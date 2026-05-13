@@ -1,0 +1,12 @@
+[
+  {
+    "id": "sample-1",
+    "name": "Sample Portal",
+    "type": "Point",
+    "category": "Entrances to the Underworld",
+    "description": "A mysterious entrance found in the deep woods.",
+    "date": "2023",
+    "coordinates": [-105.0423, 39.7392],
+    "images": ["https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1000&auto=format&fit=crop"]
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "id": "ufo-1",
+    "name": "Lights over Phoenix",
+    "type": "Point",
+    "category": "UFO Sightings",
+    "description": "Massive triangular object reported by thousands.",
+    "date": "1997",
+    "coordinates": [-112.0740, 33.4484],
+    "images": ["https://images.unsplash.com/photo-1543722530-d2c3201371e7?q=80&w=1000&auto=format&fit=crop"]
+  }
+]
