@@ -1,6 +1,5 @@
 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_60_2162)">
-<circle cx="15" cy="15" r="15" transform="rotate(-180 15 15)" fill="white"/>
 <path d="M21.707 13L15.3535 19.3535C15.1583 19.5488 14.8417 19.5488 14.6465 19.3535L8.29297 13L9 12.293L15 18.293L21 12.293L21.707 13Z" fill="black"/>
 </g>
 <defs>
