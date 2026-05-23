@@ -1,0 +1,77 @@
+{
+  "entities": {
+    "Like": {
+      "title": "Anomaly Like Count",
+      "description": "Stores the total number of likes for a specific map anomaly.",
+      "type": "object",
+      "properties": {
+        "count": {
+          "type": "integer",
+          "description": "Total number of likes."
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Last time the like count was updated."
+        }
+      },
+      "required": ["count", "updatedAt"]
+    },
+    "Submission": {
+      "title": "User Map Submission",
+      "description": "A pending or approved submission created by users for the interactive map layers.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name / title of the coordinate anomaly."
+        },
+        "category": {
+          "type": "string",
+          "description": "The category of this submission (layer association)."
+        },
+        "description": {
+          "type": "string",
+          "description": "Detailed description of narrative, events, or intelligence metadata."
+        },
+        "date": {
+          "type": "string",
+          "description": "Date or year associated with the incident. (e.g., '1947' or '2026')"
+        },
+        "coordinates": {
+          "type": "array",
+          "description": "Coordinates [lng, lat] for the map point registration."
+        },
+        "images": {
+          "type": "array",
+          "description": "Array of media URLs linked or uploaded (images, videos, pdfs, audio)."
+        },
+        "source": {
+          "type": "string",
+          "description": "Optional attribution or investigative reporter identifier."
+        },
+        "status": {
+          "type": "string",
+          "enum": ["pending", "approved", "rejected"],
+          "description": "Review status of submission."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "When the submission was created."
+        }
+      },
+      "required": ["name", "category", "description", "coordinates", "status", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/likes/{anomalyId}": {
+      "schema": "Like",
+      "description": "Collection of like counts indexed by anomaly ID."
+    },
+    "/submissions/{submissionId}": {
+      "schema": "Submission",
+      "description": "Collection of submissions or proposed features on the interactive map."
+    }
+  }
+}

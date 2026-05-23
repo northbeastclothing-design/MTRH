@@ -1,6 +1,1 @@
-{
-  "name": "MTRH - Mapping The Rabbit Hole",
-  "description": "An interactive map for exploring anomalies, UFO sightings, and subterranean entrances.",
-  "requestFramePermissions": [],
-  "majorCapabilities": []
-}
+{"name":"MTRH Interactive Map","description":"An interactive global map uncovering the world\u0027s most mysterious and unexplained phenomena, from UFO sightings and subterranean bases to ancient megaliths and paranormal anomalies.","requestFramePermissions":[],"majorCapabilities":["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]}

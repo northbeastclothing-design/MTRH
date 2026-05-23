@@ -1,0 +1,72 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Default deny
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Helper to validate document IDs
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    // Checking if the current user is owner/architect jhuffman710@gmail.com
+    function isAdmin() {
+      return request.auth != null && 
+             request.auth.token.email_verified == true && 
+             request.auth.token.email == 'jhuffman710@gmail.com';
+    }
+
+    // Input submission validator
+    function isValidSubmission(data) {
+      return data.keys().hasAll(['name', 'category', 'description', 'coordinates', 'status', 'createdAt'])
+             && data.name is string && data.name.size() > 0 && data.name.size() <= 200
+             && data.category is string && data.category.size() > 0 && data.category.size() <= 100
+             && data.description is string && data.description.size() > 0 && data.description.size() <= 10000
+             && data.coordinates is list && data.coordinates.size() == 2
+             && (data.status == 'pending' || data.status == 'approved' || data.status == 'rejected')
+             && data.createdAt == request.time
+             && (!('date' in data) || (data.date is string && data.date.size() <= 50))
+             && (!('images' in data) || (data.images is list && data.images.size() <= 10))
+             && (!('source' in data) || (data.source is string && data.source.size() <= 200));
+    }
+
+    // Likes collection: anyone can read and increment
+    match /likes/{anomalyId} {
+      // Anyone can see how many likes a point has
+      allow get, list: if true;
+
+      // Allow creating the first like
+      allow create: if isValidId(anomalyId)
+                    && request.resource.data.keys().hasAll(['count', 'updatedAt'])
+                    && request.resource.data.keys().size() == 2
+                    && request.resource.data.count == 1
+                    && request.resource.data.updatedAt == request.time;
+
+      // Allow incrementing or decrementing the like count by exactly 1
+      allow update: if isValidId(anomalyId)
+                    && (
+                      request.resource.data.count == resource.data.count + 1 ||
+                      (request.resource.data.count == resource.data.count - 1 && request.resource.data.count >= 0)
+                    )
+                    && request.resource.data.updatedAt == request.time
+                    && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['count', 'updatedAt']);
+    }
+
+    // Submissions collection
+    match /submissions/{submissionId} {
+      // Anyone can read approved records, admin can view all submissions (including pending/rejected)
+      allow get, list: if (resource != null && resource.data.status == 'approved') || isAdmin();
+
+      // Anyone can submit new points (must be 'pending')
+      allow create: if isValidId(submissionId) 
+                    && request.resource.data.status == 'pending'
+                    && isValidSubmission(request.resource.data);
+
+      // Only Admin can update or delete submissions
+      allow update: if isAdmin();
+      allow delete: if isAdmin();
+    }
+  }
+}
