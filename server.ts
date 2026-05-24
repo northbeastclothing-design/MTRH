@@ -5,7 +5,7 @@ import * as cheerio from 'cheerio';
 import fs from "fs";
 import admin from "firebase-admin";
 
-const PORT = 3000;
+const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
 
 // Initialize Firebase Admin with applet configuration
 let dbAdmin: admin.firestore.Firestore | null = null;
