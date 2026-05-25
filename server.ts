@@ -5,6 +5,7 @@ import fs from "fs";
 import admin from "firebase-admin";
 
 const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
+const isProduction = process.env.NODE_ENV === "production" || !!process.env.K_SERVICE || (typeof __filename !== "undefined" && __filename.includes("dist"));
 
 // Initialize Firebase Admin with applet configuration
 let dbAdmin: admin.firestore.Firestore | null = null;
@@ -441,7 +442,7 @@ async function startServer() {
   });
 
   // Vite middleware for development
-  if (process.env.NODE_ENV !== "production") {
+  if (!isProduction) {
     const { createServer: createViteServer } = await import("vite");
     const vite = await createViteServer({
       server: { middlewareMode: true },
