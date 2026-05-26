@@ -8,11 +8,13 @@ const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
 const isProduction = process.env.NODE_ENV === "production" || !!process.env.K_SERVICE || (typeof __filename !== "undefined" && __filename.includes("dist"));
 
 // Initialize Firebase Admin with applet configuration
+let firebaseProjectId: string | null = null;
 let dbAdmin: admin.firestore.Firestore | null = null;
 try {
   const configPath = path.join(process.cwd(), "firebase-applet-config.json");
   if (fs.existsSync(configPath)) {
     const firebaseConfig = JSON.parse(fs.readFileSync(configPath, "utf8"));
+    firebaseProjectId = firebaseConfig.projectId;
     if (admin.apps.length === 0) {
       admin.initializeApp({
         projectId: firebaseConfig.projectId
@@ -34,8 +36,93 @@ try {
   console.error("Failed to initialize Firebase Admin:", error);
 }
 
+const authorizedHosts = new Set<string>(["localhost", "127.0.0.1"]);
+
+async function authorizeDomain(domain: string) {
+  if (!firebaseProjectId) {
+    console.warn(`[Domain Auth] Cannot authorize ${domain}: firebaseProjectId is not set.`);
+    return;
+  }
+  
+  // Skip standard IP addresses, local domains or empty values
+  if (!domain || domain === "localhost" || domain === "127.0.0.1" || /^[0-9.]+$/.test(domain)) {
+    return;
+  }
+
+  try {
+    console.log(`[Domain Auth] Attempting to authorize domain "${domain}" on Firebase...`);
+    const credential = admin.app().options.credential || admin.credential.applicationDefault();
+    const tokenObj = await credential.getAccessToken();
+    const token = tokenObj.accessToken;
+
+    if (!token) {
+      console.warn("[Domain Auth] Could not retrieve access token for Identity Toolkit config API.");
+      return;
+    }
+
+    const configUrl = `https://identitytoolkit.googleapis.com/admin/v2/projects/${firebaseProjectId}/config`;
+    
+    // Fetch current project authentication config
+    const getRes = await fetch(configUrl, {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    });
+
+    if (!getRes.ok) {
+      const errorText = await getRes.text();
+      console.warn(`[Domain Auth] Failed to fetch Identity Toolkit config: ${getRes.status} - ${errorText}`);
+      return;
+    }
+
+    const config = await getRes.json();
+    const currentDomains: string[] = config.authorizedDomains || [];
+
+    if (!currentDomains.includes(domain)) {
+      const updatedDomains = [...currentDomains, domain];
+      console.log(`[Domain Auth] Adding ${domain} to whitelist. New list:`, updatedDomains);
+
+      const patchRes = await fetch(`${configUrl}?updateMask=authorizedDomains`, {
+        method: "PATCH",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          authorizedDomains: updatedDomains
+        })
+      });
+
+      if (patchRes.ok) {
+        console.log(`[Domain Auth] Successfully whitelisted domain: ${domain}`);
+      } else {
+        const errorText = await patchRes.text();
+        console.warn(`[Domain Auth] Failed to patch authorized domains: ${patchRes.status} - ${errorText}`);
+      }
+    } else {
+      console.log(`[Domain Auth] Domain "${domain}" is already authorized.`);
+    }
+  } catch (err: any) {
+    // This is expected during local development without GCP credentials, so we log it as a warning
+    console.warn(`[Domain Auth] Firebase domain authorization failed for "${domain}" (this is normal if running locally without GCP credentials):`, err.message || err);
+  }
+}
+
 async function startServer() {
   const app = express();
+
+  // Dynamic host verification for Firebase Authentication domains
+  app.use((req, res, next) => {
+    const host = req.hostname || req.headers.host?.split(":")[0];
+    if (host && !authorizedHosts.has(host)) {
+      authorizedHosts.add(host);
+      authorizeDomain(host).catch(err => {
+        console.error(`[Domain Auth] Error in background authorizeDomain for ${host}:`, err);
+        authorizedHosts.delete(host);
+      });
+    }
+    next();
+  });
 
   // Set payload sizes to allow base64 file uploads
   app.use(express.json({ limit: "50mb" }));
