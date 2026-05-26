@@ -23,7 +23,7 @@ import ufoData2 from './ufoData-2.json';
 // @ts-ignore
 import warGovData from './warGovData.json';
 // @ts-ignore
-import warGovData2 from './warGovData-2.json';
+import warGovData2 from './warGovData-2.json'; // Department of War PURSUE Release 2 dataset
 
 const getSafeData = (data: any) => {
   if (Array.isArray(data)) return data;
