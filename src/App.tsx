@@ -76,6 +76,7 @@ const CATEGORY_DESCRIPTIONS: Record<string, string> = {
   'Cryptid Sightings': 'Encounters with legendary creatures whose existence has yet to be scientifically proven.',
   'Giants': 'Historical and archaeological accounts of unusually large skeletal remains.',
   'Megaliths': 'Colossal stone structures and ancient monuments with unknown origins or purposes.',
+  'Petroglyphs': 'Ancient rock carvings and rock art depicting strange figures, celestial events, or forgotten symbols.',
   'Ancient Texts': 'Lost manuscripts, carvings, and inscriptions carrying forbidden or forgotten knowledge.',
   'Bigfoot Sightings': 'Tracking the elusive Sasquatch through forests and wilderness sightings.',
   'Blurred on Google Maps': 'Locations deliberately obscured or censored by satellite imaging providers.',
@@ -608,6 +609,16 @@ const processIncomingRecord = (item: any, index: number) => {
   else if (lowerCat.includes('ancient') || lowerCat.includes('text')) normalizedCategory = 'Ancient Texts';
   else if (lowerCat.includes('burial') || lowerCat.includes('mound')) normalizedCategory = 'Burial Mounds';
   else if (lowerCat.includes('cave') || lowerCat.includes('drawing')) normalizedCategory = 'Cave Drawings';
+  else if (lowerCat.includes('megaliths / dolmans / petroglyphs / geoglyphs')) {
+    const descLower = displayDescription.toLowerCase();
+    const nameLower = safeName.toLowerCase();
+    if (descLower.includes('petroglyph') || descLower.includes('rock art') || nameLower.includes('rock art') || nameLower.includes('petroglyph')) {
+      normalizedCategory = 'Petroglyphs';
+    } else {
+      normalizedCategory = 'Megaliths';
+    }
+  }
+  else if (lowerCat.includes('petroglyph') || lowerCat.includes('rock art')) normalizedCategory = 'Petroglyphs';
   else if (lowerCat.includes('crop') || lowerCat.includes('circle')) normalizedCategory = 'Crop Circles';
   else if (lowerCat.includes('megalith')) normalizedCategory = 'Megaliths';
   else if (lowerCat.includes('dumb') || lowerCat.includes('d.u.m.b')) normalizedCategory = 'D.U.M.B.\'s';
@@ -646,12 +657,14 @@ const processIncomingRecord = (item: any, index: number) => {
         safeImages = ['https://www.montanamegaliths.com/uploads/6/9/2/9/69295147/evergreen-dolmen-tane-talalotu_orig.jpg'];
       } else if (lowerName.includes('tizer')) {
         safeImages = ['https://www.montanamegaliths.com/uploads/6/9/2/9/69295147/andrew-barker-tizer-best_orig.jpg'];
-      } else if (lowerName.includes('ferganchick')) {
-        safeImages = ['https://www.historycolorado.org/sites/default/files/media/images/2018/5dt355.jpg'];
       } else if (lowerName.includes('steppe')) {
         safeImages = ['https://i0.wp.com/beforeatlantis.com/wp-content/uploads/2020/08/ushtogaiskiisquareaerial-1.jpg?fit=1200%2C458&ssl=1'];
       } else if (lowerName.includes('dolman') || lowerName.includes('dolmen')) {
         safeImages = ['https://upload.wikimedia.org/wikipedia/commons/5/52/Poulnabrone_dolmen%2C_Ireland_-_Aug_2009.jpg'];
+      }
+    } else if (lowerNormalizedCat === 'petroglyphs') {
+      if (lowerName.includes('ferganchick')) {
+        safeImages = ['https://www.historycolorado.org/sites/default/files/media/images/2018/5dt355.jpg'];
       }
     } else if (lowerNormalizedCat === 'underworld entrances') {
       if (lowerName.includes('darvaza') || lowerName.includes('door to hell')) {
@@ -707,6 +720,7 @@ const LAYER_CONFIG: Record<string, { color: string; icon: string }> = {
   'D.U.M.B.\'s': { color: '#BAEAF4', icon: '/icons/icon-dumbs.svg' },
   'Ghosts': { color: '#BDC4FF', icon: '/icons/icon-ghosts.svg' },
   'Megaliths': { color: '#FFFBA6', icon: '/icons/icon-megaliths.svg' },
+  'Petroglyphs': { color: '#FFCBA6', icon: '/icons/icon-petroglyphs.svg' },
   'National Parks & Reserves': { color: '#9FF3BC', icon: '/icons/icon-national-parks-reserves.svg' },
   'Blurred on Google Maps': { color: '#BDC4FF', icon: '/icons/icon-blurred-on-google.svg' },
   'Default': { color: '#b6a6ff', icon: '/icons/icon-map-pin.svg' }
@@ -1675,8 +1689,8 @@ function App() {
   useEffect(() => {
     const windowEnd = timelineWindowStart + timelineWindowSpan;
     const timelineWidth = timelineRef.current?.offsetWidth || 0;
-    // Calculate gap in years equivalent to 24px thumb width
-    const gap = timelineWidth > 0 ? (24 / timelineWidth) * timelineWindowSpan : 0;
+    // Calculate gap in years equivalent to 8px thumb width
+    const gap = timelineWidth > 0 ? (8 / timelineWidth) * timelineWindowSpan : 0;
 
     setYearRange(prev => {
       let newStart = prev.start;
@@ -2264,18 +2278,37 @@ function App() {
         'ancient-texts', 'bigfoot-sightings', 'blurred-on-google', 'burial-mounds',
         'cave-drawings', 'crop-circles', 'cryptid-sightings', 'Megaliths', 'dumbs',
         'entrances-to-underworld', 'ghosts', 'giants', 'megaliths',
-        'national-parks-reserves', 'ufo-sightings', 'map-pin'
+        'national-parks-reserves', 'ufo-sightings', 'map-pin', 'petroglyphs'
       ];
       
       let loadedCount = 0;
       iconsToLoad.forEach(iconName => {
-        map.loadImage(`/icons/icon-${iconName}.svg`, (error, image) => {
-          loadedCount++;
+        const path = `/icons/icon-${iconName}.svg`;
+        map.loadImage(path, (error, image) => {
           if (!error && image) {
             if (!map.hasImage(iconName)) map.addImage(iconName, image);
-          }
-          if (loadedCount === iconsToLoad.length) {
-            setIsStyleLoaded(true);
+            loadedCount++;
+            if (loadedCount === iconsToLoad.length) {
+              setIsStyleLoaded(true);
+            }
+          } else {
+            if (iconName === 'petroglyphs') {
+              // Try loading cave drawings as a fallback for petroglyphs if the file is missing
+              map.loadImage('/icons/icon-cave-drawings.svg', (fallbackError, fallbackImage) => {
+                if (!fallbackError && fallbackImage) {
+                  if (!map.hasImage('petroglyphs')) map.addImage('petroglyphs', fallbackImage);
+                }
+                loadedCount++;
+                if (loadedCount === iconsToLoad.length) {
+                  setIsStyleLoaded(true);
+                }
+              });
+            } else {
+              loadedCount++;
+              if (loadedCount === iconsToLoad.length) {
+                setIsStyleLoaded(true);
+              }
+            }
           }
         });
       });
@@ -2575,6 +2608,9 @@ function App() {
 
       const img = document.createElement('img');
       img.src = icon;
+      img.onerror = () => {
+        img.src = '/icons/icon-cave-drawings.svg';
+      };
       img.style.width = '30px';
       img.style.height = '30px';
       iconOuter.appendChild(img);
@@ -3415,7 +3451,12 @@ function App() {
                       >
                         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flex: 1, textAlign: 'left' }}>
                           <div style={{ width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                            <img src={getCategoryIcon(layerName)} style={{ width: '30px', height: '30px' }} alt={layerName} />
+                            <img 
+                              src={getCategoryIcon(layerName)} 
+                              onError={(e) => { e.currentTarget.src = '/icons/icon-cave-drawings.svg'; }}
+                              style={{ width: '30px', height: '30px' }} 
+                              alt={layerName} 
+                            />
                           </div>
                           <span style={{ 
                             fontSize: '10px', 
@@ -3648,6 +3689,7 @@ function App() {
                         <div style={{ width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                           <img 
                             src={getCategoryIcon(selectedFeature.categories?.[0] || '')} 
+                            onError={(e) => { e.currentTarget.src = '/icons/icon-cave-drawings.svg'; }}
                             style={{ width: '30px', height: '30px' }} 
                             alt="layer-icon" 
                           />
@@ -4533,7 +4575,7 @@ function App() {
                         {/* INPUTS FOR RANGE SELECTION (ON THE TIMELINE) AND HIGHLIGHT BAR */}
                         <div style={{
                           position: 'absolute',
-                          bottom: '26px', // Centered on the 38px line (26 + 12 = 38)
+                          bottom: '30px', // Moved up a few pixels to prevent covering the date numbers on the bottom
                           left: '0px',
                           right: '0px',
                           height: '24px',
@@ -4585,7 +4627,7 @@ function App() {
                                   onChange={(e) => {
                                     const val = parseFloat(e.target.value);
                                     const width = e.currentTarget.offsetWidth;
-                                    const gap = width > 0 ? (24 / width) * timelineWindowSpan : 0;
+                                    const gap = width > 0 ? (8 / width) * timelineWindowSpan : 0;
                                     setYearRange(p => ({ ...p, start: Math.min(val, p.end - gap) }));
                                   }}
                                   style={{ 
@@ -4603,7 +4645,7 @@ function App() {
                                   onChange={(e) => {
                                     const val = parseFloat(e.target.value);
                                     const width = e.currentTarget.offsetWidth;
-                                    const gap = width > 0 ? (24 / width) * timelineWindowSpan : 0;
+                                    const gap = width > 0 ? (8 / width) * timelineWindowSpan : 0;
                                     setYearRange(p => ({ ...p, end: Math.max(val, p.start + gap) }));
                                   }}
                                   style={{ 
@@ -5066,13 +5108,10 @@ function App() {
           -webkit-appearance: none !important; 
           appearance: none !important; 
           pointer-events: auto !important; 
-          width: 24px !important; 
+          width: 8px !important; 
           height: 24px !important; 
-          border-radius: 50% !important; 
+          border-radius: 4px !important; 
           background-color: ${isMapDarkMode ? '#ffffff' : '#000000'} !important; 
-          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='${isMapDarkMode ? 'black' : 'white'}' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E") !important;
-          background-position: center !important;
-          background-repeat: no-repeat !important;
           cursor: pointer !important; 
           border: ${isMapDarkMode ? '1px solid #000000' : 'none'} !important;
           margin-top: 0 !important;
@@ -5080,13 +5119,10 @@ function App() {
         .figma-slider-thumb-left::-moz-range-thumb { 
           appearance: none !important; 
           pointer-events: auto !important; 
-          width: 24px !important; 
+          width: 8px !important; 
           height: 24px !important; 
-          border-radius: 50% !important; 
+          border-radius: 4px !important; 
           background-color: ${isMapDarkMode ? '#ffffff' : '#000000'} !important; 
-          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='${isMapDarkMode ? 'black' : 'white'}' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E") !important;
-          background-position: center !important;
-          background-repeat: no-repeat !important;
           cursor: pointer !important; 
           border: ${isMapDarkMode ? '1px solid #000000' : 'none'} !important;
         }
@@ -5095,13 +5131,10 @@ function App() {
           -webkit-appearance: none !important; 
           appearance: none !important; 
           pointer-events: auto !important; 
-          width: 24px !important; 
+          width: 8px !important; 
           height: 24px !important; 
-          border-radius: 50% !important; 
+          border-radius: 4px !important; 
           background-color: ${isMapDarkMode ? '#ffffff' : '#000000'} !important; 
-          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='${isMapDarkMode ? 'black' : 'white'}' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='15 18 9 12 15 6'%3E%3C/polyline%3E%3C/svg%3E") !important;
-          background-position: center !important;
-          background-repeat: no-repeat !important;
           cursor: pointer !important; 
           border: ${isMapDarkMode ? '1px solid #000000' : 'none'} !important;
           margin-top: 0 !important;
@@ -5109,13 +5142,10 @@ function App() {
         .figma-slider-thumb-right::-moz-range-thumb { 
           appearance: none !important; 
           pointer-events: auto !important; 
-          width: 24px !important; 
+          width: 8px !important; 
           height: 24px !important; 
-          border-radius: 50% !important; 
+          border-radius: 4px !important; 
           background-color: ${isMapDarkMode ? '#ffffff' : '#000000'} !important; 
-          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='${isMapDarkMode ? 'black' : 'white'}' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='15 18 9 12 15 6'%3E%3C/polyline%3E%3C/svg%3E") !important;
-          background-position: center !important;
-          background-repeat: no-repeat !important;
           cursor: pointer !important; 
           border: ${isMapDarkMode ? '1px solid #000000' : 'none'} !important;
         }

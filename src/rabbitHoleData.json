@@ -17415,7 +17415,7 @@
   {
     "id": "anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-4",
     "name": "Ferganchick Orchard Rock Art Site",
-    "category": "Megaliths / Dolmans / Petroglyphs / Geoglyphs",
+    "category": "Petroglyphs",
     "type": "Point",
     "coordinates": {
       "lng": -107.928115,
@@ -18454,6 +18454,326 @@
     "source": "Wikipedia / Historical Mystery Records",
     "images": [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Masudanoiwafune.JPG/1280px-Masudanoiwafune.JPG"
+    ]
+  },
+  {
+    "id": "anomaly-Petroglyphs-0",
+    "name": "Petroglyph National Monument",
+    "category": "Petroglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lng": -106.76194444,
+      "lat": 35.13583333
+    },
+    "date": null,
+    "description": "Puebloan volcanic carvings featuring mysterious horned beings, geometric symbols, and star-headed guides. Theorists believe this massive site marks a highly active portal grid used to communicate with subterranean and sky guardians.",
+    "source": "Wikipedia / Historical Mystery Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Petroglyph_National_Monument_Aerial_%2852260985771%29.jpg/1280px-Petroglyph_National_Monument_Aerial_%2852260985771%29.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Petroglyphs-1",
+    "name": "Twyfelfontein",
+    "category": "Petroglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lat": -20.59056,
+      "lng": 14.37222
+    },
+    "date": null,
+    "description": "Thousands of hunter-gatherer engravings depicting human-animal shape-shifting. Theorists claim these carvings depict literal accounts of inter-species genetic manipulation and early portal-based travel by non-human intelligence.",
+    "source": "Wikipedia / Historical Mystery Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Twyfelfontein_16.jpg/1280px-Twyfelfontein_16.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Petroglyphs-2",
+    "name": "Valcamonica Petroglyphs",
+    "category": "Petroglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lng": 10.29733333,
+      "lat": 45.95705556
+    },
+    "date": null,
+    "description": "Over 140,000 prehistoric rock carvings spanning 8,000 years. Conspiracy circles point to the 'spacemen' figures wearing glowing, spherical helmets and wielding advanced electromagnetic tools as direct proof of paleocontact.",
+    "source": "Wikipedia / Historical Mystery Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/e/eb/Scena_di_duello_R6_-_Foppe_-_Nadro_%28Foto_Luca_Giarelli%29.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Petroglyphs-3",
+    "name": "Murujuga (Dampier Archipelago)",
+    "category": "Petroglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lng": 116.8,
+      "lat": -20.6
+    },
+    "date": null,
+    "description": "A collection of over one million petroglyphs dating back 40,000 years. Researchers suggest the deep rock engravings encode pre-glacial star maps, extinct megafauna, and ancestral star-beings who visited during the Dreamtime.",
+    "source": "Wikipedia / Historical Mystery Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/9/9e/Burrupmap.png"
+    ]
+  },
+  {
+    "id": "anomaly-Petroglyphs-4",
+    "name": "Pu\u02bbuloa Petroglyphs",
+    "category": "Petroglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lng": -155.2,
+      "lat": 19.38333333
+    },
+    "date": null,
+    "description": "The largest rock art field in Hawaii, containing over 23,000 carvings. Theorists propose the circles and cups carved into the volcanic basalt are telluric nodes connected to the deep magma-flow energy network of the Pacific.",
+    "source": "Wikipedia / Historical Mystery Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/P%C4%81hoehoe_and_Aa_flows_at_Hawaii.jpg/1280px-P%C4%81hoehoe_and_Aa_flows_at_Hawaii.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Petroglyphs-5",
+    "name": "Alta Rock Art",
+    "category": "Petroglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lng": 23.18777778,
+      "lat": 69.94694444
+    },
+    "date": null,
+    "description": "Prehistoric carvings near the Arctic Circle depicting complex reindeer herds and boat patterns. Theorists argue these represent prehistoric sea-faring networks mapping solar paths and Earth's northern magnetic lines.",
+    "source": "Wikipedia / Historical Mystery Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/c/cb/Alta-Carvings-2012-07-17-12-15-018.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Petroglyphs-6",
+    "name": "Bhimbetka Rock Shelters",
+    "category": "Petroglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lng": 77.613085,
+      "lat": 22.938415
+    },
+    "date": null,
+    "description": "Ancient rock shelters displaying carvings and paintings spanning 30,000 years. Theorists suggest the complex astronomical symbols and giant hunter figures document a lost pre-flood empire built by giants.",
+    "source": "Wikipedia / Historical Mystery Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Rock_Shelter_8%2C_Bhimbetka_02.jpg/1280px-Rock_Shelter_8%2C_Bhimbetka_02.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Petroglyphs-7",
+    "name": "Gobustan Rock Art",
+    "category": "Petroglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lng": 49.375,
+      "lat": 40.125
+    },
+    "date": null,
+    "description": "Carvings depicting reed boats, star groups, and large humans. Theorists claim these link the Caucasus directly to Thor Heyerdahl\u2019s migration theories and represent ancient sea voyages in pre-glacial times.",
+    "source": "Wikipedia / Historical Mystery Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Qobustan.jpg/1280px-Qobustan.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Petroglyphs-8",
+    "name": "Tamgaly Petroglyphs",
+    "category": "Petroglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lng": 75.535,
+      "lat": 43.80333333
+    },
+    "date": null,
+    "description": "Bronze Age carvings dominated by 'Sun-Head' deities with radiating halos. Theorists believe these represent alien visitations, high-frequency electromagnetic fields, or ancient energy channeling rituals.",
+    "source": "Wikipedia / Historical Mystery Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/c/c1/Tanbaly.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Petroglyphs-9",
+    "name": "Tanum Rock Carvings",
+    "category": "Petroglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lng": 11.34111111,
+      "lat": 58.70111111
+    },
+    "date": null,
+    "description": "Nordic Bronze Age carvings showing giant warriors, long boats, and sun wheels. Theorists suggest they record stellar wars and represent hyperborean star travelers visiting Northern Europe.",
+    "source": "Wikipedia / Historical Mystery Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Tanumshede_2005_rock_carvings_5.jpg/1280px-Tanumshede_2005_rock_carvings_5.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Petroglyphs-10",
+    "name": "Tassili n'Ajjer",
+    "category": "Petroglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lng": 9,
+      "lat": 25.5
+    },
+    "date": null,
+    "description": "Vast sandstone carvings showing massive humanoids and strange beings. Ancient astronaut theorists suggest these figures depict the 'Anunnaki' or other-worldly entities visiting the Sahara when it was a lush green valley.",
+    "source": "Wikipedia / Historical Mystery Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Map_of_Tassili_n%27Ajjer_and_surroundings-en.jpg/1280px-Map_of_Tassili_n%27Ajjer_and_surroundings-en.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Petroglyphs-11",
+    "name": "Dabous Giraffes",
+    "category": "Petroglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lng": 7.58055556,
+      "lat": 18.03027778
+    },
+    "date": null,
+    "description": "Life-sized, masterfully carved Saharan giraffes. Theorists highlight the exceptional artistic precision and remote location as evidence of a highly advanced green-Sahara civilization that possessed secret stone-softening tools.",
+    "source": "Wikipedia / Historical Mystery Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/DabousGiraffe.jpg/1280px-DabousGiraffe.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Petroglyphs-12",
+    "name": "Saimaluu Tash",
+    "category": "Petroglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lng": 73.81666667,
+      "lat": 41.18333333
+    },
+    "date": null,
+    "description": "A high-altitude mountain pass containing over 10,000 carvings. Theorists speculate it was a high-frequency spiritual observatory where ancient initiates used rock carvings to map star alignments and communicate with sky entities.",
+    "source": "Wikipedia / Historical Mystery Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/a/a1/Saimaluu_Tash.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Petroglyphs-13",
+    "name": "Pusharo Petroglyphs",
+    "category": "Petroglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lng": -71.486,
+      "lat": -12.5843
+    },
+    "date": null,
+    "description": "Mysterious carvings deep in the Amazon jungle. Alternative theorists interpret the complex geometric patterns as a cartographic key to Paititi, the legendary lost golden city of the Andes.",
+    "source": "Wikipedia / Historical Mystery Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/e/ec/Petroglifos_de_Pusharo.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Petroglyphs-14",
+    "name": "Onega Petroglyphs",
+    "category": "Petroglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lng": 35.65555556,
+      "lat": 61.69055556
+    },
+    "date": null,
+    "description": "Carvings on the shore of Lake Onega, including a famous 2-meter tall 'Demon' figure. Theorists suggest the site was built to interact with water vortexes and serve as a geomantic barrier against dark entities.",
+    "source": "Wikipedia / Historical Mystery Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/4/47/White_Sea_Canal_map.png"
+    ]
+  },
+  {
+    "id": "anomaly-Petroglyphs-15",
+    "name": "Newspaper Rock",
+    "category": "Petroglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lat": 37.9883,
+      "lng": -109.5185
+    },
+    "date": null,
+    "description": "A dense panel of thousands of Native American rock carvings. Theorists claim the petroglyphs depict anomalous multi-toed footprints, horned titans, and star-maps of ancient travelers.",
+    "source": "Wikipedia / Historical Mystery Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Newspaper_Rock_Full.jpg/1280px-Newspaper_Rock_Full.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Petroglyphs-16",
+    "name": "Edakkal Caves",
+    "category": "Petroglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lng": 76.2358,
+      "lat": 11.62466944
+    },
+    "date": null,
+    "description": "Neolithic carvings showing strange humanoids with high-energy crowns. Conspiracy circles believe the high-precision engravings represent pre-flood survivors encoding ancient technological diagrams on cave walls.",
+    "source": "Wikipedia / Historical Mystery Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Edakkal_Cave.jpg/1280px-Edakkal_Cave.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Petroglyphs-17",
+    "name": "Writing-on-Stone / \u00c1\u00eds\u00ednai\u2019pi",
+    "category": "Petroglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lng": -111.61694444,
+      "lat": 49.08194444
+    },
+    "date": null,
+    "description": "An extensive sacred landscape featuring petroglyphs. Theorists suggest the carvings are records of historic aerial anomalies, battles with giants, and shamanic travels into the spirit realm.",
+    "source": "Wikipedia / Historical Mystery Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Writing_on_stone990.jpg/1280px-Writing_on_stone990.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Petroglyphs-18",
+    "name": "Miculla Petroglyphs",
+    "category": "Petroglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lng": -70.0966,
+      "lat": -17.8713
+    },
+    "date": null,
+    "description": "Desert carvings showing stick figures with halos. Theorists interpret these as depictions of other-worldly beings manifesting along high-energy Ley Lines running from the Andes to the coast.",
+    "source": "Wikipedia / Historical Mystery Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Tacna_-_Petroglifos_de_Miculla.JPG/1280px-Tacna_-_Petroglifos_de_Miculla.JPG"
+    ]
+  },
+  {
+    "id": "anomaly-Petroglyphs-19",
+    "name": "Angono Petroglyphs",
+    "category": "Petroglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lng": 121.18679,
+      "lat": 14.532872
+    },
+    "date": null,
+    "description": "The oldest rock art in the Philippines, depicting human and animal shapes. Theorists suggest they depict small, non-human entities and were used in ancient shamanic rituals to open spiritual portals.",
+    "source": "Wikipedia / Historical Mystery Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Angono_Petroglyphs.jpg/1280px-Angono_Petroglyphs.jpg"
     ]
   }
 ]
