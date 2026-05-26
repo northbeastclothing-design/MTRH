@@ -22,6 +22,8 @@ import ufoData1 from './ufoData-1.json';
 import ufoData2 from './ufoData-2.json'; 
 // @ts-ignore
 import warGovData from './warGovData.json';
+// @ts-ignore
+import warGovData2 from './warGovData-2.json';
 
 const getSafeData = (data: any) => {
   if (Array.isArray(data)) return data;
@@ -29,7 +31,12 @@ const getSafeData = (data: any) => {
   return [];
 };
 
-const realUfoData = [...getSafeData(ufoData1), ...getSafeData(ufoData2), ...getSafeData(warGovData)];
+const realUfoData = [
+  ...getSafeData(ufoData1),
+  ...getSafeData(ufoData2),
+  ...getSafeData(warGovData),
+  ...getSafeData(warGovData2)
+];
 
 mapboxgl.accessToken = 'pk.eyJ1Ijoibm9ydGhiZWFzdCIsImEiOiJjbXAyNnBhMGowMTFoMnFwenRnNWZvOWc5In0.PpOOemte4Ub9PVLfGsUS1g'; 
 
@@ -71,7 +78,8 @@ function handleFirestoreError(error: unknown, operationType: OperationType, path
 const CATEGORY_DESCRIPTIONS: Record<string, string> = {
   'Nephilim': 'Newspaper articles about finding the bones of ancient biblical giants, horned humanoids, cyclops and more.',
   'U.F.O. Sightings': 'Reports of unidentified flying objects and extraterrestrial encounters across the globe.',
-  'War.gov UFO Files': 'Official records and multimedia releases from government archives documenting unidentified aerial phenomena.',
+  'War.gov UFO files 01': 'Official records and multimedia releases from government archives documenting unidentified aerial phenomena (First Release).',
+  'War.gov UFO files 02': 'Official declassified records and sensor videos from government archives (Second Release - PURSUE 02).',
   'D.U.M.B.\'s': 'Deep Underground Military Bases and mysterious subterranean government facilities.',
   'Cryptid Sightings': 'Encounters with legendary creatures whose existence has yet to be scientifically proven.',
   'Giants': 'Historical and archaeological accounts of unusually large skeletal remains.',
@@ -86,7 +94,8 @@ const CATEGORY_DESCRIPTIONS: Record<string, string> = {
   'Underworld Entrances': 'Purported Entrances to the Underworld from lore, legends, and modern times.',
   'Ghosts': 'Areas reported to have high levels of paranormal activity and spectral apparitions.',
   'National Parks & Reserves': 'The intersection of vast wilderness and unexplained disappearances.',
-  'Crop Circles': 'Intricate patterns appearing in fields, often appearing overnight with no clear earthly explanation.'
+  'Crop Circles': 'Intricate patterns appearing in fields, often appearing overnight with no clear earthly explanation.',
+  'Meteor Impact Craters': 'Confirmed impact structures on Earth created by ancient meteorite collisions, marking catastrophic cosmic encounters throughout geological history.'
 };
 
 const isVideoUrl = (url: string) => {
@@ -602,7 +611,13 @@ const processIncomingRecord = (item: any, index: number) => {
   let normalizedCategory = rawCategory;
   if (lowerCat.includes('bigfoot') || lowerCat.includes('sasquatch')) normalizedCategory = 'Bigfoot Sightings';
   else if (lowerCat.includes('giant') || lowerCat.includes('nephilim') || lowerCat.includes('giants')) normalizedCategory = 'Nephilim';
-  else if (lowerCat.includes('war.gov') || lowerCat.includes('aaro') || lowerCat.includes('official release') || lowerCat.includes('declassified')) normalizedCategory = 'War.gov UFO Files';
+  else if (lowerCat.includes('war.gov') || lowerCat.includes('aaro') || lowerCat.includes('official release') || lowerCat.includes('declassified')) {
+    if (lowerCat.includes('02') || lowerCat.includes('release 2') || lowerCat.includes('release_2')) {
+      normalizedCategory = 'War.gov UFO files 02';
+    } else {
+      normalizedCategory = 'War.gov UFO files 01';
+    }
+  }
   else if (lowerCat.includes('ufo') || lowerCat.includes('uap')) normalizedCategory = 'U.F.O. Sightings';
   else if (lowerCat.includes('cryptid')) normalizedCategory = 'Cryptid Sightings';
   else if (lowerCat.includes('entrance') || lowerCat.includes('underworld')) normalizedCategory = 'Underworld Entrances';
@@ -625,6 +640,7 @@ const processIncomingRecord = (item: any, index: number) => {
   else if (lowerCat.includes('ghost')) normalizedCategory = 'Ghosts';
   else if (lowerCat.includes('national park') || lowerCat.includes('reserve')) normalizedCategory = 'National Parks & Reserves';
   else if (lowerCat.includes('blurred')) normalizedCategory = 'Blurred on Google Maps';
+  else if (lowerCat.includes('meteor') || lowerCat.includes('crater') || lowerCat.includes('impact structure')) normalizedCategory = 'Meteor Impact Craters';
 
   // Smart imagery injection for map points lacking media (megaliths, underworld entrances, national parks, mounds)
   // ONLY use high-quality location-specific historical/documentary assets for actual landmarks.
@@ -707,14 +723,15 @@ const processIncomingRecord = (item: any, index: number) => {
 };
 
 const LAYER_CONFIG: Record<string, { color: string; icon: string }> = {
-  'War.gov UFO Files': { color: '#FF9BE1', icon: 'https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/icons/icon-dept-war.svg' },
+  'War.gov UFO files 01': { color: '#FF9BE1', icon: 'https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/icons/icon-dept-war.svg' },
+  'War.gov UFO files 02': { color: '#D29BFF', icon: 'https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/icons/icon-dept-war.svg' },
   'Nephilim': { color: '#E8E0CB', icon: '/icons/icon-giants.svg' },
   'U.F.O. Sightings': { color: '#C2FFBD', icon: '/icons/icon-ufo-sightings.svg' },
   'Bigfoot Sightings': { color: '#FFDCBB', icon: '/icons/icon-bigfoot-sightings.svg' },
   'Cryptid Sightings': { color: '#AFFFEC', icon: '/icons/icon-cryptid-sightings.svg' },
   'Underworld Entrances': { color: '#D3C5FB', icon: '/icons/icon-entrances-to-underworld.svg' },
   'Ancient Texts': { color: '#F6E8C1', icon: '/icons/icon-ancient-texts.svg' },
-  'Burial Mounds': { color: '#DBE7BB', icon: '/icons/icon-burial-mounds.svg' },
+  'Burial Mounds': { color: '#B3C77B', icon: '/icons/icon-burial-mounds.svg' },
   'Cave Drawings': { color: '#FFABA6', icon: '/icons/icon-cave-drawings.svg' },
   'Crop Circles': { color: '#FFF96A', icon: '/icons/icon-crop-circles.svg' },
   'D.U.M.B.\'s': { color: '#BAEAF4', icon: '/icons/icon-dumbs.svg' },
@@ -723,6 +740,7 @@ const LAYER_CONFIG: Record<string, { color: string; icon: string }> = {
   'Petroglyphs': { color: '#FFCBA6', icon: '/icons/icon-petroglyphs.svg' },
   'National Parks & Reserves': { color: '#9FF3BC', icon: '/icons/icon-national-parks-reserves.svg' },
   'Blurred on Google Maps': { color: '#BDC4FF', icon: '/icons/icon-blurred-on-google.svg' },
+  'Meteor Impact Craters': { color: '#FF9F63', icon: '/icons/icon-meteors.svg' },
   'Default': { color: '#b6a6ff', icon: '/icons/icon-map-pin.svg' }
 };
 
@@ -777,7 +795,7 @@ function App() {
 
   const uniqueCategories = useMemo(() => {
     const allTags = combinedPointsAndLinesData.flatMap(item => item.categories);
-    const order = ['War.gov UFO Files', 'Nephilim', 'U.F.O. Sightings'];
+    const order = ['War.gov UFO files 01', 'War.gov UFO files 02', 'Nephilim', 'U.F.O. Sightings'];
     return Array.from(new Set(allTags)).sort((a, b) => {
       const sA = String(a);
       const sB = String(b);
@@ -2278,7 +2296,8 @@ function App() {
         'ancient-texts', 'bigfoot-sightings', 'blurred-on-google', 'burial-mounds',
         'cave-drawings', 'crop-circles', 'cryptid-sightings', 'Megaliths', 'dumbs',
         'entrances-to-underworld', 'ghosts', 'giants', 'megaliths',
-        'national-parks-reserves', 'ufo-sightings', 'map-pin', 'petroglyphs'
+        'national-parks-reserves', 'ufo-sightings', 'map-pin', 'petroglyphs',
+        'meteors'
       ];
       
       let loadedCount = 0;
