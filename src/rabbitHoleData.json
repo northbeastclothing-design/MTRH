@@ -17175,104 +17175,6 @@
     ]
   },
   {
-    "id": "anomaly-Crop-Circles-70",
-    "name": "Avebury Trusloe Formation",
-    "category": "Crop Circles",
-    "type": "Point",
-    "coordinates": {
-      "lng": -1.8654,
-      "lat": 51.4282
-    },
-    "date": 2001,
-    "description": "Old formation near Avebury Trusloe, preserved in historical Google Earth layers.",
-    "source": "Circle Research Archive",
-    "images": []
-  },
-  {
-    "id": "anomaly-Crop-Circles-71",
-    "name": "Stanton St Bernard Formation",
-    "category": "Crop Circles",
-    "type": "Point",
-    "coordinates": {
-      "lng": -1.8751,
-      "lat": 51.3652
-    },
-    "date": 2009,
-    "description": "Beautiful 2009 formation in the Vale of Pewsey area.",
-    "source": "Circle Research Archive",
-    "images": []
-  },
-  {
-    "id": "anomaly-Crop-Circles-72",
-    "name": "Honey Street Formation",
-    "category": "Crop Circles",
-    "type": "Point",
-    "coordinates": {
-      "lng": -1.8521,
-      "lat": 51.3512
-    },
-    "date": 2011,
-    "description": "Formation appearing near the canal at Honey Street, Wiltshire.",
-    "source": "Circle Research Archive",
-    "images": []
-  },
-  {
-    "id": "anomaly-Crop-Circles-73",
-    "name": "Woodborough Hill Formation",
-    "category": "Crop Circles",
-    "type": "Point",
-    "coordinates": {
-      "lng": -1.8484,
-      "lat": 51.3482
-    },
-    "date": 2012,
-    "description": "Complex pattern near Woodborough Hill, well visible in regional Google Earth archives.",
-    "source": "Circle Research Archive",
-    "images": []
-  },
-  {
-    "id": "anomaly-Crop-Circles-74",
-    "name": "Poirino Formation (Italy)",
-    "category": "Crop Circles",
-    "type": "Point",
-    "coordinates": {
-      "lng": 7.8481,
-      "lat": 44.9224
-    },
-    "date": 2011,
-    "description": "Famous international formation researchers often mention alongside the Google Earth collection.",
-    "source": "Circle Research Archive",
-    "images": []
-  },
-  {
-    "id": "anomaly-Crop-Circles-75",
-    "name": "Chualar Formation (USA)",
-    "category": "Crop Circles",
-    "type": "Point",
-    "coordinates": {
-      "lng": -121.5172,
-      "lat": 36.5741
-    },
-    "date": 2013,
-    "description": "Large formation in California that drew significant attention and is documented for its Google Earth visibility.",
-    "source": "Circle Research Archive",
-    "images": []
-  },
-  {
-    "id": "anomaly-Crop-Circles-76",
-    "name": "Alton Barnes East Field",
-    "category": "Crop Circles",
-    "type": "Point",
-    "coordinates": {
-      "lng": -1.8481,
-      "lat": 51.3532
-    },
-    "date": 2012,
-    "description": "One of the most frequent sites for formations globally, Alton Barnes' East Field.",
-    "source": "Circle Research Archive",
-    "images": []
-  },
-  {
     "id": "anomaly-Crop-Circles-77",
     "name": "Hamstead Marshall Formation",
     "category": "Crop Circles",
@@ -17284,49 +17186,9 @@
     "date": 2012,
     "description": "Formation in West Berkshire, visible in the regional research archives.",
     "source": "Circle Research Archive",
-    "images": []
-  },
-  {
-    "id": "anomaly-Crop-Circles-78",
-    "name": "Martinsell Hill Formation",
-    "category": "Crop Circles",
-    "type": "Point",
-    "coordinates": {
-      "lng": -1.785,
-      "lat": 51.365
-    },
-    "date": 2012,
-    "description": "Visible near the prehistoric hillfort of Martinsell Hill.",
-    "source": "Circle Research Archive",
-    "images": []
-  },
-  {
-    "id": "anomaly-Crop-Circles-79",
-    "name": "Cherhill White Horse Formation",
-    "category": "Crop Circles",
-    "type": "Point",
-    "coordinates": {
-      "lng": -1.975,
-      "lat": 51.425
-    },
-    "date": 2012,
-    "description": "Formation appearing near the Cherhill White Horse, part of the landscape's ritual history.",
-    "source": "Circle Research Archive",
-    "images": []
-  },
-  {
-    "id": "anomaly-Crop-Circles-80",
-    "name": "Knap Hill Formation",
-    "category": "Crop Circles",
-    "type": "Point",
-    "coordinates": {
-      "lng": -1.85,
-      "lat": 51.38
-    },
-    "date": 2012,
-    "description": "Formation near the ancient causewayed enclosure of Knap Hill.",
-    "source": "Circle Research Archive",
-    "images": []
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/d/d5/CropCircleW.jpg"
+    ]
   },
   {
     "id": "anomaly-Crop-Circles-81",
@@ -17340,7 +17202,9 @@
     "date": 2012,
     "description": "Secondary formation in the Yatesbury sector documented by researchers.",
     "source": "Circle Research Archive",
-    "images": []
+    "images": [
+      "https://circleresearcharchive.com/wp-content/uploads/2012/08/yatesbury-crop-circle-2012-google-earth.jpg"
+    ]
   },
   {
     "id": "anomaly-Crop-Circles-82",
@@ -17354,7 +17218,9 @@
     "date": 2012,
     "description": "Another formation in the Beckhampton cluster, visible in 2012 archives.",
     "source": "Circle Research Archive",
-    "images": []
+    "images": [
+      "https://circleresearcharchive.com/wp-content/uploads/2012/08/beckhampton-crop-circle-2012-google-earth.jpg"
+    ]
   },
   {
     "id": "anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-0",
@@ -17720,7 +17586,9 @@
     "date": 2024,
     "description": "One of the early 2024 formations, located at Yatesbury.",
     "source": "Circle Research Archive",
-    "images": []
+    "images": [
+      "https://circleresearcharchive.com/wp-content/uploads/2024/05/broad-hinton-wiltshire-crop-circle-2024-google-earth.jpg"
+    ]
   },
   {
     "id": "anomaly-Crop-Circles-44",
@@ -17782,7 +17650,9 @@
     "date": 2023,
     "description": "Pattern appearing near the ancient Barbury Castle in the 2023 season.",
     "source": "Circle Research Archive",
-    "images": []
+    "images": [
+      "https://circleresearcharchive.com/wp-content/uploads/2023/08/oare-wiltshire-crop-circle-2023-google-earth.jpg"
+    ]
   },
   {
     "id": "anomaly-Crop-Circles-48",

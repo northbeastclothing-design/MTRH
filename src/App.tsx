@@ -725,9 +725,9 @@ const processIncomingRecord = (item: any, index: number) => {
 const LAYER_CONFIG: Record<string, { color: string; icon: string }> = {
   'War.gov UFO files 01': { color: '#FF9BE1', icon: 'https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/icons/icon-dept-war.svg' },
   'War.gov UFO files 02': { color: '#D29BFF', icon: 'https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/icons/icon-dept-war.svg' },
-  'Nephilim': { color: '#E8E0CB', icon: '/icons/icon-giants.svg' },
+  'Nephilim': { color: '#ECCE81', icon: '/icons/icon-giants.svg' },
   'U.F.O. Sightings': { color: '#C2FFBD', icon: '/icons/icon-ufo-sightings.svg' },
-  'Bigfoot Sightings': { color: '#FFDCBB', icon: '/icons/icon-bigfoot-sightings.svg' },
+  'Bigfoot Sightings': { color: '#C6986D', icon: '/icons/icon-bigfoot-sightings.svg' },
   'Cryptid Sightings': { color: '#AFFFEC', icon: '/icons/icon-cryptid-sightings.svg' },
   'Underworld Entrances': { color: '#D3C5FB', icon: '/icons/icon-entrances-to-underworld.svg' },
   'Ancient Texts': { color: '#F6E8C1', icon: '/icons/icon-ancient-texts.svg' },
