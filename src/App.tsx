@@ -548,7 +548,8 @@ const cleanAndProxyImageUrl = (url: any) => {
     lowerUrl.includes('wikimedia.org') || 
     lowerUrl.includes('wikipedia.org') || 
     lowerUrl.includes('unsplash.com') ||
-    lowerUrl.includes('wonders-of-the-world.net')
+    lowerUrl.includes('wonders-of-the-world.net') ||
+    lowerUrl.includes('circleresearcharchive.com')
   ) {
     return trimmedUrl;
   }
