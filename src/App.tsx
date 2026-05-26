@@ -1689,8 +1689,8 @@ function App() {
   useEffect(() => {
     const windowEnd = timelineWindowStart + timelineWindowSpan;
     const timelineWidth = timelineRef.current?.offsetWidth || 0;
-    // Calculate gap in years equivalent to 8px thumb width
-    const gap = timelineWidth > 0 ? (8 / timelineWidth) * timelineWindowSpan : 0;
+    // Calculate gap in years equivalent to 12px thumb width
+    const gap = timelineWidth > 0 ? (12 / timelineWidth) * timelineWindowSpan : 0;
 
     setYearRange(prev => {
       let newStart = prev.start;
@@ -4627,7 +4627,7 @@ function App() {
                                   onChange={(e) => {
                                     const val = parseFloat(e.target.value);
                                     const width = e.currentTarget.offsetWidth;
-                                    const gap = width > 0 ? (8 / width) * timelineWindowSpan : 0;
+                                    const gap = width > 0 ? (12 / width) * timelineWindowSpan : 0;
                                     setYearRange(p => ({ ...p, start: Math.min(val, p.end - gap) }));
                                   }}
                                   style={{ 
@@ -4645,7 +4645,7 @@ function App() {
                                   onChange={(e) => {
                                     const val = parseFloat(e.target.value);
                                     const width = e.currentTarget.offsetWidth;
-                                    const gap = width > 0 ? (8 / width) * timelineWindowSpan : 0;
+                                    const gap = width > 0 ? (12 / width) * timelineWindowSpan : 0;
                                     setYearRange(p => ({ ...p, end: Math.max(val, p.start + gap) }));
                                   }}
                                   style={{ 
@@ -5108,10 +5108,13 @@ function App() {
           -webkit-appearance: none !important; 
           appearance: none !important; 
           pointer-events: auto !important; 
-          width: 8px !important; 
+          width: 12px !important; 
           height: 24px !important; 
           border-radius: 4px !important; 
           background-color: ${isMapDarkMode ? '#ffffff' : '#000000'} !important; 
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='${isMapDarkMode ? 'black' : 'white'}' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E") !important;
+          background-position: center !important;
+          background-repeat: no-repeat !important;
           cursor: pointer !important; 
           border: ${isMapDarkMode ? '1px solid #000000' : 'none'} !important;
           margin-top: 0 !important;
@@ -5119,10 +5122,13 @@ function App() {
         .figma-slider-thumb-left::-moz-range-thumb { 
           appearance: none !important; 
           pointer-events: auto !important; 
-          width: 8px !important; 
+          width: 12px !important; 
           height: 24px !important; 
           border-radius: 4px !important; 
           background-color: ${isMapDarkMode ? '#ffffff' : '#000000'} !important; 
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='${isMapDarkMode ? 'black' : 'white'}' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E") !important;
+          background-position: center !important;
+          background-repeat: no-repeat !important;
           cursor: pointer !important; 
           border: ${isMapDarkMode ? '1px solid #000000' : 'none'} !important;
         }
@@ -5131,10 +5137,13 @@ function App() {
           -webkit-appearance: none !important; 
           appearance: none !important; 
           pointer-events: auto !important; 
-          width: 8px !important; 
+          width: 12px !important; 
           height: 24px !important; 
           border-radius: 4px !important; 
           background-color: ${isMapDarkMode ? '#ffffff' : '#000000'} !important; 
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='${isMapDarkMode ? 'black' : 'white'}' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='15 18 9 12 15 6'%3E%3C/polyline%3E%3C/svg%3E") !important;
+          background-position: center !important;
+          background-repeat: no-repeat !important;
           cursor: pointer !important; 
           border: ${isMapDarkMode ? '1px solid #000000' : 'none'} !important;
           margin-top: 0 !important;
@@ -5142,10 +5151,13 @@ function App() {
         .figma-slider-thumb-right::-moz-range-thumb { 
           appearance: none !important; 
           pointer-events: auto !important; 
-          width: 8px !important; 
+          width: 12px !important; 
           height: 24px !important; 
           border-radius: 4px !important; 
           background-color: ${isMapDarkMode ? '#ffffff' : '#000000'} !important; 
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='${isMapDarkMode ? 'black' : 'white'}' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='15 18 9 12 15 6'%3E%3C/polyline%3E%3C/svg%3E") !important;
+          background-position: center !important;
+          background-repeat: no-repeat !important;
           cursor: pointer !important; 
           border: ${isMapDarkMode ? '1px solid #000000' : 'none'} !important;
         }
