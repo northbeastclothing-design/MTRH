@@ -4575,7 +4575,7 @@ function App() {
                         {/* INPUTS FOR RANGE SELECTION (ON THE TIMELINE) AND HIGHLIGHT BAR */}
                         <div style={{
                           position: 'absolute',
-                          bottom: '30px', // Moved up a few pixels to prevent covering the date numbers on the bottom
+                          bottom: '32px', // Moved up to prevent covering the date numbers on the bottom
                           left: '0px',
                           right: '0px',
                           height: '24px',
