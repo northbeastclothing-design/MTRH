@@ -5112,7 +5112,7 @@ function App() {
           height: 24px !important; 
           border-radius: 4px !important; 
           background-color: ${isMapDarkMode ? '#ffffff' : '#000000'} !important; 
-          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='${isMapDarkMode ? 'black' : 'white'}' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E") !important;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='${isMapDarkMode ? 'black' : 'white'}' stroke-width='1' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E") !important;
           background-position: center !important;
           background-repeat: no-repeat !important;
           cursor: pointer !important; 
@@ -5126,7 +5126,7 @@ function App() {
           height: 24px !important; 
           border-radius: 4px !important; 
           background-color: ${isMapDarkMode ? '#ffffff' : '#000000'} !important; 
-          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='${isMapDarkMode ? 'black' : 'white'}' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E") !important;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='${isMapDarkMode ? 'black' : 'white'}' stroke-width='1' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E") !important;
           background-position: center !important;
           background-repeat: no-repeat !important;
           cursor: pointer !important; 
@@ -5141,7 +5141,7 @@ function App() {
           height: 24px !important; 
           border-radius: 4px !important; 
           background-color: ${isMapDarkMode ? '#ffffff' : '#000000'} !important; 
-          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='${isMapDarkMode ? 'black' : 'white'}' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='15 18 9 12 15 6'%3E%3C/polyline%3E%3C/svg%3E") !important;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='${isMapDarkMode ? 'black' : 'white'}' stroke-width='1' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='15 18 9 12 15 6'%3E%3C/polyline%3E%3C/svg%3E") !important;
           background-position: center !important;
           background-repeat: no-repeat !important;
           cursor: pointer !important; 
@@ -5155,7 +5155,7 @@ function App() {
           height: 24px !important; 
           border-radius: 4px !important; 
           background-color: ${isMapDarkMode ? '#ffffff' : '#000000'} !important; 
-          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='${isMapDarkMode ? 'black' : 'white'}' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='15 18 9 12 15 6'%3E%3C/polyline%3E%3C/svg%3E") !important;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='${isMapDarkMode ? 'black' : 'white'}' stroke-width='1' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='15 18 9 12 15 6'%3E%3C/polyline%3E%3C/svg%3E") !important;
           background-position: center !important;
           background-repeat: no-repeat !important;
           cursor: pointer !important; 
