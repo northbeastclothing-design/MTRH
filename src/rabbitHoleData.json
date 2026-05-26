@@ -18135,5 +18135,325 @@
     "images": [
       "https://circleresearcharchive.com/wp-content/uploads/2012/06/broad-hinton-wiltshire-crop-circle-2012-google-earth.jpg"
     ]
+  },
+  {
+    "id": "anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-15",
+    "name": "Stonehenge",
+    "category": "Megaliths / Dolmans / Petroglyphs / Geoglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lng": -1.82611111,
+      "lat": 51.17888889
+    },
+    "date": null,
+    "description": "A prehistoric stone circle on Salisbury Plain. Conspiracy theorists suggest it was constructed using acoustic levitation by giants or pre-diluvian builders to act as a massive telluric energy harvester, planetary stabilizer, and astronomical computer.",
+    "source": "Wikipedia / Historical Mystery Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Stonehenge2007_07_30.jpg/1280px-Stonehenge2007_07_30.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-16",
+    "name": "Carnac Stones",
+    "category": "Megaliths / Dolmans / Petroglyphs / Geoglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lng": -3.06388889,
+      "lat": 47.59722222
+    },
+    "date": null,
+    "description": "An exceptionally dense collection of over 3,000 standing stones in Brittany, France. Believed by alternative theorists to be a massive ancient seismic monitoring system or a giant acoustic wave-guide array designed to map telluric energy lines.",
+    "source": "Wikipedia / Historical Mystery Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/4748.1099_Menhire%2C_bis_zu_4_Meter_hoch%2C_von_OstnachWest_in_1167_Meter_Langen_Alignements_%28Granit-Steinreihen%29_in_einem_Halbkreis_endend_Le_M%C3%A9nec%2C_Carnac%2C_Departement_Morbihan%2C_Bretagne_Steffen_Heilfort.jpg/1280px-thumbnail.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-17",
+    "name": "Puma Punku",
+    "category": "Megaliths / Dolmans / Petroglyphs / Geoglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lng": -68.67993,
+      "lat": -16.56169
+    },
+    "date": null,
+    "description": "An ancient Tiwanaku site in Bolivia famous for its high-precision, interlocking H-shaped diorite blocks. Theorists highlight the advanced stone-cutting, straight edges, and perfect drill holes as evidence of pre-diluvian power tools or alien construction.",
+    "source": "Wikipedia / Historical Mystery Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Puma_Punku14.JPG/1280px-Puma_Punku14.JPG"
+    ]
+  },
+  {
+    "id": "anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-18",
+    "name": "Saksaywaman",
+    "category": "Megaliths / Dolmans / Petroglyphs / Geoglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lng": -71.98222222,
+      "lat": -13.50777778
+    },
+    "date": null,
+    "description": "A citadel on the northern outskirts of Cusco, Peru, featuring colossal walls built from perfectly fitted stones weighing up to 125 tons. The jigsaw precision has led to claims that the ancient builders used solar mirrors or plant-based chemical mixtures to soften and mold the stone.",
+    "source": "Wikipedia / Historical Mystery Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Sacsayhuam%C3%A1n%2C_Cusco%2C_Per%C3%BA%2C_2015-07-31%2C_DD_27.JPG/1280px-Sacsayhuam%C3%A1n%2C_Cusco%2C_Per%C3%BA%2C_2015-07-31%2C_DD_27.JPG"
+    ]
+  },
+  {
+    "id": "anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-19",
+    "name": "Baalbek Temple Complex",
+    "category": "Megaliths / Dolmans / Petroglyphs / Geoglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lng": 36.20732222,
+      "lat": 34.00633611
+    },
+    "date": null,
+    "description": "A Lebanese temple complex housing the largest cut stone blocks in antiquity, including the Trilithon blocks weighing 800 tons each. Theorists suggest this massive, flat stone platform predates Roman construction and was a launch pad or landing grid for ancient aerial vehicles.",
+    "source": "Wikipedia / Historical Mystery Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Temple_of_Bacchus%2C_Baalbek%2C_Lebanon_%2849890013476%29.jpg/1280px-Temple_of_Bacchus%2C_Baalbek%2C_Lebanon_%2849890013476%29.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-20",
+    "name": "Newgrange",
+    "category": "Megaliths / Dolmans / Petroglyphs / Geoglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lng": -6.4755655,
+      "lat": 53.6947251
+    },
+    "date": null,
+    "description": "A 5,000-year-old passage tomb in Ireland. Theorists argue that the chamber's precise alignment with the winter solstice sunrise, combined with the famous triple-spiral carvings, indicates it functioned as an ancient initiatory chamber, calendar, or acoustic resonator.",
+    "source": "Wikipedia / Historical Mystery Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Irelands_history.jpg/1280px-Irelands_history.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-21",
+    "name": "Avebury Stone Circle",
+    "category": "Megaliths / Dolmans / Petroglyphs / Geoglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lng": -1.85416667,
+      "lat": 51.42861111
+    },
+    "date": null,
+    "description": "The largest megalithic stone circle in the world, enclosing an entire village in Wiltshire, England. Believed by theorists to be a massive electromagnetic capacitor, focusing telluric currents along the St. Michael's lay line grid.",
+    "source": "Wikipedia / Historical Mystery Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Wiltshire-Avebury.jpg/1280px-Wiltshire-Avebury.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-22",
+    "name": "Gunung Padang",
+    "category": "Megaliths / Dolmans / Petroglyphs / Geoglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lng": 107.05638889,
+      "lat": -6.99388889
+    },
+    "date": null,
+    "description": "A massive terraced step pyramid in West Java, Indonesia, claimed by some geologists to date back over 20,000 years. Rumored to hide subterranean chambers, lost technology, and evidence of a pre-ice age global civilization.",
+    "source": "Wikipedia / Historical Mystery Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Situs_Megalitikum_Gunung_Padang_Cianjur.jpg/1280px-Situs_Megalitikum_Gunung_Padang_Cianjur.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-23",
+    "name": "Yonaguni Monument",
+    "category": "Megaliths / Dolmans / Petroglyphs / Geoglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lng": 123.011389,
+      "lat": 24.435833
+    },
+    "date": null,
+    "description": "An underwater rock formation off the coast of Japan featuring flat parallel faces, sharp edges, and right angles. Believed by alternative historians to be a submerged pre-glacial monument from the lost continent of Mu.",
+    "source": "Wikipedia / Historical Mystery Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Yonaguni_Monument_Terraces_midpart_NWW.jpg/1280px-Yonaguni_Monument_Terraces_midpart_NWW.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-24",
+    "name": "Callanish Stones",
+    "category": "Megaliths / Dolmans / Petroglyphs / Geoglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lng": -6.7451448,
+      "lat": 58.197541
+    },
+    "date": null,
+    "description": "A cruciform standing stone alignment on the Isle of Lewis, Scotland. Believed to be an ancient celestial clock and energy portal, aligning with the moon's major standstill every 18.6 years to open inter-dimensional gateways.",
+    "source": "Wikipedia / Historical Mystery Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/7/77/Callanish_at_sunset_-_geograph.org.uk_-_820680.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-25",
+    "name": "Mnajdra Temples",
+    "category": "Megaliths / Dolmans / Petroglyphs / Geoglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lng": 14.43638889,
+      "lat": 35.82666667
+    },
+    "date": null,
+    "description": "A megalithic temple complex in Malta. Theorists suggest its astronomical alignments and 'oracle holes' were used to focus planetary consciousness, harness solar alignments, and perform acoustic sound healing.",
+    "source": "Wikipedia / Historical Mystery Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/5/50/Sudika_Mnajdra_porthole.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-26",
+    "name": "Hagar Qim Temple",
+    "category": "Megaliths / Dolmans / Petroglyphs / Geoglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lng": 14.44222222,
+      "lat": 35.82777778
+    },
+    "date": null,
+    "description": "An ancient temple in Malta featuring massive single-stone walls, including a slab weighing 20 tons. Local legends attribute the construction to a prehistoric race of giants who inhabited the island before the biblical flood.",
+    "source": "Wikipedia / Historical Mystery Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Facade_Hagar_Qim.jpg/1280px-Facade_Hagar_Qim.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-27",
+    "name": "Nan Madol",
+    "category": "Megaliths / Dolmans / Petroglyphs / Geoglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lng": 158.33222222,
+      "lat": 6.84194444
+    },
+    "date": null,
+    "description": "A ruined city built on coral reefs in Micronesia using massive basalt columns. Local legends say the stones were levitated into place using acoustic sorcery, while theorists link the ruins to the lost continent of Lemuria.",
+    "source": "Wikipedia / Historical Mystery Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Nan_madol.jpg/1280px-Nan_madol.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-28",
+    "name": "Plain of Jars",
+    "category": "Megaliths / Dolmans / Petroglyphs / Geoglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lng": 103.1525,
+      "lat": 19.4311
+    },
+    "date": null,
+    "description": "Thousands of massive stone jars scattered across the valleys of Laos. Theorists suggest they were not for burials or wine storage, but acted as ancient energy cells, chemical distillation vats, or acoustic transmitters.",
+    "source": "Wikipedia / Historical Mystery Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/d/d3/Plainofjars_2.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-29",
+    "name": "Zorats Karer (Karahunj)",
+    "category": "Megaliths / Dolmans / Petroglyphs / Geoglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lng": 46.0286,
+      "lat": 39.5507
+    },
+    "date": null,
+    "description": "An Armenian stone circle featuring neat circular holes drilled through the tops of many stones. Theorists claim it is a 7,500-year-old astronomical observatory and stellar portal, predating Stonehenge by millennia.",
+    "source": "Wikipedia / Historical Mystery Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/d/d3/1_%282%29_-_Copy.png"
+    ]
+  },
+  {
+    "id": "anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-30",
+    "name": "Al Naslaa Rock Split",
+    "category": "Megaliths / Dolmans / Petroglyphs / Geoglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lng": 38.57158,
+      "lat": 27.22945
+    },
+    "date": null,
+    "description": "A sandstone formation in Saudi Arabia split perfectly down the middle with laser-like precision, sitting on tiny natural pedestals. Theorists claim the split was caused by ancient laser technology or precision beam cutting.",
+    "source": "Wikipedia / Historical Mystery Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Al_Naslaa_Rock_20211021_105005.jpg/1280px-Al_Naslaa_Rock_20211021_105005.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-31",
+    "name": "Senegambian Stone Circles",
+    "category": "Megaliths / Dolmans / Petroglyphs / Geoglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lng": -15.5225,
+      "lat": 13.69111111
+    },
+    "date": null,
+    "description": "Thousands of megalithic stone circles in West Africa. Theorists suggest they are situated on local magnetic vortices, acting as planetary acupuncture points to stabilize earth energies.",
+    "source": "Wikipedia / Historical Mystery Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Wassu_Stone_Circle.jpg/1280px-Wassu_Stone_Circle.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-32",
+    "name": "Mongolian Deer Stones",
+    "category": "Megaliths / Dolmans / Petroglyphs / Geoglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lng": 101.371529,
+      "lat": 47.750743
+    },
+    "date": null,
+    "description": "Ancient standing stones in Mongolia carved with flying reindeer and weapons. Theorists suggest they depict ancient aerial travelers, spirit flight, or shamanic dimensional travel paths.",
+    "source": "Wikipedia / Historical Mystery Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Tsatsyn_Denj_Deerstone.jpg/1280px-Tsatsyn_Denj_Deerstone.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-33",
+    "name": "Ring of Brodgar",
+    "category": "Megaliths / Dolmans / Petroglyphs / Geoglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lng": -3.2297227,
+      "lat": 59.0014818
+    },
+    "date": null,
+    "description": "A massive stone circle in Orkney, Scotland. Believed to be a focal point for lunar energies and a major node in the northern European lay line network.",
+    "source": "Wikipedia / Historical Mystery Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Ring_of_Brodgar%2C_Orkney.jpg/1280px-Ring_of_Brodgar%2C_Orkney.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-34",
+    "name": "Masuda no Iwafune (Rock Ship)",
+    "category": "Megaliths / Dolmans / Petroglyphs / Geoglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lng": 135.788741,
+      "lat": 34.470424
+    },
+    "date": null,
+    "description": "A colossal, 800-ton carved granite block in Asuka, Nara, Japan, with square holes cut into its top. Conspiracy theorists suggest it is an ancient machine base, a monument commemorating extraterrestrial 'rock ships', or a pre-diluvian astronomical observation platform.",
+    "source": "Wikipedia / Historical Mystery Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Masudanoiwafune.JPG/1280px-Masudanoiwafune.JPG"
+    ]
   }
 ]
