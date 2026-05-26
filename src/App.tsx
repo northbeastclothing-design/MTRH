@@ -2087,7 +2087,13 @@ function App() {
   const groupedLocations = useMemo(() => {
     const groups: Record<string, any[]> = {};
     uniqueCategories.forEach(cat => { groups[cat] = []; });
-    visibleData.forEach(item => { item.categories.forEach((cat: string) => { if (groups[cat]) groups[cat].push(item); }); });
+    visibleData.forEach(item => {
+      // Do not show LineString features (tunnels/lines) in the left sidebar list
+      if (item && item.type === 'LineString') return;
+      item.categories.forEach((cat: string) => {
+        if (groups[cat]) groups[cat].push(item);
+      });
+    });
     
     // Sort items within each layer
     Object.keys(groups).forEach(cat => {
