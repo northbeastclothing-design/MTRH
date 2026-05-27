@@ -3840,7 +3840,7 @@ function App() {
                                       justifyContent: 'center'
                                     }}
                                   >
-                                    <div style={{ width: '100%', height: '100%', pointerEvents: 'none' }}>
+                                    <div style={{ width: '100%', height: '100%', pointerEvents: 'none', overflow: 'hidden', position: 'relative' }}>
                                       {(curAsset.url.includes('youtube.com') || 
                                        curAsset.url.includes('youtu.be') || 
                                        curAsset.url.includes('dvidshub.net/video/')) ? (
@@ -3848,7 +3848,14 @@ function App() {
                                           width="100%"
                                           height="100%"
                                           src={`${getEmbedUrl(curAsset.url)}?autoplay=0&controls=0&mute=1`}
-                                          style={{ border: 'none', width: '100%', height: '100%' }}
+                                          style={{ 
+                                            border: 'none', 
+                                            width: '100%', 
+                                            height: '100%',
+                                            transform: (curAsset.url.includes('dvidshub.net') || curAsset.url.includes('youtube.com') || curAsset.url.includes('youtu.be'))
+                                              ? 'scale(1.35)'
+                                              : 'none'
+                                          }}
                                           title="Video asset viewport"
                                         />
                                       ) : (
@@ -3861,7 +3868,7 @@ function App() {
                                           muted
                                           playsInline
                                           preload="metadata"
-                                          style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                                          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                                         />
                                       )}
                                     </div>
