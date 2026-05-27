@@ -5086,8 +5086,8 @@ function App() {
         }
 
         .custom-sidebar-scrollbar::-webkit-scrollbar {
-          width: 8px;
-          height: 8px;
+          width: 5px;
+          height: 5px;
         }
         .custom-sidebar-scrollbar::-webkit-scrollbar-track {
           background: ${isMapDarkMode ? '#000000' : '#ffffff'};
@@ -5108,8 +5108,8 @@ function App() {
           overflow-y: scroll;
         }
         .custom-scrollbar::-webkit-scrollbar {
-          width: 10px;
-          height: 10px;
+          width: 5px;
+          height: 5px;
         }
         .custom-scrollbar::-webkit-scrollbar-track {
           background: ${isMapDarkMode ? '#000000' : '#ffffff'};
