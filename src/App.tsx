@@ -724,8 +724,8 @@ const processIncomingRecord = (item: any, index: number) => {
 };
 
 const LAYER_CONFIG: Record<string, { color: string; icon: string }> = {
-  'War.gov UFO files 01': { color: '#FF9BE1', icon: 'https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/icons/icon-dept-war.svg' },
-  'War.gov UFO files 02': { color: '#D29BFF', icon: 'https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/icons/icon-dept-war.svg' },
+  'War.gov UFO files 01': { color: '#FF9BE1', icon: '/icons/icon-dept-war.svg' },
+  'War.gov UFO files 02': { color: '#D29BFF', icon: '/icons/icon-dept-war-02.svg' },
   'Nephilim': { color: '#ECCE81', icon: '/icons/icon-giants.svg' },
   'U.F.O. Sightings': { color: '#C2FFBD', icon: '/icons/icon-ufo-sightings.svg' },
   'Bigfoot Sightings': { color: '#C6986D', icon: '/icons/icon-bigfoot-sightings.svg' },
@@ -5090,35 +5090,42 @@ function App() {
           height: 8px;
         }
         .custom-sidebar-scrollbar::-webkit-scrollbar-track {
-          background: #ffffff;
-          border-left: 1px solid rgba(0, 0, 0, 0.05);
+          background: ${isMapDarkMode ? '#000000' : '#ffffff'};
+          border-left: 1px solid ${isMapDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.05)'};
         }
         .custom-sidebar-scrollbar::-webkit-scrollbar-thumb {
-          background: #000000;
+          background: ${isMapDarkMode ? '#ffffff' : '#000000'};
           border-radius: 0px;
         }
-        .custom-sidebar-scrollbar {
-          scrollbar-width: thin;
-          scrollbar-color: #000000 #ffffff;
+        @supports not selector(::-webkit-scrollbar) {
+          .custom-sidebar-scrollbar {
+            scrollbar-width: thin;
+            scrollbar-color: ${isMapDarkMode ? '#ffffff #000000' : '#000000 #ffffff'};
+          }
         }
 
         .custom-scrollbar {
           overflow-y: scroll;
-          scrollbar-width: thin;
-          scrollbar-color: #000000 #ffffff;
         }
         .custom-scrollbar::-webkit-scrollbar {
           width: 10px;
+          height: 10px;
         }
         .custom-scrollbar::-webkit-scrollbar-track {
-          background: #ffffff;
+          background: ${isMapDarkMode ? '#000000' : '#ffffff'};
         }
         .custom-scrollbar::-webkit-scrollbar-thumb {
-          background: #000000;
+          background: ${isMapDarkMode ? '#ffffff' : '#000000'};
           border-radius: 0px !important;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-          background: #333333;
+          background: ${isMapDarkMode ? '#cccccc' : '#333333'};
+        }
+        @supports not selector(::-webkit-scrollbar) {
+          .custom-scrollbar {
+            scrollbar-width: thin;
+            scrollbar-color: ${isMapDarkMode ? '#ffffff #000000' : '#000000 #ffffff'};
+          }
         }
 
         .timeline-zoom-slider { -webkit-appearance: none !important; appearance: none !important; }

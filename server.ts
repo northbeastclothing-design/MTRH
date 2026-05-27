@@ -53,7 +53,7 @@ async function authorizeDomain(domain: string) {
     console.log(`[Domain Auth] Attempting to authorize domain "${domain}" on Firebase...`);
     const credential = admin.app().options.credential || admin.credential.applicationDefault();
     const tokenObj = await credential.getAccessToken();
-    const token = tokenObj.accessToken || tokenObj.access_token || (tokenObj as any).token;
+    const token = (tokenObj as any).accessToken || (tokenObj as any).access_token || (tokenObj as any).token;
 
     if (!token) {
       console.warn("[Domain Auth] Could not retrieve access token for Identity Toolkit config API.");
