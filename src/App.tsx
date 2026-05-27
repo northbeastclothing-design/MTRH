@@ -3845,16 +3845,15 @@ function App() {
                                        curAsset.url.includes('youtu.be') || 
                                        curAsset.url.includes('dvidshub.net/video/')) ? (
                                         <iframe
-                                          width="100%"
-                                          height="100%"
                                           src={`${getEmbedUrl(curAsset.url)}?autoplay=0&controls=0&mute=1`}
                                           style={{ 
                                             border: 'none', 
-                                            width: '100%', 
-                                            height: '100%',
-                                            transform: (curAsset.url.includes('dvidshub.net') || curAsset.url.includes('youtube.com') || curAsset.url.includes('youtu.be'))
-                                              ? 'scale(1.35)'
-                                              : 'none'
+                                            position: 'absolute',
+                                            top: '50%',
+                                            left: '50%',
+                                            transform: 'translate(-50%, -50%)',
+                                            width: '180%', 
+                                            height: '180%'
                                           }}
                                           title="Video asset viewport"
                                         />
