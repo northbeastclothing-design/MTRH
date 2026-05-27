@@ -92,7 +92,7 @@ const CATEGORY_DESCRIPTIONS: Record<string, string> = {
   'Cave Drawings': 'Prehistoric art depicting events, entities, and astronomical phenomena.',
   'Dolmans': 'Mysterious single-chamber megalithic tombs consisting of massive upright stones.',
   'Underworld Entrances': 'Purported Entrances to the Underworld from lore, legends, and modern times.',
-  'Ghosts': 'Areas reported to have high levels of paranormal activity and spectral apparitions.',
+  'Ghosts & Hauntings': 'Areas reported to have high levels of paranormal activity and spectral apparitions.',
   'National Parks & Reserves': 'The intersection of vast wilderness and unexplained disappearances.',
   'Crop Circles': 'Intricate patterns appearing in fields, often appearing overnight with no clear earthly explanation.',
   'Meteor Impact Craters': 'Confirmed impact structures on Earth created by ancient meteorite collisions, marking catastrophic cosmic encounters throughout geological history.'
@@ -638,7 +638,7 @@ const processIncomingRecord = (item: any, index: number) => {
   else if (lowerCat.includes('crop') || lowerCat.includes('circle')) normalizedCategory = 'Crop Circles';
   else if (lowerCat.includes('megalith')) normalizedCategory = 'Megaliths';
   else if (lowerCat.includes('dumb') || lowerCat.includes('d.u.m.b')) normalizedCategory = 'D.U.M.B.\'s';
-  else if (lowerCat.includes('ghost')) normalizedCategory = 'Ghosts';
+  else if (lowerCat.includes('ghost') || lowerCat.includes('haunt')) normalizedCategory = 'Ghosts & Hauntings';
   else if (lowerCat.includes('national park') || lowerCat.includes('reserve')) normalizedCategory = 'National Parks & Reserves';
   else if (lowerCat.includes('blurred')) normalizedCategory = 'Blurred on Google Maps';
   else if (lowerCat.includes('meteor') || lowerCat.includes('crater') || lowerCat.includes('impact structure')) normalizedCategory = 'Meteor Impact Craters';
@@ -736,7 +736,7 @@ const LAYER_CONFIG: Record<string, { color: string; icon: string }> = {
   'Cave Drawings': { color: '#FFABA6', icon: '/icons/icon-cave-drawings.svg' },
   'Crop Circles': { color: '#FFF96A', icon: '/icons/icon-crop-circles.svg' },
   'D.U.M.B.\'s': { color: '#BAEAF4', icon: '/icons/icon-dumbs.svg' },
-  'Ghosts': { color: '#BDC4FF', icon: '/icons/icon-ghosts.svg' },
+  'Ghosts & Hauntings': { color: '#BDC4FF', icon: '/icons/icon-ghosts.svg' },
   'Megaliths': { color: '#FFFBA6', icon: '/icons/icon-megaliths.svg' },
   'Petroglyphs': { color: '#FFCBA6', icon: '/icons/icon-petroglyphs.svg' },
   'National Parks & Reserves': { color: '#9FF3BC', icon: '/icons/icon-national-parks-reserves.svg' },
