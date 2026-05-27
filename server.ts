@@ -244,6 +244,85 @@ async function startServer() {
     }
   });
 
+  app.get("/api/debug-domain-auth", async (req, res) => {
+    try {
+      const logs: string[] = [];
+      const targetDomain = "mappingtherabbithole.com";
+      
+      logs.push(`[Debug] Target domain to check: ${targetDomain}`);
+      logs.push(`[Debug] Project ID: ${firebaseProjectId}`);
+      
+      if (!firebaseProjectId) {
+        return res.json({ error: "firebaseProjectId is not set.", logs });
+      }
+
+      const credential = admin.app().options.credential || admin.credential.applicationDefault();
+      logs.push(`[Debug] Credential class: ${credential.constructor.name}`);
+      
+      let token;
+      try {
+        const tokenObj = await credential.getAccessToken();
+        token = tokenObj.accessToken;
+        logs.push(`[Debug] Access token retrieved successfully (ends with ...${token.substring(token.length - 8)})`);
+      } catch (err: any) {
+        logs.push(`[Debug] Failed to retrieve access token: ${err.message || err}`);
+        return res.json({ error: "Access token retrieval failed", logs });
+      }
+
+      const configUrl = `https://identitytoolkit.googleapis.com/admin/v2/projects/${firebaseProjectId}/config`;
+      logs.push(`[Debug] Fetching config from: ${configUrl}`);
+
+      const getRes = await fetch(configUrl, {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      });
+
+      logs.push(`[Debug] GET request status: ${getRes.status}`);
+      const getResBody = await getRes.text();
+      logs.push(`[Debug] GET request response: ${getResBody}`);
+
+      if (!getRes.ok) {
+        return res.json({ error: `Identity Toolkit GET config returned ${getRes.status}`, logs });
+      }
+
+      const config = JSON.parse(getResBody);
+      const currentDomains: string[] = config.authorizedDomains || [];
+      logs.push(`[Debug] Current whitelisted domains: ${JSON.stringify(currentDomains)}`);
+
+      if (!currentDomains.includes(targetDomain)) {
+        const updatedDomains = [...currentDomains, targetDomain];
+        logs.push(`[Debug] Whitelisting domain: ${targetDomain}`);
+
+        const patchRes = await fetch(`${configUrl}?updateMask=authorizedDomains`, {
+          method: "PATCH",
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            authorizedDomains: updatedDomains
+          })
+        });
+
+        logs.push(`[Debug] PATCH request status: ${patchRes.status}`);
+        const patchResBody = await patchRes.text();
+        logs.push(`[Debug] PATCH request response: ${patchResBody}`);
+
+        if (patchRes.ok) {
+          res.json({ success: true, message: `Successfully authorized domain: ${targetDomain}`, logs });
+        } else {
+          res.json({ error: `Identity Toolkit PATCH returned ${patchRes.status}`, logs });
+        }
+      } else {
+        res.json({ success: true, message: `Domain "${targetDomain}" is already in authorized list.`, logs });
+      }
+
+    } catch (err: any) {
+      res.json({ error: err.message || String(err), stack: err.stack });
+    }
+  });
+
   app.post("/api/moderate/reject", async (req, res) => {
     try {
       const { docId, passcode } = req.body;
