@@ -53,7 +53,7 @@ async function authorizeDomain(domain: string) {
     console.log(`[Domain Auth] Attempting to authorize domain "${domain}" on Firebase...`);
     const credential = admin.app().options.credential || admin.credential.applicationDefault();
     const tokenObj = await credential.getAccessToken();
-    const token = tokenObj.accessToken;
+    const token = tokenObj.accessToken || tokenObj.access_token || (tokenObj as any).token;
 
     if (!token) {
       console.warn("[Domain Auth] Could not retrieve access token for Identity Toolkit config API.");
@@ -262,7 +262,11 @@ async function startServer() {
       let token;
       try {
         const tokenObj = await credential.getAccessToken();
-        token = tokenObj.accessToken;
+        logs.push(`[Debug] Token object keys: ${JSON.stringify(Object.keys(tokenObj))}`);
+        token = tokenObj.accessToken || tokenObj.access_token || (tokenObj as any).token;
+        if (!token) {
+          throw new Error("Token string is undefined in token object.");
+        }
         logs.push(`[Debug] Access token retrieved successfully (ends with ...${token.substring(token.length - 8)})`);
       } catch (err: any) {
         logs.push(`[Debug] Failed to retrieve access token: ${err.message || err}`);
