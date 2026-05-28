@@ -769,6 +769,44 @@ const matchParkName = (featName: string, targetName: string) => {
   return cleanFeat.includes(cleanTarget) || cleanTarget.includes(cleanFeat);
 };
 
+const getMatchScore = (featName: string, targetName: string) => {
+  if (!featName || !targetName) return 0;
+  const cleanFeat = featName.toLowerCase()
+    .replace(/[^a-z0-9]/g, '')
+    .replace('nationalparkandpreserve', '')
+    .replace('nationalparkreserve', '')
+    .replace('nationalparksreserves', '')
+    .replace('nationalpark', '')
+    .replace('nationalreserve', '')
+    .replace('nationalpreserve', '')
+    .replace('nationalmonument', '');
+  const cleanTarget = targetName.toLowerCase()
+    .replace(/[^a-z0-9]/g, '')
+    .replace('nationalparkandpreserve', '')
+    .replace('nationalparkreserve', '')
+    .replace('nationalparksreserves', '')
+    .replace('nationalpark', '')
+    .replace('nationalreserve', '')
+    .replace('nationalpreserve', '')
+    .replace('nationalmonument', '');
+
+  if (cleanFeat === cleanTarget) {
+    return 100;
+  }
+
+  const featHasWilderness = featName.toLowerCase().includes('wilderness');
+  const targetHasWilderness = targetName.toLowerCase().includes('wilderness');
+  if (featHasWilderness !== targetHasWilderness) {
+    return 10;
+  }
+
+  if (cleanFeat.includes(cleanTarget) || cleanTarget.includes(cleanFeat)) {
+    return 50;
+  }
+
+  return 0;
+};
+
 function App() {
   const mapContainer = useRef<HTMLDivElement>(null);
   const mapRef = useRef<mapboxgl.Map | null>(null);
@@ -781,6 +819,8 @@ function App() {
   const [pointsAndLinesData, setPointsAndLinesData] = useState<any[]>([]);
   const [approvedSubmissions, setApprovedSubmissions] = useState<any[]>([]);
   const [isLiveLoading, setIsLiveLoading] = useState(true);
+  const [isMapLoaded, setIsMapLoaded] = useState(false);
+  const [isDataCompiled, setIsDataCompiled] = useState(false);
   const [showAboutModal, setShowAboutModal] = useState(true);
 
   // Combine original static / scraped data and approved user submissions
@@ -919,6 +959,9 @@ function App() {
   const [isSubGeocoding, setIsSubGeocoding] = useState(false);
   const [subGeocodeMsg, setSubGeocodeMsg] = useState<{ text: string, type: 'success' | 'error' } | null>(null);
   const [isCategoryDropdownOpen, setIsCategoryDropdownOpen] = useState(false);
+
+  // Onboarding Tour State
+  const [onboardingStep, setOnboardingStep] = useState<number | null>(null);
 
   // Moderator State
   const [isModeratorOpen, setIsModeratorOpen] = useState(false);
@@ -1761,12 +1804,19 @@ function App() {
 
   // Load user likes from localStorage
   useEffect(() => {
-    const stored = localStorage.getItem('userLikedIds');
-    if (stored) {
-      try {
-        setUserLikedIds(new Set(JSON.parse(stored)));
-      } catch (e) {
-        console.error('Failed to parse userLikedIds', e);
+    const likesCleared = localStorage.getItem('likes_cleared_2026_05_28');
+    if (!likesCleared) {
+      localStorage.removeItem('userLikedIds');
+      localStorage.setItem('likes_cleared_2026_05_28', 'true');
+      setUserLikedIds(new Set());
+    } else {
+      const stored = localStorage.getItem('userLikedIds');
+      if (stored) {
+        try {
+          setUserLikedIds(new Set(JSON.parse(stored)));
+        } catch (e) {
+          console.error('Failed to parse userLikedIds', e);
+        }
       }
     }
   }, []);
@@ -1775,6 +1825,54 @@ function App() {
   useEffect(() => {
     localStorage.setItem('userLikedIds', JSON.stringify(Array.from(userLikedIds)));
   }, [userLikedIds]);
+
+  // Coordinate loader dismissal once both map is loaded and data is compiled, with a safety fallback
+  useEffect(() => {
+    if (!isLiveLoading) return;
+
+    // Safety fallback: if 6 seconds pass, dismiss the loader anyway to prevent softlock
+    const fallbackTimeout = setTimeout(() => {
+      console.warn("Loader safety timeout reached. Dismissing loader.");
+      setIsLiveLoading(false);
+    }, 6000);
+
+    if (isMapLoaded && isDataCompiled) {
+      // Add a small buffer (e.g. 500ms) for smooth rendering transition
+      const successTimeout = setTimeout(() => {
+        setIsLiveLoading(false);
+      }, 500);
+      return () => {
+        clearTimeout(fallbackTimeout);
+        clearTimeout(successTimeout);
+      };
+    }
+
+    return () => clearTimeout(fallbackTimeout);
+  }, [isMapLoaded, isDataCompiled, isLiveLoading]);
+
+  // Onboarding Tour Trigger (after entering About Modal or manually requested)
+  useEffect(() => {
+    if (!showAboutModal && !isLiveLoading) {
+      const completed = localStorage.getItem('mtrh_onboarding_completed');
+      if (!completed) {
+        setOnboardingStep(0);
+      }
+    }
+  }, [showAboutModal, isLiveLoading]);
+
+  // Synchronize UI panels with onboarding steps
+  useEffect(() => {
+    if (onboardingStep === null) return;
+    
+    if (onboardingStep === 1) {
+      setIsLeftCollapsed(false);
+    } else if (onboardingStep === 3) {
+      setIsTimelineCollapsed(false);
+    } else if (onboardingStep === 4) {
+      setIsRightCollapsed(false);
+    }
+  }, [onboardingStep]);
+
   const [isMapDarkMode, setIsMapDarkMode] = useState(false);
   const darkModeRef = useRef(isMapDarkMode);
 
@@ -2032,6 +2130,7 @@ function App() {
     const compileVerifiedIntel = () => {
       try {
         setIsLiveLoading(true);
+        setIsDataCompiled(false);
         const safeLocalData = getSafeData(rawPointsAndLinesData);
         const safeUfoData = getSafeData(realUfoData);
         const combinedRawData = [...safeLocalData, ...safeUfoData];
@@ -2061,7 +2160,7 @@ function App() {
         console.error("Critical failure during map compilation pipeline: ", err);
       } finally {
         setTimeout(() => {
-          setIsLiveLoading(false);
+          setIsDataCompiled(true);
         }, 600);
       }
     };
@@ -2176,6 +2275,10 @@ function App() {
       trackResize: true
     });
     mapRef.current = map;
+
+    map.once('load', () => {
+      setIsMapLoaded(true);
+    });
     
     map.on('click', (e) => {
       if (isPinningOnMapRef.current) {
@@ -2413,7 +2516,44 @@ function App() {
     }
 
     const currentPoints = visibleData.filter(p => p.type === 'Point');
+    currentPoints.sort((a, b) => {
+      const likesA = likes[String(a.id).replace(/[^a-zA-Z0-9_\-]/g, '_')] || 0;
+      const likesB = likes[String(b.id).replace(/[^a-zA-Z0-9_\-]/g, '_')] || 0;
+      if (likesA !== likesB) return likesA - likesB;
+
+      const getTier = (item: any) => {
+        const imgs = item.images || [];
+        if (imgs.length === 0) return 1;
+        if (imgs.some(isVideoUrl)) return 3;
+        return 2;
+      };
+
+      const tierA = getTier(a);
+      const tierB = getTier(b);
+      if (tierA !== tierB) return tierA - tierB;
+
+      return b.name.localeCompare(a.name);
+    });
+
     const currentLines = visibleData.filter(l => l.type === 'LineString');
+    currentLines.sort((a, b) => {
+      const likesA = likes[String(a.id).replace(/[^a-zA-Z0-9_\-]/g, '_')] || 0;
+      const likesB = likes[String(b.id).replace(/[^a-zA-Z0-9_\-]/g, '_')] || 0;
+      if (likesA !== likesB) return likesA - likesB;
+
+      const getTier = (item: any) => {
+        const imgs = item.images || [];
+        if (imgs.length === 0) return 1;
+        if (imgs.some(isVideoUrl)) return 3;
+        return 2;
+      };
+
+      const tierA = getTier(a);
+      const tierB = getTier(b);
+      if (tierA !== tierB) return tierA - tierB;
+
+      return b.name.localeCompare(a.name);
+    });
 
     const pointsGeoJSON: any = {
       type: 'FeatureCollection',
@@ -2796,7 +2936,16 @@ function App() {
       if (nameMatchedFeatures.length > 0) {
         const unique = deduplicateFeatures(nameMatchedFeatures);
         if (unique.length > 0) {
-          const sorted = [...unique].sort((a, b) => getGeometryWeight([b]) - getGeometryWeight([a]));
+          const sorted = [...unique].sort((a, b) => {
+            const nameA = a.properties?.name || a.properties?.name_en || a.properties?.name_es || '';
+            const nameB = b.properties?.name || b.properties?.name_en || b.properties?.name_es || '';
+            const scoreA = getMatchScore(nameA, targetName);
+            const scoreB = getMatchScore(nameB, targetName);
+            if (scoreB !== scoreA) {
+              return scoreB - scoreA;
+            }
+            return getGeometryWeight([b]) - getGeometryWeight([a]);
+          });
           const mapped = [sorted[0]];
           const currentWeight = getGeometryWeight(mapped);
           const cachedWeight = (cached && cached.precise) ? getGeometryWeight(cached.features) : 0;
@@ -3203,13 +3352,12 @@ function App() {
             <div style={{ display: 'flex', gap: '8px', marginTop: '2px' }}>
               <button
                 onClick={() => {
-                  setSubmissionSuccess(null);
-                  setSubmissionError(null);
-                  setIsSubmitOpen(true);
+                  setShowAboutModal(false);
+                  setOnboardingStep(0);
                 }}
                 style={{
-                  background: isMapDarkMode ? '#ffffff' : '#000000',
-                  color: isMapDarkMode ? '#000000' : '#ffffff',
+                  background: 'transparent',
+                  color: theme.text,
                   border: `1px solid ${theme.border}`,
                   padding: '0 16px',
                   height: '32px',
@@ -3223,18 +3371,81 @@ function App() {
                   alignItems: 'center',
                   gap: '6px',
                   boxSizing: 'border-box',
-                  transition: 'opacity 0.2s ease'
+                  transition: 'all 0.2s ease',
+                  opacity: onboardingStep !== null ? 0.5 : 1,
+                  pointerEvents: onboardingStep !== null ? 'none' : 'auto'
                 }}
               >
-                <Plus size={10} strokeWidth={3} />
-                <span>Submit Intel</span>
+                <Eye size={10} strokeWidth={3} />
+                <span>Map Guide</span>
               </button>
+
+              <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
+                <button
+                  onClick={() => {
+                    setSubmissionSuccess(null);
+                    setSubmissionError(null);
+                    setIsSubmitOpen(true);
+                  }}
+                  style={{
+                    background: isMapDarkMode ? '#ffffff' : '#000000',
+                    color: isMapDarkMode ? '#000000' : '#ffffff',
+                    border: `1px solid ${theme.border}`,
+                    padding: '0 16px',
+                    height: '32px',
+                    fontSize: '9px',
+                    fontFamily: '"Space Mono", monospace',
+                    fontWeight: 700,
+                    cursor: 'pointer',
+                    borderRadius: '16px',
+                    textTransform: 'uppercase',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '6px',
+                    boxSizing: 'border-box',
+                    transition: 'opacity 0.2s ease'
+                  }}
+                >
+                  <Plus size={10} strokeWidth={3} />
+                  <span>Submit Intel</span>
+                </button>
+                {onboardingStep === 5 && (
+                  <div style={{
+                    position: 'absolute',
+                    top: '-3px',
+                    left: '-3px',
+                    right: '-3px',
+                    bottom: '-3px',
+                    border: '3px solid #b6a6ff',
+                    boxShadow: '0 0 15px rgba(182, 166, 255, 0.5)',
+                    pointerEvents: 'none',
+                    zIndex: 9999,
+                    borderRadius: '19px',
+                    animation: 'radar-pulse 2s infinite'
+                  }} />
+                )}
+              </div>
             </div>
           </div>
         </header>
 
         {/* CORE WORKSPACE FRAMING GRID — NOW FULL BLEED OVERLAY ENVIRONMENT */}
         <div style={{ flex: 1, position: 'relative', overflow: 'hidden', pointerEvents: 'none' }}>
+          {onboardingStep === 2 && (
+            <div style={{
+              position: 'absolute',
+              left: isLeftCollapsed ? '20px' : '320px',
+              right: isRightCollapsed ? '20px' : '320px',
+              top: 0,
+              bottom: isTimelineCollapsed ? 0 : '150px',
+              border: '3px solid #b6a6ff',
+              boxShadow: '0 0 15px rgba(182, 166, 255, 0.5)',
+              pointerEvents: 'none',
+              zIndex: 9999,
+              transition: 'all 0.5s ease',
+              animation: 'radar-pulse 2s infinite'
+            }} />
+          )}
           
           {/* PROTECTIVE SIDE STRIPS */}
           <motion.div 
@@ -3285,6 +3496,20 @@ function App() {
               color: theme.text
             }}
           >
+            {onboardingStep === 1 && (
+              <div style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                border: '3px solid #b6a6ff',
+                boxShadow: '0 0 15px rgba(182, 166, 255, 0.5)',
+                pointerEvents: 'none',
+                zIndex: 9999,
+                animation: 'radar-pulse 2s infinite'
+              }} />
+            )}
             {/* ABSOLUTE POSITIONED FIXED BLACK TAB FOR LEFT SIDEBAR */}
             <motion.button 
               whileHover={{ opacity: 0.8 }}
@@ -3669,6 +3894,20 @@ function App() {
               color: theme.text
             }}
           >
+            {onboardingStep === 4 && (
+              <div style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                border: '3px solid #b6a6ff',
+                boxShadow: '0 0 15px rgba(182, 166, 255, 0.5)',
+                pointerEvents: 'none',
+                zIndex: 9999,
+                animation: 'radar-pulse 2s infinite'
+              }} />
+            )}
             
             {/* ABSOLUTE POSITIONED FIXED BLACK TAB FOR RIGHT SIDEBAR */}
             <motion.button 
@@ -4289,6 +4528,20 @@ function App() {
               color: theme.text
             }}
           >
+            {onboardingStep === 3 && (
+              <div style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                border: '3px solid #b6a6ff',
+                boxShadow: '0 0 15px rgba(182, 166, 255, 0.5)',
+                pointerEvents: 'none',
+                zIndex: 9999,
+                animation: 'radar-pulse 2s infinite'
+              }} />
+            )}
             
             {/* ABSOLUTE POSITIONED FIXED BLACK TAB FOR TIMELINE BAR */}
             <motion.button 
@@ -5270,6 +5523,21 @@ function App() {
         @keyframes spinMapAsset {
           0% { transform: rotate(0deg); }
           100% { transform: rotate(360deg); }
+        }
+
+        @keyframes radar-pulse {
+          0% {
+            box-shadow: 0 0 0 0 rgba(182, 166, 255, 0.6);
+            border-color: rgba(182, 166, 255, 0.8);
+          }
+          70% {
+            box-shadow: 0 0 0 15px rgba(182, 166, 255, 0);
+            border-color: rgba(182, 166, 255, 0.3);
+          }
+          100% {
+            box-shadow: 0 0 0 0 rgba(182, 166, 255, 0);
+            border-color: rgba(182, 166, 255, 0);
+          }
         }
       `}</style>
 
@@ -7067,8 +7335,342 @@ function App() {
           <span>MAXIMIZE MOD DESK</span>
         </button>
       )}
+
+      {/* ONBOARDING TOUR */}
+      <AnimatePresence>
+        {onboardingStep !== null && (
+          <>
+            {/* Dark semi-transparent backdrop for step 0 (Welcome Modal) */}
+            {onboardingStep === 0 && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                onClick={() => {
+                  setOnboardingStep(null);
+                  localStorage.setItem('mtrh_onboarding_completed', 'true');
+                }}
+                style={{
+                  position: 'fixed',
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  backgroundColor: 'rgba(0, 0, 0, 0.65)',
+                  zIndex: 99998,
+                  pointerEvents: 'auto'
+                }}
+              />
+            )}
+
+            {/* Tooltip Dialog */}
+            {(() => {
+              const onboardingSteps = [
+                {
+                  title: "WELCOME TO MTRH GUIDE",
+                  content: "This interactive portal maps global anomalies, classified files, and historic archives. Let's take a quick step-by-step tour to help you get started.",
+                  placement: "center"
+                },
+                {
+                  title: "1. ARCHIVE FILTERS",
+                  content: "Toggle layers to filter map events (UFOs, Bigfoot, underworld entrances, D.U.M.B.s). Use the Search bar to scan archives or world coordinates.",
+                  placement: "left-sidebar"
+                },
+                {
+                  title: "2. INTERACTIVE MAP",
+                  content: "Left-click and drag to move. Use the scroll wheel to zoom. Clicking pins or highlighted shapes unlocks their classified dossier.",
+                  placement: "map-viewport"
+                },
+                {
+                  title: "3. HISTORICAL TIMELINE",
+                  content: "Drag the timeline slider or use the zoom buttons to restrict active markers to a specific year span. Perfect for tracking events over time.",
+                  placement: "timeline"
+                },
+                {
+                  title: "4. INTELLIGENCE DOSSIER",
+                  content: "When you select a location, its full file opens here. Review images, transcripts, video attachments, and original source documents.",
+                  placement: "right-sidebar"
+                },
+                {
+                  title: "5. SUBMIT EVIDENCE",
+                  content: "Discovered an anomaly or classified file? Submit it to our queue. Once verified, it will be mapped and published on the platform.",
+                  placement: "submit-intel"
+                }
+              ];
+
+              const currentStep = onboardingSteps[onboardingStep];
+              if (!currentStep) return null;
+
+              // Invert theme: black bg with white text on light mode, and white bg with black text on dark mode
+              const tooltipTheme = {
+                bg: isMapDarkMode ? '#ffffff' : '#000000',
+                text: isMapDarkMode ? '#000000' : '#ffffff',
+                textDim: isMapDarkMode ? '#666666' : '#cccccc',
+                border: isMapDarkMode ? '#ffffff' : '#000000',
+                borderLight: isMapDarkMode ? 'rgba(0, 0, 0, 0.15)' : 'rgba(255, 255, 255, 0.2)',
+                buttonBg: isMapDarkMode ? '#000000' : '#ffffff',
+                buttonText: isMapDarkMode ? '#ffffff' : '#000000',
+                buttonBorder: isMapDarkMode ? '#000000' : '#ffffff'
+              };
+
+              const tooltipStyle: React.CSSProperties = (() => {
+                const common: React.CSSProperties = {
+                  position: 'fixed',
+                  zIndex: 100000,
+                  width: '320px',
+                  background: tooltipTheme.bg,
+                  border: `2px solid ${tooltipTheme.border}`,
+                  borderRadius: '16px',
+                  padding: '24px',
+                  color: tooltipTheme.text,
+                  fontFamily: '"Space Mono", monospace',
+                  boxShadow: isMapDarkMode ? '0 10px 40px rgba(0, 0, 0, 0.4)' : '0 10px 40px rgba(0, 0, 0, 0.3)',
+                  boxSizing: 'border-box',
+                  pointerEvents: 'auto',
+                  transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
+                };
+
+                switch (currentStep.placement) {
+                  case 'center':
+                    return {
+                      ...common,
+                      top: '50%',
+                      left: '50%',
+                      transform: 'translate(-50%, -50%)',
+                      width: '450px',
+                    };
+                  case 'left-sidebar':
+                    return {
+                      ...common,
+                      left: isLeftCollapsed ? '40px' : '340px',
+                      top: '180px',
+                    };
+                  case 'map-viewport':
+                    return {
+                      ...common,
+                      left: '50%',
+                      top: '40%',
+                      transform: 'translate(-50%, -50%)',
+                    };
+                  case 'timeline':
+                    return {
+                      ...common,
+                      left: '50%',
+                      bottom: isTimelineCollapsed ? '40px' : '170px',
+                      transform: 'translateX(-50%)',
+                      width: '360px',
+                    };
+                  case 'right-sidebar':
+                    return {
+                      ...common,
+                      right: isRightCollapsed ? '40px' : '340px',
+                      top: '180px',
+                    };
+                  case 'submit-intel':
+                    return {
+                      ...common,
+                      right: '20px',
+                      top: '100px',
+                    };
+                  default:
+                    return common;
+                }
+              })();
+
+              const arrowStyle: React.CSSProperties = (() => {
+                const common: React.CSSProperties = {
+                  position: 'absolute',
+                  width: 0,
+                  height: 0,
+                  borderStyle: 'solid',
+                };
+
+                switch (currentStep.placement) {
+                  case 'left-sidebar':
+                    return {
+                      ...common,
+                      left: '-10px',
+                      top: '32px',
+                      borderWidth: '8px 10px 8px 0',
+                      borderColor: `transparent ${tooltipTheme.bg} transparent transparent`,
+                    };
+                  case 'right-sidebar':
+                    return {
+                      ...common,
+                      right: '-10px',
+                      top: '32px',
+                      borderWidth: '8px 0 8px 10px',
+                      borderColor: `transparent transparent transparent ${tooltipTheme.bg}`,
+                    };
+                  case 'timeline':
+                    return {
+                      ...common,
+                      bottom: '-10px',
+                      left: '50%',
+                      transform: 'translateX(-50%)',
+                      borderWidth: '10px 8px 0 8px',
+                      borderColor: `${tooltipTheme.bg} transparent transparent transparent`,
+                    };
+                  case 'submit-intel':
+                    return {
+                      ...common,
+                      top: '-10px',
+                      right: '40px',
+                      borderWidth: '0 8px 10px 8px',
+                      borderColor: `transparent transparent ${tooltipTheme.bg} transparent`,
+                    };
+                  default:
+                    return { display: 'none' };
+                }
+              })();
+
+              const handleClose = () => {
+                setOnboardingStep(null);
+                localStorage.setItem('mtrh_onboarding_completed', 'true');
+              };
+
+              const handleNext = () => {
+                if (onboardingStep === onboardingSteps.length - 1) {
+                  handleClose();
+                } else {
+                  setOnboardingStep(prev => prev! + 1);
+                }
+              };
+
+              return (
+                <motion.div
+                  key={`tour-step-${onboardingStep}`}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  transition={{ duration: 0.25, ease: 'easeOut' }}
+                  style={tooltipStyle}
+                  role="dialog"
+                  aria-labelledby="tour-title"
+                >
+                  {/* Arrow Indicator */}
+                  <div style={arrowStyle} />
+
+                  <h3 
+                    id="tour-title"
+                    style={{
+                      fontSize: '11px',
+                      fontWeight: 'bold',
+                      letterSpacing: '2px',
+                      textTransform: 'uppercase',
+                      borderBottom: `1px solid ${tooltipTheme.borderLight}`,
+                      paddingBottom: '8px',
+                      margin: '0 0 12px 0',
+                      color: tooltipTheme.text,
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      alignItems: 'center'
+                    }}
+                  >
+                    <span>{currentStep.title}</span>
+                    <span style={{ fontSize: '9px', color: tooltipTheme.textDim, fontWeight: 'normal' }}>
+                      {onboardingStep + 1} / {onboardingSteps.length}
+                    </span>
+                  </h3>
+
+                  <p 
+                    style={{
+                      fontSize: '10px',
+                      lineHeight: '1.6',
+                      color: tooltipTheme.textDim,
+                      margin: '0 0 20px 0',
+                      textAlign: 'left'
+                    }}
+                  >
+                    {currentStep.content}
+                  </p>
+
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <button
+                      onClick={handleClose}
+                      style={{
+                        background: 'transparent',
+                        border: 'none',
+                        color: tooltipTheme.textDim,
+                        fontSize: '9px',
+                        fontFamily: '"Space Mono", monospace',
+                        fontWeight: 700,
+                        cursor: 'pointer',
+                        textTransform: 'uppercase',
+                        padding: '4px 0',
+                        transition: 'color 0.2s'
+                      }}
+                      onMouseEnter={(e) => { e.currentTarget.style.color = tooltipTheme.text; }}
+                      onMouseLeave={(e) => { e.currentTarget.style.color = tooltipTheme.textDim; }}
+                    >
+                      Skip Guide
+                    </button>
+
+                    <div style={{ display: 'flex', gap: '8px' }}>
+                      {onboardingStep > 0 && (
+                        <button
+                          onClick={() => setOnboardingStep(prev => prev! - 1)}
+                          style={{
+                            background: 'transparent',
+                            color: tooltipTheme.text,
+                            border: `1px solid ${tooltipTheme.border}`,
+                            padding: '0 16px',
+                            height: '32px',
+                            fontSize: '9px',
+                            fontFamily: '"Space Mono", monospace',
+                            fontWeight: 700,
+                            cursor: 'pointer',
+                            borderRadius: '16px',
+                            textTransform: 'uppercase',
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            boxSizing: 'border-box',
+                            transition: 'opacity 0.2s ease'
+                          }}
+                          onMouseEnter={(e) => { e.currentTarget.style.opacity = '0.7'; }}
+                          onMouseLeave={(e) => { e.currentTarget.style.opacity = '1'; }}
+                        >
+                          Back
+                        </button>
+                      )}
+
+                      <button
+                        onClick={handleNext}
+                        style={{
+                          background: tooltipTheme.buttonBg,
+                          color: tooltipTheme.buttonText,
+                          border: `1px solid ${tooltipTheme.buttonBorder}`,
+                          padding: '0 16px',
+                          height: '32px',
+                          fontSize: '9px',
+                          fontFamily: '"Space Mono", monospace',
+                          fontWeight: 700,
+                          cursor: 'pointer',
+                          borderRadius: '16px',
+                          textTransform: 'uppercase',
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          boxSizing: 'border-box',
+                          transition: 'opacity 0.2s ease'
+                        }}
+                        onMouseEnter={(e) => { e.currentTarget.style.opacity = '0.8'; }}
+                        onMouseLeave={(e) => { e.currentTarget.style.opacity = '1'; }}
+                      >
+                        {onboardingStep === onboardingSteps.length - 1 ? 'Finish' : 'Next'}
+                      </button>
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })()
+          }
+          </>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
 
-export default App;
+  export default App;
