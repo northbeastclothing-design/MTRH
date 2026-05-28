@@ -548,6 +548,7 @@ const cleanAndProxyImageUrl = (url: any) => {
     lowerUrl.includes('wikimedia.org') || 
     lowerUrl.includes('wikipedia.org') || 
     lowerUrl.includes('unsplash.com') ||
+    lowerUrl.includes('cloudfront.net') ||
     lowerUrl.includes('wonders-of-the-world.net') ||
     lowerUrl.includes('circleresearcharchive.com')
   ) {
@@ -2987,6 +2988,7 @@ function App() {
     if (!url) return null;
     const isImage = /\.(jpg|jpeg|png|gif|webp|bmp)/i.test(url) || url.startsWith('/uploads/');
     const isYoutube = /youtube\.com|youtu\.be/i.test(url);
+    const isDvidshub = /dvidshub\.net\/video\//i.test(url);
     const isMp4 = /\.(mp4|webm|ogg)/i.test(url);
 
     if (isYoutube) {
@@ -3001,6 +3003,23 @@ function App() {
           <div style={{ position: 'relative', width: '240px', aspectRatio: '16/9', border: `1px solid ${theme.border}`, marginTop: '4px', overflow: 'hidden' }}>
             <iframe
               src={`https://www.youtube.com/embed/${embedId}`}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0 }}
+            />
+          </div>
+        );
+      }
+    }
+
+    if (isDvidshub) {
+      const embedUrl = getEmbedUrl(url);
+      if (embedUrl) {
+        return (
+          <div style={{ position: 'relative', width: '240px', aspectRatio: '16/9', border: `1px solid ${theme.border}`, marginTop: '4px', overflow: 'hidden' }}>
+            <iframe
+              src={embedUrl}
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -3845,8 +3864,16 @@ function App() {
                                        curAsset.url.includes('youtu.be') || 
                                        curAsset.url.includes('dvidshub.net/video/')) ? (
                                         <iframe
-                                          src={`${getEmbedUrl(curAsset.url)}?autoplay=0&controls=0&mute=1`}
-                                          style={{ 
+                                          src={curAsset.url.includes('dvidshub.net/video/') ? getEmbedUrl(curAsset.url) : `${getEmbedUrl(curAsset.url)}?autoplay=0&controls=0&mute=1`}
+                                          style={curAsset.url.includes('dvidshub.net/video/') ? {
+                                            border: 'none',
+                                            position: 'absolute',
+                                            top: 0,
+                                            left: '50%',
+                                            transform: 'translateX(-50%)',
+                                            width: '165%',
+                                            height: '190%'
+                                          } : { 
                                             border: 'none', 
                                             position: 'absolute',
                                             top: '50%',
@@ -4847,14 +4874,32 @@ function App() {
                           animate={{ opacity: 1, scale: 1 }}
                           exit={{ opacity: 0, scale: 1.05 }}
                           transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                          style={{ width: '80%', height: '80%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                          style={{ 
+                            width: 'min(80vw, calc((100vh - 220px) * 16 / 9))',
+                            height: 'min(calc(100vh - 220px), calc(80vw * 9 / 16))',
+                            maxWidth: '100%',
+                            maxHeight: 'calc(100vh - 220px)',
+                            display: 'flex', 
+                            alignItems: 'center', 
+                            justifyContent: 'center',
+                            position: 'relative',
+                            overflow: 'hidden'
+                          }}
                         >
                           {(curAsset.url.includes('youtube.com') || 
                             curAsset.url.includes('youtu.be') || 
                             curAsset.url.includes('dvidshub.net/video/')) ? (
                             <iframe
                               src={getEmbedUrl(curAsset.url)}
-                              style={{ width: '100%', height: '100%', border: 'none', boxShadow: '0 20px 50px rgba(0,0,0,0.5)' }}
+                              style={{ 
+                                width: '100%', 
+                                height: curAsset.url.includes('dvidshub.net/video/') ? '110%' : '100%', 
+                                border: 'none', 
+                                boxShadow: '0 20px 50px rgba(0,0,0,0.5)',
+                                position: 'absolute',
+                                top: 0,
+                                left: 0
+                              }}
                               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                               allowFullScreen
                               title="High resolution dossier archive asset"
