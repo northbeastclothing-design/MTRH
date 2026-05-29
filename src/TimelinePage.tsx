@@ -38,6 +38,16 @@ const ERAS_CONFIG = [
     desc: 'Scriptural events, exiles, and historical kingdoms.'
   },
   {
+    id: 'enochian-lore',
+    name: 'Enochian Lore',
+    start: -3500,
+    end: -2348,
+    color: '#FF9F63', // Orange
+    icon: '/icons/icon-enochian-lore.svg',
+    layer: 'enochian-lore',
+    desc: 'Ascension of Enoch, descent of the 200 Watchers, teaching of forbidden arts, and the Nephilim giants.'
+  },
+  {
     id: 'sumerian-antediluvian',
     name: 'Sumerian Kings List',
     start: -245000,
@@ -93,7 +103,8 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
     'greek-myths': true,
     'kingdom-classical': true,
     'merovingian-bloodlines': true,
-    'royal-bloodlines': true
+    'royal-bloodlines': true,
+    'enochian-lore': true
   });
   
   // Dropdown open states
@@ -107,6 +118,10 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [startViewStart, setStartViewStart] = useState(0);
+
+  // Stacked layout tracking for Bottom Controls Panel
+  const [isErasStacked, setIsErasStacked] = useState(false);
+  const erasContainerRef = useRef<HTMLDivElement>(null);
 
   const span = viewEnd - viewStart;
 
@@ -413,6 +428,25 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
     };
     window.addEventListener('click', handleClickOutside);
     return () => window.removeEventListener('click', handleClickOutside);
+  }, []);
+
+  // Stacked layout observer for the bottom controls bar
+  useEffect(() => {
+    if (!erasContainerRef.current) return;
+    const checkStacked = () => {
+      if (erasContainerRef.current) {
+        // A single row of buttons is 32px height. If height > 40px, it has wrapped to 2 or more lines.
+        setIsErasStacked(erasContainerRef.current.offsetHeight > 40);
+      }
+    };
+    
+    checkStacked();
+    
+    // Create ResizeObserver to monitor the container height changes reactively
+    const observer = new ResizeObserver(checkStacked);
+    observer.observe(erasContainerRef.current);
+    
+    return () => observer.disconnect();
   }, []);
 
   // Auto-center vertically on selection to prevent details card cutoff
@@ -734,7 +768,8 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
             {hoveredItem && (
               hoveredItem.layer === 'biblical-patriarchs' ||
               hoveredItem.layer === 'merovingian-bloodlines' ||
-              hoveredItem.layer === 'royal-bloodlines'
+              hoveredItem.layer === 'royal-bloodlines' ||
+              hoveredItem.layer === 'enochian-lore'
             ) && (() => {
               const lines: React.ReactNode[] = [];
               
@@ -1023,25 +1058,30 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
       {/* BOTTOM CONTROLS PANEL (BOTTOM BAR) */}
       <div 
         style={{
-          height: '64px',
+          minHeight: '64px',
+          height: 'auto',
           background: theme.bg,
           borderTop: `1px solid ${theme.border}`,
-          padding: '0 24px',
+          padding: '12px 24px',
           display: 'flex',
-          alignItems: 'center',
+          alignItems: 'flex-start',
           justifyContent: 'space-between',
+          flexWrap: 'wrap',
+          rowGap: '12px',
+          columnGap: '24px',
           zIndex: 200,
           boxSizing: 'border-box',
           position: 'relative',
-          pointerEvents: 'auto'
+          pointerEvents: 'auto',
+          flexShrink: 0
         }}
       >
         {/* Left: Eras toggles */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-          <span style={{ fontSize: '9px', fontWeight: 'bold', color: theme.textDim, textTransform: 'uppercase', letterSpacing: '1px', marginRight: '4px' }}>
+        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', flexWrap: 'wrap', flex: 1 }}>
+          <span style={{ fontSize: '9px', fontWeight: 'bold', color: theme.textDim, textTransform: 'uppercase', letterSpacing: '1px', marginTop: '10px', marginRight: '4px', flexShrink: 0 }}>
             Eras:
           </span>
-          <div style={{ display: 'flex', gap: '8px' }}>
+          <div ref={erasContainerRef} style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', flex: 1 }}>
             {ERAS_CONFIG.map(era => {
               const isActive = activeEras[era.id];
               const isOpen = openDropdownEra === era.id;
@@ -1225,59 +1265,69 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
         </div>
 
         {/* Right: Zoom controls styled exactly like the map page timeline zoom bar */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-          
-          <img 
-            src="/icons/icon-zoom-out.svg" 
-            onClick={() => handleZoom(1.3)}
-            style={{ width: '24px', height: '24px', filter: theme.invert, cursor: 'pointer', opacity: span >= 252100 ? 0.3 : 1 }} 
-            title="Zoom Out"
-            alt="zoom out" 
-          />
-          
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', position: 'relative', width: '120px', justifyContent: 'center' }}>
-            <input
-              type="range"
-              min="0"
-              max="252050"
-              value={252100 - Math.round(span)}
-              onChange={(e) => {
-                const val = parseInt(e.target.value, 10);
-                const newSpan = 252100 - val;
-                const centerYear = viewStart + span / 2;
-                setViewStart(centerYear - newSpan / 2);
-                setViewEnd(centerYear + newSpan / 2);
-              }}
-              style={{
-                width: '100%',
-                height: '2px',
-                background: theme.text,
-                outline: 'none',
-                cursor: 'pointer',
-                margin: 0
-              }}
-              className="timeline-zoom-slider"
+        <div style={{ 
+          display: 'flex', 
+          flexDirection: isErasStacked ? 'column' : 'row',
+          alignItems: isErasStacked ? 'stretch' : 'flex-start', 
+          gap: '12px', 
+          flexWrap: 'wrap', 
+          justifyContent: 'flex-end',
+          marginLeft: 'auto'
+        }}>
+          {/* Zoom controls inline unit */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexShrink: 0 }}>
+            <img 
+              src="/icons/icon-zoom-out.svg" 
+              onClick={() => handleZoom(1.3)}
+              style={{ width: '24px', height: '24px', filter: theme.invert, cursor: 'pointer', opacity: span >= 252100 ? 0.3 : 1 }} 
+              title="Zoom Out"
+              alt="zoom out" 
             />
-            <span style={{ 
-              position: 'absolute', 
-              top: '12px', 
-              fontSize: '7px', 
-              color: theme.textDim, 
-              textAlign: 'center', 
-              letterSpacing: '0.5px',
-              whiteSpace: 'nowrap'
-            }}>
-              SPAN: {Math.round(span).toLocaleString()} YEARS
-            </span>
-          </div>
+            
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', position: 'relative', width: '120px', justifyContent: 'center' }}>
+              <input
+                type="range"
+                min="0"
+                max="252050"
+                value={252100 - Math.round(span)}
+                onChange={(e) => {
+                  const val = parseInt(e.target.value, 10);
+                  const newSpan = 252100 - val;
+                  const centerYear = viewStart + span / 2;
+                  setViewStart(centerYear - newSpan / 2);
+                  setViewEnd(centerYear + newSpan / 2);
+                }}
+                style={{
+                  width: '100%',
+                  height: '2px',
+                  background: theme.text,
+                  outline: 'none',
+                  cursor: 'pointer',
+                  margin: 0
+                }}
+                className="timeline-zoom-slider"
+              />
+              <span style={{ 
+                position: 'absolute', 
+                top: '12px', 
+                fontSize: '7px', 
+                color: theme.textDim, 
+                textAlign: 'center', 
+                letterSpacing: '0.5px',
+                whiteSpace: 'nowrap'
+              }}>
+                SPAN: {Math.round(span).toLocaleString()} YEARS
+              </span>
+            </div>
 
-          <img 
-            src="/icons/icon-zoom-in.svg" 
-            onClick={() => handleZoom(0.7)}
-            style={{ width: '24px', height: '24px', filter: theme.invert, cursor: 'pointer', opacity: span <= 50 ? 0.3 : 1 }} 
-            title="Zoom In"
-            alt="zoom in" 
-          />
+            <img 
+              src="/icons/icon-zoom-in.svg" 
+              onClick={() => handleZoom(0.7)}
+              style={{ width: '24px', height: '24px', filter: theme.invert, cursor: 'pointer', opacity: span <= 50 ? 0.3 : 1 }} 
+              title="Zoom In"
+              alt="zoom in" 
+            />
+          </div>
 
           <button
             onClick={handleReset}
@@ -1290,6 +1340,7 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
               color: theme.text,
               display: 'flex',
               alignItems: 'center',
+              justifyContent: 'center',
               gap: '6px',
               cursor: 'pointer',
               transition: 'all 0.15s ease',

@@ -78,6 +78,7 @@ function handleFirestoreError(error: unknown, operationType: OperationType, path
 }
 
 const CATEGORY_DESCRIPTIONS: Record<string, string> = {
+  'Enochian Sites': 'Geographical locations, portals of descent, and prisons of the fallen Watchers as detailed in the Book of Enoch.',
   'Nephilim': 'Newspaper articles about finding the bones of ancient biblical giants, horned humanoids, cyclops and more.',
   'U.F.O. Sightings': 'Reports of unidentified flying objects and extraterrestrial encounters across the globe.',
   'War.gov UFO files 01': 'Official records and multimedia releases from government archives documenting unidentified aerial phenomena (First Release).',
@@ -613,7 +614,8 @@ const processIncomingRecord = (item: any, index: number) => {
   const displayDescription = safeDescription.trim() || "No further diagnostic descriptive intelligence available in active log sheets.";
   const lowerCat = rawCategory.toLowerCase();
   let normalizedCategory = rawCategory;
-  if (lowerCat.includes('bigfoot') || lowerCat.includes('sasquatch')) normalizedCategory = 'Bigfoot Sightings';
+  if (lowerCat.includes('enochian') || lowerCat.includes('watcher') || lowerCat.includes('angel') || lowerCat === 'enochian sites') normalizedCategory = 'Enochian Sites';
+  else if (lowerCat.includes('bigfoot') || lowerCat.includes('sasquatch')) normalizedCategory = 'Bigfoot Sightings';
   else if (lowerCat.includes('giant') || lowerCat.includes('nephilim') || lowerCat.includes('giants')) normalizedCategory = 'Nephilim';
   else if (lowerCat.includes('war.gov') || lowerCat.includes('aaro') || lowerCat.includes('official release') || lowerCat.includes('declassified')) {
     if (lowerCat.includes('02') || lowerCat.includes('release 2') || lowerCat.includes('release_2')) {
@@ -707,6 +709,16 @@ const processIncomingRecord = (item: any, index: number) => {
       if (lowerName.includes('serpent')) {
         safeImages = ['https://upload.wikimedia.org/wikipedia/commons/e/e0/Serpentmound_topview.jpg'];
       }
+    } else if (lowerNormalizedCat === 'enochian sites') {
+      if (lowerName.includes('hermon')) {
+        safeImages = ['https://upload.wikimedia.org/wikipedia/commons/f/fa/Mount_Hermon_view_from_Golan.jpg'];
+      } else if (lowerName.includes('dudael')) {
+        safeImages = ['https://upload.wikimedia.org/wikipedia/commons/e/ec/Judean_Desert_view.jpg'];
+      } else if (lowerName.includes('sheol') || lowerName.includes('hinnom') || lowerName.includes('gehenna')) {
+        safeImages = ['https://upload.wikimedia.org/wikipedia/commons/4/47/Hinnom_valley_Jerusalem.jpg'];
+      } else if (lowerName.includes('bashan') || lowerName.includes('golan') || lowerName.includes('og')) {
+        safeImages = ['https://upload.wikimedia.org/wikipedia/commons/2/2a/Golan_Heights_Gamla.jpg'];
+      }
     }
   }
 
@@ -730,6 +742,7 @@ const processIncomingRecord = (item: any, index: number) => {
 const LAYER_CONFIG: Record<string, { color: string; icon: string }> = {
   'War.gov UFO files 01': { color: '#FF9BE1', icon: '/icons/icon-dept-war.svg' },
   'War.gov UFO files 02': { color: '#D29BFF', icon: '/icons/icon-dept-war-02.svg' },
+  'Enochian Sites': { color: '#FF9F63', icon: '/icons/icon-enochian-lore.svg' },
   'Nephilim': { color: '#ECCE81', icon: '/icons/icon-giants.svg' },
   'U.F.O. Sightings': { color: '#C2FFBD', icon: '/icons/icon-ufo-sightings.svg' },
   'Bigfoot Sightings': { color: '#C6986D', icon: '/icons/icon-bigfoot-sightings.svg' },

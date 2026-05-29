@@ -29203,5 +29203,61 @@
     "description": "An antipodal alignment connecting the Bermuda Triangle in the Atlantic to the Dragon's Triangle (Ma-no Umi) off the coast of Japan. Both locations are noted for matching geomagnetic anomalies, missing vessels, and reports of subterranean/undersea bases.",
     "source": "Sacred Geometry Archive",
     "images": []
+  },
+  {
+    "id": "enochian-mount-hermon",
+    "name": "Mount Hermon (Watchers Descent)",
+    "category": "Enochian Sites",
+    "type": "Point",
+    "coordinates": {
+      "lng": 35.8372,
+      "lat": 33.4117
+    },
+    "date": -3400,
+    "description": "The sacred mountain where the 200 Watchers (fallen angels) descended to earth and swore a mutual oath of rebellion in the days of Jared.",
+    "source": "Book of Enoch 6",
+    "images": []
+  },
+  {
+    "id": "enochian-desert-dudael",
+    "name": "Desert of Dudael (Imprisonment of Azazel)",
+    "category": "Enochian Sites",
+    "type": "Point",
+    "coordinates": {
+      "lng": 35.4000,
+      "lat": 31.9000
+    },
+    "date": -3000,
+    "description": "The jagged desert pit where the Archangel Raphael bound the chief Watcher Azazel and covered him with darkness, to remain until the Day of Judgment.",
+    "source": "Book of Enoch 10",
+    "images": []
+  },
+  {
+    "id": "enochian-gates-of-sheol",
+    "name": "Gates of Sheol (Valley of Hinnom)",
+    "category": "Enochian Sites",
+    "type": "Point",
+    "coordinates": {
+      "lng": 35.2301,
+      "lat": 31.7708
+    },
+    "date": -3000,
+    "description": "One of the traditional locations linked to the portals of the underworld and the prison of the fallen angels visited by Enoch in his journeys.",
+    "source": "Book of Enoch 18-21",
+    "images": []
+  },
+  {
+    "id": "enochian-og-kingdom",
+    "name": "Og's Kingdom (Mount Bashan / Golan)",
+    "category": "Enochian Sites",
+    "type": "Point",
+    "coordinates": {
+      "lng": 35.8000,
+      "lat": 32.9500
+    },
+    "date": -1400,
+    "description": "The ancient kingdom of Bashan, ruled by Og (the last of the Rephaim giants), directly tied to the geographic stronghold of the Nephilim.",
+    "source": "Genesis 14, Book of Enoch",
+    "images": []
   }
 ]

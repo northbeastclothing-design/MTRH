@@ -2,7 +2,7 @@ export interface TimelineItem {
   id: string;
   name: string;
   type: 'lifespan' | 'event';
-  layer: 'biblical-patriarchs' | 'biblical-events' | 'sumerian-kings' | 'greek-mythology' | 'merovingian-bloodlines' | 'royal-bloodlines';
+  layer: 'biblical-patriarchs' | 'biblical-events' | 'sumerian-kings' | 'greek-mythology' | 'merovingian-bloodlines' | 'royal-bloodlines' | 'enochian-lore';
   start: number; // BCE is negative, CE is positive
   end?: number;  // Only for 'lifespan'
   description: string;
@@ -2093,5 +2093,57 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     description: 'Current reigning Monarch of the United Kingdom and Commonwealth realms, crowned in 2023.',
     source: 'Official Records',
     motherId: 'queen_elizabeth_ii'
+  },
+  // ==========================================
+  // ENOCHIAN LORE (WATCHERS & GIANTS)
+  // ==========================================
+  {
+    id: 'watcher_descent',
+    name: 'Descent of the Watchers',
+    type: 'event',
+    layer: 'enochian-lore',
+    start: -3400,
+    description: 'According to the Book of Enoch, 200 angels (Watchers) led by Semjaza descended upon Mount Hermon, swearing an oath to take human wives and teach them forbidden secrets.',
+    source: 'Book of Enoch 6'
+  },
+  {
+    id: 'semjaza',
+    name: 'Semjaza (Watcher Leader)',
+    type: 'lifespan',
+    layer: 'enochian-lore',
+    start: -3400,
+    end: -2950,
+    description: 'Leader of the 200 Watchers. He taught humans root-cuttings and enchantments. Later bound by Michael in the valleys of the earth.',
+    source: 'Book of Enoch 6-8'
+  },
+  {
+    id: 'azazel',
+    name: 'Azazel (Watcher Leader)',
+    type: 'lifespan',
+    layer: 'enochian-lore',
+    start: -3400,
+    end: -3000,
+    description: 'A chief Watcher who taught men to make weapons, armor, and metallurgy, and women to paint their eyes and use dyes and cosmetics, corrupting humanity.',
+    source: 'Book of Enoch 8, 10'
+  },
+  {
+    id: 'enoch_ascension',
+    name: 'Translation of Enoch',
+    type: 'event',
+    layer: 'enochian-lore',
+    start: -3017,
+    description: 'At the age of 365, Enoch was taken by God (translated) and walked with Him. He ascended to heaven, where he recorded the secrets of creation and the judgment of the Watchers.',
+    source: 'Genesis 5:24, Book of Enoch'
+  },
+  {
+    id: 'nephilim_era',
+    name: 'The Nephilim Giants',
+    type: 'lifespan',
+    layer: 'enochian-lore',
+    start: -3300,
+    end: -2348,
+    description: 'The gigantic offspring of the union between the Watchers and human daughters. They consumed the labor of men and filled the earth with violence, leading to the divine decree of the Flood.',
+    source: 'Genesis 6:4, Book of Enoch 7',
+    fatherId: 'semjaza'
   }
 ];
