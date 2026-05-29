@@ -811,7 +811,7 @@ function App() {
   const mapContainer = useRef<HTMLDivElement>(null);
   const mapRef = useRef<mapboxgl.Map | null>(null);
   const lineLayersRef = useRef<string[]>([]);
-  const selectedParkGeomRef = useRef<Record<string, { precise: boolean; features: any[] }>>({});
+  const selectedParkGeomRef = useRef<Record<string, { precise: boolean; score: number; features: any[] }>>({});
   const [searchQuery, setSearchQuery] = useState('');
   const [geocodeResults, setGeocodeResults] = useState<any[]>([]);
   const [isSearchingGeocode, setIsSearchingGeocode] = useState(false);
@@ -2947,11 +2947,14 @@ function App() {
             return getGeometryWeight([b]) - getGeometryWeight([a]);
           });
           const mapped = [sorted[0]];
+          const name = sorted[0].properties?.name || sorted[0].properties?.name_en || sorted[0].properties?.name_es || '';
+          const currentScore = getMatchScore(name, targetName);
+          const cachedScore = cached ? (cached.score || 0) : 0;
           const currentWeight = getGeometryWeight(mapped);
-          const cachedWeight = (cached && cached.precise) ? getGeometryWeight(cached.features) : 0;
+          const cachedWeight = cached ? getGeometryWeight(cached.features) : 0;
 
-          if (!cached || !cached.precise || currentWeight > cachedWeight) {
-            selectedParkGeomRef.current[targetName] = { precise: true, features: mapped };
+          if (!cached || !cached.precise || currentScore > cachedScore || (currentScore === cachedScore && currentWeight > cachedWeight)) {
+            selectedParkGeomRef.current[targetName] = { precise: true, score: currentScore, features: mapped };
             src.setData({
               type: 'FeatureCollection',
               features: mapped
@@ -2961,7 +2964,7 @@ function App() {
         return;
       }
 
-      if (cached && cached.precise) {
+      if (cached && cached.precise && cached.score === 100) {
         return;
       }
 
@@ -2988,7 +2991,7 @@ function App() {
           const cachedWeight = cached ? getGeometryWeight(cached.features) : 0;
 
           if (!cached || (!cached.precise && currentWeight > cachedWeight)) {
-            selectedParkGeomRef.current[targetName] = { precise: false, features: mapped };
+            selectedParkGeomRef.current[targetName] = { precise: false, score: 0, features: mapped };
             src.setData({
               type: 'FeatureCollection',
               features: mapped
@@ -3023,7 +3026,7 @@ function App() {
           const cachedWeight = cached ? getGeometryWeight(cached.features) : 0;
 
           if (!cached || (!cached.precise && currentWeight > cachedWeight)) {
-            selectedParkGeomRef.current[targetName] = { precise: false, features: mapped };
+            selectedParkGeomRef.current[targetName] = { precise: false, score: 0, features: mapped };
             src.setData({
               type: 'FeatureCollection',
               features: mapped
