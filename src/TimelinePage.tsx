@@ -56,6 +56,26 @@ const ERAS_CONFIG = [
     icon: '/icons/icon-greek-mythology.svg',
     layer: 'greek-mythology',
     desc: 'Greek mythological dates calculated by ancient chronologists.'
+  },
+  {
+    id: 'merovingian-bloodlines',
+    name: 'Merovingian Bloodlines',
+    start: 400,
+    end: 800,
+    color: '#B297FF', // Light Purple
+    icon: '/icons/icon-merovingian-bloodlines.svg',
+    layer: 'merovingian-bloodlines',
+    desc: 'Salian Frankish kings and holy bloodlines.'
+  },
+  {
+    id: 'royal-bloodlines',
+    name: 'Royal Bloodlines',
+    start: 750,
+    end: 2026,
+    color: '#FF9395', // Rose/Red
+    icon: '/icons/icon-royal-bloodlines.svg',
+    layer: 'royal-bloodlines',
+    desc: 'Charlemagne, Alfred the Great, and British Monarchs down to King Charles III.'
   }
 ];
 
@@ -71,7 +91,9 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
     'sumerian-antediluvian': true,
     'biblical-patriarchs': true,
     'greek-myths': true,
-    'kingdom-classical': true
+    'kingdom-classical': true,
+    'merovingian-bloodlines': true,
+    'royal-bloodlines': true
   });
   
   // Dropdown open states
@@ -177,7 +199,7 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
     const currentSpan = viewEnd - viewStart;
     
     // Bounds clamping
-    const clampedStart = Math.max(-250000, Math.min(2000, newStart));
+    const clampedStart = Math.max(-250000, Math.min(2100, newStart));
     
     setViewStart(clampedStart);
     setViewEnd(clampedStart + currentSpan);
@@ -190,7 +212,7 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
   // Manual zoom helper
   const handleZoom = (factor: number) => {
     const centerYear = viewStart + span / 2;
-    const newSpan = Math.max(50, Math.min(250000, span * factor));
+    const newSpan = Math.max(50, Math.min(252100, span * factor));
     setViewStart(centerYear - newSpan / 2);
     setViewEnd(centerYear + newSpan / 2);
   };
@@ -348,6 +370,42 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
     return TIMELINE_ITEMS.find(x => x.id === hoveredItemId) || null;
   }, [hoveredItemId]);
 
+  // Recursively find all ancestors and descendants of the hovered item
+  const highlightedIds = useMemo(() => {
+    if (!hoveredItemId) return new Set<string>();
+    const visited = new Set<string>();
+    
+    const addAncestors = (id: string) => {
+      if (visited.has(id)) return;
+      visited.add(id);
+      const item = TIMELINE_ITEMS.find(x => x.id === id);
+      if (!item) return;
+      if (item.fatherId) addAncestors(item.fatherId);
+      if (item.motherId) addAncestors(item.motherId);
+      if (item.spouseId) visited.add(item.spouseId);
+    };
+
+    const addDescendants = (id: string) => {
+      if (visited.has(id)) return;
+      visited.add(id);
+      const item = TIMELINE_ITEMS.find(x => x.id === id);
+      if (!item) return;
+      
+      const children = TIMELINE_ITEMS.filter(x => x.fatherId === id || x.motherId === id);
+      children.forEach(c => addDescendants(c.id));
+      if (item.spouseId) visited.add(item.spouseId);
+    };
+
+    addAncestors(hoveredItemId);
+    addDescendants(hoveredItemId);
+    return visited;
+  }, [hoveredItemId]);
+
+  const highlightColor = useMemo(() => {
+    if (!hoveredItem) return '#90C2FF';
+    return ERAS_CONFIG.find(e => e.layer === hoveredItem.layer)?.color || '#90C2FF';
+  }, [hoveredItem]);
+
   // Close dropdowns on clicking outside
   useEffect(() => {
     const handleClickOutside = () => {
@@ -400,7 +458,7 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
     return () => cancelAnimationFrame(animId);
   }, [selectedItem, trackOffsets]);
 
-  const bpColor = ERAS_CONFIG.find(e => e.layer === 'biblical-patriarchs')?.color || '#90C2FF';
+  // highlightColor is defined above recursively based on hovered item
 
   return (
     <div style={{ flex: 1, display: 'flex', flexDirection: 'column', background: theme.bg, color: theme.text, overflow: 'hidden', borderTop: `1px solid ${theme.border}` }}>
@@ -497,15 +555,7 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
                         const isSelected = selectedItem?.id === item.id;
                         
                         // Check genealogy highlights
-                        const isHighlight = hoveredItem && (
-                          hoveredItem.id === item.id || 
-                          hoveredItem.fatherId === item.id || 
-                          item.fatherId === hoveredItem.id ||
-                          hoveredItem.motherId === item.id ||
-                          item.motherId === hoveredItem.id ||
-                          hoveredItem.spouseId === item.id ||
-                          item.spouseId === hoveredItem.id
-                        );
+                        const isHighlight = highlightedIds.has(item.id);
 
                         if (item.type === 'lifespan') {
                           return (
@@ -677,130 +727,93 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
           >
             <defs>
               <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                <path d="M 0 2 L 8 5 L 0 8 z" fill={bpColor} />
+                <path d="M 0 2 L 8 5 L 0 8 z" fill={highlightColor} />
               </marker>
-              <circle id="dot" cx="5" cy="5" r="3" fill={bpColor} />
+              <circle id="dot" cx="5" cy="5" r="3" fill={highlightColor} />
             </defs>
-            {hoveredItem && hoveredItem.layer === 'biblical-patriarchs' && (() => {
+            {hoveredItem && (
+              hoveredItem.layer === 'biblical-patriarchs' ||
+              hoveredItem.layer === 'merovingian-bloodlines' ||
+              hoveredItem.layer === 'royal-bloodlines'
+            ) && (() => {
               const lines: React.ReactNode[] = [];
-              const hoveredY = trackOffsets.offsets[hoveredItem.id];
               
-              if (!hoveredY) return null;
+              highlightedIds.forEach(id => {
+                const item = TIMELINE_ITEMS.find(x => x.id === id);
+                if (!item) return;
+                
+                const itemY = trackOffsets.offsets[item.id];
+                if (!itemY) return;
 
-              // 1. Connection to Spouse (solid gold line)
-              if (hoveredItem.spouseId) {
-                const spouse = TIMELINE_ITEMS.find(x => x.id === hoveredItem.spouseId);
-                const spouseY = trackOffsets.offsets[hoveredItem.spouseId];
-                if (spouse && spouseY) {
-                  // Draw solid connection line at the start of the spouse born later
-                  const connectYear = Math.max(hoveredItem.start, spouse.start);
-                  const connectX = getX(connectYear);
-                  lines.push(
-                    <g key={`spouse-${spouse.id}`}>
-                      <line 
-                        x1={`${connectX}%`} 
-                        y1={hoveredY} 
-                        x2={`${connectX}%`} 
-                        y2={spouseY} 
-                        stroke={bpColor} 
-                        strokeWidth="3" 
-                      />
-                      <circle cx={`${connectX}%`} cy={hoveredY} r="5" fill={bpColor} stroke={theme.border} strokeWidth="1" />
-                      <circle cx={`${connectX}%`} cy={spouseY} r="5" fill={bpColor} stroke={theme.border} strokeWidth="1" />
-                    </g>
-                  );
+                // 1. Connection to Spouse (draw only once)
+                if (item.spouseId && highlightedIds.has(item.spouseId)) {
+                  if (item.id < item.spouseId) {
+                    const spouse = TIMELINE_ITEMS.find(x => x.id === item.spouseId);
+                    const spouseY = trackOffsets.offsets[item.spouseId];
+                    if (spouse && spouseY) {
+                      const connectYear = Math.max(item.start, spouse.start);
+                      const connectX = getX(connectYear);
+                      lines.push(
+                        <g key={`spouse-${item.id}-${spouse.id}`}>
+                          <line 
+                            x1={`${connectX}%`} 
+                            y1={itemY} 
+                            x2={`${connectX}%`} 
+                            y2={spouseY} 
+                            stroke={highlightColor} 
+                            strokeWidth="3" 
+                          />
+                          <circle cx={`${connectX}%`} cy={itemY} r="5" fill={highlightColor} stroke={theme.border} strokeWidth="1" />
+                          <circle cx={`${connectX}%`} cy={spouseY} r="5" fill={highlightColor} stroke={theme.border} strokeWidth="1" />
+                        </g>
+                      );
+                    }
+                  }
                 }
-              }
 
-              // 2. Line to Father (from Father's bar down to Son's start)
-              if (hoveredItem.fatherId) {
-                const father = TIMELINE_ITEMS.find(x => x.id === hoveredItem.fatherId);
-                const fatherY = trackOffsets.offsets[hoveredItem.fatherId];
-                if (father && fatherY) {
-                  const birthX = getX(hoveredItem.start);
-                  lines.push(
-                    <g key={`father-${father.id}`}>
-                      <line 
-                        x1={`${birthX}%`} 
-                        y1={fatherY} 
-                        x2={`${birthX}%`} 
-                        y2={hoveredY} 
-                        stroke={bpColor} 
-                        strokeWidth="2" 
-                        strokeDasharray="4,4"
-                      />
-                      <circle cx={`${birthX}%`} cy={fatherY} r="4" fill={bpColor} stroke={theme.border} strokeWidth="1" />
-                      <circle cx={`${birthX}%`} cy={hoveredY} r="3" fill={bpColor} />
-                    </g>
-                  );
-                }
-              }
-
-              // 3. Line to Mother (from Mother's bar down to Son's start)
-              if (hoveredItem.motherId) {
-                const mother = TIMELINE_ITEMS.find(x => x.id === hoveredItem.motherId);
-                const motherY = trackOffsets.offsets[hoveredItem.motherId];
-                if (mother && motherY) {
-                  const birthX = getX(hoveredItem.start);
-                  lines.push(
-                    <g key={`mother-${mother.id}`}>
-                      <line 
-                        x1={`${birthX}%`} 
-                        y1={motherY} 
-                        x2={`${birthX}%`} 
-                        y2={hoveredY} 
-                        stroke={bpColor} 
-                        strokeWidth="2" 
-                        strokeDasharray="4,4"
-                      />
-                      <circle cx={`${birthX}%`} cy={motherY} r="4" fill={bpColor} stroke={theme.border} strokeWidth="1" />
-                      <circle cx={`${birthX}%`} cy={hoveredY} r="3" fill={bpColor} />
-                    </g>
-                  );
-                }
-              }
-
-              // 4. Lines to Children (from Hovered parents down to Children's start)
-              const children = TIMELINE_ITEMS.filter(x => x.fatherId === hoveredItem.id || x.motherId === hoveredItem.id);
-              children.forEach(child => {
-                const childY = trackOffsets.offsets[child.id];
-                if (childY) {
-                  const birthX = getX(child.start);
-                  
-                  // If hovered is father
-                  if (child.fatherId === hoveredItem.id) {
+                // 2. Connection to Father
+                if (item.fatherId && highlightedIds.has(item.fatherId)) {
+                  const father = TIMELINE_ITEMS.find(x => x.id === item.fatherId);
+                  const fatherY = trackOffsets.offsets[item.fatherId];
+                  if (father && fatherY) {
+                    const birthX = getX(item.start);
                     lines.push(
-                      <g key={`child-father-${child.id}`}>
+                      <g key={`father-${father.id}-${item.id}`}>
                         <line 
                           x1={`${birthX}%`} 
-                          y1={hoveredY} 
+                          y1={fatherY} 
                           x2={`${birthX}%`} 
-                          y2={childY} 
-                          stroke={bpColor} 
+                          y2={itemY} 
+                          stroke={highlightColor} 
                           strokeWidth="2" 
                           strokeDasharray="4,4"
                         />
-                        <circle cx={`${birthX}%`} cy={hoveredY} r="4" fill={bpColor} stroke={theme.border} strokeWidth="1" />
-                        <circle cx={`${birthX}%`} cy={childY} r="3" fill={bpColor} />
+                        <circle cx={`${birthX}%`} cy={fatherY} r="4" fill={highlightColor} stroke={theme.border} strokeWidth="1" />
+                        <circle cx={`${birthX}%`} cy={itemY} r="3" fill={highlightColor} />
                       </g>
                     );
                   }
-                  
-                  // If hovered is mother
-                  if (child.motherId === hoveredItem.id) {
+                }
+
+                // 3. Connection to Mother
+                if (item.motherId && highlightedIds.has(item.motherId)) {
+                  const mother = TIMELINE_ITEMS.find(x => x.id === item.motherId);
+                  const motherY = trackOffsets.offsets[item.motherId];
+                  if (mother && motherY) {
+                    const birthX = getX(item.start);
                     lines.push(
-                      <g key={`child-mother-${child.id}`}>
+                      <g key={`mother-${mother.id}-${item.id}`}>
                         <line 
                           x1={`${birthX}%`} 
-                          y1={hoveredY} 
+                          y1={motherY} 
                           x2={`${birthX}%`} 
-                          y2={childY} 
-                          stroke={bpColor} 
+                          y2={itemY} 
+                          stroke={highlightColor} 
                           strokeWidth="2" 
                           strokeDasharray="4,4"
                         />
-                        <circle cx={`${birthX}%`} cy={hoveredY} r="4" fill={bpColor} stroke={theme.border} strokeWidth="1" />
-                        <circle cx={`${birthX}%`} cy={childY} r="3" fill={bpColor} />
+                        <circle cx={`${birthX}%`} cy={motherY} r="4" fill={highlightColor} stroke={theme.border} strokeWidth="1" />
+                        <circle cx={`${birthX}%`} cy={itemY} r="3" fill={highlightColor} />
                       </g>
                     );
                   }
@@ -1217,7 +1230,7 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
           <img 
             src="/icons/icon-zoom-out.svg" 
             onClick={() => handleZoom(1.3)}
-            style={{ width: '24px', height: '24px', filter: theme.invert, cursor: 'pointer', opacity: span >= 250000 ? 0.3 : 1 }} 
+            style={{ width: '24px', height: '24px', filter: theme.invert, cursor: 'pointer', opacity: span >= 252100 ? 0.3 : 1 }} 
             title="Zoom Out"
             alt="zoom out" 
           />
@@ -1226,11 +1239,11 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
             <input
               type="range"
               min="0"
-              max="249950"
-              value={250000 - Math.round(span)}
+              max="252050"
+              value={252100 - Math.round(span)}
               onChange={(e) => {
                 const val = parseInt(e.target.value, 10);
-                const newSpan = 250000 - val;
+                const newSpan = 252100 - val;
                 const centerYear = viewStart + span / 2;
                 setViewStart(centerYear - newSpan / 2);
                 setViewEnd(centerYear + newSpan / 2);
