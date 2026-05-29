@@ -18,44 +18,44 @@ interface TimelinePageProps {
 
 const ERAS_CONFIG = [
   {
-    id: 'sumerian-antediluvian',
-    name: 'Sumerian Antediluvian',
-    start: -245000,
-    end: -2000,
-    color: '#C6986D', // Clay Bronze
-    icon: '/icons/icon-ancient-texts.svg',
-    layer: 'sumerian-kings',
-    desc: 'Legendary pre-flood reigns.'
-  },
-  {
     id: 'biblical-patriarchs',
-    name: 'Biblical Patriarchs',
+    name: 'Biblical Bloodlines',
     start: -4100,
     end: -1600,
-    color: '#ECCE81', // Gold
-    icon: '/icons/icon-giants.svg',
+    color: '#90C2FF', // Blue
+    icon: '/icons/icon-biblical-bloodlines.svg',
     layer: 'biblical-patriarchs',
     desc: 'Genesis genealogy and patriarch lifespans.'
   },
   {
-    id: 'greek-myths',
-    name: 'Greek Myths',
-    start: -1700,
-    end: -700,
-    color: '#AFFFEC', // Aquamarine
-    icon: '/icons/icon-cave-drawings.svg',
-    layer: 'greek-mythology',
-    desc: 'Greek mythological dates calculated by ancient chronologists.'
-  },
-  {
     id: 'kingdom-classical',
-    name: 'Kingdom & Classical',
+    name: 'Biblical Events',
     start: -1100,
     end: 100,
-    color: '#FFABA6', // Light Coral
-    icon: '/icons/icon-timeline.svg',
+    color: '#91FFC4', // Green
+    icon: '/icons/icon-biblical-bloodlines-1.svg',
     layer: 'biblical-events',
     desc: 'Scriptural events, exiles, and historical kingdoms.'
+  },
+  {
+    id: 'sumerian-antediluvian',
+    name: 'Sumerian Kings List',
+    start: -245000,
+    end: -2000,
+    color: '#FF9BE1', // Pink
+    icon: '/icons/icon-sumerian-kings-list.svg',
+    layer: 'sumerian-kings',
+    desc: 'Legendary pre-flood reigns.'
+  },
+  {
+    id: 'greek-myths',
+    name: 'Greek Mythology',
+    start: -1700,
+    end: -700,
+    color: '#FFF96A', // Yellow
+    icon: '/icons/icon-greek-mythology.svg',
+    layer: 'greek-mythology',
+    desc: 'Greek mythological dates calculated by ancient chronologists.'
   }
 ];
 
@@ -221,15 +221,18 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
       const sorted = [...layerItems].sort((a, b) => a.start - b.start);
       
       const tracks: { endYear: number; items: TimelineItem[] }[] = [];
-      const bufferYears = Math.max(1, span * 0.045); // Buffer to separate overlapping names
+      const eraSpan = Math.abs(era.end - era.start);
+      const gap = eraSpan * 0.04; // Static gap per era (increased to prevent horizontal overlapping)
       
       sorted.forEach(item => {
         const itemStart = item.start;
-        const itemEnd = item.type === 'lifespan' ? (item.end ?? item.start) : (item.start + bufferYears);
+        // Reserving more space for point events based on their label text length to avoid horizontal overlap
+        const itemEnd = item.type === 'lifespan' 
+          ? (item.end ?? item.start) 
+          : (item.start + Math.max(eraSpan * 0.06, item.name.length * 0.01 * eraSpan));
         
         let assigned = false;
         for (let i = 0; i < tracks.length; i++) {
-          const gap = span * 0.02; // Gap between elements in same track
           if (tracks[i].endYear + gap < itemStart) {
             tracks[i].items.push(item);
             tracks[i].endYear = itemEnd;
@@ -250,7 +253,7 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
     });
     
     return results;
-  }, [activeEras, viewStart, viewEnd, span]);
+  }, [activeEras]);
 
   // Compute exact y-offsets for items to draw SVG connectors
   const trackOffsets = useMemo(() => {
@@ -275,7 +278,7 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
       currentY += tracks.length * rowHeight + padding;
     });
     
-    return { offsets, totalHeight: currentY };
+    return { offsets, totalHeight: currentY + 160 };
   }, [allocatedTracksByLayer, activeEras]);
 
   // Generate Year Ruler Tick Marks
@@ -312,28 +315,31 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
     return { list, majorInterval, mediumInterval };
   }, [viewStart, viewEnd, span]);
 
-  // Handle Item Selection from Dropdown Popovers
-  const handleItemSelect = (item: TimelineItem, era: typeof ERAS_CONFIG[0]) => {
-    // 1. Center the timeline viewport horizontally on the item
-    const itemSpan = item.type === 'lifespan' ? Math.abs((item.end ?? item.start) - item.start) : 0;
-    const padding = Math.max(100, itemSpan * 1.5);
-    const targetStart = item.start - padding;
-    const targetEnd = (item.end ?? item.start) + padding;
+  // Handle Item Selection (from either dropdown or clicking directly on the timeline tracks)
+  const handleItemClick = (item: TimelineItem) => {
+    // 1. Center the timeline viewport horizontally on the item, preserving zoom span or expanding if too narrow
+    const itemCenter = item.start + (item.type === 'lifespan' ? (item.end ?? item.start) - item.start : 0) / 2;
+    const itemLength = item.type === 'lifespan' ? Math.abs((item.end ?? item.start) - item.start) : 0;
+    const targetSpan = Math.max(span, itemLength * 1.5);
+    const targetStart = itemCenter - targetSpan / 2;
+    const targetEnd = itemCenter + targetSpan / 2;
     animateViewport(targetStart, targetEnd);
     
     // 2. Make sure this era is toggled ON
-    if (!activeEras[era.id]) {
+    const era = ERAS_CONFIG.find(e => e.layer === item.layer);
+    if (era && !activeEras[era.id]) {
       setActiveEras(p => ({ ...p, [era.id]: true }));
     }
-
-    // 3. Scroll vertically to the era group
-    scrollToEraGroup(era.layer);
     
-    // 4. Select item and show its detail card
+    // 3. Select item and show its detail card
     setSelectedItem(item);
     
-    // 5. Close popovers
+    // 4. Close popovers
     setOpenDropdownEra(null);
+  };
+
+  const handleItemSelect = (item: TimelineItem, era: typeof ERAS_CONFIG[0]) => {
+    handleItemClick(item);
   };
 
   // Find hovered item object
@@ -351,8 +357,53 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
     return () => window.removeEventListener('click', handleClickOutside);
   }, []);
 
+  // Auto-center vertically on selection to prevent details card cutoff
+  useEffect(() => {
+    if (!selectedItem || !scrollContainerRef.current) return;
+    
+    const container = scrollContainerRef.current;
+    
+    const animId = requestAnimationFrame(() => {
+      const itemY = trackOffsets.offsets[selectedItem.id];
+      if (itemY === undefined) return;
+      
+      const placeBelow = itemY < 260;
+      
+      // Calculate target vertical center for item + card combination
+      const targetCenterY = placeBelow ? itemY + 110 : itemY - 110;
+      const viewportHeight = container.clientHeight;
+      let targetScrollTop = targetCenterY - viewportHeight / 2;
+      
+      const maxScroll = container.scrollHeight - viewportHeight;
+      targetScrollTop = Math.max(0, Math.min(maxScroll, targetScrollTop));
+      
+      const startScroll = container.scrollTop;
+      const scrollDiff = targetScrollTop - startScroll;
+      if (Math.abs(scrollDiff) < 2) return;
+      
+      const startTime = performance.now();
+      const duration = 500;
+      
+      const step = (now: number) => {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const ease = 1 - Math.pow(1 - progress, 3);
+        container.scrollTop = startScroll + scrollDiff * ease;
+        
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        }
+      };
+      requestAnimationFrame(step);
+    });
+    
+    return () => cancelAnimationFrame(animId);
+  }, [selectedItem, trackOffsets]);
+
+  const bpColor = ERAS_CONFIG.find(e => e.layer === 'biblical-patriarchs')?.color || '#90C2FF';
+
   return (
-    <div style={{ flex: 1, display: 'flex', flexDirection: 'column', background: theme.bg, color: theme.text, overflow: 'hidden' }}>
+    <div style={{ flex: 1, display: 'flex', flexDirection: 'column', background: theme.bg, color: theme.text, overflow: 'hidden', borderTop: `1px solid ${theme.border}` }}>
       
       {/* TIMELINE VIEWPORT SCROLLER (TOP/CENTER) */}
       <div 
@@ -363,7 +414,6 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
         onMouseLeave={handleMouseUpOrLeave}
         style={{
           flex: 1,
-          position: 'relative',
           overflowX: 'hidden',
           overflowY: 'auto',
           cursor: isDragging ? 'grabbing' : 'grab',
@@ -397,7 +447,7 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
           </div>
 
           {/* LAYER TRACKS */}
-          <div style={{ position: 'relative', zIndex: 5, padding: '0 0 40px 0' }}>
+          <div style={{ position: 'relative', zIndex: 5, padding: '0 0 160px 0' }}>
             {ERAS_CONFIG.map(era => {
               if (!activeEras[era.id]) return null;
               
@@ -407,7 +457,7 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
                 <div 
                   key={era.id} 
                   data-era-group={era.layer}
-                  style={{ display: 'flex', flexDirection: 'column' }}
+                  style={{ display: 'flex', flexDirection: 'column', paddingBottom: '16px' }}
                 >
                   {/* Layer Header */}
                   <div style={{ 
@@ -444,12 +494,17 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
                         const xEnd = item.type === 'lifespan' ? getX(item.end ?? item.start) : xStart;
                         const width = Math.max(12, xEnd - xStart);
                         const isHovered = hoveredItemId === item.id;
+                        const isSelected = selectedItem?.id === item.id;
                         
                         // Check genealogy highlights
                         const isHighlight = hoveredItem && (
                           hoveredItem.id === item.id || 
                           hoveredItem.fatherId === item.id || 
-                          item.fatherId === hoveredItem.id
+                          item.fatherId === hoveredItem.id ||
+                          hoveredItem.motherId === item.id ||
+                          item.motherId === hoveredItem.id ||
+                          hoveredItem.spouseId === item.id ||
+                          item.spouseId === hoveredItem.id
                         );
 
                         if (item.type === 'lifespan') {
@@ -460,7 +515,7 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
                               onMouseLeave={() => setHoveredItemId(null)}
                               onClick={(e) => {
                                 e.stopPropagation();
-                                setSelectedItem(item);
+                                handleItemClick(item);
                               }}
                               style={{
                                 position: 'absolute',
@@ -468,10 +523,14 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
                                 width: `${width}%`,
                                 height: '24px',
                                 top: '6px',
-                                background: isHovered 
-                                  ? `${era.color}40` 
-                                  : (isHighlight ? `${era.color}25` : `${era.color}15`),
-                                border: `1px solid ${isHovered || isHighlight ? era.color : theme.border}`,
+                                background: isSelected
+                                  ? `${era.color}e6`
+                                  : (isHovered 
+                                    ? `${era.color}99` 
+                                    : (isHighlight ? `${era.color}77` : `${era.color}44`)),
+                                border: isSelected
+                                  ? `2px solid ${isMapDarkMode ? '#ffffff' : '#000000'}`
+                                  : 'none',
                                 borderRadius: '12px',
                                 display: 'flex',
                                 alignItems: 'center',
@@ -480,11 +539,13 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
                                 fontSize: '10px',
                                 fontWeight: 700,
                                 cursor: 'pointer',
-                                color: isHovered || isHighlight ? theme.text : theme.textDim,
-                                transition: 'background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease',
+                                color: isMapDarkMode ? '#ffffff' : '#000000',
+                                mixBlendMode: isMapDarkMode ? 'screen' : 'multiply',
+                                boxShadow: isSelected ? `0 0 15px ${era.color}` : 'none',
+                                transition: 'background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease',
                                 pointerEvents: 'auto',
                                 overflow: 'hidden',
-                                zIndex: isHovered ? 200 : (isHighlight ? 100 : 5)
+                                zIndex: isSelected ? 300 : (isHovered ? 200 : (isHighlight ? 100 : 5))
                               }}
                             >
                               <span style={{ textOverflow: 'ellipsis', whiteSpace: 'nowrap', overflow: 'hidden', width: '100%' }}>
@@ -493,7 +554,10 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
                             </div>
                           );
                         } else {
-                          // Singular Event Circle
+                          // Singular Event Circle with Hover & Selected Pill Backgrounds
+                          const isHovered = hoveredItemId === item.id;
+                          const isSelected = selectedItem?.id === item.id;
+                          
                           return (
                             <div
                               key={item.id}
@@ -501,49 +565,93 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
                               onMouseLeave={() => setHoveredItemId(null)}
                               onClick={(e) => {
                                 e.stopPropagation();
-                                setSelectedItem(item);
+                                handleItemClick(item);
                               }}
                               style={{
                                 position: 'absolute',
                                 left: `${xStart}%`,
-                                transform: 'translateX(-50%)',
                                 height: '24px',
                                 top: '6px',
                                 display: 'flex',
                                 alignItems: 'center',
                                 cursor: 'pointer',
                                 pointerEvents: 'auto',
-                                zIndex: isHovered ? 200 : 5
+                                zIndex: isSelected ? 300 : (isHovered ? 200 : 5)
                               }}
                             >
-                              {/* Glowing Dot */}
                               <div
                                 style={{
-                                  width: '12px',
-                                  height: '12px',
-                                  borderRadius: '50%',
-                                  background: era.color,
-                                  border: `1px solid ${theme.border}`,
-                                  boxShadow: isHovered ? `0 0 8px ${era.color}` : 'none',
-                                  transition: 'all 0.15s ease'
-                                }}
-                              />
-                              {/* Label text placed next to the dot */}
-                              {(span < 8000 || isHovered) && (
-                                <span style={{ 
-                                  marginLeft: '8px', 
-                                  fontSize: '9px', 
-                                  fontWeight: 700, 
-                                  color: isHovered ? era.color : theme.textDim,
+                                  display: 'flex',
+                                  alignItems: 'center',
+                                  height: '24px',
+                                  borderRadius: '12px',
+                                  padding: (isHovered || isSelected) ? '0 12px' : '0',
+                                  border: isSelected
+                                    ? `2px solid ${isMapDarkMode ? '#ffffff' : '#000000'}`
+                                    : 'none',
+                                  boxShadow: isSelected ? `0 0 15px ${era.color}` : 'none',
+                                  transition: 'all 0.15s ease',
                                   whiteSpace: 'nowrap',
-                                  background: theme.bgTransparent,
-                                  padding: '1px 4px',
-                                  borderRadius: '2px',
-                                  border: isHovered ? `1px solid ${era.color}` : 'none'
-                                }}>
-                                  {item.name}
-                                </span>
-                              )}
+                                  transform: (isHovered || isSelected) ? 'translateX(-18px)' : 'translateX(-6px)',
+                                  position: 'relative'
+                                }}
+                              >
+                                {/* Blended Background Sibling (isolated from text and dot) */}
+                                {(isHovered || isSelected) && (
+                                  <div
+                                    style={{
+                                      position: 'absolute',
+                                      top: 0,
+                                      left: 0,
+                                      right: 0,
+                                      bottom: 0,
+                                      borderRadius: '12px',
+                                      background: isSelected
+                                        ? `${era.color}e6`
+                                        : `${era.color}99`,
+                                      mixBlendMode: isMapDarkMode ? 'screen' : 'multiply',
+                                      zIndex: 0,
+                                      pointerEvents: 'none'
+                                    }}
+                                  />
+                                )}
+
+                                {/* Dot */}
+                                <div
+                                  style={{
+                                    width: '12px',
+                                    height: '12px',
+                                    borderRadius: '50%',
+                                    background: (isSelected || isHovered) ? '#000000' : era.color,
+                                    border: 'none',
+                                    boxShadow: isSelected
+                                      ? `0 0 10px 2px ${era.color}`
+                                      : (isHovered ? `0 0 8px ${era.color}` : 'none'),
+                                    transform: isSelected ? 'scale(1.2)' : 'scale(1)',
+                                    transition: 'all 0.15s ease',
+                                    flexShrink: 0,
+                                    position: 'relative',
+                                    zIndex: 1
+                                  }}
+                                />
+
+                                {/* Label text */}
+                                {(span < 8000 || isHovered || isSelected) && (
+                                  <span style={{ 
+                                    marginLeft: '8px', 
+                                    fontSize: '9px', 
+                                    fontWeight: 700, 
+                                    color: (isHovered || isSelected)
+                                      ? '#000000'
+                                      : (isMapDarkMode ? '#ffffff' : '#000000'),
+                                    whiteSpace: 'nowrap',
+                                    position: 'relative',
+                                    zIndex: 1
+                                  }}>
+                                    {item.name}
+                                  </span>
+                                )}
+                              </div>
                             </div>
                           );
                         }
@@ -569,9 +677,9 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
           >
             <defs>
               <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                <path d="M 0 2 L 8 5 L 0 8 z" fill="#ECCE81" />
+                <path d="M 0 2 L 8 5 L 0 8 z" fill={bpColor} />
               </marker>
-              <circle id="dot" cx="5" cy="5" r="3" fill="#ECCE81" />
+              <circle id="dot" cx="5" cy="5" r="3" fill={bpColor} />
             </defs>
             {hoveredItem && hoveredItem.layer === 'biblical-patriarchs' && (() => {
               const lines: React.ReactNode[] = [];
@@ -579,12 +687,36 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
               
               if (!hoveredY) return null;
 
-              // 1. Line to Father (from Father's bar down to Son's start)
+              // 1. Connection to Spouse (solid gold line)
+              if (hoveredItem.spouseId) {
+                const spouse = TIMELINE_ITEMS.find(x => x.id === hoveredItem.spouseId);
+                const spouseY = trackOffsets.offsets[hoveredItem.spouseId];
+                if (spouse && spouseY) {
+                  // Draw solid connection line at the start of the spouse born later
+                  const connectYear = Math.max(hoveredItem.start, spouse.start);
+                  const connectX = getX(connectYear);
+                  lines.push(
+                    <g key={`spouse-${spouse.id}`}>
+                      <line 
+                        x1={`${connectX}%`} 
+                        y1={hoveredY} 
+                        x2={`${connectX}%`} 
+                        y2={spouseY} 
+                        stroke={bpColor} 
+                        strokeWidth="3" 
+                      />
+                      <circle cx={`${connectX}%`} cy={hoveredY} r="5" fill={bpColor} stroke={theme.border} strokeWidth="1" />
+                      <circle cx={`${connectX}%`} cy={spouseY} r="5" fill={bpColor} stroke={theme.border} strokeWidth="1" />
+                    </g>
+                  );
+                }
+              }
+
+              // 2. Line to Father (from Father's bar down to Son's start)
               if (hoveredItem.fatherId) {
                 const father = TIMELINE_ITEMS.find(x => x.id === hoveredItem.fatherId);
                 const fatherY = trackOffsets.offsets[hoveredItem.fatherId];
                 if (father && fatherY) {
-                  // Connect at the year of the son's birth (which is hoveredItem.start)
                   const birthX = getX(hoveredItem.start);
                   lines.push(
                     <g key={`father-${father.id}`}>
@@ -593,38 +725,85 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
                         y1={fatherY} 
                         x2={`${birthX}%`} 
                         y2={hoveredY} 
-                        stroke="#ECCE81" 
+                        stroke={bpColor} 
                         strokeWidth="2" 
                         strokeDasharray="4,4"
                       />
-                      <circle cx={`${birthX}%`} cy={fatherY} r="4" fill="#ECCE81" stroke={theme.border} strokeWidth="1" />
-                      <circle cx={`${birthX}%`} cy={hoveredY} r="3" fill="#ECCE81" />
+                      <circle cx={`${birthX}%`} cy={fatherY} r="4" fill={bpColor} stroke={theme.border} strokeWidth="1" />
+                      <circle cx={`${birthX}%`} cy={hoveredY} r="3" fill={bpColor} />
                     </g>
                   );
                 }
               }
 
-              // 2. Lines to Children (from Hovered bar down to Children's start)
-              const children = TIMELINE_ITEMS.filter(x => x.fatherId === hoveredItem.id);
+              // 3. Line to Mother (from Mother's bar down to Son's start)
+              if (hoveredItem.motherId) {
+                const mother = TIMELINE_ITEMS.find(x => x.id === hoveredItem.motherId);
+                const motherY = trackOffsets.offsets[hoveredItem.motherId];
+                if (mother && motherY) {
+                  const birthX = getX(hoveredItem.start);
+                  lines.push(
+                    <g key={`mother-${mother.id}`}>
+                      <line 
+                        x1={`${birthX}%`} 
+                        y1={motherY} 
+                        x2={`${birthX}%`} 
+                        y2={hoveredY} 
+                        stroke={bpColor} 
+                        strokeWidth="2" 
+                        strokeDasharray="4,4"
+                      />
+                      <circle cx={`${birthX}%`} cy={motherY} r="4" fill={bpColor} stroke={theme.border} strokeWidth="1" />
+                      <circle cx={`${birthX}%`} cy={hoveredY} r="3" fill={bpColor} />
+                    </g>
+                  );
+                }
+              }
+
+              // 4. Lines to Children (from Hovered parents down to Children's start)
+              const children = TIMELINE_ITEMS.filter(x => x.fatherId === hoveredItem.id || x.motherId === hoveredItem.id);
               children.forEach(child => {
                 const childY = trackOffsets.offsets[child.id];
                 if (childY) {
                   const birthX = getX(child.start);
-                  lines.push(
-                    <g key={`child-${child.id}`}>
-                      <line 
-                        x1={`${birthX}%`} 
-                        y1={hoveredY} 
-                        x2={`${birthX}%`} 
-                        y2={childY} 
-                        stroke="#ECCE81" 
-                        strokeWidth="2" 
-                        strokeDasharray="4,4"
-                      />
-                      <circle cx={`${birthX}%`} cy={hoveredY} r="4" fill="#ECCE81" stroke={theme.border} strokeWidth="1" />
-                      <circle cx={`${birthX}%`} cy={childY} r="3" fill="#ECCE81" />
-                    </g>
-                  );
+                  
+                  // If hovered is father
+                  if (child.fatherId === hoveredItem.id) {
+                    lines.push(
+                      <g key={`child-father-${child.id}`}>
+                        <line 
+                          x1={`${birthX}%`} 
+                          y1={hoveredY} 
+                          x2={`${birthX}%`} 
+                          y2={childY} 
+                          stroke={bpColor} 
+                          strokeWidth="2" 
+                          strokeDasharray="4,4"
+                        />
+                        <circle cx={`${birthX}%`} cy={hoveredY} r="4" fill={bpColor} stroke={theme.border} strokeWidth="1" />
+                        <circle cx={`${birthX}%`} cy={childY} r="3" fill={bpColor} />
+                      </g>
+                    );
+                  }
+                  
+                  // If hovered is mother
+                  if (child.motherId === hoveredItem.id) {
+                    lines.push(
+                      <g key={`child-mother-${child.id}`}>
+                        <line 
+                          x1={`${birthX}%`} 
+                          y1={hoveredY} 
+                          x2={`${birthX}%`} 
+                          y2={childY} 
+                          stroke={bpColor} 
+                          strokeWidth="2" 
+                          strokeDasharray="4,4"
+                        />
+                        <circle cx={`${birthX}%`} cy={hoveredY} r="4" fill={bpColor} stroke={theme.border} strokeWidth="1" />
+                        <circle cx={`${birthX}%`} cy={childY} r="3" fill={bpColor} />
+                      </g>
+                    );
+                  }
                 }
               });
 
@@ -632,72 +811,152 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
             })()}
           </svg>
 
-        </div>
+          {/* DETAILS OVERLAY CARD */}
+          <AnimatePresence>
+            {selectedItem && (() => {
+              const era = ERAS_CONFIG.find(e => e.layer === selectedItem.layer) || ERAS_CONFIG[0];
+              const itemCenterYear = selectedItem.start + (selectedItem.type === 'lifespan' ? (selectedItem.end ?? selectedItem.start) - selectedItem.start : 0) / 2;
+              const itemCenterPct = getX(itemCenterYear);
+              const itemY = trackOffsets.offsets[selectedItem.id] || 100;
+              const placeBelow = itemY < 260;
 
-        {/* DETAILS OVERLAY CARD */}
-        <AnimatePresence>
-          {selectedItem && (() => {
-            const era = ERAS_CONFIG.find(e => e.layer === selectedItem.layer) || ERAS_CONFIG[0];
-            return (
-              <motion.div
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 15 }}
-                style={{
-                  position: 'fixed',
-                  bottom: '160px', // Stays above the bottom controls bar
-                  right: '40px',
-                  width: '320px',
-                  background: isMapDarkMode ? 'rgba(0, 0, 0, 0.95)' : 'rgba(255, 255, 255, 0.95)',
-                  border: `3px solid ${theme.border}`,
-                  boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
-                  padding: '16px',
-                  zIndex: 1000,
-                  fontFamily: '"Space Mono", monospace',
-                  pointerEvents: 'auto',
-                  color: theme.text
-                }}
-              >
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '8px' }}>
-                  <span style={{ fontSize: '9px', fontWeight: 'bold', textTransform: 'uppercase', color: era.color }}>
-                    {era.name}
-                  </span>
-                  <button 
-                    onClick={() => setSelectedItem(null)}
-                    style={{ 
-                      background: 'transparent', 
-                      color: theme.text, 
-                      cursor: 'pointer', 
-                      padding: '2px 6px',
-                      fontSize: '9px',
-                      fontWeight: 'bold',
-                      border: `1px solid ${theme.border}`,
-                      borderRadius: '2px'
+              const tooltipTheme = {
+                bg: isMapDarkMode ? '#ffffff' : '#000000',
+                text: isMapDarkMode ? '#000000' : '#ffffff',
+                textDim: isMapDarkMode ? '#666666' : '#cccccc',
+                border: isMapDarkMode ? '#ffffff' : '#000000',
+                borderLight: isMapDarkMode ? 'rgba(0, 0, 0, 0.15)' : 'rgba(255, 255, 255, 0.2)',
+                buttonBg: isMapDarkMode ? '#000000' : '#ffffff',
+                buttonText: isMapDarkMode ? '#ffffff' : '#000000',
+                buttonBorder: isMapDarkMode ? '#000000' : '#ffffff'
+              };
+
+              return (
+                <motion.div
+                  key={selectedItem.id}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.25 }}
+                  style={{
+                    position: 'absolute',
+                    left: `${itemCenterPct}%`,
+                    top: `${placeBelow ? itemY + 28 : itemY - 28}px`,
+                    transform: placeBelow ? 'translate(-50%, 0)' : 'translate(-50%, -100%)',
+                    width: '320px',
+                    zIndex: 1000,
+                    pointerEvents: 'none'
+                  }}
+                >
+                  <motion.div
+                    initial={{ scale: 0.95 }}
+                    animate={{ scale: 1 }}
+                    exit={{ scale: 0.95 }}
+                    transition={{ duration: 0.25, ease: 'easeOut' }}
+                    style={{
+                      width: '100%',
+                      background: tooltipTheme.bg,
+                      border: `2px solid ${tooltipTheme.border}`,
+                      borderRadius: '16px',
+                      boxShadow: isMapDarkMode ? '0 10px 40px rgba(0, 0, 0, 0.4)' : '0 10px 40px rgba(0, 0, 0, 0.3)',
+                      padding: '24px',
+                      fontFamily: '"Space Mono", monospace',
+                      pointerEvents: 'auto',
+                      color: tooltipTheme.text,
+                      boxSizing: 'border-box',
+                      position: 'relative'
                     }}
                   >
-                    ESC
-                  </button>
-                </div>
-                <h3 style={{ margin: '0 0 6px 0', fontSize: '13px', fontWeight: 'bold', letterSpacing: '1px' }}>{selectedItem.name}</h3>
-                <div style={{ fontSize: '9px', color: theme.textDim, marginBottom: '12px', fontFamily: '"Space Mono", monospace' }}>
-                  {selectedItem.type === 'lifespan' ? (
-                    <span>LIFESPAN/REIGN: {formatYear(selectedItem.start)} – {formatYear(selectedItem.end ?? selectedItem.start)} ({Math.abs((selectedItem.end ?? selectedItem.start) - selectedItem.start)} years)</span>
-                  ) : (
-                    <span>EVENT YEAR: {formatYear(selectedItem.start)}</span>
-                  )}
-                </div>
-                <p style={{ margin: '0 0 12px 0', fontSize: '10px', lineHeight: '16px', color: theme.text }}>
-                  {selectedItem.description}
-                </p>
-                {selectedItem.source && (
-                  <div style={{ fontSize: '9px', color: theme.textDim, borderTop: `1px dashed ${theme.borderLight}`, paddingTop: '8px', textTransform: 'uppercase' }}>
-                    SOURCE: {selectedItem.source}
-                  </div>
-                )}
-              </motion.div>
-            );
-          })()}
-        </AnimatePresence>
+                    {/* Arrow */}
+                    <div style={{
+                      position: 'absolute',
+                      width: 0,
+                      height: 0,
+                      borderStyle: 'solid',
+                      left: '50%',
+                      transform: 'translateX(-50%)',
+                      ...(placeBelow ? {
+                        top: '-10px',
+                        borderWidth: '0 10px 10px 10px',
+                        borderColor: `transparent transparent ${tooltipTheme.bg} transparent`
+                      } : {
+                        bottom: '-10px',
+                        borderWidth: '10px 10px 0 10px',
+                        borderColor: `${tooltipTheme.bg} transparent transparent transparent`
+                      })
+                    }} />
+
+                    {/* Header (Era label and spacing) */}
+                    <div style={{ 
+                      fontSize: '9px', 
+                      fontWeight: 'bold', 
+                      letterSpacing: '2px', 
+                      textTransform: 'uppercase', 
+                      borderBottom: `1px solid ${tooltipTheme.borderLight}`, 
+                      paddingBottom: '8px', 
+                      margin: '0 0 12px 0', 
+                      color: era.color,
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      alignItems: 'center'
+                    }}>
+                      <span>{era.name}</span>
+                    </div>
+
+                    {/* Name */}
+                    <h3 style={{ margin: '0 0 6px 0', fontSize: '12px', fontWeight: 'bold', letterSpacing: '1px', textTransform: 'uppercase' }}>
+                      {selectedItem.name}
+                    </h3>
+
+                    {/* Dates */}
+                    <div style={{ fontSize: '9px', color: tooltipTheme.textDim, marginBottom: '16px' }}>
+                      {selectedItem.type === 'lifespan' ? (
+                        <span>LIFESPAN/REIGN: {formatYear(selectedItem.start)} – {formatYear(selectedItem.end ?? selectedItem.start)} ({Math.abs((selectedItem.end ?? selectedItem.start) - selectedItem.start)} years)</span>
+                      ) : (
+                        <span>EVENT YEAR: {formatYear(selectedItem.start)}</span>
+                      )}
+                    </div>
+
+                    {/* Description */}
+                    <p style={{ margin: '0 0 20px 0', fontSize: '10px', lineHeight: '1.6', color: tooltipTheme.textDim, textAlign: 'left' }}>
+                      {selectedItem.description}
+                    </p>
+
+                    {/* Source and Close Button Row */}
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderTop: selectedItem.source ? `1px dashed ${tooltipTheme.borderLight}` : 'none', paddingTop: selectedItem.source ? '12px' : '0' }}>
+                      {selectedItem.source ? (
+                        <span style={{ fontSize: '8px', color: tooltipTheme.textDim, textTransform: 'uppercase' }}>
+                          SRC: {selectedItem.source}
+                        </span>
+                      ) : <div />}
+                      
+                      <button
+                        onClick={() => setSelectedItem(null)}
+                        style={{
+                          background: tooltipTheme.buttonBg,
+                          color: tooltipTheme.buttonText,
+                          border: `1px solid ${tooltipTheme.buttonBorder}`,
+                          padding: '6px 16px',
+                          fontSize: '9px',
+                          fontFamily: '"Space Mono", monospace',
+                          fontWeight: 700,
+                          cursor: 'pointer',
+                          borderRadius: '16px',
+                          textTransform: 'uppercase',
+                          transition: 'all 0.2s ease',
+                          boxSizing: 'border-box'
+                        }}
+                      >
+                        Close
+                      </button>
+                    </div>
+                  </motion.div>
+                </motion.div>
+              );
+            })()}
+          </AnimatePresence>
+
+        </div>
 
       </div>
 
@@ -751,10 +1010,10 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
       {/* BOTTOM CONTROLS PANEL (BOTTOM BAR) */}
       <div 
         style={{
-          height: '130px',
+          height: '64px',
           background: theme.bg,
           borderTop: `1px solid ${theme.border}`,
-          padding: '12px 24px',
+          padding: '0 24px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
@@ -803,29 +1062,30 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
                       scrollToEraGroup(era.layer);
                     }}
                   >
-                    {/* Placeholder Icon */}
-                    <div style={{ width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                      <img 
-                        src={era.icon} 
-                        onError={(e) => { e.currentTarget.src = '/icons/icon-cave-drawings.svg'; }}
-                        style={{ width: '30px', height: '30px' }} 
-                        alt={era.name} 
-                      />
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flex: 1, textAlign: 'left' }}>
+                      {/* Placeholder Icon */}
+                      <div style={{ width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                        <img 
+                          src={era.icon} 
+                          onError={(e) => { e.currentTarget.src = '/icons/icon-cave-drawings.svg'; }}
+                          style={{ width: '30px', height: '30px' }} 
+                          alt={era.name} 
+                        />
+                      </div>
+                      
+                      {/* Label */}
+                      <span style={{ 
+                        fontSize: '10px', 
+                        fontWeight: '700', 
+                        fontFamily: '"Space Mono", monospace', 
+                        opacity: isActive ? 1 : 0.5,
+                        transition: 'opacity 0.3s ease-in-out',
+                        marginRight: '8px',
+                        whiteSpace: 'nowrap'
+                      }}>
+                        {era.name}
+                      </span>
                     </div>
-                    
-                    {/* Label */}
-                    <span style={{ 
-                      fontSize: '9px', 
-                      fontWeight: '700', 
-                      fontFamily: '"Space Mono", monospace', 
-                      opacity: isActive ? 1 : 0.5,
-                      transition: 'opacity 0.3s ease-in-out',
-                      marginLeft: '4px',
-                      marginRight: '8px',
-                      whiteSpace: 'nowrap'
-                    }}>
-                      {era.name}
-                    </span>
                     
                     {/* Action buttons on the right side of the pill */}
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0' }} onClick={e => e.stopPropagation()}>
@@ -878,8 +1138,6 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
                           bottom: '45px', // Sit cleanly above bottom controls bar
                           left: '0px',
                           width: '240px',
-                          maxHeight: '220px',
-                          overflowY: 'auto',
                           background: theme.bg,
                           border: `1px solid ${theme.border}`,
                           borderRadius: '8px',
@@ -887,54 +1145,63 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
                           zIndex: 1000,
                           fontFamily: '"Space Mono", monospace',
                           pointerEvents: 'auto',
-                          textAlign: 'left'
+                          textAlign: 'left',
+                          overflow: 'hidden'
                         }}
-                        className="custom-scrollbar"
                       >
-                        <div style={{ 
-                          padding: '6px 12px', 
-                          borderBottom: `1px solid ${theme.borderLight}`, 
-                          fontSize: '8px', 
-                          color: theme.textDim, 
-                          fontWeight: 'bold', 
-                          textTransform: 'uppercase',
-                          background: isMapDarkMode ? '#111' : '#f5f5f5',
-                          position: 'sticky',
-                          top: 0,
-                          zIndex: 1
-                        }}>
-                          Go to item:
-                        </div>
-                        {eraItems.length === 0 ? (
-                          <div style={{ padding: '12px', fontSize: '10px', color: theme.textDim, textAlign: 'center' }}>
-                            Era is currently hidden.
+                        <div
+                          style={{
+                            maxHeight: '220px',
+                            overflowY: 'auto',
+                            width: '100%'
+                          }}
+                          className="custom-scrollbar"
+                        >
+                          <div style={{ 
+                            padding: '6px 12px', 
+                            borderBottom: `1px solid ${theme.borderLight}`, 
+                            fontSize: '8px', 
+                            color: theme.textDim, 
+                            fontWeight: 'bold', 
+                            textTransform: 'uppercase',
+                            background: isMapDarkMode ? '#111' : '#f5f5f5',
+                            position: 'sticky',
+                            top: 0,
+                            zIndex: 1
+                          }}>
+                            Go to item:
                           </div>
-                        ) : (
-                          eraItems.map(item => (
-                            <div 
-                              key={item.id}
-                              onClick={() => handleItemSelect(item, era)}
-                              style={{
-                                padding: '8px 12px',
-                                fontSize: '10px',
-                                cursor: 'pointer',
-                                borderBottom: `1px solid ${theme.borderLight}`,
-                                color: theme.text,
-                                transition: 'background 0.15s ease',
-                                display: 'flex',
-                                justifyContent: 'space-between',
-                                gap: '8px'
-                              }}
-                              onMouseEnter={(e) => { e.currentTarget.style.background = `${era.color}20`; }}
-                              onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; }}
-                            >
-                              <span style={{ fontWeight: 'bold' }}>{item.name}</span>
-                              <span style={{ fontSize: '8px', color: theme.textDim, alignSelf: 'center', whiteSpace: 'nowrap' }}>
-                                {formatYear(item.start)}
-                              </span>
+                          {eraItems.length === 0 ? (
+                            <div style={{ padding: '12px', fontSize: '10px', color: theme.textDim, textAlign: 'center' }}>
+                              Era is currently hidden.
                             </div>
-                          ))
-                        )}
+                          ) : (
+                            eraItems.map(item => (
+                              <div 
+                                key={item.id}
+                                onClick={() => handleItemSelect(item, era)}
+                                style={{
+                                  padding: '8px 12px',
+                                  fontSize: '10px',
+                                  cursor: 'pointer',
+                                  borderBottom: `1px solid ${theme.borderLight}`,
+                                  color: theme.text,
+                                  transition: 'background 0.15s ease',
+                                  display: 'flex',
+                                  justifyContent: 'space-between',
+                                  gap: '8px'
+                                }}
+                                onMouseEnter={(e) => { e.currentTarget.style.background = `${era.color}20`; }}
+                                onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; }}
+                              >
+                                <span style={{ fontWeight: 'bold' }}>{item.name}</span>
+                                <span style={{ fontSize: '8px', color: theme.textDim, alignSelf: 'center', whiteSpace: 'nowrap' }}>
+                                  {formatYear(item.start)}
+                                </span>
+                              </div>
+                            ))
+                          )}
+                        </div>
                       </motion.div>
                     )}
                   </AnimatePresence>
@@ -955,26 +1222,38 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
             alt="zoom out" 
           />
           
-          <div style={{ display: 'flex', flexDirection: 'column', width: '120px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', position: 'relative', width: '120px', justifyContent: 'center' }}>
             <input
               type="range"
-              min="50"
-              max="250000"
-              value={Math.round(span)}
+              min="0"
+              max="249950"
+              value={250000 - Math.round(span)}
               onChange={(e) => {
-                const newSpan = parseInt(e.target.value, 10);
+                const val = parseInt(e.target.value, 10);
+                const newSpan = 250000 - val;
                 const centerYear = viewStart + span / 2;
                 setViewStart(centerYear - newSpan / 2);
                 setViewEnd(centerYear + newSpan / 2);
               }}
               style={{
                 width: '100%',
-                accentColor: theme.text,
+                height: '2px',
+                background: theme.text,
+                outline: 'none',
                 cursor: 'pointer',
-                background: theme.borderLight
+                margin: 0
               }}
+              className="timeline-zoom-slider"
             />
-            <span style={{ fontSize: '7px', color: theme.textDim, textAlign: 'center', marginTop: '2px', letterSpacing: '0.5px' }}>
+            <span style={{ 
+              position: 'absolute', 
+              top: '12px', 
+              fontSize: '7px', 
+              color: theme.textDim, 
+              textAlign: 'center', 
+              letterSpacing: '0.5px',
+              whiteSpace: 'nowrap'
+            }}>
               SPAN: {Math.round(span).toLocaleString()} YEARS
             </span>
           </div>
@@ -991,21 +1270,26 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
             onClick={handleReset}
             title="Reset View"
             style={{
-              width: '24px',
-              height: '24px',
+              height: '32px',
+              padding: '0 12px',
               background: 'transparent',
               border: `1px solid ${theme.border}`,
               color: theme.text,
               display: 'flex',
               alignItems: 'center',
-              justifyContent: 'center',
+              gap: '6px',
               cursor: 'pointer',
               transition: 'all 0.15s ease',
-              borderRadius: '4px',
-              padding: 0
+              borderRadius: '16px',
+              fontFamily: '"Space Mono", monospace',
+              fontSize: '9px',
+              fontWeight: 700,
+              textTransform: 'uppercase',
+              boxSizing: 'border-box'
             }}
           >
             <RotateCcw size={10} strokeWidth={2.5} />
+            <span>Reset</span>
           </button>
         </div>
 

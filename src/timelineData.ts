@@ -8,6 +8,8 @@ export interface TimelineItem {
   description: string;
   source?: string;
   fatherId?: string; // For lineage tracking
+  motherId?: string; // For mother lineage tracking
+  spouseId?: string; // For spouse relationship tracking
 }
 
 export const TIMELINE_ITEMS: TimelineItem[] = [
@@ -22,7 +24,43 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     start: -4004,
     end: -3074,
     description: 'The first human created by God. Lived 930 years.',
-    source: 'Genesis 5:3-5'
+    source: 'Genesis 5:3-5',
+    spouseId: 'eve'
+  },
+  {
+    id: 'eve',
+    name: 'Eve',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -4004,
+    end: -3074,
+    description: 'The first woman, created by God from Adam\'s rib. Mother of Cain, Abel, Seth, and others.',
+    source: 'Genesis 2:21-25, 3:20',
+    spouseId: 'adam'
+  },
+  {
+    id: 'cain',
+    name: 'Cain',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -3900,
+    end: -3100,
+    description: 'Eldest son of Adam and Eve. Slew his brother Abel and was marked by God.',
+    source: 'Genesis 4:1-16',
+    fatherId: 'adam',
+    motherId: 'eve'
+  },
+  {
+    id: 'abel',
+    name: 'Abel',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -3890,
+    end: -3760,
+    description: 'Second son of Adam and Eve. A keeper of sheep whose offering was accepted by God, slain by Cain out of jealousy.',
+    source: 'Genesis 4:2-8',
+    fatherId: 'adam',
+    motherId: 'eve'
   },
   {
     id: 'seth',
@@ -33,7 +71,8 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     end: -2962,
     description: 'Third son of Adam and Eve, born after Abel was killed. Lived 912 years.',
     source: 'Genesis 5:6-8',
-    fatherId: 'adam'
+    fatherId: 'adam',
+    motherId: 'eve'
   },
   {
     id: 'enosh',
@@ -275,7 +314,30 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     end: -1821,
     description: 'Patriarch of Israel, called by God from Ur to go to Canaan. Patriarch of the Covenant. Lived 175 years.',
     source: 'Genesis 12-25',
-    fatherId: 'terah'
+    fatherId: 'terah',
+    spouseId: 'sarah'
+  },
+  {
+    id: 'sarah',
+    name: 'Sarah',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -1986,
+    end: -1859,
+    description: 'Wife of Abraham and mother of Isaac. Lived 127 years.',
+    source: 'Genesis 17:17, 23:1',
+    spouseId: 'abraham'
+  },
+  {
+    id: 'ishmael',
+    name: 'Ishmael',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -1910,
+    end: -1773,
+    description: 'Eldest son of Abraham (with Hagar). Father of the Ishmaelites. Lived 137 years.',
+    source: 'Genesis 16:16, 25:17',
+    fatherId: 'abraham'
   },
   {
     id: 'isaac',
@@ -286,7 +348,32 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     end: -1716,
     description: 'Son of Abraham and Sarah, born in their old age. Father of Jacob and Esau. Lived 180 years.',
     source: 'Genesis 21-35',
-    fatherId: 'abraham'
+    fatherId: 'abraham',
+    motherId: 'sarah',
+    spouseId: 'rebekah'
+  },
+  {
+    id: 'rebekah',
+    name: 'Rebekah',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -1876,
+    end: -1756,
+    description: 'Wife of Isaac and mother of Jacob and Esau.',
+    source: 'Genesis 24-27',
+    spouseId: 'isaac'
+  },
+  {
+    id: 'esau',
+    name: 'Esau',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -1836,
+    end: -1690,
+    description: 'Eldest son of Isaac and Rebekah, twin brother of Jacob. Founder of the Edomites.',
+    source: 'Genesis 25-36',
+    fatherId: 'isaac',
+    motherId: 'rebekah'
   },
   {
     id: 'jacob',
@@ -297,7 +384,55 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     end: -1689,
     description: 'Son of Isaac, renamed Israel. Father of the twelve patriarchs of the Tribes of Israel. Lived 147 years.',
     source: 'Genesis 25-49',
-    fatherId: 'isaac'
+    fatherId: 'isaac',
+    motherId: 'rebekah',
+    spouseId: 'leah'
+  },
+  {
+    id: 'leah',
+    name: 'Leah',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -1820,
+    end: -1700,
+    description: 'First wife of Jacob and mother of Reuben, Simeon, Levi, Judah, Issachar, and Zebulun.',
+    source: 'Genesis 29-33, 49:31',
+    spouseId: 'jacob'
+  },
+  {
+    id: 'rachel',
+    name: 'Rachel',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -1818,
+    end: -1745,
+    description: 'Beloved second wife of Jacob and mother of Joseph and Benjamin. Died in childbirth.',
+    source: 'Genesis 29-35',
+    spouseId: 'jacob'
+  },
+  {
+    id: 'judah',
+    name: 'Judah',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -1801,
+    end: -1682,
+    description: 'Fourth son of Jacob and Leah. Ancestor of the Tribe of Judah, from whom the kings of Judah and Jesus descend. Lived 119 years.',
+    source: 'Genesis 29:35, 49:8-12',
+    fatherId: 'jacob',
+    motherId: 'leah'
+  },
+  {
+    id: 'levi',
+    name: 'Levi',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -1803,
+    end: -1666,
+    description: 'Third son of Jacob and Leah. Ancestor of the priestly Levite tribe. Lived 137 years.',
+    source: 'Genesis 29:34, Exodus 6:16',
+    fatherId: 'jacob',
+    motherId: 'leah'
   },
   {
     id: 'joseph',
@@ -308,7 +443,20 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     end: -1635,
     description: 'Favored son of Jacob, sold into slavery in Egypt, became Vizier under Pharaoh, and saved his family from famine. Lived 110 years.',
     source: 'Genesis 37-50',
-    fatherId: 'jacob'
+    fatherId: 'jacob',
+    motherId: 'rachel'
+  },
+  {
+    id: 'benjamin',
+    name: 'Benjamin',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -1745,
+    end: -1635,
+    description: 'Twelfth and youngest son of Jacob (with Rachel). Brother of Joseph. Lived approximately 110 years.',
+    source: 'Genesis 35:16-18, 43-45',
+    fatherId: 'jacob',
+    motherId: 'rachel'
   },
 
   // ==========================================
