@@ -9,6 +9,8 @@ import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChang
 // @ts-ignore
 import firebaseConfig from '../firebase-applet-config.json';
 
+import TimelinePage from './TimelinePage';
+
 // Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig);
 const db = getFirestore(firebaseApp, firebaseConfig.firestoreDatabaseId);
@@ -824,6 +826,7 @@ function App() {
   const [isMapLoaded, setIsMapLoaded] = useState(false);
   const [isDataCompiled, setIsDataCompiled] = useState(false);
   const [showAboutModal, setShowAboutModal] = useState(true);
+  const [currentPage, setCurrentPage] = useState<'map' | 'timeline'>('map');
 
   // Combine original static / scraped data and approved user submissions
   const combinedPointsAndLinesData = useMemo(() => {
@@ -3315,17 +3318,84 @@ function App() {
       <div style={{ height: '100vh', display: 'flex', flexDirection: 'column', position: 'relative', overflow: 'hidden' }}>
         
         {/* CENTER COMPONENT: FULL SCREEN MAP BASE LAYER - MOVED TO ROOT FOR TRANSPARENT HEADER */}
-        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 1 }}>
+        <motion.div 
+          initial={false}
+          animate={{ 
+            opacity: currentPage === 'map' ? 1 : 0
+          }}
+          transition={{ duration: 0.3 }}
+          style={{ 
+            position: 'absolute', 
+            top: 0, 
+            left: 0, 
+            right: 0, 
+            bottom: 0, 
+            zIndex: 1,
+            pointerEvents: currentPage === 'map' ? 'auto' : 'none'
+          }}
+        >
           <div ref={mapContainer} style={{ width: '100%', height: '100%' }} />
           
           {/* DARK MODE TOGGLE */}
 
-        </div>
+        </motion.div>
 
         {/* BRAND HEADER COMPONENT */}
-        <header style={{ height: '118px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 20px 0 0', flexShrink: 0, zIndex: 20, pointerEvents: 'none' }}>
+        <header style={{ height: '118px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 20px 0 0', flexShrink: 0, zIndex: 20, pointerEvents: 'none', position: 'relative' }}>
           <img src="/mtrh-horiz-words.svg" alt="MTRH Logo" style={{ height: '78px', width: '232px', pointerEvents: 'auto', filter: theme.invert }} />
           
+          {/* CENTER NAVIGATION PILL */}
+          <div style={{
+            position: 'absolute',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            pointerEvents: 'auto',
+            zIndex: 30,
+            display: 'flex',
+            gap: '8px',
+            border: `1px solid ${theme.border}`,
+            padding: '4px',
+            borderRadius: '20px',
+            background: theme.bgTransparent
+          }}>
+            <button 
+              onClick={() => setCurrentPage('map')}
+              style={{
+                background: currentPage === 'map' ? theme.text : 'transparent',
+                color: currentPage === 'map' ? theme.bg : theme.text,
+                border: 'none',
+                padding: '6px 18px',
+                fontSize: '10px',
+                fontFamily: '"Space Mono", monospace',
+                fontWeight: 700,
+                cursor: 'pointer',
+                borderRadius: '16px',
+                textTransform: 'uppercase',
+                transition: 'all 0.2s ease'
+              }}
+            >
+              Map
+            </button>
+            <button 
+              onClick={() => setCurrentPage('timeline')}
+              style={{
+                background: currentPage === 'timeline' ? theme.text : 'transparent',
+                color: currentPage === 'timeline' ? theme.bg : theme.text,
+                border: 'none',
+                padding: '6px 18px',
+                fontSize: '10px',
+                fontFamily: '"Space Mono", monospace',
+                fontWeight: 700,
+                cursor: 'pointer',
+                borderRadius: '16px',
+                textTransform: 'uppercase',
+                transition: 'all 0.2s ease'
+              }}
+            >
+              Timeline
+            </button>
+          </div>
+
           {/* THEME TOGGLE: FIXED TO RIGHT */}
           <div style={{ pointerEvents: 'auto', display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '8px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
@@ -3366,88 +3436,70 @@ function App() {
             </div>
 
             {/* ACTION LINK BUTTONS FOR SUBMISSIONS AND DESIGNATED MODERATION */}
-            <div style={{ display: 'flex', gap: '8px', marginTop: '2px' }}>
-              <button
-                onClick={() => {
-                  setShowAboutModal(false);
-                  setOnboardingStep(0);
-                }}
-                style={{
-                  background: 'transparent',
-                  color: theme.text,
-                  border: `1px solid ${theme.border}`,
-                  padding: '0 16px',
-                  height: '32px',
-                  fontSize: '9px',
-                  fontFamily: '"Space Mono", monospace',
-                  fontWeight: 700,
-                  cursor: 'pointer',
-                  borderRadius: '16px',
-                  textTransform: 'uppercase',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '6px',
-                  boxSizing: 'border-box',
-                  transition: 'all 0.2s ease',
-                  opacity: onboardingStep !== null ? 0.5 : 1,
-                  pointerEvents: onboardingStep !== null ? 'none' : 'auto'
-                }}
-              >
-                <Eye size={10} strokeWidth={3} />
-                <span>Map Guide</span>
-              </button>
-
-              <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
-                <button
-                  onClick={() => {
-                    setSubmissionSuccess(null);
-                    setSubmissionError(null);
-                    setIsSubmitOpen(true);
-                  }}
-                  style={{
-                    background: isMapDarkMode ? '#ffffff' : '#000000',
-                    color: isMapDarkMode ? '#000000' : '#ffffff',
-                    border: `1px solid ${theme.border}`,
-                    padding: '0 16px',
-                    height: '32px',
-                    fontSize: '9px',
-                    fontFamily: '"Space Mono", monospace',
-                    fontWeight: 700,
-                    cursor: 'pointer',
-                    borderRadius: '16px',
-                    textTransform: 'uppercase',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '6px',
-                    boxSizing: 'border-box',
-                    transition: 'opacity 0.2s ease'
-                  }}
-                >
-                  <Plus size={10} strokeWidth={3} />
-                  <span>Submit Intel</span>
-                </button>
-                {onboardingStep === 5 && (
-                  <div style={{
-                    position: 'absolute',
-                    top: '-3px',
-                    left: '-3px',
-                    right: '-3px',
-                    bottom: '-3px',
-                    border: '3px solid #b6a6ff',
-                    boxShadow: '0 0 15px rgba(182, 166, 255, 0.5)',
-                    pointerEvents: 'none',
-                    zIndex: 9999,
-                    borderRadius: '19px',
-                    animation: 'radar-pulse 2s infinite'
-                  }} />
-                )}
+            {currentPage === 'map' && (
+              <div style={{ display: 'flex', gap: '8px', marginTop: '2px' }}>
+                <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
+                  <button
+                    onClick={() => {
+                      setSubmissionSuccess(null);
+                      setSubmissionError(null);
+                      setIsSubmitOpen(true);
+                    }}
+                    style={{
+                      background: isMapDarkMode ? '#ffffff' : '#000000',
+                      color: isMapDarkMode ? '#000000' : '#ffffff',
+                      border: `1px solid ${theme.border}`,
+                      padding: '0 16px',
+                      height: '32px',
+                      fontSize: '9px',
+                      fontFamily: '"Space Mono", monospace',
+                      fontWeight: 700,
+                      cursor: 'pointer',
+                      borderRadius: '16px',
+                      textTransform: 'uppercase',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '6px',
+                      boxSizing: 'border-box',
+                      transition: 'opacity 0.2s ease'
+                    }}
+                  >
+                    <Plus size={10} strokeWidth={3} />
+                    <span>Submit Intel</span>
+                  </button>
+                  {onboardingStep === 5 && (
+                    <div style={{
+                      position: 'absolute',
+                      top: '-3px',
+                      left: '-3px',
+                      right: '-3px',
+                      bottom: '-3px',
+                      border: '3px solid #b6a6ff',
+                      boxShadow: '0 0 15px rgba(182, 166, 255, 0.5)',
+                      pointerEvents: 'none',
+                      zIndex: 9999,
+                      borderRadius: '19px',
+                      animation: 'radar-pulse 2s infinite'
+                    }} />
+                  )}
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </header>
 
         {/* CORE WORKSPACE FRAMING GRID — NOW FULL BLEED OVERLAY ENVIRONMENT */}
-        <div style={{ flex: 1, position: 'relative', overflow: 'hidden', pointerEvents: 'none' }}>
+        <AnimatePresence mode="wait">
+          {currentPage === 'map' ? (
+            <motion.div
+              key="map-panel"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              style={{ flex: 1, position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: 'column', pointerEvents: 'none', width: '100%', height: '100%' }}
+            >
+              <div style={{ flex: 1, position: 'relative', overflow: 'hidden', pointerEvents: 'none', width: '100%', height: '100%' }}>
           {onboardingStep === 2 && (
             <div style={{
               position: 'absolute',
@@ -5062,6 +5114,20 @@ function App() {
           </motion.div>
 
         </div>
+        </motion.div>
+        ) : (
+          <motion.div
+            key="timeline-panel"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}
+          >
+            <TimelinePage theme={theme} isMapDarkMode={isMapDarkMode} />
+          </motion.div>
+        )}
+        </AnimatePresence>
 
       </div>      {/* FULL SCREEN LIGHTBOX MODAL ARCHITECTURE */}
       <AnimatePresence>
