@@ -712,7 +712,7 @@ const processIncomingRecord = (item: any, index: number) => {
     } else if (lowerNormalizedCat === 'enochian sites') {
       if (lowerName.includes('hermon')) {
         safeImages = [
-          'https://upload.wikimedia.org/wikipedia/commons/0/08/Gustave_Dor%C3%A9-La_chute_des_anges_rebelles.jpg',
+          'https://upload.wikimedia.org/wikipedia/commons/1/19/Paradise_Lost_1.jpg',
           'https://upload.wikimedia.org/wikipedia/commons/3/33/The_lake_of_Tiberias,_looking_towards_Hermon._David_Roberts._1855.jpg',
           'https://upload.wikimedia.org/wikipedia/commons/4/4f/Mount_Hermon_View.jpg'
         ];
