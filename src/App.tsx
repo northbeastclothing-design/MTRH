@@ -2225,7 +2225,7 @@ function App() {
     const cleanQuery = searchQuery.trim().toLowerCase();
     return combinedPointsAndLinesData.filter(item => {
       const hasActiveLayerMatch = item.categories.some((cat: string) => activeLayers[cat] !== false);
-      const matchesTimeline = item.date ? (item.date >= yearRange.start && item.date <= yearRange.end) : true;
+      const matchesTimeline = item.date ? (item.date < 0 || (item.date >= yearRange.start && item.date <= yearRange.end)) : true;
       const matchesSearch = cleanQuery === '' || 
         item.name.toLowerCase().includes(cleanQuery) ||
         item.categories.some((cat: string) => cat.toLowerCase().includes(cleanQuery)) ||
@@ -4547,7 +4547,11 @@ function App() {
                         textAlign: 'left' 
                       }}>
                         <div style={{ fontFamily: '"Space Mono", monospace', fontWeight: '700', fontStyle: 'italic', fontSize: '10px', lineHeight: '22px' }}>
-                          DATE: <span style={{ fontStyle: 'normal', fontWeight: '400' }}>{selectedFeature.date || 'UNSPECIFIED'}</span>
+                          DATE: <span style={{ fontStyle: 'normal', fontWeight: '400' }}>
+                            {selectedFeature.displayDate || (selectedFeature.date !== null && selectedFeature.date !== undefined
+                              ? (selectedFeature.date < 0 ? `${Math.abs(selectedFeature.date).toLocaleString()} BC` : selectedFeature.date)
+                              : 'UNSPECIFIED')}
+                          </span>
                         </div>
                         <div style={{ fontFamily: '"Space Mono", monospace', fontWeight: '700', fontStyle: 'italic', fontSize: '10px', lineHeight: '22px' }}>
                           LOCATION: <span style={{ fontStyle: 'normal', fontWeight: '400' }}>{(() => {
