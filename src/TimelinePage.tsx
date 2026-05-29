@@ -113,6 +113,16 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
   // Hover & selection states
   const [hoveredItemId, setHoveredItemId] = useState<string | null>(null);
   const [selectedItem, setSelectedItem] = useState<TimelineItem | null>(null);
+
+  // Onboarding tour state
+  const [onboardingStep, setOnboardingStep] = useState<number | null>(null);
+
+  useEffect(() => {
+    const completed = localStorage.getItem('mtrh_timeline_onboarding_completed');
+    if (!completed) {
+      setOnboardingStep(0);
+    }
+  }, []);
   
   // Dragging state
   const [isDragging, setIsDragging] = useState(false);
@@ -593,49 +603,67 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
 
                         if (item.type === 'lifespan') {
                           return (
-                            <div
-                              key={item.id}
-                              onMouseEnter={() => setHoveredItemId(item.id)}
-                              onMouseLeave={() => setHoveredItemId(null)}
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                handleItemClick(item);
-                              }}
-                              style={{
-                                position: 'absolute',
-                                left: `${xStart}%`,
-                                width: `${width}%`,
-                                height: '24px',
-                                top: '6px',
-                                background: isSelected
-                                  ? `${era.color}e6`
-                                  : (isHovered 
-                                    ? `${era.color}99` 
-                                    : (isHighlight ? `${era.color}77` : `${era.color}44`)),
-                                border: isSelected
-                                  ? `2px solid ${isMapDarkMode ? '#ffffff' : '#000000'}`
-                                  : 'none',
-                                borderRadius: '12px',
-                                display: 'flex',
-                                alignItems: 'center',
-                                padding: '0 12px',
-                                boxSizing: 'border-box',
-                                fontSize: '10px',
-                                fontWeight: 700,
-                                cursor: 'pointer',
-                                color: isMapDarkMode ? '#ffffff' : '#000000',
-                                mixBlendMode: isMapDarkMode ? 'screen' : 'multiply',
-                                boxShadow: isSelected ? `0 0 15px ${era.color}` : 'none',
-                                transition: 'background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease',
-                                pointerEvents: 'auto',
-                                overflow: 'hidden',
-                                zIndex: isSelected ? 300 : (isHovered ? 200 : (isHighlight ? 100 : 5))
-                              }}
-                            >
-                              <span style={{ textOverflow: 'ellipsis', whiteSpace: 'nowrap', overflow: 'hidden', width: '100%' }}>
-                                {item.name}
-                              </span>
-                            </div>
+                            <React.Fragment key={item.id}>
+                              <div
+                                onMouseEnter={() => setHoveredItemId(item.id)}
+                                onMouseLeave={() => setHoveredItemId(null)}
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  handleItemClick(item);
+                                }}
+                                style={{
+                                  position: 'absolute',
+                                  left: `${xStart}%`,
+                                  width: `${width}%`,
+                                  height: '24px',
+                                  top: '6px',
+                                  background: isSelected
+                                    ? `${era.color}e6`
+                                    : (isHovered 
+                                      ? `${era.color}99` 
+                                      : (isHighlight ? `${era.color}77` : `${era.color}44`)),
+                                  border: isSelected
+                                    ? `2px solid ${isMapDarkMode ? '#ffffff' : '#000000'}`
+                                    : 'none',
+                                  borderRadius: '12px',
+                                  display: 'flex',
+                                  alignItems: 'center',
+                                  padding: '0 12px',
+                                  boxSizing: 'border-box',
+                                  fontSize: '10px',
+                                  fontWeight: 700,
+                                  cursor: 'pointer',
+                                  color: isMapDarkMode ? '#ffffff' : '#000000',
+                                  mixBlendMode: isMapDarkMode ? 'screen' : 'multiply',
+                                  boxShadow: isSelected ? `0 0 15px ${era.color}` : 'none',
+                                  transition: 'background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease',
+                                  pointerEvents: 'auto',
+                                  overflow: 'hidden',
+                                  zIndex: isSelected ? 300 : (isHovered ? 200 : (isHighlight ? 100 : 5))
+                                }}
+                              >
+                                <span style={{ textOverflow: 'ellipsis', whiteSpace: 'nowrap', overflow: 'hidden', width: '100%' }}>
+                                  {item.name}
+                                </span>
+                              </div>
+                              {/* Pulsing highlight overlay for onboarding */}
+                              {((onboardingStep === 1 && item.id === 'adam') || 
+                                (onboardingStep === 2 && (item.id === 'adam' || item.id === 'eve'))) && (
+                                <div style={{
+                                  position: 'absolute',
+                                  left: `${xStart}%`,
+                                  width: `${width}%`,
+                                  height: '24px',
+                                  top: '6px',
+                                  border: '3px solid #b6a6ff',
+                                  boxShadow: '0 0 15px rgba(182, 166, 255, 0.5)',
+                                  pointerEvents: 'none',
+                                  zIndex: 9999,
+                                  borderRadius: '12px',
+                                  animation: 'radar-pulse 2s infinite'
+                                }} />
+                              )}
+                            </React.Fragment>
                           );
                         } else {
                           // Singular Event Circle with Hover & Selected Pill Backgrounds
@@ -1272,7 +1300,8 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
           gap: '12px', 
           flexWrap: 'wrap', 
           justifyContent: 'flex-end',
-          marginLeft: 'auto'
+          marginLeft: 'auto',
+          position: 'relative'
         }}>
           {/* Zoom controls inline unit */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexShrink: 0 }}>
@@ -1355,10 +1384,334 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
             <RotateCcw size={10} strokeWidth={2.5} />
             <span>Reset</span>
           </button>
+
+          {/* Pulsing highlight overlay for onboarding controls */}
+          {onboardingStep === 3 && (
+            <div style={{
+              position: 'absolute',
+              top: '-6px',
+              left: '-6px',
+              right: '-6px',
+              bottom: '-6px',
+              border: '3px solid #b6a6ff',
+              boxShadow: '0 0 15px rgba(182, 166, 255, 0.5)',
+              pointerEvents: 'none',
+              zIndex: 9999,
+              borderRadius: '19px',
+              animation: 'radar-pulse 2s infinite'
+            }} />
+          )}
         </div>
 
-      </div>
+      {/* ONBOARDING TOUR */}
+      <AnimatePresence>
+        {onboardingStep !== null && (
+          <>
+            {/* Dark semi-transparent backdrop for step 0 (Welcome Modal) */}
+            {onboardingStep === 0 && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                onClick={() => {
+                  setOnboardingStep(null);
+                  localStorage.setItem('mtrh_timeline_onboarding_completed', 'true');
+                }}
+                style={{
+                  position: 'fixed',
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  backgroundColor: 'rgba(0, 0, 0, 0.65)',
+                  zIndex: 99998,
+                  pointerEvents: 'auto'
+                }}
+              />
+            )}
 
+            {/* Tooltip Dialog */}
+            {(() => {
+              const onboardingSteps = [
+                {
+                  title: "1. WELCOME TO THE TIMELINE",
+                  content: "This timeline visualizes bloodlines, historic events, and esoteric lore across pre-flood Sumerian reigns, biblical genealogies, and Frankish kingdoms. Let's take a quick tour.",
+                  placement: "center"
+                },
+                {
+                  title: "2. ERAS & LIFESPANS",
+                  content: "Historical figures and events are displayed in parallel horizontal tracks. Lifespans are represented as solid horizontal bars, and events are represented as individual dots. Pulsing elements highlight active records.",
+                  placement: "timeline-content"
+                },
+                {
+                  title: "3. RELATIONSHIP NETWORKS",
+                  content: "Hovering over any figure dynamically draws relationship lines. Solid lines connect spouses, and dashed lines connect parents to children. Hover over Adam or Eve to see this in action.",
+                  placement: "timeline-content"
+                },
+                {
+                  title: "4. VIEWPORT CONTROLS",
+                  content: "Use these controls to zoom in and out, adjust the active timeline span, or reset the viewport back to its default range.",
+                  placement: "bottom-controls"
+                }
+              ];
+
+              const currentStep = onboardingSteps[onboardingStep];
+              if (!currentStep) return null;
+
+              const tooltipTheme = {
+                bg: isMapDarkMode ? '#ffffff' : '#000000',
+                text: isMapDarkMode ? '#000000' : '#ffffff',
+                textDim: isMapDarkMode ? '#666666' : '#cccccc',
+                border: isMapDarkMode ? '#ffffff' : '#000000',
+                borderLight: isMapDarkMode ? 'rgba(0, 0, 0, 0.15)' : 'rgba(255, 255, 255, 0.2)',
+                buttonBg: isMapDarkMode ? '#000000' : '#ffffff',
+                buttonText: isMapDarkMode ? '#ffffff' : '#000000',
+                buttonBorder: isMapDarkMode ? '#000000' : '#ffffff'
+              };
+
+              const tooltipStyle: React.CSSProperties = (() => {
+                const common: React.CSSProperties = {
+                  position: 'fixed',
+                  zIndex: 100000,
+                  width: '320px',
+                  pointerEvents: 'auto',
+                  transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
+                };
+
+                switch (currentStep.placement) {
+                  case 'center':
+                    return {
+                      ...common,
+                      top: '50%',
+                      left: '50%',
+                      transform: 'translate(-50%, -50%)',
+                      width: '450px',
+                    };
+                  case 'timeline-content':
+                    return {
+                      ...common,
+                      left: '120px',
+                      top: '200px',
+                      width: '360px',
+                    };
+                  case 'bottom-controls':
+                    return {
+                      ...common,
+                      right: '24px',
+                      bottom: '105px', // Moved up to clear zoom controls perfectly
+                      width: '360px',
+                    };
+                  default:
+                    return common;
+                }
+              })();
+
+              const arrowStyle: React.CSSProperties = (() => {
+                const common: React.CSSProperties = {
+                  position: 'absolute',
+                  width: 0,
+                  height: 0,
+                  borderStyle: 'solid',
+                };
+
+                switch (currentStep.placement) {
+                  case 'timeline-content':
+                    return {
+                      ...common,
+                      top: '-10px',
+                      left: '50px',
+                      borderWidth: '0 8px 10px 8px',
+                      borderColor: `transparent transparent ${tooltipTheme.bg} transparent`,
+                    };
+                  case 'bottom-controls':
+                    return {
+                      ...common,
+                      bottom: '-10px',
+                      right: '50px',
+                      borderWidth: '10px 8px 0 8px',
+                      borderColor: `${tooltipTheme.bg} transparent transparent transparent`,
+                    };
+                  default:
+                    return { display: 'none' };
+                }
+              })();
+
+              const handleClose = () => {
+                setOnboardingStep(null);
+                localStorage.setItem('mtrh_timeline_onboarding_completed', 'true');
+              };
+
+              const handleNext = () => {
+                if (onboardingStep === onboardingSteps.length - 1) {
+                  handleClose();
+                } else {
+                  setOnboardingStep(prev => prev! + 1);
+                }
+              };
+
+              return (
+                <div style={tooltipStyle}>
+                  <motion.div
+                    key={`timeline-tour-step-${onboardingStep}`}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.95 }}
+                    transition={{ duration: 0.25, ease: 'easeOut' }}
+                    style={{
+                      width: '100%',
+                      background: tooltipTheme.bg,
+                      border: `2px solid ${tooltipTheme.border}`,
+                      borderRadius: '16px',
+                      padding: '24px',
+                      color: tooltipTheme.text,
+                      fontFamily: '"Space Mono", monospace',
+                      boxSizing: 'border-box',
+                      position: 'relative',
+                      boxShadow: isMapDarkMode ? '0 10px 40px rgba(0, 0, 0, 0.4)' : '0 10px 40px rgba(0, 0, 0, 0.3)'
+                    }}
+                    role="dialog"
+                    aria-labelledby="timeline-tour-title"
+                  >
+                    {/* Arrow Indicator */}
+                    <div style={arrowStyle} />
+
+                    <h3 
+                      id="timeline-tour-title"
+                      style={{
+                        fontSize: '11px',
+                        fontWeight: 'bold',
+                        letterSpacing: '2px',
+                        textTransform: 'uppercase',
+                        borderBottom: `1px solid ${tooltipTheme.borderLight}`,
+                        paddingBottom: '8px',
+                        margin: '0 0 12px 0',
+                        color: tooltipTheme.text,
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'center'
+                      }}
+                    >
+                      <span>{currentStep.title}</span>
+                      <span style={{ fontSize: '9px', color: tooltipTheme.textDim, fontWeight: 'normal' }}>
+                        {onboardingStep + 1} / {onboardingSteps.length}
+                      </span>
+                    </h3>
+
+                    <p 
+                      style={{
+                        fontSize: '10px',
+                        lineHeight: '1.6',
+                        color: tooltipTheme.textDim,
+                        margin: '0 0 20px 0',
+                        textAlign: 'left'
+                      }}
+                    >
+                      {currentStep.content}
+                    </p>
+
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <button
+                        onClick={handleClose}
+                        style={{
+                          background: 'transparent',
+                          border: 'none',
+                          color: tooltipTheme.textDim,
+                          fontSize: '9px',
+                          fontFamily: '"Space Mono", monospace',
+                          fontWeight: 700,
+                          cursor: 'pointer',
+                          textTransform: 'uppercase',
+                          padding: '4px 0',
+                          transition: 'color 0.2s'
+                        }}
+                        onMouseEnter={(e) => { e.currentTarget.style.color = tooltipTheme.text; }}
+                        onMouseLeave={(e) => { e.currentTarget.style.color = tooltipTheme.textDim; }}
+                      >
+                        Skip Guide
+                      </button>
+
+                      <div style={{ display: 'flex', gap: '8px' }}>
+                        {onboardingStep > 0 && (
+                          <button
+                            onClick={() => setOnboardingStep(prev => prev! - 1)}
+                            style={{
+                              background: 'transparent',
+                              color: tooltipTheme.text,
+                              border: `1px solid ${tooltipTheme.border}`,
+                              padding: '0 16px',
+                              height: '32px',
+                              fontSize: '9px',
+                              fontFamily: '"Space Mono", monospace',
+                              fontWeight: 700,
+                              cursor: 'pointer',
+                              borderRadius: '16px',
+                              textTransform: 'uppercase',
+                              display: 'inline-flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              boxSizing: 'border-box',
+                              transition: 'opacity 0.2s ease'
+                            }}
+                            onMouseEnter={(e) => { e.currentTarget.style.opacity = '0.7'; }}
+                            onMouseLeave={(e) => { e.currentTarget.style.opacity = '1'; }}
+                          >
+                            Back
+                          </button>
+                        )}
+
+                        <button
+                          onClick={handleNext}
+                          style={{
+                            background: tooltipTheme.buttonBg,
+                            color: tooltipTheme.buttonText,
+                            border: `1px solid ${tooltipTheme.buttonBorder}`,
+                            padding: '0 16px',
+                            height: '32px',
+                            fontSize: '9px',
+                            fontFamily: '"Space Mono", monospace',
+                            fontWeight: 700,
+                            cursor: 'pointer',
+                            borderRadius: '16px',
+                            textTransform: 'uppercase',
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            boxSizing: 'border-box',
+                            transition: 'opacity 0.2s ease'
+                          }}
+                          onMouseEnter={(e) => { e.currentTarget.style.opacity = '0.8'; }}
+                          onMouseLeave={(e) => { e.currentTarget.style.opacity = '1'; }}
+                        >
+                          {onboardingStep === onboardingSteps.length - 1 ? 'Finish' : 'Next'}
+                        </button>
+                      </div>
+                    </div>
+                  </motion.div>
+                </div>
+              );
+            })()
+          }
+          </>
+        )}
+      </AnimatePresence>
+
+      <style>{`
+        @keyframes radar-pulse {
+          0% {
+            box-shadow: 0 0 0 0 rgba(182, 166, 255, 0.6);
+            border-color: rgba(182, 166, 255, 0.8);
+          }
+          70% {
+            box-shadow: 0 0 0 15px rgba(182, 166, 255, 0);
+            border-color: rgba(182, 166, 255, 0.3);
+          }
+          100% {
+            box-shadow: 0 0 0 0 rgba(182, 166, 255, 0);
+            border-color: rgba(182, 166, 255, 0);
+          }
+        }
+      `}</style>
+      </div>
     </div>
   );
 }

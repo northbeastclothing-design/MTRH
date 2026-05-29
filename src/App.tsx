@@ -1886,7 +1886,7 @@ function App() {
       setIsLeftCollapsed(false);
     } else if (onboardingStep === 3) {
       setIsTimelineCollapsed(false);
-    } else if (onboardingStep === 4) {
+    } else if (onboardingStep === 5) {
       setIsRightCollapsed(false);
     }
   }, [onboardingStep]);
@@ -3389,24 +3389,41 @@ function App() {
             >
               Map
             </button>
-            <button 
-              onClick={() => setCurrentPage('timeline')}
-              style={{
-                background: currentPage === 'timeline' ? theme.text : 'transparent',
-                color: currentPage === 'timeline' ? theme.bg : theme.text,
-                border: 'none',
-                padding: '6px 18px',
-                fontSize: '10px',
-                fontFamily: '"Space Mono", monospace',
-                fontWeight: 700,
-                cursor: 'pointer',
-                borderRadius: '16px',
-                textTransform: 'uppercase',
-                transition: 'all 0.2s ease'
-              }}
-            >
-              Timeline
-            </button>
+            <div style={{ position: 'relative', display: 'inline-block' }}>
+              <button 
+                onClick={() => setCurrentPage('timeline')}
+                style={{
+                  background: currentPage === 'timeline' ? theme.text : 'transparent',
+                  color: currentPage === 'timeline' ? theme.bg : theme.text,
+                  border: 'none',
+                  padding: '6px 18px',
+                  fontSize: '10px',
+                  fontFamily: '"Space Mono", monospace',
+                  fontWeight: 700,
+                  cursor: 'pointer',
+                  borderRadius: '16px',
+                  textTransform: 'uppercase',
+                  transition: 'all 0.2s ease'
+                }}
+              >
+                Timeline
+              </button>
+              {onboardingStep === 4 && (
+                <div style={{
+                  position: 'absolute',
+                  top: '-3px',
+                  left: '-3px',
+                  right: '-3px',
+                  bottom: '-3px',
+                  border: '3px solid #b6a6ff',
+                  boxShadow: '0 0 15px rgba(182, 166, 255, 0.5)',
+                  pointerEvents: 'none',
+                  zIndex: 9999,
+                  borderRadius: '19px',
+                  animation: 'radar-pulse 2s infinite'
+                }} />
+              )}
+            </div>
           </div>
 
           {/* THEME TOGGLE: FIXED TO RIGHT */}
@@ -3480,7 +3497,7 @@ function App() {
                     <Plus size={10} strokeWidth={3} />
                     <span>Submit Intel</span>
                   </button>
-                  {onboardingStep === 5 && (
+                  {onboardingStep === 6 && (
                     <div style={{
                       position: 'absolute',
                       top: '-3px',
@@ -3976,7 +3993,7 @@ function App() {
               color: theme.text
             }}
           >
-            {onboardingStep === 4 && (
+            {onboardingStep === 5 && (
               <div style={{
                 position: 'absolute',
                 top: 0,
@@ -7463,32 +7480,37 @@ function App() {
             {(() => {
               const onboardingSteps = [
                 {
-                  title: "WELCOME TO MTRH GUIDE",
+                  title: "1. WELCOME TO MTRH GUIDE",
                   content: "This interactive portal maps global anomalies, classified files, and historic archives. Let's take a quick step-by-step tour to help you get started.",
                   placement: "center"
                 },
                 {
-                  title: "1. ARCHIVE FILTERS",
+                  title: "2. ARCHIVE FILTERS",
                   content: "Toggle layers to filter map events (UFOs, Bigfoot, underworld entrances, D.U.M.B.s). Use the Search bar to scan archives or world coordinates.",
                   placement: "left-sidebar"
                 },
                 {
-                  title: "2. INTERACTIVE MAP",
+                  title: "3. INTERACTIVE MAP",
                   content: "Left-click and drag to move. Use the scroll wheel to zoom. Clicking pins or highlighted shapes unlocks their classified dossier.",
                   placement: "map-viewport"
                 },
                 {
-                  title: "3. HISTORICAL TIMELINE",
+                  title: "4. HISTORICAL TIMELINE",
                   content: "Drag the timeline slider or use the zoom buttons to restrict active markers to a specific year span. Perfect for tracking events over time.",
                   placement: "timeline"
                 },
                 {
-                  title: "4. INTELLIGENCE DOSSIER",
+                  title: "5. INTERACTIVE TIMELINE PAGE",
+                  content: "Click this Timeline button in the header to switch to the full interactive timeline view. There you can explore detailed biblical genealogies, Sumerian kings list, Greek mythology, and Enochian lore.",
+                  placement: "timeline-button"
+                },
+                {
+                  title: "6. INTELLIGENCE DOSSIER",
                   content: "When you select a location, its full file opens here. Review images, transcripts, video attachments, and original source documents.",
                   placement: "right-sidebar"
                 },
                 {
-                  title: "5. SUBMIT EVIDENCE",
+                  title: "7. SUBMIT EVIDENCE",
                   content: "Discovered an anomaly or classified file? Submit it to our queue. Once verified, it will be mapped and published on the platform.",
                   placement: "submit-intel"
                 }
@@ -7514,19 +7536,19 @@ function App() {
                   position: 'fixed',
                   zIndex: 100000,
                   width: '320px',
-                  background: tooltipTheme.bg,
-                  border: `2px solid ${tooltipTheme.border}`,
-                  borderRadius: '16px',
-                  padding: '24px',
-                  color: tooltipTheme.text,
-                  fontFamily: '"Space Mono", monospace',
-                  boxShadow: isMapDarkMode ? '0 10px 40px rgba(0, 0, 0, 0.4)' : '0 10px 40px rgba(0, 0, 0, 0.3)',
-                  boxSizing: 'border-box',
                   pointerEvents: 'auto',
                   transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
                 };
 
                 switch (currentStep.placement) {
+                  case 'timeline-button':
+                    return {
+                      ...common,
+                      left: '50%',
+                      top: '85px', // Shifted down by 15px to clear the header navigation pill
+                      transform: 'translateX(-50%)',
+                      width: '360px',
+                    };
                   case 'center':
                     return {
                       ...common,
@@ -7552,7 +7574,7 @@ function App() {
                     return {
                       ...common,
                       left: '50%',
-                      bottom: isTimelineCollapsed ? '40px' : '170px',
+                      bottom: isTimelineCollapsed ? '60px' : '190px', // Shifted up by 20px to prevent overlap with the timeline drawer bar
                       transform: 'translateX(-50%)',
                       width: '360px',
                     };
@@ -7582,6 +7604,15 @@ function App() {
                 };
 
                 switch (currentStep.placement) {
+                  case 'timeline-button':
+                    return {
+                      ...common,
+                      top: '-10px',
+                      left: '58%',
+                      transform: 'translateX(-50%)',
+                      borderWidth: '0 8px 10px 8px',
+                      borderColor: `transparent transparent ${tooltipTheme.bg} transparent`,
+                    };
                   case 'left-sidebar':
                     return {
                       ...common,
@@ -7634,82 +7665,121 @@ function App() {
               };
 
               return (
-                <motion.div
-                  key={`tour-step-${onboardingStep}`}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.95 }}
-                  transition={{ duration: 0.25, ease: 'easeOut' }}
-                  style={tooltipStyle}
-                  role="dialog"
-                  aria-labelledby="tour-title"
-                >
-                  {/* Arrow Indicator */}
-                  <div style={arrowStyle} />
-
-                  <h3 
-                    id="tour-title"
+                <div style={tooltipStyle}>
+                  <motion.div
+                    key={`tour-step-${onboardingStep}`}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.95 }}
+                    transition={{ duration: 0.25, ease: 'easeOut' }}
                     style={{
-                      fontSize: '11px',
-                      fontWeight: 'bold',
-                      letterSpacing: '2px',
-                      textTransform: 'uppercase',
-                      borderBottom: `1px solid ${tooltipTheme.borderLight}`,
-                      paddingBottom: '8px',
-                      margin: '0 0 12px 0',
+                      width: '100%',
+                      background: tooltipTheme.bg,
+                      border: `2px solid ${tooltipTheme.border}`,
+                      borderRadius: '16px',
+                      padding: '24px',
                       color: tooltipTheme.text,
-                      display: 'flex',
-                      justifyContent: 'space-between',
-                      alignItems: 'center'
+                      fontFamily: '"Space Mono", monospace',
+                      boxSizing: 'border-box',
+                      position: 'relative',
+                      boxShadow: isMapDarkMode ? '0 10px 40px rgba(0, 0, 0, 0.4)' : '0 10px 40px rgba(0, 0, 0, 0.3)'
                     }}
+                    role="dialog"
+                    aria-labelledby="tour-title"
                   >
-                    <span>{currentStep.title}</span>
-                    <span style={{ fontSize: '9px', color: tooltipTheme.textDim, fontWeight: 'normal' }}>
-                      {onboardingStep + 1} / {onboardingSteps.length}
-                    </span>
-                  </h3>
+                    {/* Arrow Indicator */}
+                    <div style={arrowStyle} />
 
-                  <p 
-                    style={{
-                      fontSize: '10px',
-                      lineHeight: '1.6',
-                      color: tooltipTheme.textDim,
-                      margin: '0 0 20px 0',
-                      textAlign: 'left'
-                    }}
-                  >
-                    {currentStep.content}
-                  </p>
-
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <button
-                      onClick={handleClose}
+                    <h3 
+                      id="tour-title"
                       style={{
-                        background: 'transparent',
-                        border: 'none',
-                        color: tooltipTheme.textDim,
-                        fontSize: '9px',
-                        fontFamily: '"Space Mono", monospace',
-                        fontWeight: 700,
-                        cursor: 'pointer',
+                        fontSize: '11px',
+                        fontWeight: 'bold',
+                        letterSpacing: '2px',
                         textTransform: 'uppercase',
-                        padding: '4px 0',
-                        transition: 'color 0.2s'
+                        borderBottom: `1px solid ${tooltipTheme.borderLight}`,
+                        paddingBottom: '8px',
+                        margin: '0 0 12px 0',
+                        color: tooltipTheme.text,
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'center'
                       }}
-                      onMouseEnter={(e) => { e.currentTarget.style.color = tooltipTheme.text; }}
-                      onMouseLeave={(e) => { e.currentTarget.style.color = tooltipTheme.textDim; }}
                     >
-                      Skip Guide
-                    </button>
+                      <span>{currentStep.title}</span>
+                      <span style={{ fontSize: '9px', color: tooltipTheme.textDim, fontWeight: 'normal' }}>
+                        {onboardingStep + 1} / {onboardingSteps.length}
+                      </span>
+                    </h3>
 
-                    <div style={{ display: 'flex', gap: '8px' }}>
-                      {onboardingStep > 0 && (
+                    <p 
+                      style={{
+                        fontSize: '10px',
+                        lineHeight: '1.6',
+                        color: tooltipTheme.textDim,
+                        margin: '0 0 20px 0',
+                        textAlign: 'left'
+                      }}
+                    >
+                      {currentStep.content}
+                    </p>
+
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <button
+                        onClick={handleClose}
+                        style={{
+                          background: 'transparent',
+                          border: 'none',
+                          color: tooltipTheme.textDim,
+                          fontSize: '9px',
+                          fontFamily: '"Space Mono", monospace',
+                          fontWeight: 700,
+                          cursor: 'pointer',
+                          textTransform: 'uppercase',
+                          padding: '4px 0',
+                          transition: 'color 0.2s'
+                        }}
+                        onMouseEnter={(e) => { e.currentTarget.style.color = tooltipTheme.text; }}
+                        onMouseLeave={(e) => { e.currentTarget.style.color = tooltipTheme.textDim; }}
+                      >
+                        Skip Guide
+                      </button>
+
+                      <div style={{ display: 'flex', gap: '8px' }}>
+                        {onboardingStep > 0 && (
+                          <button
+                            onClick={() => setOnboardingStep(prev => prev! - 1)}
+                            style={{
+                              background: 'transparent',
+                              color: tooltipTheme.text,
+                              border: `1px solid ${tooltipTheme.border}`,
+                              padding: '0 16px',
+                              height: '32px',
+                              fontSize: '9px',
+                              fontFamily: '"Space Mono", monospace',
+                              fontWeight: 700,
+                              cursor: 'pointer',
+                              borderRadius: '16px',
+                              textTransform: 'uppercase',
+                              display: 'inline-flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              boxSizing: 'border-box',
+                              transition: 'opacity 0.2s ease'
+                            }}
+                            onMouseEnter={(e) => { e.currentTarget.style.opacity = '0.7'; }}
+                            onMouseLeave={(e) => { e.currentTarget.style.opacity = '1'; }}
+                          >
+                            Back
+                          </button>
+                        )}
+
                         <button
-                          onClick={() => setOnboardingStep(prev => prev! - 1)}
+                          onClick={handleNext}
                           style={{
-                            background: 'transparent',
-                            color: tooltipTheme.text,
-                            border: `1px solid ${tooltipTheme.border}`,
+                            background: tooltipTheme.buttonBg,
+                            color: tooltipTheme.buttonText,
+                            border: `1px solid ${tooltipTheme.buttonBorder}`,
                             padding: '0 16px',
                             height: '32px',
                             fontSize: '9px',
@@ -7724,41 +7794,15 @@ function App() {
                             boxSizing: 'border-box',
                             transition: 'opacity 0.2s ease'
                           }}
-                          onMouseEnter={(e) => { e.currentTarget.style.opacity = '0.7'; }}
+                          onMouseEnter={(e) => { e.currentTarget.style.opacity = '0.8'; }}
                           onMouseLeave={(e) => { e.currentTarget.style.opacity = '1'; }}
                         >
-                          Back
+                          {onboardingStep === onboardingSteps.length - 1 ? 'Finish' : 'Next'}
                         </button>
-                      )}
-
-                      <button
-                        onClick={handleNext}
-                        style={{
-                          background: tooltipTheme.buttonBg,
-                          color: tooltipTheme.buttonText,
-                          border: `1px solid ${tooltipTheme.buttonBorder}`,
-                          padding: '0 16px',
-                          height: '32px',
-                          fontSize: '9px',
-                          fontFamily: '"Space Mono", monospace',
-                          fontWeight: 700,
-                          cursor: 'pointer',
-                          borderRadius: '16px',
-                          textTransform: 'uppercase',
-                          display: 'inline-flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          boxSizing: 'border-box',
-                          transition: 'opacity 0.2s ease'
-                        }}
-                        onMouseEnter={(e) => { e.currentTarget.style.opacity = '0.8'; }}
-                        onMouseLeave={(e) => { e.currentTarget.style.opacity = '1'; }}
-                      >
-                        {onboardingStep === onboardingSteps.length - 1 ? 'Finish' : 'Next'}
-                      </button>
+                      </div>
                     </div>
-                  </div>
-                </motion.div>
+                  </motion.div>
+                </div>
               );
             })()
           }
