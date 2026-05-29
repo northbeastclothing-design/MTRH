@@ -621,6 +621,7 @@ const processIncomingRecord = (item: any, index: number) => {
     }
   }
   else if (lowerCat.includes('ufo') || lowerCat.includes('uap')) normalizedCategory = 'U.F.O. Sightings';
+  else if (lowerCat.includes('ley') || lowerCat.includes('ley-line') || lowerCat === 'ley lines') normalizedCategory = 'Ley Lines';
   else if (lowerCat.includes('cryptid')) normalizedCategory = 'Cryptid Sightings';
   else if (lowerCat.includes('entrance') || lowerCat.includes('underworld')) normalizedCategory = 'Underworld Entrances';
   else if (lowerCat.includes('ancient') || lowerCat.includes('text')) normalizedCategory = 'Ancient Texts';
@@ -743,6 +744,7 @@ const LAYER_CONFIG: Record<string, { color: string; icon: string }> = {
   'National Parks & Reserves': { color: '#9FF3BC', icon: '/icons/icon-national-parks-reserves.svg' },
   'Blurred on Google Maps': { color: '#BDC4FF', icon: '/icons/icon-blurred-on-google.svg' },
   'Meteor Impact Craters': { color: '#FF9F63', icon: '/icons/icon-meteors.svg' },
+  'Ley Lines': { color: '#FF5E97', icon: '/icons/icon-ley-lines.svg' },
   'Default': { color: '#b6a6ff', icon: '/icons/icon-map-pin.svg' }
 };
 
@@ -2402,7 +2404,7 @@ function App() {
         'cave-drawings', 'crop-circles', 'cryptid-sightings', 'Megaliths', 'dumbs',
         'entrances-to-underworld', 'ghosts', 'giants', 'megaliths',
         'national-parks-reserves', 'ufo-sightings', 'map-pin', 'petroglyphs',
-        'meteors'
+        'meteors', 'ley-lines'
       ];
       
       let loadedCount = 0;
@@ -2649,6 +2651,18 @@ function App() {
           id: sourceLayerId, type: 'line', source: sourceLayerId,
           paint: { 'line-color': lineColor, 'line-width': 2, 'line-opacity': 1.0 }
         });
+        
+        map.on('click', sourceLayerId, (e) => {
+          (e as any)._clickHandled = true;
+          handleLocationItemClick(line);
+        });
+        map.on('mouseenter', sourceLayerId, () => {
+          if (mapRef.current) mapRef.current.getCanvas().style.cursor = 'pointer';
+        });
+        map.on('mouseleave', sourceLayerId, () => {
+          if (mapRef.current) mapRef.current.getCanvas().style.cursor = '';
+        });
+
         lineLayersRef.current.push(sourceLayerId);
       } catch (err) { console.error(err); }
     });
