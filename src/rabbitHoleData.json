@@ -11665,48 +11665,6 @@
     "images": []
   },
   {
-    "id": "anomaly-Bigfoot-494",
-    "name": "Big Timber, Montana (Thunderbird in Montana)",
-    "category": "Bigfoot",
-    "type": "Point",
-    "coordinates": {
-      "lng": -110.10498,
-      "lat": 45.790509
-    },
-    "date": 1987,
-    "description": "10/1987 - 2 man traveling along I-90 in Montana see possible Thunderbird. The bird had a 15-20 foot wingspan.",
-    "source": "",
-    "images": []
-  },
-  {
-    "id": "anomaly-Bigfoot-496",
-    "name": "Boone, Iowa (Thunderbird in Iowa)",
-    "category": "Bigfoot",
-    "type": "Point",
-    "coordinates": {
-      "lng": -93.812256,
-      "lat": 42.035014
-    },
-    "date": 2013,
-    "description": "10/2/2013 - A couple driving along highway 30 see a large bird",
-    "source": "",
-    "images": []
-  },
-  {
-    "id": "anomaly-Bigfoot-497",
-    "name": "Seward, Nebraska (Thunderbird sighting)",
-    "category": "Bigfoot",
-    "type": "Point",
-    "coordinates": {
-      "lng": -97.305908,
-      "lat": 40.913513
-    },
-    "date": null,
-    "description": "1990 - 4 people see large bird go over their porch.",
-    "source": "",
-    "images": []
-  },
-  {
     "id": "anomaly-Bigfoot-501",
     "name": "Loyall, Kentucky (Bigfoot sighting)",
     "category": "Bigfoot",
@@ -11833,34 +11791,6 @@
     "images": []
   },
   {
-    "id": "anomaly-Bigfoot-514",
-    "name": "Bangor, Michigan (Possible Thunderbird Sighting)",
-    "category": "Bigfoot",
-    "type": "Point",
-    "coordinates": {
-      "lng": -86.076508,
-      "lat": 42.386951
-    },
-    "date": null,
-    "description": "6/14/14 - Possible Thunderbird seen by 3 people.",
-    "source": "",
-    "images": []
-  },
-  {
-    "id": "anomaly-Bigfoot-516",
-    "name": "Ellicott, Colorado (Thunderbird sighting)",
-    "category": "Bigfoot",
-    "type": "Point",
-    "coordinates": {
-      "lng": -104.468994,
-      "lat": 38.942321
-    },
-    "date": 2006,
-    "description": "2006 - Possible Thunderbird Sighting.",
-    "source": "",
-    "images": []
-  },
-  {
     "id": "anomaly-Bigfoot-519",
     "name": "Tallulah, Louisiana (Man spots Bigfoot while fishing)",
     "category": "Bigfoot",
@@ -11941,20 +11871,6 @@
     },
     "date": null,
     "description": "",
-    "source": "",
-    "images": []
-  },
-  {
-    "id": "anomaly-Bigfoot-528",
-    "name": "Elliot Lake, Ontario, CA (Fisherman take photo of large bird)",
-    "category": "Bigfoot",
-    "type": "Point",
-    "coordinates": {
-      "lng": -82.4201202,
-      "lat": 46.1945668
-    },
-    "date": 2012,
-    "description": "6/08/2012 - Fishermen take photo of possible Thunderbird. (Marker is close to actual spot)\u00a0 Read the full report and see the photos - http://www.thecryptocrew.com/2014/12/is-this-thunderbird.html",
     "source": "",
     "images": []
   },
@@ -12309,20 +12225,6 @@
     "images": []
   },
   {
-    "id": "anomaly-Bigfoot-571",
-    "name": "Mound City, Missouri (Thunderbird Stuck in Mud)",
-    "category": "Bigfoot",
-    "type": "Point",
-    "coordinates": {
-      "lng": -95.2185059,
-      "lat": 40.1830701
-    },
-    "date": null,
-    "description": "",
-    "source": "",
-    "images": []
-  },
-  {
     "id": "anomaly-Bigfoot-573",
     "name": "Keosauqua, Iowa (Rocks thrown)",
     "category": "Bigfoot",
@@ -12361,20 +12263,6 @@
     },
     "date": 2015,
     "description": "6/1/15 - Woman see possible bigfoot standing in a field. Makes return trip and finds tracks. Push pin is general area. Read the full report at http://www.thecryptocrew.com/2015/07/bigfoot-sighting-in-tennessee.html",
-    "source": "",
-    "images": []
-  },
-  {
-    "id": "anomaly-Bigfoot-578",
-    "name": "Val-des-Monts, Quebec, CA (Possible Thunderbird spotted!)",
-    "category": "Bigfoot",
-    "type": "Point",
-    "coordinates": {
-      "lng": -75.7177734,
-      "lat": 45.6005874
-    },
-    "date": null,
-    "description": "",
     "source": "",
     "images": []
   },
@@ -12435,20 +12323,6 @@
     "images": []
   },
   {
-    "id": "anomaly-Bigfoot-587",
-    "name": "Mississauga, Ontario, CA (Large Unknown Bird)",
-    "category": "Bigfoot",
-    "type": "Point",
-    "coordinates": {
-      "lng": -79.7717285,
-      "lat": 43.5644716
-    },
-    "date": 1999,
-    "description": "9/2/1999 - Man views large unknown bird with a 30 foot wingspan. Could it be a thunderbird? Read the report at http://www.thecryptocrew.com/2015/08/large-unknown-bird-report.html",
-    "source": "",
-    "images": []
-  },
-  {
     "id": "anomaly-Bigfoot-588",
     "name": "Talihina, Oklahoma (Bigfoot seen near Little River)",
     "category": "Bigfoot",
@@ -12484,20 +12358,6 @@
     "coordinates": {
       "lng": -122.5881958,
       "lat": 44.9871418
-    },
-    "date": null,
-    "description": "",
-    "source": "",
-    "images": []
-  },
-  {
-    "id": "anomaly-Bigfoot-593",
-    "name": "Cooranbong, New South Wales, AU (Possible Yowie track and hair sample)",
-    "category": "Bigfoot",
-    "type": "Point",
-    "coordinates": {
-      "lng": 151.2886047,
-      "lat": -33.0624856
     },
     "date": null,
     "description": "",
@@ -12680,20 +12540,6 @@
     "coordinates": {
       "lng": -89.881382,
       "lat": 35.2749843
-    },
-    "date": null,
-    "description": "",
-    "source": "",
-    "images": []
-  },
-  {
-    "id": "anomaly-Bigfoot-618",
-    "name": "Riverview, Michigan (Thunderbird sighting)",
-    "category": "Bigfoot",
-    "type": "Point",
-    "coordinates": {
-      "lng": -83.2082605,
-      "lat": 42.1790044
     },
     "date": null,
     "description": "",
@@ -12974,20 +12820,6 @@
     "coordinates": {
       "lng": -123.835144,
       "lat": 41.141433
-    },
-    "date": null,
-    "description": "",
-    "source": "",
-    "images": []
-  },
-  {
-    "id": "anomaly-Bigfoot-660",
-    "name": "Sylvan Lake, Michigan (Thunderbird Sightings)",
-    "category": "Bigfoot",
-    "type": "Point",
-    "coordinates": {
-      "lng": -83.3148193,
-      "lat": 42.5990928
     },
     "date": null,
     "description": "",
@@ -13303,20 +13135,6 @@
     "images": []
   },
   {
-    "id": "anomaly-Bigfoot-705",
-    "name": "Lincoln Heights, Ohio (Orange Eyed Monster Seen)",
-    "category": "Bigfoot",
-    "type": "Point",
-    "coordinates": {
-      "lng": -82.3824406,
-      "lat": 40.7535641
-    },
-    "date": 1959,
-    "description": "3/28/1959 - The orange eyed monster was first sighted on March 28",
-    "source": "",
-    "images": []
-  },
-  {
     "id": "anomaly-Bigfoot-706",
     "name": "Wrangell, Alaska (Hairy man Tells Hunter - Leave us Alone!)",
     "category": "Bigfoot",
@@ -13436,20 +13254,6 @@
     "coordinates": {
       "lng": -85.6504682,
       "lat": 42.8517363
-    },
-    "date": null,
-    "description": "",
-    "source": "",
-    "images": []
-  },
-  {
-    "id": "anomaly-Bigfoot-722",
-    "name": "Rock Springs, Wyoming (Possible Thunderbird Sighting)",
-    "category": "Bigfoot",
-    "type": "Point",
-    "coordinates": {
-      "lng": -108.4007263,
-      "lat": 41.6325089
     },
     "date": null,
     "description": "",
@@ -13702,20 +13506,6 @@
     "coordinates": {
       "lng": -82.7772877,
       "lat": 37.1684179
-    },
-    "date": null,
-    "description": "",
-    "source": "",
-    "images": []
-  },
-  {
-    "id": "anomaly-Bigfoot-763",
-    "name": "Hinton, Oklahoma (Thunderbird Sighting)",
-    "category": "Bigfoot",
-    "type": "Point",
-    "coordinates": {
-      "lng": -98.2032963,
-      "lat": 35.4503027
     },
     "date": null,
     "description": "",
@@ -14181,20 +13971,6 @@
     },
     "date": null,
     "description": "",
-    "source": "",
-    "images": []
-  },
-  {
-    "id": "anomaly-Bigfoot-826",
-    "name": "Newark, New Jersey (Cylinder Shaped UFO)",
-    "category": "Bigfoot",
-    "type": "Point",
-    "coordinates": {
-      "lng": -74.1693525,
-      "lat": 40.7327953
-    },
-    "date": 2018,
-    "description": "7/2018 - This long cylinder shaped object was seen over Newark",
     "source": "",
     "images": []
   },
@@ -14717,20 +14493,6 @@
     "images": []
   },
   {
-    "id": "anomaly-Bigfoot-899",
-    "name": "Bridgeport, Illinois (Possible Thunderbird Sighting)",
-    "category": "Bigfoot",
-    "type": "Point",
-    "coordinates": {
-      "lng": -87.7518457,
-      "lat": 38.7210148
-    },
-    "date": null,
-    "description": "",
-    "source": "",
-    "images": []
-  },
-  {
     "id": "anomaly-Bigfoot-901",
     "name": "Raymond, New Hampshire (Boy on Bicycle Followed By Possible Bigfoot)",
     "category": "Bigfoot",
@@ -14741,20 +14503,6 @@
     },
     "date": 1980,
     "description": "1980's - Boy on Bicycle Followed By Possible Bigfoot. A teenaged boy encountered a possible Bigfoot at the Pawtuckaway state park. Push pin is general area. read the full report at https://www.thecryptocrew.com/2021/05/boy-on-bicycle-followed-by-possible.html",
-    "source": "",
-    "images": []
-  },
-  {
-    "id": "anomaly-Bigfoot-902",
-    "name": "Des Arc, Arkansas (Canoers Have Possible Thunderbird Sighting!)",
-    "category": "Bigfoot",
-    "type": "Point",
-    "coordinates": {
-      "lng": -91.4254552,
-      "lat": 35.0876757
-    },
-    "date": 1982,
-    "description": "1982 - Canoers Have Possible Thunderbird Sighting! A couple on a canoeing trip have a sighting of a very large bird. Push Pin is general area.\u00a0 Read the full report at https://www.thecryptocrew.com/2021/05/canoers-have-possible-thunderbird.html",
     "source": "",
     "images": []
   },
@@ -14822,20 +14570,6 @@
     "coordinates": {
       "lng": -94.3487109,
       "lat": 38.6353432
-    },
-    "date": null,
-    "description": "",
-    "source": "",
-    "images": []
-  },
-  {
-    "id": "anomaly-Bigfoot-914",
-    "name": "Westminster, South Carolina (Was it a Thunderbird?)",
-    "category": "Bigfoot",
-    "type": "Point",
-    "coordinates": {
-      "lng": -83.2214964,
-      "lat": 34.747342
     },
     "date": null,
     "description": "",
@@ -15186,20 +14920,6 @@
     "coordinates": {
       "lng": -90.0176727,
       "lat": 43.2022483
-    },
-    "date": null,
-    "description": "",
-    "source": "",
-    "images": []
-  },
-  {
-    "id": "anomaly-Bigfoot-967",
-    "name": "Jersey City, New Jersey (Blue UFO)",
-    "category": "Bigfoot",
-    "type": "Point",
-    "coordinates": {
-      "lng": -74.0584054,
-      "lat": 40.6872753
     },
     "date": null,
     "description": "",
@@ -27857,22 +27577,6 @@
     ]
   },
   {
-    "id": "anomaly-Bigfoot-993",
-    "name": "Florida Skunk Ape - Myakka River State Park, Florida (2000)",
-    "category": "Bigfoot",
-    "type": "Point",
-    "coordinates": {
-      "lng": -82.3167,
-      "lat": 27.2358
-    },
-    "date": 2000,
-    "description": "Famous anonymous photographs sent to the Sarasota Sheriff's Department in 2000, showing a large, ape-like creature crouched behind palmetto leaves in a suburban backyard.",
-    "source": "Wikipedia - Skunk ape",
-    "images": [
-      "https://upload.wikimedia.org/wikipedia/commons/a/ac/The_Florida_Skunk_Ape_-_panoramio.jpg"
-    ]
-  },
-  {
     "id": "anomaly-Bigfoot-994",
     "name": "Ape Canyon Sighting - Mount St. Helens, Washington (1924)",
     "category": "Bigfoot",
@@ -27902,22 +27606,6 @@
     "source": "Wikipedia - Mogollon Monster",
     "images": [
       "https://upload.wikimedia.org/wikipedia/commons/7/72/Mogollon_Monster_Carving.jpg"
-    ]
-  },
-  {
-    "id": "anomaly-Bigfoot-996",
-    "name": "Dewey Lake Monster - Dewey Lake, Michigan (1964)",
-    "category": "Bigfoot",
-    "type": "Point",
-    "coordinates": {
-      "lng": -86.1333,
-      "lat": 42.0167
-    },
-    "date": 1964,
-    "description": "A series of sightings of a 10-foot-tall hairy biped near Dewey Lake in Michigan during the summer of 1964, which led to local police investigations and search parties.",
-    "source": "Wikipedia - Dewey Lake Monster",
-    "images": [
-      "https://upload.wikimedia.org/wikipedia/commons/b/bf/Dewey_Lake_Monster_%28Witness_Composite%29_3.jpg"
     ]
   },
   {
@@ -28223,5 +27911,1053 @@
       "https://upload.wikimedia.org/wikipedia/commons/b/bd/Washington_National_%281944%29.jpg",
       "https://upload.wikimedia.org/wikipedia/commons/1/13/1952_UFO_Flap_-_Air_Force_frequency_graph_of_UFO_reports.png"
     ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-0",
+    "name": "Big Timber, Montana (Thunderbird in Montana)",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -110.10498,
+      "lat": 45.790509
+    },
+    "date": 1987,
+    "description": "10/1987 - 2 man traveling along I-90 in Montana see possible Thunderbird. The bird had a 15-20 foot wingspan.",
+    "source": "",
+    "images": [],
+    "categories": [
+      "Cryptid Sightings"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-1",
+    "name": "Boone, Iowa (Thunderbird in Iowa)",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -93.812256,
+      "lat": 42.035014
+    },
+    "date": 2013,
+    "description": "10/2/2013 - A couple driving along highway 30 see a large bird",
+    "source": "",
+    "images": [],
+    "categories": [
+      "Cryptid Sightings"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-2",
+    "name": "Seward, Nebraska (Thunderbird sighting)",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -97.305908,
+      "lat": 40.913513
+    },
+    "date": null,
+    "description": "1990 - 4 people see large bird go over their porch.",
+    "source": "",
+    "images": [],
+    "categories": [
+      "Cryptid Sightings"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-3",
+    "name": "Bangor, Michigan (Possible Thunderbird Sighting)",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -86.076508,
+      "lat": 42.386951
+    },
+    "date": null,
+    "description": "6/14/14 - Possible Thunderbird seen by 3 people.",
+    "source": "",
+    "images": [],
+    "categories": [
+      "Cryptid Sightings"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-4",
+    "name": "Ellicott, Colorado (Thunderbird sighting)",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -104.468994,
+      "lat": 38.942321
+    },
+    "date": 2006,
+    "description": "2006 - Possible Thunderbird Sighting.",
+    "source": "",
+    "images": [],
+    "categories": [
+      "Cryptid Sightings"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-5",
+    "name": "Elliot Lake, Ontario, CA (Fisherman take photo of large bird)",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -82.4201202,
+      "lat": 46.1945668
+    },
+    "date": 2012,
+    "description": "6/08/2012 - Fishermen take photo of possible Thunderbird. (Marker is close to actual spot)\u00a0 Read the full report and see the photos - http://www.thecryptocrew.com/2014/12/is-this-thunderbird.html",
+    "source": "",
+    "images": [],
+    "categories": [
+      "Cryptid Sightings"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-6",
+    "name": "Mound City, Missouri (Thunderbird Stuck in Mud)",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -95.2185059,
+      "lat": 40.1830701
+    },
+    "date": null,
+    "description": "",
+    "source": "",
+    "images": [],
+    "categories": [
+      "Cryptid Sightings"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-7",
+    "name": "Val-des-Monts, Quebec, CA (Possible Thunderbird spotted!)",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -75.7177734,
+      "lat": 45.6005874
+    },
+    "date": null,
+    "description": "",
+    "source": "",
+    "images": [],
+    "categories": [
+      "Cryptid Sightings"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-8",
+    "name": "Mississauga, Ontario, CA (Large Unknown Bird)",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -79.7717285,
+      "lat": 43.5644716
+    },
+    "date": 1999,
+    "description": "9/2/1999 - Man views large unknown bird with a 30 foot wingspan. Could it be a thunderbird? Read the report at http://www.thecryptocrew.com/2015/08/large-unknown-bird-report.html",
+    "source": "",
+    "images": [],
+    "categories": [
+      "Cryptid Sightings"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-9",
+    "name": "Cooranbong, New South Wales, AU (Possible Yowie track and hair sample)",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": 151.2886047,
+      "lat": -33.0624856
+    },
+    "date": null,
+    "description": "",
+    "source": "",
+    "images": [],
+    "categories": [
+      "Cryptid Sightings"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-10",
+    "name": "Riverview, Michigan (Thunderbird sighting)",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -83.2082605,
+      "lat": 42.1790044
+    },
+    "date": null,
+    "description": "",
+    "source": "",
+    "images": [],
+    "categories": [
+      "Cryptid Sightings"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-11",
+    "name": "Sylvan Lake, Michigan (Thunderbird Sightings)",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -83.3148193,
+      "lat": 42.5990928
+    },
+    "date": null,
+    "description": "",
+    "source": "",
+    "images": [],
+    "categories": [
+      "Cryptid Sightings"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-12",
+    "name": "Lincoln Heights, Ohio (Orange Eyed Monster Seen)",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -82.3824406,
+      "lat": 40.7535641
+    },
+    "date": 1959,
+    "description": "3/28/1959 - The orange eyed monster was first sighted on March 28",
+    "source": "",
+    "images": [],
+    "categories": [
+      "Cryptid Sightings"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-13",
+    "name": "Rock Springs, Wyoming (Possible Thunderbird Sighting)",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -108.4007263,
+      "lat": 41.6325089
+    },
+    "date": null,
+    "description": "",
+    "source": "",
+    "images": [],
+    "categories": [
+      "Cryptid Sightings"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-14",
+    "name": "Hinton, Oklahoma (Thunderbird Sighting)",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -98.2032963,
+      "lat": 35.4503027
+    },
+    "date": null,
+    "description": "",
+    "source": "",
+    "images": [],
+    "categories": [
+      "Cryptid Sightings"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-15",
+    "name": "Bridgeport, Illinois (Possible Thunderbird Sighting)",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -87.7518457,
+      "lat": 38.7210148
+    },
+    "date": null,
+    "description": "",
+    "source": "",
+    "images": [],
+    "categories": [
+      "Cryptid Sightings"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-16",
+    "name": "Des Arc, Arkansas (Canoers Have Possible Thunderbird Sighting!)",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -91.4254552,
+      "lat": 35.0876757
+    },
+    "date": 1982,
+    "description": "1982 - Canoers Have Possible Thunderbird Sighting! A couple on a canoeing trip have a sighting of a very large bird. Push Pin is general area.\u00a0 Read the full report at https://www.thecryptocrew.com/2021/05/canoers-have-possible-thunderbird.html",
+    "source": "",
+    "images": [],
+    "categories": [
+      "Cryptid Sightings"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-17",
+    "name": "Westminster, South Carolina (Was it a Thunderbird?)",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -83.2214964,
+      "lat": 34.747342
+    },
+    "date": null,
+    "description": "",
+    "source": "",
+    "images": [],
+    "categories": [
+      "Cryptid Sightings"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-18",
+    "name": "Florida Skunk Ape - Myakka River State Park, Florida (2000)",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -82.3167,
+      "lat": 27.2358
+    },
+    "date": 2000,
+    "description": "Famous anonymous photographs sent to the Sarasota Sheriff's Department in 2000, showing a large, ape-like creature crouched behind palmetto leaves in a suburban backyard.",
+    "source": "Wikipedia - Skunk ape",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/a/ac/The_Florida_Skunk_Ape_-_panoramio.jpg"
+    ],
+    "categories": [
+      "Cryptid Sightings"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-19",
+    "name": "Dewey Lake Monster - Dewey Lake, Michigan (1964)",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -86.1333,
+      "lat": 42.0167
+    },
+    "date": 1964,
+    "description": "A series of sightings of a 10-foot-tall hairy biped near Dewey Lake in Michigan during the summer of 1964, which led to local police investigations and search parties.",
+    "source": "Wikipedia - Dewey Lake Monster",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/b/bf/Dewey_Lake_Monster_%28Witness_Composite%29_3.jpg"
+    ],
+    "categories": [
+      "Cryptid Sightings"
+    ]
+  },
+  {
+    "id": "anomaly-UFO-1011",
+    "name": "Newark, New Jersey (Cylinder Shaped UFO)",
+    "category": "U.F.O. Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -74.1693525,
+      "lat": 40.7327953
+    },
+    "date": 2018,
+    "description": "7/2018 - This long cylinder shaped object was seen over Newark",
+    "source": "",
+    "images": [],
+    "categories": [
+      "U.F.O. Sightings"
+    ]
+  },
+  {
+    "id": "anomaly-UFO-1012",
+    "name": "Jersey City, New Jersey (Blue UFO)",
+    "category": "U.F.O. Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -74.0584054,
+      "lat": 40.6872753
+    },
+    "date": null,
+    "description": "",
+    "source": "",
+    "images": [],
+    "categories": [
+      "U.F.O. Sightings"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-20",
+    "name": "Loch Ness Monster Sighting",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -4.43,
+      "lat": 57.25
+    },
+    "date": 1933,
+    "description": "Forget the blurry photos and \"mass hysteria",
+    "source": "Wikipedia - Loch Ness Monster",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Loch_Ness_Monster_Surgeon%27s_photograph.jpg/1280px-Loch_Ness_Monster_Surgeon%27s_photograph.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-21",
+    "name": "Point Pleasant Mothman Sighting",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -82.1375,
+      "lat": 38.8447
+    },
+    "date": 1966,
+    "description": "Beneath the crumbling facade of Point Pleasant",
+    "source": "Wikipedia - Mothman",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Mothman_Artist%27s_Impression.png/1280px-Mothman_Artist%27s_Impression.png"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-22",
+    "name": "Chupacabra Sighting",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -65.9011,
+      "lat": 18.3794
+    },
+    "date": 1995,
+    "description": "The Can\u00f3vanas Chupac",
+    "source": "Wikipedia - Chupacabra",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/d/da/Chupacabra_%28artist%27s_rendition%29.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-23",
+    "name": "Jersey Devil Sighting",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -74.65,
+      "lat": 39.75
+    },
+    "date": 1909,
+    "description": "The Pine Barrens' infernal ",
+    "source": "Wikipedia - Jersey Devil",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Jersey_Devil.svg/1280px-Jersey_Devil.svg.png"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-24",
+    "name": "Flatwoods Monster Encounter",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -80.6539,
+      "lat": 38.7236
+    },
+    "date": 1952,
+    "description": "The Flatwoods \"sightings",
+    "source": "Wikipedia - Flatwoods Monster",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Flatwoods_monster.png/1280px-Flatwoods_monster.png"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-25",
+    "name": "Abominable Snowman (Yeti) Track Discovery",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": 86.925,
+      "lat": 27.9878
+    },
+    "date": 1921,
+    "description": "The colossal, anomalous tracks found on Everest",
+    "source": "Wikipedia - Yeti",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/d/d1/Yeti_coloris%C3%A9.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-26",
+    "name": "Mongolian Death Worm Sighting",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": 104.0,
+      "lat": 43.0
+    },
+    "date": 1926,
+    "description": "Whispers from the Gobi",
+    "source": "Wikipedia - Mongolian Death Worm",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/b/b6/Allghoikhorkhoi.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-27",
+    "name": "Loveland Frogman Encounter",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -84.2694,
+      "lat": 39.2689
+    },
+    "date": 1972,
+    "description": "Reports of a strange, unidentified entity matching descriptions of the legendary 'Loveland frog' sighted in 'Loveland, Ohio'. Local authorities and mainstream institutions have historically downplayed or suppressed documentation of the encounter.",
+    "source": "Wikipedia - Loveland frog",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Green_Iguana_In_Florida.jpg/1280px-Green_Iguana_In_Florida.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-28",
+    "name": "Beast of Bray Road Sighting",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -88.5443,
+      "lat": 42.6389
+    },
+    "date": 1989,
+    "description": "The chilling encounters near Elk",
+    "source": "Wikipedia - Beast of Bray Road",
+    "images": []
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-29",
+    "name": "Mokele-Mbembe Expedition Sighting",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": 17.02,
+      "lat": 1.34
+    },
+    "date": 1913,
+    "description": "The 1980 Lake",
+    "source": "Wikipedia - Mokele-mbembe",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/0/00/Mokele-mbembe_ill_artlibre_jnl.png"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-30",
+    "name": "Champ (Lake Champlain Monster) Sighting",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -73.4079,
+      "lat": 44.0456
+    },
+    "date": 1977,
+    "description": "The 'Champ' sightings aren",
+    "source": "Wikipedia - Champ (cryptid)",
+    "images": []
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-31",
+    "name": "Ogopogo Sighting",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -119.59555556,
+      "lat": 49.54722222
+    },
+    "date": 1926,
+    "description": "The shimmering depths of Okanagan conceal not a",
+    "source": "Wikipedia - Ogopogo",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/9/92/OgoPogo_crop.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-32",
+    "name": "Bunyip Sighting",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": 145.6,
+      "lat": -38.2
+    },
+    "date": 1845,
+    "description": "Beneath the Great Swamp's",
+    "source": "Wikipedia - Bunyip",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/a/a8/Bunyip_1890.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-33",
+    "name": "Pope Lick Monster Sighting",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -85.4879,
+      "lat": 38.191953
+    },
+    "date": 1966,
+    "description": "Whispers from Pope Lick",
+    "source": "Wikipedia - Pope Lick Monster",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/8/83/Popelick2.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-34",
+    "name": "Fouke Monster Encounter",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -93.8863,
+      "lat": 33.2604
+    },
+    "date": 1971,
+    "description": "The Fouke Monster wasn",
+    "source": "Wikipedia - Fouke Monster",
+    "images": []
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-35",
+    "name": "Ozark Howler Sighting",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -92.5,
+      "lat": 37.5
+    },
+    "date": 1998,
+    "description": "Whispers from the Ozark",
+    "source": "Wikipedia - Ozark Howler",
+    "images": []
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-36",
+    "name": "Beast of G\u00e9vaudan Sighting",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": 3.3,
+      "lat": 44.9
+    },
+    "date": 1764,
+    "description": "Reports of a strange, unidentified entity matching descriptions of the legendary 'Beast of G\u00e9vaudan' sighted in 'Margeride Mountains, France'. Local authorities and mainstream institutions have historically downplayed or suppressed documentation of the encounter.",
+    "source": "Wikipedia - Beast of G\u00e9vaudan",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/a/ac/Gevaudanwolf.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-37",
+    "name": "Mapinguari Sighting",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -69.0,
+      "lat": -9.0
+    },
+    "date": 1993,
+    "description": "The stench of sulfur and decay wasn",
+    "source": "Wikipedia - Mapinguari",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/MAPINGUARI_%28cropped%29.png/1280px-MAPINGUARI_%28cropped%29.png"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-38",
+    "name": "Van Meter Visitor Encounter",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -93.9555,
+      "lat": 41.5297
+    },
+    "date": 1903,
+    "description": "The 1903 Van",
+    "source": "Wikipedia - Van Meter Visitor",
+    "images": []
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-39",
+    "name": "Skinwalker Ranch Anomalous Encounter",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -109.8883917,
+      "lat": 40.2581583
+    },
+    "date": 1994,
+    "description": "Reports of a strange, unidentified entity matching descriptions of the legendary 'Skinwalker Ranch' sighted in 'Skinwalker Ranch, Ballard, Utah'. Local authorities and mainstream institutions have historically downplayed or suppressed documentation of the encounter.",
+    "source": "Wikipedia - Skinwalker Ranch",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Skinwalker_Ranch_%2810393732103%29.jpg/1280px-Skinwalker_Ranch_%2810393732103%29.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-40",
+    "name": "Altamaha-ha Sighting",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -81.3684,
+      "lat": 31.3696
+    },
+    "date": 1969,
+    "description": "Whispers from the Altamaha aren",
+    "source": "Wikipedia - Altamaha-ha",
+    "images": []
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-41",
+    "name": "Bear Lake Monster Sighting",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -111.33,
+      "lat": 41.95
+    },
+    "date": 1868,
+    "description": "The \"Bear Lake Monster\" isn",
+    "source": "Wikipedia - Bear Lake Monster",
+    "images": []
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-42",
+    "name": "Chessie (Chesapeake Bay Monster) Sighting",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -76.25,
+      "lat": 38.25
+    },
+    "date": 1982,
+    "description": "Reports of a strange, unidentified entity matching descriptions of the legendary 'Chessie (cryptid)' sighted in 'Chesapeake Bay, Maryland'. Local authorities and mainstream institutions have historically downplayed or suppressed documentation of the encounter.",
+    "source": "Wikipedia - Chessie (cryptid)",
+    "images": []
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-43",
+    "name": "Kelly-Hopkinsville Goblin Sighting",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -87.4764,
+      "lat": 36.9711
+    },
+    "date": 1955,
+    "description": "Reports of a strange, unidentified entity matching descriptions of the legendary 'Kelly\u2013Hopkinsville encounter' sighted in 'Kelly, Kentucky'. Local authorities and mainstream institutions have historically downplayed or suppressed documentation of the encounter.",
+    "source": "Wikipedia - Kelly\u2013Hopkinsville encounter",
+    "images": []
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-44",
+    "name": "Caddy (Cadborosaurus) Sighting",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -123.2981,
+      "lat": 48.4593
+    },
+    "date": 1933,
+    "description": "Reports of a strange, unidentified entity matching descriptions of the legendary 'Cadborosaurus' sighted in 'Cadboro Bay, Victoria, BC, Canada'. Local authorities and mainstream institutions have historically downplayed or suppressed documentation of the encounter.",
+    "source": "Wikipedia - Cadborosaurus",
+    "images": []
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-45",
+    "name": "Snallygaster Sighting",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -77.5386,
+      "lat": 39.4447
+    },
+    "date": 1909,
+    "description": "Reports of a strange, unidentified entity matching descriptions of the legendary 'Snallygaster' sighted in 'Middletown, Maryland'. Local authorities and mainstream institutions have historically downplayed or suppressed documentation of the encounter.",
+    "source": "Wikipedia - Snallygaster",
+    "images": []
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-46",
+    "name": "Bessie (Lake Erie Monster) Sighting",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -82.55,
+      "lat": 41.6
+    },
+    "date": 1990,
+    "description": "Reports of a strange, unidentified entity matching descriptions of the legendary 'Bessie (lake monster)' sighted in 'Lake Erie, Ohio'. Local authorities and mainstream institutions have historically downplayed or suppressed documentation of the encounter.",
+    "source": "Wikipedia - Bessie (lake monster)",
+    "images": []
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-47",
+    "name": "Tatzelwurm Encounter",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": 8.25,
+      "lat": 46.98
+    },
+    "date": 1934,
+    "description": "Reports of a strange, unidentified entity matching descriptions of the legendary 'Tatzelwurm' sighted in 'Mount Pilatus, Switzerland'. Local authorities and mainstream institutions have historically downplayed or suppressed documentation of the encounter.",
+    "source": "Wikipedia - Tatzelwurm",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/c/c5/Dalla_Torre%281887%29-Drachensage-217-Bergstuz_oder_Stollwurm.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-48",
+    "name": "White River Monster Sighting",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -91.2721,
+      "lat": 35.6065
+    },
+    "date": 1937,
+    "description": "Reports of a strange, unidentified entity matching descriptions of the legendary 'White River Monster' sighted in 'Newport, Arkansas'. Local authorities and mainstream institutions have historically downplayed or suppressed documentation of the encounter.",
+    "source": "Wikipedia - White River Monster",
+    "images": []
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-49",
+    "name": "Momo the Monster Encounter",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -91.0515,
+      "lat": 39.4489
+    },
+    "date": 1972,
+    "description": "Reports of a strange, unidentified entity matching descriptions of the legendary 'Momo the Monster' sighted in 'Louisiana, Missouri'. Local authorities and mainstream institutions have historically downplayed or suppressed documentation of the encounter.",
+    "source": "Wikipedia - Momo the Monster",
+    "images": []
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-50",
+    "name": "Lake Worth Monster Sighting",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -97.45,
+      "lat": 32.8
+    },
+    "date": 1969,
+    "description": "Reports of a strange, unidentified entity matching descriptions of the legendary 'Lake Worth Monster' sighted in 'Lake Worth, Texas'. Local authorities and mainstream institutions have historically downplayed or suppressed documentation of the encounter.",
+    "source": "Wikipedia - Lake Worth Monster",
+    "images": []
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-51",
+    "name": "Enfield Horror Encounter",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -88.3375,
+      "lat": 38.0992
+    },
+    "date": 1973,
+    "description": "Reports of a strange, unidentified entity matching descriptions of the legendary 'Enfield Horror' sighted in 'Enfield, Illinois'. Local authorities and mainstream institutions have historically downplayed or suppressed documentation of the encounter.",
+    "source": "Wikipedia - Enfield Horror",
+    "images": []
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-52",
+    "name": "Gef the Talking Mongoose Encounter",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -4.71,
+      "lat": 54.16
+    },
+    "date": 1931,
+    "description": "Reports of a strange, unidentified entity matching descriptions of the legendary 'Gef' sighted in 'Dalby, Isle of Man'. Local authorities and mainstream institutions have historically downplayed or suppressed documentation of the encounter.",
+    "source": "Wikipedia - Gef",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/c/cc/Gef_the_talking_mongoose.png"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-53",
+    "name": "Tombstone Thunderbird Sighting",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -110.0673,
+      "lat": 31.7129
+    },
+    "date": 1890,
+    "description": "Reports of a strange, unidentified entity matching descriptions of the legendary 'Thunderbird (mythology)' sighted in 'Tombstone, Arizona'. Local authorities and mainstream institutions have historically downplayed or suppressed documentation of the encounter.",
+    "source": "Wikipedia - Thunderbird (mythology)",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Thunderbird_on_Totem_Pole.jpg/1280px-Thunderbird_on_Totem_Pole.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-54",
+    "name": "Minhoc\u00e3o Encounter",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -50.32,
+      "lat": -27.81
+    },
+    "date": 1870,
+    "description": "Reports of a strange, unidentified entity matching descriptions of the legendary 'Minhoc\u00e3o (cryptid)' sighted in 'Lages, Santa Catarina, Brazil'. Local authorities and mainstream institutions have historically downplayed or suppressed documentation of the encounter.",
+    "source": "Wikipedia - Minhoc\u00e3o (cryptid)",
+    "images": []
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-55",
+    "name": "Beast of Exmoor Sighting",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -3.8,
+      "lat": 51.1
+    },
+    "date": 1983,
+    "description": "Reports of a strange, unidentified entity matching descriptions of the legendary 'Beast of Exmoor' sighted in 'Exmoor, Devon, England'. Local authorities and mainstream institutions have historically downplayed or suppressed documentation of the encounter.",
+    "source": "Wikipedia - Beast of Exmoor",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Big_Cats_in_Sussex.jpg/1280px-Big_Cats_in_Sussex.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-56",
+    "name": "Kushtaka Sighting",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -132.8,
+      "lat": 57.0
+    },
+    "date": 1900,
+    "description": "Reports of a strange, unidentified entity matching descriptions of the legendary 'Kushtaka' sighted in 'Thomas Bay, Alaska'. Local authorities and mainstream institutions have historically downplayed or suppressed documentation of the encounter.",
+    "source": "Wikipedia - Kushtaka",
+    "images": []
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-57",
+    "name": "Bili Forest Giant Ape Discovery",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": 25.17,
+      "lat": 4.15
+    },
+    "date": 1996,
+    "description": "Reports of a strange, unidentified entity matching descriptions of the legendary 'Bili Ape' sighted in 'Bili Forest, Democratic Republic of the Congo'. Local authorities and mainstream institutions have historically downplayed or suppressed documentation of the encounter.",
+    "source": "Wikipedia - Bili Ape",
+    "images": []
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-58",
+    "name": "Ningen Sighting in Subantarctic Waters",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -60.0,
+      "lat": -70.0
+    },
+    "date": 2002,
+    "description": "Reports of a strange, unidentified entity matching descriptions of the legendary 'Ningen (folklore)' sighted in 'Subantarctic Ocean, Antarctica'. Local authorities and mainstream institutions have historically downplayed or suppressed documentation of the encounter.",
+    "source": "Wikipedia - Ningen (folklore)",
+    "images": []
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-59",
+    "name": "Kraken Sea Monster Account",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": 5.0,
+      "lat": 62.0
+    },
+    "date": 1752,
+    "description": "Reports of a strange, unidentified entity matching descriptions of the legendary 'Kraken' sighted in 'North Sea, Norway'. Local authorities and mainstream institutions have historically downplayed or suppressed documentation of the encounter.",
+    "source": "Wikipedia - Kraken",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Le_Poulpe_Colossal.jpg/1280px-Le_Poulpe_Colossal.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-60",
+    "name": "Dingonek River Beast Sighting",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": 35.0,
+      "lat": -1.0
+    },
+    "date": 1907,
+    "description": "Reports of a strange, unidentified entity matching descriptions of the legendary 'Dingonek' sighted in 'River Maggori, Kenya'. Local authorities and mainstream institutions have historically downplayed or suppressed documentation of the encounter.",
+    "source": "Wikipedia - Dingonek",
+    "images": []
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-61",
+    "name": "Gambo Beached Sea Monster Sighting",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -16.68,
+      "lat": 13.47
+    },
+    "date": 1983,
+    "description": "The colossal horror that washed ashore on",
+    "source": "Wikipedia - Gambo (sea monster)",
+    "images": []
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-62",
+    "name": "Brosno Dragon Sighting",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": 32.18,
+      "lat": 56.88
+    },
+    "date": 1996,
+    "description": "Reports of a strange, unidentified entity matching descriptions of the legendary 'Brosno dragon' sighted in 'Lake Brosno, Tver Oblast, Russia'. Local authorities and mainstream institutions have historically downplayed or suppressed documentation of the encounter.",
+    "source": "Wikipedia - Brosno dragon",
+    "images": []
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-63",
+    "name": "Falkville Metal Man Sighting",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -86.9,
+      "lat": 34.37
+    },
+    "date": 1973,
+    "description": "Reports of a strange, unidentified entity matching descriptions of the legendary 'Falkville Metal Man' sighted in 'Falkville, Alabama'. Local authorities and mainstream institutions have historically downplayed or suppressed documentation of the encounter.",
+    "source": "Wikipedia - Falkville Metal Man",
+    "images": []
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-64",
+    "name": "Queensland Tiger Sighting",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": 145.42,
+      "lat": -17.26
+    },
+    "date": 1940,
+    "description": "Reports of a strange, unidentified entity matching descriptions of the legendary 'Queensland Tiger' sighted in 'Atherton Tableland, Queensland, Australia'. Local authorities and mainstream institutions have historically downplayed or suppressed documentation of the encounter.",
+    "source": "Wikipedia - Queensland Tiger",
+    "images": []
   }
 ]
