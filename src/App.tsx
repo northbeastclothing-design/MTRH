@@ -711,13 +711,26 @@ const processIncomingRecord = (item: any, index: number) => {
       }
     } else if (lowerNormalizedCat === 'enochian sites') {
       if (lowerName.includes('hermon')) {
-        safeImages = ['https://upload.wikimedia.org/wikipedia/commons/f/fa/Mount_Hermon_view_from_Golan.jpg'];
+        safeImages = [
+          'https://upload.wikimedia.org/wikipedia/commons/0/08/Gustave_Dor%C3%A9-La_chute_des_anges_rebelles.jpg',
+          'https://upload.wikimedia.org/wikipedia/commons/3/33/The_lake_of_Tiberias,_looking_towards_Hermon._David_Roberts._1855.jpg',
+          'https://upload.wikimedia.org/wikipedia/commons/f/fa/Mount_Hermon_view_from_Golan.jpg'
+        ];
       } else if (lowerName.includes('dudael')) {
-        safeImages = ['https://upload.wikimedia.org/wikipedia/commons/e/ec/Judean_Desert_view.jpg'];
+        safeImages = [
+          'https://upload.wikimedia.org/wikipedia/commons/9/97/William_Holman_Hunt_-_The_Scapegoat.jpg',
+          'https://upload.wikimedia.org/wikipedia/commons/e/ec/Judean_Desert_view.jpg'
+        ];
       } else if (lowerName.includes('sheol') || lowerName.includes('hinnom') || lowerName.includes('gehenna')) {
-        safeImages = ['https://upload.wikimedia.org/wikipedia/commons/4/47/Hinnom_valley_Jerusalem.jpg'];
+        safeImages = [
+          'https://upload.wikimedia.org/wikipedia/commons/e/e5/Thomas_Seddon_-_Jerusalem_and_the_Valley_of_Jehoshaphat_from_the_Hill_of_Evil_Counsel_-_Google_Art_Project.jpg',
+          'https://upload.wikimedia.org/wikipedia/commons/4/47/Hinnom_valley_Jerusalem.jpg'
+        ];
       } else if (lowerName.includes('bashan') || lowerName.includes('golan') || lowerName.includes('og')) {
-        safeImages = ['https://upload.wikimedia.org/wikipedia/commons/2/2a/Golan_Heights_Gamla.jpg'];
+        safeImages = [
+          'https://upload.wikimedia.org/wikipedia/commons/0/0c/The_Sea_of_Tiberias,_looking_towards_Bashan_(David_Roberts).jpg',
+          'https://upload.wikimedia.org/wikipedia/commons/2/2a/Golan_Heights_Gamla.jpg'
+        ];
       }
     }
   }
