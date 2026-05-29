@@ -712,9 +712,9 @@ const processIncomingRecord = (item: any, index: number) => {
     } else if (lowerNormalizedCat === 'enochian sites') {
       if (lowerName.includes('hermon')) {
         safeImages = [
-          'https://upload.wikimedia.org/wikipedia/commons/1/19/Paradise_Lost_1.jpg',
+          'https://upload.wikimedia.org/wikipedia/commons/8/86/Paradise_Lost_1.jpg',
           'https://upload.wikimedia.org/wikipedia/commons/3/33/The_lake_of_Tiberias,_looking_towards_Hermon._David_Roberts._1855.jpg',
-          'https://upload.wikimedia.org/wikipedia/commons/4/4f/Mount_Hermon_View.jpg'
+          'https://upload.wikimedia.org/wikipedia/commons/1/13/Mount_Hermon_View.jpg'
         ];
       } else if (lowerName.includes('dudael')) {
         safeImages = [
@@ -724,13 +724,13 @@ const processIncomingRecord = (item: any, index: number) => {
       } else if (lowerName.includes('sheol') || lowerName.includes('hinnom') || lowerName.includes('gehenna')) {
         safeImages = [
           'https://upload.wikimedia.org/wikipedia/commons/f/f2/Thomas_Seddon_-_Jerusalem_and_the_Valley_of_Jehoshaphat_from_the_Hill_of_Evil_Counsel_-_Google_Art_Project.jpg',
-          'https://upload.wikimedia.org/wikipedia/commons/d/d2/Suburbs_of_Jerusalem_seen_from_the_Valley_of_Gehenna_-_Cootwijck_Johannes_Van_-_1619.jpg',
+          'https://upload.wikimedia.org/wikipedia/commons/9/91/Suburbs_of_Jerusalem_seen_from_the_Valley_of_Gehenna_-_Cootwijck_Johannes_Van_-_1619.jpg',
           'https://upload.wikimedia.org/wikipedia/commons/7/71/Jerusalem-Hinnom-Kidron-Old-City-323.jpg'
         ];
       } else if (lowerName.includes('bashan') || lowerName.includes('golan') || lowerName.includes('og')) {
         safeImages = [
-          'https://upload.wikimedia.org/wikipedia/commons/3/36/The_Sae_of_Tiberias,_looking_towards_Bashan._David_Roberts._1855.jpg',
-          'https://upload.wikimedia.org/wikipedia/commons/6/64/Golan_Heights_-_Gamla_view.jpg'
+          'https://upload.wikimedia.org/wikipedia/commons/c/c8/The_Sae_of_Tiberias%2C_looking_towards_Bashan._David_Roberts._1855.jpg',
+          'https://upload.wikimedia.org/wikipedia/commons/a/ac/Golan_Heights_-_Gamla_view.jpg'
         ];
       }
     }
