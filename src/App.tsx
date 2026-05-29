@@ -3695,7 +3695,7 @@ function App() {
 
             <div className="custom-scrollbar" style={{ flex: 1, padding: '0 0 15px 0', display: 'flex', flexDirection: 'column', textAlign: 'left' }}>
               {/* STICKY TOP SPACER FOR 15PX PADDING + MASKING */}
-              <div style={{ position: 'sticky', top: 0, height: '15px', background: theme.bg, zIndex: 15, flexShrink: 0 }} />
+              <div style={{ position: 'sticky', top: 0, height: '15px', background: theme.bg, zIndex: 10, flexShrink: 0 }} />
               
               {uniqueCategories.map(layerName => {
                 const isExpanded = !!expandedLayers[layerName];
@@ -3709,7 +3709,7 @@ function App() {
                     <div style={{ 
                       position: 'sticky', 
                       top: '15px', 
-                      zIndex: 10, 
+                      zIndex: 12, 
                       background: theme.bg,
                       padding: '3px 16px' 
                     }}>
