@@ -714,22 +714,23 @@ const processIncomingRecord = (item: any, index: number) => {
         safeImages = [
           'https://upload.wikimedia.org/wikipedia/commons/0/08/Gustave_Dor%C3%A9-La_chute_des_anges_rebelles.jpg',
           'https://upload.wikimedia.org/wikipedia/commons/3/33/The_lake_of_Tiberias,_looking_towards_Hermon._David_Roberts._1855.jpg',
-          'https://upload.wikimedia.org/wikipedia/commons/f/fa/Mount_Hermon_view_from_Golan.jpg'
+          'https://upload.wikimedia.org/wikipedia/commons/4/4f/Mount_Hermon_View.jpg'
         ];
       } else if (lowerName.includes('dudael')) {
         safeImages = [
           'https://upload.wikimedia.org/wikipedia/commons/9/97/William_Holman_Hunt_-_The_Scapegoat.jpg',
-          'https://upload.wikimedia.org/wikipedia/commons/e/ec/Judean_Desert_view.jpg'
+          'https://upload.wikimedia.org/wikipedia/commons/b/bb/JudeanDesert.jpg'
         ];
       } else if (lowerName.includes('sheol') || lowerName.includes('hinnom') || lowerName.includes('gehenna')) {
         safeImages = [
-          'https://upload.wikimedia.org/wikipedia/commons/e/e5/Thomas_Seddon_-_Jerusalem_and_the_Valley_of_Jehoshaphat_from_the_Hill_of_Evil_Counsel_-_Google_Art_Project.jpg',
-          'https://upload.wikimedia.org/wikipedia/commons/4/47/Hinnom_valley_Jerusalem.jpg'
+          'https://upload.wikimedia.org/wikipedia/commons/f/f2/Thomas_Seddon_-_Jerusalem_and_the_Valley_of_Jehoshaphat_from_the_Hill_of_Evil_Counsel_-_Google_Art_Project.jpg',
+          'https://upload.wikimedia.org/wikipedia/commons/d/d2/Suburbs_of_Jerusalem_seen_from_the_Valley_of_Gehenna_-_Cootwijck_Johannes_Van_-_1619.jpg',
+          'https://upload.wikimedia.org/wikipedia/commons/7/71/Jerusalem-Hinnom-Kidron-Old-City-323.jpg'
         ];
       } else if (lowerName.includes('bashan') || lowerName.includes('golan') || lowerName.includes('og')) {
         safeImages = [
-          'https://upload.wikimedia.org/wikipedia/commons/0/0c/The_Sea_of_Tiberias,_looking_towards_Bashan_(David_Roberts).jpg',
-          'https://upload.wikimedia.org/wikipedia/commons/2/2a/Golan_Heights_Gamla.jpg'
+          'https://upload.wikimedia.org/wikipedia/commons/3/36/The_Sae_of_Tiberias,_looking_towards_Bashan._David_Roberts._1855.jpg',
+          'https://upload.wikimedia.org/wikipedia/commons/6/64/Golan_Heights_-_Gamla_view.jpg'
         ];
       }
     }
