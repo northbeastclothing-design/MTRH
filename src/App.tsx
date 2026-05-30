@@ -3342,7 +3342,17 @@ function App() {
       </AnimatePresence>
 
       {/* MAPVIEW APP SCREEN CONTAINER */}
-      <div style={{ height: '100vh', display: 'flex', flexDirection: 'column', position: 'relative', overflow: 'hidden' }}>
+      <div 
+        style={{ 
+          height: '100vh', 
+          display: 'flex', 
+          flexDirection: 'column', 
+          position: 'relative', 
+          overflow: 'hidden',
+          background: isMapDarkMode ? '#000000' : '#ffffff',
+          transition: 'background-color 0.3s ease'
+        }}
+      >
         
         {/* CENTER COMPONENT: FULL SCREEN MAP BASE LAYER - MOVED TO ROOT FOR TRANSPARENT HEADER */}
         <motion.div 
@@ -3368,7 +3378,21 @@ function App() {
         </motion.div>
 
         {/* BRAND HEADER COMPONENT */}
-        <header style={{ height: '118px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 20px 0 0', flexShrink: 0, zIndex: 20, pointerEvents: 'none', position: 'relative' }}>
+        <header 
+          style={{ 
+            height: '118px', 
+            display: 'flex', 
+            alignItems: 'center', 
+            justifyContent: 'space-between', 
+            padding: '0 20px 0 0', 
+            flexShrink: 0, 
+            zIndex: 20, 
+            pointerEvents: 'none', 
+            position: 'relative',
+            background: currentPage === 'map' ? 'transparent' : (isMapDarkMode ? '#000000' : '#ffffff'),
+            transition: 'background-color 0.3s ease'
+          }}
+        >
           <img src="/mtrh-horiz-words.svg" alt="MTRH Logo" style={{ height: '78px', width: '232px', pointerEvents: 'auto', filter: theme.invert }} />
           
           {/* CENTER NAVIGATION PILL */}
