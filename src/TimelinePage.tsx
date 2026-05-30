@@ -1026,7 +1026,13 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
             ) && (() => {
               const lines: React.ReactNode[] = [];
               
-              const getConnectionAnchors = (idA: string, yA: number, idB: string, yB: number) => {
+              const getConnectionAnchors = (
+                idA: string, 
+                yA: number, 
+                idB: string, 
+                yB: number, 
+                isParentChild: boolean = false
+              ) => {
                 const isMainA = idA === hoveredItemId || (selectedItem && idA === selectedItem.id);
                 const isMainB = idB === hoveredItemId || (selectedItem && idB === selectedItem.id);
                 
@@ -1034,7 +1040,9 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
                   ? yA 
                   : (yA < yB ? yA + 12 : yA - 12);
                   
-                const anchorB = isMainB 
+                // For parent-child connections, idB (the child) is at the front left of its pill.
+                // We center it vertically on the track to align neatly next to the front of the pill.
+                const anchorB = (isMainB || isParentChild)
                   ? yB 
                   : (yA < yB ? yB - 12 : yB + 12);
                   
@@ -1056,7 +1064,7 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
                     if (spouse && spouseY) {
                       const connectYear = Math.max(item.start, spouse.start);
                       const connectX = getX(connectYear);
-                      const { anchorA: y1, anchorB: y2 } = getConnectionAnchors(item.id, itemY, spouse.id, spouseY);
+                      const { anchorA: y1, anchorB: y2 } = getConnectionAnchors(item.id, itemY, spouse.id, spouseY, false);
                       lines.push(
                         <g key={`spouse-${item.id}-${spouse.id}`}>
                           <line 
@@ -1081,7 +1089,7 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
                   const fatherY = trackOffsets.offsets[item.fatherId];
                   if (father && fatherY) {
                     const birthX = getX(item.start);
-                    const { anchorA: y1, anchorB: y2 } = getConnectionAnchors(father.id, fatherY, item.id, itemY);
+                    const { anchorA: y1, anchorB: y2 } = getConnectionAnchors(father.id, fatherY, item.id, itemY, true);
                     lines.push(
                       <g key={`father-${father.id}-${item.id}`}>
                         <line 
@@ -1106,7 +1114,7 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
                   const motherY = trackOffsets.offsets[item.motherId];
                   if (mother && motherY) {
                     const birthX = getX(item.start);
-                    const { anchorA: y1, anchorB: y2 } = getConnectionAnchors(mother.id, motherY, item.id, itemY);
+                    const { anchorA: y1, anchorB: y2 } = getConnectionAnchors(mother.id, motherY, item.id, itemY, true);
                     lines.push(
                       <g key={`mother-${mother.id}-${item.id}`}>
                         <line 
