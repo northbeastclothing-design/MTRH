@@ -106,7 +106,7 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
     'royal-bloodlines': true,
     'enochian-lore': true
   });
-  
+
   // Dropdown open states
   const [openDropdownEra, setOpenDropdownEra] = useState<string | null>(null);
 
@@ -362,6 +362,61 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
     return { list, majorInterval, mediumInterval };
   }, [viewStart, viewEnd, span]);
 
+  // Helper to find the closest event offscreen for a specific era
+  const getEraOffscreenNav = (eraId: string) => {
+    const items = eraItemsMap[eraId] || [];
+    if (items.length === 0) return null;
+    
+    // Check if any item is currently in the horizontal viewport
+    const hasInView = items.some(item => {
+      const start = item.start;
+      const end = item.type === 'lifespan' ? (item.end ?? item.start) : item.start;
+      return start <= viewEnd && end >= viewStart;
+    });
+    
+    if (hasInView) return null;
+    
+    // Find the closest item to the left and right
+    let closestLeft: TimelineItem | null = null;
+    let maxLeftEnd = -Infinity;
+    
+    let closestRight: TimelineItem | null = null;
+    let minRightStart = Infinity;
+    
+    items.forEach(item => {
+      const start = item.start;
+      const end = item.type === 'lifespan' ? (item.end ?? item.start) : item.start;
+      
+      if (end < viewStart) {
+        if (end > maxLeftEnd) {
+          maxLeftEnd = end;
+          closestLeft = item;
+        }
+      } else if (start > viewEnd) {
+        if (start < minRightStart) {
+          minRightStart = start;
+          closestRight = item;
+        }
+      }
+    });
+    
+    if (!closestLeft && !closestRight) return null;
+    
+    if (closestLeft && closestRight) {
+      const leftDist = viewStart - maxLeftEnd;
+      const rightDist = minRightStart - viewEnd;
+      if (leftDist < rightDist) {
+        return { direction: 'left' as const, item: closestLeft };
+      } else {
+        return { direction: 'right' as const, item: closestRight };
+      }
+    } else if (closestLeft) {
+      return { direction: 'left' as const, item: closestLeft };
+    } else {
+      return { direction: 'right' as const, item: closestRight };
+    }
+  };
+
   // Handle Item Selection (from either dropdown or clicking directly on the timeline tracks)
   const handleItemClick = (item: TimelineItem) => {
     // 1. Center the timeline viewport horizontally on the item, preserving zoom span or expanding if too narrow
@@ -425,6 +480,75 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
     addDescendants(hoveredItemId);
     return visited;
   }, [hoveredItemId]);
+
+  // Compute relationship distances from the hovered item using BFS
+  const highlightedDistances = useMemo(() => {
+    if (!hoveredItemId) return new Map<string, number>();
+    const distances = new Map<string, number>();
+    distances.set(hoveredItemId, 0);
+    
+    const queue: { id: string; dist: number }[] = [{ id: hoveredItemId, dist: 0 }];
+    const visited = new Set<string>([hoveredItemId]);
+    
+    while (queue.length > 0) {
+      const { id, dist } = queue.shift()!;
+      const item = TIMELINE_ITEMS.find(x => x.id === id);
+      if (!item) continue;
+      
+      const relatives: string[] = [];
+      if (item.fatherId) relatives.push(item.fatherId);
+      if (item.motherId) relatives.push(item.motherId);
+      if (item.spouseId) relatives.push(item.spouseId);
+      
+      const children = TIMELINE_ITEMS.filter(x => x.fatherId === id || x.motherId === id);
+      children.forEach(c => relatives.push(c.id));
+      
+      for (const relId of relatives) {
+        if (!visited.has(relId)) {
+          visited.add(relId);
+          distances.set(relId, dist + 1);
+          queue.push({ id: relId, dist: dist + 1 });
+        }
+      }
+    }
+    return distances;
+  }, [hoveredItemId]);
+
+  // Filter highlighted family members to only render solid/opaque styling for non-overlapping closest relatives
+  const solidHighlightedIds = useMemo(() => {
+    if (!hoveredItemId) return new Set<string>();
+    
+    const relatives = (Array.from(highlightedIds) as string[]).filter(id => id !== hoveredItemId);
+    const sortedRelatives = relatives
+      .map(id => ({ id, item: TIMELINE_ITEMS.find(x => x.id === id)!, dist: highlightedDistances.get(id) ?? 999 }))
+      .filter(x => x.item !== undefined)
+      .sort((a, b) => a.dist - b.dist);
+      
+    const selected = new Set<string>();
+    
+    for (const rel of sortedRelatives) {
+      let hasOverlap = false;
+      for (const selId of selected) {
+        const selItem = TIMELINE_ITEMS.find(x => x.id === selId)!;
+        
+        const aStart = rel.item.start;
+        const aEnd = rel.item.type === 'lifespan' ? (rel.item.end ?? rel.item.start) : rel.item.start;
+        const bStart = selItem.start;
+        const bEnd = selItem.type === 'lifespan' ? (selItem.end ?? selItem.start) : selItem.start;
+        
+        if (Math.max(aStart, bStart) <= Math.min(aEnd, bEnd)) {
+          hasOverlap = true;
+          break;
+        }
+      }
+      
+      if (!hasOverlap) {
+        selected.add(rel.id);
+      }
+    }
+    
+    return selected;
+  }, [hoveredItemId, highlightedIds, highlightedDistances]);
 
   const highlightColor = useMemo(() => {
     if (!hoveredItem) return '#90C2FF';
@@ -554,6 +678,7 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
               if (!activeEras[era.id]) return null;
               
               const tracks = allocatedTracksByLayer[era.layer] || [];
+              const offscreenNav = getEraOffscreenNav(era.id);
               
               return (
                 <div 
@@ -579,6 +704,88 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
                     <span style={{ fontSize: '10px', fontWeight: 'bold', letterSpacing: '1.5px', textTransform: 'uppercase', color: theme.text }}>
                       {era.name}
                     </span>
+
+                    <AnimatePresence>
+                      {offscreenNav && (
+                        <motion.button
+                          initial={{ opacity: 0, scale: 0.9 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          exit={{ opacity: 0, scale: 0.9 }}
+                          onMouseEnter={(e) => {
+                            e.currentTarget.style.backgroundColor = isMapDarkMode ? '#333333' : '#222222';
+                            e.currentTarget.style.borderColor = isMapDarkMode ? '#444444' : '#333333';
+                            e.currentTarget.style.transform = 'scale(1.05)';
+                          }}
+                          onMouseLeave={(e) => {
+                            e.currentTarget.style.backgroundColor = '#000000';
+                            e.currentTarget.style.borderColor = isMapDarkMode ? '#333333' : '#000000';
+                            e.currentTarget.style.transform = 'scale(1)';
+                          }}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleItemClick(offscreenNav.item);
+                          }}
+                          style={{
+                            marginLeft: 'auto',
+                            background: '#000000',
+                            color: '#ffffff',
+                            border: `1px solid ${isMapDarkMode ? '#333333' : '#000000'}`,
+                            borderRadius: '12px',
+                            padding: '4px 10px',
+                            fontSize: '8px',
+                            fontWeight: 'bold',
+                            fontFamily: '"Space Mono", monospace',
+                            cursor: 'pointer',
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '6px',
+                            boxShadow: '0 2px 6px rgba(0,0,0,0.15)',
+                            transition: 'all 0.2s ease',
+                            pointerEvents: 'auto',
+                            height: '24px',
+                            boxSizing: 'border-box'
+                          }}
+                        >
+                          {offscreenNav.direction === 'left' ? (
+                            <>
+                              <svg 
+                                xmlns="http://www.w3.org/2000/svg" 
+                                width="10" 
+                                height="10" 
+                                viewBox="0 0 24 24" 
+                                fill="none" 
+                                stroke="white" 
+                                strokeWidth="2.5" 
+                                strokeLinecap="round" 
+                                strokeLinejoin="round"
+                                style={{ flexShrink: 0 }}
+                              >
+                                <polyline points="15 18 9 12 15 6" />
+                              </svg>
+                              <span>SCROLL TO CONTENT</span>
+                            </>
+                          ) : (
+                            <>
+                              <span>SCROLL TO CONTENT</span>
+                              <svg 
+                                xmlns="http://www.w3.org/2000/svg" 
+                                width="10" 
+                                height="10" 
+                                viewBox="0 0 24 24" 
+                                fill="none" 
+                                stroke="white" 
+                                strokeWidth="2.5" 
+                                strokeLinecap="round" 
+                                strokeLinejoin="round"
+                                style={{ flexShrink: 0 }}
+                              >
+                                <polyline points="9 18 15 12 9 6" />
+                              </svg>
+                            </>
+                          )}
+                        </motion.button>
+                      )}
+                    </AnimatePresence>
                   </div>
                   
                   {/* Tracks */}
@@ -591,7 +798,7 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
                         borderBottom: `1px solid ${isMapDarkMode ? '#111' : '#f5f5f5'}`
                       }}
                     >
-                      {track.items.map(item => {
+                      {track.items.map((item, itemIdx) => {
                         const xStart = getX(item.start);
                         const xEnd = item.type === 'lifespan' ? getX(item.end ?? item.start) : xStart;
                         const width = Math.max(12, xEnd - xStart);
@@ -600,6 +807,17 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
                         
                         // Check genealogy highlights
                         const isHighlight = highlightedIds.has(item.id);
+                        const isSolidHighlight = solidHighlightedIds.has(item.id);
+
+                        // Calculate distance to the next item on the same track to prevent text overlap
+                        const nextItem = track.items[itemIdx + 1];
+                        const nextStart = nextItem ? getX(nextItem.start) : 100;
+                        const distToNext = nextStart - xStart;
+                        const pctOfParent = (distToNext / width) * 100;
+                        
+                        const mask = isHovered || isSelected 
+                          ? 'none' 
+                          : 'linear-gradient(to right, #000 calc(100% - 16px), transparent 100%)';
 
                         if (item.type === 'lifespan') {
                           return (
@@ -614,14 +832,13 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
                                 style={{
                                   position: 'absolute',
                                   left: `${xStart}%`,
-                                  width: `${width}%`,
+                                  width: isHovered || isSelected ? 'auto' : `${width}%`,
+                                  minWidth: '24px',
                                   height: '24px',
                                   top: '6px',
-                                  background: isSelected
-                                    ? `${era.color}e6`
-                                    : (isHovered 
-                                      ? `${era.color}99` 
-                                      : (isHighlight ? `${era.color}77` : `${era.color}44`)),
+                                  background: (isHovered || isSelected || isSolidHighlight)
+                                    ? era.color
+                                    : (isHighlight ? `${era.color}77` : `${era.color}44`),
                                   border: isSelected
                                     ? `2px solid ${isMapDarkMode ? '#ffffff' : '#000000'}`
                                     : 'none',
@@ -633,16 +850,24 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
                                   fontSize: '10px',
                                   fontWeight: 700,
                                   cursor: 'pointer',
-                                  color: isMapDarkMode ? '#ffffff' : '#000000',
-                                  mixBlendMode: isMapDarkMode ? 'screen' : 'multiply',
+                                  color: (isHovered || isSelected || isSolidHighlight) ? '#000000' : (isMapDarkMode ? '#ffffff' : '#000000'),
+                                  mixBlendMode: (isHovered || isSelected || isSolidHighlight) ? 'normal' : (isMapDarkMode ? 'screen' : 'multiply'),
                                   boxShadow: isSelected ? `0 0 15px ${era.color}` : 'none',
-                                  transition: 'background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease',
+                                  transition: 'background 0.15s ease, border-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease',
                                   pointerEvents: 'auto',
                                   overflow: 'hidden',
                                   zIndex: isSelected ? 300 : (isHovered ? 200 : (isHighlight ? 100 : 5))
                                 }}
                               >
-                                <span style={{ textOverflow: 'ellipsis', whiteSpace: 'nowrap', overflow: 'hidden', width: '100%' }}>
+                                <span style={{ 
+                                  display: 'block',
+                                  whiteSpace: 'nowrap', 
+                                  overflow: 'hidden', 
+                                  width: '100%',
+                                  maxWidth: isHovered || isSelected ? 'none' : `calc(${pctOfParent}% - 16px)`,
+                                  WebkitMaskImage: mask,
+                                  maskImage: mask
+                                }}>
                                   {item.name}
                                 </span>
                               </div>
@@ -652,7 +877,8 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
                                 <div style={{
                                   position: 'absolute',
                                   left: `${xStart}%`,
-                                  width: `${width}%`,
+                                  width: isHovered || isSelected ? 'auto' : `${width}%`,
+                                  minWidth: '24px',
                                   height: '24px',
                                   top: '6px',
                                   border: '3px solid #b6a6ff',
@@ -669,6 +895,7 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
                           // Singular Event Circle with Hover & Selected Pill Backgrounds
                           const isHovered = hoveredItemId === item.id;
                           const isSelected = selectedItem?.id === item.id;
+                          const isSolidHighlight = solidHighlightedIds.has(item.id);
                           
                           return (
                             <div
@@ -697,19 +924,19 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
                                   alignItems: 'center',
                                   height: '24px',
                                   borderRadius: '12px',
-                                  padding: (isHovered || isSelected) ? '0 12px' : '0',
+                                  padding: (isHovered || isSelected || isSolidHighlight) ? '0 12px' : '0',
                                   border: isSelected
                                     ? `2px solid ${isMapDarkMode ? '#ffffff' : '#000000'}`
                                     : 'none',
                                   boxShadow: isSelected ? `0 0 15px ${era.color}` : 'none',
                                   transition: 'all 0.15s ease',
                                   whiteSpace: 'nowrap',
-                                  transform: (isHovered || isSelected) ? 'translateX(-18px)' : 'translateX(-6px)',
+                                  transform: (isHovered || isSelected || isSolidHighlight) ? 'translateX(-18px)' : 'translateX(-6px)',
                                   position: 'relative'
                                 }}
                               >
                                 {/* Blended Background Sibling (isolated from text and dot) */}
-                                {(isHovered || isSelected) && (
+                                {(isHovered || isSelected || isSolidHighlight) && (
                                   <div
                                     style={{
                                       position: 'absolute',
@@ -718,10 +945,8 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
                                       right: 0,
                                       bottom: 0,
                                       borderRadius: '12px',
-                                      background: isSelected
-                                        ? `${era.color}e6`
-                                        : `${era.color}99`,
-                                      mixBlendMode: isMapDarkMode ? 'screen' : 'multiply',
+                                      background: era.color,
+                                      mixBlendMode: 'normal',
                                       zIndex: 0,
                                       pointerEvents: 'none'
                                     }}
@@ -734,11 +959,11 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
                                     width: '12px',
                                     height: '12px',
                                     borderRadius: '50%',
-                                    background: (isSelected || isHovered) ? '#000000' : era.color,
+                                    background: (isSelected || isHovered || isSolidHighlight) ? '#000000' : era.color,
                                     border: 'none',
                                     boxShadow: isSelected
                                       ? `0 0 10px 2px ${era.color}`
-                                      : (isHovered ? `0 0 8px ${era.color}` : 'none'),
+                                      : ((isHovered || isSolidHighlight) ? `0 0 8px ${era.color}` : 'none'),
                                     transform: isSelected ? 'scale(1.2)' : 'scale(1)',
                                     transition: 'all 0.15s ease',
                                     flexShrink: 0,
@@ -748,12 +973,12 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
                                 />
 
                                 {/* Label text */}
-                                {(span < 8000 || isHovered || isSelected) && (
+                                {(span < 8000 || isHovered || isSelected || isSolidHighlight) && (
                                   <span style={{ 
                                     marginLeft: '8px', 
                                     fontSize: '9px', 
                                     fontWeight: 700, 
-                                    color: (isHovered || isSelected)
+                                    color: (isHovered || isSelected || isSolidHighlight)
                                       ? '#000000'
                                       : (isMapDarkMode ? '#ffffff' : '#000000'),
                                     whiteSpace: 'nowrap',
