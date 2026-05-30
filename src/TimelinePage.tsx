@@ -638,6 +638,7 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUpOrLeave}
         onMouseLeave={handleMouseUpOrLeave}
+        className="custom-sidebar-scrollbar"
         style={{
           flex: 1,
           overflowX: 'hidden',
