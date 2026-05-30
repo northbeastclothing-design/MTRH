@@ -1026,6 +1026,12 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
             ) && (() => {
               const lines: React.ReactNode[] = [];
               
+              const getEdgeY = (yFrom: number, yTo: number) => {
+                const fromEdge = yFrom < yTo ? yFrom + 12 : yFrom - 12;
+                const toEdge = yFrom < yTo ? yTo - 12 : yTo + 12;
+                return { fromEdge, toEdge };
+              };
+
               highlightedIds.forEach(id => {
                 const item = TIMELINE_ITEMS.find(x => x.id === id);
                 if (!item) return;
@@ -1041,18 +1047,19 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
                     if (spouse && spouseY) {
                       const connectYear = Math.max(item.start, spouse.start);
                       const connectX = getX(connectYear);
+                      const { fromEdge: y1, toEdge: y2 } = getEdgeY(itemY, spouseY);
                       lines.push(
                         <g key={`spouse-${item.id}-${spouse.id}`}>
                           <line 
                             x1={`${connectX}%`} 
-                            y1={itemY} 
+                            y1={y1} 
                             x2={`${connectX}%`} 
-                            y2={spouseY} 
+                            y2={y2} 
                             stroke={highlightColor} 
                             strokeWidth="3" 
                           />
-                          <circle cx={`${connectX}%`} cy={itemY} r="5" fill={item.id === hoveredItemId || selectedItem?.id === item.id || solidHighlightedIds.has(item.id) ? '#000000' : highlightColor} stroke={theme.border} strokeWidth="1" />
-                          <circle cx={`${connectX}%`} cy={spouseY} r="5" fill={spouse.id === hoveredItemId || selectedItem?.id === spouse.id || solidHighlightedIds.has(spouse.id) ? '#000000' : highlightColor} stroke={theme.border} strokeWidth="1" />
+                          <circle cx={`${connectX}%`} cy={y1} r="5" fill={item.id === hoveredItemId || selectedItem?.id === item.id || solidHighlightedIds.has(item.id) ? '#000000' : highlightColor} stroke={theme.border} strokeWidth="1" />
+                          <circle cx={`${connectX}%`} cy={y2} r="5" fill={spouse.id === hoveredItemId || selectedItem?.id === spouse.id || solidHighlightedIds.has(spouse.id) ? '#000000' : highlightColor} stroke={theme.border} strokeWidth="1" />
                         </g>
                       );
                     }
@@ -1065,19 +1072,20 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
                   const fatherY = trackOffsets.offsets[item.fatherId];
                   if (father && fatherY) {
                     const birthX = getX(item.start);
+                    const { fromEdge: y1, toEdge: y2 } = getEdgeY(fatherY, itemY);
                     lines.push(
                       <g key={`father-${father.id}-${item.id}`}>
                         <line 
                           x1={`${birthX}%`} 
-                          y1={fatherY} 
+                          y1={y1} 
                           x2={`${birthX}%`} 
-                          y2={itemY} 
+                          y2={y2} 
                           stroke={highlightColor} 
                           strokeWidth="2" 
                           strokeDasharray="4,4"
                         />
-                        <circle cx={`${birthX}%`} cy={fatherY} r="4" fill={father.id === hoveredItemId || selectedItem?.id === father.id || solidHighlightedIds.has(father.id) ? '#000000' : highlightColor} stroke={theme.border} strokeWidth="1" />
-                        <circle cx={`${birthX}%`} cy={itemY} r="3" fill={item.id === hoveredItemId || selectedItem?.id === item.id || solidHighlightedIds.has(item.id) ? '#000000' : highlightColor} />
+                        <circle cx={`${birthX}%`} cy={y1} r="4" fill={father.id === hoveredItemId || selectedItem?.id === father.id || solidHighlightedIds.has(father.id) ? '#000000' : highlightColor} stroke={theme.border} strokeWidth="1" />
+                        <circle cx={`${birthX}%`} cy={y2} r="3" fill={item.id === hoveredItemId || selectedItem?.id === item.id || solidHighlightedIds.has(item.id) ? '#000000' : highlightColor} />
                       </g>
                     );
                   }
@@ -1089,19 +1097,20 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
                   const motherY = trackOffsets.offsets[item.motherId];
                   if (mother && motherY) {
                     const birthX = getX(item.start);
+                    const { fromEdge: y1, toEdge: y2 } = getEdgeY(motherY, itemY);
                     lines.push(
                       <g key={`mother-${mother.id}-${item.id}`}>
                         <line 
                           x1={`${birthX}%`} 
-                          y1={motherY} 
+                          y1={y1} 
                           x2={`${birthX}%`} 
-                          y2={itemY} 
+                          y2={y2} 
                           stroke={highlightColor} 
                           strokeWidth="2" 
                           strokeDasharray="4,4"
                         />
-                        <circle cx={`${birthX}%`} cy={motherY} r="4" fill={mother.id === hoveredItemId || selectedItem?.id === mother.id || solidHighlightedIds.has(mother.id) ? '#000000' : highlightColor} stroke={theme.border} strokeWidth="1" />
-                        <circle cx={`${birthX}%`} cy={itemY} r="3" fill={item.id === hoveredItemId || selectedItem?.id === item.id || solidHighlightedIds.has(item.id) ? '#000000' : highlightColor} />
+                        <circle cx={`${birthX}%`} cy={y1} r="4" fill={mother.id === hoveredItemId || selectedItem?.id === mother.id || solidHighlightedIds.has(mother.id) ? '#000000' : highlightColor} stroke={theme.border} strokeWidth="1" />
+                        <circle cx={`${birthX}%`} cy={y2} r="3" fill={item.id === hoveredItemId || selectedItem?.id === item.id || solidHighlightedIds.has(item.id) ? '#000000' : highlightColor} />
                       </g>
                     );
                   }
