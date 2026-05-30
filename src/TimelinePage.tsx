@@ -833,7 +833,7 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
                                   position: 'absolute',
                                   left: `${xStart}%`,
                                   width: isHovered || isSelected ? 'auto' : `${width}%`,
-                                  minWidth: '24px',
+                                  minWidth: isHovered || isSelected ? `${width}%` : '24px',
                                   height: '24px',
                                   top: '6px',
                                   background: (isHovered || isSelected || isSolidHighlight)
@@ -1051,8 +1051,8 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
                             stroke={highlightColor} 
                             strokeWidth="3" 
                           />
-                          <circle cx={`${connectX}%`} cy={itemY} r="5" fill={highlightColor} stroke={theme.border} strokeWidth="1" />
-                          <circle cx={`${connectX}%`} cy={spouseY} r="5" fill={highlightColor} stroke={theme.border} strokeWidth="1" />
+                          <circle cx={`${connectX}%`} cy={itemY} r="5" fill={item.id === hoveredItemId || selectedItem?.id === item.id || solidHighlightedIds.has(item.id) ? '#000000' : highlightColor} stroke={theme.border} strokeWidth="1" />
+                          <circle cx={`${connectX}%`} cy={spouseY} r="5" fill={spouse.id === hoveredItemId || selectedItem?.id === spouse.id || solidHighlightedIds.has(spouse.id) ? '#000000' : highlightColor} stroke={theme.border} strokeWidth="1" />
                         </g>
                       );
                     }
@@ -1076,8 +1076,8 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
                           strokeWidth="2" 
                           strokeDasharray="4,4"
                         />
-                        <circle cx={`${birthX}%`} cy={fatherY} r="4" fill={highlightColor} stroke={theme.border} strokeWidth="1" />
-                        <circle cx={`${birthX}%`} cy={itemY} r="3" fill={highlightColor} />
+                        <circle cx={`${birthX}%`} cy={fatherY} r="4" fill={father.id === hoveredItemId || selectedItem?.id === father.id || solidHighlightedIds.has(father.id) ? '#000000' : highlightColor} stroke={theme.border} strokeWidth="1" />
+                        <circle cx={`${birthX}%`} cy={itemY} r="3" fill={item.id === hoveredItemId || selectedItem?.id === item.id || solidHighlightedIds.has(item.id) ? '#000000' : highlightColor} />
                       </g>
                     );
                   }
@@ -1100,8 +1100,8 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
                           strokeWidth="2" 
                           strokeDasharray="4,4"
                         />
-                        <circle cx={`${birthX}%`} cy={motherY} r="4" fill={highlightColor} stroke={theme.border} strokeWidth="1" />
-                        <circle cx={`${birthX}%`} cy={itemY} r="3" fill={highlightColor} />
+                        <circle cx={`${birthX}%`} cy={motherY} r="4" fill={mother.id === hoveredItemId || selectedItem?.id === mother.id || solidHighlightedIds.has(mother.id) ? '#000000' : highlightColor} stroke={theme.border} strokeWidth="1" />
+                        <circle cx={`${birthX}%`} cy={itemY} r="3" fill={item.id === hoveredItemId || selectedItem?.id === item.id || solidHighlightedIds.has(item.id) ? '#000000' : highlightColor} />
                       </g>
                     );
                   }
