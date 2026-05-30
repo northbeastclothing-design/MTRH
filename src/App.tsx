@@ -3385,8 +3385,13 @@ function App() {
             borderRadius: '20px',
             background: theme.bgTransparent
           }}>
-            <button 
+            <motion.button 
               onClick={() => setCurrentPage('map')}
+              whileHover={{
+                background: currentPage === 'map'
+                  ? (isMapDarkMode ? '#cccccc' : '#333333')
+                  : (isMapDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.05)')
+              }}
               style={{
                 background: currentPage === 'map' ? theme.text : 'transparent',
                 color: currentPage === 'map' ? theme.bg : theme.text,
@@ -3402,10 +3407,15 @@ function App() {
               }}
             >
               Map
-            </button>
+            </motion.button>
             <div style={{ position: 'relative', display: 'inline-block' }}>
-              <button 
+              <motion.button 
                 onClick={() => setCurrentPage('timeline')}
+                whileHover={{
+                  background: currentPage === 'timeline'
+                    ? (isMapDarkMode ? '#cccccc' : '#333333')
+                    : (isMapDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.05)')
+                }}
                 style={{
                   background: currentPage === 'timeline' ? theme.text : 'transparent',
                   color: currentPage === 'timeline' ? theme.bg : theme.text,
@@ -3421,7 +3431,7 @@ function App() {
                 }}
               >
                 Timeline
-              </button>
+              </motion.button>
               {onboardingStep === 4 && (
                 <div style={{
                   position: 'absolute',
@@ -3483,11 +3493,15 @@ function App() {
             {currentPage === 'map' && (
               <div style={{ display: 'flex', gap: '8px', marginTop: '2px' }}>
                 <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
-                  <button
+                  <motion.button
                     onClick={() => {
                       setSubmissionSuccess(null);
                       setSubmissionError(null);
                       setIsSubmitOpen(true);
+                    }}
+                    whileHover={{
+                      background: isMapDarkMode ? '#cccccc' : '#333333',
+                      scale: 1.02
                     }}
                     style={{
                       background: isMapDarkMode ? '#ffffff' : '#000000',
@@ -3505,12 +3519,12 @@ function App() {
                       alignItems: 'center',
                       gap: '6px',
                       boxSizing: 'border-box',
-                      transition: 'opacity 0.2s ease'
+                      transition: 'all 0.2s ease'
                     }}
                   >
                     <Plus size={10} strokeWidth={3} />
                     <span>Submit Intel</span>
-                  </button>
+                  </motion.button>
                   {onboardingStep === 6 && (
                     <div style={{
                       position: 'absolute',
