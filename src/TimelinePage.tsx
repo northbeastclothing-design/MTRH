@@ -1031,18 +1031,23 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
                 yA: number, 
                 idB: string, 
                 yB: number, 
-                isParentChild: boolean = false
+                connectYear: number
               ) => {
+                const itemA = TIMELINE_ITEMS.find(x => x.id === idA)!;
+                const itemB = TIMELINE_ITEMS.find(x => x.id === idB)!;
+                
                 const isMainA = idA === hoveredItemId || (selectedItem && idA === selectedItem.id);
                 const isMainB = idB === hoveredItemId || (selectedItem && idB === selectedItem.id);
                 
-                const anchorA = isMainA 
+                // If the connection is at the left-most edge (start year) of the pill, center it vertically on the track.
+                const isAtStartA = connectYear === itemA.start;
+                const isAtStartB = connectYear === itemB.start;
+                
+                const anchorA = (isMainA || isAtStartA) 
                   ? yA 
                   : (yA < yB ? yA + 12 : yA - 12);
                   
-                // For parent-child connections, idB (the child) is at the front left of its pill.
-                // We center it vertically on the track to align neatly next to the front of the pill.
-                const anchorB = (isMainB || isParentChild)
+                const anchorB = (isMainB || isAtStartB) 
                   ? yB 
                   : (yA < yB ? yB - 12 : yB + 12);
                   
@@ -1064,7 +1069,7 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
                     if (spouse && spouseY) {
                       const connectYear = Math.max(item.start, spouse.start);
                       const connectX = getX(connectYear);
-                      const { anchorA: y1, anchorB: y2 } = getConnectionAnchors(item.id, itemY, spouse.id, spouseY, false);
+                      const { anchorA: y1, anchorB: y2 } = getConnectionAnchors(item.id, itemY, spouse.id, spouseY, connectYear);
                       lines.push(
                         <g key={`spouse-${item.id}-${spouse.id}`}>
                           <line 
@@ -1089,7 +1094,7 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
                   const fatherY = trackOffsets.offsets[item.fatherId];
                   if (father && fatherY) {
                     const birthX = getX(item.start);
-                    const { anchorA: y1, anchorB: y2 } = getConnectionAnchors(father.id, fatherY, item.id, itemY, true);
+                    const { anchorA: y1, anchorB: y2 } = getConnectionAnchors(father.id, fatherY, item.id, itemY, item.start);
                     lines.push(
                       <g key={`father-${father.id}-${item.id}`}>
                         <line 
@@ -1114,7 +1119,7 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
                   const motherY = trackOffsets.offsets[item.motherId];
                   if (mother && motherY) {
                     const birthX = getX(item.start);
-                    const { anchorA: y1, anchorB: y2 } = getConnectionAnchors(mother.id, motherY, item.id, itemY, true);
+                    const { anchorA: y1, anchorB: y2 } = getConnectionAnchors(mother.id, motherY, item.id, itemY, item.start);
                     lines.push(
                       <g key={`mother-${mother.id}-${item.id}`}>
                         <line 
