@@ -3533,17 +3533,28 @@ function App() {
         </header>
 
         {/* CORE WORKSPACE FRAMING GRID — NOW FULL BLEED OVERLAY ENVIRONMENT */}
-        <AnimatePresence mode="wait">
-          {currentPage === 'map' ? (
-            <motion.div
-              key="map-panel"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              style={{ flex: 1, position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: 'column', pointerEvents: 'none', width: '100%', height: '100%' }}
-            >
-              <div style={{ flex: 1, position: 'relative', overflow: 'hidden', pointerEvents: 'none', width: '100%', height: '100%' }}>
+        <div style={{ flex: 1, position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: 'column', width: '100%', height: '100%' }}>
+          {/* Map Overlay Panel */}
+          <div
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              display: 'flex',
+              flexDirection: 'column',
+              overflow: 'hidden',
+              width: '100%',
+              height: '100%',
+              pointerEvents: 'none',
+              visibility: currentPage === 'map' ? 'visible' : 'hidden',
+              opacity: currentPage === 'map' ? 1 : 0,
+              transition: 'opacity 0.3s ease, visibility 0.3s ease',
+              zIndex: currentPage === 'map' ? 10 : 0
+            }}
+          >
+            <div style={{ flex: 1, position: 'relative', overflow: 'hidden', pointerEvents: 'none', width: '100%', height: '100%' }}>
           {onboardingStep === 2 && (
             <div style={{
               position: 'absolute',
@@ -5162,20 +5173,31 @@ function App() {
           </motion.div>
 
         </div>
-        </motion.div>
-        ) : (
-          <motion.div
-            key="timeline-panel"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}
-          >
-            <TimelinePage theme={theme} isMapDarkMode={isMapDarkMode} />
-          </motion.div>
-        )}
-        </AnimatePresence>
+        </div>
+
+        {/* Timeline Panel */}
+        <div
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            display: 'flex',
+            flexDirection: 'column',
+            overflow: 'hidden',
+            width: '100%',
+            height: '100%',
+            pointerEvents: currentPage === 'timeline' ? 'auto' : 'none',
+            visibility: currentPage === 'timeline' ? 'visible' : 'hidden',
+            opacity: currentPage === 'timeline' ? 1 : 0,
+            transition: 'opacity 0.3s ease, visibility 0.3s ease',
+            zIndex: currentPage === 'timeline' ? 12 : 0
+          }}
+        >
+          <TimelinePage theme={theme} isMapDarkMode={isMapDarkMode} />
+        </div>
+      </div>
 
       </div>      {/* FULL SCREEN LIGHTBOX MODAL ARCHITECTURE */}
       <AnimatePresence>
