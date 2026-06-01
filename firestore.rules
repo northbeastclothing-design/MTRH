@@ -20,13 +20,13 @@ service cloud.firestore {
 
     // Input submission validator
     function isValidSubmission(data) {
-      return data.keys().hasAll(['name', 'category', 'description', 'coordinates', 'status', 'createdAt'])
+      return data.keys().hasAll(['name', 'category', 'description', 'status', 'createdAt'])
              && data.name is string && data.name.size() > 0 && data.name.size() <= 200
              && data.category is string && data.category.size() > 0 && data.category.size() <= 100
              && data.description is string && data.description.size() > 0 && data.description.size() <= 10000
-             && data.coordinates is list && data.coordinates.size() == 2
              && (data.status == 'pending' || data.status == 'approved' || data.status == 'rejected')
              && data.createdAt == request.time
+             && (!('coordinates' in data) || data.coordinates == null || (data.coordinates is list && data.coordinates.size() == 2))
              && (!('date' in data) || (data.date is string && data.date.size() <= 50))
              && (!('images' in data) || (data.images is list && data.images.size() <= 10))
              && (!('source' in data) || (data.source is string && data.source.size() <= 200));

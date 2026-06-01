@@ -271,7 +271,7 @@ async function startServer() {
   app.post("/api/submissions/create", async (req, res) => {
     try {
       const { name, category, description, coordinates, images, date, source } = req.body;
-      if (!name || !category || !description || !coordinates) {
+      if (!name || !category || !description) {
         return res.status(400).json({ error: "Missing required fields." });
       }
       if (!dbAdmin) {
@@ -283,11 +283,14 @@ async function startServer() {
         name: name.trim(),
         category: category,
         description: description.trim(),
-        coordinates: coordinates,
         images: images || [],
         status: 'pending',
         createdAt: admin.firestore.FieldValue.serverTimestamp()
       };
+
+      if (coordinates !== undefined && coordinates !== null) {
+        submissionData.coordinates = coordinates;
+      }
 
       if (date && typeof date === 'string' && date.trim()) {
         submissionData.date = date.trim();
@@ -356,7 +359,7 @@ async function startServer() {
 
       const response = await fetch(url, {
         headers: {
-          'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+          'User-Agent': 'MTRH-Interactive-Map/1.0 (contact: info@mtrhmap.org; development)',
           'Accept': 'image/avif,image/webp,image/apng,image/svg+xml,image/*,application/pdf,video/*,*/*;q=0.8',
           'Accept-Language': 'en-US,en;q=0.9',
           'Cache-Control': 'no-cache',

@@ -2209,3 +2209,84 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'enoch_ascension': { lng: 35.794, lat: 33.318, locationName: 'Mount Hermon', category: 'Enochian Sites' },
   'nephilim_era': { lng: 35.730, lat: 32.900, locationName: 'Og\'s Kingdom (Golan)', category: 'Nephilim' }
 };
+
+export interface Waypoint {
+  lng: number;
+  lat: number;
+  locationName: string;
+  description: string;
+  year?: number;       // Approximate biblical year (negative for BC, positive for AD)
+  displayDate?: string; // Human readable date label
+}
+
+export interface TravelPath {
+  figureId: string;
+  name: string;
+  waypoints: Waypoint[];
+}
+
+export const BIBLICAL_TRAVEL_PATHS: Record<string, TravelPath> = {
+  'abraham': {
+    figureId: 'abraham',
+    name: 'Abraham',
+    waypoints: [
+      { lng: 46.104, lat: 30.963, locationName: 'Ur of the Chaldees', year: -2166, displayDate: 'c. 2166 BC', description: 'Saul / Abram is born in Ur, an ancient Sumerian city-state.' },
+      { lng: 39.029, lat: 36.864, locationName: 'Haran', year: -2091, displayDate: 'c. 2091 BC', description: 'Settles in Haran with his father Terah; receives the Call of God to travel to Canaan.' },
+      { lng: 35.277, lat: 32.213, locationName: 'Shechem', year: -2090, displayDate: 'c. 2090 BC', description: 'Enters Canaan, builds his first altar to God under the oak of Moreh.' },
+      { lng: 35.222, lat: 31.936, locationName: 'Bethel', year: -2089, displayDate: 'c. 2089 BC', description: 'Builds another altar and pitches his tent between Bethel and Ai.' },
+      { lng: 31.235, lat: 30.044, locationName: 'Egypt', year: -2088, displayDate: 'c. 2088 BC', description: 'Flees to Egypt due to a severe famine in the land of Canaan.' },
+      { lng: 35.111, lat: 31.524, locationName: 'Hebron (Tomb of the Patriarchs)', year: -1991, displayDate: 'c. 1991 BC', description: 'Settles in Hebron, builds an altar at the Oaks of Mamre, buys the cave of Machpelah for burial.' }
+    ]
+  },
+  'jacob': {
+    figureId: 'jacob',
+    name: 'Jacob',
+    waypoints: [
+      { lng: 34.792, lat: 31.244, locationName: 'Beersheba', year: -2006, displayDate: 'c. 2006 BC', description: 'Born in Beersheba, the son of Isaac and Rebekah.' },
+      { lng: 35.222, lat: 31.936, locationName: 'Bethel (Jacob\'s Ladder)', year: -1929, displayDate: 'c. 1929 BC', description: 'Flees his brother Esau. Dreams of a ladder reaching to heaven and names the place Bethel.' },
+      { lng: 39.029, lat: 36.864, locationName: 'Haran', year: -1929, displayDate: 'c. 1929 BC', description: 'Arrives in Paddan-Aram (Haran), works 14 years for Laban to marry Rachel and Leah, and amasses wealth.' },
+      { lng: 35.717, lat: 32.183, locationName: 'Penuel', year: -1909, displayDate: 'c. 1909 BC', description: 'Wrestles with an angel overnight, has his name changed to Israel, and reconciles with Esau.' },
+      { lng: 35.277, lat: 32.213, locationName: 'Shechem', year: -1908, displayDate: 'c. 1908 BC', description: 'Settles temporarily, buys a plot of land, and builds an altar.' },
+      { lng: 35.222, lat: 31.936, locationName: 'Bethel', year: -1906, displayDate: 'c. 1906 BC', description: 'Returns to Bethel on God\'s command, purges foreign gods from his household.' },
+      { lng: 35.111, lat: 31.524, locationName: 'Hebron', year: -1886, displayDate: 'c. 1886 BC', description: 'Reunites with his father Isaac, who dies and is buried here.' },
+      { lng: 31.820, lat: 30.610, locationName: 'Goshen (Egypt)', year: -1876, displayDate: 'c. 1876 BC', description: 'Moves his entire family to Egypt during a severe famine, settling in the fertile land of Goshen.' },
+      { lng: 35.111, lat: 31.524, locationName: 'Hebron (Tomb of the Patriarchs)', year: -1859, displayDate: 'c. 1859 BC', description: 'Dies in Egypt; his sons carry his body back to Canaan to be buried in the Cave of Machpelah.' }
+    ]
+  },
+  'moses': {
+    figureId: 'moses',
+    name: 'Moses',
+    waypoints: [
+      { lng: 31.820, lat: 30.610, locationName: 'Goshen (Egypt)', year: -1526, displayDate: 'c. 1526 BC', description: 'Born in Egypt, hidden in a bulrush basket, and raised in Pharaoh\'s palace.' },
+      { lng: 35.000, lat: 28.500, locationName: 'Midian', year: -1486, displayDate: 'c. 1486 BC', description: 'Flees Egypt after slaying an Egyptian taskmaster. Lives as a shepherd for 40 years.' },
+      { lng: 33.975, lat: 28.539, locationName: 'Mount Sinai (Horeb)', year: -1446, displayDate: 'c. 1446 BC', description: 'Encounters the burning bush, receives God\'s command to free the Israelites, and later returns to receive the Ten Commandments.' },
+      { lng: 33.860, lat: 28.980, locationName: 'Red Sea & Wilderness of Paran', year: -1446, displayDate: 'c. 1446 BC', description: 'Leads the Israelites across the Red Sea, wandering the wilderness for 40 years due to disobedience.' },
+      { lng: 35.725, lat: 31.767, locationName: 'Mount Nebo', year: -1406, displayDate: 'c. 1406 BC', description: 'Views the Promised Land from the summit, dies at the age of 120, and is buried by God.' }
+    ]
+  },
+  'jesus': {
+    figureId: 'jesus',
+    name: 'Jesus',
+    waypoints: [
+      { lng: 35.201, lat: 31.704, locationName: 'Bethlehem', year: 2, displayDate: 'c. 2 BC', description: 'Born in a manger; visited by shepherds and the Magi.' },
+      { lng: 31.235, lat: 30.044, locationName: 'Egypt', year: 3, displayDate: 'c. 3 BC', description: 'Taken by Joseph and Mary to escape King Herod\'s Massacre of the Innocents.' },
+      { lng: 35.300, lat: 32.702, locationName: 'Nazareth', year: 4, displayDate: 'c. 4 BC', description: 'Grows up and lives in Nazareth as a carpenter\'s son until His ministry begins.' },
+      { lng: 35.557, lat: 31.897, locationName: 'Jordan River', year: 27, displayDate: 'c. 27 AD', description: 'Baptized by John the Baptist, marked by the Holy Spirit descending like a dove.' },
+      { lng: 35.530, lat: 32.810, locationName: 'Sea of Galilee (Capernaum)', year: 28, displayDate: 'c. 28-32 AD', description: 'Establishes His ministry headquarters in Capernaum, calls His disciples, performs miracles, and preaches.' },
+      { lng: 35.229, lat: 31.778, locationName: 'Jerusalem (Golgotha)', year: 33, displayDate: '33 AD', description: 'Enters in triumph (Palm Sunday), is crucified outside the city walls, and rises from the dead on the third day.' }
+    ]
+  },
+  'paul_apostle': {
+    figureId: 'paul_apostle',
+    name: 'Paul the Apostle',
+    waypoints: [
+      { lng: 34.897, lat: 36.917, locationName: 'Tarsus', year: 5, displayDate: 'c. 5 AD', description: 'Born Saul of Tarsus, a Roman citizen trained in strict Pharisaic law.' },
+      { lng: 35.235, lat: 31.778, locationName: 'Jerusalem', year: 25, displayDate: 'c. 25 AD', description: 'Studies under Gamaliel, witnesses and approves of the stoning of Stephen.' },
+      { lng: 36.291, lat: 33.513, locationName: 'Damascus Road', year: 34, displayDate: 'c. 34 AD', description: 'Blinded by a vision of Jesus, converts to Christianity, and begins preaching.' },
+      { lng: 36.150, lat: 36.200, locationName: 'Antioch', year: 44, displayDate: 'c. 44 AD', description: 'Spends a year teaching with Barnabas; believers are first called "Christians" here.' },
+      { lng: 33.366, lat: 35.166, locationName: 'First Missionary Journey', year: 46, displayDate: 'c. 46-48 AD', description: 'Sails to Cyprus and travels through Asia Minor (Galatia) establishing churches.' },
+      { lng: 23.727, lat: 37.983, locationName: 'Second & Third Journeys', year: 50, displayDate: 'c. 50-58 AD', description: 'Travels to Europe: Philippi, Thessalonica, Athens (Mars Hill), Corinth, and Ephesus.' },
+      { lng: 12.496, lat: 41.902, locationName: 'Rome', year: 67, displayDate: '67 AD', description: 'Appeals to Caesar, arrives in chains, is imprisoned, writes many epistles, and is martyred.' }
+    ]
+  }
+};

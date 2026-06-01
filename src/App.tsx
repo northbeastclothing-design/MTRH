@@ -10,7 +10,8 @@ import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChang
 import firebaseConfig from '../firebase-applet-config.json';
 
 import TimelinePage from './TimelinePage';
-import { TIMELINE_ITEMS, TIMELINE_LOCATIONS } from './timelineData';
+import { TIMELINE_ITEMS, TIMELINE_LOCATIONS, BIBLICAL_TRAVEL_PATHS, Waypoint, TravelPath } from './timelineData';
+import { ARCHAEOLOGICAL_FINDS_DATA } from './archaeologyData';
 
 // Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig);
@@ -101,7 +102,9 @@ const CATEGORY_DESCRIPTIONS: Record<string, string> = {
   'Ghosts & Hauntings': 'Areas reported to have high levels of paranormal activity and spectral apparitions.',
   'National Parks & Reserves': 'The intersection of vast wilderness and unexplained disappearances.',
   'Crop Circles': 'Intricate patterns appearing in fields, often appearing overnight with no clear earthly explanation.',
-  'Meteor Impact Craters': 'Confirmed impact structures on Earth created by ancient meteorite collisions, marking catastrophic cosmic encounters throughout geological history.'
+  'Meteor Impact Craters': 'Confirmed impact structures on Earth created by ancient meteorite collisions, marking catastrophic cosmic encounters throughout geological history.',
+  'Archaeological Finds': 'Remarkable historical excavations, lost citadels, and ancient artifacts rewriting human origin timelines.',
+  'Biblical Finds': 'Archaeological discoveries, inscriptions, and sacred sanctuaries validating accounts from biblical history.'
 };
 
 const isVideoUrl = (url: string) => {
@@ -550,9 +553,17 @@ const cleanAndProxyImageUrl = (url: any) => {
   // Bypass proxy for domains that block server-side IPs (like Wikipedia/Wikimedia 403s/429s on Cloud Run)
   // or that already fully support highly reliable direct client-side loading (like Unsplash/Wonders of the world).
   const lowerUrl = trimmedUrl.toLowerCase();
+  
+  const isLocal = typeof window !== 'undefined' && (
+    window.location.hostname === 'localhost' || 
+    window.location.hostname === '127.0.0.1' ||
+    window.location.hostname.startsWith('192.168.')
+  );
+
+  const isWiki = lowerUrl.includes('wikimedia.org') || lowerUrl.includes('wikipedia.org');
+  
   if (
-    lowerUrl.includes('wikimedia.org') || 
-    lowerUrl.includes('wikipedia.org') || 
+    isWiki ||
     lowerUrl.includes('unsplash.com') ||
     lowerUrl.includes('cloudfront.net') ||
     lowerUrl.includes('wonders-of-the-world.net') ||
@@ -651,6 +662,8 @@ const processIncomingRecord = (item: any, index: number) => {
   else if (lowerCat.includes('national park') || lowerCat.includes('reserve')) normalizedCategory = 'National Parks & Reserves';
   else if (lowerCat.includes('blurred')) normalizedCategory = 'Blurred on Google Maps';
   else if (lowerCat.includes('meteor') || lowerCat.includes('crater') || lowerCat.includes('impact structure')) normalizedCategory = 'Meteor Impact Craters';
+  else if (lowerCat.includes('archaeological') || lowerCat.includes('archaeology')) normalizedCategory = 'Archaeological Finds';
+  else if (lowerCat.includes('biblical find') || lowerCat === 'biblical finds') normalizedCategory = 'Biblical Finds';
 
   // Smart imagery injection for map points lacking media (megaliths, underworld entrances, national parks, mounds)
   // ONLY use high-quality location-specific historical/documentary assets for actual landmarks.
@@ -779,6 +792,8 @@ const LAYER_CONFIG: Record<string, { color: string; icon: string }> = {
   'Blurred on Google Maps': { color: '#BDC4FF', icon: '/icons/icon-blurred-on-google.svg' },
   'Meteor Impact Craters': { color: '#FF9F63', icon: '/icons/icon-meteors.svg' },
   'Ley Lines': { color: '#FF5E97', icon: '/icons/icon-ley-lines.svg' },
+  'Archaeological Finds': { color: '#74F8F3', icon: '/icons/icon-archaeological-finds.svg' },
+  'Biblical Finds': { color: '#D49459', icon: '/icons/icon-biblical-finds.svg' },
   'Default': { color: '#b6a6ff', icon: '/icons/icon-map-pin.svg' }
 };
 
@@ -848,6 +863,28 @@ function App() {
   const mapRef = useRef<mapboxgl.Map | null>(null);
   const lineLayersRef = useRef<string[]>([]);
   const selectedParkGeomRef = useRef<Record<string, { precise: boolean; score: number; features: any[] }>>({});
+  const activeTravelPopupRef = useRef<mapboxgl.Popup | null>(null);
+
+  const fadeOutPopup = (popup: mapboxgl.Popup | null) => {
+    if (!popup) return;
+    const el = popup.getElement();
+    if (el) {
+      el.style.transition = 'opacity 0.15s ease, transform 0.15s ease-out';
+      el.style.opacity = '0';
+      const currentTransform = el.style.transform || '';
+      el.style.transform = `${currentTransform} scale(0.92) translateY(6px)`;
+      setTimeout(() => {
+        try {
+          popup.remove();
+        } catch (err) {
+          // already removed or unmounted
+        }
+      }, 150);
+    } else {
+      popup.remove();
+    }
+  };
+
   const [searchQuery, setSearchQuery] = useState('');
   const [geocodeResults, setGeocodeResults] = useState<any[]>([]);
   const [isSearchingGeocode, setIsSearchingGeocode] = useState(false);
@@ -860,6 +897,7 @@ function App() {
   const [showAboutModal, setShowAboutModal] = useState(true);
   const [currentPage, setCurrentPage] = useState<'map' | 'timeline'>('map');
   const [selectedTimelineItem, setSelectedTimelineItem] = useState<any | null>(null);
+  const [activeWaypointIndex, setActiveWaypointIndex] = useState<number | null>(null);
 
   // Combine original static / scraped data and approved user submissions
   const combinedPointsAndLinesData = useMemo(() => {
@@ -867,7 +905,16 @@ function App() {
     const uniqueMap = new Map();
     combined.forEach((item: any) => {
       if (item && item.id) {
-        uniqueMap.set(String(item.id), item);
+        // Filter out point features without valid coordinates on the map view
+        const isLineString = item.type === 'LineString';
+        const hasValidCoords = Array.isArray(item.coordinates) && 
+                              item.coordinates.length === 2 && 
+                              isValidLngLat(item.coordinates[0], item.coordinates[1]);
+        const hasLineCoords = isLineString && Array.isArray(item.coordinates) && item.coordinates.length > 0;
+
+        if (hasValidCoords || hasLineCoords) {
+          uniqueMap.set(String(item.id), item);
+        }
       }
     });
     return Array.from(uniqueMap.values()) as any[];
@@ -967,6 +1014,64 @@ function App() {
   const timelineRef = useRef<HTMLDivElement>(null);
   
   const [selectedFeature, setSelectedFeature] = useState<any>(null);
+
+  // Dynamically compute active figures and their locations during a selected Biblical Event
+  const activeFigures = useMemo(() => {
+    if (!selectedFeature) return [];
+    const selectedTimelineItem = TIMELINE_ITEMS.find(t => String(t.id) === String(selectedFeature.id));
+    if (!selectedTimelineItem || selectedTimelineItem.type !== 'event') return [];
+
+    const eventYear = selectedTimelineItem.start;
+    return TIMELINE_ITEMS.filter(item => {
+      return (
+        item.type === 'lifespan' &&
+        item.layer === 'biblical-patriarchs' &&
+        item.start <= eventYear &&
+        (item.end !== undefined && item.end >= eventYear)
+      );
+    }).map(fig => {
+      // Calculate age at the time of the event
+      const age = eventYear - fig.start;
+      // Find their estimated location during this event
+      let locationName = 'Unknown';
+      let coords = null;
+      
+      const travelPath = BIBLICAL_TRAVEL_PATHS[fig.id];
+      if (travelPath && travelPath.waypoints.length > 0) {
+        // Find the last waypoint before or during the event year
+        let bestWp = null;
+        for (const wp of travelPath.waypoints) {
+          if (wp.year !== undefined && wp.year <= eventYear) {
+            bestWp = wp;
+          }
+        }
+        if (bestWp) {
+          locationName = bestWp.locationName;
+          coords = [bestWp.lng, bestWp.lat];
+        } else {
+          // Fallback to first waypoint
+          locationName = travelPath.waypoints[0].locationName;
+          coords = [travelPath.waypoints[0].lng, travelPath.waypoints[0].lat];
+        }
+      } else {
+        // Fallback to timeline data location
+        const loc = TIMELINE_LOCATIONS[fig.id];
+        if (loc) {
+          locationName = loc.locationName;
+          coords = [loc.lng, loc.lat];
+        }
+      }
+      return {
+        id: fig.id,
+        name: fig.name,
+        age,
+        locationName,
+        coords,
+        timelineItem: fig
+      };
+    });
+  }, [selectedFeature, layerColors]);
+
   const [brokenImages, setBrokenImages] = useState<Record<string, boolean>>({});
   const selectedMarkerRef = useRef<mapboxgl.Marker | null>(null);
   const [isStyleLoaded, setIsStyleLoaded] = useState(false);
@@ -1080,10 +1185,18 @@ function App() {
     setIsSavingEdit(true);
     setModeratorError(null);
     try {
-      const lngNum = parseFloat(editLongitude);
-      const latNum = parseFloat(editLatitude);
-      if (isNaN(lngNum) || isNaN(latNum)) {
-        throw new Error("Invalid Longitude/Latitude coordinates format.");
+      const hasCoords = editLongitude.trim() !== '' || editLatitude.trim() !== '';
+      let coordinatesValue: any = null;
+      if (hasCoords) {
+        const lngNum = parseFloat(editLongitude);
+        const latNum = parseFloat(editLatitude);
+        if (isNaN(lngNum) || isNaN(latNum)) {
+          throw new Error("Invalid Longitude/Latitude coordinates format.");
+        }
+        if (!isValidLngLat(lngNum, latNum)) {
+          throw new Error("Coordinates must be within standard bounds (Latitude: -90 to 90, Longitude: -180 to 180).");
+        }
+        coordinatesValue = [lngNum, latNum];
       }
 
       const updatedFields = {
@@ -1092,7 +1205,7 @@ function App() {
         description: editDescription,
         date: editDate,
         source: editSource,
-        coordinates: [lngNum, latNum],
+        coordinates: coordinatesValue,
         images: editMediaList
       };
 
@@ -2171,7 +2284,7 @@ function App() {
         setIsDataCompiled(false);
         const safeLocalData = getSafeData(rawPointsAndLinesData);
         const safeUfoData = getSafeData(realUfoData);
-        const combinedRawData = [...safeLocalData, ...safeUfoData];
+        const combinedRawData = [...safeLocalData, ...safeUfoData, ...ARCHAEOLOGICAL_FINDS_DATA];
         
         const initialBuffer = combinedRawData
           .map((item, idx) => processIncomingRecord(item, idx))
@@ -2353,6 +2466,19 @@ function App() {
 
       if ((e as any)._clickHandled) return;
 
+      // 0. Prevent clearing selection when clicking on any travel waypoint details
+      const travelFeatures = map.queryRenderedFeatures(e.point, {
+        layers: [
+          'selected-travel-waypoints-circles',
+          'selected-travel-waypoints-labels',
+          'selected-travel-waypoints-names'
+        ].filter(id => map.getLayer(id))
+      });
+      if (travelFeatures && travelFeatures.length > 0) {
+        (e as any)._clickHandled = true;
+        return;
+      }
+
       // 1. Check if we clicked on a master pin
       const pinFeatures = map.queryRenderedFeatures(e.point, {
         layers: ['master-unclustered-pins'].filter(id => map.getLayer(id))
@@ -2423,6 +2549,7 @@ function App() {
       // 4. Otherwise, empty space click clears selection
       setSelectedFeature(null);
       setIsRightCollapsed(true);
+      setActiveWaypointIndex(null);
     });
 
     map.on('style.load', () => {
@@ -2462,7 +2589,7 @@ function App() {
         'cave-drawings', 'crop-circles', 'cryptid-sightings', 'Megaliths', 'dumbs',
         'entrances-to-underworld', 'ghosts', 'giants', 'megaliths',
         'national-parks-reserves', 'ufo-sightings', 'map-pin', 'petroglyphs',
-        'meteors', 'ley-lines'
+        'meteors', 'ley-lines', 'archaeological-finds', 'biblical-finds'
       ];
       
       let loadedCount = 0;
@@ -2515,7 +2642,7 @@ function App() {
 
   useEffect(() => {
     const map = mapRef.current;
-    if (!map || !isStyleLoaded || !map.isStyleLoaded()) return;
+    if (!map || !isStyleLoaded) return;
 
     // Dynamically style standard Mapbox layers for national parks (persistent full-time)
     const targetColor = layerColors['National Parks & Reserves'] || '#9FF3BC';
@@ -2754,6 +2881,7 @@ function App() {
     if (!feature || !feature.coordinates || !mapRef.current) return;
     setSelectedFeature(feature);
     setIsRightCollapsed(false);
+    setActiveWaypointIndex(null);
 
     if (feature.type === 'LineString' && Array.isArray(feature.coordinates) && feature.coordinates.length > 0) {
       let minLng = Infinity;
@@ -3202,6 +3330,215 @@ function App() {
     };
   }, [selectedFeature, isStyleLoaded, isMapDarkMode, layerColors]);
 
+  // Synchronize travel paths and waypoints for the selected figure dynamically
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !isStyleLoaded) return;
+
+    if (activeTravelPopupRef.current) {
+      fadeOutPopup(activeTravelPopupRef.current);
+      activeTravelPopupRef.current = null;
+    }
+
+    // Helper to dynamically register sources and layers to avoid race conditions
+    const ensureTravelLayers = () => {
+      if (!map.getSource('selected-travel-path-src')) {
+        map.addSource('selected-travel-path-src', {
+          type: 'geojson',
+          data: { type: 'FeatureCollection', features: [] }
+        });
+      }
+
+      if (!map.getLayer('selected-travel-path-line')) {
+        map.addLayer({
+          id: 'selected-travel-path-line',
+          type: 'line',
+          source: 'selected-travel-path-src',
+          layout: {
+            'line-join': 'round',
+            'line-cap': 'round',
+            'visibility': 'visible'
+          },
+          paint: {
+            'line-color': '#90C2FF',
+            'line-width': 3.0,
+            'line-opacity': 0.8,
+            'line-dasharray': [1.5, 1.5]
+          }
+        });
+      }
+
+      if (!map.getSource('selected-travel-waypoints-src')) {
+        map.addSource('selected-travel-waypoints-src', {
+          type: 'geojson',
+          data: { type: 'FeatureCollection', features: [] }
+        });
+      }
+
+      if (!map.getLayer('selected-travel-waypoints-circles')) {
+        map.addLayer({
+          id: 'selected-travel-waypoints-circles',
+          type: 'circle',
+          source: 'selected-travel-waypoints-src',
+          layout: {
+            'visibility': 'visible'
+          },
+          paint: {
+            'circle-radius': [
+              'interpolate', ['linear'], ['zoom'],
+              3, 8,
+              12, 11
+            ],
+            'circle-color': '#90C2FF',
+            'circle-stroke-width': 2,
+            'circle-stroke-color': isMapDarkMode ? '#000000' : '#ffffff',
+            'circle-opacity': 1.0
+          }
+        });
+      }
+
+      if (!map.getLayer('selected-travel-waypoints-labels')) {
+        map.addLayer({
+          id: 'selected-travel-waypoints-labels',
+          type: 'symbol',
+          source: 'selected-travel-waypoints-src',
+          layout: {
+            'text-field': ['get', 'stopNumber'],
+            'text-size': 9.5,
+            'text-allow-overlap': true,
+            'text-ignore-placement': true,
+            'visibility': 'visible'
+          },
+          paint: {
+            'text-color': '#000000'
+          }
+        });
+      }
+
+      if (!map.getLayer('selected-travel-waypoints-names')) {
+        map.addLayer({
+          id: 'selected-travel-waypoints-names',
+          type: 'symbol',
+          source: 'selected-travel-waypoints-src',
+          layout: {
+            'text-field': ['get', 'locationName'],
+            'text-size': 9,
+            'text-offset': [0, 1.4],
+            'text-anchor': 'top',
+            'text-allow-overlap': false,
+            'visibility': 'visible'
+          },
+          paint: {
+            'text-color': isMapDarkMode ? '#ffffff' : '#000000',
+            'text-halo-color': isMapDarkMode ? '#000000' : '#ffffff',
+            'text-halo-width': 1.5
+          }
+        });
+
+        // Hover / Click handlers for waypoint circles
+        map.on('click', 'selected-travel-waypoints-circles', (e) => {
+          if (!e.features || !e.features.length) return;
+          (e as any)._clickHandled = true;
+          const properties = e.features[0].properties;
+          const geometry = e.features[0].geometry;
+          
+          if (properties && properties.locationName && geometry && geometry.type === 'Point') {
+            const coords = (geometry as any).coordinates as [number, number];
+            const stopNum = properties.stopNumber ? parseInt(properties.stopNumber, 10) : null;
+            if (stopNum !== null) {
+              setActiveWaypointIndex(stopNum - 1);
+            }
+
+            if (activeTravelPopupRef.current) {
+              fadeOutPopup(activeTravelPopupRef.current);
+            }
+
+            activeTravelPopupRef.current = new mapboxgl.Popup({ closeButton: false, className: 'custom-mapbox-popup', anchor: 'bottom' })
+              .setLngLat(coords)
+              .setHTML(`<div style="font-family: 'Space Mono', monospace; font-size: 11px; padding: 4px; border-radius: 4px; max-width: 200px; text-align: left;">
+                <strong style="display: block; margin-bottom: 2px; font-size: 12px; color: #fff;">${properties.locationName}</strong>
+                ${properties.displayDate ? `<span style="font-size: 10px; font-style: italic; color: #aaa; display: block; margin-bottom: 6px;">${properties.displayDate}</span>` : ''}
+                <p style="margin: 0; font-size: 10px; line-height: 1.4; color: #ddd;">${properties.description || ''}</p>
+              </div>`)
+              .addTo(map);
+          }
+        });
+
+        map.on('mouseenter', 'selected-travel-waypoints-circles', () => {
+          map.getCanvas().style.cursor = 'pointer';
+        });
+        map.on('mouseleave', 'selected-travel-waypoints-circles', () => {
+          map.getCanvas().style.cursor = '';
+        });
+      }
+    };
+
+    // Ensure layers are registered on map style load
+    ensureTravelLayers();
+
+    const pathSource = map.getSource('selected-travel-path-src') as mapboxgl.GeoJSONSource;
+    const waypointsSource = map.getSource('selected-travel-waypoints-src') as mapboxgl.GeoJSONSource;
+
+    if (!pathSource || !waypointsSource) return;
+
+    if (selectedFeature && BIBLICAL_TRAVEL_PATHS[selectedFeature.id]) {
+      const travelPath = BIBLICAL_TRAVEL_PATHS[selectedFeature.id];
+      const categoryColor = layerColors[selectedFeature.categories?.[0]] || '#90C2FF';
+
+      // Update path line coordinates
+      const coords = travelPath.waypoints.map(wp => [wp.lng, wp.lat]);
+      pathSource.setData({
+        type: 'FeatureCollection',
+        features: [{
+          type: 'Feature',
+          geometry: {
+            type: 'LineString',
+            coordinates: coords
+          },
+          properties: {}
+        }]
+      });
+
+      // Update waypoint point features
+      waypointsSource.setData({
+        type: 'FeatureCollection',
+        features: travelPath.waypoints.map((wp, idx) => ({
+          type: 'Feature',
+          geometry: {
+            type: 'Point',
+            coordinates: [wp.lng, wp.lat]
+          },
+          properties: {
+            id: `${travelPath.figureId}-wp-${idx}`,
+            locationName: wp.locationName,
+            displayDate: wp.displayDate,
+            description: wp.description,
+            stopNumber: String(idx + 1)
+          }
+        }))
+      });
+
+      // Set dynamic paint colors
+      if (map.getLayer('selected-travel-path-line')) {
+        map.setPaintProperty('selected-travel-path-line', 'line-color', categoryColor);
+      }
+      if (map.getLayer('selected-travel-waypoints-circles')) {
+        map.setPaintProperty('selected-travel-waypoints-circles', 'circle-color', categoryColor);
+      }
+    } else {
+      // Clear data when no travel path figure is selected
+      pathSource.setData({ type: 'FeatureCollection', features: [] });
+      waypointsSource.setData({ type: 'FeatureCollection', features: [] });
+    }
+
+    return () => {
+      if (activeTravelPopupRef.current) {
+        fadeOutPopup(activeTravelPopupRef.current);
+        activeTravelPopupRef.current = null;
+      }
+    };
+  }, [selectedFeature, isStyleLoaded, layerColors, isMapDarkMode]);
+
   const handleNextImage = (e: React.MouseEvent) => {
     e.stopPropagation();
     if (!activeAssets || activeAssets.length === 0) return;
@@ -3565,59 +3902,57 @@ function App() {
             </div>
 
             {/* ACTION LINK BUTTONS FOR SUBMISSIONS AND DESIGNATED MODERATION */}
-            {currentPage === 'map' && (
-              <div style={{ display: 'flex', gap: '8px', marginTop: '2px' }}>
-                <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
-                  <motion.button
-                    onClick={() => {
-                      setSubmissionSuccess(null);
-                      setSubmissionError(null);
-                      setIsSubmitOpen(true);
-                    }}
-                    whileHover={{
-                      background: isMapDarkMode ? '#cccccc' : '#333333',
-                      scale: 1.02
-                    }}
-                    style={{
-                      background: isMapDarkMode ? '#ffffff' : '#000000',
-                      color: isMapDarkMode ? '#000000' : '#ffffff',
-                      border: `1px solid ${theme.border}`,
-                      padding: '0 16px',
-                      height: '32px',
-                      fontSize: '9px',
-                      fontFamily: '"Space Mono", monospace',
-                      fontWeight: 700,
-                      cursor: 'pointer',
-                      borderRadius: '16px',
-                      textTransform: 'uppercase',
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '6px',
-                      boxSizing: 'border-box',
-                      transition: 'all 0.2s ease'
-                    }}
-                  >
-                    <Plus size={10} strokeWidth={3} />
-                    <span>Submit Intel</span>
-                  </motion.button>
-                  {onboardingStep === 6 && (
-                    <div style={{
-                      position: 'absolute',
-                      top: '-3px',
-                      left: '-3px',
-                      right: '-3px',
-                      bottom: '-3px',
-                      border: '3px solid #b6a6ff',
-                      boxShadow: '0 0 15px rgba(182, 166, 255, 0.5)',
-                      pointerEvents: 'none',
-                      zIndex: 9999,
-                      borderRadius: '19px',
-                      animation: 'radar-pulse 2s infinite'
-                    }} />
-                  )}
-                </div>
+            <div style={{ display: 'flex', gap: '8px', marginTop: '2px' }}>
+              <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
+                <motion.button
+                  onClick={() => {
+                    setSubmissionSuccess(null);
+                    setSubmissionError(null);
+                    setIsSubmitOpen(true);
+                  }}
+                  whileHover={{
+                    background: isMapDarkMode ? '#cccccc' : '#333333',
+                    scale: 1.02
+                  }}
+                  style={{
+                    background: isMapDarkMode ? '#ffffff' : '#000000',
+                    color: isMapDarkMode ? '#000000' : '#ffffff',
+                    border: `1px solid ${theme.border}`,
+                    padding: '0 16px',
+                    height: '32px',
+                    fontSize: '9px',
+                    fontFamily: '"Space Mono", monospace',
+                    fontWeight: 700,
+                    cursor: 'pointer',
+                    borderRadius: '16px',
+                    textTransform: 'uppercase',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '6px',
+                    boxSizing: 'border-box',
+                    transition: 'all 0.2s ease'
+                  }}
+                >
+                  <Plus size={10} strokeWidth={3} />
+                  <span>Submit Intel</span>
+                </motion.button>
+                {currentPage === 'map' && onboardingStep === 6 && (
+                  <div style={{
+                    position: 'absolute',
+                    top: '-3px',
+                    left: '-3px',
+                    right: '-3px',
+                    bottom: '-3px',
+                    border: '3px solid #b6a6ff',
+                    boxShadow: '0 0 15px rgba(182, 166, 255, 0.5)',
+                    pointerEvents: 'none',
+                    zIndex: 9999,
+                    borderRadius: '19px',
+                    animation: 'radar-pulse 2s infinite'
+                  }} />
+                )}
               </div>
-            )}
+            </div>
           </div>
         </header>
 
@@ -4726,6 +5061,173 @@ function App() {
                           {selectedFeature.description}
                         </p>
                       </div>
+
+                      {(() => {
+                        const travelPath = BIBLICAL_TRAVEL_PATHS[selectedFeature.id];
+                        if (!travelPath) return null;
+                        const categoryColor = layerColors[selectedFeature.categories?.[0]] || '#90C2FF';
+                        return (
+                          <div style={{ marginTop: '24px', borderTop: `1px solid ${theme.borderLight || theme.border}`, paddingTop: '20px' }}>
+                            <div style={{ fontFamily: '"Space Mono", monospace', fontWeight: '700', fontSize: '11px', lineHeight: '22px', marginBottom: '12px', letterSpacing: '1px', textTransform: 'uppercase' }}>
+                              JOURNEY PATH & LOG
+                            </div>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '0px', position: 'relative', paddingLeft: '14px' }}>
+                              {/* Vertical line connecting steps */}
+                              <div style={{
+                                position: 'absolute',
+                                left: '4px',
+                                top: '8px',
+                                bottom: '8px',
+                                width: '1px',
+                                borderLeft: `1.5px dashed ${theme.border}`
+                              }} />
+
+                              {travelPath.waypoints.map((wp, idx) => (
+                                <div 
+                                  key={idx} 
+                                  onClick={() => {
+                                    setActiveWaypointIndex(idx);
+                                    if (mapRef.current) {
+                                      mapRef.current.flyTo({
+                                        center: [wp.lng, wp.lat],
+                                        zoom: 8.5,
+                                        duration: 1500,
+                                        essential: true
+                                      });
+                                      
+                                      // Trigger a temporary popup on the map for this waypoint
+                                      if (activeTravelPopupRef.current) {
+                                        fadeOutPopup(activeTravelPopupRef.current);
+                                      }
+
+                                      activeTravelPopupRef.current = new mapboxgl.Popup({ closeButton: false, className: 'custom-mapbox-popup', anchor: 'bottom' })
+                                        .setLngLat([wp.lng, wp.lat])
+                                        .setHTML(`<div style="font-family: 'Space Mono', monospace; font-size: 11px; padding: 4px; border-radius: 4px; max-width: 200px; text-align: left;">
+                                          <strong style="display: block; margin-bottom: 2px; font-size: 12px; color: #fff;">${wp.locationName}</strong>
+                                          ${wp.displayDate ? `<span style="font-size: 10px; font-style: italic; color: #aaa; display: block; margin-bottom: 6px;">${wp.displayDate}</span>` : ''}
+                                          <p style="margin: 0; font-size: 10px; line-height: 1.4; color: #ddd;">${wp.description || ''}</p>
+                                        </div>`)
+                                        .addTo(mapRef.current);
+                                    }
+                                  }}
+                                  onMouseEnter={(e) => {
+                                    if (idx !== activeWaypointIndex) e.currentTarget.style.opacity = '0.9';
+                                  }}
+                                  onMouseLeave={(e) => {
+                                    if (idx !== activeWaypointIndex) e.currentTarget.style.opacity = '0.65';
+                                  }}
+                                  style={{
+                                    position: 'relative',
+                                    paddingBottom: idx === travelPath.waypoints.length - 1 ? '0' : '20px',
+                                    cursor: 'pointer',
+                                    opacity: idx === activeWaypointIndex ? 1.0 : 0.65,
+                                    transition: 'opacity 0.2s ease',
+                                    textAlign: 'left'
+                                  }}
+                                >
+                                  {/* Stepper node circle */}
+                                  <div style={{
+                                    position: 'absolute',
+                                    left: '-14px',
+                                    top: idx === activeWaypointIndex ? '10px' : '4px',
+                                    width: idx === activeWaypointIndex ? '9px' : '7px',
+                                    height: idx === activeWaypointIndex ? '9px' : '7px',
+                                    borderRadius: '50%',
+                                    background: categoryColor,
+                                    border: `1.5px solid ${theme.bg}`,
+                                    boxShadow: `0 0 0 1px ${theme.border}`,
+                                    transform: 'translateX(-50%)',
+                                    transition: 'all 0.2s ease',
+                                    zIndex: 2
+                                  }} />
+
+                                  {/* Waypoint details */}
+                                  <div style={{ 
+                                    fontFamily: '"Space Mono", monospace', 
+                                    fontSize: '10px',
+                                    background: idx === activeWaypointIndex 
+                                      ? (isMapDarkMode ? 'rgba(255, 255, 255, 0.05)' : 'rgba(0, 0, 0, 0.03)')
+                                      : 'transparent',
+                                    borderRadius: '6px',
+                                    padding: idx === activeWaypointIndex ? '6px 8px' : '0px',
+                                    transition: 'all 0.2s ease',
+                                    border: idx === activeWaypointIndex ? `1px solid ${categoryColor}` : 'none',
+                                    paddingLeft: idx === activeWaypointIndex ? '8px' : '0px'
+                                  }}>
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: '8px' }}>
+                                      <span style={{ 
+                                        fontWeight: '700', 
+                                        color: theme.text
+                                      }}>{wp.locationName}</span>
+                                      {wp.displayDate && (
+                                        <span style={{ fontSize: '9px', opacity: 0.65, fontWeight: 'normal', color: theme.text }}>{wp.displayDate}</span>
+                                      )}
+                                    </div>
+                                    <p style={{ margin: '4px 0 0 0', fontSize: '9px', lineHeight: '14px', color: idx === activeWaypointIndex ? theme.text : theme.textDim }}>
+                                      {wp.description}
+                                    </p>
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        );
+                      })()}
+
+                      {activeFigures && activeFigures.length > 0 && (
+                        <div style={{ marginTop: '24px', borderTop: `1px solid ${theme.borderLight || theme.border}`, paddingTop: '20px' }}>
+                          <div style={{ fontFamily: '"Space Mono", monospace', fontWeight: '700', fontSize: '11px', lineHeight: '22px', marginBottom: '12px', letterSpacing: '1px', textTransform: 'uppercase' }}>
+                            ACTIVE FIGURES DURING EVENT
+                          </div>
+                          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                            {activeFigures.map(fig => (
+                              <div 
+                                key={fig.id}
+                                onClick={() => {
+                                  // Find figure in map dataset
+                                  const matchedRecord = combinedPointsAndLinesData.find(item => String(item.id) === String(fig.id));
+                                  if (matchedRecord) {
+                                    handleLocationItemClick(matchedRecord);
+                                  } else {
+                                    // Or fly map to estimated coordinates
+                                    if (fig.coords && mapRef.current) {
+                                      mapRef.current.flyTo({
+                                        center: fig.coords,
+                                        zoom: 8.5,
+                                        duration: 1500
+                                      });
+                                    }
+                                  }
+                                }}
+                                onMouseEnter={(e) => {
+                                  e.currentTarget.style.backgroundColor = isMapDarkMode ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.05)';
+                                }}
+                                onMouseLeave={(e) => {
+                                  e.currentTarget.style.backgroundColor = 'transparent';
+                                }}
+                                style={{
+                                  display: 'flex',
+                                  flexDirection: 'column',
+                                  padding: '8px',
+                                  borderRadius: '6px',
+                                  cursor: 'pointer',
+                                  transition: 'background-color 0.2s ease',
+                                  border: `1px solid ${theme.borderLight || theme.border}`
+                                }}
+                              >
+                                <div style={{ display: 'flex', justifyContent: 'space-between', fontFamily: '"Space Mono", monospace', fontSize: '10px', fontWeight: '700' }}>
+                                  <span style={{ color: theme.text }}>{fig.name}</span>
+                                  <span style={{ opacity: 0.65, fontWeight: 'normal' }}>Age: {fig.age}</span>
+                                </div>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '4px', marginTop: '4px', fontFamily: '"Space Mono", monospace', fontSize: '9px', color: theme.textDim }}>
+                                  <MapPin size={10} style={{ filter: theme.invert }} />
+                                  <span>Location: {fig.locationName}</span>
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
                     </div>
 
                   </div>
@@ -6114,16 +6616,25 @@ function App() {
                 <form 
                   onSubmit={async (e) => {
                     e.preventDefault();
-                    if (!subName.trim() || !subCategory || !subDescription.trim() || !subLatitude || !subLongitude) {
-                      setSubmissionError("All required attributes (Name, Category, Description, Coordinates) must be defined.");
+                    if (!subName.trim() || !subCategory || !subDescription.trim()) {
+                      setSubmissionError("All required attributes (Name, Category, Description) must be defined.");
                       return;
                     }
 
-                    const latNum = parseFloat(subLatitude);
-                    const lngNum = parseFloat(subLongitude);
-                    if (isNaN(latNum) || isNaN(lngNum)) {
-                      setSubmissionError("Coordinates must be valid numbers.");
-                      return;
+                    const hasCoords = subLatitude.trim() !== '' || subLongitude.trim() !== '';
+                    let latNum = NaN;
+                    let lngNum = NaN;
+                    if (hasCoords) {
+                      latNum = parseFloat(subLatitude);
+                      lngNum = parseFloat(subLongitude);
+                      if (isNaN(latNum) || isNaN(lngNum)) {
+                        setSubmissionError("Coordinates must be valid numbers if provided.");
+                        return;
+                      }
+                      if (!isValidLngLat(lngNum, latNum)) {
+                        setSubmissionError("Coordinates must be within standard bounds (Latitude: -90 to 90, Longitude: -180 to 180).");
+                        return;
+                      }
                     }
 
                     setIsSubmitting(true);
@@ -6135,10 +6646,13 @@ function App() {
                       name: subName.trim(),
                       category: subCategory,
                       description: subDescription.trim(),
-                      coordinates: [lngNum, latNum],
                       images: subMediaList,
                       status: 'pending'
                     };
+
+                    if (hasCoords) {
+                      submissionData.coordinates = [lngNum, latNum];
+                    }
 
                     if (subDate.trim()) {
                       submissionData.date = subDate.trim();
@@ -6156,7 +6670,7 @@ function App() {
                           name: subName.trim(),
                           category: subCategory,
                           description: subDescription.trim(),
-                          coordinates: [lngNum, latNum],
+                          coordinates: hasCoords ? [lngNum, latNum] : null,
                           images: subMediaList,
                           date: subDate.trim() || undefined,
                           source: subSource.trim() || undefined
@@ -6425,11 +6939,10 @@ function App() {
 
                   {/* Lat/Lng Pin coordinates */}
                   <div>
-                    <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '6px', letterSpacing: '0.5px' }}>COORDINATES REGISTRATION *</label>
+                    <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '6px', letterSpacing: '0.5px' }}>COORDINATES REGISTRATION (OPTIONAL)</label>
                     <div style={{ display: 'flex', gap: '12px' }}>
                       <input 
                         type="text" 
-                        required
                         placeholder="LATITUDE (e.g. 41.4091)" 
                         value={subLatitude} 
                         onChange={(e) => setSubLatitude(e.target.value)}
@@ -6445,7 +6958,6 @@ function App() {
                       />
                       <input 
                         type="text" 
-                        required
                         placeholder="LONGITUDE (e.g. -122.1952)" 
                         value={subLongitude} 
                         onChange={(e) => setSubLongitude(e.target.value)}
@@ -7147,43 +7659,45 @@ function App() {
 
                                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderTop: `1px solid ${theme.borderLight}`, paddingTop: '12px', marginTop: '4px' }}>
                                     <div style={{ display: 'flex', gap: '8px' }}>
-                                      <button
-                                        onClick={() => {
-                                          if (mapRef.current) {
-                                            const mockFeature = {
-                                              id: sub.id,
-                                              name: sub.name,
-                                              description: sub.description,
-                                              coordinates: sub.coordinates,
-                                              categories: [sub.category],
-                                              type: 'Point',
-                                              isSubmitted: true
-                                            };
-                                            setSelectedFeature(mockFeature);
-                                            mapRef.current.flyTo({ center: sub.coordinates, zoom: 14 });
-                                            setIsModMinimized(true);
-                                          }
-                                        }}
-                                        style={{
-                                          background: 'transparent',
-                                          color: theme.text,
-                                          border: `1px solid ${theme.border}`,
-                                          borderRadius: '16px',
-                                          padding: '0 16px',
-                                          height: '32px',
-                                          fontSize: '9px',
-                                          fontFamily: '"Space Mono", monospace',
-                                          fontWeight: 700,
-                                          cursor: 'pointer',
-                                          display: 'flex',
-                                          alignItems: 'center',
-                                          gap: '6px',
-                                          boxSizing: 'border-box'
-                                        }}
-                                      >
-                                        <Eye size={12} />
-                                        PREVIEW
-                                      </button>
+                                      {sub.coordinates && Array.isArray(sub.coordinates) && sub.coordinates.length === 2 && isValidLngLat(sub.coordinates[0], sub.coordinates[1]) && (
+                                        <button
+                                          onClick={() => {
+                                            if (mapRef.current) {
+                                              const mockFeature = {
+                                                id: sub.id,
+                                                name: sub.name,
+                                                description: sub.description,
+                                                coordinates: sub.coordinates,
+                                                categories: [sub.category],
+                                                type: 'Point',
+                                                isSubmitted: true
+                                              };
+                                              setSelectedFeature(mockFeature);
+                                              mapRef.current.flyTo({ center: sub.coordinates, zoom: 14 });
+                                              setIsModMinimized(true);
+                                            }
+                                          }}
+                                          style={{
+                                            background: 'transparent',
+                                            color: theme.text,
+                                            border: `1px solid ${theme.border}`,
+                                            borderRadius: '16px',
+                                            padding: '0 16px',
+                                            height: '32px',
+                                            fontSize: '9px',
+                                            fontFamily: '"Space Mono", monospace',
+                                            fontWeight: 700,
+                                            cursor: 'pointer',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            gap: '6px',
+                                            boxSizing: 'border-box'
+                                          }}
+                                        >
+                                          <Eye size={12} />
+                                          PREVIEW
+                                        </button>
+                                      )}
 
                                       <button
                                         onClick={() => handleStartEdit(sub)}
@@ -7404,43 +7918,45 @@ function App() {
 
                                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderTop: `1px solid ${theme.borderLight}`, paddingTop: '12px', marginTop: '4px' }}>
                                     <div style={{ display: 'flex', gap: '8px' }}>
-                                      <button
-                                        onClick={() => {
-                                          if (mapRef.current) {
-                                            const mockFeature = {
-                                              id: sub.id,
-                                              name: sub.name,
-                                              description: sub.description,
-                                              coordinates: sub.coordinates,
-                                              categories: [sub.category],
-                                              type: 'Point',
-                                              isSubmitted: true
-                                            };
-                                            setSelectedFeature(mockFeature);
-                                            mapRef.current.flyTo({ center: sub.coordinates, zoom: 14 });
-                                            setIsModMinimized(true);
-                                          }
-                                        }}
-                                        style={{
-                                          background: 'transparent',
-                                          color: theme.text,
-                                          border: `1px solid ${theme.border}`,
-                                          borderRadius: '16px',
-                                          padding: '0 16px',
-                                          height: '32px',
-                                          fontSize: '9px',
-                                          fontFamily: '"Space Mono", monospace',
-                                          fontWeight: 700,
-                                          cursor: 'pointer',
-                                          display: 'flex',
-                                          alignItems: 'center',
-                                          gap: '6px',
-                                          boxSizing: 'border-box'
-                                        }}
-                                      >
-                                        <Eye size={12} />
-                                        PREVIEW
-                                      </button>
+                                      {sub.coordinates && Array.isArray(sub.coordinates) && sub.coordinates.length === 2 && isValidLngLat(sub.coordinates[0], sub.coordinates[1]) && (
+                                        <button
+                                          onClick={() => {
+                                            if (mapRef.current) {
+                                              const mockFeature = {
+                                                id: sub.id,
+                                                name: sub.name,
+                                                description: sub.description,
+                                                coordinates: sub.coordinates,
+                                                categories: [sub.category],
+                                                type: 'Point',
+                                                isSubmitted: true
+                                              };
+                                              setSelectedFeature(mockFeature);
+                                              mapRef.current.flyTo({ center: sub.coordinates, zoom: 14 });
+                                              setIsModMinimized(true);
+                                            }
+                                          }}
+                                          style={{
+                                            background: 'transparent',
+                                            color: theme.text,
+                                            border: `1px solid ${theme.border}`,
+                                            borderRadius: '16px',
+                                            padding: '0 16px',
+                                            height: '32px',
+                                            fontSize: '9px',
+                                            fontFamily: '"Space Mono", monospace',
+                                            fontWeight: 700,
+                                            cursor: 'pointer',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            gap: '6px',
+                                            boxSizing: 'border-box'
+                                          }}
+                                        >
+                                          <Eye size={12} />
+                                          PREVIEW
+                                        </button>
+                                      )}
 
                                       <button
                                         onClick={() => handleStartEdit(sub)}
