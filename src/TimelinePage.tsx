@@ -1272,7 +1272,7 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
                             style={{
                               background: 'transparent',
                               color: tooltipTheme.text,
-                              border: `1px solid ${tooltipTheme.border}`,
+                              border: `1px solid ${tooltipTheme.text}`,
                               padding: '6px 14px',
                               fontSize: '9px',
                               fontFamily: '"Space Mono", monospace',
@@ -1281,14 +1281,10 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
                               borderRadius: '16px',
                               textTransform: 'uppercase',
                               transition: 'all 0.2s ease',
-                              boxSizing: 'border-box',
-                              display: 'inline-flex',
-                              alignItems: 'center',
-                              gap: '6px'
+                              boxSizing: 'border-box'
                             }}
                           >
-                            <MapPin size={10} style={{ filter: isMapDarkMode ? 'none' : 'invert(1)' }} />
-                            Map
+                            MAP VIEW
                           </button>
                         )}
                         <button
