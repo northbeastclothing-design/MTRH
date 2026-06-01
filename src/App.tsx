@@ -10,6 +10,7 @@ import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChang
 import firebaseConfig from '../firebase-applet-config.json';
 
 import TimelinePage from './TimelinePage';
+import { TIMELINE_ITEMS, TIMELINE_LOCATIONS } from './timelineData';
 
 // Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig);
@@ -80,6 +81,8 @@ function handleFirestoreError(error: unknown, operationType: OperationType, path
 const CATEGORY_DESCRIPTIONS: Record<string, string> = {
   'Enochian Sites': 'Geographical locations, portals of descent, and prisons of the fallen Watchers as detailed in the Book of Enoch.',
   'Nephilim': 'Newspaper articles about finding the bones of ancient biblical giants, horned humanoids, cyclops and more.',
+  'Biblical Figures': 'Geographical tracking and historical sites associated with biblical patriarchs, prophets, and key lineage figures.',
+  'Biblical Events': 'Key geographical milestones and historical events from biblical history, including the Exodus, the Fall of Jericho, and the Crucifixion.',
   'U.F.O. Sightings': 'Reports of unidentified flying objects and extraterrestrial encounters across the globe.',
   'War.gov UFO files 01': 'Official records and multimedia releases from government archives documenting unidentified aerial phenomena (First Release).',
   'War.gov UFO files 02': 'Official declassified records and sensor videos from government archives (Second Release - PURSUE 02).',
@@ -758,6 +761,8 @@ const LAYER_CONFIG: Record<string, { color: string; icon: string }> = {
   'War.gov UFO files 02': { color: '#D29BFF', icon: '/icons/icon-dept-war-02.svg' },
   'Enochian Sites': { color: '#FF9F63', icon: '/icons/icon-enochian-lore.svg' },
   'Nephilim': { color: '#ECCE81', icon: '/icons/icon-giants.svg' },
+  'Biblical Figures': { color: '#90C2FF', icon: '/icons/icon-biblical-bloodlines.svg' },
+  'Biblical Events': { color: '#91FFC4', icon: '/icons/icon-biblical-bloodlines-1.svg' },
   'U.F.O. Sightings': { color: '#C2FFBD', icon: '/icons/icon-ufo-sightings.svg' },
   'Bigfoot Sightings': { color: '#C6986D', icon: '/icons/icon-bigfoot-sightings.svg' },
   'Cryptid Sightings': { color: '#AFFFEC', icon: '/icons/icon-cryptid-sightings.svg' },
@@ -854,6 +859,7 @@ function App() {
   const [isDataCompiled, setIsDataCompiled] = useState(false);
   const [showAboutModal, setShowAboutModal] = useState(true);
   const [currentPage, setCurrentPage] = useState<'map' | 'timeline'>('map');
+  const [selectedTimelineItem, setSelectedTimelineItem] = useState<any | null>(null);
 
   // Combine original static / scraped data and approved user submissions
   const combinedPointsAndLinesData = useMemo(() => {
@@ -2171,6 +2177,27 @@ function App() {
           .map((item, idx) => processIncomingRecord(item, idx))
           .filter(Boolean);
 
+        // Convert timeline items with coordinates to map pins
+        const timelinePins = TIMELINE_ITEMS.map(item => {
+          const loc = TIMELINE_LOCATIONS[item.id];
+          if (!loc) return null;
+          return {
+            id: item.id,
+            name: item.name,
+            categories: [loc.category || 'Biblical Events'],
+            category: loc.category || 'Biblical Events',
+            type: 'Point',
+            coordinates: [loc.lng, loc.lat],
+            date: item.start,
+            description: `${item.description}${loc.locationName ? `\n\nLocation: ${loc.locationName}` : ''}`,
+            source: item.source || null,
+            images: [],
+            isTimelinePin: true
+          };
+        }).filter(Boolean);
+
+        initialBuffer.push(...timelinePins);
+
         console.log(`Initial compilation: ${initialBuffer.length} records processed.`);
         const catCounts: any = {};
         initialBuffer.forEach((f: any) => {
@@ -2698,6 +2725,29 @@ function App() {
     });
 
   }, [visibleData, isStyleLoaded, layerColors, pointsAndLinesData, isMapDarkMode]);
+
+  const handleViewOnMap = (timelineItem: any) => {
+    setCurrentPage('map');
+    const mapRecord = combinedPointsAndLinesData.find(r => String(r.id) === String(timelineItem.id));
+    if (mapRecord) {
+      setActiveLayers(prev => ({
+        ...prev,
+        [mapRecord.category]: true
+      }));
+      // Wait for map display and coordinate mapping
+      setTimeout(() => {
+        handleLocationItemClick(mapRecord);
+      }, 50);
+    }
+  };
+
+  const handleViewOnTimeline = (timelineItemId: string) => {
+    setCurrentPage('timeline');
+    const item = TIMELINE_ITEMS.find(t => String(t.id) === String(timelineItemId));
+    if (item) {
+      setSelectedTimelineItem(item);
+    }
+  };
 
   const handleLocationItemClick = (feature: any) => {
     if (!feature || !feature.coordinates || !mapRef.current) return;
@@ -4569,6 +4619,32 @@ function App() {
                           <Heart size={14} fill={userLikedIds.has(String(selectedFeature.id).replace(/[^a-zA-Z0-9_\-]/g, '_')) ? (isMapDarkMode ? "#000" : "#fff") : "none"} />
                           <span>{userLikedIds.has(String(selectedFeature.id).replace(/[^a-zA-Z0-9_\-]/g, '_')) ? 'FAVORITED' : 'FAVORITE'} ({likes[String(selectedFeature.id).replace(/[^a-zA-Z0-9_\-]/g, '_')] || 0})</span>
                         </motion.button>
+
+                        {TIMELINE_ITEMS.some(t => String(t.id) === String(selectedFeature.id)) && (
+                          <motion.button
+                            whileTap={{ scale: 0.95 }}
+                            whileHover={{ scale: 1.05 }}
+                            onClick={() => handleViewOnTimeline(selectedFeature.id)}
+                            style={{
+                              display: 'flex',
+                              alignItems: 'center',
+                              gap: '6px',
+                              background: 'transparent',
+                              color: isMapDarkMode ? '#fff' : '#000',
+                              border: `1px solid ${isMapDarkMode ? '#fff' : '#000'}`,
+                              padding: '6px 12px',
+                              borderRadius: '16px',
+                              cursor: 'pointer',
+                              fontSize: '11px',
+                              fontWeight: 'bold',
+                              fontFamily: '"Space Mono", monospace',
+                              transition: 'all 0.2s ease'
+                            }}
+                          >
+                            <img src="/icons/icon-timeline.svg" style={{ width: '12px', height: '12px', filter: isMapDarkMode ? 'invert(1)' : 'none' }} alt="Timeline icon" />
+                            <span>VIEW ON TIMELINE</span>
+                          </motion.button>
+                        )}
                       </div>
                       
                       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '24px', justifyContent: 'flex-start' }}>
@@ -5233,7 +5309,13 @@ function App() {
             zIndex: currentPage === 'timeline' ? 12 : 0
           }}
         >
-          <TimelinePage theme={theme} isMapDarkMode={isMapDarkMode} />
+          <TimelinePage 
+            theme={theme} 
+            isMapDarkMode={isMapDarkMode} 
+            selectedItem={selectedTimelineItem}
+            setSelectedItem={setSelectedTimelineItem}
+            onViewOnMap={handleViewOnMap}
+          />
         </div>
       </div>
 

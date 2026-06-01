@@ -2147,3 +2147,65 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     fatherId: 'semjaza'
   }
 ];
+
+export interface TimelineLocation {
+  lng: number;
+  lat: number;
+  locationName: string;
+  category?: string;
+}
+
+export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
+  // Biblical Patriarchs (Figures)
+  'adam': { lng: 47.432, lat: 31.015, locationName: 'Garden of Eden', category: 'Biblical Figures' },
+  'eve': { lng: 47.432, lat: 31.015, locationName: 'Garden of Eden', category: 'Biblical Figures' },
+  'cain': { lng: 49.500, lat: 32.000, locationName: 'Land of Nod', category: 'Biblical Figures' },
+  'abel': { lng: 47.432, lat: 31.015, locationName: 'Garden of Eden', category: 'Biblical Figures' },
+  'seth': { lng: 47.432, lat: 31.015, locationName: 'Garden of Eden', category: 'Biblical Figures' },
+  'enoch': { lng: 35.794, lat: 33.318, locationName: 'Mount Hermon', category: 'Biblical Figures' },
+  'noah': { lng: 44.290, lat: 39.702, locationName: 'Mount Ararat', category: 'Biblical Figures' },
+  'abraham': { lng: 35.111, lat: 31.524, locationName: 'Hebron (Tomb of the Patriarchs)', category: 'Biblical Figures' },
+  'sarah': { lng: 35.111, lat: 31.524, locationName: 'Hebron (Tomb of the Patriarchs)', category: 'Biblical Figures' },
+  'isaac': { lng: 34.792, lat: 31.244, locationName: 'Beersheba', category: 'Biblical Figures' },
+  'rebekah': { lng: 35.111, lat: 31.524, locationName: 'Hebron (Tomb of the Patriarchs)', category: 'Biblical Figures' },
+  'jacob': { lng: 35.222, lat: 31.936, locationName: 'Bethel', category: 'Biblical Figures' },
+  'leah': { lng: 35.111, lat: 31.524, locationName: 'Hebron (Tomb of the Patriarchs)', category: 'Biblical Figures' },
+  'rachel': { lng: 35.202, lat: 31.711, locationName: 'Rachel\'s Tomb (Bethlehem)', category: 'Biblical Figures' },
+  'joseph': { lng: 31.820, lat: 30.610, locationName: 'Goshen (Egypt)', category: 'Biblical Figures' },
+  'moses': { lng: 35.725, lat: 31.767, locationName: 'Mount Nebo', category: 'Biblical Figures' },
+  'joshua': { lng: 35.289, lat: 32.056, locationName: 'Shiloh', category: 'Biblical Figures' },
+  'david': { lng: 35.235, lat: 31.773, locationName: 'City of David (Jerusalem)', category: 'Biblical Figures' },
+  'solomon': { lng: 35.235, lat: 31.778, locationName: 'Jerusalem', category: 'Biblical Figures' },
+  'jesus': { lng: 35.300, lat: 32.702, locationName: 'Nazareth', category: 'Biblical Figures' },
+  'mary-magdalene': { lng: 35.503, lat: 32.825, locationName: 'Magdala', category: 'Biblical Figures' },
+
+  // Biblical Events
+  'evt-creation': { lng: 47.432, lat: 31.015, locationName: 'Garden of Eden', category: 'Biblical Events' },
+  'evt-enoch-trans': { lng: 35.794, lat: 33.318, locationName: 'Mount Hermon', category: 'Biblical Events' },
+  'evt-adam-death': { lng: 35.111, lat: 31.524, locationName: 'Hebron', category: 'Biblical Events' },
+  'evt-great-flood': { lng: 44.290, lat: 39.702, locationName: 'Mount Ararat', category: 'Biblical Events' },
+  'evt-tower-babel': { lng: 44.422, lat: 32.536, locationName: 'Babylon', category: 'Biblical Events' },
+  'evt-abraham-canaan': { lng: 35.277, lat: 32.213, locationName: 'Shechem', category: 'Biblical Events' },
+  'evt-sodom-gomorrah': { lng: 35.534, lat: 31.254, locationName: 'Sodom & Gomorrah', category: 'Biblical Events' },
+  'evt-binding-isaac': { lng: 35.235, lat: 31.778, locationName: 'Mount Moriah', category: 'Biblical Events' },
+  'evt-joseph-sold': { lng: 35.244, lat: 32.413, locationName: 'Dothan', category: 'Biblical Events' },
+  'evt-israel-egypt': { lng: 31.820, lat: 30.610, locationName: 'Goshen', category: 'Biblical Events' },
+  'evt-exodus': { lng: 33.860, lat: 28.980, locationName: 'Red Sea Crossing', category: 'Biblical Events' },
+  'evt-sinai-law': { lng: 33.975, lat: 28.539, locationName: 'Mount Sinai', category: 'Biblical Events' },
+  'evt-jericho': { lng: 35.444, lat: 31.870, locationName: 'Jericho', category: 'Biblical Events' },
+  'reign-saul': { lng: 35.231, lat: 31.823, locationName: 'Gibeah', category: 'Biblical Events' },
+  'reign-david': { lng: 35.235, lat: 31.773, locationName: 'City of David', category: 'Biblical Events' },
+  'reign-solomon-temple': { lng: 35.235, lat: 31.778, locationName: 'Temple Mount', category: 'Biblical Events' },
+  'evt-split-kingdom': { lng: 35.277, lat: 32.213, locationName: 'Shechem', category: 'Biblical Events' },
+  'evt-fall-samaria': { lng: 35.189, lat: 32.276, locationName: 'Samaria', category: 'Biblical Events' },
+  'evt-fall-jerusalem': { lng: 35.235, lat: 31.778, locationName: 'Jerusalem', category: 'Biblical Events' },
+  'evt-temple-rebuilt': { lng: 35.235, lat: 31.778, locationName: 'Temple Mount', category: 'Biblical Events' },
+  'evt-christ-birth': { lng: 35.201, lat: 31.704, locationName: 'Bethlehem', category: 'Biblical Events' },
+  'evt-crucifixion': { lng: 35.229, lat: 31.778, locationName: 'Golgotha', category: 'Biblical Events' },
+
+  // Enochian Lore
+  'semjaza': { lng: 35.794, lat: 33.318, locationName: 'Mount Hermon', category: 'Enochian Sites' },
+  'azazel': { lng: 35.350, lat: 31.650, locationName: 'Desert of Dudael', category: 'Enochian Sites' },
+  'enoch_ascension': { lng: 35.794, lat: 33.318, locationName: 'Mount Hermon', category: 'Enochian Sites' },
+  'nephilim_era': { lng: 35.730, lat: 32.900, locationName: 'Og\'s Kingdom (Golan)', category: 'Nephilim' }
+};

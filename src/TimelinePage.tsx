@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { TIMELINE_ITEMS, TimelineItem } from './timelineData';
-import { RotateCcw } from 'lucide-react';
+import { TIMELINE_ITEMS, TimelineItem, TIMELINE_LOCATIONS } from './timelineData';
+import { RotateCcw, MapPin } from 'lucide-react';
 
 interface TimelinePageProps {
   theme: {
@@ -14,6 +14,9 @@ interface TimelinePageProps {
     invert: string;
   };
   isMapDarkMode: boolean;
+  selectedItem: TimelineItem | null;
+  setSelectedItem: (item: TimelineItem | null) => void;
+  onViewOnMap: (item: TimelineItem) => void;
 }
 
 const ERAS_CONFIG = [
@@ -89,7 +92,7 @@ const ERAS_CONFIG = [
   }
 ];
 
-export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps) {
+export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSelectedItem, onViewOnMap }: TimelinePageProps) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   
   // Viewport states: start and end year
@@ -112,7 +115,6 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
 
   // Hover & selection states
   const [hoveredItemId, setHoveredItemId] = useState<string | null>(null);
-  const [selectedItem, setSelectedItem] = useState<TimelineItem | null>(null);
 
   // Onboarding tour state
   const [onboardingStep, setOnboardingStep] = useState<number | null>(null);
@@ -1263,25 +1265,52 @@ export default function TimelinePage({ theme, isMapDarkMode }: TimelinePageProps
                         </span>
                       ) : <div />}
                       
-                      <button
-                        onClick={() => setSelectedItem(null)}
-                        style={{
-                          background: tooltipTheme.buttonBg,
-                          color: tooltipTheme.buttonText,
-                          border: `1px solid ${tooltipTheme.buttonBorder}`,
-                          padding: '6px 16px',
-                          fontSize: '9px',
-                          fontFamily: '"Space Mono", monospace',
-                          fontWeight: 700,
-                          cursor: 'pointer',
-                          borderRadius: '16px',
-                          textTransform: 'uppercase',
-                          transition: 'all 0.2s ease',
-                          boxSizing: 'border-box'
-                        }}
-                      >
-                        Close
-                      </button>
+                      <div style={{ display: 'flex', gap: '8px' }}>
+                        {TIMELINE_LOCATIONS[selectedItem.id] && (
+                          <button
+                            onClick={() => onViewOnMap(selectedItem)}
+                            style={{
+                              background: 'transparent',
+                              color: tooltipTheme.text,
+                              border: `1px solid ${tooltipTheme.border}`,
+                              padding: '6px 14px',
+                              fontSize: '9px',
+                              fontFamily: '"Space Mono", monospace',
+                              fontWeight: 700,
+                              cursor: 'pointer',
+                              borderRadius: '16px',
+                              textTransform: 'uppercase',
+                              transition: 'all 0.2s ease',
+                              boxSizing: 'border-box',
+                              display: 'inline-flex',
+                              alignItems: 'center',
+                              gap: '6px'
+                            }}
+                          >
+                            <MapPin size={10} style={{ filter: isMapDarkMode ? 'none' : 'invert(1)' }} />
+                            Map
+                          </button>
+                        )}
+                        <button
+                          onClick={() => setSelectedItem(null)}
+                          style={{
+                            background: tooltipTheme.buttonBg,
+                            color: tooltipTheme.buttonText,
+                            border: `1px solid ${tooltipTheme.buttonBorder}`,
+                            padding: '6px 16px',
+                            fontSize: '9px',
+                            fontFamily: '"Space Mono", monospace',
+                            fontWeight: 700,
+                            cursor: 'pointer',
+                            borderRadius: '16px',
+                            textTransform: 'uppercase',
+                            transition: 'all 0.2s ease',
+                            boxSizing: 'border-box'
+                          }}
+                        >
+                          Close
+                        </button>
+                      </div>
                     </div>
                   </motion.div>
                 </motion.div>
