@@ -4617,7 +4617,7 @@ function App() {
                           }}
                         >
                           <Heart size={14} fill={userLikedIds.has(String(selectedFeature.id).replace(/[^a-zA-Z0-9_\-]/g, '_')) ? (isMapDarkMode ? "#000" : "#fff") : "none"} />
-                          <span>{userLikedIds.has(String(selectedFeature.id).replace(/[^a-zA-Z0-9_\-]/g, '_')) ? 'FAVORITED' : 'FAVORITE'} ({likes[String(selectedFeature.id).replace(/[^a-zA-Z0-9_\-]/g, '_')] || 0})</span>
+                          <span>{likes[String(selectedFeature.id).replace(/[^a-zA-Z0-9_\-]/g, '_')] || 0}</span>
                         </motion.button>
 
                         {TIMELINE_ITEMS.some(t => String(t.id) === String(selectedFeature.id)) && (
@@ -4628,7 +4628,6 @@ function App() {
                             style={{
                               display: 'flex',
                               alignItems: 'center',
-                              gap: '6px',
                               background: 'transparent',
                               color: isMapDarkMode ? '#fff' : '#000',
                               border: `1px solid ${isMapDarkMode ? '#fff' : '#000'}`,
@@ -4641,8 +4640,7 @@ function App() {
                               transition: 'all 0.2s ease'
                             }}
                           >
-                            <img src="/icons/icon-timeline.svg" style={{ width: '12px', height: '12px', filter: isMapDarkMode ? 'invert(1)' : 'none' }} alt="Timeline icon" />
-                            <span>VIEW ON TIMELINE</span>
+                            <span>TIMELINE VIEW</span>
                           </motion.button>
                         )}
                       </div>
