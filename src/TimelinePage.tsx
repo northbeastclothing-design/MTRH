@@ -1230,12 +1230,22 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
                       borderBottom: `1px solid ${tooltipTheme.borderLight}`, 
                       paddingBottom: '8px', 
                       margin: '0 0 12px 0', 
-                      color: era.color,
                       display: 'flex',
                       justifyContent: 'space-between',
                       alignItems: 'center'
                     }}>
-                      <span>{era.name}</span>
+                      <span style={{
+                        background: era.color,
+                        color: '#000000',
+                        padding: '2px 8px',
+                        borderRadius: '12px',
+                        fontSize: '8px',
+                        fontWeight: 'bold',
+                        letterSpacing: '1px',
+                        display: 'inline-block'
+                      }}>
+                        {era.name}
+                      </span>
                     </div>
 
                     {/* Name */}
