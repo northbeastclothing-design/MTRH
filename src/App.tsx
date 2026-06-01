@@ -2189,10 +2189,11 @@ function App() {
             type: 'Point',
             coordinates: [loc.lng, loc.lat],
             date: item.start,
-            description: `${item.description}${loc.locationName ? `\n\nLocation: ${loc.locationName}` : ''}`,
+            description: item.description,
             source: item.source || null,
             images: [],
-            isTimelinePin: true
+            isTimelinePin: true,
+            locationName: loc.locationName
           };
         }).filter(Boolean);
 
@@ -4693,11 +4694,14 @@ function App() {
                         <div style={{ fontFamily: '"Space Mono", monospace', fontWeight: '700', fontStyle: 'italic', fontSize: '10px', lineHeight: '22px' }}>
                           LOCATION: <span style={{ fontStyle: 'normal', fontWeight: '400' }}>{(() => {
                               if (!selectedFeature.coordinates) return 'UNKNOWN';
-                              if (selectedFeature.type === 'LineString') {
-                                const start = selectedFeature.coordinates[0];
-                                return `LINESTRING START: ${start[1].toFixed(4)}, ${start[0].toFixed(4)}`;
+                              const coordsStr = selectedFeature.type === 'LineString' 
+                                ? `LINESTRING START: ${selectedFeature.coordinates[0][1].toFixed(4)}, ${selectedFeature.coordinates[0][0].toFixed(4)}`
+                                : `${selectedFeature.coordinates[1].toFixed(4)}, ${selectedFeature.coordinates[0].toFixed(4)}`;
+                              
+                              if (selectedFeature.locationName) {
+                                return `${selectedFeature.locationName} (${coordsStr})`;
                               }
-                              return `${selectedFeature.coordinates[1].toFixed(4)}, ${selectedFeature.coordinates[0].toFixed(4)}`;
+                              return coordsStr;
                             })()}</span>
                         </div>
                         {selectedFeature.source && (
