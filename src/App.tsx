@@ -2,7 +2,7 @@ import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, animate } from 'motion/react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import { X, Heart, Play, Upload, Plus, Link, MapPin, Lock, Check, Trash2, ShieldAlert, ChevronDown, Shield, Eye } from 'lucide-react';
+import { X, Heart, Play, Upload, Plus, Link, MapPin, Lock, Check, Trash2, ShieldAlert, ChevronDown, Shield, Eye, Shuffle } from 'lucide-react';
 import { initializeApp } from 'firebase/app';
 import { getFirestore, doc, getDoc, setDoc, updateDoc, increment, collection, onSnapshot, serverTimestamp, query, where, addDoc, deleteDoc } from 'firebase/firestore';
 import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } from 'firebase/auth';
@@ -864,6 +864,7 @@ function App() {
   const lineLayersRef = useRef<string[]>([]);
   const selectedParkGeomRef = useRef<Record<string, { precise: boolean; score: number; features: any[] }>>({});
   const activeTravelPopupRef = useRef<mapboxgl.Popup | null>(null);
+  const hasRandomizedRef = useRef(false);
 
   const fadeOutPopup = (popup: mapboxgl.Popup | null) => {
     if (!popup) return;
@@ -2367,16 +2368,41 @@ function App() {
   }, []);
 
   useEffect(() => {
-    setActiveLayers(prev => {
-      const updated = { ...prev };
-      uniqueCategories.forEach(cat => { 
-        if (updated[cat] === undefined) {
-          updated[cat] = true;
-        } 
+    if (uniqueCategories.length > 0 && !hasRandomizedRef.current) {
+      hasRandomizedRef.current = true;
+      const count = Math.floor(Math.random() * 3) + 2; // Choose 2, 3, or 4 layers
+      const shuffled = [...uniqueCategories].sort(() => 0.5 - Math.random());
+      const selected = shuffled.slice(0, count);
+      
+      const initialActive: Record<string, boolean> = {};
+      uniqueCategories.forEach(cat => {
+        initialActive[cat] = selected.includes(cat);
       });
-      return updated;
-    });
+      setActiveLayers(initialActive);
+    } else if (uniqueCategories.length > 0) {
+      setActiveLayers(prev => {
+        const updated = { ...prev };
+        uniqueCategories.forEach(cat => {
+          if (updated[cat] === undefined) {
+            updated[cat] = false; // New categories default to off
+          }
+        });
+        return updated;
+      });
+    }
   }, [uniqueCategories]);
+
+  const handleRandomizeLayers = () => {
+    const count = Math.floor(Math.random() * 3) + 2; // Choose 2, 3, or 4 layers
+    const shuffled = [...uniqueCategories].sort(() => 0.5 - Math.random());
+    const selected = shuffled.slice(0, count);
+    
+    const newActive: Record<string, boolean> = {};
+    uniqueCategories.forEach(cat => {
+      newActive[cat] = selected.includes(cat);
+    });
+    setActiveLayers(newActive);
+  };
 
   const visibleData = useMemo(() => {
     const cleanQuery = searchQuery.trim().toLowerCase();
@@ -4287,6 +4313,34 @@ function App() {
                 )}
               </AnimatePresence>
               </div>
+
+              <motion.button
+                whileHover={{ scale: 1.02, backgroundColor: isMapDarkMode ? '#161616' : '#f0f0f0' }}
+                whileTap={{ scale: 0.98 }}
+                onClick={handleRandomizeLayers}
+                style={{
+                  width: '100%',
+                  marginTop: '12px',
+                  padding: '8px 12px',
+                  fontSize: '10px',
+                  fontWeight: '700',
+                  letterSpacing: '1px',
+                  fontFamily: '"Space Mono", monospace',
+                  border: `1px solid ${theme.border}`,
+                  borderRadius: '16px',
+                  cursor: 'pointer',
+                  background: 'none',
+                  color: theme.text,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '6px',
+                  transition: 'background-color 0.2s ease'
+                }}
+              >
+                <Shuffle size={12} color={theme.text} />
+                SHUFFLE LAYERS
+              </motion.button>
             </div>
 
             <div className="custom-scrollbar" style={{ flex: 1, padding: '0 0 15px 0', display: 'flex', flexDirection: 'column', textAlign: 'left' }}>
