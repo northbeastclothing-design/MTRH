@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { TIMELINE_ITEMS, TimelineItem, TIMELINE_LOCATIONS } from './timelineData';
-import { RotateCcw, MapPin } from 'lucide-react';
+import { RotateCcw, MapPin, Flag } from 'lucide-react';
 
 interface TimelinePageProps {
   theme: {
@@ -17,6 +17,7 @@ interface TimelinePageProps {
   selectedItem: TimelineItem | null;
   setSelectedItem: (item: TimelineItem | null) => void;
   onViewOnMap: (item: TimelineItem) => void;
+  onFlagItem?: (item: TimelineItem) => void;
 }
 
 const ERAS_CONFIG = [
@@ -92,7 +93,7 @@ const ERAS_CONFIG = [
   }
 ];
 
-export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSelectedItem, onViewOnMap }: TimelinePageProps) {
+export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSelectedItem, onViewOnMap, onFlagItem }: TimelinePageProps) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   
   // Viewport states: start and end year
@@ -631,7 +632,7 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
   // highlightColor is defined above recursively based on hovered item
 
   return (
-    <div style={{ flex: 1, display: 'flex', flexDirection: 'column', background: theme.bg, color: theme.text, overflow: 'hidden', borderTop: `1px solid ${theme.border}` }}>
+    <div style={{ flex: 1, display: 'flex', flexDirection: 'column', background: isMapDarkMode ? 'rgba(0, 0, 0, 0.85)' : 'rgba(255, 255, 255, 0.85)', color: theme.text, overflow: 'hidden', borderTop: `1px solid #000000`, position: 'relative' }}>
       
       {/* TIMELINE VIEWPORT SCROLLER (TOP/CENTER) */}
       <div 
@@ -1324,18 +1325,22 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
                     </p>
 
                     {/* Source and Close Button Row */}
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderTop: selectedItem.source ? `1px dashed ${tooltipTheme.borderLight}` : 'none', paddingTop: selectedItem.source ? '12px' : '0' }}>
-                      {selectedItem.source ? (
-                        <span style={{ fontSize: '8px', color: tooltipTheme.textDim, textTransform: 'uppercase' }}>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', borderTop: selectedItem.source ? `1px dashed ${tooltipTheme.borderLight}` : 'none', paddingTop: selectedItem.source ? '12px' : '0' }}>
+                      {selectedItem.source && (
+                        <span style={{ fontSize: '8px', color: tooltipTheme.textDim, textTransform: 'uppercase', textAlign: 'left', display: 'block', lineHeight: '12px' }}>
                           SRC: {selectedItem.source}
                         </span>
-                      ) : <div />}
+                      )}
                       
-                      <div style={{ display: 'flex', gap: '8px' }}>
+                      <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'stretch', width: '100%' }}>
                         {TIMELINE_LOCATIONS[selectedItem.id] && (
                           <button
                             onClick={() => onViewOnMap(selectedItem)}
                             style={{
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              flex: 1,
                               background: 'transparent',
                               color: tooltipTheme.text,
                               border: `1px solid ${tooltipTheme.text}`,
@@ -1347,15 +1352,49 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
                               borderRadius: '16px',
                               textTransform: 'uppercase',
                               transition: 'all 0.2s ease',
-                              boxSizing: 'border-box'
+                              boxSizing: 'border-box',
+                              whiteSpace: 'nowrap'
                             }}
                           >
                             MAP VIEW
                           </button>
                         )}
+                        {onFlagItem && (
+                          <button
+                            onClick={() => onFlagItem(selectedItem)}
+                            style={{
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              flex: 1,
+                              background: 'transparent',
+                              color: tooltipTheme.text,
+                              border: `1px solid ${tooltipTheme.text}`,
+                              padding: '6px 14px',
+                              fontSize: '9px',
+                              fontFamily: '"Space Mono", monospace',
+                              fontWeight: 700,
+                              cursor: 'pointer',
+                              borderRadius: '16px',
+                              textTransform: 'uppercase',
+                              transition: 'all 0.2s ease',
+                              boxSizing: 'border-box',
+                              gap: '6px',
+                              whiteSpace: 'nowrap'
+                            }}
+                            title="Flag/report inaccuracy"
+                          >
+                            <Flag size={11} />
+                            <span>FLAG</span>
+                          </button>
+                        )}
                         <button
                           onClick={() => setSelectedItem(null)}
                           style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            flex: 1,
                             background: tooltipTheme.buttonBg,
                             color: tooltipTheme.buttonText,
                             border: `1px solid ${tooltipTheme.buttonBorder}`,
@@ -1367,7 +1406,8 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
                             borderRadius: '16px',
                             textTransform: 'uppercase',
                             transition: 'all 0.2s ease',
-                            boxSizing: 'border-box'
+                            boxSizing: 'border-box',
+                            whiteSpace: 'nowrap'
                           }}
                         >
                           Close

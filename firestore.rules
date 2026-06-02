@@ -68,5 +68,22 @@ service cloud.firestore {
       allow update: if isAdmin();
       allow delete: if isAdmin();
     }
+
+    // Reports/Flags collection
+    match /reports/{reportId} {
+      allow read: if isAdmin();
+      allow create: if isValidId(reportId)
+                    && request.resource.data.status == 'pending'
+                    && request.resource.data.keys().hasAll(['pointId', 'pointName', 'pointCategory', 'reason', 'details', 'status', 'createdAt'])
+                    && request.resource.data.keys().size() == 7
+                    && request.resource.data.pointId is string && request.resource.data.pointId.size() > 0 && request.resource.data.pointId.size() <= 128
+                    && request.resource.data.pointName is string && request.resource.data.pointName.size() > 0 && request.resource.data.pointName.size() <= 200
+                    && request.resource.data.pointCategory is string && request.resource.data.pointCategory.size() > 0 && request.resource.data.pointCategory.size() <= 100
+                    && request.resource.data.reason is string && request.resource.data.reason.size() > 0 && request.resource.data.reason.size() <= 100
+                    && request.resource.data.details is string && request.resource.data.details.size() <= 2000
+                    && request.resource.data.createdAt == request.time;
+      allow update: if isAdmin();
+      allow delete: if isAdmin();
+    }
   }
 }

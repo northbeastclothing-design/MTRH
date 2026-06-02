@@ -339,6 +339,112 @@ async function startServer() {
     }
   });
 
+  // Inaccuracy Reporting API Endpoints
+  app.post("/api/reports/create", async (req, res) => {
+    try {
+      const { pointId, pointName, pointCategory, reason, details } = req.body;
+      if (!pointId || !pointName || !pointCategory || !reason) {
+        return res.status(400).json({ error: "Missing required report fields." });
+      }
+      if (!dbAdmin) {
+        return res.status(500).json({ error: "Firebase database not initialized on server." });
+      }
+
+      const reportId = `report_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`;
+      const reportData = {
+        pointId: String(pointId).trim(),
+        pointName: String(pointName).trim(),
+        pointCategory: String(pointCategory).trim(),
+        reason: String(reason).trim(),
+        details: (details || "").trim(),
+        status: 'pending',
+        createdAt: admin.firestore.FieldValue.serverTimestamp()
+      };
+
+      await dbAdmin.collection('reports').doc(reportId).set(reportData);
+
+      console.log(`Reports Server-Bypass: Created report ${reportId} for point ${pointId}`);
+      res.json({ success: true, id: reportId });
+    } catch (err: any) {
+      console.error("Server-side report creation failed:", err);
+      res.status(500).json({ error: err.message || "Failed to create report on server" });
+    }
+  });
+
+  app.post("/api/moderate/reports", async (req, res) => {
+    try {
+      const { passcode } = req.body;
+      if (passcode !== "MTRH2026") {
+        return res.status(403).json({ error: "BYPASS CODE DENIED." });
+      }
+      if (!dbAdmin) {
+        return res.status(500).json({ error: "Firebase database not initialized on server." });
+      }
+
+      const snapshot = await dbAdmin.collection('reports').get();
+      const docs: any[] = [];
+      snapshot.forEach(doc => {
+        const data = doc.data();
+        const createdAt = data.createdAt && typeof data.createdAt.toDate === 'function' 
+          ? data.createdAt.toDate().toISOString() 
+          : data.createdAt;
+          
+        docs.push({
+          id: doc.id,
+          ...data,
+          createdAt
+        });
+      });
+
+      // Sort by createdAt descending
+      docs.sort((a, b) => {
+        const dateA = a.createdAt ? new Date(a.createdAt).getTime() : 0;
+        const dateB = b.createdAt ? new Date(b.createdAt).getTime() : 0;
+        return dateB - dateA;
+      });
+
+      console.log(`Reports Server-Bypass: Returned ${docs.length} reports.`);
+      res.json({ success: true, reports: docs });
+    } catch (err: any) {
+      console.error("Server-side reports fetch failed:", err);
+      res.status(500).json({ error: err.message || "Failed to fetch reports on server" });
+    }
+  });
+
+  app.post("/api/moderate/report-action", async (req, res) => {
+    try {
+      const { reportId, action, passcode } = req.body;
+      if (passcode !== "MTRH2026") {
+        return res.status(403).json({ error: "BYPASS CODE DENIED." });
+      }
+      if (!reportId || !action) {
+        return res.status(400).json({ error: "Missing report ID or action." });
+      }
+      if (!dbAdmin) {
+        return res.status(500).json({ error: "Firebase database not initialized on server." });
+      }
+
+      const docRef = dbAdmin.collection('reports').doc(reportId);
+
+      if (action === 'resolve') {
+        await docRef.update({
+          status: 'resolved'
+        });
+        console.log(`Reports Server-Bypass: Resolved report ${reportId}`);
+        res.json({ success: true, status: 'resolved' });
+      } else if (action === 'delete') {
+        await docRef.delete();
+        console.log(`Reports Server-Bypass: Deleted report ${reportId}`);
+        res.json({ success: true, status: 'deleted' });
+      } else {
+        return res.status(400).json({ error: "Invalid action type. Expected 'resolve' or 'delete'." });
+      }
+    } catch (err: any) {
+      console.error("Server-side report action failed:", err);
+      res.status(500).json({ error: err.message || "Failed to execute report action on server" });
+    }
+  });
+
   // Image Proxy Route to bypass hotlinking and CORS
   app.get("/api/proxy-resource", async (req, res) => {
     const url = req.query.url as string;

@@ -2,7 +2,7 @@ import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, animate } from 'motion/react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import { X, Heart, Play, Upload, Plus, Link, MapPin, Lock, Check, Trash2, ShieldAlert, ChevronDown, Shield, Eye, Shuffle } from 'lucide-react';
+import { X, Heart, Play, Upload, Plus, Link, MapPin, Lock, Check, Trash2, ShieldAlert, ChevronDown, Shield, Eye, Shuffle, Flag, AlertTriangle } from 'lucide-react';
 import { initializeApp } from 'firebase/app';
 import { getFirestore, doc, getDoc, setDoc, updateDoc, increment, collection, onSnapshot, serverTimestamp, query, where, addDoc, deleteDoc } from 'firebase/firestore';
 import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } from 'firebase/auth';
@@ -10,6 +10,7 @@ import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChang
 import firebaseConfig from '../firebase-applet-config.json';
 
 import TimelinePage from './TimelinePage';
+import TermTreePage from './TermTreePage';
 import { TIMELINE_ITEMS, TIMELINE_LOCATIONS, BIBLICAL_TRAVEL_PATHS, Waypoint, TravelPath } from './timelineData';
 import { ARCHAEOLOGICAL_FINDS_DATA } from './archaeologyData';
 
@@ -861,6 +862,9 @@ const getMatchScore = (featName: string, targetName: string) => {
 function App() {
   const mapContainer = useRef<HTMLDivElement>(null);
   const mapRef = useRef<mapboxgl.Map | null>(null);
+  const bgMapContainer = useRef<HTMLDivElement>(null);
+  const bgMapRef = useRef<mapboxgl.Map | null>(null);
+
   const lineLayersRef = useRef<string[]>([]);
   const selectedParkGeomRef = useRef<Record<string, { precise: boolean; score: number; features: any[] }>>({});
   const activeTravelPopupRef = useRef<mapboxgl.Popup | null>(null);
@@ -896,7 +900,7 @@ function App() {
   const [isMapLoaded, setIsMapLoaded] = useState(false);
   const [isDataCompiled, setIsDataCompiled] = useState(false);
   const [showAboutModal, setShowAboutModal] = useState(true);
-  const [currentPage, setCurrentPage] = useState<'map' | 'timeline'>('map');
+  const [currentPage, setCurrentPage] = useState<'map' | 'timeline' | 'term-tree'>('map');
   const [selectedTimelineItem, setSelectedTimelineItem] = useState<any | null>(null);
   const [activeWaypointIndex, setActiveWaypointIndex] = useState<number | null>(null);
 
@@ -986,6 +990,7 @@ function App() {
   }, [searchQuery]);
 
   const handleGeocodeSelect = (result: any) => {
+    stopMainMapRotation();
     if (!mapRef.current) return;
     const [lng, lat] = result.center;
     mapRef.current.flyTo({
@@ -1118,8 +1123,19 @@ function App() {
   const [submittingRejectionId, setSubmittingRejectionId] = useState<string | null>(null);
   const [moderatorReloadTrigger, setModeratorReloadTrigger] = useState(0);
   const [isModMinimized, setIsModMinimized] = useState(false);
-  const [activeModTab, setActiveModTab] = useState<'pending' | 'approved'>('pending');
+  const [activeModTab, setActiveModTab] = useState<'pending' | 'approved' | 'reports'>('pending');
   const [submittingRevocationId, setSubmittingRevocationId] = useState<string | null>(null);
+
+  // Inaccuracy Reporting States
+  const [isReportOpen, setIsReportOpen] = useState(false);
+  const [reportedFeature, setReportedFeature] = useState<any>(null);
+  const [reportReason, setReportReason] = useState('Incorrect Coordinates / Location');
+  const [reportDetails, setReportDetails] = useState('');
+  const [reportSuccess, setReportSuccess] = useState<string | null>(null);
+  const [isSubmittingReport, setIsSubmittingReport] = useState(false);
+  const [reportError, setReportError] = useState<string | null>(null);
+  const [reports, setReports] = useState<any[]>([]);
+  const [submittingReportActionId, setSubmittingReportActionId] = useState<string | null>(null);
 
   // States for editing submissions
   const [editingSubId, setEditingSubId] = useState<string | null>(null);
@@ -2043,6 +2059,11 @@ function App() {
     darkModeRef.current = isMapDarkMode;
   }, [isMapDarkMode]);
 
+  const isMainMapRotatingRef = useRef(true);
+  const stopMainMapRotation = () => {
+    isMainMapRotatingRef.current = false;
+  };
+
   const MAP_STYLE_LIGHT = 'mapbox://styles/mapbox/light-v11';
   const MAP_STYLE_DARK = 'mapbox://styles/mapbox/dark-v11';
 
@@ -2171,6 +2192,175 @@ function App() {
       }
     };
   }, [isModeratorAuthenticated, moderatorReloadTrigger]);
+
+  // Listen to inaccuracy reports for moderators (similar to submissions)
+  useEffect(() => {
+    if (!isModeratorAuthenticated) {
+      setReports([]);
+      return;
+    }
+
+    let isMounted = true;
+    let fallbackInterval: any = null;
+
+    const fetchReportsFromServer = async () => {
+      try {
+        const response = await fetch('/api/moderate/reports', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ passcode: 'MTRH2026' })
+        });
+        if (!response.ok) {
+          throw new Error(`Server status ${response.status}`);
+        }
+        const data = await response.json();
+        if (isMounted) {
+          setReports(data.reports || []);
+        }
+      } catch (err: any) {
+        console.warn("Server-side reports fetch failed:", err);
+      }
+    };
+
+    // Try listening to firestore snapshot first
+    const q = collection(db, 'reports');
+    const unsubscribe = onSnapshot(q, (snapshot) => {
+      const reportsList: any[] = [];
+      snapshot.forEach((doc) => {
+        const data = doc.data();
+        const createdAt = data.createdAt && typeof data.createdAt.toDate === 'function'
+          ? data.createdAt.toDate().toISOString()
+          : data.createdAt;
+
+        reportsList.push({
+          id: doc.id,
+          ...data,
+          createdAt
+        });
+      });
+
+      // Sort by createdAt descending
+      reportsList.sort((a, b) => {
+        const dateA = a.createdAt ? new Date(a.createdAt).getTime() : 0;
+        const dateB = b.createdAt ? new Date(b.createdAt).getTime() : 0;
+        return dateB - dateA;
+      });
+
+      if (isMounted) {
+        setReports(reportsList);
+      }
+    }, (error) => {
+      console.warn("Could not load reports list directly from Firestore client. Switching to secure server proxy...", error);
+      fetchReportsFromServer();
+      if (isMounted && !fallbackInterval) {
+        fallbackInterval = setInterval(fetchReportsFromServer, 5000);
+      }
+    });
+
+    fetchReportsFromServer();
+
+    return () => {
+      isMounted = false;
+      unsubscribe();
+      if (fallbackInterval) {
+        clearInterval(fallbackInterval);
+      }
+    };
+  }, [isModeratorAuthenticated, moderatorReloadTrigger]);
+
+  const handleReportSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!reportedFeature) return;
+    
+    setIsSubmittingReport(true);
+    setReportError(null);
+    setReportSuccess(null);
+
+    const reportId = `report_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`;
+    const reportData = {
+      pointId: String(reportedFeature.id),
+      pointName: String(reportedFeature.name || reportedFeature.title || 'Unnamed Point'),
+      pointCategory: String(reportedFeature.category || reportedFeature.layer || 'General'),
+      reason: reportReason,
+      details: reportDetails.trim(),
+      status: 'pending',
+      createdAt: new Date().toISOString()
+    };
+
+    try {
+      // 1. Try server endpoint first
+      const response = await fetch('/api/reports/create', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(reportData)
+      });
+      if (!response.ok) {
+        const errData = await response.json();
+        throw new Error(errData.error || `Server status ${response.status}`);
+      }
+      setReportSuccess("INACCURACY FLAG REGISTERED. WE ARE INVESTIGATING.");
+      setReportDetails('');
+    } catch (err: any) {
+      console.warn("Server-side report submission failed, trying direct Firestore write:", err);
+      try {
+        // 2. Try client-side Firestore set
+        const reportDocRef = doc(db, 'reports', reportId);
+        await setDoc(reportDocRef, {
+          pointId: reportData.pointId,
+          pointName: reportData.pointName,
+          pointCategory: reportData.pointCategory,
+          reason: reportData.reason,
+          details: reportData.details,
+          status: 'pending',
+          createdAt: serverTimestamp()
+        });
+        setReportSuccess("INACCURACY FLAG REGISTERED (DIRECT ENTRY).");
+        setReportDetails('');
+      } catch (fallbackErr: any) {
+        console.error("Firestore report creation failed:", fallbackErr);
+        setReportError(`Transmission failed: ${fallbackErr.message || "Unknown write error"}`);
+      }
+    } finally {
+      setIsSubmittingReport(false);
+    }
+  };
+
+  const handleReportAction = async (reportId: string, action: 'resolve' | 'delete') => {
+    setSubmittingReportActionId(reportId);
+    setModeratorError(null);
+
+    try {
+      // 1. Try server endpoint first
+      const response = await fetch('/api/moderate/report-action', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ reportId, action, passcode: 'MTRH2026' })
+      });
+      if (!response.ok) {
+        const errData = await response.json();
+        throw new Error(errData.error || `Server status ${response.status}`);
+      }
+    } catch (err: any) {
+      console.warn("Server-side report action failed, falling back to direct Firestore:", err);
+      try {
+        // 2. Try client-side Firestore action
+        const reportDocRef = doc(db, 'reports', reportId);
+        if (action === 'resolve') {
+          await updateDoc(reportDocRef, {
+            status: 'resolved'
+          });
+        } else if (action === 'delete') {
+          await deleteDoc(reportDocRef);
+        }
+      } catch (fallbackErr: any) {
+        console.error("Firestore report action failed:", fallbackErr);
+        setModeratorError(`Moderation action failed: ${fallbackErr.message || "Check permissions."}`);
+      }
+    } finally {
+      setSubmittingReportActionId(null);
+      setModeratorReloadTrigger(prev => prev + 1);
+    }
+  };
 
   const handleLike = async (anomalyId: string | number) => {
     if (anomalyId === undefined || anomalyId === null) return;
@@ -2474,6 +2664,93 @@ function App() {
   }, [visibleData, uniqueCategories, likes]);
 
   useEffect(() => {
+    if (!mapboxgl.supported() || !bgMapContainer.current) return;
+
+    const bgMap = new mapboxgl.Map({
+      container: bgMapContainer.current,
+      style: darkModeRef.current ? 'mapbox://styles/mapbox/dark-v11' : 'mapbox://styles/mapbox/light-v11',
+      center: [0, 20],
+      zoom: 3.5, // 2x larger still than 2.5
+      projection: { name: 'globe' } as any,
+      interactive: false,
+      attributionControl: false
+    });
+    bgMapRef.current = bgMap;
+
+    const hideLabels = () => {
+      try {
+        const style = bgMap.getStyle();
+        if (style && style.layers) {
+          for (const layer of style.layers) {
+            if (layer.type === 'symbol' || layer.id.includes('label') || layer.id.includes('place') || layer.id.includes('country') || layer.id.includes('state')) {
+              const currentVisibility = bgMap.getLayoutProperty(layer.id, 'visibility');
+              if (currentVisibility !== 'none') {
+                bgMap.setLayoutProperty(layer.id, 'visibility', 'none');
+              }
+            }
+          }
+        }
+      } catch (e) {
+        // Ignore style manipulation errors
+      }
+    };
+
+    bgMap.on('style.load', () => {
+      const isDark = darkModeRef.current;
+      bgMap.setFog({
+        color: isDark ? 'rgb(4, 4, 16)' : 'rgb(240, 243, 250)',
+        'high-color': isDark ? 'rgb(12, 12, 36)' : 'rgb(200, 215, 240)',
+        'space-color': isDark ? 'rgb(2, 2, 8)' : 'rgb(245, 247, 252)',
+        'horizon-blend': 0.15,
+        'star-intensity': isDark ? 0.35 : 0.0
+      });
+      hideLabels();
+    });
+
+    bgMap.on('styledata', hideLabels);
+    bgMap.on('idle', hideLabels);
+
+    if (bgMap.isStyleLoaded()) {
+      hideLabels();
+    }
+
+    let animationFrameId: number;
+    const rotateSpeed = -0.0125; // 3x slower rotation, halved again (from -0.025 to -0.0125)
+
+    const rotate = () => {
+      if (bgMapRef.current) {
+        try {
+          const center = bgMapRef.current.getCenter();
+          center.lng = (center.lng + rotateSpeed) % 360;
+          bgMapRef.current.setCenter(center);
+        } catch (e) {
+          // Ignore center manipulation error on unmount
+        }
+        animationFrameId = requestAnimationFrame(rotate);
+      }
+    };
+
+    bgMap.once('load', () => {
+      rotate();
+    });
+
+    return () => {
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+      }
+      if (bgMapRef.current) {
+        bgMapRef.current.remove();
+        bgMapRef.current = null;
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!bgMapRef.current) return;
+    bgMapRef.current.setStyle(isMapDarkMode ? 'mapbox://styles/mapbox/dark-v11' : 'mapbox://styles/mapbox/light-v11');
+  }, [isMapDarkMode]);
+
+  useEffect(() => {
     if (!mapboxgl.supported() || !mapContainer.current) return;
     
     const map = new mapboxgl.Map({
@@ -2481,12 +2758,42 @@ function App() {
       style: isMapDarkMode ? MAP_STYLE_DARK : MAP_STYLE_LIGHT, 
       center: [-98.5795, 39.8283], 
       zoom: 4.0,
+      projection: { name: 'globe' } as any,
       trackResize: true
     });
     mapRef.current = map;
 
+    // Stop main map rotation on any user interaction
+    map.on('mousedown', stopMainMapRotation);
+    map.on('touchstart', stopMainMapRotation);
+    map.on('zoomstart', stopMainMapRotation);
+    map.on('dragstart', stopMainMapRotation);
+    map.on('rotatestart', stopMainMapRotation);
+    map.on('movestart', (e) => {
+      if (e.originalEvent) {
+        stopMainMapRotation();
+      }
+    });
+
+    let mainMapAnimFrameId: number;
+    const rotateSpeed = -0.0125; // Same rotation speed (half of -0.025)
+
+    const rotateMainMap = () => {
+      if (mapRef.current && isMainMapRotatingRef.current) {
+        try {
+          const center = mapRef.current.getCenter();
+          center.lng = (center.lng + rotateSpeed) % 360;
+          mapRef.current.setCenter(center);
+        } catch (e) {
+          // Ignore center manipulation error on unmount
+        }
+        mainMapAnimFrameId = requestAnimationFrame(rotateMainMap);
+      }
+    };
+
     map.once('load', () => {
       setIsMapLoaded(true);
+      rotateMainMap();
     });
     
     map.on('click', (e) => {
@@ -2661,7 +2968,15 @@ function App() {
       });
     });
 
-    return () => { if (mapRef.current) { mapRef.current.remove(); mapRef.current = null; } };
+    return () => {
+      if (mainMapAnimFrameId) {
+        cancelAnimationFrame(mainMapAnimFrameId);
+      }
+      if (mapRef.current) {
+        mapRef.current.remove();
+        mapRef.current = null;
+      }
+    };
   }, []);
 
   useEffect(() => {
@@ -2956,6 +3271,7 @@ function App() {
   };
 
   const handleLocationItemClick = (feature: any) => {
+    stopMainMapRotation();
     if (!feature || !feature.coordinates || !mapRef.current) return;
     setSelectedFeature(feature);
     setIsRightCollapsed(false);
@@ -3828,7 +4144,6 @@ function App() {
         )}
       </AnimatePresence>
 
-      {/* MAPVIEW APP SCREEN CONTAINER */}
       <div 
         style={{ 
           height: '100vh', 
@@ -3840,6 +4155,23 @@ function App() {
           transition: 'background-color 0.3s ease'
         }}
       >
+        
+        {/* GLOBAL BACKGROUND GLOBE MAP (VISIBLE ON TIMELINE & TERM-TREE PAGES) */}
+        <div
+          ref={bgMapContainer}
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            pointerEvents: 'none',
+            opacity: (currentPage === 'term-tree' || currentPage === 'timeline') ? 1.0 : 0,
+            zIndex: 1,
+            transition: 'opacity 0.3s ease, visibility 0.3s ease',
+            visibility: (currentPage === 'term-tree' || currentPage === 'timeline') ? 'visible' : 'hidden'
+          }}
+        />
         
         {/* CENTER COMPONENT: FULL SCREEN MAP BASE LAYER - MOVED TO ROOT FOR TRANSPARENT HEADER */}
         <motion.div 
@@ -3876,7 +4208,7 @@ function App() {
             zIndex: 20, 
             pointerEvents: 'none', 
             position: 'relative',
-            background: currentPage === 'map' ? 'transparent' : (isMapDarkMode ? '#000000' : '#ffffff'),
+            background: (currentPage === 'map' || currentPage === 'term-tree' || currentPage === 'timeline') ? 'transparent' : (isMapDarkMode ? '#000000' : '#ffffff'),
             transition: 'background-color 0.3s ease'
           }}
         >
@@ -3959,6 +4291,29 @@ function App() {
                 }} />
               )}
             </div>
+            <motion.button 
+              onClick={() => setCurrentPage('term-tree')}
+              whileHover={{
+                background: currentPage === 'term-tree'
+                  ? (isMapDarkMode ? '#cccccc' : '#333333')
+                  : (isMapDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.05)')
+              }}
+              style={{
+                background: currentPage === 'term-tree' ? theme.text : 'transparent',
+                color: currentPage === 'term-tree' ? theme.bg : theme.text,
+                border: 'none',
+                padding: '6px 18px',
+                fontSize: '10px',
+                fontFamily: '"Space Mono", monospace',
+                fontWeight: 700,
+                cursor: 'pointer',
+                borderRadius: '16px',
+                textTransform: 'uppercase',
+                transition: 'all 0.2s ease'
+              }}
+            >
+              Term Tree
+            </motion.button>
           </div>
 
           {/* THEME TOGGLE: FIXED TO RIGHT */}
@@ -5112,7 +5467,7 @@ function App() {
                         </div>
                       )}
 
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '12px', marginBottom: '16px' }}>
                         <motion.button
                           whileTap={{ scale: 0.95 }}
                           whileHover={{ scale: 1.05 }}
@@ -5131,11 +5486,45 @@ function App() {
                             fontWeight: 'bold',
                             fontFamily: '"Space Mono", monospace',
                             opacity: userLikedIds.has(String(selectedFeature.id).replace(/[^a-zA-Z0-9_\-]/g, '_')) ? 1 : 0.7,
-                            transition: 'opacity 0.2s ease'
+                            transition: 'opacity 0.2s ease',
+                            whiteSpace: 'nowrap'
                           }}
                         >
                           <Heart size={14} fill={userLikedIds.has(String(selectedFeature.id).replace(/[^a-zA-Z0-9_\-]/g, '_')) ? (isMapDarkMode ? "#000" : "#fff") : "none"} />
                           <span>{likes[String(selectedFeature.id).replace(/[^a-zA-Z0-9_\-]/g, '_')] || 0}</span>
+                        </motion.button>
+
+                        <motion.button
+                          whileTap={{ scale: 0.95 }}
+                          whileHover={{ scale: 1.05 }}
+                          onClick={() => {
+                            setReportedFeature(selectedFeature);
+                            setReportReason('Incorrect Coordinates / Location');
+                            setReportDetails('');
+                            setReportSuccess(null);
+                            setReportError(null);
+                            setIsReportOpen(true);
+                          }}
+                          style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '6px',
+                            background: 'transparent',
+                            color: isMapDarkMode ? '#fff' : '#000',
+                            border: `1px solid ${isMapDarkMode ? '#fff' : '#000'}`,
+                            padding: '6px 12px',
+                            borderRadius: '16px',
+                            cursor: 'pointer',
+                            fontSize: '11px',
+                            fontWeight: 'bold',
+                            fontFamily: '"Space Mono", monospace',
+                            transition: 'all 0.2s ease',
+                            whiteSpace: 'nowrap'
+                          }}
+                          title="Report inaccuracy / flag this point"
+                        >
+                          <Flag size={13} />
+                          <span>FLAG</span>
                         </motion.button>
 
                         {TIMELINE_ITEMS.some(t => String(t.id) === String(selectedFeature.id)) && (
@@ -5155,7 +5544,8 @@ function App() {
                               fontSize: '11px',
                               fontWeight: 'bold',
                               fontFamily: '"Space Mono", monospace',
-                              transition: 'all 0.2s ease'
+                              transition: 'all 0.2s ease',
+                              whiteSpace: 'nowrap'
                             }}
                           >
                             <span>TIMELINE VIEW</span>
@@ -6001,6 +6391,67 @@ function App() {
             selectedItem={selectedTimelineItem}
             setSelectedItem={setSelectedTimelineItem}
             onViewOnMap={handleViewOnMap}
+            onFlagItem={(item) => {
+              setReportedFeature(item);
+              setReportReason('Incorrect Coordinates / Location');
+              setReportDetails('');
+              setReportSuccess(null);
+              setReportError(null);
+              setIsReportOpen(true);
+            }}
+          />
+        </div>
+
+        {/* Term Tree Panel */}
+        <div
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            display: 'flex',
+            flexDirection: 'column',
+            overflow: 'hidden',
+            width: '100%',
+            height: '100%',
+            pointerEvents: currentPage === 'term-tree' ? 'auto' : 'none',
+            visibility: currentPage === 'term-tree' ? 'visible' : 'hidden',
+            opacity: currentPage === 'term-tree' ? 1 : 0,
+            transition: 'opacity 0.3s ease, visibility 0.3s ease',
+            zIndex: currentPage === 'term-tree' ? 12 : 0
+          }}
+        >
+          <TermTreePage
+            theme={theme}
+            isMapDarkMode={isMapDarkMode}
+            onViewOnMap={(layerName, featureSearchTerm) => {
+              stopMainMapRotation();
+              setCurrentPage('map');
+              // Enable the layer on the map
+              setActiveLayers(prev => ({
+                ...prev,
+                [layerName]: true
+              }));
+              
+              if (featureSearchTerm) {
+                // Set map search query and wait to fly
+                setSearchQuery(featureSearchTerm);
+                // Also search in pointsAndLinesData to select the feature
+                const mapRecord = combinedPointsAndLinesData.find(r => 
+                  String(r.name).toLowerCase().includes(featureSearchTerm.toLowerCase()) ||
+                  String(r.category) === layerName
+                );
+                if (mapRecord) {
+                  setTimeout(() => {
+                    handleLocationItemClick(mapRecord);
+                  }, 100);
+                }
+              }
+            }}
+            onViewOnTimeline={(timelineId) => {
+              handleViewOnTimeline(timelineId);
+            }}
           />
         </div>
       </div>
@@ -6531,7 +6982,7 @@ function App() {
               style={{
                 backgroundColor: '#ffffff',
                 width: '671px',
-                height: '476px',
+                height: '530px',
                 position: 'relative',
                 textAlign: 'center',
                 boxShadow: '0 20px 50px rgba(0,0,0,0.5)',
@@ -6620,10 +7071,23 @@ function App() {
                 lineHeight: '20px',
                 color: '#000000',
                 width: '570px',
-                marginBottom: '30px',
+                marginBottom: '16px',
                 textAlign: 'center'
               }}>
-                We are mapping the weird. We are searching for patterns & parallels. From giant bones, to UFOs, to cryptids we are looking at them as a whole to see what transpires. This is forever a work in progress and we would love your help! Email us with your findings, data, map pins, etc.
+                We are mapping the weird. We are searching for patterns & parallels. From giant bones, to UFOs, to cryptids we are looking at them as a whole to see how they converge. This is forever a work in progress and we would love your help and input!
+              </p>
+
+              <p style={{
+                fontFamily: '"Space Mono", monospace',
+                fontSize: '11px',
+                lineHeight: '18px',
+                color: '#666666',
+                width: '570px',
+                marginBottom: '30px',
+                textAlign: 'center',
+                fontStyle: 'italic'
+              }}>
+                "It is the glory of God to conceal a thing: but the honour of kings is to search out a matter. - Proverbs 25:2"
               </p>
 
               <button 
@@ -7469,6 +7933,215 @@ function App() {
         )}
       </AnimatePresence>
 
+      {/* INACCURACY REPORT MODAL */}
+      <AnimatePresence>
+        {isReportOpen && reportedFeature && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            style={{
+              position: 'fixed',
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              background: 'rgba(0, 0, 0, 0.7)',
+              backdropFilter: 'blur(4px)',
+              zIndex: 99999,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: '20px'
+            }}
+          >
+            <motion.div
+              initial={{ scale: 0.95, y: 20 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.95, y: 20 }}
+              style={{
+                width: '100%',
+                maxWidth: '480px',
+                background: isMapDarkMode ? 'rgba(18, 18, 18, 0.85)' : 'rgba(255, 255, 255, 0.9)',
+                border: `1.5px solid ${isMapDarkMode ? '#ef4444' : '#b91c1c'}`,
+                backdropFilter: 'blur(20px)',
+                borderRadius: '8px',
+                padding: '24px',
+                color: theme.text,
+                fontFamily: '"Space Mono", monospace',
+                boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.5)'
+              }}
+            >
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px', borderBottom: `1px solid ${theme.border}`, paddingBottom: '12px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <Flag size={18} style={{ color: isMapDarkMode ? '#ef4444' : '#b91c1c' }} />
+                  <span style={{ fontWeight: 'bold', fontSize: '14px', letterSpacing: '1px', textTransform: 'uppercase' }}>
+                    FLAG ANOMALY INACCURACY
+                  </span>
+                </div>
+                <button
+                  onClick={() => setIsReportOpen(false)}
+                  style={{ background: 'transparent', border: 'none', color: theme.text, cursor: 'pointer', padding: 0, display: 'flex', alignItems: 'center' }}
+                >
+                  <X size={18} />
+                </button>
+              </div>
+
+              {reportSuccess ? (
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '16px', padding: '24px 0', textAlign: 'center' }}>
+                  <div style={{ width: '48px', height: '48px', borderRadius: '50%', background: 'rgba(0, 204, 0, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#00cc00', margin: '0 auto' }}>
+                    <Check size={28} />
+                  </div>
+                  <div style={{ fontSize: '11px', lineHeight: '20px', color: '#00cc00', fontWeight: 'bold', textTransform: 'uppercase' }}>
+                    {reportSuccess}
+                  </div>
+                  <button
+                    onClick={() => setIsReportOpen(false)}
+                    style={{
+                      background: theme.text,
+                      color: theme.bg,
+                      border: 'none',
+                      padding: '0 24px',
+                      height: '32px',
+                      borderRadius: '16px',
+                      fontSize: '9px',
+                      fontWeight: 700,
+                      cursor: 'pointer',
+                      fontFamily: '"Space Mono", monospace',
+                      marginTop: '8px'
+                    }}
+                  >
+                    CLOSE WINDOW
+                  </button>
+                </div>
+              ) : (
+                <form onSubmit={handleReportSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                  <div style={{ fontSize: '10px', color: theme.textDim, textTransform: 'uppercase', lineHeight: '15px' }}>
+                    You are flagging: <strong style={{ color: theme.text }}>{reportedFeature.name || reportedFeature.title || 'Unnamed Point'}</strong>
+                    <br />
+                    Layer: <strong style={{ color: theme.text }}>{reportedFeature.category || reportedFeature.layer || 'General'}</strong>
+                  </div>
+
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                    <label style={{ fontSize: '9px', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+                      Reason for Report
+                    </label>
+                    <div style={{ position: 'relative' }}>
+                      <select
+                        value={reportReason}
+                        onChange={(e) => setReportReason(e.target.value)}
+                        style={{
+                          width: '100%',
+                          height: '36px',
+                          background: isMapDarkMode ? '#000000' : '#ffffff',
+                          color: theme.text,
+                          border: `1.5px solid ${theme.border}`,
+                          borderRadius: '4px',
+                          padding: '0 12px',
+                          fontSize: '11px',
+                          fontFamily: '"Space Mono", monospace',
+                          appearance: 'none',
+                          cursor: 'pointer'
+                        }}
+                      >
+                        <option value="Incorrect Coordinates / Location">Incorrect Coordinates / Location</option>
+                        <option value="Inaccurate Description">Inaccurate Description</option>
+                        <option value="Broken Link / Image">Broken Link / Image</option>
+                        <option value="Duplicate Point">Duplicate Point</option>
+                        <option value="Other / Wrong Layer">Other / Wrong Layer</option>
+                      </select>
+                      <div style={{ position: 'absolute', right: '12px', top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none', color: theme.textDim }}>
+                        <ChevronDown size={14} />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                    <label style={{ fontSize: '9px', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+                      Supporting Details (Inaccuracy description)
+                    </label>
+                    <textarea
+                      required
+                      placeholder="Please detail what is incorrect about this record, including correct coordinates, links, or references if possible..."
+                      value={reportDetails}
+                      onChange={(e) => setReportDetails(e.target.value)}
+                      maxLength={2000}
+                      style={{
+                        width: '100%',
+                        height: '110px',
+                        background: isMapDarkMode ? '#000000' : '#ffffff',
+                        color: theme.text,
+                        border: `1.5px solid ${theme.border}`,
+                        borderRadius: '4px',
+                        padding: '10px 12px',
+                        fontSize: '11px',
+                        fontFamily: '"Space Mono", monospace',
+                        resize: 'none',
+                        boxSizing: 'border-box'
+                      }}
+                    />
+                  </div>
+
+                  {reportError && (
+                    <div style={{ color: '#ff3333', fontSize: '10px', fontWeight: 'bold', border: '1px solid #ff3333', padding: '8px', background: 'rgba(255,0,0,0.02)' }}>
+                      {reportError}
+                    </div>
+                  )}
+
+                  <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '12px', borderTop: `1px solid ${theme.border}`, paddingTop: '16px' }}>
+                    <button
+                      type="button"
+                      onClick={() => setIsReportOpen(false)}
+                      style={{
+                        background: 'transparent',
+                        color: theme.text,
+                        border: `1px solid ${theme.border}`,
+                        padding: '0 20px',
+                        height: '32px',
+                        borderRadius: '16px',
+                        fontSize: '9px',
+                        fontWeight: 700,
+                        cursor: 'pointer',
+                        fontFamily: '"Space Mono", monospace',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        boxSizing: 'border-box'
+                      }}
+                    >
+                      CANCEL
+                    </button>
+                    <button
+                      type="submit"
+                      disabled={isSubmittingReport}
+                      style={{
+                        background: isMapDarkMode ? '#ef4444' : '#b91c1c',
+                        color: '#ffffff',
+                        border: 'none',
+                        padding: '0 24px',
+                        height: '32px',
+                        borderRadius: '16px',
+                        fontSize: '9px',
+                        fontWeight: 700,
+                        cursor: isSubmittingReport ? 'not-allowed' : 'pointer',
+                        fontFamily: '"Space Mono", monospace',
+                        opacity: isSubmittingReport ? 0.6 : 1,
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        boxSizing: 'border-box'
+                      }}
+                    >
+                      {isSubmittingReport ? "TRANSMITTING..." : "SUBMIT REPORT"}
+                    </button>
+                  </div>
+                </form>
+              )}
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* MODERATOR CONSOLE OVERLAY */}
       <AnimatePresence>
         {isModeratorOpen && (
@@ -7749,9 +8422,26 @@ function App() {
                     >
                       APPROVED INTEL AUDIT ({approvedSubmissions.length})
                     </button>
+                    <button
+                      onClick={() => setActiveModTab('reports')}
+                      style={{
+                        padding: '10px 16px',
+                        fontSize: '10px',
+                        fontWeight: 'bold',
+                        fontFamily: '"Space Mono", monospace',
+                        background: activeModTab === 'reports' ? (isMapDarkMode ? 'rgba(255, 204, 0, 0.1)' : 'rgba(0,0,0,0.05)') : 'transparent',
+                        color: activeModTab === 'reports' ? (isMapDarkMode ? '#ffcc00' : '#000000') : (isMapDarkMode ? '#999999' : '#666666'),
+                        border: 'none',
+                        borderBottom: activeModTab === 'reports' ? (isMapDarkMode ? '2.5px solid #ffcc00' : '2.5px solid #000000') : '2.5px solid transparent',
+                        cursor: 'pointer',
+                        letterSpacing: '0.5px'
+                      }}
+                    >
+                      INACCURACY REPORTS ({reports.filter(r => r.status === 'pending').length})
+                    </button>
                   </div>
 
-                  {activeModTab === 'pending' ? (
+                  {activeModTab === 'pending' && (
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
                       <span style={{ fontSize: '9px', color: isMapDarkMode ? theme.textDim : '#000000', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
                         SUBMISSIONS PENDING FORMAL DECLASSIFICATION APPROVAL:
@@ -8010,7 +8700,9 @@ function App() {
                         </div>
                       )}
                     </div>
-                  ) : (
+                  )}
+
+                  {activeModTab === 'approved' && (
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
                       <span style={{ fontSize: '9px', color: isMapDarkMode ? theme.textDim : '#000000', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
                         APPROVED INTEL AUDIT LOG (REVOKE INTEL BACK TO PENDING SCREEN OR PURGE WRONG ENTRIES):
@@ -8266,6 +8958,132 @@ function App() {
                                   </div>
                                 </>
                               )}
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  )}
+
+                  {activeModTab === 'reports' && (
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                      <span style={{ fontSize: '9px', color: isMapDarkMode ? theme.textDim : '#000000', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+                        INACCURACY REPORTS LOG:
+                      </span>
+
+                      {reports.length === 0 ? (
+                        <div style={{ padding: '40px 0', textAlign: 'center', border: `1px dashed ${theme.borderLight}`, color: isMapDarkMode ? theme.textDim : '#000000', fontSize: '11px', fontWeight: 'bold' }}>
+                          NO INACCURACY REPORTS CURRENTLY REGISTERED.
+                        </div>
+                      ) : (
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', maxHeight: '50vh', overflowY: 'auto', paddingRight: '4px' }}>
+                          {reports.map((report) => (
+                            <div 
+                              key={report.id} 
+                              style={{ 
+                                border: `1.5px solid ${report.status === 'resolved' ? '#00cc00' : theme.border}`, 
+                                padding: '16px', 
+                                backgroundColor: isMapDarkMode ? 'rgba(255,255,255,0.02)' : '#ffffff',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                gap: '12px',
+                                boxShadow: isMapDarkMode ? 'none' : '0 2px 8px rgba(0,0,0,0.05)'
+                              }}
+                            >
+                              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                                <div>
+                                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
+                                    <h5 style={{ margin: 0, fontSize: '13px', fontWeight: 'bold', color: theme.text }}>
+                                      {report.pointName}
+                                    </h5>
+                                    <span style={{ fontSize: '8px', padding: '2px 6px', background: layerColors[report.pointCategory] || '#e5e5e5', color: '#000', borderRadius: '4px', textTransform: 'uppercase', fontFamily: '"Space Mono", monospace', fontWeight: 'bold' }}>
+                                      {report.pointCategory}
+                                    </span>
+                                    <span style={{ 
+                                      fontSize: '8px', 
+                                      padding: '2px 6px', 
+                                      background: report.status === 'resolved' ? 'rgba(0, 204, 0, 0.15)' : 'rgba(239, 68, 68, 0.15)', 
+                                      color: report.status === 'resolved' ? '#00cc00' : '#ef4444', 
+                                      border: `1px solid ${report.status === 'resolved' ? '#00cc00' : '#ef4444'}`,
+                                      borderRadius: '4px', 
+                                      textTransform: 'uppercase', 
+                                      fontFamily: '"Space Mono", monospace', 
+                                      fontWeight: 'bold' 
+                                    }}>
+                                      {report.status}
+                                    </span>
+                                  </div>
+                                  <div style={{ fontSize: '9px', color: theme.textDim, fontFamily: '"Space Mono", monospace' }}>
+                                    TARGET ID: {report.pointId} | REPORT ID: {report.id}
+                                  </div>
+                                </div>
+                                <span style={{ fontSize: '10px', color: theme.textDim, whiteSpace: 'nowrap' }}>
+                                  {report.createdAt ? new Date(report.createdAt).toLocaleDateString() : 'N/A'}
+                                </span>
+                              </div>
+
+                              <div style={{ padding: '10px', background: isMapDarkMode ? 'rgba(0,0,0,0.2)' : 'rgba(0,0,0,0.02)', borderLeft: `3px solid ${isMapDarkMode ? '#ef4444' : '#b91c1c'}`, fontSize: '11px', lineHeight: '16px', color: theme.text }}>
+                                <div style={{ fontWeight: 'bold', fontSize: '10px', textTransform: 'uppercase', color: isMapDarkMode ? '#ef4444' : '#b91c1c', marginBottom: '4px' }}>
+                                  REASON: {report.reason}
+                                </div>
+                                {report.details || <em style={{ color: theme.textDim }}>No supporting details provided.</em>}
+                              </div>
+
+                              <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '8px', borderTop: `1px solid ${theme.borderLight}`, paddingTop: '12px' }}>
+                                <button
+                                  disabled={submittingReportActionId !== null}
+                                  onClick={async () => {
+                                    const confirmed = window.confirm("Are you sure you want to permanently delete this report?");
+                                    if (!confirmed) return;
+                                    await handleReportAction(report.id, 'delete');
+                                  }}
+                                  style={{
+                                    background: 'transparent',
+                                    color: isMapDarkMode ? '#ff3333' : '#d32f2f',
+                                    border: isMapDarkMode ? '1px solid #ff3333' : '1.5px solid #d32f2f',
+                                    padding: '0 16px',
+                                    height: '32px',
+                                    borderRadius: '16px',
+                                    fontSize: '9px',
+                                    fontFamily: '"Space Mono", monospace',
+                                    fontWeight: 700,
+                                    cursor: 'pointer',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    boxSizing: 'border-box'
+                                  }}
+                                >
+                                  {submittingReportActionId === report.id ? "DELETING..." : "DELETE REPORT"}
+                                </button>
+                                
+                                {report.status === 'pending' && (
+                                  <button
+                                    disabled={submittingReportActionId !== null}
+                                    onClick={async () => {
+                                      await handleReportAction(report.id, 'resolve');
+                                    }}
+                                    style={{
+                                      background: isMapDarkMode ? '#00cc00' : '#000000',
+                                      color: isMapDarkMode ? '#000000' : '#ffffff',
+                                      border: `1.5px solid ${isMapDarkMode ? '#00cc00' : '#000000'}`,
+                                      padding: '0 16px',
+                                      height: '32px',
+                                      borderRadius: '16px',
+                                      fontSize: '9px',
+                                      fontFamily: '"Space Mono", monospace',
+                                      fontWeight: 700,
+                                      cursor: 'pointer',
+                                      display: 'flex',
+                                      alignItems: 'center',
+                                      justifyContent: 'center',
+                                      boxSizing: 'border-box'
+                                    }}
+                                  >
+                                    {submittingReportActionId === report.id ? "RESOLVING..." : "MARK RESOLVED"}
+                                  </button>
+                                )}
+                              </div>
                             </div>
                           ))}
                         </div>
