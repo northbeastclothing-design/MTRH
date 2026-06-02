@@ -10,6 +10,8 @@ export interface TimelineItem {
   fatherId?: string; // For lineage tracking
   motherId?: string; // For mother lineage tracking
   spouseId?: string; // For spouse relationship tracking
+  isPeopleGroup?: boolean;
+  subLabel?: string;
 }
 
 export const TIMELINE_ITEMS: TimelineItem[] = [
@@ -2145,6 +2147,98 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     description: 'The gigantic offspring of the union between the Watchers and human daughters. They consumed the labor of men and filled the earth with violence, leading to the divine decree of the Flood.',
     source: 'Genesis 6:4, Book of Enoch 7',
     fatherId: 'semjaza'
+  },
+  {
+    id: 'rephaim',
+    name: 'Rephaim',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -2100,
+    end: -1000,
+    description: 'An ancient race of giants who inhabited Canaan, Bashan, and Moab. Associated with King Og of Bashan and the valley of Rephaim.',
+    source: 'Genesis 14:5, Deuteronomy 2:11, 3:11',
+    isPeopleGroup: true,
+    subLabel: 'Possible Nephilim Bloodline'
+  },
+  {
+    id: 'anakim',
+    name: 'Anakim',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -1900,
+    end: -1400,
+    description: 'A formidable race of giants descended from Anak. They inhabited the hill country of Canaan, particularly Hebron (Kiriath-Arba).',
+    source: 'Numbers 13:22, Deuteronomy 2:10-11, Joshua 14:15',
+    isPeopleGroup: true,
+    subLabel: 'Possible Nephilim Bloodline'
+  },
+  {
+    id: 'emim',
+    name: 'Emim',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -2100,
+    end: -1400,
+    description: 'An ancient giant people who originally inhabited the land of Moab. Described as "a people great, and many, and tall, as the Anakim."',
+    source: 'Genesis 14:5, Deuteronomy 2:10-11',
+    isPeopleGroup: true,
+    subLabel: 'Possible Nephilim Bloodline'
+  },
+  {
+    id: 'zamzummim',
+    name: 'Zamzummim',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -2100,
+    end: -1400,
+    description: 'An ancient giant tribe also known as Zuzim, who inhabited the region of Ammon. Described as "a people great, and many, and tall, as the Anakim."',
+    source: 'Genesis 14:5, Deuteronomy 2:20-21',
+    isPeopleGroup: true,
+    subLabel: 'Possible Nephilim Bloodline'
+  },
+  {
+    id: 'horites',
+    name: 'Horites',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -2100,
+    end: -1400,
+    description: 'The ancient cave-dwelling inhabitants of Mount Seir (Edom) before being dispossessed and succeeded by the descendants of Esau (Edomites).',
+    source: 'Genesis 14:6, 36:20-30, Deuteronomy 2:12',
+    isPeopleGroup: true
+  },
+  {
+    id: 'avim',
+    name: 'Avim',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -2100,
+    end: -1400,
+    description: 'The early inhabitants of southwest Canaan (near Gaza) who dwelt in villages as far as Hazerim, later destroyed and replaced by the Caphtorim (Philistines).',
+    source: 'Deuteronomy 2:23, Joshua 13:3',
+    isPeopleGroup: true
+  },
+  {
+    id: 'perizzites',
+    name: 'Perizzites',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -2089,
+    end: -950,
+    description: 'A Canaanite people group who lived in the forested hill country of Ephraim and Judah. Mentioned regularly as inhabitants of the Promised Land.',
+    source: 'Genesis 13:7, 15:20, Joshua 17:15, 1 Kings 9:20',
+    isPeopleGroup: true
+  },
+  {
+    id: 'kenites',
+    name: 'Kenites',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -1900,
+    end: -700,
+    description: 'A nomadic clan of metalworkers allied with Israel. Jethro, the father-in-law of Moses, was a Kenite. They inhabited the Wilderness of Arad.',
+    source: 'Genesis 15:19, Judges 1:16, 4:11, 1 Samuel 15:6',
+    isPeopleGroup: true
   }
 ];
 
@@ -2207,7 +2301,15 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'semjaza': { lng: 35.794, lat: 33.318, locationName: 'Mount Hermon', category: 'Enochian Sites' },
   'azazel': { lng: 35.350, lat: 31.650, locationName: 'Desert of Dudael', category: 'Enochian Sites' },
   'enoch_ascension': { lng: 35.794, lat: 33.318, locationName: 'Mount Hermon', category: 'Enochian Sites' },
-  'nephilim_era': { lng: 35.730, lat: 32.900, locationName: 'Og\'s Kingdom (Golan)', category: 'Nephilim' }
+  'nephilim_era': { lng: 35.730, lat: 32.900, locationName: 'Og\'s Kingdom (Golan)', category: 'Nephilim' },
+  'rephaim': { lng: 35.972, lat: 32.837, locationName: 'Ashtaroth Karnaim (Bashan)', category: 'Biblical Figures' },
+  'anakim': { lng: 35.110, lat: 31.527, locationName: 'Hebron (Kiriath-Arba)', category: 'Biblical Figures' },
+  'emim': { lng: 35.727, lat: 31.636, locationName: 'Shaveh Kiriathaim (Moab)', category: 'Biblical Figures' },
+  'zamzummim': { lng: 35.930, lat: 31.950, locationName: 'Land of Ammon', category: 'Biblical Figures' },
+  'horites': { lng: 35.480, lat: 30.320, locationName: 'Mount Seir (Edom)', category: 'Biblical Figures' },
+  'avim': { lng: 34.450, lat: 31.500, locationName: 'Gaza (Hazerim)', category: 'Biblical Figures' },
+  'perizzites': { lng: 35.263, lat: 32.062, locationName: 'Hill Country of Ephraim', category: 'Biblical Figures' },
+  'kenites': { lng: 35.125, lat: 31.280, locationName: 'Wilderness of Arad', category: 'Biblical Figures' }
 };
 
 export interface Waypoint {

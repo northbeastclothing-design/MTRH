@@ -863,7 +863,8 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
                                 }}
                               >
                                 <span style={{ 
-                                  display: 'block',
+                                  display: 'flex',
+                                  alignItems: 'center',
                                   whiteSpace: 'nowrap', 
                                   overflow: 'hidden', 
                                   width: '100%',
@@ -871,6 +872,16 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
                                   WebkitMaskImage: mask,
                                   maskImage: mask
                                 }}>
+                                  {item.isPeopleGroup && (
+                                    <span style={{
+                                      marginRight: '6px',
+                                      fontWeight: 900,
+                                      fontSize: '15px',
+                                      lineHeight: 1,
+                                      WebkitTextStroke: '1.5px currentColor',
+                                      flexShrink: 0
+                                    }}>✖</span>
+                                  )}
                                   {item.name}
                                 </span>
                               </div>
@@ -986,8 +997,20 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
                                       : (isMapDarkMode ? '#ffffff' : '#000000'),
                                     whiteSpace: 'nowrap',
                                     position: 'relative',
-                                    zIndex: 1
+                                    zIndex: 1,
+                                    display: 'inline-flex',
+                                    alignItems: 'center'
                                   }}>
+                                    {item.isPeopleGroup && (
+                                      <span style={{
+                                        marginRight: '6px',
+                                        fontWeight: 900,
+                                        fontSize: '15px',
+                                        lineHeight: 1,
+                                        WebkitTextStroke: '1.5px currentColor',
+                                        flexShrink: 0
+                                      }}>✖</span>
+                                    )}
                                     {item.name}
                                   </span>
                                 )}
@@ -1249,9 +1272,42 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
                     </div>
 
                     {/* Name */}
-                    <h3 style={{ margin: '0 0 6px 0', fontSize: '12px', fontWeight: 'bold', letterSpacing: '1px', textTransform: 'uppercase' }}>
+                    <h3 style={{ 
+                      margin: '0 0 6px 0', 
+                      fontSize: '12px', 
+                      fontWeight: 'bold', 
+                      letterSpacing: '1px', 
+                      textTransform: 'uppercase',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '6px'
+                    }}>
+                      {selectedItem.isPeopleGroup && (
+                        <span style={{
+                          marginRight: '8px',
+                          fontWeight: 900,
+                          fontSize: '24px',
+                          lineHeight: 1,
+                          WebkitTextStroke: '2px currentColor',
+                          flexShrink: 0
+                        }}>✖</span>
+                      )}
                       {selectedItem.name}
                     </h3>
+
+                    {/* SubLabel */}
+                    {selectedItem.subLabel && (
+                      <div style={{
+                        fontSize: '9px',
+                        fontWeight: 'bold',
+                        color: '#ef4444',
+                        letterSpacing: '1px',
+                        textTransform: 'uppercase',
+                        marginBottom: '8px'
+                      }}>
+                        [{selectedItem.subLabel}]
+                      </div>
+                    )}
 
                     {/* Dates */}
                     <div style={{ fontSize: '9px', color: tooltipTheme.textDim, marginBottom: '16px' }}>
@@ -1567,7 +1623,19 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
                                 onMouseEnter={(e) => { e.currentTarget.style.background = `${era.color}20`; }}
                                 onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; }}
                               >
-                                <span style={{ fontWeight: 'bold' }}>{item.name}</span>
+                                <span style={{ fontWeight: 'bold', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                                  {item.isPeopleGroup && (
+                                    <span style={{
+                                      marginRight: '6px',
+                                      fontWeight: 900,
+                                      fontSize: '14px',
+                                      lineHeight: 1,
+                                      WebkitTextStroke: '1.5px currentColor',
+                                      flexShrink: 0
+                                    }}>✖</span>
+                                  )}
+                                  {item.name}
+                                </span>
                                 <span style={{ fontSize: '8px', color: theme.textDim, alignSelf: 'center', whiteSpace: 'nowrap' }}>
                                   {formatYear(item.start)}
                                 </span>

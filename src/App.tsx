@@ -2306,6 +2306,8 @@ function App() {
             source: item.source || null,
             images: [],
             isTimelinePin: true,
+            isPeopleGroup: item.isPeopleGroup,
+            subLabel: item.subLabel,
             locationName: loc.locationName
           };
         }).filter(Boolean);
@@ -2481,7 +2483,7 @@ function App() {
 
       // 1. Check if we clicked on a master pin
       const pinFeatures = map.queryRenderedFeatures(e.point, {
-        layers: ['master-unclustered-pins'].filter(id => map.getLayer(id))
+        layers: ['master-unclustered-pins', 'people-group-pins-symbol'].filter(id => map.getLayer(id))
       });
 
       if (pinFeatures && pinFeatures.length > 0) {
@@ -2747,7 +2749,7 @@ function App() {
       features: currentPoints.map(pt => ({
         type: 'Feature',
         geometry: { type: 'Point', coordinates: pt.coordinates },
-        properties: { id: pt.id, category: pt.categories[0] }
+        properties: { id: pt.id, category: pt.categories[0], isPeopleGroup: pt.isPeopleGroup || false }
       }))
     };
 
@@ -2781,11 +2783,13 @@ function App() {
         3, 3.5,
         12, 8
       ]);
+      map.setFilter('master-unclustered-pins', ['!=', ['get', 'isPeopleGroup'], true]);
     } else {
       map.addLayer({
         id: 'master-unclustered-pins',
         type: 'circle',
         source: 'master-anomalies-src',
+        filter: ['!=', ['get', 'isPeopleGroup'], true],
         paint: {
           'circle-radius': [
             'interpolate', ['linear'], ['zoom'],
@@ -2811,6 +2815,46 @@ function App() {
 
       map.on('mouseenter', 'master-unclustered-pins', () => { map.getCanvas().style.cursor = 'pointer'; });
       map.on('mouseleave', 'master-unclustered-pins', () => { map.getCanvas().style.cursor = ''; });
+    }
+
+    if (!map.getLayer('people-group-pins-symbol')) {
+      map.addLayer({
+        id: 'people-group-pins-symbol',
+        type: 'symbol',
+        source: 'master-anomalies-src',
+        filter: ['==', ['get', 'isPeopleGroup'], true],
+        layout: {
+          'text-field': '✖',
+          'text-size': [
+            'interpolate', ['linear'], ['zoom'],
+            3, 18,
+            12, 32
+          ],
+          'text-allow-overlap': true,
+          'text-ignore-placement': true
+        },
+        paint: {
+          'text-color': '#90C2FF',
+          'text-halo-color': isMapDarkMode ? '#000000' : '#ffffff',
+          'text-halo-width': 2.5
+        }
+      });
+
+      map.on('click', 'people-group-pins-symbol', (e) => {
+        if (!e.features || !e.features.length) return;
+        (e as any)._clickHandled = true;
+        const clickedId = e.features[0].properties?.id;
+        const matchedRecord = combinedPointsAndLinesData.find(item => String(item.id) === String(clickedId));
+        if (matchedRecord) {
+          handleLocationItemClick(matchedRecord);
+        }
+      });
+
+      map.on('mouseenter', 'people-group-pins-symbol', () => { map.getCanvas().style.cursor = 'pointer'; });
+      map.on('mouseleave', 'people-group-pins-symbol', () => { map.getCanvas().style.cursor = ''; });
+    } else {
+      map.setPaintProperty('people-group-pins-symbol', 'text-color', '#90C2FF');
+      map.setPaintProperty('people-group-pins-symbol', 'text-halo-color', isMapDarkMode ? '#000000' : '#ffffff');
     }
 
     lineLayersRef.current.forEach(layerId => {
@@ -2980,24 +3024,45 @@ function App() {
       const iconOuter = document.createElement('div');
       iconOuter.style.width = '30px';
       iconOuter.style.height = '30px';
-      iconOuter.style.borderRadius = '50%';
-      iconOuter.style.background = color;
-      iconOuter.style.border = `1px solid ${isMapDarkMode ? '#ffffff' : '#000000'}`;
-      iconOuter.style.boxShadow = `0 3px 0 0 ${isMapDarkMode ? '#ffffff' : '#000000'}`;
       iconOuter.style.display = 'flex';
       iconOuter.style.alignItems = 'center';
       iconOuter.style.justifyContent = 'center';
-      iconOuter.style.overflow = 'hidden';
       iconOuter.style.boxSizing = 'border-box';
 
-      const img = document.createElement('img');
-      img.src = icon;
-      img.onerror = () => {
-        img.src = '/icons/icon-cave-drawings.svg';
-      };
-      img.style.width = '30px';
-      img.style.height = '30px';
-      iconOuter.appendChild(img);
+      if (selectedFeature.isPeopleGroup) {
+        iconOuter.style.borderRadius = '0';
+        iconOuter.style.background = 'transparent';
+        iconOuter.style.border = 'none';
+        iconOuter.style.boxShadow = 'none';
+
+        const xSpan = document.createElement('span');
+        xSpan.innerText = '✖';
+        xSpan.style.fontFamily = '"Space Mono", monospace';
+        xSpan.style.fontWeight = '900';
+        xSpan.style.fontSize = '48px';
+        xSpan.style.color = color;
+        xSpan.style.lineHeight = '1';
+        xSpan.style.webkitTextStroke = `3px ${color}`;
+        xSpan.style.textShadow = isMapDarkMode
+          ? '0 0 4px #000000, 0 0 4px #000000, 0 0 4px #000000'
+          : '0 0 4px #ffffff, 0 0 4px #ffffff, 0 0 4px #ffffff';
+        iconOuter.appendChild(xSpan);
+      } else {
+        iconOuter.style.borderRadius = '50%';
+        iconOuter.style.background = color;
+        iconOuter.style.border = `1px solid ${isMapDarkMode ? '#ffffff' : '#000000'}`;
+        iconOuter.style.boxShadow = `0 3px 0 0 ${isMapDarkMode ? '#ffffff' : '#000000'}`;
+        iconOuter.style.overflow = 'hidden';
+
+        const img = document.createElement('img');
+        img.src = icon;
+        img.onerror = () => {
+          img.src = '/icons/icon-cave-drawings.svg';
+        };
+        img.style.width = '30px';
+        img.style.height = '30px';
+        iconOuter.appendChild(img);
+      }
 
       inner.appendChild(iconOuter);
 
@@ -4925,10 +4990,37 @@ function App() {
                         color: theme.text, 
                         margin: '0 0 8px 0', 
                         textAlign: 'left', 
-                        letterSpacing: '-0.5px' 
+                        letterSpacing: '-0.5px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '8px'
                       }}>
+                        {selectedFeature.isPeopleGroup && (
+                          <span style={{
+                            marginRight: '12px',
+                            fontWeight: 900,
+                            fontSize: '44px',
+                            lineHeight: 1,
+                            WebkitTextStroke: '3px currentColor',
+                            flexShrink: 0
+                          }}>✖</span>
+                        )}
                         {toTitleCase(selectedFeature.name)}
                       </h1>
+
+                      {selectedFeature.subLabel && (
+                        <div style={{
+                          fontSize: '11px',
+                          fontWeight: 'bold',
+                          color: '#ef4444',
+                          fontFamily: '"Space Mono", monospace',
+                          letterSpacing: '1px',
+                          textTransform: 'uppercase',
+                          marginBottom: '12px'
+                        }}>
+                          [{selectedFeature.subLabel}]
+                        </div>
+                      )}
 
                       <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
                         <motion.button
