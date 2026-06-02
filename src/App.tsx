@@ -2370,7 +2370,7 @@ function App() {
   useEffect(() => {
     if (uniqueCategories.length > 0 && !hasRandomizedRef.current) {
       hasRandomizedRef.current = true;
-      const count = Math.floor(Math.random() * 3) + 2; // Choose 2, 3, or 4 layers
+      const count = Math.floor(Math.random() * 3) + 4; // Choose 4, 5, or 6 layers
       const shuffled = [...uniqueCategories].sort(() => 0.5 - Math.random());
       const selected = shuffled.slice(0, count);
       
@@ -2393,7 +2393,7 @@ function App() {
   }, [uniqueCategories]);
 
   const handleRandomizeLayers = () => {
-    const count = Math.floor(Math.random() * 3) + 2; // Choose 2, 3, or 4 layers
+    const count = Math.floor(Math.random() * 3) + 4; // Choose 4, 5, or 6 layers
     const shuffled = [...uniqueCategories].sort(() => 0.5 - Math.random());
     const selected = shuffled.slice(0, count);
     
@@ -2402,6 +2402,14 @@ function App() {
       newActive[cat] = selected.includes(cat);
     });
     setActiveLayers(newActive);
+  };
+
+  const handleAllLayersOn = () => {
+    const allActive: Record<string, boolean> = {};
+    uniqueCategories.forEach(cat => {
+      allActive[cat] = true;
+    });
+    setActiveLayers(allActive);
   };
 
   const visibleData = useMemo(() => {
@@ -4314,33 +4322,61 @@ function App() {
               </AnimatePresence>
               </div>
 
-              <motion.button
-                whileHover={{ scale: 1.02, backgroundColor: isMapDarkMode ? '#161616' : '#f0f0f0' }}
-                whileTap={{ scale: 0.98 }}
-                onClick={handleRandomizeLayers}
-                style={{
-                  width: '100%',
-                  marginTop: '12px',
-                  padding: '8px 12px',
-                  fontSize: '10px',
-                  fontWeight: '700',
-                  letterSpacing: '1px',
-                  fontFamily: '"Space Mono", monospace',
-                  border: `1px solid ${theme.border}`,
-                  borderRadius: '16px',
-                  cursor: 'pointer',
-                  background: 'none',
-                  color: theme.text,
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: '6px',
-                  transition: 'background-color 0.2s ease'
-                }}
-              >
-                <Shuffle size={12} color={theme.text} />
-                SHUFFLE LAYERS
-              </motion.button>
+              <div style={{ display: 'flex', gap: '8px', marginTop: '12px' }}>
+                <motion.button
+                  whileHover={{ scale: 1.02, backgroundColor: isMapDarkMode ? '#161616' : '#f0f0f0' }}
+                  whileTap={{ scale: 0.98 }}
+                  onClick={handleRandomizeLayers}
+                  style={{
+                    flex: 1,
+                    padding: '8px 12px',
+                    fontSize: '10px',
+                    fontWeight: '700',
+                    letterSpacing: '1px',
+                    fontFamily: '"Space Mono", monospace',
+                    border: `1px solid ${theme.border}`,
+                    borderRadius: '16px',
+                    cursor: 'pointer',
+                    background: 'none',
+                    color: theme.text,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '6px',
+                    transition: 'background-color 0.2s ease'
+                  }}
+                >
+                  <Shuffle size={12} color={theme.text} />
+                  SHUFFLE
+                </motion.button>
+
+                <motion.button
+                  whileHover={{ scale: 1.02, backgroundColor: isMapDarkMode ? '#161616' : '#f0f0f0' }}
+                  whileTap={{ scale: 0.98 }}
+                  onClick={handleAllLayersOn}
+                  style={{
+                    flex: 1,
+                    padding: '8px 12px',
+                    fontSize: '10px',
+                    fontWeight: '700',
+                    letterSpacing: '1px',
+                    fontFamily: '"Space Mono", monospace',
+                    border: `1px solid ${theme.border}`,
+                    borderRadius: '16px',
+                    cursor: 'pointer',
+                    background: 'none',
+                    color: theme.text,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '6px',
+                    transition: 'background-color 0.2s ease'
+                  }}
+                >
+                  <Eye size={12} color={theme.text} />
+                  ALL LAYERS
+                </motion.button>
+              </div>
             </div>
 
             <div className="custom-scrollbar" style={{ flex: 1, padding: '0 0 15px 0', display: 'flex', flexDirection: 'column', textAlign: 'left' }}>
