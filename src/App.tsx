@@ -7120,7 +7120,7 @@ function App() {
                   e.currentTarget.style.color = '#000000';
                 }}
               >
-                Explore the map
+                Explore
               </button>
             </div>
           </motion.div>
