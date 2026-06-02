@@ -469,18 +469,114 @@ export default function TermTreePage({
     };
   }, [selectedPath, columns, activeTermId, searchQuery]);
 
-  // Auto-center selected terms vertically within their columns
+  // Mouse drag-to-scroll panning like a Miro board
+  const activeDragRef = useRef<{
+    startX: number;
+    startY: number;
+    scrollLeft: number;
+    scrollTop: number;
+    container: HTMLDivElement;
+    mainContainer: HTMLDivElement;
+    hasDragged: boolean;
+  } | null>(null);
+
+  const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>, isColumn: boolean) => {
+    // Only drag with left click
+    if (e.button !== 0) return;
+    
+    // If it's a main background click, only drag if clicking directly on container/svg
+    if (!isColumn && e.target !== e.currentTarget && (e.target as HTMLElement).tagName !== 'svg') {
+      return;
+    }
+    
+    const mainContainer = columnsContainerRef.current;
+    if (!mainContainer) return;
+    
+    const container = isColumn ? e.currentTarget : mainContainer;
+    
+    activeDragRef.current = {
+      startX: e.pageX,
+      startY: e.pageY,
+      scrollLeft: mainContainer.scrollLeft,
+      scrollTop: container.scrollTop,
+      container,
+      mainContainer,
+      hasDragged: false
+    };
+
+    // Prevent default text selection/dragging behavior during mouse drag
+    e.preventDefault();
+  };
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      const drag = activeDragRef.current;
+      if (!drag) return;
+      
+      const deltaX = e.pageX - drag.startX;
+      const deltaY = e.pageY - drag.startY;
+      
+      if (Math.abs(deltaX) > 4 || Math.abs(deltaY) > 4) {
+        if (!drag.hasDragged) {
+          drag.hasDragged = true;
+          document.body.classList.add('is-grabbing');
+        }
+      }
+      
+      // Horizontal pan (always on main container)
+      drag.mainContainer.scrollLeft = drag.scrollLeft - deltaX;
+      
+      // Vertical pan (only if dragging on a column list container)
+      if (drag.container !== drag.mainContainer) {
+        drag.container.scrollTop = drag.scrollTop - deltaY;
+      }
+    };
+
+    const handleMouseUp = () => {
+      const drag = activeDragRef.current;
+      if (drag) {
+        if (drag.hasDragged) {
+          document.body.classList.remove('is-grabbing');
+          // Prevent next click event on pill items if dragged
+          const preventClick = (captureEvent: MouseEvent) => {
+            captureEvent.stopPropagation();
+            captureEvent.preventDefault();
+          };
+          window.addEventListener('click', preventClick, { capture: true });
+          setTimeout(() => {
+            window.removeEventListener('click', preventClick, { capture: true });
+          }, 50);
+        }
+        activeDragRef.current = null;
+      }
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mouseup', handleMouseUp);
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mouseup', handleMouseUp);
+    };
+  }, []);
+
+  // Auto-center selected terms vertically within their columns (aligning them to a single horizontal line)
   useEffect(() => {
     const timer = setTimeout(() => {
+      const mainContainer = columnsContainerRef.current;
+      if (!mainContainer) return;
+      const mainHeight = mainContainer.clientHeight;
+
       selectedPath.forEach((nodeId) => {
         const el = document.getElementById(`node-pill-${nodeId}`);
         if (el && el.parentElement) {
           const container = el.parentElement;
-          const containerHeight = container.clientHeight;
           const elementTop = el.offsetTop;
           const elementHeight = el.clientHeight;
+          const containerTop = container.offsetTop;
+          
           container.scrollTo({
-            top: elementTop - containerHeight / 2 + elementHeight / 2,
+            top: elementTop + containerTop - mainHeight / 2 + elementHeight / 2,
             behavior: 'smooth'
           });
         }
@@ -501,44 +597,62 @@ export default function TermTreePage({
         borderTop: '1px solid #000000' // Black divider line across the top of the term tree area
       }}
     >
-
+      <style>{`
+        .no-scrollbar::-webkit-scrollbar {
+          display: none !important;
+        }
+        .no-scrollbar {
+          -ms-overflow-style: none !important;
+          scrollbar-width: none !important;
+        }
+        .is-grabbing {
+          cursor: grabbing !important;
+        }
+        .is-grabbing * {
+          cursor: grabbing !important;
+        }
+      `}</style>
 
       {/* CATEGORIES vertical label rotated 90 counterclockwise */}
       <div
         style={{
           position: 'absolute',
-          left: '12px',
+          left: 0,
           top: 0,
           bottom: 0,
           width: '60px',
           display: 'flex',
+          flexDirection: 'column',
           alignItems: 'center',
-          justifyContent: 'center',
+          justifyContent: 'space-between',
+          padding: '40px 0',
           pointerEvents: 'none',
           zIndex: 2
         }}
       >
-        <span
-          style={{
-            fontSize: '56px',
-            fontWeight: 900,
-            fontFamily: '"Space Mono", monospace',
-            color: isMapDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)',
-            letterSpacing: '16px',
-            whiteSpace: 'nowrap',
-            transform: 'rotate(-90deg)',
-            transformOrigin: 'center',
-            display: 'block'
-          }}
-        >
-          CATEGORIES
-        </span>
+        {"CATEGORIES".split('').map((char, index) => (
+          <span
+            key={index}
+            style={{
+              fontSize: '44px',
+              fontWeight: 900,
+              fontFamily: '"Space Mono", monospace',
+              color: isMapDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)',
+              lineHeight: '1',
+              display: 'block',
+              transform: 'rotate(-90deg)'
+            }}
+          >
+            {char}
+          </span>
+        ))}
       </div>
 
       {/* LEFT AREA: HORIZONTALLY SCROLLING MILLER COLUMNS (BACKGROUND TRANSPARENT FOR GLOBE TO SHOW) */}
       <div
         ref={columnsContainerRef}
-        className="custom-sidebar-scrollbar"
+        className="custom-sidebar-scrollbar no-scrollbar"
+        onMouseDown={e => handleMouseDown(e, false)}
         style={{
           flex: 1.5,
           display: 'flex',
@@ -549,7 +663,9 @@ export default function TermTreePage({
           position: 'relative',
           borderRight: `1px solid ${theme.borderLight}`,
           height: '100%',
-          background: 'transparent' // Made transparent so spinning globe background is visible
+          background: 'transparent', // Made transparent so spinning globe background is visible
+          cursor: 'grab',
+          zIndex: 3
         }}
       >
         {/* SVG connection overlay scrolling natively with the columns */}
@@ -676,18 +792,20 @@ export default function TermTreePage({
 
             {/* Column List Body */}
             <div
-              className="custom-sidebar-scrollbar"
+              className="custom-sidebar-scrollbar no-scrollbar"
+              onMouseDown={e => handleMouseDown(e, true)}
               style={{
                 flex: 1,
                 overflowY: 'auto',
-                paddingTop: colIdx === 0 ? 'calc(50vh - 111.5px)' : 'calc(50vh - 71px)',
-                paddingBottom: colIdx === 0 ? 'calc(50vh - 111.5px)' : 'calc(50vh - 71px)',
+                paddingTop: colIdx === 0 ? 'calc(50vh - 148px)' : 'calc(50vh - 75px)',
+                paddingBottom: colIdx === 0 ? 'calc(50vh - 148px)' : 'calc(50vh - 75px)',
                 paddingLeft: '12px',
                 paddingRight: '12px',
                 display: 'flex',
                 flexDirection: 'column',
                 gap: '8px',
-                position: 'relative'
+                position: 'relative',
+                cursor: 'grab'
               }}
             >
 
@@ -791,9 +909,9 @@ export default function TermTreePage({
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'space-between',
-                      borderRadius: '12px',
+                      borderRadius: '16px',
                       padding: '0 12px',
-                      height: '24px',
+                      height: '32px',
                       border: 'none', // No stroke
                       background: (isSelected || isHovered)
                         ? nodeColor // Solid background on hover/selection
