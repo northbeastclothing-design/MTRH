@@ -391,16 +391,29 @@ export default function TermTreePage({
               let pathData = '';
 
               if (activeLevel === relLevel) {
-                // Front-to-front (left-side to left-side) connection in the SAME column
-                x1 = activeRect.left - containerRect.left + container.scrollLeft - 4;
-                y1 = activeRect.top + activeRect.height / 2 - containerRect.top + container.scrollTop;
+                if (activeLevel === 0) {
+                  // Column 0 (categories): connect on the right side using the gap
+                  x1 = activeRect.right - containerRect.left + container.scrollLeft;
+                  y1 = activeRect.top + activeRect.height / 2 - containerRect.top + container.scrollTop;
 
-                x2 = relRect.left - containerRect.left + container.scrollLeft - 4;
-                y2 = relRect.top + relRect.height / 2 - containerRect.top + container.scrollTop;
+                  x2 = relRect.right - containerRect.left + container.scrollLeft;
+                  y2 = relRect.top + relRect.height / 2 - containerRect.top + container.scrollTop;
 
-                // Orthogonal U-shape to the left of the pills to avoid intersecting text
-                const xOffset = Math.min(x1, x2) - 12;
-                pathData = `M ${x1} ${y1} H ${xOffset} V ${y2} H ${x2}`;
+                  // Loop into the gap between Column 0 and Column 1 (20px to the right)
+                  const xOffset = Math.max(x1, x2) + 20;
+                  pathData = `M ${x1} ${y1} H ${xOffset} V ${y2} H ${x2}`;
+                } else {
+                  // Columns 1+: connect on the left side using the gap on the left
+                  x1 = activeRect.left - containerRect.left + container.scrollLeft;
+                  y1 = activeRect.top + activeRect.height / 2 - containerRect.top + container.scrollTop;
+
+                  x2 = relRect.left - containerRect.left + container.scrollLeft;
+                  y2 = relRect.top + relRect.height / 2 - containerRect.top + container.scrollTop;
+
+                  // Loop into the gap on the left (20px to the left)
+                  const xOffset = Math.min(x1, x2) - 20;
+                  pathData = `M ${x1} ${y1} H ${xOffset} V ${y2} H ${x2}`;
+                }
               } else {
                 // Different columns: connect right-side of left element to left-side of right element
                 const isLeftToRight = activeLevel < relLevel;
@@ -413,7 +426,8 @@ export default function TermTreePage({
                 x2 = rightElRect.left - containerRect.left + container.scrollLeft;
                 y2 = rightElRect.top + rightElRect.height / 2 - containerRect.top + container.scrollTop;
 
-                const xMid = (x1 + x2) / 2;
+                // Calculate xMid: 20px before the right element is the center of the gap preceding it
+                const xMid = rightElRect.left - 20 - containerRect.left + container.scrollLeft;
                 pathData = `M ${x1} ${y1} H ${xMid} V ${y2} H ${x2}`;
               }
 
@@ -455,6 +469,26 @@ export default function TermTreePage({
     };
   }, [selectedPath, columns, activeTermId, searchQuery]);
 
+  // Auto-center selected terms vertically within their columns
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      selectedPath.forEach((nodeId) => {
+        const el = document.getElementById(`node-pill-${nodeId}`);
+        if (el && el.parentElement) {
+          const container = el.parentElement;
+          const containerHeight = container.clientHeight;
+          const elementTop = el.offsetTop;
+          const elementHeight = el.clientHeight;
+          container.scrollTo({
+            top: elementTop - containerHeight / 2 + elementHeight / 2,
+            behavior: 'smooth'
+          });
+        }
+      });
+    }, 150); // slight delay to allow rendering
+    return () => clearTimeout(timer);
+  }, [selectedPath]);
+
   return (
     <div
       style={{
@@ -469,6 +503,38 @@ export default function TermTreePage({
     >
 
 
+      {/* CATEGORIES vertical label rotated 90 counterclockwise */}
+      <div
+        style={{
+          position: 'absolute',
+          left: '12px',
+          top: 0,
+          bottom: 0,
+          width: '60px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          pointerEvents: 'none',
+          zIndex: 2
+        }}
+      >
+        <span
+          style={{
+            fontSize: '56px',
+            fontWeight: 900,
+            fontFamily: '"Space Mono", monospace',
+            color: isMapDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)',
+            letterSpacing: '16px',
+            whiteSpace: 'nowrap',
+            transform: 'rotate(-90deg)',
+            transformOrigin: 'center',
+            display: 'block'
+          }}
+        >
+          CATEGORIES
+        </span>
+      </div>
+
       {/* LEFT AREA: HORIZONTALLY SCROLLING MILLER COLUMNS (BACKGROUND TRANSPARENT FOR GLOBE TO SHOW) */}
       <div
         ref={columnsContainerRef}
@@ -477,6 +543,7 @@ export default function TermTreePage({
           flex: 1.5,
           display: 'flex',
           flexDirection: 'row',
+          gap: '40px', // 40px gap between columns
           overflowX: 'auto',
           overflowY: 'hidden',
           position: 'relative',
@@ -495,7 +562,7 @@ export default function TermTreePage({
             width: `${scrollSize.width}px`,
             height: `${scrollSize.height}px`,
             pointerEvents: 'none',
-            zIndex: 10
+            zIndex: 4
           }}
         >
           {lines.map(line => {
@@ -539,8 +606,9 @@ export default function TermTreePage({
           <div
             key={colIdx}
             style={{
-              width: '260px',
-              minWidth: '240px',
+              width: colIdx === 0 ? '320px' : '260px',
+              minWidth: colIdx === 0 ? '300px' : '240px',
+              paddingLeft: colIdx === 0 ? '60px' : '0px',
               flexShrink: 0,
               display: 'flex',
               flexDirection: 'column',
@@ -555,7 +623,7 @@ export default function TermTreePage({
               <div 
                 style={{ 
                   padding: '16px', 
-                  borderBottom: `1px solid ${theme.border}`, 
+                  borderBottom: 'none', 
                   flexShrink: 0, 
                   zIndex: 100,
                   background: theme.bg
@@ -612,11 +680,14 @@ export default function TermTreePage({
               style={{
                 flex: 1,
                 overflowY: 'auto',
-                padding: '12px 12px 120px 12px',
+                paddingTop: colIdx === 0 ? 'calc(50vh - 111.5px)' : 'calc(50vh - 71px)',
+                paddingBottom: colIdx === 0 ? 'calc(50vh - 111.5px)' : 'calc(50vh - 71px)',
+                paddingLeft: '12px',
+                paddingRight: '12px',
                 display: 'flex',
                 flexDirection: 'column',
-                justifyContent: 'center', // Center terms vertically
-                gap: '8px'
+                gap: '8px',
+                position: 'relative'
               }}
             >
 
@@ -726,7 +797,7 @@ export default function TermTreePage({
                       border: 'none', // No stroke
                       background: (isSelected || isHovered)
                         ? nodeColor // Solid background on hover/selection
-                        : `${nodeColor}28`, // Faded background color matching timeline
+                        : `${nodeColor}a6`, // 65% opacity background by default (hex a6 is 65% opacity)
                       color: (isSelected || isHovered)
                         ? '#000000' // Black text on solid background color
                         : (isMatched ? (isMapDarkMode ? '#FFF96A' : '#A78B00') : theme.text),
