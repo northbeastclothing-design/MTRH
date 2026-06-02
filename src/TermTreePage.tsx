@@ -561,29 +561,38 @@ export default function TermTreePage({
   }, []);
 
   // Auto-center selected terms vertically within their columns (aligning them to a single horizontal line)
+  const isInitialMountRef = useRef(true);
+
+  // Smoothly center the columns container on the active column and vertical midpoint (single horizontal selections line)
   useEffect(() => {
     const timer = setTimeout(() => {
-      const mainContainer = columnsContainerRef.current;
-      if (!mainContainer) return;
-      const mainHeight = mainContainer.clientHeight;
-
-      selectedPath.forEach((nodeId) => {
-        const el = document.getElementById(`node-pill-${nodeId}`);
-        if (el && el.parentElement) {
-          const container = el.parentElement;
-          const elementTop = el.offsetTop;
-          const elementHeight = el.clientHeight;
-          const containerTop = container.offsetTop;
-          
-          container.scrollTo({
-            top: elementTop + containerTop - mainHeight / 2 + elementHeight / 2,
-            behavior: 'smooth'
-          });
-        }
-      });
+      const container = columnsContainerRef.current;
+      if (!container) return;
+      
+      const viewportWidth = container.clientWidth;
+      const viewportHeight = container.clientHeight;
+      
+      // Determine which column to center
+      const targetColIdx = Math.min(selectedPath.length, columns.length - 1);
+      const colCenterX = 1200 + targetColIdx * 300 + 130;
+      
+      const targetScrollLeft = colCenterX - viewportWidth / 2;
+      const targetScrollTop = 1500 - viewportHeight / 2;
+      
+      if (isInitialMountRef.current) {
+        container.scrollLeft = targetScrollLeft;
+        container.scrollTop = targetScrollTop;
+        isInitialMountRef.current = false;
+      } else {
+        container.scrollTo({
+          left: targetScrollLeft,
+          top: targetScrollTop,
+          behavior: 'smooth'
+        });
+      }
     }, 150); // slight delay to allow rendering
     return () => clearTimeout(timer);
-  }, [selectedPath]);
+  }, [selectedPath, columns]);
 
   return (
     <div
@@ -648,18 +657,15 @@ export default function TermTreePage({
         ))}
       </div>
 
-      {/* LEFT AREA: HORIZONTALLY SCROLLING MILLER COLUMNS (BACKGROUND TRANSPARENT FOR GLOBE TO SHOW) */}
+      {/* LEFT AREA: HORIZONTALLY AND VERTICALLY DRAGGABLE INFINITE CANVAS */}
       <div
         ref={columnsContainerRef}
-        className="custom-sidebar-scrollbar no-scrollbar"
-        onMouseDown={e => handleMouseDown(e, false)}
+        className="no-scrollbar"
+        onMouseDown={handleMouseDown}
         style={{
           flex: 1.5,
-          display: 'flex',
-          flexDirection: 'row',
-          gap: '40px', // 40px gap between columns
           overflowX: 'auto',
-          overflowY: 'hidden',
+          overflowY: 'auto',
           position: 'relative',
           borderRight: `1px solid ${theme.borderLight}`,
           height: '100%',
@@ -668,146 +674,155 @@ export default function TermTreePage({
           zIndex: 3
         }}
       >
-        {/* SVG connection overlay scrolling natively with the columns */}
-        <svg
-          ref={svgOverlayRef}
+        {/* The 2D Canvas */}
+        <div
           style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: `${scrollSize.width}px`,
-            height: `${scrollSize.height}px`,
-            pointerEvents: 'none',
-            zIndex: 4
+            width: '4000px',
+            height: '3000px',
+            position: 'relative',
+            background: 'transparent'
           }}
         >
-          {lines.map(line => {
-            const displayColor = adjustColorForContrast(line.color);
-            return (
-              <g key={line.id}>
-                {/* Right-angle orthogonal connector path */}
-                <path
-                  d={line.d}
-                  fill="none"
-                  stroke={displayColor}
-                  strokeWidth="2"
-                  strokeDasharray="4,4"
-                  opacity={line.isRelated ? 0.75 : 0.9}
-                />
-                
-                {/* Source Circle Anchor */}
-                <circle
-                  cx={line.x1}
-                  cy={line.y1}
-                  r="4"
-                  fill={isMapDarkMode ? '#ffffff' : '#000000'}
-                  stroke={displayColor}
-                  strokeWidth="1"
-                />
-
-                {/* Target Circle Anchor */}
-                <circle
-                  cx={line.x2}
-                  cy={line.y2}
-                  r="3"
-                  fill={line.isRelated ? displayColor : (isMapDarkMode ? '#ffffff' : '#000000')}
-                />
-              </g>
-            );
-          })}
-        </svg>
-
-        {/* Dynamic Column Render loop */}
-        {columns.map((column, colIdx) => (
-          <div
-            key={colIdx}
+          {/* SVG connection overlay scrolling natively with the columns */}
+          <svg
+            ref={svgOverlayRef}
             style={{
-              width: colIdx === 0 ? '320px' : '260px',
-              minWidth: colIdx === 0 ? '300px' : '240px',
-              paddingLeft: colIdx === 0 ? '60px' : '0px',
-              flexShrink: 0,
-              display: 'flex',
-              flexDirection: 'column',
-              height: '100%',
-              zIndex: 1,
-              position: 'relative',
-              background: 'transparent' // Made transparent so spinning globe shows through
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '4000px',
+              height: '3000px',
+              pointerEvents: 'none',
+              zIndex: 4
             }}
           >
-            {/* Sticky Search bar for Column 0 (re-styled to match map left sidebar search) */}
-            {colIdx === 0 && (
-              <div 
-                style={{ 
-                  padding: '16px', 
-                  borderBottom: 'none', 
-                  flexShrink: 0, 
-                  zIndex: 100,
-                  background: theme.bg
-                }}
-              >
-                <div style={{ position: 'relative', width: '100%' }}>
-                  <input
-                    type="text"
-                    placeholder="SEARCH DATABASE..."
-                    value={searchQuery}
-                    onChange={e => setSearchQuery(e.target.value)}
-                    style={{
-                      width: '100%',
-                      padding: '10px 32px 10px 12px',
-                      fontSize: '11px',
-                      fontFamily: '"Space Mono", monospace',
-                      border: `1px solid ${theme.border}`,
-                      borderRadius: '0px',
-                      outline: 'none',
-                      boxSizing: 'border-box',
-                      background: isMapDarkMode ? '#000000' : '#ffffff',
-                      color: theme.text
-                    }}
+            {lines.map(line => {
+              const displayColor = adjustColorForContrast(line.color);
+              return (
+                <g key={line.id}>
+                  {/* Right-angle orthogonal connector path */}
+                  <path
+                    d={line.d}
+                    fill="none"
+                    stroke={displayColor}
+                    strokeWidth="2"
+                    strokeDasharray="4,4"
+                    opacity={line.isRelated ? 0.75 : 0.9}
                   />
-                  {searchQuery && (
-                    <motion.button
-                      whileHover={{ opacity: 0.7 }}
-                      onClick={() => setSearchQuery('')}
-                      style={{
-                        position: 'absolute',
-                        right: '8px',
-                        top: '50%',
-                        transform: 'translateY(-50%)',
-                        background: 'none',
-                        border: 'none',
-                        cursor: 'pointer',
-                        padding: '4px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        zIndex: 21
-                      }}
-                    >
-                      <X size={14} color={theme.text} />
-                    </motion.button>
-                  )}
-                </div>
-              </div>
-            )}
+                  
+                  {/* Source Circle Anchor */}
+                  <circle
+                    cx={line.x1}
+                    cy={line.y1}
+                    r="4"
+                    fill={isMapDarkMode ? '#ffffff' : '#000000'}
+                    stroke={displayColor}
+                    strokeWidth="1"
+                  />
 
-            {/* Column List Body */}
+                  {/* Target Circle Anchor */}
+                  <circle
+                    cx={line.x2}
+                    cy={line.y2}
+                    r="3"
+                    fill={line.isRelated ? displayColor : (isMapDarkMode ? '#ffffff' : '#000000')}
+                  />
+                </g>
+              );
+            })}
+          </svg>
+
+        {/* Columns positioned absolutely on the 2D Canvas */}
+        {columns.map((column, colIdx) => {
+          const selectedNodeId = selectedPath[colIdx];
+          const selIdx = column.nodes.findIndex(n => n.id === selectedNodeId);
+          const activeSelIdx = selIdx >= 0 ? selIdx : 0;
+          const Y_item = activeSelIdx * 40 + 16; // 32px height + 8px gap, center is at 16px
+          const colTop = 1500 - Y_item - (colIdx === 0 ? 70 : 0);
+          const colLeft = 1200 + colIdx * 300;
+
+          return (
             <div
-              className="custom-sidebar-scrollbar no-scrollbar"
-              onMouseDown={e => handleMouseDown(e, true)}
+              key={colIdx}
               style={{
-                flex: 1,
-                overflowY: 'auto',
-                paddingTop: colIdx === 0 ? 'calc(50vh - 148px)' : 'calc(50vh - 75px)',
-                paddingBottom: colIdx === 0 ? 'calc(50vh - 148px)' : 'calc(50vh - 75px)',
-                paddingLeft: '12px',
-                paddingRight: '12px',
+                position: 'absolute',
+                left: `${colLeft}px`,
+                top: `${colTop}px`,
+                width: '260px',
                 display: 'flex',
                 flexDirection: 'column',
-                gap: '8px',
-                position: 'relative',
-                cursor: 'grab'
+                zIndex: 5,
+                background: 'transparent'
               }}
             >
+              {/* Sticky Search bar for Column 0 (re-styled to match map left sidebar search) */}
+              {colIdx === 0 && (
+                <div 
+                  style={{ 
+                    height: '70px',
+                    padding: '16px', 
+                    boxSizing: 'border-box',
+                    borderBottom: 'none', 
+                    flexShrink: 0, 
+                    zIndex: 100,
+                    background: theme.bg
+                  }}
+                >
+                  <div style={{ position: 'relative', width: '100%' }}>
+                    <input
+                      type="text"
+                      placeholder="SEARCH DATABASE..."
+                      value={searchQuery}
+                      onChange={e => setSearchQuery(e.target.value)}
+                      style={{
+                        width: '100%',
+                        padding: '10px 32px 10px 12px',
+                        fontSize: '11px',
+                        fontFamily: '"Space Mono", monospace',
+                        border: `1px solid ${theme.border}`,
+                        borderRadius: '0px',
+                        outline: 'none',
+                        boxSizing: 'border-box',
+                        background: isMapDarkMode ? '#000000' : '#ffffff',
+                        color: theme.text
+                      }}
+                    />
+                    {searchQuery && (
+                      <motion.button
+                        whileHover={{ opacity: 0.7 }}
+                        onClick={() => setSearchQuery('')}
+                        style={{
+                          position: 'absolute',
+                          right: '8px',
+                          top: '50%',
+                          transform: 'translateY(-50%)',
+                          background: 'none',
+                          border: 'none',
+                          cursor: 'pointer',
+                          padding: '4px',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          zIndex: 21
+                        }}
+                      >
+                        <X size={14} color={theme.text} />
+                      </motion.button>
+                    )}
+                  </div>
+                </div>
+              )}
+
+              {/* Column List Body (no-scrollbar, static layout inside absolute column block) */}
+              <div
+                className="no-scrollbar"
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '8px',
+                  position: 'relative'
+                }}
+              >
 
               {/* Items Render */}
               {column.nodes.map(node => {
@@ -967,7 +982,9 @@ export default function TermTreePage({
               })}
             </div>
           </div>
-        ))}
+        );
+      })}
+        </div>
       </div>
 
       {/* RIGHT AREA: DETAILS PANEL */}
