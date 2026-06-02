@@ -2,7 +2,7 @@ export interface TimelineItem {
   id: string;
   name: string;
   type: 'lifespan' | 'event';
-  layer: 'biblical-patriarchs' | 'biblical-events' | 'sumerian-kings' | 'greek-mythology' | 'merovingian-bloodlines' | 'royal-bloodlines' | 'enochian-lore';
+  layer: 'biblical-patriarchs' | 'biblical-events' | 'sumerian-kings' | 'greek-mythology' | 'merovingian-bloodlines' | 'royal-bloodlines' | 'enochian-lore' | 'future-prophecy';
   start: number; // BCE is negative, CE is positive
   end?: number;  // Only for 'lifespan'
   description: string;
@@ -2239,6 +2239,77 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     description: 'A nomadic clan of metalworkers allied with Israel. Jethro, the father-in-law of Moses, was a Kenite. They inhabited the Wilderness of Arad.',
     source: 'Genesis 15:19, Judges 1:16, 4:11, 1 Samuel 15:6',
     isPeopleGroup: true
+  },
+  // ==========================================
+  // FUTURE PROPHECY (BOOK OF REVELATION)
+  // ==========================================
+  {
+    id: 'rev_tribulation',
+    name: 'The Tribulation Period',
+    type: 'lifespan',
+    layer: 'future-prophecy',
+    start: 2100,
+    end: 2107,
+    description: 'A 7-year eschatological period of global distress and divine judgments, marked by the opening of the seven seals, seven trumpets, and seven bowls of wrath.',
+    source: 'Revelation 6-16'
+  },
+  {
+    id: 'rev_two_witnesses',
+    name: 'The Two Witnesses',
+    type: 'lifespan',
+    layer: 'future-prophecy',
+    start: 2100,
+    end: 2103,
+    description: 'Two prophetic witnesses who preach in Jerusalem with power over nature, are killed by the Beast, and rise back to heaven after three and a half days.',
+    source: 'Revelation 11:3-12'
+  },
+  {
+    id: 'rev_antichrist',
+    name: 'Rise of the Beast (Antichrist)',
+    type: 'lifespan',
+    layer: 'future-prophecy',
+    start: 2103,
+    end: 2107,
+    description: 'The final 3.5 years (42 months) of the Tribulation where the Beast rules the earth, wages war against the saints, and enforces the Mark of the Beast.',
+    source: 'Revelation 13'
+  },
+  {
+    id: 'rev_second_coming',
+    name: 'The Second Coming of Christ',
+    type: 'event',
+    layer: 'future-prophecy',
+    start: 2107,
+    description: 'Christ returns in glory with the armies of heaven on white horses, defeats the beast and the false prophet, and binds Satan in the abyss.',
+    source: 'Revelation 19'
+  },
+  {
+    id: 'rev_millennial_reign',
+    name: 'The Millennial Reign',
+    type: 'lifespan',
+    layer: 'future-prophecy',
+    start: 2107,
+    end: 3107,
+    description: 'A 1,000-year golden age of peace and righteousness where Christ reigns on earth with His saints, and the earth is filled with the knowledge of God.',
+    source: 'Revelation 20:1-6'
+  },
+  {
+    id: 'rev_final_judgment',
+    name: 'The Great White Throne Judgment',
+    type: 'event',
+    layer: 'future-prophecy',
+    start: 3107,
+    description: 'Satan is cast into the Lake of Fire. All the dead, great and small, stand before the Great White Throne and are judged according to their works.',
+    source: 'Revelation 20:11-15'
+  },
+  {
+    id: 'rev_new_jerusalem',
+    name: 'New Heaven, Earth & New Jerusalem',
+    type: 'lifespan',
+    layer: 'future-prophecy',
+    start: 3108,
+    end: 3500,
+    description: 'God wipes away all tears. The holy city, New Jerusalem, descends out of heaven from God as a bride adorned for her husband, establishing eternity.',
+    source: 'Revelation 21-22'
   }
 ];
 
@@ -2309,7 +2380,15 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'horites': { lng: 35.480, lat: 30.320, locationName: 'Mount Seir (Edom)', category: 'Biblical Figures' },
   'avim': { lng: 34.450, lat: 31.500, locationName: 'Gaza (Hazerim)', category: 'Biblical Figures' },
   'perizzites': { lng: 35.263, lat: 32.062, locationName: 'Hill Country of Ephraim', category: 'Biblical Figures' },
-  'kenites': { lng: 35.125, lat: 31.280, locationName: 'Wilderness of Arad', category: 'Biblical Figures' }
+  'kenites': { lng: 35.125, lat: 31.280, locationName: 'Wilderness of Arad', category: 'Biblical Figures' },
+  // Future Prophecies
+  'rev_tribulation': { lng: 35.235, lat: 31.778, locationName: 'Jerusalem (Temple Mount)', category: 'Biblical Events' },
+  'rev_two_witnesses': { lng: 35.235, lat: 31.778, locationName: 'Jerusalem (Old City)', category: 'Biblical Events' },
+  'rev_antichrist': { lng: 44.422, lat: 32.536, locationName: 'Babylon (Euphrates River)', category: 'Biblical Events' },
+  'rev_second_coming': { lng: 35.184, lat: 32.585, locationName: 'Valley of Megiddo (Armageddon)', category: 'Biblical Events' },
+  'rev_millennial_reign': { lng: 35.235, lat: 31.778, locationName: 'New Jerusalem / Earth', category: 'Biblical Events' },
+  'rev_final_judgment': { lng: 35.235, lat: 31.778, locationName: 'Cosmic Throne (Jerusalem)', category: 'Biblical Events' },
+  'rev_new_jerusalem': { lng: 35.235, lat: 31.778, locationName: 'New Jerusalem', category: 'Biblical Events' }
 };
 
 export interface Waypoint {

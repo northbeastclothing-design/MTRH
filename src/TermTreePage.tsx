@@ -96,9 +96,15 @@ export default function TermTreePage({
   const [searchQuery, setSearchQuery] = useState('');
   const [lines, setLines] = useState<SVGLinePath[]>([]);
   const [scrollSize, setScrollSize] = useState({ width: 0, height: 0 });
+  const [isRightCollapsed, setIsRightCollapsed] = useState(true);
 
   const columnsContainerRef = useRef<HTMLDivElement>(null);
   const svgOverlayRef = useRef<SVGSVGElement>(null);
+
+  // Drag velocity and inertia state
+  const dragVelocityRef = useRef({ x: 0, y: 0 });
+  const lastMousePosRef = useRef({ x: 0, y: 0, time: 0 });
+  const inertiaFrameRef = useRef<number | null>(null);
 
 
   // Derive active selection node (last element in selected path)
@@ -476,36 +482,39 @@ export default function TermTreePage({
     scrollLeft: number;
     scrollTop: number;
     container: HTMLDivElement;
-    mainContainer: HTMLDivElement;
     hasDragged: boolean;
   } | null>(null);
 
-  const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>, isColumn: boolean) => {
+  const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
     // Only drag with left click
     if (e.button !== 0) return;
+
+    // Stop any running inertia animation immediately on click
+    if (inertiaFrameRef.current !== null) {
+      cancelAnimationFrame(inertiaFrameRef.current);
+      inertiaFrameRef.current = null;
+    }
     
-    // If it's a main background click, only drag if clicking directly on container/svg
-    if (!isColumn && e.target !== e.currentTarget && (e.target as HTMLElement).tagName !== 'svg') {
+    // Only drag if clicking on the background, columns container, gaps, or column bodies, not on buttons/inputs
+    const target = e.target as HTMLElement;
+    if (target.closest('button') || target.closest('input') || target.closest('a')) {
       return;
     }
     
-    const mainContainer = columnsContainerRef.current;
-    if (!mainContainer) return;
+    const container = columnsContainerRef.current;
+    if (!container) return;
     
-    const container = isColumn ? e.currentTarget : mainContainer;
+    dragVelocityRef.current = { x: 0, y: 0 };
+    lastMousePosRef.current = { x: e.pageX, y: e.pageY, time: performance.now() };
     
     activeDragRef.current = {
       startX: e.pageX,
       startY: e.pageY,
-      scrollLeft: mainContainer.scrollLeft,
+      scrollLeft: container.scrollLeft,
       scrollTop: container.scrollTop,
       container,
-      mainContainer,
       hasDragged: false
     };
-
-    // Prevent default text selection/dragging behavior during mouse drag
-    e.preventDefault();
   };
 
   useEffect(() => {
@@ -522,14 +531,20 @@ export default function TermTreePage({
           document.body.classList.add('is-grabbing');
         }
       }
-      
-      // Horizontal pan (always on main container)
-      drag.mainContainer.scrollLeft = drag.scrollLeft - deltaX;
-      
-      // Vertical pan (only if dragging on a column list container)
-      if (drag.container !== drag.mainContainer) {
-        drag.container.scrollTop = drag.scrollTop - deltaY;
+
+      // Calculate velocity based on change in position over time
+      const now = performance.now();
+      const dt = now - lastMousePosRef.current.time;
+      if (dt > 0) {
+        const vx = e.pageX - lastMousePosRef.current.x;
+        const vy = e.pageY - lastMousePosRef.current.y;
+        dragVelocityRef.current = { x: vx, y: vy };
       }
+      lastMousePosRef.current = { x: e.pageX, y: e.pageY, time: now };
+      
+      // Pan main container horizontally and vertically (Miro board style)
+      drag.container.scrollLeft = drag.scrollLeft - deltaX;
+      drag.container.scrollTop = drag.scrollTop - deltaY;
     };
 
     const handleMouseUp = () => {
@@ -537,6 +552,39 @@ export default function TermTreePage({
       if (drag) {
         if (drag.hasDragged) {
           document.body.classList.remove('is-grabbing');
+
+          // Trigger inertia scroll if velocity is high enough
+          const container = drag.container;
+          let { x: vx, y: vy } = dragVelocityRef.current;
+          
+          const maxVel = 40;
+          const speed = Math.sqrt(vx * vx + vy * vy);
+          if (speed > maxVel) {
+            vx = (vx / speed) * maxVel;
+            vy = (vy / speed) * maxVel;
+          }
+          
+          const friction = 0.95; // Decay factor
+          
+          const runInertia = () => {
+            if (Math.abs(vx) < 0.25 && Math.abs(vy) < 0.25) {
+              inertiaFrameRef.current = null;
+              return;
+            }
+            
+            container.scrollLeft -= vx;
+            container.scrollTop -= vy;
+            
+            vx *= friction;
+            vy *= friction;
+            
+            inertiaFrameRef.current = requestAnimationFrame(runInertia);
+          };
+          
+          if (Math.abs(vx) > 1 || Math.abs(vy) > 1) {
+            inertiaFrameRef.current = requestAnimationFrame(runInertia);
+          }
+          
           // Prevent next click event on pill items if dragged
           const preventClick = (captureEvent: MouseEvent) => {
             captureEvent.stopPropagation();
@@ -557,6 +605,31 @@ export default function TermTreePage({
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('mouseup', handleMouseUp);
+      if (inertiaFrameRef.current !== null) {
+        cancelAnimationFrame(inertiaFrameRef.current);
+      }
+    };
+  }, []);
+
+  // Disable native browser wheel scrolling and native drag-and-drop
+  useEffect(() => {
+    const container = columnsContainerRef.current;
+    if (!container) return;
+
+    const handleWheel = (e: WheelEvent) => {
+      e.preventDefault();
+    };
+
+    const handleDragStart = (e: DragEvent) => {
+      e.preventDefault();
+    };
+
+    container.addEventListener('wheel', handleWheel, { passive: false });
+    container.addEventListener('dragstart', handleDragStart);
+
+    return () => {
+      container.removeEventListener('wheel', handleWheel);
+      container.removeEventListener('dragstart', handleDragStart);
     };
   }, []);
 
@@ -576,7 +649,9 @@ export default function TermTreePage({
       const targetColIdx = Math.min(selectedPath.length, columns.length - 1);
       const colCenterX = 1200 + targetColIdx * 300 + 130;
       
-      const targetScrollLeft = colCenterX - viewportWidth / 2;
+      // If the sidebar is expanded (not collapsed), offset the center to the left
+      const sidebarOffset = isRightCollapsed ? 0 : 300;
+      const targetScrollLeft = colCenterX - (viewportWidth - sidebarOffset) / 2;
       const targetScrollTop = 1500 - viewportHeight / 2;
       
       if (isInitialMountRef.current) {
@@ -592,7 +667,30 @@ export default function TermTreePage({
       }
     }, 150); // slight delay to allow rendering
     return () => clearTimeout(timer);
-  }, [selectedPath, columns]);
+  }, [selectedPath, columns, isRightCollapsed]);
+
+  // Automatically expand sidebar when a term is selected
+  useEffect(() => {
+    if (selectedTermId) {
+      setIsRightCollapsed(false);
+    }
+  }, [selectedTermId]);
+
+  // Poll line positions during slide transitions to ensure SVG paths follow animated columns in real-time
+  useEffect(() => {
+    let startTime = performance.now();
+    let frameId: number;
+
+    const poll = (now: number) => {
+      updateLines();
+      if (now - startTime < 400) { // Poll for 400ms matching transition duration
+        frameId = requestAnimationFrame(poll);
+      }
+    };
+
+    frameId = requestAnimationFrame(poll);
+    return () => cancelAnimationFrame(frameId);
+  }, [selectedPath]);
 
   return (
     <div
@@ -620,56 +718,85 @@ export default function TermTreePage({
         .is-grabbing * {
           cursor: grabbing !important;
         }
+        /* Disable text selection inside the columns container to ensure smooth dragging */
+        .drag-container-select-none {
+          user-select: none !important;
+          -webkit-user-select: none !important;
+          -moz-user-select: none !important;
+          -ms-user-select: none !important;
+        }
       `}</style>
 
-      {/* CATEGORIES vertical label rotated 90 counterclockwise */}
-      <div
-        style={{
+      {/* FLOATING SEARCH BAR IN THE TOP LEFT (separate from canvas) */}
+      <div 
+        style={{ 
           position: 'absolute',
-          left: 0,
-          top: 0,
-          bottom: 0,
-          width: '60px',
+          top: '20px',
+          left: '32px',
+          width: '260px',
+          height: '40px',
+          zIndex: 10,
+          background: theme.bg,
+          border: `1px solid ${theme.border}`,
+          padding: '4px 8px',
+          boxSizing: 'border-box',
           display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          padding: '40px 0',
-          pointerEvents: 'none',
-          zIndex: 2
+          alignItems: 'center'
         }}
       >
-        {"CATEGORIES".split('').map((char, index) => (
-          <span
-            key={index}
+        <div style={{ position: 'relative', width: '100%', display: 'flex', alignItems: 'center' }}>
+          <input
+            type="text"
+            placeholder="SEARCH DATABASE..."
+            value={searchQuery}
+            onChange={e => setSearchQuery(e.target.value)}
             style={{
-              fontSize: '44px',
-              fontWeight: 900,
+              width: '100%',
+              padding: '8px 24px 8px 8px',
+              fontSize: '11px',
               fontFamily: '"Space Mono", monospace',
-              color: isMapDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)',
-              lineHeight: '1',
-              display: 'block',
-              transform: 'rotate(-90deg)'
+              border: 'none',
+              outline: 'none',
+              boxSizing: 'border-box',
+              background: 'transparent',
+              color: theme.text
             }}
-          >
-            {char}
-          </span>
-        ))}
+          />
+          {searchQuery && (
+            <motion.button
+              whileHover={{ opacity: 0.7 }}
+              onClick={() => setSearchQuery('')}
+              style={{
+                position: 'absolute',
+                right: '4px',
+                background: 'none',
+                border: 'none',
+                cursor: 'pointer',
+                padding: '4px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                zIndex: 21
+              }}
+            >
+              <X size={14} color={theme.text} />
+            </motion.button>
+          )}
+        </div>
       </div>
 
       {/* LEFT AREA: HORIZONTALLY AND VERTICALLY DRAGGABLE INFINITE CANVAS */}
       <div
         ref={columnsContainerRef}
-        className="no-scrollbar"
+        className="no-scrollbar drag-container-select-none"
         onMouseDown={handleMouseDown}
         style={{
-          flex: 1.5,
-          overflowX: 'auto',
-          overflowY: 'auto',
-          position: 'relative',
-          borderRight: `1px solid ${theme.borderLight}`,
+          width: '100%',
           height: '100%',
-          background: 'transparent', // Made transparent so spinning globe background is visible
+          overflowX: 'hidden',
+          overflowY: 'hidden',
+          position: 'relative',
+          background: 'rgba(0, 0, 0, 0)', // Use zero opacity color to ensure pointer event capture in all browsers
           cursor: 'grab',
           zIndex: 3
         }}
@@ -733,109 +860,180 @@ export default function TermTreePage({
           </svg>
 
         {/* Columns positioned absolutely on the 2D Canvas */}
-        {columns.map((column, colIdx) => {
-          const selectedNodeId = selectedPath[colIdx];
-          const selIdx = column.nodes.findIndex(n => n.id === selectedNodeId);
-          const activeSelIdx = selIdx >= 0 ? selIdx : 0;
-          const Y_item = activeSelIdx * 40 + 16; // 32px height + 8px gap, center is at 16px
-          const colTop = 1500 - Y_item - (colIdx === 0 ? 70 : 0);
-          const colLeft = 1200 + colIdx * 300;
+        <AnimatePresence>
+          {columns.map((column, colIdx) => {
+            const selectedNodeId = selectedPath[colIdx];
+            const selIdx = column.nodes.findIndex(n => n.id === selectedNodeId);
+            const activeSelIdx = selIdx >= 0 ? selIdx : 0;
+            const Y_item = activeSelIdx * 40 + 16; // 32px height + 8px gap, center is at 16px
+            const colTop = 1500 - Y_item;
+            const colLeft = 1200 + colIdx * 300;
 
-          return (
-            <div
-              key={colIdx}
-              style={{
-                position: 'absolute',
-                left: `${colLeft}px`,
-                top: `${colTop}px`,
-                width: '260px',
-                display: 'flex',
-                flexDirection: 'column',
-                zIndex: 5,
-                background: 'transparent'
-              }}
-            >
-              {/* Sticky Search bar for Column 0 (re-styled to match map left sidebar search) */}
-              {colIdx === 0 && (
-                <div 
-                  style={{ 
-                    height: '70px',
-                    padding: '16px', 
-                    boxSizing: 'border-box',
-                    borderBottom: 'none', 
-                    flexShrink: 0, 
-                    zIndex: 100,
-                    background: theme.bg
-                  }}
-                >
-                  <div style={{ position: 'relative', width: '100%' }}>
-                    <input
-                      type="text"
-                      placeholder="SEARCH DATABASE..."
-                      value={searchQuery}
-                      onChange={e => setSearchQuery(e.target.value)}
-                      style={{
-                        width: '100%',
-                        padding: '10px 32px 10px 12px',
-                        fontSize: '11px',
-                        fontFamily: '"Space Mono", monospace',
-                        border: `1px solid ${theme.border}`,
-                        borderRadius: '0px',
-                        outline: 'none',
-                        boxSizing: 'border-box',
-                        background: isMapDarkMode ? '#000000' : '#ffffff',
-                        color: theme.text
-                      }}
-                    />
-                    {searchQuery && (
-                      <motion.button
-                        whileHover={{ opacity: 0.7 }}
-                        onClick={() => setSearchQuery('')}
-                        style={{
-                          position: 'absolute',
-                          right: '8px',
-                          top: '50%',
-                          transform: 'translateY(-50%)',
-                          background: 'none',
-                          border: 'none',
-                          cursor: 'pointer',
-                          padding: '4px',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          zIndex: 21
-                        }}
-                      >
-                        <X size={14} color={theme.text} />
-                      </motion.button>
-                    )}
-                  </div>
-                </div>
-              )}
-
-              {/* Column List Body (no-scrollbar, static layout inside absolute column block) */}
-              <div
-                className="no-scrollbar"
+            return (
+              <motion.div
+                key={colIdx}
+                initial={{ opacity: 0, x: 25 }}
+                animate={{ 
+                  opacity: 1, 
+                  x: 0,
+                  top: `${colTop}px`
+                }}
+                exit={{ opacity: 0, x: 25 }}
+                transition={{ 
+                  duration: 0.35,
+                  ease: [0.16, 1, 0.3, 1] // Apple-style fluid deceleration ease-out curve
+                }}
                 style={{
+                  position: 'absolute',
+                  left: `${colLeft}px`,
+                  width: '260px',
                   display: 'flex',
                   flexDirection: 'column',
-                  gap: '8px',
-                  position: 'relative'
+                  zIndex: 5,
+                  background: 'transparent'
                 }}
               >
+                {/* Column 0 Blurb (says click a category to dive deeper, fades out on click) */}
+                {colIdx === 0 && (
+                  <AnimatePresence>
+                    {selectedPath.length === 0 && (
+                      <motion.div
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        transition={{ duration: 0.3 }}
+                        style={{
+                          position: 'absolute',
+                          bottom: '100%',
+                          left: 0,
+                          right: 0,
+                          marginBottom: '16px',
+                          padding: '12px 16px',
+                          border: `1px dashed ${theme.borderLight}`,
+                          borderRadius: '8px',
+                          background: isMapDarkMode ? 'rgba(255,255,255,0.03)' : 'rgba(0,0,0,0.02)',
+                          textAlign: 'center',
+                          pointerEvents: 'none'
+                        }}
+                      >
+                        <span
+                          style={{
+                            fontSize: '10px',
+                            fontFamily: '"Space Mono", monospace',
+                            color: theme.textDim,
+                            lineHeight: '1.4',
+                            display: 'block'
+                          }}
+                        >
+                          SELECT A CATEGORY BELOW TO DIVE DEEPER INTO THE TAXONOMY AND EXPLORE CONNECTIONS.
+                        </span>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                )}
 
-              {/* Items Render */}
-              {column.nodes.map(node => {
-                const isSelected = selectedPath[colIdx] === node.id;
-                const isHovered = hoveredTermId === node.id;
-                const isMatched = searchQuery.trim() !== '' && searchFilteredData.matchedNodes.has(node.id);
-                const nodeColor = colIdx === 0 ? getNodeColor(node) : getRootCategoryColor(node);
-                const nodeIcon = getNodeIcon(node);
+                {/* Column List Body (no-scrollbar, static layout inside absolute column block) */}
+                <div
+                  className="no-scrollbar"
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '8px',
+                    position: 'relative'
+                  }}
+                >
 
-                const hasChildren = TERM_TREE_DATA.some(c => c.parentId === node.id);
+                {/* Items Render */}
+                {column.nodes.map(node => {
+                  const isSelected = selectedPath[colIdx] === node.id;
+                  const isHovered = hoveredTermId === node.id;
+                  const isMatched = searchQuery.trim() !== '' && searchFilteredData.matchedNodes.has(node.id);
+                  const nodeColor = colIdx === 0 ? getNodeColor(node) : getRootCategoryColor(node);
+                  const nodeIcon = getNodeIcon(node);
 
-                // Column 0 / Level 0: Main Category terms (style identical to map page sidebar layer list, minus visibility toggle)
-                if (colIdx === 0) {
+                  const hasChildren = TERM_TREE_DATA.some(c => c.parentId === node.id);
+
+                  // Column 0 / Level 0: Main Category terms (style identical to map page sidebar layer list, minus visibility toggle)
+                  if (colIdx === 0) {
+                    return (
+                      <div
+                        key={node.id}
+                        id={`node-pill-${node.id}`}
+                        onMouseEnter={() => setHoveredTermId(node.id)}
+                        onMouseLeave={() => setHoveredTermId(null)}
+                        onClick={() => handleNodeClick(node, colIdx)}
+                        style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'space-between',
+                          padding: '0',
+                          height: '32px',
+                          cursor: 'pointer',
+                          background: isSelected
+                            ? '#000000'
+                            : isHovered
+                              ? (isMapDarkMode ? '#222222' : '#f0f0f0')
+                              : (isMapDarkMode ? '#1a1a1a' : '#ffffff'),
+                          border: `1px solid ${theme.border}`,
+                          borderRadius: '16px',
+                          boxSizing: 'border-box',
+                          color: isSelected ? nodeColor : theme.text, // Text keeps the icon/layer color when clicked
+                          transition: 'all 0.2s ease',
+                          position: 'relative',
+                          zIndex: isSelected ? 15 : 5,
+                          boxShadow: isSelected ? `0 0 10px ${nodeColor}44` : 'none'
+                        }}
+                      >
+                        {/* Left icon and text wrapper */}
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flex: 1, textAlign: 'left', overflow: 'hidden' }}>
+                          <div style={{ width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                            <img
+                              src={nodeIcon}
+                              style={{ width: '30px', height: '30px' }}
+                              alt={node.name}
+                              draggable={false}
+                            />
+                          </div>
+                          <span
+                            style={{
+                              fontSize: '10px',
+                              lineHeight: '24px',
+                              fontWeight: '700',
+                              fontFamily: '"Space Mono", monospace',
+                              letterSpacing: '0.5px',
+                              textTransform: 'uppercase',
+                              whiteSpace: 'nowrap',
+                              overflow: 'hidden',
+                              textOverflow: 'ellipsis',
+                              opacity: 1,
+                              color: isSelected ? nodeColor : theme.text
+                            }}
+                          >
+                            {node.name}
+                          </span>
+                        </div>
+
+                        {/* Right pointing arrow (matching sidebar expand chevron but pointing right) */}
+                        {hasChildren && (
+                          <div style={{ width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                            <img
+                              src="/icons/icon-arrow-down.svg"
+                              style={{
+                                width: '30px',
+                                height: '30px',
+                                transform: 'rotate(-90deg)', // pointing right
+                                filter: isSelected ? 'invert(1)' : theme.invert
+                              }}
+                              alt="arrow"
+                              draggable={false}
+                            />
+                          </div>
+                        )}
+                      </div>
+                    );
+                  }
+
+                  // Columns 1+: Secondary Terms/Themes (look exactly like timeline cards: faded color bg, no icon, no stroke)
                   return (
                     <div
                       key={node.id}
@@ -847,464 +1045,452 @@ export default function TermTreePage({
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'space-between',
-                        padding: '0',
-                        height: '32px',
-                        cursor: 'pointer',
-                        background: isSelected
-                          ? '#000000'
-                          : isHovered
-                            ? (isMapDarkMode ? '#222222' : '#f0f0f0')
-                            : (isMapDarkMode ? '#1a1a1a' : '#ffffff'),
-                        border: `1px solid ${theme.border}`,
                         borderRadius: '16px',
-                        boxSizing: 'border-box',
-                        color: isSelected ? nodeColor : theme.text, // Text keeps the icon/layer color when clicked
-                        transition: 'all 0.2s ease',
+                        padding: '0 12px',
+                        height: '32px',
+                        border: 'none', // No stroke
+                        background: (isSelected || isHovered)
+                          ? nodeColor // Solid background on hover/selection
+                          : `${nodeColor}a6`, // 65% opacity background by default (hex a6 is 65% opacity)
+                        color: (isSelected || isHovered)
+                          ? '#000000' // Black text on solid background color
+                          : (isMatched ? (isMapDarkMode ? '#FFF96A' : '#A78B00') : theme.text),
+                        boxShadow: isSelected ? `0 0 8px ${nodeColor}44` : 'none',
+                        cursor: 'pointer',
+                        transition: 'background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease',
                         position: 'relative',
-                        zIndex: isSelected ? 15 : 5,
-                        boxShadow: isSelected ? `0 0 10px ${nodeColor}44` : 'none'
+                        zIndex: isSelected ? 15 : 5
                       }}
                     >
-                      {/* Left icon and text wrapper */}
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flex: 1, textAlign: 'left', overflow: 'hidden' }}>
-                        <div style={{ width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                          <img
-                            src={nodeIcon}
-                            style={{ width: '30px', height: '30px' }}
-                            alt={node.name}
-                          />
-                        </div>
-                        <span
+                      <span
+                        style={{
+                          fontSize: '10px',
+                          fontWeight: isSelected || isHovered || isMatched ? 700 : 500,
+                          fontFamily: '"Space Mono", monospace',
+                          letterSpacing: '0.5px',
+                          textTransform: 'uppercase',
+                          whiteSpace: 'nowrap',
+                          overflow: 'hidden',
+                          textOverflow: 'ellipsis'
+                        }}
+                      >
+                        {node.name}
+                      </span>
+
+                      {/* Chevron indicators */}
+                      {hasChildren && (
+                        <svg
+                          width="8"
+                          height="8"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="3.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                           style={{
-                            fontSize: '10px',
-                            lineHeight: '24px',
-                            fontWeight: '700',
-                            fontFamily: '"Space Mono", monospace',
-                            letterSpacing: '0.5px',
-                            textTransform: 'uppercase',
-                            whiteSpace: 'nowrap',
-                            overflow: 'hidden',
-                            textOverflow: 'ellipsis',
-                            opacity: 1,
-                            color: isSelected ? nodeColor : theme.text
+                            opacity: 0.6,
+                            flexShrink: 0,
+                            color: (isSelected || isHovered) ? '#000000' : theme.text,
+                            marginLeft: '6px'
                           }}
                         >
-                          {node.name}
-                        </span>
-                      </div>
-
-                      {/* Right pointing arrow (matching sidebar expand chevron but pointing right) */}
-                      {hasChildren && (
-                        <div style={{ width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                          <img
-                            src="/icons/icon-arrow-down.svg"
-                            style={{
-                              width: '30px',
-                              height: '30px',
-                              transform: 'rotate(-90deg)', // pointing right
-                              filter: isSelected ? 'invert(1)' : theme.invert
-                            }}
-                            alt="arrow"
-                          />
-                        </div>
+                          <polyline points="9 18 15 12 9 6" />
+                        </svg>
                       )}
                     </div>
                   );
-                }
-
-                // Columns 1+: Secondary Terms/Themes (look exactly like timeline cards: faded color bg, no icon, no stroke)
-                return (
-                  <div
-                    key={node.id}
-                    id={`node-pill-${node.id}`}
-                    onMouseEnter={() => setHoveredTermId(node.id)}
-                    onMouseLeave={() => setHoveredTermId(null)}
-                    onClick={() => handleNodeClick(node, colIdx)}
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'space-between',
-                      borderRadius: '16px',
-                      padding: '0 12px',
-                      height: '32px',
-                      border: 'none', // No stroke
-                      background: (isSelected || isHovered)
-                        ? nodeColor // Solid background on hover/selection
-                        : `${nodeColor}a6`, // 65% opacity background by default (hex a6 is 65% opacity)
-                      color: (isSelected || isHovered)
-                        ? '#000000' // Black text on solid background color
-                        : (isMatched ? (isMapDarkMode ? '#FFF96A' : '#A78B00') : theme.text),
-                      boxShadow: isSelected ? `0 0 8px ${nodeColor}44` : 'none',
-                      cursor: 'pointer',
-                      transition: 'background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease',
-                      position: 'relative',
-                      zIndex: isSelected ? 15 : 5
-                    }}
-                  >
-                    <span
-                      style={{
-                        fontSize: '10px',
-                        fontWeight: isSelected || isHovered || isMatched ? 700 : 500,
-                        fontFamily: '"Space Mono", monospace',
-                        letterSpacing: '0.5px',
-                        textTransform: 'uppercase',
-                        whiteSpace: 'nowrap',
-                        overflow: 'hidden',
-                        textOverflow: 'ellipsis'
-                      }}
-                    >
-                      {node.name}
-                    </span>
-
-                    {/* Chevron indicators */}
-                    {hasChildren && (
-                      <svg
-                        width="8"
-                        height="8"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="3.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        style={{
-                          opacity: 0.6,
-                          flexShrink: 0,
-                          color: (isSelected || isHovered) ? '#000000' : theme.text,
-                          marginLeft: '6px'
-                        }}
-                      >
-                        <polyline points="9 18 15 12 9 6" />
-                      </svg>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        );
-      })}
+                })}
+              </div>
+            </motion.div>
+          )})}
+        </AnimatePresence>
         </div>
       </div>
 
-      {/* RIGHT AREA: DETAILS PANEL */}
-      <div
-        style={{
-          flex: 1,
-          padding: '24px 32px',
-          display: 'flex',
-          flexDirection: 'column',
-          overflowY: 'auto',
-          background: isMapDarkMode ? 'rgba(0, 0, 0, 0.25)' : 'rgba(255, 255, 255, 0.25)',
-          backdropFilter: 'blur(8px)',
-          zIndex: 15
+      {/* RIGHT SIDEBAR: DOSSIER SIDEBAR WINDOW PANEL */}
+      <motion.div 
+        initial={false}
+        animate={{ 
+          right: isRightCollapsed ? -280 : 0,
+          background: isMapDarkMode ? 'rgba(10, 10, 10, 0.85)' : 'rgba(255, 255, 255, 0.85)',
+          borderColor: theme.border,
+          opacity: 1
+        }}
+        transition={{ 
+          right: { type: 'spring', stiffness: 240, damping: 28 },
+          default: { duration: 0.5, ease: [0.16, 1, 0.3, 1] }
+        }}
+        style={{ 
+          position: 'absolute',
+          top: 0,
+          bottom: 0,
+          width: '300px',
+          borderLeft: `1px solid ${theme.border}`,
+          display: 'flex', 
+          flexDirection: 'column', 
+          overflow: 'visible', 
+          zIndex: 15, 
+          fontFamily: '"Space Mono", monospace',
+          pointerEvents: 'auto',
+          color: theme.text,
+          backdropFilter: 'blur(8px)'
         }}
       >
+        {/* ABSOLUTE POSITIONED FIXED TAB FOR RIGHT SIDEBAR */}
+        <motion.button 
+          whileHover={{ opacity: 0.8 }}
+          onClick={() => setIsRightCollapsed(!isRightCollapsed)}
+          title={isRightCollapsed ? "Maximize Dossier" : "Minimize Dossier"}
+          style={{
+            position: 'absolute',
+            top: '40px',
+            left: '-20px',
+            width: '20px',
+            height: '41px',
+            background: theme.text,
+            color: theme.bg,
+            border: 'none',
+            cursor: 'pointer',
+            zIndex: 25,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: 0
+          }}
+        >
+          <img 
+            src="/icons/icon-arrow-left.svg" 
+            alt="toggle" 
+            style={{ 
+              width: '6px', 
+              height: '12px', 
+              transform: isRightCollapsed ? 'none' : 'rotate(180deg)',
+              filter: theme.invert
+            }} 
+            draggable={false}
+          />
+        </motion.button>
+
         <AnimatePresence mode="wait">
           {activeTermNode ? (
-            <motion.div
+            <motion.div 
               key={activeTermNode.id}
-              initial={{ opacity: 0, y: 10 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.2 }}
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '24px',
-                height: '100%'
-              }}
+              exit={{ opacity: 0, y: -15 }}
+              transition={{ duration: 0.32, ease: [0.16, 1, 0.3, 1] }}
+              style={{ display: 'flex', flexDirection: 'column', height: '100%', textAlign: 'left' }}
             >
-              {/* Title Header */}
-              <div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
-                  <img
-                    src={getNodeIcon(activeTermNode)}
-                    alt="icon"
-                    style={{ width: '12px', height: '12px' }}
-                  />
-                  <span style={{ fontSize: '9px', fontWeight: 'bold', letterSpacing: '1px', textTransform: 'uppercase', color: theme.textDim }}>
-                    {activeTermNode.layer || 'Taxonomy'}
+              {/* Header Top Bar */}
+              <div style={{ 
+                height: '40px', 
+                padding: '0 16px', 
+                borderBottom: `1px solid ${theme.border}`, 
+                display: 'flex', 
+                alignItems: 'center', 
+                background: theme.bg, 
+                flexShrink: 0 
+              }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <div style={{ width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <img 
+                      src={getNodeIcon(activeTermNode)} 
+                      style={{ width: '30px', height: '30px' }} 
+                      alt="layer-icon" 
+                      draggable={false}
+                    />
+                  </div>
+                  <span style={{ 
+                    fontWeight: '700', 
+                    fontSize: '11px', 
+                    letterSpacing: '1px', 
+                    fontFamily: '"Space Mono", monospace' 
+                  }}>
+                    {activeTermNode.layer ? activeTermNode.layer.toUpperCase() : 'TAXONOMY'}
                   </span>
                 </div>
-                <h2
-                  style={{
-                    fontSize: '26px',
-                    fontWeight: 900,
+              </div>
+
+              {/* Scrollable details area */}
+              <div 
+                className="no-scrollbar" 
+                style={{ 
+                  flex: 1, 
+                  overflowY: 'auto', 
+                  overflowX: 'hidden', 
+                  textAlign: 'left', 
+                  padding: '24px', 
+                  display: 'flex', 
+                  flexDirection: 'column', 
+                  gap: '24px',
+                  paddingBottom: '40px' 
+                }}
+              >
+                {/* Title */}
+                <div>
+                  <h1 style={{ 
                     fontFamily: '"Space Mono", monospace',
-                    margin: 0,
-                    letterSpacing: '1.5px',
-                    color: theme.text,
+                    fontWeight: '400', 
+                    fontSize: '24px', 
+                    lineHeight: '28px',
+                    color: theme.text, 
+                    margin: '0 0 8px 0', 
+                    textAlign: 'left', 
+                    letterSpacing: '-0.5px',
                     textTransform: 'uppercase'
-                  }}
-                >
-                  {activeTermNode.name}
-                </h2>
-              </div>
-
-              {/* LINGUISTIC TRANSLATIONS HUD */}
-              {activeTermNode.translations && activeTermNode.translations.length > 0 && (
-                <div
-                  style={{
-                    border: `1px solid ${theme.borderLight}`,
-                    borderRadius: '8px',
-                    padding: '16px',
-                    background: isMapDarkMode ? 'rgba(255,255,255,0.03)' : 'rgba(0,0,0,0.02)'
-                  }}
-                >
-                  <h3
-                    style={{
-                      fontSize: '9px',
-                      fontWeight: 'bold',
-                      letterSpacing: '1.5px',
-                      textTransform: 'uppercase',
-                      color: theme.textDim,
-                      margin: '0 0 12px 0'
-                    }}
-                  >
-                    Linguistic Roots & Translations
-                  </h3>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                    {activeTermNode.translations.map((trans, tIdx) => (
-                      <div
-                        key={tIdx}
-                        style={{
-                          display: 'flex',
-                          alignItems: 'baseline',
-                          justifyContent: 'space-between',
-                          flexWrap: 'wrap',
-                          gap: '8px',
-                          borderBottom: tIdx < activeTermNode.translations!.length - 1 ? `1px dashed ${theme.borderLight}` : 'none',
-                          paddingBottom: tIdx < activeTermNode.translations!.length - 1 ? '12px' : '0'
-                        }}
-                      >
-                        <div style={{ display: 'flex', flexDirection: 'column' }}>
-                          <span style={{ fontSize: '8px', fontWeight: 'bold', textTransform: 'uppercase', color: getNodeColor(activeTermNode) }}>
-                            {trans.lang}
-                          </span>
-                          <span style={{ fontSize: '11px', fontWeight: 'bold', color: theme.text, fontFamily: '"Space Mono", monospace' }}>
-                            {trans.translit}
-                          </span>
-                          <span style={{ fontSize: '10px', fontStyle: 'italic', color: theme.textDim }}>
-                            "{trans.meaning}"
-                          </span>
-                        </div>
-                        
-                        <div
-                          style={{
-                            fontSize: '28px',
-                            fontWeight: 'bold',
-                            color: theme.text,
-                            fontFamily: trans.lang === 'Hebrew' ? 'serif' : '"Space Mono", monospace',
-                            letterSpacing: '1px'
-                          }}
-                        >
-                          {trans.original}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+                  }}>
+                    {activeTermNode.name}
+                  </h1>
                 </div>
-              )}
 
-              {/* Description */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                <h3 style={{ fontSize: '9px', fontWeight: 'bold', letterSpacing: '1.5px', textTransform: 'uppercase', color: theme.textDim, margin: 0 }}>
-                  Overview
-                </h3>
-                <p
-                  style={{
-                    fontSize: '11px',
-                    lineHeight: '1.6',
-                    margin: 0,
-                    color: theme.text,
-                    fontFamily: '"Space Mono", monospace',
-                    whiteSpace: 'pre-line'
-                  }}
-                >
-                  {activeTermNode.description}
-                </p>
-              </div>
-
-              {/* BIBLE VERSES / SCRIPTURE REFERENCE HUD */}
-              {activeTermNode.bibleVerses && activeTermNode.bibleVerses.length > 0 && (
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                  <h3 style={{ fontSize: '9px', fontWeight: 'bold', letterSpacing: '1.5px', textTransform: 'uppercase', color: theme.textDim, margin: 0 }}>
-                    Scripture References
-                  </h3>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                    {activeTermNode.bibleVerses.map((verse, vIdx) => {
-                      const [quote, citation] = verse.split(' — ');
-                      return (
-                        <div
-                          key={vIdx}
-                          style={{
-                            borderLeft: `2px solid ${getNodeColor(activeTermNode)}`,
-                            paddingLeft: '12px',
-                            paddingTop: '2px',
-                            paddingBottom: '2px',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            gap: '4px'
-                          }}
-                        >
-                          <span style={{ fontSize: '10.5px', fontStyle: 'italic', lineHeight: '1.5', color: theme.text }}>
-                            "{quote}"
-                          </span>
-                          {citation && (
-                            <span style={{ fontSize: '8.5px', fontWeight: 'bold', color: getNodeColor(activeTermNode), letterSpacing: '0.5px' }}>
-                              — {citation.toUpperCase()}
-                            </span>
-                          )}
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-              )}
-
-              {/* CROSS REFERENCES */}
-              {activeTermNode.relatedIds && activeTermNode.relatedIds.length > 0 && (
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                  <h3 style={{ fontSize: '9px', fontWeight: 'bold', letterSpacing: '1.5px', textTransform: 'uppercase', color: theme.textDim, margin: 0 }}>
-                    Tied-in & Related Terms
-                  </h3>
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                {/* Tag Pills (Related terms looking like map categories tags) */}
+                {activeTermNode.relatedIds && activeTermNode.relatedIds.length > 0 && (
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '8px', justifyContent: 'flex-start' }}>
                     {activeTermNode.relatedIds.map(relId => {
                       const relNode = TERM_TREE_DATA.find(t => t.id === relId);
                       if (!relNode) return null;
                       const relColor = getNodeColor(relNode);
 
                       return (
-                        <button
-                          key={relId}
+                        <button 
+                          key={relId} 
                           onClick={() => {
                             const path = getPathToRoot(relId);
                             setSelectedPath(path);
-                            
-                            setTimeout(() => {
-                              const targetPill = document.getElementById(`node-pill-${relId}`);
-                              if (targetPill && columnsContainerRef.current) {
-                                columnsContainerRef.current.scrollLeft = targetPill.offsetLeft - 100;
-                              }
-                            }, 100);
                           }}
-                          style={{
-                            background: 'transparent',
-                            border: `1px solid ${relColor}88`,
-                            borderRadius: '16px',
-                            padding: '4px 12px',
-                            fontSize: '9px',
-                            color: theme.text,
-                            cursor: 'pointer',
-                            fontFamily: '"Space Mono", monospace',
-                            display: 'flex',
+                          title={`Navigate to ${relNode.name}`}
+                          style={{ 
+                            height: '24px',
+                            display: 'inline-flex',
                             alignItems: 'center',
-                            gap: '6px',
+                            fontSize: '10px', 
+                            fontWeight: '400', 
+                            padding: '0 12px', 
+                            borderRadius: '12px', 
+                            background: relColor, 
+                            border: 'none',
+                            color: '#000000',
+                            cursor: 'pointer',
                             textTransform: 'uppercase',
-                            transition: 'all 0.2s ease'
+                            letterSpacing: '0.5px',
+                            fontFamily: '"Space Mono", monospace',
+                            transition: 'transform 0.1s ease, box-shadow 0.1s ease'
                           }}
                           onMouseEnter={e => {
-                            e.currentTarget.style.background = `${relColor}22`;
-                            e.currentTarget.style.borderColor = relColor;
+                            e.currentTarget.style.transform = 'scale(1.05)';
                           }}
                           onMouseLeave={e => {
-                            e.currentTarget.style.background = 'transparent';
-                            e.currentTarget.style.borderColor = `${relColor}88`;
+                            e.currentTarget.style.transform = 'none';
                           }}
                         >
-                          <img
-                            src={getNodeIcon(relNode)}
-                            alt="rel-icon"
-                            style={{ width: '10px', height: '10px' }}
-                          />
                           {relNode.name}
                         </button>
                       );
                     })}
                   </div>
+                )}
+
+                {/* Linguistic Translations */}
+                {activeTermNode.translations && activeTermNode.translations.length > 0 && (
+                  <div
+                    style={{
+                      border: `1px solid ${theme.borderLight}`,
+                      borderRadius: '8px',
+                      padding: '16px',
+                      background: isMapDarkMode ? 'rgba(255,255,255,0.03)' : 'rgba(0,0,0,0.02)'
+                    }}
+                  >
+                    <h3
+                      style={{
+                        fontFamily: '"Space Mono", monospace',
+                        fontWeight: '700',
+                        fontSize: '11px',
+                        lineHeight: '22px',
+                        textTransform: 'uppercase',
+                        color: theme.text,
+                        margin: '0 0 12px 0'
+                      }}
+                    >
+                      Linguistic Roots
+                    </h3>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                      {activeTermNode.translations.map((trans, tIdx) => (
+                        <div
+                          key={tIdx}
+                          style={{
+                            display: 'flex',
+                            alignItems: 'baseline',
+                            justifyContent: 'space-between',
+                            flexWrap: 'wrap',
+                            gap: '8px',
+                            borderBottom: tIdx < activeTermNode.translations!.length - 1 ? `1px dashed ${theme.borderLight}` : 'none',
+                            paddingBottom: tIdx < activeTermNode.translations!.length - 1 ? '12px' : '0'
+                          }}
+                        >
+                          <div style={{ display: 'flex', flexDirection: 'column' }}>
+                            <span style={{ fontSize: '8px', fontWeight: 'bold', textTransform: 'uppercase', color: getNodeColor(activeTermNode) }}>
+                              {trans.lang}
+                            </span>
+                            <span style={{ fontSize: '11px', fontWeight: 'bold', color: theme.text, fontFamily: '"Space Mono", monospace' }}>
+                              {trans.translit}
+                            </span>
+                            <span style={{ fontSize: '10px', fontStyle: 'italic', color: theme.textDim }}>
+                              "{trans.meaning}"
+                            </span>
+                          </div>
+                          
+                          <div
+                            style={{
+                              fontSize: '24px',
+                              fontWeight: 'bold',
+                              color: theme.text,
+                              fontFamily: trans.lang === 'Hebrew' ? 'serif' : '"Space Mono", monospace',
+                              letterSpacing: '1px'
+                            }}
+                          >
+                            {trans.original}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Description */}
+                <div style={{ paddingTop: '0', textAlign: 'left' }}>
+                  <div style={{ fontFamily: '"Space Mono", monospace', fontWeight: '700', fontSize: '11px', lineHeight: '22px', textTransform: 'uppercase' }}>
+                    DESCRIPTION:
+                  </div>
+                  <p style={{ 
+                    fontFamily: '"Space Mono", monospace',
+                    fontWeight: '400',
+                    fontSize: '10px', 
+                    lineHeight: '22px', 
+                    color: theme.text,
+                    marginTop: '4px', 
+                    whiteSpace: 'pre-line', 
+                    textAlign: 'left' 
+                  }}>
+                    {activeTermNode.description}
+                  </p>
                 </div>
-              )}
 
-              {/* ACTIONS */}
-              <div style={{ marginTop: 'auto', display: 'flex', gap: '12px', flexWrap: 'wrap', paddingBottom: '24px' }}>
-                {activeTermNode.layer && (
-                  <motion.button
-                    whileTap={{ scale: 0.95 }}
-                    whileHover={{ scale: 1.05 }}
-                    onClick={() => onViewOnMap(activeTermNode.layer!, activeTermNode.mapFeatureId || activeTermNode.name)}
-                    style={{
-                      flex: 1,
-                      minWidth: '120px',
-                      background: 'transparent',
-                      color: theme.text,
-                      border: `1px solid ${theme.text}`,
-                      borderRadius: '16px',
-                      padding: '6px 12px',
-                      fontSize: '11px',
-                      fontWeight: 'bold',
-                      fontFamily: '"Space Mono", monospace',
-                      cursor: 'pointer',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      gap: '8px',
-                      transition: 'all 0.2s ease',
-                      boxSizing: 'border-box',
-                      whiteSpace: 'nowrap'
-                    }}
-                  >
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                      <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon>
-                      <line x1="9" y1="3" x2="9" y2="18"></line>
-                      <line x1="15" y1="6" x2="15" y2="21"></line>
-                    </svg>
-                    VIEW ON MAP
-                  </motion.button>
+                {/* Scripture references */}
+                {activeTermNode.bibleVerses && activeTermNode.bibleVerses.length > 0 && (
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                    <div style={{ fontFamily: '"Space Mono", monospace', fontWeight: '700', fontSize: '11px', lineHeight: '22px', textTransform: 'uppercase' }}>
+                      SCRIPTURE REFERENCES:
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                      {activeTermNode.bibleVerses.map((verse, vIdx) => {
+                        const [quote, citation] = verse.split(' — ');
+                        return (
+                          <div
+                            key={vIdx}
+                            style={{
+                              borderLeft: `2px solid ${getNodeColor(activeTermNode)}`,
+                              paddingLeft: '12px',
+                              paddingTop: '2px',
+                              paddingBottom: '2px',
+                              display: 'flex',
+                              flexDirection: 'column',
+                              gap: '4px'
+                            }}
+                          >
+                            <span style={{ fontSize: '10px', fontStyle: 'italic', lineHeight: '1.5', color: theme.text }}>
+                              "{quote}"
+                            </span>
+                            {citation && (
+                              <span style={{ fontSize: '8.5px', fontWeight: 'bold', color: getNodeColor(activeTermNode), letterSpacing: '0.5px' }}>
+                                — {citation.toUpperCase()}
+                              </span>
+                            )}
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
                 )}
 
-                {activeTermNode.timelineId && (
-                  <motion.button
-                    whileTap={{ scale: 0.95 }}
-                    whileHover={{ scale: 1.05 }}
-                    onClick={() => onViewOnTimeline(activeTermNode.timelineId!)}
-                    style={{
-                      flex: 1,
-                      minWidth: '120px',
-                      background: theme.text,
-                      color: theme.bg,
-                      border: `1px solid ${theme.text}`,
-                      borderRadius: '16px',
-                      padding: '6px 12px',
-                      fontSize: '11px',
-                      fontWeight: 'bold',
-                      fontFamily: '"Space Mono", monospace',
-                      cursor: 'pointer',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      gap: '8px',
-                      transition: 'all 0.2s ease',
-                      boxSizing: 'border-box',
-                      whiteSpace: 'nowrap'
-                    }}
-                  >
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                      <circle cx="12" cy="12" r="10"></circle>
-                      <polyline points="12 6 12 12 16 14"></polyline>
-                    </svg>
-                    VIEW ON TIMELINE
-                  </motion.button>
-                )}
+                {/* Actions view on map, etc. */}
+                <div style={{ marginTop: 'auto', display: 'flex', flexDirection: 'column', gap: '12px', paddingTop: '20px' }}>
+                  {activeTermNode.layer && (
+                    <motion.button
+                      whileTap={{ scale: 0.95 }}
+                      whileHover={{ scale: 1.05 }}
+                      onClick={() => onViewOnMap(activeTermNode.layer!, activeTermNode.mapFeatureId || activeTermNode.name)}
+                      style={{
+                        width: '100%',
+                        background: 'transparent',
+                        color: theme.text,
+                        border: `1px solid ${theme.text}`,
+                        borderRadius: '16px',
+                        padding: '6px 12px',
+                        fontSize: '11px',
+                        fontWeight: 'bold',
+                        fontFamily: '"Space Mono", monospace',
+                        cursor: 'pointer',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        gap: '8px',
+                        transition: 'all 0.2s ease',
+                        boxSizing: 'border-box',
+                        whiteSpace: 'nowrap'
+                      }}
+                    >
+                      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                        <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon>
+                        <line x1="9" y1="3" x2="9" y2="18"></line>
+                        <line x1="15" y1="6" x2="15" y2="21"></line>
+                      </svg>
+                      VIEW ON MAP
+                    </motion.button>
+                  )}
+
+                  {activeTermNode.timelineId && (
+                    <motion.button
+                      whileTap={{ scale: 0.95 }}
+                      whileHover={{ scale: 1.05 }}
+                      onClick={() => onViewOnTimeline(activeTermNode.timelineId!)}
+                      style={{
+                        width: '100%',
+                        background: theme.text,
+                        color: theme.bg,
+                        border: `1px solid ${theme.text}`,
+                        borderRadius: '16px',
+                        padding: '6px 12px',
+                        fontSize: '11px',
+                        fontWeight: 'bold',
+                        fontFamily: '"Space Mono", monospace',
+                        cursor: 'pointer',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        gap: '8px',
+                        transition: 'all 0.2s ease',
+                        boxSizing: 'border-box',
+                        whiteSpace: 'nowrap'
+                      }}
+                    >
+                      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                      </svg>
+                      VIEW ON TIMELINE
+                    </motion.button>
+                  )}
+                </div>
               </div>
             </motion.div>
           ) : (
-            <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', color: theme.textDim, fontSize: '10px', fontFamily: '"Space Mono", monospace', letterSpacing: '1.5px', textTransform: 'uppercase' }}>
+            <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', color: theme.textDim, fontSize: '10px', fontFamily: '"Space Mono", monospace', letterSpacing: '1.5px', textTransform: 'uppercase', padding: '24px', textAlign: 'center' }}>
               SELECT A TERM TO REVIEW DETAILS & TIES
             </div>
           )}
         </AnimatePresence>
-      </div>
+      </motion.div>
     </div>
   );
 }

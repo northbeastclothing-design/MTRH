@@ -90,6 +90,16 @@ const ERAS_CONFIG = [
     icon: '/icons/icon-royal-bloodlines.svg',
     layer: 'royal-bloodlines',
     desc: 'Charlemagne, Alfred the Great, and British Monarchs down to King Charles III.'
+  },
+  {
+    id: 'future-prophecy',
+    name: 'Future Prophecy',
+    start: 2100,
+    end: 3500,
+    color: '#D4AF37', // Gold!
+    icon: '/icons/icon-ancient-texts.svg',
+    layer: 'future-prophecy',
+    desc: 'Prophecies of the Book of Revelation: Tribulation, Second Coming, Millennial Reign, and the New Jerusalem.'
   }
 ];
 
@@ -108,7 +118,8 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
     'kingdom-classical': true,
     'merovingian-bloodlines': true,
     'royal-bloodlines': true,
-    'enochian-lore': true
+    'enochian-lore': true,
+    'future-prophecy': true
   });
 
   // Dropdown open states
@@ -227,7 +238,7 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
     const currentSpan = viewEnd - viewStart;
     
     // Bounds clamping
-    const clampedStart = Math.max(-250000, Math.min(2100, newStart));
+    const clampedStart = Math.max(-250000, Math.min(3500 - currentSpan, newStart));
     
     setViewStart(clampedStart);
     setViewEnd(clampedStart + currentSpan);
@@ -240,7 +251,7 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
   // Manual zoom helper
   const handleZoom = (factor: number) => {
     const centerYear = viewStart + span / 2;
-    const newSpan = Math.max(50, Math.min(252100, span * factor));
+    const newSpan = Math.max(50, Math.min(253500, span * factor));
     setViewStart(centerYear - newSpan / 2);
     setViewEnd(centerYear + newSpan / 2);
   };
@@ -1708,7 +1719,7 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
             <img 
               src="/icons/icon-zoom-out.svg" 
               onClick={() => handleZoom(1.3)}
-              style={{ width: '24px', height: '24px', filter: theme.invert, cursor: 'pointer', opacity: span >= 252100 ? 0.3 : 1 }} 
+              style={{ width: '24px', height: '24px', filter: theme.invert, cursor: 'pointer', opacity: span >= 253500 ? 0.3 : 1 }} 
               title="Zoom Out"
               alt="zoom out" 
             />
@@ -1717,11 +1728,11 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
               <input
                 type="range"
                 min="0"
-                max="252050"
-                value={252100 - Math.round(span)}
+                max="253450"
+                value={253500 - Math.round(span)}
                 onChange={(e) => {
                   const val = parseInt(e.target.value, 10);
-                  const newSpan = 252100 - val;
+                  const newSpan = 253500 - val;
                   const centerYear = viewStart + span / 2;
                   setViewStart(centerYear - newSpan / 2);
                   setViewEnd(centerYear + newSpan / 2);
