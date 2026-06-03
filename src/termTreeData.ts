@@ -34,6 +34,175 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Angelic messengers and heavenly hosts who carry out the will of God, acting as guides, protectors, and executors of divine judgment.'
   },
   {
+    id: 'ariel',
+    parentId: 'angel',
+    name: 'Ariel',
+    description: 'Female Archangel Environment, animals, shelter money, supplies',
+    sources: ['Jewish Mysticism Literature']
+  },
+  {
+    id: 'azrael',
+    parentId: 'angel',
+    name: 'Azrael',
+    description: 'Archangel of Death/Retribution guides souls to heaven, consoles families',
+    translations: [
+      { lang: 'Hebrew', original: 'עַזְרָאֵל', translit: 'Azra\'el', meaning: 'God helps' }
+    ],
+    sources: ['Islamic & Jewish Apocryphal Literature']
+  },
+  {
+    id: 'barachiel',
+    parentId: 'angel',
+    name: 'Barachiel',
+    description: 'Lightning and blessings (Seraphim)',
+    sources: ['Canonical Scripture', 'Apocryphal Texts']
+  },
+  {
+    id: 'camael',
+    parentId: 'angel',
+    name: 'Camael',
+    description: 'Strength, Courage, war Seen in: Comforted Adam and Eve after they got kicked out of Eden..',
+    sources: ['Canonical Scripture', 'Apocryphal Texts']
+  },
+  {
+    id: 'chamuel',
+    parentId: 'angel',
+    name: 'Chamuel',
+    description: 'Omniscient vision, ease anxiety, peace, brings love to relationships, and can help someone find a loving partner. Chamuel also provides comfort and protection.',
+    sources: ['Canonical Scripture', 'Apocryphal Texts']
+  },
+  {
+    id: 'gabriel',
+    parentId: 'angel',
+    name: 'Gabriel',
+    description: 'Enoch: over Paradise and the serpents and the Cherubim. aids women who are trying to conceive or adopt a child. Messenger Seen in: brought Mary the news that she would have a son Jesus, Messenger of God. Also known as: Zerachiel, Messenger of God.',
+    translations: [
+      { lang: 'Hebrew', original: 'גַּבְרִיאֵל', translit: 'Gavriel', meaning: 'God is my strength' }
+    ],
+    sources: ['Gospel of Luke', 'Book of Daniel', 'Book of Enoch']
+  },
+  {
+    id: 'haniel',
+    parentId: 'angel',
+    name: 'Haniel',
+    description: 'Female, direct people to god Seen in: Escorted Enoch to heaven.',
+    sources: ['Canonical Scripture', 'Apocryphal Texts']
+  },
+  {
+    id: 'jegudiel',
+    parentId: 'angel',
+    name: 'Jegudiel',
+    description: 'Encouragement, wisdom, strength to people working for God\'s glory',
+    sources: ['Canonical Scripture', 'Apocryphal Texts']
+  },
+  {
+    id: 'jeremiel',
+    parentId: 'angel',
+    name: 'Jeremiel',
+    description: 'hope, visions, dreams, inspires souls to go to heaven',
+    sources: ['Canonical Scripture', 'Apocryphal Texts']
+  },
+  {
+    id: 'jophiel',
+    parentId: 'angel',
+    name: 'Jophiel',
+    description: 'Female, think beautiful thoughts Seen in: Guards the tree of life.',
+    sources: ['Canonical Scripture', 'Apocryphal Texts']
+  },
+  {
+    id: 'michael',
+    parentId: 'angel',
+    name: 'Michael',
+    description: 'Enoch: set over the best part of mankind and over chaos. banish fear and provide guidance and strength, head of battalion of angels Seen in: battled satan and Prince of Persia, None. Also known as: Chief Prince, Leader of the angels.',
+    translations: [
+      { lang: 'Hebrew', original: 'מִיכָאֵל', translit: 'Mikha\'el', meaning: 'Who is like God?' }
+    ],
+    sources: ['Book of Daniel', 'Book of Revelation', 'Epistle of Jude']
+  },
+  {
+    id: 'phanuel',
+    parentId: 'angel',
+    name: 'Phanuel',
+    description: 'Overseer of the angels who watch over the repentant Seen in: None. Also known as: None.',
+    sources: ['Canonical Scripture', 'Apocryphal Texts']
+  },
+  {
+    id: 'raguel',
+    parentId: 'angel',
+    name: 'Raguel',
+    description: 'Overseer of the angels who watch over humanity Seen in: None. Also known as: None.',
+    sources: ['Canonical Scripture', 'Apocryphal Texts']
+  },
+  {
+    id: 'ramiel',
+    parentId: 'angel',
+    name: 'Ramiel',
+    description: 'Forgiveness, hope, divine visions, guiding souls into heaven',
+    sources: ['Canonical Scripture', 'Apocryphal Texts']
+  },
+  {
+    id: 'raphael',
+    parentId: 'angel',
+    name: 'Raphael',
+    description: 'healing people and animals from any number of difficulties, both mental and physical. Raphael can also help to find a lost pet or protect travelers. Seen in: escorted Enoch to heaven, None. Also known as: Angel of healing.',
+    translations: [
+      { lang: 'Hebrew', original: 'רְפָאֵל', translit: 'Refa\'el', meaning: 'God has healed' }
+    ],
+    sources: ['Book of Tobit', 'Book of Enoch']
+  },
+  {
+    id: 'saraqael',
+    parentId: 'angel',
+    name: 'Saraqael',
+    description: 'Overseer of the angels who guard the Garden of Eden Seen in: None. Also known as: None.',
+    sources: ['Canonical Scripture', 'Apocryphal Texts']
+  },
+  {
+    id: 'uriel',
+    parentId: 'angel',
+    name: 'Uriel',
+    description: '(ENOCH: one of the holy angels, who is over the world and over Tartarus) associated with the light and fire of God. Uriel can aid in intellectual pursuits, particularly problem-solving, as well as providing assistance in times of natural disasters. repentence, thunder & Terror Seen in: guards Eden, None. Also known as: None.',
+    translations: [
+      { lang: 'Hebrew', original: 'אוּרִיאֵל', translit: 'Uri\'el', meaning: 'God is my light' }
+    ],
+    sources: ['Second Book of Esdras', 'Book of Enoch']
+  },
+  {
+    id: 'zadkiel',
+    parentId: 'angel',
+    name: 'Zadkiel',
+    description: 'Mercy, guides away from sin Seen in: prevented Abraham from Sacrificing son Isaac.',
+    sources: ['Canonical Scripture', 'Apocryphal Texts']
+  },
+  {
+    id: 'remiel',
+    parentId: 'angel',
+    name: 'Remiel',
+    description: 'Overseer of the angels who watch over the dead Seen in: None. Also known as: None.',
+    sources: ['Canonical Scripture', 'Apocryphal Texts']
+  },
+  {
+    id: 'cherubim',
+    parentId: 'angel',
+    name: 'Cherubim',
+    description: 'Guard the throne of God Seen in: None. Also known as: Guard the Garden of Eden.',
+    sources: ['Canonical Scripture', 'Apocryphal Texts']
+  },
+  {
+    id: 'seraphim',
+    parentId: 'angel',
+    name: 'Seraphim',
+    description: 'Worship God Seen in: None. Also known as: None.',
+    sources: ['Canonical Scripture', 'Apocryphal Texts']
+  },
+  {
+    id: 'twenty-four-elders',
+    parentId: 'angel',
+    name: 'Twenty-four Elders',
+    description: 'Sit on thrones around the throne of God Seen in: None. Also known as: None.',
+    sources: ['Canonical Scripture', 'Apocryphal Texts']
+  },
+  {
     id: 'metatron',
     parentId: 'angel',
     name: 'Metatron',
@@ -58,6 +227,287 @@ export const TERM_TREE_DATA: TermNode[] = [
     parentId: 'biblical-enc',
     name: 'Fallen Angels',
     description: 'Rebellious spiritual entities cast out of heaven who corrupt humanity, teach forbidden knowledge, and are bound for judgment.'
+  },
+  {
+    id: 'asbeel',
+    parentId: 'fallen-angel',
+    name: 'Asbeel',
+    description: 'Angel of destruction',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
+  },
+  {
+    id: 'beelzebub',
+    parentId: 'fallen-angel',
+    name: 'Beelzebub',
+    description: 'One of Satan\'s chief lieutenants Seen in: None. Also known as: None.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
+  },
+  {
+    id: 'asmodeus',
+    parentId: 'fallen-angel',
+    name: 'Asmodeus',
+    description: 'Associated with lust and sexual immorality Seen in: None. Also known as: None.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
+  },
+  {
+    id: 'grigori',
+    parentId: 'fallen-angel',
+    name: 'Grigori',
+    description: 'Watchers who fell from heaven Seen in: None. Also known as: Watchers who fell from heaven.',
+    sources: ['Book of Enoch', 'Second Book of Enoch']
+  },
+  {
+    id: 'nephilim',
+    parentId: 'fallen-angel',
+    name: 'Nephilim',
+    description: 'Giants who were the offspring of the Grigori and human women Seen in: None. Also known as: None.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
+  },
+  {
+    id: 'azazel',
+    parentId: 'fallen-angel',
+    name: 'Azazel',
+    description: 'Leader of the Grigori Seen in: None. Also known as: Leader of the fallen angels.',
+    timelineId: 'azazel',
+    sources: ['Book of Enoch 8, 10']
+  },
+  {
+    id: 'samyaza',
+    parentId: 'fallen-angel',
+    name: 'Samyaza',
+    description: 'Second-in-command of the Grigori Seen in: None. Also known as: None.',
+    sources: ['Book of Enoch', 'Book of Giants']
+  },
+  {
+    id: 'araqiel',
+    parentId: 'fallen-angel',
+    name: 'Araqiel',
+    description: 'Fallen angel Seen in: None. Also known as: None.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
+  },
+  {
+    id: 'armaros',
+    parentId: 'fallen-angel',
+    name: 'Armaros',
+    description: 'Fallen angel Seen in: None. Also known as: None.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
+  },
+  {
+    id: 'azazeel',
+    parentId: 'fallen-angel',
+    name: 'Azazeel',
+    description: 'Fallen angel (different from the Azazel in the Book of Enoch) Seen in: None. Also known as: None.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
+  },
+  {
+    id: 'baraqiel',
+    parentId: 'fallen-angel',
+    name: 'Baraqiel',
+    description: 'Fallen angel Seen in: None. Also known as: None.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
+  },
+  {
+    id: 'barquiel',
+    parentId: 'fallen-angel',
+    name: 'Barquiel',
+    description: 'Fallen angel Seen in: None. Also known as: None.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
+  },
+  {
+    id: 'kokabel',
+    parentId: 'fallen-angel',
+    name: 'Kokabel',
+    description: 'Fallen angel Seen in: None. Also known as: None.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
+  },
+  {
+    id: 'penemue',
+    parentId: 'fallen-angel',
+    name: 'Penemue',
+    description: 'Fallen angel Seen in: None. Also known as: None.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
+  },
+  {
+    id: 'sariel',
+    parentId: 'fallen-angel',
+    name: 'Sariel',
+    description: 'Fallen angel Seen in: None. Also known as: None.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
+  },
+  {
+    id: 'semyaza',
+    parentId: 'fallen-angel',
+    name: 'Semyaza',
+    description: 'Fallen angel (different from the Samyaza in the Book of Enoch) Seen in: None. Also known as: None.',
+    sources: ['Book of Enoch', 'Book of Giants']
+  },
+  {
+    id: 'turel',
+    parentId: 'fallen-angel',
+    name: 'Turel',
+    description: 'Fallen angel Seen in: None. Also known as: None.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
+  },
+  {
+    id: 'lucifer',
+    parentId: 'fallen-angel',
+    name: 'Lucifer',
+    description: 'Leader of the angelic rebellion against God. Light bearer, morning star, the dragon, the devil, satan, covering cherub. Syncretized with Zeus, Jupiter, and Baal. Set in Eden, covered in precious stones, on the mountain of God.',
+    translations: [
+      { lang: 'Latin', original: 'Lucifer', translit: 'Lucifer', meaning: 'Light Bringer / Morning Star' }
+    ],
+    relatedIds: ['satan', 'fallen-angel'],
+    sources: ['Book of Isaiah', 'Latin Vulgate Translation']
+  },
+  {
+    id: 'yekun',
+    parentId: 'fallen-angel',
+    name: 'Yekun',
+    description: 'Persuaded and mislead other angels',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
+  },
+  {
+    id: 'kesabel',
+    parentId: 'fallen-angel',
+    name: 'Kesabel',
+    description: 'Female, seduction',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
+  },
+  {
+    id: 'gadreel',
+    parentId: 'fallen-angel',
+    name: 'Gadreel',
+    description: 'Teaches weapons of war and killing',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
+  },
+  {
+    id: 'abaddon',
+    parentId: 'fallen-angel',
+    name: 'Abaddon',
+    description: 'Master destroyer Seen in: Invoked by MOses to destroy Egyptians (red sea).',
+    translations: [
+      { lang: 'Hebrew', original: 'אֲבַדּוֹן', translit: 'Avaddon', meaning: 'Destruction / Place of Ruin' }
+    ],
+    sources: ['Book of Revelation', 'Book of Job']
+  },
+  {
+    id: 'leviathin',
+    parentId: 'fallen-angel',
+    name: 'Leviathin',
+    description: 'Arrogance, Heresy Also known as: Serpent, dragon.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
+  },
+  {
+    id: 'kasyade',
+    parentId: 'fallen-angel',
+    name: 'Kasyade',
+    description: 'Astrology, strikes on embryos, spirits, souls, and demons',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
+  },
+  {
+    id: 'semyazza',
+    parentId: 'fallen-angel',
+    name: 'Semyazza',
+    description: 'leader of watcher/fallen, grigori',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
+  },
+  {
+    id: 'kokabiel',
+    parentId: 'fallen-angel',
+    name: 'Kokabiel',
+    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
+  },
+  {
+    id: 'tamiel',
+    parentId: 'fallen-angel',
+    name: 'Tamiel',
+    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
+  },
+  {
+    id: 'daniel',
+    parentId: 'fallen-angel',
+    name: 'Daniel',
+    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
+  },
+  {
+    id: 'chazaqiel',
+    parentId: 'fallen-angel',
+    name: 'Chazaqiel',
+    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
+  },
+  {
+    id: 'bragiel',
+    parentId: 'fallen-angel',
+    name: 'Bragiel',
+    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
+  },
+  {
+    id: 'asael',
+    parentId: 'fallen-angel',
+    name: 'Asael',
+    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
+  },
+  {
+    id: 'batariel',
+    parentId: 'fallen-angel',
+    name: 'Batariel',
+    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
+  },
+  {
+    id: 'bezaliel',
+    parentId: 'fallen-angel',
+    name: 'Bezaliel',
+    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
+  },
+  {
+    id: 'ananiel',
+    parentId: 'fallen-angel',
+    name: 'Ananiel',
+    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
+  },
+  {
+    id: 'zaqiel',
+    parentId: 'fallen-angel',
+    name: 'Zaqiel',
+    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
+  },
+  {
+    id: 'shamsiel',
+    parentId: 'fallen-angel',
+    name: 'Shamsiel',
+    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
+  },
+  {
+    id: 'sathariel',
+    parentId: 'fallen-angel',
+    name: 'Sathariel',
+    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
+  },
+  {
+    id: 'turiel',
+    parentId: 'fallen-angel',
+    name: 'Turiel',
+    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
+  },
+  {
+    id: 'yomiel',
+    parentId: 'fallen-angel',
+    name: 'Yomiel',
+    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
   },
   {
     id: 'demons',
@@ -93,16 +543,478 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'The twelve Olympian gods and associated deities of classical Greek religion ruling from Mount Olympus.'
   },
   {
+    id: 'achelous',
+    parentId: 'greek-pantheon',
+    name: 'Achelous',
+    description: 'River god, father of the Sirens',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'adonis',
+    parentId: 'greek-pantheon',
+    name: 'Adonis',
+    description: 'God of beauty and desire',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'aegir',
+    parentId: 'greek-pantheon',
+    name: 'Aegir',
+    description: 'Sea god of the giants',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'ares',
+    parentId: 'greek-pantheon',
+    name: 'Ares',
+    description: 'Greek divinity. Domain: War, bloodshed, and violence. Symbol: Spear. Notable deeds: God of war, bloodshed, and violence. Son of Zeus and Hera..',
+    sources: ["Homer's Iliad", "Hesiod's Theogony"]
+  },
+  {
+    id: 'artemis',
+    parentId: 'greek-pantheon',
+    name: 'Artemis',
+    description: 'Greek divinity. Domain: Hunt, the moon, and wild animals. Symbol: Bow and arrow. Notable deeds: Goddess of the hunt, the moon, and wild animals. Daughter of Zeus and Leto. Twin sister of Apollo..',
+    sources: ['Homeric Hymns', "Hesiod's Theogony"]
+  },
+  {
+    id: 'athena',
+    parentId: 'greek-pantheon',
+    name: 'Athena',
+    description: 'Greek divinity. Domain: Wisdom, crafts, and warfare. Symbol: Owl. Notable deeds: Goddess of wisdom, crafts, and warfare. Daughter of Zeus and Metis..',
+    sources: ["Homer's Iliad", "Hesiod's Theogony"]
+  },
+  {
+    id: 'boreas',
+    parentId: 'greek-pantheon',
+    name: 'Boreas',
+    description: 'North wind god',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'demeter',
+    parentId: 'greek-pantheon',
+    name: 'Demeter',
+    description: 'Greek divinity. Domain: Agriculture and the harvest. Symbol: Wheat. Notable deeds: Goddess of agriculture and the harvest. Daughter of Cronus and Rhea..',
+    sources: ['Homeric Hymns', "Hesiod's Theogony"]
+  },
+  {
+    id: 'dionysus',
+    parentId: 'greek-pantheon',
+    name: 'Dionysus',
+    description: 'Greek divinity. Domain: Wine, revelry, and ecstasy. Symbol: Grapes. Notable deeds: God of wine, revelry, and ecstasy. Son of Zeus and Semele..',
+    sources: ["Euripides' Bacchae", 'Homeric Hymns']
+  },
+  {
+    id: 'eros',
+    parentId: 'greek-pantheon',
+    name: 'Eros',
+    description: 'God of love and desire',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'eurus',
+    parentId: 'greek-pantheon',
+    name: 'Eurus',
+    description: 'East wind god',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'gaia',
+    parentId: 'greek-pantheon',
+    name: 'Gaia',
+    description: 'Earth goddess, mother of the Titans',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'hades',
+    parentId: 'greek-pantheon',
+    name: 'Hades',
+    description: 'God of the underworld, death, and riches',
+    sources: ["Homer's Iliad & Odyssey", "Hesiod's Theogony"]
+  },
+  {
+    id: 'hecate',
+    parentId: 'greek-pantheon',
+    name: 'Hecate',
+    description: 'Goddess of witchcraft, magic, and the crossroads',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'helios',
+    parentId: 'greek-pantheon',
+    name: 'Helios',
+    description: 'Sun god',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'hephaestus',
+    parentId: 'greek-pantheon',
+    name: 'Hephaestus',
+    description: 'Greek divinity. Domain: Fire, metalworking, and crafts. Symbol: Forge. Notable deeds: God of fire, metalworking, and crafts. Son of Zeus and Hera..',
+    sources: ["Homer's Iliad", "Hesiod's Theogony"]
+  },
+  {
+    id: 'hera',
+    parentId: 'greek-pantheon',
+    name: 'Hera',
+    description: 'Greek divinity. Domain: Women, marriage, childbirth, and family. Symbol: Peacock. Notable deeds: Queen of the gods and goddess of women, marriage, childbirth, and family. Daughter of Cronus and Rhea. Wife of Zeus..',
+    sources: ["Homer's Iliad", "Hesiod's Theogony"]
+  },
+  {
+    id: 'hermes',
+    parentId: 'greek-pantheon',
+    name: 'Hermes',
+    description: 'Greek divinity. Domain: Messengers, travelers, thieves, and athletes. Symbol: Caduceus. Notable deeds: God of messengers, travelers, thieves, and athletes. Son of Zeus and Maia..',
+    sources: ['Homeric Hymns', "Hesiod's Theogony"]
+  },
+  {
+    id: 'hestia',
+    parentId: 'greek-pantheon',
+    name: 'Hestia',
+    description: 'Greek divinity. Domain: Hearth, home, and family. Symbol: Hearth. Notable deeds: Goddess of the hearth, home, and family. Daughter of Cronus and Rhea..',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'hypnos',
+    parentId: 'greek-pantheon',
+    name: 'Hypnos',
+    description: 'God of sleep',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'iris',
+    parentId: 'greek-pantheon',
+    name: 'Iris',
+    description: 'Rainbow goddess and messenger of the gods',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'kronos',
+    parentId: 'greek-pantheon',
+    name: 'Kronos',
+    description: 'Titan god of time and harvest',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'maia',
+    parentId: 'greek-pantheon',
+    name: 'Maia',
+    description: 'Titan goddess of spring and fertility',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'metis',
+    parentId: 'greek-pantheon',
+    name: 'Metis',
+    description: 'Titan goddess of wisdom and counsel',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'nike',
+    parentId: 'greek-pantheon',
+    name: 'Nike',
+    description: 'Goddess of victory',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'nyx',
+    parentId: 'greek-pantheon',
+    name: 'Nyx',
+    description: 'Night goddess',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'poseidon',
+    parentId: 'greek-pantheon',
+    name: 'Poseidon',
+    description: 'Greek divinity. Domain: Sea, earthquakes, and horses. Symbol: Trident. Notable deeds: God of the sea, earthquakes, and horses. Son of Cronus and Rhea. Brother of Zeus and Hades..',
+    sources: ["Homer's Iliad & Odyssey", "Hesiod's Theogony"]
+  },
+  {
+    id: 'prometheus',
+    parentId: 'greek-pantheon',
+    name: 'Prometheus',
+    description: 'Titan god of foresight and fire',
+    sources: ["Hesiod's Theogony", "Aeschylus' Prometheus Bound"]
+  },
+  {
+    id: 'selene',
+    parentId: 'greek-pantheon',
+    name: 'Selene',
+    description: 'Moon goddess',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'triton',
+    parentId: 'greek-pantheon',
+    name: 'Triton',
+    description: 'Sea god, son of Poseidon',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'zeus',
+    parentId: 'greek-pantheon',
+    name: 'Zeus',
+    description: ' Job/Domain: King of the gods, god of the sky and thunder. Correlated characters: Jupiter (Roman), Odin (Norse), Indra (Hindu).',
+    sources: ["Homer's Iliad", "Hesiod's Theogony"]
+  },
+  {
+    id: 'apollo',
+    parentId: 'greek-pantheon',
+    name: 'Apollo',
+    description: ' Job/Domain: God of music, poetry, healing, and prophecy. Correlated characters: Sol (Roman), Baldr (Norse), Surya (Hindu).',
+    sources: ['Homeric Hymns', "Hesiod's Theogony"]
+  },
+  {
+    id: 'aphrodite',
+    parentId: 'greek-pantheon',
+    name: 'Aphrodite',
+    description: ' Job/Domain: Goddess of love, beauty, pleasure, and procreation. Correlated characters: Venus (Roman), Freyja (Norse), Lakshmi (Hindu).',
+    sources: ["Homer's Iliad", "Hesiod's Theogony"]
+  },
+  {
     id: 'greek-titans',
     parentId: 'pantheons-mythology-br',
     name: 'Greek Titans',
     description: 'The elder deities of Greek mythology who ruled during the Golden Age, led by Cronus, preceding the Olympians.'
   },
   {
+    id: 'oceanus',
+    parentId: 'greek-titans',
+    name: 'Oceanus',
+    description: 'Greek divinity. Domain: Rivers and oceans. Father of all river gods and oceanids.. Symbol: Rivers.',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'rhea',
+    parentId: 'greek-titans',
+    name: 'Rhea',
+    description: 'Greek divinity. Domain: Motherhood and fertility. Mother of the six Olympian gods and goddesses.. Symbol: Earth.',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'themis',
+    parentId: 'greek-titans',
+    name: 'Themis',
+    description: 'Greek divinity. Domain: Law and justice. Mother of the Fates and the Horae.. Symbol: Justice.',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'atlas',
+    parentId: 'greek-titans',
+    name: 'Atlas',
+    description: 'Greek divinity. Domain: Strength and endurance. Symbol: Globe. Notable deeds: Held up the sky and earth after the Titanomachy..',
+    sources: ["Hesiod's Theogony", "Homer's Odyssey"]
+  },
+  {
+    id: 'coeus',
+    parentId: 'greek-titans',
+    name: 'Coeus',
+    description: 'Greek divinity. Domain: Titan of intelligence and knowledge. Father of Leto and Asteria.. Symbol: Intelligence and knowledge.',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'crius',
+    parentId: 'greek-titans',
+    name: 'Crius',
+    description: 'Greek divinity. Domain: Rams and constellations. Father of Astraeus and Pallas.. Symbol: Rams.',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'cronus',
+    parentId: 'greek-titans',
+    name: 'Cronus',
+    description: 'Greek divinity. Domain: Time and the harvest. Overthrew his father, Uranus, but was later overthrown by his own son, Zeus.. Symbol: Time.',
+    sources: ["Hesiod's Theogony"]
+  },
+  {
+    id: 'hyperion',
+    parentId: 'greek-titans',
+    name: 'Hyperion',
+    description: 'Greek divinity. Domain: Sun and light. Father of Helios, Selene, and Eos.. Symbol: Sun.',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'iapetus',
+    parentId: 'greek-titans',
+    name: 'Iapetus',
+    description: 'Greek divinity. Domain: Mortality and human experience. Father of Atlas, Prometheus, Epimetheus, and Menoetius.. Symbol: Mortality.',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'mnemosyne',
+    parentId: 'greek-titans',
+    name: 'Mnemosyne',
+    description: 'Greek divinity. Domain: Memory and remembrance. Mother of the nine Muses.. Symbol: Memory.',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'phoebe',
+    parentId: 'greek-titans',
+    name: 'Phoebe',
+    description: 'Greek divinity. Domain: Intelligence and prophecy. Mother of Leto and Asteria.. Symbol: Intelligence.',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'tethys',
+    parentId: 'greek-titans',
+    name: 'Tethys',
+    description: 'Greek divinity. Domain: Freshwater and rivers. Wife of Oceanus and mother of all river gods and oceanids.. Symbol: Freshwater.',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'thia',
+    parentId: 'greek-titans',
+    name: 'Thia',
+    description: 'Greek divinity. Domain: Light and brightness. Mother of Helios, Selene, and Eos.. Symbol: Light.',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
     id: 'greek-monsters',
     parentId: 'pantheons-mythology-br',
     name: 'Greek Monsters & Mortals',
     description: 'Legendary creatures, monsters, and mortal heroes featured in classical Hellenic epic poetry and folklore.'
+  },
+  {
+    id: 'cerberus',
+    parentId: 'greek-monsters',
+    name: 'Cerberus',
+    description: 'A three-headed dog that guarded the gates of the Underworld. Notable Deeds: Defeated by Heracles during his Twelve Labors..',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'centaurs',
+    parentId: 'greek-monsters',
+    name: 'Centaurs',
+    description: 'Half-man, half-horse creatures. Notable Deeds: Known for their wild and barbaric nature..',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'chimera',
+    parentId: 'greek-monsters',
+    name: 'Chimera',
+    description: 'A creature with the head of a lion, the body of a goat, and the tail of a serpent. Notable Deeds: Slain by Bellerophon with the help of Pegasus..',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'cyclops',
+    parentId: 'greek-monsters',
+    name: 'Cyclops',
+    description: 'One-eyed giants. Notable Deeds: Well-known for their strength and ferocity..',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'gorgon',
+    parentId: 'greek-monsters',
+    name: 'Gorgon',
+    description: 'Three sisters with snake hair and the ability to turn people to stone with their gaze. Notable Deeds: Medusa, the most famous Gorgon, was slain by Perseus..',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'hydra',
+    parentId: 'greek-monsters',
+    name: 'Hydra',
+    description: 'A nine-headed serpent with poisonous breath. Notable Deeds: Slain by Heracles during his Twelve Labors..',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'kraken',
+    parentId: 'greek-monsters',
+    name: 'Kraken',
+    description: 'A giant sea monster with tentacles. Notable Deeds: Said to be so large that it could wrap itself around ships and drag them to the bottom of the ocean..',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'minotaur',
+    parentId: 'greek-monsters',
+    name: 'Minotaur',
+    description: 'A half-bull, half-man creature that lived in the Labyrinth. Notable Deeds: Slain by Theseus..',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'pegasus',
+    parentId: 'greek-monsters',
+    name: 'Pegasus',
+    description: 'A winged horse. Notable Deeds: Born from the blood of the Gorgon Medusa..',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'phoenix',
+    parentId: 'greek-monsters',
+    name: 'Phoenix',
+    description: 'A bird that could resurrect itself from its own ashes. Notable Deeds: Said to be a symbol of immortality and rebirth..',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'sphinx',
+    parentId: 'greek-monsters',
+    name: 'Sphinx',
+    description: 'A creature with the body of a lion and the head of a human. Notable Deeds: Asked travelers riddles, and those who could not answer correctly were devoured..',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'scylla-and-charybdis',
+    parentId: 'greek-monsters',
+    name: 'Scylla and Charybdis',
+    description: 'Two sea monsters that lived on opposite sides of a narrow strait. Notable Deeds: Odysseus and his crew managed to navigate the strait safely, but lost six of their men to Scylla..',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'achilles',
+    parentId: 'greek-monsters',
+    name: 'Achilles',
+    description: 'Greek mortal figure. Deeds: The greatest Greek warrior in the Trojan War. Killed by Paris with an arrow guided by Apollo..',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'aeneas',
+    parentId: 'greek-monsters',
+    name: 'Aeneas',
+    description: 'Greek mortal figure. Deeds: Trojan hero who fled Troy after its fall and eventually founded Rome..',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'ajax',
+    parentId: 'greek-monsters',
+    name: 'Ajax',
+    description: 'Greek mortal figure. Deeds: One of the greatest Greek warriors in the Trojan War. Committed suicide after being tricked by Athena..',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'andromeda',
+    parentId: 'greek-monsters',
+    name: 'Andromeda',
+    description: 'Greek mortal figure. Deeds: Daughter of Cepheus and Cassiopeia who was chained to a rock to be sacrificed to a sea monster, but was rescued by Perseus..',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'antigone',
+    parentId: 'greek-monsters',
+    name: 'Antigone',
+    description: 'Greek mortal figure. Deeds: Daughter of Oedipus who buried her brother Polynices against the orders of King Creon..',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'ariadne',
+    parentId: 'greek-monsters',
+    name: 'Ariadne',
+    description: 'Greek mortal figure. Deeds: Daughter of King Minos of Crete who helped Theseus escape from the Labyrinth..',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'cassandra',
+    parentId: 'greek-monsters',
+    name: 'Cassandra',
+    description: 'Greek mortal figure. Deeds: Daughter of Priam and Hecuba who had the gift of prophecy, but her prophecies were never believed..',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+  },
+  {
+    id: 'circe',
+    parentId: 'greek-monsters',
+    name: 'Circe',
+    description: 'Greek mortal figure. Deeds: A sorceress who lived on an island in the Mediterranean Sea. She turned Odysseus\'s men into pigs..',
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
   },
   {
     id: 'gk-cecrops',
@@ -219,16 +1131,276 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'The ancient Egyptian gods and goddesses representing cosmological forces, kingship, and underworld judgments.'
   },
   {
+    id: 'amun',
+    parentId: 'egyptian-pantheon',
+    name: 'Amun',
+    description: 'God of the sun and air',
+    sources: ['Egyptian Book of the Dead', 'Pyramid Texts']
+  },
+  {
+    id: 'anubis',
+    parentId: 'egyptian-pantheon',
+    name: 'Anubis',
+    description: 'God of death, mummification, and the afterlife Job/Domain: God of death, mummification, and the afterlife. Correlated characters: Osiris (Egyptian), Hermes (Greek), Yama (Hindu).',
+    sources: ['Egyptian Book of the Dead', 'Pyramid Texts']
+  },
+  {
+    id: 'atum',
+    parentId: 'egyptian-pantheon',
+    name: 'Atum',
+    description: 'Creator god',
+    sources: ['Egyptian Book of the Dead', 'Pyramid Texts']
+  },
+  {
+    id: 'bastet',
+    parentId: 'egyptian-pantheon',
+    name: 'Bastet',
+    description: 'Cat goddess of love, fertility, and protection',
+    sources: ['Egyptian Book of the Dead', 'Pyramid Texts']
+  },
+  {
+    id: 'bes',
+    parentId: 'egyptian-pantheon',
+    name: 'Bes',
+    description: 'Protector god of children and childbirth',
+    sources: ['Egyptian Book of the Dead', 'Pyramid Texts']
+  },
+  {
+    id: 'geb',
+    parentId: 'egyptian-pantheon',
+    name: 'Geb',
+    description: 'Earth god',
+    sources: ['Egyptian Book of the Dead', 'Pyramid Texts']
+  },
+  {
+    id: 'hathor',
+    parentId: 'egyptian-pantheon',
+    name: 'Hathor',
+    description: 'Cow goddess of love, beauty, music, and motherhood',
+    sources: ['Egyptian Book of the Dead', 'Pyramid Texts']
+  },
+  {
+    id: 'horus',
+    parentId: 'egyptian-pantheon',
+    name: 'Horus',
+    description: 'Sky god and protector of the pharaoh Job/Domain: God of the sky, kingship, and protection. Correlated characters: Apollo (Greek), Hermes (Greek), Vishnu (Hindu).',
+    sources: ['Pyramid Texts', 'Egyptian Book of the Dead']
+  },
+  {
+    id: 'isis',
+    parentId: 'egyptian-pantheon',
+    name: 'Isis',
+    description: 'Goddess of motherhood, magic, healing, and protection Job/Domain: Goddess of motherhood, magic, healing, and protection. Correlated characters: Demeter (Greek), Hera (Greek), Parvati (Hindu).',
+    sources: ['Pyramid Texts', 'Egyptian Book of the Dead']
+  },
+  {
+    id: 'maat',
+    parentId: 'egyptian-pantheon',
+    name: 'Maat',
+    description: 'Goddess of truth, justice, and order',
+    sources: ['Egyptian Book of the Dead', 'Pyramid Texts']
+  },
+  {
+    id: 'neith',
+    parentId: 'egyptian-pantheon',
+    name: 'Neith',
+    description: 'Goddess of war, wisdom, and crafts',
+    sources: ['Egyptian Book of the Dead', 'Pyramid Texts']
+  },
+  {
+    id: 'nephthys',
+    parentId: 'egyptian-pantheon',
+    name: 'Nephthys',
+    description: 'Goddess of mourning and protection',
+    sources: ['Egyptian Book of the Dead', 'Pyramid Texts']
+  },
+  {
+    id: 'nut',
+    parentId: 'egyptian-pantheon',
+    name: 'Nut',
+    description: 'Sky goddess',
+    sources: ['Egyptian Book of the Dead', 'Pyramid Texts']
+  },
+  {
+    id: 'osiris',
+    parentId: 'egyptian-pantheon',
+    name: 'Osiris',
+    description: 'God of the underworld, agriculture, fertility, and rebirth Job/Domain: God of the underworld, agriculture, fertility, and rebirth. Correlated characters: Dionysus (Greek), Hades (Greek), Osiris (Hindu).',
+    sources: ['Pyramid Texts', "Plutarch's De Iside et Osiride"]
+  },
+  {
+    id: 'ptah',
+    parentId: 'egyptian-pantheon',
+    name: 'Ptah',
+    description: 'Creator god',
+    sources: ['Egyptian Book of the Dead', 'Pyramid Texts']
+  },
+  {
+    id: 'ra',
+    parentId: 'egyptian-pantheon',
+    name: 'Ra',
+    description: 'Sun god Job/Domain: God of the sun, creation, order, and light. Correlated characters: Helios (Greek), Apollo (Greek), Mithra (Persian).',
+    sources: ['Egyptian Book of the Dead', 'Litany of Re']
+  },
+  {
+    id: 'seth',
+    parentId: 'egyptian-pantheon',
+    name: 'Seth',
+    description: 'God of chaos, disorder, and the desert',
+    timelineId: 'seth',
+    sources: ['Genesis 5:6-8']
+  },
+  {
+    id: 'thoth',
+    parentId: 'egyptian-pantheon',
+    name: 'Thoth',
+    description: 'God of wisdom, knowledge, and writing',
+    sources: ['Egyptian Book of the Dead', 'Hermetic Corpus']
+  },
+  {
     id: 'norse-pantheon',
     parentId: 'pantheons-mythology-br',
     name: 'Norse Pantheon',
     description: 'The Aesir and Vanir deities of Germanic and Scandinavian mythology ruling over Asgard.'
   },
   {
+    id: 'baldr',
+    parentId: 'norse-pantheon',
+    name: 'Baldr',
+    description: 'God of light, beauty, and joy',
+    sources: ['Poetic Edda', 'Prose Edda']
+  },
+  {
+    id: 'loki',
+    parentId: 'norse-pantheon',
+    name: 'Loki',
+    description: 'God of mischief, fire, and chaos Job/Domain: God of mischief, fire, and chaos. Correlated characters: Hermes (Greek), Hephaestus (Greek), Agni (Hindu).',
+    sources: ['Poetic Edda', 'Prose Edda', 'Lokasenna']
+  },
+  {
+    id: 'odin',
+    parentId: 'norse-pantheon',
+    name: 'Odin',
+    description: 'God of war, wisdom, and magic Job/Domain: God of war, wisdom, and magic. Correlated characters: Zeus (Greek), Jupiter (Roman), Indra (Hindu).',
+    sources: ['Poetic Edda', 'Prose Edda', 'Hávamál']
+  },
+  {
+    id: 'sif',
+    parentId: 'norse-pantheon',
+    name: 'Sif',
+    description: 'Goddess of the harvest and fertility',
+    sources: ['Poetic Edda', 'Prose Edda']
+  },
+  {
+    id: 'tyr',
+    parentId: 'norse-pantheon',
+    name: 'Tyr',
+    description: 'God of war, law, and justice',
+    sources: ['Poetic Edda', 'Prose Edda']
+  },
+  {
+    id: 'thor',
+    parentId: 'norse-pantheon',
+    name: 'Thor',
+    description: ' Job/Domain: God of thunder, lightning, storms, and strength. Correlated characters: Hercules (Greek), Herakles (Roman), Indra (Hindu).',
+    sources: ['Poetic Edda', 'Prose Edda', 'Þrymskviða']
+  },
+  {
+    id: 'freya',
+    parentId: 'norse-pantheon',
+    name: 'Freya',
+    description: ' Job/Domain: Goddess of love, beauty, fertility, and war. Correlated characters: Aphrodite (Greek), Venus (Roman), Lakshmi (Hindu).',
+    sources: ['Poetic Edda', 'Prose Edda']
+  },
+  {
+    id: 'frigg',
+    parentId: 'norse-pantheon',
+    name: 'Frigg',
+    description: ' Job/Domain: Goddess of marriage, motherhood, the household, and prophecy. Correlated characters: Hera (Greek), Juno (Roman), Lakshmi (Hindu).',
+    sources: ['Poetic Edda', 'Prose Edda']
+  },
+  {
     id: 'hindu-pantheon',
     parentId: 'pantheons-mythology-br',
     name: 'Hindu Pantheon',
     description: 'The divine manifestations, avatars, and cosmic deities of Vedic and classical Hindu traditions.'
+  },
+  {
+    id: 'agni',
+    parentId: 'hindu-pantheon',
+    name: 'Agni',
+    description: 'God of fire',
+    sources: ['The Vedas', 'Mahabharata & Ramayana']
+  },
+  {
+    id: 'brahma',
+    parentId: 'hindu-pantheon',
+    name: 'Brahma',
+    description: 'God of creation Job/Domain: God of creation. Correlated characters: Ptah (Egyptian), Chaos (Greek).',
+    sources: ['Manusmriti', 'Brahma Purana']
+  },
+  {
+    id: 'durga',
+    parentId: 'hindu-pantheon',
+    name: 'Durga',
+    description: 'Goddess of war and protection',
+    sources: ['The Vedas', 'Mahabharata & Ramayana']
+  },
+  {
+    id: 'ganesha',
+    parentId: 'hindu-pantheon',
+    name: 'Ganesha',
+    description: 'Elephant-headed god of wisdom, beginnings, and good luck',
+    sources: ['Ganesha Purana', 'Mudgala Purana']
+  },
+  {
+    id: 'indra',
+    parentId: 'hindu-pantheon',
+    name: 'Indra',
+    description: 'God of thunder, lightning, rain, and war',
+    sources: ['Rigveda', 'Mahabharata']
+  },
+  {
+    id: 'krishna',
+    parentId: 'hindu-pantheon',
+    name: 'Krishna',
+    description: 'God of love, compassion, and protection',
+    sources: ['Mahabharata', 'Bhagavad Gita', 'Bhagavata Purana']
+  },
+  {
+    id: 'lakshmi',
+    parentId: 'hindu-pantheon',
+    name: 'Lakshmi',
+    description: 'Goddess of wealth, prosperity, love, and beauty Job/Domain: Goddess of wealth, prosperity, love, and beauty. Correlated characters: Aphrodite (Greek), Venus (Roman), Freya (Norse).',
+    sources: ['The Vedas', 'Mahabharata & Ramayana']
+  },
+  {
+    id: 'parvati',
+    parentId: 'hindu-pantheon',
+    name: 'Parvati',
+    description: 'Goddess of love, fertility, and power',
+    sources: ['The Vedas', 'Mahabharata & Ramayana']
+  },
+  {
+    id: 'shiva',
+    parentId: 'hindu-pantheon',
+    name: 'Shiva',
+    description: 'God of destruction and transformation Job/Domain: God of destruction and transformation. Correlated characters: Typhon (Greek), Loki (Norse).',
+    sources: ['Rigveda', 'Shiva Purana', 'Mahabharata']
+  },
+  {
+    id: 'vishnu',
+    parentId: 'hindu-pantheon',
+    name: 'Vishnu',
+    description: 'God of preservation and order Job/Domain: God of preservation and order. Correlated characters: Osiris (Egyptian), Dionysus (Greek), Mithra (Persian).',
+    sources: ['Rigveda', 'Bhagavad Gita', 'Vishnu Purana']
+  },
+  {
+    id: 'saraswati',
+    parentId: 'hindu-pantheon',
+    name: 'Saraswati',
+    description: ' Job/Domain: Goddess of knowledge, wisdom, and the arts. Correlated characters: Athena (Greek), Minerva (Roman), Neith (Egyptian).',
+    sources: ['The Vedas', 'Mahabharata & Ramayana']
   },
   {
     id: 'sumerian-kings',
@@ -878,1176 +2050,6 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Official Records']
   },
   {
-    id: 'ariel',
-    parentId: 'angel',
-    name: 'Ariel',
-    description: 'Female Archangel Environment, animals, shelter money, supplies',
-    sources: ['Jewish Mysticism Literature']
-  },
-  {
-    id: 'azrael',
-    parentId: 'angel',
-    name: 'Azrael',
-    description: 'Archangel of Death/Retribution guides souls to heaven, consoles families',
-    translations: [
-      { lang: 'Hebrew', original: 'עַזְרָאֵל', translit: 'Azra\'el', meaning: 'God helps' }
-    ],
-    sources: ['Islamic & Jewish Apocryphal Literature']
-  },
-  {
-    id: 'barachiel',
-    parentId: 'angel',
-    name: 'Barachiel',
-    description: 'Lightning and blessings (Seraphim)',
-    sources: ['Canonical Scripture', 'Apocryphal Texts']
-  },
-  {
-    id: 'camael',
-    parentId: 'angel',
-    name: 'Camael',
-    description: 'Strength, Courage, war Seen in: Comforted Adam and Eve after they got kicked out of Eden..',
-    sources: ['Canonical Scripture', 'Apocryphal Texts']
-  },
-  {
-    id: 'chamuel',
-    parentId: 'angel',
-    name: 'Chamuel',
-    description: 'Omniscient vision, ease anxiety, peace, brings love to relationships, and can help someone find a loving partner. Chamuel also provides comfort and protection.',
-    sources: ['Canonical Scripture', 'Apocryphal Texts']
-  },
-  {
-    id: 'gabriel',
-    parentId: 'angel',
-    name: 'Gabriel',
-    description: 'Enoch: over Paradise and the serpents and the Cherubim. aids women who are trying to conceive or adopt a child. Messenger Seen in: brought Mary the news that she would have a son Jesus, Messenger of God. Also known as: Zerachiel, Messenger of God.',
-    translations: [
-      { lang: 'Hebrew', original: 'גַּבְרִיאֵל', translit: 'Gavriel', meaning: 'God is my strength' }
-    ],
-    sources: ['Gospel of Luke', 'Book of Daniel', 'Book of Enoch']
-  },
-  {
-    id: 'haniel',
-    parentId: 'angel',
-    name: 'Haniel',
-    description: 'Female, direct people to god Seen in: Escorted Enoch to heaven.',
-    sources: ['Canonical Scripture', 'Apocryphal Texts']
-  },
-  {
-    id: 'jegudiel',
-    parentId: 'angel',
-    name: 'Jegudiel',
-    description: 'Encouragement, wisdom, strength to people working for God\'s glory',
-    sources: ['Canonical Scripture', 'Apocryphal Texts']
-  },
-  {
-    id: 'jeremiel',
-    parentId: 'angel',
-    name: 'Jeremiel',
-    description: 'hope, visions, dreams, inspires souls to go to heaven',
-    sources: ['Canonical Scripture', 'Apocryphal Texts']
-  },
-  {
-    id: 'jophiel',
-    parentId: 'angel',
-    name: 'Jophiel',
-    description: 'Female, think beautiful thoughts Seen in: Guards the tree of life.',
-    sources: ['Canonical Scripture', 'Apocryphal Texts']
-  },
-  {
-    id: 'michael',
-    parentId: 'angel',
-    name: 'Michael',
-    description: 'Enoch: set over the best part of mankind and over chaos. banish fear and provide guidance and strength, head of battalion of angels Seen in: battled satan and Prince of Persia, None. Also known as: Chief Prince, Leader of the angels.',
-    translations: [
-      { lang: 'Hebrew', original: 'מִיכָאֵל', translit: 'Mikha\'el', meaning: 'Who is like God?' }
-    ],
-    sources: ['Book of Daniel', 'Book of Revelation', 'Epistle of Jude']
-  },
-  {
-    id: 'phanuel',
-    parentId: 'angel',
-    name: 'Phanuel',
-    description: 'Overseer of the angels who watch over the repentant Seen in: None. Also known as: None.',
-    sources: ['Canonical Scripture', 'Apocryphal Texts']
-  },
-  {
-    id: 'raguel',
-    parentId: 'angel',
-    name: 'Raguel',
-    description: 'Overseer of the angels who watch over humanity Seen in: None. Also known as: None.',
-    sources: ['Canonical Scripture', 'Apocryphal Texts']
-  },
-  {
-    id: 'ramiel',
-    parentId: 'angel',
-    name: 'Ramiel',
-    description: 'Forgiveness, hope, divine visions, guiding souls into heaven',
-    sources: ['Canonical Scripture', 'Apocryphal Texts']
-  },
-  {
-    id: 'raphael',
-    parentId: 'angel',
-    name: 'Raphael',
-    description: 'healing people and animals from any number of difficulties, both mental and physical. Raphael can also help to find a lost pet or protect travelers. Seen in: escorted Enoch to heaven, None. Also known as: Angel of healing.',
-    translations: [
-      { lang: 'Hebrew', original: 'רְפָאֵל', translit: 'Refa\'el', meaning: 'God has healed' }
-    ],
-    sources: ['Book of Tobit', 'Book of Enoch']
-  },
-  {
-    id: 'saraqael',
-    parentId: 'angel',
-    name: 'Saraqael',
-    description: 'Overseer of the angels who guard the Garden of Eden Seen in: None. Also known as: None.',
-    sources: ['Canonical Scripture', 'Apocryphal Texts']
-  },
-  {
-    id: 'uriel',
-    parentId: 'angel',
-    name: 'Uriel',
-    description: '(ENOCH: one of the holy angels, who is over the world and over Tartarus) associated with the light and fire of God. Uriel can aid in intellectual pursuits, particularly problem-solving, as well as providing assistance in times of natural disasters. repentence, thunder & Terror Seen in: guards Eden, None. Also known as: None.',
-    translations: [
-      { lang: 'Hebrew', original: 'אוּרִיאֵל', translit: 'Uri\'el', meaning: 'God is my light' }
-    ],
-    sources: ['Second Book of Esdras', 'Book of Enoch']
-  },
-  {
-    id: 'zadkiel',
-    parentId: 'angel',
-    name: 'Zadkiel',
-    description: 'Mercy, guides away from sin Seen in: prevented Abraham from Sacrificing son Isaac.',
-    sources: ['Canonical Scripture', 'Apocryphal Texts']
-  },
-  {
-    id: 'remiel',
-    parentId: 'angel',
-    name: 'Remiel',
-    description: 'Overseer of the angels who watch over the dead Seen in: None. Also known as: None.',
-    sources: ['Canonical Scripture', 'Apocryphal Texts']
-  },
-  {
-    id: 'cherubim',
-    parentId: 'angel',
-    name: 'Cherubim',
-    description: 'Guard the throne of God Seen in: None. Also known as: Guard the Garden of Eden.',
-    sources: ['Canonical Scripture', 'Apocryphal Texts']
-  },
-  {
-    id: 'seraphim',
-    parentId: 'angel',
-    name: 'Seraphim',
-    description: 'Worship God Seen in: None. Also known as: None.',
-    sources: ['Canonical Scripture', 'Apocryphal Texts']
-  },
-  {
-    id: 'twenty-four-elders',
-    parentId: 'angel',
-    name: 'Twenty-four Elders',
-    description: 'Sit on thrones around the throne of God Seen in: None. Also known as: None.',
-    sources: ['Canonical Scripture', 'Apocryphal Texts']
-  },
-  {
-    id: 'asbeel',
-    parentId: 'fallen-angel',
-    name: 'Asbeel',
-    description: 'Angel of destruction',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'beelzebub',
-    parentId: 'fallen-angel',
-    name: 'Beelzebub',
-    description: 'One of Satan\'s chief lieutenants Seen in: None. Also known as: None.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'asmodeus',
-    parentId: 'fallen-angel',
-    name: 'Asmodeus',
-    description: 'Associated with lust and sexual immorality Seen in: None. Also known as: None.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'grigori',
-    parentId: 'fallen-angel',
-    name: 'Grigori',
-    description: 'Watchers who fell from heaven Seen in: None. Also known as: Watchers who fell from heaven.',
-    sources: ['Book of Enoch', 'Second Book of Enoch']
-  },
-  {
-    id: 'nephilim',
-    parentId: 'fallen-angel',
-    name: 'Nephilim',
-    description: 'Giants who were the offspring of the Grigori and human women Seen in: None. Also known as: None.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'azazel',
-    parentId: 'fallen-angel',
-    name: 'Azazel',
-    description: 'Leader of the Grigori Seen in: None. Also known as: Leader of the fallen angels.',
-    sources: ['Book of Leviticus', 'Book of Enoch', 'Apocalypse of Abraham']
-  },
-  {
-    id: 'samyaza',
-    parentId: 'fallen-angel',
-    name: 'Samyaza',
-    description: 'Second-in-command of the Grigori Seen in: None. Also known as: None.',
-    sources: ['Book of Enoch', 'Book of Giants']
-  },
-  {
-    id: 'araqiel',
-    parentId: 'fallen-angel',
-    name: 'Araqiel',
-    description: 'Fallen angel Seen in: None. Also known as: None.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'armaros',
-    parentId: 'fallen-angel',
-    name: 'Armaros',
-    description: 'Fallen angel Seen in: None. Also known as: None.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'azazeel',
-    parentId: 'fallen-angel',
-    name: 'Azazeel',
-    description: 'Fallen angel (different from the Azazel in the Book of Enoch) Seen in: None. Also known as: None.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'baraqiel',
-    parentId: 'fallen-angel',
-    name: 'Baraqiel',
-    description: 'Fallen angel Seen in: None. Also known as: None.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'barquiel',
-    parentId: 'fallen-angel',
-    name: 'Barquiel',
-    description: 'Fallen angel Seen in: None. Also known as: None.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'kokabel',
-    parentId: 'fallen-angel',
-    name: 'Kokabel',
-    description: 'Fallen angel Seen in: None. Also known as: None.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'penemue',
-    parentId: 'fallen-angel',
-    name: 'Penemue',
-    description: 'Fallen angel Seen in: None. Also known as: None.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'sariel',
-    parentId: 'fallen-angel',
-    name: 'Sariel',
-    description: 'Fallen angel Seen in: None. Also known as: None.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'semyaza',
-    parentId: 'fallen-angel',
-    name: 'Semyaza',
-    description: 'Fallen angel (different from the Samyaza in the Book of Enoch) Seen in: None. Also known as: None.',
-    sources: ['Book of Enoch', 'Book of Giants']
-  },
-  {
-    id: 'turel',
-    parentId: 'fallen-angel',
-    name: 'Turel',
-    description: 'Fallen angel Seen in: None. Also known as: None.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'lucifer',
-    parentId: 'fallen-angel',
-    name: 'Lucifer',
-    description: 'Leader of the angelic rebellion against God. Light bearer, morning star, the dragon, the devil, satan, covering cherub. Syncretized with Zeus, Jupiter, and Baal. Set in Eden, covered in precious stones, on the mountain of God.',
-    translations: [
-      { lang: 'Latin', original: 'Lucifer', translit: 'Lucifer', meaning: 'Light Bringer / Morning Star' }
-    ],
-    relatedIds: ['satan', 'fallen-angel'],
-    sources: ['Book of Isaiah', 'Latin Vulgate Translation']
-  },
-  {
-    id: 'yekun',
-    parentId: 'fallen-angel',
-    name: 'Yekun',
-    description: 'Persuaded and mislead other angels',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'kesabel',
-    parentId: 'fallen-angel',
-    name: 'Kesabel',
-    description: 'Female, seduction',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'gadreel',
-    parentId: 'fallen-angel',
-    name: 'Gadreel',
-    description: 'Teaches weapons of war and killing',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'abaddon',
-    parentId: 'fallen-angel',
-    name: 'Abaddon',
-    description: 'Master destroyer Seen in: Invoked by MOses to destroy Egyptians (red sea).',
-    translations: [
-      { lang: 'Hebrew', original: 'אֲבַדּוֹן', translit: 'Avaddon', meaning: 'Destruction / Place of Ruin' }
-    ],
-    sources: ['Book of Revelation', 'Book of Job']
-  },
-  {
-    id: 'leviathin',
-    parentId: 'fallen-angel',
-    name: 'Leviathin',
-    description: 'Arrogance, Heresy Also known as: Serpent, dragon.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'kasyade',
-    parentId: 'fallen-angel',
-    name: 'Kasyade',
-    description: 'Astrology, strikes on embryos, spirits, souls, and demons',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'semyazza',
-    parentId: 'fallen-angel',
-    name: 'Semyazza',
-    description: 'leader of watcher/fallen, grigori',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'kokabiel',
-    parentId: 'fallen-angel',
-    name: 'Kokabiel',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'tamiel',
-    parentId: 'fallen-angel',
-    name: 'Tamiel',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'daniel',
-    parentId: 'fallen-angel',
-    name: 'Daniel',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'chazaqiel',
-    parentId: 'fallen-angel',
-    name: 'Chazaqiel',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'bragiel',
-    parentId: 'fallen-angel',
-    name: 'Bragiel',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'asael',
-    parentId: 'fallen-angel',
-    name: 'Asael',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'batariel',
-    parentId: 'fallen-angel',
-    name: 'Batariel',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'bezaliel',
-    parentId: 'fallen-angel',
-    name: 'Bezaliel',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'ananiel',
-    parentId: 'fallen-angel',
-    name: 'Ananiel',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'zaqiel',
-    parentId: 'fallen-angel',
-    name: 'Zaqiel',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'shamsiel',
-    parentId: 'fallen-angel',
-    name: 'Shamsiel',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'sathariel',
-    parentId: 'fallen-angel',
-    name: 'Sathariel',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'turiel',
-    parentId: 'fallen-angel',
-    name: 'Turiel',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'yomiel',
-    parentId: 'fallen-angel',
-    name: 'Yomiel',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'achelous',
-    parentId: 'greek-pantheon',
-    name: 'Achelous',
-    description: 'River god, father of the Sirens',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'adonis',
-    parentId: 'greek-pantheon',
-    name: 'Adonis',
-    description: 'God of beauty and desire',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'aegir',
-    parentId: 'greek-pantheon',
-    name: 'Aegir',
-    description: 'Sea god of the giants',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'ares',
-    parentId: 'greek-pantheon',
-    name: 'Ares',
-    description: 'Greek divinity. Domain: War, bloodshed, and violence. Symbol: Spear. Notable deeds: God of war, bloodshed, and violence. Son of Zeus and Hera..',
-    sources: ["Homer's Iliad", "Hesiod's Theogony"]
-  },
-  {
-    id: 'artemis',
-    parentId: 'greek-pantheon',
-    name: 'Artemis',
-    description: 'Greek divinity. Domain: Hunt, the moon, and wild animals. Symbol: Bow and arrow. Notable deeds: Goddess of the hunt, the moon, and wild animals. Daughter of Zeus and Leto. Twin sister of Apollo..',
-    sources: ['Homeric Hymns', "Hesiod's Theogony"]
-  },
-  {
-    id: 'athena',
-    parentId: 'greek-pantheon',
-    name: 'Athena',
-    description: 'Greek divinity. Domain: Wisdom, crafts, and warfare. Symbol: Owl. Notable deeds: Goddess of wisdom, crafts, and warfare. Daughter of Zeus and Metis..',
-    sources: ["Homer's Iliad", "Hesiod's Theogony"]
-  },
-  {
-    id: 'boreas',
-    parentId: 'greek-pantheon',
-    name: 'Boreas',
-    description: 'North wind god',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'demeter',
-    parentId: 'greek-pantheon',
-    name: 'Demeter',
-    description: 'Greek divinity. Domain: Agriculture and the harvest. Symbol: Wheat. Notable deeds: Goddess of agriculture and the harvest. Daughter of Cronus and Rhea..',
-    sources: ['Homeric Hymns', "Hesiod's Theogony"]
-  },
-  {
-    id: 'dionysus',
-    parentId: 'greek-pantheon',
-    name: 'Dionysus',
-    description: 'Greek divinity. Domain: Wine, revelry, and ecstasy. Symbol: Grapes. Notable deeds: God of wine, revelry, and ecstasy. Son of Zeus and Semele..',
-    sources: ["Euripides' Bacchae", 'Homeric Hymns']
-  },
-  {
-    id: 'eros',
-    parentId: 'greek-pantheon',
-    name: 'Eros',
-    description: 'God of love and desire',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'eurus',
-    parentId: 'greek-pantheon',
-    name: 'Eurus',
-    description: 'East wind god',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'gaia',
-    parentId: 'greek-pantheon',
-    name: 'Gaia',
-    description: 'Earth goddess, mother of the Titans',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'hades',
-    parentId: 'greek-pantheon',
-    name: 'Hades',
-    description: 'God of the underworld, death, and riches',
-    sources: ["Homer's Iliad & Odyssey", "Hesiod's Theogony"]
-  },
-  {
-    id: 'hecate',
-    parentId: 'greek-pantheon',
-    name: 'Hecate',
-    description: 'Goddess of witchcraft, magic, and the crossroads',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'helios',
-    parentId: 'greek-pantheon',
-    name: 'Helios',
-    description: 'Sun god',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'hephaestus',
-    parentId: 'greek-pantheon',
-    name: 'Hephaestus',
-    description: 'Greek divinity. Domain: Fire, metalworking, and crafts. Symbol: Forge. Notable deeds: God of fire, metalworking, and crafts. Son of Zeus and Hera..',
-    sources: ["Homer's Iliad", "Hesiod's Theogony"]
-  },
-  {
-    id: 'hera',
-    parentId: 'greek-pantheon',
-    name: 'Hera',
-    description: 'Greek divinity. Domain: Women, marriage, childbirth, and family. Symbol: Peacock. Notable deeds: Queen of the gods and goddess of women, marriage, childbirth, and family. Daughter of Cronus and Rhea. Wife of Zeus..',
-    sources: ["Homer's Iliad", "Hesiod's Theogony"]
-  },
-  {
-    id: 'hermes',
-    parentId: 'greek-pantheon',
-    name: 'Hermes',
-    description: 'Greek divinity. Domain: Messengers, travelers, thieves, and athletes. Symbol: Caduceus. Notable deeds: God of messengers, travelers, thieves, and athletes. Son of Zeus and Maia..',
-    sources: ['Homeric Hymns', "Hesiod's Theogony"]
-  },
-  {
-    id: 'hestia',
-    parentId: 'greek-pantheon',
-    name: 'Hestia',
-    description: 'Greek divinity. Domain: Hearth, home, and family. Symbol: Hearth. Notable deeds: Goddess of the hearth, home, and family. Daughter of Cronus and Rhea..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'hypnos',
-    parentId: 'greek-pantheon',
-    name: 'Hypnos',
-    description: 'God of sleep',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'iris',
-    parentId: 'greek-pantheon',
-    name: 'Iris',
-    description: 'Rainbow goddess and messenger of the gods',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'kronos',
-    parentId: 'greek-pantheon',
-    name: 'Kronos',
-    description: 'Titan god of time and harvest',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'maia',
-    parentId: 'greek-pantheon',
-    name: 'Maia',
-    description: 'Titan goddess of spring and fertility',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'metis',
-    parentId: 'greek-pantheon',
-    name: 'Metis',
-    description: 'Titan goddess of wisdom and counsel',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'nike',
-    parentId: 'greek-pantheon',
-    name: 'Nike',
-    description: 'Goddess of victory',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'nyx',
-    parentId: 'greek-pantheon',
-    name: 'Nyx',
-    description: 'Night goddess',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'poseidon',
-    parentId: 'greek-pantheon',
-    name: 'Poseidon',
-    description: 'Greek divinity. Domain: Sea, earthquakes, and horses. Symbol: Trident. Notable deeds: God of the sea, earthquakes, and horses. Son of Cronus and Rhea. Brother of Zeus and Hades..',
-    sources: ["Homer's Iliad & Odyssey", "Hesiod's Theogony"]
-  },
-  {
-    id: 'prometheus',
-    parentId: 'greek-pantheon',
-    name: 'Prometheus',
-    description: 'Titan god of foresight and fire',
-    sources: ["Hesiod's Theogony", "Aeschylus' Prometheus Bound"]
-  },
-  {
-    id: 'selene',
-    parentId: 'greek-pantheon',
-    name: 'Selene',
-    description: 'Moon goddess',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'triton',
-    parentId: 'greek-pantheon',
-    name: 'Triton',
-    description: 'Sea god, son of Poseidon',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'zeus',
-    parentId: 'greek-pantheon',
-    name: 'Zeus',
-    description: ' Job/Domain: King of the gods, god of the sky and thunder. Correlated characters: Jupiter (Roman), Odin (Norse), Indra (Hindu).',
-    sources: ["Homer's Iliad", "Hesiod's Theogony"]
-  },
-  {
-    id: 'apollo',
-    parentId: 'greek-pantheon',
-    name: 'Apollo',
-    description: ' Job/Domain: God of music, poetry, healing, and prophecy. Correlated characters: Sol (Roman), Baldr (Norse), Surya (Hindu).',
-    sources: ['Homeric Hymns', "Hesiod's Theogony"]
-  },
-  {
-    id: 'aphrodite',
-    parentId: 'greek-pantheon',
-    name: 'Aphrodite',
-    description: ' Job/Domain: Goddess of love, beauty, pleasure, and procreation. Correlated characters: Venus (Roman), Freyja (Norse), Lakshmi (Hindu).',
-    sources: ["Homer's Iliad", "Hesiod's Theogony"]
-  },
-  {
-    id: 'oceanus',
-    parentId: 'greek-titans',
-    name: 'Oceanus',
-    description: 'Greek divinity. Domain: Rivers and oceans. Father of all river gods and oceanids.. Symbol: Rivers.',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'rhea',
-    parentId: 'greek-titans',
-    name: 'Rhea',
-    description: 'Greek divinity. Domain: Motherhood and fertility. Mother of the six Olympian gods and goddesses.. Symbol: Earth.',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'themis',
-    parentId: 'greek-titans',
-    name: 'Themis',
-    description: 'Greek divinity. Domain: Law and justice. Mother of the Fates and the Horae.. Symbol: Justice.',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'atlas',
-    parentId: 'greek-titans',
-    name: 'Atlas',
-    description: 'Greek divinity. Domain: Strength and endurance. Symbol: Globe. Notable deeds: Held up the sky and earth after the Titanomachy..',
-    sources: ["Hesiod's Theogony", "Homer's Odyssey"]
-  },
-  {
-    id: 'coeus',
-    parentId: 'greek-titans',
-    name: 'Coeus',
-    description: 'Greek divinity. Domain: Titan of intelligence and knowledge. Father of Leto and Asteria.. Symbol: Intelligence and knowledge.',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'crius',
-    parentId: 'greek-titans',
-    name: 'Crius',
-    description: 'Greek divinity. Domain: Rams and constellations. Father of Astraeus and Pallas.. Symbol: Rams.',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'cronus',
-    parentId: 'greek-titans',
-    name: 'Cronus',
-    description: 'Greek divinity. Domain: Time and the harvest. Overthrew his father, Uranus, but was later overthrown by his own son, Zeus.. Symbol: Time.',
-    sources: ["Hesiod's Theogony"]
-  },
-  {
-    id: 'hyperion',
-    parentId: 'greek-titans',
-    name: 'Hyperion',
-    description: 'Greek divinity. Domain: Sun and light. Father of Helios, Selene, and Eos.. Symbol: Sun.',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'iapetus',
-    parentId: 'greek-titans',
-    name: 'Iapetus',
-    description: 'Greek divinity. Domain: Mortality and human experience. Father of Atlas, Prometheus, Epimetheus, and Menoetius.. Symbol: Mortality.',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'mnemosyne',
-    parentId: 'greek-titans',
-    name: 'Mnemosyne',
-    description: 'Greek divinity. Domain: Memory and remembrance. Mother of the nine Muses.. Symbol: Memory.',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'phoebe',
-    parentId: 'greek-titans',
-    name: 'Phoebe',
-    description: 'Greek divinity. Domain: Intelligence and prophecy. Mother of Leto and Asteria.. Symbol: Intelligence.',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'tethys',
-    parentId: 'greek-titans',
-    name: 'Tethys',
-    description: 'Greek divinity. Domain: Freshwater and rivers. Wife of Oceanus and mother of all river gods and oceanids.. Symbol: Freshwater.',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'thia',
-    parentId: 'greek-titans',
-    name: 'Thia',
-    description: 'Greek divinity. Domain: Light and brightness. Mother of Helios, Selene, and Eos.. Symbol: Light.',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'cerberus',
-    parentId: 'greek-monsters',
-    name: 'Cerberus',
-    description: 'A three-headed dog that guarded the gates of the Underworld. Notable Deeds: Defeated by Heracles during his Twelve Labors..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'centaurs',
-    parentId: 'greek-monsters',
-    name: 'Centaurs',
-    description: 'Half-man, half-horse creatures. Notable Deeds: Known for their wild and barbaric nature..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'chimera',
-    parentId: 'greek-monsters',
-    name: 'Chimera',
-    description: 'A creature with the head of a lion, the body of a goat, and the tail of a serpent. Notable Deeds: Slain by Bellerophon with the help of Pegasus..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'cyclops',
-    parentId: 'greek-monsters',
-    name: 'Cyclops',
-    description: 'One-eyed giants. Notable Deeds: Well-known for their strength and ferocity..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'gorgon',
-    parentId: 'greek-monsters',
-    name: 'Gorgon',
-    description: 'Three sisters with snake hair and the ability to turn people to stone with their gaze. Notable Deeds: Medusa, the most famous Gorgon, was slain by Perseus..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'hydra',
-    parentId: 'greek-monsters',
-    name: 'Hydra',
-    description: 'A nine-headed serpent with poisonous breath. Notable Deeds: Slain by Heracles during his Twelve Labors..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'kraken',
-    parentId: 'greek-monsters',
-    name: 'Kraken',
-    description: 'A giant sea monster with tentacles. Notable Deeds: Said to be so large that it could wrap itself around ships and drag them to the bottom of the ocean..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'minotaur',
-    parentId: 'greek-monsters',
-    name: 'Minotaur',
-    description: 'A half-bull, half-man creature that lived in the Labyrinth. Notable Deeds: Slain by Theseus..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'pegasus',
-    parentId: 'greek-monsters',
-    name: 'Pegasus',
-    description: 'A winged horse. Notable Deeds: Born from the blood of the Gorgon Medusa..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'phoenix',
-    parentId: 'greek-monsters',
-    name: 'Phoenix',
-    description: 'A bird that could resurrect itself from its own ashes. Notable Deeds: Said to be a symbol of immortality and rebirth..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'sphinx',
-    parentId: 'greek-monsters',
-    name: 'Sphinx',
-    description: 'A creature with the body of a lion and the head of a human. Notable Deeds: Asked travelers riddles, and those who could not answer correctly were devoured..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'scylla-and-charybdis',
-    parentId: 'greek-monsters',
-    name: 'Scylla and Charybdis',
-    description: 'Two sea monsters that lived on opposite sides of a narrow strait. Notable Deeds: Odysseus and his crew managed to navigate the strait safely, but lost six of their men to Scylla..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'achilles',
-    parentId: 'greek-monsters',
-    name: 'Achilles',
-    description: 'Greek mortal figure. Deeds: The greatest Greek warrior in the Trojan War. Killed by Paris with an arrow guided by Apollo..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'aeneas',
-    parentId: 'greek-monsters',
-    name: 'Aeneas',
-    description: 'Greek mortal figure. Deeds: Trojan hero who fled Troy after its fall and eventually founded Rome..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'ajax',
-    parentId: 'greek-monsters',
-    name: 'Ajax',
-    description: 'Greek mortal figure. Deeds: One of the greatest Greek warriors in the Trojan War. Committed suicide after being tricked by Athena..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'andromeda',
-    parentId: 'greek-monsters',
-    name: 'Andromeda',
-    description: 'Greek mortal figure. Deeds: Daughter of Cepheus and Cassiopeia who was chained to a rock to be sacrificed to a sea monster, but was rescued by Perseus..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'antigone',
-    parentId: 'greek-monsters',
-    name: 'Antigone',
-    description: 'Greek mortal figure. Deeds: Daughter of Oedipus who buried her brother Polynices against the orders of King Creon..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'ariadne',
-    parentId: 'greek-monsters',
-    name: 'Ariadne',
-    description: 'Greek mortal figure. Deeds: Daughter of King Minos of Crete who helped Theseus escape from the Labyrinth..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'cassandra',
-    parentId: 'greek-monsters',
-    name: 'Cassandra',
-    description: 'Greek mortal figure. Deeds: Daughter of Priam and Hecuba who had the gift of prophecy, but her prophecies were never believed..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'circe',
-    parentId: 'greek-monsters',
-    name: 'Circe',
-    description: 'Greek mortal figure. Deeds: A sorceress who lived on an island in the Mediterranean Sea. She turned Odysseus\'s men into pigs..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'amun',
-    parentId: 'egyptian-pantheon',
-    name: 'Amun',
-    description: 'God of the sun and air',
-    sources: ['Egyptian Book of the Dead', 'Pyramid Texts']
-  },
-  {
-    id: 'anubis',
-    parentId: 'egyptian-pantheon',
-    name: 'Anubis',
-    description: 'God of death, mummification, and the afterlife Job/Domain: God of death, mummification, and the afterlife. Correlated characters: Osiris (Egyptian), Hermes (Greek), Yama (Hindu).',
-    sources: ['Egyptian Book of the Dead', 'Pyramid Texts']
-  },
-  {
-    id: 'atum',
-    parentId: 'egyptian-pantheon',
-    name: 'Atum',
-    description: 'Creator god',
-    sources: ['Egyptian Book of the Dead', 'Pyramid Texts']
-  },
-  {
-    id: 'bastet',
-    parentId: 'egyptian-pantheon',
-    name: 'Bastet',
-    description: 'Cat goddess of love, fertility, and protection',
-    sources: ['Egyptian Book of the Dead', 'Pyramid Texts']
-  },
-  {
-    id: 'bes',
-    parentId: 'egyptian-pantheon',
-    name: 'Bes',
-    description: 'Protector god of children and childbirth',
-    sources: ['Egyptian Book of the Dead', 'Pyramid Texts']
-  },
-  {
-    id: 'geb',
-    parentId: 'egyptian-pantheon',
-    name: 'Geb',
-    description: 'Earth god',
-    sources: ['Egyptian Book of the Dead', 'Pyramid Texts']
-  },
-  {
-    id: 'hathor',
-    parentId: 'egyptian-pantheon',
-    name: 'Hathor',
-    description: 'Cow goddess of love, beauty, music, and motherhood',
-    sources: ['Egyptian Book of the Dead', 'Pyramid Texts']
-  },
-  {
-    id: 'horus',
-    parentId: 'egyptian-pantheon',
-    name: 'Horus',
-    description: 'Sky god and protector of the pharaoh Job/Domain: God of the sky, kingship, and protection. Correlated characters: Apollo (Greek), Hermes (Greek), Vishnu (Hindu).',
-    sources: ['Pyramid Texts', 'Egyptian Book of the Dead']
-  },
-  {
-    id: 'isis',
-    parentId: 'egyptian-pantheon',
-    name: 'Isis',
-    description: 'Goddess of motherhood, magic, healing, and protection Job/Domain: Goddess of motherhood, magic, healing, and protection. Correlated characters: Demeter (Greek), Hera (Greek), Parvati (Hindu).',
-    sources: ['Pyramid Texts', 'Egyptian Book of the Dead']
-  },
-  {
-    id: 'maat',
-    parentId: 'egyptian-pantheon',
-    name: 'Maat',
-    description: 'Goddess of truth, justice, and order',
-    sources: ['Egyptian Book of the Dead', 'Pyramid Texts']
-  },
-  {
-    id: 'neith',
-    parentId: 'egyptian-pantheon',
-    name: 'Neith',
-    description: 'Goddess of war, wisdom, and crafts',
-    sources: ['Egyptian Book of the Dead', 'Pyramid Texts']
-  },
-  {
-    id: 'nephthys',
-    parentId: 'egyptian-pantheon',
-    name: 'Nephthys',
-    description: 'Goddess of mourning and protection',
-    sources: ['Egyptian Book of the Dead', 'Pyramid Texts']
-  },
-  {
-    id: 'nut',
-    parentId: 'egyptian-pantheon',
-    name: 'Nut',
-    description: 'Sky goddess',
-    sources: ['Egyptian Book of the Dead', 'Pyramid Texts']
-  },
-  {
-    id: 'osiris',
-    parentId: 'egyptian-pantheon',
-    name: 'Osiris',
-    description: 'God of the underworld, agriculture, fertility, and rebirth Job/Domain: God of the underworld, agriculture, fertility, and rebirth. Correlated characters: Dionysus (Greek), Hades (Greek), Osiris (Hindu).',
-    sources: ['Pyramid Texts', "Plutarch's De Iside et Osiride"]
-  },
-  {
-    id: 'ptah',
-    parentId: 'egyptian-pantheon',
-    name: 'Ptah',
-    description: 'Creator god',
-    sources: ['Egyptian Book of the Dead', 'Pyramid Texts']
-  },
-  {
-    id: 'ra',
-    parentId: 'egyptian-pantheon',
-    name: 'Ra',
-    description: 'Sun god Job/Domain: God of the sun, creation, order, and light. Correlated characters: Helios (Greek), Apollo (Greek), Mithra (Persian).',
-    sources: ['Egyptian Book of the Dead', 'Litany of Re']
-  },
-  {
-    id: 'seth',
-    parentId: 'egyptian-pantheon',
-    name: 'Seth',
-    description: 'God of chaos, disorder, and the desert',
-    sources: ['Pyramid Texts', 'Egyptian Book of the Dead']
-  },
-  {
-    id: 'thoth',
-    parentId: 'egyptian-pantheon',
-    name: 'Thoth',
-    description: 'God of wisdom, knowledge, and writing',
-    sources: ['Egyptian Book of the Dead', 'Hermetic Corpus']
-  },
-  {
-    id: 'baldr',
-    parentId: 'norse-pantheon',
-    name: 'Baldr',
-    description: 'God of light, beauty, and joy',
-    sources: ['Poetic Edda', 'Prose Edda']
-  },
-  {
-    id: 'loki',
-    parentId: 'norse-pantheon',
-    name: 'Loki',
-    description: 'God of mischief, fire, and chaos Job/Domain: God of mischief, fire, and chaos. Correlated characters: Hermes (Greek), Hephaestus (Greek), Agni (Hindu).',
-    sources: ['Poetic Edda', 'Prose Edda', 'Lokasenna']
-  },
-  {
-    id: 'odin',
-    parentId: 'norse-pantheon',
-    name: 'Odin',
-    description: 'God of war, wisdom, and magic Job/Domain: God of war, wisdom, and magic. Correlated characters: Zeus (Greek), Jupiter (Roman), Indra (Hindu).',
-    sources: ['Poetic Edda', 'Prose Edda', 'Hávamál']
-  },
-  {
-    id: 'sif',
-    parentId: 'norse-pantheon',
-    name: 'Sif',
-    description: 'Goddess of the harvest and fertility',
-    sources: ['Poetic Edda', 'Prose Edda']
-  },
-  {
-    id: 'tyr',
-    parentId: 'norse-pantheon',
-    name: 'Tyr',
-    description: 'God of war, law, and justice',
-    sources: ['Poetic Edda', 'Prose Edda']
-  },
-  {
-    id: 'thor',
-    parentId: 'norse-pantheon',
-    name: 'Thor',
-    description: ' Job/Domain: God of thunder, lightning, storms, and strength. Correlated characters: Hercules (Greek), Herakles (Roman), Indra (Hindu).',
-    sources: ['Poetic Edda', 'Prose Edda', 'Þrymskviða']
-  },
-  {
-    id: 'freya',
-    parentId: 'norse-pantheon',
-    name: 'Freya',
-    description: ' Job/Domain: Goddess of love, beauty, fertility, and war. Correlated characters: Aphrodite (Greek), Venus (Roman), Lakshmi (Hindu).',
-    sources: ['Poetic Edda', 'Prose Edda']
-  },
-  {
-    id: 'frigg',
-    parentId: 'norse-pantheon',
-    name: 'Frigg',
-    description: ' Job/Domain: Goddess of marriage, motherhood, the household, and prophecy. Correlated characters: Hera (Greek), Juno (Roman), Lakshmi (Hindu).',
-    sources: ['Poetic Edda', 'Prose Edda']
-  },
-  {
-    id: 'agni',
-    parentId: 'hindu-pantheon',
-    name: 'Agni',
-    description: 'God of fire',
-    sources: ['The Vedas', 'Mahabharata & Ramayana']
-  },
-  {
-    id: 'brahma',
-    parentId: 'hindu-pantheon',
-    name: 'Brahma',
-    description: 'God of creation Job/Domain: God of creation. Correlated characters: Ptah (Egyptian), Chaos (Greek).',
-    sources: ['Manusmriti', 'Brahma Purana']
-  },
-  {
-    id: 'durga',
-    parentId: 'hindu-pantheon',
-    name: 'Durga',
-    description: 'Goddess of war and protection',
-    sources: ['The Vedas', 'Mahabharata & Ramayana']
-  },
-  {
-    id: 'ganesha',
-    parentId: 'hindu-pantheon',
-    name: 'Ganesha',
-    description: 'Elephant-headed god of wisdom, beginnings, and good luck',
-    sources: ['Ganesha Purana', 'Mudgala Purana']
-  },
-  {
-    id: 'indra',
-    parentId: 'hindu-pantheon',
-    name: 'Indra',
-    description: 'God of thunder, lightning, rain, and war',
-    sources: ['Rigveda', 'Mahabharata']
-  },
-  {
-    id: 'krishna',
-    parentId: 'hindu-pantheon',
-    name: 'Krishna',
-    description: 'God of love, compassion, and protection',
-    sources: ['Mahabharata', 'Bhagavad Gita', 'Bhagavata Purana']
-  },
-  {
-    id: 'lakshmi',
-    parentId: 'hindu-pantheon',
-    name: 'Lakshmi',
-    description: 'Goddess of wealth, prosperity, love, and beauty Job/Domain: Goddess of wealth, prosperity, love, and beauty. Correlated characters: Aphrodite (Greek), Venus (Roman), Freya (Norse).',
-    sources: ['The Vedas', 'Mahabharata & Ramayana']
-  },
-  {
-    id: 'parvati',
-    parentId: 'hindu-pantheon',
-    name: 'Parvati',
-    description: 'Goddess of love, fertility, and power',
-    sources: ['The Vedas', 'Mahabharata & Ramayana']
-  },
-  {
-    id: 'shiva',
-    parentId: 'hindu-pantheon',
-    name: 'Shiva',
-    description: 'God of destruction and transformation Job/Domain: God of destruction and transformation. Correlated characters: Typhon (Greek), Loki (Norse).',
-    sources: ['Rigveda', 'Shiva Purana', 'Mahabharata']
-  },
-  {
-    id: 'vishnu',
-    parentId: 'hindu-pantheon',
-    name: 'Vishnu',
-    description: 'God of preservation and order Job/Domain: God of preservation and order. Correlated characters: Osiris (Egyptian), Dionysus (Greek), Mithra (Persian).',
-    sources: ['Rigveda', 'Bhagavad Gita', 'Vishnu Purana']
-  },
-  {
-    id: 'saraswati',
-    parentId: 'hindu-pantheon',
-    name: 'Saraswati',
-    description: ' Job/Domain: Goddess of knowledge, wisdom, and the arts. Correlated characters: Athena (Greek), Minerva (Roman), Neith (Egyptian).',
-    sources: ['The Vedas', 'Mahabharata & Ramayana']
-  },
-  {
     id: 'ufos-anomalies',
     name: 'UFOs & Anomalies',
     description: 'Aerial phenomena, declassified files, crop circles, and physical anomalies associated with unexplained intelligence.',
@@ -2059,45 +2061,6 @@ export const TERM_TREE_DATA: TermNode[] = [
     name: 'Extraterrestrial Beings',
     description: 'Unidentified biological or interdimensional entities associated with UFO phenomena and close encounters.',
     sources: ['MUFON (Mutual UFO Network) Database']
-  },
-  {
-    id: 'space-anomalies-br',
-    parentId: 'ufos-anomalies',
-    name: 'Space-Time Anomalies',
-    description: 'Phenomena dealing with portals, dimensional rifts, wormholes, and the structural boundaries of space-time.',
-    sources: ['MUFON (Mutual UFO Network) Database']
-  },
-  {
-    id: 'wormholes',
-    parentId: 'space-anomalies-br',
-    name: 'Wormholes',
-    description: 'Theoretical shortcuts through space-time connecting distant locations or separate dimensions, often explored in astrophysical anomalies.',
-    relatedIds: ['space-anomalies-br', 'ufos-anomalies'],
-    sources: ['Astrophysics Literature', 'Theoretical Physics Papers']
-  },
-  {
-    id: 'einstein-rosen-bridge',
-    parentId: 'space-anomalies-br',
-    name: 'Einstein-Rosen Bridge',
-    description: 'A specific mathematical solution in general relativity describing an traversable portal linking black holes and white holes across space.',
-    relatedIds: ['wormholes'],
-    sources: ['Astrophysics Literature', 'Theoretical Physics Papers']
-  },
-  {
-    id: 'portals',
-    parentId: 'space-anomalies-br',
-    name: 'Portals',
-    description: 'Doorways or gateways in space-time rumored to exist at specific ley line intersections or geographic anomalies, facilitating transport across realms.',
-    relatedIds: ['space-anomalies-br', 'ley-lines-br'],
-    sources: ['Astrophysics Literature', 'Theoretical Physics Papers']
-  },
-  {
-    id: 'the-veil',
-    parentId: 'space-anomalies-br',
-    name: 'The Veil',
-    description: 'The metaphysical barrier separating the physical universe from spiritual, higher-dimensional, or unseen realities.',
-    relatedIds: ['space-anomalies-br'],
-    sources: ['Astrophysics Literature', 'Theoretical Physics Papers']
   },
   {
     id: 'greys',
@@ -2140,6 +2103,45 @@ export const TERM_TREE_DATA: TermNode[] = [
     name: 'Orbs',
     description: 'These spheres of light are said to be UFOs or alien probes. They are often reported to move erratically and disappear suddenly.',
     sources: ['Modern UFOlogy Literature', 'Close Encounter Witness Records']
+  },
+  {
+    id: 'space-anomalies-br',
+    parentId: 'ufos-anomalies',
+    name: 'Space-Time Anomalies',
+    description: 'Phenomena dealing with portals, dimensional rifts, wormholes, and the structural boundaries of space-time.',
+    sources: ['MUFON (Mutual UFO Network) Database']
+  },
+  {
+    id: 'wormholes',
+    parentId: 'space-anomalies-br',
+    name: 'Wormholes',
+    description: 'Theoretical shortcuts through space-time connecting distant locations or separate dimensions, often explored in astrophysical anomalies.',
+    relatedIds: ['space-anomalies-br', 'ufos-anomalies'],
+    sources: ['Astrophysics Literature', 'Theoretical Physics Papers']
+  },
+  {
+    id: 'einstein-rosen-bridge',
+    parentId: 'space-anomalies-br',
+    name: 'Einstein-Rosen Bridge',
+    description: 'A specific mathematical solution in general relativity describing an traversable portal linking black holes and white holes across space.',
+    relatedIds: ['wormholes'],
+    sources: ['Astrophysics Literature', 'Theoretical Physics Papers']
+  },
+  {
+    id: 'portals',
+    parentId: 'space-anomalies-br',
+    name: 'Portals',
+    description: 'Doorways or gateways in space-time rumored to exist at specific ley line intersections or geographic anomalies, facilitating transport across realms.',
+    relatedIds: ['space-anomalies-br', 'ley-lines-br'],
+    sources: ['Astrophysics Literature', 'Theoretical Physics Papers']
+  },
+  {
+    id: 'the-veil',
+    parentId: 'space-anomalies-br',
+    name: 'The Veil',
+    description: 'The metaphysical barrier separating the physical universe from spiritual, higher-dimensional, or unseen realities.',
+    relatedIds: ['space-anomalies-br'],
+    sources: ['Astrophysics Literature', 'Theoretical Physics Papers']
   },
   {
     id: 'cryptids-hauntings',
@@ -2960,6 +2962,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     ],
     relatedIds: ['great-flood', 'creation-evt'],
     bibleVerses: ['So God created mankind in his own image, in the image of God he created them; male and female he created them. — Genesis 1:27', 'The Lord God took the man and put him in the Garden of Eden to work it and take care of it. — Genesis 2:15'],
+    timelineId: 'adam',
     sources: ['Canonical Scripture', 'Historical Chronology Database']
   },
   {
@@ -2972,6 +2975,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     ],
     relatedIds: ['watchers', 'mt-hermon', 'book-of-enoch'],
     bibleVerses: ['Enoch walked faithfully with God; then he was no more, because God took him away. — Genesis 5:24', 'By faith Enoch was taken from this life, so that he did not experience death... For before he was taken, he was commended as one who pleased God. — Hebrews 11:5'],
+    timelineId: 'enoch',
     sources: ['Canonical Scripture', 'Historical Chronology Database']
   },
   {
@@ -2984,6 +2988,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     ],
     relatedIds: ['great-flood', 'noahs-ark-find', 'gilgamesh-text'],
     bibleVerses: ['Noah was a righteous man, blameless among the people of his time, and he walked faithfully with God. — Genesis 6:9', 'By faith Noah, when warned about things not yet seen, in holy fear built an ark to save his family... — Hebrews 11:7'],
+    timelineId: 'noah',
     sources: ['Canonical Scripture', 'Historical Chronology Database']
   },
   {
@@ -2996,6 +3001,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     ],
     relatedIds: ['cave-machpelah', 'sodom-gomorrah-evt'],
     bibleVerses: ["The Lord had said to Abram, 'Go from your country, your people and your father's household to the land I will show you. I will make you into a great nation...' — Genesis 12:1-2"],
+    timelineId: 'abraham',
     sources: ['Canonical Scripture', 'Historical Chronology Database']
   },
   {
@@ -3008,6 +3014,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     ],
     relatedIds: ['babel-evt', 'gilgamesh-text'],
     bibleVerses: ['Cush was the father of Nimrod, who became a mighty warrior on the earth. He was a mighty hunter before the Lord... The first centers of his kingdom were Babylon, Uruk, Akkad and Kalneh, in Shinar. — Genesis 10:8-10'],
+    timelineId: 'nimrod',
     sources: ['Canonical Scripture', 'Historical Chronology Database']
   },
   {
@@ -6105,13 +6112,17 @@ export const TERM_TREE_DATA: TermNode[] = [
     id: 'zamzummim',
     parentId: 'nephilim-br',
     name: 'Zamzummim',
-    description: 'A giant mentioned in biblical narratives. Lineage: Tribe of giants.'
+    description: 'A giant mentioned in biblical narratives. Lineage: Tribe of giants.',
+    timelineId: 'zamzummim',
+    sources: ['Genesis 14:5, Deuteronomy 2:20-21']
   },
   {
     id: 'anakim',
     parentId: 'nephilim-br',
     name: 'Anakim',
-    description: 'A giant mentioned in biblical narratives. Lineage: Tribe of giants. Parents/Origins: Anak and his wife.'
+    description: 'A giant mentioned in biblical narratives. Lineage: Tribe of giants. Parents/Origins: Anak and his wife.',
+    timelineId: 'anakim',
+    sources: ['Numbers 13:22, Deuteronomy 2:10-11, Joshua 14:15']
   },
   {
     id: 'enakim',
@@ -6213,42 +6224,6 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Enochian Sites'
   },
   {
-    id: 'watcher_descent',
-    parentId: 'enochian-sites',
-    name: 'Descent of the Watchers',
-    description: 'According to the Book of Enoch, 200 angels (Watchers) led by Semjaza descended upon Mount Hermon, swearing an oath to take human wives and teach them forbidden secrets.',
-    layer: 'enochian-lore',
-    timelineId: 'watcher_descent',
-    sources: ['Book of Enoch 6']
-  },
-  {
-    id: 'semjaza',
-    parentId: 'enochian-sites',
-    name: 'Semjaza (Watcher Leader)',
-    description: 'Leader of the 200 Watchers. He taught humans root-cuttings and enchantments. Later bound by Michael in the valleys of the earth.',
-    layer: 'enochian-lore',
-    timelineId: 'semjaza',
-    sources: ['Book of Enoch 6-8']
-  },
-  {
-    id: 'enoch_ascension',
-    parentId: 'enochian-sites',
-    name: 'Translation of Enoch',
-    description: 'At the age of 365, Enoch was taken by God (translated) and walked with Him. He ascended to heaven, where he recorded the secrets of creation and the judgment of the Watchers.',
-    layer: 'enochian-lore',
-    timelineId: 'enoch_ascension',
-    sources: ['Genesis 5:24, Book of Enoch']
-  },
-  {
-    id: 'nephilim_era',
-    parentId: 'enochian-sites',
-    name: 'The Nephilim Giants',
-    description: 'The gigantic offspring of the union between the Watchers and human daughters. They consumed the labor of men and filled the earth with violence, leading to the divine decree of the Flood.',
-    layer: 'enochian-lore',
-    timelineId: 'nephilim_era',
-    sources: ['Genesis 6:4, Book of Enoch 7']
-  },
-  {
     id: 'enochian-mount-hermon',
     parentId: 'enochian-sites',
     name: 'Mount Hermon (Watchers Descent)',
@@ -6283,6 +6258,42 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Enochian Sites',
     mapFeatureId: 'enochian-og-kingdom',
     sources: ['Apocryphal Texts', 'Book of Enoch', 'Historical Gazeteers']
+  },
+  {
+    id: 'watcher_descent',
+    parentId: 'enochian-sites',
+    name: 'Descent of the Watchers',
+    description: 'According to the Book of Enoch, 200 angels (Watchers) led by Semjaza descended upon Mount Hermon, swearing an oath to take human wives and teach them forbidden secrets.',
+    layer: 'enochian-lore',
+    timelineId: 'watcher_descent',
+    sources: ['Book of Enoch 6']
+  },
+  {
+    id: 'semjaza',
+    parentId: 'enochian-sites',
+    name: 'Semjaza (Watcher Leader)',
+    description: 'Leader of the 200 Watchers. He taught humans root-cuttings and enchantments. Later bound by Michael in the valleys of the earth.',
+    layer: 'enochian-lore',
+    timelineId: 'semjaza',
+    sources: ['Book of Enoch 6-8']
+  },
+  {
+    id: 'enoch_ascension',
+    parentId: 'enochian-sites',
+    name: 'Translation of Enoch',
+    description: 'At the age of 365, Enoch was taken by God (translated) and walked with Him. He ascended to heaven, where he recorded the secrets of creation and the judgment of the Watchers.',
+    layer: 'enochian-lore',
+    timelineId: 'enoch_ascension',
+    sources: ['Genesis 5:24, Book of Enoch']
+  },
+  {
+    id: 'nephilim_era',
+    parentId: 'enochian-sites',
+    name: 'The Nephilim Giants',
+    description: 'The gigantic offspring of the union between the Watchers and human daughters. They consumed the labor of men and filled the earth with violence, leading to the divine decree of the Flood.',
+    layer: 'enochian-lore',
+    timelineId: 'nephilim_era',
+    sources: ['Genesis 6:4, Book of Enoch 7']
   },
   {
     id: 'mt-hermon',
@@ -6558,6 +6569,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     name: 'The Creation',
     description: 'The framing event of Genesis 1, marking the ordering of the cosmos.',
     bibleVerses: ['In the beginning God created the heavens and the earth. — Genesis 1:1'],
+    timelineId: 'evt-creation',
     sources: ['Canonical Scripture', 'Ancient Historical Chronicles']
   },
   {
@@ -6571,6 +6583,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     ],
     relatedIds: ['noah-fig', 'noahs-ark-find', 'gilgamesh-text', 'gobekli-tepe'],
     bibleVerses: ['Every living thing on the face of the earth was wiped out; people and animals and the creatures that move along the ground and the birds of the air were wiped from the earth. Only Noah was left, and those with him in the ark. — Genesis 7:23'],
+    timelineId: 'evt-great-flood',
     sources: ['Canonical Scripture', 'Ancient Historical Chronicles']
   },
   {
@@ -6580,6 +6593,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'A post-flood project led by Nimrod in the plains of Shinar to build a tower reaching into heaven, resulting in the confusion of tongues.',
     relatedIds: ['nimrod-fig', 'ancient-texts'],
     bibleVerses: ['Come, let us build ourselves a city, with a tower that reaches to the heavens, so that we may make a name for ourselves; otherwise we will be scattered over the face of the whole earth. — Genesis 11:4'],
+    timelineId: 'evt-tower-babel',
     sources: ['Canonical Scripture', 'Ancient Historical Chronicles']
   },
   {
@@ -6744,7 +6758,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   {
     id: 'noahs-ark-find',
     parentId: 'biblical-finds',
-    name: '',
+    name: 'Noah\'s Ark',
     description: 'The legendary vessel that survived the global deluge. Historically searched for in the Ararat mountain range.',
     relatedIds: ['noah-fig', 'great-flood'],
     bibleVerses: ['Make yourself an ark of gopher wood. Make rooms in the ark, and cover it inside and out with pitch. — Genesis 6:14'],
@@ -15277,79 +15291,6 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Underworld Entrances'
   },
   {
-    id: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-17',
-    parentId: 'underworld',
-    name: 'Guimen Gate\n - Mingshan Mountain',
-    description: 'Chongqing’s Ming Mountain is haunted by Fengdu Ghost City, a temple site dedicated to tales of the underworld influenced by Confucianism, Taoism, and Buddhism. Visitors can find the entrance to Hell at Guimen Gate, which is also known as the Ghost Torturing Pass. According to Chinese mythology, the newly dead must present themselves here to Yanluo Wang, the King of Hell, for his final judgment. Those deemed evil are banished to one of the many torturous realms of Diyu, or Chinese Hell. Fengdu’s gate to Hell has a suitably ominous appearance: it’s black and red with peaked roofs and flanked by 18 sculptures of demons enacting gruesome punishments (the worst level involves being boiled forever in a wok).',
-    layer: 'Portals / Stargates / Underworld / Hollow Earth Entrances',
-    mapFeatureId: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-17',
-    sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
-  },
-  {
-    id: 'tartarus',
-    parentId: 'underworld',
-    name: 'Tartarus',
-    description: 'In Greek mythology, Tartarus is the deep abyss that is used as a dungeon of torment and suffering for the wicked and as the prison for the Titans. Mentioned in the New Testament as the prison where rebellious angels are chained for judgment.',
-    translations: [
-      { lang: 'Greek', original: 'Τάρταρος', translit: 'Tartaros', meaning: 'Deep abyss / Prison of the Titans' }
-    ],
-    relatedIds: ['fallen-angel', 'greek-titans'],
-    bibleVerses: ['For if God did not spare angels when they sinned, but sent them to hell [Greek: tartarōsas], putting them in chains of darkness to be held for judgment... — 2 Peter 2:4 (https://www.biblegateway.com/passage/?search=2+Peter+2%3A4)'],
-    sources: ['Second Epistle of Peter', "Hesiod's Theogony", "Plato's Gorgias"]
-  },
-  {
-    id: 'asphodel',
-    parentId: 'underworld',
-    name: 'Asphodel Meadows',
-    description: 'A section of the ancient Greek underworld where ordinary souls who lived balanced, neutral lives reside. Mentioned in Homer\'s Odyssey as the place where the shades of heroes wander.',
-    translations: [
-      { lang: 'Greek', original: 'Ἀσφοδελὸς λειμών', translit: 'Asphodelos leimōn', meaning: 'Asphodel Meadows' }
-    ],
-    relatedIds: ['underworld'],
-    bibleVerses: ['Then the soul of the swift-footed grandson of Aeacus went away with long strides over the meadow of asphodel... — Homer, Odyssey Book 11 (https://www.sacred-texts.com/cla/hom/ody/ody11.htm)'],
-    sources: ["Homer's Odyssey"]
-  },
-  {
-    id: 'elysium',
-    parentId: 'underworld',
-    name: 'Elysium',
-    description: 'The Elysian Fields, a paradise in the Greek underworld reserved for heroes, demigods, and the exceptionally virtuous. A land of eternal spring, free of rain and snow, ruled by Cronus or Rhadamanthus.',
-    translations: [
-      { lang: 'Greek', original: 'Ἠλύσιον πεδίον', translit: 'Ēlysion pedion', meaning: 'Elysian Plain' }
-    ],
-    relatedIds: ['underworld', 'greek-titans'],
-    bibleVerses: ['But the deathless gods will convey you to the Elysian plain and the ends of the earth, where is fair-haired Rhadamanthus... — Homer, Odyssey Book 4 (https://www.sacred-texts.com/cla/hom/ody/ody04.htm)'],
-    sources: ["Homer's Odyssey", "Virgil's Aeneid"]
-  },
-  {
-    id: 'temple-of-styx',
-    parentId: 'underworld',
-    name: 'Temple of Styx',
-    description: 'A sacred place representing the boundary river Styx separating the physical world from the underworld. In mythology, the river Styx was a daughter of Oceanus, and a deity upon whose waters the gods swore binding oaths.',
-    translations: [
-      { lang: 'Greek', original: 'Στύξ', translit: 'Styx', meaning: 'Shuddering / Hatred' }
-    ],
-    relatedIds: ['underworld', 'oceanus'],
-    bibleVerses: ['Styx, the deathless daughter of Oceanus, came to Olympus... Therefore Zeus made her the great oath of the gods, and her children to live with him always. — Hesiod, Theogony (https://www.sacred-texts.com/cla/hes/theogony.htm)'],
-    sources: ["Hesiod's Theogony", "Homer's Iliad"]
-  },
-  {
-    id: 'at-the-mountains-of-madness',
-    parentId: 'underworld',
-    name: 'At the Mountains of Madness',
-    description: 'HP Lovecraft\'s seminal novella depicting an ancient, abandoned city in Antarctica, serving as a cultural narrative of subterranean cities, hollow earth lore, and interdimensional pre-human civilizations.',
-    relatedIds: ['underworld', 'google-blurred'],
-    sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
-  },
-  {
-    id: 'shogoth',
-    parentId: 'underworld',
-    name: 'Shogoth',
-    description: 'Amorphous, multi-eyed subterranean creatures from Lovecraftian horror, rumored in modern lore to inhabit deep tunnels beneath the ice sheets.',
-    relatedIds: ['underworld'],
-    sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
-  },
-  {
     id: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-0',
     parentId: 'underworld',
     name: 'Darvaza Gas Crater - "Door to Hell"',
@@ -15518,6 +15459,15 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
   },
   {
+    id: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-17',
+    parentId: 'underworld',
+    name: 'Guimen Gate\n - Mingshan Mountain',
+    description: 'Chongqing’s Ming Mountain is haunted by Fengdu Ghost City, a temple site dedicated to tales of the underworld influenced by Confucianism, Taoism, and Buddhism. Visitors can find the entrance to Hell at Guimen Gate, which is also known as the Ghost Torturing Pass. According to Chinese mythology, the newly dead must present themselves here to Yanluo Wang, the King of Hell, for his final judgment. Those deemed evil are banished to one of the many torturous realms of Diyu, or Chinese Hell. Fengdu’s gate to Hell has a suitably ominous appearance: it’s black and red with peaked roofs and flanked by 18 sculptures of demons enacting gruesome punishments (the worst level involves being boiled forever in a wok).',
+    layer: 'Portals / Stargates / Underworld / Hollow Earth Entrances',
+    mapFeatureId: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-17',
+    sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
+  },
+  {
     id: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-18',
     parentId: 'underworld',
     name: 'Cape Matapan',
@@ -15584,6 +15534,70 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Portals / Stargates / Underworld / Hollow Earth Entrances',
     mapFeatureId: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-26',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Mammoth_Cave_Rotunda_%28USGS_Lwt02830%29.jpg/1280px-Mammoth_Cave_Rotunda_%28USGS_Lwt02830%29.jpg'],
+    sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
+  },
+  {
+    id: 'tartarus',
+    parentId: 'underworld',
+    name: 'Tartarus',
+    description: 'In Greek mythology, Tartarus is the deep abyss that is used as a dungeon of torment and suffering for the wicked and as the prison for the Titans. Mentioned in the New Testament as the prison where rebellious angels are chained for judgment.',
+    translations: [
+      { lang: 'Greek', original: 'Τάρταρος', translit: 'Tartaros', meaning: 'Deep abyss / Prison of the Titans' }
+    ],
+    relatedIds: ['fallen-angel', 'greek-titans'],
+    bibleVerses: ['For if God did not spare angels when they sinned, but sent them to hell [Greek: tartarōsas], putting them in chains of darkness to be held for judgment... — 2 Peter 2:4 (https://www.biblegateway.com/passage/?search=2+Peter+2%3A4)'],
+    sources: ['Second Epistle of Peter', "Hesiod's Theogony", "Plato's Gorgias"]
+  },
+  {
+    id: 'asphodel',
+    parentId: 'underworld',
+    name: 'Asphodel Meadows',
+    description: 'A section of the ancient Greek underworld where ordinary souls who lived balanced, neutral lives reside. Mentioned in Homer\'s Odyssey as the place where the shades of heroes wander.',
+    translations: [
+      { lang: 'Greek', original: 'Ἀσφοδελὸς λειμών', translit: 'Asphodelos leimōn', meaning: 'Asphodel Meadows' }
+    ],
+    relatedIds: ['underworld'],
+    bibleVerses: ['Then the soul of the swift-footed grandson of Aeacus went away with long strides over the meadow of asphodel... — Homer, Odyssey Book 11 (https://www.sacred-texts.com/cla/hom/ody/ody11.htm)'],
+    sources: ["Homer's Odyssey"]
+  },
+  {
+    id: 'elysium',
+    parentId: 'underworld',
+    name: 'Elysium',
+    description: 'The Elysian Fields, a paradise in the Greek underworld reserved for heroes, demigods, and the exceptionally virtuous. A land of eternal spring, free of rain and snow, ruled by Cronus or Rhadamanthus.',
+    translations: [
+      { lang: 'Greek', original: 'Ἠλύσιον πεδίον', translit: 'Ēlysion pedion', meaning: 'Elysian Plain' }
+    ],
+    relatedIds: ['underworld', 'greek-titans'],
+    bibleVerses: ['But the deathless gods will convey you to the Elysian plain and the ends of the earth, where is fair-haired Rhadamanthus... — Homer, Odyssey Book 4 (https://www.sacred-texts.com/cla/hom/ody/ody04.htm)'],
+    sources: ["Homer's Odyssey", "Virgil's Aeneid"]
+  },
+  {
+    id: 'temple-of-styx',
+    parentId: 'underworld',
+    name: 'Temple of Styx',
+    description: 'A sacred place representing the boundary river Styx separating the physical world from the underworld. In mythology, the river Styx was a daughter of Oceanus, and a deity upon whose waters the gods swore binding oaths.',
+    translations: [
+      { lang: 'Greek', original: 'Στύξ', translit: 'Styx', meaning: 'Shuddering / Hatred' }
+    ],
+    relatedIds: ['underworld', 'oceanus'],
+    bibleVerses: ['Styx, the deathless daughter of Oceanus, came to Olympus... Therefore Zeus made her the great oath of the gods, and her children to live with him always. — Hesiod, Theogony (https://www.sacred-texts.com/cla/hes/theogony.htm)'],
+    sources: ["Hesiod's Theogony", "Homer's Iliad"]
+  },
+  {
+    id: 'at-the-mountains-of-madness',
+    parentId: 'underworld',
+    name: 'At the Mountains of Madness',
+    description: 'HP Lovecraft\'s seminal novella depicting an ancient, abandoned city in Antarctica, serving as a cultural narrative of subterranean cities, hollow earth lore, and interdimensional pre-human civilizations.',
+    relatedIds: ['underworld', 'google-blurred'],
+    sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
+  },
+  {
+    id: 'shogoth',
+    parentId: 'underworld',
+    name: 'Shogoth',
+    description: 'Amorphous, multi-eyed subterranean creatures from Lovecraftian horror, rumored in modern lore to inhabit deep tunnels beneath the ice sheets.',
+    relatedIds: ['underworld'],
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
   },
   {
@@ -17864,7 +17878,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   {
     id: 'st-michaels-line',
     parentId: 'ley-lines-br',
-    name: '',
+    name: 'St. Michael\'s Ley Line',
     description: 'A straight alignment of St. Michael churches across southern England, intersecting major megalithic nodes like Glastonbury.',
     relatedIds: ['stonehenge'],
     sources: ['Ley Line Cartography Records', "Alfred Watkins' The Old Straight Track"]
@@ -17872,8 +17886,9 @@ export const TERM_TREE_DATA: TermNode[] = [
   {
     id: 'dumbs',
     parentId: 'earth-energies',
-    name: '',
-    description: 'Deep Underground Military Bases alleged to exist across the United States, connected by high-speed subterranean rail lines.'
+    name: 'D.U.M.B.\'s',
+    description: 'Deep Underground Military Bases alleged to exist across the United States, connected by high-speed subterranean rail lines.',
+    layer: 'D.U.M.B.\'s'
   },
   {
     id: 'anomaly-D-U-M-B-s-0',
