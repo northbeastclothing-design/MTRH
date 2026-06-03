@@ -42,6 +42,16 @@ const ERAS_CONFIG = [
     desc: 'Scriptural events, exiles, and historical kingdoms.'
   },
   {
+    id: 'future-prophecy',
+    name: 'Biblical Prophecy',
+    start: 2100,
+    end: 3500,
+    color: '#D4AF37', // Gold!
+    icon: '/icons/icon-ancient-texts.svg',
+    layer: 'future-prophecy',
+    desc: 'Prophecies of the Book of Revelation: Tribulation, Second Coming, Millennial Reign, and the New Jerusalem.'
+  },
+  {
     id: 'enochian-lore',
     name: 'Enochian Lore',
     start: -3500,
@@ -90,16 +100,6 @@ const ERAS_CONFIG = [
     icon: '/icons/icon-royal-bloodlines.svg',
     layer: 'royal-bloodlines',
     desc: 'Charlemagne, Alfred the Great, and British Monarchs down to King Charles III.'
-  },
-  {
-    id: 'future-prophecy',
-    name: 'Future Prophecy',
-    start: 2100,
-    end: 3500,
-    color: '#D4AF37', // Gold!
-    icon: '/icons/icon-ancient-texts.svg',
-    layer: 'future-prophecy',
-    desc: 'Prophecies of the Book of Revelation: Tribulation, Second Coming, Millennial Reign, and the New Jerusalem.'
   }
 ];
 
