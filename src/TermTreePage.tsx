@@ -1266,7 +1266,7 @@ export default function TermTreePage({
           title={isRightCollapsed ? "Maximize Dossier" : "Minimize Dossier"}
           style={{
             position: 'absolute',
-            top: '40px',
+            top: '-1px',
             left: '-20px',
             width: '20px',
             height: '41px',
