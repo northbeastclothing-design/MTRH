@@ -117,44 +117,6 @@ export default function TermTreePage({
   }, [activeTermId]);
 
   // Compute terms visible/matched for search query
-  const searchFilteredData = useMemo(() => {
-    if (!searchQuery.trim()) {
-      return { visibleNodes: new Set(TERM_TREE_DATA.map(n => n.id)), matchedNodes: new Set<string>() };
-    }
-
-    const query = searchQuery.toLowerCase().trim();
-    const matched = new Set<string>();
-    const visible = new Set<string>();
-
-    TERM_TREE_DATA.forEach(node => {
-      const nameMatch = node.name.toLowerCase().includes(query);
-      const descMatch = node.description.toLowerCase().includes(query);
-      const transMatch = node.translations?.some(t =>
-        t.original.toLowerCase().includes(query) ||
-        t.translit.toLowerCase().includes(query) ||
-        t.meaning.toLowerCase().includes(query)
-      );
-      const verseMatch = node.bibleVerses?.some(v => v.toLowerCase().includes(query));
-
-      if (nameMatch || descMatch || transMatch || verseMatch) {
-        matched.add(node.id);
-        visible.add(node.id);
-      }
-    });
-
-    const traceAncestors = (nodeId: string) => {
-      const node = TERM_TREE_DATA.find(n => n.id === nodeId);
-      if (node && node.parentId) {
-        visible.add(node.parentId);
-        traceAncestors(node.parentId);
-      }
-    };
-
-    matched.forEach(id => traceAncestors(id));
-
-    return { visibleNodes: visible, matchedNodes: matched };
-  }, [searchQuery]);
-
   // Helper to trace path from node to root
   const getPathToRoot = (id: string | null): string[] => {
     const path: string[] = [];
@@ -167,16 +129,31 @@ export default function TermTreePage({
     return path;
   };
 
-  // If a search match is selected, expand/update the selected path to it
-  useEffect(() => {
-    if (searchQuery.trim() && searchFilteredData.matchedNodes.size > 0) {
-      const firstMatch = Array.from(searchFilteredData.matchedNodes)[0] as string | undefined;
-      if (firstMatch) {
-        const path = getPathToRoot(firstMatch);
-        setSelectedPath(path);
-      }
-    }
-  }, [searchQuery, searchFilteredData]);
+  // Compute search suggestions list for dropdown suggest panel
+  const searchSuggestions = useMemo(() => {
+    if (!searchQuery.trim()) return [];
+    const query = searchQuery.toLowerCase().trim();
+    
+    return TERM_TREE_DATA.filter(node => {
+      const nameMatch = node.name.toLowerCase().includes(query);
+      const descMatch = node.description.toLowerCase().includes(query);
+      const transMatch = node.translations?.some(t =>
+        t.original.toLowerCase().includes(query) ||
+        t.translit.toLowerCase().includes(query) ||
+        t.meaning.toLowerCase().includes(query)
+      );
+      const verseMatch = node.bibleVerses?.some(v => v.toLowerCase().includes(query));
+
+      return nameMatch || descMatch || transMatch || verseMatch;
+    }).slice(0, 10);
+  }, [searchQuery]);
+
+  const getParentPathLabel = (node: TermNode): string => {
+    if (!node.parentId) return '';
+    const parent = TERM_TREE_DATA.find(n => n.id === node.parentId);
+    if (!parent) return '';
+    return parent.name;
+  };
 
   // Layer Color and Icon helpers
   const getNodeColor = (node: TermNode): string => {
@@ -194,22 +171,35 @@ export default function TermTreePage({
     let parentId = node.parentId;
     while (parentId) {
       const parent = TERM_TREE_DATA.find(n => n.id === parentId);
-      if (parent && parent.layer && LAYER_COLORS[parent.layer]) {
-        return LAYER_COLORS[parent.layer];
+      if (parent) {
+        if (parent.layer && LAYER_COLORS[parent.layer]) {
+          return LAYER_COLORS[parent.layer];
+        }
+        // If we reach a root category in the chain, inherit its category color
+        if (parent.id === 'biblical-enc') return LAYER_COLORS['Biblical Figures'];
+        if (parent.id === 'ufos-anomalies') return LAYER_COLORS['U.F.O. Sightings'];
+        if (parent.id === 'cryptids-hauntings') return LAYER_COLORS['Cryptid Sightings'];
+        if (parent.id === 'ancient-sites') return LAYER_COLORS['Megaliths'];
+        if (parent.id === 'earth-energies') return LAYER_COLORS['Ley Lines'];
       }
       parentId = parent?.parentId;
     }
-    return theme.text;
+    
+    return LAYER_COLORS['Default'];
   };
 
-  const getRootCategoryColor = (node: TermNode): string => {
+  const getRootCategory = (node: TermNode): TermNode => {
     let curr = node;
     while (curr.parentId) {
       const parent = TERM_TREE_DATA.find(n => n.id === curr.parentId);
       if (!parent) break;
       curr = parent;
     }
-    return getNodeColor(curr);
+    return curr;
+  };
+
+  const getRootCategoryColor = (node: TermNode): string => {
+    return getNodeColor(getRootCategory(node));
   };
 
   const adjustColorForContrast = (color: string): string => {
@@ -219,34 +209,36 @@ export default function TermTreePage({
     switch (lower) {
       case '#fff96a': // Crop Circles
       case '#fffba6': // Megaliths
-        return '#b59300'; // Dark gold/yellow
+        return '#705b00'; // Very dark gold/yellow
       case '#f6e8c1': // Ancient Texts
       case '#ecce81': // Nephilim
-        return '#8b6f28'; // Dark gold/brown
+        return '#604e1e'; // Dark brown/gold
       case '#c2ffbd': // U.F.O. Sightings
       case '#9ff3bc': // National Parks
-        return '#2d7a2d'; // Dark green
+        return '#1c521c'; // Dark forest green
       case '#afffec': // Cryptid Sightings
       case '#74f8f3': // Archaeological Finds
-        return '#007b7b'; // Dark cyan/teal
+        return '#005c5c'; // Dark teal
       case '#baeaf4': // D.U.M.B.'s
-        return '#1b6e82'; // Dark blue-teal
+        return '#114b59'; // Dark blue-teal
       case '#90c2ff': // Biblical Figures
       case '#bdc4ff': // Ghosts & Hauntings / Blurred
-        return '#325fa6'; // Dark blue
+        return '#1c447d'; // Dark navy blue
       case '#ff9be1': // War.gov UFO files 01
       case '#ff5e97': // Ley Lines
-        return '#c01859'; // Dark pink/red
+        return '#940d3f'; // Dark pink/red
       case '#ff9f63': // Enochian / Meteor Impact
       case '#ffcba6': // Petroglyphs
+        return '#803b00'; // Dark rust orange
       case '#d49459': // Biblical Finds
+        return '#754215'; // Dark brown-orange
       case '#c6986d': // Bigfoot
-        return '#a05018'; // Dark orange/brown
+        return '#5c3f25'; // Dark chocolate brown
       case '#d3c5fb': // Underworld Entrances
       case '#d29bff': // War.gov UFO files 02
-        return '#663b99'; // Dark purple
+        return '#472280'; // Dark violet/purple
       case '#b6a6ff': // Default / Related
-        return '#4b3b99'; // Dark indigo
+        return '#322280'; // Dark indigo
       default:
         return color;
     }
@@ -292,13 +284,13 @@ export default function TermTreePage({
     const list: { level: number; title: string; nodes: TermNode[] }[] = [];
 
     // Level 0: Roots
-    const rootNodes = TERM_TREE_DATA.filter(n => !n.parentId && searchFilteredData.visibleNodes.has(n.id));
+    const rootNodes = TERM_TREE_DATA.filter(n => !n.parentId);
     list.push({ level: 0, title: 'Categories', nodes: rootNodes });
 
     // Subsequent levels based on active selected path
     for (let i = 0; i < selectedPath.length; i++) {
       const currentId = selectedPath[i];
-      const children = TERM_TREE_DATA.filter(n => n.parentId === currentId && searchFilteredData.visibleNodes.has(n.id));
+      const children = TERM_TREE_DATA.filter(n => n.parentId === currentId);
       if (children.length > 0) {
         list.push({
           level: i + 1,
@@ -309,7 +301,7 @@ export default function TermTreePage({
     }
 
     return list;
-  }, [selectedPath, searchFilteredData]);
+  }, [selectedPath]);
 
   // Handle term node selection click
   const handleNodeClick = (node: TermNode, level: number) => {
@@ -489,6 +481,11 @@ export default function TermTreePage({
     // Only drag with left click
     if (e.button !== 0) return;
 
+    // Dismiss search suggestions dropdown on canvas click/drag
+    if (searchQuery) {
+      setSearchQuery('');
+    }
+
     // Stop any running inertia animation immediately on click
     if (inertiaFrameRef.current !== null) {
       cancelAnimationFrame(inertiaFrameRef.current);
@@ -618,6 +615,25 @@ export default function TermTreePage({
 
     const handleWheel = (e: WheelEvent) => {
       e.preventDefault();
+
+      // Stop any running drag inertia animation immediately on scrollwheel action
+      if (inertiaFrameRef.current !== null) {
+        cancelAnimationFrame(inertiaFrameRef.current);
+        inertiaFrameRef.current = null;
+      }
+
+      let dy = e.deltaY;
+      let dx = e.deltaX;
+      if (e.deltaMode === 1) { // Line mode
+        dy *= 20;
+        dx *= 20;
+      } else if (e.deltaMode === 2) { // Page mode
+        dy *= 800;
+        dx *= 800;
+      }
+
+      container.scrollTop += dy;
+      container.scrollLeft += dx;
     };
 
     const handleDragStart = (e: DragEvent) => {
@@ -725,6 +741,22 @@ export default function TermTreePage({
           -moz-user-select: none !important;
           -ms-user-select: none !important;
         }
+        .search-suggestion-item {
+          padding: 10px 12px;
+          cursor: pointer;
+          transition: background 0.15s ease, border-color 0.15s ease;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          text-align: left;
+          border-bottom: 1px solid var(--border-light);
+        }
+        .search-suggestion-item:last-child {
+          border-bottom: none;
+        }
+        .search-suggestion-item:hover {
+          background: var(--hover-bg) !important;
+        }
       `}</style>
 
       {/* FLOATING SEARCH BAR IN THE TOP LEFT (separate from canvas) */}
@@ -734,14 +766,19 @@ export default function TermTreePage({
           top: '20px',
           left: '32px',
           width: '260px',
-          height: '40px',
           zIndex: 10,
           background: theme.bg,
           border: `1px solid ${theme.border}`,
           padding: '4px 8px',
           boxSizing: 'border-box',
           display: 'flex',
-          alignItems: 'center'
+          flexDirection: 'column',
+          justifyContent: 'center',
+          minHeight: '40px',
+          ...({
+            '--hover-bg': isMapDarkMode ? '#222222' : '#f5f5f5',
+            '--border-light': theme.borderLight
+          } as React.CSSProperties)
         }}
       >
         <div style={{ position: 'relative', width: '100%', display: 'flex', alignItems: 'center' }}>
@@ -783,6 +820,82 @@ export default function TermTreePage({
             </motion.button>
           )}
         </div>
+
+        {/* Suggestion Dropdown Panel */}
+        {searchQuery.trim() !== '' && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.15 }}
+            style={{
+              position: 'absolute',
+              top: '39px', // align right under the border
+              left: '-1px',
+              width: '260px',
+              background: theme.bg,
+              border: `1px solid ${theme.border}`,
+              borderTop: 'none',
+              maxHeight: '260px',
+              overflowY: 'auto',
+              zIndex: 11,
+              boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+              display: 'flex',
+              flexDirection: 'column'
+            }}
+          >
+            {searchSuggestions.length > 0 ? (
+              searchSuggestions.map(node => {
+                const parentLabel = getParentPathLabel(node);
+                return (
+                  <div
+                    key={node.id}
+                    className="search-suggestion-item"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      e.preventDefault();
+                      const path = getPathToRoot(node.id);
+                      setSelectedPath(path);
+                      setSearchQuery('');
+                    }}
+                  >
+                      <span style={{
+                        fontSize: '9px',
+                        fontWeight: '700',
+                        fontFamily: '"Space Mono", monospace',
+                        color: theme.text,
+                        letterSpacing: '0.5px',
+                        textTransform: 'uppercase'
+                      }}>
+                        {node.name}
+                      </span>
+                      {parentLabel && (
+                        <span style={{
+                          fontSize: '8px',
+                          fontFamily: '"Space Mono", monospace',
+                          color: theme.textDim,
+                          letterSpacing: '0.5px',
+                          textTransform: 'uppercase',
+                          marginTop: '2px'
+                        }}>
+                          IN {parentLabel}
+                        </span>
+                      )}
+                    </div>
+                  );
+                })
+              ) : (
+                <div style={{
+                  padding: '12px 16px',
+                  fontSize: '9px',
+                  fontFamily: '"Space Mono", monospace',
+                  color: theme.textDim,
+                  letterSpacing: '0.5px'
+                }}>
+                  NO MATCHES FOUND
+                </div>
+              )}
+            </motion.div>
+          )}
       </div>
 
       {/* LEFT AREA: HORIZONTALLY AND VERTICALLY DRAGGABLE INFINITE CANVAS */}
@@ -810,7 +923,7 @@ export default function TermTreePage({
             background: 'transparent'
           }}
         >
-          {/* SVG connection overlay scrolling natively with the columns */}
+          {/* SVG connection overlay (background lines) scrolling natively with the columns */}
           <svg
             ref={svgOverlayRef}
             style={{
@@ -823,40 +936,17 @@ export default function TermTreePage({
               zIndex: 4
             }}
           >
-            {lines.map(line => {
-              const displayColor = adjustColorForContrast(line.color);
-              return (
-                <g key={line.id}>
-                  {/* Right-angle orthogonal connector path */}
-                  <path
-                    d={line.d}
-                    fill="none"
-                    stroke={displayColor}
-                    strokeWidth="2"
-                    strokeDasharray="4,4"
-                    opacity={line.isRelated ? 0.75 : 0.9}
-                  />
-                  
-                  {/* Source Circle Anchor */}
-                  <circle
-                    cx={line.x1}
-                    cy={line.y1}
-                    r="4"
-                    fill={isMapDarkMode ? '#ffffff' : '#000000'}
-                    stroke={displayColor}
-                    strokeWidth="1"
-                  />
-
-                  {/* Target Circle Anchor */}
-                  <circle
-                    cx={line.x2}
-                    cy={line.y2}
-                    r="3"
-                    fill={line.isRelated ? displayColor : (isMapDarkMode ? '#ffffff' : '#000000')}
-                  />
-                </g>
-              );
-            })}
+            {lines.map(line => (
+              <path
+                key={line.id}
+                d={line.d}
+                fill="none"
+                stroke={theme.text}
+                strokeWidth="2"
+                strokeDasharray="4,4"
+                opacity={line.isRelated ? 0.6 : 0.8}
+              />
+            ))}
           </svg>
 
         {/* Columns positioned absolutely on the 2D Canvas */}
@@ -947,7 +1037,6 @@ export default function TermTreePage({
                 {column.nodes.map(node => {
                   const isSelected = selectedPath[colIdx] === node.id;
                   const isHovered = hoveredTermId === node.id;
-                  const isMatched = searchQuery.trim() !== '' && searchFilteredData.matchedNodes.has(node.id);
                   const nodeColor = colIdx === 0 ? getNodeColor(node) : getRootCategoryColor(node);
                   const nodeIcon = getNodeIcon(node);
 
@@ -1054,7 +1143,7 @@ export default function TermTreePage({
                           : `${nodeColor}a6`, // 65% opacity background by default (hex a6 is 65% opacity)
                         color: (isSelected || isHovered)
                           ? '#000000' // Black text on solid background color
-                          : (isMatched ? (isMapDarkMode ? '#FFF96A' : '#A78B00') : theme.text),
+                          : theme.text,
                         boxShadow: isSelected ? `0 0 8px ${nodeColor}44` : 'none',
                         cursor: 'pointer',
                         transition: 'background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease',
@@ -1065,7 +1154,7 @@ export default function TermTreePage({
                       <span
                         style={{
                           fontSize: '10px',
-                          fontWeight: isSelected || isHovered || isMatched ? 700 : 500,
+                          fontWeight: isSelected || isHovered ? 700 : 500,
                           fontFamily: '"Space Mono", monospace',
                           letterSpacing: '0.5px',
                           textTransform: 'uppercase',
@@ -1105,6 +1194,39 @@ export default function TermTreePage({
             </motion.div>
           )})}
         </AnimatePresence>
+
+        {/* SVG anchor dots overlay (foreground dots) rendered on top of columns */}
+        <svg
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '4000px',
+            height: '3000px',
+            pointerEvents: 'none',
+            zIndex: 6
+          }}
+        >
+          {lines.map(line => (
+            <g key={`dots-${line.id}`}>
+              {/* Source Circle Anchor */}
+              <circle
+                cx={line.x1}
+                cy={line.y1}
+                r="4"
+                fill={theme.text}
+              />
+
+              {/* Target Circle Anchor */}
+              <circle
+                cx={line.x2}
+                cy={line.y2}
+                r="3"
+                fill={theme.text}
+              />
+            </g>
+          ))}
+        </svg>
         </div>
       </div>
 
@@ -1193,22 +1315,30 @@ export default function TermTreePage({
                 flexShrink: 0 
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <div style={{ width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <img 
-                      src={getNodeIcon(activeTermNode)} 
-                      style={{ width: '30px', height: '30px' }} 
-                      alt="layer-icon" 
-                      draggable={false}
-                    />
-                  </div>
-                  <span style={{ 
-                    fontWeight: '700', 
-                    fontSize: '11px', 
-                    letterSpacing: '1px', 
-                    fontFamily: '"Space Mono", monospace' 
-                  }}>
-                    {activeTermNode.layer ? activeTermNode.layer.toUpperCase() : 'TAXONOMY'}
-                  </span>
+                  {(() => {
+                    const rootCat = getRootCategory(activeTermNode);
+                    return (
+                      <>
+                        <div style={{ width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                          <img 
+                            src={getNodeIcon(rootCat)} 
+                            style={{ width: '30px', height: '30px' }} 
+                            alt="category-icon" 
+                            draggable={false}
+                          />
+                        </div>
+                        <span style={{ 
+                          fontWeight: '700', 
+                          fontSize: '11px', 
+                          letterSpacing: '1px', 
+                          fontFamily: '"Space Mono", monospace',
+                          color: theme.text
+                        }}>
+                          {rootCat.name.toUpperCase()}
+                        </span>
+                      </>
+                    );
+                  })()}
                 </div>
               </div>
 
@@ -1291,6 +1421,42 @@ export default function TermTreePage({
                   </div>
                 )}
 
+                {/* Images Carousel */}
+                {activeTermNode.images && activeTermNode.images.length > 0 && (
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '8px' }}>
+                    <div style={{ display: 'flex', gap: '8px', overflowX: 'auto', paddingBottom: '8px' }} className="no-scrollbar">
+                      {activeTermNode.images.map((imgUrl, imgIdx) => (
+                        <div 
+                          key={imgIdx} 
+                          style={{ 
+                            flexShrink: 0, 
+                            width: activeTermNode.images!.length === 1 ? '100%' : '85%', 
+                            height: '160px', 
+                            borderRadius: '8px', 
+                            overflow: 'hidden', 
+                            border: `1px solid ${theme.borderLight}`,
+                            background: isMapDarkMode ? '#111' : '#f9f9f9',
+                            position: 'relative'
+                          }}
+                        >
+                          <img
+                            src={imgUrl}
+                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                            alt={`${activeTermNode.name} - image ${imgIdx}`}
+                            draggable={false}
+                            onError={(e) => {
+                              const parent = e.currentTarget.parentElement;
+                              if (parent) {
+                                parent.style.display = 'none';
+                              }
+                            }}
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 {/* Linguistic Translations */}
                 {activeTermNode.translations && activeTermNode.translations.length > 0 && (
                   <div
@@ -1329,7 +1495,7 @@ export default function TermTreePage({
                           }}
                         >
                           <div style={{ display: 'flex', flexDirection: 'column' }}>
-                            <span style={{ fontSize: '8px', fontWeight: 'bold', textTransform: 'uppercase', color: getNodeColor(activeTermNode) }}>
+                            <span style={{ fontSize: '8.5px', fontWeight: 'bold', textTransform: 'uppercase', color: adjustColorForContrast(getRootCategoryColor(activeTermNode)), letterSpacing: '0.5px' }}>
                               {trans.lang}
                             </span>
                             <span style={{ fontSize: '11px', fontWeight: 'bold', color: theme.text, fontFamily: '"Space Mono", monospace' }}>
@@ -1389,7 +1555,7 @@ export default function TermTreePage({
                           <div
                             key={vIdx}
                             style={{
-                              borderLeft: `2px solid ${getNodeColor(activeTermNode)}`,
+                              borderLeft: `2px solid ${getRootCategoryColor(activeTermNode)}`,
                               paddingLeft: '12px',
                               paddingTop: '2px',
                               paddingBottom: '2px',
@@ -1402,7 +1568,7 @@ export default function TermTreePage({
                               "{quote}"
                             </span>
                             {citation && (
-                              <span style={{ fontSize: '8.5px', fontWeight: 'bold', color: getNodeColor(activeTermNode), letterSpacing: '0.5px' }}>
+                              <span style={{ fontSize: '8.5px', fontWeight: 'bold', color: adjustColorForContrast(getRootCategoryColor(activeTermNode)), letterSpacing: '0.5px' }}>
                                 — {citation.toUpperCase()}
                               </span>
                             )}
