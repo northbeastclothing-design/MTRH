@@ -105,6 +105,114 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Legendary creatures, monsters, and mortal heroes featured in classical Hellenic epic poetry and folklore.'
   },
   {
+    id: 'gk-cecrops',
+    parentId: 'greek-monsters',
+    name: 'King Cecrops of Athens',
+    description: 'Legendary first King of Athens, depicted as half-man and half-serpent. Founded the Cecropia citadel.',
+    layer: 'greek-mythology',
+    timelineId: 'gk-cecrops',
+    sources: ['Parian Chronicle / Apollodorus']
+  },
+  {
+    id: 'gk-deucalion-flood',
+    parentId: 'greek-monsters',
+    name: 'Deucalion\'s Flood',
+    description: 'The Greek flood myth. Zeus sends a deluge to destroy humanity; Deucalion and Pyrrha survive in a chest, landing on Mt. Parnassus.',
+    layer: 'greek-mythology',
+    timelineId: 'gk-deucalion-flood',
+    sources: ['Parian Chronicle / Ovid']
+  },
+  {
+    id: 'gk-cadmus-thebes',
+    parentId: 'greek-monsters',
+    name: 'Cadmus Founds Thebes',
+    description: 'Phoenician prince Cadmus, searcher of Europa, follows a cow to Boeotia and founds the Cadmea (Thebes) after slaying a dragon.',
+    layer: 'greek-mythology',
+    timelineId: 'gk-cadmus-thebes',
+    sources: ['Parian Chronicle / Herodotus']
+  },
+  {
+    id: 'gk-minos-crete',
+    parentId: 'greek-monsters',
+    name: 'Reign of King Minos',
+    description: 'Reign of King Minos of Crete, builder of the Labyrinth, jailer of the Minotaur, founder of the Cretan thalassocracy.',
+    layer: 'greek-mythology',
+    timelineId: 'gk-minos-crete',
+    sources: ['Ancient Chronographers / Diodorus']
+  },
+  {
+    id: 'gk-perseus-mycenae',
+    parentId: 'greek-monsters',
+    name: 'Perseus Founds Mycenae',
+    description: 'Slayer of Medusa, Perseus founds the city of Mycenae, building its walls with the help of the Cyclopes.',
+    layer: 'greek-mythology',
+    timelineId: 'gk-perseus-mycenae',
+    sources: ['Pausanias / Apollodorus']
+  },
+  {
+    id: 'gk-heracles-labors',
+    parentId: 'greek-monsters',
+    name: 'Labors of Heracles',
+    description: 'The era of Heracles (Hercules) and his Twelve Labors performed for King Eurystheus of Mycenae.',
+    layer: 'greek-mythology',
+    timelineId: 'gk-heracles-labors',
+    sources: ['Apollodorus / Diodorus']
+  },
+  {
+    id: 'gk-theseus-athens',
+    parentId: 'greek-monsters',
+    name: 'Theseus in Athens',
+    description: 'Reign of Theseus, slayer of the Minotaur, unifier of Attica, and hero of Athens.',
+    layer: 'greek-mythology',
+    timelineId: 'gk-theseus-athens',
+    sources: ["Plutarch's Lives"]
+  },
+  {
+    id: 'gk-argonauts',
+    parentId: 'greek-monsters',
+    name: 'Voyage of the Argonauts',
+    description: 'Jason and his crew of heroes (including Heracles, Orpheus, Castor, Pollux) sail the Argo to Colchis to retrieve the Golden Fleece.',
+    layer: 'greek-mythology',
+    timelineId: 'gk-argonauts',
+    sources: ['Apollonius Rhodius']
+  },
+  {
+    id: 'gk-seven-thebes',
+    parentId: 'greek-monsters',
+    name: 'Seven Against Thebes',
+    description: 'The mythological war between the sons of Oedipus (Polynices and Eteocles) for the throne of Thebes.',
+    layer: 'greek-mythology',
+    timelineId: 'gk-seven-thebes',
+    sources: ['Apollodorus / Sophocles']
+  },
+  {
+    id: 'gk-trojan-war',
+    parentId: 'greek-monsters',
+    name: 'The Trojan War',
+    description: 'The ten-year siege of Troy by the coalition of Greek states led by Agamemnon to retrieve Helen. Concluded by the Trojan Horse.',
+    layer: 'greek-mythology',
+    timelineId: 'gk-trojan-war',
+    sources: ["Eratosthenes / Homer's Iliad"]
+  },
+  {
+    id: 'gk-odyssey-wander',
+    parentId: 'greek-monsters',
+    name: 'Wanderings of Odysseus',
+    description: 'The ten-year voyage of Odysseus to return home to Ithaca after the fall of Troy, encountering cyclopes, sirens, and gods.',
+    layer: 'greek-mythology',
+    timelineId: 'gk-odyssey-wander',
+    sources: ["Homer's Odyssey"]
+  },
+  {
+    id: 'gk-rome-founded',
+    parentId: 'greek-monsters',
+    name: 'Founding of Rome',
+    description: 'Romulus and Remus, descendants of the Trojan hero Aeneas, found the city of Rome on the Palatine Hill.',
+    layer: 'greek-mythology',
+    timelineId: 'gk-rome-founded',
+    sources: ['Varro Chronology / Livy']
+  },
+  {
     id: 'egyptian-pantheon',
     parentId: 'pantheons-mythology-br',
     name: 'Egyptian Pantheon',
@@ -121,6 +229,653 @@ export const TERM_TREE_DATA: TermNode[] = [
     parentId: 'pantheons-mythology-br',
     name: 'Hindu Pantheon',
     description: 'The divine manifestations, avatars, and cosmic deities of Vedic and classical Hindu traditions.'
+  },
+  {
+    id: 'sumerian-kings',
+    parentId: 'pantheons-mythology-br',
+    name: 'Sumerian King List',
+    description: 'Legendary pre-flood and post-flood Mesopotamian rulers claiming immensely long reigns, bridging Sumerian mythology with historical dynastic records.'
+  },
+  {
+    id: 'skl-alulim',
+    parentId: 'sumerian-kings',
+    name: 'Alulim of Eridu',
+    description: 'The first king of the first city, Eridu. Legendary reign of 28,800 years before the flood.',
+    layer: 'sumerian-kings',
+    timelineId: 'skl-alulim',
+    sources: ['Sumerian Kings List (Eridu)']
+  },
+  {
+    id: 'skl-alalngar',
+    parentId: 'sumerian-kings',
+    name: 'Alalngar of Eridu',
+    description: 'The second king of Eridu. Reigned for 36,000 years.',
+    layer: 'sumerian-kings',
+    timelineId: 'skl-alalngar',
+    sources: ['Sumerian Kings List (Eridu)']
+  },
+  {
+    id: 'skl-enmenluana',
+    parentId: 'sumerian-kings',
+    name: 'En-men-lu-ana of Bad-tibira',
+    description: 'King of Bad-tibira. Recorded as having the longest reign on the Kings List: 43,200 years.',
+    layer: 'sumerian-kings',
+    timelineId: 'skl-enmenluana',
+    sources: ['Sumerian Kings List (Bad-tibira)']
+  },
+  {
+    id: 'skl-enmengalana',
+    parentId: 'sumerian-kings',
+    name: 'En-men-gal-ana of Bad-tibira',
+    description: 'King of Bad-tibira. Reigned for 28,800 years.',
+    layer: 'sumerian-kings',
+    timelineId: 'skl-enmengalana',
+    sources: ['Sumerian Kings List (Bad-tibira)']
+  },
+  {
+    id: 'skl-dumuzid-shep',
+    parentId: 'sumerian-kings',
+    name: 'Dumuzid the Shepherd',
+    description: 'Sumerian culture hero and king of Bad-tibira, later divinized as the god of fertility and agriculture. Reigned 36,000 years.',
+    layer: 'sumerian-kings',
+    timelineId: 'skl-dumuzid-shep',
+    sources: ['Sumerian Kings List (Bad-tibira)']
+  },
+  {
+    id: 'skl-ensipad-zian-anna',
+    parentId: 'sumerian-kings',
+    name: 'En-sipad-zian-anna of Larag',
+    description: 'King of Larag. Reigned for 28,800 years.',
+    layer: 'sumerian-kings',
+    timelineId: 'skl-ensipad-zian-anna',
+    sources: ['Sumerian Kings List (Larag)']
+  },
+  {
+    id: 'skl-enmendurana',
+    parentId: 'sumerian-kings',
+    name: 'En-men-dur-ana of Sippar',
+    description: 'King of Sippar. In legend, he was summoned to heaven by the gods Shamash and Adad and taught the secrets of divination. Reigned 21,000 years.',
+    layer: 'sumerian-kings',
+    timelineId: 'skl-enmendurana',
+    sources: ['Sumerian Kings List (Sippar)']
+  },
+  {
+    id: 'skl-ubarautu',
+    parentId: 'sumerian-kings',
+    name: 'Ubara-Tutu of Shuruppak',
+    description: 'The last antediluvian king of Sumer, ruling in Shuruppak. Father of the Sumerian flood survivor Ziusudra. Reigned for 16,252 years until the flood swept over.',
+    layer: 'sumerian-kings',
+    timelineId: 'skl-ubarautu',
+    sources: ['Sumerian Kings List (Shuruppak)']
+  },
+  {
+    id: 'skl-jushur',
+    parentId: 'sumerian-kings',
+    name: 'Jushur of Kish',
+    description: 'The first king of the Kish Dynasty after the Great Flood. Reigned for a legendary 1,200 years.',
+    layer: 'sumerian-kings',
+    timelineId: 'skl-jushur',
+    sources: ['Sumerian Kings List (First Kish)']
+  },
+  {
+    id: 'skl-lugalbanda',
+    parentId: 'sumerian-kings',
+    name: 'Lugalbanda of Uruk',
+    description: 'Second king of Uruk, deified ancestor and father of Gilgamesh. Legend states he reigned for 1,200 years.',
+    layer: 'sumerian-kings',
+    timelineId: 'skl-lugalbanda',
+    sources: ['Sumerian Kings List (First Uruk)']
+  },
+  {
+    id: 'skl-enmerkar',
+    parentId: 'sumerian-kings',
+    name: 'Enmerkar of Uruk',
+    description: 'Builder of Uruk, famous for demanding tribute from Aratta, leading to the confusion of speech (similar to Babel). Reigned 420 years.',
+    layer: 'sumerian-kings',
+    timelineId: 'skl-enmerkar',
+    sources: ['Sumerian Kings List (First Uruk)']
+  },
+  {
+    id: 'skl-gilgamesh',
+    parentId: 'sumerian-kings',
+    name: 'Gilgamesh of Uruk',
+    description: 'King of Uruk, hero of the Epic of Gilgamesh, searcher for immortality. Reigned for 126 years in the Kings List. Historically dated to ~2600 BC.',
+    layer: 'sumerian-kings',
+    timelineId: 'skl-gilgamesh',
+    sources: ['Sumerian Kings List (First Uruk)']
+  },
+  {
+    id: 'bloodlines-genealogy',
+    parentId: 'biblical-enc',
+    name: 'Royal & Esoteric Bloodlines',
+    description: 'Lineages of power tracing through the Merovingian dynasty, royal houses, and ancient genealogical lineages.'
+  },
+  {
+    id: 'merovingian-bloodlines',
+    parentId: 'bloodlines-genealogy',
+    name: 'Merovingian Dynasty',
+    description: 'The Salian Frankish dynasty that ruled the Franks from the mid-5th century, surrounded by esoteric Grail lore and legends of holy bloodlines.',
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
+  },
+  {
+    id: 'sarah_damaris',
+    parentId: 'merovingian-bloodlines',
+    name: 'Sarah Damaris',
+    description: 'In alternative historical legends, the daughter of Jesus and Mary Magdalene who fled to Gaul, forming the traditional foundation of the Merovingian lineage.',
+    layer: 'merovingian-bloodlines',
+    timelineId: 'sarah_damaris',
+    sources: ['Holy Blood, Holy Grail / Lore']
+  },
+  {
+    id: 'faramund',
+    parentId: 'merovingian-bloodlines',
+    name: 'Faramund',
+    description: 'Semi-legendary first king of the Salian Franks, traditional ancestor of the Merovingian kings.',
+    layer: 'merovingian-bloodlines',
+    timelineId: 'faramund',
+    sources: ['Liber Historiae Francorum']
+  },
+  {
+    id: 'chlodio',
+    parentId: 'merovingian-bloodlines',
+    name: 'Chlodio the Long-Haired',
+    description: 'King of the Salian Franks at Dispargum. Captured Tournai and Cambrai from the Romans.',
+    layer: 'merovingian-bloodlines',
+    timelineId: 'chlodio',
+    sources: ['Gregory of Tours']
+  },
+  {
+    id: 'merovech',
+    parentId: 'merovingian-bloodlines',
+    name: 'Merovech',
+    description: 'The legendary founder of the Merovingian dynasty, said to have been born of a sea monster Quinotaur.',
+    layer: 'merovingian-bloodlines',
+    timelineId: 'merovech',
+    sources: ['Gregory of Tours']
+  },
+  {
+    id: 'childeric_i',
+    parentId: 'merovingian-bloodlines',
+    name: 'Childeric I',
+    description: 'Merovingian King of the Salian Franks. Allied with Romans against Visigoths. His rich tomb was found in 1653.',
+    layer: 'merovingian-bloodlines',
+    timelineId: 'childeric_i',
+    sources: ['Gregory of Tours']
+  },
+  {
+    id: 'clovis_i',
+    parentId: 'merovingian-bloodlines',
+    name: 'King Clovis I',
+    description: 'First King of all the Franks, united the tribes, defeated the Romans at Soissons, and converted to Catholicism.',
+    layer: 'merovingian-bloodlines',
+    timelineId: 'clovis_i',
+    sources: ['Gregory of Tours']
+  },
+  {
+    id: 'clotilde',
+    parentId: 'merovingian-bloodlines',
+    name: 'Queen Clotilde',
+    description: 'Burgundian princess, wife of Clovis I, who successfully persuaded her husband to convert to Christianity.',
+    layer: 'merovingian-bloodlines',
+    timelineId: 'clotilde',
+    sources: ['Gregory of Tours']
+  },
+  {
+    id: 'chlothar_i',
+    parentId: 'merovingian-bloodlines',
+    name: 'Chlothar I',
+    description: 'King of the Franks. Re-united the Frankish realms after his brothers died. Lived 64 years.',
+    layer: 'merovingian-bloodlines',
+    timelineId: 'chlothar_i',
+    sources: ['Gregory of Tours']
+  },
+  {
+    id: 'chilperic_i',
+    parentId: 'merovingian-bloodlines',
+    name: 'Chilperic I',
+    description: 'King of Neustria. Famous for his fierce feuds with his brother Sigebert and Queen Brunhilda.',
+    layer: 'merovingian-bloodlines',
+    timelineId: 'chilperic_i',
+    sources: ['Gregory of Tours']
+  },
+  {
+    id: 'chlothar_ii',
+    parentId: 'merovingian-bloodlines',
+    name: 'Chlothar II the Great',
+    description: 'King of Neustria, later sole King of the Franks. Promulgated the Edict of Paris.',
+    layer: 'merovingian-bloodlines',
+    timelineId: 'chlothar_ii',
+    sources: ['Gregory of Tours']
+  },
+  {
+    id: 'dagobert_i',
+    parentId: 'merovingian-bloodlines',
+    name: 'King Dagobert I',
+    description: 'The last Merovingian king to wield real power. Built the Basilica of Saint-Denis.',
+    layer: 'merovingian-bloodlines',
+    timelineId: 'dagobert_i',
+    sources: ['Gesta Dagoberti']
+  },
+  {
+    id: 'clovis_ii',
+    parentId: 'merovingian-bloodlines',
+    name: 'Clovis II',
+    description: 'King of Neustria and Burgundy, ruled under the regency of his mother and Mayor of the Palace Erchinoald.',
+    layer: 'merovingian-bloodlines',
+    timelineId: 'clovis_ii',
+    sources: ['Gregory of Tours']
+  },
+  {
+    id: 'childeric_ii',
+    parentId: 'merovingian-bloodlines',
+    name: 'Childeric II',
+    description: 'King of Austrasia, Neustria, and Burgundy. Assassinated during a hunting trip.',
+    layer: 'merovingian-bloodlines',
+    timelineId: 'childeric_ii',
+    sources: ['Gregory of Tours']
+  },
+  {
+    id: 'dagobert_ii',
+    parentId: 'merovingian-bloodlines',
+    name: 'King Dagobert II',
+    description: 'Assassinated Merovingian king. In alternative lore, his survival and lineage form the foundation of the Priory of Sion.',
+    layer: 'merovingian-bloodlines',
+    timelineId: 'dagobert_ii',
+    sources: ['Gregory of Tours / Lore']
+  },
+  {
+    id: 'royal-bloodlines',
+    parentId: 'bloodlines-genealogy',
+    name: 'Royal Dynasties & Houses',
+    description: 'Ruling noble houses of Europe, including the Carolingians, Capetians, and subsequent royal lineages of power.',
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
+  },
+  {
+    id: 'charlemagne',
+    parentId: 'royal-bloodlines',
+    name: 'Charlemagne',
+    description: 'King of the Franks, Lombards, and Emperor of the Romans. United Western Europe. Father of Europe.',
+    layer: 'royal-bloodlines',
+    timelineId: 'charlemagne',
+    sources: ["Einhard's Life of Charlemagne"]
+  },
+  {
+    id: 'judith_flanders',
+    parentId: 'royal-bloodlines',
+    name: 'Judith of Flanders',
+    description: 'Granddaughter of Charlemagne, Queen of Wessex by marriage, ancestor of the English royal line.',
+    layer: 'royal-bloodlines',
+    timelineId: 'judith_flanders',
+    sources: ['Anglo-Saxon Chronicle']
+  },
+  {
+    id: 'alfred_the_great',
+    parentId: 'royal-bloodlines',
+    name: 'Alfred the Great',
+    description: 'King of the Anglo-Saxons, defender of England against the Vikings, and promoter of literacy. Lived 50 years.',
+    layer: 'royal-bloodlines',
+    timelineId: 'alfred_the_great',
+    sources: ["Asser's Life of King Alfred"]
+  },
+  {
+    id: 'edward_elder',
+    parentId: 'royal-bloodlines',
+    name: 'Edward the Elder',
+    description: 'King of the Anglo-Saxons, conquered Danish-held territories in East Anglia and the Midlands.',
+    layer: 'royal-bloodlines',
+    timelineId: 'edward_elder',
+    sources: ['Anglo-Saxon Chronicle']
+  },
+  {
+    id: 'edmund_i',
+    parentId: 'royal-bloodlines',
+    name: 'Edmund I',
+    description: 'King of the English, conquered Strathclyde and established political control over northern realms.',
+    layer: 'royal-bloodlines',
+    timelineId: 'edmund_i',
+    sources: ['Anglo-Saxon Chronicle']
+  },
+  {
+    id: 'edgar_peaceful',
+    parentId: 'royal-bloodlines',
+    name: 'Edgar the Peaceful',
+    description: 'King of the English. His reign marked the apex of Anglo-Saxon unity and peace.',
+    layer: 'royal-bloodlines',
+    timelineId: 'edgar_peaceful',
+    sources: ['Anglo-Saxon Chronicle']
+  },
+  {
+    id: 'aethelred_unready',
+    parentId: 'royal-bloodlines',
+    name: 'Æthelred the Unready',
+    description: 'King of the English. Paid Danegeld to buy off Viking raiders; reign plagued by Danish incursions.',
+    layer: 'royal-bloodlines',
+    timelineId: 'aethelred_unready',
+    sources: ['Anglo-Saxon Chronicle']
+  },
+  {
+    id: 'edmund_ironside',
+    parentId: 'royal-bloodlines',
+    name: 'Edmund Ironside',
+    description: 'King of the English. Led fierce resistance against Danish King Cnut, earning the nickname Ironside.',
+    layer: 'royal-bloodlines',
+    timelineId: 'edmund_ironside',
+    sources: ['Anglo-Saxon Chronicle']
+  },
+  {
+    id: 'edward_exile',
+    parentId: 'royal-bloodlines',
+    name: 'Edward the Exile',
+    description: 'Son of Edmund Ironside. Fled to Hungary during Cnut\'s reign and returned to England late in life.',
+    layer: 'royal-bloodlines',
+    timelineId: 'edward_exile',
+    sources: ['Anglo-Saxon Chronicle']
+  },
+  {
+    id: 'margaret_scotland',
+    parentId: 'royal-bloodlines',
+    name: 'Margaret of Scotland',
+    description: 'English princess, Queen of Scotland, canonized saint who introduced Catholic reforms to Scotland.',
+    layer: 'royal-bloodlines',
+    timelineId: 'margaret_scotland',
+    sources: ['Life of Saint Margaret']
+  },
+  {
+    id: 'malcolm_iii',
+    parentId: 'royal-bloodlines',
+    name: 'Malcolm III of Scotland',
+    description: 'King of Scots, overthrew Macbeth, married Margaret of Scotland.',
+    layer: 'royal-bloodlines',
+    timelineId: 'malcolm_iii',
+    sources: ['Chronicles of Scotland']
+  },
+  {
+    id: 'matilda_scotland',
+    parentId: 'royal-bloodlines',
+    name: 'Matilda of Scotland',
+    description: 'Daughter of Malcolm III and Margaret, Queen of England, married King Henry I.',
+    layer: 'royal-bloodlines',
+    timelineId: 'matilda_scotland',
+    sources: ['William of Malmesbury']
+  },
+  {
+    id: 'henry_i',
+    parentId: 'royal-bloodlines',
+    name: 'King Henry I',
+    description: 'King of England, son of William the Conqueror, consolidated royal administration.',
+    layer: 'royal-bloodlines',
+    timelineId: 'henry_i',
+    sources: ['Orderic Vitalis']
+  },
+  {
+    id: 'william_conqueror',
+    parentId: 'royal-bloodlines',
+    name: 'William the Conqueror',
+    description: 'Duke of Normandy, conquered England in 1066, built the Tower of London, compiled Domesday Book.',
+    layer: 'royal-bloodlines',
+    timelineId: 'william_conqueror',
+    sources: ['William of Poitiers']
+  },
+  {
+    id: 'empress_matilda',
+    parentId: 'royal-bloodlines',
+    name: 'Empress Matilda',
+    description: 'Daughter of Henry I, Holy Roman Empress, claimant to the English throne during "The Anarchy" civil war.',
+    layer: 'royal-bloodlines',
+    timelineId: 'empress_matilda',
+    sources: ['Gesta Stephani']
+  },
+  {
+    id: 'henry_ii',
+    parentId: 'royal-bloodlines',
+    name: 'King Henry II',
+    description: 'First Plantagenet King of England, ruled vast Angevin Empire, clashed with Thomas Becket.',
+    layer: 'royal-bloodlines',
+    timelineId: 'henry_ii',
+    sources: ['Chronicles of Henry II']
+  },
+  {
+    id: 'king_john',
+    parentId: 'royal-bloodlines',
+    name: 'King John (Lackland)',
+    description: 'King of England, sealed Magna Carta at Runnymede under pressure from rebel barons.',
+    layer: 'royal-bloodlines',
+    timelineId: 'king_john',
+    sources: ['Roger of Wendover']
+  },
+  {
+    id: 'henry_iii',
+    parentId: 'royal-bloodlines',
+    name: 'King Henry III',
+    description: 'King of England, rebuilt Westminster Abbey, faced Simon de Montfort\'s parliament reforms.',
+    layer: 'royal-bloodlines',
+    timelineId: 'henry_iii',
+    sources: ['Matthew Paris']
+  },
+  {
+    id: 'edward_i',
+    parentId: 'royal-bloodlines',
+    name: 'King Edward I (Longshanks)',
+    description: 'King of England, conquered Wales, fought William Wallace in Scotland, established Model Parliament.',
+    layer: 'royal-bloodlines',
+    timelineId: 'edward_i',
+    sources: ['Chronicles of Edward I']
+  },
+  {
+    id: 'edward_ii',
+    parentId: 'royal-bloodlines',
+    name: 'King Edward II',
+    description: 'King of England, defeated at Bannockburn, deposed by his wife Isabella and Roger Mortimer.',
+    layer: 'royal-bloodlines',
+    timelineId: 'edward_ii',
+    sources: ['Vita Edwardi Secundi']
+  },
+  {
+    id: 'edward_iii',
+    parentId: 'royal-bloodlines',
+    name: 'King Edward III',
+    description: 'King of England. Claimed French crown, starting Hundred Years\' War. Created Order of the Garter.',
+    layer: 'royal-bloodlines',
+    timelineId: 'edward_iii',
+    sources: ["Jean Froissart's Chronicles"]
+  },
+  {
+    id: 'john_of_gaunt',
+    parentId: 'royal-bloodlines',
+    name: 'John of Gaunt',
+    description: 'Duke of Lancaster, son of Edward III, ancestor of Lancaster kings and Beaufort line.',
+    layer: 'royal-bloodlines',
+    timelineId: 'john_of_gaunt',
+    sources: ["Froissart's Chronicles"]
+  },
+  {
+    id: 'john_beaufort',
+    parentId: 'royal-bloodlines',
+    name: 'John Beaufort, 1st Earl of Somerset',
+    description: 'Eldest son of John of Gaunt and Katherine Swynford, legitimized by Richard II.',
+    layer: 'royal-bloodlines',
+    timelineId: 'john_beaufort',
+    sources: ['Official Records']
+  },
+  {
+    id: 'somerset_pat',
+    parentId: 'royal-bloodlines',
+    name: 'John Beaufort, 1st Duke of Somerset',
+    description: 'Military commander in France, father of Margaret Beaufort.',
+    layer: 'royal-bloodlines',
+    timelineId: 'somerset_pat',
+    sources: ['War Records']
+  },
+  {
+    id: 'margaret_beaufort',
+    parentId: 'royal-bloodlines',
+    name: 'Lady Margaret Beaufort',
+    description: 'Matriarch of the House of Tudor, mother of King Henry VII. Major figure in Wars of the Roses.',
+    layer: 'royal-bloodlines',
+    timelineId: 'margaret_beaufort',
+    sources: ['Tudor Biographies']
+  },
+  {
+    id: 'henry_vii',
+    parentId: 'royal-bloodlines',
+    name: 'King Henry VII',
+    description: 'First Tudor King, won crown at Bosworth Field, ended Wars of the Roses by marrying Elizabeth of York.',
+    layer: 'royal-bloodlines',
+    timelineId: 'henry_vii',
+    sources: ['Polydore Vergil']
+  },
+  {
+    id: 'henry_viii',
+    parentId: 'royal-bloodlines',
+    name: 'King Henry VIII',
+    description: 'King of England, broke from Rome to establish Church of England, married six times. Rule of reform.',
+    layer: 'royal-bloodlines',
+    timelineId: 'henry_viii',
+    sources: ["Edward Hall's Chronicle"]
+  },
+  {
+    id: 'elizabeth_i',
+    parentId: 'royal-bloodlines',
+    name: 'Queen Elizabeth I',
+    description: 'The Virgin Queen. Defeated Spanish Armada, presided over Elizabethan golden age of literature.',
+    layer: 'royal-bloodlines',
+    timelineId: 'elizabeth_i',
+    sources: ['William Camden']
+  },
+  {
+    id: 'mary_queen_of_scots',
+    parentId: 'royal-bloodlines',
+    name: 'Mary, Queen of Scots',
+    description: 'Queen of Scotland, claimant to English throne, executed by Elizabeth I.',
+    layer: 'royal-bloodlines',
+    timelineId: 'mary_queen_of_scots',
+    sources: ['George Buchanan']
+  },
+  {
+    id: 'james_vi_i',
+    parentId: 'royal-bloodlines',
+    name: 'King James I & VI',
+    description: 'Union of Crowns (Scotland & England), commissioned King James Bible translation.',
+    layer: 'royal-bloodlines',
+    timelineId: 'james_vi_i',
+    sources: ['State Papers']
+  },
+  {
+    id: 'elizabeth_stuart',
+    parentId: 'royal-bloodlines',
+    name: 'Elizabeth Stuart (Bohemia)',
+    description: 'The Winter Queen of Bohemia, daughter of James I, grandmother of King George I.',
+    layer: 'royal-bloodlines',
+    timelineId: 'elizabeth_stuart',
+    sources: ['Letters of Elizabeth Stuart']
+  },
+  {
+    id: 'sophia_hanover',
+    parentId: 'royal-bloodlines',
+    name: 'Sophia of Hanover',
+    description: 'Electress of Hanover, declared heiress of Great Britain by Act of Settlement 1701.',
+    layer: 'royal-bloodlines',
+    timelineId: 'sophia_hanover',
+    sources: ['Memoirs of Sophia']
+  },
+  {
+    id: 'george_i',
+    parentId: 'royal-bloodlines',
+    name: 'King George I',
+    description: 'First Hanoverian King of Great Britain. Did not speak fluent English, relied on Cabinet government.',
+    layer: 'royal-bloodlines',
+    timelineId: 'george_i',
+    sources: ['Ragnhild Hatton']
+  },
+  {
+    id: 'george_ii',
+    parentId: 'royal-bloodlines',
+    name: 'King George II',
+    description: 'Last British monarch to lead an army in battle (Dettingen). Reigned 33 years.',
+    layer: 'royal-bloodlines',
+    timelineId: 'george_ii',
+    sources: ["Lord Hervey's Memoirs"]
+  },
+  {
+    id: 'frederick_prince',
+    parentId: 'royal-bloodlines',
+    name: 'Frederick, Prince of Wales',
+    description: 'Eldest son of George II, pre-deceased his father; father of King George III.',
+    layer: 'royal-bloodlines',
+    timelineId: 'frederick_prince',
+    sources: ['Court Journals']
+  },
+  {
+    id: 'george_iii',
+    parentId: 'royal-bloodlines',
+    name: 'King George III',
+    description: 'King during American Revolution and Napoleonic Wars. Longest-reigning king (59 years).',
+    layer: 'royal-bloodlines',
+    timelineId: 'george_iii',
+    sources: ['Letters of George III']
+  },
+  {
+    id: 'edward_kent',
+    parentId: 'royal-bloodlines',
+    name: 'Prince Edward, Duke of Kent',
+    description: 'Fourth son of George III, military commander in Canada, father of Queen Victoria.',
+    layer: 'royal-bloodlines',
+    timelineId: 'edward_kent',
+    sources: ['Royal Archives']
+  },
+  {
+    id: 'queen_victoria',
+    parentId: 'royal-bloodlines',
+    name: 'Queen Victoria',
+    description: 'Empress of India. Her reign of 63 years marked the expansion of the British Empire. Grandmother of Europe.',
+    layer: 'royal-bloodlines',
+    timelineId: 'queen_victoria',
+    sources: ["Queen Victoria's Journals"]
+  },
+  {
+    id: 'edward_vii',
+    parentId: 'royal-bloodlines',
+    name: 'King Edward VII',
+    description: 'First monarch of House of Saxe-Coburg and Gotha (later Windsor), fostered entente cordiale.',
+    layer: 'royal-bloodlines',
+    timelineId: 'edward_vii',
+    sources: ['Philip Magnus']
+  },
+  {
+    id: 'george_v',
+    parentId: 'royal-bloodlines',
+    name: 'King George V',
+    description: 'King during WWI. Changed royal house name to Windsor. Inaugurated Christmas broadcasts.',
+    layer: 'royal-bloodlines',
+    timelineId: 'george_v',
+    sources: ['Harold Nicolson']
+  },
+  {
+    id: 'george_vi',
+    parentId: 'royal-bloodlines',
+    name: 'King George VI',
+    description: 'King during WWII. Symbol of national resolve after his brother abdicated. Lived 56 years.',
+    layer: 'royal-bloodlines',
+    timelineId: 'george_vi',
+    sources: ['John Wheeler-Bennett']
+  },
+  {
+    id: 'queen_elizabeth_ii',
+    parentId: 'royal-bloodlines',
+    name: 'Queen Elizabeth II',
+    description: 'Britain\'s longest-reigning monarch (70 years), oversaw post-war transition and Commonwealth growth.',
+    layer: 'royal-bloodlines',
+    timelineId: 'queen_elizabeth_ii',
+    sources: ['Official Records']
+  },
+  {
+    id: 'king_charles_iii',
+    parentId: 'royal-bloodlines',
+    name: 'King Charles III',
+    description: 'Current reigning Monarch of the United Kingdom and Commonwealth realms, crowned in 2023.',
+    layer: 'royal-bloodlines',
+    timelineId: 'king_charles_iii',
+    sources: ['Official Records']
   },
   {
     id: 'ariel',
@@ -1412,6 +2167,789 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Biblical Figures'
   },
   {
+    id: 'adam',
+    parentId: 'biblical-figures',
+    name: 'Adam',
+    description: 'The first human created by God. Lived 930 years.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'adam',
+    sources: ['Genesis 5:3-5']
+  },
+  {
+    id: 'eve',
+    parentId: 'biblical-figures',
+    name: 'Eve',
+    description: 'The first woman, created by God from Adam\'s rib. Mother of Cain, Abel, Seth, and others.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'eve',
+    sources: ['Genesis 2:21-25, 3:20']
+  },
+  {
+    id: 'cain',
+    parentId: 'biblical-figures',
+    name: 'Cain',
+    description: 'Eldest son of Adam and Eve. Slew his brother Abel and was marked by God.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'cain',
+    sources: ['Genesis 4:1-16']
+  },
+  {
+    id: 'abel',
+    parentId: 'biblical-figures',
+    name: 'Abel',
+    description: 'Second son of Adam and Eve. A keeper of sheep whose offering was accepted by God, slain by Cain out of jealousy.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'abel',
+    sources: ['Genesis 4:2-8']
+  },
+  {
+    id: 'enosh',
+    parentId: 'biblical-figures',
+    name: 'Enosh',
+    description: 'Son of Seth. During his time, people began to call upon the name of the Lord. Lived 905 years.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'enosh',
+    sources: ['Genesis 5:9-11']
+  },
+  {
+    id: 'kenan',
+    parentId: 'biblical-figures',
+    name: 'Kenan',
+    description: 'Son of Enosh. Lived 910 years.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'kenan',
+    sources: ['Genesis 5:12-14']
+  },
+  {
+    id: 'mahalalel',
+    parentId: 'biblical-figures',
+    name: 'Mahalalel',
+    description: 'Son of Kenan. Lived 895 years.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'mahalalel',
+    sources: ['Genesis 5:15-17']
+  },
+  {
+    id: 'jared',
+    parentId: 'biblical-figures',
+    name: 'Jared',
+    description: 'Son of Mahalalel. Lived 962 years.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'jared',
+    sources: ['Genesis 5:18-20']
+  },
+  {
+    id: 'methuselah',
+    parentId: 'biblical-figures',
+    name: 'Methuselah',
+    description: 'Son of Enoch. The longest-lived human in biblical records. Died in the year of the Great Flood. Lived 969 years.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'methuselah',
+    sources: ['Genesis 5:25-27']
+  },
+  {
+    id: 'lamech',
+    parentId: 'biblical-figures',
+    name: 'Lamech',
+    description: 'Son of Methuselah and father of Noah. Lived 777 years.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'lamech',
+    sources: ['Genesis 5:28-31']
+  },
+  {
+    id: 'shem',
+    parentId: 'biblical-figures',
+    name: 'Shem',
+    description: 'Son of Noah, ancestor of the Semitic peoples. Survived the Flood. Lived 600 years.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'shem',
+    sources: ['Genesis 11:10-11']
+  },
+  {
+    id: 'ham',
+    parentId: 'biblical-figures',
+    name: 'Ham',
+    description: 'Son of Noah, father of Cush, Egypt, Put, and Canaan. Survived the Flood. Lived approximately 540 years (historical estimate).',
+    layer: 'biblical-patriarchs',
+    timelineId: 'ham',
+    sources: ['Genesis 10:6']
+  },
+  {
+    id: 'japheth',
+    parentId: 'biblical-figures',
+    name: 'Japheth',
+    description: 'Son of Noah, ancestor of the maritime and northern nations. Survived the Flood. Lived approximately 540 years (historical estimate).',
+    layer: 'biblical-patriarchs',
+    timelineId: 'japheth',
+    sources: ['Genesis 10:2-5']
+  },
+  {
+    id: 'cush',
+    parentId: 'biblical-figures',
+    name: 'Cush',
+    description: 'Eldest son of Ham, father of Nimrod. Ancestor of the land of Cush (Nubia/Ethiopia). Lived approximately 500 years.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'cush',
+    sources: ['Genesis 10:6-8']
+  },
+  {
+    id: 'arpachshad',
+    parentId: 'biblical-figures',
+    name: 'Arpachshad',
+    description: 'Son of Shem, born two years after the Flood. Lived 438 years.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'arpachshad',
+    sources: ['Genesis 11:12-13']
+  },
+  {
+    id: 'shelah',
+    parentId: 'biblical-figures',
+    name: 'Shelah',
+    description: 'Son of Arpachshad. Lived 433 years.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'shelah',
+    sources: ['Genesis 11:14-15']
+  },
+  {
+    id: 'eber',
+    parentId: 'biblical-figures',
+    name: 'Eber',
+    description: 'Son of Shelah. Ancestor of the Hebrews. Lived 464 years.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'eber',
+    sources: ['Genesis 11:16-17']
+  },
+  {
+    id: 'peleg',
+    parentId: 'biblical-figures',
+    name: 'Peleg',
+    description: 'Son of Eber. Named Peleg because "in his days the earth was divided" (associated with the Tower of Babel dispersion). Lived 239 years.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'peleg',
+    sources: ['Genesis 11:18-19']
+  },
+  {
+    id: 'reu',
+    parentId: 'biblical-figures',
+    name: 'Reu',
+    description: 'Son of Peleg. Lived 239 years.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'reu',
+    sources: ['Genesis 11:20-21']
+  },
+  {
+    id: 'serug',
+    parentId: 'biblical-figures',
+    name: 'Serug',
+    description: 'Son of Reu. Lived 230 years.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'serug',
+    sources: ['Genesis 11:22-23']
+  },
+  {
+    id: 'nahor_pat',
+    parentId: 'biblical-figures',
+    name: 'Nahor',
+    description: 'Son of Serug and grandfather of Abraham. Lived 148 years.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'nahor_pat',
+    sources: ['Genesis 11:24-25']
+  },
+  {
+    id: 'terah',
+    parentId: 'biblical-figures',
+    name: 'Terah',
+    description: 'Son of Nahor and father of Abraham. Set out from Ur of the Chaldeans but settled in Harran. Lived 205 years.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'terah',
+    sources: ['Genesis 11:26-32']
+  },
+  {
+    id: 'sarah',
+    parentId: 'biblical-figures',
+    name: 'Sarah',
+    description: 'Wife of Abraham and mother of Isaac. Lived 127 years.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'sarah',
+    sources: ['Genesis 17:17, 23:1']
+  },
+  {
+    id: 'ishmael',
+    parentId: 'biblical-figures',
+    name: 'Ishmael',
+    description: 'Eldest son of Abraham (with Hagar). Father of the Ishmaelites. Lived 137 years.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'ishmael',
+    sources: ['Genesis 16:16, 25:17']
+  },
+  {
+    id: 'isaac',
+    parentId: 'biblical-figures',
+    name: 'Isaac',
+    description: 'Son of Abraham and Sarah, born in their old age. Father of Jacob and Esau. Lived 180 years.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'isaac',
+    sources: ['Genesis 21-35']
+  },
+  {
+    id: 'rebekah',
+    parentId: 'biblical-figures',
+    name: 'Rebekah',
+    description: 'Wife of Isaac and mother of Jacob and Esau.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'rebekah',
+    sources: ['Genesis 24-27']
+  },
+  {
+    id: 'esau',
+    parentId: 'biblical-figures',
+    name: 'Esau',
+    description: 'Eldest son of Isaac and Rebekah, twin brother of Jacob. Founder of the Edomites.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'esau',
+    sources: ['Genesis 25-36']
+  },
+  {
+    id: 'jacob',
+    parentId: 'biblical-figures',
+    name: 'Jacob',
+    description: 'Son of Isaac, renamed Israel. Father of the twelve patriarchs of the Tribes of Israel. Lived 147 years.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'jacob_pat',
+    sources: ['Genesis 25-49']
+  },
+  {
+    id: 'leah',
+    parentId: 'biblical-figures',
+    name: 'Leah',
+    description: 'First wife of Jacob and mother of Reuben, Simeon, Levi, Judah, Issachar, and Zebulun.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'leah',
+    sources: ['Genesis 29-33, 49:31']
+  },
+  {
+    id: 'rachel',
+    parentId: 'biblical-figures',
+    name: 'Rachel',
+    description: 'Beloved second wife of Jacob and mother of Joseph and Benjamin. Died in childbirth.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'rachel',
+    sources: ['Genesis 29-35']
+  },
+  {
+    id: 'judah',
+    parentId: 'biblical-figures',
+    name: 'Judah',
+    description: 'Fourth son of Jacob and Leah. Ancestor of the Tribe of Judah, from whom the kings of Judah and Jesus descend. Lived 119 years.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'judah',
+    sources: ['Genesis 29:35, 49:8-12']
+  },
+  {
+    id: 'levi',
+    parentId: 'biblical-figures',
+    name: 'Levi',
+    description: 'Third son of Jacob and Leah. Ancestor of the priestly Levite tribe. Lived 137 years.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'levi',
+    sources: ['Genesis 29:34, Exodus 6:16']
+  },
+  {
+    id: 'joseph',
+    parentId: 'biblical-figures',
+    name: 'Joseph',
+    description: 'Favored son of Jacob, sold into slavery in Egypt, became Vizier under Pharaoh, and saved his family from famine. Lived 110 years.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'joseph_pat',
+    sources: ['Genesis 37-50']
+  },
+  {
+    id: 'benjamin',
+    parentId: 'biblical-figures',
+    name: 'Benjamin',
+    description: 'Twelfth and youngest son of Jacob (with Rachel). Brother of Joseph. Lived approximately 110 years.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'benjamin',
+    sources: ['Genesis 35:16-18, 43-45']
+  },
+  {
+    id: 'perez',
+    parentId: 'biblical-figures',
+    name: 'Perez',
+    description: 'Son of Judah and Tamar, twin brother of Zerah. Ancestor of King David and Jesus Christ.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'perez',
+    sources: ['Genesis 38:29, Ruth 4:18']
+  },
+  {
+    id: 'hezron',
+    parentId: 'biblical-figures',
+    name: 'Hezron',
+    description: 'Son of Perez. Traveled with Jacob into Egypt.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'hezron',
+    sources: ['Genesis 46:12, Ruth 4:18']
+  },
+  {
+    id: 'ram_pat',
+    parentId: 'biblical-figures',
+    name: 'Ram',
+    description: 'Son of Hezron. Mentioned in the genealogy of King David.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'ram_pat',
+    sources: ['Ruth 4:19, 1 Chronicles 2:9']
+  },
+  {
+    id: 'amminadab',
+    parentId: 'biblical-figures',
+    name: 'Amminadab',
+    description: 'Son of Ram. Father of Nahshon and Elisheba (wife of Aaron).',
+    layer: 'biblical-patriarchs',
+    timelineId: 'amminadab',
+    sources: ['Ruth 4:19, Exodus 6:23']
+  },
+  {
+    id: 'nahshon',
+    parentId: 'biblical-figures',
+    name: 'Nahshon',
+    description: 'Son of Amminadab, leader of the tribe of Judah during the Exodus and wilderness wanderings.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'nahshon',
+    sources: ['Numbers 1:7, Ruth 4:20']
+  },
+  {
+    id: 'salmon',
+    parentId: 'biblical-figures',
+    name: 'Salmon',
+    description: 'Son of Nahshon. Traditional husband of Rahab and father of Boaz.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'salmon',
+    sources: ['Ruth 4:20, Matthew 1:5']
+  },
+  {
+    id: 'rahab',
+    parentId: 'biblical-figures',
+    name: 'Rahab',
+    description: 'Woman of Jericho who assisted Joshua\'s spies and married Salmon, entering the lineage of David and Jesus.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'rahab',
+    sources: ['Joshua 2, Matthew 1:5']
+  },
+  {
+    id: 'boaz',
+    parentId: 'biblical-figures',
+    name: 'Boaz',
+    description: 'Wealthy landowner of Bethlehem who married Ruth. Lived in the era of the Judges.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'boaz',
+    sources: ['Ruth 2-4']
+  },
+  {
+    id: 'ruth',
+    parentId: 'biblical-figures',
+    name: 'Ruth',
+    description: 'Moabite woman who remained loyal to her mother-in-law Naomi, married Boaz, and became the great-grandmother of David.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'ruth',
+    sources: ['Book of Ruth']
+  },
+  {
+    id: 'obed',
+    parentId: 'biblical-figures',
+    name: 'Obed',
+    description: 'Son of Boaz and Ruth. Father of Jesse and grandfather of King David.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'obed',
+    sources: ['Ruth 4:21-22']
+  },
+  {
+    id: 'jesse',
+    parentId: 'biblical-figures',
+    name: 'Jesse',
+    description: 'Son of Obed, farmer of Bethlehem, and father of eight sons including King David.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'jesse',
+    sources: ['1 Samuel 16, Ruth 4:22']
+  },
+  {
+    id: 'david_pat',
+    parentId: 'biblical-figures',
+    name: 'King David',
+    description: 'The second King of Israel, shepherd, author of the Psalms, and ancestor of the Messianic lineage. Lived 70 years.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'david_pat',
+    sources: ['1 Samuel 16 - 1 Kings 2']
+  },
+  {
+    id: 'bathsheba',
+    parentId: 'biblical-figures',
+    name: 'Bathsheba',
+    description: 'Wife of Uriah, then of King David, and mother of King Solomon.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'bathsheba',
+    sources: ['2 Samuel 11-12, 1 Kings 1-2']
+  },
+  {
+    id: 'solomon_pat',
+    parentId: 'biblical-figures',
+    name: 'King Solomon',
+    description: 'Third King of Israel, renowned for wisdom, builder of the First Temple in Jerusalem. Lived 59 years.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'solomon_pat',
+    sources: ['1 Kings 1-11']
+  },
+  {
+    id: 'rehoboam',
+    parentId: 'biblical-figures',
+    name: 'King Rehoboam',
+    description: 'Son of Solomon. His harsh policies led to the revolt of the ten tribes and the split of the United Kingdom.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'rehoboam',
+    sources: ['1 Kings 12-14']
+  },
+  {
+    id: 'abijah',
+    parentId: 'biblical-figures',
+    name: 'King Abijah',
+    description: 'The second King of Judah. Reigned for three years.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'abijah',
+    sources: ['1 Kings 15, 2 Chronicles 13']
+  },
+  {
+    id: 'asa',
+    parentId: 'biblical-figures',
+    name: 'King Asa',
+    description: 'Third King of Judah. Commenced religious reforms and ruled for 41 years.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'asa',
+    sources: ['1 Kings 15, 2 Chronicles 14-16']
+  },
+  {
+    id: 'jehoshaphat',
+    parentId: 'biblical-figures',
+    name: 'King Jehoshaphat',
+    description: 'Fourth King of Judah. Formed an alliance with the northern kingdom of Israel. Reigned 25 years.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'jehoshaphat',
+    sources: ['1 Kings 22, 2 Chronicles 17-20']
+  },
+  {
+    id: 'jehoram',
+    parentId: 'biblical-figures',
+    name: 'King Jehoram',
+    description: 'Fifth King of Judah. Married Athaliah, daughter of Ahab and Jezebel, introducing pagan worship. Reigned 8 years.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'jehoram',
+    sources: ['2 Kings 8, 2 Chronicles 21']
+  },
+  {
+    id: 'ahaziah',
+    parentId: 'biblical-figures',
+    name: 'King Ahaziah',
+    description: 'Sixth King of Judah. Reigned for only one year before being slain by Jehu.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'ahaziah',
+    sources: ['2 Kings 8-9, 2 Chronicles 22']
+  },
+  {
+    id: 'joash',
+    parentId: 'biblical-figures',
+    name: 'King Joash',
+    description: 'Seventh King of Judah, crowned at age seven after hiding from Athaliah. Repaired the Temple. Reigned 40 years.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'joash',
+    sources: ['2 Kings 11-12, 2 Chronicles 24']
+  },
+  {
+    id: 'amaziah',
+    parentId: 'biblical-figures',
+    name: 'King Amaziah',
+    description: 'Eighth King of Judah. Defeated the Edomites but was later assassinated. Reigned 29 years.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'amaziah',
+    sources: ['2 Kings 14, 2 Chronicles 25']
+  },
+  {
+    id: 'uzziah',
+    parentId: 'biblical-figures',
+    name: 'King Uzziah',
+    description: 'Ninth King of Judah. Struck with leprosy for offering incense in the Temple. Reigned 52 years.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'uzziah',
+    sources: ['2 Kings 15, 2 Chronicles 26']
+  },
+  {
+    id: 'jotham',
+    parentId: 'biblical-figures',
+    name: 'King Jotham',
+    description: 'Tenth King of Judah. Built the Upper Gate of the Temple. Reigned 16 years.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'jotham',
+    sources: ['2 Kings 15, 2 Chronicles 27']
+  },
+  {
+    id: 'ahaz',
+    parentId: 'biblical-figures',
+    name: 'King Ahaz',
+    description: 'Eleventh King of Judah. Renowned for wickedness and sacrificing his sons. Reigned 16 years.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'ahaz',
+    sources: ['2 Kings 16, 2 Chronicles 28']
+  },
+  {
+    id: 'hezekiah',
+    parentId: 'biblical-figures',
+    name: 'King Hezekiah',
+    description: 'Twelfth King of Judah. Reorganized Temple worship and constructed Siloam Tunnel to resist Assyria. Reigned 29 years.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'hezekiah',
+    sources: ['2 Kings 18-20, 2 Chronicles 29-32']
+  },
+  {
+    id: 'manasseh',
+    parentId: 'biblical-figures',
+    name: 'King Manasseh',
+    description: 'Thirteenth King of Judah. The longest-reigning Judean monarch (55 years), known for cruelty but repented in captivity.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'manasseh',
+    sources: ['2 Kings 21, 2 Chronicles 33']
+  },
+  {
+    id: 'amon',
+    parentId: 'biblical-figures',
+    name: 'King Amon',
+    description: 'Fourteenth King of Judah, assassinated by his own servants after a brief two-year reign.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'amon',
+    sources: ['2 Kings 21, 2 Chronicles 33']
+  },
+  {
+    id: 'josiah',
+    parentId: 'biblical-figures',
+    name: 'King Josiah',
+    description: 'Fifteenth King of Judah. Enacted massive religious reforms after rediscovering the Book of the Law. Reigned 31 years.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'josiah',
+    sources: ['2 Kings 22-23, 2 Chronicles 34-35']
+  },
+  {
+    id: 'jehoiakim',
+    parentId: 'biblical-figures',
+    name: 'King Jehoiakim',
+    description: 'Sixteenth King of Judah. Carried away captive by Nebuchadnezzar. Reigned 11 years.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'jehoiakim',
+    sources: ['2 Kings 23-24, 2 Chronicles 36']
+  },
+  {
+    id: 'jeconiah',
+    parentId: 'biblical-figures',
+    name: 'King Jeconiah',
+    description: 'Seventeenth King of Judah. Exiled to Babylon where he was eventually released from prison in old age.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'jeconiah',
+    sources: ['2 Kings 24-25, 2 Chronicles 36']
+  },
+  {
+    id: 'shealtiel',
+    parentId: 'biblical-figures',
+    name: 'Shealtiel',
+    description: 'Son of King Jeconiah. Born in Babylonian captivity.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'shealtiel',
+    sources: ['1 Chronicles 3:17, Matthew 1:12']
+  },
+  {
+    id: 'zerubbabel',
+    parentId: 'biblical-figures',
+    name: 'Zerubbabel',
+    description: 'Grandson of Jeconiah. Headed the first return of exiles from Babylon and laid the foundations of the Second Temple.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'zerubbabel',
+    sources: ['Ezra 3, Haggai 1, Matthew 1:12']
+  },
+  {
+    id: 'abiud',
+    parentId: 'biblical-figures',
+    name: 'Abiud',
+    description: 'Son of Zerubbabel. Mentioned in the Messianic genealogy of Matthew.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'abiud',
+    sources: ['Matthew 1:13']
+  },
+  {
+    id: 'eliakim',
+    parentId: 'biblical-figures',
+    name: 'Eliakim',
+    description: 'Son of Abiud. Part of the post-exile genealogy of Jesus Christ.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'eliakim',
+    sources: ['Matthew 1:13']
+  },
+  {
+    id: 'azor',
+    parentId: 'biblical-figures',
+    name: 'Azor',
+    description: 'Son of Eliakim, mentioned in the lineage of Joseph.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'azor',
+    sources: ['Matthew 1:13-14']
+  },
+  {
+    id: 'zadok_pat',
+    parentId: 'biblical-figures',
+    name: 'Zadok',
+    description: 'Son of Azor. Ancestor of Jesus.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'zadok_pat',
+    sources: ['Matthew 1:14']
+  },
+  {
+    id: 'achim',
+    parentId: 'biblical-figures',
+    name: 'Achim',
+    description: 'Son of Zadok. Ancestor of Jesus.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'achim',
+    sources: ['Matthew 1:14']
+  },
+  {
+    id: 'eliud',
+    parentId: 'biblical-figures',
+    name: 'Eliud',
+    description: 'Son of Achim. Ancestor of Jesus.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'eliud',
+    sources: ['Matthew 1:14-15']
+  },
+  {
+    id: 'eleazar_pat',
+    parentId: 'biblical-figures',
+    name: 'Eleazar',
+    description: 'Son of Eliud. Ancestor of Jesus.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'eleazar_pat',
+    sources: ['Matthew 1:15']
+  },
+  {
+    id: 'matthan',
+    parentId: 'biblical-figures',
+    name: 'Matthan',
+    description: 'Son of Eleazar. Grandfather of Joseph.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'matthan',
+    sources: ['Matthew 1:15']
+  },
+  {
+    id: 'mary_pat',
+    parentId: 'biblical-figures',
+    name: 'Virgin Mary',
+    description: 'Mother of Jesus Christ, highly favored by God.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'mary_pat',
+    sources: ['Luke 1-2, Matthew 1']
+  },
+  {
+    id: 'jesus',
+    parentId: 'biblical-figures',
+    name: 'Jesus Christ',
+    description: 'The central figure of Christianity, the Son of God, and the Messiah in Christian theology.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'jesus',
+    sources: ['Gospels']
+  },
+  {
+    id: 'mary_magdalene',
+    parentId: 'biblical-figures',
+    name: 'Mary Magdalene',
+    description: 'Faithful disciple of Jesus Christ, witness to His crucifixion and burial, and the first to witness His resurrection.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'mary_magdalene',
+    sources: ['Gospels']
+  },
+  {
+    id: 'peter_apostle',
+    parentId: 'biblical-figures',
+    name: 'Peter the Apostle',
+    description: 'Leader of the early Church, chief of the Apostles, martyred in Rome under Nero.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'peter_apostle',
+    sources: ['Gospels, Acts']
+  },
+  {
+    id: 'paul_apostle',
+    parentId: 'biblical-figures',
+    name: 'Paul the Apostle',
+    description: 'Apostle to the Gentiles, author of many epistles, martyred in Rome.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'paul_apostle',
+    sources: ['Acts, Pauline Epistles']
+  },
+  {
+    id: 'john_apostle',
+    parentId: 'biblical-figures',
+    name: 'John the Apostle',
+    description: 'The beloved disciple, author of the Gospel of John and Revelation, exiled on Patmos.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'john_apostle',
+    sources: ['Gospels, Revelation']
+  },
+  {
+    id: 'rephaim',
+    parentId: 'biblical-figures',
+    name: 'Rephaim',
+    description: 'An ancient race of giants who inhabited Canaan, Bashan, and Moab. Associated with King Og of Bashan and the valley of Rephaim.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'rephaim',
+    sources: ['Genesis 14:5, Deuteronomy 2:11, 3:11']
+  },
+  {
+    id: 'emim',
+    parentId: 'biblical-figures',
+    name: 'Emim',
+    description: 'An ancient giant people who originally inhabited the land of Moab. Described as "a people great, and many, and tall, as the Anakim."',
+    layer: 'biblical-patriarchs',
+    timelineId: 'emim',
+    sources: ['Genesis 14:5, Deuteronomy 2:10-11']
+  },
+  {
+    id: 'horites',
+    parentId: 'biblical-figures',
+    name: 'Horites',
+    description: 'The ancient cave-dwelling inhabitants of Mount Seir (Edom) before being dispossessed and succeeded by the descendants of Esau (Edomites).',
+    layer: 'biblical-patriarchs',
+    timelineId: 'horites',
+    sources: ['Genesis 14:6, 36:20-30, Deuteronomy 2:12']
+  },
+  {
+    id: 'avim',
+    parentId: 'biblical-figures',
+    name: 'Avim',
+    description: 'The early inhabitants of southwest Canaan (near Gaza) who dwelt in villages as far as Hazerim, later destroyed and replaced by the Caphtorim (Philistines).',
+    layer: 'biblical-patriarchs',
+    timelineId: 'avim',
+    sources: ['Deuteronomy 2:23, Joshua 13:3']
+  },
+  {
+    id: 'perizzites',
+    parentId: 'biblical-figures',
+    name: 'Perizzites',
+    description: 'A Canaanite people group who lived in the forested hill country of Ephraim and Judah. Mentioned regularly as inhabitants of the Promised Land.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'perizzites',
+    sources: ['Genesis 13:7, 15:20, Joshua 17:15, 1 Kings 9:20']
+  },
+  {
+    id: 'kenites',
+    parentId: 'biblical-figures',
+    name: 'Kenites',
+    description: 'A nomadic clan of metalworkers allied with Israel. Jethro, the father-in-law of Moses, was a Kenite. They inhabited the Wilderness of Arad.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'kenites',
+    sources: ['Genesis 15:19, Judges 1:16, 4:11, 1 Samuel 15:6']
+  },
+  {
     id: 'adam-eve',
     parentId: 'biblical-figures',
     name: 'Adam & Eve',
@@ -1421,7 +2959,8 @@ export const TERM_TREE_DATA: TermNode[] = [
       { lang: 'Hebrew', original: 'חַוָּה', translit: 'Chavah', meaning: 'Living One / Mother of All Living' }
     ],
     relatedIds: ['great-flood', 'creation-evt'],
-    bibleVerses: ['So God created mankind in his own image, in the image of God he created them; male and female he created them. — Genesis 1:27', 'The Lord God took the man and put him in the Garden of Eden to work it and take care of it. — Genesis 2:15']
+    bibleVerses: ['So God created mankind in his own image, in the image of God he created them; male and female he created them. — Genesis 1:27', 'The Lord God took the man and put him in the Garden of Eden to work it and take care of it. — Genesis 2:15'],
+    sources: ['Canonical Scripture', 'Historical Chronology Database']
   },
   {
     id: 'enoch',
@@ -1432,7 +2971,8 @@ export const TERM_TREE_DATA: TermNode[] = [
       { lang: 'Hebrew', original: 'חֲנוֹךְ', translit: 'Ḥanōkh', meaning: 'Dedicated / Initiated' }
     ],
     relatedIds: ['watchers', 'mt-hermon', 'book-of-enoch'],
-    bibleVerses: ['Enoch walked faithfully with God; then he was no more, because God took him away. — Genesis 5:24', 'By faith Enoch was taken from this life, so that he did not experience death... For before he was taken, he was commended as one who pleased God. — Hebrews 11:5']
+    bibleVerses: ['Enoch walked faithfully with God; then he was no more, because God took him away. — Genesis 5:24', 'By faith Enoch was taken from this life, so that he did not experience death... For before he was taken, he was commended as one who pleased God. — Hebrews 11:5'],
+    sources: ['Canonical Scripture', 'Historical Chronology Database']
   },
   {
     id: 'noah-fig',
@@ -1443,7 +2983,8 @@ export const TERM_TREE_DATA: TermNode[] = [
       { lang: 'Hebrew', original: 'נֹחַ', translit: 'Noach', meaning: 'Rest / Comfort' }
     ],
     relatedIds: ['great-flood', 'noahs-ark-find', 'gilgamesh-text'],
-    bibleVerses: ['Noah was a righteous man, blameless among the people of his time, and he walked faithfully with God. — Genesis 6:9', 'By faith Noah, when warned about things not yet seen, in holy fear built an ark to save his family... — Hebrews 11:7']
+    bibleVerses: ['Noah was a righteous man, blameless among the people of his time, and he walked faithfully with God. — Genesis 6:9', 'By faith Noah, when warned about things not yet seen, in holy fear built an ark to save his family... — Hebrews 11:7'],
+    sources: ['Canonical Scripture', 'Historical Chronology Database']
   },
   {
     id: 'abraham-fig',
@@ -1454,7 +2995,8 @@ export const TERM_TREE_DATA: TermNode[] = [
       { lang: 'Hebrew', original: 'אַבְרָהָם', translit: 'Avraham', meaning: 'Father of Multitudes' }
     ],
     relatedIds: ['cave-machpelah', 'sodom-gomorrah-evt'],
-    bibleVerses: ["The Lord had said to Abram, 'Go from your country, your people and your father's household to the land I will show you. I will make you into a great nation...' — Genesis 12:1-2"]
+    bibleVerses: ["The Lord had said to Abram, 'Go from your country, your people and your father's household to the land I will show you. I will make you into a great nation...' — Genesis 12:1-2"],
+    sources: ['Canonical Scripture', 'Historical Chronology Database']
   },
   {
     id: 'nimrod-fig',
@@ -1465,7 +3007,8 @@ export const TERM_TREE_DATA: TermNode[] = [
       { lang: 'Hebrew', original: 'נִמְרוֹד', translit: 'Nimrod', meaning: 'We Shall Rebel' }
     ],
     relatedIds: ['babel-evt', 'gilgamesh-text'],
-    bibleVerses: ['Cush was the father of Nimrod, who became a mighty warrior on the earth. He was a mighty hunter before the Lord... The first centers of his kingdom were Babylon, Uruk, Akkad and Kalneh, in Shinar. — Genesis 10:8-10']
+    bibleVerses: ['Cush was the father of Nimrod, who became a mighty warrior on the earth. He was a mighty hunter before the Lord... The first centers of his kingdom were Babylon, Uruk, Akkad and Kalneh, in Shinar. — Genesis 10:8-10'],
+    sources: ['Canonical Scripture', 'Historical Chronology Database']
   },
   {
     id: 'nephilim-br',
@@ -4670,6 +6213,42 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Enochian Sites'
   },
   {
+    id: 'watcher_descent',
+    parentId: 'enochian-sites',
+    name: 'Descent of the Watchers',
+    description: 'According to the Book of Enoch, 200 angels (Watchers) led by Semjaza descended upon Mount Hermon, swearing an oath to take human wives and teach them forbidden secrets.',
+    layer: 'enochian-lore',
+    timelineId: 'watcher_descent',
+    sources: ['Book of Enoch 6']
+  },
+  {
+    id: 'semjaza',
+    parentId: 'enochian-sites',
+    name: 'Semjaza (Watcher Leader)',
+    description: 'Leader of the 200 Watchers. He taught humans root-cuttings and enchantments. Later bound by Michael in the valleys of the earth.',
+    layer: 'enochian-lore',
+    timelineId: 'semjaza',
+    sources: ['Book of Enoch 6-8']
+  },
+  {
+    id: 'enoch_ascension',
+    parentId: 'enochian-sites',
+    name: 'Translation of Enoch',
+    description: 'At the age of 365, Enoch was taken by God (translated) and walked with Him. He ascended to heaven, where he recorded the secrets of creation and the judgment of the Watchers.',
+    layer: 'enochian-lore',
+    timelineId: 'enoch_ascension',
+    sources: ['Genesis 5:24, Book of Enoch']
+  },
+  {
+    id: 'nephilim_era',
+    parentId: 'enochian-sites',
+    name: 'The Nephilim Giants',
+    description: 'The gigantic offspring of the union between the Watchers and human daughters. They consumed the labor of men and filled the earth with violence, leading to the divine decree of the Flood.',
+    layer: 'enochian-lore',
+    timelineId: 'nephilim_era',
+    sources: ['Genesis 6:4, Book of Enoch 7']
+  },
+  {
     id: 'enochian-mount-hermon',
     parentId: 'enochian-sites',
     name: 'Mount Hermon (Watchers Descent)',
@@ -4733,11 +6312,253 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Biblical Events'
   },
   {
+    id: 'future-prophecy',
+    parentId: 'biblical-events',
+    name: 'Future Prophecy & Eschatology',
+    description: 'Apocalyptic events, biblical prophecies, and cosmological end-time visions such as the New Jerusalem and Armageddon.',
+    sources: ['Canonical Scripture', 'Ancient Historical Chronicles']
+  },
+  {
+    id: 'rev_tribulation',
+    parentId: 'future-prophecy',
+    name: 'The Tribulation Period',
+    description: 'A 7-year eschatological period of global distress and divine judgments, marked by the opening of the seven seals, seven trumpets, and seven bowls of wrath.',
+    layer: 'future-prophecy',
+    timelineId: 'rev_tribulation',
+    sources: ['Revelation 6-16']
+  },
+  {
+    id: 'rev_two_witnesses',
+    parentId: 'future-prophecy',
+    name: 'The Two Witnesses',
+    description: 'Two prophetic witnesses who preach in Jerusalem with power over nature, are killed by the Beast, and rise back to heaven after three and a half days.',
+    layer: 'future-prophecy',
+    timelineId: 'rev_two_witnesses',
+    sources: ['Revelation 11:3-12']
+  },
+  {
+    id: 'rev_antichrist',
+    parentId: 'future-prophecy',
+    name: 'Rise of the Beast (Antichrist)',
+    description: 'The final 3.5 years (42 months) of the Tribulation where the Beast rules the earth, wages war against the saints, and enforces the Mark of the Beast.',
+    layer: 'future-prophecy',
+    timelineId: 'rev_antichrist',
+    sources: ['Revelation 13']
+  },
+  {
+    id: 'rev_second_coming',
+    parentId: 'future-prophecy',
+    name: 'The Second Coming of Christ',
+    description: 'Christ returns in glory with the armies of heaven on white horses, defeats the beast and the false prophet, and binds Satan in the abyss.',
+    layer: 'future-prophecy',
+    timelineId: 'rev_second_coming',
+    sources: ['Revelation 19']
+  },
+  {
+    id: 'rev_millennial_reign',
+    parentId: 'future-prophecy',
+    name: 'The Millennial Reign',
+    description: 'A 1,000-year golden age of peace and righteousness where Christ reigns on earth with His saints, and the earth is filled with the knowledge of God.',
+    layer: 'future-prophecy',
+    timelineId: 'rev_millennial_reign',
+    sources: ['Revelation 20:1-6']
+  },
+  {
+    id: 'rev_final_judgment',
+    parentId: 'future-prophecy',
+    name: 'The Great White Throne Judgment',
+    description: 'Satan is cast into the Lake of Fire. All the dead, great and small, stand before the Great White Throne and are judged according to their works.',
+    layer: 'future-prophecy',
+    timelineId: 'rev_final_judgment',
+    sources: ['Revelation 20:11-15']
+  },
+  {
+    id: 'rev_new_jerusalem',
+    parentId: 'future-prophecy',
+    name: 'New Heaven, Earth & New Jerusalem',
+    description: 'God wipes away all tears. The holy city, New Jerusalem, descends out of heaven from God as a bride adorned for her husband, establishing eternity.',
+    layer: 'future-prophecy',
+    timelineId: 'rev_new_jerusalem',
+    sources: ['Revelation 21-22']
+  },
+  {
+    id: 'evt-enoch-trans',
+    parentId: 'biblical-events',
+    name: 'Enoch Translated',
+    description: 'Enoch was translated to heaven by God without experiencing physical death.',
+    layer: 'biblical-events',
+    timelineId: 'evt-enoch-trans',
+    sources: ['Genesis 5:24']
+  },
+  {
+    id: 'evt-adam-death',
+    parentId: 'biblical-events',
+    name: 'Death of Adam',
+    description: 'The death of the first man, Adam, at 930 years of age.',
+    layer: 'biblical-events',
+    timelineId: 'evt-adam-death',
+    sources: ['Genesis 5:5']
+  },
+  {
+    id: 'evt-abraham-canaan',
+    parentId: 'biblical-events',
+    name: 'Abraham Enters Canaan',
+    description: 'At age 75, Abraham obeys God\'s call to leave Harran and journey to the promised land of Canaan.',
+    layer: 'biblical-events',
+    timelineId: 'evt-abraham-canaan',
+    sources: ['Genesis 12:4']
+  },
+  {
+    id: 'evt-sodom-gomorrah',
+    parentId: 'biblical-events',
+    name: 'Destruction of Sodom',
+    description: 'Sodom, Gomorrah, and the cities of the plain are destroyed by fire and brimstone from heaven due to wickedness.',
+    layer: 'biblical-events',
+    timelineId: 'evt-sodom-gomorrah',
+    sources: ['Genesis 19']
+  },
+  {
+    id: 'evt-binding-isaac',
+    parentId: 'biblical-events',
+    name: 'Binding of Isaac',
+    description: 'God commands Abraham to sacrifice his son Isaac on Mount Moriah; Abraham is stopped by an angel at the last second.',
+    layer: 'biblical-events',
+    timelineId: 'evt-binding-isaac',
+    sources: ['Genesis 22']
+  },
+  {
+    id: 'evt-joseph-sold',
+    parentId: 'biblical-events',
+    name: 'Joseph Sold to Egypt',
+    description: 'Joseph is sold by his jealous brothers to Ishmaelite merchants for twenty shekels of silver, who take him to Egypt.',
+    layer: 'biblical-events',
+    timelineId: 'evt-joseph-sold',
+    sources: ['Genesis 37:28']
+  },
+  {
+    id: 'evt-israel-egypt',
+    parentId: 'biblical-events',
+    name: 'Jacob Enters Egypt',
+    description: 'Jacob and his entire family migrate from Canaan to Goshen in Egypt to escape a severe seven-year famine.',
+    layer: 'biblical-events',
+    timelineId: 'evt-israel-egypt',
+    sources: ['Genesis 46']
+  },
+  {
+    id: 'evt-exodus',
+    parentId: 'biblical-events',
+    name: 'The Exodus from Egypt',
+    description: 'The Israelites escape Egyptian bondage under Moses, following the Ten Plagues and the parting of the Red Sea.',
+    layer: 'biblical-events',
+    timelineId: 'evt-exodus',
+    sources: ['Exodus 12-14']
+  },
+  {
+    id: 'evt-sinai-law',
+    parentId: 'biblical-events',
+    name: 'Giving of the Law',
+    description: 'God speaks the Ten Commandments to Moses and the assembly of Israel at Mount Sinai, establishing the Mosaic Covenant.',
+    layer: 'biblical-events',
+    timelineId: 'evt-sinai-law',
+    sources: ['Exodus 19-20']
+  },
+  {
+    id: 'evt-jericho',
+    parentId: 'biblical-events',
+    name: 'Battle of Jericho',
+    description: 'After crossing the Jordan River, the walls of Jericho collapse after the Israelite army marches around them carrying the Ark.',
+    layer: 'biblical-events',
+    timelineId: 'evt-jericho',
+    sources: ['Joshua 6']
+  },
+  {
+    id: 'reign-saul',
+    parentId: 'biblical-events',
+    name: 'Reign of King Saul',
+    description: 'The reign of the first King of the United Kingdom of Israel.',
+    layer: 'biblical-events',
+    timelineId: 'reign-saul',
+    sources: ['1 Samuel 10-31']
+  },
+  {
+    id: 'reign-david',
+    parentId: 'biblical-events',
+    name: 'Reign of King David',
+    description: 'Reign of King David, builder of Jerusalem and conqueror of the Philistines. Golden age of Israel.',
+    layer: 'biblical-events',
+    timelineId: 'reign-david',
+    sources: ['2 Samuel, 1 Kings 1-2']
+  },
+  {
+    id: 'reign-solomon-temple',
+    parentId: 'biblical-events',
+    name: 'Solomon\'s Temple Construction',
+    description: 'The building of the First Temple in Jerusalem on Mount Moriah by King Solomon, taking seven years.',
+    layer: 'biblical-events',
+    timelineId: 'reign-solomon-temple',
+    sources: ['1 Kings 6']
+  },
+  {
+    id: 'evt-split-kingdom',
+    parentId: 'biblical-events',
+    name: 'Split of the Kingdom',
+    description: 'Following Solomon\'s death, Israel divides into the Northern Kingdom (Israel) and Southern Kingdom (Judah).',
+    layer: 'biblical-events',
+    timelineId: 'evt-split-kingdom',
+    sources: ['1 Kings 12']
+  },
+  {
+    id: 'evt-fall-samaria',
+    parentId: 'biblical-events',
+    name: 'Assyrian Captivity (Israel)',
+    description: 'Samaria falls to the Assyrian Empire under Sargon II, leading to the exile of the ten northern tribes (Lost Tribes).',
+    layer: 'biblical-events',
+    timelineId: 'evt-fall-samaria',
+    sources: ['2 Kings 17']
+  },
+  {
+    id: 'evt-fall-jerusalem',
+    parentId: 'biblical-events',
+    name: 'Babylonian Captivity (Judah)',
+    description: 'Jerusalem is besieged and destroyed by Nebuchadnezzar II of Babylon. Solomon\'s Temple is burned and the Jews exiled.',
+    layer: 'biblical-events',
+    timelineId: 'evt-fall-jerusalem',
+    sources: ['2 Kings 25']
+  },
+  {
+    id: 'evt-temple-rebuilt',
+    parentId: 'biblical-events',
+    name: 'Decree of Cyrus & Return',
+    description: 'Cyrus the Great of Persia conquers Babylon and decrees that the Jewish exiles may return to Jerusalem to rebuild the Temple.',
+    layer: 'biblical-events',
+    timelineId: 'evt-temple-rebuilt',
+    sources: ['Ezra 1']
+  },
+  {
+    id: 'evt-christ-birth',
+    parentId: 'biblical-events',
+    name: 'Birth of Jesus Christ',
+    description: 'The birth of Jesus in Bethlehem, Judea, marking the pivot point of the Western calendar.',
+    layer: 'biblical-events',
+    timelineId: 'evt-christ-birth',
+    sources: ['Luke 2, Matthew 1-2']
+  },
+  {
+    id: 'evt-crucifixion',
+    parentId: 'biblical-events',
+    name: 'Crucifixion & Resurrection',
+    description: 'The crucifixion, burial, and reported resurrection of Jesus Christ in Jerusalem under Pontius Pilate.',
+    layer: 'biblical-events',
+    timelineId: 'evt-crucifixion',
+    sources: ['Gospels']
+  },
+  {
     id: 'creation-evt',
     parentId: 'biblical-events',
     name: 'The Creation',
     description: 'The framing event of Genesis 1, marking the ordering of the cosmos.',
-    bibleVerses: ['In the beginning God created the heavens and the earth. — Genesis 1:1']
+    bibleVerses: ['In the beginning God created the heavens and the earth. — Genesis 1:1'],
+    sources: ['Canonical Scripture', 'Ancient Historical Chronicles']
   },
   {
     id: 'great-flood',
@@ -4749,7 +6570,8 @@ export const TERM_TREE_DATA: TermNode[] = [
       { lang: 'Greek', original: 'Κατακλυσμός', translit: 'Kataklysmos', meaning: 'Inundation / Wash Down' }
     ],
     relatedIds: ['noah-fig', 'noahs-ark-find', 'gilgamesh-text', 'gobekli-tepe'],
-    bibleVerses: ['Every living thing on the face of the earth was wiped out; people and animals and the creatures that move along the ground and the birds of the air were wiped from the earth. Only Noah was left, and those with him in the ark. — Genesis 7:23']
+    bibleVerses: ['Every living thing on the face of the earth was wiped out; people and animals and the creatures that move along the ground and the birds of the air were wiped from the earth. Only Noah was left, and those with him in the ark. — Genesis 7:23'],
+    sources: ['Canonical Scripture', 'Ancient Historical Chronicles']
   },
   {
     id: 'babel-evt',
@@ -4757,7 +6579,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     name: 'Tower of Babel',
     description: 'A post-flood project led by Nimrod in the plains of Shinar to build a tower reaching into heaven, resulting in the confusion of tongues.',
     relatedIds: ['nimrod-fig', 'ancient-texts'],
-    bibleVerses: ['Come, let us build ourselves a city, with a tower that reaches to the heavens, so that we may make a name for ourselves; otherwise we will be scattered over the face of the whole earth. — Genesis 11:4']
+    bibleVerses: ['Come, let us build ourselves a city, with a tower that reaches to the heavens, so that we may make a name for ourselves; otherwise we will be scattered over the face of the whole earth. — Genesis 11:4'],
+    sources: ['Canonical Scripture', 'Ancient Historical Chronicles']
   },
   {
     id: 'biblical-finds',
