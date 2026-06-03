@@ -284,13 +284,15 @@ export default function TermTreePage({
     const list: { level: number; title: string; nodes: TermNode[] }[] = [];
 
     // Level 0: Roots
-    const rootNodes = TERM_TREE_DATA.filter(n => !n.parentId);
+    const rootNodes = TERM_TREE_DATA.filter(n => !n.parentId)
+      .sort((a, b) => a.name.localeCompare(b.name));
     list.push({ level: 0, title: 'Categories', nodes: rootNodes });
 
     // Subsequent levels based on active selected path
     for (let i = 0; i < selectedPath.length; i++) {
       const currentId = selectedPath[i];
-      const children = TERM_TREE_DATA.filter(n => n.parentId === currentId);
+      const children = TERM_TREE_DATA.filter(n => n.parentId === currentId)
+        .sort((a, b) => a.name.localeCompare(b.name));
       if (children.length > 0) {
         list.push({
           level: i + 1,
