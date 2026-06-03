@@ -23,7 +23,6 @@ export interface TermNode {
 export const TERM_TREE_DATA: TermNode[] = [
   {
     id: 'biblical-enc',
-    parentId: 'None',
     name: 'Biblical & Enochian Space',
     description: 'Ancient Hebrew history, watchmen, nephilim bloodlines, catastrophic events, and pre-flood texts.',
     relatedIds: ['ancient-texts', 'megaliths', 'underworld']
@@ -1295,7 +1294,6 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'ufos-anomalies',
-    parentId: 'None',
     name: 'UFOs & Anomalies',
     description: 'Aerial phenomena, declassified files, crop circles, and physical anomalies associated with unexplained intelligence.',
     relatedIds: ['dumbs', 'google-blurred', 'ley-lines']
@@ -1390,21 +1388,18 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'cryptids-hauntings',
-    parentId: 'None',
     name: 'Cryptids & Hauntings',
     description: 'Elusive biological creatures and spiritual/paranormal geographic hot spots.',
     relatedIds: ['underworld', 'national-parks', 'burial-mounds']
   },
   {
     id: 'ancient-sites',
-    parentId: 'None',
     name: 'Ancient Sites & Megaliths',
     description: 'Physical ruins, burial mounds, rock art, and lost technologies left behind by prior civilizations.',
     relatedIds: ['biblical-enc', 'ley-lines', 'burial-mounds']
   },
   {
     id: 'earth-energies',
-    parentId: 'None',
     name: 'Earth Energies & Operations',
     description: 'Geomagnetic ley lines, deep underground military facilities, and impact anomalies.',
     relatedIds: ['ufos-anomalies', 'dumbs', 'google-blurred']
