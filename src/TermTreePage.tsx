@@ -1567,11 +1567,70 @@ export default function TermTreePage({
                             <span style={{ fontSize: '10px', fontStyle: 'italic', lineHeight: '1.5', color: theme.text }}>
                               "{quote}"
                             </span>
-                            {citation && (
-                              <span style={{ fontSize: '8.5px', fontWeight: 'bold', color: adjustColorForContrast(getRootCategoryColor(activeTermNode)), letterSpacing: '0.5px' }}>
-                                — {citation.toUpperCase()}
-                              </span>
-                            )}
+                            {citation && (() => {
+                              const urlRegex = /(https?:\/\/[^\s\)]+)/g;
+                              const match = citation.match(urlRegex);
+                              if (match) {
+                                const url = match[0];
+                                const displayText = citation.replace(`(${url})`, '').trim();
+                                return (
+                                  <span style={{ fontSize: '8.5px', fontWeight: 'bold', color: adjustColorForContrast(getRootCategoryColor(activeTermNode)), letterSpacing: '0.5px' }}>
+                                    — {displayText.toUpperCase()}{' '}
+                                    <a
+                                      href={url}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      style={{
+                                        color: adjustColorForContrast(getRootCategoryColor(activeTermNode)),
+                                        textDecoration: 'underline',
+                                        opacity: 0.85,
+                                        marginLeft: '4px',
+                                        cursor: 'pointer'
+                                      }}
+                                    >
+                                      [LINK]
+                                    </a>
+                                  </span>
+                                );
+                              }
+                              return (
+                                <span style={{ fontSize: '8.5px', fontWeight: 'bold', color: adjustColorForContrast(getRootCategoryColor(activeTermNode)), letterSpacing: '0.5px' }}>
+                                  — {citation.toUpperCase()}
+                                </span>
+                              );
+                            })()}
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+
+                {/* Primary Sources & Ancient Texts */}
+                {activeTermNode.sources && activeTermNode.sources.length > 0 && (
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                    <div style={{ fontFamily: '"Space Mono", monospace', fontWeight: '700', fontSize: '11px', lineHeight: '22px', textTransform: 'uppercase', color: theme.text }}>
+                      PRIMARY SOURCES & ANCIENT TEXTS:
+                    </div>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
+                      {activeTermNode.sources.map((source, sIdx) => {
+                        const rootColor = getRootCategoryColor(activeTermNode);
+                        return (
+                          <div
+                            key={sIdx}
+                            style={{
+                              fontFamily: '"Space Mono", monospace',
+                              fontSize: '9px',
+                              fontWeight: 'bold',
+                              padding: '4px 8px',
+                              borderRadius: '4px',
+                              backgroundColor: `${rootColor}15`,
+                              border: `1px solid ${rootColor}30`,
+                              color: adjustColorForContrast(rootColor),
+                              whiteSpace: 'nowrap'
+                            }}
+                          >
+                            {source.toUpperCase()}
                           </div>
                         );
                       })}
