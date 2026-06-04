@@ -283,7 +283,7 @@ export default function CodexPage({
   };
 
   // Layer Color and Icon helpers
-  const getNodeColor = (node: TermNode): string => {
+  function getNodeColor(node: TermNode): string {
     let curr = node;
     while (curr.parentId) {
       const parent = TERM_TREE_DATA.find(n => n.id === curr.parentId);
@@ -296,9 +296,9 @@ export default function CodexPage({
     if (curr.id === 'supernatural-anomalies') return '#C2FFBD'; // Green (U.F.O. Sightings)
     
     return LAYER_COLORS['Default'];
-  };
+  }
 
-  const getRootCategory = (node: TermNode): TermNode => {
+  function getRootCategory(node: TermNode): TermNode {
     let curr = node;
     while (curr.parentId) {
       const parent = TERM_TREE_DATA.find(n => n.id === curr.parentId);
@@ -306,13 +306,13 @@ export default function CodexPage({
       curr = parent;
     }
     return curr;
-  };
+  }
 
-  const getRootCategoryColor = (node: TermNode): string => {
+  function getRootCategoryColor(node: TermNode): string {
     return getNodeColor(getRootCategory(node));
-  };
+  }
 
-  const adjustColorForContrast = (color: string): string => {
+  function adjustColorForContrast(color: string): string {
     if (isMapDarkMode) return color;
     
     const lower = color.toLowerCase();
@@ -352,7 +352,7 @@ export default function CodexPage({
       default:
         return color;
     }
-  };
+  }
 
   const getNodeIcon = (node: TermNode): string => {
     if (node.id === 'biblical-apocryphal') return LAYER_ICONS['Biblical Figures'];
