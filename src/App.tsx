@@ -1030,6 +1030,19 @@ function App() {
   const timelineRef = useRef<HTMLDivElement>(null);
   
   const [selectedFeature, setSelectedFeature] = useState<any>(null);
+  const [focusedCodexTermId, setFocusedCodexTermId] = useState<string | null>(null);
+
+  // Helper to resolve map features to codex nodes
+  const getCodexTermForMapFeature = (feature: any) => {
+    if (!feature) return null;
+    return TERM_TREE_DATA.find(node => 
+      node.mapFeatureId === feature.id ||
+      node.timelineId === feature.id ||
+      node.id === feature.id ||
+      (node.name && feature.name && node.name.toLowerCase() === feature.name.toLowerCase())
+    );
+  };
+
 
   // Dynamically compute active figures and their locations during a selected Biblical Event
   const activeFigures = useMemo(() => {
@@ -2043,11 +2056,14 @@ function App() {
   useEffect(() => {
     if (onboardingStep === null) return;
     
-    if (onboardingStep === 1) {
+    if (onboardingStep === 0) {
+      setIsLeftCollapsed(false);
+      setIsRightCollapsed(false);
+    } else if (onboardingStep === 1) {
       setIsLeftCollapsed(false);
     } else if (onboardingStep === 3) {
       setIsTimelineCollapsed(false);
-    } else if (onboardingStep === 5) {
+    } else if (onboardingStep === 6) {
       setIsRightCollapsed(false);
     }
   }, [onboardingStep]);
@@ -4302,29 +4318,46 @@ function App() {
                 }} />
               )}
             </div>
-            <motion.button 
-              onClick={() => setCurrentPage('codex')}
-              whileHover={{
-                background: currentPage === 'codex'
-                  ? (isMapDarkMode ? '#cccccc' : '#333333')
-                  : (isMapDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.05)')
-              }}
-              style={{
-                background: currentPage === 'codex' ? theme.text : 'transparent',
-                color: currentPage === 'codex' ? theme.bg : theme.text,
-                border: 'none',
-                padding: '6px 18px',
-                fontSize: '10px',
-                fontFamily: '"Space Mono", monospace',
-                fontWeight: 700,
-                cursor: 'pointer',
-                borderRadius: '16px',
-                textTransform: 'uppercase',
-                transition: 'all 0.2s ease'
-              }}
-            >
-              Codex
-            </motion.button>
+            <div style={{ position: 'relative', display: 'inline-block' }}>
+              <motion.button 
+                onClick={() => setCurrentPage('codex')}
+                whileHover={{
+                  background: currentPage === 'codex'
+                    ? (isMapDarkMode ? '#cccccc' : '#333333')
+                    : (isMapDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.05)')
+                }}
+                style={{
+                  background: currentPage === 'codex' ? theme.text : 'transparent',
+                  color: currentPage === 'codex' ? theme.bg : theme.text,
+                  border: 'none',
+                  padding: '6px 18px',
+                  fontSize: '10px',
+                  fontFamily: '"Space Mono", monospace',
+                  fontWeight: 700,
+                  cursor: 'pointer',
+                  borderRadius: '16px',
+                  textTransform: 'uppercase',
+                  transition: 'all 0.2s ease'
+                }}
+              >
+                Codex
+              </motion.button>
+              {onboardingStep === 5 && (
+                <div style={{
+                  position: 'absolute',
+                  top: '-3px',
+                  left: '-3px',
+                  right: '-3px',
+                  bottom: '-3px',
+                  border: '3px solid #b6a6ff',
+                  boxShadow: '0 0 15px rgba(182, 166, 255, 0.5)',
+                  pointerEvents: 'none',
+                  zIndex: 9999,
+                  borderRadius: '19px',
+                  animation: 'radar-pulse 2s infinite'
+                }} />
+              )}
+            </div>
           </div>
 
           {/* THEME TOGGLE: FIXED TO RIGHT */}
@@ -4427,7 +4460,7 @@ function App() {
                   <Plus size={10} strokeWidth={3} />
                   <span>Submit Intel</span>
                 </motion.button>
-                {currentPage === 'map' && onboardingStep === 6 && (
+                {currentPage === 'map' && onboardingStep === 7 && (
                   <div style={{
                     position: 'absolute',
                     top: '-3px',
@@ -4989,7 +5022,7 @@ function App() {
               color: theme.text
             }}
           >
-            {onboardingStep === 5 && (
+            {onboardingStep === 6 && (
               <div style={{
                 position: 'absolute',
                 top: 0,
@@ -5588,6 +5621,38 @@ function App() {
                             <span>TIMELINE VIEW</span>
                           </motion.button>
                         )}
+
+                        {(() => {
+                          const codexNode = getCodexTermForMapFeature(selectedFeature);
+                          if (!codexNode) return null;
+                          return (
+                            <motion.button
+                              whileTap={{ scale: 0.95 }}
+                              whileHover={{ scale: 1.05 }}
+                              onClick={() => {
+                                setFocusedCodexTermId(codexNode.id);
+                                setCurrentPage('codex');
+                              }}
+                              style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                background: 'transparent',
+                                color: isMapDarkMode ? '#fff' : '#000',
+                                border: `1px solid ${isMapDarkMode ? '#fff' : '#000'}`,
+                                padding: '6px 12px',
+                                borderRadius: '16px',
+                                cursor: 'pointer',
+                                fontSize: '11px',
+                                fontWeight: 'bold',
+                                fontFamily: '"Space Mono", monospace',
+                                transition: 'all 0.2s ease',
+                                whiteSpace: 'nowrap'
+                              }}
+                            >
+                              <span>CODEX VIEW</span>
+                            </motion.button>
+                          );
+                        })()}
                       </div>
                       
                       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '24px', justifyContent: 'flex-start' }}>
@@ -6440,6 +6505,10 @@ function App() {
               setReportError(null);
               setIsReportOpen(true);
             }}
+            onViewOnCodex={(termId) => {
+              setFocusedCodexTermId(termId);
+              setCurrentPage('codex');
+            }}
           />
         </div>
 
@@ -6466,6 +6535,8 @@ function App() {
           <CodexPage
             theme={theme}
             isMapDarkMode={isMapDarkMode}
+            focusedTermId={focusedCodexTermId}
+            onFocusedTermConsumed={() => setFocusedCodexTermId(null)}
             onViewOnMap={(layerName, featureSearchTerm) => {
               stopMainMapRotation();
               setCurrentPage('map');
@@ -9320,7 +9391,7 @@ function App() {
                 },
                 {
                   title: "2. ARCHIVE FILTERS",
-                  content: "Toggle layers to filter map events (UFOs, Bigfoot, underworld entrances, D.U.M.B.s). Use the Search bar to scan archives or world coordinates.",
+                  content: "Toggle layers to filter map events (UFOs, Bigfoot, underworld entrances, D.U.M.B.s), click SHUFFLE to randomize active layers, or use the Search bar to scan archives.",
                   placement: "left-sidebar"
                 },
                 {
@@ -9339,12 +9410,17 @@ function App() {
                   placement: "timeline-button"
                 },
                 {
-                  title: "6. INTELLIGENCE DOSSIER",
+                  title: "6. COMPREHENSIVE CODEX",
+                  content: "Click the Codex button in the header to navigate to the Codex page, where you can browse the interconnected tree database of entities, megaliths, structures, and anomalies.",
+                  placement: "codex-button"
+                },
+                {
+                  title: "7. INTELLIGENCE DOSSIER",
                   content: "When you select a location, its full file opens here. Review images, transcripts, video attachments, and original source documents.",
                   placement: "right-sidebar"
                 },
                 {
-                  title: "7. SUBMIT EVIDENCE",
+                  title: "8. SUBMIT EVIDENCE",
                   content: "Discovered an anomaly or classified file? Submit it to our queue. Once verified, it will be mapped and published on the platform.",
                   placement: "submit-intel"
                 }
@@ -9370,17 +9446,17 @@ function App() {
                   position: 'fixed',
                   zIndex: 100000,
                   width: '320px',
-                  pointerEvents: 'auto',
-                  transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
+                  pointerEvents: 'auto'
                 };
 
                 switch (currentStep.placement) {
                   case 'timeline-button':
+                  case 'codex-button':
                     return {
                       ...common,
                       left: '50%',
                       top: '85px', // Shifted down by 15px to clear the header navigation pill
-                      transform: 'translateX(-50%)',
+                      transform: 'translate(-50%, 0)',
                       width: '360px',
                     };
                   case 'center':
@@ -9396,6 +9472,7 @@ function App() {
                       ...common,
                       left: isLeftCollapsed ? '40px' : '340px',
                       top: '180px',
+                      transform: 'translate(0, 0)',
                     };
                   case 'map-viewport':
                     return {
@@ -9408,21 +9485,23 @@ function App() {
                     return {
                       ...common,
                       left: '50%',
-                      bottom: isTimelineCollapsed ? '60px' : '190px', // Shifted up by 20px to prevent overlap with the timeline drawer bar
-                      transform: 'translateX(-50%)',
+                      top: isTimelineCollapsed ? 'calc(100vh - 60px)' : 'calc(100vh - 190px)', // Shifted up by 20px to prevent overlap with the timeline drawer bar
+                      transform: 'translate(-50%, -100%)',
                       width: '360px',
                     };
                   case 'right-sidebar':
                     return {
                       ...common,
-                      right: isRightCollapsed ? '40px' : '340px',
+                      left: isRightCollapsed ? 'calc(100vw - 360px)' : 'calc(100vw - 660px)',
                       top: '180px',
+                      transform: 'translate(0, 0)',
                     };
                   case 'submit-intel':
                     return {
                       ...common,
-                      right: '20px',
+                      left: 'calc(100vw - 340px)',
                       top: '100px',
+                      transform: 'translate(0, 0)',
                     };
                   default:
                     return common;
@@ -9442,8 +9521,15 @@ function App() {
                     return {
                       ...common,
                       top: '-10px',
-                      left: '58%',
-                      transform: 'translateX(-50%)',
+                      left: '164px',
+                      borderWidth: '0 8px 10px 8px',
+                      borderColor: `transparent transparent ${tooltipTheme.bg} transparent`,
+                    };
+                  case 'codex-button':
+                    return {
+                      ...common,
+                      top: '-10px',
+                      left: '260px',
                       borderWidth: '0 8px 10px 8px',
                       borderColor: `transparent transparent ${tooltipTheme.bg} transparent`,
                     };
@@ -9467,8 +9553,7 @@ function App() {
                     return {
                       ...common,
                       bottom: '-10px',
-                      left: '50%',
-                      transform: 'translateX(-50%)',
+                      left: '172px',
                       borderWidth: '10px 8px 0 8px',
                       borderColor: `${tooltipTheme.bg} transparent transparent transparent`,
                     };
@@ -9501,11 +9586,10 @@ function App() {
               return (
                 <div style={tooltipStyle}>
                   <motion.div
-                    key={`tour-step-${onboardingStep}`}
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.95 }}
-                    transition={{ duration: 0.25, ease: 'easeOut' }}
+                    transition={{ duration: 0.5, ease: 'easeOut' }}
                     style={{
                       width: '100%',
                       background: tooltipTheme.bg,
@@ -9524,39 +9608,46 @@ function App() {
                     {/* Arrow Indicator */}
                     <div style={arrowStyle} />
 
-                    <h3 
-                      id="tour-title"
-                      style={{
-                        fontSize: '11px',
-                        fontWeight: 'bold',
-                        letterSpacing: '2px',
-                        textTransform: 'uppercase',
-                        borderBottom: `1px solid ${tooltipTheme.borderLight}`,
-                        paddingBottom: '8px',
-                        margin: '0 0 12px 0',
-                        color: tooltipTheme.text,
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                        alignItems: 'center'
-                      }}
+                    <motion.div
+                      key={`step-text-${onboardingStep}`}
+                      initial={{ opacity: 0, y: 2 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.4, ease: 'easeOut' }}
                     >
-                      <span>{currentStep.title}</span>
-                      <span style={{ fontSize: '9px', color: tooltipTheme.textDim, fontWeight: 'normal' }}>
-                        {onboardingStep + 1} / {onboardingSteps.length}
-                      </span>
-                    </h3>
+                      <h3 
+                        id="tour-title"
+                        style={{
+                          fontSize: '11px',
+                          fontWeight: 'bold',
+                          letterSpacing: '2px',
+                          textTransform: 'uppercase',
+                          borderBottom: `1px solid ${tooltipTheme.borderLight}`,
+                          paddingBottom: '8px',
+                          margin: '0 0 12px 0',
+                          color: tooltipTheme.text,
+                          display: 'flex',
+                          justifyContent: 'space-between',
+                          alignItems: 'center'
+                        }}
+                      >
+                        <span>{currentStep.title}</span>
+                        <span style={{ fontSize: '9px', color: tooltipTheme.textDim, fontWeight: 'normal' }}>
+                          {onboardingStep + 1} / {onboardingSteps.length}
+                        </span>
+                      </h3>
 
-                    <p 
-                      style={{
-                        fontSize: '10px',
-                        lineHeight: '1.6',
-                        color: tooltipTheme.textDim,
-                        margin: '0 0 20px 0',
-                        textAlign: 'left'
-                      }}
-                    >
-                      {currentStep.content}
-                    </p>
+                      <p 
+                        style={{
+                          fontSize: '10px',
+                          lineHeight: '1.6',
+                          color: tooltipTheme.textDim,
+                          margin: '0 0 20px 0',
+                          textAlign: 'left'
+                        }}
+                      >
+                        {currentStep.content}
+                      </p>
+                    </motion.div>
 
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                       <button

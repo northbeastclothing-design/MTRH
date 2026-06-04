@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, Flag } from 'lucide-react';
 import { TERM_TREE_DATA, TermNode, TranslationInfo } from './termTreeData';
+import { TIMELINE_LOCATIONS } from './timelineData';
 
 interface CodexPageProps {
   theme: {
@@ -18,6 +19,8 @@ interface CodexPageProps {
   onViewOnTimeline: (timelineId: string) => void;
   onFlagItem?: (item: TermNode) => void;
   onSelectedTermChange?: (node: TermNode | null) => void;
+  focusedTermId?: string | null;
+  onFocusedTermConsumed?: () => void;
 }
 
 const LAYER_COLORS: Record<string, string> = {
@@ -129,7 +132,9 @@ export default function CodexPage({
   onViewOnMap,
   onViewOnTimeline,
   onFlagItem,
-  onSelectedTermChange
+  onSelectedTermChange,
+  focusedTermId,
+  onFocusedTermConsumed
 }: CodexPageProps) {
   const [selectedPath, setSelectedPath] = useState<string[]>([]);
   const [hoveredTermId, setHoveredTermId] = useState<string | null>(null);
@@ -161,6 +166,57 @@ export default function CodexPage({
     return TERM_TREE_DATA.find(t => t.id === activeTermId) || null;
   }, [activeTermId]);
 
+  const resolvedMapInfo = useMemo(() => {
+    if (!activeTermNode) return null;
+
+    // 1. If it has a timelineId and it exists in TIMELINE_LOCATIONS, use that location's category and the term name
+    if (activeTermNode.timelineId && TIMELINE_LOCATIONS[activeTermNode.timelineId]) {
+      const loc = TIMELINE_LOCATIONS[activeTermNode.timelineId];
+      return {
+        layer: loc.category,
+        featureSearchTerm: activeTermNode.name
+      };
+    }
+
+    // 2. If the node has an explicit layer defined, map it
+    if (activeTermNode.layer) {
+      let layerName = activeTermNode.layer;
+      if (layerName === 'biblical-patriarchs' || layerName === 'royal-bloodlines' || layerName === 'merovingian-bloodlines' || layerName === 'sumerian-kings' || layerName === 'greek-mythology') {
+        if (layerName === 'biblical-patriarchs') layerName = 'Biblical Figures';
+        else if (layerName === 'royal-bloodlines' || layerName === 'merovingian-bloodlines') layerName = 'Biblical Figures';
+        else if (layerName === 'sumerian-kings') layerName = 'Archaeological Finds';
+        else if (layerName === 'greek-mythology') layerName = 'Archaeological Finds';
+      }
+      return {
+        layer: layerName,
+        featureSearchTerm: activeTermNode.mapFeatureId || activeTermNode.name
+      };
+    }
+
+    // 3. Otherwise, walk up the hierarchy of parent terms to find an inherited layer
+    let curr = activeTermNode;
+    while (curr.parentId) {
+      const parent = TERM_TREE_DATA.find(n => n.id === curr.parentId);
+      if (!parent) break;
+      if (parent.layer) {
+        let layerName = parent.layer;
+        if (layerName === 'biblical-patriarchs' || layerName === 'royal-bloodlines' || layerName === 'merovingian-bloodlines' || layerName === 'sumerian-kings' || layerName === 'greek-mythology') {
+          if (layerName === 'biblical-patriarchs') layerName = 'Biblical Figures';
+          else if (layerName === 'royal-bloodlines' || layerName === 'merovingian-bloodlines') layerName = 'Biblical Figures';
+          else if (layerName === 'sumerian-kings') layerName = 'Archaeological Finds';
+          else if (layerName === 'greek-mythology') layerName = 'Archaeological Finds';
+        }
+        return {
+          layer: layerName,
+          featureSearchTerm: activeTermNode.mapFeatureId || activeTermNode.name
+        };
+      }
+      curr = parent;
+    }
+
+    return null;
+  }, [activeTermNode]);
+
   useEffect(() => {
     if (onSelectedTermChange) {
       onSelectedTermChange(activeTermNode);
@@ -179,6 +235,20 @@ export default function CodexPage({
     }
     return path;
   };
+
+  // Handle external focus on a specific term
+  useEffect(() => {
+    if (focusedTermId) {
+      const path = getPathToRoot(focusedTermId);
+      if (path.length > 0) {
+        setSelectedPath(path);
+        setIsRightCollapsed(false);
+      }
+      if (onFocusedTermConsumed) {
+        onFocusedTermConsumed();
+      }
+    }
+  }, [focusedTermId, onFocusedTermConsumed]);
 
   // Compute search suggestions list for dropdown suggest panel
   const searchSuggestions = useMemo(() => {
@@ -1806,11 +1876,11 @@ export default function CodexPage({
                       </motion.button>
                     )}
 
-                    {activeTermNode.layer && (
+                    {resolvedMapInfo && (
                       <motion.button
                         whileTap={{ scale: 0.95 }}
                         whileHover={{ scale: 1.05 }}
-                        onClick={() => onViewOnMap(activeTermNode.layer!, activeTermNode.mapFeatureId || activeTermNode.name)}
+                        onClick={() => onViewOnMap(resolvedMapInfo.layer, resolvedMapInfo.featureSearchTerm)}
                         style={{
                           display: 'flex',
                           alignItems: 'center',

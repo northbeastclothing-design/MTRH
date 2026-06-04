@@ -1,7 +1,8 @@
 import React, { useState, useMemo, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { TIMELINE_ITEMS, TimelineItem, TIMELINE_LOCATIONS } from './timelineData';
-import { RotateCcw, MapPin, Flag } from 'lucide-react';
+import { RotateCcw, MapPin, Flag, X } from 'lucide-react';
+import { TERM_TREE_DATA } from './termTreeData';
 
 interface TimelinePageProps {
   theme: {
@@ -18,6 +19,7 @@ interface TimelinePageProps {
   setSelectedItem: (item: TimelineItem | null) => void;
   onViewOnMap: (item: TimelineItem) => void;
   onFlagItem?: (item: TimelineItem) => void;
+  onViewOnCodex?: (termId: string) => void;
 }
 
 const ERAS_CONFIG = [
@@ -103,8 +105,19 @@ const ERAS_CONFIG = [
   }
 ];
 
-export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSelectedItem, onViewOnMap, onFlagItem }: TimelinePageProps) {
+export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSelectedItem, onViewOnMap, onFlagItem, onViewOnCodex }: TimelinePageProps) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const hasDraggedRef = useRef(false);
+
+  // Match the active timeline item to a Codex term
+  const codexTerm = useMemo(() => {
+    if (!selectedItem) return null;
+    return TERM_TREE_DATA.find(node => 
+      node.timelineId === selectedItem.id ||
+      node.id === selectedItem.id ||
+      (node.name && selectedItem.name && node.name.toLowerCase() === selectedItem.name.toLowerCase())
+    );
+  }, [selectedItem]);
   
   // Viewport states: start and end year
   const [viewStart, setViewStart] = useState(-4100);
@@ -225,11 +238,15 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
     setIsDragging(true);
     setStartX(e.clientX);
     setStartViewStart(viewStart);
+    hasDraggedRef.current = false;
   };
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!isDragging || !scrollContainerRef.current) return;
     const deltaX = e.clientX - startX;
+    if (Math.abs(deltaX) > 5) {
+      hasDraggedRef.current = true;
+    }
     const viewportWidth = scrollContainerRef.current.clientWidth;
     const yearsPerPixel = span / viewportWidth;
     const deltaYears = deltaX * yearsPerPixel;
@@ -244,8 +261,11 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
     setViewEnd(clampedStart + currentSpan);
   };
 
-  const handleMouseUpOrLeave = () => {
+  const handleMouseUpOrLeave = (e: React.MouseEvent) => {
     setIsDragging(false);
+    if (e.type === 'mouseup' && !hasDraggedRef.current && selectedItem) {
+      setSelectedItem(null);
+    }
   };
 
   // Manual zoom helper
@@ -736,6 +756,8 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
                             e.currentTarget.style.borderColor = isMapDarkMode ? '#333333' : '#000000';
                             e.currentTarget.style.transform = 'scale(1)';
                           }}
+                          onMouseDown={(e) => e.stopPropagation()}
+                          onMouseUp={(e) => e.stopPropagation()}
                           onClick={(e) => {
                             e.stopPropagation();
                             handleItemClick(offscreenNav.item);
@@ -840,6 +862,8 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
                               <div
                                 onMouseEnter={() => setHoveredItemId(item.id)}
                                 onMouseLeave={() => setHoveredItemId(null)}
+                                onMouseDown={(e) => e.stopPropagation()}
+                                onMouseUp={(e) => e.stopPropagation()}
                                 onClick={(e) => {
                                   e.stopPropagation();
                                   handleItemClick(item);
@@ -928,6 +952,8 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
                               key={item.id}
                               onMouseEnter={() => setHoveredItemId(item.id)}
                               onMouseLeave={() => setHoveredItemId(null)}
+                              onMouseDown={(e) => e.stopPropagation()}
+                              onMouseUp={(e) => e.stopPropagation()}
                               onClick={(e) => {
                                 e.stopPropagation();
                                 handleItemClick(item);
@@ -1223,6 +1249,8 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
                     animate={{ scale: 1 }}
                     exit={{ scale: 0.95 }}
                     transition={{ duration: 0.25, ease: 'easeOut' }}
+                    onMouseDown={(e) => e.stopPropagation()}
+                    onMouseUp={(e) => e.stopPropagation()}
                     style={{
                       width: '100%',
                       background: tooltipTheme.bg,
@@ -1237,6 +1265,32 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
                       position: 'relative'
                     }}
                   >
+                    <button
+                      onClick={() => setSelectedItem(null)}
+                      style={{
+                        position: 'absolute',
+                        top: '22px',
+                        right: '24px',
+                        background: 'none',
+                        border: 'none',
+                        color: tooltipTheme.text,
+                        cursor: 'pointer',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '6px',
+                        padding: '4px',
+                        fontSize: '9px',
+                        fontFamily: '"Space Mono", monospace',
+                        fontWeight: 'bold',
+                        transition: 'opacity 0.2s ease',
+                        opacity: 0.8
+                      }}
+                      onMouseEnter={(e) => e.currentTarget.style.opacity = '1'}
+                      onMouseLeave={(e) => e.currentTarget.style.opacity = '0.8'}
+                    >
+                      <X size={14} />
+                      <span>CLOSE</span>
+                    </button>
                     {/* Arrow */}
                     <div style={{
                       position: 'absolute',
@@ -1370,6 +1424,32 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
                             MAP VIEW
                           </button>
                         )}
+                        {codexTerm && onViewOnCodex && (
+                          <button
+                            onClick={() => onViewOnCodex(codexTerm.id)}
+                            style={{
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              flex: 1,
+                              background: 'transparent',
+                              color: tooltipTheme.text,
+                              border: `1px solid ${tooltipTheme.text}`,
+                              padding: '6px 14px',
+                              fontSize: '9px',
+                              fontFamily: '"Space Mono", monospace',
+                              fontWeight: 700,
+                              cursor: 'pointer',
+                              borderRadius: '16px',
+                              textTransform: 'uppercase',
+                              transition: 'all 0.2s ease',
+                              boxSizing: 'border-box',
+                              whiteSpace: 'nowrap'
+                            }}
+                          >
+                            CODEX VIEW
+                          </button>
+                        )}
                         {onFlagItem && (
                           <button
                             onClick={() => onFlagItem(selectedItem)}
@@ -1399,30 +1479,6 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
                             <span>FLAG</span>
                           </button>
                         )}
-                        <button
-                          onClick={() => setSelectedItem(null)}
-                          style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            flex: 1,
-                            background: tooltipTheme.buttonBg,
-                            color: tooltipTheme.buttonText,
-                            border: `1px solid ${tooltipTheme.buttonBorder}`,
-                            padding: '6px 16px',
-                            fontSize: '9px',
-                            fontFamily: '"Space Mono", monospace',
-                            fontWeight: 700,
-                            cursor: 'pointer',
-                            borderRadius: '16px',
-                            textTransform: 'uppercase',
-                            transition: 'all 0.2s ease',
-                            boxSizing: 'border-box',
-                            whiteSpace: 'nowrap'
-                          }}
-                        >
-                          Close
-                        </button>
                       </div>
                     </div>
                   </motion.div>
