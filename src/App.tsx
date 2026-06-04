@@ -9596,7 +9596,7 @@ function App() {
                     return {
                       ...common,
                       top: '-10px',
-                      right: '67px',
+                      right: '63px',
                       borderWidth: '0 8px 10px 8px',
                       borderColor: `transparent transparent ${tooltipTheme.bg} transparent`,
                     };
