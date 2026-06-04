@@ -519,9 +519,6 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
     
     // 3. Select item and show its detail card
     setSelectedItem(item);
-    
-    // 4. Close popovers
-    setOpenDropdownEra(null);
   };
 
   const handleItemSelect = (item: TimelineItem, era: typeof ERAS_CONFIG[0]) => {
@@ -1338,25 +1335,20 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
               return (
                 <motion.div
                   key={selectedItem.id}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.25 }}
+                  initial={{ opacity: 0, scale: 0.95, x: '-50%', y: placeBelow ? '0%' : '-100%' }}
+                  animate={{ opacity: 1, scale: 1, x: '-50%', y: placeBelow ? '0%' : '-100%' }}
+                  exit={{ opacity: 0, scale: 0.95, x: '-50%', y: placeBelow ? '0%' : '-100%' }}
+                  transition={{ duration: 0.25, ease: 'easeOut' }}
                   style={{
                     position: 'absolute',
                     left: `${itemCenterPct}%`,
                     top: `${placeBelow ? itemY + 28 : itemY - 28}px`,
-                    transform: placeBelow ? 'translate(-50%, 0)' : 'translate(-50%, -100%)',
                     width: '320px',
                     zIndex: 1000,
                     pointerEvents: 'none'
                   }}
                 >
-                  <motion.div
-                    initial={{ scale: 0.95 }}
-                    animate={{ scale: 1 }}
-                    exit={{ scale: 0.95 }}
-                    transition={{ duration: 0.25, ease: 'easeOut' }}
+                  <div
                     onMouseDown={(e) => e.stopPropagation()}
                     onMouseUp={(e) => e.stopPropagation()}
                     style={{
@@ -1589,7 +1581,7 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
                         )}
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 </motion.div>
               );
             })()}
