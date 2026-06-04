@@ -2,7 +2,7 @@ import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, animate } from 'motion/react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import { X, Heart, Play, Upload, Plus, Link, MapPin, Lock, Check, Trash2, ShieldAlert, ChevronDown, Shield, Eye, Shuffle, Flag, AlertTriangle } from 'lucide-react';
+import { X, Heart, Play, Upload, Plus, Link, MapPin, Lock, Check, Trash2, ShieldAlert, ChevronDown, Shield, Eye, EyeOff, Shuffle, Flag, AlertTriangle } from 'lucide-react';
 import { initializeApp } from 'firebase/app';
 import { getFirestore, doc, getDoc, setDoc, updateDoc, increment, collection, onSnapshot, serverTimestamp, query, where, addDoc, deleteDoc } from 'firebase/firestore';
 import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } from 'firebase/auth';
@@ -2629,6 +2629,14 @@ function App() {
     setActiveLayers(allActive);
   };
 
+  const handleAllLayersOff = () => {
+    const allInactive: Record<string, boolean> = {};
+    uniqueCategories.forEach(cat => {
+      allInactive[cat] = false;
+    });
+    setActiveLayers(allInactive);
+  };
+
   const visibleData = useMemo(() => {
     const cleanQuery = searchQuery.trim().toLowerCase();
     return combinedPointsAndLinesData.filter(item => {
@@ -4747,44 +4755,17 @@ function App() {
               </AnimatePresence>
               </div>
 
-              <div style={{ display: 'flex', gap: '8px', marginTop: '12px' }}>
-                <motion.button
-                  whileHover={{ scale: 1.02, backgroundColor: isMapDarkMode ? '#161616' : '#f0f0f0' }}
-                  whileTap={{ scale: 0.98 }}
-                  onClick={handleRandomizeLayers}
-                  style={{
-                    flex: 1,
-                    padding: '8px 12px',
-                    fontSize: '10px',
-                    fontWeight: '700',
-                    letterSpacing: '1px',
-                    fontFamily: '"Space Mono", monospace',
-                    border: `1px solid ${theme.border}`,
-                    borderRadius: '16px',
-                    cursor: 'pointer',
-                    background: 'none',
-                    color: theme.text,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    gap: '6px',
-                    transition: 'background-color 0.2s ease'
-                  }}
-                >
-                  <Shuffle size={12} color={theme.text} />
-                  SHUFFLE
-                </motion.button>
-
+              <div style={{ display: 'flex', gap: '6px', marginTop: '12px' }}>
                 <motion.button
                   whileHover={{ scale: 1.02, backgroundColor: isMapDarkMode ? '#161616' : '#f0f0f0' }}
                   whileTap={{ scale: 0.98 }}
                   onClick={handleAllLayersOn}
                   style={{
                     flex: 1,
-                    padding: '8px 12px',
-                    fontSize: '10px',
+                    padding: '8px 4px',
+                    fontSize: '9px',
                     fontWeight: '700',
-                    letterSpacing: '1px',
+                    letterSpacing: '0.5px',
                     fontFamily: '"Space Mono", monospace',
                     border: `1px solid ${theme.border}`,
                     borderRadius: '16px',
@@ -4794,12 +4775,66 @@ function App() {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    gap: '6px',
+                    gap: '4px',
                     transition: 'background-color 0.2s ease'
                   }}
                 >
-                  <Eye size={12} color={theme.text} />
-                  ALL LAYERS
+                  <Eye size={11} color={theme.text} />
+                  ALL ON
+                </motion.button>
+
+                <motion.button
+                  whileHover={{ scale: 1.02, backgroundColor: isMapDarkMode ? '#161616' : '#f0f0f0' }}
+                  whileTap={{ scale: 0.98 }}
+                  onClick={handleAllLayersOff}
+                  style={{
+                    flex: 1,
+                    padding: '8px 4px',
+                    fontSize: '9px',
+                    fontWeight: '700',
+                    letterSpacing: '0.5px',
+                    fontFamily: '"Space Mono", monospace',
+                    border: `1px solid ${theme.border}`,
+                    borderRadius: '16px',
+                    cursor: 'pointer',
+                    background: 'none',
+                    color: theme.text,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '4px',
+                    transition: 'background-color 0.2s ease'
+                  }}
+                >
+                  <EyeOff size={11} color={theme.text} />
+                  ALL OFF
+                </motion.button>
+
+                <motion.button
+                  whileHover={{ scale: 1.02, backgroundColor: isMapDarkMode ? '#161616' : '#f0f0f0' }}
+                  whileTap={{ scale: 0.98 }}
+                  onClick={handleRandomizeLayers}
+                  style={{
+                    flex: 1,
+                    padding: '8px 4px',
+                    fontSize: '9px',
+                    fontWeight: '700',
+                    letterSpacing: '0.5px',
+                    fontFamily: '"Space Mono", monospace',
+                    border: `1px solid ${theme.border}`,
+                    borderRadius: '16px',
+                    cursor: 'pointer',
+                    background: 'none',
+                    color: theme.text,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '4px',
+                    transition: 'background-color 0.2s ease'
+                  }}
+                >
+                  <Shuffle size={11} color={theme.text} />
+                  SHUFFLE
                 </motion.button>
               </div>
             </div>
