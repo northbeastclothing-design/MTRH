@@ -9556,7 +9556,7 @@ function App() {
                     return {
                       ...common,
                       top: '-10px',
-                      left: '164px',
+                      left: '148px',
                       borderWidth: '0 8px 10px 8px',
                       borderColor: `transparent transparent ${tooltipTheme.bg} transparent`,
                     };
@@ -9564,7 +9564,7 @@ function App() {
                     return {
                       ...common,
                       top: '-10px',
-                      left: '260px',
+                      left: '242px',
                       borderWidth: '0 8px 10px 8px',
                       borderColor: `transparent transparent ${tooltipTheme.bg} transparent`,
                     };
@@ -9588,7 +9588,7 @@ function App() {
                     return {
                       ...common,
                       bottom: '-10px',
-                      left: '172px',
+                      left: '180px',
                       borderWidth: '10px 8px 0 8px',
                       borderColor: `${tooltipTheme.bg} transparent transparent transparent`,
                     };
@@ -9596,7 +9596,7 @@ function App() {
                     return {
                       ...common,
                       top: '-10px',
-                      right: '40px',
+                      right: '50px',
                       borderWidth: '0 8px 10px 8px',
                       borderColor: `transparent transparent ${tooltipTheme.bg} transparent`,
                     };
