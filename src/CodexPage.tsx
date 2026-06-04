@@ -88,6 +88,7 @@ interface SVGLinePath {
   y2: number;
   color: string;
   isRelated: boolean;
+  isDottedParentLink?: boolean;
 }
 
 const MISSING_IMAGE_URL = '/icons/icon-missing-image.svg';
@@ -165,6 +166,11 @@ export default function CodexPage({
     if (!activeTermId) return null;
     return TERM_TREE_DATA.find(t => t.id === activeTermId) || null;
   }, [activeTermId]);
+
+  const activeRootColor = useMemo(() => {
+    const rootCatNode = selectedPath[0] ? TERM_TREE_DATA.find(n => n.id === selectedPath[0]) : null;
+    return rootCatNode ? getNodeColor(rootCatNode) : (activeTermNode ? getRootCategoryColor(activeTermNode) : '#b6a6ff');
+  }, [selectedPath, activeTermNode]);
 
   const resolvedMapInfo = useMemo(() => {
     if (!activeTermNode) return null;
@@ -660,8 +666,72 @@ export default function CodexPage({
                 y1,
                 x2,
                 y2,
-                color: activeNode ? getRootCategoryColor(activeNode) : '#b6a6ff',
+                color: activeRootColor,
                 isRelated: true
+              });
+            }
+          }
+        });
+      }
+
+      // 3. Draw Parent & Secondary Parent connections (attaching to categories/sub-categories they are linked to)
+      if (activeNode && activeEl) {
+        const activeRect = activeEl.getBoundingClientRect();
+        const activeLevel = getNodeLevel(activeNode);
+        const parentIds: string[] = [];
+        if (activeNode.parentId) {
+          parentIds.push(activeNode.parentId);
+        }
+        if (activeNode.secondaryParentIds) {
+          parentIds.push(...activeNode.secondaryParentIds);
+        }
+
+        // Collect all terms currently rendered in the active columns
+        const renderedIds = new Set<string>();
+        columns.forEach(col => col.nodes.forEach(n => renderedIds.add(n.id)));
+
+        parentIds.forEach(pId => {
+          if (renderedIds.has(pId)) {
+            // Check if there is already a line connecting them in paths (e.g. selection path)
+            const alreadyHasLine = paths.some(p => p.id === `path-${pId}-${activeTermId}` || p.id === `path-${activeTermId}-${pId}`);
+            if (alreadyHasLine) return;
+
+            const parentEl = document.getElementById(`node-pill-${pId}`);
+            const parentNode = TERM_TREE_DATA.find(n => n.id === pId);
+
+            if (parentEl && parentNode) {
+              const parentRect = parentEl.getBoundingClientRect();
+              const parentLevel = getNodeLevel(parentNode);
+
+              let x1 = 0, y1 = 0, x2 = 0, y2 = 0;
+              let pathData = '';
+
+              // Different columns: connect right-side of left element to left-side of right element
+              const isParentToChild = parentLevel < activeLevel;
+              const leftElRect = isParentToChild ? parentRect : activeRect;
+              const rightElRect = isParentToChild ? activeRect : parentRect;
+
+              x1 = leftElRect.right - containerRect.left + container.scrollLeft;
+              y1 = leftElRect.top + leftElRect.height / 2 - containerRect.top + container.scrollTop;
+
+              x2 = rightElRect.left - containerRect.left + container.scrollLeft;
+              y2 = rightElRect.top + rightElRect.height / 2 - containerRect.top + container.scrollTop;
+
+              const xMid = rightElRect.left - 20 - containerRect.left + container.scrollLeft;
+              pathData = `M ${x1} ${y1} H ${xMid} V ${y2} H ${x2}`;
+
+              const parentColor = getRootCategoryColor(parentNode);
+
+              paths.push({
+                id: `parentLink-${activeTermId}-${pId}`,
+                d: pathData,
+                x1,
+                y1,
+                x2,
+                y2,
+                color: parentColor,
+                isRelated: false,
+                isDottedParentLink: true
               });
             }
           }
@@ -1221,17 +1291,21 @@ export default function CodexPage({
               zIndex: 4
             }}
           >
-            {lines.map(line => (
-              <path
-                key={line.id}
-                d={line.d}
-                fill="none"
-                stroke={theme.text}
-                strokeWidth="2"
-                strokeDasharray="4,4"
-                opacity={line.isRelated ? 0.6 : 0.8}
-              />
-            ))}
+            {lines.map(line => {
+              const strokeColor = adjustColorForContrast(line.color);
+              const isDotted = line.isRelated || line.isDottedParentLink;
+              return (
+                <path
+                  key={line.id}
+                  d={line.d}
+                  fill="none"
+                  stroke={strokeColor}
+                  strokeWidth="2"
+                  strokeDasharray={isDotted ? "4,4" : "none"}
+                  opacity={line.isRelated ? 0.5 : (line.isDottedParentLink ? 0.75 : 0.9)}
+                />
+              );
+            })}
           </svg>
 
         {/* Columns positioned absolutely on the 2D Canvas */}
@@ -1322,7 +1396,7 @@ export default function CodexPage({
                 {column.nodes.map(node => {
                   const isSelected = selectedPath[colIdx] === node.id;
                   const isHovered = hoveredTermId === node.id;
-                  const nodeColor = colIdx === 0 ? getNodeColor(node) : getRootCategoryColor(node);
+                  const nodeColor = colIdx === 0 ? getNodeColor(node) : activeRootColor;
                   const nodeIcon = getNodeIcon(node);
 
                   const hasChildren = TERM_TREE_DATA.some(c => c.parentId === node.id);
@@ -1514,25 +1588,28 @@ export default function CodexPage({
             zIndex: 6
           }}
         >
-          {lines.map(line => (
-            <g key={`dots-${line.id}`}>
-              {/* Source Circle Anchor */}
-              <circle
-                cx={line.x1}
-                cy={line.y1}
-                r="4"
-                fill={theme.text}
-              />
+          {lines.map(line => {
+            const dotColor = adjustColorForContrast(line.color);
+            return (
+              <g key={`dots-${line.id}`}>
+                {/* Source Circle Anchor */}
+                <circle
+                  cx={line.x1}
+                  cy={line.y1}
+                  r="4"
+                  fill={dotColor}
+                />
 
-              {/* Target Circle Anchor */}
-              <circle
-                cx={line.x2}
-                cy={line.y2}
-                r="3"
-                fill={theme.text}
-              />
-            </g>
-          ))}
+                {/* Target Circle Anchor */}
+                <circle
+                  cx={line.x2}
+                  cy={line.y2}
+                  r="3"
+                  fill={dotColor}
+                />
+              </g>
+            );
+          })}
         </svg>
         </div>
       </div>
@@ -1952,7 +2029,7 @@ export default function CodexPage({
                             fontWeight: '400', 
                             padding: '0 12px', 
                             borderRadius: '12px', 
-                            background: getRootCategoryColor(activeTermNode), 
+                            background: activeRootColor, 
                             border: 'none',
                             color: '#000000',
                             cursor: 'default',
@@ -2049,7 +2126,7 @@ export default function CodexPage({
                           }}
                         >
                           <div style={{ display: 'flex', flexDirection: 'column' }}>
-                            <span style={{ fontSize: '8.5px', fontWeight: 'bold', textTransform: 'uppercase', color: adjustColorForContrast(getRootCategoryColor(activeTermNode)), letterSpacing: '0.5px' }}>
+                            <span style={{ fontSize: '8.5px', fontWeight: 'bold', textTransform: 'uppercase', color: adjustColorForContrast(activeRootColor), letterSpacing: '0.5px' }}>
                               {trans.lang}
                             </span>
                             <span style={{ fontSize: '11px', fontWeight: 'bold', color: theme.text, fontFamily: '"Space Mono", monospace' }}>
@@ -2119,7 +2196,7 @@ export default function CodexPage({
                           <div
                             key={vIdx}
                             style={{
-                              borderLeft: `2px solid ${getRootCategoryColor(activeTermNode)}`,
+                              borderLeft: `2px solid ${activeRootColor}`,
                               paddingLeft: '12px',
                               paddingTop: '2px',
                               paddingBottom: '2px',
@@ -2138,14 +2215,14 @@ export default function CodexPage({
                                 const url = match[0];
                                 const displayText = citation.replace(`(${url})`, '').trim();
                                 return (
-                                  <span style={{ fontSize: '8.5px', fontWeight: 'bold', color: adjustColorForContrast(getRootCategoryColor(activeTermNode)), letterSpacing: '0.5px' }}>
+                                  <span style={{ fontSize: '8.5px', fontWeight: 'bold', color: adjustColorForContrast(activeRootColor), letterSpacing: '0.5px' }}>
                                     — {displayText.toUpperCase()}{' '}
                                     <a
                                       href={url}
                                       target="_blank"
                                       rel="noopener noreferrer"
                                       style={{
-                                        color: adjustColorForContrast(getRootCategoryColor(activeTermNode)),
+                                        color: adjustColorForContrast(activeRootColor),
                                         textDecoration: 'underline',
                                         opacity: 0.85,
                                         marginLeft: '4px',
@@ -2158,7 +2235,7 @@ export default function CodexPage({
                                 );
                               }
                               return (
-                                <span style={{ fontSize: '8.5px', fontWeight: 'bold', color: adjustColorForContrast(getRootCategoryColor(activeTermNode)), letterSpacing: '0.5px' }}>
+                                <span style={{ fontSize: '8.5px', fontWeight: 'bold', color: adjustColorForContrast(activeRootColor), letterSpacing: '0.5px' }}>
                                   — {citation.toUpperCase()}
                                 </span>
                               );
@@ -2188,7 +2265,7 @@ export default function CodexPage({
                     </div>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
                       {activeTermNode.sources.map((source, sIdx) => {
-                        const rootColor = getRootCategoryColor(activeTermNode);
+                        const rootColor = activeRootColor;
                         return (
                           <div
                             key={sIdx}
