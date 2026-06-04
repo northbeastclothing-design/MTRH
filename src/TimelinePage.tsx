@@ -135,9 +135,6 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
     'future-prophecy': true
   });
 
-  // Dropdown open states
-  const [openDropdownEra, setOpenDropdownEra] = useState<string | null>(null);
-
   // Hover & selection states
   const [hoveredItemId, setHoveredItemId] = useState<string | null>(null);
 
@@ -155,10 +152,6 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [startViewStart, setStartViewStart] = useState(0);
-
-  // Stacked layout tracking for Bottom Controls Panel
-  const [isErasStacked, setIsErasStacked] = useState(false);
-  const erasContainerRef = useRef<HTMLDivElement>(null);
 
   const span = viewEnd - viewStart;
 
@@ -646,33 +639,6 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
     return ERAS_CONFIG.find(e => e.layer === hoveredItem.layer)?.color || '#90C2FF';
   }, [hoveredItem]);
 
-  // Close dropdowns on clicking outside
-  useEffect(() => {
-    const handleClickOutside = () => {
-      setOpenDropdownEra(null);
-    };
-    window.addEventListener('click', handleClickOutside);
-    return () => window.removeEventListener('click', handleClickOutside);
-  }, []);
-
-  // Stacked layout observer for the bottom controls bar
-  useEffect(() => {
-    if (!erasContainerRef.current) return;
-    const checkStacked = () => {
-      if (erasContainerRef.current) {
-        // A single row of buttons is 32px height. If height > 40px, it has wrapped to 2 or more lines.
-        setIsErasStacked(erasContainerRef.current.offsetHeight > 40);
-      }
-    };
-    
-    checkStacked();
-    
-    // Create ResizeObserver to monitor the container height changes reactively
-    const observer = new ResizeObserver(checkStacked);
-    observer.observe(erasContainerRef.current);
-    
-    return () => observer.disconnect();
-  }, []);
 
   // Auto-center vertically on selection to prevent details card cutoff
   useEffect(() => {
@@ -843,35 +809,28 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
                         background: 'none',
                         border: 'none',
                         cursor: 'pointer',
-                        padding: '4px',
+                        padding: 0,
+                        width: '30px',
+                        height: '30px',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        color: theme.text,
-                        opacity: 0.6,
-                        transition: 'opacity 0.2s ease, transform 0.2s ease',
                         marginLeft: '-4px'
                       }}
-                      onMouseEnter={(e) => { e.currentTarget.style.opacity = '1'; }}
-                      onMouseLeave={(e) => { e.currentTarget.style.opacity = '0.6'; }}
                       title={isCollapsed ? "Expand Era" : "Collapse Era"}
                     >
-                      <svg 
-                        width="12" 
-                        height="12" 
-                        viewBox="0 0 24 24" 
-                        fill="none" 
-                        stroke="currentColor" 
-                        strokeWidth="2.5" 
-                        strokeLinecap="round" 
-                        strokeLinejoin="round"
-                        style={{
-                          transform: isCollapsed ? 'rotate(-90deg)' : 'rotate(0deg)',
-                          transition: 'transform 0.2s ease'
-                        }}
-                      >
-                        <polyline points="6 9 12 15 18 9" />
-                      </svg>
+                      <img 
+                        src={isCollapsed 
+                          ? "https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/icons/icon-arrow-down.svg" 
+                          : "https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/icons/icon-arrow-up.svg"
+                        } 
+                        style={{ 
+                          width: '30px', 
+                          height: '30px', 
+                          filter: 'brightness(0)' 
+                        }} 
+                        alt={isCollapsed ? "expand" : "collapse"} 
+                      />
                     </button>
 
                     <img 
@@ -1690,17 +1649,13 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
       {/* BOTTOM CONTROLS PANEL (BOTTOM BAR) */}
       <div 
         style={{
-          minHeight: '64px',
-          height: 'auto',
+          height: '64px',
           background: theme.bg,
           borderTop: `1px solid ${theme.border}`,
-          padding: '12px 24px',
+          padding: '0 24px',
           display: 'flex',
-          alignItems: 'flex-start',
+          alignItems: 'center',
           justifyContent: 'space-between',
-          flexWrap: 'wrap',
-          rowGap: '12px',
-          columnGap: '24px',
           zIndex: 200,
           boxSizing: 'border-box',
           position: 'relative',
@@ -1708,260 +1663,58 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
           flexShrink: 0
         }}
       >
-        {/* Left: Eras toggles */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '16px', flexWrap: 'wrap', flex: 1 }}>
-          {/* Timeline Search Input */}
-          <div style={{ position: 'relative', width: '220px', flexShrink: 0 }}>
-            <input 
-              type="text" 
-              placeholder="SEARCH TIMELINE EVENTS..." 
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+        {/* Left: Search input */}
+        <div style={{ position: 'relative', width: '220px', flexShrink: 0 }}>
+          <input 
+            type="text" 
+            placeholder="SEARCH TIMELINE EVENTS..." 
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            style={{
+              width: '100%',
+              padding: '8px 30px 8px 10px',
+              fontSize: '10.5px',
+              fontFamily: '"Space Mono", monospace',
+              border: `1px solid ${theme.border}`,
+              borderRadius: '0px',
+              outline: 'none',
+              boxSizing: 'border-box',
+              background: isMapDarkMode ? '#000000' : '#ffffff',
+              color: theme.text,
+              height: '32px'
+            }}
+          />
+          {searchQuery && (
+            <motion.button
+              whileHover={{ opacity: 0.7 }}
+              onClick={() => setSearchQuery('')}
               style={{
-                width: '100%',
-                padding: '8px 30px 8px 10px',
-                fontSize: '10.5px',
-                fontFamily: '"Space Mono", monospace',
-                border: `1px solid ${theme.border}`,
-                borderRadius: '0px',
-                outline: 'none',
-                boxSizing: 'border-box',
-                background: isMapDarkMode ? '#000000' : '#ffffff',
-                color: theme.text,
-                height: '32px'
+                position: 'absolute',
+                right: '6px',
+                top: '50%',
+                transform: 'translateY(-50%)',
+                background: 'none',
+                border: 'none',
+                cursor: 'pointer',
+                padding: '4px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                zIndex: 21
               }}
-            />
-            {searchQuery && (
-              <motion.button
-                whileHover={{ opacity: 0.7 }}
-                onClick={() => setSearchQuery('')}
-                style={{
-                  position: 'absolute',
-                  right: '6px',
-                  top: '50%',
-                  transform: 'translateY(-50%)',
-                  background: 'none',
-                  border: 'none',
-                  cursor: 'pointer',
-                  padding: '4px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  zIndex: 21
-                }}
-              >
-                <X size={12} color={theme.text} />
-              </motion.button>
-            )}
-          </div>
-
-          <span style={{ fontSize: '9px', fontWeight: 'bold', color: theme.textDim, textTransform: 'uppercase', letterSpacing: '1px', flexShrink: 0 }}>
-            Eras:
-          </span>
-          <div ref={erasContainerRef} style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', flex: 1 }}>
-            {orderedEras.map(era => {
-              const isActive = activeEras[era.id];
-              const isOpen = openDropdownEra === era.id;
-              
-              // Get all items in this era to populate the dropdown
-              const eraItems = eraItemsMap[era.id] || [];
-
-              return (
-                <div 
-                  key={era.id} 
-                  style={{ position: 'relative' }}
-                  onClick={e => e.stopPropagation()} // Stop bubbling to window click handler
-                >
-                  {/* Era selector button matching map layers styling */}
-                  <div 
-                    style={{ 
-                      display: 'flex', 
-                      alignItems: 'center', 
-                      padding: '0 4px 0 0', 
-                      height: '32px',
-                      cursor: 'pointer', 
-                      background: isActive ? theme.bg : (isMapDarkMode ? '#1a1a1a' : '#EFEFEF'),
-                      border: `1px solid ${theme.border}`,
-                      borderRadius: '16px',
-                      boxSizing: 'border-box',
-                      color: theme.text,
-                      transition: 'background 0.3s ease-in-out'
-                    }}
-                    onClick={() => {
-                      animateViewport(era.start, era.end);
-                      scrollToEraGroup(era.layer);
-                    }}
-                  >
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flex: 1, textAlign: 'left' }}>
-                      {/* Placeholder Icon */}
-                      <div style={{ width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <img 
-                          src={era.icon} 
-                          onError={(e) => { e.currentTarget.src = '/icons/icon-cave-drawings.svg'; }}
-                          style={{ width: '30px', height: '30px' }} 
-                          alt={era.name} 
-                        />
-                      </div>
-                      
-                      {/* Label */}
-                      <span style={{ 
-                        fontSize: '10px', 
-                        fontWeight: '700', 
-                        fontFamily: '"Space Mono", monospace', 
-                        opacity: isActive ? 1 : 0.5,
-                        transition: 'opacity 0.3s ease-in-out',
-                        marginRight: '8px',
-                        whiteSpace: 'nowrap'
-                      }}>
-                        {era.name}
-                      </span>
-                    </div>
-                    
-                    {/* Action buttons on the right side of the pill */}
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0' }} onClick={e => e.stopPropagation()}>
-                      {/* Visibility Toggle Eye */}
-                      <button 
-                        onClick={() => {
-                          setActiveEras(p => ({ ...p, [era.id]: !p[era.id] }));
-                        }}
-                        style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, display: 'flex', alignItems: 'center' }}
-                      >
-                        <img 
-                          src={isActive 
-                            ? "https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/icons/icon-eye-open.svg" 
-                            : "https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/icons/icon-eye-closed.svg"
-                          } 
-                          style={{ width: '31px', height: '30px', filter: theme.invert }} 
-                          alt="toggle visibility" 
-                        />
-                      </button>
-                      
-                      {/* Arrow Dropdown Toggle */}
-                      <button 
-                        onClick={() => {
-                          setOpenDropdownEra(prev => prev === era.id ? null : era.id);
-                        }}
-                        style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-                      >
-                        <img 
-                          src={isOpen 
-                            ? "https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/icons/icon-arrow-up.svg" 
-                            : "https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/icons/icon-arrow-down.svg"
-                          } 
-                          style={{ width: '30px', height: '30px', filter: theme.invert }} 
-                          alt="expand items" 
-                        />
-                      </button>
-                    </div>
-                  </div>
-
-                  {/* POPOVER LISTING ITEMS */}
-                  <AnimatePresence>
-                    {isOpen && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                        transition={{ duration: 0.2 }}
-                        style={{
-                          position: 'absolute',
-                          bottom: '45px', // Sit cleanly above bottom controls bar
-                          left: '0px',
-                          width: '240px',
-                          background: theme.bg,
-                          border: `1px solid ${theme.border}`,
-                          borderRadius: '8px',
-                          boxShadow: '0 -10px 25px rgba(0,0,0,0.15)',
-                          zIndex: 1000,
-                          fontFamily: '"Space Mono", monospace',
-                          pointerEvents: 'auto',
-                          textAlign: 'left',
-                          overflow: 'hidden'
-                        }}
-                      >
-                        <div
-                          style={{
-                            maxHeight: '220px',
-                            overflowY: 'auto',
-                            width: '100%'
-                          }}
-                          className="custom-scrollbar"
-                        >
-                          <div style={{ 
-                            padding: '6px 12px', 
-                            borderBottom: `1px solid ${theme.borderLight}`, 
-                            fontSize: '8px', 
-                            color: theme.textDim, 
-                            fontWeight: 'bold', 
-                            textTransform: 'uppercase',
-                            background: isMapDarkMode ? '#111' : '#f5f5f5',
-                            position: 'sticky',
-                            top: 0,
-                            zIndex: 1
-                          }}>
-                            Go to item:
-                          </div>
-                          {eraItems.length === 0 ? (
-                            <div style={{ padding: '12px', fontSize: '10px', color: theme.textDim, textAlign: 'center' }}>
-                              Era is currently hidden.
-                            </div>
-                          ) : (
-                            eraItems.map(item => (
-                              <div 
-                                key={item.id}
-                                onClick={() => handleItemSelect(item, era)}
-                                style={{
-                                  padding: '8px 12px',
-                                  fontSize: '10px',
-                                  cursor: 'pointer',
-                                  borderBottom: `1px solid ${theme.borderLight}`,
-                                  color: theme.text,
-                                  transition: 'background 0.15s ease',
-                                  display: 'flex',
-                                  justifyContent: 'space-between',
-                                  gap: '8px'
-                                }}
-                                onMouseEnter={(e) => { e.currentTarget.style.background = `${era.color}20`; }}
-                                onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; }}
-                              >
-                                <span style={{ fontWeight: 'bold', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
-                                  {item.isPeopleGroup && (
-                                    <span style={{
-                                      marginRight: '6px',
-                                      fontWeight: 900,
-                                      fontSize: '14px',
-                                      lineHeight: 1,
-                                      WebkitTextStroke: '1.5px currentColor',
-                                      flexShrink: 0
-                                    }}>✖</span>
-                                  )}
-                                  {item.name}
-                                </span>
-                                <span style={{ fontSize: '8px', color: theme.textDim, alignSelf: 'center', whiteSpace: 'nowrap' }}>
-                                  {formatYear(item.start)}
-                                </span>
-                              </div>
-                            ))
-                          )}
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              );
-            })}
-          </div>
+            >
+              <X size={12} color={theme.text} />
+            </motion.button>
+          )}
         </div>
 
         {/* Right: Zoom controls styled exactly like the map page timeline zoom bar */}
         <div style={{ 
           display: 'flex', 
-          flexDirection: isErasStacked ? 'column' : 'row',
-          alignItems: isErasStacked ? 'stretch' : 'flex-start', 
+          flexDirection: 'row',
+          alignItems: 'center', 
           gap: '12px', 
-          flexWrap: 'wrap', 
           justifyContent: 'flex-end',
-          marginLeft: 'auto',
           position: 'relative'
         }}>
           {/* Zoom controls inline unit */}
@@ -2040,6 +1793,14 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
               fontWeight: 700,
               textTransform: 'uppercase',
               boxSizing: 'border-box'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = theme.text;
+              e.currentTarget.style.color = theme.bg;
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = 'transparent';
+              e.currentTarget.style.color = theme.text;
             }}
           >
             <RotateCcw size={10} strokeWidth={2.5} />
