@@ -162,16 +162,71 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
 
   const span = viewEnd - viewStart;
 
+  // Search query state
+  const [searchQuery, setSearchQuery] = useState('');
+
+  // Eras order state for reordering
+  const [erasOrder, setErasOrder] = useState<string[]>(() => {
+    const saved = localStorage.getItem('mtrh_timeline_eras_order');
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed) && parsed.length === ERAS_CONFIG.length) {
+          return parsed;
+        }
+      } catch (e) {}
+    }
+    return ERAS_CONFIG.map(e => e.id);
+  });
+
+  // Save order when changed
+  useEffect(() => {
+    localStorage.setItem('mtrh_timeline_eras_order', JSON.stringify(erasOrder));
+  }, [erasOrder]);
+
+  // Collapsed eras state
+  const [collapsedEras, setCollapsedEras] = useState<Record<string, boolean>>({});
+
+  // Active dragging era
+  const [draggingEraId, setDraggingEraId] = useState<string | null>(null);
+
+  // Ordered eras list based on erasOrder state
+  const orderedEras = useMemo(() => {
+    return [...ERAS_CONFIG].sort((a, b) => erasOrder.indexOf(a.id) - erasOrder.indexOf(b.id));
+  }, [erasOrder]);
+
+  const handleDragOverEra = (e: React.DragEvent, targetId: string) => {
+    e.preventDefault();
+    if (!draggingEraId || draggingEraId === targetId) return;
+    
+    setErasOrder(prev => {
+      const next = [...prev];
+      const draggingIdx = next.indexOf(draggingEraId);
+      const targetIdx = next.indexOf(targetId);
+      if (draggingIdx !== -1 && targetIdx !== -1) {
+        next.splice(draggingIdx, 1);
+        next.splice(targetIdx, 0, draggingEraId);
+      }
+      return next;
+    });
+  };
+
   // Pre-cluster and sort timeline items by era to avoid React Hook loop violations
   const eraItemsMap = useMemo(() => {
     const map: Record<string, TimelineItem[]> = {};
+    const query = searchQuery.toLowerCase().trim();
     ERAS_CONFIG.forEach(era => {
-      map[era.id] = TIMELINE_ITEMS
-        .filter(item => item.layer === era.layer)
-        .sort((a, b) => a.start - b.start);
+      let filtered = TIMELINE_ITEMS.filter(item => item.layer === era.layer);
+      if (query) {
+        filtered = filtered.filter(item => 
+          item.name.toLowerCase().includes(query) ||
+          (item.description && item.description.toLowerCase().includes(query))
+        );
+      }
+      map[era.id] = filtered.sort((a, b) => a.start - b.start);
     });
     return map;
-  }, []);
+  }, [searchQuery]);
 
   // Format years nicely (e.g. 4,004 BC, 30 AD)
   const formatYear = (year: number) => {
@@ -280,6 +335,9 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
   const handleReset = () => {
     animateViewport(-4100, -1600);
     scrollToEraGroup('biblical-patriarchs');
+    setErasOrder(ERAS_CONFIG.map(e => e.id));
+    setCollapsedEras({});
+    setSearchQuery('');
   };
 
   // Get percentage offset from left of timeline for a given year
@@ -292,14 +350,13 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
     const results: Record<string, { endYear: number; items: TimelineItem[] }[]> = {};
     
     ERAS_CONFIG.forEach(era => {
-      if (!activeEras[era.id]) {
+      if (!activeEras[era.id] || collapsedEras[era.id]) {
         results[era.layer] = [];
         return;
       }
       
-      const layerItems = TIMELINE_ITEMS.filter(item => item.layer === era.layer);
-      // Sort by start year
-      const sorted = [...layerItems].sort((a, b) => a.start - b.start);
+      const layerItems = eraItemsMap[era.id] || [];
+      const sorted = layerItems;
       
       const tracks: { endYear: number; items: TimelineItem[] }[] = [];
       const eraSpan = Math.abs(era.end - era.start);
@@ -334,7 +391,7 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
     });
     
     return results;
-  }, [activeEras]);
+  }, [activeEras, collapsedEras, eraItemsMap]);
 
   // Compute exact y-offsets for items to draw SVG connectors
   const trackOffsets = useMemo(() => {
@@ -344,7 +401,7 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
     const rowHeight = 36;
     const padding = 16;
     
-    ERAS_CONFIG.forEach(era => {
+    orderedEras.forEach(era => {
       if (!activeEras[era.id]) return;
       
       currentY += headerHeight; // Add layer header space
@@ -360,7 +417,7 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
     });
     
     return { offsets, totalHeight: currentY + 160 };
-  }, [allocatedTracksByLayer, activeEras]);
+  }, [allocatedTracksByLayer, activeEras, orderedEras]);
 
   // Generate Year Ruler Tick Marks
   const ticks = useMemo(() => {
@@ -709,32 +766,114 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
 
           {/* LAYER TRACKS */}
           <div style={{ position: 'relative', zIndex: 5, padding: '0 0 160px 0' }}>
-            {ERAS_CONFIG.map(era => {
+            {orderedEras.map(era => {
               if (!activeEras[era.id]) return null;
               
               const tracks = allocatedTracksByLayer[era.layer] || [];
               const offscreenNav = getEraOffscreenNav(era.id);
+              const isCollapsed = collapsedEras[era.id];
               
               return (
                 <div 
                   key={era.id} 
                   data-era-group={era.layer}
-                  style={{ display: 'flex', flexDirection: 'column', paddingBottom: '16px' }}
+                  style={{ display: 'flex', flexDirection: 'column', paddingBottom: isCollapsed ? '0px' : '16px' }}
                 >
                   {/* Layer Header */}
-                  <div style={{ 
-                    height: '36px', 
-                    padding: '0 24px', 
-                    borderBottom: `1px solid ${theme.borderLight}`, 
-                    background: isMapDarkMode ? 'rgba(20, 20, 20, 0.8)' : 'rgba(245, 245, 245, 0.8)', 
-                    display: 'flex', 
-                    alignItems: 'center', 
-                    gap: '10px',
-                    position: 'sticky',
-                    top: 0,
-                    zIndex: 10,
-                    pointerEvents: 'auto'
-                  }}>
+                  <div 
+                    draggable={true}
+                    onDragStart={(e) => {
+                      const target = e.target as HTMLElement;
+                      if (target.closest('button') || target.closest('a') || target.tagName === 'INPUT') {
+                        e.preventDefault();
+                        return;
+                      }
+                      setDraggingEraId(era.id);
+                      e.dataTransfer.effectAllowed = 'move';
+                    }}
+                    onDragEnd={() => setDraggingEraId(null)}
+                    onDragOver={(e) => handleDragOverEra(e, era.id)}
+                    style={{ 
+                      height: '36px', 
+                      padding: '0 24px', 
+                      borderBottom: `1px solid ${theme.borderLight}`, 
+                      background: isMapDarkMode ? 'rgba(20, 20, 20, 0.8)' : 'rgba(245, 245, 245, 0.8)', 
+                      display: 'flex', 
+                      alignItems: 'center', 
+                      gap: '10px',
+                      position: 'sticky',
+                      top: 0,
+                      zIndex: 10,
+                      pointerEvents: 'auto',
+                      cursor: 'grab',
+                      opacity: draggingEraId === era.id ? 0.4 : 1,
+                      transition: 'opacity 0.2s ease, background-color 0.2s ease'
+                    }}
+                  >
+                    {/* Drag Handle */}
+                    <div style={{ display: 'flex', alignItems: 'center', cursor: 'grab', marginRight: '-2px' }}>
+                      <svg 
+                        width="10" 
+                        height="14" 
+                        viewBox="0 0 24 24" 
+                        fill="none" 
+                        stroke={theme.textDim} 
+                        strokeWidth="3.5" 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round"
+                        style={{ opacity: 0.45 }}
+                      >
+                        <circle cx="9" cy="5" r="1.5" />
+                        <circle cx="9" cy="12" r="1.5" />
+                        <circle cx="9" cy="19" r="1.5" />
+                        <circle cx="15" cy="5" r="1.5" />
+                        <circle cx="15" cy="12" r="1.5" />
+                        <circle cx="15" cy="19" r="1.5" />
+                      </svg>
+                    </div>
+
+                    {/* Expand/Collapse Caret */}
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setCollapsedEras(p => ({ ...p, [era.id]: !p[era.id] }));
+                      }}
+                      onMouseDown={(e) => e.stopPropagation()}
+                      style={{
+                        background: 'none',
+                        border: 'none',
+                        cursor: 'pointer',
+                        padding: '4px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        color: theme.text,
+                        opacity: 0.6,
+                        transition: 'opacity 0.2s ease, transform 0.2s ease',
+                        marginLeft: '-4px'
+                      }}
+                      onMouseEnter={(e) => { e.currentTarget.style.opacity = '1'; }}
+                      onMouseLeave={(e) => { e.currentTarget.style.opacity = '0.6'; }}
+                      title={isCollapsed ? "Expand Era" : "Collapse Era"}
+                    >
+                      <svg 
+                        width="12" 
+                        height="12" 
+                        viewBox="0 0 24 24" 
+                        fill="none" 
+                        stroke="currentColor" 
+                        strokeWidth="2.5" 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round"
+                        style={{
+                          transform: isCollapsed ? 'rotate(-90deg)' : 'rotate(0deg)',
+                          transition: 'transform 0.2s ease'
+                        }}
+                      >
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </button>
+
                     <img 
                       src={era.icon} 
                       alt={era.name} 
@@ -742,11 +881,12 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
                         height: '30px', 
                         width: '30px', 
                         display: 'block',
-                        objectFit: 'contain'
+                        objectFit: 'contain',
+                        marginLeft: '-4px'
                       }} 
                     />
                     <span style={{ fontSize: '10px', fontWeight: 'bold', letterSpacing: '1.5px', textTransform: 'uppercase', color: theme.text }}>
-                      {era.name}
+                      {era.name} {isCollapsed && <span style={{ fontSize: '8px', opacity: 0.5, letterSpacing: '1px', textTransform: 'lowercase', fontStyle: 'italic', marginLeft: '6px' }}>(collapsed)</span>}
                     </span>
 
                     <AnimatePresence>
@@ -1569,12 +1709,57 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
         }}
       >
         {/* Left: Eras toggles */}
-        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', flexWrap: 'wrap', flex: 1 }}>
-          <span style={{ fontSize: '9px', fontWeight: 'bold', color: theme.textDim, textTransform: 'uppercase', letterSpacing: '1px', marginTop: '10px', marginRight: '4px', flexShrink: 0 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '16px', flexWrap: 'wrap', flex: 1 }}>
+          {/* Timeline Search Input */}
+          <div style={{ position: 'relative', width: '220px', flexShrink: 0 }}>
+            <input 
+              type="text" 
+              placeholder="SEARCH TIMELINE EVENTS..." 
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              style={{
+                width: '100%',
+                padding: '8px 30px 8px 10px',
+                fontSize: '10.5px',
+                fontFamily: '"Space Mono", monospace',
+                border: `1px solid ${theme.border}`,
+                borderRadius: '0px',
+                outline: 'none',
+                boxSizing: 'border-box',
+                background: isMapDarkMode ? '#000000' : '#ffffff',
+                color: theme.text,
+                height: '32px'
+              }}
+            />
+            {searchQuery && (
+              <motion.button
+                whileHover={{ opacity: 0.7 }}
+                onClick={() => setSearchQuery('')}
+                style={{
+                  position: 'absolute',
+                  right: '6px',
+                  top: '50%',
+                  transform: 'translateY(-50%)',
+                  background: 'none',
+                  border: 'none',
+                  cursor: 'pointer',
+                  padding: '4px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  zIndex: 21
+                }}
+              >
+                <X size={12} color={theme.text} />
+              </motion.button>
+            )}
+          </div>
+
+          <span style={{ fontSize: '9px', fontWeight: 'bold', color: theme.textDim, textTransform: 'uppercase', letterSpacing: '1px', flexShrink: 0 }}>
             Eras:
           </span>
           <div ref={erasContainerRef} style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', flex: 1 }}>
-            {ERAS_CONFIG.map(era => {
+            {orderedEras.map(era => {
               const isActive = activeEras[era.id];
               const isOpen = openDropdownEra === era.id;
               
