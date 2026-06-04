@@ -739,8 +739,8 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
                       src={era.icon} 
                       alt={era.name} 
                       style={{ 
-                        height: '36px', 
-                        width: '36px', 
+                        height: '30px', 
+                        width: '30px', 
                         display: 'block',
                         objectFit: 'contain'
                       }} 
