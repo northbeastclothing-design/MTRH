@@ -10,6 +10,8 @@ export interface TermNode {
   name: string;
   description: string;
   parentId?: string;
+  secondaryParentIds?: string[];
+  isApocryphal?: boolean;
   layer?: string;       // Matches keys in LAYER_CONFIG
   timelineId?: string;  // Matches ids in TIMELINE_ITEMS
   mapFeatureId?: string;// Optional specific map feature ID if available
@@ -20,187 +22,27 @@ export interface TermNode {
   sources?: string[];
 }
 
-export const TERM_TREE_DATA: TermNode[] = [
+const chunk_0: any[] = [
   {
-    id: 'biblical-enc',
-    name: 'Biblical & Enochian Space',
-    description: 'Ancient Hebrew history, watchmen, nephilim bloodlines, catastrophic events, and pre-flood texts.',
-    relatedIds: ['ancient-texts', 'megaliths', 'underworld']
+    id: 'biblical-apocryphal',
+    name: 'Biblical / Apocryphal',
+    description: 'Scriptural records, angelic hierarchies, ancient pagan pantheons, pre-flood patriarchs, nephilim lineages, and non-canonical/apocryphal narratives.'
+  },
+  {
+    id: 'megaliths-structures',
+    name: 'Megaliths / Structures',
+    description: 'Ancient monolithic ruins, prehistoric earthworks, grid alignments, deep underground military bases, and planetary anomalies.'
+  },
+  {
+    id: 'supernatural-anomalies',
+    name: 'Supernatural / Anomalies',
+    description: 'Extraterrestrial encounters, cryptid sightings, localized hauntings, portal gateways, and cosmic space-time anomalies.'
   },
   {
     id: 'angel',
-    parentId: 'biblical-enc',
+    parentId: 'biblical-apocryphal',
     name: 'Angels',
     description: 'Angelic messengers and heavenly hosts who carry out the will of God, acting as guides, protectors, and executors of divine judgment.'
-  },
-  {
-    id: 'ariel',
-    parentId: 'angel',
-    name: 'Ariel',
-    description: 'Female Archangel Environment, animals, shelter money, supplies',
-    sources: ['Jewish Mysticism Literature']
-  },
-  {
-    id: 'azrael',
-    parentId: 'angel',
-    name: 'Azrael',
-    description: 'Archangel of Death/Retribution guides souls to heaven, consoles families',
-    translations: [
-      { lang: 'Hebrew', original: 'עַזְרָאֵל', translit: 'Azra\'el', meaning: 'God helps' }
-    ],
-    sources: ['Islamic & Jewish Apocryphal Literature']
-  },
-  {
-    id: 'barachiel',
-    parentId: 'angel',
-    name: 'Barachiel',
-    description: 'Lightning and blessings (Seraphim)',
-    sources: ['Canonical Scripture', 'Apocryphal Texts']
-  },
-  {
-    id: 'camael',
-    parentId: 'angel',
-    name: 'Camael',
-    description: 'Strength, Courage, war Seen in: Comforted Adam and Eve after they got kicked out of Eden..',
-    sources: ['Canonical Scripture', 'Apocryphal Texts']
-  },
-  {
-    id: 'chamuel',
-    parentId: 'angel',
-    name: 'Chamuel',
-    description: 'Omniscient vision, ease anxiety, peace, brings love to relationships, and can help someone find a loving partner. Chamuel also provides comfort and protection.',
-    sources: ['Canonical Scripture', 'Apocryphal Texts']
-  },
-  {
-    id: 'gabriel',
-    parentId: 'angel',
-    name: 'Gabriel',
-    description: 'Enoch: over Paradise and the serpents and the Cherubim. aids women who are trying to conceive or adopt a child. Messenger Seen in: brought Mary the news that she would have a son Jesus, Messenger of God. Also known as: Zerachiel, Messenger of God.',
-    translations: [
-      { lang: 'Hebrew', original: 'גַּבְרִיאֵל', translit: 'Gavriel', meaning: 'God is my strength' }
-    ],
-    sources: ['Gospel of Luke', 'Book of Daniel', 'Book of Enoch']
-  },
-  {
-    id: 'haniel',
-    parentId: 'angel',
-    name: 'Haniel',
-    description: 'Female, direct people to god Seen in: Escorted Enoch to heaven.',
-    sources: ['Canonical Scripture', 'Apocryphal Texts']
-  },
-  {
-    id: 'jegudiel',
-    parentId: 'angel',
-    name: 'Jegudiel',
-    description: 'Encouragement, wisdom, strength to people working for God\'s glory',
-    sources: ['Canonical Scripture', 'Apocryphal Texts']
-  },
-  {
-    id: 'jeremiel',
-    parentId: 'angel',
-    name: 'Jeremiel',
-    description: 'hope, visions, dreams, inspires souls to go to heaven',
-    sources: ['Canonical Scripture', 'Apocryphal Texts']
-  },
-  {
-    id: 'jophiel',
-    parentId: 'angel',
-    name: 'Jophiel',
-    description: 'Female, think beautiful thoughts Seen in: Guards the tree of life.',
-    sources: ['Canonical Scripture', 'Apocryphal Texts']
-  },
-  {
-    id: 'michael',
-    parentId: 'angel',
-    name: 'Michael',
-    description: 'Enoch: set over the best part of mankind and over chaos. banish fear and provide guidance and strength, head of battalion of angels Seen in: battled satan and Prince of Persia, None. Also known as: Chief Prince, Leader of the angels.',
-    translations: [
-      { lang: 'Hebrew', original: 'מִיכָאֵל', translit: 'Mikha\'el', meaning: 'Who is like God?' }
-    ],
-    sources: ['Book of Daniel', 'Book of Revelation', 'Epistle of Jude']
-  },
-  {
-    id: 'phanuel',
-    parentId: 'angel',
-    name: 'Phanuel',
-    description: 'Overseer of the angels who watch over the repentant Seen in: None. Also known as: None.',
-    sources: ['Canonical Scripture', 'Apocryphal Texts']
-  },
-  {
-    id: 'raguel',
-    parentId: 'angel',
-    name: 'Raguel',
-    description: 'Overseer of the angels who watch over humanity Seen in: None. Also known as: None.',
-    sources: ['Canonical Scripture', 'Apocryphal Texts']
-  },
-  {
-    id: 'ramiel',
-    parentId: 'angel',
-    name: 'Ramiel',
-    description: 'Forgiveness, hope, divine visions, guiding souls into heaven',
-    sources: ['Canonical Scripture', 'Apocryphal Texts']
-  },
-  {
-    id: 'raphael',
-    parentId: 'angel',
-    name: 'Raphael',
-    description: 'healing people and animals from any number of difficulties, both mental and physical. Raphael can also help to find a lost pet or protect travelers. Seen in: escorted Enoch to heaven, None. Also known as: Angel of healing.',
-    translations: [
-      { lang: 'Hebrew', original: 'רְפָאֵל', translit: 'Refa\'el', meaning: 'God has healed' }
-    ],
-    sources: ['Book of Tobit', 'Book of Enoch']
-  },
-  {
-    id: 'saraqael',
-    parentId: 'angel',
-    name: 'Saraqael',
-    description: 'Overseer of the angels who guard the Garden of Eden Seen in: None. Also known as: None.',
-    sources: ['Canonical Scripture', 'Apocryphal Texts']
-  },
-  {
-    id: 'uriel',
-    parentId: 'angel',
-    name: 'Uriel',
-    description: '(ENOCH: one of the holy angels, who is over the world and over Tartarus) associated with the light and fire of God. Uriel can aid in intellectual pursuits, particularly problem-solving, as well as providing assistance in times of natural disasters. repentence, thunder & Terror Seen in: guards Eden, None. Also known as: None.',
-    translations: [
-      { lang: 'Hebrew', original: 'אוּרִיאֵל', translit: 'Uri\'el', meaning: 'God is my light' }
-    ],
-    sources: ['Second Book of Esdras', 'Book of Enoch']
-  },
-  {
-    id: 'zadkiel',
-    parentId: 'angel',
-    name: 'Zadkiel',
-    description: 'Mercy, guides away from sin Seen in: prevented Abraham from Sacrificing son Isaac.',
-    sources: ['Canonical Scripture', 'Apocryphal Texts']
-  },
-  {
-    id: 'remiel',
-    parentId: 'angel',
-    name: 'Remiel',
-    description: 'Overseer of the angels who watch over the dead Seen in: None. Also known as: None.',
-    sources: ['Canonical Scripture', 'Apocryphal Texts']
-  },
-  {
-    id: 'cherubim',
-    parentId: 'angel',
-    name: 'Cherubim',
-    description: 'Guard the throne of God Seen in: None. Also known as: Guard the Garden of Eden.',
-    sources: ['Canonical Scripture', 'Apocryphal Texts']
-  },
-  {
-    id: 'seraphim',
-    parentId: 'angel',
-    name: 'Seraphim',
-    description: 'Worship God Seen in: None. Also known as: None.',
-    sources: ['Canonical Scripture', 'Apocryphal Texts']
-  },
-  {
-    id: 'twenty-four-elders',
-    parentId: 'angel',
-    name: 'Twenty-four Elders',
-    description: 'Sit on thrones around the throne of God Seen in: None. Also known as: None.',
-    sources: ['Canonical Scripture', 'Apocryphal Texts']
   },
   {
     id: 'metatron',
@@ -212,7 +54,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     ],
     relatedIds: ['angel', 'book-of-enoch'],
     bibleVerses: ['Enoch was taken... he was called Metatron, the scribe of the righteousness of the Great Lord... — 3 Enoch 4:2-3 (https://www.sacred-texts.com/jud/3en/index.htm)'],
-    sources: ['3 Enoch (Hebrew Book of Enoch)', 'Talmud (Hagigah 15a)']
+    sources: ['3 Enoch (Hebrew Book of Enoch)', 'Talmud (Hagigah 15a)'],
+    isApocryphal: true
   },
   {
     id: 'metatron-cube',
@@ -220,294 +63,225 @@ export const TERM_TREE_DATA: TermNode[] = [
     name: 'Metatron\'s Cube',
     description: 'A complex geometric figure containing all five Platonic solids, serving as a sacred template representing the organization and structure of matter in the universe.',
     relatedIds: ['metatron'],
-    sources: ['Canonical Scripture', 'Apocryphal Texts']
+    sources: ['Apocryphal Texts'],
+    isApocryphal: true,
+    bibleVerses: ['This Enoch is Metatron... I have committed unto him seventy names, and I have made his glory like My glory... — 3 Enoch 4:2-5 (https://www.sacred-texts.com/jud/3en/index.htm)']
+  },
+  {
+    id: 'ariel',
+    parentId: 'angel',
+    name: 'Ariel',
+    description: 'Female Archangel Environment, animals, shelter money, supplies',
+    sources: ['Jewish Mysticism Literature'],
+    isApocryphal: true,
+    bibleVerses: ['Woe to Ariel, to Ariel, the city where David dwelt! add ye year to year; let them kill sacrifices. — Isaiah 29:1 (https://www.biblegateway.com/passage/?search=Isaiah+29%3A1)']
+  },
+  {
+    id: 'azrael',
+    parentId: 'angel',
+    name: 'Azrael',
+    description: 'Archangel of Death/Retribution guides souls to heaven, consoles families',
+    translations: [
+      { lang: 'Hebrew', original: 'עַזְרָאֵל', translit: 'Azra\'el', meaning: 'God helps' }
+    ],
+    sources: ['Islamic & Jewish Apocryphal Literature'],
+    isApocryphal: true,
+    bibleVerses: ['And the angel of death, who is charged with taking your souls, will take you. Then to your Lord you will be returned. — Quran 32:11', 'For he hath weighed the world in a balance; by measure hath he measured the times... — 2 Esdras 4:36-37 (https://www.biblegateway.com/passage/?search=2+Esdras+4%3A36-37)']
+  },
+  {
+    id: 'barachiel',
+    parentId: 'angel',
+    name: 'Barachiel',
+    description: 'Lightning and blessings (Seraphim)',
+    sources: ['Apocryphal Texts'],
+    isApocryphal: true,
+    bibleVerses: ['Another angel came and stood over the altar, having a golden censer. Much incense was given to him, that he should add it to the prayers of all the saints on the golden altar which was before the throne. The smoke of the incense, with the prayers of the saints, went up before God out of the angel’s hand. — Revelation 8:3-4 (https://www.biblegateway.com/passage/?search=Revelation+8%3A3-4)']
+  },
+  {
+    id: 'camael',
+    parentId: 'angel',
+    name: 'Camael',
+    description: 'Strength, Courage, war Seen in: Comforted Adam and Eve after they got kicked out of Eden..',
+    sources: ['Apocryphal Texts'],
+    isApocryphal: true,
+    bibleVerses: ['Jacob was left alone, and wrestled with a man there until the breaking of the day. When he saw that he didn’t prevail against him, he touched the hollow of his thigh, and the hollow of Jacob’s thigh was strained, as he wrestled. The man said, “Let me go, for the day breaks.” Jacob said, “I won’t let you go, unless you bless me.” He said to him, “What is your name?” He said, “Jacob”. He said, “Your name will no longer be called Jacob, but Israel; for you have fought with God and with men, and have prevailed.” Jacob asked him, “Please tell me your name.” He said, “Why is it that you ask what my name is?” He blessed him there. Jacob called the name of the place Peniel: for, he said, “I have seen God face to face, and my life is preserved.” — Genesis 32:24-30 (https://www.biblegateway.com/passage/?search=Genesis+32%3A24-30)']
+  },
+  {
+    id: 'chamuel',
+    parentId: 'angel',
+    name: 'Chamuel',
+    description: 'Omniscient vision, ease anxiety, peace, brings love to relationships, and can help someone find a loving partner. Chamuel also provides comfort and protection.',
+    sources: ['Apocryphal Texts'],
+    isApocryphal: true,
+    bibleVerses: ['An angel from heaven appeared to him, strengthening him. — Luke 22:43 (https://www.biblegateway.com/passage/?search=Luke+22%3A43)']
+  },
+  {
+    id: 'gabriel',
+    parentId: 'angel',
+    name: 'Gabriel',
+    description: 'Enoch: over Paradise and the serpents and the Cherubim. aids women who are trying to conceive or adopt a child. Messenger Seen in: brought Mary the news that she would have a son Jesus, Messenger of God. Also known as: Zerachiel, Messenger of God.',
+    translations: [
+      { lang: 'Hebrew', original: 'גַּבְרִיאֵל', translit: 'Gavriel', meaning: 'God is my strength' }
+    ],
+    sources: ['Gospel of Luke', 'Book of Daniel', 'Book of Enoch'],
+    bibleVerses: ['I heard a man’s voice between the banks of the Ulai, which called, and said, “Gabriel, make this man understand the vision.” — Daniel 8:16 (https://www.biblegateway.com/passage/?search=Daniel+8%3A16)', 'The angel answered him, “I am Gabriel, who stands in the presence of God. I was sent to speak to you, and to bring you this good news. — Luke 1:19 (https://www.biblegateway.com/passage/?search=Luke+1%3A19)', 'Now in the sixth month, the angel Gabriel was sent from God to a city of Galilee, named Nazareth, to a virgin pledged to be married to a man whose name was Joseph, of David’s house. The virgin’s name was Mary. Having come in, the angel said to her, “Rejoice, you highly favored one! The Lord is with you. Blessed are you among women!” But when she saw him, she was greatly troubled at the saying, and considered what kind of salutation this might be. The angel said to her, “Don’t be afraid, Mary, for you have found favor with God. Behold, you will conceive in your womb, and give birth to a son, and will call his name ‘Jesus.’ He will be great, and will be called the Son of the Most High. The Lord God will give him the throne of his father, David, and he will reign over the house of Jacob forever. There will be no end to his Kingdom.” Mary said to the angel, “How can this be, seeing I am a virgin?” The angel answered her, “The Holy Spirit will come on you, and the power of the Most High will overshadow you. Therefore also the holy one who is born from you will be called the Son of God. Behold, Elizabeth, your relative, also has conceived a son in her old age; and this is the sixth month with her who was called barren. For nothing spoken by God is impossible.” Mary said, “Behold, the servant of the Lord; let it be done to me according to your word.” The angel departed from her. — Luke 1:26-38 (https://www.biblegateway.com/passage/?search=Luke+1%3A26-38)']
+  },
+  {
+    id: 'haniel',
+    parentId: 'angel',
+    name: 'Haniel',
+    description: 'Female, direct people to god Seen in: Escorted Enoch to heaven.',
+    sources: ['Apocryphal Texts'],
+    isApocryphal: true,
+    bibleVerses: ['Then Samuel took the horn of oil, and anointed him in the middle of his brothers. Then Yahweh’s Spirit came mightily on David from that day forward. So Samuel rose up and went to Ramah. — 1 Samuel 16:13 (https://www.biblegateway.com/passage/?search=1+Samuel+16%3A13)']
+  },
+  {
+    id: 'jegudiel',
+    parentId: 'angel',
+    name: 'Jegudiel',
+    description: 'Encouragement, wisdom, strength to people working for God\'s glory',
+    sources: ['Apocryphal Texts'],
+    isApocryphal: true,
+    bibleVerses: ['“Behold, I send an angel before you, to keep you by the way, and to bring you into the place which I have prepared. Pay attention to him, and listen to his voice. Don’t provoke him, for he will not pardon your disobedience, for my name is in him. — Exodus 23:20-21 (https://www.biblegateway.com/passage/?search=Exodus+23%3A20-21)']
+  },
+  {
+    id: 'jeremiel',
+    parentId: 'angel',
+    name: 'Jeremiel',
+    description: 'hope, visions, dreams, inspires souls to go to heaven',
+    sources: ['Apocryphal Texts'],
+    isApocryphal: true,
+    bibleVerses: ['Then answered the angel Jeremiel, and said, Even when the number of seeds is filled in you: for he hath weighed the world in a balance. — 2 Esdras 4:36 (https://www.biblegateway.com/passage/?search=2+Esdras+4%3A36)']
+  },
+  {
+    id: 'jophiel',
+    parentId: 'angel',
+    name: 'Jophiel',
+    description: 'Female, think beautiful thoughts Seen in: Guards the tree of life.',
+    sources: ['Apocryphal Texts'],
+    isApocryphal: true,
+    bibleVerses: ['So he drove out the man; and he placed cherubim at the east of the garden of Eden, and a flaming sword which turned every way, to guard the way to the tree of life. — Genesis 3:24 (https://www.biblegateway.com/passage/?search=Genesis+3%3A24)']
+  },
+  {
+    id: 'michael',
+    parentId: 'angel',
+    name: 'Michael',
+    description: 'One of the chief archangels in Jewish, Christian, and Islamic traditions, often depicted as the commander of the army of God. In the Bible, he leads the angels against Satan\'s forces in the heavenly war in Revelation, disputes over the body of Moses in Jude, and acts as the protector of Israel in Daniel.',
+    translations: [
+      { lang: 'Hebrew', original: 'מִיכָאֵל', translit: 'Mikha\'el', meaning: 'Who is like God?' }
+    ],
+    sources: ['Book of Daniel', 'Book of Revelation', 'Epistle of Jude'],
+    bibleVerses: ['Michael, one of the holy angels, to wit, he that is set over the best part of mankind and over chaos. — 1 Enoch 20:5 (https://www.sacred-texts.com/bib/boe/boe023.htm)']
+  },
+  {
+    id: 'phanuel',
+    parentId: 'angel',
+    name: 'Phanuel',
+    description: 'One of the four Archangels of the Presence in the Book of Enoch. He is set over repentance and hope of those who inherit eternal life, tasked with casting out the accusing satans and preventing them from standing before the Lord of Spirits.',
+    sources: ['Apocryphal Texts'],
+    isApocryphal: true,
+    bibleVerses: ['It will be that whoever will call on the name of the Lord will be saved.’ — Acts 2:21 (https://www.biblegateway.com/passage/?search=Acts+2%3A21)']
+  },
+  {
+    id: 'raguel',
+    parentId: 'angel',
+    name: 'Raguel',
+    description: 'One of the seven holy archangels listed in the Book of Enoch. He is described as the angel who takes vengeance on the world of the luminaries, acting as a guardian of justice, harmony, and order among the celestial hosts.',
+    sources: ['Apocryphal Texts'],
+    isApocryphal: true,
+    bibleVerses: ['Raguel, one of the holy angels, who takes vengeance on the world of the luminaries. — 1 Enoch 20:4 (https://www.sacred-texts.com/bib/boe/boe023.htm)']
+  },
+  {
+    id: 'ramiel',
+    parentId: 'angel',
+    name: 'Ramiel',
+    description: 'Forgiveness, hope, divine visions, guiding souls into heaven',
+    sources: ['Apocryphal Texts'],
+    isApocryphal: true,
+    bibleVerses: ['Then they will see the Son of Man coming in clouds with great power and glory. Then he will send out his angels, and will gather together his chosen ones from the four winds, from the ends of the earth to the ends of the sky. — Mark 13:26-27 (https://www.biblegateway.com/passage/?search=Mark+13%3A26-27)']
+  },
+  {
+    id: 'raphael',
+    parentId: 'angel',
+    name: 'Raphael',
+    description: 'One of the holy archangels tasked with healing the earth and humanity from physical and spiritual afflictions. Prominently featured in the deuterocanonical Book of Tobit, where he disguises himself as a human to guide Tobias, protect him from the demon Asmodeus, and heal Tobit\'s blindness.',
+    translations: [
+      { lang: 'Hebrew', original: 'רְפָאֵל', translit: 'Refa\'el', meaning: 'God has healed' }
+    ],
+    sources: ['Book of Tobit', 'Book of Enoch'],
+    isApocryphal: true,
+    bibleVerses: ['Raphael, one of the holy angels, who is over the spirits of men. — 1 Enoch 20:3 (https://www.sacred-texts.com/bib/boe/boe023.htm)']
+  },
+  {
+    id: 'saraqael',
+    parentId: 'angel',
+    name: 'Saraqael',
+    description: 'One of the holy archangels in the Book of Enoch. He is set over the spirits of humans who sin in the spirit, serving as a watcher of divine bounds and spiritual transgressions.',
+    sources: ['Apocryphal Texts'],
+    isApocryphal: true,
+    bibleVerses: ['Saraqael, one of the holy angels, who is set over the spirits, who sin in the spirit. — 1 Enoch 20:6 (https://www.sacred-texts.com/bib/boe/boe023.htm)']
+  },
+  {
+    id: 'uriel',
+    parentId: 'angel',
+    name: 'Uriel',
+    description: 'One of the primary archangels, representing the light and fire of God. Set over thunder and terror in apocryphal lore, he serves as the watcher of the world and Tartarus (the underworld), guards the gates of Eden, and guides Ezra through prophetic visions.',
+    translations: [
+      { lang: 'Hebrew', original: 'אוּרִיאֵל', translit: 'Uri\'el', meaning: 'God is my light' }
+    ],
+    sources: ['Second Book of Esdras', 'Book of Enoch'],
+    isApocryphal: true,
+    bibleVerses: ['Uriel, one of the holy angels, who is over clamour and terror. — 1 Enoch 20:2 (https://www.sacred-texts.com/bib/boe/boe023.htm)']
+  },
+  {
+    id: 'zadkiel',
+    parentId: 'angel',
+    name: 'Zadkiel',
+    description: 'The archangel of mercy, benevolence, and freedom. In rabbinic and Christian traditions, he is often identified as the angel who stayed Abraham\'s hand from sacrificing his son Isaac on Mount Moriah, and is associated with memory and forgiveness.',
+    sources: ['Apocryphal Texts'],
+    isApocryphal: true,
+    bibleVerses: ['Yahweh’s angel called to him out of the sky, and said, “Abraham, Abraham!” He said, “Here I am.” He said, “Don’t lay your hand on the boy or do anything to him. For now I know that you fear God, since you have not withheld your son, your only son, from me.” — Genesis 22:11-12 (https://www.biblegateway.com/passage/?search=Genesis+22%3A11-12)']
+  },
+  {
+    id: 'remiel',
+    parentId: 'angel',
+    name: 'Remiel',
+    description: 'One of the holy archangels in the Book of Enoch and the Apocalypse of Baruch. He is set over those who rise from the dead, guiding souls, translating divine visions, and representing the hope of resurrection.',
+    sources: ['Apocryphal Texts'],
+    isApocryphal: true,
+    bibleVerses: ['Remiel, one of the holy angels, whom God set over those who rise. — 1 Enoch 20:8 (https://www.sacred-texts.com/bib/boe/boe023.htm)']
+  },
+  {
+    id: 'cherubim',
+    parentId: 'angel',
+    name: 'Cherubim',
+    description: 'High-ranking celestial beings associated with the presence and glory of God. In Genesis, they are stationed with a flaming sword to guard the way to the Tree of Life. In Ezekiel\'s vision, they appear as multi-faced creatures carrying the divine throne.',
+    sources: ['Bible', 'Apocryphal Texts'],
+    bibleVerses: ['So he drove out the man; and he placed cherubim at the east of the garden of Eden, and a flaming sword which turned every way, to guard the way to the tree of life. — Genesis 3:24 (https://www.biblegateway.com/passage/?search=Genesis+3%3A24)', 'Then I looked, and see, in the expanse that was over the head of the cherubim there appeared above them as it were a sapphire stone, as the appearance of the likeness of a throne. He spoke to the man clothed in linen, and said, “Go in between the whirling wheels, even under the cherub, and fill both your hands with coals of fire from between the cherubim, and scatter them over the city.” He went in as I watched. — Ezekiel 10:1-2 (https://www.biblegateway.com/passage/?search=Ezekiel+10%3A1-2)', 'You shall make two cherubim of hammered gold. You shall make them at the two ends of the mercy seat. Make one cherub at the one end, and one cherub at the other end. You shall make the cherubim on its two ends of one piece with the mercy seat. The cherubim shall spread out their wings upward, covering the mercy seat with their wings, with their faces toward one another. The faces of the cherubim shall be toward the mercy seat. — Exodus 25:18-20 (https://www.biblegateway.com/passage/?search=Exodus+25%3A18-20)']
+  },
+  {
+    id: 'seraphim',
+    parentId: 'angel',
+    name: 'Seraphim',
+    description: 'An order of fiery six-winged angels described in Isaiah\'s vision of the Temple. They hover above the throne of God, continuously chanting \'Holy, holy, holy is the Lord of Hosts,\' and purifying the prophet\'s lips with a burning coal.',
+    sources: ['Bible', 'Apocryphal Texts'],
+    bibleVerses: ['Above him stood the seraphim. Each one had six wings. With two he covered his face. With two he covered his feet. With two he flew. One called to another, and said, “Holy, holy, holy, is Yahweh of Armies! The whole earth is full of his glory!” — Isaiah 6:2-3 (https://www.biblegateway.com/passage/?search=Isaiah+6%3A2-3)', 'Then one of the seraphim flew to me, having a live coal in his hand, which he had taken with the tongs from off the altar. He touched my mouth with it, and said, “Behold, this has touched your lips; and your iniquity is taken away, and your sin forgiven.” — Isaiah 6:6-7 (https://www.biblegateway.com/passage/?search=Isaiah+6%3A6-7)']
+  },
+  {
+    id: 'twenty-four-elders',
+    parentId: 'angel',
+    name: 'Twenty-four Elders',
+    description: 'Elders described in the Book of Revelation who sit on twenty-four thrones surrounding the throne of God. Clad in white garments and wearing golden crowns, they continuously cast their crowns before God in worship, representing the redeemed or divine council.',
+    sources: ['Bible', 'Apocryphal Texts'],
+    bibleVerses: ['Around the throne were twenty-four thrones. On the thrones were twenty-four elders sitting, dressed in white garments, with crowns of gold on their heads. — Revelation 4:4 (https://www.biblegateway.com/passage/?search=Revelation+4%3A4)', 'the twenty-four elders fall down before him who sits on the throne, and worship him who lives forever and ever, and throw their crowns before the throne, saying, — Revelation 4:10 (https://www.biblegateway.com/passage/?search=Revelation+4%3A10)', 'Now when he had taken the book, the four living creatures and the twenty-four elders fell down before the Lamb, each one having a harp, and golden bowls full of incense, which are the prayers of the saints. — Revelation 5:8 (https://www.biblegateway.com/passage/?search=Revelation+5%3A8)']
   },
   {
     id: 'fallen-angel',
-    parentId: 'biblical-enc',
+    parentId: 'biblical-apocryphal',
     name: 'Fallen Angels',
-    description: 'Rebellious spiritual entities cast out of heaven who corrupt humanity, teach forbidden knowledge, and are bound for judgment.'
-  },
-  {
-    id: 'asbeel',
-    parentId: 'fallen-angel',
-    name: 'Asbeel',
-    description: 'Angel of destruction',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'beelzebub',
-    parentId: 'fallen-angel',
-    name: 'Beelzebub',
-    description: 'One of Satan\'s chief lieutenants Seen in: None. Also known as: None.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'asmodeus',
-    parentId: 'fallen-angel',
-    name: 'Asmodeus',
-    description: 'Associated with lust and sexual immorality Seen in: None. Also known as: None.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'grigori',
-    parentId: 'fallen-angel',
-    name: 'Grigori',
-    description: 'Watchers who fell from heaven Seen in: None. Also known as: Watchers who fell from heaven.',
-    sources: ['Book of Enoch', 'Second Book of Enoch']
-  },
-  {
-    id: 'nephilim',
-    parentId: 'fallen-angel',
-    name: 'Nephilim',
-    description: 'Giants who were the offspring of the Grigori and human women Seen in: None. Also known as: None.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'azazel',
-    parentId: 'fallen-angel',
-    name: 'Azazel',
-    description: 'Leader of the Grigori Seen in: None. Also known as: Leader of the fallen angels.',
-    timelineId: 'azazel',
-    sources: ['Book of Enoch 8, 10']
-  },
-  {
-    id: 'samyaza',
-    parentId: 'fallen-angel',
-    name: 'Samyaza',
-    description: 'Second-in-command of the Grigori Seen in: None. Also known as: None.',
-    sources: ['Book of Enoch', 'Book of Giants']
-  },
-  {
-    id: 'araqiel',
-    parentId: 'fallen-angel',
-    name: 'Araqiel',
-    description: 'Fallen angel Seen in: None. Also known as: None.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'armaros',
-    parentId: 'fallen-angel',
-    name: 'Armaros',
-    description: 'Fallen angel Seen in: None. Also known as: None.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'azazeel',
-    parentId: 'fallen-angel',
-    name: 'Azazeel',
-    description: 'Fallen angel (different from the Azazel in the Book of Enoch) Seen in: None. Also known as: None.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'baraqiel',
-    parentId: 'fallen-angel',
-    name: 'Baraqiel',
-    description: 'Fallen angel Seen in: None. Also known as: None.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'barquiel',
-    parentId: 'fallen-angel',
-    name: 'Barquiel',
-    description: 'Fallen angel Seen in: None. Also known as: None.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'kokabel',
-    parentId: 'fallen-angel',
-    name: 'Kokabel',
-    description: 'Fallen angel Seen in: None. Also known as: None.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'penemue',
-    parentId: 'fallen-angel',
-    name: 'Penemue',
-    description: 'Fallen angel Seen in: None. Also known as: None.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'sariel',
-    parentId: 'fallen-angel',
-    name: 'Sariel',
-    description: 'Fallen angel Seen in: None. Also known as: None.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'semyaza',
-    parentId: 'fallen-angel',
-    name: 'Semyaza',
-    description: 'Fallen angel (different from the Samyaza in the Book of Enoch) Seen in: None. Also known as: None.',
-    sources: ['Book of Enoch', 'Book of Giants']
-  },
-  {
-    id: 'turel',
-    parentId: 'fallen-angel',
-    name: 'Turel',
-    description: 'Fallen angel Seen in: None. Also known as: None.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'lucifer',
-    parentId: 'fallen-angel',
-    name: 'Lucifer',
-    description: 'Leader of the angelic rebellion against God. Light bearer, morning star, the dragon, the devil, satan, covering cherub. Syncretized with Zeus, Jupiter, and Baal. Set in Eden, covered in precious stones, on the mountain of God.',
-    translations: [
-      { lang: 'Latin', original: 'Lucifer', translit: 'Lucifer', meaning: 'Light Bringer / Morning Star' }
-    ],
-    relatedIds: ['satan', 'fallen-angel'],
-    sources: ['Book of Isaiah', 'Latin Vulgate Translation']
-  },
-  {
-    id: 'yekun',
-    parentId: 'fallen-angel',
-    name: 'Yekun',
-    description: 'Persuaded and mislead other angels',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'kesabel',
-    parentId: 'fallen-angel',
-    name: 'Kesabel',
-    description: 'Female, seduction',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'gadreel',
-    parentId: 'fallen-angel',
-    name: 'Gadreel',
-    description: 'Teaches weapons of war and killing',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'abaddon',
-    parentId: 'fallen-angel',
-    name: 'Abaddon',
-    description: 'Master destroyer Seen in: Invoked by MOses to destroy Egyptians (red sea).',
-    translations: [
-      { lang: 'Hebrew', original: 'אֲבַדּוֹן', translit: 'Avaddon', meaning: 'Destruction / Place of Ruin' }
-    ],
-    sources: ['Book of Revelation', 'Book of Job']
-  },
-  {
-    id: 'leviathin',
-    parentId: 'fallen-angel',
-    name: 'Leviathin',
-    description: 'Arrogance, Heresy Also known as: Serpent, dragon.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'kasyade',
-    parentId: 'fallen-angel',
-    name: 'Kasyade',
-    description: 'Astrology, strikes on embryos, spirits, souls, and demons',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'semyazza',
-    parentId: 'fallen-angel',
-    name: 'Semyazza',
-    description: 'leader of watcher/fallen, grigori',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'kokabiel',
-    parentId: 'fallen-angel',
-    name: 'Kokabiel',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'tamiel',
-    parentId: 'fallen-angel',
-    name: 'Tamiel',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'daniel',
-    parentId: 'fallen-angel',
-    name: 'Daniel',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'chazaqiel',
-    parentId: 'fallen-angel',
-    name: 'Chazaqiel',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'bragiel',
-    parentId: 'fallen-angel',
-    name: 'Bragiel',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'asael',
-    parentId: 'fallen-angel',
-    name: 'Asael',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'batariel',
-    parentId: 'fallen-angel',
-    name: 'Batariel',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'bezaliel',
-    parentId: 'fallen-angel',
-    name: 'Bezaliel',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'ananiel',
-    parentId: 'fallen-angel',
-    name: 'Ananiel',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'zaqiel',
-    parentId: 'fallen-angel',
-    name: 'Zaqiel',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'shamsiel',
-    parentId: 'fallen-angel',
-    name: 'Shamsiel',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'sathariel',
-    parentId: 'fallen-angel',
-    name: 'Sathariel',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'turiel',
-    parentId: 'fallen-angel',
-    name: 'Turiel',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
-  },
-  {
-    id: 'yomiel',
-    parentId: 'fallen-angel',
-    name: 'Yomiel',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6']
+    description: 'Rebellious spiritual entities cast out of heaven who corrupt humanity, teach forbidden knowledge, and are bound for judgment.',
+    secondaryParentIds: ['aliens'],
+    isApocryphal: true
   },
   {
     id: 'demons',
@@ -518,8 +292,10 @@ export const TERM_TREE_DATA: TermNode[] = [
       { lang: 'Greek', original: 'Δαίμων', translit: 'Daimon', meaning: 'Divine power / Lesser spirit' }
     ],
     relatedIds: ['fallen-angel', 'nephilim-br'],
-    bibleVerses: ['They sacrificed to false gods, which are not God—demons that they had not known, gods that recently appeared... — Deuteronomy 32:17 (https://www.biblegateway.com/passage/?search=Deuteronomy+32%3A17)'],
-    sources: ['Book of Enoch', 'Book of Giants', 'Canonical Gospels']
+    bibleVerses: ['They sacrificed to demons, not God, to gods that they didn’t know, to new gods that came up recently, which your fathers didn’t dread. — Deuteronomy 32:17 (https://www.biblegateway.com/passage/?search=Deuteronomy+32%3A17)', 'The demons begged him, saying, “If you cast us out, permit us to go away into the herd of pigs.” — Matthew 8:31 (https://www.biblegateway.com/passage/?search=Matthew+8%3A31)', 'You believe that God is one. You do well. The demons also believe, and shudder. — James 2:19 (https://www.biblegateway.com/passage/?search=James+2%3A19)'],
+    sources: ['Book of Enoch', 'Book of Giants', 'Canonical Gospels'],
+    secondaryParentIds: ['hauntings-br', 'cryptid-sightings-br'],
+    isApocryphal: true
   },
   {
     id: 'principalities',
@@ -528,493 +304,951 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'High-ranking spiritual forces or rulers of darkness mentioned in biblical theology, believed to hold territorial authority over nations and regions.',
     relatedIds: ['fallen-angel'],
     bibleVerses: ['For our struggle is not against flesh and blood, but against the rulers, against the authorities, against the powers of this dark world and against the spiritual forces of evil in the heavenly realms. — Ephesians 6:12 (https://www.biblegateway.com/passage/?search=Ephesians+6%3A12)'],
-    sources: ['Ephesians 6', 'Colossians 2']
+    sources: ['Ephesians 6', 'Colossians 2'],
+    isApocryphal: true
+  },
+  {
+    id: 'asbeel',
+    parentId: 'fallen-angel',
+    name: 'Asbeel',
+    description: 'Angel of destruction',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
+    isApocryphal: true,
+    bibleVerses: ['He who gave evil counsel to the holy sons of God, and led them astray to defile their bodies with the daughters of men. — 1 Enoch 69:5 (https://www.sacred-texts.com/bib/boe/boe072.htm)']
+  },
+  {
+    id: 'beelzebub',
+    parentId: 'fallen-angel',
+    name: 'Beelzebub',
+    description: 'Originally a Philistine god worshipped at Ekron (Baal-Zebub), later syncretized in Jewish and Christian demonology as a high-ranking prince of demons. Known as the \'Lord of the Flies,\' he is associated with pride, rebellion, and demonic hierarchy.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
+    isApocryphal: true,
+    bibleVerses: ['But when the Pharisees heard it, they said, This fellow doth not cast out devils, but by Beelzebub the prince of the devils. — Matthew 12:24 (https://www.biblegateway.com/passage/?search=Matthew+12%3A24)', 'And Ahaziah fell down through a lattice... and sent messengers, and said unto them, Go, inquire of Baal-zebub the god of Ekron whether I shall recover of this disease. — 2 Kings 1:2 (https://www.biblegateway.com/passage/?search=2+Kings+1%3A2)']
+  },
+  {
+    id: 'asmodeus',
+    parentId: 'fallen-angel',
+    name: 'Asmodeus',
+    description: 'A powerful king of demons prominently featured in the deuterocanonical Book of Tobit and the Testament of Solomon. Associated with lust, wrath, discord, and the disruption of marriages.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
+    isApocryphal: true,
+    bibleVerses: ['Because that she had been married to seven husbands, whom Asmodeus the evil spirit had killed, before they had lain with her. — Tobit 3:8 (https://www.biblegateway.com/passage/?search=Tobit+3%3A8)']
+  },
+  {
+    id: 'grigori',
+    parentId: 'fallen-angel',
+    name: 'Grigori',
+    description: 'An order of angels also known as the Watchers. According to the Book of Enoch, a group of two hundred Grigori led by Semyaza descended to Mount Hermon, took human wives, taught humanity forbidden arts, and fathered the giant Nephilim.',
+    sources: ['Book of Enoch', 'Second Book of Enoch'],
+    isApocryphal: true,
+    bibleVerses: ['These are the Grigori (Watchers), who with their prince Satanail rejected the Lord... and they went down on the earth, and performed a deed outside their covenant... — 2 Enoch 18:3 (https://www.sacred-texts.com/bib/boe/index.htm)']
+  },
+  {
+    id: 'nephilim',
+    parentId: 'fallen-angel',
+    name: 'Nephilim',
+    description: 'The giant offspring of the union between the sons of God (Watchers) and daughters of men as described in Genesis 6 and the Book of Enoch. Their great size and violence filled the earth with bloodshed, prompting the divine judgment of the Flood.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
+    isApocryphal: true,
+    bibleVerses: ['And they became pregnant, and they bare great giants, whose height was three thousand ells: Who consumed all the acquisitions of men. And when men could no longer sustain them, the giants turned against them and devoured mankind. — 1 Enoch 7:2-4 (https://www.sacred-texts.com/bib/boe/boe010.htm)']
+  },
+  {
+    id: 'azazel',
+    parentId: 'fallen-angel',
+    name: 'Azazel',
+    description: 'One of the primary leaders of the fallen Watchers in the Book of Enoch. He is accused of teaching humanity metalworking, weapons of war, cosmetics, and writing, and is associated with the scapegoat ritual in Leviticus 16.',
+    timelineId: 'azazel',
+    sources: ['Book of Leviticus', 'Book of Enoch', 'Apocalypse of Abraham'],
+    isApocryphal: true,
+    bibleVerses: ['And Azâzêl taught men to make swords, and knives, and shields, and breastplates, and made known to them the metals of the earth and the art of working them... — 1 Enoch 8:1 (https://www.sacred-texts.com/bib/boe/boe011.htm)', 'And the Lord said to Raphael: \'Bind Azazel hand and foot, and cast him into the darkness: and make an opening in the desert, which is in Dudael, and cast him therein.\' — 1 Enoch 10:4 (https://www.sacred-texts.com/bib/boe/boe013.htm)']
+  },
+  {
+    id: 'samyaza',
+    parentId: 'fallen-angel',
+    name: 'Samyaza',
+    description: 'The chief leader of the two hundred fallen Watchers who descended to Mount Hermon in the Book of Enoch. He bound the angels to a mutual oath to go through with their plan to take human wives, teaching enchantments and root-cuttings.',
+    sources: ['Book of Enoch', 'Book of Giants'],
+    isApocryphal: true,
+    bibleVerses: ['And Semjâzâ, who was their leader, said unto them: \'I fear ye will not indeed agree to do this deed, and I alone shall have to pay the penalty of a great sin.\' — 1 Enoch 6:3 (https://www.sacred-texts.com/bib/boe/boe009.htm)', 'And Semjâzâ taught enchantments, and root-clippings... — 1 Enoch 8:3 (https://www.sacred-texts.com/bib/boe/boe011.htm)']
+  },
+  {
+    id: 'araqiel',
+    parentId: 'fallen-angel',
+    name: 'Araqiel',
+    description: 'One of the chief fallen Watchers in the Book of Enoch. He is described as teaching humanity the signs of the earth, geomancy, and terrestrial secrets.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
+    isApocryphal: true,
+    bibleVerses: ['And Araqiêl taught the signs of the earth... — 1 Enoch 8:3 (https://www.sacred-texts.com/bib/boe/boe011.htm)']
+  },
+  {
+    id: 'armaros',
+    parentId: 'fallen-angel',
+    name: 'Armaros',
+    description: 'A prominent fallen Watcher listed in the Book of Enoch. He taught humanity the resolving of enchantments, counter-spells, and warding wardcraft.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
+    isApocryphal: true,
+    bibleVerses: ['And Armârôs taught the resolving of enchantments... — 1 Enoch 8:3 (https://www.sacred-texts.com/bib/boe/boe011.htm)']
+  },
+  {
+    id: 'azazeel',
+    parentId: 'fallen-angel',
+    name: 'Azazeel',
+    description: 'An alternative spelling or distinct demonic entity linked to Azazel in various occult traditions and demonological records, associated with wilderness, scapegoats, and desert spirits.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
+    isApocryphal: true,
+    bibleVerses: ['And Azâzêl taught men to make swords, and knives, and shields, and breastplates, and made known to them the metals of the earth and the art of working them... — 1 Enoch 8:1 (https://www.sacred-texts.com/bib/boe/boe011.htm)', 'And the Lord said to Raphael: \'Bind Azazel hand and foot, and cast him into the darkness: and make an opening in the desert, which is in Dudael, and cast him therein.\' — 1 Enoch 10:4 (https://www.sacred-texts.com/bib/boe/boe013.htm)']
+  },
+  {
+    id: 'baraqiel',
+    parentId: 'fallen-angel',
+    name: 'Baraqiel',
+    description: 'One of the chief fallen Watchers in the Book of Enoch. He is responsible for teaching humanity astrology, the observation of the stars, and celestial paths.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
+    isApocryphal: true,
+    bibleVerses: ['And Barâqîjâl taught astrology... — 1 Enoch 8:3 (https://www.sacred-texts.com/bib/boe/boe011.htm)']
+  },
+  {
+    id: 'barquiel',
+    parentId: 'fallen-angel',
+    name: 'Barquiel',
+    description: 'A fallen Watcher listed in the Book of Enoch. He taught humanity the observation of the lightning, weather portents, and electrical phenomena.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
+    isApocryphal: true,
+    bibleVerses: ['And Barâqîjâl taught astrology, and Kôkabîêl the constellations, and Ezêqêêl the knowledge of the clouds... — 1 Enoch 8:3 (https://www.sacred-texts.com/bib/boe/boe011.htm)']
+  },
+  {
+    id: 'kokabel',
+    parentId: 'fallen-angel',
+    name: 'Kokabel',
+    description: 'A chief fallen Watcher in the Book of Enoch. He is described as teaching his disciples the constellations, star configurations, and astronomical lore.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
+    isApocryphal: true,
+    bibleVerses: ['And Kôkabîêl taught the constellations... — 1 Enoch 8:3 (https://www.sacred-texts.com/bib/boe/boe011.htm)']
+  },
+  {
+    id: 'penemue',
+    parentId: 'fallen-angel',
+    name: 'Penemue',
+    description: 'A prominent fallen Watcher in the Book of Enoch. He taught humanity the art of writing with ink and paper, which Enoch condemns as leading people astray, and taught children the secrets of wisdom, sweetness, and bitterness.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
+    isApocryphal: true,
+    bibleVerses: ['He who showed the children of men the bitter and the sweet, and he showed them all the secrets of their wisdom. And he instructed mankind in writing with ink and paper... — 1 Enoch 69:8 (https://www.sacred-texts.com/bib/boe/boe072.htm)']
+  },
+  {
+    id: 'sariel',
+    parentId: 'fallen-angel',
+    name: 'Sariel',
+    description: 'A holy archangel who watches over spirits, but in some traditions listed among the fallen Watchers. In the Book of Enoch, he is credited with teaching humanity the course of the moon and lunar phases.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
+    isApocryphal: true,
+    bibleVerses: ['And Sariêl taught the course of the moon... — 1 Enoch 8:3 (https://www.sacred-texts.com/bib/boe/boe011.htm)', 'Sariel, one of the holy angels, who is set over the spirits, who sin in the spirit. — 1 Enoch 20:6 (https://www.sacred-texts.com/bib/boe/boe023.htm)']
+  },
+  {
+    id: 'semyaza',
+    parentId: 'fallen-angel',
+    name: 'Semyaza',
+    description: 'A fallen angel variant name of Shemyaza/Samyaza referenced in various medieval grimoires and apocryphal lists as a commander of demonic hosts and teacher of magical arts.',
+    sources: ['Book of Enoch', 'Book of Giants'],
+    isApocryphal: true,
+    bibleVerses: ['And Semjâzâ, who was their leader, said unto them: \'I fear ye will not indeed agree to do this deed, and I alone shall have to pay the penalty of a great sin.\' — 1 Enoch 6:3 (https://www.sacred-texts.com/bib/boe/boe009.htm)', 'And Semjâzâ taught enchantments, and root-clippings... — 1 Enoch 8:3 (https://www.sacred-texts.com/bib/boe/boe011.htm)']
+  },
+  {
+    id: 'turel',
+    parentId: 'fallen-angel',
+    name: 'Turel',
+    description: 'One of the fallen Watchers listed in the Book of Enoch. He is associated with teaching the course of the sun and celestial motions.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
+    isApocryphal: true,
+    bibleVerses: ['And these are the names of their chiefs... Turiel... — 1 Enoch 6:7-8 (https://www.sacred-texts.com/bib/boe/boe009.htm)']
+  },
+  {
+    id: 'lucifer',
+    parentId: 'fallen-angel',
+    name: 'Lucifer',
+    description: 'Leader of the angelic rebellion against God. Light bearer, morning star, the dragon, the devil, satan, covering cherub. Syncretized with Zeus, Jupiter, and Baal. Set in Eden, covered in precious stones, on the mountain of God.',
+    translations: [
+      { lang: 'Latin', original: 'Lucifer', translit: 'Lucifer', meaning: 'Light Bringer / Morning Star' }
+    ],
+    relatedIds: ['satan', 'fallen-angel'],
+    sources: ['Book of Isaiah', 'Latin Vulgate Translation'],
+    isApocryphal: true,
+    bibleVerses: ['How art thou fallen from heaven, O Lucifer, son of the morning! how art thou cut down to the ground, which didst weaken the nations! — Isaiah 14:12 (https://www.biblegateway.com/passage/?search=Isaiah+14%3A12)', 'Thou hast been in Eden the garden of God; every precious stone was thy covering... thou art the anointed cherub that covereth... — Ezekiel 28:13-14 (https://www.biblegateway.com/passage/?search=Ezekiel+28%3A13-14)']
+  },
+  {
+    id: 'yekun',
+    parentId: 'fallen-angel',
+    name: 'Yekun',
+    description: 'Persuaded and mislead other angels',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
+    isApocryphal: true,
+    bibleVerses: ['He who led astray all the sons of God, and brought them down to the earth, and led them astray through the daughters of men. — 1 Enoch 69:4 (https://www.sacred-texts.com/bib/boe/boe072.htm)']
+  },
+  {
+    id: 'kesabel',
+    parentId: 'fallen-angel',
+    name: 'Kesabel',
+    description: 'Female, seduction',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
+    isApocryphal: true,
+    bibleVerses: ['He who showed the children of men the path of death... — 1 Enoch 69:7 (https://www.sacred-texts.com/bib/boe/boe072.htm)']
+  },
+  {
+    id: 'gadreel',
+    parentId: 'fallen-angel',
+    name: 'Gadreel',
+    description: 'Teaches weapons of war and killing',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
+    isApocryphal: true,
+    bibleVerses: ['He who showed the children of men all the blows of death, and he led astray Eve, and showed the weapons of death to the sons of men... — 1 Enoch 69:6 (https://www.sacred-texts.com/bib/boe/boe072.htm)']
+  },
+  {
+    id: 'abaddon',
+    parentId: 'fallen-angel',
+    name: 'Abaddon',
+    description: 'Master destroyer Seen in: Invoked by MOses to destroy Egyptians (red sea).',
+    translations: [
+      { lang: 'Hebrew', original: 'אֲבַדּוֹן', translit: 'Avaddon', meaning: 'Destruction / Place of Ruin' }
+    ],
+    sources: ['Book of Revelation', 'Book of Job'],
+    isApocryphal: true,
+    bibleVerses: ['And they had a king over them, which is the angel of the bottomless pit, whose name in the Hebrew tongue is Abaddon, but in the Greek tongue hath his name Apollyon. — Revelation 9:11 (https://www.biblegateway.com/passage/?search=Revelation+9%3A11)', 'Hell and destruction [Hebrew: Abaddon] are before the Lord: how much more then the hearts of the children of men? — Proverbs 15:11 (https://www.biblegateway.com/passage/?search=Proverbs+15%3A11)']
+  },
+  {
+    id: 'leviathin',
+    parentId: 'fallen-angel',
+    name: 'Leviathin',
+    description: 'Arrogance, Heresy Also known as: Serpent, dragon.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
+    isApocryphal: true,
+    bibleVerses: ['Canst thou draw out leviathan with an hook? or his tongue with a cord which thou lettest down? — Job 41:1 (https://www.biblegateway.com/passage/?search=Job+41%3A1)', 'In that day the Lord with his sore and great and strong sword shall punish leviathan the piercing serpent, even leviathan that crooked serpent; and he shall slay the dragon that is in the sea. — Isaiah 27:1 (https://www.biblegateway.com/passage/?search=Isaiah+27%3A1)']
+  },
+  {
+    id: 'kasyade',
+    parentId: 'fallen-angel',
+    name: 'Kasyade',
+    description: 'Astrology, strikes on embryos, spirits, souls, and demons',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
+    isApocryphal: true,
+    bibleVerses: ['He who showed the children of men all the evil blows of spirits and demons, and the blows of the embryo in the womb... — 1 Enoch 69:12 (https://www.sacred-texts.com/bib/boe/boe072.htm)']
+  },
+  {
+    id: 'semyazza',
+    parentId: 'fallen-angel',
+    name: 'Semyazza',
+    description: 'leader of watcher/fallen, grigori',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
+    isApocryphal: true,
+    bibleVerses: ['And Semjâzâ, who was their leader, said unto them: \'I fear ye will not indeed agree to do this deed, and I alone shall have to pay the penalty of a great sin.\' — 1 Enoch 6:3 (https://www.sacred-texts.com/bib/boe/boe009.htm)', 'And Semjâzâ taught enchantments, and root-clippings... — 1 Enoch 8:3 (https://www.sacred-texts.com/bib/boe/boe011.htm)']
+  },
+  {
+    id: 'kokabiel',
+    parentId: 'fallen-angel',
+    name: 'Kokabiel',
+    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
+    isApocryphal: true,
+    bibleVerses: ['And Kôkabîêl taught the constellations... — 1 Enoch 8:3 (https://www.sacred-texts.com/bib/boe/boe011.htm)']
+  },
+  {
+    id: 'tamiel',
+    parentId: 'fallen-angel',
+    name: 'Tamiel',
+    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
+    isApocryphal: true,
+    bibleVerses: ['These are their chiefs of tens... And these are the names: ... Tamiel... — 1 Enoch 6:7-8 (https://www.sacred-texts.com/bib/boe/boe009.htm)']
+  },
+  {
+    id: 'daniel',
+    parentId: 'fallen-angel',
+    name: 'Daniel',
+    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
+    isApocryphal: true,
+    bibleVerses: ['These are their chiefs of tens... And these are the names: ... Daniel... — 1 Enoch 6:7-8 (https://www.sacred-texts.com/bib/boe/boe009.htm)']
+  },
+  {
+    id: 'chazaqiel',
+    parentId: 'fallen-angel',
+    name: 'Chazaqiel',
+    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
+    isApocryphal: true,
+    bibleVerses: ['And Êzêqêêl taught the knowledge of the clouds... — 1 Enoch 8:3 (https://www.sacred-texts.com/bib/boe/boe011.htm)']
+  },
+  {
+    id: 'bragiel',
+    parentId: 'fallen-angel',
+    name: 'Bragiel',
+    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
+    isApocryphal: true,
+    bibleVerses: ['These are their chiefs of tens... And these are the names: ... Barâqîjâl... — 1 Enoch 6:7-8 (https://www.sacred-texts.com/bib/boe/boe009.htm)']
+  },
+  {
+    id: 'asael',
+    parentId: 'fallen-angel',
+    name: 'Asael',
+    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
+    isApocryphal: true,
+    bibleVerses: ['And Azâzêl taught men to make swords, and knives, and shields, and breastplates... And the whole earth has been corrupted through the works that were taught by Azâzêl... — 1 Enoch 8:1 / 10:8 (https://www.sacred-texts.com/bib/boe/boe011.htm)']
+  },
+  {
+    id: 'batariel',
+    parentId: 'fallen-angel',
+    name: 'Batariel',
+    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
+    isApocryphal: true,
+    bibleVerses: ['These are their chiefs of tens... And these are the names: ... Batariel... — 1 Enoch 6:7-8 (https://www.sacred-texts.com/bib/boe/boe009.htm)']
+  },
+  {
+    id: 'bezaliel',
+    parentId: 'fallen-angel',
+    name: 'Bezaliel',
+    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
+    isApocryphal: true,
+    bibleVerses: ['These are their chiefs of tens... And these are the names: ... Bezaliel... — 1 Enoch 6:7-8 (https://www.sacred-texts.com/bib/boe/boe009.htm)']
+  },
+  {
+    id: 'ananiel',
+    parentId: 'fallen-angel',
+    name: 'Ananiel',
+    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
+    isApocryphal: true,
+    bibleVerses: ['These are their chiefs of tens... And these are the names: ... Ananiel... — 1 Enoch 6:7-8 (https://www.sacred-texts.com/bib/boe/boe009.htm)']
+  },
+  {
+    id: 'zaqiel',
+    parentId: 'fallen-angel',
+    name: 'Zaqiel',
+    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
+    isApocryphal: true,
+    bibleVerses: ['These are their chiefs of tens... And these are the names: ... Zaqiel... — 1 Enoch 6:7-8 (https://www.sacred-texts.com/bib/boe/boe009.htm)']
+  },
+  {
+    id: 'shamsiel',
+    parentId: 'fallen-angel',
+    name: 'Shamsiel',
+    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
+    isApocryphal: true,
+    bibleVerses: ['And Shamsiêl taught the signs of the sun... — 1 Enoch 8:3 (https://www.sacred-texts.com/bib/boe/boe011.htm)']
+  },
+  {
+    id: 'sathariel',
+    parentId: 'fallen-angel',
+    name: 'Sathariel',
+    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
+    isApocryphal: true,
+    bibleVerses: ['These are their chiefs of tens... And these are the names: ... Sathariel... — 1 Enoch 6:7-8 (https://www.sacred-texts.com/bib/boe/boe009.htm)']
+  },
+  {
+    id: 'turiel',
+    parentId: 'fallen-angel',
+    name: 'Turiel',
+    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
+    isApocryphal: true,
+    bibleVerses: ['These are their chiefs of tens... And these are the names: ... Turiel... — 1 Enoch 6:7-8 (https://www.sacred-texts.com/bib/boe/boe009.htm)']
+  },
+  {
+    id: 'yomiel',
+    parentId: 'fallen-angel',
+    name: 'Yomiel',
+    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
+    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
+    isApocryphal: true,
+    bibleVerses: ['These are their chiefs of tens... And these are the names: ... Yomiel... — 1 Enoch 6:7-8 (https://www.sacred-texts.com/bib/boe/boe009.htm)']
   },
   {
     id: 'pantheons-mythology-br',
-    parentId: 'biblical-enc',
+    parentId: 'biblical-apocryphal',
     name: 'Pagan Pantheons & Fallen Realms',
-    description: 'Deities, titans, and legendary creatures of ancient polytheistic mythologies, often correlated with pre-flood powers or fallen angelic influences.'
+    description: 'Deities, titans, and legendary creatures of ancient polytheistic mythologies, often correlated with pre-flood powers or fallen angelic influences.',
+    isApocryphal: true
   },
   {
     id: 'greek-pantheon',
     parentId: 'pantheons-mythology-br',
     name: 'Greek Pantheon',
-    description: 'The twelve Olympian gods and associated deities of classical Greek religion ruling from Mount Olympus.'
+    description: 'The twelve Olympian gods and associated deities of classical Greek religion ruling from Mount Olympus.',
+    isApocryphal: true
+  },
+  {
+    id: 'greek-titans',
+    parentId: 'pantheons-mythology-br',
+    name: 'Greek Titans',
+    description: 'The elder deities of Greek mythology who ruled during the Golden Age, led by Cronus, preceding the Olympians.',
+    isApocryphal: true
+  },
+  {
+    id: 'greek-monsters',
+    parentId: 'pantheons-mythology-br',
+    name: 'Greek Monsters & Mortals',
+    description: 'Legendary creatures, monsters, and mortal heroes featured in classical Hellenic epic poetry and folklore.',
+    isApocryphal: true
+  },
+  {
+    id: 'egyptian-pantheon',
+    parentId: 'pantheons-mythology-br',
+    name: 'Egyptian Pantheon',
+    description: 'The ancient Egyptian gods and goddesses representing cosmological forces, kingship, and underworld judgments.',
+    isApocryphal: true
+  },
+  {
+    id: 'norse-pantheon',
+    parentId: 'pantheons-mythology-br',
+    name: 'Norse Pantheon',
+    description: 'The Aesir and Vanir deities of Germanic and Scandinavian mythology ruling over Asgard.',
+    isApocryphal: true
+  },
+  {
+    id: 'hindu-pantheon',
+    parentId: 'pantheons-mythology-br',
+    name: 'Hindu Pantheon',
+    description: 'The divine manifestations, avatars, and cosmic deities of Vedic and classical Hindu traditions.',
+    isApocryphal: true
+  },
+  {
+    id: 'sumerian-kings',
+    parentId: 'pantheons-mythology-br',
+    name: 'Sumerian King List',
+    description: 'Legendary pre-flood and post-flood Mesopotamian rulers claiming immensely long reigns, bridging Sumerian mythology with historical dynastic records.',
+    isApocryphal: true
   },
   {
     id: 'achelous',
     parentId: 'greek-pantheon',
     name: 'Achelous',
     description: 'River god, father of the Sirens',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'adonis',
     parentId: 'greek-pantheon',
     name: 'Adonis',
     description: 'God of beauty and desire',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'aegir',
     parentId: 'greek-pantheon',
     name: 'Aegir',
     description: 'Sea god of the giants',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'ares',
     parentId: 'greek-pantheon',
     name: 'Ares',
     description: 'Greek divinity. Domain: War, bloodshed, and violence. Symbol: Spear. Notable deeds: God of war, bloodshed, and violence. Son of Zeus and Hera..',
-    sources: ["Homer's Iliad", "Hesiod's Theogony"]
+    sources: ["Homer's Iliad", "Hesiod's Theogony"],
+    isApocryphal: true
   },
   {
     id: 'artemis',
     parentId: 'greek-pantheon',
     name: 'Artemis',
     description: 'Greek divinity. Domain: Hunt, the moon, and wild animals. Symbol: Bow and arrow. Notable deeds: Goddess of the hunt, the moon, and wild animals. Daughter of Zeus and Leto. Twin sister of Apollo..',
-    sources: ['Homeric Hymns', "Hesiod's Theogony"]
+    sources: ['Homeric Hymns', "Hesiod's Theogony"],
+    isApocryphal: true
   },
   {
     id: 'athena',
     parentId: 'greek-pantheon',
     name: 'Athena',
     description: 'Greek divinity. Domain: Wisdom, crafts, and warfare. Symbol: Owl. Notable deeds: Goddess of wisdom, crafts, and warfare. Daughter of Zeus and Metis..',
-    sources: ["Homer's Iliad", "Hesiod's Theogony"]
+    sources: ["Homer's Iliad", "Hesiod's Theogony"],
+    isApocryphal: true
   },
   {
     id: 'boreas',
     parentId: 'greek-pantheon',
     name: 'Boreas',
     description: 'North wind god',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'demeter',
     parentId: 'greek-pantheon',
     name: 'Demeter',
     description: 'Greek divinity. Domain: Agriculture and the harvest. Symbol: Wheat. Notable deeds: Goddess of agriculture and the harvest. Daughter of Cronus and Rhea..',
-    sources: ['Homeric Hymns', "Hesiod's Theogony"]
+    sources: ['Homeric Hymns', "Hesiod's Theogony"],
+    isApocryphal: true
   },
   {
     id: 'dionysus',
     parentId: 'greek-pantheon',
     name: 'Dionysus',
     description: 'Greek divinity. Domain: Wine, revelry, and ecstasy. Symbol: Grapes. Notable deeds: God of wine, revelry, and ecstasy. Son of Zeus and Semele..',
-    sources: ["Euripides' Bacchae", 'Homeric Hymns']
+    sources: ["Euripides' Bacchae", 'Homeric Hymns'],
+    isApocryphal: true
   },
   {
     id: 'eros',
     parentId: 'greek-pantheon',
     name: 'Eros',
     description: 'God of love and desire',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'eurus',
     parentId: 'greek-pantheon',
     name: 'Eurus',
     description: 'East wind god',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'gaia',
     parentId: 'greek-pantheon',
     name: 'Gaia',
     description: 'Earth goddess, mother of the Titans',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'hades',
     parentId: 'greek-pantheon',
     name: 'Hades',
     description: 'God of the underworld, death, and riches',
-    sources: ["Homer's Iliad & Odyssey", "Hesiod's Theogony"]
+    sources: ["Homer's Iliad & Odyssey", "Hesiod's Theogony"],
+    isApocryphal: true
   },
   {
     id: 'hecate',
     parentId: 'greek-pantheon',
     name: 'Hecate',
     description: 'Goddess of witchcraft, magic, and the crossroads',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'helios',
     parentId: 'greek-pantheon',
     name: 'Helios',
     description: 'Sun god',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'hephaestus',
     parentId: 'greek-pantheon',
     name: 'Hephaestus',
     description: 'Greek divinity. Domain: Fire, metalworking, and crafts. Symbol: Forge. Notable deeds: God of fire, metalworking, and crafts. Son of Zeus and Hera..',
-    sources: ["Homer's Iliad", "Hesiod's Theogony"]
+    sources: ["Homer's Iliad", "Hesiod's Theogony"],
+    isApocryphal: true
   },
   {
     id: 'hera',
     parentId: 'greek-pantheon',
     name: 'Hera',
     description: 'Greek divinity. Domain: Women, marriage, childbirth, and family. Symbol: Peacock. Notable deeds: Queen of the gods and goddess of women, marriage, childbirth, and family. Daughter of Cronus and Rhea. Wife of Zeus..',
-    sources: ["Homer's Iliad", "Hesiod's Theogony"]
+    sources: ["Homer's Iliad", "Hesiod's Theogony"],
+    isApocryphal: true
   },
   {
     id: 'hermes',
     parentId: 'greek-pantheon',
     name: 'Hermes',
     description: 'Greek divinity. Domain: Messengers, travelers, thieves, and athletes. Symbol: Caduceus. Notable deeds: God of messengers, travelers, thieves, and athletes. Son of Zeus and Maia..',
-    sources: ['Homeric Hymns', "Hesiod's Theogony"]
+    sources: ['Homeric Hymns', "Hesiod's Theogony"],
+    isApocryphal: true
   },
   {
     id: 'hestia',
     parentId: 'greek-pantheon',
     name: 'Hestia',
     description: 'Greek divinity. Domain: Hearth, home, and family. Symbol: Hearth. Notable deeds: Goddess of the hearth, home, and family. Daughter of Cronus and Rhea..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'hypnos',
     parentId: 'greek-pantheon',
     name: 'Hypnos',
     description: 'God of sleep',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'iris',
     parentId: 'greek-pantheon',
     name: 'Iris',
     description: 'Rainbow goddess and messenger of the gods',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'kronos',
     parentId: 'greek-pantheon',
     name: 'Kronos',
     description: 'Titan god of time and harvest',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'maia',
     parentId: 'greek-pantheon',
     name: 'Maia',
     description: 'Titan goddess of spring and fertility',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'metis',
     parentId: 'greek-pantheon',
     name: 'Metis',
     description: 'Titan goddess of wisdom and counsel',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'nike',
     parentId: 'greek-pantheon',
     name: 'Nike',
     description: 'Goddess of victory',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'nyx',
     parentId: 'greek-pantheon',
     name: 'Nyx',
     description: 'Night goddess',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'poseidon',
     parentId: 'greek-pantheon',
     name: 'Poseidon',
     description: 'Greek divinity. Domain: Sea, earthquakes, and horses. Symbol: Trident. Notable deeds: God of the sea, earthquakes, and horses. Son of Cronus and Rhea. Brother of Zeus and Hades..',
-    sources: ["Homer's Iliad & Odyssey", "Hesiod's Theogony"]
+    sources: ["Homer's Iliad & Odyssey", "Hesiod's Theogony"],
+    isApocryphal: true
   },
   {
     id: 'prometheus',
     parentId: 'greek-pantheon',
     name: 'Prometheus',
     description: 'Titan god of foresight and fire',
-    sources: ["Hesiod's Theogony", "Aeschylus' Prometheus Bound"]
+    sources: ["Hesiod's Theogony", "Aeschylus' Prometheus Bound"],
+    isApocryphal: true
   },
   {
     id: 'selene',
     parentId: 'greek-pantheon',
     name: 'Selene',
     description: 'Moon goddess',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'triton',
     parentId: 'greek-pantheon',
     name: 'Triton',
     description: 'Sea god, son of Poseidon',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'zeus',
     parentId: 'greek-pantheon',
     name: 'Zeus',
     description: ' Job/Domain: King of the gods, god of the sky and thunder. Correlated characters: Jupiter (Roman), Odin (Norse), Indra (Hindu).',
-    sources: ["Homer's Iliad", "Hesiod's Theogony"]
+    sources: ["Homer's Iliad", "Hesiod's Theogony"],
+    isApocryphal: true
   },
   {
     id: 'apollo',
     parentId: 'greek-pantheon',
     name: 'Apollo',
     description: ' Job/Domain: God of music, poetry, healing, and prophecy. Correlated characters: Sol (Roman), Baldr (Norse), Surya (Hindu).',
-    sources: ['Homeric Hymns', "Hesiod's Theogony"]
+    sources: ['Homeric Hymns', "Hesiod's Theogony"],
+    isApocryphal: true
   },
   {
     id: 'aphrodite',
     parentId: 'greek-pantheon',
     name: 'Aphrodite',
     description: ' Job/Domain: Goddess of love, beauty, pleasure, and procreation. Correlated characters: Venus (Roman), Freyja (Norse), Lakshmi (Hindu).',
-    sources: ["Homer's Iliad", "Hesiod's Theogony"]
-  },
-  {
-    id: 'greek-titans',
-    parentId: 'pantheons-mythology-br',
-    name: 'Greek Titans',
-    description: 'The elder deities of Greek mythology who ruled during the Golden Age, led by Cronus, preceding the Olympians.'
+    sources: ["Homer's Iliad", "Hesiod's Theogony"],
+    isApocryphal: true
   },
   {
     id: 'oceanus',
     parentId: 'greek-titans',
     name: 'Oceanus',
     description: 'Greek divinity. Domain: Rivers and oceans. Father of all river gods and oceanids.. Symbol: Rivers.',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'rhea',
     parentId: 'greek-titans',
     name: 'Rhea',
     description: 'Greek divinity. Domain: Motherhood and fertility. Mother of the six Olympian gods and goddesses.. Symbol: Earth.',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'themis',
     parentId: 'greek-titans',
     name: 'Themis',
     description: 'Greek divinity. Domain: Law and justice. Mother of the Fates and the Horae.. Symbol: Justice.',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'atlas',
     parentId: 'greek-titans',
     name: 'Atlas',
     description: 'Greek divinity. Domain: Strength and endurance. Symbol: Globe. Notable deeds: Held up the sky and earth after the Titanomachy..',
-    sources: ["Hesiod's Theogony", "Homer's Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'coeus',
     parentId: 'greek-titans',
     name: 'Coeus',
     description: 'Greek divinity. Domain: Titan of intelligence and knowledge. Father of Leto and Asteria.. Symbol: Intelligence and knowledge.',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'crius',
     parentId: 'greek-titans',
     name: 'Crius',
     description: 'Greek divinity. Domain: Rams and constellations. Father of Astraeus and Pallas.. Symbol: Rams.',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'cronus',
     parentId: 'greek-titans',
     name: 'Cronus',
     description: 'Greek divinity. Domain: Time and the harvest. Overthrew his father, Uranus, but was later overthrown by his own son, Zeus.. Symbol: Time.',
-    sources: ["Hesiod's Theogony"]
+    sources: ["Hesiod's Theogony"],
+    isApocryphal: true
   },
   {
     id: 'hyperion',
     parentId: 'greek-titans',
     name: 'Hyperion',
     description: 'Greek divinity. Domain: Sun and light. Father of Helios, Selene, and Eos.. Symbol: Sun.',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'iapetus',
     parentId: 'greek-titans',
     name: 'Iapetus',
     description: 'Greek divinity. Domain: Mortality and human experience. Father of Atlas, Prometheus, Epimetheus, and Menoetius.. Symbol: Mortality.',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'mnemosyne',
     parentId: 'greek-titans',
     name: 'Mnemosyne',
     description: 'Greek divinity. Domain: Memory and remembrance. Mother of the nine Muses.. Symbol: Memory.',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'phoebe',
     parentId: 'greek-titans',
     name: 'Phoebe',
     description: 'Greek divinity. Domain: Intelligence and prophecy. Mother of Leto and Asteria.. Symbol: Intelligence.',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'tethys',
     parentId: 'greek-titans',
     name: 'Tethys',
     description: 'Greek divinity. Domain: Freshwater and rivers. Wife of Oceanus and mother of all river gods and oceanids.. Symbol: Freshwater.',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'thia',
     parentId: 'greek-titans',
     name: 'Thia',
     description: 'Greek divinity. Domain: Light and brightness. Mother of Helios, Selene, and Eos.. Symbol: Light.',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
-  },
-  {
-    id: 'greek-monsters',
-    parentId: 'pantheons-mythology-br',
-    name: 'Greek Monsters & Mortals',
-    description: 'Legendary creatures, monsters, and mortal heroes featured in classical Hellenic epic poetry and folklore.'
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'cerberus',
     parentId: 'greek-monsters',
     name: 'Cerberus',
     description: 'A three-headed dog that guarded the gates of the Underworld. Notable Deeds: Defeated by Heracles during his Twelve Labors..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'centaurs',
     parentId: 'greek-monsters',
     name: 'Centaurs',
     description: 'Half-man, half-horse creatures. Notable Deeds: Known for their wild and barbaric nature..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'chimera',
     parentId: 'greek-monsters',
     name: 'Chimera',
     description: 'A creature with the head of a lion, the body of a goat, and the tail of a serpent. Notable Deeds: Slain by Bellerophon with the help of Pegasus..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'cyclops',
     parentId: 'greek-monsters',
     name: 'Cyclops',
     description: 'One-eyed giants. Notable Deeds: Well-known for their strength and ferocity..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'gorgon',
     parentId: 'greek-monsters',
     name: 'Gorgon',
     description: 'Three sisters with snake hair and the ability to turn people to stone with their gaze. Notable Deeds: Medusa, the most famous Gorgon, was slain by Perseus..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'hydra',
     parentId: 'greek-monsters',
     name: 'Hydra',
     description: 'A nine-headed serpent with poisonous breath. Notable Deeds: Slain by Heracles during his Twelve Labors..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'kraken',
     parentId: 'greek-monsters',
     name: 'Kraken',
     description: 'A giant sea monster with tentacles. Notable Deeds: Said to be so large that it could wrap itself around ships and drag them to the bottom of the ocean..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'minotaur',
     parentId: 'greek-monsters',
     name: 'Minotaur',
     description: 'A half-bull, half-man creature that lived in the Labyrinth. Notable Deeds: Slain by Theseus..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'pegasus',
     parentId: 'greek-monsters',
     name: 'Pegasus',
     description: 'A winged horse. Notable Deeds: Born from the blood of the Gorgon Medusa..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'phoenix',
     parentId: 'greek-monsters',
     name: 'Phoenix',
     description: 'A bird that could resurrect itself from its own ashes. Notable Deeds: Said to be a symbol of immortality and rebirth..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'sphinx',
     parentId: 'greek-monsters',
     name: 'Sphinx',
     description: 'A creature with the body of a lion and the head of a human. Notable Deeds: Asked travelers riddles, and those who could not answer correctly were devoured..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'scylla-and-charybdis',
     parentId: 'greek-monsters',
     name: 'Scylla and Charybdis',
     description: 'Two sea monsters that lived on opposite sides of a narrow strait. Notable Deeds: Odysseus and his crew managed to navigate the strait safely, but lost six of their men to Scylla..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'achilles',
     parentId: 'greek-monsters',
     name: 'Achilles',
     description: 'Greek mortal figure. Deeds: The greatest Greek warrior in the Trojan War. Killed by Paris with an arrow guided by Apollo..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'aeneas',
     parentId: 'greek-monsters',
     name: 'Aeneas',
     description: 'Greek mortal figure. Deeds: Trojan hero who fled Troy after its fall and eventually founded Rome..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'ajax',
     parentId: 'greek-monsters',
     name: 'Ajax',
     description: 'Greek mortal figure. Deeds: One of the greatest Greek warriors in the Trojan War. Committed suicide after being tricked by Athena..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'andromeda',
     parentId: 'greek-monsters',
     name: 'Andromeda',
     description: 'Greek mortal figure. Deeds: Daughter of Cepheus and Cassiopeia who was chained to a rock to be sacrificed to a sea monster, but was rescued by Perseus..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'antigone',
     parentId: 'greek-monsters',
     name: 'Antigone',
     description: 'Greek mortal figure. Deeds: Daughter of Oedipus who buried her brother Polynices against the orders of King Creon..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'ariadne',
     parentId: 'greek-monsters',
     name: 'Ariadne',
     description: 'Greek mortal figure. Deeds: Daughter of King Minos of Crete who helped Theseus escape from the Labyrinth..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'cassandra',
     parentId: 'greek-monsters',
     name: 'Cassandra',
     description: 'Greek mortal figure. Deeds: Daughter of Priam and Hecuba who had the gift of prophecy, but her prophecies were never believed..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'circe',
     parentId: 'greek-monsters',
     name: 'Circe',
     description: 'Greek mortal figure. Deeds: A sorceress who lived on an island in the Mediterranean Sea. She turned Odysseus\'s men into pigs..',
-    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'gk-cecrops',
@@ -1023,7 +1257,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Legendary first King of Athens, depicted as half-man and half-serpent. Founded the Cecropia citadel.',
     layer: 'greek-mythology',
     timelineId: 'gk-cecrops',
-    sources: ['Parian Chronicle / Apollodorus']
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'gk-deucalion-flood',
@@ -1032,7 +1267,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'The Greek flood myth. Zeus sends a deluge to destroy humanity; Deucalion and Pyrrha survive in a chest, landing on Mt. Parnassus.',
     layer: 'greek-mythology',
     timelineId: 'gk-deucalion-flood',
-    sources: ['Parian Chronicle / Ovid']
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'gk-cadmus-thebes',
@@ -1041,7 +1277,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Phoenician prince Cadmus, searcher of Europa, follows a cow to Boeotia and founds the Cadmea (Thebes) after slaying a dragon.',
     layer: 'greek-mythology',
     timelineId: 'gk-cadmus-thebes',
-    sources: ['Parian Chronicle / Herodotus']
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'gk-minos-crete',
@@ -1050,7 +1287,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Reign of King Minos of Crete, builder of the Labyrinth, jailer of the Minotaur, founder of the Cretan thalassocracy.',
     layer: 'greek-mythology',
     timelineId: 'gk-minos-crete',
-    sources: ['Ancient Chronographers / Diodorus']
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'gk-perseus-mycenae',
@@ -1059,7 +1297,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Slayer of Medusa, Perseus founds the city of Mycenae, building its walls with the help of the Cyclopes.',
     layer: 'greek-mythology',
     timelineId: 'gk-perseus-mycenae',
-    sources: ['Pausanias / Apollodorus']
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'gk-heracles-labors',
@@ -1068,7 +1307,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'The era of Heracles (Hercules) and his Twelve Labors performed for King Eurystheus of Mycenae.',
     layer: 'greek-mythology',
     timelineId: 'gk-heracles-labors',
-    sources: ['Apollodorus / Diodorus']
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'gk-theseus-athens',
@@ -1077,7 +1317,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Reign of Theseus, slayer of the Minotaur, unifier of Attica, and hero of Athens.',
     layer: 'greek-mythology',
     timelineId: 'gk-theseus-athens',
-    sources: ["Plutarch's Lives"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'gk-argonauts',
@@ -1086,7 +1327,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Jason and his crew of heroes (including Heracles, Orpheus, Castor, Pollux) sail the Argo to Colchis to retrieve the Golden Fleece.',
     layer: 'greek-mythology',
     timelineId: 'gk-argonauts',
-    sources: ['Apollonius Rhodius']
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'gk-seven-thebes',
@@ -1095,7 +1337,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'The mythological war between the sons of Oedipus (Polynices and Eteocles) for the throne of Thebes.',
     layer: 'greek-mythology',
     timelineId: 'gk-seven-thebes',
-    sources: ['Apollodorus / Sophocles']
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'gk-trojan-war',
@@ -1104,7 +1347,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'The ten-year siege of Troy by the coalition of Greek states led by Agamemnon to retrieve Helen. Concluded by the Trojan Horse.',
     layer: 'greek-mythology',
     timelineId: 'gk-trojan-war',
-    sources: ["Eratosthenes / Homer's Iliad"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'gk-odyssey-wander',
@@ -1113,7 +1357,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'The ten-year voyage of Odysseus to return home to Ithaca after the fall of Troy, encountering cyclopes, sirens, and gods.',
     layer: 'greek-mythology',
     timelineId: 'gk-odyssey-wander',
-    sources: ["Homer's Odyssey"]
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'gk-rome-founded',
@@ -1122,125 +1367,136 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Romulus and Remus, descendants of the Trojan hero Aeneas, found the city of Rome on the Palatine Hill.',
     layer: 'greek-mythology',
     timelineId: 'gk-rome-founded',
-    sources: ['Varro Chronology / Livy']
-  },
-  {
-    id: 'egyptian-pantheon',
-    parentId: 'pantheons-mythology-br',
-    name: 'Egyptian Pantheon',
-    description: 'The ancient Egyptian gods and goddesses representing cosmological forces, kingship, and underworld judgments.'
+    sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    isApocryphal: true
   },
   {
     id: 'amun',
     parentId: 'egyptian-pantheon',
     name: 'Amun',
     description: 'God of the sun and air',
-    sources: ['Egyptian Book of the Dead', 'Pyramid Texts']
+    sources: ['Egyptian Book of the Dead', 'Pyramid Texts'],
+    isApocryphal: true
   },
   {
     id: 'anubis',
     parentId: 'egyptian-pantheon',
     name: 'Anubis',
     description: 'God of death, mummification, and the afterlife Job/Domain: God of death, mummification, and the afterlife. Correlated characters: Osiris (Egyptian), Hermes (Greek), Yama (Hindu).',
-    sources: ['Egyptian Book of the Dead', 'Pyramid Texts']
+    sources: ['Egyptian Book of the Dead', 'Pyramid Texts'],
+    isApocryphal: true
   },
   {
     id: 'atum',
     parentId: 'egyptian-pantheon',
     name: 'Atum',
     description: 'Creator god',
-    sources: ['Egyptian Book of the Dead', 'Pyramid Texts']
+    sources: ['Egyptian Book of the Dead', 'Pyramid Texts'],
+    isApocryphal: true
   },
   {
     id: 'bastet',
     parentId: 'egyptian-pantheon',
     name: 'Bastet',
     description: 'Cat goddess of love, fertility, and protection',
-    sources: ['Egyptian Book of the Dead', 'Pyramid Texts']
+    sources: ['Egyptian Book of the Dead', 'Pyramid Texts'],
+    isApocryphal: true
   },
   {
     id: 'bes',
     parentId: 'egyptian-pantheon',
     name: 'Bes',
     description: 'Protector god of children and childbirth',
-    sources: ['Egyptian Book of the Dead', 'Pyramid Texts']
+    sources: ['Egyptian Book of the Dead', 'Pyramid Texts'],
+    isApocryphal: true
   },
   {
     id: 'geb',
     parentId: 'egyptian-pantheon',
     name: 'Geb',
     description: 'Earth god',
-    sources: ['Egyptian Book of the Dead', 'Pyramid Texts']
+    sources: ['Egyptian Book of the Dead', 'Pyramid Texts'],
+    isApocryphal: true
   },
   {
     id: 'hathor',
     parentId: 'egyptian-pantheon',
     name: 'Hathor',
     description: 'Cow goddess of love, beauty, music, and motherhood',
-    sources: ['Egyptian Book of the Dead', 'Pyramid Texts']
+    sources: ['Egyptian Book of the Dead', 'Pyramid Texts'],
+    isApocryphal: true
   },
   {
     id: 'horus',
     parentId: 'egyptian-pantheon',
     name: 'Horus',
     description: 'Sky god and protector of the pharaoh Job/Domain: God of the sky, kingship, and protection. Correlated characters: Apollo (Greek), Hermes (Greek), Vishnu (Hindu).',
-    sources: ['Pyramid Texts', 'Egyptian Book of the Dead']
+    sources: ['Pyramid Texts', 'Egyptian Book of the Dead'],
+    isApocryphal: true
   },
   {
     id: 'isis',
     parentId: 'egyptian-pantheon',
     name: 'Isis',
     description: 'Goddess of motherhood, magic, healing, and protection Job/Domain: Goddess of motherhood, magic, healing, and protection. Correlated characters: Demeter (Greek), Hera (Greek), Parvati (Hindu).',
-    sources: ['Pyramid Texts', 'Egyptian Book of the Dead']
+    sources: ['Pyramid Texts', 'Egyptian Book of the Dead'],
+    isApocryphal: true
   },
   {
     id: 'maat',
     parentId: 'egyptian-pantheon',
     name: 'Maat',
     description: 'Goddess of truth, justice, and order',
-    sources: ['Egyptian Book of the Dead', 'Pyramid Texts']
+    sources: ['Egyptian Book of the Dead', 'Pyramid Texts'],
+    isApocryphal: true
   },
   {
     id: 'neith',
     parentId: 'egyptian-pantheon',
     name: 'Neith',
     description: 'Goddess of war, wisdom, and crafts',
-    sources: ['Egyptian Book of the Dead', 'Pyramid Texts']
+    sources: ['Egyptian Book of the Dead', 'Pyramid Texts'],
+    isApocryphal: true
   },
   {
     id: 'nephthys',
     parentId: 'egyptian-pantheon',
     name: 'Nephthys',
     description: 'Goddess of mourning and protection',
-    sources: ['Egyptian Book of the Dead', 'Pyramid Texts']
+    sources: ['Egyptian Book of the Dead', 'Pyramid Texts'],
+    isApocryphal: true
   },
   {
     id: 'nut',
     parentId: 'egyptian-pantheon',
     name: 'Nut',
     description: 'Sky goddess',
-    sources: ['Egyptian Book of the Dead', 'Pyramid Texts']
+    sources: ['Egyptian Book of the Dead', 'Pyramid Texts'],
+    isApocryphal: true
   },
   {
     id: 'osiris',
     parentId: 'egyptian-pantheon',
     name: 'Osiris',
     description: 'God of the underworld, agriculture, fertility, and rebirth Job/Domain: God of the underworld, agriculture, fertility, and rebirth. Correlated characters: Dionysus (Greek), Hades (Greek), Osiris (Hindu).',
-    sources: ['Pyramid Texts', "Plutarch's De Iside et Osiride"]
+    sources: ['Pyramid Texts', "Plutarch's De Iside et Osiride"],
+    isApocryphal: true
   },
   {
     id: 'ptah',
     parentId: 'egyptian-pantheon',
     name: 'Ptah',
     description: 'Creator god',
-    sources: ['Egyptian Book of the Dead', 'Pyramid Texts']
+    sources: ['Egyptian Book of the Dead', 'Pyramid Texts'],
+    isApocryphal: true
   },
   {
     id: 'ra',
     parentId: 'egyptian-pantheon',
     name: 'Ra',
     description: 'Sun god Job/Domain: God of the sun, creation, order, and light. Correlated characters: Helios (Greek), Apollo (Greek), Mithra (Persian).',
-    sources: ['Egyptian Book of the Dead', 'Litany of Re']
+    sources: ['Egyptian Book of the Dead', 'Litany of Re'],
+    isApocryphal: true
   },
   {
     id: 'seth',
@@ -1248,165 +1504,168 @@ export const TERM_TREE_DATA: TermNode[] = [
     name: 'Seth',
     description: 'God of chaos, disorder, and the desert',
     timelineId: 'seth',
-    sources: ['Genesis 5:6-8']
+    sources: ['Pyramid Texts', 'Egyptian Book of the Dead'],
+    isApocryphal: true
   },
   {
     id: 'thoth',
     parentId: 'egyptian-pantheon',
     name: 'Thoth',
     description: 'God of wisdom, knowledge, and writing',
-    sources: ['Egyptian Book of the Dead', 'Hermetic Corpus']
-  },
-  {
-    id: 'norse-pantheon',
-    parentId: 'pantheons-mythology-br',
-    name: 'Norse Pantheon',
-    description: 'The Aesir and Vanir deities of Germanic and Scandinavian mythology ruling over Asgard.'
+    sources: ['Egyptian Book of the Dead', 'Hermetic Corpus'],
+    isApocryphal: true
   },
   {
     id: 'baldr',
     parentId: 'norse-pantheon',
     name: 'Baldr',
     description: 'God of light, beauty, and joy',
-    sources: ['Poetic Edda', 'Prose Edda']
+    sources: ['Poetic Edda', 'Prose Edda'],
+    isApocryphal: true
   },
   {
     id: 'loki',
     parentId: 'norse-pantheon',
     name: 'Loki',
     description: 'God of mischief, fire, and chaos Job/Domain: God of mischief, fire, and chaos. Correlated characters: Hermes (Greek), Hephaestus (Greek), Agni (Hindu).',
-    sources: ['Poetic Edda', 'Prose Edda', 'Lokasenna']
+    sources: ['Poetic Edda', 'Prose Edda', 'Lokasenna'],
+    isApocryphal: true
   },
   {
     id: 'odin',
     parentId: 'norse-pantheon',
     name: 'Odin',
     description: 'God of war, wisdom, and magic Job/Domain: God of war, wisdom, and magic. Correlated characters: Zeus (Greek), Jupiter (Roman), Indra (Hindu).',
-    sources: ['Poetic Edda', 'Prose Edda', 'Hávamál']
+    sources: ['Poetic Edda', 'Prose Edda', 'Hávamál'],
+    isApocryphal: true
   },
   {
     id: 'sif',
     parentId: 'norse-pantheon',
     name: 'Sif',
     description: 'Goddess of the harvest and fertility',
-    sources: ['Poetic Edda', 'Prose Edda']
+    sources: ['Poetic Edda', 'Prose Edda'],
+    isApocryphal: true
   },
   {
     id: 'tyr',
     parentId: 'norse-pantheon',
     name: 'Tyr',
     description: 'God of war, law, and justice',
-    sources: ['Poetic Edda', 'Prose Edda']
+    sources: ['Poetic Edda', 'Prose Edda'],
+    isApocryphal: true
   },
   {
     id: 'thor',
     parentId: 'norse-pantheon',
     name: 'Thor',
     description: ' Job/Domain: God of thunder, lightning, storms, and strength. Correlated characters: Hercules (Greek), Herakles (Roman), Indra (Hindu).',
-    sources: ['Poetic Edda', 'Prose Edda', 'Þrymskviða']
+    sources: ['Poetic Edda', 'Prose Edda', 'Þrymskviða'],
+    isApocryphal: true
   },
   {
     id: 'freya',
     parentId: 'norse-pantheon',
     name: 'Freya',
     description: ' Job/Domain: Goddess of love, beauty, fertility, and war. Correlated characters: Aphrodite (Greek), Venus (Roman), Lakshmi (Hindu).',
-    sources: ['Poetic Edda', 'Prose Edda']
+    sources: ['Poetic Edda', 'Prose Edda'],
+    isApocryphal: true
   },
   {
     id: 'frigg',
     parentId: 'norse-pantheon',
     name: 'Frigg',
     description: ' Job/Domain: Goddess of marriage, motherhood, the household, and prophecy. Correlated characters: Hera (Greek), Juno (Roman), Lakshmi (Hindu).',
-    sources: ['Poetic Edda', 'Prose Edda']
-  },
-  {
-    id: 'hindu-pantheon',
-    parentId: 'pantheons-mythology-br',
-    name: 'Hindu Pantheon',
-    description: 'The divine manifestations, avatars, and cosmic deities of Vedic and classical Hindu traditions.'
+    sources: ['Poetic Edda', 'Prose Edda'],
+    isApocryphal: true
   },
   {
     id: 'agni',
     parentId: 'hindu-pantheon',
     name: 'Agni',
     description: 'God of fire',
-    sources: ['The Vedas', 'Mahabharata & Ramayana']
+    sources: ['The Vedas', 'Mahabharata & Ramayana'],
+    isApocryphal: true
   },
   {
     id: 'brahma',
     parentId: 'hindu-pantheon',
     name: 'Brahma',
     description: 'God of creation Job/Domain: God of creation. Correlated characters: Ptah (Egyptian), Chaos (Greek).',
-    sources: ['Manusmriti', 'Brahma Purana']
+    sources: ['Manusmriti', 'Brahma Purana'],
+    isApocryphal: true
   },
   {
     id: 'durga',
     parentId: 'hindu-pantheon',
     name: 'Durga',
     description: 'Goddess of war and protection',
-    sources: ['The Vedas', 'Mahabharata & Ramayana']
+    sources: ['The Vedas', 'Mahabharata & Ramayana'],
+    isApocryphal: true
   },
   {
     id: 'ganesha',
     parentId: 'hindu-pantheon',
     name: 'Ganesha',
     description: 'Elephant-headed god of wisdom, beginnings, and good luck',
-    sources: ['Ganesha Purana', 'Mudgala Purana']
+    sources: ['Ganesha Purana', 'Mudgala Purana'],
+    isApocryphal: true
   },
   {
     id: 'indra',
     parentId: 'hindu-pantheon',
     name: 'Indra',
     description: 'God of thunder, lightning, rain, and war',
-    sources: ['Rigveda', 'Mahabharata']
+    sources: ['Rigveda', 'Mahabharata'],
+    isApocryphal: true
   },
   {
     id: 'krishna',
     parentId: 'hindu-pantheon',
     name: 'Krishna',
     description: 'God of love, compassion, and protection',
-    sources: ['Mahabharata', 'Bhagavad Gita', 'Bhagavata Purana']
+    sources: ['Mahabharata', 'Bhagavad Gita', 'Bhagavata Purana'],
+    isApocryphal: true
   },
   {
     id: 'lakshmi',
     parentId: 'hindu-pantheon',
     name: 'Lakshmi',
     description: 'Goddess of wealth, prosperity, love, and beauty Job/Domain: Goddess of wealth, prosperity, love, and beauty. Correlated characters: Aphrodite (Greek), Venus (Roman), Freya (Norse).',
-    sources: ['The Vedas', 'Mahabharata & Ramayana']
+    sources: ['The Vedas', 'Mahabharata & Ramayana'],
+    isApocryphal: true
   },
   {
     id: 'parvati',
     parentId: 'hindu-pantheon',
     name: 'Parvati',
     description: 'Goddess of love, fertility, and power',
-    sources: ['The Vedas', 'Mahabharata & Ramayana']
+    sources: ['The Vedas', 'Mahabharata & Ramayana'],
+    isApocryphal: true
   },
   {
     id: 'shiva',
     parentId: 'hindu-pantheon',
     name: 'Shiva',
     description: 'God of destruction and transformation Job/Domain: God of destruction and transformation. Correlated characters: Typhon (Greek), Loki (Norse).',
-    sources: ['Rigveda', 'Shiva Purana', 'Mahabharata']
+    sources: ['Rigveda', 'Shiva Purana', 'Mahabharata'],
+    isApocryphal: true
   },
   {
     id: 'vishnu',
     parentId: 'hindu-pantheon',
     name: 'Vishnu',
     description: 'God of preservation and order Job/Domain: God of preservation and order. Correlated characters: Osiris (Egyptian), Dionysus (Greek), Mithra (Persian).',
-    sources: ['Rigveda', 'Bhagavad Gita', 'Vishnu Purana']
+    sources: ['Rigveda', 'Bhagavad Gita', 'Vishnu Purana'],
+    isApocryphal: true
   },
   {
     id: 'saraswati',
     parentId: 'hindu-pantheon',
     name: 'Saraswati',
     description: ' Job/Domain: Goddess of knowledge, wisdom, and the arts. Correlated characters: Athena (Greek), Minerva (Roman), Neith (Egyptian).',
-    sources: ['The Vedas', 'Mahabharata & Ramayana']
-  },
-  {
-    id: 'sumerian-kings',
-    parentId: 'pantheons-mythology-br',
-    name: 'Sumerian King List',
-    description: 'Legendary pre-flood and post-flood Mesopotamian rulers claiming immensely long reigns, bridging Sumerian mythology with historical dynastic records.'
+    sources: ['The Vedas', 'Mahabharata & Ramayana'],
+    isApocryphal: true
   },
   {
     id: 'skl-alulim',
@@ -1415,7 +1674,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'The first king of the first city, Eridu. Legendary reign of 28,800 years before the flood.',
     layer: 'sumerian-kings',
     timelineId: 'skl-alulim',
-    sources: ['Sumerian Kings List (Eridu)']
+    sources: ['Sumerian King List Tablet', 'Mesopotamian Chronology'],
+    isApocryphal: true
   },
   {
     id: 'skl-alalngar',
@@ -1424,7 +1684,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'The second king of Eridu. Reigned for 36,000 years.',
     layer: 'sumerian-kings',
     timelineId: 'skl-alalngar',
-    sources: ['Sumerian Kings List (Eridu)']
+    sources: ['Sumerian King List Tablet', 'Mesopotamian Chronology'],
+    isApocryphal: true
   },
   {
     id: 'skl-enmenluana',
@@ -1433,7 +1694,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'King of Bad-tibira. Recorded as having the longest reign on the Kings List: 43,200 years.',
     layer: 'sumerian-kings',
     timelineId: 'skl-enmenluana',
-    sources: ['Sumerian Kings List (Bad-tibira)']
+    sources: ['Sumerian King List Tablet', 'Mesopotamian Chronology'],
+    isApocryphal: true
   },
   {
     id: 'skl-enmengalana',
@@ -1442,7 +1704,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'King of Bad-tibira. Reigned for 28,800 years.',
     layer: 'sumerian-kings',
     timelineId: 'skl-enmengalana',
-    sources: ['Sumerian Kings List (Bad-tibira)']
+    sources: ['Sumerian King List Tablet', 'Mesopotamian Chronology'],
+    isApocryphal: true
   },
   {
     id: 'skl-dumuzid-shep',
@@ -1451,7 +1714,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Sumerian culture hero and king of Bad-tibira, later divinized as the god of fertility and agriculture. Reigned 36,000 years.',
     layer: 'sumerian-kings',
     timelineId: 'skl-dumuzid-shep',
-    sources: ['Sumerian Kings List (Bad-tibira)']
+    sources: ['Sumerian King List Tablet', 'Mesopotamian Chronology'],
+    isApocryphal: true
   },
   {
     id: 'skl-ensipad-zian-anna',
@@ -1460,7 +1724,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'King of Larag. Reigned for 28,800 years.',
     layer: 'sumerian-kings',
     timelineId: 'skl-ensipad-zian-anna',
-    sources: ['Sumerian Kings List (Larag)']
+    sources: ['Sumerian King List Tablet', 'Mesopotamian Chronology'],
+    isApocryphal: true
   },
   {
     id: 'skl-enmendurana',
@@ -1469,7 +1734,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'King of Sippar. In legend, he was summoned to heaven by the gods Shamash and Adad and taught the secrets of divination. Reigned 21,000 years.',
     layer: 'sumerian-kings',
     timelineId: 'skl-enmendurana',
-    sources: ['Sumerian Kings List (Sippar)']
+    sources: ['Sumerian King List Tablet', 'Mesopotamian Chronology'],
+    isApocryphal: true
   },
   {
     id: 'skl-ubarautu',
@@ -1478,7 +1744,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'The last antediluvian king of Sumer, ruling in Shuruppak. Father of the Sumerian flood survivor Ziusudra. Reigned for 16,252 years until the flood swept over.',
     layer: 'sumerian-kings',
     timelineId: 'skl-ubarautu',
-    sources: ['Sumerian Kings List (Shuruppak)']
+    sources: ['Sumerian King List Tablet', 'Mesopotamian Chronology'],
+    isApocryphal: true
   },
   {
     id: 'skl-jushur',
@@ -1487,7 +1754,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'The first king of the Kish Dynasty after the Great Flood. Reigned for a legendary 1,200 years.',
     layer: 'sumerian-kings',
     timelineId: 'skl-jushur',
-    sources: ['Sumerian Kings List (First Kish)']
+    sources: ['Sumerian King List Tablet', 'Mesopotamian Chronology'],
+    isApocryphal: true
   },
   {
     id: 'skl-lugalbanda',
@@ -1496,7 +1764,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Second king of Uruk, deified ancestor and father of Gilgamesh. Legend states he reigned for 1,200 years.',
     layer: 'sumerian-kings',
     timelineId: 'skl-lugalbanda',
-    sources: ['Sumerian Kings List (First Uruk)']
+    sources: ['Sumerian King List Tablet', 'Mesopotamian Chronology'],
+    isApocryphal: true
   },
   {
     id: 'skl-enmerkar',
@@ -1505,7 +1774,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Builder of Uruk, famous for demanding tribute from Aratta, leading to the confusion of speech (similar to Babel). Reigned 420 years.',
     layer: 'sumerian-kings',
     timelineId: 'skl-enmerkar',
-    sources: ['Sumerian Kings List (First Uruk)']
+    sources: ['Sumerian King List Tablet', 'Mesopotamian Chronology'],
+    isApocryphal: true
   },
   {
     id: 'skl-gilgamesh',
@@ -1514,11 +1784,12 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'King of Uruk, hero of the Epic of Gilgamesh, searcher for immortality. Reigned for 126 years in the Kings List. Historically dated to ~2600 BC.',
     layer: 'sumerian-kings',
     timelineId: 'skl-gilgamesh',
-    sources: ['Sumerian Kings List (First Uruk)']
+    sources: ['Sumerian King List Tablet', 'Mesopotamian Chronology'],
+    isApocryphal: true
   },
   {
     id: 'bloodlines-genealogy',
-    parentId: 'biblical-enc',
+    parentId: 'biblical-apocryphal',
     name: 'Royal & Esoteric Bloodlines',
     description: 'Lineages of power tracing through the Merovingian dynasty, royal houses, and ancient genealogical lineages.'
   },
@@ -1530,13 +1801,20 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
+    id: 'royal-bloodlines',
+    parentId: 'bloodlines-genealogy',
+    name: 'Royal Dynasties & Houses',
+    description: 'Ruling noble houses of Europe, including the Carolingians, Capetians, and subsequent royal lineages of power.',
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
+  },
+  {
     id: 'sarah_damaris',
     parentId: 'merovingian-bloodlines',
     name: 'Sarah Damaris',
     description: 'In alternative historical legends, the daughter of Jesus and Mary Magdalene who fled to Gaul, forming the traditional foundation of the Merovingian lineage.',
     layer: 'merovingian-bloodlines',
     timelineId: 'sarah_damaris',
-    sources: ['Holy Blood, Holy Grail / Lore']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'faramund',
@@ -1545,7 +1823,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Semi-legendary first king of the Salian Franks, traditional ancestor of the Merovingian kings.',
     layer: 'merovingian-bloodlines',
     timelineId: 'faramund',
-    sources: ['Liber Historiae Francorum']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'chlodio',
@@ -1554,7 +1832,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'King of the Salian Franks at Dispargum. Captured Tournai and Cambrai from the Romans.',
     layer: 'merovingian-bloodlines',
     timelineId: 'chlodio',
-    sources: ['Gregory of Tours']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'merovech',
@@ -1563,7 +1841,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'The legendary founder of the Merovingian dynasty, said to have been born of a sea monster Quinotaur.',
     layer: 'merovingian-bloodlines',
     timelineId: 'merovech',
-    sources: ['Gregory of Tours']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'childeric_i',
@@ -1572,7 +1850,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Merovingian King of the Salian Franks. Allied with Romans against Visigoths. His rich tomb was found in 1653.',
     layer: 'merovingian-bloodlines',
     timelineId: 'childeric_i',
-    sources: ['Gregory of Tours']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'clovis_i',
@@ -1581,7 +1859,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'First King of all the Franks, united the tribes, defeated the Romans at Soissons, and converted to Catholicism.',
     layer: 'merovingian-bloodlines',
     timelineId: 'clovis_i',
-    sources: ['Gregory of Tours']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'clotilde',
@@ -1590,7 +1868,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Burgundian princess, wife of Clovis I, who successfully persuaded her husband to convert to Christianity.',
     layer: 'merovingian-bloodlines',
     timelineId: 'clotilde',
-    sources: ['Gregory of Tours']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'chlothar_i',
@@ -1599,7 +1877,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'King of the Franks. Re-united the Frankish realms after his brothers died. Lived 64 years.',
     layer: 'merovingian-bloodlines',
     timelineId: 'chlothar_i',
-    sources: ['Gregory of Tours']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'chilperic_i',
@@ -1608,7 +1886,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'King of Neustria. Famous for his fierce feuds with his brother Sigebert and Queen Brunhilda.',
     layer: 'merovingian-bloodlines',
     timelineId: 'chilperic_i',
-    sources: ['Gregory of Tours']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'chlothar_ii',
@@ -1617,7 +1895,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'King of Neustria, later sole King of the Franks. Promulgated the Edict of Paris.',
     layer: 'merovingian-bloodlines',
     timelineId: 'chlothar_ii',
-    sources: ['Gregory of Tours']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'dagobert_i',
@@ -1626,7 +1904,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'The last Merovingian king to wield real power. Built the Basilica of Saint-Denis.',
     layer: 'merovingian-bloodlines',
     timelineId: 'dagobert_i',
-    sources: ['Gesta Dagoberti']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'clovis_ii',
@@ -1635,7 +1913,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'King of Neustria and Burgundy, ruled under the regency of his mother and Mayor of the Palace Erchinoald.',
     layer: 'merovingian-bloodlines',
     timelineId: 'clovis_ii',
-    sources: ['Gregory of Tours']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'childeric_ii',
@@ -1644,7 +1922,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'King of Austrasia, Neustria, and Burgundy. Assassinated during a hunting trip.',
     layer: 'merovingian-bloodlines',
     timelineId: 'childeric_ii',
-    sources: ['Gregory of Tours']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'dagobert_ii',
@@ -1653,13 +1931,6 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Assassinated Merovingian king. In alternative lore, his survival and lineage form the foundation of the Priory of Sion.',
     layer: 'merovingian-bloodlines',
     timelineId: 'dagobert_ii',
-    sources: ['Gregory of Tours / Lore']
-  },
-  {
-    id: 'royal-bloodlines',
-    parentId: 'bloodlines-genealogy',
-    name: 'Royal Dynasties & Houses',
-    description: 'Ruling noble houses of Europe, including the Carolingians, Capetians, and subsequent royal lineages of power.',
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
@@ -1669,7 +1940,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'King of the Franks, Lombards, and Emperor of the Romans. United Western Europe. Father of Europe.',
     layer: 'royal-bloodlines',
     timelineId: 'charlemagne',
-    sources: ["Einhard's Life of Charlemagne"]
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'judith_flanders',
@@ -1678,7 +1949,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Granddaughter of Charlemagne, Queen of Wessex by marriage, ancestor of the English royal line.',
     layer: 'royal-bloodlines',
     timelineId: 'judith_flanders',
-    sources: ['Anglo-Saxon Chronicle']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'alfred_the_great',
@@ -1687,7 +1958,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'King of the Anglo-Saxons, defender of England against the Vikings, and promoter of literacy. Lived 50 years.',
     layer: 'royal-bloodlines',
     timelineId: 'alfred_the_great',
-    sources: ["Asser's Life of King Alfred"]
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'edward_elder',
@@ -1696,7 +1967,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'King of the Anglo-Saxons, conquered Danish-held territories in East Anglia and the Midlands.',
     layer: 'royal-bloodlines',
     timelineId: 'edward_elder',
-    sources: ['Anglo-Saxon Chronicle']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'edmund_i',
@@ -1705,7 +1976,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'King of the English, conquered Strathclyde and established political control over northern realms.',
     layer: 'royal-bloodlines',
     timelineId: 'edmund_i',
-    sources: ['Anglo-Saxon Chronicle']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'edgar_peaceful',
@@ -1714,7 +1985,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'King of the English. His reign marked the apex of Anglo-Saxon unity and peace.',
     layer: 'royal-bloodlines',
     timelineId: 'edgar_peaceful',
-    sources: ['Anglo-Saxon Chronicle']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'aethelred_unready',
@@ -1723,7 +1994,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'King of the English. Paid Danegeld to buy off Viking raiders; reign plagued by Danish incursions.',
     layer: 'royal-bloodlines',
     timelineId: 'aethelred_unready',
-    sources: ['Anglo-Saxon Chronicle']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'edmund_ironside',
@@ -1732,7 +2003,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'King of the English. Led fierce resistance against Danish King Cnut, earning the nickname Ironside.',
     layer: 'royal-bloodlines',
     timelineId: 'edmund_ironside',
-    sources: ['Anglo-Saxon Chronicle']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'edward_exile',
@@ -1741,7 +2012,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Son of Edmund Ironside. Fled to Hungary during Cnut\'s reign and returned to England late in life.',
     layer: 'royal-bloodlines',
     timelineId: 'edward_exile',
-    sources: ['Anglo-Saxon Chronicle']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'margaret_scotland',
@@ -1750,7 +2021,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'English princess, Queen of Scotland, canonized saint who introduced Catholic reforms to Scotland.',
     layer: 'royal-bloodlines',
     timelineId: 'margaret_scotland',
-    sources: ['Life of Saint Margaret']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'malcolm_iii',
@@ -1759,7 +2030,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'King of Scots, overthrew Macbeth, married Margaret of Scotland.',
     layer: 'royal-bloodlines',
     timelineId: 'malcolm_iii',
-    sources: ['Chronicles of Scotland']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'matilda_scotland',
@@ -1768,7 +2039,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Daughter of Malcolm III and Margaret, Queen of England, married King Henry I.',
     layer: 'royal-bloodlines',
     timelineId: 'matilda_scotland',
-    sources: ['William of Malmesbury']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'henry_i',
@@ -1777,7 +2048,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'King of England, son of William the Conqueror, consolidated royal administration.',
     layer: 'royal-bloodlines',
     timelineId: 'henry_i',
-    sources: ['Orderic Vitalis']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'william_conqueror',
@@ -1786,7 +2057,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Duke of Normandy, conquered England in 1066, built the Tower of London, compiled Domesday Book.',
     layer: 'royal-bloodlines',
     timelineId: 'william_conqueror',
-    sources: ['William of Poitiers']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'empress_matilda',
@@ -1795,7 +2066,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Daughter of Henry I, Holy Roman Empress, claimant to the English throne during "The Anarchy" civil war.',
     layer: 'royal-bloodlines',
     timelineId: 'empress_matilda',
-    sources: ['Gesta Stephani']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'henry_ii',
@@ -1804,7 +2075,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'First Plantagenet King of England, ruled vast Angevin Empire, clashed with Thomas Becket.',
     layer: 'royal-bloodlines',
     timelineId: 'henry_ii',
-    sources: ['Chronicles of Henry II']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'king_john',
@@ -1813,7 +2084,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'King of England, sealed Magna Carta at Runnymede under pressure from rebel barons.',
     layer: 'royal-bloodlines',
     timelineId: 'king_john',
-    sources: ['Roger of Wendover']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'henry_iii',
@@ -1822,7 +2093,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'King of England, rebuilt Westminster Abbey, faced Simon de Montfort\'s parliament reforms.',
     layer: 'royal-bloodlines',
     timelineId: 'henry_iii',
-    sources: ['Matthew Paris']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'edward_i',
@@ -1831,7 +2102,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'King of England, conquered Wales, fought William Wallace in Scotland, established Model Parliament.',
     layer: 'royal-bloodlines',
     timelineId: 'edward_i',
-    sources: ['Chronicles of Edward I']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'edward_ii',
@@ -1840,7 +2111,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'King of England, defeated at Bannockburn, deposed by his wife Isabella and Roger Mortimer.',
     layer: 'royal-bloodlines',
     timelineId: 'edward_ii',
-    sources: ['Vita Edwardi Secundi']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'edward_iii',
@@ -1849,7 +2120,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'King of England. Claimed French crown, starting Hundred Years\' War. Created Order of the Garter.',
     layer: 'royal-bloodlines',
     timelineId: 'edward_iii',
-    sources: ["Jean Froissart's Chronicles"]
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'john_of_gaunt',
@@ -1858,7 +2129,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Duke of Lancaster, son of Edward III, ancestor of Lancaster kings and Beaufort line.',
     layer: 'royal-bloodlines',
     timelineId: 'john_of_gaunt',
-    sources: ["Froissart's Chronicles"]
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'john_beaufort',
@@ -1867,7 +2138,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Eldest son of John of Gaunt and Katherine Swynford, legitimized by Richard II.',
     layer: 'royal-bloodlines',
     timelineId: 'john_beaufort',
-    sources: ['Official Records']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'somerset_pat',
@@ -1876,7 +2147,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Military commander in France, father of Margaret Beaufort.',
     layer: 'royal-bloodlines',
     timelineId: 'somerset_pat',
-    sources: ['War Records']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'margaret_beaufort',
@@ -1885,7 +2156,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Matriarch of the House of Tudor, mother of King Henry VII. Major figure in Wars of the Roses.',
     layer: 'royal-bloodlines',
     timelineId: 'margaret_beaufort',
-    sources: ['Tudor Biographies']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'henry_vii',
@@ -1894,7 +2165,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'First Tudor King, won crown at Bosworth Field, ended Wars of the Roses by marrying Elizabeth of York.',
     layer: 'royal-bloodlines',
     timelineId: 'henry_vii',
-    sources: ['Polydore Vergil']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'henry_viii',
@@ -1903,7 +2174,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'King of England, broke from Rome to establish Church of England, married six times. Rule of reform.',
     layer: 'royal-bloodlines',
     timelineId: 'henry_viii',
-    sources: ["Edward Hall's Chronicle"]
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'elizabeth_i',
@@ -1912,7 +2183,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'The Virgin Queen. Defeated Spanish Armada, presided over Elizabethan golden age of literature.',
     layer: 'royal-bloodlines',
     timelineId: 'elizabeth_i',
-    sources: ['William Camden']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'mary_queen_of_scots',
@@ -1921,7 +2192,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Queen of Scotland, claimant to English throne, executed by Elizabeth I.',
     layer: 'royal-bloodlines',
     timelineId: 'mary_queen_of_scots',
-    sources: ['George Buchanan']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'james_vi_i',
@@ -1930,7 +2201,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Union of Crowns (Scotland & England), commissioned King James Bible translation.',
     layer: 'royal-bloodlines',
     timelineId: 'james_vi_i',
-    sources: ['State Papers']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'elizabeth_stuart',
@@ -1939,7 +2210,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'The Winter Queen of Bohemia, daughter of James I, grandmother of King George I.',
     layer: 'royal-bloodlines',
     timelineId: 'elizabeth_stuart',
-    sources: ['Letters of Elizabeth Stuart']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'sophia_hanover',
@@ -1948,7 +2219,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Electress of Hanover, declared heiress of Great Britain by Act of Settlement 1701.',
     layer: 'royal-bloodlines',
     timelineId: 'sophia_hanover',
-    sources: ['Memoirs of Sophia']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'george_i',
@@ -1957,7 +2228,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'First Hanoverian King of Great Britain. Did not speak fluent English, relied on Cabinet government.',
     layer: 'royal-bloodlines',
     timelineId: 'george_i',
-    sources: ['Ragnhild Hatton']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'george_ii',
@@ -1966,7 +2237,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Last British monarch to lead an army in battle (Dettingen). Reigned 33 years.',
     layer: 'royal-bloodlines',
     timelineId: 'george_ii',
-    sources: ["Lord Hervey's Memoirs"]
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'frederick_prince',
@@ -1975,7 +2246,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Eldest son of George II, pre-deceased his father; father of King George III.',
     layer: 'royal-bloodlines',
     timelineId: 'frederick_prince',
-    sources: ['Court Journals']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'george_iii',
@@ -1984,7 +2255,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'King during American Revolution and Napoleonic Wars. Longest-reigning king (59 years).',
     layer: 'royal-bloodlines',
     timelineId: 'george_iii',
-    sources: ['Letters of George III']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'edward_kent',
@@ -1993,7 +2264,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Fourth son of George III, military commander in Canada, father of Queen Victoria.',
     layer: 'royal-bloodlines',
     timelineId: 'edward_kent',
-    sources: ['Royal Archives']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'queen_victoria',
@@ -2002,7 +2273,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Empress of India. Her reign of 63 years marked the expansion of the British Empire. Grandmother of Europe.',
     layer: 'royal-bloodlines',
     timelineId: 'queen_victoria',
-    sources: ["Queen Victoria's Journals"]
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'edward_vii',
@@ -2011,7 +2282,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'First monarch of House of Saxe-Coburg and Gotha (later Windsor), fostered entente cordiale.',
     layer: 'royal-bloodlines',
     timelineId: 'edward_vii',
-    sources: ['Philip Magnus']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'george_v',
@@ -2020,7 +2291,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'King during WWI. Changed royal house name to Windsor. Inaugurated Christmas broadcasts.',
     layer: 'royal-bloodlines',
     timelineId: 'george_v',
-    sources: ['Harold Nicolson']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'george_vi',
@@ -2029,7 +2300,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'King during WWII. Symbol of national resolve after his brother abdicated. Lived 56 years.',
     layer: 'royal-bloodlines',
     timelineId: 'george_vi',
-    sources: ['John Wheeler-Bennett']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'queen_elizabeth_ii',
@@ -2038,7 +2309,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Britain\'s longest-reigning monarch (70 years), oversaw post-war transition and Commonwealth growth.',
     layer: 'royal-bloodlines',
     timelineId: 'queen_elizabeth_ii',
-    sources: ['Official Records']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'king_charles_iii',
@@ -2047,20 +2318,14 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Current reigning Monarch of the United Kingdom and Commonwealth realms, crowned in 2023.',
     layer: 'royal-bloodlines',
     timelineId: 'king_charles_iii',
-    sources: ['Official Records']
-  },
-  {
-    id: 'ufos-anomalies',
-    name: 'UFOs & Anomalies',
-    description: 'Aerial phenomena, declassified files, crop circles, and physical anomalies associated with unexplained intelligence.',
-    relatedIds: ['dumbs', 'google-blurred', 'ley-lines']
+    sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },
   {
     id: 'aliens',
-    parentId: 'ufos-anomalies',
+    parentId: 'supernatural-anomalies',
     name: 'Extraterrestrial Beings',
     description: 'Unidentified biological or interdimensional entities associated with UFO phenomena and close encounters.',
-    sources: ['MUFON (Mutual UFO Network) Database']
+    secondaryParentIds: ['fallen-angel']
   },
   {
     id: 'greys',
@@ -2106,10 +2371,10 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'space-anomalies-br',
-    parentId: 'ufos-anomalies',
+    parentId: 'supernatural-anomalies',
     name: 'Space-Time Anomalies',
     description: 'Phenomena dealing with portals, dimensional rifts, wormholes, and the structural boundaries of space-time.',
-    sources: ['MUFON (Mutual UFO Network) Database']
+    secondaryParentIds: ['megaliths-structures']
   },
   {
     id: 'wormholes',
@@ -2144,26 +2409,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Astrophysics Literature', 'Theoretical Physics Papers']
   },
   {
-    id: 'cryptids-hauntings',
-    name: 'Cryptids & Hauntings',
-    description: 'Elusive biological creatures and spiritual/paranormal geographic hot spots.',
-    relatedIds: ['underworld', 'national-parks', 'burial-mounds']
-  },
-  {
-    id: 'ancient-sites',
-    name: 'Ancient Sites & Megaliths',
-    description: 'Physical ruins, burial mounds, rock art, and lost technologies left behind by prior civilizations.',
-    relatedIds: ['biblical-enc', 'ley-lines', 'burial-mounds']
-  },
-  {
-    id: 'earth-energies',
-    name: 'Earth Energies & Operations',
-    description: 'Geomagnetic ley lines, deep underground military facilities, and impact anomalies.',
-    relatedIds: ['ufos-anomalies', 'dumbs', 'google-blurred']
-  },
-  {
     id: 'biblical-figures',
-    parentId: 'biblical-enc',
+    parentId: 'biblical-apocryphal',
     name: 'Biblical Figures',
     description: 'Key historical patriarchs and historical personalities mentioned in the biblical record.',
     layer: 'Biblical Figures'
@@ -2175,7 +2422,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'The first human created by God. Lived 930 years.',
     layer: 'biblical-patriarchs',
     timelineId: 'adam',
-    sources: ['Genesis 5:3-5']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Yahweh God formed man from the dust of the ground, and breathed into his nostrils the breath of life; and man became a living soul. — Genesis 2:7 (https://www.biblegateway.com/passage/?search=Genesis+2%3A7)', 'By the sweat of your face will you eat bread until you return to the ground, for out of it you were taken. For you are dust, and to dust you shall return.” — Genesis 3:19 (https://www.biblegateway.com/passage/?search=Genesis+3%3A19)', 'So also it is written, “The first man, Adam, became a living soul.” The last Adam became a life-giving spirit. — 1 Corinthians 15:45 (https://www.biblegateway.com/passage/?search=1+Corinthians+15%3A45)']
   },
   {
     id: 'eve',
@@ -2184,7 +2432,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'The first woman, created by God from Adam\'s rib. Mother of Cain, Abel, Seth, and others.',
     layer: 'biblical-patriarchs',
     timelineId: 'eve',
-    sources: ['Genesis 2:21-25, 3:20']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Yahweh God made a woman from the rib which he had taken from the man, and brought her to the man. — Genesis 2:22 (https://www.biblegateway.com/passage/?search=Genesis+2%3A22)', 'The man called his wife Eve because she would be the mother of all the living. — Genesis 3:20 (https://www.biblegateway.com/passage/?search=Genesis+3%3A20)', 'But I am afraid that somehow, as the serpent deceived Eve in his craftiness, so your minds might be corrupted from the simplicity that is in Christ. — 2 Corinthians 11:3 (https://www.biblegateway.com/passage/?search=2+Corinthians+11%3A3)']
   },
   {
     id: 'cain',
@@ -2193,7 +2442,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Eldest son of Adam and Eve. Slew his brother Abel and was marked by God.',
     layer: 'biblical-patriarchs',
     timelineId: 'cain',
-    sources: ['Genesis 4:1-16']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['The man knew Eve his wife. She conceived, and gave birth to Cain, and said, “I have gotten a man with Yahweh’s help.” — Genesis 4:1 (https://www.biblegateway.com/passage/?search=Genesis+4%3A1)', 'Cain said to Abel, his brother, “Let’s go into the field.” While they were in the field, Cain rose up against Abel, his brother, and killed him. — Genesis 4:8 (https://www.biblegateway.com/passage/?search=Genesis+4%3A8)', 'unlike Cain, who was of the evil one, and killed his brother. Why did he kill him? Because his deeds were evil, and his brother’s righteous. — 1 John 3:12 (https://www.biblegateway.com/passage/?search=1+John+3%3A12)']
   },
   {
     id: 'abel',
@@ -2202,7 +2452,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Second son of Adam and Eve. A keeper of sheep whose offering was accepted by God, slain by Cain out of jealousy.',
     layer: 'biblical-patriarchs',
     timelineId: 'abel',
-    sources: ['Genesis 4:2-8']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Again she gave birth, to Cain’s brother Abel. Abel was a keeper of sheep, but Cain was a tiller of the ground. — Genesis 4:2 (https://www.biblegateway.com/passage/?search=Genesis+4%3A2)', 'that on you may come all the righteous blood shed on the earth, from the blood of righteous Abel to the blood of Zachariah son of Barachiah, whom you killed between the sanctuary and the altar. — Matthew 23:35 (https://www.biblegateway.com/passage/?search=Matthew+23%3A35)', 'By faith, Abel offered to God a more excellent sacrifice than Cain, through which he had testimony given to him that he was righteous, God testifying with respect to his gifts; and through it he, being dead, still speaks. — Hebrews 11:4 (https://www.biblegateway.com/passage/?search=Hebrews+11%3A4)']
   },
   {
     id: 'enosh',
@@ -2211,7 +2462,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Son of Seth. During his time, people began to call upon the name of the Lord. Lived 905 years.',
     layer: 'biblical-patriarchs',
     timelineId: 'enosh',
-    sources: ['Genesis 5:9-11']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['A son was also born to Seth, and he named him Enosh. At that time men began to call on Yahweh’s name. — Genesis 4:26 (https://www.biblegateway.com/passage/?search=Genesis+4%3A26)', 'Seth lived one hundred five years, then became the father of Enosh. Seth lived after he became the father of Enosh eight hundred seven years, and became the father of other sons and daughters. All of the days of Seth were nine hundred twelve years, then he died. — Genesis 5:6-8 (https://www.biblegateway.com/passage/?search=Genesis+5%3A6-8)', 'the son of Enos, the son of Seth, the son of Adam, the son of God. — Luke 3:38 (https://www.biblegateway.com/passage/?search=Luke+3%3A38)']
   },
   {
     id: 'kenan',
@@ -2220,7 +2472,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Son of Enosh. Lived 910 years.',
     layer: 'biblical-patriarchs',
     timelineId: 'kenan',
-    sources: ['Genesis 5:12-14']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Enosh lived ninety years, and became the father of Kenan. Enosh lived after he became the father of Kenan, eight hundred fifteen years, and became the father of other sons and daughters. All of the days of Enosh were nine hundred five years, then he died. Kenan lived seventy years, then became the father of Mahalalel. Kenan lived after he became the father of Mahalalel eight hundred forty years, and became the father of other sons and daughters and all of the days of Kenan were nine hundred ten years, then he died. — Genesis 5:9-14 (https://www.biblegateway.com/passage/?search=Genesis+5%3A9-14)', 'Kenan, Mahalalel, Jared, — 1 Chronicles 1:2 (https://www.biblegateway.com/passage/?search=1+Chronicles+1%3A2)', 'the son of Methuselah, the son of Enoch, the son of Jared, the son of Mahalaleel, the son of Cainan, — Luke 3:37 (https://www.biblegateway.com/passage/?search=Luke+3%3A37)']
   },
   {
     id: 'mahalalel',
@@ -2229,7 +2482,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Son of Kenan. Lived 895 years.',
     layer: 'biblical-patriarchs',
     timelineId: 'mahalalel',
-    sources: ['Genesis 5:15-17']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Mahalalel lived sixty-five years, then became the father of Jared. Mahalalel lived after he became the father of Jared eight hundred thirty years, and became the father of other sons and daughters. All of the days of Mahalalel were eight hundred ninety-five years, then he died. — Genesis 5:15-17 (https://www.biblegateway.com/passage/?search=Genesis+5%3A15-17)', 'Kenan, Mahalalel, Jared, — 1 Chronicles 1:2 (https://www.biblegateway.com/passage/?search=1+Chronicles+1%3A2)', 'the son of Methuselah, the son of Enoch, the son of Jared, the son of Mahalaleel, the son of Cainan, — Luke 3:37 (https://www.biblegateway.com/passage/?search=Luke+3%3A37)']
   },
   {
     id: 'jared',
@@ -2238,7 +2492,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Son of Mahalalel. Lived 962 years.',
     layer: 'biblical-patriarchs',
     timelineId: 'jared',
-    sources: ['Genesis 5:18-20']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Jared lived one hundred sixty-two years, then became the father of Enoch. Jared lived after he became the father of Enoch eight hundred years, and became the father of other sons and daughters. All of the days of Jared were nine hundred sixty-two years, then he died. — Genesis 5:18-20 (https://www.biblegateway.com/passage/?search=Genesis+5%3A18-20)', 'Kenan, Mahalalel, Jared, — 1 Chronicles 1:2 (https://www.biblegateway.com/passage/?search=1+Chronicles+1%3A2)', 'the son of Methuselah, the son of Enoch, the son of Jared, the son of Mahalaleel, the son of Cainan, — Luke 3:37 (https://www.biblegateway.com/passage/?search=Luke+3%3A37)']
   },
   {
     id: 'methuselah',
@@ -2247,7 +2502,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Son of Enoch. The longest-lived human in biblical records. Died in the year of the Great Flood. Lived 969 years.',
     layer: 'biblical-patriarchs',
     timelineId: 'methuselah',
-    sources: ['Genesis 5:25-27']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Enoch lived sixty-five years, then became the father of Methuselah. After Methuselah’s birth, Enoch walked with God for three hundred years, and became the father of more sons and daughters. All the days of Enoch were three hundred sixty-five years. Enoch walked with God, and he was not found, for God took him. Methuselah lived one hundred eighty-seven years, then became the father of Lamech. Methuselah lived after he became the father of Lamech seven hundred eighty-two years, and became the father of other sons and daughters. All the days of Methuselah were nine hundred sixty-nine years, then he died. — Genesis 5:21-27 (https://www.biblegateway.com/passage/?search=Genesis+5%3A21-27)', 'Enoch, Methuselah, Lamech, — 1 Chronicles 1:3 (https://www.biblegateway.com/passage/?search=1+Chronicles+1%3A3)', 'the son of Methuselah, the son of Enoch, the son of Jared, the son of Mahalaleel, the son of Cainan, — Luke 3:37 (https://www.biblegateway.com/passage/?search=Luke+3%3A37)']
   },
   {
     id: 'lamech',
@@ -2256,7 +2512,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Son of Methuselah and father of Noah. Lived 777 years.',
     layer: 'biblical-patriarchs',
     timelineId: 'lamech',
-    sources: ['Genesis 5:28-31']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Lamech lived one hundred eighty-two years, then became the father of a son. He named him Noah, saying, “This one will comfort us in our work and in the toil of our hands, caused by the ground which Yahweh has cursed.” Lamech lived after he became the father of Noah five hundred ninety-five years, and became the father of other sons and daughters. All the days of Lamech were seven hundred seventy-seven years, then he died. — Genesis 5:28-31 (https://www.biblegateway.com/passage/?search=Genesis+5%3A28-31)', 'Enoch, Methuselah, Lamech, — 1 Chronicles 1:3 (https://www.biblegateway.com/passage/?search=1+Chronicles+1%3A3)', 'the son of Cainan, the son of Arphaxad, the son of Shem, the son of Noah, the son of Lamech, — Luke 3:36 (https://www.biblegateway.com/passage/?search=Luke+3%3A36)']
   },
   {
     id: 'shem',
@@ -2265,7 +2522,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Son of Noah, ancestor of the Semitic peoples. Survived the Flood. Lived 600 years.',
     layer: 'biblical-patriarchs',
     timelineId: 'shem',
-    sources: ['Genesis 11:10-11']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Noah became the father of three sons: Shem, Ham, and Japheth. — Genesis 6:10 (https://www.biblegateway.com/passage/?search=Genesis+6%3A10)', 'He said, “Blessed be Yahweh, the God of Shem. Let Canaan be his servant. May God enlarge Japheth. Let him dwell in the tents of Shem. Let Canaan be his servant.” — Genesis 9:26-27 (https://www.biblegateway.com/passage/?search=Genesis+9%3A26-27)', 'the son of Cainan, the son of Arphaxad, the son of Shem, the son of Noah, the son of Lamech, — Luke 3:36 (https://www.biblegateway.com/passage/?search=Luke+3%3A36)']
   },
   {
     id: 'ham',
@@ -2274,7 +2532,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Son of Noah, father of Cush, Egypt, Put, and Canaan. Survived the Flood. Lived approximately 540 years (historical estimate).',
     layer: 'biblical-patriarchs',
     timelineId: 'ham',
-    sources: ['Genesis 10:6']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Noah became the father of three sons: Shem, Ham, and Japheth. — Genesis 6:10 (https://www.biblegateway.com/passage/?search=Genesis+6%3A10)', 'Ham, the father of Canaan, saw the nakedness of his father, and told his two brothers outside. Shem and Japheth took a garment, and laid it on both their shoulders, went in backwards, and covered the nakedness of their father. Their faces were backwards, and they didn’t see their father’s nakedness. Noah awoke from his wine, and knew what his youngest son had done to him. He said, “Canaan is cursed. He will be a servant of servants to his brothers.” — Genesis 9:22-25 (https://www.biblegateway.com/passage/?search=Genesis+9%3A22-25)', 'Noah, Shem, Ham, and Japheth. — 1 Chronicles 1:4 (https://www.biblegateway.com/passage/?search=1+Chronicles+1%3A4)']
   },
   {
     id: 'japheth',
@@ -2283,7 +2542,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Son of Noah, ancestor of the maritime and northern nations. Survived the Flood. Lived approximately 540 years (historical estimate).',
     layer: 'biblical-patriarchs',
     timelineId: 'japheth',
-    sources: ['Genesis 10:2-5']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Noah became the father of three sons: Shem, Ham, and Japheth. — Genesis 6:10 (https://www.biblegateway.com/passage/?search=Genesis+6%3A10)', 'May God enlarge Japheth. Let him dwell in the tents of Shem. Let Canaan be his servant.” — Genesis 9:27 (https://www.biblegateway.com/passage/?search=Genesis+9%3A27)', 'Noah, Shem, Ham, and Japheth. — 1 Chronicles 1:4 (https://www.biblegateway.com/passage/?search=1+Chronicles+1%3A4)']
   },
   {
     id: 'cush',
@@ -2292,7 +2552,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Eldest son of Ham, father of Nimrod. Ancestor of the land of Cush (Nubia/Ethiopia). Lived approximately 500 years.',
     layer: 'biblical-patriarchs',
     timelineId: 'cush',
-    sources: ['Genesis 10:6-8']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['The sons of Ham were: Cush, Mizraim, Put, and Canaan. The sons of Cush were: Seba, Havilah, Sabtah, Raamah, and Sabteca. The sons of Raamah were: Sheba and Dedan. Cush became the father of Nimrod. He began to be a mighty one in the earth. — Genesis 10:6-8 (https://www.biblegateway.com/passage/?search=Genesis+10%3A6-8)', 'The sons of Ham: Cush, Mizraim, Put, and Canaan. The sons of Cush: Seba, Havilah, Sabta, Raama, Sabteca. The sons of Raamah: Sheba and Dedan. Cush became the father of Nimrod. He began to be a mighty one in the earth. — 1 Chronicles 1:8-10 (https://www.biblegateway.com/passage/?search=1+Chronicles+1%3A8-10)', 'Princes shall come out of Egypt. Ethiopia shall hurry to stretch out her hands to God. — Psalm 68:31 (https://www.biblegateway.com/passage/?search=Psalm+68%3A31)']
   },
   {
     id: 'arpachshad',
@@ -2301,7 +2562,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Son of Shem, born two years after the Flood. Lived 438 years.',
     layer: 'biblical-patriarchs',
     timelineId: 'arpachshad',
-    sources: ['Genesis 11:12-13']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['This is the history of the generations of Shem: Shem was one hundred years old when he became the father of Arpachshad two years after the flood. Shem lived five hundred years after he became the father of Arpachshad, and became the father of more sons and daughters. Arpachshad lived thirty-five years and became the father of Shelah. Arpachshad lived four hundred three years after he became the father of Shelah, and became the father of more sons and daughters. — Genesis 11:10-13 (https://www.biblegateway.com/passage/?search=Genesis+11%3A10-13)', 'The sons of Shem: Elam, Asshur, Arpachshad, Lud, Aram, Uz, Hul, Gether, and Meshech. Arpachshad became the father of Shelah, and Shelah became the father of Eber. — 1 Chronicles 1:17-18 (https://www.biblegateway.com/passage/?search=1+Chronicles+1%3A17-18)', 'the son of Cainan, the son of Arphaxad, the son of Shem, the son of Noah, the son of Lamech, — Luke 3:36 (https://www.biblegateway.com/passage/?search=Luke+3%3A36)']
   },
   {
     id: 'shelah',
@@ -2310,7 +2572,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Son of Arpachshad. Lived 433 years.',
     layer: 'biblical-patriarchs',
     timelineId: 'shelah',
-    sources: ['Genesis 11:14-15']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Arpachshad lived thirty-five years and became the father of Shelah. Arpachshad lived four hundred three years after he became the father of Shelah, and became the father of more sons and daughters. Shelah lived thirty years, and became the father of Eber. Shelah lived four hundred three years after he became the father of Eber, and became the father of more sons and daughters. — Genesis 11:12-15 (https://www.biblegateway.com/passage/?search=Genesis+11%3A12-15)', 'Arpachshad became the father of Shelah, and Shelah became the father of Eber. — 1 Chronicles 1:18 (https://www.biblegateway.com/passage/?search=1+Chronicles+1%3A18)', 'the son of Serug, the son of Reu, the son of Peleg, the son of Eber, the son of Shelah, — Luke 3:35 (https://www.biblegateway.com/passage/?search=Luke+3%3A35)']
   },
   {
     id: 'eber',
@@ -2319,7 +2582,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Son of Shelah. Ancestor of the Hebrews. Lived 464 years.',
     layer: 'biblical-patriarchs',
     timelineId: 'eber',
-    sources: ['Genesis 11:16-17']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Shelah lived thirty years, and became the father of Eber. Shelah lived four hundred three years after he became the father of Eber, and became the father of more sons and daughters. Eber lived thirty-four years, and became the father of Peleg. Eber lived four hundred thirty years after he became the father of Peleg, and became the father of more sons and daughters. — Genesis 11:14-17 (https://www.biblegateway.com/passage/?search=Genesis+11%3A14-17)', 'Arpachshad became the father of Shelah, and Shelah became the father of Eber. To Eber were born two sons: the name of the one was Peleg, for in his days the earth was divided; and his brother’s name was Joktan. — 1 Chronicles 1:18-19 (https://www.biblegateway.com/passage/?search=1+Chronicles+1%3A18-19)', 'the son of Serug, the son of Reu, the son of Peleg, the son of Eber, the son of Shelah, — Luke 3:35 (https://www.biblegateway.com/passage/?search=Luke+3%3A35)']
   },
   {
     id: 'peleg',
@@ -2328,7 +2592,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Son of Eber. Named Peleg because "in his days the earth was divided" (associated with the Tower of Babel dispersion). Lived 239 years.',
     layer: 'biblical-patriarchs',
     timelineId: 'peleg',
-    sources: ['Genesis 11:18-19']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Eber lived thirty-four years, and became the father of Peleg. Eber lived four hundred thirty years after he became the father of Peleg, and became the father of more sons and daughters. Peleg lived thirty years, and became the father of Reu. Peleg lived two hundred nine years after he became the father of Reu, and became the father of more sons and daughters. — Genesis 11:16-19 (https://www.biblegateway.com/passage/?search=Genesis+11%3A16-19)', 'To Eber were born two sons: the name of the one was Peleg, for in his days the earth was divided; and his brother’s name was Joktan. — 1 Chronicles 1:19 (https://www.biblegateway.com/passage/?search=1+Chronicles+1%3A19)', 'the son of Serug, the son of Reu, the son of Peleg, the son of Eber, the son of Shelah, — Luke 3:35 (https://www.biblegateway.com/passage/?search=Luke+3%3A35)']
   },
   {
     id: 'reu',
@@ -2337,7 +2602,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Son of Peleg. Lived 239 years.',
     layer: 'biblical-patriarchs',
     timelineId: 'reu',
-    sources: ['Genesis 11:20-21']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Peleg lived thirty years, and became the father of Reu. Peleg lived two hundred nine years after he became the father of Reu, and became the father of more sons and daughters. Reu lived thirty-two years, and became the father of Serug. Reu lived two hundred seven years after he became the father of Serug, and became the father of more sons and daughters. — Genesis 11:18-21 (https://www.biblegateway.com/passage/?search=Genesis+11%3A18-21)', 'Eber, Peleg, Reu, — 1 Chronicles 1:25 (https://www.biblegateway.com/passage/?search=1+Chronicles+1%3A25)', 'the son of Serug, the son of Reu, the son of Peleg, the son of Eber, the son of Shelah, — Luke 3:35 (https://www.biblegateway.com/passage/?search=Luke+3%3A35)']
   },
   {
     id: 'serug',
@@ -2346,7 +2612,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Son of Reu. Lived 230 years.',
     layer: 'biblical-patriarchs',
     timelineId: 'serug',
-    sources: ['Genesis 11:22-23']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Reu lived thirty-two years, and became the father of Serug. Reu lived two hundred seven years after he became the father of Serug, and became the father of more sons and daughters. Serug lived thirty years, and became the father of Nahor. Serug lived two hundred years after he became the father of Nahor, and became the father of more sons and daughters. — Genesis 11:20-23 (https://www.biblegateway.com/passage/?search=Genesis+11%3A20-23)', 'Serug, Nahor, Terah, — 1 Chronicles 1:26 (https://www.biblegateway.com/passage/?search=1+Chronicles+1%3A26)', 'the son of Serug, the son of Reu, the son of Peleg, the son of Eber, the son of Shelah, — Luke 3:35 (https://www.biblegateway.com/passage/?search=Luke+3%3A35)']
   },
   {
     id: 'nahor_pat',
@@ -2355,7 +2622,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Son of Serug and grandfather of Abraham. Lived 148 years.',
     layer: 'biblical-patriarchs',
     timelineId: 'nahor_pat',
-    sources: ['Genesis 11:24-25']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Serug lived thirty years, and became the father of Nahor. Serug lived two hundred years after he became the father of Nahor, and became the father of more sons and daughters. Nahor lived twenty-nine years, and became the father of Terah. Nahor lived one hundred nineteen years after he became the father of Terah, and became the father of more sons and daughters. — Genesis 11:22-25 (https://www.biblegateway.com/passage/?search=Genesis+11%3A22-25)', 'Serug, Nahor, Terah, — 1 Chronicles 1:26 (https://www.biblegateway.com/passage/?search=1+Chronicles+1%3A26)', 'the son of Jacob, the son of Isaac, the son of Abraham, the son of Terah, the son of Nahor, — Luke 3:34 (https://www.biblegateway.com/passage/?search=Luke+3%3A34)']
   },
   {
     id: 'terah',
@@ -2364,7 +2632,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Son of Nahor and father of Abraham. Set out from Ur of the Chaldeans but settled in Harran. Lived 205 years.',
     layer: 'biblical-patriarchs',
     timelineId: 'terah',
-    sources: ['Genesis 11:26-32']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Nahor lived twenty-nine years, and became the father of Terah. Nahor lived one hundred nineteen years after he became the father of Terah, and became the father of more sons and daughters. Terah lived seventy years, and became the father of Abram, Nahor, and Haran. Now this is the history of the generations of Terah. Terah became the father of Abram, Nahor, and Haran. Haran became the father of Lot. Haran died before his father Terah in the land of his birth, in Ur of the Chaldees. Abram and Nahor married wives. The name of Abram’s wife was Sarai, and the name of Nahor’s wife was Milcah, the daughter of Haran who was also the father of Iscah. Sarai was barren. She had no child. Terah took Abram his son, Lot the son of Haran, his son’s son, and Sarai his daughter-in-law, his son Abram’s wife. They went from Ur of the Chaldees, to go into the land of Canaan. They came to Haran and lived there. The days of Terah were two hundred five years. Terah died in Haran. — Genesis 11:24-32 (https://www.biblegateway.com/passage/?search=Genesis+11%3A24-32)', 'Joshua said to all the people, “Yahweh says, the God of Israel, ‘Your fathers lived of old time beyond the River, even Terah, the father of Abraham, and the father of Nahor: and they served other gods. — Joshua 24:2 (https://www.biblegateway.com/passage/?search=Joshua+24%3A2)', 'the son of Jacob, the son of Isaac, the son of Abraham, the son of Terah, the son of Nahor, — Luke 3:34 (https://www.biblegateway.com/passage/?search=Luke+3%3A34)']
   },
   {
     id: 'sarah',
@@ -2373,7 +2642,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Wife of Abraham and mother of Isaac. Lived 127 years.',
     layer: 'biblical-patriarchs',
     timelineId: 'sarah',
-    sources: ['Genesis 17:17, 23:1']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['God said to Abraham, “As for Sarai your wife, you shall not call her name Sarai, but her name will be Sarah. I will bless her, and moreover I will give you a son by her. Yes, I will bless her, and she will be a mother of nations. Kings of peoples will come from her.” — Genesis 17:15-16 (https://www.biblegateway.com/passage/?search=Genesis+17%3A15-16)', 'Yahweh visited Sarah as he had said, and Yahweh did to Sarah as he had spoken. Sarah conceived, and bore Abraham a son in his old age, at the set time of which God had spoken to him. — Genesis 21:1-2 (https://www.biblegateway.com/passage/?search=Genesis+21%3A1-2)', 'By faith, even Sarah herself received power to conceive, and she bore a child when she was past age, since she counted him faithful who had promised. — Hebrews 11:11 (https://www.biblegateway.com/passage/?search=Hebrews+11%3A11)']
   },
   {
     id: 'ishmael',
@@ -2382,7 +2652,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Eldest son of Abraham (with Hagar). Father of the Ishmaelites. Lived 137 years.',
     layer: 'biblical-patriarchs',
     timelineId: 'ishmael',
-    sources: ['Genesis 16:16, 25:17']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Yahweh’s angel said to her, “Behold, you are with child, and will bear a son. You shall call his name Ishmael, because Yahweh has heard your affliction. He will be like a wild donkey among men. His hand will be against every man, and every man’s hand against him. He will live opposite all of his brothers.” — Genesis 16:11-12 (https://www.biblegateway.com/passage/?search=Genesis+16%3A11-12)', 'God heard the voice of the boy. The angel of God called to Hagar out of the sky, and said to her, “What ails you, Hagar? Don’t be afraid. For God has heard the voice of the boy where he is. Get up, lift up the boy, and hold him in your hand. For I will make him a great nation.” — Genesis 21:17-18 (https://www.biblegateway.com/passage/?search=Genesis+21%3A17-18)', 'For it is written that Abraham had two sons, one by the servant, and one by the free woman. However, the son by the servant was born according to the flesh, but the son by the free woman was born through promise. — Galatians 4:22-23 (https://www.biblegateway.com/passage/?search=Galatians+4%3A22-23)']
   },
   {
     id: 'isaac',
@@ -2391,7 +2662,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Son of Abraham and Sarah, born in their old age. Father of Jacob and Esau. Lived 180 years.',
     layer: 'biblical-patriarchs',
     timelineId: 'isaac',
-    sources: ['Genesis 21-35']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Abraham called his son who was born to him, whom Sarah bore to him, Isaac. — Genesis 21:3 (https://www.biblegateway.com/passage/?search=Genesis+21%3A3)', 'They came to the place which God had told him of. Abraham built the altar there, and laid the wood in order, bound Isaac his son, and laid him on the altar, on the wood. Abraham stretched out his hand, and took the knife to kill his son. Yahweh’s angel called to him out of the sky, and said, “Abraham, Abraham!” He said, “Here I am.” He said, “Don’t lay your hand on the boy or do anything to him. For now I know that you fear God, since you have not withheld your son, your only son, from me.” — Genesis 22:9-12 (https://www.biblegateway.com/passage/?search=Genesis+22%3A9-12)', 'By faith, Isaac blessed Jacob and Esau, even concerning things to come. — Hebrews 11:20 (https://www.biblegateway.com/passage/?search=Hebrews+11%3A20)']
   },
   {
     id: 'rebekah',
@@ -2400,7 +2672,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Wife of Isaac and mother of Jacob and Esau.',
     layer: 'biblical-patriarchs',
     timelineId: 'rebekah',
-    sources: ['Genesis 24-27']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Before he had finished speaking, behold, Rebekah came out, who was born to Bethuel the son of Milcah, the wife of Nahor, Abraham’s brother, with her pitcher on her shoulder. — Genesis 24:15 (https://www.biblegateway.com/passage/?search=Genesis+24%3A15)', 'Isaac brought her into his mother Sarah’s tent, and took Rebekah, and she became his wife. He loved her. Isaac was comforted after his mother’s death. — Genesis 24:67 (https://www.biblegateway.com/passage/?search=Genesis+24%3A67)', 'Not only so, but Rebekah also conceived by one, by our father Isaac. — Romans 9:10 (https://www.biblegateway.com/passage/?search=Romans+9%3A10)']
   },
   {
     id: 'esau',
@@ -2409,7 +2682,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Eldest son of Isaac and Rebekah, twin brother of Jacob. Founder of the Edomites.',
     layer: 'biblical-patriarchs',
     timelineId: 'esau',
-    sources: ['Genesis 25-36']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['The first came out red all over, like a hairy garment. They named him Esau. — Genesis 25:25 (https://www.biblegateway.com/passage/?search=Genesis+25%3A25)', 'Jacob boiled stew. Esau came in from the field, and he was famished. Esau said to Jacob, “Please feed me with that same red stew, for I am famished.” Therefore his name was called Edom. Jacob said, “First, sell me your birthright.” Esau said, “Behold, I am about to die. What good is the birthright to me?” Jacob said, “Swear to me first.” He swore to him. He sold his birthright to Jacob. Jacob gave Esau bread and stew of lentils. He ate and drank, rose up, and went his way. So Esau despised his birthright. — Genesis 25:29-34 (https://www.biblegateway.com/passage/?search=Genesis+25%3A29-34)', 'lest there be any sexually immoral person, or profane person, like Esau, who sold his birthright for one meal. For you know that even when he afterward desired to inherit the blessing, he was rejected, for he found no place for a change of mind though he sought it diligently with tears. — Hebrews 12:16-17 (https://www.biblegateway.com/passage/?search=Hebrews+12%3A16-17)']
   },
   {
     id: 'jacob',
@@ -2418,7 +2692,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Son of Isaac, renamed Israel. Father of the twelve patriarchs of the Tribes of Israel. Lived 147 years.',
     layer: 'biblical-patriarchs',
     timelineId: 'jacob_pat',
-    sources: ['Genesis 25-49']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['After that, his brother came out, and his hand had hold on Esau’s heel. He was named Jacob. Isaac was sixty years old when she bore them. — Genesis 25:26 (https://www.biblegateway.com/passage/?search=Genesis+25%3A26)', 'He said, “Your name will no longer be called Jacob, but Israel; for you have fought with God and with men, and have prevailed.” — Genesis 32:28 (https://www.biblegateway.com/passage/?search=Genesis+32%3A28)', 'Even as it is written, “Jacob I loved, but Esau I hated.” — Romans 9:13 (https://www.biblegateway.com/passage/?search=Romans+9%3A13)']
   },
   {
     id: 'leah',
@@ -2427,7 +2702,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'First wife of Jacob and mother of Reuben, Simeon, Levi, Judah, Issachar, and Zebulun.',
     layer: 'biblical-patriarchs',
     timelineId: 'leah',
-    sources: ['Genesis 29-33, 49:31']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Laban had two daughters. The name of the elder was Leah, and the name of the younger was Rachel. Leah’s eyes were weak, but Rachel was beautiful in form and attractive. — Genesis 29:16-17 (https://www.biblegateway.com/passage/?search=Genesis+29%3A16-17)', 'Yahweh saw that Leah was hated, and he opened her womb, but Rachel was barren. Leah conceived, and bore a son, and she named him Reuben. For she said, “Because Yahweh has looked at my affliction; for now my husband will love me.” She conceived again, and bore a son, and said, “Because Yahweh has heard that I am hated, he has therefore given me this son also.” She named him Simeon. She conceived again, and bore a son. Said, “Now this time will my husband be joined to me, because I have borne him three sons.” Therefore his name was called Levi. She conceived again, and bore a son. She said, “This time will I praise Yahweh.” Therefore she named him Judah. Then she stopped bearing. — Genesis 29:31-35 (https://www.biblegateway.com/passage/?search=Genesis+29%3A31-35)', 'All the people who were in the gate, and the elders, said, “We are witnesses. May Yahweh make the woman who has come into your house like Rachel and like Leah, which both built the house of Israel; and treat you worthily in Ephrathah, and be famous in Bethlehem. — Ruth 4:11 (https://www.biblegateway.com/passage/?search=Ruth+4%3A11)']
   },
   {
     id: 'rachel',
@@ -2436,7 +2712,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Beloved second wife of Jacob and mother of Joseph and Benjamin. Died in childbirth.',
     layer: 'biblical-patriarchs',
     timelineId: 'rachel',
-    sources: ['Genesis 29-35']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Leah’s eyes were weak, but Rachel was beautiful in form and attractive. — Genesis 29:17 (https://www.biblegateway.com/passage/?search=Genesis+29%3A17)', 'God remembered Rachel, and God listened to her, and opened her womb. She conceived, bore a son, and said, “God has taken away my reproach.” She named him Joseph, saying, “May Yahweh add another son to me.” — Genesis 30:22-24 (https://www.biblegateway.com/passage/?search=Genesis+30%3A22-24)', 'Yahweh says: “A voice is heard in Ramah, lamentation and bitter weeping, Rachel weeping for her children. She refuses to be comforted for her children, because they are no more.” — Jeremiah 31:15 (https://www.biblegateway.com/passage/?search=Jeremiah+31%3A15)']
   },
   {
     id: 'judah',
@@ -2445,7 +2722,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Fourth son of Jacob and Leah. Ancestor of the Tribe of Judah, from whom the kings of Judah and Jesus descend. Lived 119 years.',
     layer: 'biblical-patriarchs',
     timelineId: 'judah',
-    sources: ['Genesis 29:35, 49:8-12']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['She conceived again, and bore a son. She said, “This time will I praise Yahweh.” Therefore she named him Judah. Then she stopped bearing. — Genesis 29:35 (https://www.biblegateway.com/passage/?search=Genesis+29%3A35)', '“Judah, your brothers will praise you. Your hand will be on the neck of your enemies. Your father’s sons will bow down before you. Judah is a lion’s cub. From the prey, my son, you have gone up. He stooped down, he crouched as a lion, as a lioness. Who will rouse him up? The scepter will not depart from Judah, nor the ruler’s staff from between his feet, until he comes to whom it belongs. To him will the obedience of the peoples be. — Genesis 49:8-10 (https://www.biblegateway.com/passage/?search=Genesis+49%3A8-10)', 'One of the elders said to me, “Don’t weep. Behold, the Lion who is of the tribe of Judah, the Root of David, has overcome; he who opens the book and its seven seals.” — Revelation 5:5 (https://www.biblegateway.com/passage/?search=Revelation+5%3A5)']
   },
   {
     id: 'levi',
@@ -2454,7 +2732,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Third son of Jacob and Leah. Ancestor of the priestly Levite tribe. Lived 137 years.',
     layer: 'biblical-patriarchs',
     timelineId: 'levi',
-    sources: ['Genesis 29:34, Exodus 6:16']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['She conceived again, and bore a son. Said, “Now this time will my husband be joined to me, because I have borne him three sons.” Therefore his name was called Levi. — Genesis 29:34 (https://www.biblegateway.com/passage/?search=Genesis+29%3A34)', 'About Levi he said, “Your Thummim and your Urim are with your godly one, whom you proved at Massah, with whom you contended at the waters of Meribah. He said of his father, and of his mother, ‘I have not seen him.’ He didn’t acknowledge his brothers, nor did he know his own children; for they have observed your word, and keep your covenant. They shall teach Jacob your ordinances, and Israel your law. They shall put incense before you, and whole burnt offering on your altar. — Deuteronomy 33:8-10 (https://www.biblegateway.com/passage/?search=Deuteronomy+33%3A8-10)', 'You will know that I have sent this commandment to you, that my covenant may be with Levi,” says Yahweh of Armies. “My covenant was with him of life and peace; and I gave them to him that he might be reverent toward me; and he was reverent toward me, and stood in awe of my name. — Malachi 2:4-5 (https://www.biblegateway.com/passage/?search=Malachi+2%3A4-5)']
   },
   {
     id: 'joseph',
@@ -2463,7 +2742,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Favored son of Jacob, sold into slavery in Egypt, became Vizier under Pharaoh, and saved his family from famine. Lived 110 years.',
     layer: 'biblical-patriarchs',
     timelineId: 'joseph_pat',
-    sources: ['Genesis 37-50']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Now Israel loved Joseph more than all his children, because he was the son of his old age, and he made him a coat of many colors. — Genesis 37:3 (https://www.biblegateway.com/passage/?search=Genesis+37%3A3)', 'Pharaoh said to Joseph, “Because God has shown you all of this, there is no one so discreet and wise as you. You shall be over my house, and according to your word will all my people be ruled. Only in the throne I will be greater than you.” Pharaoh said to Joseph, “Behold, I have set you over all the land of Egypt.” — Genesis 41:39-41 (https://www.biblegateway.com/passage/?search=Genesis+41%3A39-41)', 'By faith, Joseph, when his end was near, made mention of the departure of the children of Israel; and gave instructions concerning his bones. — Hebrews 11:22 (https://www.biblegateway.com/passage/?search=Hebrews+11%3A22)']
   },
   {
     id: 'benjamin',
@@ -2472,7 +2752,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Twelfth and youngest son of Jacob (with Rachel). Brother of Joseph. Lived approximately 110 years.',
     layer: 'biblical-patriarchs',
     timelineId: 'benjamin',
-    sources: ['Genesis 35:16-18, 43-45']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['As her soul was departing (for she died), she named him Benoni, but his father named him Benjamin. — Genesis 35:18 (https://www.biblegateway.com/passage/?search=Genesis+35%3A18)', '“Benjamin is a ravenous wolf. In the morning he will devour the prey. At evening he will divide the plunder.” — Genesis 49:27 (https://www.biblegateway.com/passage/?search=Genesis+49%3A27)', 'About Benjamin he said, “The beloved of Yahweh will dwell in safety by him. He covers him all day long. He dwells between his shoulders.” — Deuteronomy 33:12 (https://www.biblegateway.com/passage/?search=Deuteronomy+33%3A12)']
   },
   {
     id: 'perez',
@@ -2481,7 +2762,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Son of Judah and Tamar, twin brother of Zerah. Ancestor of King David and Jesus Christ.',
     layer: 'biblical-patriarchs',
     timelineId: 'perez',
-    sources: ['Genesis 38:29, Ruth 4:18']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['As he drew back his hand, behold, his brother came out, and she said, “Why have you made a breach for yourself?” Therefore his name was called Perez. — Genesis 38:29 (https://www.biblegateway.com/passage/?search=Genesis+38%3A29)', 'Now this is the history of the generations of Perez: Perez became the father of Hezron, — Ruth 4:18 (https://www.biblegateway.com/passage/?search=Ruth+4%3A18)', 'Judah became the father of Perez and Zerah by Tamar. Perez became the father of Hezron. Hezron became the father of Ram. — Matthew 1:3 (https://www.biblegateway.com/passage/?search=Matthew+1%3A3)']
   },
   {
     id: 'hezron',
@@ -2490,7 +2772,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Son of Perez. Traveled with Jacob into Egypt.',
     layer: 'biblical-patriarchs',
     timelineId: 'hezron',
-    sources: ['Genesis 46:12, Ruth 4:18']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['The sons of Judah: Er, Onan, Shelah, Perez, and Zerah; but Er and Onan died in the land of Canaan. The sons of Perez were Hezron and Hamul. — Genesis 46:12 (https://www.biblegateway.com/passage/?search=Genesis+46%3A12)', 'Now this is the history of the generations of Perez: Perez became the father of Hezron, — Ruth 4:18 (https://www.biblegateway.com/passage/?search=Ruth+4%3A18)', 'Judah became the father of Perez and Zerah by Tamar. Perez became the father of Hezron. Hezron became the father of Ram. — Matthew 1:3 (https://www.biblegateway.com/passage/?search=Matthew+1%3A3)']
   },
   {
     id: 'ram_pat',
@@ -2499,7 +2782,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Son of Hezron. Mentioned in the genealogy of King David.',
     layer: 'biblical-patriarchs',
     timelineId: 'ram_pat',
-    sources: ['Ruth 4:19, 1 Chronicles 2:9']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['and Hezron became the father of Ram, and Ram became the father of Amminadab, — Ruth 4:19 (https://www.biblegateway.com/passage/?search=Ruth+4%3A19)', 'The sons also of Hezron, who were born to him: Jerahmeel, Ram, and Chelubai. — 1 Chronicles 2:9 (https://www.biblegateway.com/passage/?search=1+Chronicles+2%3A9)', 'Judah became the father of Perez and Zerah by Tamar. Perez became the father of Hezron. Hezron became the father of Ram. Ram became the father of Amminadab. Amminadab became the father of Nahshon. Nahshon became the father of Salmon. — Matthew 1:3-4 (https://www.biblegateway.com/passage/?search=Matthew+1%3A3-4)']
   },
   {
     id: 'amminadab',
@@ -2508,7 +2792,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Son of Ram. Father of Nahshon and Elisheba (wife of Aaron).',
     layer: 'biblical-patriarchs',
     timelineId: 'amminadab',
-    sources: ['Ruth 4:19, Exodus 6:23']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['and Hezron became the father of Ram, and Ram became the father of Amminadab, — Ruth 4:19 (https://www.biblegateway.com/passage/?search=Ruth+4%3A19)', 'Ram became the father of Amminadab, and Amminadab became the father of Nahshon, prince of the children of Judah; — 1 Chronicles 2:10 (https://www.biblegateway.com/passage/?search=1+Chronicles+2%3A10)', 'Ram became the father of Amminadab. Amminadab became the father of Nahshon. Nahshon became the father of Salmon. — Matthew 1:4 (https://www.biblegateway.com/passage/?search=Matthew+1%3A4)']
   },
   {
     id: 'nahshon',
@@ -2517,7 +2802,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Son of Amminadab, leader of the tribe of Judah during the Exodus and wilderness wanderings.',
     layer: 'biblical-patriarchs',
     timelineId: 'nahshon',
-    sources: ['Numbers 1:7, Ruth 4:20']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Of Judah: Nahshon the son of Amminadab. — Numbers 1:7 (https://www.biblegateway.com/passage/?search=Numbers+1%3A7)', 'and Amminadab became the father of Nahshon, and Nahshon became the father of Salmon, — Ruth 4:20 (https://www.biblegateway.com/passage/?search=Ruth+4%3A20)', 'Ram became the father of Amminadab. Amminadab became the father of Nahshon. Nahshon became the father of Salmon. — Matthew 1:4 (https://www.biblegateway.com/passage/?search=Matthew+1%3A4)']
   },
   {
     id: 'salmon',
@@ -2526,7 +2812,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Son of Nahshon. Traditional husband of Rahab and father of Boaz.',
     layer: 'biblical-patriarchs',
     timelineId: 'salmon',
-    sources: ['Ruth 4:20, Matthew 1:5']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['and Amminadab became the father of Nahshon, and Nahshon became the father of Salmon, and Salmon became the father of Boaz, and Boaz became the father of Obed, — Ruth 4:20-21 (https://www.biblegateway.com/passage/?search=Ruth+4%3A20-21)', 'and Nahshon became the father of Salma, and Salma became the father of Boaz, — 1 Chronicles 2:11 (https://www.biblegateway.com/passage/?search=1+Chronicles+2%3A11)', 'Ram became the father of Amminadab. Amminadab became the father of Nahshon. Nahshon became the father of Salmon. Salmon became the father of Boaz by Rahab. Boaz became the father of Obed by Ruth. Obed became the father of Jesse. — Matthew 1:4-5 (https://www.biblegateway.com/passage/?search=Matthew+1%3A4-5)']
   },
   {
     id: 'rahab',
@@ -2535,7 +2822,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Woman of Jericho who assisted Joshua\'s spies and married Salmon, entering the lineage of David and Jesus.',
     layer: 'biblical-patriarchs',
     timelineId: 'rahab',
-    sources: ['Joshua 2, Matthew 1:5']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Joshua the son of Nun secretly sent two men out of Shittim as spies, saying, “Go, view the land, including Jericho.” They went and came into the house of a prostitute whose name was Rahab, and slept there. — Joshua 2:1 (https://www.biblegateway.com/passage/?search=Joshua+2%3A1)', 'By faith, Rahab the prostitute, didn’t perish with those who were disobedient, having received the spies in peace. — Hebrews 11:31 (https://www.biblegateway.com/passage/?search=Hebrews+11%3A31)', 'In the same way, wasn’t Rahab the prostitute also justified by works, in that she received the messengers, and sent them out another way? — James 2:25 (https://www.biblegateway.com/passage/?search=James+2%3A25)']
   },
   {
     id: 'boaz',
@@ -2544,7 +2832,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Wealthy landowner of Bethlehem who married Ruth. Lived in the era of the Judges.',
     layer: 'biblical-patriarchs',
     timelineId: 'boaz',
-    sources: ['Ruth 2-4']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Naomi had a relative of her husband’s, a mighty man of wealth, of the family of Elimelech, and his name was Boaz. — Ruth 2:1 (https://www.biblegateway.com/passage/?search=Ruth+2%3A1)', 'So Boaz took Ruth, and she became his wife; and he went in to her, and Yahweh enabled her to conceive, and she bore a son. — Ruth 4:13 (https://www.biblegateway.com/passage/?search=Ruth+4%3A13)', 'Salmon became the father of Boaz by Rahab. Boaz became the father of Obed by Ruth. Obed became the father of Jesse. — Matthew 1:5 (https://www.biblegateway.com/passage/?search=Matthew+1%3A5)']
   },
   {
     id: 'ruth',
@@ -2553,7 +2842,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Moabite woman who remained loyal to her mother-in-law Naomi, married Boaz, and became the great-grandmother of David.',
     layer: 'biblical-patriarchs',
     timelineId: 'ruth',
-    sources: ['Book of Ruth']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Ruth said, “Don’t urge me to leave you, and to return from following you, for where you go, I will go; and where you stay, I will stay. Your people will be my people, and your God my God. — Ruth 1:16 (https://www.biblegateway.com/passage/?search=Ruth+1%3A16)', 'So Boaz took Ruth, and she became his wife; and he went in to her, and Yahweh enabled her to conceive, and she bore a son. — Ruth 4:13 (https://www.biblegateway.com/passage/?search=Ruth+4%3A13)', 'Salmon became the father of Boaz by Rahab. Boaz became the father of Obed by Ruth. Obed became the father of Jesse. — Matthew 1:5 (https://www.biblegateway.com/passage/?search=Matthew+1%3A5)']
   },
   {
     id: 'obed',
@@ -2562,7 +2852,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Son of Boaz and Ruth. Father of Jesse and grandfather of King David.',
     layer: 'biblical-patriarchs',
     timelineId: 'obed',
-    sources: ['Ruth 4:21-22']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['The women, her neighbors, gave him a name, saying, “A son is born to Naomi”. They named him Obed. He is the father of Jesse, the father of David. — Ruth 4:17 (https://www.biblegateway.com/passage/?search=Ruth+4%3A17)', 'and Boaz became the father of Obed, and Obed became the father of Jesse; — 1 Chronicles 2:12 (https://www.biblegateway.com/passage/?search=1+Chronicles+2%3A12)', 'Salmon became the father of Boaz by Rahab. Boaz became the father of Obed by Ruth. Obed became the father of Jesse. — Matthew 1:5 (https://www.biblegateway.com/passage/?search=Matthew+1%3A5)']
   },
   {
     id: 'jesse',
@@ -2571,7 +2862,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Son of Obed, farmer of Bethlehem, and father of eight sons including King David.',
     layer: 'biblical-patriarchs',
     timelineId: 'jesse',
-    sources: ['1 Samuel 16, Ruth 4:22']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Yahweh said to Samuel, “How long will you mourn for Saul, since I have rejected him from being king over Israel? Fill your horn with oil, and go. I will send you to Jesse the Bethlehemite; for I have provided a king for myself among his sons.” — 1 Samuel 16:1 (https://www.biblegateway.com/passage/?search=1+Samuel+16%3A1)', 'A shoot will come out of the stock of Jesse, and a branch out of his roots will bear fruit. — Isaiah 11:1 (https://www.biblegateway.com/passage/?search=Isaiah+11%3A1)', 'Again, Isaiah says, “There will be the root of Jesse, he who arises to rule over the Gentiles; in him the Gentiles will hope.” — Romans 15:12 (https://www.biblegateway.com/passage/?search=Romans+15%3A12)']
   },
   {
     id: 'david_pat',
@@ -2580,7 +2872,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'The second King of Israel, shepherd, author of the Psalms, and ancestor of the Messianic lineage. Lived 70 years.',
     layer: 'biblical-patriarchs',
     timelineId: 'david_pat',
-    sources: ['1 Samuel 16 - 1 Kings 2']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Then Samuel took the horn of oil, and anointed him in the middle of his brothers. Then Yahweh’s Spirit came mightily on David from that day forward. So Samuel rose up and went to Ramah. — 1 Samuel 16:13 (https://www.biblegateway.com/passage/?search=1+Samuel+16%3A13)', 'When your days are fulfilled, and you sleep with your fathers, I will set up your offspring after you, who will proceed out of your body, and I will establish his kingdom. He will build a house for my name, and I will establish the throne of his kingdom forever. — 2 Samuel 7:12-13 (https://www.biblegateway.com/passage/?search=2+Samuel+7%3A12-13)', 'The book of the genealogy of Jesus Christ, the son of David, the son of Abraham. — Matthew 1:1 (https://www.biblegateway.com/passage/?search=Matthew+1%3A1)']
   },
   {
     id: 'bathsheba',
@@ -2589,7 +2882,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Wife of Uriah, then of King David, and mother of King Solomon.',
     layer: 'biblical-patriarchs',
     timelineId: 'bathsheba',
-    sources: ['2 Samuel 11-12, 1 Kings 1-2']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['At evening, David arose from his bed and walked on the roof of the king’s house. From the roof, he saw a woman bathing, and the woman was very beautiful to look at. David sent and inquired after the woman. One said, “Isn’t this Bathsheba, the daughter of Eliam, Uriah the Hittite’s wife?” — 2 Samuel 11:2-3 (https://www.biblegateway.com/passage/?search=2+Samuel+11%3A2-3)', 'Then Nathan spoke to Bathsheba the mother of Solomon, saying, “Haven’t you heard that Adonijah the son of Haggith reigns, and David our lord doesn’t know it? Now therefore come, please let me give you counsel, that you may save your own life, and your son Solomon’s life. Go in to king David, and tell him, ‘Didn’t you, my lord, king, swear to your servant, saying, “Assuredly Solomon your son shall reign after me, and he shall sit on my throne?” Why then does Adonijah reign?’ — 1 Kings 1:11-13 (https://www.biblegateway.com/passage/?search=1+Kings+1%3A11-13)', 'Jesse became the father of King David. David became the father of Solomon by her who had been Uriah’s wife. — Matthew 1:6 (https://www.biblegateway.com/passage/?search=Matthew+1%3A6)']
   },
   {
     id: 'solomon_pat',
@@ -2598,7 +2892,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Third King of Israel, renowned for wisdom, builder of the First Temple in Jerusalem. Lived 59 years.',
     layer: 'biblical-patriarchs',
     timelineId: 'solomon_pat',
-    sources: ['1 Kings 1-11']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['In Gibeon, Yahweh appeared to Solomon in a dream by night; and God said, “Ask for what I should give you.” Solomon said, “You have shown to your servant David my father great loving kindness, because he walked before you in truth, in righteousness, and in uprightness of heart with you. You have kept for him this great loving kindness, that you have given him a son to sit on his throne, as it is today. Now, Yahweh my God, you have made your servant king instead of David my father. I am just a little child. I don’t know how to go out or come in. Your servant is among your people which you have chosen, a great people, that can’t be numbered or counted for multitude. Give your servant therefore an understanding heart to judge your people, that I may discern between good and evil; for who is able to judge this great people of yours?” — 1 Kings 3:5-9 (https://www.biblegateway.com/passage/?search=1+Kings+3%3A5-9)', 'God gave Solomon abundant wisdom and understanding, and very great understanding, even as the sand that is on the seashore. Solomon’s wisdom excelled the wisdom of all the children of the east and all the wisdom of Egypt. — 1 Kings 4:29-30 (https://www.biblegateway.com/passage/?search=1+Kings+4%3A29-30)', 'Jesse became the father of King David. David became the father of Solomon by her who had been Uriah’s wife. — Matthew 1:6 (https://www.biblegateway.com/passage/?search=Matthew+1%3A6)']
   },
   {
     id: 'rehoboam',
@@ -2607,7 +2902,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Son of Solomon. His harsh policies led to the revolt of the ten tribes and the split of the United Kingdom.',
     layer: 'biblical-patriarchs',
     timelineId: 'rehoboam',
-    sources: ['1 Kings 12-14']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Rehoboam went to Shechem, for all Israel had come to Shechem to make him king. When Jeroboam the son of Nebat heard of it (for he was yet in Egypt, where he had fled from the presence of king Solomon, and Jeroboam lived in Egypt, and they sent and called him), Jeroboam and all the assembly of Israel came, and spoke to Rehoboam, saying, “Your father made our yoke difficult. Now therefore make the hard service of your father, and his heavy yoke which he put on us, lighter, and we will serve you.” He said to them, “Depart for three days, then come back to me.” The people departed. — 1 Kings 12:1-5 (https://www.biblegateway.com/passage/?search=1+Kings+12%3A1-5)', 'Rehoboam the son of Solomon reigned in Judah. Rehoboam was forty-one years old when he began to reign, and he reigned seventeen years in Jerusalem, the city which Yahweh had chosen out of all the tribes of Israel, to put his name there. His mother’s name was Naamah the Ammonitess. — 1 Kings 14:21 (https://www.biblegateway.com/passage/?search=1+Kings+14%3A21)', 'Solomon became the father of Rehoboam. Rehoboam became the father of Abijah. Abijah became the father of Asa. — Matthew 1:7 (https://www.biblegateway.com/passage/?search=Matthew+1%3A7)']
   },
   {
     id: 'abijah',
@@ -2616,7 +2912,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'The second King of Judah. Reigned for three years.',
     layer: 'biblical-patriarchs',
     timelineId: 'abijah',
-    sources: ['1 Kings 15, 2 Chronicles 13']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Now in the eighteenth year of king Jeroboam the son of Nebat, Abijam began to reign over Judah. He reigned three years in Jerusalem. His mother’s name was Maacah the daughter of Abishalom. He walked in all the sins of his father, which he had done before him; and his heart was not perfect with Yahweh his God, as the heart of David his father. — 1 Kings 15:1-3 (https://www.biblegateway.com/passage/?search=1+Kings+15%3A1-3)', 'In the eighteenth year of king Jeroboam, Abijah began to reign over Judah. He reigned three years in Jerusalem. His mother’s name was Micaiah the daughter of Uriel of Gibeah. There was war between Abijah and Jeroboam. Abijah joined battle with an army of valiant men of war, even four hundred thousand chosen men; and Jeroboam set the battle in array against him with eight hundred thousand chosen men, who were mighty men of valor. — 2 Chronicles 13:1-3 (https://www.biblegateway.com/passage/?search=2+Chronicles+13%3A1-3)', 'Solomon became the father of Rehoboam. Rehoboam became the father of Abijah. Abijah became the father of Asa. — Matthew 1:7 (https://www.biblegateway.com/passage/?search=Matthew+1%3A7)']
   },
   {
     id: 'asa',
@@ -2625,7 +2922,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Third King of Judah. Commenced religious reforms and ruled for 41 years.',
     layer: 'biblical-patriarchs',
     timelineId: 'asa',
-    sources: ['1 Kings 15, 2 Chronicles 14-16']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['In the twentieth year of Jeroboam king of Israel, Asa began to reign over Judah. He reigned forty-one years in Jerusalem. His mother’s name was Maacah the daughter of Abishalom. Asa did that which was right in Yahweh’s eyes, as David his father did. — 1 Kings 15:9-11 (https://www.biblegateway.com/passage/?search=1+Kings+15%3A9-11)', 'Asa did that which was good and right in Yahweh his God’s eyes; for he took away the foreign altars and the high places, broke down the pillars, cut down the Asherah poles, — 2 Chronicles 14:2-3 (https://www.biblegateway.com/passage/?search=2+Chronicles+14%3A2-3)', 'Solomon became the father of Rehoboam. Rehoboam became the father of Abijah. Abijah became the father of Asa. — Matthew 1:7 (https://www.biblegateway.com/passage/?search=Matthew+1%3A7)']
   },
   {
     id: 'jehoshaphat',
@@ -2634,7 +2932,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Fourth King of Judah. Formed an alliance with the northern kingdom of Israel. Reigned 25 years.',
     layer: 'biblical-patriarchs',
     timelineId: 'jehoshaphat',
-    sources: ['1 Kings 22, 2 Chronicles 17-20']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Jehoshaphat the son of Asa began to reign over Judah in the fourth year of Ahab king of Israel. Jehoshaphat was thirty-five years old when he began to reign; and he reigned twenty-five years in Jerusalem. His mother’s name was Azubah the daughter of Shilhi. He walked in all the way of Asa his father. He didn’t turn away from it, doing that which was right in Yahweh’s eyes. However the high places were not taken away. The people still sacrificed and burned incense on the high places. — 1 Kings 22:41-43 (https://www.biblegateway.com/passage/?search=1+Kings+22%3A41-43)', 'Yahweh was with Jehoshaphat, because he walked in the first ways of his father David, and didn’t seek the Baals, but sought to the God of his father, and walked in his commandments, and not in the ways of Israel. — 2 Chronicles 17:3-4 (https://www.biblegateway.com/passage/?search=2+Chronicles+17%3A3-4)', 'Asa became the father of Jehoshaphat. Jehoshaphat became the father of Joram. Joram became the father of Uzziah. — Matthew 1:8 (https://www.biblegateway.com/passage/?search=Matthew+1%3A8)']
   },
   {
     id: 'jehoram',
@@ -2643,7 +2942,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Fifth King of Judah. Married Athaliah, daughter of Ahab and Jezebel, introducing pagan worship. Reigned 8 years.',
     layer: 'biblical-patriarchs',
     timelineId: 'jehoram',
-    sources: ['2 Kings 8, 2 Chronicles 21']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['In the fifth year of Joram the son of Ahab king of Israel, Jehoshaphat being king of Judah then, Jehoram the son of Jehoshaphat king of Judah began to reign. He was thirty-two years old when he began to reign. He reigned eight years in Jerusalem. He walked in the way of the kings of Israel, as did Ahab’s house; for he married Ahab’s daughter. He did that which was evil in Yahweh’s sight. — 2 Kings 8:16-18 (https://www.biblegateway.com/passage/?search=2+Kings+8%3A16-18)', 'Jehoram was thirty-two years old when he began to reign, and he reigned eight years in Jerusalem. He walked in the way of the kings of Israel, as did Ahab’s house; for he had Ahab’s daughter as his wife. He did that which was evil in Yahweh’s sight. — 2 Chronicles 21:5-6 (https://www.biblegateway.com/passage/?search=2+Chronicles+21%3A5-6)', 'Asa became the father of Jehoshaphat. Jehoshaphat became the father of Joram. Joram became the father of Uzziah. — Matthew 1:8 (https://www.biblegateway.com/passage/?search=Matthew+1%3A8)']
   },
   {
     id: 'ahaziah',
@@ -2652,7 +2952,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Sixth King of Judah. Reigned for only one year before being slain by Jehu.',
     layer: 'biblical-patriarchs',
     timelineId: 'ahaziah',
-    sources: ['2 Kings 8-9, 2 Chronicles 22']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['In the twelfth year of Joram the son of Ahab king of Israel, Ahaziah the son of Jehoram king of Judah began to reign. Ahaziah was twenty-two years old when he began to reign; and he reigned one year in Jerusalem. His mother’s name was Athaliah the daughter of Omri king of Israel. He walked in the way of Ahab’s house, and did that which was evil in Yahweh’s sight, as did Ahab’s house; for he was the son-in-law of Ahab’s house. — 2 Kings 8:25-27 (https://www.biblegateway.com/passage/?search=2+Kings+8%3A25-27)', 'The inhabitants of Jerusalem made Ahaziah his youngest son king in his place, because the band of men who came with the Arabians to the camp had slain all the oldest. So Ahaziah the son of Jehoram king of Judah reigned. Ahaziah was forty-two years old when he began to reign, and he reigned one year in Jerusalem. His mother’s name was Athaliah the daughter of Omri. — 2 Chronicles 22:1-2 (https://www.biblegateway.com/passage/?search=2+Chronicles+22%3A1-2)', 'He sought Ahaziah, and they caught him (now he was hiding in Samaria), and they brought him to Jehu, and killed him; and they buried him, for they said, “He is the son of Jehoshaphat, who sought Yahweh with all his heart.” The house of Ahaziah had no power to hold the kingdom. — 2 Chronicles 22:9 (https://www.biblegateway.com/passage/?search=2+Chronicles+22%3A9)']
   },
   {
     id: 'joash',
@@ -2661,7 +2962,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Seventh King of Judah, crowned at age seven after hiding from Athaliah. Repaired the Temple. Reigned 40 years.',
     layer: 'biblical-patriarchs',
     timelineId: 'joash',
-    sources: ['2 Kings 11-12, 2 Chronicles 24']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Jehoash was seven years old when he began to reign. — 2 Kings 11:21 (https://www.biblegateway.com/passage/?search=2+Kings+11%3A21)', 'Jehoash began to reign in the seventh year of Jehu, and he reigned forty years in Jerusalem. His mother’s name was Zibiah of Beersheba. Jehoash did that which was right in Yahweh’s eyes all his days in which Jehoiada the priest instructed him. — 2 Kings 12:1-2 (https://www.biblegateway.com/passage/?search=2+Kings+12%3A1-2)', 'Joash was seven years old when he began to reign, and he reigned forty years in Jerusalem. His mother’s name was Zibiah, of Beersheba. Joash did that which was right in Yahweh’s eyes all the days of Jehoiada the priest. — 2 Chronicles 24:1-2 (https://www.biblegateway.com/passage/?search=2+Chronicles+24%3A1-2)']
   },
   {
     id: 'amaziah',
@@ -2670,7 +2972,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Eighth King of Judah. Defeated the Edomites but was later assassinated. Reigned 29 years.',
     layer: 'biblical-patriarchs',
     timelineId: 'amaziah',
-    sources: ['2 Kings 14, 2 Chronicles 25']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['In the second year of Joash son of Joahaz king of Israel Amaziah the son of Joash king of Judah began to reign. He was twenty-five years old when he began to reign; and he reigned twenty-nine years in Jerusalem. His mother’s name was Jehoaddin of Jerusalem. He did that which was right in Yahweh’s eyes, yet not like David his father. He did according to all that Joash his father had done. — 2 Kings 14:1-3 (https://www.biblegateway.com/passage/?search=2+Kings+14%3A1-3)', 'Amaziah was twenty-five years old when he began to reign, and he reigned twenty-nine years in Jerusalem. His mother’s name was Jehoaddan, of Jerusalem. He did that which was right in Yahweh’s eyes, but not with a perfect heart. — 2 Chronicles 25:1-2 (https://www.biblegateway.com/passage/?search=2+Chronicles+25%3A1-2)', 'Now after Amaziah had come from the slaughter of the Edomites, he brought the gods of the children of Seir, and set them up to be his gods, and bowed down himself before them, and burned incense to them. — 2 Chronicles 25:14 (https://www.biblegateway.com/passage/?search=2+Chronicles+25%3A14)']
   },
   {
     id: 'uzziah',
@@ -2679,7 +2982,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Ninth King of Judah. Struck with leprosy for offering incense in the Temple. Reigned 52 years.',
     layer: 'biblical-patriarchs',
     timelineId: 'uzziah',
-    sources: ['2 Kings 15, 2 Chronicles 26']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['In the twenty-seventh year of Jeroboam king of Israel, Azariah son of Amaziah king of Judah began to reign. He was sixteen years old when he began to reign, and he reigned fifty-two years in Jerusalem. His mother’s name was Jecoliah of Jerusalem. He did that which was right in Yahweh’s eyes, according to all that his father Amaziah had done. — 2 Kings 15:1-3 (https://www.biblegateway.com/passage/?search=2+Kings+15%3A1-3)', 'All the people of Judah took Uzziah, who was sixteen years old, and made him king in the place of his father Amaziah. — 2 Chronicles 26:1 (https://www.biblegateway.com/passage/?search=2+Chronicles+26%3A1)', 'But when he was strong, his heart was lifted up, so that he did corruptly, and he trespassed against Yahweh his God; for he went into Yahweh’s temple to burn incense on the altar of incense. Azariah the priest went in after him, and with him eighty priests of Yahweh, who were valiant men. They resisted Uzziah the king, and said to him, “It isn’t for you, Uzziah, to burn incense to Yahweh, but for the priests the sons of Aaron, who are consecrated to burn incense. Go out of the sanctuary, for you have trespassed. It will not be for your honor from Yahweh God.” Then Uzziah was angry. He had a censer in his hand to burn incense, and while he was angry with the priests, the leprosy broke out on his forehead before the priests in Yahweh’s house, beside the altar of incense. Azariah the chief priest, and all the priests, looked at him, and behold, he was leprous in his forehead, and they thrust him out quickly from there. Yes, he himself also hurried to go out, because Yahweh had struck him. Uzziah the king was a leper to the day of his death, and lived in a separate house, being a leper; for he was cut off from Yahweh’s house. Jotham his son was over the king’s house, judging the people of the land. — 2 Chronicles 26:16-21 (https://www.biblegateway.com/passage/?search=2+Chronicles+26%3A16-21)']
   },
   {
     id: 'jotham',
@@ -2688,7 +2992,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Tenth King of Judah. Built the Upper Gate of the Temple. Reigned 16 years.',
     layer: 'biblical-patriarchs',
     timelineId: 'jotham',
-    sources: ['2 Kings 15, 2 Chronicles 27']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['In the second year of Pekah the son of Remaliah king of Israel, Jotham the son of Uzziah king of Judah began to reign. He was twenty-five years old when he began to reign, and he reigned sixteen years in Jerusalem. His mother’s name was Jerusha the daughter of Zadok. He did that which was right in Yahweh’s eyes. He did according to all that his father Uzziah had done. — 2 Kings 15:32-34 (https://www.biblegateway.com/passage/?search=2+Kings+15%3A32-34)', 'Jotham was twenty-five years old when he began to reign, and he reigned sixteen years in Jerusalem. His mother’s name was Jerushah the daughter of Zadok. He did that which was right in Yahweh’s eyes, according to all that his father Uzziah had done. However he didn’t enter into Yahweh’s temple. The people still acted corruptly. — 2 Chronicles 27:1-2 (https://www.biblegateway.com/passage/?search=2+Chronicles+27%3A1-2)', 'Uzziah became the father of Jotham. Jotham became the father of Ahaz. Ahaz became the father of Hezekiah. — Matthew 1:9 (https://www.biblegateway.com/passage/?search=Matthew+1%3A9)']
   },
   {
     id: 'ahaz',
@@ -2697,7 +3002,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Eleventh King of Judah. Renowned for wickedness and sacrificing his sons. Reigned 16 years.',
     layer: 'biblical-patriarchs',
     timelineId: 'ahaz',
-    sources: ['2 Kings 16, 2 Chronicles 28']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['In the seventeenth year of Pekah the son of Remaliah, Ahaz the son of Jotham king of Judah began to reign. Ahaz was twenty years old when he began to reign, and he reigned sixteen years in Jerusalem. He didn’t do that which was right in Yahweh his God’s eyes, like David his father. But he walked in the way of the kings of Israel, yes, and made his son to pass through the fire, according to the abominations of the nations whom Yahweh cast out from before the children of Israel. — 2 Kings 16:1-3 (https://www.biblegateway.com/passage/?search=2+Kings+16%3A1-3)', 'Ahaz was twenty years old when he began to reign, and he reigned sixteen years in Jerusalem. He didn’t do that which was right in Yahweh’s eyes, like David his father, but he walked in the ways of the kings of Israel, and also made molten images for the Baals. Moreover he burned incense in the valley of the son of Hinnom, and burned his children in the fire, according to the abominations of the nations whom Yahweh cast out before the children of Israel. He sacrificed and burned incense in the high places, and on the hills, and under every green tree. — 2 Chronicles 28:1-4 (https://www.biblegateway.com/passage/?search=2+Chronicles+28%3A1-4)', 'Uzziah became the father of Jotham. Jotham became the father of Ahaz. Ahaz became the father of Hezekiah. — Matthew 1:9 (https://www.biblegateway.com/passage/?search=Matthew+1%3A9)']
   },
   {
     id: 'hezekiah',
@@ -2706,7 +3012,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Twelfth King of Judah. Reorganized Temple worship and constructed Siloam Tunnel to resist Assyria. Reigned 29 years.',
     layer: 'biblical-patriarchs',
     timelineId: 'hezekiah',
-    sources: ['2 Kings 18-20, 2 Chronicles 29-32']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Now in the third year of Hoshea son of Elah king of Israel, Hezekiah the son of Ahaz king of Judah began to reign. He was twenty-five years old when he began to reign, and he reigned twenty-nine years in Jerusalem. His mother’s name was Abi the daughter of Zechariah. He did that which was right in Yahweh’s eyes, according to all that David his father had done. He removed the high places, and broke the pillars, and cut down the Asherah. He also broke in pieces the bronze serpent that Moses had made, because in those days the children of Israel burned incense to it; and he called it Nehushtan. He trusted in Yahweh, the God of Israel; so that after him was no one like him among all the kings of Judah, nor among them that were before him. — 2 Kings 18:1-5 (https://www.biblegateway.com/passage/?search=2+Kings+18%3A1-5)', 'This same Hezekiah also stopped the upper spring of the waters of Gihon, and brought them straight down on the west side of David’s city. Hezekiah prospered in all his works. — 2 Chronicles 32:30 (https://www.biblegateway.com/passage/?search=2+Chronicles+32%3A30)', 'Uzziah became the father of Jotham. Jotham became the father of Ahaz. Ahaz became the father of Hezekiah. — Matthew 1:9 (https://www.biblegateway.com/passage/?search=Matthew+1%3A9)']
   },
   {
     id: 'manasseh',
@@ -2715,7 +3022,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Thirteenth King of Judah. The longest-reigning Judean monarch (55 years), known for cruelty but repented in captivity.',
     layer: 'biblical-patriarchs',
     timelineId: 'manasseh',
-    sources: ['2 Kings 21, 2 Chronicles 33']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Manasseh was twelve years old when he began to reign, and he reigned fifty-five years in Jerusalem. His mother’s name was Hephzibah. He did that which was evil in Yahweh’s sight, after the abominations of the nations whom Yahweh cast out before the children of Israel. — 2 Kings 21:1-2 (https://www.biblegateway.com/passage/?search=2+Kings+21%3A1-2)', 'Yahweh spoke to Manasseh, and to his people; but they didn’t listen. Therefore Yahweh brought on them the captains of the army of the king of Assyria, who took Manasseh in chains, bound him with fetters, and carried him to Babylon. When he was in distress, he begged Yahweh his God, and humbled himself greatly before the God of his fathers. He prayed to him; and he was entreated by him, and heard his supplication, and brought him again to Jerusalem into his kingdom. Then Manasseh knew that Yahweh was God. — 2 Chronicles 33:10-13 (https://www.biblegateway.com/passage/?search=2+Chronicles+33%3A10-13)', 'Hezekiah became the father of Manasseh. Manasseh became the father of Amon. Amon became the father of Josiah. — Matthew 1:10 (https://www.biblegateway.com/passage/?search=Matthew+1%3A10)']
   },
   {
     id: 'amon',
@@ -2724,7 +3032,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Fourteenth King of Judah, assassinated by his own servants after a brief two-year reign.',
     layer: 'biblical-patriarchs',
     timelineId: 'amon',
-    sources: ['2 Kings 21, 2 Chronicles 33']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Amon was twenty-two years old when he began to reign; and he reigned two years in Jerusalem. His mother’s name was Meshullemeth the daughter of Haruz of Jotbah. He did that which was evil in Yahweh’s sight, as Manasseh his father did. He walked in all the ways that his father walked in, and served the idols that his father served, and worshiped them; and he abandoned Yahweh, the God of his fathers, and didn’t walk in the way of Yahweh. — 2 Kings 21:19-22 (https://www.biblegateway.com/passage/?search=2+Kings+21%3A19-22)', 'Amon was twenty-two years old when he began to reign; and he reigned two years in Jerusalem. He did that which was evil in Yahweh’s sight, as did Manasseh his father; and Amon sacrificed to all the engraved images which Manasseh his father had made, and served them. He didn’t humble himself before Yahweh, as Manasseh his father had humbled himself; but this same Amon trespassed more and more. — 2 Chronicles 33:21-23 (https://www.biblegateway.com/passage/?search=2+Chronicles+33%3A21-23)', 'Hezekiah became the father of Manasseh. Manasseh became the father of Amon. Amon became the father of Josiah. — Matthew 1:10 (https://www.biblegateway.com/passage/?search=Matthew+1%3A10)']
   },
   {
     id: 'josiah',
@@ -2733,7 +3042,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Fifteenth King of Judah. Enacted massive religious reforms after rediscovering the Book of the Law. Reigned 31 years.',
     layer: 'biblical-patriarchs',
     timelineId: 'josiah',
-    sources: ['2 Kings 22-23, 2 Chronicles 34-35']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Josiah was eight years old when he began to reign, and he reigned thirty-one years in Jerusalem. His mother’s name was Jedidah the daughter of Adaiah of Bozkath. He did that which was right in Yahweh’s eyes, and walked in all the way of David his father, and didn’t turn away to the right hand or to the left. — 2 Kings 22:1-2 (https://www.biblegateway.com/passage/?search=2+Kings+22%3A1-2)', 'There was no king like him before him, who turned to Yahweh with all his heart, and with all his soul, and with all his might, according to all the law of Moses; and there was none like him who arose after him. — 2 Kings 23:25 (https://www.biblegateway.com/passage/?search=2+Kings+23%3A25)', 'Hezekiah became the father of Manasseh. Manasseh became the father of Amon. Amon became the father of Josiah. — Matthew 1:10 (https://www.biblegateway.com/passage/?search=Matthew+1%3A10)']
   },
   {
     id: 'jehoiakim',
@@ -2742,7 +3052,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Sixteenth King of Judah. Carried away captive by Nebuchadnezzar. Reigned 11 years.',
     layer: 'biblical-patriarchs',
     timelineId: 'jehoiakim',
-    sources: ['2 Kings 23-24, 2 Chronicles 36']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Jehoiakim was twenty-five years old when he began to reign, and he reigned eleven years in Jerusalem. His mother’s name was Zebidah the daughter of Pedaiah of Rumah. He did that which was evil in Yahweh’s sight, according to all that his fathers had done. — 2 Kings 23:36-37 (https://www.biblegateway.com/passage/?search=2+Kings+23%3A36-37)', 'Jehoiakim was twenty-five years old when he began to reign, and he reigned eleven years in Jerusalem. He did that which was evil in Yahweh his God’s sight. — 2 Chronicles 36:5 (https://www.biblegateway.com/passage/?search=2+Chronicles+36%3A5)', 'Therefore Yahweh says concerning Jehoiakim the son of Josiah, king of Judah: “They won’t lament for him, saying, ‘Ah my brother!’ or, ‘Ah sister!’ They won’t lament for him, saying ‘Ah lord!’ or, ‘Ah his glory!’ — Jeremiah 22:18 (https://www.biblegateway.com/passage/?search=Jeremiah+22%3A18)']
   },
   {
     id: 'jeconiah',
@@ -2751,7 +3062,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Seventeenth King of Judah. Exiled to Babylon where he was eventually released from prison in old age.',
     layer: 'biblical-patriarchs',
     timelineId: 'jeconiah',
-    sources: ['2 Kings 24-25, 2 Chronicles 36']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Jehoiachin was eighteen years old when he began to reign, and he reigned in Jerusalem three months. His mother’s name was Nehushta the daughter of Elnathan of Jerusalem. He did that which was evil in Yahweh’s sight, according to all that his father had done. — 2 Kings 24:8-9 (https://www.biblegateway.com/passage/?search=2+Kings+24%3A8-9)', 'The sons of Jehoiakim: Jeconiah his son, and Zedekiah his son. — 1 Chronicles 3:16 (https://www.biblegateway.com/passage/?search=1+Chronicles+3%3A16)', 'Josiah became the father of Jechoniah and his brothers, at the time of the exile to Babylon. — Matthew 1:11 (https://www.biblegateway.com/passage/?search=Matthew+1%3A11)']
   },
   {
     id: 'shealtiel',
@@ -2760,7 +3072,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Son of King Jeconiah. Born in Babylonian captivity.',
     layer: 'biblical-patriarchs',
     timelineId: 'shealtiel',
-    sources: ['1 Chronicles 3:17, Matthew 1:12']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['The sons of Jeconiah, the captive: Shealtiel his son, — 1 Chronicles 3:17 (https://www.biblegateway.com/passage/?search=1+Chronicles+3%3A17)', 'Then Jeshua the son of Jozadak stood up with his brothers the priests, and Zerubbabel the son of Shealtiel and his brothers, and built the altar of the God of Israel, to offer burnt offerings on it, as it is written in the law of Moses the man of God. — Ezra 3:2 (https://www.biblegateway.com/passage/?search=Ezra+3%3A2)', 'After the exile to Babylon, Jechoniah became the father of Shealtiel. Shealtiel became the father of Zerubbabel. — Matthew 1:12 (https://www.biblegateway.com/passage/?search=Matthew+1%3A12)']
   },
   {
     id: 'zerubbabel',
@@ -2769,7 +3082,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Grandson of Jeconiah. Headed the first return of exiles from Babylon and laid the foundations of the Second Temple.',
     layer: 'biblical-patriarchs',
     timelineId: 'zerubbabel',
-    sources: ['Ezra 3, Haggai 1, Matthew 1:12']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['In the second year of Darius the king, in the sixth month, in the first day of the month, Yahweh’s word came by Haggai, the prophet, to Zerubbabel, the son of Shealtiel, governor of Judah, and to Joshua, the son of Jehozadak, the high priest, saying, — Haggai 1:1 (https://www.biblegateway.com/passage/?search=Haggai+1%3A1)', 'Then he answered and spoke to me, saying, “This is Yahweh’s word to Zerubbabel, saying, ‘Not by might, nor by power, but by my Spirit,’ says Yahweh of Armies. — Zechariah 4:6 (https://www.biblegateway.com/passage/?search=Zechariah+4%3A6)', 'After the exile to Babylon, Jechoniah became the father of Shealtiel. Shealtiel became the father of Zerubbabel. — Matthew 1:12 (https://www.biblegateway.com/passage/?search=Matthew+1%3A12)']
   },
   {
     id: 'abiud',
@@ -2778,7 +3092,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Son of Zerubbabel. Mentioned in the Messianic genealogy of Matthew.',
     layer: 'biblical-patriarchs',
     timelineId: 'abiud',
-    sources: ['Matthew 1:13']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Zerubbabel became the father of Abiud. Abiud became the father of Eliakim. Eliakim became the father of Azor. — Matthew 1:13 (https://www.biblegateway.com/passage/?search=Matthew+1%3A13)']
   },
   {
     id: 'eliakim',
@@ -2787,7 +3102,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Son of Abiud. Part of the post-exile genealogy of Jesus Christ.',
     layer: 'biblical-patriarchs',
     timelineId: 'eliakim',
-    sources: ['Matthew 1:13']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Zerubbabel became the father of Abiud. Abiud became the father of Eliakim. Eliakim became the father of Azor. — Matthew 1:13 (https://www.biblegateway.com/passage/?search=Matthew+1%3A13)']
   },
   {
     id: 'azor',
@@ -2796,7 +3112,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Son of Eliakim, mentioned in the lineage of Joseph.',
     layer: 'biblical-patriarchs',
     timelineId: 'azor',
-    sources: ['Matthew 1:13-14']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Zerubbabel became the father of Abiud. Abiud became the father of Eliakim. Eliakim became the father of Azor. — Matthew 1:13 (https://www.biblegateway.com/passage/?search=Matthew+1%3A13)', 'Azor became the father of Zadok. Zadok became the father of Achim. Achim became the father of Eliud. — Matthew 1:14 (https://www.biblegateway.com/passage/?search=Matthew+1%3A14)']
   },
   {
     id: 'zadok_pat',
@@ -2805,7 +3122,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Son of Azor. Ancestor of Jesus.',
     layer: 'biblical-patriarchs',
     timelineId: 'zadok_pat',
-    sources: ['Matthew 1:14']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Azor became the father of Zadok. Zadok became the father of Achim. Achim became the father of Eliud. — Matthew 1:14 (https://www.biblegateway.com/passage/?search=Matthew+1%3A14)']
   },
   {
     id: 'achim',
@@ -2814,7 +3132,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Son of Zadok. Ancestor of Jesus.',
     layer: 'biblical-patriarchs',
     timelineId: 'achim',
-    sources: ['Matthew 1:14']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Azor became the father of Zadok. Zadok became the father of Achim. Achim became the father of Eliud. — Matthew 1:14 (https://www.biblegateway.com/passage/?search=Matthew+1%3A14)']
   },
   {
     id: 'eliud',
@@ -2823,7 +3142,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Son of Achim. Ancestor of Jesus.',
     layer: 'biblical-patriarchs',
     timelineId: 'eliud',
-    sources: ['Matthew 1:14-15']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Eliud became the father of Eleazar. Eleazar became the father of Matthan. Matthan became the father of Jacob. — Matthew 1:15 (https://www.biblegateway.com/passage/?search=Matthew+1%3A15)']
   },
   {
     id: 'eleazar_pat',
@@ -2832,7 +3152,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Son of Eliud. Ancestor of Jesus.',
     layer: 'biblical-patriarchs',
     timelineId: 'eleazar_pat',
-    sources: ['Matthew 1:15']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Eliud became the father of Eleazar. Eleazar became the father of Matthan. Matthan became the father of Jacob. — Matthew 1:15 (https://www.biblegateway.com/passage/?search=Matthew+1%3A15)']
   },
   {
     id: 'matthan',
@@ -2841,7 +3162,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Son of Eleazar. Grandfather of Joseph.',
     layer: 'biblical-patriarchs',
     timelineId: 'matthan',
-    sources: ['Matthew 1:15']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Eliud became the father of Eleazar. Eleazar became the father of Matthan. Matthan became the father of Jacob. — Matthew 1:15 (https://www.biblegateway.com/passage/?search=Matthew+1%3A15)']
   },
   {
     id: 'mary_pat',
@@ -2850,7 +3172,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Mother of Jesus Christ, highly favored by God.',
     layer: 'biblical-patriarchs',
     timelineId: 'mary_pat',
-    sources: ['Luke 1-2, Matthew 1']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Now in the sixth month, the angel Gabriel was sent from God to a city of Galilee, named Nazareth, to a virgin pledged to be married to a man whose name was Joseph, of David’s house. The virgin’s name was Mary. Having come in, the angel said to her, “Rejoice, you highly favored one! The Lord is with you. Blessed are you among women!” But when she saw him, she was greatly troubled at the saying, and considered what kind of salutation this might be. The angel said to her, “Don’t be afraid, Mary, for you have found favor with God. Behold, you will conceive in your womb, and give birth to a son, and will call his name ‘Jesus.’ — Luke 1:26-31 (https://www.biblegateway.com/passage/?search=Luke+1%3A26-31)', 'She gave birth to her firstborn son. She wrapped him in bands of cloth, and laid him in a feeding trough, because there was no room for them in the inn. — Luke 2:7 (https://www.biblegateway.com/passage/?search=Luke+2%3A7)', 'But there were standing by the cross of Jesus his mother, and his mother’s sister, Mary the wife of Clopas, and Mary Magdalene. Therefore when Jesus saw his mother, and the disciple whom he loved standing there, he said to his mother, “Woman, behold, your son!” Then he said to the disciple, “Behold, your mother!” From that hour, the disciple took her to his own home. — John 19:25-27 (https://www.biblegateway.com/passage/?search=John+19%3A25-27)']
   },
   {
     id: 'jesus',
@@ -2859,7 +3182,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'The central figure of Christianity, the Son of God, and the Messiah in Christian theology.',
     layer: 'biblical-patriarchs',
     timelineId: 'jesus',
-    sources: ['Gospels']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['In the beginning was the Word, and the Word was with God, and the Word was God. — John 1:1 (https://www.biblegateway.com/passage/?search=John+1%3A1)', 'For God so loved the world, that he gave his one and only Son, that whoever believes in him should not perish, but have eternal life. — John 3:16 (https://www.biblegateway.com/passage/?search=John+3%3A16)', 'She shall give birth to a son. You shall call his name Jesus, for it is he who shall save his people from their sins.” — Matthew 1:21 (https://www.biblegateway.com/passage/?search=Matthew+1%3A21)']
   },
   {
     id: 'mary_magdalene',
@@ -2868,7 +3192,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Faithful disciple of Jesus Christ, witness to His crucifixion and burial, and the first to witness His resurrection.',
     layer: 'biblical-patriarchs',
     timelineId: 'mary_magdalene',
-    sources: ['Gospels']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['and certain women who had been healed of evil spirits and infirmities: Mary who was called Magdalene, from whom seven demons had gone out; — Luke 8:2 (https://www.biblegateway.com/passage/?search=Luke+8%3A2)', 'But Mary was standing outside at the tomb weeping. So, as she wept, she stooped and looked into the tomb, and she saw two angels in white sitting, one at the head, and one at the feet, where the body of Jesus had lain. They told her, “Woman, why are you weeping?” She said to them, “Because they have taken away my Lord, and I don’t know where they have laid him.” When she had said this, she turned around and saw Jesus standing, and didn’t know that it was Jesus. Jesus said to her, “Woman, why are you weeping? Who are you looking for?” She, supposing him to be the gardener, said to him, “Sir, if you have carried him away, tell me where you have laid him, and I will take him away.” Jesus said to her, “Mary.” She turned and said to him, “Rabboni!” which is to say, “Teacher!” Jesus said to her, “Don’t hold me, for I haven’t yet ascended to my Father; but go to my brothers, and tell them, ‘I am ascending to my Father and your Father, to my God and your God.’” Mary Magdalene came and told the disciples that she had seen the Lord, and that he had said these things to her. — John 20:11-18 (https://www.biblegateway.com/passage/?search=John+20%3A11-18)', 'Now when he had risen early on the first day of the week, he appeared first to Mary Magdalene, from whom he had cast out seven demons. — Mark 16:9 (https://www.biblegateway.com/passage/?search=Mark+16%3A9)']
   },
   {
     id: 'peter_apostle',
@@ -2877,7 +3202,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Leader of the early Church, chief of the Apostles, martyred in Rome under Nero.',
     layer: 'biblical-patriarchs',
     timelineId: 'peter_apostle',
-    sources: ['Gospels, Acts']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['I also tell you that you are Peter, and on this rock I will build my assembly, and the gates of Hades will not prevail against it. — Matthew 16:18 (https://www.biblegateway.com/passage/?search=Matthew+16%3A18)', 'The Lord said, “Simon, Simon, behold, Satan asked to have all of you, that he might sift you as wheat, but I prayed for you, that your faith wouldn’t fail. You, when once you have turned again, establish your brothers.” — Luke 22:31-32 (https://www.biblegateway.com/passage/?search=Luke+22%3A31-32)', 'So when they had eaten their breakfast, Jesus said to Simon Peter, “Simon, son of Jonah, do you love me more than these?” He said to him, “Yes, Lord; you know that I have affection for you.” He said to him, “Feed my lambs.” He said to him again a second time, “Simon, son of Jonah, do you love me?” He said to him, “Yes, Lord; you know that I have affection for you.” He said to him, “Tend my sheep.” He said to him the third time, “Simon, son of Jonah, do you have affection for me?” Peter was grieved because he asked him the third time, “Do you have affection for me?” He said to him, “Lord, you know everything. You know that I have affection for you.” Jesus said to him, “Feed my sheep. — John 21:15-17 (https://www.biblegateway.com/passage/?search=John+21%3A15-17)']
   },
   {
     id: 'paul_apostle',
@@ -2886,7 +3212,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Apostle to the Gentiles, author of many epistles, martyred in Rome.',
     layer: 'biblical-patriarchs',
     timelineId: 'paul_apostle',
-    sources: ['Acts, Pauline Epistles']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['As he traveled, he got close to Damascus, and suddenly a light from the sky shone around him. He fell on the earth, and heard a voice saying to him, “Saul, Saul, why do you persecute me?” He said, “Who are you, Lord?” The Lord said, “I am Jesus, whom you are persecuting. But rise up, and enter into the city, and you will be told what you must do.” — Acts 9:3-6 (https://www.biblegateway.com/passage/?search=Acts+9%3A3-6)', '“He said to me, ‘Depart, for I will send you out far from here to the Gentiles.’” — Acts 22:21 (https://www.biblegateway.com/passage/?search=Acts+22%3A21)', 'Paul, a servant of Jesus Christ, called to be an apostle, set apart for the Good News of God, — Romans 1:1 (https://www.biblegateway.com/passage/?search=Romans+1%3A1)']
   },
   {
     id: 'john_apostle',
@@ -2895,7 +3222,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'The beloved disciple, author of the Gospel of John and Revelation, exiled on Patmos.',
     layer: 'biblical-patriarchs',
     timelineId: 'john_apostle',
-    sources: ['Gospels, Revelation']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['Therefore when Jesus saw his mother, and the disciple whom he loved standing there, he said to his mother, “Woman, behold, your son!” — John 19:26 (https://www.biblegateway.com/passage/?search=John+19%3A26)', 'This is the Revelation of Jesus Christ, which God gave him to show to his servants the things which must happen soon, which he sent and made known by his angel to his servant, John, who testified to God’s word, and of the testimony of Jesus Christ, about everything that he saw. — Revelation 1:1-2 (https://www.biblegateway.com/passage/?search=Revelation+1%3A1-2)', 'Then Peter, turning around, saw a disciple following. This was the disciple whom Jesus loved, the one who had also leaned on Jesus’ breast at the supper and asked, “Lord, who is going to betray You?” Peter seeing him, said to Jesus, “Lord, what about this man?” Jesus said to him, “If I desire that he stay until I come, what is that to you? You follow me.” This saying therefore went out among the brothers, that this disciple wouldn’t die. Yet Jesus didn’t say to him that he wouldn’t die, but, “If I desire that he stay until I come, what is that to you?” This is the disciple who testifies about these things, and wrote these things. We know that his witness is true. — John 21:20-24 (https://www.biblegateway.com/passage/?search=John+21%3A20-24)']
   },
   {
     id: 'rephaim',
@@ -2904,7 +3232,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'An ancient race of giants who inhabited Canaan, Bashan, and Moab. Associated with King Og of Bashan and the valley of Rephaim.',
     layer: 'biblical-patriarchs',
     timelineId: 'rephaim',
-    sources: ['Genesis 14:5, Deuteronomy 2:11, 3:11']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['In the fourteenth year Chedorlaomer came, and the kings who were with him, and struck the Rephaim in Ashteroth Karnaim, and the Zuzim in Ham, and the Emim in Shaveh Kiriathaim, — Genesis 14:5 (https://www.biblegateway.com/passage/?search=Genesis+14%3A5)', '(For only Og king of Bashan remained of the remnant of the Rephaim. Behold, his bedstead was a bedstead of iron. Isn’t it in Rabbah of the children of Ammon? Nine cubits was its length, and four cubits its width, after the cubit of a man.) — Deuteronomy 3:11 (https://www.biblegateway.com/passage/?search=Deuteronomy+3%3A11)', 'and the border of Og king of Bashan, of the remnant of the Rephaim, who lived at Ashtaroth and at Edrei, — Joshua 12:4 (https://www.biblegateway.com/passage/?search=Joshua+12%3A4)']
   },
   {
     id: 'emim',
@@ -2913,7 +3242,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'An ancient giant people who originally inhabited the land of Moab. Described as "a people great, and many, and tall, as the Anakim."',
     layer: 'biblical-patriarchs',
     timelineId: 'emim',
-    sources: ['Genesis 14:5, Deuteronomy 2:10-11']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['In the fourteenth year Chedorlaomer came, and the kings who were with him, and struck the Rephaim in Ashteroth Karnaim, and the Zuzim in Ham, and the Emim in Shaveh Kiriathaim, — Genesis 14:5 (https://www.biblegateway.com/passage/?search=Genesis+14%3A5)', '(The Emim lived therein before, a people great, and many, and tall, as the Anakim. These also are considered to be Rephaim, as the Anakim; but the Moabites call them Emim. — Deuteronomy 2:10-11 (https://www.biblegateway.com/passage/?search=Deuteronomy+2%3A10-11)']
   },
   {
     id: 'horites',
@@ -2922,7 +3252,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'The ancient cave-dwelling inhabitants of Mount Seir (Edom) before being dispossessed and succeeded by the descendants of Esau (Edomites).',
     layer: 'biblical-patriarchs',
     timelineId: 'horites',
-    sources: ['Genesis 14:6, 36:20-30, Deuteronomy 2:12']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['and the Horites in their Mount Seir, to El Paran, which is by the wilderness. — Genesis 14:6 (https://www.biblegateway.com/passage/?search=Genesis+14%3A6)', 'The Horites also lived in Seir before, but the children of Esau succeeded them. They destroyed them from before them, and lived in their place; as Israel did to the land of his possession, which Yahweh gave to them.) — Deuteronomy 2:12 (https://www.biblegateway.com/passage/?search=Deuteronomy+2%3A12)', 'The sons of Seir: Lotan, Shobal, Zibeon, Anah, Dishon, Ezer, and Dishan. — 1 Chronicles 1:38 (https://www.biblegateway.com/passage/?search=1+Chronicles+1%3A38)']
   },
   {
     id: 'avim',
@@ -2931,7 +3262,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'The early inhabitants of southwest Canaan (near Gaza) who dwelt in villages as far as Hazerim, later destroyed and replaced by the Caphtorim (Philistines).',
     layer: 'biblical-patriarchs',
     timelineId: 'avim',
-    sources: ['Deuteronomy 2:23, Joshua 13:3']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['and the Avvim, who lived in villages as far as Gaza, the Caphtorim, who came out of Caphtor, destroyed them, and lived in their place.) — Deuteronomy 2:23 (https://www.biblegateway.com/passage/?search=Deuteronomy+2%3A23)', 'from the Shihor, which is before Egypt, even to the border of Ekron northward, which is counted as Canaanite; the five lords of the Philistines; the Gazites, and the Ashdodites, the Ashkelonites, the Gittites, and the Ekronites; also the Avvim, — Joshua 13:3 (https://www.biblegateway.com/passage/?search=Joshua+13%3A3)']
   },
   {
     id: 'perizzites',
@@ -2940,7 +3272,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'A Canaanite people group who lived in the forested hill country of Ephraim and Judah. Mentioned regularly as inhabitants of the Promised Land.',
     layer: 'biblical-patriarchs',
     timelineId: 'perizzites',
-    sources: ['Genesis 13:7, 15:20, Joshua 17:15, 1 Kings 9:20']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['There was strife between the herdsmen of Abram’s livestock and the herdsmen of Lot’s livestock. The Canaanites and the Perizzites lived in the land at that time. — Genesis 13:7 (https://www.biblegateway.com/passage/?search=Genesis+13%3A7)', 'the Hittites, the Perizzites, the Rephaim, — Genesis 15:20 (https://www.biblegateway.com/passage/?search=Genesis+15%3A20)', 'Judah went up, and Yahweh delivered the Canaanites and the Perizzites into their hand. They struck ten thousand men in Bezek. — Judges 1:4 (https://www.biblegateway.com/passage/?search=Judges+1%3A4)']
   },
   {
     id: 'kenites',
@@ -2949,7 +3282,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'A nomadic clan of metalworkers allied with Israel. Jethro, the father-in-law of Moses, was a Kenite. They inhabited the Wilderness of Arad.',
     layer: 'biblical-patriarchs',
     timelineId: 'kenites',
-    sources: ['Genesis 15:19, Judges 1:16, 4:11, 1 Samuel 15:6']
+    sources: ['Bible', 'Historical Chronology Database'],
+    bibleVerses: ['the Kenites, the Kenizzites, the Kadmonites, — Genesis 15:19 (https://www.biblegateway.com/passage/?search=Genesis+15%3A19)', 'He looked at the Kenite, and took up his parable, and said, “Your dwelling place is strong. Your nest is set in the rock. — Numbers 24:21 (https://www.biblegateway.com/passage/?search=Numbers+24%3A21)', 'Now Heber the Kenite had separated himself from the Kenites, even from the children of Hobab, Moses’ brother-in-law, and had pitched his tent as far as the oak in Zaanannim, which is by Kedesh. — Judges 4:11 (https://www.biblegateway.com/passage/?search=Judges+4%3A11)']
   },
   {
     id: 'adam-eve',
@@ -2963,7 +3297,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     relatedIds: ['great-flood', 'creation-evt'],
     bibleVerses: ['So God created mankind in his own image, in the image of God he created them; male and female he created them. — Genesis 1:27', 'The Lord God took the man and put him in the Garden of Eden to work it and take care of it. — Genesis 2:15'],
     timelineId: 'adam',
-    sources: ['Canonical Scripture', 'Historical Chronology Database']
+    sources: ['Bible', 'Historical Chronology Database']
   },
   {
     id: 'enoch',
@@ -2976,7 +3310,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     relatedIds: ['watchers', 'mt-hermon', 'book-of-enoch'],
     bibleVerses: ['Enoch walked faithfully with God; then he was no more, because God took him away. — Genesis 5:24', 'By faith Enoch was taken from this life, so that he did not experience death... For before he was taken, he was commended as one who pleased God. — Hebrews 11:5'],
     timelineId: 'enoch',
-    sources: ['Canonical Scripture', 'Historical Chronology Database']
+    sources: ['Bible', 'Historical Chronology Database']
   },
   {
     id: 'noah-fig',
@@ -2989,7 +3323,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     relatedIds: ['great-flood', 'noahs-ark-find', 'gilgamesh-text'],
     bibleVerses: ['Noah was a righteous man, blameless among the people of his time, and he walked faithfully with God. — Genesis 6:9', 'By faith Noah, when warned about things not yet seen, in holy fear built an ark to save his family... — Hebrews 11:7'],
     timelineId: 'noah',
-    sources: ['Canonical Scripture', 'Historical Chronology Database']
+    sources: ['Bible', 'Historical Chronology Database']
   },
   {
     id: 'abraham-fig',
@@ -3000,9 +3334,9 @@ export const TERM_TREE_DATA: TermNode[] = [
       { lang: 'Hebrew', original: 'אַבְרָהָם', translit: 'Avraham', meaning: 'Father of Multitudes' }
     ],
     relatedIds: ['cave-machpelah', 'sodom-gomorrah-evt'],
-    bibleVerses: ["The Lord had said to Abram, 'Go from your country, your people and your father's household to the land I will show you. I will make you into a great nation...' — Genesis 12:1-2"],
+    bibleVerses: ['Now Yahweh said to Abram, “Leave your country, and your relatives, and your father’s house, and go to the land that I will show you. I will make of you a great nation. I will bless you and make your name great. You will be a blessing. I will bless those who bless you, and I will curse him who treates you with contempt. All the families of the earth will be blessed through you.” — Genesis 12:1-3 (https://www.biblegateway.com/passage/?search=Genesis+12%3A1-3)', 'Yahweh brought him outside, and said, “Look now toward the sky, and count the stars, if you are able to count them.” He said to Abram, “So will your offspring be.” He believed in Yahweh, who credited it to him for righteousness. — Genesis 15:5-6 (https://www.biblegateway.com/passage/?search=Genesis+15%3A5-6)', 'For what does the Scripture say? “Abraham believed God, and it was accounted to him for righteousness.” — Romans 4:3 (https://www.biblegateway.com/passage/?search=Romans+4%3A3)'],
     timelineId: 'abraham',
-    sources: ['Canonical Scripture', 'Historical Chronology Database']
+    sources: ['Bible', 'Historical Chronology Database']
   },
   {
     id: 'nimrod-fig',
@@ -3013,13 +3347,13 @@ export const TERM_TREE_DATA: TermNode[] = [
       { lang: 'Hebrew', original: 'נִמְרוֹד', translit: 'Nimrod', meaning: 'We Shall Rebel' }
     ],
     relatedIds: ['babel-evt', 'gilgamesh-text'],
-    bibleVerses: ['Cush was the father of Nimrod, who became a mighty warrior on the earth. He was a mighty hunter before the Lord... The first centers of his kingdom were Babylon, Uruk, Akkad and Kalneh, in Shinar. — Genesis 10:8-10'],
+    bibleVerses: ['Cush became the father of Nimrod. He began to be a mighty one in the earth. He was a mighty hunter before Yahweh. Therefore it is said, “like Nimrod, a mighty hunter before Yahweh”. — Genesis 10:8-9 (https://www.biblegateway.com/passage/?search=Genesis+10%3A8-9)', 'Cush became the father of Nimrod. He began to be a mighty one in the earth. — 1 Chronicles 1:10 (https://www.biblegateway.com/passage/?search=1+Chronicles+1%3A10)', 'They will rule the land of Assyria with the sword, and the land of Nimrod in its gates. He will deliver us from the Assyrian, when he invades our land, and when he marches within our border. — Micah 5:6 (https://www.biblegateway.com/passage/?search=Micah+5%3A6)'],
     timelineId: 'nimrod',
-    sources: ['Canonical Scripture', 'Historical Chronology Database']
+    sources: ['Bible', 'Historical Chronology Database']
   },
   {
     id: 'nephilim-br',
-    parentId: 'biblical-enc',
+    parentId: 'biblical-apocryphal',
     name: 'Nephilim & Giants',
     description: 'The offspring of the Watchers (sons of God) and human women, described as "mighty men of old, men of renown."',
     translations: [
@@ -3028,13 +3362,16 @@ export const TERM_TREE_DATA: TermNode[] = [
     ],
     relatedIds: ['watchers', 'mounds', 'megaliths'],
     bibleVerses: ['The Nephilim were on the earth in those days—and also afterward—when the sons of God went to the daughters of humans and had children by them. They were the heroes of old, men of renown. — Genesis 6:4', 'We saw the Nephilim there (the descendants of Anak come from the Nephilim). We seemed like grasshoppers in our own eyes, and we looked the same to them. — Numbers 13:33'],
-    layer: 'Nephilim'
+    layer: 'Nephilim',
+    isApocryphal: true
   },
   {
     id: 'giant-skeletal-finds',
     parentId: 'nephilim-br',
     name: 'Giant Excavations & Finds',
-    description: 'Historical records, mound excavations, and news clippings of large skeletons, elongated skulls, and giant bones found globally.'
+    description: 'Historical records, mound excavations, and news clippings of large skeletons, elongated skulls, and giant bones found globally.',
+    secondaryParentIds: ['archaeological-finds-br'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-0',
@@ -3044,7 +3381,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-0',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X471Ywze0cWP7vyD6XRpdCPB59v-dJjysTxpR-Ga8m2HN1Oki2Y7CTPZNcAqOStBkdwGZk8NWu5xWXOJRaUKb05FpR8rj9POfTPC1ueD0HIVKZRZkWhGX9K4AuxBWs1_VBqzka6dxRznCrGcC4ICv1ZQPIT2Lr4Ux4JJKSaoR7FUpEgCwc5Mw-Hh9KljNCStbh651yVmg8mdIkTcb7nRKEOEgubNGf9Qbs4ZQ1vNGVtzQJ6wU5P2KbVfZ0?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-1',
@@ -3054,7 +3392,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-1',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6oGcc1klRZnFBTN6xpzBEsy9f3rVJFq7OwfiL8oSKjkz866_z4YJknb8vw4o5n3e6VRVU2IYaAz_LdUfHdiR6iaSXW6D9S5knr8z18ikFRYYoxsQxOQa5cEz8hNaVxtokH-8jEBM5Dwlt2oR8Ky2EHvmZ3nL5U5eXVR80iZAMF_qzMGxVtUWU6DfDUx7WW07mqdh7zKQ1q0OdiBVOaPQtkCylYCi6ROZyKtvAxuwjHxjW0-k7pRiVSTPg?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-2',
@@ -3064,7 +3403,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-2',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4YUnIZ7FaBn6qPEFc2imVUf41gldkR7CYdfZKGEH0fHTK34_tbk0kN_KrsoHSSvnmaaVf1lRuxSSxRHgo1mLioJIMjOobLrEi05-1s3dDymurDXTJNzkh_lZYKMCLqhR5mwC3zGWb2qODT1dDKsyfjYbdKtwpX-lefDOIhxxV0UGdPy1GxsLy2src3v9OyYDdEtacH9q1uk3I46FyYwsQV0SPhgZHgshYJkdZocJzvrO6R7XuvGAdujNw?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X79WOMDFKYYBHzQEOUrQceT7sYxb28to0e2kAsbRE49VRyxLGdPrj2uV4_9sjMW468G5o-e-8rOqwTP2CYvx1I7fzQTxcAfjVgoMQZzXpDBJv8nrCS_l0qSxxuumgpUdwgoIuRNfoDTCQEGsp_m88FHBxYFJgphTWveVztl0TkMWTG7Z7RxaNZEWuvwuenqopwPp4JbKkFFu5oiG4j6twUrVA3i5eWVGGWPPI0cZtlXdOPYWRnr1nmpEOE?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-3',
@@ -3074,7 +3414,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-3',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7rYON9vAipWchWK4XZ33uHuz2cwYwf-cQVaV6YnmyuNNhsjksu2R57qgZo7eo7DQ8tk2FrSekEqQWWTfABcY7vzWNCq8bR61-AJ4dzHk5k-6c4ky5vSLyBiyjoW_goV9FqGonenaCcM2kGt38sihy6yR3GTWs-E85uG07n_epZ-OmA8rOF6zAeafEJA7bE2dzdEorONx6AFgvnW6Gw2WkW5j9QnyJ6VO7OdRxbKsq2s3qzGAhQ0LbB_O0?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-4',
@@ -3084,7 +3425,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-4',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4A4LUWElK8hEy0acrbVgvvRSSYHf1wkJYW_Poba1E5iYN5mbLVZ5eKs-kVU2p5l_xOgC6Fj1qNYyIonoNAGDiFnZfrpaquAXrU6LV4fmvATsN0sQaHzfnhI9JmxTw6cqMgyO_28GWN5jL31FTJatIiguDTDX1VJDlmAWuPGSme2bEj5n7xLIh-wBX15p0cH9Y5oDRDVM6zZ6CAslKnzLiiyptx0c1CLWXZbugRluzfwr5Dr9pKQwBAgko?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-5',
@@ -3094,7 +3436,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-5',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7pD_IscuOSRXDO8zkKRTn5R_OtvxplKeSHfJf_Lo-Jt8R9UcyWnbNbbonxG44i3pz7Xah-9KuUcHq87D1yRirx-Re4nYUWikiHsf3jzEztmUcbh_i-ZNMDfNFmeK_QnR1oVNTsCL_qqNAALX2g42-pN0Y31ZoebAx6YyQ1IfQ9vrfO3z8PZFMa4m65bF2usSggi2A03fy0UV0rOT39avpxIpwE6UeVrN7ZAINXl1WjkRTNMmk6m5qnBy8?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6Yz7cy38uc_hZZq6oDPZ0PotYIcA5A1X0fedlVb43KQuZXsIFvxIwRcXS4-Hz0rX_Sgr858yKiYrmw2abj_tJawPsVRkVrRAzXK61Ij7-unxttxL5kRAd6FZtsm7QEexJnRPbOZAM6Xvd1wrRVZ38oyyQGoi4UZlg5eMvbAYjemOW3K1gRBYf_-YkuP83x5BkGMgvk-PfQNk-XYPCoBkh87A9JFJZ-WIfQznN_A6FAMnqYbPuUut2W8WA?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-6',
@@ -3104,7 +3447,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-6',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5pRSZ8B5EmtIOYuqvI5bSNybLdACsNjsfPy6Y0Wk5xFPbfO9qIFSc-teXLPeM3RHVN-EMQrGMkNsGa5KoPhnzp2t7rp3ltYxDddER2z1xZiKJcYpsDm3SiG2T0HYGCpRRM7m5l2uq6WbKzmuMNzeQMwST5waTsLWiW6d1DZoSPZ24R88rEyCy2_eIpeIlX-d_pLeEk_vyWbjdNmgFOKhMaqsbr1wWGnltVTQ8jmicpPuq5rXhDpss8UA8?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-7',
@@ -3114,7 +3458,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-7',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4qP28rIvnfGafWNUOqgXTEWQA6wP9zebHa5FsHMLIRHIMFVi6bWqONQ2xLKTarWGRfk5NyjiyTlj8AMHRaaZqSlZ4oLwBf6mVASqF-VDBcpq6fcjFjS7FofiI6jyjS-3SnXNF353B6MIp8GIXQhWKXvE2Prx_P8IqQragCQmFwjplzLf72JSlikcaZw1NlNiMAg1I8aNpe8w18V3g1NIrLpku1CvoJTbQZ54xplk31eO3HFaOrx8fwY8c?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-8',
@@ -3124,7 +3469,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-8',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6EB_EZcEJNBqERwNv7bnjPdLZRS9BBef4sKzqy6EIGORYABMIGQATxBlJrQLI-Kk7Ew8Vs0Koqh1v41LY-0-NK3VAmeMWfcWQoUhy_sKVmaOLtUuauiNYsxemFZTcaVlBL6qMl7nlkO8YIYFZ5kaJVDA-2UxiEt_vogELO5ARQDPHXN5VIPNldZc5OTuioStEHed0cgidMHZdDX1JHK1_107ZSbk3eKRZaPZuOXWE0-YnvjgxtJzU-C6Y?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4uB52KOjfmtAzphhWJaUGbUnCD1Dt3cFEQKOdMRyCzbJ90G7YHdjydTWIx5dk3kUq08E7cg3iUecKE-pegruk0EPk_Ayk488STOXX8U_2flE_qtvkDSvxDgr2KhP4HyBK1Nmg2E8FEqxtyKR1o8xsyEvwEZy09U0huk4hdiE20VmbzjF-lNpXU0-l5lrzBbKgslHy6ipuczHD8XCg3ij3hHzuEcu8DyE63y4J4cA4X_zNsBxYahijE9vM?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-9',
@@ -3134,7 +3480,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-9',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4wsadaBGQH09AplIws59UFWMsE07lUmAvTmy0TF0Ob-WttLgqC8xD9DDdME9oMusNjyjmfXw2CFTZD-OnX4GO3fQ4Fd6dpmBc7DQf_E67nveYs6zF6hZ9BlKvmE-DJIaN9j9SnasnRhUfO9rXXvckhuFTIVCGdX1azSHZkQP2Gi0_N9Klw9W_wW0mr6-FBbedqF460syN2b3mV5NIYzvTCgzJGLmvbdZ0U7kmR52JLWvc24KA6VSbx9jE?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-10',
@@ -3144,7 +3491,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-10',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7JCFK3Ke7vsdjcG4-413x3qEbFP1Gvn-rbYs8L4y5881EmGBgvXtvxalb8OUZdcVGYUekNuxadOx33R5t_oxd3q7lPncXdM4CjK6FG9R8g1jlXG4SROIZ7FhrbNX20R2B3gukcz4J3Vn4I6Pnus8KhkBqbOjmdOB9VWFeVw6ctK6XUs4IRWW27MsqWpwi3ciZnf0Dha0wN2CSmzVgnUH7uwH4JCBYTlgI0ZkefoZVEy4risT_uRVRy790?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-11',
@@ -3154,7 +3502,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-11',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6FemfS4gzndjN3794Ja8tSILus8bqBuuwr0_6ybQZlo15KbpyD1e6uIF81v46noGBiGGMXtrU95mPTwp6YEwzVJODu2vytReqZvUidCX5eMPvJTpFox2RGnL8DNzDJk6MAqD0MUsmlJHJlHdYyyZiM7suRbv3v7DnpvlXY_Hx-uE17tDacQuQx3ZwkQnkMdtv1v0ipj84E_9_d3nE7PiVtkQiTBuueqfqGUOmbW7nV02xx9ucwAf97wxA?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-12',
@@ -3164,7 +3513,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-12',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5dCvgitI22OntFc4-C6GasOxtMaLUR1MoJpk5iyJ6S_WMRHNX9TQNzHPMMOiwguWFs41tPn1TzoqUWv6nYIYzReUeRkNE5Q6USqEnsKOFdHSmSmCaEE6-BdMOMRy025nTc4F6ulhCw7qzSHSETR9Wwkam9oppus6L1lSph3Ws-I1ueG7Begujb5KaANWd1VdxaDUc-zPU3rZSYzVZd8utGulj2hzoAGf_GzGFuB9II7EUp7GOrsx8aaf8?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4r9Vcpoe3vuGVJnjN0oWzN10EAgPkPGmQk6mAfdq_tVEqQHwqzv5q-06GSwwjRktUKj3dcKLW_xI_149duzAbI1kFSqN0FyylfDo2A5e2f1zzpNMqdscwYC76ov3nbIw1TRN9X5-KechGmOCjsvof3iumKIfEMU2Svz6VYlMmF1mGbV_Wo197gImi0aSlqFhVRN3NJgu6-j70k14AoNWSuhF1alLca4wX6fiX62pIguDn8FXTZsOwrBbM?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-13',
@@ -3174,7 +3524,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-13',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6R2QizZBcAOICdXlOIoxruxCmD4IStKwLHg-3MNuUgrGYz8TBzCnev7iiV_4Ne7aQY-jGzww_npcfulRRKjD_QtULKZ0BgKP6zmvinrxuxoXlrnbEuUQtfjZNE3zS28D2njkWElvFH7SeG60fBVOg8CcgajVW9KWWR9edrq3x5LhiqQZkpqVA_hT8NEPfvt7YjTTCUlS_2iSgalZYKtTOUKyrS06MYZ9tvtcoLISNT0FfGCw5Jj_pibwg?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-14',
@@ -3184,7 +3535,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-14',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5p6XSJda972d0O5YxDsCs7LaIEvsXstzJ0MKLg5Ywq1UM8YOMy_3223WUNVWUozCQiQRASYw2kYEHD0hjZRAKy3XGDLgFeBSodawNdR1eJEcMyUcJJiW9au3rrxIRovivo3SBXci5vnx-7NWKEvas06s4q8a3_EZ8iwOQViVslNfcwzHjbRlB7vRUN0__cvRC9vVvLH87KGuxRrUWLjVNPIn3hvNxn6IyTa_L5NzCMU-TclEAnpWmgqxc?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-15',
@@ -3193,7 +3545,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Islands of the giants!',
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-15',
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-16',
@@ -3202,7 +3555,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Islands of the giants!',
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-16',
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-17',
@@ -3211,7 +3565,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Islands of the giants!',
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-17',
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-18',
@@ -3221,7 +3576,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-18',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6KnBwaJsUgSr7DixYY7Y6MuCXeT3ThyaVRg-oCFh_nD79Ef0jhAmEgjZ6jTs7YgKxxRzlh4kX_N2-7MlH7P4yOqP6YMBd2wvphDDzuQ1VNOX_L6pDHNosLYmKLlpUmopJdcWPNfNufkbcNhIQLKnZenvxP-4z5w-I2X1XndxBl8fGmy0CR7RzJ-nrsRUSYs_3rNdtiPlIYHuYNJB0MNZpEBZrWeOFMfP6DdYGjd9SOImA3MdhEaKG3A_c?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-19',
@@ -3231,7 +3587,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-19',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5uW_412qgWMEpbEuNr1Kbc3s8buBjPaVyq5gnmFdlVO8ls-8rg5hZnVnh5G0ePyT9lFCVabgu4aArY3BtvB_CMtYQM-a-9CwQr6J5hI9dAm215Fthnb_mjWdVcY8eLY_zncRWpFRpJonm8mt4fg3d1-N68d2aO-szCbBq7vJZmJ_UCORgLJ2SY8TRjMykGJiN9tlv9UnteIjzUAR2Q2DYE3b15Ds53ooa0QFFHuqbI8hKxGZ5zPnPE5LM?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-20',
@@ -3241,7 +3598,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-20',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7BSQ6X9395AtTdg3sJh5YjPUs4wSTwk2AVjbGRpvC1zHiTHZf-F8kT8Dagr2S6uQuzPyR9mV7k3JCvNnpZNcJWs_GjobW4wl0yXdLLp_BOx6K9jx7uhguRPfM9soF5cQnRme4gOrS9-4Kt-KT27pT3DVKIU7eeeCyZLN6njLDbxwQZGWbpqVb2_RmR5Mb6oJHWRgUUgkQ6DwPurFGAB32eLhTQB5gnJm645Y6vz3KACAXSOhTrxou6jGg?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-21',
@@ -3251,7 +3609,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-21',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7LCb9e84NWvKZQooMShBWMWUCEyB-_XurDcHD_-1JL7mW-fCHQp495NvNMYRfr9t3geTha5wp6_mCNKjfyQaSESBDcOLn0eVxUn323FDK_ewbcEQltZwpcouSvvwJwQbAeyTB3sdR4sOgzwAFd0QF3X50gzcMwxmWtl9_sc29KjBXEMqbTebx-5SPxssefL1_0GDRb6XQ2ODTwIOvQmuQ4l4C9jbKfH09VDxYenUtvC_N8VEYPAqzLCWM?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-22',
@@ -3261,7 +3620,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-22',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5sn62lgScwXYLEwXOCsNlwb1-vFlf-YQOEYl-4FGKtWJ5fTC6n-6jZrAEyjRznaniTzfoMb6fYdEvvVlII685gHUVQ_iF2Jj8PsOnrUbBckhjkV4uxIM_wssOmyrLceZaml0GlVliKDvRLtdnTYNvnSQS0tSIbhySfLndFXO_gFzGRT0sl79Ukf6WfzXX4-_Re_k8YufE7SsXMrjIM1BzbJOPpCT-4RhXM7ZqzxxThqVdFCoVXc8GRYGY?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-23',
@@ -3271,7 +3631,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-23',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7hBaffNgiLG3OPrc7fwrNiMlxa5BpyFuhzz7E9GTpwoiz3FdwtR3AbjYXvErb-NpxJo4a-wQ67pptbXtpRmD2iw8yD1KdJty8rszDIPoiMxbyxlIkQoNQL8ACUbWXj0Fau6B33uYNQ99Wrcu17vEh7lhg4K113ky40hg8IAVNR3EHIcdsS5FSnsPTWS5HII1-Vq5DtM-7OSNnZFREAisNH7drJPlN4yOnRfQa-430xD0Q8ZqdH03QSaFs?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-24',
@@ -3281,7 +3642,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-24',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6MwTKrRP-svZumXVw6HgVKXjdnj5DZXOTfIEagLXZ41YCTX5-ebHaeDF42G2Sm3nY3DVEnRisCCXIffTGXRB41racxmJfrnnYSHmDlzDnMIBJLuY22QhTfQT_gA0gl5OogXW0J_ef0fP8lzIqgmSr7lX1UBIoavgVmeigop0G7exmwdFh9bTRU97K1Z7UP_KMB_Niz-j9EsXLiuWVMUUpElOloF9ocvjByuNRM3VhX9ZVK6detX6JDJKQ?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6nvpF4M7QwIlrHz926tEzg2MTF77iv5tCuZoFf1CXdBYNcUQbaXJwbXIerhz7rMTDeetOoZAkC9STrbVrp6pQL2hzYOhZhso9BilboLuE82p-uRUT7X5_kwnkjpmFlk1SdoQy9BNt-WS-p78hBAouj2vkMwW5CBI5N_Q4VAM644PVxobSbO-eaEDLu6BY4gfFyLGRoqen3PdhgBEFCfbD3riqj1MnhF9wUop_JFGyS4kbrt78-v1sHAkw?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-25',
@@ -3291,7 +3653,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-25',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6dodl8EMS47OAVLpwPrOvFQpTQ3HUXVNIsB5jYXl1wf82nq0GmRuXGGgdYXuf0eIeOAPTzuWa0QXl34JbFJovarJiaJXHtTJKSyokNW-tpZHwQ-Jyjgq4zACvIAC2IrDguCgKhjiWKu3q7s6XScfQd3-1A19gPK23-JwEjZ8KLnPqJBrc5mrKdoS0GcTJ5f29QxTSeNHtGDHqFpseSxHkvsuwipd6m85t2kb9W5_DWUVhM4GFi82cgAvY?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-26',
@@ -3301,7 +3664,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-26',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7FaSGB6yhVLSOhlC2hp8EM2Ud_PfGYwig1ihorxeMTJUqVTwmojFy2NmQvkFlwITm5zJnD5LTRjpFgaDRIohEtFF77NC7ogRa6nUdLHao9Jxgry8krT3mOrzWtiNHizOQ0zQbx_vM0bnWGArJG8nze9mKaUz2Eq-W1CL8zMnmCQIO3E1rxYP0Dtkm18MF3B8vXDhAvxSk9jhEW7-1zeZ8Sv6s-cD4MKScOSekEzFx7ulaPd9tphYZO9Ao?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5TEBnAuWP78QYnIti5bosNQIougCeQPdc-xh8JMUscmOuksGXrz5uEF2rY1q-x5YGeyUH2FZxHwNOj7DyKcx282TXfUDaFy2ZfumPXwIAdbe7IxTyvYWYZDawwF0R_e6hbdO80wdCcCpHD1_-tbUb0yCX0MQW4y009yHnq9rtW_ZLxlUXA0gT5d3WMLLmbyyl_4ytxUkQ5qwe6-V_M3gzCIwBTx93wv8bjaFjWQtJi9EDM4a6bxPBIY1s?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5DHPX6D0ujZGn8OIsuWrdAYkhApyJT_ZEw8QWFY9YpbB5Nm4srYly5ImPIiO0XGSY-Lc2N-KQ5b9ZnzUF5DmDJd8n6czhmTHL1-bqOOc28K6-aeOfAyN6FQ7-g68cNEF-wSnGbDz7cpa8gKdoJmuUEzaiemfIGHxSvcMb4Fref2xQQIWpPlgbpOd6UpLbxF_BGe-7Rb_w14X_esXKsYwWVSkU0cV6NqMj3T-6tzevSdRl2ud5W9IZMIQQ?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-27',
@@ -3311,8 +3675,12 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-27',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4MPKUXvh6Vkd7Px3S4FNcPnG8U7fyvYRbDWNcPfQPmn7vbCRScO4IljDxdaKekR8rq4PQFF3cuAebUh8FJsPV1Sg105tD8Y4_VapnN8V9EApE_zagSOmrYnji3-ktNN4_yxi3G2nWgUudRCEcLI9ljy19api9sXxWhhB-7ojshcATcB7nm7oMyQJY0w_3C48J64HXf3Ln30zIBJP20Y3NaUaM8Lkv8Cbj6VSCs-Wo6KKW1F819WgvEe7E?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5pJs-ZwxdUR0PpPL4MqilsflIMM2pU80etP1FtkB2SC7t1bQ2U8rVQGUGucWwS1nc1zGOkv-8NGjjLxE9V7eYTWQSGQwyAr0aF1R59Gq4ukUpznVdnYZA0ZKujWBTmr5bUfcgO9VBiGpAs_8NX4ASZHTs9Iq7yRMHDEOw5vhsiCr8_vwDseHvBNTaKKJTZ7UkwR5ASLWhFZX0bDp9doyXdz1gtcOo6p7EnITd31wnnb-OyrttOK91TWak?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4ykMMAqGsCOCRbbWNTNgYw3kK9eakqpa7FlfcdT-QXhq8VQ6o5hFyStY6mYJxmStcLrwJ32LQmeMH6HpcTiaMfL9fVaaQjJepIeSH-YsK3ipCxH3ee6giC0J6X4i8Hmz4VO29PVvflLYaK9JqE8sk-JOeviit8M4HF5ZRRggq9Mrb_1fxaZ3GUL4vIQuQ-y3AkkH6VpXQdHpn_oRaM7OuW1TomPzg2byBJVWDdtl5yDxuMHEmOTEOwYnY?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
-  },
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
+  }
+];
+
+const chunk_1: any[] = [
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-28',
     parentId: 'giant-skeletal-finds',
@@ -3321,7 +3689,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-28',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6qwk055OKnG_dmyWZ7WlyaaRUPu0zpTT_GbCxNO1XiQh8elDhjnoDKQEuRJjwDwLdFnXjNDPEOBn1dIk93jbo5YFnprldv9GYjEYfUjG8zna9Mc8tSn2wNUINy-oHimJ1kYpmxVuu6vt5WmzuJRja18MWRjRa2-0rijXc9csq-MspIfUD_DazbIKk8vczZofJ78r_oDA9SlVWEp10hNNSTNFyRBKrRIB63n8mKYvLtvUILWgDvQjsGLIo?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-29',
@@ -3331,7 +3700,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-29',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7EPFMH1vpeo2cYoHWYwJ2gq3_RdBRM5pcQVHReDsK10E1AmwURZxmnPE6x0rFknpK5wMNnM-kjP8WDZzZQuWiw8_v2vgAwmzyeI76T1rnGpjLCnuJFrHbhPq_xngaNMe4EH_f3Ersm6sMROHxT3LJboBSZT8QDYfKHgmbaRubURYAIXuNjm9goBqUwYFZjTZcodX026rW-ZSIbw6hl2qgpbGUm-Hu0cQrLcptPyL5MHJLIfatnmBdLq7s?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-30',
@@ -3341,7 +3711,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-30',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4X2F3hDNji1PdW0Y19QopmjivVgb9oFPv8v4LeOz3ByLKWbTnqsPd02rIFxfzJ6slF8WuN0PEcRsHC4ZXII41JG978Dqeg3qkV-vjYs1hXGtUb5ynOd4KmzLw0Sf5Ow5S5e8TGgMoZocMeqiMADMyv3-3K_tj3T8kVYu6DGR9jHwgP49DABbyvXjAi_m3GRD3mEhTb6-JQpPY6QqLrRrro7plMZ5ZMysATMUbCM1ygvEWliFHwLBugiBs?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-31',
@@ -3351,7 +3722,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-31',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4B7XJpfmN_5CnW2HBLbl-WTRfUMsROSDMTs99mlqthzdLf6jQZMLt4g1kLG3rx-PpyOz84fQDrJ1JVK3l_YLTHO6TaJh9Z2yD_VyLi2x-hWpGh0pVXg12qZ-zBNlxiz0YZ6l2qj-4m2jQQDJtnG4eqO7c8lH1JQooPaUb-T2QoDvb8XbJ01Uw2yFMqRsYcd6iWep4zbPeKYSJCbWwFVmCWEOtHktLkBkZSCbl2A2THeYjTxL3dS2bb27k?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-32',
@@ -3361,7 +3733,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-32',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6SXF2tYHAt5lX2qahNgVyezOKb6vmXcXItmxbPc0kRg8bNa9qONz9a-ltbLQCgCuEf--nacwErG17ZhpFt_ThA9PDn-ZUm-Jd2ugPYl17q5HYkLjmogjeZpNQv41VRw6XwXXoOwfjq87aj7CcH67g18XtRgCJT5mBYH4_0Bx3lGunR92_dCd_ALWNRAYSoBxWk-EACK8u6bJZn1IbUq0dd67FLFcWyHqocCYsP7STsmQN4s5j8JSvyOH8?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-33',
@@ -3371,7 +3744,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-33',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5cxkfqHLqCQtbWawioSe5kuVykjH0OAPVG1tocssg5bb0kIoObrbSCb5h8MwXo9crK-HA0SVPOtCFLg8OhJ9SKOpi7yGANjUxsjTfMtnH5wUfJwfPxyoHDvxmS3rrkdgC0zu3JhFc4R_d2VC96E3mD8_t1jLS8pXLeW5oa-FG0rdzJUQF8LUKt8BqWDYmswKIYzYvC8jyOZ8VFWXvDSB0J6rPNMFd2608LDyeZYBQ4iScKiosx633dgK8?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-34',
@@ -3381,7 +3755,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-34',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4_WtrTiXDxvylx3vQXeQrZyApZdxLbriP7CYf7dZtKg5hxT4ElXLXrKciT5BUfGhOiAfPf3dOcSx3Q0tMlyDt4tmugKrKEcc9gvB-3rpNEefE0vNnbaGV1Oq6V757pm0CXSvqZGCDPEmZE1Nit6h_czv2WuhQp9eEC2lVkqSMeN1iELkMNOmYds-StcjswZnRIjiRImRu7-NmTzFKE1YJPIWOkl_u3d8DmcgkRLbt_hV2CoEisYtMybLI?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-35',
@@ -3391,7 +3766,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-35',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6pBRygDr-Vt_efsnC7jSy35FBdTXbamyee233QzBOed-wY2hCP7VvEfifqJ7Qg8nNAxTbij1gytMisWUoXggbYMdRRxoHOF_w45q-n_Ya-c1f5AFbu84sK2toCWB3QEsABzm6_JltHa1C13CVAZRvs57jCS-yNf0Nkkbij7ZiyvX-XJ0bfSUlMCB97xxZFthmSoxlClqO5gZAQ0cvN0WbavzQD1Aim8HDVBgFMcuYZgM-osCUE2cBcK7c?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-36',
@@ -3401,7 +3777,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-36',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4Fbd7SagHjyMVdbU-DmIc6cIGPLZ94pCWNU37-pR8EkTBdUTtKek2yBg8C0IbaafsNP4nxTYuEaBNGRo3ChQLhPn_I3dkkyhClVorfpcf2EZyUAqztH-CL-KlUkKTAL8HFizaJKgesn_E2zg7m6S8Nax90k-xCT28v8kmZ8w7rq8SB0aeGVlJsY84_mL2K5hhcgdYe3bnJZliIFSsEH_ceGLqtIt1S0JS07YiYGEuH5lPIXwZ8aA29sqI?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-37',
@@ -3411,7 +3788,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-37',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4xxmdZNjCVfZKjuMecR-QF8rCdH_RBY33FfJww1RC7i00ui509u3TEDJsHEKzABvsnaAXtjaK7Eo7lCJUJKR7dO3QT_wHqteHZzew4Ro8aK31Y9BwkbJ8yBGONya940AfFT1OEz1FK6dOruIC_ddotkk5IKiel806nrgKjJB5v1Vv8awHp9yvROjiLff4RnrlY3vdVYZuQ4bKz0LV7iF6XI-nCOOqWVid_YHuL8FKJsJdKAE4HTyBH5u4?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-38',
@@ -3421,7 +3799,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-38',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5vXn-KubU5OrhQJP-BLZq2RAVLzK9x3RjlY6he-fBdIGpQ0qxcexeDUHyLI0g7Yzon5b95H4nY1jCqBvE9-lzNFGzm5rPBk23XmdoexfEuRpajTXvqkOmwWakLZGhajpGmAxsEnpKcSxN-tA7jMfqeruqCBNcLnSGSfJIwULFNm38LyjnDgtgFYzmzSex3n1ZgNFDTY8Iv24OdGM3Fl7EbxfrWYK1QuONftve7gSFJL-a_4jrk28gb9fA?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6GloGSA-f5MI1GiRwhfF7LOYzwYicutCdEbH2e53ILrzw8Zi76MefnZb5RS_EAxTWxG9Eqz9820soNMo_b_D9g1VUqUMciGapisl80mG2gSLy1yrxbXjEpaKS4aD8dNNOMq7iwgU4Z6aiGzpDbsMFEmpj_Q7dTpIlv3bgnTNZA_S3Vfj_AFYdmMoWx9QTB9d_rSltKIDv7ww3rNgGA1UxMia09hGrhgXwv_1-Gc_nh0bBbbfgorxjDC5w?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X56YnVQtmImfmgkU423kPz67eIt9zdcKFDj8zf-jI3jmAFjFQ4eVA5XJydpGoY27dgJ65W4cF1XD0RRdL6_zBeevjxTeKA5xd58CoOZqQWg9-dVdAtQg4ADvbtqISTTRmFKCc41Z-3KuqE7wrodv_wky8KHzGnKF3OG6Pg9ZAf2pcb-iH68DVuZ4XZp3tWa0abNZNFkEtzPmdmHIJA07WdTyo8HFoFnNScyfr-2CI_bXUSWtjMBkAovekM?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4Wocd1C_dg8gxU_0yG_gfjAtP40bPl1BqDQYiMVOt4Xu4fGON0tathuIy06ugddNDJdPDCYt-PKFFX-FhjcaZrqqGeWdfX15cBgyhYyNyh0GIqh_2PsNHlwfgQBsMv4Sbl-9LbY4iGKfW0gPHSG2PPG4LB34BUXYGLJrFW_xtRZmF69o1Y78DQ13X3qhM0P3TLO2Kwhh6GK3AVKJP0k2HHFgF5nKxotKcZ6kx0R6uMyBsbB9H06Y6nd9M?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4r3RnuyqCRThh2sPvVPJTUNfY48xINo1oki8hp8lNTS4Mq4Ugg4-dFAQyrIYKhvRXRy0SUYBXBxuOOTqyLdewAnoli9iodJ9BX6ZTtLXtuCMZSlO4cS_xBO7lmhGK-3mwOSxMU4oyv8RH0QbtgR9V0fiJsu1zgLO5IIZiVZRHy3mhJhBmpqLqPELm_anoQRAyR9tEUcA_3704Wxm80Dxu680zN7HVGcoALUQ1rLmMzF_Ampw7sUNHyTmI?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7H-mvCWvvftmd04eRERHUIqc0mcLm0DAEzpkwWZ-y0V72RHqRF-YgouVD1GArCQjorD3Dm5PQXtH7KjB_oS7gs5ofyxo8eFBLVSUfcmSuiYT06rdi1x_5Ll4CMyDr0rwo9oEj6AwIG8EzOuXUWmvLjqUnvSbzL3xmDeUn_MueDZiCrYtfyNMZaMPSeTjcnT8iV34gHI8fp8RZ70ScT7GLxc_W3oAvR9WuQbHbXg9tkFayEqH6BgbvJKyM?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-39',
@@ -3431,7 +3810,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-39',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4GqrEHNmM-q8JDj9SjcsaM5Fkho2eQCjRuq8DRSHUSeJO7llm4CESq8IA8AxJaPAkeGM3j9icDqnJHX-bMLAJEMmtpnl5r2hcTDSOSc3d8X4bWvqJc553cRfQwsZ0qzZXJOjMQs4VmLbXd3LXoyrbdP4e4fbjRoLMnkCb9DuqGyUtxfx91l1sZl-iQS3oy_73VwuLYC7XUNaKNwu-QoU11bsmBsw7qyB4ue4bDxigRk8r62enG4C-TNUQ?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-40',
@@ -3441,7 +3821,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-40',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X41RyVVrbijM4vNW25iyheGLfs5BrMK6zs9r-CqLn6OQViC1g0Q5ORp2lgEy_1Hwc-3aOE4z8MJ6FB-WWCyyW1HvET8oPy7IsiiSJjf2nXZiWgTUj56xu07OZWbMLR4qwlCqHbd3fldKmyj71bJv19TQfqw3aMKG4G19fAB7axVcIJTcBx-Qtf3A7c49WOy4fvgKxHQifVptFIIDIbc2IaZVXPMpxM3CkrPkfvnSlwMngXW2qNsmkGBtlk?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7WQjssn8k0TIAtIZryoyXQfq2BC7ZpqnoB4rAxf28_m-ftjqDCcZFiHOxVSV9e8TYqaBOjnMik4zZQVNtcJTgK7fjmpauOjEQRbs5eS4edu6Ci_SfyfmPt1elklzZqAzBq5hr7EkTNF148C6d0YxY_-9tH5616S_bLOBoJA9ONJZD9CvrYB9TL9JTFJdR20P5UbdKBS76U3cfEesoMYwt7u0stIV3EoXR02CDrLXWY6P1HqAUaHE0JXy4?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-41',
@@ -3451,7 +3832,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-41',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6mS_k6wa7SPmRQ1sO3mQtx0tVosJqu89BPJ556w4_UpnVmIMC9PMas9o4gfGO3hHn3c3lRqlU-VibfAPtOw6WakIzOHAg1irxq3ZhaAunjGAlEgEV6y8-WRUAkmt-UtrfqLrLJagqkKmRl69OFo6O4XB72kHF9PQd9iqn9GW6H3jeQJJAVrplFQ8r6Kw30SZ_xsrzF65vTjxU3cBB77uyCQZt6ZgJDcFpPBX72crEErnhKuzxRi0BUGy0?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-42',
@@ -3461,7 +3843,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-42',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7kRIGO33diOSgTCt6gUDeGVN6nxQg52DcIWb9nKdpnZ4XgUBy0nZedNvSUtJSEhMWNv6dYCsq1x2wAN6-oq5BmN8BSAQeat7bMajowfJniA0x7SHWJekL6rot2AGdUmEo74Kjv5qPcws4caTws8LA3Ff6H7Ud9zc6Y72P84ZhcoJ0qRtcSD6--5KPtuiOkyXl2FRvYdtv7uW5om-m1E5moj5v30kJcvo7k1h5rV-Mv_P1sXVo_PTzjf90?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6QBeV29LJ0NR2dJmbFui9ViDahYjEejh3KK9RkgrkxbqxA-FPW8Lxf3LEBLIPzlScDt9pm0DFRV6uODEjW3IUz7pR_VqusPG5Ur2IJtEScxF9rN-OFSFkUpVz10eP8j_OuKau__eV9_Ka3Y0oy_9oJE52OEvrgyCxT2ABIW5tPdJ8NtjhGGSaGEs61X4a-CgsWU3JxdsbYrAaAnUJdm1JzyVbPoyn9EiTSjyL1VU1cGV97ZjP5wDQxUZQ?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-43',
@@ -3471,7 +3854,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-43',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4pTE_BQ0NjtlKDp9KIea-2quJ6VdV_IyjgGZ7doXYIrkf14NnTj1HpEcxIaIFkTBQvWLMapAsRavGnYku_FfUHjs6vvyI_9hAPPnArWgZskTwrmP_GohPsbQe3sVxdTeyQMJ3a1OLmqyeVBVxGO2iWvMuAL4UXYsci5AoiCv6irfmeUI8AB3zsdqOYGnRlh4hLCM6s1odlH0ExNqt3JXN0yvD-ZbEaqhsSXehnw7MEeBLI4Cm9mERo_ic?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5k6G_w0zZrB89U_LVtL_LieeNuEGQnxoCR45YAY_2sbFhjMrSQQyL7ZOp4xQ5yfiirOgGF8lNQKFiJv5Po5lcDXjlN-wYUk9VY-eJOZAeWe3psVhBaLiwZgvqYCWb-is9sMXpDNHjToP40jGUCTUT0XAKr8s77uGio542zOHKBT9PlMGdNL2m-R-0vvDBgA2gjBqj2UbmJSWHS8zJxxXwItNpdFp3sY_A7j46kIbePTM4C876kBireZAo?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4HcMY3Is_4duAqmK3my2qN0l-qCUATTsFwZJPAXa4ZASWPqPWTXx74RyduMkP2klnMAENMh6SeJ6pQvr7Ao8R6zyiumGH1JB4CipPS3vR-dFZFiL1scY9TKblJJTgngL8jrQWoXuXvGktp_0Xtss7noXBooUnDDsi56YCf2bi5jPi0gG2kLigv4FWf7i9K8DAf-fPNpOdeQj_cYS1DSmGxkzejjMAfpg7Zi23wLPwd4sQofMki2KWyGOA?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7bV0SYgy2XKyDZ0SVc4nyAx5usLz2KmQv5nzWWRlyGjwYrMWEINJDy4fYutJy60guO4rEX6a1iZCqUi7HdADYinoa0xL1b_vk6nyv7hUPVQ-kn915CPTpxD-lTx2bYDy0L7Mx_hXwCWIY0bsolxigdZSPdfTb5WPUQWA-k04x0K2CRrzpOY-45qqU2QefYEbuj8RlonoW3a52_hX_0bvptuxYDxWcx-YFv1rE4vZ5yQMKc9u3YlhHz2WU?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5QBdmWgJhw6IXUaC0h1iaKTPur1zMLkysGHyeGGUmgKnvzwkFkZzB0qfrRsooQIGcYTNH2-n3mXoINMfWb0Qdp1eO20gWb1hw-uAjnA5duzGQCcCihz7ujfIxJtbWN-ZLFF43_GmQX6Ws0GAPQNhRjXMKE-rGGSo3pNwEbMYV2eQC6xf4I7MUPmgjJqiB4Lu-eOd5_DeEMjwewvz0QrGBImWZBnRfRVwnfMH_gMvtibKIwhu5iJAgIoA8?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7LDhQx8gxh6BS4ZvMqS9t-R4Vxqf6MJPcHlAcdMO0fWr7nhYJS1XK0Y9X_rlV0cX0tl6A0wpcAbd-iDiP2ENa82e2UnYx2Uy3gk5J1A4U-LJ3-V20WFK1K0oEGW-WGouMKJAiyaJpjrEkJ8fogz0yo8f-0IoHnao_6-kReCdOeWd9TMsiQqFlMagpmFIwUSINDgKQjVjzH26vURitFoOh-2tIcLmcuMA_ubP7oqalPgNk9Fm5PEqHUeU0?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X41-TRXORvL88p-MQDu2_nJHnB3d4ojdrkYjH_0Ew1pVC_XEfsDUqlZBgehnO6MiR67BswxzcPY-rUETywTdLSgPqvaSk78O-OiDk0t7n4iaal3KW1KYSrQy1mfif7SvlLCUx6JoTFcfZtHfLraTlJkPVMldfZapnVtWBAByxZ6Zq-WQyIvYfDEXgYMozZqBDXSSc8EX0_m-Q8a_2jTu0R3LrOyKKfRlYkkA8UT0OWtbZT3zkgUf-D-0-U?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4oHVV50FWnV4Mz1Msuz3zEzOqu2IfE7mKVeOMMlCFa5jfNW430uc49xECVRHjWg5Mvy3FuKBdn5hcg1LW00Hsf_zffEJKLef003HAlsy7O1p4FffsCTxZ2SR625Vst2CIWVqkEIqHiC2fZRKu6IHkFd5Vxg15AZXcObQX5R9PzffdeakpllLroGUUFuMhq4KVOPPu8FbuqvOM86byN4x7twke6gvHJDUNLTkO2eufjEghAcNGzwR0GOMg?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-44',
@@ -3481,7 +3865,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-44',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5tgnZE5nTisuGS3heUOkztPikDXPnmDOnM5Jdl2oE3cMAVg5hiJsiyivWGOJuTDBskt3LQltuta5_VsPjxrg2w25qI67dIx6mGgLg55W39yfuPF5NIW_tx8i1b_GP3yHtDH3BY_yGceHtYtMsh6BlArG3X7yVJ1GSNivwSGkoOsg9OE4PeSXBd8VaXIq9Dm3GqhtuId22Q3wDvh54nJ7WB8pGBAEYx9PR5VgAh1BLsalG3hW7sF7JbWjY?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5co_wExaIrqpo3131RrerSInEJ_qNzne8y2csxUp75_K3wetP9Q27N3G8OqoJ1VWp6Y1UHY-qvpTCmkLvX6c4huFMdKD4L5h5snRMvbSArFi2R-6p4oWKfk6t6EJijY_ztqsbxYar4Gm0ehD_oyJ75WrVRTWfR8VCkB2bWBdlhKSDx4moAN8rNYmNljKFMWIldRw9dCdiNX2ReUKOADTQFxaKosYbQPAZGfya6HWXme2OtB7JEs57gvc0?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-45',
@@ -3491,7 +3876,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-45',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5BEf-fAh7RwW6X555k4-aBSdRpQ6F-9J9j1ePNjXzxCjJmW06yu97iiihuZ7vCdKuTWXUp1YxVIkLGLHsvrLanISZfpzUdDjda8XvKHZyYFKbwnNzocJfYVPB2w5WUdqXIk2DfEQggUU6aRT2dubqDP38HkuOaVUWoo5QxvlGdZTmZiDxZm6v0gK6cPxuvTzCvk7xktvNyzo6lDEopvIz48JEtuYTvxkYlLEtCpEBjcOITgJK12IG4rR8?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5-uf_Az_CwnfW2_jgg7R7oXwesCnqQIGPrSqtA7l4j62_fa_T-mtD-bGeHnUh8A2HmCV9XvtPOFGAYwLln22fmxglwIoc-AqsMW-WF5KKucVMnK0uOxmLrkttCqarn0ECIQlZ9A8Spx1-xELAxMB2GiJLgcd_ugs1EA01hGXJ5chgw8ADYO7paL4vd_JR6x_i44Km-Z47Y0O98vZjVw7amYV7R86KTjMg_9ayXQEkBhVAeyAg66TEb164?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-46',
@@ -3501,7 +3887,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-46',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7tPM5a6ArLdoPnWnz4u0qcs7Vew9wjPvgCsLbMlNixlSrCltsZOoWsp1fyT52X99k2a8gZon89JxORi-EtvKDfTivlLsrVFCuvYrhWlLG3G0bZkcs_b5pQbyLGoSYfaElqGQ6q1wAKnxKQ17l7WRep3l0GVJXNW0CG5IWay0g-iMlUYkL_jd3FHrZ2tvye_GDauW6swQ6sjPuQMmSyG-3bo2ZpbQIGKe5gmr6RpBE8gWYXG2eWfWgecpc?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X427D3hJZO04UZ6d1lXsK3YgZedA9pQX-WbSNp3n6Jd5Yhl15sss5SDgub0-1PIyjRu0FsB8-LJpa9ivcZVmOadw5GnmaYDtamgNVHU9XyhgVxMmR6TWRD6p6NOJOeJ0Zb2kv_PCHhsakVddy6G2_Wak7NAp-zj2j-p_lt5D4bElQpRaLSXhUa7h-d--NywC0pSzu-fkUEm5VuZzVx4pxe3p5mT1w_iwXwTx1SQm4M-Iv_UqCTnjsWoeok?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-47',
@@ -3511,7 +3898,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-47',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4Ne596CDsoCQY7dM6CFvMh1uPQRuDqPAmmuIOSP_dYtZHQcPpXT42-1g_iktTYWl3IY8zSHwnRupJB0-M8N5Ag3whWV_FoJypygIY7etmaDvATuLAMXJ6omqh0PTgyxSgsag-EEiIkhhrVl8DTwGpuUBTL8p84UJMgpHX5zwjlQxmw3mEpAil9iwo6lfPBmd092hfs-XERISSwXZormIkZCn4f2s7HvTXfTK9iZMzKkYViouU9PkcDA30?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-48',
@@ -3521,7 +3909,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-48',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6rxh-QEo_vaDYRAQ-swNIQ1hnnDCDF86zasqul8SMGg7LGMBCc2D7wI_uX8a3gUmSx85sP8sHlUWJDG0THFj0jQ9S6odLdgdRqLME-IRjxSiKbv64jfuwrfS7q0alxeJjiNlt4h9EFRMtftQp9TEeu1Ppc9aoYEYfhWjsBrYO6vl_ii15hiob6pXi-8hdG0fB429bC3AEdqLq7Kk7mN1ahYSMCvFDzZ-o3fHJgFrzToaVfMGsV5fh7o9g?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-49',
@@ -3531,7 +3920,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-49',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7JcJtWzalibQ2O1Gh61f0zFjMRa_8OlN9ET_LZOOVkZnTqiSuG24Fa77sPA4jjPLvD1b2Gk0KtJik-GXZktSiA3LvMXMeBy9KbOkvtn-YMsc9rrmKXlWtbBPMEWm6YB3kwoSqkbY7mUa5T5qduES8TH-FcMOcEFBU-U8dihG8I90blWIGtfIbn6caM13qmEQHyzdQk2AV1CAf51Zd9fldrZEOMjQYcce8ZSOFxn__-bD0CW14IEr121pY?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6tZmy6pVeQF3xSRGDX-ppocJsOnE5elIjBgn8deiXS8bjD_iVj47a2cmXFJXe2nNYxWgCVWQVkO_vKgPk9TdlosdTU2BHfbN94AgiCHOEqR96Wp57-01FAjNqORC4UUw7a7M2F5setthqlyvlz3p11tg82x0uJA_I3yr-18nuowsAgkC2UsMkh7pn7JHxYwxg8QYBPKsZowoQDiQTMl4Rw2eDUqtLKCyzsKFsmTzs6nS_hNFwi9jIcyIc?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-50',
@@ -3541,7 +3931,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-50',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X534XBl6luQSgqiPWdfKkUkt02tqVs7317JPngwyu2G7_C1vXnHFu64fYd6geS8QUpM91ISHinvtC_xkgeFdsM-fB8B0Sl5-K-uuJAEE5fv-L_EVFK3oz4DHzShAw3OqmPjSRs4BZDRODDud2pLBTNJEuKVUkzMIHiPLvTa8x7pRr4kU2gXAnwb-A6npJlxHa-tnK2kKeFEbGO7wnNDC8DaFnsJ5_NhGMntDso4VuMEWROU-AWUmqzqhlg?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-51',
@@ -3551,7 +3942,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-51',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5hIhGC0bsfSg-FdKtf2urFvJ2RFyBu1b7hGFXmbZ39_cUEKpV8fdhFQ7ZIqH3wER7Dm-tQIJmY4fwQc-b6a4uMYkekW61UWZr1JLRGh-7gbIQSTL7BSUJfnzUEDe006Lmei8g7sIZwNpffIYiYZTjTV66OROGe92AIrYvqbLG1Z_oT42-LuxDZyMBQa8MyAjJ6Ahu_vrPYR7PNkW-AufZhAiJm18-me0hnB8dN2NFpKt_p1UP_l-7W9zE?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-52',
@@ -3561,7 +3953,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-52',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7P7Pt7-ZjHj-6HtZFFwQil2pzjlcV-huyzd55368w0cSgSttVmB7KVFc9p5M6IXkyR4m8VZiNn8mm1Q4i5op7Ky1zDO2Qd97pm338s5KuCdk0zab3FquB8pqgUvOzjDNWSg9GxUPIxOMlYmnlk-WHDS6L-4qs7STNW8PmDiciMOjbpUwjZuxtouJfvJzlIyHVKP8vD9M99DvRldSackE3Ex8LufNXr-rTbZgaahNyWyY-wk-W4uVBwu4U?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4sTqSrW-y6QuMgCCodP6NULjOQnfD_QwjPqGgdr8wwLIn4WXMGS7dGJQzjfsEqgaab51Al20PHtjiyJ66TVS93WZs4WQU05ViUjGnU204Z7dlBbmXrUffwRCTHnjQLMMnSjcAxGnjvdKYE0bVVrWQbZ8N97UuTr6sxSqoPELCBXMqDkX-bEH8XGuIBftor6hAiBLL0qDqFPCIIQell4hHVQ09qKA-iG-QddUgfHR5zH4arxDWCTDar4Lk?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6hw8jZZcwByA9rhsr4VMvj4fEivjndkBp-RykDPstHoAlFL_b75H8qSWBkyU_MpwgkXlWlipswnTqsrGBucY3EqalyJE8n-p9nnquZDSiikV76xQYSO_Jrec62aMVFCfJ876yTlPzVheuNMVvyyv_r1kHC1gjkvp3_bvtlBXoB92ZU3UTDQAIs6zUjJr0Twtr8bt4-Py_rsemoh7L-9ya-JIDoNzxnPPYLukY-auydWswSshcF776y3DM?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-53',
@@ -3571,7 +3964,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-53',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6k8Re0wS5O-ZYBboGbqbynMiClhFnx7qaKKES2JIvQzewv3hJV93ogmXI1VCHNhEN4a8mx-4YRflCAX7ONI41w2F2WzWhm0gri3QR2pbLUa7dw5wl4z9ruoooBXDPV_lghCWDBuPmI8tevSlrJPVzfawsvxbMb-zwH9aUPkcjveb5Ap99cLqwKDN_wMoXXodOutGvGKvefE-HqSgvc0M9DObNdk6xgEg2J63axR0O652b2KKGf8u3Csl8?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-54',
@@ -3581,7 +3975,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-54',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7h85-Ue9klR-WR65Oa_zpbbgixiLFu12MYF_yHJabuy-ao1NI1L1BUikcwkLro6fwUiSM_momHuEDwUqlD5W-uiyXMEj9hpkMpcIMbNh6mBnMav-WgfJJPsxr2zxdWGTrf4j8Q3bQhlencrWF5cEW0wafIMvfzysreevxBMP1_SRx4w-8NaSVJF9_2NSKFHrILYpimiKZ72pdUIs0Yz7gXYLnVY_yLwopvScGEtZJm9xV6ZSu1BRRJQbY?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-55',
@@ -3591,7 +3986,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-55',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5glkOqnWVeUofrhBC4-XlWrl783S7IDX8p4mkUrZaOydK9A07Gj9MXgnfzX4m5yBia246uHsKT583ruSX6NZo1JzaYIsufD4uth1j8laIamM0icVH_AQA9IdREEeHTgQgIyYVBS-L1SIzvkee2JGFqFVLYIUn55xcPilhnZ-Q2mj3GVvkDJ-bJeL9EAD8_qweWmiuKP_mzDioxHUu4th80noEiu6CpOe9oV5I__XMiwF5l7LX1RqPxSLs?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-56',
@@ -3601,7 +3997,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-56',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6TzifpmQWWC_l18I6b-XHUXpIbxkDXaA0Fh-75MZxCj8FvOMr_htsQ5ptKYY16K8C6jFZ7yiT3IO34ScQzfZIK2cHJW6YE9Y5XHKfnePVaxJ6zGqh_a54xrTF2EFi7XMPZTJoPT2q8WnqLS1ktyUjLZFo20UgFCusFI5XqXtIjOs_5RVa2zsbq_Kzk0pAJQDkSLnuw28_yRWnfBI5G36VTQCw-PJTImNVeFRMjDgWZb52AIol9rxoYcIQ?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7uc_lbAUQs7bfuGSgEHUS779SMYELe7eqo1aw6-Ft8ySiou0pqVfC50UPDG1YOHmXjDxT7Xzs8FN0DrcnK2TmIKl6JiPmbh-LafR_OG4qN-0pk9xB6GFW7SigQYLNqSkR6iO9aO6QCyPmJw-2j2It39QLvfUy5I5G1eSH9oo8rr_QX8uEI-9Qo8fPTV8Ov5f0oRwsSnJqESV08ALZlUv5US7xdyEskhaW8hW2bxjo_PkelmmacFeudoTQ?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6PNaLnJAB0jsAlSoEAodupMxjWT07QyV0oVwP4mhN8Kd-H1kztTz-PLMv9WswgTCt1sqPGz1gu6omDIcV-SrT9PrvUyA4hxuoRnpiHH7oS5Mq49IQDXDp8mJCSQR-OnlCOfoZUsiHpW6eg_1oHsZ8oJbrzJ-kFS4E5g7aXkGLq_LlyzFHCcvc2NQzVMMSZAIlSrjKRfoMHed6QghMYvuCJPvn3JGiw-y8tsUZ1nHi_JBpZ81cspvC8cig?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7PzG0_tPlqiSwU5Rz1c8k9e5EHIWX9UN2tXRZy7y48rW4xDMI95DsDsdThCF3Nzghx3kDpTUve5h0LEyoG16fXo_lUQRDHqiZz_p_967RdgKBAddi7RWt2FJWj5gGxBYon2TKd1IyygsyZSMTP366tdp2at0gasbb0Q-tXfmIKQQZ8KqaabeDg7AatDO2VbbdvU5RADSATNC2i6k6Hbsx_G-q6XoOUyqm76gr81OqtPTRoEVeB9RHVqdg?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-57',
@@ -3611,7 +4008,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-57',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4uo3xA1uj44f222E8QgASo2RJd2MbjL0uYjyyz7MQMSPEZaQFE3JtvboQdRFwGC4MJrJ3I0NsgxVhx1B14im53sjj5ik-wJZTAgYf2g7SZ-KBTNBGi0pHegIXhogbRSuMwJBCP9R2L6aaYXjudXBd5P0f4DTx-we8HDgxpQpJuxPBOSRztYuxB7VBeJG2ahhv8jqmhtqnXfATjoVVRWn4dfHPgmWx2CZa6cocJqt5sgyEt3dagxcnDdRY?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-58',
@@ -3621,7 +4019,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-58',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X511lD1jIMz_WKcY0vZUQLSN2BaPfqyErVJU990iisRT3fpFFHQus5PakSoeSQ7JQxcsrCOI2Zwu9WyPSV8x2sEry3dTNBhjuwrrRL5Aiyn1CgsMlyq6SQHDHrBoTB7qltaoVty9xiHE2voyasPyep3I3PEencBMG6EflxWCuu44xMRRPtY-6r2s6DW0oQ5WZ55H4qvG-ywFrlgkWNYzc7FbYgEkD6HtiGmzpd9h9AcIK961PCs5PywuR4?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-59',
@@ -3631,7 +4030,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-59',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X78oMU_EJ6ksRKlRolmO9duMXqRUbpD4PUf7mDA82RxPfj_wsN5mwBk0Kz4Gp_YXCsliJXqUQYBip-ZDWr-wfNl_wVrbq-4i_pTm4u1kMF4ADZ-n5ZGCNFA4me9bFjJW255CtnS8ytDzWQirh_JLDLhmrVZfLgA5nB3VPjc78ac_p-exMKAYEilWRUZLiu4SiHb-nH8---N3PGTmR9b99_3mSpf-Cc-HZoHYq5vDsTee3EFbLrBQ6i5wcM?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7dI5aDA5KKc1N8txms25-lHHFH1xTrzjDVPU-C_mt_VTMNHkyjZM_2VJU782LgPe4HzbgleoUp0g33NBUfROTGFKwJweMsxf7DmBp4Sb9eDx6iKtkz6J20tvULOcW7qw2twlwFK21-XmMvfBXECAIjX5DcoJhmAcwaBWcvpaQF79CG6adIjBbDkuNCRD30qVtVTdfMrkw11T-KhR2tPpV6f1v2m3LSzkWkD5qc306DDcXlzvbb166m7iA?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-60',
@@ -3641,7 +4041,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-60',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X51t6Ob67dfZppi6KfhhoVClFquMPDfoxFc7EzmxH3xZVdJ0CXLyZF44xddIIl5OAHcTPK1HsSdDC2l9yPATqI-7dqYbv4GQoMahOUPwQVVAJ6cbX7C0QPQKXMNOlmVYPcPVkBPto2aF_tGmcRBXRn3eo3KMiL-rHvYMHGWGO3B65Y3SQC94Msa_5hoOYZsGbNE40-YoSbsVsoXp5yBVJlAXKKLuyHLiEiA0eUlmnor1oEtUb7__Lo_ySo?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-61',
@@ -3651,7 +4052,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-61',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4XiQN0j2aOY8e6yVO267HzBqOVqa5qmICBdqB3p2FJp_2_KNvFcWXsD_RZ7V5m60H5zC42qHdoVtfy1r5lUC7qcsboHmW5vigZ10klSV_qWuAwLn6ATpetLV6ojDYmDhXSBzFtoEAQCn4DMs_4B_srE-V0bnkLX-VtGqQt6mUCOOOJTx65OSKWA8vavbdhJte6FLfvrvRwNj9E3bE5vFylOPY_dBcM6bNLymy3g4ZqoLzT_mttf4Zxs8w?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-62',
@@ -3661,7 +4063,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-62',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X697ue45OgwofG0Dm6y8JjVGB7IgIu01EitrPU-i8ab6nkjQyAgdHfuP0XvZMjtJYAbq4Eu7wQllSupTWMhg3OZj54pBC4ns_5Mmfyx-APvv7V9iO-EahgAkVx_tHnjZ_-QwDp71T4bAMDR4-9GR62tk0u3q_wOo0V9w3QWC1JDhDeXvRmJHG7xNY-uWZ-7_BtBZ0AI7DMNwE27MTfBFojeOp-EuhELAgCTcLylUOz25f38cp2iepf4gT0?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-63',
@@ -3671,7 +4074,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-63',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X42ijB7t_5UPmRyISZpBl51liAzL36uLxJZgKWGRpWCFq8ODdino-IZiHCZOBotAgNT8TofjHaDNYbcYjzGnvQ-egOAWH3dBU_zg_eeUTx3f0KeN_pq0tPFK5_yz2NNoqq8_MS-TDhIS6Qn2TDAmT-2xmiTU18oxwT9fV55q1xX38bEBE5e87hV6hfIlzSmnkTcMzLY3S_JY4sdOLYcb2S9aVrdQeG2TU2x5eF3eXTU7f14NRtn88e4jZU?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-64',
@@ -3681,7 +4085,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-64',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X44QUsKGebSasjr9mhL8n5AZEcPQs-NIRjZHu23r7SFjrE1KTgJdzOPtHXBlASSlq5_HLV7RBuvKtujS5LhnRy-vXr9gaDjtvn4rg0-y9M4VqklR72wKFUTJb1hxuCh5uGDoThqahCfOEbc7thX2_xM3BBN2J_RGdyIt2Nvqg-WI0q0SOh-nXPtlq47sm2buLmd3JteyXpO91c8QUHBiLBQP3K4FgFVZPO-Zy0-maoV4hBRVduuQoOJKUM?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6dHB8-taHEl0TMpnizD7CclvNR6nwBf1yMH_E8-QCYbmjiNTxQba1UmjjqI8OTFj9_IjeP7ZchJrsYLcAQ35H3wgTvsKZT8v5WvkX-nThAA5h0Ea5gGeDpyHhdwFsT9i5wy7z2kRyQL-_KA8VNygiJvM3IRcxPbSEJgDscYwTEzlTpf6pBs4Ell3EynTOyPlCTZ0V3R0rSpGhs-B_WKjSabv4KByFW1e9_xSg9RBPeyNN-doeZNsYcUwo?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-65',
@@ -3691,7 +4096,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-65',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5DX4IiTAV4IvG-9wgO8rJO00AYfDeEQFXAIBqXkkWkk4VIcZNku8-CVmAaZFaKHun7iBHloBqa8zXjJBkt9wGi5cF3lneowtmhgcYu2Kp1iNCyl7VQUxQbKj3o82CeuFXryGiAPua0Wze3JHmIaqyv-WIfXAnCLqOIjkV47XCgszOJRgAtaBhsj5aBAeurT3IIqTzGQ3FlIlyTUYKArDk59PcwjMkynJZKBMw207Gu_IESagsJ91f1DZ0?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-66',
@@ -3700,7 +4106,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'IDAHO— Two members of the State Highway Department of Idaho discovered the skeletal remains of a prehistoric Giant in the Salmon River country. The lower jawbone and vertebrae were to be sent to the Smithsonian in Washington D.C.',
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-66',
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-67',
@@ -3710,7 +4117,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-67',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4jaUHLDIV2vQtqsHJ6DptNZGEoPQBj4CPC9TVuNqEd0IQwVC5AcbLC9rtfs5a8E_xaTLwmluLhu1mtQ24-B4qbqbMSh7QjGxXblhHPTvjLkx-zKJ4wWWihNU5OqZtpUwRqahOeA5Kr0Fi6JyghCwAaE4ce27zAL3X43cMjryGHtjxGULlJ6RDhAB-RGH9uiyVTAjtmJdgz3WorkM2N37zXsYHh-BLYlypNgq4HHzmcCL5gwDZBahUGDDo?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-68',
@@ -3719,7 +4127,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'date: description: source: location:',
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-68',
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-70',
@@ -3729,7 +4138,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-70',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X57HqT20IB1Df-pXp1qa3UtUOQ9KohOM2-xDPreHTtvMRPm6Kbu61mxfgNw0-NTibVLzxNfIKz-xoxOshYjyuCXFwlT3vxG0B-xcBU28QWhRN19xondN57kS_VXpuXfQ1dxzPK6bDmwegdWt4X6FxJ40FG-Bx4VORsBInmj2JHq95cWzWDewIPa2Rg20rtX3vbqZMhHPPovyC_nF0VyJMr2lzxWyW7WW_S2si6o5O4Vgra0UaGTtLrOBK0?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-71',
@@ -3739,7 +4149,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-71',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7qxIzXMrcN5cOUGSE2OwkJSvmPWtXVKlkne2pxSV1jmJpTkTft4lW8Q2CbQcogSfXTbsKHAhuxsnsLAk2U_pZMu-bQb_dWHFnpHg710W8kOqdJ_ilxd4XBYoPwflT7OKsMnCDit7Qu43lAX2srBtVLzdmJbQhcMvqg0lPyQcmpPYY2Rr7I_yLB0lKbI5zba4XNK4QQBGo1wfcgkt-EWmhOoJnbPfhjL0jy1SwLKAIK0IzRT_a3pNfKdX4?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-72',
@@ -3749,7 +4160,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-72',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X54XnOeqk99tau_I7OTsZg0XQPmCqonuFhqA40TRSESLRgnPOEo-2nvwQd8zxM5Zfu1dJF-WnUkRgJAaY1K7KGnZBmsgPklSsFvJAvn6cUJ4G_xsyMSd6cDyTXgBQCXCHw4E9MQfGxWS0V-uU5-8W1wWKJVUCYaDpVUASczHb15yZS_nIliPea5X6vn5t4gauKX-0OTn-s2pEn-gKeh8WgPn-5_IvvBvajfIXU0n6xgQjKI1Pk0sQGts9Y?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-73',
@@ -3759,7 +4171,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-73',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6p9vSoPy1zA8nUF_K6fyuFpJU--htkHkv_C1-WgpAIo7MA3QoXrpE0NKileYAyvrT-hA2NL8TWI4MGBxOTM4GfP1fI82A2GH5OaqXrZseX_aY0FtUzcjOkkpmZ0tPRRzqnWlkb56AoN2JH9WJyiIkavk_oRR_5In9cW_M1LHrAa15YPD1KfyIvyzHbIHG78p0lWPiC9raE_QLdIU_EayAs_8WMbnDT9oncY4SgOwbCWuQ1c-ABdzltN60?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-74',
@@ -3769,7 +4182,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-74',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4jjZB1xfv2juo0jImLdeZuhkk-OXGKbDDnyjplNSLUhSsJH89iloGUPIrwykB7WtBkVrs0E9qT-4bJZBDiKe0ACL6xKX_lxjG6THmmvKaHkD1LCO_aDGr5iaVhWrWskmwmvcPyRpislJi_YW5mNfxR5eRDa3-8n-oxhTK5f8ruVFY1pSVQ2FiZON57tcDbc-LfJqcn6HFKDJABS4nGecvd3qnGfZ_nuaM6UuP0YLl-1EHLETQQCfYccvc?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-75',
@@ -3779,7 +4193,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-75',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5nfJuDH1hkbYw8DMySEQCSAlaEmdFOlzM38Cn49dCrPlR5GrSEyWMlpmRpijiZoHrfA2bGEBXSSPrb2FFPOtqv7J_XLksXBjS92XglaX_-mFxcs-cP93dhbKPR6YHF3BjpDHi35DjhiCEvBMu_x-17DqukkmpVfIDC1R28SY1WngSivDGMDZcMWP8XWBeKaBM-tm-8z93CaUXTIuA2lpR1jEzlXCRze9OhsYUIePiz6UT6dPM8IJx-jM8?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-76',
@@ -3789,7 +4204,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-76',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6PfogGyML1G02O2-h6701L8xEcmvy30oOEqTKkvtdLXYiyfQT-qwtD1t9zaFOuozA7m6mTe5M2bkNIambOlnh28yUiUFM4NEcUAoGVHsL_srlsC3Z5Jk3nqqsaxc0kYCz31qg7TQHVZynE1JX1VFgJuk9dpgBQm91KeKsOfuBBGZP3S3q4mzKqRzG8d8NVNFa2XemkAF1M5I4CpuLwAiWubFdio8rakqL2W9GBemlskXXCQxgK8StcRbU?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-77',
@@ -3799,7 +4215,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-77',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5ygUyQrNgcrRaRRfbrE3aP8bSGOa2hP2_X3_Sy6yxyaf4JM5X0mGdIXT99ieKrvPAkEnJbX_R1c8vmdak8XiUpb87pCMAuvBEuRMbAYio5BHTrFuox6j17Xc6RfrL8SFTievgSMyBH-ITIt6vPlY1byjhFaMSeTbgI1V6GmMNqvdbl3-8LA4eZi__9wNYBvg15n7vqWvmI9T6nQXE2AzQDP1ZzusErS7YeoEgb-oaFmUFJVaY5kmP4ye0?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4VWwP0BiNQaCV1BtwE56nnAGsOl3dEOK9QOKWldIRZPVuwPoRpt7y5-fwpBY6Zd-V3KGQIL3j7kRKJ3oSJSdwZiJCLig0dNOvgsH_y-s9jwuohz7Qppf8cz6sX-GaPB-IgzvtGa1eHZQ1CdsKnowpEVSJCKyKvcy5R1FOkIgVQah1jQ1X2rXa7xLoXDr__yWa5Y2EZ1QPLI4bDx0ga6k5GCVCplT9Bo7_BX8mLemiFsBQn1L-q1SOd4_Y?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-78',
@@ -3809,7 +4226,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-78',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6r-D48P4yGn-Ev-BjQch_RXZqAdm4PzIFSwApXd4kdAK6zWB0fiZZbR18SGrwmGGZh8U0_hLxf7fRvQXRJXa7-QxlW8u5M55Xl-NKeOragp312qQxflmsuxAzjJfn7Y0-0HgbGIiFFKZIDjSo2HTO7ZtSOgZ77lu37lHLmP8cEH-7YQPiWHRgJXodr_f1KDDflfdeVOhXrYw8huMGf54w3cDfsq8JaNGMs-NO-m7bI69SQRKMFqJ1_r8U?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-79',
@@ -3819,7 +4237,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-79',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5BOFfj88VeaFKlF1EnG205apCK_lVNrPjYNbpoeQDly1WY0K7GVQL3MzayQ-bd_80MUNMrlwS2sao2dxTbecBd6gAPQwt0Cf2IO4DVvHiSqWO563nywK8vm1ZNToLJyQsF0-TxTDipVIc6AYraLkeqsMSmZonPtX--LVd4ZUT3s1i5rvKxDaflZo-iEVR82xyZG6XFrb9pHkzkP86u-QSEX8XpA30NCTEiUUJKVnwO9SOsn6My8kEajP4?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-80',
@@ -3829,7 +4248,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-80',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7gGdl57tK8cciBZpSSocnZT-3uLnIidt9W5kZPa6zNZGRuFZR75x4AH_hCd48gZPF4u0CBYZJciXW9QCg-3mDQxLtJMBRSbrpRAJVvKdNGpIPiMGvOL5NjcKxz2IsgUhYSqhULN2JVX0_JMsrdo4zM46TYPE8-eyJTpK6lRk16HaZGIRjN-tY4__Ki-aA1KeqhZuPgedsZOpy6WZOMSwpLi30J7zOUjoQB_5Sv2eov5dc4hcO-I7xO1M8?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-81',
@@ -3839,7 +4259,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-81',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X72tO4kdtdhDNyUu1rjMp4wxCOd8gWuWQt59TyOudx9iZUmcIfj-664xmpyOo4WVm1nOY3QqXglByeRDRRfoZTEQAQouUXvGyWqVLfF4xF8Qk8CgSMcKdcXtWEFSHYsBDeTRvM2OtiK0MWH3gWNwzHsM9G0Q7NWaLIIiHFyjW7XQanJ643aG_5WeQFWJE7gBWKYdjakBksaKpSvKiY3u6700HGZ8jpwFwFEfV0xFRSgeC4ztpJYa3NDsl4?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-82',
@@ -3849,7 +4270,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-82',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5FItY8TGs1cyanLZ3lEVldzBTJCllBZe4zdAB6rdMX87u9uLk-RNHpIIrG2AiBNb635dAduA1FIU1FTPiBwA7HwnDUWZK7W5SH5rihz1Lf553Zlgpar25PZCRRqLrTQGjA0NoDERmARX5Z23QfEXqv4USk6jolqox7dAJgPaXPCZE_MzQo4eZG8ce0zFPoaCHkRUJVLFn_dXpYgw7pfscXXX4a69wZUUhNzCfFGlwBrchGtmjCNlzbyEU?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-83',
@@ -3859,7 +4281,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-83',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5etxHgW3zzOB4ebEbkVQ7Kx4uPXLM5rpz4bjlcDJ5lGLNzElQzURG_0XFg55RQLHOVf1alcFJvvZwFn1MuN9hkavCBC-qBmNJ0ij7-N4-Wy-GMMzRfOYEYsoLqzl-BRfhZTBiOefBsudcqcAA8aZ6RfB-RtdQXULyX1nRtDWxkV2LxY81Qfm5sy7rXcmKe5w1hDWF73-lpx5zYUNLajh2CiVq6P3X-eUAx5perB9J9CWoZPIp9gs9vJOQ?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-84',
@@ -3869,7 +4292,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-84',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6xEpPaOUjsX1ktHdjcV4O_EEpg4YvGqvqPxCPP-PCpd7qkdNBKYGxzgjcPh03tdrWN3TWbR6s_STJ0QuIa0Pal0QMOVzvXA-5YQ3o2fAzs_k-6f4TsTwiEuq3lGILwOjTDXfFnIEfpWys4bclhgWVoX_Y4UI-LHjfwmakR_74ACVgJfUl-7kfBPqGRLRsAJr58E2PYVYczDFIwQ5RFpVMVtXAwR9l2yoXRnb9nLQe3dcVaN_dvV98Bo0k?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-85',
@@ -3879,7 +4303,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-85',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X61cPbmEk9h-B5-MqJK6U1f8m-xv9Wrdd7yzktSbgQfJKz85JB3-Jz7uH5UxP5Xqw-ZwMZqcGCvXAvXej-9Lkj-Wm5wSZuE2u2yNNMcpHfe2DK1ILdqVjEoqPBnOIFqs3HmAxt-TChIZHX-HgvQTkZIvygkzJEPV_WoOnRUSrcXc2JwXpHX_OrBve9UMO-9Ju5z5PG7elQ4b9oo4slZDsX-SZPNce6D-hmMK7hU3Qva9oNbFeVTMlg5H3w?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-86',
@@ -3889,7 +4314,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-86',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5KCjassEVKw3gIo7AHG_rxHUQBo3J8I-2qLstnJQzxAFeRHfDTPIygDlCbkQ2t8g_5EZopmiLQ2eDA0EWId2rIOPKfKYYIzOlO-OfHI8HfOQt0QUe942NUuDR5Lk4ljkJFU_GDhPZjr_2RgoEZM69r6N1H52L5WGiyT2Qc2sIUAdvROqm7RoONJQbmRCAeGIt8776xwyRIJVIPwkGtwZ0WFCGQG3Fu2qm3fCvwC56nxUPg3VTEWMYN4Ak?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-87',
@@ -3899,7 +4325,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-87',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6isAKvH47qm3A6xi0PYfQrljPO5kWr0Xtvf6YZ5sAOq7zJhIvMqGOQmEVFMEaM1GK4HEMzA-1BDsOjSvxdQ6NfzTyf6sys8Y-_S0X6VElqDddcu-1SPVzwBrGj0P2PrbDE-jbVyo4117Cggi--zVY_oBmzvpvEDCRGwM2VUu-ncJ5wCbHRrTl_IqjPOHnh3v3X07ycayx0Qeku73XllbW-ORcGVPRW5mMhozogRCElP51pUKUztgiCBKg?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-88',
@@ -3909,7 +4336,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-88',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7jjpP-Y5xi2gR58GrxVc-NKsd9DEOdUmmlYFJKQ_4lpEI-FcN602kNWx-WPrzirXmtwEsYuEhsLeIQFrGfCPyXNM-cxRq6dKx1NDK9oHFxGSCrns2c7OU0wMj8O1tSLTPaH-0eYS8lBEWtTSb64mU2fZ0D5KYma760f4nBWM8nGVbKn24y1Ukxo3z2zuAMhiVA4yRfagnQorl2xsvKoWRrnVuKHtA5Z_jF7fIlNP3-kq3zOSJ_-R_1O_U?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7vZr30vZzGTwik4BDa-Kvw8VXOJIVte6BiLhCHtCQYDTC6MjCvooQYZpkHBZe7e1hROqANRYIlwuKRqlOOcGT2Ig9OoQvZiMZEIDKxm1ZaltoYuYMwWR6kCIus0yOBEYvKXECyIMRszb1Mu0LAVg62PwtnQ9RsMytx25lN5UEdhT3jYK6mqwFX8FCbpGRXswFv4zItBT9DYVmn0VcwRJ9UowevDj5urr_pqJbKswKv5tD014LnbBi-qgU?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-89',
@@ -3919,7 +4347,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-89',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6kFDkjaX24O9j1XBOhgw3DhLBZ9axMI2gaEZEgI90NxK1u28h1TuWvP9fb5t6rEPFaMe6lyIqFP60zy7a-j7o8OsyEd5DOFzEGiwfHpQpJ0k3ke6bNwkIQPUaRdChhibZsmaNtV0pjGvJf3ilQr5bo7jbfD9kfkAbiaSkANzrBFHANFjwTQik2jmDcEHyoMbeLGbVt0gqZdxoPewaPtM-vhWzWck9R-RFrKCx2Pa_ADgUIPwZdjIr5ovE?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X628xzVpWfDhUUQt7D2FN9ZC-RUKIJ8KvuID0SJqqbN74d_xo_32xmtMUeUo00_2ByTibG6Jqg0zbeYYtC6SBUzNcWlegFuP9yDr716MSbnRWVw-89s71XnJVjACUzDojgZrrh8NR7QNxs_7HNFVtlagoYrQlpypuf8A5pTVrjTRuKzHv5JpJBGMwwPs8_uOjKd94U8qa_r19qHWAyfjZSX6sZRMjTIx-1s3_z-nhTbXhx9PH9dhxyZ1Bk?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7G1rKPVTPhpNKO3ltWUIs5cHtkW4ebKWJW4mMfyKWroGn4dhnhvoXEi2OJYy7dsg0RU7pCOhZeSiTRndTPbkCwif-S48pwYktvIKIr2loqCQfGZCwPLMqURxk_rAEbTEzwccumxglZStmqsdbxrX4Ulw_GhnB9YXFvbH-A53Ov2jDOx2n3QctZx-v50wW85h2xB3de5xZapPSAKKScMgXDE0RF-For0qL4UaVdKfNxpDglhW3XElTOMaY?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-90',
@@ -3929,7 +4358,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-90',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7jD8xG4eA6b9-fjPVHKkYUHMXY7XWo2xuo9cL2ZUa0Tb52QybE59E8CPKjmJsXiWApnUutCz1LpoooK9lAdJeehpkIrm4FjgxIFoeuGrYuIjGuqJ0aT0mM09HRt_5zzBi0Rn6q79Hfl2G0J6mVj6eC7n_D2MLr1pL89l0wQ1pl3pdPRrFBNgcK1ghC7nYqJc5IGvPTRwQfVDNiNGwkvW6gVq2ZkkUKkkNDoAF_kzlmIjvQyC1ouUmnKCs?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-91',
@@ -3939,7 +4369,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-91',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5bxp9kvwFqXiSN95U_Lzxc4sLG83ZzzYifVhfg0BMHCPnLmisnJbijhSC7dit4o151E2EYhrTuhrLmGoYaC0KgtmI6jMAegMCKABtMTRkOaiGRQCjXqRxRoJ8jjWTJovc-1EJWOO821SpTL3GDEV1TtxV_I3WM8ed6xZjJer7sGLeeO-DOxJe68XrwT5hnpTI7ONXAwTXpTQJnVF8G0C2_6WtHodGGD8RpmPfL8fBShqUZg1Eo-9yIlvE?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-92',
@@ -3949,7 +4380,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-92',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X74mfDhSw3C7RfSagsjAc-2-Ox0DOqcPL7CqQS9mvJ-eIzTcQIsyCRDtGOAxfRI2ErNAjWdr8t0lfk1DIQAeEw931BzpkPajwWy8LHkUTumwxTXoOAmmLlqpINs-KN8clt-qEutQWz_EUGwdTwZBnQoD5KDiLaw7opXb3TPkp8-9d1RhCRoONB-kp5wqxieQxOlbyz1KeqSxVMebyNRcZr9xNIRe0A9mTsH5xtGrfW9ktxvte-t2VIrYlI?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-93',
@@ -3959,7 +4391,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-93',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7e42FpNhORdFqKax_6Hy6hCSF2Q4pG35cJUT_Tie6Qfs3wYQHz2ZKu_hgn_rAVgQlUNfELm_hO3DOuoIY1Iejw-UVVwrZpJZikw9EkoowRgUbT31chheRYY8BrcbrI2GXCqtREPbvr8IhvRmvjlGj5UJjYxorD9UeFV5lwJSL68TV_UkWBHNPLDUj9ewhyXWKXDFFXKQe5IgsRADYWMWycqVdp2yOe4DKpugLJTAYiNChtkx72SeSZmFo?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-94',
@@ -3969,7 +4402,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-94',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6sXJh1aLgsGHM7vFSV5IP6MS11DoTD17JCmOeZpmBoQErmewPibcMaVB02nG5XhCCIGFNdZDmj1_ke5VzSRBDZfB4pVhg5OgWktMmYZayhQxXVZwzY8aY8c-35A2UKPPFHUJ0FzlzMZmEBQur3cN_TTMwxf0kxfKMYrBtqXs-qf9iPE6SE4PFz6ecqe1Q0PWyNOQ2INSp6BvpNWmkniY2Hrmdp88Ld6jHsy4VIH4kVJMIEeottjXa6kVQ?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-95',
@@ -3979,7 +4413,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-95',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4GUdWOI75lwr8fOCG8vQm2pSp5SXMl5LLjjMl1HlEC4LfyvRmOTk7NjdB3AlN5Xmo8xOtsek0sgA5_oSgDvWfeKSp_sfvuDegyLGAJ1SwUIFUy3r2Ref29pNNLysvNzXQ9jOrFsh9KWAy359s7J98t61g0cNeCfdfbCgSXics2ByepwmUXND2lj9u5hf8khgQveFjR10VRkLGvf5i-HnYdxaCLtMu-cqahNazGJFq_qBwSlm23J51De08?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-96',
@@ -3989,7 +4424,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-96',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X72BOK7HCUFNViDodt-xswPk7MQ7JwuP41WS2c7_iQ-q4QBxY61uh6CEq-4BhbYP1xt4G2Lu9b0VlUKgzHMH9Ht9RqtAbK0qbD2w2CgxJIs3D-hEs8yajxHe4hf8sHsKj9wKV6MX1SzPSCz7nzpxfqAMh9WRKn-E9yX21Mas8DQF4nL2eTP2vJFvxFaaiKMJpDarMmDQ6aVmGbP3H_4QePnx8_V4MVKWgR254GMGJ1vlXPwnzmLbjWxet0?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-97',
@@ -3999,7 +4435,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-97',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4AdQryfgtiDggMcVXy5qTTB7QPII1Zsh9nwi_JUh8d_C5sC6yl_HCbESJ5nugn1yckBoUh5Vv8BXiqgzgpyKKxeB_cutlSBe7XIXSwIY_GhnjwzsVw-SBkkNSxHrpM4XOqErJvz3k_v6j0kxy1ireke3_jBNZPaX8pX0kFjtUrqpQlFBj361OiYsOTm8xbSO41-HSPd45di1unHltRn52ud0Bl9AP4uZk2XNT0mV7YunTHtxb8w-m19nM?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-98',
@@ -4009,7 +4446,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-98',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6cByD6zvDxtF_hMXeNuTJBRAJglTadqrVhA2TPixQFa22jDyv2wlFl4c6p1gjRcUpYj-LzpV2DygpSGNqUYCr25kxRB6Q0FwifSSovjz7P1c9LrSffbkbcqHnT3wMxsLcIj5l8DZ_ReINV0IUUCE7v8o8VifaO23ZBLH7UBsjDHJ_gJYFm-_w0DuemkNckQ5a_qhT75EKaCXM_XfLb_q6oTfAOOOJv4M7uPeix-IjMtCcNVP1dq2yR0F4?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-99',
@@ -4019,7 +4457,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-99',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X79a9IU6uuUwjtIgFp-sqf_Dve63cOdtLMBcST5hRXIsmGI0OPfBtBakRHzwIj17j18KfQyHdkFPRhvJpsEDOnhawI3E5G0eNNZsxlmDJZU0_A8oQEu9o99JeQCNlV9fwhy7kCT3XOwrJ5u9p1wm-VC6TRVvTb2xaMX8ie3vMVXAMQ4M1h-kU2xC3JN49juKoXwAQZ5RhE2kObkoEOu9QAVasuxCLIwgAPDKC2AtmkFji9QEgU2Ln6QfeQ?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-100',
@@ -4028,7 +4467,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'date: description: source: location:',
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-100',
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-101',
@@ -4038,7 +4478,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-101',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5tpM_H6XAJ5l8bQse-KzRAJOsk2tv4_6-765fPLS4H5lOqyIHyoSuXkKzBcjTfaXPw7lhPA5LNvKQBpZOK6aj2K65QUt7ZaaK9pQjpJ8t_D4ibVBi7MHXhlU1yvR6iO8-Mm8BjhJyNyeZRv4HFvCpNd39iPz-7tyj6JDrL0FrrneKTvIFYK8_CAWW531QAleQSf6w4Q77AL1LV0De1aAzkJ-KRRyO33N_UKi7K6GB10v1RJ8cWIg23h8s?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-102',
@@ -4048,7 +4489,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-102',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X754Gy1ASfkYmAK_rKE_53KXCwhH3661MYMC1wD5mKQ639UbFd83XpvWKzOD104AwKLWTtwsaJVQqdcp7LD2oKHsXaqJVKYjnKw1Ohg5AGFBWAtczACR4eNF8AA8kJVgtPQTIJ6wpFDWR9tsHlNWoBE3A8xAPLcwIucQbiSkuYu1btsi9dZsJIF8kKzn_PWSKRDPsTSTGE8y5_HDx-Er1osJcKe7t1iH89Dyn2sN8RhsXge0hFb4TGcDsY?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-103',
@@ -4058,7 +4500,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-103',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5YGBqnJ_W-IxjRKxzfQ6Wp16lPoQTqBT0_HVk8yesCmTx2NoRP20Oong1ESd2gQO9BzBjs4_3Z6I2CSaikMO_WIXY8rRqzxoLTgim1wwvdl3XoPXHDESZBZwiJHtFnOQ8RfdmhknCVmNe8Z7yLLCv95Kr-4OW04GrRUkbkKe2GWeifqjGQcNhpdcO2AXpVa-8c2ymgOda8aSIwhP8XHynKGQL-K0BRXBp4ptCq0l13r9RHnjFSjeKkR7I?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-104',
@@ -4068,7 +4511,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-104',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5CEpfJieKtpYVCzDuNONjKUQQp-xDuAOM4EeTU13zSEhlnQln5iR7ypsv4SaAi5vC8TLuaPdLxBfwHuekFRRSXeBYz7XTGSWGoo_6rkOGy2r-paUpmKQkZokMd1llJQ-SZDeJPGVvSjLW4FN7G6s-3rt9p0FNgk2OFdYT4wV29H4P-MVseIzksT6FGGp-lL5aeOvlj_2-GYk4AWVeCpP3NP19RUikL0FBg5WGNFD-diDStW4j2AgVN0YE?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-105',
@@ -4078,7 +4522,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-105',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X79OOL4yK-iMToeQJKl4sUJGnEhrHuIb_h4HxIjmbgERWHXZG3bzTfENI55m3h8lDnMUnqdMKDhYv6AWSXVDVZFU1IDeRMvwq-Wi4n89dgQszwrLDf04deP-T93CZ-5buhrRjR_UciXlOw4XGUXPZLW1sGwPDHm0dcBZa2ntURCVewO5qjwB48SdNYLUh_1cecG6puSV60FZDaXm4nok2MNTjDse3FbZy5WEUQ8nIm3FKz_xK3vFOBk6TU?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-106',
@@ -4088,7 +4533,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-106',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6oquAhUZXvRqlASuPvhSgHe0yDH_mBFsbuNTrs3OpPX7vOmRm7nkVh_W6yNpQAkZELi9Zcn8En8d4atLTHJQIADi4Ba9oGZ26_4Yq70spSfm2AhpL90oHgnBrOgD3mod01cuD-fa_UZWOYhxKBwclVVFIF3bpZJ_Y_AKvuOAzFJFxmEzQTao8C_p7uEGFMCW6j-n5UW_nJK0tOMvB0a1doZPBk4rmbn7nsdCwPQyRqbDq0kmumcNeg1zs?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-107',
@@ -4098,7 +4544,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-107',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X54qp-0gnF_vuGBnHf5PNbUC7P02GLNdLqfDoui3fBdUDEP5NRwnzwCVG8Pke6LzokKmDSTj_ikvwjpM56CMrU330w4koVygbU-R2ljlxRwoAymES2-UgdP5-oeBDnhuv8XEYAk1S7nVYIViNfDoJKjsDM9Tre0bm0n6POzwH8xyi_LatvwD_G1AmlN0usMqhRJs0J5NA0MJgSTMBumYEkQ93IKqQczQ8xjtUoLL6TGm2TcdjSrd-wzAYs?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-108',
@@ -4108,7 +4555,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-108',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5PSWODKZiTVghwk3lWEVektSwW8iRFdlHlV6IFQiwfQBdow7vXOtAfszG5sMifbDSx0B3e4M6GVdfp0RZmGkQJEkWsvMhwYwoo7cx26TA5-gxEdmnXTR1BdkcFD1tmJ_5QZSJL_KQlkmJNJd8UiB0b7b5rm7pLml4tdtGrU_UnnGqNCZg7BxmHWrhTaVeiuxRoVIwrJ-hUKscXfS46jv4Ra-Ittr7HhSqPO6maMYXtnsM2-9wN_R8XDOI?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-109',
@@ -4118,7 +4566,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-109',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4aq2dY8e3F2_QO8uDjeJJiHM4o2blVCW5kc-PLrGfZE6JsXPX9EBx9-e3g8tRPvOoGgBleyi8r6S1lJESquNK65JOHCQP_YQ9aQ-Sth54plLfehMOxjy5mjzoUnk5flRrVFsMB1FYYJTi6IelEqhHnUqpVSj-Axq6cDfLyvckEWD0CzICAW9Hq9oYSagz6EknrAJQNwzcpXEzpB5ghJjFjkSRganqjcAwuhgcRV9Zpkk6sBFhiPt9M_iM?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-110',
@@ -4128,7 +4577,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-110',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5hfaOHdwN7zXuOH8RBOEza9Vm2vGpUV75KY3O4SA-eSPUSBVZLB6zQEuiXHb8IZSapo8yDLepz5HaIIEifamaGq60ac3Ydldntk-3VvYFxvtUcckGxR1z21tD4U-9dB2IqOZJjFibffwP4bOLx0Z9RvsUCX9v-AjLzSDCALEjXJiVqA9QsEednUpdrVscBxFdnhiALOwagTDdFk5kasex4J2-BYm8QAT5Len2hQXmddsE2w_0Y3-FQgpo?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-111',
@@ -4138,7 +4588,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-111',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X61vzZKXX2srgV-KszfStNsrD0BTcnqAWoHBJu3IJUmNKs2WMIOTsSuO0LF1cs_K-T08w-XHQkdrrNMvOKVqnA7Zb5pvxHlu0cmUFeRjNbGAPvq7iIFNi6Ka7Wvsiy2eH_0QEQHk93qCIz1aq11BCkDEFN7KtjH3_XCCnuAiwEz8_3TpGYDg1z2sGN7_7sxAleqbjzNIUE0F7sFArulpK1jaxc1SWwUzSuFCK-x9oW9PvScbpwDcXkFlvY?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-112',
@@ -4148,7 +4599,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-112',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4GI3RFSVB5cfDRNJ_DVVEdRvlDOX6e3fhqndcZl1OXkvR82aVr8t87quqoF2066bGXMx7m85mCjxqBKaXTSQIc9xOF-6kBikF4i9ZAprgSEHD-e5sxIAuVQxBYx0L_R5FTH9mBU-eH1pTqiQzaq_EU_6FN0SBmjeAQ8PBEbRNlC2ag-38P5xptptN4Mys3lyVQcoMe4KPM8W76YVQ27lKKVyYo3kZkyfy4U9DgX1EnCxZRwsGul3JnBj4?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-113',
@@ -4158,7 +4610,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-113',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6vPph8_X5H6cf2d-3-nw02Hxg5PVSK-2AgSJLs_oYb3fWeVFbKz1Jv7clACGbrve7c96U8Hu8QN5m8rG8ED16dosZrLnvJy_DlMqdNkTGYRB54dvfLh9XWJfl3FT1rJrUZHGdJhw7Mp5dXhV77DRCPVfPjpfE0DZhvE20Rgik_3itEFkSmNT-b2i11eZF1OSRZqM8hGhhCCQY5j7pGqyPqNQ6d3EJnfuWZMOkn0WpmLy9R6BbOLpFhtco?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-114',
@@ -4168,7 +4621,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-114',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5WU9oEvyTRq3DCo1HMKv0kjFg8RhTxtFm-MFtdF5c7EfHYXriZyYNzZZUjDv5xVDRsepgDIBVfQgserWb78Pmc06luH5I16vMuHdMgxPZqeXjzYVA7yP8HpJwJHUSfMI5tHjSvR7kjaf4MoGu2L9dWDXjdB1LAJY-KB16DBSFY3GSj2SCONf0w-wHWLOEXUHj5S1mN-YW6720D21Oqh4zPVRR0j_uGSrnyYOvCin9o33SJEMeRHYJfwb0?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-115',
@@ -4178,7 +4632,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-115',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5UpGYGl0HIoffGpj2eBZQc_gEJgWvQHiuOs7QvYKeGBfeuphWQZDQUfcF_q6SIK5Eb1Kq1QCYZtOoyifaeUmIvJiHm6JrJU0D1tFJgaZcKLSciY4lUrUJMWbpXE-5Jb6iX67sHK7zAvxapL1g637aK_1geKlK1XEVS9Hm2NhfCLXKkbTTBsbcTuzzoZ5bbe_nzEABFlkRosZ66K7Bp5_DdSqz5eO6IAz1-JEFcE5zilT_pOeV1YeWYKCo?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-116',
@@ -4188,7 +4643,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-116',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4CGvrzk0J82g1XX-6-TRrN3wB2cgEHXfUqhuYBc1EFhsXZzwaLaAYNIXBvxz1JfQ3P1DvysAgCt8qsmUrNXtou2JI-T7uTJaQkgGNdAKQrVNz1dN1VqHkrduyqAuw3yY-isxQSdcOyzBS7bDhf8uR2pOT8p45bYyVD_hfJpBB8EpU_QgCYZBHRoykLfNeg1ZllR6G2gYkhT63UnLZFk-V26tf1jYEcODDaOvfTWrwSbyFGt6Q-t7pFzpU?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-117',
@@ -4198,7 +4654,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-117',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6tCwciNAHkwlJyTFmfL7j4chGqJ3Y-fGlnAjyGornZGgmY4pArOVqDrjHJWWWMBNk-Ysd37IPlZBJz475FMFarh6soiyccnt8ObM4uynLP0Z7idZFFpxqKTd63XBAEvUfRLB6KmJwDy6dYRR07BUKGC0oTPAJ3xWLab5FGJAnrTrCFPkb2Ygik1AdksLa10fzOtMG3-jYxmUUqeHmesc6x5eOSwE1VURM8p3PTNOkjfJyvRV7p55iUoPA?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-118',
@@ -4208,7 +4665,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-118',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5E2KNT1rutbjnC-jjtdAFDynjqa6vuipF2fSIfmzxO5SlixX6jCv676X4SFlbljDaUOwjUG77lqafzjmvUgK_XFg5uKfxKIQ2K8V1Dy-IPD03cw3HNNoLuqEeQ0V9pETBdV7GTQm3mlrr83yvzX3gdTEe00kgmVslhWpJ2EeMb_rj41C-3yXFOq9ogkd9oAXXym-VOBSOCRMdRfAV1xu-4RLpQOuesNzcQ1EyOKne-49_Ml9DoD7eCPTo?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-119',
@@ -4218,7 +4676,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-119',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X48Hf-H4tdeYIAg6s2S1QVS-Z6S8feXFQ29rfPaF09uMG5X6qJI1dr3x-9fOgrbgbda3EtukVARzpJFxOaTP9EFklWXkrPyef2iITh1I3O9moyS9wPU6g5LLqsTWu7C3SSyjg_tF4tHEZW_MpV1Oq6EFpKqOfvADkWW9aW1_tUQOMt1akEpIFziU2RjrTnPsMOK7HlWw2eHLAXmO8Vs-Oeb6f7RiKfHkYHS3DhhawyLJuiAVt2a8WiP1nA?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5cG5wBtLLzmAv8AKy6r8B-eSN4W6dC1FTT7hubbgRU3j3-ewoQbMVkCWAkoKTVCmxPtF9RH-ige1lE7hJrrSZ22gJQrcR9clwjgirdGw2kfjEmzD_N2ttiOobE1GKAvAl4wHOg4zqmH3uPgpOfI8ch_kApeknoEeE1ZMEQAfHKe8SMSR-kWbabTjxh9cpLvm3UI4Y3gnj6URzijLTJIc83C4xkrdw9ud0BA9gnGyMO_u7rQIUyGZGKJn8?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6-F38gtFfmp-lNrjgzIhqE0WQ-6nG4ej4cz-AgNntMnlY_L7cVNqJpPSUyyOeYSD4u4uWyRyE6UWxBJJ-0dFgNI50TBLPwfyluFBBTnEQsLSUrT44QuqHjvym_7DBu1-i5PiGKQfmsWRqxKDMKtzW04DMcMEKCEO_yfGTaDtDaC6KCLSlbRS0QaMuxpyuUwyAGXcfwhRJN7Eu04zmUUrOlnCEf55R_PxC4VjTtYWvqfahTxpB4cvSoyDU?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7ZW8GFNtyGGAIHFUe9Dykm3MWeYp_MkVRWLDhtVCWBp-cJAneQsV2YdNOrl_klZ8v4NDzoQFrvZ3E9hYDvHnumMwRnTC19kVDmyy8YLKZ5ijOhOWF5pW-8lmVnGa1HGM57v2KzklfoSaxM7qRqgBWl3rAhlwGULCPZT3eMHsHQXrVH1e-RS8cOvbNKi3ScS0gWY6CYoVApcjh92MEloVT_LWcZP9NlQfMLHhOS6TH2pmNxXKrhq-r1lWM?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-120',
@@ -4228,7 +4687,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-120',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4QtRUangbs9BqtUJAVKOsSIFgEjxon5_guOFCirVVDlX7m4Bes1T-IhsPPSjoLkgX4s8xKwtmgix2wNL5wDPFeQ3ASUcm1GwYf80RQDJwAuPl5Ujgbl3rvoHT9zn8_zB2H0b4SJs-D3csCIjmIjhQgYEz5CxLmLrxUtGQ2A6qlGp7jdoGBvN7JFxnEOVbI02EQJipK-sv0gK7oWaH-bik6N5Wod2NkKYsfGWzZ3Es5x4lqQTwYqubnDEA?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-121',
@@ -4238,7 +4698,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-121',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7zPPlx2sF8mdRlcL-Jo7ksfqu6tgHue2oueSOdEDwjCRuJpYC3a8AOiCUOnsEMg1KChdCQPYOgTvRT8hnCMV7Ad3A_1qAXzIM10RQkqqOSpmvFblx8ZCBWBV1O2j5dGgenZg5Ztr6YODP0tXbxBOrDazwis4rjvyLse92vyxlEwHp4d5MxT4kggn3lMbun8KLxyokkHlHqB8nqdj6STSAdbDrz24G1XrhtrqHNpmNyN0nHaYyHOtMsIac?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-122',
@@ -4248,7 +4709,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-122',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5aK18RKPa-FWiC2TGCpsqrrTB-ttoHRztF3WFbjZ8ALYb1wiIoqhwOT5cbSvwYyFqz-AOUl-ve9wVbgDlt0RGJFg8n1pHOVKHS6c_9mVNqX_tnNYFioPYok5WH4siN-7QBJmqN_F_vzC6QcgrrzUXWDZxi8qm2t1z7OpZwF01cmjY6dp4Bfo-X6a5SiLDolJs5x41hqe6t-7g1eNVVBrBI1e_KUntAtbXoWPZPQ48WFbFaal2cDPgJzOY?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-123',
@@ -4258,7 +4720,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-123',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5y6whKUKbAI12avx-m13aMPGSrZjk35jp9RclfU7zHWcuVN2va9GxrbyJJ5ZmJIUjvaaOW5jYdBPcCLiBKLVZ1AIAiieN4hmGF4RXyrC99-PHWcQt4McCCRZj_68riiHwESVOO-FRt0808y_KEMWJjYAxJHT66vQ36L8xm1luvUtqhZFpvA_bZrwL2uQ5FjeAdqT4qeJN687Dp9Rg9D6rRwHyAuxAinwglFtIrOtw97mifVFYt2x1B35M?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-124',
@@ -4268,7 +4731,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-124',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5SVwWVphUNVMbGLCRZa_-73Y7RpxfwNGeNICNIw-ziXYbJyLXkI4tPYDx2stmQGdyJ1uDeKbNonEya3uID9zziRBg9q2CyU47mMzPvuJ3NKE3H49KfFcIW_7NZ2aevprk83dej_LcHnoYV0h9kJO3s73YB1pJiqAB2QOcIEt_MDFbPEbXTK77oOWinJTonSr0ClMYKg2jtbDQMYB-sN8uDWUAtrl533Opx9wTZla_Lc_0VaPsZvOpy8XQ?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6En7knXqu-1WRcPY370qguW2Ptu8O40P9oh9R_SEDDIp0QJV2-1ufx2hKOCPr0Vpw4NtSDT_gfQeIgUK6-Af9MjlMKaTK2HMAHdhKkadri5WAOVX9ecBTd_j4DROp7KFKqv7JcDpKNc49IETICX8J_o4jzlEyuRsuV5p-fzis2UVZ2ZHXpXyUveH7D5WAhHmhS4jdIOQM-7GhMXfak-D79eQv2EXtddgjGa7Q-NFhe0sNs_YaHlMpCDxw?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-125',
@@ -4278,7 +4742,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-125',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6-6TiYQQcHDWkkX4eQuU_LweXs-0xqKptHA_FuuOWs2FLkt-iz8YhVU7f1Fmo8hCcIsGAxlm7Sx4efXXK1Y7IuWVJH7aB_8mo7SUx1ymKYgsN7RlEQPGUYzpTLkOiS2zR4-raiBjX2TGBqvLBovt37arauIZCXAURsmuAtXaHGd_MFfB1GFfFwvJZA2WHN7MDvNepRUC51jC-Jyfwa5Usje13L42PG6ieK0QBJ3ayznJJFE81JErfbwlk?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-126',
@@ -4288,7 +4753,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-126',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5dV-46xHLMzP7OYIt6r9MiYFxEX7JTKpU1W4mn3vwOxDJ4xCn88VjAG0W6Jwa5oHb1J3wkjo7qiCIRbqNIpr2Vqa3QRFj0vPZoWGPR9y_AVziKQwDe7neeCSLGRt_sXfYMZ4JiKrhhRHt9BzC6GH9pOi0sAL1e6XeW8uruQocFIElU_oYXgKYS02BM4qVLiuBpL_gHnfRvNe8lXEVduTmb3ELZZ9rZU07OTsbGdwcztr2kX2f3YKs27L4?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-127',
@@ -4298,7 +4764,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-127',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4cecLitEc_vDp4eR1Cv5TEPBzuEqdVAqxWGuez4ecDyiQien6rTtOR4dTFVY4YQUT7yM-w3dv8IGDuIcOpGZ5S3g3fTbaJNBJHLvim16TMyKV-s6cSUxFJcSY0s2US902xVzywnO8qeqcsL6pnCjxOiIeuB4tXWjC5ifxNIaYHXgfBCROxmCAJsDKeDDNCpYHJNH9BroGbTf0StP3VyATQwj_i-lYppWFYhKV561R0Ms8nAOOrTzFpI88?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-128',
@@ -4308,7 +4775,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-128',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5Z6ZUecMqtjC_zSeMqmuCto0lAYpCAKyad9H_dfl4VPzsqBImg1bo1ue2qu2m3JGITvKoG9XXHqCS9kcT9oV3U4zGJOgnA_yCTa3eEhzoTm6DUs0S9lhVpsf9PKRicMKO106wWCSFNaiumdD0BKm_e3OaWyH-A43iR_DLFa9nLHJzl4sa0JfPeqIUf4Wux7xVSOOl_ozNX9AkoLOTJuAXe0Z8UlfHY6R2VcuVGrIKiTBM8dhsvwS4Jpac?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-129',
@@ -4318,7 +4786,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-129',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6OQLdRvxXuPq7zTLDp_7EDt-ehNYH9AW2N6senD0CJubfNQjTElKxYwIp8QQBD58rGAySYZfPfL-Z-81ZIwLNJUQtBx-wBluftT4Il367vc1SgOolPRHaOZsSf7k7gvbC24kcXQ0CImRNo2cP8WtCJYWPpvht-jA_5HAm0Es7RDIaUgF9FHK9TiH0pCWqWLWqpU8k7KYygHDSUDaGyyG8Yp28Sm9JSTS8bWXeOD_6FpHwdOCQQdKJKA7U?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6kPF-s1fNGjDHo7VVfsZsOn15mYAcLjxSMs3KibtAFAL8Aj7Mw2uftyPKes0a3WFNZxLxDQhvT0OGH4v439j-g5X5uicm47xqmLhoWSRB9XQNRQyChN7Ov3a9zCGfHUYlq__Icx48BjpuPYTloeUDvsGzONih1StEtl3sPjXEEEw9RTwehcr9l9ZcEcHjh4dyUPmmD1wmvawPRCyvAnyYvYRhRSmgaeADXC3bMsWk4wQjw7YY0zb7rUY4?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5yIDiXWEqtXj9unmp3YmKtNgnwp1dKh7fQp5eZGkghQJQeSrdmlGpgsFcL2XEjBm7hSe0k-0gEhmJy_aCaqluQqZpG1KSDicu9rr47cAMYETx3QUKsQhA4pn1lT1ECilgwCmVshvUOob3-BmwtC_Q1aA6mrs3zvM3GBuQQcNITYsCC1NOrPCHk7hh5i9saqkTiIlPDeicqpz5aLpCznBZMA7wm_kkEPnQjcpMecjzRq9dR5ViyBfdepQA?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-130',
@@ -4328,7 +4797,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-130',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4EwL7MRNvrSAA-QJgUdI0E09OSNHY8sE4j0OQN1YSXqk_K008Rzqo6uVe09MxJ5xw64jWnwuazkS7aGqHiB2dq6LLIKM2D7uZjmJoqxk3rtB-5DDfemeNFYjk-4tvtyM8g7QCb0x_keIIYWXkNhr2hsvcIR4kHoazU4uxgS1InTQad17HvmjaC7YpNemIm4UAkh3Mw7k-XHCyGbqXoGWDvdDrIS8VrtkDoj631TB0R-VhM_PkKTAwCeYw?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-131',
@@ -4338,7 +4808,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-131',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X50HQHzbAN9Wv2LWXeOdavpN0zZh2z9GSyoNJo_ce4k5fL6d28er97M4W8_225Gey5e9JwIrbLkaEip6aRkW295TPiLuQKIp7q3DEzIP0dLT7FfJcY4131P6bgPOH0sAnCvyqVw0Kfvaez7SOmUmZ98cpthei-8UoEcqWCmVHxW4TbUwcwKZMB_ukRhVAVFqBzQaXPWB4opZQeUyrCyyU4UC7WEkMlXFtEO_celcMVOjCO3GTIkjSJfAbQ?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-132',
@@ -4348,7 +4819,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-132',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7k1dM_5lX8-Ua0sxLPC6WzT89K-tXmxxJCXXe4aRPylhm948AFAlACr7ZaPf1wX6sDis7treZPsj_d7h2meF85qszhG61T42_xHZRpb4SAoyCfzsA8UzhAUfT0QyhJwhi4pU_W5xXUnDMgu3ZT3e4eZ76nU5mdk9bR-lpmE_milfjjZVBvW_UacZNYDZu9RPV-0x0_fgCsPeAx3wUttFqbASt1Z6dWhBvgu__uvQsBL7Zt1RENxrjYE4g?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-133',
@@ -4358,7 +4830,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-133',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5Kf_LHZZMpdbd1BfwA5oxTuouFf4dwrHaa4OY3frWtrZsAObh_YyajPWto9CaKmX6HTX1klPUjqygAPKz1oVWrujhwaHXgxA3ExblgHNr5CqzTyaGMv6A0XaRLnOYWuX3MNGtYz-biCOO6VPKuJZ_bdy9mKKcGP8D-BfONy8MYIwHVBfB9UpxTKNSpEwxy1VWeRUme_-0P_ZtNtSeH1J3UnvFc_Rs5iouEFxKtqhHE-ZkXqXMfcYOcVAs?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-134',
@@ -4368,7 +4841,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-134',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6Gaat2YhwRR9UY-nDZljTgskFrMbkAKJh2Uyij8lIf-vAVYPKJhW4wyvwqqoByoKkExCanVCsq33357r_2bQZ81G8BlPrsGrQv-HpZJ3obVrjvucm9L68SunoBxIpRV2S5-aRBcPA-k3EMHBLmkjKYroBZhIKsEzsWcsLw1nGfBe6YQGaldu8d3Sn59iLWU2gUEoRqiVZcrvVtlkWbjVmpbfX-l2GjorCrJz3VVuBIj3PKRYARyalVlxY?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-135',
@@ -4378,7 +4852,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-135',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4joJiFsSdvS9VhDiPNoy_IAYzKKqx4waipG2xYtfzhmyeeNLqRbCNZNwRm7wW5wBxkpGkFQG554-hdYHhDn_DAWFFbpbWMWJDa1LLU91z008I5jqA4p7qg4apuWD6h5xEYj1zee90MUN2Co8wwZXiWr15KhIPSzmjxXXYqDno7vm4aAbF10MTFXTvd4OMj6xv6FnOV6oG20yIoldZ1UDtjdmnoVJZ2RsHfObQnNmK2zLYqQAAuimkFfSc?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-136',
@@ -4388,7 +4863,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-136',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7E4Q74cRorGs--Sa7Q4dDO2Y9X-mu3URdUSkgui-VAQF0LiXHSz4MfmGxEdM6k1ap8fMXdYmuSPC_y_28hvhFEefgCt2qM1LXuPEFrIO6f_W4zoh4AilQJKYZSPyj2cIOQxJRsOktnzqENJvEaf0uy5YtTWo18QRloieVR-5Pawe5cnwlZOnw9QdzqFITbz6a_RiCos1FNAeACQWLdxt8I97bVP-2q4oNotZHL6-g2WOs5uaL9fIID160?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-137',
@@ -4398,7 +4874,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-137',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4_YR9wLwEmaITT8dTyw73lornABQPEBX5ZMHQtIzOAzWFLqK7qOWnAwjJUiRqh9UUW2y8sVXoVbazM8thZ6676mEC_bS8a7dHMhLXwmXlc5TMMXsgqBtQX6sKKCvSV3bmHAhdEH1bXbzrqXxIcNSrQfl-NVjEXoN7cd05uNirFsUOYsJYam5FMQpB98UeQpx5vOJ5MT_q5Vp8Bbsjwy6kec8vIgEBrhXAT7LJX-Ed2L8XUhovtfPOeet0?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-138',
@@ -4408,7 +4885,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-138',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7ERFjDfifs55TGrd24ebqM9OOl45ghrunICpBThX3PQxfS8CA4k-SH4XeY7ogwFPUNUsqDUEOob3o0voS4gZbyo5w5vLvVzeFatHmfFomgVN4NesO5P2pjiOp_O75hRc79Kvv-ZSDBmYYnCEfwtkjc22NXZvxPB84TS5M28g3Mfda4Jh4NJPSO_byadyqoM-9-UiwEk0FVwxDSQGNb6WtMfXjkT8EqeMobmidjVkxQBC4u4d1Ptc4j-kU?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-139',
@@ -4418,7 +4896,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-139',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5sQtRXwzdUBXbQgXhZSsBfSNhqsN5z4GLfVONxIhDZwoYgsHzWBGVdC_FhYX_K1scYB23Ol0mS8X_uPib8CLRXW_6nNK760zrluP_mAlFJOMkECQBswMPNoigok4Ra51wxthFpvv71copmeGo_z97GFNh6m7tT34unvT0yLLEBs1c1BGuUrYQ4Qru-xPYdFbZKn3dlvteYSwnRNhh35HU0eexyh0jchsm-YuKHZj36T1u9COueszi4K14?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-140',
@@ -4428,7 +4907,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-140',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X74iE5pbvC8FFEpRnQfCN2JHFeKXRNa2UMQXXKBRf0SpSfZvWeSzgwKIc841mYd-AGrOiDqG0SrXwr21kTGCveA36itoGwdq4BlPy0lGDfnQmULrf4CAHERW9jNUzhe8RQkw_eVtRfn_CKTKyazVzYVCuQgxdH7QgsqcOSvdI1yRS2zq3jM5q-QYBOGr-EaQnhgf1HkNRQ0KBZsilWVvJurM_8i5p42H23Fwz1URpPdCVTm8-p3LI3Y_Iw?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-141',
@@ -4438,7 +4918,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-141',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7LuRrS8c0DPe7cp00U5aouvzYVESz7bo9aMrRnhJu3AOfpO9zi7vy6xW6iTg7NsNSOtO-AjSdvyA5Hl92nvbdqr6vDH9tA0i7Tcj2--tdjOYxhCn8UdopT9TyDYYhPLjT8tWKyS4KfXuf-AHDTCNfoO7Z5TqSA4fOkmtQfH97yqTSl2v_WdkU4r6Z_0w_KInmRig3q0rnUVWHVSFLYasN6ue0G9ES5ZKjwvZXmVZcRR1oddxoyAjE5KYI?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-142',
@@ -4448,7 +4929,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-142',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6TmpVgVfRvXaRfSFdr8BS_0BAUsxh3xU4juQzuZ22qQ3BqHhTxSckhh1JA3x0TNXR9x4-CO2cTlkjUxR1mcaKGLHYu543HMSWmRIAZmiSmfLCO_J3Omgfz1ART0rb0dcVhJ3X5KnVynpcunrnR_TXj4rPbaF2eQIT3LRUiT-WscOKJSV0iP4ZmRHwX85Z-giIOoa_EdPqtfdlbgZH1uoCeqBLVQkm6kEhOvLihwpOGAvTAKeoM-Zs7LZg?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-143',
@@ -4458,7 +4940,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-143',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6MFcnJdReXvt8DcUjLYoClwHA1eLIs-52g5jkgE9End-_GhDTe1M6Tey1-Ens94x3FLU7t96IJDaL39NETkorMct8bZIGRvec42RG1D5lr_DHdr2WPzjXi66y6FG-lFe5ARx920RnWubtkv-ubM9prXoBOodrM9CnMsiiNX-VWubgQLyOxnFIrkjWHmTrM27lhelunrCHvNx5ni47QHjTERu9cqMI4YIpImG9331v9Vu5VaslkktLOXTg?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-144',
@@ -4468,7 +4951,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-144',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5w_f3Lz6YyuiD1sYPvNF2ZCxLqNYm2iQ7orhUJ6hAjKxE9jElufLEkeFNluxNLSZEVqeVxglODhb8j4tHFlUHkVSSu_s2WzRNQCFOGF_Kr61N0fwKyWXsg-nE2zgMNqqQ1jFWMF9hI3CAYcUyC3FYUqj7kpfh9bG3-OjnXsTN2zdpJa43A5cGmc2GXm9Zj9nAURZpMwYP9yTXtL0afLpVMBQG9QQ0jL4F4dY7WIY6P2kFA37jHUDE3xU8?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-145',
@@ -4478,7 +4962,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-145',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5f4NmbFPPbBYbYFNYhmNcoxPF6qFxOtu2v_bKSrz3Z-dHY2S1vvj1O7B23hoI7aeaoDcwFpkX_Q8qt22AtLmjl1SdVNPC5MQ7pLZ_mSzQf979OFTYbgQKAso6iTZHTc97_SuHhFydR_dgcQaeErapK-YeIoGkZnbE-HXCe-Q7xVgxWJ87lfzpboMKzzH2YbEcwF5MBVX71YxvXVPF5WiDz52n8embuZ_Mayfe5KkjxgMPLSTKEd1Jh7Yc?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-146',
@@ -4488,7 +4973,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-146',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4yCPpmR8PgZadzZxzmFjfafKtAdI1wwemqFtbi8Q2J7gI17k9CPC4rpZ8It29fqR9zfnMAqIxW9JPdNJP5wiSUlMGROrzt_TUF5OvRxPXhF7G3-WD0g6vrsww4RJ3KmYFNfxvigyjpUSNWUGN92ZXFewOVODZxSzlMqXoEn7xUaJ9bFO9UoghoI5cVySlqWKk16wKtvp6DIkRbqJwSeKAB7Xq8Ki9-WjMiGrU0vf5Jaby3myAXZ3Rml70?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-147',
@@ -4498,7 +4984,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-147',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7__rwYeeh6RA2XYQLGmdgSWMAXpgnjjWZ7M5G5eTNFFgt1aqVHOgIElgpHlj4GFYyNqTC6pOziQTrZ8UB5Jhdwba-WKNHyZsbaQ0ffR6maVpOeckBjkJKSiBgyUkmBDMc77T-v16JnFysjl_rJ23i2LQF88MSKHqillZ_3Ti0UuFarvgCMtkJSBwohr_eb3Pr8cG8At_nPstnpt78opT61aeVWsj4a0xzpU3SOjXQ02ELzQsX0tqOIBBw?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X50M7pu8-rrQyjDnLcTlFs05J1yBgPsOkjQ2EcAQlG7ddU3Y4b-fULX6Lcszv1ZMi_OaI-eIpRuc3mJiynt7aLgXir5XqscJHNnRz2rz5-Mqmn3taelIMc2g4qfehN9F0J8zR5-BJMzuvYdnEZpT9cBITIHVPsNZjJkIuFzJCmw9NkqvYzwognpErj0JCouqTAeB5zHgIaFJGw8UwSHAQ-kf4CSiqKsMbc978-lKwGpm3QnwCi26MhCCyM?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-148',
@@ -4508,7 +4995,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-148',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4xmX-0QMxz9DigjBBmuDuGjdOLJXTXDRjwNhnUZPiNY_a9Pi95tIIkmoH0Q_SaypbcWFtg8k_K9pcwZVlXwhbm68soccbzDJjfWcAR4TFgWK--3EcjH4Nz9n7tuZM3pkfIj5YzPw8P4t4KCBozmDwoEit3jIL1jnoKV9kcqDElWS6VTFNEVCImKJ3ZQdy4A_A2I0h6IVb77vuvc6E6l-Xu_Yzr62M_8BwJFfwMzFfVfon2dNXr5pHqywo?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-149',
@@ -4518,7 +5006,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-149',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4jves9im0QcgmNXcXwUqgbptumyMKKIFvT-4P4Ryly2hVQCVubqD8CeWSze3QzEs3oBd2V4wtdVzuX6_t5kQMxUyW173THfrVT3V9APD18FqoQIM3GNTzbpQlOVv_IFUZP5HQH5Q2OONe9Aw8INSU9spjgrL5-QLVaDunNiAOahZd32bOVD7IGeiWxMVn3HSt0dQ6iieRaDVoE33tXRt5DtKMpetIKrdWCjArv5ESX9ZMe4WOwj0YBysg?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-150',
@@ -4528,7 +5017,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-150',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7VvYZTnF0uHueqxWlhnZ0Tbi9zQQCSFpDP7F07FEV35g82yLvQIkChvD2z7WYbvAK5XAx-MfnO3ajapHhBLFcP82Fm8qOT0yrBkEn7fazzfJeNkgTh8K7R8TwKQJatqjl3d2z5wrVvh1urtXsvHc6kQP7iEerUvShzf5ubg3vctHfRnGvU_9yDne8BXYhOqUbLPrV87vWb05Genvkktkg1H2IJiFV_SRyElM_hMjH26x_Um_s2WB5m_UY?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4bAaNf6RnNZeR3kvfmP1uE3rWs5G-mt6NJuzb7tEsI0B350Ld-fiDDWt0s-u3BmjPpSItVEM9UH2PzzSanzduLSIPuR_Vm6UJz2YST1LRNcRYWHzhsa3FbJToF6IiiNudspR81m1PH5PYREksijAViKn2m5ZhUri8nHsb6DRbE0yC5kRfOKqkITvFqCpGiBn6ueXla_low-SDQ28YyQHSECAp3siRKzRwSfpg_XoFy4e7-kkmKZaMeDrc?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-151',
@@ -4538,7 +5028,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-151',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4-Awe4BuQnAHlIVVZqX7-2STV3XygHeeUc_h8r9LRttN5Ih4UHoClZzgeQRkSgkhqe6VuDUfJJ3_2iYBLucDpWBrOaDuS_Q_FJHYQNkJXr3M9fc1z7OQNds_danU-egSy1N2qvu1xpSWQ-ZrWArXdYSCCqGc-O7FEGlLN_cVotPUJ_MmyDzK1fGyeED1o3FUkMwxD9M3MNs5W0k1bvOG_f1P-LtgTJuXmQ40enpi66wx_yXThnKFkz_Gk?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-152',
@@ -4548,7 +5039,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-152',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5eJIY4kuxdryyzb20Bd5MJgvAMfGOrG8x2t-NGAmlKj1eyh0fLPlIZ66D0OAjmY6heiAWEZdESFYaeH2YQbHmgirhRcCjJoJfz96xUqbQtzEPU3L9RMjoUmh9PVCXpiyJJrv2cvXKWvp-AGIz3PJ9mAnwq3QagEp4cSg_qiAAw5Cd7CqRSwoTzvqolWvxbqYhKrwJ80ZOb4qsiEhOiRUj0brqpsqcJ7xX3TZshud2v2L7lD1zxSMUwYEA?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-153',
@@ -4558,7 +5050,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-153',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6kPF_FSI8gcG3_0tlayoes0_b8vz61GmbVTUfweKfegixrbliobVe8tXu4LArTLnbO6CgW6l-LScKKrG1Dwd34Qmz6UYXq0jzi1ojiWTFFSNNTrVuLC5GpadmL6lse1fVGhN39WSzRBgaxHsw6UVjHIUmiuh5dX7Zajaea8JZEtGedZbq6yQm2EwiWz709b1c2am0DbvJHufe1bo10jVmb5wqg7oQiCqULBr6ogTGHjpx5Jlm8OxCyf78?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-154',
@@ -4568,7 +5061,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-154',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7bxEoBVaEaYVAr0TwOjsmWRi_V4XD93wt9B5qRZ6ZnO0qu9Pn_ir5f-8rbSdyCRdUautnyribEHadAAaNakDBHChK9-TkmooKGEWHzyAvTag-8gehA6O7hIc2fElcCSojdVzDBDbCtwQB-_8OQGBVYxRstDxLoVYsvP0DmM0hXiVrMuxkQtxFpX9gueqXUgfd9wEZ1y3OwXobEJo2eRe7sZX1B5YDiXT8J-NZ-vQ5cm71TeGm6vMIXdkQ?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-155',
@@ -4578,7 +5072,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-155',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6AwcTGcMEdQZcQ40Zfo_v2JPpsHouyVHT6fKtHb1BU4jKG0MKnKA2u1fWzZ6Ds_K0hKh0Yx6HlmnjGvAehsgPxQyydSOR9haAIRkCTazD8gYYXh7c2hL-VFabroaPXD6nlWw_GId_bb7X2NTKD6RSwlg90_B4_lryhskVAaCUHupnVhOrkSeCI8XlspXiv2HQUMz3ugqStaN-YPaFV1f42Faga79RZwxaLr7uVj5PYYgehKOP9OAzTC_s?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-156',
@@ -4588,7 +5083,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-156',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6sHTlCHvGyx0zlKJhTFxB_RP3UbOakEu1sKENw7gBlLKL3nP1Bjb8pDRkjWVPEg7SLBER_4g8DzkRzwMv5uZ-XLSadz5O5RbC2NqNYEbyssYnnins-_Eyz9p3vDuaayqLW3zkMHB1gwbnsUENgY8Ap0fQEN71k63PSzVWYRirZT4FDcKNs67UGyuXXC6ESWYxa9_0k1RW04SU8GsW5oMth4zXGXhfVTtaPyGcFT9HSRY1mH_7kcrsxzj4?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-157',
@@ -4598,7 +5094,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-157',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6Zl82lTBt86PFNuOZUzp43b_RRwgndsHvUmpVgc9Trv4JzyP37e9G-QoiMXXQXw4hFBhv8W-m33qcXZxbQSOGAuRpNYaK9AEPkQujZTs9xx4k1LW6hbwfRegbmfk1-T88inDtoGyvnqnkS-GYVr9rL6uqTBiFjh5kDM5CNAxpIzf5Zz_oXUQ2fEProUwEohxscb0kqlCgsIV7XgS3HNwYt8jMSSMzVSnjHQ4gFbhJDFkqhGz3raXhHZng?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-158',
@@ -4608,7 +5105,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-158',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6odjdGCcCB0PvW6BOjRuX_puVc04j8PvHuUjf_lSp7FHhfh0ImVqde0OIPwEBPSAwDei9XbX1azMlk1Rs_V7fDSInmwb4PiA1Vu5btCo-6HacuGgksMZZ9ku7qKAUQauhL39wNyjiSkxXqMSsvATOLNJTN-hAMy5jxtr2jdxy_90dJ25SiBIFh0iNE7cDtQznO0Lll_bO9uftN0-vXMLsST9_6UphPwnx_wOjrUotk1DV3Db6AgcD4Js0?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-159',
@@ -4618,7 +5116,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-159',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7b7RezxK76qx2k6rWJaI48syAN-CZjIm5QBlGQfQRlOxKOFAUqBGrg-ajLuX9yAw78mzKa8hDrkjvribnc4oqfhhzbg1txJQRoFFHldCDviScnM8NL05DC0Y4ijm-n5Zd90Qk3rg1baXKetlNAHCPYtz83hVQ3kc5l7bsrMmb7kByQIE1LBs8W6zdTU25CvIfuXMMAD3XvZIRRufOpIMD0H40JocmrAruZg3_ZLDygMJaiUzPmxJVb_Z0?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-161',
@@ -4628,7 +5127,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-161',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4nuxIyrkOpb1qcOXqQLsIAoE3BmcHbZSy_RN9qVdvFwyHPBO-mCt9oeUUPCx_L0m-NyM0VJm7A0JWl-a0rAxOiZkijfaSJNyZp5Diewhpur3QK4wVBvmJsF6wDxV1yFV--SpGEVWiik3_FNMDfd-_dPy0XtxXwKZ4sRS2HwPT7BI9NtfBiOlEGVkw0u6fj2id0_fcrHCn922iyteWElaPZTjY-9YAa3F1vN5NDyRdgbfTZtFCAncwhnuk?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5BYc0B3aKJ-O7I8Amxw7SScw67vDEhIxLeIe6yJCcbN_3XKZSPsf86x2FcJgZjkPUdWTRp0BCY_bKwfUvDMojPf1nzn9Xqgqy4Wi4kqI4-zYwilHDpeuYssRtKvSzvKEtautfDseruEGNXcSedJWg7ItZPM_ey-n4XAg4xPolzKUoKlfVDnLZuRlYLa_8x6ftBkUZW15FfwBgMj5BoTcSDK2txbWumQ1bPoc3Nf3yYRDfaTg8OzMiX5ZQ?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4M2qnHz1ZMuI9nejXL_lVwFcF93JUyvavSs91cHeD85qDOS7IZWyKmdM-5ItLTYsg2ZfRyYS3321_kUAhSh4Kh6gvSeep33YFdpStIk0KQivbscB2dVz_-bkkO866R9sTh1v73AqH_cnGOaUk0T9pOjiSed4uQXtsuOPRD9-Ya9PMFBW_R155f8ucCVHZiLeb1hLgBUANL_X2MFGL7X0Q2pN7xtPNWw6msLJh7LhgUVNkH9ZWgezzzmEA?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-162',
@@ -4638,7 +5138,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-162',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7ycyXc9SIqluE6PMB6JMbo5ncNcYqoQarzkEUHMo0kBfdl5CP7oJ-k2QNbMvfhlyodvKoP3bMMtOJzsT5E4vs-0XEAyizk27pToLlWMOoDCqKBXBwpSGiO68gj6XV2pZF8SNOoupnC8ZWa-9sODOwKGvx_Ev2o8z305DWkqYHXAUG5Gnd-8OZG4HJHDic0bjP9qd44scUSYtdsH9KbyRUZ5tKRQvRfZHNfhnHujjN9pdRmHfSdd9ZWaT8?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-163',
@@ -4648,7 +5149,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-163',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X69feO5bqkBrnFwSufGsdr4mdmq3RY1vELFhF0ETpC00JrYbYLJ5yDXEbDpDc_8-BfCgHAthj1ZFbYvWPx8_EFlWuDBPr-0KIVX8zUA2m-mKpgBvIDbQKcEtR5mFFmdd-xZC6wkwzV1gc1_lgv5ZkGPalPQWGswYWAZlVmO_OWQjZohIU18nBMKjWeKfuohl3b5oyoOGa0cmzm7CGAN7NtqHyFJB7WT1r9iKm2poeg6otNoQYaLfkZ2jmQ?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7Vr8MPbs8h7TegGQg9S-xTZoisayvuSGN9Z1Ue4q-KbCefeHgOXarFGuOR6QPNCMgVa_acpEuAibFKkXqDYVP0FO9q21m_pIs3-c8ZwNWjeZBl-5DoFeyrcp2DgksjMJyrU9SoHI9GD31dT6L6D1jIKdHXFCKxKuZddJW8SKqMBQkSqwlC9AhX8SweR6gtgJWOiye3sHogKI3Ya9yC0RAqjdrQpg1z8b1tHFDKFz-NRAqCgCDjUylDxlg?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7ZERMrHqU5BDrE7CuN7O-hUknRj5klAm2XMKNR3_QUCPKcH9MnIAc_ItVqdUscSde19KEpvGK5570_vQFKwSW-Y_jyCaIFo33MlyiOhjuEDYuLGLxN_aIMpImSwt_4u3uJ9F-rQe6ij7Y-Ih49ogZgdTx9gVbegRVvIrEr3NnHC8Bz6MbiKfVQruschL3_N9YUpD6dSCWFXaEoE73xOuZ0xEBxq0SHA7MvGw9xM_eMfOxBmqJjcc5kHu8?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-164',
@@ -4658,7 +5160,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-164',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7iYPUBwYGbjl5wwaZ68Z_nr4vgk7BS5l_3t8ycEtk3qvT4f6RHQwSRv18qGfjG7nHBvTT81O4Oac8Bno-ViCPkj4dq03w1-rk4EI1xkdBQa6vSZmoEfGrK9zIgeNoUHWAEWtUeQKUAOSB5mZnxVuQnOjjtCuzjA-luwrkpZ6ETdATZZisgXwHFlONYrMarnWBuzqgoEvWo3EYb_u7eMsNcCZbDJxH9yxUF0wPVkummUoWfMr5V6HMExN0?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6l7vyfqT_ypHsMfb-nUqLkyAlGVqw4VVghBH7K1r2rCGTIs394zZ5e7Sm7DNoKQPQ_RanVh8b70HHBmYc2Qe5XmPCP3Cf_-W2PZtJmDBV_8At49jy3YR9ja2FtApmEyLMWBsyYZG9J4jingNgziJ4UJYSmYs_bCtZXibihDQyCG-lSoR2Y4l3cvMbVbe5dWSoEl_KvLeVLVEsxbcsZ-cUgdjZV8mEAmHziOR5HBBcbVak2BWMdY6VbCmQ?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4ea1fpoJJog7dTHEz42mGs8OMKR41o9dwVBolr2Ko6n5spiq--Qpf8zFe5BSnETL0d8Fjyz7dBBTADvxkIeEDvocolA-R4PYwPvH0oiGwn29WPyLJ5zSp7B4EH0b1TUn3SwQZcMF4llb0miLfALf1ZYzaHslfTIWbwOAvchnHmTXIjdNObA9Y7xiT4E41BPcRp0hFg2B94kiJ3_8b2jtexf6MIt5H3Hh_7CHxII-X73_liIw2Cb8jdWWM?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-165',
@@ -4667,7 +5170,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'date: description: source: location:',
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-165',
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-166',
@@ -4677,7 +5181,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-166',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4gBIxZGvI9kmtAs3I1SLXCFmR8TQl--rZz5bYnrn0CO-4Xtz3aigNai_zHISKel7cGDhYUZ3X7baoNNmWXMJmPJWEj9R9uPX-8-NmrKH9SfPJU7TpT9iAC_cWCkEnb1w3pRVycaimbTVrbxY7dTRyXl9AEL5dN4r0YNtNkD8b6WKeJhgYDVqYfd95DVkxEIRAtR9su-IiAgsgfhgyLh1Rivu0iwr_FMYoSO7Cd2UJ7mFby3qGirY0_buY?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5RzgHAJ1NZ6IMXWEsH1GuC0oTtuoKxDAlW9T5Tgy8j0zRI71OVWMr4hjjIVmbGmV2DjmjrIo4fBH-aoHkKP0OKSzi7lr4e18n7kSbFC4Wmd3VQ1ZlW7fm4O6x8S3HEcGhTVUTRWtBd_riBtCofANi9AVcDGb5FRM7bmkPxO76iHGPhJwBdgBMf6v5bsD4OXBDp6FMvyxtak9kc6vjNHRtmiFrg8HOu8v5087bXjhJ62_Eeuef_0k4-4Ss?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-167',
@@ -4687,7 +5192,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-167',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6Df7-nu5z3XMLrd8VwbKL3cmlbV6uCeGMwqWraLPSyofbd-PiWBuNSRTVUzWmQc9C2VbuPctMoRvNSbxvSTfe7fUb0vrmFCENjZ59I7dBPxQmuhg5OC049NE6rc2HG_FujpucvtKtzIPvEuhRCSg4e0eKMbDOs3ToPGs_Ur2LQbEBhpJga1gLRp_H94OyXrGt2yTXpFwiGX6ZN-7pTxu0P3NdDZk9rbv0XK_FR66UkP4BETZwSHVwx2KQ?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-168',
@@ -4697,7 +5203,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-168',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5tra4hNgS2kLefxcQwgAbjJcRyA8RpmRSEDhC2crT7mxmPCJKYFA6jayiY4_RgdvTS9F0YR5DpTEBJ2jL9vcti6SYZYrrYN06zK1p0a26X4Tj95z2pZ9wpJpq4Uv25gmyudCGa5ElsJ0gQ4q8eM6pWE0OpaNTb1JmaH5ObnudHFDAksRddH7a4SX9Be2LUDj6uwZ54t4s0v7pSKDIAQ01ameUab35okPQu6_eTAt1wpF_aBcVLhi6GeCU?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-169',
@@ -4707,7 +5214,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-169',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X46tlKt3IqILcTozKTsbk-BOO3kbADP7jRbofZbEL6XOww4Dn2tT0MF3jpB9XwanaLkUcWt4HplQFldIN81zJMucHVj5Oa5TtNgR1c5CCZDAUHA6fQcJ2rZACP17tpzO9TVSsosECtTmpDo4oBL_WOWmvjbVoCWpUbvCaBFkaGmATFbOJoOqFKiGlPX8H7O13SP2NXCLug0s9AOVTEqP1sw3kAmaWaIzpKTKTbN7c2CztoVym4MYnLEPOg?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-170',
@@ -4717,7 +5225,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-170',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5jCdW7_-QIoQqLwYn9XI1kxEQD-1FZq7xmmim9e--7NticJeA0ZbGOAeKMJhR4XvfsX_rsljrVRnZx9ywT76yBYrQ6C90LT29SPL9L7SV4CfPVtKlK2-xFnu9MZzrKNmCazck0sG_v9oN3pF5cBl6TZ3a1yYh9MK006XTpF7x_3E_HcYdJdVPVY_5Akt3GLLcqgGWBBPka-K9BDMt7y0IlZNHk4BiA0BTgsNCTBRMncYESg2ZcaMDqodU?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-171',
@@ -4727,7 +5236,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-171',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7ODVGMNRihxyR2iciidpweAictcRmCtxE7XMWCK5qyy1bPPBsxiIe0hD8jr20BkjfJmnCOXK4cmMtb3nM3lTROxxl9iWS-JcAd8EL0jqETVT-RmTfOoTfKPnVjQl7nqo2IZVGSsDYBpZoBUfnxg1FamnmaCobjeXikHBid2L7DMU4yOOjHwv98wNpZuWxeeb2C15rwSOuK0Xyo2iNlfERPa7a15X2R7BxsJR7RbhnfKnJPFh3WoE7DLAc?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-172',
@@ -4737,7 +5247,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-172',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4Z4bR8SinQfX1KmbETvUwOd1V3LjSde8bRDSLG4rGgyUcy162XDKj4NGdhfII7HhLcfyHFh-9OCHE4xPqeUhvKqhRrGrDBPMelCEpIXSXLRdByiG3AJUVZKzlmvhVXYEtvHrpX8lzUDzO1MvUe7WZu4_6RhQ1FUEt1LC4st2L-nY--jLHRO1wfwgtFgqsMlheXMIKhPSGYVUNYYqHnBT9aEEIv24TSD4A5QazyRLDdslm7JWBu-iEKsp8?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-173',
@@ -4747,7 +5258,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-173',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7Y5S9EUDxMFPjAh70yZJoOQbFKC_ypd5gdmWJ-UYVKQLXggf4Zgds5FLyYaOghQ_Hd5cSyVtw3XnD8imOGEosyqJ5MbORTKMGTO_k9fQ0rN7k_RRLWnYOMaPU05PW5iTj3osDhBbLEFY3ApWY3D_pwcfA9kSrk26t9VfDZ2Be_ZgItQ4aHfdmZ-LHcUjlvr0wK7Fnb4L48zXUXcA31IwtaZJEO3YPei-WSvYtCG2hVfpdWUAnymswAHkI?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-174',
@@ -4757,7 +5269,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-174',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4-UgZ92KfoU7lDXhT4T5v4iK7bHswS7quytY5-dM8Pd-pLD20BZZyT-SQ847-oqsGi-g00qT5SSrNi0k0b-vLjCNcTtUntdDnsVk-vyX7BPY1ZTD67MdSY4GoXFA3zsl5PL3a4TfrYo-oYv-zCAr9yhNNeGXF6l66KG3vkM1avqwdWpyFy-WoUGYHiHxpEIlLRjCHSyYiUwveW4Ov9u8GeuskWs6KPh6pUOhpO6kWb7ykNhQVq-Q9SDRU?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-175',
@@ -4767,7 +5280,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-175',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6tUskB53Ew0olxmgmlQgXDtDj9hBgDxkj0GhXmidqd-LFoo2MrvRLl0J5OUWU5-iJLc3jHe5EkDDm-7YaL8gE28lm4kdyQqeiwo76o18ZaQ6kT9vX61z4zCujB6W6GreuAmxakc7_cXgB_xrvmsgWm2yZXyPr1k0VgPrID0N6OXSNjCduP3EpIQsdJ_3OqPKQEn-LcMU6_7szwgV2fDd3MsHkJjvlSPvQ5-T7UHBpEJXQsBajF2qqBOD4?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-176',
@@ -4777,7 +5291,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-176',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6Eo6rY0ywDM9RVxoK-SrUKPzr4sKXBhmNzHpXOU22Gdw6wPsNzsfxAnV-Swyp8_Gpfvw7YNXY0mWXaQOmF5533tl1HX59xqq86rZnwwcNbG3weL0qblDmkuLgBLWy11ZcpOH7rhympmAYICUhyDYYW5vzdpDivOnd5yWEMW9pOMN2VBOm_cslEDZq51I34xaHtfSn4kPb3PL_DemgPtcTfNPY_F07m2RO01t_0xmOIaM572rt3i0ArnwY?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-177',
@@ -4787,7 +5302,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-177',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X48EcRhPuHDkQ6XQ4TfYR-Gwz4lj7_1u4MAL6WUtAjKHEdDPN1BPZbOrw7rBPrTwUXpBG9R-RVqKSe_6ak_nIdb7f_xAZVMt3CBXloE7AlsdyQYAO_ukppl3cVaIwvoxVz9-fJTgSArOsNpy8kq0J1r8jbqD0sdhJlBQZVLhgirxDrCLoybPSrShM8ZWe7AqvxaSVAd-4ZbjYC37Yxcmk6-JuoDE6tPEoFdceTRrage3-CAPSgjWeFI32A?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-178',
@@ -4797,7 +5313,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-178',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4Zi5biONIbaSZ89T-iFNBI-b-Ko69geyI9o_7M4d16e-k92ttiqarTWO5T6NBdyoN1tGPg67gtJo-TBwBxGUP6fSa4Nmf8zFWg4oVgnnhtbEgfrSVHJ0f_QSNfIwuA0GwvQPd9FF6VB614nL5bjtEORcn0iqE-UTle54yd7zDQ59YB0W0itMvnKTf29q7PZQe73fTEdZtvl4vc6zYJp651JSiaD8VkLbPRaqs_qP0CJs9jLdnwGPDOxic?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-179',
@@ -4807,7 +5324,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-179',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4ypaUIYcBZdmSRS97LvBqfg7E6SIKoGDZ52iV8nGi-9YlIADL6n7UKnJ8OvgD1zLU6RIFnfDiQlAnDqNz09Cn8JoGo7zXfxROdDzcHerEAmzbWlLlLbB23GPPsoXht_Jqob_w5Ig-nBA5tAjc6mousx-o9hnegive3nNSdwH84CVhMgLCr6i1pMxjmsRArsYWr7DBnwB3DnyWh4EKwgr8LrLn8VjYzHzP5kyPWCWemn5rR6dXzLlaEgWA?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-180',
@@ -4817,7 +5335,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-180',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6tEd3zYVRWMj3NLcQWF6ZqWETuz15xnIywVp67HPLEiNLRDkN5I9LRRs4h6SjAjoDGI1_KLEgodoJbHY8padZ0U6niP-iRZpui5wvp1GZv9PelTKebOMXoPhVJxG55Tv_M4oHmqTWVMfEKDwhaVKM6lRa6JBOe3625zMG-QRuJW1ZSCU0whYfijEReYrIJhUEI_enhrGqes-5yxwJpiHE-eGO7cjRz3TT26zMOBQy-hxxEW1mlHi42170?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-181',
@@ -4827,7 +5346,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-181',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7wsSaZYurRHqzR1dRnGZIwPKLtOfmJGNbrl4kWXI84zLJCeioUA4sPokX56M9iMhcWbm_A0nF9B9Vm6BgFS0SeGd28Hmke6TohohzzXpNVKXet6xBZVrwB8yCR_dNOF0qMNCh-xgCNr5o5MsmaF2bJ1sUveMUX0vvNooAm9HLLCSJIpzNB7ZtdsPIruv7JOtGP3bnpvHoyNDE8X4ax3N5Dx4BlkNVMYOT7nptfBTzobq2amW51RpbzrWo?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-182',
@@ -4837,7 +5357,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-182',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5llnvXD5wZqqz8xH9qjEVSUx0l_iGc7-Pw7j25m6S9hWQIUVbvgogFB8EzBuRUP0G-n65sxYQFECqPWpZ708P48Z44LOoq8Lmppk278Wd5Ohjsi4Z_FLg56jmfKECh4G2vinybABRpaCvS3s5Yct9z2EODGGswnDRnhUzOJBORx1eopQtJQv_rzVHTxzA3fSBl8EpQdOeMQRE4dA2Pj1qBVV2yucv-0acZPaUGKmceE0A70UxlJwqOYTo?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-183',
@@ -4847,7 +5368,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-183',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7lr58ghDyvDYl-_SjsfpucgNIw9T9sMfSwSTNr_GWhXN7SYp5J4Vx5Xz2adeyPdkoq6cN6mSOOe320xzItITBvWBrrvYjjAFY-ngFVYTKdRAnapktX1yvK_Q0mXa_EyIc8qop4KfeXPEHPMLN2Zh7tqSZCUXfcZ7qlDTnetr3Az2MrhVdnzY-e5D1LjjLHSGC8hu8_qZvaO8Mx5vnpDL8wF9HPqD2ldmpH9KKtCfoM_BCxRBxdY67xkm4?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-184',
@@ -4857,7 +5379,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-184',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5Xaw-_5zRquNz0y6YZREuM9Xjh8NJeYHCzcDH-sr3xBzbmNjtj27GnM75TH2i2yp9ruAG0abNNchMXi8RWCj3UiiuQ12R8bwvYi_6YvbKT4fneZAelly7uty69LBw7hdRmmDdmxxZqJxUBnea5TPr1NZ1muP9k5ATc9qrPyKqRLy_zL8euZ66KtfIcqRNuLHE5Sht3Xz8Ob74VEDznSrZq6cZWkzBJKQ9ErU9Z00lYhtWHuxwhljj8wqw?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-185',
@@ -4867,7 +5390,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-185',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6jiXTJ1kA6SrNYNiCEygXpj7bAm7RPAJL5nXrSEpbtCQhNU0e04013UOQdEH-fmCKrsfCpfZThMhnp8bSJWxvkN4H8yoUyWKZWDxciZvAoPcFFA8lMKs1xOvr7BThCV1ASbr8pR6yWV_JHTI4IK5I-53bRqt7bo-yAz0QB3W-QybQeLN0_rpTqF3sJtF4Na88-PvlmhEUsXmk6qMAb1L-_5F26Xy6971G2cLHRZhwdJEdSLdJnk29aL-8?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-186',
@@ -4877,7 +5401,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-186',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6DRkR_8hRTdxY-I8q3CMPbzzrjCKHkg5pz4rU2B9zUDFwKFWyhME5sRZhD_pEEcGTxyyks7CaMFRgDb6KyMlcCk7_b_IS0wxx8gZQmlPXiJb-GYp5Uqlx08rA56n5WT5mQAvVneI7j4AGBz8wWLvVBcNmkmCQIiTpV1vfmh20SeATS1JkgM_9vb-ZcpVoUX2H08Ny4lGetdL92u0a6C7q8TPIG00RBoJe8FA9Zu-HaRKwCWarM8KEazIQ?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-187',
@@ -4887,7 +5412,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-187',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5lI6_yF1r_pKQuJ7weOF9rsbpeHC5kSZkVCFV8Okg571V0OGhmbDipMWJUECRdcT50tEsgmtzJouvBvab2qmwuu6bKI3RVa86pkrCN6JdRaKFhVBuSoWJv4mO5Bwyqw9wj0RF3Y0Yo0mGzV6hSe5MSTyGgj1JGpZYBtR9ZEb1EV9ahjNn2NsyDGCZkhUDO3VAt6XA1zcK_pxujXrZbTn4eC8MTLmXJhLrP3hdwKrnljPXWJHQy3a6RZX4?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-188',
@@ -4897,7 +5423,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-188',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5RXMCCF7uK_fbvVD0_YEXlqT5N4VUtp27OSC0UsZw_s-TwUghhtbHvz01mQrCrAfpq1BaMa_I3fFHjsGZxNZpQlpLZXiXxwKB12AMB2y5Q3lND0tvrZ_IOXZPw2EsWtsv00NoAx5Fz9mrCXFa-k5iQTYwg2LSsdAukv0pHEpWQxgl5DOHdfLubpA3OCTdyiaay_jPBySh0bg9qUHZhhbhSL1t6YJZPAiR2WSRE5SpTx9aGxWE5kRQe1oE?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-189',
@@ -4907,7 +5434,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-189',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7cjrnx9qGblKgP45JYsA9zmCKKO-KgvHub0hF9pHmaCLzv6QySxZP5TE6glHr0tn5A61JXk5bCk9SW7zsToEkl87qhZArlMrTC2P0TM5M4fk9sSfrR-vU5-X5FNGkQNxX05ch0SJ51Dx6m0t4dhRzaezraDL_4cmPgDLttnRHF3QGGEwAKUlY0JBzxUfRXRjP4FpAKrDaJ0MXMq3BJPY80nFETHP_ECuVaNr0Mpodh-2qhTYWNKuRAd7Y?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7zdrijokNMPcRqjytirvfx33GIhbMm-PUcz4Bjrwb6u64j-cULuLCNKITynXw75GPqaRpJNtaE-WrCkpmj_JnS9BDxPW7YmUmtoiPCbdff5AieIClfVB-GNZyFh7CW3EJk6N38sFTKGtrMORAAgSPAIDWPMui4zlrCK9p3RVLFnsKNmrKTaOhZPi8LoTAmxhATgyTidHmYZD3GP957OpeSREOoWsDRgkqKxLz725JzVsHI7a475WXrBlA?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-190',
@@ -4917,7 +5445,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-190',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6oDfUlBujlgmk2SGulx2ES2J2ElgFFzmkDd5RPELfjXLxukMi0k4Mb394BArenYcE80hG9Be5IOs7RT2H5viiQDkzpkZLphUMRBuuXccjUKPNLZj_HztZUQfv7HZ2x3gFVcLS5IgqEkoMQPY8agAIiYrPctGp94c47NMbEqcjggNn5MNqFzGQILIr7UwY9JL9R8p8BQW9ugvW30dG_JVLuUIi4YEqLbDZphl2T5TsmM3w4x1ljvma7DMM?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-191',
@@ -4927,7 +5456,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-191',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6wTJ_IFBqb81dqrExqAJR7R3k-qMeJKaQYfT8rNt4XF0zyyTccPPDmZXqPUqGpxOhZT6Prx5_quHW-6n_nqLZ632PcIzLg_pwHots7WIQh3mtn5U6kJkZCpS3Umcrl_uuAqfY16fd5UHOcKIaOqJLUeVyq90DoJEeVCl7Yn-0FCwDOgOq8qMmGgIarfUZXIvBFixlezxy6yOLq13Jr6gmK9DGfgw5GF4gvp_vvbK0kJ8QvYH8ZNj35wnk?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-192',
@@ -4937,7 +5467,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-192',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6oP9UOaP1B0P4xZ47YXI3fcS90KnXWsh7Fc0PLg8gpPMtfx2J-CDW_NYBB5zdvVEABb2d-o9hwELMc6fckJSRrxdUOWrh9tUFIE6yBwRk-Ys12gOFcm3DDXluGJPIBxcLDMjRnGahQDBTSLNMxqcXyP1H08fWX5BrIqCIVMSdQaW6wDwcSy4WK59A0O3gvkLmY34dh0vfx0UggkQBRbwvkI7QMhACYf_7SFqq7xF1svP-mXNUw0lmSHF0?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-194',
@@ -4947,7 +5478,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-194',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5xKHZmFiuaxIR5F4BFX1b2ppVf2GaDYps30vCskndy04dklwIejh68nK6WurEb4Pk23KJgwfUOXZXi-MJVZrwa22xFO0FWdSxT23BjVjdfvYrcJ-FheCgFrO2hFXwKAwq0HrSO1vwUXo6BtAiL0RwrQgjlvw4f0ToBJl55BUzjrcZMYQ0ECY1Rc0D1gvEFDP-ETHmbU10mkq9IZTXLkm4u3h4Yzcae7zaqYh3xDkc10jfnjgkTRzsFDFY?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-195',
@@ -4957,7 +5489,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-195',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4dXwklYJdqin_0lxe7-CT2mYJaWkT5lrayA9NrZtDMoiEF3l84eoeoUSgBWq-9P9THTQMk_qO4K-lSPve41kfuc3prrIYR-ef485AWijy4_U6oi4x-enTHwNOB2ljKRn4fLohEJGjMXhrKCPS1fAuNioXtg77v4PVWBuEN1cgJqYfE9DUsnkRTYNIVjCrDLNSkYgtOLdThQIMEqfoXEl02k3QAq_oW8enk7j6OjMPjfqXBxSpXa0SBEl0?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-196',
@@ -4967,7 +5500,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-196',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6DwsE4w0pD5nEurDuc_7FfVNe18pTNRW3Lsc4R13KnIptug2gK8dmCNPnfBvtQ532nsM_3g08xNS2DS3swvAL6rhJfpXQX2MaxxrbAXJJT1KdWIGh_cs8a9i7phMooLQlFCKMboQhggzwxV9kb0BlFggfLSlQo8L_asseUHcEd4_NsV56ZDh9GE0Hka9RUq1Y0Dspqa2_hUq6rk9FmRXiV1MeA9WMDSuugUsBQruDtZfStEE1pyxYxhaA?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-197',
@@ -4977,7 +5511,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-197',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4T85R3NBnPQLCvg7TDCKxjy79RCsiijcSNJEQirxo5br_0CgjHmGPz8ZzUXIagS-F52oXx6ljhOkNStL12ng2ReBH6vgh97Cxi9_FHEtOs13XQ2gUDa1s3a4l5TxtULbi2kbZe_kQbWqAEHX_sVpHQop8QKNatGsqA_Iver9z2J3tMk5AFzD1b76zWKHAfHVWj4xy0iwY4CLTpHB8mWWnwapBiaEiRdt1_LZFVk7igTxo7jSofIbP4qPE?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-198',
@@ -4987,7 +5522,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-198',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7Nbdbbp6-AHku7vO2rvem2rbZja1cuX7C3sMCPpj4Ps38-2LAOGigZTiHYv7PLY4dFcTWAcHoDnpSmwykVobDcbUO23vbAMxoeU8X6K9fB4MryT6CRrUWlLCTeqOYS5GKpeYZFAxT9nqTBhWzfEF25OwAH9Zbmnn-IsJMsVn25SzlAgdBy9HPM2RrsJt4m-6_ohw_HCy4Shfdz10FFpODe-COBL1XXjdKuG1EpP8cZBeGDUIu_AmEY2jg?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-199',
@@ -4997,7 +5533,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-199',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6aEkfa5AI5UaTpQWgjwURkw7cDE230jS5yO8n-EeB393NiHlY7UGXS464PlsOUblxzS0OgI8KyhbBalIHv7kf15iUg1qJjAoQqOFnShUCWDdQxZ-5x_4geNvt5BO9WXI21FgaRztjYpSfkRnK4bL8084Yvf1BpLL417bu1dZt1HUVrz8kl5vQS28fO5s5PZkXcv1fEE1UcTtZrrcW_abbPGXQAQO0rfXLoSajGCLkfJgCaJ0w9hSZV-6w?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6VZqH1-AzukIsE7rl7PrZkHqqsJX_jJtKxceMInmF1xplskrhmBXzuIJs3mmMmXVWZ-H4sTF1Gm9vByT4AAWW7CdVjIgd4UfyLUiUcvZVduJe0yWfqptZRjxm4rxTMRiTbdfNlQCaUjbWyaHQLTjbTcgp5q5Dl475uGAnLJ9wZ2UjS0zQvp-TxF4YSucaoGILvaGkMNAjjUcs_j30lDgHl0x5Jn69IIosZ76SRpNs7pQoAK_9bJf7KZjg?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-200',
@@ -5007,7 +5544,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-200',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4BEqEsQwC4r8HQ014MOQsM_IC9r_Ya7BhG7ddwsasPib2Bvo_7YqSu8AN8YSWaJq_B_WuT3an6gAknl57rrx0QD9q63eIANbsfiTgOetn-sXYqxUNkBDNjaD1CMsU28p0z4p-UvWsuD1NzCx3y0TxRkgarlJLuLEj1xS_K6l9Lp17HpdFzrtGfoFAzY3AoDNg6tfDzZEcYfBhZVwY8KUIvK-vPYh5wowYKEEUbEsZOtgzyWmDYD36RnJE?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-201',
@@ -5017,7 +5555,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-201',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6ba03iReoG8nuMm-rQ3YTWVlAb953fSkcRopVuwTf4K7_NaL4rwgHi2cayWpOocJeLKkxNnrePa9i0bImeya5DWJMKwginkwZ8n9GnjjMmXmiYusp2SxZRtg1XXRG8ZytA_xmED9lr4Quq4NUSFFV6Hq4sbcQhaC8Kt5UQcRcg1z120mKXXiuXq43Z0Tmk5AFKNY_7tqk-6g6Yy10zhEJBo8UR8pFItaSZuUXHkkkI2Wnemm8-kV0EsPA?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-202',
@@ -5027,7 +5566,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-202',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4MBKgwcMDvFs6G6vXp32-9BHmBjYv5f_ftMsgM3irRFv7hexw9khxFqe7bK2cJ5ZnQSd-rkmF-HmmKzomA6kisgRywDld48-dFZCmpfD10R3o2rWnlrMP1NdH609ydpYejHOySiM53MxAOckH2WxuX0w5dXMmBsihx3ClHsl4bbnR4Qn_lDVuq78JsqFvjdnaIRFBl4ImFnwrG39XCieerwc3S5RVKJ0EstWuu4encB64ZL22BSzT3GdA?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-203',
@@ -5037,7 +5577,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-203',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7ih8M_VOI3bbynSePwFH2Cg_ZLHL46z14kUCFFYZ89UEgsr0AfL8sqo0EDeAMeJh0FtUI0m3bCDosqihjHWGBBLslm1X3MADTbgm8fx010FltsMUdNypKR45FWD1zVD1fyOvB_ajrEYATaVLeR080_h1xqvNbPORt1bzn09igABb0nGgppb9zgfEKgDhX427SbdxeftLQELthPTQ08tx_RTJiDMmXyqQsajYfhzmGv8XmtlVDerIsU1HU?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-204',
@@ -5047,7 +5588,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-204',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X798ab72HyUKus9Ud9qbRbX6oDTo3j0W4vTSRZcVyGs9Rx1qkq8IxXgogPPBiKY76wJ18YIw0pOi0rfDHhL2Dq43xv59aRzhObzqthYm-nSxMDekr9fTKIk065dtweZxlOQy-HUNU3dqErZtkM_Gk2f-pRuQyFHxC3E_Zs1xCayJWNG3E2j6KyKhcDjPFUiRKnS9Ad7k5kqtafm56D9jXIMt5yrMFvyuDmP-X8uzV8IdGpN0z-k-5nrzoU?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7hf3OeLu01utIovNb8AHv9I-6OTT2hoOluCrioywyfi6IVU6z4t1EhN-wG69QPhn01vbdAdryCigGe7Z5uCsRGxs0Ir76L896WVUrsh7lsimkw14070tBR2mO_Nm-XSve4UuKvXuEX8dkFlstete8RwT34wJQrrPL6mxMGdPqkADB73gcb0sLi5nHZLwSwRl7WCzaQUjIsmygQvCXBBf5gE6hpYPwh8Tlhq9HwA4XWicB0D9jy8amoaG0?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5CioDF4ehdUWIB7yHXdvT7DTI_0l0qtThdoqxfiD7GV7go8Retej_dxhHl8gRn_xyNDUjXP7Yc4Y5aUjPs-GkJrI9zpboVvAZsmjdsWjr88LlC5uZPBVamhN4eUf36ZLzh2fCOl1TbTIKeCKdWGwGH89PxL2A17LTODK6mcAH_JeTbhUY54-B3PqqCUEXQQmpboZbtHOxINcUdsBa5YPrujJknpirVjkEsCDdRl0FC-ZD8reOs68QrkQE?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-205',
@@ -5057,7 +5599,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-205',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6gU-21QyTnhnhNCxvFjOwsSkhhpCCxqCV3tdu6K6ZqVSy4O8gCnV08CJ0aNsK5g49_fQ4br3vbpRkf8x9gZfG51kX0AkB7mQP9ou_y8NERROd8ctYuUekIektzpTBujQQUB0dG2I5T-LLlmkduEMbFWrI5rQK6AgLOexyPqBNPMlzzmslPV36e9DJJRPqh7LaGAQ9agLljJqbvvevfY75hn2Hu6DSfs1mLJwRwa87c91GEbhc7mRQ101o?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-206',
@@ -5067,7 +5610,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-206',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6vGqmu2CJFrDx9I7XF6xH84TG4fBwA-vHuGXFkRx6BwHRlPPSUcBUdfsDr5HmJDVrvtEXpFOqbHeUUcb_x6j41uo-bfVvMYIadwx6dqOFsRdLsNvb48ULkaej-gXnA6gIUe0Nysing-WaR4s8YeFe6XY8QMolnKqotQy73-keLklznhRmbj7HmkIMW2LHN-BU5j40A9Z6rg_RebZiGSds75V-VRX-5IDQPxtl0_26EvNe78M5BTT-VBUA?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-207',
@@ -5077,7 +5621,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-207',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5RukTBSHpVyHJLNt6EnrvowVD8N8lrKubQQ2pFINWkAEwu7fhP7KfiPQvfvs4EBhpAxS8VaKqEVXN7SotJgTCK2eBkxd0YLZ2sRBz3kK3ynn8qW4fLSihl4TSP_TSfqiE0Q3DUd49l4D_424M4-vYS4biL2DGP3AtXqz39SIuPAO02fFcST_GcwBNhcr6OYOnol69ZTHxgVtbvjFoz7uKHdUFD37R2ALHVVwMzcSgAkyAkJ68SaLYOwOg?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-208',
@@ -5087,7 +5632,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-208',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7CkedkjKpiSSFmS1CyrB5lIeeRexWJklrXKAO7Re8J5STm7I2TzZiV01mXSN4fFwZBOodQrzuLxpD1mlq87BE6wxRF7XYt63scN-ry4zseT44zQ-eTDFR7kf6yJIleonUW6cyOxy3lQX21G0ptz5C08FxKgjw3UMtwX103YPs3VUQ_hsrCWRU3mY_wbBWwZJSSJfJyuYLQE0aw3BQkVh_xIU5FYLTxbgOY9-9JXuKhhucef7J87SV_RFY?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X664kTxkFmy-YfpeRqlIlx5bqVD-Bv-gVdEyZo9sKwh-fCwE_txgaz2gsO63UHQWJMUdn0-GKFPoOIKUfqiePFjAsdQJ80CIq6IC_Tdl4LjSvKr7oUz8o2HvBw2I26MH57Di_cVkXJLkm8szm1XCekMSrxIHAw59J-ZMHPXQkwINC-BJJnA-fCoTeIK97E5-48nMXW7R5CCvwMwhk2lNzAEwger3VMP9tHXHU81YvR9PTgP8ddtQ8c1w7g?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-209',
@@ -5097,7 +5643,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-209',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5AgPEA12raBZBNeeKilYw0QMmPv84S8sklh2AXvvOW7B25gZbap-QI_-nFot4KvJPD-w1gkyzpsQHBf0cKCiZLqcInjqUNC3H7R_zPpxzI0Xdu5G-rHx7hRidPi81Xu67GGTJZw6Vrmc0kvWhEzn73Oo7DYwJ735Tf7mfXJeW8BpjAldyViRj6MUI0GOGT6T3ki0ruv7zbhSAiebm_cB5n4aZ34hQ3p_9y634lm4_e0eF2gZWdY0eEE_o?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-210',
@@ -5107,7 +5654,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-210',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6lRJ3JPLoK-Uxzm43SXRIzkEs1Zx_q7z71nLCg6bjqTJ_HECbk7SZ2dK3xJQS72cZqpRcNSnyo6gkpu8eTJFRALr74Ma1QIZeDii7qkl3We8iMjg95yEITyNNkXontsdyyi7dZcdvvu11dQvH7ePwl1jKlLNE-wNXVMMVYsJSzo9CpU0ESICGSOSe-iS4JYPFGJyquJ4tSPJisFqYYpyCrbKnx8WaOMXYL9eMqMM_vf_XZcmPT2KhZ4lQ?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-211',
@@ -5117,7 +5665,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-211',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6jX738GUVUS_Zd2yDRv7sex-YO4n5Q75vSKqcjKv-OXtiRL6CpLYZRwTmYbfS--ey2UOowdoUa_Zpnp5YKMs7CYZZ0PAcRYbwolJpZRTztQAWRxEa7HXcwl4wHuXZLzqGfCy03rtj8p_cgh4gbUwn94TbrPo8yFbP1UgQWjDqgz-9NxBpQeb6PymA64CANOqAlGlu6TRLfCqA39gaBoPrgvfyh2oHB-CrJzTQnt3nhLAtZ7z7C43myktk?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5fPaSdXb8WBf4fb24TWFtWvymfMFvi6GKO_7QIAOOaVQ_WlOqDhg6jjAaKQQlH3fh6g6VxUKXNpOjEQjAeotQjJJB0XB4qItq_IJ_D4kzUcUVXHWMT2JlPWX3zrUt83VXFRNADRRSdiX2gPvtp5s3CQ6EvaJL3oE9aVvW-b6UUgnpT_RIQB6h-W8mMXl9hNRSOC8L72JrYhM5VIB11PS650aS9mBf1ZQkO2U3DNB5aAX3ysT7QePiONR0?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-212',
@@ -5127,7 +5676,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-212',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4A53AiPmaSvgXd2_hkTIOHaxb5gE2siMiFQKZDOQ00UjOl9gX8s5oIm5FjLiFcKXukcExJn_Lp90DLOgebtN5PBAtbpdcZsfiFp41Ndt4rLPYVwLvlgpFB0vLrabX18bgMrd_HlDJETU7iX7ecmInDzM5i42GnWQMYsMsWNQcRHoOiVFgNWznxVbE7TcNtCr7qLYOQ4e_fEQx3gZy9ct2akDrmEbbEKvCHtQzEMg3kiDtesrr4yRjq8aA?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-213',
@@ -5137,7 +5687,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-213',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7XPWAw-ad9UlSwqtHDeiGIDOYbAzn6KLf9pOU4qOLflNVCztrrlOMO-FHQDsT9LjlhQfNbynRlInEpa3xHtxfpzrNn3JAs3OymuqrBra3cNuk8CXhmSD4zmNWtucrk9VK655BXsRRViSKJAM3p0sPkMhSNDKFqidYJxgDy-Cj9Wlcs-yrNmqMc1JePSWRnO2FofjHh-TC063M6PwuC-XP-9TDq3kvMfXH4L4RXDxRFhvMWFM5OqL8t1fw?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-215',
@@ -5147,7 +5698,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-215',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7puNdBmhbCmO5iYb2pv8QhX8KBxZtd6Yt1tiz38kcDLLIT_J2765EDFVvsmJX53Nn9iixzGlKhgWVawDgQuVeypeMVcLAUzCn0ys9p0hgvm331BXzvnm27g0mIoM3lNiH7vqptcMf2NSGfmAcNBaTIAjdyldatn0thynV2xzjM2b3vTJKDwdk9R0KKefE7BqHMN4dugRhF8PGqXimCVGMP4Z42VUxR8bFBJYnGlhG8ZldkhR_AVM1nLD0?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-216',
@@ -5157,7 +5709,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-216',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5A-A2gNI47cDDPzESrVnQNFsY5EjCqSAI2qnjVQw09TFJn8zKEYN54JbB05UfKiaTqSiUU5ium-BWD1FC7-0t-MNHRF5W6OYYU1rgKuIHoIcRsnPbvVOPMfNhY0XwRG-UMroxdp4Tp8PFx8z0uq41fg1dsCSEvhv-rM2Z7Syj0Si-LlpRXGWRVvn6gLAcoWjU52d4BPsGfwf0vdL5z_-Wn1-_JirT3VBnmZGxbyaGPJW9PvBHb5sCDALs?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-217',
@@ -5167,7 +5720,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-217',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X48uItfXShEWFGoBWxvPqxNecjHKogBJYHiyi_UaYE0cMOy85RjDvaSfeHq0izMIhkjESnllPEL42bsydQ8n5RDZghJVb_tdc_HR_FgCaRDdQR4s1vWyFRL2oRaW1lpam-kIy2NmLbf1ymSLfCEAC4flaLurPqY64NM8674gx4LwF5iCzY73xjglipDDG8MkiuyUNxdG1bXKnGrsgSFtuxFg3E2hzSEtEz86yPqE8mx1-iJP9Ujy7T0ssM?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-218',
@@ -5177,7 +5731,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-218',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6KP2FFIFByR61fIg4-JzEeSRz8s-KGfl2fAnNAjlqwS1VmUasCzQOvD7WNUud3F740L1fruMZ5cMIOvU_cUmOMx9jeiyGxCWAyH7EvztCxuqlmZQCSV3zKvAYv6TDATTCArKwckXg5TEu5LcaMTqjjdlxu1L3kexpFUX_Y1O08tPECrYHpRQo_snL1VApaKlt-3SxwFE2Hbm81DJkGDvHdM9be_O7DVZxQRGmVu3bgq19AjHQdRMlec0M?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-219',
@@ -5187,7 +5742,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-219',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5qDpf8SM5H1S5oKtjnBQfmpmgFWgkSuW8IrY6t3HY8Q5PXzQTrbly6mP1BPbIAg3J4kJliBigm3aO-AWDq232NMuDCD-FaVTMQrsp28WLddBGt0hKpNZmw6-XuzWJ7rWLp1knXAaK6JqxWKt8CpMe9f_Ebj5GwxdSK0164w20GGZo6zepmX4Rdc4qkxD-aJfKQWozwYDtB1eWBTDHC6DSjmDrCJs2Z-6GbE0p42hHzVHnPxbAnOrSL56Q?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-220',
@@ -5197,7 +5753,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-220',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5_cVx6dzzKzT_SVLLVddgeat_vFN0CJTj7NJktWO5PhkG4rOvMfoVXDqJDJVqlBG0_8BSD1VmGrcK8DNd-agOaT8xeiD67mAdzb548eb9y63UGFIKfAJrDUAhNozzyMqa8iehEq86JJEAi6I4CPIiv4DWJnyQaQwmlmxDHlQ_KDxMchMlwEFZiJrJ6VsIrrMZ2yhHBaJw1YPo-_R1fLVoCg7fyCEmxenQxB2c73qdrBPhyRIHJOjAwUec?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-221',
@@ -5207,7 +5764,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-221',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4HcU63GpJmdIS_K-z3SUTuEs3khTJXCICUdc7x8WpFbQypgb99iXUgKdhJLsIxyknh6ekGDo8_zGRLh2CrbQdSKQ_M3HjNOs8fvanwdmaWbfEI-vsf43pvIcl1-VE15clCbCqRrpKGo2e4I8j9xV-gwQz7kc2HUXXW-oORAb2lezpT907s7XELXKnJ7UR1tyA13BpZ3w6BPXtxnODB-CB-58Pp2j__j9Ewaqe1rabzUQJ5Q-0aKG1_3_I?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4k0-puH44Bv2iJ5U-QydzRULeBQK1eKW4I0041vUa_jl5BKRTwdx_hszpiC-ggRyHjpdOvNA0H1bzd6u-AjHfBBQ0pE7WLyPiz6jA6rmrvEMMhrmyA4DuJFJ5aaLldCtrJz--xwsQGGmrlxJXabBtfonrVyIRIDCdkVMAA6BnUarFwS8jqPqyxmOhgtIc226iiwlp6a8vRL_Zu35KDIqAOHF5gt009mjsa6tiH6V76zEo2f98iQVkDV2A?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-222',
@@ -5217,7 +5775,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-222',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X67gNazeVuCIUBgXNHp9xifJ5eqlGruIi4PnOkPHg206hN2MpJLbcr18ILDGXs2x2qZU0lCpOe_qX78ocdKUkTjQMtEOxW7MKHU3OTDqe2ki3d6OUSpLgSQIipXqoVep8HX95ytEtNfpA6wCpQKCq3HT8ivM-h9ZuvaCDs6_RfPoVR_JQ7jPoxAKTgOZveWvASI1iAd6gJ3veXssfSwsvm3_szyWTvoQ4KwY013E-O2WdFGHA5CLXOeGFo?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-223',
@@ -5227,7 +5786,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-223',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6-HWsGQ7XIa7vJs_j9fMOJOmgBChSpvgtTaB8oHSaHhkVxpKLdJq4O9TWYdYOWfspdYNWMQSwxlKN_Kso4eVEYC-ysnva3bxnMLmihXIJVj9RW9ScPmsLqOgsThCX7SL0TtiS2U7SixFBj94sVUbqbzstYMfLYpbhESsj-zMbIsrjL3XRecZVyhVSps6j9TkNTyAR09tF9tJihTtBwVahfZSE95rwcHxFoUoDzm0hRS8h3CwsOGqn2-NU?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-224',
@@ -5237,7 +5797,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-224',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5NwGwtZ_CSQ848nUx1G3nG-SS4rdnm3_jUD77uslY63FS3Pgt0yamBFkwPdLrnoEDIUwVGVADJCx2eDc7zZj5U_913cUowZ9wQcpxlqWOgKOfiJRHAIrArRK4mV1AxS4AnDL2EnCsEyvzwtP9L9HuYTZ9OmvcPi8E7UkLSH-6XxSoaeHMCMbOIbxoxp_fgd9ICgH6-SQoZboNhkLoOozMs8xDWE0jfWjioZ716tA_OZdxXofJmCwsaing?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-225',
@@ -5247,7 +5808,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-225',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6gpDRcW7YyOL2lGdRQX1Kz7bN_zCVc3KcU8cs4Yo7UurO3n7VBJruIKKHcyhuOMP_Eydy6713OsAq0YqiR3zR7ppczsmxWTnB-IRsXeieZc2QaFN2XRPgjJVA1281YIDa5nMBGHXgoznVM8HuAPGBpeT1oLW3bxt3RFE_piDU7pIMiaeaX_X-Wd-LO3BKZy0n9SHBIcaT5vtpbFSMT-I6t0TV992gOdu3ETAP8GMb85tsr3y4fXNou2Yo?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-226',
@@ -5257,7 +5819,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-226',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4q6_cNaU4xN_-SY3vKCiTFwrV76tNu2E2OiRPtvKaw5D5WNBJ34DjLq3X32l39BX_zYhD8D7mUXlOTFOcgY-jT3CcHKkGfMYMsNXNFdoGX-vwtXT2UHEeCpOshnvV2SnJb5mM2a37VlKeUC9KM6dsaR2k3k05d7vJHk_y71YS2fm_vAhMiQg1l7QmXC2d_Q8NCXPf4imLq3uplCcHGOFWHdPcFIQr6FVKg2N_UolrbPkEC80SSt8L3vMU?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-227',
@@ -5267,7 +5830,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-227',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4K7wSK7x0BlkR9j4Jw5_aBMqXH6nRa5DxyYGzDM9g6_MJnio4XDKkGgKX9GlzV8EJR5Y6ePFqdUiEZ3aoTsrkIjG-qhTai6LtX1QlNAA-G8gPNM4jbjqmc40OjFvb4d1e2fz1XnKA4QZ6-Vs6KEhCNHbmLHAgbOIuqwvzAVExHNQEHFpzWz9k-RmbUZr-RQKeI7lc0jm9OBju64ASwoqk0CHItMRxH6ng_sYYlL8P0WsYWb02oaPwY6jI?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-228',
@@ -5277,7 +5841,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-228',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7qiO847WhmcZqxOEbWmZ-sjNmX7ZZLkcgcqXuZOBWn8XqwOqiylLNqesicEbw0ZTU5WNUYIkOVu_xjPQEO9BTzfrD1_2RgLUe5v78vq7Q_JvyOAM56k_EhwnotUcknWIg90_E2IID-wK7sp9PavSU12NAlOs_j-Nn3hT89CrDomQ0rzuEdWIRg5lHMHDmimr8BCSqnVKXmnlSO1gCqcxukQ2HMdouutbEQO_-1OToVfedHRO4-BKN5QtQ?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-229',
@@ -5287,7 +5852,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-229',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4yAx9ydj159H6giWcwmct4MH640MmAlepHNqYl6iLqOoW6BrfBheTz0xMToTvx28A-6BlV72P-24rmLX3dOb-oSPOx2NxH9ArI7by_VJzPEbzdHpKldCNckycP9WVIJjlbtLWXlQK6sErsOylEHF2PD5oRWdP0WcXoRkKukv_FonSIHkfrLzqSh2iWiNt8iWGKGKTbEg-h_mvfuetmfMrvtPmA6iJKyS0fX7wa4vYsjqyOwPoV22V8xbM?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-230',
@@ -5297,7 +5863,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-230',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4rqrfXZR083WT2r1MH9sLrV_tjB5zFjIqHiewEfY-NFB9pay-bSjvtCuLqwrmcFm_KZfqA8hkiA4vTLNlIyqmiLMrwomP5JxboEV2nCucwVK3K34fBypJs1YA4zs7bYZLMB5UUVpFb01BZOm-QwActaX6EAtAEkPFwjdBuGa_pTv2YZCDftbkd0Zu0q1A0pD48g_9WcwvgGqvWErF3kn8qGUZYAEDyZBKwVIT51Gp4hAMDg_fDWUJpFCA?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-231',
@@ -5307,7 +5874,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-231',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5479kFhSuvY88Cc0EiqWlnjQln5Tab-dKbgpxBkruzKvmedmt7bnR2nOIA1jwfY-dzt72j_4vJr74LFDarynRKENl-msdCxnXF1oWxndSRrl0jYBz2Cwwot9guNPLW940CbMLYBsRk7hl1xpW_XOyDecOpOtcdoejnh0q_VAR7pr91oq_jQm5n6dTxWV5BRdeuVxTDqiOx5ndzNXD4bmzYi1j4LH1GK4hPXUa9tItIpQLRLHRCFHS4x4s?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-232',
@@ -5317,7 +5885,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-232',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7uD2EootBs-EAw6ug1jm9IKrbzLh6X0HUCV3-eB788l2flAgJCHGvd4Ym9US8qdPPdw542bc_uR4JuofIvqryKqgG-cqqq9J7l33ruIJW5b2QtLDbdSc6H2cLzkCpj__hEl2JVIkh_vhM-B2W-pOQItjSSECxWP52f0iZwQ8L9J034BJjEGrLVr0Q2uzND41KD7UlOoGQNZ1Z8ZrY9xcuugzYerVFnPRLDv8nnD5UoMFczNgII032Y3P8?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4hlmJRD9AWf0vfqQbApHaworsBDUpQ_do5fFesJz_ELb1_KG50_QdDK_-tIi-hLbCl8ZNDWc1Fxj35QHa7_BUraRYqLbSOjNOd0i71bmGfv1ba5805wyb1_CVQIFLZFkAXx3dKCE8nGMxOks5vomUOtYfEiBk5fXdQf5HV_zeZadso6Ein9_TOM0cJ8ZnqB2wkklNd1GvKONm3InzcmNp3ZvBZt0qzpNjhVITxExvvE_SczMB5nAVuBck?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-233',
@@ -5327,7 +5896,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-233',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6Nd0VERAQ4fqmpJVwBNZ43r0ljtPbwETkzzMM36KdG8thaw3XsYr0a5vE6w_OOtNBExqEhTH1wumTCH3FxhI_D_HZdW0DHtIkhlsl2h2K8kddbvDPGSacGN76y3RFHdxZl7jk2IntS-2QEFSenB9T796b4881DXAzlUUNniiUbdpz5cKCFy8_8CekIT6QYaIuYYnirWoae50uQ_Bg7G7nMPeSJqewC__AL2ZB41FywfBac5rcNpX2zih0?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-234',
@@ -5337,7 +5907,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-234',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4S8dcye9uOU9ASNCnqdDXyohOo684gciBOxmsxMy10scUmTrNjlaF0pcnh567DcEbq0t7enpdELyudWB05A9DCH1_pxrRJIHHoLhuU0iapt47rDyUieMqcVYS5uVKfmP1NLfm-HMGv1J3ZBtuLo2FHrOZWTe_SGjLsnF3sLcE57nI4txEpbMspDvdOHXgMgzcUKOentezOyJJNjIdepl0GJOwsIdbnbAIpH9M98dltjrwr4q3Qz8x3cCU?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-235',
@@ -5347,7 +5918,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-235',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5BRDH9cxY3kZjxNpQ1arYnWzbZfMAhSQvN8J4mO19LD_HBM4tNLxx1Do9wq-KF-t62hgbaMn2pI2ObjtEmWkLRvTnEMYG6BVCfdTKvuWx3VL7l7WOEVZcv5oQOlkpEq7O_okRXjB2IY3PIR_ZojFYmKGM12WjRSiKSZ2ARCExWO6WL69nYOUcsi2yHqDReY4xWN9mw7ZYVOHuw9PA4CJBbkBn9KToPse2dIQpSAyaZb-GiN7_AFNGeB6A?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-236',
@@ -5357,7 +5929,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-236',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6J_kI0igM1nREMqC2AnivQQkYXG9TjwxfdcjtFSx1lkB98wbA02B4hVRSyh7yEck7SKJJTh2iI390ojcBI0nZgMa81eCSPfh98hIpDuoh4MfJ_K3O0VGp2xSj2OcVQG_iHcDIMExBlJPA4HAf_dBEe9a_t1DrdMqmByvIl9LXJU_V22bP5U_Wsh02fKH2RixlYxiObfJrgHC3VnCWUB9UjUNDk9vTYAXNna8XzHNTiWOmmN6p0tCVOwoI?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-237',
@@ -5367,7 +5940,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-237',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X768Igu5p7poich7Bo4xwqho68NewwkwbF8aCjommKAqIaALhyXh_OkaBQavp9SLwzXuhOXb9YHr9GcGe24BJaq_N1h5gfiE4hAIeVKWqw4YsUNmaek8L_PRgFEi6yIp_rCX6eKQE-PpBZG1zMjBqKs7qe3s_atZyCwqTeItjGDJrWNBziwk7m489jMIpn5akMSl7StDq_TZThzv_bKOfFZzTAhUYQnCXZcCyMQ2YSMjg-OkwTLCjfhh-E?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-238',
@@ -5377,7 +5951,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-238',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7nEiLxOSvH2CCcfOzm0tn5VbNIGTO23YPxwaBWDgRMHFNf543nvYk7pbq9uip9KBEvCcFWv6vn971LeRfnJjFdtUg0iErhjJ8lBAqgmq-IzAk9ieBdkjNbSj4gJN8-zF17eCCTYaBQHXBN-ARuVk_gSW78rlSb0TYO6cMhlu026S5RHBkJJ7PEvgm5O60Mu3aLG8rDiFbouTCCeUQqrabmhSCJGakFGgFdYGeqfbf_BXE65qdKupo39Pk?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6jn2z-Uf43zhfff6B6UXrPHJDhAHVGlohE551JWHAKk8-t3rpd5RRNongZsaeLPFZHlRWDygneMVOMqP6tBNtJkuKaDPRwyYl21WwV7-P38Fh8wMG6uZ0h-DN-gVL10QJQEZ-bOjvPC9kAmOBaAn8MuCs3aFir4QTZeB-al3ZjrO9-j8HbxplTyPh7Y_j5Bv5BJ8byBs_iOInBVNres_RuU-CC8r2j7gN6JRYmPPn3zNGTB4wSle-7-co?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7ouCeQWmsg6oi4qr5XX10_F_tt4O73OvN1fvd1aJo2NqF3BSWoVCyGEkXXYKNZud6wOvx2yYT5T_9nWXxfuzgWJXQUXfb4Q-QuW556kXamguwi_DjJPBLVmoLzg5cFUjLL2qlxJOsuUfE4G8SNCVSZp0Uj4qPzwc345oOei69Vj-Omj0vlkmhpKkkqMTsJmFXTH1vTa_PQWxece-3eJ8DIcsEwfwMWpjsNOZrrGwQHH9z8-0DFBkLF5XI?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7KG4psuPjaTlb-i2gD7IzvgFopsaIlUi1qpKitbOhS4mB0IQAHGMv0uWg6Pa_0kUtGnY7OOV1DbjQ6BeStrs86QCSQkB5JMLiyVo7Y2stMXwVfBJMQg_k6D8H9WWunAEyCI_j1vOTRV_dfNoPKRGQdODgEb0VEUoRFT3A-X0ZygxnRj0YL_L_8TQtGxzZJ-1uUySd_2SjCSM5hAUYDUOrZPGptmDk7RK3REwlCciREp-Wowe8au-yqxy4?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-239',
@@ -5387,7 +5962,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-239',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7R0MkAX0pRgsZmR3mxEqyBWWlqTQJD1rUtRdmTZo2Yj50jAU7e2R7QfFRtEm88FUhhOuDpkWpUnQn8NV0QgvuvuX_tNoyJTp9yIgwyFi2W1ZaaVLMoU_nUKWb0YpeNbf1HwjwTfA01eorSnPDhhokdlL30JGjw5NO9lnrte8cB1JOHMgue2z8c8Ma2-PmzU3t5dxXu4nRMAtTkh5KsXCkOtcqvIZ2BgQ70qK1bNb8D3q9VfXCppomKNaA?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-240',
@@ -5397,7 +5973,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-240',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6I0-76NdwZzxvLhfdYrXWHUm6BIuy_D4TeMX4ZrLtYaw141HYNBMyfc22AyT7Z0uCnHGbLHGEV4DOiaZiiRI7Bj8DSUa2TGQoIvLcLFT8Ydi68p0VR38zTBatEz2aQ7Sj673JtMFGa_oy9wCnAsqTDz7xoLuJWTU9u-qThg9HEsm5_TUTe5YNAU3JRrJ6bGGwGh7AqUfqSIWpQclV8SMiFuzstvRW8s09VgSABUOLp5gW2N0ZnkpL1C4A?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5ywOOMINNPHTHOVL7OMsWxXeg3UQh6Qe1_Q9hNFS-2rHmtorWwolVWPfs32mqhUgiUgbfRK7oCNSDJ4kbqQJ8x9Or2WzFgOGrEsddwe38tTGEuPVm1EBgXkFeYg6tfY5zKlBYtlFecSe598cwRuNF4GCimTaNMV0WzSBgWD-jP9zDsipwjMN4knZsfoCqwRZRgJk9hon4HBkKRo1dMgrF-yulctinj-RUN2Sytjd8DK8aIzKsW_-o19_E?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6Z30tbXRlyqllZ_fvvOzHEOLkPRCbF7pO4mPbMNCDgyevmAffC7K8USQBjTgHD4-PZflpdOIONDNmrAt4k5eOXJNdoFxUu1aTYy8N_FWrgyLtl8C8ZaSn0A4Hw1JkxOSjS8YcM1OaOzHdwEukEHTPMB4dUuou-9nVZDagajn1YlB2XuMjl9B-U7ecpvnW1kQzZnSUyIcaSD8u9FinqKf5KvKHQ8X2eQjBJ0G6stDsiNW8gI385ezrZEzM?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-241',
@@ -5407,7 +5984,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-241',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5jKCfeN9YiWniT7jYpdTJ8l_2QvRBLCKw9bTwDbqyKiIdZ0p7qDGx6ewWWF0YHJcmMFdoy6sh0DUeTvy8oWzg4GUh_gzrH1sdVt_xtjWfL_eBLqTYetKFndY5Lv2BA0Hqk6tqpt2hu-sY9NvJ9TC9NBrswj5bj0qhV1UzI_gyXRPPZN93HIlVRAqg2uCaYxixzwO_zlwgaIOtOkJ2NT6E2bS3VGYRAHfb0-N0JtbrYMlotsQstuyI0DHk?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5Bhyg0lFcWAqu1nDZAlt8d6MHTnh4OORRjip3Af81yfF5rS1Kvi26qjLDfK4efjOzsWpmeOrmw4it8qFV3VCp_1A1sOpvQkp5Mx04IeiYLI_3FIjyZMp8ozV2NkCbjI1k_-HoCsWPTswqkGy_sEgRLVpNoYaJjiyINjrGuu3DRdKlQdbWFHM7PNm42AgDYP_MOA3P7HKixbc0IUW6Um30oXkKZnlur4Jug6JW-cqiMgYj_6K11ga8qvaY?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7yWTMlX3uIUlB-_H8gQUMUcPA7Wp7rToa0QnrAtzKR4Zxj_KGLdniHNuB2Rxw0bHiTr0C9cJkBas42tZ0vq5-GGiLouXrFLlfXG2COfFSRtZSH244alcdM8iXZt-cvXythlafDI4udH6NPxVSnyrm7eHp6jA6qThsl-43Blr3Y0ye44n4-Fs_vYuPWxHraps1mVzBBu1dPYRvHtEXoNZc1Kq04m_5ciPA8XfmyMUGM4G3Hc3JhAcq0ino?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4VguPfAOwszxuKGhslA_TMGuO_RhYjGI2aFN1A2t5kYijsljFjt84KJXTm29FSDpNEkAQcnukmSJXI9FBZ3Y2wjDm73tFK4YGIDK_QObslcAiky32pWJOsUEt-75rbLbm4JIGxwhcyNpNJQkSuMLZqOAcD7RJKi5yNAqg1P-P-Pc-6nnNn-Fk4IR8PtG4ssvsch51yyOQBJt41Zc7wrke61J53fM1IElKKwT-0QCJ1S3x85C6HyjCc20g?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4HE4c0YuYi0KrnKoZ8Ke9B-mEhOCcEovBDuMcZXZfeiSWy8MB_bJFhjSGl5imvEfHvTY2JE1l-YxazS4uoXAJGcJXZY-FVUBIByEezyYM_UglcD-qaDb-aiPzAur7dKn8PNaJYfMVfpPWALTF2neDU5q6ihHthUtRbsQmMA49CBBRrzqL-1ak3llUsu02Zy2Ke-vodwp_dj0NC30jsEYpvbD6XB7dwYZ_7EPnxM_kqXlNrhOY_YNagP2o?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7bwkwsjAdQlazK6EJa_VoFtWsjsoquTy9HlAj0-1VILTuKV2cPkmtfcwJnXlqQ3gB2BVPiJsdgnn8VpAjYpBS1tsDRWnZy7HHRRzFrDM1ZGj4NXdMibaXI-5-xTgPDJsHujdtDIzTxU0zzqdzVYYa3qIwzYmJmkSVFdzFBpNwkkslH1JcLZIwqwolKWMEf_-CDFfz-d2Ec5OZimqx4WRp1UScoicOwrT8iR9mfBNtBdJ95_7zZvgJKtCg?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6YtvwOokpL5Cp-S8liy9oxRU0yoTJvu-H_aYg_2WAMJAz6CrVKoscQPV8HniXDE64xDST0I1zjVYzK7W_OmiHGzg6w5QbuHD6CJ7UuPeI2d8--90dvXn54NNrBJRh3zn0PXxatGYRXj-dyd6W-xcsck83kZCYNdiu1WcZKJvINAYBOe_tbK1IZtL14RZ_Ns8tQPXy0XI0NOrf7S_ARGWL_A9gDuSdNMIqZystShaJjBDJk8OSA5kbyXqo?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-242',
@@ -5417,7 +5995,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-242',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7_na5iWPG0s4b-5GDpuuCiqQmC523U2fnCwIpEPGSyXV64eVgP0LFvelxNyO45TzXGAvFZo44pZQU8ZuXKpYuTI0y56IFdVz68lNr8tDNNCBQ2bHvc8b7-CF8qFGP2I8mmRxv0EAj_T60ftsIaSyVufYte08uvMkTB-zA2EVErwR38oDVRyu6hdkH3x8lc81nGsovoSoK4REH31xHQ6ua5nlOh7HJoMu3ONjwJJQB1Nm6CZ_kfXkA_VA0?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-243',
@@ -5427,7 +6006,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-243',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7wRY5ZcOEbSdrBbPywKkXKMO5LV9SKciq3YYSQaSlOOQo8hn5XJeuGLTbXflE2SC6uMmqq1_rIOeb1oyfA3VhsUFba7b2Dd1zj0LCwr7EZehssAtBzbjqziCLI8tlTu7ANKfyBJFJgKtJEJMWMib620gGCeseFL2WkecQkL-tmuxBnDY_g00O4ow1YI18DNtMt5NlkxfvAh1RwRVNzE00U_wu84NMdWKpH45Z-g3SSFbjjpEwIRgB0ijs?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-244',
@@ -5437,7 +6017,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-244',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7XL7CzH8Z3-zG_CdFWPqy1tmTT36GhCFW2mZZ8ZJ6OuwzxJC925knolehkDWHeLvN20MoJlr0xzz40Zmd8123uRSyev9lP3s4b-nxh2uaIGvIE39C29PDaQp49_7Uru8EOxYhdk3rOnfPykpuYTGTHl2xa_4Op6NxXQHCT2MeH9aMfVKkmiOb_GA_0CILuaw7r1u1bxJmpgu9ruU85Bp56tzxWFbCKHCBdd5YNQzmEB4_nOw42ULfJfSg?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-245',
@@ -5447,7 +6028,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-245',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7ohUhcDBOlhcsL3u3E9RrWSfTPtnCo_lIPWq9iTILBl25XoVlXGPljUD9x8qRO2GrxVPrAyk01REgCdpQCC1_8RB32wGpdDfvxLy9rctRf6x_d2tda1jATUC-mPN5Tq_S-opXJvos9ZlIxE7CJgfTu_A2zFX6PrnE5IY6fY1yDk_FrJ15Hs58BuXvz99PKQ9GznauEWH1-4TWxgtecGJJ-fS9d79FZobfInWU1fgqHm3mYTx-YEvsP3yA?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-246',
@@ -5457,7 +6039,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-246',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7BAFH08lTB7oUsbCKs1gTquopd-6lkXjIL1zb954Cf6L3QnGiFwntNsinN6pVn6hwxDemRHfqj02Sn7X6wgnwlJSm1hI5aKgzFKC0u4XFuVroCPAA3oSLfH2P_pYyJCwM51JW-kb9MTI2JLy-sv848_IslqLgEkHvexN4njZzaPpvFS11NBdm_pB1zPnqvGsxLFjIG5nMx6oy9mdeHs6918uwre_s9mnRENM548jgpZpR3UjMsswrSuvE?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4aRm7HtqRXc9CHOR8faCvTOrPmNRIKLpOpwDnUFvyVPJvyR-UU7U15q6uDYMHWuJFxNC14xHon2uGremwactL4OGPynk0aNBo_J59XxTSheI09EESj2yBmWO_h86a_TX07Xz7A6a_jz06nw3W5DvD8dGO3KwloghmKJTShZEmUvvnODlXP2VVQViEPvAC9RWsnBRhw6dYr367cN-JYMCzrXZHIMc0gReV581xLG0z1MBXBUNnHMd4KNUg?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5074jDa4_13rP1PKgW2PXWMP7nq8QnaZfvBvJVQZrBetlira_tSLvPa8Qclhd9ch6KF2nTF0U0KHmzAhWO2738a3Aub3MJx76JbRY3wWznTHJUhrOETN--77WRb64b2crAGUfxiK_5naEJLpoPPa__wzUmgkR3w0ajnF1CkX8v_GWCkTiJZPslfaQl8wPYGDR48Q-t8k456xL8NqZUq0Wqf0Ofkib3Pw0hSKOCjjy9T_2zFAzS7ZO3Qow?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-247',
@@ -5467,7 +6050,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-247',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X46Y4g87asA7EKhkV-9128UeWzWcdWeCygqisMr38aRn8EV2mMAfJm5G-1xY31wrzOgsGTsEVH_H4Rq_U_ECRi87XoTS0-Gh3Ww8VgfFOV_EnYTyfAjuj7M_tdJtVS75_hv2lHns6yKCdkerwHA1QEqm-XK976kEkgPBA7nrwL5px5WCweE2dySEUEMQtk6HIWS36kWeVVVw7YHrd8JZUIXCEb0jxlyKzVa7FYrz1bKYy81vkJK_Naj-t8?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-248',
@@ -5477,7 +6061,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-248',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4vcw-rS31a0rd0tKxIPCNFz5gFPxFRyH4kw49_UOZXfZRcXxe56zUxf33Oi672Yq_HSqdW3EYSyHh_KPB1XLMee0r2fZqbLYroRcTgdnzZCkAY5Fz1yjKHQ03nAEebemJggQBoPZq3VpqMcdj1-kUiL5MlWeNkYqla6ln3B-9FJygyewxgDYY4Ur-fvYGAEmtBD1cKHeZsTxukeb0z83zLsX_jFxcCqsV1PNJJAYaZkahdG9XXjccgCkQ?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X72f9LxL3DfNNxI0VtDFxBwZyBMpD72T9xJEiU88YF8QkSzwJKC-CAOSPfCvT8xbBcAnD5beW0E5jIJvUdjSPYkZF6Qjj8aErD4CV-qif_C4MLao879jkv7195zySmcmgIdhjzGMR0xM8Cju6mgJqtLrjRVhbvuAvfmJNPlzrIirKvyyHlMgnMLCnXNEyM4azCQd_McnP867DM11PFmq4kFBXvtNnMzwaQ260wGm8LmjyPi38Y_zb5CL-k?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-249',
@@ -5487,7 +6072,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-249',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X49WJmjqOwSdgs1nIFdkHCcj0DlDLIJvFZkpGL5i3XrlY7ngqPT7ksUdRb-yPtA8GsdREu1HDYJIRaEp0AWEqq_XUqlKsoHorMGIdhYKoQmUNstZHBp8jPSdjVr-jVBxzTEuuxuAtxjLHxuM72ZQFSUdYgWjEaHCHD61viE7gTC_ZT7CcNmaQuIyM55ke76zjOkT4tbNCRS_S6kvgYQ_GF8ioIGDkGD93VK8R6H7sFZ_js5gOTUnWix1Ho?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-250',
@@ -5497,7 +6083,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-250',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6zdRZXpfQ0_gEcS6CviyrP87rziuGKlGa8yr2CTzNqF0nYdQkbz9FYNLVGTvV4r81qsd0SCn2nY3XMvsUvvEHg4q9Se8NdrMJiMcN8f9yE9EOjs7BQJD_g8rLqj3_xqBR5nz7_TwoTHuPb91Ijh98co5-ihnVdjO9sFrEhY6r1VCl7Zm9eqsMp0MXpuvToo95Wk5LR0WHlWZXc641VntNaesS0hZb8PnD-JX_ad4jrLWzwTmPoS3WquyY?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-251',
@@ -5507,7 +6094,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-251',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5kHLO_tTxGGtiVCCt34zC2bJy6pzfj0X4hAIx6HxvB_BEzwjiOliaZlLc9aKZ1HgFiqjaRFvaVfIbGZkvho-mrvmBT1XFJB33QXVnUphE28ARPiiD13HxnWkAV8NujYZQyom60VfVbAeq6JbM1vDgSEYKT3Mq8D5P6FGeJTda2-P49wc0r-nxmDVOX7SSNIjdKrT5hJySQuwbGR4hP4YRjyP49U3gAp3Fn78bZwcolHXwOpVBTpOq9vhM?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-252',
@@ -5517,7 +6105,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-252',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4KBvFQS990haMHUBMxIwblvDFoorbEmU9hOIT_dywxA9JBa5HjfmJrQGIn5mGiwRf1oIAlvmuMLgi48l6pe7iez4penkZHaPt1CVxfeCXV-feNmKGgiqUGbaa6R5oCy6R3truSM5rfQ7ibtY0KOETkrm5ZIkz7qkzT2pZaIClbpPl8vymbeJkl20nmST-RoCWy9r28DR-5lC5irgHuIRyWVMldmA_Y7-3yZ3YIzucx82YaWWr3KsWn8gQ?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-253',
@@ -5527,7 +6116,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-253',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5HD3TAWJQmcPpaZC_lbpl6J080takSrtibFKZuCUrv6SXnXMBQX4dbQLB5dHGLbG1w_aBhXB82Z6-vhCm79lUvppxpLpFsgfsKOUeTNlPQG3fBgVJ7QybZ3LN1Y1hjZZp1Vwg6Ew3ksjScUKiYBeYSQ2PhE2Og-k7bdmFBLHoOGvtuM_t3np5_hhYyOf8ZlPBhF1uq7al1Zlsjq6eySOzbfCq726RhDKi_fjv6tu58MhSgfWxRpksZ8TQ?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5R0MF_Vfc11lNTQYxtAsvc_rVistDgCCVRWw3HKyMht_YofbwFu6-ZHlbVY3C4c16nxXKQwrr30j0ydSSiK3yvy6W3DfPQo6ZnbkIDYzqcAGSKv_EyWTNrbyzeB2yh0OHzAFOHOqJIhwXCWVUJzdxrDojs4wf5m_miI1wac8oOt6sr2ARfQ-nDmTQue9Kp8bOy39Mq5mQUOgbi2tFmopGQ6NNXeUosB035k5C3QJfwciQ1k8XApvyUc2c?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4PbsmM82lmvOmvUN_sBEJWIiEF1FU9CSnT0rqYadqk17kaVvQaA-QTGhJSx35xw4wZEqjEZDFpAqq4xuzGeHHJwR0TbdCyZYh3yCdv61jkDBxbj57wpYlHGAN_-0s77lLiMBzzlEILA1hVxFdfvQi5ZPgh_drNxYh3L0Yg7qCip0wTdU9-gxIPAigctdmo8Ju_E-hiOyu6xUeFLwDyxEWMtMQURMyipT6gcATku08xybZUTqW270q37oA?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7mhJuNHnUQaSPISxmkQxYwRbzheFQ-jZQEKhR0AB7DAjpffD1JLWSjbOSSg2EaQpiWERJRY4krNXuid2Mfpq_qxgFJXqOpksuT_HHN78x-IL8JFCej9dFOrYNoe9fo3hEsT1STpRSSlzqo95gKrPMLmULykohf5XlYPXz6LYwiC6dr1g-B5cAoUjsqf18G1Q8kfZsghFm5NE0pBc8Z63-Fw-4IE10odcZB4wirJuB61B7nYG6XswtPq1Q?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6Dw2vw7H8TRmT8iFzuTEME4551fK-YgIlPIH7xpR2A3DtnDNw_3-Xd9HLAXdegdQuRrXRHbXIBoHED561TWM9wjhhxL7_PUcipS5xxBimZjYCVMVjQ2xFrxWVCFhM5H8WmkqWW6plrIm0dIyeuT_holPz7j_4D6aizu78A6XZ8woX_zapG7VuLtsl7hyZBT0MD12IftjRnGsu6YFLN3GBV_wxhuEzDK_hSoYkeoYorLgEqmEMFpeD1K_Q?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-254',
@@ -5537,7 +6127,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-254',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X70FToiUwyB0PR3zGkUT2uzb-CgRkDRDvo7rnObpkcgRDk8g6B5NSP2yUkeqPLNfnCD9uUa6EfOTwS5BZDC8jpSiTrbXR46uTOXdlz4w3ZGnAdEhbIDqdTdbEcg2dicgv07WSVxzcJNZ3Ttp1bZv9yrXBwseNc-7pVga_kefllsXxM_HlCRXSPqXfgeoKI1Inu1-m5xuIUFJmQxUJBMwmlUzl9pGIBRjDIcoABgP7EFq6PI7C4tgpHIvh4?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-255',
@@ -5547,7 +6138,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-255',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6_wInRnuzWmeaM7lBEv9pA12quGUhxpQh_R_zhPT2bGxzGdO6H90ys7hpzCVaA9ztUKXHgaL7_wGfC7rpowHuELTxblKZXlKGMob7BH2uwQG46WOg3tZuqn6sm2Fad2SXKmveW68u47KqidqnPGUMfYQUY2mL_E0h_zDNXi9So4AU99SW7Z3cRHEh-ocrxDqzVTwYi86unmJQIZ7YdnDY-V1gmlA8dQCI_rnY7RAKXYmBI3NDGUZC5fNc?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-256',
@@ -5557,7 +6149,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-256',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6iVjizPrTrN4fi-rI0jMfys0K75uHqUvQbtuDxh2WiZXT65tvAOzQZJW8GG8qGRTY4zqBsTvev-KUQKjpsn6lJh_YJTQ5nJ8RBwocA-XiYJQRdxKxbN5VOHK_0_JMuqJ67EYpUMbiYzMeJo4NK9lASmNGmzJqbEuGnSX8gHjRu4sW-H-enFNjAqkB126oPw5I6n_BgA_X7B2zOV0g37Khxvt1yR2jPgw58nvSLSNEVwZCObY8jCIfoQqE?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-258',
@@ -5567,7 +6160,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-258',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X44QW3bNOzqctALdM76InS_JsiSRPJE8Nz-9fp6tuLh3xXKdn_RwVic9UH-56LoUPg5r0i1iVVAUgcC6kGCoUqzSGmyfqI4jlwqpqqHnXT8-dflJobKompww6EFyGUVtl1TGEoO8VX2LEZdXOUBswf0cRAcmSos_PQDokHevcCzR2cmmKnYDck-Rbg6Org5CT6mz9dkIKrBg6oiSZOnowTuAHezEOpkHrdIGQQoKlWqPrx3-R-lNuYYsOQ?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-259',
@@ -5577,7 +6171,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-259',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5U6CsNiNG2DL_GAu2fYlYpiG4jEVJ3FZBi7s7ldvFKO0OmlJ0Mnr9k-Ago1YZNoKbW85hQ504mSBCormYLoJ3Q4KFlXVUBaQZSUFleWLnEKnrQ2mN1xO18_nehHWFBk5hv_Gm_ooHTpnj9hcVcXIuo5li2k1pKQULApQ0GqFjNYi_g5rlKyqyNznYjMiD6cmB5UXiNo9nVA9q_4cL6zzJuQMqSYQ1YsvQ55ZNHVzTjOcGDAgH-slzoIlc?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-260',
@@ -5587,7 +6182,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-260',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X52H_0CFBWegB5tmXDNO-IWfahOVCZ4pCZlQurYIVwbFu-B33YP3XdDLS5b61TYEosJs7K8BVFv_ELLFftPQrW0Nxhjy08iveH0hQ-wNspLry5pcWv9gp_g_yLc4ajtXWWzXtrqqE7BlpUyUnNQfRlbVS2OPNV8OU6TfU5Azl_X-vyi157Lddd7qSUVHrqhiF7Frn7VYvgQAirzH-NyYIvW_BBBqCg95crHHSpRm_Xmlf_zB1d0UvBiJ30?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-261',
@@ -5597,7 +6193,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-261',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4AAmeNvIgMnNgEpEw980T9IhtmF9xxogJewPuljO83L4eXe0Q7fJtiXuR5dHEfUxUJME89UMMrjwH9G6gBwPxURozF2nQ_I4gqO3XtvBkYFEsJmToare3cr2aWLUX-fR6DXtCDeAe_Uw_iFL1FYQVn7PRT5R3bTrXzw__9bocVHmX1hWxQql1SGmfHbg7tYkLkKzR1RGPAkCNvk0ddgKl90H4eiQy92IImRoBLeLpNpMm9YU67PpF7hvM?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-262',
@@ -5607,7 +6204,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-262',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6pz2uGR9d1RHrd4sd1qgrwEpf643Ekyg4hDfbDI4ZLFjMeGlE-kJ6Wn7K3d3Pxwj6lx5o5ieJa2bEwnOICD64ujOqD26HVmgDHA_Qm44ANP2bnavGLh0FqP53Q2Y-lGOv1Hmja6kU3tJz3-p4kxXwYVdCtFCn9jsJ4a6fyus30C_YJLwWP0XENXtruQYTTleOPK_60J31sx_TDPPkXIsb3ZtV8fhySVbOuJtmIKhmzj7C0i4VQ9xPpNHE?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-263',
@@ -5617,7 +6215,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-263',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7fXq8lFsUbGTr_bnl_3SXiCXiQ693avSPZmWZUcFQmtOzTQ9Q40zLKJPWHFzgoLQwVKkW4c4wNGvI5c6uMt_1p0Gekb-XUs26yejRNKz7SWBnkgzO_CxABOLtnX3xIPdiF5YCc9NWsd8oxO0b68QM4HaH10ReUapu9my0ZWjne1xcIx-2Bgqu9Lr1eRlSb1HeCacxnhgnYV_m9dIvdxGxdM1pD1WdpXV3GBjrp2lMDIkgWAtcBDC9iuWA?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-264',
@@ -5627,7 +6226,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-264',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7d2sylZGZA5qb2WEjSxLfackYlLCe6IuM9l3lqdoe0anziOUplV36lZdxO12GCvZPKE4_FpqZ-kvO_mhePERlzTvA6ocgtqejQXmAKdPcZpAEvzJKsuCYf02XMagpTXktFXS-nmWnU0IjHgZREqarRnygUzsFKKLJxIdRMTHH7e1h4WoerdjyFv0dwdS0P-OOTZGmpIoLFW1qQuGNSRCJChd-DXgLjyVM6MZpYRNOWh7LcH4JJvU7ZX6g?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-265',
@@ -5637,7 +6237,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-265',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X43gkc1cGW65b1X1H-llxVR9n7m31KP3sRvyIJxMTYwmwOz6C2Ab6rzgjlUcClWV8vBYqgUuKK-VSK3tHe2j1r7fCpczRWNrgRMdwFhISVLfOZo3QsWTwrpNonTErfRSgMlrq6vU_SRMHjAeB_2CjUzE2IF4Vp45FMstTdHWlmWmuTTK0YihkJ2IK3M4hPSBs6NiMVZYoxi_tivPHGYBAHt446LAQdxbdW12-1otRCbmGXK3MzBGJ1PNnQ?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-266',
@@ -5647,7 +6248,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-266',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5oSj70y2ZTpAr3IQ4x-XhrnPW-MnbF9amv47EkoS4BvaLMgtEuFRwsDSjZ-PAkc2jIpTT2XSsIM_e6t1s39Sa_wtOhTpx0RFCQjijUm5LtFzGtw2710viW46qut9SnlsknfomQMtqiynr9G1pMzcrgDES4CumWNsgiBHPTTSa3ZfVlnwM3vmNIzLbQz9Fp0Co1rDlMvSEOlsc70f81iJ9nqk_dW2XR01mywQlQATKQ0FhRZowBn4CbBvQ?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-267',
@@ -5657,7 +6259,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-267',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7cQ682I-tA-o1tEJWQx7UZO0vOBU79_8JhkGfnWP_-fjtjyRD6arWV6XjB8wjMjG8V1eYWRJ0-xdGIhIgkOHUirWNM4txNX3xH0X0_dX_4tkdFusQuP9nJjYUhNoFP4mdVUEKIRdefesAy5Tk2n4O9FSoPBb-ej6rrqNUpaJqKl9rRMYZqViSoEtS-iYR8KN8Yc98fHTerPCAhHCquY8NOG9IiY6hvFTbkedx-aRHp3gihA594C4DjaGc?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-268',
@@ -5667,7 +6270,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-268',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5JsdCTnby7oz9b3zf39VY6W8ecnQwypp2ONHcZ-5qeJIheaRKIZUZiflo0Ha2pL2LcCV_o5RYqDyjI9Y0-fM0fAsNGvlyL5MGlx98IQLQoBoKa4GwchFR-s2zRnHaVRgaIkmIvS4LhDrfFZFefqwNlK3JrvdKotPyR-oQJ2lXgDpWt0JmKmqyklRiQv4PT3gACFK_FiFAMzTZCZanrt8S_DWgK4IpV0Bq-x-lsxD_jz_vzjZznzTG5EJE?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-269',
@@ -5677,7 +6281,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-269',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7Fy12OBp-FQAMxvHNoi4AK-hEDusKrl3gmeHD3stk7CqanmufLCJ7nxW4JHnFQbxoUCW-wX6KihoRvwxGcE1RUfzpK7iw4SlCF9BLEgElIiZrMnDC1NzFYxsDLZvPdjXchadgkjOnl4WXzr03xbos89RqbGCrmaCJYsIT48e-FLHnAQlCaXJU_Ok1aPHhCayRaai0s9dQvOlHafYpPosPTYhEqpVO0gZ-6T8AKHjl06QJzAQfoE6zzwWM?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-270',
@@ -5687,7 +6292,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-270',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5XWcxs21v7KI2bhDzYPOGcp0c7HRAAUr6rEoGqVhascU2cDGOfnlKhzyhPPmp-CHA9Id5WKkb3vFYBVES3igxBBnAsznZHJD3Af4ttyU13MN3gujYhJG4N7tRIRw9Ibm8LQSYi0S1bqtlhiMmCJDWgNdI00-hh3XOwi14CXxJ1yF97TxxyLLBUe7goHsrgCqPIXDzIHFVE6QyqjP_q4MRKrcCIUepq1PXt9khlwuDWbPKL6WSNWUHY6kM?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-271',
@@ -5697,7 +6303,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-271',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6xfnII5UC480XOh0CSqNjXPvvAK7RK7UQs4rtZozJsqgfTCOt5L6H8DI2r5Arqdx602uhnbPNkzXfQTAqTbvniHls8maNuYa76WPtUoaZ2QgE1_bMmi_8jDKw1ajWZuiL1LqvgQgT5feGZO54vAcvy-SW-d7JuBZNa1v3DSzMtMXXoWKQWFQDOD_ubj0Gx5VtqZpGdZ0nWXSZ0uerZ1C_G3HPM0CA0BwsbF-mXsU5C0NK97qiYt8PPelY?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-272',
@@ -5707,7 +6314,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-272',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6wQ_7Ok9b0hp3yxC_qiJc4VgSIK2KycMs5zLYGg_nexwu4CKmt2AuMZkvDNyay_mWyjJrmmCBIfEjNFAWzr_OAuoIrfr6FRc_lygr11Ki7MWj_r9Q_qX4-iLf6J7kjVtvPffOvqtXCm7WX3HQESZEOa5gH1w0trMDqtwruWYEWiyphkyLRCkBhr9ulhe5LVvrsgECERX3ioKm-tkapX-PkwItmm9spvXBcvcNyVF_ejZeplIzummOGd44?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-273',
@@ -5717,7 +6325,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-273',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4NIuWK2k6pV1aeYSL5JTUNxCYg13FdoSPLwrhEb1VDlJl6n_ReUn8IxGnzA7l7NSPmLQ4SUfqEzaYcvWmM47HBP6lY0uUdxURoGtrTlgsOAhteXNsBjaNKgfDhSbsDKFbpQZ9SIi9i_WZ50oisipJmVBVGvz5cxtFzdJpe0H8xa0P630dhPspgRqFIJbVqnM2VfmjpbpgLkzw4uZp5qElILGQPkWD6kz4uJxblv5MCcX_AfZhXiJLgtyw?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-274',
@@ -5727,7 +6336,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-274',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6eTl3l8m_7MeAOhXVGeRUoQtDQGhIso2z-BXP9lSC77ejiLndl5SvrKpVSZSE19fMX2B1k0E7OvDexfD58uu1WG0Hqlaw9elWuUpFgSzHXwhirx3jPeidBvvKT-LulxDoGqVgWn17XM7kvZlPRphoWofVFydMoEtURhButXz6I0qvgGAzq4_rdxyM-H5VEjEjPB--4BPE0UCX6HmLOGUozDqKDkjqlp7Tgl2hFOVOZlcDWr3XA460LOGo?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-275',
@@ -5737,7 +6347,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-275',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6WDNHpMOPBNZQ0tiolYtEyPGcF25iMnc4l9POtAgVUDyiaWhXfrrJ4jKAd1wFDdi6c4tSXg5Vcaljmz3cDY82142ID0In7ZKOti7oUrxcku2UcbfUx_y7XvsXPX3TzDDQpW3Sg7K-Q3Y-iGwgLAghtYAxbKOyadmiAhoUI3e9AKfdiJtWWayio5_qr5TWqzkAJ_dsRzqrdV2WpIChX2xTsatGNjnQaADOJyqoz0RnSWqaf6CE6eSSBrNQ?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-276',
@@ -5747,7 +6358,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-276',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X58FpdoRCA99Sne7ZfU9fWC0zMX1VM0dE2Lvj7R-9S0L_u4uHLSXPB5rnitKFGma5m5C4DsPHQ4vKHVBeqBgx78oI5t8Cm_VdK10y3B7BX-cRwONLeFu2tfdr4loDvwjhw8TQi9CjjfVzBxs056geJnycwzrMy8jDDV2_7x-R_c8ozU97-ZjziU1sAOBDdMvuzP3RYyEr2zSf5_mNJOBatxPwXyBwEA5vmjbT7MFxylmKqpda5H1ZotnW0?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-277',
@@ -5757,7 +6369,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-277',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6a-UETJ2A99OszuS75xwwyorZpysG5R04Yln9lIWiZl9sJdAosO2or3ChUdtLxy2JzyGsECfZiT2nmHxW1yuUp7MD3qDkqrEgDGzWW2sm8Z5xWjkY9VhGAT_n2plDv4oKil9sJI6paMAOZpE90SUFxyg8xWbmD5gCsABLKh2m9hU0wPFxuqVqhmrjw5wic77FkgbaXCmtHOurO5piXqX0Z523YOTckYzqtooEzilNpmMyFoLVyPs_IZUE?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-278',
@@ -5767,7 +6380,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-278',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X49aVCLdbRzZv7iY7E7ENbxZJl4-dITEd2KBm2GflouB4C4hsQXgsL_W0xSXW5pit_J9gmbeAnxbqh6MuYGp58_zLrsW_NM7v8oF0Miv87aLn9o0M75A0pLAxFD2Ct-FEfUeMSbAhWcYehAoZgalZMCPWReNLsAOSmOEKEdfDZ4vby74b-AyPtRMLi7hSP4dCn7ORLYPTeEg9prF67ec841xdv5MdgqYOugOz7fsOFCJbsvHLZLTzXREXg?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6m14PccVm0B0AQyqHlMmxgiYHXTMmKVjNjO8hB29X4FwEULIxp9ItKF088miQ2Ug6pRDvRe-ZqYQ_AsaWBDiWg6fgZQ4vOvV4-gpHHCAHnnzIv7Dm4EoqqPpmKsj9NujsGsiWm9pz-29taqn6-engzvVPYJG4Bx23V99Wnl0LpMdGXz3-pW9vCziwZu5RR4leMvIEAlngfEcRSLbIcO2kDp0ShixATdfy1fyKK9441xDSigOOqEm82evc?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-279',
@@ -5777,7 +6391,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-279',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4-91g77jhmkQTx-8dAA1l8g3yMVWR1e0lFA0fYgUO_1mLjQhWzhfAPU9VfbfTvbKxHEiyb8IWmsp-MCThCn5asDjpZp7qnlQD6HtqHlQ0lpM6Mfr2ZtXXZDftiuQnCs83oIinlaPMlb_p9m_QlDikLz8mMnKZZFWDvYtNjQsjCJw8dCsbjZi771AmvN-4J1132RMbesNcbW6ZEBYPDLXQPkWdekXWSKLSgZmVRbbUJeAkcFa-T3hUHaMY?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-280',
@@ -5787,7 +6402,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-280',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X649KNJIc9zDIVsmcylJNRwonYLuG5l7_poyXN12r5tmkbFIG45jvSSdh8kZPF8bQb5XPT0SpyhmJs9nwclw7y2du2FU4w9iiln1GmOdhXk-xtRukzb50UmhCINQavexAo77jvpAfVpKamzShET7P_IrMrpe6i-7bUG8SZhzZ0zZyLPdXJqqzDMsaoX1_8SXkbWJCQWTrSqluVgHU8F7VTqgv-dv-oXj_ah4AUFpwSXaYmMHb0uOYiMsxE?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-281',
@@ -5797,7 +6413,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-281',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7k8zyB5Zl8_h6JFUz2y_NcPltrrR1HLe_v0rhPWSTkYKJYh24N3XuBT99z2DGaSoBdgOZ_IkmR4qkwxOOeWu4UguhwyWSuNDJ1n_Tvmju-MLEE4RasNFwTlWhCUkAZ6EkzyzEkIfL41Gb6sl_UyoSFG4E6huBZwzRpM6AVENpmdPgR53czVSJSJxBeKpCXO5h_l-w6wB7BBHLaSuRSv4l03d8gbEZs0CujYvbnRJ5YN-Fphy9BVtw9Huc?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-282',
@@ -5807,7 +6424,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-282',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4Frq6cmhnEAdINoE51rTFQeE1frX8Emnl_TqoaFUtWbBD0bvUKFwqLClLX_Xv0kyRg0PJ7itIlNBDq44mA8qVIH9-N9qKps57LGU79kYF2u_fYIghSwJavjxmubxq9oKKeEjV0q-tCKsQIZGwlIz6m5VttOhNCXMNgjF4hxukbr_XiVP8_DY0dA26crh9-B-BTF3UFnhVjCNlvPQk-soJLlPfO6FfYRoNPTMaNdThIpnddvDJewc0qWMY?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7vnyJzwOGo5c-PgQ_fUGzpxpaMhPZVG8JQdS6CF87NiiW1rwfUm6ff8_277UEtjcrFKvTljFO8JiL93ejXF94IZvyAZkyhHOBYUbcaZtpvSih-IH8Sj9Yg625Ujw4OdYfoNQpK7W-PAnLoJY70zoMY1iA1OR9QguciR3Svwo8CyeW0rgblkdMzuUYzZneXkgZsP195CysEKACyE_ufqlVcq21taBOkhJgBdx30X4dq-WPzERkkLpltqlY?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-283',
@@ -5817,7 +6435,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-283',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6kdCfpUw2ZicTp5dfEWHroQ_aWol-HJe4LLAn_heQ2uKUSAdbrYgLwFxNds7nBB-LeYukYStsvNa2L8tpCLtufdHIxiEQCVdlGOUKi0WTyctXJrzm0TouDRzLcYy16Lds1WRhNKUkkB7DPid7B1a6HMUMySY82TYJUR8hcvvKiAVyeeFh52r1iSFGdITYolPs3s8_QjJFk_ElZR7SGKz2Zv46wDLthLY5zws0kcaH_LofwO_TsWdHNsaA?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-284',
@@ -5827,7 +6446,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-284',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4vpqO8Gin4FaFSQnRXRTHYUuejdb75j7zeEGFe_0-zz9Dtoq39j7TUak9vq93hW7w4BEaK62vXGrfdw2VxIpeOvzFursfp_2XqudP4Clly6gCxOIR_Ht_AFaMFTUBrG86Eg0YDFVtO0RcUSAxtdk3XYltJIxJKzAbGklG7MVOeL-O1JVSCUMwO5pfo0_g1Fe_ohuS4hTV2iv1FVHfsPXoQyOyG-cJTiyNg6WfYW-3x8asO8ZurYquB1Ak?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-285',
@@ -5837,7 +6457,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-285',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4gu7tOex30PdqEMCseW0HVlhe9IRxKhWdyyVUV3_DBlUj_mhXMIDvrXWdfO37jnvTje2OzPC6rTOvUCzfKfpkwev_rMijKtnt1TCvM4IC6ZUBqeaUozFYiLJVyU_ARZrxdHOXt5bX-5NiATi3-X_SuCKZO6XTFc7RAgAgIXPayuitjQFUvyov07vi9EQO8WmbNR3UkH7I42BcPpJgBDf-jiFGHrpaRMKiCWolgvAitVIr4aJlv6ZxkoM0?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-286',
@@ -5847,7 +6468,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-286',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5bQneWnz-6D876DTJRn2az3SqenaFJufQH_DharFGwJ8d2uKfm0y6Fp_XEXAWSOsKafZmaVKjEoA1kPY2snQn1UDIX3WBvDM3BIdRBO-hp1B0Y22XQ1IxzDRy020MteHjUGr7Q-nrPY505YwxfTx80GXfFn_7YD18i1LKbu8nZ4HeEE37q-0ihKbi5cy61kY1XQqeciDK7jS3Wlv-iBKjqeOjHhJC0WrgqEtilvTxEy65U9YYYPZNzZgU?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-287',
@@ -5857,7 +6479,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-287',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5lp05PKb1u0gA1JFnwtcHXZ9rj9D1iIimdsCdV4e5bxuWYYCtW3Rr5lUefi0-oRuMT24nwRmPnwHXb_YjXYFe9ljWKeRyiW3frlUjYbyrEKyS7_bNLf2vr_uHD1bNynOcNP1B7Udc7LP0Ou8trfKD6CBMifjq2DH8zi6GpLosRsaEvAkv0ZIl7iEqOnn0Sgb0O4UuZErHOdtwahgAIGD4O9hzGcfTT6q7hT5kAlKdL4u3VVGJL-nMYbBQ?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-288',
@@ -5867,7 +6490,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-288',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4W8JAbp7o9s7f05i1CU-ve60ES497fCG0lhLpLHANEg6Cru1aSHpkCS7EXGcg-sI1yg5nW0VPOOEXj5yyNJdMpmOV9xVb0-fVl7ysmP-L6Q-uLgUQlCPe2fwlvnGiDrXmfQZa_L3HapAJTQzvP91dJqlV3UhVr6sI5oWXzisYiqInRvvyq4wAlmYWirnMZ6e4yaqqxQaWALKqgNc6S301V_9DZRKN0vo5VSlSjG53eP2Fy7pX3oeiuSDo?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-289',
@@ -5877,7 +6501,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-289',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4z_SXiAaOFqDHhUo7Ep_lxFujcYJN2aeZeGqAERqXUNIrGqWZ8xYy8hfLJCQ7erSjZ3bTxuWSQTIG4IXW7chmf6syAHIJH03rRbv2_GgooVfnomBAqtay25bFPNsZqfKuRmHWzwRKtLJjUaxiXWioKuCAEsMcRspReGQebzlcEcx7sHIf1U_JUTpvmlOf3Y0bQ00vrOykB07cu61ndausjN3MsPk7w0UotkrQdwMfxxbGoWiWRg_Qtp3Y?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-290',
@@ -5887,7 +6512,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-290',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5KbNOYEC58d9LTHpGcpacEKb3p1eSCRcCRVdTrliEf6e_RVxZ81RJr4VFOFrgVQcO-oVJAom-a37BB92G5ZZzd_9HcrExxbprPCTMl2lh8n8vS0IVS-ZFXiRIE3iNkUN30bh39colpUYUwuvOBjRreFVQsz9kuEzFLpZ2btFke-0grsJIOt9GAvN328K_YGeP6WIjAOs1FMQADMV-Wh-tzaKjUve1o-39LDgcOC6B0D4Y1lMiKMP0rnyY?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-291',
@@ -5897,7 +6523,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-291',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7mPKAZKHdUeZ7sRL86sJjKA348A7LxRJ9vFm_k4aoGVPBKvuNYJ1vp0W9GOYvQ1zqQxALfC56_i7Zxdgux0R0Chq-7VcFyYbRl6PoklTDvaQ3bzTuMeQ5tXzUzlL_RROTyDjiijqf4YMIROzCAqTjj9s432GC_RXvvMCBkRllFkRipx4THUbwqpl6JIXHXWGKUiE0WvyK48ysKnm8_IzRJHhfF8D5qRekQWC8ZoSVIK4nt8e1bPP8lR5c?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-292',
@@ -5907,7 +6534,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-292',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6l0erDZZyhcNv5pCSzM-427ITpJB4aZfwd2eCeqtzDV_yMRHGOP2VEeE6sk7oUAo4ZcGIDnGf1Xgjs0ml0YuR0gUorNFqXgpMuih3SaPKWsRNncYWrGAvpgwBQGG1YbwDeHbZJjmbrkMHPDrPCdVzVyP1mqgqyQq6mMxr7Uf8wIjwLTd-aA3NUtdAB1nGWjrEjAgf_ykz3lqt0HOLYSvv2alLAm6DSaRpLXGe4wn99g-2aFn7JQOAq-gA?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-293',
@@ -5917,7 +6545,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-293',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4E7Ztb51ctpzLT9yPzvmw4swk42IY8j_ka4J6YCkj6TROV-o3qiByaWaLfLw_2S12yg18lPQXv4schDHSfIC7P4QhBgmVExzdUjJIJxP3HKYA__eeGkzJQltYNLpbRNEfgtihGhrn0MuR-WPqjvqt2WcyvexTfFmsatrbv1OsC6hgMHCONoqV-Oldli_NrshmwYHwcfMA5NiCKCzTNZ2tjnhIQo1sRibhR7c8y9QyzI9l3x9cTY_edjBo?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-294',
@@ -5927,7 +6556,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-294',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7oNQXNxMMAOVdRFl5oN6Ymjbj-gdEcEAl-Y1m44wGuHR2eK7aLpLdvthqzigQ13fEF_Ct9rDYggWu9DdqtXkUx4_4ldAPJcLAgxoPXOYh0BcF89wqCV6VoQVGysgh3xfZnZmkv7NLHtbzOl7jyUKkHNuwD8-NrQ6p_Iu9L7QOQaawRPL0pCs4VhB0AKfcdFMteNLD0Bk3-XJYl1uxBHYwF--M1tw3NRdSn3_UucVRWuJLcVs-6ZyA1n64?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-295',
@@ -5937,7 +6567,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-295',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7OlXtrimROBRx1uz2sXQ7luQT_Jq1n7yk2n6qiIlU1ANOJM1ybFbRwOKM-jwgB4rP95eU0tSayq7wfYDtOfYFgyI2ELpWgjfNaesfManghAkVgJ6RLl8dhbqKuJONV8oMZnGJlix7qNnlIlvl13sj_vW6rLzO2wsTbH7rAFDWaOr7dmeHlscUtFKJnhkBy8HP1lGpSK82p6y3Rg3l2Ek2tvIYIUv0aDPCSWPhQ8feaB0iUE-J0JuJcFRk?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-296',
@@ -5947,7 +6578,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-296',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6nwfgtdgq3Zt6CxzvI5cEl3r8PwLXvgb31GXpph4IDdxSCU3oescHAr_MLeTjyj_Dh7RAE9OVefGzRXBV-E7PVJofEUKPRmRHJYx7J-gEaoM98CV3nSGGm9FuYhsqfOYGEXbLu7rys6OmhrOzwVvYpKISr7A73Rirg2gj4tZLy9sIkprMmDfROtP5k__hXj-RQwflnPlLodvfqMadZB7fuMGVZe4HSjB5r66d7LZThyIfgP9OExViSGLM?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-297',
@@ -5957,7 +6589,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-297',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6_ZOpMSc05MWj_JHkABzMoN5lC0W71COdWh5I4VI5ePz9JrI7U4k6JL9W6JRIVAdo4JSOi3lbU6hjEMqA7MXJMS8bvOoTZ7YRVSPvB0DW3RVZHp_po2RELN3cfKc9fFMykibloVDl3ejCQkbc9Em2TV1iHkz5NFUBqj1ITUnJMXpTp8ta_mxk5V2vrd0FUd_B6mBHWGYktURSSoGw5d4MbTEJvjU1SrI-b1NJtKL1s2oWQZEyYcGdjE0Q?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X59ThLUskxE1222fBEfaoK3KBqb84lwn2A12mJ0SNjIncGnf5XeZ_EMv7xyRsg557bbHTJXYh3LCAv015Cgf8Dc_VERiFXKGpXtq78_uQdoRJ_YKFrZzXhrdkpZ_uOK25BrhkBSaV5U02by-va2WWhU4x9NpdVOYomotjeu1G10RhXHW1jQTcJ3DiETQd2DFmYbhmc-ji7MEAsm5Dn3ddXDpIhachAk7QN2zgq3X3diMDQC3uDVT83JGlw?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7FaIcfz61fnKvfZqtpcqA6R1plmwnWL36gV1Tnm4cEh50gXogZbiaoj1xgH27YdOsgAx9in3HYJXm4mehJ1-YjIPYG9T-M7ZhEEDifA4NG3Tu2tlruf2HpGVt-roIRcqvH_YGw30qp4HDyyijrDzTfV7ax5nAGHHQRTDguRyicZ0gp9Fahcrufw-HKn7WVzUTiXQ8HXPcTo0Z4L8p5hly9WIFnm_i-LC83T5m1ramX7ouET5K1mDQ8w8s?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X75RcTKxfW2jqVk7MH8yprBcE6-Zcr7AF_J_9oVplCgiBUnFydnSQ7IxjrK_vNgaG2l0MA3FJrZkz0oGXuD-lHig-ugF2y_cOmZTDMoF7TLBChylv9eKx5_-UNgQ59N8Irt0D9MGsSn2snbLmVGyuqZ2jrSO5rFfPP-n3_L2mZ10ktPwesMvcGb3YRYQMddWfEHd9FUvjFIfPXRiTVjF8nd1-uaW4PaE6ptpmi77u6io44UlPOahVsIKO0?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-298',
@@ -5967,7 +6600,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-298',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5498CTeiR_ujP-Kytfx01rxYgG6xDJcBHFhyCEZtDyFY0J3ib7MCQbhYUAu9evCX2hbGFfWl8wYEN2XEzmA312FWUdW6VRtxwq5pgTrB5Ovu2bDuqqlElf12s9oWbhhiAfFxI2X2_qvAH-rSbYagRZvbahelyKfa9wuUnZT2c2uUsgqpWbAXgw03kg3Jy2-Ea3iCcGdufe7RgBHNYM8a3vNwB94TvupspweUIKsVZM6BOaIfNTkOJ5rPw?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-299',
@@ -5977,7 +6611,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-299',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4DNqp733IeAXcBRShlIMAjfeMcVCm0xhX9h_JlfhjvA3he-BaQYkwE2qGapZUrCkVi4qslT_x0XO-CB88X1lmHeEwbhvXsn4pzkIZtRcS4plkcQ-QeaoiRg5quTCf247kRwFsXs8N3aXifBxO4Je2pWhRod51kAiXtw5vNqtjk-vD2_xdPHUtcrItp_xykucDSE2Pw-09nWbz7DBx_ak3GRMnot2XEXtTmHOMZfoid8xiH9i1dok1-uhM?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6-DsMkWdmXm-92NVCSs8p5aidn2WZgbChr5MXFu9squWDODxxHl3wmfZI6tT0cnG77hPKTB9UZUYLdo277JE2q7WYHD2_0GrbmRF_M5J1MCPC5YP7MP7PQvcvVGhr0OnZa422g1ffOXdpxjUcZv_5I1e78f5eNn-op03bj79qIR-VkZscG_iliYMAUucPkEO6f4RfWE0I5b_dI8JYHKWjRJPIXT_Fb5Nd5rvm3d-koG0Z2UiLPH6zNHe8?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7ID20llgTH-UOY2H0Dk6Jk1OmPtc86DfOCYA14iXa2cF0-ITq7TC2dsJsltgLuxkbYZ2VUumNb8OCfOK_D6aXJ2qSNGtoogw7f0GCc7Pqsg4coPPFcFmkcoloDILWwqbkLoxxuAyuxvBSra4KoQ-kxmNrn8GMsNmQQZv54uW6nEXL_XDrSNr-F7P3uX5NOFZ758fqHTo2-KnyQExayUWQFhZDD21_WbnaNYW33Vbeyuyvrfc1zGQzcuh4?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5PzNuuXdWOlzxWH7VQ80ehKMy1BhzDRxqxTv05X4FV6Usnxq9J7xiufo8fnpBFBzxSMPexXuNOKLe79hG5xvB8t00Zfv7PT1bW9xPwPdc9S52X12KusnyA4IsGcOysaU_Qm80Kf1E1tV7_j-vRNLiXWgHbPU687W1y0s2hXKQzMZ351zK6ER7bkym8LfpEBTOj_rjKRTgNPqrlOo4cnZJz_8yOxsLCnv2Jg2iFWHUqg9OvvFRv5V2wS1g?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5KDaXAlTHBOYCSWolEtPSQHLAHIHYq_Dv-54TiNLlRJ0n9ZvqgLt3Ohw4Y_pG6wQrAzTa2t3Br6pR5aekwvQG6_ePzumVY9jB1WL59vJtzHojA0P9mzRYwt-MOx8_5o8nocDHeCkACfmNIQ5dNlH54HY3QpRy8gMrcBdNEwAHuOj5PdwDNjNQwrPKaRqy0hkkCF6Kq_E4FPe9BP_gatox7zlFQHgW1nFQW_gxDhsDgvr-eplL9EW6KygA?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-300',
@@ -5987,7 +6622,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-300',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X69cTrJgrdswsl0Gn5mjHe8qq2ONJGaLXBEmFN67hDMX3_ZGAk7dj9s-gzMJVW2r7NcwGAp8XP0olYFLlsuA0b_1hjAXQV3a_Z58fheB3RCicZurXuunx_D1ZXdoCPqqIdrKh6c6vUJ7UHVg0-d59utZmQa68blSfVDU7pN3ZBgUQgYL4qI36FVNNjEPiQZOGg2p5CP7oX4Vaissos4pCcg5Zg3TT5Dj5VGUMR79cNwY3_4mz22y5IjPL4?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-301',
@@ -5997,7 +6633,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-301',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7iskJtNNVSKF3pQgyw4DFpTSpVvwT7DfrnJ34IEv3HaQfA54obs7gmoEf1Y-gGcZeTrCGyqweJR3MQR6_r8bEzeLD27s70CUFwl9N9Vmms0oL-XE1Sc5QYy8ZUfgEUuYA2imq0Zm6mPzvvPeJepr0OFbXpqFoxunpKNC1NiFiJdiNihdyzw0StcEkWYIgUrF18lYFNtPyu6Fb20GIu39hh17exO_j4-x4QMNTWXKGYmdQGE6SDE89YHew?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-302',
@@ -6007,7 +6644,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-302',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6_J5HQIHSYbRBJEAHsZ4hC0h6kbHSlCt1zwpdBjGlGU98WdC_iHeOaehOTLCBcaGfHqAvD3WpCa7Zupb70YFunQB61DObybDmTHODpqxCqK_nadd8636NFAiYVsuo_5eDqFq2q6124I1FrHBAew5FahzGDNP35yEsfBNLNrJxaU70GtFqX1xFSQXxsoF2qegIXwXnb04Nt5QqhfpLaRfA3WLOx5dAFBmrZV6Tq_tJONTWFpeZ6e1D3-Dw?authuser=0&fife=s16383'],
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-303',
@@ -6016,7 +6654,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'ALABAMA— Excavations of the prehistoric mounds at Moundville by the Alabama Museum of Natural History produced some 400 burials. Walter B. Jones, director of the museum, announced that one skeleton measured seven feet six inches in height. Most of the large skeletons were found in the vicinity of Mound G, with the majority averaging over six feet in height.',
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-303',
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-304',
@@ -6025,7 +6664,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'ONTARIO— Excavations on the Daniel Fredenburg farm along the Grand River in Cayuga Township uncovered a pit containing some 200 skeletons piled in layers, all of gigantic stature. Some measured nine feet, and very few were less than seven feet. Stone axes, skimmers, and large stone pipes in their jaws were found with the remains, with skulls that could easily cover an ordinary person\'s head.',
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-304',
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-305',
@@ -6034,7 +6674,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'PENNSYLVANIA— Excavations at the Sugar Run Indian Mounds in Warren, PA, by state archaeologists and the Smithsonian uncovered rock cists containing uncremated skeletons. Buried with them were sheets of mica, lumps of galena (crystal lead), and fifty-three cache blades. They represent an ancient eastern outpost of mound builders along the Allegheny River corridor who flourished until at least 1000 CE.',
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-305',
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-306',
@@ -6043,7 +6684,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'OKLAHOMA— Archaeological excavations near Langley (Mayes County) and Grove (Delaware County) uncovered tombs of a long-vanished race of mound builders. The skeletal remains were much larger than present-day humans. Perfect balanced obsidian and flint battle points measuring 8-10 inches were discovered along with picture writings showing hunters and Thunderbird pottery designs.',
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-306',
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-307',
@@ -6052,7 +6694,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'ARKANSAS— The Chickasawba Mound stands 25 feet high on the east bank of the Pemiscott River. Excavations uncovered human skeletons measuring eight and ten feet in height, described as relics of a former age. Highly polished pottery and a finely carved vase with exquisite hieroglyphs were discovered with the remains.',
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-307',
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-308',
@@ -6061,7 +6704,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'OHIO— Excavation of a mound (64 ft long by 35 ft wide) in Marion, Ohio, uncovered several skeletons about eight feet deep. In one grave, two skeletons—one male and one female—were buried. The male skeleton measured nine feet in length, and the female measured eight feet. The female was looking downward, and the male was directly on top looking upward.',
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-308',
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-309',
@@ -6070,7 +6714,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'UTAH— A workman digging an irrigation ditch near the Jordan River outside Salt Lake City uncovered a gigantic skeleton measuring 8 feet 6 inches in height. Standing bolt upright eight feet deep, the skull measured 11 inches in diameter and the feet were 19 inches long. Found around the neck was a copper chain with three medallions covered in curious hieroglyphics.',
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-309',
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-310',
@@ -6079,7 +6724,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'FLORIDA— Discovery of 168 bog mummies preserved in acid-neutral peat at Windover Pond, Titusville. Dating back to 7500 BCE, actual brain matter was preserved in over ninety skulls, allowing MRI/CT scans. Skeletons were tightly wrapped in textile and held down by ritual wooden stakes. DNA analysis confirmed Haplogroup X origin, showing links to ancient water burials in northern Europe.',
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-310',
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-311',
@@ -6088,25 +6734,29 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'NEVADA— Discovered in 1940 by Sydney and Georgia Wheeler, the Spirit Cave mummy was preserved under bat guano. Wrapped in tule matting of sophisticated diamond-plaited weave, the male mummy was dressed in a skin robe with leather moccasins. DNA and craniometric analysis by physical anthropologists in 2006 confirmed Nordic/Ainu Caucasian characteristics with no relation to local Paiute-Shoshone tribes.',
     layer: 'Giants / Nephilim / Elongated Skulls / Horns',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-311',
-    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports']
+    sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
+    isApocryphal: true
   },
   {
     id: 'lahmi',
     parentId: 'nephilim-br',
     name: 'Lahmi',
-    description: 'A giant mentioned in biblical narratives. Lineage: Philistine. Parents/Origins: Anak and his wife.'
+    description: 'A giant mentioned in biblical narratives. Lineage: Philistine. Parents/Origins: Anak and his wife.',
+    isApocryphal: true
   },
   {
     id: 'ishbi-benob',
     parentId: 'nephilim-br',
     name: 'Ishbi-Benob',
-    description: 'A giant mentioned in biblical narratives. Lineage: Philistine. Parents/Origins: Rapha and his wife.'
+    description: 'A giant mentioned in biblical narratives. Lineage: Philistine. Parents/Origins: Rapha and his wife.',
+    isApocryphal: true
   },
   {
     id: 'saph',
     parentId: 'nephilim-br',
     name: 'Saph',
-    description: 'A giant mentioned in biblical narratives. Lineage: Philistine.'
+    description: 'A giant mentioned in biblical narratives. Lineage: Philistine.',
+    isApocryphal: true
   },
   {
     id: 'zamzummim',
@@ -6114,7 +6764,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     name: 'Zamzummim',
     description: 'A giant mentioned in biblical narratives. Lineage: Tribe of giants.',
     timelineId: 'zamzummim',
-    sources: ['Genesis 14:5, Deuteronomy 2:20-21']
+    isApocryphal: true,
+    bibleVerses: ['(That also was deemed a land of giants; giants formerly dwelt there, and the Ammonites call them Zamzummim, a people great and many, and tall as the Anakim...) — Deuteronomy 2:20-21 (https://www.biblegateway.com/passage/?search=Deuteronomy+2%3A20-21)']
   },
   {
     id: 'anakim',
@@ -6122,49 +6773,59 @@ export const TERM_TREE_DATA: TermNode[] = [
     name: 'Anakim',
     description: 'A giant mentioned in biblical narratives. Lineage: Tribe of giants. Parents/Origins: Anak and his wife.',
     timelineId: 'anakim',
-    sources: ['Numbers 13:22, Deuteronomy 2:10-11, Joshua 14:15']
+    isApocryphal: true,
+    bibleVerses: ['A people great and tall, the descendants of the Anakim, whom you know, and of whom you have heard it said, \'Who can stand before the descendants of Anak?\' — Deuteronomy 9:2 (https://www.biblegateway.com/passage/?search=Deuteronomy+9%3A2)', 'And there we saw the giants, the sons of Anak, which come of the giants: and we were in our own sight as grasshoppers, and so we were in their sight. — Numbers 13:33 (https://www.biblegateway.com/passage/?search=Numbers+13%3A33)']
   },
   {
     id: 'enakim',
     parentId: 'nephilim-br',
     name: 'Enakim',
-    description: 'A giant mentioned in biblical narratives. Lineage: Tribe of giants. Parents/Origins: Anak and his wife.'
+    description: 'A giant mentioned in biblical narratives. Lineage: Tribe of giants. Parents/Origins: Anak and his wife.',
+    isApocryphal: true,
+    bibleVerses: ['A people great and tall, the descendants of the Anakim, whom you know, and of whom you have heard it said, \'Who can stand before the descendants of Anak?\' — Deuteronomy 9:2 (https://www.biblegateway.com/passage/?search=Deuteronomy+9%3A2)']
   },
   {
     id: 'horim',
     parentId: 'nephilim-br',
     name: 'Horim',
-    description: 'A giant mentioned in biblical narratives. Lineage: Tribe of giants. Parents/Origins: Seir and his wife.'
+    description: 'A giant mentioned in biblical narratives. Lineage: Tribe of giants. Parents/Origins: Seir and his wife.',
+    isApocryphal: true,
+    bibleVerses: ['The Horites also formerly dwelt in Seir, but the descendants of Esau dispossessed them and destroyed them from before them... — Deuteronomy 2:12 (https://www.biblegateway.com/passage/?search=Deuteronomy+2%3A12)']
   },
   {
     id: 'anak',
     parentId: 'nephilim-br',
     name: 'Anak',
-    description: 'A giant mentioned in biblical narratives. Lineage: Son of Arba. Parents/Origins: Arba and his wife.'
+    description: 'A giant mentioned in biblical narratives. Lineage: Son of Arba. Parents/Origins: Arba and his wife.',
+    isApocryphal: true
   },
   {
     id: 'ahiman',
     parentId: 'nephilim-br',
     name: 'Ahiman',
-    description: 'A giant mentioned in biblical narratives. Lineage: Son of Anak. Parents/Origins: Anak and his wife.'
+    description: 'A giant mentioned in biblical narratives. Lineage: Son of Anak. Parents/Origins: Anak and his wife.',
+    isApocryphal: true
   },
   {
     id: 'sheshai',
     parentId: 'nephilim-br',
     name: 'Sheshai',
-    description: 'A giant mentioned in biblical narratives. Lineage: Son of Anak. Parents/Origins: Anak and his wife.'
+    description: 'A giant mentioned in biblical narratives. Lineage: Son of Anak. Parents/Origins: Anak and his wife.',
+    isApocryphal: true
   },
   {
     id: 'talmai',
     parentId: 'nephilim-br',
     name: 'Talmai',
-    description: 'A giant mentioned in biblical narratives. Lineage: Son of Anak. Parents/Origins: Anak and his wife.'
+    description: 'A giant mentioned in biblical narratives. Lineage: Son of Anak. Parents/Origins: Anak and his wife.',
+    isApocryphal: true
   },
   {
     id: 'sihon',
     parentId: 'nephilim-br',
     name: 'Sihon',
-    description: 'A giant mentioned in biblical narratives. Lineage: King of the Amorites. Parents/Origins: Sihon and a human woman.'
+    description: 'A giant mentioned in biblical narratives. Lineage: King of the Amorites. Parents/Origins: Sihon and a human woman.',
+    isApocryphal: true
   },
   {
     id: 'watchers',
@@ -6175,14 +6836,16 @@ export const TERM_TREE_DATA: TermNode[] = [
       { lang: 'Hebrew', original: 'עִירִין', translit: 'Irin', meaning: 'Sentinels / Wakeful Ones' }
     ],
     relatedIds: ['enoch', 'mt-hermon', 'book-of-enoch'],
-    bibleVerses: ['For if God did not spare angels when they sinned, but sent them to hell, putting them in chains of darkness to be held for judgment... — 2 Peter 2:4', 'And the angels who did not keep their positions of authority but abandoned their proper dwelling—these he has kept in darkness, bound with everlasting chains for judgment on the great Day. — Jude 1:6']
+    bibleVerses: ['And the angels, the children of heaven, saw them and lusted after them, and said to one another: \'Come, let us choose us wives from among the children of men and beget us children.\' — 1 Enoch 6:2 (https://www.sacred-texts.com/bib/boe/boe009.htm)'],
+    isApocryphal: true
   },
   {
     id: 'alchemy',
     parentId: 'watchers',
     name: 'Alchemy',
     description: 'The ancient art of transmuting metals and achieving spiritual purification, historically claimed in apocryphal texts to be a forbidden celestial art taught to humans by the Watchers.',
-    relatedIds: ['watchers', 'emerald-tablets']
+    relatedIds: ['watchers', 'emerald-tablets'],
+    bibleVerses: ['And Semjâzâ taught enchantments, and root-clippings, and Armârôs the resolving of enchantments, and Barâqîjâl taught astrology... — 1 Enoch 8:3 (https://www.sacred-texts.com/bib/boe/boe011.htm)']
   },
   {
     id: 'pharmakia',
@@ -6203,7 +6866,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     ],
     relatedIds: ['biblical-figures'],
     bibleVerses: ['A champion named Goliath, who was from Gath, came out of the Philistine camp. His height was six cubits and a span. — 1 Samuel 17:4'],
-    sources: ['First Book of Samuel', 'Historical Chronicles']
+    sources: ['First Book of Samuel', 'Historical Chronicles'],
+    isApocryphal: true
   },
   {
     id: 'og-bashan',
@@ -6214,14 +6878,17 @@ export const TERM_TREE_DATA: TermNode[] = [
       { lang: 'Hebrew', original: 'עוֹג', translit: 'Og', meaning: 'Gigantic / Round' }
     ],
     relatedIds: ['enochian-sites', 'megaliths'],
-    bibleVerses: ['Og king of Bashan was the last of the Rephaim. His bed was decorated with iron and was more than nine cubits long and four cubits wide... — Deuteronomy 3:11']
+    bibleVerses: ['Og king of Bashan was the last of the Rephaim. His bed was decorated with iron and was more than nine cubits long and four cubits wide... — Deuteronomy 3:11'],
+    isApocryphal: true
   },
   {
     id: 'enochian-sites',
-    parentId: 'biblical-enc',
+    parentId: 'biblical-apocryphal',
     name: 'Enochian Sites & Peaks',
     description: 'Geographic markers closely associated with Enochian lore and the landing of the Watchers.',
-    layer: 'Enochian Sites'
+    layer: 'Enochian Sites',
+    secondaryParentIds: ['megaliths-structures'],
+    isApocryphal: true
   },
   {
     id: 'enochian-mount-hermon',
@@ -6230,7 +6897,9 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'The sacred mountain where the 200 Watchers (fallen angels) descended to earth and swore a mutual oath of rebellion in the days of Jared.',
     layer: 'Enochian Sites',
     mapFeatureId: 'enochian-mount-hermon',
-    sources: ['Apocryphal Texts', 'Book of Enoch', 'Historical Gazeteers']
+    sources: ['Apocryphal Texts', 'Book of Enoch', 'Historical Gazeteers'],
+    isApocryphal: true,
+    bibleVerses: ['And they were in all two hundred; who descended in the days of Jared on the summit of Mount Hermon, and they called it Mount Hermon, because they had sworn and bound themselves by mutual imprecations upon it. — 1 Enoch 6:6 (https://www.sacred-texts.com/bib/boe/boe009.htm)']
   },
   {
     id: 'enochian-desert-dudael',
@@ -6239,7 +6908,9 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'The jagged desert pit where the Archangel Raphael bound the chief Watcher Azazel and covered him with darkness, to remain until the Day of Judgment.',
     layer: 'Enochian Sites',
     mapFeatureId: 'enochian-desert-dudael',
-    sources: ['Apocryphal Texts', 'Book of Enoch', 'Historical Gazeteers']
+    sources: ['Apocryphal Texts', 'Book of Enoch', 'Historical Gazeteers'],
+    isApocryphal: true,
+    bibleVerses: ['And the Lord said to Raphael: \'Bind Azazel hand and foot, and cast him into the darkness: and make an opening in the desert, which is in Dudael, and cast him therein.\' — 1 Enoch 10:4 (https://www.sacred-texts.com/bib/boe/boe013.htm)']
   },
   {
     id: 'enochian-gates-of-sheol',
@@ -6248,7 +6919,9 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'One of the traditional locations linked to the portals of the underworld and the prison of the fallen angels visited by Enoch in his journeys.',
     layer: 'Enochian Sites',
     mapFeatureId: 'enochian-gates-of-sheol',
-    sources: ['Apocryphal Texts', 'Book of Enoch', 'Historical Gazeteers']
+    sources: ['Apocryphal Texts', 'Book of Enoch', 'Historical Gazeteers'],
+    isApocryphal: true,
+    bibleVerses: ['And I went from thence to another place, and he showed me in the west another great and high mountain of hard rock. And there were four hollow places in it, deep and very smooth... These hollow places have been created for this very purpose, that the spirits of the souls of the dead should be gathered into them... — 1 Enoch 22:1-3 (https://www.sacred-texts.com/bib/boe/boe025.htm)']
   },
   {
     id: 'enochian-og-kingdom',
@@ -6257,7 +6930,9 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'The ancient kingdom of Bashan, ruled by Og (the last of the Rephaim giants), directly tied to the geographic stronghold of the Nephilim.',
     layer: 'Enochian Sites',
     mapFeatureId: 'enochian-og-kingdom',
-    sources: ['Apocryphal Texts', 'Book of Enoch', 'Historical Gazeteers']
+    sources: ['Apocryphal Texts', 'Book of Enoch', 'Historical Gazeteers'],
+    isApocryphal: true,
+    bibleVerses: ['For only Og king of Bashan remained of the remnant of giants; behold, his bedstead was a bedstead of iron... nine cubits was the length thereof, and four cubits the breadth of it... — Deuteronomy 3:11 (https://www.biblegateway.com/passage/?search=Deuteronomy+3%3A11)', 'And Semjâzâ taught enchantments, and root-clippings... and they bare great giants... who consumed all the acquisitions of men. — 1 Enoch 7:2-3 (https://www.sacred-texts.com/bib/boe/boe010.htm)']
   },
   {
     id: 'watcher_descent',
@@ -6266,7 +6941,9 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'According to the Book of Enoch, 200 angels (Watchers) led by Semjaza descended upon Mount Hermon, swearing an oath to take human wives and teach them forbidden secrets.',
     layer: 'enochian-lore',
     timelineId: 'watcher_descent',
-    sources: ['Book of Enoch 6']
+    sources: ['Apocryphal Texts', 'Book of Enoch', 'Historical Gazeteers'],
+    isApocryphal: true,
+    bibleVerses: ['And it came to pass when the children of men had multiplied that in those days were born unto them beautiful and comely daughters. And the angels, the children of the heaven, saw and lusted after them... — 1 Enoch 6:1-2 (https://www.sacred-texts.com/bib/boe/boe009.htm)']
   },
   {
     id: 'semjaza',
@@ -6275,7 +6952,9 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Leader of the 200 Watchers. He taught humans root-cuttings and enchantments. Later bound by Michael in the valleys of the earth.',
     layer: 'enochian-lore',
     timelineId: 'semjaza',
-    sources: ['Book of Enoch 6-8']
+    sources: ['Apocryphal Texts', 'Book of Enoch', 'Historical Gazeteers'],
+    isApocryphal: true,
+    bibleVerses: ['And Semjâzâ, who was their leader, said unto them: \'I fear ye will not indeed agree to do this deed, and I alone shall have to pay the penalty of a great sin.\' — 1 Enoch 6:3 (https://www.sacred-texts.com/bib/boe/boe009.htm)', 'And Semjâzâ taught enchantments, and root-clippings... — 1 Enoch 8:3 (https://www.sacred-texts.com/bib/boe/boe011.htm)']
   },
   {
     id: 'enoch_ascension',
@@ -6284,7 +6963,9 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'At the age of 365, Enoch was taken by God (translated) and walked with Him. He ascended to heaven, where he recorded the secrets of creation and the judgment of the Watchers.',
     layer: 'enochian-lore',
     timelineId: 'enoch_ascension',
-    sources: ['Genesis 5:24, Book of Enoch']
+    sources: ['Apocryphal Texts', 'Book of Enoch', 'Historical Gazeteers'],
+    isApocryphal: true,
+    bibleVerses: ['And Enoch walked with God: and he was not; for God took him. — Genesis 5:24 (https://www.biblegateway.com/passage/?search=Genesis+5%3A24)', 'By faith Enoch was translated that he should not see death; and was not found, because God had translated him... — Hebrews 11:5 (https://www.biblegateway.com/passage/?search=Hebrews+11%3A5)', 'Before these things Enoch was hidden, and no one of the children of men knew where he was hidden, and where he abode, and what had become of him. — 1 Enoch 12:1 (https://www.sacred-texts.com/bib/boe/boe015.htm)']
   },
   {
     id: 'nephilim_era',
@@ -6293,7 +6974,9 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'The gigantic offspring of the union between the Watchers and human daughters. They consumed the labor of men and filled the earth with violence, leading to the divine decree of the Flood.',
     layer: 'enochian-lore',
     timelineId: 'nephilim_era',
-    sources: ['Genesis 6:4, Book of Enoch 7']
+    sources: ['Apocryphal Texts', 'Book of Enoch', 'Historical Gazeteers'],
+    isApocryphal: true,
+    bibleVerses: ['And they became pregnant, and they bare great giants, whose height was three thousand ells: Who consumed all the acquisitions of men. And when men could no longer sustain them, the giants turned against them and devoured mankind. — 1 Enoch 7:2-4 (https://www.sacred-texts.com/bib/boe/boe010.htm)']
   },
   {
     id: 'mt-hermon',
@@ -6304,7 +6987,9 @@ export const TERM_TREE_DATA: TermNode[] = [
       { lang: 'Hebrew', original: 'הַר חֶרְמוֹν', translit: 'Har Chermon', meaning: 'Sanctuary / Consecrated Peak' }
     ],
     relatedIds: ['watchers', 'ley-lines'],
-    sources: ['Apocryphal Texts', 'Book of Enoch', 'Historical Gazeteers']
+    sources: ['Apocryphal Texts', 'Book of Enoch', 'Historical Gazeteers'],
+    isApocryphal: true,
+    bibleVerses: ['And they were in all two hundred; who descended in the days of Jared on the summit of Mount Hermon, and they called it Mount Hermon, because they had sworn and bound themselves by mutual imprecations upon it. — 1 Enoch 6:6 (https://www.sacred-texts.com/bib/boe/boe009.htm)']
   },
   {
     id: 'cave-machpelah',
@@ -6313,11 +6998,12 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'The burial site of Abraham, Sarah, Isaac, Rebekah, Jacob, and Leah. Rumored to hold tunnels leading deep into the Earth.',
     relatedIds: ['abraham-fig'],
     bibleVerses: ['So the field and the cave in it were deeded to Abraham by the Hittites as a burial place. — Genesis 23:20'],
-    sources: ['Apocryphal Texts', 'Book of Enoch', 'Historical Gazeteers']
+    sources: ['Apocryphal Texts', 'Book of Enoch', 'Historical Gazeteers'],
+    isApocryphal: true
   },
   {
     id: 'biblical-events',
-    parentId: 'biblical-enc',
+    parentId: 'biblical-apocryphal',
     name: 'Biblical Events',
     description: 'Catastrophic events and cosmological milestones recorded in antiquity.',
     layer: 'Biblical Events'
@@ -6327,7 +7013,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     parentId: 'biblical-events',
     name: 'Future Prophecy & Eschatology',
     description: 'Apocalyptic events, biblical prophecies, and cosmological end-time visions such as the New Jerusalem and Armageddon.',
-    sources: ['Canonical Scripture', 'Ancient Historical Chronicles']
+    sources: ['Bible', 'Ancient Historical Chronicles'],
+    bibleVerses: ['And I saw a new heaven and a new earth: for the first heaven and the first earth were passed away... And I John saw the holy city, new Jerusalem, coming down from God out of heaven, prepared as a bride adorned for her husband. — Revelation 21:1-2 (https://www.biblegateway.com/passage/?search=Revelation+21%3A1-2)']
   },
   {
     id: 'rev_tribulation',
@@ -6336,7 +7023,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'A 7-year eschatological period of global distress and divine judgments, marked by the opening of the seven seals, seven trumpets, and seven bowls of wrath.',
     layer: 'future-prophecy',
     timelineId: 'rev_tribulation',
-    sources: ['Revelation 6-16']
+    sources: ['Biblical Prophecy Texts', 'Eschatological Literature'],
+    bibleVerses: ['for then there will be great oppression, such as has not been from the beginning of the world until now, no, nor ever will be. — Matthew 24:21 (https://www.biblegateway.com/passage/?search=Matthew+24%3A21)', 'I told him, “My lord, you know.” He said to me, “These are those who came out of the great tribulation. They washed their robes, and made them white in the Lamb’s blood. — Revelation 7:14 (https://www.biblegateway.com/passage/?search=Revelation+7%3A14)', '“At that time Michael will stand up, the great prince who stands for the children of your people; and there will be a time of trouble, such as never was since there was a nation even to that same time. At that time your people will be delivered, everyone who is found written in the book. — Daniel 12:1 (https://www.biblegateway.com/passage/?search=Daniel+12%3A1)']
   },
   {
     id: 'rev_two_witnesses',
@@ -6345,7 +7033,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Two prophetic witnesses who preach in Jerusalem with power over nature, are killed by the Beast, and rise back to heaven after three and a half days.',
     layer: 'future-prophecy',
     timelineId: 'rev_two_witnesses',
-    sources: ['Revelation 11:3-12']
+    sources: ['Biblical Prophecy Texts', 'Eschatological Literature'],
+    bibleVerses: ['I will give power to my two witnesses, and they will prophesy one thousand two hundred sixty days, clothed in sackcloth.” These are the two olive trees and the two lamp stands, standing before the Lord of the earth. — Revelation 11:3-4 (https://www.biblegateway.com/passage/?search=Revelation+11%3A3-4)', 'After the three and a half days, the breath of life from God entered into them, and they stood on their feet. Great fear fell on those who saw them. I heard a loud voice from heaven saying to them, “Come up here!” They went up into heaven in the cloud, and their enemies saw them. — Revelation 11:11-12 (https://www.biblegateway.com/passage/?search=Revelation+11%3A11-12)']
   },
   {
     id: 'rev_antichrist',
@@ -6354,7 +7043,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'The final 3.5 years (42 months) of the Tribulation where the Beast rules the earth, wages war against the saints, and enforces the Mark of the Beast.',
     layer: 'future-prophecy',
     timelineId: 'rev_antichrist',
-    sources: ['Revelation 13']
+    sources: ['Biblical Prophecy Texts', 'Eschatological Literature'],
+    bibleVerses: ['Then I stood on the sand of the sea. I saw a beast coming up out of the sea, having ten horns and seven heads. On his horns were ten crowns, and on his heads, blasphemous names. The beast which I saw was like a leopard, and his feet were like those of a bear, and his mouth like the mouth of a lion. The dragon gave him his power, his throne, and great authority. — Revelation 13:1-2 (https://www.biblegateway.com/passage/?search=Revelation+13%3A1-2)', 'I saw another beast coming up out of the earth. He had two horns like a lamb, and he spoke like a dragon. He exercises all the authority of the first beast in his presence. He makes the earth and those who dwell in it to worship the first beast, whose fatal wound was healed. — Revelation 13:11-12 (https://www.biblegateway.com/passage/?search=Revelation+13%3A11-12)', 'Let no one deceive you in any way. For it will not be, unless the rebellion comes first, and the man of sin is revealed, the son of destruction, he who opposes and exalts himself against all that is called God or that is worshiped; so that he sits as God in the temple of God, setting himself up as God. — 2 Thessalonians 2:3-4 (https://www.biblegateway.com/passage/?search=2+Thessalonians+2%3A3-4)']
   },
   {
     id: 'rev_second_coming',
@@ -6363,7 +7053,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Christ returns in glory with the armies of heaven on white horses, defeats the beast and the false prophet, and binds Satan in the abyss.',
     layer: 'future-prophecy',
     timelineId: 'rev_second_coming',
-    sources: ['Revelation 19']
+    sources: ['Biblical Prophecy Texts', 'Eschatological Literature'],
+    bibleVerses: ['I saw the heaven opened, and behold, a white horse, and he who sat on it is called Faithful and True. In righteousness he judges and makes war. His eyes are a flame of fire, and on his head are many crowns. He has names written and a name written which no one knows but he himself. He is clothed in a garment sprinkled with blood. His name is called “The Word of God.” The armies which are in heaven followed him on white horses, clothed in white, pure, fine linen. Out of his mouth proceeds a sharp, double-edged sword, that with it he should strike the nations. He will rule them with an iron rod. He treads the wine press of the fierceness of the wrath of God, the Almighty. He has on his garment and on his thigh a name written, “KING OF KINGS, AND LORD OF LORDS.” — Revelation 19:11-16 (https://www.biblegateway.com/passage/?search=Revelation+19%3A11-16)', 'and then the sign of the Son of Man will appear in the sky. Then all the tribes of the earth will mourn, and they will see the Son of Man coming on the clouds of the sky with power and great glory. — Matthew 24:30 (https://www.biblegateway.com/passage/?search=Matthew+24%3A30)', 'who also said, “You men of Galilee, why do you stand looking into the sky? This Jesus, who was received up from you into the sky, will come back in the same way as you saw him going into the sky.” — Acts 1:11 (https://www.biblegateway.com/passage/?search=Acts+1%3A11)']
   },
   {
     id: 'rev_millennial_reign',
@@ -6372,7 +7063,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'A 1,000-year golden age of peace and righteousness where Christ reigns on earth with His saints, and the earth is filled with the knowledge of God.',
     layer: 'future-prophecy',
     timelineId: 'rev_millennial_reign',
-    sources: ['Revelation 20:1-6']
+    sources: ['Biblical Prophecy Texts', 'Eschatological Literature'],
+    bibleVerses: ['I saw thrones, and they sat on them, and judgment was given to them. I saw the souls of those who had been beheaded for the testimony of Jesus, and for the word of God, and such as didn’t worship the beast nor his image, and didn’t receive the mark on their forehead and on their hand. They lived and reigned with Christ for a thousand years. The rest of the dead didn’t live until the thousand years were finished. This is the first resurrection. Blessed and holy is he who has part in the first resurrection. Over these, the second death has no power, but they will be priests of God and of Christ, and will reign with him one thousand years. — Revelation 20:4-6 (https://www.biblegateway.com/passage/?search=Revelation+20%3A4-6)', 'The wolf will live with the lamb, and the leopard will lie down with the young goat; The calf, the young lion, and the fattened calf together; and a little child will lead them. The cow and the bear will graze. Their young ones will lie down together. The lion will eat straw like the ox. The nursing child will play near a cobra’s hole, and the weaned child will put his hand on the viper’s den. They will not hurt nor destroy in all my holy mountain; for the earth will be full of the knowledge of Yahweh, as the waters cover the sea. — Isaiah 11:6-9 (https://www.biblegateway.com/passage/?search=Isaiah+11%3A6-9)']
   },
   {
     id: 'rev_final_judgment',
@@ -6381,7 +7073,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Satan is cast into the Lake of Fire. All the dead, great and small, stand before the Great White Throne and are judged according to their works.',
     layer: 'future-prophecy',
     timelineId: 'rev_final_judgment',
-    sources: ['Revelation 20:11-15']
+    sources: ['Biblical Prophecy Texts', 'Eschatological Literature'],
+    bibleVerses: ['I saw a great white throne, and him who sat on it, from whose face the earth and the heaven fled away. There was found no place for them. I saw the dead, the great and the small, standing before the throne, and they opened books. Another book was opened, which is the book of life. The dead were judged out of the things which were written in the books, according to their works. — Revelation 20:11-12 (https://www.biblegateway.com/passage/?search=Revelation+20%3A11-12)', 'But you, why do you judge your brother? Or you again, why do you despise your brother? For we will all stand before the judgment seat of Christ. — Romans 14:10 (https://www.biblegateway.com/passage/?search=Romans+14%3A10)', 'For we must all be revealed before the judgment seat of Christ; that each one may receive the things in the body, according to what he has done, whether good or bad. — 2 Corinthians 5:10 (https://www.biblegateway.com/passage/?search=2+Corinthians+5%3A10)']
   },
   {
     id: 'rev_new_jerusalem',
@@ -6390,7 +7083,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'God wipes away all tears. The holy city, New Jerusalem, descends out of heaven from God as a bride adorned for her husband, establishing eternity.',
     layer: 'future-prophecy',
     timelineId: 'rev_new_jerusalem',
-    sources: ['Revelation 21-22']
+    sources: ['Biblical Prophecy Texts', 'Eschatological Literature'],
+    bibleVerses: ['I saw a new heaven and a new earth: for the first heaven and the first earth have passed away, and the sea is no more. I saw the holy city, New Jerusalem, coming down out of heaven from God, prepared like a bride adorned for her husband. — Revelation 21:1-2 (https://www.biblegateway.com/passage/?search=Revelation+21%3A1-2)', 'He carried me away in the Spirit to a great and high mountain, and showed me the holy city, Jerusalem, coming down out of heaven from God, having the glory of God. Her light was like a most precious stone, as if it were a jasper stone, clear as crystal; having a great and high wall; having twelve gates, and at the gates twelve angels; and names written on them, which are the names of the twelve tribes of the children of Israel. — Revelation 21:10-12 (https://www.biblegateway.com/passage/?search=Revelation+21%3A10-12)', 'But, according to his promise, we look for new heavens and a new earth, in which righteousness dwells. — 2 Peter 3:13 (https://www.biblegateway.com/passage/?search=2+Peter+3%3A13)']
   },
   {
     id: 'evt-enoch-trans',
@@ -6399,7 +7093,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Enoch was translated to heaven by God without experiencing physical death.',
     layer: 'biblical-events',
     timelineId: 'evt-enoch-trans',
-    sources: ['Genesis 5:24']
+    sources: ['Bible', 'Ancient Historical Chronicles'],
+    bibleVerses: ['Enoch walked with God, and he was not found, for God took him. — Genesis 5:24 (https://www.biblegateway.com/passage/?search=Genesis+5%3A24)', 'By faith, Enoch was taken away, so that he wouldn’t see death, and he was not found, because God translated him. For he has had testimony given to him that before his translation he had been well pleasing to God. — Hebrews 11:5 (https://www.biblegateway.com/passage/?search=Hebrews+11%3A5)']
   },
   {
     id: 'evt-adam-death',
@@ -6408,7 +7103,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'The death of the first man, Adam, at 930 years of age.',
     layer: 'biblical-events',
     timelineId: 'evt-adam-death',
-    sources: ['Genesis 5:5']
+    sources: ['Bible', 'Ancient Historical Chronicles'],
+    bibleVerses: ['And all the days that Adam lived were nine hundred and thirty years: and he died. — Genesis 5:5 (https://www.biblegateway.com/passage/?search=Genesis+5%3A5)']
   },
   {
     id: 'evt-abraham-canaan',
@@ -6417,7 +7113,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'At age 75, Abraham obeys God\'s call to leave Harran and journey to the promised land of Canaan.',
     layer: 'biblical-events',
     timelineId: 'evt-abraham-canaan',
-    sources: ['Genesis 12:4']
+    sources: ['Bible', 'Ancient Historical Chronicles'],
+    bibleVerses: ['So Abram went, as Yahweh had told him. Lot went with him. Abram was seventy-five years old when he departed from Haran. Abram took Sarai his wife, Lot his brother’s son, all their possessions that they had gathered, and the people whom they had acquired in Haran, and they went to go into the land of Canaan. They entered into the land of Canaan. — Genesis 12:4-5 (https://www.biblegateway.com/passage/?search=Genesis+12%3A4-5)', 'By faith, Abraham, when he was called, obeyed to go out to the place which he was to receive for an inheritance. He went out, not knowing where he went. — Hebrews 11:8 (https://www.biblegateway.com/passage/?search=Hebrews+11%3A8)']
   },
   {
     id: 'evt-sodom-gomorrah',
@@ -6426,7 +7123,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Sodom, Gomorrah, and the cities of the plain are destroyed by fire and brimstone from heaven due to wickedness.',
     layer: 'biblical-events',
     timelineId: 'evt-sodom-gomorrah',
-    sources: ['Genesis 19']
+    sources: ['Bible', 'Ancient Historical Chronicles'],
+    bibleVerses: ['Then Yahweh rained on Sodom and on Gomorrah sulfur and fire from Yahweh out of the sky. He overthrew those cities, all the plain, all the inhabitants of the cities, and that which grew on the ground. — Genesis 19:24-25 (https://www.biblegateway.com/passage/?search=Genesis+19%3A24-25)', 'and turning the cities of Sodom and Gomorrah into ashes, condemned them to destruction, having made them an example to those who would live in an ungodly way; — 2 Peter 2:6 (https://www.biblegateway.com/passage/?search=2+Peter+2%3A6)', 'Even as Sodom and Gomorrah, and the cities around them, having, in the same way as these, given themselves over to sexual immorality and gone after strange flesh, are shown as an example, suffering the punishment of eternal fire. — Jude 1:7 (https://www.biblegateway.com/passage/?search=Jude+1%3A7)']
   },
   {
     id: 'evt-binding-isaac',
@@ -6435,7 +7133,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'God commands Abraham to sacrifice his son Isaac on Mount Moriah; Abraham is stopped by an angel at the last second.',
     layer: 'biblical-events',
     timelineId: 'evt-binding-isaac',
-    sources: ['Genesis 22']
+    sources: ['Bible', 'Ancient Historical Chronicles'],
+    bibleVerses: ['They came to the place which God had told him of. Abraham built the altar there, and laid the wood in order, bound Isaac his son, and laid him on the altar, on the wood. Abraham stretched out his hand, and took the knife to kill his son. Yahweh’s angel called to him out of the sky, and said, “Abraham, Abraham!” He said, “Here I am.” He said, “Don’t lay your hand on the boy or do anything to him. For now I know that you fear God, since you have not withheld your son, your only son, from me.” — Genesis 22:9-12 (https://www.biblegateway.com/passage/?search=Genesis+22%3A9-12)', 'By faith, Abraham, being tested, offered up Isaac. Yes, he who had gladly received the promises was offering up his one and only son, to whom it was said, “your offspring will be accounted as from Isaac”; — Hebrews 11:17-18 (https://www.biblegateway.com/passage/?search=Hebrews+11%3A17-18)']
   },
   {
     id: 'evt-joseph-sold',
@@ -6444,7 +7143,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Joseph is sold by his jealous brothers to Ishmaelite merchants for twenty shekels of silver, who take him to Egypt.',
     layer: 'biblical-events',
     timelineId: 'evt-joseph-sold',
-    sources: ['Genesis 37:28']
+    sources: ['Bible', 'Ancient Historical Chronicles'],
+    bibleVerses: ['Midianites who were merchants passed by, and they drew and lifted up Joseph out of the pit, and sold Joseph to the Ishmaelites for twenty pieces of silver. They brought Joseph into Egypt. — Genesis 37:28 (https://www.biblegateway.com/passage/?search=Genesis+37%3A28)', '“The patriarchs, moved with jealousy against Joseph, sold him into Egypt. God was with him, — Acts 7:9 (https://www.biblegateway.com/passage/?search=Acts+7%3A9)']
   },
   {
     id: 'evt-israel-egypt',
@@ -6453,7 +7153,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Jacob and his entire family migrate from Canaan to Goshen in Egypt to escape a severe seven-year famine.',
     layer: 'biblical-events',
     timelineId: 'evt-israel-egypt',
-    sources: ['Genesis 46']
+    sources: ['Bible', 'Ancient Historical Chronicles'],
+    bibleVerses: ['Jacob rose up from Beersheba, and the sons of Israel carried Jacob, their father, their little ones, and their wives, in the wagons which Pharaoh had sent to carry him. They took their livestock, and their goods, which they had gotten in the land of Canaan, and came into Egypt—Jacob, and all his offspring with him, his sons, and his sons’ sons with him, his daughters, and his sons’ daughters, and he brought all his offspring with him into Egypt. — Genesis 46:5-7 (https://www.biblegateway.com/passage/?search=Genesis+46%3A5-7)', 'Joseph sent, and summoned Jacob, his father, and all his relatives, seventy-five souls. Jacob went down into Egypt, and he died, himself and our fathers, — Acts 7:14-15 (https://www.biblegateway.com/passage/?search=Acts+7%3A14-15)']
   },
   {
     id: 'evt-exodus',
@@ -6462,7 +7163,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'The Israelites escape Egyptian bondage under Moses, following the Ten Plagues and the parting of the Red Sea.',
     layer: 'biblical-events',
     timelineId: 'evt-exodus',
-    sources: ['Exodus 12-14']
+    sources: ['Bible', 'Ancient Historical Chronicles'],
+    bibleVerses: ['Now the time that the children of Israel lived in Egypt was four hundred thirty years. At the end of four hundred thirty years, to the day, all of Yahweh’s armies went out from the land of Egypt. — Exodus 12:40-41 (https://www.biblegateway.com/passage/?search=Exodus+12%3A40-41)', 'Moses stretched out his hand over the sea, and Yahweh caused the sea to go back by a strong east wind all night, and made the sea dry land, and the waters were divided. The children of Israel went into the middle of the sea on the dry ground, and the waters were a wall to them on their right hand, and on their left. — Exodus 14:21-22 (https://www.biblegateway.com/passage/?search=Exodus+14%3A21-22)', 'By faith, they passed through the Red Sea as on dry land. When the Egyptians tried to do so, they were swallowed up. — Hebrews 11:29 (https://www.biblegateway.com/passage/?search=Hebrews+11%3A29)']
   },
   {
     id: 'evt-sinai-law',
@@ -6471,7 +7173,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'God speaks the Ten Commandments to Moses and the assembly of Israel at Mount Sinai, establishing the Mosaic Covenant.',
     layer: 'biblical-events',
     timelineId: 'evt-sinai-law',
-    sources: ['Exodus 19-20']
+    sources: ['Bible', 'Ancient Historical Chronicles'],
+    bibleVerses: ['All of Mount Sinai smoked, because Yahweh descended on it in fire; and its smoke ascended like the smoke of a furnace, and the whole mountain quaked greatly. When the sound of the trumpet grew louder and louder, Moses spoke, and God answered him by a voice. Yahweh came down on Mount Sinai, to the top of the mountain. Yahweh called Moses to the top of the mountain, and Moses went up. — Exodus 19:18-20 (https://www.biblegateway.com/passage/?search=Exodus+19%3A18-20)', 'God spoke all these words, saying, “I am Yahweh your God, who brought you out of the land of Egypt, out of the house of bondage. “You shall have no other gods before me. — Exodus 20:1-3 (https://www.biblegateway.com/passage/?search=Exodus+20%3A1-3)']
   },
   {
     id: 'evt-jericho',
@@ -6480,7 +7183,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'After crossing the Jordan River, the walls of Jericho collapse after the Israelite army marches around them carrying the Ark.',
     layer: 'biblical-events',
     timelineId: 'evt-jericho',
-    sources: ['Joshua 6']
+    sources: ['Bible', 'Ancient Historical Chronicles'],
+    bibleVerses: ['So the people shouted and the priests blew the trumpets. When the people heard the sound of the trumpet, the people shouted with a great shout, and the wall fell down flat, so that the people went up into the city, every man straight in front of him, and they took the city. — Joshua 6:20 (https://www.biblegateway.com/passage/?search=Joshua+6%3A20)', 'By faith, the walls of Jericho fell down, after they had been encircled for seven days. — Hebrews 11:30 (https://www.biblegateway.com/passage/?search=Hebrews+11%3A30)']
   },
   {
     id: 'reign-saul',
@@ -6489,7 +7193,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'The reign of the first King of the United Kingdom of Israel.',
     layer: 'biblical-events',
     timelineId: 'reign-saul',
-    sources: ['1 Samuel 10-31']
+    sources: ['Bible', 'Ancient Historical Chronicles'],
+    bibleVerses: ['Then Samuel took the vial of oil, and poured it on his head, and kissed him, and said, “Hasn’t Yahweh anointed you to be prince over his inheritance? — 1 Samuel 10:1 (https://www.biblegateway.com/passage/?search=1+Samuel+10%3A1)', 'Saul was thirty years old when he became king, and he reigned over Israel forty-two years. — 1 Samuel 13:1 (https://www.biblegateway.com/passage/?search=1+Samuel+13%3A1)', 'Afterward they asked for a king, and God gave to them Saul the son of Kish, a man of the tribe of Benjamin, for forty years. — Acts 13:21 (https://www.biblegateway.com/passage/?search=Acts+13%3A21)']
   },
   {
     id: 'reign-david',
@@ -6498,7 +7203,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Reign of King David, builder of Jerusalem and conqueror of the Philistines. Golden age of Israel.',
     layer: 'biblical-events',
     timelineId: 'reign-david',
-    sources: ['2 Samuel, 1 Kings 1-2']
+    sources: ['Bible', 'Ancient Historical Chronicles'],
+    bibleVerses: ['David was thirty years old when he began to reign, and he reigned forty years. In Hebron he reigned over Judah seven years and six months; and in Jerusalem he reigned thirty-three years over all Israel and Judah. — 2 Samuel 5:4-5 (https://www.biblegateway.com/passage/?search=2+Samuel+5%3A4-5)', 'The days that David reigned over Israel were forty years; he reigned seven years in Hebron, and he reigned thirty-three years in Jerusalem. — 1 Kings 2:11 (https://www.biblegateway.com/passage/?search=1+Kings+2%3A11)']
   },
   {
     id: 'reign-solomon-temple',
@@ -6507,7 +7213,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'The building of the First Temple in Jerusalem on Mount Moriah by King Solomon, taking seven years.',
     layer: 'biblical-events',
     timelineId: 'reign-solomon-temple',
-    sources: ['1 Kings 6']
+    sources: ['Bible', 'Ancient Historical Chronicles'],
+    bibleVerses: ['In the four hundred and eightieth year after the children of Israel had come out of the land of Egypt, in the fourth year of Solomon’s reign over Israel, in the month Ziv, which is the second month, he began to build Yahweh’s house. — 1 Kings 6:1 (https://www.biblegateway.com/passage/?search=1+Kings+6%3A1)', 'In the eleventh year, in the month Bul, which is the eighth month, the house was finished throughout all its parts, and according to all its specifications. So he spent seven years building it. — 1 Kings 6:38 (https://www.biblegateway.com/passage/?search=1+Kings+6%3A38)', 'Then Solomon began to build Yahweh’s house at Jerusalem on Mount Moriah, where Yahweh appeared to David his father, which he prepared in the place that David had appointed, on the threshing floor of Ornan the Jebusite. He began to build in the second day of the second month, in the fourth year of his reign. — 2 Chronicles 3:1-2 (https://www.biblegateway.com/passage/?search=2+Chronicles+3%3A1-2)']
   },
   {
     id: 'evt-split-kingdom',
@@ -6516,7 +7223,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Following Solomon\'s death, Israel divides into the Northern Kingdom (Israel) and Southern Kingdom (Judah).',
     layer: 'biblical-events',
     timelineId: 'evt-split-kingdom',
-    sources: ['1 Kings 12']
+    sources: ['Bible', 'Ancient Historical Chronicles'],
+    bibleVerses: ['When all Israel saw that the king didn’t listen to them, the people answered the king, saying, “What portion have we in David? We don’t have an inheritance in the son of Jesse. To your tents, Israel! Now see to your own house, David.” So Israel departed to their tents. But as for the children of Israel who lived in the cities of Judah, Rehoboam reigned over them. Then king Rehoboam sent Adoram, who was over the men subject to forced labor; and all Israel stoned him to death with stones. King Rehoboam hurried to get himself up to his chariot, to flee to Jerusalem. So Israel rebelled against David’s house to this day. When all Israel heard that Jeroboam had returned, they sent and called him to the congregation, and made him king over all Israel. There was no one who followed David’s house, except for the tribe of Judah only. — 1 Kings 12:16-20 (https://www.biblegateway.com/passage/?search=1+Kings+12%3A16-20)', 'When all Israel saw that the king didn’t listen to them, the people answered the king, saying, “What portion have we in David? We don’t have an inheritance in the son of Jesse! Every man to your tents, Israel! Now see to your own house, David.” So all Israel departed to their tents. But as for the children of Israel who lived in the cities of Judah, Rehoboam reigned over them. Then king Rehoboam sent Hadoram, who was over the men subject to forced labor; and the children of Israel stoned him to death with stones. King Rehoboam hurried to get himself up to his chariot, to flee to Jerusalem. So Israel rebelled against David’s house to this day. — 2 Chronicles 10:16-19 (https://www.biblegateway.com/passage/?search=2+Chronicles+10%3A16-19)']
   },
   {
     id: 'evt-fall-samaria',
@@ -6525,7 +7233,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Samaria falls to the Assyrian Empire under Sargon II, leading to the exile of the ten northern tribes (Lost Tribes).',
     layer: 'biblical-events',
     timelineId: 'evt-fall-samaria',
-    sources: ['2 Kings 17']
+    sources: ['Bible', 'Ancient Historical Chronicles'],
+    bibleVerses: ['Then the king of Assyria came up throughout all the land, went up to Samaria, and besieged it three years. In the ninth year of Hoshea the king of Assyria took Samaria, and carried Israel away to Assyria, and placed them in Halah, and on the Habor, the river of Gozan, and in the cities of the Medes. — 2 Kings 17:5-6 (https://www.biblegateway.com/passage/?search=2+Kings+17%3A5-6)', 'In the fourth year of king Hezekiah, which was the seventh year of Hoshea son of Elah king of Israel, Shalmaneser king of Assyria came up against Samaria, and besieged it. At the end of three years they took it. In the sixth year of Hezekiah, which was the ninth year of Hoshea king of Israel, Samaria was taken. The king of Assyria carried Israel away to Assyria, and put them in Halah, and on the Habor, the river of Gozan, and in the cities of the Medes, because they didn’t obey Yahweh their God’s voice, but transgressed his covenant, even all that Moses the servant of Yahweh commanded, and would not hear it or do it. — 2 Kings 18:9-12 (https://www.biblegateway.com/passage/?search=2+Kings+18%3A9-12)']
   },
   {
     id: 'evt-fall-jerusalem',
@@ -6534,7 +7243,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Jerusalem is besieged and destroyed by Nebuchadnezzar II of Babylon. Solomon\'s Temple is burned and the Jews exiled.',
     layer: 'biblical-events',
     timelineId: 'evt-fall-jerusalem',
-    sources: ['2 Kings 25']
+    sources: ['Bible', 'Ancient Historical Chronicles'],
+    bibleVerses: ['Now in the fifth month, on the seventh day of the month, which was the nineteenth year of king Nebuchadnezzar, king of Babylon, Nebuzaradan the captain of the guard, a servant of the king of Babylon, came to Jerusalem. He burned Yahweh’s house, the king’s house, and all the houses of Jerusalem, even every great house, he burned with fire. All the army of the Chaldeans, who were with the captain of the guard, broke down the walls around Jerusalem. Nebuzaradan the captain of the guard carried away captive the residue of the people who were left in the city, and those who fell away, who fell to the king of Babylon, and the residue of the multitude. — 2 Kings 25:8-11 (https://www.biblegateway.com/passage/?search=2+Kings+25%3A8-11)', 'Therefore he brought on them the king of the Chaldeans, who killed their young men with the sword in the house of their sanctuary, and had no compassion on young man or virgin, old man or gray-headed. He gave them all into his hand. All the vessels of God’s house, great and small, and the treasures of Yahweh’s house, and the treasures of the king, and of his princes, all these he brought to Babylon. They burned God’s house, and broke down the wall of Jerusalem, and burned all its palaces with fire, and destroyed all of its valuable vessels. He carried those who had escaped from the sword away to Babylon, and they were servants to him and his sons until the reign of the kingdom of Persia, to fulfill Yahweh’s word by Jeremiah’s mouth, until the land had enjoyed its Sabbaths. As long as it lay desolate, it kept Sabbath, to fulfill seventy years. — 2 Chronicles 36:17-21 (https://www.biblegateway.com/passage/?search=2+Chronicles+36%3A17-21)']
   },
   {
     id: 'evt-temple-rebuilt',
@@ -6543,7 +7253,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Cyrus the Great of Persia conquers Babylon and decrees that the Jewish exiles may return to Jerusalem to rebuild the Temple.',
     layer: 'biblical-events',
     timelineId: 'evt-temple-rebuilt',
-    sources: ['Ezra 1']
+    sources: ['Bible', 'Ancient Historical Chronicles'],
+    bibleVerses: ['Now in the first year of Cyrus king of Persia, that Yahweh’s word by Jeremiah’s mouth might be accomplished, Yahweh stirred up the spirit of Cyrus king of Persia, so that he made a proclamation throughout all his kingdom, and put it also in writing, saying, “Thus says Cyrus king of Persia, ‘Yahweh, the God of heaven, has given me all the kingdoms of the earth; and he has commanded me to build him a house in Jerusalem, which is in Judah. Whoever there is among you of all his people, may his God be with him, and let him go up to Jerusalem, which is in Judah, and build the house of Yahweh, the God of Israel (he is God), which is in Jerusalem. — Ezra 1:1-3 (https://www.biblegateway.com/passage/?search=Ezra+1%3A1-3)', 'The elders of the Jews built and prospered, through the prophesying of Haggai the prophet and Zechariah the son of Iddo. They built and finished it, according to the commandment of the God of Israel, and according to the decree of Cyrus, Darius, and Artaxerxes king of Persia. This house was finished on the third day of the month Adar, which was in the sixth year of the reign of Darius the king. — Ezra 6:14-15 (https://www.biblegateway.com/passage/?search=Ezra+6%3A14-15)']
   },
   {
     id: 'evt-christ-birth',
@@ -6552,7 +7263,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'The birth of Jesus in Bethlehem, Judea, marking the pivot point of the Western calendar.',
     layer: 'biblical-events',
     timelineId: 'evt-christ-birth',
-    sources: ['Luke 2, Matthew 1-2']
+    sources: ['Bible', 'Ancient Historical Chronicles'],
+    bibleVerses: ['Joseph also went up from Galilee, out of the city of Nazareth, into Judea, to David’s city, which is called Bethlehem, because he was of the house and family of David; to enroll himself with Mary, who was pledged to be married to him as wife, being pregnant. While they were there, the day had come for her to give birth. She gave birth to her firstborn son. She wrapped him in bands of cloth, and laid him in a feeding trough, because there was no room for them in the inn. — Luke 2:4-7 (https://www.biblegateway.com/passage/?search=Luke+2%3A4-7)', 'Now the birth of Jesus Christ was like this: After his mother, Mary, was engaged to Joseph, before they came together, she was found pregnant by the Holy Spirit. Joseph, her husband, being a righteous man, and not willing to make her a public example, intended to put her away secretly. But when he thought about these things, behold, an angel of the Lord appeared to him in a dream, saying, “Joseph, son of David, don’t be afraid to take to yourself Mary, your wife, for that which is conceived in her is of the Holy Spirit. She shall give birth to a son. You shall call his name Jesus, for it is he who shall save his people from their sins.” Now all this has happened, that it might be fulfilled which was spoken by the Lord through the prophet, saying, “Behold, the virgin shall be with child, and shall give birth to a son. They shall call his name Immanuel”; which is, being interpreted, “God with us.” Joseph arose from his sleep, and did as the angel of the Lord commanded him, and took his wife to himself; and didn’t know her sexually until she had given birth to her firstborn son. He named him Jesus. — Matthew 1:18-25 (https://www.biblegateway.com/passage/?search=Matthew+1%3A18-25)']
   },
   {
     id: 'evt-crucifixion',
@@ -6561,16 +7273,17 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'The crucifixion, burial, and reported resurrection of Jesus Christ in Jerusalem under Pontius Pilate.',
     layer: 'biblical-events',
     timelineId: 'evt-crucifixion',
-    sources: ['Gospels']
+    sources: ['Bible', 'Ancient Historical Chronicles'],
+    bibleVerses: ['When they came to the place that is called The Skull, they crucified him there with the criminals, one on the right and the other on the left. — Luke 23:33 (https://www.biblegateway.com/passage/?search=Luke+23%3A33)', 'When they had crucified him, they divided his clothing among them, casting lots, — Matthew 27:35 (https://www.biblegateway.com/passage/?search=Matthew+27%3A35)', 'The angel answered the women, “Don’t be afraid, for I know that you seek Jesus, who has been crucified. He is not here, for he has risen, just like he said. Come, see the place where the Lord was lying. — Matthew 28:5-6 (https://www.biblegateway.com/passage/?search=Matthew+28%3A5-6)']
   },
   {
     id: 'creation-evt',
     parentId: 'biblical-events',
     name: 'The Creation',
     description: 'The framing event of Genesis 1, marking the ordering of the cosmos.',
-    bibleVerses: ['In the beginning God created the heavens and the earth. — Genesis 1:1'],
+    bibleVerses: ['In the beginning, God created the heavens and the earth. — Genesis 1:1 (https://www.biblegateway.com/passage/?search=Genesis+1%3A1)', 'God saw everything that he had made, and, behold, it was very good. There was evening and there was morning, a sixth day. — Genesis 1:31 (https://www.biblegateway.com/passage/?search=Genesis+1%3A31)', 'All things were made through him. Without him was not anything made that has been made. — John 1:3 (https://www.biblegateway.com/passage/?search=John+1%3A3)'],
     timelineId: 'evt-creation',
-    sources: ['Canonical Scripture', 'Ancient Historical Chronicles']
+    sources: ['Bible', 'Ancient Historical Chronicles']
   },
   {
     id: 'great-flood',
@@ -6582,9 +7295,9 @@ export const TERM_TREE_DATA: TermNode[] = [
       { lang: 'Greek', original: 'Κατακλυσμός', translit: 'Kataklysmos', meaning: 'Inundation / Wash Down' }
     ],
     relatedIds: ['noah-fig', 'noahs-ark-find', 'gilgamesh-text', 'gobekli-tepe'],
-    bibleVerses: ['Every living thing on the face of the earth was wiped out; people and animals and the creatures that move along the ground and the birds of the air were wiped from the earth. Only Noah was left, and those with him in the ark. — Genesis 7:23'],
+    bibleVerses: ['In the six hundredth year of Noah’s life, in the second month, on the seventeenth day of the month, on the same day all the fountains of the great deep burst open, and the sky’s windows opened. It rained on the earth forty days and forty nights. — Genesis 7:11-12 (https://www.biblegateway.com/passage/?search=Genesis+7%3A11-12)', 'Every living thing was destroyed that was on the surface of the ground, including man, livestock, creeping things, and birds of the sky. They were destroyed from the earth. Only Noah was left, and those who were with him in the ship. — Genesis 7:23 (https://www.biblegateway.com/passage/?search=Genesis+7%3A23)', 'For as in those days which were before the flood they were eating and drinking, marrying and giving in marriage, until the day that Noah entered into the ship, and they didn’t know until the flood came, and took them all away, so will be the coming of the Son of Man. — Matthew 24:38-39 (https://www.biblegateway.com/passage/?search=Matthew+24%3A38-39)'],
     timelineId: 'evt-great-flood',
-    sources: ['Canonical Scripture', 'Ancient Historical Chronicles']
+    sources: ['Bible', 'Ancient Historical Chronicles']
   },
   {
     id: 'babel-evt',
@@ -6592,13 +7305,13 @@ export const TERM_TREE_DATA: TermNode[] = [
     name: 'Tower of Babel',
     description: 'A post-flood project led by Nimrod in the plains of Shinar to build a tower reaching into heaven, resulting in the confusion of tongues.',
     relatedIds: ['nimrod-fig', 'ancient-texts'],
-    bibleVerses: ['Come, let us build ourselves a city, with a tower that reaches to the heavens, so that we may make a name for ourselves; otherwise we will be scattered over the face of the whole earth. — Genesis 11:4'],
+    bibleVerses: ['They said, “Come, let’s build ourselves a city, and a tower whose top reaches to the sky, and let’s make a name for ourselves, lest we be scattered abroad on the surface of the whole earth.” — Genesis 11:4 (https://www.biblegateway.com/passage/?search=Genesis+11%3A4)', 'Come, let’s go down, and there confuse their language, that they may not understand one another’s speech.” So Yahweh scattered them abroad from there on the surface of all the earth. They stopped building the city. Therefore its name was called Babel, because there Yahweh confused the language of all the earth. From there, Yahweh scattered them abroad on the surface of all the earth. — Genesis 11:7-9 (https://www.biblegateway.com/passage/?search=Genesis+11%3A7-9)'],
     timelineId: 'evt-tower-babel',
-    sources: ['Canonical Scripture', 'Ancient Historical Chronicles']
+    sources: ['Bible', 'Ancient Historical Chronicles']
   },
   {
     id: 'biblical-finds',
-    parentId: 'biblical-enc',
+    parentId: 'biblical-apocryphal',
     name: 'Biblical Finds',
     description: 'Archaeological discoveries and artifacts reinforcing or validating biblical historical accounts.',
     layer: 'Biblical Finds'
@@ -6611,7 +7324,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Biblical Finds',
     mapFeatureId: 'archaeology-shroud-of-turin',
     images: ['https://upload.wikimedia.org/wikipedia/commons/2/23/Turin_shroud_positive_and_negative_displaying_original_color_information_708_x_465_pixels_94_KB.jpg'],
-    sources: ['Archaeological Excavation Reports', 'Historical Geography Database']
+    sources: ['Archaeological Excavation Reports', 'Historical Geography Database'],
+    bibleVerses: ['And he bought fine linen, and took him down, and wrapped him in the linen, and laid him in a sepulchre which was hewn out of a rock, and rolled a stone unto the door of the sepulchre. — Mark 15:46 (https://www.biblegateway.com/passage/?search=Mark+15%3A46)']
   },
   {
     id: 'archaeology-noahs-ark-ararat',
@@ -6621,7 +7335,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Biblical Finds',
     mapFeatureId: 'archaeology-noahs-ark-ararat',
     images: ['https://upload.wikimedia.org/wikipedia/commons/1/1a/The_Structure_Claimed_to_be_the_Noah%27s_Ark_near_the_Mount_Ararat_in_Turkey.jpg'],
-    sources: ['Archaeological Excavation Reports', 'Historical Geography Database']
+    sources: ['Archaeological Excavation Reports', 'Historical Geography Database'],
+    bibleVerses: ['And the ark rested in the seventh month, on the seventeenth day of the month, upon the mountains of Ararat. — Genesis 8:4 (https://www.biblegateway.com/passage/?search=Genesis+8%3A4)', 'Make thee an ark of gopher wood; rooms shalt thou make in the ark, and shalt pitch it within and without with pitch. — Genesis 6:14 (https://www.biblegateway.com/passage/?search=Genesis+6%3A14)']
   },
   {
     id: 'archaeology-ark-of-covenant-axum',
@@ -6631,7 +7346,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Biblical Finds',
     mapFeatureId: 'archaeology-ark-of-covenant-axum',
     images: ['https://upload.wikimedia.org/wikipedia/commons/b/bc/ET_Axum_asv2018-01_img31_StMary_of_Zion_Church.jpg'],
-    sources: ['Archaeological Excavation Reports', 'Historical Geography Database']
+    sources: ['Archaeological Excavation Reports', 'Historical Geography Database'],
+    bibleVerses: ['And they shall make an ark of shittim wood: two cubits and a half shall be the length thereof, and a cubit and a half the breadth thereof, and a cubit and a half the height thereof. — Exodus 25:10 (https://www.biblegateway.com/passage/?search=Exodus+25%3A10)', 'And the temple of God was opened in heaven, and there was seen in his temple the ark of his testament... — Revelation 11:19 (https://www.biblegateway.com/passage/?search=Revelation+11%3A19)']
   },
   {
     id: 'archaeology-sodom-gomorrah',
@@ -6641,7 +7357,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Biblical Finds',
     mapFeatureId: 'archaeology-sodom-gomorrah',
     images: ['https://upload.wikimedia.org/wikipedia/commons/1/12/Tall_el-Hammam_Excavation-Jordan_Valley.jpg'],
-    sources: ['Archaeological Excavation Reports', 'Historical Geography Database']
+    sources: ['Archaeological Excavation Reports', 'Historical Geography Database'],
+    bibleVerses: ['Then the Lord rained upon Sodom and upon Gomorrah brimstone and fire from the Lord out of heaven; — Genesis 19:24 (https://www.biblegateway.com/passage/?search=Genesis+19%3A24)', 'Even as Sodom and Gomorrha, and the cities about them in like manner, giving themselves over to fornication, and going after strange flesh, are set forth for an example, suffering the vengeance of eternal fire. — Jude 1:7 (https://www.biblegateway.com/passage/?search=Jude+1%3A7)']
   },
   {
     id: 'archaeology-hezekiahs-tunnel-inscription',
@@ -6651,7 +7368,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Biblical Finds',
     mapFeatureId: 'archaeology-hezekiahs-tunnel-inscription',
     images: ['https://upload.wikimedia.org/wikipedia/commons/a/af/Siloam_Inscription_2.jpg'],
-    sources: ['Archaeological Excavation Reports', 'Historical Geography Database']
+    sources: ['Archaeological Excavation Reports', 'Historical Geography Database'],
+    bibleVerses: ['And the rest of the acts of Hezekiah, and all his might, and how he made a pool, and a conduit, and brought water into the city, are they not written in the book of the chronicles of the kings of Judah? — 2 Kings 20:20 (https://www.biblegateway.com/passage/?search=2+Kings+20%3A20)', 'This same Hezekiah also stopped the upper watercourse of Gihon, and brought it straight down to the west side of the city of David. And Hezekiah prospered in all his works. — 2 Chronicles 32:30 (https://www.biblegateway.com/passage/?search=2+Chronicles+32%3A30)']
   },
   {
     id: 'archaeology-garden-tomb',
@@ -6661,7 +7379,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Biblical Finds',
     mapFeatureId: 'archaeology-garden-tomb',
     images: ['https://upload.wikimedia.org/wikipedia/commons/7/7c/Jerusalem_Garden_Tomb_%2843300924231%29.jpg'],
-    sources: ['Archaeological Excavation Reports', 'Historical Geography Database']
+    sources: ['Archaeological Excavation Reports', 'Historical Geography Database'],
+    bibleVerses: ['Now in the place where he was crucified there was a garden; and in the garden a new sepulchre, wherein was never man yet laid. — John 19:41 (https://www.biblegateway.com/passage/?search=John+19%3A41)']
   },
   {
     id: 'archaeology-dead-sea-scrolls',
@@ -6671,7 +7390,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Biblical Finds',
     mapFeatureId: 'archaeology-dead-sea-scrolls',
     images: ['https://upload.wikimedia.org/wikipedia/commons/a/a6/Dead_Sea_Scrolls.jpg'],
-    sources: ['Archaeological Excavation Reports', 'Historical Geography Database']
+    sources: ['Archaeological Excavation Reports', 'Historical Geography Database'],
+    bibleVerses: ['The grass withereth, the flower fadeth: but the word of our God shall stand for ever. — Isaiah 40:8 (https://www.biblegateway.com/passage/?search=Isaiah+40%3A8)']
   },
   {
     id: 'archaeology-tel-dan-stele',
@@ -6681,7 +7401,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Biblical Finds',
     mapFeatureId: 'archaeology-tel-dan-stele',
     images: ['https://upload.wikimedia.org/wikipedia/commons/4/40/JRSLM_300116_Tel_Dan_Stele_01.jpg'],
-    sources: ['Archaeological Excavation Reports', 'Historical Geography Database']
+    sources: ['Archaeological Excavation Reports', 'Historical Geography Database'],
+    bibleVerses: ['And he went with Joram the son of Ahab to the war against Hazael king of Syria in Ramoth-gilead; and the Syrians wounded Joram. — 2 Kings 8:28 (https://www.biblegateway.com/passage/?search=2+Kings+8%3A28)']
   },
   {
     id: 'archaeology-cyrus-cylinder',
@@ -6691,7 +7412,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Biblical Finds',
     mapFeatureId: 'archaeology-cyrus-cylinder',
     images: ['https://upload.wikimedia.org/wikipedia/commons/e/e5/Cyrus_Cylinder_front.jpg'],
-    sources: ['Archaeological Excavation Reports', 'Historical Geography Database']
+    sources: ['Archaeological Excavation Reports', 'Historical Geography Database'],
+    bibleVerses: ['Thus saith Cyrus king of Persia, The Lord God of heaven hath given me all the kingdoms of the earth; and he hath charged me to build him an house at Jerusalem, which is in Judah. — Ezra 1:2 (https://www.biblegateway.com/passage/?search=Ezra+1%3A2)']
   },
   {
     id: 'archaeology-ketef-hinnom',
@@ -6701,7 +7423,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Biblical Finds',
     mapFeatureId: 'archaeology-ketef-hinnom',
     images: ['https://upload.wikimedia.org/wikipedia/commons/7/70/KetefHinom.jpg'],
-    sources: ['Archaeological Excavation Reports', 'Historical Geography Database']
+    sources: ['Archaeological Excavation Reports', 'Historical Geography Database'],
+    bibleVerses: ['The Lord bless thee, and keep thee: The Lord make his face shine upon thee, and be gracious unto thee: The Lord lift up his countenance upon thee, and give thee peace. — Numbers 6:24-26 (https://www.biblegateway.com/passage/?search=Numbers+6%3A24-26)']
   },
   {
     id: 'archaeology-pilate-stone',
@@ -6711,7 +7434,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Biblical Finds',
     mapFeatureId: 'archaeology-pilate-stone',
     images: ['https://upload.wikimedia.org/wikipedia/commons/e/e1/Pilate_Inscription.JPG'],
-    sources: ['Archaeological Excavation Reports', 'Historical Geography Database']
+    sources: ['Archaeological Excavation Reports', 'Historical Geography Database'],
+    bibleVerses: ['And when they had bound him, they led him away, and delivered him to Pontius Pilate the governor. — Matthew 27:2 (https://www.biblegateway.com/passage/?search=Matthew+27%3A2)']
   },
   {
     id: 'archaeology-pool-of-siloam',
@@ -6721,7 +7445,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Biblical Finds',
     mapFeatureId: 'archaeology-pool-of-siloam',
     images: ['https://upload.wikimedia.org/wikipedia/commons/8/80/City_of_David_-_Pool_of_Siloam_IMG_5931.JPG'],
-    sources: ['Archaeological Excavation Reports', 'Historical Geography Database']
+    sources: ['Archaeological Excavation Reports', 'Historical Geography Database'],
+    bibleVerses: ['And said unto him, Go, wash in the pool of Siloam, (which is by interpretation, Sent.) He went his way therefore, and washed, and came seeing. — John 9:7 (https://www.biblegateway.com/passage/?search=John+9%3A7)', 'But the gate of the fountain repaired Shallun... and the wall of the pool of Siloah by the king\'s garden, and unto the stairs that go down from the city of David. — Nehemiah 3:15 (https://www.biblegateway.com/passage/?search=Nehemiah+3%3A15)']
   },
   {
     id: 'archaeology-mesha-stele',
@@ -6731,7 +7456,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Biblical Finds',
     mapFeatureId: 'archaeology-mesha-stele',
     images: ['https://upload.wikimedia.org/wikipedia/commons/7/7b/P1120870_Louvre_st%C3%A8le_de_M%C3%A9sha_AO5066_rwk.JPG'],
-    sources: ['Archaeological Excavation Reports', 'Historical Geography Database']
+    sources: ['Archaeological Excavation Reports', 'Historical Geography Database'],
+    bibleVerses: ['And Mesha king of Moab was a sheepmaster, and rendered unto the king of Israel an hundred thousand lambs, and an hundred thousand rams, with the wool. But it came to pass, when Ahab was dead, that the king of Moab rebelled against the king of Israel. — 2 Kings 3:4-5 (https://www.biblegateway.com/passage/?search=2+Kings+3%3A4-5)']
   },
   {
     id: 'archaeology-house-of-peter',
@@ -6741,7 +7467,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Biblical Finds',
     mapFeatureId: 'archaeology-house-of-peter',
     images: ['https://upload.wikimedia.org/wikipedia/commons/8/86/Capernaum%2C_Israel_10.jpg'],
-    sources: ['Archaeological Excavation Reports', 'Historical Geography Database']
+    sources: ['Archaeological Excavation Reports', 'Historical Geography Database'],
+    bibleVerses: ['And when Jesus was come into Peter\'s house, he saw his wife\'s mother laid, and sick of a fever. — Matthew 8:14 (https://www.biblegateway.com/passage/?search=Matthew+8%3A14)', 'And leaving Nazareth, he came and dwelt in Capernaum, which is upon the sea coast, in the borders of Zabulon and Nephthalim: — Matthew 4:13 (https://www.biblegateway.com/passage/?search=Matthew+4%3A13)']
   },
   {
     id: 'ark-covenant',
@@ -6766,11 +7493,10 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'ufo-sightings-br',
-    parentId: 'ufos-anomalies',
+    parentId: 'supernatural-anomalies',
     name: 'U.F.O. Sightings',
     description: 'Unidentified Flying Objects or Aerial Phenomena sightings that defy explanation.',
-    layer: 'U.F.O. Sightings',
-    sources: ['MUFON (Mutual UFO Network) Database']
+    layer: 'U.F.O. Sightings'
   },
   {
     id: 'anomaly-UFO-1000',
@@ -6918,11 +7644,10 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'crop-circles-br',
-    parentId: 'ufos-anomalies',
+    parentId: 'supernatural-anomalies',
     name: 'Crop Circles',
     description: 'Complex geometrical patterns pressed into agricultural fields, exhibiting changes in crop nodes and magnetic anomalies.',
-    layer: 'Crop Circles',
-    sources: ['MUFON (Mutual UFO Network) Database']
+    layer: 'Crop Circles'
   },
   {
     id: 'crop-circle-formations',
@@ -7175,7 +7900,10 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Crop Circles',
     mapFeatureId: 'anomaly-Crop-Circles-27',
     sources: ['BLT Research Team Reports', 'Temporary Temples Crop Circle Archives']
-  },
+  }
+];
+
+const chunk_2: any[] = [
   {
     id: 'anomaly-Crop-Circles-28',
     parentId: 'crop-circle-formations',
@@ -9314,7 +10042,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'bigfoot-br',
-    parentId: 'cryptids-hauntings',
+    parentId: 'supernatural-anomalies',
     name: 'Bigfoot / Sasquatch',
     description: 'Large, hairy, bipedal ape-like hominids reported across forested regions.',
     layer: 'Bigfoot Sightings'
@@ -10855,7 +11583,10 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Bigfoot',
     mapFeatureId: 'anomaly-Bigfoot-171',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
-  },
+  }
+];
+
+const chunk_3: any[] = [
   {
     id: 'anomaly-Bigfoot-172',
     parentId: 'bigfoot-sightings-br',
@@ -14425,7 +15156,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'cryptid-sightings-br',
-    parentId: 'cryptids-hauntings',
+    parentId: 'supernatural-anomalies',
     name: 'Cryptid Sightings',
     description: 'Sightings of other legendary or undiscovered creatures whose existence is not confirmed by conventional zoology.',
     translations: [
@@ -14466,7 +15197,10 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Cryptid Sightings',
     mapFeatureId: 'anomaly-Cryptid-Sightings-2',
     sources: ['Regional Cryptid Databases', 'Folklore Society Archives']
-  },
+  }
+];
+
+const chunk_4: any[] = [
   {
     id: 'anomaly-Cryptid-Sightings-3',
     parentId: 'cryptid-sightings-br',
@@ -15065,7 +15799,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'hauntings-br',
-    parentId: 'cryptids-hauntings',
+    parentId: 'supernatural-anomalies',
     name: 'Ghosts & Hauntings',
     description: 'Reports of paranormal occurrences, residual energy, or spirits tied to specific geographic battlefields or buildings.',
     layer: 'Ghosts & Hauntings'
@@ -15280,7 +16014,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'underworld',
-    parentId: 'cryptids-hauntings',
+    parentId: 'supernatural-anomalies',
     name: 'Underworld Entrances',
     description: 'Caverns, underground systems, or structural passages rumored to lead deep into hollow earth tunnels.',
     translations: [
@@ -15288,7 +16022,81 @@ export const TERM_TREE_DATA: TermNode[] = [
       { lang: 'Hebrew', original: 'שְׁאוֹλ', translit: 'Sheol', meaning: 'Abode of the Dead' }
     ],
     relatedIds: ['mt-shasta', 'derinkuyu', 'dumbs'],
-    layer: 'Underworld Entrances'
+    layer: 'Underworld Entrances',
+    secondaryParentIds: ['megaliths-structures']
+  },
+  {
+    id: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-17',
+    parentId: 'underworld',
+    name: 'Guimen Gate\n - Mingshan Mountain',
+    description: 'Chongqing’s Ming Mountain is haunted by Fengdu Ghost City, a temple site dedicated to tales of the underworld influenced by Confucianism, Taoism, and Buddhism. Visitors can find the entrance to Hell at Guimen Gate, which is also known as the Ghost Torturing Pass. According to Chinese mythology, the newly dead must present themselves here to Yanluo Wang, the King of Hell, for his final judgment. Those deemed evil are banished to one of the many torturous realms of Diyu, or Chinese Hell. Fengdu’s gate to Hell has a suitably ominous appearance: it’s black and red with peaked roofs and flanked by 18 sculptures of demons enacting gruesome punishments (the worst level involves being boiled forever in a wok).',
+    layer: 'Portals / Stargates / Underworld / Hollow Earth Entrances',
+    mapFeatureId: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-17',
+    sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
+  },
+  {
+    id: 'tartarus',
+    parentId: 'underworld',
+    name: 'Tartarus',
+    description: 'In Greek mythology, Tartarus is the deep abyss that is used as a dungeon of torment and suffering for the wicked and as the prison for the Titans. Mentioned in the New Testament as the prison where rebellious angels are chained for judgment.',
+    translations: [
+      { lang: 'Greek', original: 'Τάρταρος', translit: 'Tartaros', meaning: 'Deep abyss / Prison of the Titans' }
+    ],
+    relatedIds: ['fallen-angel', 'greek-titans'],
+    bibleVerses: ['For if God did not spare angels when they sinned, but sent them to hell [Greek: tartarōsas], putting them in chains of darkness to be held for judgment... — 2 Peter 2:4 (https://www.biblegateway.com/passage/?search=2+Peter+2%3A4)'],
+    sources: ['Second Epistle of Peter', "Hesiod's Theogony", "Plato's Gorgias"]
+  },
+  {
+    id: 'asphodel',
+    parentId: 'underworld',
+    name: 'Asphodel Meadows',
+    description: 'A section of the ancient Greek underworld where ordinary souls who lived balanced, neutral lives reside. Mentioned in Homer\'s Odyssey as the place where the shades of heroes wander.',
+    translations: [
+      { lang: 'Greek', original: 'Ἀσφοδελὸς λειμών', translit: 'Asphodelos leimōn', meaning: 'Asphodel Meadows' }
+    ],
+    relatedIds: ['underworld'],
+    bibleVerses: ['Then the soul of the swift-footed grandson of Aeacus went away with long strides over the meadow of asphodel... — Homer, Odyssey Book 11 (https://www.sacred-texts.com/cla/hom/ody/ody11.htm)'],
+    sources: ["Homer's Odyssey"]
+  },
+  {
+    id: 'elysium',
+    parentId: 'underworld',
+    name: 'Elysium',
+    description: 'The Elysian Fields, a paradise in the Greek underworld reserved for heroes, demigods, and the exceptionally virtuous. A land of eternal spring, free of rain and snow, ruled by Cronus or Rhadamanthus.',
+    translations: [
+      { lang: 'Greek', original: 'Ἠλύσιον πεδίον', translit: 'Ēlysion pedion', meaning: 'Elysian Plain' }
+    ],
+    relatedIds: ['underworld', 'greek-titans'],
+    bibleVerses: ['But the deathless gods will convey you to the Elysian plain and the ends of the earth, where is fair-haired Rhadamanthus... — Homer, Odyssey Book 4 (https://www.sacred-texts.com/cla/hom/ody/ody04.htm)'],
+    sources: ["Homer's Odyssey", "Virgil's Aeneid"]
+  },
+  {
+    id: 'temple-of-styx',
+    parentId: 'underworld',
+    name: 'Temple of Styx',
+    description: 'A sacred place representing the boundary river Styx separating the physical world from the underworld. In mythology, the river Styx was a daughter of Oceanus, and a deity upon whose waters the gods swore binding oaths.',
+    translations: [
+      { lang: 'Greek', original: 'Στύξ', translit: 'Styx', meaning: 'Shuddering / Hatred' }
+    ],
+    relatedIds: ['underworld', 'oceanus'],
+    bibleVerses: ['Styx, the deathless daughter of Oceanus, came to Olympus... Therefore Zeus made her the great oath of the gods, and her children to live with him always. — Hesiod, Theogony (https://www.sacred-texts.com/cla/hes/theogony.htm)'],
+    sources: ["Hesiod's Theogony", "Homer's Iliad"]
+  },
+  {
+    id: 'at-the-mountains-of-madness',
+    parentId: 'underworld',
+    name: 'At the Mountains of Madness',
+    description: 'HP Lovecraft\'s seminal novella depicting an ancient, abandoned city in Antarctica, serving as a cultural narrative of subterranean cities, hollow earth lore, and interdimensional pre-human civilizations.',
+    relatedIds: ['underworld', 'google-blurred'],
+    sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
+  },
+  {
+    id: 'shogoth',
+    parentId: 'underworld',
+    name: 'Shogoth',
+    description: 'Amorphous, multi-eyed subterranean creatures from Lovecraftian horror, rumored in modern lore to inhabit deep tunnels beneath the ice sheets.',
+    relatedIds: ['underworld'],
+    sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
   },
   {
     id: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-0',
@@ -15459,15 +16267,6 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
   },
   {
-    id: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-17',
-    parentId: 'underworld',
-    name: 'Guimen Gate\n - Mingshan Mountain',
-    description: 'Chongqing’s Ming Mountain is haunted by Fengdu Ghost City, a temple site dedicated to tales of the underworld influenced by Confucianism, Taoism, and Buddhism. Visitors can find the entrance to Hell at Guimen Gate, which is also known as the Ghost Torturing Pass. According to Chinese mythology, the newly dead must present themselves here to Yanluo Wang, the King of Hell, for his final judgment. Those deemed evil are banished to one of the many torturous realms of Diyu, or Chinese Hell. Fengdu’s gate to Hell has a suitably ominous appearance: it’s black and red with peaked roofs and flanked by 18 sculptures of demons enacting gruesome punishments (the worst level involves being boiled forever in a wok).',
-    layer: 'Portals / Stargates / Underworld / Hollow Earth Entrances',
-    mapFeatureId: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-17',
-    sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
-  },
-  {
     id: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-18',
     parentId: 'underworld',
     name: 'Cape Matapan',
@@ -15537,70 +16336,6 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
   },
   {
-    id: 'tartarus',
-    parentId: 'underworld',
-    name: 'Tartarus',
-    description: 'In Greek mythology, Tartarus is the deep abyss that is used as a dungeon of torment and suffering for the wicked and as the prison for the Titans. Mentioned in the New Testament as the prison where rebellious angels are chained for judgment.',
-    translations: [
-      { lang: 'Greek', original: 'Τάρταρος', translit: 'Tartaros', meaning: 'Deep abyss / Prison of the Titans' }
-    ],
-    relatedIds: ['fallen-angel', 'greek-titans'],
-    bibleVerses: ['For if God did not spare angels when they sinned, but sent them to hell [Greek: tartarōsas], putting them in chains of darkness to be held for judgment... — 2 Peter 2:4 (https://www.biblegateway.com/passage/?search=2+Peter+2%3A4)'],
-    sources: ['Second Epistle of Peter', "Hesiod's Theogony", "Plato's Gorgias"]
-  },
-  {
-    id: 'asphodel',
-    parentId: 'underworld',
-    name: 'Asphodel Meadows',
-    description: 'A section of the ancient Greek underworld where ordinary souls who lived balanced, neutral lives reside. Mentioned in Homer\'s Odyssey as the place where the shades of heroes wander.',
-    translations: [
-      { lang: 'Greek', original: 'Ἀσφοδελὸς λειμών', translit: 'Asphodelos leimōn', meaning: 'Asphodel Meadows' }
-    ],
-    relatedIds: ['underworld'],
-    bibleVerses: ['Then the soul of the swift-footed grandson of Aeacus went away with long strides over the meadow of asphodel... — Homer, Odyssey Book 11 (https://www.sacred-texts.com/cla/hom/ody/ody11.htm)'],
-    sources: ["Homer's Odyssey"]
-  },
-  {
-    id: 'elysium',
-    parentId: 'underworld',
-    name: 'Elysium',
-    description: 'The Elysian Fields, a paradise in the Greek underworld reserved for heroes, demigods, and the exceptionally virtuous. A land of eternal spring, free of rain and snow, ruled by Cronus or Rhadamanthus.',
-    translations: [
-      { lang: 'Greek', original: 'Ἠλύσιον πεδίον', translit: 'Ēlysion pedion', meaning: 'Elysian Plain' }
-    ],
-    relatedIds: ['underworld', 'greek-titans'],
-    bibleVerses: ['But the deathless gods will convey you to the Elysian plain and the ends of the earth, where is fair-haired Rhadamanthus... — Homer, Odyssey Book 4 (https://www.sacred-texts.com/cla/hom/ody/ody04.htm)'],
-    sources: ["Homer's Odyssey", "Virgil's Aeneid"]
-  },
-  {
-    id: 'temple-of-styx',
-    parentId: 'underworld',
-    name: 'Temple of Styx',
-    description: 'A sacred place representing the boundary river Styx separating the physical world from the underworld. In mythology, the river Styx was a daughter of Oceanus, and a deity upon whose waters the gods swore binding oaths.',
-    translations: [
-      { lang: 'Greek', original: 'Στύξ', translit: 'Styx', meaning: 'Shuddering / Hatred' }
-    ],
-    relatedIds: ['underworld', 'oceanus'],
-    bibleVerses: ['Styx, the deathless daughter of Oceanus, came to Olympus... Therefore Zeus made her the great oath of the gods, and her children to live with him always. — Hesiod, Theogony (https://www.sacred-texts.com/cla/hes/theogony.htm)'],
-    sources: ["Hesiod's Theogony", "Homer's Iliad"]
-  },
-  {
-    id: 'at-the-mountains-of-madness',
-    parentId: 'underworld',
-    name: 'At the Mountains of Madness',
-    description: 'HP Lovecraft\'s seminal novella depicting an ancient, abandoned city in Antarctica, serving as a cultural narrative of subterranean cities, hollow earth lore, and interdimensional pre-human civilizations.',
-    relatedIds: ['underworld', 'google-blurred'],
-    sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
-  },
-  {
-    id: 'shogoth',
-    parentId: 'underworld',
-    name: 'Shogoth',
-    description: 'Amorphous, multi-eyed subterranean creatures from Lovecraftian horror, rumored in modern lore to inhabit deep tunnels beneath the ice sheets.',
-    relatedIds: ['underworld'],
-    sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
-  },
-  {
     id: 'mt-shasta',
     parentId: 'underworld',
     name: 'Mount Shasta',
@@ -15618,7 +16353,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'megaliths',
-    parentId: 'ancient-sites',
+    parentId: 'megaliths-structures',
     name: 'Megalithic Structures',
     description: 'Massive, precision-engineered stone monuments built in antiquity using stones of immense weight.',
     translations: [
@@ -15942,7 +16677,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'mounds',
-    parentId: 'ancient-sites',
+    parentId: 'megaliths-structures',
     name: 'Burial Mounds & Earthworks',
     description: 'Artificial hills and structural earthworks built by ancient cultures, often aligned with astronomical events.',
     layer: 'Burial Mounds'
@@ -16560,7 +17295,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'petroglyphs-br',
-    parentId: 'ancient-sites',
+    parentId: 'megaliths-structures',
     name: 'Petroglyphs & Cave Art',
     description: 'Images carved or painted onto rock walls, frequently depicting strange humanoid figures, spirals, and entities.',
     translations: [
@@ -16577,7 +17312,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'cave-drawings-br',
-    parentId: 'ancient-sites',
+    parentId: 'megaliths-structures',
     name: 'Cave Drawings',
     description: 'Prehistoric paintings inside deep caverns, dating back to the Ice Age.',
     layer: 'Cave Drawings'
@@ -17553,7 +18288,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'ancient-texts',
-    parentId: 'ancient-sites',
+    parentId: 'megaliths-structures',
     name: 'Ancient Texts & Tablets',
     description: 'Written records from ancient civilizations that preserve historical memories of floods, giants, and celestial deities.',
     layer: 'Ancient Texts'
@@ -17604,7 +18339,9 @@ export const TERM_TREE_DATA: TermNode[] = [
     parentId: 'ancient-texts',
     name: 'Book of Enoch',
     description: 'An ancient Jewish religious work ascribed to Enoch. It contains unique descriptions of the fall of the Watchers, their breeding with humans to create Nephilim, and detailed astronomical grids.',
-    relatedIds: ['enoch', 'watchers', 'mt-hermon']
+    relatedIds: ['enoch', 'watchers', 'mt-hermon'],
+    isApocryphal: true,
+    bibleVerses: ['The words of the blessing of Enoch, wherewith he blessed the elect and righteous, who will be living in the day of tribulation, when all the wicked and godless are to be removed. — 1 Enoch 1:1 (https://www.sacred-texts.com/bib/boe/boe004.htm)']
   },
   {
     id: 'gilgamesh-text',
@@ -17615,7 +18352,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'archaeological-finds-br',
-    parentId: 'ancient-sites',
+    parentId: 'megaliths-structures',
     name: 'Archaeological Finds',
     description: 'Physical objects and artifacts discovered during excavations that challenge historical timelines.',
     layer: 'Archaeological Finds'
@@ -17762,10 +18499,11 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'ley-lines-br',
-    parentId: 'earth-energies',
+    parentId: 'megaliths-structures',
     name: 'Ley Lines & Planetary Grids',
     description: 'Hypothetical straight alignments of ancient megalithic sites, sacred places, and earth energy currents.',
-    layer: 'Ley Lines'
+    layer: 'Ley Lines',
+    secondaryParentIds: ['supernatural-anomalies']
   },
   {
     id: 'anomaly-Ley-Lines-1',
@@ -17885,10 +18623,11 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'dumbs',
-    parentId: 'earth-energies',
+    parentId: 'megaliths-structures',
     name: 'D.U.M.B.\'s',
     description: 'Deep Underground Military Bases alleged to exist across the United States, connected by high-speed subterranean rail lines.',
-    layer: 'D.U.M.B.\'s'
+    layer: 'D.U.M.B.\'s',
+    secondaryParentIds: ['supernatural-anomalies']
   },
   {
     id: 'anomaly-D-U-M-B-s-0',
@@ -18316,7 +19055,10 @@ export const TERM_TREE_DATA: TermNode[] = [
     mapFeatureId: 'anomaly-D-U-M-B-s-44',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Santa_Catalina_Island_%28California%29_by_Sentinel-2%2C_2019-03-30.jpg/1280px-Santa_Catalina_Island_%28California%29_by_Sentinel-2%2C_2019-03-30.jpg'],
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
-  },
+  }
+];
+
+const chunk_5: any[] = [
   {
     id: 'anomaly-D-U-M-B-s-45',
     parentId: 'dumbs',
@@ -18425,7 +19167,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'google-blurred',
-    parentId: 'earth-energies',
+    parentId: 'megaliths-structures',
     name: 'Google Maps Blurs',
     description: 'Secret, blurred, or pixelated locations on digital maps, indicating high-security installations or anomalies.',
     layer: 'Blurred on Google Maps'
@@ -18950,7 +19692,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'craters-br',
-    parentId: 'earth-energies',
+    parentId: 'megaliths-structures',
     name: 'Meteor Impact Craters',
     description: 'Scars of ancient space impacts, some of which triggered global extinction events or localized magnetic anomalies.',
     layer: 'Meteor Impact Craters'
@@ -20680,7 +21422,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'national-parks',
-    parentId: 'earth-energies',
+    parentId: 'megaliths-structures',
     name: 'National Parks & Anomalies',
     description: 'Protected federal reserves that overlay magnetic anomalies, cave networks, and unexplained disappearances (Missing 411 cases).',
     layer: 'National Parks & Reserves'
@@ -21273,4 +22015,13 @@ export const TERM_TREE_DATA: TermNode[] = [
     relatedIds: ['underworld', 'megaliths'],
     sources: ['National Park Service Database', 'USGS Geographic Names Information System']
   }
+];
+
+export const TERM_TREE_DATA: TermNode[] = [
+  ...chunk_0,
+  ...chunk_1,
+  ...chunk_2,
+  ...chunk_3,
+  ...chunk_4,
+  ...chunk_5
 ];

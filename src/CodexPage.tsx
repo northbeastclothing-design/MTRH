@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X } from 'lucide-react';
+import { X, Flag } from 'lucide-react';
 import { TERM_TREE_DATA, TermNode, TranslationInfo } from './termTreeData';
 
-interface TermTreePageProps {
+interface CodexPageProps {
   theme: {
     bg: string;
     bgTransparent: string;
@@ -16,6 +16,8 @@ interface TermTreePageProps {
   isMapDarkMode: boolean;
   onViewOnMap: (layerName: string, featureSearchTerm?: string) => void;
   onViewOnTimeline: (timelineId: string) => void;
+  onFlagItem?: (item: TermNode) => void;
+  onSelectedTermChange?: (node: TermNode | null) => void;
 }
 
 const LAYER_COLORS: Record<string, string> = {
@@ -85,21 +87,64 @@ interface SVGLinePath {
   isRelated: boolean;
 }
 
-export default function TermTreePage({
+const MISSING_IMAGE_URL = '/icons/icon-missing-image.svg';
+
+const cleanAndProxyImageUrl = (url: any) => {
+  if (!url || typeof url !== 'string') return MISSING_IMAGE_URL;
+  
+  const trimmedUrl = url.trim();
+  if (trimmedUrl.includes('icon-missing-image.svg')) return MISSING_IMAGE_URL;
+  
+  if (
+    trimmedUrl.startsWith('/api/proxy') || 
+    trimmedUrl.startsWith('data:') || 
+    trimmedUrl.startsWith('blob:')
+  ) {
+    return trimmedUrl;
+  }
+
+  const lowerUrl = trimmedUrl.toLowerCase();
+  const isWiki = lowerUrl.includes('wikimedia.org') || lowerUrl.includes('wikipedia.org');
+  
+  if (
+    isWiki ||
+    lowerUrl.includes('unsplash.com') ||
+    lowerUrl.includes('cloudfront.net') ||
+    lowerUrl.includes('wonders-of-the-world.net') ||
+    lowerUrl.includes('circleresearcharchive.com')
+  ) {
+    return trimmedUrl;
+  }
+
+  if (trimmedUrl.startsWith('http')) {
+    return `/api/proxy-resource?url=${encodeURIComponent(trimmedUrl)}`;
+  }
+
+  return trimmedUrl;
+};
+
+export default function CodexPage({
   theme,
   isMapDarkMode,
   onViewOnMap,
-  onViewOnTimeline
-}: TermTreePageProps) {
+  onViewOnTimeline,
+  onFlagItem,
+  onSelectedTermChange
+}: CodexPageProps) {
   const [selectedPath, setSelectedPath] = useState<string[]>([]);
   const [hoveredTermId, setHoveredTermId] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [lines, setLines] = useState<SVGLinePath[]>([]);
   const [scrollSize, setScrollSize] = useState({ width: 0, height: 0 });
   const [isRightCollapsed, setIsRightCollapsed] = useState(true);
+  
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const [brokenImages, setBrokenImages] = useState<Record<string, boolean>>({});
+  const [isImageLoading, setIsImageLoading] = useState(false);
 
   const columnsContainerRef = useRef<HTMLDivElement>(null);
   const svgOverlayRef = useRef<SVGSVGElement>(null);
+  const canvasRef = useRef<HTMLDivElement>(null);
 
   // Drag velocity and inertia state
   const dragVelocityRef = useRef({ x: 0, y: 0 });
@@ -115,6 +160,12 @@ export default function TermTreePage({
     if (!activeTermId) return null;
     return TERM_TREE_DATA.find(t => t.id === activeTermId) || null;
   }, [activeTermId]);
+
+  useEffect(() => {
+    if (onSelectedTermChange) {
+      onSelectedTermChange(activeTermNode);
+    }
+  }, [activeTermNode, onSelectedTermChange]);
 
   // Compute terms visible/matched for search query
   // Helper to trace path from node to root
@@ -157,33 +208,16 @@ export default function TermTreePage({
 
   // Layer Color and Icon helpers
   const getNodeColor = (node: TermNode): string => {
-    if (node.layer && LAYER_COLORS[node.layer]) {
-      return LAYER_COLORS[node.layer];
+    let curr = node;
+    while (curr.parentId) {
+      const parent = TERM_TREE_DATA.find(n => n.id === curr.parentId);
+      if (!parent) break;
+      curr = parent;
     }
-    
-    // Assign generic colors to root branches to represent their space
-    if (node.id === 'biblical-enc') return LAYER_COLORS['Biblical Figures'];
-    if (node.id === 'ufos-anomalies') return LAYER_COLORS['U.F.O. Sightings'];
-    if (node.id === 'cryptids-hauntings') return LAYER_COLORS['Cryptid Sightings'];
-    if (node.id === 'ancient-sites') return LAYER_COLORS['Megaliths'];
-    if (node.id === 'earth-energies') return LAYER_COLORS['Ley Lines'];
 
-    let parentId = node.parentId;
-    while (parentId) {
-      const parent = TERM_TREE_DATA.find(n => n.id === parentId);
-      if (parent) {
-        if (parent.layer && LAYER_COLORS[parent.layer]) {
-          return LAYER_COLORS[parent.layer];
-        }
-        // If we reach a root category in the chain, inherit its category color
-        if (parent.id === 'biblical-enc') return LAYER_COLORS['Biblical Figures'];
-        if (parent.id === 'ufos-anomalies') return LAYER_COLORS['U.F.O. Sightings'];
-        if (parent.id === 'cryptids-hauntings') return LAYER_COLORS['Cryptid Sightings'];
-        if (parent.id === 'ancient-sites') return LAYER_COLORS['Megaliths'];
-        if (parent.id === 'earth-energies') return LAYER_COLORS['Ley Lines'];
-      }
-      parentId = parent?.parentId;
-    }
+    if (curr.id === 'biblical-apocryphal') return '#90C2FF'; // Blue (Biblical Figures)
+    if (curr.id === 'megaliths-structures') return '#FFFBA6'; // Yellow/Gold (Megaliths)
+    if (curr.id === 'supernatural-anomalies') return '#C2FFBD'; // Green (U.F.O. Sightings)
     
     return LAYER_COLORS['Default'];
   };
@@ -245,11 +279,19 @@ export default function TermTreePage({
   };
 
   const getNodeIcon = (node: TermNode): string => {
+    if (node.id === 'biblical-apocryphal') return LAYER_ICONS['Biblical Figures'];
+    if (node.id === 'megaliths-structures') return LAYER_ICONS['Megaliths'];
+    if (node.id === 'supernatural-anomalies') return LAYER_ICONS['U.F.O. Sightings'];
+
     if (node.layer && LAYER_ICONS[node.layer]) {
       return LAYER_ICONS[node.layer];
     }
     let parentId = node.parentId;
     while (parentId) {
+      if (parentId === 'biblical-apocryphal') return LAYER_ICONS['Biblical Figures'];
+      if (parentId === 'megaliths-structures') return LAYER_ICONS['Megaliths'];
+      if (parentId === 'supernatural-anomalies') return LAYER_ICONS['U.F.O. Sightings'];
+
       const parent = TERM_TREE_DATA.find(n => n.id === parentId);
       if (parent && parent.layer && LAYER_ICONS[parent.layer]) {
         return LAYER_ICONS[parent.layer];
@@ -257,18 +299,128 @@ export default function TermTreePage({
       parentId = parent?.parentId;
     }
     
-    // Assign generic icons to root branches to represent their space
-    if (node.id === 'biblical-enc') return LAYER_ICONS['Biblical Figures'];
-    if (node.id === 'ufos-anomalies') return LAYER_ICONS['U.F.O. Sightings'];
-    if (node.id === 'cryptids-hauntings') return LAYER_ICONS['Cryptid Sightings'];
-    if (node.id === 'ancient-sites') return LAYER_ICONS['Megaliths'];
-    if (node.id === 'earth-energies') return LAYER_ICONS['Ley Lines'];
-    
     return LAYER_ICONS['Default'];
   };
 
-  // Helper to trace term depth level
+  const hasCanonicalConnection = (node: TermNode): boolean => {
+    // Explicit list of terms/categories that are found in the Bible but also have isApocryphal: true
+    const biblicalExclusions = ['fallen-angel', 'demons', 'nephilim-br', 'watchers', 'giants'];
+    if (biblicalExclusions.includes(node.id)) return true;
+
+    // Check if it has any canonical bible verses
+    if (node.bibleVerses && node.bibleVerses.length > 0) {
+      const canonicalBooks = [
+        'Genesis', 'Exodus', 'Leviticus', 'Numbers', 'Deuteronomy', 'Joshua', 'Judges', 'Ruth',
+        '1 Samuel', '2 Samuel', '1 Kings', '2 Kings', '1 Chronicles', '2 Chronicles', 'Ezra', 'Nehemiah', 'Esther',
+        'Job', 'Psalms', 'Psalm', 'Proverbs', 'Ecclesiastes', 'Song of Solomon', 'Isaiah', 'Jeremiah', 'Lamentations',
+        'Ezekiel', 'Daniel', 'Hosea', 'Joel', 'Amos', 'Obadiah', 'Jonah', 'Micah', 'Nahum', 'Habakkuk',
+        'Zephaniah', 'Haggai', 'Zechariah', 'Malachi',
+        'Matthew', 'Mark', 'Luke', 'John', 'Acts', 'Romans', '1 Corinthians', '2 Corinthians', 'Galatians', 'Ephesians',
+        'Philippians', 'Colossians', '1 Thessalonians', '2 Thessalonians', '1 Timothy', '2 Timothy', 'Titus', 'Philemon',
+        'Hebrews', 'James', '1 Peter', '2 Peter', '1 John', '2 John', '3 John', 'Jude', 'Revelation'
+      ];
+      
+      const hasCanonicalVerse = node.bibleVerses.some(verse => {
+        const parts = verse.split(' — ');
+        if (parts.length < 2) return false;
+        const citation = parts[1].toLowerCase();
+        
+        // Check if citation mentions a canonical book
+        const hasBook = canonicalBooks.some(book => citation.includes(book.toLowerCase()));
+        if (!hasBook) return false;
+        
+        // Exclude apocryphal books that might contain the name (e.g. Enoch, Jubilees, etc.)
+        const isApocryphalWord = 
+          citation.includes('enoch') || 
+          citation.includes('giants') || 
+          citation.includes('jubilees') || 
+          citation.includes('jasher') || 
+          citation.includes('gospel of thomas') || 
+          citation.includes('gospel of peter') || 
+          citation.includes('gospel of mary') || 
+          citation.includes('gospel of judas') ||
+          citation.includes('apocalypse of') ||
+          citation.includes('maccabees') ||
+          citation.includes('esdras') ||
+          citation.includes('tobit') ||
+          citation.includes('judith') ||
+          citation.includes('wisdom of solomon') ||
+          citation.includes('sirach') ||
+          citation.includes('baruch');
+          
+        return !isApocryphalWord;
+      });
+      
+      if (hasCanonicalVerse) return true;
+    }
+
+    // Check if sources mention canonical scripture, bible, or any of the biblical books
+    if (node.sources && node.sources.length > 0) {
+      const canonicalKeywords = [
+        'canonical', 'bible', 'gospel', 'testament', 'scripture',
+        'genesis', 'exodus', 'leviticus', 'numbers', 'deuteronomy', 'joshua', 'judges', 'ruth',
+        'samuel', 'kings', 'chronicles', 'ezra', 'nehemiah', 'esther', 'job', 'psalm', 'proverb',
+        'ecclesiastes', 'isaiah', 'jeremiah', 'lamentations', 'ezekiel', 'daniel', 'hosea', 'joel',
+        'amos', 'obadiah', 'jonah', 'micah', 'nahum', 'habakkuk', 'zephaniah', 'haggai', 'zechariah',
+        'malachi', 'matthew', 'mark', 'luke', 'john', 'acts', 'romans', 'corinthians', 'galatians',
+        'ephesians', 'philippians', 'colossians', 'thessalonians', 'timothy', 'titus', 'philemon',
+        'hebrews', 'james', 'peter', 'jude', 'revelation'
+      ];
+      
+      const hasCanonicalSource = node.sources.some(s => {
+        const lower = s.toLowerCase();
+        
+        // Exclude apocryphal specific mentions
+        if (lower.includes('enoch') || lower.includes('giants') || lower.includes('jubilees') || lower.includes('apocryphal texts only')) {
+          return false;
+        }
+        
+        return canonicalKeywords.some(keyword => lower.includes(keyword));
+      });
+      
+      if (hasCanonicalSource) return true;
+    }
+
+    // Check description for explicit "found in the bible" or "canonical"
+    if (node.description) {
+      const lowerDesc = node.description.toLowerCase();
+      if (lowerDesc.includes('canonical scripture') || 
+          lowerDesc.includes('in the bible') || 
+          lowerDesc.includes('biblical narrative') || 
+          lowerDesc.includes('mentioned in the bible') ||
+          lowerDesc.includes('mentioned in genesis') ||
+          lowerDesc.includes('book of revelation') ||
+          lowerDesc.includes('book of daniel') ||
+          lowerDesc.includes('book of genesis')) {
+        return true;
+      }
+    }
+
+    return false;
+  };
+
+  const isOnlyApocryphal = (node: TermNode): boolean => {
+    if (!node.isApocryphal) return false;
+    
+    // Genuinely biblical terms that also have isApocryphal: true will list 'Bible' in their sources
+    const hasBibleSource = node.sources?.some(s => s.toLowerCase() === 'bible');
+    if (hasBibleSource) return false;
+    
+    const biblicalExclusions = ['fallen-angel', 'demons', 'nephilim-br', 'watchers', 'giants'];
+    if (biblicalExclusions.includes(node.id)) return false;
+    
+    return true;
+  };
+
+  // Helper to trace term depth level dynamically based on active rendering columns
   const getNodeLevel = (node: TermNode): number => {
+    for (let i = 0; i < columns.length; i++) {
+      if (columns[i].nodes.some(n => n.id === node.id)) {
+        return i;
+      }
+    }
+    
+    // Fallback if not found in active rendered columns
     let lvl = 0;
     let curr = node.parentId;
     while (curr) {
@@ -291,7 +443,7 @@ export default function TermTreePage({
     // Subsequent levels based on active selected path
     for (let i = 0; i < selectedPath.length; i++) {
       const currentId = selectedPath[i];
-      const children = TERM_TREE_DATA.filter(n => n.parentId === currentId)
+      const children = TERM_TREE_DATA.filter(n => n.parentId === currentId || n.secondaryParentIds?.includes(currentId))
         .sort((a, b) => a.name.localeCompare(b.name));
       if (children.length > 0) {
         list.push({
@@ -651,6 +803,29 @@ export default function TermTreePage({
     };
   }, []);
 
+  // Parallax grid background effect linked to drag/scroll position
+  useEffect(() => {
+    const container = columnsContainerRef.current;
+    const canvas = canvasRef.current;
+    if (!container || !canvas) return;
+
+    const handleScroll = () => {
+      const scrollLeft = container.scrollLeft;
+      const scrollTop = container.scrollTop;
+      const ratio = 0.7; // moves at 70% of canvas speed (30% lag)
+      const x = scrollLeft * (1 - ratio);
+      const y = scrollTop * (1 - ratio);
+      canvas.style.backgroundPosition = `${x}px ${y}px`;
+    };
+
+    container.addEventListener('scroll', handleScroll);
+    handleScroll();
+
+    return () => {
+      container.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   // Auto-center selected terms vertically within their columns (aligning them to a single horizontal line)
   const isInitialMountRef = useRef(true);
 
@@ -694,6 +869,27 @@ export default function TermTreePage({
     }
   }, [selectedTermId]);
 
+  useEffect(() => {
+    setActiveImageIndex(0);
+    setIsImageLoading(true);
+  }, [activeTermId]);
+
+  const handlePrevImage = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (!activeTermNode || !activeTermNode.images) return;
+    setActiveImageIndex(prev => 
+      prev === 0 ? activeTermNode.images!.length - 1 : prev - 1
+    );
+  };
+
+  const handleNextImage = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (!activeTermNode || !activeTermNode.images) return;
+    setActiveImageIndex(prev => 
+      prev === activeTermNode.images!.length - 1 ? 0 : prev + 1
+    );
+  };
+
   // Poll line positions during slide transitions to ensure SVG paths follow animated columns in real-time
   useEffect(() => {
     let startTime = performance.now();
@@ -709,6 +905,21 @@ export default function TermTreePage({
     frameId = requestAnimationFrame(poll);
     return () => cancelAnimationFrame(frameId);
   }, [selectedPath]);
+
+  const minorLines = [30, 60, 90, 120, 150, 180, 210, 240, 270];
+  const minorStroke = isMapDarkMode ? 'rgba(255,255,255,0.07)' : 'rgba(0,0,0,0.07)';
+  const majorStroke = isMapDarkMode ? 'rgba(255,255,255,0.18)' : 'rgba(0,0,0,0.18)';
+
+  const svgGrid = `data:image/svg+xml,${encodeURIComponent(`
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300">
+  ${minorLines.map(pos => `
+    <line x1="${pos}" y1="0" x2="${pos}" y2="300" stroke="${minorStroke}" stroke-dasharray="2,2" />
+    <line x1="0" y1="${pos}" x2="300" y2="${pos}" stroke="${minorStroke}" stroke-dasharray="2,2" />
+  `).join('')}
+  <line x1="0" y1="0" x2="0" y2="300" stroke="${majorStroke}" stroke-dasharray="4,4" />
+  <line x1="0" y1="0" x2="300" y2="0" stroke="${majorStroke}" stroke-dasharray="4,4" />
+</svg>
+`)}`;
 
   return (
     <div
@@ -918,11 +1129,13 @@ export default function TermTreePage({
       >
         {/* The 2D Canvas */}
         <div
+          ref={canvasRef}
           style={{
             width: '4000px',
             height: '3000px',
             position: 'relative',
-            background: 'transparent'
+            backgroundImage: `url("${svgGrid}")`,
+            backgroundRepeat: 'repeat'
           }}
         >
           {/* SVG connection overlay (background lines) scrolling natively with the columns */}
@@ -1068,7 +1281,7 @@ export default function TermTreePage({
                           border: `1px solid ${theme.border}`,
                           borderRadius: '16px',
                           boxSizing: 'border-box',
-                          color: isSelected ? nodeColor : theme.text, // Text keeps the icon/layer color when clicked
+                          color: isSelected ? '#ffffff' : theme.text, // Text is white when selected over black background
                           transition: 'all 0.2s ease',
                           position: 'relative',
                           zIndex: isSelected ? 15 : 5,
@@ -1097,7 +1310,7 @@ export default function TermTreePage({
                               overflow: 'hidden',
                               textOverflow: 'ellipsis',
                               opacity: 1,
-                              color: isSelected ? nodeColor : theme.text
+                              color: isSelected ? '#ffffff' : theme.text
                             }}
                           >
                             {node.name}
@@ -1153,20 +1366,42 @@ export default function TermTreePage({
                         zIndex: isSelected ? 15 : 5
                       }}
                     >
-                      <span
-                        style={{
-                          fontSize: '10px',
-                          fontWeight: isSelected || isHovered ? 700 : 500,
-                          fontFamily: '"Space Mono", monospace',
-                          letterSpacing: '0.5px',
-                          textTransform: 'uppercase',
-                          whiteSpace: 'nowrap',
-                          overflow: 'hidden',
-                          textOverflow: 'ellipsis'
-                        }}
-                      >
-                        {node.name}
-                      </span>
+                      <div style={{ display: 'flex', alignItems: 'center', minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                        <span
+                          style={{
+                            fontSize: '10px',
+                            fontWeight: isSelected || isHovered ? 700 : 500,
+                            fontFamily: '"Space Mono", monospace',
+                            letterSpacing: '0.5px',
+                            textTransform: 'uppercase',
+                            whiteSpace: 'nowrap',
+                            overflow: 'hidden',
+                            textOverflow: 'ellipsis'
+                          }}
+                        >
+                          {node.name}
+                        </span>
+                        {isOnlyApocryphal(node) && (
+                          <span 
+                            title="Apocryphal / Non-Canonical" 
+                            style={{ 
+                              display: 'inline-flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              fontSize: '11px',
+                              lineHeight: '1',
+                              fontWeight: '900',
+                              color: isSelected || isHovered 
+                                ? '#000000' 
+                                : (isMapDarkMode ? '#ffffff' : '#000000'),
+                              marginLeft: '6px',
+                              flexShrink: 0
+                            }}
+                          >
+                            ✖
+                          </span>
+                        )}
+                      </div>
 
                       {/* Chevron indicators */}
                       {hasChildren && (
@@ -1236,7 +1471,7 @@ export default function TermTreePage({
       <motion.div 
         initial={false}
         animate={{ 
-          right: isRightCollapsed ? -280 : 0,
+          right: isRightCollapsed ? -280 : 20,
           background: isMapDarkMode ? 'rgba(10, 10, 10, 0.85)' : 'rgba(255, 255, 255, 0.85)',
           borderColor: theme.border,
           opacity: 1
@@ -1352,46 +1587,293 @@ export default function TermTreePage({
                   overflowY: 'auto', 
                   overflowX: 'hidden', 
                   textAlign: 'left', 
-                  padding: '24px', 
                   display: 'flex', 
                   flexDirection: 'column', 
-                  gap: '24px',
                   paddingBottom: '40px' 
                 }}
               >
-                {/* Title */}
-                <div>
+                {/* Image Gallery at the very top (styled like map page dossier) */}
+                {activeTermNode.images && activeTermNode.images.length > 0 && (
+                  <div style={{ width: '100%', position: 'relative', borderBottom: `1px solid ${theme.border}`, flexShrink: 0 }}>
+                    <div 
+                      style={{ 
+                        width: '100%', 
+                        height: '260px', 
+                        backgroundColor: isMapDarkMode ? '#0a0a0a' : '#f0f0f0', 
+                        overflow: 'hidden', 
+                        display: 'flex', 
+                        alignItems: 'center', 
+                        justifyContent: 'center', 
+                        position: 'relative'
+                      }}
+                    >
+                      {(() => {
+                        const imgUrl = activeTermNode.images[activeImageIndex];
+                        if (!imgUrl) return null;
+
+                        const isBroken = !!brokenImages[imgUrl];
+                        const imgSrc = isBroken ? MISSING_IMAGE_URL : cleanAndProxyImageUrl(imgUrl);
+
+                        return (
+                          <>
+                            {isImageLoading && !isBroken && (
+                              <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: theme.bg, display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 3 }}>
+                                <div className="loading-spinner" />
+                              </div>
+                            )}
+
+                            <motion.img 
+                              key={`${activeTermNode.id}-${activeImageIndex}`}
+                              initial={{ opacity: 0 }}
+                              animate={{ opacity: isImageLoading ? 0 : 1 }}
+                              transition={{ duration: 0.3 }}
+                              src={imgSrc} 
+                              alt={`${activeTermNode.name} asset viewport`} 
+                              referrerPolicy="no-referrer"
+                              onLoad={() => setIsImageLoading(false)}
+                              onError={() => {
+                                setIsImageLoading(false);
+                                setBrokenImages(prev => ({ ...prev, [imgUrl]: true }));
+                              }}
+                              style={{ 
+                                width: isBroken ? '48px' : '100%', 
+                                height: isBroken ? '48px' : '100%', 
+                                objectFit: isBroken ? 'contain' : 'cover',                     
+                                backgroundColor: 'transparent',           
+                                filter: isBroken ? (isMapDarkMode ? 'invert(1)' : 'none') : 'none'
+                              }}
+                            />
+                          </>
+                        );
+                      })()}
+                      
+                      <div style={{ 
+                        position: 'absolute', 
+                        bottom: '4px', 
+                        left: '4px', right: '4px', 
+                        display: 'flex', 
+                        alignItems: 'center', 
+                        justifyContent: 'space-between', 
+                        zIndex: 2,
+                        pointerEvents: 'none'
+                      }}>
+                        <div style={{ display: 'flex', gap: '4px', flex: 1, justifyContent: 'flex-start', pointerEvents: 'auto' }}>
+                          {activeTermNode.images.length > 1 && (
+                            <>
+                              <motion.button 
+                                whileHover={{ opacity: 0.7 }}
+                                onClick={handlePrevImage} 
+                                style={{ 
+                                  background: theme.bg, 
+                                  border: `1px solid ${theme.border}`, 
+                                  borderRadius: '50%', 
+                                  width: '30px', 
+                                  height: '30px', 
+                                  cursor: 'pointer', 
+                                  padding: '0',
+                                  display: 'flex', 
+                                  alignItems: 'center', 
+                                  justifyContent: 'center',
+                                  boxShadow: 'none',
+                                  fontFamily: '"Space Mono", monospace'
+                                }}
+                              >
+                                <img 
+                                  src="/icons/icon-arrow-left.svg" 
+                                  style={{ width: '6px', height: '12px', filter: isMapDarkMode ? 'brightness(0) invert(1)' : 'brightness(0)' }} 
+                                  alt="prev" 
+                                />
+                              </motion.button>
+                              <motion.button 
+                                whileHover={{ opacity: 0.7 }}
+                                onClick={handleNextImage} 
+                                style={{ 
+                                  background: theme.bg, 
+                                  border: `1px solid ${theme.border}`, 
+                                  borderRadius: '50%', 
+                                  width: '30px', 
+                                  height: '30px', 
+                                  cursor: 'pointer', 
+                                  padding: '0',
+                                  display: 'flex', 
+                                  alignItems: 'center', 
+                                  justifyContent: 'center',
+                                  boxShadow: 'none',
+                                  fontFamily: '"Space Mono", monospace'
+                                }}
+                              >
+                                <img 
+                                  src="/icons/icon-arrow-right.svg" 
+                                  style={{ width: '6px', height: '12px', filter: isMapDarkMode ? 'brightness(0) invert(1)' : 'brightness(0)' }} 
+                                  alt="next" 
+                                />
+                              </motion.button>
+                            </>
+                          )}
+                        </div>
+
+                        {activeTermNode.images.length > 1 && (
+                          <div style={{ display: 'flex', flex: 1, justifyContent: 'center' }}>
+                            <div style={{ 
+                              background: 'rgba(0, 0, 0, 0.65)', 
+                              backdropFilter: 'blur(2px)',
+                              color: '#ffffff', 
+                              fontSize: '11px', 
+                              fontFamily: '"Space Mono", monospace',
+                              fontWeight: '700',
+                              height: '30px',
+                              display: 'flex',
+                              alignItems: 'center',
+                              padding: '0 16px', 
+                              borderRadius: '15px', 
+                              letterSpacing: '0.5px',
+                              textAlign: 'center',
+                              whiteSpace: 'nowrap'
+                            }}>
+                              {activeImageIndex + 1}/{activeTermNode.images.length}
+                            </div>
+                          </div>
+                        )}
+                        <div style={{ display: 'flex', flex: 1, justifyContent: 'flex-end' }} />
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Rest of the details content padded beneath the image gallery */}
+                <div 
+                  style={{ 
+                    padding: '24px', 
+                    textAlign: 'left',
+                    flex: 1
+                  }}
+                >
+                  {/* Title */}
                   <h1 style={{ 
                     fontFamily: '"Space Mono", monospace',
                     fontWeight: '400', 
-                    fontSize: '24px', 
-                    lineHeight: '28px',
+                    fontSize: '32px', 
+                    lineHeight: '36px',
                     color: theme.text, 
                     margin: '0 0 8px 0', 
                     textAlign: 'left', 
                     letterSpacing: '-0.5px',
-                    textTransform: 'uppercase'
+                    textTransform: 'uppercase',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '8px'
                   }}>
+                    {isOnlyApocryphal(activeTermNode) && (
+                      <span style={{
+                        marginRight: '12px',
+                        fontWeight: 900,
+                        fontSize: '44px',
+                        lineHeight: 1,
+                        WebkitTextStroke: '3px currentColor',
+                        flexShrink: 0
+                      }}>✖</span>
+                    )}
                     {activeTermNode.name}
                   </h1>
-                </div>
 
-                {/* Tag Pills (Related terms looking like map categories tags) */}
-                {activeTermNode.relatedIds && activeTermNode.relatedIds.length > 0 && (
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '8px', justifyContent: 'flex-start' }}>
-                    {activeTermNode.relatedIds.map(relId => {
-                      const relNode = TERM_TREE_DATA.find(t => t.id === relId);
-                      if (!relNode) return null;
-                      const relColor = getNodeColor(relNode);
+                  {/* Actions Row (Flag, View on Map, View on Timeline) */}
+                  <div style={{ display: 'flex', gap: '8px', marginBottom: '16px', flexWrap: 'wrap' }}>
+                    {onFlagItem && (
+                      <motion.button
+                        whileTap={{ scale: 0.95 }}
+                        whileHover={{ scale: 1.05 }}
+                        onClick={() => onFlagItem(activeTermNode)}
+                        style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: '6px',
+                          background: 'transparent',
+                          color: isMapDarkMode ? '#fff' : '#000',
+                          border: `1px solid ${isMapDarkMode ? '#fff' : '#000'}`,
+                          padding: '6px 12px',
+                          borderRadius: '16px',
+                          cursor: 'pointer',
+                          fontSize: '11px',
+                          fontWeight: 'bold',
+                          fontFamily: '"Space Mono", monospace',
+                          transition: 'all 0.2s ease',
+                          whiteSpace: 'nowrap'
+                        }}
+                        title="Report inaccuracy / flag this term"
+                      >
+                        <Flag size={13} />
+                        <span>FLAG</span>
+                      </motion.button>
+                    )}
 
-                      return (
+                    {activeTermNode.layer && (
+                      <motion.button
+                        whileTap={{ scale: 0.95 }}
+                        whileHover={{ scale: 1.05 }}
+                        onClick={() => onViewOnMap(activeTermNode.layer!, activeTermNode.mapFeatureId || activeTermNode.name)}
+                        style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: '6px',
+                          background: 'transparent',
+                          color: isMapDarkMode ? '#fff' : '#000',
+                          border: `1px solid ${isMapDarkMode ? '#fff' : '#000'}`,
+                          padding: '6px 12px',
+                          borderRadius: '16px',
+                          cursor: 'pointer',
+                          fontSize: '11px',
+                          fontWeight: 'bold',
+                          fontFamily: '"Space Mono", monospace',
+                          transition: 'all 0.2s ease',
+                          whiteSpace: 'nowrap'
+                        }}
+                      >
+                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                          <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon>
+                          <line x1="9" y1="3" x2="9" y2="18"></line>
+                          <line x1="15" y1="6" x2="15" y2="21"></line>
+                        </svg>
+                        <span>VIEW ON MAP</span>
+                      </motion.button>
+                    )}
+
+                    {activeTermNode.timelineId && (
+                      <motion.button
+                        whileTap={{ scale: 0.95 }}
+                        whileHover={{ scale: 1.05 }}
+                        onClick={() => onViewOnTimeline(activeTermNode.timelineId!)}
+                        style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: '6px',
+                          background: 'transparent',
+                          color: isMapDarkMode ? '#fff' : '#000',
+                          border: `1px solid ${isMapDarkMode ? '#fff' : '#000'}`,
+                          padding: '6px 12px',
+                          borderRadius: '16px',
+                          cursor: 'pointer',
+                          fontSize: '11px',
+                          fontWeight: 'bold',
+                          fontFamily: '"Space Mono", monospace',
+                          transition: 'all 0.2s ease',
+                          whiteSpace: 'nowrap'
+                        }}
+                      >
+                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                          <circle cx="12" cy="12" r="10"></circle>
+                          <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <span>TIMELINE VIEW</span>
+                      </motion.button>
+                    )}
+                  </div>
+
+                  {/* Tag Pills (Category layer + Related terms) */}
+                  {((activeTermNode.layer) || (activeTermNode.relatedIds && activeTermNode.relatedIds.length > 0)) && (
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '24px', justifyContent: 'flex-start' }}>
+                      {/* Node's own Layer tag */}
+                      {activeTermNode.layer && (
                         <button 
-                          key={relId} 
-                          onClick={() => {
-                            const path = getPathToRoot(relId);
-                            setSelectedPath(path);
-                          }}
-                          title={`Navigate to ${relNode.name}`}
                           style={{ 
                             height: '24px',
                             display: 'inline-flex',
@@ -1400,64 +1882,63 @@ export default function TermTreePage({
                             fontWeight: '400', 
                             padding: '0 12px', 
                             borderRadius: '12px', 
-                            background: relColor, 
+                            background: getRootCategoryColor(activeTermNode), 
                             border: 'none',
                             color: '#000000',
-                            cursor: 'pointer',
+                            cursor: 'default',
                             textTransform: 'uppercase',
                             letterSpacing: '0.5px',
-                            fontFamily: '"Space Mono", monospace',
-                            transition: 'transform 0.1s ease, box-shadow 0.1s ease'
-                          }}
-                          onMouseEnter={e => {
-                            e.currentTarget.style.transform = 'scale(1.05)';
-                          }}
-                          onMouseLeave={e => {
-                            e.currentTarget.style.transform = 'none';
+                            fontFamily: '"Space Mono", monospace'
                           }}
                         >
-                          {relNode.name}
+                          {activeTermNode.layer}
                         </button>
-                      );
-                    })}
-                  </div>
-                )}
+                      )}
 
-                {/* Images Carousel */}
-                {activeTermNode.images && activeTermNode.images.length > 0 && (
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '8px' }}>
-                    <div style={{ display: 'flex', gap: '8px', overflowX: 'auto', paddingBottom: '8px' }} className="no-scrollbar">
-                      {activeTermNode.images.map((imgUrl, imgIdx) => (
-                        <div 
-                          key={imgIdx} 
-                          style={{ 
-                            flexShrink: 0, 
-                            width: activeTermNode.images!.length === 1 ? '100%' : '85%', 
-                            height: '160px', 
-                            borderRadius: '8px', 
-                            overflow: 'hidden', 
-                            border: `1px solid ${theme.borderLight}`,
-                            background: isMapDarkMode ? '#111' : '#f9f9f9',
-                            position: 'relative'
-                          }}
-                        >
-                          <img
-                            src={imgUrl}
-                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                            alt={`${activeTermNode.name} - image ${imgIdx}`}
-                            draggable={false}
-                            onError={(e) => {
-                              const parent = e.currentTarget.parentElement;
-                              if (parent) {
-                                parent.style.display = 'none';
-                              }
+                      {/* Related term tags */}
+                      {activeTermNode.relatedIds?.map(relId => {
+                        const relNode = TERM_TREE_DATA.find(t => t.id === relId);
+                        if (!relNode) return null;
+                        const relColor = getNodeColor(relNode);
+
+                        return (
+                          <button 
+                            key={relId} 
+                            onClick={() => {
+                              const path = getPathToRoot(relId);
+                              setSelectedPath(path);
                             }}
-                          />
-                        </div>
-                      ))}
+                            title={`Navigate to ${relNode.name}`}
+                            style={{ 
+                              height: '24px',
+                              display: 'inline-flex',
+                              alignItems: 'center',
+                              fontSize: '10px', 
+                              fontWeight: '400', 
+                              padding: '0 12px', 
+                              borderRadius: '12px', 
+                              background: relColor, 
+                              border: 'none',
+                              color: '#000000',
+                              cursor: 'pointer',
+                              textTransform: 'uppercase',
+                              letterSpacing: '0.5px',
+                              fontFamily: '"Space Mono", monospace',
+                              transition: 'transform 0.1s ease, box-shadow 0.1s ease'
+                            }}
+                            onMouseEnter={e => {
+                              e.currentTarget.style.transform = 'scale(1.05)';
+                            }}
+                            onMouseLeave={e => {
+                              e.currentTarget.style.transform = 'none';
+                            }}
+                          >
+                            {relNode.name}
+                          </button>
+                        );
+                      })}
                     </div>
-                  </div>
-                )}
+                  )}
 
                 {/* Linguistic Translations */}
                 {activeTermNode.translations && activeTermNode.translations.length > 0 && (
@@ -1466,7 +1947,8 @@ export default function TermTreePage({
                       border: `1px solid ${theme.borderLight}`,
                       borderRadius: '8px',
                       padding: '16px',
-                      background: isMapDarkMode ? 'rgba(255,255,255,0.03)' : 'rgba(0,0,0,0.02)'
+                      background: isMapDarkMode ? 'rgba(255,255,255,0.03)' : 'rgba(0,0,0,0.02)',
+                      marginBottom: '24px'
                     }}
                   >
                     <h3
@@ -1526,7 +2008,7 @@ export default function TermTreePage({
                 )}
 
                 {/* Description */}
-                <div style={{ paddingTop: '0', textAlign: 'left' }}>
+                <div style={{ paddingTop: '0', textAlign: 'left', marginBottom: '24px' }}>
                   <div style={{ fontFamily: '"Space Mono", monospace', fontWeight: '700', fontSize: '11px', lineHeight: '22px', textTransform: 'uppercase' }}>
                     DESCRIPTION:
                   </div>
@@ -1546,7 +2028,17 @@ export default function TermTreePage({
 
                 {/* Scripture references */}
                 {activeTermNode.bibleVerses && activeTermNode.bibleVerses.length > 0 && (
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  <div 
+                    style={{ 
+                      marginTop: '24px', 
+                      borderTop: `1px solid ${theme.borderLight || theme.border}`, 
+                      paddingTop: '20px', 
+                      display: 'flex', 
+                      flexDirection: 'column', 
+                      gap: '10px',
+                      marginBottom: '24px'
+                    }}
+                  >
                     <div style={{ fontFamily: '"Space Mono", monospace', fontWeight: '700', fontSize: '11px', lineHeight: '22px', textTransform: 'uppercase' }}>
                       SCRIPTURE REFERENCES:
                     </div>
@@ -1610,7 +2102,17 @@ export default function TermTreePage({
 
                 {/* Primary Sources & Ancient Texts */}
                 {activeTermNode.sources && activeTermNode.sources.length > 0 && (
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  <div 
+                    style={{ 
+                      marginTop: '24px', 
+                      borderTop: `1px solid ${theme.borderLight || theme.border}`, 
+                      paddingTop: '20px', 
+                      display: 'flex', 
+                      flexDirection: 'column', 
+                      gap: '10px',
+                      marginBottom: '24px'
+                    }}
+                  >
                     <div style={{ fontFamily: '"Space Mono", monospace', fontWeight: '700', fontSize: '11px', lineHeight: '22px', textTransform: 'uppercase', color: theme.text }}>
                       PRIMARY SOURCES & ANCIENT TEXTS:
                     </div>
@@ -1632,7 +2134,7 @@ export default function TermTreePage({
                               whiteSpace: 'nowrap'
                             }}
                           >
-                            {source.toUpperCase()}
+                            {source.trim().toUpperCase() === 'CANONICAL SCRIPTURE' ? 'BIBLE' : source.toUpperCase()}
                           </div>
                         );
                       })}
@@ -1640,77 +2142,53 @@ export default function TermTreePage({
                   </div>
                 )}
 
-                {/* Actions view on map, etc. */}
-                <div style={{ marginTop: 'auto', display: 'flex', flexDirection: 'column', gap: '12px', paddingTop: '20px' }}>
-                  {activeTermNode.layer && (
-                    <motion.button
-                      whileTap={{ scale: 0.95 }}
-                      whileHover={{ scale: 1.05 }}
-                      onClick={() => onViewOnMap(activeTermNode.layer!, activeTermNode.mapFeatureId || activeTermNode.name)}
-                      style={{
-                        width: '100%',
-                        background: 'transparent',
-                        color: theme.text,
-                        border: `1px solid ${theme.text}`,
-                        borderRadius: '16px',
-                        padding: '6px 12px',
-                        fontSize: '11px',
-                        fontWeight: 'bold',
-                        fontFamily: '"Space Mono", monospace',
-                        cursor: 'pointer',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        gap: '8px',
-                        transition: 'all 0.2s ease',
-                        boxSizing: 'border-box',
-                        whiteSpace: 'nowrap'
+                {/* Legend explanation for Apocryphal tag */}
+                {isOnlyApocryphal(activeTermNode) && (
+                  <div 
+                    style={{ 
+                      marginTop: '24px',
+                      borderTop: `1px solid ${theme.borderLight || theme.border}`,
+                      paddingTop: '20px',
+                      marginBottom: '24px'
+                    }}
+                  >
+                    <div 
+                      style={{ 
+                        padding: '12px',
+                        border: `1px solid ${theme.borderLight}`,
+                        borderRadius: '8px',
+                        background: isMapDarkMode ? 'rgba(255,255,255,0.02)' : 'rgba(0,0,0,0.01)',
                       }}
                     >
-                      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                        <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon>
-                        <line x1="9" y1="3" x2="9" y2="18"></line>
-                        <line x1="15" y1="6" x2="15" y2="21"></line>
-                      </svg>
-                      VIEW ON MAP
-                    </motion.button>
-                  )}
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
+                        <span 
+                          style={{ 
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            fontSize: '11px',
+                            lineHeight: '1',
+                            fontWeight: '900',
+                            color: isMapDarkMode ? '#ffffff' : '#000000',
+                            fontFamily: '"Space Mono", monospace',
+                          }}
+                        >
+                          ✖
+                        </span>
+                        <span style={{ fontSize: '9px', fontWeight: 'bold', fontFamily: '"Space Mono", monospace' }}>
+                          APOCRYPHAL INDICATOR
+                        </span>
+                      </div>
+                      <p style={{ fontSize: '8.5px', lineHeight: '1.4', color: theme.textDim, margin: 0, fontFamily: '"Space Mono", monospace' }}>
+                        Represents apocryphal, non-canonical, or mythological entries outside of canonical scripture.
+                      </p>
+                    </div>
+                  </div>
+                )}
 
-                  {activeTermNode.timelineId && (
-                    <motion.button
-                      whileTap={{ scale: 0.95 }}
-                      whileHover={{ scale: 1.05 }}
-                      onClick={() => onViewOnTimeline(activeTermNode.timelineId!)}
-                      style={{
-                        width: '100%',
-                        background: theme.text,
-                        color: theme.bg,
-                        border: `1px solid ${theme.text}`,
-                        borderRadius: '16px',
-                        padding: '6px 12px',
-                        fontSize: '11px',
-                        fontWeight: 'bold',
-                        fontFamily: '"Space Mono", monospace',
-                        cursor: 'pointer',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        gap: '8px',
-                        transition: 'all 0.2s ease',
-                        boxSizing: 'border-box',
-                        whiteSpace: 'nowrap'
-                      }}
-                    >
-                      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <polyline points="12 6 12 12 16 14"></polyline>
-                      </svg>
-                      VIEW ON TIMELINE
-                    </motion.button>
-                  )}
-                </div>
               </div>
-            </motion.div>
+            </div>
+          </motion.div>
           ) : (
             <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', color: theme.textDim, fontSize: '10px', fontFamily: '"Space Mono", monospace', letterSpacing: '1.5px', textTransform: 'uppercase', padding: '24px', textAlign: 'center' }}>
               SELECT A TERM TO REVIEW DETAILS & TIES
@@ -1718,6 +2196,27 @@ export default function TermTreePage({
           )}
         </AnimatePresence>
       </motion.div>
+
+      {/* FIXED RIGHT EDGE MASK BAR */}
+      <motion.div 
+        initial={false}
+        animate={{ 
+          background: isMapDarkMode ? 'rgba(10, 10, 10, 0.85)' : 'rgba(255, 255, 255, 0.85)',
+          borderColor: theme.border
+        }}
+        transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+        style={{ 
+          position: 'absolute', 
+          top: 0, 
+          right: 0, 
+          bottom: 0, 
+          width: '20px', 
+          borderLeft: `1px solid ${theme.border}`, 
+          zIndex: 100, 
+          pointerEvents: 'auto',
+          backdropFilter: 'blur(8px)'
+        }} 
+      />
     </div>
   );
 }

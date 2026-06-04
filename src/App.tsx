@@ -10,9 +10,10 @@ import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChang
 import firebaseConfig from '../firebase-applet-config.json';
 
 import TimelinePage from './TimelinePage';
-import TermTreePage from './TermTreePage';
+import CodexPage from './CodexPage';
 import { TIMELINE_ITEMS, TIMELINE_LOCATIONS, BIBLICAL_TRAVEL_PATHS, Waypoint, TravelPath } from './timelineData';
 import { ARCHAEOLOGICAL_FINDS_DATA } from './archaeologyData';
+import { TERM_TREE_DATA } from './termTreeData';
 
 // Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig);
@@ -900,7 +901,7 @@ function App() {
   const [isMapLoaded, setIsMapLoaded] = useState(false);
   const [isDataCompiled, setIsDataCompiled] = useState(false);
   const [showAboutModal, setShowAboutModal] = useState(true);
-  const [currentPage, setCurrentPage] = useState<'map' | 'timeline' | 'term-tree'>('map');
+  const [currentPage, setCurrentPage] = useState<'map' | 'timeline' | 'codex'>('map');
   const [selectedTimelineItem, setSelectedTimelineItem] = useState<any | null>(null);
   const [activeWaypointIndex, setActiveWaypointIndex] = useState<number | null>(null);
 
@@ -939,6 +940,15 @@ function App() {
       return sA.localeCompare(sB);
     }); 
   }, [combinedPointsAndLinesData]);
+
+  const allIntelCategories = useMemo(() => {
+    return [
+      ...uniqueCategories,
+      'Biblical / Apocryphal',
+      'Megaliths / Structures',
+      'Supernatural / Anomalies'
+    ];
+  }, [uniqueCategories]);
 
   const layerColors = useMemo(() => {
     const assigned: Record<string, string> = {};
@@ -1083,6 +1093,7 @@ function App() {
   const [isStyleLoaded, setIsStyleLoaded] = useState(false);
   const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1200);
   const [scrollbarWidth, setScrollbarWidth] = useState(0);
+  const [selectedCodexNode, setSelectedCodexNode] = useState<any>(null);
 
   // Submission Form State
   const [isSubmitOpen, setIsSubmitOpen] = useState(false);
@@ -4156,7 +4167,7 @@ function App() {
         }}
       >
         
-        {/* GLOBAL BACKGROUND GLOBE MAP (VISIBLE ON TIMELINE & TERM-TREE PAGES) */}
+        {/* GLOBAL BACKGROUND GLOBE MAP (VISIBLE ON TIMELINE & CODEX PAGES) */}
         <div
           ref={bgMapContainer}
           style={{
@@ -4166,10 +4177,10 @@ function App() {
             right: 0,
             bottom: 0,
             pointerEvents: 'none',
-            opacity: (currentPage === 'term-tree' || currentPage === 'timeline') ? 1.0 : 0,
+            opacity: (currentPage === 'codex' || currentPage === 'timeline') ? 1.0 : 0,
             zIndex: 1,
             transition: 'opacity 0.3s ease, visibility 0.3s ease',
-            visibility: (currentPage === 'term-tree' || currentPage === 'timeline') ? 'visible' : 'hidden'
+            visibility: (currentPage === 'codex' || currentPage === 'timeline') ? 'visible' : 'hidden'
           }}
         />
         
@@ -4208,7 +4219,7 @@ function App() {
             zIndex: 20, 
             pointerEvents: 'none', 
             position: 'relative',
-            background: (currentPage === 'map' || currentPage === 'term-tree' || currentPage === 'timeline') ? 'transparent' : (isMapDarkMode ? '#000000' : '#ffffff'),
+            background: (currentPage === 'map' || currentPage === 'codex' || currentPage === 'timeline') ? 'transparent' : (isMapDarkMode ? '#000000' : '#ffffff'),
             transition: 'background-color 0.3s ease'
           }}
         >
@@ -4292,15 +4303,15 @@ function App() {
               )}
             </div>
             <motion.button 
-              onClick={() => setCurrentPage('term-tree')}
+              onClick={() => setCurrentPage('codex')}
               whileHover={{
-                background: currentPage === 'term-tree'
+                background: currentPage === 'codex'
                   ? (isMapDarkMode ? '#cccccc' : '#333333')
                   : (isMapDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.05)')
               }}
               style={{
-                background: currentPage === 'term-tree' ? theme.text : 'transparent',
-                color: currentPage === 'term-tree' ? theme.bg : theme.text,
+                background: currentPage === 'codex' ? theme.text : 'transparent',
+                color: currentPage === 'codex' ? theme.bg : theme.text,
                 border: 'none',
                 padding: '6px 18px',
                 fontSize: '10px',
@@ -4312,7 +4323,7 @@ function App() {
                 transition: 'all 0.2s ease'
               }}
             >
-              Term Tree
+              Codex
             </motion.button>
           </div>
 
@@ -4362,6 +4373,32 @@ function App() {
                   onClick={() => {
                     setSubmissionSuccess(null);
                     setSubmissionError(null);
+                    if (currentPage === 'codex') {
+                      if (selectedCodexNode) {
+                        let curr = selectedCodexNode;
+                        let limit = 10;
+                        while (curr && curr.parentId && limit > 0) {
+                          const p = TERM_TREE_DATA.find((x: any) => x.id === curr.parentId);
+                          if (!p) break;
+                          curr = p;
+                          limit--;
+                        }
+                        const rootId = curr?.id;
+                        if (rootId === 'biblical-apocryphal') {
+                          setSubCategory('Biblical / Apocryphal');
+                        } else if (rootId === 'megaliths-structures') {
+                          setSubCategory('Megaliths / Structures');
+                        } else if (rootId === 'supernatural-anomalies') {
+                          setSubCategory('Supernatural / Anomalies');
+                        } else {
+                          setSubCategory('Biblical / Apocryphal');
+                        }
+                      } else {
+                        setSubCategory('Biblical / Apocryphal');
+                      }
+                    } else {
+                      setSubCategory('U.F.O. Sightings');
+                    }
                     setIsSubmitOpen(true);
                   }}
                   whileHover={{
@@ -6406,7 +6443,7 @@ function App() {
           />
         </div>
 
-        {/* Term Tree Panel */}
+        {/* Codex Panel */}
         <div
           style={{
             position: 'absolute',
@@ -6419,14 +6456,14 @@ function App() {
             overflow: 'hidden',
             width: '100%',
             height: '100%',
-            pointerEvents: currentPage === 'term-tree' ? 'auto' : 'none',
-            visibility: currentPage === 'term-tree' ? 'visible' : 'hidden',
-            opacity: currentPage === 'term-tree' ? 1 : 0,
+            pointerEvents: currentPage === 'codex' ? 'auto' : 'none',
+            visibility: currentPage === 'codex' ? 'visible' : 'hidden',
+            opacity: currentPage === 'codex' ? 1 : 0,
             transition: 'opacity 0.3s ease, visibility 0.3s ease',
-            zIndex: currentPage === 'term-tree' ? 12 : 0
+            zIndex: currentPage === 'codex' ? 12 : 0
           }}
         >
-          <TermTreePage
+          <CodexPage
             theme={theme}
             isMapDarkMode={isMapDarkMode}
             onViewOnMap={(layerName, featureSearchTerm) => {
@@ -6455,6 +6492,17 @@ function App() {
             }}
             onViewOnTimeline={(timelineId) => {
               handleViewOnTimeline(timelineId);
+            }}
+            onFlagItem={(item) => {
+              setReportedFeature(item);
+              setReportReason('Inaccurate Description');
+              setReportDetails('');
+              setReportSuccess(null);
+              setReportError(null);
+              setIsReportOpen(true);
+            }}
+            onSelectedTermChange={(node) => {
+              setSelectedCodexNode(node);
             }}
           />
         </div>
@@ -6742,7 +6790,7 @@ function App() {
           justifyContent: 'space-between',
           padding: '0 60px 0 0'
         }}>
-          <div>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'space-between', alignSelf: 'stretch' }}>
             <img 
               src="/mtrh-horiz-words.svg" 
               alt="MTRH Logo" 
@@ -6753,6 +6801,17 @@ function App() {
                 filter: isMapDarkMode ? 'invert(1)' : 'none'
               }} 
             />
+            <div style={{ 
+              marginLeft: '35px',
+              opacity: 0.5,
+              color: isMapDarkMode ? '#000000' : '#ffffff', 
+              fontSize: '10px', 
+              fontWeight: 'normal', 
+              lineHeight: '1.5', 
+              textTransform: 'none' 
+            }}>
+              Copyright North Beast LLC 2026.<br /> All rights reserved.
+            </div>
           </div>
           
           {/* RIGHT: CONTENT COLUMNS - Aligned right */}
@@ -6777,8 +6836,50 @@ function App() {
                 <span style={{ fontWeight: 'normal', textTransform: 'none' }}>Questions? Wanna help?</span>
                 <a href="mailto:mappingtherabbithole@gmail.com" style={{ color: 'inherit', textDecoration: 'underline', textTransform: 'none' }}>mappingtherabbithole@gmail.com</a>
                 
-                <div style={{ marginTop: '24px', color: isMapDarkMode ? '#000000' : '#ffffff', fontSize: '10px', fontWeight: 'normal', lineHeight: '1.5', textTransform: 'none' }}>
-                  Copyright North Beast LLC 2026.<br /> All rights reserved.
+                <div style={{ marginTop: '24px', display: 'flex', justifyContent: 'flex-end' }}>
+                  <form 
+                    action="https://www.paypal.com/donate" 
+                    method="post" 
+                    target="_blank" 
+                    style={{ display: 'inline-block', margin: 0, padding: 0 }}
+                  >
+                    <input type="hidden" name="business" value="GZV5QVK7KNBVE" />
+                    <input type="hidden" name="no_recurring" value="0" />
+                    <input type="hidden" name="item_name" value="I do this because I love it! But anything is greatly appreciated!" />
+                    <input type="hidden" name="currency_code" value="USD" />
+                    <button 
+                      type="submit"
+                      style={{
+                        width: '140px',
+                        height: '30px',
+                        backgroundColor: 'transparent',
+                        color: isMapDarkMode ? '#000000' : '#ffffff',
+                        border: `1.5px solid ${isMapDarkMode ? '#000000' : '#ffffff'}`,
+                        padding: '0',
+                        fontSize: '10px',
+                        fontWeight: 'bold',
+                        fontFamily: '"Space Mono", monospace',
+                        cursor: 'pointer',
+                        textTransform: 'none',
+                        borderRadius: '30px',
+                        transition: 'all 0.2s',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center'
+                      }}
+                      onMouseOver={(e) => {
+                        e.currentTarget.style.backgroundColor = isMapDarkMode ? '#000000' : '#ffffff';
+                        e.currentTarget.style.color = isMapDarkMode ? '#ffffff' : '#000000';
+                      }}
+                      onMouseOut={(e) => {
+                        e.currentTarget.style.backgroundColor = 'transparent';
+                        e.currentTarget.style.color = isMapDarkMode ? '#000000' : '#ffffff';
+                      }}
+                    >
+                      Donate
+                    </button>
+                    <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" style={{ display: 'none' }} />
+                  </form>
                 </div>
               </div>
             </div>
@@ -7094,38 +7195,89 @@ function App() {
                 "It is the glory of God to conceal a thing: but the honour of kings is to search out a matter. - Proverbs 25:2"
               </p>
 
-              <button 
-                onClick={() => setShowAboutModal(false)}
-                style={{
-                  width: '200px',
-                  height: '30px',
-                  backgroundColor: 'transparent',
-                  color: '#000000',
-                  border: '1.5px solid #000000',
-                  padding: '0',
-                  fontSize: '10px',
-                  fontWeight: 'bold',
-                  fontFamily: '"Space Mono", monospace',
-                  cursor: 'pointer',
-                  textTransform: 'none',
-                  borderRadius: '30px',
-                  transition: 'all 0.2s',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  marginBottom: '30px'
-                }}
-                onMouseOver={(e) => {
-                  e.currentTarget.style.backgroundColor = '#000000';
-                  e.currentTarget.style.color = '#ffffff';
-                }}
-                onMouseOut={(e) => {
-                  e.currentTarget.style.backgroundColor = 'transparent';
-                  e.currentTarget.style.color = '#000000';
-                }}
-              >
-                Explore
-              </button>
+              <div style={{
+                display: 'flex',
+                gap: '16px',
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginBottom: '30px'
+              }}>
+                <button 
+                  onClick={() => setShowAboutModal(false)}
+                  style={{
+                    width: '200px',
+                    height: '30px',
+                    backgroundColor: '#000000',
+                    color: '#ffffff',
+                    border: '1.5px solid #000000',
+                    padding: '0',
+                    fontSize: '10px',
+                    fontWeight: 'bold',
+                    fontFamily: '"Space Mono", monospace',
+                    cursor: 'pointer',
+                    textTransform: 'none',
+                    borderRadius: '30px',
+                    transition: 'all 0.2s',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                  }}
+                  onMouseOver={(e) => {
+                    e.currentTarget.style.backgroundColor = 'transparent';
+                    e.currentTarget.style.color = '#000000';
+                  }}
+                  onMouseOut={(e) => {
+                    e.currentTarget.style.backgroundColor = '#000000';
+                    e.currentTarget.style.color = '#ffffff';
+                  }}
+                >
+                  Explore
+                </button>
+
+                <form 
+                  action="https://www.paypal.com/donate" 
+                  method="post" 
+                  target="_blank" 
+                  style={{ display: 'inline-block', margin: 0, padding: 0 }}
+                >
+                  <input type="hidden" name="business" value="GZV5QVK7KNBVE" />
+                  <input type="hidden" name="no_recurring" value="0" />
+                  <input type="hidden" name="item_name" value="I do this because I love it! But anything is greatly appreciated!" />
+                  <input type="hidden" name="currency_code" value="USD" />
+                  <button 
+                    type="submit"
+                    style={{
+                      width: '200px',
+                      height: '30px',
+                      backgroundColor: 'transparent',
+                      color: '#000000',
+                      border: '1.5px solid #000000',
+                      padding: '0',
+                      fontSize: '10px',
+                      fontWeight: 'bold',
+                      fontFamily: '"Space Mono", monospace',
+                      cursor: 'pointer',
+                      textTransform: 'none',
+                      borderRadius: '30px',
+                      transition: 'all 0.2s',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center'
+                    }}
+                    onMouseOver={(e) => {
+                      e.currentTarget.style.backgroundColor = '#000000';
+                      e.currentTarget.style.color = '#ffffff';
+                    }}
+                    onMouseOut={(e) => {
+                      e.currentTarget.style.backgroundColor = 'transparent';
+                      e.currentTarget.style.color = '#000000';
+                    }}
+                  >
+                    Donate
+                  </button>
+                  <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" style={{ display: 'none' }} />
+                </form>
+              </div>
             </div>
           </motion.div>
         </motion.div>
@@ -7387,7 +7539,7 @@ function App() {
 
                   <div style={{ display: 'flex', gap: '16px', zIndex: 10002 }}>
                     <div style={{ flex: 1, position: 'relative' }}>
-                      <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '6px', letterSpacing: '0.5px' }}>MAP REGISTRY LAYER *</label>
+                      <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '6px', letterSpacing: '0.5px' }}>REGISTRY LAYER / CODEX CATEGORY *</label>
                       <div style={{ position: 'relative' }}>
                         <button
                           type="button"
@@ -7430,7 +7582,7 @@ function App() {
                               overflowY: 'auto',
                               boxShadow: isMapDarkMode ? '0 5px 25px rgba(0,0,0,0.8)' : '0 5px 25px rgba(0,0,0,0.15)'
                             }}>
-                              {uniqueCategories.map(cat => (
+                              {allIntelCategories.map(cat => (
                                 <div
                                   key={cat}
                                   onClick={() => {
