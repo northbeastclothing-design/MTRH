@@ -9588,7 +9588,7 @@ function App() {
                     return {
                       ...common,
                       bottom: '-10px',
-                      left: '160px',
+                      left: '162px',
                       borderWidth: '10px 8px 0 8px',
                       borderColor: `${tooltipTheme.bg} transparent transparent transparent`,
                     };
@@ -9596,7 +9596,7 @@ function App() {
                     return {
                       ...common,
                       top: '-10px',
-                      right: '73px',
+                      right: '67px',
                       borderWidth: '0 8px 10px 8px',
                       borderColor: `transparent transparent ${tooltipTheme.bg} transparent`,
                     };
