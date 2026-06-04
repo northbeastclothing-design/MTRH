@@ -9490,7 +9490,7 @@ function App() {
                     return {
                       ...common,
                       left: '50%',
-                      top: '85px', // Shifted down by 15px to clear the header navigation pill
+                      top: '89px', // Shifted down to align pointer perfectly with buttons
                       transform: 'translate(-50%, 0)',
                       width: '360px',
                     };
@@ -9527,7 +9527,7 @@ function App() {
                   case 'right-sidebar':
                     return {
                       ...common,
-                      left: isRightCollapsed ? 'calc(100vw - 360px)' : 'calc(100vw - 660px)',
+                      left: isRightCollapsed ? 'calc(100vw - 370px)' : 'calc(100vw - 670px)',
                       top: '180px',
                       transform: 'translate(0, 0)',
                     };
