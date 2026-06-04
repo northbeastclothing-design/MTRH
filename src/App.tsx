@@ -83,7 +83,7 @@ function handleFirestoreError(error: unknown, operationType: OperationType, path
 
 const CATEGORY_DESCRIPTIONS: Record<string, string> = {
   'Enochian Sites': 'Geographical locations, portals of descent, and prisons of the fallen Watchers as detailed in the Book of Enoch.',
-  'Nephilim': 'Newspaper articles about finding the bones of ancient biblical giants, horned humanoids, cyclops and more.',
+  'Giants & Nephilim': 'Newspaper articles about finding the bones of ancient biblical giants, horned humanoids, cyclops and more.',
   'Biblical Figures': 'Geographical tracking and historical sites associated with biblical patriarchs, prophets, and key lineage figures.',
   'Biblical Events': 'Key geographical milestones and historical events from biblical history, including the Exodus, the Fall of Jericho, and the Crucifixion.',
   'U.F.O. Sightings': 'Reports of unidentified flying objects and extraterrestrial encounters across the globe.',
@@ -632,7 +632,7 @@ const processIncomingRecord = (item: any, index: number) => {
   let normalizedCategory = rawCategory;
   if (lowerCat.includes('enochian') || lowerCat.includes('watcher') || lowerCat.includes('angel') || lowerCat === 'enochian sites') normalizedCategory = 'Enochian Sites';
   else if (lowerCat.includes('bigfoot') || lowerCat.includes('sasquatch')) normalizedCategory = 'Bigfoot Sightings';
-  else if (lowerCat.includes('giant') || lowerCat.includes('nephilim') || lowerCat.includes('giants')) normalizedCategory = 'Nephilim';
+  else if (lowerCat.includes('giant') || lowerCat.includes('nephilim') || lowerCat.includes('giants')) normalizedCategory = 'Giants & Nephilim';
   else if (lowerCat.includes('war.gov') || lowerCat.includes('aaro') || lowerCat.includes('official release') || lowerCat.includes('declassified')) {
     if (lowerCat.includes('02') || lowerCat.includes('release 2') || lowerCat.includes('release_2')) {
       normalizedCategory = 'War.gov UFO files 02';
@@ -775,7 +775,7 @@ const LAYER_CONFIG: Record<string, { color: string; icon: string }> = {
   'War.gov UFO files 01': { color: '#FF9BE1', icon: '/icons/icon-dept-war.svg' },
   'War.gov UFO files 02': { color: '#D29BFF', icon: '/icons/icon-dept-war-02.svg' },
   'Enochian Sites': { color: '#FF9F63', icon: '/icons/icon-enochian-lore.svg' },
-  'Nephilim': { color: '#ECCE81', icon: '/icons/icon-giants.svg' },
+  'Giants & Nephilim': { color: '#ECCE81', icon: '/icons/icon-giants.svg' },
   'Biblical Figures': { color: '#90C2FF', icon: '/icons/icon-biblical-bloodlines.svg' },
   'Biblical Events': { color: '#91FFC4', icon: '/icons/icon-biblical-bloodlines-1.svg' },
   'U.F.O. Sightings': { color: '#C2FFBD', icon: '/icons/icon-ufo-sightings.svg' },
@@ -928,7 +928,7 @@ function App() {
 
   const uniqueCategories = useMemo(() => {
     const allTags = combinedPointsAndLinesData.flatMap(item => item.categories);
-    const order = ['War.gov UFO files 01', 'War.gov UFO files 02', 'Nephilim', 'U.F.O. Sightings'];
+    const order = ['War.gov UFO files 01', 'War.gov UFO files 02', 'Giants & Nephilim', 'U.F.O. Sightings'];
     return Array.from(new Set(allTags)).sort((a, b) => {
       const sA = String(a);
       const sB = String(b);

@@ -3362,7 +3362,7 @@ const chunk_0: any[] = [
     ],
     relatedIds: ['watchers', 'mounds', 'megaliths'],
     bibleVerses: ['The Nephilim were on the earth in those days—and also afterward—when the sons of God went to the daughters of humans and had children by them. They were the heroes of old, men of renown. — Genesis 6:4', 'We saw the Nephilim there (the descendants of Anak come from the Nephilim). We seemed like grasshoppers in our own eyes, and we looked the same to them. — Numbers 13:33'],
-    layer: 'Nephilim',
+    layer: 'Giants & Nephilim',
     isApocryphal: true
   },
   {

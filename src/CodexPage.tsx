@@ -27,7 +27,7 @@ const LAYER_COLORS: Record<string, string> = {
   'War.gov UFO files 01': '#FF9BE1',
   'War.gov UFO files 02': '#D29BFF',
   'Enochian Sites': '#FF9F63',
-  'Nephilim': '#ECCE81',
+  'Giants & Nephilim': '#ECCE81',
   'Biblical Figures': '#90C2FF',
   'Biblical Events': '#91FFC4',
   'U.F.O. Sightings': '#C2FFBD',
@@ -55,7 +55,7 @@ const LAYER_ICONS: Record<string, string> = {
   'War.gov UFO files 01': '/icons/icon-dept-war.svg',
   'War.gov UFO files 02': '/icons/icon-dept-war-02.svg',
   'Enochian Sites': '/icons/icon-enochian-lore.svg',
-  'Nephilim': '/icons/icon-giants.svg',
+  'Giants & Nephilim': '/icons/icon-giants.svg',
   'Biblical Figures': '/icons/icon-biblical-bloodlines.svg',
   'Biblical Events': '/icons/icon-biblical-bloodlines-1.svg',
   'U.F.O. Sightings': '/icons/icon-ufo-sightings.svg',
@@ -315,7 +315,7 @@ export default function CodexPage({
       case '#fffba6': // Megaliths
         return '#705b00'; // Very dark gold/yellow
       case '#f6e8c1': // Ancient Texts
-      case '#ecce81': // Nephilim
+      case '#ecce81': // Giants & Nephilim
         return '#604e1e'; // Dark brown/gold
       case '#c2ffbd': // U.F.O. Sightings
       case '#9ff3bc': // National Parks

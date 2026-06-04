@@ -2372,7 +2372,7 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'semjaza': { lng: 35.794, lat: 33.318, locationName: 'Mount Hermon', category: 'Enochian Sites' },
   'azazel': { lng: 35.350, lat: 31.650, locationName: 'Desert of Dudael', category: 'Enochian Sites' },
   'enoch_ascension': { lng: 35.794, lat: 33.318, locationName: 'Mount Hermon', category: 'Enochian Sites' },
-  'nephilim_era': { lng: 35.730, lat: 32.900, locationName: 'Og\'s Kingdom (Golan)', category: 'Nephilim' },
+  'nephilim_era': { lng: 35.730, lat: 32.900, locationName: 'Og\'s Kingdom (Golan)', category: 'Giants & Nephilim' },
   'rephaim': { lng: 35.972, lat: 32.837, locationName: 'Ashtaroth Karnaim (Bashan)', category: 'Biblical Figures' },
   'anakim': { lng: 35.110, lat: 31.527, locationName: 'Hebron (Kiriath-Arba)', category: 'Biblical Figures' },
   'emim': { lng: 35.727, lat: 31.636, locationName: 'Shaveh Kiriathaim (Moab)', category: 'Biblical Figures' },
