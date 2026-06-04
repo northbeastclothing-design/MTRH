@@ -735,7 +735,16 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
                     zIndex: 10,
                     pointerEvents: 'auto'
                   }}>
-                    <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: era.color }} />
+                    <img 
+                      src={era.icon} 
+                      alt={era.name} 
+                      style={{ 
+                        height: '36px', 
+                        width: '36px', 
+                        display: 'block',
+                        objectFit: 'contain'
+                      }} 
+                    />
                     <span style={{ fontSize: '10px', fontWeight: 'bold', letterSpacing: '1.5px', textTransform: 'uppercase', color: theme.text }}>
                       {era.name}
                     </span>
