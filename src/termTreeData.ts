@@ -367,6 +367,7 @@ const chunk_0: any[] = [
     parentId: 'fallen-angel',
     name: 'Samyaza',
     description: 'The chief leader of the two hundred fallen Watchers who descended to Mount Hermon in the Book of Enoch. He bound the angels to a mutual oath to go through with their plan to take human wives, teaching enchantments and root-cuttings.',
+    timelineId: 'semjaza',
     sources: ['Book of Enoch', 'Book of Giants'],
     isApocryphal: true,
     bibleVerses: ['And Semjâzâ, who was their leader, said unto them: \'I fear ye will not indeed agree to do this deed, and I alone shall have to pay the penalty of a great sin.\' — 1 Enoch 6:3 (https://www.sacred-texts.com/bib/boe/boe009.htm)', 'And Semjâzâ taught enchantments, and root-clippings... — 1 Enoch 8:3 (https://www.sacred-texts.com/bib/boe/boe011.htm)']
@@ -3363,6 +3364,7 @@ const chunk_0: any[] = [
     relatedIds: ['watchers', 'mounds', 'megaliths'],
     bibleVerses: ['The Nephilim were on the earth in those days—and also afterward—when the sons of God went to the daughters of humans and had children by them. They were the heroes of old, men of renown. — Genesis 6:4', 'We saw the Nephilim there (the descendants of Anak come from the Nephilim). We seemed like grasshoppers in our own eyes, and we looked the same to them. — Numbers 13:33'],
     layer: 'Giants & Nephilim',
+    timelineId: 'nephilim_era',
     isApocryphal: true
   },
   {
@@ -22023,5 +22025,83 @@ export const TERM_TREE_DATA: TermNode[] = [
   ...chunk_2,
   ...chunk_3,
   ...chunk_4,
-  ...chunk_5
+  ...chunk_5,
+  {
+    id: 'anunnaki',
+    parentId: 'pantheons-mythology-br',
+    name: 'The Anunnaki',
+    description: 'Ancient Sumerian gods ("those who descended from heaven") reimagined in modern alternative history as an advanced extraterrestrial species from the planet Nibiru, who genetically modified early humanity to serve as gold miners—paralleling the Enochian account of the Watchers.',
+    translations: [
+      { lang: 'Sumerian', original: '𒀭𒀀𒉣𒈾', translit: 'A-nuna-ki', meaning: 'Those of Royal Seed / Descendants of Heaven' }
+    ],
+    timelineId: 'skl-alulim',
+    relatedIds: ['nephilim-br', 'sumerian-kings', 'babel-evt'],
+    sources: ['Sumerian Clay Tablets (Enuma Elis)', 'Alternative Archaeology Texts']
+  },
+  {
+    id: 'book-of-giants',
+    parentId: 'nephilim-br',
+    name: 'Book of Giants',
+    description: 'An apocryphal Jewish manuscript discovered among the Dead Sea Scrolls in Qumran, expanding on the Book of Enoch by detailing the lives, wars, and prophetic nightmares of the Nephilim giants—such as Ohyah and Hahyah—preceding the Great Flood.',
+    timelineId: 'nephilim_era',
+    mapFeatureId: 'archaeology-dead-sea-scrolls',
+    relatedIds: ['nephilim-br', 'samyaza', 'enochian-sites', 'archaeology-dead-sea-scrolls'],
+    sources: ['Qumran Cave 4 Manuscripts', 'Manichaean Fragments'],
+    isApocryphal: true
+  },
+  {
+    id: 'archons',
+    parentId: 'demons',
+    name: 'The Archons',
+    description: 'In Gnostic cosmology, a hierarchy of malevolent spiritual rulers and planetary gatekeepers created by the demiurge to trap divine human sparks in the material matrix. Conspiratorial lore links them to interdimensional forces directing the global cabal.',
+    translations: [
+      { lang: 'Greek', original: 'Ἄρχων', translit: 'Arkhōn', meaning: 'Ruler / Prince / Authority' }
+    ],
+    relatedIds: ['principalities', 'demons', 'fallen-angel'],
+    bibleVerses: ['According to the prince [Archon] of the power of the air, the spirit that now worketh in the children of disobedience... — Ephesians 2:2'],
+    sources: ['Gnostic Codices (Nag Hammadi Library)', 'Pistis Sophia']
+  },
+  {
+    id: 'tartaria-empire',
+    parentId: 'megaliths-structures',
+    name: 'Tartaria & The Mud Flood',
+    description: 'A global alternative history theory alleging a technologically advanced empire ("Grand Tartaria") that utilized atmospheric free energy through antiqui-tech architectural details (domes, spires, and obelisks) before being erased by a weaponized mud flood and a massive 19th-century history rewrite.',
+    relatedIds: ['megaliths-structures', 'ley-lines-br', 'pyramids'],
+    sources: ['Alternative Cartography Research', 'Esoteric Architectural History']
+  },
+  {
+    id: 'atlantis-lost',
+    parentId: 'megaliths-structures',
+    name: 'Atlantis & Lemuria',
+    description: 'Legendary lost continents representing advanced pre-diluvian civilizations possessing high-crystal technologies and geodetic grids, swallowed by global geological cataclysms—often equated with the pre-flood civilization of the Genesis era.',
+    timelineId: 'evt-great-flood',
+    relatedIds: ['nephilim-br', 'ley-lines-br', 'sphinx', 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-1', 'anomaly-Ley-Lines-6'],
+    sources: ['Plato\'s Timaeus & Critias', 'Esoteric History Archives']
+  },
+  {
+    id: 'agartha-inner-earth',
+    parentId: 'supernatural-anomalies',
+    name: 'Agartha (Inner Earth)',
+    description: 'A legendary subterranean world of advanced cities and tunnels located at the Earth\'s core. Conspiracies locate entries in Tibet, the Amazon rainforest, and major polar openings investigated by early military expeditions.',
+    relatedIds: ['supernatural-anomalies', 'dumbs', 'operation-highjump', 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-24', 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-25'],
+    sources: ['Esoteric Buddhist Lore', 'Early Hollow Earth Scientific Hypotheses']
+  },
+  {
+    id: 'operation-highjump',
+    parentId: 'ufo-sightings-br',
+    name: 'Operation Highjump (Antarctic Clashes)',
+    description: 'A massive 1946–1947 US Navy expedition to Antarctica led by Admiral Richard E. Byrd, which abruptly retreated amidst rumors of conflicts with advanced, disc-shaped aircraft operating from geothermal hollows or a secret redoubt (Base 211).',
+    layer: 'U.F.O. Sightings',
+    mapFeatureId: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-25',
+    relatedIds: ['ufo-sightings-br', 'agartha-inner-earth', 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-25'],
+    sources: ['Declassified Admiral Byrd Logs', 'Military Expedition Archives']
+  },
+  {
+    id: 'philadelphia-experiment',
+    parentId: 'space-anomalies-br',
+    name: 'The Philadelphia Experiment',
+    description: 'A rumored 1943 US military experiment ("Project Rainbow") in which the destroyer escort USS Eldridge was allegedly rendered completely invisible, resulting in physical teleportation, temporal distortion, and severe molecular displacement among the crew.',
+    relatedIds: ['the-veil', 'supernatural-anomalies'],
+    sources: ['Project Rainbow Records', 'Fringe Physics Literature']
+  }
 ];
