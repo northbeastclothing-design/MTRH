@@ -9556,7 +9556,7 @@ function App() {
                     return {
                       ...common,
                       top: '-10px',
-                      left: '148px',
+                      left: '158px',
                       borderWidth: '0 8px 10px 8px',
                       borderColor: `transparent transparent ${tooltipTheme.bg} transparent`,
                     };
@@ -9588,7 +9588,7 @@ function App() {
                     return {
                       ...common,
                       bottom: '-10px',
-                      left: '180px',
+                      left: '190px',
                       borderWidth: '10px 8px 0 8px',
                       borderColor: `${tooltipTheme.bg} transparent transparent transparent`,
                     };
@@ -9596,7 +9596,7 @@ function App() {
                     return {
                       ...common,
                       top: '-10px',
-                      right: '50px',
+                      right: '72px',
                       borderWidth: '0 8px 10px 8px',
                       borderColor: `transparent transparent ${tooltipTheme.bg} transparent`,
                     };
