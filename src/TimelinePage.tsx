@@ -406,11 +406,12 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
         });
       });
       
-      currentY += tracks.length * rowHeight + padding;
+      const isCollapsed = collapsedEras[era.id];
+      currentY += tracks.length * rowHeight + (isCollapsed ? 0 : padding);
     });
     
     return { offsets, totalHeight: currentY + 160 };
-  }, [allocatedTracksByLayer, activeEras, orderedEras]);
+  }, [allocatedTracksByLayer, activeEras, orderedEras, collapsedEras]);
 
   // Generate Year Ruler Tick Marks
   const ticks = useMemo(() => {
