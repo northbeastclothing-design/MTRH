@@ -1292,17 +1292,16 @@ export default function CodexPage({
             }}
           >
             {lines.map(line => {
-              const strokeColor = adjustColorForContrast(line.color);
               const isDotted = line.isRelated || line.isDottedParentLink;
               return (
                 <path
                   key={line.id}
                   d={line.d}
                   fill="none"
-                  stroke={strokeColor}
+                  stroke={theme.text}
                   strokeWidth="2"
                   strokeDasharray={isDotted ? "4,4" : "none"}
-                  opacity={line.isRelated ? 0.5 : (line.isDottedParentLink ? 0.75 : 0.9)}
+                  opacity={line.isRelated ? 0.6 : (line.isDottedParentLink ? 0.75 : 0.85)}
                 />
               );
             })}
@@ -1588,28 +1587,25 @@ export default function CodexPage({
             zIndex: 6
           }}
         >
-          {lines.map(line => {
-            const dotColor = adjustColorForContrast(line.color);
-            return (
-              <g key={`dots-${line.id}`}>
-                {/* Source Circle Anchor */}
-                <circle
-                  cx={line.x1}
-                  cy={line.y1}
-                  r="4"
-                  fill={dotColor}
-                />
+          {lines.map(line => (
+            <g key={`dots-${line.id}`}>
+              {/* Source Circle Anchor */}
+              <circle
+                cx={line.x1}
+                cy={line.y1}
+                r="4"
+                fill={theme.text}
+              />
 
-                {/* Target Circle Anchor */}
-                <circle
-                  cx={line.x2}
-                  cy={line.y2}
-                  r="3"
-                  fill={dotColor}
-                />
-              </g>
-            );
-          })}
+              {/* Target Circle Anchor */}
+              <circle
+                cx={line.x2}
+                cy={line.y2}
+                r="3"
+                fill={theme.text}
+              />
+            </g>
+          ))}
         </svg>
         </div>
       </div>
