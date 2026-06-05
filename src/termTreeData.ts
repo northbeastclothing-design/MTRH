@@ -22273,10 +22273,17 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['U.S. Navy Declassified Reports', 'Environmental Ocean Dumping Records']
   },
   {
+    id: 'whistleblowers',
+    parentId: 'secret-government-programs',
+    name: 'Whistleblowers',
+    description: 'Individuals from the intelligence community, military, and government contractors who have leaked or officially testified about classified surveillance, secret operations, or coverups.',
+    layer: 'Secret Government Programs'
+  },
+  {
     id: 'ufology-researchers',
     parentId: 'supernatural-anomalies',
-    name: 'Ufologists, Researchers & Whistleblowers',
-    description: 'Leading scientists, military intelligence investigators, and whistleblowers who have researched, testified on, and documented unidentified aerial phenomena (UAP).',
+    name: 'Ufologists & Researchers',
+    description: 'Leading scientists, astronomers, computer scientists, and historians who have researched, documented, and analyzed unidentified aerial phenomena (UAP) and anomalous events.',
     layer: 'U.F.O. Sightings'
   },
   {
@@ -22350,8 +22357,8 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'david-grusch',
-    parentId: 'ufology-researchers',
-    secondaryParentIds: ['secret-government-programs'],
+    parentId: 'whistleblowers',
+    secondaryParentIds: ['ufology-researchers', 'secret-government-programs'],
     name: 'David Grusch',
     description: 'Former U.S. Air Force officer and intelligence official who testified under oath to Congress in 2023, claiming that the U.S. government operates a secret, decades-long UAP crash retrieval and reverse-engineering program possessing non-human craft and biologics.',
     relatedIds: ['secret-government-programs', 'ufo-sightings-br'],
@@ -22359,7 +22366,8 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'bob-lazar',
-    parentId: 'ufology-researchers',
+    parentId: 'whistleblowers',
+    secondaryParentIds: ['ufology-researchers'],
     name: 'Bob Lazar',
     description: 'An American who claimed in 1989 to have been hired to reverse-engineer extraterrestrial technology at "S-4", a secret facility near Area 51. He brought public awareness to the base and detailed gravity-wave propulsion systems powered by Element 115.',
     relatedIds: ['ufo-sightings-br'],
@@ -22367,7 +22375,8 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'luis-elizondo',
-    parentId: 'ufology-researchers',
+    parentId: 'whistleblowers',
+    secondaryParentIds: ['ufology-researchers'],
     name: 'Luis Elizondo',
     description: 'Former U.S. Army Counterintelligence Special Agent and director of the Advanced Aerospace Threat Identification Program (AATIP). He resigned in 2017 to protest secrecy and assisted in the release of declassified Navy Tic-Tac and Go Fast videos.',
     relatedIds: ['ufo-sightings-br'],
@@ -22448,7 +22457,8 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'cathy-obrien',
-    parentId: 'project-mkultra',
+    parentId: 'whistleblowers',
+    secondaryParentIds: ['project-mkultra'],
     name: 'Cathy O\'Brien',
     description: 'An American author who claims to be a survivor of a secret government mind-control program called Project Monarch, a rumored offshoot of Project MKUltra. She became a prominent whistleblower on ritual abuse and psychological programming.',
     relatedIds: ['project-mkultra'],
@@ -22496,7 +22506,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'edward-snowden',
-    parentId: 'secret-government-programs',
+    parentId: 'whistleblowers',
     name: 'Edward Snowden',
     description: 'Former CIA employee and NSA contractor who leaked highly classified information in 2013, exposing global bulk surveillance programs (like PRISM) operated by the NSA and the Five Eyes intelligence alliance.',
     relatedIds: ['secret-government-programs'],
