@@ -2323,7 +2323,7 @@ const chunk_0: any[] = [
   },
   {
     id: 'aliens',
-    parentId: 'supernatural-anomalies',
+    parentId: 'ufos',
     name: 'Extraterrestrial Beings',
     description: 'Unidentified biological or interdimensional entities associated with UFO phenomena and close encounters.',
     secondaryParentIds: ['fallen-angel']
@@ -7495,7 +7495,7 @@ const chunk_1: any[] = [
   },
   {
     id: 'ufo-sightings-br',
-    parentId: 'supernatural-anomalies',
+    parentId: 'ufos',
     name: 'U.F.O. Sightings',
     description: 'Unidentified Flying Objects or Aerial Phenomena sightings that defy explanation.',
     layer: 'U.F.O. Sightings'
@@ -22280,8 +22280,22 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Secret Government Programs'
   },
   {
-    id: 'ufology-researchers',
+    id: 'ufos',
     parentId: 'supernatural-anomalies',
+    name: 'UFOs',
+    description: 'Unidentified Flying Objects, close encounters, extraterrestrial entities, and the researchers and whistleblowers who investigate them.',
+    layer: 'U.F.O. Sightings'
+  },
+  {
+    id: 'ufo-whistleblowers',
+    parentId: 'ufos',
+    name: 'Whistleblowers',
+    description: 'Military intelligence officials, aerospace contractors, and government personnel who have exposed secret UFO retrieval and reverse-engineering programs.',
+    layer: 'U.F.O. Sightings'
+  },
+  {
+    id: 'ufology-researchers',
+    parentId: 'ufos',
     name: 'Ufologists & Researchers',
     description: 'Leading scientists, astronomers, computer scientists, and historians who have researched, documented, and analyzed unidentified aerial phenomena (UAP) and anomalous events.',
     layer: 'U.F.O. Sightings'
@@ -22357,7 +22371,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'david-grusch',
-    parentId: 'whistleblowers',
+    parentId: 'ufo-whistleblowers',
     secondaryParentIds: ['ufology-researchers', 'secret-government-programs'],
     name: 'David Grusch',
     description: 'Former U.S. Air Force officer and intelligence official who testified under oath to Congress in 2023, claiming that the U.S. government operates a secret, decades-long UAP crash retrieval and reverse-engineering program possessing non-human craft and biologics.',
@@ -22366,7 +22380,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'bob-lazar',
-    parentId: 'whistleblowers',
+    parentId: 'ufo-whistleblowers',
     secondaryParentIds: ['ufology-researchers'],
     name: 'Bob Lazar',
     description: 'An American who claimed in 1989 to have been hired to reverse-engineer extraterrestrial technology at "S-4", a secret facility near Area 51. He brought public awareness to the base and detailed gravity-wave propulsion systems powered by Element 115.',
@@ -22375,7 +22389,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'luis-elizondo',
-    parentId: 'whistleblowers',
+    parentId: 'ufo-whistleblowers',
     secondaryParentIds: ['ufology-researchers'],
     name: 'Luis Elizondo',
     description: 'Former U.S. Army Counterintelligence Special Agent and director of the Advanced Aerospace Threat Identification Program (AATIP). He resigned in 2017 to protest secrecy and assisted in the release of declassified Navy Tic-Tac and Go Fast videos.',
