@@ -22089,19 +22089,182 @@ export const TERM_TREE_DATA: TermNode[] = [
   {
     id: 'operation-highjump',
     parentId: 'ufo-sightings-br',
+    secondaryParentIds: ['secret-government-programs'],
     name: 'Operation Highjump (Antarctic Clashes)',
     description: 'A massive 1946–1947 US Navy expedition to Antarctica led by Admiral Richard E. Byrd, which abruptly retreated amidst rumors of conflicts with advanced, disc-shaped aircraft operating from geothermal hollows or a secret redoubt (Base 211).',
-    layer: 'U.F.O. Sightings',
-    mapFeatureId: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-25',
-    relatedIds: ['ufo-sightings-br', 'agartha-inner-earth', 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-25'],
+    layer: 'Secret Government Programs',
+    timelineId: 'operation-highjump',
+    relatedIds: ['ufo-sightings-br', 'agartha-inner-earth', 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-25', 'secret-government-programs'],
     sources: ['Declassified Admiral Byrd Logs', 'Military Expedition Archives']
   },
   {
     id: 'philadelphia-experiment',
-    parentId: 'space-anomalies-br',
+    parentId: 'secret-government-programs',
+    secondaryParentIds: ['space-anomalies-br'],
     name: 'The Philadelphia Experiment',
     description: 'A rumored 1943 US military experiment ("Project Rainbow") in which the destroyer escort USS Eldridge was allegedly rendered completely invisible, resulting in physical teleportation, temporal distortion, and severe molecular displacement among the crew.',
-    relatedIds: ['the-veil', 'supernatural-anomalies'],
+    layer: 'Secret Government Programs',
+    timelineId: 'philadelphia-experiment',
+    relatedIds: ['the-veil', 'supernatural-anomalies', 'space-anomalies-br'],
     sources: ['Project Rainbow Records', 'Fringe Physics Literature']
+  },
+  {
+    id: 'secret-government-programs',
+    name: 'Secret Government Programs',
+    description: 'Declassified military projects, psychological operations, clandestine intelligence agency experiments, and conspiracy theory research programs in the United States and abroad.',
+    layer: 'Secret Government Programs'
+  },
+  {
+    id: 'project-mkultra',
+    parentId: 'secret-government-programs',
+    name: 'Project MKUltra',
+    description: 'A clandestine CIA mind control and chemical interrogation program launched in 1953, utilizing drugs, sensory deprivation, and hypnosis on unwitting subjects.',
+    layer: 'Secret Government Programs',
+    timelineId: 'project-mkultra',
+    sources: ['CIA Declassified Archives', 'Joint Congressional Committee Investigation Reports (1977)']
+  },
+  {
+    id: 'project-stargate',
+    parentId: 'secret-government-programs',
+    name: 'Project Stargate',
+    description: 'A declassified U.S. Army unit established in 1978 to investigate the potential of psychic phenomena, specifically remote viewing, for military and intelligence espionage.',
+    layer: 'Secret Government Programs',
+    timelineId: 'project-stargate',
+    sources: ['DIA Declassified Documents', 'CIA Archives (Released 1995)']
+  },
+  {
+    id: 'operation-paperclip',
+    parentId: 'secret-government-programs',
+    name: 'Operation Paperclip',
+    description: 'A secret program of the Joint Intelligence Objectives Agency in 1945 in which more than 1,600 German scientists, engineers, and technicians were recruited to the U.S. for government employment.',
+    layer: 'Secret Government Programs',
+    timelineId: 'operation-paperclip',
+    sources: ['National Archives and Records Administration (NARA) Records', 'Marshall Space Flight Center History Office']
+  },
+  {
+    id: 'project-blue-book',
+    parentId: 'secret-government-programs',
+    name: 'Project Blue Book',
+    description: 'The systematic study of unidentified flying objects (UFOs) conducted by the United States Air Force from 1952 to 1969, analyzing over 12,000 reports of aerial anomalies.',
+    layer: 'Secret Government Programs',
+    timelineId: 'project-blue-book',
+    sources: ['U.S. Air Force Project Blue Book Archives', 'National Archives (NARA)']
+  },
+  {
+    id: 'majestic-12',
+    parentId: 'secret-government-programs',
+    name: 'Majestic 12 (MJ-12)',
+    description: 'A conspiracy theory regarding a secret committee of scientists, military leaders, and government officials formed in 1947 by President Harry S. Truman to facilitate recovery and investigation of alien spacecraft.',
+    layer: 'Secret Government Programs',
+    timelineId: 'majestic-12',
+    sources: ['FBI Vault (Conspiratorial Document Leak Archives)', 'Investigative Research Manuscripts']
+  },
+  {
+    id: 'operation-northwoods',
+    parentId: 'secret-government-programs',
+    name: 'Operation Northwoods',
+    description: 'A proposed 1962 false flag operation against Cuba, planning staged acts of terrorism on U.S. soil to justify military intervention, which was rejected by President John F. Kennedy.',
+    layer: 'Secret Government Programs',
+    timelineId: 'operation-northwoods',
+    sources: ['Joint Chiefs of Staff Declassified Memorandums', 'National Security Archive']
+  },
+  {
+    id: 'montauk-project',
+    parentId: 'secret-government-programs',
+    name: 'Montauk Project',
+    description: 'A conspiracy theory alleging a series of secret United States government projects at Camp Hero in Montauk, Long Island, focused on exotic physics research, time travel, and mind control.',
+    layer: 'Secret Government Programs',
+    timelineId: 'montauk-project',
+    sources: ['Camp Hero Declassified History Logs', 'Esoteric Physics Research Papers']
+  },
+  {
+    id: 'operation-mockingbird',
+    parentId: 'secret-government-programs',
+    name: 'Operation Mockingbird',
+    description: 'A clandestine CIA campaign launched in the early 1950s to influence domestic and foreign media, recruiting leading American journalists into a network to present intelligence propaganda.',
+    layer: 'Secret Government Programs',
+    timelineId: 'operation-mockingbird',
+    sources: ['Church Committee Reports', 'Clandestine CIA Activity Logs']
+  },
+  {
+    id: 'operation-sea-spray',
+    parentId: 'secret-government-programs',
+    name: 'Operation Sea-Spray',
+    description: 'A secret U.S. Navy biological warfare experiment in which the bacteria Serratia marcescens was sprayed over the San Francisco Bay Area to study vulnerability to biological attacks, causing multiple infections.',
+    layer: 'Secret Government Programs',
+    timelineId: 'operation-sea-spray',
+    sources: ['U.S. Senate Subcommittee Hearings', 'Biological Warfare History Archives']
+  },
+  {
+    id: 'project-sunshine',
+    parentId: 'secret-government-programs',
+    name: 'Project Sunshine',
+    description: 'A clandestine research project by the AEC and USAF to determine the effects of radioactive fallout on human tissue, notoriously gathering baby tissue and bones without parental consent.',
+    layer: 'Secret Government Programs',
+    timelineId: 'project-sunshine',
+    sources: ['Atomic Energy Commission Records', 'Nuclear Medicine Historical Reviews']
+  },
+  {
+    id: 'project-horizon',
+    parentId: 'secret-government-programs',
+    name: 'Project Horizon',
+    description: 'A secret military study proposing the establishment of a manned, fortified military outpost on the Moon to facilitate defense, communications, and space surveillance.',
+    layer: 'Secret Government Programs',
+    timelineId: 'project-horizon',
+    sources: ['U.S. Department of the Army Declassified Files', 'Lunar Exploration History Archives']
+  },
+  {
+    id: 'project-iceworm',
+    parentId: 'secret-government-programs',
+    name: 'Project Iceworm',
+    description: 'A secret U.S. Army program to build a massive network of mobile nuclear missile launch sites under the Greenland ice sheet under the cover of Camp Century\'s scientific base.',
+    layer: 'Secret Government Programs',
+    timelineId: 'project-iceworm',
+    sources: ['Danish Foreign Policy Institute Reports', 'Camp Century Construction Records']
+  },
+  {
+    id: 'project-plowshare',
+    parentId: 'secret-government-programs',
+    name: 'Project Plowshare',
+    description: 'A program designed to utilize "peaceful nuclear explosions" for massive construction projects, such as digging canals, artificial harbors, and blasting mountain passes.',
+    layer: 'Secret Government Programs',
+    timelineId: 'project-plowshare',
+    sources: ['Lawrence Livermore National Laboratory Archives', 'AEC Peaceful Nuclear Explosions Project Papers']
+  },
+  {
+    id: 'project-1794',
+    parentId: 'secret-government-programs',
+    name: 'Project 1794',
+    description: 'A secret military aeronautical development project with Avro Canada to build a supersonic, vertical take-off and landing (VTOL) flying saucer designed to intercept bombers.',
+    layer: 'Secret Government Programs',
+    timelineId: 'project-1794',
+    sources: ['Declassified USAF Records (Released 2012)', 'Avro Canada Aeronautical Studies']
+  },
+  {
+    id: 'operation-gladio',
+    parentId: 'secret-government-programs',
+    name: 'Operation Gladio',
+    description: 'A clandestine NATO stay-behind network set up during the Cold War to organize armed resistance in the event of a Soviet invasion, which allegedly engaged in false flag operations.',
+    layer: 'Secret Government Programs',
+    timelineId: 'operation-gladio',
+    sources: ['Italian Parliamentary Investigations', 'NATO Clandestine Planning Files']
+  },
+  {
+    id: 'operation-lac',
+    parentId: 'secret-government-programs',
+    name: 'Operation LAC',
+    description: 'A series of chemical warfare dispersal tests conducted by the U.S. Army, spraying zinc cadmium sulfide over vast areas of the United States to test dispersion patterns.',
+    layer: 'Secret Government Programs',
+    timelineId: 'operation-lac',
+    sources: ['National Research Council Review', 'Army Chemical Corps Archives']
+  },
+  {
+    id: 'operation-chase',
+    parentId: 'secret-government-programs',
+    name: 'Operation CHASE',
+    description: 'A U.S. military program of disposing of chemical weapons and conventional munitions by loading them onto old cargo ships and deliberately sinking them in the deep Atlantic Ocean.',
+    layer: 'Secret Government Programs',
+    timelineId: 'operation-chase',
+    sources: ['U.S. Navy Declassified Reports', 'Environmental Ocean Dumping Records']
   }
 ];

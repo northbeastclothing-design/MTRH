@@ -2,7 +2,7 @@ export interface TimelineItem {
   id: string;
   name: string;
   type: 'lifespan' | 'event';
-  layer: 'biblical-patriarchs' | 'biblical-events' | 'sumerian-kings' | 'greek-mythology' | 'merovingian-bloodlines' | 'royal-bloodlines' | 'enochian-lore' | 'future-prophecy';
+  layer: 'biblical-patriarchs' | 'biblical-events' | 'sumerian-kings' | 'greek-mythology' | 'merovingian-bloodlines' | 'royal-bloodlines' | 'enochian-lore' | 'future-prophecy' | 'secret-gov-programs';
   start: number; // BCE is negative, CE is positive
   end?: number;  // Only for 'lifespan'
   description: string;
@@ -2310,6 +2310,190 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     end: 3500,
     description: 'God wipes away all tears. The holy city, New Jerusalem, descends out of heaven from God as a bride adorned for her husband, establishing eternity.',
     source: 'Revelation 21-22'
+  },
+  {
+    id: 'operation-paperclip',
+    name: 'Operation Paperclip',
+    type: 'lifespan',
+    layer: 'secret-gov-programs',
+    start: 1945,
+    end: 1959,
+    description: 'A secret program of the Joint Intelligence Objectives Agency in which more than 1,600 German scientists, engineers, and technicians were recruited to the U.S. for government employment.',
+    source: 'National Archives (NARA)'
+  },
+  {
+    id: 'majestic-12',
+    name: 'Majestic 12',
+    type: 'event',
+    layer: 'secret-gov-programs',
+    start: 1947,
+    description: 'A conspiracy theory regarding a secret committee of scientists, military leaders, and government officials formed by President Harry S. Truman to investigate alien spacecraft.',
+    source: 'FBI Conspiratorial Archives'
+  },
+  {
+    id: 'project-blue-book',
+    name: 'Project Blue Book',
+    type: 'lifespan',
+    layer: 'secret-gov-programs',
+    start: 1952,
+    end: 1969,
+    description: 'The systematic study of unidentified flying objects (UFOs) conducted by the United States Air Force, analyzing over 12,000 reports of aerial anomalies.',
+    source: 'U.S. Air Force Records'
+  },
+  {
+    id: 'project-mkultra',
+    name: 'Project MKUltra',
+    type: 'lifespan',
+    layer: 'secret-gov-programs',
+    start: 1953,
+    end: 1973,
+    description: 'A clandestine CIA mind control and chemical interrogation program utilizing drugs, sensory deprivation, and hypnosis on unwitting subjects.',
+    source: 'CIA Declassified Archives'
+  },
+  {
+    id: 'operation-northwoods',
+    name: 'Operation Northwoods',
+    type: 'event',
+    layer: 'secret-gov-programs',
+    start: 1962,
+    description: 'A proposed false flag operation against Cuba, planning staged acts of terrorism on U.S. soil to justify military intervention, which was rejected by President John F. Kennedy.',
+    source: 'Joint Chiefs of Staff Memorandums'
+  },
+  {
+    id: 'montauk-project',
+    name: 'Montauk Project',
+    type: 'lifespan',
+    layer: 'secret-gov-programs',
+    start: 1970,
+    end: 1983,
+    description: 'A conspiracy theory alleging a series of secret United States government projects at Camp Hero, Montauk, Long Island, focused on exotic physics, time travel, and mind control.',
+    source: 'Camp Hero Logs'
+  },
+  {
+    id: 'project-stargate',
+    name: 'Project Stargate',
+    type: 'lifespan',
+    layer: 'secret-gov-programs',
+    start: 1978,
+    end: 1995,
+    description: 'A declassified U.S. Army unit established to investigate the potential of psychic phenomena, specifically remote viewing, for military and intelligence espionage.',
+    source: 'DIA Declassified Documents'
+  },
+  {
+    id: 'philadelphia-experiment',
+    name: 'The Philadelphia Experiment',
+    type: 'event',
+    layer: 'secret-gov-programs',
+    start: 1943,
+    description: 'A rumored military experiment in which the destroyer escort USS Eldridge was allegedly rendered completely invisible and teleported from Philadelphia, Pennsylvania, to Norfolk, Virginia.',
+    source: 'Fringe Physics Literature'
+  },
+  {
+    id: 'operation-mockingbird',
+    name: 'Operation Mockingbird',
+    type: 'lifespan',
+    layer: 'secret-gov-programs',
+    start: 1951,
+    end: 1976,
+    description: 'A clandestine CIA campaign launched in the early 1950s to influence domestic and foreign media, recruiting leading American journalists into a network to present intelligence propaganda.',
+    source: 'Church Committee Reports'
+  },
+  {
+    id: 'operation-sea-spray',
+    name: 'Operation Sea-Spray',
+    type: 'event',
+    layer: 'secret-gov-programs',
+    start: 1950,
+    description: 'A secret U.S. Navy biological warfare experiment in which the bacteria Serratia marcescens was sprayed over the San Francisco Bay Area to study vulnerability to biological attacks, causing multiple infections.',
+    source: 'U.S. Senate Subcommittee Hearings'
+  },
+  {
+    id: 'project-sunshine',
+    name: 'Project Sunshine',
+    type: 'lifespan',
+    layer: 'secret-gov-programs',
+    start: 1953,
+    end: 1959,
+    description: 'A clandestine research project by the AEC and USAF to determine the effects of radioactive fallout on human tissue, notoriously gathering baby tissue and bones without parental consent.',
+    source: 'Atomic Energy Commission Records'
+  },
+  {
+    id: 'project-horizon',
+    name: 'Project Horizon',
+    type: 'event',
+    layer: 'secret-gov-programs',
+    start: 1959,
+    description: 'A secret military study proposing the establishment of a manned, fortified military outpost on the Moon to facilitate defense, communications, and space surveillance.',
+    source: 'U.S. Department of the Army Declassified Files'
+  },
+  {
+    id: 'project-iceworm',
+    name: 'Project Iceworm',
+    type: 'lifespan',
+    layer: 'secret-gov-programs',
+    start: 1959,
+    end: 1967,
+    description: 'A secret U.S. Army program to build a massive network of mobile nuclear missile launch sites under the Greenland ice sheet under the cover of Camp Century\'s scientific base.',
+    source: 'Danish Foreign Policy Institute Reports'
+  },
+  {
+    id: 'project-plowshare',
+    name: 'Project Plowshare',
+    type: 'lifespan',
+    layer: 'secret-gov-programs',
+    start: 1957,
+    end: 1973,
+    description: 'A program designed to utilize "peaceful nuclear explosions" for massive construction projects, such as digging canals, artificial harbors, and blasting mountain passes.',
+    source: 'Lawrence Livermore National Laboratory Archives'
+  },
+  {
+    id: 'project-1794',
+    name: 'Project 1794',
+    type: 'event',
+    layer: 'secret-gov-programs',
+    start: 1956,
+    description: 'A secret military aeronautical development project with Avro Canada to build a supersonic, vertical take-off and landing (VTOL) flying saucer designed to intercept bombers.',
+    source: 'Declassified USAF Records (Released 2012)'
+  },
+  {
+    id: 'operation-gladio',
+    name: 'Operation Gladio',
+    type: 'lifespan',
+    layer: 'secret-gov-programs',
+    start: 1956,
+    end: 1990,
+    description: 'A clandestine NATO stay-behind network set up during the Cold War to organize armed resistance in the event of a Soviet invasion, which allegedly engaged in false flag operations.',
+    source: 'Italian Parliamentary Investigations'
+  },
+  {
+    id: 'operation-lac',
+    name: 'Operation LAC',
+    type: 'lifespan',
+    layer: 'secret-gov-programs',
+    start: 1957,
+    end: 1958,
+    description: 'A series of chemical warfare dispersal tests conducted by the U.S. Army, spraying zinc cadmium sulfide over vast areas of the United States to test dispersion patterns.',
+    source: 'National Research Council Review'
+  },
+  {
+    id: 'operation-chase',
+    name: 'Operation CHASE',
+    type: 'lifespan',
+    layer: 'secret-gov-programs',
+    start: 1964,
+    end: 1970,
+    description: 'A U.S. military program of disposing of chemical weapons and conventional munitions by loading them onto old cargo ships and deliberately sinking them in the deep Atlantic Ocean.',
+    source: 'U.S. Navy Declassified Reports'
+  },
+  {
+    id: 'operation-highjump',
+    name: 'Operation Highjump',
+    type: 'lifespan',
+    layer: 'secret-gov-programs',
+    start: 1946,
+    end: 1947,
+    description: 'A massive 1946–1947 US Navy expedition to Antarctica led by Admiral Richard E. Byrd, which reportedly encountered advanced disc-shaped aircraft.',
+    source: 'Declassified Admiral Byrd Logs'
   }
 ];
 
@@ -2388,7 +2572,27 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'rev_second_coming': { lng: 35.184, lat: 32.585, locationName: 'Valley of Megiddo (Armageddon)', category: 'Biblical Events' },
   'rev_millennial_reign': { lng: 35.235, lat: 31.778, locationName: 'New Jerusalem / Earth', category: 'Biblical Events' },
   'rev_final_judgment': { lng: 35.235, lat: 31.778, locationName: 'Cosmic Throne (Jerusalem)', category: 'Biblical Events' },
-  'rev_new_jerusalem': { lng: 35.235, lat: 31.778, locationName: 'New Jerusalem', category: 'Biblical Events' }
+  'rev_new_jerusalem': { lng: 35.235, lat: 31.778, locationName: 'New Jerusalem', category: 'Biblical Events' },
+  // Secret Government Programs
+  'project-mkultra': { lng: -77.164, lat: 38.948, locationName: 'Langley, Virginia', category: 'Secret Government Programs' },
+  'project-stargate': { lng: -76.741, lat: 39.113, locationName: 'Fort Meade, Maryland', category: 'Secret Government Programs' },
+  'operation-paperclip': { lng: -86.586, lat: 34.730, locationName: 'Huntsville, Alabama', category: 'Secret Government Programs' },
+  'project-blue-book': { lng: -84.054, lat: 39.814, locationName: 'Wright-Patterson AFB, Ohio', category: 'Secret Government Programs' },
+  'majestic-12': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C.', category: 'Secret Government Programs' },
+  'operation-northwoods': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (Pentagon)', category: 'Secret Government Programs' },
+  'montauk-project': { lng: -71.864, lat: 41.062, locationName: 'Camp Hero, Montauk, New York', category: 'Secret Government Programs' },
+  'philadelphia-experiment': { lng: -75.174, lat: 39.897, locationName: 'Philadelphia Naval Shipyard', category: 'Secret Government Programs' },
+  'operation-mockingbird': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (CIA HQ / Media Hubs)', category: 'Secret Government Programs' },
+  'operation-sea-spray': { lng: -122.419, lat: 37.774, locationName: 'San Francisco, California', category: 'Secret Government Programs' },
+  'project-sunshine': { lng: -87.629, lat: 41.878, locationName: 'Chicago, Illinois (Argonne National Lab)', category: 'Secret Government Programs' },
+  'project-horizon': { lng: -86.640, lat: 34.681, locationName: 'Redstone Arsenal, Alabama', category: 'Secret Government Programs' },
+  'project-iceworm': { lng: -61.137, lat: 77.178, locationName: 'Camp Century, Greenland', category: 'Secret Government Programs' },
+  'project-plowshare': { lng: -116.046, lat: 37.136, locationName: 'Nevada Test Site', category: 'Secret Government Programs' },
+  'project-1794': { lng: -79.638, lat: 43.684, locationName: 'Malton, Ontario, Canada', category: 'Secret Government Programs' },
+  'operation-gladio': { lng: 12.496, lat: 41.902, locationName: 'Rome, Italy (NATO Command)', category: 'Secret Government Programs' },
+  'operation-lac': { lng: -90.199, lat: 38.627, locationName: 'St. Louis, Missouri (Core Test Area)', category: 'Secret Government Programs' },
+  'operation-chase': { lng: -76.008, lat: 36.850, locationName: 'Atlantic Ocean (Out of Norfolk, VA)', category: 'Secret Government Programs' },
+  'operation-highjump': { lng: 135.0, lat: -82.8628, locationName: 'Ross Ice Shelf, Antarctica', category: 'Secret Government Programs' }
 };
 
 export interface Waypoint {

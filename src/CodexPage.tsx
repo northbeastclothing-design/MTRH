@@ -48,6 +48,7 @@ const LAYER_COLORS: Record<string, string> = {
   'Ley Lines': '#FF5E97',
   'Archaeological Finds': '#74F8F3',
   'Biblical Finds': '#D49459',
+  'Secret Government Programs': '#FF5C5C',
   'Default': '#b6a6ff'
 };
 
@@ -76,6 +77,7 @@ const LAYER_ICONS: Record<string, string> = {
   'Ley Lines': '/icons/icon-ley-lines.svg',
   'Archaeological Finds': '/icons/icon-archaeological-finds.svg',
   'Biblical Finds': '/icons/icon-biblical-finds.svg',
+  'Secret Government Programs': '/icons/icon-secret-government-programs.svg',
   'Default': '/icons/icon-map-pin.svg'
 };
 
@@ -180,7 +182,7 @@ export default function CodexPage({
       const loc = TIMELINE_LOCATIONS[activeTermNode.timelineId];
       return {
         layer: loc.category,
-        featureSearchTerm: activeTermNode.name
+        featureSearchTerm: activeTermNode.timelineId
       };
     }
 
@@ -195,7 +197,7 @@ export default function CodexPage({
       }
       return {
         layer: layerName,
-        featureSearchTerm: activeTermNode.mapFeatureId || activeTermNode.name
+        featureSearchTerm: activeTermNode.mapFeatureId || activeTermNode.id || activeTermNode.name
       };
     }
 
@@ -214,7 +216,7 @@ export default function CodexPage({
         }
         return {
           layer: layerName,
-          featureSearchTerm: activeTermNode.mapFeatureId || activeTermNode.name
+          featureSearchTerm: activeTermNode.mapFeatureId || activeTermNode.id || activeTermNode.name
         };
       }
       curr = parent;
@@ -294,6 +296,7 @@ export default function CodexPage({
     if (curr.id === 'biblical-apocryphal') return '#90C2FF'; // Blue (Biblical Figures)
     if (curr.id === 'megaliths-structures') return '#FFFBA6'; // Yellow/Gold (Megaliths)
     if (curr.id === 'supernatural-anomalies') return '#C2FFBD'; // Green (U.F.O. Sightings)
+    if (curr.id === 'secret-government-programs') return '#FF5C5C'; // Red (Secret Government Programs)
     
     return LAYER_COLORS['Default'];
   }
@@ -334,6 +337,8 @@ export default function CodexPage({
       case '#90c2ff': // Biblical Figures
       case '#bdc4ff': // Ghosts & Hauntings / Blurred
         return '#1c447d'; // Dark navy blue
+      case '#ff5c5c': // Secret Government Programs
+        return '#b31b1b'; // Dark red/crimson
       case '#ff9be1': // War.gov UFO files 01
       case '#ff5e97': // Ley Lines
         return '#940d3f'; // Dark pink/red
@@ -358,6 +363,7 @@ export default function CodexPage({
     if (node.id === 'biblical-apocryphal') return LAYER_ICONS['Biblical Figures'];
     if (node.id === 'megaliths-structures') return LAYER_ICONS['Megaliths'];
     if (node.id === 'supernatural-anomalies') return LAYER_ICONS['U.F.O. Sightings'];
+    if (node.id === 'secret-government-programs') return LAYER_ICONS['Secret Government Programs'];
 
     if (node.layer && LAYER_ICONS[node.layer]) {
       return LAYER_ICONS[node.layer];
@@ -367,6 +373,7 @@ export default function CodexPage({
       if (parentId === 'biblical-apocryphal') return LAYER_ICONS['Biblical Figures'];
       if (parentId === 'megaliths-structures') return LAYER_ICONS['Megaliths'];
       if (parentId === 'supernatural-anomalies') return LAYER_ICONS['U.F.O. Sightings'];
+      if (parentId === 'secret-government-programs') return LAYER_ICONS['Secret Government Programs'];
 
       const parent = TERM_TREE_DATA.find(n => n.id === parentId);
       if (parent && parent.layer && LAYER_ICONS[parent.layer]) {

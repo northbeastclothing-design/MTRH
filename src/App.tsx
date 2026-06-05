@@ -666,6 +666,7 @@ const processIncomingRecord = (item: any, index: number) => {
   else if (lowerCat.includes('meteor') || lowerCat.includes('crater') || lowerCat.includes('impact structure')) normalizedCategory = 'Meteor Impact Craters';
   else if (lowerCat.includes('archaeological') || lowerCat.includes('archaeology')) normalizedCategory = 'Archaeological Finds';
   else if (lowerCat.includes('biblical find') || lowerCat === 'biblical finds') normalizedCategory = 'Biblical Finds';
+  else if (lowerCat.includes('government program') || lowerCat.includes('secret government') || lowerCat.includes('classified program')) normalizedCategory = 'Secret Government Programs';
 
   // Smart imagery injection for map points lacking media (megaliths, underworld entrances, national parks, mounds)
   // ONLY use high-quality location-specific historical/documentary assets for actual landmarks.
@@ -796,6 +797,7 @@ const LAYER_CONFIG: Record<string, { color: string; icon: string }> = {
   'Ley Lines': { color: '#FF5E97', icon: '/icons/icon-ley-lines.svg' },
   'Archaeological Finds': { color: '#74F8F3', icon: '/icons/icon-archaeological-finds.svg' },
   'Biblical Finds': { color: '#D49459', icon: '/icons/icon-biblical-finds.svg' },
+  'Secret Government Programs': { color: '#FF5C5C', icon: '/icons/icon-secret-government-programs.svg' },
   'Default': { color: '#b6a6ff', icon: '/icons/icon-map-pin.svg' }
 };
 
@@ -928,7 +930,7 @@ function App() {
 
   const uniqueCategories = useMemo(() => {
     const allTags = combinedPointsAndLinesData.flatMap(item => item.categories);
-    const order = ['War.gov UFO files 01', 'War.gov UFO files 02', 'Giants & Nephilim', 'U.F.O. Sightings'];
+    const order = ['War.gov UFO files 01', 'War.gov UFO files 02', 'Secret Government Programs', 'Giants & Nephilim', 'U.F.O. Sightings'];
     return Array.from(new Set(allTags)).sort((a, b) => {
       const sA = String(a);
       const sB = String(b);
@@ -946,7 +948,8 @@ function App() {
       ...uniqueCategories,
       'Biblical / Apocryphal',
       'Megaliths / Structures',
-      'Supernatural / Anomalies'
+      'Supernatural / Anomalies',
+      'Secret Government Programs'
     ];
   }, [uniqueCategories]);
 
@@ -3290,6 +3293,11 @@ function App() {
         ...prev,
         [mapRecord.category]: true
       }));
+      setExpandedLayers(prev => ({
+        ...prev,
+        [mapRecord.category]: true
+      }));
+      setSearchQuery('');
       // Wait for map display and coordinate mapping
       setTimeout(() => {
         handleLocationItemClick(mapRecord);
@@ -3311,6 +3319,22 @@ function App() {
     setSelectedFeature(feature);
     setIsRightCollapsed(false);
     setActiveWaypointIndex(null);
+
+    // Auto-expand the categories this location belongs to in the sidebar
+    if (feature.categories && Array.isArray(feature.categories)) {
+      setExpandedLayers(prev => {
+        const next = { ...prev };
+        feature.categories.forEach((cat: string) => {
+          next[cat] = true;
+        });
+        return next;
+      });
+    } else if (feature.category) {
+      setExpandedLayers(prev => ({
+        ...prev,
+        [feature.category]: true
+      }));
+    }
 
     if (feature.type === 'LineString' && Array.isArray(feature.coordinates) && feature.coordinates.length > 0) {
       let minLng = Infinity;
@@ -6580,15 +6604,26 @@ function App() {
                 ...prev,
                 [layerName]: true
               }));
+              // Expand the layer in the sidebar
+              setExpandedLayers(prev => ({
+                ...prev,
+                [layerName]: true
+              }));
               
               if (featureSearchTerm) {
-                // Set map search query and wait to fly
-                setSearchQuery(featureSearchTerm);
-                // Also search in pointsAndLinesData to select the feature
-                const mapRecord = combinedPointsAndLinesData.find(r => 
-                  String(r.name).toLowerCase().includes(featureSearchTerm.toLowerCase()) ||
-                  String(r.category) === layerName
-                );
+                // Prioritize finding by exact ID match first
+                let mapRecord = combinedPointsAndLinesData.find(r => String(r.id) === featureSearchTerm);
+                
+                // If not found, find by name containing search term
+                if (!mapRecord) {
+                  mapRecord = combinedPointsAndLinesData.find(r => 
+                    String(r.name).toLowerCase().includes(featureSearchTerm.toLowerCase())
+                  );
+                }
+                
+                // Clear search query to keep all other layer assets visible on the map and sidebar list
+                setSearchQuery('');
+
                 if (mapRecord) {
                   setTimeout(() => {
                     handleLocationItemClick(mapRecord);

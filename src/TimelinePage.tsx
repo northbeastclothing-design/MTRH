@@ -102,6 +102,16 @@ const ERAS_CONFIG = [
     icon: '/icons/icon-royal-bloodlines.svg',
     layer: 'royal-bloodlines',
     desc: 'Charlemagne, Alfred the Great, and British Monarchs down to King Charles III.'
+  },
+  {
+    id: 'secret-gov-programs',
+    name: 'Secret Government Programs',
+    start: 1940,
+    end: 2026,
+    color: '#FF5C5C', // Vibrant classified red
+    icon: '/icons/icon-secret-government-programs.svg',
+    layer: 'secret-gov-programs',
+    desc: 'Declassified military projects, chemical mind control, psychic remote viewing research, and classified aerospace programs.'
   }
 ];
 
@@ -132,7 +142,8 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
     'merovingian-bloodlines': true,
     'royal-bloodlines': true,
     'enochian-lore': true,
-    'future-prophecy': true
+    'future-prophecy': true,
+    'secret-gov-programs': true
   });
 
   // Hover & selection states
@@ -182,6 +193,9 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
 
   // Active dragging era
   const [draggingEraId, setDraggingEraId] = useState<string | null>(null);
+
+  // Ref to track last selected item ID to run horizontal pans only on selection change
+  const lastSelectedIdRef = useRef<string | null>(null);
 
   // Ordered eras list based on erasOrder state
   const orderedEras = useMemo(() => {
@@ -504,21 +518,7 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
 
   // Handle Item Selection (from either dropdown or clicking directly on the timeline tracks)
   const handleItemClick = (item: TimelineItem) => {
-    // 1. Center the timeline viewport horizontally on the item, preserving zoom span or expanding if too narrow
-    const itemCenter = item.start + (item.type === 'lifespan' ? (item.end ?? item.start) - item.start : 0) / 2;
-    const itemLength = item.type === 'lifespan' ? Math.abs((item.end ?? item.start) - item.start) : 0;
-    const targetSpan = Math.max(span, itemLength * 1.5);
-    const targetStart = itemCenter - targetSpan / 2;
-    const targetEnd = itemCenter + targetSpan / 2;
-    animateViewport(targetStart, targetEnd);
-    
-    // 2. Make sure this era is toggled ON
-    const era = ERAS_CONFIG.find(e => e.layer === item.layer);
-    if (era && !activeEras[era.id]) {
-      setActiveEras(p => ({ ...p, [era.id]: true }));
-    }
-    
-    // 3. Select item and show its detail card
+    // Select item and show its detail card (auto-centering and era activation are handled in useEffect)
     setSelectedItem(item);
   };
 
@@ -638,10 +638,47 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
   }, [hoveredItem]);
 
 
-  // Auto-center vertically on selection to prevent details card cutoff
+  // Auto-center vertically and horizontally on selection
   useEffect(() => {
-    if (!selectedItem || !scrollContainerRef.current) return;
-    
+    if (!selectedItem) {
+      lastSelectedIdRef.current = null;
+      return;
+    }
+
+    const isNewSelection = lastSelectedIdRef.current !== selectedItem.id;
+    lastSelectedIdRef.current = selectedItem.id;
+
+    if (isNewSelection) {
+      // 1. Make sure the era is active and not collapsed
+      const era = ERAS_CONFIG.find(e => e.layer === selectedItem.layer);
+      if (era) {
+        if (!activeEras[era.id]) {
+          setActiveEras(p => ({ ...p, [era.id]: true }));
+        }
+        if (collapsedEras[era.id]) {
+          setCollapsedEras(p => ({ ...p, [era.id]: false }));
+        }
+      }
+
+      // 2. Horizontal auto-centering
+      const start = selectedItem.start;
+      const end = selectedItem.type === 'lifespan' ? (selectedItem.end ?? selectedItem.start) : selectedItem.start;
+      
+      const itemCenter = selectedItem.start + (selectedItem.type === 'lifespan' ? (selectedItem.end ?? selectedItem.start) - selectedItem.start : 0) / 2;
+      const itemLength = selectedItem.type === 'lifespan' ? Math.abs((selectedItem.end ?? selectedItem.start) - selectedItem.start) : 0;
+      const currentSpan = viewEnd - viewStart;
+      const targetSpan = Math.max(currentSpan, itemLength * 1.5);
+      const targetStart = itemCenter - targetSpan / 2;
+      const targetEnd = itemCenter + targetSpan / 2;
+
+      const isFullyVisible = start >= viewStart && end <= viewEnd;
+      if (!isFullyVisible || Math.abs((viewStart + currentSpan / 2) - itemCenter) > currentSpan * 0.1) {
+        animateViewport(targetStart, targetEnd);
+      }
+    }
+
+    // 3. Vertical auto-centering (always runs to adjust when layout changes or card is toggled)
+    if (!scrollContainerRef.current) return;
     const container = scrollContainerRef.current;
     
     const animId = requestAnimationFrame(() => {
@@ -650,7 +687,6 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
       
       const placeBelow = itemY < 260;
       
-      // Calculate target vertical center for item + card combination
       const targetCenterY = placeBelow ? itemY + 110 : itemY - 110;
       const viewportHeight = container.clientHeight;
       let targetScrollTop = targetCenterY - viewportHeight / 2;
@@ -679,7 +715,7 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
     });
     
     return () => cancelAnimationFrame(animId);
-  }, [selectedItem, trackOffsets]);
+  }, [selectedItem, trackOffsets, viewStart, viewEnd, activeEras, collapsedEras]);
 
   // highlightColor is defined above recursively based on hovered item
 
