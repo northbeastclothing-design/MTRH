@@ -22372,7 +22372,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   {
     id: 'david-grusch',
     parentId: 'ufo-whistleblowers',
-    secondaryParentIds: ['ufology-researchers', 'secret-government-programs'],
+    secondaryParentIds: ['ufology-researchers'],
     name: 'David Grusch',
     description: 'Former U.S. Air Force officer and intelligence official who testified under oath to Congress in 2023, claiming that the U.S. government operates a secret, decades-long UAP crash retrieval and reverse-engineering program possessing non-human craft and biologics.',
     relatedIds: ['secret-government-programs', 'ufo-sightings-br'],
@@ -22528,7 +22528,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'chelsea-manning',
-    parentId: 'secret-government-programs',
+    parentId: 'whistleblowers',
     name: 'Chelsea Manning',
     description: 'Former U.S. Army intelligence analyst who leaked nearly 750,000 military and diplomatic documents to WikiLeaks in 2010, exposing battlefield logs, classified videos, and secret diplomatic communications.',
     relatedIds: ['secret-government-programs'],
