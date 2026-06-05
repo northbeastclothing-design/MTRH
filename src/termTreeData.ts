@@ -22121,6 +22121,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'A clandestine CIA mind control and chemical interrogation program launched in 1953, utilizing drugs, sensory deprivation, and hypnosis on unwitting subjects.',
     layer: 'Secret Government Programs',
     timelineId: 'project-mkultra',
+    relatedIds: ['sidney-gottlieb', 'ewen-cameron', 'cathy-obrien'],
     sources: ['CIA Declassified Archives', 'Joint Congressional Committee Investigation Reports (1977)']
   },
   {
@@ -22130,6 +22131,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'A declassified U.S. Army unit established in 1978 to investigate the potential of psychic phenomena, specifically remote viewing, for military and intelligence espionage.',
     layer: 'Secret Government Programs',
     timelineId: 'project-stargate',
+    relatedIds: ['joe-mcmoneagle', 'uri-geller', 'ingo-swann', 'russell-targ', 'hal-puthoff', 'albert-stubblebine'],
     sources: ['DIA Declassified Documents', 'CIA Archives (Released 1995)']
   },
   {
@@ -22139,6 +22141,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'A secret program of the Joint Intelligence Objectives Agency in 1945 in which more than 1,600 German scientists, engineers, and technicians were recruited to the U.S. for government employment.',
     layer: 'Secret Government Programs',
     timelineId: 'operation-paperclip',
+    relatedIds: ['wernher-von-braun', 'hubertus-strughold'],
     sources: ['National Archives and Records Administration (NARA) Records', 'Marshall Space Flight Center History Office']
   },
   {
@@ -22148,6 +22151,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'The systematic study of unidentified flying objects (UFOs) conducted by the United States Air Force from 1952 to 1969, analyzing over 12,000 reports of aerial anomalies.',
     layer: 'Secret Government Programs',
     timelineId: 'project-blue-book',
+    relatedIds: ['j-allen-hynek', 'edward-ruppelt', 'john-samford', 'jacques-vallee'],
     sources: ['U.S. Air Force Project Blue Book Archives', 'National Archives (NARA)']
   },
   {
@@ -22157,6 +22161,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'A conspiracy theory regarding a secret committee of scientists, military leaders, and government officials formed in 1947 by President Harry S. Truman to facilitate recovery and investigation of alien spacecraft.',
     layer: 'Secret Government Programs',
     timelineId: 'majestic-12',
+    relatedIds: ['roscoe-hillenkoetter', 'stanton-friedman', 'philip-corso', 'richard-dolan', 'timothy-good'],
     sources: ['FBI Vault (Conspiratorial Document Leak Archives)', 'Investigative Research Manuscripts']
   },
   {
@@ -22266,5 +22271,243 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Secret Government Programs',
     timelineId: 'operation-chase',
     sources: ['U.S. Navy Declassified Reports', 'Environmental Ocean Dumping Records']
+  },
+  {
+    id: 'ufology-researchers',
+    parentId: 'supernatural-anomalies',
+    name: 'Ufologists, Researchers & Whistleblowers',
+    description: 'Leading scientists, military intelligence investigators, and whistleblowers who have researched, testified on, and documented unidentified aerial phenomena (UAP).',
+    layer: 'U.F.O. Sightings'
+  },
+  {
+    id: 'j-allen-hynek',
+    parentId: 'ufology-researchers',
+    secondaryParentIds: ['project-blue-book'],
+    name: 'Dr. J. Allen Hynek',
+    description: 'Astronomer who served as scientific advisor to the USAF UFO projects (Sign, Grudge, and Blue Book). Originally a skeptic who debunked reports, he later became convinced of the physical reality of UFOs, founded the Center for UFO Studies (CUFOS), and developed the Close Encounters classification scale.',
+    relatedIds: ['project-blue-book', 'jacques-vallee', 'donald-keyhoe', 'edward-ruppelt'],
+    sources: ['The UFO Experience (Hynek)', 'Project Blue Book Archives']
+  },
+  {
+    id: 'jacques-vallee',
+    parentId: 'ufology-researchers',
+    secondaryParentIds: ['project-blue-book'],
+    name: 'Dr. Jacques Vallée',
+    description: 'French-born astronomer, computer scientist, and ufologist who co-developed the first computerized database of UFO sightings. A close associate of J. Allen Hynek, he is famous for proposing the Interdimensional Hypothesis (IDH)—arguing that UFOs represent a non-human consciousness manipulating space-time.',
+    relatedIds: ['j-allen-hynek', 'project-blue-book', 'john-keel'],
+    sources: ['Passport to Magonia', 'Dimensions (Vallee)']
+  },
+  {
+    id: 'stanton-friedman',
+    parentId: 'ufology-researchers',
+    secondaryParentIds: ['majestic-12'],
+    name: 'Stanton Friedman',
+    description: 'Nuclear physicist and investigator who was the original civilian researcher to investigate the Roswell UFO crash in the late 1970s. He spent decades researching Majestic 12 documents and presenting scientific arguments for the extraterrestrial origin of UFOs.',
+    relatedIds: ['majestic-12', 'philip-corso'],
+    sources: ['Crash at Corona', 'Roswell Incident Archives']
+  },
+  {
+    id: 'donald-keyhoe',
+    parentId: 'ufology-researchers',
+    name: 'Major Donald Keyhoe',
+    description: 'Retired U.S. Marine Corps Major who co-founded NICAP, the largest civilian UFO research organization in the 1950s and 60s. He was a vocal opponent of military censorship, arguing that the Air Force covered up UFO files to prevent panic.',
+    relatedIds: ['j-allen-hynek', 'roscoe-hillenkoetter'],
+    sources: ['Flying Saucers are Real (1950)', 'NICAP Archives']
+  },
+  {
+    id: 'richard-dolan',
+    parentId: 'ufology-researchers',
+    secondaryParentIds: ['majestic-12'],
+    name: 'Richard Dolan',
+    description: 'Historian and author specialized in the history of the national security state and declassified UFO documentation, analyzing the geopolitical implications of UAP secrecy.',
+    relatedIds: ['majestic-12', 'timothy-good'],
+    sources: ['UFOs and the National Security State']
+  },
+  {
+    id: 'linda-moulton-howe',
+    parentId: 'ufology-researchers',
+    name: 'Linda Moulton Howe',
+    description: 'Emmy-winning investigative journalist who pioneered research into animal mutilations, crop circles, and physical evidence of UFO encounters, proposing military and non-human intelligence involvement.',
+    relatedIds: ['crop-circles'],
+    sources: ['An Alien Harvest', 'Earthfiles Archives']
+  },
+  {
+    id: 'john-keel',
+    parentId: 'ufology-researchers',
+    name: 'John Keel',
+    description: 'Journalist and author of *The Mothman Prophecies* who developed the "ultraterrestrial" hypothesis, suggesting that anomalies and paranormal phenomena are caused by shape-shifting entities from co-existing dimensions rather than space travelers.',
+    relatedIds: ['jacques-vallee', 'supernatural-anomalies'],
+    sources: ['The Mothman Prophecies', 'Operation Trojan Horse']
+  },
+  {
+    id: 'timothy-good',
+    parentId: 'ufology-researchers',
+    secondaryParentIds: ['majestic-12'],
+    name: 'Timothy Good',
+    description: 'Leading British ufologist and author who conducted global investigations into military encounters and government cover-ups of UFO sightings, utilizing leaked documents and first-hand military testimonies.',
+    relatedIds: ['majestic-12', 'richard-dolan'],
+    sources: ['Above Top Secret', 'Need to Know']
+  },
+  {
+    id: 'david-grusch',
+    parentId: 'ufology-researchers',
+    secondaryParentIds: ['secret-government-programs'],
+    name: 'David Grusch',
+    description: 'Former U.S. Air Force officer and intelligence official who testified under oath to Congress in 2023, claiming that the U.S. government operates a secret, decades-long UAP crash retrieval and reverse-engineering program possessing non-human craft and biologics.',
+    relatedIds: ['secret-government-programs', 'ufo-sightings-br'],
+    sources: ['Congressional Hearing on UAP (July 2023)', 'Inspector General Complaint Filing']
+  },
+  {
+    id: 'bob-lazar',
+    parentId: 'ufology-researchers',
+    name: 'Bob Lazar',
+    description: 'An American who claimed in 1989 to have been hired to reverse-engineer extraterrestrial technology at "S-4", a secret facility near Area 51. He brought public awareness to the base and detailed gravity-wave propulsion systems powered by Element 115.',
+    relatedIds: ['ufo-sightings-br'],
+    sources: ['KLAS-TV Interviews (George Knapp)', 'Area 51 Historical Archives']
+  },
+  {
+    id: 'luis-elizondo',
+    parentId: 'ufology-researchers',
+    name: 'Luis Elizondo',
+    description: 'Former U.S. Army Counterintelligence Special Agent and director of the Advanced Aerospace Threat Identification Program (AATIP). He resigned in 2017 to protest secrecy and assisted in the release of declassified Navy Tic-Tac and Go Fast videos.',
+    relatedIds: ['ufo-sightings-br'],
+    sources: ['AATIP Records', 'Imminent (Luis Elizondo Memoir)']
+  },
+  {
+    id: 'philip-corso',
+    parentId: 'ufology-researchers',
+    secondaryParentIds: ['majestic-12'],
+    name: 'Col. Philip J. Corso',
+    description: 'U.S. Army intelligence officer who served in Eisenhower\'s National Security Council. In his book *The Day After Roswell*, he claimed to have personally seeded recovered alien technologies (integrated circuits, lasers, night vision) from the Roswell crash to American defense contractors.',
+    relatedIds: ['majestic-12', 'stanton-friedman'],
+    sources: ['The Day After Roswell (1997)', 'Eisenhower National Security Archives']
+  },
+  {
+    id: 'joe-mcmoneagle',
+    parentId: 'project-stargate',
+    name: 'Joe McMoneagle',
+    description: 'U.S. Army remote viewer No. 001 who served in Project Stargate at SRI. Awarded the Legion of Merit for his remote viewing contributions, which included locating lost Soviet aircraft and hostage locations during the Cold War.',
+    relatedIds: ['project-stargate', 'uri-geller', 'ingo-swann', 'hal-puthoff'],
+    sources: ['Project Stargate Declassified Files', 'Mind Trek (Joe McMoneagle)']
+  },
+  {
+    id: 'uri-geller',
+    parentId: 'project-stargate',
+    name: 'Uri Geller',
+    description: 'Israeli-British psychic and performer famous for spoon-bending. In 1972, he was subject to secret scientific testing at Stanford Research Institute (SRI) under CIA oversight as part of the early research that led to Project Stargate.',
+    relatedIds: ['project-stargate', 'joe-mcmoneagle', 'ingo-swann', 'hal-puthoff'],
+    sources: ['SRI Technical Reports', 'CIA-RDP96-00787R000700110003-2 (Declassified CIA Document)']
+  },
+  {
+    id: 'ingo-swann',
+    parentId: 'project-stargate',
+    name: 'Ingo Swann',
+    description: 'Artist, psychic, and author who co-created the Controlled Remote Viewing (CRV) protocols for Project Stargate. Notoriously remote-viewed rings around Jupiter before the Voyager probe confirmed their existence.',
+    relatedIds: ['project-stargate', 'joe-mcmoneagle', 'uri-geller', 'hal-puthoff'],
+    sources: ['Controlled Remote Viewing Manual', 'To Kiss Earth Good-Bye']
+  },
+  {
+    id: 'russell-targ',
+    parentId: 'project-stargate',
+    name: 'Russell Targ',
+    description: 'Physicist and author who co-founded the Stanford Research Institute (SRI) remote viewing program with Hal Puthoff, conducting early psychic espionage research for the CIA and DIA.',
+    relatedIds: ['project-stargate', 'hal-puthoff', 'joe-mcmoneagle'],
+    sources: ['Mind-Reach', 'Limitless Mind']
+  },
+  {
+    id: 'hal-puthoff',
+    parentId: 'project-stargate',
+    name: 'Dr. Hal Puthoff',
+    description: 'Physicist who directed the SRI remote viewing program (Project Stargate). Later researched zero-point energy, quantum vacuum physics, and advanced propulsion technologies, serving as a consultant on government threat assessment programs.',
+    relatedIds: ['project-stargate', 'russell-targ', 'joe-mcmoneagle'],
+    sources: ['SRI Remote Viewing Studies', 'Advanced Space Propulsion Papers']
+  },
+  {
+    id: 'albert-stubblebine',
+    parentId: 'project-stargate',
+    name: 'Maj. Gen. Albert Stubblebine',
+    description: 'U.S. Army Major General who commanded INSCOM and was a primary military sponsor of Project Stargate. A staunch advocate for psychic espionage, remote viewing, and psychic warfare concepts.',
+    relatedIds: ['project-stargate'],
+    sources: ['The Men Who Stare at Goats (Jon Ronson)', 'INSCOM Clandestine Records']
+  },
+  {
+    id: 'sidney-gottlieb',
+    parentId: 'project-mkultra',
+    name: 'Dr. Sidney Gottlieb',
+    description: 'Chemist and CIA officer who directed Project MKUltra. Nicknamed the "Black Sorcerer," he administered LSD, toxins, and mind-control techniques to unwitting subjects, destroying most program records before congressional investigations.',
+    relatedIds: ['project-mkultra'],
+    sources: ['Poisoner in Chief (Stephen Kinzer)', 'MKUltra Senate Hearings']
+  },
+  {
+    id: 'ewen-cameron',
+    parentId: 'project-mkultra',
+    name: 'Dr. D. Ewen Cameron',
+    description: 'Psychiatrist and head of the Allan Memorial Institute who conducted MKUltra Subproject 68. He subjected patients to "psychic driving," chemical sleep, and high-voltage electroshock to rewrite their personalities.',
+    relatedIds: ['project-mkultra'],
+    sources: ['Allan Memorial Institute Archives', 'MKUltra Subproject 68 Records']
+  },
+  {
+    id: 'cathy-obrien',
+    parentId: 'project-mkultra',
+    name: 'Cathy O\'Brien',
+    description: 'An American author who claims to be a survivor of a secret government mind-control program called Project Monarch, a rumored offshoot of Project MKUltra. She became a prominent whistleblower on ritual abuse and psychological programming.',
+    relatedIds: ['project-mkultra'],
+    sources: ['Trance Formation of America (1995)']
+  },
+  {
+    id: 'wernher-von-braun',
+    parentId: 'operation-paperclip',
+    name: 'Dr. Wernher von Braun',
+    description: 'German rocket engineer who pioneered the V-2 combat rocket. Recruited to the U.S. under Operation Paperclip, he became the architect of the Saturn V rocket and director of NASA\'s Marshall Space Flight Center.',
+    relatedIds: ['operation-paperclip', 'project-horizon'],
+    sources: ['NARA Operation Paperclip Files', 'NASA Marshall Space Flight Center History']
+  },
+  {
+    id: 'hubertus-strughold',
+    parentId: 'operation-paperclip',
+    name: 'Hubertus Strughold',
+    description: 'German physiologist recruited under Operation Paperclip. Known as the "Father of Space Medicine" for his contributions to astronaut safety, his legacy remains controversial due to links to human experiments at Dachau.',
+    relatedIds: ['operation-paperclip'],
+    sources: ['Operation Paperclip Personnel Files', 'Dachau Cold Experiments Investigation Reports']
+  },
+  {
+    id: 'edward-ruppelt',
+    parentId: 'project-blue-book',
+    name: 'Capt. Edward J. Ruppelt',
+    description: 'U.S. Air Force Captain who served as the first head of Project Blue Book. He coined the term "Unidentified Flying Object" to replace "flying saucer" and advocated for objective scientific study of the phenomena.',
+    relatedIds: ['project-blue-book', 'j-allen-hynek'],
+    sources: ['The Report on Unidentified Flying Objects (Edward J. Ruppelt)']
+  },
+  {
+    id: 'john-samford',
+    parentId: 'project-blue-book',
+    name: 'Maj. Gen. John A. Samford',
+    description: 'U.S. Air Force Major General who served as Director of Intelligence during the famous 1952 Washington D.C. UFO flyovers, holding the largest Pentagon press conference since WWII to address the radar anomalies.',
+    relatedIds: ['project-blue-book'],
+    sources: ['Pentagon Press Conference Transcript (July 29, 1952)']
+  },
+  {
+    id: 'roscoe-hillenkoetter',
+    parentId: 'majestic-12',
+    name: 'Roscoe H. Hillenkoetter',
+    description: 'The first Director of the CIA (1947–1950) who is alleged to have been a member of the Majestic 12 group. Later, as a retired Rear Admiral, he joined NICAP and publicly warned that the government was censoring UFO information.',
+    relatedIds: ['majestic-12', 'donald-keyhoe'],
+    sources: ['NICAP Board Minutes', 'Majestic 12 Alleged Leak Documents']
+  },
+  {
+    id: 'edward-snowden',
+    parentId: 'secret-government-programs',
+    name: 'Edward Snowden',
+    description: 'Former CIA employee and NSA contractor who leaked highly classified information in 2013, exposing global bulk surveillance programs (like PRISM) operated by the NSA and the Five Eyes intelligence alliance.',
+    relatedIds: ['secret-government-programs'],
+    sources: ['NSA Declassified Documents', 'Citizenfour Documentary Files']
+  },
+  {
+    id: 'chelsea-manning',
+    parentId: 'secret-government-programs',
+    name: 'Chelsea Manning',
+    description: 'Former U.S. Army intelligence analyst who leaked nearly 750,000 military and diplomatic documents to WikiLeaks in 2010, exposing battlefield logs, classified videos, and secret diplomatic communications.',
+    relatedIds: ['secret-government-programs'],
+    sources: ['WikiLeaks Iraq and Afghan War Logs', 'U.S. Army Court-Martial Proceedings']
   }
 ];
