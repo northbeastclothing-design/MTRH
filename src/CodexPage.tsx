@@ -1543,7 +1543,7 @@ export default function CodexPage({
                               fontWeight: '900',
                               color: isSelected || isHovered 
                                 ? '#000000' 
-                                : (isMapDarkMode ? '#ff5c5c' : '#b31b1b'),
+                                : (isMapDarkMode ? '#ffffff' : '#000000'),
                               marginLeft: '6px',
                               flexShrink: 0
                             }}
@@ -1919,8 +1919,7 @@ export default function CodexPage({
                         fontWeight: 900,
                         fontSize: '44px',
                         lineHeight: 1,
-                        WebkitTextStroke: `3px ${isMapDarkMode ? '#ff5c5c' : '#b31b1b'}`,
-                        color: isMapDarkMode ? '#ff5c5c' : '#b31b1b',
+                        WebkitTextStroke: '3px currentColor',
                         flexShrink: 0
                       }}>✖</span>
                     )}
