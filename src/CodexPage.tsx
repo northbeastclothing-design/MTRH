@@ -1543,7 +1543,7 @@ export default function CodexPage({
                               fontWeight: '900',
                               color: isSelected || isHovered 
                                 ? '#000000' 
-                                : (isMapDarkMode ? '#ffffff' : '#000000'),
+                                : (isMapDarkMode ? '#ff5c5c' : '#b31b1b'),
                               marginLeft: '6px',
                               flexShrink: 0
                             }}
@@ -1919,7 +1919,8 @@ export default function CodexPage({
                         fontWeight: 900,
                         fontSize: '44px',
                         lineHeight: 1,
-                        WebkitTextStroke: '3px currentColor',
+                        WebkitTextStroke: `3px ${isMapDarkMode ? '#ff5c5c' : '#b31b1b'}`,
+                        color: isMapDarkMode ? '#ff5c5c' : '#b31b1b',
                         flexShrink: 0
                       }}>✖</span>
                     )}
@@ -2305,9 +2306,9 @@ export default function CodexPage({
                     <div 
                       style={{ 
                         padding: '12px',
-                        border: `1px solid ${theme.borderLight}`,
+                        border: `1px solid ${isMapDarkMode ? 'rgba(255, 92, 92, 0.4)' : 'rgba(179, 27, 27, 0.4)'}`,
                         borderRadius: '8px',
-                        background: isMapDarkMode ? 'rgba(255,255,255,0.02)' : 'rgba(0,0,0,0.01)',
+                        background: isMapDarkMode ? 'rgba(255, 92, 92, 0.04)' : 'rgba(255, 92, 92, 0.02)',
                       }}
                     >
                       <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
@@ -2319,17 +2320,17 @@ export default function CodexPage({
                             fontSize: '11px',
                             lineHeight: '1',
                             fontWeight: '900',
-                            color: isMapDarkMode ? '#ffffff' : '#000000',
+                            color: isMapDarkMode ? '#ff5c5c' : '#b31b1b',
                             fontFamily: '"Space Mono", monospace',
                           }}
                         >
                           ✖
                         </span>
-                        <span style={{ fontSize: '9px', fontWeight: 'bold', fontFamily: '"Space Mono", monospace' }}>
+                        <span style={{ fontSize: '9px', fontWeight: 'bold', fontFamily: '"Space Mono", monospace', color: isMapDarkMode ? '#ff5c5c' : '#b31b1b' }}>
                           APOCRYPHAL INDICATOR
                         </span>
                       </div>
-                      <p style={{ fontSize: '8.5px', lineHeight: '1.4', color: theme.textDim, margin: 0, fontFamily: '"Space Mono", monospace' }}>
+                      <p style={{ fontSize: '8.5px', lineHeight: '1.4', color: isMapDarkMode ? '#ffb3b3' : '#801c1c', margin: 0, fontFamily: '"Space Mono", monospace' }}>
                         Represents apocryphal, non-canonical, or mythological entries outside of canonical scripture.
                       </p>
                     </div>

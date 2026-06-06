@@ -270,7 +270,7 @@ async function startServer() {
 
   app.post("/api/submissions/create", async (req, res) => {
     try {
-      const { name, category, description, coordinates, images, date, source } = req.body;
+      const { name, category, description, coordinates, images, date, source, socialLink } = req.body;
       if (!name || !category || !description) {
         return res.status(400).json({ error: "Missing required fields." });
       }
@@ -297,6 +297,9 @@ async function startServer() {
       }
       if (source && typeof source === 'string' && source.trim()) {
         submissionData.source = source.trim();
+      }
+      if (socialLink && typeof socialLink === 'string' && socialLink.trim()) {
+        submissionData.socialLink = socialLink.trim();
       }
 
       await dbAdmin.collection('submissions').doc(submissionId).set(submissionData);

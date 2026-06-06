@@ -1,7 +1,7 @@
 export interface ArchaeologicalFind {
   id: string;
   name: string;
-  category: 'Archaeological Finds' | 'Biblical Finds';
+  category: 'Archaeological Finds' | 'Biblical Finds' | 'Cryptid Sightings' | 'Giants & Nephilim';
   type: 'Point';
   coordinates: {
     lng: number;
@@ -12,6 +12,7 @@ export interface ArchaeologicalFind {
   description: string;
   source: string;
   images: string[];
+  socialLink?: string;
 }
 
 export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
@@ -184,7 +185,7 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
     source: "Hellenic Ministry of Culture",
     images: ["https://upload.wikimedia.org/wikipedia/commons/5/5b/Palace_of_Knossos.jpg"]
   },
-
+  
   // ==================== BIBLICAL FINDS ====================
   {
     id: "archaeology-shroud-of-turin",
@@ -353,5 +354,262 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
     description: "A first-century residential house in Capernaum, over which an early Christian octagonal church was later built in the 5th century. Early graffiti scratched into the plaster of the house walls mentions Jesus, Peter, and Christian symbols, supporting the historic tradition that this was the home of Simon Peter.",
     source: "Capernaum Archaeological Excavations",
     images: ["https://upload.wikimedia.org/wikipedia/commons/8/86/Capernaum%2C_Israel_10.jpg"]
+  },
+  {
+    id: "archaeology-winged-serpents-buto",
+    name: "Winged Serpent Boneyard of Buto",
+    category: "Cryptid Sightings",
+    type: "Point",
+    coordinates: { lng: 32.0900, lat: 30.6100 }, // Wadi Tumilat / Sinai border pass, Egypt
+    date: -450,
+    displayDate: "c. 450 BC (Reported by Herodotus)",
+    description: "A narrow mountain pass situated opposite the ancient city of Buto, described by the Greek historian Herodotus. He reported seeing massive heaps of bones and spines belonging to winged serpents that flew from Arabia toward Egypt every spring, only to be intercepted and destroyed by ibises. The creatures were described as bat-winged, serpentine, and resembling water snakes.",
+    source: "Herodotus, Histories (Book II.75) / @classical_presbyterian",
+    images: ["https://www.instagram.com/p/DZLsVsaOGIf/media/?size=l"],
+    socialLink: "https://www.instagram.com/p/DZLsVsaOGIf/"
+  },
+  {
+    id: "archaeology-alexander-dragon-abisarus",
+    name: "King Abisarus' Serpent Cavern",
+    category: "Cryptid Sightings",
+    type: "Point",
+    coordinates: { lng: 73.7300, lat: 32.9300 }, // Jhelum River region, Punjab, Pakistan
+    date: -330,
+    displayDate: "330 BC (Reported by Alexander the Great)",
+    description: "During Alexander the Great's invasion of India, his army encountered a massive, sacred serpent living in a cavern in the territory of King Abisarus. Recorded by Claudius Aelianus (On Animals) and Alexander's lieutenant Onesicritus, the creature was revered as a god by local inhabitants. When the passing army disturbed the cavern, the serpent reportedly emerged, hissing and snorting violently, with eyes described as the size of Macedonian shields.",
+    source: "Aelian, On the Nature of Animals (Book XV) / @classical_presbyterian",
+    images: ["https://www.instagram.com/p/DY_IpTVOaiJ/media/?size=l"],
+    socialLink: "https://www.instagram.com/p/DY_IpTVOaiJ/"
+  },
+  {
+    id: "archaeology-ethiopian-dragons",
+    name: "Ethiopian Giant Dragons",
+    category: "Cryptid Sightings",
+    type: "Point",
+    coordinates: { lng: 39.5000, lat: 9.0000 }, // Highlands of Ethiopia
+    date: -250,
+    displayDate: "c. 250 BC (Reported)",
+    description: "According to Roman author Claudius Aelianus (On Animals), ancient Greek rulers imported massive live dragons from Ethiopia. Aelian described Ethiopia as a land renowned for giant serpents, noting they were the largest in the known world and were occasionally captured for exhibition in the courts of Hellenistic Egypt.",
+    source: "Aelian, On the Nature of Animals (Book II.21) / @classical_presbyterian",
+    images: ["https://www.instagram.com/p/DZGlPQtlfjY/media/?size=l"],
+    socialLink: "https://www.instagram.com/p/DZGlPQtlfjY/"
+  },
+  {
+    id: "archaeology-dos-palmas-winged-serpent",
+    name: "Dos Palmas Winged Serpent Encounter",
+    category: "Cryptid Sightings",
+    type: "Point",
+    coordinates: { lng: -115.8271, lat: 33.5089 }, // Riverside County, California, USA
+    date: 1882,
+    displayDate: "1882 AD (Encounter)",
+    description: "An 1882 report published in the Los Angeles Times described a bizarre encounter in the Colorado Desert where a Southern Pacific train was intercepted by a 30-foot-long winged, serpent-like creature near Dos Palmas. Witnesses reported that the train collided with the beast, triggering a violent attack where the creature broke windows and shook the passenger cars before flying away.",
+    source: "Los Angeles Times (1882) / @classical_presbyterian",
+    images: ["https://www.instagram.com/p/DYBJEK6Cefe/media/?size=l"],
+    socialLink: "https://www.instagram.com/p/DYBJEK6Cefe/"
+  },
+  // ==================== GIANTS & NEPHILIM ====================
+  {
+    id: "archaeology-noblesville-giant",
+    name: "8 ft 7 in Giant Skeleton - Noblesville, Indiana",
+    category: "Giants & Nephilim",
+    type: "Point",
+    coordinates: { lng: -86.0139, lat: 40.0456 },
+    date: 1921,
+    displayDate: "1921 AD (Found)",
+    description: "A group of boys digging along the banks of the White River in Noblesville, Indiana, unearthed the skeleton of an exceptionally tall individual estimated to be eight feet seven inches in height. The skull was reported to be of massive proportions, with local doctors examining the remains.",
+    source: "Noblesville Ledger (1921) / Travis Roy @giants_of_ancientamerica",
+    images: []
+  },
+  {
+    id: "archaeology-crittenden-giant",
+    name: "12 ft Giant in Stone Sarcophagus - Crittenden, Arizona",
+    category: "Giants & Nephilim",
+    type: "Point",
+    coordinates: { lng: -110.7634, lat: 31.5473 },
+    date: 1891,
+    displayDate: "1891 AD (Found)",
+    description: "In 1891, a massive stone coffin or sarcophagus was discovered in Crittenden, Arizona, containing the remains of a giant human skeleton estimated to be twelve feet tall. The discovery included unique artifacts and reported anatomical details like six toes on each foot.",
+    source: "Arizona Citizen (1891) / Travis Roy @giants_of_ancientamerica",
+    images: []
+  },
+  {
+    id: "archaeology-san-diego-mummy",
+    name: "8 ft 4 in Giant Mummy - San Diego, California",
+    category: "Giants & Nephilim",
+    type: "Point",
+    coordinates: { lng: -117.1611, lat: 32.7157 },
+    date: 1895,
+    displayDate: "1895 AD (Found)",
+    description: "In 1895, a petrified giant mummy measuring eight feet four inches tall was discovered in a cave near San Diego, California. The mummy was later purchased by the Smithsonian Institution for exhibition before later being scrutinized under claims of being an elaborate hoax made of gelatin and leather.",
+    source: "San Diego Union (1895) / Travis Roy @giants_of_ancientamerica",
+    images: ["https://upload.wikimedia.org/wikipedia/commons/4/43/The_San_Diego_Giant.png"]
+  },
+  {
+    id: "archaeology-mount-morris-giant",
+    name: "Giant Skeleton in Mound - Mount Morris, New York",
+    category: "Giants & Nephilim",
+    type: "Point",
+    coordinates: { lng: -77.8789, lat: 42.7239 },
+    date: 1811,
+    displayDate: "1811 AD (Found)",
+    description: "Workmen unearthing an Indian mound measuring 100 feet in diameter and 8 to 10 feet high on the site of Mount Morris discovered the skeletal remains of a giant of enormous size. The mound also contained rude medals, a pipe, and other historical artifacts.",
+    source: "A History of Livingston County, New York (1824) / Travis Roy @giants_of_ancientamerica",
+    images: []
+  },
+  {
+    id: "archaeology-baltimore-giant",
+    name: "7 ft Indian Skeleton - Baltimore, Maryland",
+    category: "Giants & Nephilim",
+    type: "Point",
+    coordinates: { lng: -76.6122, lat: 39.2904 },
+    date: 1897,
+    displayDate: "1897 AD (Found)",
+    description: "The Maryland Academy of Sciences received the skeletal remains of a prehistoric Indian estimated to stand over seven feet tall. The bones were unearthed during local excavations in Maryland and displayed at the academy.",
+    source: "Baltimore American (1897) / Travis Roy @giants_of_ancientamerica",
+    images: []
+  },
+  {
+    id: "archaeology-reinersville-giant",
+    name: "8 ft 7 in Giant Skeleton - Reinersville, Ohio",
+    category: "Giants & Nephilim",
+    type: "Point",
+    coordinates: { lng: -81.7051, lat: 39.6973 },
+    date: 1898,
+    displayDate: "1898 AD (Found)",
+    description: "An archaeological discovery near Reinersville in Morgan County, Ohio, revealed a giant skeleton measuring eight feet seven inches in length. The remains were found in an ancient burial mound, representing one of the largest skeletons documented in the state.",
+    source: "Ohio Science Annual (1898) / Travis Roy @giants_of_ancientamerica",
+    images: []
+  },
+  {
+    id: "archaeology-centerburg-giants",
+    name: "7 ft Skeletons - Centerburg, Ohio",
+    category: "Giants & Nephilim",
+    type: "Point",
+    coordinates: { lng: -82.6982, lat: 40.3048 },
+    date: 1885,
+    displayDate: "1885 AD (Found)",
+    description: "Workmen in Centerburg, Licking County, Ohio, uncovered multiple skeletons measuring over seven feet long in a burial mound. Licking County has long been recognized as a major site for Indian mounds and prehistoric artifacts.",
+    source: "New York Times (1885) / Travis Roy @giants_of_ancientamerica",
+    images: []
+  },
+  {
+    id: "archaeology-port-costa-giant",
+    name: "7 ft Giant Skeleton - Port Costa, California",
+    category: "Giants & Nephilim",
+    type: "Point",
+    coordinates: { lng: -122.1841, lat: 38.0469 },
+    date: 1911,
+    displayDate: "1911 AD (Found)",
+    description: "Assistant Curator William Altmann of the Golden Gate Park Memorial Museum discovered a giant skeleton measuring over seven feet tall in Port Costa, California. The find included pottery and artifacts, challenging previous theories about the region's indigenous history.",
+    source: "Oakland Tribune (1911) / Travis Roy @giants_of_ancientamerica",
+    images: []
+  },
+  {
+    id: "archaeology-petersburg-giant",
+    name: "9 ft Giant in Stone Grave - Petersburg, Kentucky",
+    category: "Giants & Nephilim",
+    type: "Point",
+    coordinates: { lng: -84.8472, lat: 39.0664 },
+    date: 1886,
+    displayDate: "1886 AD (Found)",
+    description: "An excavation for a new building in Petersburg, Kentucky, revealed a peculiar prehistoric stone and clay cement grave containing a giant human skeleton measuring fully nine feet in length.",
+    source: "Daily Northwestern (1886) / Travis Roy @giants_of_ancientamerica",
+    images: []
+  },
+  {
+    id: "archaeology-mora-giant",
+    name: "9 ft Giant Skeleton - Mora, Minnesota",
+    category: "Giants & Nephilim",
+    type: "Point",
+    coordinates: { lng: -93.2941, lat: 45.8739 },
+    date: 1897,
+    displayDate: "1897 AD (Found)",
+    description: "While excavating with a steam shovel near Mora, Minnesota, workers unearthed the skeleton of a nine-foot-tall giant. Along with the bones, they discovered a large copper spear with a point measuring 10 inches in length.",
+    source: "Syracuse Daily Standard (1897) / Travis Roy @giants_of_ancientamerica",
+    images: []
+  },
+  {
+    id: "archaeology-guadalupe-giant",
+    name: "12 ft Giant Skeletons - Guadalupe, New Mexico",
+    category: "Giants & Nephilim",
+    type: "Point",
+    coordinates: { lng: -104.9167, lat: 34.9167 },
+    date: 1902,
+    displayDate: "1902 AD (Found)",
+    description: "A report in the New York Times detailed the discovery of a race of giant skeletons in Guadalupe, New Mexico, with some bones belonging to individuals estimated at twelve feet tall. The unearthing prompted archaeological plans for further exploration.",
+    source: "New York Times (1902) / Travis Roy @giants_of_ancientamerica",
+    images: []
+  },
+  {
+    id: "archaeology-colorado-river-giants",
+    name: "8-9 ft Giants in Caves - Colorado River Desert",
+    category: "Giants & Nephilim",
+    type: "Point",
+    coordinates: { lng: -114.5000, lat: 34.0000 },
+    date: 1947,
+    displayDate: "1947 AD (Found)",
+    description: "Reports emerged of the discovery of 32 caves within a 180-square-mile desert area along the Nevada-California-Arizona border, containing the remains of ancient 8-to-9-foot-tall giants dressed in strange skins and costumes.",
+    source: "Nevada News (1947) / Travis Roy @giants_of_ancientamerica",
+    images: []
+  },
+  {
+    id: "archaeology-georgia-dunes-giants",
+    name: "7 ft Giant Skeletons in Sand Dunes - Georgia Coast",
+    category: "Giants & Nephilim",
+    type: "Point",
+    coordinates: { lng: -81.3800, lat: 31.1500 },
+    date: 1936,
+    displayDate: "1936 AD (Found)",
+    description: "Archaeologists uncovered a prehistoric race of giant skeletons, all ranging from six-and-one-half to seven feet in height, buried within sand dunes along the coast of Georgia.",
+    source: "Salt Lake Tribune (1936) / Travis Roy @giants_of_ancientamerica",
+    images: []
+  },
+  {
+    id: "archaeology-iowa-mound-giant",
+    name: "7 ft 6 in Giant Skeleton - Iowa",
+    category: "Giants & Nephilim",
+    type: "Point",
+    coordinates: { lng: -93.6000, lat: 41.6000 },
+    date: 1925,
+    displayDate: "1925 AD (Found)",
+    description: "A skeleton of a giant who stood seven feet six inches tall was unearthed from an ancient mound in Iowa.",
+    source: "Oakland Tribune (1925) / Travis Roy @giants_of_ancientamerica",
+    images: []
+  },
+  {
+    id: "archaeology-missouri-giant-1926",
+    name: "7 ft 2 in Giant Skeleton - Missouri",
+    category: "Giants & Nephilim",
+    type: "Point",
+    coordinates: { lng: -92.2000, lat: 38.5000 },
+    date: 1926,
+    displayDate: "1926 AD (Found)",
+    description: "Reports from Missouri described the discovery of a giant skeleton of an individual measuring slightly over seven feet two inches in height.",
+    source: "Oakland Tribune (1926) / Travis Roy @giants_of_ancientamerica",
+    images: []
+  },
+  {
+    id: "archaeology-andrews-settlement-giant",
+    name: "7-8 ft Giant in Pyramidal Mound - Andrews Settlement, Pennsylvania",
+    category: "Giants & Nephilim",
+    type: "Point",
+    coordinates: { lng: -77.9000, lat: 41.8500 },
+    date: 1886,
+    displayDate: "1886 AD (Found)",
+    description: "While hunting towards an Irish settlement, W.H. Scoville discovered a pyramidal mound walled at the base with stone. Excavation revealed the remains of a giant human skeleton estimated to be between seven and eight feet long, buried alongside the skeleton of a dog.",
+    source: "Potter County Historical Reports (1886) / Travis Roy @giants_of_ancientamerica",
+    images: []
+  },
+  {
+    id: "archaeology-lake-michigan-mounds-giant",
+    name: "7-8 ft Giant Skeletons - Lake Michigan Mounds",
+    category: "Giants & Nephilim",
+    type: "Point",
+    coordinates: { lng: -86.2300, lat: 43.0600 },
+    date: 1902,
+    displayDate: "1902 AD (Found)",
+    description: "A newspaper report documented the discovery of fields of ancient burial mounds along Lake Michigan, which yielded multiple giant skeletons measuring between seven and eight feet in height.",
+    source: "Historical Press Records (1902) / Travis Roy @giants_of_ancientamerica",
+    images: []
   }
 ];

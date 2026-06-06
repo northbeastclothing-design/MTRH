@@ -2,7 +2,7 @@ import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, animate } from 'motion/react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import { X, Heart, Play, Upload, Plus, Link, MapPin, Lock, Check, Trash2, ShieldAlert, ChevronDown, Shield, Eye, EyeOff, Shuffle, Flag, AlertTriangle } from 'lucide-react';
+import { X, Heart, Play, Upload, Plus, Link, MapPin, Lock, Check, Trash2, ShieldAlert, ChevronDown, Shield, Eye, EyeOff, Shuffle, Flag, AlertTriangle, Instagram, ExternalLink } from 'lucide-react';
 import { initializeApp } from 'firebase/app';
 import { getFirestore, doc, getDoc, setDoc, updateDoc, increment, collection, onSnapshot, serverTimestamp, query, where, addDoc, deleteDoc } from 'firebase/firestore';
 import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } from 'firebase/auth';
@@ -5712,6 +5712,42 @@ function App() {
                             </motion.button>
                           );
                         })()}
+
+                        {selectedFeature.socialLink && (
+                          <motion.a
+                            whileTap={{ scale: 0.95 }}
+                            whileHover={{ scale: 1.05 }}
+                            href={selectedFeature.socialLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{
+                              display: 'flex',
+                              alignItems: 'center',
+                              gap: '6px',
+                              background: 'transparent',
+                              color: isMapDarkMode ? '#fff' : '#000',
+                              border: `1px solid ${isMapDarkMode ? '#fff' : '#000'}`,
+                              padding: '6px 12px',
+                              borderRadius: '16px',
+                              cursor: 'pointer',
+                              fontSize: '11px',
+                              fontWeight: 'bold',
+                              fontFamily: '"Space Mono", monospace',
+                              transition: 'all 0.2s ease',
+                              whiteSpace: 'nowrap',
+                              textDecoration: 'none'
+                            }}
+                          >
+                            {selectedFeature.socialLink.toLowerCase().includes('instagram.com') ? (
+                              <Instagram size={13} />
+                            ) : (
+                              <ExternalLink size={13} />
+                            )}
+                            <span>
+                              {selectedFeature.socialLink.toLowerCase().includes('instagram.com') ? 'INSTAGRAM' : 'X.COM'}
+                            </span>
+                          </motion.a>
+                        )}
                       </div>
                       
                       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '24px', justifyContent: 'flex-start' }}>
