@@ -7566,7 +7566,7 @@ function App() {
               {/* Header */}
               <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', borderBottom: `2px solid ${theme.border}`, paddingBottom: '12px', marginBottom: '20px' }}>
                 <span style={{ fontWeight: 700, fontSize: '12px', letterSpacing: '1.5px', textTransform: 'uppercase' }}>Input Intel //</span>
-                <p style={{ margin: 0, fontSize: '10px', color: theme.textDim, textTransform: 'uppercase', letterSpacing: '0.5px', lineHeight: '14px' }}>
+                <p style={{ margin: 0, fontSize: '11px', color: theme.textDim, lineHeight: '16px' }}>
                   Thank you for contributing to mapping the rabbit hole. Your intelligence submissions help build our collective community map.
                 </p>
               </div>
