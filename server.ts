@@ -3,6 +3,11 @@ import path from "path";
 import * as cheerio from 'cheerio';
 import fs from "fs";
 import admin from "firebase-admin";
+import nodemailer from "nodemailer";
+import dotenv from "dotenv";
+
+// Load environment variables
+dotenv.config();
 
 const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
 const isProduction = process.env.NODE_ENV === "production" || !!process.env.K_SERVICE || (typeof __filename !== "undefined" && __filename.includes("dist"));
@@ -105,6 +110,47 @@ async function authorizeDomain(domain: string) {
   } catch (err: any) {
     // This is expected during local development without GCP credentials, so we log it as a warning
     console.warn(`[Domain Auth] Firebase domain authorization failed for "${domain}" (this is normal if running locally without GCP credentials):`, err.message || err);
+  }
+}
+
+/**
+ * Sends an email notification to the moderator.
+ */
+async function sendNotificationEmail(subject: string, textBody: string, htmlBody: string) {
+  const host = process.env.SMTP_HOST;
+  const port = process.env.SMTP_PORT ? parseInt(process.env.SMTP_PORT, 10) : 587;
+  const secure = process.env.SMTP_SECURE === "true" || port === 465;
+  const user = process.env.SMTP_USER;
+  const pass = process.env.SMTP_PASS;
+  const toEmail = process.env.SMTP_TO || "mappingtherabbithole@gmail.com";
+
+  if (!host || !user || !pass) {
+    console.warn("[Email Notification] SMTP credentials not fully configured in environment variables. Skipping email dispatch.");
+    return;
+  }
+
+  try {
+    const transporter = nodemailer.createTransport({
+      host,
+      port,
+      secure,
+      auth: {
+        user,
+        pass
+      }
+    });
+
+    const info = await transporter.sendMail({
+      from: `"MTRH Map Notifications" <${user}>`,
+      to: toEmail,
+      subject,
+      text: textBody,
+      html: htmlBody
+    });
+
+    console.log(`[Email Notification] Email successfully sent to ${toEmail}: ${info.messageId}`);
+  } catch (error) {
+    console.error("[Email Notification] Failed to send email notification:", error);
   }
 }
 
@@ -304,6 +350,80 @@ async function startServer() {
 
       await dbAdmin.collection('submissions').doc(submissionId).set(submissionData);
 
+      // Trigger email notification in the background
+      const appUrl = process.env.APP_URL || "http://localhost:3000";
+      const modLink = `${appUrl}/mod`;
+      
+      const subject = `[MTRH] New Intel Submission: ${submissionData.name}`;
+      const textBody = `A new piece of intel has been submitted for moderation review.
+
+Name of Anomaly / Signature: ${submissionData.name}
+Category: ${submissionData.category}
+Date/Timeframe: ${submissionData.date || "Not provided"}
+Source/Provenance: ${submissionData.source || "Not provided"}
+Coordinates: ${submissionData.coordinates ? JSON.stringify(submissionData.coordinates) : "Not provided"}
+Social Link: ${submissionData.socialLink || "Not provided"}
+
+Description:
+${submissionData.description}
+
+Attachments:
+${submissionData.images && submissionData.images.length > 0 ? submissionData.images.join("\n") : "None"}
+
+Please review and approve or reject this submission in the Moderation Desk:
+${modLink}
+`;
+
+      const htmlBody = `
+        <div style="font-family: monospace; padding: 20px; background-color: #000; color: #fff; border: 1px solid #fff;">
+          <h2 style="color: #ffcc00; border-bottom: 2px solid #ffcc00; padding-bottom: 10px; text-transform: uppercase; letter-spacing: 2px;">MTRH // New Intel Submitted</h2>
+          <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+            <tr>
+              <td style="padding: 6px; font-weight: bold; width: 180px; color: #ffcc00;">Anomaly Name:</td>
+              <td style="padding: 6px; border-bottom: 1px solid #222;">${submissionData.name}</td>
+            </tr>
+            <tr>
+              <td style="padding: 6px; font-weight: bold; color: #ffcc00;">Category:</td>
+              <td style="padding: 6px; border-bottom: 1px solid #222;">${submissionData.category}</td>
+            </tr>
+            <tr>
+              <td style="padding: 6px; font-weight: bold; color: #ffcc00;">Date/Timeframe:</td>
+              <td style="padding: 6px; border-bottom: 1px solid #222;">${submissionData.date || "Not provided"}</td>
+            </tr>
+            <tr>
+              <td style="padding: 6px; font-weight: bold; color: #ffcc00;">Coordinates:</td>
+              <td style="padding: 6px; border-bottom: 1px solid #222;">${submissionData.coordinates ? `[${submissionData.coordinates.join(', ')}]` : "Not provided"}</td>
+            </tr>
+            <tr>
+              <td style="padding: 6px; font-weight: bold; color: #ffcc00;">Source:</td>
+              <td style="padding: 6px; border-bottom: 1px solid #222;">${submissionData.source || "Not provided"}</td>
+            </tr>
+            <tr>
+              <td style="padding: 6px; font-weight: bold; color: #ffcc00;">Social Link:</td>
+              <td style="padding: 6px; border-bottom: 1px solid #222;">${submissionData.socialLink || "Not provided"}</td>
+            </tr>
+          </table>
+          <div style="margin-bottom: 20px;">
+            <h4 style="color: #ffcc00; text-transform: uppercase; margin-bottom: 8px;">Description</h4>
+            <p style="white-space: pre-wrap; background: #111; padding: 12px; border: 1px solid #333; line-height: 1.6;">${submissionData.description}</p>
+          </div>
+          ${submissionData.images && submissionData.images.length > 0 ? `
+          <div style="margin-bottom: 20px;">
+            <h4 style="color: #ffcc00; text-transform: uppercase; margin-bottom: 8px;">Staged Attachments</h4>
+            <ul style="list-style-type: none; padding: 0;">
+              ${submissionData.images.map((img: string) => `<li><a href="${img.startsWith('/') ? appUrl + img : img}" style="color: #3b82f6; text-decoration: none;" target="_blank">${img}</a></li>`).join('')}
+            </ul>
+          </div>` : ''}
+          <div style="margin-top: 30px; text-align: center;">
+            <a href="${modLink}" style="display: inline-block; background: #ffcc00; color: #000; font-weight: bold; text-decoration: none; padding: 10px 24px; border: 2px solid #ffcc00; text-transform: uppercase; letter-spacing: 1px;">Open Decisional Moderation Desk</a>
+          </div>
+        </div>
+      `;
+
+      sendNotificationEmail(subject, textBody, htmlBody).catch(err => {
+        console.error("Failed to send submission email in background:", err);
+      });
+
       console.log(`Submissions Server-Bypass: Created submission ${submissionId}`);
       res.json({ success: true, id: submissionId });
     } catch (err: any) {
@@ -365,6 +485,60 @@ async function startServer() {
       };
 
       await dbAdmin.collection('reports').doc(reportId).set(reportData);
+
+      // Trigger inaccuracy report email notification in the background
+      const appUrl = process.env.APP_URL || "http://localhost:3000";
+      const modLink = `${appUrl}/mod`;
+      
+      const subject = `[MTRH] Inaccuracy Flag: ${reportData.pointName}`;
+      const textBody = `An inaccuracy flag (report) has been submitted for moderation review.
+
+Point Name: ${reportData.pointName}
+Point Category: ${reportData.pointCategory}
+Point ID: ${reportData.pointId}
+Reason: ${reportData.reason}
+
+Details provided by reporter:
+${reportData.details || "No details provided"}
+
+Please review this report in the Decisional Moderation Desk:
+${modLink}
+`;
+
+      const htmlBody = `
+        <div style="font-family: monospace; padding: 20px; background-color: #000; color: #fff; border: 1px solid #fff;">
+          <h2 style="color: #ef4444; border-bottom: 2px solid #ef4444; padding-bottom: 10px; text-transform: uppercase; letter-spacing: 2px;">MTRH // Point Flagged for Inaccuracy</h2>
+          <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+            <tr>
+              <td style="padding: 6px; font-weight: bold; width: 180px; color: #ef4444;">Point Name:</td>
+              <td style="padding: 6px; border-bottom: 1px solid #222;">${reportData.pointName}</td>
+            </tr>
+            <tr>
+              <td style="padding: 6px; font-weight: bold; color: #ef4444;">Category:</td>
+              <td style="padding: 6px; border-bottom: 1px solid #222;">${reportData.pointCategory}</td>
+            </tr>
+            <tr>
+              <td style="padding: 6px; font-weight: bold; color: #ef4444;">Point ID:</td>
+              <td style="padding: 6px; border-bottom: 1px solid #222;"><code>${reportData.pointId}</code></td>
+            </tr>
+            <tr>
+              <td style="padding: 6px; font-weight: bold; color: #ef4444;">Reason for Flag:</td>
+              <td style="padding: 6px; border-bottom: 1px solid #222; font-weight: bold;">${reportData.reason}</td>
+            </tr>
+          </table>
+          <div style="margin-bottom: 20px;">
+            <h4 style="color: #ef4444; text-transform: uppercase; margin-bottom: 8px;">Reporter Details</h4>
+            <p style="white-space: pre-wrap; background: #111; padding: 12px; border: 1px solid #333; line-height: 1.6;">${reportData.details || "No details provided"}</p>
+          </div>
+          <div style="margin-top: 30px; text-align: center;">
+            <a href="${modLink}" style="display: inline-block; background: #ef4444; color: #fff; font-weight: bold; text-decoration: none; padding: 10px 24px; border: 2px solid #ef4444; text-transform: uppercase; letter-spacing: 1px;">Open Decisional Moderation Desk</a>
+          </div>
+        </div>
+      `;
+
+      sendNotificationEmail(subject, textBody, htmlBody).catch(err => {
+        console.error("Failed to send report email in background:", err);
+      });
 
       console.log(`Reports Server-Bypass: Created report ${reportId} for point ${pointId}`);
       res.json({ success: true, id: reportId });
