@@ -909,9 +909,12 @@ function App() {
   const [selectedTimelineItem, setSelectedTimelineItem] = useState<any | null>(null);
   const [activeWaypointIndex, setActiveWaypointIndex] = useState<number | null>(null);
 
-  // Combine original static / scraped data and approved user submissions
+  // Combine original static / scraped data and approved user submissions for Map
   const combinedPointsAndLinesData = useMemo(() => {
-    const combined = [...pointsAndLinesData, ...approvedSubmissions];
+    const approvedMapSubmissions = approvedSubmissions.filter(item => 
+      !item.destinations || item.destinations.includes('map')
+    );
+    const combined = [...pointsAndLinesData, ...approvedMapSubmissions];
     const uniqueMap = new Map();
     combined.forEach((item: any) => {
       if (item && item.id) {
@@ -929,6 +932,41 @@ function App() {
     });
     return Array.from(uniqueMap.values()) as any[];
   }, [pointsAndLinesData, approvedSubmissions]);
+
+  // Combine static Codex nodes and approved user Codex submissions
+  const combinedCodexNodes = useMemo(() => {
+    const approvedCodexSubmissions = approvedSubmissions.filter(item => 
+      item.destinations && item.destinations.includes('codex')
+    ).map(item => ({
+      id: item.id,
+      name: item.name,
+      description: item.description,
+      parentId: item.codexParentId || undefined,
+      images: item.images || [],
+      sources: item.source ? [item.source] : [],
+      layer: item.category || undefined
+    }));
+    return [...TERM_TREE_DATA, ...approvedCodexSubmissions];
+  }, [approvedSubmissions]);
+
+  // Combine static Timeline items and approved user Timeline submissions
+  const combinedTimelineItems = useMemo(() => {
+    const approvedTimelineSubmissions = approvedSubmissions.filter(item => 
+      item.destinations && item.destinations.includes('timeline')
+    ).map(item => ({
+      id: item.id,
+      name: item.name,
+      description: item.description,
+      start: Number(item.date) || 0,
+      end: item.timelineEnd ? Number(item.timelineEnd) : undefined,
+      type: item.timelineType || 'event',
+      layer: item.timelineLayer || 'biblical-events',
+      fatherId: item.timelineFatherId || undefined,
+      motherId: item.timelineMotherId || undefined,
+      spouseId: item.timelineSpouseId || undefined
+    }));
+    return [...TIMELINE_ITEMS, ...approvedTimelineSubmissions];
+  }, [approvedSubmissions]);
 
   const uniqueCategories = useMemo(() => {
     const allTags = combinedPointsAndLinesData.flatMap(item => item.categories);
@@ -1041,7 +1079,7 @@ function App() {
   // Helper to resolve map features to codex nodes
   const getCodexTermForMapFeature = (feature: any) => {
     if (!feature) return null;
-    return TERM_TREE_DATA.find(node => 
+    return combinedCodexNodes.find(node => 
       node.mapFeatureId === feature.id ||
       node.timelineId === feature.id ||
       node.id === feature.id ||
@@ -1053,11 +1091,11 @@ function App() {
   // Dynamically compute active figures and their locations during a selected Biblical Event
   const activeFigures = useMemo(() => {
     if (!selectedFeature) return [];
-    const selectedTimelineItem = TIMELINE_ITEMS.find(t => String(t.id) === String(selectedFeature.id));
+    const selectedTimelineItem = combinedTimelineItems.find(t => String(t.id) === String(selectedFeature.id));
     if (!selectedTimelineItem || selectedTimelineItem.type !== 'event') return [];
 
     const eventYear = selectedTimelineItem.start;
-    return TIMELINE_ITEMS.filter(item => {
+    return combinedTimelineItems.filter(item => {
       return (
         item.type === 'lifespan' &&
         item.layer === 'biblical-patriarchs' &&
@@ -1139,6 +1177,16 @@ function App() {
   const [subGeocodeMsg, setSubGeocodeMsg] = useState<{ text: string, type: 'success' | 'error' } | null>(null);
   const [isCategoryDropdownOpen, setIsCategoryDropdownOpen] = useState(false);
 
+  // New Cross-Registry Submission Fields
+  const [subDestinations, setSubDestinations] = useState<string[]>(['map']);
+  const [subCodexParentId, setSubCodexParentId] = useState('');
+  const [subTimelineLayer, setSubTimelineLayer] = useState('biblical-events');
+  const [subTimelineType, setSubTimelineType] = useState<'event' | 'lifespan'>('event');
+  const [subTimelineEnd, setSubTimelineEnd] = useState('');
+  const [subTimelineFatherId, setSubTimelineFatherId] = useState('');
+  const [subTimelineMotherId, setSubTimelineMotherId] = useState('');
+  const [subTimelineSpouseId, setSubTimelineSpouseId] = useState('');
+
   // Onboarding Tour State
   const [onboardingStep, setOnboardingStep] = useState<number | null>(null);
 
@@ -1187,6 +1235,16 @@ function App() {
   const [isEditGeocoding, setIsEditGeocoding] = useState(false);
   const [editGeocodeMsg, setEditGeocodeMsg] = useState<{ text: string, type: 'success' | 'error' } | null>(null);
 
+  // New Cross-Registry Editing Fields
+  const [editDestinations, setEditDestinations] = useState<string[]>(['map']);
+  const [editCodexParentId, setEditCodexParentId] = useState('');
+  const [editTimelineLayer, setEditTimelineLayer] = useState('biblical-events');
+  const [editTimelineType, setEditTimelineType] = useState<'event' | 'lifespan'>('event');
+  const [editTimelineEnd, setEditTimelineEnd] = useState('');
+  const [editTimelineFatherId, setEditTimelineFatherId] = useState('');
+  const [editTimelineMotherId, setEditTimelineMotherId] = useState('');
+  const [editTimelineSpouseId, setEditTimelineSpouseId] = useState('');
+
   const isPinningOnMapRef = useRef(false);
   useEffect(() => {
     isPinningOnMapRef.current = isPinningOnMap;
@@ -1219,6 +1277,14 @@ function App() {
     setEditSource(sub.source || '');
     setEditLongitude(sub.coordinates?.[0]?.toString() || '');
     setEditLatitude(sub.coordinates?.[1]?.toString() || '');
+    setEditDestinations(sub.destinations || ['map']);
+    setEditCodexParentId(sub.codexParentId || '');
+    setEditTimelineLayer(sub.timelineLayer || 'biblical-events');
+    setEditTimelineType(sub.timelineType || 'event');
+    setEditTimelineEnd(sub.timelineEnd || '');
+    setEditTimelineFatherId(sub.timelineFatherId || '');
+    setEditTimelineMotherId(sub.timelineMotherId || '');
+    setEditTimelineSpouseId(sub.timelineSpouseId || '');
     setIsEditCategoryDropdownOpen(false);
     setEditMediaList(sub.images || []);
     setEditMediaInput('');
@@ -1253,7 +1319,15 @@ function App() {
         date: editDate,
         source: editSource,
         coordinates: coordinatesValue,
-        images: editMediaList
+        images: editMediaList,
+        destinations: editDestinations,
+        codexParentId: editDestinations.includes('codex') ? editCodexParentId : '',
+        timelineLayer: editDestinations.includes('timeline') ? editTimelineLayer : '',
+        timelineType: editDestinations.includes('timeline') ? editTimelineType : 'event',
+        timelineEnd: (editDestinations.includes('timeline') && editTimelineType === 'lifespan') ? editTimelineEnd.trim() : '',
+        timelineFatherId: (editDestinations.includes('timeline') && editTimelineType === 'lifespan') ? editTimelineFatherId : '',
+        timelineMotherId: (editDestinations.includes('timeline') && editTimelineType === 'lifespan') ? editTimelineMotherId : '',
+        timelineSpouseId: (editDestinations.includes('timeline') && editTimelineType === 'lifespan') ? editTimelineSpouseId : ''
       };
 
       const response = await fetch('/api/moderate/update', {
@@ -1374,51 +1448,329 @@ function App() {
           />
         </div>
 
-        <div style={{ display: 'flex', gap: '10px' }}>
-          <div style={{ flex: 1 }}>
-            <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>LAYER CATEGORY *</label>
-            <select 
-              value={editCategory} 
-              onChange={(e) => setEditCategory(e.target.value)} 
-              style={{
-                width: '100%', 
-                background: isMapDarkMode ? '#222' : '#fff', 
-                border: `1px solid ${theme.border}`, 
-                color: theme.text, 
-                padding: '6px 10px', 
-                fontSize: '11px',
-                fontFamily: '"Space Mono", monospace',
-                height: '30px'
-              }}
-            >
-              {uniqueCategories.map(cat => (
-                <option key={cat} value={cat} style={{ background: isMapDarkMode ? '#0d0d0d' : '#fff' }}>
-                  {cat}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          <div style={{ width: '120px' }}>
-            <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>YEAR / DATE</label>
-            <input 
-              type="text" 
-              value={editDate} 
-              onChange={(e) => setEditDate(e.target.value)} 
-              style={{
-                width: '100%', 
-                background: isMapDarkMode ? '#222' : '#fff', 
-                border: `1px solid ${theme.border}`, 
-                color: theme.text, 
-                padding: '6px 10px', 
-                fontSize: '11px',
-                fontFamily: '"Space Mono", monospace',
-                height: '30px',
-                boxSizing: 'border-box'
-              }} 
-            />
+        {/* DESTINATION REGISTRIES */}
+        <div>
+          <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>DESTINATION REGISTRIES * (SELECT AT LEAST ONE)</label>
+          <div style={{ display: 'flex', gap: '20px', marginTop: '4px', marginBottom: '4px' }}>
+            <label style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '11px', cursor: 'pointer', color: theme.text }}>
+              <input
+                type="checkbox"
+                checked={editDestinations.includes('map')}
+                onChange={(e) => {
+                  if (e.target.checked) {
+                    setEditDestinations(prev => [...prev, 'map']);
+                  } else {
+                    setEditDestinations(prev => prev.filter(d => d !== 'map'));
+                  }
+                }}
+                style={{ accentColor: theme.text }}
+              />
+              Interactive Map
+            </label>
+            <label style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '11px', cursor: 'pointer', color: theme.text }}>
+              <input
+                type="checkbox"
+                checked={editDestinations.includes('codex')}
+                onChange={(e) => {
+                  if (e.target.checked) {
+                    setEditDestinations(prev => [...prev, 'codex']);
+                  } else {
+                    setEditDestinations(prev => prev.filter(d => d !== 'codex'));
+                  }
+                }}
+                style={{ accentColor: theme.text }}
+              />
+              Codex
+            </label>
+            <label style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '11px', cursor: 'pointer', color: theme.text }}>
+              <input
+                type="checkbox"
+                checked={editDestinations.includes('timeline')}
+                onChange={(e) => {
+                  if (e.target.checked) {
+                    setEditDestinations(prev => [...prev, 'timeline']);
+                  } else {
+                    setEditDestinations(prev => prev.filter(d => d !== 'timeline'));
+                  }
+                }}
+                style={{ accentColor: theme.text }}
+              />
+              Timeline
+            </label>
           </div>
         </div>
+
+        {editDestinations.includes('map') && (
+          <div style={{ display: 'flex', gap: '10px', borderLeft: `2px solid ${theme.borderLight}`, paddingLeft: '10px' }}>
+            <div style={{ flex: 1 }}>
+              <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>LAYER CATEGORY *</label>
+              <select 
+                value={editCategory} 
+                onChange={(e) => setEditCategory(e.target.value)} 
+                style={{
+                  width: '100%', 
+                  background: isMapDarkMode ? '#222' : '#fff', 
+                  border: `1px solid ${theme.border}`, 
+                  color: theme.text, 
+                  padding: '6px 10px', 
+                  fontSize: '11px',
+                  fontFamily: '"Space Mono", monospace',
+                  height: '30px'
+                }}
+              >
+                {uniqueCategories.map(cat => (
+                  <option key={cat} value={cat} style={{ background: isMapDarkMode ? '#0d0d0d' : '#fff' }}>
+                    {cat}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div style={{ width: '120px' }}>
+              <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>YEAR / DATE</label>
+              <input 
+                type="text" 
+                value={editDate} 
+                onChange={(e) => setEditDate(e.target.value)} 
+                style={{
+                  width: '100%', 
+                  background: isMapDarkMode ? '#222' : '#fff', 
+                  border: `1px solid ${theme.border}`, 
+                  color: theme.text, 
+                  padding: '6px 10px', 
+                  fontSize: '11px',
+                  fontFamily: '"Space Mono", monospace',
+                  height: '30px',
+                  boxSizing: 'border-box'
+                }} 
+              />
+            </div>
+          </div>
+        )}
+
+        {editDestinations.includes('codex') && (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', borderLeft: `2px solid ${theme.borderLight}`, paddingLeft: '10px' }}>
+            <div>
+              <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>PARENT CODEX TERM</label>
+              <select
+                value={editCodexParentId}
+                onChange={(e) => setEditCodexParentId(e.target.value)}
+                style={{
+                  width: '100%',
+                  background: isMapDarkMode ? '#222' : '#fff',
+                  border: `1px solid ${theme.border}`,
+                  padding: '6px 10px',
+                  fontSize: '11px',
+                  color: theme.text,
+                  fontFamily: '"Space Mono", monospace',
+                  height: '30px'
+                }}
+              >
+                <option value="">None (Root Category)</option>
+                {[...combinedCodexNodes]
+                  .sort((a, b) => a.name.localeCompare(b.name))
+                  .map(node => (
+                    <option key={node.id} value={node.id}>
+                      {node.name}
+                    </option>
+                  ))
+                }
+              </select>
+            </div>
+          </div>
+        )}
+
+        {editDestinations.includes('timeline') && (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', borderLeft: `2px solid ${theme.borderLight}`, paddingLeft: '10px' }}>
+            <div style={{ display: 'flex', gap: '10px' }}>
+              <div style={{ flex: 1 }}>
+                <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>TIMELINE LAYER / ERA *</label>
+                <select
+                  value={editTimelineLayer}
+                  onChange={(e) => setEditTimelineLayer(e.target.value)}
+                  style={{
+                    width: '100%',
+                    background: isMapDarkMode ? '#222' : '#fff',
+                    border: `1px solid ${theme.border}`,
+                    padding: '6px 10px',
+                    fontSize: '11px',
+                    color: theme.text,
+                    fontFamily: '"Space Mono", monospace',
+                    height: '30px'
+                  }}
+                >
+                  <option value="biblical-patriarchs">Biblical Bloodlines</option>
+                  <option value="biblical-events">Biblical Events</option>
+                  <option value="future-prophecy">Biblical Prophecy</option>
+                  <option value="enochian-lore">Enochian Lore</option>
+                  <option value="sumerian-kings">Sumerian Kings List</option>
+                  <option value="greek-mythology">Greek Mythology</option>
+                  <option value="merovingian-bloodlines">Merovingian Bloodlines</option>
+                  <option value="royal-bloodlines">Royal Bloodlines</option>
+                  <option value="secret-gov-programs">Secret Government Programs</option>
+                  <option value="ancient-civilizations">Ancient Civilizations & Tribes</option>
+                  <option value="alchemy-occult">Alchemy & Occult</option>
+                </select>
+              </div>
+
+              <div style={{ width: '120px' }}>
+                <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>ENTRY TYPE</label>
+                <select
+                  value={editTimelineType}
+                  onChange={(e) => setEditTimelineType(e.target.value as 'event' | 'lifespan')}
+                  style={{
+                    width: '100%',
+                    background: isMapDarkMode ? '#222' : '#fff',
+                    border: `1px solid ${theme.border}`,
+                    padding: '6px 10px',
+                    fontSize: '11px',
+                    color: theme.text,
+                    fontFamily: '"Space Mono", monospace',
+                    height: '30px'
+                  }}
+                >
+                  <option value="event">Event</option>
+                  <option value="lifespan">Lifespan</option>
+                </select>
+              </div>
+            </div>
+
+            <div style={{ display: 'flex', gap: '10px' }}>
+              <div style={{ flex: 1 }}>
+                <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>
+                  {editTimelineType === 'lifespan' ? 'YEAR OF BIRTH (START) *' : 'YEAR OF OCCURRENCE *'}
+                </label>
+                <input
+                  type="text"
+                  placeholder="e.g. -1948 or 1350"
+                  value={editDate}
+                  onChange={(e) => setEditDate(e.target.value)}
+                  style={{
+                    width: '100%',
+                    background: isMapDarkMode ? '#222' : '#fff',
+                    border: `1px solid ${theme.border}`,
+                    padding: '6px 10px',
+                    fontSize: '11px',
+                    color: theme.text,
+                    fontFamily: '"Space Mono", monospace',
+                    height: '30px',
+                    boxSizing: 'border-box'
+                  }}
+                />
+              </div>
+
+              {editTimelineType === 'lifespan' && (
+                <div style={{ flex: 1 }}>
+                  <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>YEAR OF DEATH (END)</label>
+                  <input
+                    type="text"
+                    placeholder="e.g. -1800 or 1410 (optional)"
+                    value={editTimelineEnd}
+                    onChange={(e) => setEditTimelineEnd(e.target.value)}
+                    style={{
+                      width: '100%',
+                      background: isMapDarkMode ? '#222' : '#fff',
+                      border: `1px solid ${theme.border}`,
+                      padding: '6px 10px',
+                      fontSize: '11px',
+                      color: theme.text,
+                      fontFamily: '"Space Mono", monospace',
+                      height: '30px',
+                      boxSizing: 'border-box'
+                    }}
+                  />
+                </div>
+              )}
+            </div>
+
+            {/* Lineage relationships for Lifespans in Edit Form */}
+            {editTimelineType === 'lifespan' && (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', background: isMapDarkMode ? 'rgba(255,255,255,0.01)' : 'rgba(0,0,0,0.01)', padding: '8px', border: `1px solid ${theme.borderLight}` }}>
+                <div style={{ fontSize: '8px', fontWeight: 'bold', color: theme.textDim, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Family Tree Lineage (Optional)</div>
+                
+                <div style={{ display: 'flex', gap: '6px' }}>
+                  <div style={{ flex: 1 }}>
+                    <label style={{ fontSize: '7.5px', display: 'block', marginBottom: '2px', color: theme.text }}>FATHER</label>
+                    <select
+                      value={editTimelineFatherId}
+                      onChange={(e) => setEditTimelineFatherId(e.target.value)}
+                      style={{
+                        width: '100%',
+                        background: isMapDarkMode ? '#111' : '#fff',
+                        border: `1px solid ${theme.border}`,
+                        padding: '4px 6px',
+                        fontSize: '9px',
+                        color: theme.text,
+                        fontFamily: '"Space Mono", monospace'
+                      }}
+                    >
+                      <option value="">None</option>
+                      {[...combinedTimelineItems]
+                        .filter(item => item.type === 'lifespan' && item.id !== sub.id)
+                        .sort((a, b) => a.name.localeCompare(b.name))
+                        .map(item => (
+                          <option key={item.id} value={item.id}>{item.name}</option>
+                        ))
+                      }
+                    </select>
+                  </div>
+
+                  <div style={{ flex: 1 }}>
+                    <label style={{ fontSize: '7.5px', display: 'block', marginBottom: '2px', color: theme.text }}>MOTHER</label>
+                    <select
+                      value={editTimelineMotherId}
+                      onChange={(e) => setEditTimelineMotherId(e.target.value)}
+                      style={{
+                        width: '100%',
+                        background: isMapDarkMode ? '#111' : '#fff',
+                        border: `1px solid ${theme.border}`,
+                        padding: '4px 6px',
+                        fontSize: '9px',
+                        color: theme.text,
+                        fontFamily: '"Space Mono", monospace'
+                      }}
+                    >
+                      <option value="">None</option>
+                      {[...combinedTimelineItems]
+                        .filter(item => item.type === 'lifespan' && item.id !== sub.id)
+                        .sort((a, b) => a.name.localeCompare(b.name))
+                        .map(item => (
+                          <option key={item.id} value={item.id}>{item.name}</option>
+                        ))
+                      }
+                    </select>
+                  </div>
+
+                  <div style={{ flex: 1 }}>
+                    <label style={{ fontSize: '7.5px', display: 'block', marginBottom: '2px', color: theme.text }}>SPOUSE</label>
+                    <select
+                      value={editTimelineSpouseId}
+                      onChange={(e) => setEditTimelineSpouseId(e.target.value)}
+                      style={{
+                        width: '100%',
+                        background: isMapDarkMode ? '#111' : '#fff',
+                        border: `1px solid ${theme.border}`,
+                        padding: '4px 6px',
+                        fontSize: '9px',
+                        color: theme.text,
+                        fontFamily: '"Space Mono", monospace'
+                      }}
+                    >
+                      <option value="">None</option>
+                      {[...combinedTimelineItems]
+                        .filter(item => item.type === 'lifespan' && item.id !== sub.id)
+                        .sort((a, b) => a.name.localeCompare(b.name))
+                        .map(item => (
+                          <option key={item.id} value={item.id}>{item.name}</option>
+                        ))
+                      }
+                    </select>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        )}
 
         <div>
           <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>INTELLIGENCE / DESCRIPTION *</label>
@@ -1640,172 +1992,176 @@ function App() {
             </div>
           )}
         </div>
-
-        {/* Geographic location search matching requirement */}
-        <div style={{ background: isMapDarkMode ? 'rgba(255,255,255,0.02)' : 'rgba(0,0,0,0.02)', border: `1px dashed ${theme.borderLight}`, padding: '10px', borderRadius: '2px' }}>
-          <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '6px', letterSpacing: '0.5px', color: theme.text }}>GEOGRAPHIC GEO-SEARCH (AUTO-FILL COORDINATES)</label>
-          <div style={{ display: 'flex', gap: '8px' }}>
-            <input
-              type="text"
-              placeholder="Type place name/address (e.g., Mount Shasta, CA)..."
-              value={editLocationSearch}
-              onChange={(e) => setEditLocationSearch(e.target.value)}
-              onKeyDown={async (e) => {
-                if (e.key === 'Enter') {
-                  e.preventDefault();
-                  await handleEditSearchGeocode();
-                }
-              }}
-              style={{
-                flex: 1,
-                background: isMapDarkMode ? '#222' : '#fff',
-                border: `1px solid ${theme.border}`,
-                padding: '6px 10px',
-                fontSize: '11px',
-                color: theme.text,
-                fontFamily: '"Space Mono", monospace'
-              }}
-            />
-            <button
-              type="button"
-              onClick={handleEditSearchGeocode}
-              disabled={isEditGeocoding}
-              style={{
-                background: theme.text,
-                color: theme.bg,
-                border: 'none',
-                padding: '0 12px',
-                height: '28px',
-                borderRadius: '14px',
-                fontSize: '9px',
-                fontWeight: 700,
-                cursor: 'pointer',
-                fontFamily: '"Space Mono", monospace',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                boxSizing: 'border-box'
-              }}
-            >
-              {isEditGeocoding ? 'RESOLVE...' : 'RESOLVE'}
-            </button>
-          </div>
-          
-          {editGeocodeMsg && (
-            <div style={{ fontSize: '9px', color: editGeocodeMsg.type === 'error' ? '#ff3333' : '#00cc00', marginTop: '6px', fontWeight: 'bold' }}>
-              {editGeocodeMsg.text}
-            </div>
-          )}
-
-          {editGeocodeResults.length > 1 && (
-            <div style={{ 
-              marginTop: '8px', 
-              border: `1px solid ${theme.borderLight}`,
-              borderRadius: '2px',
-              background: isMapDarkMode ? '#111111' : '#fcfcfc',
-              maxHeight: '130px',
-              overflowY: 'auto',
-              textAlign: 'left'
-            }}>
-              <div style={{ padding: '4px 8px', fontSize: '8px', fontWeight: 'bold', color: theme.textDim, borderBottom: `1px solid ${theme.borderLight}`, letterSpacing: '0.5px' }}>
-                SUGGESTED MATCHES (CLICK TO PINPOINT):
+        {editDestinations.includes('map') && (
+          <>
+            {/* Geographic location search matching requirement */}
+            <div style={{ background: isMapDarkMode ? 'rgba(255,255,255,0.02)' : 'rgba(0,0,0,0.02)', border: `1px dashed ${theme.borderLight}`, padding: '10px', borderRadius: '2px' }}>
+              <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '6px', letterSpacing: '0.5px', color: theme.text }}>GEOGRAPHIC GEO-SEARCH (AUTO-FILL COORDINATES)</label>
+              <div style={{ display: 'flex', gap: '8px' }}>
+                <input
+                  type="text"
+                  placeholder="Type place name/address (e.g., Mount Shasta, CA)..."
+                  value={editLocationSearch}
+                  onChange={(e) => setEditLocationSearch(e.target.value)}
+                  onKeyDown={async (e) => {
+                    if (e.key === 'Enter') {
+                      e.preventDefault();
+                      await handleEditSearchGeocode();
+                    }
+                  }}
+                  style={{
+                    flex: 1,
+                    background: isMapDarkMode ? '#222' : '#fff',
+                    border: `1px solid ${theme.border}`,
+                    padding: '6px 10px',
+                    fontSize: '11px',
+                    color: theme.text,
+                    fontFamily: '"Space Mono", monospace'
+                  }}
+                />
+                <button
+                  type="button"
+                  onClick={handleEditSearchGeocode}
+                  disabled={isEditGeocoding}
+                  style={{
+                    background: theme.text,
+                    color: theme.bg,
+                    border: 'none',
+                    padding: '0 12px',
+                    height: '28px',
+                    borderRadius: '14px',
+                    fontSize: '9px',
+                    fontWeight: 700,
+                    cursor: 'pointer',
+                    fontFamily: '"Space Mono", monospace',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    boxSizing: 'border-box'
+                  }}
+                >
+                  {isEditGeocoding ? 'RESOLVE...' : 'RESOLVE'}
+                </button>
               </div>
-              {editGeocodeResults.map((feat) => {
-                const [lng, lat] = feat.center;
-                return (
-                  <div 
-                    key={feat.id}
-                    onClick={() => {
-                      setEditLongitude(lng.toFixed(6));
-                      setEditLatitude(lat.toFixed(6));
-                      setEditLocationSearch(feat.place_name || feat.text);
-                      setEditGeocodeMsg({
-                        text: `SELECTED: ${feat.place_name || feat.text} (${lat.toFixed(4)}, ${lng.toFixed(4)})`,
-                        type: 'success'
-                      });
-                      setEditGeocodeResults([]);
-                    }}
-                    style={{ 
-                      padding: '6px 8px', 
-                      fontSize: '9.5px', 
-                      cursor: 'pointer',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      gap: '1px',
-                      borderBottom: `1px solid ${theme.borderLight}`
-                    }}
-                    className={isMapDarkMode ? "hover:bg-gray-800" : "hover:bg-gray-100"}
-                  >
-                    <span style={{ fontWeight: 'bold', color: theme.text }}>{feat.place_name || feat.text}</span>
-                  </div>
-                );
-              })}
-            </div>
-          )}
-        </div>
+              
+              {editGeocodeMsg && (
+                <div style={{ fontSize: '9px', color: editGeocodeMsg.type === 'error' ? '#ff3333' : '#00cc00', marginTop: '6px', fontWeight: 'bold' }}>
+                  {editGeocodeMsg.text}
+                </div>
+              )}
 
-        <div style={{ border: `1px dashed ${theme.borderLight}`, padding: '10px', borderRadius: '2px', background: isMapDarkMode ? '#1a1a1a' : '#fcfcfc', marginTop: '4px' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
-            <span style={{ fontSize: '9px', fontWeight: 'bold', letterSpacing: '0.5px', color: '#ffcc00' }}>MAP COORDINATE CALIBRATION</span>
-            <button 
-              type="button"
-              onClick={handleUseMapCenterForEdit}
-              style={{
-                background: 'rgba(255,204,0,0.1)',
-                border: '1px solid #ffcc00',
-                color: '#ffcc00',
-                cursor: 'pointer',
-                padding: '2px 8px',
-                borderRadius: '2px',
-                fontSize: '8px',
-                fontWeight: 'bold',
-                fontFamily: '"Space Mono", monospace'
-              }}
-            >
-              USE MAP CENTER COORDS
-            </button>
-          </div>
-          
-          <div style={{ display: 'flex', gap: '10px' }}>
-            <div style={{ flex: 1 }}>
-              <span style={{ fontSize: '8px', color: theme.textDim, display: 'block', marginBottom: '2px' }}>LONGITUDE *</span>
-              <input 
-                type="text" 
-                value={editLongitude} 
-                onChange={(e) => setEditLongitude(e.target.value)} 
-                style={{
-                  width: '100%', 
-                  background: isMapDarkMode ? '#111' : '#fff', 
-                  border: `1px solid ${theme.border}`, 
-                  color: theme.text, 
-                  padding: '4px 8px', 
-                  fontSize: '11.5px',
-                  fontFamily: '"Space Mono", monospace'
-                }} 
-              />
+              {editGeocodeResults.length > 1 && (
+                <div style={{ 
+                  marginTop: '8px', 
+                  border: `1px solid ${theme.borderLight}`,
+                  borderRadius: '2px',
+                  background: isMapDarkMode ? '#111' : '#fcfcfc',
+                  maxHeight: '130px',
+                  overflowY: 'auto',
+                  textAlign: 'left'
+                }}>
+                  <div style={{ padding: '4px 8px', fontSize: '8px', fontWeight: 'bold', color: theme.textDim, borderBottom: `1px solid ${theme.borderLight}`, letterSpacing: '0.5px' }}>
+                    SUGGESTED MATCHES (CLICK TO PINPOINT):
+                  </div>
+                  {editGeocodeResults.map((feat) => {
+                    const [lng, lat] = feat.center;
+                    return (
+                      <div 
+                        key={feat.id}
+                        onClick={() => {
+                          setEditLongitude(lng.toFixed(6));
+                          setEditLatitude(lat.toFixed(6));
+                          setEditLocationSearch(feat.place_name || feat.text);
+                          setEditGeocodeMsg({
+                            text: `SELECTED: ${feat.place_name || feat.text} (${lat.toFixed(4)}, ${lng.toFixed(4)})`,
+                            type: 'success'
+                          });
+                          setEditGeocodeResults([]);
+                        }}
+                        style={{ 
+                          padding: '6px 8px', 
+                          fontSize: '9.5px', 
+                          cursor: 'pointer',
+                          display: 'flex',
+                          flexDirection: 'column',
+                          gap: '1px',
+                          borderBottom: `1px solid ${theme.borderLight}`
+                        }}
+                        className={isMapDarkMode ? "hover:bg-gray-800" : "hover:bg-gray-100"}
+                      >
+                        <span style={{ fontWeight: 'bold', color: theme.text }}>{feat.place_name || feat.text}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
             </div>
-            <div style={{ flex: 1 }}>
-              <span style={{ fontSize: '8px', color: theme.textDim, display: 'block', marginBottom: '2px' }}>LATITUDE *</span>
-              <input 
-                type="text" 
-                value={editLatitude} 
-                onChange={(e) => setEditLatitude(e.target.value)} 
-                style={{
-                  width: '100%', 
-                  background: isMapDarkMode ? '#111' : '#fff', 
-                  border: `1px solid ${theme.border}`, 
-                  color: theme.text, 
-                  padding: '4px 8px', 
-                  fontSize: '11.5px',
-                  fontFamily: '"Space Mono", monospace'
-                }} 
-              />
+
+            <div style={{ border: `1px dashed ${theme.borderLight}`, padding: '10px', borderRadius: '2px', background: isMapDarkMode ? '#1a1a1a' : '#fcfcfc', marginTop: '4px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
+                <span style={{ fontSize: '9px', fontWeight: 'bold', letterSpacing: '0.5px', color: '#ffcc00' }}>MAP COORDINATE CALIBRATION</span>
+                <button 
+                  type="button"
+                  onClick={handleUseMapCenterForEdit}
+                  style={{
+                    background: 'rgba(255,204,0,0.1)',
+                    border: '1px solid #ffcc00',
+                    color: '#ffcc00',
+                    cursor: 'pointer',
+                    padding: '2px 8px',
+                    borderRadius: '2px',
+                    fontSize: '8px',
+                    fontWeight: 'bold',
+                    fontFamily: '"Space Mono", monospace'
+                  }}
+                >
+                  USE MAP CENTER COORDS
+                </button>
+              </div>
+              
+              <div style={{ display: 'flex', gap: '10px' }}>
+                <div style={{ flex: 1 }}>
+                  <span style={{ fontSize: '8px', color: theme.textDim, display: 'block', marginBottom: '2px' }}>LONGITUDE *</span>
+                  <input 
+                    type="text" 
+                    value={editLongitude} 
+                    onChange={(e) => setEditLongitude(e.target.value)} 
+                    style={{
+                      width: '100%', 
+                      background: isMapDarkMode ? '#111' : '#fff', 
+                      border: `1px solid ${theme.border}`, 
+                      color: theme.text, 
+                      padding: '4px 8px', 
+                      fontSize: '11.5px',
+                      fontFamily: '"Space Mono", monospace'
+                    }} 
+                  />
+                </div>
+                <div style={{ flex: 1 }}>
+                  <span style={{ fontSize: '8px', color: theme.textDim, display: 'block', marginBottom: '2px' }}>LATITUDE *</span>
+                  <input 
+                    type="text" 
+                    value={editLatitude} 
+                    onChange={(e) => setEditLatitude(e.target.value)} 
+                    style={{
+                      width: '100%', 
+                      background: isMapDarkMode ? '#111' : '#fff', 
+                      border: `1px solid ${theme.border}`, 
+                      color: theme.text, 
+                      padding: '4px 8px', 
+                      fontSize: '11.5px',
+                      fontFamily: '"Space Mono", monospace'
+                    }} 
+                  />
+                </div>
+              </div>
+              <span style={{ fontSize: '8px', color: theme.textDim, display: 'block', marginTop: '6px', fontStyle: 'italic', lineHeight: '11px' }}>
+                Tip: Close/minimize this desk, find the correct spot on the map, then hit 'USE MAP CENTER COORDS' above to snap it!
+              </span>
             </div>
-          </div>
-          <span style={{ fontSize: '8px', color: theme.textDim, display: 'block', marginTop: '6px', fontStyle: 'italic', lineHeight: '11px' }}>
-            Tip: Close/minimize this desk, find the correct spot on the map, then hit 'USE MAP CENTER COORDS' above to snap it!
-          </span>
-        </div>
+          </>
+        )}
+
 
         <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px', marginTop: '10px' }}>
           <button
@@ -2149,7 +2505,15 @@ function App() {
           images: data.images || [],
           source: data.source || 'User Submission',
           isSubmitted: true,
-          type: 'Point'
+          type: 'Point',
+          destinations: data.destinations || ['map'],
+          codexParentId: data.codexParentId || '',
+          timelineLayer: data.timelineLayer || '',
+          timelineType: data.timelineType || 'event',
+          timelineEnd: data.timelineEnd || '',
+          timelineFatherId: data.timelineFatherId || '',
+          timelineMotherId: data.timelineMotherId || '',
+          timelineSpouseId: data.timelineSpouseId || ''
         });
       });
       setApprovedSubmissions(docs);
@@ -2515,12 +2879,12 @@ function App() {
           .filter(Boolean);
 
         // Convert timeline items with coordinates to map pins
-        const timelinePins = TIMELINE_ITEMS.map(item => {
+        const timelinePins = combinedTimelineItems.map(item => {
           const loc = TIMELINE_LOCATIONS[item.id];
           if (!loc) return null;
           
           // Match with Codex node to pull images
-          const codexNode = TERM_TREE_DATA.find(node => 
+          const codexNode = combinedCodexNodes.find(node => 
             node.timelineId === item.id ||
             node.mapFeatureId === item.id ||
             node.id === item.id ||
@@ -3320,7 +3684,7 @@ function App() {
 
   const handleViewOnTimeline = (timelineItemId: string) => {
     setCurrentPage('timeline');
-    const item = TIMELINE_ITEMS.find(t => String(t.id) === String(timelineItemId));
+    const item = combinedTimelineItems.find(t => String(t.id) === String(timelineItemId));
     if (item) {
       setSelectedTimelineItem(item);
     }
@@ -4456,7 +4820,7 @@ function App() {
                         let curr = selectedCodexNode;
                         let limit = 10;
                         while (curr && curr.parentId && limit > 0) {
-                          const p = TERM_TREE_DATA.find((x: any) => x.id === curr.parentId);
+                          const p = combinedCodexNodes.find((x: any) => x.id === curr.parentId);
                           if (!p) break;
                           curr = p;
                           limit--;
@@ -5669,7 +6033,7 @@ function App() {
                           <span>FLAG</span>
                         </motion.button>
 
-                        {TIMELINE_ITEMS.some(t => String(t.id) === String(selectedFeature.id)) && (
+                        {combinedTimelineItems.some(t => String(t.id) === String(selectedFeature.id)) && (
                           <motion.button
                             whileTap={{ scale: 0.95 }}
                             whileHover={{ scale: 1.05 }}
@@ -6602,6 +6966,7 @@ function App() {
           <TimelinePage 
             theme={theme} 
             isMapDarkMode={isMapDarkMode} 
+            timelineItems={combinedTimelineItems}
             selectedItem={selectedTimelineItem}
             setSelectedItem={setSelectedTimelineItem}
             onViewOnMap={handleViewOnMap}
@@ -6642,6 +7007,7 @@ function App() {
         >
           <CodexPage
             theme={theme}
+            codexNodes={combinedCodexNodes}
             isMapDarkMode={isMapDarkMode}
             focusedTermId={focusedCodexTermId}
             onFocusedTermConsumed={() => setFocusedCodexTermId(null)}
@@ -7632,6 +7998,11 @@ function App() {
                       }
                     }
 
+                    if (subDestinations.length === 0) {
+                      setSubmissionError("At least one destination registry must be selected.");
+                      return;
+                    }
+
                     setIsSubmitting(true);
                     setSubmissionError(null);
                     setSubmissionSuccess(null);
@@ -7642,7 +8013,15 @@ function App() {
                       category: subCategory,
                       description: subDescription.trim(),
                       images: subMediaList,
-                      status: 'pending'
+                      status: 'pending',
+                      destinations: subDestinations,
+                      codexParentId: subDestinations.includes('codex') ? subCodexParentId : '',
+                      timelineLayer: subDestinations.includes('timeline') ? subTimelineLayer : '',
+                      timelineType: subDestinations.includes('timeline') ? subTimelineType : 'event',
+                      timelineEnd: (subDestinations.includes('timeline') && subTimelineType === 'lifespan') ? subTimelineEnd.trim() : '',
+                      timelineFatherId: (subDestinations.includes('timeline') && subTimelineType === 'lifespan') ? subTimelineFatherId : '',
+                      timelineMotherId: (subDestinations.includes('timeline') && subTimelineType === 'lifespan') ? subTimelineMotherId : '',
+                      timelineSpouseId: (subDestinations.includes('timeline') && subTimelineType === 'lifespan') ? subTimelineSpouseId : ''
                     };
 
                     if (hasCoords) {
@@ -7668,7 +8047,15 @@ function App() {
                           coordinates: hasCoords ? [lngNum, latNum] : null,
                           images: subMediaList,
                           date: subDate.trim() || undefined,
-                          source: subSource.trim() || undefined
+                          source: subSource.trim() || undefined,
+                          destinations: subDestinations,
+                          codexParentId: subDestinations.includes('codex') ? subCodexParentId : '',
+                          timelineLayer: subDestinations.includes('timeline') ? subTimelineLayer : '',
+                          timelineType: subDestinations.includes('timeline') ? subTimelineType : 'event',
+                          timelineEnd: (subDestinations.includes('timeline') && subTimelineType === 'lifespan') ? subTimelineEnd.trim() : '',
+                          timelineFatherId: (subDestinations.includes('timeline') && subTimelineType === 'lifespan') ? subTimelineFatherId : '',
+                          timelineMotherId: (subDestinations.includes('timeline') && subTimelineType === 'lifespan') ? subTimelineMotherId : '',
+                          timelineSpouseId: (subDestinations.includes('timeline') && subTimelineType === 'lifespan') ? subTimelineSpouseId : ''
                         })
                       });
                       
@@ -7685,6 +8072,14 @@ function App() {
                       setSubLongitude('');
                       setSubSource('');
                       setSubMediaList([]);
+                      setSubDestinations(['map']);
+                      setSubCodexParentId('');
+                      setSubTimelineLayer('biblical-events');
+                      setSubTimelineType('event');
+                      setSubTimelineEnd('');
+                      setSubTimelineFatherId('');
+                      setSubTimelineMotherId('');
+                      setSubTimelineSpouseId('');
                     } catch (err: any) {
                       console.warn("Server proxy submission failed, trying direct Firestore fallback:", err);
                       try {
@@ -7700,6 +8095,14 @@ function App() {
                         setSubLongitude('');
                         setSubSource('');
                         setSubMediaList([]);
+                        setSubDestinations(['map']);
+                        setSubCodexParentId('');
+                        setSubTimelineLayer('biblical-events');
+                        setSubTimelineType('event');
+                        setSubTimelineEnd('');
+                        setSubTimelineFatherId('');
+                        setSubTimelineMotherId('');
+                        setSubTimelineSpouseId('');
                       } catch (fallbackErr: any) {
                         console.error("Firestore submission fallback error:", fallbackErr);
                         setSubmissionError(`Transmission Failure: ${fallbackErr.message || fallbackErr}`);
@@ -7728,15 +8131,337 @@ function App() {
                         fontFamily: '"Space Mono", monospace'
                       }}
                     />
+                                 {/* DESTINATION REGISTRIES */}
+                  <div>
+                    <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '4px', letterSpacing: '0.5px' }}>DESTINATION REGISTRIES * (SELECT AT LEAST ONE)</label>
+                    <div style={{ display: 'flex', gap: '20px', marginTop: '6px', marginBottom: '6px' }}>
+                      <label style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '11px', cursor: 'pointer', color: theme.text }}>
+                        <input
+                          type="checkbox"
+                          checked={subDestinations.includes('map')}
+                          onChange={(e) => {
+                            if (e.target.checked) {
+                              setSubDestinations(prev => [...prev, 'map']);
+                            } else {
+                              setSubDestinations(prev => prev.filter(d => d !== 'map'));
+                            }
+                          }}
+                          style={{ accentColor: theme.text }}
+                        />
+                        Interactive Map
+                      </label>
+                      <label style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '11px', cursor: 'pointer', color: theme.text }}>
+                        <input
+                          type="checkbox"
+                          checked={subDestinations.includes('codex')}
+                          onChange={(e) => {
+                            if (e.target.checked) {
+                              setSubDestinations(prev => [...prev, 'codex']);
+                            } else {
+                              setSubDestinations(prev => prev.filter(d => d !== 'codex'));
+                            }
+                          }}
+                          style={{ accentColor: theme.text }}
+                        />
+                        Codex
+                      </label>
+                      <label style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '11px', cursor: 'pointer', color: theme.text }}>
+                        <input
+                          type="checkbox"
+                          checked={subDestinations.includes('timeline')}
+                          onChange={(e) => {
+                            if (e.target.checked) {
+                              setSubDestinations(prev => [...prev, 'timeline']);
+                            } else {
+                              setSubDestinations(prev => prev.filter(d => d !== 'timeline'));
+                            }
+                          }}
+                          style={{ accentColor: theme.text }}
+                        />
+                        Timeline
+                      </label>
+                    </div>
                   </div>
 
-                  <div style={{ display: 'flex', gap: '16px', zIndex: 10002 }}>
-                    <div style={{ flex: 1, position: 'relative' }}>
-                      <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '6px', letterSpacing: '0.5px' }}>REGISTRY LAYER / CODEX CATEGORY *</label>
-                      <div style={{ position: 'relative' }}>
-                        <button
-                          type="button"
-                          onClick={() => setIsCategoryDropdownOpen(!isCategoryDropdownOpen)}
+                  {subDestinations.includes('map') && (
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', borderLeft: `2px solid ${theme.borderLight}`, paddingLeft: '12px', marginTop: '4px' }}>
+                      <div style={{ fontSize: '10px', fontWeight: 'bold', color: theme.textDim, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Map Configuration</div>
+                      <div style={{ display: 'flex', gap: '16px', zIndex: 10002 }}>
+                        <div style={{ flex: 1, position: 'relative' }}>
+                          <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '6px', letterSpacing: '0.5px' }}>REGISTRY LAYER / CODEX CATEGORY *</label>
+                          <div style={{ position: 'relative' }}>
+                            <button
+                              type="button"
+                              onClick={() => setIsCategoryDropdownOpen(!isCategoryDropdownOpen)}
+                              style={{
+                                width: '100%',
+                                background: isMapDarkMode ? '#0a0a0a' : '#ffffff',
+                                border: `1px solid ${theme.border}`,
+                                padding: '8px 12px',
+                                fontSize: '11px',
+                                color: theme.text,
+                                fontFamily: '"Space Mono", monospace',
+                                textAlign: 'left',
+                                display: 'flex',
+                                justifyContent: 'space-between',
+                                alignItems: 'center',
+                                cursor: 'pointer'
+                              }}
+                            >
+                              <span style={{ fontWeight: 'bold' }}>{subCategory}</span>
+                              <ChevronDown size={12} style={{ color: theme.text, transform: isCategoryDropdownOpen ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }} />
+                            </button>
+                            
+                            {isCategoryDropdownOpen && (
+                              <>
+                                <div 
+                                  onClick={() => setIsCategoryDropdownOpen(false)}
+                                  style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, zIndex: 10000 }} 
+                                />
+                                <div style={{
+                                  position: 'absolute',
+                                  top: '100%',
+                                  left: 0,
+                                  right: 0,
+                                  background: isMapDarkMode ? '#0d0d0d' : '#ffffff',
+                                  border: `1px solid ${theme.border}`,
+                                  borderTop: 'none',
+                                  zIndex: 10001,
+                                  maxHeight: '200px',
+                                  overflowY: 'auto',
+                                  boxShadow: isMapDarkMode ? '0 5px 25px rgba(0,0,0,0.8)' : '0 5px 25px rgba(0,0,0,0.15)'
+                                }}>
+                                  {allIntelCategories.map(cat => (
+                                    <div
+                                      key={cat}
+                                      onClick={() => {
+                                        setSubCategory(cat);
+                                        setIsCategoryDropdownOpen(false);
+                                      }}
+                                      style={{
+                                        padding: '8px 12px',
+                                        fontSize: '11px',
+                                        color: theme.text,
+                                        cursor: 'pointer',
+                                        background: subCategory === cat ? (isMapDarkMode ? '#222' : '#eee') : 'transparent',
+                                        transition: 'background 0.15s',
+                                        borderBottom: `1px solid ${theme.borderLight}`,
+                                        fontWeight: subCategory === cat ? 'bold' : 'normal',
+                                      }}
+                                      onMouseEnter={(e) => {
+                                        e.currentTarget.style.background = isMapDarkMode ? '#1a1a1a' : '#f5f5f5';
+                                      }}
+                                      onMouseLeave={(e) => {
+                                        e.currentTarget.style.background = subCategory === cat ? (isMapDarkMode ? '#222' : '#eee') : 'transparent';
+                                      }}
+                                    >
+                                      {cat}
+                                    </div>
+                                  ))}
+                                </div>
+                              </>
+                            )}
+                          </div>
+                        </div>
+
+                        <div style={{ width: '180px' }}>
+                          <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '6px', letterSpacing: '0.5px' }}>YEAR OF OCCURRENCE</label>
+                          <input 
+                            type="text" 
+                            placeholder="e.g. 1948" 
+                            value={subDate} 
+                            onChange={(e) => setSubDate(e.target.value)}
+                            style={{
+                              width: '100%',
+                              background: 'transparent',
+                              border: `1px solid ${theme.border}`,
+                              padding: '8px 12px',
+                              fontSize: '11px',
+                              color: theme.text,
+                              fontFamily: '"Space Mono", monospace'
+                            }}
+                          />
+                        </div>
+                      </div>
+
+                      {/* Geolocation auto-pinpoint input block matching requirement 3 */}
+                      <div style={{ background: isMapDarkMode ? 'rgba(255,255,255,0.02)' : 'rgba(0,0,0,0.02)', border: `1px dashed ${theme.borderLight}`, padding: '14px', borderRadius: '2px' }}>
+                        <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '6px', letterSpacing: '0.5px', color: theme.text }}>GEOGRAPHIC GEO-SEARCH (AUTO-FILL COORDINATES)</label>
+                        <div style={{ display: 'flex', gap: '8px' }}>
+                          <input
+                            type="text"
+                            placeholder="Type place name/address (e.g., Mount Shasta, CA)..."
+                            value={subLocationSearch}
+                            onChange={(e) => setSubLocationSearch(e.target.value)}
+                            onKeyDown={async (e) => {
+                              if (e.key === 'Enter') {
+                                e.preventDefault();
+                                await handleSubSearchGeocode();
+                              }
+                            }}
+                            style={{
+                              flex: 1,
+                              background: 'transparent',
+                              border: `1px solid ${theme.border}`,
+                              padding: '6px 12px',
+                              fontSize: '11px',
+                              color: theme.text,
+                              fontFamily: '"Space Mono", monospace'
+                            }}
+                          />
+                          <button
+                            type="button"
+                            onClick={handleSubSearchGeocode}
+                            disabled={isSubGeocoding}
+                            style={{
+                              background: theme.text,
+                              color: theme.bg,
+                              border: 'none',
+                              padding: '0 16px',
+                              height: '32px',
+                              borderRadius: '16px',
+                              fontSize: '9px',
+                              fontWeight: 700,
+                              cursor: 'pointer',
+                              fontFamily: '"Space Mono", monospace',
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              boxSizing: 'border-box'
+                            }}
+                          >
+                            {isSubGeocoding ? 'FINDING...' : 'RESOLVE'}
+                          </button>
+                        </div>
+                        
+                        {subGeocodeMsg && (
+                          <div style={{ fontSize: '9px', color: subGeocodeMsg.type === 'error' ? '#ff3333' : '#00cc00', marginTop: '6px', fontWeight: 'bold' }}>
+                            {subGeocodeMsg.text}
+                          </div>
+                        )}
+
+                        {subGeocodeResults.length > 1 && (
+                          <div style={{ 
+                            marginTop: '8px', 
+                            border: `1px solid ${theme.borderLight}`,
+                            borderRadius: '2px',
+                            background: isMapDarkMode ? '#111111' : '#fcfcfc',
+                            maxHeight: '130px',
+                            overflowY: 'auto',
+                            textAlign: 'left'
+                          }}>
+                            <div style={{ padding: '4px 8px', fontSize: '8px', fontWeight: 'bold', color: theme.textDim, borderBottom: `1px solid ${theme.borderLight}`, letterSpacing: '0.5px' }}>
+                              SUGGESTED MATCHES (CLICK TO PINPOINT):
+                            </div>
+                            {subGeocodeResults.map((feat) => {
+                              const [lng, lat] = feat.center;
+                              return (
+                                <div 
+                                  key={feat.id}
+                                  onClick={() => {
+                                    setSubLongitude(lng.toFixed(6));
+                                    setSubLatitude(lat.toFixed(6));
+                                    setSubLocationSearch(feat.place_name || feat.text);
+                                    setSubGeocodeMsg({
+                                      text: `SELECTED: ${feat.place_name || feat.text} (${lat.toFixed(4)}, ${lng.toFixed(4)})`,
+                                      type: 'success'
+                                    });
+                                    setSubGeocodeResults([]);
+                                  }}
+                                  style={{ 
+                                    padding: '6px 8px', 
+                                    fontSize: '9.5px', 
+                                    cursor: 'pointer',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    gap: '1px',
+                                    borderBottom: `1px solid ${theme.borderLight}`
+                                  }}
+                                  className={isMapDarkMode ? "hover:bg-gray-800" : "hover:bg-gray-100"}
+                                >
+                                  <span style={{ fontWeight: 'bold', color: theme.text }}>{feat.place_name || feat.text}</span>
+                                  <span style={{ fontSize: '8px', color: theme.textDim }}>Coordinates: {lat.toFixed(4)}, {lng.toFixed(4)}</span>
+                                </div>
+                              );
+                            })}
+                          </div>
+                        )}
+                      </div>
+
+                      {/* Lat/Lng Pin coordinates */}
+                      <div>
+                        <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '6px', letterSpacing: '0.5px' }}>COORDINATES REGISTRATION (OPTIONAL)</label>
+                        <div style={{ display: 'flex', gap: '12px' }}>
+                          <input 
+                            type="text" 
+                            placeholder="LATITUDE (e.g. 41.4091)" 
+                            value={subLatitude} 
+                            onChange={(e) => setSubLatitude(e.target.value)}
+                            style={{
+                              flex: 1,
+                              background: 'transparent',
+                              border: `1px solid ${theme.border}`,
+                              padding: '8px 12px',
+                              fontSize: '11px',
+                              color: theme.text,
+                              fontFamily: '"Space Mono", monospace'
+                            }}
+                          />
+                          <input 
+                            type="text" 
+                            placeholder="LONGITUDE (e.g. -122.1952)" 
+                            value={subLongitude} 
+                            onChange={(e) => setSubLongitude(e.target.value)}
+                            style={{
+                              flex: 1,
+                              background: 'transparent',
+                              border: `1px solid ${theme.border}`,
+                              padding: '8px 12px',
+                              fontSize: '11px',
+                              color: theme.text,
+                              fontFamily: '"Space Mono", monospace'
+                            }}
+                          />
+                          <button 
+                            type="button" 
+                            onClick={() => {
+                              setIsSubmitOpen(false);
+                              setIsPinningOnMap(true);
+                            }}
+                            style={{
+                              background: theme.text,
+                              color: theme.bg,
+                              border: 'none',
+                              padding: '0 16px',
+                              height: '32px',
+                              borderRadius: '16px',
+                              fontSize: '9px',
+                              fontWeight: 700,
+                              cursor: 'pointer',
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              gap: '6px',
+                              fontFamily: '"Space Mono", monospace',
+                              boxSizing: 'border-box'
+                            }}
+                          >
+                            <MapPin size={10} strokeWidth={2.5} />
+                            <span>PIN MAP</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {subDestinations.includes('codex') && (
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', borderLeft: `2px solid ${theme.borderLight}`, paddingLeft: '12px', marginTop: '4px' }}>
+                      <div style={{ fontSize: '10px', fontWeight: 'bold', color: theme.textDim, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Codex Configuration</div>
+                      <div>
+                        <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '6px', letterSpacing: '0.5px' }}>PARENT CODEX TERM</label>
+                        <select
+                          value={subCodexParentId}
+                          onChange={(e) => setSubCodexParentId(e.target.value)}
                           style={{
                             width: '100%',
                             background: isMapDarkMode ? '#0a0a0a' : '#ffffff',
@@ -7744,257 +8469,211 @@ function App() {
                             padding: '8px 12px',
                             fontSize: '11px',
                             color: theme.text,
-                            fontFamily: '"Space Mono", monospace',
-                            textAlign: 'left',
-                            display: 'flex',
-                            justifyContent: 'space-between',
-                            alignItems: 'center',
-                            cursor: 'pointer'
+                            fontFamily: '"Space Mono", monospace'
                           }}
                         >
-                          <span style={{ fontWeight: 'bold' }}>{subCategory}</span>
-                          <ChevronDown size={12} style={{ color: theme.text, transform: isCategoryDropdownOpen ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }} />
-                        </button>
-                        
-                        {isCategoryDropdownOpen && (
-                          <>
-                            <div 
-                              onClick={() => setIsCategoryDropdownOpen(false)}
-                              style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, zIndex: 10000 }} 
-                            />
-                            <div style={{
-                              position: 'absolute',
-                              top: '100%',
-                              left: 0,
-                              right: 0,
-                              background: isMapDarkMode ? '#0d0d0d' : '#ffffff',
+                          <option value="">None (Root Category)</option>
+                          {[...combinedCodexNodes]
+                            .sort((a, b) => a.name.localeCompare(b.name))
+                            .map(node => (
+                              <option key={node.id} value={node.id}>
+                                {node.name}
+                              </option>
+                            ))
+                          }
+                        </select>
+                      </div>
+                    </div>
+                  )}
+
+                  {subDestinations.includes('timeline') && (
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', borderLeft: `2px solid ${theme.borderLight}`, paddingLeft: '12px', marginTop: '4px' }}>
+                      <div style={{ fontSize: '10px', fontWeight: 'bold', color: theme.textDim, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Timeline Configuration</div>
+                      
+                      <div style={{ display: 'flex', gap: '12px' }}>
+                        <div style={{ flex: 1 }}>
+                          <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '6px', letterSpacing: '0.5px' }}>TIMELINE LAYER / ERA *</label>
+                          <select
+                            value={subTimelineLayer}
+                            onChange={(e) => setSubTimelineLayer(e.target.value)}
+                            style={{
+                              width: '100%',
+                              background: isMapDarkMode ? '#0a0a0a' : '#ffffff',
                               border: `1px solid ${theme.border}`,
-                              borderTop: 'none',
-                              zIndex: 10001,
-                              maxHeight: '200px',
-                              overflowY: 'auto',
-                              boxShadow: isMapDarkMode ? '0 5px 25px rgba(0,0,0,0.8)' : '0 5px 25px rgba(0,0,0,0.15)'
-                            }}>
-                              {allIntelCategories.map(cat => (
-                                <div
-                                  key={cat}
-                                  onClick={() => {
-                                    setSubCategory(cat);
-                                    setIsCategoryDropdownOpen(false);
-                                  }}
-                                  style={{
-                                    padding: '8px 12px',
-                                    fontSize: '11px',
-                                    color: theme.text,
-                                    cursor: 'pointer',
-                                    background: subCategory === cat ? (isMapDarkMode ? '#222' : '#eee') : 'transparent',
-                                    transition: 'background 0.15s',
-                                    borderBottom: `1px solid ${theme.borderLight}`,
-                                    fontWeight: subCategory === cat ? 'bold' : 'normal',
-                                  }}
-                                  onMouseEnter={(e) => {
-                                    e.currentTarget.style.background = isMapDarkMode ? '#1a1a1a' : '#f5f5f5';
-                                  }}
-                                  onMouseLeave={(e) => {
-                                    e.currentTarget.style.background = subCategory === cat ? (isMapDarkMode ? '#222' : '#eee') : 'transparent';
-                                  }}
-                                >
-                                  {cat}
-                                </div>
-                              ))}
-                            </div>
-                          </>
+                              padding: '8px 12px',
+                              fontSize: '11px',
+                              color: theme.text,
+                              fontFamily: '"Space Mono", monospace'
+                            }}
+                          >
+                            <option value="biblical-patriarchs">Biblical Bloodlines</option>
+                            <option value="biblical-events">Biblical Events</option>
+                            <option value="future-prophecy">Biblical Prophecy</option>
+                            <option value="enochian-lore">Enochian Lore</option>
+                            <option value="sumerian-kings">Sumerian Kings List</option>
+                            <option value="greek-mythology">Greek Mythology</option>
+                            <option value="merovingian-bloodlines">Merovingian Bloodlines</option>
+                            <option value="royal-bloodlines">Royal Bloodlines</option>
+                            <option value="secret-gov-programs">Secret Government Programs</option>
+                            <option value="ancient-civilizations">Ancient Civilizations & Tribes</option>
+                            <option value="alchemy-occult">Alchemy & Occult</option>
+                          </select>
+                        </div>
+
+                        <div style={{ width: '120px' }}>
+                          <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '6px', letterSpacing: '0.5px' }}>ENTRY TYPE</label>
+                          <select
+                            value={subTimelineType}
+                            onChange={(e) => setSubTimelineType(e.target.value as 'event' | 'lifespan')}
+                            style={{
+                              width: '100%',
+                              background: isMapDarkMode ? '#0a0a0a' : '#ffffff',
+                              border: `1px solid ${theme.border}`,
+                              padding: '8px 12px',
+                              fontSize: '11px',
+                              color: theme.text,
+                              fontFamily: '"Space Mono", monospace'
+                            }}
+                          >
+                            <option value="event">Event</option>
+                            <option value="lifespan">Lifespan</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div style={{ display: 'flex', gap: '12px' }}>
+                        <div style={{ flex: 1 }}>
+                          <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '6px', letterSpacing: '0.5px' }}>
+                            {subTimelineType === 'lifespan' ? 'YEAR OF BIRTH (START) *' : 'YEAR OF OCCURRENCE *'}
+                          </label>
+                          <input
+                            type="text"
+                            placeholder="e.g. -1948 or 1350"
+                            value={subDate}
+                            onChange={(e) => setSubDate(e.target.value)}
+                            style={{
+                              width: '100%',
+                              background: 'transparent',
+                              border: `1px solid ${theme.border}`,
+                              padding: '8px 12px',
+                              fontSize: '11px',
+                              color: theme.text,
+                              fontFamily: '"Space Mono", monospace'
+                            }}
+                          />
+                        </div>
+
+                        {subTimelineType === 'lifespan' && (
+                          <div style={{ flex: 1 }}>
+                            <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '6px', letterSpacing: '0.5px' }}>YEAR OF DEATH (END)</label>
+                            <input
+                              type="text"
+                              placeholder="e.g. -1800 or 1410 (optional)"
+                              value={subTimelineEnd}
+                              onChange={(e) => setSubTimelineEnd(e.target.value)}
+                              style={{
+                                width: '100%',
+                                background: 'transparent',
+                                border: `1px solid ${theme.border}`,
+                                padding: '8px 12px',
+                                fontSize: '11px',
+                                color: theme.text,
+                                fontFamily: '"Space Mono", monospace'
+                              }}
+                            />
+                          </div>
                         )}
                       </div>
-                    </div>
 
-                    <div style={{ width: '180px' }}>
-                      <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '6px', letterSpacing: '0.5px' }}>YEAR OF OCCURRENCE</label>
-                      <input 
-                        type="text" 
-                        placeholder="e.g. 1948" 
-                        value={subDate} 
-                        onChange={(e) => setSubDate(e.target.value)}
-                        style={{
-                          width: '100%',
-                          background: 'transparent',
-                          border: `1px solid ${theme.border}`,
-                          padding: '8px 12px',
-                          fontSize: '11px',
-                          color: theme.text,
-                          fontFamily: '"Space Mono", monospace'
-                        }}
-                      />
-                    </div>
-                  </div>
-
-                  {/* Geolocation auto-pinpoint input block matching requirement 3 */}
-                  <div style={{ background: isMapDarkMode ? 'rgba(255,255,255,0.02)' : 'rgba(0,0,0,0.02)', border: `1px dashed ${theme.borderLight}`, padding: '14px', borderRadius: '2px' }}>
-                    <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '6px', letterSpacing: '0.5px', color: theme.text }}>GEOGRAPHIC GEO-SEARCH (AUTO-FILL COORDINATES)</label>
-                    <div style={{ display: 'flex', gap: '8px' }}>
-                      <input
-                        type="text"
-                        placeholder="Type place name/address (e.g., Mount Shasta, CA)..."
-                        value={subLocationSearch}
-                        onChange={(e) => setSubLocationSearch(e.target.value)}
-                        onKeyDown={async (e) => {
-                          if (e.key === 'Enter') {
-                            e.preventDefault();
-                            await handleSubSearchGeocode();
-                          }
-                        }}
-                        style={{
-                          flex: 1,
-                          background: 'transparent',
-                          border: `1px solid ${theme.border}`,
-                          padding: '6px 12px',
-                          fontSize: '11px',
-                          color: theme.text,
-                          fontFamily: '"Space Mono", monospace'
-                        }}
-                      />
-                      <button
-                        type="button"
-                        onClick={handleSubSearchGeocode}
-                        disabled={isSubGeocoding}
-                        style={{
-                          background: theme.text,
-                          color: theme.bg,
-                          border: 'none',
-                          padding: '0 16px',
-                          height: '32px',
-                          borderRadius: '16px',
-                          fontSize: '9px',
-                          fontWeight: 700,
-                          cursor: 'pointer',
-                          fontFamily: '"Space Mono", monospace',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          boxSizing: 'border-box'
-                        }}
-                      >
-                        {isSubGeocoding ? 'FINDING...' : 'RESOLVE'}
-                      </button>
-                    </div>
-                    
-                    {subGeocodeMsg && (
-                      <div style={{ fontSize: '9px', color: subGeocodeMsg.type === 'error' ? '#ff3333' : '#00cc00', marginTop: '6px', fontWeight: 'bold' }}>
-                        {subGeocodeMsg.text}
-                      </div>
-                    )}
-
-                    {subGeocodeResults.length > 1 && (
-                      <div style={{ 
-                        marginTop: '8px', 
-                        border: `1px solid ${theme.borderLight}`,
-                        borderRadius: '2px',
-                        background: isMapDarkMode ? '#111111' : '#fcfcfc',
-                        maxHeight: '130px',
-                        overflowY: 'auto',
-                        textAlign: 'left'
-                      }}>
-                        <div style={{ padding: '4px 8px', fontSize: '8px', fontWeight: 'bold', color: theme.textDim, borderBottom: `1px solid ${theme.borderLight}`, letterSpacing: '0.5px' }}>
-                          SUGGESTED MATCHES (CLICK TO PINPOINT):
-                        </div>
-                        {subGeocodeResults.map((feat) => {
-                          const [lng, lat] = feat.center;
-                          return (
-                            <div 
-                              key={feat.id}
-                              onClick={() => {
-                                setSubLongitude(lng.toFixed(6));
-                                setSubLatitude(lat.toFixed(6));
-                                setSubLocationSearch(feat.place_name || feat.text);
-                                setSubGeocodeMsg({
-                                  text: `SELECTED: ${feat.place_name || feat.text} (${lat.toFixed(4)}, ${lng.toFixed(4)})`,
-                                  type: 'success'
-                                });
-                                setSubGeocodeResults([]);
-                              }}
-                              style={{ 
-                                padding: '6px 8px', 
-                                fontSize: '9.5px', 
-                                cursor: 'pointer',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                gap: '1px',
-                                borderBottom: `1px solid ${theme.borderLight}`
-                              }}
-                              className={isMapDarkMode ? "hover:bg-gray-800" : "hover:bg-gray-100"}
-                            >
-                              <span style={{ fontWeight: 'bold', color: theme.text }}>{feat.place_name || feat.text}</span>
-                              <span style={{ fontSize: '8px', color: theme.textDim }}>Coordinates: {lat.toFixed(4)}, {lng.toFixed(4)}</span>
+                      {/* Lineage relationships for Lifespans */}
+                      {subTimelineType === 'lifespan' && (
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', background: isMapDarkMode ? 'rgba(255,255,255,0.01)' : 'rgba(0,0,0,0.01)', padding: '10px', border: `1px solid ${theme.borderLight}` }}>
+                          <div style={{ fontSize: '8px', fontWeight: 'bold', color: theme.textDim, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Family Tree Lineage (Optional)</div>
+                          
+                          <div style={{ display: 'flex', gap: '8px' }}>
+                            <div style={{ flex: 1 }}>
+                              <label style={{ fontSize: '8px', display: 'block', marginBottom: '4px' }}>FATHER</label>
+                              <select
+                                value={subTimelineFatherId}
+                                onChange={(e) => setSubTimelineFatherId(e.target.value)}
+                                style={{
+                                  width: '100%',
+                                  background: isMapDarkMode ? '#0a0a0a' : '#ffffff',
+                                  border: `1px solid ${theme.border}`,
+                                  padding: '4px 6px',
+                                  fontSize: '9.5px',
+                                  color: theme.text,
+                                  fontFamily: '"Space Mono", monospace'
+                                }}
+                              >
+                                <option value="">None</option>
+                                {[...combinedTimelineItems]
+                                  .filter(item => item.type === 'lifespan')
+                                  .sort((a, b) => a.name.localeCompare(b.name))
+                                  .map(item => (
+                                    <option key={item.id} value={item.id}>{item.name}</option>
+                                  ))
+                                }
+                              </select>
                             </div>
-                          );
-                        })}
-                      </div>
-                    )}
-                  </div>
 
-                  {/* Lat/Lng Pin coordinates */}
-                  <div>
-                    <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '6px', letterSpacing: '0.5px' }}>COORDINATES REGISTRATION (OPTIONAL)</label>
-                    <div style={{ display: 'flex', gap: '12px' }}>
-                      <input 
-                        type="text" 
-                        placeholder="LATITUDE (e.g. 41.4091)" 
-                        value={subLatitude} 
-                        onChange={(e) => setSubLatitude(e.target.value)}
-                        style={{
-                          flex: 1,
-                          background: 'transparent',
-                          border: `1px solid ${theme.border}`,
-                          padding: '8px 12px',
-                          fontSize: '11px',
-                          color: theme.text,
-                          fontFamily: '"Space Mono", monospace'
-                        }}
-                      />
-                      <input 
-                        type="text" 
-                        placeholder="LONGITUDE (e.g. -122.1952)" 
-                        value={subLongitude} 
-                        onChange={(e) => setSubLongitude(e.target.value)}
-                        style={{
-                          flex: 1,
-                          background: 'transparent',
-                          border: `1px solid ${theme.border}`,
-                          padding: '8px 12px',
-                          fontSize: '11px',
-                          color: theme.text,
-                          fontFamily: '"Space Mono", monospace'
-                        }}
-                      />
-                      <button 
-                        type="button" 
-                        onClick={() => {
-                          setIsSubmitOpen(false);
-                          setIsPinningOnMap(true);
-                        }}
-                        style={{
-                          background: theme.text,
-                          color: theme.bg,
-                          border: 'none',
-                          padding: '0 16px',
-                          height: '32px',
-                          borderRadius: '16px',
-                          fontSize: '9px',
-                          fontWeight: 700,
-                          cursor: 'pointer',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          gap: '6px',
-                          fontFamily: '"Space Mono", monospace',
-                          boxSizing: 'border-box'
-                        }}
-                      >
-                        <MapPin size={10} strokeWidth={2.5} />
-                        <span>PIN MAP</span>
-                      </button>
+                            <div style={{ flex: 1 }}>
+                              <label style={{ fontSize: '8px', display: 'block', marginBottom: '4px' }}>MOTHER</label>
+                              <select
+                                value={subTimelineMotherId}
+                                onChange={(e) => setSubTimelineMotherId(e.target.value)}
+                                style={{
+                                  width: '100%',
+                                  background: isMapDarkMode ? '#0a0a0a' : '#ffffff',
+                                  border: `1px solid ${theme.border}`,
+                                  padding: '4px 6px',
+                                  fontSize: '9.5px',
+                                  color: theme.text,
+                                  fontFamily: '"Space Mono", monospace'
+                                }}
+                              >
+                                <option value="">None</option>
+                                {[...combinedTimelineItems]
+                                  .filter(item => item.type === 'lifespan')
+                                  .sort((a, b) => a.name.localeCompare(b.name))
+                                  .map(item => (
+                                    <option key={item.id} value={item.id}>{item.name}</option>
+                                  ))
+                                }
+                              </select>
+                            </div>
+
+                            <div style={{ flex: 1 }}>
+                              <label style={{ fontSize: '8px', display: 'block', marginBottom: '4px' }}>SPOUSE</label>
+                              <select
+                                value={subTimelineSpouseId}
+                                onChange={(e) => setSubTimelineSpouseId(e.target.value)}
+                                style={{
+                                  width: '100%',
+                                  background: isMapDarkMode ? '#0a0a0a' : '#ffffff',
+                                  border: `1px solid ${theme.border}`,
+                                  padding: '4px 6px',
+                                  fontSize: '9.5px',
+                                  color: theme.text,
+                                  fontFamily: '"Space Mono", monospace'
+                                }}
+                              >
+                                <option value="">None</option>
+                                {[...combinedTimelineItems]
+                                  .filter(item => item.type === 'lifespan')
+                                  .sort((a, b) => a.name.localeCompare(b.name))
+                                  .map(item => (
+                                    <option key={item.id} value={item.id}>{item.name}</option>
+                                  ))
+                                }
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      )}
                     </div>
-                  </div>
+                  )}
+    </div>
 
                   <div>
                     <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '6px', letterSpacing: '0.5px' }}>NARRATIVE RECORD & DATA LOG *</label>
@@ -8822,11 +9501,62 @@ function App() {
                                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                                     <div>
                                       <h5 style={{ margin: '0 0 4px 0', fontSize: '13px', fontWeight: 'bold', color: theme.text }}>{sub.name}</h5>
-                                      <div style={{ display: 'flex', gap: '12px', fontSize: '9px', color: isMapDarkMode ? theme.textDim : '#000000', fontWeight: isMapDarkMode ? 'normal' : '500' }}>
-                                        <span>LAYER: <strong style={{ color: isMapDarkMode ? '#ffffff' : '#000000', textDecoration: isMapDarkMode ? 'none' : 'underline' }}>{sub.category}</strong></span>
-                                        <span>COORDS: <strong style={{ color: isMapDarkMode ? '#ffffff' : '#000000' }}>[{sub.coordinates?.[1]}, {sub.coordinates?.[0]}]</strong></span>
+                                      <div style={{ display: 'flex', gap: '12px', fontSize: '9px', color: isMapDarkMode ? theme.textDim : '#000000', fontWeight: isMapDarkMode ? 'normal' : '500', flexWrap: 'wrap', alignItems: 'center' }}>
+                                        {(!sub.destinations || sub.destinations.includes('map')) && (
+                                          <>
+                                            <span>LAYER: <strong style={{ color: isMapDarkMode ? '#ffffff' : '#000000', textDecoration: isMapDarkMode ? 'none' : 'underline' }}>{sub.category}</strong></span>
+                                            <span>COORDS: <strong style={{ color: isMapDarkMode ? '#ffffff' : '#000000' }}>[{sub.coordinates?.[1]}, {sub.coordinates?.[0]}]</strong></span>
+                                          </>
+                                        )}
                                         {sub.date && <span>YEAR: <strong style={{ color: isMapDarkMode ? '#ffffff' : '#000000' }}>{sub.date}</strong></span>}
                                       </div>
+
+                                      {/* Destinations & Parenting Parameters */}
+                                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginTop: '4px' }}>
+                                        {(sub.destinations || ['map']).map((dest: string) => (
+                                          <span 
+                                            key={dest} 
+                                            style={{ 
+                                              fontSize: '8px', 
+                                              fontWeight: 'bold', 
+                                              padding: '1px 5px', 
+                                              background: isMapDarkMode ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.04)', 
+                                              color: theme.text,
+                                              border: `1px solid ${theme.borderLight}`,
+                                              borderRadius: '2px',
+                                              textTransform: 'uppercase'
+                                            }}
+                                          >
+                                            {dest}
+                                          </span>
+                                        ))}
+                                      </div>
+
+                                      {/* Codex Parent metadata */}
+                                      {sub.destinations?.includes('codex') && (
+                                        <div style={{ fontSize: '8.5px', color: theme.textDim, marginTop: '4px' }}>
+                                          CODEX PARENT: <strong style={{ color: theme.text }}>{combinedCodexNodes.find(n => n.id === sub.codexParentId)?.name || 'Root Category'}</strong>
+                                        </div>
+                                      )}
+
+                                      {/* Timeline configuration metadata */}
+                                      {sub.destinations?.includes('timeline') && (
+                                        <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', marginTop: '4px' }}>
+                                          <div style={{ fontSize: '8.5px', color: theme.textDim }}>
+                                            TIMELINE ERA: <strong style={{ color: theme.text }}>{sub.timelineLayer}</strong> | TYPE: <strong style={{ color: theme.text }}>{sub.timelineType?.toUpperCase()}</strong>
+                                            {sub.timelineType === 'lifespan' && sub.timelineEnd && (
+                                              <> | DEATH YEAR: <strong style={{ color: theme.text }}>{sub.timelineEnd}</strong></>
+                                            )}
+                                          </div>
+                                          {sub.timelineType === 'lifespan' && (sub.timelineFatherId || sub.timelineMotherId || sub.timelineSpouseId) && (
+                                            <div style={{ fontSize: '8.5px', color: theme.textDim }}>
+                                              {sub.timelineFatherId && <>FATHER: <strong style={{ color: theme.text }}>{combinedTimelineItems.find(t => t.id === sub.timelineFatherId)?.name || sub.timelineFatherId}</strong> </>}
+                                              {sub.timelineMotherId && <>MOTHER: <strong style={{ color: theme.text }}>{combinedTimelineItems.find(t => t.id === sub.timelineMotherId)?.name || sub.timelineMotherId}</strong> </>}
+                                              {sub.timelineSpouseId && <>SPOUSE: <strong style={{ color: theme.text }}>{combinedTimelineItems.find(t => t.id === sub.timelineSpouseId)?.name || sub.timelineSpouseId}</strong> </>}
+                                            </div>
+                                          )}
+                                        </div>
+                                      )}
                                     </div>
                                     <span style={{ padding: '2px 6px', background: isMapDarkMode ? '#ffa500' : '#000000', color: isMapDarkMode ? '#000000' : '#ffffff', fontSize: '8px', fontWeight: 'bold', borderRadius: '1px' }}>PENDING</span>
                                   </div>
@@ -9083,11 +9813,62 @@ function App() {
                                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                                     <div>
                                       <h5 style={{ margin: '0 0 4px 0', fontSize: '13px', fontWeight: 'bold', color: theme.text }}>{sub.name}</h5>
-                                      <div style={{ display: 'flex', gap: '12px', fontSize: '9px', color: isMapDarkMode ? theme.textDim : '#000000', fontWeight: isMapDarkMode ? 'normal' : '500' }}>
-                                        <span>LAYER: <strong style={{ color: isMapDarkMode ? (layerColors[sub.category] || '#b6a6ff') : '#000000', textDecoration: isMapDarkMode ? 'none' : 'underline' }}>{sub.category}</strong></span>
-                                        <span>COORDS: <strong>[{sub.coordinates?.[1]}, {sub.coordinates?.[0]}]</strong></span>
+                                      <div style={{ display: 'flex', gap: '12px', fontSize: '9px', color: isMapDarkMode ? theme.textDim : '#000000', fontWeight: isMapDarkMode ? 'normal' : '500', flexWrap: 'wrap', alignItems: 'center' }}>
+                                        {(!sub.destinations || sub.destinations.includes('map')) && (
+                                          <>
+                                            <span>LAYER: <strong style={{ color: isMapDarkMode ? (layerColors[sub.category] || '#b6a6ff') : '#000000', textDecoration: isMapDarkMode ? 'none' : 'underline' }}>{sub.category}</strong></span>
+                                            <span>COORDS: <strong>[{sub.coordinates?.[1]}, {sub.coordinates?.[0]}]</strong></span>
+                                          </>
+                                        )}
                                         {sub.date ? <span>YEAR: <strong>{sub.date}</strong></span> : null}
                                       </div>
+
+                                      {/* Destinations & Parenting Parameters */}
+                                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginTop: '4px' }}>
+                                        {(sub.destinations || ['map']).map((dest: string) => (
+                                          <span 
+                                            key={dest} 
+                                            style={{ 
+                                              fontSize: '8px', 
+                                              fontWeight: 'bold', 
+                                              padding: '1px 5px', 
+                                              background: isMapDarkMode ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.04)', 
+                                              color: theme.text,
+                                              border: `1px solid ${theme.borderLight}`,
+                                              borderRadius: '2px',
+                                              textTransform: 'uppercase'
+                                            }}
+                                          >
+                                            {dest}
+                                          </span>
+                                        ))}
+                                      </div>
+
+                                      {/* Codex Parent metadata */}
+                                      {sub.destinations?.includes('codex') && (
+                                        <div style={{ fontSize: '8.5px', color: theme.textDim, marginTop: '4px' }}>
+                                          CODEX PARENT: <strong style={{ color: theme.text }}>{combinedCodexNodes.find(n => n.id === sub.codexParentId)?.name || 'Root Category'}</strong>
+                                        </div>
+                                      )}
+
+                                      {/* Timeline configuration metadata */}
+                                      {sub.destinations?.includes('timeline') && (
+                                        <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', marginTop: '4px' }}>
+                                          <div style={{ fontSize: '8.5px', color: theme.textDim }}>
+                                            TIMELINE ERA: <strong style={{ color: theme.text }}>{sub.timelineLayer}</strong> | TYPE: <strong style={{ color: theme.text }}>{sub.timelineType?.toUpperCase()}</strong>
+                                            {sub.timelineType === 'lifespan' && sub.timelineEnd && (
+                                              <> | DEATH YEAR: <strong style={{ color: theme.text }}>{sub.timelineEnd}</strong></>
+                                            )}
+                                          </div>
+                                          {sub.timelineType === 'lifespan' && (sub.timelineFatherId || sub.timelineMotherId || sub.timelineSpouseId) && (
+                                            <div style={{ fontSize: '8.5px', color: theme.textDim }}>
+                                              {sub.timelineFatherId && <>FATHER: <strong style={{ color: theme.text }}>{combinedTimelineItems.find(t => t.id === sub.timelineFatherId)?.name || sub.timelineFatherId}</strong> </>}
+                                              {sub.timelineMotherId && <>MOTHER: <strong style={{ color: theme.text }}>{combinedTimelineItems.find(t => t.id === sub.timelineMotherId)?.name || sub.timelineMotherId}</strong> </>}
+                                              {sub.timelineSpouseId && <>SPOUSE: <strong style={{ color: theme.text }}>{combinedTimelineItems.find(t => t.id === sub.timelineSpouseId)?.name || sub.timelineSpouseId}</strong> </>}
+                                            </div>
+                                          )}
+                                        </div>
+                                      )}
                                     </div>
                                     <span style={{ padding: '2px 6px', background: isMapDarkMode ? 'rgba(0, 204, 0, 0.1)' : '#000000', border: isMapDarkMode ? '1px solid #00cc00' : '1px solid #000000', color: isMapDarkMode ? '#00cc00' : '#ffffff', fontSize: '8px', fontWeight: 'bold', borderRadius: '1.5px' }}>APPROVED</span>
                                   </div>

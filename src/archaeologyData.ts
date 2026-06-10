@@ -622,7 +622,7 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
     displayDate: "c. 2000 BC - 1697 AD",
     description: "The major ancient cities of the Mayan civilization, including Tikal, Copán, and Chichen Itza, featuring monumental stone step-pyramids, astronomical observatories, and complex hieroglyphic texts. Mayan myths detail a dark underworld labyrinth named Xibalba.",
     source: "UNESCO World Heritage Sites",
-    images: ["https://upload.wikimedia.org/wikipedia/commons/e/ec/Tikal_Temple_I_2010.jpg"]
+    images: ["https://upload.wikimedia.org/wikipedia/commons/0/06/Tikal_Temple1_2006_08_11.JPG"]
   },
   {
     id: "archaeology-aztec-tenochtitlan",
@@ -646,7 +646,7 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
     displayDate: "c. 1100 AD - Present",
     description: "Old Oraibi on Third Mesa is one of the oldest continuously inhabited communities in North America. Hopi oral traditions speak of subterranean survival guided by the friendly 'Ant People' during a past world-ending cataclysm.",
     source: "National Register of Historic Places / Hopi History",
-    images: ["https://upload.wikimedia.org/wikipedia/commons/e/e0/Hopi_Oraibi_1900.jpg"]
+    images: ["https://upload.wikimedia.org/wikipedia/commons/6/6d/A_distant_view_in_the_Hopi_pueblo_of_Oraibi_from_the_southwest%2C_Arizona%2C_ca.1898_%28CHS-4594%29.jpg"]
   },
   {
     id: "archaeology-moundbuilders-cahokia",
@@ -694,6 +694,6 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
     displayDate: "c. 1200 - 604 BC",
     description: "The ancient seaport of Ashkelon, one of the five major cities of the Philistine Pentapolis. Excavations have uncovered extensive Bronze and Iron Age structures, including the first-ever discovered Philistine cemetery.",
     source: "Leon Levy Expedition to Ashkelon / Harvard Museum",
-    images: ["https://upload.wikimedia.org/wikipedia/commons/b/b3/Tel_Ashkelon.jpg"]
+    images: ["https://upload.wikimedia.org/wikipedia/commons/c/ce/Restored_Canaanite_city_gate_of_Ashkelon_%2814341997262%29.jpg"]
   }
 ];
