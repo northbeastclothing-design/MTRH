@@ -10313,14 +10313,52 @@ function App() {
                                 {report.details || <em style={{ color: theme.textDim }}>No supporting details provided.</em>}
                               </div>
 
-                              <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '8px', borderTop: `1px solid ${theme.borderLight}`, paddingTop: '12px' }}>
-                                <button
-                                  disabled={submittingReportActionId !== null}
-                                  onClick={async () => {
-                                    const confirmed = window.confirm("Are you sure you want to permanently delete this report?");
-                                    if (!confirmed) return;
-                                    await handleReportAction(report.id, 'delete');
-                                  }}
+                              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderTop: `1px solid ${theme.borderLight}`, paddingTop: '12px' }}>
+                                <div style={{ display: 'flex', gap: '8px' }}>
+                                  {(() => {
+                                    const mapRecord = combinedPointsAndLinesData.find(item => String(item.id) === String(report.pointId));
+                                    if (!mapRecord || !mapRecord.coordinates) return null;
+                                    return (
+                                      <button
+                                        onClick={() => {
+                                          if (mapRef.current) {
+                                            setSelectedFeature(mapRecord);
+                                            mapRef.current.flyTo({ center: mapRecord.coordinates, zoom: 14 });
+                                            setIsModMinimized(true);
+                                          }
+                                        }}
+                                        style={{
+                                          background: 'transparent',
+                                          color: theme.text,
+                                          border: `1px solid ${theme.border}`,
+                                          borderRadius: '16px',
+                                          padding: '0 16px',
+                                          height: '32px',
+                                          fontSize: '9px',
+                                          fontFamily: '"Space Mono", monospace',
+                                          fontWeight: 700,
+                                          cursor: 'pointer',
+                                          display: 'flex',
+                                          alignItems: 'center',
+                                          gap: '6px',
+                                          boxSizing: 'border-box'
+                                        }}
+                                      >
+                                        <Eye size={12} />
+                                        PREVIEW
+                                      </button>
+                                    );
+                                  })()}
+                                </div>
+
+                                <div style={{ display: 'flex', gap: '8px' }}>
+                                  <button
+                                    disabled={submittingReportActionId !== null}
+                                    onClick={async () => {
+                                      const confirmed = window.confirm("Are you sure you want to permanently delete this report?");
+                                      if (!confirmed) return;
+                                      await handleReportAction(report.id, 'delete');
+                                    }}
                                   style={{
                                     background: 'transparent',
                                     color: isMapDarkMode ? '#ff3333' : '#d32f2f',
@@ -10369,6 +10407,7 @@ function App() {
                                 )}
                               </div>
                             </div>
+                          </div>
                           ))}
                         </div>
                       )}
