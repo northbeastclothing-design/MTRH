@@ -1186,6 +1186,8 @@ function App() {
   const [subTimelineFatherId, setSubTimelineFatherId] = useState('');
   const [subTimelineMotherId, setSubTimelineMotherId] = useState('');
   const [subTimelineSpouseId, setSubTimelineSpouseId] = useState('');
+  const [subSubmitterName, setSubSubmitterName] = useState('');
+  const [subSubmitterEmail, setSubSubmitterEmail] = useState('');
 
   // Onboarding Tour State
   const [onboardingStep, setOnboardingStep] = useState<number | null>(null);
@@ -8066,7 +8068,9 @@ function App() {
                       timelineEnd: (subDestinations.includes('timeline') && subTimelineType === 'lifespan') ? subTimelineEnd.trim() : '',
                       timelineFatherId: (subDestinations.includes('timeline') && subTimelineType === 'lifespan') ? subTimelineFatherId : '',
                       timelineMotherId: (subDestinations.includes('timeline') && subTimelineType === 'lifespan') ? subTimelineMotherId : '',
-                      timelineSpouseId: (subDestinations.includes('timeline') && subTimelineType === 'lifespan') ? subTimelineSpouseId : ''
+                      timelineSpouseId: (subDestinations.includes('timeline') && subTimelineType === 'lifespan') ? subTimelineSpouseId : '',
+                      submitterName: subSubmitterName.trim(),
+                      submitterEmail: subSubmitterEmail.trim()
                     };
 
                     if (hasCoords) {
@@ -8100,7 +8104,9 @@ function App() {
                           timelineEnd: (subDestinations.includes('timeline') && subTimelineType === 'lifespan') ? subTimelineEnd.trim() : '',
                           timelineFatherId: (subDestinations.includes('timeline') && subTimelineType === 'lifespan') ? subTimelineFatherId : '',
                           timelineMotherId: (subDestinations.includes('timeline') && subTimelineType === 'lifespan') ? subTimelineMotherId : '',
-                          timelineSpouseId: (subDestinations.includes('timeline') && subTimelineType === 'lifespan') ? subTimelineSpouseId : ''
+                          timelineSpouseId: (subDestinations.includes('timeline') && subTimelineType === 'lifespan') ? subTimelineSpouseId : '',
+                          submitterName: subSubmitterName.trim() || undefined,
+                          submitterEmail: subSubmitterEmail.trim() || undefined
                         })
                       });
                       
@@ -8125,6 +8131,8 @@ function App() {
                       setSubTimelineFatherId('');
                       setSubTimelineMotherId('');
                       setSubTimelineSpouseId('');
+                      setSubSubmitterName('');
+                      setSubSubmitterEmail('');
                     } catch (err: any) {
                       console.warn("Server proxy submission failed, trying direct Firestore fallback:", err);
                       try {
@@ -8148,6 +8156,8 @@ function App() {
                         setSubTimelineFatherId('');
                         setSubTimelineMotherId('');
                         setSubTimelineSpouseId('');
+                        setSubSubmitterName('');
+                        setSubSubmitterEmail('');
                       } catch (fallbackErr: any) {
                         console.error("Firestore submission fallback error:", fallbackErr);
                         setSubmissionError(`Transmission Failure: ${fallbackErr.message || fallbackErr}`);
@@ -8991,6 +9001,46 @@ function App() {
                     )}
                   </div>
 
+                  {/* SUBMITTER CONTACT INFO (OPTIONAL) */}
+                  <div style={{ display: 'flex', gap: '12px', marginTop: '12px' }}>
+                    <div style={{ flex: 1 }}>
+                      <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: theme.text }}>SUBMITTER NAME (OPTIONAL)</label>
+                      <input 
+                        type="text" 
+                        placeholder="e.g., Agent Mulder" 
+                        value={subSubmitterName} 
+                        onChange={(e) => setSubSubmitterName(e.target.value)}
+                        style={{
+                          width: '100%',
+                          background: 'transparent',
+                          border: `1px solid ${theme.border}`,
+                          padding: '8px 12px',
+                          fontSize: '11px',
+                          color: theme.text,
+                          fontFamily: '"Space Mono", monospace'
+                        }}
+                      />
+                    </div>
+                    <div style={{ flex: 1 }}>
+                      <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: theme.text }}>SUBMITTER EMAIL (OPTIONAL)</label>
+                      <input 
+                        type="email" 
+                        placeholder="e.g., mulder@fbi.gov" 
+                        value={subSubmitterEmail} 
+                        onChange={(e) => setSubSubmitterEmail(e.target.value)}
+                        style={{
+                          width: '100%',
+                          background: 'transparent',
+                          border: `1px solid ${theme.border}`,
+                          padding: '8px 12px',
+                          fontSize: '11px',
+                          color: theme.text,
+                          fontFamily: '"Space Mono", monospace'
+                        }}
+                      />
+                    </div>
+                  </div>
+
                   {submissionError && (
                     <div style={{ color: '#ff3333', fontSize: '10px', fontWeight: 'bold', border: '1px solid #ff3333', padding: '8px', background: 'rgba(255,0,0,0.02)' }}>
                       {submissionError}
@@ -9661,6 +9711,13 @@ function App() {
                                     </div>
                                   )}
 
+                                  {(sub.submitterName || sub.submitterEmail) && (
+                                    <div style={{ fontSize: '9px', color: isMapDarkMode ? theme.textDim : '#000000', borderTop: `1px dashed ${theme.borderLight}`, paddingTop: '4px', marginTop: '4px' }}>
+                                      SUBMITTER CONTACT: <strong style={{ color: theme.text }}>{sub.submitterName || 'Anonymous'}</strong>
+                                      {sub.submitterEmail && <> | <a href={`mailto:${sub.submitterEmail}`} style={{ color: '#b6a6ff', textDecoration: 'underline' }}>{sub.submitterEmail}</a></>}
+                                    </div>
+                                  )}
+
                                   {sub.images && sub.images.length > 0 && (
                                     <div style={{ borderTop: `1px solid ${theme.borderLight}`, paddingTop: '10px' }}>
                                       <span style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: isMapDarkMode ? theme.text : '#000000' }}>ATTACHMENTS DETECTED:</span>
@@ -9970,6 +10027,13 @@ function App() {
                                   {sub.source && (
                                     <div style={{ fontSize: '9px', color: isMapDarkMode ? theme.textDim : '#000000', fontStyle: 'italic' }}>
                                       Source: <strong>{sub.source}</strong>
+                                    </div>
+                                  )}
+
+                                  {(sub.submitterName || sub.submitterEmail) && (
+                                    <div style={{ fontSize: '9px', color: isMapDarkMode ? theme.textDim : '#000000', borderTop: `1px dashed ${theme.borderLight}`, paddingTop: '4px', marginTop: '4px' }}>
+                                      SUBMITTER CONTACT: <strong style={{ color: theme.text }}>{sub.submitterName || 'Anonymous'}</strong>
+                                      {sub.submitterEmail && <> | <a href={`mailto:${sub.submitterEmail}`} style={{ color: '#b6a6ff', textDecoration: 'underline' }}>{sub.submitterEmail}</a></>}
                                     </div>
                                   )}
 

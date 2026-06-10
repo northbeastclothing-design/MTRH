@@ -332,7 +332,9 @@ async function startServer() {
         timelineEnd,
         timelineFatherId,
         timelineMotherId,
-        timelineSpouseId
+        timelineSpouseId,
+        submitterName,
+        submitterEmail
       } = req.body;
 
       if (!name || !category || !description) {
@@ -357,7 +359,9 @@ async function startServer() {
         timelineEnd: timelineEnd || '',
         timelineFatherId: timelineFatherId || '',
         timelineMotherId: timelineMotherId || '',
-        timelineSpouseId: timelineSpouseId || ''
+        timelineSpouseId: timelineSpouseId || '',
+        submitterName: (submitterName && typeof submitterName === 'string') ? submitterName.trim() : '',
+        submitterEmail: (submitterEmail && typeof submitterEmail === 'string') ? submitterEmail.trim() : ''
       };
 
       if (coordinates !== undefined && coordinates !== null) {
@@ -390,12 +394,14 @@ Date/Timeframe: ${submissionData.date || "Not provided"}
 Source/Provenance: ${submissionData.source || "Not provided"}
 Coordinates: ${submissionData.coordinates ? JSON.stringify(submissionData.coordinates) : "Not provided"}
 Social Link: ${submissionData.socialLink || "Not provided"}
+Submitter Name: ${submissionData.submitterName || "Not provided"}
+Submitter Email: ${submissionData.submitterEmail || "Not provided"}
 
 --- Codex Placement ---
 Parent Codex Term ID: ${submissionData.codexParentId || "None (Root category)"}
 
 --- Timeline Placement ---
-Timeline Layer / Era: ${submissionData.timelineLayer || "None"}
+Timeline Era / Layer: ${submissionData.timelineLayer || "None"}
 Timeline Type: ${submissionData.timelineType || "event"}
 Timeline End Year: ${submissionData.timelineEnd || "N/A"}
 Father ID: ${submissionData.timelineFatherId || "None"}
@@ -443,6 +449,14 @@ ${modLink}
             <tr>
               <td style="padding: 6px; font-weight: bold; color: #ffcc00;">Social Link:</td>
               <td style="padding: 6px; border-bottom: 1px solid #222;">${submissionData.socialLink || "Not provided"}</td>
+            </tr>
+            <tr>
+              <td style="padding: 6px; font-weight: bold; color: #ffcc00;">Submitter Name:</td>
+              <td style="padding: 6px; border-bottom: 1px solid #222;">${submissionData.submitterName || "Not provided"}</td>
+            </tr>
+            <tr>
+              <td style="padding: 6px; font-weight: bold; color: #ffcc00;">Submitter Email:</td>
+              <td style="padding: 6px; border-bottom: 1px solid #222;">${submissionData.submitterEmail ? `<a href="mailto:${submissionData.submitterEmail}" style="color: #ffcc00;">${submissionData.submitterEmail}</a>` : "Not provided"}</td>
             </tr>
           </table>
 
