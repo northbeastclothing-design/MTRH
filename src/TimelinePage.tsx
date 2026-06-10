@@ -112,6 +112,16 @@ const ERAS_CONFIG = [
     icon: '/icons/icon-secret-government-programs.svg',
     layer: 'secret-gov-programs',
     desc: 'Declassified military projects, chemical mind control, psychic remote viewing research, and classified aerospace programs.'
+  },
+  {
+    id: 'ancient-civilizations',
+    name: 'Ancient Civilizations & Tribes',
+    start: -4000,
+    end: 2026,
+    color: '#74F8F3', // Cyan
+    icon: '/icons/icon-archaeological-finds.svg',
+    layer: 'ancient-civilizations',
+    desc: 'Ancient Mesoamerican empires, Native American tribes, and lost civilizations of antiquity.'
   }
 ];
 
@@ -143,7 +153,8 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
     'royal-bloodlines': true,
     'enochian-lore': true,
     'future-prophecy': true,
-    'secret-gov-programs': true
+    'secret-gov-programs': true,
+    'ancient-civilizations': true
   });
 
   // Hover & selection states

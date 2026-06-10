@@ -611,5 +611,53 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
     description: "A newspaper report documented the discovery of fields of ancient burial mounds along Lake Michigan, which yielded multiple giant skeletons measuring between seven and eight feet in height.",
     source: "Historical Press Records (1902) / Travis Roy @giants_of_ancientamerica",
     images: []
+  },
+  {
+    id: "archaeology-mayan-copan",
+    name: "Mayan Ruins of Copán & Tikal",
+    category: "Archaeological Finds",
+    type: "Point",
+    coordinates: { lng: -89.1411, lat: 14.8383 },
+    date: -2000,
+    displayDate: "c. 2000 BC - 1697 AD",
+    description: "The major ancient cities of the Mayan civilization, including Tikal, Copán, and Chichen Itza, featuring monumental stone step-pyramids, astronomical observatories, and complex hieroglyphic texts. Mayan myths detail a dark underworld labyrinth named Xibalba.",
+    source: "UNESCO World Heritage Sites",
+    images: ["https://upload.wikimedia.org/wikipedia/commons/e/ec/Tikal_Temple_I_2010.jpg"]
+  },
+  {
+    id: "archaeology-aztec-tenochtitlan",
+    name: "Tenochtitlan (Aztec Capital)",
+    category: "Archaeological Finds",
+    type: "Point",
+    coordinates: { lng: -99.1332, lat: 19.4326 },
+    date: 1325,
+    displayDate: "1325 - 1521 AD",
+    description: "The capital of the Aztec Empire, built on an island in Lake Texcoco. Its heart was the Templo Mayor, a massive double-pyramid temple dedicated to Huitzilopochtli and Tlaloc. Aztec legends speak of a prehistoric race of giants called Quinamentin who built the ancient pyramids.",
+    source: "INAH Mexico / Historical Archives",
+    images: ["https://upload.wikimedia.org/wikipedia/commons/b/b2/Templo_Mayor_reconstruction.jpg"]
+  },
+  {
+    id: "archaeology-hopi-mesa",
+    name: "Hopi Oraibi Mesa",
+    category: "Archaeological Finds",
+    type: "Point",
+    coordinates: { lng: -110.5982, lat: 35.8764 },
+    date: 1100,
+    displayDate: "c. 1100 AD - Present",
+    description: "Old Oraibi on Third Mesa is one of the oldest continuously inhabited communities in North America. Hopi oral traditions speak of subterranean survival guided by the friendly 'Ant People' during a past world-ending cataclysm.",
+    source: "National Register of Historic Places / Hopi History",
+    images: ["https://upload.wikimedia.org/wikipedia/commons/e/e0/Hopi_Oraibi_1900.jpg"]
+  },
+  {
+    id: "archaeology-moundbuilders-cahokia",
+    name: "Cahokia Mounds (Mound Builders Capital)",
+    category: "Archaeological Finds",
+    type: "Point",
+    coordinates: { lng: -90.0633, lat: 38.6539 },
+    date: 1050,
+    displayDate: "c. 600 - 1400 AD (Peak c. 1050 AD)",
+    description: "The largest pre-columbian settlement north of Mexico, featuring Monks Mound, a colossal earthen pyramid covering 14 acres. Cahokia served as the ceremonial and political heart of the Mississippian culture, whose construction is associated in later settler journals with the discovery of giant human skeletons.",
+    source: "Cahokia Mounds State Historic Site",
+    images: ["https://upload.wikimedia.org/wikipedia/commons/a/ab/MonksMound_aerial.jpg"]
   }
 ];

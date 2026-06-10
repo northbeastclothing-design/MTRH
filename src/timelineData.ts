@@ -2,7 +2,7 @@ export interface TimelineItem {
   id: string;
   name: string;
   type: 'lifespan' | 'event';
-  layer: 'biblical-patriarchs' | 'biblical-events' | 'sumerian-kings' | 'greek-mythology' | 'merovingian-bloodlines' | 'royal-bloodlines' | 'enochian-lore' | 'future-prophecy' | 'secret-gov-programs';
+  layer: 'biblical-patriarchs' | 'biblical-events' | 'sumerian-kings' | 'greek-mythology' | 'merovingian-bloodlines' | 'royal-bloodlines' | 'enochian-lore' | 'future-prophecy' | 'secret-gov-programs' | 'ancient-civilizations';
   start: number; // BCE is negative, CE is positive
   end?: number;  // Only for 'lifespan'
   description: string;
@@ -2494,6 +2494,50 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     end: 1947,
     description: 'A massive 1946–1947 US Navy expedition to Antarctica led by Admiral Richard E. Byrd, which reportedly encountered advanced disc-shaped aircraft.',
     source: 'Declassified Admiral Byrd Logs'
+  },
+  {
+    id: 'timeline-mayan-civilization',
+    name: 'Mayan Civilization',
+    type: 'lifespan',
+    layer: 'ancient-civilizations',
+    start: -2000,
+    end: 1697,
+    description: 'Mesoamerican civilization noted for its logo-syllabic script, art, architecture, mathematics, calendar, and astronomical system.',
+    source: 'Historical Chronology',
+    isPeopleGroup: true
+  },
+  {
+    id: 'timeline-aztec-civilization',
+    name: 'Aztec Civilization',
+    type: 'lifespan',
+    layer: 'ancient-civilizations',
+    start: 1300,
+    end: 1521,
+    description: 'Mesoamerican empire centered in the Valley of Mexico, building Tenochtitlan and leaving massive monuments like the Sun and Moon pyramids.',
+    source: 'Mesoamerican History',
+    isPeopleGroup: true
+  },
+  {
+    id: 'timeline-hopi-tribe',
+    name: 'Hopi Tribe',
+    type: 'lifespan',
+    layer: 'ancient-civilizations',
+    start: 500,
+    end: 2026,
+    description: 'Native American nation in northeastern Arizona, descended from the Ancestral Puebloans, preserving ancient oral histories of subterranean migrations and Kachina guides.',
+    source: 'Indigenous Oral Traditions',
+    isPeopleGroup: true
+  },
+  {
+    id: 'timeline-mound-builders',
+    name: 'The Mound Builders',
+    type: 'lifespan',
+    layer: 'ancient-civilizations',
+    start: -3500,
+    end: 1500,
+    description: 'Various pre-columbian Native American societies (Adena, Hopewell, Mississippian) who built massive earthen mounds for burial, residential, and ceremonial use.',
+    source: 'Smithsonian Archaeological Records',
+    isPeopleGroup: true
   }
 ];
 

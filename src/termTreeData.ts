@@ -22079,6 +22079,54 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Plato\'s Timaeus & Critias', 'Esoteric History Archives']
   },
   {
+    id: 'ancient-civilizations-tribes',
+    parentId: 'megaliths-structures',
+    name: 'Ancient Civilizations & Tribes',
+    description: 'Indigenous people groups, lost civilizations, and ancient empires whose histories intersect with megalithic building, mound construction, and anomalous legends.',
+    layer: 'Archaeological Finds',
+    relatedIds: ['megaliths-structures', 'burial-mounds', 'crop-circles-br']
+  },
+  {
+    id: 'mayan-civilization',
+    parentId: 'ancient-civilizations-tribes',
+    name: 'Mayan Civilization',
+    description: 'A Mesoamerican civilization known for its highly developed writing system, art, architecture, mathematics, calendar, and astronomical system. Their lore features deep connections to Xibalba (the underworld) and legends of ancient giants.',
+    timelineId: 'timeline-mayan-civilization',
+    mapFeatureId: 'archaeology-mayan-copan',
+    relatedIds: ['underworld', 'atlantis-lost', 'crop-circles-br'],
+    sources: ['Popol Vuh', 'Mayan Hieroglyphic Records']
+  },
+  {
+    id: 'aztec-civilization',
+    parentId: 'ancient-civilizations-tribes',
+    name: 'Aztec Civilization',
+    description: 'A Mesoamerican culture that flourished in central Mexico in the post-classic period. Famous for Tenochtitlan, their complex calendar stone, massive temples, and accounts of Quetzalcoatl and the Quinamentin (ancient giants).',
+    timelineId: 'timeline-aztec-civilization',
+    mapFeatureId: 'archaeology-aztec-tenochtitlan',
+    relatedIds: ['megaliths', 'atlantis-lost'],
+    sources: ['Codex Florentino', 'Nahuatl Oral History']
+  },
+  {
+    id: 'hopi-tribe',
+    parentId: 'ancient-civilizations-tribes',
+    name: 'Hopi Tribe',
+    description: 'A Native American nation in northeastern Arizona. Hopi cosmology details migrations through successive worlds and features the \'Ant People\' (who protected them underground during cataclysms) and Kachina spirits.',
+    timelineId: 'timeline-hopi-tribe',
+    mapFeatureId: 'archaeology-hopi-mesa',
+    relatedIds: ['agartha-inner-earth', 'underworld'],
+    sources: ['Hopi Oral Traditions', 'Book of the Hopi (Frank Waters)']
+  },
+  {
+    id: 'mound-builders',
+    parentId: 'ancient-civilizations-tribes',
+    name: 'The Mound Builders',
+    description: 'Prehistoric inhabitants of North America who constructed massive earthen mounds for burial, residential, and ceremonial purposes. Associated with numerous 19th-century reports of giant skeletal remains.',
+    timelineId: 'timeline-mound-builders',
+    mapFeatureId: 'archaeology-moundbuilders-cahokia',
+    relatedIds: ['burial-mounds', 'serpent-mound', 'nephilim-br'],
+    sources: ['Smithsonian Bureau of Ethnology Reports', 'North American Archaeology Archives']
+  },
+  {
     id: 'agartha-inner-earth',
     parentId: 'supernatural-anomalies',
     name: 'Agartha (Inner Earth)',
