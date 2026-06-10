@@ -122,6 +122,16 @@ const ERAS_CONFIG = [
     icon: '/icons/icon-archaeological-finds.svg',
     layer: 'ancient-civilizations',
     desc: 'Ancient Mesoamerican empires, Native American tribes, and lost civilizations of antiquity.'
+  },
+  {
+    id: 'alchemy-occult',
+    name: 'Alchemy & Occult',
+    start: 1300,
+    end: 2026,
+    color: '#E9C46A', // Gold
+    icon: '/icons/icon-alchemy-occult.svg',
+    layer: 'alchemy-occult',
+    desc: 'Esoteric traditions, alchemical pursuits, and occult figures linking science and mysticism from Isaac Newton to Jack Parsons.'
   }
 ];
 
@@ -154,7 +164,8 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
     'enochian-lore': true,
     'future-prophecy': true,
     'secret-gov-programs': true,
-    'ancient-civilizations': true
+    'ancient-civilizations': true,
+    'alchemy-occult': true
   });
 
   // Hover & selection states

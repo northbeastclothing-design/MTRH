@@ -49,6 +49,7 @@ const LAYER_COLORS: Record<string, string> = {
   'Archaeological Finds': '#74F8F3',
   'Biblical Finds': '#D49459',
   'Secret Government Programs': '#FF5C5C',
+  'Alchemy / Occult': '#E9C46A',
   'Default': '#b6a6ff'
 };
 
@@ -78,6 +79,7 @@ const LAYER_ICONS: Record<string, string> = {
   'Archaeological Finds': '/icons/icon-archaeological-finds.svg',
   'Biblical Finds': '/icons/icon-biblical-finds.svg',
   'Secret Government Programs': '/icons/icon-secret-government-programs.svg',
+  'Alchemy / Occult': '/icons/icon-alchemy-occult.svg',
   'Default': '/icons/icon-map-pin.svg'
 };
 
@@ -297,6 +299,7 @@ export default function CodexPage({
     if (curr.id === 'megaliths-structures') return '#FFFBA6'; // Yellow/Gold (Megaliths)
     if (curr.id === 'supernatural-anomalies') return '#C2FFBD'; // Green (U.F.O. Sightings)
     if (curr.id === 'secret-government-programs') return '#FF5C5C'; // Red (Secret Government Programs)
+    if (curr.id === 'alchemy-occult') return '#E9C46A'; // Gold (Alchemy / Occult)
     
     return LAYER_COLORS['Default'];
   }
@@ -325,6 +328,7 @@ export default function CodexPage({
         return '#705b00'; // Very dark gold/yellow
       case '#f6e8c1': // Ancient Texts
       case '#ecce81': // Giants & Nephilim
+      case '#e9c46a': // Alchemy / Occult
         return '#604e1e'; // Dark brown/gold
       case '#c2ffbd': // U.F.O. Sightings
       case '#9ff3bc': // National Parks
@@ -364,6 +368,7 @@ export default function CodexPage({
     if (node.id === 'megaliths-structures') return LAYER_ICONS['Megaliths'];
     if (node.id === 'supernatural-anomalies') return LAYER_ICONS['U.F.O. Sightings'];
     if (node.id === 'secret-government-programs') return LAYER_ICONS['Secret Government Programs'];
+    if (node.id === 'alchemy-occult') return LAYER_ICONS['Alchemy / Occult'];
 
     if (node.layer && LAYER_ICONS[node.layer]) {
       return LAYER_ICONS[node.layer];
@@ -374,6 +379,7 @@ export default function CodexPage({
       if (parentId === 'megaliths-structures') return LAYER_ICONS['Megaliths'];
       if (parentId === 'supernatural-anomalies') return LAYER_ICONS['U.F.O. Sightings'];
       if (parentId === 'secret-government-programs') return LAYER_ICONS['Secret Government Programs'];
+      if (parentId === 'alchemy-occult') return LAYER_ICONS['Alchemy / Occult'];
 
       const parent = TERM_TREE_DATA.find(n => n.id === parentId);
       if (parent && parent.layer && LAYER_ICONS[parent.layer]) {

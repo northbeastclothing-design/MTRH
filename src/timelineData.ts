@@ -2,7 +2,7 @@ export interface TimelineItem {
   id: string;
   name: string;
   type: 'lifespan' | 'event';
-  layer: 'biblical-patriarchs' | 'biblical-events' | 'sumerian-kings' | 'greek-mythology' | 'merovingian-bloodlines' | 'royal-bloodlines' | 'enochian-lore' | 'future-prophecy' | 'secret-gov-programs' | 'ancient-civilizations';
+  layer: 'biblical-patriarchs' | 'biblical-events' | 'sumerian-kings' | 'greek-mythology' | 'merovingian-bloodlines' | 'royal-bloodlines' | 'enochian-lore' | 'future-prophecy' | 'secret-gov-programs' | 'ancient-civilizations' | 'alchemy-occult';
   start: number; // BCE is negative, CE is positive
   end?: number;  // Only for 'lifespan'
   description: string;
@@ -2528,18 +2528,121 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     source: 'Indigenous Oral Traditions',
     isPeopleGroup: true
   },
-  {
-    id: 'timeline-mound-builders',
-    name: 'The Mound Builders',
-    type: 'lifespan',
-    layer: 'ancient-civilizations',
-    start: -3500,
-    end: 1500,
-    description: 'Various pre-columbian Native American societies (Adena, Hopewell, Mississippian) who built massive earthen mounds for burial, residential, and ceremonial use.',
-    source: 'Smithsonian Archaeological Records',
-    isPeopleGroup: true
-  }
-];
+    {
+      id: 'timeline-mound-builders',
+      name: 'The Mound Builders',
+      type: 'lifespan',
+      layer: 'ancient-civilizations',
+      start: -3500,
+      end: 1500,
+      description: 'Various pre-columbian Native American societies (Adena, Hopewell, Mississippian) who built massive earthen mounds for burial, residential, and ceremonial use.',
+      source: 'Smithsonian Archaeological Records',
+      isPeopleGroup: true
+    },
+    {
+      id: 'nicolas-flamel',
+      name: 'Nicolas Flamel',
+      type: 'lifespan',
+      layer: 'alchemy-occult',
+      start: 1330,
+      end: 1418,
+      description: 'French scribe and manuscript seller who gained a posthumous reputation as a legendary alchemist who succeeded in creating the Philosopher\'s Stone.',
+      source: 'Historical Alchemical Records'
+    },
+    {
+      id: 'evt-flamel-stone',
+      name: 'Nicolas Flamel\'s Stone Creation',
+      type: 'event',
+      layer: 'alchemy-occult',
+      start: 1382,
+      description: 'Nicolas Flamel allegedly succeeds in the transmutation of mercury into silver, and later gold, using the Philosopher\'s Stone.',
+      source: 'Esoteric Legend'
+    },
+    {
+      id: 'isaac-newton',
+      name: 'Sir Isaac Newton',
+      type: 'lifespan',
+      layer: 'alchemy-occult',
+      start: 1643,
+      end: 1727,
+      description: 'English physicist, mathematician, and alchemist who spent a vast portion of his life translating and studying alchemical manuscripts (such as the Emerald Tablet) and esoteric biblical prophecy.',
+      source: 'Cambridge Newton Papers'
+    },
+    {
+      id: 'evt-newton-alchemy',
+      name: 'Newton\'s Alchemical Lab Studies',
+      type: 'event',
+      layer: 'alchemy-occult',
+      start: 1669,
+      description: 'Isaac Newton begins extensive private alchemical experiments at Cambridge, running a private lab in Trinity College.',
+      source: 'Cambridge Newton Papers'
+    },
+    {
+      id: 'evt-newton-emerald-tablet',
+      name: 'Newton Translates Emerald Tablet',
+      type: 'event',
+      layer: 'alchemy-occult',
+      start: 1680,
+      description: 'Isaac Newton translates the Emerald Tablet of Hermes Trismegistus, leaving behind a famous English translation detailing "As above, so below."',
+      source: 'Newton Alchemical Manuscripts'
+    },
+    {
+      id: 'evt-golden-dawn-founded',
+      name: 'Hermetic Order of the Golden Dawn',
+      type: 'event',
+      layer: 'alchemy-occult',
+      start: 1888,
+      description: 'The Hermetic Order of the Golden Dawn is founded in London, establishing a secret society dedicated to the study of the occult, Hermeticism, Kabbalah, and ceremonial magic.',
+      source: 'Golden Dawn Historical Records'
+    },
+    {
+      id: 'aleister-crowley',
+      name: 'Aleister Crowley',
+      type: 'lifespan',
+      layer: 'alchemy-occult',
+      start: 1875,
+      end: 1947,
+      description: 'English occultist, ceremonial magician, and novelist who founded the religion of Thelema, famously known as the Great Beast 666.',
+      source: 'Occult Biography Archive'
+    },
+    {
+      id: 'evt-crowley-boleskine',
+      name: 'Crowley Purchases Boleskine House',
+      type: 'event',
+      layer: 'alchemy-occult',
+      start: 1899,
+      description: 'Aleister Crowley purchases Boleskine House to perform the six-month Sacred Magic of Abramelin the Mage ritual to contact his Holy Guardian Angel.',
+      source: 'The Confessions of Aleister Crowley'
+    },
+    {
+      id: 'evt-book-of-the-law',
+      name: 'Reception of Liber AL vel Legis',
+      type: 'event',
+      layer: 'alchemy-occult',
+      start: 1904,
+      description: 'Aleister Crowley receives the "Book of the Law" in Cairo, Egypt, channeled from a discarnate entity named Aiwass, establishing the Law of Thelema: "Do what thou wilt."',
+      source: 'Thelema Holy Books'
+    },
+    {
+      id: 'jack-parsons',
+      name: 'Jack Parsons',
+      type: 'lifespan',
+      layer: 'alchemy-occult',
+      start: 1914,
+      end: 1952,
+      description: 'American rocket propulsion researcher, co-founder of JPL, and O.T.O. occultist who collaborated with L. Ron Hubbard in the Babalon Working sex magic rituals.',
+      source: 'Strange Angel (George Pendle)'
+    },
+    {
+      id: 'evt-babalon-working',
+      name: 'The Babalon Working',
+      type: 'event',
+      layer: 'alchemy-occult',
+      start: 1946,
+      description: 'Jack Parsons and L. Ron Hubbard perform the Babalon Working, a series of sex magic rituals in Pasadena intended to manifest the divine feminine archetype on Earth.',
+      source: 'Agape Lodge Records / Parsons Journal'
+    }
+  ];
 
 export interface TimelineLocation {
   lng: number;
@@ -2636,7 +2739,21 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'operation-gladio': { lng: 12.496, lat: 41.902, locationName: 'Rome, Italy (NATO Command)', category: 'Secret Government Programs' },
   'operation-lac': { lng: -90.199, lat: 38.627, locationName: 'St. Louis, Missouri (Core Test Area)', category: 'Secret Government Programs' },
   'operation-chase': { lng: -76.008, lat: 36.850, locationName: 'Atlantic Ocean (Out of Norfolk, VA)', category: 'Secret Government Programs' },
-  'operation-highjump': { lng: 135.0, lat: -82.8628, locationName: 'Ross Ice Shelf, Antarctica', category: 'Secret Government Programs' }
+  'operation-highjump': { lng: 135.0, lat: -82.8628, locationName: 'Ross Ice Shelf, Antarctica', category: 'Secret Government Programs' },
+
+  // Alchemy / Occult Locations
+  'nicolas-flamel': { lng: 2.353333, lat: 48.863333, locationName: 'House of Nicolas Flamel (Paris, France)', category: 'Alchemy / Occult' },
+  'evt-flamel-stone': { lng: 2.353333, lat: 48.863333, locationName: 'House of Nicolas Flamel (Paris, France)', category: 'Alchemy / Occult' },
+  'isaac-newton': { lng: -0.630278, lat: 52.809167, locationName: 'Woolsthorpe Manor (Lincolnshire, England)', category: 'Alchemy / Occult' },
+  'evt-newton-alchemy': { lng: 0.118, lat: 52.205, locationName: 'Trinity College (Cambridge, England)', category: 'Alchemy / Occult' },
+  'evt-newton-emerald-tablet': { lng: -0.630278, lat: 52.809167, locationName: 'Woolsthorpe Manor (Lincolnshire, England)', category: 'Alchemy / Occult' },
+  'evt-golden-dawn-founded': { lng: -0.1278, lat: 51.5074, locationName: 'London, England', category: 'Alchemy / Occult' },
+  'aleister-crowley': { lng: -4.437222, lat: 57.265278, locationName: 'Boleskine House (Loch Ness, Scotland)', category: 'Alchemy / Occult' },
+  'evt-crowley-boleskine': { lng: -4.437222, lat: 57.265278, locationName: 'Boleskine House (Loch Ness, Scotland)', category: 'Alchemy / Occult' },
+  'evt-book-of-the-law': { lng: 31.2357, lat: 30.0444, locationName: 'Cairo, Egypt', category: 'Alchemy / Occult' },
+  'jack-parsons': { lng: -118.156111, lat: 34.133333, locationName: 'Parsons Residence (Pasadena, California)', category: 'Alchemy / Occult' },
+  'evt-babalon-working': { lng: -118.156111, lat: 34.133333, locationName: 'Parsons Residence (Pasadena, California)', category: 'Alchemy / Occult' },
+  'abbey-of-thelema': { lng: 14.030556, lat: 38.031944, locationName: 'Abbey of Thelema (Cefalù, Sicily)', category: 'Alchemy / Occult' }
 };
 
 export interface Waypoint {
