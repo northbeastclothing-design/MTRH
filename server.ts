@@ -414,7 +414,7 @@ ${modLink}
 
       const htmlBody = `
         <div style="font-family: monospace; padding: 20px; background-color: #000; color: #fff; border: 1px solid #fff;">
-          <h2 style="color: #ffcc00; border-bottom: 2px solid #ffcc00; padding-bottom: 10px; text-transform: uppercase; letter-spacing: 2px;">MTRH // New Intel Submitted</h2>
+          <h2 style="color: #ffcc00; border-bottom: 2px solid #ffcc00; padding-bottom: 10px; font-weight: bold; letter-spacing: 1px;">MTRH // New Intel Submitted</h2>
           <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
             <tr>
               <td style="padding: 6px; font-weight: bold; width: 180px; color: #ffcc00;">Anomaly Name:</td>
@@ -422,7 +422,7 @@ ${modLink}
             </tr>
             <tr>
               <td style="padding: 6px; font-weight: bold; color: #ffcc00;">Destinations:</td>
-              <td style="padding: 6px; border-bottom: 1px solid #222; color: #ffcc00;"><strong>${(submissionData.destinations || []).join(', ').toUpperCase()}</strong></td>
+              <td style="padding: 6px; border-bottom: 1px solid #222; color: #ffcc00;"><strong>${(submissionData.destinations || []).join(', ')}</strong></td>
             </tr>
             <tr>
               <td style="padding: 6px; font-weight: bold; color: #ffcc00;">Map Category:</td>
@@ -447,12 +447,12 @@ ${modLink}
           </table>
 
           <div style="margin-bottom: 20px; border: 1px solid #333; padding: 12px; background: #111;">
-            <h4 style="color: #ffcc00; text-transform: uppercase; margin: 0 0 10px 0; border-bottom: 1px solid #333; padding-bottom: 4px;">Codex Placement</h4>
+            <h4 style="color: #ffcc00; font-weight: bold; margin: 0 0 10px 0; border-bottom: 1px solid #333; padding-bottom: 4px;">Codex Placement</h4>
             <div>Parent Term ID: <code>${submissionData.codexParentId || "None (Root)"}</code></div>
           </div>
 
           <div style="margin-bottom: 20px; border: 1px solid #333; padding: 12px; background: #111;">
-            <h4 style="color: #ffcc00; text-transform: uppercase; margin: 0 0 10px 0; border-bottom: 1px solid #333; padding-bottom: 4px;">Timeline Placement</h4>
+            <h4 style="color: #ffcc00; font-weight: bold; margin: 0 0 10px 0; border-bottom: 1px solid #333; padding-bottom: 4px;">Timeline Placement</h4>
             <table style="width: 100%; font-size: 11px;">
               <tr><td style="width: 150px; color: #aaa;">Layer/Era:</td><td>${submissionData.timelineLayer || "None"}</td></tr>
               <tr><td style="color: #aaa;">Type:</td><td>${submissionData.timelineType}</td></tr>
@@ -464,18 +464,18 @@ ${modLink}
           </div>
 
           <div style="margin-bottom: 20px;">
-            <h4 style="color: #ffcc00; text-transform: uppercase; margin-bottom: 8px;">Description</h4>
+            <h4 style="color: #ffcc00; font-weight: bold; margin-bottom: 8px;">Description</h4>
             <p style="white-space: pre-wrap; background: #111; padding: 12px; border: 1px solid #333; line-height: 1.6;">${submissionData.description}</p>
           </div>
           ${submissionData.images && submissionData.images.length > 0 ? `
           <div style="margin-bottom: 20px;">
-            <h4 style="color: #ffcc00; text-transform: uppercase; margin-bottom: 8px;">Staged Attachments</h4>
+            <h4 style="color: #ffcc00; font-weight: bold; margin-bottom: 8px;">Staged Attachments</h4>
             <ul style="list-style-type: none; padding: 0;">
               ${submissionData.images.map((img: string) => `<li><a href="${img.startsWith('/') ? appUrl + img : img}" style="color: #3b82f6; text-decoration: none;" target="_blank">${img}</a></li>`).join('')}
             </ul>
           </div>` : ''}
           <div style="margin-top: 30px; text-align: center;">
-            <a href="${modLink}" style="display: inline-block; background: #ffcc00; color: #000; font-weight: bold; text-decoration: none; padding: 10px 24px; border: 2px solid #ffcc00; text-transform: uppercase; letter-spacing: 1px;">Open Decisional Moderation Desk</a>
+            <a href="${modLink}" style="display: inline-block; background: #ffcc00; color: #000; font-weight: bold; text-decoration: none; padding: 10px 24px; border: 2px solid #ffcc00; letter-spacing: 0.5px;">OPEN DECISIONAL MODERATION DESK</a>
           </div>
         </div>
       `;
@@ -567,7 +567,7 @@ ${modLink}
 
       const htmlBody = `
         <div style="font-family: monospace; padding: 20px; background-color: #000; color: #fff; border: 1px solid #fff;">
-          <h2 style="color: #ef4444; border-bottom: 2px solid #ef4444; padding-bottom: 10px; text-transform: uppercase; letter-spacing: 2px;">MTRH // Point Flagged for Inaccuracy</h2>
+          <h2 style="color: #ef4444; border-bottom: 2px solid #ef4444; padding-bottom: 10px; font-weight: bold; letter-spacing: 1px;">MTRH // Point Flagged for Inaccuracy</h2>
           <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
             <tr>
               <td style="padding: 6px; font-weight: bold; width: 180px; color: #ef4444;">Point Name:</td>
@@ -587,11 +587,11 @@ ${modLink}
             </tr>
           </table>
           <div style="margin-bottom: 20px;">
-            <h4 style="color: #ef4444; text-transform: uppercase; margin-bottom: 8px;">Reporter Details</h4>
+            <h4 style="color: #ef4444; font-weight: bold; margin-bottom: 8px;">Reporter Details</h4>
             <p style="white-space: pre-wrap; background: #111; padding: 12px; border: 1px solid #333; line-height: 1.6;">${reportData.details || "No details provided"}</p>
           </div>
           <div style="margin-top: 30px; text-align: center;">
-            <a href="${modLink}" style="display: inline-block; background: #ef4444; color: #fff; font-weight: bold; text-decoration: none; padding: 10px 24px; border: 2px solid #ef4444; text-transform: uppercase; letter-spacing: 1px;">Open Decisional Moderation Desk</a>
+            <a href="${modLink}" style="display: inline-block; background: #ef4444; color: #fff; font-weight: bold; text-decoration: none; padding: 10px 24px; border: 2px solid #ef4444; letter-spacing: 0.5px;">OPEN DECISIONAL MODERATION DESK</a>
           </div>
         </div>
       `;

@@ -223,7 +223,16 @@ export default function TimelinePage({
   }, [erasOrder]);
 
   // Collapsed eras state
-  const [collapsedEras, setCollapsedEras] = useState<Record<string, boolean>>({});
+  const [collapsedEras, setCollapsedEras] = useState<Record<string, boolean>>(() => {
+    const initial: Record<string, boolean> = { 'biblical-patriarchs': true };
+    if (selectedItem) {
+      const selectedEra = ERAS_CONFIG.find(e => e.layer === selectedItem.layer);
+      if (selectedEra) {
+        initial[selectedEra.id] = false;
+      }
+    }
+    return initial;
+  });
 
   // Active dragging era
   const [draggingEraId, setDraggingEraId] = useState<string | null>(null);

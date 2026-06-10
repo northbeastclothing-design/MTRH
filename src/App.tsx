@@ -1431,7 +1431,7 @@ function App() {
     return (
       <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', width: '100%', textAlign: 'left' }}>
         <div>
-          <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>NAME *</label>
+          <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>NAME *</label>
           <input 
             type="text" 
             value={editName} 
@@ -1450,7 +1450,7 @@ function App() {
 
         {/* DESTINATION REGISTRIES */}
         <div>
-          <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>DESTINATION REGISTRIES * (SELECT AT LEAST ONE)</label>
+          <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>DESTINATION REGISTRIES * (SELECT AT LEAST ONE)</label>
           <div style={{ display: 'flex', gap: '20px', marginTop: '4px', marginBottom: '4px' }}>
             <label style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '11px', cursor: 'pointer', color: theme.text }}>
               <input
@@ -1503,7 +1503,7 @@ function App() {
         {editDestinations.includes('map') && (
           <div style={{ display: 'flex', gap: '10px', borderLeft: `2px solid ${theme.borderLight}`, paddingLeft: '10px' }}>
             <div style={{ flex: 1 }}>
-              <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>LAYER CATEGORY *</label>
+              <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>LAYER CATEGORY *</label>
               <select 
                 value={editCategory} 
                 onChange={(e) => setEditCategory(e.target.value)} 
@@ -1527,7 +1527,7 @@ function App() {
             </div>
 
             <div style={{ width: '120px' }}>
-              <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>YEAR / DATE</label>
+              <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>YEAR / DATE</label>
               <input 
                 type="text" 
                 value={editDate} 
@@ -1548,10 +1548,10 @@ function App() {
           </div>
         )}
 
-        {editDestinations.includes('codex') && (
+         {editDestinations.includes('codex') && (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', borderLeft: `2px solid ${theme.borderLight}`, paddingLeft: '10px' }}>
             <div>
-              <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>PARENT CODEX TERM</label>
+              <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>PARENT CODEX TERM</label>
               <select
                 value={editCodexParentId}
                 onChange={(e) => setEditCodexParentId(e.target.value)}
@@ -1584,7 +1584,7 @@ function App() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', borderLeft: `2px solid ${theme.borderLight}`, paddingLeft: '10px' }}>
             <div style={{ display: 'flex', gap: '10px' }}>
               <div style={{ flex: 1 }}>
-                <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>TIMELINE LAYER / ERA *</label>
+                <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>TIMELINE LAYER / ERA *</label>
                 <select
                   value={editTimelineLayer}
                   onChange={(e) => setEditTimelineLayer(e.target.value)}
@@ -1614,7 +1614,7 @@ function App() {
               </div>
 
               <div style={{ width: '120px' }}>
-                <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>ENTRY TYPE</label>
+                <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>ENTRY TYPE</label>
                 <select
                   value={editTimelineType}
                   onChange={(e) => setEditTimelineType(e.target.value as 'event' | 'lifespan')}
@@ -1637,7 +1637,7 @@ function App() {
 
             <div style={{ display: 'flex', gap: '10px' }}>
               <div style={{ flex: 1 }}>
-                <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>
+                <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>
                   {editTimelineType === 'lifespan' ? 'YEAR OF BIRTH (START) *' : 'YEAR OF OCCURRENCE *'}
                 </label>
                 <input
@@ -1661,7 +1661,7 @@ function App() {
 
               {editTimelineType === 'lifespan' && (
                 <div style={{ flex: 1 }}>
-                  <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>YEAR OF DEATH (END)</label>
+                  <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>YEAR OF DEATH (END)</label>
                   <input
                     type="text"
                     placeholder="e.g. -1800 or 1410 (optional)"
@@ -1686,11 +1686,11 @@ function App() {
             {/* Lineage relationships for Lifespans in Edit Form */}
             {editTimelineType === 'lifespan' && (
               <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', background: isMapDarkMode ? 'rgba(255,255,255,0.01)' : 'rgba(0,0,0,0.01)', padding: '8px', border: `1px solid ${theme.borderLight}` }}>
-                <div style={{ fontSize: '8px', fontWeight: 'bold', color: theme.textDim, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Family Tree Lineage (Optional)</div>
+                <div style={{ fontSize: '10px', fontWeight: 'bold', color: theme.textDim, letterSpacing: '0.5px' }}>FAMILY TREE LINEAGE (OPTIONAL)</div>
                 
                 <div style={{ display: 'flex', gap: '6px' }}>
                   <div style={{ flex: 1 }}>
-                    <label style={{ fontSize: '7.5px', display: 'block', marginBottom: '2px', color: theme.text }}>FATHER</label>
+                    <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '2px', color: theme.text }}>FATHER</label>
                     <select
                       value={editTimelineFatherId}
                       onChange={(e) => setEditTimelineFatherId(e.target.value)}
@@ -1716,7 +1716,7 @@ function App() {
                   </div>
 
                   <div style={{ flex: 1 }}>
-                    <label style={{ fontSize: '7.5px', display: 'block', marginBottom: '2px', color: theme.text }}>MOTHER</label>
+                    <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '2px', color: theme.text }}>MOTHER</label>
                     <select
                       value={editTimelineMotherId}
                       onChange={(e) => setEditTimelineMotherId(e.target.value)}
@@ -1742,7 +1742,7 @@ function App() {
                   </div>
 
                   <div style={{ flex: 1 }}>
-                    <label style={{ fontSize: '7.5px', display: 'block', marginBottom: '2px', color: theme.text }}>SPOUSE</label>
+                    <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '2px', color: theme.text }}>SPOUSE</label>
                     <select
                       value={editTimelineSpouseId}
                       onChange={(e) => setEditTimelineSpouseId(e.target.value)}
@@ -1773,7 +1773,7 @@ function App() {
         )}
 
         <div>
-          <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>INTELLIGENCE / DESCRIPTION *</label>
+          <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>INTELLIGENCE / DESCRIPTION *</label>
           <textarea 
             rows={4}
             value={editDescription} 
@@ -1792,7 +1792,7 @@ function App() {
         </div>
 
         <div>
-          <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>SOURCE DOCUMENTATION</label>
+          <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>SOURCE DOCUMENTATION</label>
           <input 
             type="text" 
             value={editSource} 
@@ -1812,7 +1812,7 @@ function App() {
         {/* Media list manager matching user's request to edit imagery/videos */}
         <div style={{ background: isMapDarkMode ? 'rgba(255,255,255,0.02)' : 'rgba(0,0,0,0.02)', border: `1px solid ${theme.border}`, padding: '12px', borderRadius: '2px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <label style={{ fontSize: '9px', fontWeight: 'bold', letterSpacing: '0.5px', color: theme.text }}>EDIT IMAGES / VIDEOS ATTACHMENTS</label>
+            <label style={{ fontSize: '10.5px', fontWeight: 'bold', color: theme.text }}>EDIT IMAGES / VIDEOS ATTACHMENTS</label>
             <div style={{ display: 'flex', gap: '8px' }}>
               <button
                 type="button"
@@ -1959,8 +1959,8 @@ function App() {
                 }}
               />
               <Upload size={16} style={{ marginBottom: '4px' }} />
-              <span style={{ fontSize: '9px', textTransform: 'uppercase' }}>
-                {isEditUploading ? "Uploading file..." : "Click to add file"}
+              <span style={{ fontSize: '9px' }}>
+                {isEditUploading ? "UPLOADING FILE..." : "CLICK TO ADD FILE"}
               </span>
             </div>
           )}
@@ -1968,7 +1968,7 @@ function App() {
           {/* Edit Attachments lists */}
           {editMediaList.length > 0 && (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', borderTop: `1px solid ${theme.borderLight}`, paddingTop: '8px', marginTop: '4px' }}>
-              <span style={{ fontSize: '8px', fontWeight: 'bold', letterSpacing: '0.5px', color: theme.textDim }}>CURRENT ATTACHMENTS ({editMediaList.length})</span>
+              <span style={{ fontSize: '9.5px', fontWeight: 'bold', color: theme.textDim }}>CURRENT ATTACHMENTS ({editMediaList.length})</span>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px' }}>
                 {editMediaList.map((url, idx) => {
                   const isFile = url.startsWith('/uploads/');
@@ -1996,7 +1996,7 @@ function App() {
           <>
             {/* Geographic location search matching requirement */}
             <div style={{ background: isMapDarkMode ? 'rgba(255,255,255,0.02)' : 'rgba(0,0,0,0.02)', border: `1px dashed ${theme.borderLight}`, padding: '10px', borderRadius: '2px' }}>
-              <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '6px', letterSpacing: '0.5px', color: theme.text }}>GEOGRAPHIC GEO-SEARCH (AUTO-FILL COORDINATES)</label>
+              <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: theme.text }}>Geographic Geo-Search (Auto-fill Coordinates)</label>
               <div style={{ display: 'flex', gap: '8px' }}>
                 <input
                   type="text"
@@ -2040,7 +2040,7 @@ function App() {
                     boxSizing: 'border-box'
                   }}
                 >
-                  {isEditGeocoding ? 'RESOLVE...' : 'RESOLVE'}
+                  {isEditGeocoding ? 'Resolving...' : 'Resolve'}
                 </button>
               </div>
               
@@ -2061,7 +2061,7 @@ function App() {
                   textAlign: 'left'
                 }}>
                   <div style={{ padding: '4px 8px', fontSize: '8px', fontWeight: 'bold', color: theme.textDim, borderBottom: `1px solid ${theme.borderLight}`, letterSpacing: '0.5px' }}>
-                    SUGGESTED MATCHES (CLICK TO PINPOINT):
+                    Suggested Matches (Click to pinpoint):
                   </div>
                   {editGeocodeResults.map((feat) => {
                     const [lng, lat] = feat.center;
@@ -2099,7 +2099,7 @@ function App() {
 
             <div style={{ border: `1px dashed ${theme.borderLight}`, padding: '10px', borderRadius: '2px', background: isMapDarkMode ? '#1a1a1a' : '#fcfcfc', marginTop: '4px' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
-                <span style={{ fontSize: '9px', fontWeight: 'bold', letterSpacing: '0.5px', color: '#ffcc00' }}>MAP COORDINATE CALIBRATION</span>
+                <span style={{ fontSize: '10.5px', fontWeight: 'bold', color: '#ffcc00' }}>Map Coordinate Calibration</span>
                 <button 
                   type="button"
                   onClick={handleUseMapCenterForEdit}
@@ -2115,13 +2115,13 @@ function App() {
                     fontFamily: '"Space Mono", monospace'
                   }}
                 >
-                  USE MAP CENTER COORDS
+                  Use Map Center Coords
                 </button>
               </div>
               
               <div style={{ display: 'flex', gap: '10px' }}>
                 <div style={{ flex: 1 }}>
-                  <span style={{ fontSize: '8px', color: theme.textDim, display: 'block', marginBottom: '2px' }}>LONGITUDE *</span>
+                  <span style={{ fontSize: '9.5px', fontWeight: 'bold', color: theme.textDim, display: 'block', marginBottom: '2px' }}>Longitude *</span>
                   <input 
                     type="text" 
                     value={editLongitude} 
@@ -2138,7 +2138,7 @@ function App() {
                   />
                 </div>
                 <div style={{ flex: 1 }}>
-                  <span style={{ fontSize: '8px', color: theme.textDim, display: 'block', marginBottom: '2px' }}>LATITUDE *</span>
+                  <span style={{ fontSize: '9.5px', fontWeight: 'bold', color: theme.textDim, display: 'block', marginBottom: '2px' }}>Latitude *</span>
                   <input 
                     type="text" 
                     value={editLatitude} 
@@ -2181,7 +2181,7 @@ function App() {
               cursor: 'pointer'
             }}
           >
-            CANCEL
+            Cancel
           </button>
           <button
             type="button"
@@ -2200,7 +2200,7 @@ function App() {
               cursor: 'pointer'
             }}
           >
-            {isSavingEdit ? 'SAVING...' : 'SAVE CHANGES'}
+            {isSavingEdit ? 'Saving...' : 'Save Changes'}
           </button>
         </div>
       </div>
@@ -8114,7 +8114,7 @@ function App() {
                   style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}
                 >
                   <div>
-                    <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '6px', letterSpacing: '0.5px' }}>NAME OF ANOMALY / SIGNATURE *</label>
+                    <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: theme.text }}>Name of Anomaly / Signature *</label>
                     <input 
                       type="text" 
                       required
@@ -8133,7 +8133,7 @@ function App() {
                     />
                                  {/* DESTINATION REGISTRIES */}
                   <div>
-                    <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '4px', letterSpacing: '0.5px' }}>DESTINATION REGISTRIES * (SELECT AT LEAST ONE)</label>
+                    <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>Destination Registries * (Select at least one)</label>
                     <div style={{ display: 'flex', gap: '20px', marginTop: '6px', marginBottom: '6px' }}>
                       <label style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '11px', cursor: 'pointer', color: theme.text }}>
                         <input
@@ -8185,10 +8185,10 @@ function App() {
 
                   {subDestinations.includes('map') && (
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', borderLeft: `2px solid ${theme.borderLight}`, paddingLeft: '12px', marginTop: '4px' }}>
-                      <div style={{ fontSize: '10px', fontWeight: 'bold', color: theme.textDim, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Map Configuration</div>
+                      <div style={{ fontSize: '12px', fontWeight: 'bold', color: theme.textDim, letterSpacing: '0.5px' }}>Map Configuration</div>
                       <div style={{ display: 'flex', gap: '16px', zIndex: 10002 }}>
                         <div style={{ flex: 1, position: 'relative' }}>
-                          <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '6px', letterSpacing: '0.5px' }}>REGISTRY LAYER / CODEX CATEGORY *</label>
+                          <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: theme.text }}>Registry Layer / Codex Category *</label>
                           <div style={{ position: 'relative' }}>
                             <button
                               type="button"
@@ -8265,7 +8265,7 @@ function App() {
                         </div>
 
                         <div style={{ width: '180px' }}>
-                          <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '6px', letterSpacing: '0.5px' }}>YEAR OF OCCURRENCE</label>
+                          <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: theme.text }}>Year of Occurrence</label>
                           <input 
                             type="text" 
                             placeholder="e.g. 1948" 
@@ -8286,7 +8286,7 @@ function App() {
 
                       {/* Geolocation auto-pinpoint input block matching requirement 3 */}
                       <div style={{ background: isMapDarkMode ? 'rgba(255,255,255,0.02)' : 'rgba(0,0,0,0.02)', border: `1px dashed ${theme.borderLight}`, padding: '14px', borderRadius: '2px' }}>
-                        <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '6px', letterSpacing: '0.5px', color: theme.text }}>GEOGRAPHIC GEO-SEARCH (AUTO-FILL COORDINATES)</label>
+                        <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: theme.text }}>Geographic Geo-Search (Auto-fill Coordinates)</label>
                         <div style={{ display: 'flex', gap: '8px' }}>
                           <input
                             type="text"
@@ -8330,7 +8330,7 @@ function App() {
                               boxSizing: 'border-box'
                             }}
                           >
-                            {isSubGeocoding ? 'FINDING...' : 'RESOLVE'}
+                            {isSubGeocoding ? 'Finding...' : 'Resolve'}
                           </button>
                         </div>
                         
@@ -8351,7 +8351,7 @@ function App() {
                             textAlign: 'left'
                           }}>
                             <div style={{ padding: '4px 8px', fontSize: '8px', fontWeight: 'bold', color: theme.textDim, borderBottom: `1px solid ${theme.borderLight}`, letterSpacing: '0.5px' }}>
-                              SUGGESTED MATCHES (CLICK TO PINPOINT):
+                              Suggested Matches (Click to pinpoint):
                             </div>
                             {subGeocodeResults.map((feat) => {
                               const [lng, lat] = feat.center;
@@ -8390,11 +8390,11 @@ function App() {
 
                       {/* Lat/Lng Pin coordinates */}
                       <div>
-                        <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '6px', letterSpacing: '0.5px' }}>COORDINATES REGISTRATION (OPTIONAL)</label>
+                        <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: theme.text }}>Coordinates Registration (Optional)</label>
                         <div style={{ display: 'flex', gap: '12px' }}>
                           <input 
                             type="text" 
-                            placeholder="LATITUDE (e.g. 41.4091)" 
+                            placeholder="Latitude (e.g. 41.4091)" 
                             value={subLatitude} 
                             onChange={(e) => setSubLatitude(e.target.value)}
                             style={{
@@ -8409,7 +8409,7 @@ function App() {
                           />
                           <input 
                             type="text" 
-                            placeholder="LONGITUDE (e.g. -122.1952)" 
+                            placeholder="Longitude (e.g. -122.1952)" 
                             value={subLongitude} 
                             onChange={(e) => setSubLongitude(e.target.value)}
                             style={{
@@ -8447,7 +8447,7 @@ function App() {
                             }}
                           >
                             <MapPin size={10} strokeWidth={2.5} />
-                            <span>PIN MAP</span>
+                            <span>Pin Map</span>
                           </button>
                         </div>
                       </div>
@@ -8456,9 +8456,9 @@ function App() {
 
                   {subDestinations.includes('codex') && (
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', borderLeft: `2px solid ${theme.borderLight}`, paddingLeft: '12px', marginTop: '4px' }}>
-                      <div style={{ fontSize: '10px', fontWeight: 'bold', color: theme.textDim, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Codex Configuration</div>
+                      <div style={{ fontSize: '12px', fontWeight: 'bold', color: theme.textDim, letterSpacing: '0.5px' }}>Codex Configuration</div>
                       <div>
-                        <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '6px', letterSpacing: '0.5px' }}>PARENT CODEX TERM</label>
+                        <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: theme.text }}>Parent Codex Term</label>
                         <select
                           value={subCodexParentId}
                           onChange={(e) => setSubCodexParentId(e.target.value)}
@@ -8488,11 +8488,11 @@ function App() {
 
                   {subDestinations.includes('timeline') && (
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', borderLeft: `2px solid ${theme.borderLight}`, paddingLeft: '12px', marginTop: '4px' }}>
-                      <div style={{ fontSize: '10px', fontWeight: 'bold', color: theme.textDim, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Timeline Configuration</div>
+                      <div style={{ fontSize: '12px', fontWeight: 'bold', color: theme.textDim, letterSpacing: '0.5px' }}>Timeline Configuration</div>
                       
                       <div style={{ display: 'flex', gap: '12px' }}>
                         <div style={{ flex: 1 }}>
-                          <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '6px', letterSpacing: '0.5px' }}>TIMELINE LAYER / ERA *</label>
+                          <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: theme.text }}>Timeline Layer / Era *</label>
                           <select
                             value={subTimelineLayer}
                             onChange={(e) => setSubTimelineLayer(e.target.value)}
@@ -8521,7 +8521,7 @@ function App() {
                         </div>
 
                         <div style={{ width: '120px' }}>
-                          <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '6px', letterSpacing: '0.5px' }}>ENTRY TYPE</label>
+                          <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: theme.text }}>Entry Type</label>
                           <select
                             value={subTimelineType}
                             onChange={(e) => setSubTimelineType(e.target.value as 'event' | 'lifespan')}
@@ -8543,8 +8543,8 @@ function App() {
 
                       <div style={{ display: 'flex', gap: '12px' }}>
                         <div style={{ flex: 1 }}>
-                          <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '6px', letterSpacing: '0.5px' }}>
-                            {subTimelineType === 'lifespan' ? 'YEAR OF BIRTH (START) *' : 'YEAR OF OCCURRENCE *'}
+                          <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: theme.text }}>
+                            {subTimelineType === 'lifespan' ? 'Year of Birth (Start) *' : 'Year of Occurrence *'}
                           </label>
                           <input
                             type="text"
@@ -8565,7 +8565,7 @@ function App() {
 
                         {subTimelineType === 'lifespan' && (
                           <div style={{ flex: 1 }}>
-                            <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '6px', letterSpacing: '0.5px' }}>YEAR OF DEATH (END)</label>
+                            <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: theme.text }}>Year of Death (End)</label>
                             <input
                               type="text"
                               placeholder="e.g. -1800 or 1410 (optional)"
@@ -8588,11 +8588,11 @@ function App() {
                       {/* Lineage relationships for Lifespans */}
                       {subTimelineType === 'lifespan' && (
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', background: isMapDarkMode ? 'rgba(255,255,255,0.01)' : 'rgba(0,0,0,0.01)', padding: '10px', border: `1px solid ${theme.borderLight}` }}>
-                          <div style={{ fontSize: '8px', fontWeight: 'bold', color: theme.textDim, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Family Tree Lineage (Optional)</div>
+                          <div style={{ fontSize: '10px', fontWeight: 'bold', color: theme.textDim, letterSpacing: '0.5px' }}>Family Tree Lineage (Optional)</div>
                           
                           <div style={{ display: 'flex', gap: '8px' }}>
                             <div style={{ flex: 1 }}>
-                              <label style={{ fontSize: '8px', display: 'block', marginBottom: '4px' }}>FATHER</label>
+                              <label style={{ fontSize: '9.5px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>Father</label>
                               <select
                                 value={subTimelineFatherId}
                                 onChange={(e) => setSubTimelineFatherId(e.target.value)}
@@ -8618,7 +8618,7 @@ function App() {
                             </div>
 
                             <div style={{ flex: 1 }}>
-                              <label style={{ fontSize: '8px', display: 'block', marginBottom: '4px' }}>MOTHER</label>
+                              <label style={{ fontSize: '9.5px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>Mother</label>
                               <select
                                 value={subTimelineMotherId}
                                 onChange={(e) => setSubTimelineMotherId(e.target.value)}
@@ -8644,7 +8644,7 @@ function App() {
                             </div>
 
                             <div style={{ flex: 1 }}>
-                              <label style={{ fontSize: '8px', display: 'block', marginBottom: '4px' }}>SPOUSE</label>
+                              <label style={{ fontSize: '9.5px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>Spouse</label>
                               <select
                                 value={subTimelineSpouseId}
                                 onChange={(e) => setSubTimelineSpouseId(e.target.value)}
@@ -8676,7 +8676,7 @@ function App() {
     </div>
 
                   <div>
-                    <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '6px', letterSpacing: '0.5px' }}>NARRATIVE RECORD & DATA LOG *</label>
+                    <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: theme.text }}>Narrative Record & Data Log *</label>
                     <textarea 
                       required
                       rows={4}
@@ -8698,7 +8698,7 @@ function App() {
 
                   <div style={{ display: 'flex', gap: '16px' }}>
                     <div style={{ flex: 1 }}>
-                      <label style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '6px', letterSpacing: '0.5px' }}>INVESTIGATIVE SOURCE Attribution</label>
+                      <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: theme.text }}>Investigative Source Attribution</label>
                       <input 
                         type="text" 
                         placeholder="e.g. US Air Force Project Blue Book Archives" 
@@ -8720,7 +8720,7 @@ function App() {
                   {/* Media Selector upload/link */}
                   <div style={{ borderTop: `1px solid ${theme.border}`, paddingTop: '16px', marginTop: '4px' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
-                      <label style={{ fontSize: '9px', fontWeight: 'bold', letterSpacing: '0.5px' }}>MEDIA / INTEL FILES ATTACHMENT</label>
+                      <label style={{ fontSize: '10.5px', fontWeight: 'bold', color: theme.text }}>Media / Intel Files Attachment</label>
                       <div style={{ display: 'flex', gap: '8px' }}>
                         <button
                           type="button"
@@ -8736,7 +8736,7 @@ function App() {
                             fontFamily: '"Space Mono", monospace'
                           }}
                         >
-                          LINK URL
+                          Link URL
                         </button>
                         <span style={{ fontSize: '9px', color: theme.textDim }}>|</span>
                         <button
@@ -8753,7 +8753,7 @@ function App() {
                             fontFamily: '"Space Mono", monospace'
                           }}
                         >
-                          FILE UPLOAD
+                          File Upload
                         </button>
                       </div>
                     </div>
@@ -8800,7 +8800,7 @@ function App() {
                             boxSizing: 'border-box'
                           }}
                         >
-                          LINK
+                          Link
                         </button>
                       </div>
                     ) : (
@@ -8866,17 +8866,17 @@ function App() {
                           }}
                         />
                         <Upload size={20} style={{ marginBottom: '8px' }} />
-                        <span style={{ fontSize: '9px', textTransform: 'uppercase' }}>
+                        <span style={{ fontSize: '9px' }}>
                           {isUploading ? "Uploading file..." : "Click or drag files here to stage"}
                         </span>
-                        <span style={{ fontSize: '7px', color: theme.textDim, marginTop: '4px' }}>PNG, JPG, MP4, MP3, PDF COMPATIBLE</span>
+                        <span style={{ fontSize: '8px', color: theme.textDim, marginTop: '4px' }}>PNG, JPG, MP4, MP3, PDF compatible</span>
                       </div>
                     )}
 
                     {/* Staged attachments */}
                     {subMediaList.length > 0 && (
                       <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginTop: '12px', background: isMapDarkMode ? '#141414' : '#fafafa', border: `1px solid ${theme.borderLight}`, padding: '8px' }}>
-                        <span style={{ fontSize: '9px', fontWeight: 'bold', letterSpacing: '0.5px' }}>STAGED INTEL ATTACHMENTS ({subMediaList.length})</span>
+                        <span style={{ fontSize: '9.5px', fontWeight: 'bold' }}>Staged Intel Attachments ({subMediaList.length})</span>
                         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
                           {subMediaList.map((url, idx) => {
                             const isFile = url.startsWith('/uploads/');
@@ -8928,7 +8928,7 @@ function App() {
                         boxSizing: 'border-box'
                       }}
                     >
-                      ABORT
+                      Cancel
                     </button>
                     <button 
                       type="submit" 
@@ -8951,7 +8951,7 @@ function App() {
                         boxSizing: 'border-box'
                       }}
                     >
-                      {isSubmitting ? "TRANSMITTING..." : "SUBMIT INTEL"}
+                      {isSubmitting ? "Transmitting..." : "Submit Intel"}
                     </button>
                   </div>
                 </form>
@@ -9216,7 +9216,7 @@ function App() {
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: `2.5px solid ${theme.border}`, paddingBottom: '12px', marginBottom: '20px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                   <Shield size={14} color={isMapDarkMode ? '#ffcc00' : '#000000'} />
-                  <span style={{ fontWeight: 700, fontSize: '11px', letterSpacing: '1px', textTransform: 'uppercase' }}>MTRH// DECISIONAL MODERATION DESK</span>
+                  <span style={{ fontWeight: 700, fontSize: '11px', letterSpacing: '1px' }}>MTRH // Decisional Moderation Desk</span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
                   {isModeratorAuthenticated && (
@@ -9235,7 +9235,7 @@ function App() {
                         fontFamily: '"Space Mono", monospace' 
                       }}
                     >
-                      MINIMIZE DESK
+                      Minimize Desk
                     </button>
                   )}
                   <button onClick={() => setIsModeratorOpen(false)} style={{ background: 'transparent', border: 'none', color: theme.text, cursor: 'pointer', padding: 0, display: 'flex', alignItems: 'center' }}>
@@ -9248,7 +9248,7 @@ function App() {
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', alignItems: 'center', justifyContent: 'center', padding: '36px 0' }}>
                   <ShieldAlert size={48} strokeWidth={1.5} color={isMapDarkMode ? '#ffcc00' : '#000000'} />
                   <div style={{ textAlign: 'center' }}>
-                    <h4 style={{ fontSize: '11px', fontWeight: 'bold', marginBottom: '6px', letterSpacing: '1px' }}>ADMIN SECURITY GATE SECUREMTRH_1</h4>
+                    <h4 style={{ fontSize: '11px', fontWeight: 'bold', marginBottom: '6px', letterSpacing: '1px' }}>Admin Security Gate SECUREMTRH_1</h4>
                     <p style={{ fontSize: '10px', color: isMapDarkMode ? theme.textDim : '#000000', fontWeight: isMapDarkMode ? 'normal' : '500', margin: 0, width: '360px', lineHeight: '18px' }}>Authenticating under the owner account jhuffman710@gmail.com grants full write authority over map submissions.</p>
                   </div>
 
@@ -9280,19 +9280,19 @@ function App() {
                       boxSizing: 'border-box'
                     }}
                   >
-                    SIGN IN WITH GOOGLE
+                    Sign in with Google
                   </button>
 
                   <div style={{ width: '100%', display: 'flex', alignItems: 'center', gap: '12px', margin: '8px 0', maxWidth: '300px' }}>
                     <div style={{ flex: 1, height: '1px', background: theme.borderLight }} />
-                    <span style={{ fontSize: '8px', color: isMapDarkMode ? theme.textDim : '#000000', fontWeight: 'bold' }}>OR SECRETS BYPASS</span>
+                    <span style={{ fontSize: '9px', color: isMapDarkMode ? theme.textDim : '#000000', fontWeight: 'bold' }}>Or Secret Bypass</span>
                     <div style={{ flex: 1, height: '1px', background: theme.borderLight }} />
                   </div>
 
                   <div style={{ display: 'flex', gap: '8px', width: '100%', maxWidth: '300px' }}>
                     <input
                       type="password"
-                      placeholder="ENTER SECRET CODENAME..."
+                      placeholder="Enter secret codename..."
                       value={moderatorPasscode}
                       onChange={(e) => setModeratorPasscode(e.target.value)}
                       onKeyDown={(e) => {
@@ -9346,7 +9346,7 @@ function App() {
                         boxSizing: 'border-box'
                       }}
                     >
-                      BYPASS
+                      Bypass
                     </button>
                   </div>
 
@@ -9405,7 +9405,7 @@ function App() {
                         fontFamily: '"Space Mono", monospace'
                       }}
                     >
-                      TERM SESSION
+                      Terminate Session
                     </button>
                   </div>
 
@@ -9431,7 +9431,7 @@ function App() {
                         letterSpacing: '0.5px'
                       }}
                     >
-                      PENDING REVIEW ({pendingSubmissions.length})
+                      Pending Review ({pendingSubmissions.length})
                     </button>
                     <button
                       onClick={() => setActiveModTab('approved')}
@@ -9448,7 +9448,7 @@ function App() {
                         letterSpacing: '0.5px'
                       }}
                     >
-                      APPROVED INTEL AUDIT ({approvedSubmissions.length})
+                      Approved Intel Audit ({approvedSubmissions.length})
                     </button>
                     <button
                       onClick={() => setActiveModTab('reports')}
@@ -9465,19 +9465,19 @@ function App() {
                         letterSpacing: '0.5px'
                       }}
                     >
-                      INACCURACY REPORTS ({reports.filter(r => r.status === 'pending').length})
+                      Inaccuracy Reports ({reports.filter(r => r.status === 'pending').length})
                     </button>
                   </div>
 
                   {activeModTab === 'pending' && (
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
-                      <span style={{ fontSize: '9px', color: isMapDarkMode ? theme.textDim : '#000000', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-                        SUBMISSIONS PENDING FORMAL DECLASSIFICATION APPROVAL:
+                      <span style={{ fontSize: '9.5px', color: isMapDarkMode ? theme.textDim : '#000000', fontWeight: 'bold', letterSpacing: '0.5px' }}>
+                        Submissions pending formal declassification approval:
                       </span>
 
                       {pendingSubmissions.length === 0 ? (
                         <div style={{ padding: '40px 0', textAlign: 'center', border: `1px dashed ${theme.borderLight}`, color: isMapDarkMode ? theme.textDim : '#000000', fontSize: '11px', fontWeight: 'bold' }}>
-                          NO UNAPPROVED USER SUBMISSIONS AT THIS TIME. SIGNALS CLEAR.
+                          No unapproved user submissions at this time. Signals clear.
                         </div>
                       ) : (
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', maxHeight: '50vh', overflowY: 'auto', paddingRight: '4px' }}>
@@ -9504,11 +9504,11 @@ function App() {
                                       <div style={{ display: 'flex', gap: '12px', fontSize: '9px', color: isMapDarkMode ? theme.textDim : '#000000', fontWeight: isMapDarkMode ? 'normal' : '500', flexWrap: 'wrap', alignItems: 'center' }}>
                                         {(!sub.destinations || sub.destinations.includes('map')) && (
                                           <>
-                                            <span>LAYER: <strong style={{ color: isMapDarkMode ? '#ffffff' : '#000000', textDecoration: isMapDarkMode ? 'none' : 'underline' }}>{sub.category}</strong></span>
-                                            <span>COORDS: <strong style={{ color: isMapDarkMode ? '#ffffff' : '#000000' }}>[{sub.coordinates?.[1]}, {sub.coordinates?.[0]}]</strong></span>
+                                            <span>Layer: <strong style={{ color: isMapDarkMode ? '#ffffff' : '#000000', textDecoration: isMapDarkMode ? 'none' : 'underline' }}>{sub.category}</strong></span>
+                                            <span>Coords: <strong style={{ color: isMapDarkMode ? '#ffffff' : '#000000' }}>[{sub.coordinates?.[1]}, {sub.coordinates?.[0]}]</strong></span>
                                           </>
                                         )}
-                                        {sub.date && <span>YEAR: <strong style={{ color: isMapDarkMode ? '#ffffff' : '#000000' }}>{sub.date}</strong></span>}
+                                        {sub.date && <span>Year: <strong style={{ color: isMapDarkMode ? '#ffffff' : '#000000' }}>{sub.date}</strong></span>}
                                       </div>
 
                                       {/* Destinations & Parenting Parameters */}
@@ -9524,7 +9524,7 @@ function App() {
                                               color: theme.text,
                                               border: `1px solid ${theme.borderLight}`,
                                               borderRadius: '2px',
-                                              textTransform: 'uppercase'
+                                              textTransform: 'none'
                                             }}
                                           >
                                             {dest}
@@ -9535,7 +9535,7 @@ function App() {
                                       {/* Codex Parent metadata */}
                                       {sub.destinations?.includes('codex') && (
                                         <div style={{ fontSize: '8.5px', color: theme.textDim, marginTop: '4px' }}>
-                                          CODEX PARENT: <strong style={{ color: theme.text }}>{combinedCodexNodes.find(n => n.id === sub.codexParentId)?.name || 'Root Category'}</strong>
+                                          Codex Parent: <strong style={{ color: theme.text }}>{combinedCodexNodes.find(n => n.id === sub.codexParentId)?.name || 'Root Category'}</strong>
                                         </div>
                                       )}
 
@@ -9543,22 +9543,22 @@ function App() {
                                       {sub.destinations?.includes('timeline') && (
                                         <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', marginTop: '4px' }}>
                                           <div style={{ fontSize: '8.5px', color: theme.textDim }}>
-                                            TIMELINE ERA: <strong style={{ color: theme.text }}>{sub.timelineLayer}</strong> | TYPE: <strong style={{ color: theme.text }}>{sub.timelineType?.toUpperCase()}</strong>
+                                            Timeline Era: <strong style={{ color: theme.text }}>{sub.timelineLayer}</strong> | Type: <strong style={{ color: theme.text }}>{sub.timelineType?.toUpperCase()}</strong>
                                             {sub.timelineType === 'lifespan' && sub.timelineEnd && (
-                                              <> | DEATH YEAR: <strong style={{ color: theme.text }}>{sub.timelineEnd}</strong></>
+                                              <> | Death Year: <strong style={{ color: theme.text }}>{sub.timelineEnd}</strong></>
                                             )}
                                           </div>
                                           {sub.timelineType === 'lifespan' && (sub.timelineFatherId || sub.timelineMotherId || sub.timelineSpouseId) && (
                                             <div style={{ fontSize: '8.5px', color: theme.textDim }}>
-                                              {sub.timelineFatherId && <>FATHER: <strong style={{ color: theme.text }}>{combinedTimelineItems.find(t => t.id === sub.timelineFatherId)?.name || sub.timelineFatherId}</strong> </>}
-                                              {sub.timelineMotherId && <>MOTHER: <strong style={{ color: theme.text }}>{combinedTimelineItems.find(t => t.id === sub.timelineMotherId)?.name || sub.timelineMotherId}</strong> </>}
-                                              {sub.timelineSpouseId && <>SPOUSE: <strong style={{ color: theme.text }}>{combinedTimelineItems.find(t => t.id === sub.timelineSpouseId)?.name || sub.timelineSpouseId}</strong> </>}
+                                              {sub.timelineFatherId && <>Father: <strong style={{ color: theme.text }}>{combinedTimelineItems.find(t => t.id === sub.timelineFatherId)?.name || sub.timelineFatherId}</strong> </>}
+                                              {sub.timelineMotherId && <>Mother: <strong style={{ color: theme.text }}>{combinedTimelineItems.find(t => t.id === sub.timelineMotherId)?.name || sub.timelineMotherId}</strong> </>}
+                                              {sub.timelineSpouseId && <>Spouse: <strong style={{ color: theme.text }}>{combinedTimelineItems.find(t => t.id === sub.timelineSpouseId)?.name || sub.timelineSpouseId}</strong> </>}
                                             </div>
                                           )}
                                         </div>
                                       )}
                                     </div>
-                                    <span style={{ padding: '2px 6px', background: isMapDarkMode ? '#ffa500' : '#000000', color: isMapDarkMode ? '#000000' : '#ffffff', fontSize: '8px', fontWeight: 'bold', borderRadius: '1px' }}>PENDING</span>
+                                    <span style={{ padding: '2px 6px', background: isMapDarkMode ? '#ffa500' : '#000000', color: isMapDarkMode ? '#000000' : '#ffffff', fontSize: '8.5px', fontWeight: 'bold', borderRadius: '1.5px' }}>Pending</span>
                                   </div>
 
                                   <p style={{ margin: 0, fontSize: '10.5px', lineHeight: '16px', color: isMapDarkMode ? theme.textDim : '#000000', fontWeight: isMapDarkMode ? 'normal' : '500', whiteSpace: 'pre-line' }}>
@@ -9573,7 +9573,7 @@ function App() {
 
                                   {sub.images && sub.images.length > 0 && (
                                     <div style={{ borderTop: `1px solid ${theme.borderLight}`, paddingTop: '10px' }}>
-                                      <span style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: isMapDarkMode ? theme.text : '#000000' }}>ATTACHMENTS DETECTED:</span>
+                                      <span style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: isMapDarkMode ? theme.text : '#000000' }}>Attachments Detected:</span>
                                       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '10px' }}>
                                         {sub.images.map((imgUrl: string, index: number) => {
                                           const isFile = imgUrl.startsWith('/uploads/');
@@ -9593,7 +9593,7 @@ function App() {
                                                 textDecoration: 'none'
                                               }}
                                             >
-                                              [LINK {index+1}: {imgName.slice(0, 30)}...]
+                                              [Link {index+1}: {imgName.slice(0, 30)}...]
                                             </a>
                                           );
                                         })}
@@ -9646,7 +9646,7 @@ function App() {
                                           }}
                                         >
                                           <Eye size={12} />
-                                          PREVIEW
+                                          Preview
                                         </button>
                                       )}
 
@@ -9669,7 +9669,7 @@ function App() {
                                           boxSizing: 'border-box'
                                         }}
                                       >
-                                        EDIT INTEL
+                                        Edit Intel
                                       </button>
                                     </div>
 
@@ -9719,7 +9719,7 @@ function App() {
                                           boxSizing: 'border-box'
                                         }}
                                       >
-                                        {submittingRejectionId === sub.id ? "REJECTING..." : "REJECT / DELETE"}
+                                        {submittingRejectionId === sub.id ? "Rejecting..." : "Reject / Delete"}
                                       </button>
                                       <button
                                         disabled={submittingApprovalId !== null || submittingRejectionId !== null}
@@ -9768,7 +9768,7 @@ function App() {
                                           boxSizing: 'border-box'
                                         }}
                                       >
-                                        {submittingApprovalId === sub.id ? "APPROVING..." : "APPROVE ENTRY"}
+                                        {submittingApprovalId === sub.id ? "Approving..." : "Approve Entry"}
                                       </button>
                                     </div>
                                   </div>
@@ -9784,12 +9784,12 @@ function App() {
                   {activeModTab === 'approved' && (
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
                       <span style={{ fontSize: '9px', color: isMapDarkMode ? theme.textDim : '#000000', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-                        APPROVED INTEL AUDIT LOG (REVOKE INTEL BACK TO PENDING SCREEN OR PURGE WRONG ENTRIES):
+                        Approved Intel Audit Log (Revoke intel back to pending screen or purge wrong entries):
                       </span>
 
                       {approvedSubmissions.length === 0 ? (
                         <div style={{ padding: '40px 0', textAlign: 'center', border: `1px dashed ${theme.borderLight}`, color: isMapDarkMode ? theme.textDim : '#000000', fontSize: '11px', fontWeight: 'bold' }}>
-                          NO REGISTERED APPROVED USER INTEL DISCOVERED IN CURRENT CLOUD INDEX.
+                          No registered approved user intel discovered in current cloud index.
                         </div>
                       ) : (
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', maxHeight: '50vh', overflowY: 'auto', paddingRight: '4px' }}>
@@ -9816,11 +9816,11 @@ function App() {
                                       <div style={{ display: 'flex', gap: '12px', fontSize: '9px', color: isMapDarkMode ? theme.textDim : '#000000', fontWeight: isMapDarkMode ? 'normal' : '500', flexWrap: 'wrap', alignItems: 'center' }}>
                                         {(!sub.destinations || sub.destinations.includes('map')) && (
                                           <>
-                                            <span>LAYER: <strong style={{ color: isMapDarkMode ? (layerColors[sub.category] || '#b6a6ff') : '#000000', textDecoration: isMapDarkMode ? 'none' : 'underline' }}>{sub.category}</strong></span>
-                                            <span>COORDS: <strong>[{sub.coordinates?.[1]}, {sub.coordinates?.[0]}]</strong></span>
+                                            <span>Layer: <strong style={{ color: isMapDarkMode ? (layerColors[sub.category] || '#b6a6ff') : '#000000', textDecoration: isMapDarkMode ? 'none' : 'underline' }}>{sub.category}</strong></span>
+                                            <span>Coords: <strong>[{sub.coordinates?.[1]}, {sub.coordinates?.[0]}]</strong></span>
                                           </>
                                         )}
-                                        {sub.date ? <span>YEAR: <strong>{sub.date}</strong></span> : null}
+                                        {sub.date ? <span>Year: <strong>{sub.date}</strong></span> : null}
                                       </div>
 
                                       {/* Destinations & Parenting Parameters */}
@@ -9836,7 +9836,7 @@ function App() {
                                               color: theme.text,
                                               border: `1px solid ${theme.borderLight}`,
                                               borderRadius: '2px',
-                                              textTransform: 'uppercase'
+                                              textTransform: 'none'
                                             }}
                                           >
                                             {dest}
@@ -9847,7 +9847,7 @@ function App() {
                                       {/* Codex Parent metadata */}
                                       {sub.destinations?.includes('codex') && (
                                         <div style={{ fontSize: '8.5px', color: theme.textDim, marginTop: '4px' }}>
-                                          CODEX PARENT: <strong style={{ color: theme.text }}>{combinedCodexNodes.find(n => n.id === sub.codexParentId)?.name || 'Root Category'}</strong>
+                                          Codex Parent: <strong style={{ color: theme.text }}>{combinedCodexNodes.find(n => n.id === sub.codexParentId)?.name || 'Root Category'}</strong>
                                         </div>
                                       )}
 
@@ -9855,22 +9855,22 @@ function App() {
                                       {sub.destinations?.includes('timeline') && (
                                         <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', marginTop: '4px' }}>
                                           <div style={{ fontSize: '8.5px', color: theme.textDim }}>
-                                            TIMELINE ERA: <strong style={{ color: theme.text }}>{sub.timelineLayer}</strong> | TYPE: <strong style={{ color: theme.text }}>{sub.timelineType?.toUpperCase()}</strong>
+                                            Timeline Era: <strong style={{ color: theme.text }}>{sub.timelineLayer}</strong> | Type: <strong style={{ color: theme.text }}>{sub.timelineType === 'lifespan' ? 'Lifespan' : 'Event'}</strong>
                                             {sub.timelineType === 'lifespan' && sub.timelineEnd && (
-                                              <> | DEATH YEAR: <strong style={{ color: theme.text }}>{sub.timelineEnd}</strong></>
+                                              <> | Death Year: <strong style={{ color: theme.text }}>{sub.timelineEnd}</strong></>
                                             )}
                                           </div>
                                           {sub.timelineType === 'lifespan' && (sub.timelineFatherId || sub.timelineMotherId || sub.timelineSpouseId) && (
                                             <div style={{ fontSize: '8.5px', color: theme.textDim }}>
-                                              {sub.timelineFatherId && <>FATHER: <strong style={{ color: theme.text }}>{combinedTimelineItems.find(t => t.id === sub.timelineFatherId)?.name || sub.timelineFatherId}</strong> </>}
-                                              {sub.timelineMotherId && <>MOTHER: <strong style={{ color: theme.text }}>{combinedTimelineItems.find(t => t.id === sub.timelineMotherId)?.name || sub.timelineMotherId}</strong> </>}
-                                              {sub.timelineSpouseId && <>SPOUSE: <strong style={{ color: theme.text }}>{combinedTimelineItems.find(t => t.id === sub.timelineSpouseId)?.name || sub.timelineSpouseId}</strong> </>}
+                                              {sub.timelineFatherId && <>Father: <strong style={{ color: theme.text }}>{combinedTimelineItems.find(t => t.id === sub.timelineFatherId)?.name || sub.timelineFatherId}</strong> </>}
+                                              {sub.timelineMotherId && <>Mother: <strong style={{ color: theme.text }}>{combinedTimelineItems.find(t => t.id === sub.timelineMotherId)?.name || sub.timelineMotherId}</strong> </>}
+                                              {sub.timelineSpouseId && <>Spouse: <strong style={{ color: theme.text }}>{combinedTimelineItems.find(t => t.id === sub.timelineSpouseId)?.name || sub.timelineSpouseId}</strong> </>}
                                             </div>
                                           )}
                                         </div>
                                       )}
                                     </div>
-                                    <span style={{ padding: '2px 6px', background: isMapDarkMode ? 'rgba(0, 204, 0, 0.1)' : '#000000', border: isMapDarkMode ? '1px solid #00cc00' : '1px solid #000000', color: isMapDarkMode ? '#00cc00' : '#ffffff', fontSize: '8px', fontWeight: 'bold', borderRadius: '1.5px' }}>APPROVED</span>
+                                    <span style={{ padding: '2px 6px', background: isMapDarkMode ? 'rgba(0, 204, 0, 0.1)' : '#000000', border: isMapDarkMode ? '1px solid #00cc00' : '1px solid #000000', color: isMapDarkMode ? '#00cc00' : '#ffffff', fontSize: '8.5px', fontWeight: 'bold', borderRadius: '1.5px' }}>Approved</span>
                                   </div>
 
                                   <p style={{ margin: 0, fontSize: '10.5px', lineHeight: '16px', color: isMapDarkMode ? theme.textDim : '#000000', fontWeight: isMapDarkMode ? 'normal' : '500', whiteSpace: 'pre-line' }}>
@@ -9885,7 +9885,7 @@ function App() {
 
                                   {sub.images && sub.images.length > 0 && (
                                     <div style={{ borderTop: `1px solid ${theme.borderLight}`, paddingTop: '10px' }}>
-                                      <span style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: isMapDarkMode ? theme.text : '#000000' }}>ATTACHMENTS DETECTED:</span>
+                                      <span style={{ fontSize: '10px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: isMapDarkMode ? theme.text : '#000000' }}>Attachments Detected:</span>
                                       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '10px' }}>
                                         {sub.images.map((imgUrl: string, index: number) => {
                                           const isFile = imgUrl.startsWith('/uploads/');
@@ -9905,7 +9905,7 @@ function App() {
                                                 textDecoration: 'none'
                                               }}
                                             >
-                                              [LINK {index+1}: {imgName.slice(0, 30)}...]
+                                              [Link {index+1}: {imgName.slice(0, 30)}...]
                                             </a>
                                           );
                                         })}
@@ -9981,7 +9981,7 @@ function App() {
                                           boxSizing: 'border-box'
                                         }}
                                       >
-                                        EDIT INTEL
+                                        Edit Intel
                                       </button>
                                     </div>
 
@@ -10033,7 +10033,7 @@ function App() {
                                           boxSizing: 'border-box'
                                         }}
                                       >
-                                        {submittingRevocationId === sub.id ? "REVOKING..." : "REVOKE TO REVIEW"}
+                                        {submittingRevocationId === sub.id ? "Revoking..." : "Revoke to Review"}
                                       </button>
                                       <button
                                         disabled={submittingRevocationId !== null || submittingRejectionId !== null}
@@ -10082,7 +10082,7 @@ function App() {
                                           boxSizing: 'border-box'
                                         }}
                                       >
-                                        {submittingRejectionId === sub.id ? "DELETING..." : "DELETE PERMANENTLY"}
+                                        {submittingRejectionId === sub.id ? "Deleting..." : "Delete Permanently"}
                                       </button>
                                     </div>
                                   </div>
@@ -10097,13 +10097,13 @@ function App() {
 
                   {activeModTab === 'reports' && (
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
-                      <span style={{ fontSize: '9px', color: isMapDarkMode ? theme.textDim : '#000000', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-                        INACCURACY REPORTS LOG:
+                      <span style={{ fontSize: '9px', color: isMapDarkMode ? theme.textDim : '#000000', fontWeight: 'bold', textTransform: 'none', letterSpacing: '0.5px' }}>
+                        Inaccuracy Reports Log:
                       </span>
 
                       {reports.length === 0 ? (
                         <div style={{ padding: '40px 0', textAlign: 'center', border: `1px dashed ${theme.borderLight}`, color: isMapDarkMode ? theme.textDim : '#000000', fontSize: '11px', fontWeight: 'bold' }}>
-                          NO INACCURACY REPORTS CURRENTLY REGISTERED.
+                          No inaccuracy reports currently registered.
                         </div>
                       ) : (
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', maxHeight: '50vh', overflowY: 'auto', paddingRight: '4px' }}>
@@ -10126,7 +10126,7 @@ function App() {
                                     <h5 style={{ margin: 0, fontSize: '13px', fontWeight: 'bold', color: theme.text }}>
                                       {report.pointName}
                                     </h5>
-                                    <span style={{ fontSize: '8px', padding: '2px 6px', background: layerColors[report.pointCategory] || '#e5e5e5', color: '#000', borderRadius: '4px', textTransform: 'uppercase', fontFamily: '"Space Mono", monospace', fontWeight: 'bold' }}>
+                                    <span style={{ fontSize: '8px', padding: '2px 6px', background: layerColors[report.pointCategory] || '#e5e5e5', color: '#000', borderRadius: '4px', textTransform: 'none', fontFamily: '"Space Mono", monospace', fontWeight: 'bold' }}>
                                       {report.pointCategory}
                                     </span>
                                     <span style={{ 
@@ -10136,7 +10136,7 @@ function App() {
                                       color: report.status === 'resolved' ? '#00cc00' : '#ef4444', 
                                       border: `1px solid ${report.status === 'resolved' ? '#00cc00' : '#ef4444'}`,
                                       borderRadius: '4px', 
-                                      textTransform: 'uppercase', 
+                                      textTransform: 'none', 
                                       fontFamily: '"Space Mono", monospace', 
                                       fontWeight: 'bold' 
                                     }}>
@@ -10153,8 +10153,8 @@ function App() {
                               </div>
 
                               <div style={{ padding: '10px', background: isMapDarkMode ? 'rgba(0,0,0,0.2)' : 'rgba(0,0,0,0.02)', borderLeft: `3px solid ${isMapDarkMode ? '#ef4444' : '#b91c1c'}`, fontSize: '11px', lineHeight: '16px', color: theme.text }}>
-                                <div style={{ fontWeight: 'bold', fontSize: '10px', textTransform: 'uppercase', color: isMapDarkMode ? '#ef4444' : '#b91c1c', marginBottom: '4px' }}>
-                                  REASON: {report.reason}
+                                <div style={{ fontWeight: 'bold', fontSize: '10px', textTransform: 'none', color: isMapDarkMode ? '#ef4444' : '#b91c1c', marginBottom: '4px' }}>
+                                  Reason: {report.reason}
                                 </div>
                                 {report.details || <em style={{ color: theme.textDim }}>No supporting details provided.</em>}
                               </div>
@@ -10184,7 +10184,7 @@ function App() {
                                     boxSizing: 'border-box'
                                   }}
                                 >
-                                  {submittingReportActionId === report.id ? "DELETING..." : "DELETE REPORT"}
+                                  {submittingReportActionId === report.id ? "Deleting..." : "Delete Report"}
                                 </button>
                                 
                                 {report.status === 'pending' && (
@@ -10210,7 +10210,7 @@ function App() {
                                       boxSizing: 'border-box'
                                     }}
                                   >
-                                    {submittingReportActionId === report.id ? "RESOLVING..." : "MARK RESOLVED"}
+                                    {submittingReportActionId === report.id ? "Resolving..." : "Mark Resolved"}
                                   </button>
                                 )}
                               </div>
@@ -10249,11 +10249,11 @@ function App() {
             display: 'flex',
             alignItems: 'center',
             gap: '8px',
-            textTransform: 'uppercase'
+            textTransform: 'none'
           }}
         >
           <Shield size={14} />
-          <span>MAXIMIZE MOD DESK</span>
+          <span>Maximize Mod Desk</span>
         </button>
       )}
 
