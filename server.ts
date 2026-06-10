@@ -316,7 +316,25 @@ async function startServer() {
 
   app.post("/api/submissions/create", async (req, res) => {
     try {
-      const { name, category, description, coordinates, images, date, source, socialLink } = req.body;
+      const {
+        name,
+        category,
+        description,
+        coordinates,
+        images,
+        date,
+        source,
+        socialLink,
+        destinations,
+        codexParentId,
+        timelineLayer,
+        timelineType,
+        timelineEnd,
+        timelineFatherId,
+        timelineMotherId,
+        timelineSpouseId
+      } = req.body;
+
       if (!name || !category || !description) {
         return res.status(400).json({ error: "Missing required fields." });
       }
@@ -331,7 +349,15 @@ async function startServer() {
         description: description.trim(),
         images: images || [],
         status: 'pending',
-        createdAt: admin.firestore.FieldValue.serverTimestamp()
+        createdAt: admin.firestore.FieldValue.serverTimestamp(),
+        destinations: destinations || ['map'],
+        codexParentId: codexParentId || '',
+        timelineLayer: timelineLayer || '',
+        timelineType: timelineType || 'event',
+        timelineEnd: timelineEnd || '',
+        timelineFatherId: timelineFatherId || '',
+        timelineMotherId: timelineMotherId || '',
+        timelineSpouseId: timelineSpouseId || ''
       };
 
       if (coordinates !== undefined && coordinates !== null) {
@@ -358,11 +384,23 @@ async function startServer() {
       const textBody = `A new piece of intel has been submitted for moderation review.
 
 Name of Anomaly / Signature: ${submissionData.name}
-Category: ${submissionData.category}
+Destinations: ${(submissionData.destinations || []).join(', ') || "map"}
+Map Category / Layer: ${submissionData.category}
 Date/Timeframe: ${submissionData.date || "Not provided"}
 Source/Provenance: ${submissionData.source || "Not provided"}
 Coordinates: ${submissionData.coordinates ? JSON.stringify(submissionData.coordinates) : "Not provided"}
 Social Link: ${submissionData.socialLink || "Not provided"}
+
+--- Codex Placement ---
+Parent Codex Term ID: ${submissionData.codexParentId || "None (Root category)"}
+
+--- Timeline Placement ---
+Timeline Layer / Era: ${submissionData.timelineLayer || "None"}
+Timeline Type: ${submissionData.timelineType || "event"}
+Timeline End Year: ${submissionData.timelineEnd || "N/A"}
+Father ID: ${submissionData.timelineFatherId || "None"}
+Mother ID: ${submissionData.timelineMotherId || "None"}
+Spouse ID: ${submissionData.timelineSpouseId || "None"}
 
 Description:
 ${submissionData.description}
@@ -383,7 +421,11 @@ ${modLink}
               <td style="padding: 6px; border-bottom: 1px solid #222;">${submissionData.name}</td>
             </tr>
             <tr>
-              <td style="padding: 6px; font-weight: bold; color: #ffcc00;">Category:</td>
+              <td style="padding: 6px; font-weight: bold; color: #ffcc00;">Destinations:</td>
+              <td style="padding: 6px; border-bottom: 1px solid #222; color: #ffcc00;"><strong>${(submissionData.destinations || []).join(', ').toUpperCase()}</strong></td>
+            </tr>
+            <tr>
+              <td style="padding: 6px; font-weight: bold; color: #ffcc00;">Map Category:</td>
               <td style="padding: 6px; border-bottom: 1px solid #222;">${submissionData.category}</td>
             </tr>
             <tr>
@@ -403,6 +445,24 @@ ${modLink}
               <td style="padding: 6px; border-bottom: 1px solid #222;">${submissionData.socialLink || "Not provided"}</td>
             </tr>
           </table>
+
+          <div style="margin-bottom: 20px; border: 1px solid #333; padding: 12px; background: #111;">
+            <h4 style="color: #ffcc00; text-transform: uppercase; margin: 0 0 10px 0; border-bottom: 1px solid #333; padding-bottom: 4px;">Codex Placement</h4>
+            <div>Parent Term ID: <code>${submissionData.codexParentId || "None (Root)"}</code></div>
+          </div>
+
+          <div style="margin-bottom: 20px; border: 1px solid #333; padding: 12px; background: #111;">
+            <h4 style="color: #ffcc00; text-transform: uppercase; margin: 0 0 10px 0; border-bottom: 1px solid #333; padding-bottom: 4px;">Timeline Placement</h4>
+            <table style="width: 100%; font-size: 11px;">
+              <tr><td style="width: 150px; color: #aaa;">Layer/Era:</td><td>${submissionData.timelineLayer || "None"}</td></tr>
+              <tr><td style="color: #aaa;">Type:</td><td>${submissionData.timelineType}</td></tr>
+              <tr><td style="color: #aaa;">End Year:</td><td>${submissionData.timelineEnd || "N/A"}</td></tr>
+              <tr><td style="color: #aaa;">Father ID:</td><td>${submissionData.timelineFatherId || "None"}</td></tr>
+              <tr><td style="color: #aaa;">Mother ID:</td><td>${submissionData.timelineMotherId || "None"}</td></tr>
+              <tr><td style="color: #aaa;">Spouse ID:</td><td>${submissionData.timelineSpouseId || "None"}</td></tr>
+            </table>
+          </div>
+
           <div style="margin-bottom: 20px;">
             <h4 style="color: #ffcc00; text-transform: uppercase; margin-bottom: 8px;">Description</h4>
             <p style="white-space: pre-wrap; background: #111; padding: 12px; border: 1px solid #333; line-height: 1.6;">${submissionData.description}</p>

@@ -634,7 +634,7 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
     displayDate: "1325 - 1521 AD",
     description: "The capital of the Aztec Empire, built on an island in Lake Texcoco. Its heart was the Templo Mayor, a massive double-pyramid temple dedicated to Huitzilopochtli and Tlaloc. Aztec legends speak of a prehistoric race of giants called Quinamentin who built the ancient pyramids.",
     source: "INAH Mexico / Historical Archives",
-    images: ["https://upload.wikimedia.org/wikipedia/commons/b/b2/Templo_Mayor_reconstruction.jpg"]
+    images: ["https://upload.wikimedia.org/wikipedia/commons/1/19/Templo_Mayor_50.jpg"]
   },
   {
     id: "archaeology-hopi-mesa",
@@ -658,7 +658,7 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
     displayDate: "c. 600 - 1400 AD (Peak c. 1050 AD)",
     description: "The largest pre-columbian settlement north of Mexico, featuring Monks Mound, a colossal earthen pyramid covering 14 acres. Cahokia served as the ceremonial and political heart of the Mississippian culture, whose construction is associated in later settler journals with the discovery of giant human skeletons.",
     source: "Cahokia Mounds State Historic Site",
-    images: ["https://upload.wikimedia.org/wikipedia/commons/a/ab/MonksMound_aerial.jpg"]
+    images: ["https://upload.wikimedia.org/wikipedia/commons/2/2d/Monks_Mound_in_July.JPG"]
   },
   {
     id: "archaeology-sumer-ur",
@@ -670,7 +670,7 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
     displayDate: "c. 3800 - 500 BC",
     description: "The archaeological remains of Ur and Eridu, key urban centers of the ancient Sumerian civilization. Ur is home to the famous Great Ziggurat of Ur, a monumental stepped pyramid temple dedicated to the moon god Nanna.",
     source: "UNESCO World Heritage Sites / British Museum Excavations",
-    images: ["https://upload.wikimedia.org/wikipedia/commons/1/1c/Ziggurat_of_ur.jpg"]
+    images: ["https://upload.wikimedia.org/wikipedia/commons/6/6b/Ziggarat_of_Ur_001.jpg"]
   },
   {
     id: "archaeology-mount-seir-petra",
@@ -682,7 +682,7 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
     displayDate: "c. 400 BC - 100 AD",
     description: "The spectacular rock-cut rose red city of Petra, carved directly into the sandstone canyons of Mount Seir. Historically the capital of the Nabataeans, this strategic stronghold lies in the ancestral territory of the Edomites.",
     source: "UNESCO World Heritage Sites",
-    images: ["https://upload.wikimedia.org/wikipedia/commons/2/2f/Treasury_petra_crop.jpg"]
+    images: ["https://upload.wikimedia.org/wikipedia/commons/2/2f/Treasury_petra_crop.jpeg"]
   },
   {
     id: "archaeology-ashkelon-philistines",

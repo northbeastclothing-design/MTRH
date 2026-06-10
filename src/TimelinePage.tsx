@@ -20,6 +20,7 @@ interface TimelinePageProps {
   onViewOnMap: (item: TimelineItem) => void;
   onFlagItem?: (item: TimelineItem) => void;
   onViewOnCodex?: (termId: string) => void;
+  timelineItems?: TimelineItem[];
 }
 
 const ERAS_CONFIG = [
@@ -118,8 +119,8 @@ const ERAS_CONFIG = [
     name: 'Ancient Civilizations & Tribes',
     start: -4000,
     end: 2026,
-    color: '#74F8F3', // Cyan
-    icon: '/icons/icon-archaeological-finds.svg',
+    color: '#BCA7C7', // Lavender
+    icon: '/icons/icon-people-groups.svg',
     layer: 'ancient-civilizations',
     desc: 'Ancient Mesoamerican empires, Native American tribes, and lost civilizations of antiquity.'
   },
@@ -128,14 +129,25 @@ const ERAS_CONFIG = [
     name: 'Alchemy & Occult',
     start: 1300,
     end: 2026,
-    color: '#E9C46A', // Gold
+    color: '#59DCB7', // Mint/Teal
     icon: '/icons/icon-alchemy-occult.svg',
     layer: 'alchemy-occult',
     desc: 'Esoteric traditions, alchemical pursuits, and occult figures linking science and mysticism from Isaac Newton to Jack Parsons.'
   }
 ];
 
-export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSelectedItem, onViewOnMap, onFlagItem, onViewOnCodex }: TimelinePageProps) {
+export default function TimelinePage({
+  theme,
+  isMapDarkMode,
+  selectedItem,
+  setSelectedItem,
+  onViewOnMap,
+  onFlagItem,
+  onViewOnCodex,
+  timelineItems
+}: TimelinePageProps) {
+  const items = timelineItems || TIMELINE_ITEMS;
+
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const hasDraggedRef = useRef(false);
 
@@ -245,7 +257,7 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
     const map: Record<string, TimelineItem[]> = {};
     const query = searchQuery.toLowerCase().trim();
     ERAS_CONFIG.forEach(era => {
-      let filtered = TIMELINE_ITEMS.filter(item => item.layer === era.layer);
+      let filtered = items.filter(item => item.layer === era.layer);
       if (query) {
         filtered = filtered.filter(item => 
           item.name.toLowerCase().includes(query) ||
@@ -255,7 +267,7 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
       map[era.id] = filtered.sort((a, b) => a.start - b.start);
     });
     return map;
-  }, [searchQuery]);
+  }, [searchQuery, items]);
 
   // Format years nicely (e.g. 4,004 BC, 30 AD)
   const formatYear = (year: number) => {
@@ -551,8 +563,8 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
   // Find hovered item object
   const hoveredItem = useMemo(() => {
     if (!hoveredItemId) return null;
-    return TIMELINE_ITEMS.find(x => x.id === hoveredItemId) || null;
-  }, [hoveredItemId]);
+    return items.find(x => x.id === hoveredItemId) || null;
+  }, [hoveredItemId, items]);
 
   // Recursively find all ancestors and descendants of the hovered item
   const highlightedIds = useMemo(() => {
@@ -562,7 +574,7 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
     const addAncestors = (id: string) => {
       if (visited.has(id)) return;
       visited.add(id);
-      const item = TIMELINE_ITEMS.find(x => x.id === id);
+      const item = items.find(x => x.id === id);
       if (!item) return;
       if (item.fatherId) addAncestors(item.fatherId);
       if (item.motherId) addAncestors(item.motherId);
@@ -572,10 +584,10 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
     const addDescendants = (id: string) => {
       if (visited.has(id)) return;
       visited.add(id);
-      const item = TIMELINE_ITEMS.find(x => x.id === id);
+      const item = items.find(x => x.id === id);
       if (!item) return;
       
-      const children = TIMELINE_ITEMS.filter(x => x.fatherId === id || x.motherId === id);
+      const children = items.filter(x => x.fatherId === id || x.motherId === id);
       children.forEach(c => addDescendants(c.id));
       if (item.spouseId) visited.add(item.spouseId);
     };
@@ -583,7 +595,7 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
     addAncestors(hoveredItemId);
     addDescendants(hoveredItemId);
     return visited;
-  }, [hoveredItemId]);
+  }, [hoveredItemId, items]);
 
   // Compute relationship distances from the hovered item using BFS
   const highlightedDistances = useMemo(() => {
@@ -596,7 +608,7 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
     
     while (queue.length > 0) {
       const { id, dist } = queue.shift()!;
-      const item = TIMELINE_ITEMS.find(x => x.id === id);
+      const item = items.find(x => x.id === id);
       if (!item) continue;
       
       const relatives: string[] = [];
@@ -604,7 +616,7 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
       if (item.motherId) relatives.push(item.motherId);
       if (item.spouseId) relatives.push(item.spouseId);
       
-      const children = TIMELINE_ITEMS.filter(x => x.fatherId === id || x.motherId === id);
+      const children = items.filter(x => x.fatherId === id || x.motherId === id);
       children.forEach(c => relatives.push(c.id));
       
       for (const relId of relatives) {
@@ -616,7 +628,7 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
       }
     }
     return distances;
-  }, [hoveredItemId]);
+  }, [hoveredItemId, items]);
 
   // Filter highlighted family members to only render solid/opaque styling for non-overlapping closest relatives
   const solidHighlightedIds = useMemo(() => {
@@ -624,7 +636,7 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
     
     const relatives = (Array.from(highlightedIds) as string[]).filter(id => id !== hoveredItemId);
     const sortedRelatives = relatives
-      .map(id => ({ id, item: TIMELINE_ITEMS.find(x => x.id === id)!, dist: highlightedDistances.get(id) ?? 999 }))
+      .map(id => ({ id, item: items.find(x => x.id === id)!, dist: highlightedDistances.get(id) ?? 999 }))
       .filter(x => x.item !== undefined)
       .sort((a, b) => a.dist - b.dist);
       
@@ -633,7 +645,7 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
     for (const rel of sortedRelatives) {
       let hasOverlap = false;
       for (const selId of selected) {
-        const selItem = TIMELINE_ITEMS.find(x => x.id === selId)!;
+        const selItem = items.find(x => x.id === selId)!;
         
         const aStart = rel.item.start;
         const aEnd = rel.item.type === 'lifespan' ? (rel.item.end ?? rel.item.start) : rel.item.start;
@@ -1261,8 +1273,8 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
                 yB: number, 
                 connectYear: number
               ) => {
-                const itemA = TIMELINE_ITEMS.find(x => x.id === idA)!;
-                const itemB = TIMELINE_ITEMS.find(x => x.id === idB)!;
+                const itemA = items.find(x => x.id === idA)!;
+                const itemB = items.find(x => x.id === idB)!;
                 
                 const isMainA = idA === hoveredItemId || (selectedItem && idA === selectedItem.id);
                 const isMainB = idB === hoveredItemId || (selectedItem && idB === selectedItem.id);
@@ -1283,7 +1295,7 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
               };
 
               highlightedIds.forEach(id => {
-                const item = TIMELINE_ITEMS.find(x => x.id === id);
+                const item = items.find(x => x.id === id);
                 if (!item) return;
                 
                 const itemY = trackOffsets.offsets[item.id];
@@ -1292,7 +1304,7 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
                 // 1. Connection to Spouse (draw only once)
                 if (item.spouseId && highlightedIds.has(item.spouseId)) {
                   if (item.id < item.spouseId) {
-                    const spouse = TIMELINE_ITEMS.find(x => x.id === item.spouseId);
+                    const spouse = items.find(x => x.id === item.spouseId);
                     const spouseY = trackOffsets.offsets[item.spouseId];
                     if (spouse && spouseY) {
                       const connectYear = Math.max(item.start, spouse.start);
@@ -1318,7 +1330,7 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
 
                 // 2. Connection to Father
                 if (item.fatherId && highlightedIds.has(item.fatherId)) {
-                  const father = TIMELINE_ITEMS.find(x => x.id === item.fatherId);
+                  const father = items.find(x => x.id === item.fatherId);
                   const fatherY = trackOffsets.offsets[item.fatherId];
                   if (father && fatherY) {
                     const birthX = getX(item.start);
@@ -1343,7 +1355,7 @@ export default function TimelinePage({ theme, isMapDarkMode, selectedItem, setSe
 
                 // 3. Connection to Mother
                 if (item.motherId && highlightedIds.has(item.motherId)) {
-                  const mother = TIMELINE_ITEMS.find(x => x.id === item.motherId);
+                  const mother = items.find(x => x.id === item.motherId);
                   const motherY = trackOffsets.offsets[item.motherId];
                   if (mother && motherY) {
                     const birthX = getX(item.start);

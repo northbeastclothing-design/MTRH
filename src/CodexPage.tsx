@@ -21,6 +21,7 @@ interface CodexPageProps {
   onSelectedTermChange?: (node: TermNode | null) => void;
   focusedTermId?: string | null;
   onFocusedTermConsumed?: () => void;
+  codexNodes?: TermNode[];
 }
 
 const LAYER_COLORS: Record<string, string> = {
@@ -49,8 +50,8 @@ const LAYER_COLORS: Record<string, string> = {
   'Archaeological Finds': '#74F8F3',
   'Biblical Finds': '#D49459',
   'Secret Government Programs': '#FF5C5C',
-  'Alchemy / Occult': '#E9C46A',
-  'People Groups': '#74F8F3',
+  'Alchemy / Occult': '#59DCB7',
+  'People Groups': '#BCA7C7',
   'Default': '#b6a6ff'
 };
 
@@ -141,8 +142,11 @@ export default function CodexPage({
   onFlagItem,
   onSelectedTermChange,
   focusedTermId,
-  onFocusedTermConsumed
+  onFocusedTermConsumed,
+  codexNodes
 }: CodexPageProps) {
+  const nodes = codexNodes || TERM_TREE_DATA;
+
   const [selectedPath, setSelectedPath] = useState<string[]>([]);
   const [hoveredTermId, setHoveredTermId] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -170,11 +174,11 @@ export default function CodexPage({
 
   const activeTermNode = useMemo(() => {
     if (!activeTermId) return null;
-    return TERM_TREE_DATA.find(t => t.id === activeTermId) || null;
-  }, [activeTermId]);
+    return nodes.find(t => t.id === activeTermId) || null;
+  }, [activeTermId, nodes]);
 
   const activeRootColor = useMemo(() => {
-    const rootCatNode = selectedPath[0] ? TERM_TREE_DATA.find(n => n.id === selectedPath[0]) : null;
+    const rootCatNode = selectedPath[0] ? nodes.find(n => n.id === selectedPath[0]) : null;
     return rootCatNode ? getNodeColor(rootCatNode) : (activeTermNode ? getRootCategoryColor(activeTermNode) : '#b6a6ff');
   }, [selectedPath, activeTermNode]);
 
@@ -208,7 +212,7 @@ export default function CodexPage({
     // 3. Otherwise, walk up the hierarchy of parent terms to find an inherited layer
     let curr = activeTermNode;
     while (curr.parentId) {
-      const parent = TERM_TREE_DATA.find(n => n.id === curr.parentId);
+      const parent = nodes.find(n => n.id === curr.parentId);
       if (!parent) break;
       if (parent.layer) {
         let layerName = parent.layer;
@@ -242,7 +246,7 @@ export default function CodexPage({
     let curr = id;
     while (curr) {
       path.unshift(curr);
-      const node = TERM_TREE_DATA.find(n => n.id === curr);
+      const node = nodes.find(n => n.id === curr);
       curr = node?.parentId || null;
     }
     return path;
@@ -267,7 +271,7 @@ export default function CodexPage({
     if (!searchQuery.trim()) return [];
     const query = searchQuery.toLowerCase().trim();
     
-    return TERM_TREE_DATA.filter(node => {
+    return nodes.filter(node => {
       const nameMatch = node.name.toLowerCase().includes(query);
       const descMatch = node.description.toLowerCase().includes(query);
       const transMatch = node.translations?.some(t =>
@@ -279,11 +283,11 @@ export default function CodexPage({
 
       return nameMatch || descMatch || transMatch || verseMatch;
     }).slice(0, 10);
-  }, [searchQuery]);
+  }, [searchQuery, nodes]);
 
   const getParentPathLabel = (node: TermNode): string => {
     if (!node.parentId) return '';
-    const parent = TERM_TREE_DATA.find(n => n.id === node.parentId);
+    const parent = nodes.find(n => n.id === node.parentId);
     if (!parent) return '';
     return parent.name;
   };
@@ -292,7 +296,7 @@ export default function CodexPage({
   function getNodeColor(node: TermNode): string {
     let curr = node;
     while (curr.parentId) {
-      const parent = TERM_TREE_DATA.find(n => n.id === curr.parentId);
+      const parent = nodes.find(n => n.id === curr.parentId);
       if (!parent) break;
       curr = parent;
     }
@@ -301,8 +305,8 @@ export default function CodexPage({
     if (curr.id === 'megaliths-structures') return '#FFFBA6'; // Yellow/Gold (Megaliths)
     if (curr.id === 'supernatural-anomalies') return '#C2FFBD'; // Green (U.F.O. Sightings)
     if (curr.id === 'secret-government-programs') return '#FF5C5C'; // Red (Secret Government Programs)
-    if (curr.id === 'alchemy-occult') return '#E9C46A'; // Gold (Alchemy / Occult)
-    if (curr.id === 'people-groups') return '#74F8F3'; // Cyan (People Groups)
+    if (curr.id === 'alchemy-occult') return '#59DCB7'; // Mint/Teal (Alchemy / Occult)
+    if (curr.id === 'people-groups') return '#BCA7C7'; // Lavender (People Groups)
     
     return LAYER_COLORS['Default'];
   }
@@ -310,7 +314,7 @@ export default function CodexPage({
   function getRootCategory(node: TermNode): TermNode {
     let curr = node;
     while (curr.parentId) {
-      const parent = TERM_TREE_DATA.find(n => n.id === curr.parentId);
+      const parent = nodes.find(n => n.id === curr.parentId);
       if (!parent) break;
       curr = parent;
     }
@@ -331,8 +335,9 @@ export default function CodexPage({
         return '#705b00'; // Very dark gold/yellow
       case '#f6e8c1': // Ancient Texts
       case '#ecce81': // Giants & Nephilim
-      case '#e9c46a': // Alchemy / Occult
         return '#604e1e'; // Dark brown/gold
+      case '#59dcb7': // Alchemy / Occult
+        return '#125e4a'; // Dark mint/teal
       case '#c2ffbd': // U.F.O. Sightings
       case '#9ff3bc': // National Parks
         return '#1c521c'; // Dark forest green
@@ -361,6 +366,8 @@ export default function CodexPage({
         return '#472280'; // Dark violet/purple
       case '#b6a6ff': // Default / Related
         return '#322280'; // Dark indigo
+      case '#bca7c7': // People Groups
+        return '#502d66'; // Dark purple/lavender
       default:
         return color;
     }
@@ -386,7 +393,7 @@ export default function CodexPage({
       if (parentId === 'alchemy-occult') return LAYER_ICONS['Alchemy / Occult'];
       if (parentId === 'people-groups') return LAYER_ICONS['People Groups'];
 
-      const parent = TERM_TREE_DATA.find(n => n.id === parentId);
+      const parent = nodes.find(n => n.id === parentId);
       if (parent && parent.layer && LAYER_ICONS[parent.layer]) {
         return LAYER_ICONS[parent.layer];
       }
@@ -519,7 +526,7 @@ export default function CodexPage({
     let curr = node.parentId;
     while (curr) {
       lvl++;
-      const parent = TERM_TREE_DATA.find(n => n.id === curr);
+      const parent = nodes.find(n => n.id === curr);
       curr = parent?.parentId;
     }
     return lvl;
@@ -530,14 +537,14 @@ export default function CodexPage({
     const list: { level: number; title: string; nodes: TermNode[] }[] = [];
 
     // Level 0: Roots
-    const rootNodes = TERM_TREE_DATA.filter(n => !n.parentId)
+    const rootNodes = nodes.filter(n => !n.parentId)
       .sort((a, b) => a.name.localeCompare(b.name));
     list.push({ level: 0, title: 'Categories', nodes: rootNodes });
 
     // Subsequent levels based on active selected path
     for (let i = 0; i < selectedPath.length; i++) {
       const currentId = selectedPath[i];
-      const children = TERM_TREE_DATA.filter(n => n.parentId === currentId || n.secondaryParentIds?.includes(currentId))
+      const children = nodes.filter(n => n.parentId === currentId || n.secondaryParentIds?.includes(currentId))
         .sort((a, b) => a.name.localeCompare(b.name));
       if (children.length > 0) {
         list.push({
@@ -591,7 +598,7 @@ export default function CodexPage({
         const x2 = childRect.left - containerRect.left + container.scrollLeft;
         const y2 = childRect.top + childRect.height / 2 - containerRect.top + container.scrollTop;
 
-        const parentNode = TERM_TREE_DATA.find(n => n.id === parentId);
+        const parentNode = nodes.find(n => n.id === parentId);
         const color = parentNode ? getRootCategoryColor(parentNode) : theme.borderLight;
 
         // Orthogonal right angle path (horizontal, vertical, horizontal)
@@ -613,7 +620,7 @@ export default function CodexPage({
 
     // 2. Draw Cross-linked Related Terms curves
     if (activeTermId) {
-      const activeNode = TERM_TREE_DATA.find(n => n.id === activeTermId);
+      const activeNode = nodes.find(n => n.id === activeTermId);
       const activeEl = document.getElementById(`node-pill-${activeTermId}`);
 
       if (activeNode && activeNode.relatedIds && activeEl) {
@@ -626,7 +633,7 @@ export default function CodexPage({
         activeNode.relatedIds.forEach(relId => {
           if (renderedIds.has(relId)) {
             const relEl = document.getElementById(`node-pill-${relId}`);
-            const relNode = TERM_TREE_DATA.find(n => n.id === relId);
+            const relNode = nodes.find(n => n.id === relId);
 
             if (relEl && relNode) {
               const relRect = relEl.getBoundingClientRect();
@@ -715,7 +722,7 @@ export default function CodexPage({
             if (alreadyHasLine) return;
 
             const parentEl = document.getElementById(`node-pill-${pId}`);
-            const parentNode = TERM_TREE_DATA.find(n => n.id === pId);
+            const parentNode = nodes.find(n => n.id === pId);
 
             if (parentEl && parentNode) {
               const parentRect = parentEl.getBoundingClientRect();
@@ -777,7 +784,7 @@ export default function CodexPage({
       }
       window.removeEventListener('resize', updateLines);
     };
-  }, [selectedPath, columns, activeTermId, searchQuery]);
+  }, [selectedPath, columns, activeTermId, searchQuery, nodes]);
 
   // Mouse drag-to-scroll panning like a Miro board
   const activeDragRef = useRef<{
@@ -1416,7 +1423,7 @@ export default function CodexPage({
                   const nodeColor = colIdx === 0 ? getNodeColor(node) : activeRootColor;
                   const nodeIcon = getNodeIcon(node);
 
-                  const hasChildren = TERM_TREE_DATA.some(c => c.parentId === node.id);
+                  const hasChildren = nodes.some(c => c.parentId === node.id);
 
                   // Column 0 / Level 0: Main Category terms (style identical to map page sidebar layer list, minus visibility toggle)
                   if (colIdx === 0) {
@@ -2058,7 +2065,7 @@ export default function CodexPage({
 
                       {/* Related term tags */}
                       {activeTermNode.relatedIds?.map(relId => {
-                        const relNode = TERM_TREE_DATA.find(t => t.id === relId);
+                        const relNode = nodes.find(t => t.id === relId);
                         if (!relNode) return null;
                         const relColor = getNodeColor(relNode);
 
