@@ -2641,6 +2641,79 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
       start: 1946,
       description: 'Jack Parsons and L. Ron Hubbard perform the Babalon Working, a series of sex magic rituals in Pasadena intended to manifest the divine feminine archetype on Earth.',
       source: 'Agape Lodge Records / Parsons Journal'
+    },
+    {
+      id: 'evt-golem-prague',
+      name: 'The Golem of Prague',
+      type: 'event',
+      layer: 'alchemy-occult',
+      start: 1580,
+      description: 'Rabbi Loew ben Bezalel of Prague allegedly animates a clay Golem using Kabbalistic rituals and Hebrew letters to protect the Jewish community.',
+      source: 'Jewish Folklore & Esoterica'
+    },
+    {
+      id: 'evt-theosophy-society',
+      name: 'Theosophical Society Founded',
+      type: 'event',
+      layer: 'alchemy-occult',
+      start: 1875,
+      description: 'Helena Blavatsky and others found the Theosophical Society in New York, popularizing modern esotericism and the belief in the Great White Lodge.',
+      source: 'Theosophical History Archives'
+    },
+    {
+      id: 'timeline-egyptian-civilization',
+      name: 'Ancient Egyptians',
+      type: 'lifespan',
+      layer: 'ancient-civilizations',
+      start: -3100,
+      end: -30,
+      description: 'The civilization of ancient Egypt, famous for its grand dynastic history, royal pyramids of Giza, hieroglyphic writing, and esoteric mystery schools.',
+      source: 'Egyptian Chronology',
+      isPeopleGroup: true
+    },
+    {
+      id: 'timeline-tribe-of-judah',
+      name: 'Tribe of Judah',
+      type: 'lifespan',
+      layer: 'ancient-civilizations',
+      start: -1800,
+      end: 70,
+      description: 'The southern kingdom and lineage of Israel descended from Jacob\'s son Judah, which produced the royal line of David and maintained its identity through the Babylonian Exile up to the Roman destruction of Jerusalem.',
+      source: 'Biblical Chronicles',
+      isPeopleGroup: true
+    },
+    {
+      id: 'timeline-sumerian-civilization',
+      name: 'Sumerian Civilization',
+      type: 'lifespan',
+      layer: 'ancient-civilizations',
+      start: -4500,
+      end: -1900,
+      description: 'The first urban civilization in historical Mesopotamia, responsible for the development of cuneiform script, early mathematical systems, and complex ziggurats.',
+      source: 'Near Eastern Archaeology',
+      isPeopleGroup: true
+    },
+    {
+      id: 'timeline-edomites',
+      name: 'Edomites',
+      type: 'lifespan',
+      layer: 'ancient-civilizations',
+      start: -1800,
+      end: 100,
+      description: 'The descendants of Esau who settled in the rugged sandstone peaks of Mount Seir, establishing a kingdom noted for its strategic trade routes and mountain strongholds.',
+      source: 'Levantine Archaeological Records',
+      isPeopleGroup: true
+    },
+    {
+      id: 'timeline-philistines',
+      name: 'Philistines',
+      type: 'lifespan',
+      layer: 'ancient-civilizations',
+      start: -1200,
+      end: -604,
+      description: 'A seafaring people group originating from the Aegean who established a powerful pentapolis along the coast of southern Canaan, frequently warring with the early Israelite tribes.',
+      source: 'Levantine Archaeology',
+      isPeopleGroup: true
     }
   ];
 
@@ -2753,7 +2826,16 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'evt-book-of-the-law': { lng: 31.2357, lat: 30.0444, locationName: 'Cairo, Egypt', category: 'Alchemy / Occult' },
   'jack-parsons': { lng: -118.156111, lat: 34.133333, locationName: 'Parsons Residence (Pasadena, California)', category: 'Alchemy / Occult' },
   'evt-babalon-working': { lng: -118.156111, lat: 34.133333, locationName: 'Parsons Residence (Pasadena, California)', category: 'Alchemy / Occult' },
-  'abbey-of-thelema': { lng: 14.030556, lat: 38.031944, locationName: 'Abbey of Thelema (Cefalù, Sicily)', category: 'Alchemy / Occult' }
+  'abbey-of-thelema': { lng: 14.030556, lat: 38.031944, locationName: 'Abbey of Thelema (Cefalù, Sicily)', category: 'Alchemy / Occult' },
+  'evt-golem-prague': { lng: 14.418611, lat: 50.090000, locationName: 'Old-New Synagogue (Prague, Czech Republic)', category: 'Alchemy / Occult' },
+  'evt-theosophy-society': { lng: -74.0060, lat: 40.7128, locationName: 'New York City, New York', category: 'Alchemy / Occult' },
+  
+  // Ancient Civilizations / People Groups
+  'timeline-egyptian-civilization': { lng: 31.1342, lat: 29.9792, locationName: 'Great Pyramids of Giza (Egypt)', category: 'Archaeological Finds' },
+  'timeline-tribe-of-judah': { lng: 35.0998, lat: 31.5298, locationName: 'Judean Hills (Hebron, Israel)', category: 'Archaeological Finds' },
+  'timeline-sumerian-civilization': { lng: 46.12, lat: 31.32, locationName: 'Ur & Eridu (Sumerian Heartland)', category: 'Archaeological Finds' },
+  'timeline-edomites': { lng: 35.44, lat: 30.32, locationName: 'Mount Seir (Edomite Territory)', category: 'Archaeological Finds' },
+  'timeline-philistines': { lng: 34.50, lat: 31.66, locationName: 'Ashkelon (Philistine Pentapolis)', category: 'Archaeological Finds' }
 };
 
 export interface Waypoint {

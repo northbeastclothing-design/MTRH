@@ -659,5 +659,41 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
     description: "The largest pre-columbian settlement north of Mexico, featuring Monks Mound, a colossal earthen pyramid covering 14 acres. Cahokia served as the ceremonial and political heart of the Mississippian culture, whose construction is associated in later settler journals with the discovery of giant human skeletons.",
     source: "Cahokia Mounds State Historic Site",
     images: ["https://upload.wikimedia.org/wikipedia/commons/a/ab/MonksMound_aerial.jpg"]
+  },
+  {
+    id: "archaeology-sumer-ur",
+    name: "Ancient Ur & Eridu Ruins",
+    category: "Archaeological Finds",
+    type: "Point",
+    coordinates: { lng: 46.1030, lat: 30.9630 },
+    date: -3800,
+    displayDate: "c. 3800 - 500 BC",
+    description: "The archaeological remains of Ur and Eridu, key urban centers of the ancient Sumerian civilization. Ur is home to the famous Great Ziggurat of Ur, a monumental stepped pyramid temple dedicated to the moon god Nanna.",
+    source: "UNESCO World Heritage Sites / British Museum Excavations",
+    images: ["https://upload.wikimedia.org/wikipedia/commons/1/1c/Ziggurat_of_ur.jpg"]
+  },
+  {
+    id: "archaeology-mount-seir-petra",
+    name: "Petra & Mount Seir",
+    category: "Archaeological Finds",
+    type: "Point",
+    coordinates: { lng: 35.4444, lat: 30.3286 },
+    date: -400,
+    displayDate: "c. 400 BC - 100 AD",
+    description: "The spectacular rock-cut rose red city of Petra, carved directly into the sandstone canyons of Mount Seir. Historically the capital of the Nabataeans, this strategic stronghold lies in the ancestral territory of the Edomites.",
+    source: "UNESCO World Heritage Sites",
+    images: ["https://upload.wikimedia.org/wikipedia/commons/2/2f/Treasury_petra_crop.jpg"]
+  },
+  {
+    id: "archaeology-ashkelon-philistines",
+    name: "Archaeological Site of Ashkelon",
+    category: "Archaeological Finds",
+    type: "Point",
+    coordinates: { lng: 34.5492, lat: 31.6622 },
+    date: -1200,
+    displayDate: "c. 1200 - 604 BC",
+    description: "The ancient seaport of Ashkelon, one of the five major cities of the Philistine Pentapolis. Excavations have uncovered extensive Bronze and Iron Age structures, including the first-ever discovered Philistine cemetery.",
+    source: "Leon Levy Expedition to Ashkelon / Harvard Museum",
+    images: ["https://upload.wikimedia.org/wikipedia/commons/b/b3/Tel_Ashkelon.jpg"]
   }
 ];

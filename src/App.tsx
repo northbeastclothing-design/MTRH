@@ -2518,6 +2518,16 @@ function App() {
         const timelinePins = TIMELINE_ITEMS.map(item => {
           const loc = TIMELINE_LOCATIONS[item.id];
           if (!loc) return null;
+          
+          // Match with Codex node to pull images
+          const codexNode = TERM_TREE_DATA.find(node => 
+            node.timelineId === item.id ||
+            node.mapFeatureId === item.id ||
+            node.id === item.id ||
+            (node.name && item.name && node.name.toLowerCase() === item.name.toLowerCase())
+          );
+          const resolvedImages = codexNode && codexNode.images ? codexNode.images : [];
+
           return {
             id: item.id,
             name: item.name,
@@ -2528,7 +2538,7 @@ function App() {
             date: item.start,
             description: item.description,
             source: item.source || null,
-            images: [],
+            images: resolvedImages,
             isTimelinePin: true,
             isPeopleGroup: item.isPeopleGroup,
             subLabel: item.subLabel,

@@ -50,6 +50,7 @@ const LAYER_COLORS: Record<string, string> = {
   'Biblical Finds': '#D49459',
   'Secret Government Programs': '#FF5C5C',
   'Alchemy / Occult': '#E9C46A',
+  'People Groups': '#74F8F3',
   'Default': '#b6a6ff'
 };
 
@@ -80,6 +81,7 @@ const LAYER_ICONS: Record<string, string> = {
   'Biblical Finds': '/icons/icon-biblical-finds.svg',
   'Secret Government Programs': '/icons/icon-secret-government-programs.svg',
   'Alchemy / Occult': '/icons/icon-alchemy-occult.svg',
+  'People Groups': '/icons/icon-people-groups.svg',
   'Default': '/icons/icon-map-pin.svg'
 };
 
@@ -300,6 +302,7 @@ export default function CodexPage({
     if (curr.id === 'supernatural-anomalies') return '#C2FFBD'; // Green (U.F.O. Sightings)
     if (curr.id === 'secret-government-programs') return '#FF5C5C'; // Red (Secret Government Programs)
     if (curr.id === 'alchemy-occult') return '#E9C46A'; // Gold (Alchemy / Occult)
+    if (curr.id === 'people-groups') return '#74F8F3'; // Cyan (People Groups)
     
     return LAYER_COLORS['Default'];
   }
@@ -369,6 +372,7 @@ export default function CodexPage({
     if (node.id === 'supernatural-anomalies') return LAYER_ICONS['U.F.O. Sightings'];
     if (node.id === 'secret-government-programs') return LAYER_ICONS['Secret Government Programs'];
     if (node.id === 'alchemy-occult') return LAYER_ICONS['Alchemy / Occult'];
+    if (node.id === 'people-groups') return LAYER_ICONS['People Groups'];
 
     if (node.layer && LAYER_ICONS[node.layer]) {
       return LAYER_ICONS[node.layer];
@@ -380,6 +384,7 @@ export default function CodexPage({
       if (parentId === 'supernatural-anomalies') return LAYER_ICONS['U.F.O. Sightings'];
       if (parentId === 'secret-government-programs') return LAYER_ICONS['Secret Government Programs'];
       if (parentId === 'alchemy-occult') return LAYER_ICONS['Alchemy / Occult'];
+      if (parentId === 'people-groups') return LAYER_ICONS['People Groups'];
 
       const parent = TERM_TREE_DATA.find(n => n.id === parentId);
       if (parent && parent.layer && LAYER_ICONS[parent.layer]) {

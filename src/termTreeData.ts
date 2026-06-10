@@ -44,10 +44,123 @@ const chunk_0: any[] = [
     description: 'Indigenous nations, historical empires, lineages, and mysterious societies whose origins and legacies are recorded in antiquity.'
   },
   {
-    id: 'angel',
+    id: 'elohim',
     parentId: 'biblical-apocryphal',
+    name: 'Elohim',
+    description: 'A biblical Hebrew term for "divine beings" or "gods," representing the spiritual hosts, angelic orders, and heavenly council ruling under God in biblical and Near Eastern cosmology.'
+  },
+  {
+    id: 'angel',
+    parentId: 'elohim',
     name: 'Angels',
     description: 'Angelic messengers and heavenly hosts who carry out the will of God, acting as guides, protectors, and executors of divine judgment.'
+  },
+  {
+    id: 'thrones-ophanim',
+    parentId: 'elohim',
+    name: 'Thrones (Ophanim)',
+    description: 'The "wheels" seen in Ezekiel\'s vision of the divine chariot, described as wheels within wheels covered with eyes. In angelic hierarchy, they represent divine justice and support the throne of God.',
+    sources: ['Bible', 'Apocryphal Texts'],
+    bibleVerses: [
+      'As I looked at the living creatures, I saw a wheel on the ground beside each creature with its four faces. This was the appearance and structure of the wheels: They sparkled like topaz, and all four looked alike. Each appeared to be made like a wheel intersecting a wheel. — Ezekiel 1:15-16 (https://www.biblegateway.com/passage/?search=Ezekiel+1%3A15-16)',
+      'For in him all things were created: things in heaven and on earth, visible and invisible, whether thrones or powers or rulers or authorities; all things have been created through him and for him. — Colossians 1:16 (https://www.biblegateway.com/passage/?search=Colossians+1%3A16)'
+    ]
+  },
+  {
+    id: 'dominions',
+    parentId: 'elohim',
+    name: 'Dominions (Lordships)',
+    description: 'An order of angels responsible for regulating the duties of lower angels and maintaining the cosmic order. They manifest the majesty of God\'s sovereign rule.',
+    sources: ['Bible', 'Apocryphal Texts'],
+    bibleVerses: [
+      'far above all rule and authority, power and dominion, and every name that is invoked, not only in the present age but also in the one to come. — Ephesians 1:21 (https://www.biblegateway.com/passage/?search=Ephesians+1%3A21)',
+      'whether thrones or powers or rulers or authorities; all things have been created through him and for him. — Colossians 1:16 (https://www.biblegateway.com/passage/?search=Colossians+1%3A16)'
+    ]
+  },
+  {
+    id: 'virtues',
+    parentId: 'elohim',
+    name: 'Virtues (Strongholds)',
+    description: 'An order of angels associated with miracles, signs, and the bestowal of grace and courage to humanity, helping govern the laws of the physical cosmos.',
+    sources: ['Bible', 'Apocryphal Texts'],
+    bibleVerses: [
+      'who has gone into heaven and is at God’s right hand—with angels, authorities and powers in submission to him. — 1 Peter 3:22 (https://www.biblegateway.com/passage/?search=1+Peter+3%3A22)'
+    ]
+  },
+  {
+    id: 'holy-powers',
+    parentId: 'elohim',
+    name: 'Powers (Authorities)',
+    description: 'An order of angels tasked with defending the cosmos against malevolent spiritual forces, guarding the pathways between heaven and earth, and maintaining spiritual equilibrium.',
+    sources: ['Bible', 'Apocryphal Texts'],
+    bibleVerses: [
+      'For in him all things were created: things in heaven and on earth, visible and invisible, whether thrones or powers or rulers or authorities; all things have been created through him and for him. — Colossians 1:16 (https://www.biblegateway.com/passage/?search=Colossians+1%3A16)'
+    ]
+  },
+  {
+    id: 'holy-principalities',
+    parentId: 'elohim',
+    name: 'Principalities (Rulers)',
+    description: 'An order of angels charged with watching over large groups, nations, cities, and the church, guiding their leaders and protecting their spiritual destinies.',
+    sources: ['Bible', 'Apocryphal Texts'],
+    bibleVerses: [
+      'For in him all things were created: things in heaven and on earth, visible and invisible, whether thrones or powers or rulers or authorities; all things have been created through him and for him. — Colossians 1:16 (https://www.biblegateway.com/passage/?search=Colossians+1%3A16)'
+    ]
+  },
+  {
+    id: 'archangels-order',
+    parentId: 'elohim',
+    name: 'Archangels',
+    description: 'A high order of angels who serve as chief messengers, military commanders of the heavenly hosts, and guardians of nations in divine revelation.',
+    sources: ['Bible', 'Apocryphal Texts'],
+    bibleVerses: [
+      'For the Lord himself will come down from heaven, with a loud command, with the voice of the archangel and with the trumpet call of God... — 1 Thessalonians 4:16 (https://www.biblegateway.com/passage/?search=1+Thessalonians+4%3A16)',
+      'But even the archangel Michael, when he was disputing with the devil about the body of Moses, did not himself dare to condemn him for slander... — Jude 1:9 (https://www.biblegateway.com/passage/?search=Jude+1%3A9)'
+    ]
+  },
+  {
+    id: 'living-creatures',
+    parentId: 'elohim',
+    name: 'Living Creatures (Chayot Ha Kodesh)',
+    description: 'Four multi-winged, multi-faced celestial beings surrounding the throne of God in the visions of Ezekiel and John. They have the faces of a human, a lion, an ox, and an eagle, crying "Holy, Holy, Holy" day and night.',
+    sources: ['Bible', 'Apocryphal Texts'],
+    bibleVerses: [
+      'Each of the four living creatures had six wings and was covered with eyes all around, even under its wings. Day and night they never stop saying: "‘Holy, holy, holy is the Lord God Almighty,’ who was, and is, and is to come." — Revelation 4:8 (https://www.biblegateway.com/passage/?search=Revelation+4%3A8)',
+      'In the middle of it was the likeness of four living creatures. This was their appearance: they had the likeness of a man. — Ezekiel 1:5 (https://www.biblegateway.com/passage/?search=Ezekiel+1%3A5)'
+    ]
+  },
+  {
+    id: 'hashmallim',
+    parentId: 'elohim',
+    name: 'Hashmallim (Glowing Ones)',
+    description: 'An order of angels in Jewish Kabbalistic tradition and Ezekiel\'s chariot vision, described as entities of glowing metal or electric light who represent raw celestial energy.',
+    sources: ['Jewish Mysticism', 'Talmud (Hagigah 13a)'],
+    isApocryphal: true,
+    bibleVerses: [
+      'I looked, and I saw a windstorm coming out of the north—a immense cloud with flashing lightning and surrounded by brilliant light. The center of the fire looked like glowing metal [Hebrew: hashmal]. — Ezekiel 1:4 (https://www.biblegateway.com/passage/?search=Ezekiel+1%3A4)'
+    ]
+  },
+  {
+    id: 'erelim',
+    parentId: 'elohim',
+    name: 'Erelim (Valiant Ones)',
+    description: 'An order of angels in Jewish Kabbalistic and liturgical lore representing strength and deep devotion, associated with mourning for destruction and carrying divine courage.',
+    sources: ['Jewish Mysticism', 'Zohar'],
+    isApocryphal: true,
+    bibleVerses: [
+      'Behold, their valiant ones [Hebrew: erelim] cry without; the ambassadors of peace weep bitterly. — Isaiah 33:7 (https://www.biblegateway.com/passage/?search=Isaiah+33%3A7)'
+    ]
+  },
+  {
+    id: 'holy-watchers',
+    parentId: 'elohim',
+    name: 'Holy Watchers (Irin)',
+    description: 'An order of high-ranking angels who do not sleep, guarding the celestial boundaries and executing decrees of the divine council. While some Watchers rebelled, the faithful Watchers remain guardians of cosmic order.',
+    sources: ['Book of Daniel', 'Book of Enoch'],
+    bibleVerses: [
+      'I saw in the visions of my head on my bed, and behold, a watcher and a holy one came down from heaven. — Daniel 4:13 (https://www.biblegateway.com/passage/?search=Daniel+4%3A13)',
+      'This matter is by the decree of the watchers, and the demand by the word of the holy ones... — Daniel 4:17 (https://www.biblegateway.com/passage/?search=Daniel+4%3A17)'
+    ]
   },
   {
     id: 'metatron',
@@ -258,7 +371,7 @@ const chunk_0: any[] = [
   },
   {
     id: 'cherubim',
-    parentId: 'angel',
+    parentId: 'elohim',
     name: 'Cherubim',
     description: 'High-ranking celestial beings associated with the presence and glory of God. In Genesis, they are stationed with a flaming sword to guard the way to the Tree of Life. In Ezekiel\'s vision, they appear as multi-faced creatures carrying the divine throne.',
     sources: ['Bible', 'Apocryphal Texts'],
@@ -266,7 +379,7 @@ const chunk_0: any[] = [
   },
   {
     id: 'seraphim',
-    parentId: 'angel',
+    parentId: 'elohim',
     name: 'Seraphim',
     description: 'An order of fiery six-winged angels described in Isaiah\'s vision of the Temple. They hover above the throne of God, continuously chanting \'Holy, holy, holy is the Lord of Hosts,\' and purifying the prophet\'s lips with a burning coal.',
     sources: ['Bible', 'Apocryphal Texts'],
@@ -281,8 +394,14 @@ const chunk_0: any[] = [
     bibleVerses: ['Around the throne were twenty-four thrones. On the thrones were twenty-four elders sitting, dressed in white garments, with crowns of gold on their heads. — Revelation 4:4 (https://www.biblegateway.com/passage/?search=Revelation+4%3A4)', 'the twenty-four elders fall down before him who sits on the throne, and worship him who lives forever and ever, and throw their crowns before the throne, saying, — Revelation 4:10 (https://www.biblegateway.com/passage/?search=Revelation+4%3A10)', 'Now when he had taken the book, the four living creatures and the twenty-four elders fell down before the Lamb, each one having a harp, and golden bowls full of incense, which are the prayers of the saints. — Revelation 5:8 (https://www.biblegateway.com/passage/?search=Revelation+5%3A8)']
   },
   {
-    id: 'fallen-angel',
+    id: 'demonology',
     parentId: 'biblical-apocryphal',
+    name: 'Demonology',
+    description: 'The study and taxonomy of fallen angels, demons, malevolent spirits, and unclean entities in biblical, apocryphal, and historical accounts.'
+  },
+  {
+    id: 'fallen-angel',
+    parentId: 'demonology',
     name: 'Fallen Angels',
     description: 'Rebellious spiritual entities cast out of heaven who corrupt humanity, teach forbidden knowledge, and are bound for judgment.',
     secondaryParentIds: ['aliens'],
@@ -290,7 +409,7 @@ const chunk_0: any[] = [
   },
   {
     id: 'demons',
-    parentId: 'fallen-angel',
+    parentId: 'demonology',
     name: 'Demons',
     description: 'Malevolent spiritual entities, described in Enochian texts as the disembodied spirits of the deceased Nephilim giants who wander the earth bringing corruption.',
     translations: [
@@ -300,6 +419,69 @@ const chunk_0: any[] = [
     bibleVerses: ['They sacrificed to demons, not God, to gods that they didn’t know, to new gods that came up recently, which your fathers didn’t dread. — Deuteronomy 32:17 (https://www.biblegateway.com/passage/?search=Deuteronomy+32%3A17)', 'The demons begged him, saying, “If you cast us out, permit us to go away into the herd of pigs.” — Matthew 8:31 (https://www.biblegateway.com/passage/?search=Matthew+8%3A31)', 'You believe that God is one. You do well. The demons also believe, and shudder. — James 2:19 (https://www.biblegateway.com/passage/?search=James+2%3A19)'],
     sources: ['Book of Enoch', 'Book of Giants', 'Canonical Gospels'],
     secondaryParentIds: ['hauntings-br', 'cryptid-sightings-br'],
+    isApocryphal: true
+  },
+  {
+    id: 'shedim',
+    parentId: 'demons',
+    name: 'Shedim',
+    description: 'The biblical Hebrew term for demons or foreign deities, translated as "demons" or "devils," to whom ancient Israelites were warned against sacrificing.',
+    sources: ['Bible'],
+    bibleVerses: [
+      'They sacrificed to demons [Hebrew: shedim], not God, to gods that they didn’t know, to new gods that came up recently... — Deuteronomy 32:17 (https://www.biblegateway.com/passage/?search=Deuteronomy+32%3A17)',
+      'They sacrificed their sons and their daughters to demons [Hebrew: shedim]. — Psalm 106:37 (https://www.biblegateway.com/passage/?search=Psalm+106%3A37)'
+    ]
+  },
+  {
+    id: 'seirim',
+    parentId: 'demons',
+    name: 'Se\'irim (Goat-Demons)',
+    description: 'Desert spirits or satyrs mentioned in the Bible, translated as "goat-demons" or "wild goats," associated with desolate ruins and forbidden pagan rituals.',
+    sources: ['Bible'],
+    bibleVerses: [
+      'They shall no more sacrifice their sacrifices to the goat-demons [Hebrew: se\'irim], after whom they play the prostitute. — Leviticus 17:7 (https://www.biblegateway.com/passage/?search=Leviticus+17%3A7)',
+      'But wild beasts of the desert will lie there, and their houses will be full of owls. Ostriches will dwell there, and wild goats [Hebrew: se\'irim] will caper there. — Isaiah 13:21 (https://www.biblegateway.com/passage/?search=Isaiah+13%3A21)'
+    ]
+  },
+  {
+    id: 'lilith',
+    parentId: 'demons',
+    name: 'Lilith',
+    description: 'A night-demon or screech owl mentioned in Isaiah\'s prophecy of Edom\'s desolation. In later Jewish apocryphal and Talmudic tradition, she is described as Adam\'s first wife who fled Eden and became a mother of demons.',
+    sources: ['Book of Isaiah', 'Alphabet of Sirach', 'Talmud (Erubin 100b)'],
+    isApocryphal: true,
+    bibleVerses: [
+      'The wild beasts of the desert will meet with the wolves, and the wild goat will cry to his fellow. Yes, the night monster [Hebrew: lilith] will settle there, and will find her a place of rest. — Isaiah 34:14 (https://www.biblegateway.com/passage/?search=Isaiah+34%3A14)'
+    ]
+  },
+  {
+    id: 'belial',
+    parentId: 'demons',
+    name: 'Belial',
+    description: 'A biblical term representing worthlessness, lawlessness, and wickedness, later personified in Second Temple literature and the New Testament as a chief demon, Satan, or the ruler of darkness.',
+    sources: ['Bible', 'Dead Sea Scrolls (Rule of the Community)'],
+    bibleVerses: [
+      'What agreement has Christ with Belial? Or what portion has a believer with an unbeliever? — 2 Corinthians 6:15 (https://www.biblegateway.com/passage/?search=2+Corinthians+6%3A15)',
+      'Certain worthless fellows [Hebrew: sons of Belial] have gone out from among you, and have drawn away the inhabitants of their city... — Deuteronomy 13:13 (https://www.biblegateway.com/passage/?search=Deuteronomy+13%3A13)'
+    ]
+  },
+  {
+    id: 'djinns',
+    parentId: 'demons',
+    name: 'Jinn (Djinns)',
+    description: 'Spiritual beings in Near Eastern and Islamic lore created from "smokeless fire" who inhabit an unseen parallel dimension. Like humans, they possess free will and can be good, neutral, or malevolent.',
+    sources: ['Quran', 'Near Eastern Folklore'],
+    isApocryphal: true,
+    bibleVerses: [
+      'And He created the jinn from a smokeless flame of fire. — Quran 55:15'
+    ]
+  },
+  {
+    id: 'dybbuk',
+    parentId: 'demons',
+    name: 'Dybbuk',
+    description: 'In Jewish folklore and Kabbalistic tradition, a dybbuk is the wandering, disembodied soul of a deceased person that clings to or possesses the body of a living person to achieve a neglected purpose.',
+    sources: ['Jewish Mysticism', 'Sha\'an HaGilgulim (Gate of Reincarnations)'],
     isApocryphal: true
   },
   {
@@ -323,7 +505,7 @@ const chunk_0: any[] = [
   },
   {
     id: 'beelzebub',
-    parentId: 'fallen-angel',
+    parentId: 'demons',
     name: 'Beelzebub',
     description: 'Originally a Philistine god worshipped at Ekron (Baal-Zebub), later syncretized in Jewish and Christian demonology as a high-ranking prince of demons. Known as the \'Lord of the Flies,\' he is associated with pride, rebellion, and demonic hierarchy.',
     sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
@@ -332,7 +514,7 @@ const chunk_0: any[] = [
   },
   {
     id: 'asmodeus',
-    parentId: 'fallen-angel',
+    parentId: 'demons',
     name: 'Asmodeus',
     description: 'A powerful king of demons prominently featured in the deuterocanonical Book of Tobit and the Testament of Solomon. Associated with lust, wrath, discord, and the disruption of marriages.',
     sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
@@ -509,7 +691,7 @@ const chunk_0: any[] = [
   },
   {
     id: 'abaddon',
-    parentId: 'fallen-angel',
+    parentId: 'demons',
     name: 'Abaddon',
     description: 'Master destroyer Seen in: Invoked by MOses to destroy Egyptians (red sea).',
     translations: [
@@ -521,7 +703,7 @@ const chunk_0: any[] = [
   },
   {
     id: 'leviathin',
-    parentId: 'fallen-angel',
+    parentId: 'demons',
     name: 'Leviathin',
     description: 'Arrogance, Heresy Also known as: Serpent, dragon.',
     sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
@@ -22132,6 +22314,66 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Smithsonian Bureau of Ethnology Reports', 'North American Archaeology Archives']
   },
   {
+    id: 'egyptian-civilization',
+    parentId: 'ancient-civilizations-tribes',
+    name: 'Ancient Egyptians',
+    description: 'One of the oldest and most influential civilizations in the ancient world, centered along the Nile River. Renowned for monumental stone pyramids, sphinxes, advanced geometry, and deep ties to Enochian and Hermetic lore.',
+    timelineId: 'timeline-egyptian-civilization',
+    mapFeatureId: 'archaeology-tutankhamun-tomb',
+    relatedIds: ['megaliths-structures', 'emerald-tablet', 'hermeticism'],
+    sources: ['Ancient Egyptian Records', 'Hermetic Literature']
+  },
+  {
+    id: 'israelites',
+    parentId: 'ancient-civilizations-tribes',
+    name: 'Kingdom of Israel',
+    description: 'The ancient Hebrew nation descended from the twelve sons of Jacob (Israel). They established a united monarchy under Saul, David, and Solomon before splitting into the Northern Kingdom (Israel) and Southern Kingdom (Judah).',
+    timelineId: 'reign-david',
+    mapFeatureId: 'archaeology-hezekiahs-tunnel-inscription',
+    relatedIds: ['biblical-apocryphal', 'reign-david', 'reign-solomon-temple'],
+    sources: ['Bible', 'Ancient Near East Chronology']
+  },
+  {
+    id: 'tribe-of-judah',
+    parentId: 'ancient-civilizations-tribes',
+    name: 'Tribe of Judah',
+    description: 'One of the twelve tribes of Israel, descended from Jacob\'s fourth son, Judah. The tribe settled in the southern region of Canaan (Judea) and produced the Davidic royal bloodline and eventually Jesus Christ.',
+    timelineId: 'timeline-tribe-of-judah',
+    mapFeatureId: 'archaeology-pool-of-siloam',
+    relatedIds: ['israelites', 'royal-bloodlines', 'judah'],
+    sources: ['Bible', 'Jewish Historical Annals']
+  },
+  {
+    id: 'sumerian-civilization',
+    parentId: 'ancient-civilizations-tribes',
+    name: 'Sumerian Civilization',
+    description: 'The earliest known civilization in the historical region of southern Mesopotamia (modern Iraq). Famous for inventing cuneiform writing, developing advanced mathematics, and compiling the Sumerian King List of legendary long-lived rulers.',
+    timelineId: 'timeline-sumerian-civilization',
+    mapFeatureId: 'archaeology-sumer-ur',
+    relatedIds: ['sumerian-kings', 'anunnaki', 'babel-evt'],
+    sources: ['Sumerian Clay Tablets', 'Mesopotamian Archaeology']
+  },
+  {
+    id: 'edomites',
+    parentId: 'ancient-civilizations-tribes',
+    name: 'Edomites',
+    description: 'An ancient Semitic nation situated in the rugged mountain region of Mount Seir (modern Jordan), descended from Esau (Edom), the twin brother of Jacob. Famous for their rock-hewn fortress cities like Petra.',
+    timelineId: 'timeline-edomites',
+    mapFeatureId: 'archaeology-mount-seir-petra',
+    relatedIds: ['esau', 'horites'],
+    sources: ['Bible', 'Levantine Archaeological Records']
+  },
+  {
+    id: 'philistines',
+    parentId: 'ancient-civilizations-tribes',
+    name: 'Philistines',
+    description: 'An ancient seafaring people who settled on the southern coast of Canaan (the Pentapolis, including Gaza and Ashkelon). According to biblical and archaeological records, they migrated from Caphtor (Crete) and frequently clashed with the Israelites.',
+    timelineId: 'timeline-philistines',
+    mapFeatureId: 'archaeology-ashkelon-philistines',
+    relatedIds: ['israelites', 'reign-david', 'avim'],
+    sources: ['Bible', 'Philistine Material Culture (Ashkelon)']
+  },
+  {
     id: 'agartha-inner-earth',
     parentId: 'supernatural-anomalies',
     name: 'Agartha (Inner Earth)',
@@ -22622,7 +22864,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     name: 'The Emerald Tablet',
     description: 'A legendary Hermetic text reputed to contain the secrets of the prima materia and alchemical transmutation, famous for the core precept: "As above, so below."',
     relatedIds: ['hermeticism', 'alchemy', 'isaac-newton'],
-    images: ['https://upload.wikimedia.org/wikipedia/commons/1/1a/Emerald_Tablet_of_Hermes.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Leipzig_tablet_text.jpg/1280px-Leipzig_tablet_text.jpg'],
     sources: ['Tabula Smaragdina Translation (Isaac Newton)', 'Chrysopoeia of Cleopatra']
   },
   {
@@ -22659,7 +22901,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     timelineId: 'nicolas-flamel',
     mapFeatureId: 'nicolas-flamel',
     relatedIds: ['alchemy', 'historical-alchemists'],
-    images: ['https://upload.wikimedia.org/wikipedia/commons/f/ff/Maison_de_Nicolas_Flamel%2C_51_rue_de_Montmorency%2C_Paris_3e.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/7/73/Nicolas_Flamel_Histoire_critique.jpg'],
     sources: ['Exposition of the Hieroglyphical Figures (1612)', 'Historical Paris Archives']
   },
   {
@@ -22726,7 +22968,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     timelineId: 'aleister-crowley',
     mapFeatureId: 'aleister-crowley',
     relatedIds: ['ordo-templi-orientis', 'hermetic-order-golden-dawn', 'jack-parsons', 'abbey-of-thelema'],
-    images: ['https://upload.wikimedia.org/wikipedia/commons/e/ec/Aleister_Crowley_Golden_Dawn.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/4/40/Aleister_Crowley%2C_thinker.jpg'],
     sources: ['The Book of the Law', 'Magick in Theory and Practice', 'Boleskine House Archives']
   },
   {
@@ -22737,7 +22979,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     timelineId: 'jack-parsons',
     mapFeatureId: 'jack-parsons',
     relatedIds: ['ordo-templi-orientis', 'aleister-crowley'],
-    images: ['https://upload.wikimedia.org/wikipedia/commons/2/23/Jack_Parsons_rocket_scientist.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/5/5d/Jack_Parsons_2.jpg'],
     sources: ['Strange Angel (George Pendle)', 'The Collected Writings of Jack Parsons']
   },
   {
@@ -22748,5 +22990,59 @@ export const TERM_TREE_DATA: TermNode[] = [
     mapFeatureId: 'abbey-of-thelema',
     relatedIds: ['aleister-crowley', 'ordo-templi-orientis'],
     sources: ['The Confessions of Aleister Crowley', 'Cefalù Local History Records']
+  },
+  {
+    id: 'philosophers-stone',
+    parentId: 'alchemy',
+    name: 'Philosopher\'s Stone',
+    description: 'A legendary alchemical substance capable of turning base metals into gold or silver, and the essential ingredient for creating the Elixir of Life.',
+    relatedIds: ['alchemy', 'elixir-of-life', 'nicolas-flamel'],
+    sources: ['Alchemical Treatises']
+  },
+  {
+    id: 'elixir-of-life',
+    parentId: 'alchemy',
+    name: 'Elixir of Life',
+    description: 'A mythical potion that grants the drinker eternal youth or immortality, sought by alchemists in connection with the Philosopher\'s Stone.',
+    relatedIds: ['alchemy', 'philosophers-stone'],
+    sources: ['Alchemical Treatises']
+  },
+  {
+    id: 'homunculus',
+    parentId: 'alchemy',
+    name: 'Homunculus',
+    description: 'A miniature, fully formed human constructed through alchemical processes, first detailed in the writings of Paracelsus.',
+    relatedIds: ['alchemy', 'paracelsus'],
+    sources: ['De Natura Rerum (Paracelsus)']
+  },
+  {
+    id: 'golem',
+    parentId: 'kabbalah',
+    name: 'The Golem',
+    description: 'An animate anthropomorphic being created entirely from inanimate matter (usually clay or mud) brought to life through mystical Hebrew letters and Kabbalistic incantations, most famously the Golem of Prague.',
+    timelineId: 'evt-golem-prague',
+    mapFeatureId: 'evt-golem-prague',
+    relatedIds: ['kabbalah'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Golem_%E2%80%93_Mikol%C3%A1%C5%A1_Ale%C5%A1_%28Star%C3%A9_pov%C4%9Bsti_%C4%8Desk%C3%A9%29.jpg/1280px-Golem_%E2%80%93_Mikol%C3%A1%C5%A1_Ale%C5%A1_%28Star%C3%A9_pov%C4%9Bsti_%C4%8Desk%C3%A9%29.jpg'],
+    sources: ['Jewish Folklore', 'Kabbalistic Manuscripts']
+  },
+  {
+    id: 'theosophy',
+    parentId: 'esoteric-traditions',
+    name: 'Theosophy',
+    description: 'An esoteric philosophy founded in the late 19th century by Helena Blavatsky, Henry Steel Olcott, and others, blending Western esotericism with Eastern mystical concepts.',
+    timelineId: 'evt-theosophy-society',
+    mapFeatureId: 'evt-theosophy-society',
+    relatedIds: ['great-white-lodge', 'magical-orders'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/a/ad/Helena_Petrovna_Blavatsky.jpg'],
+    sources: ['The Secret Doctrine (Helena Blavatsky)', 'Isis Unveiled']
+  },
+  {
+    id: 'great-white-lodge',
+    parentId: 'theosophy',
+    name: 'Great White Lodge',
+    description: 'Also known as the Great White Brotherhood, a belief in a hidden hierarchy of spiritual masters who guide human evolution and preserve ancient esoteric wisdom.',
+    relatedIds: ['theosophy'],
+    sources: ['Theosophical Literature']
   }
 ];
