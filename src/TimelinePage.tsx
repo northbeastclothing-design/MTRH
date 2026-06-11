@@ -1093,7 +1093,7 @@ export default function TimelinePage({
                                   WebkitMaskImage: mask,
                                   maskImage: mask
                                 }}>
-                                  {item.isPeopleGroup && (
+                                  {item.isPeopleGroup && item.subLabel === 'Possible Nephilim Bloodline' && (
                                     <span style={{
                                       marginRight: '6px',
                                       fontWeight: 900,
@@ -1224,7 +1224,7 @@ export default function TimelinePage({
                                     display: 'inline-flex',
                                     alignItems: 'center'
                                   }}>
-                                    {item.isPeopleGroup && (
+                                    {item.isPeopleGroup && item.subLabel === 'Possible Nephilim Bloodline' && (
                                       <span style={{
                                         marginRight: '6px',
                                         fontWeight: 900,
@@ -1528,7 +1528,7 @@ export default function TimelinePage({
                       alignItems: 'center',
                       gap: '6px'
                     }}>
-                      {selectedItem.isPeopleGroup && (
+                      {selectedItem.isPeopleGroup && selectedItem.subLabel === 'Possible Nephilim Bloodline' && (
                         <span style={{
                           marginRight: '8px',
                           fontWeight: 900,
