@@ -3415,60 +3415,60 @@ const chunk_0: any[] = [
   },
   {
     id: 'rephaim',
-    parentId: 'biblical-figures',
+    parentId: 'ancient-civilizations-tribes',
     name: 'Rephaim',
     description: 'An ancient race of giants who inhabited Canaan, Bashan, and Moab. Associated with King Og of Bashan and the valley of Rephaim.',
-    layer: 'biblical-patriarchs',
+    layer: 'ancient-civilizations',
     timelineId: 'rephaim',
     sources: ['Bible', 'Historical Chronology Database'],
     bibleVerses: ['In the fourteenth year Chedorlaomer came, and the kings who were with him, and struck the Rephaim in Ashteroth Karnaim, and the Zuzim in Ham, and the Emim in Shaveh Kiriathaim, — Genesis 14:5 (https://www.biblegateway.com/passage/?search=Genesis+14%3A5)', '(For only Og king of Bashan remained of the remnant of the Rephaim. Behold, his bedstead was a bedstead of iron. Isn’t it in Rabbah of the children of Ammon? Nine cubits was its length, and four cubits its width, after the cubit of a man.) — Deuteronomy 3:11 (https://www.biblegateway.com/passage/?search=Deuteronomy+3%3A11)', 'and the border of Og king of Bashan, of the remnant of the Rephaim, who lived at Ashtaroth and at Edrei, — Joshua 12:4 (https://www.biblegateway.com/passage/?search=Joshua+12%3A4)']
   },
   {
     id: 'emim',
-    parentId: 'biblical-figures',
+    parentId: 'ancient-civilizations-tribes',
     name: 'Emim',
     description: 'An ancient giant people who originally inhabited the land of Moab. Described as "a people great, and many, and tall, as the Anakim."',
-    layer: 'biblical-patriarchs',
+    layer: 'ancient-civilizations',
     timelineId: 'emim',
     sources: ['Bible', 'Historical Chronology Database'],
     bibleVerses: ['In the fourteenth year Chedorlaomer came, and the kings who were with him, and struck the Rephaim in Ashteroth Karnaim, and the Zuzim in Ham, and the Emim in Shaveh Kiriathaim, — Genesis 14:5 (https://www.biblegateway.com/passage/?search=Genesis+14%3A5)', '(The Emim lived therein before, a people great, and many, and tall, as the Anakim. These also are considered to be Rephaim, as the Anakim; but the Moabites call them Emim. — Deuteronomy 2:10-11 (https://www.biblegateway.com/passage/?search=Deuteronomy+2%3A10-11)']
   },
   {
     id: 'horites',
-    parentId: 'biblical-figures',
+    parentId: 'ancient-civilizations-tribes',
     name: 'Horites',
     description: 'The ancient cave-dwelling inhabitants of Mount Seir (Edom) before being dispossessed and succeeded by the descendants of Esau (Edomites).',
-    layer: 'biblical-patriarchs',
+    layer: 'ancient-civilizations',
     timelineId: 'horites',
     sources: ['Bible', 'Historical Chronology Database'],
     bibleVerses: ['and the Horites in their Mount Seir, to El Paran, which is by the wilderness. — Genesis 14:6 (https://www.biblegateway.com/passage/?search=Genesis+14%3A6)', 'The Horites also lived in Seir before, but the children of Esau succeeded them. They destroyed them from before them, and lived in their place; as Israel did to the land of his possession, which Yahweh gave to them.) — Deuteronomy 2:12 (https://www.biblegateway.com/passage/?search=Deuteronomy+2%3A12)', 'The sons of Seir: Lotan, Shobal, Zibeon, Anah, Dishon, Ezer, and Dishan. — 1 Chronicles 1:38 (https://www.biblegateway.com/passage/?search=1+Chronicles+1%3A38)']
   },
   {
     id: 'avim',
-    parentId: 'biblical-figures',
+    parentId: 'ancient-civilizations-tribes',
     name: 'Avim',
     description: 'The early inhabitants of southwest Canaan (near Gaza) who dwelt in villages as far as Hazerim, later destroyed and replaced by the Caphtorim (Philistines).',
-    layer: 'biblical-patriarchs',
+    layer: 'ancient-civilizations',
     timelineId: 'avim',
     sources: ['Bible', 'Historical Chronology Database'],
     bibleVerses: ['and the Avvim, who lived in villages as far as Gaza, the Caphtorim, who came out of Caphtor, destroyed them, and lived in their place.) — Deuteronomy 2:23 (https://www.biblegateway.com/passage/?search=Deuteronomy+2%3A23)', 'from the Shihor, which is before Egypt, even to the border of Ekron northward, which is counted as Canaanite; the five lords of the Philistines; the Gazites, and the Ashdodites, the Ashkelonites, the Gittites, and the Ekronites; also the Avvim, — Joshua 13:3 (https://www.biblegateway.com/passage/?search=Joshua+13%3A3)']
   },
   {
     id: 'perizzites',
-    parentId: 'biblical-figures',
+    parentId: 'ancient-civilizations-tribes',
     name: 'Perizzites',
     description: 'A Canaanite people group who lived in the forested hill country of Ephraim and Judah. Mentioned regularly as inhabitants of the Promised Land.',
-    layer: 'biblical-patriarchs',
+    layer: 'ancient-civilizations',
     timelineId: 'perizzites',
     sources: ['Bible', 'Historical Chronology Database'],
     bibleVerses: ['There was strife between the herdsmen of Abram’s livestock and the herdsmen of Lot’s livestock. The Canaanites and the Perizzites lived in the land at that time. — Genesis 13:7 (https://www.biblegateway.com/passage/?search=Genesis+13%3A7)', 'the Hittites, the Perizzites, the Rephaim, — Genesis 15:20 (https://www.biblegateway.com/passage/?search=Genesis+15%3A20)', 'Judah went up, and Yahweh delivered the Canaanites and the Perizzites into their hand. They struck ten thousand men in Bezek. — Judges 1:4 (https://www.biblegateway.com/passage/?search=Judges+1%3A4)']
   },
   {
     id: 'kenites',
-    parentId: 'biblical-figures',
+    parentId: 'ancient-civilizations-tribes',
     name: 'Kenites',
     description: 'A nomadic clan of metalworkers allied with Israel. Jethro, the father-in-law of Moses, was a Kenite. They inhabited the Wilderness of Arad.',
-    layer: 'biblical-patriarchs',
+    layer: 'ancient-civilizations',
     timelineId: 'kenites',
     sources: ['Bible', 'Historical Chronology Database'],
     bibleVerses: ['the Kenites, the Kenizzites, the Kadmonites, — Genesis 15:19 (https://www.biblegateway.com/passage/?search=Genesis+15%3A19)', 'He looked at the Kenite, and took up his parable, and said, “Your dwelling place is strong. Your nest is set in the rock. — Numbers 24:21 (https://www.biblegateway.com/passage/?search=Numbers+24%3A21)', 'Now Heber the Kenite had separated himself from the Kenites, even from the children of Hobab, Moses’ brother-in-law, and had pitched his tent as far as the oak in Zaanannim, which is by Kedesh. — Judges 4:11 (https://www.biblegateway.com/passage/?search=Judges+4%3A11)']
@@ -16839,7 +16839,57 @@ const chunk_4: any[] = [
     mapFeatureId: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-34',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Masudanoiwafune.JPG/1280px-Masudanoiwafune.JPG'],
     sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
+  },  {
+    id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-35',
+    parentId: 'megaliths',
+    name: 'Angkor Wat',
+    description: 'A massive temple complex in Cambodia. Alternative history researchers highlight its mirror alignment with the constellation Draco during the spring equinox in 10,500 BC, suggesting it was built on an ancient planetary grid aligned with celestial markers and constructed by a pre-diluvian civilization using lost geodetic knowledge.',
+    layer: 'Megaliths / Dolmans / Petroglyphs / Geoglyphs',
+    mapFeatureId: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-35',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Buddhist_monks_in_front_of_the_Angkor_Wat.jpg/1280px-Buddhist_monks_in_front_of_the_Angkor_Wat.jpg'],
+    sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
   },
+  {
+    id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-36',
+    parentId: 'megaliths',
+    name: 'Chichen Itza',
+    description: 'A major Maya city in Yucatán, Mexico. Theorists focus on the El Castillo pyramid, which creates the illusion of a crawling serpent of light during equinoxes, and claim its acoustic properties—where a clap at the base mimics the quetzal bird—demonstrate advanced acoustic engineering and resonance physics inherited from pre-diluvian builders.',
+    layer: 'Megaliths / Dolmans / Petroglyphs / Geoglyphs',
+    mapFeatureId: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-36',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Chichen_Itza_3.jpg/1280px-Chichen_Itza_3.jpg'],
+    sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
+  },  {
+    id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-38',
+    parentId: 'megaliths',
+    name: 'Teotihuacan',
+    description: 'A massive ancient city in Mexico featuring the Pyramids of the Sun and Moon. Alternative theorists highlight that the city\'s layout is a physical representation of a computer circuit board, and that the Pyramid of the Sun contains a layer of imported sheet mica designed to act as an electromagnetic insulator or radiation shield.',
+    layer: 'Megaliths / Dolmans / Petroglyphs / Geoglyphs',
+    mapFeatureId: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-38',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Teotihuac%C3%A1n-5973.JPG/1280px-Teotihuac%C3%A1n-5973.JPG'],
+    sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
+  },
+  {
+    id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-39',
+    parentId: 'megaliths',
+    name: 'Ġgantija Temples',
+    description: 'A megalithic temple complex in Gozo, Malta, dating back to 3600 BC. Built using corbelled globigerina limestone blocks weighing over 50 tons, local folklore attributes the construction to a giantess who carried the stones from the south coast, supporting alternative theories of a prehistoric giant race.',
+    layer: 'Megaliths / Dolmans / Petroglyphs / Geoglyphs',
+    mapFeatureId: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-39',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Ggantija_Temple_on_Gozo.jpg/1280px-Ggantija_Temple_on_Gozo.jpg'],
+    sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
+  },
+  {
+    id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-40',
+    parentId: 'megaliths',
+    name: 'Dolmen of Menga',
+    description: 'A massive megalithic gallery grave in Spain dating to 3750 BC. Built using vertical stones and enormous roof slabs weighing up to 180 tons, alternative theorists argue the transport and alignment of these blocks would be impossible without advanced engineering techniques or acoustic manipulation.',
+    layer: 'Megaliths / Dolmans / Petroglyphs / Geoglyphs',
+    mapFeatureId: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-40',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Dolmen_and_Torcal-008.jpg/1280px-Dolmen_and_Torcal-008.jpg'],
+    sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
+  },
+
+
   {
     id: 'stonehenge',
     parentId: 'megaliths',
@@ -16862,6 +16912,9 @@ const chunk_4: any[] = [
     name: 'Göbekli Tepe',
     description: 'The oldest known temple complex in the world, dating to ~9600 BC. Features massive T-shaped stone pillars carved with wild animals.',
     relatedIds: ['great-flood', 'watchers'],
+    layer: 'Megaliths / Dolmans / Petroglyphs / Geoglyphs',
+    mapFeatureId: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-37',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/G%C3%B6bekli_Tepe%2C_Urfa.jpg/1280px-G%C3%B6bekli_Tepe%2C_Urfa.jpg'],
     sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
   },
   {

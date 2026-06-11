@@ -35,7 +35,7 @@ CRYPTID_MIGRATION_IDS = [
     "anomaly-Bigfoot-705"   # Orange Eyed Monster
 ]
 
-# Bigfoot IDs to migrate to U.F.O. Sightings
+# Bigfoot IDs to migrate to UFOs - Sightings
 UFO_MIGRATION_IDS = [
     "anomaly-Bigfoot-826",  # Cylinder Shaped UFO (Newark)
     "anomaly-Bigfoot-967"   # Blue UFO (Jersey City)
@@ -528,7 +528,7 @@ def main():
     # Find highest existing indices for UFO category
     highest_ufo_idx = -1
     for item in clean_data:
-        if item.get('category') == "U.F.O. Sightings":
+        if item.get('category') == "UFOs - Sightings":
             item_id = item.get('id', '')
             match = re.search(r'anomaly-UFO-(\d+)$', item_id)
             if match:
@@ -557,8 +557,8 @@ def main():
     for item in to_migrate_ufos:
         new_id = f"anomaly-UFO-{next_ufo_idx}"
         item['id'] = new_id
-        item['category'] = "U.F.O. Sightings"
-        item['categories'] = ["U.F.O. Sightings"]
+        item['category'] = "UFOs - Sightings"
+        item['categories'] = ["UFOs - Sightings"]
         clean_data.append(item)
         print(f"Migrated UFO '{item.get('name')}' as ID '{new_id}'")
         next_ufo_idx += 1

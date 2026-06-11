@@ -335,7 +335,7 @@ def main():
     # Find highest ID in rabbitHoleData.json
     highest_idx = -1
     for item in rabbit:
-        if item.get("category") == "U.F.O. Sightings" or item.get("category") == "Bigfoot":
+        if item.get("category") == "UFOs - Sightings" or item.get("category") == "Bigfoot":
             # Just look at the suffix of the ID
             m = re.search(r'-(\d+)$', item.get("id", ""))
             if m:
@@ -373,7 +373,7 @@ def main():
         new_item = {
             "id": item_id,
             "name": name,
-            "category": "U.F.O. Sightings",
+            "category": "UFOs - Sightings",
             "type": "Point",
             "coordinates": fs["coordinates"],
             "date": fs["date"],

@@ -808,7 +808,7 @@ ${modLink}
                records.push({
                  id: item.id || `uap-idx-${idx}`,
                  name: item.title || item.name || "UAP Incident",
-                 category: item.category || "U.F.O. Sightings",
+                 category: item.category || "UFOs - Sightings",
                  description: item.description || item.comments || item.summary || "",
                  date: item.date || item.year || item.occurred_at || 2024,
                  coordinates: item.coordinates || [item.lng || item.longitude || -77.0, item.lat || item.latitude || 38.9],
@@ -869,7 +869,7 @@ ${modLink}
               records.push({
                 id: `uap-dom-${i}`,
                 name: title || "UAP Incident",
-                category: "U.F.O. Sightings",
+                category: "UFOs - Sightings",
                 description: description,
               images: finalImage ? [finalImage] : [],
               video: video,

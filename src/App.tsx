@@ -30,6 +30,8 @@ import ufoData2 from './ufoData-2.json';
 import warGovData from './warGovData.json';
 // @ts-ignore
 import warGovData2 from './warGovData-2.json'; // Department of War PURSUE Release 2 dataset
+// @ts-ignore
+import brazilianUfoData from './brazilianUfoData.json';
 
 const getSafeData = (data: any) => {
   if (Array.isArray(data)) return data;
@@ -41,7 +43,8 @@ const realUfoData = [
   ...getSafeData(ufoData1),
   ...getSafeData(ufoData2),
   ...getSafeData(warGovData),
-  ...getSafeData(warGovData2)
+  ...getSafeData(warGovData2),
+  ...getSafeData(brazilianUfoData)
 ];
 
 mapboxgl.accessToken = 'pk.eyJ1Ijoibm9ydGhiZWFzdCIsImEiOiJjbXAyNnBhMGowMTFoMnFwenRnNWZvOWc5In0.PpOOemte4Ub9PVLfGsUS1g'; 
@@ -86,9 +89,9 @@ const CATEGORY_DESCRIPTIONS: Record<string, string> = {
   'Giants & Nephilim': 'Newspaper articles about finding the bones of ancient biblical giants, horned humanoids, cyclops and more.',
   'Biblical Figures': 'Geographical tracking and historical sites associated with biblical patriarchs, prophets, and key lineage figures.',
   'Biblical Events': 'Key geographical milestones and historical events from biblical history, including the Exodus, the Fall of Jericho, and the Crucifixion.',
-  'U.F.O. Sightings': 'Reports of unidentified flying objects and extraterrestrial encounters across the globe.',
-  'War.gov UFO files 01': 'Official records and multimedia releases from government archives documenting unidentified aerial phenomena (First Release).',
-  'War.gov UFO files 02': 'Official declassified records and sensor videos from government archives (Second Release - PURSUE 02).',
+  'UFOs - Sightings': 'Reports of unidentified flying objects and UAP encounters across the globe.',
+  'UFOs - War.gov': 'Official declassified records, sensor videos, and multimedia releases from government archives documenting unidentified aerial phenomena.',
+  'UFOs - Brazillian Archives': 'Declassified Brazilian military documents, reports, and drawings detailing unexplained aerial phenomena and entity encounters compiled from official archives.',
   'D.U.M.B.\'s': 'Deep Underground Military Bases and mysterious subterranean government facilities.',
   'Cryptid Sightings': 'Encounters with legendary creatures whose existence has yet to be scientifically proven.',
   'Giants': 'Historical and archaeological accounts of unusually large skeletal remains.',
@@ -633,14 +636,9 @@ const processIncomingRecord = (item: any, index: number) => {
   if (lowerCat.includes('enochian') || lowerCat.includes('watcher') || lowerCat.includes('angel') || lowerCat === 'enochian sites') normalizedCategory = 'Enochian Sites';
   else if (lowerCat.includes('bigfoot') || lowerCat.includes('sasquatch')) normalizedCategory = 'Bigfoot Sightings';
   else if (lowerCat.includes('giant') || lowerCat.includes('nephilim') || lowerCat.includes('giants')) normalizedCategory = 'Giants & Nephilim';
-  else if (lowerCat.includes('war.gov') || lowerCat.includes('aaro') || lowerCat.includes('official release') || lowerCat.includes('declassified')) {
-    if (lowerCat.includes('02') || lowerCat.includes('release 2') || lowerCat.includes('release_2')) {
-      normalizedCategory = 'War.gov UFO files 02';
-    } else {
-      normalizedCategory = 'War.gov UFO files 01';
-    }
-  }
-  else if (lowerCat.includes('ufo') || lowerCat.includes('uap')) normalizedCategory = 'U.F.O. Sightings';
+  else if (lowerCat.includes('brazilian') || lowerCat === 'brazilian ufo archives' || lowerCat.includes('brazillian')) normalizedCategory = 'UFOs - Brazillian Archives';
+  else if (lowerCat.includes('war.gov') || lowerCat.includes('aaro') || lowerCat.includes('official release') || lowerCat.includes('declassified')) normalizedCategory = 'UFOs - War.gov';
+  else if (lowerCat.includes('ufo') || lowerCat.includes('uap')) normalizedCategory = 'UFOs - Sightings';
   else if (lowerCat.includes('ley') || lowerCat.includes('ley-line') || lowerCat === 'ley lines') normalizedCategory = 'Ley Lines';
   else if (lowerCat.includes('cryptid')) normalizedCategory = 'Cryptid Sightings';
   else if (lowerCat.includes('entrance') || lowerCat.includes('underworld')) normalizedCategory = 'Underworld Entrances';
@@ -774,13 +772,13 @@ const processIncomingRecord = (item: any, index: number) => {
 };
 
 const LAYER_CONFIG: Record<string, { color: string; icon: string }> = {
-  'War.gov UFO files 01': { color: '#FF9BE1', icon: '/icons/icon-dept-war.svg' },
-  'War.gov UFO files 02': { color: '#D29BFF', icon: '/icons/icon-dept-war-02.svg' },
+  'UFOs - War.gov': { color: '#FF9BE1', icon: '/icons/icon-ufo-wargov.svg' },
+  'UFOs - Brazillian Archives': { color: '#BD59FF', icon: '/icons/icon-ufo-brazilian.svg' },
   'Enochian Sites': { color: '#FF9F63', icon: '/icons/icon-enochian-lore.svg' },
   'Giants & Nephilim': { color: '#ECCE81', icon: '/icons/icon-giants.svg' },
   'Biblical Figures': { color: '#90C2FF', icon: '/icons/icon-biblical-bloodlines.svg' },
   'Biblical Events': { color: '#91FFC4', icon: '/icons/icon-biblical-bloodlines-1.svg' },
-  'U.F.O. Sightings': { color: '#C2FFBD', icon: '/icons/icon-ufo-sightings.svg' },
+  'UFOs - Sightings': { color: '#C2FFBD', icon: '/icons/icon-ufo-sightings.svg' },
   'Bigfoot Sightings': { color: '#C6986D', icon: '/icons/icon-bigfoot-sightings.svg' },
   'Cryptid Sightings': { color: '#AFFFEC', icon: '/icons/icon-cryptid-sightings.svg' },
   'Underworld Entrances': { color: '#D3C5FB', icon: '/icons/icon-entrances-to-underworld.svg' },
@@ -970,7 +968,7 @@ function App() {
 
   const uniqueCategories = useMemo(() => {
     const allTags = combinedPointsAndLinesData.flatMap(item => item.categories);
-    const order = ['War.gov UFO files 01', 'War.gov UFO files 02', 'Secret Government Programs', 'Giants & Nephilim', 'U.F.O. Sightings'];
+    const order = ['UFOs - War.gov', 'UFOs - Brazillian Archives', 'UFOs - Sightings', 'Secret Government Programs', 'Giants & Nephilim'];
     return Array.from(new Set(allTags)).sort((a, b) => {
       const sA = String(a);
       const sB = String(b);
@@ -1156,7 +1154,7 @@ function App() {
   const [isSubmitOpen, setIsSubmitOpen] = useState(false);
   const [isPinningOnMap, setIsPinningOnMap] = useState(false);
   const [subName, setSubName] = useState('');
-  const [subCategory, setSubCategory] = useState('U.F.O. Sightings');
+  const [subCategory, setSubCategory] = useState('UFOs - Sightings');
   const [subDescription, setSubDescription] = useState('');
   const [subDate, setSubDate] = useState('');
   const [subLatitude, setSubLatitude] = useState('');
@@ -4459,11 +4457,12 @@ function App() {
     if (!str) return '';
     // If it's an acronym like D.U.M.B.S. or all caps like UFO, keep it
     if (str.includes('.') || (str === str.toUpperCase() && str.length > 1)) return str;
-    return str
+    const titled = str
       .toLowerCase()
       .split(' ')
       .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
       .join(' ');
+    return titled.replace(/\bufos\b/gi, 'UFOs');
   };
 
   const renderMediaPreview = (url: string) => {
@@ -4886,7 +4885,7 @@ function App() {
                         setSubCategory('Biblical / Apocryphal');
                       }
                     } else {
-                      setSubCategory('U.F.O. Sightings');
+                      setSubCategory('UFOs - Sightings');
                     }
                     setIsSubmitOpen(true);
                   }}

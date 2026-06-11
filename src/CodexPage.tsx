@@ -25,13 +25,13 @@ interface CodexPageProps {
 }
 
 const LAYER_COLORS: Record<string, string> = {
-  'War.gov UFO files 01': '#FF9BE1',
-  'War.gov UFO files 02': '#D29BFF',
+  'UFOs - War.gov': '#FF9BE1',
+  'UFOs - Brazillian Archives': '#BD59FF',
   'Enochian Sites': '#FF9F63',
   'Giants & Nephilim': '#ECCE81',
   'Biblical Figures': '#90C2FF',
   'Biblical Events': '#91FFC4',
-  'U.F.O. Sightings': '#C2FFBD',
+  'UFOs - Sightings': '#C2FFBD',
   'Bigfoot Sightings': '#C6986D',
   'Cryptid Sightings': '#AFFFEC',
   'Underworld Entrances': '#D3C5FB',
@@ -56,13 +56,13 @@ const LAYER_COLORS: Record<string, string> = {
 };
 
 const LAYER_ICONS: Record<string, string> = {
-  'War.gov UFO files 01': '/icons/icon-dept-war.svg',
-  'War.gov UFO files 02': '/icons/icon-dept-war-02.svg',
+  'UFOs - War.gov': '/icons/icon-ufo-wargov.svg',
+  'UFOs - Brazillian Archives': '/icons/icon-ufo-brazilian.svg',
   'Enochian Sites': '/icons/icon-enochian-lore.svg',
   'Giants & Nephilim': '/icons/icon-giants.svg',
   'Biblical Figures': '/icons/icon-biblical-bloodlines.svg',
   'Biblical Events': '/icons/icon-biblical-bloodlines-1.svg',
-  'U.F.O. Sightings': '/icons/icon-ufo-sightings.svg',
+  'UFOs - Sightings': '/icons/icon-ufo-sightings.svg',
   'Bigfoot Sightings': '/icons/icon-bigfoot-sightings.svg',
   'Cryptid Sightings': '/icons/icon-cryptid-sightings.svg',
   'Underworld Entrances': '/icons/icon-entrances-to-underworld.svg',
@@ -338,9 +338,10 @@ export default function CodexPage({
         return '#604e1e'; // Dark brown/gold
       case '#59dcb7': // Alchemy / Occult
         return '#125e4a'; // Dark mint/teal
-      case '#c2ffbd': // U.F.O. Sightings
+      case '#c2ffbd': // UFOs - Sightings
       case '#9ff3bc': // National Parks
-        return '#1c521c'; // Dark forest green
+      case '#bd59ff': // UFOs - Brazillian Archives
+        return '#6200af'; // Dark purple
       case '#afffec': // Cryptid Sightings
       case '#74f8f3': // Archaeological Finds
         return '#005c5c'; // Dark teal
@@ -351,7 +352,7 @@ export default function CodexPage({
         return '#1c447d'; // Dark navy blue
       case '#ff5c5c': // Secret Government Programs
         return '#b31b1b'; // Dark red/crimson
-      case '#ff9be1': // War.gov UFO files 01
+      case '#ff9be1': // UFOs - War.gov
       case '#ff5e97': // Ley Lines
         return '#940d3f'; // Dark pink/red
       case '#ff9f63': // Enochian / Meteor Impact
@@ -376,7 +377,7 @@ export default function CodexPage({
   const getNodeIcon = (node: TermNode): string => {
     if (node.id === 'biblical-apocryphal') return LAYER_ICONS['Biblical Figures'];
     if (node.id === 'megaliths-structures') return LAYER_ICONS['Megaliths'];
-    if (node.id === 'supernatural-anomalies') return LAYER_ICONS['U.F.O. Sightings'];
+    if (node.id === 'supernatural-anomalies') return LAYER_ICONS['UFOs - Sightings'];
     if (node.id === 'secret-government-programs') return LAYER_ICONS['Secret Government Programs'];
     if (node.id === 'alchemy-occult') return LAYER_ICONS['Alchemy / Occult'];
     if (node.id === 'people-groups') return LAYER_ICONS['People Groups'];
@@ -388,7 +389,7 @@ export default function CodexPage({
     while (parentId) {
       if (parentId === 'biblical-apocryphal') return LAYER_ICONS['Biblical Figures'];
       if (parentId === 'megaliths-structures') return LAYER_ICONS['Megaliths'];
-      if (parentId === 'supernatural-anomalies') return LAYER_ICONS['U.F.O. Sightings'];
+      if (parentId === 'supernatural-anomalies') return LAYER_ICONS['UFOs - Sightings'];
       if (parentId === 'secret-government-programs') return LAYER_ICONS['Secret Government Programs'];
       if (parentId === 'alchemy-occult') return LAYER_ICONS['Alchemy / Occult'];
       if (parentId === 'people-groups') return LAYER_ICONS['People Groups'];
