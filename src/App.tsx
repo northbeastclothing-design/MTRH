@@ -6,6 +6,7 @@ import { X, Heart, Play, Upload, Plus, Link, MapPin, Lock, Check, Trash2, Shield
 import { initializeApp } from 'firebase/app';
 import { getFirestore, doc, getDoc, setDoc, updateDoc, increment, collection, onSnapshot, serverTimestamp, query, where, addDoc, deleteDoc } from 'firebase/firestore';
 import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } from 'firebase/auth';
+import { getAnalytics, isSupported } from 'firebase/analytics';
 // @ts-ignore
 import firebaseConfig from '../firebase-applet-config.json';
 
@@ -19,6 +20,16 @@ import { TERM_TREE_DATA } from './termTreeData';
 const firebaseApp = initializeApp(firebaseConfig);
 const db = getFirestore(firebaseApp, firebaseConfig.firestoreDatabaseId);
 const auth = getAuth(firebaseApp);
+
+// Initialize Analytics conditionally if a Measurement ID exists
+if (firebaseConfig.measurementId) {
+  isSupported().then((supported) => {
+    if (supported) {
+      getAnalytics(firebaseApp);
+      console.log("Firebase Analytics initialized successfully.");
+    }
+  });
+}
 
 // @ts-ignore
 import rawPointsAndLinesData from './rabbitHoleData.json'; 
@@ -773,7 +784,7 @@ const processIncomingRecord = (item: any, index: number) => {
 
 const LAYER_CONFIG: Record<string, { color: string; icon: string }> = {
   'UFOs - War.gov': { color: '#FF9BE1', icon: '/icons/icon-ufo-wargov.svg' },
-  'UFOs - Brazillian Archives': { color: '#BD59FF', icon: '/icons/icon-ufo-brazilian.svg' },
+  'UFOs - Brazillian Archives': { color: '#B297FF', icon: '/icons/icon-ufo-brazilian.svg' },
   'Enochian Sites': { color: '#FF9F63', icon: '/icons/icon-enochian-lore.svg' },
   'Giants & Nephilim': { color: '#ECCE81', icon: '/icons/icon-giants.svg' },
   'Biblical Figures': { color: '#90C2FF', icon: '/icons/icon-biblical-bloodlines.svg' },

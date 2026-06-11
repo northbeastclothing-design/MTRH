@@ -26,7 +26,7 @@ interface CodexPageProps {
 
 const LAYER_COLORS: Record<string, string> = {
   'UFOs - War.gov': '#FF9BE1',
-  'UFOs - Brazillian Archives': '#BD59FF',
+  'UFOs - Brazillian Archives': '#B297FF',
   'Enochian Sites': '#FF9F63',
   'Giants & Nephilim': '#ECCE81',
   'Biblical Figures': '#90C2FF',
@@ -340,7 +340,7 @@ export default function CodexPage({
         return '#125e4a'; // Dark mint/teal
       case '#c2ffbd': // UFOs - Sightings
       case '#9ff3bc': // National Parks
-      case '#bd59ff': // UFOs - Brazillian Archives
+      case '#b297ff': // UFOs - Brazillian Archives
         return '#6200af'; // Dark purple
       case '#afffec': // Cryptid Sightings
       case '#74f8f3': // Archaeological Finds
