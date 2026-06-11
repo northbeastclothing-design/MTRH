@@ -50,7 +50,7 @@ const LAYER_COLORS: Record<string, string> = {
   'Archaeological Finds': '#74F8F3',
   'Biblical Finds': '#D49459',
   'Secret Government Programs': '#FF5C5C',
-  'Alchemy / Occult': '#59DCB7',
+  'The Occult': '#59DCB7',
   'People Groups': '#BCA7C7',
   'Default': '#b6a6ff'
 };
@@ -81,7 +81,7 @@ const LAYER_ICONS: Record<string, string> = {
   'Archaeological Finds': '/icons/icon-archaeological-finds.svg',
   'Biblical Finds': '/icons/icon-biblical-finds.svg',
   'Secret Government Programs': '/icons/icon-secret-government-programs.svg',
-  'Alchemy / Occult': '/icons/icon-alchemy-occult.svg',
+  'The Occult': '/icons/icon-alchemy-occult.svg',
   'People Groups': '/icons/icon-people-groups.svg',
   'Default': '/icons/icon-map-pin.svg'
 };
@@ -148,7 +148,9 @@ export default function CodexPage({
   const nodes = codexNodes || TERM_TREE_DATA;
 
   const [selectedPath, setSelectedPath] = useState<string[]>([]);
-  const [hoveredTermId, setHoveredTermId] = useState<string | null>(null);
+  const [hoveredTerm, setHoveredTerm] = useState<{ id: string; level: number } | null>(null);
+  const hoveredTermId = hoveredTerm?.id || null;
+  const hoveredLevel = hoveredTerm?.level ?? null;
   const [searchQuery, setSearchQuery] = useState('');
   const [lines, setLines] = useState<SVGLinePath[]>([]);
   const [scrollSize, setScrollSize] = useState({ width: 0, height: 0 });
@@ -305,7 +307,7 @@ export default function CodexPage({
     if (curr.id === 'megaliths-structures') return '#FFFBA6'; // Yellow/Gold (Megaliths)
     if (curr.id === 'supernatural-anomalies') return '#C2FFBD'; // Green (U.F.O. Sightings)
     if (curr.id === 'secret-government-programs') return '#FF5C5C'; // Red (Secret Government Programs)
-    if (curr.id === 'alchemy-occult') return '#59DCB7'; // Mint/Teal (Alchemy / Occult)
+    if (curr.id === 'alchemy-occult') return '#59DCB7'; // Mint/Teal (The Occult)
     if (curr.id === 'people-groups') return '#BCA7C7'; // Lavender (People Groups)
     
     return LAYER_COLORS['Default'];
@@ -336,7 +338,7 @@ export default function CodexPage({
       case '#f6e8c1': // Ancient Texts
       case '#ecce81': // Giants & Nephilim
         return '#604e1e'; // Dark brown/gold
-      case '#59dcb7': // Alchemy / Occult
+      case '#59dcb7': // The Occult
         return '#125e4a'; // Dark mint/teal
       case '#c2ffbd': // UFOs - Sightings
       case '#9ff3bc': // National Parks
@@ -379,7 +381,7 @@ export default function CodexPage({
     if (node.id === 'megaliths-structures') return LAYER_ICONS['Megaliths'];
     if (node.id === 'supernatural-anomalies') return LAYER_ICONS['UFOs - Sightings'];
     if (node.id === 'secret-government-programs') return LAYER_ICONS['Secret Government Programs'];
-    if (node.id === 'alchemy-occult') return LAYER_ICONS['Alchemy / Occult'];
+    if (node.id === 'alchemy-occult') return LAYER_ICONS['The Occult'];
     if (node.id === 'people-groups') return LAYER_ICONS['People Groups'];
 
     if (node.layer && LAYER_ICONS[node.layer]) {
@@ -391,7 +393,7 @@ export default function CodexPage({
       if (parentId === 'megaliths-structures') return LAYER_ICONS['Megaliths'];
       if (parentId === 'supernatural-anomalies') return LAYER_ICONS['UFOs - Sightings'];
       if (parentId === 'secret-government-programs') return LAYER_ICONS['Secret Government Programs'];
-      if (parentId === 'alchemy-occult') return LAYER_ICONS['Alchemy / Occult'];
+      if (parentId === 'alchemy-occult') return LAYER_ICONS['The Occult'];
       if (parentId === 'people-groups') return LAYER_ICONS['People Groups'];
 
       const parent = nodes.find(n => n.id === parentId);
@@ -545,8 +547,16 @@ export default function CodexPage({
     // Subsequent levels based on active selected path
     for (let i = 0; i < selectedPath.length; i++) {
       const currentId = selectedPath[i];
-      const children = nodes.filter(n => n.parentId === currentId || n.secondaryParentIds?.includes(currentId))
-        .sort((a, b) => a.name.localeCompare(b.name));
+      const currentNode = nodes.find(n => n.id === currentId);
+      const children = nodes.filter(n => {
+        if (selectedPath.slice(0, i + 1).includes(n.id)) return false;
+        
+        const isChild = n.parentId === currentId || n.secondaryParentIds?.includes(currentId);
+        const isParent = currentNode && (currentNode.parentId === n.id || currentNode.secondaryParentIds?.includes(n.id));
+        
+        return isChild || isParent;
+      }).sort((a, b) => a.name.localeCompare(b.name));
+
       if (children.length > 0) {
         list.push({
           level: i + 1,
@@ -557,7 +567,7 @@ export default function CodexPage({
     }
 
     return list;
-  }, [selectedPath]);
+  }, [selectedPath, nodes]);
 
   // Handle term node selection click
   const handleNodeClick = (node: TermNode, level: number) => {
@@ -579,13 +589,31 @@ export default function CodexPage({
     const containerRect = container.getBoundingClientRect();
     const paths: SVGLinePath[] = [];
 
+    // Helper to find the best column index for a node ID relative to activeTermLevel
+    const activeTermLevel = hoveredLevel !== null ? hoveredLevel : (selectedPath.length > 0 ? selectedPath.length - 1 : 0);
+    
+    const getBestColIdx = (pId: string): number | null => {
+      let bestColIdx: number | null = null;
+      let minDiff = Infinity;
+      columns.forEach((col, colIdx) => {
+        if (col.nodes.some(n => n.id === pId)) {
+          const diff = Math.abs(colIdx - activeTermLevel);
+          if (diff < minDiff) {
+            minDiff = diff;
+            bestColIdx = colIdx;
+          }
+        }
+      });
+      return bestColIdx;
+    };
+
     // 1. Draw Selection Path connecting lines (right-angle orthogonal staircase style)
     for (let i = 0; i < selectedPath.length - 1; i++) {
       const parentId = selectedPath[i];
       const childId = selectedPath[i + 1];
 
-      const parentEl = document.getElementById(`node-pill-${parentId}`);
-      const childEl = document.getElementById(`node-pill-${childId}`);
+      const parentEl = document.getElementById(`node-pill-${parentId}-${i}`);
+      const childEl = document.getElementById(`node-pill-${childId}-${i + 1}`);
 
       if (parentEl && childEl) {
         const parentRect = parentEl.getBoundingClientRect();
@@ -622,24 +650,20 @@ export default function CodexPage({
     // 2. Draw Cross-linked Related Terms curves
     if (activeTermId) {
       const activeNode = nodes.find(n => n.id === activeTermId);
-      const activeEl = document.getElementById(`node-pill-${activeTermId}`);
+      const activeEl = document.getElementById(`node-pill-${activeTermId}-${activeTermLevel}`);
 
       if (activeNode && activeNode.relatedIds && activeEl) {
         const activeRect = activeEl.getBoundingClientRect();
-        
-        // Collect all terms currently rendered in the active columns
-        const renderedIds = new Set<string>();
-        columns.forEach(col => col.nodes.forEach(n => renderedIds.add(n.id)));
 
         activeNode.relatedIds.forEach(relId => {
-          if (renderedIds.has(relId)) {
-            const relEl = document.getElementById(`node-pill-${relId}`);
+          const relLevel = getBestColIdx(relId);
+          if (relLevel !== null) {
+            const relEl = document.getElementById(`node-pill-${relId}-${relLevel}`);
             const relNode = nodes.find(n => n.id === relId);
 
             if (relEl && relNode) {
               const relRect = relEl.getBoundingClientRect();
-              const activeLevel = getNodeLevel(activeNode);
-              const relLevel = getNodeLevel(relNode);
+              const activeLevel = activeTermLevel;
 
               let x1 = 0, y1 = 0, x2 = 0, y2 = 0;
               let pathData = '';
@@ -703,7 +727,7 @@ export default function CodexPage({
       // 3. Draw Parent & Secondary Parent connections (attaching to categories/sub-categories they are linked to)
       if (activeNode && activeEl) {
         const activeRect = activeEl.getBoundingClientRect();
-        const activeLevel = getNodeLevel(activeNode);
+        const activeLevel = activeTermLevel;
         const parentIds: string[] = [];
         if (activeNode.parentId) {
           parentIds.push(activeNode.parentId);
@@ -712,22 +736,18 @@ export default function CodexPage({
           parentIds.push(...activeNode.secondaryParentIds);
         }
 
-        // Collect all terms currently rendered in the active columns
-        const renderedIds = new Set<string>();
-        columns.forEach(col => col.nodes.forEach(n => renderedIds.add(n.id)));
-
         parentIds.forEach(pId => {
-          if (renderedIds.has(pId)) {
+          const parentLevel = getBestColIdx(pId);
+          if (parentLevel !== null) {
             // Check if there is already a line connecting them in paths (e.g. selection path)
             const alreadyHasLine = paths.some(p => p.id === `path-${pId}-${activeTermId}` || p.id === `path-${activeTermId}-${pId}`);
             if (alreadyHasLine) return;
 
-            const parentEl = document.getElementById(`node-pill-${pId}`);
+            const parentEl = document.getElementById(`node-pill-${pId}-${parentLevel}`);
             const parentNode = nodes.find(n => n.id === pId);
 
             if (parentEl && parentNode) {
               const parentRect = parentEl.getBoundingClientRect();
-              const parentLevel = getNodeLevel(parentNode);
 
               let x1 = 0, y1 = 0, x2 = 0, y2 = 0;
               let pathData = '';
@@ -785,7 +805,7 @@ export default function CodexPage({
       }
       window.removeEventListener('resize', updateLines);
     };
-  }, [selectedPath, columns, activeTermId, searchQuery, nodes]);
+  }, [selectedPath, columns, activeTermId, hoveredLevel, searchQuery, nodes]);
 
   // Mouse drag-to-scroll panning like a Miro board
   const activeDragRef = useRef<{
@@ -1431,9 +1451,9 @@ export default function CodexPage({
                     return (
                       <div
                         key={node.id}
-                        id={`node-pill-${node.id}`}
-                        onMouseEnter={() => setHoveredTermId(node.id)}
-                        onMouseLeave={() => setHoveredTermId(null)}
+                        id={`node-pill-${node.id}-${colIdx}`}
+                        onMouseEnter={() => setHoveredTerm({ id: node.id, level: colIdx })}
+                        onMouseLeave={() => setHoveredTerm(null)}
                         onClick={() => handleNodeClick(node, colIdx)}
                         style={{
                           display: 'flex',
@@ -1447,7 +1467,9 @@ export default function CodexPage({
                             : isHovered
                               ? (isMapDarkMode ? '#222222' : '#f0f0f0')
                               : (isMapDarkMode ? '#1a1a1a' : '#ffffff'),
-                          border: `1px solid ${theme.border}`,
+                          border: (selectedTermId === node.id)
+                            ? `2px solid ${isMapDarkMode ? '#ffffff' : '#000000'}`
+                            : `1px solid ${theme.border}`,
                           borderRadius: '16px',
                           boxSizing: 'border-box',
                           color: isSelected ? '#ffffff' : theme.text, // Text is white when selected over black background
@@ -1510,9 +1532,9 @@ export default function CodexPage({
                   return (
                     <div
                       key={node.id}
-                      id={`node-pill-${node.id}`}
-                      onMouseEnter={() => setHoveredTermId(node.id)}
-                      onMouseLeave={() => setHoveredTermId(null)}
+                      id={`node-pill-${node.id}-${colIdx}`}
+                      onMouseEnter={() => setHoveredTerm({ id: node.id, level: colIdx })}
+                      onMouseLeave={() => setHoveredTerm(null)}
                       onClick={() => handleNodeClick(node, colIdx)}
                       style={{
                         display: 'flex',
@@ -1521,7 +1543,10 @@ export default function CodexPage({
                         borderRadius: '16px',
                         padding: '0 12px',
                         height: '32px',
-                        border: 'none', // No stroke
+                        boxSizing: 'border-box',
+                        border: (selectedTermId === node.id)
+                          ? `2px solid ${isMapDarkMode ? '#ffffff' : '#000000'}`
+                          : '2px solid transparent',
                         background: (isSelected || isHovered)
                           ? nodeColor // Solid background on hover/selection
                           : `${nodeColor}a6`, // 65% opacity background by default (hex a6 is 65% opacity)

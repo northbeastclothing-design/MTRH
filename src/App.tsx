@@ -676,7 +676,7 @@ const processIncomingRecord = (item: any, index: number) => {
   else if (lowerCat.includes('archaeological') || lowerCat.includes('archaeology')) normalizedCategory = 'Archaeological Finds';
   else if (lowerCat.includes('biblical find') || lowerCat === 'biblical finds') normalizedCategory = 'Biblical Finds';
   else if (lowerCat.includes('government program') || lowerCat.includes('secret government') || lowerCat.includes('classified program')) normalizedCategory = 'Secret Government Programs';
-  else if (lowerCat.includes('alchemy') || lowerCat.includes('occult') || lowerCat.includes('hermeticism') || lowerCat.includes('thelema')) normalizedCategory = 'Alchemy / Occult';
+  else if (lowerCat.includes('alchemy') || lowerCat.includes('occult') || lowerCat.includes('hermeticism') || lowerCat.includes('thelema')) normalizedCategory = 'The Occult';
 
   // Smart imagery injection for map points lacking media (megaliths, underworld entrances, national parks, mounds)
   // ONLY use high-quality location-specific historical/documentary assets for actual landmarks.
@@ -808,7 +808,7 @@ const LAYER_CONFIG: Record<string, { color: string; icon: string }> = {
   'Archaeological Finds': { color: '#74F8F3', icon: '/icons/icon-archaeological-finds.svg' },
   'Biblical Finds': { color: '#D49459', icon: '/icons/icon-biblical-finds.svg' },
   'Secret Government Programs': { color: '#FF5C5C', icon: '/icons/icon-secret-government-programs.svg' },
-  'Alchemy / Occult': { color: '#E9C46A', icon: '/icons/icon-alchemy-occult.svg' },
+  'The Occult': { color: '#E9C46A', icon: '/icons/icon-alchemy-occult.svg' },
   'Default': { color: '#b6a6ff', icon: '/icons/icon-map-pin.svg' }
 };
 
@@ -999,7 +999,7 @@ function App() {
       'Megaliths / Structures',
       'Supernatural / Anomalies',
       'Secret Government Programs',
-      'Alchemy / Occult'
+      'The Occult'
     ];
   }, [uniqueCategories]);
 
@@ -1665,7 +1665,7 @@ function App() {
                   <option value="royal-bloodlines">Royal Bloodlines</option>
                   <option value="secret-gov-programs">Secret Government Programs</option>
                   <option value="ancient-civilizations">Ancient Civilizations & Tribes</option>
-                  <option value="alchemy-occult">Alchemy & Occult</option>
+                  <option value="alchemy-occult">The Occult</option>
                 </select>
               </div>
 
@@ -8626,7 +8626,7 @@ function App() {
                             <option value="royal-bloodlines">Royal Bloodlines</option>
                             <option value="secret-gov-programs">Secret Government Programs</option>
                             <option value="ancient-civilizations">Ancient Civilizations & Tribes</option>
-                            <option value="alchemy-occult">Alchemy & Occult</option>
+                            <option value="alchemy-occult">The Occult</option>
                           </select>
                         </div>
 

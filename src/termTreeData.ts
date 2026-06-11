@@ -22884,16 +22884,16 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'alchemy-occult',
-    name: 'Alchemy / Occult',
+    name: 'The Occult',
     description: 'Esoteric philosophy, hermeticism, alchemy, secret societies, magical orders, and historical figures dedicated to occult sciences.',
-    layer: 'Alchemy / Occult'
+    layer: 'The Occult'
   },
   {
     id: 'esoteric-traditions',
     parentId: 'alchemy-occult',
     name: 'Esoteric Traditions',
     description: 'Schools of thought and philosophical systems concerned with secret or hidden wisdom, spiritual initiation, and the nature of reality.',
-    layer: 'Alchemy / Occult'
+    layer: 'The Occult'
   },
   {
     id: 'hermeticism',
@@ -22908,141 +22908,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     parentId: 'esoteric-traditions',
     name: 'Alchemy',
     description: 'The ancient art and science of transmuting matter, particularly base metals into gold, and achieving spiritual purification and immortality (the Great Work).',
-    relatedIds: ['hermeticism', 'emerald-tablet', 'isaac-newton', 'nicolas-flamel', 'paracelsus'],
+    relatedIds: ['hermeticism', 'emerald-tablet', 'isaac-newton', 'nicolas-flamel', 'paracelsus', 'elias-ashmole', 'john-dee'],
     sources: ['The Mirror of Alchymy', 'Alchemical Archives']
-  },
-  {
-    id: 'emerald-tablet',
-    parentId: 'esoteric-traditions',
-    name: 'The Emerald Tablet',
-    description: 'A legendary Hermetic text reputed to contain the secrets of the prima materia and alchemical transmutation, famous for the core precept: "As above, so below."',
-    relatedIds: ['hermeticism', 'alchemy', 'isaac-newton'],
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Leipzig_tablet_text.jpg/1280px-Leipzig_tablet_text.jpg'],
-    sources: ['Tabula Smaragdina Translation (Isaac Newton)', 'Chrysopoeia of Cleopatra']
-  },
-  {
-    id: 'kabbalah',
-    parentId: 'esoteric-traditions',
-    name: 'Kabbalah',
-    description: 'An esoteric method, discipline, and school of thought in Jewish mysticism, later adapted by Western occultists to form Christian and Hermetic Kabbalah.',
-    relatedIds: ['esoteric-traditions', 'hermetic-order-golden-dawn'],
-    sources: ['The Zohar', 'Sefer Yetzirah']
-  },
-  {
-    id: 'historical-alchemists',
-    parentId: 'alchemy-occult',
-    name: 'Alchemists & Mystics',
-    description: 'Prominent historical scientists, philosophers, and writers who privately or publicly practiced alchemical and esoteric arts.',
-    layer: 'Alchemy / Occult'
-  },
-  {
-    id: 'isaac-newton',
-    parentId: 'historical-alchemists',
-    name: 'Sir Isaac Newton',
-    description: 'Celebrated physicist and mathematician who spent decades privately researching alchemy, translating Hermetic texts, and analyzing biblical prophecies.',
-    timelineId: 'isaac-newton',
-    mapFeatureId: 'isaac-newton',
-    relatedIds: ['alchemy', 'emerald-tablet'],
-    images: ['https://upload.wikimedia.org/wikipedia/commons/3/3b/Portrait_of_Sir_Isaac_Newton%2C_1689.jpg'],
-    sources: ['Newton Papers (Cambridge University Library)', 'Isaac Newton: The Last Sorcerer (Michael White)']
-  },
-  {
-    id: 'nicolas-flamel',
-    parentId: 'historical-alchemists',
-    name: 'Nicolas Flamel',
-    description: 'A 14th-century French scribe who, in occult legend, successfully created the Philosopher\'s Stone, granting him and his wife Perenelle wealth and immortality.',
-    timelineId: 'nicolas-flamel',
-    mapFeatureId: 'nicolas-flamel',
-    relatedIds: ['alchemy', 'historical-alchemists'],
-    images: ['https://upload.wikimedia.org/wikipedia/commons/7/73/Nicolas_Flamel_Histoire_critique.jpg'],
-    sources: ['Exposition of the Hieroglyphical Figures (1612)', 'Historical Paris Archives']
-  },
-  {
-    id: 'paracelsus',
-    parentId: 'historical-alchemists',
-    name: 'Paracelsus',
-    description: 'Swiss physician, alchemist, and occultist who pioneered iatrochemistry (using chemistry in medicine) and wrote extensively on elementals and hermetic philosophy.',
-    relatedIds: ['alchemy', 'historical-alchemists'],
-    sources: ['Archidoxes of Alchemy', 'Paracelsus: Essential Readings']
-  },
-  {
-    id: 'magical-orders',
-    parentId: 'alchemy-occult',
-    name: 'Secret Societies & Orders',
-    description: 'Fraternal organizations, esoteric societies, and initiatory orders that structured occult study and rituals through historical lineages.',
-    layer: 'Alchemy / Occult'
-  },
-  {
-    id: 'rosicrucianism',
-    parentId: 'magical-orders',
-    name: 'Rosicrucianism',
-    description: 'An esoteric cultural movement claiming to possess secret wisdom passed down from antiquity, announced in the early 17th century by anonymous manifestos.',
-    relatedIds: ['magical-orders', 'freemasonry'],
-    sources: ['Fama Fraternitatis (1614)', 'Confessio Fraternitatis (1615)']
-  },
-  {
-    id: 'freemasonry',
-    parentId: 'magical-orders',
-    name: 'Freemasonry',
-    description: 'A fraternal organisation rich in geometry, architectural symbols, and moral allegories, often linked in occult lore to the Knights Templar and Solomon\'s Temple.',
-    relatedIds: ['magical-orders', 'rosicrucianism'],
-    sources: ['The Constitutions of the Free-Masons (1723)', 'Morals and Dogma (Albert Pike)']
-  },
-  {
-    id: 'hermetic-order-golden-dawn',
-    parentId: 'magical-orders',
-    name: 'Hermetic Order of the Golden Dawn',
-    description: 'A highly influential 19th-century secret society in London dedicated to ceremonial magic, Kabbalah, Tarot, and spiritual development.',
-    timelineId: 'evt-golden-dawn-founded',
-    mapFeatureId: 'evt-golden-dawn-founded',
-    relatedIds: ['magical-orders', 'aleister-crowley', 'kabbalah'],
-    sources: ['The Golden Dawn (Israel Regardie)', 'Order Ritual Records']
-  },
-  {
-    id: 'ordo-templi-orientis',
-    parentId: 'magical-orders',
-    name: 'Ordo Templi Orientis (O.T.O.)',
-    description: 'An international fraternal occult organization founded by Theodor Reuss, later restructured by Aleister Crowley around the law of Thelema.',
-    relatedIds: ['magical-orders', 'aleister-crowley', 'jack-parsons'],
-    sources: ['Equinox of the Gods', 'O.T.O. Charters']
-  },
-  {
-    id: 'modern-occultists',
-    parentId: 'alchemy-occult',
-    name: 'Modern Occultists & Rocketry',
-    description: 'Occult figures of the 20th century whose work bridged ceremonial magic, rocket propulsion, and alternative philosophies.',
-    layer: 'Alchemy / Occult'
-  },
-  {
-    id: 'aleister-crowley',
-    parentId: 'modern-occultists',
-    name: 'Aleister Crowley',
-    description: 'English occultist, ceremonial magician, and founder of Thelema. He established the Abbey of Thelema and famously purchased Boleskine House to perform the Abramelin ritual.',
-    timelineId: 'aleister-crowley',
-    mapFeatureId: 'aleister-crowley',
-    relatedIds: ['ordo-templi-orientis', 'hermetic-order-golden-dawn', 'jack-parsons', 'abbey-of-thelema'],
-    images: ['https://upload.wikimedia.org/wikipedia/commons/4/40/Aleister_Crowley%2C_thinker.jpg'],
-    sources: ['The Book of the Law', 'Magick in Theory and Practice', 'Boleskine House Archives']
-  },
-  {
-    id: 'jack-parsons',
-    parentId: 'modern-occultists',
-    name: 'Jack Parsons',
-    description: 'Brilliant JPL co-founder and rocket scientist who privately led the Agape Lodge of the O.T.O., performing the famous Babalon Working rituals with L. Ron Hubbard.',
-    timelineId: 'jack-parsons',
-    mapFeatureId: 'jack-parsons',
-    relatedIds: ['ordo-templi-orientis', 'aleister-crowley'],
-    images: ['https://upload.wikimedia.org/wikipedia/commons/5/5d/Jack_Parsons_2.jpg'],
-    sources: ['Strange Angel (George Pendle)', 'The Collected Writings of Jack Parsons']
-  },
-  {
-    id: 'abbey-of-thelema',
-    parentId: 'modern-occultists',
-    name: 'Abbey of Thelema',
-    description: 'A temple and spiritual commune founded by Aleister Crowley in Cefalù, Sicily in 1920, serving as a school for training in ceremonial magic and Thelema.',
-    mapFeatureId: 'abbey-of-thelema',
-    relatedIds: ['aleister-crowley', 'ordo-templi-orientis'],
-    sources: ['The Confessions of Aleister Crowley', 'Cefalù Local History Records']
   },
   {
     id: 'philosophers-stone',
@@ -23069,6 +22936,23 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['De Natura Rerum (Paracelsus)']
   },
   {
+    id: 'emerald-tablet',
+    parentId: 'esoteric-traditions',
+    name: 'The Emerald Tablet',
+    description: 'A legendary Hermetic text reputed to contain the secrets of the prima materia and alchemical transmutation, famous for the core precept: "As above, so below."',
+    relatedIds: ['hermeticism', 'alchemy', 'isaac-newton'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Leipzig_tablet_text.jpg/1280px-Leipzig_tablet_text.jpg'],
+    sources: ['Tabula Smaragdina Translation (Isaac Newton)', 'Chrysopoeia of Cleopatra']
+  },
+  {
+    id: 'kabbalah',
+    parentId: 'esoteric-traditions',
+    name: 'Kabbalah',
+    description: 'An esoteric method, discipline, and school of thought in Jewish mysticism, later adapted by Western occultists to form Christian and Hermetic Kabbalah.',
+    relatedIds: ['esoteric-traditions', 'hermetic-order-golden-dawn'],
+    sources: ['The Zohar', 'Sefer Yetzirah']
+  },
+  {
     id: 'golem',
     parentId: 'kabbalah',
     name: 'The Golem',
@@ -23080,13 +22964,32 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Jewish Folklore', 'Kabbalistic Manuscripts']
   },
   {
+    id: 'thelema',
+    parentId: 'esoteric-traditions',
+    name: 'Thelema',
+    description: 'An esoteric and social philosophy founded by Aleister Crowley in 1904 with the reception of *The Book of the Law*. Its core tenets are "Do what thou wilt shall be the whole of the Law" and "Love is the law, love under will."',
+    timelineId: 'evt-book-of-the-law',
+    mapFeatureId: 'evt-book-of-the-law',
+    relatedIds: ['esoteric-traditions', 'aleister-crowley', 'ordo-templi-orientis', 'abbey-of-thelema'],
+    sources: ['The Book of the Law (Aleister Crowley)', 'Thelemic Holy Books']
+  },
+  {
+    id: 'abbey-of-thelema',
+    parentId: 'thelema',
+    name: 'Abbey of Thelema',
+    description: 'A temple and spiritual commune founded by Aleister Crowley in Cefalù, Sicily in 1920, serving as a school for training in ceremonial magic and Thelema.',
+    mapFeatureId: 'abbey-of-thelema',
+    relatedIds: ['aleister-crowley', 'ordo-templi-orientis', 'thelema'],
+    sources: ['The Confessions of Aleister Crowley', 'Cefalù Local History Records']
+  },
+  {
     id: 'theosophy',
     parentId: 'esoteric-traditions',
     name: 'Theosophy',
     description: 'An esoteric philosophy founded in the late 19th century by Helena Blavatsky, Henry Steel Olcott, and others, blending Western esotericism with Eastern mystical concepts.',
     timelineId: 'evt-theosophy-society',
     mapFeatureId: 'evt-theosophy-society',
-    relatedIds: ['great-white-lodge', 'magical-orders'],
+    relatedIds: ['great-white-lodge', 'magical-orders', 'alice-bailey', 'lucis-trust'],
     images: ['https://upload.wikimedia.org/wikipedia/commons/a/ad/Helena_Petrovna_Blavatsky.jpg'],
     sources: ['The Secret Doctrine (Helena Blavatsky)', 'Isis Unveiled']
   },
@@ -23097,5 +23000,268 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Also known as the Great White Brotherhood, a belief in a hidden hierarchy of spiritual masters who guide human evolution and preserve ancient esoteric wisdom.',
     relatedIds: ['theosophy'],
     sources: ['Theosophical Literature']
+  },
+  {
+    id: 'magical-orders',
+    parentId: 'alchemy-occult',
+    name: 'Secret Societies & Orders',
+    description: 'Fraternal organizations, esoteric societies, and initiatory orders that structured occult study and rituals through historical lineages.',
+    layer: 'The Occult'
+  },
+  {
+    id: 'knights-templar',
+    parentId: 'magical-orders',
+    name: 'The Knights Templar',
+    description: 'A Catholic military order founded in 1119, famous for their role in the Crusades and their immense wealth. Mystically, they are alleged to have discovered esoteric relics (such as the Holy Grail) beneath the Temple Mount and to have practiced secret, occult rites prior to their sudden dissolution by King Philip IV of France in 1307.',
+    timelineId: 'knights-templar-founded',
+    mapFeatureId: 'knights-templar-founded',
+    relatedIds: ['magical-orders', 'freemasonry', 'hugues-de-payens', 'knights-hospitaller'],
+    sources: ['The History of the Knights Templar (Charles Addison)', 'Occult conspiracy literature']
+  },
+  {
+    id: 'knights-hospitaller',
+    parentId: 'magical-orders',
+    name: 'The Knights Hospitaller',
+    description: 'Also known as the Sovereign Military Order of Malta, a medieval Catholic military order founded in Jerusalem in the 11th century. Like the Templars, they grew into a major military power in the Mediterranean, holding Rhodes and later Malta, and are often linked in esoteric lore to global elite networks and secret sovereign lineages.',
+    timelineId: 'knights-hospitaller-founded',
+    mapFeatureId: 'knights-hospitaller-founded',
+    relatedIds: ['magical-orders', 'knights-templar', 'blessed-gerard'],
+    sources: ['The Knights Hospitaller (H. J. A. Sire)', 'Occult history archives']
+  },
+  {
+    id: 'rosicrucianism',
+    parentId: 'magical-orders',
+    name: 'Rosicrucianism',
+    description: 'An esoteric cultural movement claiming to possess secret wisdom passed down from antiquity, announced in the early 17th century by anonymous manifestos.',
+    relatedIds: ['magical-orders', 'freemasonry', 'christian-rosenkreuz'],
+    sources: ['Fama Fraternitatis (1614)', 'Confessio Fraternitatis (1615)']
+  },
+  {
+    id: 'freemasonry',
+    parentId: 'magical-orders',
+    name: 'Freemasonry',
+    description: 'A fraternal organisation rich in geometry, architectural symbols, and moral allegories, often linked in occult lore to the Knights Templar and Solomon\'s Temple.',
+    relatedIds: ['magical-orders', 'rosicrucianism', 'knights-templar', 'elias-ashmole', 'albert-pike'],
+    sources: ['The Constitutions of the Free-Masons (1723)', 'Morals and Dogma (Albert Pike)']
+  },
+  {
+    id: 'illuminati',
+    parentId: 'magical-orders',
+    name: 'Bavarian Illuminati',
+    description: 'An Enlightenment-era secret society founded in 1776 by Adam Weishaupt in Bavaria. It aimed to oppose superstition, obscurantism, religious influence over public life, and abuses of state power, but was outlawed in 1785 and has since become the focal point of global conspiracy theories regarding a shadow elite.',
+    timelineId: 'illuminati-founded',
+    mapFeatureId: 'illuminati-founded',
+    relatedIds: ['magical-orders', 'freemasonry', 'adam-weishaupt'],
+    sources: ['The Secret School of Wisdom (Josef Wäges)', 'Conspiracy history records']
+  },
+  {
+    id: 'hermetic-order-golden-dawn',
+    parentId: 'magical-orders',
+    name: 'Hermetic Order of the Golden Dawn',
+    description: 'A highly influential 19th-century secret society in London dedicated to ceremonial magic, Kabbalah, Tarot, and spiritual development.',
+    timelineId: 'evt-golden-dawn-founded',
+    mapFeatureId: 'evt-golden-dawn-founded',
+    relatedIds: ['magical-orders', 'aleister-crowley', 'kabbalah', 'william-wynn-westcott', 'macgregor-mathers'],
+    sources: ['The Golden Dawn (Israel Regardie)', 'Order Ritual Records']
+  },
+  {
+    id: 'ordo-templi-orientis',
+    parentId: 'magical-orders',
+    name: 'Ordo Templi Orientis (O.T.O.)',
+    description: 'An international fraternal occult organization founded by Theodor Reuss, later restructured by Aleister Crowley around the law of Thelema.',
+    relatedIds: ['magical-orders', 'aleister-crowley', 'jack-parsons', 'theodor-reuss', 'thelema'],
+    sources: ['Equinox of the Gods', 'O.T.O. Charters']
+  },
+  {
+    id: 'lucis-trust',
+    parentId: 'magical-orders',
+    name: 'Lucis Trust',
+    description: 'An esoteric publishing and educational trust founded in 1922 by Alice and Foster Bailey. Originally incorporated as the Lucifer Publishing Company, it publishes the writings of Alice Bailey (which she claimed to have received from a Tibetan Master, Djwhal Khul) and promotes the establishment of a "New World Order" based on spiritual principles.',
+    timelineId: 'lucis-trust-founded',
+    mapFeatureId: 'lucis-trust-founded',
+    relatedIds: ['magical-orders', 'theosophy', 'alice-bailey'],
+    sources: ['Lucis Trust Archives', 'Alice Bailey: Autobiography']
+  },
+  {
+    id: 'historical-alchemists',
+    parentId: 'alchemy-occult',
+    name: 'Occultists & Alchemists',
+    description: 'Prominent historical scientists, philosophers, writers, and figures who privately or publicly practiced alchemical, esoteric, and occult arts.',
+    layer: 'The Occult'
+  },
+  {
+    id: 'blessed-gerard',
+    parentId: 'historical-alchemists',
+    secondaryParentIds: ['knights-hospitaller'],
+    name: 'Blessed Gerard',
+    description: 'The founder of the Order of Knights of the Hospital of Saint John of Jerusalem (Knights Hospitaller). He established a hospice for pilgrims in Jerusalem in the late 11th century, which was formally recognized by papal bull in 1113.',
+    relatedIds: ['knights-hospitaller'],
+    sources: ['The Knights of Saint John', 'Hospitaler Historical Records']
+  },
+  {
+    id: 'hugues-de-payens',
+    parentId: 'historical-alchemists',
+    secondaryParentIds: ['knights-templar'],
+    name: 'Hugues de Payens',
+    description: 'The co-founder and first Grand Master of the Knights Templar. Along with eight other knights, he established the order in 1118 to protect pilgrims in the Holy Land, securing their first headquarters at the Temple Mount.',
+    relatedIds: ['knights-templar'],
+    sources: ['The History of the Knights Templar', 'Crusades Historical Documents']
+  },
+  {
+    id: 'nicolas-flamel',
+    parentId: 'historical-alchemists',
+    name: 'Nicolas Flamel',
+    description: 'A 14th-century French scribe who, in occult legend, successfully created the Philosopher\'s Stone, granting him and his wife Perenelle wealth and immortality.',
+    timelineId: 'nicolas-flamel',
+    mapFeatureId: 'nicolas-flamel',
+    relatedIds: ['alchemy', 'historical-alchemists'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/7/73/Nicolas_Flamel_Histoire_critique.jpg'],
+    sources: ['Exposition of the Hieroglyphical Figures (1612)', 'Historical Paris Archives']
+  },
+  {
+    id: 'christian-rosenkreuz',
+    parentId: 'historical-alchemists',
+    secondaryParentIds: ['rosicrucianism'],
+    name: 'Christian Rosenkreuz',
+    description: 'The legendary founder of the Rosicrucian Order (Order of the Rosy Cross). According to the Rosicrucian manifestos, he traveled to the East, gathered secret wisdom, and returned to Europe to found the fraternity.',
+    relatedIds: ['rosicrucianism'],
+    sources: ['Fama Fraternitatis (1614)', 'Chymical Wedding of Christian Rosenkreutz']
+  },
+  {
+    id: 'john-dee',
+    parentId: 'historical-alchemists',
+    name: 'John Dee',
+    description: 'Elizabethan mathematician, astronomer, astrologer, and adviser to Queen Elizabeth I. He devoted much of his life to alchemy, divination, and Hermetic philosophy, famously channeling the Enochian system of magic with medium Edward Kelley.',
+    timelineId: 'john-dee',
+    mapFeatureId: 'john-dee',
+    relatedIds: ['historical-alchemists', 'enochian-lore', 'alchemy'],
+    sources: ['The Private Diary of Dr. John Dee', 'John Dee: The World of an Elizabethan Magus (Peter French)']
+  },
+  {
+    id: 'elias-ashmole',
+    parentId: 'historical-alchemists',
+    secondaryParentIds: ['freemasonry'],
+    name: 'Elias Ashmole',
+    description: 'English antiquarian, politician, and student of alchemy. He was one of the earliest speculative Freemasons recorded (initiated in 1646) and possessed a massive library of alchemical and Hermetic manuscripts.',
+    relatedIds: ['freemasonry', 'alchemy'],
+    sources: ['The Diary and Will of Elias Ashmole', 'Ashmolean Library Archives']
+  },
+  {
+    id: 'paracelsus',
+    parentId: 'historical-alchemists',
+    name: 'Paracelsus',
+    description: 'Swiss physician, alchemist, and occultist who pioneered iatrochemistry (using chemistry in medicine) and wrote extensively on elementals and hermetic philosophy.',
+    relatedIds: ['alchemy', 'historical-alchemists'],
+    sources: ['Archidoxes of Alchemy', 'Paracelsus: Essential Readings']
+  },
+  {
+    id: 'isaac-newton',
+    parentId: 'historical-alchemists',
+    name: 'Sir Isaac Newton',
+    description: 'Celebrated physicist and mathematician who spent decades privately researching alchemy, translating Hermetic texts, and analyzing biblical prophecies.',
+    timelineId: 'isaac-newton',
+    mapFeatureId: 'isaac-newton',
+    relatedIds: ['alchemy', 'emerald-tablet'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/3/3b/Portrait_of_Sir_Isaac_Newton%2C_1689.jpg'],
+    sources: ['Newton Papers (Cambridge University Library)', 'Isaac Newton: The Last Sorcerer (Michael White)']
+  },
+  {
+    id: 'adam-weishaupt',
+    parentId: 'historical-alchemists',
+    secondaryParentIds: ['illuminati'],
+    name: 'Adam Weishaupt',
+    description: 'A German philosopher, professor of canon law, and the founder of the Order of the Illuminati in 1776. He sought to promote reason, secularism, and republicanism through the secret society, which was suppressed by the Bavarian government.',
+    relatedIds: ['illuminati'],
+    sources: ['Illuminati Correspondence', 'Bavarian Government Suppression Files']
+  },
+  {
+    id: 'william-wynn-westcott',
+    parentId: 'historical-alchemists',
+    secondaryParentIds: ['hermetic-order-golden-dawn'],
+    name: 'Dr. William Wynn Westcott',
+    description: 'English coroner, ceremonial magician, and co-founder of the Hermetic Order of the Golden Dawn. He discovered the Cipher Manuscripts that formed the foundation of the order\'s initiatory rituals and grade structure.',
+    relatedIds: ['hermetic-order-golden-dawn'],
+    sources: ['The Cipher Manuscripts', 'Golden Dawn Archives']
+  },
+  {
+    id: 'macgregor-mathers',
+    parentId: 'historical-alchemists',
+    secondaryParentIds: ['hermetic-order-golden-dawn'],
+    name: 'Samuel Liddell MacGregor Mathers',
+    description: 'One of the founders of the Hermetic Order of the Golden Dawn. An influential British occultist, translator of key esoteric texts (such as the Key of Solomon and the Book of the Sacred Magic of Abramelin the Mage), and ceremonial magician who claimed contact with Secret Chiefs.',
+    relatedIds: ['hermetic-order-golden-dawn', 'aleister-crowley'],
+    sources: ['Abramelin Translation', 'Golden Dawn Correspondence']
+  },
+  {
+    id: 'theodor-reuss',
+    parentId: 'historical-alchemists',
+    secondaryParentIds: ['ordo-templi-orientis'],
+    name: 'Theodor Reuss',
+    description: 'An Anglo-German occultist, singer, journalist, and co-founder of the Ordo Templi Orientis (O.T.O.) alongside Carl Kellner. He later authorized Aleister Crowley to lead the order in Britain and Ireland, facilitating its transition to Thelemic principles.',
+    relatedIds: ['ordo-templi-orientis', 'aleister-crowley'],
+    sources: ['O.T.O. Historical Charters', 'Reuss Correspondence']
+  },
+  {
+    id: 'albert-pike',
+    parentId: 'historical-alchemists',
+    secondaryParentIds: ['freemasonry'],
+    name: 'Albert Pike',
+    description: 'An American lawyer, general, and prominent Freemason who authored *Morals and Dogma of the Ancient and Accepted Scottish Rite of Freemasonry*. In esoteric and conspiracy lore, he is frequently accused of writing a controversial letter outlining a plan for three world wars, and is scrutinized for his deep occult philosophy.',
+    relatedIds: ['freemasonry'],
+    sources: ['Morals and Dogma of the Ancient and Accepted Scottish Rite', 'Albert Pike Biography']
+  },
+  {
+    id: 'alice-bailey',
+    parentId: 'historical-alchemists',
+    secondaryParentIds: ['lucis-trust'],
+    name: 'Alice Bailey',
+    description: 'An influential writer and esotericist who founded the Lucis Trust in 1922. She claimed to telepathically receive teachings from Djwhal Khul, a Tibetan Master of Wisdom, and wrote numerous books outlining a synthesis of Eastern and Western esotericism, spiritual hierarchy, and the New Age.',
+    relatedIds: ['lucis-trust', 'theosophy'],
+    sources: ['The Unfinished Autobiography of Alice Bailey', 'Esoteric Psychology']
+  },
+  {
+    id: 'aleister-crowley',
+    parentId: 'historical-alchemists',
+    secondaryParentIds: ['hermetic-order-golden-dawn', 'ordo-templi-orientis', 'thelema'],
+    name: 'Aleister Crowley',
+    description: 'English occultist, ceremonial magician, and founder of Thelema. He established the Abbey of Thelema and famously purchased Boleskine House to perform the Abramelin ritual.',
+    timelineId: 'aleister-crowley',
+    mapFeatureId: 'aleister-crowley',
+    relatedIds: ['ordo-templi-orientis', 'hermetic-order-golden-dawn', 'jack-parsons', 'abbey-of-thelema', 'thelema', 'macgregor-mathers', 'theodor-reuss'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/4/40/Aleister_Crowley%2C_thinker.jpg'],
+    sources: ['The Book of the Law', 'Magick in Theory and Practice', 'Boleskine House Archives']
+  },
+  {
+    id: 'jack-parsons',
+    parentId: 'historical-alchemists',
+    secondaryParentIds: ['ordo-templi-orientis'],
+    name: 'Jack Parsons',
+    description: 'Brilliant JPL co-founder and rocket scientist who privately led the Agape Lodge of the O.T.O., performing the famous Babalon Working rituals with L. Ron Hubbard.',
+    timelineId: 'jack-parsons',
+    mapFeatureId: 'jack-parsons',
+    relatedIds: ['ordo-templi-orientis', 'aleister-crowley'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/5/5d/Jack_Parsons_2.jpg'],
+    sources: ['Strange Angel (George Pendle)', 'The Collected Writings of Jack Parsons']
+  },
+  {
+    id: 'robert-maxwell',
+    parentId: 'historical-alchemists',
+    name: 'Robert Maxwell',
+    description: 'British media mogul, publisher, and former Member of Parliament who built a massive empire, including Pergamon Press. He died under mysterious circumstances off his yacht, and was posthumously revealed to have engaged in massive financial fraud and had alleged ties to multiple intelligence agencies.',
+    timelineId: 'robert-maxwell',
+    mapFeatureId: 'robert-maxwell',
+    relatedIds: ['historical-alchemists', 'pergamon-press'],
+    sources: ['Robert Maxwell: Israel\'s Superspy (Gordon Thomas)', 'Maxwell: The Outsider (Tom Bower)']
+  },
+  {
+    id: 'pergamon-press',
+    parentId: 'robert-maxwell',
+    name: 'Pergamon Press',
+    description: 'A major scientific and medical publishing house founded by Robert Maxwell. In conspiracy and esoteric lore, it is sometimes scrutinized for its role in controlling academic literature, dissemination of scientific research, and potential intelligence front connections.',
+    timelineId: 'maxwell-pergamon',
+    mapFeatureId: 'maxwell-pergamon',
+    relatedIds: ['historical-alchemists', 'robert-maxwell'],
+    sources: ['Pergamon Press Archive', 'Media and Intelligence Studies']
   }
 ];
+

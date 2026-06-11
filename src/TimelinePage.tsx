@@ -126,13 +126,13 @@ const ERAS_CONFIG = [
   },
   {
     id: 'alchemy-occult',
-    name: 'Alchemy & Occult',
-    start: 1300,
+    name: 'The Occult',
+    start: 1000,
     end: 2026,
     color: '#59DCB7', // Mint/Teal
     icon: '/icons/icon-alchemy-occult.svg',
     layer: 'alchemy-occult',
-    desc: 'Esoteric traditions, alchemical pursuits, and occult figures linking science and mysticism from Isaac Newton to Jack Parsons.'
+    desc: 'Esoteric traditions, secret societies, alchemical pursuits, and occult figures from the Knights Templar to the modern era.'
   }
 ];
 

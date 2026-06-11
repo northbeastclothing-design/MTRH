@@ -2714,6 +2714,80 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
       description: 'A seafaring people group originating from the Aegean who established a powerful pentapolis along the coast of southern Canaan, frequently warring with the early Israelite tribes.',
       source: 'Levantine Archaeology',
       isPeopleGroup: true
+    },
+    {
+      id: 'knights-templar-founded',
+      name: 'Knights Templar Founded',
+      type: 'event',
+      layer: 'alchemy-occult',
+      start: 1119,
+      description: 'Hugues de Payens and eight other French knights establish the Poor Fellow-Soldiers of Christ and of the Temple of Solomon (Knights Templar) at the Temple Mount in Jerusalem.',
+      source: 'Crusade Chronology'
+    },
+    {
+      id: 'knights-hospitaller-founded',
+      name: 'Knights Hospitaller Recognized',
+      type: 'event',
+      layer: 'alchemy-occult',
+      start: 1113,
+      description: 'Pope Paschal II issues the papal bull Pie Postulatio Voluntatis, officially recognizing the Order of Knights of the Hospital of Saint John of Jerusalem under Blessed Gerard.',
+      source: 'Vatican Archives'
+    },
+    {
+      id: 'john-dee',
+      name: 'John Dee',
+      type: 'lifespan',
+      layer: 'alchemy-occult',
+      start: 1527,
+      end: 1608,
+      description: 'Elizabethan mathematician, astronomer, and occultist who served as court adviser to Queen Elizabeth I, devoting his later years to alchemical research and Enochian spirit communication.',
+      source: 'Historical Biographies'
+    },
+    {
+      id: 'john-dee-mortlake',
+      name: 'John Dee\'s Enochian Channelings',
+      type: 'event',
+      layer: 'alchemy-occult',
+      start: 1582,
+      description: 'John Dee and medium Edward Kelley begin their famous "spirit actions" at Mortlake, claiming to receive a celestial language and system of magic directly from angels.',
+      source: 'Dee\'s Spiritual Diaries'
+    },
+    {
+      id: 'illuminati-founded',
+      name: 'Bavarian Illuminati Founded',
+      type: 'event',
+      layer: 'alchemy-occult',
+      start: 1776,
+      description: 'Adam Weishaupt, professor of canon law, founds the Order of the Illuminati in Ingolstadt, Bavaria, seeking to combat state tyranny and religious control over society.',
+      source: 'Bavarian Historical Records'
+    },
+    {
+      id: 'lucis-trust-founded',
+      name: 'Lucifer Publishing Company Founded',
+      type: 'event',
+      layer: 'alchemy-occult',
+      start: 1922,
+      description: 'Alice and Foster Bailey establish the Lucifer Publishing Company (later renamed Lucis Trust) in New York City to publish Bailey\'s channeled esoteric teachings.',
+      source: 'Lucis Trust Official History'
+    },
+    {
+      id: 'robert-maxwell',
+      name: 'Robert Maxwell',
+      type: 'lifespan',
+      layer: 'alchemy-occult',
+      start: 1923,
+      end: 1991,
+      description: 'British media tycoon, Member of Parliament, and owner of Pergamon Press, whose life and mysterious death off his yacht have been linked to intelligence agencies and global networks.',
+      source: 'Historical Biographies'
+    },
+    {
+      id: 'maxwell-pergamon',
+      name: 'Maxwell Acquires Pergamon Press',
+      type: 'event',
+      layer: 'alchemy-occult',
+      start: 1951,
+      description: 'Robert Maxwell acquires control of Pergamon Press, building it into a global scientific publishing giant and establishing its headquarters at Headington Hill Hall in Oxford.',
+      source: 'Corporate Publishing Records'
     }
   ];
 
@@ -2814,21 +2888,29 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'operation-chase': { lng: -76.008, lat: 36.850, locationName: 'Atlantic Ocean (Out of Norfolk, VA)', category: 'Secret Government Programs' },
   'operation-highjump': { lng: 135.0, lat: -82.8628, locationName: 'Ross Ice Shelf, Antarctica', category: 'Secret Government Programs' },
 
-  // Alchemy / Occult Locations
-  'nicolas-flamel': { lng: 2.353333, lat: 48.863333, locationName: 'House of Nicolas Flamel (Paris, France)', category: 'Alchemy / Occult' },
-  'evt-flamel-stone': { lng: 2.353333, lat: 48.863333, locationName: 'House of Nicolas Flamel (Paris, France)', category: 'Alchemy / Occult' },
-  'isaac-newton': { lng: -0.630278, lat: 52.809167, locationName: 'Woolsthorpe Manor (Lincolnshire, England)', category: 'Alchemy / Occult' },
-  'evt-newton-alchemy': { lng: 0.118, lat: 52.205, locationName: 'Trinity College (Cambridge, England)', category: 'Alchemy / Occult' },
-  'evt-newton-emerald-tablet': { lng: -0.630278, lat: 52.809167, locationName: 'Woolsthorpe Manor (Lincolnshire, England)', category: 'Alchemy / Occult' },
-  'evt-golden-dawn-founded': { lng: -0.1278, lat: 51.5074, locationName: 'London, England', category: 'Alchemy / Occult' },
-  'aleister-crowley': { lng: -4.437222, lat: 57.265278, locationName: 'Boleskine House (Loch Ness, Scotland)', category: 'Alchemy / Occult' },
-  'evt-crowley-boleskine': { lng: -4.437222, lat: 57.265278, locationName: 'Boleskine House (Loch Ness, Scotland)', category: 'Alchemy / Occult' },
-  'evt-book-of-the-law': { lng: 31.2357, lat: 30.0444, locationName: 'Cairo, Egypt', category: 'Alchemy / Occult' },
-  'jack-parsons': { lng: -118.156111, lat: 34.133333, locationName: 'Parsons Residence (Pasadena, California)', category: 'Alchemy / Occult' },
-  'evt-babalon-working': { lng: -118.156111, lat: 34.133333, locationName: 'Parsons Residence (Pasadena, California)', category: 'Alchemy / Occult' },
-  'abbey-of-thelema': { lng: 14.030556, lat: 38.031944, locationName: 'Abbey of Thelema (Cefalù, Sicily)', category: 'Alchemy / Occult' },
-  'evt-golem-prague': { lng: 14.418611, lat: 50.090000, locationName: 'Old-New Synagogue (Prague, Czech Republic)', category: 'Alchemy / Occult' },
-  'evt-theosophy-society': { lng: -74.0060, lat: 40.7128, locationName: 'New York City, New York', category: 'Alchemy / Occult' },
+  // The Occult Locations
+  'nicolas-flamel': { lng: 2.353333, lat: 48.863333, locationName: 'House of Nicolas Flamel (Paris, France)', category: 'The Occult' },
+  'evt-flamel-stone': { lng: 2.353333, lat: 48.863333, locationName: 'House of Nicolas Flamel (Paris, France)', category: 'The Occult' },
+  'isaac-newton': { lng: -0.630278, lat: 52.809167, locationName: 'Woolsthorpe Manor (Lincolnshire, England)', category: 'The Occult' },
+  'evt-newton-alchemy': { lng: 0.118, lat: 52.205, locationName: 'Trinity College (Cambridge, England)', category: 'The Occult' },
+  'evt-newton-emerald-tablet': { lng: -0.630278, lat: 52.809167, locationName: 'Woolsthorpe Manor (Lincolnshire, England)', category: 'The Occult' },
+  'evt-golden-dawn-founded': { lng: -0.1278, lat: 51.5074, locationName: 'London, England', category: 'The Occult' },
+  'aleister-crowley': { lng: -4.437222, lat: 57.265278, locationName: 'Boleskine House (Loch Ness, Scotland)', category: 'The Occult' },
+  'evt-crowley-boleskine': { lng: -4.437222, lat: 57.265278, locationName: 'Boleskine House (Loch Ness, Scotland)', category: 'The Occult' },
+  'evt-book-of-the-law': { lng: 31.2357, lat: 30.0444, locationName: 'Cairo, Egypt', category: 'The Occult' },
+  'jack-parsons': { lng: -118.156111, lat: 34.133333, locationName: 'Parsons Residence (Pasadena, California)', category: 'The Occult' },
+  'evt-babalon-working': { lng: -118.156111, lat: 34.133333, locationName: 'Parsons Residence (Pasadena, California)', category: 'The Occult' },
+  'abbey-of-thelema': { lng: 14.030556, lat: 38.031944, locationName: 'Abbey of Thelema (Cefalù, Sicily)', category: 'The Occult' },
+  'evt-golem-prague': { lng: 14.418611, lat: 50.090000, locationName: 'Old-New Synagogue (Prague, Czech Republic)', category: 'The Occult' },
+  'evt-theosophy-society': { lng: -74.0060, lat: 40.7128, locationName: 'New York City, New York', category: 'The Occult' },
+  'john-dee': { lng: -0.270, lat: 51.469, locationName: 'Mortlake (London, England)', category: 'The Occult' },
+  'john-dee-mortlake': { lng: -0.270, lat: 51.469, locationName: 'Mortlake (London, England)', category: 'The Occult' },
+  'knights-templar-founded': { lng: 35.235, lat: 31.778, locationName: 'Temple Mount (Jerusalem)', category: 'The Occult' },
+  'knights-hospitaller-founded': { lng: 35.2294, lat: 31.7772, locationName: 'Muristan (Jerusalem)', category: 'The Occult' },
+  'illuminati-founded': { lng: 11.4244, lat: 48.7667, locationName: 'Ingolstadt, Bavaria, Germany', category: 'The Occult' },
+  'lucis-trust-founded': { lng: -73.9669, lat: 40.7516, locationName: '866 United Nations Plaza (New York, NY)', category: 'The Occult' },
+  'robert-maxwell': { lng: -1.2335, lat: 51.7589, locationName: 'Headington Hill Hall (Oxford, England)', category: 'The Occult' },
+  'maxwell-pergamon': { lng: -1.2335, lat: 51.7589, locationName: 'Headington Hill Hall (Oxford, England)', category: 'The Occult' },
   
   // Ancient Civilizations / People Groups
   'timeline-egyptian-civilization': { lng: 31.1342, lat: 29.9792, locationName: 'Great Pyramids of Giza (Egypt)', category: 'Archaeological Finds' },
