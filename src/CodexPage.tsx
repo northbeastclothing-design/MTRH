@@ -52,6 +52,7 @@ const LAYER_COLORS: Record<string, string> = {
   'Secret Government Programs': '#FF5C5C',
   'The Occult': '#59DCB7',
   'People Groups': '#BCA7C7',
+  'Ancient People Groups': '#BCA7C7',
   'Default': '#b6a6ff'
 };
 
@@ -83,6 +84,8 @@ const LAYER_ICONS: Record<string, string> = {
   'Secret Government Programs': '/icons/icon-secret-government-programs.svg',
   'The Occult': '/icons/icon-alchemy-occult.svg',
   'People Groups': '/icons/icon-people-groups.svg',
+  'Ancient People Groups': '/icons/icon-people-groups.svg',
+  'ancient-civilizations': '/icons/icon-people-groups.svg',
   'Default': '/icons/icon-map-pin.svg'
 };
 
@@ -199,11 +202,12 @@ export default function CodexPage({
     // 2. If the node has an explicit layer defined, map it
     if (activeTermNode.layer) {
       let layerName = activeTermNode.layer;
-      if (layerName === 'biblical-patriarchs' || layerName === 'royal-bloodlines' || layerName === 'merovingian-bloodlines' || layerName === 'sumerian-kings' || layerName === 'greek-mythology') {
+      if (layerName === 'biblical-patriarchs' || layerName === 'royal-bloodlines' || layerName === 'merovingian-bloodlines' || layerName === 'sumerian-kings' || layerName === 'greek-mythology' || layerName === 'ancient-civilizations') {
         if (layerName === 'biblical-patriarchs') layerName = 'Biblical Figures';
         else if (layerName === 'royal-bloodlines' || layerName === 'merovingian-bloodlines') layerName = 'Biblical Figures';
         else if (layerName === 'sumerian-kings') layerName = 'Archaeological Finds';
         else if (layerName === 'greek-mythology') layerName = 'Archaeological Finds';
+        else if (layerName === 'ancient-civilizations') layerName = 'Ancient People Groups';
       }
       return {
         layer: layerName,
@@ -218,11 +222,12 @@ export default function CodexPage({
       if (!parent) break;
       if (parent.layer) {
         let layerName = parent.layer;
-        if (layerName === 'biblical-patriarchs' || layerName === 'royal-bloodlines' || layerName === 'merovingian-bloodlines' || layerName === 'sumerian-kings' || layerName === 'greek-mythology') {
+        if (layerName === 'biblical-patriarchs' || layerName === 'royal-bloodlines' || layerName === 'merovingian-bloodlines' || layerName === 'sumerian-kings' || layerName === 'greek-mythology' || layerName === 'ancient-civilizations') {
           if (layerName === 'biblical-patriarchs') layerName = 'Biblical Figures';
           else if (layerName === 'royal-bloodlines' || layerName === 'merovingian-bloodlines') layerName = 'Biblical Figures';
           else if (layerName === 'sumerian-kings') layerName = 'Archaeological Finds';
           else if (layerName === 'greek-mythology') layerName = 'Archaeological Finds';
+          else if (layerName === 'ancient-civilizations') layerName = 'Ancient People Groups';
         }
         return {
           layer: layerName,
@@ -1265,6 +1270,9 @@ export default function CodexPage({
                         letterSpacing: '0.5px',
                         textTransform: 'uppercase'
                       }}>
+                        {node.subLabel === 'Possible Nephilim Bloodline' && (
+                          <span style={{ marginRight: '6px', color: 'currentColor', fontWeight: '900' }}>✖</span>
+                        )}
                         {node.name}
                       </span>
                       {parentLabel && (
@@ -1561,6 +1569,26 @@ export default function CodexPage({
                       }}
                     >
                       <div style={{ display: 'flex', alignItems: 'center', minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                        {node.subLabel === 'Possible Nephilim Bloodline' && (
+                          <span 
+                            title="Possible Nephilim Bloodline" 
+                            style={{ 
+                              display: 'inline-flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              fontSize: '11px',
+                              lineHeight: '1',
+                              fontWeight: '900',
+                              color: isSelected || isHovered 
+                                ? '#000000' 
+                                : (isMapDarkMode ? '#ffffff' : '#000000'),
+                              marginRight: '6px',
+                              flexShrink: 0
+                            }}
+                          >
+                            ✖
+                          </span>
+                        )}
                         <span
                           style={{
                             fontSize: '10px',
@@ -1967,8 +1995,33 @@ export default function CodexPage({
                         flexShrink: 0
                       }}>✖</span>
                     )}
+                    {activeTermNode.subLabel === 'Possible Nephilim Bloodline' && (
+                      <span style={{
+                        marginRight: '12px',
+                        fontWeight: 900,
+                        fontSize: '44px',
+                        lineHeight: 1,
+                        WebkitTextStroke: '3px currentColor',
+                        flexShrink: 0
+                      }}>✖</span>
+                    )}
                     {activeTermNode.name}
                   </h1>
+
+                  {/* SubLabel */}
+                  {activeTermNode.subLabel && (
+                    <div style={{
+                      fontSize: '10px',
+                      fontWeight: 'bold',
+                      color: isMapDarkMode ? '#ff5c5c' : '#b31b1b',
+                      letterSpacing: '1px',
+                      textTransform: 'uppercase',
+                      marginBottom: '12px',
+                      fontFamily: '"Space Mono", monospace'
+                    }}>
+                      [{activeTermNode.subLabel}]
+                    </div>
+                  )}
 
                   {/* Actions Row (Flag, View on Map, View on Timeline) */}
                   <div style={{ display: 'flex', gap: '8px', marginBottom: '16px', flexWrap: 'wrap' }}>
@@ -2375,6 +2428,50 @@ export default function CodexPage({
                       </div>
                       <p style={{ fontSize: '8.5px', lineHeight: '1.4', color: isMapDarkMode ? '#ffb3b3' : '#801c1c', margin: 0, fontFamily: '"Space Mono", monospace' }}>
                         Represents apocryphal, non-canonical, or mythological entries outside of canonical scripture.
+                      </p>
+                    </div>
+                  </div>
+                )}
+
+                {/* Legend explanation for Nephilim Bloodline tag */}
+                {activeTermNode.subLabel === 'Possible Nephilim Bloodline' && (
+                  <div 
+                    style={{ 
+                      marginTop: '24px',
+                      borderTop: `1px solid ${theme.borderLight || theme.border}`,
+                      paddingTop: '20px',
+                      marginBottom: '24px'
+                    }}
+                  >
+                    <div 
+                      style={{ 
+                        padding: '12px',
+                        border: `1px solid ${isMapDarkMode ? 'rgba(255, 92, 92, 0.4)' : 'rgba(179, 27, 27, 0.4)'}`,
+                        borderRadius: '8px',
+                        background: isMapDarkMode ? 'rgba(255, 92, 92, 0.04)' : 'rgba(255, 92, 92, 0.02)',
+                      }}
+                    >
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
+                        <span 
+                          style={{ 
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            fontSize: '11px',
+                            lineHeight: '1',
+                            fontWeight: '900',
+                            color: isMapDarkMode ? '#ff5c5c' : '#b31b1b',
+                            fontFamily: '"Space Mono", monospace',
+                          }}
+                        >
+                          ✖
+                        </span>
+                        <span style={{ fontSize: '9px', fontWeight: 'bold', fontFamily: '"Space Mono", monospace', color: isMapDarkMode ? '#ff5c5c' : '#b31b1b' }}>
+                          NEPHILIM BLOODLINE INDICATOR
+                        </span>
+                      </div>
+                      <p style={{ fontSize: '8.5px', lineHeight: '1.4', color: isMapDarkMode ? '#ffb3b3' : '#801c1c', margin: 0, fontFamily: '"Space Mono", monospace' }}>
+                        Represents a people group historically associated with or suspected of carrying Nephilim giant lineage.
                       </p>
                     </div>
                   </div>

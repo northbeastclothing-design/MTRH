@@ -120,7 +120,8 @@ const CATEGORY_DESCRIPTIONS: Record<string, string> = {
   'Crop Circles': 'Intricate patterns appearing in fields, often appearing overnight with no clear earthly explanation.',
   'Meteor Impact Craters': 'Confirmed impact structures on Earth created by ancient meteorite collisions, marking catastrophic cosmic encounters throughout geological history.',
   'Archaeological Finds': 'Remarkable historical excavations, lost citadels, and ancient artifacts rewriting human origin timelines.',
-  'Biblical Finds': 'Archaeological discoveries, inscriptions, and sacred sanctuaries validating accounts from biblical history.'
+  'Biblical Finds': 'Archaeological discoveries, inscriptions, and sacred sanctuaries validating accounts from biblical history.',
+  'Ancient People Groups': 'Ancient Mesoamerican civilizations, Native American tribes, and lost people groups of antiquity.'
 };
 
 const isVideoUrl = (url: string) => {
@@ -653,6 +654,7 @@ const processIncomingRecord = (item: any, index: number) => {
   else if (lowerCat.includes('ley') || lowerCat.includes('ley-line') || lowerCat === 'ley lines') normalizedCategory = 'Ley Lines';
   else if (lowerCat.includes('cryptid')) normalizedCategory = 'Cryptid Sightings';
   else if (lowerCat.includes('entrance') || lowerCat.includes('underworld')) normalizedCategory = 'Underworld Entrances';
+  else if (lowerCat.includes('ancient people') || lowerCat.includes('people group')) normalizedCategory = 'Ancient People Groups';
   else if (lowerCat.includes('ancient') || lowerCat.includes('text')) normalizedCategory = 'Ancient Texts';
   else if (lowerCat.includes('burial') || lowerCat.includes('mound')) normalizedCategory = 'Burial Mounds';
   else if (lowerCat.includes('cave') || lowerCat.includes('drawing')) normalizedCategory = 'Cave Drawings';
@@ -809,6 +811,7 @@ const LAYER_CONFIG: Record<string, { color: string; icon: string }> = {
   'Biblical Finds': { color: '#D49459', icon: '/icons/icon-biblical-finds.svg' },
   'Secret Government Programs': { color: '#FF5C5C', icon: '/icons/icon-secret-government-programs.svg' },
   'The Occult': { color: '#E9C46A', icon: '/icons/icon-alchemy-occult.svg' },
+  'Ancient People Groups': { color: '#BCA7C7', icon: '/icons/icon-people-groups.svg' },
   'Default': { color: '#b6a6ff', icon: '/icons/icon-map-pin.svg' }
 };
 
@@ -1664,7 +1667,7 @@ function App() {
                   <option value="merovingian-bloodlines">Merovingian Bloodlines</option>
                   <option value="royal-bloodlines">Royal Bloodlines</option>
                   <option value="secret-gov-programs">Secret Government Programs</option>
-                  <option value="ancient-civilizations">Ancient Civilizations & Tribes</option>
+                  <option value="ancient-civilizations">Ancient People Groups</option>
                   <option value="alchemy-occult">The Occult</option>
                 </select>
               </div>
@@ -8625,7 +8628,7 @@ function App() {
                             <option value="merovingian-bloodlines">Merovingian Bloodlines</option>
                             <option value="royal-bloodlines">Royal Bloodlines</option>
                             <option value="secret-gov-programs">Secret Government Programs</option>
-                            <option value="ancient-civilizations">Ancient Civilizations & Tribes</option>
+                            <option value="ancient-civilizations">Ancient People Groups</option>
                             <option value="alchemy-occult">The Occult</option>
                           </select>
                         </div>

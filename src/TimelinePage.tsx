@@ -116,13 +116,13 @@ const ERAS_CONFIG = [
   },
   {
     id: 'ancient-civilizations',
-    name: 'Ancient Civilizations & Tribes',
+    name: 'Ancient People Groups',
     start: -4000,
     end: 2026,
     color: '#BCA7C7', // Lavender
     icon: '/icons/icon-people-groups.svg',
     layer: 'ancient-civilizations',
-    desc: 'Ancient Mesoamerican empires, Native American tribes, and lost civilizations of antiquity.'
+    desc: 'Ancient Mesoamerican empires, Native American tribes, and lost people groups of antiquity.'
   },
   {
     id: 'alchemy-occult',

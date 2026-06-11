@@ -20,7 +20,9 @@ export interface TermNode {
   bibleVerses?: string[]; // Optional scripture quotes
   images?: string[];
   sources?: string[];
+  subLabel?: string;
 }
+
 
 const chunk_0: any[] = [
   {
@@ -3415,27 +3417,29 @@ const chunk_0: any[] = [
   },
   {
     id: 'rephaim',
-    parentId: 'ancient-civilizations-tribes',
+    parentId: 'people-groups',
     name: 'Rephaim',
     description: 'An ancient race of giants who inhabited Canaan, Bashan, and Moab. Associated with King Og of Bashan and the valley of Rephaim.',
     layer: 'ancient-civilizations',
     timelineId: 'rephaim',
     sources: ['Bible', 'Historical Chronology Database'],
-    bibleVerses: ['In the fourteenth year Chedorlaomer came, and the kings who were with him, and struck the Rephaim in Ashteroth Karnaim, and the Zuzim in Ham, and the Emim in Shaveh Kiriathaim, — Genesis 14:5 (https://www.biblegateway.com/passage/?search=Genesis+14%3A5)', '(For only Og king of Bashan remained of the remnant of the Rephaim. Behold, his bedstead was a bedstead of iron. Isn’t it in Rabbah of the children of Ammon? Nine cubits was its length, and four cubits its width, after the cubit of a man.) — Deuteronomy 3:11 (https://www.biblegateway.com/passage/?search=Deuteronomy+3%3A11)', 'and the border of Og king of Bashan, of the remnant of the Rephaim, who lived at Ashtaroth and at Edrei, — Joshua 12:4 (https://www.biblegateway.com/passage/?search=Joshua+12%3A4)']
+    bibleVerses: ['In the fourteenth year Chedorlaomer came, and the kings who were with him, and struck the Rephaim in Ashteroth Karnaim, and the Zuzim in Ham, and the Emim in Shaveh Kiriathaim, — Genesis 14:5 (https://www.biblegateway.com/passage/?search=Genesis+14%3A5)', '(For only Og king of Bashan remained of the remnant of the Rephaim. Behold, his bedstead was a bedstead of iron. Isn’t it in Rabbah of the children of Ammon? Nine cubits was its length, and four cubits its width, after the cubit of a man.) — Deuteronomy 3:11 (https://www.biblegateway.com/passage/?search=Deuteronomy+3%3A11)', 'and the border of Og king of Bashan, of the remnant of the Rephaim, who lived at Ashtaroth and at Edrei, — Joshua 12:4 (https://www.biblegateway.com/passage/?search=Joshua+12%3A4)'],
+    subLabel: 'Possible Nephilim Bloodline'
   },
   {
     id: 'emim',
-    parentId: 'ancient-civilizations-tribes',
+    parentId: 'people-groups',
     name: 'Emim',
     description: 'An ancient giant people who originally inhabited the land of Moab. Described as "a people great, and many, and tall, as the Anakim."',
     layer: 'ancient-civilizations',
     timelineId: 'emim',
     sources: ['Bible', 'Historical Chronology Database'],
-    bibleVerses: ['In the fourteenth year Chedorlaomer came, and the kings who were with him, and struck the Rephaim in Ashteroth Karnaim, and the Zuzim in Ham, and the Emim in Shaveh Kiriathaim, — Genesis 14:5 (https://www.biblegateway.com/passage/?search=Genesis+14%3A5)', '(The Emim lived therein before, a people great, and many, and tall, as the Anakim. These also are considered to be Rephaim, as the Anakim; but the Moabites call them Emim. — Deuteronomy 2:10-11 (https://www.biblegateway.com/passage/?search=Deuteronomy+2%3A10-11)']
+    bibleVerses: ['In the fourteenth year Chedorlaomer came, and the kings who were with him, and struck the Rephaim in Ashteroth Karnaim, and the Zuzim in Ham, and the Emim in Shaveh Kiriathaim, — Genesis 14:5 (https://www.biblegateway.com/passage/?search=Genesis+14%3A5)', '(The Emim lived therein before, a people great, and many, and tall, as the Anakim. These also are considered to be Rephaim, as the Anakim; but the Moabites call them Emim. — Deuteronomy 2:10-11 (https://www.biblegateway.com/passage/?search=Deuteronomy+2%3A10-11)'],
+    subLabel: 'Possible Nephilim Bloodline'
   },
   {
     id: 'horites',
-    parentId: 'ancient-civilizations-tribes',
+    parentId: 'people-groups',
     name: 'Horites',
     description: 'The ancient cave-dwelling inhabitants of Mount Seir (Edom) before being dispossessed and succeeded by the descendants of Esau (Edomites).',
     layer: 'ancient-civilizations',
@@ -3445,7 +3449,7 @@ const chunk_0: any[] = [
   },
   {
     id: 'avim',
-    parentId: 'ancient-civilizations-tribes',
+    parentId: 'people-groups',
     name: 'Avim',
     description: 'The early inhabitants of southwest Canaan (near Gaza) who dwelt in villages as far as Hazerim, later destroyed and replaced by the Caphtorim (Philistines).',
     layer: 'ancient-civilizations',
@@ -3455,7 +3459,7 @@ const chunk_0: any[] = [
   },
   {
     id: 'perizzites',
-    parentId: 'ancient-civilizations-tribes',
+    parentId: 'people-groups',
     name: 'Perizzites',
     description: 'A Canaanite people group who lived in the forested hill country of Ephraim and Judah. Mentioned regularly as inhabitants of the Promised Land.',
     layer: 'ancient-civilizations',
@@ -3465,7 +3469,7 @@ const chunk_0: any[] = [
   },
   {
     id: 'kenites',
-    parentId: 'ancient-civilizations-tribes',
+    parentId: 'people-groups',
     name: 'Kenites',
     description: 'A nomadic clan of metalworkers allied with Israel. Jethro, the father-in-law of Moses, was a Kenite. They inhabited the Wilderness of Arad.',
     layer: 'ancient-civilizations',
@@ -6954,7 +6958,8 @@ const chunk_1: any[] = [
     description: 'A giant mentioned in biblical narratives. Lineage: Tribe of giants.',
     timelineId: 'zamzummim',
     isApocryphal: true,
-    bibleVerses: ['(That also was deemed a land of giants; giants formerly dwelt there, and the Ammonites call them Zamzummim, a people great and many, and tall as the Anakim...) — Deuteronomy 2:20-21 (https://www.biblegateway.com/passage/?search=Deuteronomy+2%3A20-21)']
+    bibleVerses: ['(That also was deemed a land of giants; giants formerly dwelt there, and the Ammonites call them Zamzummim, a people great and many, and tall as the Anakim...) — Deuteronomy 2:20-21 (https://www.biblegateway.com/passage/?search=Deuteronomy+2%3A20-21)'],
+    subLabel: 'Possible Nephilim Bloodline'
   },
   {
     id: 'anakim',
@@ -6963,7 +6968,8 @@ const chunk_1: any[] = [
     description: 'A giant mentioned in biblical narratives. Lineage: Tribe of giants. Parents/Origins: Anak and his wife.',
     timelineId: 'anakim',
     isApocryphal: true,
-    bibleVerses: ['A people great and tall, the descendants of the Anakim, whom you know, and of whom you have heard it said, \'Who can stand before the descendants of Anak?\' — Deuteronomy 9:2 (https://www.biblegateway.com/passage/?search=Deuteronomy+9%3A2)', 'And there we saw the giants, the sons of Anak, which come of the giants: and we were in our own sight as grasshoppers, and so we were in their sight. — Numbers 13:33 (https://www.biblegateway.com/passage/?search=Numbers+13%3A33)']
+    bibleVerses: ['A people great and tall, the descendants of the Anakim, whom you know, and of whom you have heard it said, \'Who can stand before the descendants of Anak?\' — Deuteronomy 9:2 (https://www.biblegateway.com/passage/?search=Deuteronomy+9%3A2)', 'And there we saw the giants, the sons of Anak, which come of the giants: and we were in our own sight as grasshoppers, and so we were in their sight. — Numbers 13:33 (https://www.biblegateway.com/passage/?search=Numbers+13%3A33)'],
+    subLabel: 'Possible Nephilim Bloodline'
   },
   {
     id: 'enakim',
@@ -16554,6 +16560,7 @@ const chunk_4: any[] = [
   {
     id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-0',
     parentId: 'megaliths',
+    secondaryParentIds: ['egyptian-civilization'],
     name: 'The Great Pyramid of Giza',
     description: 'Not a tomb, but an ancient power plant utilizing acoustic resonance and subterranean water aquifers to generate electromagnetic energy. The precision of its alignments to true north and Orion’s Belt suggests pre-diluvian high technology or extraterrestrial architects.',
     layer: 'Megaliths / Dolmans / Petroglyphs / Geoglyphs',
@@ -16563,6 +16570,7 @@ const chunk_4: any[] = [
   {
     id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-1',
     parentId: 'megaliths',
+    secondaryParentIds: ['egyptian-civilization'],
     name: 'Great Sphinx of Giza',
     description: 'Carved thousands of years before dynastic Egypt, showing clear signs of water-erosion from a time when the Sahara was a lush rainforest. Beneath its paws lies the legendary \'Hall of Records\', a hidden chamber holding the lost history of Atlantis and the origins of humanity.',
     layer: 'Megaliths / Dolmans / Petroglyphs / Geoglyphs',
@@ -16852,6 +16860,7 @@ const chunk_4: any[] = [
   {
     id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-36',
     parentId: 'megaliths',
+    secondaryParentIds: ['mayan-civilization'],
     name: 'Chichen Itza',
     description: 'A major Maya city in Yucatán, Mexico. Theorists focus on the El Castillo pyramid, which creates the illusion of a crawling serpent of light during equinoxes, and claim its acoustic properties—where a clap at the base mimics the quetzal bird—demonstrate advanced acoustic engineering and resonance physics inherited from pre-diluvian builders.',
     layer: 'Megaliths / Dolmans / Petroglyphs / Geoglyphs',
@@ -16861,6 +16870,7 @@ const chunk_4: any[] = [
   },  {
     id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-38',
     parentId: 'megaliths',
+    secondaryParentIds: ['aztec-civilization'],
     name: 'Teotihuacan',
     description: 'A massive ancient city in Mexico featuring the Pyramids of the Sun and Moon. Alternative theorists highlight that the city\'s layout is a physical representation of a computer circuit board, and that the Pyramid of the Sun contains a layer of imported sheet mica designed to act as an electromagnetic insulator or radiation shield.',
     layer: 'Megaliths / Dolmans / Petroglyphs / Geoglyphs',
@@ -16901,6 +16911,7 @@ const chunk_4: any[] = [
   {
     id: 'pyramids',
     parentId: 'megaliths',
+    secondaryParentIds: ['egyptian-civilization'],
     name: 'Great Pyramid of Giza',
     description: 'The oldest of the Seven Wonders of the Ancient World. Built with extreme mathematical and astronomical precision.',
     relatedIds: ['ley-lines', 'ancient-texts'],
@@ -22319,112 +22330,276 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Plato\'s Timaeus & Critias', 'Esoteric History Archives']
   },
   {
-    id: 'ancient-civilizations-tribes',
-    parentId: 'people-groups',
-    name: 'Ancient Civilizations & Tribes',
-    description: 'Indigenous people groups, lost civilizations, and ancient empires whose histories intersect with megalithic building, mound construction, and anomalous legends.',
-    layer: 'Archaeological Finds',
-    relatedIds: ['megaliths-structures', 'burial-mounds', 'crop-circles-br']
-  },
-  {
     id: 'mayan-civilization',
-    parentId: 'ancient-civilizations-tribes',
+    parentId: 'people-groups',
     name: 'Mayan Civilization',
     description: 'A Mesoamerican civilization known for its highly developed writing system, art, architecture, mathematics, calendar, and astronomical system. Their lore features deep connections to Xibalba (the underworld) and legends of ancient giants.',
+    layer: 'Archaeological Finds',
     timelineId: 'timeline-mayan-civilization',
     mapFeatureId: 'archaeology-mayan-copan',
     relatedIds: ['underworld', 'atlantis-lost', 'crop-circles-br'],
     sources: ['Popol Vuh', 'Mayan Hieroglyphic Records']
   },
   {
+    id: 'archaeology-mayan-copan',
+    parentId: 'mayan-civilization',
+    name: 'Mayan Ruins of Copán & Tikal',
+    description: 'The major ancient cities of the Mayan civilization, including Tikal, Copán, and Chichen Itza, featuring monumental stone step-pyramids, astronomical observatories, and complex hieroglyphic texts.',
+    layer: 'Archaeological Finds',
+    mapFeatureId: 'archaeology-mayan-copan',
+    sources: ['UNESCO World Heritage Sites']
+  },
+  {
     id: 'aztec-civilization',
-    parentId: 'ancient-civilizations-tribes',
+    parentId: 'people-groups',
     name: 'Aztec Civilization',
     description: 'A Mesoamerican culture that flourished in central Mexico in the post-classic period. Famous for Tenochtitlan, their complex calendar stone, massive temples, and accounts of Quetzalcoatl and the Quinamentin (ancient giants).',
+    layer: 'Archaeological Finds',
     timelineId: 'timeline-aztec-civilization',
     mapFeatureId: 'archaeology-aztec-tenochtitlan',
     relatedIds: ['megaliths', 'atlantis-lost'],
     sources: ['Codex Florentino', 'Nahuatl Oral History']
   },
   {
+    id: 'archaeology-aztec-tenochtitlan',
+    parentId: 'aztec-civilization',
+    name: 'Tenochtitlan (Aztec Capital)',
+    description: 'The capital of the Aztec Empire, built on an island in Lake Texcoco. Its heart was the Templo Mayor, a massive double-pyramid temple.',
+    layer: 'Archaeological Finds',
+    mapFeatureId: 'archaeology-aztec-tenochtitlan',
+    sources: ['INAH Mexico / Historical Archives']
+  },
+  {
     id: 'hopi-tribe',
-    parentId: 'ancient-civilizations-tribes',
+    parentId: 'people-groups',
     name: 'Hopi Tribe',
     description: 'A Native American nation in northeastern Arizona. Hopi cosmology details migrations through successive worlds and features the \'Ant People\' (who protected them underground during cataclysms) and Kachina spirits.',
+    layer: 'Archaeological Finds',
     timelineId: 'timeline-hopi-tribe',
     mapFeatureId: 'archaeology-hopi-mesa',
     relatedIds: ['agartha-inner-earth', 'underworld'],
     sources: ['Hopi Oral Traditions', 'Book of the Hopi (Frank Waters)']
   },
   {
+    id: 'archaeology-hopi-mesa',
+    parentId: 'hopi-tribe',
+    name: 'Hopi Oraibi Mesa',
+    description: 'Old Oraibi on Third Mesa is one of the oldest continuously inhabited communities in North America, associated with subterranean Ant People legends.',
+    layer: 'Archaeological Finds',
+    mapFeatureId: 'archaeology-hopi-mesa',
+    sources: ['National Register of Historic Places / Hopi History']
+  },
+  {
     id: 'mound-builders',
-    parentId: 'ancient-civilizations-tribes',
+    parentId: 'people-groups',
     name: 'The Mound Builders',
     description: 'Prehistoric inhabitants of North America who constructed massive earthen mounds for burial, residential, and ceremonial purposes. Associated with numerous 19th-century reports of giant skeletal remains.',
+    layer: 'Archaeological Finds',
     timelineId: 'timeline-mound-builders',
     mapFeatureId: 'archaeology-moundbuilders-cahokia',
     relatedIds: ['burial-mounds', 'serpent-mound', 'nephilim-br'],
     sources: ['Smithsonian Bureau of Ethnology Reports', 'North American Archaeology Archives']
   },
   {
+    id: 'archaeology-moundbuilders-cahokia',
+    parentId: 'mound-builders',
+    name: 'Cahokia Mounds',
+    description: 'The largest pre-columbian settlement north of Mexico, featuring Monks Mound, a colossal earthen pyramid covering 14 acres.',
+    layer: 'Archaeological Finds',
+    mapFeatureId: 'archaeology-moundbuilders-cahokia',
+    sources: ['Cahokia Mounds State Historic Site']
+  },
+  {
     id: 'egyptian-civilization',
-    parentId: 'ancient-civilizations-tribes',
+    parentId: 'people-groups',
     name: 'Ancient Egyptians',
     description: 'One of the oldest and most influential civilizations in the ancient world, centered along the Nile River. Renowned for monumental stone pyramids, sphinxes, advanced geometry, and deep ties to Enochian and Hermetic lore.',
+    layer: 'Archaeological Finds',
     timelineId: 'timeline-egyptian-civilization',
     mapFeatureId: 'archaeology-tutankhamun-tomb',
     relatedIds: ['megaliths-structures', 'emerald-tablet', 'hermeticism'],
     sources: ['Ancient Egyptian Records', 'Hermetic Literature']
   },
   {
+    id: 'archaeology-tutankhamun-tomb',
+    parentId: 'egyptian-civilization',
+    name: 'Tomb of Tutankhamun (KV62)',
+    description: 'The virtually intact royal tomb of the 18th-dynasty Pharaoh Tutankhamun, containing over 5,000 pristine artifacts.',
+    layer: 'Archaeological Finds',
+    mapFeatureId: 'archaeology-tutankhamun-tomb',
+    sources: ['Grand Egyptian Museum / Historical Records']
+  },
+  {
+    id: 'archaeology-rosetta-stone',
+    parentId: 'egyptian-civilization',
+    name: 'The Rosetta Stone',
+    description: 'A granodiorite stele inscribed with three versions of a decree, providing the key to modern translation of Egyptian hieroglyphs.',
+    layer: 'Archaeological Finds',
+    mapFeatureId: 'archaeology-rosetta-stone',
+    sources: ['British Museum / Historical Records']
+  },
+  {
     id: 'israelites',
-    parentId: 'ancient-civilizations-tribes',
+    parentId: 'people-groups',
     name: 'Kingdom of Israel',
     description: 'The ancient Hebrew nation descended from the twelve sons of Jacob (Israel). They established a united monarchy under Saul, David, and Solomon before splitting into the Northern Kingdom (Israel) and Southern Kingdom (Judah).',
+    layer: 'Biblical Finds',
     timelineId: 'reign-david',
     mapFeatureId: 'archaeology-hezekiahs-tunnel-inscription',
     relatedIds: ['biblical-apocryphal', 'reign-david', 'reign-solomon-temple'],
     sources: ['Bible', 'Ancient Near East Chronology']
   },
   {
+    id: 'archaeology-hezekiahs-tunnel-inscription',
+    parentId: 'israelites',
+    name: "Hezekiah's Tunnel Inscription",
+    description: 'An ancient Hebrew inscription documenting the excavation of the water tunnel built under King Hezekiah.',
+    layer: 'Biblical Finds',
+    mapFeatureId: 'archaeology-hezekiahs-tunnel-inscription',
+    sources: ['Historical Records']
+  },
+  {
+    id: 'archaeology-ark-of-covenant-axum',
+    parentId: 'israelites',
+    name: 'Ark of the Covenant (Axum Claims)',
+    description: 'The sacred vessel constructed by the Israelites to hold the tablets of the Ten Commandments, claimed to reside in Axum, Ethiopia.',
+    layer: 'Biblical Finds',
+    mapFeatureId: 'archaeology-ark-of-covenant-axum',
+    sources: ['Ethiopian Orthodox Tradition']
+  },
+  {
+    id: 'archaeology-tel-dan-stele',
+    parentId: 'israelites',
+    name: "Tel Dan 'House of David' Stele",
+    description: 'A basalt victory monument recording victories over Israel, containing the first extra-biblical reference to the House of David.',
+    layer: 'Biblical Finds',
+    mapFeatureId: 'archaeology-tel-dan-stele',
+    sources: ['Israel Museum, Jerusalem']
+  },
+  {
+    id: 'archaeology-mesha-stele',
+    parentId: 'israelites',
+    name: 'The Mesha Stele (Moabite Stone)',
+    description: 'A monument recording Moabite King Mesha\'s rebellion against Israelite rule, mentioning Israel and Yahweh.',
+    layer: 'Biblical Finds',
+    mapFeatureId: 'archaeology-mesha-stele',
+    sources: ['Louvre Museum, Paris']
+  },
+  {
     id: 'tribe-of-judah',
-    parentId: 'ancient-civilizations-tribes',
+    parentId: 'people-groups',
     name: 'Tribe of Judah',
     description: 'One of the twelve tribes of Israel, descended from Jacob\'s fourth son, Judah. The tribe settled in the southern region of Canaan (Judea) and produced the Davidic royal bloodline and eventually Jesus Christ.',
+    layer: 'Biblical Finds',
     timelineId: 'timeline-tribe-of-judah',
     mapFeatureId: 'archaeology-pool-of-siloam',
     relatedIds: ['israelites', 'royal-bloodlines', 'judah'],
     sources: ['Bible', 'Jewish Historical Annals']
   },
   {
+    id: 'archaeology-pool-of-siloam',
+    parentId: 'tribe-of-judah',
+    name: 'The Pool of Siloam',
+    description: 'A rock-cut reservoir in Jerusalem associated with water supply securement and the healing of the blind man in the Gospel of John.',
+    layer: 'Biblical Finds',
+    mapFeatureId: 'archaeology-pool-of-siloam',
+    sources: ['City of David Archaeological Site']
+  },
+  {
+    id: 'archaeology-ketef-hinnom',
+    parentId: 'tribe-of-judah',
+    name: 'Ketef Hinnom Silver Scrolls',
+    description: 'Two tiny rolled silver scrolls containing the Priestly Blessing, representing the oldest surviving fragments of a biblical text.',
+    layer: 'Biblical Finds',
+    mapFeatureId: 'archaeology-ketef-hinnom',
+    sources: ['Israel Museum, Jerusalem']
+  },
+  {
+    id: 'archaeology-dead-sea-scrolls',
+    parentId: 'tribe-of-judah',
+    name: 'The Dead Sea Scrolls',
+    description: 'Ancient Jewish religious manuscripts discovered in the Qumran caves, including the oldest surviving biblical texts.',
+    layer: 'Biblical Finds',
+    mapFeatureId: 'archaeology-dead-sea-scrolls',
+    sources: ['Israel Museum, Jerusalem']
+  },
+  {
+    id: 'archaeology-cyrus-cylinder',
+    parentId: 'tribe-of-judah',
+    name: 'The Cyrus Cylinder',
+    description: 'An ancient clay cylinder recording Persian King Cyrus\'s decree repatriating Jews to rebuild Jerusalem.',
+    layer: 'Biblical Finds',
+    mapFeatureId: 'archaeology-cyrus-cylinder',
+    sources: ['British Museum']
+  },
+  {
+    id: 'archaeology-pilate-stone',
+    parentId: 'tribe-of-judah',
+    name: 'The Pilate Stone',
+    description: 'A limestone block bearing an inscription mentioning Pontius Pilate, Prefect of Judaea.',
+    layer: 'Biblical Finds',
+    mapFeatureId: 'archaeology-pilate-stone',
+    sources: ['Israel Museum, Jerusalem']
+  },
+  {
     id: 'sumerian-civilization',
-    parentId: 'ancient-civilizations-tribes',
+    parentId: 'people-groups',
     name: 'Sumerian Civilization',
     description: 'The earliest known civilization in the historical region of southern Mesopotamia (modern Iraq). Famous for inventing cuneiform writing, developing advanced mathematics, and compiling the Sumerian King List of legendary long-lived rulers.',
+    layer: 'Archaeological Finds',
     timelineId: 'timeline-sumerian-civilization',
     mapFeatureId: 'archaeology-sumer-ur',
     relatedIds: ['sumerian-kings', 'anunnaki', 'babel-evt'],
     sources: ['Sumerian Clay Tablets', 'Mesopotamian Archaeology']
   },
   {
+    id: 'archaeology-sumer-ur',
+    parentId: 'sumerian-civilization',
+    name: 'Ancient Ur & Eridu Ruins',
+    description: 'The archaeological remains of Ur and Eridu, key urban centers of the ancient Sumerian civilization, featuring the Great Ziggurat of Ur.',
+    layer: 'Archaeological Finds',
+    mapFeatureId: 'archaeology-sumer-ur',
+    sources: ['UNESCO World Heritage Sites']
+  },
+  {
     id: 'edomites',
-    parentId: 'ancient-civilizations-tribes',
+    parentId: 'people-groups',
     name: 'Edomites',
     description: 'An ancient Semitic nation situated in the rugged mountain region of Mount Seir (modern Jordan), descended from Esau (Edom), the twin brother of Jacob. Famous for their rock-hewn fortress cities like Petra.',
+    layer: 'Archaeological Finds',
     timelineId: 'timeline-edomites',
     mapFeatureId: 'archaeology-mount-seir-petra',
     relatedIds: ['esau', 'horites'],
     sources: ['Bible', 'Levantine Archaeological Records']
   },
   {
+    id: 'archaeology-mount-seir-petra',
+    parentId: 'edomites',
+    name: 'Petra & Mount Seir',
+    description: 'The spectacular rock-cut rose red city of Petra, historically the capital of the Nabataeans, in the ancestral land of the Edomites.',
+    layer: 'Archaeological Finds',
+    mapFeatureId: 'archaeology-mount-seir-petra',
+    sources: ['UNESCO World Heritage Sites']
+  },
+  {
     id: 'philistines',
-    parentId: 'ancient-civilizations-tribes',
+    parentId: 'people-groups',
     name: 'Philistines',
     description: 'An ancient seafaring people who settled on the southern coast of Canaan (the Pentapolis, including Gaza and Ashkelon). According to biblical and archaeological records, they migrated from Caphtor (Crete) and frequently clashed with the Israelites.',
+    layer: 'Archaeological Finds',
     timelineId: 'timeline-philistines',
     mapFeatureId: 'archaeology-ashkelon-philistines',
     relatedIds: ['israelites', 'reign-david', 'avim'],
     sources: ['Bible', 'Philistine Material Culture (Ashkelon)']
+  },
+  {
+    id: 'archaeology-ashkelon-philistines',
+    parentId: 'philistines',
+    name: 'Archaeological Site of Ashkelon',
+    description: 'An ancient seaport, one of the five major cities of the Philistine Pentapolis, where extensive Bronze/Iron Age remains were excavated.',
+    layer: 'Archaeological Finds',
+    mapFeatureId: 'archaeology-ashkelon-philistines',
+    sources: ['Harvard Museum']
   },
   {
     id: 'agartha-inner-earth',

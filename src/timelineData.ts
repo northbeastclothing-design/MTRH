@@ -2851,14 +2851,14 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'azazel': { lng: 35.350, lat: 31.650, locationName: 'Desert of Dudael', category: 'Enochian Sites' },
   'enoch_ascension': { lng: 35.794, lat: 33.318, locationName: 'Mount Hermon', category: 'Enochian Sites' },
   'nephilim_era': { lng: 35.730, lat: 32.900, locationName: 'Og\'s Kingdom (Golan)', category: 'Giants & Nephilim' },
-  'rephaim': { lng: 35.972, lat: 32.837, locationName: 'Ashtaroth Karnaim (Bashan)', category: 'Archaeological Finds' },
-  'anakim': { lng: 35.110, lat: 31.527, locationName: 'Hebron (Kiriath-Arba)', category: 'Archaeological Finds' },
-  'emim': { lng: 35.727, lat: 31.636, locationName: 'Shaveh Kiriathaim (Moab)', category: 'Archaeological Finds' },
-  'zamzummim': { lng: 35.930, lat: 31.950, locationName: 'Land of Ammon', category: 'Archaeological Finds' },
-  'horites': { lng: 35.480, lat: 30.320, locationName: 'Mount Seir (Edom)', category: 'Archaeological Finds' },
-  'avim': { lng: 34.450, lat: 31.500, locationName: 'Gaza (Hazerim)', category: 'Archaeological Finds' },
-  'perizzites': { lng: 35.263, lat: 32.062, locationName: 'Hill Country of Ephraim', category: 'Archaeological Finds' },
-  'kenites': { lng: 35.125, lat: 31.280, locationName: 'Wilderness of Arad', category: 'Archaeological Finds' },
+  'rephaim': { lng: 35.972, lat: 32.837, locationName: 'Ashtaroth Karnaim (Bashan)', category: 'Ancient People Groups' },
+  'anakim': { lng: 35.110, lat: 31.527, locationName: 'Hebron (Kiriath-Arba)', category: 'Ancient People Groups' },
+  'emim': { lng: 35.727, lat: 31.636, locationName: 'Shaveh Kiriathaim (Moab)', category: 'Ancient People Groups' },
+  'zamzummim': { lng: 35.930, lat: 31.950, locationName: 'Land of Ammon', category: 'Ancient People Groups' },
+  'horites': { lng: 35.480, lat: 30.320, locationName: 'Mount Seir (Edom)', category: 'Ancient People Groups' },
+  'avim': { lng: 34.450, lat: 31.500, locationName: 'Gaza (Hazerim)', category: 'Ancient People Groups' },
+  'perizzites': { lng: 35.263, lat: 32.062, locationName: 'Hill Country of Ephraim', category: 'Ancient People Groups' },
+  'kenites': { lng: 35.125, lat: 31.280, locationName: 'Wilderness of Arad', category: 'Ancient People Groups' },
   // Future Prophecies
   'rev_tribulation': { lng: 35.235, lat: 31.778, locationName: 'Jerusalem (Temple Mount)', category: 'Biblical Events' },
   'rev_two_witnesses': { lng: 35.235, lat: 31.778, locationName: 'Jerusalem (Old City)', category: 'Biblical Events' },
@@ -2913,11 +2913,11 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'maxwell-pergamon': { lng: -1.2335, lat: 51.7589, locationName: 'Headington Hill Hall (Oxford, England)', category: 'The Occult' },
   
   // Ancient Civilizations / People Groups
-  'timeline-egyptian-civilization': { lng: 31.1342, lat: 29.9792, locationName: 'Great Pyramids of Giza (Egypt)', category: 'Archaeological Finds' },
-  'timeline-tribe-of-judah': { lng: 35.0998, lat: 31.5298, locationName: 'Judean Hills (Hebron, Israel)', category: 'Archaeological Finds' },
-  'timeline-sumerian-civilization': { lng: 46.12, lat: 31.32, locationName: 'Ur & Eridu (Sumerian Heartland)', category: 'Archaeological Finds' },
-  'timeline-edomites': { lng: 35.44, lat: 30.32, locationName: 'Mount Seir (Edomite Territory)', category: 'Archaeological Finds' },
-  'timeline-philistines': { lng: 34.50, lat: 31.66, locationName: 'Ashkelon (Philistine Pentapolis)', category: 'Archaeological Finds' }
+  'timeline-egyptian-civilization': { lng: 31.1342, lat: 29.9792, locationName: 'Great Pyramids of Giza (Egypt)', category: 'Ancient People Groups' },
+  'timeline-tribe-of-judah': { lng: 35.0998, lat: 31.5298, locationName: 'Judean Hills (Hebron, Israel)', category: 'Ancient People Groups' },
+  'timeline-sumerian-civilization': { lng: 46.12, lat: 31.32, locationName: 'Ur & Eridu (Sumerian Heartland)', category: 'Ancient People Groups' },
+  'timeline-edomites': { lng: 35.44, lat: 30.32, locationName: 'Mount Seir (Edomite Territory)', category: 'Ancient People Groups' },
+  'timeline-philistines': { lng: 34.50, lat: 31.66, locationName: 'Ashkelon (Philistine Pentapolis)', category: 'Ancient People Groups' }
 };
 
 export interface Waypoint {

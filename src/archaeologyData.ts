@@ -1,7 +1,7 @@
 export interface ArchaeologicalFind {
   id: string;
   name: string;
-  category: 'Archaeological Finds' | 'Biblical Finds' | 'Cryptid Sightings' | 'Giants & Nephilim';
+  category: 'Archaeological Finds' | 'Biblical Finds' | 'Cryptid Sightings' | 'Giants & Nephilim' | 'Ancient People Groups';
   type: 'Point';
   coordinates: {
     lng: number;
