@@ -3657,7 +3657,7 @@ function App() {
           'text-ignore-placement': true
         },
         paint: {
-          'text-color': '#90C2FF',
+          'text-color': '#BCA7C7',
           'text-halo-color': isMapDarkMode ? '#000000' : '#ffffff',
           'text-halo-width': 2.5
         }
@@ -3676,7 +3676,7 @@ function App() {
       map.on('mouseenter', 'people-group-pins-symbol', () => { map.getCanvas().style.cursor = 'pointer'; });
       map.on('mouseleave', 'people-group-pins-symbol', () => { map.getCanvas().style.cursor = ''; });
     } else {
-      map.setPaintProperty('people-group-pins-symbol', 'text-color', '#90C2FF');
+      map.setPaintProperty('people-group-pins-symbol', 'text-color', '#BCA7C7');
       map.setPaintProperty('people-group-pins-symbol', 'text-halo-color', isMapDarkMode ? '#000000' : '#ffffff');
     }
 
