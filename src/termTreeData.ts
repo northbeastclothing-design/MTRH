@@ -15724,16 +15724,6 @@ const chunk_3: any[] = [
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },
   {
-    id: 'anomaly-Bigfoot-990',
-    parentId: 'bigfoot-sightings-br',
-    name: 'McConkie Ranch Bigfoot Petroglyph - Vernal, Utah',
-    description: 'Ancient Fremont petroglyphs at McConkie Ranch depicting tall, clawed, humanoid figures resembling local Bigfoot/Giant legends.',
-    layer: 'Bigfoot',
-    mapFeatureId: 'anomaly-Bigfoot-990',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/d/dc/Bigfoot_petroglyph_panel_McConkie_Ranch_Vernal_Utah.jpeg'],
-    sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
-  },
-  {
     id: 'anomaly-Bigfoot-991',
     parentId: 'bigfoot-sightings-br',
     name: 'Bigfoot Museum - Willow Creek, California',
@@ -17367,6 +17357,16 @@ const chunk_4: any[] = [
     mapFeatureId: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-37',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/G%C3%B6bekli_Tepe%2C_Urfa.jpg/1280px-G%C3%B6bekli_Tepe%2C_Urfa.jpg'],
     sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
+  },
+  {
+    id: 'anomaly-Bigfoot-990',
+    parentId: 'megaliths',
+    name: 'McConkie Ranch Bigfoot Petroglyph - Vernal, Utah',
+    description: 'Ancient Fremont petroglyphs at McConkie Ranch depicting tall, clawed, humanoid figures resembling local Bigfoot/Giant legends.',
+    layer: 'Megaliths / Dolmans / Petroglyphs / Geoglyphs',
+    mapFeatureId: 'anomaly-Bigfoot-990',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/d/dc/Bigfoot_petroglyph_panel_McConkie_Ranch_Vernal_Utah.jpeg'],
+    sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },
   {
     id: 'mounds',
@@ -23085,7 +23085,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Secret Government Programs',
     timelineId: 'project-mkultra',
     relatedIds: ['sidney-gottlieb', 'ewen-cameron', 'cathy-obrien'],
-    images: ['https://www.dni.gov/files/documents/FOIA/01_Project_MKULTRA_The_CIAs_Program_of_Research_in_Behavioral_Modification.pdf'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/0/01/ProjectMKULTRA_Senate_Report.pdf'],
     sources: ['CIA Declassified Archives', 'Joint Congressional Committee Investigation Reports (1977)']
   },
   {
@@ -23097,8 +23097,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     timelineId: 'project-stargate',
     relatedIds: ['joe-mcmoneagle', 'uri-geller', 'ingo-swann', 'russell-targ', 'hal-puthoff', 'albert-stubblebine'],
     images: [
-      'https://www.cia.gov/readingroom/docs/CIA-RDP96-00788R001700210016-5.pdf',
-      'https://www.cia.gov/readingroom/docs/CIA-RDP96-00788R001900760001-9.pdf'
+      'https://upload.wikimedia.org/wikipedia/commons/d/dc/Analysis_and_Assessment_of_Gateway_Process.pdf',
+      'https://dn721503.ca.archive.org/0/items/CIA-RDP96-00788R001900760001-9/CIA-RDP96-00788R001900760001-9.pdf'
     ],
     sources: ['DIA Declassified Documents', 'CIA Archives (Released 1995)']
   },
@@ -23139,7 +23139,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'A proposed 1962 false flag operation against Cuba, planning staged acts of terrorism on U.S. soil to justify military intervention, which was rejected by President John F. Kennedy.',
     layer: 'Secret Government Programs',
     timelineId: 'operation-northwoods',
-    images: ['https://www.gwu.edu/~nsarchiv/news/20010430/northwoods.pdf'],
+    images: ['https://nsarchive2.gwu.edu/news/20010430/northwoods.pdf'],
     sources: ['Joint Chiefs of Staff Declassified Memorandums', 'National Security Archive']
   },
   {
@@ -23185,7 +23185,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'A secret military study proposing the establishment of a manned, fortified military outpost on the Moon to facilitate defense, communications, and space surveillance.',
     layer: 'Secret Government Programs',
     timelineId: 'project-horizon',
-    images: ['https://nsarchive.gwu.edu/NSAEBB/NSAEBB479/docs/EBB-Moon01_sm.pdf'],
+    images: ['https://nsarchive2.gwu.edu/NSAEBB/NSAEBB479/docs/EBB-Moon01_sm.pdf'],
     sources: ['U.S. Department of the Army Declassified Files', 'Lunar Exploration History Archives']
   },
   {
@@ -23195,7 +23195,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'A secret U.S. Army program to build a massive network of mobile nuclear missile launch sites under the Greenland ice sheet under the cover of Camp Century\'s scientific base.',
     layer: 'Secret Government Programs',
     timelineId: 'project-iceworm',
-    images: ['https://apps.dtic.mil/sti/pdfs/AD0437438.pdf'],
+    images: ['https://web.archive.org/web/20210926224338/https://apps.dtic.mil/sti/pdfs/AD0477706.pdf'],
     sources: ['Danish Foreign Policy Institute Reports', 'Camp Century Construction Records']
   },
   {
@@ -23214,7 +23214,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'A secret military aeronautical development project with Avro Canada to build a supersonic, vertical take-off and landing (VTOL) flying saucer designed to intercept bombers.',
     layer: 'Secret Government Programs',
     timelineId: 'project-1794',
-    images: ['https://www.archives.gov/files/dc-blog/2013/january/project-1794-final-development-summary-report.pdf'],
+    images: ['https://documents.theblackvault.com/documents/ufos/1794.pdf'],
     sources: ['Declassified USAF Records (Released 2012)', 'Avro Canada Aeronautical Studies']
   },
   {
@@ -23886,6 +23886,13 @@ export const TERM_TREE_DATA: TermNode[] = [
     mapFeatureId: 'maxwell-pergamon',
     relatedIds: ['historical-alchemists', 'robert-maxwell'],
     sources: ['Pergamon Press Archive', 'Media and Intelligence Studies']
+  },
+  {
+    id: 'missing-411-br',
+    parentId: 'supernatural-anomalies',
+    name: 'Missing 411',
+    description: 'Mysterious disappearances of people in national parks and wilderness areas documented by David Paulides, characterized by strange environmental patterns, sudden weather changes, and failed canine tracks.',
+    layer: 'Missing 411'
   }
 ];
 

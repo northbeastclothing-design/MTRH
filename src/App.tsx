@@ -15,6 +15,7 @@ import CodexPage from './CodexPage';
 import { TIMELINE_ITEMS, TIMELINE_LOCATIONS, BIBLICAL_TRAVEL_PATHS, Waypoint, TravelPath } from './timelineData';
 import { ARCHAEOLOGICAL_FINDS_DATA } from './archaeologyData';
 import { TERM_TREE_DATA } from './termTreeData';
+import { MISSING_411_DATA } from './missing411Data';
 
 // Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig);
@@ -117,6 +118,7 @@ const CATEGORY_DESCRIPTIONS: Record<string, string> = {
   'Underworld Entrances': 'Purported Entrances to the Underworld from lore, legends, and modern times.',
   'Ghosts & Hauntings': 'Areas reported to have high levels of paranormal activity and spectral apparitions.',
   'National Parks & Reserves': 'The intersection of vast wilderness and unexplained disappearances.',
+  'Missing 411': 'Mysterious disappearances of people in national parks and wilderness areas documented by David Paulides.',
   'Crop Circles': 'Intricate patterns appearing in fields, often appearing overnight with no clear earthly explanation.',
   'Meteor Impact Craters': 'Confirmed impact structures on Earth created by ancient meteorite collisions, marking catastrophic cosmic encounters throughout geological history.',
   'Archaeological Finds': 'Remarkable historical excavations, lost citadels, and ancient artifacts rewriting human origin timelines.',
@@ -673,6 +675,7 @@ const processIncomingRecord = (item: any, index: number) => {
   else if (lowerCat.includes('dumb') || lowerCat.includes('d.u.m.b')) normalizedCategory = 'D.U.M.B.\'s';
   else if (lowerCat.includes('ghost') || lowerCat.includes('haunt')) normalizedCategory = 'Ghosts & Hauntings';
   else if (lowerCat.includes('national park') || lowerCat.includes('reserve')) normalizedCategory = 'National Parks & Reserves';
+  else if (lowerCat.includes('missing 411') || lowerCat === 'missing 411') normalizedCategory = 'Missing 411';
   else if (lowerCat.includes('blurred')) normalizedCategory = 'Blurred on Google Maps';
   else if (lowerCat.includes('meteor') || lowerCat.includes('crater') || lowerCat.includes('impact structure')) normalizedCategory = 'Meteor Impact Craters';
   else if (lowerCat.includes('archaeological') || lowerCat.includes('archaeology')) normalizedCategory = 'Archaeological Finds';
@@ -804,13 +807,14 @@ const LAYER_CONFIG: Record<string, { color: string; icon: string }> = {
   'Megaliths': { color: '#FFFBA6', icon: '/icons/icon-megaliths.svg' },
   'Petroglyphs': { color: '#FFCBA6', icon: '/icons/icon-petroglyphs.svg' },
   'National Parks & Reserves': { color: '#9FF3BC', icon: '/icons/icon-national-parks-reserves.svg' },
+  'Missing 411': { color: '#CBDF8E', icon: '/icons/icon-missing-411.svg' },
   'Blurred on Google Maps': { color: '#BDC4FF', icon: '/icons/icon-blurred-on-google.svg' },
   'Meteor Impact Craters': { color: '#FF9F63', icon: '/icons/icon-meteors.svg' },
   'Ley Lines': { color: '#FF5E97', icon: '/icons/icon-ley-lines.svg' },
   'Archaeological Finds': { color: '#74F8F3', icon: '/icons/icon-archaeological-finds.svg' },
   'Biblical Finds': { color: '#D49459', icon: '/icons/icon-biblical-finds.svg' },
   'Secret Government Programs': { color: '#FF5C5C', icon: '/icons/icon-secret-government-programs.svg' },
-  'The Occult': { color: '#E9C46A', icon: '/icons/icon-alchemy-occult.svg' },
+  'The Occult': { color: '#59DCB7', icon: '/icons/icon-alchemy-occult.svg' },
   'Ancient People Groups': { color: '#BCA7C7', icon: '/icons/icon-people-groups.svg' },
   'Default': { color: '#b6a6ff', icon: '/icons/icon-map-pin.svg' }
 };
@@ -885,6 +889,10 @@ function App() {
   const lineLayersRef = useRef<string[]>([]);
   const selectedParkGeomRef = useRef<Record<string, { precise: boolean; score: number; features: any[] }>>({});
   const activeTravelPopupRef = useRef<mapboxgl.Popup | null>(null);
+  const hoverPopupRef = useRef<mapboxgl.Popup | null>(null);
+  const hoverTimeoutRef = useRef<any>(null);
+  const hoveredFeatureIdRef = useRef<string | null>(null);
+  const combinedDataRef = useRef<any[]>([]);
   const hasRandomizedRef = useRef(false);
 
   const fadeOutPopup = (popup: mapboxgl.Popup | null) => {
@@ -944,6 +952,8 @@ function App() {
     });
     return Array.from(uniqueMap.values()) as any[];
   }, [pointsAndLinesData, approvedSubmissions]);
+
+  combinedDataRef.current = combinedPointsAndLinesData;
 
   // Combine static Codex nodes and approved user Codex submissions
   const combinedCodexNodes = useMemo(() => {
@@ -1086,6 +1096,9 @@ function App() {
   const timelineRef = useRef<HTMLDivElement>(null);
   
   const [selectedFeature, setSelectedFeature] = useState<any>(null);
+  const selectedFeatureRef = useRef<any>(null);
+  selectedFeatureRef.current = selectedFeature;
+  const wasHoverTooltipVisibleRef = useRef(false);
   const [focusedCodexTermId, setFocusedCodexTermId] = useState<string | null>(null);
 
   // Helper to resolve map features to codex nodes
@@ -2931,7 +2944,7 @@ function App() {
         setIsDataCompiled(false);
         const safeLocalData = getSafeData(rawPointsAndLinesData);
         const safeUfoData = getSafeData(realUfoData);
-        const combinedRawData = [...safeLocalData, ...safeUfoData, ...ARCHAEOLOGICAL_FINDS_DATA];
+        const combinedRawData = [...safeLocalData, ...safeUfoData, ...ARCHAEOLOGICAL_FINDS_DATA, ...MISSING_411_DATA];
         
         const initialBuffer = combinedRawData
           .map((item, idx) => processIncomingRecord(item, idx))
@@ -3630,14 +3643,109 @@ function App() {
         if (!e.features || !e.features.length) return;
         (e as any)._clickHandled = true;
         const clickedId = e.features[0].properties?.id;
-        const matchedRecord = combinedPointsAndLinesData.find(item => String(item.id) === String(clickedId));
+        const matchedRecord = combinedDataRef.current.find(item => String(item.id) === String(clickedId));
         if (matchedRecord) {
           handleLocationItemClick(matchedRecord);
         }
       });
 
-      map.on('mouseenter', 'master-unclustered-pins', () => { map.getCanvas().style.cursor = 'pointer'; });
-      map.on('mouseleave', 'master-unclustered-pins', () => { map.getCanvas().style.cursor = ''; });
+      map.on('mousemove', 'master-unclustered-pins', (e) => {
+        if (!e.features || !e.features.length) return;
+        map.getCanvas().style.cursor = 'pointer';
+        
+        const clickedId = e.features[0].properties?.id;
+
+        // If the hovered feature is already selected, clear hover states and return early
+        if (selectedFeatureRef.current && String(selectedFeatureRef.current.id) === String(clickedId)) {
+          if (hoverTimeoutRef.current) {
+            clearTimeout(hoverTimeoutRef.current);
+            hoverTimeoutRef.current = null;
+          }
+          if (hoverPopupRef.current) {
+            hoverPopupRef.current.remove();
+            hoverPopupRef.current = null;
+          }
+          hoveredFeatureIdRef.current = null;
+          return;
+        }
+
+        if (hoveredFeatureIdRef.current === clickedId) return;
+        
+        if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
+        if (hoverPopupRef.current) {
+          hoverPopupRef.current.remove();
+          hoverPopupRef.current = null;
+        }
+        
+        hoveredFeatureIdRef.current = clickedId;
+        
+        const matchedRecord = combinedDataRef.current.find(item => String(item.id) === String(clickedId));
+        if (matchedRecord) {
+          const geometry = e.features[0].geometry;
+          const coords = geometry.type === 'Point' 
+            ? (geometry as any).coordinates as [number, number] 
+            : [e.lngLat.lng, e.lngLat.lat] as [number, number];
+            
+          hoverTimeoutRef.current = setTimeout(() => {
+            if (hoverPopupRef.current) hoverPopupRef.current.remove();
+            
+            const tooltipContainer = document.createElement('div');
+            tooltipContainer.className = 'label-fade-in';
+            // Simple Title Case: capitalize first letter of each word
+            tooltipContainer.innerText = matchedRecord.name.toLowerCase().split(' ').map((word: string) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+            tooltipContainer.style.background = darkModeRef.current ? '#ffffff' : '#000000';
+            tooltipContainer.style.color = darkModeRef.current ? '#000000' : '#ffffff';
+            tooltipContainer.style.padding = '0 12px';
+            tooltipContainer.style.height = '22px';
+            tooltipContainer.style.display = 'flex';
+            tooltipContainer.style.alignItems = 'center';
+            tooltipContainer.style.borderRadius = '50px';
+            tooltipContainer.style.fontSize = '10px';
+            tooltipContainer.style.fontWeight = '500';
+            tooltipContainer.style.fontFamily = '"Space Mono", monospace';
+            tooltipContainer.style.whiteSpace = 'nowrap';
+            tooltipContainer.style.position = 'relative';
+            tooltipContainer.style.pointerEvents = 'none';
+            
+            // Triangle arrow below bubble
+            const arrow = document.createElement('div');
+            arrow.style.position = 'absolute';
+            arrow.style.bottom = '-8px';
+            arrow.style.left = '50%';
+            arrow.style.transform = 'translateX(-50%)';
+            arrow.style.width = '0';
+            arrow.style.height = '0';
+            arrow.style.borderLeft = '8px solid transparent';
+            arrow.style.borderRight = '8px solid transparent';
+            arrow.style.borderTop = `8px solid ${darkModeRef.current ? '#ffffff' : '#000000'}`;
+            tooltipContainer.appendChild(arrow);
+            
+            hoverPopupRef.current = new mapboxgl.Popup({
+              closeButton: false,
+              closeOnClick: false,
+              className: 'hover-tooltip-popup',
+              anchor: 'bottom',
+              offset: [0, -17]
+            })
+            .setLngLat(coords)
+            .setDOMContent(tooltipContainer)
+            .addTo(map);
+          }, 700);
+        }
+      });
+
+      map.on('mouseleave', 'master-unclustered-pins', () => {
+        map.getCanvas().style.cursor = '';
+        hoveredFeatureIdRef.current = null;
+        if (hoverTimeoutRef.current) {
+          clearTimeout(hoverTimeoutRef.current);
+          hoverTimeoutRef.current = null;
+        }
+        if (hoverPopupRef.current) {
+          hoverPopupRef.current.remove();
+          hoverPopupRef.current = null;
+        }
+      });
     }
 
     if (!map.getLayer('people-group-pins-symbol')) {
@@ -3667,14 +3775,109 @@ function App() {
         if (!e.features || !e.features.length) return;
         (e as any)._clickHandled = true;
         const clickedId = e.features[0].properties?.id;
-        const matchedRecord = combinedPointsAndLinesData.find(item => String(item.id) === String(clickedId));
+        const matchedRecord = combinedDataRef.current.find(item => String(item.id) === String(clickedId));
         if (matchedRecord) {
           handleLocationItemClick(matchedRecord);
         }
       });
 
-      map.on('mouseenter', 'people-group-pins-symbol', () => { map.getCanvas().style.cursor = 'pointer'; });
-      map.on('mouseleave', 'people-group-pins-symbol', () => { map.getCanvas().style.cursor = ''; });
+      map.on('mousemove', 'people-group-pins-symbol', (e) => {
+        if (!e.features || !e.features.length) return;
+        map.getCanvas().style.cursor = 'pointer';
+        
+        const clickedId = e.features[0].properties?.id;
+
+        // If the hovered feature is already selected, clear hover states and return early
+        if (selectedFeatureRef.current && String(selectedFeatureRef.current.id) === String(clickedId)) {
+          if (hoverTimeoutRef.current) {
+            clearTimeout(hoverTimeoutRef.current);
+            hoverTimeoutRef.current = null;
+          }
+          if (hoverPopupRef.current) {
+            hoverPopupRef.current.remove();
+            hoverPopupRef.current = null;
+          }
+          hoveredFeatureIdRef.current = null;
+          return;
+        }
+
+        if (hoveredFeatureIdRef.current === clickedId) return;
+        
+        if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
+        if (hoverPopupRef.current) {
+          hoverPopupRef.current.remove();
+          hoverPopupRef.current = null;
+        }
+        
+        hoveredFeatureIdRef.current = clickedId;
+        
+        const matchedRecord = combinedDataRef.current.find(item => String(item.id) === String(clickedId));
+        if (matchedRecord) {
+          const geometry = e.features[0].geometry;
+          const coords = geometry.type === 'Point' 
+            ? (geometry as any).coordinates as [number, number] 
+            : [e.lngLat.lng, e.lngLat.lat] as [number, number];
+            
+          hoverTimeoutRef.current = setTimeout(() => {
+            if (hoverPopupRef.current) hoverPopupRef.current.remove();
+            
+            const tooltipContainer = document.createElement('div');
+            tooltipContainer.className = 'label-fade-in';
+            // Simple Title Case: capitalize first letter of each word
+            tooltipContainer.innerText = matchedRecord.name.toLowerCase().split(' ').map((word: string) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+            tooltipContainer.style.background = darkModeRef.current ? '#ffffff' : '#000000';
+            tooltipContainer.style.color = darkModeRef.current ? '#000000' : '#ffffff';
+            tooltipContainer.style.padding = '0 12px';
+            tooltipContainer.style.height = '22px';
+            tooltipContainer.style.display = 'flex';
+            tooltipContainer.style.alignItems = 'center';
+            tooltipContainer.style.borderRadius = '50px';
+            tooltipContainer.style.fontSize = '10px';
+            tooltipContainer.style.fontWeight = '500';
+            tooltipContainer.style.fontFamily = '"Space Mono", monospace';
+            tooltipContainer.style.whiteSpace = 'nowrap';
+            tooltipContainer.style.position = 'relative';
+            tooltipContainer.style.pointerEvents = 'none';
+            
+            // Triangle arrow below bubble
+            const arrow = document.createElement('div');
+            arrow.style.position = 'absolute';
+            arrow.style.bottom = '-8px';
+            arrow.style.left = '50%';
+            arrow.style.transform = 'translateX(-50%)';
+            arrow.style.width = '0';
+            arrow.style.height = '0';
+            arrow.style.borderLeft = '8px solid transparent';
+            arrow.style.borderRight = '8px solid transparent';
+            arrow.style.borderTop = `8px solid ${darkModeRef.current ? '#ffffff' : '#000000'}`;
+            tooltipContainer.appendChild(arrow);
+            
+            hoverPopupRef.current = new mapboxgl.Popup({
+              closeButton: false,
+              closeOnClick: false,
+              className: 'hover-tooltip-popup',
+              anchor: 'bottom',
+              offset: [0, -17]
+            })
+            .setLngLat(coords)
+            .setDOMContent(tooltipContainer)
+            .addTo(map);
+          }, 700);
+        }
+      });
+
+      map.on('mouseleave', 'people-group-pins-symbol', () => {
+        map.getCanvas().style.cursor = '';
+        hoveredFeatureIdRef.current = null;
+        if (hoverTimeoutRef.current) {
+          clearTimeout(hoverTimeoutRef.current);
+          hoverTimeoutRef.current = null;
+        }
+        if (hoverPopupRef.current) {
+          hoverPopupRef.current.remove();
+          hoverPopupRef.current = null;
+        }
+      });
     } else {
       map.setPaintProperty('people-group-pins-symbol', 'text-color', '#BCA7C7');
       map.setPaintProperty('people-group-pins-symbol', 'text-halo-color', isMapDarkMode ? '#000000' : '#ffffff');
@@ -3752,6 +3955,21 @@ function App() {
   const handleLocationItemClick = (feature: any) => {
     stopMainMapRotation();
     if (!feature || !feature.coordinates || !mapRef.current) return;
+
+    // Record if hover popup was active to determine click transition style
+    wasHoverTooltipVisibleRef.current = !!hoverPopupRef.current;
+
+    // Immediately clear active hover states to smooth hover-to-click transition
+    if (hoverTimeoutRef.current) {
+      clearTimeout(hoverTimeoutRef.current);
+      hoverTimeoutRef.current = null;
+    }
+    if (hoverPopupRef.current) {
+      hoverPopupRef.current.remove();
+      hoverPopupRef.current = null;
+    }
+    hoveredFeatureIdRef.current = null;
+
     setSelectedFeature(feature);
     setIsRightCollapsed(false);
     setActiveWaypointIndex(null);
@@ -3826,14 +4044,21 @@ function App() {
 
       // Inner element to apply transition animation safely without interfering with Mapbox's positioning transform style
       const inner = document.createElement('div');
-      inner.className = 'pin-bounce-in';
       inner.style.display = 'flex';
       inner.style.flexDirection = 'column';
       inner.style.alignItems = 'center';
 
       // The label bubble
       const label = document.createElement('div');
-      label.className = 'label-fade-in';
+      
+      const useSlideUp = wasHoverTooltipVisibleRef.current;
+      wasHoverTooltipVisibleRef.current = false; // Reset state immediately
+      
+      if (useSlideUp) {
+        label.className = 'label-slide-up-from-hover';
+      } else {
+        label.className = 'label-fade-in';
+      }
       // Simple Title Case: capitalize first letter of each word
       label.innerText = selectedFeature.name.toLowerCase().split(' ').map((word: string) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
       label.style.background = isMapDarkMode ? '#ffffff' : '#000000';
@@ -3867,6 +4092,7 @@ function App() {
 
       // Larger category icon with border
       const iconOuter = document.createElement('div');
+      iconOuter.className = 'pin-bounce-in';
       iconOuter.style.width = '30px';
       iconOuter.style.height = '30px';
       iconOuter.style.display = 'flex';
