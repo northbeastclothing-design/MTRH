@@ -16,6 +16,7 @@ import { TIMELINE_ITEMS, TIMELINE_LOCATIONS, BIBLICAL_TRAVEL_PATHS, Waypoint, Tr
 import { ARCHAEOLOGICAL_FINDS_DATA } from './archaeologyData';
 import { TERM_TREE_DATA } from './termTreeData';
 import { MISSING_411_DATA } from './missing411Data';
+import { CAVES_DATA } from './cavesData';
 
 // Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig);
@@ -119,6 +120,7 @@ const CATEGORY_DESCRIPTIONS: Record<string, string> = {
   'Ghosts & Hauntings': 'Areas reported to have high levels of paranormal activity and spectral apparitions.',
   'National Parks & Reserves': 'The intersection of vast wilderness and unexplained disappearances.',
   'Missing 411': 'Mysterious disappearances of people in national parks and wilderness areas documented by David Paulides.',
+  'Cave Systems': 'USGS documented locations of caves, caverns, grottos, and sinkholes.',
   'Crop Circles': 'Intricate patterns appearing in fields, often appearing overnight with no clear earthly explanation.',
   'Meteor Impact Craters': 'Confirmed impact structures on Earth created by ancient meteorite collisions, marking catastrophic cosmic encounters throughout geological history.',
   'Archaeological Finds': 'Remarkable historical excavations, lost citadels, and ancient artifacts rewriting human origin timelines.',
@@ -647,7 +649,8 @@ const processIncomingRecord = (item: any, index: number) => {
   const displayDescription = safeDescription.trim() || "No further diagnostic descriptive intelligence available in active log sheets.";
   const lowerCat = rawCategory.toLowerCase();
   let normalizedCategory = rawCategory;
-  if (lowerCat.includes('enochian') || lowerCat.includes('watcher') || lowerCat.includes('angel') || lowerCat === 'enochian sites') normalizedCategory = 'Enochian Sites';
+  if (lowerCat.includes('cave system') || lowerCat === 'cave systems') normalizedCategory = 'Cave Systems';
+  else if (lowerCat.includes('enochian') || lowerCat.includes('watcher') || lowerCat.includes('angel') || lowerCat === 'enochian sites') normalizedCategory = 'Enochian Sites';
   else if (lowerCat.includes('bigfoot') || lowerCat.includes('sasquatch')) normalizedCategory = 'Bigfoot Sightings';
   else if (lowerCat.includes('giant') || lowerCat.includes('nephilim') || lowerCat.includes('giants')) normalizedCategory = 'Giants & Nephilim';
   else if (lowerCat.includes('brazilian') || lowerCat === 'brazilian ufo archives' || lowerCat.includes('brazillian')) normalizedCategory = 'UFOs - Brazillian Archives';
@@ -801,6 +804,7 @@ const LAYER_CONFIG: Record<string, { color: string; icon: string }> = {
   'Ancient Texts': { color: '#F6E8C1', icon: '/icons/icon-ancient-texts.svg' },
   'Burial Mounds': { color: '#B3C77B', icon: '/icons/icon-burial-mounds.svg' },
   'Cave Drawings': { color: '#FFABA6', icon: '/icons/icon-cave-drawings.svg' },
+  'Cave Systems': { color: '#B9BDAD', icon: '/icons/icon-caves.svg' },
   'Crop Circles': { color: '#FFF96A', icon: '/icons/icon-crop-circles.svg' },
   'D.U.M.B.\'s': { color: '#BAEAF4', icon: '/icons/icon-dumbs.svg' },
   'Ghosts & Hauntings': { color: '#BDC4FF', icon: '/icons/icon-ghosts.svg' },
@@ -2944,7 +2948,7 @@ function App() {
         setIsDataCompiled(false);
         const safeLocalData = getSafeData(rawPointsAndLinesData);
         const safeUfoData = getSafeData(realUfoData);
-        const combinedRawData = [...safeLocalData, ...safeUfoData, ...ARCHAEOLOGICAL_FINDS_DATA, ...MISSING_411_DATA];
+        const combinedRawData = [...safeLocalData, ...safeUfoData, ...ARCHAEOLOGICAL_FINDS_DATA, ...MISSING_411_DATA, ...CAVES_DATA];
         
         const initialBuffer = combinedRawData
           .map((item, idx) => processIncomingRecord(item, idx))
