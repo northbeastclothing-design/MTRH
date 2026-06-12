@@ -308,6 +308,26 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     fatherId: 'nahor_pat'
   },
   {
+    id: 'job_patriarch',
+    name: 'Job',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -2100,
+    end: -1900,
+    description: 'A righteous man tested by Satan, who maintained his faith in God despite losing his wealth, health, and children.',
+    source: 'Book of Job'
+  },
+  {
+    id: 'melchizedek',
+    name: 'Melchizedek',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -2080,
+    end: -2000,
+    description: 'King of Salem and priest of God Most High who blessed Abraham. A mysterious figure referenced as a prefigurement of Christ.',
+    source: 'Genesis 14:18-20, Psalm 110:4, Hebrews 7'
+  },
+  {
     id: 'abraham',
     name: 'Abraham',
     type: 'lifespan',
@@ -328,6 +348,27 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     end: -1859,
     description: 'Wife of Abraham and mother of Isaac. Lived 127 years.',
     source: 'Genesis 17:17, 23:1',
+    spouseId: 'abraham'
+  },
+  {
+    id: 'lot',
+    name: 'Lot',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -1980,
+    end: -1890,
+    description: 'Nephew of Abraham who settled in Sodom and was rescued by angels before its destruction.',
+    source: 'Genesis 11-19'
+  },
+  {
+    id: 'hagar',
+    name: 'Hagar',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -1930,
+    end: -1860,
+    description: 'Egyptian handmaid of Sarah, second wife of Abraham, and mother of Ishmael.',
+    source: 'Genesis 16, 21',
     spouseId: 'abraham'
   },
   {
@@ -967,6 +1008,56 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     fatherId: 'amminadab'
   },
   {
+    id: 'miriam',
+    name: 'Miriam',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -1534,
+    end: -1407,
+    description: 'Prophetess and elder sister of Moses and Aaron who helped lead the Israelites during the Exodus.',
+    source: 'Exodus 15, Numbers 12'
+  },
+  {
+    id: 'aaron',
+    name: 'Aaron',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -1529,
+    end: -1406,
+    description: 'Elder brother of Moses, first High Priest of Israel, and spokesman during the Exodus.',
+    source: 'Exodus, Numbers'
+  },
+  {
+    id: 'moses',
+    name: 'Moses',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -1526,
+    end: -1406,
+    description: 'The prophet, leader, and lawgiver who led the Israelites out of Egypt, received the Ten Commandments, and authored the Torah.',
+    source: 'Exodus, Leviticus, Numbers, Deuteronomy'
+  },
+  {
+    id: 'joshua',
+    name: 'Joshua',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -1496,
+    end: -1386,
+    description: 'Moses\' assistant and successor who led the Israelite tribes in the conquest of Canaan.',
+    source: 'Book of Joshua'
+  },
+  {
+    id: 'caleb',
+    name: 'Caleb',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -1486,
+    end: -1400,
+    description: 'One of the twelve spies sent by Moses into Canaan, who along with Joshua brought back a favorable report.',
+    source: 'Numbers 13-14, Joshua 14'
+  },
+  {
     id: 'salmon',
     name: 'Salmon',
     type: 'lifespan',
@@ -1026,6 +1117,16 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     motherId: 'ruth'
   },
   {
+    id: 'deborah_judge',
+    name: 'Deborah',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -1250,
+    end: -1180,
+    description: 'Prophetess and the only female Judge of Israel, who rallied the tribes against Canaanite oppression.',
+    source: 'Judges 4-5'
+  },
+  {
     id: 'jesse',
     name: 'Jesse',
     type: 'lifespan',
@@ -1035,6 +1136,57 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     description: 'Son of Obed, farmer of Bethlehem, and father of eight sons including King David.',
     source: '1 Samuel 16, Ruth 4:22',
     fatherId: 'obed'
+  },
+  {
+    id: 'gideon',
+    name: 'Gideon',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -1190,
+    end: -1150,
+    description: 'A judge of Israel who defeated a massive Midianite army with only 300 men.',
+    source: 'Judges 6-8'
+  },
+  {
+    id: 'samson',
+    name: 'Samson',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -1118,
+    end: -1078,
+    description: 'A legendary Nazirite judge of Israel endowed with supernatural strength to fight the Philistines.',
+    source: 'Judges 13-16'
+  },
+  {
+    id: 'samuel_prophet',
+    name: 'Samuel',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -1105,
+    end: -1015,
+    description: 'The last Judge and first of the major prophets of Israel, who anointed Kings Saul and David.',
+    source: '1 Samuel'
+  },
+  {
+    id: 'saul_king',
+    name: 'King Saul',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -1080,
+    end: -1010,
+    description: 'The first King of the United Kingdom of Israel, whose reign ended in tragedy at Mount Gilboa.',
+    source: '1 Samuel 9-31'
+  },
+  {
+    id: 'jonathan',
+    name: 'Jonathan',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -1060,
+    end: -1010,
+    description: 'Eldest son of King Saul and close friend of King David, known for his bravery and loyalty.',
+    source: '1 Samuel 14-31',
+    fatherId: 'saul_king'
   },
   {
     id: 'david_pat',
@@ -1060,6 +1212,16 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     spouseId: 'david_pat'
   },
   {
+    id: 'nathan_prophet',
+    name: 'Nathan',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -1010,
+    end: -950,
+    description: 'Prophet who served during the reigns of David and Solomon, delivering God\'s covenant promise and rebuking David.',
+    source: '2 Samuel 7, 12, 1 Kings 1'
+  },
+  {
     id: 'solomon_pat',
     name: 'King Solomon',
     type: 'lifespan',
@@ -1070,6 +1232,27 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     source: '1 Kings 1-11',
     fatherId: 'david_pat',
     motherId: 'bathsheba'
+  },
+  {
+    id: 'absalom',
+    name: 'Absalom',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -1005,
+    end: -967,
+    description: 'Third son of King David, celebrated for his beauty but who led a rebellion against his father.',
+    source: '2 Samuel 13-18',
+    fatherId: 'david_pat'
+  },
+  {
+    id: 'jeroboam_i',
+    name: 'King Jeroboam I',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -975,
+    end: -910,
+    description: 'The first king of the northern Kingdom of Israel after the split, who set up golden calves at Bethel and Dan.',
+    source: '1 Kings 11-14'
   },
   {
     id: 'rehoboam',
@@ -1116,6 +1299,38 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     fatherId: 'asa'
   },
   {
+    id: 'ahab_king',
+    name: 'King Ahab',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -900,
+    end: -852,
+    description: 'King of Israel who ruled with his wife Jezebel. He was denounced by the prophet Elijah for his wickedness.',
+    source: '1 Kings 16-22',
+    spouseId: 'jezebel_queen'
+  },
+  {
+    id: 'jezebel_queen',
+    name: 'Jezebel',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -890,
+    end: -841,
+    description: 'Phoenician princess, wife of King Ahab, who introduced Baal worship to Israel and persecuted the prophets of God.',
+    source: '1 Kings 16 - 2 Kings 9',
+    spouseId: 'ahab_king'
+  },
+  {
+    id: 'elijah',
+    name: 'Elijah',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -900,
+    end: -849,
+    description: 'A major prophet of Israel who opposed Ahab and Jezebel, performed miracles, and was taken to heaven in a whirlwind.',
+    source: '1 Kings 17 - 2 Kings 2'
+  },
+  {
     id: 'jehoram',
     name: 'King Jehoram',
     type: 'lifespan',
@@ -1125,6 +1340,16 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     description: 'Fifth King of Judah. Married Athaliah, daughter of Ahab and Jezebel, introducing pagan worship. Reigned 8 years.',
     source: '2 Kings 8, 2 Chronicles 21',
     fatherId: 'jehoshaphat'
+  },
+  {
+    id: 'elisha',
+    name: 'Elisha',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -870,
+    end: -790,
+    description: 'Prophet who succeeded Elijah, receiving a double portion of his spirit and performing numerous miracles.',
+    source: '1 Kings 19, 2 Kings 2-13'
   },
   {
     id: 'ahaziah',
@@ -1160,6 +1385,16 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     fatherId: 'joash'
   },
   {
+    id: 'jonah',
+    name: 'Jonah',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -810,
+    end: -750,
+    description: 'Prophet who was swallowed by a great fish after fleeing God\'s command to preach repentance to Nineveh.',
+    source: 'Book of Jonah, 2 Kings 14:25'
+  },
+  {
     id: 'uzziah',
     name: 'King Uzziah',
     type: 'lifespan',
@@ -1180,6 +1415,16 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     description: 'Tenth King of Judah. Built the Upper Gate of the Temple. Reigned 16 years.',
     source: '2 Kings 15, 2 Chronicles 27',
     fatherId: 'uzziah'
+  },
+  {
+    id: 'isaiah',
+    name: 'Isaiah',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -760,
+    end: -681,
+    description: 'Major prophet of Judah who prophesied during the reigns of Uzziah, Jotham, Ahaz, and Hezekiah, foretelling the Messiah.',
+    source: 'Book of Isaiah, 2 Kings 19-20'
   },
   {
     id: 'ahaz',
@@ -1237,6 +1482,16 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     fatherId: 'amon'
   },
   {
+    id: 'jeremiah',
+    name: 'Jeremiah',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -650,
+    end: -570,
+    description: 'Major prophet known as the "Weeping Prophet," who witnessed and prophesied the Fall of Jerusalem and the Babylonian Exile.',
+    source: 'Book of Jeremiah, Lamentations'
+  },
+  {
     id: 'jehoiakim',
     name: 'King Jehoiakim',
     type: 'lifespan',
@@ -1257,6 +1512,26 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     description: 'Seventeenth King of Judah. Exiled to Babylon where he was eventually released from prison in old age.',
     source: '2 Kings 24-25, 2 Chronicles 36',
     fatherId: 'jehoiakim'
+  },
+  {
+    id: 'ezekiel',
+    name: 'Ezekiel',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -622,
+    end: -570,
+    description: 'Priest and prophet exiled to Babylon, known for his vivid apocalyptic visions of the chariot-throne and the dry bones.',
+    source: 'Book of Ezekiel'
+  },
+  {
+    id: 'daniel_prophet',
+    name: 'Daniel',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -620,
+    end: -538,
+    description: 'Prophet and statesman in Babylon and Persia, renowned for his wisdom, interpretation of dreams, and the lions\' den.',
+    source: 'Book of Daniel'
   },
   {
     id: 'shealtiel',
@@ -1281,6 +1556,16 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     fatherId: 'shealtiel'
   },
   {
+    id: 'esther_queen',
+    name: 'Queen Esther',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -510,
+    end: -450,
+    description: 'Jewish queen of Persia who risked her life to save her people from a genocidal plot by Haman.',
+    source: 'Book of Esther'
+  },
+  {
     id: 'abiud',
     name: 'Abiud',
     type: 'lifespan',
@@ -1290,6 +1575,26 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     description: 'Son of Zerubbabel. Mentioned in the Messianic genealogy of Matthew.',
     source: 'Matthew 1:13',
     fatherId: 'zerubbabel'
+  },
+  {
+    id: 'ezra',
+    name: 'Ezra',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -480,
+    end: -440,
+    description: 'Priest, scribe, and religious leader who returned from exile and helped re-establish the law in Jerusalem.',
+    source: 'Book of Ezra'
+  },
+  {
+    id: 'nehemiah',
+    name: 'Nehemiah',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -473,
+    end: -403,
+    description: 'Governor of Persian Judea who led the rebuilding of Jerusalem\'s walls and enacted religious reforms.',
+    source: 'Book of Nehemiah'
   },
   {
     id: 'eliakim',
@@ -1380,6 +1685,16 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     fatherId: 'matthan'
   },
   {
+    id: 'herod_great',
+    name: 'Herod the Great',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -73,
+    end: -4,
+    description: 'Roman-appointed client king of Judea who expanded the Second Temple and ordered the execution of male infants in Bethlehem.',
+    source: 'Matthew 2, Josephus'
+  },
+  {
     id: 'joseph_pat',
     name: 'Joseph of Nazareth',
     type: 'lifespan',
@@ -1401,6 +1716,16 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     description: 'Mother of Jesus Christ, highly favored by God.',
     source: 'Luke 1-2, Matthew 1',
     spouseId: 'joseph_pat'
+  },
+  {
+    id: 'john_baptist',
+    name: 'John the Baptist',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -7,
+    end: 29,
+    description: 'Prophet who preached repentance and prepared the way for Jesus Christ, whom he baptized in the Jordan River.',
+    source: 'Gospels'
   },
   {
     id: 'jesus',
@@ -1435,6 +1760,110 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     source: 'Gospels, Acts'
   },
   {
+    id: 'stephen_martyr',
+    name: 'Stephen',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: 1,
+    end: 34,
+    description: 'A deacon in the early Church and the first Christian martyr, stoned to death under Saul\'s approval.',
+    source: 'Acts 6-7'
+  },
+  {
+    id: 'james_apostle',
+    name: 'James the Apostle',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: 1,
+    end: 44,
+    description: 'Son of Zebedee and brother of John the Apostle. The first of the twelve apostles to be martyred.',
+    source: 'Gospels, Acts 12:2'
+  },
+  {
+    id: 'james_brother',
+    name: 'James the Just',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: 1,
+    end: 62,
+    description: 'Brother of Jesus, leader of the early Church in Jerusalem, and author of the Epistle of James. Martyred in 62 AD.',
+    source: 'Gospels, Acts 15, Galatians 1:19',
+    fatherId: 'joseph_pat',
+    motherId: 'mary_pat'
+  },
+  {
+    id: 'luke_evangelist',
+    name: 'Luke the Evangelist',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: 1,
+    end: 84,
+    description: 'Physician, companion of Paul, and author of the Gospel of Luke and the Book of Acts.',
+    source: 'Colossians 4:14, Acts'
+  },
+  {
+    id: 'matthew_apostle',
+    name: 'Matthew the Apostle',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: 1,
+    end: 74,
+    description: 'Former tax collector called to be one of the twelve apostles, and author of the Gospel of Matthew.',
+    source: 'Gospels'
+  },
+  {
+    id: 'martha_bethany',
+    name: 'Martha of Bethany',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: 1,
+    end: 70,
+    description: 'Sister of Mary and Lazarus of Bethany, known for her hospitality and dialogue with Jesus.',
+    source: 'Luke 10, John 11-12'
+  },
+  {
+    id: 'barnabas',
+    name: 'Barnabas',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: 1,
+    end: 61,
+    description: 'A Cypriot Jew and early Christian missionary who traveled with Paul and introduced him to the Apostles.',
+    source: 'Acts 4, 9, 11-15'
+  },
+  {
+    id: 'jude_brother',
+    name: 'Jude',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: 2,
+    end: 80,
+    description: 'Brother of Jesus and James the Just, and author of the Epistle of Jude.',
+    source: 'Matthew 13:55, Jude',
+    fatherId: 'joseph_pat',
+    motherId: 'mary_pat'
+  },
+  {
+    id: 'mary_bethany',
+    name: 'Mary of Bethany',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: 3,
+    end: 72,
+    description: 'Sister of Martha and Lazarus of Bethany, who sat at Jesus\' feet to listen to His teaching.',
+    source: 'Luke 10, John 11-12'
+  },
+  {
+    id: 'mary_magdalene',
+    name: 'Mary Magdalene',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: 3,
+    end: 63,
+    description: 'Faithful disciple of Jesus Christ, witness to His crucifixion and burial, and the first to witness His resurrection.',
+    source: 'Gospels'
+  },
+  {
     id: 'paul_apostle',
     name: 'Paul the Apostle',
     type: 'lifespan',
@@ -1445,6 +1874,26 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     source: 'Acts, Pauline Epistles'
   },
   {
+    id: 'lazarus',
+    name: 'Lazarus of Bethany',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: 5,
+    end: 65,
+    description: 'Brother of Mary and Martha, raised from the dead by Jesus after being in the tomb for four days.',
+    source: 'John 11-12'
+  },
+  {
+    id: 'mark_evangelist',
+    name: 'Mark the Evangelist',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: 5,
+    end: 68,
+    description: 'Companion of Peter and Paul, and author of the Gospel of Mark.',
+    source: 'Acts 12, 1 Peter 5:13'
+  },
+  {
     id: 'john_apostle',
     name: 'John the Apostle',
     type: 'lifespan',
@@ -1453,6 +1902,16 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     end: 100,
     description: 'The beloved disciple, author of the Gospel of John and Revelation, exiled on Patmos.',
     source: 'Gospels, Revelation'
+  },
+  {
+    id: 'timothy_bishop',
+    name: 'Timothy',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: 17,
+    end: 97,
+    description: 'Paul\'s close companion, co-worker, and recipient of the pastoral epistles, later Bishop of Ephesus.',
+    source: 'Acts 16, Pauline Epistles'
   },
 
   // ==========================================
@@ -2807,20 +3266,65 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'seth': { lng: 47.432, lat: 31.015, locationName: 'Garden of Eden', category: 'Biblical Figures' },
   'enoch': { lng: 35.794, lat: 33.318, locationName: 'Mount Hermon', category: 'Biblical Figures' },
   'noah': { lng: 44.290, lat: 39.702, locationName: 'Mount Ararat', category: 'Biblical Figures' },
+  'job_patriarch': { lng: 35.600, lat: 30.300, locationName: 'Land of Uz', category: 'Biblical Figures' },
+  'melchizedek': { lng: 35.235, lat: 31.778, locationName: 'Salem (Jerusalem)', category: 'Biblical Figures' },
   'abraham': { lng: 35.111, lat: 31.524, locationName: 'Hebron (Tomb of the Patriarchs)', category: 'Biblical Figures' },
   'sarah': { lng: 35.111, lat: 31.524, locationName: 'Hebron (Tomb of the Patriarchs)', category: 'Biblical Figures' },
+  'lot': { lng: 35.450, lat: 31.050, locationName: 'Sodom / Zoar', category: 'Biblical Figures' },
+  'hagar': { lng: 34.792, lat: 31.244, locationName: 'Wilderness of Beersheba', category: 'Biblical Figures' },
   'isaac': { lng: 34.792, lat: 31.244, locationName: 'Beersheba', category: 'Biblical Figures' },
   'rebekah': { lng: 35.111, lat: 31.524, locationName: 'Hebron (Tomb of the Patriarchs)', category: 'Biblical Figures' },
   'jacob': { lng: 35.222, lat: 31.936, locationName: 'Bethel', category: 'Biblical Figures' },
   'leah': { lng: 35.111, lat: 31.524, locationName: 'Hebron (Tomb of the Patriarchs)', category: 'Biblical Figures' },
   'rachel': { lng: 35.202, lat: 31.711, locationName: 'Rachel\'s Tomb (Bethlehem)', category: 'Biblical Figures' },
   'joseph': { lng: 31.820, lat: 30.610, locationName: 'Goshen (Egypt)', category: 'Biblical Figures' },
+  'miriam': { lng: 34.422, lat: 30.638, locationName: 'Kadesh Barnea', category: 'Biblical Figures' },
+  'aaron': { lng: 35.412, lat: 30.317, locationName: 'Mount Hor', category: 'Biblical Figures' },
   'moses': { lng: 35.725, lat: 31.767, locationName: 'Mount Nebo', category: 'Biblical Figures' },
   'joshua': { lng: 35.289, lat: 32.056, locationName: 'Shiloh', category: 'Biblical Figures' },
+  'caleb': { lng: 35.111, lat: 31.524, locationName: 'Hebron', category: 'Biblical Figures' },
+  'deborah_judge': { lng: 35.390, lat: 32.686, locationName: 'Mount Tabor', category: 'Biblical Figures' },
+  'gideon': { lng: 35.302, lat: 32.549, locationName: 'Spring of Harod', category: 'Biblical Figures' },
+  'samson': { lng: 34.896, lat: 31.810, locationName: 'Timnah', category: 'Biblical Figures' },
+  'samuel_prophet': { lng: 35.216, lat: 31.890, locationName: 'Ramah', category: 'Biblical Figures' },
+  'saul_king': { lng: 35.231, lat: 31.823, locationName: 'Gibeah', category: 'Biblical Figures' },
+  'jonathan': { lng: 35.231, lat: 31.823, locationName: 'Gibeah', category: 'Biblical Figures' },
   'david': { lng: 35.235, lat: 31.773, locationName: 'City of David (Jerusalem)', category: 'Biblical Figures' },
+  'david_pat': { lng: 35.235, lat: 31.773, locationName: 'City of David (Jerusalem)', category: 'Biblical Figures' },
+  'absalom': { lng: 35.239, lat: 31.777, locationName: 'Tomb of Absalom (Jerusalem)', category: 'Biblical Figures' },
+  'nathan_prophet': { lng: 35.235, lat: 31.778, locationName: 'Jerusalem', category: 'Biblical Figures' },
   'solomon': { lng: 35.235, lat: 31.778, locationName: 'Jerusalem', category: 'Biblical Figures' },
+  'solomon_pat': { lng: 35.235, lat: 31.778, locationName: 'Jerusalem', category: 'Biblical Figures' },
+  'jeroboam_i': { lng: 35.277, lat: 32.213, locationName: 'Shechem', category: 'Biblical Figures' },
+  'ahab_king': { lng: 35.189, lat: 32.276, locationName: 'Samaria', category: 'Biblical Figures' },
+  'jezebel_queen': { lng: 35.326, lat: 32.559, locationName: 'Jezreel', category: 'Biblical Figures' },
+  'elijah': { lng: 35.018, lat: 32.744, locationName: 'Mount Carmel', category: 'Biblical Figures' },
+  'elisha': { lng: 35.451, lat: 32.339, locationName: 'Abel-meholah', category: 'Biblical Figures' },
+  'jonah': { lng: 43.150, lat: 36.360, locationName: 'Nineveh', category: 'Biblical Figures' },
+  'isaiah': { lng: 35.235, lat: 31.778, locationName: 'Jerusalem', category: 'Biblical Figures' },
+  'jeremiah': { lng: 35.260, lat: 31.815, locationName: 'Anathoth', category: 'Biblical Figures' },
+  'ezekiel': { lng: 44.422, lat: 32.536, locationName: 'Babylon (River Chebar)', category: 'Biblical Figures' },
+  'daniel_prophet': { lng: 48.241, lat: 32.189, locationName: 'Susa (Persia)', category: 'Biblical Figures' },
+  'esther_queen': { lng: 48.241, lat: 32.189, locationName: 'Susa (Persia)', category: 'Biblical Figures' },
+  'ezra': { lng: 35.235, lat: 31.778, locationName: 'Jerusalem', category: 'Biblical Figures' },
+  'nehemiah': { lng: 35.235, lat: 31.778, locationName: 'Jerusalem', category: 'Biblical Figures' },
+  'herod_great': { lng: 35.241, lat: 31.666, locationName: 'Herodium (Judea)', category: 'Biblical Figures' },
+  'john_baptist': { lng: 35.557, lat: 31.897, locationName: 'Jordan River', category: 'Biblical Figures' },
   'jesus': { lng: 35.300, lat: 32.702, locationName: 'Nazareth', category: 'Biblical Figures' },
+  'mary_magdalene': { lng: 35.503, lat: 32.825, locationName: 'Magdala', category: 'Biblical Figures' },
   'mary-magdalene': { lng: 35.503, lat: 32.825, locationName: 'Magdala', category: 'Biblical Figures' },
+  'stephen_martyr': { lng: 35.235, lat: 31.778, locationName: 'Jerusalem', category: 'Biblical Figures' },
+  'james_apostle': { lng: 35.235, lat: 31.778, locationName: 'Jerusalem', category: 'Biblical Figures' },
+  'james_brother': { lng: 35.235, lat: 31.778, locationName: 'Jerusalem', category: 'Biblical Figures' },
+  'jude_brother': { lng: 35.300, lat: 32.702, locationName: 'Galilee', category: 'Biblical Figures' },
+  'barnabas': { lng: 33.366, lat: 35.166, locationName: 'Cyprus', category: 'Biblical Figures' },
+  'mark_evangelist': { lng: 29.918, lat: 31.200, locationName: 'Alexandria', category: 'Biblical Figures' },
+  'luke_evangelist': { lng: 36.150, lat: 36.200, locationName: 'Antioch', category: 'Biblical Figures' },
+  'matthew_apostle': { lng: 35.530, lat: 32.810, locationName: 'Capernaum', category: 'Biblical Figures' },
+  'timothy_bishop': { lng: 27.341, lat: 37.941, locationName: 'Ephesus', category: 'Biblical Figures' },
+  'lazarus': { lng: 35.258, lat: 31.772, locationName: 'Bethany', category: 'Biblical Figures' },
+  'martha_bethany': { lng: 35.258, lat: 31.772, locationName: 'Bethany', category: 'Biblical Figures' },
+  'mary_bethany': { lng: 35.258, lat: 31.772, locationName: 'Bethany', category: 'Biblical Figures' },
 
   // Biblical Events
   'evt-creation': { lng: 47.432, lat: 31.015, locationName: 'Garden of Eden', category: 'Biblical Events' },

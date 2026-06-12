@@ -3416,6 +3416,446 @@ const chunk_0: any[] = [
     bibleVerses: ['Therefore when Jesus saw his mother, and the disciple whom he loved standing there, he said to his mother, “Woman, behold, your son!” — John 19:26 (https://www.biblegateway.com/passage/?search=John+19%3A26)', 'This is the Revelation of Jesus Christ, which God gave him to show to his servants the things which must happen soon, which he sent and made known by his angel to his servant, John, who testified to God’s word, and of the testimony of Jesus Christ, about everything that he saw. — Revelation 1:1-2 (https://www.biblegateway.com/passage/?search=Revelation+1%3A1-2)', 'Then Peter, turning around, saw a disciple following. This was the disciple whom Jesus loved, the one who had also leaned on Jesus’ breast at the supper and asked, “Lord, who is going to betray You?” Peter seeing him, said to Jesus, “Lord, what about this man?” Jesus said to him, “If I desire that he stay until I come, what is that to you? You follow me.” This saying therefore went out among the brothers, that this disciple wouldn’t die. Yet Jesus didn’t say to him that he wouldn’t die, but, “If I desire that he stay until I come, what is that to you?” This is the disciple who testifies about these things, and wrote these things. We know that his witness is true. — John 21:20-24 (https://www.biblegateway.com/passage/?search=John+21%3A20-24)']
   },
   {
+    id: 'job_patriarch',
+    parentId: 'biblical-figures',
+    name: 'Job',
+    description: 'A righteous man tested by Satan, who maintained his faith in God despite losing his wealth, health, and children.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'job_patriarch',
+    sources: ['Bible'],
+    bibleVerses: ['There was a man in the land of Uz, whose name was Job. That man was blameless and upright, and one who feared God, and turned away from evil. — Job 1:1 (https://www.biblegateway.com/passage/?search=Job+1%3A1)', '“Naked I came out of my mother’s womb, and naked I will return there. Yahweh gave, and Yahweh has taken away. Blessed be the name of Yahweh.” — Job 1:21 (https://www.biblegateway.com/passage/?search=Job+1%3A21)']
+  },
+  {
+    id: 'melchizedek',
+    parentId: 'biblical-figures',
+    name: 'Melchizedek',
+    description: 'King of Salem and priest of God Most High who blessed Abraham. A mysterious figure referenced as a prefigurement of Christ.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'melchizedek',
+    sources: ['Bible'],
+    bibleVerses: ['Melchizedek king of Salem brought out bread and wine. He was priest of God Most High. He blessed him, and said, “Blessed be Abram by God Most High, possessor of heaven and earth.” — Genesis 14:18-19 (https://www.biblegateway.com/passage/?search=Genesis+14%3A18-19)', 'Yahweh has sworn, and will not change his mind: “You are a priest forever after the order of Melchizedek.” — Psalm 110:4 (https://www.biblegateway.com/passage/?search=Psalm+110%3A4)']
+  },
+  {
+    id: 'lot',
+    parentId: 'biblical-figures',
+    name: 'Lot',
+    description: 'Nephew of Abraham who settled in Sodom and was rescued by angels before its destruction.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'lot',
+    sources: ['Bible'],
+    bibleVerses: ['Terah took Abram his son, and Lot the son of Haran, his son’s son... and they went forth from Ur of the Chaldees... — Genesis 11:31 (https://www.biblegateway.com/passage/?search=Genesis+11%3A31)', 'The two angels came to Sodom at evening. Lot was sitting in the gate of Sodom. — Genesis 19:1 (https://www.biblegateway.com/passage/?search=Genesis+19%3A1)']
+  },
+  {
+    id: 'hagar',
+    parentId: 'biblical-figures',
+    name: 'Hagar',
+    description: 'Egyptian handmaid of Sarah, second wife of Abraham, and mother of Ishmael.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'hagar',
+    sources: ['Bible'],
+    bibleVerses: ['Sarai, Abram’s wife, took Hagar the Egyptian, her handmaid... and gave her to her husband Abram to be his wife. — Genesis 16:3 (https://www.biblegateway.com/passage/?search=Genesis+16%3A3)', 'God heard the voice of the boy. The angel of God called to Hagar out of heaven, and said to her, “What ails you, Hagar? Don’t be afraid...” — Genesis 21:17 (https://www.biblegateway.com/passage/?search=Genesis+21%3A17)']
+  },
+  {
+    id: 'miriam',
+    parentId: 'biblical-figures',
+    name: 'Miriam',
+    description: 'Prophetess and elder sister of Moses and Aaron who helped lead the Israelites during the Exodus.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'miriam',
+    sources: ['Bible'],
+    bibleVerses: ['Miriam the prophetess, the sister of Aaron, took a tambourine in her hand; and all the women went out after her with tambourines and with dances. — Exodus 15:20 (https://www.biblegateway.com/passage/?search=Exodus+15%3A20)', 'Miriam and Aaron spoke against Moses because of the Cushite woman whom he had married... — Numbers 12:1 (https://www.biblegateway.com/passage/?search=Numbers+12%3A1)']
+  },
+  {
+    id: 'aaron',
+    parentId: 'biblical-figures',
+    name: 'Aaron',
+    description: 'Elder brother of Moses, first High Priest of Israel, and spokesman during the Exodus.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'aaron',
+    sources: ['Bible'],
+    bibleVerses: ['“Is there not Aaron, your brother, the Levite? I know that he can speak well... He will be your spokesman to the people.” — Exodus 4:14-16 (https://www.biblegateway.com/passage/?search=Exodus+4%3A14-16)', 'Bring Aaron and his sons with him, and the garments, and the anointing oil... — Leviticus 8:2 (https://www.biblegateway.com/passage/?search=Leviticus+8%3A2)']
+  },
+  {
+    id: 'moses',
+    parentId: 'biblical-figures',
+    name: 'Moses',
+    description: 'The prophet, leader, and lawgiver who led the Israelites out of Egypt, received the Ten Commandments, and authored the Torah.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'moses',
+    sources: ['Bible'],
+    bibleVerses: ['She named him Moses, and said, “Because I drew him out of the water.” — Exodus 2:10 (https://www.biblegateway.com/passage/?search=Exodus+2%3A10)', 'There has not arisen a prophet since in Israel like Moses, whom Yahweh knew face to face... — Deuteronomy 34:10 (https://www.biblegateway.com/passage/?search=Deuteronomy+34%3A10)']
+  },
+  {
+    id: 'joshua',
+    parentId: 'biblical-figures',
+    name: 'Joshua',
+    description: 'Moses\' assistant and successor who led the Israelite tribes in the conquest of Canaan.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'joshua',
+    sources: ['Bible'],
+    bibleVerses: ['“Joshua the son of Nun, who stands before you, he will enter there. Encourage him, for he will cause Israel to inherit it.” — Deuteronomy 1:38 (https://www.biblegateway.com/passage/?search=Deuteronomy+1%3A38)', 'Be strong and courageous; for you shall cause this people to inherit the land which I swore to their fathers to give them. — Joshua 1:6 (https://www.biblegateway.com/passage/?search=Joshua+1%3A6)']
+  },
+  {
+    id: 'caleb',
+    parentId: 'biblical-figures',
+    name: 'Caleb',
+    description: 'One of the twelve spies sent by Moses into Canaan, who along with Joshua brought back a favorable report.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'caleb',
+    sources: ['Bible'],
+    bibleVerses: ['Caleb stilled the people before Moses, and said, “Let’s go up at once, and possess it; for we are well able to overcome it.” — Numbers 13:30 (https://www.biblegateway.com/passage/?search=Numbers+13%3A30)', '“But my servant Caleb, because he had another spirit with him, and has followed me fully, him I will bring into the land...” — Numbers 14:24 (https://www.biblegateway.com/passage/?search=Numbers+14%3A24)']
+  },
+  {
+    id: 'deborah_judge',
+    parentId: 'biblical-figures',
+    name: 'Deborah',
+    description: 'Prophetess and the only female Judge of Israel, who rallied the tribes against Canaanite oppression.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'deborah_judge',
+    sources: ['Bible'],
+    bibleVerses: ['Now Deborah, a prophetess, the wife of Lappidoth, judged Israel at that time. — Judges 4:4 (https://www.biblegateway.com/passage/?search=Judges+4%3A4)', '“The rulers ceased in Israel. They ceased until I, Deborah, arose, arose a mother in Israel.” — Judges 5:7 (https://www.biblegateway.com/passage/?search=Judges+5%3A7)']
+  },
+  {
+    id: 'gideon',
+    parentId: 'biblical-figures',
+    name: 'Gideon',
+    description: 'A judge of Israel who defeated a massive Midianite army with only 300 men.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'gideon',
+    sources: ['Bible'],
+    bibleVerses: ['The angel of Yahweh appeared to him, and said to him, “Yahweh is with you, you mighty man of valor.” — Judges 6:12 (https://www.biblegateway.com/passage/?search=Judges+6%3A12)', 'Yahweh said to Gideon, “By the three hundred men who lapped I will save you...” — Judges 7:7 (https://www.biblegateway.com/passage/?search=Judges+7%3A7)']
+  },
+  {
+    id: 'samson',
+    parentId: 'biblical-figures',
+    name: 'Samson',
+    description: 'A legendary Nazirite judge of Israel endowed with supernatural strength to fight the Philistines.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'samson',
+    sources: ['Bible'],
+    bibleVerses: ['“For, behold, you shall conceive, and bear a son; and no razor shall come on his head; for the child shall be a Nazirite to God...” — Judges 13:5 (https://www.biblegateway.com/passage/?search=Judges+13%3A5)', 'He found a fresh jawbone of a donkey... and killed a thousand men with it. — Judges 15:15 (https://www.biblegateway.com/passage/?search=Judges+15%3A15)']
+  },
+  {
+    id: 'samuel_prophet',
+    parentId: 'biblical-figures',
+    name: 'Samuel',
+    description: 'The last Judge and first of the major prophets of Israel, who anointed Kings Saul and David.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'samuel_prophet',
+    sources: ['Bible'],
+    bibleVerses: ['She named him Samuel, saying, “Because I have asked him of Yahweh.” — 1 Samuel 1:20 (https://www.biblegateway.com/passage/?search=1+Samuel+1%3A20)', 'Samuel grew, and Yahweh was with him, and let none of his words fall to the ground. — 1 Samuel 3:19 (https://www.biblegateway.com/passage/?search=1+Samuel+3%3A19)']
+  },
+  {
+    id: 'saul_king',
+    parentId: 'biblical-figures',
+    name: 'King Saul',
+    description: 'The first King of the United Kingdom of Israel, whose reign ended in tragedy at Mount Gilboa.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'saul_king',
+    sources: ['Bible'],
+    bibleVerses: ['Then Samuel took the vial of oil, and poured it on his head... and said, “Hasn’t Yahweh anointed you to be prince over his inheritance?” — 1 Samuel 10:1 (https://www.biblegateway.com/passage/?search=1+Samuel+10%3A1)', 'So Saul died, and his three sons, and his armor bearer, and all his men, that same day together. — 1 Samuel 31:6 (https://www.biblegateway.com/passage/?search=1+Samuel+31%3A6)']
+  },
+  {
+    id: 'jonathan',
+    parentId: 'biblical-figures',
+    name: 'Jonathan',
+    description: 'Eldest son of King Saul and close friend of King David, known for his bravery and loyalty.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'jonathan',
+    sources: ['Bible'],
+    bibleVerses: ['The soul of Jonathan was knit with the soul of David, and Jonathan loved him as his own soul. — 1 Samuel 18:1 (https://www.biblegateway.com/passage/?search=1+Samuel+18%3A1)', '“I am distressed for you, my brother Jonathan. You have been very pleasant to me. Your love to me was wonderful, passing the love of women.” — 2 Samuel 1:26 (https://www.biblegateway.com/passage/?search=2+Samuel+1%3A26)']
+  },
+  {
+    id: 'absalom',
+    parentId: 'biblical-figures',
+    name: 'Absalom',
+    description: 'Third son of King David, celebrated for his beauty but who led a rebellion against his father.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'absalom',
+    sources: ['Bible'],
+    bibleVerses: ['Now in all Israel there was none to be so much praised as Absalom for his beauty... — 2 Samuel 14:25 (https://www.biblegateway.com/passage/?search=2+Samuel+14%3A25)', 'The king was much moved, and went up to the room over the gate, and wept. As he went, he said, “O my son Absalom! My son, my son Absalom!...” — 2 Samuel 18:33 (https://www.biblegateway.com/passage/?search=2+Samuel+18%33)']
+  },
+  {
+    id: 'nathan_prophet',
+    parentId: 'biblical-figures',
+    name: 'Nathan',
+    description: 'Prophet who served during the reigns of David and Solomon, delivering God\'s covenant promise and rebuking David.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'nathan_prophet',
+    sources: ['Bible'],
+    bibleVerses: ['Nathan said to David, “You are the man! This is what Yahweh, the God of Israel, says...” — 2 Samuel 12:7 (https://www.biblegateway.com/passage/?search=2+Samuel+12%3A7)', '“Go and tell my servant David, ‘This is what Yahweh says: “Should you build me a house for me to dwell in?”’” — 2 Samuel 7:5 (https://www.biblegateway.com/passage/?search=2+Samuel+7%3A5)']
+  },
+  {
+    id: 'jeroboam_i',
+    parentId: 'biblical-figures',
+    name: 'King Jeroboam I',
+    description: 'The first king of the northern Kingdom of Israel after the split, who set up golden calves at Bethel and Dan.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'jeroboam_i',
+    sources: ['Bible'],
+    bibleVerses: ['“I will tear the kingdom out of the hand of Solomon, and will give ten tribes to you.” — 1 Kings 11:31 (https://www.biblegateway.com/passage/?search=1+Kings+11%3A31)', 'Whereupon the king took counsel, and made two calves of gold; and he said to them, “It is too much for you to go up to Jerusalem. Behold your gods, Israel...” — 1 Kings 12:28 (https://www.biblegateway.com/passage/?search=1+Kings+12%3A28)']
+  },
+  {
+    id: 'ahab_king',
+    parentId: 'biblical-figures',
+    name: 'King Ahab',
+    description: 'King of Israel who ruled with his wife Jezebel. He was denounced by the prophet Elijah for his wickedness.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'ahab_king',
+    sources: ['Bible'],
+    bibleVerses: ['Ahab the son of Omri did that which was evil in the sight of Yahweh above all who were before him. — 1 Kings 16:30 (https://www.biblegateway.com/passage/?search=1+Kings+16%3A30)', '“Have you found me, my enemy?” Ahab said to Elijah. He answered, “I have found you, because you have sold yourself to do that which is evil...” — 1 Kings 21:20 (https://www.biblegateway.com/passage/?search=1+Kings+21%3A20)']
+  },
+  {
+    id: 'jezebel_queen',
+    parentId: 'biblical-figures',
+    name: 'Jezebel',
+    description: 'Phoenician princess, wife of King Ahab, who introduced Baal worship to Israel and persecuted the prophets of God.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'jezebel_queen',
+    sources: ['Bible'],
+    bibleVerses: ['It came to pass, as if it had been a light thing for him to walk in the sins of Jeroboam... that he took as wife Jezebel the daughter of Ethbaal... — 1 Kings 16:31 (https://www.biblegateway.com/passage/?search=1+Kings+16%3A31)', '“The dogs shall eat Jezebel by the rampart of Jezreel.” — 1 Kings 21:23 (https://www.biblegateway.com/passage/?search=1+Kings+21%3A23)']
+  },
+  {
+    id: 'elijah',
+    parentId: 'biblical-figures',
+    name: 'Elijah',
+    description: 'A major prophet of Israel who opposed Ahab and Jezebel, performed miracles, and was taken to heaven in a whirlwind.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'elijah',
+    sources: ['Bible'],
+    bibleVerses: ['Elijah the Tishbite... said to Ahab, “As Yahweh, the God of Israel, lives, before whom I stand, there shall not be dew nor rain these years, but according to my word.” — 1 Kings 17:1 (https://www.biblegateway.com/passage/?search=1+Kings+17%3A1)', 'It came to pass, as they still went on, and talked, that behold, a chariot of fire and horses of fire parted them... and Elijah went up by a whirlwind into heaven. — 2 Kings 2:11 (https://www.biblegateway.com/passage/?search=2+Kings+2%3A11)']
+  },
+  {
+    id: 'elisha',
+    parentId: 'biblical-figures',
+    name: 'Elisha',
+    description: 'Prophet who succeeded Elijah, receiving a double portion of his spirit and performing numerous miracles.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'elisha',
+    sources: ['Bible'],
+    bibleVerses: ['Elijah went over to him, and cast his mantle on him. — 1 Kings 19:19 (https://www.biblegateway.com/passage/?search=1+Kings+19%39)', 'Elisha said, “Please let a double portion of your spirit be on me.” — 2 Kings 2:9 (https://www.biblegateway.com/passage/?search=2+Kings+2%3A9)']
+  },
+  {
+    id: 'jonah',
+    parentId: 'biblical-figures',
+    name: 'Jonah',
+    description: 'Prophet who was swallowed by a great fish after fleeing God\'s command to preach repentance to Nineveh.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'jonah',
+    sources: ['Bible'],
+    bibleVerses: ['Now the word of Yahweh came to Jonah the son of Amittai, saying, “Arise, go to Nineveh, that great city, and preach against it...” — Jonah 1:1-2 (https://www.biblegateway.com/passage/?search=Jonah+1%3A1-2)', 'Yahweh prepared a great fish to swallow up Jonah, and Jonah was in the belly of the fish three days and three nights. — Jonah 1:17 (https://www.biblegateway.com/passage/?search=Jonah+1%3A17)']
+  },
+  {
+    id: 'isaiah',
+    parentId: 'biblical-figures',
+    name: 'Isaiah',
+    description: 'Major prophet of Judah who prophesied during the reigns of Uzziah, Jotham, Ahaz, and Hezekiah, foretelling the Messiah.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'isaiah',
+    sources: ['Bible'],
+    bibleVerses: ['I heard the Lord’s voice, saying, “Whom shall I send, and who will go for us?” Then I said, “Here I am. Send me.” — Isaiah 6:8 (https://www.biblegateway.com/passage/?search=Isaiah+6%3A8)', 'Therefore the Lord himself will give you a sign. Behold, the virgin will conceive, and bear a son, and shall call his name Immanuel. — Isaiah 7:14 (https://www.biblegateway.com/passage/?search=Isaiah+7%3A14)']
+  },
+  {
+    id: 'jeremiah',
+    parentId: 'biblical-figures',
+    name: 'Jeremiah',
+    description: 'Major prophet known as the "Weeping Prophet," who witnessed and prophesied the Fall of Jerusalem and the Babylonian Exile.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'jeremiah',
+    sources: ['Bible'],
+    bibleVerses: ['“Before I formed you in the belly, I knew you. Before you came out of the womb, I sanctified you. I have appointed you a prophet to the nations.” — Jeremiah 1:5 (https://www.biblegateway.com/passage/?search=Jeremiah+1%3A5)', '“For I know the thoughts that I think toward you,” says Yahweh, “thoughts of peace, and not of evil, to give you hope and a future.” — Jeremiah 29:11 (https://www.biblegateway.com/passage/?search=Jeremiah+29%3A11)']
+  },
+  {
+    id: 'ezekiel',
+    parentId: 'biblical-figures',
+    name: 'Ezekiel',
+    description: 'Priest and prophet exiled to Babylon, known for his vivid apocalyptic visions of the chariot-throne and the dry bones.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'ezekiel',
+    sources: ['Bible'],
+    bibleVerses: ['The heavens were opened, and I saw visions of God. — Ezekiel 1:1 (https://www.biblegateway.com/passage/?search=Ezekiel+1%3A1)', 'He said to me, “Prophesy to these bones, and tell them, ‘You dry bones, hear Yahweh’s word!’” — Ezekiel 37:4 (https://www.biblegateway.com/passage/?search=Ezekiel+37%3A4)']
+  },
+  {
+    id: 'daniel_prophet',
+    parentId: 'biblical-figures',
+    name: 'Daniel',
+    description: 'Prophet and statesman in Babylon and Persia, renowned for his wisdom, interpretation of dreams, and the lions\' den.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'daniel_prophet',
+    sources: ['Bible'],
+    bibleVerses: ['As for these four youths, God gave them knowledge and skill in all learning and wisdom; and Daniel had understanding in all visions and dreams. — Daniel 1:17 (https://www.biblegateway.com/passage/?search=Daniel+1%3A17)', 'My God has sent his angel, and has shut the lions’ mouths, and they have not hurt me... — Daniel 6:22 (https://www.biblegateway.com/passage/?search=Daniel+6%3A22)']
+  },
+  {
+    id: 'esther_queen',
+    parentId: 'biblical-figures',
+    name: 'Queen Esther',
+    description: 'Jewish queen of Persia who risked her life to save her people from a genocidal plot by Haman.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'esther_queen',
+    sources: ['Bible'],
+    bibleVerses: ['“Who knows whether you haven’t come to the kingdom for such a time as this?” — Esther 4:14 (https://www.biblegateway.com/passage/?search=Esther+4%3A14)', '“Go, gather together all the Jews... and fast for me... and so I will go in to the king... and if I perish, I perish.” — Esther 4:16 (https://www.biblegateway.com/passage/?search=Esther+4%3A16)']
+  },
+  {
+    id: 'ezra',
+    parentId: 'biblical-figures',
+    name: 'Ezra',
+    description: 'Priest, scribe, and religious leader who returned from exile and helped re-establish the law in Jerusalem.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'ezra',
+    sources: ['Bible'],
+    bibleVerses: ['For Ezra had set his heart to seek Yahweh’s law, and to do it, and to teach statutes and ordinances in Israel. — Ezra 7:10 (https://www.biblegateway.com/passage/?search=Ezra+7%3A10)', 'Ezra the priest stood up, and said to them, “You have trespassed, and have married foreign women, to increase the guilt of Israel.” — Ezra 10:10 (https://www.biblegateway.com/passage/?search=Ezra+10%3A10)']
+  },
+  {
+    id: 'nehemiah',
+    parentId: 'biblical-figures',
+    name: 'Nehemiah',
+    description: 'Governor of Persian Judea who led the rebuilding of Jerusalem\'s walls and enacted religious reforms.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'nehemiah',
+    sources: ['Bible'],
+    bibleVerses: ['They said to me, “The remnant... are in great affliction and reproach. The wall of Jerusalem also is broken down...” — Nehemiah 1:3 (https://www.biblegateway.com/passage/?search=Nehemiah+1%3A3)', 'So we built the wall; and all the wall was joined together to half the height of it; for the people had a mind to work. — Nehemiah 4:6 (https://www.biblegateway.com/passage/?search=Nehemiah+4%3A6)']
+  },
+  {
+    id: 'herod_great',
+    parentId: 'biblical-figures',
+    name: 'Herod the Great',
+    description: 'Roman-appointed client king of Judea who expanded the Second Temple and ordered the execution of male infants in Bethlehem.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'herod_great',
+    sources: ['Bible', 'Josephus'],
+    bibleVerses: ['Now when Jesus was born in Bethlehem of Judea in the days of Herod the king, behold, wise men from the east came to Jerusalem... — Matthew 2:1 (https://www.biblegateway.com/passage/?search=Matthew+2%3A1)', 'Then Herod, when he saw that he was mocked by the wise men, was exceedingly angry, and sent out, and slew all the male children who were in Bethlehem... — Matthew 2:16 (https://www.biblegateway.com/passage/?search=Matthew+2%3A16)']
+  },
+  {
+    id: 'john_baptist',
+    parentId: 'biblical-figures',
+    name: 'John the Baptist',
+    description: 'Prophet who preached repentance and prepared the way for Jesus Christ, whom he baptized in the Jordan River.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'john_baptist',
+    sources: ['Bible'],
+    bibleVerses: ['In those days, John the Baptist came, preaching in the wilderness of Judea, saying, “Repent, for the Kingdom of Heaven is at hand!” — Matthew 3:1-2 (https://www.biblegateway.com/passage/?search=Matthew+3%3A1-2)', 'Then Jesus came from Galilee to the Jordan to John, to be baptized by him. — Matthew 3:13 (https://www.biblegateway.com/passage/?search=Matthew+3%3A13)']
+  },
+  {
+    id: 'james_apostle',
+    parentId: 'biblical-figures',
+    name: 'James the Apostle',
+    description: 'Son of Zebedee and brother of John the Apostle. The first of the twelve apostles to be martyred.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'james_apostle',
+    sources: ['Bible'],
+    bibleVerses: ['Going on from there, he saw two other brothers, James the son of Zebedee, and John his brother, in the boat... and he called them. — Matthew 4:21 (https://www.biblegateway.com/passage/?search=Matthew+4%3A21)', 'Now about that time, Herod the king stretched out his hands to afflict certain of the assembly. He killed James, the brother of John, with the sword. — Acts 12:1-2 (https://www.biblegateway.com/passage/?search=Acts+12%3A1-2)']
+  },
+  {
+    id: 'james_brother',
+    parentId: 'biblical-figures',
+    name: 'James the Just',
+    description: 'Brother of Jesus, leader of the early Church in Jerusalem, and author of the Epistle of James. Martyred in 62 AD.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'james_brother',
+    sources: ['Bible'],
+    bibleVerses: ['“Isn’t this the carpenter’s son? Isn’t his mother called Mary, and his brothers James, Joses, Simon, and Judas?” — Matthew 13:55 (https://www.biblegateway.com/passage/?search=Matthew+13%3A55)', 'But I saw none of the other apostles, except James, the Lord’s brother. — Galatians 1:19 (https://www.biblegateway.com/passage/?search=Galatians+1%3A19)']
+  },
+  {
+    id: 'jude_brother',
+    parentId: 'biblical-figures',
+    name: 'Jude',
+    description: 'Brother of Jesus and James the Just, and author of the Epistle of Jude.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'jude_brother',
+    sources: ['Bible'],
+    bibleVerses: ['Jude, a servant of Jesus Christ, and brother of James, to those who are called, sanctified by God the Father, and kept for Jesus Christ: — Jude 1:1 (https://www.biblegateway.com/passage/?search=Jude+1%3A1)']
+  },
+  {
+    id: 'stephen_martyr',
+    parentId: 'biblical-figures',
+    name: 'Stephen',
+    description: 'A deacon in the early Church and the first Christian martyr, stoned to death under Saul\'s approval.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'stephen_martyr',
+    sources: ['Bible'],
+    bibleVerses: ['Stephen, full of faith and power, performed great wonders and signs among the people. — Acts 6:8 (https://www.biblegateway.com/passage/?search=Acts+6%3A8)', 'They stoned Stephen as he called on the Lord and said, “Lord Jesus, receive my spirit!” — Acts 7:59 (https://www.biblegateway.com/passage/?search=Acts+7%3A59)']
+  },
+  {
+    id: 'barnabas',
+    parentId: 'biblical-figures',
+    name: 'Barnabas',
+    description: 'A Cypriot Jew and early Christian missionary who traveled with Paul and introduced him to the Apostles.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'barnabas',
+    sources: ['Bible'],
+    bibleVerses: ['Joses, who by the apostles was surnamed Barnabas (which is, being interpreted, Son of Encouragement), a Levite, a man of Cyprus by birth... — Acts 4:36 (https://www.biblegateway.com/passage/?search=Acts+4%3A36)', 'For he was a good man, and full of the Holy Spirit and of faith. And a great multitude was added to the Lord. — Acts 11:24 (https://www.biblegateway.com/passage/?search=Acts+11%3A24)']
+  },
+  {
+    id: 'mark_evangelist',
+    parentId: 'biblical-figures',
+    name: 'Mark the Evangelist',
+    description: 'Companion of Peter and Paul, and author of the Gospel of Mark.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'mark_evangelist',
+    sources: ['Bible'],
+    bibleVerses: ['She came to the house of Mary the mother of John whose surname was Mark, where many were gathered together and were praying. — Acts 12:12 (https://www.biblegateway.com/passage/?search=Acts+12%3A12)', '“Only Luke is with me. Take Mark, and bring him with you, for he is useful to me for service.” — 2 Timothy 4:11 (https://www.biblegateway.com/passage/?search=2+Timothy+4%3A11)']
+  },
+  {
+    id: 'luke_evangelist',
+    parentId: 'biblical-figures',
+    name: 'Luke the Evangelist',
+    description: 'Physician, companion of Paul, and author of the Gospel of Luke and the Book of Acts.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'luke_evangelist',
+    sources: ['Bible'],
+    bibleVerses: ['Luke, the beloved physician, and Demas greet you. — Colossians 4:14 (https://www.biblegateway.com/passage/?search=Colossians+4%3A14)', 'It seemed good to me also, having traced the course of all things accurately from the first, to write to you in order, most excellent Theophilus... — Luke 1:3 (https://www.biblegateway.com/passage/?search=Luke+1%3A3)']
+  },
+  {
+    id: 'matthew_apostle',
+    parentId: 'biblical-figures',
+    name: 'Matthew the Apostle',
+    description: 'Former tax collector called to be one of the twelve apostles, and author of the Gospel of Matthew.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'matthew_apostle',
+    sources: ['Bible'],
+    bibleVerses: ['As Jesus passed by from there, he saw a man, called Matthew, sitting at the tax collection office. He said to him, “Follow me.” He arose and followed him. — Matthew 9:9 (https://www.biblegateway.com/passage/?search=Matthew+9%3A9)']
+  },
+  {
+    id: 'timothy_bishop',
+    parentId: 'biblical-figures',
+    name: 'Timothy',
+    description: 'Paul\'s close companion, co-worker, and recipient of the pastoral epistles, later Bishop of Ephesus.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'timothy_bishop',
+    sources: ['Bible'],
+    bibleVerses: ['He came to Derbe and Lystra: and behold, a certain disciple was there, named Timothy, the son of a Jewess who believed... — Acts 16:1 (https://www.biblegateway.com/passage/?search=Acts+16%3A1)', 'To Timothy, my beloved child: Grace, mercy, and peace, from God the Father and Christ Jesus our Lord. — 2 Timothy 1:2 (https://www.biblegateway.com/passage/?search=2+Timothy+1%3A2)']
+  },
+  {
+    id: 'lazarus',
+    parentId: 'biblical-figures',
+    name: 'Lazarus of Bethany',
+    description: 'Brother of Mary and Martha, raised from the dead by Jesus after being in the tomb for four days.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'lazarus',
+    sources: ['Bible'],
+    bibleVerses: ['He cried with a loud voice, “Lazarus, come out!” He who had been dead came out... — John 11:43-44 (https://www.biblegateway.com/passage/?search=John+11%3A43-44)', 'The chief priests took counsel that they might put Lazarus to death also, because on account of him many of the Jews went away, and believed in Jesus. — John 12:10-11 (https://www.biblegateway.com/passage/?search=John+12%3A10-11)']
+  },
+  {
+    id: 'martha_bethany',
+    parentId: 'biblical-figures',
+    name: 'Martha of Bethany',
+    description: 'Sister of Mary and Lazarus of Bethany, known for her hospitality and dialogue with Jesus.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'martha_bethany',
+    sources: ['Bible'],
+    bibleVerses: ['Now a certain woman named Martha received him into her house. — Luke 10:38 (https://www.biblegateway.com/passage/?search=Luke+10%38)', 'Martha said to Jesus, “Lord, if you had been here, my brother wouldn’t have died.” — John 11:21 (https://www.biblegateway.com/passage/?search=John+11%3A21)']
+  },
+  {
+    id: 'mary_bethany',
+    parentId: 'biblical-figures',
+    name: 'Mary of Bethany',
+    description: 'Sister of Martha and Lazarus of Bethany, who sat at Jesus\' feet to listen to His teaching.',
+    layer: 'biblical-patriarchs',
+    timelineId: 'mary_bethany',
+    sources: ['Bible'],
+    bibleVerses: ['She had a sister called Mary, who also sat at Jesus’ feet, and heard his word. — Luke 10:39 (https://www.biblegateway.com/passage/?search=Luke+10%39)', 'Mary therefore took a pound of ointment of pure nard, very precious, and anointed the feet of Jesus, and wiped his feet with her hair. — John 12:3 (https://www.biblegateway.com/passage/?search=John+12%3A3)']
+  },
+  {
     id: 'rephaim',
     parentId: 'people-groups',
     name: 'Rephaim',
@@ -22645,6 +23085,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Secret Government Programs',
     timelineId: 'project-mkultra',
     relatedIds: ['sidney-gottlieb', 'ewen-cameron', 'cathy-obrien'],
+    images: ['https://www.dni.gov/files/documents/FOIA/01_Project_MKULTRA_The_CIAs_Program_of_Research_in_Behavioral_Modification.pdf'],
     sources: ['CIA Declassified Archives', 'Joint Congressional Committee Investigation Reports (1977)']
   },
   {
@@ -22655,6 +23096,10 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Secret Government Programs',
     timelineId: 'project-stargate',
     relatedIds: ['joe-mcmoneagle', 'uri-geller', 'ingo-swann', 'russell-targ', 'hal-puthoff', 'albert-stubblebine'],
+    images: [
+      'https://www.cia.gov/readingroom/docs/CIA-RDP96-00788R001700210016-5.pdf',
+      'https://www.cia.gov/readingroom/docs/CIA-RDP96-00788R001900760001-9.pdf'
+    ],
     sources: ['DIA Declassified Documents', 'CIA Archives (Released 1995)']
   },
   {
@@ -22694,6 +23139,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'A proposed 1962 false flag operation against Cuba, planning staged acts of terrorism on U.S. soil to justify military intervention, which was rejected by President John F. Kennedy.',
     layer: 'Secret Government Programs',
     timelineId: 'operation-northwoods',
+    images: ['https://www.gwu.edu/~nsarchiv/news/20010430/northwoods.pdf'],
     sources: ['Joint Chiefs of Staff Declassified Memorandums', 'National Security Archive']
   },
   {
@@ -22739,6 +23185,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'A secret military study proposing the establishment of a manned, fortified military outpost on the Moon to facilitate defense, communications, and space surveillance.',
     layer: 'Secret Government Programs',
     timelineId: 'project-horizon',
+    images: ['https://nsarchive.gwu.edu/NSAEBB/NSAEBB479/docs/EBB-Moon01_sm.pdf'],
     sources: ['U.S. Department of the Army Declassified Files', 'Lunar Exploration History Archives']
   },
   {
@@ -22748,6 +23195,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'A secret U.S. Army program to build a massive network of mobile nuclear missile launch sites under the Greenland ice sheet under the cover of Camp Century\'s scientific base.',
     layer: 'Secret Government Programs',
     timelineId: 'project-iceworm',
+    images: ['https://apps.dtic.mil/sti/pdfs/AD0437438.pdf'],
     sources: ['Danish Foreign Policy Institute Reports', 'Camp Century Construction Records']
   },
   {
@@ -22766,6 +23214,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'A secret military aeronautical development project with Avro Canada to build a supersonic, vertical take-off and landing (VTOL) flying saucer designed to intercept bombers.',
     layer: 'Secret Government Programs',
     timelineId: 'project-1794',
+    images: ['https://www.archives.gov/files/dc-blog/2013/january/project-1794-final-development-summary-report.pdf'],
     sources: ['Declassified USAF Records (Released 2012)', 'Avro Canada Aeronautical Studies']
   },
   {
