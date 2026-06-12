@@ -29367,5 +29367,133 @@
     "images": [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Dolmen_and_Torcal-008.jpg/1280px-Dolmen_and_Torcal-008.jpg"
     ]
+  },
+  {
+    "id": "anomaly-Ancient-Texts-0",
+    "name": "The Dead Sea Scrolls",
+    "category": "Ancient Texts",
+    "type": "Point",
+    "coordinates": {
+      "lng": 35.459,
+      "lat": 31.741
+    },
+    "date": 1947,
+    "description": "Discovered in eleven caves near the Qumran archaeological site, the Dead Sea Scrolls consist of thousands of fragments of biblical texts, apocrypha, and sectarian writings dating back to the 3rd century BC.",
+    "source": "Israel Museum / Dead Sea Scrolls Digital Archive",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/1/13/1QIsa_b.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Ancient-Texts-1",
+    "name": "Nag Hammadi Library",
+    "category": "Ancient Texts",
+    "type": "Point",
+    "coordinates": {
+      "lng": 32.228,
+      "lat": 26.082
+    },
+    "date": 1945,
+    "description": "A collection of thirteen leather-bound papyrus codices buried in a jar near Nag Hammadi, Egypt. They contain key early Gnostic writings including the Gospel of Thomas and the Apocryphon of John.",
+    "source": "Gnostic Society Library",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/4/42/El_Evangelio_de_Tom%C3%A1s-Gospel_of_Thomas-_Codex_II_Manuscritos_de_Nag_Hammadi-The_Nag_Hammadi_manuscripts.png"
+    ]
+  },
+  {
+    "id": "anomaly-Ancient-Texts-2",
+    "name": "Royal Library of Ashurbanipal",
+    "category": "Ancient Texts",
+    "type": "Point",
+    "coordinates": {
+      "lng": 43.1556,
+      "lat": 36.3636
+    },
+    "date": 1849,
+    "description": "A collection of thousands of clay tablets and fragments containing texts of all kinds from the 7th century BC. Discovered in Nineveh (modern Iraq), it includes the famous Epic of Gilgamesh.",
+    "source": "British Museum",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/8/8b/Library_of_Ashurbanipal.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Ancient-Texts-3",
+    "name": "Codex Sinaiticus",
+    "category": "Ancient Texts",
+    "type": "Point",
+    "coordinates": {
+      "lng": 33.976,
+      "lat": 28.556
+    },
+    "date": 1844,
+    "description": "Discovered at Saint Catherine's Monastery, the Codex Sinaiticus is a 4th-century uncial manuscript of the Greek Bible, written in Koine Greek. It is one of the most important witnesses to the Christian biblical text.",
+    "source": "British Library / Codex Sinaiticus Project",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/4/4a/Sinaiticus_text.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Ancient-Texts-4",
+    "name": "Maya Codex of Mexico (Grolier Codex)",
+    "category": "Ancient Texts",
+    "type": "Point",
+    "coordinates": {
+      "lng": -92.25,
+      "lat": 16.75
+    },
+    "date": 1965,
+    "description": "A pre-Columbian Maya book found in a cave in Chiapas, containing astronomical tables and deity depictions, confirmed to be authentic and dating to the 13th century.",
+    "source": "National Museum of Anthropology (Mexico)",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/4/4b/Grolier_Codex_in_HuffPo1.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Ancient-Texts-5",
+    "name": "Dunhuang Manuscripts",
+    "category": "Ancient Texts",
+    "type": "Point",
+    "coordinates": {
+      "lng": 94.815,
+      "lat": 40.035
+    },
+    "date": 1900,
+    "description": "A cache of medieval scrolls discovered in the Mogao Caves. It contains thousands of religious and secular documents, including the Diamond Sutra—the world's earliest dated printed book.",
+    "source": "International Dunhuang Project",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/0/04/Digitisation_of_a_Dunhuang_manuscript.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Ancient-Texts-6",
+    "name": "Phaistos Disc",
+    "category": "Ancient Texts",
+    "type": "Point",
+    "coordinates": {
+      "lng": 24.8143,
+      "lat": 35.0513
+    },
+    "date": 1908,
+    "description": "A disk of fired clay from the Minoan palace of Phaistos on Crete, featuring 241 stamped symbols arranged in a spiral. It remains undeciphered and is one of the most famous mysteries in archaeology.",
+    "source": "Heraklion Archaeological Museum",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/9/9d/Phaistos_Disc_%E2%80%94_Side_A.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Ancient-Texts-7",
+    "name": "Enūma Eliš Tablets",
+    "category": "Ancient Texts",
+    "type": "Point",
+    "coordinates": {
+      "lng": 38.9,
+      "lat": 37.05
+    },
+    "date": 1849,
+    "description": "Cuneiform tablets detailing the Mesopotamian creation epic, describing the birth of the gods and the creation of the cosmos and humans by Marduk. First discovered in Nineveh.",
+    "source": "British Museum",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/c/c3/Chaos_Monster_and_Sun_God.png"
+    ]
   }
 ]

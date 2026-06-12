@@ -13,10 +13,10 @@ import firebaseConfig from '../firebase-applet-config.json';
 import TimelinePage from './TimelinePage';
 import CodexPage from './CodexPage';
 import { TIMELINE_ITEMS, TIMELINE_LOCATIONS, BIBLICAL_TRAVEL_PATHS, Waypoint, TravelPath } from './timelineData';
-import { ARCHAEOLOGICAL_FINDS_DATA } from './archaeologyData';
+// import { ARCHAEOLOGICAL_FINDS_DATA } from './archaeologyData';
 import { TERM_TREE_DATA } from './termTreeData';
-import { MISSING_411_DATA } from './missing411Data';
-import { CAVES_DATA } from './cavesData';
+// import { MISSING_411_DATA } from './missing411Data';
+// import { CAVES_DATA } from './cavesData';
 
 // Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig);
@@ -33,18 +33,16 @@ if (firebaseConfig.measurementId) {
   });
 }
 
-// @ts-ignore
-import rawPointsAndLinesData from './rabbitHoleData.json'; 
-// @ts-ignore
-import ufoData1 from './ufoData-1.json'; 
-// @ts-ignore
-import ufoData2 from './ufoData-2.json'; 
-// @ts-ignore
-import warGovData from './warGovData.json';
-// @ts-ignore
-import warGovData2 from './warGovData-2.json'; // Department of War PURSUE Release 2 dataset
-// @ts-ignore
-import brazilianUfoData from './brazilianUfoData.json';
+// Heavy datasets will be loaded dynamically on demand
+const ARCHAEOLOGICAL_FINDS_DATA: any[] = [];
+const MISSING_411_DATA: any[] = [];
+const CAVES_DATA: any[] = [];
+const rawPointsAndLinesData: any[] = [];
+const ufoData1: any[] = [];
+const ufoData2: any[] = [];
+const warGovData: any[] = [];
+const warGovData2: any[] = [];
+const brazilianUfoData: any[] = [];
 
 const getSafeData = (data: any) => {
   if (Array.isArray(data)) return data;
@@ -924,6 +922,12 @@ function App() {
   const [isSearchingGeocode, setIsSearchingGeocode] = useState(false);
   const [showSearchResults, setShowSearchResults] = useState(false);
   const [pointsAndLinesData, setPointsAndLinesData] = useState<any[]>([]);
+  const [rabbitHoleData, setRabbitHoleData] = useState<any[]>([]);
+  const [ufoData, setUfoData] = useState<any[]>([]);
+  const [archaeologyData, setArchaeologyData] = useState<any[]>([]);
+  const [missing411Data, setMissing411Data] = useState<any[]>([]);
+  const [cavesData, setCavesData] = useState<any[]>([]);
+  const [savedPasscode, setSavedPasscode] = useState('');
   const [approvedSubmissions, setApprovedSubmissions] = useState<any[]>([]);
   const [isLiveLoading, setIsLiveLoading] = useState(true);
   const [isMapLoaded, setIsMapLoaded] = useState(false);
@@ -932,6 +936,50 @@ function App() {
   const [currentPage, setCurrentPage] = useState<'map' | 'timeline' | 'codex'>('map');
   const [selectedTimelineItem, setSelectedTimelineItem] = useState<any | null>(null);
   const [activeWaypointIndex, setActiveWaypointIndex] = useState<number | null>(null);
+  const getModeratorHeadersAndBody = async (bodyObj: any = {}) => {
+    const headers: any = { 'Content-Type': 'application/json' };
+    const body: any = { ...bodyObj };
+    
+    if (auth.currentUser) {
+      try {
+        const token = await auth.currentUser.getIdToken();
+        headers['Authorization'] = `Bearer ${token}`;
+      } catch (e) {
+        console.error("Error getting ID token:", e);
+      }
+    } else if (savedPasscode) {
+      body.passcode = savedPasscode;
+      headers['Authorization'] = savedPasscode;
+    } else if (moderatorPasscode) {
+      body.passcode = moderatorPasscode;
+      headers['Authorization'] = moderatorPasscode;
+    }
+    return { headers, body: JSON.stringify(body) };
+  };
+
+  const handleBypassAuth = async () => {
+    try {
+      setModeratorError(null);
+      const response = await fetch('/api/moderate/pending', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ passcode: moderatorPasscode })
+      });
+      
+      if (!response.ok) {
+        const errData = await response.json();
+        throw new Error(errData.error || `Server status ${response.status}`);
+      }
+
+      setSavedPasscode(moderatorPasscode);
+      setIsModeratorAuthenticated(true);
+      setModeratorPasscode('');
+    } catch (err: any) {
+      console.error("Passcode auth fail:", err);
+      setModeratorError(err.message || "BYPASS CODE DENIED.");
+    }
+  };
+
 
   // Combine original static / scraped data and approved user submissions for Map
   const combinedPointsAndLinesData = useMemo(() => {
@@ -995,9 +1043,9 @@ function App() {
   }, [approvedSubmissions]);
 
   const uniqueCategories = useMemo(() => {
-    const allTags = combinedPointsAndLinesData.flatMap(item => item.categories);
     const order = ['UFOs - War.gov', 'UFOs - Brazillian Archives', 'UFOs - Sightings', 'Secret Government Programs', 'Giants & Nephilim'];
-    return Array.from(new Set(allTags)).sort((a, b) => {
+    const allCategories = Object.keys(LAYER_CONFIG).filter(cat => cat !== 'Default');
+    return allCategories.sort((a, b) => {
       const sA = String(a);
       const sB = String(b);
       const indexA = order.indexOf(sA);
@@ -1006,8 +1054,8 @@ function App() {
       if (indexA !== -1) return -1;
       if (indexB !== -1) return 1;
       return sA.localeCompare(sB);
-    }); 
-  }, [combinedPointsAndLinesData]);
+    });
+  }, []);
 
   const allIntelCategories = useMemo(() => {
     return [
@@ -1361,14 +1409,11 @@ function App() {
         timelineSpouseId: (editDestinations.includes('timeline') && editTimelineType === 'lifespan') ? editTimelineSpouseId : ''
       };
 
+      const authParams = await getModeratorHeadersAndBody({ docId, updatedData: updatedFields });
       const response = await fetch('/api/moderate/update', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          docId,
-          passcode: 'MTRH2026',
-          updatedData: updatedFields
-        })
+        headers: authParams.headers,
+        body: authParams.body
       });
 
       if (!response.ok) {
@@ -2415,6 +2460,108 @@ function App() {
       return { start: newStart, end: newEnd };
     });
   }, [timelineWindowStart, timelineWindowSpan]);
+
+  // 1. Synchronize initial state and back/forward browser navigation from URL
+  useEffect(() => {
+    const handlePopState = () => {
+      const path = window.location.pathname;
+      const params = new URLSearchParams(window.location.search);
+
+      // Sync Page
+      if (path.startsWith('/timeline')) {
+        setCurrentPage('timeline');
+        setIsModeratorOpen(false);
+        const itemId = params.get('itemId');
+        if (itemId) {
+          const matched = TIMELINE_ITEMS.find(item => String(item.id) === itemId);
+          if (matched) setSelectedTimelineItem(matched);
+        } else {
+          setSelectedTimelineItem(null);
+        }
+      } else if (path.startsWith('/codex')) {
+        setCurrentPage('codex');
+        setIsModeratorOpen(false);
+        const termId = params.get('termId');
+        if (termId) {
+          const matched = TERM_TREE_DATA.find(node => String(node.id) === termId);
+          if (matched) setSelectedCodexNode(matched);
+        } else {
+          setSelectedCodexNode(null);
+        }
+      } else if (path.startsWith('/mod')) {
+        setCurrentPage('map');
+        setIsModeratorOpen(true);
+      } else {
+        setCurrentPage('map');
+        setIsModeratorOpen(false);
+      }
+
+      // Sync selectedFeature
+      const featureId = params.get('featureId');
+      if (featureId) {
+        const matched = combinedPointsAndLinesData.find(item => String(item.id) === featureId);
+        if (matched) setSelectedFeature(matched);
+      } else {
+        setSelectedFeature(null);
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    handlePopState();
+
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, [combinedPointsAndLinesData]);
+
+  // 2. Sync page and navigation changes to URL history path
+  useEffect(() => {
+    let path = '/';
+    if (isModeratorOpen) path = '/mod';
+    else if (currentPage === 'timeline') path = '/timeline';
+    else if (currentPage === 'codex') path = '/codex';
+
+    const params = new URLSearchParams(window.location.search);
+
+    // Keep coordinates and featureId only on map / mod page
+    if (currentPage !== 'map' && !isModeratorOpen) {
+      params.delete('lat');
+      params.delete('lng');
+      params.delete('zoom');
+      params.delete('featureId');
+    }
+
+    if (currentPage === 'timeline' && selectedTimelineItem) {
+      params.set('itemId', String(selectedTimelineItem.id));
+    } else {
+      params.delete('itemId');
+    }
+
+    if (currentPage === 'codex' && selectedCodexNode) {
+      params.set('termId', String(selectedCodexNode.id));
+    } else {
+      params.delete('termId');
+    }
+
+    const searchStr = params.toString();
+    const newURL = path + (searchStr ? `?${searchStr}` : '');
+    
+    if (window.location.pathname !== path || window.location.search !== (searchStr ? `?${searchStr}` : '')) {
+      window.history.pushState(null, '', newURL);
+    }
+  }, [currentPage, isModeratorOpen, selectedTimelineItem, selectedCodexNode]);
+
+  // 3. Sync selectedFeature selection to URL search params (replace state)
+  useEffect(() => {
+    if (currentPage === 'map' && !isModeratorOpen) {
+      const params = new URLSearchParams(window.location.search);
+      if (selectedFeature) {
+        params.set('featureId', String(selectedFeature.id));
+      } else {
+        params.delete('featureId');
+      }
+      const searchStr = params.toString();
+      window.history.replaceState(null, '', `/${searchStr ? `?${searchStr}` : ''}`);
+    }
+  }, [selectedFeature, currentPage, isModeratorOpen]);
   
   const [expandedLayers, setExpandedLayers] = useState<Record<string, boolean>>({});
   const [activeLayers, setActiveLayers] = useState<Record<string, boolean>>({});
@@ -2612,10 +2759,11 @@ function App() {
     // Define raw fetching from server-side bypass
     const fetchPendingFromServer = async () => {
       try {
+        const authParams = await getModeratorHeadersAndBody();
         const response = await fetch('/api/moderate/pending', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ passcode: 'MTRH2026' })
+          headers: authParams.headers,
+          body: authParams.body
         });
         if (!response.ok) {
           throw new Error(`Server status ${response.status}`);
@@ -2678,10 +2826,11 @@ function App() {
 
     const fetchReportsFromServer = async () => {
       try {
+        const authParams = await getModeratorHeadersAndBody();
         const response = await fetch('/api/moderate/reports', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ passcode: 'MTRH2026' })
+          headers: authParams.headers,
+          body: authParams.body
         });
         if (!response.ok) {
           throw new Error(`Server status ${response.status}`);
@@ -2804,10 +2953,11 @@ function App() {
 
     try {
       // 1. Try server endpoint first
+      const authParams = await getModeratorHeadersAndBody({ reportId, action });
       const response = await fetch('/api/moderate/report-action', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ reportId, action, passcode: 'MTRH2026' })
+        headers: authParams.headers,
+        body: authParams.body
       });
       if (!response.ok) {
         const errData = await response.json();
@@ -2941,14 +3091,91 @@ function App() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isLightboxOpen, selectedFeature, activeAssets]);
 
+  // Dynamically load datasets on demand based on active layers
+  useEffect(() => {
+    const loadDatasets = async () => {
+      // 1. UFO Datasets
+      const hasUfoActive = activeLayers['UFOs - War.gov'] || activeLayers['UFOs - Brazillian Archives'] || activeLayers['UFOs - Sightings'] || activeLayers['Secret Government Programs'];
+      if (hasUfoActive && ufoData.length === 0) {
+        try {
+          const [ufo1, ufo2, war1, war2, br] = await Promise.all([
+            import('./ufoData-1.json'),
+            import('./ufoData-2.json'),
+            import('./warGovData.json'),
+            import('./warGovData-2.json'),
+            import('./brazilianUfoData.json')
+          ]);
+          setUfoData([
+            ...getSafeData(ufo1),
+            ...getSafeData(ufo2),
+            ...getSafeData(war1),
+            ...getSafeData(war2),
+            ...getSafeData(br)
+          ]);
+        } catch (err) {
+          console.error("Failed to load UFO datasets:", err);
+        }
+      }
+
+      // 2. Archaeology Finds & Biblical Finds
+      const hasArchaeologyActive = activeLayers['Archaeological Finds'] || activeLayers['Biblical Finds'];
+      if (hasArchaeologyActive && archaeologyData.length === 0) {
+        try {
+          const module = await import('./archaeologyData');
+          setArchaeologyData(getSafeData(module.ARCHAEOLOGICAL_FINDS_DATA));
+        } catch (err) {
+          console.error("Failed to load archaeology finds:", err);
+        }
+      }
+
+      // 3. Missing 411
+      if (activeLayers['Missing 411'] && missing411Data.length === 0) {
+        try {
+          const module = await import('./missing411Data');
+          setMissing411Data(getSafeData(module.MISSING_411_DATA));
+        } catch (err) {
+          console.error("Failed to load Missing 411 data:", err);
+        }
+      }
+
+      // 4. Cave Systems
+      if (activeLayers['Cave Systems'] && cavesData.length === 0) {
+        try {
+          const module = await import('./cavesData');
+          setCavesData(getSafeData(module.CAVES_DATA));
+        } catch (err) {
+          console.error("Failed to load caves data:", err);
+        }
+      }
+
+      // 5. Core Rabbit Hole data
+      const needsRabbitHole = Object.keys(activeLayers).some(k => 
+        activeLayers[k] && 
+        k !== 'UFOs - War.gov' && k !== 'UFOs - Brazillian Archives' && k !== 'UFOs - Sightings' && k !== 'Secret Government Programs' &&
+        k !== 'Archaeological Finds' && k !== 'Biblical Finds' &&
+        k !== 'Missing 411' && k !== 'Cave Systems'
+      );
+      if (needsRabbitHole && rabbitHoleData.length === 0) {
+        try {
+          const module = await import('./rabbitHoleData.json');
+          setRabbitHoleData(getSafeData(module));
+        } catch (err) {
+          console.error("Failed to load core map data:", err);
+        }
+      }
+    };
+
+    loadDatasets();
+  }, [activeLayers]);
+
   useEffect(() => {
     const compileVerifiedIntel = () => {
       try {
         setIsLiveLoading(true);
         setIsDataCompiled(false);
-        const safeLocalData = getSafeData(rawPointsAndLinesData);
-        const safeUfoData = getSafeData(realUfoData);
-        const combinedRawData = [...safeLocalData, ...safeUfoData, ...ARCHAEOLOGICAL_FINDS_DATA, ...MISSING_411_DATA, ...CAVES_DATA];
+        const safeLocalData = getSafeData(rabbitHoleData);
+        const safeUfoData = getSafeData(ufoData);
+        const combinedRawData = [...safeLocalData, ...safeUfoData, ...archaeologyData, ...missing411Data, ...cavesData];
         
         const initialBuffer = combinedRawData
           .map((item, idx) => processIncomingRecord(item, idx))
@@ -3038,7 +3265,7 @@ function App() {
     };
 
     compileVerifiedIntel();
-  }, []);
+  }, [rabbitHoleData, ufoData, archaeologyData, missing411Data, cavesData]);
 
   useEffect(() => {
     if (uniqueCategories.length > 0 && !hasRandomizedRef.current) {
@@ -3244,11 +3471,16 @@ function App() {
   useEffect(() => {
     if (!mapboxgl.supported() || !mapContainer.current) return;
     
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlLat = parseFloat(urlParams.get('lat') || '');
+    const urlLng = parseFloat(urlParams.get('lng') || '');
+    const urlZoom = parseFloat(urlParams.get('zoom') || '');
+
     const map = new mapboxgl.Map({
       container: mapContainer.current,
       style: isMapDarkMode ? MAP_STYLE_DARK : MAP_STYLE_LIGHT, 
-      center: [-98.5795, 39.8283], 
-      zoom: 4.0,
+      center: (!isNaN(urlLat) && !isNaN(urlLng)) ? [urlLng, urlLat] : [-98.5795, 39.8283], 
+      zoom: !isNaN(urlZoom) ? urlZoom : 4.0,
       projection: { name: 'globe' } as any,
       trackResize: true
     });
@@ -3264,6 +3496,19 @@ function App() {
       if (e.originalEvent) {
         stopMainMapRotation();
       }
+    });
+
+    map.on('moveend', () => {
+      const center = map.getCenter();
+      const zoomVal = map.getZoom();
+      const params = new URLSearchParams(window.location.search);
+      params.set('lat', center.lat.toFixed(4));
+      params.set('lng', center.lng.toFixed(4));
+      params.set('zoom', zoomVal.toFixed(1));
+      
+      const path = window.location.pathname;
+      const searchStr = params.toString();
+      window.history.replaceState(null, '', path + (searchStr ? `?${searchStr}` : ''));
     });
 
     let mainMapAnimFrameId: number;
@@ -9681,13 +9926,7 @@ function App() {
                       onKeyDown={(e) => {
                         if (e.key === 'Enter') {
                           e.preventDefault();
-                          if (moderatorPasscode === 'MTRH2026') {
-                            setIsModeratorAuthenticated(true);
-                            setModeratorPasscode('');
-                            setModeratorError(null);
-                          } else {
-                            setModeratorError("BYPASS CODE DENIED.");
-                          }
+                          handleBypassAuth();
                         }
                       }}
                       style={{
@@ -9704,13 +9943,7 @@ function App() {
                     />
                     <button
                       onClick={() => {
-                        if (moderatorPasscode === 'MTRH2026') {
-                          setIsModeratorAuthenticated(true);
-                          setModeratorPasscode('');
-                          setModeratorError(null);
-                        } else {
-                          setModeratorError("BYPASS CODE DENIED.");
-                        }
+                        handleBypassAuth();
                       }}
                       style={{
                         background: 'transparent',
@@ -9753,7 +9986,7 @@ function App() {
                           <br /><br />
                           <strong>IMMEDIATE BYPASS:</strong> 
                           <br />
-                          Simply type the secret passcode <strong>MTRH2026</strong> in the box above and click <strong>BYPASS</strong>. This will authenticate you locally using our secure server-side administrative bypass and load the submissions list instantly!
+                          Simply type the secret administrative passcode in the box above and click <strong>BYPASS</strong>. This will authenticate you locally using our secure server-side administrative bypass and load the submissions list instantly!
                         </div>
                       )}
                     </div>
@@ -10070,10 +10303,11 @@ function App() {
                                           setSubmittingRejectionId(sub.id);
                                           setModeratorError(null);
                                           try {
+                                            const authParams = await getModeratorHeadersAndBody({ docId: sub.id });
                                             const response = await fetch('/api/moderate/reject', {
                                               method: 'POST',
-                                              headers: { 'Content-Type': 'application/json' },
-                                              body: JSON.stringify({ docId: sub.id, passcode: 'MTRH2026' })
+                                              headers: authParams.headers,
+                                              body: authParams.body
                                             });
                                             if (!response.ok) {
                                               const errData = await response.json();
@@ -10117,10 +10351,11 @@ function App() {
                                           setSubmittingApprovalId(sub.id);
                                           setModeratorError(null);
                                           try {
+                                            const authParams = await getModeratorHeadersAndBody({ docId: sub.id });
                                             const response = await fetch('/api/moderate/approve', {
                                               method: 'POST',
-                                              headers: { 'Content-Type': 'application/json' },
-                                              body: JSON.stringify({ docId: sub.id, passcode: 'MTRH2026' })
+                                              headers: authParams.headers,
+                                              body: authParams.body
                                             });
                                             if (!response.ok) {
                                               const errData = await response.json();
@@ -10389,10 +10624,11 @@ function App() {
                                           setSubmittingRevocationId(sub.id);
                                           setModeratorError(null);
                                           try {
+                                            const authParams = await getModeratorHeadersAndBody({ docId: sub.id });
                                             const response = await fetch('/api/moderate/revoke', {
                                               method: 'POST',
-                                              headers: { 'Content-Type': 'application/json' },
-                                              body: JSON.stringify({ docId: sub.id, passcode: 'MTRH2026' })
+                                              headers: authParams.headers,
+                                              body: authParams.body
                                             });
                                             if (!response.ok) {
                                               const errData = await response.json();
@@ -10440,10 +10676,11 @@ function App() {
                                           setSubmittingRejectionId(sub.id);
                                           setModeratorError(null);
                                           try {
+                                            const authParams = await getModeratorHeadersAndBody({ docId: sub.id });
                                             const response = await fetch('/api/moderate/reject', {
                                               method: 'POST',
-                                              headers: { 'Content-Type': 'application/json' },
-                                              body: JSON.stringify({ docId: sub.id, passcode: 'MTRH2026' })
+                                              headers: authParams.headers,
+                                              body: authParams.body
                                             });
                                             if (!response.ok) {
                                               const errData = await response.json();

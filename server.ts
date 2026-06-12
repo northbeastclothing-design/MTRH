@@ -41,6 +41,126 @@ try {
   console.error("Failed to initialize Firebase Admin:", error);
 }
 
+// Local filesystem-based mock database helper when live Firestore is inaccessible
+const LOCAL_DB_DIR = path.join(process.cwd(), '.local_db');
+if (!fs.existsSync(LOCAL_DB_DIR)) {
+  fs.mkdirSync(LOCAL_DB_DIR);
+}
+
+function getLocalMockFile(collection: string): any[] {
+  const filePath = path.join(LOCAL_DB_DIR, `${collection}.json`);
+  if (!fs.existsSync(filePath)) {
+    fs.writeFileSync(filePath, JSON.stringify([]), 'utf8');
+  }
+  try {
+    return JSON.parse(fs.readFileSync(filePath, 'utf8'));
+  } catch (e) {
+    return [];
+  }
+}
+
+function saveLocalMockFile(collection: string, data: any[]) {
+  const filePath = path.join(LOCAL_DB_DIR, `${collection}.json`);
+  fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf8');
+}
+
+async function safeGetCollection(collectionName: string): Promise<any[]> {
+  try {
+    if (!dbAdmin) {
+      return getLocalMockFile(collectionName);
+    }
+    const snapshot = await dbAdmin.collection(collectionName).get();
+    const docs: any[] = [];
+    snapshot.forEach(doc => {
+      docs.push({ id: doc.id, ...doc.data() });
+    });
+    return docs;
+  } catch (err: any) {
+    if (err.message?.includes("default credentials") || err.message?.includes("credentials") || err.code === 'credentials') {
+      console.warn(`[Firestore Fallback] Using local mock database for "${collectionName}" (Firestore credentials not loaded).`);
+      return getLocalMockFile(collectionName);
+    }
+    throw err;
+  }
+}
+
+async function safeAddDocument(collectionName: string, docId: string | null, data: any): Promise<string> {
+  try {
+    if (!dbAdmin) {
+      const mockDb = getLocalMockFile(collectionName);
+      const id = docId || `mock_${Date.now()}`;
+      mockDb.push({ id, ...data });
+      saveLocalMockFile(collectionName, mockDb);
+      return id;
+    }
+    if (docId) {
+      await dbAdmin.collection(collectionName).doc(docId).set(data);
+      return docId;
+    } else {
+      const docRef = await dbAdmin.collection(collectionName).add(data);
+      return docRef.id;
+    }
+  } catch (err: any) {
+    if (err.message?.includes("default credentials") || err.message?.includes("credentials") || err.code === 'credentials') {
+      console.warn(`[Firestore Fallback] Using local mock database for writing to "${collectionName}" (Firestore credentials not loaded).`);
+      const mockDb = getLocalMockFile(collectionName);
+      const id = docId || `mock_${Date.now()}`;
+      mockDb.push({ id, ...data });
+      saveLocalMockFile(collectionName, mockDb);
+      return id;
+    }
+    throw err;
+  }
+}
+
+async function safeUpdateDocument(collectionName: string, docId: string, data: any): Promise<void> {
+  try {
+    if (!dbAdmin) {
+      const mockDb = getLocalMockFile(collectionName);
+      const idx = mockDb.findIndex(item => item.id === docId);
+      if (idx !== -1) {
+        mockDb[idx] = { ...mockDb[idx], ...data };
+        saveLocalMockFile(collectionName, mockDb);
+      }
+      return;
+    }
+    await dbAdmin.collection(collectionName).doc(docId).update(data);
+  } catch (err: any) {
+    if (err.message?.includes("default credentials") || err.message?.includes("credentials") || err.code === 'credentials') {
+      console.warn(`[Firestore Fallback] Using local mock database for updating "${collectionName}" (Firestore credentials not loaded).`);
+      const mockDb = getLocalMockFile(collectionName);
+      const idx = mockDb.findIndex(item => item.id === docId);
+      if (idx !== -1) {
+        mockDb[idx] = { ...mockDb[idx], ...data };
+        saveLocalMockFile(collectionName, mockDb);
+      }
+      return;
+    }
+    throw err;
+  }
+}
+
+async function safeDeleteDocument(collectionName: string, docId: string): Promise<void> {
+  try {
+    if (!dbAdmin) {
+      const mockDb = getLocalMockFile(collectionName);
+      const filtered = mockDb.filter(item => item.id !== docId);
+      saveLocalMockFile(collectionName, filtered);
+      return;
+    }
+    await dbAdmin.collection(collectionName).doc(docId).delete();
+  } catch (err: any) {
+    if (err.message?.includes("default credentials") || err.message?.includes("credentials") || err.code === 'credentials') {
+      console.warn(`[Firestore Fallback] Using local mock database for deleting from "${collectionName}" (Firestore credentials not loaded).`);
+      const mockDb = getLocalMockFile(collectionName);
+      const filtered = mockDb.filter(item => item.id !== docId);
+      saveLocalMockFile(collectionName, filtered);
+      return;
+    }
+    throw err;
+  }
+}
+
 const authorizedHosts = new Set<string>(["localhost", "127.0.0.1"]);
 
 async function authorizeDomain(domain: string) {
@@ -210,22 +330,45 @@ async function startServer() {
     }
   });
 
+  async function verifyAdminAccess(req: express.Request): Promise<boolean> {
+    const { passcode } = req.body;
+    const authHeader = req.headers.authorization;
+    const expectedPasscode = process.env.ADMIN_PASSCODE || "MTRH2026";
+
+    // 1. Passcode check (body or auth header)
+    if (passcode === expectedPasscode || authHeader === expectedPasscode) {
+      return true;
+    }
+
+    // 2. Firebase ID Token check
+    if (authHeader && authHeader.startsWith("Bearer ")) {
+      const token = authHeader.substring(7);
+      try {
+        const decodedToken = await admin.auth().verifyIdToken(token);
+        if (decodedToken && decodedToken.email === "jhuffman710@gmail.com") {
+          return true;
+        }
+      } catch (err: any) {
+        console.warn("[Admin Auth] Failed to verify ID Token:", err.message || err);
+      }
+    }
+
+    return false;
+  }
+
   // Secure Server-side Moderation Routes bypassing OAuth unauthorized-domain constraints
   app.post("/api/moderate/approve", async (req, res) => {
     try {
-      const { docId, passcode } = req.body;
-      if (passcode !== "MTRH2026") {
-        return res.status(403).json({ error: "BYPASS CODE DENIED." });
+      const { docId } = req.body;
+      const isAuthorized = await verifyAdminAccess(req);
+      if (!isAuthorized) {
+        return res.status(403).json({ error: "BYPASS CODE DENIED OR UNAUTHORIZED SESSION." });
       }
       if (!docId) {
         return res.status(400).json({ error: "Missing document ID." });
       }
-      if (!dbAdmin) {
-        return res.status(500).json({ error: "Firebase database not initialized on server." });
-      }
 
-      const docRef = dbAdmin.collection('submissions').doc(docId);
-      await docRef.update({
+      await safeUpdateDocument('submissions', docId, {
         status: 'approved'
       });
 
@@ -239,19 +382,16 @@ async function startServer() {
 
   app.post("/api/moderate/revoke", async (req, res) => {
     try {
-      const { docId, passcode } = req.body;
-      if (passcode !== "MTRH2026") {
-        return res.status(403).json({ error: "BYPASS CODE DENIED." });
+      const { docId } = req.body;
+      const isAuthorized = await verifyAdminAccess(req);
+      if (!isAuthorized) {
+        return res.status(403).json({ error: "BYPASS CODE DENIED OR UNAUTHORIZED SESSION." });
       }
       if (!docId) {
         return res.status(400).json({ error: "Missing document ID." });
       }
-      if (!dbAdmin) {
-        return res.status(500).json({ error: "Firebase database not initialized on server." });
-      }
 
-      const docRef = dbAdmin.collection('submissions').doc(docId);
-      await docRef.update({
+      await safeUpdateDocument('submissions', docId, {
         status: 'pending'
       });
 
@@ -265,9 +405,10 @@ async function startServer() {
 
   app.post("/api/moderate/update", async (req, res) => {
     try {
-      const { docId, passcode, updatedData } = req.body;
-      if (passcode !== "MTRH2026") {
-        return res.status(403).json({ error: "BYPASS CODE DENIED." });
+      const { docId, updatedData } = req.body;
+      const isAuthorized = await verifyAdminAccess(req);
+      if (!isAuthorized) {
+        return res.status(403).json({ error: "BYPASS CODE DENIED OR UNAUTHORIZED SESSION." });
       }
       if (!docId) {
         return res.status(400).json({ error: "Missing document ID." });
@@ -275,12 +416,8 @@ async function startServer() {
       if (!updatedData) {
         return res.status(400).json({ error: "Missing updated data." });
       }
-      if (!dbAdmin) {
-        return res.status(500).json({ error: "Firebase database not initialized on server." });
-      }
 
-      const docRef = dbAdmin.collection('submissions').doc(docId);
-      await docRef.update(updatedData);
+      await safeUpdateDocument('submissions', docId, updatedData);
 
       console.log(`Submissions Server-Bypass: Updated document ${docId}`);
       res.json({ success: true });
@@ -292,19 +429,16 @@ async function startServer() {
 
   app.post("/api/moderate/reject", async (req, res) => {
     try {
-      const { docId, passcode } = req.body;
-      if (passcode !== "MTRH2026") {
-        return res.status(403).json({ error: "BYPASS CODE DENIED." });
+      const { docId } = req.body;
+      const isAuthorized = await verifyAdminAccess(req);
+      if (!isAuthorized) {
+        return res.status(403).json({ error: "BYPASS CODE DENIED OR UNAUTHORIZED SESSION." });
       }
       if (!docId) {
         return res.status(400).json({ error: "Missing document ID." });
       }
-      if (!dbAdmin) {
-        return res.status(500).json({ error: "Firebase database not initialized on server." });
-      }
 
-      const docRef = dbAdmin.collection('submissions').doc(docId);
-      await docRef.delete();
+      await safeDeleteDocument('submissions', docId);
 
       console.log(`Submissions Server-Bypass: Deleted/Rejected document ${docId}`);
       res.json({ success: true, status: 'deleted' });
@@ -340,9 +474,6 @@ async function startServer() {
       if (!name || !category || !description) {
         return res.status(400).json({ error: "Missing required fields." });
       }
-      if (!dbAdmin) {
-        return res.status(500).json({ error: "Firebase database not initialized on server." });
-      }
 
       const submissionId = `user_${Date.now()}`;
       const submissionData: any = {
@@ -351,7 +482,7 @@ async function startServer() {
         description: description.trim(),
         images: images || [],
         status: 'pending',
-        createdAt: admin.firestore.FieldValue.serverTimestamp(),
+        createdAt: dbAdmin ? admin.firestore.FieldValue.serverTimestamp() : new Date().toISOString(),
         destinations: destinations || ['map'],
         codexParentId: codexParentId || '',
         timelineLayer: timelineLayer || '',
@@ -378,7 +509,7 @@ async function startServer() {
         submissionData.socialLink = socialLink.trim();
       }
 
-      await dbAdmin.collection('submissions').doc(submissionId).set(submissionData);
+      await safeAddDocument('submissions', submissionId, submissionData);
 
       // Trigger email notification in the background
       const appUrl = process.env.APP_URL || "http://localhost:3000";
@@ -508,28 +639,16 @@ ${modLink}
 
   app.post("/api/moderate/pending", async (req, res) => {
     try {
-      const { passcode } = req.body;
-      if (passcode !== "MTRH2026") {
-        return res.status(403).json({ error: "BYPASS CODE DENIED." });
-      }
-      if (!dbAdmin) {
-        return res.status(500).json({ error: "Firebase database not initialized on server." });
+      const isAuthorized = await verifyAdminAccess(req);
+      if (!isAuthorized) {
+        return res.status(403).json({ error: "BYPASS CODE DENIED OR UNAUTHORIZED SESSION." });
       }
 
-      const snapshot = await dbAdmin.collection('submissions').get();
-      const docs: any[] = [];
-      snapshot.forEach(doc => {
-        const data = doc.data();
-        if (data.status === "pending") {
-          docs.push({
-            id: doc.id,
-            ...data
-          });
-        }
-      });
+      const allDocs = await safeGetCollection('submissions');
+      const pendingDocs = allDocs.filter(data => data.status === "pending");
 
-      console.log(`Submissions Server-Bypass: Returned ${docs.length} pending submissions.`);
-      res.json({ success: true, pending: docs });
+      console.log(`Submissions Server-Bypass: Returned ${pendingDocs.length} pending submissions.`);
+      res.json({ success: true, pending: pendingDocs });
     } catch (err: any) {
       console.error("Server-side pending fetch failed:", err);
       res.status(500).json({ error: err.message || "Failed to fetch pending submissions on server" });
@@ -543,9 +662,6 @@ ${modLink}
       if (!pointId || !pointName || !pointCategory || !reason) {
         return res.status(400).json({ error: "Missing required report fields." });
       }
-      if (!dbAdmin) {
-        return res.status(500).json({ error: "Firebase database not initialized on server." });
-      }
 
       const reportId = `report_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`;
       const reportData = {
@@ -555,10 +671,10 @@ ${modLink}
         reason: String(reason).trim(),
         details: (details || "").trim(),
         status: 'pending',
-        createdAt: admin.firestore.FieldValue.serverTimestamp()
+        createdAt: dbAdmin ? admin.firestore.FieldValue.serverTimestamp() : new Date().toISOString()
       };
 
-      await dbAdmin.collection('reports').doc(reportId).set(reportData);
+      await safeAddDocument('reports', reportId, reportData);
 
       // Trigger inaccuracy report email notification in the background
       const appUrl = process.env.APP_URL || "http://localhost:3000";
@@ -624,27 +740,21 @@ ${modLink}
 
   app.post("/api/moderate/reports", async (req, res) => {
     try {
-      const { passcode } = req.body;
-      if (passcode !== "MTRH2026") {
-        return res.status(403).json({ error: "BYPASS CODE DENIED." });
-      }
-      if (!dbAdmin) {
-        return res.status(500).json({ error: "Firebase database not initialized on server." });
+      const isAuthorized = await verifyAdminAccess(req);
+      if (!isAuthorized) {
+        return res.status(403).json({ error: "BYPASS CODE DENIED OR UNAUTHORIZED SESSION." });
       }
 
-      const snapshot = await dbAdmin.collection('reports').get();
-      const docs: any[] = [];
-      snapshot.forEach(doc => {
-        const data = doc.data();
+      const allReports = await safeGetCollection('reports');
+      const docs = allReports.map(data => {
         const createdAt = data.createdAt && typeof data.createdAt.toDate === 'function' 
           ? data.createdAt.toDate().toISOString() 
           : data.createdAt;
           
-        docs.push({
-          id: doc.id,
+        return {
           ...data,
           createdAt
-        });
+        };
       });
 
       // Sort by createdAt descending
@@ -664,27 +774,23 @@ ${modLink}
 
   app.post("/api/moderate/report-action", async (req, res) => {
     try {
-      const { reportId, action, passcode } = req.body;
-      if (passcode !== "MTRH2026") {
-        return res.status(403).json({ error: "BYPASS CODE DENIED." });
+      const { reportId, action } = req.body;
+      const isAuthorized = await verifyAdminAccess(req);
+      if (!isAuthorized) {
+        return res.status(403).json({ error: "BYPASS CODE DENIED OR UNAUTHORIZED SESSION." });
       }
       if (!reportId || !action) {
         return res.status(400).json({ error: "Missing report ID or action." });
       }
-      if (!dbAdmin) {
-        return res.status(500).json({ error: "Firebase database not initialized on server." });
-      }
-
-      const docRef = dbAdmin.collection('reports').doc(reportId);
 
       if (action === 'resolve') {
-        await docRef.update({
+        await safeUpdateDocument('reports', reportId, {
           status: 'resolved'
         });
         console.log(`Reports Server-Bypass: Resolved report ${reportId}`);
         res.json({ success: true, status: 'resolved' });
       } else if (action === 'delete') {
-        await docRef.delete();
+        await safeDeleteDocument('reports', reportId);
         console.log(`Reports Server-Bypass: Deleted report ${reportId}`);
         res.json({ success: true, status: 'deleted' });
       } else {
