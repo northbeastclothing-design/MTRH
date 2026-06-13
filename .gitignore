@@ -11,3 +11,5 @@ coverage/
 .vscode/
 __pycache__/
 scratch/
+.local_db/
+

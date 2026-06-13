@@ -19044,6 +19044,86 @@ const chunk_4: any[] = [
     relatedIds: ['great-flood', 'noah-fig', 'nimrod-fig']
   },
   {
+    id: 'codex-dead-sea-scrolls',
+    parentId: 'ancient-texts',
+    name: 'The Dead Sea Scrolls',
+    description: 'A collection of ancient Jewish religious manuscripts discovered in the Qumran Caves, containing the oldest surviving copies of biblical books and apocryphal texts.',
+    layer: 'Ancient Texts',
+    mapFeatureId: 'anomaly-Ancient-Texts-0',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/1/13/1QIsa_b.jpg'],
+    sources: ['Qumran Caves Scrolls Database', 'Israel Museum']
+  },
+  {
+    id: 'codex-nag-hammadi',
+    parentId: 'ancient-texts',
+    name: 'Nag Hammadi Library',
+    description: 'Thirteen leather-bound papyrus codices discovered in Egypt containing major early Gnostic texts, including the Gospel of Thomas and Gospel of Philip.',
+    layer: 'Ancient Texts',
+    mapFeatureId: 'anomaly-Ancient-Texts-1',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/4/42/El_Evangelio_de_Tom%C3%A1s-Gospel_of_Thomas-_Codex_II_Manuscritos_de_Nag_Hammadi-The_Nag_Hammadi_manuscripts.png'],
+    sources: ['Gnostic Society Library', 'Institute for Antiquity and Christianity']
+  },
+  {
+    id: 'codex-library-ashurbanipal',
+    parentId: 'ancient-texts',
+    name: 'Royal Library of Ashurbanipal',
+    description: 'A vast collection of cuneiform clay tablets from the 7th century BC Nineveh, preserving the Epic of Gilgamesh and ancient Mesopotamian astronomical, historical, and ritual texts.',
+    layer: 'Ancient Texts',
+    mapFeatureId: 'anomaly-Ancient-Texts-2',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/8/8b/Library_of_Ashurbanipal.jpg'],
+    sources: ['British Museum Nineveh Project']
+  },
+  {
+    id: 'codex-sinaiticus',
+    parentId: 'ancient-texts',
+    name: 'Codex Sinaiticus',
+    description: 'A 4th-century Greek uncial manuscript of the Bible, representing one of the oldest and most complete surviving witnesses to the New Testament text.',
+    layer: 'Ancient Texts',
+    mapFeatureId: 'anomaly-Ancient-Texts-3',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/4/4a/Sinaiticus_text.jpg'],
+    sources: ['British Library / Codex Sinaiticus Project']
+  },
+  {
+    id: 'codex-grolier-maya',
+    parentId: 'ancient-texts',
+    name: 'Maya Codex of Mexico',
+    description: 'A pre-Columbian Maya book depicting Venus cycle almanacs and deity rituals, confirmed to be the oldest surviving authentic manuscript from the Americas (c. 13th century).',
+    layer: 'Ancient Texts',
+    mapFeatureId: 'anomaly-Ancient-Texts-4',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/4/4b/Grolier_Codex_in_HuffPo1.jpg'],
+    sources: ['National Museum of Anthropology (Mexico)', 'INAH']
+  },
+  {
+    id: 'codex-dunhuang-manuscripts',
+    parentId: 'ancient-texts',
+    name: 'Dunhuang Manuscripts',
+    description: 'A cache of medieval documents discovered in the Mogao Caves of Dunhuang, China, preserving unique Buddhist texts, historical records, and the earliest printed dated book (the Diamond Sutra).',
+    layer: 'Ancient Texts',
+    mapFeatureId: 'anomaly-Ancient-Texts-5',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/0/04/Digitisation_of_a_Dunhuang_manuscript.jpg'],
+    sources: ['International Dunhuang Project', 'British Library']
+  },
+  {
+    id: 'codex-phaistos-disc',
+    parentId: 'ancient-texts',
+    name: 'Phaistos Disc',
+    description: 'A fired clay disc from the Minoan palace of Phaistos, Crete, stamped with 241 unique symbols in a spiral pattern. It remains undeciphered and is one of archaeology\'s greatest mysteries.',
+    layer: 'Ancient Texts',
+    mapFeatureId: 'anomaly-Ancient-Texts-6',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/9/9d/Phaistos_Disc_%E2%80%94_Side_A.jpg'],
+    sources: ['Heraklion Archaeological Museum']
+  },
+  {
+    id: 'codex-enuma-elish',
+    parentId: 'ancient-texts',
+    name: 'Enūma Eliš',
+    description: 'Mesopotamian creation epic cuneiform tablets describing the birth of the gods, the defeat of Tiamat, and the creation of the cosmos and mankind by Marduk.',
+    layer: 'Ancient Texts',
+    mapFeatureId: 'anomaly-Ancient-Texts-7',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/c/c3/Chaos_Monster_and_Sun_God.png'],
+    sources: ['Mesopotamian Clay Tablets Collection', 'British Museum']
+  },
+  {
     id: 'archaeological-finds-br',
     parentId: 'megaliths-structures',
     name: 'Archaeological Finds',

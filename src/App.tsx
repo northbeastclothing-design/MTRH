@@ -930,12 +930,37 @@ function App() {
   const [savedPasscode, setSavedPasscode] = useState('');
   const [approvedSubmissions, setApprovedSubmissions] = useState<any[]>([]);
   const [isLiveLoading, setIsLiveLoading] = useState(true);
+  const [isInitialLoad, setIsInitialLoad] = useState(true);
   const [isMapLoaded, setIsMapLoaded] = useState(false);
   const [isDataCompiled, setIsDataCompiled] = useState(false);
   const [showAboutModal, setShowAboutModal] = useState(true);
   const [currentPage, setCurrentPage] = useState<'map' | 'timeline' | 'codex'>('map');
   const [selectedTimelineItem, setSelectedTimelineItem] = useState<any | null>(null);
   const [activeWaypointIndex, setActiveWaypointIndex] = useState<number | null>(null);
+
+  const isLayerLoading = (layerName: string): boolean => {
+    if (!activeLayers[layerName]) return false;
+
+    if (layerName === 'Cave Systems') {
+      return cavesData.length === 0;
+    }
+    if (layerName === 'Missing 411') {
+      return missing411Data.length === 0;
+    }
+    if (layerName === 'Archaeological Finds' || layerName === 'Biblical Finds') {
+      return archaeologyData.length === 0;
+    }
+    if (
+      layerName === 'UFOs - War.gov' ||
+      layerName === 'UFOs - Brazillian Archives' ||
+      layerName === 'UFOs - Sightings' ||
+      layerName === 'Secret Government Programs'
+    ) {
+      return ufoData.length === 0;
+    }
+
+    return rabbitHoleData.length === 0;
+  };
   const getModeratorHeadersAndBody = async (bodyObj: any = {}) => {
     const headers: any = { 'Content-Type': 'application/json' };
     const body: any = { ...bodyObj };
@@ -2611,12 +2636,14 @@ function App() {
     const fallbackTimeout = setTimeout(() => {
       console.warn("Loader safety timeout reached. Dismissing loader.");
       setIsLiveLoading(false);
+      setIsInitialLoad(false);
     }, 6000);
 
     if (isMapLoaded && isDataCompiled) {
       // Add a small buffer (e.g. 500ms) for smooth rendering transition
       const successTimeout = setTimeout(() => {
         setIsLiveLoading(false);
+        setIsInitialLoad(false);
       }, 500);
       return () => {
         clearTimeout(fallbackTimeout);
@@ -2671,7 +2698,18 @@ function App() {
     darkModeRef.current = isMapDarkMode;
   }, [isMapDarkMode]);
 
-  const isMainMapRotatingRef = useRef(true);
+  const initialShouldRotate = (() => {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const hasLocation = params.has('lat') || params.has('lng') || params.has('zoom');
+      const hasDeepLink = params.has('itemId') || params.has('termId') || params.has('featureId');
+      return !hasLocation && !hasDeepLink;
+    } catch (e) {
+      return true;
+    }
+  })();
+
+  const isMainMapRotatingRef = useRef(initialShouldRotate);
   const stopMainMapRotation = () => {
     isMainMapRotatingRef.current = false;
   };
@@ -3449,7 +3487,12 @@ function App() {
     };
 
     bgMap.once('load', () => {
-      rotate();
+      const params = new URLSearchParams(window.location.search);
+      const hasLocation = params.has('lat') || params.has('lng') || params.has('zoom');
+      const hasDeepLink = params.has('itemId') || params.has('termId') || params.has('featureId');
+      if (!hasLocation && !hasDeepLink) {
+        rotate();
+      }
     });
 
     return () => {
@@ -5082,7 +5125,7 @@ function App() {
 
       {/* GLOBAL FULL-SCREEN LOADER OVERLAY */}
       <AnimatePresence>
-        {isLiveLoading && (
+        {(isInitialLoad && isLiveLoading) && (
           <motion.div 
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -5838,7 +5881,26 @@ function App() {
                             onClick={() => setActiveLayers(p => ({ ...p, [layerName]: !p[layerName] }))} 
                             style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, display: 'flex', alignItems: 'center' }}
                           >
-                            <img src={isActive ? "https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/icons/icon-eye-open.svg" : "https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/icons/icon-eye-closed.svg"} style={{ width: '31px', height: '30px', filter: theme.invert }} alt="toggle" />
+                            {isLayerLoading(layerName) ? (
+                              <div style={{
+                                width: '31px',
+                                height: '30px',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center'
+                              }}>
+                                <div style={{
+                                  width: '14px',
+                                  height: '14px',
+                                  borderRadius: '50%',
+                                  border: `2px solid ${isMapDarkMode ? '#333' : '#ddd'}`,
+                                  borderTopColor: '#b6a6ff',
+                                  animation: 'spinMapAsset 0.8s linear infinite'
+                                }} />
+                              </div>
+                            ) : (
+                              <img src={isActive ? "https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/icons/icon-eye-open.svg" : "https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/icons/icon-eye-closed.svg"} style={{ width: '31px', height: '30px', filter: theme.invert }} alt="toggle" />
+                            )}
                           </motion.button>
                           <motion.button 
                             whileHover={{ opacity: 0.6 }}
@@ -5862,15 +5924,6 @@ function App() {
                         <motion.div 
                           initial="hidden"
                           animate="show"
-                          variants={{
-                            hidden: { opacity: 0 },
-                            show: {
-                              opacity: 1,
-                              transition: {
-                                staggerChildren: 0.05
-                              }
-                            }
-                          }}
                           style={{ display: 'flex', flexDirection: 'column', paddingLeft: '22px', paddingRight: '16px' }}
                         >
                           {CATEGORY_DESCRIPTIONS[layerName] && (
@@ -5886,75 +5939,122 @@ function App() {
                               {CATEGORY_DESCRIPTIONS[layerName]}
                             </div>
                           )}
-                          {locationsInLayer.slice(0, 100).map(loc => {
-                            const isSelected = selectedFeature?.id === loc.id;
-                            const pillColor = layerColors[layerName] || '#e5e5e5';
-                            return (
-                              <motion.div 
-                                key={loc.id} 
-                                variants={{
-                                  hidden: { opacity: 0, x: -10 },
-                                  show: { opacity: 1, x: 0 }
+                          <AnimatePresence mode="wait">
+                            {isLayerLoading(layerName) ? (
+                              <motion.div
+                                key="loader"
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                style={{
+                                  padding: '16px',
+                                  display: 'flex',
+                                  flexDirection: 'column',
+                                  alignItems: 'center',
+                                  justifyContent: 'center',
+                                  gap: '12px',
+                                  fontFamily: '"Space Mono", monospace'
                                 }}
-                                onClick={() => handleLocationItemClick(loc)} 
-                                onMouseEnter={(e) => {
-                                  if (!isSelected) e.currentTarget.style.backgroundColor = isMapDarkMode ? 'rgba(255,255,255,0.1)' : pillColor;
-                                }}
-                                onMouseLeave={(e) => {
-                                  if (!isSelected) e.currentTarget.style.backgroundColor = 'transparent';
-                                }}
-                                style={{ 
-                                  height: '24px',
-                                  borderRadius: '12px',
-                                  padding: '0 12px 0 2px', 
-                                  fontSize: '10px', 
-                                  cursor: 'pointer', 
-                                  display: 'flex', 
-                                  alignItems: 'center', 
-                                  gap: '8px', 
-                                  background: isSelected ? theme.text : 'transparent', 
-                                  color: isSelected ? theme.bg : theme.text,
-                                  textAlign: 'left', 
-                                  fontFamily: '"Space Mono", monospace', 
-                                  textTransform: 'capitalize',
-                                  margin: '2px 0',
-                                  width: '100%',
-                                  transition: 'background-color 0.2s ease, color 0.2s ease'
-                                }} 
-                                className="nested-item"
                               >
-                                <div 
-                                  style={{
-                                    width: '24px',
-                                    height: '24px',
-                                    minWidth: '24px',
-                                    backgroundColor: isSelected ? theme.bg : theme.text,
-                                    WebkitMaskImage: 'url(/icons/icon-map-pin.svg)',
-                                    maskImage: 'url(/icons/icon-map-pin.svg)',
-                                    WebkitMaskSize: '24px 24px',
-                                    maskSize: '24px 24px',
-                                    WebkitMaskPosition: 'center',
-                                    maskPosition: 'center',
-                                    WebkitMaskRepeat: 'no-repeat',
-                                    maskRepeat: 'no-repeat'
-                                  }} 
-                                />
-                                <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                                  {toTitleCase(loc.name)}
-                                </span>
+                                <div style={{
+                                  width: '20px',
+                                  height: '20px',
+                                  borderRadius: '50%',
+                                  border: `2px solid ${isMapDarkMode ? '#333' : '#ddd'}`,
+                                  borderTopColor: '#b6a6ff',
+                                  animation: 'spinMapAsset 0.8s linear infinite'
+                                }} />
+                                <span style={{ fontSize: '9px', color: theme.textDim, letterSpacing: '1px' }}>RETRIEVING INTEL...</span>
                               </motion.div>
-                            );
-                          })}
-                          {locationsInLayer.length > 100 && (
-                            <div style={{ padding: '8px 12px', fontSize: '10px', color: theme.textDim, fontStyle: 'italic', borderTop: `1px solid ${theme.borderLight}`, marginTop: '4px' }}>
-                              Showing first 100 of {locationsInLayer.length} results. Use search to narrow down.
-                            </div>
-                          )}
-                          {locationsInLayer.length === 0 && (
-                            <div style={{ padding: '8px 16px', fontSize: '9px', color: theme.textDim, fontFamily: '"Space Mono", monospace' }}>
-                              {!isActive ? "Toggle on visibility to view data" : "NO ASSETS IN RANGE, adjust timeline range sliders to discover more."}
-                            </div>
-                          )}
+                            ) : (
+                              <motion.div 
+                                key="content"
+                                initial="hidden"
+                                animate="show"
+                                exit="hidden"
+                                variants={{
+                                  hidden: { opacity: 0 },
+                                  show: {
+                                    opacity: 1,
+                                    transition: {
+                                      staggerChildren: 0.03
+                                    }
+                                  }
+                                }}
+                                style={{ display: 'flex', flexDirection: 'column', width: '100%' }}
+                              >
+                                {locationsInLayer.slice(0, 100).map(loc => {
+                                  const isSelected = selectedFeature?.id === loc.id;
+                                  const pillColor = layerColors[layerName] || '#e5e5e5';
+                                  return (
+                                    <motion.div 
+                                      key={loc.id} 
+                                      variants={{
+                                        hidden: { opacity: 0, x: -10 },
+                                        show: { opacity: 1, x: 0 }
+                                      }}
+                                      onClick={() => handleLocationItemClick(loc)} 
+                                      onMouseEnter={(e) => {
+                                        if (!isSelected) e.currentTarget.style.backgroundColor = isMapDarkMode ? 'rgba(255,255,255,0.1)' : pillColor;
+                                      }}
+                                      onMouseLeave={(e) => {
+                                        if (!isSelected) e.currentTarget.style.backgroundColor = 'transparent';
+                                      }}
+                                      style={{ 
+                                        height: '24px',
+                                        borderRadius: '12px',
+                                        padding: '0 12px 0 2px', 
+                                        fontSize: '10px', 
+                                        cursor: 'pointer', 
+                                        display: 'flex', 
+                                        alignItems: 'center', 
+                                        gap: '8px', 
+                                        background: isSelected ? theme.text : 'transparent', 
+                                        color: isSelected ? theme.bg : theme.text,
+                                        textAlign: 'left', 
+                                        fontFamily: '"Space Mono", monospace', 
+                                        textTransform: 'capitalize',
+                                        margin: '2px 0',
+                                        width: '100%',
+                                        transition: 'background-color 0.2s ease, color 0.2s ease'
+                                      }} 
+                                      className="nested-item"
+                                    >
+                                      <div 
+                                        style={{
+                                          width: '24px',
+                                          height: '24px',
+                                          minWidth: '24px',
+                                          backgroundColor: isSelected ? theme.bg : theme.text,
+                                          WebkitMaskImage: 'url(/icons/icon-map-pin.svg)',
+                                          maskImage: 'url(/icons/icon-map-pin.svg)',
+                                          WebkitMaskSize: '24px 24px',
+                                          maskSize: '24px 24px',
+                                          WebkitMaskPosition: 'center',
+                                          maskPosition: 'center',
+                                          WebkitMaskRepeat: 'no-repeat',
+                                          maskRepeat: 'no-repeat'
+                                        }} 
+                                      />
+                                      <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                                        {toTitleCase(loc.name)}
+                                      </span>
+                                    </motion.div>
+                                  );
+                                })}
+                                {locationsInLayer.length > 100 && (
+                                  <div style={{ padding: '8px 12px', fontSize: '10px', color: theme.textDim, fontStyle: 'italic', borderTop: `1px solid ${theme.borderLight}`, marginTop: '4px' }}>
+                                    Showing first 100 of {locationsInLayer.length} results. Use search to narrow down.
+                                  </div>
+                                )}
+                                {locationsInLayer.length === 0 && (
+                                  <div style={{ padding: '8px 16px', fontSize: '9px', color: theme.textDim, fontFamily: '"Space Mono", monospace' }}>
+                                    {!isActive ? "Toggle on visibility to view data" : "NO ASSETS IN RANGE, adjust timeline range sliders to discover more."}
+                                  </div>
+                                )}
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
                         </motion.div>
                       </motion.div>
                     )}
