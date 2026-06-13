@@ -1004,8 +1004,27 @@ ${modLink}
     app.use(vite.middlewares);
   } else {
     const distPath = path.join(process.cwd(), 'dist');
-    app.use(express.static(distPath));
+    
+    // Serve static files with a long-term cache (1 year) since they are hashed and immutable.
+    // Disable serving index.html automatically via index: false so we can control its caching headers.
+    app.use(express.static(distPath, {
+      maxAge: '1y',
+      immutable: true,
+      index: false
+    }));
+
     app.get('*', (req, res) => {
+      // If the request points to a static asset that wasn't found by express.static,
+      // return a proper 404 instead of falling back to index.html (which causes JS parser errors).
+      if (req.path.startsWith('/assets/') || path.extname(req.path)) {
+        res.status(404).send('Not Found');
+        return;
+      }
+
+      // Serve index.html with cache-disabling headers so normal reloads always fetch the latest assets
+      res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+      res.setHeader('Pragma', 'no-cache');
+      res.setHeader('Expires', '0');
       res.sendFile(path.join(distPath, 'index.html'));
     });
   }

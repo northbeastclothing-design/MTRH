@@ -2592,6 +2592,7 @@ function App() {
   
   const [expandedLayers, setExpandedLayers] = useState<Record<string, boolean>>({});
   const [activeLayers, setActiveLayers] = useState<Record<string, boolean>>({});
+  const [visibleCounts, setVisibleCounts] = useState<Record<string, number>>({});
 
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
@@ -5987,70 +5988,120 @@ function App() {
                                 }}
                                 style={{ display: 'flex', flexDirection: 'column', width: '100%' }}
                               >
-                                {locationsInLayer.slice(0, 100).map(loc => {
-                                  const isSelected = selectedFeature?.id === loc.id;
-                                  const pillColor = layerColors[layerName] || '#e5e5e5';
+                                {(() => {
+                                  const maxVisible = visibleCounts[layerName] || 100;
                                   return (
-                                    <motion.div 
-                                      key={loc.id} 
-                                      variants={{
-                                        hidden: { opacity: 0, x: -10 },
-                                        show: { opacity: 1, x: 0 }
-                                      }}
-                                      onClick={() => handleLocationItemClick(loc)} 
-                                      onMouseEnter={(e) => {
-                                        if (!isSelected) e.currentTarget.style.backgroundColor = isMapDarkMode ? 'rgba(255,255,255,0.1)' : pillColor;
-                                      }}
-                                      onMouseLeave={(e) => {
-                                        if (!isSelected) e.currentTarget.style.backgroundColor = 'transparent';
-                                      }}
-                                      style={{ 
-                                        height: '24px',
-                                        borderRadius: '12px',
-                                        padding: '0 12px 0 2px', 
-                                        fontSize: '10px', 
-                                        cursor: 'pointer', 
-                                        display: 'flex', 
-                                        alignItems: 'center', 
-                                        gap: '8px', 
-                                        background: isSelected ? theme.text : 'transparent', 
-                                        color: isSelected ? theme.bg : theme.text,
-                                        textAlign: 'left', 
-                                        fontFamily: '"Space Mono", monospace', 
-                                        textTransform: 'capitalize',
-                                        margin: '2px 0',
-                                        width: '100%',
-                                        transition: 'background-color 0.2s ease, color 0.2s ease'
-                                      }} 
-                                      className="nested-item"
-                                    >
-                                      <div 
-                                        style={{
-                                          width: '24px',
-                                          height: '24px',
-                                          minWidth: '24px',
-                                          backgroundColor: isSelected ? theme.bg : theme.text,
-                                          WebkitMaskImage: 'url(/icons/icon-map-pin.svg)',
-                                          maskImage: 'url(/icons/icon-map-pin.svg)',
-                                          WebkitMaskSize: '24px 24px',
-                                          maskSize: '24px 24px',
-                                          WebkitMaskPosition: 'center',
-                                          maskPosition: 'center',
-                                          WebkitMaskRepeat: 'no-repeat',
-                                          maskRepeat: 'no-repeat'
-                                        }} 
-                                      />
-                                      <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                                        {toTitleCase(loc.name)}
-                                      </span>
-                                    </motion.div>
+                                    <>
+                                      {locationsInLayer.slice(0, maxVisible).map(loc => {
+                                        const isSelected = selectedFeature?.id === loc.id;
+                                        const pillColor = layerColors[layerName] || '#e5e5e5';
+                                        return (
+                                          <motion.div 
+                                            key={loc.id} 
+                                            variants={{
+                                              hidden: { opacity: 0, x: -10 },
+                                              show: { opacity: 1, x: 0 }
+                                            }}
+                                            onClick={() => handleLocationItemClick(loc)} 
+                                            onMouseEnter={(e) => {
+                                              if (!isSelected) e.currentTarget.style.backgroundColor = isMapDarkMode ? 'rgba(255,255,255,0.1)' : pillColor;
+                                            }}
+                                            onMouseLeave={(e) => {
+                                              if (!isSelected) e.currentTarget.style.backgroundColor = 'transparent';
+                                            }}
+                                            style={{ 
+                                              height: '24px',
+                                              borderRadius: '12px',
+                                              padding: '0 12px 0 2px', 
+                                              fontSize: '10px', 
+                                              cursor: 'pointer', 
+                                              display: 'flex', 
+                                              alignItems: 'center', 
+                                              gap: '8px', 
+                                              background: isSelected ? theme.text : 'transparent', 
+                                              color: isSelected ? theme.bg : theme.text,
+                                              textAlign: 'left', 
+                                              fontFamily: '"Space Mono", monospace', 
+                                              textTransform: 'capitalize',
+                                              margin: '2px 0',
+                                              width: '100%',
+                                              transition: 'background-color 0.2s ease, color 0.2s ease'
+                                            }} 
+                                            className="nested-item"
+                                          >
+                                            <div 
+                                              style={{
+                                                width: '24px',
+                                                height: '24px',
+                                                minWidth: '24px',
+                                                backgroundColor: isSelected ? theme.bg : theme.text,
+                                                WebkitMaskImage: 'url(/icons/icon-map-pin.svg)',
+                                                maskImage: 'url(/icons/icon-map-pin.svg)',
+                                                WebkitMaskSize: '24px 24px',
+                                                maskSize: '24px 24px',
+                                                WebkitMaskPosition: 'center',
+                                                maskPosition: 'center',
+                                                WebkitMaskRepeat: 'no-repeat',
+                                                maskRepeat: 'no-repeat'
+                                              }} 
+                                            />
+                                            <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                                              {toTitleCase(loc.name)}
+                                            </span>
+                                          </motion.div>
+                                        );
+                                      })}
+                                      {locationsInLayer.length > maxVisible && (
+                                        <div style={{ padding: '8px 12px', fontSize: '10px', color: theme.textDim, fontStyle: 'italic', borderTop: `1px solid ${theme.borderLight}`, marginTop: '4px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                                          <div>
+                                            Showing first {maxVisible} of {locationsInLayer.length} results.
+                                          </div>
+                                          <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+                                            <button 
+                                              onClick={(e) => {
+                                                e.stopPropagation();
+                                                setVisibleCounts(p => ({ ...p, [layerName]: (p[layerName] || 100) + 100 }));
+                                              }}
+                                              style={{
+                                                background: 'none',
+                                                border: 'none',
+                                                color: '#b6a6ff',
+                                                fontSize: '10px',
+                                                fontWeight: 'bold',
+                                                cursor: 'pointer',
+                                                padding: '2px 0',
+                                                fontFamily: '"Space Mono", monospace',
+                                                textDecoration: 'underline'
+                                              }}
+                                            >
+                                              LOAD MORE (+100)
+                                            </button>
+                                            <span style={{ color: theme.borderLight }}>|</span>
+                                            <button 
+                                              onClick={(e) => {
+                                                e.stopPropagation();
+                                                setVisibleCounts(p => ({ ...p, [layerName]: locationsInLayer.length }));
+                                              }}
+                                              style={{
+                                                background: 'none',
+                                                border: 'none',
+                                                color: '#b6a6ff',
+                                                fontSize: '10px',
+                                                fontWeight: 'bold',
+                                                cursor: 'pointer',
+                                                padding: '2px 0',
+                                                fontFamily: '"Space Mono", monospace',
+                                                textDecoration: 'underline'
+                                              }}
+                                            >
+                                              LOAD ALL
+                                            </button>
+                                          </div>
+                                        </div>
+                                      )}
+                                    </>
                                   );
-                                })}
-                                {locationsInLayer.length > 100 && (
-                                  <div style={{ padding: '8px 12px', fontSize: '10px', color: theme.textDim, fontStyle: 'italic', borderTop: `1px solid ${theme.borderLight}`, marginTop: '4px' }}>
-                                    Showing first 100 of {locationsInLayer.length} results. Use search to narrow down.
-                                  </div>
-                                )}
+                                })()}
                                 {locationsInLayer.length === 0 && (
                                   <div style={{ padding: '8px 16px', fontSize: '9px', color: theme.textDim, fontFamily: '"Space Mono", monospace' }}>
                                     {!isActive ? "Toggle on visibility to view data" : "NO ASSETS IN RANGE, adjust timeline range sliders to discover more."}
