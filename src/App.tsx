@@ -1755,6 +1755,8 @@ function App() {
                   <option value="greek-mythology">Greek Mythology</option>
                   <option value="merovingian-bloodlines">Merovingian Bloodlines</option>
                   <option value="royal-bloodlines">Royal Bloodlines</option>
+                  <option value="illuminati-bloodlines">13 Illuminati Bloodlines</option>
+                  <option value="black-nobility">13 Black Nobility Families</option>
                   <option value="secret-gov-programs">Secret Government Programs</option>
                   <option value="ancient-civilizations">Ancient People Groups</option>
                   <option value="alchemy-occult">The Occult</option>
@@ -9257,6 +9259,8 @@ function App() {
                             <option value="greek-mythology">Greek Mythology</option>
                             <option value="merovingian-bloodlines">Merovingian Bloodlines</option>
                             <option value="royal-bloodlines">Royal Bloodlines</option>
+                            <option value="illuminati-bloodlines">13 Illuminati Bloodlines</option>
+                            <option value="black-nobility">13 Black Nobility Families</option>
                             <option value="secret-gov-programs">Secret Government Programs</option>
                             <option value="ancient-civilizations">Ancient People Groups</option>
                             <option value="alchemy-occult">The Occult</option>

@@ -206,12 +206,13 @@ export default function CodexPage({
     // 2. If the node has an explicit layer defined, map it
     if (activeTermNode.layer) {
       let layerName = activeTermNode.layer;
-      if (layerName === 'biblical-patriarchs' || layerName === 'royal-bloodlines' || layerName === 'merovingian-bloodlines' || layerName === 'sumerian-kings' || layerName === 'greek-mythology' || layerName === 'ancient-civilizations') {
+      if (layerName === 'biblical-patriarchs' || layerName === 'royal-bloodlines' || layerName === 'merovingian-bloodlines' || layerName === 'sumerian-kings' || layerName === 'greek-mythology' || layerName === 'ancient-civilizations' || layerName === 'illuminati-bloodlines' || layerName === 'black-nobility') {
         if (layerName === 'biblical-patriarchs') layerName = 'Biblical Figures';
         else if (layerName === 'royal-bloodlines' || layerName === 'merovingian-bloodlines') layerName = 'Biblical Figures';
         else if (layerName === 'sumerian-kings') layerName = 'Archaeological Finds';
         else if (layerName === 'greek-mythology') layerName = 'Archaeological Finds';
         else if (layerName === 'ancient-civilizations') layerName = 'Ancient People Groups';
+        else if (layerName === 'illuminati-bloodlines' || layerName === 'black-nobility') layerName = 'The Occult';
       }
       return {
         layer: layerName,
@@ -226,12 +227,13 @@ export default function CodexPage({
       if (!parent) break;
       if (parent.layer) {
         let layerName = parent.layer;
-        if (layerName === 'biblical-patriarchs' || layerName === 'royal-bloodlines' || layerName === 'merovingian-bloodlines' || layerName === 'sumerian-kings' || layerName === 'greek-mythology' || layerName === 'ancient-civilizations') {
+        if (layerName === 'biblical-patriarchs' || layerName === 'royal-bloodlines' || layerName === 'merovingian-bloodlines' || layerName === 'sumerian-kings' || layerName === 'greek-mythology' || layerName === 'ancient-civilizations' || layerName === 'illuminati-bloodlines' || layerName === 'black-nobility') {
           if (layerName === 'biblical-patriarchs') layerName = 'Biblical Figures';
           else if (layerName === 'royal-bloodlines' || layerName === 'merovingian-bloodlines') layerName = 'Biblical Figures';
           else if (layerName === 'sumerian-kings') layerName = 'Archaeological Finds';
           else if (layerName === 'greek-mythology') layerName = 'Archaeological Finds';
           else if (layerName === 'ancient-civilizations') layerName = 'Ancient People Groups';
+          else if (layerName === 'illuminati-bloodlines' || layerName === 'black-nobility') layerName = 'The Occult';
         }
         return {
           layer: layerName,

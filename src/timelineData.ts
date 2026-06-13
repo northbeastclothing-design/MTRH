@@ -2,7 +2,7 @@ export interface TimelineItem {
   id: string;
   name: string;
   type: 'lifespan' | 'event';
-  layer: 'biblical-patriarchs' | 'biblical-events' | 'sumerian-kings' | 'greek-mythology' | 'merovingian-bloodlines' | 'royal-bloodlines' | 'enochian-lore' | 'future-prophecy' | 'secret-gov-programs' | 'ancient-civilizations' | 'alchemy-occult';
+  layer: 'biblical-patriarchs' | 'biblical-events' | 'sumerian-kings' | 'greek-mythology' | 'merovingian-bloodlines' | 'royal-bloodlines' | 'enochian-lore' | 'future-prophecy' | 'secret-gov-programs' | 'ancient-civilizations' | 'alchemy-occult' | 'illuminati-bloodlines' | 'black-nobility';
   start: number; // BCE is negative, CE is positive
   end?: number;  // Only for 'lifespan'
   description: string;
@@ -3247,6 +3247,312 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
       start: 1951,
       description: 'Robert Maxwell acquires control of Pergamon Press, building it into a global scientific publishing giant and establishing its headquarters at Headington Hill Hall in Oxford.',
       source: 'Corporate Publishing Records'
+    },
+    // ==========================================
+    // 13 ILLUMINATI BLOODLINES (NEPHILIM LINES)
+    // ==========================================
+    {
+      id: 'bloodline-rothschild',
+      name: 'Rothschild Bloodline',
+      type: 'lifespan',
+      layer: 'illuminati-bloodlines',
+      start: 1744,
+      end: 2026,
+      description: 'An international banking dynasty founded by Mayer Amschel Rothschild in Frankfurt. The family established houses across Europe, becoming the central focus of global financial and power conspiracy theories.',
+      source: 'Fritz Springmeier - Bloodlines of the Illuminati',
+      isPeopleGroup: true,
+      subLabel: 'Possible Nephilim Bloodline'
+    },
+    {
+      id: 'bloodline-rockefeller',
+      name: 'Rockefeller Bloodline',
+      type: 'lifespan',
+      layer: 'illuminati-bloodlines',
+      start: 1839,
+      end: 2026,
+      description: 'An ultra-wealthy American banking and industrial family founded by John D. Rockefeller (Standard Oil). Associated with global institutions, educational foundations, and theories of globalist governance.',
+      source: 'Fritz Springmeier - Bloodlines of the Illuminati',
+      isPeopleGroup: true,
+      subLabel: 'Possible Nephilim Bloodline'
+    },
+    {
+      id: 'bloodline-astor',
+      name: 'Astor Bloodline',
+      type: 'lifespan',
+      layer: 'illuminati-bloodlines',
+      start: 1763,
+      end: 2026,
+      description: 'Famous for John Jacob Astor, who became America\'s first multi-millionaire through the fur trade and real estate. Associated with massive land holdings, political influence, and elite secret societies.',
+      source: 'Fritz Springmeier - Bloodlines of the Illuminati',
+      isPeopleGroup: true,
+      subLabel: 'Possible Nephilim Bloodline'
+    },
+    {
+      id: 'bloodline-bundy',
+      name: 'Bundy Bloodline',
+      type: 'lifespan',
+      layer: 'illuminati-bloodlines',
+      start: 1800,
+      end: 2026,
+      description: 'An influential American family closely connected to the US government, military-industrial complex, and key intelligence circles, notably represented by national security advisor McGeorge Bundy.',
+      source: 'Fritz Springmeier - Bloodlines of the Illuminati',
+      isPeopleGroup: true,
+      subLabel: 'Possible Nephilim Bloodline'
+    },
+    {
+      id: 'bloodline-collins',
+      name: 'Collins Bloodline',
+      type: 'lifespan',
+      layer: 'illuminati-bloodlines',
+      start: 1630,
+      end: 2026,
+      description: 'An old American family dating back to the Salem witch trials. Esoterically rumored to possess ancient occult lineages and strong connections to hidden secret societies in the United States.',
+      source: 'Fritz Springmeier - Bloodlines of the Illuminati',
+      isPeopleGroup: true,
+      subLabel: 'Possible Nephilim Bloodline'
+    },
+    {
+      id: 'bloodline-dupont',
+      name: 'DuPont Bloodline',
+      type: 'lifespan',
+      layer: 'illuminati-bloodlines',
+      start: 1802,
+      end: 2026,
+      description: 'A prominent industrial dynasty that began with gunpowder manufacture and expanded into chemical dominance. Associated with massive corporate power, military contracting, and political lobbying.',
+      source: 'Fritz Springmeier - Bloodlines of the Illuminati',
+      isPeopleGroup: true,
+      subLabel: 'Possible Nephilim Bloodline'
+    },
+    {
+      id: 'bloodline-freeman',
+      name: 'Freeman Bloodline',
+      type: 'lifespan',
+      layer: 'illuminati-bloodlines',
+      start: 1700,
+      end: 2026,
+      description: 'A key family within the US political, intelligence, and legal apparatus, frequently linked to high-ranking members of the judiciary, government advisory posts, and esoteric fraternities.',
+      source: 'Fritz Springmeier - Bloodlines of the Illuminati',
+      isPeopleGroup: true,
+      subLabel: 'Possible Nephilim Bloodline'
+    },
+    {
+      id: 'bloodline-kennedy',
+      name: 'Kennedy Bloodline',
+      type: 'lifespan',
+      layer: 'illuminati-bloodlines',
+      start: 1888,
+      end: 2026,
+      description: 'An iconic American political dynasty. Despite their tragic public history, alternative theories suggest their prominence is tied to bloodline networks and the struggle for global influence.',
+      source: 'Fritz Springmeier - Bloodlines of the Illuminati',
+      isPeopleGroup: true,
+      subLabel: 'Possible Nephilim Bloodline'
+    },
+    {
+      id: 'bloodline-li',
+      name: 'Li Bloodline',
+      type: 'lifespan',
+      layer: 'illuminati-bloodlines',
+      start: 1850,
+      end: 2026,
+      description: 'A powerful Asian dynasty representing wealth and industrial power, often linked in esoteric narratives to Chinese secret societies (Triads) and international finance.',
+      source: 'Fritz Springmeier - Bloodlines of the Illuminati',
+      isPeopleGroup: true,
+      subLabel: 'Possible Nephilim Bloodline'
+    },
+    {
+      id: 'bloodline-onassis',
+      name: 'Onassis Bloodline',
+      type: 'lifespan',
+      layer: 'illuminati-bloodlines',
+      start: 1906,
+      end: 2026,
+      description: 'A shipping empire founded by Aristotle Onassis, which gained massive global influence and connected with other elite bloodlines, including the Kennedys.',
+      source: 'Fritz Springmeier - Bloodlines of the Illuminati',
+      isPeopleGroup: true,
+      subLabel: 'Possible Nephilim Bloodline'
+    },
+    {
+      id: 'bloodline-russell',
+      name: 'Russell Bloodline',
+      type: 'lifespan',
+      layer: 'illuminati-bloodlines',
+      start: 1823,
+      end: 2026,
+      description: 'Associated with the founding of the Russell Trust Association (which runs Yale\'s Skull and Bones society) and early missionary movements. Linked to opium trade wealth and political networks.',
+      source: 'Fritz Springmeier - Bloodlines of the Illuminati',
+      isPeopleGroup: true,
+      subLabel: 'Possible Nephilim Bloodline'
+    },
+    {
+      id: 'bloodline-vanduyn',
+      name: 'Van Duyn Bloodline',
+      type: 'lifespan',
+      layer: 'illuminati-bloodlines',
+      start: 1700,
+      end: 2026,
+      description: 'A family of Dutch origin linked in alternative history to banking networks, mental control experiments, and the implementation of social engineering projects.',
+      source: 'Fritz Springmeier - Bloodlines of the Illuminati',
+      isPeopleGroup: true,
+      subLabel: 'Possible Nephilim Bloodline'
+    },
+    {
+      id: 'bloodline-merovingian',
+      name: 'Merovingian Bloodline (13th Line)',
+      type: 'lifespan',
+      layer: 'illuminati-bloodlines',
+      start: 450,
+      end: 2026,
+      description: 'The ancient Frankish royal dynasty from whom the other bloodlines claim royal legitimacy. Associated in esoteric lore with the Holy Grail and direct descent from early biblical lineages.',
+      source: 'Fritz Springmeier - Bloodlines of the Illuminati',
+      isPeopleGroup: true,
+      subLabel: 'Possible Nephilim Bloodline'
+    },
+    // ==========================================
+    // 13 BLACK NOBILITY FAMILIES (VATICAN LINES)
+    // ==========================================
+    {
+      id: 'nobility-medici',
+      name: 'De Medici Bloodline',
+      type: 'lifespan',
+      layer: 'black-nobility',
+      start: 1300,
+      end: 2026,
+      description: 'The dominant Italian banking family and political dynasty of Florence that rose to fame under Cosimo de\' Medici. They produced four popes and two queens of France, wielding immense religious and financial influence.',
+      source: 'Vatican & Papal Historical Records',
+      isPeopleGroup: true,
+      subLabel: 'Possible Nephilim Bloodline'
+    },
+    {
+      id: 'nobility-farnese',
+      name: 'Farnese Bloodline',
+      type: 'lifespan',
+      layer: 'black-nobility',
+      start: 1100,
+      end: 2026,
+      description: 'An influential Italian ducal family of Parma and Rome. Notably produced Pope Paul III, who authorized the founding of the Society of Jesus (Jesuits) and initiated the Counter-Reformation.',
+      source: 'Vatican & Papal Historical Records',
+      isPeopleGroup: true,
+      subLabel: 'Possible Nephilim Bloodline'
+    },
+    {
+      id: 'nobility-massimo',
+      name: 'Massimo Bloodline',
+      type: 'lifespan',
+      layer: 'black-nobility',
+      start: 1012,
+      end: 2026,
+      description: 'One of the oldest Roman patrician families, traditionally claiming descent from the ancient Roman Fabia gens. Long-standing members of the Black Nobility, serving as high advisors in the Papal court.',
+      source: 'Vatican & Papal Historical Records',
+      isPeopleGroup: true,
+      subLabel: 'Possible Nephilim Bloodline'
+    },
+    {
+      id: 'nobility-colonna',
+      name: 'Colonna Bloodline',
+      type: 'lifespan',
+      layer: 'black-nobility',
+      start: 1000,
+      end: 2026,
+      description: 'A powerful Roman princely family that produced Pope Martin V and key military leaders. Renowned for their historic centuries-long rivalry with the Orsini family for control of Rome and the papacy.',
+      source: 'Vatican & Papal Historical Records',
+      isPeopleGroup: true,
+      subLabel: 'Possible Nephilim Bloodline'
+    },
+    {
+      id: 'nobility-pallavicini',
+      name: 'Pallavicini Bloodline',
+      type: 'lifespan',
+      layer: 'black-nobility',
+      start: 1100,
+      end: 2026,
+      description: 'An ancient Italian noble dynasty of Genoese and Lombard origin, holding massive estates and banking interests in Italy and Austria. Linked to high-ranking Vatican diplomacy and finance.',
+      source: 'Vatican & Papal Historical Records',
+      isPeopleGroup: true,
+      subLabel: 'Possible Nephilim Bloodline'
+    },
+    {
+      id: 'nobility-torlonia',
+      name: 'Torlonia Bloodline',
+      type: 'lifespan',
+      layer: 'black-nobility',
+      start: 1750,
+      end: 2026,
+      description: 'A Roman noble family of French origin that amassed spectacular wealth in the 18th century through banking, administrative control of Vatican land holdings, and monopolistic contracts.',
+      source: 'Vatican & Papal Historical Records',
+      isPeopleGroup: true,
+      subLabel: 'Possible Nephilim Bloodline'
+    },
+    {
+      id: 'nobility-saxegotha',
+      name: 'Saxe-Coburg-Gotha Bloodline',
+      type: 'lifespan',
+      layer: 'black-nobility',
+      start: 1826,
+      end: 2026,
+      description: 'A highly successful German dynastic house whose members married into and inherited multiple European thrones, establishing reign over the United Kingdom, Belgium, Portugal, and Bulgaria.',
+      source: 'European Royal Registries',
+      isPeopleGroup: true,
+      subLabel: 'Possible Nephilim Bloodline'
+    },
+    {
+      id: 'nobility-cavendish',
+      name: 'Cavendish Bloodline',
+      type: 'lifespan',
+      layer: 'black-nobility',
+      start: 1350,
+      end: 2026,
+      description: 'One of the wealthiest and most influential English aristocratic families, holding the title of Duke of Devonshire. In alternative history narratives, they are linked to the Kennedy lineage.',
+      source: 'British Peerage Records',
+      isPeopleGroup: true,
+      subLabel: 'Possible Nephilim Bloodline'
+    },
+    {
+      id: 'nobility-windsor',
+      name: 'Windsor Bloodline',
+      type: 'lifespan',
+      layer: 'black-nobility',
+      start: 1917,
+      end: 2026,
+      description: 'The official reigning house of the United Kingdom, created in 1917 by King George V renaming the British branch of Saxe-Coburg-Gotha to distance the monarchy from its German roots during World War I.',
+      source: 'British Royal Archives',
+      isPeopleGroup: true,
+      subLabel: 'Possible Nephilim Bloodline'
+    },
+    {
+      id: 'nobility-romanov',
+      name: 'Romanov Bloodline',
+      type: 'lifespan',
+      layer: 'black-nobility',
+      start: 1613,
+      end: 2026,
+      description: 'The imperial dynasty that ruled Russia for over three centuries. Renowned for their vast wealth and territorial expansion, their sudden overthrow in 1917 is a focal point of globalist conspiracy theories.',
+      source: 'Imperial Russian Archives',
+      isPeopleGroup: true,
+      subLabel: 'Possible Nephilim Bloodline'
+    },
+    {
+      id: 'nobility-habsburg',
+      name: 'Habsburg Bloodline',
+      type: 'lifespan',
+      layer: 'black-nobility',
+      start: 1000,
+      end: 2026,
+      description: 'One of the most powerful and far-reaching royal houses in European history, supplying Holy Roman Emperors, Spanish monarchs, and Austrian emperors. Famous for consolidating power through strategic intermarriage.',
+      source: 'European Royal Registries',
+      isPeopleGroup: true,
+      subLabel: 'Possible Nephilim Bloodline'
+    },
+    {
+      id: 'nobility-plantagenet',
+      name: 'Plantagenet Bloodline',
+      type: 'lifespan',
+      layer: 'black-nobility',
+      start: 1154,
+      end: 2026,
+      description: 'A French-origin royal dynasty that ruled England from the 12th to the late 15th century. They oversaw major historical turning points, including the signing of the Magna Carta and the Hundred Years\' War.',
+      source: 'English Royal Chronologies',
+      isPeopleGroup: true,
+      subLabel: 'Possible Nephilim Bloodline'
     }
   ];
 
@@ -3421,7 +3727,36 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'timeline-tribe-of-judah': { lng: 35.0998, lat: 31.5298, locationName: 'Judean Hills (Hebron, Israel)', category: 'Ancient People Groups' },
   'timeline-sumerian-civilization': { lng: 46.12, lat: 31.32, locationName: 'Ur & Eridu (Sumerian Heartland)', category: 'Ancient People Groups' },
   'timeline-edomites': { lng: 35.44, lat: 30.32, locationName: 'Mount Seir (Edomite Territory)', category: 'Ancient People Groups' },
-  'timeline-philistines': { lng: 34.50, lat: 31.66, locationName: 'Ashkelon (Philistine Pentapolis)', category: 'Ancient People Groups' }
+  'timeline-philistines': { lng: 34.50, lat: 31.66, locationName: 'Ashkelon (Philistine Pentapolis)', category: 'Ancient People Groups' },
+  
+  // 13 Illuminati Bloodlines
+  'bloodline-rothschild': { lng: 8.6872, lat: 50.1119, locationName: 'Judengasse Ancestral House (Frankfurt, Germany)', category: 'The Occult' },
+  'bloodline-rockefeller': { lng: -73.9787, lat: 40.7587, locationName: 'Rockefeller Plaza (New York City, USA)', category: 'The Occult' },
+  'bloodline-astor': { lng: -73.9856, lat: 40.7484, locationName: 'Waldorf-Astoria / Astor Estates (New York City, USA)', category: 'The Occult' },
+  'bloodline-bundy': { lng: -77.0365, lat: 38.8977, locationName: 'Bundy Family Offices (Washington D.C., USA)', category: 'The Occult' },
+  'bloodline-collins': { lng: -70.8967, lat: 42.5195, locationName: 'Collins Family Homestead (Salem, Massachusetts, USA)', category: 'The Occult' },
+  'bloodline-dupont': { lng: -75.5786, lat: 39.7707, locationName: 'DuPont Gunpowder Mills & Estates (Wilmington, Delaware, USA)', category: 'The Occult' },
+  'bloodline-freeman': { lng: -71.0589, lat: 42.3601, locationName: 'Freeman Family Estate (Boston, Massachusetts, USA)', category: 'The Occult' },
+  'bloodline-kennedy': { lng: -70.3014, lat: 41.6303, locationName: 'Kennedy Compound (Hyannis Port, Massachusetts, USA)', category: 'The Occult' },
+  'bloodline-li': { lng: 114.1601, lat: 22.2798, locationName: 'Cheung Kong Center (Hong Kong)', category: 'The Occult' },
+  'bloodline-onassis': { lng: 20.7378, lat: 38.6925, locationName: 'Skorpios Island (Ionian Sea, Greece)', category: 'The Occult' },
+  'bloodline-russell': { lng: -72.9298, lat: 41.3082, locationName: 'Skull and Bones Tomb (New Haven, Connecticut, USA)', category: 'The Occult' },
+  'bloodline-vanduyn': { lng: 4.3007, lat: 52.0705, locationName: 'Van Duyn Ancestral Estates (The Hague, Netherlands)', category: 'The Occult' },
+  'bloodline-merovingian': { lng: 3.3886, lat: 50.6056, locationName: 'Tomb of Childeric I (Tournai, Belgium)', category: 'The Occult' },
+  
+  // Black Nobility Families
+  'nobility-medici': { lng: 11.2558, lat: 43.7731, locationName: 'Medici Palace (Florence, Italy)', category: 'The Occult' },
+  'nobility-farnese': { lng: 12.4706, lat: 41.8947, locationName: 'Palazzo Farnese (Rome, Italy)', category: 'The Occult' },
+  'nobility-massimo': { lng: 12.4739, lat: 41.8972, locationName: 'Palazzo Massimo alle Colonne (Rome, Italy)', category: 'The Occult' },
+  'nobility-colonna': { lng: 12.4839, lat: 41.8986, locationName: 'Palazzo Colonna (Rome, Italy)', category: 'The Occult' },
+  'nobility-pallavicini': { lng: 12.4878, lat: 41.8986, locationName: 'Palazzo Pallavicini-Rospigliosi (Rome, Italy)', category: 'The Occult' },
+  'nobility-torlonia': { lng: 12.4797, lat: 41.8936, locationName: 'Villa Torlonia / Torlonia Banking House (Rome, Italy)', category: 'The Occult' },
+  'nobility-saxegotha': { lng: 10.7042, lat: 50.9489, locationName: 'Friedenstein Palace (Gotha, Germany)', category: 'The Occult' },
+  'nobility-cavendish': { lng: -1.6217, lat: 53.2275, locationName: 'Chatsworth House (Derbyshire, England)', category: 'The Occult' },
+  'nobility-windsor': { lng: -0.6044, lat: 51.4839, locationName: 'Windsor Castle (Berkshire, England)', category: 'The Occult' },
+  'nobility-romanov': { lng: 30.3158, lat: 59.9398, locationName: 'Winter Palace (St. Petersburg, Russia)', category: 'The Occult' },
+  'nobility-habsburg': { lng: 16.3634, lat: 48.2065, locationName: 'Hofburg Palace (Vienna, Austria)', category: 'The Occult' },
+  'nobility-plantagenet': { lng: 0.2017, lat: 47.2003, locationName: 'Fontevraud Abbey (Anjou, France)', category: 'The Occult' }
 };
 
 export interface Waypoint {

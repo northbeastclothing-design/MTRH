@@ -1980,6 +1980,7 @@ const chunk_0: any[] = [
   {
     id: 'bloodlines-genealogy',
     parentId: 'biblical-apocryphal',
+    secondaryParentIds: ['alchemy-occult'],
     name: 'Royal & Esoteric Bloodlines',
     description: 'Lineages of power tracing through the Merovingian dynasty, royal houses, and ancient genealogical lineages.'
   },
@@ -1996,6 +1997,272 @@ const chunk_0: any[] = [
     name: 'Royal Dynasties & Houses',
     description: 'Ruling noble houses of Europe, including the Carolingians, Capetians, and subsequent royal lineages of power.',
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
+  },
+  {
+    id: 'illuminati-bloodlines',
+    parentId: 'bloodlines-genealogy',
+    name: '13 Illuminati Bloodlines',
+    description: 'A shadow network of thirteen powerful family lineages popularized in alternative history and conspiracy theories, alleged to secretly steer the course of global finance, geopolitics, and religious/esoteric organizations.',
+    sources: ['Bloodlines of the Illuminati by Fritz Springmeier', 'Esoteric History Records']
+  },
+  {
+    id: 'bloodline-rothschild',
+    parentId: 'illuminati-bloodlines',
+    secondaryParentIds: ['black-nobility'],
+    name: 'Rothschild Bloodline',
+    description: 'A prominent international banking dynasty originating in Frankfurt in the late 18th century. Founded by Mayer Amschel Rothschild, the family established financial houses across Europe, serving as the cornerstone of modern central banking conspiracy theories.',
+    layer: 'illuminati-bloodlines',
+    timelineId: 'bloodline-rothschild',
+    subLabel: 'Possible Nephilim Bloodline',
+    sources: ['Bloodlines of the Illuminati by Fritz Springmeier', 'Ancestral Banking Records']
+  },
+  {
+    id: 'bloodline-rockefeller',
+    parentId: 'illuminati-bloodlines',
+    name: 'Rockefeller Bloodline',
+    description: 'An American industrial and banking dynasty founded by oil tycoon John D. Rockefeller in the 19th century. The family\'s vast philanthropic foundations and leading role in globalist institutions like the Council on Foreign Relations have made them a key subject of New World Order theories.',
+    layer: 'illuminati-bloodlines',
+    timelineId: 'bloodline-rockefeller',
+    subLabel: 'Possible Nephilim Bloodline',
+    sources: ['Bloodlines of the Illuminati by Fritz Springmeier', 'Corporate Records']
+  },
+  {
+    id: 'bloodline-astor',
+    parentId: 'illuminati-bloodlines',
+    name: 'Astor Bloodline',
+    description: 'An elite Anglo-American family founded by John Jacob Astor, who built an immense fortune in the 19th century through the fur trade and Manhattan real estate. Associated with high-ranking political positions, publishing power, and esoteric societies.',
+    layer: 'illuminati-bloodlines',
+    timelineId: 'bloodline-astor',
+    subLabel: 'Possible Nephilim Bloodline',
+    sources: ['Bloodlines of the Illuminati by Fritz Springmeier', 'Waldorf-Astoria Archives']
+  },
+  {
+    id: 'bloodline-bundy',
+    parentId: 'illuminati-bloodlines',
+    name: 'Bundy Bloodline',
+    description: 'An influential American patrician family with deep roots in Boston\'s elite circles. Closely intertwined with the US State Department, intelligence agencies, and national security posts during the Cold War era, exemplified by policy advisor McGeorge Bundy.',
+    layer: 'illuminati-bloodlines',
+    timelineId: 'bloodline-bundy',
+    subLabel: 'Possible Nephilim Bloodline',
+    sources: ['Bloodlines of the Illuminati by Fritz Springmeier', 'Cold War State Dept. Archives']
+  },
+  {
+    id: 'bloodline-collins',
+    parentId: 'illuminati-bloodlines',
+    name: 'Collins Bloodline',
+    description: 'An ancient American family with lineage tracing back to the Salem Witch Trials and colonial New England. In alternative history, the Collins family is esoterically alleged to maintain powerful occult traditions and hold leadership roles within hidden societies.',
+    layer: 'illuminati-bloodlines',
+    timelineId: 'bloodline-collins',
+    subLabel: 'Possible Nephilim Bloodline',
+    sources: ['Bloodlines of the Illuminati by Fritz Springmeier', 'New England Historical Annals']
+  },
+  {
+    id: 'bloodline-dupont',
+    parentId: 'illuminati-bloodlines',
+    name: 'DuPont Bloodline',
+    description: 'A wealthy French-American industrial dynasty founded by Éleuthère Irénée du Pont de Nemours. They achieved a monopoly on military gunpowder in the 19th century, eventually developing the world\'s largest chemical manufacturing empire.',
+    layer: 'illuminati-bloodlines',
+    timelineId: 'bloodline-dupont',
+    subLabel: 'Possible Nephilim Bloodline',
+    sources: ['Bloodlines of the Illuminati by Fritz Springmeier', 'DuPont Corporate History']
+  },
+  {
+    id: 'bloodline-freeman',
+    parentId: 'illuminati-bloodlines',
+    name: 'Freeman Bloodline',
+    description: 'A family heavily integrated into the US political, legal, and intelligence infrastructure. Members have traditionally held positions as federal judges, intelligence directors, and prominent policy advisors, frequently linked to esoteric fraternal networks.',
+    layer: 'illuminati-bloodlines',
+    timelineId: 'bloodline-freeman',
+    subLabel: 'Possible Nephilim Bloodline',
+    sources: ['Bloodlines of the Illuminati by Fritz Springmeier', 'Judicial and Congressional Records']
+  },
+  {
+    id: 'bloodline-kennedy',
+    parentId: 'illuminati-bloodlines',
+    secondaryParentIds: ['black-nobility'],
+    name: 'Kennedy Bloodline',
+    description: 'A legendary American political dynasty of Irish descent. Alternative history researchers suggest that despite their public tragedies, their rise to power and subsequent struggles were intimately linked to global bloodline negotiations.',
+    layer: 'illuminati-bloodlines',
+    timelineId: 'bloodline-kennedy',
+    subLabel: 'Possible Nephilim Bloodline',
+    sources: ['Bloodlines of the Illuminati by Fritz Springmeier', 'Hyannis Port Historical Society']
+  },
+  {
+    id: 'bloodline-li',
+    parentId: 'illuminati-bloodlines',
+    name: 'Li Bloodline',
+    description: 'A prominent East Asian family representing immense industrial wealth and political influence in Hong Kong and China. Conspiracy literature frequently links this lineage to international finance, shipping monopolies, and secret societies.',
+    layer: 'illuminati-bloodlines',
+    timelineId: 'bloodline-li',
+    subLabel: 'Possible Nephilim Bloodline',
+    sources: ['Bloodlines of the Illuminati by Fritz Springmeier', 'East Asian Economic History']
+  },
+  {
+    id: 'bloodline-onassis',
+    parentId: 'illuminati-bloodlines',
+    name: 'Onassis Bloodline',
+    description: 'A Greek shipping dynasty founded by Aristotle Onassis, who constructed one of the largest private merchant fleets in history. The family\'s alliances, including marriages with the Kennedy family, consolidated their position in global elite circles.',
+    layer: 'illuminati-bloodlines',
+    timelineId: 'bloodline-onassis',
+    subLabel: 'Possible Nephilim Bloodline',
+    sources: ['Bloodlines of the Illuminati by Fritz Springmeier', 'Greek Maritime Archives']
+  },
+  {
+    id: 'bloodline-russell',
+    parentId: 'illuminati-bloodlines',
+    name: 'Russell Bloodline',
+    description: 'An American family historically enriched by the 19th-century shipping and opium trades. Key family members founded the Russell Trust Association, the corporate entity behind Yale University\'s infamous Skull and Bones secret society.',
+    layer: 'illuminati-bloodlines',
+    timelineId: 'bloodline-russell',
+    subLabel: 'Possible Nephilim Bloodline',
+    sources: ['Bloodlines of the Illuminati by Fritz Springmeier', 'Yale Skull & Bones Archives']
+  },
+  {
+    id: 'bloodline-vanduyn',
+    parentId: 'illuminati-bloodlines',
+    name: 'Van Duyn Bloodline',
+    description: 'A Dutch family of ancient origins with prominent influence in European shipping, banking, and real estate. In conspiracy narratives, they are associated with early social engineering and control research projects.',
+    layer: 'illuminati-bloodlines',
+    timelineId: 'bloodline-vanduyn',
+    subLabel: 'Possible Nephilim Bloodline',
+    sources: ['Bloodlines of the Illuminati by Fritz Springmeier', 'Dutch Genealogical Records']
+  },
+  {
+    id: 'bloodline-merovingian',
+    parentId: 'illuminati-bloodlines',
+    name: 'Merovingian Bloodline',
+    description: 'The Salian Frankish royal dynasty whose legendary origins involve the sea beast Quinotaur. Considered by alternative genealogists to be the foundational lineage from which all other elite bloodlines claim their right to rule.',
+    layer: 'illuminati-bloodlines',
+    timelineId: 'bloodline-merovingian',
+    subLabel: 'Possible Nephilim Bloodline',
+    sources: ['Bloodlines of the Illuminati by Fritz Springmeier', 'Frankish Annals', 'Grail Lore']
+  },
+  {
+    id: 'black-nobility',
+    parentId: 'bloodlines-genealogy',
+    name: '13 Black Nobility Families',
+    description: 'A network of powerful European aristocratic and royal dynasties historically associated with the Papacy and Holy Roman Empire, commonly referred to in conspiracy theories as the Black Nobility.',
+    sources: ['Vatican & Papal Historical Records', 'European Aristocratic Genealogies']
+  },
+  {
+    id: 'nobility-medici',
+    parentId: 'black-nobility',
+    name: 'De Medici Bloodline',
+    description: 'The dominant Italian banking family and political dynasty of Florence that rose to fame in the 15th century. Producing four popes and two queens of France, they were central to Renaissance-era financing and European power structures.',
+    layer: 'black-nobility',
+    timelineId: 'nobility-medici',
+    subLabel: 'Possible Nephilim Bloodline',
+    sources: ['Vatican & Papal Historical Records', 'Medici Palace Archives']
+  },
+  {
+    id: 'nobility-farnese',
+    parentId: 'black-nobility',
+    name: 'Farnese Bloodline',
+    description: 'An influential Italian aristocratic family who ruled Parma and Piacenza. Famously produced Pope Paul III, who authorized the founding of the Jesuit Order and constructed the pentagonal Villa Farnese.',
+    layer: 'black-nobility',
+    timelineId: 'nobility-farnese',
+    subLabel: 'Possible Nephilim Bloodline',
+    sources: ['Vatican & Papal Historical Records', 'Jesuit Historical Society']
+  },
+  {
+    id: 'nobility-massimo',
+    parentId: 'black-nobility',
+    name: 'Massimo Bloodline',
+    description: 'One of the oldest noble families of Rome, traditionally claiming descent from the ancient Roman Fabia gens. Regarded in alternative history as a paramount family of the Black Nobility with deep behind-the-scenes influence in the Vatican.',
+    layer: 'black-nobility',
+    timelineId: 'nobility-massimo',
+    subLabel: 'Possible Nephilim Bloodline',
+    sources: ['Vatican & Papal Historical Records', 'Roman Patrician Registries']
+  },
+  {
+    id: 'nobility-colonna',
+    parentId: 'black-nobility',
+    name: 'Colonna Bloodline',
+    description: 'An ancient and extremely powerful Roman noble family. They produced Pope Martin V and dominated Rome\'s medieval politics, fighting a centuries-long rivalry with the Orsini family for control of the Papacy.',
+    layer: 'black-nobility',
+    timelineId: 'nobility-colonna',
+    subLabel: 'Possible Nephilim Bloodline',
+    sources: ['Vatican & Papal Historical Records', 'Colonna Palace Archives']
+  },
+  {
+    id: 'nobility-pallavicini',
+    parentId: 'black-nobility',
+    name: 'Pallavicini Bloodline',
+    description: 'An old Italian noble family of Genoese and Lombard origin, holding massive estates and banking interests. Prominent in the political, military, and financial history of Genoa, Austria, and the Vatican.',
+    layer: 'black-nobility',
+    timelineId: 'nobility-pallavicini',
+    subLabel: 'Possible Nephilim Bloodline',
+    sources: ['Vatican & Papal Historical Records', 'Pallavicini Family Archives']
+  },
+  {
+    id: 'nobility-torlonia',
+    parentId: 'black-nobility',
+    name: 'Torlonia Bloodline',
+    description: 'A Roman noble family that rose to spectacular wealth in the 18th and 19th centuries through banking, administration of Vatican estates, and monopoly concessions granted by the Papacy.',
+    layer: 'black-nobility',
+    timelineId: 'nobility-torlonia',
+    subLabel: 'Possible Nephilim Bloodline',
+    sources: ['Vatican & Papal Historical Records', 'Torlonia Banking House Archives']
+  },
+  {
+    id: 'nobility-saxegotha',
+    parentId: 'black-nobility',
+    name: 'Saxe-Coburg-Gotha Bloodline',
+    description: 'A German dynastic house whose members succeeded to several European thrones. Through strategic marriages, they inherited reigns over the United Kingdom, Belgium, Portugal, and Bulgaria, serving as the core lineage of modern European royalty.',
+    layer: 'black-nobility',
+    timelineId: 'nobility-saxegotha',
+    subLabel: 'Possible Nephilim Bloodline',
+    sources: ['European Royal Registries', 'Coburg Family Archives']
+  },
+  {
+    id: 'nobility-cavendish',
+    parentId: 'black-nobility',
+    name: 'Cavendish Bloodline',
+    description: 'A premier English aristocratic family holding the dukedom of Devonshire since 1694. Associated in conspiracy lore with the Kennedy family, representing the British counterpart of the political and genealogical network.',
+    layer: 'black-nobility',
+    timelineId: 'nobility-cavendish',
+    subLabel: 'Possible Nephilim Bloodline',
+    sources: ['British Peerage Records', 'Devonshire Estate Archives']
+  },
+  {
+    id: 'nobility-windsor',
+    parentId: 'black-nobility',
+    name: 'Windsor Bloodline',
+    description: 'The royal house of the United Kingdom, renamed in 1917 from the House of Saxe-Coburg-Gotha. They have reigned over the British Empire and Commonwealth, representing a highly visible and influential branch of European nobility.',
+    layer: 'black-nobility',
+    timelineId: 'nobility-windsor',
+    subLabel: 'Possible Nephilim Bloodline',
+    sources: ['British Royal Archives', 'Windsor Castle Historical Society']
+  },
+  {
+    id: 'nobility-romanov',
+    parentId: 'black-nobility',
+    name: 'Romanov Bloodline',
+    description: 'The imperial ruling house of Russia from 1613 until their execution and overthrow in the 1917 Bolshevik Revolution. Alternative narratives suggest their demise was part of global financial and power struggles.',
+    layer: 'black-nobility',
+    timelineId: 'nobility-romanov',
+    subLabel: 'Possible Nephilim Bloodline',
+    sources: ['Imperial Russian Archives', 'Romanov Family Association']
+  },
+  {
+    id: 'nobility-habsburg',
+    parentId: 'black-nobility',
+    name: 'Habsburg Bloodline',
+    description: 'One of the most influential royal houses of Europe, supplying Holy Roman Emperors, Spanish kings, and Austrian emperors. Famous for expanding their empire through dynastic alliances rather than conquest.',
+    layer: 'black-nobility',
+    timelineId: 'nobility-habsburg',
+    subLabel: 'Possible Nephilim Bloodline',
+    sources: ['European Royal Registries', 'Hofburg Palace Archives']
+  },
+  {
+    id: 'nobility-plantagenet',
+    parentId: 'black-nobility',
+    name: 'Plantagenet Bloodline',
+    description: 'A royal house of French origin that ruled England from 1154 to 1485. They established the foundations of English common law, signed the Magna Carta, and engaged in the Crusades and the Hundred Years\' War.',
+    layer: 'black-nobility',
+    timelineId: 'nobility-plantagenet',
+    subLabel: 'Possible Nephilim Bloodline',
+    sources: ['English Royal Chronologies', 'Fontevraud Abbey Records']
   },
   {
     id: 'sarah_damaris',

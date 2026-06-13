@@ -133,6 +133,26 @@ const ERAS_CONFIG = [
     icon: '/icons/icon-alchemy-occult.svg',
     layer: 'alchemy-occult',
     desc: 'Esoteric traditions, secret societies, alchemical pursuits, and occult figures from the Knights Templar to the modern era.'
+  },
+  {
+    id: 'illuminati-bloodlines',
+    name: '13 Illuminati Bloodlines',
+    start: 450,
+    end: 2026,
+    color: '#FF6B6B',
+    icon: '/icons/icon-illuminati-bloodlines.svg',
+    layer: 'illuminati-bloodlines',
+    desc: 'The thirteen elite family bloodlines alleged to secretly direct global banking, governments, and occult networks.'
+  },
+  {
+    id: 'black-nobility',
+    name: '13 Black Nobility Families',
+    start: 1000,
+    end: 2026,
+    color: '#C5A3FF',
+    icon: '/icons/icon-black-nobility.svg',
+    layer: 'black-nobility',
+    desc: 'The powerful European papal and royal dynasties loyal to the Vatican, historically called the Black Nobility.'
   }
 ];
 
@@ -177,7 +197,9 @@ export default function TimelinePage({
     'future-prophecy': true,
     'secret-gov-programs': true,
     'ancient-civilizations': true,
-    'alchemy-occult': true
+    'alchemy-occult': true,
+    'illuminati-bloodlines': true,
+    'black-nobility': true
   });
 
   // Hover & selection states
