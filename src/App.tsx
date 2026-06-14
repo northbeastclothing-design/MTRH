@@ -37,6 +37,8 @@ if (firebaseConfig.measurementId) {
 const ARCHAEOLOGICAL_FINDS_DATA: any[] = [];
 const MISSING_411_DATA: any[] = [];
 const CAVES_DATA: any[] = [];
+const ALIEN_ABDUCTION_DATA: any[] = [];
+const CATTLE_MUTILATION_DATA: any[] = [];
 const rawPointsAndLinesData: any[] = [];
 const ufoData1: any[] = [];
 const ufoData2: any[] = [];
@@ -121,6 +123,8 @@ const CATEGORY_DESCRIPTIONS: Record<string, string> = {
   'National Parks & Reserves': 'The intersection of vast wilderness and unexplained disappearances.',
   'Missing 411': 'Mysterious disappearances of people in national parks and wilderness areas documented by David Paulides.',
   'Cave Systems': 'USGS documented locations of caves, caverns, grottos, and sinkholes.',
+  'Alien Abductions': 'Documentation of major reported extraterrestrial abduction cases and close encounters.',
+  'Cattle Mutilations': 'Reports of unexplained livestock deaths characterized by bloodless surgical-like tissue removal and a lack of tracks.',
   'Crop Circles': 'Intricate patterns appearing in fields, often appearing overnight with no clear earthly explanation.',
   'Meteor Impact Craters': 'Confirmed impact structures on Earth created by ancient meteorite collisions, marking catastrophic cosmic encounters throughout geological history.',
   'Archaeological Finds': 'Remarkable historical excavations, lost citadels, and ancient artifacts rewriting human origin timelines.',
@@ -650,6 +654,8 @@ const processIncomingRecord = (item: any, index: number) => {
   const lowerCat = rawCategory.toLowerCase();
   let normalizedCategory = rawCategory;
   if (lowerCat.includes('cave system') || lowerCat === 'cave systems') normalizedCategory = 'Cave Systems';
+  else if (lowerCat.includes('alien abduction') || lowerCat.includes('abduction')) normalizedCategory = 'Alien Abductions';
+  else if (lowerCat.includes('cattle mutilation') || lowerCat.includes('livestock mutilation') || lowerCat.includes('mutilation')) normalizedCategory = 'Cattle Mutilations';
   else if (lowerCat.includes('enochian') || lowerCat.includes('watcher') || lowerCat.includes('angel') || lowerCat === 'enochian sites') normalizedCategory = 'Enochian Sites';
   else if (lowerCat.includes('bigfoot') || lowerCat.includes('sasquatch')) normalizedCategory = 'Bigfoot Sightings';
   else if (lowerCat.includes('giant') || lowerCat.includes('nephilim') || lowerCat.includes('giants')) normalizedCategory = 'Giants & Nephilim';
@@ -805,6 +811,8 @@ const LAYER_CONFIG: Record<string, { color: string; icon: string }> = {
   'Burial Mounds': { color: '#B3C77B', icon: '/icons/icon-burial-mounds.svg' },
   'Cave Drawings': { color: '#FFABA6', icon: '/icons/icon-cave-drawings.svg' },
   'Cave Systems': { color: '#B9BDAD', icon: '/icons/icon-caves.svg' },
+  'Alien Abductions': { color: '#C0F06E', icon: '/icons/icon-alien.svg' },
+  'Cattle Mutilations': { color: '#D59CF1', icon: '/icons/icon-cow.svg' },
   'Crop Circles': { color: '#FFF96A', icon: '/icons/icon-crop-circles.svg' },
   'D.U.M.B.\'s': { color: '#BAEAF4', icon: '/icons/icon-dumbs.svg' },
   'Ghosts & Hauntings': { color: '#BDC4FF', icon: '/icons/icon-ghosts.svg' },
@@ -929,6 +937,8 @@ function App() {
   const [archaeologyData, setArchaeologyData] = useState<any[]>([]);
   const [missing411Data, setMissing411Data] = useState<any[]>([]);
   const [cavesData, setCavesData] = useState<any[]>([]);
+  const [alienAbductionData, setAlienAbductionData] = useState<any[]>([]);
+  const [cattleMutilationData, setCattleMutilationData] = useState<any[]>([]);
   const [savedPasscode, setSavedPasscode] = useState('');
   const [approvedSubmissions, setApprovedSubmissions] = useState<any[]>([]);
   const [isLiveLoading, setIsLiveLoading] = useState(true);
@@ -945,6 +955,12 @@ function App() {
 
     if (layerName === 'Cave Systems') {
       return cavesData.length === 0;
+    }
+    if (layerName === 'Alien Abductions') {
+      return alienAbductionData.length === 0;
+    }
+    if (layerName === 'Cattle Mutilations') {
+      return cattleMutilationData.length === 0;
     }
     if (layerName === 'Missing 411') {
       return missing411Data.length === 0;
@@ -3193,12 +3209,32 @@ function App() {
         }
       }
 
+      // 4b. Alien Abductions
+      if (activeLayers['Alien Abductions'] && alienAbductionData.length === 0) {
+        try {
+          const module = await import('./alienAbductionData');
+          setAlienAbductionData(getSafeData(module.ALIEN_ABDUCTION_DATA));
+        } catch (err) {
+          console.error("Failed to load alien abductions data:", err);
+        }
+      }
+
+      // 4c. Cattle Mutilations
+      if (activeLayers['Cattle Mutilations'] && cattleMutilationData.length === 0) {
+        try {
+          const module = await import('./cattleMutilationData');
+          setCattleMutilationData(getSafeData(module.CATTLE_MUTILATION_DATA));
+        } catch (err) {
+          console.error("Failed to load cattle mutilation data:", err);
+        }
+      }
+
       // 5. Core Rabbit Hole data
       const needsRabbitHole = Object.keys(activeLayers).some(k => 
         activeLayers[k] && 
         k !== 'UFOs - War.gov' && k !== 'UFOs - Brazillian Archives' && k !== 'UFOs - Sightings' && k !== 'Secret Government Programs' &&
         k !== 'Archaeological Finds' && k !== 'Biblical Finds' &&
-        k !== 'Missing 411' && k !== 'Cave Systems'
+        k !== 'Missing 411' && k !== 'Cave Systems' && k !== 'Alien Abductions' && k !== 'Cattle Mutilations'
       );
       if (needsRabbitHole && rabbitHoleData.length === 0) {
         try {
@@ -3220,7 +3256,7 @@ function App() {
         setIsDataCompiled(false);
         const safeLocalData = getSafeData(rabbitHoleData);
         const safeUfoData = getSafeData(ufoData);
-        const combinedRawData = [...safeLocalData, ...safeUfoData, ...archaeologyData, ...missing411Data, ...cavesData];
+        const combinedRawData = [...safeLocalData, ...safeUfoData, ...archaeologyData, ...missing411Data, ...cavesData, ...alienAbductionData, ...cattleMutilationData];
         
         const initialBuffer = combinedRawData
           .map((item, idx) => processIncomingRecord(item, idx))
@@ -3310,7 +3346,7 @@ function App() {
     };
 
     compileVerifiedIntel();
-  }, [rabbitHoleData, ufoData, archaeologyData, missing411Data, cavesData]);
+  }, [rabbitHoleData, ufoData, archaeologyData, missing411Data, cavesData, alienAbductionData, cattleMutilationData]);
 
   useEffect(() => {
     if (uniqueCategories.length > 0 && !hasRandomizedRef.current) {

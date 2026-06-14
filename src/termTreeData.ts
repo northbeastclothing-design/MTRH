@@ -24240,6 +24240,20 @@ export const TERM_TREE_DATA: TermNode[] = [
     name: 'Missing 411',
     description: 'Mysterious disappearances of people in national parks and wilderness areas documented by David Paulides, characterized by strange environmental patterns, sudden weather changes, and failed canine tracks.',
     layer: 'Missing 411'
+  },
+  {
+    id: 'alien-abductions-br',
+    parentId: 'supernatural-anomalies',
+    name: 'Alien Abductions',
+    description: 'Documentation of major reported extraterrestrial abduction cases and close encounters.',
+    layer: 'Alien Abductions'
+  },
+  {
+    id: 'cattle-mutilations-br',
+    parentId: 'supernatural-anomalies',
+    name: 'Cattle Mutilations',
+    description: 'Reports of unexplained livestock deaths characterized by bloodless surgical-like tissue removal and a lack of tracks.',
+    layer: 'Cattle Mutilations'
   }
 ];
 
