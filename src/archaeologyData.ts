@@ -1,7 +1,7 @@
 export interface ArchaeologicalFind {
   id: string;
   name: string;
-  category: 'Archaeological Finds' | 'Biblical Finds' | 'Cryptid Sightings' | 'Giants & Nephilim' | 'Ancient People Groups';
+  category: 'Archaeological Finds' | 'Biblical Finds' | 'Cryptid Sightings' | 'Giants & Nephilim' | 'Ancient People Groups' | 'Rock Art & Cave Paintings' | 'Megaliths / Structures' | 'Burial Mounds';
   type: 'Point';
   coordinates: {
     lng: number;
@@ -56,7 +56,7 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
   {
     id: "archaeology-mohenjo-daro",
     name: "Mohenjo-daro Ruins",
-    category: "Archaeological Finds",
+    category: "Megaliths / Structures",
     type: "Point",
     coordinates: { lng: 68.1299, lat: 27.3292 }, // Sindh, Pakistan
     date: -2500,
@@ -68,7 +68,7 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
   {
     id: "archaeology-olmec-colossal-heads",
     name: "Olmec Colossal Heads",
-    category: "Archaeological Finds",
+    category: "Megaliths / Structures",
     type: "Point",
     coordinates: { lng: -94.0375, lat: 18.0069 }, // La Venta, Mexico
     date: -900,
@@ -92,7 +92,7 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
   {
     id: "archaeology-altamira-cave",
     name: "Cave of Altamira paintings",
-    category: "Archaeological Finds",
+    category: "Rock Art & Cave Paintings",
     type: "Point",
     coordinates: { lng: -4.1194, lat: 43.3769 }, // Santillana del Mar, Spain
     date: -18000,
@@ -128,7 +128,7 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
   {
     id: "archaeology-machu-picchu",
     name: "Lost Citadel of Machu Picchu",
-    category: "Archaeological Finds",
+    category: "Megaliths / Structures",
     type: "Point",
     coordinates: { lng: -72.5450, lat: -13.1631 }, // Machu Picchu, Peru
     date: 1450,
@@ -164,7 +164,7 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
   {
     id: "archaeology-lascaux",
     name: "Lascaux Cave Paintings",
-    category: "Archaeological Finds",
+    category: "Rock Art & Cave Paintings",
     type: "Point",
     coordinates: { lng: 1.1681, lat: 45.0538 }, // Montignac, France
     date: -15000,
@@ -176,7 +176,7 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
   {
     id: "archaeology-knossos",
     name: "Minoan Palace of Knossos",
-    category: "Archaeological Finds",
+    category: "Megaliths / Structures",
     type: "Point",
     coordinates: { lng: 25.1631, lat: 35.2978 }, // Crete, Greece
     date: -1900,
@@ -615,7 +615,7 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
   {
     id: "archaeology-mayan-copan",
     name: "Mayan Ruins of Copán & Tikal",
-    category: "Archaeological Finds",
+    category: "Megaliths / Structures",
     type: "Point",
     coordinates: { lng: -89.1411, lat: 14.8383 },
     date: -2000,
@@ -627,7 +627,7 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
   {
     id: "archaeology-aztec-tenochtitlan",
     name: "Tenochtitlan (Aztec Capital)",
-    category: "Archaeological Finds",
+    category: "Megaliths / Structures",
     type: "Point",
     coordinates: { lng: -99.1332, lat: 19.4326 },
     date: 1325,
@@ -651,7 +651,7 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
   {
     id: "archaeology-moundbuilders-cahokia",
     name: "Cahokia Mounds (Mound Builders Capital)",
-    category: "Archaeological Finds",
+    category: "Burial Mounds",
     type: "Point",
     coordinates: { lng: -90.0633, lat: 38.6539 },
     date: 1050,
@@ -663,7 +663,7 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
   {
     id: "archaeology-sumer-ur",
     name: "Ancient Ur & Eridu Ruins",
-    category: "Archaeological Finds",
+    category: "Megaliths / Structures",
     type: "Point",
     coordinates: { lng: 46.1030, lat: 30.9630 },
     date: -3800,
@@ -675,7 +675,7 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
   {
     id: "archaeology-mount-seir-petra",
     name: "Petra & Mount Seir",
-    category: "Archaeological Finds",
+    category: "Megaliths / Structures",
     type: "Point",
     coordinates: { lng: 35.4444, lat: 30.3286 },
     date: -400,
@@ -695,5 +695,18 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
     description: "The ancient seaport of Ashkelon, one of the five major cities of the Philistine Pentapolis. Excavations have uncovered extensive Bronze and Iron Age structures, including the first-ever discovered Philistine cemetery.",
     source: "Leon Levy Expedition to Ashkelon / Harvard Museum",
     images: ["https://upload.wikimedia.org/wikipedia/commons/c/ce/Restored_Canaanite_city_gate_of_Ashkelon_%2814341997262%29.jpg"]
+  },
+  {
+    id: "archaeology-kodachrome-handprints",
+    name: "Indian Cave Hand Marks - Kodachrome Basin State Park, Utah",
+    category: "Rock Art & Cave Paintings",
+    type: "Point",
+    coordinates: { lng: -111.9840, lat: 37.5218 },
+    date: -1000,
+    displayDate: "Prehistoric (Indian Cave)",
+    description: "Over 100 deep hand-shaped impressions, known as petrosomatoglyphs, pressed into the soft Entrada Sandstone of Indian Cave along the Panorama Trail. Unlike carved petroglyphs, these indentations were formed by centuries of individuals repeatedly rubbing or pressing their hands into the fragile rock, wearing down the sand grains to leave deep, smooth finger and palm grooves.",
+    source: "Utah State Parks / @freetherabbitspodcast",
+    images: ["https://www.instagram.com/p/DZK35-UDYJa/media/?size=l"],
+    socialLink: "https://www.instagram.com/p/DZK35-UDYJa/"
   }
 ];

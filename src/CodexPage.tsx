@@ -37,15 +37,15 @@ const LAYER_COLORS: Record<string, string> = {
   'Underworld Entrances': '#D3C5FB',
   'Ancient Texts': '#F6E8C1',
   'Burial Mounds': '#B3C77B',
-  'Cave Drawings': '#FFABA6',
   'Cave Systems': '#B9BDAD',
   'Alien Abductions': '#C0F06E',
   'Cattle Mutilations': '#D59CF1',
   'Crop Circles': '#FFF96A',
   "D.U.M.B.'s": '#BAEAF4',
   'Ghosts & Hauntings': '#BDC4FF',
-  'Megaliths': '#FFFBA6',
-  'Petroglyphs': '#FFCBA6',
+  'Megaliths / Structures': '#FFFBA6',
+  'Rock Art & Cave Paintings': '#FFCBA6',
+  'Geoglyphs & Earthworks': '#E5B25D',
   'National Parks & Reserves': '#9FF3BC',
   'Missing 411': '#CBDF8E',
   'Blurred on Google Maps': '#BDC4FF',
@@ -73,15 +73,15 @@ const LAYER_ICONS: Record<string, string> = {
   'Underworld Entrances': '/icons/icon-entrances-to-underworld.svg',
   'Ancient Texts': '/icons/icon-ancient-texts.svg',
   'Burial Mounds': '/icons/icon-burial-mounds.svg',
-  'Cave Drawings': '/icons/icon-cave-drawings.svg',
   'Cave Systems': '/icons/icon-caves.svg',
   'Alien Abductions': '/icons/icon-alien.svg',
   'Cattle Mutilations': '/icons/icon-cow.svg',
   'Crop Circles': '/icons/icon-crop-circles.svg',
   "D.U.M.B.'s": '/icons/icon-dumbs.svg',
   'Ghosts & Hauntings': '/icons/icon-ghosts.svg',
-  'Megaliths': '/icons/icon-megaliths.svg',
-  'Petroglyphs': '/icons/icon-petroglyphs.svg',
+  'Megaliths / Structures': '/icons/icon-megaliths.svg',
+  'Rock Art & Cave Paintings': '/icons/icon-petroglyphs.svg',
+  'Geoglyphs & Earthworks': '/icons/icon-geoglyphs.svg',
   'National Parks & Reserves': '/icons/icon-national-parks-reserves.svg',
   'Missing 411': '/icons/icon-missing-411.svg',
   'Blurred on Google Maps': '/icons/icon-blurred-on-google.svg',
@@ -393,7 +393,7 @@ export default function CodexPage({
 
   const getNodeIcon = (node: TermNode): string => {
     if (node.id === 'biblical-apocryphal') return LAYER_ICONS['Biblical Figures'];
-    if (node.id === 'megaliths-structures') return LAYER_ICONS['Megaliths'];
+    if (node.id === 'megaliths-structures') return LAYER_ICONS['Megaliths / Structures'];
     if (node.id === 'supernatural-anomalies') return LAYER_ICONS['UFOs - Sightings'];
     if (node.id === 'secret-government-programs') return LAYER_ICONS['Secret Government Programs'];
     if (node.id === 'alchemy-occult') return LAYER_ICONS['The Occult'];
@@ -405,7 +405,7 @@ export default function CodexPage({
     let parentId = node.parentId;
     while (parentId) {
       if (parentId === 'biblical-apocryphal') return LAYER_ICONS['Biblical Figures'];
-      if (parentId === 'megaliths-structures') return LAYER_ICONS['Megaliths'];
+      if (parentId === 'megaliths-structures') return LAYER_ICONS['Megaliths / Structures'];
       if (parentId === 'supernatural-anomalies') return LAYER_ICONS['UFOs - Sightings'];
       if (parentId === 'secret-government-programs') return LAYER_ICONS['Secret Government Programs'];
       if (parentId === 'alchemy-occult') return LAYER_ICONS['The Occult'];

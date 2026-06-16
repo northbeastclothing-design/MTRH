@@ -29495,5 +29495,38 @@
     "images": [
       "https://upload.wikimedia.org/wikipedia/commons/c/c3/Chaos_Monster_and_Sun_God.png"
     ]
+  },
+  {
+    "id": "anomaly-UFO-1070",
+    "name": "Jellyfish UFO Sighting - Al Taqaddum Air Base, Iraq (2017)",
+    "category": "UFOs - Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": 43.5894,
+      "lat": 33.3331
+    },
+    "date": 2017,
+    "description": "A jellyfish-shaped Unidentified Anomalous Phenomenon (UAP) captured on thermal video by a US military aerostat sensor over Al Taqaddum Air Base in Iraq in 2017. The object, featuring dangling appendages, moved silently across the installation before descending into a body of water and shooting away. While declassified reviews attribute it to balloons, the footage leaked by Jeremy Corbell has fueled intense debate over advanced non-human crafts.",
+    "source": "Declassified US Military Aerostat Footage / Jeremy Corbell Leak",
+    "images": [
+      "https://youtu.be/nb45rXZX6Yw?si=vzv_1eO3eLPB7uyf"
+    ]
+  },
+  {
+    "id": "anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-41",
+    "name": "Ica Desert Rebus Geoglyphs - Ica, Peru",
+    "category": "Megaliths / Dolmans / Petroglyphs / Geoglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lng": -75.6200,
+      "lat": -14.2200
+    },
+    "date": null,
+    "description": "A mysterious sequence of geoglyphs discovered in the Ica Desert, depicting an eye, an anchor, and a target/crosshair pattern. Unlike the larger trenches of the Nazca lines, these symbols are etched into the arid desert floor using organized rows of small pebbles. Best observed from above, their precise alignment and meaning remain an archaeological enigma.",
+    "source": "@Weird_Old_World / Drone Survey",
+    "images": [
+      "https://pbs.twimg.com/amplify_video_thumb/2063375918345641985/img/4i9uiE2uo4dQe9Fx.jpg"
+    ],
+    "socialLink": "https://x.com/Weird_Old_World/status/2063377605160513823"
   }
 ]

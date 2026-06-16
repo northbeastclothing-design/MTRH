@@ -110,13 +110,13 @@ const CATEGORY_DESCRIPTIONS: Record<string, string> = {
   'D.U.M.B.\'s': 'Deep Underground Military Bases and mysterious subterranean government facilities.',
   'Cryptid Sightings': 'Encounters with legendary creatures whose existence has yet to be scientifically proven.',
   'Giants': 'Historical and archaeological accounts of unusually large skeletal remains.',
-  'Megaliths': 'Colossal stone structures and ancient monuments with unknown origins or purposes.',
-  'Petroglyphs': 'Ancient rock carvings and rock art depicting strange figures, celestial events, or forgotten symbols.',
+  'Megaliths / Structures': 'Colossal stone circles, dolmens, standing stones, and ancient temples of unknown origin.',
+  'Geoglyphs & Earthworks': 'Massive ground drawings, desert glyphs, and ceremonial earthworks best viewed from the sky.',
+  'Rock Art & Cave Paintings': 'Ancient rock carvings, petroglyphs, and cave paintings depicting entities, celestial events, or forgotten symbols.',
   'Ancient Texts': 'Lost manuscripts, carvings, and inscriptions carrying forbidden or forgotten knowledge.',
   'Bigfoot Sightings': 'Tracking the elusive Sasquatch through forests and wilderness sightings.',
   'Blurred on Google Maps': 'Locations deliberately obscured or censored by satellite imaging providers.',
   'Burial Mounds': 'Ancient earthworks and ceremonial mounds marking the resting places of unknown civilizations.',
-  'Cave Drawings': 'Prehistoric art depicting events, entities, and astronomical phenomena.',
   'Dolmans': 'Mysterious single-chamber megalithic tombs consisting of massive upright stones.',
   'Underworld Entrances': 'Purported Entrances to the Underworld from lore, legends, and modern times.',
   'Ghosts & Hauntings': 'Areas reported to have high levels of paranormal activity and spectral apparitions.',
@@ -668,19 +668,22 @@ const processIncomingRecord = (item: any, index: number) => {
   else if (lowerCat.includes('ancient people') || lowerCat.includes('people group')) normalizedCategory = 'Ancient People Groups';
   else if (lowerCat.includes('ancient') || lowerCat.includes('text')) normalizedCategory = 'Ancient Texts';
   else if (lowerCat.includes('burial') || lowerCat.includes('mound')) normalizedCategory = 'Burial Mounds';
-  else if (lowerCat.includes('cave') || lowerCat.includes('drawing')) normalizedCategory = 'Cave Drawings';
+  else if (lowerCat.includes('cave') || lowerCat.includes('drawing')) normalizedCategory = 'Rock Art & Cave Paintings';
   else if (lowerCat.includes('megaliths / dolmans / petroglyphs / geoglyphs')) {
     const descLower = displayDescription.toLowerCase();
     const nameLower = safeName.toLowerCase();
-    if (descLower.includes('petroglyph') || descLower.includes('rock art') || nameLower.includes('rock art') || nameLower.includes('petroglyph')) {
-      normalizedCategory = 'Petroglyphs';
+    if (descLower.includes('petroglyph') || descLower.includes('rock art') || nameLower.includes('rock art') || nameLower.includes('petroglyph') || descLower.includes('cave painting') || descLower.includes('cave art')) {
+      normalizedCategory = 'Rock Art & Cave Paintings';
+    } else if (descLower.includes('geoglyph') || descLower.includes('line') || nameLower.includes('geoglyph') || nameLower.includes('line') || nameLower.includes('intaglio')) {
+      normalizedCategory = 'Geoglyphs & Earthworks';
     } else {
-      normalizedCategory = 'Megaliths';
+      normalizedCategory = 'Megaliths / Structures';
     }
   }
-  else if (lowerCat.includes('petroglyph') || lowerCat.includes('rock art')) normalizedCategory = 'Petroglyphs';
+  else if (lowerCat.includes('petroglyph') || lowerCat.includes('rock art')) normalizedCategory = 'Rock Art & Cave Paintings';
+  else if (lowerCat.includes('geoglyph') || lowerCat.includes('earthwork')) normalizedCategory = 'Geoglyphs & Earthworks';
   else if (lowerCat.includes('crop') || lowerCat.includes('circle')) normalizedCategory = 'Crop Circles';
-  else if (lowerCat.includes('megalith')) normalizedCategory = 'Megaliths';
+  else if (lowerCat.includes('megalith')) normalizedCategory = 'Megaliths / Structures';
   else if (lowerCat.includes('dumb') || lowerCat.includes('d.u.m.b')) normalizedCategory = 'D.U.M.B.\'s';
   else if (lowerCat.includes('ghost') || lowerCat.includes('haunt')) normalizedCategory = 'Ghosts & Hauntings';
   else if (lowerCat.includes('national park') || lowerCat.includes('reserve')) normalizedCategory = 'National Parks & Reserves';
@@ -699,7 +702,7 @@ const processIncomingRecord = (item: any, index: number) => {
     const lowerName = safeName.toLowerCase();
     const lowerNormalizedCat = normalizedCategory.toLowerCase();
     
-    if (lowerNormalizedCat === 'megaliths') {
+    if (lowerNormalizedCat === 'megaliths & ancient monuments') {
       if (lowerName.includes('pyramid of giza') || lowerName.includes('great pyramid')) {
         safeImages = ['https://www.wonders-of-the-world.net/Pyramids-of-Egypt/images/Description/Gizeh/Pyramides-de-Gizeh-7.jpg'];
       } else if (lowerName.includes('sphinx')) {
@@ -708,7 +711,15 @@ const processIncomingRecord = (item: any, index: number) => {
         safeImages = ['https://ferrerysaret.com/wp-content/uploads/2026/01/GobekliTepe_turquia-2.jpg'];
       } else if (lowerName.includes('moai') || lowerName.includes('easter island')) {
         safeImages = ['https://www.wonders-of-the-world.net/Statues-of-Easter-island/images/Vignettes/Photos/Statues-de-l-ile-de-Paques-004-V.jpg'];
-      } else if (lowerName.includes('nazca')) {
+      } else if (lowerName.includes('evergreen')) {
+        safeImages = ['https://www.montanamegaliths.com/uploads/6/9/2/9/69295147/evergreen-dolmen-tane-talalotu_orig.jpg'];
+      } else if (lowerName.includes('tizer')) {
+        safeImages = ['https://www.montanamegaliths.com/uploads/6/9/2/9/69295147/andrew-barker-tizer-best_orig.jpg'];
+      } else if (lowerName.includes('dolman') || lowerName.includes('dolmen')) {
+        safeImages = ['https://upload.wikimedia.org/wikipedia/commons/5/52/Poulnabrone_dolmen%2C_Ireland_-_Aug_2009.jpg'];
+      }
+    } else if (lowerNormalizedCat === 'geoglyphs & earthworks') {
+      if (lowerName.includes('nazca')) {
         safeImages = [
           'https://youtu.be/t0vEngqpk84?si=TdyO-_NxCj9CqnFl',
           'https://www.machutravelperu.com/blog/wp-content/uploads/2018/03/how-were-nazca-lines-made.jpg'
@@ -719,16 +730,10 @@ const processIncomingRecord = (item: any, index: number) => {
         safeImages = ['https://paracasbluetours.com/wp-content/uploads/2026/01/el-candelabro-paracas-noche-estrellas-misterio.webp'];
       } else if (lowerName.includes('blythe')) {
         safeImages = ['https://www.ancientartarchive.org/wp-content/uploads/ALV200217009325_Blythe_Geoglyph-scaled.jpg'];
-      } else if (lowerName.includes('evergreen')) {
-        safeImages = ['https://www.montanamegaliths.com/uploads/6/9/2/9/69295147/evergreen-dolmen-tane-talalotu_orig.jpg'];
-      } else if (lowerName.includes('tizer')) {
-        safeImages = ['https://www.montanamegaliths.com/uploads/6/9/2/9/69295147/andrew-barker-tizer-best_orig.jpg'];
       } else if (lowerName.includes('steppe')) {
         safeImages = ['https://i0.wp.com/beforeatlantis.com/wp-content/uploads/2020/08/ushtogaiskiisquareaerial-1.jpg?fit=1200%2C458&ssl=1'];
-      } else if (lowerName.includes('dolman') || lowerName.includes('dolmen')) {
-        safeImages = ['https://upload.wikimedia.org/wikipedia/commons/5/52/Poulnabrone_dolmen%2C_Ireland_-_Aug_2009.jpg'];
       }
-    } else if (lowerNormalizedCat === 'petroglyphs') {
+    } else if (lowerNormalizedCat === 'rock art & cave paintings') {
       if (lowerName.includes('ferganchick')) {
         safeImages = ['https://www.historycolorado.org/sites/default/files/media/images/2018/5dt355.jpg'];
       }
@@ -809,15 +814,15 @@ const LAYER_CONFIG: Record<string, { color: string; icon: string }> = {
   'Underworld Entrances': { color: '#D3C5FB', icon: '/icons/icon-entrances-to-underworld.svg' },
   'Ancient Texts': { color: '#F6E8C1', icon: '/icons/icon-ancient-texts.svg' },
   'Burial Mounds': { color: '#B3C77B', icon: '/icons/icon-burial-mounds.svg' },
-  'Cave Drawings': { color: '#FFABA6', icon: '/icons/icon-cave-drawings.svg' },
   'Cave Systems': { color: '#B9BDAD', icon: '/icons/icon-caves.svg' },
   'Alien Abductions': { color: '#C0F06E', icon: '/icons/icon-alien.svg' },
   'Cattle Mutilations': { color: '#D59CF1', icon: '/icons/icon-cow.svg' },
   'Crop Circles': { color: '#FFF96A', icon: '/icons/icon-crop-circles.svg' },
   'D.U.M.B.\'s': { color: '#BAEAF4', icon: '/icons/icon-dumbs.svg' },
   'Ghosts & Hauntings': { color: '#BDC4FF', icon: '/icons/icon-ghosts.svg' },
-  'Megaliths': { color: '#FFFBA6', icon: '/icons/icon-megaliths.svg' },
-  'Petroglyphs': { color: '#FFCBA6', icon: '/icons/icon-petroglyphs.svg' },
+  'Megaliths / Structures': { color: '#FFFBA6', icon: '/icons/icon-megaliths.svg' },
+  'Geoglyphs & Earthworks': { color: '#E5B25D', icon: '/icons/icon-geoglyphs.svg' },
+  'Rock Art & Cave Paintings': { color: '#FFCBA6', icon: '/icons/icon-petroglyphs.svg' },
   'National Parks & Reserves': { color: '#9FF3BC', icon: '/icons/icon-national-parks-reserves.svg' },
   'Missing 411': { color: '#CBDF8E', icon: '/icons/icon-missing-411.svg' },
   'Blurred on Google Maps': { color: '#BDC4FF', icon: '/icons/icon-blurred-on-google.svg' },
@@ -3179,7 +3184,13 @@ function App() {
       }
 
       // 2. Archaeology Finds & Biblical Finds
-      const hasArchaeologyActive = activeLayers['Archaeological Finds'] || activeLayers['Biblical Finds'];
+      const hasArchaeologyActive = 
+        activeLayers['Archaeological Finds'] || 
+        activeLayers['Biblical Finds'] ||
+        activeLayers['Rock Art & Cave Paintings'] ||
+        activeLayers['Megaliths / Structures'] ||
+        activeLayers['Geoglyphs & Earthworks'] ||
+        activeLayers['Burial Mounds'];
       if (hasArchaeologyActive && archaeologyData.length === 0) {
         try {
           const module = await import('./archaeologyData');
@@ -3751,10 +3762,10 @@ function App() {
 
       const iconsToLoad = [
         'ancient-texts', 'bigfoot-sightings', 'blurred-on-google', 'burial-mounds',
-        'cave-drawings', 'crop-circles', 'cryptid-sightings', 'Megaliths', 'dumbs',
+        'crop-circles', 'cryptid-sightings', 'Megaliths', 'dumbs',
         'entrances-to-underworld', 'ghosts', 'giants', 'megaliths',
         'national-parks-reserves', 'ufo-sightings', 'map-pin', 'petroglyphs',
-        'meteors', 'ley-lines', 'archaeological-finds', 'biblical-finds'
+        'meteors', 'ley-lines', 'archaeological-finds', 'biblical-finds', 'geoglyphs'
       ];
       
       let loadedCount = 0;
@@ -6090,49 +6101,64 @@ function App() {
                                         );
                                       })}
                                       {locationsInLayer.length > maxVisible && (
-                                        <div style={{ padding: '8px 12px', fontSize: '10px', color: theme.textDim, fontStyle: 'italic', borderTop: `1px solid ${theme.borderLight}`, marginTop: '4px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                                        <div style={{ padding: '8px 12px', fontSize: '10px', color: theme.textDim, fontStyle: 'italic', borderTop: `1px solid ${theme.borderLight}`, marginTop: '4px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
                                           <div>
                                             Showing first {maxVisible} of {locationsInLayer.length} results.
                                           </div>
-                                          <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+                                          <div style={{ display: 'flex', gap: '8px', alignItems: 'center', flexWrap: 'wrap' }}>
                                             <button 
                                               onClick={(e) => {
                                                 e.stopPropagation();
                                                 setVisibleCounts(p => ({ ...p, [layerName]: (p[layerName] || 100) + 100 }));
                                               }}
                                               style={{
-                                                background: 'none',
+                                                height: '22px',
+                                                display: 'inline-flex',
+                                                alignItems: 'center',
+                                                fontSize: '9px',
+                                                fontWeight: '700',
+                                                padding: '0 10px',
+                                                borderRadius: '11px',
+                                                background: layerColors[layerName] || '#b6a6ff',
                                                 border: 'none',
-                                                color: '#b6a6ff',
-                                                fontSize: '10px',
-                                                fontWeight: 'bold',
+                                                color: '#000000',
                                                 cursor: 'pointer',
-                                                padding: '2px 0',
+                                                textTransform: 'uppercase',
+                                                letterSpacing: '0.6px',
                                                 fontFamily: '"Space Mono", monospace',
-                                                textDecoration: 'underline'
+                                                fontStyle: 'normal',
+                                                transition: 'transform 0.1s ease, box-shadow 0.1s ease',
                                               }}
+                                              className="interactive-tag-pill"
                                             >
-                                              LOAD MORE (+100)
+                                              Load More
                                             </button>
-                                            <span style={{ color: theme.borderLight }}>|</span>
                                             <button 
                                               onClick={(e) => {
                                                 e.stopPropagation();
                                                 setVisibleCounts(p => ({ ...p, [layerName]: locationsInLayer.length }));
                                               }}
                                               style={{
-                                                background: 'none',
+                                                height: '22px',
+                                                display: 'inline-flex',
+                                                alignItems: 'center',
+                                                fontSize: '9px',
+                                                fontWeight: '700',
+                                                padding: '0 10px',
+                                                borderRadius: '11px',
+                                                background: layerColors[layerName] || '#b6a6ff',
                                                 border: 'none',
-                                                color: '#b6a6ff',
-                                                fontSize: '10px',
-                                                fontWeight: 'bold',
+                                                color: '#000000',
                                                 cursor: 'pointer',
-                                                padding: '2px 0',
+                                                textTransform: 'uppercase',
+                                                letterSpacing: '0.6px',
                                                 fontFamily: '"Space Mono", monospace',
-                                                textDecoration: 'underline'
+                                                fontStyle: 'normal',
+                                                transition: 'transform 0.1s ease, box-shadow 0.1s ease',
                                               }}
+                                              className="interactive-tag-pill"
                                             >
-                                              LOAD ALL
+                                              Load All
                                             </button>
                                           </div>
                                         </div>
