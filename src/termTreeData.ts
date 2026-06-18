@@ -21096,6 +21096,237 @@ const chunk_6: any[] = [
     description: 'The alternative history theory asserting that ancient accounts of \'dragons\' across various continents were first-hand encounters with surviving dinosaurs. Proponents highlight petroglyphs, ancient temple carvings (such as the Ta Prohm stegosaur), and historical logs of reptilian monsters written long before the word \'dinosaur\' was coined in 1841.',
     sources: ['The Great Dinosaur Mystery and the Bible', 'Historical Chronicles of Slain Serpents'],
     relatedIds: ['dragons-br', 'behemoth-dinosaur']
+  },
+  {
+    id: 'fae-elves',
+    parentId: 'fae',
+    name: 'Elves',
+    description: 'Powerful, semi-divine beings of Norse and Germanic mythology. Historically associated with magic, physical beauty, and illnesses like "elf-shot," they reside in Alfheim under the rule of the god Freyr.',
+    sources: ['Prose Edda', 'Norse Sagas', 'Germanic Folklore']
+  },
+  {
+    id: 'fae-pixies',
+    parentId: 'fae',
+    name: 'Pixies',
+    description: 'High-spirited, diminutive fae from Celtic folklore, particularly Devon and Cornwall. Often described as green-clad pranksters who lead travelers astray (being "pixy-led") and cause domestic mischief.',
+    sources: ['Cornish Folk Tales', 'Devonshire Lore']
+  },
+  {
+    id: 'fae-brownies',
+    parentId: 'fae',
+    name: 'Brownies / Hobgoblins',
+    description: 'Household spirits from Scottish and English folklore who perform domestic chores at night in exchange for small gifts of food, particularly milk or cream. Insulting or overpaying them causes them to leave or become malevolent hobgoblins.',
+    sources: ['Scottish Folklore Databases', 'English Folk Beliefs']
+  },
+  {
+    id: 'fae-leprechauns',
+    parentId: 'fae',
+    name: 'Leprechauns',
+    description: 'A type of solitary fae in Irish folklore, typically depicted as shoemakers who guard hidden pots of gold at the end of rainbows. Rooted in the ancient luchorpán (small body) legends.',
+    sources: ['Irish Mythology', 'Keating\'s History of Ireland']
+  },
+  {
+    id: 'fae-banshee',
+    parentId: 'fae',
+    name: 'Banshee (Bean Sídhe)',
+    description: 'A female spirit in Irish mythology whose wailing, high-pitched scream warns of an imminent death in a family. Described as a messenger from the Otherworld (the Sidhe mounds).',
+    sources: ['Irish Folk Oral History', 'Celtic Death Lore']
+  },
+  {
+    id: 'fae-selkies',
+    parentId: 'fae',
+    name: 'Selkies',
+    description: 'Mythological seal-people from Scottish, Shetland, and Icelandic folklore who can shed their seal skins to walk on land as humans. If a human steals a selkie\'s skin, they can force the selkie to marry them.',
+    sources: ['Orkney Folk Tales', 'Shetland Oral History']
+  },
+  {
+    id: 'fae-pooka',
+    parentId: 'fae',
+    name: 'Puck / Pooka',
+    description: 'A shape-shifting, mischievous fae from Celtic (Irish and Welsh) folklore. Often taking the form of a wild black horse, eagle, or goat, the Pooka takes travelers on wild, terrifying night rides.',
+    sources: ['Irish Folk Beliefs', 'Welsh Mabinogion']
+  },
+  {
+    id: 'fae-changelings',
+    parentId: 'fae',
+    name: 'Changelings',
+    description: 'Folklore of a faerie child left in place of a stolen human infant. Historically used to explain childhood physical anomalies or developmental delays, the legend highlights the traditional fear of fae abductions.',
+    sources: ['Medieval Folk Records', 'Grimms\' Fairy Tales']
+  },
+  {
+    id: 'fae-tuatha-de-danann',
+    parentId: 'fae',
+    name: 'Tuatha Dé Danann (Aos Sí)',
+    description: 'The "People of the Goddess Danu"—a supernatural race of god-like beings in Irish mythology. After losing Ireland to the Milesians, they retreated into the hollow hills (mounds) and became the Sidhe/faerie folk.',
+    sources: ['Lebor Gabála Érenn (Book of Invasions)', 'Annals of the Four Masters'],
+    relatedIds: ['mounds']
+  },
+  {
+    id: 'fae-nymphs',
+    parentId: 'fae',
+    name: 'Nymphs',
+    description: 'Minor nature goddesses of Greek and Roman mythology, animating forests (dryads), fresh water (naiads), and mountains (oreads). In esoteric traditions, they are viewed as nature elementals.',
+    sources: ['Homeric Hymns', 'Metamorphoses (Ovid)']
+  },
+  {
+    id: 'fae-sylphs-undines',
+    parentId: 'fae',
+    name: 'Sylphs & Undines',
+    description: 'Elementals of air (sylphs) and water (undines) popularized by Swiss alchemist Paracelsus. In hermetic and occult traditions, they are viewed as spiritual intelligences representing the elements of nature.',
+    sources: ['Liber de Nymphis (Paracelsus)', 'Occult Philosophy (Agrippa)'],
+    relatedIds: ['alchemy']
+  },
+  {
+    id: 'philosophers-br',
+    parentId: 'esoteric-traditions',
+    name: 'Philosophers & Sages',
+    description: 'Historical thinkers, mystics, and scholars whose works shaped global metaphysics, ethics, and esoteric understanding of the cosmos.',
+    relatedIds: ['socrates-philosopher', 'plato-philosopher', 'aristotle-philosopher', 'pythagoras-philosopher', 'hermes-trismegistus-philosopher', 'francis-bacon-philosopher', 'manly-p-hall-philosopher']
+  },
+  {
+    id: 'socrates-philosopher',
+    parentId: 'philosophers-br',
+    name: 'Socrates',
+    description: 'Classical Greek philosopher credited as one of the founders of Western philosophy. He taught through the Socratic method of dialogue and questioning, ultimately executed by hemlock in Athens for impiety and corrupting the youth.',
+    mapFeatureId: 'anomaly-Philosophers-Socrates',
+    timelineId: 'socrates-lifespan',
+    sources: ['Plato\'s Dialogues', 'Xenophon\'s Memorabilia']
+  },
+  {
+    id: 'plato-philosopher',
+    parentId: 'philosophers-br',
+    name: 'Plato',
+    description: 'Greek philosopher, student of Socrates, and founder of the Academy. He authored dialogues on metaphysics, politics, and the soul. In esoteric research, Plato is famous for documenting the legend of Atlantis in Timaeus and Critias.',
+    mapFeatureId: 'anomaly-Philosophers-Plato',
+    timelineId: 'plato-lifespan',
+    relatedIds: ['atlantis-lost'],
+    sources: ['Timaeus (Plato)', 'Critias (Plato)', 'The Republic']
+  },
+  {
+    id: 'aristotle-philosopher',
+    parentId: 'philosophers-br',
+    name: 'Aristotle',
+    description: 'Polymath and philosopher of classical Greece, student of Plato, and tutor to Alexander the Great. He established the Lyceum and wrote extensively on physics, biology, metaphysics, and logic, shaping medieval scholasticism.',
+    mapFeatureId: 'anomaly-Philosophers-Aristotle',
+    timelineId: 'aristotle-lifespan',
+    sources: ['Metaphysics (Aristotle)', 'Nicomachean Ethics']
+  },
+  {
+    id: 'pythagoras-philosopher',
+    parentId: 'philosophers-br',
+    name: 'Pythagoras',
+    description: 'Ionian Greek philosopher and founder of the Pythagorean brotherhood in Croton. Beyond mathematics, he taught the transmigration of souls (reincarnation), the "harmony of the spheres" (cosmic acoustics), and sacred geometry.',
+    mapFeatureId: 'anomaly-Philosophers-Pythagoras',
+    timelineId: 'pythagoras-lifespan',
+    sources: ['Pythagorean Fragments', 'Lives of Eminent Philosophers (Diogenes Laërtius)']
+  },
+  {
+    id: 'hermes-trismegistus-philosopher',
+    parentId: 'philosophers-br',
+    name: 'Hermes Trismegistus',
+    description: 'The legendary syncretic figure combining the Greek god Hermes and the Egyptian god Thoth. Revered as the author of the Hermetica, he is the foundational patron of Hermeticism, alchemy, and astrology, famously associated with the Emerald Tablet.',
+    mapFeatureId: 'anomaly-Philosophers-Hermes',
+    relatedIds: ['alchemy', 'ouroboros-esoteric'],
+    sources: ['Corpus Hermeticum', 'The Emerald Tablet']
+  },
+  {
+    id: 'francis-bacon-philosopher',
+    parentId: 'philosophers-br',
+    name: 'Francis Bacon',
+    description: 'English philosopher, statesman, and pioneer of the scientific method. In alternative history, Bacon is viewed as a high-ranking Rosicrucian or Freemason, the true author behind Shakespeare\'s plays, and the visionary of a "New Atlantis" (America) established as a utopian scientific empire.',
+    mapFeatureId: 'anomaly-Philosophers-Bacon',
+    timelineId: 'francis-bacon-lifespan',
+    relatedIds: ['rosicrucians', 'freemasonry', 'atlantis-lost'],
+    sources: ['Novum Organum', 'The New Atlantis', 'Baconian Authorship Studies']
+  },
+  {
+    id: 'manly-p-hall-philosopher',
+    parentId: 'philosophers-br',
+    name: 'Manly P. Hall',
+    description: 'Canadian-born author and mystic who founded the Philosophical Research Society in Los Angeles. He is famous for publishing *The Secret Teachings of All Ages*, an encyclopedic outline of Hermetic, Kabbalistic, and Rosicrucian symbolic philosophy.',
+    mapFeatureId: 'anomaly-Philosophers-Hall',
+    timelineId: 'manly-p-hall-lifespan',
+    sources: ['The Secret Teachings of All Ages (1928)', 'The Secret Destiny of America']
+  },
+  {
+    id: 'hinduism',
+    parentId: 'esoteric-traditions',
+    name: 'Hinduism',
+    description: 'One of the world\'s oldest major spiritual traditions, characterized by a diverse array of philosophies, rituals, and cosmologies (including karma, dharma, and samsara) centered around the Vedas and Upanishads.',
+    relatedIds: ['vritra-vedic', 'buddhism'],
+    timelineId: 'hinduism-origins',
+    mapFeatureId: 'anomaly-Religions-Hinduism',
+    sources: ['The Vedas', 'The Upanishads', 'Bhagavad Gita']
+  },
+  {
+    id: 'judaism',
+    parentId: 'esoteric-traditions',
+    name: 'Judaism',
+    description: 'Monotheistic Abrahamic religion based on the Torah, prophets, and rabbinic literature. Its mystical branch, Kabbalah, deals with the Tree of Life (Sefirot), divine emanations, and Hebrew letter mysticism.',
+    relatedIds: ['kabbalah', 'leviathan-biblical', 'behemoth-dinosaur', 'christianity', 'islam'],
+    timelineId: 'judaism-origins',
+    mapFeatureId: 'anomaly-Religions-Judaism',
+    sources: ['Torah / Tanakh', 'Talmud', 'Zohar']
+  },
+  {
+    id: 'christianity',
+    parentId: 'esoteric-traditions',
+    name: 'Christianity',
+    description: 'Abrahamic religion based on the life, death, and resurrection of Jesus Christ. While historically exoteric, it contains deep esoteric and mystical branches (Christian Gnosticism, Hesychasm, Christian Hermeticism).',
+    relatedIds: ['gnosticism', 'judaism', 'islam'],
+    timelineId: 'christianity-origins',
+    mapFeatureId: 'anomaly-Religions-Christianity',
+    sources: ['New Testament', 'Apocryphal Gospels', 'Philokalia']
+  },
+  {
+    id: 'islam',
+    parentId: 'esoteric-traditions',
+    name: 'Islam',
+    description: 'Monotheistic Abrahamic religion revealed through the Prophet Muhammad. Its mystical dimension, Sufism, focuses on the direct experiential union with God through meditation, chanting (dhikr), and internal purification.',
+    relatedIds: ['sufism', 'judaism', 'christianity'],
+    timelineId: 'islam-origins',
+    mapFeatureId: 'anomaly-Religions-Islam',
+    sources: ['Quran', 'Hadith', 'Masnavi (Rumi)']
+  },
+  {
+    id: 'zoroastrianism',
+    parentId: 'esoteric-traditions',
+    name: 'Zoroastrianism',
+    description: 'An ancient Persian monotheistic/dualistic religion founded by the prophet Zoroaster (Zarathustra), focusing on the cosmic battle between Ahura Mazda (light/truth) and Angra Mainyu (darkness/chaos).',
+    relatedIds: ['esoteric-traditions'],
+    timelineId: 'zoroastrianism-origins',
+    mapFeatureId: 'anomaly-Religions-Zoroastrianism',
+    sources: ['Avesta', 'Gathas']
+  },
+  {
+    id: 'shinto',
+    parentId: 'esoteric-traditions',
+    name: 'Shinto',
+    description: 'The indigenous animist spiritual tradition of Japan, centered on the worship of Kami (spirits or deities inhabiting nature) and sacred purifications.',
+    relatedIds: ['ryujin-japanese'],
+    timelineId: 'shinto-origins',
+    mapFeatureId: 'anomaly-Religions-Shinto',
+    sources: ['Kojiki', 'Nihon Shoki']
+  },
+  {
+    id: 'gnosticism',
+    parentId: 'esoteric-traditions',
+    name: 'Gnosticism',
+    description: 'A diverse collection of ancient esoteric religious movements emphasizing personal intuitive knowledge (Gnosis) over orthodox faith, asserting the material world was created by an inferior deity (Demurge/Yaldabaoth).',
+    relatedIds: ['christianity', 'alchemy'],
+    timelineId: 'gnosticism-origins',
+    mapFeatureId: 'anomaly-Religions-Gnosticism',
+    sources: ['Nag Hammadi Library', 'Pistis Sophia']
+  },
+  {
+    id: 'rosicrucianism',
+    parentId: 'esoteric-traditions',
+    name: 'Rosicrucianism',
+    description: 'A cultural and spiritual movement of the early 17th century, announced by manifestos proclaiming a secret esoteric order of Christian kabbalists and alchemists seeking a global reformation.',
+    relatedIds: ['alchemy', 'freemasonry', 'francis-bacon-philosopher'],
+    timelineId: 'rosicrucianism-origins',
+    mapFeatureId: 'anomaly-Religions-Rosicrucianism',
+    sources: ['Fama Fraternitatis (1614)', 'Confessio Fraternitatis', 'Chymical Wedding of Christian Rosenkreutz']
   }
 ];
 

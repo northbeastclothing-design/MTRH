@@ -29570,5 +29570,215 @@
     "description": "In 1928, Peruvian archaeologist Julio Tello discovered a massive graveyard containing hundreds of individuals with severely elongated skulls. While mainstream science attributes this to artificial cranial deformation (cranial binding), alternative researchers point to DNA testing showing mitochondrial DNA with mutations unknown in any human, primate, or animal, alongside physiological differences such as a single parietal plate instead of two, suggesting a non-human origin or a hybrid Nephilim lineage.",
     "source": "Julio Tello Excavation Records / Paracas History Museum",
     "images": []
+  },
+  {
+    "id": "anomaly-Philosophers-Socrates",
+    "name": "Socrates (Athens, Greece)",
+    "category": "The Occult",
+    "type": "Point",
+    "coordinates": {
+      "lng": 23.7275,
+      "lat": 37.9838
+    },
+    "date": -470,
+    "description": "The birthplace and home of Socrates, classical Greek philosopher credited as one of the founders of Western philosophy. Socrates taught through the Socratic method of dialogue and questioning, ultimately executed by hemlock in Athens for impiety and corrupting the youth.",
+    "source": "Plato's Dialogues / Xenophon's Memorabilia",
+    "images": []
+  },
+  {
+    "id": "anomaly-Philosophers-Plato",
+    "name": "Plato's Academy (Athens, Greece)",
+    "category": "The Occult",
+    "type": "Point",
+    "coordinates": {
+      "lng": 23.7144,
+      "lat": 37.9942
+    },
+    "date": -387,
+    "description": "Plato's Academy, founded by Plato in Athens. He authored dialogues on metaphysics, politics, and the soul. In esoteric research, Plato is famous for documenting the legend of Atlantis in Timaeus and Critias.",
+    "source": "Timaeus and Critias (Plato) / Academy Historical Records",
+    "images": []
+  },
+  {
+    "id": "anomaly-Philosophers-Aristotle",
+    "name": "Aristotle's Lyceum (Athens, Greece)",
+    "category": "The Occult",
+    "type": "Point",
+    "coordinates": {
+      "lng": 23.7441,
+      "lat": 37.9731
+    },
+    "date": -335,
+    "description": "Aristotle's Lyceum, founded by Aristotle in Athens. A student of Plato and tutor to Alexander the Great, Aristotle established a temple of learning that shaped medieval scholasticism and logic.",
+    "source": "Metaphysics (Aristotle) / Lyceum Excavation Archives",
+    "images": []
+  },
+  {
+    "id": "anomaly-Philosophers-Pythagoras",
+    "name": "Pythagoras' School (Crotone, Italy)",
+    "category": "The Occult",
+    "type": "Point",
+    "coordinates": {
+      "lng": 17.1292,
+      "lat": 39.0814
+    },
+    "date": -530,
+    "description": "The school and brotherhood founded by Pythagoras in Croton. Beyond mathematics, he taught the transmigration of souls (reincarnation), the 'harmony of the spheres' (cosmic acoustics), and sacred geometry.",
+    "source": "Pythagorean Fragments / Historical Chronicles",
+    "images": []
+  },
+  {
+    "id": "anomaly-Philosophers-Hermes",
+    "name": "Hermopolis Magna (Thoth & Hermes Temple, Egypt)",
+    "category": "The Occult",
+    "type": "Point",
+    "coordinates": {
+      "lng": 30.8025,
+      "lat": 27.7808
+    },
+    "date": -1500,
+    "description": "Hermopolis Magna, the center of worship for the Egyptian god Thoth, later syncretized as Hermes Trismegistus. It is the legendary origin of the Hermetica and alchemical philosophy.",
+    "source": "Corpus Hermeticum / Archaeological Excavation Reports",
+    "images": []
+  },
+  {
+    "id": "anomaly-Philosophers-Bacon",
+    "name": "Francis Bacon's Tomb (St Albans, UK)",
+    "category": "The Occult",
+    "type": "Point",
+    "coordinates": {
+      "lng": -0.3582,
+      "lat": 51.7533
+    },
+    "date": 1626,
+    "description": "Sir Francis Bacon's burial site at St Michael's Church. Often viewed as a high-ranking Rosicrucian or Freemason, Bacon is theorized as the true author of Shakespeare's plays and the mastermind behind the colonization of America as a 'New Atlantis'.",
+    "source": "Novum Organum / Rosicrucian Manifestos",
+    "images": []
+  },
+  {
+    "id": "anomaly-Philosophers-Hall",
+    "name": "Philosophical Research Society (Manly P. Hall, Los Angeles)",
+    "category": "The Occult",
+    "type": "Point",
+    "coordinates": {
+      "lng": -118.2831,
+      "lat": 34.1164
+    },
+    "date": 1934,
+    "description": "The Philosophical Research Society in Los Angeles, founded by Manly P. Hall to promote the study of mythology, metaphysics, and esoteric philosophy. Hall is famous for compiling 'The Secret Teachings of All Ages'.",
+    "source": "Philosophical Research Society Archives",
+    "images": []
+  },
+  {
+    "id": "anomaly-Religions-Hinduism",
+    "name": "Indus Valley Civilization (Origins of Vedic Hinduism)",
+    "category": "The Occult",
+    "type": "Point",
+    "coordinates": {
+      "lng": 68.1256,
+      "lat": 27.3292
+    },
+    "date": -2500,
+    "description": "Mohenjo-daro, a major center of the Indus Valley Civilization. In alternative history and Vedic research, it is linked to the composition of the earliest Vedas and ancient advanced civilizations.",
+    "source": "The Vedas / Archaeological Excavations of Harappa & Mohenjo-daro",
+    "images": []
+  },
+  {
+    "id": "anomaly-Religions-Judaism",
+    "name": "Jerusalem Temple Mount (Judaism Center)",
+    "category": "The Occult",
+    "type": "Point",
+    "coordinates": {
+      "lng": 35.2356,
+      "lat": 31.7781
+    },
+    "date": -1000,
+    "description": "The Temple Mount in Jerusalem, the spiritual center of Judaism. It was the site of the First and Second Temples, holding deep scriptural, historical, and esoteric significance (Kabbalah).",
+    "source": "Hebrew Bible / Historical Chronicles",
+    "images": []
+  },
+  {
+    "id": "anomaly-Religions-Christianity",
+    "name": "Nazareth & Jerusalem (Christianity Birthplace)",
+    "category": "The Occult",
+    "type": "Point",
+    "coordinates": {
+      "lng": 35.2297,
+      "lat": 31.7784
+    },
+    "date": 33,
+    "description": "Jerusalem and Nazareth, the birthplace of Christianity. While historically exoteric, it contains deep esoteric and mystical branches (Christian Gnosticism, Hesychasm, Christian Hermeticism).",
+    "source": "New Testament / Gnostic Gospels / Historical Studies",
+    "images": []
+  },
+  {
+    "id": "anomaly-Religions-Islam",
+    "name": "Kaaba in Mecca (Islamic Sanctuary)",
+    "category": "The Occult",
+    "type": "Point",
+    "coordinates": {
+      "lng": 39.8262,
+      "lat": 21.4225
+    },
+    "date": 622,
+    "description": "The Kaaba in Mecca, the focal sanctuary of Islam. Symbolizing the center of the world in Islamic geography, it hosts the pilgrimage (Hajj) and is rich in Sufi mystical interpretations.",
+    "source": "The Quran / Sufi Metaphysical Texts",
+    "images": []
+  },
+  {
+    "id": "anomaly-Religions-Zoroastrianism",
+    "name": "Yazd Fire Temple (Zoroastrian Holy Fire, Yazd, Iran)",
+    "category": "The Occult",
+    "type": "Point",
+    "coordinates": {
+      "lng": 54.3733,
+      "lat": 31.8814
+    },
+    "date": -1000,
+    "description": "The Yazd Fire Temple, which houses the Atash Behram, a holy fire kept burning continuously since 470 AD. Yazd remains the historical sanctuary of Zoroastrianism in Persia.",
+    "source": "The Avesta / Yazd Heritage Records",
+    "images": []
+  },
+  {
+    "id": "anomaly-Religions-Shinto",
+    "name": "Ise Grand Shrine (Shinto Center, Japan)",
+    "category": "The Occult",
+    "type": "Point",
+    "coordinates": {
+      "lng": 136.7258,
+      "lat": 34.4550
+    },
+    "date": -4,
+    "description": "Ise Grand Shrine, Japan's most sacred Shinto sanctuary, dedicated to the sun goddess Amaterasu. The shrine has been rebuilt every 20 years in accordance with Shinto renewal traditions.",
+    "source": "Kojiki / Ise Shrine Records",
+    "images": []
+  },
+  {
+    "id": "anomaly-Religions-Gnosticism",
+    "name": "Nag Hammadi (Discovery of Gnostic Gospels, Egypt)",
+    "category": "The Occult",
+    "type": "Point",
+    "coordinates": {
+      "lng": 32.2356,
+      "lat": 26.0528
+    },
+    "date": 340,
+    "description": "The cliffs near Nag Hammadi, where local farmers discovered a jar containing thirteen leather-bound papyrus codices in 1945. These Gnostic texts detail early esoteric Christian teachings rejected by orthodoxy.",
+    "source": "Nag Hammadi Library / Gnostic Gospels Research",
+    "images": []
+  },
+  {
+    "id": "anomaly-Religions-Rosicrucianism",
+    "name": "Heidelberg Castle (Rosicrucian Origins, Germany)",
+    "category": "The Occult",
+    "type": "Point",
+    "coordinates": {
+      "lng": 8.7153,
+      "lat": 49.4106
+    },
+    "date": 1614,
+    "description": "Heidelberg Castle, associated with Frederick V, Elector Palatine. In esoteric history, it was a focal point of the 'Rosicrucian Enlightenment', hosting gardens and architecture loaded with Hermetic symbolism.",
+    "source": "Fama Fraternitatis (1614) / The Rosicrucian Enlightenment (Frances Yates)",
+    "images": []
   }
 ]

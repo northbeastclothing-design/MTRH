@@ -3601,6 +3601,102 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
       start: 1983,
       description: 'U.S. Army/CIA report assessing the Monroe Institute\'s Hemi-Sync training for altered states of consciousness, astral projection, and remote viewing.',
       source: 'Declassified CIA Archives'
+    },
+    {
+      id: 'pythagoras-lifespan',
+      name: 'Life of Pythagoras',
+      type: 'lifespan',
+      layer: 'alchemy-occult',
+      start: -570,
+      end: -495,
+      description: 'Life of Pythagoras, Greek philosopher, mystic, mathematician, and founder of Pythagoreanism who taught reincarnation and sacred geometry.',
+      source: 'Diogenes Laërtius'
+    },
+    {
+      id: 'socrates-lifespan',
+      name: 'Life of Socrates',
+      type: 'lifespan',
+      layer: 'alchemy-occult',
+      start: -470,
+      end: -399,
+      description: 'Life of Socrates, classical Athenian philosopher whose dialectical method of inquiry laid the foundations of Western philosophy.',
+      source: 'Plato\'s Dialogues'
+    },
+    {
+      id: 'plato-lifespan',
+      name: 'Life of Plato',
+      type: 'lifespan',
+      layer: 'alchemy-occult',
+      start: -428,
+      end: -348,
+      description: 'Life of Plato, student of Socrates, founder of the Academy, and recorder of the Atlantis legend in Timaeus and Critias.',
+      source: 'Plato\'s Dialogues'
+    },
+    {
+      id: 'aristotle-lifespan',
+      name: 'Life of Aristotle',
+      type: 'lifespan',
+      layer: 'alchemy-occult',
+      start: -384,
+      end: -322,
+      description: 'Life of Aristotle, classical Greek philosopher, student of Plato, and tutor to Alexander the Great who founded the Lyceum.',
+      source: 'Metaphysics'
+    },
+    {
+      id: 'francis-bacon-lifespan',
+      name: 'Life of Sir Francis Bacon',
+      type: 'lifespan',
+      layer: 'alchemy-occult',
+      start: 1561,
+      end: 1626,
+      description: 'Life of Sir Francis Bacon, English philosopher, Rosicrucian visionary, and pioneer of the empirical scientific method.',
+      source: 'Historical Biographies'
+    },
+    {
+      id: 'manly-p-hall-lifespan',
+      name: 'Life of Manly P. Hall',
+      type: 'lifespan',
+      layer: 'alchemy-occult',
+      start: 1901,
+      end: 1990,
+      description: 'Life of Manly P. Hall, prominent esoteric author who published The Secret Teachings of All Ages and founded the PRS.',
+      source: 'PRS Archives'
+    },
+    {
+      id: 'hinduism-origins',
+      name: 'Origins of Vedic Hinduism',
+      type: 'event',
+      layer: 'ancient-civilizations',
+      start: -1500,
+      description: 'The composition of the Rigveda, marking the formalization of early Vedic Hinduism in the Indus Valley.',
+      source: 'Rigveda Chronicles'
+    },
+    {
+      id: 'zoroastrianism-origins',
+      name: 'Teachings of Zoroaster',
+      type: 'event',
+      layer: 'ancient-civilizations',
+      start: -1000,
+      description: 'The spiritual teachings of Zoroaster (Zarathustra) in ancient Persia, introducing cosmic dualism.',
+      source: 'Avestan Records'
+    },
+    {
+      id: 'gnosticism-origins',
+      name: 'Nag Hammadi Library Burial',
+      type: 'event',
+      layer: 'alchemy-occult',
+      start: 340,
+      description: 'Scribes bury the Gnostic Gospels in a jar near Nag Hammadi, Egypt, preserving early esoteric Christian teachings from orthodox censorship.',
+      source: 'Nag Hammadi Codices'
+    },
+    {
+      id: 'rosicrucianism-origins',
+      name: 'Publication of Fama Fraternitatis',
+      type: 'event',
+      layer: 'alchemy-occult',
+      start: 1614,
+      description: 'The publication of the first Rosicrucian Manifesto in Germany, announcing the secret Order of the Rose Cross.',
+      source: 'Fama Fraternitatis'
     }
   ];
 
@@ -3809,7 +3905,17 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'buddhism-founded': { lng: 84.9912, lat: 24.6951, locationName: 'Bodh Gaya, Bihar, India', category: 'Ancient People Groups' },
   'coral-castle-construction': { lng: -80.444305, lat: 25.500556, locationName: 'Coral Castle (Homestead, Florida)', category: 'Megaliths / Structures' },
   'operation-fishbowl': { lng: -169.5292, lat: 16.7375, locationName: 'Johnston Atoll, Pacific Ocean', category: 'Secret Government Programs' },
-  'gateway-process': { lng: -78.5085, lat: 38.0293, locationName: 'The Monroe Institute (Faber, Virginia)', category: 'Secret Government Programs' }
+  'gateway-process': { lng: -78.5085, lat: 38.0293, locationName: 'The Monroe Institute (Faber, Virginia)', category: 'Secret Government Programs' },
+  'pythagoras-lifespan': { lng: 17.1292, lat: 39.0814, locationName: 'Pythagoras School (Crotone, Italy)', category: 'The Occult' },
+  'socrates-lifespan': { lng: 23.7275, lat: 37.9838, locationName: 'Athens, Greece', category: 'The Occult' },
+  'plato-lifespan': { lng: 23.7144, lat: 37.9942, locationName: 'Plato\'s Academy (Athens, Greece)', category: 'The Occult' },
+  'aristotle-lifespan': { lng: 23.7441, lat: 37.9731, locationName: 'Aristotle\'s Lyceum (Athens, Greece)', category: 'The Occult' },
+  'francis-bacon-lifespan': { lng: -0.3582, lat: 51.7533, locationName: 'Tomb of Sir Francis Bacon (St Albans, UK)', category: 'The Occult' },
+  'manly-p-hall-lifespan': { lng: -118.2831, lat: 34.1164, locationName: 'Philosophical Research Society (Los Angeles, CA)', category: 'The Occult' },
+  'hinduism-origins': { lng: 68.1256, lat: 27.3292, locationName: 'Indus Valley (Origins of Hinduism)', category: 'The Occult' },
+  'zoroastrianism-origins': { lng: 54.3733, lat: 31.8814, locationName: 'Yazd Fire Temple (Yazd, Iran)', category: 'The Occult' },
+  'gnosticism-origins': { lng: 32.2356, lat: 26.0528, locationName: 'Nag Hammadi Caves (Egypt)', category: 'The Occult' },
+  'rosicrucianism-origins': { lng: 8.7153, lat: 49.4106, locationName: 'Heidelberg Castle (Heidelberg, Germany)', category: 'The Occult' }
 };
 
 export interface Waypoint {
