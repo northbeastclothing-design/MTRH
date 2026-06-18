@@ -3798,7 +3798,7 @@ const chunk_0: any[] = [  {
       { lang: 'Hebrew', original: 'נְפִילִים', translit: 'Nefilim', meaning: 'Fallen Ones / Giants' },
       { lang: 'Greek', original: 'Γίγαντες', translit: 'Gigantes', meaning: 'Earth-born' }
     ],
-    relatedIds: ['watchers', 'mounds', 'megaliths'],
+    relatedIds: ['watchers', 'mounds', 'megaliths', 'rh-negative-blood', 'elongated-skulls'],
     bibleVerses: ['The Nephilim were on the earth in those days—and also afterward—when the sons of God went to the daughters of humans and had children by them. They were the heroes of old, men of renown. — Genesis 6:4', 'We saw the Nephilim there (the descendants of Anak come from the Nephilim). We seemed like grasshoppers in our own eyes, and we looked the same to them. — Numbers 13:33'],
     layer: 'Giants & Nephilim',
     timelineId: 'nephilim_era',
@@ -3815,7 +3815,7 @@ const chunk_0: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '11 ft Giants Skulls & Bones - Louisiana, Missouri',
     description: 'LOUISIANA— While conducting an excavation workers uncovered the skeletons of several ancient Giants approx double the size of modern humans.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-0',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X471Ywze0cWP7vyD6XRpdCPB59v-dJjysTxpR-Ga8m2HN1Oki2Y7CTPZNcAqOStBkdwGZk8NWu5xWXOJRaUKb05FpR8rj9POfTPC1ueD0HIVKZRZkWhGX9K4AuxBWs1_VBqzka6dxRznCrGcC4ICv1ZQPIT2Lr4Ux4JJKSaoR7FUpEgCwc5Mw-Hh9KljNCStbh651yVmg8mdIkTcb7nRKEOEgubNGf9Qbs4ZQ1vNGVtzQJ6wU5P2KbVfZ0?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -3825,7 +3825,7 @@ const chunk_0: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '9 ft Giant Skeleton - Manchester, Ohio',
     description: 'OHIO— A group of boys discovered the remains of an ancient Giant over nine feet in height while digging within a burial mound near Manchester Ohio. The skull was of such an enormous size that the jawbone would easily fit over the face of a large modern man.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-1',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6oGcc1klRZnFBTN6xpzBEsy9f3rVJFq7OwfiL8oSKjkz866_z4YJknb8vw4o5n3e6VRVU2IYaAz_LdUfHdiR6iaSXW6D9S5knr8z18ikFRYYoxsQxOQa5cEz8hNaVxtokH-8jEBM5Dwlt2oR8Ky2EHvmZ3nL5U5eXVR80iZAMF_qzMGxVtUWU6DfDUx7WW07mqdh7zKQ1q0OdiBVOaPQtkCylYCi6ROZyKtvAxuwjHxjW0-k7pRiVSTPg?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -3835,7 +3835,7 @@ const chunk_0: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '12 ft Giant Skeleton - Maryville, Missouri',
     description: 'date: 1883 description: source: Daily Kennebec Journal, found by Travis Roy @giants_of_ancientamerica location: Bernard, MO',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-2',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4YUnIZ7FaBn6qPEFc2imVUf41gldkR7CYdfZKGEH0fHTK34_tbk0kN_KrsoHSSvnmaaVf1lRuxSSxRHgo1mLioJIMjOobLrEi05-1s3dDymurDXTJNzkh_lZYKMCLqhR5mwC3zGWb2qODT1dDKsyfjYbdKtwpX-lefDOIhxxV0UGdPy1GxsLy2src3v9OyYDdEtacH9q1uk3I46FyYwsQV0SPhgZHgshYJkdZocJzvrO6R7XuvGAdujNw?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X79WOMDFKYYBHzQEOUrQceT7sYxb28to0e2kAsbRE49VRyxLGdPrj2uV4_9sjMW468G5o-e-8rOqwTP2CYvx1I7fzQTxcAfjVgoMQZzXpDBJv8nrCS_l0qSxxuumgpUdwgoIuRNfoDTCQEGsp_m88FHBxYFJgphTWveVztl0TkMWTG7Z7RxaNZEWuvwuenqopwPp4JbKkFFu5oiG4j6twUrVA3i5eWVGGWPPI0cZtlXdOPYWRnr1nmpEOE?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -3845,7 +3845,7 @@ const chunk_0: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '10 ft Giant Skeleton - Fairview, Pennsylvania',
     description: 'date: 1885 description: source: , found by Travis Roy @giants_of_ancientamerica location: Erie County, PA',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-3',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7rYON9vAipWchWK4XZ33uHuz2cwYwf-cQVaV6YnmyuNNhsjksu2R57qgZo7eo7DQ8tk2FrSekEqQWWTfABcY7vzWNCq8bR61-AJ4dzHk5k-6c4ky5vSLyBiyjoW_goV9FqGonenaCcM2kGt38sihy6yR3GTWs-E85uG07n_epZ-OmA8rOF6zAeafEJA7bE2dzdEorONx6AFgvnW6Gw2WkW5j9QnyJ6VO7OdRxbKsq2s3qzGAhQ0LbB_O0?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -3855,7 +3855,7 @@ const chunk_0: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x2 Large Giant Skeletons - Hancock, New York',
     description: 'PENNSYLVANIA— Railway builders unearth two skeletons of male and female Giants. They were declared to be of a prehistoric people. A newspaper reporter put the skull and femur bone of the male Giant on display in the local village.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-4',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4A4LUWElK8hEy0acrbVgvvRSSYHf1wkJYW_Poba1E5iYN5mbLVZ5eKs-kVU2p5l_xOgC6Fj1qNYyIonoNAGDiFnZfrpaquAXrU6LV4fmvATsN0sQaHzfnhI9JmxTw6cqMgyO_28GWN5jL31FTJatIiguDTDX1VJDlmAWuPGSme2bEj5n7xLIh-wBX15p0cH9Y5oDRDVM6zZ6CAslKnzLiiyptx0c1CLWXZbugRluzfwr5Dr9pKQwBAgko?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -3865,7 +3865,7 @@ const chunk_0: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeletons - Dayton, Ohio',
     description: 'OHIO— Several skeletons of Giants were unearthed in the gravel pits near Dayton Ohio. One of great interest was unearthed near a region called Edgar’s Woods. This Giant was abnormally large and had arms of great length. Although most of the skeleton crumbled when making contact with the air the jawbone stayed intact and contained a large tusk-like tooth among the normal human-looking teeth. — Oftentimes when a Giant skeleton is discovered strange anomalies are noticed that are quite different than human beings of today. This is most likely due to the fact that they are descendants of the original Nephilim described in The Bible. — The article also mentions that although it was a Giant it seemed to be of a different tribe than the other Moundbuilders of Ohio.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-5',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7pD_IscuOSRXDO8zkKRTn5R_OtvxplKeSHfJf_Lo-Jt8R9UcyWnbNbbonxG44i3pz7Xah-9KuUcHq87D1yRirx-Re4nYUWikiHsf3jzEztmUcbh_i-ZNMDfNFmeK_QnR1oVNTsCL_qqNAALX2g42-pN0Y31ZoebAx6YyQ1IfQ9vrfO3z8PZFMa4m65bF2usSggi2A03fy0UV0rOT39avpxIpwE6UeVrN7ZAINXl1WjkRTNMmk6m5qnBy8?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6Yz7cy38uc_hZZq6oDPZ0PotYIcA5A1X0fedlVb43KQuZXsIFvxIwRcXS4-Hz0rX_Sgr858yKiYrmw2abj_tJawPsVRkVrRAzXK61Ij7-unxttxL5kRAd6FZtsm7QEexJnRPbOZAM6Xvd1wrRVZ38oyyQGoi4UZlg5eMvbAYjemOW3K1gRBYf_-YkuP83x5BkGMgvk-PfQNk-XYPCoBkh87A9JFJZ-WIfQznN_A6FAMnqYbPuUut2W8WA?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -3875,7 +3875,7 @@ const chunk_0: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '8 ft Giant Skeleton with Copper Idol - Chamberlain, South Dakota',
     description: 'date: 1907 description: source: found by Travis Roy @giants_of_ancientamerica location: Oacoma, SD',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-6',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5pRSZ8B5EmtIOYuqvI5bSNybLdACsNjsfPy6Y0Wk5xFPbfO9qIFSc-teXLPeM3RHVN-EMQrGMkNsGa5KoPhnzp2t7rp3ltYxDddER2z1xZiKJcYpsDm3SiG2T0HYGCpRRM7m5l2uq6WbKzmuMNzeQMwST5waTsLWiW6d1DZoSPZ24R88rEyCy2_eIpeIlX-d_pLeEk_vyWbjdNmgFOKhMaqsbr1wWGnltVTQ8jmicpPuq5rXhDpss8UA8?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -3885,7 +3885,7 @@ const chunk_0: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeleton with Dog-like Creature - Whitestown, Indiana',
     description: 'INDIANA— Several farmers unearthed the skeleton of a Gigantic Indian at a depth of about for feet while digging in a gravel pit. The skeleton of a dog-like creature was buried with the Giant.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-7',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4qP28rIvnfGafWNUOqgXTEWQA6wP9zebHa5FsHMLIRHIMFVi6bWqONQ2xLKTarWGRfk5NyjiyTlj8AMHRaaZqSlZ4oLwBf6mVASqF-VDBcpq6fcjFjS7FofiI6jyjS-3SnXNF353B6MIp8GIXQhWKXvE2Prx_P8IqQragCQmFwjplzLf72JSlikcaZw1NlNiMAg1I8aNpe8w18V3g1NIrLpku1CvoJTbQZ54xplk31eO3HFaOrx8fwY8c?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -3895,7 +3895,7 @@ const chunk_0: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeleton - Kingman, Arizona',
     description: 'ARIZONA— Peter Marx discovered a prehistoric Giant skeleton on his farm near Walnut Creek. The skeleton of the assumed ancient Aztec drew so much attention that the Smithsonian Institute sent representative Mr. Shroup to purchase it. Marx declined the proposal in order to offer it first to the Arizona State Museum. The Smithsonian documented the Giant by taking pictures with the best modern equipment of the day.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-8',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6EB_EZcEJNBqERwNv7bnjPdLZRS9BBef4sKzqy6EIGORYABMIGQATxBlJrQLI-Kk7Ew8Vs0Koqh1v41LY-0-NK3VAmeMWfcWQoUhy_sKVmaOLtUuauiNYsxemFZTcaVlBL6qMl7nlkO8YIYFZ5kaJVDA-2UxiEt_vogELO5ARQDPHXN5VIPNldZc5OTuioStEHed0cgidMHZdDX1JHK1_107ZSbk3eKRZaPZuOXWE0-YnvjgxtJzU-C6Y?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4uB52KOjfmtAzphhWJaUGbUnCD1Dt3cFEQKOdMRyCzbJ90G7YHdjydTWIx5dk3kUq08E7cg3iUecKE-pegruk0EPk_Ayk488STOXX8U_2flE_qtvkDSvxDgr2KhP4HyBK1Nmg2E8FEqxtyKR1o8xsyEvwEZy09U0huk4hdiE20VmbzjF-lNpXU0-l5lrzBbKgslHy6ipuczHD8XCg3ij3hHzuEcu8DyE63y4J4cA4X_zNsBxYahijE9vM?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -3905,7 +3905,7 @@ const chunk_0: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x8 Giants All Above 7 ft - Marinette, Wisconsin',
     description: 'WISCONSIN— Deputy State Game Wardens reports the discovery of eight ancient Giants uncovered by workmen while excavating for a new house. The Giants are all above seven feet in height.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-9',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4wsadaBGQH09AplIws59UFWMsE07lUmAvTmy0TF0Ob-WttLgqC8xD9DDdME9oMusNjyjmfXw2CFTZD-OnX4GO3fQ4Fd6dpmBc7DQf_E67nveYs6zF6hZ9BlKvmE-DJIaN9j9SnasnRhUfO9rXXvckhuFTIVCGdX1azSHZkQP2Gi0_N9Klw9W_wW0mr6-FBbedqF460syN2b3mV5NIYzvTCgzJGLmvbdZ0U7kmR52JLWvc24KA6VSbx9jE?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -3915,7 +3915,7 @@ const chunk_0: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '10 ft Giant Skeleton - Dundalk, Leinster, IE',
     description: 'IRELAND— Laborers conducting foundation work on some cottages discovered three skeletons of prehistoric people. They were in separate graves and one was that of of a man about ten feet in height.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-10',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7JCFK3Ke7vsdjcG4-413x3qEbFP1Gvn-rbYs8L4y5881EmGBgvXtvxalb8OUZdcVGYUekNuxadOx33R5t_oxd3q7lPncXdM4CjK6FG9R8g1jlXG4SROIZ7FhrbNX20R2B3gukcz4J3Vn4I6Pnus8KhkBqbOjmdOB9VWFeVw6ctK6XUs4IRWW27MsqWpwi3ciZnf0Dha0wN2CSmzVgnUH7uwH4JCBYTlgI0ZkefoZVEy4risT_uRVRy790?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -3925,7 +3925,7 @@ const chunk_0: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '7 ft Skeleton - Baudette, Minnesota',
     description: 'MINNESOTA— A caved-in bank of the Rainy River In Minnesota uncovered the skeleton of a prehistoric Giant woman. The bones uncovered were put on exhibition in the township of Spooner.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-11',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6FemfS4gzndjN3794Ja8tSILus8bqBuuwr0_6ybQZlo15KbpyD1e6uIF81v46noGBiGGMXtrU95mPTwp6YEwzVJODu2vytReqZvUidCX5eMPvJTpFox2RGnL8DNzDJk6MAqD0MUsmlJHJlHdYyyZiM7suRbv3v7DnpvlXY_Hx-uE17tDacQuQx3ZwkQnkMdtv1v0ipj84E_9_d3nE7PiVtkQiTBuueqfqGUOmbW7nV02xx9ucwAf97wxA?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -3935,7 +3935,7 @@ const chunk_0: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giants Tooth - Pittsburg, Kansas',
     description: 'KANSAS— within a coal mine at a depth of nearly 600 ft miners discovered a very large petrified molar tooth that once examined by multiple dentists was declared to be from a human. From the size of the tooth the Prehistoric Giant it belonged to was calculated to have been at least twelve feet in height.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-12',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5dCvgitI22OntFc4-C6GasOxtMaLUR1MoJpk5iyJ6S_WMRHNX9TQNzHPMMOiwguWFs41tPn1TzoqUWv6nYIYzReUeRkNE5Q6USqEnsKOFdHSmSmCaEE6-BdMOMRy025nTc4F6ulhCw7qzSHSETR9Wwkam9oppus6L1lSph3Ws-I1ueG7Begujb5KaANWd1VdxaDUc-zPU3rZSYzVZd8utGulj2hzoAGf_GzGFuB9II7EUp7GOrsx8aaf8?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4r9Vcpoe3vuGVJnjN0oWzN10EAgPkPGmQk6mAfdq_tVEqQHwqzv5q-06GSwwjRktUKj3dcKLW_xI_149duzAbI1kFSqN0FyylfDo2A5e2f1zzpNMqdscwYC76ov3nbIw1TRN9X5-KechGmOCjsvof3iumKIfEMU2Svz6VYlMmF1mGbV_Wo197gImi0aSlqFhVRN3NJgu6-j70k14AoNWSuhF1alLca4wX6fiX62pIguDn8FXTZsOwrBbM?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -3945,7 +3945,7 @@ const chunk_0: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '12 ft Petrified Giant - Jackson, Michigan',
     description: 'MICHIGAN— What was thought to be a prehistoric man (although hair was still on his head) was discovered by excavators in Michigan. The Giant man measured twelve feet in height and seemed to have died by a wooden peg driven through his heart.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-13',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6R2QizZBcAOICdXlOIoxruxCmD4IStKwLHg-3MNuUgrGYz8TBzCnev7iiV_4Ne7aQY-jGzww_npcfulRRKjD_QtULKZ0BgKP6zmvinrxuxoXlrnbEuUQtfjZNE3zS28D2njkWElvFH7SeG60fBVOg8CcgajVW9KWWR9edrq3x5LhiqQZkpqVA_hT8NEPfvt7YjTTCUlS_2iSgalZYKtTOUKyrS06MYZ9tvtcoLISNT0FfGCw5Jj_pibwg?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -3955,7 +3955,7 @@ const chunk_0: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '9 ft Giant Skeleton of Mound Builder - Mayfield, Pennsylvania',
     description: 'date: 1920 description: source: location: Huntington Township, PA, found by Travis Roy @giants_of_ancientamerica',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-14',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5p6XSJda972d0O5YxDsCs7LaIEvsXstzJ0MKLg5Ywq1UM8YOMy_3223WUNVWUozCQiQRASYw2kYEHD0hjZRAKy3XGDLgFeBSodawNdR1eJEcMyUcJJiW9au3rrxIRovivo3SBXci5vnx-7NWKEvas06s4q8a3_EZ8iwOQViVslNfcwzHjbRlB7vRUN0__cvRC9vVvLH87KGuxRrUWLjVNPIn3hvNxn6IyTa_L5NzCMU-TclEAnpWmgqxc?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -3965,7 +3965,7 @@ const chunk_0: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Bonaire Check details (Heather Arnold) - Dorp Antriol, Bonaire, BQ',
     description: 'Islands of the giants!',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-15',
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
     isApocryphal: true
@@ -3974,7 +3974,7 @@ const chunk_0: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Aruba check details (heather arnold) - Angochi, AW',
     description: 'Islands of the giants!',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-16',
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
     isApocryphal: true
@@ -3983,7 +3983,7 @@ const chunk_0: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Curacao - check details (heather arnold) - Sint Michiel Liber, CW',
     description: 'Islands of the giants!',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-17',
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
     isApocryphal: true
@@ -3992,7 +3992,7 @@ const chunk_0: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '18 ft Giant Skeleton, Helmet & 9 ft Sword - Oil City, Pennsylvania',
     description: 'PENNSYLVANIA— While excavating in preparation to erect an oil derrick, William Thompson and Robert R. Smith discovered the skeleton of a Nephilim Giant 18’ in height about 12’ deep within a prehistoric burial mound. An Assyrian-style iron helmet and nine-foot-long sword were also uncovered with the remains. The Skeleton was to be sent to New York the following week after the discovery.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-18',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6KnBwaJsUgSr7DixYY7Y6MuCXeT3ThyaVRg-oCFh_nD79Ef0jhAmEgjZ6jTs7YgKxxRzlh4kX_N2-7MlH7P4yOqP6YMBd2wvphDDzuQ1VNOX_L6pDHNosLYmKLlpUmopJdcWPNfNufkbcNhIQLKnZenvxP-4z5w-I2X1XndxBl8fGmy0CR7RzJ-nrsRUSYs_3rNdtiPlIYHuYNJB0MNZpEBZrWeOFMfP6DdYGjd9SOImA3MdhEaKG3A_c?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4002,7 +4002,7 @@ const chunk_0: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeletons, Horses, & Artifacts - Mandan, North Dakota',
     description: 'NORTH DAKOTA— A massive burial ground of a race of Giants fully encompassing an area of 100 acres has been discovered. Buried with them were skeletons of horses and pottery of\nhigh-craftsmanship. When an old local Indian was asked about the discovery, he said that he knew nothing of them and that they preceded his people.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-19',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5uW_412qgWMEpbEuNr1Kbc3s8buBjPaVyq5gnmFdlVO8ls-8rg5hZnVnh5G0ePyT9lFCVabgu4aArY3BtvB_CMtYQM-a-9CwQr6J5hI9dAm215Fthnb_mjWdVcY8eLY_zncRWpFRpJonm8mt4fg3d1-N68d2aO-szCbBq7vJZmJ_UCORgLJ2SY8TRjMykGJiN9tlv9UnteIjzUAR2Q2DYE3b15Ds53ooa0QFFHuqbI8hKxGZ5zPnPE5LM?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4012,7 +4012,7 @@ const chunk_0: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x22 Giant Skeletons 7-8 ft & Artifacts - Stony Point, Michigan',
     description: 'MICHIGAN— Interesting account of the the discovery of 22 ancient skeletons by Mr. Cartwright, a farmer from Barry County, Michigan. The skeletons were those of Giants from seven to eight feet in height buried in the sitting position in a circular pattern. Stone axe heads and smoking pipes were uncovered as well as a Silver Breastplate with strange inscriptions upon it. The farmer sold the Breastplate for $10.00 to a young man who since had moved away, thus contact was lost with the invaluable artifact.\nWho were these ancients that once ruled in great empires stretching across ancient America? History knows.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-20',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7BSQ6X9395AtTdg3sJh5YjPUs4wSTwk2AVjbGRpvC1zHiTHZf-F8kT8Dagr2S6uQuzPyR9mV7k3JCvNnpZNcJWs_GjobW4wl0yXdLLp_BOx6K9jx7uhguRPfM9soF5cQnRme4gOrS9-4Kt-KT27pT3DVKIU7eeeCyZLN6njLDbxwQZGWbpqVb2_RmR5Mb6oJHWRgUUgkQ6DwPurFGAB32eLhTQB5gnJm645Y6vz3KACAXSOhTrxou6jGg?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4022,7 +4022,7 @@ const chunk_0: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeletons - Tremont, Maine',
     description: 'MAINE— The remains of several ancient Giants were uncovered over a period of time (1830 & 1869) near the Bar Harbor region of Maine. A scientist thought it possible that they were Norsemen who inhabited the area before Columbus arrived in America.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-21',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7LCb9e84NWvKZQooMShBWMWUCEyB-_XurDcHD_-1JL7mW-fCHQp495NvNMYRfr9t3geTha5wp6_mCNKjfyQaSESBDcOLn0eVxUn323FDK_ewbcEQltZwpcouSvvwJwQbAeyTB3sdR4sOgzwAFd0QF3X50gzcMwxmWtl9_sc29KjBXEMqbTebx-5SPxssefL1_0GDRb6XQ2ODTwIOvQmuQ4l4C9jbKfH09VDxYenUtvC_N8VEYPAqzLCWM?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4032,7 +4032,7 @@ const chunk_0: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '9 ft Giant Skeletons - Kokomo, Indiana',
     description: 'INDIANA— Farmer unintentionally uncovers prehistoric grave of Giants averaging nine feet in height while burying his horse. Who were these ancients? Where did they go? History knows.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-22',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5sn62lgScwXYLEwXOCsNlwb1-vFlf-YQOEYl-4FGKtWJ5fTC6n-6jZrAEyjRznaniTzfoMb6fYdEvvVlII685gHUVQ_iF2Jj8PsOnrUbBckhjkV4uxIM_wssOmyrLceZaml0GlVliKDvRLtdnTYNvnSQS0tSIbhySfLndFXO_gFzGRT0sl79Ukf6WfzXX4-_Re_k8YufE7SsXMrjIM1BzbJOPpCT-4RhXM7ZqzxxThqVdFCoVXc8GRYGY?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4042,7 +4042,7 @@ const chunk_0: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeletons - Port Edwards, Wisconsin',
     description: 'WISCONSIN— Several skeletons of ancient Giants were unearthed by a farmer’s plow near Port Edwards, Wisconsin.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-23',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7hBaffNgiLG3OPrc7fwrNiMlxa5BpyFuhzz7E9GTpwoiz3FdwtR3AbjYXvErb-NpxJo4a-wQ67pptbXtpRmD2iw8yD1KdJty8rszDIPoiMxbyxlIkQoNQL8ACUbWXj0Fau6B33uYNQ99Wrcu17vEh7lhg4K113ky40hg8IAVNR3EHIcdsS5FSnsPTWS5HII1-Vq5DtM-7OSNnZFREAisNH7drJPlN4yOnRfQa-430xD0Q8ZqdH03QSaFs?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4052,7 +4052,7 @@ const chunk_0: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '9 ft Giant Skeleton W/ Double Rows of Teeth - Bowling Green, Ohio',
     description: 'OHIO— The skeleton of a prehistoric Giant nearly 9 feet in height was discovered near the village of Bowling Green, Ohio. The massive skull contained a large jaw with double rows of teeth and the arms were much longer than normal.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-24',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6MwTKrRP-svZumXVw6HgVKXjdnj5DZXOTfIEagLXZ41YCTX5-ebHaeDF42G2Sm3nY3DVEnRisCCXIffTGXRB41racxmJfrnnYSHmDlzDnMIBJLuY22QhTfQT_gA0gl5OogXW0J_ef0fP8lzIqgmSr7lX1UBIoavgVmeigop0G7exmwdFh9bTRU97K1Z7UP_KMB_Niz-j9EsXLiuWVMUUpElOloF9ocvjByuNRM3VhX9ZVK6detX6JDJKQ?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6nvpF4M7QwIlrHz926tEzg2MTF77iv5tCuZoFf1CXdBYNcUQbaXJwbXIerhz7rMTDeetOoZAkC9STrbVrp6pQL2hzYOhZhso9BilboLuE82p-uRUT7X5_kwnkjpmFlk1SdoQy9BNt-WS-p78hBAouj2vkMwW5CBI5N_Q4VAM644PVxobSbO-eaEDLu6BY4gfFyLGRoqen3PdhgBEFCfbD3riqj1MnhF9wUop_JFGyS4kbrt78-v1sHAkw?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4062,7 +4062,7 @@ const chunk_0: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeleton - Bowling Green, Ohio',
     description: 'OHIO— Prehistoric Giant discovered by a laborer in Wood County, Ohio. A race of Giants once roamed and ruled ancient America. Who were they, and where did they go? History knows.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-25',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6dodl8EMS47OAVLpwPrOvFQpTQ3HUXVNIsB5jYXl1wf82nq0GmRuXGGgdYXuf0eIeOAPTzuWa0QXl34JbFJovarJiaJXHtTJKSyokNW-tpZHwQ-Jyjgq4zACvIAC2IrDguCgKhjiWKu3q7s6XScfQd3-1A19gPK23-JwEjZ8KLnPqJBrc5mrKdoS0GcTJ5f29QxTSeNHtGDHqFpseSxHkvsuwipd6m85t2kb9W5_DWUVhM4GFi82cgAvY?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4072,7 +4072,7 @@ const chunk_0: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '8 ft Giant Skeletons - Pekin, Illinois',
     description: 'ILLINOIS— Several skeletons of prehistoric Giants over eight feet in height were discovered within a burial mound along the Illinois River. Many curious artifacts were unearthed with the ancients and were to be put on display at the Jamestown (Va.) Exposition along with the skeletons.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-26',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7FaSGB6yhVLSOhlC2hp8EM2Ud_PfGYwig1ihorxeMTJUqVTwmojFy2NmQvkFlwITm5zJnD5LTRjpFgaDRIohEtFF77NC7ogRa6nUdLHao9Jxgry8krT3mOrzWtiNHizOQ0zQbx_vM0bnWGArJG8nze9mKaUz2Eq-W1CL8zMnmCQIO3E1rxYP0Dtkm18MF3B8vXDhAvxSk9jhEW7-1zeZ8Sv6s-cD4MKScOSekEzFx7ulaPd9tphYZO9Ao?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5TEBnAuWP78QYnIti5bosNQIougCeQPdc-xh8JMUscmOuksGXrz5uEF2rY1q-x5YGeyUH2FZxHwNOj7DyKcx282TXfUDaFy2ZfumPXwIAdbe7IxTyvYWYZDawwF0R_e6hbdO80wdCcCpHD1_-tbUb0yCX0MQW4y009yHnq9rtW_ZLxlUXA0gT5d3WMLLmbyyl_4ytxUkQ5qwe6-V_M3gzCIwBTx93wv8bjaFjWQtJi9EDM4a6bxPBIY1s?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5DHPX6D0ujZGn8OIsuWrdAYkhApyJT_ZEw8QWFY9YpbB5Nm4srYly5ImPIiO0XGSY-Lc2N-KQ5b9ZnzUF5DmDJd8n6czhmTHL1-bqOOc28K6-aeOfAyN6FQ7-g68cNEF-wSnGbDz7cpa8gKdoJmuUEzaiemfIGHxSvcMb4Fref2xQQIWpPlgbpOd6UpLbxF_BGe-7Rb_w14X_esXKsYwWVSkU0cV6NqMj3T-6tzevSdRl2ud5W9IZMIQQ?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4082,7 +4082,7 @@ const chunk_0: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Petrified Leg Bone - Fairbanks, Alaska',
     description: 'ALASKA— Miner A.R. Simpson discovered the petrified leg bone of what local doctors of Fairbanks confirmed as belonging to that of a prehistoric Giant.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-27',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4MPKUXvh6Vkd7Px3S4FNcPnG8U7fyvYRbDWNcPfQPmn7vbCRScO4IljDxdaKekR8rq4PQFF3cuAebUh8FJsPV1Sg105tD8Y4_VapnN8V9EApE_zagSOmrYnji3-ktNN4_yxi3G2nWgUudRCEcLI9ljy19api9sXxWhhB-7ojshcATcB7nm7oMyQJY0w_3C48J64HXf3Ln30zIBJP20Y3NaUaM8Lkv8Cbj6VSCs-Wo6KKW1F819WgvEe7E?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5pJs-ZwxdUR0PpPL4MqilsflIMM2pU80etP1FtkB2SC7t1bQ2U8rVQGUGucWwS1nc1zGOkv-8NGjjLxE9V7eYTWQSGQwyAr0aF1R59Gq4ukUpznVdnYZA0ZKujWBTmr5bUfcgO9VBiGpAs_8NX4ASZHTs9Iq7yRMHDEOw5vhsiCr8_vwDseHvBNTaKKJTZ7UkwR5ASLWhFZX0bDp9doyXdz1gtcOo6p7EnITd31wnnb-OyrttOK91TWak?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4ykMMAqGsCOCRbbWNTNgYw3kK9eakqpa7FlfcdT-QXhq8VQ6o5hFyStY6mYJxmStcLrwJ32LQmeMH6HpcTiaMfL9fVaaQjJepIeSH-YsK3ipCxH3ee6giC0J6X4i8Hmz4VO29PVvflLYaK9JqE8sk-JOeviit8M4HF5ZRRggq9Mrb_1fxaZ3GUL4vIQuQ-y3AkkH6VpXQdHpn_oRaM7OuW1TomPzg2byBJVWDdtl5yDxuMHEmOTEOwYnY?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4095,7 +4095,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '15 ft Giant Skeleton - Xochimilco, Mexico City, MX',
     description: 'MEXICO— Prehistoric skeleton of a Giant nearly 15 feet in height discovered southeast of Mexico City.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-28',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6qwk055OKnG_dmyWZ7WlyaaRUPu0zpTT_GbCxNO1XiQh8elDhjnoDKQEuRJjwDwLdFnXjNDPEOBn1dIk93jbo5YFnprldv9GYjEYfUjG8zna9Mc8tSn2wNUINy-oHimJ1kYpmxVuu6vt5WmzuJRja18MWRjRa2-0rijXc9csq-MspIfUD_DazbIKk8vczZofJ78r_oDA9SlVWEp10hNNSTNFyRBKrRIB63n8mKYvLtvUILWgDvQjsGLIo?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4105,7 +4105,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeleton - Carlsbad, New Mexico',
     description: 'A young boy fourteen years of age discovered the skeleton of a ‘very large man’ within a cave located on the family ranch. The skeleton was thought to have been that of an Apache Indian.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-29',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7EPFMH1vpeo2cYoHWYwJ2gq3_RdBRM5pcQVHReDsK10E1AmwURZxmnPE6x0rFknpK5wMNnM-kjP8WDZzZQuWiw8_v2vgAwmzyeI76T1rnGpjLCnuJFrHbhPq_xngaNMe4EH_f3Ersm6sMROHxT3LJboBSZT8QDYfKHgmbaRubURYAIXuNjm9goBqUwYFZjTZcodX026rW-ZSIbw6hl2qgpbGUm-Hu0cQrLcptPyL5MHJLIfatnmBdLq7s?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4115,7 +4115,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '9 ft Giant Skeleton - Lexington, Oklahoma',
     description: 'OKLAHOMA— Article suggests the discovery of an ancient Giant nine feet in height by some boys in Oklahoma. The article (as custom with many newspapers of that era) seems to recount a news report along with a bit of humor.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-30',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4X2F3hDNji1PdW0Y19QopmjivVgb9oFPv8v4LeOz3ByLKWbTnqsPd02rIFxfzJ6slF8WuN0PEcRsHC4ZXII41JG978Dqeg3qkV-vjYs1hXGtUb5ynOd4KmzLw0Sf5Ow5S5e8TGgMoZocMeqiMADMyv3-3K_tj3T8kVYu6DGR9jHwgP49DABbyvXjAi_m3GRD3mEhTb6-JQpPY6QqLrRrro7plMZ5ZMysATMUbCM1ygvEWliFHwLBugiBs?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4125,7 +4125,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '15-18 ft Giant Skeletons - Billings, Montana',
     description: 'MONTANA— While excavating a well on his ranch, Emmett Williams uncovered the remains of a massive prehistoric Giant. The bones that didn’t crumble once making contact with the air resembled the bones of a modern human, only they were three times the size. The remains were discovered in sand beneath a strata of soft slate.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-31',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4B7XJpfmN_5CnW2HBLbl-WTRfUMsROSDMTs99mlqthzdLf6jQZMLt4g1kLG3rx-PpyOz84fQDrJ1JVK3l_YLTHO6TaJh9Z2yD_VyLi2x-hWpGh0pVXg12qZ-zBNlxiz0YZ6l2qj-4m2jQQDJtnG4eqO7c8lH1JQooPaUb-T2QoDvb8XbJ01Uw2yFMqRsYcd6iWep4zbPeKYSJCbWwFVmCWEOtHktLkBkZSCbl2A2THeYjTxL3dS2bb27k?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4135,7 +4135,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '12 ft Giant Skeleton w/ Wooden Peg in Heart - Jackson, Michigan',
     description: 'MICHIGAN— What was thought to be a prehistoric man (although hair was still on his head) was discovered by excavators in Michigan. The Giant man measured twelve feet in height and seemed to have died by a wooden peg driven through his heart.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-32',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6SXF2tYHAt5lX2qahNgVyezOKb6vmXcXItmxbPc0kRg8bNa9qONz9a-ltbLQCgCuEf--nacwErG17ZhpFt_ThA9PDn-ZUm-Jd2ugPYl17q5HYkLjmogjeZpNQv41VRw6XwXXoOwfjq87aj7CcH67g18XtRgCJT5mBYH4_0Bx3lGunR92_dCd_ALWNRAYSoBxWk-EACK8u6bJZn1IbUq0dd67FLFcWyHqocCYsP7STsmQN4s5j8JSvyOH8?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4145,7 +4145,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '33 ft Giant Skeleton - Ciudad de Nanacamilpa, Tlaxcala, MX',
     description: 'MEXICO— REPORT: Workmen uncovered the fossilized skeleton of a Nephilim Giant 32 feet, ten inches in height near the small town of Nanacamilpa, Vera Cruz.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-33',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5cxkfqHLqCQtbWawioSe5kuVykjH0OAPVG1tocssg5bb0kIoObrbSCb5h8MwXo9crK-HA0SVPOtCFLg8OhJ9SKOpi7yGANjUxsjTfMtnH5wUfJwfPxyoHDvxmS3rrkdgC0zu3JhFc4R_d2VC96E3mD8_t1jLS8pXLeW5oa-FG0rdzJUQF8LUKt8BqWDYmswKIYzYvC8jyOZ8VFWXvDSB0J6rPNMFd2608LDyeZYBQ4iScKiosx633dgK8?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4155,7 +4155,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '9 ft Giant Skeleton - Lake Meade, Pennsylvania',
     description: 'date: 1920 description: source: found by Travis Roy @giants_of_ancientamerica location: Huntington Township, PA',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-34',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4_WtrTiXDxvylx3vQXeQrZyApZdxLbriP7CYf7dZtKg5hxT4ElXLXrKciT5BUfGhOiAfPf3dOcSx3Q0tMlyDt4tmugKrKEcc9gvB-3rpNEefE0vNnbaGV1Oq6V757pm0CXSvqZGCDPEmZE1Nit6h_czv2WuhQp9eEC2lVkqSMeN1iELkMNOmYds-StcjswZnRIjiRImRu7-NmTzFKE1YJPIWOkl_u3d8DmcgkRLbt_hV2CoEisYtMybLI?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4165,7 +4165,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '7 ft Skeleton - Neenah, Wisconsin',
     description: 'WISCONSIN— Road workers uncovered the ancient skeleton of a Giant at least seven feet in height while building highway 26. Local physicians declared it the largest they’d ever seen. Because of its great size, it was to be sent to a museum.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-35',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6pBRygDr-Vt_efsnC7jSy35FBdTXbamyee233QzBOed-wY2hCP7VvEfifqJ7Qg8nNAxTbij1gytMisWUoXggbYMdRRxoHOF_w45q-n_Ya-c1f5AFbu84sK2toCWB3QEsABzm6_JltHa1C13CVAZRvs57jCS-yNf0Nkkbij7ZiyvX-XJ0bfSUlMCB97xxZFthmSoxlClqO5gZAQ0cvN0WbavzQD1Aim8HDVBgFMcuYZgM-osCUE2cBcK7c?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4175,7 +4175,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Footprints - Bulawayo, Bulawayo, ZW',
     description: 'Southern Rhodesia— Italian explorers discover what appeared to be a prehistoric Giant’s footprint in stone near a riverbed. Scientists interpreted the discovery as proof that a race of Giants once lived in the region.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-36',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4Fbd7SagHjyMVdbU-DmIc6cIGPLZ94pCWNU37-pR8EkTBdUTtKek2yBg8C0IbaafsNP4nxTYuEaBNGRo3ChQLhPn_I3dkkyhClVorfpcf2EZyUAqztH-CL-KlUkKTAL8HFizaJKgesn_E2zg7m6S8Nax90k-xCT28v8kmZ8w7rq8SB0aeGVlJsY84_mL2K5hhcgdYe3bnJZliIFSsEH_ceGLqtIt1S0JS07YiYGEuH5lPIXwZ8aA29sqI?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4185,7 +4185,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x3 Giant Skeletons - Ures, Sonora, MX',
     description: 'MEXICO— A group of modern scientists seeking to follow the path of Spaniard Coronado and his men are in search of the legendary race of supermen/ titans of the region. Formerly, gold prospectors in the area discovered three Giant skeletons buried along the banks of a river establishing truth to the local Indian legends of a race of Giants in the land.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-37',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4xxmdZNjCVfZKjuMecR-QF8rCdH_RBY33FfJww1RC7i00ui509u3TEDJsHEKzABvsnaAXtjaK7Eo7lCJUJKR7dO3QT_wHqteHZzew4Ro8aK31Y9BwkbJ8yBGONya940AfFT1OEz1FK6dOruIC_ddotkk5IKiel806nrgKjJB5v1Vv8awHp9yvROjiLff4RnrlY3vdVYZuQ4bKz0LV7iF6XI-nCOOqWVid_YHuL8FKJsJdKAE4HTyBH5u4?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4195,7 +4195,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Footprints - Glen Rose, Texas',
     description: 'In addition to the many old newspaper articles of Giant skeletons discovered across Texas, Giant humanoid footprints also exist imprinted in ancient riverbeds in Texas as well. What used to be mud, was turned into a hard cement-like substance within many riverbeds across North Central Texas due to extreme weather events of the distant past.\nActually, Giant footprints in stone have been found all over the world and so many remain yet to be discovered. Footprints, along with the massive stone tools and battle axes are hardcore evidence when the ancient skeletons are no longer available for visual display.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-38',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5vXn-KubU5OrhQJP-BLZq2RAVLzK9x3RjlY6he-fBdIGpQ0qxcexeDUHyLI0g7Yzon5b95H4nY1jCqBvE9-lzNFGzm5rPBk23XmdoexfEuRpajTXvqkOmwWakLZGhajpGmAxsEnpKcSxN-tA7jMfqeruqCBNcLnSGSfJIwULFNm38LyjnDgtgFYzmzSex3n1ZgNFDTY8Iv24OdGM3Fl7EbxfrWYK1QuONftve7gSFJL-a_4jrk28gb9fA?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6GloGSA-f5MI1GiRwhfF7LOYzwYicutCdEbH2e53ILrzw8Zi76MefnZb5RS_EAxTWxG9Eqz9820soNMo_b_D9g1VUqUMciGapisl80mG2gSLy1yrxbXjEpaKS4aD8dNNOMq7iwgU4Z6aiGzpDbsMFEmpj_Q7dTpIlv3bgnTNZA_S3Vfj_AFYdmMoWx9QTB9d_rSltKIDv7ww3rNgGA1UxMia09hGrhgXwv_1-Gc_nh0bBbbfgorxjDC5w?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X56YnVQtmImfmgkU423kPz67eIt9zdcKFDj8zf-jI3jmAFjFQ4eVA5XJydpGoY27dgJ65W4cF1XD0RRdL6_zBeevjxTeKA5xd58CoOZqQWg9-dVdAtQg4ADvbtqISTTRmFKCc41Z-3KuqE7wrodv_wky8KHzGnKF3OG6Pg9ZAf2pcb-iH68DVuZ4XZp3tWa0abNZNFkEtzPmdmHIJA07WdTyo8HFoFnNScyfr-2CI_bXUSWtjMBkAovekM?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4Wocd1C_dg8gxU_0yG_gfjAtP40bPl1BqDQYiMVOt4Xu4fGON0tathuIy06ugddNDJdPDCYt-PKFFX-FhjcaZrqqGeWdfX15cBgyhYyNyh0GIqh_2PsNHlwfgQBsMv4Sbl-9LbY4iGKfW0gPHSG2PPG4LB34BUXYGLJrFW_xtRZmF69o1Y78DQ13X3qhM0P3TLO2Kwhh6GK3AVKJP0k2HHFgF5nKxotKcZ6kx0R6uMyBsbB9H06Y6nd9M?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4r3RnuyqCRThh2sPvVPJTUNfY48xINo1oki8hp8lNTS4Mq4Ugg4-dFAQyrIYKhvRXRy0SUYBXBxuOOTqyLdewAnoli9iodJ9BX6ZTtLXtuCMZSlO4cS_xBO7lmhGK-3mwOSxMU4oyv8RH0QbtgR9V0fiJsu1zgLO5IIZiVZRHy3mhJhBmpqLqPELm_anoQRAyR9tEUcA_3704Wxm80Dxu680zN7HVGcoALUQ1rLmMzF_Ampw7sUNHyTmI?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7H-mvCWvvftmd04eRERHUIqc0mcLm0DAEzpkwWZ-y0V72RHqRF-YgouVD1GArCQjorD3Dm5PQXtH7KjB_oS7gs5ofyxo8eFBLVSUfcmSuiYT06rdi1x_5Ll4CMyDr0rwo9oEj6AwIG8EzOuXUWmvLjqUnvSbzL3xmDeUn_MueDZiCrYtfyNMZaMPSeTjcnT8iV34gHI8fp8RZ70ScT7GLxc_W3oAvR9WuQbHbXg9tkFayEqH6BgbvJKyM?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4205,7 +4205,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '7 ft Viking Woman Skeleton - Buddinge, Capital Region, DK',
     description: 'DENMARK— Skeleton of Giant woman fully seven feet in height discovered in Denmark and sent to a museum. The skeleton was thought to be very old.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-39',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4GqrEHNmM-q8JDj9SjcsaM5Fkho2eQCjRuq8DRSHUSeJO7llm4CESq8IA8AxJaPAkeGM3j9icDqnJHX-bMLAJEMmtpnl5r2hcTDSOSc3d8X4bWvqJc553cRfQwsZ0qzZXJOjMQs4VmLbXd3LXoyrbdP4e4fbjRoLMnkCb9DuqGyUtxfx91l1sZl-iQS3oy_73VwuLYC7XUNaKNwu-QoU11bsmBsw7qyB4ue4bDxigRk8r62enG4C-TNUQ?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4215,7 +4215,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '7 ft Skeletons - Bokeelia, Florida',
     description: 'FLORIDA— Prehistoric Giant’s skull discovered near Boca Grande, Florida. The discovery seems to confirm the legends of Giants in Florida predating the arrival of the Spaniards.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-40',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X41RyVVrbijM4vNW25iyheGLfs5BrMK6zs9r-CqLn6OQViC1g0Q5ORp2lgEy_1Hwc-3aOE4z8MJ6FB-WWCyyW1HvET8oPy7IsiiSJjf2nXZiWgTUj56xu07OZWbMLR4qwlCqHbd3fldKmyj71bJv19TQfqw3aMKG4G19fAB7axVcIJTcBx-Qtf3A7c49WOy4fvgKxHQifVptFIIDIbc2IaZVXPMpxM3CkrPkfvnSlwMngXW2qNsmkGBtlk?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7WQjssn8k0TIAtIZryoyXQfq2BC7ZpqnoB4rAxf28_m-ftjqDCcZFiHOxVSV9e8TYqaBOjnMik4zZQVNtcJTgK7fjmpauOjEQRbs5eS4edu6Ci_SfyfmPt1elklzZqAzBq5hr7EkTNF148C6d0YxY_-9tH5616S_bLOBoJA9ONJZD9CvrYB9TL9JTFJdR20P5UbdKBS76U3cfEesoMYwt7u0stIV3EoXR02CDrLXWY6P1HqAUaHE0JXy4?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4225,7 +4225,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Stone Hammers & Hieroglyphics - Miami, Arizona',
     description: 'ARIZONA— Fred Brawn and Cy Childers investigated the prehistoric turquoise mine called the Turquoise Queen. This mine is located in an inaccessible area upon a sharp ridge. The mine is a thirty foot wide hole and about the same depth. The hole appeared to be pounded out of solid rock, and dozens of the massive hammer heads are still scattered around. These stone hammers average 14 inches in length and are about 20-30 pounds in weight— tools of prehistoric Giants. Undecipherable hieroglyphics were discovered in the area as well as near other ancient turquoise mines in the region. MASSIVE stone battle axes, hammer heads and other weapons and tools have been discovered all over America confirming a race of prehistoric Giants across this region. Oftentimes these were found buried alongside the Giants within their burial mounds.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-41',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6mS_k6wa7SPmRQ1sO3mQtx0tVosJqu89BPJ556w4_UpnVmIMC9PMas9o4gfGO3hHn3c3lRqlU-VibfAPtOw6WakIzOHAg1irxq3ZhaAunjGAlEgEV6y8-WRUAkmt-UtrfqLrLJagqkKmRl69OFo6O4XB72kHF9PQd9iqn9GW6H3jeQJJAVrplFQ8r6Kw30SZ_xsrzF65vTjxU3cBB77uyCQZt6ZgJDcFpPBX72crEErnhKuzxRi0BUGy0?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4235,7 +4235,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x34 7-8ft Giant Skeletons - Ures, Sonora, MX',
     description: 'NORTH SONORA MEXICO— Paxton Hayes, Alex Krieger, Sigurd Russel of the US discovered the mummies of 34 Giants over seven feet in height within a cave system in Northern Mexico. The mummies were wrapped in clothes designed with embroidered symbols of blue. More unexplored caves were discovered.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-42',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7kRIGO33diOSgTCt6gUDeGVN6nxQg52DcIWb9nKdpnZ4XgUBy0nZedNvSUtJSEhMWNv6dYCsq1x2wAN6-oq5BmN8BSAQeat7bMajowfJniA0x7SHWJekL6rot2AGdUmEo74Kjv5qPcws4caTws8LA3Ff6H7Ud9zc6Y72P84ZhcoJ0qRtcSD6--5KPtuiOkyXl2FRvYdtv7uW5om-m1E5moj5v30kJcvo7k1h5rV-Mv_P1sXVo_PTzjf90?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6QBeV29LJ0NR2dJmbFui9ViDahYjEejh3KK9RkgrkxbqxA-FPW8Lxf3LEBLIPzlScDt9pm0DFRV6uODEjW3IUz7pR_VqusPG5Ur2IJtEScxF9rN-OFSFkUpVz10eP8j_OuKau__eV9_Ka3Y0oy_9oJE52OEvrgyCxT2ABIW5tPdJ8NtjhGGSaGEs61X4a-CgsWU3JxdsbYrAaAnUJdm1JzyVbPoyn9EiTSjyL1VU1cGV97ZjP5wDQxUZQ?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4245,7 +4245,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '17 ft Giant Skeleton & Artifacts - Las Vegas, New Mexico',
     description: 'NEW MEXICO— After hearing old tales of the local natives, a Mr.Luciano Quintana along with five other fellows decided to excavate some odd stones. These carefully placed stones turned out to be a prehistoric burial. Once carefully removing the stones and the layers of decomposed wood and sand, the remains of an ancient Giant of massive proportions was discovered. The Giant was buried in a sitting position. It was determined that the titan was measured around 17 feet in height. Rude implements of enormous size were also recovered in the vicinity.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-43',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4pTE_BQ0NjtlKDp9KIea-2quJ6VdV_IyjgGZ7doXYIrkf14NnTj1HpEcxIaIFkTBQvWLMapAsRavGnYku_FfUHjs6vvyI_9hAPPnArWgZskTwrmP_GohPsbQe3sVxdTeyQMJ3a1OLmqyeVBVxGO2iWvMuAL4UXYsci5AoiCv6irfmeUI8AB3zsdqOYGnRlh4hLCM6s1odlH0ExNqt3JXN0yvD-ZbEaqhsSXehnw7MEeBLI4Cm9mERo_ic?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5k6G_w0zZrB89U_LVtL_LieeNuEGQnxoCR45YAY_2sbFhjMrSQQyL7ZOp4xQ5yfiirOgGF8lNQKFiJv5Po5lcDXjlN-wYUk9VY-eJOZAeWe3psVhBaLiwZgvqYCWb-is9sMXpDNHjToP40jGUCTUT0XAKr8s77uGio542zOHKBT9PlMGdNL2m-R-0vvDBgA2gjBqj2UbmJSWHS8zJxxXwItNpdFp3sY_A7j46kIbePTM4C876kBireZAo?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4HcMY3Is_4duAqmK3my2qN0l-qCUATTsFwZJPAXa4ZASWPqPWTXx74RyduMkP2klnMAENMh6SeJ6pQvr7Ao8R6zyiumGH1JB4CipPS3vR-dFZFiL1scY9TKblJJTgngL8jrQWoXuXvGktp_0Xtss7noXBooUnDDsi56YCf2bi5jPi0gG2kLigv4FWf7i9K8DAf-fPNpOdeQj_cYS1DSmGxkzejjMAfpg7Zi23wLPwd4sQofMki2KWyGOA?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7bV0SYgy2XKyDZ0SVc4nyAx5usLz2KmQv5nzWWRlyGjwYrMWEINJDy4fYutJy60guO4rEX6a1iZCqUi7HdADYinoa0xL1b_vk6nyv7hUPVQ-kn915CPTpxD-lTx2bYDy0L7Mx_hXwCWIY0bsolxigdZSPdfTb5WPUQWA-k04x0K2CRrzpOY-45qqU2QefYEbuj8RlonoW3a52_hX_0bvptuxYDxWcx-YFv1rE4vZ5yQMKc9u3YlhHz2WU?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5QBdmWgJhw6IXUaC0h1iaKTPur1zMLkysGHyeGGUmgKnvzwkFkZzB0qfrRsooQIGcYTNH2-n3mXoINMfWb0Qdp1eO20gWb1hw-uAjnA5duzGQCcCihz7ujfIxJtbWN-ZLFF43_GmQX6Ws0GAPQNhRjXMKE-rGGSo3pNwEbMYV2eQC6xf4I7MUPmgjJqiB4Lu-eOd5_DeEMjwewvz0QrGBImWZBnRfRVwnfMH_gMvtibKIwhu5iJAgIoA8?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7LDhQx8gxh6BS4ZvMqS9t-R4Vxqf6MJPcHlAcdMO0fWr7nhYJS1XK0Y9X_rlV0cX0tl6A0wpcAbd-iDiP2ENa82e2UnYx2Uy3gk5J1A4U-LJ3-V20WFK1K0oEGW-WGouMKJAiyaJpjrEkJ8fogz0yo8f-0IoHnao_6-kReCdOeWd9TMsiQqFlMagpmFIwUSINDgKQjVjzH26vURitFoOh-2tIcLmcuMA_ubP7oqalPgNk9Fm5PEqHUeU0?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X41-TRXORvL88p-MQDu2_nJHnB3d4ojdrkYjH_0Ew1pVC_XEfsDUqlZBgehnO6MiR67BswxzcPY-rUETywTdLSgPqvaSk78O-OiDk0t7n4iaal3KW1KYSrQy1mfif7SvlLCUx6JoTFcfZtHfLraTlJkPVMldfZapnVtWBAByxZ6Zq-WQyIvYfDEXgYMozZqBDXSSc8EX0_m-Q8a_2jTu0R3LrOyKKfRlYkkA8UT0OWtbZT3zkgUf-D-0-U?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4oHVV50FWnV4Mz1Msuz3zEzOqu2IfE7mKVeOMMlCFa5jfNW430uc49xECVRHjWg5Mvy3FuKBdn5hcg1LW00Hsf_zffEJKLef003HAlsy7O1p4FffsCTxZ2SR625Vst2CIWVqkEIqHiC2fZRKu6IHkFd5Vxg15AZXcObQX5R9PzffdeakpllLroGUUFuMhq4KVOPPu8FbuqvOM86byN4x7twke6gvHJDUNLTkO2eufjEghAcNGzwR0GOMg?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4255,7 +4255,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x5 8 ft Giant Skeletons - Utica, Ohio',
     description: 'OHIO— Five prehistoric Giants were discovered within burial mounds near Homer, Ohio. The Giants were buried laying on a megalithic stone floor. About 40 stone implements of great artisanship were recovered with the titans.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-44',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5tgnZE5nTisuGS3heUOkztPikDXPnmDOnM5Jdl2oE3cMAVg5hiJsiyivWGOJuTDBskt3LQltuta5_VsPjxrg2w25qI67dIx6mGgLg55W39yfuPF5NIW_tx8i1b_GP3yHtDH3BY_yGceHtYtMsh6BlArG3X7yVJ1GSNivwSGkoOsg9OE4PeSXBd8VaXIq9Dm3GqhtuId22Q3wDvh54nJ7WB8pGBAEYx9PR5VgAh1BLsalG3hW7sF7JbWjY?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5co_wExaIrqpo3131RrerSInEJ_qNzne8y2csxUp75_K3wetP9Q27N3G8OqoJ1VWp6Y1UHY-qvpTCmkLvX6c4huFMdKD4L5h5snRMvbSArFi2R-6p4oWKfk6t6EJijY_ztqsbxYar4Gm0ehD_oyJ75WrVRTWfR8VCkB2bWBdlhKSDx4moAN8rNYmNljKFMWIldRw9dCdiNX2ReUKOADTQFxaKosYbQPAZGfya6HWXme2OtB7JEs57gvc0?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4265,7 +4265,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '10 ft Giant Skeletons - Puga, Nayarit, MX',
     description: 'MEXICO— British and American explorers in search of legendary Spanish gold within Mexico discover the skeletons of a prehistoric race of Giants averaging more than ten feet in height. The Giants were found within burial mounds. Pieces of pottery were also recovered from the mounds.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-45',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5BEf-fAh7RwW6X555k4-aBSdRpQ6F-9J9j1ePNjXzxCjJmW06yu97iiihuZ7vCdKuTWXUp1YxVIkLGLHsvrLanISZfpzUdDjda8XvKHZyYFKbwnNzocJfYVPB2w5WUdqXIk2DfEQggUU6aRT2dubqDP38HkuOaVUWoo5QxvlGdZTmZiDxZm6v0gK6cPxuvTzCvk7xktvNyzo6lDEopvIz48JEtuYTvxkYlLEtCpEBjcOITgJK12IG4rR8?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5-uf_Az_CwnfW2_jgg7R7oXwesCnqQIGPrSqtA7l4j62_fa_T-mtD-bGeHnUh8A2HmCV9XvtPOFGAYwLln22fmxglwIoc-AqsMW-WF5KKucVMnK0uOxmLrkttCqarn0ECIQlZ9A8Spx1-xELAxMB2GiJLgcd_ugs1EA01hGXJ5chgw8ADYO7paL4vd_JR6x_i44Km-Z47Y0O98vZjVw7amYV7R86KTjMg_9ayXQEkBhVAeyAg66TEb164?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4275,7 +4275,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '9 ft Giant Skeleton - Sparta, Tennessee',
     description: 'TENNESSEE— While working in a field, Justice of the Peace John Park uncovered the megalithic burial mound of a prehistoric Giant. Upon removing the top stone, he discovered an ancient burial vault neatly lined with stones. The Giant within measured nine feet in height and three feet across the chest. He took some of the bones home with him, which were all extremely large.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-46',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7tPM5a6ArLdoPnWnz4u0qcs7Vew9wjPvgCsLbMlNixlSrCltsZOoWsp1fyT52X99k2a8gZon89JxORi-EtvKDfTivlLsrVFCuvYrhWlLG3G0bZkcs_b5pQbyLGoSYfaElqGQ6q1wAKnxKQ17l7WRep3l0GVJXNW0CG5IWay0g-iMlUYkL_jd3FHrZ2tvye_GDauW6swQ6sjPuQMmSyG-3bo2ZpbQIGKe5gmr6RpBE8gWYXG2eWfWgecpc?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X427D3hJZO04UZ6d1lXsK3YgZedA9pQX-WbSNp3n6Jd5Yhl15sss5SDgub0-1PIyjRu0FsB8-LJpa9ivcZVmOadw5GnmaYDtamgNVHU9XyhgVxMmR6TWRD6p6NOJOeJ0Zb2kv_PCHhsakVddy6G2_Wak7NAp-zj2j-p_lt5D4bElQpRaLSXhUa7h-d--NywC0pSzu-fkUEm5VuZzVx4pxe3p5mT1w_iwXwTx1SQm4M-Iv_UqCTnjsWoeok?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4285,7 +4285,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Large Skeleton - Honey Grove, Texas',
     description: 'TEXAS— A race of prehistoric Giants once lived in Texas in the ancient past. Who were these titans? They had a tradition of building their monumental burial mounds out of earth and round shaped megalithic boulders that were possibly natural concretions but many times shaped with tools. They are typically discovered near the waterways of creeks and rivers. Celtic and Viking runes have also been discovered in the areas of Texas and Oklahoma near areas where such mounds were located, suggesting possible origins of these Moundbuilders of antiquity.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-47',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4Ne596CDsoCQY7dM6CFvMh1uPQRuDqPAmmuIOSP_dYtZHQcPpXT42-1g_iktTYWl3IY8zSHwnRupJB0-M8N5Ag3whWV_FoJypygIY7etmaDvATuLAMXJ6omqh0PTgyxSgsag-EEiIkhhrVl8DTwGpuUBTL8p84UJMgpHX5zwjlQxmw3mEpAil9iwo6lfPBmd092hfs-XERISSwXZormIkZCn4f2s7HvTXfTK9iZMzKkYViouU9PkcDA30?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4295,7 +4295,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '8 ft Hundreds of Giant Skeletons & Mummies - Lovelock, Nevada',
     description: 'NEVADA— Prehistoric Giant eleven feet in height was unearthed approximately 72 miles from the red-haired Lovelock Cave Giant mummies, suggesting a widespread range of these ancient race of titans in the general area. Also, in the region , hundreds of Giants averaging eight feet in height were discovered by archaeologists.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-48',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6rxh-QEo_vaDYRAQ-swNIQ1hnnDCDF86zasqul8SMGg7LGMBCc2D7wI_uX8a3gUmSx85sP8sHlUWJDG0THFj0jQ9S6odLdgdRqLME-IRjxSiKbv64jfuwrfS7q0alxeJjiNlt4h9EFRMtftQp9TEeu1Ppc9aoYEYfhWjsBrYO6vl_ii15hiob6pXi-8hdG0fB429bC3AEdqLq7Kk7mN1ahYSMCvFDzZ-o3fHJgFrzToaVfMGsV5fh7o9g?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4305,7 +4305,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '11 ft Giant Skeleton - Winnemucca, Nevada',
     description: 'NEVADA— Workmen engaged in digging gravel uncovered the skeletal bones of an ancient Giant 11 feet in height. The bones were examined by a Dr. Samuels who indicated that they were in truth the remains of a gigantic man. The remains were discovered about 67 miles from the famed red-haired Lovelock Cave Giants.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-49',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7JcJtWzalibQ2O1Gh61f0zFjMRa_8OlN9ET_LZOOVkZnTqiSuG24Fa77sPA4jjPLvD1b2Gk0KtJik-GXZktSiA3LvMXMeBy9KbOkvtn-YMsc9rrmKXlWtbBPMEWm6YB3kwoSqkbY7mUa5T5qduES8TH-FcMOcEFBU-U8dihG8I90blWIGtfIbn6caM13qmEQHyzdQk2AV1CAf51Zd9fldrZEOMjQYcce8ZSOFxn__-bD0CW14IEr121pY?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6tZmy6pVeQF3xSRGDX-ppocJsOnE5elIjBgn8deiXS8bjD_iVj47a2cmXFJXe2nNYxWgCVWQVkO_vKgPk9TdlosdTU2BHfbN94AgiCHOEqR96Wp57-01FAjNqORC4UUw7a7M2F5setthqlyvlz3p11tg82x0uJA_I3yr-18nuowsAgkC2UsMkh7pn7JHxYwxg8QYBPKsZowoQDiQTMl4Rw2eDUqtLKCyzsKFsmTzs6nS_hNFwi9jIcyIc?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4315,7 +4315,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeleton under 1,000 lb rock - Westernport, Maryland',
     description: 'MARYLAND— Remains of a prehistoric Giant found beneath a massive stone weighing about 1,000 pounds. The skull walls were very thick.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-50',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X534XBl6luQSgqiPWdfKkUkt02tqVs7317JPngwyu2G7_C1vXnHFu64fYd6geS8QUpM91ISHinvtC_xkgeFdsM-fB8B0Sl5-K-uuJAEE5fv-L_EVFK3oz4DHzShAw3OqmPjSRs4BZDRODDud2pLBTNJEuKVUkzMIHiPLvTa8x7pRr4kU2gXAnwb-A6npJlxHa-tnK2kKeFEbGO7wnNDC8DaFnsJ5_NhGMntDso4VuMEWROU-AWUmqzqhlg?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4325,7 +4325,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '7.5 ft Giant Skeleton - Lebanon, Ohio',
     description: 'OHIO— Farmer J. Watkins discovered a prehistoric burial mound while digging into a gravel bank on his farm near Stubbtown, Ohio. Many ancient skeletons were unearthed, including a Giant woman measuring seven feet five inches in height. Around her neck were beautiful ropes of pearls.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-51',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5hIhGC0bsfSg-FdKtf2urFvJ2RFyBu1b7hGFXmbZ39_cUEKpV8fdhFQ7ZIqH3wER7Dm-tQIJmY4fwQc-b6a4uMYkekW61UWZr1JLRGh-7gbIQSTL7BSUJfnzUEDe006Lmei8g7sIZwNpffIYiYZTjTV66OROGe92AIrYvqbLG1Z_oT42-LuxDZyMBQa8MyAjJ6Ahu_vrPYR7PNkW-AufZhAiJm18-me0hnB8dN2NFpKt_p1UP_l-7W9zE?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4335,7 +4335,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '10 ft Giant Skeleton - Shoshone, Idaho',
     description: 'IDAHO— The skeleton of an ancient Giant ten feet in height with a skull twice the size of a modern human was discovered deep within a Southern Idaho cave. The bones were to packed up and sent to the Museum in Washington, D.C. — A thirty pound strange and rusty cylindrical artifact that appeared to be a possible unknown gun-like part was found near the deceased titan.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-52',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7P7Pt7-ZjHj-6HtZFFwQil2pzjlcV-huyzd55368w0cSgSttVmB7KVFc9p5M6IXkyR4m8VZiNn8mm1Q4i5op7Ky1zDO2Qd97pm338s5KuCdk0zab3FquB8pqgUvOzjDNWSg9GxUPIxOMlYmnlk-WHDS6L-4qs7STNW8PmDiciMOjbpUwjZuxtouJfvJzlIyHVKP8vD9M99DvRldSackE3Ex8LufNXr-rTbZgaahNyWyY-wk-W4uVBwu4U?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4sTqSrW-y6QuMgCCodP6NULjOQnfD_QwjPqGgdr8wwLIn4WXMGS7dGJQzjfsEqgaab51Al20PHtjiyJ66TVS93WZs4WQU05ViUjGnU204Z7dlBbmXrUffwRCTHnjQLMMnSjcAxGnjvdKYE0bVVrWQbZ8N97UuTr6sxSqoPELCBXMqDkX-bEH8XGuIBftor6hAiBLL0qDqFPCIIQell4hHVQ09qKA-iG-QddUgfHR5zH4arxDWCTDar4Lk?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6hw8jZZcwByA9rhsr4VMvj4fEivjndkBp-RykDPstHoAlFL_b75H8qSWBkyU_MpwgkXlWlipswnTqsrGBucY3EqalyJE8n-p9nnquZDSiikV76xQYSO_Jrec62aMVFCfJ876yTlPzVheuNMVvyyv_r1kHC1gjkvp3_bvtlBXoB92ZU3UTDQAIs6zUjJr0Twtr8bt4-Py_rsemoh7L-9ya-JIDoNzxnPPYLukY-auydWswSshcF776y3DM?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4345,7 +4345,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '15-18 ft Giant Skeleton - Prescott, Arizona',
     description: 'ARIZONA— On his farm northwest of Prescott, Arizona, discovered the skeleton of a prehistoric Giant twice the size of modern man. Prehistoric Giants in the hundreds have been discovered all throughout the Cliff Dweller Region of the American Southwest.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-53',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6k8Re0wS5O-ZYBboGbqbynMiClhFnx7qaKKES2JIvQzewv3hJV93ogmXI1VCHNhEN4a8mx-4YRflCAX7ONI41w2F2WzWhm0gri3QR2pbLUa7dw5wl4z9ruoooBXDPV_lghCWDBuPmI8tevSlrJPVzfawsvxbMb-zwH9aUPkcjveb5Ap99cLqwKDN_wMoXXodOutGvGKvefE-HqSgvc0M9DObNdk6xgEg2J63axR0O652b2KKGf8u3Csl8?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4355,7 +4355,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '7-11 ft Giant Skeletons - Aswan, Aswan, EG',
     description: 'EGYPT— A professor uncovers over sixty prehistoric burials of a race of Giants ranging from seven foot eight inches up to eleven foot one inch in height. Who were these ancient titans? They were thought to have dated back to around 1043 B.C.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-54',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7h85-Ue9klR-WR65Oa_zpbbgixiLFu12MYF_yHJabuy-ao1NI1L1BUikcwkLro6fwUiSM_momHuEDwUqlD5W-uiyXMEj9hpkMpcIMbNh6mBnMav-WgfJJPsxr2zxdWGTrf4j8Q3bQhlencrWF5cEW0wafIMvfzysreevxBMP1_SRx4w-8NaSVJF9_2NSKFHrILYpimiKZ72pdUIs0Yz7gXYLnVY_yLwopvScGEtZJm9xV6ZSu1BRRJQbY?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4365,7 +4365,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeleton - Moundsville, West Virginia',
     description: 'WEST VIRGINIA— A prehistoric burial mound was excavated in Grave Creek, West Virginia. Within this mound was discovered Giant skeletons, one of which was on display for a time. At a depth of 60 feet, this strangely inscribed stone was discovered written in an ancient tongue of Iberian/ Phoenician. Who were the Giant Moundbuilders in America of antiquity? It seems they might’ve understood and/ or spoken a few different languages. —-Find more information regarding ancient tongues spoken in America in the book: America B.C. by Barry Fell.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-55',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5glkOqnWVeUofrhBC4-XlWrl783S7IDX8p4mkUrZaOydK9A07Gj9MXgnfzX4m5yBia246uHsKT583ruSX6NZo1JzaYIsufD4uth1j8laIamM0icVH_AQA9IdREEeHTgQgIyYVBS-L1SIzvkee2JGFqFVLYIUn55xcPilhnZ-Q2mj3GVvkDJ-bJeL9EAD8_qweWmiuKP_mzDioxHUu4th80noEiu6CpOe9oV5I__XMiwF5l7LX1RqPxSLs?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4375,7 +4375,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeletons - Carthage, Illinois',
     description: 'ILLINOIS— A farmer accidentally discovered an ancient burial mound of prehistoric Giants. Several skeletons of unusual size were found within the burial chamber and were thought to have been warriors. The teeth were much larger than the teeth of modern humans.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-56',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6TzifpmQWWC_l18I6b-XHUXpIbxkDXaA0Fh-75MZxCj8FvOMr_htsQ5ptKYY16K8C6jFZ7yiT3IO34ScQzfZIK2cHJW6YE9Y5XHKfnePVaxJ6zGqh_a54xrTF2EFi7XMPZTJoPT2q8WnqLS1ktyUjLZFo20UgFCusFI5XqXtIjOs_5RVa2zsbq_Kzk0pAJQDkSLnuw28_yRWnfBI5G36VTQCw-PJTImNVeFRMjDgWZb52AIol9rxoYcIQ?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7uc_lbAUQs7bfuGSgEHUS779SMYELe7eqo1aw6-Ft8ySiou0pqVfC50UPDG1YOHmXjDxT7Xzs8FN0DrcnK2TmIKl6JiPmbh-LafR_OG4qN-0pk9xB6GFW7SigQYLNqSkR6iO9aO6QCyPmJw-2j2It39QLvfUy5I5G1eSH9oo8rr_QX8uEI-9Qo8fPTV8Ov5f0oRwsSnJqESV08ALZlUv5US7xdyEskhaW8hW2bxjo_PkelmmacFeudoTQ?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6PNaLnJAB0jsAlSoEAodupMxjWT07QyV0oVwP4mhN8Kd-H1kztTz-PLMv9WswgTCt1sqPGz1gu6omDIcV-SrT9PrvUyA4hxuoRnpiHH7oS5Mq49IQDXDp8mJCSQR-OnlCOfoZUsiHpW6eg_1oHsZ8oJbrzJ-kFS4E5g7aXkGLq_LlyzFHCcvc2NQzVMMSZAIlSrjKRfoMHed6QghMYvuCJPvn3JGiw-y8tsUZ1nHi_JBpZ81cspvC8cig?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7PzG0_tPlqiSwU5Rz1c8k9e5EHIWX9UN2tXRZy7y48rW4xDMI95DsDsdThCF3Nzghx3kDpTUve5h0LEyoG16fXo_lUQRDHqiZz_p_967RdgKBAddi7RWt2FJWj5gGxBYon2TKd1IyygsyZSMTP366tdp2at0gasbb0Q-tXfmIKQQZ8KqaabeDg7AatDO2VbbdvU5RADSATNC2i6k6Hbsx_G-q6XoOUyqm76gr81OqtPTRoEVeB9RHVqdg?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4385,7 +4385,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '7.5 ft Giant Skeleton - Hamilton, Ohio',
     description: 'OHIO— A Mr. Tweedale of Hamilton, Ohio discovered the prehistoric skeleton of a Giant upon opening a burial mound in that area. While making his way home, sadly he stumbled and dropped the remains of the Giant which crumbled to dust upon the hard fall.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-57',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4uo3xA1uj44f222E8QgASo2RJd2MbjL0uYjyyz7MQMSPEZaQFE3JtvboQdRFwGC4MJrJ3I0NsgxVhx1B14im53sjj5ik-wJZTAgYf2g7SZ-KBTNBGi0pHegIXhogbRSuMwJBCP9R2L6aaYXjudXBd5P0f4DTx-we8HDgxpQpJuxPBOSRztYuxB7VBeJG2ahhv8jqmhtqnXfATjoVVRWn4dfHPgmWx2CZa6cocJqt5sgyEt3dagxcnDdRY?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4395,7 +4395,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeleton - Forest, Mississippi',
     description: 'MISSISSIPPI— Farmer discovers a Large Skeleton of a prehistoric person on his farm. Another such skeleton had been discovered within the same region.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-58',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X511lD1jIMz_WKcY0vZUQLSN2BaPfqyErVJU990iisRT3fpFFHQus5PakSoeSQ7JQxcsrCOI2Zwu9WyPSV8x2sEry3dTNBhjuwrrRL5Aiyn1CgsMlyq6SQHDHrBoTB7qltaoVty9xiHE2voyasPyep3I3PEencBMG6EflxWCuu44xMRRPtY-6r2s6DW0oQ5WZ55H4qvG-ywFrlgkWNYzc7FbYgEkD6HtiGmzpd9h9AcIK961PCs5PywuR4?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4405,7 +4405,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x3 Giant Skeletons - Mitcham, England, GB',
     description: 'ENGLAND— While excavations were underway near Morden Road, ten ancient skeletons were discovered. Three of which were of Giant proportions being exceptionally tall. These were thought to be Anglo-Saxon Chieftains, but could very well be Celtic in origin.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-59',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X78oMU_EJ6ksRKlRolmO9duMXqRUbpD4PUf7mDA82RxPfj_wsN5mwBk0Kz4Gp_YXCsliJXqUQYBip-ZDWr-wfNl_wVrbq-4i_pTm4u1kMF4ADZ-n5ZGCNFA4me9bFjJW255CtnS8ytDzWQirh_JLDLhmrVZfLgA5nB3VPjc78ac_p-exMKAYEilWRUZLiu4SiHb-nH8---N3PGTmR9b99_3mSpf-Cc-HZoHYq5vDsTee3EFbLrBQ6i5wcM?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7dI5aDA5KKc1N8txms25-lHHFH1xTrzjDVPU-C_mt_VTMNHkyjZM_2VJU782LgPe4HzbgleoUp0g33NBUfROTGFKwJweMsxf7DmBp4Sb9eDx6iKtkz6J20tvULOcW7qw2twlwFK21-XmMvfBXECAIjX5DcoJhmAcwaBWcvpaQF79CG6adIjBbDkuNCRD30qVtVTdfMrkw11T-KhR2tPpV6f1v2m3LSzkWkD5qc306DDcXlzvbb166m7iA?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4415,7 +4415,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Bones Washed Up - Santa Monica, California',
     description: 'CALIFORNIA— The partial remains of a prehistoric skeleton was discovered washed up on the Malibu Coast shoreline just above Santa Monica. Judging from the size of the bones, the individual was of great strength and a possible Giant.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-60',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X51t6Ob67dfZppi6KfhhoVClFquMPDfoxFc7EzmxH3xZVdJ0CXLyZF44xddIIl5OAHcTPK1HsSdDC2l9yPATqI-7dqYbv4GQoMahOUPwQVVAJ6cbX7C0QPQKXMNOlmVYPcPVkBPto2aF_tGmcRBXRn3eo3KMiL-rHvYMHGWGO3B65Y3SQC94Msa_5hoOYZsGbNE40-YoSbsVsoXp5yBVJlAXKKLuyHLiEiA0eUlmnor1oEtUb7__Lo_ySo?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4425,7 +4425,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeletons - Chisec, Alta Verapaz, GT',
     description: 'GUATEMALA— A prehistoric Stone Age city uncovered seems to have been immediately swallowed up by an earthquake in ancient times. According to the many artifacts discovered, this was a highly civilized people. Some of the skeletons brought to light were those of Giants.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-61',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4XiQN0j2aOY8e6yVO267HzBqOVqa5qmICBdqB3p2FJp_2_KNvFcWXsD_RZ7V5m60H5zC42qHdoVtfy1r5lUC7qcsboHmW5vigZ10klSV_qWuAwLn6ATpetLV6ojDYmDhXSBzFtoEAQCn4DMs_4B_srE-V0bnkLX-VtGqQt6mUCOOOJTx65OSKWA8vavbdhJte6FLfvrvRwNj9E3bE5vFylOPY_dBcM6bNLymy3g4ZqoLzT_mttf4Zxs8w?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4435,7 +4435,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeleton - Calico Rock, Arkansas',
     description: 'ARKANSAS— Railway builders unearth what appeared to be an Indian burial ground. Among the articles discovered was a gigantic jawbone, large enough to slide over the face of a modern man. Possibly, it’s bearer was a descendant of the Giant Moundbuilders who once ruled the continent.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-62',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X697ue45OgwofG0Dm6y8JjVGB7IgIu01EitrPU-i8ab6nkjQyAgdHfuP0XvZMjtJYAbq4Eu7wQllSupTWMhg3OZj54pBC4ns_5Mmfyx-APvv7V9iO-EahgAkVx_tHnjZ_-QwDp71T4bAMDR4-9GR62tk0u3q_wOo0V9w3QWC1JDhDeXvRmJHG7xNY-uWZ-7_BtBZ0AI7DMNwE27MTfBFojeOp-EuhELAgCTcLylUOz25f38cp2iepf4gT0?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4445,7 +4445,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeleton - Fredericktown, Ohio',
     description: 'CHESTERVILLE, OHIO—\nIn 1829, a burial mound was destroyed for the purpose of making brick for the township’s first hotel. Upon the deconstruction, a Giant’s skeleton was unearthed.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-63',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X42ijB7t_5UPmRyISZpBl51liAzL36uLxJZgKWGRpWCFq8ODdino-IZiHCZOBotAgNT8TofjHaDNYbcYjzGnvQ-egOAWH3dBU_zg_eeUTx3f0KeN_pq0tPFK5_yz2NNoqq8_MS-TDhIS6Qn2TDAmT-2xmiTU18oxwT9fV55q1xX38bEBE5e87hV6hfIlzSmnkTcMzLY3S_JY4sdOLYcb2S9aVrdQeG2TU2x5eF3eXTU7f14NRtn88e4jZU?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4455,7 +4455,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeleton - Cardington, Ohio',
     description: 'OHIO— Massive burial mounds and earthworks of the Prehistoric Moundbuilders in Ohio detailed in report. In one such mound, a Giant skeleton possessing a very large jawbone was unearthed. Who were these titans that once lived and ruled in ancient America?\nHistory knows.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-64',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X44QUsKGebSasjr9mhL8n5AZEcPQs-NIRjZHu23r7SFjrE1KTgJdzOPtHXBlASSlq5_HLV7RBuvKtujS5LhnRy-vXr9gaDjtvn4rg0-y9M4VqklR72wKFUTJb1hxuCh5uGDoThqahCfOEbc7thX2_xM3BBN2J_RGdyIt2Nvqg-WI0q0SOh-nXPtlq47sm2buLmd3JteyXpO91c8QUHBiLBQP3K4FgFVZPO-Zy0-maoV4hBRVduuQoOJKUM?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6dHB8-taHEl0TMpnizD7CclvNR6nwBf1yMH_E8-QCYbmjiNTxQba1UmjjqI8OTFj9_IjeP7ZchJrsYLcAQ35H3wgTvsKZT8v5WvkX-nThAA5h0Ea5gGeDpyHhdwFsT9i5wy7z2kRyQL-_KA8VNygiJvM3IRcxPbSEJgDscYwTEzlTpf6pBs4Ell3EynTOyPlCTZ0V3R0rSpGhs-B_WKjSabv4KByFW1e9_xSg9RBPeyNN-doeZNsYcUwo?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4465,7 +4465,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeleton - Lewiston, Idaho',
     description: 'IDAHO— Two members of the State Highway Department of Idaho discovered the skeletal remains of a prehistoric Giant in the Salmon River country. The lower jawbone and vertebrae were to be sent to the Smithsonian in Washington D.C.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-65',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5DX4IiTAV4IvG-9wgO8rJO00AYfDeEQFXAIBqXkkWkk4VIcZNku8-CVmAaZFaKHun7iBHloBqa8zXjJBkt9wGi5cF3lneowtmhgcYu2Kp1iNCyl7VQUxQbKj3o82CeuFXryGiAPua0Wze3JHmIaqyv-WIfXAnCLqOIjkV47XCgszOJRgAtaBhsj5aBAeurT3IIqTzGQ3FlIlyTUYKArDk59PcwjMkynJZKBMw207Gu_IESagsJ91f1DZ0?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4475,7 +4475,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Horned Skeleton - Pendleton, Oregon',
     description: 'IDAHO— Two members of the State Highway Department of Idaho discovered the skeletal remains of a prehistoric Giant in the Salmon River country. The lower jawbone and vertebrae were to be sent to the Smithsonian in Washington D.C.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-66',
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
     isApocryphal: true
@@ -4484,7 +4484,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Tribe of Giants - Nikiski, Alaska',
     description: 'ALASKA— The Reverend Francis Barnum S.J. from Chicago spent a number of years traveling through Alaska as a missionary to the indigenous peoples of the new frontier. Upon moving northward into the Eskimo territories, he happened upon a strange tribe of European-looking Indians of gigantic stature. There he lived among them for over eight years and mastered their strange language. During his entire time dwelling with the tribal groups, he never saw one man that wasn’t MUCH larger and taller in height than the average American man.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-67',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4jaUHLDIV2vQtqsHJ6DptNZGEoPQBj4CPC9TVuNqEd0IQwVC5AcbLC9rtfs5a8E_xaTLwmluLhu1mtQ24-B4qbqbMSh7QjGxXblhHPTvjLkx-zKJ4wWWihNU5OqZtpUwRqahOeA5Kr0Fi6JyghCwAaE4ce27zAL3X43cMjryGHtjxGULlJ6RDhAB-RGH9uiyVTAjtmJdgz3WorkM2N37zXsYHh-BLYlypNgq4HHzmcCL5gwDZBahUGDDo?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4494,7 +4494,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Silver Lake - La Pine, Oregon',
     description: 'date: description: source: location:',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-68',
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
     isApocryphal: true
@@ -4503,7 +4503,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x14 Giant Skeletons - Saint-Martin-le-Vinoux, Rhone-Alpes, FR',
     description: 'FRANCE— Workers uncover the megalithic graves of 14 prehistoric Giants of massive proportions at Grenoble, France. In ancient times, Celtic peoples moved through France, Germany and into the British Isles erecting huge megalithic stone monuments as well as burial mounds and henges.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-70',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X57HqT20IB1Df-pXp1qa3UtUOQ9KohOM2-xDPreHTtvMRPm6Kbu61mxfgNw0-NTibVLzxNfIKz-xoxOshYjyuCXFwlT3vxG0B-xcBU28QWhRN19xondN57kS_VXpuXfQ1dxzPK6bDmwegdWt4X6FxJ40FG-Bx4VORsBInmj2JHq95cWzWDewIPa2Rg20rtX3vbqZMhHPPovyC_nF0VyJMr2lzxWyW7WW_S2si6o5O4Vgra0UaGTtLrOBK0?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4513,7 +4513,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeletons - Port Hueneme, California',
     description: 'CALIFORNIA—Many prehistoric Giants seven and a half feet in height with massive skulls discovered on San Nicolas Island off of the south California coast. Today the island is a testing site for the US Navy.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-71',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7qxIzXMrcN5cOUGSE2OwkJSvmPWtXVKlkne2pxSV1jmJpTkTft4lW8Q2CbQcogSfXTbsKHAhuxsnsLAk2U_pZMu-bQb_dWHFnpHg710W8kOqdJ_ilxd4XBYoPwflT7OKsMnCDit7Qu43lAX2srBtVLzdmJbQhcMvqg0lPyQcmpPYY2Rr7I_yLB0lKbI5zba4XNK4QQBGo1wfcgkt-EWmhOoJnbPfhjL0jy1SwLKAIK0IzRT_a3pNfKdX4?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4523,7 +4523,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '8 ft Giant Skeleton - Avalon, California',
     description: 'CATALINA ISLAND, CALIFORNIA—\nUpon hearing an old Native American relay legends of a prehistoric race of eight foot tall Giants on the island, Dr. Furstenan started excavating along Avalon Bay and uncovered an ancient Giant. Many artifacts were discovered as well as a strange flat stone bearing unknown symbols— possibly a calendar. After examining the Giant’s bones he issued the above utterance.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-72',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X54XnOeqk99tau_I7OTsZg0XQPmCqonuFhqA40TRSESLRgnPOEo-2nvwQd8zxM5Zfu1dJF-WnUkRgJAaY1K7KGnZBmsgPklSsFvJAvn6cUJ4G_xsyMSd6cDyTXgBQCXCHw4E9MQfGxWS0V-uU5-8W1wWKJVUCYaDpVUASczHb15yZS_nIliPea5X6vn5t4gauKX-0OTn-s2pEn-gKeh8WgPn-5_IvvBvajfIXU0n6xgQjKI1Pk0sQGts9Y?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4533,7 +4533,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeleton - Prescott, Arizona',
     description: 'ARIZONA— Prehistoric Giant with very long arms and abnormally long sharp teeth discovered by workmen conducting an excavation in what is thought to be an ancient fort that the prehistoric peoples inhabited.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-73',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6p9vSoPy1zA8nUF_K6fyuFpJU--htkHkv_C1-WgpAIo7MA3QoXrpE0NKileYAyvrT-hA2NL8TWI4MGBxOTM4GfP1fI82A2GH5OaqXrZseX_aY0FtUzcjOkkpmZ0tPRRzqnWlkb56AoN2JH9WJyiIkavk_oRR_5In9cW_M1LHrAa15YPD1KfyIvyzHbIHG78p0lWPiC9raE_QLdIU_EayAs_8WMbnDT9oncY4SgOwbCWuQ1c-ABdzltN60?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4543,7 +4543,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '300 ft Giant Skeleton - Santa Caterina Villarmosa, Sicily, IT',
     description: 'SICILY/ CRETE/ LUCERNE— Report describes the impossibility of declaring how tall the largest Giant ever to live was.\nA supposed Giant humanoid discovered in Sicily was declared nearly 300’ in height and a massive 70’ tall Giant from the island of Crete was mentioned. Lastly, a still impressive 17’ Giant from Lucerne was stated. Definitely, Giants had differing heights probably based upon the tribes/ peoples they descended from.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-74',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4jjZB1xfv2juo0jImLdeZuhkk-OXGKbDDnyjplNSLUhSsJH89iloGUPIrwykB7WtBkVrs0E9qT-4bJZBDiKe0ACL6xKX_lxjG6THmmvKaHkD1LCO_aDGr5iaVhWrWskmwmvcPyRpislJi_YW5mNfxR5eRDa3-8n-oxhTK5f8ruVFY1pSVQ2FiZON57tcDbc-LfJqcn6HFKDJABS4nGecvd3qnGfZ_nuaM6UuP0YLl-1EHLETQQCfYccvc?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4553,7 +4553,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '70 ft Giant Skeleton - Zoniana, Crete, GR',
     description: 'SICILY/ CRETE/ LUCERNE— Report describes the impossibility of declaring how tall the largest Giant ever to live was.\nA supposed Giant humanoid discovered in Sicily was declared nearly 300’ in height and a massive 70’ tall Giant from the island of Crete was mentioned. Lastly, a still impressive 17’ Giant from Lucerne was stated. Definitely, Giants had differing heights probably based upon the tribes/ peoples they descended from.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-75',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5nfJuDH1hkbYw8DMySEQCSAlaEmdFOlzM38Cn49dCrPlR5GrSEyWMlpmRpijiZoHrfA2bGEBXSSPrb2FFPOtqv7J_XLksXBjS92XglaX_-mFxcs-cP93dhbKPR6YHF3BjpDHi35DjhiCEvBMu_x-17DqukkmpVfIDC1R28SY1WngSivDGMDZcMWP8XWBeKaBM-tm-8z93CaUXTIuA2lpR1jEzlXCRze9OhsYUIePiz6UT6dPM8IJx-jM8?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4563,7 +4563,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '17 ft Giant Skeleton - Luzern, Lucerne, CH',
     description: 'SICILY/ CRETE/ LUCERNE— Report describes the impossibility of declaring how tall the largest Giant ever to live was.\nA supposed Giant humanoid discovered in Sicily was declared nearly 300’ in height and a massive 70’ tall Giant from the island of Crete was mentioned. Lastly, a still impressive 17’ Giant from Lucerne was stated. Definitely, Giants had differing heights probably based upon the tribes/ peoples they descended from.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-76',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6PfogGyML1G02O2-h6701L8xEcmvy30oOEqTKkvtdLXYiyfQT-qwtD1t9zaFOuozA7m6mTe5M2bkNIambOlnh28yUiUFM4NEcUAoGVHsL_srlsC3Z5Jk3nqqsaxc0kYCz31qg7TQHVZynE1JX1VFgJuk9dpgBQm91KeKsOfuBBGZP3S3q4mzKqRzG8d8NVNFa2XemkAF1M5I4CpuLwAiWubFdio8rakqL2W9GBemlskXXCQxgK8StcRbU?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4573,7 +4573,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeleton - Texcoco de Mora, Mexico, MX',
     description: 'MEXICO—A discovery of an ancient Giant was made and the skeleton was sent to Mexico City for studying. Possibly this was one of the pre-Aztec titans who would’ve been a builder of the ancient pyramids of that country.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-77',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5ygUyQrNgcrRaRRfbrE3aP8bSGOa2hP2_X3_Sy6yxyaf4JM5X0mGdIXT99ieKrvPAkEnJbX_R1c8vmdak8XiUpb87pCMAuvBEuRMbAYio5BHTrFuox6j17Xc6RfrL8SFTievgSMyBH-ITIt6vPlY1byjhFaMSeTbgI1V6GmMNqvdbl3-8LA4eZi__9wNYBvg15n7vqWvmI9T6nQXE2AzQDP1ZzusErS7YeoEgb-oaFmUFJVaY5kmP4ye0?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4VWwP0BiNQaCV1BtwE56nnAGsOl3dEOK9QOKWldIRZPVuwPoRpt7y5-fwpBY6Zd-V3KGQIL3j7kRKJ3oSJSdwZiJCLig0dNOvgsH_y-s9jwuohz7Qppf8cz6sX-GaPB-IgzvtGa1eHZQ1CdsKnowpEVSJCKyKvcy5R1FOkIgVQah1jQ1X2rXa7xLoXDr__yWa5Y2EZ1QPLI4bDx0ga6k5GCVCplT9Bo7_BX8mLemiFsBQn1L-q1SOd4_Y?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4583,7 +4583,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x3 Giant Skulls w/ Sharp Teeth - Richmond, Missouri',
     description: 'MISSOURI— Land owner in the Ozarks discovers three Giant’s skulls in a cave. The skulls are described as having a low receding forehead (somewhat elongated), very thick skull walls and very large sharp teeth.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-78',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6r-D48P4yGn-Ev-BjQch_RXZqAdm4PzIFSwApXd4kdAK6zWB0fiZZbR18SGrwmGGZh8U0_hLxf7fRvQXRJXa7-QxlW8u5M55Xl-NKeOragp312qQxflmsuxAzjJfn7Y0-0HgbGIiFFKZIDjSo2HTO7ZtSOgZ77lu37lHLmP8cEH-7YQPiWHRgJXodr_f1KDDflfdeVOhXrYw8huMGf54w3cDfsq8JaNGMs-NO-m7bI69SQRKMFqJ1_r8U?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4593,7 +4593,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Sheriff Skeleton - San Antonio, Texas',
     description: 'TEXAS— Evidently a Giant fought for the Texans in the battle for independence against Mexico based on the unearthing of a gigantic man with fingers double the size of the average man as well as a massive skull with teeth more comparable with the teeth of a colt. The clothing remains were like those who fought against Santa Anna and the Giant wore a five-pointed star badge with the words, “Republic of Texas”. The city of San Antonio took charge of the skeleton and reburied it in the city cemetery.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-79',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5BOFfj88VeaFKlF1EnG205apCK_lVNrPjYNbpoeQDly1WY0K7GVQL3MzayQ-bd_80MUNMrlwS2sao2dxTbecBd6gAPQwt0Cf2IO4DVvHiSqWO563nywK8vm1ZNToLJyQsF0-TxTDipVIc6AYraLkeqsMSmZonPtX--LVd4ZUT3s1i5rvKxDaflZo-iEVR82xyZG6XFrb9pHkzkP86u-QSEX8XpA30NCTEiUUJKVnwO9SOsn6My8kEajP4?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4603,7 +4603,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giantess Skeleton - Chalon-sur-Saone, Bourgogne, FR',
     description: 'HUNGARY— ‘Very Tall’ prehistoric Celtic or Pannonian Prophetess/ Seeress discovered within megalithic lava stone tomb by farmer while plowing a field. The Giantess wore a strange crown made of iron with tips of silver.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-80',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7gGdl57tK8cciBZpSSocnZT-3uLnIidt9W5kZPa6zNZGRuFZR75x4AH_hCd48gZPF4u0CBYZJciXW9QCg-3mDQxLtJMBRSbrpRAJVvKdNGpIPiMGvOL5NjcKxz2IsgUhYSqhULN2JVX0_JMsrdo4zM46TYPE8-eyJTpK6lRk16HaZGIRjN-tY4__Ki-aA1KeqhZuPgedsZOpy6WZOMSwpLi30J7zOUjoQB_5Sv2eov5dc4hcO-I7xO1M8?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4613,7 +4613,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '9 ft Giant Skeleton - Three Forks, Montana',
     description: 'Prehistoric Giant nearly nine feet in height uncovered near the headwaters of the Missouri River. Who were the Giants that once ruled in America in time past?\nHistory knows.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-81',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X72tO4kdtdhDNyUu1rjMp4wxCOd8gWuWQt59TyOudx9iZUmcIfj-664xmpyOo4WVm1nOY3QqXglByeRDRRfoZTEQAQouUXvGyWqVLfF4xF8Qk8CgSMcKdcXtWEFSHYsBDeTRvM2OtiK0MWH3gWNwzHsM9G0Q7NWaLIIiHFyjW7XQanJ643aG_5WeQFWJE7gBWKYdjakBksaKpSvKiY3u6700HGZ8jpwFwFEfV0xFRSgeC4ztpJYa3NDsl4?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4623,7 +4623,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '8 ft Giant Skeleton - Ellensburg, Washington',
     description: 'OREGON— A Mr. L.L. Sharp confirms the discovery of a prehistoric Giant of eight feet in height. The skull is described as being massive and of great brain-space. Also, the skull seems\nto be somewhat elongated per description.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-82',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5FItY8TGs1cyanLZ3lEVldzBTJCllBZe4zdAB6rdMX87u9uLk-RNHpIIrG2AiBNb635dAduA1FIU1FTPiBwA7HwnDUWZK7W5SH5rihz1Lf553Zlgpar25PZCRRqLrTQGjA0NoDERmARX5Z23QfEXqv4USk6jolqox7dAJgPaXPCZE_MzQo4eZG8ce0zFPoaCHkRUJVLFn_dXpYgw7pfscXXX4a69wZUUhNzCfFGlwBrchGtmjCNlzbyEU?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4633,7 +4633,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '13 ft Giant Skeleton - Gouzon, Limousin, FR',
     description: 'FRANCE— Prehistoric Giant thirteen feet in height discovered in France. Giants inhabited the Celtic lands of prehistory erecting massive megalithic monuments.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-83',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5etxHgW3zzOB4ebEbkVQ7Kx4uPXLM5rpz4bjlcDJ5lGLNzElQzURG_0XFg55RQLHOVf1alcFJvvZwFn1MuN9hkavCBC-qBmNJ0ij7-N4-Wy-GMMzRfOYEYsoLqzl-BRfhZTBiOefBsudcqcAA8aZ6RfB-RtdQXULyX1nRtDWxkV2LxY81Qfm5sy7rXcmKe5w1hDWF73-lpx5zYUNLajh2CiVq6P3X-eUAx5perB9J9CWoZPIp9gs9vJOQ?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4643,7 +4643,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '110 ft, 50 ft Giant Skeleton & Shin Bones - Sazava, Central Bohemia, CZ',
     description: 'Supposed ancient Nephilim Giants 110\' and 50\' tall discovered in Bohemia and England. Remains of Nephilim in these proportions are hardly heard of or reported.\nTypically, the tallest found are from 20\'- 30\'. The shin bone of the Bohemian Titan was reportedly at 26\' in length.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-84',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6xEpPaOUjsX1ktHdjcV4O_EEpg4YvGqvqPxCPP-PCpd7qkdNBKYGxzgjcPh03tdrWN3TWbR6s_STJ0QuIa0Pal0QMOVzvXA-5YQ3o2fAzs_k-6f4TsTwiEuq3lGILwOjTDXfFnIEfpWys4bclhgWVoX_Y4UI-LHjfwmakR_74ACVgJfUl-7kfBPqGRLRsAJr58E2PYVYczDFIwQ5RFpVMVtXAwR9l2yoXRnb9nLQe3dcVaN_dvV98Bo0k?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4653,7 +4653,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '8 ft Giant Skeletons - Saint Michaels, Maryland',
     description: 'MARYLAND— Employees of the Maryland Academy of Science discover many prehistoric Giant skeletons nearly eight feet in height along the banks of the Choptank River. In prehistoric America (and the world-over) Giants existed and most probably ruled in their societies.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-85',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X61cPbmEk9h-B5-MqJK6U1f8m-xv9Wrdd7yzktSbgQfJKz85JB3-Jz7uH5UxP5Xqw-ZwMZqcGCvXAvXej-9Lkj-Wm5wSZuE2u2yNNMcpHfe2DK1ILdqVjEoqPBnOIFqs3HmAxt-TChIZHX-HgvQTkZIvygkzJEPV_WoOnRUSrcXc2JwXpHX_OrBve9UMO-9Ju5z5PG7elQ4b9oo4slZDsX-SZPNce6D-hmMK7hU3Qva9oNbFeVTMlg5H3w?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4663,7 +4663,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeleton (Torso) - Honolulu, Hawaii',
     description: 'HAWAII— Sun-bather discovers the partial skeleton of a prehistoric Giant. The Bishop Museum is examining it in hopes it will reveal mysteries of the origins of the Polynesian race.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-86',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5KCjassEVKw3gIo7AHG_rxHUQBo3J8I-2qLstnJQzxAFeRHfDTPIygDlCbkQ2t8g_5EZopmiLQ2eDA0EWId2rIOPKfKYYIzOlO-OfHI8HfOQt0QUe942NUuDR5Lk4ljkJFU_GDhPZjr_2RgoEZM69r6N1H52L5WGiyT2Qc2sIUAdvROqm7RoONJQbmRCAeGIt8776xwyRIJVIPwkGtwZ0WFCGQG3Fu2qm3fCvwC56nxUPg3VTEWMYN4Ak?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4673,7 +4673,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '12 ft Giant Skeleton - Des Moines, Iowa',
     description: 'DES MOINES, IOWA— Stone-cutter W.H. Saylor discovered the petrified/ fossilized foot of a prehistoric Giant approximately 12’ tall and of huge proportions. Many times, Giant’s burials have been discovered near river-ways.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-87',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6isAKvH47qm3A6xi0PYfQrljPO5kWr0Xtvf6YZ5sAOq7zJhIvMqGOQmEVFMEaM1GK4HEMzA-1BDsOjSvxdQ6NfzTyf6sys8Y-_S0X6VElqDddcu-1SPVzwBrGj0P2PrbDE-jbVyo4117Cggi--zVY_oBmzvpvEDCRGwM2VUu-ncJ5wCbHRrTl_IqjPOHnh3v3X07ycayx0Qeku73XllbW-ORcGVPRW5mMhozogRCElP51pUKUztgiCBKg?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4683,7 +4683,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '7 ft Skeleton - San Leandro, California',
     description: 'CALIFORNIA— While excavating gravel on his property, a man uncovers ancient Giant. Deputy Coroner Robert Morgan advised that it be sent to the\nUniversity of California. Apart from being unearthed from burial mounds, many prehistoric Giants have been discovered from gravel pits.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-88',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7jjpP-Y5xi2gR58GrxVc-NKsd9DEOdUmmlYFJKQ_4lpEI-FcN602kNWx-WPrzirXmtwEsYuEhsLeIQFrGfCPyXNM-cxRq6dKx1NDK9oHFxGSCrns2c7OU0wMj8O1tSLTPaH-0eYS8lBEWtTSb64mU2fZ0D5KYma760f4nBWM8nGVbKn24y1Ukxo3z2zuAMhiVA4yRfagnQorl2xsvKoWRrnVuKHtA5Z_jF7fIlNP3-kq3zOSJ_-R_1O_U?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7vZr30vZzGTwik4BDa-Kvw8VXOJIVte6BiLhCHtCQYDTC6MjCvooQYZpkHBZe7e1hROqANRYIlwuKRqlOOcGT2Ig9OoQvZiMZEIDKxm1ZaltoYuYMwWR6kCIus0yOBEYvKXECyIMRszb1Mu0LAVg62PwtnQ9RsMytx25lN5UEdhT3jYK6mqwFX8FCbpGRXswFv4zItBT9DYVmn0VcwRJ9UowevDj5urr_pqJbKswKv5tD014LnbBi-qgU?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4693,7 +4693,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '8 ft Giant w/ Buffalo - Victoria West, Northern Cape, ZA',
     description: 'SOUTH AFRICA— Hunter becomes the hunted: Road makers discover the skeletons of a prehistoric Giant eight feet tall and a type of extinct buffalo lying side by side. It seems both titans died at the same time as they struggled with each other.\nA race of Ancient Giants once inhabited Africa, most possibly responsible for the erecting of the many megalithic structures and pyramids.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-89',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6kFDkjaX24O9j1XBOhgw3DhLBZ9axMI2gaEZEgI90NxK1u28h1TuWvP9fb5t6rEPFaMe6lyIqFP60zy7a-j7o8OsyEd5DOFzEGiwfHpQpJ0k3ke6bNwkIQPUaRdChhibZsmaNtV0pjGvJf3ilQr5bo7jbfD9kfkAbiaSkANzrBFHANFjwTQik2jmDcEHyoMbeLGbVt0gqZdxoPewaPtM-vhWzWck9R-RFrKCx2Pa_ADgUIPwZdjIr5ovE?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X628xzVpWfDhUUQt7D2FN9ZC-RUKIJ8KvuID0SJqqbN74d_xo_32xmtMUeUo00_2ByTibG6Jqg0zbeYYtC6SBUzNcWlegFuP9yDr716MSbnRWVw-89s71XnJVjACUzDojgZrrh8NR7QNxs_7HNFVtlagoYrQlpypuf8A5pTVrjTRuKzHv5JpJBGMwwPs8_uOjKd94U8qa_r19qHWAyfjZSX6sZRMjTIx-1s3_z-nhTbXhx9PH9dhxyZ1Bk?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7G1rKPVTPhpNKO3ltWUIs5cHtkW4ebKWJW4mMfyKWroGn4dhnhvoXEi2OJYy7dsg0RU7pCOhZeSiTRndTPbkCwif-S48pwYktvIKIr2loqCQfGZCwPLMqURxk_rAEbTEzwccumxglZStmqsdbxrX4Ulw_GhnB9YXFvbH-A53Ov2jDOx2n3QctZx-v50wW85h2xB3de5xZapPSAKKScMgXDE0RF-For0qL4UaVdKfNxpDglhW3XElTOMaY?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4703,7 +4703,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '17 ft Giant Skeleton - Grand Canyon, Arizona',
     description: 'ARIZONA— Old Indian leads man to the tomb of a prehistoric Nephilim Giant 17’ tall buried in the Grand Canyon. Indian legends tell of a race of ancient Giants that once inhabited the mesas from Mexico to Arizona. Many gigantic skeletons have been discovered in the region, as well as ancient mummies with red hair.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-90',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7jD8xG4eA6b9-fjPVHKkYUHMXY7XWo2xuo9cL2ZUa0Tb52QybE59E8CPKjmJsXiWApnUutCz1LpoooK9lAdJeehpkIrm4FjgxIFoeuGrYuIjGuqJ0aT0mM09HRt_5zzBi0Rn6q79Hfl2G0J6mVj6eC7n_D2MLr1pL89l0wQ1pl3pdPRrFBNgcK1ghC7nYqJc5IGvPTRwQfVDNiNGwkvW6gVq2ZkkUKkkNDoAF_kzlmIjvQyC1ouUmnKCs?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4713,7 +4713,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Patagonia Giants - Stanley, FK',
     description: 'A painting called “Habit of the Patagonians in 1764,” by Antoine-Joseph Pernety depicting giants of Patagonia. This is from an account published in 1771 in “The history of a voyage to the Malouine (or Falkland) Islands,” made in 1763 and 1764, under the command of M. de Bougainville, in order to form a settlement there: and of two voyages to the Streights of Magellan, with an account of the Patagonians.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-91',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5bxp9kvwFqXiSN95U_Lzxc4sLG83ZzzYifVhfg0BMHCPnLmisnJbijhSC7dit4o151E2EYhrTuhrLmGoYaC0KgtmI6jMAegMCKABtMTRkOaiGRQCjXqRxRoJ8jjWTJovc-1EJWOO821SpTL3GDEV1TtxV_I3WM8ed6xZjJer7sGLeeO-DOxJe68XrwT5hnpTI7ONXAwTXpTQJnVF8G0C2_6WtHodGGD8RpmPfL8fBShqUZg1Eo-9yIlvE?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4723,7 +4723,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '13 ft Giant Skeleton - Monclova, Coahuila, MX',
     description: 'MEXICO— The skeleton of a prehistoric Giant 12’7” tall was discovered within ancient burial mound. Who were these ancients that once ruled in the Americas? History knows.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-92',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X74mfDhSw3C7RfSagsjAc-2-Ox0DOqcPL7CqQS9mvJ-eIzTcQIsyCRDtGOAxfRI2ErNAjWdr8t0lfk1DIQAeEw931BzpkPajwWy8LHkUTumwxTXoOAmmLlqpINs-KN8clt-qEutQWz_EUGwdTwZBnQoD5KDiLaw7opXb3TPkp8-9d1RhCRoONB-kp5wqxieQxOlbyz1KeqSxVMebyNRcZr9xNIRe0A9mTsH5xtGrfW9ktxvte-t2VIrYlI?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4733,7 +4733,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Tribe of Giants (living) - Nanticoke, Pennsylvania',
     description: 'MARYLAND- //HISTORICAL REPORT//\nIn the year 1608, Captain John Smith left Jamestown on an exploration expedition up the Chesapeake to the Susquehanna River. Along the river he encountered a strange people of giant stature and strange language— unlike any he’d encountered before in this strange new land. The tribe was said to be of the great Iroquois Nation. Many Giant skeletons have been found in the Susquehanna region. These peoples he encountered were most definitely the descendants of the titan Moundbuilders.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-93',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7e42FpNhORdFqKax_6Hy6hCSF2Q4pG35cJUT_Tie6Qfs3wYQHz2ZKu_hgn_rAVgQlUNfELm_hO3DOuoIY1Iejw-UVVwrZpJZikw9EkoowRgUbT31chheRYY8BrcbrI2GXCqtREPbvr8IhvRmvjlGj5UJjYxorD9UeFV5lwJSL68TV_UkWBHNPLDUj9ewhyXWKXDFFXKQe5IgsRADYWMWycqVdp2yOe4DKpugLJTAYiNChtkx72SeSZmFo?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4743,7 +4743,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x14 Giant Skeletons - Delavan, Wisconsin',
     description: 'WISCONSIN— The skeletons of 14 prehistoric Giants were discovered at a depth of eight feet within an ancient burial mound. They were found incased in a megalithic stone burial vault. Who were the ancient Giants that once reigned in Ancient America? History knows.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-94',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6sXJh1aLgsGHM7vFSV5IP6MS11DoTD17JCmOeZpmBoQErmewPibcMaVB02nG5XhCCIGFNdZDmj1_ke5VzSRBDZfB4pVhg5OgWktMmYZayhQxXVZwzY8aY8c-35A2UKPPFHUJ0FzlzMZmEBQur3cN_TTMwxf0kxfKMYrBtqXs-qf9iPE6SE4PFz6ecqe1Q0PWyNOQ2INSp6BvpNWmkniY2Hrmdp88Ld6jHsy4VIH4kVJMIEeottjXa6kVQ?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4753,7 +4753,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '19 ft snake Skeleton w/ Giant Skeleton Inside - Gainesville, Texas',
     description: 'Two very different Giants meet their end.\nTEXAS— <REPORT> The surprising discovery of a fossilized prehistoric massive snake discovered by man digging out a well. After neighbors assist if digging, they find a Paleolithic Giant’s skeleton within the serpent’s belly. Giant’s stone axe head was laying nearby which was examined by a local geologist.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-95',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4GUdWOI75lwr8fOCG8vQm2pSp5SXMl5LLjjMl1HlEC4LfyvRmOTk7NjdB3AlN5Xmo8xOtsek0sgA5_oSgDvWfeKSp_sfvuDegyLGAJ1SwUIFUy3r2Ref29pNNLysvNzXQ9jOrFsh9KWAy359s7J98t61g0cNeCfdfbCgSXics2ByepwmUXND2lj9u5hf8khgQveFjR10VRkLGvf5i-HnYdxaCLtMu-cqahNazGJFq_qBwSlm23J51De08?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4763,7 +4763,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeleton w/ Copper Armor - Marietta, Ohio',
     description: 'OHIO— When excavating a huge burial mound 500’ long x 200’ wide x 28’ high, a Mr. Putnam unearthed a massive skeleton of an ancient Giant at a depth of 14’. Curiously, the man was wearing a set of copper armor as well as a copper oval cap with wooden deer antler replicas.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-96',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X72BOK7HCUFNViDodt-xswPk7MQ7JwuP41WS2c7_iQ-q4QBxY61uh6CEq-4BhbYP1xt4G2Lu9b0VlUKgzHMH9Ht9RqtAbK0qbD2w2CgxJIs3D-hEs8yajxHe4hf8sHsKj9wKV6MX1SzPSCz7nzpxfqAMh9WRKn-E9yX21Mas8DQF4nL2eTP2vJFvxFaaiKMJpDarMmDQ6aVmGbP3H_4QePnx8_V4MVKWgR254GMGJ1vlXPwnzmLbjWxet0?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4773,7 +4773,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '25 ft Giant Skeleton - La Cote-Saint-Andre, Rhone-Alpes, FR',
     description: 'FRANCE— Report detailing the discovery of a prehistoric Nephilim Giant over 25 feet tall in France in the year 1613. Could this be on of the titans who erected many of the monstrous megalithic monuments throughout the West?',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-97',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4AdQryfgtiDggMcVXy5qTTB7QPII1Zsh9nwi_JUh8d_C5sC6yl_HCbESJ5nugn1yckBoUh5Vv8BXiqgzgpyKKxeB_cutlSBe7XIXSwIY_GhnjwzsVw-SBkkNSxHrpM4XOqErJvz3k_v6j0kxy1ireke3_jBNZPaX8pX0kFjtUrqpQlFBj361OiYsOTm8xbSO41-HSPd45di1unHltRn52ud0Bl9AP4uZk2XNT0mV7YunTHtxb8w-m19nM?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4783,7 +4783,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeletons in Caves - Menton, Provence-Alpes-Cote d\'Azur, FR',
     description: 'MONACO— 1872-1895• The exploration of a series of nine caves brings to light the remains of Cro-Magnon Giants. Among the articles buried with them was red ochre. Most likely, these individuals used this substance for dyes and ritualistic religious practices. It is often found in their burials around the world.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-98',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6cByD6zvDxtF_hMXeNuTJBRAJglTadqrVhA2TPixQFa22jDyv2wlFl4c6p1gjRcUpYj-LzpV2DygpSGNqUYCr25kxRB6Q0FwifSSovjz7P1c9LrSffbkbcqHnT3wMxsLcIj5l8DZ_ReINV0IUUCE7v8o8VifaO23ZBLH7UBsjDHJ_gJYFm-_w0DuemkNckQ5a_qhT75EKaCXM_XfLb_q6oTfAOOOJv4M7uPeix-IjMtCcNVP1dq2yR0F4?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4793,7 +4793,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x2 Giant Skeletons - Lakewood, New York',
     description: 'NEW YORK— While grading, workmen discover two prehistoric skeletons of Giants. Who were these ancients? Their megalithic structures and mounds dot the northeast of America.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-99',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X79a9IU6uuUwjtIgFp-sqf_Dve63cOdtLMBcST5hRXIsmGI0OPfBtBakRHzwIj17j18KfQyHdkFPRhvJpsEDOnhawI3E5G0eNNZsxlmDJZU0_A8oQEu9o99JeQCNlV9fwhy7kCT3XOwrJ5u9p1wm-VC6TRVvTb2xaMX8ie3vMVXAMQ4M1h-kU2xC3JN49juKoXwAQZ5RhE2kObkoEOu9QAVasuxCLIwgAPDKC2AtmkFji9QEgU2Ln6QfeQ?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4803,7 +4803,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Masontown - Brookhaven, West Virginia',
     description: 'date: description: source: location:',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-100',
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
     isApocryphal: true
@@ -4812,7 +4812,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x300 Giant Tribe - Tiburon, California',
     description: 'MEXICO— A band of strange Turkish-speaking Indian warriors 300 strong all averaging in-between six and seven feet tall, crossed over from Tiburon Island and are raiding ranches in Sonora. It is believed that they are cannibalistic.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-101',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5tpM_H6XAJ5l8bQse-KzRAJOsk2tv4_6-765fPLS4H5lOqyIHyoSuXkKzBcjTfaXPw7lhPA5LNvKQBpZOK6aj2K65QUt7ZaaK9pQjpJ8t_D4ibVBi7MHXhlU1yvR6iO8-Mm8BjhJyNyeZRv4HFvCpNd39iPz-7tyj6JDrL0FrrneKTvIFYK8_CAWW531QAleQSf6w4Q77AL1LV0De1aAzkJ-KRRyO33N_UKi7K6GB10v1RJ8cWIg23h8s?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4822,7 +4822,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x14 Giant Skeletons in Coffins - Washington, D.C., Washington, D.C.',
     description: 'WASHINGTON, D.C.—The megalithic burials of 14 massive prehistoric Giants unearthed by roadway workers near Washington D.C. The skeletons possessed huge skulls and very large jawbones.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-102',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X754Gy1ASfkYmAK_rKE_53KXCwhH3661MYMC1wD5mKQ639UbFd83XpvWKzOD104AwKLWTtwsaJVQqdcp7LD2oKHsXaqJVKYjnKw1Ohg5AGFBWAtczACR4eNF8AA8kJVgtPQTIJ6wpFDWR9tsHlNWoBE3A8xAPLcwIucQbiSkuYu1btsi9dZsJIF8kKzn_PWSKRDPsTSTGE8y5_HDx-Er1osJcKe7t1iH89Dyn2sN8RhsXge0hFb4TGcDsY?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4832,7 +4832,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x25 Giant Skeletons - Crawfordsville, Indiana',
     description: 'INDIANA— Burial grounds of prehistoric Giants discovered in gravel pits near Crawfordsville, Indiana. Approximately twenty skeletons of gigantic proportions and/or attributes were unearthed and studied by Wabash College students and collected for departments of archaeology.\nWho were these ancients? History knows.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-103',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5YGBqnJ_W-IxjRKxzfQ6Wp16lPoQTqBT0_HVk8yesCmTx2NoRP20Oong1ESd2gQO9BzBjs4_3Z6I2CSaikMO_WIXY8rRqzxoLTgim1wwvdl3XoPXHDESZBZwiJHtFnOQ8RfdmhknCVmNe8Z7yLLCv95Kr-4OW04GrRUkbkKe2GWeifqjGQcNhpdcO2AXpVa-8c2ymgOda8aSIwhP8XHynKGQL-K0BRXBp4ptCq0l13r9RHnjFSjeKkR7I?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4842,7 +4842,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Canton - Cadiz, Kentucky',
     description: 'KENTUCKY— A prehistoric Giant’s skull of massive proportions was removed from a burial mound in Twigg County, Kentucky.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-104',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5CEpfJieKtpYVCzDuNONjKUQQp-xDuAOM4EeTU13zSEhlnQln5iR7ypsv4SaAi5vC8TLuaPdLxBfwHuekFRRSXeBYz7XTGSWGoo_6rkOGy2r-paUpmKQkZokMd1llJQ-SZDeJPGVvSjLW4FN7G6s-3rt9p0FNgk2OFdYT4wV29H4P-MVseIzksT6FGGp-lL5aeOvlj_2-GYk4AWVeCpP3NP19RUikL0FBg5WGNFD-diDStW4j2AgVN0YE?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4852,7 +4852,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeleton & Copper Artifacts - Durand, Wisconsin',
     description: 'WISCONSIN— Party of hunters come across three symmetrical burial mounds and upon opening one, a prehistoric Giant of massive proportions was discovered along with a smaller skeleton most probably his woman. A curious extremely-hard copper artifact was discovered with the Giant. Moundbuilders inhabited predominantly the whole of the Americas in times past.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-105',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X79OOL4yK-iMToeQJKl4sUJGnEhrHuIb_h4HxIjmbgERWHXZG3bzTfENI55m3h8lDnMUnqdMKDhYv6AWSXVDVZFU1IDeRMvwq-Wi4n89dgQszwrLDf04deP-T93CZ-5buhrRjR_UciXlOw4XGUXPZLW1sGwPDHm0dcBZa2ntURCVewO5qjwB48SdNYLUh_1cecG6puSV60FZDaXm4nok2MNTjDse3FbZy5WEUQ8nIm3FKz_xK3vFOBk6TU?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4862,7 +4862,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '7 ft Horned Giant Skeleton - New Castle, Indiana',
     description: 'INDIANA— Farmer discovers ancient Giant with horns on its skull over 7’ in height while digging in a ‘gravel pit’ on the farm. Other similar skeletons (Giants?) had been discovered near there in the few weeks prior. Many times, farmers would find these titans buried in gravel pit areas. What were these pits? Possibly they were gravel-based burial mounds that farmers, in need of gravel for various reasons, accidentally discovered the Giants while extracting the gravel.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-106',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6oquAhUZXvRqlASuPvhSgHe0yDH_mBFsbuNTrs3OpPX7vOmRm7nkVh_W6yNpQAkZELi9Zcn8En8d4atLTHJQIADi4Ba9oGZ26_4Yq70spSfm2AhpL90oHgnBrOgD3mod01cuD-fa_UZWOYhxKBwclVVFIF3bpZJ_Y_AKvuOAzFJFxmEzQTao8C_p7uEGFMCW6j-n5UW_nJK0tOMvB0a1doZPBk4rmbn7nsdCwPQyRqbDq0kmumcNeg1zs?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4872,7 +4872,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x68 Horned Giant Skeletons - Nanticoke, Pennsylvania',
     description: 'NEW YORK STATE— Binghamton, N. Y.\nJuly 14,-Prof. A B. Skinner, of the American\nIndian Museum; Professor W. K. Morehead\nof Phillips Andover Academy, and Dr.\nGeorge Donohue, Pennsylvania State\nhistorian, who have been conducting\na research party along the valley of\nthe Susquehanna, have uncovered\nan Indian mound at Toga point, on the\nupper portion of Queen Esther\'s flats,\non the Murray farm, a short distance\nfrom Sayre, In the mound were found\nthe bones of 68 men which are believed to have been buried 700 years ago.\nThe average height of these men,\nwhen the skeletons were assembled,was seven feet, while many were much taller.\nFurther evidence of their gigantic size was found in large stone axes in the grave.\nOn some of the skulls, two inches above the perfectly-formed foreheads, were protuberances of bone evidently horns\nthat had been there since birth.\nMembers of the expedition say that\nit is the frst discovery of its kind on\nrecord. The skull and a few bones\nfound in one grave were shipped to\nthe American Indian Museum.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-107',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X54qp-0gnF_vuGBnHf5PNbUC7P02GLNdLqfDoui3fBdUDEP5NRwnzwCVG8Pke6LzokKmDSTj_ikvwjpM56CMrU330w4koVygbU-R2ljlxRwoAymES2-UgdP5-oeBDnhuv8XEYAk1S7nVYIViNfDoJKjsDM9Tre0bm0n6POzwH8xyi_LatvwD_G1AmlN0usMqhRJs0J5NA0MJgSTMBumYEkQ93IKqQczQ8xjtUoLL6TGm2TcdjSrd-wzAYs?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4882,7 +4882,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeleton - Pittsburgh, Pennsylvania',
     description: 'PENNSYLVANIA— Upon blasting into a mountain side, quarrymen accidentally discovered the prehistoric remains of an ancient Giant and his woman in a revealed cavern. Who were these prehistoric titans who once lived and ruled in America in times past? History knows.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-108',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5PSWODKZiTVghwk3lWEVektSwW8iRFdlHlV6IFQiwfQBdow7vXOtAfszG5sMifbDSx0B3e4M6GVdfp0RZmGkQJEkWsvMhwYwoo7cx26TA5-gxEdmnXTR1BdkcFD1tmJ_5QZSJL_KQlkmJNJd8UiB0b7b5rm7pLml4tdtGrU_UnnGqNCZg7BxmHWrhTaVeiuxRoVIwrJ-hUKscXfS46jv4Ra-Ittr7HhSqPO6maMYXtnsM2-9wN_R8XDOI?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4892,7 +4892,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '9 ft Giant Skeletons - Pulaski, Virginia',
     description: 'VIRGINIA— Prehistoric Giants nine feet tall discovered in a cave near a railway. The skulls are reported to have been an inch thick.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-109',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4aq2dY8e3F2_QO8uDjeJJiHM4o2blVCW5kc-PLrGfZE6JsXPX9EBx9-e3g8tRPvOoGgBleyi8r6S1lJESquNK65JOHCQP_YQ9aQ-Sth54plLfehMOxjy5mjzoUnk5flRrVFsMB1FYYJTi6IelEqhHnUqpVSj-Axq6cDfLyvckEWD0CzICAW9Hq9oYSagz6EknrAJQNwzcpXEzpB5ghJjFjkSRganqjcAwuhgcRV9Zpkk6sBFhiPt9M_iM?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4902,7 +4902,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Large Skeletons - Indianapolis, Indiana',
     description: 'INDIANA— Skeleton of huge proportions well over six feet in height discovered in a megalithic stone burial vault within a square shaped burial mound. The skeleton was taken to the state museum for display.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-110',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5hfaOHdwN7zXuOH8RBOEza9Vm2vGpUV75KY3O4SA-eSPUSBVZLB6zQEuiXHb8IZSapo8yDLepz5HaIIEifamaGq60ac3Ydldntk-3VvYFxvtUcckGxR1z21tD4U-9dB2IqOZJjFibffwP4bOLx0Z9RvsUCX9v-AjLzSDCALEjXJiVqA9QsEednUpdrVscBxFdnhiALOwagTDdFk5kasex4J2-BYm8QAT5Len2hQXmddsE2w_0Y3-FQgpo?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4912,7 +4912,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '9 ft Giant Skeleton - Cameron, Wisconsin',
     description: 'WISCONSIN— Ancient Giant nine feet long discovered in Barron County.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-111',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X61vzZKXX2srgV-KszfStNsrD0BTcnqAWoHBJu3IJUmNKs2WMIOTsSuO0LF1cs_K-T08w-XHQkdrrNMvOKVqnA7Zb5pvxHlu0cmUFeRjNbGAPvq7iIFNi6Ka7Wvsiy2eH_0QEQHk93qCIz1aq11BCkDEFN7KtjH3_XCCnuAiwEz8_3TpGYDg1z2sGN7_7sxAleqbjzNIUE0F7sFArulpK1jaxc1SWwUzSuFCK-x9oW9PvScbpwDcXkFlvY?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4922,7 +4922,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeletons - Helena Valley Southeast, Montana',
     description: 'MONTANA— Giant skeletons (center of picture) discovered in a cave somewhere in Montana. In prehistoric times. Giants roamed Montana. Their remains have been discovered in different regions of the state. Additionally, explorer and researcher Julie Ryder has done extensive documentation on possible megalithic structures within the state— the probable work of these very titans.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-112',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4GI3RFSVB5cfDRNJ_DVVEdRvlDOX6e3fhqndcZl1OXkvR82aVr8t87quqoF2066bGXMx7m85mCjxqBKaXTSQIc9xOF-6kBikF4i9ZAprgSEHD-e5sxIAuVQxBYx0L_R5FTH9mBU-eH1pTqiQzaq_EU_6FN0SBmjeAQ8PBEbRNlC2ag-38P5xptptN4Mys3lyVQcoMe4KPM8W76YVQ27lKKVyYo3kZkyfy4U9DgX1EnCxZRwsGul3JnBj4?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4932,7 +4932,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x6 Giant Skeletons - Spencer, Indiana',
     description: 'INDIANA— Six ancients unearthed with massive smoking pipes. One individual, probably a chieftain, was a Giant seven feet in height.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-113',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6vPph8_X5H6cf2d-3-nw02Hxg5PVSK-2AgSJLs_oYb3fWeVFbKz1Jv7clACGbrve7c96U8Hu8QN5m8rG8ED16dosZrLnvJy_DlMqdNkTGYRB54dvfLh9XWJfl3FT1rJrUZHGdJhw7Mp5dXhV77DRCPVfPjpfE0DZhvE20Rgik_3itEFkSmNT-b2i11eZF1OSRZqM8hGhhCCQY5j7pGqyPqNQ6d3EJnfuWZMOkn0WpmLy9R6BbOLpFhtco?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4942,7 +4942,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeletons - Columbus, Indiana',
     description: 'INDIANA— In a burial mound that a Giant male had earlier been unearthed, two female skeletons were discovered. One was of Caucasian origins and the other of a Native American and Caucasian combined ethnicity. Strange jewelry pieces were also uncovered. A small six pointed star with 13 smaller stars on each point and a full moon in the center, and a strange peculiar shaped copper cross covered with birds and beasts. The two women’s skulls and artifacts were to be on display at the World’s Fair.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-114',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5WU9oEvyTRq3DCo1HMKv0kjFg8RhTxtFm-MFtdF5c7EfHYXriZyYNzZZUjDv5xVDRsepgDIBVfQgserWb78Pmc06luH5I16vMuHdMgxPZqeXjzYVA7yP8HpJwJHUSfMI5tHjSvR7kjaf4MoGu2L9dWDXjdB1LAJY-KB16DBSFY3GSj2SCONf0w-wHWLOEXUHj5S1mN-YW6720D21Oqh4zPVRR0j_uGSrnyYOvCin9o33SJEMeRHYJfwb0?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4952,7 +4952,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Nashville - Nashville, Tennessee',
     description: 'TENNESSEE— Thirteen skeletons discovered in a cave in Nashville, Tn. Among the remains was what is assumed to be the king or chief as the arms, legs, fingers and neck had gold worth about $1,200.00. A copper axe head weighing 11 lbs was also discovered. According to burials all around the US, the prehistoric inhabitants of America were metal smiths. Who were the ancients who once ruled in ancient America?',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-115',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5UpGYGl0HIoffGpj2eBZQc_gEJgWvQHiuOs7QvYKeGBfeuphWQZDQUfcF_q6SIK5Eb1Kq1QCYZtOoyifaeUmIvJiHm6JrJU0D1tFJgaZcKLSciY4lUrUJMWbpXE-5Jb6iX67sHK7zAvxapL1g637aK_1geKlK1XEVS9Hm2NhfCLXKkbTTBsbcTuzzoZ5bbe_nzEABFlkRosZ66K7Bp5_DdSqz5eO6IAz1-JEFcE5zilT_pOeV1YeWYKCo?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4962,7 +4962,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '10 ft Giant Skeletons - Winchester, Indiana',
     description: 'INDIANA— Prehistoric Giant skeletons 10 feet in height unearthed near Winchester, Indiana. The mound-building culture was one that encircled the globe in many directions. Its hierarchy was a race of Giants that ruled and reigned over the others within their tribal units. Their mounds, a remembrance to their predecessors before— a form of ancestral worship.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-116',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4CGvrzk0J82g1XX-6-TRrN3wB2cgEHXfUqhuYBc1EFhsXZzwaLaAYNIXBvxz1JfQ3P1DvysAgCt8qsmUrNXtou2JI-T7uTJaQkgGNdAKQrVNz1dN1VqHkrduyqAuw3yY-isxQSdcOyzBS7bDhf8uR2pOT8p45bYyVD_hfJpBB8EpU_QgCYZBHRoykLfNeg1ZllR6G2gYkhT63UnLZFk-V26tf1jYEcODDaOvfTWrwSbyFGt6Q-t7pFzpU?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4972,7 +4972,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Large Skeletons on Battlefield - New Braunfels, Texas',
     description: 'TEXAS— Ancient battleground near New Brannsfel, Tx containing approximately 300 skeletons. One was a race of men approx six feet in height with copper shields and strange battle axes made of bone handles and glasslike blades. The other race was of a very strong bone density with long arms hanging to the knees. It was a gruesome battle with many of the skeletons still interlocking from the fight. On the head of one of the skeletons was a crown of silver with an uncut opal stone inset within it. The artifacts were given to the archaeological society of the state of TEXAS.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-117',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6tCwciNAHkwlJyTFmfL7j4chGqJ3Y-fGlnAjyGornZGgmY4pArOVqDrjHJWWWMBNk-Ysd37IPlZBJz475FMFarh6soiyccnt8ObM4uynLP0Z7idZFFpxqKTd63XBAEvUfRLB6KmJwDy6dYRR07BUKGC0oTPAJ3xWLab5FGJAnrTrCFPkb2Ygik1AdksLa10fzOtMG3-jYxmUUqeHmesc6x5eOSwE1VURM8p3PTNOkjfJyvRV7p55iUoPA?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4982,7 +4982,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '10-12 ft Giants Skeletons - Douglas, Arizona',
     description: 'ARIZONA— Heavy rainfall uncovers an ancient burial ground of prehistoric Giants approximately twice the size of modern humans. Red haired Giants we’re among the Cliff Dwellers of the Southwest.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-118',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5E2KNT1rutbjnC-jjtdAFDynjqa6vuipF2fSIfmzxO5SlixX6jCv676X4SFlbljDaUOwjUG77lqafzjmvUgK_XFg5uKfxKIQ2K8V1Dy-IPD03cw3HNNoLuqEeQ0V9pETBdV7GTQm3mlrr83yvzX3gdTEe00kgmVslhWpJ2EeMb_rj41C-3yXFOq9ogkd9oAXXym-VOBSOCRMdRfAV1xu-4RLpQOuesNzcQ1EyOKne-49_Ml9DoD7eCPTo?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -4992,7 +4992,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeletons & Megalithic Sites - Carlsbad, New Mexico',
     description: 'NEW MEXICO— The remnants of a prehistoric city of the Cliff Dwellers was discovered along with some skeletal remains extracted from cave burials. Nearby there is what appears to be three megalithic boulders erected. An ancient race of red haired people once inhabited and most probably built many of the Cliff Dweller cities and lookout towers of the region. Many skeletons of Giants have been uncovered in the area.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-119',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X48Hf-H4tdeYIAg6s2S1QVS-Z6S8feXFQ29rfPaF09uMG5X6qJI1dr3x-9fOgrbgbda3EtukVARzpJFxOaTP9EFklWXkrPyef2iITh1I3O9moyS9wPU6g5LLqsTWu7C3SSyjg_tF4tHEZW_MpV1Oq6EFpKqOfvADkWW9aW1_tUQOMt1akEpIFziU2RjrTnPsMOK7HlWw2eHLAXmO8Vs-Oeb6f7RiKfHkYHS3DhhawyLJuiAVt2a8WiP1nA?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5cG5wBtLLzmAv8AKy6r8B-eSN4W6dC1FTT7hubbgRU3j3-ewoQbMVkCWAkoKTVCmxPtF9RH-ige1lE7hJrrSZ22gJQrcR9clwjgirdGw2kfjEmzD_N2ttiOobE1GKAvAl4wHOg4zqmH3uPgpOfI8ch_kApeknoEeE1ZMEQAfHKe8SMSR-kWbabTjxh9cpLvm3UI4Y3gnj6URzijLTJIc83C4xkrdw9ud0BA9gnGyMO_u7rQIUyGZGKJn8?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6-F38gtFfmp-lNrjgzIhqE0WQ-6nG4ej4cz-AgNntMnlY_L7cVNqJpPSUyyOeYSD4u4uWyRyE6UWxBJJ-0dFgNI50TBLPwfyluFBBTnEQsLSUrT44QuqHjvym_7DBu1-i5PiGKQfmsWRqxKDMKtzW04DMcMEKCEO_yfGTaDtDaC6KCLSlbRS0QaMuxpyuUwyAGXcfwhRJN7Eu04zmUUrOlnCEf55R_PxC4VjTtYWvqfahTxpB4cvSoyDU?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7ZW8GFNtyGGAIHFUe9Dykm3MWeYp_MkVRWLDhtVCWBp-cJAneQsV2YdNOrl_klZ8v4NDzoQFrvZ3E9hYDvHnumMwRnTC19kVDmyy8YLKZ5ijOhOWF5pW-8lmVnGa1HGM57v2KzklfoSaxM7qRqgBWl3rAhlwGULCPZT3eMHsHQXrVH1e-RS8cOvbNKi3ScS0gWY6CYoVApcjh92MEloVT_LWcZP9NlQfMLHhOS6TH2pmNxXKrhq-r1lWM?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5002,7 +5002,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '8 ft Giant with 50 little people Skeletons - Chamberlain, South Dakota',
     description: 'SOUTH DAKOTA— Upon opening gravel pits on the Sioux Reservation, fifty skeletons were unearthed. All but one were of an unknown race of little people. The other skeleton was of a Giant eight feet in height.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-120',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4QtRUangbs9BqtUJAVKOsSIFgEjxon5_guOFCirVVDlX7m4Bes1T-IhsPPSjoLkgX4s8xKwtmgix2wNL5wDPFeQ3ASUcm1GwYf80RQDJwAuPl5Ujgbl3rvoHT9zn8_zB2H0b4SJs-D3csCIjmIjhQgYEz5CxLmLrxUtGQ2A6qlGp7jdoGBvN7JFxnEOVbI02EQJipK-sv0gK7oWaH-bik6N5Wod2NkKYsfGWzZ3Es5x4lqQTwYqubnDEA?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5012,7 +5012,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '8 ft Giant Skeleton - Portsmouth, Ohio',
     description: 'KENTUCKY— Prehistoric Giant eight feet in length and four feet across shoulders discovered.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-121',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7zPPlx2sF8mdRlcL-Jo7ksfqu6tgHue2oueSOdEDwjCRuJpYC3a8AOiCUOnsEMg1KChdCQPYOgTvRT8hnCMV7Ad3A_1qAXzIM10RQkqqOSpmvFblx8ZCBWBV1O2j5dGgenZg5Ztr6YODP0tXbxBOrDazwis4rjvyLse92vyxlEwHp4d5MxT4kggn3lMbun8KLxyokkHlHqB8nqdj6STSAdbDrz24G1XrhtrqHNpmNyN0nHaYyHOtMsIac?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5022,7 +5022,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '10 ft Giant Skeletons - Tura, Krasnoyarskiy, RU',
     description: 'RUSSIA— Giant skeletons nearly 10’ in height discovered by university professor in the north of Russia. It was assumed that they were pre-flood titans.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-122',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5aK18RKPa-FWiC2TGCpsqrrTB-ttoHRztF3WFbjZ8ALYb1wiIoqhwOT5cbSvwYyFqz-AOUl-ve9wVbgDlt0RGJFg8n1pHOVKHS6c_9mVNqX_tnNYFioPYok5WH4siN-7QBJmqN_F_vzC6QcgrrzUXWDZxi8qm2t1z7OpZwF01cmjY6dp4Bfo-X6a5SiLDolJs5x41hqe6t-7g1eNVVBrBI1e_KUntAtbXoWPZPQ48WFbFaal2cDPgJzOY?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5032,7 +5032,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '2x Skeletons with Double Rows of Teeth - Columbus Grove, Ohio',
     description: 'OHIO— Farmer unearths three skeletons while plowing his field. Two of the skeletons had all double rows of teeth. Many times the ancient Giants in America had double rows of teeth. Were these descendants of Giants, Giant youth or some other type of prehistoric people?',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-123',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5y6whKUKbAI12avx-m13aMPGSrZjk35jp9RclfU7zHWcuVN2va9GxrbyJJ5ZmJIUjvaaOW5jYdBPcCLiBKLVZ1AIAiieN4hmGF4RXyrC99-PHWcQt4McCCRZj_68riiHwESVOO-FRt0808y_KEMWJjYAxJHT66vQ36L8xm1luvUtqhZFpvA_bZrwL2uQ5FjeAdqT4qeJN687Dp9Rg9D6rRwHyAuxAinwglFtIrOtw97mifVFYt2x1B35M?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5042,7 +5042,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '8-10 ft Skeletons & Stone Altar - Pleasant Grove, Ohio',
     description: 'OHIO— The skeletons of 12 prehistoric male and female Giants ranging from eight to ten feet in height discovered buried in massive burial mound 64’ x 35’. There was also a child three and a half feet in length buried with one of the women. At the head of the woman with the child lay an 18 pound sandstone with strange hieroglyphics upon it. A huge megalithic stone alter 4-1/2’ deep x 12’ in length with charred human bones upon it was uncovered on the south end of the burial mound.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-124',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5SVwWVphUNVMbGLCRZa_-73Y7RpxfwNGeNICNIw-ziXYbJyLXkI4tPYDx2stmQGdyJ1uDeKbNonEya3uID9zziRBg9q2CyU47mMzPvuJ3NKE3H49KfFcIW_7NZ2aevprk83dej_LcHnoYV0h9kJO3s73YB1pJiqAB2QOcIEt_MDFbPEbXTK77oOWinJTonSr0ClMYKg2jtbDQMYB-sN8uDWUAtrl533Opx9wTZla_Lc_0VaPsZvOpy8XQ?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6En7knXqu-1WRcPY370qguW2Ptu8O40P9oh9R_SEDDIp0QJV2-1ufx2hKOCPr0Vpw4NtSDT_gfQeIgUK6-Af9MjlMKaTK2HMAHdhKkadri5WAOVX9ecBTd_j4DROp7KFKqv7JcDpKNc49IETICX8J_o4jzlEyuRsuV5p-fzis2UVZ2ZHXpXyUveH7D5WAhHmhS4jdIOQM-7GhMXfak-D79eQv2EXtddgjGa7Q-NFhe0sNs_YaHlMpCDxw?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5052,7 +5052,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x75,000 Skeletons (Many Giants) - Choctaw, Oklahoma',
     description: 'OKLAHOMA— The American Archaeologist, Professor Walters discovered a vast prehistoric burial ground containing the skeletons of at least 75,000 warriors. The battlefield was uncovered by railroad builders. It is suspected that it was the site of a battle between the Mayans and the Mysterious Moundbuilders for the control of the Northern Country. Many of the men and warriors of those cultures were Giants in stature and strength.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-125',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6-6TiYQQcHDWkkX4eQuU_LweXs-0xqKptHA_FuuOWs2FLkt-iz8YhVU7f1Fmo8hCcIsGAxlm7Sx4efXXK1Y7IuWVJH7aB_8mo7SUx1ymKYgsN7RlEQPGUYzpTLkOiS2zR4-raiBjX2TGBqvLBovt37arauIZCXAURsmuAtXaHGd_MFfB1GFfFwvJZA2WHN7MDvNepRUC51jC-Jyfwa5Usje13L42PG6ieK0QBJ3ayznJJFE81JErfbwlk?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5062,7 +5062,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x4 7-8 ft Skeletons - Granville, Ohio',
     description: 'OHIO— Upon opening a small burial mound, there was discovered a burial vault containing four Giant skeletons— three over seven feet in height and one eight feet. About 30 stone instruments and utensils were discovered with the ancients as well as artistically made smoking pipe.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-126',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5dV-46xHLMzP7OYIt6r9MiYFxEX7JTKpU1W4mn3vwOxDJ4xCn88VjAG0W6Jwa5oHb1J3wkjo7qiCIRbqNIpr2Vqa3QRFj0vPZoWGPR9y_AVziKQwDe7neeCSLGRt_sXfYMZ4JiKrhhRHt9BzC6GH9pOi0sAL1e6XeW8uruQocFIElU_oYXgKYS02BM4qVLiuBpL_gHnfRvNe8lXEVduTmb3ELZZ9rZU07OTsbGdwcztr2kX2f3YKs27L4?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5072,7 +5072,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x13 7-8 ft Giant Skeletons - Ashley, Ohio',
     description: 'OHIO— While digging a cellar into what was thought to be a hill, workers discovered the prehistoric skeletons of 13 Giants. It is assumed that other similar remains will be uncovered at the location.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-127',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4cecLitEc_vDp4eR1Cv5TEPBzuEqdVAqxWGuez4ecDyiQien6rTtOR4dTFVY4YQUT7yM-w3dv8IGDuIcOpGZ5S3g3fTbaJNBJHLvim16TMyKV-s6cSUxFJcSY0s2US902xVzywnO8qeqcsL6pnCjxOiIeuB4tXWjC5ifxNIaYHXgfBCROxmCAJsDKeDDNCpYHJNH9BroGbTf0StP3VyATQwj_i-lYppWFYhKV561R0Ms8nAOOrTzFpI88?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5082,7 +5082,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '11 ft Giant Skeleton - Wheeling, West Virginia',
     description: 'APPALACHIAN MOUNTAINS—The prehistoric skeleton of a massive Giant approximately 11 feet in height discovered in Sheriff’s personal vineyard near Wheeling. The teeth and jawbone were said to be about the size of that of a horses.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-128',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5Z6ZUecMqtjC_zSeMqmuCto0lAYpCAKyad9H_dfl4VPzsqBImg1bo1ue2qu2m3JGITvKoG9XXHqCS9kcT9oV3U4zGJOgnA_yCTa3eEhzoTm6DUs0S9lhVpsf9PKRicMKO106wWCSFNaiumdD0BKm_e3OaWyH-A43iR_DLFa9nLHJzl4sa0JfPeqIUf4Wux7xVSOOl_ozNX9AkoLOTJuAXe0Z8UlfHY6R2VcuVGrIKiTBM8dhsvwS4Jpac?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5092,7 +5092,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x5 Giant Skeletons - Shepherdstown, West Virginia',
     description: 'MARYLAND — While working on a canal system, workmen uncovered five skeletons of enormous size with very long and narrow skulls.\n\nArticles discovered with the titans include the following: a clay pipe and an old pottery vase. A copper penny dated @ 1730 was also found nearby.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-129',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6OQLdRvxXuPq7zTLDp_7EDt-ehNYH9AW2N6senD0CJubfNQjTElKxYwIp8QQBD58rGAySYZfPfL-Z-81ZIwLNJUQtBx-wBluftT4Il367vc1SgOolPRHaOZsSf7k7gvbC24kcXQ0CImRNo2cP8WtCJYWPpvht-jA_5HAm0Es7RDIaUgF9FHK9TiH0pCWqWLWqpU8k7KYygHDSUDaGyyG8Yp28Sm9JSTS8bWXeOD_6FpHwdOCQQdKJKA7U?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6kPF-s1fNGjDHo7VVfsZsOn15mYAcLjxSMs3KibtAFAL8Aj7Mw2uftyPKes0a3WFNZxLxDQhvT0OGH4v439j-g5X5uicm47xqmLhoWSRB9XQNRQyChN7Ov3a9zCGfHUYlq__Icx48BjpuPYTloeUDvsGzONih1StEtl3sPjXEEEw9RTwehcr9l9ZcEcHjh4dyUPmmD1wmvawPRCyvAnyYvYRhRSmgaeADXC3bMsWk4wQjw7YY0zb7rUY4?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5yIDiXWEqtXj9unmp3YmKtNgnwp1dKh7fQp5eZGkghQJQeSrdmlGpgsFcL2XEjBm7hSe0k-0gEhmJy_aCaqluQqZpG1KSDicu9rr47cAMYETx3QUKsQhA4pn1lT1ECilgwCmVshvUOob3-BmwtC_Q1aA6mrs3zvM3GBuQQcNITYsCC1NOrPCHk7hh5i9saqkTiIlPDeicqpz5aLpCznBZMA7wm_kkEPnQjcpMecjzRq9dR5ViyBfdepQA?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5102,7 +5102,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeleton - Ozark, Missouri',
     description: 'MISSOURI— Near Ozark, Missouri, a Mr. Bruce McCord was digging out a small cave to build himself a food storage cellar. Upon digging through the layer of limestone cave ceiling deposits and about six inches of earth, he discovered two prehistoric skeletons. One being a Giant seven feet in height. He described the skull as being massive and of very thick bone density. The bones were in very good condition, but soon crumbled once making contact with the outside air.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-130',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4EwL7MRNvrSAA-QJgUdI0E09OSNHY8sE4j0OQN1YSXqk_K008Rzqo6uVe09MxJ5xw64jWnwuazkS7aGqHiB2dq6LLIKM2D7uZjmJoqxk3rtB-5DDfemeNFYjk-4tvtyM8g7QCb0x_keIIYWXkNhr2hsvcIR4kHoazU4uxgS1InTQad17HvmjaC7YpNemIm4UAkh3Mw7k-XHCyGbqXoGWDvdDrIS8VrtkDoj631TB0R-VhM_PkKTAwCeYw?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5112,7 +5112,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Point 124 - Beatty, Nevada',
     description: 'Prehistoric grave unearthed along with ancient pottery. The southwest US was inhabited by a race of Cliff Dwellers that often had a hierarchy of Giants at the leadership. Who were these peculiar people? Giant mummies as well as normal-sized mummies with red hair have been discovered in this area confirming the fact that Giants and modern sized humans of a somewhat similar ethnic background coexisted together.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-131',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X50HQHzbAN9Wv2LWXeOdavpN0zZh2z9GSyoNJo_ce4k5fL6d28er97M4W8_225Gey5e9JwIrbLkaEip6aRkW295TPiLuQKIp7q3DEzIP0dLT7FfJcY4131P6bgPOH0sAnCvyqVw0Kfvaez7SOmUmZ98cpthei-8UoEcqWCmVHxW4TbUwcwKZMB_ukRhVAVFqBzQaXPWB4opZQeUyrCyyU4UC7WEkMlXFtEO_celcMVOjCO3GTIkjSJfAbQ?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5122,7 +5122,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '28 ft Giant Skeleton - Maringouin, Louisiana',
     description: 'LOUISIANA— The prehistoric remains of a Nephilim Giant 28’ in height was discovered in Louisiana.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-132',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7k1dM_5lX8-Ua0sxLPC6WzT89K-tXmxxJCXXe4aRPylhm948AFAlACr7ZaPf1wX6sDis7treZPsj_d7h2meF85qszhG61T42_xHZRpb4SAoyCfzsA8UzhAUfT0QyhJwhi4pU_W5xXUnDMgu3ZT3e4eZ76nU5mdk9bR-lpmE_milfjjZVBvW_UacZNYDZu9RPV-0x0_fgCsPeAx3wUttFqbASt1Z6dWhBvgu__uvQsBL7Zt1RENxrjYE4g?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5132,7 +5132,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x20 7+ ft Skeletons - Harrisonburg, Louisiana',
     description: 'The Giant remains of 15-20 skeletons over seven feet in height being investigated by Smithsonian in Louisiana. The titans were discovered within an ancient burial mound.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-133',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5Kf_LHZZMpdbd1BfwA5oxTuouFf4dwrHaa4OY3frWtrZsAObh_YyajPWto9CaKmX6HTX1klPUjqygAPKz1oVWrujhwaHXgxA3ExblgHNr5CqzTyaGMv6A0XaRLnOYWuX3MNGtYz-biCOO6VPKuJZ_bdy9mKKcGP8D-BfONy8MYIwHVBfB9UpxTKNSpEwxy1VWeRUme_-0P_ZtNtSeH1J3UnvFc_Rs5iouEFxKtqhHE-ZkXqXMfcYOcVAs?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5142,7 +5142,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Large Skeleton - Provo, Utah',
     description: 'UTAH— A skeleton of Giant characteristics discovered and analyzed by Brigham Young University.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-134',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6Gaat2YhwRR9UY-nDZljTgskFrMbkAKJh2Uyij8lIf-vAVYPKJhW4wyvwqqoByoKkExCanVCsq33357r_2bQZ81G8BlPrsGrQv-HpZJ3obVrjvucm9L68SunoBxIpRV2S5-aRBcPA-k3EMHBLmkjKYroBZhIKsEzsWcsLw1nGfBe6YQGaldu8d3Sn59iLWU2gUEoRqiVZcrvVtlkWbjVmpbfX-l2GjorCrJz3VVuBIj3PKRYARyalVlxY?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5152,7 +5152,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '12-15 ft Giant Skeletons - San Manuel, Arizona',
     description: 'ARIZONA— Heavy rains uncovered the burial grounds of a Gigantic race of prehistoric people about twice the size of modern humans. The skulls discovered were one inch thick. Pottery, earrings and other finds were uncovered with the titans.\nWere these the Anasazi?',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-135',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4joJiFsSdvS9VhDiPNoy_IAYzKKqx4waipG2xYtfzhmyeeNLqRbCNZNwRm7wW5wBxkpGkFQG554-hdYHhDn_DAWFFbpbWMWJDa1LLU91z008I5jqA4p7qg4apuWD6h5xEYj1zee90MUN2Co8wwZXiWr15KhIPSzmjxXXYqDno7vm4aAbF10MTFXTvd4OMj6xv6FnOV6oG20yIoldZ1UDtjdmnoVJZ2RsHfObQnNmK2zLYqQAAuimkFfSc?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5162,7 +5162,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x20 12-15 ft Giant Skeletons - Orange, Texas',
     description: 'TEXAS— Laborers extracting shells from a river bank uncover the skeletons of 20 prehistoric Giants with forearms as long as modern man’s entire arm. Pottery fragments were also discovered with the skeletons.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-136',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7E4Q74cRorGs--Sa7Q4dDO2Y9X-mu3URdUSkgui-VAQF0LiXHSz4MfmGxEdM6k1ap8fMXdYmuSPC_y_28hvhFEefgCt2qM1LXuPEFrIO6f_W4zoh4AilQJKYZSPyj2cIOQxJRsOktnzqENJvEaf0uy5YtTWo18QRloieVR-5Pawe5cnwlZOnw9QdzqFITbz6a_RiCos1FNAeACQWLdxt8I97bVP-2q4oNotZHL6-g2WOs5uaL9fIID160?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5172,7 +5172,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeletons & Buried City - Huntington, West Virginia',
     description: 'OHIO— Report: A buried prehistoric city and Gigantic skeletons discovered in Ohio.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-137',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4_YR9wLwEmaITT8dTyw73lornABQPEBX5ZMHQtIzOAzWFLqK7qOWnAwjJUiRqh9UUW2y8sVXoVbazM8thZ6676mEC_bS8a7dHMhLXwmXlc5TMMXsgqBtQX6sKKCvSV3bmHAhdEH1bXbzrqXxIcNSrQfl-NVjEXoN7cd05uNirFsUOYsJYam5FMQpB98UeQpx5vOJ5MT_q5Vp8Bbsjwy6kec8vIgEBrhXAT7LJX-Ed2L8XUhovtfPOeet0?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5182,7 +5182,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x68 7+ ft Giant Skeletons - Athens, Pennsylvania',
     description: 'PENNSYLVANIA— The skeletons of 68 prehistoric Giants seven feet tall and greater discovered with massive stone battle axes in burial mound.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-138',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7ERFjDfifs55TGrd24ebqM9OOl45ghrunICpBThX3PQxfS8CA4k-SH4XeY7ogwFPUNUsqDUEOob3o0voS4gZbyo5w5vLvVzeFatHmfFomgVN4NesO5P2pjiOp_O75hRc79Kvv-ZSDBmYYnCEfwtkjc22NXZvxPB84TS5M28g3Mfda4Jh4NJPSO_byadyqoM-9-UiwEk0FVwxDSQGNb6WtMfXjkT8EqeMobmidjVkxQBC4u4d1Ptc4j-kU?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5192,7 +5192,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '10 ft Giant Skeleton - Durand, Michigan',
     description: 'MICHIGAN— While digging in a sand pit on his farm, farmer Guy Gould discovered the massive skeleton of a prehistoric Giant in a wonderful state of preservation. The skeleton was buried in a sitting posture with some curious fragments of pottery.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-139',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5sQtRXwzdUBXbQgXhZSsBfSNhqsN5z4GLfVONxIhDZwoYgsHzWBGVdC_FhYX_K1scYB23Ol0mS8X_uPib8CLRXW_6nNK760zrluP_mAlFJOMkECQBswMPNoigok4Ra51wxthFpvv71copmeGo_z97GFNh6m7tT34unvT0yLLEBs1c1BGuUrYQ4Qru-xPYdFbZKn3dlvteYSwnRNhh35HU0eexyh0jchsm-YuKHZj36T1u9COueszi4K14?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5202,7 +5202,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '8 ft Giant Skeleton - Perham, Minnesota',
     description: 'MINNESOTA— Giant skeleton dug up@on the charm of the county commissioner. Based upon the size of the skeletal bones, it was determined prehistoric titan was at least eight feet in height.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-140',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X74iE5pbvC8FFEpRnQfCN2JHFeKXRNa2UMQXXKBRf0SpSfZvWeSzgwKIc841mYd-AGrOiDqG0SrXwr21kTGCveA36itoGwdq4BlPy0lGDfnQmULrf4CAHERW9jNUzhe8RQkw_eVtRfn_CKTKyazVzYVCuQgxdH7QgsqcOSvdI1yRS2zq3jM5q-QYBOGr-EaQnhgf1HkNRQ0KBZsilWVvJurM_8i5p42H23Fwz1URpPdCVTm8-p3LI3Y_Iw?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5212,7 +5212,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '9 ft Giant Skeleton - Salmon, Idaho',
     description: 'IDAHO— While excavating soil for road fill in the Salmon River Canyon, road builders Harry Vincent and Lawrence Tipton discovered what seemed to be a prehistoric graveyard of Giants, when they uncovered the skeleton of a Giant woman nearly nine feet in height. They sent the skeletal remains to the Smithsonian Institute in Washington, D.C. for examination in hopes the museum would send out archaeologists to further investigate.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-141',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7LuRrS8c0DPe7cp00U5aouvzYVESz7bo9aMrRnhJu3AOfpO9zi7vy6xW6iTg7NsNSOtO-AjSdvyA5Hl92nvbdqr6vDH9tA0i7Tcj2--tdjOYxhCn8UdopT9TyDYYhPLjT8tWKyS4KfXuf-AHDTCNfoO7Z5TqSA4fOkmtQfH97yqTSl2v_WdkU4r6Z_0w_KInmRig3q0rnUVWHVSFLYasN6ue0G9ES5ZKjwvZXmVZcRR1oddxoyAjE5KYI?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5222,7 +5222,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeleton - Tucumcari, New Mexico',
     description: 'LAS VEGAS— Report confirmation of prehistoric Giant unearthed. The gentleman was to take it to Las Vegas for exhibition and sale once he had the skeletal bones wired together for display.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-142',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6TmpVgVfRvXaRfSFdr8BS_0BAUsxh3xU4juQzuZ22qQ3BqHhTxSckhh1JA3x0TNXR9x4-CO2cTlkjUxR1mcaKGLHYu543HMSWmRIAZmiSmfLCO_J3Omgfz1ART0rb0dcVhJ3X5KnVynpcunrnR_TXj4rPbaF2eQIT3LRUiT-WscOKJSV0iP4ZmRHwX85Z-giIOoa_EdPqtfdlbgZH1uoCeqBLVQkm6kEhOvLihwpOGAvTAKeoM-Zs7LZg?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5232,7 +5232,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '10-12 ft Giant Skeletons - Chihuahua, Chihuahua, MX',
     description: 'MEXICO— Gold and silver mining prospectors in the Sierra Madra mountain range have discovered within a single cave, several perfectly intact Giant skeletons all 10’ to 12’ in height. Were these the builders of the great Aztec and Mayan cities of old?',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-143',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6MFcnJdReXvt8DcUjLYoClwHA1eLIs-52g5jkgE9End-_GhDTe1M6Tey1-Ens94x3FLU7t96IJDaL39NETkorMct8bZIGRvec42RG1D5lr_DHdr2WPzjXi66y6FG-lFe5ARx920RnWubtkv-ubM9prXoBOodrM9CnMsiiNX-VWubgQLyOxnFIrkjWHmTrM27lhelunrCHvNx5ni47QHjTERu9cqMI4YIpImG9331v9Vu5VaslkktLOXTg?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5242,7 +5242,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x2 Large Skeletons - Jackson, Ohio',
     description: 'OHIO— Farmer unearths two possibly young Moundbuilder Giant warriors while plowing field. Arrowheads, stone axe heads and copper bracelets were discovered with the titans.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-144',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5w_f3Lz6YyuiD1sYPvNF2ZCxLqNYm2iQ7orhUJ6hAjKxE9jElufLEkeFNluxNLSZEVqeVxglODhb8j4tHFlUHkVSSu_s2WzRNQCFOGF_Kr61N0fwKyWXsg-nE2zgMNqqQ1jFWMF9hI3CAYcUyC3FYUqj7kpfh9bG3-OjnXsTN2zdpJa43A5cGmc2GXm9Zj9nAURZpMwYP9yTXtL0afLpVMBQG9QQ0jL4F4dY7WIY6P2kFA37jHUDE3xU8?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5252,7 +5252,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeleton - Bedford, Indiana',
     description: 'INDIANA— Giant Moundbuilder skeleton discovered within prehistoric megalithic-style burial mound. The 22’ earthen mound was covered in slabs of limestone that seemed to have been carried there from about a half mile away.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-145',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5f4NmbFPPbBYbYFNYhmNcoxPF6qFxOtu2v_bKSrz3Z-dHY2S1vvj1O7B23hoI7aeaoDcwFpkX_Q8qt22AtLmjl1SdVNPC5MQ7pLZ_mSzQf979OFTYbgQKAso6iTZHTc97_SuHhFydR_dgcQaeErapK-YeIoGkZnbE-HXCe-Q7xVgxWJ87lfzpboMKzzH2YbEcwF5MBVX71YxvXVPF5WiDz52n8embuZ_Mayfe5KkjxgMPLSTKEd1Jh7Yc?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5262,7 +5262,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '18 ft Giant Skeleton - Franklin, Tennessee',
     description: 'TENNESSEE— House of Representatives discuss the discovery of an 18’ tall prehistoric Nephilim Giant discovered in Williamson County.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-146',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4yCPpmR8PgZadzZxzmFjfafKtAdI1wwemqFtbi8Q2J7gI17k9CPC4rpZ8It29fqR9zfnMAqIxW9JPdNJP5wiSUlMGROrzt_TUF5OvRxPXhF7G3-WD0g6vrsww4RJ3KmYFNfxvigyjpUSNWUGN92ZXFewOVODZxSzlMqXoEn7xUaJ9bFO9UoghoI5cVySlqWKk16wKtvp6DIkRbqJwSeKAB7Xq8Ki9-WjMiGrU0vf5Jaby3myAXZ3Rml70?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5272,7 +5272,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '10 ft Giant Skeleton - Dunleer, Leinster, IE',
     description: 'IRELAND— Three prehistoric people from the megalithic building period unearthed in stone chambers. One skeleton was of a man 10 feet in height. Giants roamed the earth in ancient times, building incredible megalithic structures wherever they went.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-147',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7__rwYeeh6RA2XYQLGmdgSWMAXpgnjjWZ7M5G5eTNFFgt1aqVHOgIElgpHlj4GFYyNqTC6pOziQTrZ8UB5Jhdwba-WKNHyZsbaQ0ffR6maVpOeckBjkJKSiBgyUkmBDMc77T-v16JnFysjl_rJ23i2LQF88MSKHqillZ_3Ti0UuFarvgCMtkJSBwohr_eb3Pr8cG8At_nPstnpt78opT61aeVWsj4a0xzpU3SOjXQ02ELzQsX0tqOIBBw?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X50M7pu8-rrQyjDnLcTlFs05J1yBgPsOkjQ2EcAQlG7ddU3Y4b-fULX6Lcszv1ZMi_OaI-eIpRuc3mJiynt7aLgXir5XqscJHNnRz2rz5-Mqmn3taelIMc2g4qfehN9F0J8zR5-BJMzuvYdnEZpT9cBITIHVPsNZjJkIuFzJCmw9NkqvYzwognpErj0JCouqTAeB5zHgIaFJGw8UwSHAQ-kf4CSiqKsMbc978-lKwGpm3QnwCi26MhCCyM?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5282,7 +5282,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '38 ft Giant Skeleton on Marbel Slab - Saint Joseph, Missouri',
     description: 'A supposed gigantic human skeleton over 38 feet in height discovered within a recently discovered cave. The Giant was reported to be resting upon a large slab of a marble-like stone material.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-148',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4xmX-0QMxz9DigjBBmuDuGjdOLJXTXDRjwNhnUZPiNY_a9Pi95tIIkmoH0Q_SaypbcWFtg8k_K9pcwZVlXwhbm68soccbzDJjfWcAR4TFgWK--3EcjH4Nz9n7tuZM3pkfIj5YzPw8P4t4KCBozmDwoEit3jIL1jnoKV9kcqDElWS6VTFNEVCImKJ3ZQdy4A_A2I0h6IVb77vuvc6E6l-Xu_Yzr62M_8BwJFfwMzFfVfon2dNXr5pHqywo?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5292,7 +5292,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x11 Giant Skeletons (Elongated Skulls, Double Rows of Teeth) - Ellensburg, Washington',
     description: 'WASHINGTON STATE—Eleven ancient Giants were uncovered from a cement-like burial about twenty feet below the earth’s surface. These titans all possessed sloping elongated skulls, double rows of teeth in the front upper jaw and massive lower jawbones.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-149',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4jves9im0QcgmNXcXwUqgbptumyMKKIFvT-4P4Ryly2hVQCVubqD8CeWSze3QzEs3oBd2V4wtdVzuX6_t5kQMxUyW173THfrVT3V9APD18FqoQIM3GNTzbpQlOVv_IFUZP5HQH5Q2OONe9Aw8INSU9spjgrL5-QLVaDunNiAOahZd32bOVD7IGeiWxMVn3HSt0dQ6iieRaDVoE33tXRt5DtKMpetIKrdWCjArv5ESX9ZMe4WOwj0YBysg?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5302,7 +5302,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x16 Giant Skeletons - East Saint Louis, Illinois',
     description: 'ILLINOIS—Possible Giant Moundbuilder King discovered within megalithic burial chamber surrounded by another 15 buried prehistoric Giants.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-150',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7VvYZTnF0uHueqxWlhnZ0Tbi9zQQCSFpDP7F07FEV35g82yLvQIkChvD2z7WYbvAK5XAx-MfnO3ajapHhBLFcP82Fm8qOT0yrBkEn7fazzfJeNkgTh8K7R8TwKQJatqjl3d2z5wrVvh1urtXsvHc6kQP7iEerUvShzf5ubg3vctHfRnGvU_9yDne8BXYhOqUbLPrV87vWb05Genvkktkg1H2IJiFV_SRyElM_hMjH26x_Um_s2WB5m_UY?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4bAaNf6RnNZeR3kvfmP1uE3rWs5G-mt6NJuzb7tEsI0B350Ld-fiDDWt0s-u3BmjPpSItVEM9UH2PzzSanzduLSIPuR_Vm6UJz2YST1LRNcRYWHzhsa3FbJToF6IiiNudspR81m1PH5PYREksijAViKn2m5ZhUri8nHsb6DRbE0yC5kRfOKqkITvFqCpGiBn6ueXla_low-SDQ28YyQHSECAp3siRKzRwSfpg_XoFy4e7-kkmKZaMeDrc?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5312,7 +5312,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeleton - Fort Frances, Ontario, CA',
     description: 'MINNESOTA— The skeleton of a Giant Moundbuilder woman was discovered in a caved-in region of the Rainy River. She was taken to the city of Spooner and put on exhibition.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-151',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4-Awe4BuQnAHlIVVZqX7-2STV3XygHeeUc_h8r9LRttN5Ih4UHoClZzgeQRkSgkhqe6VuDUfJJ3_2iYBLucDpWBrOaDuS_Q_FJHYQNkJXr3M9fc1z7OQNds_danU-egSy1N2qvu1xpSWQ-ZrWArXdYSCCqGc-O7FEGlLN_cVotPUJ_MmyDzK1fGyeED1o3FUkMwxD9M3MNs5W0k1bvOG_f1P-LtgTJuXmQ40enpi66wx_yXThnKFkz_Gk?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5322,7 +5322,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x68 Giant Skeletons - Valentine, Nebraska',
     description: 'NEBRASKA—\nCanal workers discover prehistoric burial ground of 68 Giants at a depth of 10 feet. The Giants ranged in height from 7’ and taller. Massive battle axes were also uncovered with the titans.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-152',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5eJIY4kuxdryyzb20Bd5MJgvAMfGOrG8x2t-NGAmlKj1eyh0fLPlIZ66D0OAjmY6heiAWEZdESFYaeH2YQbHmgirhRcCjJoJfz96xUqbQtzEPU3L9RMjoUmh9PVCXpiyJJrv2cvXKWvp-AGIz3PJ9mAnwq3QagEp4cSg_qiAAw5Cd7CqRSwoTzvqolWvxbqYhKrwJ80ZOb4qsiEhOiRUj0brqpsqcJ7xX3TZshud2v2L7lD1zxSMUwYEA?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5332,7 +5332,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '9 ft Giant Skeleton - Saratoga, Wyoming',
     description: 'WYOMING—Tennan Ranch: A burst water main creates a cavity in a hillside revealing the fossilized skeleton of a prehistoric Giant 9’3” in height.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-153',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6kPF_FSI8gcG3_0tlayoes0_b8vz61GmbVTUfweKfegixrbliobVe8tXu4LArTLnbO6CgW6l-LScKKrG1Dwd34Qmz6UYXq0jzi1ojiWTFFSNNTrVuLC5GpadmL6lse1fVGhN39WSzRBgaxHsw6UVjHIUmiuh5dX7Zajaea8JZEtGedZbq6yQm2EwiWz709b1c2am0DbvJHufe1bo10jVmb5wqg7oQiCqULBr6ogTGHjpx5Jlm8OxCyf78?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5342,7 +5342,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '30 ft Giant Skeleton - Charenton, Louisiana',
     description: 'LOUISIANA— The half jawbone, rib and another bone of a supposed Nephilim Giant was discovered by a Louisiana gentleman at the depth of 65’. Based upon the size and weight of the bones, it was surmised that the titan stood at least 30’ in height.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-154',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7bxEoBVaEaYVAr0TwOjsmWRi_V4XD93wt9B5qRZ6ZnO0qu9Pn_ir5f-8rbSdyCRdUautnyribEHadAAaNakDBHChK9-TkmooKGEWHzyAvTag-8gehA6O7hIc2fElcCSojdVzDBDbCtwQB-_8OQGBVYxRstDxLoVYsvP0DmM0hXiVrMuxkQtxFpX9gueqXUgfd9wEZ1y3OwXobEJo2eRe7sZX1B5YDiXT8J-NZ-vQ5cm71TeGm6vMIXdkQ?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5352,7 +5352,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Jawbone - Eddyville, Kentucky',
     description: 'KENTUCKY— Workmen uncover the massive lower jawbone of a prehistoric Giant. The large bone was discovered under old tree growth of three feet in diameter. The jawbone easily fits over the face of today’s largest men.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-155',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6AwcTGcMEdQZcQ40Zfo_v2JPpsHouyVHT6fKtHb1BU4jKG0MKnKA2u1fWzZ6Ds_K0hKh0Yx6HlmnjGvAehsgPxQyydSOR9haAIRkCTazD8gYYXh7c2hL-VFabroaPXD6nlWw_GId_bb7X2NTKD6RSwlg90_B4_lryhskVAaCUHupnVhOrkSeCI8XlspXiv2HQUMz3ugqStaN-YPaFV1f42Faga79RZwxaLr7uVj5PYYgehKOP9OAzTC_s?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5362,7 +5362,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Large Bones with 20 teeth - Flint, Michigan',
     description: 'MICHIGAN— While digging a sewer line, workers uncovered bones of supposed Indians. One curiosity was a massive lower jawbone that contained 20 teeth. Modern humans have 16, and 14 if their wisdom teeth have been removed.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-156',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6sHTlCHvGyx0zlKJhTFxB_RP3UbOakEu1sKENw7gBlLKL3nP1Bjb8pDRkjWVPEg7SLBER_4g8DzkRzwMv5uZ-XLSadz5O5RbC2NqNYEbyssYnnins-_Eyz9p3vDuaayqLW3zkMHB1gwbnsUENgY8Ap0fQEN71k63PSzVWYRirZT4FDcKNs67UGyuXXC6ESWYxa9_0k1RW04SU8GsW5oMth4zXGXhfVTtaPyGcFT9HSRY1mH_7kcrsxzj4?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5372,7 +5372,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skull - Big Park, Arizona',
     description: 'ARIZONA— A prospector of ancient ruins and burial grounds uncovered a prehistoric burial site containing fifty skeletons. Among the remains he discovered the skull of gigantic human measuring 18 inches from crown to chin.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-157',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6Zl82lTBt86PFNuOZUzp43b_RRwgndsHvUmpVgc9Trv4JzyP37e9G-QoiMXXQXw4hFBhv8W-m33qcXZxbQSOGAuRpNYaK9AEPkQujZTs9xx4k1LW6hbwfRegbmfk1-T88inDtoGyvnqnkS-GYVr9rL6uqTBiFjh5kDM5CNAxpIzf5Zz_oXUQ2fEProUwEohxscb0kqlCgsIV7XgS3HNwYt8jMSSMzVSnjHQ4gFbhJDFkqhGz3raXhHZng?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5382,7 +5382,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skull - Hazlehurst, Mississippi',
     description: 'MISSISSIPPI— Upon digging a well of almost solid rock, a workman discovers a prehistoric Giant’s skull at a depth of 68 feet. How the well preserved skull was at such a depth is a curiosity.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-158',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6odjdGCcCB0PvW6BOjRuX_puVc04j8PvHuUjf_lSp7FHhfh0ImVqde0OIPwEBPSAwDei9XbX1azMlk1Rs_V7fDSInmwb4PiA1Vu5btCo-6HacuGgksMZZ9ku7qKAUQauhL39wNyjiSkxXqMSsvATOLNJTN-hAMy5jxtr2jdxy_90dJ25SiBIFh0iNE7cDtQznO0Lll_bO9uftN0-vXMLsST9_6UphPwnx_wOjrUotk1DV3Db6AgcD4Js0?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5392,7 +5392,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '10 ft Giant Skeleton - Owosso, Michigan',
     description: 'MICHIGAN— Farmer uncovers prehistoric Giant at least 10 feet in height in sand pit near his home. The skeleton was buried in a sitting posture with intricate pottery pieces around the body.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-159',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7b7RezxK76qx2k6rWJaI48syAN-CZjIm5QBlGQfQRlOxKOFAUqBGrg-ajLuX9yAw78mzKa8hDrkjvribnc4oqfhhzbg1txJQRoFFHldCDviScnM8NL05DC0Y4ijm-n5Zd90Qk3rg1baXKetlNAHCPYtz83hVQ3kc5l7bsrMmb7kByQIE1LBs8W6zdTU25CvIfuXMMAD3XvZIRRufOpIMD0H40JocmrAruZg3_ZLDygMJaiUzPmxJVb_Z0?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5402,7 +5402,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeletons, Artifacts, and Megalithic Tombs - Koutsopodi, Peloponnese, GR',
     description: 'GREECE— Massive amounts of artifacts including gold treasures, bronze swords and lances, and Giant’s bones were discovered in the megalithic rock-cut tombs in Mycenae, Greece. Giants of old encircled the earth constructing megalithic cities, chamber tombs, monuments and pyramidal high places.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-161',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4nuxIyrkOpb1qcOXqQLsIAoE3BmcHbZSy_RN9qVdvFwyHPBO-mCt9oeUUPCx_L0m-NyM0VJm7A0JWl-a0rAxOiZkijfaSJNyZp5Diewhpur3QK4wVBvmJsF6wDxV1yFV--SpGEVWiik3_FNMDfd-_dPy0XtxXwKZ4sRS2HwPT7BI9NtfBiOlEGVkw0u6fj2id0_fcrHCn922iyteWElaPZTjY-9YAa3F1vN5NDyRdgbfTZtFCAncwhnuk?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5BYc0B3aKJ-O7I8Amxw7SScw67vDEhIxLeIe6yJCcbN_3XKZSPsf86x2FcJgZjkPUdWTRp0BCY_bKwfUvDMojPf1nzn9Xqgqy4Wi4kqI4-zYwilHDpeuYssRtKvSzvKEtautfDseruEGNXcSedJWg7ItZPM_ey-n4XAg4xPolzKUoKlfVDnLZuRlYLa_8x6ftBkUZW15FfwBgMj5BoTcSDK2txbWumQ1bPoc3Nf3yYRDfaTg8OzMiX5ZQ?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4M2qnHz1ZMuI9nejXL_lVwFcF93JUyvavSs91cHeD85qDOS7IZWyKmdM-5ItLTYsg2ZfRyYS3321_kUAhSh4Kh6gvSeep33YFdpStIk0KQivbscB2dVz_-bkkO866R9sTh1v73AqH_cnGOaUk0T9pOjiSed4uQXtsuOPRD9-Ya9PMFBW_R155f8ucCVHZiLeb1hLgBUANL_X2MFGL7X0Q2pN7xtPNWw6msLJh7LhgUVNkH9ZWgezzzmEA?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5412,7 +5412,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeletons - Anniston, Alabama',
     description: 'The bones of some prehistoric Giants have been unearthed near Anniston, Alabama. One of the thigh bones was 64 inches long, and the skulls averaged 34 inches in circumference. Titans like these roamed ancient America, instilling fear and obedience within the humans of average size at the time.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-162',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7ycyXc9SIqluE6PMB6JMbo5ncNcYqoQarzkEUHMo0kBfdl5CP7oJ-k2QNbMvfhlyodvKoP3bMMtOJzsT5E4vs-0XEAyizk27pToLlWMOoDCqKBXBwpSGiO68gj6XV2pZF8SNOoupnC8ZWa-9sODOwKGvx_Ev2o8z305DWkqYHXAUG5Gnd-8OZG4HJHDic0bjP9qd44scUSYtdsH9KbyRUZ5tKRQvRfZHNfhnHujjN9pdRmHfSdd9ZWaT8?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5422,7 +5422,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeletons in "Bone Cave" - Manchester, Tennessee',
     description: 'TENNESSEE— Near Manchester, Tennessee, a cave known as ‘Bone Cave’ had received its name by the many prehistoric Giant’s bones discovered within it. The place is not far from the ‘Old Stone Fort’ which was most likely built by the ancient Giants.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-163',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X69feO5bqkBrnFwSufGsdr4mdmq3RY1vELFhF0ETpC00JrYbYLJ5yDXEbDpDc_8-BfCgHAthj1ZFbYvWPx8_EFlWuDBPr-0KIVX8zUA2m-mKpgBvIDbQKcEtR5mFFmdd-xZC6wkwzV1gc1_lgv5ZkGPalPQWGswYWAZlVmO_OWQjZohIU18nBMKjWeKfuohl3b5oyoOGa0cmzm7CGAN7NtqHyFJB7WT1r9iKm2poeg6otNoQYaLfkZ2jmQ?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7Vr8MPbs8h7TegGQg9S-xTZoisayvuSGN9Z1Ue4q-KbCefeHgOXarFGuOR6QPNCMgVa_acpEuAibFKkXqDYVP0FO9q21m_pIs3-c8ZwNWjeZBl-5DoFeyrcp2DgksjMJyrU9SoHI9GD31dT6L6D1jIKdHXFCKxKuZddJW8SKqMBQkSqwlC9AhX8SweR6gtgJWOiye3sHogKI3Ya9yC0RAqjdrQpg1z8b1tHFDKFz-NRAqCgCDjUylDxlg?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7ZERMrHqU5BDrE7CuN7O-hUknRj5klAm2XMKNR3_QUCPKcH9MnIAc_ItVqdUscSde19KEpvGK5570_vQFKwSW-Y_jyCaIFo33MlyiOhjuEDYuLGLxN_aIMpImSwt_4u3uJ9F-rQe6ij7Y-Ih49ogZgdTx9gVbegRVvIrEr3NnHC8Bz6MbiKfVQruschL3_N9YUpD6dSCWFXaEoE73xOuZ0xEBxq0SHA7MvGw9xM_eMfOxBmqJjcc5kHu8?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5432,7 +5432,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeletons - Rising Sun, Indiana',
     description: 'OHIO VALLEY— A race of prehistoric Giants inhabited ancient America, with their great national Capitol located most probably in the Ohio River Valley. Their skeletal remains are of powerful build and the jawbones often easily fit over the face of the largest of modern mankind.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-164',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7iYPUBwYGbjl5wwaZ68Z_nr4vgk7BS5l_3t8ycEtk3qvT4f6RHQwSRv18qGfjG7nHBvTT81O4Oac8Bno-ViCPkj4dq03w1-rk4EI1xkdBQa6vSZmoEfGrK9zIgeNoUHWAEWtUeQKUAOSB5mZnxVuQnOjjtCuzjA-luwrkpZ6ETdATZZisgXwHFlONYrMarnWBuzqgoEvWo3EYb_u7eMsNcCZbDJxH9yxUF0wPVkummUoWfMr5V6HMExN0?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6l7vyfqT_ypHsMfb-nUqLkyAlGVqw4VVghBH7K1r2rCGTIs394zZ5e7Sm7DNoKQPQ_RanVh8b70HHBmYc2Qe5XmPCP3Cf_-W2PZtJmDBV_8At49jy3YR9ja2FtApmEyLMWBsyYZG9J4jingNgziJ4UJYSmYs_bCtZXibihDQyCG-lSoR2Y4l3cvMbVbe5dWSoEl_KvLeVLVEsxbcsZ-cUgdjZV8mEAmHziOR5HBBcbVak2BWMdY6VbCmQ?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4ea1fpoJJog7dTHEz42mGs8OMKR41o9dwVBolr2Ko6n5spiq--Qpf8zFe5BSnETL0d8Fjyz7dBBTADvxkIeEDvocolA-R4PYwPvH0oiGwn29WPyLJ5zSp7B4EH0b1TUn3SwQZcMF4llb0miLfALf1ZYzaHslfTIWbwOAvchnHmTXIjdNObA9Y7xiT4E41BPcRp0hFg2B94kiJ3_8b2jtexf6MIt5H3Hh_7CHxII-X73_liIw2Cb8jdWWM?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5442,7 +5442,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Contra Costa County - Blackhawk, California',
     description: 'date: description: source: location:',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-165',
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
     isApocryphal: true
@@ -5451,7 +5451,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x153 Giant Skeletons in Burial Mound - Wickliffe, Kentucky',
     description: 'KENTUCKY— Pictured are just a few of 153 Moundbuilder skeletons discovered in prehistoric burial mound in an ancient buried city in Wickliffe, Kentucky. The prehistoric race of Moundbuilders were often of gigantic stature and great overall bone density.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-166',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4gBIxZGvI9kmtAs3I1SLXCFmR8TQl--rZz5bYnrn0CO-4Xtz3aigNai_zHISKel7cGDhYUZ3X7baoNNmWXMJmPJWEj9R9uPX-8-NmrKH9SfPJU7TpT9iAC_cWCkEnb1w3pRVycaimbTVrbxY7dTRyXl9AEL5dN4r0YNtNkD8b6WKeJhgYDVqYfd95DVkxEIRAtR9su-IiAgsgfhgyLh1Rivu0iwr_FMYoSO7Cd2UJ7mFby3qGirY0_buY?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5RzgHAJ1NZ6IMXWEsH1GuC0oTtuoKxDAlW9T5Tgy8j0zRI71OVWMr4hjjIVmbGmV2DjmjrIo4fBH-aoHkKP0OKSzi7lr4e18n7kSbFC4Wmd3VQ1ZlW7fm4O6x8S3HEcGhTVUTRWtBd_riBtCofANi9AVcDGb5FRM7bmkPxO76iHGPhJwBdgBMf6v5bsD4OXBDp6FMvyxtak9kc6vjNHRtmiFrg8HOu8v5087bXjhJ62_Eeuef_0k4-4Ss?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5461,7 +5461,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x17 Skeletons in Megalithic Temple - Kingston, Tennessee',
     description: 'TENNESSEE—Upon constructing a dam, workers uncovered a prehistoric megalithic temple complex buried deep below a prehistoric burial mound. A mysterious prehistoric race that often included giants once inhabited Tennessee. We wonder about the undocumented sizes of the 17 discovered skeletons.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-167',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6Df7-nu5z3XMLrd8VwbKL3cmlbV6uCeGMwqWraLPSyofbd-PiWBuNSRTVUzWmQc9C2VbuPctMoRvNSbxvSTfe7fUb0vrmFCENjZ59I7dBPxQmuhg5OC049NE6rc2HG_FujpucvtKtzIPvEuhRCSg4e0eKMbDOs3ToPGs_Ur2LQbEBhpJga1gLRp_H94OyXrGt2yTXpFwiGX6ZN-7pTxu0P3NdDZk9rbv0XK_FR66UkP4BETZwSHVwx2KQ?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5471,7 +5471,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Bois D\'arc Creek - Honey Grove, Texas',
     description: 'Reported prehistoric Giant unearthed on the banks of Bois d’arc Creek near Bonham, TEXAS.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-168',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5tra4hNgS2kLefxcQwgAbjJcRyA8RpmRSEDhC2crT7mxmPCJKYFA6jayiY4_RgdvTS9F0YR5DpTEBJ2jL9vcti6SYZYrrYN06zK1p0a26X4Tj95z2pZ9wpJpq4Uv25gmyudCGa5ElsJ0gQ4q8eM6pWE0OpaNTb1JmaH5ObnudHFDAksRddH7a4SX9Be2LUDj6uwZ54t4s0v7pSKDIAQ01ameUab35okPQu6_eTAt1wpF_aBcVLhi6GeCU?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5481,7 +5481,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '7.5 ft Skeleton in Huge Cliff Dwellings - La Cienega, New Mexico',
     description: 'Explorer discovers the skeletal remains of a Giant Cliff-dweller woman seven and a half feet tall. According to other discoveries in the region, giants and red hair were common with the Cliff-dwellers.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-169',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X46tlKt3IqILcTozKTsbk-BOO3kbADP7jRbofZbEL6XOww4Dn2tT0MF3jpB9XwanaLkUcWt4HplQFldIN81zJMucHVj5Oa5TtNgR1c5CCZDAUHA6fQcJ2rZACP17tpzO9TVSsosECtTmpDo4oBL_WOWmvjbVoCWpUbvCaBFkaGmATFbOJoOqFKiGlPX8H7O13SP2NXCLug0s9AOVTEqP1sw3kAmaWaIzpKTKTbN7c2CztoVym4MYnLEPOg?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5491,7 +5491,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '7.5 ft giant Skeleton in Burial Mound - Concord, California',
     description: 'CALIFORNIA— California scientist unearths prehistoric Giant seven and a half feet tall from burial mound. Many of these ancient Giants have been discovered on the islands in the Santa Barbara channel.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-170',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5jCdW7_-QIoQqLwYn9XI1kxEQD-1FZq7xmmim9e--7NticJeA0ZbGOAeKMJhR4XvfsX_rsljrVRnZx9ywT76yBYrQ6C90LT29SPL9L7SV4CfPVtKlK2-xFnu9MZzrKNmCazck0sG_v9oN3pF5cBl6TZ3a1yYh9MK006XTpF7x_3E_HcYdJdVPVY_5Akt3GLLcqgGWBBPka-K9BDMt7y0IlZNHk4BiA0BTgsNCTBRMncYESg2ZcaMDqodU?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5501,7 +5501,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '7 ft Bronze Sword - Vanse, Vest-Agder, NO',
     description: 'SWEDEN— Massive bronze sword over seven feet long and very wide discovered underneath megalithic stone slabs within ancient Viking burial mound.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-171',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7ODVGMNRihxyR2iciidpweAictcRmCtxE7XMWCK5qyy1bPPBsxiIe0hD8jr20BkjfJmnCOXK4cmMtb3nM3lTROxxl9iWS-JcAd8EL0jqETVT-RmTfOoTfKPnVjQl7nqo2IZVGSsDYBpZoBUfnxg1FamnmaCobjeXikHBid2L7DMU4yOOjHwv98wNpZuWxeeb2C15rwSOuK0Xyo2iNlfERPa7a15X2R7BxsJR7RbhnfKnJPFh3WoE7DLAc?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5511,7 +5511,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Multiple 8 ft Giant Skeletons - Toledo, Ohio',
     description: 'OHIO— While building the Toledo and Ottawa Beach Railroad, workers cut through a prehistoric burial mound. Several Giant skeletons of immense proportions at approximately eight feet tall were unearthed, as well as their weapons of war.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-172',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4Z4bR8SinQfX1KmbETvUwOd1V3LjSde8bRDSLG4rGgyUcy162XDKj4NGdhfII7HhLcfyHFh-9OCHE4xPqeUhvKqhRrGrDBPMelCEpIXSXLRdByiG3AJUVZKzlmvhVXYEtvHrpX8lzUDzO1MvUe7WZu4_6RhQ1FUEt1LC4st2L-nY--jLHRO1wfwgtFgqsMlheXMIKhPSGYVUNYYqHnBT9aEEIv24TSD4A5QazyRLDdslm7JWBu-iEKsp8?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5521,7 +5521,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeleton - Arcadia, Wisconsin',
     description: 'WISCONSIN— Railway builders cut into burial mound and discovered a giant skeleton. The jawbone was so large that it easily fit over the face of the largest workman on site. The thigh bone was described as being as thick and strong as a horse bone. Curiously, the skeleton still had some hair remaining and several Mexican coins were buried near the titan. The remains and artifacts were to be put on exhibition.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-173',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7Y5S9EUDxMFPjAh70yZJoOQbFKC_ypd5gdmWJ-UYVKQLXggf4Zgds5FLyYaOghQ_Hd5cSyVtw3XnD8imOGEosyqJ5MbORTKMGTO_k9fQ0rN7k_RRLWnYOMaPU05PW5iTj3osDhBbLEFY3ApWY3D_pwcfA9kSrk26t9VfDZ2Be_ZgItQ4aHfdmZ-LHcUjlvr0wK7Fnb4L48zXUXcA31IwtaZJEO3YPei-WSvYtCG2hVfpdWUAnymswAHkI?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5531,7 +5531,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '9 ft Giant Skeleton Among Others - Brunswick, Georgia',
     description: 'Burial mound with massive oak tree growing upon it discovered. Upon digging within it, five skeletons were found— one being the remains of an ancient Giant nine feet in height. The jawbone was sent to town to be put on display.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-174',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4-UgZ92KfoU7lDXhT4T5v4iK7bHswS7quytY5-dM8Pd-pLD20BZZyT-SQ847-oqsGi-g00qT5SSrNi0k0b-vLjCNcTtUntdDnsVk-vyX7BPY1ZTD67MdSY4GoXFA3zsl5PL3a4TfrYo-oYv-zCAr9yhNNeGXF6l66KG3vkM1avqwdWpyFy-WoUGYHiHxpEIlLRjCHSyYiUwveW4Ov9u8GeuskWs6KPh6pUOhpO6kWb7ykNhQVq-Q9SDRU?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5541,7 +5541,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeleton - Missouri Valley, Iowa',
     description: 'MISSOURI VALLEY— Ancient Giant discovered as workers dig new high school foundation. The Giant appeared to have taken a fatal blow to the head by a sharp object— possibly even a bullet.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-175',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6tUskB53Ew0olxmgmlQgXDtDj9hBgDxkj0GhXmidqd-LFoo2MrvRLl0J5OUWU5-iJLc3jHe5EkDDm-7YaL8gE28lm4kdyQqeiwo76o18ZaQ6kT9vX61z4zCujB6W6GreuAmxakc7_cXgB_xrvmsgWm2yZXyPr1k0VgPrID0N6OXSNjCduP3EpIQsdJ_3OqPKQEn-LcMU6_7szwgV2fDd3MsHkJjvlSPvQ5-T7UHBpEJXQsBajF2qqBOD4?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5551,7 +5551,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x200 7-9 ft Giant Skeletons - Ancaster, Ontario, CA',
     description: 'ONTARIO, CANADA— Farmer discovers ancient burial ground/mound containing at least 200 skeletons on prehistoric Giants. These beings ranged from seven to nine feet in height and all wore a string of beads around the neck. Stone weaponry was also uncovered.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-176',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6Eo6rY0ywDM9RVxoK-SrUKPzr4sKXBhmNzHpXOU22Gdw6wPsNzsfxAnV-Swyp8_Gpfvw7YNXY0mWXaQOmF5533tl1HX59xqq86rZnwwcNbG3weL0qblDmkuLgBLWy11ZcpOH7rhympmAYICUhyDYYW5vzdpDivOnd5yWEMW9pOMN2VBOm_cslEDZq51I34xaHtfSn4kPb3PL_DemgPtcTfNPY_F07m2RO01t_0xmOIaM572rt3i0ArnwY?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5561,7 +5561,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Cyclops Skeleton - Buzzards Bay, Massachusetts',
     description: 'The skeleton of a prehistoric Giant was unearthed having an apparent one eye socket. Giants like these have been noted throughout historical and mythological accounts across the globe.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-177',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X48EcRhPuHDkQ6XQ4TfYR-Gwz4lj7_1u4MAL6WUtAjKHEdDPN1BPZbOrw7rBPrTwUXpBG9R-RVqKSe_6ak_nIdb7f_xAZVMt3CBXloE7AlsdyQYAO_ukppl3cVaIwvoxVz9-fJTgSArOsNpy8kq0J1r8jbqD0sdhJlBQZVLhgirxDrCLoybPSrShM8ZWe7AqvxaSVAd-4ZbjYC37Yxcmk6-JuoDE6tPEoFdceTRrage3-CAPSgjWeFI32A?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5571,7 +5571,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '7.5 ft Giant Skeleton - Evanston, Illinois',
     description: 'Ancient Giant skeleton between seven and eight feet tall discovered near Lake Michigan. Along with the skeleton, a single moccasin, copper knife & gold as well as other items were recovered. The titan was sent to a local university.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-178',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4Zi5biONIbaSZ89T-iFNBI-b-Ko69geyI9o_7M4d16e-k92ttiqarTWO5T6NBdyoN1tGPg67gtJo-TBwBxGUP6fSa4Nmf8zFWg4oVgnnhtbEgfrSVHJ0f_QSNfIwuA0GwvQPd9FF6VB614nL5bjtEORcn0iqE-UTle54yd7zDQ59YB0W0itMvnKTf29q7PZQe73fTEdZtvl4vc6zYJp651JSiaD8VkLbPRaqs_qP0CJs9jLdnwGPDOxic?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5581,7 +5581,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x9 7-8 ft Skeletons - St. Louis, Missouri',
     description: 'MISSISSIPPI RIVER— The skeletons of nine prehistoric Giants have been unearthed along a bluff above the Mississippi River. All of them being between seven and eight feet in height, with the one in the center being substantially larger.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-179',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4ypaUIYcBZdmSRS97LvBqfg7E6SIKoGDZ52iV8nGi-9YlIADL6n7UKnJ8OvgD1zLU6RIFnfDiQlAnDqNz09Cn8JoGo7zXfxROdDzcHerEAmzbWlLlLbB23GPPsoXht_Jqob_w5Ig-nBA5tAjc6mousx-o9hnegive3nNSdwH84CVhMgLCr6i1pMxjmsRArsYWr7DBnwB3DnyWh4EKwgr8LrLn8VjYzHzP5kyPWCWemn5rR6dXzLlaEgWA?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5591,7 +5591,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeleton - Upper Sandusky, Ohio',
     description: 'OHIO— While constructing the foundation for a new courthouse, workers unearthed a wooden box containing deceased soldiers from the war of 1812. But, upon digging further, discovered the remains of a prehistoric Giant.\nOftentimes, critics say that all the newspapers of the 1800’s to early 1900’s were all faking these discoveries. But, we must point out that in this case, the article’s main focus isn’t even on the discovery of the Giant— rather the soldiers unearthed. Also, most discoveries aren’t even found on the front page of newspapers, but mostly on the interior of the paper and often at the bottom of a page. This in itself debunks such false assumptions.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-180',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6tEd3zYVRWMj3NLcQWF6ZqWETuz15xnIywVp67HPLEiNLRDkN5I9LRRs4h6SjAjoDGI1_KLEgodoJbHY8padZ0U6niP-iRZpui5wvp1GZv9PelTKebOMXoPhVJxG55Tv_M4oHmqTWVMfEKDwhaVKM6lRa6JBOe3625zMG-QRuJW1ZSCU0whYfijEReYrIJhUEI_enhrGqes-5yxwJpiHE-eGO7cjRz3TT26zMOBQy-hxxEW1mlHi42170?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5601,7 +5601,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x7 7-8 Ft Skeletons - Norway, Michigan',
     description: 'MINOMINEE RIVER, WISCONSIN—Fishermen discover ancient Giant skeleton between seven and eight feet tall sticking out of the riverbank while fishing. They brought the skull of the titan to the local game warden for him to display in his personal museum.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-181',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7wsSaZYurRHqzR1dRnGZIwPKLtOfmJGNbrl4kWXI84zLJCeioUA4sPokX56M9iMhcWbm_A0nF9B9Vm6BgFS0SeGd28Hmke6TohohzzXpNVKXet6xBZVrwB8yCR_dNOF0qMNCh-xgCNr5o5MsmaF2bJ1sUveMUX0vvNooAm9HLLCSJIpzNB7ZtdsPIruv7JOtGP3bnpvHoyNDE8X4ax3N5Dx4BlkNVMYOT7nptfBTzobq2amW51RpbzrWo?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5611,7 +5611,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeletons - Masontown, Pennsylvania',
     description: 'PENNSYLVANIA— Ancient Giants uncovered by railway builders. The prehistoric Titans were buried with a number of beautiful shells.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-182',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5llnvXD5wZqqz8xH9qjEVSUx0l_iGc7-Pw7j25m6S9hWQIUVbvgogFB8EzBuRUP0G-n65sxYQFECqPWpZ708P48Z44LOoq8Lmppk278Wd5Ohjsi4Z_FLg56jmfKECh4G2vinybABRpaCvS3s5Yct9z2EODGGswnDRnhUzOJBORx1eopQtJQv_rzVHTxzA3fSBl8EpQdOeMQRE4dA2Pj1qBVV2yucv-0acZPaUGKmceE0A70UxlJwqOYTo?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5621,7 +5621,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '12 ft Giant Skeleton - Friendship, Maine',
     description: 'MAINE— Prehistoric Giant 12’ tall discovered buried with arrowheads and copper artifacts. Many megalithic structures exist in the northeast. Were these men the builders of such? Who were the ancient titans that once ruled in America? History knows.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-183',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7lr58ghDyvDYl-_SjsfpucgNIw9T9sMfSwSTNr_GWhXN7SYp5J4Vx5Xz2adeyPdkoq6cN6mSOOe320xzItITBvWBrrvYjjAFY-ngFVYTKdRAnapktX1yvK_Q0mXa_EyIc8qop4KfeXPEHPMLN2Zh7tqSZCUXfcZ7qlDTnetr3Az2MrhVdnzY-e5D1LjjLHSGC8hu8_qZvaO8Mx5vnpDL8wF9HPqD2ldmpH9KKtCfoM_BCxRBxdY67xkm4?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5631,7 +5631,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x3 Giant Skeletons - Lewisburg, Ohio',
     description: 'OHIO— Three prehistoric Giants unearthed on a farm one mile from Lewisburg, Ohio.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-184',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5Xaw-_5zRquNz0y6YZREuM9Xjh8NJeYHCzcDH-sr3xBzbmNjtj27GnM75TH2i2yp9ruAG0abNNchMXi8RWCj3UiiuQ12R8bwvYi_6YvbKT4fneZAelly7uty69LBw7hdRmmDdmxxZqJxUBnea5TPr1NZ1muP9k5ATc9qrPyKqRLy_zL8euZ66KtfIcqRNuLHE5Sht3Xz8Ob74VEDznSrZq6cZWkzBJKQ9ErU9Z00lYhtWHuxwhljj8wqw?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5641,7 +5641,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '9 ft Giant Skeleton - Guadalajara, Jalisco, MX',
     description: 'MEXICO— While tracking a wounded mountain lion into a cave, hunters discover a prehistoric burial of Giants averaging 9’ in height. Judging by the amount of bones, they assessed that there were around 200 skeletons.\nNear a complete skeleton lay a massive stone axe head weighing 30 pounds.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-185',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6jiXTJ1kA6SrNYNiCEygXpj7bAm7RPAJL5nXrSEpbtCQhNU0e04013UOQdEH-fmCKrsfCpfZThMhnp8bSJWxvkN4H8yoUyWKZWDxciZvAoPcFFA8lMKs1xOvr7BThCV1ASbr8pR6yWV_JHTI4IK5I-53bRqt7bo-yAz0QB3W-QybQeLN0_rpTqF3sJtF4Na88-PvlmhEUsXmk6qMAb1L-_5F26Xy6971G2cLHRZhwdJEdSLdJnk29aL-8?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5651,7 +5651,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Benton County - Camden, Tennessee',
     description: 'TENNESSEE— A landslide into the Tennessee River revealed a prehistoric burial ground containing 50 Giant skeletons all over seven feet in height.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-186',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6DRkR_8hRTdxY-I8q3CMPbzzrjCKHkg5pz4rU2B9zUDFwKFWyhME5sRZhD_pEEcGTxyyks7CaMFRgDb6KyMlcCk7_b_IS0wxx8gZQmlPXiJb-GYp5Uqlx08rA56n5WT5mQAvVneI7j4AGBz8wWLvVBcNmkmCQIiTpV1vfmh20SeATS1JkgM_9vb-ZcpVoUX2H08Ny4lGetdL92u0a6C7q8TPIG00RBoJe8FA9Zu-HaRKwCWarM8KEazIQ?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5661,7 +5661,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x2 Horned Giant Skeletons - Springfield, Ohio',
     description: 'OHIO— Workmen extracting gravel from a pit must have uncovered a prehistoric burial mound, whereas they uncovered two skeletons. One of the skulls, belonging to an ancient Giant, had four horns each about two inches in length. The two horns above the ears curved upward, while the two below the ears downward. Who were these sometimes strange titans that once ruled in ancient America?',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-187',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5lI6_yF1r_pKQuJ7weOF9rsbpeHC5kSZkVCFV8Okg571V0OGhmbDipMWJUECRdcT50tEsgmtzJouvBvab2qmwuu6bKI3RVa86pkrCN6JdRaKFhVBuSoWJv4mO5Bwyqw9wj0RF3Y0Yo0mGzV6hSe5MSTyGgj1JGpZYBtR9ZEb1EV9ahjNn2NsyDGCZkhUDO3VAt6XA1zcK_pxujXrZbTn4eC8MTLmXJhLrP3hdwKrnljPXWJHQy3a6RZX4?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5671,7 +5671,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeletons - Strasburg, Pennsylvania',
     description: 'PENNSYLVANIA— Article reports that many gigantic human skeletons had been unearthed in direct agreement with the book, Captain Smith’s History.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-188',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5RXMCCF7uK_fbvVD0_YEXlqT5N4VUtp27OSC0UsZw_s-TwUghhtbHvz01mQrCrAfpq1BaMa_I3fFHjsGZxNZpQlpLZXiXxwKB12AMB2y5Q3lND0tvrZ_IOXZPw2EsWtsv00NoAx5Fz9mrCXFa-k5iQTYwg2LSsdAukv0pHEpWQxgl5DOHdfLubpA3OCTdyiaay_jPBySh0bg9qUHZhhbhSL1t6YJZPAiR2WSRE5SpTx9aGxWE5kRQe1oE?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5681,7 +5681,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeletons - Dickeyville, Wisconsin',
     description: 'MISSISSIPPI RIVER— Race of prehistoric Giants navigated the Mississippi River in ancient times, and are found in the burial mounds in the region. Many of the giants had double rows of teeth. The uncovering workmen supposedly just discarded the skeletons instead of preserving them.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-189',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7cjrnx9qGblKgP45JYsA9zmCKKO-KgvHub0hF9pHmaCLzv6QySxZP5TE6glHr0tn5A61JXk5bCk9SW7zsToEkl87qhZArlMrTC2P0TM5M4fk9sSfrR-vU5-X5FNGkQNxX05ch0SJ51Dx6m0t4dhRzaezraDL_4cmPgDLttnRHF3QGGEwAKUlY0JBzxUfRXRjP4FpAKrDaJ0MXMq3BJPY80nFETHP_ECuVaNr0Mpodh-2qhTYWNKuRAd7Y?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7zdrijokNMPcRqjytirvfx33GIhbMm-PUcz4Bjrwb6u64j-cULuLCNKITynXw75GPqaRpJNtaE-WrCkpmj_JnS9BDxPW7YmUmtoiPCbdff5AieIClfVB-GNZyFh7CW3EJk6N38sFTKGtrMORAAgSPAIDWPMui4zlrCK9p3RVLFnsKNmrKTaOhZPi8LoTAmxhATgyTidHmYZD3GP957OpeSREOoWsDRgkqKxLz725JzVsHI7a475WXrBlA?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5691,7 +5691,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x25 Giant Skeletons - Shelbyville, Indiana',
     description: 'INDIANA— Twenty-five prehistoric Giants unearthed from an ancient gravel burial mound.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-190',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6oDfUlBujlgmk2SGulx2ES2J2ElgFFzmkDd5RPELfjXLxukMi0k4Mb394BArenYcE80hG9Be5IOs7RT2H5viiQDkzpkZLphUMRBuuXccjUKPNLZj_HztZUQfv7HZ2x3gFVcLS5IgqEkoMQPY8agAIiYrPctGp94c47NMbEqcjggNn5MNqFzGQILIr7UwY9JL9R8p8BQW9ugvW30dG_JVLuUIi4YEqLbDZphl2T5TsmM3w4x1ljvma7DMM?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5701,7 +5701,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x22 7-8 ft Giant Skeletons - Battle Creek, Michigan',
     description: 'Battle Creek, MICHIGAN— A farmer uncovers an ancient burial mound while plowing his field. To his astonishment, he turns to see what bound his plow up a bit and sees about twelve huge skulls tumbling on the earth’s surface. Upon investigation, twenty-two Giant skeletons ranging from 7’-8’ tall were discovered buried in a sitting posture and circular pattern, face to face. Among the artifacts uncovered was a silver breast plate with curious inscriptions upon it. This piece sold for $10.00. Giants stone axe heads also found.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-191',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6wTJ_IFBqb81dqrExqAJR7R3k-qMeJKaQYfT8rNt4XF0zyyTccPPDmZXqPUqGpxOhZT6Prx5_quHW-6n_nqLZ632PcIzLg_pwHots7WIQh3mtn5U6kJkZCpS3Umcrl_uuAqfY16fd5UHOcKIaOqJLUeVyq90DoJEeVCl7Yn-0FCwDOgOq8qMmGgIarfUZXIvBFixlezxy6yOLq13Jr6gmK9DGfgw5GF4gvp_vvbK0kJ8QvYH8ZNj35wnk?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5711,7 +5711,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeleton - Bristol, Tennessee',
     description: 'John W. Emmert of bureau of ethnology Smithsonian Institute discovered a skeleton of a prehistoric Giant when excavating an ancient burial mound.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-192',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6oP9UOaP1B0P4xZ47YXI3fcS90KnXWsh7Fc0PLg8gpPMtfx2J-CDW_NYBB5zdvVEABb2d-o9hwELMc6fckJSRrxdUOWrh9tUFIE6yBwRk-Ys12gOFcm3DDXluGJPIBxcLDMjRnGahQDBTSLNMxqcXyP1H08fWX5BrIqCIVMSdQaW6wDwcSy4WK59A0O3gvkLmY34dh0vfx0UggkQBRbwvkI7QMhACYf_7SFqq7xF1svP-mXNUw0lmSHF0?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5721,7 +5721,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Hundreds of Giant Skeletons - Corpus Christi, Texas',
     description: 'TEXAS— According to the amount of skeletons discovered in such a small area, and according to the known history of the coastal regions of Texas, hundreds or possibly thousands of massacred prehistoric cannibalistic Giants lie buried approximately 50 miles from Corpus Christi. The giants were noted by Spaniards as being almost animalistic, living in the brush and eating grasshoppers and similar foods.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-194',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5xKHZmFiuaxIR5F4BFX1b2ppVf2GaDYps30vCskndy04dklwIejh68nK6WurEb4Pk23KJgwfUOXZXi-MJVZrwa22xFO0FWdSxT23BjVjdfvYrcJ-FheCgFrO2hFXwKAwq0HrSO1vwUXo6BtAiL0RwrQgjlvw4f0ToBJl55BUzjrcZMYQ0ECY1Rc0D1gvEFDP-ETHmbU10mkq9IZTXLkm4u3h4Yzcae7zaqYh3xDkc10jfnjgkTRzsFDFY?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5731,7 +5731,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeletons - Katonah, New York',
     description: 'Katonah, New York—While constructing a railroad, workers discovered several ancient giants within a burial mound. The giants were removed and reburied in the local cemetery.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-195',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4dXwklYJdqin_0lxe7-CT2mYJaWkT5lrayA9NrZtDMoiEF3l84eoeoUSgBWq-9P9THTQMk_qO4K-lSPve41kfuc3prrIYR-ef485AWijy4_U6oi4x-enTHwNOB2ljKRn4fLohEJGjMXhrKCPS1fAuNioXtg77v4PVWBuEN1cgJqYfE9DUsnkRTYNIVjCrDLNSkYgtOLdThQIMEqfoXEl02k3QAq_oW8enk7j6OjMPjfqXBxSpXa0SBEl0?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5741,7 +5741,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skull - Victoria, Texas',
     description: 'The massive skull of a prehistoric Giant was uncovered during the archaeological excavation of a burial mound in Victoria County, Texas. The skull was stated to be twice the size of a modern day human’s skull. Giants roamed much of ancient North and South America & beyond.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-196',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6DwsE4w0pD5nEurDuc_7FfVNe18pTNRW3Lsc4R13KnIptug2gK8dmCNPnfBvtQ532nsM_3g08xNS2DS3swvAL6rhJfpXQX2MaxxrbAXJJT1KdWIGh_cs8a9i7phMooLQlFCKMboQhggzwxV9kb0BlFggfLSlQo8L_asseUHcEd4_NsV56ZDh9GE0Hka9RUq1Y0Dspqa2_hUq6rk9FmRXiV1MeA9WMDSuugUsBQruDtZfStEE1pyxYxhaA?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5751,7 +5751,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '9 ft Giant Skeleton - Greensburg, Pennsylvania',
     description: 'Prehistoric Giant approximately nine feet tall unearthed from ancient burial mound.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-197',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4T85R3NBnPQLCvg7TDCKxjy79RCsiijcSNJEQirxo5br_0CgjHmGPz8ZzUXIagS-F52oXx6ljhOkNStL12ng2ReBH6vgh97Cxi9_FHEtOs13XQ2gUDa1s3a4l5TxtULbi2kbZe_kQbWqAEHX_sVpHQop8QKNatGsqA_Iver9z2J3tMk5AFzD1b76zWKHAfHVWj4xy0iwY4CLTpHB8mWWnwapBiaEiRdt1_LZFVk7igTxo7jSofIbP4qPE?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5761,7 +5761,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '7 ft Skeletons - Arkadelphia, Arkansas',
     description: 'ARKANSAS— Prehistoric road 800-1,000 years old discovered as well as ancient Giants seven feet tall.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-198',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7Nbdbbp6-AHku7vO2rvem2rbZja1cuX7C3sMCPpj4Ps38-2LAOGigZTiHYv7PLY4dFcTWAcHoDnpSmwykVobDcbUO23vbAMxoeU8X6K9fB4MryT6CRrUWlLCTeqOYS5GKpeYZFAxT9nqTBhWzfEF25OwAH9Zbmnn-IsJMsVn25SzlAgdBy9HPM2RrsJt4m-6_ohw_HCy4Shfdz10FFpODe-COBL1XXjdKuG1EpP8cZBeGDUIu_AmEY2jg?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5771,7 +5771,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeletons w/ Elongated Skulls - Delavan Lake, Wisconsin',
     description: 'WISCONSIN— Prehistoric Giants unearthed possessing elongated skulls—sloping directly above the eye sockets. Another mound in the area containing 28 skeletons was also discovered.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-199',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6aEkfa5AI5UaTpQWgjwURkw7cDE230jS5yO8n-EeB393NiHlY7UGXS464PlsOUblxzS0OgI8KyhbBalIHv7kf15iUg1qJjAoQqOFnShUCWDdQxZ-5x_4geNvt5BO9WXI21FgaRztjYpSfkRnK4bL8084Yvf1BpLL417bu1dZt1HUVrz8kl5vQS28fO5s5PZkXcv1fEE1UcTtZrrcW_abbPGXQAQO0rfXLoSajGCLkfJgCaJ0w9hSZV-6w?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6VZqH1-AzukIsE7rl7PrZkHqqsJX_jJtKxceMInmF1xplskrhmBXzuIJs3mmMmXVWZ-H4sTF1Gm9vByT4AAWW7CdVjIgd4UfyLUiUcvZVduJe0yWfqptZRjxm4rxTMRiTbdfNlQCaUjbWyaHQLTjbTcgp5q5Dl475uGAnLJ9wZ2UjS0zQvp-TxF4YSucaoGILvaGkMNAjjUcs_j30lDgHl0x5Jn69IIosZ76SRpNs7pQoAK_9bJf7KZjg?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5781,7 +5781,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '8 ft Giant Skeleton - Monongahela, Pennsylvania',
     description: 'PENNSYLVANIA— Farmer discovers megalithic burial chamber containing the skeletal remains of an ancient Giant eight feet in height. Several hundred similar graves were located within the vicinity.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-200',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4BEqEsQwC4r8HQ014MOQsM_IC9r_Ya7BhG7ddwsasPib2Bvo_7YqSu8AN8YSWaJq_B_WuT3an6gAknl57rrx0QD9q63eIANbsfiTgOetn-sXYqxUNkBDNjaD1CMsU28p0z4p-UvWsuD1NzCx3y0TxRkgarlJLuLEj1xS_K6l9Lp17HpdFzrtGfoFAzY3AoDNg6tfDzZEcYfBhZVwY8KUIvK-vPYh5wowYKEEUbEsZOtgzyWmDYD36RnJE?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5791,7 +5791,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x40 7 ft Giant Skeletons - Munich, Bavaria, DE',
     description: 'GERMANY— Workers uncovered the skeletons of 40 well preserved Giants all averaging seven feet in height.\nMany groups of Giants roamed ancient Europe erecting megalithic structures and burial mounds.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-201',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6ba03iReoG8nuMm-rQ3YTWVlAb953fSkcRopVuwTf4K7_NaL4rwgHi2cayWpOocJeLKkxNnrePa9i0bImeya5DWJMKwginkwZ8n9GnjjMmXmiYusp2SxZRtg1XXRG8ZytA_xmED9lr4Quq4NUSFFV6Hq4sbcQhaC8Kt5UQcRcg1z120mKXXiuXq43Z0Tmk5AFKNY_7tqk-6g6Yy10zhEJBo8UR8pFItaSZuUXHkkkI2Wnemm8-kV0EsPA?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5801,7 +5801,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x4 8 ft Giant Skeletons - Bellbrook, Ohio',
     description: 'OHIO— A group of boys discovered the remains of four prehistoric Giants while playing on an ancient burial mound called Barrett’s Mound. The skeletal bones were exposed because of a fallen tree due to a huge wind storm. The skeletons measured nearly eight feet in height and were buried with their heads facing the east. The bones crumbled when efforts were made to remove them.\nThe skeletons were viewed by a great number of villagers.\n—-NOTE: It is somewhat common that on occasion, these skeletons crumble once making contact with the air. The possible cause for this could either be, 1) due to extreme age, or 2) due to extreme dampness in the soil, or a combination of both. However, this is just a hypothesis.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-202',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4MBKgwcMDvFs6G6vXp32-9BHmBjYv5f_ftMsgM3irRFv7hexw9khxFqe7bK2cJ5ZnQSd-rkmF-HmmKzomA6kisgRywDld48-dFZCmpfD10R3o2rWnlrMP1NdH609ydpYejHOySiM53MxAOckH2WxuX0w5dXMmBsihx3ClHsl4bbnR4Qn_lDVuq78JsqFvjdnaIRFBl4ImFnwrG39XCieerwc3S5RVKJ0EstWuu4encB64ZL22BSzT3GdA?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5811,7 +5811,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '7 ft Skeleton - Bridgeport, Connecticut',
     description: 'CONNECTICUT— While excavating for a residence, workmen uncovered the skeleton of a Native American approximately seven feet in height. The skeleton was declared by a Doctor George L. Porter to be about 150-200 years old.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-203',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7ih8M_VOI3bbynSePwFH2Cg_ZLHL46z14kUCFFYZ89UEgsr0AfL8sqo0EDeAMeJh0FtUI0m3bCDosqihjHWGBBLslm1X3MADTbgm8fx010FltsMUdNypKR45FWD1zVD1fyOvB_ajrEYATaVLeR080_h1xqvNbPORt1bzn09igABb0nGgppb9zgfEKgDhX427SbdxeftLQELthPTQ08tx_RTJiDMmXyqQsajYfhzmGv8XmtlVDerIsU1HU?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5821,7 +5821,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Multiple Giant Cyclops Skeletons - Ures, Sonora, MX',
     description: 'MEXICO— A team of Mexican and American archaeologists discover an ancient burial grounds of a race of prehistoric Giants averaging between 8’-9’ in height. Some of them being Cyclops.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-204',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X798ab72HyUKus9Ud9qbRbX6oDTo3j0W4vTSRZcVyGs9Rx1qkq8IxXgogPPBiKY76wJ18YIw0pOi0rfDHhL2Dq43xv59aRzhObzqthYm-nSxMDekr9fTKIk065dtweZxlOQy-HUNU3dqErZtkM_Gk2f-pRuQyFHxC3E_Zs1xCayJWNG3E2j6KyKhcDjPFUiRKnS9Ad7k5kqtafm56D9jXIMt5yrMFvyuDmP-X8uzV8IdGpN0z-k-5nrzoU?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7hf3OeLu01utIovNb8AHv9I-6OTT2hoOluCrioywyfi6IVU6z4t1EhN-wG69QPhn01vbdAdryCigGe7Z5uCsRGxs0Ir76L896WVUrsh7lsimkw14070tBR2mO_Nm-XSve4UuKvXuEX8dkFlstete8RwT34wJQrrPL6mxMGdPqkADB73gcb0sLi5nHZLwSwRl7WCzaQUjIsmygQvCXBBf5gE6hpYPwh8Tlhq9HwA4XWicB0D9jy8amoaG0?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5CioDF4ehdUWIB7yHXdvT7DTI_0l0qtThdoqxfiD7GV7go8Retej_dxhHl8gRn_xyNDUjXP7Yc4Y5aUjPs-GkJrI9zpboVvAZsmjdsWjr88LlC5uZPBVamhN4eUf36ZLzh2fCOl1TbTIKeCKdWGwGH89PxL2A17LTODK6mcAH_JeTbhUY54-B3PqqCUEXQQmpboZbtHOxINcUdsBa5YPrujJknpirVjkEsCDdRl0FC-ZD8reOs68QrkQE?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5831,7 +5831,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x16 Giant Skeletons - Fairmont City, Illinois',
     description: 'Sixteen ancient Giants discovered within megalithic stone and earthen burial mound near the prehistoric Cahokia mound cultural complex.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-205',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6gU-21QyTnhnhNCxvFjOwsSkhhpCCxqCV3tdu6K6ZqVSy4O8gCnV08CJ0aNsK5g49_fQ4br3vbpRkf8x9gZfG51kX0AkB7mQP9ou_y8NERROd8ctYuUekIektzpTBujQQUB0dG2I5T-LLlmkduEMbFWrI5rQK6AgLOexyPqBNPMlzzmslPV36e9DJJRPqh7LaGAQ9agLljJqbvvevfY75hn2Hu6DSfs1mLJwRwa87c91GEbhc7mRQ101o?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5841,7 +5841,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x14 9 ft Giant Skeleton - Santa Monica, California',
     description: 'CALIFORNIA— Workmen uncover the remains of 14 prehistoric Giant skeletons averaging 9’ in height on Santa Monica Beach.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-206',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6vGqmu2CJFrDx9I7XF6xH84TG4fBwA-vHuGXFkRx6BwHRlPPSUcBUdfsDr5HmJDVrvtEXpFOqbHeUUcb_x6j41uo-bfVvMYIadwx6dqOFsRdLsNvb48ULkaej-gXnA6gIUe0Nysing-WaR4s8YeFe6XY8QMolnKqotQy73-keLklznhRmbj7HmkIMW2LHN-BU5j40A9Z6rg_RebZiGSds75V-VRX-5IDQPxtl0_26EvNe78M5BTT-VBUA?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5851,7 +5851,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x14 Giant Skeletons - Logan, West Virginia',
     description: 'WEST VIRGINIA— Workmen uncover the skeletons of 14 ancient Giants while grading a road. Who were these titans who once ruled in prehistoric America?\nAncient languages of Celtiberian, Ogham, Nordic Runes, Phoenician etc have been discovered often in or near their burials.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-207',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5RukTBSHpVyHJLNt6EnrvowVD8N8lrKubQQ2pFINWkAEwu7fhP7KfiPQvfvs4EBhpAxS8VaKqEVXN7SotJgTCK2eBkxd0YLZ2sRBz3kK3ynn8qW4fLSihl4TSP_TSfqiE0Q3DUd49l4D_424M4-vYS4biL2DGP3AtXqz39SIuPAO02fFcST_GcwBNhcr6OYOnol69ZTHxgVtbvjFoz7uKHdUFD37R2ALHVVwMzcSgAkyAkJ68SaLYOwOg?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5861,7 +5861,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeleton - Gainesville, Texas',
     description: 'GAINSVILLE, TEXAS— While workers were removing dirt from the Pecan Creek bank, they discovered a massive prehistoric Giant.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-208',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7CkedkjKpiSSFmS1CyrB5lIeeRexWJklrXKAO7Re8J5STm7I2TzZiV01mXSN4fFwZBOodQrzuLxpD1mlq87BE6wxRF7XYt63scN-ry4zseT44zQ-eTDFR7kf6yJIleonUW6cyOxy3lQX21G0ptz5C08FxKgjw3UMtwX103YPs3VUQ_hsrCWRU3mY_wbBWwZJSSJfJyuYLQE0aw3BQkVh_xIU5FYLTxbgOY9-9JXuKhhucef7J87SV_RFY?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X664kTxkFmy-YfpeRqlIlx5bqVD-Bv-gVdEyZo9sKwh-fCwE_txgaz2gsO63UHQWJMUdn0-GKFPoOIKUfqiePFjAsdQJ80CIq6IC_Tdl4LjSvKr7oUz8o2HvBw2I26MH57Di_cVkXJLkm8szm1XCekMSrxIHAw59J-ZMHPXQkwINC-BJJnA-fCoTeIK97E5-48nMXW7R5CCvwMwhk2lNzAEwger3VMP9tHXHU81YvR9PTgP8ddtQ8c1w7g?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5871,7 +5871,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeleton - Caldwell, Ohio',
     description: 'OHIO— Report regarding the skeleton of a prehistoric Giant of immense height and size discovered in the great mound in Moundsville, Ohio. Artifacts discovered there were un-decipherable. Article also mentions another large mound discovered on the west coast of the US.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-209',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5AgPEA12raBZBNeeKilYw0QMmPv84S8sklh2AXvvOW7B25gZbap-QI_-nFot4KvJPD-w1gkyzpsQHBf0cKCiZLqcInjqUNC3H7R_zPpxzI0Xdu5G-rHx7hRidPi81Xu67GGTJZw6Vrmc0kvWhEzn73Oo7DYwJ735Tf7mfXJeW8BpjAldyViRj6MUI0GOGT6T3ki0ruv7zbhSAiebm_cB5n4aZ34hQ3p_9y634lm4_e0eF2gZWdY0eEE_o?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5881,7 +5881,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Large Skeleton - Forman, North Dakota',
     description: 'North Dakota— While cutting down what they thought to be a small hill, road builders discovered an ancient burial mound containing Giant’s bones.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-210',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6lRJ3JPLoK-Uxzm43SXRIzkEs1Zx_q7z71nLCg6bjqTJ_HECbk7SZ2dK3xJQS72cZqpRcNSnyo6gkpu8eTJFRALr74Ma1QIZeDii7qkl3We8iMjg95yEITyNNkXontsdyyi7dZcdvvu11dQvH7ePwl1jKlLNE-wNXVMMVYsJSzo9CpU0ESICGSOSe-iS4JYPFGJyquJ4tSPJisFqYYpyCrbKnx8WaOMXYL9eMqMM_vf_XZcmPT2KhZ4lQ?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5891,7 +5891,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '8 ft Giant Skeleton - Morrisville, Vermont',
     description: 'VERMONT— While repairing a road around the year 1830, workmen unearthed the prehistoric skeleton of a Giant approximately eight feet tall with a most massive skull.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-211',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6jX738GUVUS_Zd2yDRv7sex-YO4n5Q75vSKqcjKv-OXtiRL6CpLYZRwTmYbfS--ey2UOowdoUa_Zpnp5YKMs7CYZZ0PAcRYbwolJpZRTztQAWRxEa7HXcwl4wHuXZLzqGfCy03rtj8p_cgh4gbUwn94TbrPo8yFbP1UgQWjDqgz-9NxBpQeb6PymA64CANOqAlGlu6TRLfCqA39gaBoPrgvfyh2oHB-CrJzTQnt3nhLAtZ7z7C43myktk?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5fPaSdXb8WBf4fb24TWFtWvymfMFvi6GKO_7QIAOOaVQ_WlOqDhg6jjAaKQQlH3fh6g6VxUKXNpOjEQjAeotQjJJB0XB4qItq_IJ_D4kzUcUVXHWMT2JlPWX3zrUt83VXFRNADRRSdiX2gPvtp5s3CQ6EvaJL3oE9aVvW-b6UUgnpT_RIQB6h-W8mMXl9hNRSOC8L72JrYhM5VIB11PS650aS9mBf1ZQkO2U3DNB5aAX3ysT7QePiONR0?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5901,7 +5901,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '9 ft Giant Skeleton - Salem, West Virginia',
     description: 'WEST VIRGINIA— Prehistoric Giants discovered within two burial mounds in Morganville, West Virginia ranging from 7’-9’ in height. Many ancient Giants have been unearthed in West Virginia. Who were these people? Where did they come from and where did they go? History knows.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-212',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4A53AiPmaSvgXd2_hkTIOHaxb5gE2siMiFQKZDOQ00UjOl9gX8s5oIm5FjLiFcKXukcExJn_Lp90DLOgebtN5PBAtbpdcZsfiFp41Ndt4rLPYVwLvlgpFB0vLrabX18bgMrd_HlDJETU7iX7ecmInDzM5i42GnWQMYsMsWNQcRHoOiVFgNWznxVbE7TcNtCr7qLYOQ4e_fEQx3gZy9ct2akDrmEbbEKvCHtQzEMg3kiDtesrr4yRjq8aA?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5911,7 +5911,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x2 Giant Ape-like Skeletons - Santa Barbara, California',
     description: 'CALIFORNIA— Smithsonian excavations uncovered the skeletons of two prehistoric Giants of massive proportions. The skulls being really the only part of the skeleton not disintegrated, they are described as elongated in appearance.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-213',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7XPWAw-ad9UlSwqtHDeiGIDOYbAzn6KLf9pOU4qOLflNVCztrrlOMO-FHQDsT9LjlhQfNbynRlInEpa3xHtxfpzrNn3JAs3OymuqrBra3cNuk8CXhmSD4zmNWtucrk9VK655BXsRRViSKJAM3p0sPkMhSNDKFqidYJxgDy-Cj9Wlcs-yrNmqMc1JePSWRnO2FofjHh-TC063M6PwuC-XP-9TDq3kvMfXH4L4RXDxRFhvMWFM5OqL8t1fw?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5921,7 +5921,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '7.5 ft Skeleton - Ridgely, Maryland',
     description: 'MARYLAND— Farmer discovers prehistoric Giant approximately 7-1/2 feet tall while digging a ditch on his farm. The discovered skeleton and ornate beaded necklace to be sent to the Museum in Washington.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-215',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7puNdBmhbCmO5iYb2pv8QhX8KBxZtd6Yt1tiz38kcDLLIT_J2765EDFVvsmJX53Nn9iixzGlKhgWVawDgQuVeypeMVcLAUzCn0ys9p0hgvm331BXzvnm27g0mIoM3lNiH7vqptcMf2NSGfmAcNBaTIAjdyldatn0thynV2xzjM2b3vTJKDwdk9R0KKefE7BqHMN4dugRhF8PGqXimCVGMP4Z42VUxR8bFBJYnGlhG8ZldkhR_AVM1nLD0?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5931,7 +5931,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x800 Skeletons Some Giants - Bristol, Virginia',
     description: 'BRISTOL, TENNESSEE— Approximately 800 prehistoric skeletons discovered in cavern system supposedly about 1,000 years old. Other reports from the region described Giant skeletons discovered.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-216',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5A-A2gNI47cDDPzESrVnQNFsY5EjCqSAI2qnjVQw09TFJn8zKEYN54JbB05UfKiaTqSiUU5ium-BWD1FC7-0t-MNHRF5W6OYYU1rgKuIHoIcRsnPbvVOPMfNhY0XwRG-UMroxdp4Tp8PFx8z0uq41fg1dsCSEvhv-rM2Z7Syj0Si-LlpRXGWRVvn6gLAcoWjU52d4BPsGfwf0vdL5z_-Wn1-_JirT3VBnmZGxbyaGPJW9PvBHb5sCDALs?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5941,7 +5941,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '7 ft Skeleton - Huntington, West Virginia',
     description: 'WEST VIRGINIA— Upon the removal of a prehistoric burial mound on Thirteenth street in Central City near Huntington, workers discovered an ancient Giant approximately seven feet tall and of massive proportions. Copper bracelets of impeccable craftsmanship were discovered along with a plate with unknown inscriptions written upon it—found at the head of the Giant.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-217',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X48uItfXShEWFGoBWxvPqxNecjHKogBJYHiyi_UaYE0cMOy85RjDvaSfeHq0izMIhkjESnllPEL42bsydQ8n5RDZghJVb_tdc_HR_FgCaRDdQR4s1vWyFRL2oRaW1lpam-kIy2NmLbf1ymSLfCEAC4flaLurPqY64NM8674gx4LwF5iCzY73xjglipDDG8MkiuyUNxdG1bXKnGrsgSFtuxFg3E2hzSEtEz86yPqE8mx1-iJP9Ujy7T0ssM?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5951,7 +5951,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '19 Inch Hobbit with 200 tiny teeth - Newport, Tennessee',
     description: 'NEWPORT, TENNESSEE—\nPrehistoric Hobbit Report• While cutting a bed for laying the Tennessee and North Carolina Railroad, workmen discovered a most odd prehistoric skeleton of a woman 19 inches in height. To add to the unusualness of the skeleton, it had approximately 200 tiny teeth that grew straight from the jaw bones.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-218',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6KP2FFIFByR61fIg4-JzEeSRz8s-KGfl2fAnNAjlqwS1VmUasCzQOvD7WNUud3F740L1fruMZ5cMIOvU_cUmOMx9jeiyGxCWAyH7EvztCxuqlmZQCSV3zKvAYv6TDATTCArKwckXg5TEu5LcaMTqjjdlxu1L3kexpFUX_Y1O08tPECrYHpRQo_snL1VApaKlt-3SxwFE2Hbm81DJkGDvHdM9be_O7DVZxQRGmVu3bgq19AjHQdRMlec0M?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5961,7 +5961,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '12 ft Giant Tribe Reports - Ostrov Paskhi, CL',
     description: 'Report from 1722 describing the Giants averaging 12’ in height that once inhabited and ruled on Easter Island. There are legends that connect these Giants to ancient Peru and the greater Andes and Amazonian regions. Also, there are many accounts of red hair.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-219',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5qDpf8SM5H1S5oKtjnBQfmpmgFWgkSuW8IrY6t3HY8Q5PXzQTrbly6mP1BPbIAg3J4kJliBigm3aO-AWDq232NMuDCD-FaVTMQrsp28WLddBGt0hKpNZmw6-XuzWJ7rWLp1knXAaK6JqxWKt8CpMe9f_Ebj5GwxdSK0164w20GGZo6zepmX4Rdc4qkxD-aJfKQWozwYDtB1eWBTDHC6DSjmDrCJs2Z-6GbE0p42hHzVHnPxbAnOrSL56Q?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5971,7 +5971,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x2 Giant Skeletons - Frankfort, Indiana',
     description: 'JEFFERSONVILLE, INDIANA— Burial ground discovered containing two Giants, remnants of a bear necklace, red paint and other articles.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-220',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5_cVx6dzzKzT_SVLLVddgeat_vFN0CJTj7NJktWO5PhkG4rOvMfoVXDqJDJVqlBG0_8BSD1VmGrcK8DNd-agOaT8xeiD67mAdzb548eb9y63UGFIKfAJrDUAhNozzyMqa8iehEq86JJEAi6I4CPIiv4DWJnyQaQwmlmxDHlQ_KDxMchMlwEFZiJrJ6VsIrrMZ2yhHBaJw1YPo-_R1fLVoCg7fyCEmxenQxB2c73qdrBPhyRIHJOjAwUec?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5981,7 +5981,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '7ft Giant Skeleton with Horns - Knightstown, Indiana',
     description: 'INDIANA— Farmer discovers ancient Giant in a gravel pit on his farm. The prehistoric titans was over seven feet in height and had horns growing from his skull.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-221',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4HcU63GpJmdIS_K-z3SUTuEs3khTJXCICUdc7x8WpFbQypgb99iXUgKdhJLsIxyknh6ekGDo8_zGRLh2CrbQdSKQ_M3HjNOs8fvanwdmaWbfEI-vsf43pvIcl1-VE15clCbCqRrpKGo2e4I8j9xV-gwQz7kc2HUXXW-oORAb2lezpT907s7XELXKnJ7UR1tyA13BpZ3w6BPXtxnODB-CB-58Pp2j__j9Ewaqe1rabzUQJ5Q-0aKG1_3_I?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4k0-puH44Bv2iJ5U-QydzRULeBQK1eKW4I0041vUa_jl5BKRTwdx_hszpiC-ggRyHjpdOvNA0H1bzd6u-AjHfBBQ0pE7WLyPiz6jA6rmrvEMMhrmyA4DuJFJ5aaLldCtrJz--xwsQGGmrlxJXabBtfonrVyIRIDCdkVMAA6BnUarFwS8jqPqyxmOhgtIc226iiwlp6a8vRL_Zu35KDIqAOHF5gt009mjsa6tiH6V76zEo2f98iQVkDV2A?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -5991,7 +5991,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '8 ft Giant Skeletons (Hundreds) - Buckingham, Virginia',
     description: 'VIRGINIA— A farmer on the Monongahela River discovered a megalithic stone burial of Giants eight feet tall while plowing his fields. The field contains several hundred of these burials. Virginia has a rich history of prehistoric Giants. Along with the skeletal remains, articles of great artistic workmanship were uncovered.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-222',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X67gNazeVuCIUBgXNHp9xifJ5eqlGruIi4PnOkPHg206hN2MpJLbcr18ILDGXs2x2qZU0lCpOe_qX78ocdKUkTjQMtEOxW7MKHU3OTDqe2ki3d6OUSpLgSQIipXqoVep8HX95ytEtNfpA6wCpQKCq3HT8ivM-h9ZuvaCDs6_RfPoVR_JQ7jPoxAKTgOZveWvASI1iAd6gJ3veXssfSwsvm3_szyWTvoQ4KwY013E-O2WdFGHA5CLXOeGFo?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6001,7 +6001,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Elongated Skull - Fairport Harbor, Ohio',
     description: 'longated skull of prehistoric Moundbuilder discovered with burial mound. Often, the Giants had such skulls. Which were not the results of head-binding practices during infancy. The skulls usually posses more brain mass when compared to modern skulls.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-223',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6-HWsGQ7XIa7vJs_j9fMOJOmgBChSpvgtTaB8oHSaHhkVxpKLdJq4O9TWYdYOWfspdYNWMQSwxlKN_Kso4eVEYC-ysnva3bxnMLmihXIJVj9RW9ScPmsLqOgsThCX7SL0TtiS2U7SixFBj94sVUbqbzstYMfLYpbhESsj-zMbIsrjL3XRecZVyhVSps6j9TkNTyAR09tF9tJihTtBwVahfZSE95rwcHxFoUoDzm0hRS8h3CwsOGqn2-NU?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6011,7 +6011,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '10-12 ft Giant Skeletons - Kentwood, Louisiana',
     description: 'LOUISIANA— Several Gigantic skeletons excavated with skulls twice the size of modern humanity.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-224',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5NwGwtZ_CSQ848nUx1G3nG-SS4rdnm3_jUD77uslY63FS3Pgt0yamBFkwPdLrnoEDIUwVGVADJCx2eDc7zZj5U_913cUowZ9wQcpxlqWOgKOfiJRHAIrArRK4mV1AxS4AnDL2EnCsEyvzwtP9L9HuYTZ9OmvcPi8E7UkLSH-6XxSoaeHMCMbOIbxoxp_fgd9ICgH6-SQoZboNhkLoOozMs8xDWE0jfWjioZ716tA_OZdxXofJmCwsaing?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6021,7 +6021,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Jawbone - Leavenworth, Washington',
     description: 'WASHINGTON STATE— While conducting an excavation near a riverbank, an R. E. Hawley discovered the jawbone of a prehistoric Giant.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-225',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6gpDRcW7YyOL2lGdRQX1Kz7bN_zCVc3KcU8cs4Yo7UurO3n7VBJruIKKHcyhuOMP_Eydy6713OsAq0YqiR3zR7ppczsmxWTnB-IRsXeieZc2QaFN2XRPgjJVA1281YIDa5nMBGHXgoznVM8HuAPGBpeT1oLW3bxt3RFE_piDU7pIMiaeaX_X-Wd-LO3BKZy0n9SHBIcaT5vtpbFSMT-I6t0TV992gOdu3ETAP8GMb85tsr3y4fXNou2Yo?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6031,7 +6031,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '8 ft Giant Skeletons - Piketon, Ohio',
     description: 'HIO— Prehistoric Giants discovered within two gravel banks thought to be burial grounds/ mounds of prehistoric Moundbuilders.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-226',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4q6_cNaU4xN_-SY3vKCiTFwrV76tNu2E2OiRPtvKaw5D5WNBJ34DjLq3X32l39BX_zYhD8D7mUXlOTFOcgY-jT3CcHKkGfMYMsNXNFdoGX-vwtXT2UHEeCpOshnvV2SnJb5mM2a37VlKeUC9KM6dsaR2k3k05d7vJHk_y71YS2fm_vAhMiQg1l7QmXC2d_Q8NCXPf4imLq3uplCcHGOFWHdPcFIQr6FVKg2N_UolrbPkEC80SSt8L3vMU?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6041,7 +6041,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeleton with Treasure Chest - Fayetteville, West Virginia',
     description: 'WEST VIRGINIA— Quarrymen discover a cave containing iron chest with tools and coins of prehistoric race. An ancient Giant skeleton was seated upon the chest. Giants roamed West Virginia in the past. Their bones have been discovered within burial mounds throughout the state. Who were these titans? Where did they go?',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-227',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4K7wSK7x0BlkR9j4Jw5_aBMqXH6nRa5DxyYGzDM9g6_MJnio4XDKkGgKX9GlzV8EJR5Y6ePFqdUiEZ3aoTsrkIjG-qhTai6LtX1QlNAA-G8gPNM4jbjqmc40OjFvb4d1e2fz1XnKA4QZ6-Vs6KEhCNHbmLHAgbOIuqwvzAVExHNQEHFpzWz9k-RmbUZr-RQKeI7lc0jm9OBju64ASwoqk0CHItMRxH6ng_sYYlL8P0WsYWb02oaPwY6jI?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6051,7 +6051,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '35 ft Giant Skeleton - Winsted, Connecticut',
     description: 'CONNECTICUT—- Possible prehistoric Giant skeleton approximately 35 feet long discovered embedded 20’ below the earth’s surface.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-228',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7qiO847WhmcZqxOEbWmZ-sjNmX7ZZLkcgcqXuZOBWn8XqwOqiylLNqesicEbw0ZTU5WNUYIkOVu_xjPQEO9BTzfrD1_2RgLUe5v78vq7Q_JvyOAM56k_EhwnotUcknWIg90_E2IID-wK7sp9PavSU12NAlOs_j-Nn3hT89CrDomQ0rzuEdWIRg5lHMHDmimr8BCSqnVKXmnlSO1gCqcxukQ2HMdouutbEQO_-1OToVfedHRO4-BKN5QtQ?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6061,7 +6061,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '7 ft Skeleton and an Infant - Burlington, Iowa',
     description: 'IOWA— The skeletons of an infant and prehistoric Giant seven feet tall discovered along with a quantity of silver and copper ornaments.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-229',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4yAx9ydj159H6giWcwmct4MH640MmAlepHNqYl6iLqOoW6BrfBheTz0xMToTvx28A-6BlV72P-24rmLX3dOb-oSPOx2NxH9ArI7by_VJzPEbzdHpKldCNckycP9WVIJjlbtLWXlQK6sErsOylEHF2PD5oRWdP0WcXoRkKukv_FonSIHkfrLzqSh2iWiNt8iWGKGKTbEg-h_mvfuetmfMrvtPmA6iJKyS0fX7wa4vYsjqyOwPoV22V8xbM?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6071,7 +6071,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeletons - Valley City, North Dakota',
     description: 'NORTH DAKOTA—\nEngineers working for the Northern Pacific Railroad discover prehistoric Giants within burial mound near the Sheyenne River. Some of the bones and artifacts were to be shipped away for examination and possible display. The article states that the Native Americans of the day were unaware of who built the burial mounds.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-230',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4rqrfXZR083WT2r1MH9sLrV_tjB5zFjIqHiewEfY-NFB9pay-bSjvtCuLqwrmcFm_KZfqA8hkiA4vTLNlIyqmiLMrwomP5JxboEV2nCucwVK3K34fBypJs1YA4zs7bYZLMB5UUVpFb01BZOm-QwActaX6EAtAEkPFwjdBuGa_pTv2YZCDftbkd0Zu0q1A0pD48g_9WcwvgGqvWErF3kn8qGUZYAEDyZBKwVIT51Gp4hAMDg_fDWUJpFCA?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6081,7 +6081,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '7 ft Skeleton - Shepherdstown, West Virginia',
     description: 'MARYLAND—\nPrehistoric Giants discovered with bone density as nearly thick as the bones of a horse. Report of the discovery and examination by the Academy of Science.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-231',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5479kFhSuvY88Cc0EiqWlnjQln5Tab-dKbgpxBkruzKvmedmt7bnR2nOIA1jwfY-dzt72j_4vJr74LFDarynRKENl-msdCxnXF1oWxndSRrl0jYBz2Cwwot9guNPLW940CbMLYBsRk7hl1xpW_XOyDecOpOtcdoejnh0q_VAR7pr91oq_jQm5n6dTxWV5BRdeuVxTDqiOx5ndzNXD4bmzYi1j4LH1GK4hPXUa9tItIpQLRLHRCFHS4x4s?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6091,7 +6091,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '18 ft Giant Skeleton with 9 ft Sword - Tionesta, Pennsylvania',
     description: 'PENNSYLVANIA—\nTwo workmen unearth massive Assyrian style helmet and sword nine feet long in prehistoric burial mound. Upon digging deeper, they discovered the skeleton of an ancient Giant 18’ long with double rows of teeth in his huge skull. Assyria was an ancient kingdom in the Middle East— where the Nephilim Giants originated.\nThe skeleton was sent to New York City.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-232',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7uD2EootBs-EAw6ug1jm9IKrbzLh6X0HUCV3-eB788l2flAgJCHGvd4Ym9US8qdPPdw542bc_uR4JuofIvqryKqgG-cqqq9J7l33ruIJW5b2QtLDbdSc6H2cLzkCpj__hEl2JVIkh_vhM-B2W-pOQItjSSECxWP52f0iZwQ8L9J034BJjEGrLVr0Q2uzND41KD7UlOoGQNZ1Z8ZrY9xcuugzYerVFnPRLDv8nnD5UoMFczNgII032Y3P8?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4hlmJRD9AWf0vfqQbApHaworsBDUpQ_do5fFesJz_ELb1_KG50_QdDK_-tIi-hLbCl8ZNDWc1Fxj35QHa7_BUraRYqLbSOjNOd0i71bmGfv1ba5805wyb1_CVQIFLZFkAXx3dKCE8nGMxOks5vomUOtYfEiBk5fXdQf5HV_zeZadso6Ein9_TOM0cJ8ZnqB2wkklNd1GvKONm3InzcmNp3ZvBZt0qzpNjhVITxExvvE_SczMB5nAVuBck?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6101,7 +6101,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '7-8 ft Giant Skeleton - Prairie du Chien, Wisconsin',
     description: 'WISCONSIN— Ancient Giant in between seven and eight feet in height and massive bone structure unearthed by workers installing sewer.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-233',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6Nd0VERAQ4fqmpJVwBNZ43r0ljtPbwETkzzMM36KdG8thaw3XsYr0a5vE6w_OOtNBExqEhTH1wumTCH3FxhI_D_HZdW0DHtIkhlsl2h2K8kddbvDPGSacGN76y3RFHdxZl7jk2IntS-2QEFSenB9T796b4881DXAzlUUNniiUbdpz5cKCFy8_8CekIT6QYaIuYYnirWoae50uQ_Bg7G7nMPeSJqewC__AL2ZB41FywfBac5rcNpX2zih0?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6111,7 +6111,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '75 ft Tall Scythians - Zhezqazghan, Qaraghandy, KZ',
     description: 'Scythians— We know that they were Moundbuilders and wore golden torques like their Celtic and Viking descendants. Upon his journey to the north, Arab explorer Ahmad Ibn Fadlan(879-960) reported on the Viking Rus this way: Their bodies are as tall as date palm trees, with blond hair and ruddy skin. The men are tattooed from the fingernails to the neck with dark blue or dark green designs. Every man is armed with an axe, sword and long knife.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-234',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4S8dcye9uOU9ASNCnqdDXyohOo684gciBOxmsxMy10scUmTrNjlaF0pcnh567DcEbq0t7enpdELyudWB05A9DCH1_pxrRJIHHoLhuU0iapt47rDyUieMqcVYS5uVKfmP1NLfm-HMGv1J3ZBtuLo2FHrOZWTe_SGjLsnF3sLcE57nI4txEpbMspDvdOHXgMgzcUKOentezOyJJNjIdepl0GJOwsIdbnbAIpH9M98dltjrwr4q3Qz8x3cCU?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6121,7 +6121,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '7 ft Skeleton - Zanesville, Ohio',
     description: 'Giant most likely seven feet tall when alive found buried within ancient mound. The Giant was in a copper encasement. The Giant Moundbuilders were metal workers as many of their burial mounds contain copper artifacts ranging from weapons and armor to kingly crowns.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-235',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5BRDH9cxY3kZjxNpQ1arYnWzbZfMAhSQvN8J4mO19LD_HBM4tNLxx1Do9wq-KF-t62hgbaMn2pI2ObjtEmWkLRvTnEMYG6BVCfdTKvuWx3VL7l7WOEVZcv5oQOlkpEq7O_okRXjB2IY3PIR_ZojFYmKGM12WjRSiKSZ2ARCExWO6WL69nYOUcsi2yHqDReY4xWN9mw7ZYVOHuw9PA4CJBbkBn9KToPse2dIQpSAyaZb-GiN7_AFNGeB6A?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6131,7 +6131,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeletons - Strasburg, Virginia',
     description: 'VIRGINIA— Article mentions that Giant Indians of great size had been dug up in Shenandoah County, Virginia comparable to the reports from Captain John Smith’s History.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-236',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6J_kI0igM1nREMqC2AnivQQkYXG9TjwxfdcjtFSx1lkB98wbA02B4hVRSyh7yEck7SKJJTh2iI390ojcBI0nZgMa81eCSPfh98hIpDuoh4MfJ_K3O0VGp2xSj2OcVQG_iHcDIMExBlJPA4HAf_dBEe9a_t1DrdMqmByvIl9LXJU_V22bP5U_Wsh02fKH2RixlYxiObfJrgHC3VnCWUB9UjUNDk9vTYAXNna8XzHNTiWOmmN6p0tCVOwoI?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6141,7 +6141,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '9 ft Giant Skeleton - Chiefland, Florida',
     description: 'FLORIDA—\nPrehistoric Giant nine feet tall discovered beneath mound of oyster shells. Often times, the Moundbuilders of Florida used oyster shells to construct their burial mounds in place of soil.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-237',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X768Igu5p7poich7Bo4xwqho68NewwkwbF8aCjommKAqIaALhyXh_OkaBQavp9SLwzXuhOXb9YHr9GcGe24BJaq_N1h5gfiE4hAIeVKWqw4YsUNmaek8L_PRgFEi6yIp_rCX6eKQE-PpBZG1zMjBqKs7qe3s_atZyCwqTeItjGDJrWNBziwk7m489jMIpn5akMSl7StDq_TZThzv_bKOfFZzTAhUYQnCXZcCyMQ2YSMjg-OkwTLCjfhh-E?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6151,7 +6151,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeleton with x250 others - Victoria, Texas',
     description: 'The skeleton of a prehistoric Giant discovered along with approximately 250 other skeletons in massive burial. The assumption of a possible link to the ancients of northern Mexico was made.\nAlso, the fossilized foot bone of a supposed camel unearthed with the buried dead.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-238',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7nEiLxOSvH2CCcfOzm0tn5VbNIGTO23YPxwaBWDgRMHFNf543nvYk7pbq9uip9KBEvCcFWv6vn971LeRfnJjFdtUg0iErhjJ8lBAqgmq-IzAk9ieBdkjNbSj4gJN8-zF17eCCTYaBQHXBN-ARuVk_gSW78rlSb0TYO6cMhlu026S5RHBkJJ7PEvgm5O60Mu3aLG8rDiFbouTCCeUQqrabmhSCJGakFGgFdYGeqfbf_BXE65qdKupo39Pk?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6jn2z-Uf43zhfff6B6UXrPHJDhAHVGlohE551JWHAKk8-t3rpd5RRNongZsaeLPFZHlRWDygneMVOMqP6tBNtJkuKaDPRwyYl21WwV7-P38Fh8wMG6uZ0h-DN-gVL10QJQEZ-bOjvPC9kAmOBaAn8MuCs3aFir4QTZeB-al3ZjrO9-j8HbxplTyPh7Y_j5Bv5BJ8byBs_iOInBVNres_RuU-CC8r2j7gN6JRYmPPn3zNGTB4wSle-7-co?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7ouCeQWmsg6oi4qr5XX10_F_tt4O73OvN1fvd1aJo2NqF3BSWoVCyGEkXXYKNZud6wOvx2yYT5T_9nWXxfuzgWJXQUXfb4Q-QuW556kXamguwi_DjJPBLVmoLzg5cFUjLL2qlxJOsuUfE4G8SNCVSZp0Uj4qPzwc345oOei69Vj-Omj0vlkmhpKkkqMTsJmFXTH1vTa_PQWxece-3eJ8DIcsEwfwMWpjsNOZrrGwQHH9z8-0DFBkLF5XI?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7KG4psuPjaTlb-i2gD7IzvgFopsaIlUi1qpKitbOhS4mB0IQAHGMv0uWg6Pa_0kUtGnY7OOV1DbjQ6BeStrs86QCSQkB5JMLiyVo7Y2stMXwVfBJMQg_k6D8H9WWunAEyCI_j1vOTRV_dfNoPKRGQdODgEb0VEUoRFT3A-X0ZygxnRj0YL_L_8TQtGxzZJ-1uUySd_2SjCSM5hAUYDUOrZPGptmDk7RK3REwlCciREp-Wowe8au-yqxy4?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6161,7 +6161,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Bones & Reports of Giant Tribe - Playas, Guayas, EC',
     description: 'Giant’s skulls and weapons from Peru reported to have been discovered and in possession of the Smithsonian Institute.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-239',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7R0MkAX0pRgsZmR3mxEqyBWWlqTQJD1rUtRdmTZo2Yj50jAU7e2R7QfFRtEm88FUhhOuDpkWpUnQn8NV0QgvuvuX_tNoyJTp9yIgwyFi2W1ZaaVLMoU_nUKWb0YpeNbf1HwjwTfA01eorSnPDhhokdlL30JGjw5NO9lnrte8cB1JOHMgue2z8c8Ma2-PmzU3t5dxXu4nRMAtTkh5KsXCkOtcqvIZ2BgQ70qK1bNb8D3q9VfXCppomKNaA?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6171,7 +6171,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '17 ft Petrified Giant Skeleton - Flagstaff, Arizona',
     description: 'Very large petrified Giant skeleton possibly between 11’-17’ tall discovered in cavern near Flagstaff, Arizona. Footprints 👣 in the stone floor were also seen with a stride of five feet.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-240',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6I0-76NdwZzxvLhfdYrXWHUm6BIuy_D4TeMX4ZrLtYaw141HYNBMyfc22AyT7Z0uCnHGbLHGEV4DOiaZiiRI7Bj8DSUa2TGQoIvLcLFT8Ydi68p0VR38zTBatEz2aQ7Sj673JtMFGa_oy9wCnAsqTDz7xoLuJWTU9u-qThg9HEsm5_TUTe5YNAU3JRrJ6bGGwGh7AqUfqSIWpQclV8SMiFuzstvRW8s09VgSABUOLp5gW2N0ZnkpL1C4A?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5ywOOMINNPHTHOVL7OMsWxXeg3UQh6Qe1_Q9hNFS-2rHmtorWwolVWPfs32mqhUgiUgbfRK7oCNSDJ4kbqQJ8x9Or2WzFgOGrEsddwe38tTGEuPVm1EBgXkFeYg6tfY5zKlBYtlFecSe598cwRuNF4GCimTaNMV0WzSBgWD-jP9zDsipwjMN4knZsfoCqwRZRgJk9hon4HBkKRo1dMgrF-yulctinj-RUN2Sytjd8DK8aIzKsW_-o19_E?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6Z30tbXRlyqllZ_fvvOzHEOLkPRCbF7pO4mPbMNCDgyevmAffC7K8USQBjTgHD4-PZflpdOIONDNmrAt4k5eOXJNdoFxUu1aTYy8N_FWrgyLtl8C8ZaSn0A4Hw1JkxOSjS8YcM1OaOzHdwEukEHTPMB4dUuou-9nVZDagajn1YlB2XuMjl9B-U7ecpvnW1kQzZnSUyIcaSD8u9FinqKf5KvKHQ8X2eQjBJ0G6stDsiNW8gI385ezrZEzM?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6181,7 +6181,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skulls - Warsaw, Kentucky',
     description: 'Massive Nebraska Moundbuilder skull pictured pulled from prehistoric burial mound along with 71 other skulls.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-241',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5jKCfeN9YiWniT7jYpdTJ8l_2QvRBLCKw9bTwDbqyKiIdZ0p7qDGx6ewWWF0YHJcmMFdoy6sh0DUeTvy8oWzg4GUh_gzrH1sdVt_xtjWfL_eBLqTYetKFndY5Lv2BA0Hqk6tqpt2hu-sY9NvJ9TC9NBrswj5bj0qhV1UzI_gyXRPPZN93HIlVRAqg2uCaYxixzwO_zlwgaIOtOkJ2NT6E2bS3VGYRAHfb0-N0JtbrYMlotsQstuyI0DHk?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5Bhyg0lFcWAqu1nDZAlt8d6MHTnh4OORRjip3Af81yfF5rS1Kvi26qjLDfK4efjOzsWpmeOrmw4it8qFV3VCp_1A1sOpvQkp5Mx04IeiYLI_3FIjyZMp8ozV2NkCbjI1k_-HoCsWPTswqkGy_sEgRLVpNoYaJjiyINjrGuu3DRdKlQdbWFHM7PNm42AgDYP_MOA3P7HKixbc0IUW6Um30oXkKZnlur4Jug6JW-cqiMgYj_6K11ga8qvaY?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7yWTMlX3uIUlB-_H8gQUMUcPA7Wp7rToa0QnrAtzKR4Zxj_KGLdniHNuB2Rxw0bHiTr0C9cJkBas42tZ0vq5-GGiLouXrFLlfXG2COfFSRtZSH244alcdM8iXZt-cvXythlafDI4udH6NPxVSnyrm7eHp6jA6qThsl-43Blr3Y0ye44n4-Fs_vYuPWxHraps1mVzBBu1dPYRvHtEXoNZc1Kq04m_5ciPA8XfmyMUGM4G3Hc3JhAcq0ino?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4VguPfAOwszxuKGhslA_TMGuO_RhYjGI2aFN1A2t5kYijsljFjt84KJXTm29FSDpNEkAQcnukmSJXI9FBZ3Y2wjDm73tFK4YGIDK_QObslcAiky32pWJOsUEt-75rbLbm4JIGxwhcyNpNJQkSuMLZqOAcD7RJKi5yNAqg1P-P-Pc-6nnNn-Fk4IR8PtG4ssvsch51yyOQBJt41Zc7wrke61J53fM1IElKKwT-0QCJ1S3x85C6HyjCc20g?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4HE4c0YuYi0KrnKoZ8Ke9B-mEhOCcEovBDuMcZXZfeiSWy8MB_bJFhjSGl5imvEfHvTY2JE1l-YxazS4uoXAJGcJXZY-FVUBIByEezyYM_UglcD-qaDb-aiPzAur7dKn8PNaJYfMVfpPWALTF2neDU5q6ihHthUtRbsQmMA49CBBRrzqL-1ak3llUsu02Zy2Ke-vodwp_dj0NC30jsEYpvbD6XB7dwYZ_7EPnxM_kqXlNrhOY_YNagP2o?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7bwkwsjAdQlazK6EJa_VoFtWsjsoquTy9HlAj0-1VILTuKV2cPkmtfcwJnXlqQ3gB2BVPiJsdgnn8VpAjYpBS1tsDRWnZy7HHRRzFrDM1ZGj4NXdMibaXI-5-xTgPDJsHujdtDIzTxU0zzqdzVYYa3qIwzYmJmkSVFdzFBpNwkkslH1JcLZIwqwolKWMEf_-CDFfz-d2Ec5OZimqx4WRp1UScoicOwrT8iR9mfBNtBdJ95_7zZvgJKtCg?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6YtvwOokpL5Cp-S8liy9oxRU0yoTJvu-H_aYg_2WAMJAz6CrVKoscQPV8HniXDE64xDST0I1zjVYzK7W_OmiHGzg6w5QbuHD6CJ7UuPeI2d8--90dvXn54NNrBJRh3zn0PXxatGYRXj-dyd6W-xcsck83kZCYNdiu1WcZKJvINAYBOe_tbK1IZtL14RZ_Ns8tQPXy0XI0NOrf7S_ARGWL_A9gDuSdNMIqZystShaJjBDJk8OSA5kbyXqo?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6191,7 +6191,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Cyclops Skeleton - Williamsburg, Virginia',
     description: 'Workmen uncovered the skeleton of a Giant. But, there was an additional oddity besides his bone mass and tall stature. He had one eye socket. It’s easy to brush this as possible misidentification. Maybe the center bone was missing causing it to appear that way. But, the truth is, these beings had anomalies that added to their differences from modern humanity. In example: Many have been unearthed with bony horn-like protuberances from their skulls (multiple accounts), double rows of teeth & even Biblical reports of six fingers and toes. So, in reality, the Giant quite possibly could’ve had only one eye socket.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-242',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7_na5iWPG0s4b-5GDpuuCiqQmC523U2fnCwIpEPGSyXV64eVgP0LFvelxNyO45TzXGAvFZo44pZQU8ZuXKpYuTI0y56IFdVz68lNr8tDNNCBQ2bHvc8b7-CF8qFGP2I8mmRxv0EAj_T60ftsIaSyVufYte08uvMkTB-zA2EVErwR38oDVRyu6hdkH3x8lc81nGsovoSoK4REH31xHQ6ua5nlOh7HJoMu3ONjwJJQB1Nm6CZ_kfXkA_VA0?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6201,7 +6201,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeleton - Brno, South Moravian, CZ',
     description: 'MORAVIA— A prehistoric grave was discovered thought to be 5,000 years old. The remains of a massive Giant was unearthed along with a stone weapon and some utensils.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-243',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7wRY5ZcOEbSdrBbPywKkXKMO5LV9SKciq3YYSQaSlOOQo8hn5XJeuGLTbXflE2SC6uMmqq1_rIOeb1oyfA3VhsUFba7b2Dd1zj0LCwr7EZehssAtBzbjqziCLI8tlTu7ANKfyBJFJgKtJEJMWMib620gGCeseFL2WkecQkL-tmuxBnDY_g00O4ow1YI18DNtMt5NlkxfvAh1RwRVNzE00U_wu84NMdWKpH45Z-g3SSFbjjpEwIRgB0ijs?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6211,7 +6211,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x2 9 ft Giant Skeletons - Midland, Michigan',
     description: 'MICHIGAN— Two Giants nine feet tall discovered within ancient Indian burial mound. Other mounds in the vicinity were also reported to be excavated soon afterward.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-244',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7XL7CzH8Z3-zG_CdFWPqy1tmTT36GhCFW2mZZ8ZJ6OuwzxJC925knolehkDWHeLvN20MoJlr0xzz40Zmd8123uRSyev9lP3s4b-nxh2uaIGvIE39C29PDaQp49_7Uru8EOxYhdk3rOnfPykpuYTGTHl2xa_4Op6NxXQHCT2MeH9aMfVKkmiOb_GA_0CILuaw7r1u1bxJmpgu9ruU85Bp56tzxWFbCKHCBdd5YNQzmEB4_nOw42ULfJfSg?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6221,7 +6221,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '10-12 ft Giant Skeleton - Aigurande, Centre, FR',
     description: 'FRANCE— Ancient Celtic Giant double the size of the modern human discovered within megalithic tumulus. As the Celts moved westward from the Caucasus, Giants were among them. They were most likely the ruling class.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-245',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7ohUhcDBOlhcsL3u3E9RrWSfTPtnCo_lIPWq9iTILBl25XoVlXGPljUD9x8qRO2GrxVPrAyk01REgCdpQCC1_8RB32wGpdDfvxLy9rctRf6x_d2tda1jATUC-mPN5Tq_S-opXJvos9ZlIxE7CJgfTu_A2zFX6PrnE5IY6fY1yDk_FrJ15Hs58BuXvz99PKQ9GznauEWH1-4TWxgtecGJJ-fS9d79FZobfInWU1fgqHm3mYTx-YEvsP3yA?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6231,7 +6231,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giants Race Reported - Lima, Lima, PE',
     description: 'Peru, Central America & Mexico—\nA race of Giants once inhabited Peru. According to this report, they traveled there from Central America and built massive megalithic stone and walls.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-246',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7BAFH08lTB7oUsbCKs1gTquopd-6lkXjIL1zb954Cf6L3QnGiFwntNsinN6pVn6hwxDemRHfqj02Sn7X6wgnwlJSm1hI5aKgzFKC0u4XFuVroCPAA3oSLfH2P_pYyJCwM51JW-kb9MTI2JLy-sv848_IslqLgEkHvexN4njZzaPpvFS11NBdm_pB1zPnqvGsxLFjIG5nMx6oy9mdeHs6918uwre_s9mnRENM548jgpZpR3UjMsswrSuvE?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4aRm7HtqRXc9CHOR8faCvTOrPmNRIKLpOpwDnUFvyVPJvyR-UU7U15q6uDYMHWuJFxNC14xHon2uGremwactL4OGPynk0aNBo_J59XxTSheI09EESj2yBmWO_h86a_TX07Xz7A6a_jz06nw3W5DvD8dGO3KwloghmKJTShZEmUvvnODlXP2VVQViEPvAC9RWsnBRhw6dYr367cN-JYMCzrXZHIMc0gReV581xLG0z1MBXBUNnHMd4KNUg?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5074jDa4_13rP1PKgW2PXWMP7nq8QnaZfvBvJVQZrBetlira_tSLvPa8Qclhd9ch6KF2nTF0U0KHmzAhWO2738a3Aub3MJx76JbRY3wWznTHJUhrOETN--77WRb64b2crAGUfxiK_5naEJLpoPPa__wzUmgkR3w0ajnF1CkX8v_GWCkTiJZPslfaQl8wPYGDR48Q-t8k456xL8NqZUq0Wqf0Ofkib3Pw0hSKOCjjy9T_2zFAzS7ZO3Qow?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6241,7 +6241,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '13 ft Giant Skeleton - Autrans, Rhone-Alpes, FR',
     description: 'giants_of_ancientamerica\'s profile picture\n1851• Iowa Capitol Reporter•\nFRANCE— Ancient giant 13’ tall discovered in France. This was possibly one of the prehistoric Celtic giant megalith builders of long ago.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-247',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X46Y4g87asA7EKhkV-9128UeWzWcdWeCygqisMr38aRn8EV2mMAfJm5G-1xY31wrzOgsGTsEVH_H4Rq_U_ECRi87XoTS0-Gh3Ww8VgfFOV_EnYTyfAjuj7M_tdJtVS75_hv2lHns6yKCdkerwHA1QEqm-XK976kEkgPBA7nrwL5px5WCweE2dySEUEMQtk6HIWS36kWeVVVw7YHrd8JZUIXCEb0jxlyKzVa7FYrz1bKYy81vkJK_Naj-t8?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6251,7 +6251,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x68 7 ft and Taller Horned Giant Skeletons - Lewisburg, Pennsylvania',
     description: 'The remains of 68 prehistoric Giants ranging from 7’ and greater discovered when archaeologists were exploring old Indian villages in the Susquehanna River Valley. Some of the Giants had horns growing directly from the skull.\n——We do not own this horned skull photo. Credits to whom credits are due. We’re not sure of it’s origins or if it’s connected to this particular report.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-248',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4vcw-rS31a0rd0tKxIPCNFz5gFPxFRyH4kw49_UOZXfZRcXxe56zUxf33Oi672Yq_HSqdW3EYSyHh_KPB1XLMee0r2fZqbLYroRcTgdnzZCkAY5Fz1yjKHQ03nAEebemJggQBoPZq3VpqMcdj1-kUiL5MlWeNkYqla6ln3B-9FJygyewxgDYY4Ur-fvYGAEmtBD1cKHeZsTxukeb0z83zLsX_jFxcCqsV1PNJJAYaZkahdG9XXjccgCkQ?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X72f9LxL3DfNNxI0VtDFxBwZyBMpD72T9xJEiU88YF8QkSzwJKC-CAOSPfCvT8xbBcAnD5beW0E5jIJvUdjSPYkZF6Qjj8aErD4CV-qif_C4MLao879jkv7195zySmcmgIdhjzGMR0xM8Cju6mgJqtLrjRVhbvuAvfmJNPlzrIirKvyyHlMgnMLCnXNEyM4azCQd_McnP867DM11PFmq4kFBXvtNnMzwaQ260wGm8LmjyPi38Y_zb5CL-k?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6261,7 +6261,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '7 ft 4 inch Giant Skeleton - Isla Vista, California',
     description: 'The assistant curator of The Golden Gate Park Memorial Museum unearthed the prehistoric skeleton of a Giant 7’ 4” tall from an ancient burial mound. The Giant had a very thick, massive and strongly built jaw.\nA race of Giants once inhabited the coastline of California. Many have been discovered in the nearby regions.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-249',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X49WJmjqOwSdgs1nIFdkHCcj0DlDLIJvFZkpGL5i3XrlY7ngqPT7ksUdRb-yPtA8GsdREu1HDYJIRaEp0AWEqq_XUqlKsoHorMGIdhYKoQmUNstZHBp8jPSdjVr-jVBxzTEuuxuAtxjLHxuM72ZQFSUdYgWjEaHCHD61viE7gTC_ZT7CcNmaQuIyM55ke76zjOkT4tbNCRS_S6kvgYQ_GF8ioIGDkGD93VK8R6H7sFZ_js5gOTUnWix1Ho?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6271,7 +6271,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '13 ft Giant Skeleton - Janesville, Wisconsin',
     description: 'WISCONSIN— While digging a foundation for a barn, workmen uncover the bones of a partially petrified prehistoric Giant approximately 13’ in length. A gentleman purchased the remains for $10,000.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-250',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6zdRZXpfQ0_gEcS6CviyrP87rziuGKlGa8yr2CTzNqF0nYdQkbz9FYNLVGTvV4r81qsd0SCn2nY3XMvsUvvEHg4q9Se8NdrMJiMcN8f9yE9EOjs7BQJD_g8rLqj3_xqBR5nz7_TwoTHuPb91Ijh98co5-ihnVdjO9sFrEhY6r1VCl7Zm9eqsMp0MXpuvToo95Wk5LR0WHlWZXc641VntNaesS0hZb8PnD-JX_ad4jrLWzwTmPoS3WquyY?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6281,7 +6281,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '13 ft Giant Skeleton - Newark, New Jersey',
     description: 'NEW JERSEY— Ancient Giant 13’ tall discovered in a burial mound near Newark, New Jersey. Many of the world-wide Moundbuilder hierarchy were of gigantic stature.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-251',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5kHLO_tTxGGtiVCCt34zC2bJy6pzfj0X4hAIx6HxvB_BEzwjiOliaZlLc9aKZ1HgFiqjaRFvaVfIbGZkvho-mrvmBT1XFJB33QXVnUphE28ARPiiD13HxnWkAV8NujYZQyom60VfVbAeq6JbM1vDgSEYKT3Mq8D5P6FGeJTda2-P49wc0r-nxmDVOX7SSNIjdKrT5hJySQuwbGR4hP4YRjyP49U3gAp3Fn78bZwcolHXwOpVBTpOq9vhM?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6291,7 +6291,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '18 ft Giant Skeleton - Unionville, Tennessee',
     description: 'TENNESSEE & FRANCE—\nNews article evidently reports on the discovery of a prehistoric Giant discovered in Tennessee. As skeptical as the particular newspaper was, it pointed to another discovery in France of a Giant of similar proportions a couple centuries before. Men that stood at 18’ in stature.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-252',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4KBvFQS990haMHUBMxIwblvDFoorbEmU9hOIT_dywxA9JBa5HjfmJrQGIn5mGiwRf1oIAlvmuMLgi48l6pe7iez4penkZHaPt1CVxfeCXV-feNmKGgiqUGbaa6R5oCy6R3truSM5rfQ7ibtY0KOETkrm5ZIkz7qkzT2pZaIClbpPl8vymbeJkl20nmST-RoCWy9r28DR-5lC5irgHuIRyWVMldmA_Y7-3yZ3YIzucx82YaWWr3KsWn8gQ?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6301,7 +6301,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skull - Lovelock, Nevada',
     description: 'Skull of massive proportions discovered near Lovelock Cave In Nevada. There are legends and evidence of red haired giants in the area.\nThese photos do not belong to us. All rights reserved to original researchers.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-253',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5HD3TAWJQmcPpaZC_lbpl6J080takSrtibFKZuCUrv6SXnXMBQX4dbQLB5dHGLbG1w_aBhXB82Z6-vhCm79lUvppxpLpFsgfsKOUeTNlPQG3fBgVJ7QybZ3LN1Y1hjZZp1Vwg6Ew3ksjScUKiYBeYSQ2PhE2Og-k7bdmFBLHoOGvtuM_t3np5_hhYyOf8ZlPBhF1uq7al1Zlsjq6eySOzbfCq726RhDKi_fjv6tu58MhSgfWxRpksZ8TQ?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5R0MF_Vfc11lNTQYxtAsvc_rVistDgCCVRWw3HKyMht_YofbwFu6-ZHlbVY3C4c16nxXKQwrr30j0ydSSiK3yvy6W3DfPQo6ZnbkIDYzqcAGSKv_EyWTNrbyzeB2yh0OHzAFOHOqJIhwXCWVUJzdxrDojs4wf5m_miI1wac8oOt6sr2ARfQ-nDmTQue9Kp8bOy39Mq5mQUOgbi2tFmopGQ6NNXeUosB035k5C3QJfwciQ1k8XApvyUc2c?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4PbsmM82lmvOmvUN_sBEJWIiEF1FU9CSnT0rqYadqk17kaVvQaA-QTGhJSx35xw4wZEqjEZDFpAqq4xuzGeHHJwR0TbdCyZYh3yCdv61jkDBxbj57wpYlHGAN_-0s77lLiMBzzlEILA1hVxFdfvQi5ZPgh_drNxYh3L0Yg7qCip0wTdU9-gxIPAigctdmo8Ju_E-hiOyu6xUeFLwDyxEWMtMQURMyipT6gcATku08xybZUTqW270q37oA?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7mhJuNHnUQaSPISxmkQxYwRbzheFQ-jZQEKhR0AB7DAjpffD1JLWSjbOSSg2EaQpiWERJRY4krNXuid2Mfpq_qxgFJXqOpksuT_HHN78x-IL8JFCej9dFOrYNoe9fo3hEsT1STpRSSlzqo95gKrPMLmULykohf5XlYPXz6LYwiC6dr1g-B5cAoUjsqf18G1Q8kfZsghFm5NE0pBc8Z63-Fw-4IE10odcZB4wirJuB61B7nYG6XswtPq1Q?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6Dw2vw7H8TRmT8iFzuTEME4551fK-YgIlPIH7xpR2A3DtnDNw_3-Xd9HLAXdegdQuRrXRHbXIBoHED561TWM9wjhhxL7_PUcipS5xxBimZjYCVMVjQ2xFrxWVCFhM5H8WmkqWW6plrIm0dIyeuT_holPz7j_4D6aizu78A6XZ8woX_zapG7VuLtsl7hyZBT0MD12IftjRnGsu6YFLN3GBV_wxhuEzDK_hSoYkeoYorLgEqmEMFpeD1K_Q?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6311,7 +6311,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '18 ft Giant Skeleton - Waco, Texas',
     description: 'TEXAS— Oil prosecutor unearths prehistoric Giant 18 feet tall near the Brazos river. Giant possibly sent to Smithsonian Institute in Washington.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-254',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X70FToiUwyB0PR3zGkUT2uzb-CgRkDRDvo7rnObpkcgRDk8g6B5NSP2yUkeqPLNfnCD9uUa6EfOTwS5BZDC8jpSiTrbXR46uTOXdlz4w3ZGnAdEhbIDqdTdbEcg2dicgv07WSVxzcJNZ3Ttp1bZv9yrXBwseNc-7pVga_kefllsXxM_HlCRXSPqXfgeoKI1Inu1-m5xuIUFJmQxUJBMwmlUzl9pGIBRjDIcoABgP7EFq6PI7C4tgpHIvh4?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6321,7 +6321,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x3 Giant Skeletons - Rome, Latium, IT',
     description: 'Peasants discover the megalithic travertine stone burials of three ancient Giants while working a field near Rome.\nCould these be ancient Celtic Giants that once conquered Rome before the rise of Julius Caesar?',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-255',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6_wInRnuzWmeaM7lBEv9pA12quGUhxpQh_R_zhPT2bGxzGdO6H90ys7hpzCVaA9ztUKXHgaL7_wGfC7rpowHuELTxblKZXlKGMob7BH2uwQG46WOg3tZuqn6sm2Fad2SXKmveW68u47KqidqnPGUMfYQUY2mL_E0h_zDNXi9So4AU99SW7Z3cRHEh-ocrxDqzVTwYi86unmJQIZ7YdnDY-V1gmlA8dQCI_rnY7RAKXYmBI3NDGUZC5fNc?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6331,7 +6331,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '15 ft Giant Skeleton - Las Vegas, Nevada',
     description: 'The legend of an ancient race of Giants in the Southwestern United States was reborn when archaeologists uncovered a prehistoric Giant approximately 15’ tall. Many Giants have been discovered across the region as well as red-haired mummies.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-256',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6iVjizPrTrN4fi-rI0jMfys0K75uHqUvQbtuDxh2WiZXT65tvAOzQZJW8GG8qGRTY4zqBsTvev-KUQKjpsn6lJh_YJTQ5nJ8RBwocA-XiYJQRdxKxbN5VOHK_0_JMuqJ67EYpUMbiYzMeJo4NK9lASmNGmzJqbEuGnSX8gHjRu4sW-H-enFNjAqkB126oPw5I6n_BgA_X7B2zOV0g37Khxvt1yR2jPgw58nvSLSNEVwZCObY8jCIfoQqE?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6341,7 +6341,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x12 8-10 ft Giant Skeletons - South Zanesville, Ohio',
     description: 'Brush Creek, OHIO— Upon the excavation of a prehistoric burial mound 64’ x 35’ x 8’ high, 12 Giants and one child were exhumed. Some were obviously couples. The males were nine feet on average and the females at eight feet. One Giant, however, measured 10 feet tall. A hieroglyphic stone led the researchers to believe the Giants were sun-worshippers.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-258',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X44QW3bNOzqctALdM76InS_JsiSRPJE8Nz-9fp6tuLh3xXKdn_RwVic9UH-56LoUPg5r0i1iVVAUgcC6kGCoUqzSGmyfqI4jlwqpqqHnXT8-dflJobKompww6EFyGUVtl1TGEoO8VX2LEZdXOUBswf0cRAcmSos_PQDokHevcCzR2cmmKnYDck-Rbg6Org5CT6mz9dkIKrBg6oiSZOnowTuAHezEOpkHrdIGQQoKlWqPrx3-R-lNuYYsOQ?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6351,7 +6351,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeleton - Concord, New Hampshire',
     description: 'NEW HAMPSHIRE— When workmen were digging for a cellar, they discovered nine ancient skeletons within a 10 foot space. Three adults and six children were discovered, one adult being a Giant.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-259',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5U6CsNiNG2DL_GAu2fYlYpiG4jEVJ3FZBi7s7ldvFKO0OmlJ0Mnr9k-Ago1YZNoKbW85hQ504mSBCormYLoJ3Q4KFlXVUBaQZSUFleWLnEKnrQ2mN1xO18_nehHWFBk5hv_Gm_ooHTpnj9hcVcXIuo5li2k1pKQULApQ0GqFjNYi_g5rlKyqyNznYjMiD6cmB5UXiNo9nVA9q_4cL6zzJuQMqSYQ1YsvQ55ZNHVzTjOcGDAgH-slzoIlc?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6361,7 +6361,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Woman and Man Skeleton - Mayville, New York',
     description: 'CHAUTAUQUA—\nRailroad builders unearthed the skeletons of a Giant woman and man.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-260',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X52H_0CFBWegB5tmXDNO-IWfahOVCZ4pCZlQurYIVwbFu-B33YP3XdDLS5b61TYEosJs7K8BVFv_ELLFftPQrW0Nxhjy08iveH0hQ-wNspLry5pcWv9gp_g_yLc4ajtXWWzXtrqqE7BlpUyUnNQfRlbVS2OPNV8OU6TfU5Azl_X-vyi157Lddd7qSUVHrqhiF7Frn7VYvgQAirzH-NyYIvW_BBBqCg95crHHSpRm_Xmlf_zB1d0UvBiJ30?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6371,7 +6371,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '19 ft Giant Skeleton - Rouen, Haute-Normandie, FR',
     description: 'FRANCE— Skeleton of possible Celtic Giant 19 feet tall discovered in 1850. Mammoth megalithic monuments and standing stones scatter the prehistoric French landscape.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-261',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4AAmeNvIgMnNgEpEw980T9IhtmF9xxogJewPuljO83L4eXe0Q7fJtiXuR5dHEfUxUJME89UMMrjwH9G6gBwPxURozF2nQ_I4gqO3XtvBkYFEsJmToare3cr2aWLUX-fR6DXtCDeAe_Uw_iFL1FYQVn7PRT5R3bTrXzw__9bocVHmX1hWxQql1SGmfHbg7tYkLkKzR1RGPAkCNvk0ddgKl90H4eiQy92IImRoBLeLpNpMm9YU67PpF7hvM?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6381,7 +6381,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '9 ft Giant Skeleton - Bennettsville, South Carolina',
     description: 'SOUTH CAROLINA—\nMen in search of prehistoric artifacts and treasures, discover a Giant nine feet in length at the bottom of a burial mound.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-262',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6pz2uGR9d1RHrd4sd1qgrwEpf643Ekyg4hDfbDI4ZLFjMeGlE-kJ6Wn7K3d3Pxwj6lx5o5ieJa2bEwnOICD64ujOqD26HVmgDHA_Qm44ANP2bnavGLh0FqP53Q2Y-lGOv1Hmja6kU3tJz3-p4kxXwYVdCtFCn9jsJ4a6fyus30C_YJLwWP0XENXtruQYTTleOPK_60J31sx_TDPPkXIsb3ZtV8fhySVbOuJtmIKhmzj7C0i4VQ9xPpNHE?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6391,7 +6391,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x14 7-8 ft Giant Skeletons - Agoura, California',
     description: 'CALIFORNIA— While camping at the mouth of Malibu Canyon, three men discovered the remains of 14 prehistoric Giants ranging from seven to eight feet in height.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-263',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7fXq8lFsUbGTr_bnl_3SXiCXiQ693avSPZmWZUcFQmtOzTQ9Q40zLKJPWHFzgoLQwVKkW4c4wNGvI5c6uMt_1p0Gekb-XUs26yejRNKz7SWBnkgzO_CxABOLtnX3xIPdiF5YCc9NWsd8oxO0b68QM4HaH10ReUapu9my0ZWjne1xcIx-2Bgqu9Lr1eRlSb1HeCacxnhgnYV_m9dIvdxGxdM1pD1WdpXV3GBjrp2lMDIkgWAtcBDC9iuWA?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6401,7 +6401,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x4 Giant Skeletons - Stover, Missouri',
     description: 'MISSOURI— The skeletons of four prehistoric Giants were unearthed near the town of Florence, Missouri. There is a legend of gold hidden in the area as well.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-264',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7d2sylZGZA5qb2WEjSxLfackYlLCe6IuM9l3lqdoe0anziOUplV36lZdxO12GCvZPKE4_FpqZ-kvO_mhePERlzTvA6ocgtqejQXmAKdPcZpAEvzJKsuCYf02XMagpTXktFXS-nmWnU0IjHgZREqarRnygUzsFKKLJxIdRMTHH7e1h4WoerdjyFv0dwdS0P-OOTZGmpIoLFW1qQuGNSRCJChd-DXgLjyVM6MZpYRNOWh7LcH4JJvU7ZX6g?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6411,7 +6411,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeleton with x8 others - Walkerton, Indiana',
     description: 'United States— Eight prehistoric people discovered, some of them giants with copper armor. One apparently had been killed by an arrow to the head.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-265',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X43gkc1cGW65b1X1H-llxVR9n7m31KP3sRvyIJxMTYwmwOz6C2Ab6rzgjlUcClWV8vBYqgUuKK-VSK3tHe2j1r7fCpczRWNrgRMdwFhISVLfOZo3QsWTwrpNonTErfRSgMlrq6vU_SRMHjAeB_2CjUzE2IF4Vp45FMstTdHWlmWmuTTK0YihkJ2IK3M4hPSBs6NiMVZYoxi_tivPHGYBAHt446LAQdxbdW12-1otRCbmGXK3MzBGJ1PNnQ?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6421,7 +6421,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeleton with Massive Axe Head - Goodhue, Minnesota',
     description: 'MINNESOTA— A massive stone axe head was discovered within a prehistoric burial mound. The axe was so heavy that it could hardly be held with two hands. Next to the weapon lay the skeleton of a ancient Giant, which was so old that it crumbled to dust once it had made contact with oxygen.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-266',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5oSj70y2ZTpAr3IQ4x-XhrnPW-MnbF9amv47EkoS4BvaLMgtEuFRwsDSjZ-PAkc2jIpTT2XSsIM_e6t1s39Sa_wtOhTpx0RFCQjijUm5LtFzGtw2710viW46qut9SnlsknfomQMtqiynr9G1pMzcrgDES4CumWNsgiBHPTTSa3ZfVlnwM3vmNIzLbQz9Fp0Co1rDlMvSEOlsc70f81iJ9nqk_dW2XR01mywQlQATKQ0FhRZowBn4CbBvQ?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6431,7 +6431,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '24" Giant Footprint - Mount Carmel, Tennessee',
     description: 'TENNESSEE—The over 24” long footprints of a possible modern Giant discovered in Tennessee.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-267',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7cQ682I-tA-o1tEJWQx7UZO0vOBU79_8JhkGfnWP_-fjtjyRD6arWV6XjB8wjMjG8V1eYWRJ0-xdGIhIgkOHUirWNM4txNX3xH0X0_dX_4tkdFusQuP9nJjYUhNoFP4mdVUEKIRdefesAy5Tk2n4O9FSoPBb-ej6rrqNUpaJqKl9rRMYZqViSoEtS-iYR8KN8Yc98fHTerPCAhHCquY8NOG9IiY6hvFTbkedx-aRHp3gihA594C4DjaGc?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6441,7 +6441,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '7 ft Petrified Skeleton - Hudson, Michigan',
     description: 'MICHIGAN— The petrified skeleton of a prehistoric Giant over seven feet tall discovered on a farm in Hudson, Michigan. The remains were to be sent to the State University at Lansing.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-268',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5JsdCTnby7oz9b3zf39VY6W8ecnQwypp2ONHcZ-5qeJIheaRKIZUZiflo0Ha2pL2LcCV_o5RYqDyjI9Y0-fM0fAsNGvlyL5MGlx98IQLQoBoKa4GwchFR-s2zRnHaVRgaIkmIvS4LhDrfFZFefqwNlK3JrvdKotPyR-oQJ2lXgDpWt0JmKmqyklRiQv4PT3gACFK_FiFAMzTZCZanrt8S_DWgK4IpV0Bq-x-lsxD_jz_vzjZznzTG5EJE?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6451,7 +6451,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '8.5 ft Giant Skeleton w/ Sword - Moycullen, Connaught, IE',
     description: 'IRELAND— Workmen unearth the skeleton of an 8-1/2 foot tall Celtic Giant with an Gaelic inscribed sword with the year a.d. 1231.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-269',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7Fy12OBp-FQAMxvHNoi4AK-hEDusKrl3gmeHD3stk7CqanmufLCJ7nxW4JHnFQbxoUCW-wX6KihoRvwxGcE1RUfzpK7iw4SlCF9BLEgElIiZrMnDC1NzFYxsDLZvPdjXchadgkjOnl4WXzr03xbos89RqbGCrmaCJYsIT48e-FLHnAQlCaXJU_Ok1aPHhCayRaai0s9dQvOlHafYpPosPTYhEqpVO0gZ-6T8AKHjl06QJzAQfoE6zzwWM?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6461,7 +6461,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '37.5 ft (18 ft wide) Giant Skeleton - Nashik, Maharashtra, IN',
     description: 'INDIA— The supposed skeleton of a massive Giant reported to have been 37-1/2 feet tall x 18 feet wide with teeth the size of grinding stones. Giants roamed the earth erecting megalithic temples and monuments in prehistoric times.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-270',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5XWcxs21v7KI2bhDzYPOGcp0c7HRAAUr6rEoGqVhascU2cDGOfnlKhzyhPPmp-CHA9Id5WKkb3vFYBVES3igxBBnAsznZHJD3Af4ttyU13MN3gujYhJG4N7tRIRw9Ibm8LQSYi0S1bqtlhiMmCJDWgNdI00-hh3XOwi14CXxJ1yF97TxxyLLBUe7goHsrgCqPIXDzIHFVE6QyqjP_q4MRKrcCIUepq1PXt9khlwuDWbPKL6WSNWUHY6kM?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6471,7 +6471,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '7.2 ft Giant Skeleton - Lawrenceburg, Indiana',
     description: 'KENTUCKY— An ancient Giant skeleton 7’2” tall with massive skull and bone structure discovered in an cement-like grave made from clay and stone. A number of copper artifacts were found along side the skeleton.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-271',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6xfnII5UC480XOh0CSqNjXPvvAK7RK7UQs4rtZozJsqgfTCOt5L6H8DI2r5Arqdx602uhnbPNkzXfQTAqTbvniHls8maNuYa76WPtUoaZ2QgE1_bMmi_8jDKw1ajWZuiL1LqvgQgT5feGZO54vAcvy-SW-d7JuBZNa1v3DSzMtMXXoWKQWFQDOD_ubj0Gx5VtqZpGdZ0nWXSZ0uerZ1C_G3HPM0CA0BwsbF-mXsU5C0NK97qiYt8PPelY?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6481,7 +6481,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Gigantic Skeleton w/ Dog & Canoe - Montague, Michigan',
     description: 'MICHIGAN— Gigantic skeleton of a possible Indian along with a dog and canoe unearthed near the White River.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-272',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6wQ_7Ok9b0hp3yxC_qiJc4VgSIK2KycMs5zLYGg_nexwu4CKmt2AuMZkvDNyay_mWyjJrmmCBIfEjNFAWzr_OAuoIrfr6FRc_lygr11Ki7MWj_r9Q_qX4-iLf6J7kjVtvPffOvqtXCm7WX3HQESZEOa5gH1w0trMDqtwruWYEWiyphkyLRCkBhr9ulhe5LVvrsgECERX3ioKm-tkapX-PkwItmm9spvXBcvcNyVF_ejZeplIzummOGd44?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6491,7 +6491,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x15 10-12 ft Giant Skeletons - Alcorcon, Madrid, ES',
     description: 'GAUL/ CELTIBERIA—\n15 Celtic Giants discovered crushed by boulders in a prehistoric mine for metals. Their massive hands were twice the size of modern man’s.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-273',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4NIuWK2k6pV1aeYSL5JTUNxCYg13FdoSPLwrhEb1VDlJl6n_ReUn8IxGnzA7l7NSPmLQ4SUfqEzaYcvWmM47HBP6lY0uUdxURoGtrTlgsOAhteXNsBjaNKgfDhSbsDKFbpQZ9SIi9i_WZ50oisipJmVBVGvz5cxtFzdJpe0H8xa0P630dhPspgRqFIJbVqnM2VfmjpbpgLkzw4uZp5qElILGQPkWD6kz4uJxblv5MCcX_AfZhXiJLgtyw?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6501,7 +6501,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x11 Giant Skeletons w/ Elongated Skulls & double Rows of Teeth - Ellensburg, Washington',
     description: 'Washington. Eleven massive Giants with double rows of teeth and sloping elongated skulls discovered within an interesting burial. Elongated skulls have been discovered all around the globe.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-274',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6eTl3l8m_7MeAOhXVGeRUoQtDQGhIso2z-BXP9lSC77ejiLndl5SvrKpVSZSE19fMX2B1k0E7OvDexfD58uu1WG0Hqlaw9elWuUpFgSzHXwhirx3jPeidBvvKT-LulxDoGqVgWn17XM7kvZlPRphoWofVFydMoEtURhButXz6I0qvgGAzq4_rdxyM-H5VEjEjPB--4BPE0UCX6HmLOGUozDqKDkjqlp7Tgl2hFOVOZlcDWr3XA460LOGo?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6511,7 +6511,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x3 Giant Skeletons - Craigsville, West Virginia',
     description: 'WEST VIRGINIA— Three huge skeletons unearthed an a place called Indian Rocks. The bones were to be given to a University.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-275',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6WDNHpMOPBNZQ0tiolYtEyPGcF25iMnc4l9POtAgVUDyiaWhXfrrJ4jKAd1wFDdi6c4tSXg5Vcaljmz3cDY82142ID0In7ZKOti7oUrxcku2UcbfUx_y7XvsXPX3TzDDQpW3Sg7K-Q3Y-iGwgLAghtYAxbKOyadmiAhoUI3e9AKfdiJtWWayio5_qr5TWqzkAJ_dsRzqrdV2WpIChX2xTsatGNjnQaADOJyqoz0RnSWqaf6CE6eSSBrNQ?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6521,7 +6521,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeletons of Man & Woman - Chillicothe, Ohio',
     description: 'OHIO— Party of excavators uncover an ancient Giant encased in copper armory and a copper cap with copper covered wooden antlers. The discoverers thought they had uncovered the king of the Moundbuilders.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-276',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X58FpdoRCA99Sne7ZfU9fWC0zMX1VM0dE2Lvj7R-9S0L_u4uHLSXPB5rnitKFGma5m5C4DsPHQ4vKHVBeqBgx78oI5t8Cm_VdK10y3B7BX-cRwONLeFu2tfdr4loDvwjhw8TQi9CjjfVzBxs056geJnycwzrMy8jDDV2_7x-R_c8ozU97-ZjziU1sAOBDdMvuzP3RYyEr2zSf5_mNJOBatxPwXyBwEA5vmjbT7MFxylmKqpda5H1ZotnW0?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6531,7 +6531,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeleton in Stone Grave - Eutin, Schleswig-Holstein, DE',
     description: 'GERMANY— Ancient Celtic Giants’ cairns excavated exposing a skeleton buried in a megalithic grave over nine feet long. Golden articles also discovered.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-277',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6a-UETJ2A99OszuS75xwwyorZpysG5R04Yln9lIWiZl9sJdAosO2or3ChUdtLxy2JzyGsECfZiT2nmHxW1yuUp7MD3qDkqrEgDGzWW2sm8Z5xWjkY9VhGAT_n2plDv4oKil9sJI6paMAOZpE90SUFxyg8xWbmD5gCsABLKh2m9hU0wPFxuqVqhmrjw5wic77FkgbaXCmtHOurO5piXqX0Z523YOTckYzqtooEzilNpmMyFoLVyPs_IZUE?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6541,7 +6541,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '8 ft Giant Skeleton - Albany, California',
     description: 'California— Explorer finds bones of a prehistoric Giant in burial mound near West Berkeley, California. The bones indicate a man of eight feet in height with a massive skull.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-278',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X49aVCLdbRzZv7iY7E7ENbxZJl4-dITEd2KBm2GflouB4C4hsQXgsL_W0xSXW5pit_J9gmbeAnxbqh6MuYGp58_zLrsW_NM7v8oF0Miv87aLn9o0M75A0pLAxFD2Ct-FEfUeMSbAhWcYehAoZgalZMCPWReNLsAOSmOEKEdfDZ4vby74b-AyPtRMLi7hSP4dCn7ORLYPTeEg9prF67ec841xdv5MdgqYOugOz7fsOFCJbsvHLZLTzXREXg?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6m14PccVm0B0AQyqHlMmxgiYHXTMmKVjNjO8hB29X4FwEULIxp9ItKF088miQ2Ug6pRDvRe-ZqYQ_AsaWBDiWg6fgZQ4vOvV4-gpHHCAHnnzIv7Dm4EoqqPpmKsj9NujsGsiWm9pz-29taqn6-engzvVPYJG4Bx23V99Wnl0LpMdGXz3-pW9vCziwZu5RR4leMvIEAlngfEcRSLbIcO2kDp0ShixATdfy1fyKK9441xDSigOOqEm82evc?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6551,7 +6551,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x3 8 ft Giant Skeletons - Sahuaripa, Sonora, MX',
     description: 'Gold prospectors discover the skeletons of three ancient giants. Two giant females were unearthed as well as a male over eight feet in height.\nMost probably, these were some of the race of builders of the ancient pyramidal complexes in Mexico.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-279',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4-91g77jhmkQTx-8dAA1l8g3yMVWR1e0lFA0fYgUO_1mLjQhWzhfAPU9VfbfTvbKxHEiyb8IWmsp-MCThCn5asDjpZp7qnlQD6HtqHlQ0lpM6Mfr2ZtXXZDftiuQnCs83oIinlaPMlb_p9m_QlDikLz8mMnKZZFWDvYtNjQsjCJw8dCsbjZi771AmvN-4J1132RMbesNcbW6ZEBYPDLXQPkWdekXWSKLSgZmVRbbUJeAkcFa-T3hUHaMY?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6561,7 +6561,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '7 ft Skeleton - Dillon, Montana',
     description: 'Montana— Farmer discovers the skeleton of a Giant seven feet tall while plowing a field.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-280',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X649KNJIc9zDIVsmcylJNRwonYLuG5l7_poyXN12r5tmkbFIG45jvSSdh8kZPF8bQb5XPT0SpyhmJs9nwclw7y2du2FU4w9iiln1GmOdhXk-xtRukzb50UmhCINQavexAo77jvpAfVpKamzShET7P_IrMrpe6i-7bUG8SZhzZ0zZyLPdXJqqzDMsaoX1_8SXkbWJCQWTrSqluVgHU8F7VTqgv-dv-oXj_ah4AUFpwSXaYmMHb0uOYiMsxE?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6571,7 +6571,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x100 8+ ft Giant Skeletons - Deming, New Mexico',
     description: 'Deming, New Mexico,\nmore than 100 megalithic stone graves were discovered. The graves that were opened up contained Giants at least eight feet tall with teeth the size of horses teeth and massive jaw bones. The bones were so old that they crumbled once exposed to the desert air.\nWho were these Giant Cliff-Dwellers? Ancient red haired mummies have been found in the area suggesting the\nCliff-Dwellers were a red haired race.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-281',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7k8zyB5Zl8_h6JFUz2y_NcPltrrR1HLe_v0rhPWSTkYKJYh24N3XuBT99z2DGaSoBdgOZ_IkmR4qkwxOOeWu4UguhwyWSuNDJ1n_Tvmju-MLEE4RasNFwTlWhCUkAZ6EkzyzEkIfL41Gb6sl_UyoSFG4E6huBZwzRpM6AVENpmdPgR53czVSJSJxBeKpCXO5h_l-w6wB7BBHLaSuRSv4l03d8gbEZs0CujYvbnRJ5YN-Fphy9BVtw9Huc?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6581,7 +6581,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Natives (Living) & Skeletons - North East, Maryland',
     description: 'Maryland report from Captain John Smith. In 1608 Smith encounters gigantic natives with strange speech as he explores inland. Report also reports of more recent discovery of Giant’s bones in the area.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-282',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4Frq6cmhnEAdINoE51rTFQeE1frX8Emnl_TqoaFUtWbBD0bvUKFwqLClLX_Xv0kyRg0PJ7itIlNBDq44mA8qVIH9-N9qKps57LGU79kYF2u_fYIghSwJavjxmubxq9oKKeEjV0q-tCKsQIZGwlIz6m5VttOhNCXMNgjF4hxukbr_XiVP8_DY0dA26crh9-B-BTF3UFnhVjCNlvPQk-soJLlPfO6FfYRoNPTMaNdThIpnddvDJewc0qWMY?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7vnyJzwOGo5c-PgQ_fUGzpxpaMhPZVG8JQdS6CF87NiiW1rwfUm6ff8_277UEtjcrFKvTljFO8JiL93ejXF94IZvyAZkyhHOBYUbcaZtpvSih-IH8Sj9Yg625Ujw4OdYfoNQpK7W-PAnLoJY70zoMY1iA1OR9QguciR3Svwo8CyeW0rgblkdMzuUYzZneXkgZsP195CysEKACyE_ufqlVcq21taBOkhJgBdx30X4dq-WPzERkkLpltqlY?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6591,7 +6591,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x14 Giant Skeletons in Slate Coffins - Le Chatelet, Centre, FR',
     description: 'France• Prehistoric slate stone coffins were unearthed containing the remains of 14 ancient Celtic Giants. Celtic Gauls once ruled France, erecting massive stone and earthen megaliths.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-283',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6kdCfpUw2ZicTp5dfEWHroQ_aWol-HJe4LLAn_heQ2uKUSAdbrYgLwFxNds7nBB-LeYukYStsvNa2L8tpCLtufdHIxiEQCVdlGOUKi0WTyctXJrzm0TouDRzLcYy16Lds1WRhNKUkkB7DPid7B1a6HMUMySY82TYJUR8hcvvKiAVyeeFh52r1iSFGdITYolPs3s8_QjJFk_ElZR7SGKz2Zv46wDLthLY5zws0kcaH_LofwO_TsWdHNsaA?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6601,7 +6601,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x3 7+ ft Giant Skeletons - Avignon, Provence-Alpes-Cote d\'Azur, FR',
     description: 'France• Three ancient Giant skeletons all approximately seven feet in height unearthed by Nazi German prisoners while digging foundations for a garage. The skeletons were believed to be about 2,000 years old. Celtic giants once ruled in Gaul (France). Many Celts were said to be taller than Roman spears —which were about seven feet long. Also, British Celts were described as being easily head and shoulders taller than Roman soldiers.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-284',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4vpqO8Gin4FaFSQnRXRTHYUuejdb75j7zeEGFe_0-zz9Dtoq39j7TUak9vq93hW7w4BEaK62vXGrfdw2VxIpeOvzFursfp_2XqudP4Clly6gCxOIR_Ht_AFaMFTUBrG86Eg0YDFVtO0RcUSAxtdk3XYltJIxJKzAbGklG7MVOeL-O1JVSCUMwO5pfo0_g1Fe_ohuS4hTV2iv1FVHfsPXoQyOyG-cJTiyNg6WfYW-3x8asO8ZurYquB1Ak?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6611,7 +6611,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Multiple Giant Skeletons - West Palm Beach, Florida',
     description: 'Florida • Several large shell burial mounds revealed many Giant skeletons upon excavation, as well as some curious relics. The Giant Moundbuilders of Florida often used shells instead of soil and stone when erecting their sacred burial sites.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-285',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4gu7tOex30PdqEMCseW0HVlhe9IRxKhWdyyVUV3_DBlUj_mhXMIDvrXWdfO37jnvTje2OzPC6rTOvUCzfKfpkwev_rMijKtnt1TCvM4IC6ZUBqeaUozFYiLJVyU_ARZrxdHOXt5bX-5NiATi3-X_SuCKZO6XTFc7RAgAgIXPayuitjQFUvyov07vi9EQO8WmbNR3UkH7I42BcPpJgBDf-jiFGHrpaRMKiCWolgvAitVIr4aJlv6ZxkoM0?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6621,7 +6621,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeletons, Clay Tablets, Artifacts - Grand Rapids, Michigan',
     description: 'Artifacts including copper, slate and clay tablets discovered in Michigan Burial Mounds. Also, the appearance of Giant remains pictured.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-286',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5bQneWnz-6D876DTJRn2az3SqenaFJufQH_DharFGwJ8d2uKfm0y6Fp_XEXAWSOsKafZmaVKjEoA1kPY2snQn1UDIX3WBvDM3BIdRBO-hp1B0Y22XQ1IxzDRy020MteHjUGr7Q-nrPY505YwxfTx80GXfFn_7YD18i1LKbu8nZ4HeEE37q-0ihKbi5cy61kY1XQqeciDK7jS3Wlv-iBKjqeOjHhJC0WrgqEtilvTxEy65U9YYYPZNzZgU?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6631,7 +6631,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeleton - Colusa, California',
     description: 'California• The remains of an ancient Giant were discovered by workmen installing a gas main.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-287',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5lp05PKb1u0gA1JFnwtcHXZ9rj9D1iIimdsCdV4e5bxuWYYCtW3Rr5lUefi0-oRuMT24nwRmPnwHXb_YjXYFe9ljWKeRyiW3frlUjYbyrEKyS7_bNLf2vr_uHD1bNynOcNP1B7Udc7LP0Ou8trfKD6CBMifjq2DH8zi6GpLosRsaEvAkv0ZIl7iEqOnn0Sgb0O4UuZErHOdtwahgAIGD4O9hzGcfTT6q7hT5kAlKdL4u3VVGJL-nMYbBQ?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6641,7 +6641,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '15 ft Giant Skeleton - Nuevo Michoacan (Estacion Riito), Sonora, MX',
     description: 'New Mexico • Extremely massive Giant approximately 15’ in height discovered buried in between two large megalithic hewn stones. Red haired peoples and red haired giants lived in the lands of the Cliffdwellers.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-288',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4W8JAbp7o9s7f05i1CU-ve60ES497fCG0lhLpLHANEg6Cru1aSHpkCS7EXGcg-sI1yg5nW0VPOOEXj5yyNJdMpmOV9xVb0-fVl7ysmP-L6Q-uLgUQlCPe2fwlvnGiDrXmfQZa_L3HapAJTQzvP91dJqlV3UhVr6sI5oWXzisYiqInRvvyq4wAlmYWirnMZ6e4yaqqxQaWALKqgNc6S301V_9DZRKN0vo5VSlSjG53eP2Fy7pX3oeiuSDo?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6651,7 +6651,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x3 Giant & Giant Panther Skeletons - Chillicothe, Ohio',
     description: 'Ohio• Three Giants found within two different burial mounds in Ohio. The skulls of the individuals were of rather thick bone structure and elongated. Also buried next to one of the Giants was a panther of unusual size. Copper ornaments and massive stone battle axe heads were also recovered.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-289',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4z_SXiAaOFqDHhUo7Ep_lxFujcYJN2aeZeGqAERqXUNIrGqWZ8xYy8hfLJCQ7erSjZ3bTxuWSQTIG4IXW7chmf6syAHIJH03rRbv2_GgooVfnomBAqtay25bFPNsZqfKuRmHWzwRKtLJjUaxiXWioKuCAEsMcRspReGQebzlcEcx7sHIf1U_JUTpvmlOf3Y0bQ00vrOykB07cu61ndausjN3MsPk7w0UotkrQdwMfxxbGoWiWRg_Qtp3Y?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6661,7 +6661,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeleton - Lisbon, North Dakota',
     description: 'NORTH DAKOTA— A large Native American skeleton was discovered in Lisbon, North Dakota. Exact measurements unmentioned.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-290',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5KbNOYEC58d9LTHpGcpacEKb3p1eSCRcCRVdTrliEf6e_RVxZ81RJr4VFOFrgVQcO-oVJAom-a37BB92G5ZZzd_9HcrExxbprPCTMl2lh8n8vS0IVS-ZFXiRIE3iNkUN30bh39colpUYUwuvOBjRreFVQsz9kuEzFLpZ2btFke-0grsJIOt9GAvN328K_YGeP6WIjAOs1FMQADMV-Wh-tzaKjUve1o-39LDgcOC6B0D4Y1lMiKMP0rnyY?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6671,7 +6671,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '8 ft Giant Skeleton - Greenville, Ohio',
     description: 'OHIO— Workmen uncovered an ancient Giant approximately eight feet tall in a sand pit. A half gallon stone pot was discovered beside the titan. Who were these ancient Giants that roamed and ruled in America past? God and history knows.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-291',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7mPKAZKHdUeZ7sRL86sJjKA348A7LxRJ9vFm_k4aoGVPBKvuNYJ1vp0W9GOYvQ1zqQxALfC56_i7Zxdgux0R0Chq-7VcFyYbRl6PoklTDvaQ3bzTuMeQ5tXzUzlL_RROTyDjiijqf4YMIROzCAqTjj9s432GC_RXvvMCBkRllFkRipx4THUbwqpl6JIXHXWGKUiE0WvyK48ysKnm8_IzRJHhfF8D5qRekQWC8ZoSVIK4nt8e1bPP8lR5c?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6681,7 +6681,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Cyclops Skeleton - Webster Springs, West Virginia',
     description: 'Giant discovered with apparently one eye socket. When giants were born upon the earth, abnormal anomalies occurred sometimes such as:\nSix fingers and toes, double rows of teeth, horn like growths on the skull, etc.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-292',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6l0erDZZyhcNv5pCSzM-427ITpJB4aZfwd2eCeqtzDV_yMRHGOP2VEeE6sk7oUAo4ZcGIDnGf1Xgjs0ml0YuR0gUorNFqXgpMuih3SaPKWsRNncYWrGAvpgwBQGG1YbwDeHbZJjmbrkMHPDrPCdVzVyP1mqgqyQq6mMxr7Uf8wIjwLTd-aA3NUtdAB1nGWjrEjAgf_ykz3lqt0HOLYSvv2alLAm6DSaRpLXGe4wn99g-2aFn7JQOAq-gA?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6691,7 +6691,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '7 ft Skeleton - Ashby de la Zouch, England, GB',
     description: 'A Celtic Giant skeleton seven feet tall discovered during a quarrying operation. The bones seemed to be hundreds of years old. —Ancient Giants once roamed and ruled Western and Northern Europe. What happened to these Chieftains of old?',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-293',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4E7Ztb51ctpzLT9yPzvmw4swk42IY8j_ka4J6YCkj6TROV-o3qiByaWaLfLw_2S12yg18lPQXv4schDHSfIC7P4QhBgmVExzdUjJIJxP3HKYA__eeGkzJQltYNLpbRNEfgtihGhrn0MuR-WPqjvqt2WcyvexTfFmsatrbv1OsC6hgMHCONoqV-Oldli_NrshmwYHwcfMA5NiCKCzTNZ2tjnhIQo1sRibhR7c8y9QyzI9l3x9cTY_edjBo?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6701,7 +6701,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeleton - Saint Marys, Ohio',
     description: 'Ohio: The skeletal remains of a Giant were discovered near Lake St. Mary’s in Ohio.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-294',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7oNQXNxMMAOVdRFl5oN6Ymjbj-gdEcEAl-Y1m44wGuHR2eK7aLpLdvthqzigQ13fEF_Ct9rDYggWu9DdqtXkUx4_4ldAPJcLAgxoPXOYh0BcF89wqCV6VoQVGysgh3xfZnZmkv7NLHtbzOl7jyUKkHNuwD8-NrQ6p_Iu9L7QOQaawRPL0pCs4VhB0AKfcdFMteNLD0Bk3-XJYl1uxBHYwF--M1tw3NRdSn3_UucVRWuJLcVs-6ZyA1n64?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6711,7 +6711,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant\'s Jawbone - Redding, California',
     description: 'Redding: A hunting party discovers a Giant’s lower jawbone twice the size of a modern human.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-295',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7OlXtrimROBRx1uz2sXQ7luQT_Jq1n7yk2n6qiIlU1ANOJM1ybFbRwOKM-jwgB4rP95eU0tSayq7wfYDtOfYFgyI2ELpWgjfNaesfManghAkVgJ6RLl8dhbqKuJONV8oMZnGJlix7qNnlIlvl13sj_vW6rLzO2wsTbH7rAFDWaOr7dmeHlscUtFKJnhkBy8HP1lGpSK82p6y3Rg3l2Ek2tvIYIUv0aDPCSWPhQ8feaB0iUE-J0JuJcFRk?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6721,7 +6721,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '19 ft Giant Skeleton w/ x30 other Giant Skeletons - Truth or Consequences, New Mexico',
     description: 'New Mexico. A Judge vouches the authenticity of the discovery of an ancient Giant 19 feet tall near his place. The bones were protruding from a creek bank. Thirty other large skeletons were discovered buried in a row in the same basic vicinity. There was speculation that they could be Aztecs. Who were the ancient titans that roamed the plains, deserts and forests of America in times past?',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-296',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6nwfgtdgq3Zt6CxzvI5cEl3r8PwLXvgb31GXpph4IDdxSCU3oescHAr_MLeTjyj_Dh7RAE9OVefGzRXBV-E7PVJofEUKPRmRHJYx7J-gEaoM98CV3nSGGm9FuYhsqfOYGEXbLu7rys6OmhrOzwVvYpKISr7A73Rirg2gj4tZLy9sIkprMmDfROtP5k__hXj-RQwflnPlLodvfqMadZB7fuMGVZe4HSjB5r66d7LZThyIfgP9OExViSGLM?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6731,7 +6731,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Horned Elongated Skull Skeletons - Tampa, Florida',
     description: 'Tampa, Florida. Although some of the massively thick thigh bones did not indicate a tall race of ancient humans, the odd characteristics point to other Giant- staples, like the following: dense skulls (several more times as thick as modern day humans), elongated skulls (no foreheads), horns and extreme bone density. Another thing to note is, we don’t know how old the individual was to whom the thigh bones belonged upon point of death. He could have been yet a youth. Pottery and other articles were also found within the burial mound. *Rude artist rendition of the skull not as old as the article.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-297',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6_ZOpMSc05MWj_JHkABzMoN5lC0W71COdWh5I4VI5ePz9JrI7U4k6JL9W6JRIVAdo4JSOi3lbU6hjEMqA7MXJMS8bvOoTZ7YRVSPvB0DW3RVZHp_po2RELN3cfKc9fFMykibloVDl3ejCQkbc9Em2TV1iHkz5NFUBqj1ITUnJMXpTp8ta_mxk5V2vrd0FUd_B6mBHWGYktURSSoGw5d4MbTEJvjU1SrI-b1NJtKL1s2oWQZEyYcGdjE0Q?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X59ThLUskxE1222fBEfaoK3KBqb84lwn2A12mJ0SNjIncGnf5XeZ_EMv7xyRsg557bbHTJXYh3LCAv015Cgf8Dc_VERiFXKGpXtq78_uQdoRJ_YKFrZzXhrdkpZ_uOK25BrhkBSaV5U02by-va2WWhU4x9NpdVOYomotjeu1G10RhXHW1jQTcJ3DiETQd2DFmYbhmc-ji7MEAsm5Dn3ddXDpIhachAk7QN2zgq3X3diMDQC3uDVT83JGlw?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7FaIcfz61fnKvfZqtpcqA6R1plmwnWL36gV1Tnm4cEh50gXogZbiaoj1xgH27YdOsgAx9in3HYJXm4mehJ1-YjIPYG9T-M7ZhEEDifA4NG3Tu2tlruf2HpGVt-roIRcqvH_YGw30qp4HDyyijrDzTfV7ax5nAGHHQRTDguRyicZ0gp9Fahcrufw-HKn7WVzUTiXQ8HXPcTo0Z4L8p5hly9WIFnm_i-LC83T5m1ramX7ouET5K1mDQ8w8s?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X75RcTKxfW2jqVk7MH8yprBcE6-Zcr7AF_J_9oVplCgiBUnFydnSQ7IxjrK_vNgaG2l0MA3FJrZkz0oGXuD-lHig-ugF2y_cOmZTDMoF7TLBChylv9eKx5_-UNgQ59N8Irt0D9MGsSn2snbLmVGyuqZ2jrSO5rFfPP-n3_L2mZ10ktPwesMvcGb3YRYQMddWfEHd9FUvjFIfPXRiTVjF8nd1-uaW4PaE6ptpmi77u6io44UlPOahVsIKO0?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6741,7 +6741,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Skeleton - Meads, Kentucky',
     description: 'Man discovers the massive skeleton of an ancient Giant in his yard after heavy rainfall.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-298',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5498CTeiR_ujP-Kytfx01rxYgG6xDJcBHFhyCEZtDyFY0J3ib7MCQbhYUAu9evCX2hbGFfWl8wYEN2XEzmA312FWUdW6VRtxwq5pgTrB5Ovu2bDuqqlElf12s9oWbhhiAfFxI2X2_qvAH-rSbYagRZvbahelyKfa9wuUnZT2c2uUsgqpWbAXgw03kg3Jy2-Ea3iCcGdufe7RgBHNYM8a3vNwB94TvupspweUIKsVZM6BOaIfNTkOJ5rPw?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6751,7 +6751,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'x13 7-8 ft Giant Skeletons w/ Horn Instruments and Weapons - Nezperce, Idaho',
     description: 'While digging a cellar, a workman discovered 13 skeletons of ancient Giants ranging from 7 to 8 feet in height. With them where many curious items including: skinning knives made of jasper and onyx, polished transparent stone war clubs, copper articles, bone needles and unknown hieroglyphics.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-299',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4DNqp733IeAXcBRShlIMAjfeMcVCm0xhX9h_JlfhjvA3he-BaQYkwE2qGapZUrCkVi4qslT_x0XO-CB88X1lmHeEwbhvXsn4pzkIZtRcS4plkcQ-QeaoiRg5quTCf247kRwFsXs8N3aXifBxO4Je2pWhRod51kAiXtw5vNqtjk-vD2_xdPHUtcrItp_xykucDSE2Pw-09nWbz7DBx_ak3GRMnot2XEXtTmHOMZfoid8xiH9i1dok1-uhM?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6-DsMkWdmXm-92NVCSs8p5aidn2WZgbChr5MXFu9squWDODxxHl3wmfZI6tT0cnG77hPKTB9UZUYLdo277JE2q7WYHD2_0GrbmRF_M5J1MCPC5YP7MP7PQvcvVGhr0OnZa422g1ffOXdpxjUcZv_5I1e78f5eNn-op03bj79qIR-VkZscG_iliYMAUucPkEO6f4RfWE0I5b_dI8JYHKWjRJPIXT_Fb5Nd5rvm3d-koG0Z2UiLPH6zNHe8?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7ID20llgTH-UOY2H0Dk6Jk1OmPtc86DfOCYA14iXa2cF0-ITq7TC2dsJsltgLuxkbYZ2VUumNb8OCfOK_D6aXJ2qSNGtoogw7f0GCc7Pqsg4coPPFcFmkcoloDILWwqbkLoxxuAyuxvBSra4KoQ-kxmNrn8GMsNmQQZv54uW6nEXL_XDrSNr-F7P3uX5NOFZ758fqHTo2-KnyQExayUWQFhZDD21_WbnaNYW33Vbeyuyvrfc1zGQzcuh4?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5PzNuuXdWOlzxWH7VQ80ehKMy1BhzDRxqxTv05X4FV6Usnxq9J7xiufo8fnpBFBzxSMPexXuNOKLe79hG5xvB8t00Zfv7PT1bW9xPwPdc9S52X12KusnyA4IsGcOysaU_Qm80Kf1E1tV7_j-vRNLiXWgHbPU687W1y0s2hXKQzMZ351zK6ER7bkym8LfpEBTOj_rjKRTgNPqrlOo4cnZJz_8yOxsLCnv2Jg2iFWHUqg9OvvFRv5V2wS1g?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5KDaXAlTHBOYCSWolEtPSQHLAHIHYq_Dv-54TiNLlRJ0n9ZvqgLt3Ohw4Y_pG6wQrAzTa2t3Br6pR5aekwvQG6_ePzumVY9jB1WL59vJtzHojA0P9mzRYwt-MOx8_5o8nocDHeCkACfmNIQ5dNlH54HY3QpRy8gMrcBdNEwAHuOj5PdwDNjNQwrPKaRqy0hkkCF6Kq_E4FPe9BP_gatox7zlFQHgW1nFQW_gxDhsDgvr-eplL9EW6KygA?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6761,7 +6761,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '7-8" Giant Skeleton - Saint Albans, Maine',
     description: 'MAINE— Excavators discovered the skeleton of a Giant between seven and eight feet in height in Maine. Many years prior, the site was understood to be a Kickapoo burial ground.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-300',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X69cTrJgrdswsl0Gn5mjHe8qq2ONJGaLXBEmFN67hDMX3_ZGAk7dj9s-gzMJVW2r7NcwGAp8XP0olYFLlsuA0b_1hjAXQV3a_Z58fheB3RCicZurXuunx_D1ZXdoCPqqIdrKh6c6vUJ7UHVg0-d59utZmQa68blSfVDU7pN3ZBgUQgYL4qI36FVNNjEPiQZOGg2p5CP7oX4Vaissos4pCcg5Zg3TT5Dj5VGUMR79cNwY3_4mz22y5IjPL4?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6771,7 +6771,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant Remains and Stone Altar - Auki, Malaita, SB',
     description: '"I would also like to draw your attention to the fact that there are many remains of a lost civilisation of the giant race scattered in different parts of Malaita. I say “civilisation” for a very good reason. Around a mountain near Mt. Mala in North Malaita’s interior, is a perfectly fitting large stone block wall spiraling around the mountain. This path leads to a flat area on the top of the mountain where another large stone block wall separates off a higher, split-level flat area where a stone altar can be found. Further on is a burial site which has a perfectly flat 18ft x 6ft x 1ft stone slab upon it. The bush people who live further away from that area say that a Ramo of great importance is buried there. There are also hieroglyphic inscriptions chiseled into the stone block wall. A decade ago or so when some of the Islanders were cutting back the jungle a little to expose this area more, they also found pottery and other items. The area from where these large blocks of stone were quarried is miles down the mountain range on the west coast near the sea. Incidentally, the indigenous people of this area are quite jealously protective of this site, but that should not be too much of a problem with monetary gratuities, if one wished to visit this place. A helicopter is advisable."',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-301',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7iskJtNNVSKF3pQgyw4DFpTSpVvwT7DfrnJ34IEv3HaQfA54obs7gmoEf1Y-gGcZeTrCGyqweJR3MQR6_r8bEzeLD27s70CUFwl9N9Vmms0oL-XE1Sc5QYy8ZUfgEUuYA2imq0Zm6mPzvvPeJepr0OFbXpqFoxunpKNC1NiFiJdiNihdyzw0StcEkWYIgUrF18lYFNtPyu6Fb20GIu39hh17exO_j4-x4QMNTWXKGYmdQGE6SDE89YHew?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6781,7 +6781,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Giant HQ - Honiara, Guadalcanal, SB',
     description: '"“The Giants of Guadalcanal” are named as such by the Guadalcanal people, and from my observations they seem to be very similar to the Sasquatch, Bigfoot, Yeti, Yowie and such suspected to be found in existing in other parts of the world. At this moment of time, there are hundreds quite possibly thousands of these Giant ‘people’ (civilisation) living ‘inside’ the huge tropical rainforest Jungle Mountain ranges of Guadalcanal, as the Guadalcanal people will tell you. The indigenous Guadalcanal people of the Island can support all claims made on this Website about the Guadalcanal Giants, as it totally plays the major part of their entire ‘grass-roots’ culture, both past and present."',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-302',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6_J5HQIHSYbRBJEAHsZ4hC0h6kbHSlCt1zwpdBjGlGU98WdC_iHeOaehOTLCBcaGfHqAvD3WpCa7Zupb70YFunQB61DObybDmTHODpqxCqK_nadd8636NFAiYVsuo_5eDqFq2q6124I1FrHBAew5FahzGDNP35yEsfBNLNrJxaU70GtFqX1xFSQXxsoF2qegIXwXnb04Nt5QqhfpLaRfA3WLOx5dAFBmrZV6Tq_tJONTWFpeZ6e1D3-Dw?authuser=0&fife=s16383'],
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
@@ -6791,7 +6791,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '7 ft 6 in Giant - Moundville, Alabama',
     description: 'ALABAMA— Excavations of the prehistoric mounds at Moundville by the Alabama Museum of Natural History produced some 400 burials. Walter B. Jones, director of the museum, announced that one skeleton measured seven feet six inches in height. Most of the large skeletons were found in the vicinity of Mound G, with the majority averaging over six feet in height.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-303',
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
     isApocryphal: true
@@ -6800,7 +6800,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '9 ft Giants Golgotha - Cayuga, Ontario',
     description: 'ONTARIO— Excavations on the Daniel Fredenburg farm along the Grand River in Cayuga Township uncovered a pit containing some 200 skeletons piled in layers, all of gigantic stature. Some measured nine feet, and very few were less than seven feet. Stone axes, skimmers, and large stone pipes in their jaws were found with the remains, with skulls that could easily cover an ordinary person\'s head.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-304',
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
     isApocryphal: true
@@ -6809,7 +6809,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Pre-Seneca Mound Builders - Sugar Run, Pennsylvania',
     description: 'PENNSYLVANIA— Excavations at the Sugar Run Indian Mounds in Warren, PA, by state archaeologists and the Smithsonian uncovered rock cists containing uncremated skeletons. Buried with them were sheets of mica, lumps of galena (crystal lead), and fifty-three cache blades. They represent an ancient eastern outpost of mound builders along the Allegheny River corridor who flourished until at least 1000 CE.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-305',
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
     isApocryphal: true
@@ -6818,7 +6818,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Mound Builders Picture Writing - Miami, Oklahoma',
     description: 'OKLAHOMA— Archaeological excavations near Langley (Mayes County) and Grove (Delaware County) uncovered tombs of a long-vanished race of mound builders. The skeletal remains were much larger than present-day humans. Perfect balanced obsidian and flint battle points measuring 8-10 inches were discovered along with picture writings showing hunters and Thunderbird pottery designs.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-306',
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
     isApocryphal: true
@@ -6827,7 +6827,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '10 ft Giants of Chickasawba Mound - Blytheville, Arkansas',
     description: 'ARKANSAS— The Chickasawba Mound stands 25 feet high on the east bank of the Pemiscott River. Excavations uncovered human skeletons measuring eight and ten feet in height, described as relics of a former age. Highly polished pottery and a finely carved vase with exquisite hieroglyphs were discovered with the remains.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-307',
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
     isApocryphal: true
@@ -6836,7 +6836,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '9 ft Giants - Marion, Ohio',
     description: 'OHIO— Excavation of a mound (64 ft long by 35 ft wide) in Marion, Ohio, uncovered several skeletons about eight feet deep. In one grave, two skeletons—one male and one female—were buried. The male skeleton measured nine feet in length, and the female measured eight feet. The female was looking downward, and the male was directly on top looking upward.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-308',
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
     isApocryphal: true
@@ -6845,7 +6845,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '8 ft 6 in Giant - Salt Lake City, Utah',
     description: 'UTAH— A workman digging an irrigation ditch near the Jordan River outside Salt Lake City uncovered a gigantic skeleton measuring 8 feet 6 inches in height. Standing bolt upright eight feet deep, the skull measured 11 inches in diameter and the feet were 19 inches long. Found around the neck was a copper chain with three medallions covered in curious hieroglyphics.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-309',
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
     isApocryphal: true
@@ -6854,7 +6854,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: 'Windover Pond Bog Mummies - Titusville, Florida',
     description: 'FLORIDA— Discovery of 168 bog mummies preserved in acid-neutral peat at Windover Pond, Titusville. Dating back to 7500 BCE, actual brain matter was preserved in over ninety skulls, allowing MRI/CT scans. Skeletons were tightly wrapped in textile and held down by ritual wooden stakes. DNA analysis confirmed Haplogroup X origin, showing links to ancient water burials in northern Europe.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-310',
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
     isApocryphal: true
@@ -6863,7 +6863,7 @@ const chunk_1: any[] = [  {
     parentId: 'giant-skeletal-finds',
     name: '9,500-Year-Old Spirit Cave Mummy - Fallon, Nevada',
     description: 'NEVADA— Discovered in 1940 by Sydney and Georgia Wheeler, the Spirit Cave mummy was preserved under bat guano. Wrapped in tule matting of sophisticated diamond-plaited weave, the male mummy was dressed in a skin robe with leather moccasins. DNA and craniometric analysis by physical anthropologists in 2006 confirmed Nordic/Ainu Caucasian characteristics with no relation to local Paiute-Shoshone tribes.',
-    layer: 'Giants / Nephilim / Elongated Skulls / Horns',
+    layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-311',
     sources: ['Historical Newspaper Archives (1800s-1900s)', 'Smithsonian Mound Reports'],
     isApocryphal: true
@@ -7049,7 +7049,7 @@ const chunk_1: any[] = [  {
     parentId: 'enochian-sites',
     name: 'Descent of the Watchers',
     description: 'According to the Book of Enoch, 200 angels (Watchers) led by Semjaza descended upon Mount Hermon, swearing an oath to take human wives and teach them forbidden secrets.',
-    layer: 'enochian-lore',
+    layer: 'Enochian Sites',
     timelineId: 'watcher_descent',
     sources: ['Apocryphal Texts', 'Book of Enoch', 'Historical Gazeteers'],
     isApocryphal: true,
@@ -7059,7 +7059,7 @@ const chunk_1: any[] = [  {
     parentId: 'enochian-sites',
     name: 'Semjaza (Watcher Leader)',
     description: 'Leader of the 200 Watchers. He taught humans root-cuttings and enchantments. Later bound by Michael in the valleys of the earth.',
-    layer: 'enochian-lore',
+    layer: 'Enochian Sites',
     timelineId: 'semjaza',
     sources: ['Apocryphal Texts', 'Book of Enoch', 'Historical Gazeteers'],
     isApocryphal: true,
@@ -7069,7 +7069,7 @@ const chunk_1: any[] = [  {
     parentId: 'enochian-sites',
     name: 'Translation of Enoch',
     description: 'At the age of 365, Enoch was taken by God (translated) and walked with Him. He ascended to heaven, where he recorded the secrets of creation and the judgment of the Watchers.',
-    layer: 'enochian-lore',
+    layer: 'Enochian Sites',
     timelineId: 'enoch_ascension',
     sources: ['Apocryphal Texts', 'Book of Enoch', 'Historical Gazeteers'],
     isApocryphal: true,
@@ -7079,7 +7079,7 @@ const chunk_1: any[] = [  {
     parentId: 'enochian-sites',
     name: 'The Nephilim Giants',
     description: 'The gigantic offspring of the union between the Watchers and human daughters. They consumed the labor of men and filled the earth with violence, leading to the divine decree of the Flood.',
-    layer: 'enochian-lore',
+    layer: 'Enochian Sites',
     timelineId: 'nephilim_era',
     sources: ['Apocryphal Texts', 'Book of Enoch', 'Historical Gazeteers'],
     isApocryphal: true,
@@ -7123,7 +7123,6 @@ const chunk_1: any[] = [  {
     parentId: 'future-prophecy',
     name: 'The Tribulation Period',
     description: 'A 7-year eschatological period of global distress and divine judgments, marked by the opening of the seven seals, seven trumpets, and seven bowls of wrath.',
-    layer: 'future-prophecy',
     timelineId: 'rev_tribulation',
     sources: ['Biblical Prophecy Texts', 'Eschatological Literature'],
     bibleVerses: ['for then there will be great oppression, such as has not been from the beginning of the world until now, no, nor ever will be. — Matthew 24:21 (https://www.biblegateway.com/passage/?search=Matthew+24%3A21)', 'I told him, “My lord, you know.” He said to me, “These are those who came out of the great tribulation. They washed their robes, and made them white in the Lamb’s blood. — Revelation 7:14 (https://www.biblegateway.com/passage/?search=Revelation+7%3A14)', '“At that time Michael will stand up, the great prince who stands for the children of your people; and there will be a time of trouble, such as never was since there was a nation even to that same time. At that time your people will be delivered, everyone who is found written in the book. — Daniel 12:1 (https://www.biblegateway.com/passage/?search=Daniel+12%3A1)']
@@ -7132,7 +7131,6 @@ const chunk_1: any[] = [  {
     parentId: 'future-prophecy',
     name: 'The Two Witnesses',
     description: 'Two prophetic witnesses who preach in Jerusalem with power over nature, are killed by the Beast, and rise back to heaven after three and a half days.',
-    layer: 'future-prophecy',
     timelineId: 'rev_two_witnesses',
     sources: ['Biblical Prophecy Texts', 'Eschatological Literature'],
     bibleVerses: ['I will give power to my two witnesses, and they will prophesy one thousand two hundred sixty days, clothed in sackcloth.” These are the two olive trees and the two lamp stands, standing before the Lord of the earth. — Revelation 11:3-4 (https://www.biblegateway.com/passage/?search=Revelation+11%3A3-4)', 'After the three and a half days, the breath of life from God entered into them, and they stood on their feet. Great fear fell on those who saw them. I heard a loud voice from heaven saying to them, “Come up here!” They went up into heaven in the cloud, and their enemies saw them. — Revelation 11:11-12 (https://www.biblegateway.com/passage/?search=Revelation+11%3A11-12)']
@@ -7141,7 +7139,6 @@ const chunk_1: any[] = [  {
     parentId: 'future-prophecy',
     name: 'Rise of the Beast (Antichrist)',
     description: 'The final 3.5 years (42 months) of the Tribulation where the Beast rules the earth, wages war against the saints, and enforces the Mark of the Beast.',
-    layer: 'future-prophecy',
     timelineId: 'rev_antichrist',
     sources: ['Biblical Prophecy Texts', 'Eschatological Literature'],
     bibleVerses: ['Then I stood on the sand of the sea. I saw a beast coming up out of the sea, having ten horns and seven heads. On his horns were ten crowns, and on his heads, blasphemous names. The beast which I saw was like a leopard, and his feet were like those of a bear, and his mouth like the mouth of a lion. The dragon gave him his power, his throne, and great authority. — Revelation 13:1-2 (https://www.biblegateway.com/passage/?search=Revelation+13%3A1-2)', 'I saw another beast coming up out of the earth. He had two horns like a lamb, and he spoke like a dragon. He exercises all the authority of the first beast in his presence. He makes the earth and those who dwell in it to worship the first beast, whose fatal wound was healed. — Revelation 13:11-12 (https://www.biblegateway.com/passage/?search=Revelation+13%3A11-12)', 'Let no one deceive you in any way. For it will not be, unless the rebellion comes first, and the man of sin is revealed, the son of destruction, he who opposes and exalts himself against all that is called God or that is worshiped; so that he sits as God in the temple of God, setting himself up as God. — 2 Thessalonians 2:3-4 (https://www.biblegateway.com/passage/?search=2+Thessalonians+2%3A3-4)']
@@ -7150,7 +7147,6 @@ const chunk_1: any[] = [  {
     parentId: 'future-prophecy',
     name: 'The Second Coming of Christ',
     description: 'Christ returns in glory with the armies of heaven on white horses, defeats the beast and the false prophet, and binds Satan in the abyss.',
-    layer: 'future-prophecy',
     timelineId: 'rev_second_coming',
     sources: ['Biblical Prophecy Texts', 'Eschatological Literature'],
     bibleVerses: ['I saw the heaven opened, and behold, a white horse, and he who sat on it is called Faithful and True. In righteousness he judges and makes war. His eyes are a flame of fire, and on his head are many crowns. He has names written and a name written which no one knows but he himself. He is clothed in a garment sprinkled with blood. His name is called “The Word of God.” The armies which are in heaven followed him on white horses, clothed in white, pure, fine linen. Out of his mouth proceeds a sharp, double-edged sword, that with it he should strike the nations. He will rule them with an iron rod. He treads the wine press of the fierceness of the wrath of God, the Almighty. He has on his garment and on his thigh a name written, “KING OF KINGS, AND LORD OF LORDS.” — Revelation 19:11-16 (https://www.biblegateway.com/passage/?search=Revelation+19%3A11-16)', 'and then the sign of the Son of Man will appear in the sky. Then all the tribes of the earth will mourn, and they will see the Son of Man coming on the clouds of the sky with power and great glory. — Matthew 24:30 (https://www.biblegateway.com/passage/?search=Matthew+24%3A30)', 'who also said, “You men of Galilee, why do you stand looking into the sky? This Jesus, who was received up from you into the sky, will come back in the same way as you saw him going into the sky.” — Acts 1:11 (https://www.biblegateway.com/passage/?search=Acts+1%3A11)']
@@ -7159,7 +7155,6 @@ const chunk_1: any[] = [  {
     parentId: 'future-prophecy',
     name: 'The Millennial Reign',
     description: 'A 1,000-year golden age of peace and righteousness where Christ reigns on earth with His saints, and the earth is filled with the knowledge of God.',
-    layer: 'future-prophecy',
     timelineId: 'rev_millennial_reign',
     sources: ['Biblical Prophecy Texts', 'Eschatological Literature'],
     bibleVerses: ['I saw thrones, and they sat on them, and judgment was given to them. I saw the souls of those who had been beheaded for the testimony of Jesus, and for the word of God, and such as didn’t worship the beast nor his image, and didn’t receive the mark on their forehead and on their hand. They lived and reigned with Christ for a thousand years. The rest of the dead didn’t live until the thousand years were finished. This is the first resurrection. Blessed and holy is he who has part in the first resurrection. Over these, the second death has no power, but they will be priests of God and of Christ, and will reign with him one thousand years. — Revelation 20:4-6 (https://www.biblegateway.com/passage/?search=Revelation+20%3A4-6)', 'The wolf will live with the lamb, and the leopard will lie down with the young goat; The calf, the young lion, and the fattened calf together; and a little child will lead them. The cow and the bear will graze. Their young ones will lie down together. The lion will eat straw like the ox. The nursing child will play near a cobra’s hole, and the weaned child will put his hand on the viper’s den. They will not hurt nor destroy in all my holy mountain; for the earth will be full of the knowledge of Yahweh, as the waters cover the sea. — Isaiah 11:6-9 (https://www.biblegateway.com/passage/?search=Isaiah+11%3A6-9)']
@@ -7168,7 +7163,6 @@ const chunk_1: any[] = [  {
     parentId: 'future-prophecy',
     name: 'The Great White Throne Judgment',
     description: 'Satan is cast into the Lake of Fire. All the dead, great and small, stand before the Great White Throne and are judged according to their works.',
-    layer: 'future-prophecy',
     timelineId: 'rev_final_judgment',
     sources: ['Biblical Prophecy Texts', 'Eschatological Literature'],
     bibleVerses: ['I saw a great white throne, and him who sat on it, from whose face the earth and the heaven fled away. There was found no place for them. I saw the dead, the great and the small, standing before the throne, and they opened books. Another book was opened, which is the book of life. The dead were judged out of the things which were written in the books, according to their works. — Revelation 20:11-12 (https://www.biblegateway.com/passage/?search=Revelation+20%3A11-12)', 'But you, why do you judge your brother? Or you again, why do you despise your brother? For we will all stand before the judgment seat of Christ. — Romans 14:10 (https://www.biblegateway.com/passage/?search=Romans+14%3A10)', 'For we must all be revealed before the judgment seat of Christ; that each one may receive the things in the body, according to what he has done, whether good or bad. — 2 Corinthians 5:10 (https://www.biblegateway.com/passage/?search=2+Corinthians+5%3A10)']
@@ -7177,7 +7171,6 @@ const chunk_1: any[] = [  {
     parentId: 'future-prophecy',
     name: 'New Heaven, Earth & New Jerusalem',
     description: 'God wipes away all tears. The holy city, New Jerusalem, descends out of heaven from God as a bride adorned for her husband, establishing eternity.',
-    layer: 'future-prophecy',
     timelineId: 'rev_new_jerusalem',
     sources: ['Biblical Prophecy Texts', 'Eschatological Literature'],
     bibleVerses: ['I saw a new heaven and a new earth: for the first heaven and the first earth have passed away, and the sea is no more. I saw the holy city, New Jerusalem, coming down out of heaven from God, prepared like a bride adorned for her husband. — Revelation 21:1-2 (https://www.biblegateway.com/passage/?search=Revelation+21%3A1-2)', 'He carried me away in the Spirit to a great and high mountain, and showed me the holy city, Jerusalem, coming down out of heaven from God, having the glory of God. Her light was like a most precious stone, as if it were a jasper stone, clear as crystal; having a great and high wall; having twelve gates, and at the gates twelve angels; and names written on them, which are the names of the twelve tribes of the children of Israel. — Revelation 21:10-12 (https://www.biblegateway.com/passage/?search=Revelation+21%3A10-12)', 'But, according to his promise, we look for new heavens and a new earth, in which righteousness dwells. — 2 Peter 3:13 (https://www.biblegateway.com/passage/?search=2+Peter+3%3A13)']
@@ -7186,7 +7179,7 @@ const chunk_1: any[] = [  {
     parentId: 'biblical-events',
     name: 'Enoch Translated',
     description: 'Enoch was translated to heaven by God without experiencing physical death.',
-    layer: 'biblical-events',
+    layer: 'Biblical Events',
     timelineId: 'evt-enoch-trans',
     sources: ['Bible', 'Ancient Historical Chronicles'],
     bibleVerses: ['Enoch walked with God, and he was not found, for God took him. — Genesis 5:24 (https://www.biblegateway.com/passage/?search=Genesis+5%3A24)', 'By faith, Enoch was taken away, so that he wouldn’t see death, and he was not found, because God translated him. For he has had testimony given to him that before his translation he had been well pleasing to God. — Hebrews 11:5 (https://www.biblegateway.com/passage/?search=Hebrews+11%3A5)']
@@ -7195,7 +7188,7 @@ const chunk_1: any[] = [  {
     parentId: 'biblical-events',
     name: 'Death of Adam',
     description: 'The death of the first man, Adam, at 930 years of age.',
-    layer: 'biblical-events',
+    layer: 'Biblical Events',
     timelineId: 'evt-adam-death',
     sources: ['Bible', 'Ancient Historical Chronicles'],
     bibleVerses: ['And all the days that Adam lived were nine hundred and thirty years: and he died. — Genesis 5:5 (https://www.biblegateway.com/passage/?search=Genesis+5%3A5)']
@@ -7204,7 +7197,7 @@ const chunk_1: any[] = [  {
     parentId: 'biblical-events',
     name: 'Abraham Enters Canaan',
     description: 'At age 75, Abraham obeys God\'s call to leave Harran and journey to the promised land of Canaan.',
-    layer: 'biblical-events',
+    layer: 'Biblical Events',
     timelineId: 'evt-abraham-canaan',
     sources: ['Bible', 'Ancient Historical Chronicles'],
     bibleVerses: ['So Abram went, as Yahweh had told him. Lot went with him. Abram was seventy-five years old when he departed from Haran. Abram took Sarai his wife, Lot his brother’s son, all their possessions that they had gathered, and the people whom they had acquired in Haran, and they went to go into the land of Canaan. They entered into the land of Canaan. — Genesis 12:4-5 (https://www.biblegateway.com/passage/?search=Genesis+12%3A4-5)', 'By faith, Abraham, when he was called, obeyed to go out to the place which he was to receive for an inheritance. He went out, not knowing where he went. — Hebrews 11:8 (https://www.biblegateway.com/passage/?search=Hebrews+11%3A8)']
@@ -7213,7 +7206,7 @@ const chunk_1: any[] = [  {
     parentId: 'biblical-events',
     name: 'Destruction of Sodom',
     description: 'Sodom, Gomorrah, and the cities of the plain are destroyed by fire and brimstone from heaven due to wickedness.',
-    layer: 'biblical-events',
+    layer: 'Biblical Events',
     timelineId: 'evt-sodom-gomorrah',
     sources: ['Bible', 'Ancient Historical Chronicles'],
     bibleVerses: ['Then Yahweh rained on Sodom and on Gomorrah sulfur and fire from Yahweh out of the sky. He overthrew those cities, all the plain, all the inhabitants of the cities, and that which grew on the ground. — Genesis 19:24-25 (https://www.biblegateway.com/passage/?search=Genesis+19%3A24-25)', 'and turning the cities of Sodom and Gomorrah into ashes, condemned them to destruction, having made them an example to those who would live in an ungodly way; — 2 Peter 2:6 (https://www.biblegateway.com/passage/?search=2+Peter+2%3A6)', 'Even as Sodom and Gomorrah, and the cities around them, having, in the same way as these, given themselves over to sexual immorality and gone after strange flesh, are shown as an example, suffering the punishment of eternal fire. — Jude 1:7 (https://www.biblegateway.com/passage/?search=Jude+1%3A7)']
@@ -7222,7 +7215,7 @@ const chunk_1: any[] = [  {
     parentId: 'biblical-events',
     name: 'Binding of Isaac',
     description: 'God commands Abraham to sacrifice his son Isaac on Mount Moriah; Abraham is stopped by an angel at the last second.',
-    layer: 'biblical-events',
+    layer: 'Biblical Events',
     timelineId: 'evt-binding-isaac',
     sources: ['Bible', 'Ancient Historical Chronicles'],
     bibleVerses: ['They came to the place which God had told him of. Abraham built the altar there, and laid the wood in order, bound Isaac his son, and laid him on the altar, on the wood. Abraham stretched out his hand, and took the knife to kill his son. Yahweh’s angel called to him out of the sky, and said, “Abraham, Abraham!” He said, “Here I am.” He said, “Don’t lay your hand on the boy or do anything to him. For now I know that you fear God, since you have not withheld your son, your only son, from me.” — Genesis 22:9-12 (https://www.biblegateway.com/passage/?search=Genesis+22%3A9-12)', 'By faith, Abraham, being tested, offered up Isaac. Yes, he who had gladly received the promises was offering up his one and only son, to whom it was said, “your offspring will be accounted as from Isaac”; — Hebrews 11:17-18 (https://www.biblegateway.com/passage/?search=Hebrews+11%3A17-18)']
@@ -7231,7 +7224,7 @@ const chunk_1: any[] = [  {
     parentId: 'biblical-events',
     name: 'Joseph Sold to Egypt',
     description: 'Joseph is sold by his jealous brothers to Ishmaelite merchants for twenty shekels of silver, who take him to Egypt.',
-    layer: 'biblical-events',
+    layer: 'Biblical Events',
     timelineId: 'evt-joseph-sold',
     sources: ['Bible', 'Ancient Historical Chronicles'],
     bibleVerses: ['Midianites who were merchants passed by, and they drew and lifted up Joseph out of the pit, and sold Joseph to the Ishmaelites for twenty pieces of silver. They brought Joseph into Egypt. — Genesis 37:28 (https://www.biblegateway.com/passage/?search=Genesis+37%3A28)', '“The patriarchs, moved with jealousy against Joseph, sold him into Egypt. God was with him, — Acts 7:9 (https://www.biblegateway.com/passage/?search=Acts+7%3A9)']
@@ -7240,7 +7233,7 @@ const chunk_1: any[] = [  {
     parentId: 'biblical-events',
     name: 'Jacob Enters Egypt',
     description: 'Jacob and his entire family migrate from Canaan to Goshen in Egypt to escape a severe seven-year famine.',
-    layer: 'biblical-events',
+    layer: 'Biblical Events',
     timelineId: 'evt-israel-egypt',
     sources: ['Bible', 'Ancient Historical Chronicles'],
     bibleVerses: ['Jacob rose up from Beersheba, and the sons of Israel carried Jacob, their father, their little ones, and their wives, in the wagons which Pharaoh had sent to carry him. They took their livestock, and their goods, which they had gotten in the land of Canaan, and came into Egypt—Jacob, and all his offspring with him, his sons, and his sons’ sons with him, his daughters, and his sons’ daughters, and he brought all his offspring with him into Egypt. — Genesis 46:5-7 (https://www.biblegateway.com/passage/?search=Genesis+46%3A5-7)', 'Joseph sent, and summoned Jacob, his father, and all his relatives, seventy-five souls. Jacob went down into Egypt, and he died, himself and our fathers, — Acts 7:14-15 (https://www.biblegateway.com/passage/?search=Acts+7%3A14-15)']
@@ -7249,7 +7242,7 @@ const chunk_1: any[] = [  {
     parentId: 'biblical-events',
     name: 'The Exodus from Egypt',
     description: 'The Israelites escape Egyptian bondage under Moses, following the Ten Plagues and the parting of the Red Sea.',
-    layer: 'biblical-events',
+    layer: 'Biblical Events',
     timelineId: 'evt-exodus',
     sources: ['Bible', 'Ancient Historical Chronicles'],
     bibleVerses: ['Now the time that the children of Israel lived in Egypt was four hundred thirty years. At the end of four hundred thirty years, to the day, all of Yahweh’s armies went out from the land of Egypt. — Exodus 12:40-41 (https://www.biblegateway.com/passage/?search=Exodus+12%3A40-41)', 'Moses stretched out his hand over the sea, and Yahweh caused the sea to go back by a strong east wind all night, and made the sea dry land, and the waters were divided. The children of Israel went into the middle of the sea on the dry ground, and the waters were a wall to them on their right hand, and on their left. — Exodus 14:21-22 (https://www.biblegateway.com/passage/?search=Exodus+14%3A21-22)', 'By faith, they passed through the Red Sea as on dry land. When the Egyptians tried to do so, they were swallowed up. — Hebrews 11:29 (https://www.biblegateway.com/passage/?search=Hebrews+11%3A29)']
@@ -7258,7 +7251,7 @@ const chunk_1: any[] = [  {
     parentId: 'biblical-events',
     name: 'Giving of the Law',
     description: 'God speaks the Ten Commandments to Moses and the assembly of Israel at Mount Sinai, establishing the Mosaic Covenant.',
-    layer: 'biblical-events',
+    layer: 'Biblical Events',
     timelineId: 'evt-sinai-law',
     sources: ['Bible', 'Ancient Historical Chronicles'],
     bibleVerses: ['All of Mount Sinai smoked, because Yahweh descended on it in fire; and its smoke ascended like the smoke of a furnace, and the whole mountain quaked greatly. When the sound of the trumpet grew louder and louder, Moses spoke, and God answered him by a voice. Yahweh came down on Mount Sinai, to the top of the mountain. Yahweh called Moses to the top of the mountain, and Moses went up. — Exodus 19:18-20 (https://www.biblegateway.com/passage/?search=Exodus+19%3A18-20)', 'God spoke all these words, saying, “I am Yahweh your God, who brought you out of the land of Egypt, out of the house of bondage. “You shall have no other gods before me. — Exodus 20:1-3 (https://www.biblegateway.com/passage/?search=Exodus+20%3A1-3)']
@@ -7267,7 +7260,7 @@ const chunk_1: any[] = [  {
     parentId: 'biblical-events',
     name: 'Battle of Jericho',
     description: 'After crossing the Jordan River, the walls of Jericho collapse after the Israelite army marches around them carrying the Ark.',
-    layer: 'biblical-events',
+    layer: 'Biblical Events',
     timelineId: 'evt-jericho',
     sources: ['Bible', 'Ancient Historical Chronicles'],
     bibleVerses: ['So the people shouted and the priests blew the trumpets. When the people heard the sound of the trumpet, the people shouted with a great shout, and the wall fell down flat, so that the people went up into the city, every man straight in front of him, and they took the city. — Joshua 6:20 (https://www.biblegateway.com/passage/?search=Joshua+6%3A20)', 'By faith, the walls of Jericho fell down, after they had been encircled for seven days. — Hebrews 11:30 (https://www.biblegateway.com/passage/?search=Hebrews+11%3A30)']
@@ -7276,7 +7269,7 @@ const chunk_1: any[] = [  {
     parentId: 'biblical-events',
     name: 'Reign of King Saul',
     description: 'The reign of the first King of the United Kingdom of Israel.',
-    layer: 'biblical-events',
+    layer: 'Biblical Events',
     timelineId: 'reign-saul',
     sources: ['Bible', 'Ancient Historical Chronicles'],
     bibleVerses: ['Then Samuel took the vial of oil, and poured it on his head, and kissed him, and said, “Hasn’t Yahweh anointed you to be prince over his inheritance? — 1 Samuel 10:1 (https://www.biblegateway.com/passage/?search=1+Samuel+10%3A1)', 'Saul was thirty years old when he became king, and he reigned over Israel forty-two years. — 1 Samuel 13:1 (https://www.biblegateway.com/passage/?search=1+Samuel+13%3A1)', 'Afterward they asked for a king, and God gave to them Saul the son of Kish, a man of the tribe of Benjamin, for forty years. — Acts 13:21 (https://www.biblegateway.com/passage/?search=Acts+13%3A21)']
@@ -7285,7 +7278,7 @@ const chunk_1: any[] = [  {
     parentId: 'biblical-events',
     name: 'Reign of King David',
     description: 'Reign of King David, builder of Jerusalem and conqueror of the Philistines. Golden age of Israel.',
-    layer: 'biblical-events',
+    layer: 'Biblical Events',
     timelineId: 'reign-david',
     sources: ['Bible', 'Ancient Historical Chronicles'],
     bibleVerses: ['David was thirty years old when he began to reign, and he reigned forty years. In Hebron he reigned over Judah seven years and six months; and in Jerusalem he reigned thirty-three years over all Israel and Judah. — 2 Samuel 5:4-5 (https://www.biblegateway.com/passage/?search=2+Samuel+5%3A4-5)', 'The days that David reigned over Israel were forty years; he reigned seven years in Hebron, and he reigned thirty-three years in Jerusalem. — 1 Kings 2:11 (https://www.biblegateway.com/passage/?search=1+Kings+2%3A11)']
@@ -7294,7 +7287,7 @@ const chunk_1: any[] = [  {
     parentId: 'biblical-events',
     name: 'Solomon\'s Temple Construction',
     description: 'The building of the First Temple in Jerusalem on Mount Moriah by King Solomon, taking seven years.',
-    layer: 'biblical-events',
+    layer: 'Biblical Events',
     timelineId: 'reign-solomon-temple',
     sources: ['Bible', 'Ancient Historical Chronicles'],
     bibleVerses: ['In the four hundred and eightieth year after the children of Israel had come out of the land of Egypt, in the fourth year of Solomon’s reign over Israel, in the month Ziv, which is the second month, he began to build Yahweh’s house. — 1 Kings 6:1 (https://www.biblegateway.com/passage/?search=1+Kings+6%3A1)', 'In the eleventh year, in the month Bul, which is the eighth month, the house was finished throughout all its parts, and according to all its specifications. So he spent seven years building it. — 1 Kings 6:38 (https://www.biblegateway.com/passage/?search=1+Kings+6%3A38)', 'Then Solomon began to build Yahweh’s house at Jerusalem on Mount Moriah, where Yahweh appeared to David his father, which he prepared in the place that David had appointed, on the threshing floor of Ornan the Jebusite. He began to build in the second day of the second month, in the fourth year of his reign. — 2 Chronicles 3:1-2 (https://www.biblegateway.com/passage/?search=2+Chronicles+3%3A1-2)']
@@ -7303,7 +7296,7 @@ const chunk_1: any[] = [  {
     parentId: 'biblical-events',
     name: 'Split of the Kingdom',
     description: 'Following Solomon\'s death, Israel divides into the Northern Kingdom (Israel) and Southern Kingdom (Judah).',
-    layer: 'biblical-events',
+    layer: 'Biblical Events',
     timelineId: 'evt-split-kingdom',
     sources: ['Bible', 'Ancient Historical Chronicles'],
     bibleVerses: ['When all Israel saw that the king didn’t listen to them, the people answered the king, saying, “What portion have we in David? We don’t have an inheritance in the son of Jesse. To your tents, Israel! Now see to your own house, David.” So Israel departed to their tents. But as for the children of Israel who lived in the cities of Judah, Rehoboam reigned over them. Then king Rehoboam sent Adoram, who was over the men subject to forced labor; and all Israel stoned him to death with stones. King Rehoboam hurried to get himself up to his chariot, to flee to Jerusalem. So Israel rebelled against David’s house to this day. When all Israel heard that Jeroboam had returned, they sent and called him to the congregation, and made him king over all Israel. There was no one who followed David’s house, except for the tribe of Judah only. — 1 Kings 12:16-20 (https://www.biblegateway.com/passage/?search=1+Kings+12%3A16-20)', 'When all Israel saw that the king didn’t listen to them, the people answered the king, saying, “What portion have we in David? We don’t have an inheritance in the son of Jesse! Every man to your tents, Israel! Now see to your own house, David.” So all Israel departed to their tents. But as for the children of Israel who lived in the cities of Judah, Rehoboam reigned over them. Then king Rehoboam sent Hadoram, who was over the men subject to forced labor; and the children of Israel stoned him to death with stones. King Rehoboam hurried to get himself up to his chariot, to flee to Jerusalem. So Israel rebelled against David’s house to this day. — 2 Chronicles 10:16-19 (https://www.biblegateway.com/passage/?search=2+Chronicles+10%3A16-19)']
@@ -7312,7 +7305,7 @@ const chunk_1: any[] = [  {
     parentId: 'biblical-events',
     name: 'Assyrian Captivity (Israel)',
     description: 'Samaria falls to the Assyrian Empire under Sargon II, leading to the exile of the ten northern tribes (Lost Tribes).',
-    layer: 'biblical-events',
+    layer: 'Biblical Events',
     timelineId: 'evt-fall-samaria',
     sources: ['Bible', 'Ancient Historical Chronicles'],
     bibleVerses: ['Then the king of Assyria came up throughout all the land, went up to Samaria, and besieged it three years. In the ninth year of Hoshea the king of Assyria took Samaria, and carried Israel away to Assyria, and placed them in Halah, and on the Habor, the river of Gozan, and in the cities of the Medes. — 2 Kings 17:5-6 (https://www.biblegateway.com/passage/?search=2+Kings+17%3A5-6)', 'In the fourth year of king Hezekiah, which was the seventh year of Hoshea son of Elah king of Israel, Shalmaneser king of Assyria came up against Samaria, and besieged it. At the end of three years they took it. In the sixth year of Hezekiah, which was the ninth year of Hoshea king of Israel, Samaria was taken. The king of Assyria carried Israel away to Assyria, and put them in Halah, and on the Habor, the river of Gozan, and in the cities of the Medes, because they didn’t obey Yahweh their God’s voice, but transgressed his covenant, even all that Moses the servant of Yahweh commanded, and would not hear it or do it. — 2 Kings 18:9-12 (https://www.biblegateway.com/passage/?search=2+Kings+18%3A9-12)']
@@ -7321,7 +7314,7 @@ const chunk_1: any[] = [  {
     parentId: 'biblical-events',
     name: 'Babylonian Captivity (Judah)',
     description: 'Jerusalem is besieged and destroyed by Nebuchadnezzar II of Babylon. Solomon\'s Temple is burned and the Jews exiled.',
-    layer: 'biblical-events',
+    layer: 'Biblical Events',
     timelineId: 'evt-fall-jerusalem',
     sources: ['Bible', 'Ancient Historical Chronicles'],
     bibleVerses: ['Now in the fifth month, on the seventh day of the month, which was the nineteenth year of king Nebuchadnezzar, king of Babylon, Nebuzaradan the captain of the guard, a servant of the king of Babylon, came to Jerusalem. He burned Yahweh’s house, the king’s house, and all the houses of Jerusalem, even every great house, he burned with fire. All the army of the Chaldeans, who were with the captain of the guard, broke down the walls around Jerusalem. Nebuzaradan the captain of the guard carried away captive the residue of the people who were left in the city, and those who fell away, who fell to the king of Babylon, and the residue of the multitude. — 2 Kings 25:8-11 (https://www.biblegateway.com/passage/?search=2+Kings+25%3A8-11)', 'Therefore he brought on them the king of the Chaldeans, who killed their young men with the sword in the house of their sanctuary, and had no compassion on young man or virgin, old man or gray-headed. He gave them all into his hand. All the vessels of God’s house, great and small, and the treasures of Yahweh’s house, and the treasures of the king, and of his princes, all these he brought to Babylon. They burned God’s house, and broke down the wall of Jerusalem, and burned all its palaces with fire, and destroyed all of its valuable vessels. He carried those who had escaped from the sword away to Babylon, and they were servants to him and his sons until the reign of the kingdom of Persia, to fulfill Yahweh’s word by Jeremiah’s mouth, until the land had enjoyed its Sabbaths. As long as it lay desolate, it kept Sabbath, to fulfill seventy years. — 2 Chronicles 36:17-21 (https://www.biblegateway.com/passage/?search=2+Chronicles+36%3A17-21)']
@@ -7330,7 +7323,7 @@ const chunk_1: any[] = [  {
     parentId: 'biblical-events',
     name: 'Decree of Cyrus & Return',
     description: 'Cyrus the Great of Persia conquers Babylon and decrees that the Jewish exiles may return to Jerusalem to rebuild the Temple.',
-    layer: 'biblical-events',
+    layer: 'Biblical Events',
     timelineId: 'evt-temple-rebuilt',
     sources: ['Bible', 'Ancient Historical Chronicles'],
     bibleVerses: ['Now in the first year of Cyrus king of Persia, that Yahweh’s word by Jeremiah’s mouth might be accomplished, Yahweh stirred up the spirit of Cyrus king of Persia, so that he made a proclamation throughout all his kingdom, and put it also in writing, saying, “Thus says Cyrus king of Persia, ‘Yahweh, the God of heaven, has given me all the kingdoms of the earth; and he has commanded me to build him a house in Jerusalem, which is in Judah. Whoever there is among you of all his people, may his God be with him, and let him go up to Jerusalem, which is in Judah, and build the house of Yahweh, the God of Israel (he is God), which is in Jerusalem. — Ezra 1:1-3 (https://www.biblegateway.com/passage/?search=Ezra+1%3A1-3)', 'The elders of the Jews built and prospered, through the prophesying of Haggai the prophet and Zechariah the son of Iddo. They built and finished it, according to the commandment of the God of Israel, and according to the decree of Cyrus, Darius, and Artaxerxes king of Persia. This house was finished on the third day of the month Adar, which was in the sixth year of the reign of Darius the king. — Ezra 6:14-15 (https://www.biblegateway.com/passage/?search=Ezra+6%3A14-15)']
@@ -7339,7 +7332,7 @@ const chunk_1: any[] = [  {
     parentId: 'biblical-events',
     name: 'Birth of Jesus Christ',
     description: 'The birth of Jesus in Bethlehem, Judea, marking the pivot point of the Western calendar.',
-    layer: 'biblical-events',
+    layer: 'Biblical Events',
     timelineId: 'evt-christ-birth',
     sources: ['Bible', 'Ancient Historical Chronicles'],
     bibleVerses: ['Joseph also went up from Galilee, out of the city of Nazareth, into Judea, to David’s city, which is called Bethlehem, because he was of the house and family of David; to enroll himself with Mary, who was pledged to be married to him as wife, being pregnant. While they were there, the day had come for her to give birth. She gave birth to her firstborn son. She wrapped him in bands of cloth, and laid him in a feeding trough, because there was no room for them in the inn. — Luke 2:4-7 (https://www.biblegateway.com/passage/?search=Luke+2%3A4-7)', 'Now the birth of Jesus Christ was like this: After his mother, Mary, was engaged to Joseph, before they came together, she was found pregnant by the Holy Spirit. Joseph, her husband, being a righteous man, and not willing to make her a public example, intended to put her away secretly. But when he thought about these things, behold, an angel of the Lord appeared to him in a dream, saying, “Joseph, son of David, don’t be afraid to take to yourself Mary, your wife, for that which is conceived in her is of the Holy Spirit. She shall give birth to a son. You shall call his name Jesus, for it is he who shall save his people from their sins.” Now all this has happened, that it might be fulfilled which was spoken by the Lord through the prophet, saying, “Behold, the virgin shall be with child, and shall give birth to a son. They shall call his name Immanuel”; which is, being interpreted, “God with us.” Joseph arose from his sleep, and did as the angel of the Lord commanded him, and took his wife to himself; and didn’t know her sexually until she had given birth to her firstborn son. He named him Jesus. — Matthew 1:18-25 (https://www.biblegateway.com/passage/?search=Matthew+1%3A18-25)']
@@ -7348,7 +7341,7 @@ const chunk_1: any[] = [  {
     parentId: 'biblical-events',
     name: 'Crucifixion & Resurrection',
     description: 'The crucifixion, burial, and reported resurrection of Jesus Christ in Jerusalem under Pontius Pilate.',
-    layer: 'biblical-events',
+    layer: 'Biblical Events',
     timelineId: 'evt-crucifixion',
     sources: ['Bible', 'Ancient Historical Chronicles'],
     bibleVerses: ['When they came to the place that is called The Skull, they crucified him there with the criminals, one on the right and the other on the left. — Luke 23:33 (https://www.biblegateway.com/passage/?search=Luke+23%3A33)', 'When they had crucified him, they divided his clothing among them, casting lots, — Matthew 27:35 (https://www.biblegateway.com/passage/?search=Matthew+27%3A35)', 'The angel answered the women, “Don’t be afraid, for I know that you seek Jesus, who has been crucified. He is not here, for he has risen, just like he said. Come, see the place where the Lord was lying. — Matthew 28:5-6 (https://www.biblegateway.com/passage/?search=Matthew+28%3A5-6)']
@@ -7552,13 +7545,13 @@ const chunk_1: any[] = [  {
     parentId: 'ufos',
     name: 'U.F.O. Sightings',
     description: 'Unidentified Flying Objects or Aerial Phenomena sightings that defy explanation.',
-    layer: 'U.F.O. Sightings'
+    layer: 'UFOs - Sightings'
   },  {
     id: 'anomaly-UFO-1000',
     parentId: 'ufo-sightings-br',
     name: 'USS Nimitz UFO Incident - Tic Tac (2004)',
     description: 'During training off San Diego, radar operators and Navy fighter pilots, including Commander David Fravor, encountered a highly agile, solid white Tic-Tac-shaped craft. The object performed physics-defying maneuvers and accelerated at extreme speeds, captured on cockpit FLIR camera.',
-    layer: 'U.F.O. Sightings',
+    layer: 'UFOs - Sightings',
     mapFeatureId: 'anomaly-UFO-1000',
     images: ['https://www.youtube.com/watch?v=rO_M0hLlJ-Q'],
     sources: ['MUFON (Mutual UFO Network) Database', 'Project Blue Book Archives']
@@ -7567,7 +7560,7 @@ const chunk_1: any[] = [  {
     parentId: 'ufo-sightings-br',
     name: 'Belgian UFO Wave (1989-1990)',
     description: 'A series of sightings of silent, low-flying, massive triangular craft with three bright white lights and a central red flashing light, monitored by thousands of citizens and tracked by Belgian Air Force F-16 interceptors on radar.',
-    layer: 'U.F.O. Sightings',
+    layer: 'UFOs - Sightings',
     mapFeatureId: 'anomaly-UFO-1001',
     images: ['https://upload.wikimedia.org/wikipedia/en/c/c5/Patrick_Mar%C3%A9chal_UFO_photo_uncropped.jpg', 'https://upload.wikimedia.org/wikipedia/commons/8/8c/Vaguebelge%28reconstitution%29.png'],
     sources: ['MUFON (Mutual UFO Network) Database', 'Project Blue Book Archives']
@@ -7576,7 +7569,7 @@ const chunk_1: any[] = [  {
     parentId: 'ufo-sightings-br',
     name: 'Rendlesham Forest Incident (1980)',
     description: 'A series of reported sightings of unexplained lights and the alleged landing of a metallic craft near RAF Woodbridge, witnessed by U.S. Air Force personnel including Deputy Base Commander Col. Charles Halt, who recorded audio tapes of the radioactive landing site.',
-    layer: 'U.F.O. Sightings',
+    layer: 'UFOs - Sightings',
     mapFeatureId: 'anomaly-UFO-1002',
     images: ['https://upload.wikimedia.org/wikipedia/commons/3/3d/Supposed_UFO_landing_site_-_Rendlesham_Forest_-_geograph.org.uk_-_263104.jpg'],
     sources: ['MUFON (Mutual UFO Network) Database', 'Project Blue Book Archives']
@@ -7585,7 +7578,7 @@ const chunk_1: any[] = [  {
     parentId: 'ufo-sightings-br',
     name: 'Kecksburg UFO Incident - Kecksburg, Pennsylvania (1965)',
     description: 'A large, metallic, acorn-shaped object carrying hieroglyphic-like markings crashed in the woods near Kecksburg. Witnesses reported that the military quickly cordoned off the area and carted the object away on a flatbed truck.',
-    layer: 'U.F.O. Sightings',
+    layer: 'UFOs - Sightings',
     mapFeatureId: 'anomaly-UFO-1003',
     images: ['https://upload.wikimedia.org/wikipedia/commons/9/9b/Kecksburg_UFO.JPG'],
     sources: ['MUFON (Mutual UFO Network) Database', 'Project Blue Book Archives']
@@ -7594,7 +7587,7 @@ const chunk_1: any[] = [  {
     parentId: 'ufo-sightings-br',
     name: 'Gimbal & GoFast UFO Encounters (2015)',
     description: 'Declassified cockpit sensor videos captured by Navy F/A-18 fighter pilots showing unidentified anomalous objects moving at high speeds against the wind and rotating, prompting military announcements regarding UAP investigation programs.',
-    layer: 'U.F.O. Sightings',
+    layer: 'UFOs - Sightings',
     mapFeatureId: 'anomaly-UFO-1004',
     images: ['https://www.youtube.com/watch?v=wCT3HdHokaw'],
     sources: ['MUFON (Mutual UFO Network) Database', 'Project Blue Book Archives']
@@ -7603,7 +7596,7 @@ const chunk_1: any[] = [  {
     parentId: 'ufo-sightings-br',
     name: 'Chicago O\'Hare UFO Sighting (2006)',
     description: 'A metallic, saucer-shaped craft hovered silently over Terminal C at Chicago O\'Hare Airport before accelerating vertically at extreme speed, punching a clean circular hole in the thick cloud cover, witnessed by pilots and airline employees.',
-    layer: 'U.F.O. Sightings',
+    layer: 'UFOs - Sightings',
     mapFeatureId: 'anomaly-UFO-1005',
     images: ['https://www.youtube.com/watch?v=tC9EEFb6ZL4'],
     sources: ['MUFON (Mutual UFO Network) Database', 'Project Blue Book Archives']
@@ -7612,7 +7605,7 @@ const chunk_1: any[] = [  {
     parentId: 'ufo-sightings-br',
     name: 'Westall UFO Incident - Melbourne, Australia (1966)',
     description: 'An encounter witnessed by over 200 students and teachers at two Melbourne schools. A grey saucer-shaped craft was observed landing in a nearby paddock, rising, and flying away. Witnesses claim they were pressured by authorities to remain silent.',
-    layer: 'U.F.O. Sightings',
+    layer: 'UFOs - Sightings',
     mapFeatureId: 'anomaly-UFO-1006',
     images: ['https://www.youtube.com/watch?v=ZY-xj_b-c7c'],
     sources: ['MUFON (Mutual UFO Network) Database', 'Project Blue Book Archives']
@@ -7621,7 +7614,7 @@ const chunk_1: any[] = [  {
     parentId: 'ufo-sightings-br',
     name: 'Ariel School UFO Incident - Ruwa, Zimbabwe (1994)',
     description: 'Sixty-two students at the Ariel School in Ruwa reported seeing one or more silver craft land in a field near their school and witnessing humanoid beings emerge, who communicated telepathic messages regarding environmental preservation.',
-    layer: 'U.F.O. Sightings',
+    layer: 'UFOs - Sightings',
     mapFeatureId: 'anomaly-UFO-1007',
     images: ['https://www.youtube.com/watch?v=gRtp_jUCq0o'],
     sources: ['MUFON (Mutual UFO Network) Database', 'Project Blue Book Archives']
@@ -7630,7 +7623,7 @@ const chunk_1: any[] = [  {
     parentId: 'ufo-sightings-br',
     name: 'Valensole UFO Incident - Valensole, France (1965)',
     description: 'Lavender farmer Maurice Masse reported seeing an egg-shaped craft land in his field and observing two small humanoid figures. The landing left physical traces in the soil and caused Masse to experience temporary paralysis.',
-    layer: 'U.F.O. Sightings',
+    layer: 'UFOs - Sightings',
     mapFeatureId: 'anomaly-UFO-1008',
     images: ['https://upload.wikimedia.org/wikipedia/commons/8/8d/Valensole_humanoid.png'],
     sources: ['MUFON (Mutual UFO Network) Database', 'Project Blue Book Archives']
@@ -7639,7 +7632,7 @@ const chunk_1: any[] = [  {
     parentId: 'ufo-sightings-br',
     name: 'Colares UFO Incident - Operation Saucer (1977)',
     description: 'A wave of UFO sightings in which residents of Colares, Brazil, reported being beamed with intense light rays causing burn marks, puncture wounds, and blood loss. The Brazilian Air Force investigated under the classified \'Operation Saucer\'.',
-    layer: 'U.F.O. Sightings',
+    layer: 'UFOs - Sightings',
     mapFeatureId: 'anomaly-UFO-1009',
     images: ['https://upload.wikimedia.org/wikipedia/commons/1/17/Estrutura_Documental_da_Opera%C3%A7%C3%A3o_Prato.png'],
     sources: ['MUFON (Mutual UFO Network) Database', 'Project Blue Book Archives']
@@ -7648,7 +7641,7 @@ const chunk_1: any[] = [  {
     parentId: 'ufo-sightings-br',
     name: 'Washington D.C. UFO Flap - Washington D.C. (1952)',
     description: 'A series of radar and visual sightings of unidentified flying objects hovering over the White House and Capitol, prompting jet interceptor scrambles and a massive press conference by Major General John Samford.',
-    layer: 'U.F.O. Sightings',
+    layer: 'UFOs - Sightings',
     mapFeatureId: 'anomaly-UFO-1010',
     images: ['https://upload.wikimedia.org/wikipedia/commons/b/bd/Washington_National_%281944%29.jpg', 'https://upload.wikimedia.org/wikipedia/commons/1/13/1952_UFO_Flap_-_Air_Force_frequency_graph_of_UFO_reports.png'],
     sources: ['MUFON (Mutual UFO Network) Database', 'Project Blue Book Archives']
@@ -7657,7 +7650,7 @@ const chunk_1: any[] = [  {
     parentId: 'ufo-sightings-br',
     name: 'Newark, New Jersey (Cylinder Shaped UFO)',
     description: '7/2018 - This long cylinder shaped object was seen over Newark',
-    layer: 'U.F.O. Sightings',
+    layer: 'UFOs - Sightings',
     mapFeatureId: 'anomaly-UFO-1011',
     sources: ['MUFON (Mutual UFO Network) Database', 'Project Blue Book Archives']
   },  {
@@ -7665,7 +7658,7 @@ const chunk_1: any[] = [  {
     parentId: 'ufo-sightings-br',
     name: 'Jersey City, New Jersey (Blue UFO)',
     description: '',
-    layer: 'U.F.O. Sightings',
+    layer: 'UFOs - Sightings',
     mapFeatureId: 'anomaly-UFO-1012',
     sources: ['MUFON (Mutual UFO Network) Database', 'Project Blue Book Archives']
   },  {
@@ -9840,7 +9833,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Fredonia, New York (May 2014)',
     description: 'sasquatch witnessed at 30 feet while metal detecting. Facial features',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-0',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -9848,7 +9841,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Fredonia, New York (July 2017)',
     description: 'Family of four creatures witnessed on video.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-1',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -9856,7 +9849,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Fredonia, New York (July 9 2016)',
     description: 'Two sasquatch witnessed one was recorded on video as it went to all fours and fled.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-3',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -9864,7 +9857,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Fredonia, New York (June 2005)',
     description: '3 am motorist witnessed a small sasquatch roughly 5 foot tall cross the highway and go up a hill.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-4',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -9872,7 +9865,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Fredonia, New York (August 2007)',
     description: 'Anthropologist ( Kenneth) was followed out of the woods by what they said was a hairy creature',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-5',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -9880,7 +9873,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Fredonia, New York (1920  Winter)',
     description: 'Abe Fortes follows large bi pedal trackway for over a mile in Cassadaga swamp  .   https://www.bibliotecapleyades.net/gigantes/NewYorklandofgiants.html',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-6',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -9888,7 +9881,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Fredonia, New York (April 1907)',
     description: 'Marcus Thomason a peddler witnessed a large hairy creature and observed it at close range for few minutes. Near Cassadaga swamp.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-7',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -9896,7 +9889,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Falconer, New York (October 2018)',
     description: 'Baby Witnessed in a Tree',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-8',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -9904,7 +9897,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Fredonia, New York (October 2018)',
     description: '2 sasquatch captured on camera. White round head bottom middle of screen and large black figure screen looking at the camera.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-9',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -9912,7 +9905,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Randolph, New York (1960 Summer)',
     description: 'Kinzu Dam worker witnesses a large hairy creature on the north shore. Seneca call it High Hat.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-10',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -9920,7 +9913,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Mayville, New York (1965-66)',
     description: 'John Keel      (Strange Creatures from Time & Space ). Explains of a family who witnesses two white fuzzy creatures that usually appear in pairs of 2. Chautauqua  county.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-11',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -9928,7 +9921,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Cuba, New York (1960s)',
     description: 'Strange happenings with farm equipment. The tractor was picked up by the hitch and dragged a good distance. The big dogs on the farm coward  by unseen things in the trees.                    (Black Creek Whodat) mid 70s',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-12',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -9936,7 +9929,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Houghton, New York (1970s)',
     description: 'Family called the DEC to come investigate a large pile of cabbage left by a bipedal (anthropologic) creature. The DEC never returned.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-13',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -9944,7 +9937,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Ransomville, New York (September 1978)',
     description: 'Two teen hunters find decomposing carcass. Everyone considered it a defunct bigfoot body.  Veteran hunter stated whatever that was',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-14',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -9952,7 +9945,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Canisteo, New York (1979)',
     description: 'Two farmers witness a creature tear past them up the hill near the creek. Stated it was about 6 foot tall with no neck with a wide body',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-15',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -9960,7 +9953,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Greece, New York (October 1997)',
     description: 'Four people witness a white 7 foot sasquatch off of Mill rd.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-16',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -9968,7 +9961,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Alfred, New York (1999 Summer)',
     description: 'Two teenage girls witness a large white sasquatch about 8 miles from the village of belmont',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-17',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -9976,7 +9969,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Portville, New York (1999 Labor day)',
     description: 'Family has felt spied on in their home. Later that week the made plaster casts of a 19 inch foot print. The family wants no publicity.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-18',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -9984,7 +9977,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Akron, New York (April 1997)',
     description: 'Motorist near the Alabama swamps reports driving and witnessing a bigfoot -like creature cross the road in the early morning hours. Tall dark and shaggy was the description.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-19',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -9992,7 +9985,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Little Valley, New York (October 2000)',
     description: 'Two hunter s see a 6 foot bigfoot like creature. ^ foot tall stocky. Closer to route 242',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-20',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10000,7 +9993,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Salamanca, New York (October 13 2001)',
     description: 'Two small game hunters witness a bigfoot like creature cross the railroad tracks near old rt.17',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-21',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10008,7 +10001,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Middleport, New York (September 21 2002)',
     description: 'Twilight',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-22',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10016,7 +10009,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Clarkson, New York (Januray 2003)',
     description: 'Motorist sees a large bigfoot near the garbage dump. It crossed the road near an upright old refrigerator.  It only came up to its belly implying a tall subject.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-23',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10024,7 +10017,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Clarence, New York (May 312006)',
     description: 'Hans mobius famed automobile collector took photos of an upright beast on the farm.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-24',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10032,7 +10025,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Medina, New York (Christmas 2008)',
     description: '3 motorists witness a large shaggy upright creature cross the road west of Medina.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-25',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10040,7 +10033,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Susquehanna, Pennsylvania (2008 until present)',
     description: 'Long time resident is having multiple interaction and problems on the property with sasquatch creatures.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-26',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10048,7 +10041,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Westmere, New York (June 2001)',
     description: 'Howls heard',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-27',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10056,7 +10049,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Belmont, New York (January 1999)',
     description: 'Teen recalls witnessing a hairy creature run under a street light',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-28',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10064,7 +10057,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Belmont, New York (February 1998)',
     description: 'Witness has 2 encounters with a hairy creature near Genesee river.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-29',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10072,7 +10065,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Endwell, New York (1986)',
     description: 'Witness spots legs of a bi pedal creature at a distance of 100 feet near their house.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-30',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10080,7 +10073,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Salamanca, New York (July 2013)',
     description: 'Couple observes a sasquatch outside the cabin window in Allegany.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-31',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10088,7 +10081,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Little Valley, New York (October 15 2000)',
     description: 'State land.  Daylight sighting by a turkey hunter.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-32',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10096,7 +10089,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Salamanca, New York (October 2001)',
     description: 'Hunter had daylight sighting just North of the Reservation.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-33',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10104,7 +10097,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Little Valley, New York (September 2000)',
     description: 'Witness states they heard howl and knocks. Witness makes emphasis of "being college educated" and not having answers.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-34',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10112,7 +10105,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'North East, Pennsylvania (September 1975)',
     description: 'Occasional incidents from the 1970 to current. Hunters have many reports. Chautauqua  county.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-35',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10120,7 +10113,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Horseheads North, New York (September 2000)',
     description: 'A bicyclist\'s daylight encounter with rancid smell.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-36',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10128,7 +10121,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'South Hill, New York (Summer 1997)',
     description: 'Howls and screams heard from residence.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-37',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10136,7 +10129,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Big Flats, New York (February 1989)',
     description: 'Unseen creature stalks a jogger on a trail at 10pm.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-38',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10144,7 +10137,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Oxford, New York (June 2002)',
     description: 'Multiple vocalization heard by resident near bowman lake.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-39',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10152,7 +10145,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Middleport, New York (July 2002)',
     description: 'Night time sighiting around 10pm by a couple that was sitting on the porch.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-40',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10160,7 +10153,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Dannemora, New York (February 2005)',
     description: 'Motorists witness night time sighting.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-41',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10168,7 +10161,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Dannemora, New York (July 1998)',
     description: 'Daytime sighting by motorists.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-42',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10176,7 +10169,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Chatham, New York (May 1983)',
     description: '(Friday)  Mother and daughter witness a Hairy man beast creature as making a right hand turn onto rt 203.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-43',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10184,7 +10177,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Homer, New York (Winter 1969)',
     description: 'Experimental forest Suny Cortland. A woman reports being followed by a large dark creature .',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-44',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10192,7 +10185,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Deposit, New York (10/01/2005)',
     description: 'Hunter scouting the area hears knocking sounds and possibly was stalked in daylight.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-45',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10200,7 +10193,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Otego, New York (March 2001)',
     description: 'Multiple encounters from 2001 to 2004 on a farm near Treadwell off of rt14. (Joseph) reports',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-46',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10208,7 +10201,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Deposit, New York (October 1997)',
     description: 'Hunter hears clicking noises while scouting and has a large animal come towards him.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-47',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10216,7 +10209,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Pawling, New York (March 2018)',
     description: 'Hiker experiences howling vocalizations.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-48',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10224,7 +10217,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Dover Plains, New York (November 9)',
     description: '2013',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-49',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10232,7 +10225,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Rhinebeck, New York (June 2009)',
     description: 'Young adult has encounter while driving near  pilgrims progress rd.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-50',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10240,7 +10233,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Pawling, New York (July 2007)',
     description: 'Family of campers witness a possible sasquatch pass by their tents near nuclear lake.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-51',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10248,7 +10241,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Pine Plains, New York (May 1985)',
     description: 'Motorists see a dark shadow manlike creature on more than one occasion.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-52',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10256,7 +10249,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Akron, New York (Summer 1998)',
     description: 'Witness sees large glowing yellow eyes while four wheeling. Many talk about a menacing presence.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-53',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10264,7 +10257,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Lake Placid, New York (August 6 2010)',
     description: 'Keene near Cascade mountain. Camper witnessed a 7 to 8 foot tall creature for about 1 minute',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-54',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10272,7 +10265,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Lake Placid, New York (June 10 2006)',
     description: 'Brothers driving witness a large creature cross the road early morning 730 am',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-55',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10280,7 +10273,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Elizabethtown, New York (October 2002 - 2003)',
     description: 'Multiple encounters by cabin owners. Stomping',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-56',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10288,7 +10281,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Elizabethtown, New York (October 2002)',
     description: 'Vocalizations heard in this area on rt 9n',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-57',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10296,7 +10289,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Port Henry, New York (October 5 2002)',
     description: 'Motorists on 54 heading from rt9n toward Mineville witness a creature in the woods.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-58',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10304,7 +10297,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Ticonderoga, New York (September 28  1998)',
     description: 'Hiker a mile in finds footprints and hears possible vocalizations.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-59',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10312,7 +10305,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Tupper Lake, New York (August 15 1996)',
     description: 'Fishermen in a canoe witness a tall dark hairy creature on the north west bank of pine pond',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-60',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10320,7 +10313,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Port Henry, New York (1989)',
     description: '1993',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-61',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10328,7 +10321,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Gloversville, New York (Summer 2004)',
     description: '2 Motorists witness a large dark creature cross the road in the vehicle headlights. It crossed the guardrail with ease.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-62',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10336,7 +10329,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Johnstown, New York (August 1998)',
     description: '25th-30th.   Two see a 7 to 8 ft tall bi-ped walking on a dead end road.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-63',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10344,7 +10337,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Gloversville, New York (January 15 1966)',
     description: '2 rabbit hunters come across large 16 inch tracks in the snow that were spaced about 12 feet apart as if it was running.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-64',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10352,7 +10345,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Lake Pleasant, New York (July 11)',
     description: '2014',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-65',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10360,7 +10353,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Northville, New York (September 24 2010)',
     description: '2 men sitting on a porch encounter something in the late evening near the friends home.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-66',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10368,7 +10361,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Lake Pleasant, New York (May 1999)',
     description: 'Camper hears crazy screams from the cabin. They have been camping in the region for 25 years and never heard anything like it.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-67',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10376,7 +10369,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Lake Pleasant, New York (July 1969)',
     description: 'Couple sees something looking in the window of their home',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-68',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10384,7 +10377,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Adams, New York (September 6th 1818)',
     description: 'Gentleman witnesses a hairy upright forward leaning creature running. Hundreds pursue the creature over a week to no avail.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-69',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10392,7 +10385,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Boonville, New York (July 11 2000)',
     description: 'Group of hikers see a dark hairy creature while hiking near  moose river camp trail.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-70',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10400,7 +10393,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Chittenango, New York (Summer 1970)',
     description: 'Witness makes loud bang prior to witnessing a creature',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-71',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10408,7 +10401,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Greece, New York (June 20 2004)',
     description: '3 men have a late nite encounter with a bipedal creature',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-72',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10416,7 +10409,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Gasport, New York (September 2002)',
     description: 'Hiker has encounter outside Middleport',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-74',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10424,7 +10417,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Canastota, New York (October  1972)',
     description: 'Man recounts his encounter near Verona state park.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-75',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10432,7 +10425,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Nedrow, New York (August 1960)',
     description: 'Odd happenings take place near a golf course over a period of time.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-76',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10440,7 +10433,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Naples, New York (Point 84)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-77',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10448,7 +10441,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Naples, New York (October 2020)',
     description: '2 hunters hear clear woods knocks just south of Middlesex NY.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-78',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10456,7 +10449,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Naples, New York (November 1979)',
     description: 'Hunter has morning sighting of a creature while hunting deer.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-79',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10464,7 +10457,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Harriman, New York (September 14 1994)',
     description: '2 friends driving witness a sasquatch near the Appalachian trail cross.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-80',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10472,7 +10465,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Greenwood Lake, New York (Point 88)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-81',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10480,7 +10473,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Greenwood Lake, New York (July 1973)',
     description: 'Screams being exchanged while camping on the Appalachian trail.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-82',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10488,7 +10481,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Albion, New York (January 2003)',
     description: 'Husband and wife see creature near the garbage dump',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-83',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10496,7 +10489,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Albion, New York (August 2002)',
     description: 'Vocalization  heard in town',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-84',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10504,7 +10497,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Medina, New York (April 15 1997)',
     description: 'Motorist has sighting near media early morning',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-85',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10512,7 +10505,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Holley, New York (Summer 1995)',
     description: 'Coon hunters hear multiple vocalizations',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-86',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10520,7 +10513,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Pulaski, New York (September 1996)',
     description: 'Night sighting by motorist',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-87',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10528,7 +10521,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Williamstown, Massachusetts (December 1985)',
     description: 'Large figure prowls around a cabin at night',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-88',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10536,7 +10529,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Sidney, New York (May 2004)',
     description: 'Woman sees large upright creature walk past her window at 8am while getting ready for work',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-89',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10544,7 +10537,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Cooperstown, New York (July 1998)',
     description: 'Sequence of loud vocals heard by campers in the region.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-90',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10552,7 +10545,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Cooperstown, New York (August 1 1973)',
     description: 'Old sighting and recent vocalization near the town in 2005',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-91',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10560,7 +10553,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Pawling, New York (May 2020)',
     description: 'Loud knocks heard from Croton Swamp south of Pawling',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-92',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10568,7 +10561,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'West Point, New York (September 2004)',
     description: 'Red eyeshine witnessed by worker.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-93',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10576,7 +10569,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Lake Carmel, New York (August 1980)',
     description: '2 report seeing a hairy crouching animal',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-94',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10584,7 +10577,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Williamstown, Massachusetts (February 2004)',
     description: 'Vocalizations heard and foot tracks located the next day and photographed.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-95',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10592,7 +10585,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Averill Park, New York (January 1990)',
     description: 'Track find about 1.5 miles behind homeowners residence.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-96',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10600,7 +10593,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Poestenkill, New York (July 1988)',
     description: 'Night road sighting by wife and husband.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-97',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10608,7 +10601,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Harriman, New York (August 10 2010)',
     description: 'Fishermen docking the boat around 9:20 pm hear a large boulder thrown into the water. Manlike creature with red eyes seen as they flashed lights on it.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-98',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10616,7 +10609,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Central Valley, New York (October 1997)',
     description: 'Campground operator has night time sighting.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-99',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10624,7 +10617,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Thiells, New York (Winter 1990)',
     description: 'Tracks located in the snow and many other sightings near bear mountain.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-100',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10632,7 +10625,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Montour Falls, New York (September 13 1999)',
     description: 'Motorist sees hairy black creature cross road . Oncoming traffic was firefighters on call who also witnessed the creature.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-101',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10640,7 +10633,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Canton, New York (March 3 2009)',
     description: 'Elder gentleman walking his dog in the preserve hears wood knocking and whoops',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-102',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10648,7 +10641,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Canton, New York (Fall 1976 - 2009)',
     description: 'Sightings and odd happenings  around a family house for years.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-103',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10656,7 +10649,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Lima, New York (April 23 2003)',
     description: 'Frank Piztolato and Phillip Vivolo witness a creature near a dump by the town church. Loren Colemen has issues statements on this report along with others.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-104',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10664,7 +10657,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Bath, New York (November 2012)',
     description: 'Resident observe a sasquatch near homes around 2 am',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-105',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10672,7 +10665,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Sylvan Beach, New York (November 9 2003)',
     description: 'Campers describe an animal making odd sounds over a 3 or 4 hour period',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-106',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10680,7 +10673,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Bath, New York (November 2002)',
     description: 'Sighting by hunters near Bath NY',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-107',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10688,7 +10681,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Addison, New York (August 1995 with follow up)',
     description: 'Bigfoot seen stomping around near town by a pond pulling vegetation. Footprints  and hair were found. The DEC was called and eventually stated it was one of the most odd things they had investigated in the region.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-108',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10696,7 +10689,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Gang Mills, New York (November 1986)',
     description: 'First week of deer season hunter sees a 6 foot tall black hairy man',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-109',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10704,7 +10697,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Canisteo, New York (April 21 1980)',
     description: 'Farmers building a fence witness a sasquatch.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-110',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10712,7 +10705,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Apalachin, New York (October 22 2001)',
     description: 'Close female sasquatch sighting very close to the road.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-111',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10720,7 +10713,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Dryden, New York (January 2001)',
     description: '2 Hunters experience vocalizations',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-112',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10728,7 +10721,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Kingston, New York (June 2018)',
     description: 'Cattle farm has sightings',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-113',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10736,7 +10729,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Plattekill, New York (May 23 1997)',
     description: 'Video footage shot at dusk shows a baby bigfoot in the trees.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-114',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10744,7 +10737,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Ellenville, New York (December 1985)',
     description: 'Large bigfoot creature seen while hiking',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-115',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10752,7 +10745,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Shenorock, New York (September 2010)',
     description: 'Fishermen and law enforcement officer report 3 class A sightings in the town of Somers within a year.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-116',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10760,7 +10753,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Wolcott, New York (September 2003)',
     description: 'Farmer observes white hair covered creature during a family gathering on a farm',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-117',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10768,7 +10761,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Whitehall, New York (June 12 2019)',
     description: 'Afternoon sighting by dog walker',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-118',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10776,7 +10769,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Queensbury, New York (June 2015)',
     description: 'Couple has sighting while boating',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-119',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10784,7 +10777,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Manchester Center, Vermont (November 2004)',
     description: 'Wildlife surveyor hears distinct knocking on 2 days while working',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-120',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10792,7 +10785,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Queensbury, New York (July 9 2000)',
     description: 'Howls heard by couple taking photos near creek on Buck mountain.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-121',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10800,7 +10793,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Whitehall, New York (November 1999)',
     description: 'Election day',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-122',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10808,7 +10801,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Whitehall, New York (Januray 1981)',
     description: 'Man has clear sighting of primate type creature on a clear winter night',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-123',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10816,7 +10809,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Whitehall, New York (August 7 2018)',
     description: 'Investigators hear about a creature that stepped over barells and crosses a guardrail with ease.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-124',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10824,7 +10817,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Whitehall, New York (1976)',
     description: 'Abair rd incident.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-125',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10832,7 +10825,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Hadley, New York (July 2009)',
     description: 'Vocalizations heard by multiple campers',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-126',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10840,7 +10833,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Whitehall, New York (August 2007)',
     description: 'Hikers describe rocks being thrown at her and a hiking companion.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-127',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10848,7 +10841,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Warrensburg, New York (Summer 1981)',
     description: 'Possible stalking of a few hikers.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-128',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10856,7 +10849,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Warrensburg, New York (Summer 2002)',
     description: 'Knocking sounds heard by resident.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-129',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10864,7 +10857,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Ticonderoga, New York (August 2001)',
     description: 'Campers describe being approached by some type of creature while camping.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-130',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10872,7 +10865,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Whitehall, New York (May 2001)',
     description: 'Possible sighting by "over night" campers. 3 campers in tent',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-131',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10880,7 +10873,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Ticonderoga, New York (July 29 1998)',
     description: 'Investigator finds 8 inch branches snapped after hearing motorist sighting.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-132',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10888,7 +10881,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Whitehall, New York (Summer 1992)',
     description: 'Family reports strange sounds near their cabin over a 2 week period',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-133',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10896,7 +10889,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Warrensburg, New York (October 1992)',
     description: 'Standoff with motorist as hairy creature goes across the road',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-134',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10904,7 +10897,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Whitehall, New York (May 1990)',
     description: 'Boaters witness creature near the shoreline',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-135',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10912,7 +10905,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Susquehanna, Pennsylvania (August 2007)',
     description: 'Home owner has odd happenings around the house near the River. Garden was raided. Footprints seen and bad smells.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-136',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10920,7 +10913,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Perry, New York (Summer 1838)',
     description: 'A boy was scared by a man like creature near Silver Lake region.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-137',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10928,7 +10921,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Milton, New York (1868)',
     description: 'Many reported sightings of wild men in the west region eluding capture.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-138',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10936,7 +10929,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Newark, New York (Summer 1869)',
     description: 'Over 100 residents make reports of seeing a wild man. 200 men set out to capture the creature to no avail.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-139',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10944,7 +10937,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Saranac Lake, New York (Summer 1909)',
     description: 'Sightings near rainbow lake scare many residents.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-140',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10952,7 +10945,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Salamanca, New York (September 1915)',
     description: 'Sightings broke out of a naked wild man type creature',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-141',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10960,7 +10953,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Malone, New York (September 1921)',
     description: 'Odd wild man sightings broke out over the region. Many parents would not allow the children to walk home from school due to fear.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-142',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10968,7 +10961,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Malone, New York (October 1921)',
     description: 'Many wild man sightings broke out. The Sherriff attempted to capture the creatures with his posse.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-143',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10976,7 +10969,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Wheatley Heights, New York (Autumn 1922)',
     description: 'Hunters search for a beast the resembles a gorilla.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-144',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10984,7 +10977,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Tupper Lake, New York (February 1932)',
     description: 'Indian lake residents and fur trappers spot a huge hairy man beast.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-145',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -10992,7 +10985,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Massapequa Park, New York (September 1934)',
     description: 'Albert Abernathy residence destroyed inside by a gorilla man',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-146',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11000,7 +10993,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Potsdam, New York (February 1941)',
     description: 'Many Potsdam residence are in fear due to creature sightings',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-147',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11008,7 +11001,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Tupper Lake, New York (November 1948)',
     description: 'Hunter Lawrence Peets spotted a wild beast making whimpering sounds',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-148',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11016,7 +11009,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Tupper Lake, New York (Summer 1969)',
     description: 'Ape creature appears at a cabin window',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-149',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11024,7 +11017,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Glens Falls, New York (Spring 1970)',
     description: 'Creature runs in front of a school teachers car',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-150',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11032,7 +11025,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Whitehall, New York (Early  1970s)',
     description: 'Man like creature walks onto a farmers porch',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-151',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11040,7 +11033,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Whitehall, New York (February 16 1974)',
     description: 'A man parked on the road with his girlfriend sees large silhouette of a creature',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-152',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11048,7 +11041,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Watertown, New York (December 7 1974)',
     description: 'Boys near a church parking lot witness a large creature black and hairy.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-153',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11056,7 +11049,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Watertown, New York (January 21 1975)',
     description: '10 inch tracks found near a church after a hairy creature was spotted.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-154',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11064,7 +11057,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Calcium, New York (January 1975)',
     description: '3 people witness a 5 foot tall creature swinging its arms as it walks through a field.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-155',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11072,7 +11065,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Fair Haven, Vermont (May 1975)',
     description: 'Golf course owner encounters a giant two legged beast sloth like thing at 1130pm',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-156',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11080,7 +11073,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Saranac Lake, New York (June 1975)',
     description: '2 men witness a big sasquatch creature bending down before darting off into the bushes',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-157',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11088,7 +11081,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Fair Haven, Vermont (August 24 1976)',
     description: 'Martin paddock and 2 others report to the sheriff they seen a towering beast at 10pm',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-158',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11096,7 +11089,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Fair Haven, Vermont (September 1 1976)',
     description: 'Frank Mcfarren told police that at 11:10 pm he fired his shotgun and rifle at a huge hairy beast . Police search turned up nothing',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-159',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11104,7 +11097,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Lewiston, New York (September 1976)',
     description: 'Police officer Peter Filicetti was picking corn when the rows started to separate and a big creature walked by him. A 200 yard trail of 3 toe prints were seen.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-160',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11112,7 +11105,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Whitehall, New York (March 1977)',
     description: 'An amber colored animal walked across the road swinging its arms',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-161',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11120,7 +11113,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Valatie, New York (December 1978)',
     description: 'Martha Hallenbeck Seen a big black furry creature on her lawn curled up. Later large prints were seen in the snow',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-162',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11128,7 +11121,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Lake Pleasant, New York (Summer 1979)',
     description: 'Woman sees a 4.5 foot tall creature making a thumping noise next to a tree',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-163',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11136,7 +11129,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Nassau, New York (December 5 1979)',
     description: 'Barry Knight witnessed 4 creatures walking through the woods while trapping. They made growling clacking sounds',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-164',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11144,7 +11137,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Milton, New York (Late 1970s)',
     description: 'Sherriff report states something threw  large uprooted trees at a trailer 10 inches in diameter',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-165',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11152,7 +11145,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Saratoga Springs, New York (April 1980)',
     description: 'A woman notices a 7 to 8 ft tall animal in her headlights',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-166',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11160,7 +11153,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Warrensburg, New York (June 4 1980)',
     description: 'Camper Fred Renaudo was awakened by the sound of something crashing through the brush. He seen a white creature and 15 inch prints were seen.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-167',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11168,7 +11161,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Nassau, New York (May 1982)',
     description: 'Michael Maub looked across Kinderhook creek while fishing and seen a 7 foot reddish creature go up the bank',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-168',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11176,7 +11169,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Glens Falls North, New York (October 7 1983)',
     description: 'Three bicyclists heard screaming at 8 pm and seen red glowing eye',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-169',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11184,7 +11177,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Poultney, Vermont (August 18 1989)',
     description: 'Dog walker witnesses a hairy creature by the road at 3pm. It had matted hair.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-170',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11192,7 +11185,7 @@ const chunk_2: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Chatham, New York (Janurary 1990)',
     description: '20 inch long footprints were seen in the snow',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-171',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   }
@@ -11203,7 +11196,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Whitehall, New York (1979)',
     description: 'Darren Gosslin and friend found a long trail of human like footprints',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-172',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11211,7 +11204,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Warrensburg, New York (June 1995)',
     description: 'Squatting creature near roadside at 12:25 am which seemed to be 5 feet tall with white matted hair with oval shaped eyes.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-173',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11219,7 +11212,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Plattekill, New York (Summer 1997)',
     description: 'Doug Pridgen made a video of a concert near an apple orchard. Upon review it seems to be two creatures and the small one is swinging in the tree.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-174',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11227,7 +11220,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Castile, New York (February 1998)',
     description: '2 girls saw a six to seven foot tall bigfoot jump onto the trail near them and growled. it had white matted shaggy hair.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-175',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11235,7 +11228,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Whitehall, New York (June 2004)',
     description: '2 Hong Kong visitors were fishing and seen a reddish brown creature with a flat face wadding quickly through the water.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-176',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11243,7 +11236,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Whitehall, New York (June 2003)',
     description: 'Larry Paap witnessed a golden brown creature large with a huge neck as it vanished before his eyes',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-178',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11251,7 +11244,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Lakewood, New York (July 2018)',
     description: 'Cabin owners have issues with bigfoot causing problems and knocking trees across driveway. Chautauqua  county.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-179',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11259,7 +11252,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Silver Creek, New York (October 2014)',
     description: 'Odd tracks seen in the light snow. Reported 15 inch in length. Chautauqua county',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-180',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11267,7 +11260,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Fredonia, New York (November 2015)',
     description: 'Prints in the snow witnessed by driver. The tracks cut diagonal across the trail road into the pines.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-181',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11275,7 +11268,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Fredonia, New York (October 18 2017)',
     description: 'Hunter party hears loud screams over the truck radio as they are leaving for the day. 7 pm',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-182',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11283,7 +11276,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Fredonia, New York (July 2017 -2019)',
     description: 'Multi prints casted by searchers Dan and Ryan. 16 and 19 inch in length',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-183',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11291,7 +11284,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Falconer, New York (November 2019)',
     description: 'Veteran Hunter hears screams in a valley. Something he has never heard ever before.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-184',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11299,7 +11292,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Falconer, New York (November 2 2015)',
     description: 'Hunters hear mumblings  in the pines on separate occasions',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-185',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11307,7 +11300,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Brocton, New York (December 2013)',
     description: 'Hunters have sighting of tall black creature moving through the timber. Chautauqua  county.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-186',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11315,7 +11308,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Fredonia, New York (November  2016)',
     description: 'Bow hunter records screams down in a valley and hears other hunters shooting. Recording attached. Best heard around the 30 plus second mark.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-187',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11323,7 +11316,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Naples, New York (August 2018)',
     description: 'Residents have encounters with a tan creature  during the daytime causing them to run to their truck. Tracks found during winter months.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-188',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11331,7 +11324,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Alfred, New York (2000s)',
     description: 'Gentleman hears branches breaking and talking with no one around.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-189',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11339,7 +11332,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Nunda, New York (2014 Fall)',
     description: 'A gentleman who has since passed away had witnessed a bigfoot like creature in the Rattlesnake forest.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-190',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11347,7 +11340,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Northeast Ithaca, New York (November 2016)',
     description: 'Hunter witnesses odd occurrence  with light ball phenomenon on still cold morning. This type of phenomenon has been reported for many decades and has been reported in and around sasquatch reports.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-191',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11355,7 +11348,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Wellsville, New York (May 30 2021)',
     description: 'Multiple occurrences at family farm witnessed by ( Todd) researcher.  ( balls of light) . A juvenile sasquatch was witnessed.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-192',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11363,7 +11356,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Lanesborough, Massachusetts (February  2007)',
     description: 'Atv riders at night (10pm) witness a tall dark figure come out of the woods onto the trail as it runs down the trail back into the woods. The riders attempted to follow with lights to no avail. There is a second part to this later that summer not to far away riding atvs they stop for a break and hear large branches breaking as they wrote it off as a bear?',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-193',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11371,7 +11364,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Holley, New York (2022 comments)',
     description: 'Hunter circles and locates an area in Murray township and states " This is an entire area you should search" . Updates on odd happenings in the future.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-194',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11379,7 +11372,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Batavia, New York (Summer 1960)',
     description: 'Bigfoot was seen running under a rail trestle Donald Palone age 15 and a few of his friends state.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-195',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11387,7 +11380,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Newfane, New York (Summer 1980)',
     description: 'Peter Filicetti a part time police office for Newfane stated " he has spent 4 years researching the beast" He has heard screams and noticed the 3 toed footprints',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-196',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11395,7 +11388,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Naples, New York (Fall/Winter 2020)',
     description: 'Bow hunter has odd wood knocks',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-197',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11403,7 +11396,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Cazenovia, New York (January 1 2022)',
     description: 'Researchers hear a howl near a structure.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-198',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11411,7 +11404,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Fredonia, New York (July 2016)',
     description: 'Odd structure located in the woods offtrail.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-200',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11419,7 +11412,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Fredonia, New York (July 2018)',
     description: 'Camera capture of a possible sasquatch.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-201',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11427,7 +11420,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Fredonia, New York (August 2018)',
     description: 'Glowing eyes captured on a trail camera photo. Photo had to be zoomed in in an attempt to view.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-202',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11435,7 +11428,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Fredonia, New York (June 2016)',
     description: 'Structure located near a trail',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-203',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11443,7 +11436,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Fredonia, New York (Summer 2017)',
     description: 'Audio captured in this area at 540am.  All these audio captures were from near this specific location.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-204',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11451,7 +11444,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Fredonia, New York (August 2016)',
     description: 'A long distance photo was captured of something black moving through the timber with something in it\'s mouth. Seems you can see the right leg on the creature and lighter colored face.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-205',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11459,7 +11452,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Falconer, New York (May 2014)',
     description: 'Small structure located that has since been removed.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-206',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11467,7 +11460,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Cairo, New York (February 6)',
     description: '2022',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-207',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11475,7 +11468,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Boonville, New York (May 2016)',
     description: 'Hunters report hearing multiple loud wood knocks while hunting turkey. Five years later one hunter went back to that location and ran across what is known as a tree structure where he had previously heard the tree knock to his astonishment.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-208',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11483,7 +11476,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Lockport, New York (October 2016)',
     description: 'Witness describes road crossing close to a deer crossing sign on Day road to investigator  Erik',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-209',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11491,7 +11484,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Lockport, New York (February 2018)',
     description: 'Local Lockport investigator Eric  had a sighting.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-210',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11499,7 +11492,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Lockport, New York (1960-70s)',
     description: 'Sighting minimal details. WYRK post regarding bigfoot.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-211',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11507,7 +11500,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Naples, New York (Point 217)',
     description: 'https://www.lifeinthefingerlakes.com/part-3-wilderness-and-canadice-lake/           Sightings have been reported between Candice lake and Honeoye Wildlife Inlet.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-212',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11515,7 +11508,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Sylvan Beach, New York (Spring 2010)',
     description: 'Witness reports something brown hairy and hunched crossed the road quickly.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-213',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11523,7 +11516,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Horseheads North, New York (August 2011)',
     description: 'Motorist heading towards horseheads on rt4 witness a large and small creature cross the rod as they round the bend in the road. Dark hair blackish.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-214',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11531,7 +11524,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Lake Placid, New York (December 1986)',
     description: 'Witness (PJP}  recalls the events that took place during the sighting. .',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-215',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11539,7 +11532,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Canton, New York (September  27-28 2021)',
     description: 'TONY- recalls seeing something during bear season.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-216',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11547,7 +11540,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Manlius, New York (1990 no month given)',
     description: 'Young man states what he saw during a drive in Morgan Hill State Forest.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-217',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11555,7 +11548,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Buffalo, New York (WGRZ)',
     description: 'Attached is a video done by the news station.  plus the following link.   https://buffalonews.com/bn-chronicles-looking-back-at-western-new-york-bigfoot-sightings/article_a958bd58-6c24-11ec-9824-27f2ee9035ae.html',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-218',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11563,7 +11556,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Nedrow, New York (Fall 1869)',
     description: 'CARDIFF GIANT. Stub Newell finds a stone giant which is on display at Cooperstown museum. Wikipedia has details on the Cardiff giant.  https://en.wikipedia.org/wiki/Cardiff_Giant',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-219',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11571,7 +11564,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Fredonia, New York (1820-1939)',
     description: '7) Cassadaga. About seven miles south of Fredonia',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-220',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11579,7 +11572,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'East Aurora, New York (1850 Chase Pierson)',
     description: '9) East Aurora. The village of East Aurora has a couple ancient mysteries in its track record. In History of the Holland Purchase (1850)',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-222',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11587,7 +11580,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Irondequoit, New York (1830-1850s)',
     description: '6) Rochester. A natural sand mound revealed a surprise in 1796. “On the shore of Lake Ontario on a high bluff near Irondequoit Bay… the bank caved off and untombed a great quantity of human bones of a large size',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-223',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11595,7 +11588,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Randolph, New York (1859)',
     description: '5) Conewango. The Conewango Creek is a slow-moving',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-224',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11603,7 +11596,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Salamanca, New York (1851)',
     description: '4) Carrolton. About five miles southeast of Salamanca is Carrollton',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-225',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11611,7 +11604,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Tonawanda, New York (1820s)',
     description: '3) Tonawanda. Right offshore from the village of North Tonawanda is a small island in the Niagara River upon which the Stephen White family once dwelt in their fine Federal-style mansion. Another structure had been there when the Whites arrived: a ten-foot high burial mound people could see from shore. Someone decided to take it apart sometime in the 1820s',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-226',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11619,7 +11612,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Billington Heights, New York (1800s ridge rd to Buffalo Creek)',
     description: '2) Shelby. Many early commenters – including E. G. Squier',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-227',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11627,7 +11620,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'South Blooming Grove, New York (1976)',
     description: 'School bus driver stops and children watch a hairy creature.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-228',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11635,7 +11628,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Washingtonville, New York (1990s Watching house)',
     description: 'Multiple encounters in the region.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-230',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11643,7 +11636,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Tupper Lake, New York (Sumer mid 1990s)',
     description: 'Kevin. Hears screams @ 2am while camping near Rollins pond. States it was extremely  loud and it vibrated in your chest.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-231',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11651,7 +11644,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Gang Mills, New York (Beartown Road)',
     description: 'Report # 74487 (Class A)',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-232',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11659,7 +11652,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Fredonia, New York (Ex -Marine 2022)',
     description: 'August 27',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-261',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11667,7 +11660,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Shokan, New York (Grog Kill Road)',
     description: 'My experience of the “big roar” happened about 2 or 3 in the morning of Aug 27th 2022. It was warm. 80 degrees during the day so I had my screen door open. I believe the Airbnb was on Grog Kill road in Willow New York. I now think that the way the screen moved was more from the intensity of the sound not an indentation of something leaning on it. The house was near a creek (you could see the creek from the porch). Other curious things were garbage strewn on the ground next to the dumpsters and someone out in the middle of the night with flashlights the day or two before I hear the “roar”   2022 witness report.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-262',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11675,7 +11668,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Eden, New York (1979)',
     description: 'I took the top bunk of the bunk bed. We positioned it front of the window to look out. Sometime in the night I woke up. Across from our cabin was probably a 9 footer. Standing by the cars. There was a booger light on. He was in that more on the lean side. Brownish. 40 or so feet from the cabin. He (no breasts) had a thoughtful look on his face. Didn\'t look my way',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-263',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11683,7 +11676,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Harrogate, Tennessee (Bigfoot in Colmar)',
     description: 'KY',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-266',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11691,7 +11684,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Pineville, Kentucky (Bigfoot Night Sighting)',
     description: '1940\'s - Bigfoot chases man to house.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-270',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11699,7 +11692,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Pineville, Kentucky (2002 Bigfoot Sighting)',
     description: '2002 Bigfoot sighting in bell county',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-272',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11707,7 +11700,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Seattle, Washington (UFO Sighting)',
     description: '8/04/2011 - Possible UFO reported to TCC by Matthew O\'Brien.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-273',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11715,7 +11708,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Willits, California (Bigfoot Crosses hwy 101)',
     description: '10/29/2008 - sighting date may be off a little. A dazed bigfoot is seen crossing hwy 101.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-275',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11723,7 +11716,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Heflin, Alabama (Bigfoot seen while Fishing)',
     description: '1994 - Report submitted by Dewey Lambert. While Dewey and his wife were fishing in a small boat they had an encounter with Bigfoot.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-278',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11731,7 +11724,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Harlan, Kentucky (Bigfoot Crosses the Road)',
     description: '9/2000 - Bigfoot seen crossing the road by Joann Carter. She stop and gather a hair sample.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-280',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11739,7 +11732,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Cumberland, Kentucky (4 people see a Bigfoot)',
     description: 'Fall/2008 - While on a ATV trip 4 people see a bigfoot.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-282',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11747,7 +11740,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Cumberland, Kentucky (2 men see Bigfoot)',
     description: '1981 - 2 men on the way to work see a bigfoot crouched on side of the road.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-284',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11755,7 +11748,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Pineville, Kentucky (Possible Dog Man Seen)',
     description: '2011 - Strange creature seen in cow pasture',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-286',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11763,7 +11756,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Kelso, Washington (Man sees Bigfoot)',
     description: '1995 - Kelso',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-290',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11771,7 +11764,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Newmarket, New Hampshire (18 inch track found)',
     description: '1990 - Newmarket',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-291',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11779,7 +11772,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Coeur d\'Alene, Idaho (UFO Sighting)',
     description: '8/2003 -',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-296',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11787,7 +11780,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Shoshone, Idaho (Sounds of a Bigfoot)',
     description: 'Aug. 2005 - First name: Phil',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-311',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11795,7 +11788,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Albany, Louisiana (Bigfoot Crosses Hwy.)',
     description: '2000',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-322',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11803,7 +11796,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Green Springs, Ohio (Bigfoot sighting with photos)',
     description: 'June 26th',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-323',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11811,7 +11804,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Elizabeth, West Virginia (Bigfoot seen eating)',
     description: '9/29/2011 - Dustin Ostrowski said - "my buddy and I were walking around in the woods out back of our house',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-326',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11819,7 +11812,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'West Brookfield, Massachusetts (Bigfoot seen while bird hunting)',
     description: '10/2011 -  "I saw a  creature in Brookfield',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-329',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11827,7 +11820,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Troy, North Carolina (Truck shaken by Bigfoot)',
     description: '2011 (?) - “As it got close',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-333',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11835,7 +11828,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Low Flying UFO)',
     description: '1990\'s - The object was almost directly over my head when I first saw it. We both seen the object',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-335',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11843,7 +11836,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Chester, Pennsylvania (Christmas UFO)',
     description: '12/25/2012 - Video of strange lights filmed during the day.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-338',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11851,7 +11844,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (UFO in Sky)',
     description: 'Late Summer 2012 -I had stepped out on my back deck and noticed this thing in the sky',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-340',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11859,7 +11852,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Cherokee, Oklahoma (2 Girls See Bigfoot)',
     description: '1984 - Two young girls (Carla and Toni) both 12 at the time',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-342',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11867,7 +11860,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Springfield, New Hampshire (Bigfoot Game Cam Photo)',
     description: 'picture was taken with a motion detecting trail camera',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-343',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11875,7 +11868,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Kingston, New Hampshire (Bigfoot seen in tall Grass)',
     description: 'Date unknown -  my sister and I were walking down a main street in Kingston NH and we both saw a hairy creature wearing a tattered flannel shirt in a field of tall grass',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-346',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11883,7 +11876,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Imperial, Pennsylvania (Possible Photo of Bigfoot)',
     description: '3/2012 - Photo taken of possible bigfoot in Clinton',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-348',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11891,7 +11884,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Oakridge, Oregon (Logger Sees Bigfoot)',
     description: 'June27',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-350',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11899,7 +11892,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Raleigh, Mississippi (Bigfoot in Mississippi)',
     description: '10/23/2011 - Rock thrown into creek',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-352',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11907,7 +11900,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Pinon Hills, California (UFO Seen in Campground)',
     description: '5/26/13 -  Wrightwood',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-354',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11915,7 +11908,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Canyonville, Oregon (Bigfoot sighting in Days Creek)',
     description: 'Oct. 1991 - Bigfoot spotted by two hunters in Days Creek',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-356',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11923,7 +11916,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Myrtle Point, Oregon (Bigfoot seen by 3 people)',
     description: '6/8/13 - Remote',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-358',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11931,7 +11924,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Canyonville, Oregon (2 Men See Bigfoot)',
     description: 'Fall 1971 - 2 Men see what they think is a bear until it stands up.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-362',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11939,7 +11932,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Middlesboro, Kentucky (2 Boys see Bigfoot)',
     description: 'Fall 1982 - 2 boy walking home after playing basketball see a bigfoot.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-365',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11947,7 +11940,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Columbiana, Ohio (Dan Baker Sighting)',
     description: '6/15/2013 - Sculptor Dan Baker has night sighting. Several other people see the creature.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-367',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11955,7 +11948,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Harlan, Kentucky (Pastor and others find tracks)',
     description: '10/2008 - 4 men find bigfoot tracks in Evarts',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-370',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11963,7 +11956,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Harlan, Kentucky (Bigfoot Seen in garbage)',
     description: '6/28/2011 - Bigfoot seen digging in garbage',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-372',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11971,7 +11964,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Jay, Oklahoma (Bigfoot seen in Stream)',
     description: 'Fall/2009 - Man sees white/grayish bigfoot in a stream on a moon lit night.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-374',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11979,7 +11972,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Myrtle Creek, Oregon (Juvenile Bigfoot Tracks)',
     description: '75/2013 - The Crypto Crew\'s Bobby and Corinna Long find possible juvenile bigfoot tracks. See the photos and video by Clicking Here (http://www.thecryptocrew.com/2013/07/possible-juvenile-bigfoot-tracks.html)',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-376',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11987,7 +11980,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Man Sees BF while feeding Dogs)',
     description: '1967 - Never reported until now. Man and wife see bigfoot while going out to feed the dogs. (Pin is really close)',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-377',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -11995,7 +11988,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Beavercreek, Oregon (Photo Of Bigfoot)',
     description: '7/4/13 - Mark Hubbard takes photo of possible bigfoot. View photo',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-381',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12003,7 +11996,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Pineville, Kentucky (White bigfoot sighting)',
     description: 'Late 1950\'s -  2 teenage boys playing near a coal mine see a large white bigfoot.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-382',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12011,7 +12004,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Pineville, Kentucky (UFO on Hwy 119)',
     description: '1990\'s -  UFO seen on Hwy 119 near Calloway',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-387',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12019,7 +12012,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Pickerington, Ohio (UFO in Pickerington)',
     description: 'Oh',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-390',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12027,7 +12020,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Ware, Massachusetts (Sounds & Tracks)',
     description: 'Jan. 2013 - Man hears strange ape like sounds around his home',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-395',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12035,7 +12028,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Mount Plymouth, Florida (UFOs Seen Near Zellwood)',
     description: '1993 & 2012 - Family see large UFO in 1993 and try to record it. Also more UFOs seen around 2012. Read Full report by',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-400',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12043,7 +12036,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Hardwick, Massachusetts (Black Triangle UFO)',
     description: 'Sighting Date - around 2002 - Large Black triangle UFO seen in MA.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-402',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12051,7 +12044,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Shady Cove, Oregon (Tracks Found)',
     description: '7/26/2013 - TCC\'s Bobby & Corinna Long find more possible Bigfoot Tracks.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-406',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12059,7 +12052,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Bigfoot Crosses the Road)',
     description: '7/18/2013 - Early in the morning a bigfoot cross the road in from of car.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-409',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12067,7 +12060,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Appomattox, Virginia (3 UFOs filmed)',
     description: '2013 - Chris Light films 2 UFOs near his home in Virginia.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-413',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12075,7 +12068,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Duquesne, Missouri (Elderly woman sees bigfoot)',
     description: '8/06/2013 - A elderly woman out bird watching in the morning sees a large bigfoot. Report by Casey Macias (Push pin is very close)',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-417',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12083,7 +12076,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Edgewood, Ohio (Large Track in Backyard)',
     description: '2013 - Woman finds possible large bigfoot track in back yard.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-420',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12091,7 +12084,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Dawsonville, Georgia (Bull Mountain Tracks)',
     description: '2011 - Hunters find possible bigfoot tracks and follow them.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-424',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12099,7 +12092,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Shelton, Washington (Bigfoot Tracks found)',
     description: '2010 - A state employee stumbled across an excellent bigfoot trackway.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-428',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12107,7 +12100,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Bigfoot seen in creek)',
     description: '3/2006 - Man on walk sees a bigfoot in creek splashing around.(pin is very close to target)',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-434',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12115,7 +12108,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Bluefield, West Virginia (Hunter Shoots A Bigfoot)',
     description: '11/26/03 - Exclusive',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-438',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12123,7 +12116,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Whitesburg, Kentucky (Track found)',
     description: '2010 - Track found in Letcher county near a hollow fill.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-443',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12131,7 +12124,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Middlesboro, Kentucky (Bigfoot Tears up Garden)',
     description: '8/2011 - Couple goes to garden for corn and find it ripped up with bigfoot tracks in it.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-446',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12139,7 +12132,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Sandy Hook, Kentucky (Bigfoot tracks found)',
     description: '6/15/2013 - Bigfoot tracks found in garden in Carter',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-449',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12147,7 +12140,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Olive Hill, Kentucky (2 Sighting Reports)',
     description: '1990\'s -  2 reports from Carter County Kentucky in a little town named Grahn.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-452',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12155,7 +12148,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Coeburn, Virginia (Bigfoot crosses road)',
     description: '2000 - late summer or early fall - Couple on the way home after seeing a movie witness large hairy man type creature cross the road. (Marker/pin is very close)',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-456',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12163,7 +12156,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Riddle, Oregon (Hunters See Black Bigfoot)',
     description: '10/2008 - Three hunters see a large black bigfoot cross the road. Push pin is on mark.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-459',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12171,7 +12164,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Barbourville, Kentucky (UFO Follows Car)',
     description: 'Winter',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-462',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12179,7 +12172,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Whitesburg, Kentucky (2 Reports of bigfoot sighting)',
     description: '2006 -  Mr. Isom shares his 2 bigfoot sightings. Read the full report by  Clicking Here (http://www.thecryptocrew.com/2013/11/2-more-bigfoot-reports-from-kentucky.html)',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-464',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12187,7 +12180,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Vinton, Virginia (Game Cam photo of a Bigfoot?)',
     description: '8/7/2010 - Sightings report than includes a possible game cam photo of a bigfoot. Lady reports seeing a large "something" behind her house. Read the full report and watch the video by Clicking Here (http://www.thecryptocrew.com/2013/12/possible-bigfoot-photo-from-va.html)',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-466',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12195,7 +12188,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Annville, Kentucky (Face to Face with Bigfoot)',
     description: '11/1999 - Hunter has life changing face to face encounter with bigfoot. Read full report by Clicking Here (http://www.thecryptocrew.com/2013/12/hunter-has-close-up-encounter-with.html)',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-468',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12203,7 +12196,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Berea, Kentucky (4 Men see a Bigfoot)',
     description: 'Fall 1987 - 4 men see a gray bigfoot next to a railroad trestle. Pin is on target.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-469',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12211,7 +12204,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Berea, Kentucky (Several more Bigfoot Sightings)',
     description: 'From 2002 until 2011 - Several more bigfoot sightings in and around Berea. Ranging in size and color. Read the full reports by Clicking Here> (http://www.thecryptocrew.com/2014/01/more-bigfoot-sightings-in-kentucky.html)',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-471',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12219,7 +12212,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Dudley, Massachusetts (Bigfoot seen near Power lines)',
     description: '1/10/14 - Possible bigfoot seen near power lines digging in trash bag. Read full report by Clicking Here (http://www.thecryptocrew.com/2014/01/possible-bigfoot-seen-near-power-lines.html)',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-472',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12227,7 +12220,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Berea, Kentucky (Triangle Shaped UFO)',
     description: '1973 - Triangle Shaped UFO seen by for people. Read the full report by Clicking Here (http://www.thecryptocrew.com/2014/01/triangle-shaped-ufo-unreported-until-now.html)',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-473',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12235,7 +12228,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Bruce, Mississippi (UFO Seen for 2 hours)',
     description: 'Fall 1976 - Group of about 12 people witness UFO for almost 2 hours. (Push Pin is close)',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-475',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12243,7 +12236,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Oxford, Mississippi (3 People see UFOs)',
     description: 'Spring 1979 - 3 people see 3 different colored UFO while in the back yard.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-477',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12251,7 +12244,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Bethlehem, West Virginia (Bigfoot Sighting)',
     description: 'July 11',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-480',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12259,7 +12252,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Ripley, Mississippi (Bigfoot Crosses Road)',
     description: '12/25/2008 - Two people see large creature cross the road. Read full report by Clicking Here (http://www.thecryptocrew.com/2014/01/bigfoot-sighting-report-from-mississippi.html)',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-482',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12267,7 +12260,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Raymond, New Hampshire (Hiker sees possible Bigfoot)',
     description: '2/2/2014 - Hiker and his dogs see possible bigfoot cross trail.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-483',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12275,7 +12268,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Middlesboro, Kentucky (UFO Near Cumberland Gap)',
     description: '2-13-14 - Two people witnessed and video a UFO for about an hour near Cumberland Gap.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-485',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12283,7 +12276,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Berea, Kentucky (Hunters encounter Bigfoot)',
     description: '1994 (?) - Two hunters out scouting a large farm for hunting encounter possible bigfoots.(push pin is general area)',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-487',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12291,7 +12284,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Epping, New Hampshire (More reports of Bigfoot)',
     description: 'Two reports - one from 2005 and one from 2011. - More possible bigfoot sightings coming from New Hampshire from the Pawtuckaway State Park area.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-489',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12299,7 +12292,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Williston Highlands, Florida (Bigfoot at Geothe State Forest)',
     description: '2014/2005 - Reports of bigfoot being seen in Geothe State Forest.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-492',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12307,7 +12300,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Bigfoot sighting)',
     description: '2006 or 2007 - Bigfoot was seen on old strip mine site. Read the full report by  Clicking Here (http://www.thecryptocrew.com/2014/05/bigfoot-sighting-report-unreported.html)',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-501',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12315,7 +12308,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Jenkins, Kentucky (Deer hunter encounters Bigfoot)',
     description: '10/31/12 - While out deer scouting a man encounters a bigfoot and has to fire his 30/30 rifle. Read the full report by Clicking Here (http://www.thecryptocrew.com/2014/05/bigfoot-sighting-report-from-letcher.html)',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-502',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12323,7 +12316,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Providence, Kentucky (Blackberry picker encounters Bigfoot)',
     description: '6/28/2008 - While out picking blackberries a man encounters a bigfoot chasing deer. Read the full report at http://www.thecryptocrew.com/2014/05/bigfoot-in-western-kentucky-blackberry.html',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-503',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12331,7 +12324,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Truckee, California (Bigfoot Peeks in Tent)',
     description: '1977 - Bigfoot peeks inside a tent and kid shines flashlight on it. read full report by  Clicking Here (http://www.thecryptocrew.com/2014/05/bigfoot-sighting-near-stampede-reservoir.html)',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-504',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12339,7 +12332,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Bigfoot Crosses Road)',
     description: '5/22/14 - Couple witness bigfoot cross the road in the early morning hours.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-505',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12347,7 +12340,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Bigfoot standing)',
     description: '2001 - 3 people see large figure just standing watching. Read full report by Clicking Here (http://www.thecryptocrew.com/2014/05/2-more-possible-bigfoot-sightings-in.html)',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-507',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12355,7 +12348,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Meridian, Mississippi (Driver has close sighting of Bigfoot)',
     description: '1979 - While driving back to base',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-508',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12363,7 +12356,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'West Burlington, Iowa (Bigfoot seen)',
     description: 'picture taken',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-511',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12371,7 +12364,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Hickory Creek, Texas (Bigfoot/Dogman Seen)',
     description: '12/02/2011 - While driving back home to Kentucky',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-512',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12379,7 +12372,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Tallulah, Louisiana (Man spots Bigfoot while fishing)',
     description: '1960\'s -While bass fishing a man see a large bigfoot. Read all the details by Clicking Here (http://www.thecryptocrew.com/2014/09/another-bigfoot-report-from-mississippi.html)',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-519',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12387,7 +12380,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Watonga, Oklahoma (Aggressive Bigfoot Encounter)',
     description: '1988 or 89 - 2 men encounter a white/grey bigfoot which becomes aggressive.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-520',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12395,7 +12388,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (2 bigfoot seen)',
     description: '10/2013 - Man out ginsening seen 2 bigfoot. A large female and a younger bigfoot. Read all the details by  Clicking Here  (http://www.thecryptocrew.com/2014/11/bigfoot-report-from-harlan-ky-never.html)',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-522',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12403,7 +12396,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Wolfville, Nova Scotia, CA (Bigfoot sighting)',
     description: '1997 - Man spots Bigfoot in mountains near Wolfville',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-524',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12411,7 +12404,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Avenal, California (Bigfoot crosses Road)',
     description: '1977 - Bigfoot crosses hwy 41. Large Bigfoot is seen on hwy 41 by 5 people. Read the details at http://www.thecryptocrew.com/2014/12/bigfoot-seen-on-hwy-41.html   Push pin is general area.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-525',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12419,7 +12412,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Lenoir, North Carolina (UFO photo)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-526',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12427,7 +12420,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Kensington, Prince Edward Island, CA (Bigfoot Walks Away)',
     description: '1997 - Man walking his dog sees a Bigfoot. Read the details at http://www.thecryptocrew.com/2014/12/prince-edward-island-bigfoot-report.html',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-529',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12435,7 +12428,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Northwest Ithaca, New York (2 Men see Bigfoot)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-530',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12443,7 +12436,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Prestwich, England, GB (8 foot Bigfoot seen by 2 people)',
     description: '6/1982 - "I froze at the size of him',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-532',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12451,7 +12444,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Letham, Scotland, GB (Bigfoot in Scotland)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-533',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12459,7 +12452,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Dorchester, England, GB (Howls recorded)',
     description: 'Tracks Found',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-535',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12467,7 +12460,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Blackley, England, GB (Rock Throwing Bigfoot?)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-537',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12475,7 +12468,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Colebrook, New Hampshire (Hunters find possible Bigfoot Tracks)',
     description: '2001 (?) - A man and his son encounter odd',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-539',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12483,7 +12476,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Raymond, New Hampshire (Tracks found)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-540',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12491,7 +12484,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Cimarron, New Mexico (Bigfoot Crosses Road)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-542',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12499,7 +12492,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Mount Carmel, Illinois (Bigfoot Seen Near Wabash River)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-544',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12507,7 +12500,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Martinsville, Indiana (Bigfoot at Pond.)',
     description: 'Summer 1999 - 2 men fishing seen large bigfoot next to fishing pond. Push pin is general area. read the full report at http://www.thecryptocrew.com/2015/02/bigfoot-sighting-in-indiana.html',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-547',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12515,7 +12508,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Mount Carmel, Illinois (Young Bigfoot seen in River bed)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-548',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12523,7 +12516,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Salford, England, GB (Male Bigfoot Seen)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-550',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12531,7 +12524,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Rosiclare, Illinois (Scavenging Bigfoot)',
     description: '2/2001 - Family driving home witness a Bigfoot taking some road kill. Push pin is general area. Read the full details at http://www.thecryptocrew.com/2015/03/scavenging-shawnee-bigfoot.html',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-552',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12539,7 +12532,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Pikeville, Kentucky (Coon Hunters Encounter Bigfoot)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-553',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12547,7 +12540,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Keokuk, Iowa (Bigfoot seen in creek)',
     description: '8/27/2000 - 3 men witness a bigfoot in Lamalees creek. Push pin is general area. Read full report at http://www.thecryptocrew.com/2015/04/bigfoot-sighting-report-from-iowa.html',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-555',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12555,7 +12548,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Deerfield, New Hampshire (Bigfoot at Dump)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-556',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12563,7 +12556,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Bethel, Maine (Bigfoot seen in Grafton Notch Park)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-558',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12571,7 +12564,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Lawson Heights, Pennsylvania (Possible Bigfoot in Westmoreland County.)',
     description: '2008 -  Woman taking her dog out to use the bath room encounter unknown creature. Read the full report at   http://www.thecryptocrew.com/2015/04/possible-bigfoot-in-westmoreland-county.html',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-560',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12579,7 +12572,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Madera, California (Object Seen in Sky)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-561',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12587,7 +12580,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Kingsport, Tennessee (Massive UFO Cluster)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-563',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12595,7 +12588,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Halifax, Nova Scotia, CA (Bigfoot almost hit by car)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-565',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12603,7 +12596,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Cascade, Idaho (Man chases Bigfoot after sightings)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-567',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12611,7 +12604,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'New Albany, Indiana (Possible Tracks Near Ohio River)',
     description: '5/24/15 - A man and his son out for a fishing trip find possible Bigfoot tracks. Read the full report at  http://www.thecryptocrew.com/2015/05/possible-bigfoot-tracks-found-near-ohio.html',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-569',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12619,7 +12612,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Couple find track)',
     description: '2013 - While out on their ATV a couple find a bigfoot track. Read the details at http://www.thecryptocrew.com/2015/05/couple-fines-track-while-4-wheelin.html Pin is general area and not on target',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-570',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12627,7 +12620,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Keosauqua, Iowa (Rocks thrown)',
     description: 'creature seen',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-573',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12635,7 +12628,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Elizabethtown, Illinois (Howls and Whoops)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-575',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12643,7 +12636,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Atoka, Tennessee (Bigfoot seen in field)',
     description: '6/1/15 - Woman see possible bigfoot standing in a field. Makes return trip and finds tracks. Push pin is general area. Read the full report at http://www.thecryptocrew.com/2015/07/bigfoot-sighting-in-tennessee.html',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-577',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12651,7 +12644,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Greater Sudbury, Ontario, CA (UFO photographed?)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-580',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12659,7 +12652,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Westover, West Virginia (Man has sighting while looking for deer)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-582',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12667,7 +12660,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Van, Texas (Hog Hunter Spots Bigfoot)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-584',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12675,7 +12668,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Cave Junction, Oregon (Best UFO picture Ever?)',
     description: '1927 - Fireman takes clear photo of a UFO. Get the story and details',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-586',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12683,7 +12676,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Talihina, Oklahoma (Bigfoot seen near Little River)',
     description: '1972 - While fishing on Little River',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-588',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12691,7 +12684,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Murray, Kentucky (Possible Dogman seen)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-589',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12699,7 +12692,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Molalla, Oregon (Bigfoot behind cabins)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-591',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12707,7 +12700,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Harlan, Kentucky (Bigfoot Near River)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-595',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12715,7 +12708,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Lakeland Village, California (Creature seen on 74 Ortega hwy)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-597',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12723,7 +12716,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Condon, Tennessee (Squirrel Hunters encounter Bigfoot)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-599',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12731,7 +12724,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'London, Kentucky (Possible Bigfoot Tracks)',
     description: '12/03/15 - Woman find possible Bigfoot tracks near her home. Also reports of strange sounds. Push pin in general area. Read full report at  http://www.thecryptocrew.com/2015/12/possible-bigfoot-tracks-found-in.html',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-601',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12739,7 +12732,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Lone Oak, Tennessee (Bigfoot next to creek)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-602',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12747,7 +12740,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Cotgrave, England, GB (6 foot tall covered with hair)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-604',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12755,7 +12748,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Temple, Georgia (Something near the lake)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-606',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12763,7 +12756,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Madisonville, Kentucky (Driver Sees Bigfoot)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-608',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12771,7 +12764,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Winchester, Tennessee (White Bigfoot Seen several times)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-610',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12779,7 +12772,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Fort Mitchell, Kentucky (Howl Heard by Two People)',
     description: '11/14 - Two people on a break hear a sound that was terrifying',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-612',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12787,7 +12780,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Daytime Howl)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-613',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12795,7 +12788,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Morristown, Tennessee (UFO in Night Sky)',
     description: 'Winter of 2005 or 06 - Dark object seen moving slowly and making no sound. Push pin is general area. Read full report and details at http://www.thecryptocrew.com/2016/04/ufo-report-morristown-tennessee.html',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-615',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12803,7 +12796,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Millington, Tennessee (Bigfoot stalks giggers)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-616',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12811,7 +12804,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Rainelle, West Virginia (Dark figure)',
     description: 'Knocks and Howls',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-620',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12819,7 +12812,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Tecumseh, Michigan (Deer Hunter encounters Bigfoot)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-622',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12827,7 +12820,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Berlin, Wisconsin (UFO Seen)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-624',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12835,7 +12828,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Pikeville, Kentucky (Wood Knocks and Glowing eyes)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-626',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12843,7 +12836,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Round Silver UFO)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-628',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12851,7 +12844,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Henryetta, Oklahoma (Hunter frying bologna has encounter)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-630',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12859,7 +12852,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Texanna, Oklahoma (Bigfoot steals chickens)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-632',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12867,7 +12860,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Bigfoot near a pond)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-634',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12875,7 +12868,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Hickman, Kentucky (Hunter films UFO Finds Crop Circle)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-636',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12883,7 +12876,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Hendron, Kentucky (UFOs caught on camera)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-638',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12891,7 +12884,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Hindman, Kentucky (Bigfoot Tracks Found)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-640',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12899,7 +12892,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Coshocton, Ohio (Bigfoot sighting)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-642',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12907,7 +12900,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Cumberland, Kentucky (Bigfoot Steals Dog)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-644',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12915,7 +12908,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Sardis, Georgia (Bigfoot Steals Pears)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-646',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12923,7 +12916,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'The Dalles, Oregon (Bigfoot Seen at Water Trough)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-648',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12931,7 +12924,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Franklin, West Virginia (Bigfoot on side of the road)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-650',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12939,7 +12932,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Rockland, Massachusetts (Teens See Bigfoot in Field)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-652',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12947,7 +12940,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Bodfish, California (Weird Things In Bodfish)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-654',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12955,7 +12948,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Berkeley Springs, West Virginia (UFO Near Rainbow?)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-656',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12963,7 +12956,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Westhaven-Moonstone, California (Bigfoot seen near trees)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-658',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12971,7 +12964,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Myrtle Creek, Oregon (Bigfoot Tracks Found)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-662',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12979,7 +12972,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Horses riders encounter bigfoot.)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-664',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12987,7 +12980,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Verona, Kentucky (Hunter encounters Bigfoot)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-666',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -12995,7 +12988,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Harlan, Kentucky (Possible Bigfoot Track)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-668',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13003,7 +12996,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Cumberland, Kentucky (Bigfoot Sighting)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-670',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13011,7 +13004,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Green, Oregon (Possible Bigfoot Track)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-672',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13019,7 +13012,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Jay, Oklahoma (Bigfoot Looking in Window)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-674',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13027,7 +13020,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'New Hope, Oregon (Possible Bigfoot Track)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-676',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13035,7 +13028,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Myrtle Creek, Oregon (More Bigfoot Tracks)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-678',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13043,7 +13036,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Pineville, Kentucky (Bigfoot Track)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-680',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13051,7 +13044,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Sardis, Georgia (Driver has sighting)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-682',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13059,7 +13052,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Prestonsburg, Kentucky (Sighting in 05 & Tracks in 17)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-684',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13067,7 +13060,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Williamsburg, Kentucky (Bigfoot Seen On Old Logging Road)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-686',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13075,7 +13068,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Fredericton, New Brunswick, CA (Bigfoot seen in hay field)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-688',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13083,7 +13076,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Jellico, Tennessee (ATV Rider Has Bigfoot Sighting)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-690',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13091,7 +13084,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Kahoka, Missouri (Large Track Found)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-692',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13099,7 +13092,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Glide, Oregon (Couple Find Bigfoot Tracks)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-694',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13107,7 +13100,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Sutton, West Virginia (2 Men see Bigfoot)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-696',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13115,7 +13108,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Shady Cove, Oregon (Couple Find Tracks)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-698',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13123,7 +13116,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Campton, Kentucky (Bigfoot Chases ATV)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-700',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13131,7 +13124,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Sullivan, Missouri (Bigfoot Shot 9 Times!)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-702',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13139,7 +13132,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Marietta, Washington (Bigfoot Terrorizes 78 Year Old Woman!)',
     description: '10/23/1975 - Police are called after an apparent Bigfoot tried to break into the house of a 78 year old woman. The woman became so frightened that she fled the house out of total fear. The Bigfoot damaged not only the house but also the smokehouse that was on the property. Push Pin is general area. Read the full details at http://www.thecryptocrew.com/2018/01/bigfoot-terrorizes-78-year-old-woman.html',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-704',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13147,7 +13140,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Wrangell, Alaska (Hairy man Tells Hunter - Leave us Alone!)',
     description: '1979 - The follow account comes from a refrigeration mechanic by the name of Dana Jacallen.Jacallen\'s fascination with the creatures goes back to a cold morning in 1979 in the remote Etolin Island area near Wrangell. Push pin is general area. Read the details and other reports at http://www.thecryptocrew.com/2018/01/hairy-man-tells-hunter-leave-us-alone.html',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-706',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13155,7 +13148,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Wrangell, Alaska (Missing Child Returned by Bigfoot)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-707',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13163,7 +13156,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Harrogate, Tennessee (Bigfoot around house)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-709',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13171,7 +13164,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Masonville, Kentucky (Bigfoot Startles Harmonica Player)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-711',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13179,7 +13172,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Louisa, Kentucky (White Bigfoot Seen)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-713',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13187,7 +13180,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Worden, Illinois (Bigfoot Runs Across Dirt Road)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-715',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13195,7 +13188,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'McKee, Kentucky (Possible Bigfoot Seen in Jackson County)',
     description: '12/2017 - Couple driving home see a large dark figure on the side of the road. Push pin is general area. Read full details by clicking the link https://www.thecryptocrew.com/2018/04/possible-bigfoot-seen-in-jackson-county.html',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-717',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13203,7 +13196,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Teen Has Bigfoot Sighting!)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-718',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13211,7 +13204,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Cutlerville, Michigan (Blonde Bigfoot Startles Woman)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-720',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13219,7 +13212,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Crocker, Missouri (Possible Young Bigfoot Seen)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-724',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13227,7 +13220,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Myrtle Creek, Oregon (Possible Bigfoot Track Found)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-726',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13235,7 +13228,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Harlan, Kentucky (Bigfoot Tracks Found)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-729',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13243,7 +13236,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Hazard, Kentucky (Hunters Encounter Bigfoot)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-731',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13251,7 +13244,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Pineville, Kentucky (Shots Fired in Possible Bigfoot Abduction)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-733',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13259,7 +13252,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Cole Harbour, Nova Scotia, CA (Bigfoot Standing Near Trees)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-735',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13267,7 +13260,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Harlan, Kentucky (Bigfoot Track Found & Cast)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-738',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13275,7 +13268,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Williamsburg, Kentucky (Kayak Fisherman spots Bigfoot)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-740',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13283,7 +13276,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Harlan, Kentucky (Bigfoot standing)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-742',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13291,7 +13284,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Pennington Gap, Virginia (Possible UFO)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-744',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13299,7 +13292,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Dillon, Montana (Hikers Encounter Bigfoot)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-746',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13307,7 +13300,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Pineville, Kentucky (Bigfoot Crosses Road)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-748',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13315,7 +13308,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Harlan, Kentucky (Possible Bigfoot Tracks)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-750',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13323,7 +13316,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Sandy Hook, Kentucky (Road sighting)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-753',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13331,7 +13324,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Myrtle Creek, Oregon (Large Bigfoot seen)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-755',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13339,7 +13332,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Winston, Oregon (Bigfoot Charges Car)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-757',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13347,7 +13340,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Myrtle Creek, Oregon (Reddish Bigfoot)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-759',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13355,7 +13348,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Whitesburg, Kentucky (Bigfoot Howls)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-761',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13363,7 +13356,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Franklin, West Virginia (Bigfoot seen twice)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-765',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13371,7 +13364,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Locust Grove, Oklahoma (Bigfoot watches kids sleeping)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-768',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13379,7 +13372,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Pineville, Kentucky (Bigfoot Seen in early AM)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-770',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13387,7 +13380,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Mushroom Hunters Find Tracks)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-774',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13395,7 +13388,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Middlesboro, Kentucky (Bigfoot track in creek)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-776',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13403,7 +13396,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Nevada, Iowa (walkers spot Bigfoot)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-778',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13411,7 +13404,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Wytheville, Virginia (Large UFO Seen!)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-780',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13419,7 +13412,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Multiple Bigfoot Sighting)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-783',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13427,7 +13420,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Pineville, Kentucky (Multiple Sightings)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-785',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13435,7 +13428,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (UFO Sighting and Interview)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-787',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13443,7 +13436,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Myrtle Creek, Oregon (Possible Bigfoot Encounter)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-789',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13451,7 +13444,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Hazard, Kentucky (Bigfoot Sighting)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-791',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13459,7 +13452,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Grantsville, Utah (UFO Seen in Dugway)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-793',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13467,7 +13460,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Rustburg, Virginia (Bigfoot Crosses the Road)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-795',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13475,7 +13468,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Harlan, Kentucky (Hunter finds Tracks)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-797',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13483,7 +13476,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Jenkins, Kentucky (UFO Filmed)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-799',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13491,7 +13484,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Jenkins, Kentucky (More UFOs in Jenkins)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-801',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13499,7 +13492,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Maysville, North Carolina (Bigfoot Encounter and Track Castings)',
     description: '4/27/2020 Bigfoot Encounter and Track Castings - A night research trip turns a little frightful but yields good results. Push pin is general area. Read full report at https://www.thecryptocrew.com/2020/05/bigfoot-encounter-and-track-castings.html',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-806',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13507,7 +13500,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Green Cove Springs, Florida (UFO Report From FL)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-807',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13515,7 +13508,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Newbury, New Hampshire (Large Humanoid Seen In New Hampshire - Maybe a Bigfoot?)',
     description: '05/20/2018 - Large Humanoid Seen In New Hampshire - Maybe a Bigfoot? Push pin is general area. Read the full report at - https://www.thecryptocrew.com/2020/05/large-humanoid-seen-in-new-hampshire.html',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-809',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13523,7 +13516,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Colorado Springs, Colorado (UFO Over Colorado Springs)',
     description: 'Colorado',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-810',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13531,7 +13524,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Vista, California (Strange Lights Seen)',
     description: '3/31/20 - Odd lights that are very reminiscent of the Phoenix lights filmed in Vista. Push pin is on target. Read the report and watch the video at https://www.thecryptocrew.com/2020/05/strange-lights-seen-in-california.html',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-811',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13539,7 +13532,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Saint George, Utah (UFOs Filmed)',
     description: '5/12/20 - Flashing objects filmed during the day time. Push pin is on target. Read report and watch video at https://www.thecryptocrew.com/2020/05/ufos-filmed-in-utah.html',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-812',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13547,7 +13540,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Williamsburg, Kentucky (Object In Sky)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-813',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13555,7 +13548,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Altadena, California (Unknown Objects in the sky)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-815',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13563,7 +13556,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Ipswich, England, GB (Bright orange lights in the sky)',
     description: '6/19/2020 - Several objects captured on film. Push pin is general area. Read the full report and watch the video at https://www.thecryptocrew.com/2020/06/ufos-over-england.html',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-817',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13571,7 +13564,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Winchester, Nevada (Yellowish objects in the sky)',
     description: '6/13/20 - The event started out with three large yellowish objects in the sky',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-818',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13579,7 +13572,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Englehart, Ontario, CA (UFO Filmed)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-819',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13587,7 +13580,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Shamokin, Pennsylvania (Very bright white flying object)',
     description: '6/3/20 - witness observed a very bright white flying object moving rapidly into sky',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-821',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13595,7 +13588,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Williams, Oregon (Possible Bigfoot seen)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-822',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13603,7 +13596,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Jeffersonville, Indiana (UFOs Watches Fireworks)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-824',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13611,7 +13604,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Canon City, Colorado (UFO Filmed)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-827',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13619,7 +13612,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Murray, Kentucky (Silver Triangle UFO)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-829',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13627,7 +13620,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Vienna, Illinois (Bigfoot Sighting in Shawnee National Forest)',
     description: '8/11/20 - While camping in SNF man encounters possible bigfoot. Push pin is general area. Read the full report at http://www.thecryptocrew.com/2020/08/bigfoot-sighting-in-shawnee-national.html',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-831',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13635,7 +13628,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Topeka, Kansas (Door Cam Catches UFO)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-832',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13643,7 +13636,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Newnan, Georgia (Doorbell Camera Catches UFO)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-834',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13651,7 +13644,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Rainelle, West Virginia (Man has Bigfoot Sighting)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-836',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13659,7 +13652,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Brentwood, California (Triangle UFO Sighting)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-838',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13667,7 +13660,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Sutherlin, Oregon (Bigfoot Howls or Screams)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-840',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13675,7 +13668,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Pineville, Kentucky (Bigfoot Takes Apples)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-842',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13683,7 +13676,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Pineville, Kentucky (Screams)',
     description: '1940s - This is an old report handed down from mother to daughter. There are actually 2 reports',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-844',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13691,7 +13684,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Hyden, Kentucky (Bigfoot in Creek)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-845',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13699,7 +13692,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'De Witt, Arkansas (Huge Bigfoot seen)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-847',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13707,7 +13700,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Guildford, England, GB (2 Glowing Objects)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-849',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13715,7 +13708,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Bell Gardens, California (Cigar Shaped UFO Filmed)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-851',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13723,7 +13716,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Spring Hill, Tennessee (Man Chases UFO)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-853',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13731,7 +13724,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Frisco, Texas (UFO Filmed Over Frisco)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-855',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13739,7 +13732,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Lincoln Park, Colorado (UFOs filmed)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-857',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13747,7 +13740,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Dillon, Montana (Tracks Found)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-859',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13755,7 +13748,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'East Liverpool, Ohio (Bigfoot Encounter - Tracks Found)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-861',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13763,7 +13756,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Baker City, Oregon (Bright Red Lights)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-863',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13771,7 +13764,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Pinehurst, Idaho (Cigar Shaped UFO)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-865',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13779,7 +13772,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Chicago, Illinois (Chicago UFO)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-867',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13787,7 +13780,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Kingston, Ontario, CA (Possible Bigfoot Throwing Rocks)',
     description: '9/13/2011 - While on a camping trip 2 men have a possible bigfoot throwing rock near them as they slept. Push pin is general area. Read the full report at - http://www.thecryptocrew.com/2020/12/possible-bigfoot-throwing-rocks-report.html',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-870',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13795,7 +13788,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Kentucky UFO)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-871',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13803,7 +13796,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Weston, Florida (UFO Flap)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-873',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13811,7 +13804,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Waterford, Michigan (Glowing Orb Filmed)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-875',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13819,7 +13812,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Edwardsville, Kansas (2 Triangle Craft)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-877',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13827,7 +13820,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Jamaica, New York (UFO Seen and photographed)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-881',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13835,7 +13828,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Temecula, California (Bright Orb)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-883',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13843,7 +13836,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Roscoe, Texas (Sphere shaped Object)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-885',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13851,7 +13844,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Hazard, Kentucky (Possible Bigfoot Jumps on Van)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-887',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13859,7 +13852,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Cadiz, Kentucky (Bigfoot Sighting)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-889',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13867,7 +13860,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Harlan, Kentucky (Campers Encounter Bigfoot)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-891',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13875,7 +13868,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Harlan, Kentucky (Bowhunter encounters Bigfoot)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-893',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13883,7 +13876,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Moreno Valley, California (Moreno Valley UFO)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-895',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13891,7 +13884,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Renaze, Pays de la Loire, FR (Possible UFO)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-897',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13899,7 +13892,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Raymond, New Hampshire (Boy on Bicycle Followed By Possible Bigfoot)',
     description: '1980\'s - Boy on Bicycle Followed By Possible Bigfoot. A teenaged boy encountered a possible Bigfoot at the Pawtuckaway state park. Push pin is general area. read the full report at https://www.thecryptocrew.com/2021/05/boy-on-bicycle-followed-by-possible.html',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-901',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13907,7 +13900,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Roundup, Montana (Hikers Encounter Bigfoot)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-903',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13915,7 +13908,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Tielt, Flanders, BE (UFO In Photo)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-905',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13923,7 +13916,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Great Wyrley, England, GB (Large Fireball UFO)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-908',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13931,7 +13924,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Flippin, Arkansas (Hunter Hears Possible Bigfoot)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-910',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13939,7 +13932,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Harrisonville, Missouri (Unknown Creature)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-912',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13947,7 +13940,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Gray Summit, Missouri (Bigfoot/Ape man sighting)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-916',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13955,7 +13948,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Virginia Beach, Virginia (Possible Dogman Sighting)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-918',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13963,7 +13956,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Newport, Tennessee (Bigfoot Hit by Truck)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-920',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13971,7 +13964,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Avilla, Indiana (Trucker Records UFO)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-922',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13979,7 +13972,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Cumberland, Kentucky (Possible Dogman)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-924',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13987,7 +13980,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Virginia Beach, Virginia (Unknown Large Creature)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-926',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -13995,7 +13988,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Harlan, Kentucky (Possible UFO in Night Sky)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-928',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -14003,7 +13996,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Harlan, Kentucky (UFO seen in night sky)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-930',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -14011,7 +14004,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Doylestown, Ohio (Possible Dogman seen twice)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-932',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -14019,7 +14012,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Mount Sterling, Kentucky (Possible Bigfoot Seen in Field)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-934',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -14027,7 +14020,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Torquay, England, GB (Unknown Humanoid)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-936',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -14035,7 +14028,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Deerfield, New Hampshire (Summer Camp Bigfoot)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-938',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -14043,7 +14036,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Unknown Object)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-940',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -14051,7 +14044,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Weare, New Hampshire (UFO Seen)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-942',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -14059,7 +14052,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Astor, Florida (Woman spots UFOs)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-944',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -14067,7 +14060,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Burlington, North Dakota (UFO Filmed Early in Morning)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-946',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -14075,7 +14068,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Weare, New Hampshire (Wood Devil Sighting)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-948',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -14083,7 +14076,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Springhill, Nova Scotia, CA (Terrifying Encounter)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-950',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -14091,7 +14084,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Hazard, Kentucky (Possible Bigfoot Seen)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-952',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -14099,7 +14092,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Benton, Kentucky (Bigfoot Activity)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-954',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -14107,7 +14100,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Watertown, Florida (White UFOs)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-957',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -14115,7 +14108,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Benton, Kentucky (Bigfoot Evidence)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-959',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -14123,7 +14116,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Cascade Locks, Oregon (Mrs. Baxter and Bigfoot)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-961',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -14131,7 +14124,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Towanda, Pennsylvania (Woman Frightened by Bigfoot)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-963',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -14139,7 +14132,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Spring Green, Wisconsin (Howls and Visual)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-965',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -14147,7 +14140,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Jonesville, Virginia (UFO Speeds off)',
     description: '',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-969',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -14155,7 +14148,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Harrisonville, Missouri (Possible Bigfoot Sighting)',
     description: '6/2021 - Family moves into a new home in April',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-971',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -14163,7 +14156,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Omaha, Nebraska (Large Bird sighting)',
     description: '7/8/1969 - As a teenager',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-972',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -14171,7 +14164,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Bigfoot Hits Garage)',
     description: '1/25/23 - Early morning encounter with a possible bigfoot that ends up slapping the garage. Push pin is general area.  Read the full report at .https://www.thecryptocrew.com/2023/02/possible-bigfoot-sighting-in-harlan.html',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-973',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -14179,7 +14172,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Lebanon, Missouri (UFO Seen Above Trees)',
     description: '1967 - It was a big white light hovering silently above a stand of trees and silently lowered itself down in the trees about a mile away. Push pin is general area. Read the full report at - https://www.thecryptocrew.com/2023/02/bright-ufo-seen-above-trees.html',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-974',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -14187,7 +14180,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Gronau, North Rhine-Westphalia, DE (Black Figure)',
     description: '12/30/22 - While out walking a dog',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-975',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -14195,7 +14188,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (UFO Spotted)',
     description: '3/25/23 UFO sighting and the witness managed to get a picture. Push pin is on target. Read the full report and see the images at https://www.thecryptocrew.com/2023/03/2-ufo-sightings-in-harlan-county.html',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-976',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -14203,7 +14196,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (UFO Wave Witnessed)',
     description: '3/25/23 - Witness saw and photographed UFO wave with 30+ UFOs. Push pin is general area. Read the full report and see the images at - https://www.thecryptocrew.com/2023/03/2-ufo-sightings-in-harlan-county.html',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-977',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -14211,7 +14204,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Mundys Corner, Pennsylvania (Bikers Have Bigfoot Sighting)',
     description: '10/05/2022 - A couple biking spot a large bigfoot up ahead of them.  Push pin is general area. Read the full report at https://www.thecryptocrew.com/2023/04/ghost-town-trails-bigfoot-sighting.html',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-978',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -14219,7 +14212,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'North Ogden, Utah (Bigfoot Throws Log at Researchers)',
     description: '8/2016 - 2 researchers get a log threw at them while following bigfoot tracks. Push pin is general area. Read the full report at https://www.thecryptocrew.com/2023/08/bigfoot-throws-log-at-researchers.html',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-979',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -14227,7 +14220,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Costa Mesa, California (UFOs filmed over 2 days)',
     description: '2023 - Witness films several unknown objects over two days. Push pin is general area. Read the full report and watch the videos at https://www.thecryptocrew.com/2023/08/ufo-sightings-near-costa-mesa-california.html',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-980',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
@@ -14235,7 +14228,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Patterson-Gimlin Film - Bluff Creek, California (1967)',
     description: 'Shot by Roger Patterson and Bob Gimlin, this is the most famous and heavily analyzed Bigfoot footage in history. The short film depicts a large, hairy, bipedal female creature (nicknamed \'Patty\') walking along a gravel bar next to Bluff Creek and looking directly at the camera.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-981',
     images: ['https://www.youtube.com/watch?v=Q60mSMmhTZU', 'https://www.youtube.com/watch?v=6g1JNmXcpTM', 'https://upload.wikimedia.org/wikipedia/commons/8/81/Patterson_Gimlin_Bigfoot.jpg', 'https://upload.wikimedia.org/wikipedia/commons/d/dd/Patterson_Gimlin_Bigfoot_%28cropped%29.jpg'],
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14244,7 +14237,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Paul Freeman Footage - Blue Mountains, Washington (1994)',
     description: 'Captured by former U.S. Forest Service patrolman Paul Freeman near Walla Walla, Washington, this video depicts a large, dark, shaggy figure walking through the dense forest brush. Freeman was a dedicated tracker who also collected numerous plaster casts of footprints.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-982',
     images: ['https://www.youtube.com/watch?v=mtrbAu8yEAI'],
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14253,7 +14246,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Marble Mountain Bigfoot - Marble Mountains, California (2001)',
     description: 'Captured by Jim Mills while leading a youth group hiking trip, this video is one of the longest continuous clips of an alleged Sasquatch. It shows a distant, massive, black silhouette walking steadily along a treeless mountain ridge.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-983',
     images: ['https://www.youtube.com/watch?v=eD8XSQbayXs'],
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14262,7 +14255,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Provo Canyon Bigfoot - Provo Canyon, Utah (2012)',
     description: 'A group of hikers in Provo Canyon filmed a large, dark, hairy creature crouched in the brush on a steep hillside. When they approached closer, the creature stood up on two legs and moved away, prompting the hikers to run.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-984',
     images: ['https://www.youtube.com/watch?v=Ss_Gm_N5C48'],
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14271,7 +14264,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Independence Day Bigfoot - Carbon County, Utah (2013)',
     description: 'Recorded on July 4, 2013, in the mountains of Utah, this controversial footage shows a large bipedal figure walking on a hillside carrying an infant-sized creature, sparking widespread frame-by-frame analysis in the research community.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-985',
     images: ['https://www.youtube.com/watch?v=jit4U1913FE'],
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14280,7 +14273,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Silver Star Mountain Bigfoot - Silver Star Mountain, Washington (2005)',
     description: 'Two hikers on Silver Star Mountain in Skamania County, Washington, photographed a tall, dark figure walking along a snowy ridge, which was later investigated by the BFRO.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-986',
     images: ['https://upload.wikimedia.org/wikipedia/commons/6/69/Squatch2005small.jpg'],
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14289,7 +14282,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Rick Jacobs Bigfoot Photos - Allegheny National Forest, Pennsylvania (2007)',
     description: 'A trail camera set up by hunter Rick Jacobs in the Allegheny National Forest captured photos of an unidentified creature. The subject is hunched over and has distinct primate-like features, which many researchers identify as a juvenile Bigfoot.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-987',
     images: ['https://upload.wikimedia.org/wikipedia/commons/8/81/Jacobs_juvenile_Sasquatch.jpg'],
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14298,7 +14291,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Bigfoot Trap - Siskiyou National Forest, Oregon (1974)',
     description: 'Built in 1974 by the North American Wildlife Research Team (NAWRT), this is the only physical Bigfoot trap in the world. It consists of a heavy wooden box with a metal trapdoor, located in the Rogue River-Siskiyou National Forest.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-988',
     images: ['https://upload.wikimedia.org/wikipedia/commons/d/de/Bigfoot_trap.jpg'],
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14307,7 +14300,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Bigfoot Petroglyph - Painted Rock, Tulare County, California',
     description: 'A prehistoric Yokuts Native American rock art site featuring \'Mayak\', a family of giant, hairy creatures described in local oral traditions as Bigfoot. This petroglyph is considered by researchers to be one of the oldest depictions of Sasquatch in North America.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-989',
     images: ['https://upload.wikimedia.org/wikipedia/commons/a/a2/Painted_Rock_Tulare_County.jpg'],
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14316,7 +14309,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Bigfoot Museum - Willow Creek, California',
     description: 'Located in Willow Creek, California—the \'Bigfoot Capital of the World\'—this museum houses footprint plaster casts, historical newspaper clippings, and various other Bigfoot research artifacts.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-991',
     images: ['https://upload.wikimedia.org/wikipedia/commons/a/a5/Bigfoot_Museum_Willow_Creek.jpg'],
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14325,7 +14318,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Minnesota Iceman Exhibition - Winona, Minnesota (1968)',
     description: 'A male hominid-like creature frozen in ice, exhibited at malls and carnivals in the late 1960s. Cryptozoologists Bernard Heuvelmans and Ivan T. Sanderson examined it and declared it a new species.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-992',
     images: ['https://upload.wikimedia.org/wikipedia/commons/b/b1/Minnesota-Iceman-composite-in-ice-and-reconstruction-600-px-tiny-Dec-2016-Darren-Naish-Tetrapod-Zoology.jpg'],
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14334,7 +14327,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Ape Canyon Sighting - Mount St. Helens, Washington (1924)',
     description: 'A group of miners reported being attacked by multiple \'hairy ape-men\' throwing rocks at their cabin in 1924, in a gorge now known as Ape Canyon.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-994',
     images: ['https://upload.wikimedia.org/wikipedia/commons/1/15/ApeCanyon-highview-daylight.jpg'],
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14343,7 +14336,7 @@ const chunk_3: any[] = [  {
     parentId: 'bigfoot-sightings-br',
     name: 'Mogollon Monster - Mogollon Rim, Arizona',
     description: 'Sightings of a Bigfoot-like creature along the Mogollon Rim in Arizona date back to the early 1900s. Witnesses describe a tall creature with red eyes and a strong, foul odor.',
-    layer: 'Bigfoot',
+    layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-995',
     images: ['https://upload.wikimedia.org/wikipedia/commons/7/72/Mogollon_Monster_Carving.jpg'],
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15145,7 +15138,7 @@ const chunk_4: any[] = [  {
     parentId: 'underworld',
     name: 'Guimen Gate\n - Mingshan Mountain',
     description: 'Chongqing’s Ming Mountain is haunted by Fengdu Ghost City, a temple site dedicated to tales of the underworld influenced by Confucianism, Taoism, and Buddhism. Visitors can find the entrance to Hell at Guimen Gate, which is also known as the Ghost Torturing Pass. According to Chinese mythology, the newly dead must present themselves here to Yanluo Wang, the King of Hell, for his final judgment. Those deemed evil are banished to one of the many torturous realms of Diyu, or Chinese Hell. Fengdu’s gate to Hell has a suitably ominous appearance: it’s black and red with peaked roofs and flanked by 18 sculptures of demons enacting gruesome punishments (the worst level involves being boiled forever in a wok).',
-    layer: 'Portals / Stargates / Underworld / Hollow Earth Entrances',
+    layer: 'Underworld Entrances',
     mapFeatureId: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-17',
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
   },  {
@@ -15211,7 +15204,7 @@ const chunk_4: any[] = [  {
     parentId: 'underworld',
     name: 'Darvaza Gas Crater - "Door to Hell"',
     description: 'A burning pit of fire in the Turkmenistan desert. While officially blamed on a Soviet drilling mishap in 1971, local mystics and conspiracists whisper that the drill penetrated a hollow subterranean vault, releasing ancient subterranean entities and a perpetual flame that cannot be extinguished.',
-    layer: 'Portals / Stargates / Underworld / Hollow Earth Entrances',
+    layer: 'Underworld Entrances',
     mapFeatureId: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-0',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Darvasa_gas_crater_panorama.jpg/1280px-Darvasa_gas_crater_panorama.jpg'],
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
@@ -15220,7 +15213,7 @@ const chunk_4: any[] = [  {
     parentId: 'underworld',
     name: 'Lua-o-Milu, or the land of the dead',
     description: 'Situated in the remote Waipi\'o Valley, this lava tube was feared by ancient Hawaiians as the portal to the spirit underworld. Modern esotericists suggest it is an entrance to the Hollow Earth network, guarded by ancient entities and protected by localized electromagnetic anomalies.',
-    layer: 'Portals / Stargates / Underworld / Hollow Earth Entrances',
+    layer: 'Underworld Entrances',
     mapFeatureId: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-1',
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
   },  {
@@ -15228,7 +15221,7 @@ const chunk_4: any[] = [  {
     parentId: 'underworld',
     name: 'Mount Osore, Osorezan, Mount of Dread',
     description: 'A sulfurous wasteland in Japan where blind mediums (Itako) summon the dead. Conspiracy theorists suggest the volcanic gas acts as a consciousness-altering agent, opening a tear in the dimensional fabric that allows contact with entities from parallel realms.',
-    layer: 'Portals / Stargates / Underworld / Hollow Earth Entrances',
+    layer: 'Underworld Entrances',
     mapFeatureId: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-2',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Osorezan_Aomori.JPG/1280px-Osorezan_Aomori.JPG'],
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
@@ -15237,7 +15230,7 @@ const chunk_4: any[] = [  {
     parentId: 'underworld',
     name: 'Cave of Hades (Gates Of Hades)',
     description: 'A dark, sea-level cave where Hercules and Orpheus supposedly descended into the underworld. Hollow Earth researchers suggest this cave system descends far deeper than mapped, connecting to a subterranean highway network used by non-human civilizations.',
-    layer: 'Portals / Stargates / Underworld / Hollow Earth Entrances',
+    layer: 'Underworld Entrances',
     mapFeatureId: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-3',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Herakles_Kerberos_Eurystheus_Louvre_E701.jpg/1280px-Herakles_Kerberos_Eurystheus_Louvre_E701.jpg'],
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
@@ -15246,7 +15239,7 @@ const chunk_4: any[] = [  {
     parentId: 'underworld',
     name: 'The Gates of Hell',
     description: 'An urban legend centered on a series of underground storm tunnels in Philadelphia. Local lore describes satanic rituals, mysterious bone deposits, and physical manifestations of the devil. Paranormal researchers note anomalous electromagnetic readings and acoustic frequencies that cause extreme dread.',
-    layer: 'Portals / Stargates / Underworld / Hollow Earth Entrances',
+    layer: 'Underworld Entrances',
     mapFeatureId: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-4',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/La_puerta_del_Infierno_de_Rodin_del_museo_Soumaya_%28con_fondo_negro%29.jpg/1280px-La_puerta_del_Infierno_de_Rodin_del_museo_Soumaya_%28con_fondo_negro%29.jpg'],
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
@@ -15255,7 +15248,7 @@ const chunk_4: any[] = [  {
     parentId: 'underworld',
     name: 'Hekla Volcano',
     description: 'In medieval Europe, Christian writers declared this active Icelandic volcano to be one of the physical gates of Hell. Modern hollow-earth and UFO researchers claim to have witnessed metallic crafts entering and exiting the volcanic plume, suggesting a subterranean base hidden deep within the earth\'s crust.',
-    layer: 'Portals / Stargates / Underworld / Hollow Earth Entrances',
+    layer: 'Underworld Entrances',
     mapFeatureId: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-5',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/2006-05-21-153901_Iceland_St%C3%B3rin%C3%BApur.jpg/1280px-2006-05-21-153901_Iceland_St%C3%B3rin%C3%BApur.jpg'],
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
@@ -15264,7 +15257,7 @@ const chunk_4: any[] = [  {
     parentId: 'underworld',
     name: 'ATM Cave Belize- Actun Tunichil Muknal',
     description: 'Xibalba is described as a terrifying labyrinth filled with rivers of blood and scorpions, with demonic beings lurking about. The entrance to the Mayan underworld is said to be a cavern in Belize’s Tapir Mountain named Actun Tunichil Muknal, or Cave of the Crystal Sepulchre. Creeping inside feels like a scene from Indiana Jones’ Raiders of the Lost Ark: the dark, tight passages are littered with the skulls and bones of human sacrifices.',
-    layer: 'Portals / Stargates / Underworld / Hollow Earth Entrances',
+    layer: 'Underworld Entrances',
     mapFeatureId: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-6',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Actun_Tunichil_Muknal.jpg/1280px-Actun_Tunichil_Muknal.jpg'],
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
@@ -15273,7 +15266,7 @@ const chunk_4: any[] = [  {
     parentId: 'underworld',
     name: 'St Patrick\'s Purgatory',
     description: 'Pilgrims to St. Patrick’s Purgatory, a small 15th-century monastery on Station Island, risk getting stuck in limbo—possibly a fate worse than Hell. According to old Irish tales, St. Patrick visited the island, and Jesus appeared to him. The Lord showed him horrifying visions of Satan’s lair and pin-dropped a location to a cave that served as the entrance to purgatory. Soon after, a monastery was built to plug the narrow descending hole into Hell.',
-    layer: 'Portals / Stargates / Underworld / Hollow Earth Entrances',
+    layer: 'Underworld Entrances',
     mapFeatureId: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-7',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Lough_Derg_Station_Island_Basilica_SE_2009_09_17.jpg/1280px-Lough_Derg_Station_Island_Basilica_SE_2009_09_17.jpg'],
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
@@ -15282,7 +15275,7 @@ const chunk_4: any[] = [  {
     parentId: 'underworld',
     name: 'Stull Cemetery',
     description: 'One of Earth’s many gateways to Hell purportedly lies in the tiny Kansas town of Stull. Since the 1970s, rumors have swirled that the local cemetery is one of the world’s seven gates to Hell. Witnesses insist that every year on Halloween, Satan opens a portal among the tombstones. Some swear that they have seen an endless staircase leading down into a pit of flames. In 2002, the adjacent stone church was mysteriously knocked down, resulting in more gossip of the Devil’s doings in Stull.',
-    layer: 'Portals / Stargates / Underworld / Hollow Earth Entrances',
+    layer: 'Underworld Entrances',
     mapFeatureId: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-8',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Stull_Intersection.JPG/1280px-Stull_Intersection.JPG'],
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
@@ -15291,7 +15284,7 @@ const chunk_4: any[] = [  {
     parentId: 'underworld',
     name: 'Hells Gate National Park',
     description: 'A national park near Nairobi proudly calls itself Hell’s Gate after the nickname given to a break in the cliffs by British explorers in 1880. Fittingly for Satan’s lair, the park is a hotbed of geothermic activity. Volcanoes belch out plumes of steam, and the grounds are marked by ash and sulfuric hot springs. Vultures and buzzards whizz around the towering red cliffs and Hell’s Gate gap, adding to the park’s Satanic atmosphere.',
-    layer: 'Portals / Stargates / Underworld / Hollow Earth Entrances',
+    layer: 'Underworld Entrances',
     mapFeatureId: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-9',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Hell%27s_Gate%2C_Kenya.jpg/1280px-Hell%27s_Gate%2C_Kenya.jpg'],
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
@@ -15300,7 +15293,7 @@ const chunk_4: any[] = [  {
     parentId: 'underworld',
     name: 'Lacus Curtius',
     description: 'The Roman Forum is one of the Italian capital’s most popular attractions, yet the majority of sightseers have no clue that they are treading near a gate to Hell. Look for a pit called Lacus Curtius: a tablet surrounded by rubble surreptitiously marks this entrance to the netherworld. The ancient historian Livy wrote that an oracle foretold Rome’s doom unless citizens sacrificed what was dearest to the city. A chasm to Hell opened up, and soldier Marcus Curtius charged in because he realized the Roman legion was of greatest value to the city. Curtius’ sacrifice saved the people, and a carved stone of his armored figure now sits at the mouth to Hell.',
-    layer: 'Portals / Stargates / Underworld / Hollow Earth Entrances',
+    layer: 'Underworld Entrances',
     mapFeatureId: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-10',
     images: ['https://upload.wikimedia.org/wikipedia/commons/8/86/RomaForoRomanoLacusCurtius.jpg'],
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
@@ -15309,7 +15302,7 @@ const chunk_4: any[] = [  {
     parentId: 'underworld',
     name: 'Antro della Sibilla',
     description: 'Naples, Italy, also has a gateway to Hell called the Cave of the Sibyl, which was described by Virgil over 2000 years ago in The Aeneid: “The gates of Hell are open night and day. Smooth the descent, and easy is the way…” According to the poet, the Trojan hero Aeneas met the oracle Sibyl here, and she guided him through the cave into Hell. In 1932, after centuries of searching, explorers finally uncovered this entrance to the netherworld. Today, visitors to Cumae Archaeological Site can go inside Sibyl’s cave and walk through her coffin-shaped rock-cut passageways.',
-    layer: 'Portals / Stargates / Underworld / Hollow Earth Entrances',
+    layer: 'Underworld Entrances',
     mapFeatureId: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-11',
     images: ['https://upload.wikimedia.org/wikipedia/commons/b/b2/INC-1813-r_%D0%90%D1%83%D1%80%D0%B5%D1%83%D1%81_%D0%BE%D0%BA._43_%D0%B3._%D0%B4%D0%BE_%D0%BD._%D1%8D._%D0%9C%D0%BE%D0%BD%D0%B5%D1%82%D0%B0%D1%80%D0%B8%D0%B8_%D0%9E%D0%BA%D1%82%D0%B0%D0%B2%D0%B8%D0%B0%D0%BD_%D0%9B%D1%8E%D1%86%D0%B8%D0%B9_%D0%A6%D0%B5%D1%81%D1%82%D0%B8%D0%B9_%D0%B8_%D0%93%D0%B0%D0%B9_%D0%9D%D0%BE%D1%80%D0%B1%D0%B0%D0%BD_%28%D1%80%D0%B5%D0%B2%D0%B5%D1%80%D1%81%29.png'],
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
@@ -15318,7 +15311,7 @@ const chunk_4: any[] = [  {
     parentId: 'underworld',
     name: 'Mictlan México',
     description: 'For the Aztecs, Mictlan is the “place of the dead” that consists of nine levels ruled by two skull-faced death gods. You can get a glimpse of the Aztec underworld at Mitla, an archaeological ruin formerly called Mictlan and located near Oaxaca, a city known for its vivacious Day of the Dead celebrations. With bright red painted walls and dozens of tombs beneath the rubble, Mitla certainly looks like a gateway to Hell.',
-    layer: 'Portals / Stargates / Underworld / Hollow Earth Entrances',
+    layer: 'Underworld Entrances',
     mapFeatureId: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-12',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Teopanzolco_%28cropped%29.jpg/1280px-Teopanzolco_%28cropped%29.jpg'],
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
@@ -15327,7 +15320,7 @@ const chunk_4: any[] = [  {
     parentId: 'underworld',
     name: 'Houska castle',
     description: 'Located north of Prague, Houska Castle is a 13th-century Gothic masterpiece that purportedly sits atop Hell’s Gate. According to local lore, the castle’s chapel was built to cover an enormous hole in the ground that served as a Satanic threshold. The defensive walls also prevented demons and other ghastly creatures from crawling out of the hellhole. Houska Castle is still considered haunted, and tourists have reported seeing headless horses and demonic winged beasts lurking in the halls.',
-    layer: 'Portals / Stargates / Underworld / Hollow Earth Entrances',
+    layer: 'Underworld Entrances',
     mapFeatureId: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-13',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Burg_Houska.jpg/1280px-Burg_Houska.jpg'],
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
@@ -15336,7 +15329,7 @@ const chunk_4: any[] = [  {
     parentId: 'underworld',
     name: 'St Louis Cemetery No 2',
     description: 'A labyrinth of above-ground tombs in New Orleans. Esoteric researchers claim the cemetery sits on a powerful intersection of voodoo energy lines, with hidden subterranean chambers beneath the tombs used for secret society initiations and inter-dimensional rituals.',
-    layer: 'Portals / Stargates / Underworld / Hollow Earth Entrances',
+    layer: 'Underworld Entrances',
     mapFeatureId: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-14',
     images: ['https://upload.wikimedia.org/wikipedia/commons/b/be/All_Saints_Day_in_New_Orleans_--_Decorating_the_Tombs.jpg'],
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
@@ -15345,7 +15338,7 @@ const chunk_4: any[] = [  {
     parentId: 'underworld',
     name: 'Gates of Guinee - St. Louis Cemetery No. 1',
     description: 'Voodoo mythology says that the dead are sent to a purgatory called Guinee before continuing to travel to the “deep waters” of their ancestors. Some believe that powerful voodoo masters can open the seven gates to the spirit world and reclaim the souls of the dead or turn them into zombie-like creatures for nefarious purposes. The Gates of Guinee is said to be found in the graveyards of New Orleans, perhaps at the tomb of voodoo queen Marie Laveau in the St. Louis Cemetery. Those making the journey to Guinee must open all seven gates in sequence and appease the loa or spirit guarding each one.',
-    layer: 'Portals / Stargates / Underworld / Hollow Earth Entrances',
+    layer: 'Underworld Entrances',
     mapFeatureId: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-15',
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
   },  {
@@ -15353,7 +15346,7 @@ const chunk_4: any[] = [  {
     parentId: 'underworld',
     name: 'Pluto’s Gate - Hierapolis',
     description: 'According to storytellers, Turkey has an opening to Greco-Roman Hell called Pluto’s Gate. Toxic mists waft out from the pit, sending priests into hallucinations and causing some to die. Pluto’s Gate was written off as a fable until it was unexpectedly discovered in 2013. Archaeologists uncovered a carved arch opening in the Temple of Pluto, with fumes spewing from the thermal springs deep below. These carbon dioxide vapors can kill birds and other small animals that get too close to this “Satanic temple,” making it one of the scariest gates of Hell on Earth.',
-    layer: 'Portals / Stargates / Underworld / Hollow Earth Entrances',
+    layer: 'Underworld Entrances',
     mapFeatureId: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-16',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Plutonium_%28Pluto%27s_Gate%29_in_Hierapolis_01.jpg/1280px-Plutonium_%28Pluto%27s_Gate%29_in_Hierapolis_01.jpg'],
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
@@ -15362,7 +15355,7 @@ const chunk_4: any[] = [  {
     parentId: 'underworld',
     name: 'Cape Matapan',
     description: 'A dark, sea-level cave where Hercules and Orpheus supposedly descended into the underworld. Hollow Earth researchers suggest this cave system descends far deeper than mapped, connecting to a subterranean highway network used by non-human civilizations.',
-    layer: 'Portals / Stargates / Underworld / Hollow Earth Entrances',
+    layer: 'Underworld Entrances',
     mapFeatureId: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-18',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Cape_Matapan_08.JPG/1280px-Cape_Matapan_08.JPG'],
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
@@ -15371,7 +15364,7 @@ const chunk_4: any[] = [  {
     parentId: 'underworld',
     name: 'Chinoike Jigoku',
     description: 'Chinoike Jigoku is presided over by a collection of sculpted demons, some carved into the rocks themselves. The Buddhists likened the appearance of the pool to the bubbling pits of hell, and in times gone by the Bloody Hell Pond – reckoned at around 78 degrees Celsius—was sometimes used to torture prisoners before boiling them alive.',
-    layer: 'Portals / Stargates / Underworld / Hollow Earth Entrances',
+    layer: 'Underworld Entrances',
     mapFeatureId: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-20',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/180131_Umi-Jigoku.jpg/1280px-180131_Umi-Jigoku.jpg'],
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
@@ -15380,7 +15373,7 @@ const chunk_4: any[] = [  {
     parentId: 'underworld',
     name: 'Templo de San Pablo Etla',
     description: 'Writing in 1674, a Dominican chronicler named Francisco Burgoa described an extensive cavity in the earth at Mitla, which a group of Spanish missionaries decided to explore. But when they descended into the maze, “such was the corruption and bad smell, the dampness of the floor, and a cold wind which extinguished the lights, that at the little distance they had already penetrated … they resolved to come out, and ordered this infernal gate to be thoroughly closed with masonry,” wrote Burgoa, per a translation.',
-    layer: 'Portals / Stargates / Underworld / Hollow Earth Entrances',
+    layer: 'Underworld Entrances',
     mapFeatureId: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-21',
     images: ['https://upload.wikimedia.org/wikipedia/commons/e/ea/MonteAlbanWest.jpg'],
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
@@ -15389,7 +15382,7 @@ const chunk_4: any[] = [  {
     parentId: 'underworld',
     name: 'Caesarea Philippi - Gates of Hell',
     description: 'An ancient sanctuary built around a bottomless spring in the cave of Pan. In biblical times, it was known as the \'Gates of Sheol.\' Conspiracists suggest the site was a center for pagan sacrifice and Nephilim ritual magic, designed to draw entities through a natural dimensional portal.',
-    layer: 'Portals / Stargates / Underworld / Hollow Earth Entrances',
+    layer: 'Underworld Entrances',
     mapFeatureId: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-23',
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
   },  {
@@ -15397,7 +15390,7 @@ const chunk_4: any[] = [  {
     parentId: 'underworld',
     name: 'The North Pole (approximate)',
     description: 'The legendary entry point described by Admiral Richard E. Byrd during his high-secret expeditions. Conspiracists believe the North Pole hides a massive opening into the Hollow Earth, covered up by military flight restrictions and airbrushed satellite imagery to hide the inner sun and its advanced civilizations.',
-    layer: 'Portals / Stargates / Underworld / Hollow Earth Entrances',
+    layer: 'Underworld Entrances',
     mapFeatureId: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-24',
     images: ['https://upload.wikimedia.org/wikipedia/commons/c/c6/Star_Trail_above_Beccles_-_geograph.org.uk_-_1855505.jpg'],
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
@@ -15406,7 +15399,7 @@ const chunk_4: any[] = [  {
     parentId: 'underworld',
     name: 'The South Pole',
     description: 'A highly militarized zone under the guise of scientific research (Project Deep Freeze). Rumors persist of ancient ruins under the ice, secret Nazi bases (New Swabia), and a massive thermal entrance into the inner earth that is monitored by global militaries.',
-    layer: 'Portals / Stargates / Underworld / Hollow Earth Entrances',
+    layer: 'Underworld Entrances',
     mapFeatureId: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-25',
     images: ['https://upload.wikimedia.org/wikipedia/commons/5/59/Pole-south.gif'],
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
@@ -15415,7 +15408,7 @@ const chunk_4: any[] = [  {
     parentId: 'underworld',
     name: 'Mammoth Cave',
     description: 'The longest cave system in the world. Deep within its uncharted, thousands-of-miles of passageways, conspiracy theorists claim there are entrances to Agartha—the subterranean empire. Reports of encounters with subterranean reptilian humanoids and lost civilizations have been suppressed by national park authorities.',
-    layer: 'Portals / Stargates / Underworld / Hollow Earth Entrances',
+    layer: 'Underworld Entrances',
     mapFeatureId: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-26',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Mammoth_Cave_Rotunda_%28USGS_Lwt02830%29.jpg/1280px-Mammoth_Cave_Rotunda_%28USGS_Lwt02830%29.jpg'],
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
@@ -15449,7 +15442,7 @@ const chunk_4: any[] = [  {
     parentId: 'megaliths-structures',
     name: 'Geoglyphs & Earthworks',
     description: 'Massive prehistoric ground designs, desert glyphs, and ceremonial alignments.',
-    layer: 'Geoglyphs & Earthworks'
+    layer: 'Megaliths / Structures'
   },  {
     id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-0',
     parentId: 'megaliths',
@@ -15469,14 +15462,6 @@ const chunk_4: any[] = [  {
     mapFeatureId: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-1',
     sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
   },  {
-    id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-2',
-    parentId: 'megaliths',
-    name: 'Göbeklitepe',
-    description: 'At over 12,000 years old, this massive stone complex completely rewrites human history. Built by a highly advanced, unknown civilization before the invention of agriculture, its carvings serve as a warning of a past cosmic catastrophe, possibly a comet impact that reset human progress.',
-    layer: 'Megaliths / Structures',
-    mapFeatureId: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-2',
-    sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
-  },  {
     id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-3',
     parentId: 'megaliths',
     name: 'Easter Island Moai',
@@ -15489,7 +15474,7 @@ const chunk_4: any[] = [  {
     parentId: 'geoglyphs-br',
     name: 'Nazca Lines',
     description: 'A massive, ancient runway system and communication array designed to be viewed only from the sky. These geoglyphs align with specific stellar constellations and serve as a pre-historic landing strip for extraterrestrial visitors, or a massive celestial calendar built by lost civilizations.',
-    layer: 'Geoglyphs & Earthworks',
+    layer: 'Megaliths / Structures',
     mapFeatureId: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-5',
     sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
   },  {
@@ -15497,7 +15482,7 @@ const chunk_4: any[] = [  {
     parentId: 'geoglyphs-br',
     name: 'Uffington White Horse',
     description: 'This stylized chalk figure is far older than conventional archaeology claims. Rather than a horse, some suspect it represents a dragon or a stellar constellation. It is situated on a major intersection of English lay lines, serving as a beacon for aerial travelers or a monument to an ancient dragon-worshiping culture.',
-    layer: 'Geoglyphs & Earthworks',
+    layer: 'Megaliths / Structures',
     mapFeatureId: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-6',
     sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
   },  {
@@ -15505,7 +15490,7 @@ const chunk_4: any[] = [  {
     parentId: 'geoglyphs-br',
     name: 'Candelabro de Paracas (Candelabra of Paracas)',
     description: 'Etched deep into a Peruvian hillside, this giant geoglyph points directly toward the Nazca Lines and the global lay line grid. Some believe it represents a lightning bolt of the god Viracocha, while others suggest it served as a navigational beacon for ancient trans-oceanic—or celestial—navigators.',
-    layer: 'Geoglyphs & Earthworks',
+    layer: 'Megaliths / Structures',
     mapFeatureId: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-7',
     sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
   },  {
@@ -15513,7 +15498,7 @@ const chunk_4: any[] = [  {
     parentId: 'geoglyphs-br',
     name: 'Blythe Intaglios',
     description: 'Colossal human and animal figures carved into the California desert floor, invisible except from high altitudes. Local tribes speak of these representing the creator Mastamho, but alternative historians believe they were coordinates or signaling markers for sky deities.',
-    layer: 'Geoglyphs & Earthworks',
+    layer: 'Megaliths / Structures',
     mapFeatureId: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-8',
     sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
   },  {
@@ -15521,7 +15506,7 @@ const chunk_4: any[] = [  {
     parentId: 'geoglyphs-br',
     name: 'Steppe Geoglyphs',
     description: 'Discovered via satellite in Kazakhstan, these massive geometric shapes (squares, rings, crosses) span several football fields. Dating back over 8,000 years, they predate all known civilizations in the region, suggesting a highly organized, lost civilization that utilized sacred geometry on a planetary scale.',
-    layer: 'Geoglyphs & Earthworks',
+    layer: 'Megaliths / Structures',
     mapFeatureId: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-9',
     sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
   },  {
@@ -15716,7 +15701,7 @@ const chunk_4: any[] = [  {
     parentId: 'megaliths',
     name: 'Angkor Wat',
     description: 'A massive temple complex in Cambodia. Alternative history researchers highlight its mirror alignment with the constellation Draco during the spring equinox in 10,500 BC, suggesting it was built on an ancient planetary grid aligned with celestial markers and constructed by a pre-diluvian civilization using lost geodetic knowledge.',
-    layer: 'Megaliths / Dolmans / Petroglyphs / Geoglyphs',
+    layer: 'Megaliths / Structures',
     mapFeatureId: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-35',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Buddhist_monks_in_front_of_the_Angkor_Wat.jpg/1280px-Buddhist_monks_in_front_of_the_Angkor_Wat.jpg'],
     sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
@@ -15736,7 +15721,7 @@ const chunk_4: any[] = [  {
     secondaryParentIds: ['aztec-civilization'],
     name: 'Teotihuacan',
     description: 'A massive ancient city in Mexico featuring the Pyramids of the Sun and Moon. Alternative theorists highlight that the city\'s layout is a physical representation of a computer circuit board, and that the Pyramid of the Sun contains a layer of imported sheet mica designed to act as an electromagnetic insulator or radiation shield.',
-    layer: 'Megaliths / Dolmans / Petroglyphs / Geoglyphs',
+    layer: 'Megaliths / Structures',
     mapFeatureId: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-38',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Teotihuac%C3%A1n-5973.JPG/1280px-Teotihuac%C3%A1n-5973.JPG'],
     sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
@@ -15781,7 +15766,7 @@ const chunk_4: any[] = [  {
     id: 'gobekli-tepe',
     parentId: 'megaliths',
     name: 'Göbekli Tepe',
-    description: 'The oldest known temple complex in the world, dating to ~9600 BC. Features massive T-shaped stone pillars carved with wild animals.',
+    description: 'At over 12,000 years old, this is the oldest known temple complex in the world (~9600 BC), completely rewriting human history. Built by a highly advanced, unknown civilization before the invention of agriculture, its massive T-shaped stone pillars are carved with wild animals. Its construction may serve as a warning of a past cosmic catastrophe — possibly a comet impact that reset human progress.',
     relatedIds: ['great-flood', 'watchers'],
     layer: 'Megaliths / Structures',
     mapFeatureId: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-37',
@@ -17614,14 +17599,14 @@ const chunk_4: any[] = [  {
     parentId: 'megaliths-structures',
     name: 'D.U.M.B.\'s',
     description: 'Deep Underground Military Bases alleged to exist across the United States, connected by high-speed subterranean rail lines.',
-    layer: 'D.U.M.B.\'s',
+    layer: "D.U.M.B.'s",
     secondaryParentIds: ['supernatural-anomalies']
   },  {
     id: 'anomaly-D-U-M-B-s-0',
     parentId: 'dumbs',
     name: 'Cheyenne Mountain Complex',
     description: 'Purpose: Originally built as the headquarters for NORAD (North American Aerospace Defense Command), it’s a Cold War-era bunker designed to withstand nuclear attack. Approximate Coordinates: 38.7443° N, 104.8467° W Details: Located inside Cheyenne Mountain, about 2,000 feet underground, it spans over 150,000 square feet. While some NORAD functions have moved to Peterson Space Force Base, it remains active for classified missions.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-0',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Cheyenne_Mountain_Space_Force_Station_Base_Upgrade_Photos_%288248119%29.jpg/1280px-Cheyenne_Mountain_Space_Force_Station_Base_Upgrade_Photos_%288248119%29.jpg'],
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
@@ -17630,7 +17615,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'Raven Rock Mountain Complex (Site R)',
     description: 'Purpose: Known as the “Underground Pentagon,” it’s a key continuity-of-government facility for the Department of Defense. Approximate Coordinates: 39.7340° N, 77.4190° W Details: Situated under Raven Rock Mountain near the Pennsylvania-Maryland border, it can house thousands of personnel and includes extensive communication systems.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-1',
     images: ['https://upload.wikimedia.org/wikipedia/commons/b/b4/Raven-rock-site-r-logo.png'],
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
@@ -17639,7 +17624,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'Mount Weather Emergency Operations Center',
     description: 'Purpose: Managed by FEMA, it serves as a hub for emergency coordination and continuity of government during national crises. Approximate Coordinates: 39.0638° N, 77.8880° W Details: Located about an hour from Washington, D.C., this facility includes underground bunkers and above-ground support structures, with a focus on disaster response rather than direct military operations.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-2',
     images: ['https://upload.wikimedia.org/wikipedia/commons/8/8e/MountWeatherFEMA.jpg'],
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
@@ -17648,7 +17633,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'Dulce Base',
     description: 'Claim: Alleged to be a joint human-alien underground facility under Archuleta Mesa, popularized by conspiracy theorists like Paul Bennewitz and John Lear. Approximate Coordinates: 36.9370° N, 106.9980° W Details: Stories suggest secret experiments and alien activity, but no credible evidence supports its existence. Local UFO sightings fuel the legend.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-3',
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
   },  {
@@ -17656,7 +17641,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'Deep Springs',
     description: 'Claim: Suggested by some to be an extension of secret facilities tied to the Nevada Test Site, possibly for advanced technology or covert ops. Approximate Coordinates: 37.3750° N, 117.9667° W Details: Mentioned in fringe sources, but no solid evidence exists beyond gravity anomaly speculations.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-5',
     images: ['https://upload.wikimedia.org/wikipedia/commons/3/33/Logo_of_Deep_Springs_College.png'],
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
@@ -17665,7 +17650,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'Kapustin Yar',
     description: 'Purpose: A secretive missile and aerospace testing site, rumored to have underground components. Approximate Coordinates: 48.5833° N, 45.8333° E Details: Known as Russia’s “Area 51,” its underground extent is unconfirmed but speculated due to its role in sensitive projects.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-6',
     images: ['https://upload.wikimedia.org/wikipedia/commons/f/f7/Mo_narznaki108_1.png'],
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
@@ -17674,7 +17659,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'Pine Gap',
     description: 'Purpose: A joint U.S.-Australian intelligence facility, with reported underground sections for surveillance and communication. Approximate Coordinates: 23.7990° S, 133.7370° E Details: Officially a satellite tracking station, its underground scope is classified.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-7',
     images: ['https://upload.wikimedia.org/wikipedia/commons/c/cc/Pine_Gap_by_Skyring.jpg'],
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
@@ -17683,7 +17668,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'Zeljava Air Base',
     description: 'Purpose: A former Yugoslav underground air base, built into a mountain to protect aircraft during the Cold War. Approximate Coordinates: 44.8360° N, 15.7580° E Details: Abandoned since the Yugoslav Wars, it’s one of the largest known underground bases in Europe, though no longer active.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-8',
     images: ['https://upload.wikimedia.org/wikipedia/commons/4/4c/%C5%BDeljava%2C_Runway_1.jpg'],
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
@@ -17692,7 +17677,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'Tehachapi Ranch',
     description: 'Claim: Alleged to be a massive underground facility operated by Lockheed Martin or Northrop Grumman for advanced aerospace projects, possibly tied to reverse-engineered alien tech. Approximate Location: 35.1310° N, 118.4490° W (near Tehachapi city) Details: Stories suggest tunnels extend under the Tehachapi Mountains, with claims of secret aircraft testing and ET collaboration. No evidence beyond anecdotal reports exists.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-9',
     images: ['https://upload.wikimedia.org/wikipedia/commons/3/33/EastTehachapiCrest.jpg'],
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
@@ -17701,7 +17686,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'Greenbrier Bunker Extension',
     description: 'Claim: Beyond the known Cold War-era Greenbrier bunker (declassified in 1992), some allege a deeper, still-classified DUMB exists beneath it for elite survival or experiments. Approximate Location: 37.7860° N, 80.3050° W Details: The known bunker was built for Congress under a hotel, but conspiracy narratives extend it to a multi-level complex tied to broader DUMB networks.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-10',
     images: ['https://upload.wikimedia.org/wikipedia/commons/b/bb/Greenbrier1.jpg'],
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
@@ -17710,7 +17695,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'Denver International Airport',
     description: 'Claim: Widely speculated to house a DUMB beneath its sprawling runways, possibly for New World Order operations or alien detention. Approximate Location: 39.8617° N, 104.6732° W Details: Fueled by its odd art, vast size, and barbed-wire fencing facing inward, theorists claim underground levels span miles, though official records only confirm utility spaces.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-11',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DenverAirport2023.jpg/1280px-DenverAirport2023.jpg'],
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
@@ -17719,7 +17704,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'Tonopah Test Range',
     description: 'Claim: Beyond its known role in testing aircraft like the F-117, some allege an underground base connects to Area 51 for secret projects. Approximate Location: 37.7980° N, 116.7800° W Details: Said to house advanced weaponry or alien craft, with tunnels linking to other Nevada sites, but no concrete proof supports this.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-12',
     images: ['https://upload.wikimedia.org/wikipedia/commons/d/d4/Jfader_tonopah_airfield2.jpg'],
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
@@ -17728,7 +17713,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'China Lake',
     description: 'Claim: The Naval Air Weapons Station China Lake is said to conceal a DUMB for weapons testing and extraterrestrial research. Approximate Location: 35.6850° N, 117.6920° W Details: Alleged to be a hub for scalar weapons or mind control experiments, tied to seismic activity blamed on underground construction.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-13',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/US_Navy_051215-N-9277A-003_An_F-A-18F_Super_Hornet_assigned_to_Air_Test_and_Evaluation_Squadron_Nine_%28VX-9%29_returns_to_its%27_home_at_Naval_Air_Weapons_Station_%28NAWS%29_China_Lake.jpg/1280px-thumbnail.jpg'],
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
@@ -17737,7 +17722,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'Yulin Naval Base Extension',
     description: 'Claim: Beyond its known underground submarine pens, some allege a deeper DUMB for bioweapons or extraterrestrial tech. Approximate Location: 18.2240° N, 109.5260° E Details: Visible tunnel entrances exist, but conspiracy theories expand it into a vast complex, unverified by official sources.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-14',
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
   },  {
@@ -17745,7 +17730,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'Mount Yamantau',
     description: 'Claim: Purported to be a massive underground city or DUMB for Russian leadership survival, far exceeding its official “mining” purpose. Approximate Location: 54.2550° N, 58.1050° E Details: U.S. satellite imagery shows construction, but its scale and purpose remain speculative, with DUMB claims adding alien or doomsday elements.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-15',
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
   },  {
@@ -17753,7 +17738,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'Porton Down',
     description: 'Claim: Beyond its known bioweapons research, some allege an underground complex for secret experiments, possibly tied to NATO DUMBs. Approximate Location: 51.1290° N, 1.7010° W Details: Said to link to other UK bases, with unverified stories of chemical or alien research.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-16',
     images: ['https://upload.wikimedia.org/wikipedia/commons/4/4a/Who_left_the_gate_open%5E_-_geograph.org.uk_-_1706982.jpg'],
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
@@ -17762,7 +17747,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'The White House',
     description: 'An underground presidential command bunker (PEOC) extending deep into the earth. Purported to house cryogenic chambers, classified executive archives, and secret underground transit tunnels linking to Mount Weather and Raven Rock.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-17',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/White_House_north_and_south_sides.jpg/1280px-White_House_north_and_south_sides.jpg'],
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
@@ -17771,7 +17756,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'Brooks Range',
     description: 'A covert subterranean facility hidden beneath the remote Alaskan permafrost. Rumored to monitor high-frequency atmospheric activities (linked to HAARP) and study anomalous energy pockets deep within the earth.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-18',
     images: ['https://upload.wikimedia.org/wikipedia/commons/0/05/Caribou_with_brooks_range_mountains_in_background.jpg'],
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
@@ -17780,7 +17765,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'Delta Junction',
     description: 'A high-security underground computing hub in Alaska, serving as a primary command-and-control node for northern missile defense arrays and advanced electronic warfare research.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-19',
     images: ['https://upload.wikimedia.org/wikipedia/commons/2/20/Ende_des_Alaska_Highways.jpg'],
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
@@ -17789,7 +17774,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'Fort Greely',
     description: 'Known for ground-based missile interceptors, but conspiracy theorists claim it hides a multi-level subterranean facility housing quantum computing laboratories and experimental aerospace technologies.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-20',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Interceptor_Missile.jpg/1280px-Interceptor_Missile.jpg'],
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
@@ -17798,7 +17783,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'Fort Huachuca',
     description: 'A massive subterranean NSA and military intelligence signals collection hub. Purported to host electronic surveillance arrays, underground communications routing, and classified remote viewing operations.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-21',
     images: ['https://upload.wikimedia.org/wikipedia/commons/7/7e/Old_Fort_Huachuca.jpg'],
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
@@ -17807,7 +17792,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'Luke Air Force Base',
     description: 'Rumored to feature a vast underground hangar and laboratory network, connected by tunnel systems to Area 51, dedicated to reverse-engineering exotic and classified aerospace technologies.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-22',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/F-35s_new_home_%2816122656366%29.jpg/1280px-F-35s_new_home_%2816122656366%29.jpg'],
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
@@ -17816,7 +17801,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'Page',
     description: 'A critical western logistics node near Lake Powell, linking Area 51 to the eastern network. Rumored to utilize massive amounts of hydroelectric power from Glen Canyon Dam for classified experiments.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-23',
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
   },  {
@@ -17824,7 +17809,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'Sedona',
     description: 'Reported detainment camp. Located under the Enchantment Resort in Boynton Canyon',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-24',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Cathedral_Rock_-_Sedona_AZ-1.jpg/1280px-Cathedral_Rock_-_Sedona_AZ-1.jpg'],
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
@@ -17833,7 +17818,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'Wikieup',
     description: 'A highly secure underground switching station and communications relay in the Arizona desert, routing high-speed subterranean maglev trains between Area 51, Phoenix, and Tucson.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-25',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Wikieup-Snoopy_Rocket-1960-2.jpg/1280px-Wikieup-Snoopy_Rocket-1960-2.jpg'],
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
@@ -17842,7 +17827,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'Yucca',
     description: 'Located near the Yucca Mountain nuclear repository, this deep geological vault is rumored to serve as a cover for a classified storage base housing exotic materials, recovered debris, and advanced propulsion prototypes.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-26',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Yucca_elata_-_tmcelrath_01.jpg/1280px-Yucca_elata_-_tmcelrath_01.jpg'],
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
@@ -17851,7 +17836,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'Fort Stockton',
     description: 'A subterranean border logistics and supply depot in West Texas, connecting southern military monitoring systems with the larger nationwide underground maglev network.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-27',
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
   },  {
@@ -17859,7 +17844,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'Carlsbad',
     description: 'Rumored to utilize the massive natural Carlsbad cavern system as a cover for a deep-underground archiving vault, storing classified national security documents and biological seed repositories.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-28',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/CarlsbadSignDowntownJune2020.jpeg/1280px-CarlsbadSignDowntownJune2020.jpeg'],
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
@@ -17868,7 +17853,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'Chihuahua',
     description: 'A joint-operation subterranean monitoring base located under the desert, rumored to monitor tectonic activities and test electronic border surveillance networks.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-29',
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
   },  {
@@ -17876,7 +17861,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'Los Alamos',
     description: 'The historical birthplace of atomic weapons. Purported to house a massive subterranean physics lab extending miles deep, researching advanced thermodynamics, genetics, and dimensional doorway phenomena.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-30',
     images: ['https://upload.wikimedia.org/wikipedia/commons/7/7f/Los_Alamos_Aerial.jpg'],
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
@@ -17885,7 +17870,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'Las Vegas',
     description: 'Purported to house a major underground control center beneath Nellis AFB, managing black-budget financial routing systems, drone-fleet operations, and VIP evacuation bunkers.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-31',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Las_Vegas_from_above_%2840064746644%29.jpg/1280px-Las_Vegas_from_above_%2840064746644%29.jpg'],
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
@@ -17894,7 +17879,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'Irvine',
     description: 'A deep underground tactical command post beneath the Orange County hills, serving as a high-tech communications hub and a terminal for the high-speed shuttle line running to Death Valley.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-32',
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
   },  {
@@ -17902,7 +17887,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'Vandenberg Space Force Base',
     description: 'A primary underground launch control facility, housing secret space-defense systems and silos for classified orbital vehicles, connected to Edwards AFB via the subterranean \'Line 59\'.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-33',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Delta_IV_launch_2013-08-28.jpg/1280px-Delta_IV_launch_2013-08-28.jpg'],
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
@@ -17911,7 +17896,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'Shasta',
     description: 'Legend-shrouded subterranean city beneath Mount Shasta. Supposedly a highly advanced joint-habitation facility housing high-tech research, cloaked energy grids, and geothermal power systems.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-34',
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
   },  {
@@ -17919,7 +17904,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'Salt Lake City',
     description: 'A vast underground network under the temple lot and downtown SLC. Rumored to house extensive genetic databases, continuity archives, and act as a major junction in the national military maglev network.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-35',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Salt_Lake_Union_Pacific_Railroad_Station%2C_South_Temple_at_400_West%2C_Central_City_West%2C_Salt_Lake_City%2C_UT%2C_USA.jpg/1280px-Salt_Lake_Union_Pacific_Railroad_Station%2C_South_Temple_at_400_West%2C_Central_City_West%2C_Salt_Lake_City%2C_UT%2C_USA.jpg'],
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
@@ -17928,7 +17913,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'Riverton',
     description: 'A mid-country subterranean logistics depot in Wyoming, rumored to store massive strategic reserves of food, water, and medical equipment for continuity-of-government scenarios.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-36',
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
   },  {
@@ -17936,7 +17921,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'Unknown Area',
     description: 'Somewhere around these parts...',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-37',
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
   },  {
@@ -17944,7 +17929,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'Kinsley',
     description: 'Situated at the geographic center of the United States. Rumored to be a primary routing and switching junction for the transcontinental subterranean maglev system, linking the east and west coast networks.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-38',
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
   },  {
@@ -17952,7 +17937,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'Hutchinson',
     description: 'Sits above the massive salt mines, which conspiracy theorists claim serve as a cover for a vast underground storage facility holding millions of classified paper documents, corporate archives, and national treasures.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-39',
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
   },  {
@@ -17960,7 +17945,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'Tulsa',
     description: 'A deep-underground communications and radar station in Oklahoma, acting as a major junction point for maglev lines passing through the midwest.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-40',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Tulsa_skyline_aerial%2C_April_2023.jpg/1280px-Tulsa_skyline_aerial%2C_April_2023.jpg'],
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
@@ -17969,7 +17954,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'Palms',
     description: 'A desert node near Twentynine Palms, rumored to be a subterranean training facility and testing ground for experimental infantry equipment and robotic combat units.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-41',
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
   },  {
@@ -17977,7 +17962,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'Fort Irwin',
     description: 'Home to the National Training Center, it is rumored to sit atop a massive subterranean training base where simulated underground warfare, combat simulation, and tunnel navigation are researched.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-42',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/National_Training_Center_SSI.svg/1280px-National_Training_Center_SSI.svg.png'],
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
@@ -17986,7 +17971,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'Benicia',
     description: 'A historical military site rumored to house an active underground terminal and naval facility, linking northern California\'s bay area installations to the deep network.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-43',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/CABeniciaCapitol0152.jpg/1280px-CABeniciaCapitol0152.jpg'],
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
@@ -17995,7 +17980,7 @@ const chunk_4: any[] = [  {
     parentId: 'dumbs',
     name: 'Santa Catalina Island',
     description: 'Tunnels to: I was told by someone who worked at the Port Hueneme Naval Weapons Division Base in Oxnard that they have heard and it is ‘common rumor’ that there is a tunnel from the base to this Island, and also to Edwards Air Force Base, possibly utilizing old mines.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-44',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Santa_Catalina_Island_%28California%29_by_Sentinel-2%2C_2019-03-30.jpg/1280px-Santa_Catalina_Island_%28California%29_by_Sentinel-2%2C_2019-03-30.jpg'],
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
@@ -18007,7 +17992,7 @@ const chunk_5: any[] = [  {
     parentId: 'dumbs',
     name: 'Chocolate Mountains',
     description: 'Tunnels to: Fort Irwin, California',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-45',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Chocolate_Mountains.jpg/1280px-Chocolate_Mountains.jpg'],
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
@@ -18016,7 +18001,7 @@ const chunk_5: any[] = [  {
     parentId: 'dumbs',
     name: 'Death Valley',
     description: 'Function: The entrance to the Death Valley Tunnel is in the Panamint Mountains down on the lower edge of the range near Wingate Pass, in the bottom of an abandoned mine shaft. The bottom of the shaft opens into an extensive tunnel system',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-46',
     images: ['https://upload.wikimedia.org/wikipedia/commons/9/98/Death_Valley_from_space.JPG'],
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
@@ -18025,7 +18010,7 @@ const chunk_5: any[] = [  {
     parentId: 'dumbs',
     name: 'tunnel',
     description: 'A purported subterranean high-speed maglev tunnel corridor connecting the Deep Springs node directly to the Salt Lake City node, allowing rapid and covert transport of military cargo and personnel.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-47',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Signalisation_routi%C3%A8re_entr%C3%A9e_sud_tunnel_du_Galibier.jpg/1280px-Signalisation_routi%C3%A8re_entr%C3%A9e_sud_tunnel_du_Galibier.jpg'],
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
@@ -18034,7 +18019,7 @@ const chunk_5: any[] = [  {
     parentId: 'dumbs',
     name: 'tunnels',
     description: 'A purported subterranean high-speed maglev tunnel corridor connecting the Tonopah Test Range node directly to the Benicia node, allowing rapid and covert transport of military cargo and personnel.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-51',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Signalisation_routi%C3%A8re_entr%C3%A9e_sud_tunnel_du_Galibier.jpg/1280px-Signalisation_routi%C3%A8re_entr%C3%A9e_sud_tunnel_du_Galibier.jpg'],
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
@@ -18043,7 +18028,7 @@ const chunk_5: any[] = [  {
     parentId: 'dumbs',
     name: 'Line 53',
     description: 'A designated high-speed subterranean maglev shuttle line (Line 53) in the sub-global military transit network, routing directly between the Unknown Area node and the Salt Lake City node.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-57',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Metro_Amsterdam_M5_Kraaiennest_4.JPG/1280px-Metro_Amsterdam_M5_Kraaiennest_4.JPG'],
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
@@ -18052,7 +18037,7 @@ const chunk_5: any[] = [  {
     parentId: 'dumbs',
     name: 'Edwards Air Force Base',
     description: 'Function: Aircraft Development – antigravity research and vehicle development Levels: Multiple Tunnels to: Catalina Island Fort Irwin, California Vandenburg AFB, California Notes: Delta Hanger – North Base, Edwards AFB, Ca. Haystack Buttte – Edwards, AFB, Ca.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-61',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/F-35_at_Edwards.jpg/1280px-F-35_at_Edwards.jpg'],
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
@@ -18061,7 +18046,7 @@ const chunk_5: any[] = [  {
     parentId: 'dumbs',
     name: 'Line 59',
     description: 'A designated high-speed subterranean maglev shuttle line (Line 59) in the sub-global military transit network, routing directly between the Edwards Air Force Base node and the Vandenberg Space Force Base node.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-64',
     images: ['https://upload.wikimedia.org/wikipedia/commons/0/07/Seventeenth_stellation_of_icosahedron.png'],
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
@@ -18070,7 +18055,7 @@ const chunk_5: any[] = [  {
     parentId: 'dumbs',
     name: 'Twentynine Palms',
     description: 'A massive subterranean installation beneath the Marine Corps base, housing advanced geological warfare labs, electromagnetic railgun research, and deep desert shelters.',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-65',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/29_Palms_looking_East_on_Hwy_62.jpg/1280px-29_Palms_looking_East_on_Hwy_62.jpg'],
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
@@ -18079,7 +18064,7 @@ const chunk_5: any[] = [  {
     parentId: 'dumbs',
     name: 'Helendale',
     description: 'Function: Special Aircraft Facility Helendale has an extensive railway/shipping system through it from the Union Pacific days which runs in from Salt Lake City, Denver, Omaha, Los Angeles and Chicago',
-    layer: 'D.U.M.B.s',
+    layer: "D.U.M.B.'s",
     mapFeatureId: 'anomaly-D-U-M-B-s-69',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Helendale%2C_California_aerial.jpg/1280px-Helendale%2C_California_aerial.jpg'],
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
@@ -20659,6 +20644,282 @@ const chunk_5: any[] = [  {
   }
 ];
 
+
+const chunk_6: any[] = [
+
+  // ── WITCHCRAFT & FOLK MAGIC ───────────────────────────────────────────────
+  {
+    id: 'witchcraft-folk-magic',
+    parentId: 'alchemy-occult',
+    name: 'Witchcraft & Folk Magic',
+    description: 'The practice of wielding supernatural or spiritual power through ritual, spell-casting, divination, and communion with spirits. Found in virtually every culture throughout recorded history, it encompasses a wide spectrum from ceremonial high magic to rural folk traditions and shamanic practices.',
+  },
+  {
+    id: 'witches',
+    parentId: 'witchcraft-folk-magic',
+    name: 'Witches',
+    description: 'Practitioners of witchcraft who draw upon spiritual forces, nature, and occult knowledge to cast spells, perform rituals, and interact with the unseen world. Historically persecuted by religious institutions, witches appear across nearly every culture — from the völvas of Norse tradition to the cunning folk of medieval Europe. In biblical context, they are firmly forbidden (Deuteronomy 18:10-11), and their power is attributed to demonic pacts.',
+    sources: ['Bible', 'Historical Records', 'Folklore'],
+    bibleVerses: [
+      'Let no one be found among you who sacrifices their son or daughter in the fire, who practices divination or sorcery, interprets omens, engages in witchcraft, or casts spells... — Deuteronomy 18:10-11 (https://www.biblegateway.com/passage/?search=Deuteronomy+18%3A10-11)',
+      'Do not allow a sorceress to live. — Exodus 22:18 (https://www.biblegateway.com/passage/?search=Exodus+22%3A18)'
+    ]
+  },
+  {
+    id: 'wizards',
+    parentId: 'witchcraft-folk-magic',
+    name: 'Wizards',
+    description: 'Practitioners of high ceremonial magic, typically depicted as learned men who command spiritual forces through arcane knowledge, ritual, and esoteric study. The term "wizard" derives from the Old English "wys" (wise). In many traditions, wizards operate through study and skill rather than innate power, and in scripture, wise men or "wizards" who consult familiar spirits are explicitly condemned.',
+    sources: ['Bible', 'Historical Records', 'Folklore'],
+    bibleVerses: [
+      'A man or woman who is a medium or spiritist among you must be put to death. You are to stone them; their blood will be on their own heads. — Leviticus 20:27 (https://www.biblegateway.com/passage/?search=Leviticus+20%3A27)'
+    ]
+  },
+  {
+    id: 'warlocks',
+    parentId: 'witchcraft-folk-magic',
+    name: 'Warlocks',
+    description: 'Historically derived from the Old English "wǣrloga," meaning oath-breaker or deceiver, a warlock is often defined as a male practitioner of dark magic who has made a pact with a demonic entity. In Scottish tradition, warlocks were specifically those who had renounced their baptismal vows and pledged allegiance to the devil. The term carries a connotation of betrayal and forbidden covenant.',
+    sources: ['Folklore', 'Historical Records', 'Scottish Tradition']
+  },
+  {
+    id: 'divination',
+    parentId: 'witchcraft-folk-magic',
+    name: 'Divination',
+    description: 'The practice of seeking knowledge of the future or the hidden through supernatural, ritualistic, or occult means. Methods include tarot, astrology, scrying, casting lots, reading omens, and consulting spirits. Divination is one of the oldest recorded spiritual practices, found in Mesopotamian liver-reading (extispicy), Egyptian dreams, and biblical accounts. It is explicitly forbidden in scripture as an open door to demonic influence.',
+    sources: ['Bible', 'Ancient Mesopotamia', 'Historical Records'],
+    bibleVerses: [
+      'There shall not be found among you anyone who... practices divination or tells fortunes or interprets omens, or a sorcerer... — Deuteronomy 18:10 (https://www.biblegateway.com/passage/?search=Deuteronomy+18%3A10)',
+      'For rebellion is like the sin of divination, and arrogance like the evil of idolatry. — 1 Samuel 15:23 (https://www.biblegateway.com/passage/?search=1+Samuel+15%3A23)'
+    ]
+  },
+  {
+    id: 'familiars',
+    parentId: 'witchcraft-folk-magic',
+    name: 'Familiars',
+    description: 'Spirit entities — often inhabiting the form of animals — believed to assist witches, wizards, or shamans in their magical work. Common in European witch trial records, familiars were said to be given to witches by the devil and would perform tasks, gather intelligence, or act as conduits for dark power. They appear as cats, dogs, toads, ravens, or other creatures, and are considered demonic in nature from a biblical perspective.',
+    sources: ['Folklore', 'Historical Records', 'Witch Trial Documents']
+  },
+  {
+    id: 'spirit-animals',
+    parentId: 'witchcraft-folk-magic',
+    name: 'Spirit Animals',
+    description: 'In shamanic and indigenous traditions, a spirit animal (or power animal / totem) is a spiritual guardian that takes animal form, representing a person\'s protective force and guiding spirit. The concept spans Native American traditions, Siberian shamanism, and Celtic animal totems. While presented in modern culture as benign, from a biblical standpoint the practice of communing with animal spirits is closely related to the forbidden practice of consulting familiar spirits.',
+    sources: ['Indigenous Traditions', 'Shamanic Records', 'Anthropology']
+  },
+  {
+    id: 'shaman',
+    parentId: 'witchcraft-folk-magic',
+    name: 'Shaman',
+    description: 'A spiritual practitioner who acts as an intermediary between the physical and spirit worlds, using altered states of consciousness — induced through drumming, chanting, fasting, or plant medicines — to communicate with spirits, heal the sick, divine the future, and navigate the unseen realm. Found on every inhabited continent, shamanism is considered the world\'s oldest spiritual system. In biblical context, the shaman\'s role as a spirit-communicator places it within the category of forbidden mediumship.',
+    sources: ['Anthropology', 'Indigenous Traditions', 'Historical Records']
+  },
+  {
+    id: 'voodoo',
+    parentId: 'witchcraft-folk-magic',
+    name: 'Voodoo (Vodou)',
+    description: 'A syncretic spiritual religion originating in West Africa (Vodun) and developed in the Haitian diaspora through the blending of African traditional religion with Catholic iconography. Practitioners work with powerful spirits called Lwa (or Loa), performing ritual offerings, dances, and possessions to communicate with the spirit world. Voodoo is often misrepresented in Western media but remains a deeply complex system of ancestor veneration, spirit communion, and folk magic.',
+    sources: ['Historical Records', 'Anthropology', 'Haitian Tradition']
+  },
+  {
+    id: 'papa-legba',
+    parentId: 'voodoo',
+    name: 'Papa Legba',
+    description: 'The most important Lwa (spirit) in Haitian Vodou, Papa Legba is the gatekeeper who stands at the crossroads between the physical world and the spirit realm. No communication with other spirits can occur without first invoking his permission. He is depicted as an old man with a cane, often accompanied by dogs, and is associated with the sun, communication, and the roads of destiny. He bears resemblance to similar crossroads entities in African Yoruba tradition (Eshu/Elegba) and has been linked in occult circles to Lucifer as a gatekeeper spirit.',
+    sources: ['Haitian Vodou Tradition', 'Anthropology', 'West African Religion']
+  },
+  {
+    id: 'witch-of-endor',
+    parentId: 'witchcraft-folk-magic',
+    name: 'Witch of Endor',
+    description: 'A biblical figure consulted by King Saul on the eve of his final battle. Described as a "woman who had a familiar spirit" — a medium or necromancer who could summon the dead — she called up what appeared to be the spirit of the deceased prophet Samuel when Saul sought her out in disguise. The event stands as one of the most controversial passages in scripture regarding contact with the dead, and is held as evidence of actual demonic activity masquerading as departed souls.',
+    sources: ['Bible'],
+    bibleVerses: [
+      'Saul then said to his attendants, "Find me a woman who is a medium, so I may go and inquire of her." "There is one in Endor," they said. — 1 Samuel 28:7 (https://www.biblegateway.com/passage/?search=1+Samuel+28%3A7)'
+    ]
+  },
+
+  // ── SUPERNATURAL ENTITIES ─────────────────────────────────────────────────
+  {
+    id: 'vampires',
+    parentId: 'cryptid-sightings-br',
+    name: 'Vampires',
+    description: 'Undead entities that sustain themselves by feeding on the life force — typically blood — of the living. Vampire legends appear independently across dozens of cultures: the strigoi of Romania, the vrykolakas of Greece, the aswang of the Philippines, and the jiangshi of China. Modern vampire mythology was largely crystallized by Bram Stoker\'s 1897 novel "Dracula," though the folkloric tradition is ancient. Some researchers connect vampirism to demonic possession of corpses, blood-based ritual practices, and certain genetic conditions such as porphyria.',
+    sources: ['Folklore', 'Historical Records', 'Anthropology']
+  },
+  {
+    id: 'fae',
+    parentId: 'cryptid-sightings-br',
+    name: 'Fae (Fairies)',
+    description: 'A broad class of supernatural beings from European — particularly Celtic, Norse, and Germanic — folklore: fairies, elves, pixies, brownies, sidhe, and their kin. Far from the benign Disney image, traditional faeries were ambivalent or dangerous beings who could cause illness, steal children (changelings), lead travelers astray, and drag humans into their realm. Many researchers connect faerie encounters — with their descriptions of non-human entities, stolen time, paralysis, and lights — to modern UFO and alien abduction reports, suggesting they may be different cultural framings of the same phenomenon.',
+    sources: ['Celtic Mythology', 'Norse Tradition', 'Folklore', 'Ufology']
+  },
+  {
+    id: 'dogman',
+    parentId: 'cryptid-sightings-br',
+    name: 'Dogman',
+    description: 'A cryptid reported across North America — especially the Great Lakes region — described as a bipedal, canine-featured entity standing 7–9 feet tall with a wolf-like head, muscular humanoid body, and digitigrade legs. Unlike Bigfoot, Dogman encounters often carry an intensely threatening and predatory quality. Reports date back to Native American oral tradition and the Beast of Bray Road in Wisconsin is one of the most documented modern cases. Some researchers link Dogman to interdimensional entities rather than an undiscovered physical species.',
+    sources: ['Cryptid Research', 'Eyewitness Accounts', 'Native American Tradition']
+  },
+  {
+    id: 'hat-man',
+    parentId: 'hauntings-br',
+    name: 'Hat Man',
+    description: 'One of the most consistently reported shadow entities worldwide: a tall, featureless dark figure wearing a wide-brimmed fedora hat and sometimes a trenchcoat. Unlike typical shadow people, the Hat Man often appears solid, projects an overwhelming sense of menace and intelligence, and is reported to watch the witness without moving. He is frequently encountered during sleep paralysis episodes but also during fully waking states. Cross-cultural reports are strikingly uniform despite no single origin legend, leading researchers to classify him as a genuine paranormal entity.',
+    sources: ['Paranormal Research', 'Eyewitness Accounts', 'Sleep Paralysis Research']
+  },
+
+  // ── VRIL / THEOSOPHY ─────────────────────────────────────────────────────
+  {
+    id: 'vril',
+    parentId: 'theosophy',
+    name: 'Vril',
+    description: 'A mysterious all-pervasive energy first described in Edward Bulwer-Lytton\'s 1871 novel "The Coming Race," in which a subterranean master race called the Vril-ya wield a limitless fluid-like power called Vril for healing, destruction, and psychic communication. Despite being fiction, the concept was adopted by 19th-century occultists and later by the Theosophical movement, which identified Vril with the Akashic force and prana. Some researchers allege that a secretive pre-Nazi German occult group — the Vril Society — sought to harness this energy for advanced propulsion and spiritual initiation.',
+    sources: ['Edward Bulwer-Lytton', 'Theosophy', 'Historical Research']
+  },
+  {
+    id: 'vril-society',
+    parentId: 'vril',
+    name: 'Vril Society',
+    description: 'An alleged secret occult society said to have operated in pre-WWII Germany, reportedly connected to the Thule Society and the inner circle that would form around the Nazi Party. According to researchers, the Vril Society included female mediums who claimed to channel messages from alien intelligences in the Aldebaran star system, receiving technical blueprints for circular disc-shaped craft. The group allegedly included figures such as Rudolf Hess and Heinrich Himmler. Its historical existence is disputed but widely circulated in alternative history research.',
+    sources: ['Alternative History Research', 'Historical Records', 'WWII Occult Research']
+  },
+  {
+    id: 'mahatmas',
+    parentId: 'theosophy',
+    name: 'Mahatmas (Masters of Wisdom)',
+    description: 'In Theosophical doctrine, the Mahatmas — also called Masters of the Ancient Wisdom — are advanced spiritual beings who have completed the cycle of physical incarnation and now guide humanity\'s evolution from higher planes. Helena Blavatsky claimed to receive her foundational Theosophical teachings from two Mahatmas: Morya (Master M.) and Koot Hoomi (Master K.H.), supposedly based in the Himalayas. Critics identify the Mahatmas as spiritually deceptive entities equivalent to what scripture calls familiar spirits or fallen angels presenting as "ascended masters."',
+    sources: ['Theosophy', 'Helena Blavatsky Writings', 'Esoteric Literature']
+  },
+  {
+    id: 'secret-chiefs',
+    parentId: 'esoteric-traditions',
+    name: 'Secret Chiefs',
+    description: 'In Western esoteric tradition, the Secret Chiefs (also called "Unknown Superiors") are claimed to be hidden spiritual masters of superhuman power who stand behind and direct occult orders and esoteric movements. The concept appears in Rosicrucianism, Freemasonry, and was central to the Hermetic Order of the Golden Dawn, where MacGregor Mathers claimed authority derived from direct contact with these entities. Aleister Crowley also claimed such contact. Researchers connect the Secret Chiefs to the Theosophical Mahatmas and, from a biblical standpoint, to deceptive demonic principalities masquerading as enlightened teachers.',
+    sources: ['Western Esotericism', 'Hermetic Order of the Golden Dawn', 'Rosicrucianism']
+  },
+
+  // ── EXTRATERRESTRIAL ──────────────────────────────────────────────────────
+  {
+    id: 'starseeds',
+    parentId: 'aliens',
+    name: 'Starseeds',
+    description: 'In New Age and UFO spirituality, Starseeds are souls believed to have originated from other star systems — such as the Pleiades, Sirius, Arcturus, Andromeda, or Lyra — who have incarnated on Earth to assist in a planetary spiritual awakening or "ascension." They typically report a sense of not belonging to Earth, heightened spiritual sensitivity, and memories of other worlds. Critics and biblical scholars identify the Starseed belief system as a sophisticated form of spiritual deception — demonic entities presenting themselves as benevolent cosmic guides to draw people away from scripture-based faith.',
+    sources: ['New Age Research', 'UFO Spirituality', 'Alternative Spirituality']
+  },
+  {
+    id: 'rh-negative-blood',
+    parentId: 'aliens',
+    name: 'RH- Blood Type',
+    description: 'Approximately 15% of the human population lacks the Rhesus (Rh) D antigen on their red blood cells, making them Rh-negative. What makes this biologically unusual is that an Rh-negative mother carrying an Rh-positive child will develop antibodies against the fetus — a reaction not seen in any other primate species. This anomaly has fueled extensive speculation: theories range from genetic mutation, to Neanderthal ancestry, to hybridization with a non-terrestrial bloodline. Rh-negative blood is disproportionately represented among Basques, certain Celtic and Middle Eastern populations, and is frequently cited in alien hybridization and Nephilim bloodline research, with alternative theories suggesting it originates from ancient interbreeding between humans and the Nephilim or angelic hosts.',
+    sources: ['Biology', 'Alternative Research', 'Genetics'],
+    relatedIds: ['nephilim-br', 'nephilim']
+  },
+  {
+    id: 'zeta-reticuli',
+    parentId: 'aliens',
+    name: 'Zeta Reticuli',
+    description: 'A binary star system located approximately 39 light-years from Earth in the constellation Reticulum. Zeta Reticuli gained enormous prominence in UFO research after the 1961 Betty and Barney Hill abduction case, in which Betty Hill reportedly sketched a star map she had been shown aboard the craft. Astronomer Marjorie Fish reconstructed the map in 1969 and identified Zeta Reticuli as the most consistent origin point. The system is widely believed in UFO research to be the home star system of the Grey alien species, and Bob Lazar specifically cited Zeta Reticuli 2 as the origin of the craft he claimed to have worked on at Area 51.',
+    sources: ['UFO Research', 'Bob Lazar Testimony', 'Astronomy', 'Betty Hill Abduction Case']
+  },
+  {
+    id: 'pleiadians',
+    parentId: 'aliens',
+    name: 'Pleiadians',
+    description: 'An alleged extraterrestrial race said to originate from the Pleiades star cluster (approximately 444 light-years away in the constellation Taurus). Pleiadian contact claims date at least to the 1950s contactee era — particularly Billy Meier, who claimed decades of face-to-face meetings with a Pleiadian woman named Semjase and produced thousands of photographs of their craft. Pleiadians are typically described as tall, humanoid, and fair-featured (related to the "Nordic" alien type), and present themselves as spiritually advanced, benevolent guides to humanity. In alternative research they are closely associated with the Starseed narrative. From a biblical standpoint, their communications consistently promote doctrines contrary to scripture.',
+    sources: ['Billy Meier Contact Reports', 'UFO Research', 'New Age Literature']
+  },
+  {
+    id: 'admiral-byrd',
+    parentId: 'operation-highjump',
+    name: 'Admiral Richard E. Byrd',
+    description: 'U.S. Navy Admiral and polar explorer who led Operation Highjump (1946–1947). Byrd claimed to have flown beyond both the North and South Poles into vast temperate territories, fueling Hollow Earth theories of polar entrances to a subterranean world.',
+    sources: ['Declassified Admiral Byrd Logs', 'Hollow Earth Literature'],
+    relatedIds: ['operation-highjump', 'agartha-inner-earth']
+  },
+  {
+    id: 'operation-fishbowl',
+    parentId: 'secret-government-programs',
+    name: 'Operation Fishbowl',
+    description: 'A series of high-altitude nuclear tests conducted by the United States over Johnston Atoll in 1962. In alternative research, these tests are popularized as a covert attempt to probe or breach the Earth\'s atmospheric dome or firmament.',
+    sources: ['Defense Atomic Support Agency Reports', 'Fringe Cosmology Literature'],
+    mapFeatureId: 'anomaly-Secret-Government-Programs-Fishbowl',
+    timelineId: 'operation-fishbowl',
+    relatedIds: ['secret-government-programs']
+  },
+  {
+    id: 'gateway-process',
+    parentId: 'project-stargate',
+    name: 'The Gateway Process',
+    description: 'A declassified 1983 CIA assessment analyzing the Monroe Institute\'s "Gateway Experience" technique. The program utilized Hemi-Sync (audio-guided brain hemisphere synchronization) to induce altered states of consciousness, astral projection, and remote viewing for military intelligence purposes.',
+    sources: ['Declassified CIA Report (McDonnell, 1983)', 'Monroe Institute Archives'],
+    timelineId: 'gateway-process',
+    relatedIds: ['project-stargate']
+  },
+  {
+    id: 'gate-program-education',
+    parentId: 'secret-government-programs',
+    name: 'The GATE Program (Gifted & Talented)',
+    description: 'The Gifted and Talented Education (GATE) programs in public schools. In conspiracy research and survivor testimonies, these programs are sometimes theorized to serve as selective screening and recruitment mechanisms for classified government intelligence projects, cognitive profiling, or early-stage psychological experiments targeting high-potential children.',
+    sources: ['Alternative Education Research', 'Conspiracy Theory Literature'],
+    relatedIds: ['secret-government-programs', 'project-mkultra']
+  },
+  {
+    id: 'coral-castle',
+    parentId: 'megaliths',
+    name: 'Coral Castle',
+    description: 'A massive stone structure in Homestead, Florida, built single-handedly by Latvian immigrant Edward Leedskalnin between 1923 and 1951. Moving blocks weighing up to 30 tons without heavy machinery, Leedskalnin claimed he understood the construction secrets of the Egyptian pyramids, sparking theories of acoustic levitation, anti-gravity, or telluric magnetism.',
+    sources: ['Magnetic Current (Edward Leedskalnin)', 'Homestead Historical Records'],
+    mapFeatureId: 'anomaly-Megaliths---Structures-Coral-Castle',
+    timelineId: 'coral-castle-construction',
+    relatedIds: ['megaliths', 'pyramids']
+  },
+  {
+    id: 'taoism',
+    parentId: 'esoteric-traditions',
+    name: 'Taoism',
+    description: 'An ancient Chinese philosophical and spiritual tradition founded by Lao Tzu. Beyond its exoteric tenets, Taoism features internal alchemy (Neidan), Qi energy cultivation, and magical practices aimed at spiritual and physical immortality.',
+    sources: ['Tao Te Ching (Lao Tzu)', 'Esoteric Taoist Alchemy Records'],
+    timelineId: 'taoism-founded',
+    relatedIds: ['esoteric-traditions', 'alchemy']
+  },
+  {
+    id: 'buddhism',
+    parentId: 'esoteric-traditions',
+    name: 'Buddhism',
+    description: 'A major world philosophy founded by Siddhartha Gautama in ancient India. While exoterically focused on mindfulness and liberation, its esoteric branches (like Vajrayana or Tibetan Buddhism) feature complex rituals, mantric formulas, and traditions of hidden realms (Shambhala) connecting directly to alternative histories of subterranean civilizations.',
+    sources: ['Pali Canon', 'Tibetan Kalachakra Tantra'],
+    timelineId: 'buddhism-founded',
+    relatedIds: ['esoteric-traditions']
+  },
+  {
+    id: 'elongated-skulls',
+    parentId: 'nephilim-br',
+    name: 'Elongated Skulls',
+    description: 'Prehistoric human remains exhibiting severe cranial elongation, most famously discovered in Paracas, Peru. While mainstream archaeology attributes this to artificial cranial deformation, alternative researchers highlight anomalous physiological features (cranial sutures, brain volume) and controversial DNA tests as evidence of genetic anomalies or Nephilim/hybrid lineages.',
+    sources: ['Julio Tello Excavation Reports', 'Paracas Museum Archives'],
+    mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-Paracas',
+    relatedIds: ['nephilim-br', 'giant-skeletal-finds']
+  },
+  {
+    id: 'ufo-types',
+    parentId: 'ufos',
+    name: 'Types of UFOs',
+    description: 'The primary categorizations of Unidentified Flying Objects based on shape and flight behavior: flying saucers/discs, cigar-shaped cylinders (motherships), silent black triangles (TR-3B), luminous shifting orbs, and white oblong "tic-tacs".',
+    sources: ['MUFON Database', 'Project Blue Book Records'],
+    relatedIds: ['ufos']
+  },
+  {
+    id: 'bilderberg-group',
+    parentId: 'illuminati-bloodlines',
+    name: 'Bilderberg Group',
+    description: 'An annual private conference established in 1954 to foster dialogue between political, financial, and industrial elites of Europe and North America. Conspiracy researchers view the invitation-only, off-the-record meetings as a shadow global government coordinating international policies and trade.',
+    sources: ['Bilderberg Official Archives', 'Fringe Geopolitical Research'],
+    mapFeatureId: 'anomaly-Secret-Government-Programs-Bilderberg',
+    relatedIds: ['illuminati-bloodlines', 'illuminati']
+  }
+];
+
 export const TERM_TREE_DATA: TermNode[] = [
   ...chunk_0,
   ...chunk_1,
@@ -21149,19 +21410,19 @@ export const TERM_TREE_DATA: TermNode[] = [
     parentId: 'supernatural-anomalies',
     name: 'UFOs',
     description: 'Unidentified Flying Objects, close encounters, extraterrestrial entities, and the researchers and whistleblowers who investigate them.',
-    layer: 'U.F.O. Sightings'
+    layer: 'UFOs - Sightings'
   },  {
     id: 'ufo-whistleblowers',
     parentId: 'ufos',
     name: 'Whistleblowers',
     description: 'Military intelligence officials, aerospace contractors, and government personnel who have exposed secret UFO retrieval and reverse-engineering programs.',
-    layer: 'U.F.O. Sightings'
+    layer: 'UFOs - Sightings'
   },  {
     id: 'ufology-researchers',
     parentId: 'ufos',
     name: 'Ufologists & Researchers',
     description: 'Leading scientists, astronomers, computer scientists, and historians who have researched, documented, and analyzed unidentified aerial phenomena (UAP) and anomalous events.',
-    layer: 'U.F.O. Sightings'
+    layer: 'UFOs - Sightings'
   },  {
     id: 'j-allen-hynek',
     parentId: 'ufology-researchers',
@@ -21725,6 +21986,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     name: 'Cattle Mutilations',
     description: 'Reports of unexplained livestock deaths characterized by bloodless surgical-like tissue removal and a lack of tracks.',
     layer: 'Cattle Mutilations'
-  }
+  },
+  ...chunk_6,
 ];
 

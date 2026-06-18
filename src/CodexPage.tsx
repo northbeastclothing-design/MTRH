@@ -45,7 +45,7 @@ const LAYER_COLORS: Record<string, string> = {
   'Ghosts & Hauntings': '#BDC4FF',
   'Megaliths / Structures': '#FFFBA6',
   'Rock Art & Cave Paintings': '#FFCBA6',
-  'Geoglyphs & Earthworks': '#E5B25D',
+
   'National Parks & Reserves': '#9FF3BC',
   'Missing 411': '#CBDF8E',
   'Blurred on Google Maps': '#BDC4FF',
@@ -81,7 +81,7 @@ const LAYER_ICONS: Record<string, string> = {
   'Ghosts & Hauntings': '/icons/icon-ghosts.svg',
   'Megaliths / Structures': '/icons/icon-megaliths.svg',
   'Rock Art & Cave Paintings': '/icons/icon-petroglyphs.svg',
-  'Geoglyphs & Earthworks': '/icons/icon-geoglyphs.svg',
+
   'National Parks & Reserves': '/icons/icon-national-parks-reserves.svg',
   'Missing 411': '/icons/icon-missing-411.svg',
   'Blurred on Google Maps': '/icons/icon-blurred-on-google.svg',
@@ -207,7 +207,12 @@ export default function CodexPage({
       };
     }
 
-    // 2. If the node has an explicit layer defined, map it
+    // 2. If this node is a category/parent (has children) and has no explicit mapFeatureId,
+    //    suppress VIEW ON MAP — navigating there would open the layer with no specific target
+    const isParentNode = nodes.some(n => n.parentId === activeTermNode.id);
+    if (isParentNode && !activeTermNode.mapFeatureId) return null;
+
+    // 3. If the node has an explicit layer defined, map it
     if (activeTermNode.layer) {
       let layerName = activeTermNode.layer;
       if (layerName === 'biblical-patriarchs' || layerName === 'royal-bloodlines' || layerName === 'merovingian-bloodlines' || layerName === 'sumerian-kings' || layerName === 'greek-mythology' || layerName === 'ancient-civilizations' || layerName === 'illuminati-bloodlines' || layerName === 'black-nobility') {
@@ -224,7 +229,7 @@ export default function CodexPage({
       };
     }
 
-    // 3. Otherwise, walk up the hierarchy of parent terms to find an inherited layer
+    // 4. Otherwise, walk up the hierarchy of parent terms to find an inherited layer
     let curr = activeTermNode;
     while (curr.parentId) {
       const parent = nodes.find(n => n.id === curr.parentId);
@@ -248,7 +253,7 @@ export default function CodexPage({
     }
 
     return null;
-  }, [activeTermNode]);
+  }, [activeTermNode, nodes]);
 
   useEffect(() => {
     if (onSelectedTermChange) {

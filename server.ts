@@ -512,8 +512,8 @@ async function startServer() {
       await safeAddDocument('submissions', submissionId, submissionData);
 
       // Trigger email notification in the background
-      const appUrl = process.env.APP_URL || "http://localhost:3000";
-      const modLink = `${appUrl}/mod`;
+      const appUrl = process.env.APP_URL || "https://mappingtherabbithole.com";
+      const modLink = `${appUrl}/moderator`;
       
       const subject = `[MTRH] New Intel Submission: ${submissionData.name}`;
       const textBody = `A new piece of intel has been submitted for moderation review.
@@ -677,8 +677,8 @@ ${modLink}
       await safeAddDocument('reports', reportId, reportData);
 
       // Trigger inaccuracy report email notification in the background
-      const appUrl = process.env.APP_URL || "http://localhost:3000";
-      const modLink = `${appUrl}/mod`;
+      const appUrl = process.env.APP_URL || "https://mappingtherabbithole.com";
+      const modLink = `${appUrl}/moderator`;
       
       const subject = `[MTRH] Inaccuracy Flag: ${reportData.pointName}`;
       const textBody = `An inaccuracy flag (report) has been submitted for moderation review.

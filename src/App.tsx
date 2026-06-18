@@ -1,8 +1,9 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import { motion, AnimatePresence, animate } from 'motion/react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import { X, Heart, Play, Upload, Plus, Link, MapPin, Lock, Check, Trash2, ShieldAlert, ChevronDown, Shield, Eye, EyeOff, Shuffle, Flag, AlertTriangle, Instagram, ExternalLink } from 'lucide-react';
+import { X, Heart, Play, Upload, Plus, Link, MapPin, Lock, Check, Trash2, ShieldAlert, ChevronDown, Shield, Eye, EyeOff, Shuffle, Flag, AlertTriangle, Instagram, ExternalLink, RotateCcw } from 'lucide-react';
 import { initializeApp } from 'firebase/app';
 import { getFirestore, doc, getDoc, setDoc, updateDoc, increment, collection, onSnapshot, serverTimestamp, query, where, addDoc, deleteDoc } from 'firebase/firestore';
 import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } from 'firebase/auth';
@@ -111,7 +112,7 @@ const CATEGORY_DESCRIPTIONS: Record<string, string> = {
   'Cryptid Sightings': 'Encounters with legendary creatures whose existence has yet to be scientifically proven.',
   'Giants': 'Historical and archaeological accounts of unusually large skeletal remains.',
   'Megaliths / Structures': 'Colossal stone circles, dolmens, standing stones, and ancient temples of unknown origin.',
-  'Geoglyphs & Earthworks': 'Massive ground drawings, desert glyphs, and ceremonial earthworks best viewed from the sky.',
+
   'Rock Art & Cave Paintings': 'Ancient rock carvings, petroglyphs, and cave paintings depicting entities, celestial events, or forgotten symbols.',
   'Ancient Texts': 'Lost manuscripts, carvings, and inscriptions carrying forbidden or forgotten knowledge.',
   'Bigfoot Sightings': 'Tracking the elusive Sasquatch through forests and wilderness sightings.',
@@ -674,14 +675,12 @@ const processIncomingRecord = (item: any, index: number) => {
     const nameLower = safeName.toLowerCase();
     if (descLower.includes('petroglyph') || descLower.includes('rock art') || nameLower.includes('rock art') || nameLower.includes('petroglyph') || descLower.includes('cave painting') || descLower.includes('cave art')) {
       normalizedCategory = 'Rock Art & Cave Paintings';
-    } else if (descLower.includes('geoglyph') || descLower.includes('line') || nameLower.includes('geoglyph') || nameLower.includes('line') || nameLower.includes('intaglio')) {
-      normalizedCategory = 'Geoglyphs & Earthworks';
     } else {
       normalizedCategory = 'Megaliths / Structures';
     }
   }
   else if (lowerCat.includes('petroglyph') || lowerCat.includes('rock art')) normalizedCategory = 'Rock Art & Cave Paintings';
-  else if (lowerCat.includes('geoglyph') || lowerCat.includes('earthwork')) normalizedCategory = 'Geoglyphs & Earthworks';
+  else if (lowerCat.includes('geoglyph') || lowerCat.includes('earthwork')) normalizedCategory = 'Megaliths / Structures';
   else if (lowerCat.includes('crop') || lowerCat.includes('circle')) normalizedCategory = 'Crop Circles';
   else if (lowerCat.includes('megalith')) normalizedCategory = 'Megaliths / Structures';
   else if (lowerCat.includes('dumb') || lowerCat.includes('d.u.m.b')) normalizedCategory = 'D.U.M.B.\'s';
@@ -821,7 +820,7 @@ const LAYER_CONFIG: Record<string, { color: string; icon: string }> = {
   'D.U.M.B.\'s': { color: '#BAEAF4', icon: '/icons/icon-dumbs.svg' },
   'Ghosts & Hauntings': { color: '#BDC4FF', icon: '/icons/icon-ghosts.svg' },
   'Megaliths / Structures': { color: '#FFFBA6', icon: '/icons/icon-megaliths.svg' },
-  'Geoglyphs & Earthworks': { color: '#E5B25D', icon: '/icons/icon-geoglyphs.svg' },
+
   'Rock Art & Cave Paintings': { color: '#FFCBA6', icon: '/icons/icon-petroglyphs.svg' },
   'National Parks & Reserves': { color: '#9FF3BC', icon: '/icons/icon-national-parks-reserves.svg' },
   'Missing 411': { color: '#CBDF8E', icon: '/icons/icon-missing-411.svg' },
@@ -1181,6 +1180,16 @@ function App() {
   };
 
   const handleSearchItemSelect = (item: any) => {
+    // Auto-enable the item's layer if it's currently toggled off
+    if (item.categories && item.categories.length > 0) {
+      setActiveLayers(prev => {
+        const updated = { ...prev };
+        item.categories.forEach((cat: string) => {
+          if (updated[cat] === false) updated[cat] = true;
+        });
+        return updated;
+      });
+    }
     handleLocationItemClick(item);
     setSearchQuery('');
     setGeocodeResults([]);
@@ -1188,8 +1197,49 @@ function App() {
   };
 
   const [yearRange, setYearRange] = useState({ start: 0, end: 2050 });
+  const [hasSeenTimelineHint, setHasSeenTimelineHint] = useState(false);
+  const hasSeenTimelineHintRef = useRef(false); // ref for use inside setTimeout closures
+  const [showTimelineHint, setShowTimelineHint] = useState(false);
+  const [hintSource, setHintSource] = useState<'zoom' | 'left' | 'right'>('zoom');
+  const [hintAnchor, setHintAnchor] = useState<{ x: number; y: number } | null>(null);
+  const timelineHintTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const hintDebounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const pendingHintRef = useRef<{ source: 'zoom' | 'left' | 'right'; x: number; y: number } | null>(null);
+  const zoomSliderRef = useRef<HTMLInputElement>(null);
+  const leftSliderRef = useRef<HTMLInputElement>(null);
+  const rightSliderRef = useRef<HTMLInputElement>(null);
+  const timelinePanelRef = useRef<HTMLDivElement>(null);
   const [timelineWindowStart, setTimelineWindowStart] = useState(0);
-  const [timelineWindowSpan, setTimelineWindowSpan] = useState(2050); 
+  const [timelineWindowSpan, setTimelineWindowSpan] = useState(2050);
+
+  // Called on every slider onChange — debounces 400ms so tooltip appears at release position, not drag start
+  const triggerTimelineHint = (source: 'zoom' | 'left' | 'right', ref: React.RefObject<HTMLInputElement>, thumbRatio?: number) => {
+    if (hasSeenTimelineHintRef.current) return;
+
+    // Always track latest position while dragging
+    if (ref.current) {
+      const rect = ref.current.getBoundingClientRect();
+      const x = thumbRatio !== undefined
+        ? rect.left + thumbRatio * rect.width
+        : rect.left + rect.width / 2;
+      pendingHintRef.current = { source, x, y: rect.top };
+    }
+
+    // Reset debounce — fires 400ms after the last drag movement (i.e. on release)
+    if (hintDebounceRef.current) clearTimeout(hintDebounceRef.current);
+    hintDebounceRef.current = setTimeout(() => {
+      if (hasSeenTimelineHintRef.current) return;
+      const pending = pendingHintRef.current;
+      if (!pending) return;
+      hasSeenTimelineHintRef.current = true;
+      setHasSeenTimelineHint(true);
+      setHintSource(pending.source);
+      setHintAnchor({ x: pending.x, y: pending.y });
+      setShowTimelineHint(true);
+      if (timelineHintTimerRef.current) clearTimeout(timelineHintTimerRef.current);
+      timelineHintTimerRef.current = setTimeout(() => setShowTimelineHint(false), 12000);
+    }, 400);
+  };
   const [isTimelineDragging, setIsTimelineDragging] = useState(false);
   const [dragStartX, setDragStartX] = useState(0);
   const [dragStartTimelineStart, setDragStartTimelineStart] = useState(0);
@@ -1380,11 +1430,21 @@ function App() {
   // Requirement 1: Listen to URL slug for opening Mod Desk Automatically
   useEffect(() => {
     const checkModUrl = () => {
+      const path = window.location.pathname.toLowerCase();
+      const hash = window.location.hash.toLowerCase();
       const isModUrl = 
-        window.location.pathname === '/mod' || 
-        window.location.pathname.endsWith('/mod') || 
-        window.location.hash === '#/mod' || 
-        window.location.hash === '#mod';
+        path === '/mod' || 
+        path === '/moderator' || 
+        path === '/moderate' || 
+        path.endsWith('/mod') || 
+        path.endsWith('/moderator') || 
+        path.endsWith('/moderate') || 
+        hash === '#/mod' || 
+        hash === '#mod' || 
+        hash === '#/moderator' || 
+        hash === '#moderator' || 
+        hash === '#/moderate' || 
+        hash === '#moderate';
       if (isModUrl) {
         setIsModeratorOpen(true);
         setIsModMinimized(false);
@@ -2538,7 +2598,7 @@ function App() {
         } else {
           setSelectedCodexNode(null);
         }
-      } else if (path.startsWith('/mod')) {
+      } else if (path.startsWith('/mod') || path.startsWith('/moderator') || path.startsWith('/moderate')) {
         setCurrentPage('map');
         setIsModeratorOpen(true);
       } else {
@@ -2565,7 +2625,7 @@ function App() {
   // 2. Sync page and navigation changes to URL history path
   useEffect(() => {
     let path = '/';
-    if (isModeratorOpen) path = '/mod';
+    if (isModeratorOpen) path = '/moderator';
     else if (currentPage === 'timeline') path = '/timeline';
     else if (currentPage === 'codex') path = '/codex';
 
@@ -3189,7 +3249,7 @@ function App() {
         activeLayers['Biblical Finds'] ||
         activeLayers['Rock Art & Cave Paintings'] ||
         activeLayers['Megaliths / Structures'] ||
-        activeLayers['Geoglyphs & Earthworks'] ||
+
         activeLayers['Burial Mounds'];
       if (hasArchaeologyActive && archaeologyData.length === 0) {
         try {
@@ -3425,6 +3485,20 @@ function App() {
       return hasActiveLayerMatch && matchesTimeline && matchesSearch;
     });
   }, [combinedPointsAndLinesData, yearRange, activeLayers, searchQuery]);
+
+  // Search across ALL data regardless of which layers are active
+  const searchData = useMemo(() => {
+    const cleanQuery = searchQuery.trim().toLowerCase();
+    if (cleanQuery.length < 2) return [];
+    return combinedPointsAndLinesData.filter(item => {
+      const matchesTimeline = item.date ? (item.date < 0 || item.date > 2050 || (item.date >= yearRange.start && item.date <= yearRange.end)) : true;
+      const matchesSearch =
+        item.name.toLowerCase().includes(cleanQuery) ||
+        item.categories.some((cat: string) => cat.toLowerCase().includes(cleanQuery)) ||
+        item.description.toLowerCase().includes(cleanQuery);
+      return matchesTimeline && matchesSearch;
+    });
+  }, [combinedPointsAndLinesData, yearRange, searchQuery]);
 
   const groupedLocations = useMemo(() => {
     const groups: Record<string, any[]> = {};
@@ -5737,20 +5811,25 @@ function App() {
                         }}
                       >
                       {/* RESEARCH DATA RESULTS */}
-                      {visibleData.length > 0 && (
+                      {searchData.length > 0 && (
                         <div style={{ borderBottom: `1px solid ${theme.borderLight}` }}>
                           <div style={{ padding: '8px 12px', fontSize: '10px', background: isMapDarkMode ? '#1a1a1a' : '#f8f8f8', borderBottom: `1px solid ${theme.borderLight}`, fontWeight: 'bold' }}>RESEARCH ARCHIVES</div>
-                          {visibleData.slice(0, 10).map((item, idx) => (
+                          {searchData.slice(0, 10).map((item, idx) => (
                             <div 
                               key={`data-${idx}`}
                               onClick={() => handleSearchItemSelect(item)}
                               className={isMapDarkMode ? "hover:bg-gray-800" : "hover:bg-gray-50"}
-                              style={{ padding: '10px 12px', cursor: 'pointer', borderBottom: idx < visibleData.slice(0, 10).length - 1 ? `1px solid ${theme.borderLight}` : 'none', display: 'flex', alignItems: 'center', gap: '8px' }}
+                              style={{ padding: '10px 12px', cursor: 'pointer', borderBottom: idx < searchData.slice(0, 10).length - 1 ? `1px solid ${theme.borderLight}` : 'none', display: 'flex', alignItems: 'center', gap: '8px' }}
                             >
                               <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: layerColors[item.categories[0]] || (isMapDarkMode ? '#fff' : '#000') }} />
                               <div style={{ display: 'flex', flexDirection: 'column' }}>
                                 <span style={{ fontSize: '11px', fontWeight: 'bold' }}>{item.name}</span>
-                                <span style={{ fontSize: '9px', color: theme.textDim }}>{item.categories[0]}</span>
+                                <span style={{ fontSize: '9px', color: theme.textDim }}>
+                                  {item.categories[0]}
+                                  {activeLayers[item.categories[0]] === false && (
+                                    <span style={{ marginLeft: '6px', opacity: 0.6 }}>(layer off — will enable)</span>
+                                  )}
+                                </span>
                               </div>
                             </div>
                           ))}
@@ -5775,7 +5854,7 @@ function App() {
                         </div>
                       )}
 
-                      {visibleData.length === 0 && geocodeResults.length === 0 && !isSearchingGeocode && (
+                      {searchData.length === 0 && geocodeResults.length === 0 && !isSearchingGeocode && (
                         <div style={{ padding: '20px', textAlign: 'center', fontSize: '11px', color: '#999' }}>NO RESULTS FOUND</div>
                       )}
 
@@ -7192,7 +7271,99 @@ function App() {
                 animation: 'radar-pulse 2s infinite'
               }} />
             )}
-            
+
+            {/* TIMELINE HINT TOOLTIP — portal escapes stacking contexts; AnimatePresence always mounted for exit anim */}
+            {createPortal(
+              <AnimatePresence>
+                {showTimelineHint && hintAnchor && (() => {
+                  const MARGIN = 20;
+                  const TIP_W = 280;
+                  const TIP_H = 120;
+                  const clampedX = Math.max(
+                    MARGIN + TIP_W / 2,
+                    Math.min(window.innerWidth - MARGIN - TIP_W / 2, hintAnchor.x)
+                  );
+                  const rawTop = hintAnchor.y - 16;
+                  const clampedTop = Math.max(MARGIN + TIP_H, rawTop);
+                  return (
+                    <div
+                      key="timeline-hint-positioner"
+                      style={{
+                        position: 'fixed',
+                        left: clampedX,
+                        top: clampedTop,
+                        transform: 'translate(-50%, -100%)',
+                        zIndex: 2147483647,
+                        pointerEvents: 'auto',
+                        width: `${TIP_W}px`,
+                      }}
+                    >
+                      <motion.div
+                        key="timeline-hint"
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.92 }}
+                        transition={{ duration: 0.25, ease: 'easeOut' }}
+                      >
+                        <div style={{
+                          background: isMapDarkMode ? '#ffffff' : '#000000',
+                          border: `2px solid ${isMapDarkMode ? '#ffffff' : '#000000'}`,
+                          borderRadius: '12px',
+                          padding: '14px 16px',
+                          color: isMapDarkMode ? '#000000' : '#ffffff',
+                          fontFamily: '"Space Mono", monospace',
+                          boxShadow: '0 8px 32px rgba(0,0,0,0.4)',
+                          position: 'relative',
+                        }}>
+                          <div style={{
+                            fontSize: '9px',
+                            fontWeight: '700',
+                            letterSpacing: '1.5px',
+                            textTransform: 'uppercase',
+                            marginBottom: '6px',
+                            opacity: 0.5,
+                          }}>
+                            {hintSource === 'zoom' ? 'Zoom Controls' : hintSource === 'left' ? 'Start Range' : 'End Range'}
+                          </div>
+                          <div style={{ fontSize: '10px', lineHeight: '1.6', opacity: 0.85, paddingRight: '20px' }}>
+                            Only locations within the black arrows are shown on the map & sidebar.
+                          </div>
+                          <button
+                            onClick={() => setShowTimelineHint(false)}
+                            style={{
+                              position: 'absolute',
+                              top: '10px',
+                              right: '12px',
+                              background: 'none',
+                              border: 'none',
+                              color: isMapDarkMode ? '#000000' : '#ffffff',
+                              cursor: 'pointer',
+                              fontSize: '14px',
+                              opacity: 0.4,
+                              lineHeight: 1,
+                              padding: 0,
+                            }}
+                            aria-label="Dismiss"
+                          >✕</button>
+                          <div style={{
+                            position: 'absolute',
+                            bottom: '-10px',
+                            left: `calc(50% + ${hintAnchor.x - clampedX}px)`,
+                            transform: 'translateX(-50%)',
+                            width: 0,
+                            height: 0,
+                            borderStyle: 'solid',
+                            borderWidth: '10px 8px 0 8px',
+                            borderColor: `${isMapDarkMode ? '#ffffff' : '#000000'} transparent transparent transparent`,
+                          }} />
+                        </div>
+                      </motion.div>
+                    </div>
+                  );
+                })()}
+              </AnimatePresence>
+            , document.body)}
+
             {/* ABSOLUTE POSITIONED FIXED BLACK TAB FOR TIMELINE BAR */}
             <motion.button 
               whileHover={{ opacity: 0.8 }}
@@ -7265,12 +7436,55 @@ function App() {
                             
                             setTimelineWindowSpan(newSpan);
                             setTimelineWindowStart(newStart);
+                            triggerTimelineHint('zoom', zoomSliderRef);
                           }}
                           style={{ width: '120px', height: '2px', background: theme.text, outline: 'none', cursor: 'pointer' }}
                           className="timeline-zoom-slider"
+                          ref={zoomSliderRef}
                         />
                         <img src="/icons/icon-zoom-in.svg" style={{ width: '24px', height: '24px', filter: theme.invert }} alt="zoom in" />
                       </div>
+
+                      {/* RESET BUTTON */}
+                      <button
+                        onClick={() => {
+                          setTimelineWindowStart(timeBounds.min);
+                          setTimelineWindowSpan(timeBounds.max - timeBounds.min);
+                          setYearRange({ start: timeBounds.min, end: timeBounds.max });
+                        }}
+                        title="Reset Timeline"
+                        style={{
+                          height: '32px',
+                          padding: '0 12px',
+                          background: 'transparent',
+                          border: `1px solid ${theme.border}`,
+                          color: theme.text,
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          gap: '6px',
+                          cursor: 'pointer',
+                          transition: 'all 0.15s ease',
+                          borderRadius: '16px',
+                          fontFamily: '"Space Mono", monospace',
+                          fontSize: '9px',
+                          fontWeight: 700,
+                          textTransform: 'uppercase',
+                          boxSizing: 'border-box',
+                          whiteSpace: 'nowrap',
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.background = theme.text;
+                          e.currentTarget.style.color = theme.bg;
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.background = 'transparent';
+                          e.currentTarget.style.color = theme.text;
+                        }}
+                      >
+                        <RotateCcw size={10} strokeWidth={2.5} />
+                        <span>Reset</span>
+                      </button>
                     </div>
                   </div>
 
@@ -7585,12 +7799,15 @@ function App() {
                                     const width = e.currentTarget.offsetWidth;
                                     const gap = width > 0 ? (12 / width) * timelineWindowSpan : 0;
                                     setYearRange(p => ({ ...p, start: Math.min(val, p.end - gap) }));
+                                    const thumbRatio = (val - timelineWindowStart) / timelineWindowSpan;
+                                    triggerTimelineHint('left', leftSliderRef, Math.max(0, Math.min(1, thumbRatio)));
                                   }}
                                   style={{ 
                                     ...commonInputStyle,
                                     zIndex: yearRange.start > (windowEnd + timelineWindowStart) / 2 ? 14 : 13
                                   }}
                                   className="figma-slider-thumb-left"
+                                  ref={leftSliderRef}
                                 />
                                 <input 
                                   type="range" 
@@ -7603,12 +7820,15 @@ function App() {
                                     const width = e.currentTarget.offsetWidth;
                                     const gap = width > 0 ? (12 / width) * timelineWindowSpan : 0;
                                     setYearRange(p => ({ ...p, end: Math.max(val, p.start + gap) }));
+                                    const thumbRatio = (val - timelineWindowStart) / timelineWindowSpan;
+                                    triggerTimelineHint('right', rightSliderRef, Math.max(0, Math.min(1, thumbRatio)));
                                   }}
                                   style={{ 
                                     ...commonInputStyle,
                                     zIndex: 12
                                   }}
                                   className="figma-slider-thumb-right"
+                                  ref={rightSliderRef}
                                 />
                               </>
                             );

@@ -3553,6 +3553,54 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
       source: 'English Royal Chronologies',
       isPeopleGroup: true,
       subLabel: 'Possible Nephilim Bloodline'
+    },
+    {
+      id: 'taoism-founded',
+      name: 'Life of Laozi (Taoism)',
+      type: 'lifespan',
+      layer: 'ancient-civilizations',
+      start: -601,
+      end: -531,
+      description: 'Ancient Chinese philosopher and writer, reputed author of the Tao Te Ching and founder of Taoism.',
+      source: 'Historical Chronology'
+    },
+    {
+      id: 'buddhism-founded',
+      name: 'Life of Buddha (Siddhartha Gautama)',
+      type: 'lifespan',
+      layer: 'ancient-civilizations',
+      start: -563,
+      end: -483,
+      description: 'Founder of Buddhism, whose teachings on enlightenment and liberation from Samsara influenced spiritual traditions throughout Asia and later Western esotericism.',
+      source: 'Historical Chronology'
+    },
+    {
+      id: 'coral-castle-construction',
+      name: 'Coral Castle Construction',
+      type: 'lifespan',
+      layer: 'alchemy-occult',
+      start: 1923,
+      end: 1951,
+      description: 'Edward Leedskalnin single-handedly constructs Coral Castle in Florida, allegedly using ancient levitation or anti-gravity secrets.',
+      source: 'Historical Records'
+    },
+    {
+      id: 'operation-fishbowl',
+      name: 'Operation Fishbowl',
+      type: 'event',
+      layer: 'secret-gov-programs',
+      start: 1962,
+      description: 'High-altitude nuclear tests over Johnston Atoll, theorized in alternative science as attempts to probe or breach the Earth\'s dome/firmament.',
+      source: 'Declassified Military Records'
+    },
+    {
+      id: 'gateway-process',
+      name: 'The Gateway Process Report',
+      type: 'event',
+      layer: 'secret-gov-programs',
+      start: 1983,
+      description: 'U.S. Army/CIA report assessing the Monroe Institute\'s Hemi-Sync training for altered states of consciousness, astral projection, and remote viewing.',
+      source: 'Declassified CIA Archives'
     }
   ];
 
@@ -3756,7 +3804,12 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'nobility-windsor': { lng: -0.6044, lat: 51.4839, locationName: 'Windsor Castle (Berkshire, England)', category: 'The Occult' },
   'nobility-romanov': { lng: 30.3158, lat: 59.9398, locationName: 'Winter Palace (St. Petersburg, Russia)', category: 'The Occult' },
   'nobility-habsburg': { lng: 16.3634, lat: 48.2065, locationName: 'Hofburg Palace (Vienna, Austria)', category: 'The Occult' },
-  'nobility-plantagenet': { lng: 0.2017, lat: 47.2003, locationName: 'Fontevraud Abbey (Anjou, France)', category: 'The Occult' }
+  'nobility-plantagenet': { lng: 0.2017, lat: 47.2003, locationName: 'Fontevraud Abbey (Anjou, France)', category: 'The Occult' },
+  'taoism-founded': { lng: 115.378, lat: 33.876, locationName: 'Luyi County, Henan, China', category: 'Ancient People Groups' },
+  'buddhism-founded': { lng: 84.9912, lat: 24.6951, locationName: 'Bodh Gaya, Bihar, India', category: 'Ancient People Groups' },
+  'coral-castle-construction': { lng: -80.444305, lat: 25.500556, locationName: 'Coral Castle (Homestead, Florida)', category: 'Megaliths / Structures' },
+  'operation-fishbowl': { lng: -169.5292, lat: 16.7375, locationName: 'Johnston Atoll, Pacific Ocean', category: 'Secret Government Programs' },
+  'gateway-process': { lng: -78.5085, lat: 38.0293, locationName: 'The Monroe Institute (Faber, Virginia)', category: 'Secret Government Programs' }
 };
 
 export interface Waypoint {
