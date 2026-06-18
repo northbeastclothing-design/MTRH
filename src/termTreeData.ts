@@ -20982,13 +20982,120 @@ const chunk_6: any[] = [
     relatedIds: ['ufos']
   },
   {
-    id: 'bilderberg-group',
-    parentId: 'illuminati-bloodlines',
-    name: 'Bilderberg Group',
-    description: 'An annual private conference established in 1954 to foster dialogue between political, financial, and industrial elites of Europe and North America. Conspiracy researchers view the invitation-only, off-the-record meetings as a shadow global government coordinating international policies and trade.',
     sources: ['Bilderberg Official Archives', 'Fringe Geopolitical Research'],
     mapFeatureId: 'anomaly-Secret-Government-Programs-Bilderberg',
     relatedIds: ['illuminati-bloodlines', 'illuminati']
+  },
+  {
+    id: 'dragons-br',
+    parentId: 'supernatural-anomalies',
+    name: 'Dragons & Serpents',
+    description: 'Legendary winged reptiles or giant serpentine beasts found in the creation myths, historical logs, and sacred texts of nearly every ancient civilization across the globe.',
+    layer: 'Cryptid Sightings',
+    relatedIds: ['dinosaurs-historical', 'leviathan-biblical', 'ouroboros-esoteric']
+  },
+  {
+    id: 'leviathan-biblical',
+    parentId: 'dragons-br',
+    name: 'Leviathan',
+    description: 'A multi-headed sea serpent or dragon in Hebrew scripture and Canaanite mythology. Job 41 describes it as a fire-breathing, armored ocean titan, while Isaiah depicts it as the crooked serpent slain by the Creator in cosmic battle.',
+    sources: ['Book of Job (Job 41)', 'Book of Isaiah (Isaiah 27:1)', 'Ugaritic Baal Cycle'],
+    bibleVerses: [
+      'Canst thou draw out leviathan with an hook? or his tongue with a cord which thou lettest down? — Job 41:1 (https://www.biblegateway.com/passage/?search=Job+41%3A1)',
+      'In that day the Lord with his sore and great and strong sword shall punish leviathan the piercing serpent, even leviathan that crooked serpent; and he shall slay the dragon that is in the sea. — Isaiah 27:1 (https://www.biblegateway.com/passage/?search=Isaiah+27%3A1)'
+    ],
+    relatedIds: ['dragons-br']
+  },
+  {
+    id: 'behemoth-dinosaur',
+    parentId: 'dragons-br',
+    name: 'Behemoth',
+    description: 'A massive primeval land beast described in Job 40:15-24. While modern exegesis often interprets it as a hippopotamus or elephant, alternative researchers and creationists highlight its tail \'like a cedar\' as matching a sauropod dinosaur.',
+    sources: ['Book of Job (Job 40)'],
+    bibleVerses: [
+      'Behold now behemoth, which I made with thee; he eateth grass as an ox. Lo now, his strength is in his loins, and his force is in the navel of his belly. He moveth his tail like a cedar: the sinews of his stones are wrapped together. — Job 40:15-17 (https://www.biblegateway.com/passage/?search=Job+40%3A15-17)'
+    ],
+    relatedIds: ['dragons-br', 'dinosaurs-historical']
+  },
+  {
+    id: 'tiamat-mesopotamian',
+    parentId: 'dragons-br',
+    name: 'Tiamat',
+    description: 'The primordial Babylonian goddess of the salt sea, depicted as a chaos dragon or multi-headed serpent in the Enuma Elish. She was slain by Marduk, who used her split body to form heaven and earth.',
+    sources: ['Enuma Elish (Babylonian Creation Epic)'],
+    relatedIds: ['dragons-br']
+  },
+  {
+    id: 'chinese-long',
+    parentId: 'dragons-br',
+    name: 'Shenlong (Chinese Dragon)',
+    description: 'Unlike the destructive Western dragons, the Chinese Long is a benevolent symbol of imperial power, wisdom, and water. Shenlong, the spiritual dragon, governs wind, rain, and storms in Taoist and Chinese cosmology.',
+    sources: ['Classic of Mountains and Seas (Shan Hai Jing)', 'I Ching'],
+    relatedIds: ['dragons-br', 'taoism']
+  },
+  {
+    id: 'feathered-serpent',
+    parentId: 'dragons-br',
+    name: 'Feathered Serpent (Quetzalcoatl)',
+    description: 'A prominent Mesoamerican deity shaped as a winged, plumed serpent. Worshiped by the Aztecs and Mayans (as Kukulkan), it was associated with wind, rain, learning, and the creation of humanity, with architectural manifestations at Chichen Itza.',
+    sources: ['Popol Vuh', 'Florentine Codex'],
+    relatedIds: ['dragons-br', 'pyramids']
+  },
+  {
+    id: 'fafnir-norse',
+    parentId: 'dragons-br',
+    name: 'Fafnir',
+    description: 'A dwarf in Germanic/Norse mythology who was corrupted by greed and transformed into a venom-spitting dragon to guard his hoard. He was slain by the hero Sigurd/Siegfried, whose tasting of Fafnir\'s blood granted the ability to speak with birds.',
+    sources: ['Poetic Edda', 'Volsunga Saga'],
+    relatedIds: ['dragons-br']
+  },
+  {
+    id: 'ryujin-japanese',
+    parentId: 'dragons-br',
+    name: 'Ryujin',
+    description: 'The Japanese dragon god of the sea and oceans, residing in Ryugu-jo, a palace built of red and white coral. He controlled the tides using magical jewels and was revered as an ancestor of Japan\'s imperial line.',
+    sources: ['Kojiki', 'Nihon Shoki'],
+    relatedIds: ['dragons-br']
+  },
+  {
+    id: 'apophis-egyptian',
+    parentId: 'dragons-br',
+    name: 'Apophis (Apep)',
+    description: 'The ancient Egyptian deity of chaos, darkness, and non-existence, represented as a giant serpent or dragon. Apophis was the eternal enemy of the sun god Ra, attempting to swallow Ra\'s solar barge during its nightly journey through the underworld (Duat).',
+    sources: ['Book of Gates', 'Book of the Dead'],
+    relatedIds: ['dragons-br']
+  },
+  {
+    id: 'vritra-vedic',
+    parentId: 'dragons-br',
+    name: 'Vritra',
+    description: 'A Vedic dragon or massive serpent representing drought in Hindu scripture. Vritra hoarded all the waters of the cosmos until slain by the storm god Indra using his thunderbolt (Vajra), releasing the rivers and restoring life.',
+    sources: ['Rigveda'],
+    relatedIds: ['dragons-br']
+  },
+  {
+    id: 'ouroboros-esoteric',
+    parentId: 'dragons-br',
+    name: 'Ouroboros',
+    description: 'An ancient symbol depicting a serpent or dragon eating its own tail. Originating in Egyptian iconographies and refined in Greek alchemical texts, it symbolizes the cyclical nature of the universe, infinity, and eternal return.',
+    sources: ['Chrysopoeia of Cleopatra', 'Egyptian Book of the Netherworld'],
+    relatedIds: ['dragons-br', 'alchemy']
+  },
+  {
+    id: 'wyvern-basilisk',
+    parentId: 'dragons-br',
+    name: 'Wyvern & Basilisk',
+    description: 'Key creatures of European heraldry and medieval folklore. The Wyvern is a two-legged winged dragon, while the Basilisk (or Cockatrice) is a legendary serpent king said to be hatched by a toad from a cockerel\'s egg, capable of killing with its glance or toxic breath.',
+    sources: ['Naturalis Historia (Pliny the Elder)', 'Medieval Bestiaries'],
+    relatedIds: ['dragons-br']
+  },
+  {
+    id: 'dinosaurs-historical',
+    parentId: 'dragons-br',
+    name: 'Dinosaurs as Dragons',
+    description: 'The alternative history theory asserting that ancient accounts of \'dragons\' across various continents were first-hand encounters with surviving dinosaurs. Proponents highlight petroglyphs, ancient temple carvings (such as the Ta Prohm stegosaur), and historical logs of reptilian monsters written long before the word \'dinosaur\' was coined in 1841.',
+    sources: ['The Great Dinosaur Mystery and the Bible', 'Historical Chronicles of Slain Serpents'],
+    relatedIds: ['dragons-br', 'behemoth-dinosaur']
   }
 ];
 
