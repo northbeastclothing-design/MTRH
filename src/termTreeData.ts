@@ -14355,6 +14355,78 @@ const chunk_3: any[] = [  {
     relatedIds: ['cryptids-hauntings'],
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database']
   },  {
+    id: 'yowie-australia',
+    parentId: 'bigfoot-br',
+    name: 'Yowie',
+    description: 'A bipedal hominid cryptid from Australian Aboriginal mythology and modern sightings, said to inhabit the outback and wilderness regions of Eastern Australia.',
+    sources: ['Australian Hominoid Research', 'Aboriginal Dreamtime Legends']
+  },  {
+    id: 'almas-caucasus',
+    parentId: 'bigfoot-br',
+    name: 'Almas / Almasty',
+    description: 'A wild, bipedal hominid reported in the Caucasus and Pamir Mountains of Central Asia, and the Altai Mountains of southern Mongolia.',
+    sources: ['Soviet Academy of Sciences Hominoid Studies', 'Mongolian Folklore']
+  },  {
+    id: 'orang-pendek-sumatra',
+    parentId: 'bigfoot-br',
+    name: 'Orang Pendek',
+    description: 'A small, bipedal, ground-dwelling hominid reported to inhabit the remote, mountainous forests of Sumatra, Indonesia.',
+    sources: ['Sumatran Expedition Logs', 'Indonesian Cryptozoology']
+  },  {
+    id: 'mapinguari-amazon',
+    parentId: 'bigfoot-br',
+    name: 'Mapinguari',
+    description: 'A legendary giant beast described in Amazonian folklore as a large, hairy, bipedal creature with a second mouth on its belly. Some researchers link it to late-surviving giant ground sloths or a South American hominid.',
+    sources: ['Amazonian Indigenous Legends', 'South American Cryptid Research']
+  },  {
+    id: 'yeren-china',
+    parentId: 'bigfoot-br',
+    name: 'Yeren',
+    description: 'A legendary wild man or ape-man reported to inhabit the mountainous, heavily forested regions of Hubei province and the Shennongjia Nature Reserve in China.',
+    sources: ['Chinese Academy of Sciences Expeditions', 'Shennongjia Archives']
+  },  {
+    id: 'hibagon-japan',
+    parentId: 'bigfoot-br',
+    name: 'Hibagon',
+    description: 'A hairy, ape-like creature reported in the forested areas around Mount Hiba in Hiroshima Prefecture, Japan, during the 1970s.',
+    sources: ['Hiroshima Cryptid Reports', 'Japanese Folklore']
+  },  {
+    id: 'skunk-ape-florida',
+    parentId: 'bigfoot-br',
+    name: 'Skunk Ape',
+    description: 'A swamp-dwelling, bipedal hominid reported to inhabit the southeastern United States, most famously the Florida Everglades, characterized by its reddish-brown hair and extremely foul odor.',
+    sources: ['Everglades Cryptid Database', 'Myakka River Sightings']
+  },  {
+    id: 'chuchunaa-siberia',
+    parentId: 'bigfoot-br',
+    name: 'Chuchunaa',
+    description: 'A wild man or Neanderthal-like hominid reported in Yakutia and Siberia, Russia, described as wearing skins and possessing a high-pitched, whistling call.',
+    sources: ['Siberian Ethnographic Records', 'Russian Cryptid Studies']
+  },  {
+    id: 'batutut-vietnam',
+    parentId: 'bigfoot-br',
+    name: 'Batutut',
+    description: 'A hairy, forest-dwelling bipedal creature reported in the Vu Quang Nature Reserve and other mountainous rainforest regions of Vietnam, Laos, and Borneo.',
+    sources: ['Vu Quang Expedition Logs', 'Indochina Wildlife Surveys']
+  },  {
+    id: 'mande-barung-india',
+    parentId: 'bigfoot-br',
+    name: 'Mande Barung',
+    description: 'A forest-dwelling ape-man reported in the Garo Hills of Meghalaya, India, described as a giant, herbivorous biped.',
+    sources: ['Garo Hills Folk History', 'Indian Hominid Expeditions']
+  },  {
+    id: 'barmanou-pakistan',
+    parentId: 'bigfoot-br',
+    name: 'Barmanou',
+    description: 'A bipedal wild man reported in the mountainous regions of northern Pakistan and eastern Afghanistan, particularly the Hindu Kush.',
+    sources: ['Hindu Kush Cryptid Research (Jordi Magraner)', 'Pamir Hominoid Logs']
+  },  {
+    id: 'agogwe-east-africa',
+    parentId: 'bigfoot-br',
+    name: 'Agogwe',
+    description: 'A small, bipedal, human-like cryptid reported in the forests and grasslands of East Africa, particularly Tanzania and Kenya, described as being covered in reddish woolly hair.',
+    sources: ['East African Explorer Journals', 'Tanzanian Folklore']
+  },  {
     id: 'cryptid-sightings-br',
     parentId: 'supernatural-anomalies',
     name: 'Cryptid Sightings',
