@@ -3669,18 +3669,6 @@ function App() {
       }
     });
 
-    map.on('moveend', () => {
-      const center = map.getCenter();
-      const zoomVal = map.getZoom();
-      const params = new URLSearchParams(window.location.search);
-      params.set('lat', center.lat.toFixed(4));
-      params.set('lng', center.lng.toFixed(4));
-      params.set('zoom', zoomVal.toFixed(1));
-      
-      const path = window.location.pathname;
-      const searchStr = params.toString();
-      window.history.replaceState(null, '', path + (searchStr ? `?${searchStr}` : ''));
-    });
 
     let mainMapAnimFrameId: number;
     const rotateSpeed = -0.0125; // Same rotation speed (half of -0.025)
