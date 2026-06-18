@@ -950,7 +950,12 @@ function App() {
   const [isMapLoaded, setIsMapLoaded] = useState(false);
   const [isDataCompiled, setIsDataCompiled] = useState(false);
   const [showAboutModal, setShowAboutModal] = useState(true);
-  const [currentPage, setCurrentPage] = useState<'map' | 'timeline' | 'codex'>('map');
+  const [currentPage, setCurrentPage] = useState<'map' | 'timeline' | 'codex'>(() => {
+    const path = window.location.pathname.toLowerCase();
+    if (path.startsWith('/timeline')) return 'timeline';
+    if (path.startsWith('/codex')) return 'codex';
+    return 'map';
+  });
   const [selectedTimelineItem, setSelectedTimelineItem] = useState<any | null>(null);
   const [activeWaypointIndex, setActiveWaypointIndex] = useState<number | null>(null);
 
@@ -1368,7 +1373,24 @@ function App() {
   const [onboardingStep, setOnboardingStep] = useState<number | null>(null);
 
   // Moderator State
-  const [isModeratorOpen, setIsModeratorOpen] = useState(false);
+  const [isModeratorOpen, setIsModeratorOpen] = useState(() => {
+    const path = window.location.pathname.toLowerCase();
+    const hash = window.location.hash.toLowerCase();
+    return (
+      path === '/mod' || 
+      path === '/moderator' || 
+      path === '/moderate' || 
+      path.endsWith('/mod') || 
+      path.endsWith('/moderator') || 
+      path.endsWith('/moderate') || 
+      hash === '#/mod' || 
+      hash === '#mod' || 
+      hash === '#/moderator' || 
+      hash === '#moderator' || 
+      hash === '#/moderate' || 
+      hash === '#moderate'
+    );
+  });
   const [moderatorPasscode, setModeratorPasscode] = useState('');
   const [isModeratorAuthenticated, setIsModeratorAuthenticated] = useState(false);
   const [moderatorError, setModeratorError] = useState<string | null>(null);
@@ -8345,6 +8367,7 @@ function App() {
                 <a href="https://www.theconfessionalspodcast.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>THE CONFESSIONALS</a>
                 <a href="https://www.instagram.com/giants_of_ancientamerica/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>GIANTS OF ANCIENT AMERICA</a>
                 <a href="https://www.instagram.com/freetherabbitspodcast/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>FREE THE RABBITS</a>
+                <a href="https://www.21cdstudios.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>21CD</a>
               </div>
             </div>
 
