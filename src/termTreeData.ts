@@ -20982,6 +20982,10 @@ const chunk_6: any[] = [
     relatedIds: ['ufos']
   },
   {
+    id: 'bilderberg-group',
+    parentId: 'illuminati-bloodlines',
+    name: 'Bilderberg Group',
+    description: 'An annual private conference established in 1954 to foster dialogue between political, financial, and industrial elites of Europe and North America. Conspiracy researchers view the invitation-only, off-the-record meetings as a shadow global government coordinating international policies and trade.',
     sources: ['Bilderberg Official Archives', 'Fringe Geopolitical Research'],
     mapFeatureId: 'anomaly-Secret-Government-Programs-Bilderberg',
     relatedIds: ['illuminati-bloodlines', 'illuminati']
