@@ -863,6 +863,50 @@ const chunk_0: any[] = [  {
     sources: ['Hesiod\'s Theogony', 'Ovid\'s Fasti'],
     isApocryphal: true
   },  {
+    id: 'myth-chimera',
+    parentId: 'mythical-creatures',
+    name: 'Chimera',
+    description: 'A fire-breathing monster from Greek mythology composed of the parts of three animals: a lion, a goat, and a snake. Slain by Bellerophon riding Pegasus, it is studied in alternative history as a possible representation of pre-flood transgenic hybridization or a symbolic warning against transgenic sciences.',
+    relatedIds: ['mythical-creatures', 'myth-pegasus', 'greek-monsters'],
+    sources: ['Hesiod\'s Theogony', 'Homer\'s Iliad'],
+    isApocryphal: true
+  },  {
+    id: 'myth-kraken',
+    parentId: 'mythical-creatures',
+    name: 'Kraken',
+    description: 'A legendary giant sea monster of Scandinavian folklore, described as a colossal cephalopod capable of dragging entire ships to the depths. Alternative researchers link the kraken to ancient sightings of giant or colossal squids, or pre-flood marine monsters.',
+    relatedIds: ['mythical-creatures', 'norse-pantheon', 'fae-mermaids-sirens'],
+    sources: ['Natural History of Norway (Pontoppidan)', 'Norse Sagas'],
+    isApocryphal: true
+  },  {
+    id: 'myth-basilisk',
+    parentId: 'mythical-creatures',
+    name: 'Basilisk (Cockatrice)',
+    description: 'A legendary reptilian king of beasts said to kill with a single glance and leave a trail of deadly venom. Often described as hatched from a cock\'s egg by a serpent. Esoterically representing spiritual death and corruption, it is sometimes linked to ancient venomous reptiles or alchemical symbols.',
+    relatedIds: ['mythical-creatures', 'dragons-br'],
+    sources: ['Pliny\'s Natural History', 'Medieval Bestiaries'],
+    isApocryphal: true
+  },  {
+    id: 'myth-unicorn',
+    parentId: 'mythical-creatures',
+    name: 'Unicorn',
+    description: 'A legendary creature depicted since antiquity as a horse with a single large, pointed, spiraling horn. Historically, the King James Version of the Bible translates the Hebrew word \'re\'em\' (likely a wild ox or aurochs) as \'unicorn.\' Esoterically, it symbolizes purity, divine strength, and the alchemical union of opposites.',
+    relatedIds: ['mythical-creatures', 'alchemy'],
+    sources: ['Physiologus', 'Pliny\'s Natural History', 'Job 39:9-10'],
+    isApocryphal: true,
+    bibleVerses: [
+      'Will the unicorn be willing to serve thee, or abide by thy crib? Canst thou bind the unicorn with his band in the furrow? — Job 39:9-10 (https://www.biblegateway.com/passage/?search=Job+39%3A9-10)',
+      'God brought them out of Egypt; he hath as it were the strength of an unicorn. — Numbers 23:22 (https://www.biblegateway.com/passage/?search=Numbers+23%3A22)'
+    ]
+  },  {
+    id: 'myth-thunderbird',
+    parentId: 'mythical-creatures',
+    name: 'Thunderbird',
+    description: 'A legendary giant bird in Native American cultures, believed to possess supernatural power and generate thunder by flapping its wings. In cryptozoology and alternative archaeology, Thunderbird sightings are investigated as potential surviving pterosaurs or relic populations of prehistoric giant avians.',
+    relatedIds: ['mythical-creatures', 'cryptid-sightings-br'],
+    sources: ['Native American Oral History', 'Cryptozoology Databases'],
+    isApocryphal: true
+  },  {
     id: 'myth-pan',
     parentId: 'greek-pantheon',
     name: 'Pan',
