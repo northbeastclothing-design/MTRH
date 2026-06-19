@@ -815,6 +815,54 @@ const chunk_0: any[] = [  {
     description: 'Legendary pre-flood and post-flood Mesopotamian rulers claiming immensely long reigns, bridging Sumerian mythology with historical dynastic records.',
     isApocryphal: true
   },  {
+    id: 'mythical-creatures',
+    parentId: 'pantheons-mythology-br',
+    name: 'Mythical Creatures',
+    description: 'Legendary beasts and creatures of ancient folklore, mythology, and medieval bestiaries. Often carrying profound symbolic or spiritual significance, these creatures are studied by alternative researchers for their possible historical basis (such as surviving pre-flood species), ties to genetic manipulation, or interdimensional manifestations.',
+    relatedIds: ['pantheons-mythology-br', 'greek-monsters', 'dragons-br', 'fae-mermaids-sirens'],
+    sources: ['Ancient Bestiaries', 'Classical Mythology', 'Fringe Cryptozoology'],
+    isApocryphal: true
+  },  {
+    id: 'myth-phoenix',
+    parentId: 'mythical-creatures',
+    name: 'Phoenix',
+    description: 'A mythical firebird from Greek, Egyptian, and Persian mythology. Renowned for its longevity, the Phoenix cyclically burns to ashes and is reborn from its own remains, serving as a universal symbol of spiritual resurrection, alchemical transmutation, and solar cycles.',
+    relatedIds: ['mythical-creatures', 'alchemy'],
+    sources: ['Herodotus\' Histories', 'Ovid\'s Metamorphoses'],
+    isApocryphal: true
+  },  {
+    id: 'myth-satyrs',
+    parentId: 'mythical-creatures',
+    name: 'Satyrs',
+    description: 'Cloven-hoofed, goat-legged male nature spirits of Greek mythology, companions of Dionysus and Pan. Historically linked to the biblical \'se\'irim\' (goat-demons or devils) and later syncretized with demonic imagery.',
+    relatedIds: ['mythical-creatures', 'myth-pan', 'lucifer'],
+    sources: ['Hesiod\'s Theogony', 'Leviticus 17:7', 'Isaiah 13:21'],
+    isApocryphal: true
+  },  {
+    id: 'myth-griffins',
+    parentId: 'mythical-creatures',
+    name: 'Griffin (Gryphon)',
+    description: 'A legendary creature with the body of a lion and the head and wings of an eagle. Guarding gold and treasures in ancient Scythian lore, alternative historians link the griffin to ancient memories of dinosaur fossils (such as Protoceratops) or symbolic representations of royal-angelic hybrids.',
+    relatedIds: ['mythical-creatures', 'behemoth-dinosaur'],
+    sources: ['Aelian\'s De Natura Animalium', 'Fringe Palaeontology Articles'],
+    isApocryphal: true
+  },  {
+    id: 'myth-centaurs',
+    parentId: 'mythical-creatures',
+    name: 'Centaurs',
+    description: 'A mythological race of creatures possessing the upper body of a human and the lower body and legs of a horse. Alternative historians and Nephilim researchers hypothesize that centaurs represented memories of early cavalry riders or pre-flood transgenic experiments conducted by the Watchers.',
+    relatedIds: ['mythical-creatures', 'nephilim-br', 'watchers'],
+    sources: ['Hesiod\'s Shield of Heracles', 'Pindar\'s Pythian Odes'],
+    isApocryphal: true
+  },  {
+    id: 'myth-pegasus',
+    parentId: 'mythical-creatures',
+    name: 'Pegasus',
+    description: 'The mythical winged horse of Greek lore, sired by Poseidon and born from the blood of the slain Medusa. Associated with celestial navigation, lightning, and poetic inspiration, it was ridden by Bellerophon to slay the Chimera.',
+    relatedIds: ['mythical-creatures', 'greek-monsters'],
+    sources: ['Hesiod\'s Theogony', 'Ovid\'s Fasti'],
+    isApocryphal: true
+  },  {
     id: 'myth-pan',
     parentId: 'greek-pantheon',
     name: 'Pan',
@@ -3397,6 +3445,17 @@ const chunk_0: any[] = [  {
     timelineId: 'samson',
     sources: ['Bible'],
     bibleVerses: ['“For, behold, you shall conceive, and bear a son; and no razor shall come on his head; for the child shall be a Nazirite to God...” — Judges 13:5 (https://www.biblegateway.com/passage/?search=Judges+13%3A5)', 'He found a fresh jawbone of a donkey... and killed a thousand men with it. — Judges 15:15 (https://www.biblegateway.com/passage/?search=Judges+15%3A15)']
+  },  {
+    id: 'prophets-general',
+    parentId: 'biblical-figures',
+    name: 'Prophets & Seers',
+    description: 'Individuals who serve as messengers or mouthpieces of the divine, conveying revelations, warnings, and future predictions to humanity. In the biblical Hebrew tradition, prophets (Nevi\'im) received words, dreams, and visions directly from Yahweh, acting in direct opposition to false prophets, mediums, and necromancers. Alternative and esoteric scholars study the spiritual, multidimensional, and neurological contexts of prophetic visions.',
+    relatedIds: ['biblical-figures', 'samuel_prophet', 'daniel_prophet', 'necromancers', 'sorcerers'],
+    sources: ['Bible', 'Ancient Near Eastern Prophetic Texts', 'Theological Studies'],
+    bibleVerses: [
+      'Surely the Lord Yahweh will do nothing, unless he reveals his secret to his servants the prophets. — Amos 3:7 (https://www.biblegateway.com/passage/?search=Amos+3%3A7)',
+      'For no prophecy ever came by the will of man: but holy men of God spoke, being moved by the Holy Spirit. — 2 Peter 1:21 (https://www.biblegateway.com/passage/?search=2+Peter+1%3A21)'
+    ]
   },  {
     id: 'samuel_prophet',
     parentId: 'biblical-figures',
@@ -20768,6 +20827,41 @@ const chunk_6: any[] = [
     sources: ['Folklore', 'Historical Records', 'Scottish Tradition']
   },
   {
+    id: 'necromancers',
+    parentId: 'witchcraft-folk-magic',
+    name: 'Necromancer',
+    description: 'A practitioner of necromancy, the forbidden magic of summoning and communicating with the spirits of the dead to retrieve hidden knowledge or foresee the future. In the Bible, necromancy is explicitly condemned as consulting familiar spirits. The most famous scriptural example is the Witch of Endor, whom King Saul petitioned to conjure the spirit of the deceased prophet Samuel (1 Samuel 28).',
+    relatedIds: ['witch-of-endor', 'witchcraft-folk-magic', 'divination', 'prophets-general'],
+    sources: ['Bible', 'Grimoires of Necromancy', 'Ancient Greek Nekromanteion'],
+    bibleVerses: [
+      'There shall not be found among you anyone who... casts spells, or who consults a ghost or a familiar spirit, or who inquires of the dead. — Deuteronomy 18:10-11 (https://www.biblegateway.com/passage/?search=Deuteronomy+18%3A10-11)',
+      'And when they say to you, “Seek those who are mediums and wizards, who whisper and mutter,” should not a people seek their God? Should they seek the dead on behalf of the living? — Isaiah 8:19 (https://www.biblegateway.com/passage/?search=Isaiah+8%3A19)'
+    ]
+  },
+  {
+    id: 'sorcerers',
+    parentId: 'witchcraft-folk-magic',
+    name: 'Sorcerer',
+    description: 'A practitioner of sorcery (pharmakeia), the art of using spells, rituals, potions, and herbs to invoke supernatural forces and alter the physical world. In the Greek New Testament, the root word \'pharmakeia\' carries the connotation of drugs, poisons, and hallucinogens used to induce trance states for communion with demons. Biblical accounts document sorcerers opposing prophets, such as Simon Magus in Acts 8 and Elymas in Acts 13.',
+    relatedIds: ['witchcraft-folk-magic', 'wizards', 'witches', 'prophets-general'],
+    sources: ['Bible', 'Ancient Near Eastern Magic Records', 'Hellenistic Magical Papyri'],
+    bibleVerses: [
+      'But the cowardly, unbelieving, abominable, murderers, sexually immoral, sorcerers, idolaters, and all liars, their part will be in the lake that burns with fire and sulfur... — Revelation 21:8 (https://www.biblegateway.com/passage/?search=Revelation+21%3A8)',
+      'Now the deeds of the flesh are obvious, which are: adultery, sexual immorality... idolatry, sorcery... — Galatians 5:19-20 (https://www.biblegateway.com/passage/?search=Galatians+5%3A19-20)'
+    ]
+  },
+  {
+    id: 'enchantresses',
+    parentId: 'witchcraft-folk-magic',
+    name: 'Enchantress',
+    description: 'A female practitioner of enchantment and glamour magic, using charms, spells, music, and alluring speech to bind or manipulate the minds, senses, and wills of others. Enchantresses are prominent in classical myth, such as Circe in Homer\'s Odyssey, who transfigured men into beasts, and the biblical warnings against seductive, spirit-whispering enchantments.',
+    relatedIds: ['witchcraft-folk-magic', 'witches', 'enchantments-br'],
+    sources: ['Bible', 'Odyssey (Homer)', 'Medieval Romance Lore'],
+    bibleVerses: [
+      'Stand now with your enchantments, and with the multitude of your sorceries, in which you have labored from your youth... — Isaiah 47:12 (https://www.biblegateway.com/passage/?search=Isaiah+47%3A12)'
+    ]
+  },
+  {
     id: 'divination',
     parentId: 'witchcraft-folk-magic',
     name: 'Divination',
@@ -21219,6 +21313,7 @@ const chunk_6: any[] = [
     parentId: 'fae',
     name: 'Mermaids & Sirens',
     description: 'Aquatic human-hybrid fae and spirits of the seas. Possessing alluring voices capable of casting hypnotic spells over sailors, they are linked in global folklore to shipwreck lore and deep-ocean mysteries.',
+    relatedIds: ['mythical-creatures'],
     sources: ['Odyssey (Homer)', 'Medieval Bestiaries']
   },
   {
