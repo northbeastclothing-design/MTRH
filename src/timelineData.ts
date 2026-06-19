@@ -3697,6 +3697,24 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
       start: 1614,
       description: 'The publication of the first Rosicrucian Manifesto in Germany, announcing the secret Order of the Rose Cross.',
       source: 'Fama Fraternitatis'
+    },
+    {
+      id: 'catholicism-history',
+      name: 'Apostolic Foundation of Catholicism',
+      type: 'event',
+      layer: 'alchemy-occult',
+      start: 33,
+      description: 'Commissioning of Saint Peter as the head of the church in Rome, establishing the lineage of the papacy.',
+      source: 'Roman Catholic Historical Annals'
+    },
+    {
+      id: 'mormonism-origins',
+      name: 'Translation of the Book of Mormon',
+      type: 'event',
+      layer: 'alchemy-occult',
+      start: 1827,
+      description: 'Joseph Smith receives the golden plates on the Hill Cumorah from the Angel Moroni, translating them to publish the Book of Mormon.',
+      source: 'LDS Church Historical Archives'
     }
   ];
 
@@ -3915,7 +3933,9 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'hinduism-origins': { lng: 68.1256, lat: 27.3292, locationName: 'Indus Valley (Origins of Hinduism)', category: 'The Occult' },
   'zoroastrianism-origins': { lng: 54.3733, lat: 31.8814, locationName: 'Yazd Fire Temple (Yazd, Iran)', category: 'The Occult' },
   'gnosticism-origins': { lng: 32.2356, lat: 26.0528, locationName: 'Nag Hammadi Caves (Egypt)', category: 'The Occult' },
-  'rosicrucianism-origins': { lng: 8.7153, lat: 49.4106, locationName: 'Heidelberg Castle (Heidelberg, Germany)', category: 'The Occult' }
+  'rosicrucianism-origins': { lng: 8.7153, lat: 49.4106, locationName: 'Heidelberg Castle (Heidelberg, Germany)', category: 'The Occult' },
+  'catholicism-history': { lng: 12.4534, lat: 41.9029, locationName: 'Vatican City (Rome, Italy)', category: 'The Occult' },
+  'mormonism-origins': { lng: -77.2244, lat: 43.0167, locationName: 'Hill Cumorah (Manchester, NY)', category: 'The Occult' }
 };
 
 export interface Waypoint {

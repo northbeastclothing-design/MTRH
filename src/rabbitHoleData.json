@@ -29780,5 +29780,33 @@
     "description": "Heidelberg Castle, associated with Frederick V, Elector Palatine. In esoteric history, it was a focal point of the 'Rosicrucian Enlightenment', hosting gardens and architecture loaded with Hermetic symbolism.",
     "source": "Fama Fraternitatis (1614) / The Rosicrucian Enlightenment (Frances Yates)",
     "images": []
+  },
+  {
+    "id": "anomaly-Religions-Catholicism",
+    "name": "Vatican City (Center of Catholicism)",
+    "category": "The Occult",
+    "type": "Point",
+    "coordinates": {
+      "lng": 12.4534,
+      "lat": 41.9029
+    },
+    "date": 33,
+    "description": "Vatican City, the seat of the Pope and spiritual center of the Roman Catholic Church. In alternative history, it is heavily scrutinized for its secret archives, historical links to crusading military orders, and its custody of suppressed ancient scriptures.",
+    "source": "Historical Chronicles / Vatican Heritage",
+    "images": []
+  },
+  {
+    "id": "anomaly-Religions-Mormonism",
+    "name": "Hill Cumorah (Birthplace of Mormonism)",
+    "category": "The Occult",
+    "type": "Point",
+    "coordinates": {
+      "lng": -77.2244,
+      "lat": 43.0167
+    },
+    "date": 1827,
+    "description": "Hill Cumorah in Manchester, New York, where Joseph Smith claimed to receive the golden plates from the angel Moroni in 1827. In alternative archaeology and fringe history, Mormon legends of ancient American civilizations are sometimes compared to Mound Builder cultures.",
+    "source": "History of the Church / Joseph Smith Testimony",
+    "images": []
   }
 ]
