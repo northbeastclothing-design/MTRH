@@ -26,8 +26,61 @@ export interface TermNode {
 
 const chunk_0: any[] = [  {
     id: 'biblical-apocryphal',
-    name: 'Biblical / Apocryphal',
-    description: 'Scriptural records, angelic hierarchies, ancient pagan pantheons, pre-flood patriarchs, nephilim lineages, and non-canonical/apocryphal narratives.'
+    name: 'Religion',
+    description: 'Scriptural records, world religions, angelic hierarchies, ancient patriarchs, nephilim lineages, and canonical or apocryphal narratives.'
+  },
+  {
+    id: 'myths-legends-root',
+    name: 'Myths / Legends',
+    description: 'Ancient pantheons, legendary sagas, mythical beasts, and hero epics from Greek, Norse, Egyptian, Chinese, and other civilizations.'
+  },
+  {
+    id: 'chinese-mythology',
+    parentId: 'myths-legends-root',
+    name: 'Chinese Pantheon & Lore',
+    description: 'Deities, immortals, and legendary creatures of ancient Chinese mythology and folklore.'
+  },
+  {
+    id: 'greek-mythology',
+    parentId: 'myths-legends-root',
+    name: 'Greek Mythology',
+    description: 'The pantheon of Olympian gods, primeval Titans, and legendary monsters and heroes of ancient Hellenic lore.',
+    isApocryphal: true
+  },
+  {
+    id: 'native-american-mythology',
+    parentId: 'myths-legends-root',
+    name: 'Native American Lore',
+    description: 'The rich oral traditions, spirit guides, and creation stories of various Indigenous peoples of North America.',
+    isApocryphal: true
+  },
+  {
+    id: 'navajo-hopi-lore',
+    parentId: 'native-american-mythology',
+    name: 'Navajo & Hopi Lore',
+    description: 'The cosmology, shape-shifting legends, and emergence myths of the Southwestern Hopi and Navajo peoples.',
+    isApocryphal: true
+  },
+  {
+    id: 'algonquian-iroquois-lore',
+    parentId: 'native-american-mythology',
+    name: 'Algonquian & Iroquois Lore',
+    description: 'The legends of the Northeast woodlands, encompassing Algonquian Wendigo stories and the historical/mythical founding of the Iroquois Confederacy.',
+    isApocryphal: true
+  },
+  {
+    id: 'sioux-plains-lore',
+    parentId: 'native-american-mythology',
+    name: 'Sioux & Plains Lore',
+    description: 'The sacred vision quests, pipe ceremonies, and trickster legends of the Great Plains Lakota/Sioux nations.',
+    isApocryphal: true
+  },
+  {
+    id: 'anishinaabe-ojibwe-lore',
+    parentId: 'native-american-mythology',
+    name: 'Anishinaabe & Ojibwe Lore',
+    description: 'The Great Lakes folklore of the Anishinaabe and Ojibwe peoples, including culture hero stories and avian thunder guardians.',
+    isApocryphal: true
   },  {
     id: 'megaliths-structures',
     name: 'Megaliths / Structures',
@@ -42,9 +95,9 @@ const chunk_0: any[] = [  {
     description: 'Indigenous nations, historical empires, lineages, and mysterious societies whose origins and legacies are recorded in antiquity.'
   },  {
     id: 'elohim',
-    parentId: 'biblical-apocryphal',
-    name: 'Elohim',
-    description: 'A biblical Hebrew term for "divine beings" or "gods," representing the spiritual hosts, angelic orders, and heavenly council ruling under God in biblical and Near Eastern cosmology.'
+    parentId: 'christianity',
+    name: 'Angelology',
+    description: 'The study of angels, heavenly hosts, and divine messengers. In biblical cosmology, it encompasses the angelic hierarchies, the heavenly council, and the hosts of spiritual beings ruling under God, historically referred to by the Hebrew term Elohim.'
   },  {
     id: 'angel',
     parentId: 'elohim',
@@ -356,7 +409,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Around the throne were twenty-four thrones. On the thrones were twenty-four elders sitting, dressed in white garments, with crowns of gold on their heads. — Revelation 4:4 (https://www.biblegateway.com/passage/?search=Revelation+4%3A4)', 'the twenty-four elders fall down before him who sits on the throne, and worship him who lives forever and ever, and throw their crowns before the throne, saying, — Revelation 4:10 (https://www.biblegateway.com/passage/?search=Revelation+4%3A10)', 'Now when he had taken the book, the four living creatures and the twenty-four elders fell down before the Lamb, each one having a harp, and golden bowls full of incense, which are the prayers of the saints. — Revelation 5:8 (https://www.biblegateway.com/passage/?search=Revelation+5%3A8)']
   },  {
     id: 'demonology',
-    parentId: 'biblical-apocryphal',
+    parentId: 'christianity',
     name: 'Demonology',
     description: 'The study and taxonomy of fallen angels, demons, malevolent spirits, and unclean entities in biblical, apocryphal, and historical accounts.'
   },  {
@@ -767,26 +820,20 @@ const chunk_0: any[] = [  {
     isApocryphal: true,
     bibleVerses: ['These are their chiefs of tens... And these are the names: ... Yomiel... — 1 Enoch 6:7-8 (https://www.sacred-texts.com/bib/boe/boe009.htm)']
   },  {
-    id: 'pantheons-mythology-br',
-    parentId: 'biblical-apocryphal',
-    name: 'Pagan Pantheons & Fallen Realms',
-    description: 'Deities, titans, and legendary creatures of ancient polytheistic mythologies, often correlated with pre-flood powers or fallen angelic influences.',
-    isApocryphal: true
-  },  {
     id: 'greek-pantheon',
-    parentId: 'pantheons-mythology-br',
+    parentId: 'greek-mythology',
     name: 'Greek Pantheon',
     description: 'The twelve Olympian gods and associated deities of classical Greek religion ruling from Mount Olympus.',
     isApocryphal: true
   },  {
     id: 'greek-titans',
-    parentId: 'pantheons-mythology-br',
+    parentId: 'greek-mythology',
     name: 'Greek Titans',
     description: 'The elder deities of Greek mythology who ruled during the Golden Age, led by Cronus, preceding the Olympians.',
     isApocryphal: true
   },  {
     id: 'greek-monsters',
-    parentId: 'pantheons-mythology-br',
+    parentId: 'greek-mythology',
     name: 'Greek Monsters & Mortals',
     description: 'Legendary creatures, monsters, and mortal heroes featured in classical Hellenic epic poetry and folklore.',
     isApocryphal: true
@@ -798,25 +845,25 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'norse-pantheon',
-    parentId: 'pantheons-mythology-br',
+    parentId: 'myths-legends-root',
     name: 'Norse Pantheon',
     description: 'The Aesir and Vanir deities of Germanic and Scandinavian mythology ruling over Asgard.',
     isApocryphal: true
   },  {
     id: 'hindu-pantheon',
-    parentId: 'pantheons-mythology-br',
+    parentId: 'myths-legends-root',
     name: 'Hindu Pantheon',
     description: 'The divine manifestations, avatars, and cosmic deities of Vedic and classical Hindu traditions.',
     isApocryphal: true
   },  {
     id: 'sumerian-kings',
-    parentId: 'pantheons-mythology-br',
+    parentId: 'myths-legends-root',
     name: 'Sumerian King List',
     description: 'Legendary pre-flood and post-flood Mesopotamian rulers claiming immensely long reigns, bridging Sumerian mythology with historical dynastic records.',
     isApocryphal: true
   },  {
     id: 'mythical-creatures',
-    parentId: 'pantheons-mythology-br',
+    parentId: 'myths-legends-root',
     name: 'Mythical Creatures',
     description: 'Legendary beasts and creatures of ancient folklore, mythology, and medieval bestiaries. Often carrying profound symbolic or spiritual significance, these creatures are studied by alternative researchers for their possible historical basis (such as surviving pre-flood species), ties to genetic manipulation, or interdimensional manifestations.',
     relatedIds: ['pantheons-mythology-br', 'greek-monsters', 'dragons-br', 'fae-mermaids-sirens'],
@@ -898,14 +945,6 @@ const chunk_0: any[] = [  {
       'Will the unicorn be willing to serve thee, or abide by thy crib? Canst thou bind the unicorn with his band in the furrow? — Job 39:9-10 (https://www.biblegateway.com/passage/?search=Job+39%3A9-10)',
       'God brought them out of Egypt; he hath as it were the strength of an unicorn. — Numbers 23:22 (https://www.biblegateway.com/passage/?search=Numbers+23%3A22)'
     ]
-  },  {
-    id: 'myth-thunderbird',
-    parentId: 'mythical-creatures',
-    name: 'Thunderbird',
-    description: 'A legendary giant bird in Native American cultures, believed to possess supernatural power and generate thunder by flapping its wings. In cryptozoology and alternative archaeology, Thunderbird sightings are investigated as potential surviving pterosaurs or relic populations of prehistoric giant avians.',
-    relatedIds: ['mythical-creatures', 'cryptid-sightings-br'],
-    sources: ['Native American Oral History', 'Cryptozoology Databases'],
-    isApocryphal: true
   },  {
     id: 'myth-pan',
     parentId: 'greek-pantheon',
@@ -1859,7 +1898,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'bloodlines-genealogy',
-    parentId: 'biblical-apocryphal',
+    parentId: 'christianity',
     secondaryParentIds: ['alchemy-occult'],
     name: 'Royal & Esoteric Bloodlines',
     description: 'Lineages of power tracing through the Merovingian dynasty, royal houses, and ancient genealogical lineages.'
@@ -2648,7 +2687,7 @@ const chunk_0: any[] = [  {
     sources: ['Astrophysics Literature', 'Theoretical Physics Papers']
   },  {
     id: 'biblical-figures',
-    parentId: 'biblical-apocryphal',
+    parentId: 'christianity',
     name: 'Biblical Figures',
     description: 'Key historical patriarchs and historical personalities mentioned in the biblical record.',
     layer: 'Biblical Figures'
@@ -3907,7 +3946,7 @@ const chunk_0: any[] = [  {
     sources: ['Bible', 'Historical Chronology Database']
   },  {
     id: 'nephilim-br',
-    parentId: 'biblical-apocryphal',
+    parentId: 'christianity',
     name: 'Nephilim & Giants',
     description: 'The offspring of the Watchers (sons of God) and human women, described as "mighty men of old, men of renown."',
     translations: [
@@ -7114,7 +7153,7 @@ const chunk_1: any[] = [  {
     isApocryphal: true
   },  {
     id: 'enochian-sites',
-    parentId: 'biblical-apocryphal',
+    parentId: 'christianity',
     name: 'Enochian Sites & Peaks',
     description: 'Geographic markers closely associated with Enochian lore and the landing of the Watchers.',
     layer: 'Enochian Sites',
@@ -7223,7 +7262,7 @@ const chunk_1: any[] = [  {
     isApocryphal: true
   },  {
     id: 'biblical-events',
-    parentId: 'biblical-apocryphal',
+    parentId: 'christianity',
     name: 'Biblical Events',
     description: 'Catastrophic events and cosmological milestones recorded in antiquity.',
     layer: 'Biblical Events'
@@ -7492,154 +7531,154 @@ const chunk_1: any[] = [  {
     timelineId: 'evt-tower-babel',
     sources: ['Bible', 'Ancient Historical Chronicles']
   },  {
-    id: 'biblical-finds',
-    parentId: 'biblical-apocryphal',
-    name: 'Biblical Finds',
+    id: 'biblical-discoveries',
+    parentId: 'christianity',
+    name: 'Biblical Discoveries',
     description: 'Archaeological discoveries and artifacts reinforcing or validating biblical historical accounts.',
-    layer: 'Biblical Finds'
+    layer: 'Biblical Discoveries'
   },  {
     id: 'archaeology-shroud-of-turin',
-    parentId: 'biblical-finds',
+    parentId: 'biblical-discoveries',
     name: 'The Shroud of Turin',
     description: 'A length of linen cloth housed in Turin, Italy, bearing the faint double image of a man showing signs of severe physical trauma matching the biblical description of Roman crucifixion. While radiocarbon dating has sparked intense debate, alternative studies argue the linen contains unique pollen and coin prints from 1st-century Judaea.',
-    layer: 'Biblical Finds',
+    layer: 'Biblical Discoveries',
     mapFeatureId: 'archaeology-shroud-of-turin',
     images: ['https://upload.wikimedia.org/wikipedia/commons/2/23/Turin_shroud_positive_and_negative_displaying_original_color_information_708_x_465_pixels_94_KB.jpg'],
     sources: ['Archaeological Excavation Reports', 'Historical Geography Database'],
     bibleVerses: ['And he bought fine linen, and took him down, and wrapped him in the linen, and laid him in a sepulchre which was hewn out of a rock, and rolled a stone unto the door of the sepulchre. — Mark 15:46 (https://www.biblegateway.com/passage/?search=Mark+15%3A46)']
   },  {
     id: 'archaeology-noahs-ark-ararat',
-    parentId: 'biblical-finds',
+    parentId: 'biblical-discoveries',
     name: 'Noah\'s Ark Search (Durupinar Site)',
     description: 'A 150-meter-long boat-shaped formation located in the Tendürek mountains near Mount Ararat, discovered by a Turkish military pilot. While mainstream geologists view it as a natural syncline, expeditions claim ground-penetrating radar scans reveal regular iron bracket anomalies and fossilized timber rib patterns matching the Ark\'s dimensions.',
-    layer: 'Biblical Finds',
+    layer: 'Biblical Discoveries',
     mapFeatureId: 'archaeology-noahs-ark-ararat',
     images: ['https://upload.wikimedia.org/wikipedia/commons/1/1a/The_Structure_Claimed_to_be_the_Noah%27s_Ark_near_the_Mount_Ararat_in_Turkey.jpg'],
     sources: ['Archaeological Excavation Reports', 'Historical Geography Database'],
     bibleVerses: ['And the ark rested in the seventh month, on the seventeenth day of the month, upon the mountains of Ararat. — Genesis 8:4 (https://www.biblegateway.com/passage/?search=Genesis+8%3A4)', 'Make thee an ark of gopher wood; rooms shalt thou make in the ark, and shalt pitch it within and without with pitch. — Genesis 6:14 (https://www.biblegateway.com/passage/?search=Genesis+6%3A14)']
   },  {
     id: 'archaeology-ark-of-covenant-axum',
-    parentId: 'biblical-finds',
+    parentId: 'biblical-discoveries',
     name: 'Ark of the Covenant Sanctuary (Axum)',
     description: 'The Chapel of the Tablet at the Church of Our Lady Mary of Zion in Axum, Ethiopia. Local tradition holds that the Ark of the Covenant was brought to Ethiopia by Menelik I, the son of King Solomon and the Queen of Sheba, and has been guarded continuously by a succession of celibate monks who never leave the sanctuary.',
-    layer: 'Biblical Finds',
+    layer: 'Biblical Discoveries',
     mapFeatureId: 'archaeology-ark-of-covenant-axum',
     images: ['https://upload.wikimedia.org/wikipedia/commons/b/bc/ET_Axum_asv2018-01_img31_StMary_of_Zion_Church.jpg'],
     sources: ['Archaeological Excavation Reports', 'Historical Geography Database'],
     bibleVerses: ['And they shall make an ark of shittim wood: two cubits and a half shall be the length thereof, and a cubit and a half the breadth thereof, and a cubit and a half the height thereof. — Exodus 25:10 (https://www.biblegateway.com/passage/?search=Exodus+25%3A10)', 'And the temple of God was opened in heaven, and there was seen in his temple the ark of his testament... — Revelation 11:19 (https://www.biblegateway.com/passage/?search=Revelation+11%3A19)']
   },  {
     id: 'archaeology-sodom-gomorrah',
-    parentId: 'biblical-finds',
+    parentId: 'biblical-discoveries',
     name: 'Sodom & Gomorrah Site (Tall el-Hammam)',
     description: 'Excavations at Tall el-Hammam have uncovered a major Middle Bronze Age city destroyed by a sudden, catastrophic high-heat event. Findings of melted pottery, bubbling pottery shards, pulverized brickwork, and a soot-rich charcoal layer suggest a cosmic airburst (similar to the Tunguska event) matching the biblical account of Sodom\'s fiery end.',
-    layer: 'Biblical Finds',
+    layer: 'Biblical Discoveries',
     mapFeatureId: 'archaeology-sodom-gomorrah',
     images: ['https://upload.wikimedia.org/wikipedia/commons/1/12/Tall_el-Hammam_Excavation-Jordan_Valley.jpg'],
     sources: ['Archaeological Excavation Reports', 'Historical Geography Database'],
     bibleVerses: ['Then the Lord rained upon Sodom and upon Gomorrah brimstone and fire from the Lord out of heaven; — Genesis 19:24 (https://www.biblegateway.com/passage/?search=Genesis+19%3A24)', 'Even as Sodom and Gomorrha, and the cities about them in like manner, giving themselves over to fornication, and going after strange flesh, are set forth for an example, suffering the vengeance of eternal fire. — Jude 1:7 (https://www.biblegateway.com/passage/?search=Jude+1%3A7)']
   },  {
     id: 'archaeology-hezekiahs-tunnel-inscription',
-    parentId: 'biblical-finds',
+    parentId: 'biblical-discoveries',
     name: 'Hezekiah\'s Tunnel Inscription',
     description: 'An ancient Paleo-Hebrew inscription carved into the wall of Hezekiah\'s Tunnel, celebrating the moment when two teams of stone excavators, digging from opposite ends, successfully met in the center. The tunnel was dug to secure Jerusalem\'s water supply during the Assyrian siege led by Sennacherib, confirming 2 Kings 20.',
-    layer: 'Biblical Finds',
+    layer: 'Biblical Discoveries',
     mapFeatureId: 'archaeology-hezekiahs-tunnel-inscription',
     images: ['https://upload.wikimedia.org/wikipedia/commons/a/af/Siloam_Inscription_2.jpg'],
     sources: ['Archaeological Excavation Reports', 'Historical Geography Database'],
     bibleVerses: ['And the rest of the acts of Hezekiah, and all his might, and how he made a pool, and a conduit, and brought water into the city, are they not written in the book of the chronicles of the kings of Judah? — 2 Kings 20:20 (https://www.biblegateway.com/passage/?search=2+Kings+20%3A20)', 'This same Hezekiah also stopped the upper watercourse of Gihon, and brought it straight down to the west side of the city of David. And Hezekiah prospered in all his works. — 2 Chronicles 32:30 (https://www.biblegateway.com/passage/?search=2+Chronicles+32%3A30)']
   },  {
     id: 'archaeology-garden-tomb',
-    parentId: 'biblical-finds',
+    parentId: 'biblical-discoveries',
     name: 'The Garden Tomb',
     description: 'A rock-cut tomb located outside the city walls of Jerusalem. Unearthed in 1867, it was proposed by British General Charles Gordon as the actual site of Golgotha and the tomb of Joseph of Arimathea. It features a channel in the ground for a rolling stone, matching the Gospel descriptions of Jesus\' resurrection site.',
-    layer: 'Biblical Finds',
+    layer: 'Biblical Discoveries',
     mapFeatureId: 'archaeology-garden-tomb',
     images: ['https://upload.wikimedia.org/wikipedia/commons/7/7c/Jerusalem_Garden_Tomb_%2843300924231%29.jpg'],
     sources: ['Archaeological Excavation Reports', 'Historical Geography Database'],
     bibleVerses: ['Now in the place where he was crucified there was a garden; and in the garden a new sepulchre, wherein was never man yet laid. — John 19:41 (https://www.biblegateway.com/passage/?search=John+19%3A41)']
   },  {
     id: 'archaeology-dead-sea-scrolls',
-    parentId: 'biblical-finds',
+    parentId: 'biblical-discoveries',
     name: 'The Dead Sea Scrolls',
     description: 'Ancient Jewish religious manuscripts found in the Qumran Caves near the Dead Sea. They include the oldest surviving manuscripts of entire books of the Hebrew Bible (excluding Esther), biblical commentaries, and sectarian texts, providing unprecedented insight into Second Temple Judaism.',
-    layer: 'Biblical Finds',
+    layer: 'Biblical Discoveries',
     mapFeatureId: 'archaeology-dead-sea-scrolls',
     images: ['https://upload.wikimedia.org/wikipedia/commons/a/a6/Dead_Sea_Scrolls.jpg'],
     sources: ['Archaeological Excavation Reports', 'Historical Geography Database'],
     bibleVerses: ['The grass withereth, the flower fadeth: but the word of our God shall stand for ever. — Isaiah 40:8 (https://www.biblegateway.com/passage/?search=Isaiah+40%3A8)']
   },  {
     id: 'archaeology-tel-dan-stele',
-    parentId: 'biblical-finds',
+    parentId: 'biblical-discoveries',
     name: 'Tel Dan \'House of David\' Stele',
     description: 'A fragmented basalt stele discovered in northern Israel. Written in Old Aramaic, it records victories over Israel by a king of Aram-Damascus. Crucially, the inscription contains the words \'Beit David\' (House of David), representing the first extra-biblical historical validation of King David\'s dynasty.',
-    layer: 'Biblical Finds',
+    layer: 'Biblical Discoveries',
     mapFeatureId: 'archaeology-tel-dan-stele',
     images: ['https://upload.wikimedia.org/wikipedia/commons/4/40/JRSLM_300116_Tel_Dan_Stele_01.jpg'],
     sources: ['Archaeological Excavation Reports', 'Historical Geography Database'],
     bibleVerses: ['And he went with Joram the son of Ahab to the war against Hazael king of Syria in Ramoth-gilead; and the Syrians wounded Joram. — 2 Kings 8:28 (https://www.biblegateway.com/passage/?search=2+Kings+8%3A28)']
   },  {
     id: 'archaeology-cyrus-cylinder',
-    parentId: 'biblical-finds',
+    parentId: 'biblical-discoveries',
     name: 'The Cyrus Cylinder',
     description: 'An ancient clay cylinder inscribed in Akkadian cuneiform by Cyrus the Great of Persia. It describes his conquest of Babylon and his policy of repatriating displaced peoples and restoring their temples, which directly corroborates the Biblical decree in the Book of Ezra allowing the Jews to return and rebuild Jerusalem.',
-    layer: 'Biblical Finds',
+    layer: 'Biblical Discoveries',
     mapFeatureId: 'archaeology-cyrus-cylinder',
     images: ['https://upload.wikimedia.org/wikipedia/commons/e/e5/Cyrus_Cylinder_front.jpg'],
     sources: ['Archaeological Excavation Reports', 'Historical Geography Database'],
     bibleVerses: ['Thus saith Cyrus king of Persia, The Lord God of heaven hath given me all the kingdoms of the earth; and he hath charged me to build him an house at Jerusalem, which is in Judah. — Ezra 1:2 (https://www.biblegateway.com/passage/?search=Ezra+1%3A2)']
   },  {
     id: 'archaeology-ketef-hinnom',
-    parentId: 'biblical-finds',
+    parentId: 'biblical-discoveries',
     name: 'Ketef Hinnom Silver Scrolls',
     description: 'Two tiny rolled silver scrolls discovered in a tomb chamber at Ketef Hinnom. Once unrolled and deciphered using advanced imaging, they were found to contain the Priestly Blessing from Numbers 6:24-26. They are the oldest surviving fragments of a biblical text ever discovered, predating the Dead Sea Scrolls by 300+ years.',
-    layer: 'Biblical Finds',
+    layer: 'Biblical Discoveries',
     mapFeatureId: 'archaeology-ketef-hinnom',
     images: ['https://upload.wikimedia.org/wikipedia/commons/7/70/KetefHinom.jpg'],
     sources: ['Archaeological Excavation Reports', 'Historical Geography Database'],
     bibleVerses: ['The Lord bless thee, and keep thee: The Lord make his face shine upon thee, and be gracious unto thee: The Lord lift up his countenance upon thee, and give thee peace. — Numbers 6:24-26 (https://www.biblegateway.com/passage/?search=Numbers+6%3A24-26)']
   },  {
     id: 'archaeology-pilate-stone',
-    parentId: 'biblical-finds',
+    parentId: 'biblical-discoveries',
     name: 'The Pilate Stone',
     description: 'A damaged block of carved limestone found at Caesarea Maritima. The latin inscription clearly mentions \'Pontius Pilatus, Prefect of Judaea,\' who dedicated a building in honor of Emperor Tiberius. It is the first physical archaeological artifact confirming the existence and title of Pontius Pilate.',
-    layer: 'Biblical Finds',
+    layer: 'Biblical Discoveries',
     mapFeatureId: 'archaeology-pilate-stone',
     images: ['https://upload.wikimedia.org/wikipedia/commons/e/e1/Pilate_Inscription.JPG'],
     sources: ['Archaeological Excavation Reports', 'Historical Geography Database'],
     bibleVerses: ['And when they had bound him, they led him away, and delivered him to Pontius Pilate the governor. — Matthew 27:2 (https://www.biblegateway.com/passage/?search=Matthew+27%3A2)']
   },  {
     id: 'archaeology-pool-of-siloam',
-    parentId: 'biblical-finds',
+    parentId: 'biblical-discoveries',
     name: 'The Pool of Siloam',
     description: 'A rock-cut pool on the southern slope of the City of David, fed by the Gihon Spring. Initially built by King Hezekiah in the 8th century BC to secure the city\'s water supply, it was later expanded in the Second Temple era. It is famously referenced in the Gospel of John as the location where Jesus healed a blind man.',
-    layer: 'Biblical Finds',
+    layer: 'Biblical Discoveries',
     mapFeatureId: 'archaeology-pool-of-siloam',
     images: ['https://upload.wikimedia.org/wikipedia/commons/8/80/City_of_David_-_Pool_of_Siloam_IMG_5931.JPG'],
     sources: ['Archaeological Excavation Reports', 'Historical Geography Database'],
     bibleVerses: ['And said unto him, Go, wash in the pool of Siloam, (which is by interpretation, Sent.) He went his way therefore, and washed, and came seeing. — John 9:7 (https://www.biblegateway.com/passage/?search=John+9%3A7)', 'But the gate of the fountain repaired Shallun... and the wall of the pool of Siloah by the king\'s garden, and unto the stairs that go down from the city of David. — Nehemiah 3:15 (https://www.biblegateway.com/passage/?search=Nehemiah+3%3A15)']
   },  {
     id: 'archaeology-mesha-stele',
-    parentId: 'biblical-finds',
+    parentId: 'biblical-discoveries',
     name: 'The Mesha Stele (Moabite Stone)',
     description: 'A basalt monument erected by King Mesha of Moab. The Moabite inscription describes how Moab was oppressed by Omri, King of Israel, and how Mesha threw off Israelite rule. It contains direct references to Israel, the House of David, and Yahweh, corroborating and supplementing accounts in 2 Kings 3.',
-    layer: 'Biblical Finds',
+    layer: 'Biblical Discoveries',
     mapFeatureId: 'archaeology-mesha-stele',
     images: ['https://upload.wikimedia.org/wikipedia/commons/7/7b/P1120870_Louvre_st%C3%A8le_de_M%C3%A9sha_AO5066_rwk.JPG'],
     sources: ['Archaeological Excavation Reports', 'Historical Geography Database'],
     bibleVerses: ['And Mesha king of Moab was a sheepmaster, and rendered unto the king of Israel an hundred thousand lambs, and an hundred thousand rams, with the wool. But it came to pass, when Ahab was dead, that the king of Moab rebelled against the king of Israel. — 2 Kings 3:4-5 (https://www.biblegateway.com/passage/?search=2+Kings+3%3A4-5)']
   },  {
     id: 'archaeology-house-of-peter',
-    parentId: 'biblical-finds',
+    parentId: 'biblical-discoveries',
     name: 'House of Peter at Capernaum',
     description: 'A first-century residential house in Capernaum, over which an early Christian octagonal church was later built in the 5th century. Early graffiti scratched into the plaster of the house walls mentions Jesus, Peter, and Christian symbols, supporting the historic tradition that this was the home of Simon Peter.',
-    layer: 'Biblical Finds',
+    layer: 'Biblical Discoveries',
     mapFeatureId: 'archaeology-house-of-peter',
     images: ['https://upload.wikimedia.org/wikipedia/commons/8/86/Capernaum%2C_Israel_10.jpg'],
     sources: ['Archaeological Excavation Reports', 'Historical Geography Database'],
     bibleVerses: ['And when Jesus was come into Peter\'s house, he saw his wife\'s mother laid, and sick of a fever. — Matthew 8:14 (https://www.biblegateway.com/passage/?search=Matthew+8%3A14)', 'And leaving Nazareth, he came and dwelt in Capernaum, which is upon the sea coast, in the borders of Zabulon and Nephthalim: — Matthew 4:13 (https://www.biblegateway.com/passage/?search=Matthew+4%3A13)']
   },  {
     id: 'ark-covenant',
-    parentId: 'biblical-finds',
+    parentId: 'biblical-discoveries',
     name: 'Ark of the Covenant',
     description: 'The sacred chest containing the tablets of the Law, Aaron\'s rod, and manna. Described as possessing immense electrical and spiritual power.',
     translations: [
@@ -7650,7 +7689,7 @@ const chunk_1: any[] = [  {
     sources: ['Archaeological Excavation Reports', 'Historical Geography Database']
   },  {
     id: 'noahs-ark-find',
-    parentId: 'biblical-finds',
+    parentId: 'biblical-discoveries',
     name: 'Noah\'s Ark',
     description: 'The legendary vessel that survived the global deluge. Historically searched for in the Ararat mountain range.',
     relatedIds: ['noah-fig', 'great-flood'],
@@ -21107,7 +21146,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'taoism',
-    parentId: 'esoteric-traditions',
+    parentId: 'biblical-apocryphal',
     name: 'Taoism',
     description: 'An ancient Chinese philosophical and spiritual tradition founded by Lao Tzu. Beyond its exoteric tenets, Taoism features internal alchemy (Neidan), Qi energy cultivation, and magical practices aimed at spiritual and physical immortality.',
     sources: ['Tao Te Ching (Lao Tzu)', 'Esoteric Taoist Alchemy Records'],
@@ -21116,7 +21155,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'buddhism',
-    parentId: 'esoteric-traditions',
+    parentId: 'biblical-apocryphal',
     name: 'Buddhism',
     description: 'A major world philosophy founded by Siddhartha Gautama in ancient India. While exoterically focused on mindfulness and liberation, its esoteric branches (like Vajrayana or Tibetan Buddhism) feature complex rituals, mantric formulas, and traditions of hidden realms (Shambhala) connecting directly to alternative histories of subterranean civilizations.',
     sources: ['Pali Canon', 'Tibetan Kalachakra Tantra'],
@@ -21484,7 +21523,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'hinduism',
-    parentId: 'esoteric-traditions',
+    parentId: 'biblical-apocryphal',
     name: 'Hinduism',
     description: 'One of the world\'s oldest major spiritual traditions. It has no single historical founder, having evolved from ancient Vedic rishis (sages) who received the sacred Vedas as divine sound (shruti, "what is heard"). In modern Hinduism, Jesus is widely revered by reformists and gurus (such as Paramahansa Yogananda) as a self-realized yogi, a great spiritual master, or an avatar (incarnation) of divine consciousness.',
     relatedIds: ['vritra-vedic', 'buddhism'],
@@ -21494,7 +21533,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'judaism',
-    parentId: 'esoteric-traditions',
+    parentId: 'biblical-apocryphal',
     name: 'Judaism',
     description: 'Monotheistic Abrahamic religion traced to the patriarch Abraham and the prophet Moses, who received the Torah directly from God on Mount Sinai. Judaism views Jesus as a historical Jewish teacher and reformer, but does not recognize him as the Messiah, divine, or a prophet, since his life did not fulfill the traditional Hebrew scriptural prophecies of global peace and gathering the exiles.',
     relatedIds: ['kabbalah', 'leviathan-biblical', 'behemoth-dinosaur', 'christianity', 'islam'],
@@ -21514,7 +21553,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'islam',
-    parentId: 'esoteric-traditions',
+    parentId: 'biblical-apocryphal',
     name: 'Islam',
     description: 'Monotheistic Abrahamic religion revealed through the Prophet Muhammad, who received the Quran from God via the Angel Gabriel (Jibril). Islam highly reveres Jesus as Isa al-Masih (Jesus the Messiah), one of its greatest prophets and messengers born of the Virgin Mary, though it rejects the beliefs that he is the literal Son of God or that he was crucified, holding that he was raised alive to heaven by God.',
     relatedIds: ['sufism', 'judaism', 'christianity'],
@@ -21524,7 +21563,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'zoroastrianism',
-    parentId: 'esoteric-traditions',
+    parentId: 'biblical-apocryphal',
     name: 'Zoroastrianism',
     description: 'Ancient Persian dualistic religion founded by the prophet Zoroaster (Zarathustra), who received revelations from the creator deity Ahura Mazda recorded in the Gathas/Avesta. While traditional Zoroastrianism does not mention Jesus, alternative and historical scholars note striking parallels between his role and the Zoroastrian prophecy of the Saoshyant (a future virgin-born savior who overcomes evil).',
     relatedIds: ['esoteric-traditions'],
@@ -21534,7 +21573,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'shinto',
-    parentId: 'esoteric-traditions',
+    parentId: 'biblical-apocryphal',
     name: 'Shinto',
     description: 'The indigenous animist tradition of Japan, originating from prehistoric folklore and nature worship without a single founder or primary canonical text. Shinto does not officially recognize Jesus, but syncretic views sometimes revere him as a kami (divine spirit) of benevolence. A highly unusual local Japanese legend in Shingo, Aomori, claims Jesus did not die on the cross but escaped to Japan, becoming a farmer.',
     relatedIds: ['ryujin-japanese'],
@@ -21544,7 +21583,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'gnosticism',
-    parentId: 'esoteric-traditions',
+    parentId: 'biblical-apocryphal',
     name: 'Gnosticism',
     description: 'Ancient esoteric religious movements founded by early Christian mystics (like Valentinus), claiming to receive secret teachings of Jesus and direct spiritual intuition (Gnosis) rather than orthodox faith. Gnosticism depicts Jesus as a docetic, non-physical divine messenger sent from the supreme realm (Pleroma) to reveal the secret spark of light trapped in the material world.',
     relatedIds: ['christianity', 'alchemy'],
@@ -21554,7 +21593,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'rosicrucianism',
-    parentId: 'esoteric-traditions',
+    parentId: 'biblical-apocryphal',
     name: 'Rosicrucianism',
     description: 'Esoteric Christian movement purportedly founded by Christian Rosenkreutz in the 15th century and announced via anonymous 17th-century manifestos written by German scholars. It depicts Jesus as the ultimate exemplar of human spiritual evolution, viewing the Crucifixion and Resurrection as alchemical symbols for the transmutation of the soul.',
     relatedIds: ['alchemy', 'freemasonry', 'francis-bacon-philosopher'],
@@ -21564,7 +21603,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'catholicism',
-    parentId: 'christianity',
+    parentId: 'christian-denominations',
     name: 'Catholicism',
     description: 'The largest branch of Christianity, historically tracing its founding to Jesus Christ, who appointed Saint Peter as the first Pope, with teachings preserved in the 73-book biblical canon and Sacred Tradition. Catholicism recognizes Jesus as the incarnate Son of God, the Savior, and the second person of the Trinity, physically present in the bread and wine of the Eucharist through transubstantiation.',
     relatedIds: ['christianity', 'judaism', 'gnosticism'],
@@ -21574,7 +21613,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'mormonism',
-    parentId: 'christianity',
+    parentId: 'biblical-apocryphal',
     name: 'Mormonism (Latter-day Saints)',
     description: 'A restorationist Christian movement founded by Joseph Smith Jr. in 1830, who claimed to translate the Book of Mormon from golden plates delivered by the angel Moroni. It depicts Jesus as the literal firstborn spirit son of God the Father, distinct from Him in physical body, and teaches that after His resurrection in Jerusalem, Jesus visited and established His church among ancient civilizations in the Americas.',
     relatedIds: ['christianity', 'judaism', 'mounds'],
@@ -21740,7 +21779,476 @@ const chunk_6: any[] = [
   }
 ];
 
+
+const chunk_new_religion: any[] = [
+  // --- CHRISTIAN DENOMINATIONS ---
+  {
+    id: 'christian-denominations',
+    parentId: 'christianity',
+    name: 'Denominations',
+    description: 'The distinct religious bodies, sects, and branches within Christianity, representing diverse theological, liturgical, and historical traditions.'
+  },
+  {
+    id: 'eastern-orthodoxy',
+    parentId: 'christian-denominations',
+    name: 'Eastern Orthodoxy',
+    description: 'The second-largest Christian church, representing the Eastern branch of Chalcedonian Christianity, emphasizing liturgical tradition, mystical theology (Hesychasm), and the consensus of the early Church Fathers.'
+  },
+  {
+    id: 'oriental-orthodoxy',
+    parentId: 'christian-denominations',
+    name: 'Oriental Orthodoxy',
+    description: 'An ancient branch of Eastern Christianity that recognized only the first three ecumenical councils, historically distinct in its Miaphysite christology.'
+  },
+  {
+    id: 'restorationism',
+    parentId: 'christian-denominations',
+    name: 'Restorationism',
+    description: 'A category of Christian movements (such as the Stone-Campbell movement or early Advent movements) asserting that post-apostolic Christianity fell into apostasy, necessitating a restoration of the primitive 1st-century church.'
+  },
+  {
+    id: 'protestantism',
+    parentId: 'christian-denominations',
+    name: 'Protestantism',
+    description: 'A major branch of Christianity originating from the 16th-century Reformation, emphasizing salvation by faith alone (sola fide), the authority of scripture (sola scriptura), and the priesthood of all believers.'
+  },
+  // --- PROTESTANT DENOMINATIONS ---
+  {
+    id: 'baptists',
+    parentId: 'protestantism',
+    name: 'Baptists',
+    description: "A major Protestant group emphasizing believer's baptism by full immersion, local church autonomy, and liberty of conscience."
+  },
+  {
+    id: 'methodists',
+    parentId: 'protestantism',
+    name: 'Methodists',
+    description: 'A movement founded by John Wesley in the 18th century, emphasizing personal holiness, charity, social action, and methodical study of scripture.'
+  },
+  {
+    id: 'lutherans',
+    parentId: 'protestantism',
+    name: 'Lutherans',
+    description: 'The oldest major Protestant denomination, following the theology of Martin Luther, which focuses on justification by grace through faith.'
+  },
+  {
+    id: 'presbyterians',
+    parentId: 'protestantism',
+    name: 'Presbyterians',
+    description: 'A branch of Reformed Protestantism governed by representative bodies of elders (presbyters), heavily influenced by John Knox and Scottish church history.'
+  },
+  {
+    id: 'calvinists',
+    parentId: 'protestantism',
+    name: 'Calvinists',
+    description: 'Adherents of Reformed theology developed by John Calvin, centered on the absolute sovereignty of God, predestination, and the doctrines of grace.'
+  },
+  {
+    id: 'moravianism',
+    parentId: 'protestantism',
+    name: 'Moravianism',
+    description: 'One of the oldest Protestant movements, originating from the Bohemian Reformation (John Huss), emphasizing ecumenical piety, community life, and foreign missions.'
+  },
+  {
+    id: 'pentecostalism',
+    parentId: 'protestantism',
+    name: 'Pentecostalism',
+    description: 'A renewal movement within Protestantism originating in the early 20th century (Azusa Street Revival), emphasizing direct personal experience of God through baptism in the Holy Spirit and supernatural spiritual gifts.'
+  },
+  {
+    id: 'plymouth-brethren',
+    parentId: 'protestantism',
+    name: 'Plymouth Brethren',
+    description: 'A late-1820s restorationist movement originating in Dublin and Plymouth, rejecting formal clerical structures in favor of the priesthood of all believers and weekly communion.'
+  },
+  {
+    id: 'quakerism',
+    parentId: 'protestantism',
+    name: 'Quakerism (Religious Society of Friends)',
+    description: 'A Christian movement founded by George Fox in 17th-century England, focusing on the "Inner Light" (the direct experience of Christ within each individual) and absolute pacifism.'
+  },
+  {
+    id: 'waldensianism',
+    parentId: 'protestantism',
+    name: 'Waldensianism',
+    description: 'A pre-Reformation movement founded by Peter Waldo in the 12th century, advocating voluntary poverty and scripture translation, later aligning with Protestantism.'
+  },
+  {
+    id: 'anglicanism',
+    parentId: 'protestantism',
+    name: 'Anglican / Episcopalian',
+    description: 'The global communion of churches historically connected to the Church of England, representing a middle way (via media) between Catholicism and Protestantism.'
+  },
+  {
+    id: 'seventh-day-adventists',
+    parentId: 'protestantism',
+    name: 'Seventh-day Adventism',
+    description: 'A Protestant denomination arising from the 19th-century Millerite movement, characterized by its observance of Saturday as the Sabbath and its expectation of the imminent second coming of Jesus.'
+  },
+  {
+    id: 'pentecostal-charismatic',
+    parentId: 'protestantism',
+    name: 'Pentecostal & Charismatic Movement',
+    description: 'The broader interdenominational movement emphasizing baptism in the Holy Spirit, speaking in tongues, divine healing, and prophetic ministry across diverse churches.'
+  },
+
+  // --- DENOMINATIONS UNDER OTHER WORLD RELIGIONS ---
+  // ISLAM
+  {
+    id: 'islam-denominations',
+    parentId: 'islam',
+    name: 'Denominations',
+    description: 'The principal branches and spiritual dimensions of Islam, representing diverse legal, theological, and mystical developments.'
+  },
+  {
+    id: 'islam-sunni',
+    parentId: 'islam-denominations',
+    name: 'Sunni Islam',
+    description: 'The largest branch of Islam, recognizing the first four caliphs as rightful successors to Muhammad and relying on consensus and established jurisprudence (Hadith).'
+  },
+  {
+    id: 'islam-shia',
+    parentId: 'islam-denominations',
+    name: 'Shia Islam',
+    description: "The second-largest branch of Islam, holding that leadership belongs to the Prophet's bloodline through his cousin and son-in-law Ali and subsequent Imams."
+  },
+  {
+    id: 'islam-sufism',
+    parentId: 'islam-denominations',
+    name: 'Sufism',
+    description: 'The esoteric, mystical dimension of Islam focusing on direct experiential union with God through contemplation, spiritual practice, and internal purification.'
+  },
+
+  // BUDDHISM
+  {
+    id: 'buddhism-denominations',
+    parentId: 'buddhism',
+    name: 'Denominations',
+    description: 'The major lineages and philosophical schools of Buddhism developed throughout Asia.'
+  },
+  {
+    id: 'buddhism-theravada',
+    parentId: 'buddhism-denominations',
+    name: 'Theravada',
+    description: 'The "School of the Elders," the oldest surviving Buddhist branch, focusing on the Pali Canon and monastic path to Arhatship.'
+  },
+  {
+    id: 'buddhism-mahayana',
+    parentId: 'buddhism-denominations',
+    name: 'Mahayana',
+    description: 'The "Great Vehicle," emphasizing the Bodhisattva path of universal compassion and liberation for all sentient beings.'
+  },
+  {
+    id: 'buddhism-vajrayana',
+    parentId: 'buddhism-denominations',
+    name: 'Vajrayana / Tibetan Buddhism',
+    description: 'The "Diamond Vehicle," incorporating tantric rituals, visualization, mantric formulas, and oral lineages led by Lamas.'
+  },
+  {
+    id: 'buddhism-zen',
+    parentId: 'buddhism-denominations',
+    name: 'Zen Buddhism',
+    description: 'A Mahayana school focusing on direct, experiential insight (Satori) through meditation (zazen) and koan study, bypassing intellectual dogmatism.'
+  },
+
+  // HINDUISM
+  {
+    id: 'hinduism-denominations',
+    parentId: 'hinduism',
+    name: 'Denominations',
+    description: 'The primary devotional branches of modern Hinduism, centered on specific divine aspects of Brahman.'
+  },
+  {
+    id: 'hinduism-vaishnavism',
+    parentId: 'hinduism-denominations',
+    name: 'Vaishnavism',
+    description: 'The branch of Hinduism devoted to the worship of Vishnu and his avatars (such as Rama and Krishna) as the supreme deity.'
+  },
+  {
+    id: 'hinduism-shaivism',
+    parentId: 'hinduism-denominations',
+    name: 'Shaivism',
+    description: 'The branch of Hinduism devoted to Shiva as the supreme Lord, emphasizing asceticism, yoga, and non-dualistic realization.'
+  },
+  {
+    id: 'hinduism-shaktism',
+    parentId: 'hinduism-denominations',
+    name: 'Shaktism',
+    description: 'The branch of Hinduism focusing on the active, creative feminine energy (Shakti) or Devi as the supreme cosmic power.'
+  },
+  {
+    id: 'hinduism-smartism',
+    parentId: 'hinduism-denominations',
+    name: 'Smartism',
+    description: 'A liberal, non-sectarian tradition focusing on the worship of five major deities (Vishnu, Shiva, Ganesha, Surya, Devi) as equal manifestations of Brahman.'
+  },
+
+  // JUDAISM
+  {
+    id: 'judaism-denominations',
+    parentId: 'judaism',
+    name: 'Denominations',
+    description: 'The primary movements and theological branches of modern Jewish religious observance.'
+  },
+  {
+    id: 'judaism-orthodox',
+    parentId: 'judaism-denominations',
+    name: 'Orthodox Judaism',
+    description: 'The traditionalist branch adhering strictly to the written and oral Torah (Halakha) as divinely revealed and unchangeable.'
+  },
+  {
+    id: 'judaism-conservative',
+    parentId: 'judaism-denominations',
+    name: 'Conservative Judaism',
+    description: 'A moderate branch viewing Jewish law as binding but evolving dynamically with modern historical developments.'
+  },
+  {
+    id: 'judaism-reform',
+    parentId: 'judaism-denominations',
+    name: 'Reform Judaism',
+    description: 'A progressive movement emphasizing the ethical dimensions of Jewish law over ritual obligations, advocating individual autonomy.'
+  },
+  {
+    id: 'judaism-hasidic',
+    parentId: 'judaism-denominations',
+    name: 'Hasidic Judaism',
+    description: 'A spiritual revival movement within Orthodox Judaism founded by the Baal Shem Tov, focusing on joy, prayer, and Kabbalistic devotion.'
+  },
+
+  // GNOSTICISM
+  {
+    id: 'gnosticism-denominations',
+    parentId: 'gnosticism',
+    name: 'Denominations',
+    description: 'The primary historical schools and sects of the ancient Gnostic movement.'
+  },
+  {
+    id: 'gnostic-sethian',
+    parentId: 'gnosticism-denominations',
+    name: 'Sethianism',
+    description: 'One of the earliest Gnostic groups, tracing their esoteric revelation to Seth, the third son of Adam and Eve.'
+  },
+  {
+    id: 'gnostic-valentinian',
+    parentId: 'gnosticism-denominations',
+    name: 'Valentinianism',
+    description: 'A major Gnostic school founded by Valentinus, attempting to synthesize Gnostic cosmology with mainstream proto-orthodox Christianity.'
+  },
+  {
+    id: 'gnostic-manichaean',
+    parentId: 'gnosticism-denominations',
+    name: 'Manichaeism',
+    description: 'A widespread dualist religion founded by Mani, describing a cosmic battle between the realms of Light and Darkness.'
+  },
+
+  // SHINTO
+  {
+    id: 'shinto-denominations',
+    parentId: 'shinto',
+    name: 'Denominations',
+    description: 'The primary classifications of Shinto practice and institutional layout throughout Japanese history.'
+  },
+  {
+    id: 'shinto-shrine',
+    parentId: 'shinto-denominations',
+    name: 'Shrine Shinto (Jinja Shinto)',
+    description: 'The traditional, mainstream form of Shinto centered on localized shrine worship, festivals, and community kami devotion.'
+  },
+  {
+    id: 'shinto-sect',
+    parentId: 'shinto-denominations',
+    name: 'Sect Shinto (Kyoha Shinto)',
+    description: 'The various independent Shinto groups and new religious movements recognized by the government in the 19th century.'
+  },
+  {
+    id: 'shinto-state',
+    parentId: 'shinto-denominations',
+    name: 'State Shinto (Kokka Shinto)',
+    description: 'The state-sponsored, nationalistic form of Shinto utilized by the Empire of Japan to foster loyalty to the Emperor as a living kami.'
+  },
+
+  // TAOISM
+  {
+    id: 'taoism-denominations',
+    parentId: 'taoism',
+    name: 'Denominations',
+    description: 'The two major formal lineages dominating traditional Taoist institutional practice.'
+  },
+  {
+    id: 'taoism-quanzhen',
+    parentId: 'taoism-denominations',
+    name: 'Quanzhen (Complete Perfection)',
+    description: 'The monastic branch of Taoism emphasizing internal alchemy, meditation, celibacy, and vegetarianism.'
+  },
+  {
+    id: 'taoism-zhengyi',
+    parentId: 'taoism-denominations',
+    name: 'Zhengyi (Orthodox Unity)',
+    description: 'The householder branch of Taoism led by married priests, focusing on talismans, exorcisms, and public rituals.'
+  },
+
+  // ZOROASTRIANISM
+  {
+    id: 'zoroastrianism-denominations',
+    parentId: 'zoroastrianism',
+    name: 'Denominations',
+    description: 'The two principal modern cultural and regional communities of the Zoroastrian diaspora.'
+  },
+  {
+    id: 'zoroastrian-parsis',
+    parentId: 'zoroastrianism-denominations',
+    name: 'Parsis',
+    description: 'The ethnoreligious group of Zoroastrian heritage residing in India, descended from Persian refugees who fled Islamic conquest.'
+  },
+  {
+    id: 'zoroastrian-iranis',
+    parentId: 'zoroastrianism-denominations',
+    name: 'Iranis',
+    description: 'The Zoroastrian community of Iran, distinct from the Parsis due to their continuous presence in their ancestral homeland.'
+  },
+
+  // --- MYTHOLOGY ADDITIONS ---
+  {
+    id: 'jade-emperor',
+    parentId: 'chinese-mythology',
+    name: 'The Jade Emperor (Yuhuang Dadi)',
+    description: 'The supreme ruler of Heaven in Chinese mythology and Taoist theology, governing all realm layers, mortals, and immortals. In alternative history, he is associated with ancient sky deities, high-technology flying chariots, and celestial administrative hierarchies.',
+    isApocryphal: true,
+    sources: ['Classic of Mountains and Seas', 'Taoist Canon']
+  },
+  {
+    id: 'monkey-king',
+    parentId: 'chinese-mythology',
+    name: 'The Monkey King (Sun Wukong)',
+    description: 'A legendary mythological figure born from a stone who acquired supernatural powers, 72 transformations, and physical immortality, as told in the classic novel *Journey to the West*. He represents rebel strength and advanced spiritual technologies of self-cultivation.',
+    isApocryphal: true,
+    sources: ["Journey to the West (Wu Cheng'en)", 'Chinese Folk Legends']
+  },
+  {
+    id: 'change-goddess',
+    parentId: 'chinese-mythology',
+    name: "Chang'e (Moon Goddess)",
+    description: 'The Chinese goddess of the Moon, who became immortal after consuming the Elixir of Life stolen from her husband, Hou Yi the archer. Alternative history researchers link her story to ancient tales of lunar habitation, immortality elixirs, and celestial events.',
+    isApocryphal: true,
+    sources: ['Huainanzi', 'Chinese Folklore Database']
+  },
+  {
+    id: 'pangu-creator',
+    parentId: 'chinese-mythology',
+    name: 'Pangu (The Creator Giant)',
+    description: 'The first sentient being and creator giant in Chinese mythology, who emerged from a cosmic egg and separated Yin and Yang to form the earth and sky. His body parts transformed into the wind, thunder, sun, moon, and mountains upon his death, mirroring giant creation myths worldwide.',
+    isApocryphal: true,
+    sources: ['Sanwu Liji (Xu Zheng)', 'Chinese Cosmological Texts']
+  },
+  {
+    id: 'fuxi-nuwa',
+    parentId: 'chinese-mythology',
+    name: 'Fuxi & Nuwa',
+    description: 'The sibling creation deities of Chinese mythology, depicted with human upper bodies and intertwined serpent tails. They are credited with creating humanity from clay, repairing the pillars of heaven after a cosmic deluge, and introducing the Eight Trigrams (Bagua)—often compared by alternative researchers to Sumerian serpent deities and DNA double-helix representations.',
+    isApocryphal: true,
+    sources: ['Huainanzi', 'Classic of Mountains and Seas', 'Shiji (Sima Qian)']
+  },
+  {
+    id: 'yggdrasil-norse',
+    parentId: 'norse-pantheon',
+    name: 'Yggdrasil (The World Tree)',
+    description: 'The immense, sacred ash tree that connects the nine worlds of Norse cosmology. Serving as the central axis of the cosmos, alternative researchers compare Yggdrasil to global "World Tree" alignments, telluric current networks, and multi-dimensional portal structures.',
+    isApocryphal: true,
+    sources: ['Poetic Edda', 'Prose Edda']
+  },
+  {
+    id: 'ragnarok-norse',
+    parentId: 'norse-pantheon',
+    name: 'Ragnarok (Doom of the Gods)',
+    description: 'A series of cataclysmic events in Norse mythology, including a great winter (Fimbulwinter), giant battles, and a global deluge, leading to the death of major gods (Odin, Thor, Loki) and the submersion of the world in water, followed by a new cycle of life. Historically correlated with ancient memories of post-glacial flooding and planetary disasters.',
+    isApocryphal: true,
+    sources: ['Poetic Edda', 'Prose Edda', 'Völuspá']
+  },
+  {
+    id: 'myth-thunderbird',
+    parentId: 'anishinaabe-ojibwe-lore',
+    name: 'Thunderbird',
+    description: 'A legendary giant bird in Native American cultures, believed to possess supernatural power and generate thunder by flapping its wings. In cryptozoology and alternative archaeology, Thunderbird sightings are investigated as potential surviving pterosaurs or relic populations of prehistoric giant avians.',
+    relatedIds: ['anishinaabe-ojibwe-lore', 'cryptid-sightings-br'],
+    sources: ['Native American Oral History', 'Cryptozoology Databases'],
+    isApocryphal: true
+  },
+  {
+    id: 'navajo-skinwalker',
+    parentId: 'navajo-hopi-lore',
+    name: 'Skinwalker (Yee Naaldlooshii)',
+    description: 'A harmful shape-shifting witch in Navajo cultural folklore, capable of transforming into, or occupying, various animals. Alternative and paranormal researchers study Skinwalker legends in relation to localized creature sightings, skinwalker-like encounters, and anomalous energetic signatures.',
+    relatedIds: ['navajo-hopi-lore', 'supernatural-anomalies'],
+    sources: ['Navajo Oral History', 'Paranormal Research Archives'],
+    isApocryphal: true
+  },
+  {
+    id: 'hopi-kachina',
+    parentId: 'navajo-hopi-lore',
+    name: 'Kachina Spirits',
+    description: 'Deified spirits or cosmological messengers in Pueblo and Hopi mythology, representing natural forces, ancestors, or celestial beings. Hopi rituals utilize carved dolls and masked dancers to invite their guidance and blessing.',
+    relatedIds: ['navajo-hopi-lore'],
+    sources: ['Hopi Traditions and Rituals', 'Pueblo Ethnological Studies'],
+    isApocryphal: true
+  },
+  {
+    id: 'blue-star-kachina',
+    parentId: 'navajo-hopi-lore',
+    name: 'Blue Star Kachina (Saquasohuh)',
+    description: 'A sacred prophecy of the Hopi people, symbolizing the transition between world ages (the transition from the Fourth World to the Fifth). The prophecy states that the arrival of a blue star spirit will signal the purification of the earth, often compared by alternative researchers to astronomical events, comets, or celestial arrival events.',
+    relatedIds: ['hopi-kachina', 'navajo-hopi-lore'],
+    sources: ['Book of the Hopi (Frank Waters)', 'Hopi Prophecy Traditions'],
+    isApocryphal: true
+  },
+  {
+    id: 'algonquian-wendigo',
+    parentId: 'algonquian-iroquois-lore',
+    name: 'The Wendigo',
+    description: 'A malevolent, cannibalistic giant spirit of Algonquian folklore, associated with winter, cold, starvation, and greed. Legend holds that humans who engage in cannibalism or exhibit extreme selfishness can be possessed or transformed into a Wendigo.',
+    relatedIds: ['algonquian-iroquois-lore'],
+    sources: ['Algonquian Oral Traditions', 'Northern Woodland Folklore'],
+    isApocryphal: true
+  },
+  {
+    id: 'great-peacemaker',
+    parentId: 'algonquian-iroquois-lore',
+    name: 'The Great Peacemaker (Deganawida)',
+    description: 'The legendary prophet and founder of the Haudenosaunee (Iroquois) Confederacy. Together with Hiawatha, he united the Mohawk, Oneida, Onondaga, Cayuga, and Seneca nations under the Great Law of Peace, establishing one of the earliest participatory democracies.',
+    relatedIds: ['algonquian-iroquois-lore', 'people-groups'],
+    sources: ['Iroquois Oral Constitution', 'Haudenosaunee Council Records'],
+    isApocryphal: true
+  },
+  {
+    id: 'white-buffalo-calf-woman',
+    parentId: 'sioux-plains-lore',
+    name: 'White Buffalo Calf Woman (Ptesanwi)',
+    description: 'A primary sacred figure of the Lakota/Sioux religion. She brought the Seven Sacred Rites and the Chanunpa (sacred ceremonial pipe) to the Lakota, instructing them in their sacred relation to Wakan Tanka (the Great Spirit) and all living things before transforming into a white buffalo calf.',
+    relatedIds: ['sioux-plains-lore'],
+    sources: ['Lakota Ceremonial Traditions', 'Lakota Oral History'],
+    isApocryphal: true
+  },
+  {
+    id: 'lakota-iktomi',
+    parentId: 'sioux-plains-lore',
+    name: 'Iktomi',
+    description: 'The spider-trickster spirit in Lakota mythology, representing both profound wisdom and foolishness. Iktomi acts as a teacher of moral lessons, warning against greed, pride, and deceit through his own comical errors.',
+    relatedIds: ['sioux-plains-lore'],
+    sources: ['Lakota Oral Tales', 'Plains Indian Trickster Myths'],
+    isApocryphal: true
+  },
+  {
+    id: 'ojibwe-nanabozho',
+    parentId: 'anishinaabe-ojibwe-lore',
+    name: 'Nanabozho (The Great Hare)',
+    description: 'A central trickster figure, shape-shifter, and culture hero in Anishinaabe/Ojibwe storytelling. He is credited with creating the world, bringing medicine and fire to humans, and naming all geographic landmarks.',
+    relatedIds: ['anishinaabe-ojibwe-lore'],
+    sources: ['Anishinaabe Sacred Teachings', 'Ojibwe Traditional Stories'],
+    isApocryphal: true
+  }
+];
+
 export const TERM_TREE_DATA: TermNode[] = [
+  ...chunk_new_religion,
   ...chunk_0,
   ...chunk_1,
   ...chunk_2,
@@ -21748,7 +22256,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   ...chunk_4,
   ...chunk_5,  {
     id: 'anunnaki',
-    parentId: 'pantheons-mythology-br',
+    parentId: 'myths-legends-root',
     name: 'The Anunnaki',
     description: 'Ancient Sumerian gods ("those who descended from heaven") reimagined in modern alternative history as an advanced extraterrestrial species from the planet Nibiru, who genetically modified early humanity to serve as gold miners—paralleling the Enochian account of the Watchers.',
     translations: [
@@ -21905,7 +22413,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     parentId: 'people-groups',
     name: 'Kingdom of Israel',
     description: 'The ancient Hebrew nation descended from the twelve sons of Jacob (Israel). They established a united monarchy under Saul, David, and Solomon before splitting into the Northern Kingdom (Israel) and Southern Kingdom (Judah).',
-    layer: 'Biblical Finds',
+    layer: 'Biblical Discoveries',
     timelineId: 'reign-david',
     mapFeatureId: 'archaeology-hezekiahs-tunnel-inscription',
     relatedIds: ['biblical-apocryphal', 'reign-david', 'reign-solomon-temple'],
@@ -21915,7 +22423,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     parentId: 'israelites',
     name: "Hezekiah's Tunnel Inscription",
     description: 'An ancient Hebrew inscription documenting the excavation of the water tunnel built under King Hezekiah.',
-    layer: 'Biblical Finds',
+    layer: 'Biblical Discoveries',
     mapFeatureId: 'archaeology-hezekiahs-tunnel-inscription',
     sources: ['Historical Records']
   },  {
@@ -21923,7 +22431,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     parentId: 'israelites',
     name: 'Ark of the Covenant (Axum Claims)',
     description: 'The sacred vessel constructed by the Israelites to hold the tablets of the Ten Commandments, claimed to reside in Axum, Ethiopia.',
-    layer: 'Biblical Finds',
+    layer: 'Biblical Discoveries',
     mapFeatureId: 'archaeology-ark-of-covenant-axum',
     sources: ['Ethiopian Orthodox Tradition']
   },  {
@@ -21931,7 +22439,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     parentId: 'israelites',
     name: "Tel Dan 'House of David' Stele",
     description: 'A basalt victory monument recording victories over Israel, containing the first extra-biblical reference to the House of David.',
-    layer: 'Biblical Finds',
+    layer: 'Biblical Discoveries',
     mapFeatureId: 'archaeology-tel-dan-stele',
     sources: ['Israel Museum, Jerusalem']
   },  {
@@ -21939,7 +22447,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     parentId: 'israelites',
     name: 'The Mesha Stele (Moabite Stone)',
     description: 'A monument recording Moabite King Mesha\'s rebellion against Israelite rule, mentioning Israel and Yahweh.',
-    layer: 'Biblical Finds',
+    layer: 'Biblical Discoveries',
     mapFeatureId: 'archaeology-mesha-stele',
     sources: ['Louvre Museum, Paris']
   },  {
@@ -21947,7 +22455,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     parentId: 'people-groups',
     name: 'Tribe of Judah',
     description: 'One of the twelve tribes of Israel, descended from Jacob\'s fourth son, Judah. The tribe settled in the southern region of Canaan (Judea) and produced the Davidic royal bloodline and eventually Jesus Christ.',
-    layer: 'Biblical Finds',
+    layer: 'Biblical Discoveries',
     timelineId: 'timeline-tribe-of-judah',
     mapFeatureId: 'archaeology-pool-of-siloam',
     relatedIds: ['israelites', 'royal-bloodlines', 'judah'],
@@ -21957,7 +22465,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     parentId: 'tribe-of-judah',
     name: 'The Pool of Siloam',
     description: 'A rock-cut reservoir in Jerusalem associated with water supply securement and the healing of the blind man in the Gospel of John.',
-    layer: 'Biblical Finds',
+    layer: 'Biblical Discoveries',
     mapFeatureId: 'archaeology-pool-of-siloam',
     sources: ['City of David Archaeological Site']
   },  {
@@ -21965,7 +22473,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     parentId: 'tribe-of-judah',
     name: 'Ketef Hinnom Silver Scrolls',
     description: 'Two tiny rolled silver scrolls containing the Priestly Blessing, representing the oldest surviving fragments of a biblical text.',
-    layer: 'Biblical Finds',
+    layer: 'Biblical Discoveries',
     mapFeatureId: 'archaeology-ketef-hinnom',
     sources: ['Israel Museum, Jerusalem']
   },  {
@@ -21973,7 +22481,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     parentId: 'tribe-of-judah',
     name: 'The Dead Sea Scrolls',
     description: 'Ancient Jewish religious manuscripts discovered in the Qumran caves, including the oldest surviving biblical texts.',
-    layer: 'Biblical Finds',
+    layer: 'Biblical Discoveries',
     mapFeatureId: 'archaeology-dead-sea-scrolls',
     sources: ['Israel Museum, Jerusalem']
   },  {
@@ -21981,7 +22489,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     parentId: 'tribe-of-judah',
     name: 'The Cyrus Cylinder',
     description: 'An ancient clay cylinder recording Persian King Cyrus\'s decree repatriating Jews to rebuild Jerusalem.',
-    layer: 'Biblical Finds',
+    layer: 'Biblical Discoveries',
     mapFeatureId: 'archaeology-cyrus-cylinder',
     sources: ['British Museum']
   },  {
@@ -21989,7 +22497,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     parentId: 'tribe-of-judah',
     name: 'The Pilate Stone',
     description: 'A limestone block bearing an inscription mentioning Pontius Pilate, Prefect of Judaea.',
-    layer: 'Biblical Finds',
+    layer: 'Biblical Discoveries',
     mapFeatureId: 'archaeology-pilate-stone',
     sources: ['Israel Museum, Jerusalem']
   },  {

@@ -1,7 +1,8 @@
+// Archaeological and Biblical discoveries data
 export interface ArchaeologicalFind {
   id: string;
   name: string;
-  category: 'Archaeological Finds' | 'Biblical Finds' | 'Cryptid Sightings' | 'Giants & Nephilim' | 'Ancient People Groups' | 'Rock Art & Cave Paintings' | 'Megaliths / Structures' | 'Burial Mounds';
+  category: 'Archaeological Finds' | 'Biblical Discoveries' | 'Cryptid Sightings' | 'Giants & Nephilim' | 'Ancient People Groups' | 'Rock Art & Cave Paintings' | 'Megaliths / Structures' | 'Burial Mounds';
   type: 'Point';
   coordinates: {
     lng: number;
@@ -186,11 +187,11 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
     images: ["https://upload.wikimedia.org/wikipedia/commons/5/5b/Palace_of_Knossos.jpg"]
   },
   
-  // ==================== BIBLICAL FINDS ====================
+  // ==================== BIBLICAL DISCOVERIES ====================
   {
     id: "archaeology-shroud-of-turin",
     name: "The Shroud of Turin",
-    category: "Biblical Finds",
+    category: "Biblical Discoveries",
     type: "Point",
     coordinates: { lng: 7.6857, lat: 45.0728 }, // Turin Cathedral, Italy
     date: 1354,
@@ -202,7 +203,7 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
   {
     id: "archaeology-noahs-ark-ararat",
     name: "Noah's Ark Search (Durupinar Site)",
-    category: "Biblical Finds",
+    category: "Biblical Discoveries",
     type: "Point",
     coordinates: { lng: 44.2750, lat: 39.4406 }, // Mount Ararat, Turkey
     date: 1959,
@@ -214,7 +215,7 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
   {
     id: "archaeology-ark-of-covenant-axum",
     name: "Ark of the Covenant Sanctuary (Axum)",
-    category: "Biblical Finds",
+    category: "Biblical Discoveries",
     type: "Point",
     coordinates: { lng: 38.7186, lat: 14.1299 }, // Axum, Ethiopia
     date: 1000,
@@ -226,7 +227,7 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
   {
     id: "archaeology-sodom-gomorrah",
     name: "Sodom & Gomorrah Site (Tall el-Hammam)",
-    category: "Biblical Finds",
+    category: "Biblical Discoveries",
     type: "Point",
     coordinates: { lng: 35.6738, lat: 31.8402 }, // Jordan Valley, Jordan
     date: -1650,
@@ -238,7 +239,7 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
   {
     id: "archaeology-hezekiahs-tunnel-inscription",
     name: "Hezekiah's Tunnel Inscription",
-    category: "Biblical Finds",
+    category: "Biblical Discoveries",
     type: "Point",
     coordinates: { lng: 35.2361, lat: 31.7725 }, // Gihon Spring, Jerusalem
     date: -701,
@@ -250,7 +251,7 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
   {
     id: "archaeology-garden-tomb",
     name: "The Garden Tomb",
-    category: "Biblical Finds",
+    category: "Biblical Discoveries",
     type: "Point",
     coordinates: { lng: 35.2299, lat: 31.7824 }, // Jerusalem, Israel
     date: -600,
@@ -262,7 +263,7 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
   {
     id: "archaeology-dead-sea-scrolls",
     name: "The Dead Sea Scrolls",
-    category: "Biblical Finds",
+    category: "Biblical Discoveries",
     type: "Point",
     coordinates: { lng: 35.4597, lat: 31.7411 }, // Qumran Caves, West Bank
     date: -150,
@@ -274,7 +275,7 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
   {
     id: "archaeology-tel-dan-stele",
     name: "Tel Dan 'House of David' Stele",
-    category: "Biblical Finds",
+    category: "Biblical Discoveries",
     type: "Point",
     coordinates: { lng: 35.6525, lat: 33.2483 }, // Tel Dan, Israel
     date: -830,
@@ -286,7 +287,7 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
   {
     id: "archaeology-cyrus-cylinder",
     name: "The Cyrus Cylinder",
-    category: "Biblical Finds",
+    category: "Biblical Discoveries",
     type: "Point",
     coordinates: { lng: 44.4208, lat: 32.5430 }, // Babylon, Iraq
     date: -539,
@@ -298,7 +299,7 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
   {
     id: "archaeology-ketef-hinnom",
     name: "Ketef Hinnom Silver Scrolls",
-    category: "Biblical Finds",
+    category: "Biblical Discoveries",
     type: "Point",
     coordinates: { lng: 35.2267, lat: 31.7686 }, // Jerusalem, Israel
     date: -600,
@@ -310,7 +311,7 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
   {
     id: "archaeology-pilate-stone",
     name: "The Pilate Stone",
-    category: "Biblical Finds",
+    category: "Biblical Discoveries",
     type: "Point",
     coordinates: { lng: 34.8925, lat: 32.5081 }, // Caesarea Maritima, Israel
     date: 30,
@@ -322,7 +323,7 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
   {
     id: "archaeology-pool-of-siloam",
     name: "The Pool of Siloam",
-    category: "Biblical Finds",
+    category: "Biblical Discoveries",
     type: "Point",
     coordinates: { lng: 35.2348, lat: 31.7702 }, // City of David, Jerusalem
     date: -700,
@@ -334,7 +335,7 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
   {
     id: "archaeology-mesha-stele",
     name: "The Mesha Stele (Moabite Stone)",
-    category: "Biblical Finds",
+    category: "Biblical Discoveries",
     type: "Point",
     coordinates: { lng: 35.7836, lat: 31.5003 }, // Dhiban, Jordan
     date: -840,
@@ -346,7 +347,7 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
   {
     id: "archaeology-house-of-peter",
     name: "House of Peter at Capernaum",
-    category: "Biblical Finds",
+    category: "Biblical Discoveries",
     type: "Point",
     coordinates: { lng: 35.5752, lat: 32.8812 }, // Capernaum, Israel
     date: 50,

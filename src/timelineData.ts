@@ -2,7 +2,7 @@ export interface TimelineItem {
   id: string;
   name: string;
   type: 'lifespan' | 'event';
-  layer: 'biblical-patriarchs' | 'biblical-events' | 'sumerian-kings' | 'greek-mythology' | 'merovingian-bloodlines' | 'royal-bloodlines' | 'enochian-lore' | 'future-prophecy' | 'secret-gov-programs' | 'ancient-civilizations' | 'alchemy-occult' | 'illuminati-bloodlines' | 'black-nobility';
+  layer: 'biblical-patriarchs' | 'biblical-events' | 'sumerian-kings' | 'greek-mythology' | 'merovingian-bloodlines' | 'royal-bloodlines' | 'enochian-lore' | 'future-prophecy' | 'secret-gov-programs' | 'ancient-civilizations' | 'alchemy-occult' | 'illuminati-bloodlines' | 'black-nobility' | 'nasa-space';
   start: number; // BCE is negative, CE is positive
   end?: number;  // Only for 'lifespan'
   description: string;
@@ -3760,6 +3760,72 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
       start: 1827,
       description: 'Joseph Smith receives the golden plates on the Hill Cumorah from the Angel Moroni, translating them to publish the Book of Mormon.',
       source: 'LDS Church Historical Archives'
+    },
+    {
+      id: 'jpl-founded-event',
+      name: 'Jet Propulsion Laboratory Founded',
+      type: 'event',
+      layer: 'nasa-space',
+      start: 1936,
+      description: 'Occultist and rocket scientist Jack Parsons, along with Frank Malina and the Caltech \'Suicide Squad,\' begins early rocket testing that leads to the establishment of JPL.',
+      source: 'JPL Historical Records / Strange Angel'
+    },
+    {
+      id: 'nasa-founded-event',
+      name: 'NASA Officially Established',
+      type: 'event',
+      layer: 'nasa-space',
+      start: 1958,
+      description: 'President Dwight D. Eisenhower signs the National Aeronautics and Space Act, establishing NASA as a civilian space agency absorbing NACA and military rocket groups.',
+      source: 'National Aeronautics and Space Act of 1958'
+    },
+    {
+      id: 'apollo-11-landing-event',
+      name: 'Apollo 11 Moon Landing',
+      type: 'event',
+      layer: 'nasa-space',
+      start: 1969,
+      description: 'Astronauts Neil Armstrong and Buzz Aldrin land the Apollo Lunar Module on the Moon, a historic feat that alternative researchers study for anomalous broadcast transmissions, shadows, and Masonic symbolic gestures.',
+      source: 'NASA Mission Logs / Apollo 11 Press Kit'
+    },
+    {
+      id: 'project-mercury-start',
+      name: 'Project Mercury',
+      type: 'lifespan',
+      layer: 'nasa-space',
+      start: 1958,
+      end: 1963,
+      description: 'The first U.S. human spaceflight program, designed to put an astronaut into Earth orbit and safely recover them.',
+      source: 'NASA Project Mercury History Office'
+    },
+    {
+      id: 'project-gemini-start',
+      name: 'Project Gemini',
+      type: 'lifespan',
+      layer: 'nasa-space',
+      start: 1961,
+      end: 1966,
+      description: 'The second human spaceflight program, focused on developing orbital rendezvous, docking, and extravehicular activity (EVA) techniques.',
+      source: 'NASA Gemini Program Summaries'
+    },
+    {
+      id: 'project-apollo-start',
+      name: 'Project Apollo',
+      type: 'lifespan',
+      layer: 'nasa-space',
+      start: 1961,
+      end: 1972,
+      description: 'NASA\'s historic lunar landing program, which succeeded in landing the first humans on the Moon in 1969. Heavily analyzed for potential anomalies.',
+      source: 'NASA Apollo Mission Logs'
+    },
+    {
+      id: 'artemis-program-event',
+      name: 'Artemis I Lunar Mission',
+      type: 'event',
+      layer: 'nasa-space',
+      start: 2022,
+      description: 'The uncrewed Artemis I flight test launches from Cape Canaveral, performing a lunar flyby and returning to Earth, marking the official operational debut of the SLS and Orion spacecraft.',
+      source: 'NASA Mission Reports'
     }
   ];
 
@@ -3985,7 +4051,14 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'gnosticism-origins': { lng: 32.2356, lat: 26.0528, locationName: 'Nag Hammadi Caves (Egypt)', category: 'The Occult' },
   'rosicrucianism-origins': { lng: 8.7153, lat: 49.4106, locationName: 'Heidelberg Castle (Heidelberg, Germany)', category: 'The Occult' },
   'catholicism-history': { lng: 12.4534, lat: 41.9029, locationName: 'Vatican City (Rome, Italy)', category: 'The Occult' },
-  'mormonism-origins': { lng: -77.2244, lat: 43.0167, locationName: 'Hill Cumorah (Manchester, NY)', category: 'The Occult' }
+  'mormonism-origins': { lng: -77.2244, lat: 43.0167, locationName: 'Hill Cumorah (Manchester, NY)', category: 'The Occult' },
+  'jpl-founded-event': { lng: -118.1702, lat: 34.1996, locationName: 'Jet Propulsion Laboratory (Pasadena, CA)', category: 'NASA / Space' },
+  'nasa-founded-event': { lng: -77.0161, lat: 38.8831, locationName: 'NASA Headquarters (Washington, D.C.)', category: 'NASA / Space' },
+  'apollo-11-landing-event': { lng: -80.6077, lat: 28.5721, locationName: 'Kennedy Space Center (Cape Canaveral, FL)', category: 'NASA / Space' },
+  'project-mercury-start': { lng: -80.6077, lat: 28.5721, locationName: 'Cape Canaveral Space Force Station (FL)', category: 'NASA / Space' },
+  'project-gemini-start': { lng: -80.6077, lat: 28.5721, locationName: 'Cape Canaveral Space Force Station (FL)', category: 'NASA / Space' },
+  'project-apollo-start': { lng: -80.6077, lat: 28.5721, locationName: 'Kennedy Space Center (Cape Canaveral, FL)', category: 'NASA / Space' },
+  'artemis-program-event': { lng: -80.6041, lat: 28.6272, locationName: 'Launch Complex 39B (Cape Canaveral, FL)', category: 'NASA / Space' }
 };
 
 export interface Waypoint {

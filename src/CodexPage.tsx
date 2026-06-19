@@ -1,3 +1,4 @@
+// Codex Page Component
 import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, Flag } from 'lucide-react';
@@ -30,6 +31,8 @@ const LAYER_COLORS: Record<string, string> = {
   'Enochian Sites': '#FF9F63',
   'Giants & Nephilim': '#ECCE81',
   'Biblical Figures': '#90C2FF',
+  'Religion': '#90C2FF',
+  'Myths / Legends': '#FFF96A',
   'Biblical Events': '#91FFC4',
   'UFOs - Sightings': '#C2FFBD',
   'Bigfoot Sightings': '#C6986D',
@@ -52,8 +55,9 @@ const LAYER_COLORS: Record<string, string> = {
   'Meteor Impact Craters': '#FF9F63',
   'Ley Lines': '#FF5E97',
   'Archaeological Finds': '#74F8F3',
-  'Biblical Finds': '#D49459',
+  'Biblical Discoveries': '#D49459',
   'Secret Government Programs': '#FF5C5C',
+  'NASA / Space': '#BACEF4',
   'The Occult': '#59DCB7',
   'People Groups': '#BCA7C7',
   'Ancient People Groups': '#BCA7C7',
@@ -66,6 +70,8 @@ const LAYER_ICONS: Record<string, string> = {
   'Enochian Sites': '/icons/icon-enochian-lore.svg',
   'Giants & Nephilim': '/icons/icon-giants.svg',
   'Biblical Figures': '/icons/icon-biblical-bloodlines.svg',
+  'Religion': '/icons/icon-biblical-bloodlines.svg',
+  'Myths / Legends': '/icons/icon-greek-mythology.svg',
   'Biblical Events': '/icons/icon-biblical-bloodlines-1.svg',
   'UFOs - Sightings': '/icons/icon-ufo-sightings.svg',
   'Bigfoot Sightings': '/icons/icon-bigfoot-sightings.svg',
@@ -88,8 +94,9 @@ const LAYER_ICONS: Record<string, string> = {
   'Meteor Impact Craters': '/icons/icon-meteors.svg',
   'Ley Lines': '/icons/icon-ley-lines.svg',
   'Archaeological Finds': '/icons/icon-archaeological-finds.svg',
-  'Biblical Finds': '/icons/icon-biblical-finds.svg',
+  'Biblical Discoveries': '/icons/icon-biblical-discoveries.svg',
   'Secret Government Programs': '/icons/icon-secret-government-programs.svg',
+  'NASA / Space': '/icons/icon-nasa.svg',
   'The Occult': '/icons/icon-alchemy-occult.svg',
   'People Groups': '/icons/icon-people-groups.svg',
   'Ancient People Groups': '/icons/icon-people-groups.svg',
@@ -347,11 +354,13 @@ export default function CodexPage({
     }
 
     if (curr.id === 'biblical-apocryphal') return '#90C2FF'; // Blue (Biblical Figures)
+    if (curr.id === 'myths-legends-root') return '#FFF96A'; // Yellow/Gold (Myths / Legends)
     if (curr.id === 'megaliths-structures') return '#FFFBA6'; // Yellow/Gold (Megaliths)
     if (curr.id === 'supernatural-anomalies') return '#C2FFBD'; // Green (U.F.O. Sightings)
     if (curr.id === 'secret-government-programs') return '#FF5C5C'; // Red (Secret Government Programs)
     if (curr.id === 'alchemy-occult') return '#59DCB7'; // Mint/Teal (The Occult)
     if (curr.id === 'people-groups') return '#BCA7C7'; // Lavender (People Groups)
+    if (curr.id === 'nasa-root') return '#BACEF4'; // Light Blue (NASA / Space)
     
     return LAYER_COLORS['Default'];
   }
@@ -403,7 +412,7 @@ export default function CodexPage({
       case '#ff9f63': // Enochian / Meteor Impact
       case '#ffcba6': // Petroglyphs
         return '#803b00'; // Dark rust orange
-      case '#d49459': // Biblical Finds
+      case '#d49459': // Biblical Discoveries
         return '#754215'; // Dark brown-orange
       case '#c6986d': // Bigfoot
         return '#5c3f25'; // Dark chocolate brown
@@ -421,11 +430,13 @@ export default function CodexPage({
 
   const getNodeIcon = (node: TermNode): string => {
     if (node.id === 'biblical-apocryphal') return LAYER_ICONS['Biblical Figures'];
+    if (node.id === 'myths-legends-root') return LAYER_ICONS['Myths / Legends'];
     if (node.id === 'megaliths-structures') return LAYER_ICONS['Megaliths / Structures'];
     if (node.id === 'supernatural-anomalies') return LAYER_ICONS['UFOs - Sightings'];
     if (node.id === 'secret-government-programs') return LAYER_ICONS['Secret Government Programs'];
     if (node.id === 'alchemy-occult') return LAYER_ICONS['The Occult'];
     if (node.id === 'people-groups') return LAYER_ICONS['People Groups'];
+    if (node.id === 'nasa-root') return LAYER_ICONS['NASA / Space'];
 
     if (node.layer && LAYER_ICONS[node.layer]) {
       return LAYER_ICONS[node.layer];
@@ -433,11 +444,13 @@ export default function CodexPage({
     let parentId = node.parentId;
     while (parentId) {
       if (parentId === 'biblical-apocryphal') return LAYER_ICONS['Biblical Figures'];
+      if (parentId === 'myths-legends-root') return LAYER_ICONS['Myths / Legends'];
       if (parentId === 'megaliths-structures') return LAYER_ICONS['Megaliths / Structures'];
       if (parentId === 'supernatural-anomalies') return LAYER_ICONS['UFOs - Sightings'];
       if (parentId === 'secret-government-programs') return LAYER_ICONS['Secret Government Programs'];
       if (parentId === 'alchemy-occult') return LAYER_ICONS['The Occult'];
       if (parentId === 'people-groups') return LAYER_ICONS['People Groups'];
+      if (parentId === 'nasa-root') return LAYER_ICONS['NASA / Space'];
 
       const parent = nodes.find(n => n.id === parentId);
       if (parent && parent.layer && LAYER_ICONS[parent.layer]) {
@@ -1514,7 +1527,7 @@ export default function CodexPage({
                               ? (isMapDarkMode ? '#222222' : '#f0f0f0')
                               : (isMapDarkMode ? '#1a1a1a' : '#ffffff'),
                           border: (selectedTermId === node.id)
-                            ? `2px solid ${isMapDarkMode ? '#ffffff' : '#000000'}`
+                            ? `1px solid ${isMapDarkMode ? '#ffffff' : '#000000'}`
                             : `1px solid ${theme.border}`,
                           borderRadius: '16px',
                           boxSizing: 'border-box',
@@ -2184,6 +2197,12 @@ export default function CodexPage({
                       {activeTermNode.relatedIds?.map(relId => {
                         const relNode = nodes.find(t => t.id === relId);
                         if (!relNode) return null;
+                        
+                        // Prevent duplicate category tags
+                        if (activeTermNode.layer && relNode.name.toLowerCase() === activeTermNode.layer.toLowerCase()) {
+                          return null;
+                        }
+
                         const relColor = getNodeColor(relNode);
 
                         return (

@@ -85,5 +85,11 @@ service cloud.firestore {
       allow update: if isAdmin();
       allow delete: if isAdmin();
     }
+
+    // Overrides collection
+    match /overrides/{overrideId} {
+      allow read, get, list: if true;
+      allow write, create, update, delete: if isAdmin();
+    }
   }
 }

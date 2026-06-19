@@ -29850,5 +29850,75 @@
     "description": "The center of operations for Project Deep Freeze, a series of major U.S. military expeditions to Antarctica starting in 1955. Esoteric and alternative history circles view these highly militarized science programs as cover operations to monitor suspected Hollow Earth access points, locate ancient monuments buried under the ice cap, and investigate the remnants of the rumored WWII Nazi New Swabia (Neuschwabenland) base.",
     "source": "U.S. Navy Logs / Antarctic Expedition Journals",
     "images": []
+  },
+  {
+    "id": "anomaly-Nasa-Space-Cape-Canaveral",
+    "name": "Kennedy Space Center (Cape Canaveral)",
+    "category": "NASA / Space",
+    "type": "Point",
+    "coordinates": {
+      "lng": -80.6077,
+      "lat": 28.5721
+    },
+    "date": 1962,
+    "description": "NASA's primary launch facility for human spaceflight. Established in 1962, it has served as the launch point for all Apollo lunar missions and Space Shuttle operations. Alternative theorists point to the geographic alignment of its launchpads, connections to military rocket development, and alleged anomalies in early Apollo mission footage and photography.",
+    "source": "KSC Historical Reports / NASA Archives",
+    "images": []
+  },
+  {
+    "id": "anomaly-Nasa-Space-Vandenberg",
+    "name": "Vandenberg Space Force Base",
+    "category": "NASA / Space",
+    "type": "Point",
+    "coordinates": {
+      "lng": -120.6012,
+      "lat": 34.772
+    },
+    "date": 1958,
+    "description": "A major military and civil spaceport in California. Used by NASA for polar orbit launches, satellite deployments, and classified joint operations with the National Reconnaissance Office (NRO). Alternative space researchers associate Vandenberg with top-secret space defense programs and satellite-based monitoring anomalies.",
+    "source": "U.S. Space Force Fact Sheets / NRO Archives",
+    "images": []
+  },
+  {
+    "id": "anomaly-Nasa-Space-JPL",
+    "name": "Jet Propulsion Laboratory (JPL)",
+    "category": "NASA / Space",
+    "type": "Point",
+    "coordinates": {
+      "lng": -118.1702,
+      "lat": 34.1996
+    },
+    "date": 1958,
+    "description": "Federally funded R&D center managed by Caltech. Originally established in the 1930s by rocket pioneer and O.T.O. occultist Jack Parsons, Frank Malina, and the 'Suicide Squad.' JPL pioneered early jet propulsion and spacecraft control. Its history is heavily linked to alternative theories of ritual magic and occult symbolism underlying civilian space exploration.",
+    "source": "JPL Historical Archives / Strange Angel",
+    "images": []
+  },
+  {
+    "id": "anomaly-Nasa-Space-HQ",
+    "name": "NASA Headquarters",
+    "category": "NASA / Space",
+    "type": "Point",
+    "coordinates": {
+      "lng": -77.0161,
+      "lat": 38.8831
+    },
+    "date": 1958,
+    "description": "The central administrative headquarters of NASA in Washington, D.C. Established in 1958, it coordinates all NASA operations, aeronautics research, and space exploration projects. Conspiracists view it as the decision center for major civilian space coverups, photo redaction, and global space communication policies.",
+    "source": "NASA Official Records",
+    "images": []
+  },
+  {
+    "id": "anomaly-Nasa-Space-Artemis-Program",
+    "name": "Artemis Program SLS Launchpad (LC-39B)",
+    "category": "NASA / Space",
+    "type": "Point",
+    "coordinates": {
+      "lng": -80.6041,
+      "lat": 28.6272
+    },
+    "date": 2022,
+    "description": "Launch Complex 39B at Kennedy Space Center, the primary launchpad for the Space Launch System (SLS) carrying the Orion spacecraft for the Artemis lunar missions.",
+    "source": "NASA Artemis Program Overview",
+    "images": []
   }
 ]

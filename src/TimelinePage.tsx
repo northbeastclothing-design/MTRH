@@ -21,9 +21,40 @@ interface TimelinePageProps {
   onFlagItem?: (item: TimelineItem) => void;
   onViewOnCodex?: (termId: string) => void;
   timelineItems?: TimelineItem[];
+  approvedSubmissions?: any[];
 }
 
 const ERAS_CONFIG = [
+  {
+    id: 'black-nobility',
+    name: '13 Black Nobility Families',
+    start: 1000,
+    end: 2026,
+    color: '#C5A3FF',
+    icon: '/icons/icon-black-nobility.svg',
+    layer: 'black-nobility',
+    desc: 'The powerful European papal and royal dynasties loyal to the Vatican, historically called the Black Nobility.'
+  },
+  {
+    id: 'illuminati-bloodlines',
+    name: '13 Illuminati Bloodlines',
+    start: 450,
+    end: 2026,
+    color: '#FF6B6B',
+    icon: '/icons/icon-illuminati-bloodlines.svg',
+    layer: 'illuminati-bloodlines',
+    desc: 'The thirteen elite family bloodlines alleged to secretly direct global banking, governments, and occult networks.'
+  },
+  {
+    id: 'ancient-civilizations',
+    name: 'Ancient People Groups',
+    start: -4000,
+    end: 2026,
+    color: '#BCA7C7', // Lavender
+    icon: '/icons/icon-people-groups.svg',
+    layer: 'ancient-civilizations',
+    desc: 'Ancient Mesoamerican empires, Native American tribes, and lost people groups of antiquity.'
+  },
   {
     id: 'biblical-patriarchs',
     name: 'Biblical Bloodlines',
@@ -65,16 +96,6 @@ const ERAS_CONFIG = [
     desc: 'Ascension of Enoch, descent of the 200 Watchers, teaching of forbidden arts, and the Nephilim giants.'
   },
   {
-    id: 'sumerian-antediluvian',
-    name: 'Sumerian Kings List',
-    start: -245000,
-    end: -2000,
-    color: '#FF9BE1', // Pink
-    icon: '/icons/icon-sumerian-kings-list.svg',
-    layer: 'sumerian-kings',
-    desc: 'Legendary pre-flood reigns.'
-  },
-  {
     id: 'greek-myths',
     name: 'Greek Mythology',
     start: -1700,
@@ -93,6 +114,16 @@ const ERAS_CONFIG = [
     icon: '/icons/icon-merovingian-bloodlines.svg',
     layer: 'merovingian-bloodlines',
     desc: 'Salian Frankish kings and holy bloodlines.'
+  },
+  {
+    id: 'nasa-space',
+    name: 'NASA / Space',
+    start: 1936,
+    end: 2026,
+    color: '#BACEF4',
+    icon: '/icons/icon-nasa.svg',
+    layer: 'nasa-space',
+    desc: 'Civilian aerospace achievements, space program launch sites, historical milestones, and lunar exploration missions.'
   },
   {
     id: 'royal-bloodlines',
@@ -115,14 +146,14 @@ const ERAS_CONFIG = [
     desc: 'Declassified military projects, chemical mind control, psychic remote viewing research, and classified aerospace programs.'
   },
   {
-    id: 'ancient-civilizations',
-    name: 'Ancient People Groups',
-    start: -4000,
-    end: 2026,
-    color: '#BCA7C7', // Lavender
-    icon: '/icons/icon-people-groups.svg',
-    layer: 'ancient-civilizations',
-    desc: 'Ancient Mesoamerican empires, Native American tribes, and lost people groups of antiquity.'
+    id: 'sumerian-antediluvian',
+    name: 'Sumerian Kings List',
+    start: -245000,
+    end: -2000,
+    color: '#FF9BE1', // Pink
+    icon: '/icons/icon-sumerian-kings-list.svg',
+    layer: 'sumerian-kings',
+    desc: 'Legendary pre-flood reigns.'
   },
   {
     id: 'alchemy-occult',
@@ -133,26 +164,6 @@ const ERAS_CONFIG = [
     icon: '/icons/icon-alchemy-occult.svg',
     layer: 'alchemy-occult',
     desc: 'Esoteric traditions, secret societies, alchemical pursuits, and occult figures from the Knights Templar to the modern era.'
-  },
-  {
-    id: 'illuminati-bloodlines',
-    name: '13 Illuminati Bloodlines',
-    start: 450,
-    end: 2026,
-    color: '#FF6B6B',
-    icon: '/icons/icon-illuminati-bloodlines.svg',
-    layer: 'illuminati-bloodlines',
-    desc: 'The thirteen elite family bloodlines alleged to secretly direct global banking, governments, and occult networks.'
-  },
-  {
-    id: 'black-nobility',
-    name: '13 Black Nobility Families',
-    start: 1000,
-    end: 2026,
-    color: '#C5A3FF',
-    icon: '/icons/icon-black-nobility.svg',
-    layer: 'black-nobility',
-    desc: 'The powerful European papal and royal dynasties loyal to the Vatican, historically called the Black Nobility.'
   }
 ];
 
@@ -164,7 +175,8 @@ export default function TimelinePage({
   onViewOnMap,
   onFlagItem,
   onViewOnCodex,
-  timelineItems
+  timelineItems,
+  approvedSubmissions
 }: TimelinePageProps) {
   const items = timelineItems || TIMELINE_ITEMS;
 
@@ -196,6 +208,7 @@ export default function TimelinePage({
     'enochian-lore': true,
     'future-prophecy': true,
     'secret-gov-programs': true,
+    'nasa-space': true,
     'ancient-civilizations': true,
     'alchemy-occult': true,
     'illuminati-bloodlines': true,
@@ -227,7 +240,7 @@ export default function TimelinePage({
 
   // Eras order state for reordering
   const [erasOrder, setErasOrder] = useState<string[]>(() => {
-    const saved = localStorage.getItem('mtrh_timeline_eras_order');
+    const saved = localStorage.getItem('mtrh_timeline_eras_order_v2');
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
@@ -241,7 +254,7 @@ export default function TimelinePage({
 
   // Save order when changed
   useEffect(() => {
-    localStorage.setItem('mtrh_timeline_eras_order', JSON.stringify(erasOrder));
+    localStorage.setItem('mtrh_timeline_eras_order_v2', JSON.stringify(erasOrder));
   }, [erasOrder]);
 
   // Collapsed eras state

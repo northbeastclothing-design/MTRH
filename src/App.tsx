@@ -1,3 +1,4 @@
+// Mapping The Rabbit Hole App Component
 import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { motion, AnimatePresence, animate } from 'motion/react';
@@ -129,7 +130,7 @@ const CATEGORY_DESCRIPTIONS: Record<string, string> = {
   'Crop Circles': 'Intricate patterns appearing in fields, often appearing overnight with no clear earthly explanation.',
   'Meteor Impact Craters': 'Confirmed impact structures on Earth created by ancient meteorite collisions, marking catastrophic cosmic encounters throughout geological history.',
   'Archaeological Finds': 'Remarkable historical excavations, lost citadels, and ancient artifacts rewriting human origin timelines.',
-  'Biblical Finds': 'Archaeological discoveries, inscriptions, and sacred sanctuaries validating accounts from biblical history.',
+  'Biblical Discoveries': 'Archaeological discoveries, inscriptions, and sacred sanctuaries validating accounts from biblical history.',
   'Ancient People Groups': 'Ancient Mesoamerican civilizations, Native American tribes, and lost people groups of antiquity.'
 };
 
@@ -690,7 +691,7 @@ const processIncomingRecord = (item: any, index: number) => {
   else if (lowerCat.includes('blurred')) normalizedCategory = 'Blurred on Google Maps';
   else if (lowerCat.includes('meteor') || lowerCat.includes('crater') || lowerCat.includes('impact structure')) normalizedCategory = 'Meteor Impact Craters';
   else if (lowerCat.includes('archaeological') || lowerCat.includes('archaeology')) normalizedCategory = 'Archaeological Finds';
-  else if (lowerCat.includes('biblical find') || lowerCat === 'biblical finds') normalizedCategory = 'Biblical Finds';
+  else if (lowerCat.includes('biblical find') || lowerCat.includes('biblical discover') || lowerCat === 'biblical finds' || lowerCat === 'biblical discoveries') normalizedCategory = 'Biblical Discoveries';
   else if (lowerCat.includes('government program') || lowerCat.includes('secret government') || lowerCat.includes('classified program')) normalizedCategory = 'Secret Government Programs';
   else if (lowerCat.includes('alchemy') || lowerCat.includes('occult') || lowerCat.includes('hermeticism') || lowerCat.includes('thelema')) normalizedCategory = 'The Occult';
 
@@ -806,6 +807,8 @@ const LAYER_CONFIG: Record<string, { color: string; icon: string }> = {
   'Enochian Sites': { color: '#FF9F63', icon: '/icons/icon-enochian-lore.svg' },
   'Giants & Nephilim': { color: '#ECCE81', icon: '/icons/icon-giants.svg' },
   'Biblical Figures': { color: '#90C2FF', icon: '/icons/icon-biblical-bloodlines.svg' },
+  'Religion': { color: '#90C2FF', icon: '/icons/icon-biblical-bloodlines.svg' },
+  'Myths / Legends': { color: '#FFF96A', icon: '/icons/icon-greek-mythology.svg' },
   'Biblical Events': { color: '#91FFC4', icon: '/icons/icon-biblical-bloodlines-1.svg' },
   'UFOs - Sightings': { color: '#C2FFBD', icon: '/icons/icon-ufo-sightings.svg' },
   'Bigfoot Sightings': { color: '#C6986D', icon: '/icons/icon-bigfoot-sightings.svg' },
@@ -828,8 +831,9 @@ const LAYER_CONFIG: Record<string, { color: string; icon: string }> = {
   'Meteor Impact Craters': { color: '#FF9F63', icon: '/icons/icon-meteors.svg' },
   'Ley Lines': { color: '#FF5E97', icon: '/icons/icon-ley-lines.svg' },
   'Archaeological Finds': { color: '#74F8F3', icon: '/icons/icon-archaeological-finds.svg' },
-  'Biblical Finds': { color: '#D49459', icon: '/icons/icon-biblical-finds.svg' },
+  'Biblical Discoveries': { color: '#D49459', icon: '/icons/icon-biblical-discoveries.svg' },
   'Secret Government Programs': { color: '#FF5C5C', icon: '/icons/icon-secret-government-programs.svg' },
+  'NASA / Space': { color: '#BACEF4', icon: '/icons/icon-nasa.svg' },
   'The Occult': { color: '#59DCB7', icon: '/icons/icon-alchemy-occult.svg' },
   'Ancient People Groups': { color: '#BCA7C7', icon: '/icons/icon-people-groups.svg' },
   'Default': { color: '#b6a6ff', icon: '/icons/icon-map-pin.svg' }
@@ -931,6 +935,8 @@ function App() {
     }
   };
 
+  const [overrides, setOverrides] = useState<Record<string, any>>({});
+  const [editingReportId, setEditingReportId] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [geocodeResults, setGeocodeResults] = useState<any[]>([]);
   const [isSearchingGeocode, setIsSearchingGeocode] = useState(false);
@@ -974,7 +980,7 @@ function App() {
     if (layerName === 'Missing 411') {
       return missing411Data.length === 0;
     }
-    if (layerName === 'Archaeological Finds' || layerName === 'Biblical Finds') {
+    if (layerName === 'Archaeological Finds' || layerName === 'Biblical Discoveries') {
       return archaeologyData.length === 0;
     }
     if (
@@ -1033,7 +1039,6 @@ function App() {
   };
 
 
-  // Combine original static / scraped data and approved user submissions for Map
   const combinedPointsAndLinesData = useMemo(() => {
     const approvedMapSubmissions = approvedSubmissions.filter(item => 
       !item.destinations || item.destinations.includes('map')
@@ -1042,20 +1047,31 @@ function App() {
     const uniqueMap = new Map();
     combined.forEach((item: any) => {
       if (item && item.id) {
+        let mergedItem = { ...item };
+        const override = overrides[String(item.id)];
+        if (override) {
+          mergedItem = {
+            ...mergedItem,
+            ...override
+          };
+          if (override.coordinates) {
+            mergedItem.coordinates = override.coordinates;
+          }
+        }
         // Filter out point features without valid coordinates on the map view
-        const isLineString = item.type === 'LineString';
-        const hasValidCoords = Array.isArray(item.coordinates) && 
-                              item.coordinates.length === 2 && 
-                              isValidLngLat(item.coordinates[0], item.coordinates[1]);
-        const hasLineCoords = isLineString && Array.isArray(item.coordinates) && item.coordinates.length > 0;
+        const isLineString = mergedItem.type === 'LineString';
+        const hasValidCoords = Array.isArray(mergedItem.coordinates) && 
+                              mergedItem.coordinates.length === 2 && 
+                              isValidLngLat(mergedItem.coordinates[0], mergedItem.coordinates[1]);
+        const hasLineCoords = isLineString && Array.isArray(mergedItem.coordinates) && mergedItem.coordinates.length > 0;
 
         if (hasValidCoords || hasLineCoords) {
-          uniqueMap.set(String(item.id), item);
+          uniqueMap.set(String(mergedItem.id), mergedItem);
         }
       }
     });
     return Array.from(uniqueMap.values()) as any[];
-  }, [pointsAndLinesData, approvedSubmissions]);
+  }, [pointsAndLinesData, approvedSubmissions, overrides]);
 
   combinedDataRef.current = combinedPointsAndLinesData;
 
@@ -1072,8 +1088,18 @@ function App() {
       sources: item.source ? [item.source] : [],
       layer: item.category || undefined
     }));
-    return [...TERM_TREE_DATA, ...approvedCodexSubmissions];
-  }, [approvedSubmissions]);
+    const rawNodes = [...TERM_TREE_DATA, ...approvedCodexSubmissions];
+    return rawNodes.map((node: any) => {
+      const override = overrides[String(node.id)];
+      if (override) {
+        return {
+          ...node,
+          ...override
+        };
+      }
+      return node;
+    });
+  }, [approvedSubmissions, overrides]);
 
   // Combine static Timeline items and approved user Timeline submissions
   const combinedTimelineItems = useMemo(() => {
@@ -1091,8 +1117,20 @@ function App() {
       motherId: item.timelineMotherId || undefined,
       spouseId: item.timelineSpouseId || undefined
     }));
-    return [...TIMELINE_ITEMS, ...approvedTimelineSubmissions];
-  }, [approvedSubmissions]);
+    const rawItems = [...TIMELINE_ITEMS, ...approvedTimelineSubmissions];
+    return rawItems.map((item: any) => {
+      const override = overrides[String(item.id)];
+      if (override) {
+        return {
+          ...item,
+          ...override,
+          start: override.start !== undefined ? Number(override.start) : (override.date !== undefined ? Number(override.date) : item.start),
+          end: override.end !== undefined ? Number(override.end) : item.end
+        };
+      }
+      return item;
+    });
+  }, [approvedSubmissions, overrides]);
 
   const uniqueCategories = useMemo(() => {
     const order = ['UFOs - War.gov', 'UFOs - Brazillian Archives', 'UFOs - Sightings', 'Secret Government Programs', 'Giants & Nephilim'];
@@ -1110,14 +1148,16 @@ function App() {
   }, []);
 
   const allIntelCategories = useMemo(() => {
-    return [
+    const cats = [
       ...uniqueCategories,
-      'Biblical / Apocryphal',
+      'Religion',
+      'Myths / Legends',
       'Megaliths / Structures',
       'Supernatural / Anomalies',
       'Secret Government Programs',
       'The Occult'
     ];
+    return Array.from(new Set(cats));
   }, [uniqueCategories]);
 
   const layerColors = useMemo(() => {
@@ -1437,6 +1477,8 @@ function App() {
   // New Cross-Registry Editing Fields
   const [editDestinations, setEditDestinations] = useState<string[]>(['map']);
   const [editCodexParentId, setEditCodexParentId] = useState('');
+  const [editTimelineId, setEditTimelineId] = useState('');
+  const [editMapFeatureId, setEditMapFeatureId] = useState('');
   const [editTimelineLayer, setEditTimelineLayer] = useState('biblical-events');
   const [editTimelineType, setEditTimelineType] = useState<'event' | 'lifespan'>('event');
   const [editTimelineEnd, setEditTimelineEnd] = useState('');
@@ -1861,6 +1903,7 @@ function App() {
                   <option value="illuminati-bloodlines">13 Illuminati Bloodlines</option>
                   <option value="black-nobility">13 Black Nobility Families</option>
                   <option value="secret-gov-programs">Secret Government Programs</option>
+                  <option value="nasa-space">NASA / Space</option>
                   <option value="ancient-civilizations">Ancient People Groups</option>
                   <option value="alchemy-occult">The Occult</option>
                 </select>
@@ -2460,6 +2503,353 @@ function App() {
     );
   };
 
+  const handleSaveReportEdit = async (report: any) => {
+    setIsSavingEdit(true);
+    setModeratorError(null);
+    try {
+      const isSubmission = approvedSubmissions.some(s => String(s.id) === String(report.pointId)) ||
+                           pendingSubmissions.some(s => String(s.id) === String(report.pointId));
+
+      const hasCoords = editLongitude.trim() !== '' || editLatitude.trim() !== '';
+      let coordinatesValue: any = null;
+      if (hasCoords) {
+        const lngNum = parseFloat(editLongitude);
+        const latNum = parseFloat(editLatitude);
+        if (isNaN(lngNum) || isNaN(latNum)) {
+          throw new Error("Invalid Longitude/Latitude coordinates format.");
+        }
+        if (!isValidLngLat(lngNum, latNum)) {
+          throw new Error("Coordinates must be within standard bounds (Latitude: -90 to 90, Longitude: -180 to 180).");
+        }
+        coordinatesValue = [lngNum, latNum];
+      }
+
+      if (isSubmission) {
+        const updatedFields = {
+          name: editName.trim(),
+          category: editCategory,
+          description: editDescription.trim(),
+          date: editDate,
+          source: editSource.trim(),
+          coordinates: coordinatesValue,
+          codexParentId: editCodexParentId,
+          timelineLayer: editTimelineLayer,
+          timelineType: editTimelineType,
+          timelineEnd: editTimelineEnd.trim(),
+          timelineFatherId: editTimelineFatherId,
+          timelineMotherId: editTimelineMotherId,
+          timelineSpouseId: editTimelineSpouseId
+        };
+        const authParams = await getModeratorHeadersAndBody({ docId: report.pointId, updatedData: updatedFields });
+        const response = await fetch('/api/moderate/update', {
+          method: 'POST',
+          headers: authParams.headers,
+          body: authParams.body
+        });
+        if (!response.ok) {
+          const errData = await response.json();
+          throw new Error(errData.error || `Server status ${response.status}`);
+        }
+        try {
+          await updateDoc(doc(db, 'submissions', report.pointId), updatedFields);
+        } catch (fbErr) {
+          console.warn("Direct Firestore update failed:", fbErr);
+        }
+      } else {
+        const updatedFields: any = {
+          name: editName.trim(),
+          description: editDescription.trim(),
+          category: editCategory,
+          source: editSource.trim(),
+          coordinates: coordinatesValue,
+          parentId: editCodexParentId,
+          timelineId: editTimelineId,
+          mapFeatureId: editMapFeatureId
+        };
+        
+        Object.keys(updatedFields).forEach(key => {
+          if (updatedFields[key] === undefined || updatedFields[key] === '') {
+            delete updatedFields[key];
+          }
+        });
+
+        const authParams = await getModeratorHeadersAndBody({ overrideId: report.pointId, updatedData: updatedFields });
+        const response = await fetch('/api/moderate/save-override', {
+          method: 'POST',
+          headers: authParams.headers,
+          body: authParams.body
+        });
+        if (!response.ok) {
+          const errData = await response.json();
+          throw new Error(errData.error || `Server status ${response.status}`);
+        }
+        try {
+          await setDoc(doc(db, 'overrides', report.pointId), updatedFields);
+        } catch (fbErr) {
+          console.warn("Direct Firestore override set failed:", fbErr);
+        }
+        
+        setOverrides(prev => ({
+          ...prev,
+          [report.pointId]: updatedFields
+        }));
+      }
+
+      await handleReportAction(report.id, 'resolve');
+
+      setEditingReportId(null);
+      setModeratorReloadTrigger(prev => prev + 1);
+    } catch (err: any) {
+      console.error("Failed to save report edit:", err);
+      setModeratorError(`Edit Failed: ${err.message || 'Unknown network error'}`);
+    } finally {
+      setIsSavingEdit(false);
+    }
+  };
+
+  const renderReportEditForm = (report: any) => {
+    const mapRecord = combinedPointsAndLinesData.find(item => String(item.id) === String(report.pointId));
+    const codexRecord = combinedCodexNodes.find(item => String(item.id) === String(report.pointId));
+    const isMapItem = !!mapRecord || report.pointCategory !== 'General';
+    const isCodexItem = !!codexRecord;
+
+    return (
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', width: '100%', textAlign: 'left' }}>
+        <div>
+          <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>NAME *</label>
+          <input 
+            type="text" 
+            value={editName} 
+            onChange={(e) => setEditName(e.target.value)} 
+            style={{
+              width: '100%', 
+              background: isMapDarkMode ? '#222' : '#fff', 
+              border: `1px solid ${theme.border}`, 
+              color: theme.text, 
+              padding: '6px 10px', 
+              fontSize: '11px',
+              fontFamily: '"Space Mono", monospace'
+            }} 
+          />
+        </div>
+
+        {isMapItem && (
+          <div style={{ display: 'flex', gap: '10px', borderLeft: `2px solid ${theme.borderLight}`, paddingLeft: '10px', flexWrap: 'wrap' }}>
+            <div style={{ flex: 1, minWidth: '150px' }}>
+              <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>LAYER CATEGORY *</label>
+              <select 
+                value={editCategory} 
+                onChange={(e) => setEditCategory(e.target.value)} 
+                style={{
+                  width: '100%', 
+                  background: isMapDarkMode ? '#222' : '#fff', 
+                  border: `1px solid ${theme.border}`, 
+                  color: theme.text, 
+                  padding: '6px 10px', 
+                  fontSize: '11px',
+                  fontFamily: '"Space Mono", monospace',
+                  height: '30px'
+                }}
+              >
+                {uniqueCategories.map(cat => (
+                  <option key={cat} value={cat} style={{ background: isMapDarkMode ? '#0d0d0d' : '#fff' }}>
+                    {cat}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div style={{ width: '120px' }}>
+              <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>LONGITUDE *</label>
+              <input 
+                type="text" 
+                value={editLongitude} 
+                onChange={(e) => setEditLongitude(e.target.value)} 
+                style={{
+                  width: '100%', 
+                  background: isMapDarkMode ? '#222' : '#fff', 
+                  border: `1px solid ${theme.border}`, 
+                  color: theme.text, 
+                  padding: '6px 10px', 
+                  fontSize: '11px',
+                  fontFamily: '"Space Mono", monospace',
+                  height: '30px'
+                }} 
+              />
+            </div>
+
+            <div style={{ width: '120px' }}>
+              <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>LATITUDE *</label>
+              <input 
+                type="text" 
+                value={editLatitude} 
+                onChange={(e) => setEditLatitude(e.target.value)} 
+                style={{
+                  width: '100%', 
+                  background: isMapDarkMode ? '#222' : '#fff', 
+                  border: `1px solid ${theme.border}`, 
+                  color: theme.text, 
+                  padding: '6px 10px', 
+                  fontSize: '11px',
+                  fontFamily: '"Space Mono", monospace',
+                  height: '30px'
+                }} 
+              />
+            </div>
+          </div>
+        )}
+
+        {isCodexItem && (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', borderLeft: `2px solid ${theme.borderLight}`, paddingLeft: '10px' }}>
+            <div>
+              <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>PARENT CODEX TERM</label>
+              <select
+                value={editCodexParentId}
+                onChange={(e) => setEditCodexParentId(e.target.value)}
+                style={{
+                  width: '100%',
+                  background: isMapDarkMode ? '#222' : '#fff',
+                  border: `1px solid ${theme.border}`,
+                  padding: '6px 10px',
+                  fontSize: '11px',
+                  color: theme.text,
+                  fontFamily: '"Space Mono", monospace',
+                  height: '30px'
+                }}
+              >
+                <option value="">None (Root Category)</option>
+                {[...combinedCodexNodes]
+                  .filter(node => node.id !== report.pointId)
+                  .sort((a, b) => a.name.localeCompare(b.name))
+                  .map(node => (
+                    <option key={node.id} value={node.id}>
+                      {node.name}
+                    </option>
+                  ))
+                }
+              </select>
+            </div>
+            
+            <div style={{ display: 'flex', gap: '10px' }}>
+              <div style={{ flex: 1 }}>
+                <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>TIMELINE ID</label>
+                <input 
+                  type="text" 
+                  value={editTimelineId} 
+                  onChange={(e) => setEditTimelineId(e.target.value)} 
+                  style={{
+                    width: '100%', 
+                    background: isMapDarkMode ? '#222' : '#fff', 
+                    border: `1px solid ${theme.border}`, 
+                    color: theme.text, 
+                    padding: '6px 10px', 
+                    fontSize: '11px',
+                    fontFamily: '"Space Mono", monospace'
+                  }} 
+                />
+              </div>
+              <div style={{ flex: 1 }}>
+                <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>MAP FEATURE ID</label>
+                <input 
+                  type="text" 
+                  value={editMapFeatureId} 
+                  onChange={(e) => setEditMapFeatureId(e.target.value)} 
+                  style={{
+                    width: '100%', 
+                    background: isMapDarkMode ? '#222' : '#fff', 
+                    border: `1px solid ${theme.border}`, 
+                    color: theme.text, 
+                    padding: '6px 10px', 
+                    fontSize: '11px',
+                    fontFamily: '"Space Mono", monospace'
+                  }} 
+                />
+              </div>
+            </div>
+          </div>
+        )}
+
+        <div>
+          <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>DESCRIPTION *</label>
+          <textarea 
+            rows={4}
+            value={editDescription} 
+            onChange={(e) => setEditDescription(e.target.value)} 
+            style={{
+              width: '100%', 
+              background: isMapDarkMode ? '#222' : '#fff', 
+              border: `1px solid ${theme.border}`, 
+              color: theme.text, 
+              padding: '8px 10px', 
+              fontSize: '11px',
+              fontFamily: '"Space Mono", monospace',
+              lineHeight: '15px'
+            }} 
+          />
+        </div>
+
+        <div>
+          <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>SOURCE DOCUMENTATION</label>
+          <input 
+            type="text" 
+            value={editSource} 
+            onChange={(e) => setEditSource(e.target.value)} 
+            style={{
+              width: '100%', 
+              background: isMapDarkMode ? '#222' : '#fff', 
+              border: `1px solid ${theme.border}`, 
+              color: theme.text, 
+              padding: '6px 10px', 
+              fontSize: '11px',
+              fontFamily: '"Space Mono", monospace'
+            }} 
+          />
+        </div>
+
+        <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px', marginTop: '10px' }}>
+          <button
+            type="button"
+            disabled={isSavingEdit}
+            onClick={() => setEditingReportId(null)}
+            style={{
+              background: 'transparent',
+              color: theme.text,
+              border: `1px solid ${theme.border}`,
+              borderRadius: '16px',
+              padding: '0 18px',
+              height: '32px',
+              fontSize: '9px',
+              fontFamily: '"Space Mono", monospace',
+              fontWeight: 700,
+              cursor: 'pointer'
+            }}
+          >
+            CANCEL
+          </button>
+          <button
+            type="button"
+            disabled={isSavingEdit}
+            onClick={() => handleSaveReportEdit(report)}
+            style={{
+              background: '#ffcc00',
+              color: '#000000',
+              border: '1px solid #ffcc00',
+              borderRadius: '16px',
+              padding: '0 18px',
+              height: '32px',
+              fontSize: '9px',
+              fontFamily: '"Space Mono", monospace',
+              fontWeight: 700,
+              cursor: 'pointer'
+            }}
+          >
+            {isSavingEdit ? 'SAVING...' : 'SAVE & RESOLVE'}
+          </button>
+        </div>
+      </div>
+    );
+  };
+
   // Requirement 3: Geocode search to auto-populate submission coords (with proximity bias and suggestions list)
   const handleSubSearchGeocode = async () => {
     const queryStr = subLocationSearch.trim();
@@ -2892,6 +3282,37 @@ function App() {
     return () => unsubscribe();
   }, []);
 
+  // Listen to Overrides dynamically (Anyone can fetch these to apply corrections)
+  useEffect(() => {
+    const q = collection(db, 'overrides');
+    const unsubscribe = onSnapshot(q, (snapshot) => {
+      const overridesMap: Record<string, any> = {};
+      snapshot.forEach((doc) => {
+        overridesMap[doc.id] = doc.data();
+      });
+      setOverrides(overridesMap);
+    }, (error) => {
+      console.warn("Could not listen to overrides directly. Fetching from server proxy...", error);
+      fetchOverridesFromServer();
+    });
+
+    const fetchOverridesFromServer = async () => {
+      try {
+        const response = await fetch('/api/overrides');
+        if (response.ok) {
+          const data = await response.json();
+          setOverrides(data.overrides || {});
+        }
+      } catch (err) {
+        console.warn("Could not fetch overrides from server proxy:", err);
+      }
+    };
+
+    fetchOverridesFromServer();
+
+    return () => unsubscribe();
+  }, []);
+
   // Listen to all submissions for moderators (Requires Auth or Bypass)
   useEffect(() => {
     if (!isModeratorAuthenticated) {
@@ -3265,10 +3686,10 @@ function App() {
         }
       }
 
-      // 2. Archaeology Finds & Biblical Finds
+      // 2. Archaeology Finds & Biblical Discoveries
       const hasArchaeologyActive = 
         activeLayers['Archaeological Finds'] || 
-        activeLayers['Biblical Finds'] ||
+        activeLayers['Biblical Discoveries'] ||
         activeLayers['Rock Art & Cave Paintings'] ||
         activeLayers['Megaliths / Structures'] ||
 
@@ -3326,7 +3747,7 @@ function App() {
       const needsRabbitHole = Object.keys(activeLayers).some(k => 
         activeLayers[k] && 
         k !== 'UFOs - War.gov' && k !== 'UFOs - Brazillian Archives' && k !== 'UFOs - Sightings' && k !== 'Secret Government Programs' &&
-        k !== 'Archaeological Finds' && k !== 'Biblical Finds' &&
+        k !== 'Archaeological Finds' && k !== 'Biblical Discoveries' &&
         k !== 'Missing 411' && k !== 'Cave Systems' && k !== 'Alien Abductions' && k !== 'Cattle Mutilations'
       );
       if (needsRabbitHole && rabbitHoleData.length === 0) {
@@ -3358,7 +3779,8 @@ function App() {
         // Convert timeline items with coordinates to map pins
         const timelinePins = combinedTimelineItems.map(item => {
           const loc = TIMELINE_LOCATIONS[item.id];
-          if (!loc) return null;
+          const override = overrides[String(item.id)];
+          if (!loc && (!override || !override.coordinates)) return null;
           
           // Match with Codex node to pull images
           const codexNode = combinedCodexNodes.find(node => 
@@ -3369,13 +3791,16 @@ function App() {
           );
           const resolvedImages = codexNode && codexNode.images ? codexNode.images : [];
 
+          const lng = override && override.coordinates ? override.coordinates[0] : (loc ? loc.lng : 0);
+          const lat = override && override.coordinates ? override.coordinates[1] : (loc ? loc.lat : 0);
+
           return {
             id: item.id,
             name: item.name,
-            categories: [loc.category || 'Biblical Events'],
-            category: loc.category || 'Biblical Events',
+            categories: [override?.category || loc?.category || 'Biblical Events'],
+            category: override?.category || loc?.category || 'Biblical Events',
             type: 'Point',
-            coordinates: [loc.lng, loc.lat],
+            coordinates: [lng, lat],
             date: item.start,
             description: item.description,
             source: item.source || null,
@@ -3383,7 +3808,7 @@ function App() {
             isTimelinePin: true,
             isPeopleGroup: item.isPeopleGroup,
             subLabel: item.subLabel,
-            locationName: loc.locationName
+            locationName: override?.locationName || loc?.locationName || ''
           };
         }).filter(Boolean);
 
@@ -3439,7 +3864,7 @@ function App() {
     };
 
     compileVerifiedIntel();
-  }, [rabbitHoleData, ufoData, archaeologyData, missing411Data, cavesData, alienAbductionData, cattleMutilationData]);
+  }, [rabbitHoleData, ufoData, archaeologyData, missing411Data, cavesData, alienAbductionData, cattleMutilationData, overrides]);
 
   useEffect(() => {
     if (uniqueCategories.length > 0 && !hasRandomizedRef.current) {
@@ -3849,7 +4274,7 @@ function App() {
         'crop-circles', 'cryptid-sightings', 'Megaliths', 'dumbs',
         'entrances-to-underworld', 'ghosts', 'giants', 'megaliths',
         'national-parks-reserves', 'ufo-sightings', 'map-pin', 'petroglyphs',
-        'meteors', 'ley-lines', 'archaeological-finds', 'biblical-finds', 'geoglyphs'
+        'meteors', 'ley-lines', 'archaeological-finds', 'biblical-discoveries', 'geoglyphs'
       ];
       
       let loadedCount = 0;
@@ -5543,16 +5968,18 @@ function App() {
                         }
                         const rootId = curr?.id;
                         if (rootId === 'biblical-apocryphal') {
-                          setSubCategory('Biblical / Apocryphal');
+                          setSubCategory('Religion');
+                        } else if (rootId === 'myths-legends-root') {
+                          setSubCategory('Myths / Legends');
                         } else if (rootId === 'megaliths-structures') {
                           setSubCategory('Megaliths / Structures');
                         } else if (rootId === 'supernatural-anomalies') {
                           setSubCategory('Supernatural / Anomalies');
                         } else {
-                          setSubCategory('Biblical / Apocryphal');
+                          setSubCategory('Religion');
                         }
                       } else {
-                        setSubCategory('Biblical / Apocryphal');
+                        setSubCategory('Religion');
                       }
                     } else {
                       setSubCategory('UFOs - Sightings');
@@ -9555,6 +9982,7 @@ function App() {
                             <option value="illuminati-bloodlines">13 Illuminati Bloodlines</option>
                             <option value="black-nobility">13 Black Nobility Families</option>
                             <option value="secret-gov-programs">Secret Government Programs</option>
+                            <option value="nasa-space">NASA / Space</option>
                             <option value="ancient-civilizations">Ancient People Groups</option>
                             <option value="alchemy-occult">The Occult</option>
                           </select>
@@ -11206,91 +11634,141 @@ function App() {
                                 boxShadow: isMapDarkMode ? 'none' : '0 2px 8px rgba(0,0,0,0.05)'
                               }}
                             >
-                              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-                                <div>
-                                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
-                                    <h5 style={{ margin: 0, fontSize: '13px', fontWeight: 'bold', color: theme.text }}>
-                                      {report.pointName}
-                                    </h5>
-                                    <span style={{ fontSize: '8px', padding: '2px 6px', background: layerColors[report.pointCategory] || '#e5e5e5', color: '#000', borderRadius: '4px', textTransform: 'none', fontFamily: '"Space Mono", monospace', fontWeight: 'bold' }}>
-                                      {report.pointCategory}
-                                    </span>
-                                    <span style={{ 
-                                      fontSize: '8px', 
-                                      padding: '2px 6px', 
-                                      background: report.status === 'resolved' ? 'rgba(0, 204, 0, 0.15)' : 'rgba(239, 68, 68, 0.15)', 
-                                      color: report.status === 'resolved' ? '#00cc00' : '#ef4444', 
-                                      border: `1px solid ${report.status === 'resolved' ? '#00cc00' : '#ef4444'}`,
-                                      borderRadius: '4px', 
-                                      textTransform: 'none', 
-                                      fontFamily: '"Space Mono", monospace', 
-                                      fontWeight: 'bold' 
-                                    }}>
-                                      {report.status}
+                              {editingReportId === report.id ? (
+                                renderReportEditForm(report)
+                              ) : (
+                                <>
+                                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                                    <div>
+                                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
+                                        <h5 style={{ margin: 0, fontSize: '13px', fontWeight: 'bold', color: theme.text }}>
+                                          {report.pointName}
+                                        </h5>
+                                        <span style={{ fontSize: '8px', padding: '2px 6px', background: layerColors[report.pointCategory] || '#e5e5e5', color: '#000', borderRadius: '4px', textTransform: 'none', fontFamily: '"Space Mono", monospace', fontWeight: 'bold' }}>
+                                          {report.pointCategory}
+                                        </span>
+                                        <span style={{ 
+                                          fontSize: '8px', 
+                                          padding: '2px 6px', 
+                                          background: report.status === 'resolved' ? 'rgba(0, 204, 0, 0.15)' : 'rgba(239, 68, 68, 0.15)', 
+                                          color: report.status === 'resolved' ? '#00cc00' : '#ef4444', 
+                                          border: `1px solid ${report.status === 'resolved' ? '#00cc00' : '#ef4444'}`,
+                                          borderRadius: '4px', 
+                                          textTransform: 'none', 
+                                          fontFamily: '"Space Mono", monospace', 
+                                          fontWeight: 'bold' 
+                                        }}>
+                                          {report.status}
+                                        </span>
+                                      </div>
+                                      <div style={{ fontSize: '9px', color: theme.textDim, fontFamily: '"Space Mono", monospace' }}>
+                                        TARGET ID: {report.pointId} | REPORT ID: {report.id}
+                                      </div>
+                                    </div>
+                                    <span style={{ fontSize: '10px', color: theme.textDim, whiteSpace: 'nowrap' }}>
+                                      {report.createdAt ? new Date(report.createdAt).toLocaleDateString() : 'N/A'}
                                     </span>
                                   </div>
-                                  <div style={{ fontSize: '9px', color: theme.textDim, fontFamily: '"Space Mono", monospace' }}>
-                                    TARGET ID: {report.pointId} | REPORT ID: {report.id}
+
+                                  <div style={{ padding: '10px', background: isMapDarkMode ? 'rgba(0,0,0,0.2)' : 'rgba(0,0,0,0.02)', borderLeft: `3px solid ${isMapDarkMode ? '#ef4444' : '#b91c1c'}`, fontSize: '11px', lineHeight: '16px', color: theme.text }}>
+                                    <div style={{ fontWeight: 'bold', fontSize: '10px', textTransform: 'uppercase', color: isMapDarkMode ? '#ef4444' : '#b91c1c', marginBottom: '4px' }}>
+                                      REASON: {report.reason}
+                                    </div>
+                                    {report.details || <em style={{ color: theme.textDim }}>No supporting details provided.</em>}
                                   </div>
-                                </div>
-                                <span style={{ fontSize: '10px', color: theme.textDim, whiteSpace: 'nowrap' }}>
-                                  {report.createdAt ? new Date(report.createdAt).toLocaleDateString() : 'N/A'}
-                                </span>
-                              </div>
 
-                              <div style={{ padding: '10px', background: isMapDarkMode ? 'rgba(0,0,0,0.2)' : 'rgba(0,0,0,0.02)', borderLeft: `3px solid ${isMapDarkMode ? '#ef4444' : '#b91c1c'}`, fontSize: '11px', lineHeight: '16px', color: theme.text }}>
-                                <div style={{ fontWeight: 'bold', fontSize: '10px', textTransform: 'uppercase', color: isMapDarkMode ? '#ef4444' : '#b91c1c', marginBottom: '4px' }}>
-                                  REASON: {report.reason}
-                                </div>
-                                {report.details || <em style={{ color: theme.textDim }}>No supporting details provided.</em>}
-                              </div>
+                                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderTop: `1px solid ${theme.borderLight}`, paddingTop: '12px' }}>
+                                    <div style={{ display: 'flex', gap: '8px' }}>
+                                      {(() => {
+                                        const mapRecord = combinedPointsAndLinesData.find(item => String(item.id) === String(report.pointId));
+                                        if (!mapRecord || !mapRecord.coordinates) return null;
+                                        return (
+                                          <button
+                                            onClick={() => {
+                                              if (mapRef.current) {
+                                                setSelectedFeature(mapRecord);
+                                                mapRef.current.flyTo({ center: mapRecord.coordinates, zoom: 14 });
+                                                setIsModMinimized(true);
+                                              }
+                                            }}
+                                            style={{
+                                              background: 'transparent',
+                                              color: theme.text,
+                                              border: `1px solid ${theme.border}`,
+                                              borderRadius: '16px',
+                                              padding: '0 16px',
+                                              height: '32px',
+                                              fontSize: '9px',
+                                              fontFamily: '"Space Mono", monospace',
+                                              fontWeight: 700,
+                                              cursor: 'pointer',
+                                              display: 'flex',
+                                              alignItems: 'center',
+                                              gap: '6px',
+                                              boxSizing: 'border-box'
+                                            }}
+                                          >
+                                            <Eye size={12} />
+                                            PREVIEW
+                                          </button>
+                                        );
+                                      })()}
 
-                              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderTop: `1px solid ${theme.borderLight}`, paddingTop: '12px' }}>
-                                <div style={{ display: 'flex', gap: '8px' }}>
-                                  {(() => {
-                                    const mapRecord = combinedPointsAndLinesData.find(item => String(item.id) === String(report.pointId));
-                                    if (!mapRecord || !mapRecord.coordinates) return null;
-                                    return (
+                                      {report.status === 'pending' && (
+                                        <button
+                                          onClick={() => {
+                                            const mapRecord = combinedPointsAndLinesData.find(item => String(item.id) === String(report.pointId));
+                                            const codexRecord = combinedCodexNodes.find(item => String(item.id) === String(report.pointId));
+                                            
+                                            setEditName(mapRecord?.name || codexRecord?.name || report.pointName || '');
+                                            setEditDescription(mapRecord?.description || codexRecord?.description || '');
+                                            setEditCategory(mapRecord?.category || report.pointCategory || '');
+                                            setEditSource(mapRecord?.source || (codexRecord?.sources && codexRecord.sources[0]) || '');
+                                            
+                                            if (mapRecord?.coordinates && Array.isArray(mapRecord.coordinates) && mapRecord.coordinates.length === 2) {
+                                              setEditLongitude(String(mapRecord.coordinates[0]));
+                                              setEditLatitude(String(mapRecord.coordinates[1]));
+                                            } else {
+                                              setEditLongitude('');
+                                              setEditLatitude('');
+                                            }
+                                            
+                                            setEditCodexParentId(codexRecord?.parentId || '');
+                                            setEditTimelineId(codexRecord?.timelineId || '');
+                                            setEditMapFeatureId(codexRecord?.mapFeatureId || '');
+                                            
+                                            setEditingReportId(report.id);
+                                          }}
+                                          style={{
+                                            background: 'transparent',
+                                            color: theme.text,
+                                            border: `1px solid ${theme.border}`,
+                                            borderRadius: '16px',
+                                            padding: '0 16px',
+                                            height: '32px',
+                                            fontSize: '9px',
+                                            fontFamily: '"Space Mono", monospace',
+                                            fontWeight: 700,
+                                            cursor: 'pointer',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            gap: '6px',
+                                            boxSizing: 'border-box'
+                                          }}
+                                        >
+                                          EDIT
+                                        </button>
+                                      )}
+                                    </div>
+
+                                    <div style={{ display: 'flex', gap: '8px' }}>
                                       <button
-                                        onClick={() => {
-                                          if (mapRef.current) {
-                                            setSelectedFeature(mapRecord);
-                                            mapRef.current.flyTo({ center: mapRecord.coordinates, zoom: 14 });
-                                            setIsModMinimized(true);
-                                          }
+                                        disabled={submittingReportActionId !== null}
+                                        onClick={async () => {
+                                          const confirmed = window.confirm("Are you sure you want to permanently delete this report?");
+                                          if (!confirmed) return;
+                                          await handleReportAction(report.id, 'delete');
                                         }}
-                                        style={{
-                                          background: 'transparent',
-                                          color: theme.text,
-                                          border: `1px solid ${theme.border}`,
-                                          borderRadius: '16px',
-                                          padding: '0 16px',
-                                          height: '32px',
-                                          fontSize: '9px',
-                                          fontFamily: '"Space Mono", monospace',
-                                          fontWeight: 700,
-                                          cursor: 'pointer',
-                                          display: 'flex',
-                                          alignItems: 'center',
-                                          gap: '6px',
-                                          boxSizing: 'border-box'
-                                        }}
-                                      >
-                                        <Eye size={12} />
-                                        PREVIEW
-                                      </button>
-                                    );
-                                  })()}
-                                </div>
-
-                                <div style={{ display: 'flex', gap: '8px' }}>
-                                  <button
-                                    disabled={submittingReportActionId !== null}
-                                    onClick={async () => {
-                                      const confirmed = window.confirm("Are you sure you want to permanently delete this report?");
-                                      if (!confirmed) return;
-                                      await handleReportAction(report.id, 'delete');
-                                    }}
                                   style={{
                                     background: 'transparent',
                                     color: isMapDarkMode ? '#ff3333' : '#d32f2f',
@@ -11339,8 +11817,10 @@ function App() {
                                 )}
                               </div>
                             </div>
-                          </div>
-                          ))}
+                          </>
+                        )}
+                      </div>
+                    ))}
                         </div>
                       )}
                     </div>

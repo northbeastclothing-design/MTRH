@@ -802,6 +802,55 @@ ${modLink}
     }
   });
 
+  app.get("/api/overrides", async (req, res) => {
+    try {
+      const list = await safeGetCollection('overrides');
+      const overridesMap: Record<string, any> = {};
+      list.forEach(item => {
+        overridesMap[item.id] = item;
+      });
+      res.json({ success: true, overrides: overridesMap });
+    } catch (err: any) {
+      console.error("Server-side overrides fetch failed:", err);
+      res.status(500).json({ error: err.message || "Failed to fetch overrides on server" });
+    }
+  });
+
+  app.post("/api/moderate/save-override", async (req, res) => {
+    try {
+      const { overrideId, updatedData } = req.body;
+      const isAuthorized = await verifyAdminAccess(req);
+      if (!isAuthorized) {
+        return res.status(403).json({ error: "BYPASS CODE DENIED OR UNAUTHORIZED SESSION." });
+      }
+      if (!overrideId) {
+        return res.status(400).json({ error: "Missing override ID." });
+      }
+      if (!updatedData) {
+        return res.status(400).json({ error: "Missing updated data." });
+      }
+
+      if (!dbAdmin) {
+        const mockDb = getLocalMockFile('overrides');
+        const idx = mockDb.findIndex(item => item.id === overrideId);
+        if (idx !== -1) {
+          mockDb[idx] = { id: overrideId, ...updatedData };
+        } else {
+          mockDb.push({ id: overrideId, ...updatedData });
+        }
+        saveLocalMockFile('overrides', mockDb);
+      } else {
+        await dbAdmin.collection('overrides').doc(overrideId).set(updatedData);
+      }
+
+      console.log(`Overrides Server-Bypass: Saved override for ${overrideId}`);
+      res.json({ success: true });
+    } catch (err: any) {
+      console.error("Server-side save override failed:", err);
+      res.status(500).json({ error: err.message || "Failed to save override on server" });
+    }
+  });
+
   // Image Proxy Route to bypass hotlinking and CORS
   app.get("/api/proxy-resource", async (req, res) => {
     const url = req.query.url as string;
