@@ -815,6 +815,19 @@ const chunk_0: any[] = [  {
     description: 'Legendary pre-flood and post-flood Mesopotamian rulers claiming immensely long reigns, bridging Sumerian mythology with historical dynastic records.',
     isApocryphal: true
   },  {
+    id: 'myth-pan',
+    parentId: 'greek-pantheon',
+    name: 'Pan',
+    description: 'The ancient Greek god of the wild, shepherds, rustic music, and nature elementals, depicted as a satyr with the horns, legs, and cloven hooves of a goat. In alternative and biblical research, Pan is connected to the Hebrew term "Se\'irim" (goat-demons or satyrs) referenced in Leviticus 17:7 and Isaiah 13:21/34:14. Pan\'s cave at Caesarea Philippi—referred to as the "Gates of Hades"—is the direct geographical setting where Jesus declared that the gates of hell would not overcome His church (Matthew 16:18). In later Western occultism, Pan\'s goat-like physiology heavily influenced the visual depiction of Baphomet and the Devil.',
+    relatedIds: ['lucifer', 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-23', 'fae-nymphs', 'fae-pooka'],
+    sources: ['Hesiod\'s Theogony', 'Matthew 16:13-20', 'Leviticus 17:7', 'Isaiah 13:21'],
+    isApocryphal: true,
+    bibleVerses: [
+      'They must no longer offer any of their sacrifices to the goat-demons (se\'irim) after whom they prostitute themselves. — Leviticus 17:7 (https://www.biblegateway.com/passage/?search=Leviticus+17%3A7)',
+      'But wild beasts of the desert will lie there... and satyrs (goat-demons) will dance there. — Isaiah 13:21 (https://www.biblegateway.com/passage/?search=Isaiah+13%3A21)',
+      'And I tell you that you are Peter, and on this rock I will build my church, and the gates of Hades will not overcome it. — Matthew 16:18 (https://www.biblegateway.com/passage/?search=Matthew+16%3A18)'
+    ]
+  },  {
     id: 'achelous',
     parentId: 'greek-pantheon',
     name: 'Achelous',
