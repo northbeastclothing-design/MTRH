@@ -2770,8 +2770,26 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     description: 'God wipes away all tears. The holy city, New Jerusalem, descends out of heaven from God as a bride adorned for her husband, establishing eternity.',
     source: 'Revelation 21-22'
   },
-  {
-    id: 'operation-paperclip',
+    {
+      id: 'ahnenerbe-founded',
+      name: 'SS Ahnenerbe Established',
+      type: 'event',
+      layer: 'secret-gov-programs',
+      start: 1935,
+      description: 'Heinrich Himmler establishes the SS Ahnenerbe research institute to conduct archaeological, historical, and esoteric expeditions investigating Aryan ancestral heritage and occult artifacts.',
+      source: 'Nuremberg Trial Records'
+    },
+    {
+      id: 'die-glocke-development',
+      name: 'Die Glocke (The Bell) Development',
+      type: 'event',
+      layer: 'secret-gov-programs',
+      start: 1944,
+      description: 'The alleged development of the top-secret Nazi anti-gravity and quantum physics device Die Glocke (The Bell) near the Wenceslaus mine on the Polish border.',
+      source: 'SS Trial Records'
+    },
+    {
+      id: 'operation-paperclip',
     name: 'Operation Paperclip',
     type: 'lifespan',
     layer: 'secret-gov-programs',
@@ -2809,8 +2827,17 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     description: 'A clandestine CIA mind control and chemical interrogation program utilizing drugs, sensory deprivation, and hypnosis on unwitting subjects.',
     source: 'CIA Declassified Archives'
   },
-  {
-    id: 'operation-northwoods',
+    {
+      id: 'deep-freeze-expedition',
+      name: 'Project Deep Freeze Starts',
+      type: 'event',
+      layer: 'secret-gov-programs',
+      start: 1955,
+      description: 'The U.S. Navy launches Project Deep Freeze, establishing permanent military-supported scientific bases in Antarctica under Admiral Richard E. Byrd.',
+      source: 'U.S. Navy Antarctic Journals'
+    },
+    {
+      id: 'operation-northwoods',
     name: 'Operation Northwoods',
     type: 'event',
     layer: 'secret-gov-programs',
@@ -2828,8 +2855,17 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     description: 'A conspiracy theory alleging a series of secret United States government projects at Camp Hero, Montauk, Long Island, focused on exotic physics, time travel, and mind control.',
     source: 'Camp Hero Logs'
   },
-  {
-    id: 'project-stargate',
+    {
+      id: 'project-pegasus-event',
+      name: 'Project Pegasus (Time Travel Research)',
+      type: 'event',
+      layer: 'secret-gov-programs',
+      start: 1968,
+      description: 'DARPA and the CIA allegedly launch Project Pegasus, researching child-based teleportation and time travel using Nikola Tesla\'s physical files.',
+      source: 'Whistleblower Testimony'
+    },
+    {
+      id: 'project-stargate',
     name: 'Project Stargate',
     type: 'lifespan',
     layer: 'secret-gov-programs',
@@ -3934,6 +3970,10 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'operation-fishbowl': { lng: -169.5292, lat: 16.7375, locationName: 'Johnston Atoll, Pacific Ocean', category: 'Secret Government Programs' },
   'gateway-process': { lng: -78.5085, lat: 38.0293, locationName: 'The Monroe Institute (Faber, Virginia)', category: 'Secret Government Programs' },
   'kandahar-giant-event': { lng: 65.7372, lat: 31.6289, locationName: 'Kandahar Cave (Kandahar, Afghanistan)', category: 'Secret Government Programs' },
+  'ahnenerbe-founded': { lng: 13.4050, lat: 52.5200, locationName: 'Ahnenerbe Headquarters (Berlin, Germany)', category: 'Secret Government Programs' },
+  'die-glocke-development': { lng: 16.5011, lat: 50.6278, locationName: 'Wenceslaus Mine (Ludwikowice Kłodzkie, Poland)', category: 'Secret Government Programs' },
+  'deep-freeze-expedition': { lng: 0.0, lat: -90.0, locationName: 'Amundsen-Scott South Pole Station (Antarctica)', category: 'Secret Government Programs' },
+  'project-pegasus-event': { lng: -122.3321, lat: 47.6062, locationName: 'Seattle Portal Station (Seattle, Washington)', category: 'Secret Government Programs' },
   'pythagoras-lifespan': { lng: 17.1292, lat: 39.0814, locationName: 'Pythagoras School (Crotone, Italy)', category: 'The Occult' },
   'socrates-lifespan': { lng: 23.7275, lat: 37.9838, locationName: 'Athens, Greece', category: 'The Occult' },
   'plato-lifespan': { lng: 23.7144, lat: 37.9942, locationName: 'Plato\'s Academy (Athens, Greece)', category: 'The Occult' },

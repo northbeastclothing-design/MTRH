@@ -20834,6 +20834,14 @@ const chunk_5: any[] = [  {
 
 
 const chunk_6: any[] = [
+  {
+    id: 'nikola-tesla',
+    parentId: 'alchemy-occult',
+    name: 'Nikola Tesla',
+    description: 'Serbian-American inventor, electrical engineer, and futurist who pioneered alternating current (AC) power systems. Esoteric and alternative history circles focus heavily on his unreleased work, including his claims of developing a wireless power transmission system (Wardenclyffe Tower), a death ray (teleforce), and his study of non-physical energy forces, resonance, and the primary ether—leading to conspiracy theories that his classified papers were seized by the FBI after his death in 1943.',
+    relatedIds: ['philadelphia-experiment', 'project-pegasus-time'],
+    sources: ['FBI Declassified Tesla Files', 'Tesla Museum Archives']
+  },
 
   // ── WITCHCRAFT & FOLK MAGIC ───────────────────────────────────────────────
   {
@@ -22120,6 +22128,49 @@ export const TERM_TREE_DATA: TermNode[] = [
     timelineId: 'majestic-12',
     relatedIds: ['roscoe-hillenkoetter', 'stanton-friedman', 'philip-corso', 'richard-dolan', 'timothy-good'],
     sources: ['FBI Vault (Conspiratorial Document Leak Archives)', 'Investigative Research Manuscripts']
+  },  {
+    id: 'project-deep-freeze',
+    parentId: 'secret-government-programs',
+    name: 'Project Deep Freeze',
+    description: 'A series of U.S. military expeditions to Antarctica starting in 1955 under the leadership of Admiral Richard E. Byrd. While officially established for scientific research and to secure geological data, alternative researchers argue the operations were part of a highly militarized cover-up. Conspiratorial theories suggest the expeditions were designed to locate hidden openings to the Hollow Earth, search for ancient ruins beneath the ice sheet, and investigate rumors of secret Nazi bases in New Swabia (Neuschwabenland).',
+    layer: 'Secret Government Programs',
+    timelineId: 'deep-freeze-expedition',
+    relatedIds: ['secret-government-programs', 'operation-highjump', 'admiral-byrd', 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-25'],
+    sources: ['U.S. Navy Declassified Records', 'Antarctic Expedition Journals']
+  },  {
+    id: 'die-glocke',
+    parentId: 'secret-government-programs',
+    name: 'Die Glocke (The Bell)',
+    description: 'A rumored top-secret Nazi scientific project or Wunderwaffe (wonder weapon) developed during the final stages of World War II near the Wenceslaus mine on the Polish border. Described as a metallic bell-shaped device housing spinning counter-rotating cylinders of a mysterious violet liquid codenamed "Xerum-525," Die Glocke was reportedly linked to anti-gravity propulsion, extreme radiation, and time-space dilation experiments. Its development was spearheaded by SS General Jakob Sporrenberg and remains one of the most famous legends of Nazi occult physics.',
+    layer: 'Secret Government Programs',
+    timelineId: 'die-glocke-development',
+    relatedIds: ['secret-government-programs', 'operation-paperclip', 'ss-ahnenerbe', 'heinrich-himmler'],
+    sources: ['Nick Cook\'s The Hunt for Zero Point', 'SS Trial Documents']
+  },  {
+    id: 'ss-ahnenerbe',
+    parentId: 'secret-government-programs',
+    name: 'SS Ahnenerbe',
+    description: 'The Ancestral Heritage (Ahnenerbe) research institute established in 1935 by Reichsführer-SS Heinrich Himmler to investigate the history, archaeology, and occult sciences of the Aryan race. The Ahnenerbe funded scientific expeditions to Tibet (led by Ernst Schäfer), Antarctica, Sweden, and Iraq to locate ancient esoteric knowledge, search for runic power, and retrieve religious relics like the Holy Grail and the Spear of Destiny to empower the SS.',
+    layer: 'Secret Government Programs',
+    timelineId: 'ahnenerbe-founded',
+    relatedIds: ['secret-government-programs', 'heinrich-himmler', 'vril-society'],
+    sources: ['Ahnenerbe SS Research Files', 'Nuremberg Trial Records']
+  },  {
+    id: 'heinrich-himmler',
+    parentId: 'ss-ahnenerbe',
+    name: 'Heinrich Himmler',
+    description: 'Reichsführer of the Schutzstaffel (SS) and one of the most powerful men in Nazi Germany. Himmler was deeply devoted to occultism, Nordic paganism, and esoteric mysticism. He established Wewelsburg Castle as the occult headquarters of the SS, founded the Ahnenerbe to search for Aryan origins and sacred relics, and integrated astrological and runic symbols into the SS apparatus.',
+    relatedIds: ['ss-ahnenerbe', 'vril-society', 'die-glocke'],
+    sources: ['Historical SS Biographies', 'Nuremberg Trial Records']
+  },  {
+    id: 'project-pegasus-time',
+    parentId: 'secret-government-programs',
+    name: 'Project Pegasus (Time Travel)',
+    description: 'A rumored secret defense program allegedly conducted by DARPA and the CIA in the late 1960s and early 1970s. According to whistleblower claims (specifically from Andrew Basiago), Project Pegasus successfully developed teleportation and time-travel technologies using Nikola Tesla\'s physical papers. The project reportedly used young children to test holographic time portals, sending them to historical events and future eras, and remains a major component of modern time-travel conspiracy lore.',
+    layer: 'Secret Government Programs',
+    timelineId: 'project-pegasus-event',
+    relatedIds: ['secret-government-programs', 'nikola-tesla', 'montauk-project'],
+    sources: ['Conspiracy Research Databases', 'Whistleblower Testimonies']
   },  {
     id: 'operation-northwoods',
     parentId: 'secret-government-programs',

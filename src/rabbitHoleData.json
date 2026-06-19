@@ -29822,5 +29822,33 @@
     "description": "AFGHANISTAN— According to widespread military rumors and alternative research reports, in 2002 a U.S. Army squad went missing in a remote mountainous region of Kandahar. A rescue squad tracked their footprints to a massive cave littered with abandoned military gear. Inside, they encountered a 13-foot-tall, red-haired giant with six fingers and toes who killed a soldier with a spear before the squad killed the giant with concentrated gunfire. The giant's body was allegedly airlifted away in a military cargo helicopter and classified under strict NDA secrecy.",
     "source": "Military Oral History / Alternative Media Records",
     "images": []
+  },
+  {
+    "id": "anomaly-Secret-Government-Programs-Die-Glocke",
+    "name": "Die Glocke (Wenceslaus Mine) - Ludwikowice Kłodzkie, Poland",
+    "category": "Secret Government Programs",
+    "type": "Point",
+    "coordinates": {
+      "lng": 16.5011,
+      "lat": 50.6278
+    },
+    "date": 1944,
+    "description": "The alleged development site of Die Glocke (The Bell), a rumored top-secret Nazi Wunderwaffe (wonder weapon). Built inside a concrete military structure near the Wenceslaus mine, the device reportedly housed counter-rotating cylinders filled with 'Xerum-525' and was associated with early breakthroughs in anti-gravity, high-energy particle physics, and time dilation.",
+    "source": "Alternative Physics Literature / SS General Sporrenberg Trial Records",
+    "images": []
+  },
+  {
+    "id": "anomaly-Secret-Government-Programs-Deep-Freeze",
+    "name": "Project Deep Freeze - South Pole Station, Antarctica",
+    "category": "Secret Government Programs",
+    "type": "Point",
+    "coordinates": {
+      "lng": 0.0,
+      "lat": -90.0
+    },
+    "date": 1955,
+    "description": "The center of operations for Project Deep Freeze, a series of major U.S. military expeditions to Antarctica starting in 1955. Esoteric and alternative history circles view these highly militarized science programs as cover operations to monitor suspected Hollow Earth access points, locate ancient monuments buried under the ice cap, and investigate the remnants of the rumored WWII Nazi New Swabia (Neuschwabenland) base.",
+    "source": "U.S. Navy Logs / Antarctic Expedition Journals",
+    "images": []
   }
 ]
