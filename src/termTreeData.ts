@@ -21543,7 +21543,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'christianity',
-    parentId: 'esoteric-traditions',
+    parentId: 'biblical-apocryphal',
     name: 'Christianity',
     description: 'Abrahamic religion based on the life, death, resurrection, and teachings of Jesus of Nazareth, recorded in the New Testament. It recognizes Jesus as the incarnate Son of God, the prophesied Messiah (Christ), and the second person of the Holy Trinity who redeemed humanity through his sacrifice on the cross.',
     relatedIds: ['gnosticism', 'judaism', 'islam', 'catholicism', 'mormonism'],
@@ -22247,7 +22247,238 @@ const chunk_new_religion: any[] = [
   }
 ];
 
+const chunk_new_additions: any[] = [
+  // --- GNOSTIC ADDITIONS ---
+  {
+    id: 'pleroma',
+    parentId: 'gnosticism',
+    name: 'Pleroma',
+    description: "The divine totality or 'fullness' of light in Gnostic cosmology, representing the supreme spiritual realm inhabited by the Aeons, entirely separate from the flawed material universe.",
+    relatedIds: ['gnosticism', 'yaldabaoth', 'sophia-gnostic', 'demiurge'],
+    sources: ['Nag Hammadi Library', 'Apocryphon of John']
+  },
+  {
+    id: 'sophia-gnostic',
+    parentId: 'gnosticism',
+    name: 'Sophia (Gnostic Divine Feminine)',
+    description: "The personification of divine wisdom and the final Aeon of the Pleroma. Her attempt to create without her male consort resulted in her fall and the accidental creation of the material demiurge.",
+    relatedIds: ['gnosticism', 'pleroma', 'yaldabaoth', 'demiurge'],
+    sources: ['Nag Hammadi Library', 'Pistis Sophia']
+  },
+  {
+    id: 'yaldabaoth',
+    parentId: 'gnosticism',
+    name: 'Yaldabaoth',
+    description: "The lion-faced, serpent-bodied demiurge or false creator deity of Gnostic belief systems, born from Sophia's fall, who rules the material realm in ignorance of the supreme spiritual God.",
+    relatedIds: ['gnosticism', 'pleroma', 'sophia-gnostic', 'demiurge'],
+    sources: ['Nag Hammadi Library', 'Apocryphon of John']
+  },
+  {
+    id: 'demiurge',
+    parentId: 'gnosticism',
+    name: 'Demiurge',
+    description: "In Gnosticism, the subordinate, flawed, or malevolent creator deity who fashioned the material world, holding human souls prisoner in matter. He is typically identified in Gnostic texts as Yaldabaoth, Saklas, or Samael.",
+    relatedIds: ['gnosticism', 'yaldabaoth', 'pleroma', 'sophia-gnostic'],
+    sources: ['Nag Hammadi Library', 'Apocryphon of John']
+  },
+
+  // --- OCCULT & ESOTERIC ADDITIONS ---
+  {
+    id: 'the-great-work',
+    parentId: 'esoteric-traditions',
+    name: 'The Great Work (Magnum Opus)',
+    description: "The ultimate spiritual goal in Western alchemy, Hermeticism, and modern esotericism, representing the transmutation of human consciousness, self-realization, and union with the divine.",
+    relatedIds: ['alchemy', 'hermeticism', 'thelema', 'rosicrucianism']
+  },
+  {
+    id: 'left-hand-path',
+    parentId: 'esoteric-traditions',
+    name: 'Left-Hand Path',
+    description: "An esoteric classification focusing on individual will, self-deification, and the transgression of traditional moral boundaries and social taboos to achieve spiritual liberation, contrasting with the submissive Right-Hand Path.",
+    relatedIds: ['thelema', 'antinomianism-esoteric', 'esoteric-traditions']
+  },
+  {
+    id: 'antinomianism-esoteric',
+    parentId: 'esoteric-traditions',
+    name: 'Antinomianism',
+    description: "The theological and esoteric concept that spiritual liberation involves transcending, or intentionally transgressing, conventional moral laws and social taboos.",
+    relatedIds: ['left-hand-path', 'gnosticism']
+  },
+  {
+    id: 'amalantrah-working',
+    parentId: 'thelema',
+    name: 'Amalantrah Working',
+    description: "A series of ceremonial magic rituals conducted by Aleister Crowley in New York City in 1918, claiming to open a spiritual portal and establish contact with a non-human entity named Lam.",
+    timelineId: 'amalantrah-working-event',
+    mapFeatureId: 'amalantrah-working-event',
+    relatedIds: ['thelema', 'aleister-crowley', 'babalon-working'],
+    sources: ['The Equinox (Aleister Crowley)', 'Thelemic History Archives']
+  },
+  {
+    id: 'scientology',
+    parentId: 'esoteric-traditions',
+    secondaryParentIds: ['biblical-apocryphal'],
+    name: 'Scientology',
+    description: "A modern new religious movement and esoteric belief system founded by L. Ron Hubbard, emphasizing the spiritual immortality of the soul (the Thetan) and the recovery of past-life memories.",
+    timelineId: 'scientology-founded-event',
+    mapFeatureId: 'scientology-founded-event',
+    relatedIds: ['l-ron-hubbard', 'jack-parsons', 'ordo-templi-orientis'],
+    sources: ['Dianetics (L. Ron Hubbard)', 'Academic Studies of New Religions']
+  },
+  {
+    id: 'l-ron-hubbard',
+    parentId: 'historical-alchemists',
+    secondaryParentIds: ['scientology'],
+    name: 'L. Ron Hubbard',
+    description: "American writer, founder of Scientology, and former affiliate of the Ordo Templi Orientis who participated in the Babalon Working rituals with Jack Parsons.",
+    timelineId: 'l-ron-hubbard-lifespan',
+    mapFeatureId: 'l-ron-hubbard-lifespan',
+    relatedIds: ['scientology', 'jack-parsons', 'babalon-working', 'aleister-crowley'],
+    sources: ['Dianetics (L. Ron Hubbard)', 'Occult Biographies']
+  },
+  {
+    id: 'kenneth-grant',
+    parentId: 'historical-alchemists',
+    name: 'Kenneth Grant',
+    description: "English occultist, writer, and head of the Typhonian Order, who synthesized Crowley's Thelema with cosmic horror, extraterrestrial themes, and the works of H.P. Lovecraft.",
+    timelineId: 'kenneth-grant-lifespan',
+    mapFeatureId: 'kenneth-grant-lifespan',
+    relatedIds: ['historical-alchemists', 'thelema', 'aleister-crowley', 'hp-lovecraft'],
+    sources: ['The Typhonian Trilogies (Kenneth Grant)', 'Occult Biographies']
+  },
+  {
+    id: 'hp-lovecraft',
+    parentId: 'historical-alchemists',
+    name: 'H.P. Lovecraft',
+    description: "American author of weird fiction and cosmic horror, whose Cthulhu Mythos and depictions of ancient extraterrestrial entities heavily influenced modern chaos magic and Typhonian esotericism.",
+    timelineId: 'hp-lovecraft-lifespan',
+    mapFeatureId: 'hp-lovecraft-lifespan',
+    relatedIds: ['historical-alchemists', 'kenneth-grant', 'peter-levenda'],
+    sources: ['The Call of Cthulhu', 'At the Mountains of Madness']
+  },
+  {
+    id: 'peter-levenda',
+    parentId: 'historical-alchemists',
+    name: 'Peter Levenda',
+    description: "American author and researcher of esoteric history, specialized in the intersections of occultism, political conspiracies, intelligence networks, and modern mythology.",
+    timelineId: 'peter-levenda-lifespan',
+    mapFeatureId: 'peter-levenda-lifespan',
+    relatedIds: ['historical-alchemists', 'hp-lovecraft', 'kenneth-grant'],
+    sources: ['Unholy Alliance', 'Sinister Forces (Peter Levenda)']
+  },
+
+  // --- ROBIN HOOD LEGENDS ---
+  {
+    id: 'robin-hood-legends',
+    parentId: 'myths-legends-root',
+    name: 'Robin Hood Legends',
+    description: "The medieval English folklore cycle of Sherwood Forest, detailing the exploits of the heroic outlaw and his band of Merry Men.",
+    timelineId: 'robin-hood-legends-era',
+    mapFeatureId: 'robin-hood-legends-era',
+    relatedIds: ['myths-legends-root', 'robin-hood-char', 'sherwood-forest-lore'],
+    sources: ['A Gest of Robyn Hode', 'Medieval English Ballads'],
+    isApocryphal: true
+  },
+  {
+    id: 'robin-hood-char',
+    parentId: 'robin-hood-legends',
+    name: 'Robin Hood',
+    description: "The legendary heroic outlaw of English folklore, depicted as a highly skilled archer and swordsman who 'steals from the rich and gives to the poor.'",
+    relatedIds: ['robin-hood-legends', 'maid-marian-char', 'merry-men-group'],
+    sources: ['Medieval English Ballads', 'English Folklore Records'],
+    isApocryphal: true
+  },
+  {
+    id: 'maid-marian-char',
+    parentId: 'robin-hood-legends',
+    name: 'Maid Marian',
+    description: "Robin Hood's love interest and companion, who evolved from a figure in May Day games into a strong, independent noblewoman who aids the outlaws.",
+    relatedIds: ['robin-hood-legends', 'robin-hood-char', 'merry-men-group'],
+    sources: ['English Folklore Records', 'May Day Festivity Chronicles'],
+    isApocryphal: true
+  },
+  {
+    id: 'merry-men-group',
+    parentId: 'robin-hood-legends',
+    name: 'Little John & The Merry Men',
+    description: "Robin Hood's band of outlaws residing in Sherwood Forest—including his second-in-command Little John, the jovial Friar Tuck, and the young Will Scarlet—who resist the tyranny of the Sheriff of Nottingham.",
+    relatedIds: ['robin-hood-legends', 'robin-hood-char', 'maid-marian-char'],
+    sources: ['Medieval English Ballads', 'English Folklore Records'],
+    isApocryphal: true
+  },
+  {
+    id: 'sherwood-forest-lore',
+    parentId: 'robin-hood-legends',
+    name: 'Sherwood Forest',
+    description: "The ancient royal forest in Nottinghamshire, England, which serves as the legendary sanctuary and base of operations for Robin Hood and his Merry Men.",
+    relatedIds: ['robin-hood-legends', 'robin-hood-char'],
+    sources: ['Nottinghamshire Historical Records', 'English Folklore Records'],
+    isApocryphal: true
+  },
+
+  // --- ARTHURIAN LEGENDS ---
+  {
+    id: 'arthurian-legend',
+    parentId: 'myths-legends-root',
+    name: 'King Arthur & Merlin Legends',
+    description: "The legendary cycle of British history and medieval romance centered on Camelot, the round table, and the mystical prophecies of the wizard Merlin.",
+    timelineId: 'arthurian-legend-era',
+    mapFeatureId: 'arthurian-legend-era',
+    relatedIds: ['myths-legends-root', 'king-arthur-char', 'merlin-wizard-char', 'tomb-king-arthur'],
+    sources: ['Historia Regum Britanniae (Geoffrey of Monmouth)', 'Le Morte d\'Arthur (Thomas Malory)'],
+    isApocryphal: true
+  },
+  {
+    id: 'king-arthur-char',
+    parentId: 'arthurian-legend',
+    name: 'King Arthur',
+    description: "The legendary British sovereign who pulled the sword from the stone, established the fellowship of the Round Table at Camelot, and defended Britain against Saxon invaders.",
+    relatedIds: ['arthurian-legend', 'merlin-wizard-char', 'excalibur-lore', 'round-table-knights', 'tomb-king-arthur'],
+    sources: ['Geoffrey of Monmouth Writings', 'Le Morte d\'Arthur'],
+    isApocryphal: true
+  },
+  {
+    id: 'merlin-wizard-char',
+    parentId: 'arthurian-legend',
+    name: 'Merlin the Wizard',
+    description: "The legendary wizard, prophet, and advisor who engineered Arthur's birth, constructed the Round Table, and guided the kingdom of Camelot before his mystical imprisonment.",
+    relatedIds: ['arthurian-legend', 'king-arthur-char', 'excalibur-lore'],
+    sources: ['Prophecies of Merlin', 'Vita Merlini (Geoffrey of Monmouth)'],
+    isApocryphal: true
+  },
+  {
+    id: 'excalibur-lore',
+    parentId: 'arthurian-legend',
+    name: 'Excalibur & The Lady of the Lake',
+    description: "The magical sword of sovereignty given to Arthur by the mystical Lady of the Lake, possessing healing scabbard properties and returned to the waters upon his death.",
+    relatedIds: ['arthurian-legend', 'king-arthur-char', 'merlin-wizard-char'],
+    sources: ['French Vulgate Cycle', 'Le Morte d\'Arthur'],
+    isApocryphal: true
+  },
+  {
+    id: 'round-table-knights',
+    parentId: 'arthurian-legend',
+    name: 'Knights of the Round Table & The Holy Grail',
+    description: "The chivalric fellowship of Camelot's greatest knights who sat at a table designed to prevent squabbles over precedence, embarking on the sacred quest for the Holy Grail.",
+    relatedIds: ['arthurian-legend', 'king-arthur-char'],
+    sources: ['Le Morte d\'Arthur', 'Chrétien de Troyes Romances'],
+    isApocryphal: true
+  },
+  {
+    id: 'tomb-king-arthur',
+    parentId: 'arthurian-legend',
+    name: 'Tomb of King Arthur (Glastonbury)',
+    description: "The legendary burial site of King Arthur and Queen Guinevere. In 1191, monks at Glastonbury Abbey claimed to have excavated an oak coffin containing giant bones and a lead cross reading 'Here lies buried the renowned King Arthur in the island of Avalon.' The tomb was relocated to a black marble monument before the high altar, which was lost following the Dissolution of the Monasteries in 1539.",
+    timelineId: 'tomb-king-arthur-discovered',
+    mapFeatureId: 'tomb-king-arthur-discovered',
+    relatedIds: ['arthurian-legend', 'king-arthur-char'],
+    sources: ['Glastonbury Abbey Chronicles', 'Gerald of Wales Writings'],
+    isApocryphal: true
+  }
+];
+
 export const TERM_TREE_DATA: TermNode[] = [
+  ...chunk_new_additions,
   ...chunk_new_religion,
   ...chunk_0,
   ...chunk_1,

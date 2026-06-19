@@ -3826,6 +3826,92 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
       start: 2022,
       description: 'The uncrewed Artemis I flight test launches from Cape Canaveral, performing a lunar flyby and returning to Earth, marking the official operational debut of the SLS and Orion spacecraft.',
       source: 'NASA Mission Reports'
+    },
+    // --- ESOTERIC/OCCULT TIMELINE ITEMS ---
+    {
+      id: 'amalantrah-working-event',
+      name: 'Amalantrah Working',
+      type: 'event',
+      layer: 'alchemy-occult',
+      start: 1918,
+      description: 'Aleister Crowley performs a series of magical workings in New York City, opening a spiritual portal and drawing the likeness of an extraterrestrial-like intelligence named Lam.',
+      source: 'The Equinox / Thelemic Records'
+    },
+    {
+      id: 'scientology-founded-event',
+      name: 'Church of Scientology Founded',
+      type: 'event',
+      layer: 'alchemy-occult',
+      start: 1954,
+      description: 'L. Ron Hubbard officially establishes the Church of Scientology in Los Angeles, developing his spiritual technology of Dianetics and the concept of the immortal Thetan.',
+      source: 'Scientology Archives / Religious History Studies'
+    },
+    {
+      id: 'l-ron-hubbard-lifespan',
+      name: 'L. Ron Hubbard',
+      type: 'lifespan',
+      layer: 'alchemy-occult',
+      start: 1911,
+      end: 1986,
+      description: 'American writer, founder of Scientology, and former associate of Jack Parsons with whom he conducted the famous Babalon Working rituals in Pasadena.',
+      source: 'Historical Biographies'
+    },
+    {
+      id: 'kenneth-grant-lifespan',
+      name: 'Kenneth Grant',
+      type: 'lifespan',
+      layer: 'alchemy-occult',
+      start: 1924,
+      end: 2011,
+      description: 'English occultist, disciple of Aleister Crowley, and head of the Typhonian O.T.O. who integrated cosmic horror and Lovecraftian mythos into Western esotericism.',
+      source: 'Typhonian Order Archives'
+    },
+    {
+      id: 'hp-lovecraft-lifespan',
+      name: 'H.P. Lovecraft',
+      type: 'lifespan',
+      layer: 'alchemy-occult',
+      start: 1890,
+      end: 1937,
+      description: 'Influential author of cosmic horror and the Cthulhu Mythos, whose descriptions of ancient alien deities became highly integrated into modern esoteric traditions.',
+      source: 'Historical Biographies'
+    },
+    {
+      id: 'peter-levenda-lifespan',
+      name: 'Peter Levenda',
+      type: 'lifespan',
+      layer: 'alchemy-occult',
+      start: 1950,
+      description: 'American historian and author who documented the connections between occultism, intelligence networks, and historical conspiracies.',
+      source: 'Occult History Literature'
+    },
+    // --- MYTHS & LEGENDS TIMELINE ITEMS ---
+    {
+      id: 'robin-hood-legends-era',
+      name: 'Robin Hood Legends',
+      type: 'event',
+      layer: 'greek-mythology',
+      start: 1200,
+      description: 'The era of the legendary archer and outlaw Robin Hood and his Merry Men in Sherwood Forest, fighting the corruption of the Sheriff of Nottingham.',
+      source: 'Medieval Ballads'
+    },
+    {
+      id: 'arthurian-legend-era',
+      name: 'Reign of King Arthur',
+      type: 'event',
+      layer: 'greek-mythology',
+      start: 500,
+      description: 'The legendary reign of King Arthur at Camelot, established by the prophecies of Merlin and guarded by the Knights of the Round Table.',
+      source: 'Geoffrey of Monmouth'
+    },
+    {
+      id: 'tomb-king-arthur-discovered',
+      name: 'Claimed Discovery of King Arthur\'s Tomb',
+      type: 'event',
+      layer: 'greek-mythology',
+      start: 1191,
+      description: 'Monks at Glastonbury Abbey claim to discover the oak coffin and graves of King Arthur and Queen Guinevere, marked by a lead cross declaring the site as Avalon.',
+      source: 'Glastonbury Abbey Chronicles'
     }
   ];
 
@@ -4058,7 +4144,16 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'project-mercury-start': { lng: -80.6077, lat: 28.5721, locationName: 'Cape Canaveral Space Force Station (FL)', category: 'NASA / Space' },
   'project-gemini-start': { lng: -80.6077, lat: 28.5721, locationName: 'Cape Canaveral Space Force Station (FL)', category: 'NASA / Space' },
   'project-apollo-start': { lng: -80.6077, lat: 28.5721, locationName: 'Kennedy Space Center (Cape Canaveral, FL)', category: 'NASA / Space' },
-  'artemis-program-event': { lng: -80.6041, lat: 28.6272, locationName: 'Launch Complex 39B (Cape Canaveral, FL)', category: 'NASA / Space' }
+  'artemis-program-event': { lng: -80.6041, lat: 28.6272, locationName: 'Launch Complex 39B (Cape Canaveral, FL)', category: 'NASA / Space' },
+  'amalantrah-working-event': { lng: -73.9712, lat: 40.7831, locationName: 'Central Park West (New York City, NY)', category: 'The Occult' },
+  'scientology-founded-event': { lng: -118.2437, lat: 34.0522, locationName: 'Los Angeles, CA', category: 'The Occult' },
+  'l-ron-hubbard-lifespan': { lng: -118.1565, lat: 34.1350, locationName: 'Pasadena Agape Lodge (Pasadena, CA)', category: 'The Occult' },
+  'kenneth-grant-lifespan': { lng: -0.1278, lat: 51.5074, locationName: 'London, England', category: 'The Occult' },
+  'hp-lovecraft-lifespan': { lng: -71.4128, lat: 41.8240, locationName: 'Providence, RI', category: 'The Occult' },
+  'peter-levenda-lifespan': { lng: -73.9712, lat: 40.7831, locationName: 'New York City, NY', category: 'The Occult' },
+  'robin-hood-legends-era': { lng: -1.0772, lat: 53.2045, locationName: 'Sherwood Forest (Nottinghamshire, England)', category: 'Myths / Legends' },
+  'arthurian-legend-era': { lng: -4.7600, lat: 50.6672, locationName: 'Tintagel Castle (Cornwall, England)', category: 'Myths / Legends' },
+  'tomb-king-arthur-discovered': { lng: -2.7161, lat: 51.1462, locationName: 'Glastonbury Abbey (Somerset, England)', category: 'Myths / Legends' }
 };
 
 export interface Waypoint {
