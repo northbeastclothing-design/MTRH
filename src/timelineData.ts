@@ -3603,6 +3603,15 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
       source: 'Declassified CIA Archives'
     },
     {
+      id: 'kandahar-giant-event',
+      name: 'The Kandahar Giant Encounter',
+      type: 'event',
+      layer: 'secret-gov-programs',
+      start: 2002,
+      description: 'A rumored encounter in Kandahar, Afghanistan where a U.S. Army squad reportedly engaged and killed a 13-foot red-haired giant inside a mountain cave. The giant\'s remains were allegedly airlifted away and classified.',
+      source: 'Military Whistleblower Records'
+    },
+    {
       id: 'pythagoras-lifespan',
       name: 'Life of Pythagoras',
       type: 'lifespan',
@@ -3924,6 +3933,7 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'coral-castle-construction': { lng: -80.444305, lat: 25.500556, locationName: 'Coral Castle (Homestead, Florida)', category: 'Megaliths / Structures' },
   'operation-fishbowl': { lng: -169.5292, lat: 16.7375, locationName: 'Johnston Atoll, Pacific Ocean', category: 'Secret Government Programs' },
   'gateway-process': { lng: -78.5085, lat: 38.0293, locationName: 'The Monroe Institute (Faber, Virginia)', category: 'Secret Government Programs' },
+  'kandahar-giant-event': { lng: 65.7372, lat: 31.6289, locationName: 'Kandahar Cave (Kandahar, Afghanistan)', category: 'Secret Government Programs' },
   'pythagoras-lifespan': { lng: 17.1292, lat: 39.0814, locationName: 'Pythagoras School (Crotone, Italy)', category: 'The Occult' },
   'socrates-lifespan': { lng: 23.7275, lat: 37.9838, locationName: 'Athens, Greece', category: 'The Occult' },
   'plato-lifespan': { lng: 23.7144, lat: 37.9942, locationName: 'Plato\'s Academy (Athens, Greece)', category: 'The Occult' },

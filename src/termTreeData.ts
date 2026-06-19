@@ -21760,6 +21760,15 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Qumran Cave 4 Manuscripts', 'Manichaean Fragments'],
     isApocryphal: true
   },  {
+    id: 'kandahar-giant',
+    parentId: 'nephilim-br',
+    name: 'Kandahar Giant',
+    description: 'A legendary 13-foot-tall, red-haired humanoid giant with six fingers and toes reportedly killed by a U.S. Army squad in a remote mountain cave in Kandahar, Afghanistan, in 2002. The incident, first detailed by military whistleblowers, alleges that the giant killed one soldier with a spear before being brought down by concentrated rifle fire. The body was reportedly airlifted away on a military cargo helicopter, and the encounter remains subject to a strict government cover-up, linking it in alternative circles to modern surviving Nephilim remnants.',
+    mapFeatureId: 'anomaly-Giants-Kandahar-Giant',
+    timelineId: 'kandahar-giant-event',
+    relatedIds: ['nephilim-br', 'secret-government-programs'],
+    sources: ['Military Whistleblower Testimony', 'Fringe Research Databases']
+  },  {
     id: 'archons',
     parentId: 'demons',
     name: 'The Archons',

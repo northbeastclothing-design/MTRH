@@ -29808,5 +29808,19 @@
     "description": "Hill Cumorah in Manchester, New York, where Joseph Smith claimed to receive the golden plates from the angel Moroni in 1827. In alternative archaeology and fringe history, Mormon legends of ancient American civilizations are sometimes compared to Mound Builder cultures.",
     "source": "History of the Church / Joseph Smith Testimony",
     "images": []
+  },
+  {
+    "id": "anomaly-Giants-Kandahar-Giant",
+    "name": "The Kandahar Giant",
+    "category": "Giants / Nephilim / Elongated Skulls / Horns",
+    "type": "Point",
+    "coordinates": {
+      "lng": 65.7372,
+      "lat": 31.6289
+    },
+    "date": 2002,
+    "description": "AFGHANISTAN— According to widespread military rumors and alternative research reports, in 2002 a U.S. Army squad went missing in a remote mountainous region of Kandahar. A rescue squad tracked their footprints to a massive cave littered with abandoned military gear. Inside, they encountered a 13-foot-tall, red-haired giant with six fingers and toes who killed a soldier with a spear before the squad killed the giant with concentrated gunfire. The giant's body was allegedly airlifted away in a military cargo helicopter and classified under strict NDA secrecy.",
+    "source": "Military Oral History / Alternative Media Records",
+    "images": []
   }
 ]
