@@ -293,17 +293,40 @@ export default function CodexPage({
     if (!searchQuery.trim()) return [];
     const query = searchQuery.toLowerCase().trim();
     
-    return nodes.filter(node => {
+    const matches = nodes.filter(node => {
       const nameMatch = node.name.toLowerCase().includes(query);
-      const descMatch = node.description.toLowerCase().includes(query);
+      const descMatch = node.description ? node.description.toLowerCase().includes(query) : false;
       const transMatch = node.translations?.some(t =>
-        t.original.toLowerCase().includes(query) ||
-        t.translit.toLowerCase().includes(query) ||
-        t.meaning.toLowerCase().includes(query)
+        (t.original || '').toLowerCase().includes(query) ||
+        (t.translit || '').toLowerCase().includes(query) ||
+        (t.meaning || '').toLowerCase().includes(query)
       );
-      const verseMatch = node.bibleVerses?.some(v => v.toLowerCase().includes(query));
+      const verseMatch = node.bibleVerses?.some(v => (v || '').toLowerCase().includes(query));
 
       return nameMatch || descMatch || transMatch || verseMatch;
+    });
+
+    // Sort by match quality: exact name matches first, then prefix name matches, then substring name matches, then description matches
+    return matches.sort((a, b) => {
+      const aNameLower = a.name.toLowerCase();
+      const bNameLower = b.name.toLowerCase();
+      
+      const aExact = aNameLower === query;
+      const bExact = bNameLower === query;
+      if (aExact && !bExact) return -1;
+      if (!aExact && bExact) return 1;
+
+      const aStartsWith = aNameLower.startsWith(query);
+      const bStartsWith = bNameLower.startsWith(query);
+      if (aStartsWith && !bStartsWith) return -1;
+      if (!aStartsWith && bStartsWith) return 1;
+
+      const aContainsName = aNameLower.includes(query);
+      const bContainsName = bNameLower.includes(query);
+      if (aContainsName && !bContainsName) return -1;
+      if (!aContainsName && bContainsName) return 1;
+
+      return 0;
     }).slice(0, 10);
   }, [searchQuery, nodes]);
 
