@@ -21181,6 +21181,76 @@ const chunk_6: any[] = [
     relatedIds: ['alchemy']
   },
   {
+    id: 'fae-goblins',
+    parentId: 'fae',
+    name: 'Goblins',
+    description: 'Grotesque, mischievous, or malicious class of fae from European folklore, typically associated with subterranean spaces, caves, and dark forests. Often described as hoarding gold and performing chaotic household pranks.',
+    sources: ['British Folk Tales', 'Germanic Kobold Lore']
+  },
+  {
+    id: 'fae-trolls',
+    parentId: 'fae',
+    name: 'Trolls',
+    description: 'Scandinavian mythic beings dwelling in rocks, mountains, or caves. Typically depicted as giant, solitary, and physically powerful creatures, they are famously vulnerable to sunlight, which turns them to stone.',
+    sources: ['Prose Edda', 'Scandinavian Sagas']
+  },
+  {
+    id: 'fae-dwarves',
+    parentId: 'fae',
+    name: 'Dwarves',
+    description: 'Subterranean Germanic and Norse fae renowned for mining, metallurgy, and crafting magical items (like Mjolnir and Draupnir). They dwell in Svartalfheim and are rich in runes and esoteric metalcraft.',
+    sources: ['Poetic Edda', 'Nibelungenlied']
+  },
+  {
+    id: 'fae-mermaids-sirens',
+    parentId: 'fae',
+    name: 'Mermaids & Sirens',
+    description: 'Aquatic human-hybrid fae and spirits of the seas. Possessing alluring voices capable of casting hypnotic spells over sailors, they are linked in global folklore to shipwreck lore and deep-ocean mysteries.',
+    sources: ['Odyssey (Homer)', 'Medieval Bestiaries']
+  },
+  {
+    id: 'fae-will-o-wisp',
+    parentId: 'fae',
+    name: 'Will-o\'-the-Wisp',
+    description: 'Luminous, shifting atmospheric fae or spirits (also called Ignis Fatuus or Jack-o\'-lantern) seen over bogs, swamps, and marshes. They are legendary for misleading nocturnal travelers off safe paths.',
+    sources: ['English Border Lore', 'Scientific Atmospheric Studies']
+  },
+  {
+    id: 'fae-redcaps',
+    parentId: 'fae',
+    name: 'Redcaps',
+    description: 'Extremely malevolent, murderous border folklore fae that inhabit ruined castles along the Anglo-Scottish border. They are depicted as red-eyed hags who dye their caps in the blood of travelers.',
+    sources: ['Border Minstrelsy (Walter Scott)', 'Scottish Folk Studies']
+  },
+  {
+    id: 'fae-gnomes',
+    parentId: 'fae',
+    name: 'Gnomes',
+    description: 'Earth elementals introduced into western esotericism by Paracelsus. Described as small, subterranean guardians of mineral wealth, they are said to move through solid earth as easily as fish swim through water.',
+    sources: ['Liber de Nymphis (Paracelsus)', 'Esoteric Cosmology']
+  },
+  {
+    id: 'fae-salamanders',
+    parentId: 'fae',
+    name: 'Salamanders',
+    description: 'Occult elementals representing the force of fire in Paracelsian alchemy. Symbolizing energy, heat, and volcanism, they are viewed in hermetic philosophy as spirits of spiritual purification.',
+    sources: ['Liber de Nymphis (Paracelsus)', 'Hermetic Alchemy']
+  },
+  {
+    id: 'fae-kelpies',
+    parentId: 'fae',
+    name: 'Kelpies',
+    description: 'Scottish shape-shifting water spirits inhabiting lochs and deep pools. Typically appearing as a magnificent horse that entices travelers to mount it, the Kelpie traps its rider and drags them to the depths.',
+    sources: ['Scottish Highland Lore', 'Celtic Mythological Studies']
+  },
+  {
+    id: 'fae-kobolds',
+    parentId: 'fae',
+    name: 'Kobolds',
+    description: 'Germanic mine and domestic spirits. They can be benevolent helpers or malicious tricksters who cause cave-ins or lead miners astray, representing the unpredictable forces of subterranean earth.',
+    sources: ['German Folk Beliefs', 'Mining History Records']
+  },
+  {
     id: 'philosophers-br',
     parentId: 'esoteric-traditions',
     name: 'Philosophers & Sages',
@@ -21351,6 +21421,162 @@ const chunk_6: any[] = [
     timelineId: 'mormonism-origins',
     mapFeatureId: 'anomaly-Religions-Mormonism',
     sources: ['Book of Mormon', 'Doctrine and Covenants', 'Pearl of Great Price']
+  },
+  {
+    id: 'astrology-cosmology',
+    parentId: 'esoteric-traditions',
+    name: 'Astrology & Cosmology',
+    description: 'The ancient practice of observing celestial movements and relative planetary alignments, interpreting them as keys to terrestrial events, personality archetypes, and spiritual cycles.',
+    relatedIds: ['esoteric-traditions', 'magical-orders', 'hermeticism', 'hermes-trismegistus-philosopher'],
+    sources: ['Tetrabiblos (Ptolemy)', 'Hermetic Writings']
+  },
+  {
+    id: 'constellations-parent',
+    parentId: 'astrology-cosmology',
+    name: 'Constellations',
+    description: 'Mapped groups of stars forming recognized celestial patterns. In alternative history, ancient astronaut theories, and esoteric traditions, key constellation alignments (like Giza to Orion) are viewed as stargates or signs of ancient contact.',
+    relatedIds: ['astrology-cosmology', 'mazzaroth', 'zodiac'],
+    sources: ['Almagest (Ptolemy)', 'Ancient Astronomical Charts']
+  },
+  {
+    id: 'const-orion',
+    parentId: 'constellations-parent',
+    name: 'Orion',
+    description: 'The Hunter constellation, one of the most prominent in the night sky. In alternative archaeology, the Orion Correlation Theory suggests the Giza Pyramids align with Orion\'s Belt, symbolizing Osiris.',
+    relatedIds: ['constellations-parent', 'pyramids-giza'],
+    sources: ['Orion Mystery (Robert Bauval)', 'Egyptian Star Tables']
+  },
+  {
+    id: 'const-pleiades',
+    parentId: 'constellations-parent',
+    name: 'The Pleiades',
+    description: 'A cluster of stars in the Taurus constellation, mentioned in Job and ancient myths globally. In modern UFO contactee lore and New Age channeling, they are claimed to be the home of Pleiadians.',
+    relatedIds: ['constellations-parent', 'aliens', 'starseeds'],
+    sources: ['Book of Job', 'New Age Channelings']
+  },
+  {
+    id: 'const-sirius',
+    parentId: 'constellations-parent',
+    name: 'Sirius (The Dog Star)',
+    description: 'The brightest star in Canis Major, central to Egyptian stellar tracking and calendars. Fringely famous for the Dogon tribe\'s unexplained historical knowledge of its invisible white dwarf companion star Sirius B.',
+    relatedIds: ['constellations-parent', 'egyptian-civilization'],
+    sources: ['The Pale Fox (Griaule/Dieterlen)', 'The Sirius Mystery (Robert Temple)']
+  },
+  {
+    id: 'const-draco',
+    parentId: 'constellations-parent',
+    name: 'Draco',
+    description: 'The celestial Dragon constellation. In alternative history and reptilian conspiracy theories, Draco is identified as the prime star system of origin for hostile non-human serpentine entities.',
+    relatedIds: ['constellations-parent', 'dragons-br'],
+    sources: ['Ancient Star Catalogs', 'Conspiracy Theory Databases']
+  },
+  {
+    id: 'const-ursa-major',
+    parentId: 'constellations-parent',
+    name: 'Ursa Major (The Great Bear)',
+    description: 'The Great Bear constellation containing the Big Dipper asterism. Associated globally with navigation, polar alignment, the Seven Rishis of Vedic lore, and cosmic axis symbolism.',
+    relatedIds: ['constellations-parent'],
+    sources: ['Vedic Astronomical Texts', 'Navigational History']
+  },
+  {
+    id: 'mazzaroth',
+    parentId: 'astrology-cosmology',
+    name: 'The Mazzaroth',
+    description: 'The ancient Hebrew word for the constellations of the zodiac, referenced in Job 38:32. Christian esotericists view the Mazzaroth as a divine prophecy written in the stars depicting the redemptive history of humanity.',
+    relatedIds: ['astrology-cosmology', 'zodiac'],
+    sources: ['Book of Job', 'The Gospel in the Stars (Joseph Seiss)']
+  },
+  {
+    id: 'zodiac',
+    parentId: 'astrology-cosmology',
+    name: 'The Zodiac',
+    description: 'The celestial path divided into twelve equal divisions of 30 degrees, representing the sun\'s annual path. The foundation of western, Vedic, and Chinese astrology, mapping human archetypes and cycles.',
+    relatedIds: ['astrology-cosmology', 'mazzaroth'],
+    sources: ['Ptolemaic Astrology', 'Vedic Astrology Records']
+  },
+  {
+    id: 'zodiac-aries',
+    parentId: 'zodiac',
+    name: 'Aries',
+    description: 'The Ram, the first sign of the zodiac marking the vernal equinox. Symbolizes new beginnings, initiation, and the spring season of renewal.',
+    sources: ['Astrological Manuals']
+  },
+  {
+    id: 'zodiac-taurus',
+    parentId: 'zodiac',
+    name: 'Taurus',
+    description: 'The Bull, the second sign of the zodiac. Linked historically to the ancient bull cults of Egypt (Apis) and Minoan Crete, and associated with material stability.',
+    sources: ['Astrological Manuals']
+  },
+  {
+    id: 'zodiac-gemini',
+    parentId: 'zodiac',
+    name: 'Gemini',
+    description: 'The Twins, the third sign of the zodiac. Represents duality, intellectual communication, and the divine twins of global mythologies.',
+    sources: ['Astrological Manuals']
+  },
+  {
+    id: 'zodiac-cancer',
+    parentId: 'zodiac',
+    name: 'Cancer',
+    description: 'The Crab, the fourth sign of the zodiac marking the summer solstice. Associated with intuition, emotion, protection, and lunar cycles.',
+    sources: ['Astrological Manuals']
+  },
+  {
+    id: 'zodiac-leo',
+    parentId: 'zodiac',
+    name: 'Leo',
+    description: 'The Lion, the fifth sign of the zodiac. Associated with solar power, sovereignty, and the Sphinx (theoretically aligned with Leo in 10,500 BC).',
+    sources: ['Astrological Manuals']
+  },
+  {
+    id: 'zodiac-virgo',
+    parentId: 'zodiac',
+    name: 'Virgo',
+    description: 'The Virgin, the sixth sign of the zodiac. Associated with harvest, fertility deities (Isis, Demeter), and purity.',
+    sources: ['Astrological Manuals']
+  },
+  {
+    id: 'zodiac-libra',
+    parentId: 'zodiac',
+    name: 'Libra',
+    description: 'The Scales, the seventh sign of the zodiac marking the autumn equinox. Symbolizes balance, justice, and cosmic law.',
+    sources: ['Astrological Manuals']
+  },
+  {
+    id: 'zodiac-scorpio',
+    parentId: 'zodiac',
+    name: 'Scorpio',
+    description: 'The Scorpion, the eighth sign of the zodiac. Associated with transformation, hidden knowledge, death, rebirth, and the occult.',
+    sources: ['Astrological Manuals']
+  },
+  {
+    id: 'zodiac-sagittarius',
+    parentId: 'zodiac',
+    name: 'Sagittarius',
+    description: 'The Archer, the ninth sign of the zodiac. Symbolizes exploration, philosophy, and alignment with the Galactic Center.',
+    sources: ['Astrological Manuals']
+  },
+  {
+    id: 'zodiac-capricorn',
+    parentId: 'zodiac',
+    name: 'Capricorn',
+    description: 'The Sea-Goat, the tenth sign of the zodiac marking the winter solstice. Represents time, structure, karma, and Saturnian limitations.',
+    sources: ['Astrological Manuals']
+  },
+  {
+    id: 'zodiac-aquarius',
+    parentId: 'zodiac',
+    name: 'Aquarius',
+    description: 'The Water-Bearer, the eleventh sign of the zodiac. Associated with collective consciousness, technological evolution, and the Age of Aquarius.',
+    sources: ['Astrological Manuals']
+  },
+  {
+    id: 'zodiac-pisces',
+    parentId: 'zodiac',
+    name: 'Pisces',
+    description: 'The Fish, the twelfth sign of the zodiac. Represents spiritual completion, mystical union, and the current messianic era.',
+    sources: ['Astrological Manuals']
   }
 ];
 
