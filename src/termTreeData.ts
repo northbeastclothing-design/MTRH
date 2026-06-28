@@ -682,6 +682,7 @@ const chunk_0: any[] = [  {
   },  {
     id: 'leviathin',
     parentId: 'demons',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Destruction_of_Leviathan.png/1280px-Destruction_of_Leviathan.png'],
     relatedIds: ['behemoth-enoch'],
     secondaryParentIds: ['enochian-creatures'],
     name: 'Leviathin',
@@ -7168,7 +7169,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'enochian-desert-dudael',
     parentId: 'enochian-sites',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/b/b5/William_Holman_Hunt_-_The_Scapegoat_-_Google_Art_Project.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/William_Holman_Hunt_-_The_Scapegoat.jpg/1280px-William_Holman_Hunt_-_The_Scapegoat.jpg'],
     name: 'Desert of Dudael (Imprisonment of Azazel)',
     description: 'The jagged desert pit where the Archangel Raphael bound the chief Watcher Azazel and covered him with darkness, to remain until the Day of Judgment.',
     layer: 'Enochian Sites',
@@ -7239,7 +7240,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'mt-hermon',
     parentId: 'enochian-sites',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/e/ee/Edward_Lear_-_Mount_Hermon_from_near_Damascus_-_Google_Art_Project.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Hermonsnow.jpg/1280px-Hermonsnow.jpg'],
     name: 'Mount Hermon',
     description: 'The highest peak in the Levant. In Enochian texts, it is the exact location where the 200 Watchers swore mutual pacts to take wives and descend among men.',
     translations: [
@@ -7272,7 +7273,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'adoil',
     parentId: 'enochian-cosmology',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/8/82/William_Blake_-_The_Ancient_of_Days_-_Google_Art_Project.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Europe_a_Prophecy_copy_K_plate_01.jpg/1280px-Europe_a_Prophecy_copy_K_plate_01.jpg'],
     name: 'Adoil',
     description: 'A primordial light-bearing entity summoned by God from the invisible depths in 2 Enoch. God commands Adoil to disintegrate, and from his bursting belly emerges the great, primordial light that serves as the foundation for all upper, spiritual creations and the divine throne.',
     isApocryphal: true,
@@ -7281,7 +7282,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'archas',
     parentId: 'enochian-cosmology',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/6/64/Elohim_Creating_Adam_William_Blake.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/d/d4/Michelangelo%2C_Creation_of_Adam_03.jpg'],
     name: 'Archas',
     description: 'A heavy, red, and hard primordial entity summoned by God from the invisible depths in 2 Enoch. Upon command, Archas disintegrates, releasing a dark, dense age/substance that serves as the foundation for the lower, physical creation and the material world.',
     isApocryphal: true,
@@ -7290,7 +7291,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'pravuil',
     parentId: 'elohim',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/b/b2/John_Melhuish_Strudwick_-_The_Recording_Angel.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Recordingangel2.jpg/1280px-Recordingangel2.jpg'],
     name: 'Pravuil',
     description: 'An archangel in 2 Enoch, noted for having exceptional wisdom and serving as the Lord\'s celestial scribe. He was tasked with bringing Enoch books from the heavenly storehouses and a quick-writing reed to record the mysteries of creation.',
     isApocryphal: true,
@@ -7299,7 +7300,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'sabaoth',
     parentId: 'gnosticism',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/d/de/Albrecht_D%C3%BCrer_-_Landauer_Altar.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Albrecht_D%C3%BCrer_-_Adoration_of_the_Trinity_%28Landauer_Altar%29_-_Google_Art_Project.jpg/1280px-Albrecht_D%C3%BCrer_-_Adoration_of_the_Trinity_%28Landauer_Altar%29_-_Google_Art_Project.jpg'],
     name: 'Sabaoth (Gnostic Archon)',
     description: 'In Gnostic cosmology (such as the Apocryphon of John and Hypostasis of the Archons), Sabaoth is a son of Yaldabaoth. After witnessing his father\'s boast, Sabaoth repented, sang praises to Sophia, and was elevated to rule over the seventh heaven, becoming the Lord of forces and representing a righteous celestial ruler distinct from the Demiurge.',
     isApocryphal: true,
@@ -7307,7 +7308,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'behemoth-enoch',
     parentId: 'enochian-creatures',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/1/1e/Blake_Behemoth_and_Leviathan.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/f/f5/Ill_dict_infernal_p0100-86_behemoth.jpg'],
     relatedIds: ['leviathin'],
     name: 'Behemoth (Enochian Desert Beast)',
     description: 'A primordial male monster described in the Book of Enoch who was separated from Leviathan on the day of creation to dwell in the vast, dry desert of Dundayin, east of the Garden of Eden. Under Jewish and Enochic eschatology, both beasts are destined to be part of a final feast.',
@@ -7317,7 +7318,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'ioanit-stations',
     parentId: 'enochian-cosmology',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/b/b8/Hildegard_von_Bingen_Liber_Divinorum_Operum.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Hildegard_von_Bingen.jpg/1280px-Hildegard_von_Bingen.jpg'],
     name: 'Ioanit Stations of Light',
     description: 'A mysterious celestial order or regiment of light seen by Enoch in the Seventh Heaven, standing alongside the archangels and principalities. The term\'s origin is highly debated, potentially relating to Coptic or Hebrew transcriptions.',
     isApocryphal: true,
@@ -7326,14 +7327,14 @@ const chunk_1: any[] = [  {
   },  {
     id: 'heavens-levels',
     parentId: 'enochian-cosmology',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/3/3b/Dante_Paradiso_31.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Firenze%2C_commedia_di_dante%2C_paradiso%2C_1325-50_%28con_intregrazioni_dei_canti_VI-XXXIII_del_xix_sec%29%2C_pluteo_40.15%2C_c_5v%2C_01.JPG/1280px-Firenze%2C_commedia_di_dante%2C_paradiso%2C_1325-50_%28con_intregrazioni_dei_canti_VI-XXXIII_del_xix_sec%29%2C_pluteo_40.15%2C_c_5v%2C_01.JPG'],
     name: 'The Levels of Heaven',
     description: 'The layered structure of the celestial realms through which Enoch ascends, as detailed in the Secrets of Enoch (2 Enoch).',
     isApocryphal: true
   },  {
     id: 'heaven-1',
     parentId: 'heavens-levels',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/3/3b/Dante_Paradiso_31.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Firenze%2C_commedia_di_dante%2C_paradiso%2C_1325-50_%28con_intregrazioni_dei_canti_VI-XXXIII_del_xix_sec%29%2C_pluteo_40.15%2C_c_5v%2C_01.JPG/1280px-Firenze%2C_commedia_di_dante%2C_paradiso%2C_1325-50_%28con_intregrazioni_dei_canti_VI-XXXIII_del_xix_sec%29%2C_pluteo_40.15%2C_c_5v%2C_01.JPG'],
     name: 'First Heaven',
     description: 'The lowest celestial sphere where Enoch observes a great sea (the upper waters), the rulers of the star orders, and the storehouses/chambers of snow, ice, clouds, and dew guarded by angels.',
     isApocryphal: true,
@@ -7342,7 +7343,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'heaven-2',
     parentId: 'heavens-levels',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/3/3b/Dante_Paradiso_31.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Firenze%2C_commedia_di_dante%2C_paradiso%2C_1325-50_%28con_intregrazioni_dei_canti_VI-XXXIII_del_xix_sec%29%2C_pluteo_40.15%2C_c_5v%2C_01.JPG/1280px-Firenze%2C_commedia_di_dante%2C_paradiso%2C_1325-50_%28con_intregrazioni_dei_canti_VI-XXXIII_del_xix_sec%29%2C_pluteo_40.15%2C_c_5v%2C_01.JPG'],
     name: 'Second Heaven',
     description: 'A dark, gloomy prison where the rebellious angels (Watchers/Grigori) are suspended in chains, weeping and waiting in darkness for the great day of judgment.',
     isApocryphal: true,
@@ -7352,7 +7353,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'heaven-3',
     parentId: 'heavens-levels',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/3/3b/Dante_Paradiso_31.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Firenze%2C_commedia_di_dante%2C_paradiso%2C_1325-50_%28con_intregrazioni_dei_canti_VI-XXXIII_del_xix_sec%29%2C_pluteo_40.15%2C_c_5v%2C_01.JPG/1280px-Firenze%2C_commedia_di_dante%2C_paradiso%2C_1325-50_%28con_intregrazioni_dei_canti_VI-XXXIII_del_xix_sec%29%2C_pluteo_40.15%2C_c_5v%2C_01.JPG'],
     name: 'Third Heaven',
     description: 'A dual realm containing both the lush, fragrant Paradise (Garden of Eden) prepared for the righteous with the Tree of Life in its midst, and a terrifying place of fire, ice, and dark torture in the northern part for the wicked.',
     isApocryphal: true,
@@ -7361,7 +7362,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'heaven-4',
     parentId: 'heavens-levels',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/3/3b/Dante_Paradiso_31.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Firenze%2C_commedia_di_dante%2C_paradiso%2C_1325-50_%28con_intregrazioni_dei_canti_VI-XXXIII_del_xix_sec%29%2C_pluteo_40.15%2C_c_5v%2C_01.JPG/1280px-Firenze%2C_commedia_di_dante%2C_paradiso%2C_1325-50_%28con_intregrazioni_dei_canti_VI-XXXIII_del_xix_sec%29%2C_pluteo_40.15%2C_c_5v%2C_01.JPG'],
     name: 'Fourth Heaven',
     description: 'The sphere of solar and lunar paths, showing the orbits, gates, and chariots of the Sun and Moon. It is guarded and accompanied by the solar spirits: the Chalkydri and Phoenixes.',
     isApocryphal: true,
@@ -7370,7 +7371,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'chalkydri',
     parentId: 'enochian-creatures',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/9/9f/Odilon_Redon_-_The_Chariot_of_Apollo_-_Google_Art_Project.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Guido_Reni_-_L%27Aurora_di_Guido_Reni_nelle_arti_decorative.jpg/1280px-Guido_Reni_-_L%27Aurora_di_Guido_Reni_nelle_arti_decorative.jpg'],
     secondaryParentIds: ['heaven-4'],
     name: 'Chalkydri',
     description: 'Enochian solar elements/creatures of the Fourth Heaven, described in 2 Enoch as hybrid beings with crocodile heads, lion feet/tails, twelve wings, and rainbow-like iridescence who accompany the sun and sing at dawn.',
@@ -7380,7 +7381,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'phoenixes-enoch',
     parentId: 'enochian-creatures',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/9/9f/Odilon_Redon_-_The_Chariot_of_Apollo_-_Google_Art_Project.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Guido_Reni_-_L%27Aurora_di_Guido_Reni_nelle_arti_decorative.jpg/1280px-Guido_Reni_-_L%27Aurora_di_Guido_Reni_nelle_arti_decorative.jpg'],
     secondaryParentIds: ['heaven-4'],
     name: 'Phoenixes (Enochian Solar Attendants)',
     description: 'Fiery celestial creatures of the Fourth Heaven, described alongside the chalkydri as flying elements that accompany the chariot of the sun, bringing dew, heat, and singing praises to the Creator.',
@@ -7390,7 +7391,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'heaven-5',
     parentId: 'heavens-levels',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/3/3b/Dante_Paradiso_31.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Firenze%2C_commedia_di_dante%2C_paradiso%2C_1325-50_%28con_intregrazioni_dei_canti_VI-XXXIII_del_xix_sec%29%2C_pluteo_40.15%2C_c_5v%2C_01.JPG/1280px-Firenze%2C_commedia_di_dante%2C_paradiso%2C_1325-50_%28con_intregrazioni_dei_canti_VI-XXXIII_del_xix_sec%29%2C_pluteo_40.15%2C_c_5v%2C_01.JPG'],
     name: 'Fifth Heaven',
     description: 'The silent realm of the Grigori (Watchers) who sit in sorrow and dejection, mourning their fallen brethren who descended to earth. Enoch encourages them to sing praises to God to break their silence.',
     isApocryphal: true,
@@ -7400,7 +7401,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'heaven-6',
     parentId: 'heavens-levels',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/3/3b/Dante_Paradiso_31.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Firenze%2C_commedia_di_dante%2C_paradiso%2C_1325-50_%28con_intregrazioni_dei_canti_VI-XXXIII_del_xix_sec%29%2C_pluteo_40.15%2C_c_5v%2C_01.JPG/1280px-Firenze%2C_commedia_di_dante%2C_paradiso%2C_1325-50_%28con_intregrazioni_dei_canti_VI-XXXIII_del_xix_sec%29%2C_pluteo_40.15%2C_c_5v%2C_01.JPG'],
     name: 'Sixth Heaven',
     description: 'The dwelling of the seven groups of angels who regulate the paths of stars, sun, moon, seasons, and the lives and souls of men. They write down all deeds, accompanied by cherubim and phoenixes singing in harmony.',
     isApocryphal: true,
@@ -7409,7 +7410,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'heaven-7',
     parentId: 'heavens-levels',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/3/3b/Dante_Paradiso_31.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Firenze%2C_commedia_di_dante%2C_paradiso%2C_1325-50_%28con_intregrazioni_dei_canti_VI-XXXIII_del_xix_sec%29%2C_pluteo_40.15%2C_c_5v%2C_01.JPG/1280px-Firenze%2C_commedia_di_dante%2C_paradiso%2C_1325-50_%28con_intregrazioni_dei_canti_VI-XXXIII_del_xix_sec%29%2C_pluteo_40.15%2C_c_5v%2C_01.JPG'],
     name: 'Seventh Heaven',
     description: 'A highly luminous realm containing the armies of archangels, principalities, powers, cherubim, seraphim, the nine regiments, and the mysterious Ioanit stations of light, all worshiping before the distant throne of God.',
     isApocryphal: true,
@@ -7419,7 +7420,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'heaven-8',
     parentId: 'heavens-levels',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/3/3b/Dante_Paradiso_31.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Firenze%2C_commedia_di_dante%2C_paradiso%2C_1325-50_%28con_intregrazioni_dei_canti_VI-XXXIII_del_xix_sec%29%2C_pluteo_40.15%2C_c_5v%2C_01.JPG/1280px-Firenze%2C_commedia_di_dante%2C_paradiso%2C_1325-50_%28con_intregrazioni_dei_canti_VI-XXXIII_del_xix_sec%29%2C_pluteo_40.15%2C_c_5v%2C_01.JPG'],
     name: 'Eighth Heaven (Muzaloth)',
     description: 'Also called Muzaloth. The celestial sphere above the seventh heaven that governs the changing of the seasons and holds the twelve constellations of the zodiac along their orbits.',
     isApocryphal: true,
@@ -7428,7 +7429,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'heaven-9',
     parentId: 'heavens-levels',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/3/3b/Dante_Paradiso_31.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Firenze%2C_commedia_di_dante%2C_paradiso%2C_1325-50_%28con_intregrazioni_dei_canti_VI-XXXIII_del_xix_sec%29%2C_pluteo_40.15%2C_c_5v%2C_01.JPG/1280px-Firenze%2C_commedia_di_dante%2C_paradiso%2C_1325-50_%28con_intregrazioni_dei_canti_VI-XXXIII_del_xix_sec%29%2C_pluteo_40.15%2C_c_5v%2C_01.JPG'],
     name: 'Ninth Heaven (Kuchavim)',
     description: 'Also called Kuchavim. The sphere of the celestial mansions or homes where the twelve constellations of the zodiac reside in the highest firmament.',
     isApocryphal: true,
@@ -7437,7 +7438,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'heaven-10',
     parentId: 'heavens-levels',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/3/3b/Dante_Paradiso_31.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Firenze%2C_commedia_di_dante%2C_paradiso%2C_1325-50_%28con_intregrazioni_dei_canti_VI-XXXIII_del_xix_sec%29%2C_pluteo_40.15%2C_c_5v%2C_01.JPG/1280px-Firenze%2C_commedia_di_dante%2C_paradiso%2C_1325-50_%28con_intregrazioni_dei_canti_VI-XXXIII_del_xix_sec%29%2C_pluteo_40.15%2C_c_5v%2C_01.JPG'],
     name: 'Tenth Heaven (Aravat)',
     description: 'Also called Aravat (Aravoth). The highest, most sacred heaven where God\'s glorious throne stands, surrounded by seraphim and cherubim, and where Enoch is granted a vision of the Divine Face.',
     isApocryphal: true,
@@ -22677,11 +22678,7 @@ const chunk_nasa: any[] = [
     mapFeatureId: 'anomaly-Nasa-Space-Cape-Canaveral',
     timelineId: 'apollo-11-landing-event',
     sources: ['KSC Historical Reports', 'NASA Archives'],
-    images: [
-      'https://www.youtube.com/watch?v=s16ayjwFX7c',
-      'https://www.youtube.com/watch?v=OnoNITE-CLg',
-      'https://upload.wikimedia.org/wikipedia/commons/2/2e/Kennedy_Space_Center_visitor_complex.jpg'
-    ]
+    images: ['https://www.youtube.com/watch?v=s16ayjwFX7c', 'https://www.youtube.com/watch?v=OnoNITE-CLg', 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Apollo_11_Launch_-_GPN-2000-000630.jpg/1280px-Apollo_11_Launch_-_GPN-2000-000630.jpg']
   },
   {
     id: 'anomaly-Nasa-Space-Vandenberg',
@@ -22691,11 +22688,7 @@ const chunk_nasa: any[] = [
     layer: 'NASA / Space',
     mapFeatureId: 'anomaly-Nasa-Space-Vandenberg',
     sources: ['U.S. Space Force Fact Sheets', 'NRO Archives'],
-    images: [
-      'https://www.youtube.com/watch?v=0tWn24zW2tY',
-      'https://www.youtube.com/watch?v=2Tz1P8sQO-4',
-      'https://upload.wikimedia.org/wikipedia/commons/9/99/Atlas_V_launch_with_InSight_from_Vandenberg.jpg'
-    ]
+    images: ['https://www.youtube.com/watch?v=0tWn24zW2tY', 'https://www.youtube.com/watch?v=2Tz1P8sQO-4', 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/NASA%E2%80%99s_TRACERS_Mission_Launches_to_Study_Earth%E2%80%99s_Magnetic_Shield_%28SVS14876_-_5~orig%29.jpg/1280px-NASA%E2%80%99s_TRACERS_Mission_Launches_to_Study_Earth%E2%80%99s_Magnetic_Shield_%28SVS14876_-_5~orig%29.jpg']
   },
   {
     id: 'anomaly-Nasa-Space-JPL',
@@ -22706,11 +22699,7 @@ const chunk_nasa: any[] = [
     mapFeatureId: 'anomaly-Nasa-Space-JPL',
     timelineId: 'jpl-founded-event',
     sources: ['JPL Historical Archives', 'Strange Angel'],
-    images: [
-      'https://www.youtube.com/watch?v=NzKzM7_Gz8s',
-      'https://www.youtube.com/watch?v=gYQwyAMTKtE',
-      'https://upload.wikimedia.org/wikipedia/commons/3/30/Jet_Propulsion_Laboratory.jpg'
-    ]
+    images: ['https://www.youtube.com/watch?v=NzKzM7_Gz8s', 'https://www.youtube.com/watch?v=gYQwyAMTKtE', 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Site_du_JPL_en_Californie.jpg/1280px-Site_du_JPL_en_Californie.jpg']
   },
   {
     id: 'anomaly-Nasa-Space-HQ',
@@ -22721,11 +22710,7 @@ const chunk_nasa: any[] = [
     mapFeatureId: 'anomaly-Nasa-Space-HQ',
     timelineId: 'nasa-founded-event',
     sources: ['NASA Official Records'],
-    images: [
-      'https://www.youtube.com/watch?v=xZtH3k3dD_Y',
-      'https://upload.wikimedia.org/wikipedia/commons/8/86/NASA_Headquarters_Washington_DC.jpg',
-      'https://upload.wikimedia.org/wikipedia/commons/b/b3/Mary_W_Jackson_NASA_Headquarters_sign_June_2020.jpg'
-    ]
+    images: ['https://www.youtube.com/watch?v=xZtH3k3dD_Y', 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/NASA_HQ_Building.jpg/1280px-NASA_HQ_Building.jpg', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Mary_W_Jackson_NASA_Headquarters_sign_June_2020.jpg/1280px-Mary_W_Jackson_NASA_Headquarters_sign_June_2020.jpg']
   },
   {
     id: 'anomaly-Nasa-Space-Artemis-Program',
@@ -22736,11 +22721,7 @@ const chunk_nasa: any[] = [
     mapFeatureId: 'anomaly-Nasa-Space-Artemis-Program',
     timelineId: 'artemis-program-event',
     sources: ['NASA Artemis Program Overview'],
-    images: [
-      'https://www.youtube.com/watch?v=cM5G5v5Zk1o',
-      'https://upload.wikimedia.org/wikipedia/commons/c/cd/Artemis_I_SLS_rolls_out_to_LC-39B.jpg',
-      'https://upload.wikimedia.org/wikipedia/commons/e/e0/Artemis_I_SLS_at_LC-39B.jpg'
-    ]
+    images: ['https://www.youtube.com/watch?v=cM5G5v5Zk1o', 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Orion_Approaches_Moon_for_Outbound_Powered_Flyby.jpg/1280px-Orion_Approaches_Moon_for_Outbound_Powered_Flyby.jpg', 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Artemis_I_SLS_at_LC-39B.jpg/1280px-Artemis_I_SLS_at_LC-39B.jpg']
   }
 ];
 
