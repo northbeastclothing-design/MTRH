@@ -2601,6 +2601,8 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     name: 'The Nephilim Giants',
     type: 'lifespan',
     layer: 'enochian-lore',
+    isPeopleGroup: true,
+    subLabel: 'Possible Nephilim Bloodline',
     start: -3300,
     end: -2348,
     description: 'The gigantic offspring of the union between the Watchers and human daughters. They consumed the labor of men and filled the earth with violence, leading to the divine decree of the Flood.',
@@ -2664,7 +2666,8 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     end: -1400,
     description: 'The ancient cave-dwelling inhabitants of Mount Seir (Edom) before being dispossessed and succeeded by the descendants of Esau (Edomites).',
     source: 'Genesis 14:6, 36:20-30, Deuteronomy 2:12',
-    isPeopleGroup: true
+    isPeopleGroup: true,
+    subLabel: 'Possible Nephilim Bloodline',
   },
   {
     id: 'avim',
@@ -2675,7 +2678,8 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     end: -1400,
     description: 'The early inhabitants of southwest Canaan (near Gaza) who dwelt in villages as far as Hazerim, later destroyed and replaced by the Caphtorim (Philistines).',
     source: 'Deuteronomy 2:23, Joshua 13:3',
-    isPeopleGroup: true
+    isPeopleGroup: true,
+    subLabel: 'Possible Nephilim Bloodline',
   },
   {
     id: 'perizzites',

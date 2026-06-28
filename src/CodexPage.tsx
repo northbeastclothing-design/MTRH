@@ -1654,26 +1654,7 @@ export default function CodexPage({
                         >
                           {node.name}
                         </span>
-                        {isOnlyApocryphal(node) && (
-                          <span 
-                            title="Apocryphal / Non-Canonical" 
-                            style={{ 
-                              display: 'inline-flex',
-                              alignItems: 'center',
-                              justifyContent: 'center',
-                              fontSize: '11px',
-                              lineHeight: '1',
-                              fontWeight: '900',
-                              color: isSelected || isHovered 
-                                ? '#000000' 
-                                : (isMapDarkMode ? '#ffffff' : '#000000'),
-                              marginLeft: '6px',
-                              flexShrink: 0
-                            }}
-                          >
-                            ✖
-                          </span>
-                        )}
+
                       </div>
 
                       {/* Chevron indicators */}
@@ -2036,16 +2017,7 @@ export default function CodexPage({
                     alignItems: 'center',
                     gap: '8px'
                   }}>
-                    {isOnlyApocryphal(activeTermNode) && (
-                      <span style={{
-                        marginRight: '12px',
-                        fontWeight: 900,
-                        fontSize: '44px',
-                        lineHeight: 1,
-                        WebkitTextStroke: '3px currentColor',
-                        flexShrink: 0
-                      }}>✖</span>
-                    )}
+
                     {activeTermNode.subLabel === 'Possible Nephilim Bloodline' && (
                       <span style={{
                         marginRight: '12px',

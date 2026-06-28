@@ -3859,6 +3859,7 @@ const chunk_0: any[] = [  {
   },  {
     id: 'avim',
     parentId: 'people-groups',
+    subLabel: 'Possible Nephilim Bloodline',
     name: 'Avim',
     description: 'The early inhabitants of southwest Canaan (near Gaza) who dwelt in villages as far as Hazerim, later destroyed and replaced by the Caphtorim (Philistines).',
     layer: 'ancient-civilizations',
@@ -7025,18 +7026,21 @@ const chunk_1: any[] = [  {
   },  {
     id: 'lahmi',
     parentId: 'nephilim-br',
+    subLabel: 'Possible Nephilim Bloodline',
     name: 'Lahmi',
     description: 'A giant mentioned in biblical narratives. Lineage: Philistine. Parents/Origins: Anak and his wife.',
     isApocryphal: true
   },  {
     id: 'ishbi-benob',
     parentId: 'nephilim-br',
+    subLabel: 'Possible Nephilim Bloodline',
     name: 'Ishbi-Benob',
     description: 'A giant mentioned in biblical narratives. Lineage: Philistine. Parents/Origins: Rapha and his wife.',
     isApocryphal: true
   },  {
     id: 'saph',
     parentId: 'nephilim-br',
+    subLabel: 'Possible Nephilim Bloodline',
     name: 'Saph',
     description: 'A giant mentioned in biblical narratives. Lineage: Philistine.',
     isApocryphal: true
@@ -7044,7 +7048,7 @@ const chunk_1: any[] = [  {
     id: 'zamzummim',
     parentId: 'nephilim-br',
     name: 'Zamzummim',
-    description: 'A giant mentioned in biblical narratives. Lineage: Tribe of giants.',
+    description: 'An ancient tribe of giants who inhabited the region of Ammon. Described in Deuteronomy as a people great, many, and tall, as the Anakim, who were dispossessed and destroyed by the Ammonites.',
     timelineId: 'zamzummim',
     isApocryphal: true,
     bibleVerses: ['(That also was deemed a land of giants; giants formerly dwelt there, and the Ammonites call them Zamzummim, a people great and many, and tall as the Anakim...) — Deuteronomy 2:20-21 (https://www.biblegateway.com/passage/?search=Deuteronomy+2%3A20-21)'],
@@ -7053,7 +7057,7 @@ const chunk_1: any[] = [  {
     id: 'anakim',
     parentId: 'nephilim-br',
     name: 'Anakim',
-    description: 'A giant mentioned in biblical narratives. Lineage: Tribe of giants. Parents/Origins: Anak and his wife.',
+    description: 'An ancient race of giants described in biblical narratives as descendants of Anak, noted for their formidable stature. They inhabited the hill country of Canaan before being defeated by Joshua and the Israelites.',
     timelineId: 'anakim',
     isApocryphal: true,
     bibleVerses: ['A people great and tall, the descendants of the Anakim, whom you know, and of whom you have heard it said, \'Who can stand before the descendants of Anak?\' — Deuteronomy 9:2 (https://www.biblegateway.com/passage/?search=Deuteronomy+9%3A2)', 'And there we saw the giants, the sons of Anak, which come of the giants: and we were in our own sight as grasshoppers, and so we were in their sight. — Numbers 13:33 (https://www.biblegateway.com/passage/?search=Numbers+13%3A33)'],
@@ -7061,44 +7065,51 @@ const chunk_1: any[] = [  {
   },  {
     id: 'enakim',
     parentId: 'nephilim-br',
+    subLabel: 'Possible Nephilim Bloodline',
     name: 'Enakim',
-    description: 'A giant mentioned in biblical narratives. Lineage: Tribe of giants. Parents/Origins: Anak and his wife.',
+    description: 'A variant name for the Anakim, representing the formidable giant people group of Canaan descended from Anak, noted in Deuteronomy as a great and tall people.',
     isApocryphal: true,
     bibleVerses: ['A people great and tall, the descendants of the Anakim, whom you know, and of whom you have heard it said, \'Who can stand before the descendants of Anak?\' — Deuteronomy 9:2 (https://www.biblegateway.com/passage/?search=Deuteronomy+9%3A2)']
   },  {
     id: 'horim',
     parentId: 'nephilim-br',
+    subLabel: 'Possible Nephilim Bloodline',
     name: 'Horim',
-    description: 'A giant mentioned in biblical narratives. Lineage: Tribe of giants. Parents/Origins: Seir and his wife.',
+    description: 'An ancient people group or tribe of cave-dwellers who inhabited Mount Seir (Edom). Associated in scriptural records with the giant lineages of Canaan, they were dispossessed and succeeded by the descendants of Esau.',
     isApocryphal: true,
     bibleVerses: ['The Horites also formerly dwelt in Seir, but the descendants of Esau dispossessed them and destroyed them from before them... — Deuteronomy 2:12 (https://www.biblegateway.com/passage/?search=Deuteronomy+2%3A12)']
   },  {
     id: 'anak',
     parentId: 'nephilim-br',
+    subLabel: 'Possible Nephilim Bloodline',
     name: 'Anak',
     description: 'A giant mentioned in biblical narratives. Lineage: Son of Arba. Parents/Origins: Arba and his wife.',
     isApocryphal: true
   },  {
     id: 'ahiman',
     parentId: 'nephilim-br',
+    subLabel: 'Possible Nephilim Bloodline',
     name: 'Ahiman',
     description: 'A giant mentioned in biblical narratives. Lineage: Son of Anak. Parents/Origins: Anak and his wife.',
     isApocryphal: true
   },  {
     id: 'sheshai',
     parentId: 'nephilim-br',
+    subLabel: 'Possible Nephilim Bloodline',
     name: 'Sheshai',
     description: 'A giant mentioned in biblical narratives. Lineage: Son of Anak. Parents/Origins: Anak and his wife.',
     isApocryphal: true
   },  {
     id: 'talmai',
     parentId: 'nephilim-br',
+    subLabel: 'Possible Nephilim Bloodline',
     name: 'Talmai',
     description: 'A giant mentioned in biblical narratives. Lineage: Son of Anak. Parents/Origins: Anak and his wife.',
     isApocryphal: true
   },  {
     id: 'sihon',
     parentId: 'nephilim-br',
+    subLabel: 'Possible Nephilim Bloodline',
     name: 'Sihon',
     description: 'A giant mentioned in biblical narratives. Lineage: King of the Amorites. Parents/Origins: Sihon and a human woman.',
     isApocryphal: true
@@ -7131,6 +7142,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'goliath',
     parentId: 'nephilim-br',
+    subLabel: 'Possible Nephilim Bloodline',
     name: 'Goliath of Gath',
     description: 'The champion giant of the Philistines, slain by David. He represented the remnants of the giant clans of Canaan.',
     translations: [
@@ -7143,6 +7155,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'og-bashan',
     parentId: 'nephilim-br',
+    subLabel: 'Possible Nephilim Bloodline',
     name: 'Og of Bashan',
     description: 'An Amorite king described in Deuteronomy as the last of the Rephaim (giants). His iron bedstead was famously preserved for its immense size.',
     translations: [
@@ -22509,6 +22522,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },  {
     id: 'kandahar-giant',
     parentId: 'nephilim-br',
+    subLabel: 'Possible Nephilim Bloodline',
     name: 'Kandahar Giant',
     description: 'A legendary 13-foot-tall, red-haired humanoid giant with six fingers and toes reportedly killed by a U.S. Army squad in a remote mountain cave in Kandahar, Afghanistan, in 2002. The incident, first detailed by military whistleblowers, alleges that the giant killed one soldier with a spear before being brought down by concentrated rifle fire. The body was reportedly airlifted away on a military cargo helicopter, and the encounter remains subject to a strict government cover-up, linking it in alternative circles to modern surviving Nephilim remnants.',
     mapFeatureId: 'anomaly-Giants-Kandahar-Giant',
