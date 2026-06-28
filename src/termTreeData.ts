@@ -7254,7 +7254,6 @@ const chunk_1: any[] = [  {
     bibleVerses: ['So the field and the cave in it were deeded to Abraham by the Hittites as a burial place. — Genesis 23:20'],
     sources: ['Apocryphal Texts', 'Book of Enoch', 'Historical Gazeteers'],
   },  {
-  },  {
     id: 'enochian-cosmology',
     parentId: 'christianity',
     name: 'Enochian Cosmology',
