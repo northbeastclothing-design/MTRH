@@ -7168,7 +7168,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'enochian-desert-dudael',
     parentId: 'enochian-sites',
-    images: ['/images/enochian/dudael-2.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/b/b5/William_Holman_Hunt_-_The_Scapegoat_-_Google_Art_Project.jpg'],
     name: 'Desert of Dudael (Imprisonment of Azazel)',
     description: 'The jagged desert pit where the Archangel Raphael bound the chief Watcher Azazel and covered him with darkness, to remain until the Day of Judgment.',
     layer: 'Enochian Sites',
@@ -7239,7 +7239,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'mt-hermon',
     parentId: 'enochian-sites',
-    images: ['/images/enochian/hermon-2.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/e/ee/Edward_Lear_-_Mount_Hermon_from_near_Damascus_-_Google_Art_Project.jpg'],
     name: 'Mount Hermon',
     description: 'The highest peak in the Levant. In Enochian texts, it is the exact location where the 200 Watchers swore mutual pacts to take wives and descend among men.',
     translations: [
@@ -7272,6 +7272,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'adoil',
     parentId: 'enochian-cosmology',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/8/82/William_Blake_-_The_Ancient_of_Days_-_Google_Art_Project.jpg'],
     name: 'Adoil',
     description: 'A primordial light-bearing entity summoned by God from the invisible depths in 2 Enoch. God commands Adoil to disintegrate, and from his bursting belly emerges the great, primordial light that serves as the foundation for all upper, spiritual creations and the divine throne.',
     isApocryphal: true,
@@ -7280,6 +7281,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'archas',
     parentId: 'enochian-cosmology',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/6/64/Elohim_Creating_Adam_William_Blake.jpg'],
     name: 'Archas',
     description: 'A heavy, red, and hard primordial entity summoned by God from the invisible depths in 2 Enoch. Upon command, Archas disintegrates, releasing a dark, dense age/substance that serves as the foundation for the lower, physical creation and the material world.',
     isApocryphal: true,
@@ -7288,6 +7290,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'pravuil',
     parentId: 'elohim',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/b/b2/John_Melhuish_Strudwick_-_The_Recording_Angel.jpg'],
     name: 'Pravuil',
     description: 'An archangel in 2 Enoch, noted for having exceptional wisdom and serving as the Lord\'s celestial scribe. He was tasked with bringing Enoch books from the heavenly storehouses and a quick-writing reed to record the mysteries of creation.',
     isApocryphal: true,
@@ -7296,6 +7299,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'sabaoth',
     parentId: 'gnosticism',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/d/de/Albrecht_D%C3%BCrer_-_Landauer_Altar.jpg'],
     name: 'Sabaoth (Gnostic Archon)',
     description: 'In Gnostic cosmology (such as the Apocryphon of John and Hypostasis of the Archons), Sabaoth is a son of Yaldabaoth. After witnessing his father\'s boast, Sabaoth repented, sang praises to Sophia, and was elevated to rule over the seventh heaven, becoming the Lord of forces and representing a righteous celestial ruler distinct from the Demiurge.',
     isApocryphal: true,
@@ -7303,7 +7307,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'behemoth-enoch',
     parentId: 'enochian-creatures',
-    images: ['/images/enochian/behemoth_desert.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/1/1e/Blake_Behemoth_and_Leviathan.jpg'],
     relatedIds: ['leviathin'],
     name: 'Behemoth (Enochian Desert Beast)',
     description: 'A primordial male monster described in the Book of Enoch who was separated from Leviathan on the day of creation to dwell in the vast, dry desert of Dundayin, east of the Garden of Eden. Under Jewish and Enochic eschatology, both beasts are destined to be part of a final feast.',
@@ -7313,6 +7317,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'ioanit-stations',
     parentId: 'enochian-cosmology',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/b/b8/Hildegard_von_Bingen_Liber_Divinorum_Operum.jpg'],
     name: 'Ioanit Stations of Light',
     description: 'A mysterious celestial order or regiment of light seen by Enoch in the Seventh Heaven, standing alongside the archangels and principalities. The term\'s origin is highly debated, potentially relating to Coptic or Hebrew transcriptions.',
     isApocryphal: true,
@@ -7321,12 +7326,14 @@ const chunk_1: any[] = [  {
   },  {
     id: 'heavens-levels',
     parentId: 'enochian-cosmology',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/3/3b/Dante_Paradiso_31.jpg'],
     name: 'The Levels of Heaven',
     description: 'The layered structure of the celestial realms through which Enoch ascends, as detailed in the Secrets of Enoch (2 Enoch).',
     isApocryphal: true
   },  {
     id: 'heaven-1',
     parentId: 'heavens-levels',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/3/3b/Dante_Paradiso_31.jpg'],
     name: 'First Heaven',
     description: 'The lowest celestial sphere where Enoch observes a great sea (the upper waters), the rulers of the star orders, and the storehouses/chambers of snow, ice, clouds, and dew guarded by angels.',
     isApocryphal: true,
@@ -7335,6 +7342,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'heaven-2',
     parentId: 'heavens-levels',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/3/3b/Dante_Paradiso_31.jpg'],
     name: 'Second Heaven',
     description: 'A dark, gloomy prison where the rebellious angels (Watchers/Grigori) are suspended in chains, weeping and waiting in darkness for the great day of judgment.',
     isApocryphal: true,
@@ -7344,6 +7352,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'heaven-3',
     parentId: 'heavens-levels',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/3/3b/Dante_Paradiso_31.jpg'],
     name: 'Third Heaven',
     description: 'A dual realm containing both the lush, fragrant Paradise (Garden of Eden) prepared for the righteous with the Tree of Life in its midst, and a terrifying place of fire, ice, and dark torture in the northern part for the wicked.',
     isApocryphal: true,
@@ -7352,6 +7361,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'heaven-4',
     parentId: 'heavens-levels',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/3/3b/Dante_Paradiso_31.jpg'],
     name: 'Fourth Heaven',
     description: 'The sphere of solar and lunar paths, showing the orbits, gates, and chariots of the Sun and Moon. It is guarded and accompanied by the solar spirits: the Chalkydri and Phoenixes.',
     isApocryphal: true,
@@ -7360,7 +7370,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'chalkydri',
     parentId: 'enochian-creatures',
-    images: ['/images/enochian/chalkydri_phoenixes_sun.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/9/9f/Odilon_Redon_-_The_Chariot_of_Apollo_-_Google_Art_Project.jpg'],
     secondaryParentIds: ['heaven-4'],
     name: 'Chalkydri',
     description: 'Enochian solar elements/creatures of the Fourth Heaven, described in 2 Enoch as hybrid beings with crocodile heads, lion feet/tails, twelve wings, and rainbow-like iridescence who accompany the sun and sing at dawn.',
@@ -7370,7 +7380,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'phoenixes-enoch',
     parentId: 'enochian-creatures',
-    images: ['/images/enochian/chalkydri_phoenixes_sun.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/9/9f/Odilon_Redon_-_The_Chariot_of_Apollo_-_Google_Art_Project.jpg'],
     secondaryParentIds: ['heaven-4'],
     name: 'Phoenixes (Enochian Solar Attendants)',
     description: 'Fiery celestial creatures of the Fourth Heaven, described alongside the chalkydri as flying elements that accompany the chariot of the sun, bringing dew, heat, and singing praises to the Creator.',
@@ -7380,6 +7390,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'heaven-5',
     parentId: 'heavens-levels',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/3/3b/Dante_Paradiso_31.jpg'],
     name: 'Fifth Heaven',
     description: 'The silent realm of the Grigori (Watchers) who sit in sorrow and dejection, mourning their fallen brethren who descended to earth. Enoch encourages them to sing praises to God to break their silence.',
     isApocryphal: true,
@@ -7389,6 +7400,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'heaven-6',
     parentId: 'heavens-levels',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/3/3b/Dante_Paradiso_31.jpg'],
     name: 'Sixth Heaven',
     description: 'The dwelling of the seven groups of angels who regulate the paths of stars, sun, moon, seasons, and the lives and souls of men. They write down all deeds, accompanied by cherubim and phoenixes singing in harmony.',
     isApocryphal: true,
@@ -7397,6 +7409,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'heaven-7',
     parentId: 'heavens-levels',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/3/3b/Dante_Paradiso_31.jpg'],
     name: 'Seventh Heaven',
     description: 'A highly luminous realm containing the armies of archangels, principalities, powers, cherubim, seraphim, the nine regiments, and the mysterious Ioanit stations of light, all worshiping before the distant throne of God.',
     isApocryphal: true,
@@ -7406,6 +7419,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'heaven-8',
     parentId: 'heavens-levels',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/3/3b/Dante_Paradiso_31.jpg'],
     name: 'Eighth Heaven (Muzaloth)',
     description: 'Also called Muzaloth. The celestial sphere above the seventh heaven that governs the changing of the seasons and holds the twelve constellations of the zodiac along their orbits.',
     isApocryphal: true,
@@ -7414,6 +7428,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'heaven-9',
     parentId: 'heavens-levels',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/3/3b/Dante_Paradiso_31.jpg'],
     name: 'Ninth Heaven (Kuchavim)',
     description: 'Also called Kuchavim. The sphere of the celestial mansions or homes where the twelve constellations of the zodiac reside in the highest firmament.',
     isApocryphal: true,
@@ -7422,6 +7437,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'heaven-10',
     parentId: 'heavens-levels',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/3/3b/Dante_Paradiso_31.jpg'],
     name: 'Tenth Heaven (Aravat)',
     description: 'Also called Aravat (Aravoth). The highest, most sacred heaven where God\'s glorious throne stands, surrounded by seraphim and cherubim, and where Enoch is granted a vision of the Divine Face.',
     isApocryphal: true,
