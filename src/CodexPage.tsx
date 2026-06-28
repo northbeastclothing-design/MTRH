@@ -221,6 +221,7 @@ export default function CodexPage({
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [brokenImages, setBrokenImages] = useState<Record<string, boolean>>({});
   const [isImageLoading, setIsImageLoading] = useState(false);
+  const [isFullscreenActive, setIsFullscreenActive] = useState(false);
 
   const columnsContainerRef = useRef<HTMLDivElement>(null);
   const svgOverlayRef = useRef<SVGSVGElement>(null);
@@ -1913,6 +1914,36 @@ export default function CodexPage({
                         position: 'relative'
                       }}
                     >
+                      {/* Fullscreen button */}
+                      <motion.button
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        onClick={() => setIsFullscreenActive(true)}
+                        style={{
+                          position: 'absolute',
+                          top: '12px',
+                          right: '12px',
+                          width: '32px',
+                          height: '32px',
+                          borderRadius: '4px',
+                          background: 'rgba(0, 0, 0, 0.5)',
+                          border: '1px solid rgba(255, 255, 255, 0.2)',
+                          cursor: 'pointer',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          zIndex: 10,
+                          backdropFilter: 'blur(4px)'
+                        }}
+                        title="View Fullscreen"
+                      >
+                        <img 
+                          src="/icons/icon-expand.svg" 
+                          style={{ width: '16px', height: '16px', filter: 'invert(1)' }} 
+                          alt="Fullscreen"
+                        />
+                      </motion.button>
+
                       {(() => {
                         const imgUrl = activeTermNode.images[activeImageIndex];
                         if (!imgUrl) return null;
@@ -1934,10 +1965,12 @@ export default function CodexPage({
                                 />
                               ) : (
                                 <video
-                                  src={imgUrl}
                                   controls
                                   style={{ width: '100%', height: '100%', objectFit: 'contain' }}
-                                />
+                                >
+                                  <source src={imgUrl} type={imgUrl.toLowerCase().endsWith('.webm') ? 'video/webm' : imgUrl.toLowerCase().endsWith('.ogv') ? 'video/ogg' : 'video/mp4'} />
+                                  Your browser does not support the video tag.
+                                </video>
                               )}
                             </div>
                           );
@@ -2032,8 +2065,8 @@ export default function CodexPage({
                                 }}
                               >
                                 <img 
-                                  src="/icons/icon-arrow-right.svg" 
-                                  style={{ width: '6px', height: '12px', filter: isMapDarkMode ? 'brightness(0) invert(1)' : 'brightness(0)' }} 
+                                  src="/icons/icon-arrow-left.svg" 
+                                  style={{ width: '6px', height: '12px', transform: 'rotate(180deg)', filter: isMapDarkMode ? 'brightness(0) invert(1)' : 'brightness(0)' }} 
                                   alt="next" 
                                 />
                               </motion.button>
@@ -2612,6 +2645,109 @@ export default function CodexPage({
           backdropFilter: 'blur(8px)'
         }} 
       />
+
+      {/* Fullscreen Lightbox Overlay */}
+      {isFullscreenActive && activeTermNode && activeTermNode.images && activeTermNode.images.length > 0 && (() => {
+        const imgUrl = activeTermNode.images[activeImageIndex];
+        if (!imgUrl) return null;
+        const isBroken = !!brokenImages[imgUrl];
+        const imgSrc = isBroken ? MISSING_IMAGE_URL : cleanAndProxyImageUrl(imgUrl);
+
+        return (
+          <div 
+            style={{
+              position: 'fixed',
+              top: 0,
+              left: 0,
+              width: '100vw',
+              height: '100vh',
+              background: 'rgba(0, 0, 0, 0.9)',
+              backdropFilter: 'blur(10px)',
+              zIndex: 9999,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              cursor: 'zoom-out'
+            }}
+            onClick={() => setIsFullscreenActive(false)}
+          >
+            {/* Close button */}
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                setIsFullscreenActive(false);
+              }}
+              style={{
+                position: 'absolute',
+                top: '24px',
+                right: '24px',
+                width: '44px',
+                height: '44px',
+                borderRadius: '50%',
+                background: 'rgba(255, 255, 255, 0.1)',
+                border: '1px solid rgba(255, 255, 255, 0.2)',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: '#fff',
+                fontSize: '24px',
+                zIndex: 10000
+              }}
+            >
+              ✕
+            </button>
+
+            {/* Media Content */}
+            <div 
+              style={{ 
+                width: '90vw',
+                height: '90vh',
+                display: 'flex', 
+                alignItems: 'center', 
+                justifyContent: 'center' 
+              }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              {isVideoUrl(imgUrl) && !isBroken ? (
+                <div style={{ width: '100%', height: '100%', position: 'relative' }}>
+                  {imgUrl.includes('youtube.com') || imgUrl.includes('youtu.be') ? (
+                    <iframe
+                      src={`${getEmbedUrl(imgUrl)}?autoplay=1`}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      style={{ width: '100%', height: '100%' }}
+                    />
+                  ) : (
+                    <video
+                      controls
+                      autoPlay
+                      style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                    >
+                      <source src={imgUrl} type={imgUrl.toLowerCase().endsWith('.webm') ? 'video/webm' : imgUrl.toLowerCase().endsWith('.ogv') ? 'video/ogg' : 'video/mp4'} />
+                      Your browser does not support the video tag.
+                    </video>
+                  )}
+                </div>
+              ) : (
+                <img 
+                  src={imgSrc} 
+                  alt={activeTermNode.name} 
+                  referrerPolicy="no-referrer"
+                  style={{ 
+                    maxWidth: '100%', 
+                    maxHeight: '100%', 
+                    objectFit: 'contain', 
+                    boxShadow: '0 20px 50px rgba(0, 0, 0, 0.5)',
+                    border: '1px solid rgba(255, 255, 255, 0.1)' 
+                  }} 
+                />
+              )}
+            </div>
+          </div>
+        );
+      })()}
     </div>
   );
 }

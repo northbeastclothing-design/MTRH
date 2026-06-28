@@ -22665,7 +22665,7 @@ const chunk_new_additions: any[] = [
 const chunk_nasa: any[] = [
   {
     id: 'nasa-root',
-    name: 'NASA & Space Exploration',
+    name: 'Nasa / Space',
     description: 'The civil space agency of the United States, spaceports, laboratories, and programs associated with historical lunar landings, interplanetary science, and advanced launch systems.',
     layer: 'NASA / Space'
   },
@@ -22678,7 +22678,11 @@ const chunk_nasa: any[] = [
     mapFeatureId: 'anomaly-Nasa-Space-Cape-Canaveral',
     timelineId: 'apollo-11-landing-event',
     sources: ['KSC Historical Reports', 'NASA Archives'],
-    images: ['https://upload.wikimedia.org/wikipedia/commons/3/3f/Flight_of_AS-506_%28Apollo_11%29_from_lift-off_to_1_min_after_S-IC_stage_separation%2C_VJSC_1425D-q1.ogv', 'https://upload.wikimedia.org/wikipedia/commons/f/f9/STS-132_Liftoff_Space_Shuttle_Atlantis.ogv', 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Apollo_11_Launch_-_GPN-2000-000630.jpg/1280px-Apollo_11_Launch_-_GPN-2000-000630.jpg']
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/3/3f/Flight_of_AS-506_%28Apollo_11%29_from_lift-off_to_1_min_after_S-IC_stage_separation%2C_VJSC_1425D-q1.ogv',
+      'https://upload.wikimedia.org/wikipedia/commons/f/f9/STS-132_Liftoff_Space_Shuttle_Atlantis.ogv',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Apollo_11_Launch_-_GPN-2000-000630.jpg/1280px-Apollo_11_Launch_-_GPN-2000-000630.jpg'
+    ]
   },
   {
     id: 'anomaly-Nasa-Space-Vandenberg',
@@ -22688,7 +22692,11 @@ const chunk_nasa: any[] = [
     layer: 'NASA / Space',
     mapFeatureId: 'anomaly-Nasa-Space-Vandenberg',
     sources: ['U.S. Space Force Fact Sheets', 'NRO Archives'],
-    images: ['https://upload.wikimedia.org/wikipedia/commons/4/44/NASA%E2%80%99s_SPHEREX_and_PUNCH_Missions_Launch_from_Vandenberg_Space_Force_Base_%28SVS14803%29.webm', 'https://upload.wikimedia.org/wikipedia/commons/9/9b/USSF_video_of_Sentinel-6_launch_from_VAFB_SLC-4_--_Isolated_Views_%283263265%29.webm', 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/NASA%E2%80%99s_TRACERS_Mission_Launches_to_Study_Earth%E2%80%99s_Magnetic_Shield_%28SVS14876_-_5~orig%29.jpg/1280px-NASA%E2%80%99s_TRACERS_Mission_Launches_to_Study_Earth%E2%80%99s_Magnetic_Shield_%28SVS14876_-_5~orig%29.jpg']
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/4/44/NASA%E2%80%99s_SPHEREX_and_PUNCH_Missions_Launch_from_Vandenberg_Space_Force_Base_%28SVS14803%29.webm',
+      'https://upload.wikimedia.org/wikipedia/commons/9/9b/USSF_video_of_Sentinel-6_launch_from_VAFB_SLC-4_--_Isolated_Views_%283263265%29.webm',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/NASA%E2%80%99s_TRACERS_Mission_Launches_to_Study_Earth%E2%80%99s_Magnetic_Shield_%28SVS14876_-_5~orig%29.jpg/1280px-NASA%E2%80%99s_TRACERS_Mission_Launches_to_Study_Earth%E2%80%99s_Magnetic_Shield_%28SVS14876_-_5~orig%29.jpg'
+    ]
   },
   {
     id: 'anomaly-Nasa-Space-JPL',
@@ -22699,7 +22707,11 @@ const chunk_nasa: any[] = [
     mapFeatureId: 'anomaly-Nasa-Space-JPL',
     timelineId: 'jpl-founded-event',
     sources: ['JPL Historical Archives', 'Strange Angel'],
-    images: ['https://upload.wikimedia.org/wikipedia/commons/c/ce/Perseverance_Entry_Descent_Landing.webm', 'https://upload.wikimedia.org/wikipedia/commons/6/67/Mars_Curiosity_video_msl20120810.ogv', 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Site_du_JPL_en_Californie.jpg/1280px-Site_du_JPL_en_Californie.jpg']
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/c/ce/Perseverance_Entry_Descent_Landing.webm',
+      'https://upload.wikimedia.org/wikipedia/commons/6/67/Mars_Curiosity_video_msl20120810.ogv',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Site_du_JPL_en_Californie.jpg/1280px-Site_du_JPL_en_Californie.jpg'
+    ]
   },
   {
     id: 'anomaly-Nasa-Space-HQ',
@@ -22710,7 +22722,11 @@ const chunk_nasa: any[] = [
     mapFeatureId: 'anomaly-Nasa-Space-HQ',
     timelineId: 'nasa-founded-event',
     sources: ['NASA Official Records'],
-    images: ['https://upload.wikimedia.org/wikipedia/commons/8/83/Restored_Apollo_11_Moonwalk_-_Original_NASA_EVA_Mission_Video_-_Walking_on_the_Moon.webm', 'https://upload.wikimedia.org/wikipedia/commons/a/a6/Apollo_11_Landing_-_first_steps_on_the_moon.ogv', 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/NASA_HQ_Building.jpg/1280px-NASA_HQ_Building.jpg']
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/8/83/Restored_Apollo_11_Moonwalk_-_Original_NASA_EVA_Mission_Video_-_Walking_on_the_Moon.webm',
+      'https://upload.wikimedia.org/wikipedia/commons/a/a6/Apollo_11_Landing_-_first_steps_on_the_moon.ogv',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/NASA_HQ_Building.jpg/1280px-NASA_HQ_Building.jpg'
+    ]
   },
   {
     id: 'anomaly-Nasa-Space-Artemis-Program',
@@ -22721,7 +22737,84 @@ const chunk_nasa: any[] = [
     mapFeatureId: 'anomaly-Nasa-Space-Artemis-Program',
     timelineId: 'artemis-program-event',
     sources: ['NASA Artemis Program Overview'],
-    images: ['https://upload.wikimedia.org/wikipedia/commons/5/53/Artemis_II_Live_Launch_Coverage_-_SLS_Launch_Vehicle_Camera%2C_Switched_Feed_%28KSC-20260401-MH-AJN01-0001%29.webm', 'https://upload.wikimedia.org/wikipedia/commons/c/c7/Artemis_I_%E2%80%93_SLS_Launch_and_Mission_Animation_%E2%80%93_Jan_2021_%28767297104813%29.webm', 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Orion_Approaches_Moon_for_Outbound_Powered_Flyby.jpg/1280px-Orion_Approaches_Moon_for_Outbound_Powered_Flyby.jpg']
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/5/53/Artemis_II_Live_Launch_Coverage_-_SLS_Launch_Vehicle_Camera%2C_Switched_Feed_%28KSC-20260401-MH-AJN01-0001%29.webm',
+      'https://upload.wikimedia.org/wikipedia/commons/c/c7/Artemis_I_%E2%80%93_SLS_Launch_and_Mission_Animation_%E2%80%93_Jan_2021_%28767297104813%29.webm',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Orion_Approaches_Moon_for_Outbound_Powered_Flyby.jpg/1280px-Orion_Approaches_Moon_for_Outbound_Powered_Flyby.jpg'
+    ]
+  },
+  {
+    id: 'project-mercury',
+    parentId: 'nasa-root',
+    name: 'Project Mercury',
+    description: 'The first U.S. human spaceflight program, designed to put an astronaut into Earth orbit and safely recover them. It successfully launched six crewed flights between 1961 and 1963.',
+    layer: 'NASA / Space',
+    timelineId: 'project-mercury-start',
+    sources: ['NASA Project Mercury History Office'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Glenn62.jpg/1280px-Glenn62.jpg'
+    ]
+  },
+  {
+    id: 'project-gemini',
+    parentId: 'nasa-root',
+    name: 'Project Gemini',
+    description: 'The second U.S. human spaceflight program, focused on developing orbital rendezvous, docking, and extravehicular activity (EVA) techniques, preparing the foundation for the Apollo lunar missions.',
+    layer: 'NASA / Space',
+    timelineId: 'project-gemini-start',
+    sources: ['NASA Gemini Program Summaries'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Ed_White_First_American_Spacewalker_-_GPN-2000-001180.jpg/1280px-Ed_White_First_American_Spacewalker_-_GPN-2000-001180.jpg'
+    ]
+  },
+  {
+    id: 'project-apollo',
+    parentId: 'nasa-root',
+    name: 'Project Apollo',
+    description: "NASA's historic lunar landing program, which succeeded in landing the first humans on the Moon in 1969. Heavily analyzed in alternative circles for potential launch-pad anomalies and Masonic symbolic alignments.",
+    layer: 'NASA / Space',
+    timelineId: 'project-apollo-start',
+    sources: ['NASA Apollo Mission Logs'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Apollo_4_Launch_-_GPN-2000-000044.jpg/1280px-Apollo_4_Launch_-_GPN-2000-000044.jpg'
+    ]
+  },
+  {
+    id: 'apollo-11-landing-codex',
+    parentId: 'nasa-root',
+    name: 'Apollo 11 Moon Landing',
+    description: "Astronauts Neil Armstrong and Buzz Aldrin land the Apollo Lunar Module on the Moon, a historic feat that alternative researchers study for anomalous broadcast transmissions, shadows, and Masonic symbolic gestures.",
+    layer: 'NASA / Space',
+    timelineId: 'apollo-11-landing-event',
+    sources: ['NASA Mission Logs', 'Apollo 11 Press Kit'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/A_Man_on_the_Moon%2C_AS11-40-5903_%28cropped%29.jpg/1280px-A_Man_on_the_Moon%2C_AS11-40-5903_%28cropped%29.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/8/83/Restored_Apollo_11_Moonwalk_-_Original_NASA_EVA_Mission_Video_-_Walking_on_the_Moon.webm',
+      'https://upload.wikimedia.org/wikipedia/commons/a/a6/Apollo_11_Landing_-_first_steps_on_the_moon.ogv'
+    ]
+  },
+  {
+    id: 'skylab-program-codex',
+    parentId: 'nasa-root',
+    name: 'Skylab Program',
+    description: "The first United States space station, launched and operated by NASA from 1973 to 1979. It was occupied by three crewed missions who conducted solar physics, Earth observation, and materials science experiments.",
+    layer: 'NASA / Space',
+    sources: ['Skylab: A Chronology', 'NASA Archives'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Skylab_%28SL-4%29.jpg/1280px-Skylab_%28SL-4%29.jpg'
+    ]
+  },
+  {
+    id: 'space-shuttle-program-codex',
+    parentId: 'nasa-root',
+    name: 'Space Shuttle Program',
+    description: "The fourth human spaceflight program carried out by NASA, which accomplished routine transportation for Earth-to-orbit crew and cargo from 1981 to 2011, deploying the Hubble Space Telescope and building the ISS.",
+    layer: 'NASA / Space',
+    sources: ['Space Shuttle Decision', 'NASA Shuttle Mission Reports'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Space_Shuttle_Columbia_launching.jpg/1280px-Space_Shuttle_Columbia_launching.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/f/f9/STS-132_Liftoff_Space_Shuttle_Atlantis.ogv'
+    ]
   }
 ];
 

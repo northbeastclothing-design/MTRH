@@ -5565,7 +5565,7 @@ function App() {
     const isImage = /\.(jpg|jpeg|png|gif|webp|bmp)/i.test(url) || url.startsWith('/uploads/');
     const isYoutube = /youtube\.com|youtu\.be/i.test(url);
     const isDvidshub = /dvidshub\.net\/video\//i.test(url);
-    const isMp4 = /\.(mp4|webm|ogg)/i.test(url);
+    const isMp4 = /\.(mp4|webm|ogg|ogv)/i.test(url);
 
     if (isYoutube) {
       let embedId = '';
@@ -5607,12 +5607,15 @@ function App() {
     }
 
     if (isMp4) {
+      const mimeType = url.toLowerCase().endsWith('.webm') ? 'video/webm' : url.toLowerCase().endsWith('.ogv') ? 'video/ogg' : 'video/mp4';
       return (
         <video 
-          src={url} 
           controls 
           style={{ maxWidth: '240px', maxHeight: '135px', border: `1px solid ${theme.border}`, marginTop: '4px', borderRadius: '2px' }}
-        />
+        >
+          <source src={url} type={mimeType} />
+          Your browser does not support the video tag.
+        </video>
       );
     }
 
@@ -6958,17 +6961,24 @@ function App() {
                                           title="Video asset viewport"
                                         />
                                       ) : (
-                                        <video
-                                          src={(curAsset.url.includes('war.gov') || curAsset.url.includes('aaro.mil') || curAsset.url.includes('archives.gov'))
+                                        (() => {
+                                          const videoSrc = (curAsset.url.includes('war.gov') || curAsset.url.includes('aaro.mil') || curAsset.url.includes('archives.gov'))
                                             ? curAsset.url
                                             : curAsset.url.includes('.gov') || curAsset.url.includes('.mil')
                                               ? `/api/proxy-resource?url=${encodeURIComponent(curAsset.url)}`
-                                              : curAsset.url}
-                                          muted
-                                          playsInline
-                                          preload="metadata"
-                                          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                                        />
+                                              : curAsset.url;
+                                          const mimeType = videoSrc.toLowerCase().endsWith('.webm') ? 'video/webm' : videoSrc.toLowerCase().endsWith('.ogv') ? 'video/ogg' : 'video/mp4';
+                                          return (
+                                            <video
+                                              muted
+                                              playsInline
+                                              preload="metadata"
+                                              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                            >
+                                              <source src={videoSrc} type={mimeType} />
+                                            </video>
+                                          );
+                                        })()
                                       )}
                                     </div>
                                     
@@ -8587,16 +8597,24 @@ function App() {
                               title="High resolution dossier archive asset"
                             />
                           ) : (
-                            <video
-                              src={(curAsset.url.includes('war.gov') || curAsset.url.includes('aaro.mil') || curAsset.url.includes('archives.gov'))
+                            (() => {
+                              const videoSrc = (curAsset.url.includes('war.gov') || curAsset.url.includes('aaro.mil') || curAsset.url.includes('archives.gov'))
                                 ? curAsset.url
                                 : curAsset.url.includes('.gov') || curAsset.url.includes('.mil')
                                   ? `/api/proxy-resource?url=${encodeURIComponent(curAsset.url)}`
-                                  : curAsset.url}
-                              controls
-                              autoPlay
-                              style={{ width: '100%', height: '100%', outline: 'none', boxShadow: '0 20px 50px rgba(0,0,0,0.5)' }}
-                            />
+                                  : curAsset.url;
+                              const mimeType = videoSrc.toLowerCase().endsWith('.webm') ? 'video/webm' : videoSrc.toLowerCase().endsWith('.ogv') ? 'video/ogg' : 'video/mp4';
+                              return (
+                                <video
+                                  controls
+                                  autoPlay
+                                  style={{ width: '100%', height: '100%', outline: 'none', boxShadow: '0 20px 50px rgba(0,0,0,0.5)' }}
+                                >
+                                  <source src={videoSrc} type={mimeType} />
+                                  Your browser does not support the video tag.
+                                </video>
+                              );
+                            })()
                           )}
                         </motion.div>
                       ) : curAsset.type === 'audio' ? (
