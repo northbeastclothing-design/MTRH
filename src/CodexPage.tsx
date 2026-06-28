@@ -118,11 +118,55 @@ interface SVGLinePath {
 
 const MISSING_IMAGE_URL = '/icons/icon-missing-image.svg';
 
+const isVideoUrl = (url: string) => {
+  if (!url) return false;
+  const videoExtensions = ['.mp4', '.webm', '.ogg', '.mov'];
+  const lowerUrl = url.trim().toLowerCase();
+  return videoExtensions.some(ext => lowerUrl.includes(ext)) || 
+         lowerUrl.includes('youtube.com/embed') || 
+         lowerUrl.includes('youtube.com/watch') ||
+         lowerUrl.includes('youtu.be/') ||
+         lowerUrl.includes('vimeo.com') || 
+         lowerUrl.includes('dvidshub.net/video/embed') ||
+         lowerUrl.includes('dvidshub.net/video/');
+};
+
+const getEmbedUrl = (url: string) => {
+  if (!url) return '';
+  const trimmed = url.trim();
+  
+  // YouTube 
+  if (trimmed.includes('youtube.com/watch?v=')) {
+    const videoId = trimmed.split('v=')[1]?.split('&')[0];
+    return `https://www.youtube.com/embed/${videoId}`;
+  }
+  if (trimmed.includes('youtu.be/')) {
+    const videoId = trimmed.split('youtu.be/')[1]?.split('?')[0];
+    return `https://www.youtube.com/embed/${videoId}`;
+  }
+  
+  // DVIDS
+  if (trimmed.includes('dvidshub.net/video/')) {
+    if (trimmed.includes('/video/embed/')) {
+      return trimmed;
+    }
+    const parts = trimmed.split('/video/')[1]?.split('/');
+    const videoId = parts ? parts[0] : '';
+    return `https://www.dvidshub.net/video/embed/${videoId}`;
+  }
+
+  return trimmed;
+};
+
 const cleanAndProxyImageUrl = (url: any) => {
   if (!url || typeof url !== 'string') return MISSING_IMAGE_URL;
   
   const trimmedUrl = url.trim();
   if (trimmedUrl.includes('icon-missing-image.svg')) return MISSING_IMAGE_URL;
+
+  if (isVideoUrl(trimmedUrl)) {
+    return trimmedUrl;
+  }
   
   if (
     trimmedUrl.startsWith('/api/proxy') || 
@@ -1875,6 +1919,29 @@ export default function CodexPage({
 
                         const isBroken = !!brokenImages[imgUrl];
                         const imgSrc = isBroken ? MISSING_IMAGE_URL : cleanAndProxyImageUrl(imgUrl);
+
+                        if (isVideoUrl(imgUrl) && !isBroken) {
+                          const embedUrl = getEmbedUrl(imgUrl);
+                          return (
+                            <div style={{ width: '100%', height: '100%', position: 'relative', overflow: 'hidden' }}>
+                              {(imgUrl.includes('youtube.com') || imgUrl.includes('youtu.be')) ? (
+                                <iframe
+                                  src={`${embedUrl}?autoplay=0&controls=1&mute=1`}
+                                  frameBorder="0"
+                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                  allowFullScreen
+                                  style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0 }}
+                                />
+                              ) : (
+                                <video
+                                  src={imgUrl}
+                                  controls
+                                  style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                                />
+                              )}
+                            </div>
+                          );
+                        }
 
                         return (
                           <>

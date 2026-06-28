@@ -22660,7 +22660,92 @@ const chunk_new_additions: any[] = [
   }
 ];
 
+
+const chunk_nasa: any[] = [
+  {
+    id: 'nasa-root',
+    name: 'NASA & Space Exploration',
+    description: 'The civil space agency of the United States, spaceports, laboratories, and programs associated with historical lunar landings, interplanetary science, and advanced launch systems.',
+    layer: 'NASA / Space'
+  },
+  {
+    id: 'anomaly-Nasa-Space-Cape-Canaveral',
+    parentId: 'nasa-root',
+    name: 'Kennedy Space Center (Cape Canaveral)',
+    description: "NASA's primary launch facility for human spaceflight. Established in 1962, it has served as the launch point for all Apollo lunar missions and Space Shuttle operations. Alternative theorists point to the geographic alignment of its launchpads, connections to military rocket development, and alleged anomalies in early Apollo mission footage and photography.",
+    layer: 'NASA / Space',
+    mapFeatureId: 'anomaly-Nasa-Space-Cape-Canaveral',
+    timelineId: 'apollo-11-landing-event',
+    sources: ['KSC Historical Reports', 'NASA Archives'],
+    images: [
+      'https://www.youtube.com/watch?v=s16ayjwFX7c',
+      'https://www.youtube.com/watch?v=OnoNITE-CLg',
+      'https://upload.wikimedia.org/wikipedia/commons/2/2e/Kennedy_Space_Center_visitor_complex.jpg'
+    ]
+  },
+  {
+    id: 'anomaly-Nasa-Space-Vandenberg',
+    parentId: 'nasa-root',
+    name: 'Vandenberg Space Force Base',
+    description: 'A major military and civil spaceport in California. Used by NASA for polar orbit launches, satellite deployments, and classified joint operations with the National Reconnaissance Office (NRO). Alternative space researchers associate Vandenberg with top-secret space defense programs and satellite-based monitoring anomalies.',
+    layer: 'NASA / Space',
+    mapFeatureId: 'anomaly-Nasa-Space-Vandenberg',
+    sources: ['U.S. Space Force Fact Sheets', 'NRO Archives'],
+    images: [
+      'https://www.youtube.com/watch?v=0tWn24zW2tY',
+      'https://www.youtube.com/watch?v=2Tz1P8sQO-4',
+      'https://upload.wikimedia.org/wikipedia/commons/9/99/Atlas_V_launch_with_InSight_from_Vandenberg.jpg'
+    ]
+  },
+  {
+    id: 'anomaly-Nasa-Space-JPL',
+    parentId: 'nasa-root',
+    name: 'Jet Propulsion Laboratory (JPL)',
+    description: "Federally funded R&D center managed by Caltech. Originally established in the 1930s by rocket pioneer and O.T.O. occultist Jack Parsons, Frank Malina, and the 'Suicide Squad.' JPL pioneered early jet propulsion and spacecraft control. Its history is heavily linked to alternative theories of ritual magic and occult symbolism underlying civilian space exploration.",
+    layer: 'NASA / Space',
+    mapFeatureId: 'anomaly-Nasa-Space-JPL',
+    timelineId: 'jpl-founded-event',
+    sources: ['JPL Historical Archives', 'Strange Angel'],
+    images: [
+      'https://www.youtube.com/watch?v=NzKzM7_Gz8s',
+      'https://www.youtube.com/watch?v=gYQwyAMTKtE',
+      'https://upload.wikimedia.org/wikipedia/commons/3/30/Jet_Propulsion_Laboratory.jpg'
+    ]
+  },
+  {
+    id: 'anomaly-Nasa-Space-HQ',
+    parentId: 'nasa-root',
+    name: 'NASA Headquarters',
+    description: 'The central administrative headquarters of NASA in Washington, D.C. Established in 1958, it coordinates all NASA operations, aeronautics research, and space exploration projects. Conspiracists view it as the decision center for major civilian space coverups, photo redaction, and global space communication policies.',
+    layer: 'NASA / Space',
+    mapFeatureId: 'anomaly-Nasa-Space-HQ',
+    timelineId: 'nasa-founded-event',
+    sources: ['NASA Official Records'],
+    images: [
+      'https://www.youtube.com/watch?v=xZtH3k3dD_Y',
+      'https://upload.wikimedia.org/wikipedia/commons/8/86/NASA_Headquarters_Washington_DC.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/b/b3/Mary_W_Jackson_NASA_Headquarters_sign_June_2020.jpg'
+    ]
+  },
+  {
+    id: 'anomaly-Nasa-Space-Artemis-Program',
+    parentId: 'nasa-root',
+    name: 'Artemis Program SLS Launchpad (LC-39B)',
+    description: 'Launch Complex 39B at Kennedy Space Center, the primary launchpad for the Space Launch System (SLS) carrying the Orion spacecraft for the Artemis lunar missions.',
+    layer: 'NASA / Space',
+    mapFeatureId: 'anomaly-Nasa-Space-Artemis-Program',
+    timelineId: 'artemis-program-event',
+    sources: ['NASA Artemis Program Overview'],
+    images: [
+      'https://www.youtube.com/watch?v=cM5G5v5Zk1o',
+      'https://upload.wikimedia.org/wikipedia/commons/c/cd/Artemis_I_SLS_rolls_out_to_LC-39B.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/e/e0/Artemis_I_SLS_at_LC-39B.jpg'
+    ]
+  }
+];
+
 export const TERM_TREE_DATA: TermNode[] = [
+  ...chunk_nasa,
   ...chunk_new_additions,
   ...chunk_new_religion,
   ...chunk_0,
