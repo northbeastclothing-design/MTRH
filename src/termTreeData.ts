@@ -22679,8 +22679,8 @@ const chunk_nasa: any[] = [
     timelineId: 'apollo-11-landing-event',
     sources: ['KSC Historical Reports', 'NASA Archives'],
     images: [
-      'https://upload.wikimedia.org/wikipedia/commons/3/3f/Flight_of_AS-506_%28Apollo_11%29_from_lift-off_to_1_min_after_S-IC_stage_separation%2C_VJSC_1425D-q1.ogv',
-      'https://upload.wikimedia.org/wikipedia/commons/f/f9/STS-132_Liftoff_Space_Shuttle_Atlantis.ogv',
+      'https://upload.wikimedia.org/wikipedia/commons/8/88/Jack_King%27s_Apollo_11_Launch_Commentary_o4OBKOlgmfo.webm',
+      'https://upload.wikimedia.org/wikipedia/commons/8/89/Launch_of_Space_Shuttle_Atlantis_STS-129.webm',
       'https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Apollo_11_Launch_-_GPN-2000-000630.jpg/1280px-Apollo_11_Launch_-_GPN-2000-000630.jpg'
     ]
   },
@@ -22709,7 +22709,7 @@ const chunk_nasa: any[] = [
     sources: ['JPL Historical Archives', 'Strange Angel'],
     images: [
       'https://upload.wikimedia.org/wikipedia/commons/c/ce/Perseverance_Entry_Descent_Landing.webm',
-      'https://upload.wikimedia.org/wikipedia/commons/6/67/Mars_Curiosity_video_msl20120810.ogv',
+      'https://upload.wikimedia.org/wikipedia/commons/d/dc/Mars_Science_Laboratory_Curiosity_Rover_Animation.webm',
       'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Site_du_JPL_en_Californie.jpg/1280px-Site_du_JPL_en_Californie.jpg'
     ]
   },
@@ -22724,7 +22724,7 @@ const chunk_nasa: any[] = [
     sources: ['NASA Official Records'],
     images: [
       'https://upload.wikimedia.org/wikipedia/commons/8/83/Restored_Apollo_11_Moonwalk_-_Original_NASA_EVA_Mission_Video_-_Walking_on_the_Moon.webm',
-      'https://upload.wikimedia.org/wikipedia/commons/a/a6/Apollo_11_Landing_-_first_steps_on_the_moon.ogv',
+      'https://upload.wikimedia.org/wikipedia/commons/7/79/Historic_Apollo_11_Moonwalk_Footage.webm',
       'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/NASA_HQ_Building.jpg/1280px-NASA_HQ_Building.jpg'
     ]
   },
@@ -22790,7 +22790,7 @@ const chunk_nasa: any[] = [
     images: [
       'https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/A_Man_on_the_Moon%2C_AS11-40-5903_%28cropped%29.jpg/1280px-A_Man_on_the_Moon%2C_AS11-40-5903_%28cropped%29.jpg',
       'https://upload.wikimedia.org/wikipedia/commons/8/83/Restored_Apollo_11_Moonwalk_-_Original_NASA_EVA_Mission_Video_-_Walking_on_the_Moon.webm',
-      'https://upload.wikimedia.org/wikipedia/commons/a/a6/Apollo_11_Landing_-_first_steps_on_the_moon.ogv'
+      'https://upload.wikimedia.org/wikipedia/commons/7/79/Historic_Apollo_11_Moonwalk_Footage.webm'
     ]
   },
   {
@@ -22813,7 +22813,7 @@ const chunk_nasa: any[] = [
     sources: ['Space Shuttle Decision', 'NASA Shuttle Mission Reports'],
     images: [
       'https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Space_Shuttle_Columbia_launching.jpg/1280px-Space_Shuttle_Columbia_launching.jpg',
-      'https://upload.wikimedia.org/wikipedia/commons/f/f9/STS-132_Liftoff_Space_Shuttle_Atlantis.ogv'
+      'https://upload.wikimedia.org/wikipedia/commons/8/89/Launch_of_Space_Shuttle_Atlantis_STS-129.webm'
     ]
   }
 ];
