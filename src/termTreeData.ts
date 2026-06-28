@@ -7168,6 +7168,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'enochian-desert-dudael',
     parentId: 'enochian-sites',
+    images: ['/images/enochian/dudael-2.jpg'],
     name: 'Desert of Dudael (Imprisonment of Azazel)',
     description: 'The jagged desert pit where the Archangel Raphael bound the chief Watcher Azazel and covered him with darkness, to remain until the Day of Judgment.',
     layer: 'Enochian Sites',
@@ -7238,6 +7239,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'mt-hermon',
     parentId: 'enochian-sites',
+    images: ['/images/enochian/hermon-2.jpg'],
     name: 'Mount Hermon',
     description: 'The highest peak in the Levant. In Enochian texts, it is the exact location where the 200 Watchers swore mutual pacts to take wives and descend among men.',
     translations: [
@@ -7301,6 +7303,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'behemoth-enoch',
     parentId: 'enochian-creatures',
+    images: ['/images/enochian/behemoth_desert.jpg'],
     relatedIds: ['leviathin'],
     name: 'Behemoth (Enochian Desert Beast)',
     description: 'A primordial male monster described in the Book of Enoch who was separated from Leviathan on the day of creation to dwell in the vast, dry desert of Dundayin, east of the Garden of Eden. Under Jewish and Enochic eschatology, both beasts are destined to be part of a final feast.',
@@ -7357,6 +7360,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'chalkydri',
     parentId: 'enochian-creatures',
+    images: ['/images/enochian/chalkydri_phoenixes_sun.jpg'],
     secondaryParentIds: ['heaven-4'],
     name: 'Chalkydri',
     description: 'Enochian solar elements/creatures of the Fourth Heaven, described in 2 Enoch as hybrid beings with crocodile heads, lion feet/tails, twelve wings, and rainbow-like iridescence who accompany the sun and sing at dawn.',
@@ -7366,6 +7370,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'phoenixes-enoch',
     parentId: 'enochian-creatures',
+    images: ['/images/enochian/chalkydri_phoenixes_sun.jpg'],
     secondaryParentIds: ['heaven-4'],
     name: 'Phoenixes (Enochian Solar Attendants)',
     description: 'Fiery celestial creatures of the Fourth Heaven, described alongside the chalkydri as flying elements that accompany the chariot of the sun, bringing dew, heat, and singing praises to the Creator.',
