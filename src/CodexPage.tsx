@@ -562,6 +562,14 @@ export default function CodexPage({
   const isOnlyApocryphal = (node: TermNode): boolean => {
     if (!node.isApocryphal) return false;
     
+    // If it is part of Myths / Legends or The Occult, it is non-canonical (so it remains apocryphal)
+    const path = getPathToRoot(node.id);
+    const isMythOrOccult = path.includes('myths-legends-root') || path.includes('alchemy-occult');
+    if (isMythOrOccult) return true;
+
+    // If it has a canonical biblical connection, it is not purely apocryphal
+    if (hasCanonicalConnection(node)) return false;
+    
     // Genuinely biblical terms that also have isApocryphal: true will list 'Bible' in their sources
     const hasBibleSource = node.sources?.some(s => s.toLowerCase() === 'bible');
     if (hasBibleSource) return false;

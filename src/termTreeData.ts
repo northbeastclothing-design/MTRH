@@ -431,7 +431,6 @@ const chunk_0: any[] = [  {
     bibleVerses: ['They sacrificed to demons, not God, to gods that they didn’t know, to new gods that came up recently, which your fathers didn’t dread. — Deuteronomy 32:17 (https://www.biblegateway.com/passage/?search=Deuteronomy+32%3A17)', 'The demons begged him, saying, “If you cast us out, permit us to go away into the herd of pigs.” — Matthew 8:31 (https://www.biblegateway.com/passage/?search=Matthew+8%3A31)', 'You believe that God is one. You do well. The demons also believe, and shudder. — James 2:19 (https://www.biblegateway.com/passage/?search=James+2%3A19)'],
     sources: ['Book of Enoch', 'Book of Giants', 'Canonical Gospels'],
     secondaryParentIds: ['hauntings-br', 'cryptid-sightings-br'],
-    isApocryphal: true
   },  {
     id: 'shedim',
     parentId: 'demons',
@@ -497,7 +496,6 @@ const chunk_0: any[] = [  {
     relatedIds: ['fallen-angel'],
     bibleVerses: ['For our struggle is not against flesh and blood, but against the rulers, against the authorities, against the powers of this dark world and against the spiritual forces of evil in the heavenly realms. — Ephesians 6:12 (https://www.biblegateway.com/passage/?search=Ephesians+6%3A12)'],
     sources: ['Ephesians 6', 'Colossians 2'],
-    isApocryphal: true
   },  {
     id: 'asbeel',
     parentId: 'fallen-angel',
@@ -512,7 +510,6 @@ const chunk_0: any[] = [  {
     name: 'Beelzebub',
     description: 'Originally a Philistine god worshipped at Ekron (Baal-Zebub), later syncretized in Jewish and Christian demonology as a high-ranking prince of demons. Known as the \'Lord of the Flies,\' he is associated with pride, rebellion, and demonic hierarchy.',
     sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
-    isApocryphal: true,
     bibleVerses: ['But when the Pharisees heard it, they said, This fellow doth not cast out devils, but by Beelzebub the prince of the devils. — Matthew 12:24 (https://www.biblegateway.com/passage/?search=Matthew+12%3A24)', 'And Ahaziah fell down through a lattice... and sent messengers, and said unto them, Go, inquire of Baal-zebub the god of Ekron whether I shall recover of this disease. — 2 Kings 1:2 (https://www.biblegateway.com/passage/?search=2+Kings+1%3A2)']
   },  {
     id: 'asmodeus',
@@ -646,7 +643,6 @@ const chunk_0: any[] = [  {
     ],
     relatedIds: ['satan', 'fallen-angel'],
     sources: ['Book of Isaiah', 'Latin Vulgate Translation'],
-    isApocryphal: true,
     bibleVerses: ['How art thou fallen from heaven, O Lucifer, son of the morning! how art thou cut down to the ground, which didst weaken the nations! — Isaiah 14:12 (https://www.biblegateway.com/passage/?search=Isaiah+14%3A12)', 'Thou hast been in Eden the garden of God; every precious stone was thy covering... thou art the anointed cherub that covereth... — Ezekiel 28:13-14 (https://www.biblegateway.com/passage/?search=Ezekiel+28%3A13-14)']
   },  {
     id: 'yekun',
@@ -681,7 +677,6 @@ const chunk_0: any[] = [  {
       { lang: 'Hebrew', original: 'אֲבַדּוֹן', translit: 'Avaddon', meaning: 'Destruction / Place of Ruin' }
     ],
     sources: ['Book of Revelation', 'Book of Job'],
-    isApocryphal: true,
     bibleVerses: ['And they had a king over them, which is the angel of the bottomless pit, whose name in the Hebrew tongue is Abaddon, but in the Greek tongue hath his name Apollyon. — Revelation 9:11 (https://www.biblegateway.com/passage/?search=Revelation+9%3A11)', 'Hell and destruction [Hebrew: Abaddon] are before the Lord: how much more then the hearts of the children of men? — Proverbs 15:11 (https://www.biblegateway.com/passage/?search=Proverbs+15%3A11)']
   },  {
     id: 'leviathin',
@@ -689,7 +684,6 @@ const chunk_0: any[] = [  {
     name: 'Leviathin',
     description: 'Arrogance, Heresy Also known as: Serpent, dragon.',
     sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
-    isApocryphal: true,
     bibleVerses: ['Canst thou draw out leviathan with an hook? or his tongue with a cord which thou lettest down? — Job 41:1 (https://www.biblegateway.com/passage/?search=Job+41%3A1)', 'In that day the Lord with his sore and great and strong sword shall punish leviathan the piercing serpent, even leviathan that crooked serpent; and he shall slay the dragon that is in the sea. — Isaiah 27:1 (https://www.biblegateway.com/passage/?search=Isaiah+27%3A1)']
   },  {
     id: 'kasyade',
@@ -7029,28 +7023,24 @@ const chunk_1: any[] = [  {
     subLabel: 'Possible Nephilim Bloodline',
     name: 'Lahmi',
     description: 'A giant mentioned in biblical narratives. Lineage: Philistine. Parents/Origins: Anak and his wife.',
-    isApocryphal: true
   },  {
     id: 'ishbi-benob',
     parentId: 'nephilim-br',
     subLabel: 'Possible Nephilim Bloodline',
     name: 'Ishbi-Benob',
     description: 'A giant mentioned in biblical narratives. Lineage: Philistine. Parents/Origins: Rapha and his wife.',
-    isApocryphal: true
   },  {
     id: 'saph',
     parentId: 'nephilim-br',
     subLabel: 'Possible Nephilim Bloodline',
     name: 'Saph',
     description: 'A giant mentioned in biblical narratives. Lineage: Philistine.',
-    isApocryphal: true
   },  {
     id: 'zamzummim',
     parentId: 'nephilim-br',
     name: 'Zamzummim',
     description: 'An ancient tribe of giants who inhabited the region of Ammon. Described in Deuteronomy as a people great, many, and tall, as the Anakim, who were dispossessed and destroyed by the Ammonites.',
     timelineId: 'zamzummim',
-    isApocryphal: true,
     bibleVerses: ['(That also was deemed a land of giants; giants formerly dwelt there, and the Ammonites call them Zamzummim, a people great and many, and tall as the Anakim...) — Deuteronomy 2:20-21 (https://www.biblegateway.com/passage/?search=Deuteronomy+2%3A20-21)'],
     subLabel: 'Possible Nephilim Bloodline'
   },  {
@@ -7059,7 +7049,6 @@ const chunk_1: any[] = [  {
     name: 'Anakim',
     description: 'An ancient race of giants described in biblical narratives as descendants of Anak, noted for their formidable stature. They inhabited the hill country of Canaan before being defeated by Joshua and the Israelites.',
     timelineId: 'anakim',
-    isApocryphal: true,
     bibleVerses: ['A people great and tall, the descendants of the Anakim, whom you know, and of whom you have heard it said, \'Who can stand before the descendants of Anak?\' — Deuteronomy 9:2 (https://www.biblegateway.com/passage/?search=Deuteronomy+9%3A2)', 'And there we saw the giants, the sons of Anak, which come of the giants: and we were in our own sight as grasshoppers, and so we were in their sight. — Numbers 13:33 (https://www.biblegateway.com/passage/?search=Numbers+13%3A33)'],
     subLabel: 'Possible Nephilim Bloodline'
   },  {
@@ -7068,7 +7057,6 @@ const chunk_1: any[] = [  {
     subLabel: 'Possible Nephilim Bloodline',
     name: 'Enakim',
     description: 'A variant name for the Anakim, representing the formidable giant people group of Canaan descended from Anak, noted in Deuteronomy as a great and tall people.',
-    isApocryphal: true,
     bibleVerses: ['A people great and tall, the descendants of the Anakim, whom you know, and of whom you have heard it said, \'Who can stand before the descendants of Anak?\' — Deuteronomy 9:2 (https://www.biblegateway.com/passage/?search=Deuteronomy+9%3A2)']
   },  {
     id: 'horim',
@@ -7076,7 +7064,6 @@ const chunk_1: any[] = [  {
     subLabel: 'Possible Nephilim Bloodline',
     name: 'Horim',
     description: 'An ancient people group or tribe of cave-dwellers who inhabited Mount Seir (Edom). Associated in scriptural records with the giant lineages of Canaan, they were dispossessed and succeeded by the descendants of Esau.',
-    isApocryphal: true,
     bibleVerses: ['The Horites also formerly dwelt in Seir, but the descendants of Esau dispossessed them and destroyed them from before them... — Deuteronomy 2:12 (https://www.biblegateway.com/passage/?search=Deuteronomy+2%3A12)']
   },  {
     id: 'anak',
@@ -7084,35 +7071,30 @@ const chunk_1: any[] = [  {
     subLabel: 'Possible Nephilim Bloodline',
     name: 'Anak',
     description: 'A giant mentioned in biblical narratives. Lineage: Son of Arba. Parents/Origins: Arba and his wife.',
-    isApocryphal: true
   },  {
     id: 'ahiman',
     parentId: 'nephilim-br',
     subLabel: 'Possible Nephilim Bloodline',
     name: 'Ahiman',
     description: 'A giant mentioned in biblical narratives. Lineage: Son of Anak. Parents/Origins: Anak and his wife.',
-    isApocryphal: true
   },  {
     id: 'sheshai',
     parentId: 'nephilim-br',
     subLabel: 'Possible Nephilim Bloodline',
     name: 'Sheshai',
     description: 'A giant mentioned in biblical narratives. Lineage: Son of Anak. Parents/Origins: Anak and his wife.',
-    isApocryphal: true
   },  {
     id: 'talmai',
     parentId: 'nephilim-br',
     subLabel: 'Possible Nephilim Bloodline',
     name: 'Talmai',
     description: 'A giant mentioned in biblical narratives. Lineage: Son of Anak. Parents/Origins: Anak and his wife.',
-    isApocryphal: true
   },  {
     id: 'sihon',
     parentId: 'nephilim-br',
     subLabel: 'Possible Nephilim Bloodline',
     name: 'Sihon',
     description: 'A giant mentioned in biblical narratives. Lineage: King of the Amorites. Parents/Origins: Sihon and a human woman.',
-    isApocryphal: true
   },  {
     id: 'watchers',
     parentId: 'nephilim-br',
@@ -7151,7 +7133,6 @@ const chunk_1: any[] = [  {
     relatedIds: ['biblical-figures'],
     bibleVerses: ['A champion named Goliath, who was from Gath, came out of the Philistine camp. His height was six cubits and a span. — 1 Samuel 17:4'],
     sources: ['First Book of Samuel', 'Historical Chronicles'],
-    isApocryphal: true
   },  {
     id: 'og-bashan',
     parentId: 'nephilim-br',
@@ -7163,7 +7144,6 @@ const chunk_1: any[] = [  {
     ],
     relatedIds: ['enochian-sites', 'megaliths'],
     bibleVerses: ['Og king of Bashan was the last of the Rephaim. His bed was decorated with iron and was more than nine cubits long and four cubits wide... — Deuteronomy 3:11'],
-    isApocryphal: true
   },  {
     id: 'enochian-sites',
     parentId: 'christianity',
@@ -7272,7 +7252,6 @@ const chunk_1: any[] = [  {
     relatedIds: ['abraham-fig'],
     bibleVerses: ['So the field and the cave in it were deeded to Abraham by the Hittites as a burial place. — Genesis 23:20'],
     sources: ['Apocryphal Texts', 'Book of Enoch', 'Historical Gazeteers'],
-    isApocryphal: true
   },  {
     id: 'biblical-events',
     parentId: 'christianity',
