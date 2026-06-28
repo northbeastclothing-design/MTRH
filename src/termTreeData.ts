@@ -526,6 +526,7 @@ const chunk_0: any[] = [  {
     description: 'An order of angels also known as the Watchers. According to the Book of Enoch, a group of two hundred Grigori led by Semyaza descended to Mount Hermon, took human wives, taught humanity forbidden arts, and fathered the giant Nephilim.',
     sources: ['Book of Enoch', 'Second Book of Enoch'],
     isApocryphal: true,
+    relatedIds: ['heaven-2', 'heaven-5'],
     bibleVerses: ['These are the Grigori (Watchers), who with their prince Satanail rejected the Lord... and they went down on the earth, and performed a deed outside their covenant... — 2 Enoch 18:3 (https://www.sacred-texts.com/bib/boe/index.htm)']
   },  {
     id: 'nephilim',
@@ -7252,6 +7253,165 @@ const chunk_1: any[] = [  {
     relatedIds: ['abraham-fig'],
     bibleVerses: ['So the field and the cave in it were deeded to Abraham by the Hittites as a burial place. — Genesis 23:20'],
     sources: ['Apocryphal Texts', 'Book of Enoch', 'Historical Gazeteers'],
+  },  {
+  },  {
+    id: 'enochian-cosmology',
+    parentId: 'christianity',
+    name: 'Enochian Cosmology',
+    description: 'The layered structure of the cosmos, heavenly spheres, and primordial creation elements described in the Book of Enoch and the Secrets of Enoch (2 Enoch).',
+    isApocryphal: true
+  },  {
+    id: 'adoil',
+    parentId: 'enochian-cosmology',
+    name: 'Adoil',
+    description: 'A primordial light-bearing entity summoned by God from the invisible depths in 2 Enoch. God commands Adoil to disintegrate, and from his bursting belly emerges the great, primordial light that serves as the foundation for all upper, spiritual creations and the divine throne.',
+    isApocryphal: true,
+    sources: ['Second Book of Enoch'],
+    bibleVerses: ['I commanded in the very lowest parts that visible things should come down from invisible... I called Adoil, a very great one, with a belly of great light. And I said to him: \'Become undone, Adoil, and let the visible come out of thee.\' — 2 Enoch 24:4-25:1']
+  },  {
+    id: 'archas',
+    parentId: 'enochian-cosmology',
+    name: 'Archas',
+    description: 'A heavy, red, and hard primordial entity summoned by God from the invisible depths in 2 Enoch. Upon command, Archas disintegrates, releasing a dark, dense age/substance that serves as the foundation for the lower, physical creation and the material world.',
+    isApocryphal: true,
+    sources: ['Second Book of Enoch'],
+    bibleVerses: ['And I called Archas, a second one, hard, heavy, and very red. And I said to him: \'Become undone, Archas, and let the visible come out of thee.\' And he became undone... and there came out a great and very dark age... — 2 Enoch 26:1-2']
+  },  {
+    id: 'pravuil',
+    parentId: 'elohim',
+    name: 'Pravuil',
+    description: 'An archangel in 2 Enoch, noted for having exceptional wisdom and serving as the Lord\'s celestial scribe. He was tasked with bringing Enoch books from the heavenly storehouses and a quick-writing reed to record the mysteries of creation.',
+    isApocryphal: true,
+    sources: ['Second Book of Enoch', 'Jewish Pseudepigrapha'],
+    bibleVerses: ['And the Lord called Pravuil, one of his archangels, who was quick in wisdom... and the Lord said to Pravuil: \'Bring out the books from my store-houses, and a reed of quick-writing, and give it to Enoch...\' — 2 Enoch 22:11-12 (https://www.sacred-texts.com/bib/boe/index.htm)']
+  },  {
+    id: 'sabaoth',
+    parentId: 'gnosticism',
+    name: 'Sabaoth (Gnostic Archon)',
+    description: 'In Gnostic cosmology (such as the Apocryphon of John and Hypostasis of the Archons), Sabaoth is a son of Yaldabaoth. After witnessing his father\'s boast, Sabaoth repented, sang praises to Sophia, and was elevated to rule over the seventh heaven, becoming the Lord of forces and representing a righteous celestial ruler distinct from the Demiurge.',
+    isApocryphal: true,
+    sources: ['Nag Hammadi Library', 'Apocryphon of John', 'Hypostasis of the Archons']
+  },  {
+    id: 'behemoth-enoch',
+    parentId: 'enochian-cosmology',
+    name: 'Behemoth (Enochian Desert Beast)',
+    description: 'A primordial male monster described in the Book of Enoch who was separated from Leviathan on the day of creation to dwell in the vast, dry desert of Dundayin, east of the Garden of Eden. Under Jewish and Enochic eschatology, both beasts are destined to be part of a final feast.',
+    isApocryphal: true,
+    sources: ['Book of Enoch', 'Book of Job', 'Jewish Eschatology'],
+    bibleVerses: ['And on that day were two monsters parted, a female monster named Leviathan, to dwell in the abysses of the ocean... but the male is named Behemoth, who occupied with his breast a waste wilderness named Dundayin... — 1 Enoch 60:7-8 (https://www.sacred-texts.com/bib/boe/boe063.htm)']
+  },  {
+    id: 'ioanit-stations',
+    parentId: 'enochian-cosmology',
+    name: 'Ioanit Stations of Light',
+    description: 'A mysterious celestial order or regiment of light seen by Enoch in the Seventh Heaven, standing alongside the archangels and principalities. The term\'s origin is highly debated, potentially relating to Coptic or Hebrew transcriptions.',
+    isApocryphal: true,
+    sources: ['Second Book of Enoch'],
+    bibleVerses: ['And those men took me from thence, and led me up on to the seventh heaven... and the nine regiments, and the Ioanit stations of light... — 2 Enoch 20:1-3']
+  },  {
+    id: 'heavens-levels',
+    parentId: 'enochian-cosmology',
+    name: 'The Levels of Heaven',
+    description: 'The layered structure of the celestial realms through which Enoch ascends, as detailed in the Secrets of Enoch (2 Enoch).',
+    isApocryphal: true
+  },  {
+    id: 'heaven-1',
+    parentId: 'heavens-levels',
+    name: 'First Heaven',
+    description: 'The lowest celestial sphere where Enoch observes a great sea (the upper waters), the rulers of the star orders, and the storehouses/chambers of snow, ice, clouds, and dew guarded by angels.',
+    isApocryphal: true,
+    sources: ['Second Book of Enoch'],
+    bibleVerses: ['They brought me up into the first heaven, and showed me a very great sea... and they showed me the treasuries of the snow and ice... — 2 Enoch 3:1-5:1']
+  },  {
+    id: 'heaven-2',
+    parentId: 'heavens-levels',
+    name: 'Second Heaven',
+    description: 'A dark, gloomy prison where the rebellious angels (Watchers/Grigori) are suspended in chains, weeping and waiting in darkness for the great day of judgment.',
+    isApocryphal: true,
+    sources: ['Second Book of Enoch'],
+    bibleVerses: ['And those men took me, and led me up on to the second heaven, and showed me darkness, gloomier than the darkness on earth... and I saw prisoners suspended, waiting for the great and boundless judgment... — 2 Enoch 7:1-2'],
+    relatedIds: ['grigori']
+  },  {
+    id: 'heaven-3',
+    parentId: 'heavens-levels',
+    name: 'Third Heaven',
+    description: 'A dual realm containing both the lush, fragrant Paradise (Garden of Eden) prepared for the righteous with the Tree of Life in its midst, and a terrifying place of fire, ice, and dark torture in the northern part for the wicked.',
+    isApocryphal: true,
+    sources: ['Second Book of Enoch'],
+    bibleVerses: ['And those men took me from thence, and led me up on to the third heaven, and placed me there; and I looked down, and saw the produce of these places... and in the midst of the trees that of life... and in the northern part, I saw a very terrible place of fire and ice... — 2 Enoch 8:1-10:1']
+  },  {
+    id: 'heaven-4',
+    parentId: 'heavens-levels',
+    name: 'Fourth Heaven',
+    description: 'The sphere of solar and lunar paths, showing the orbits, gates, and chariots of the Sun and Moon. It is guarded and accompanied by the solar spirits: the Chalkydri and Phoenixes.',
+    isApocryphal: true,
+    sources: ['Second Book of Enoch'],
+    bibleVerses: ['Those men took me, and led me up on to the fourth heaven, and showed me all the successive goings, and all the rays of the light of sun and moon... and the chalkydri and phoenixes... — 2 Enoch 11:1-12:1']
+  },  {
+    id: 'chalkydri',
+    parentId: 'heaven-4',
+    name: 'Chalkydri',
+    description: 'Enochian solar elements/creatures of the Fourth Heaven, described in 2 Enoch as hybrid beings with crocodile heads, lion feet/tails, twelve wings, and rainbow-like iridescence who accompany the sun and sing at dawn.',
+    isApocryphal: true,
+    sources: ['Second Book of Enoch'],
+    bibleVerses: ['And in the midst of the sun path, there go spirits, chalkydri and phoenixes, with twelve wings... having the head of a crocodile, the feet and tail of a lion... — 2 Enoch 12:1-2']
+  },  {
+    id: 'phoenixes-enoch',
+    parentId: 'heaven-4',
+    name: 'Phoenixes (Enochian Solar Attendants)',
+    description: 'Fiery celestial creatures of the Fourth Heaven, described alongside the chalkydri as flying elements that accompany the chariot of the sun, bringing dew, heat, and singing praises to the Creator.',
+    isApocryphal: true,
+    sources: ['Second Book of Enoch'],
+    bibleVerses: ['And in the midst of the sun path, there go spirits, chalkydri and phoenixes... — 2 Enoch 12:1']
+  },  {
+    id: 'heaven-5',
+    parentId: 'heavens-levels',
+    name: 'Fifth Heaven',
+    description: 'The silent realm of the Grigori (Watchers) who sit in sorrow and dejection, mourning their fallen brethren who descended to earth. Enoch encourages them to sing praises to God to break their silence.',
+    isApocryphal: true,
+    sources: ['Second Book of Enoch'],
+    bibleVerses: ['And those men took me up on to the fifth heaven, and I saw there many and countless soldiers, called Grigori... and they sat down in sadness and silent... — 2 Enoch 18:1-3'],
+    relatedIds: ['grigori']
+  },  {
+    id: 'heaven-6',
+    parentId: 'heavens-levels',
+    name: 'Sixth Heaven',
+    description: 'The dwelling of the seven groups of angels who regulate the paths of stars, sun, moon, seasons, and the lives and souls of men. They write down all deeds, accompanied by cherubim and phoenixes singing in harmony.',
+    isApocryphal: true,
+    sources: ['Second Book of Enoch'],
+    bibleVerses: ['And those men took me from thence, and led me up on to the sixth heaven, and I saw there seven groups of angels, very bright and glorious... who write down all the lives of men before the face of the Lord... — 2 Enoch 19:1-3']
+  },  {
+    id: 'heaven-7',
+    parentId: 'heavens-levels',
+    name: 'Seventh Heaven',
+    description: 'A highly luminous realm containing the armies of archangels, principalities, powers, cherubim, seraphim, the nine regiments, and the mysterious Ioanit stations of light, all worshiping before the distant throne of God.',
+    isApocryphal: true,
+    sources: ['Second Book of Enoch'],
+    bibleVerses: ['And those men took me from thence, and led me up on to the seventh heaven, and I saw there a very great light, and fiery troops of great archangels... and the nine regiments, and the Ioanit stations of light... — 2 Enoch 20:1-3'],
+    relatedIds: ['ioanit-stations']
+  },  {
+    id: 'heaven-8',
+    parentId: 'heavens-levels',
+    name: 'Eighth Heaven (Muzaloth)',
+    description: 'Also called Muzaloth. The celestial sphere above the seventh heaven that governs the changing of the seasons and holds the twelve constellations of the zodiac along their orbits.',
+    isApocryphal: true,
+    sources: ['Second Book of Enoch'],
+    bibleVerses: ['And the wind took me, and brought me to the eighth heaven, which is called in the Hebrew tongue Muzaloth, the changer of the seasons, who carries the twelve constellations... — 2 Enoch 21:6 (Slavonic manuscript variants)']
+  },  {
+    id: 'heaven-9',
+    parentId: 'heavens-levels',
+    name: 'Ninth Heaven (Kuchavim)',
+    description: 'Also called Kuchavim. The sphere of the celestial mansions or homes where the twelve constellations of the zodiac reside in the highest firmament.',
+    isApocryphal: true,
+    sources: ['Second Book of Enoch'],
+    bibleVerses: ['And the wind brought me to the ninth heaven, which is called in the Hebrew tongue Kuchavim, where the houses of the twelve constellations are... — 2 Enoch 21:6']
+  },  {
+    id: 'heaven-10',
+    parentId: 'heavens-levels',
+    name: 'Tenth Heaven (Aravat)',
+    description: 'Also called Aravat (Aravoth). The highest, most sacred heaven where God\'s glorious throne stands, surrounded by seraphim and cherubim, and where Enoch is granted a vision of the Divine Face.',
+    isApocryphal: true,
+    sources: ['Second Book of Enoch'],
+    bibleVerses: ['And I saw the tenth heaven, which is called Aravat, where the appearance of the face of the Lord is like iron in a fire... and the throne of the Lord is there... — 2 Enoch 22:1']
   },  {
     id: 'biblical-events',
     parentId: 'christianity',
