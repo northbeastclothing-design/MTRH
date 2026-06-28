@@ -1966,9 +1966,10 @@ export default function CodexPage({
                               ) : (
                                 <video
                                   controls
+                                  referrerPolicy="no-referrer"
                                   style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                                 >
-                                  <source src={imgUrl} type={imgUrl.toLowerCase().endsWith('.webm') ? 'video/webm' : imgUrl.toLowerCase().endsWith('.ogv') ? 'video/ogg' : 'video/mp4'} />
+                                  <source src={imgUrl.startsWith('http') ? `/api/proxy-resource?url=${encodeURIComponent(imgUrl)}` : imgUrl} type={imgUrl.toLowerCase().endsWith('.webm') ? 'video/webm' : imgUrl.toLowerCase().endsWith('.ogv') ? 'video/ogg' : 'video/mp4'} />
                                   Your browser does not support the video tag.
                                 </video>
                               )}
@@ -2723,9 +2724,10 @@ export default function CodexPage({
                     <video
                       controls
                       autoPlay
+                      referrerPolicy="no-referrer"
                       style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                     >
-                      <source src={imgUrl} type={imgUrl.toLowerCase().endsWith('.webm') ? 'video/webm' : imgUrl.toLowerCase().endsWith('.ogv') ? 'video/ogg' : 'video/mp4'} />
+                      <source src={imgUrl.startsWith('http') ? `/api/proxy-resource?url=${encodeURIComponent(imgUrl)}` : imgUrl} type={imgUrl.toLowerCase().endsWith('.webm') ? 'video/webm' : imgUrl.toLowerCase().endsWith('.ogv') ? 'video/ogg' : 'video/mp4'} />
                       Your browser does not support the video tag.
                     </video>
                   )}

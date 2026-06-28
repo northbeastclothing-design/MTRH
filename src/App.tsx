@@ -6962,17 +6962,16 @@ function App() {
                                         />
                                       ) : (
                                         (() => {
-                                          const videoSrc = (curAsset.url.includes('war.gov') || curAsset.url.includes('aaro.mil') || curAsset.url.includes('archives.gov'))
-                                            ? curAsset.url
-                                            : curAsset.url.includes('.gov') || curAsset.url.includes('.mil')
-                                              ? `/api/proxy-resource?url=${encodeURIComponent(curAsset.url)}`
-                                              : curAsset.url;
-                                          const mimeType = videoSrc.toLowerCase().endsWith('.webm') ? 'video/webm' : videoSrc.toLowerCase().endsWith('.ogv') ? 'video/ogg' : 'video/mp4';
+                                          const videoSrc = curAsset.url.startsWith('http')
+                                            ? `/api/proxy-resource?url=${encodeURIComponent(curAsset.url)}`
+                                            : curAsset.url;
+                                          const mimeType = curAsset.url.toLowerCase().endsWith('.webm') ? 'video/webm' : curAsset.url.toLowerCase().endsWith('.ogv') ? 'video/ogg' : 'video/mp4';
                                           return (
                                             <video
                                               muted
                                               playsInline
                                               preload="metadata"
+                                              referrerPolicy="no-referrer"
                                               style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                                             >
                                               <source src={videoSrc} type={mimeType} />
@@ -8598,16 +8597,15 @@ function App() {
                             />
                           ) : (
                             (() => {
-                              const videoSrc = (curAsset.url.includes('war.gov') || curAsset.url.includes('aaro.mil') || curAsset.url.includes('archives.gov'))
-                                ? curAsset.url
-                                : curAsset.url.includes('.gov') || curAsset.url.includes('.mil')
-                                  ? `/api/proxy-resource?url=${encodeURIComponent(curAsset.url)}`
-                                  : curAsset.url;
-                              const mimeType = videoSrc.toLowerCase().endsWith('.webm') ? 'video/webm' : videoSrc.toLowerCase().endsWith('.ogv') ? 'video/ogg' : 'video/mp4';
+                              const videoSrc = curAsset.url.startsWith('http')
+                                ? `/api/proxy-resource?url=${encodeURIComponent(curAsset.url)}`
+                                : curAsset.url;
+                              const mimeType = curAsset.url.toLowerCase().endsWith('.webm') ? 'video/webm' : curAsset.url.toLowerCase().endsWith('.ogv') ? 'video/ogg' : 'video/mp4';
                               return (
                                 <video
                                   controls
                                   autoPlay
+                                  referrerPolicy="no-referrer"
                                   style={{ width: '100%', height: '100%', outline: 'none', boxShadow: '0 20px 50px rgba(0,0,0,0.5)' }}
                                 >
                                   <source src={videoSrc} type={mimeType} />

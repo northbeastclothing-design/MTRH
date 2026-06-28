@@ -851,7 +851,7 @@ ${modLink}
     }
   });
 
-  // Image Proxy Route to bypass hotlinking and CORS
+  // Image/Video Proxy Route to bypass hotlinking, CORS, and support range requests
   app.get("/api/proxy-resource", async (req, res) => {
     const url = req.query.url as string;
     if (!url) return res.status(400).send("URL is required");
@@ -868,50 +868,57 @@ ${modLink}
       }
 
       const domain = new URL(url).hostname;
+      
+      const headers: Record<string, string> = {
+        'User-Agent': 'MTRH-Interactive-Map/1.0 (contact: info@mtrhmap.org; development)',
+        'Accept': '*/*',
+        'Accept-Language': 'en-US,en;q=0.9',
+        'Referer': referer,
+        'Host': domain
+      };
 
-      const response = await fetch(url, {
-        headers: {
-          'User-Agent': 'MTRH-Interactive-Map/1.0 (contact: info@mtrhmap.org; development)',
-          'Accept': 'image/avif,image/webp,image/apng,image/svg+xml,image/*,application/pdf,video/*,*/*;q=0.8',
-          'Accept-Language': 'en-US,en;q=0.9',
-          'Cache-Control': 'no-cache',
-          'Referer': referer,
-          'Host': domain
-        }
-      });
-      
-      if (!response.ok) {
-        console.warn(`Upstream returned ${response.status} for ${url}`);
-        return res.status(response.status).send(`Upstream error: ${response.status}`);
+      // Forward client Range header if requested
+      if (req.headers.range) {
+        headers['Range'] = req.headers.range;
       }
+
+      const response = await fetch(url, { headers });
       
-      const contentType = response.headers.get("content-type");
-      if (contentType) {
-        res.setHeader("Content-Type", contentType);
-      } else {
-        // Fallback for common types if missing in header
-        if (url.endsWith('.pdf')) res.setHeader("Content-Type", "application/pdf");
-        if (url.endsWith('.jpg') || url.endsWith('.jpeg')) res.setHeader("Content-Type", "image/jpeg");
-        if (url.endsWith('.png')) res.setHeader("Content-Type", "image/png");
-      }
+      // Set status code matching upstream response (e.g. 206 for Partial Content, 200 for full resource)
+      res.statusCode = response.status;
       
-      // Handle potential frame options and CSP from upstream that would break embedding
+      const copyHeader = (name: string) => {
+        const val = response.headers.get(name);
+        if (val) res.setHeader(name, val);
+      };
+
+      copyHeader('content-type');
+      copyHeader('content-length');
+      copyHeader('content-range');
+      copyHeader('accept-ranges');
+      copyHeader('cache-control');
+
+      res.setHeader("Access-Control-Allow-Origin", "*");
+      res.setHeader("X-Frame-Options", "ALLOWALL");
       res.removeHeader("X-Frame-Options");
       res.removeHeader("Content-Security-Policy");
       res.removeHeader("Cross-Origin-Resource-Policy");
-      res.setHeader("X-Frame-Options", "ALLOWALL");
-      res.setHeader("Access-Control-Allow-Origin", "*");
-      res.setHeader("Content-Disposition", "inline");
-      
-      // Add caching for performance
-      res.setHeader("Cache-Control", "public, max-age=86400");
-      
-      const arrayBuffer = await response.arrayBuffer();
-      console.log(`Proxy: Successfully fetched ${url} (${arrayBuffer.byteLength} bytes) - Type: ${contentType}`);
-      res.send(Buffer.from(arrayBuffer));
+
+      // Stream response body back to client chunk by chunk
+      if (response.body) {
+        const reader = response.body.getReader();
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+          res.write(value);
+        }
+      }
+      res.end();
     } catch (e) {
       console.error(`Proxy failed for ${url}:`, e);
-      res.status(500).send("Proxy technical error");
+      if (!res.headersSent) {
+        res.status(500).send("Proxy technical error");
+      }
     }
   });
 

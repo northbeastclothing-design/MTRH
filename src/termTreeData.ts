@@ -22752,7 +22752,20 @@ const chunk_nasa: any[] = [
     timelineId: 'project-mercury-start',
     sources: ['NASA Project Mercury History Office'],
     images: [
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Glenn62.jpg/1280px-Glenn62.jpg'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Glenn62.jpg/1280px-Glenn62.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/e/e5/50th_Anniversary_-_John_Glenn_and_Friendship_7.webm'
+    ]
+  },
+  {
+    id: 'mercury-atlas-6',
+    parentId: 'project-mercury',
+    name: 'Mercury-Atlas 6 (Friendship 7)',
+    description: 'The first crewed orbital flight by the United States, piloted by astronaut John Glenn on February 20, 1962, marking a major milestone in the Space Race.',
+    layer: 'NASA / Space',
+    sources: ['NASA MA-6 Mission Report'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Glenn62.jpg/1280px-Glenn62.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/e/e5/50th_Anniversary_-_John_Glenn_and_Friendship_7.webm'
     ]
   },
   {
@@ -22764,7 +22777,20 @@ const chunk_nasa: any[] = [
     timelineId: 'project-gemini-start',
     sources: ['NASA Gemini Program Summaries'],
     images: [
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Ed_White_First_American_Spacewalker_-_GPN-2000-001180.jpg/1280px-Ed_White_First_American_Spacewalker_-_GPN-2000-001180.jpg'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Ed_White_First_American_Spacewalker_-_GPN-2000-001180.jpg/1280px-Ed_White_First_American_Spacewalker_-_GPN-2000-001180.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/5/5d/The_Four_Days_of_Gemini_4_%284K_60FPS%29.webm'
+    ]
+  },
+  {
+    id: 'gemini-4',
+    parentId: 'project-gemini',
+    name: 'Gemini 4',
+    description: 'The second crewed spaceflight of the Gemini series in June 1965, during which Ed White performed the first American spacewalk (EVA).',
+    layer: 'NASA / Space',
+    sources: ['NASA Gemini IV Mission Summary'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Ed_White_First_American_Spacewalker_-_GPN-2000-001180.jpg/1280px-Ed_White_First_American_Spacewalker_-_GPN-2000-001180.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/5/5d/The_Four_Days_of_Gemini_4_%284K_60FPS%29.webm'
     ]
   },
   {
@@ -22776,12 +22802,13 @@ const chunk_nasa: any[] = [
     timelineId: 'project-apollo-start',
     sources: ['NASA Apollo Mission Logs'],
     images: [
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Apollo_4_Launch_-_GPN-2000-000044.jpg/1280px-Apollo_4_Launch_-_GPN-2000-000044.jpg'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Apollo_4_Launch_-_GPN-2000-000044.jpg/1280px-Apollo_4_Launch_-_GPN-2000-000044.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/f/fd/Power_for_Apollo_-_Saturn_V.webm'
     ]
   },
   {
     id: 'apollo-11-landing-codex',
-    parentId: 'nasa-root',
+    parentId: 'project-apollo',
     name: 'Apollo 11 Moon Landing',
     description: "Astronauts Neil Armstrong and Buzz Aldrin land the Apollo Lunar Module on the Moon, a historic feat that alternative researchers study for anomalous broadcast transmissions, shadows, and Masonic symbolic gestures.",
     layer: 'NASA / Space',
@@ -22789,8 +22816,9 @@ const chunk_nasa: any[] = [
     sources: ['NASA Mission Logs', 'Apollo 11 Press Kit'],
     images: [
       'https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/A_Man_on_the_Moon%2C_AS11-40-5903_%28cropped%29.jpg/1280px-A_Man_on_the_Moon%2C_AS11-40-5903_%28cropped%29.jpg',
-      'https://upload.wikimedia.org/wikipedia/commons/8/83/Restored_Apollo_11_Moonwalk_-_Original_NASA_EVA_Mission_Video_-_Walking_on_the_Moon.webm',
-      'https://upload.wikimedia.org/wikipedia/commons/7/79/Historic_Apollo_11_Moonwalk_Footage.webm'
+      'https://upload.wikimedia.org/wikipedia/commons/8/88/Jack_King%27s_Apollo_11_Launch_Commentary_o4OBKOlgmfo.webm',
+      'https://upload.wikimedia.org/wikipedia/commons/7/79/Historic_Apollo_11_Moonwalk_Footage.webm',
+      'https://upload.wikimedia.org/wikipedia/commons/8/83/Restored_Apollo_11_Moonwalk_-_Original_NASA_EVA_Mission_Video_-_Walking_on_the_Moon.webm'
     ]
   },
   {
@@ -22813,6 +22841,30 @@ const chunk_nasa: any[] = [
     sources: ['Space Shuttle Decision', 'NASA Shuttle Mission Reports'],
     images: [
       'https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Space_Shuttle_Columbia_launching.jpg/1280px-Space_Shuttle_Columbia_launching.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/8/89/Launch_of_Space_Shuttle_Atlantis_STS-129.webm'
+    ]
+  },
+  {
+    id: 'space-shuttle-challenger',
+    parentId: 'space-shuttle-program-codex',
+    name: 'Space Shuttle Challenger (STS-51-L)',
+    description: 'The tragic tenth mission of the Space Shuttle Challenger, which broke apart 73 seconds into flight on January 28, 1986, leading to the loss of all seven crew members and suspending the program for 32 months.',
+    layer: 'NASA / Space',
+    sources: ['Rogers Commission Report', 'NASA Challenger Archives'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Challenger_flight_51-l_crew.jpg/1280px-Challenger_flight_51-l_crew.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/4/4d/Space_Shuttle_Challenger_Launch_and_Breakup.webm'
+    ]
+  },
+  {
+    id: 'space-shuttle-atlantis',
+    parentId: 'space-shuttle-program-codex',
+    name: 'Space Shuttle Atlantis (STS-129)',
+    description: 'The 31st flight of Space Shuttle Atlantis in November 2009, which delivered critical components and spare parts to the International Space Station.',
+    layer: 'NASA / Space',
+    sources: ['NASA STS-129 Mission Overview'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/4/4f/STS-129_Atlantis_Ready_to_Fly.jpg',
       'https://upload.wikimedia.org/wikipedia/commons/8/89/Launch_of_Space_Shuttle_Atlantis_STS-129.webm'
     ]
   }
