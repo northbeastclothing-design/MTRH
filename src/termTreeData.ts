@@ -682,6 +682,8 @@ const chunk_0: any[] = [  {
   },  {
     id: 'leviathin',
     parentId: 'demons',
+    relatedIds: ['behemoth-enoch'],
+    secondaryParentIds: ['enochian-creatures'],
     name: 'Leviathin',
     description: 'Arrogance, Heresy Also known as: Serpent, dragon.',
     sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
@@ -7260,6 +7262,12 @@ const chunk_1: any[] = [  {
     description: 'The layered structure of the cosmos, heavenly spheres, and primordial creation elements described in the Book of Enoch and the Secrets of Enoch (2 Enoch).',
     isApocryphal: true
   },  {
+    id: 'enochian-creatures',
+    parentId: 'enochian-cosmology',
+    name: 'Enochian Creatures',
+    description: 'A catalog of hybrid, celestial, and mythological beasts described in the Book of Enoch and related pseudepigraphal texts.',
+    isApocryphal: true
+  },  {
     id: 'adoil',
     parentId: 'enochian-cosmology',
     name: 'Adoil',
@@ -7292,7 +7300,8 @@ const chunk_1: any[] = [  {
     sources: ['Nag Hammadi Library', 'Apocryphon of John', 'Hypostasis of the Archons']
   },  {
     id: 'behemoth-enoch',
-    parentId: 'enochian-cosmology',
+    parentId: 'enochian-creatures',
+    relatedIds: ['leviathin'],
     name: 'Behemoth (Enochian Desert Beast)',
     description: 'A primordial male monster described in the Book of Enoch who was separated from Leviathan on the day of creation to dwell in the vast, dry desert of Dundayin, east of the Garden of Eden. Under Jewish and Enochic eschatology, both beasts are destined to be part of a final feast.',
     isApocryphal: true,
@@ -7347,7 +7356,8 @@ const chunk_1: any[] = [  {
     bibleVerses: ['Those men took me, and led me up on to the fourth heaven, and showed me all the successive goings, and all the rays of the light of sun and moon... and the chalkydri and phoenixes... — 2 Enoch 11:1-12:1']
   },  {
     id: 'chalkydri',
-    parentId: 'heaven-4',
+    parentId: 'enochian-creatures',
+    secondaryParentIds: ['heaven-4'],
     name: 'Chalkydri',
     description: 'Enochian solar elements/creatures of the Fourth Heaven, described in 2 Enoch as hybrid beings with crocodile heads, lion feet/tails, twelve wings, and rainbow-like iridescence who accompany the sun and sing at dawn.',
     isApocryphal: true,
@@ -7355,7 +7365,8 @@ const chunk_1: any[] = [  {
     bibleVerses: ['And in the midst of the sun path, there go spirits, chalkydri and phoenixes, with twelve wings... having the head of a crocodile, the feet and tail of a lion... — 2 Enoch 12:1-2']
   },  {
     id: 'phoenixes-enoch',
-    parentId: 'heaven-4',
+    parentId: 'enochian-creatures',
+    secondaryParentIds: ['heaven-4'],
     name: 'Phoenixes (Enochian Solar Attendants)',
     description: 'Fiery celestial creatures of the Fourth Heaven, described alongside the chalkydri as flying elements that accompany the chariot of the sun, bringing dew, heat, and singing praises to the Creator.',
     isApocryphal: true,
