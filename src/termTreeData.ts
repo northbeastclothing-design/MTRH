@@ -22678,7 +22678,7 @@ const chunk_nasa: any[] = [
     mapFeatureId: 'anomaly-Nasa-Space-Cape-Canaveral',
     timelineId: 'apollo-11-landing-event',
     sources: ['KSC Historical Reports', 'NASA Archives'],
-    images: ['https://www.youtube.com/watch?v=s16ayjwFX7c', 'https://www.youtube.com/watch?v=OnoNITE-CLg', 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Apollo_11_Launch_-_GPN-2000-000630.jpg/1280px-Apollo_11_Launch_-_GPN-2000-000630.jpg']
+    images: ['https://upload.wikimedia.org/wikipedia/commons/3/3f/Flight_of_AS-506_%28Apollo_11%29_from_lift-off_to_1_min_after_S-IC_stage_separation%2C_VJSC_1425D-q1.ogv', 'https://upload.wikimedia.org/wikipedia/commons/f/f9/STS-132_Liftoff_Space_Shuttle_Atlantis.ogv', 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Apollo_11_Launch_-_GPN-2000-000630.jpg/1280px-Apollo_11_Launch_-_GPN-2000-000630.jpg']
   },
   {
     id: 'anomaly-Nasa-Space-Vandenberg',
@@ -22688,7 +22688,7 @@ const chunk_nasa: any[] = [
     layer: 'NASA / Space',
     mapFeatureId: 'anomaly-Nasa-Space-Vandenberg',
     sources: ['U.S. Space Force Fact Sheets', 'NRO Archives'],
-    images: ['https://www.youtube.com/watch?v=0tWn24zW2tY', 'https://www.youtube.com/watch?v=2Tz1P8sQO-4', 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/NASA%E2%80%99s_TRACERS_Mission_Launches_to_Study_Earth%E2%80%99s_Magnetic_Shield_%28SVS14876_-_5~orig%29.jpg/1280px-NASA%E2%80%99s_TRACERS_Mission_Launches_to_Study_Earth%E2%80%99s_Magnetic_Shield_%28SVS14876_-_5~orig%29.jpg']
+    images: ['https://upload.wikimedia.org/wikipedia/commons/4/44/NASA%E2%80%99s_SPHEREX_and_PUNCH_Missions_Launch_from_Vandenberg_Space_Force_Base_%28SVS14803%29.webm', 'https://upload.wikimedia.org/wikipedia/commons/9/9b/USSF_video_of_Sentinel-6_launch_from_VAFB_SLC-4_--_Isolated_Views_%283263265%29.webm', 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/NASA%E2%80%99s_TRACERS_Mission_Launches_to_Study_Earth%E2%80%99s_Magnetic_Shield_%28SVS14876_-_5~orig%29.jpg/1280px-NASA%E2%80%99s_TRACERS_Mission_Launches_to_Study_Earth%E2%80%99s_Magnetic_Shield_%28SVS14876_-_5~orig%29.jpg']
   },
   {
     id: 'anomaly-Nasa-Space-JPL',
@@ -22699,7 +22699,7 @@ const chunk_nasa: any[] = [
     mapFeatureId: 'anomaly-Nasa-Space-JPL',
     timelineId: 'jpl-founded-event',
     sources: ['JPL Historical Archives', 'Strange Angel'],
-    images: ['https://www.youtube.com/watch?v=NzKzM7_Gz8s', 'https://www.youtube.com/watch?v=gYQwyAMTKtE', 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Site_du_JPL_en_Californie.jpg/1280px-Site_du_JPL_en_Californie.jpg']
+    images: ['https://upload.wikimedia.org/wikipedia/commons/c/ce/Perseverance_Entry_Descent_Landing.webm', 'https://upload.wikimedia.org/wikipedia/commons/6/67/Mars_Curiosity_video_msl20120810.ogv', 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Site_du_JPL_en_Californie.jpg/1280px-Site_du_JPL_en_Californie.jpg']
   },
   {
     id: 'anomaly-Nasa-Space-HQ',
@@ -22710,7 +22710,7 @@ const chunk_nasa: any[] = [
     mapFeatureId: 'anomaly-Nasa-Space-HQ',
     timelineId: 'nasa-founded-event',
     sources: ['NASA Official Records'],
-    images: ['https://www.youtube.com/watch?v=xZtH3k3dD_Y', 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/NASA_HQ_Building.jpg/1280px-NASA_HQ_Building.jpg', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Mary_W_Jackson_NASA_Headquarters_sign_June_2020.jpg/1280px-Mary_W_Jackson_NASA_Headquarters_sign_June_2020.jpg']
+    images: ['https://upload.wikimedia.org/wikipedia/commons/8/83/Restored_Apollo_11_Moonwalk_-_Original_NASA_EVA_Mission_Video_-_Walking_on_the_Moon.webm', 'https://upload.wikimedia.org/wikipedia/commons/a/a6/Apollo_11_Landing_-_first_steps_on_the_moon.ogv', 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/NASA_HQ_Building.jpg/1280px-NASA_HQ_Building.jpg']
   },
   {
     id: 'anomaly-Nasa-Space-Artemis-Program',
@@ -22721,7 +22721,7 @@ const chunk_nasa: any[] = [
     mapFeatureId: 'anomaly-Nasa-Space-Artemis-Program',
     timelineId: 'artemis-program-event',
     sources: ['NASA Artemis Program Overview'],
-    images: ['https://www.youtube.com/watch?v=cM5G5v5Zk1o', 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Orion_Approaches_Moon_for_Outbound_Powered_Flyby.jpg/1280px-Orion_Approaches_Moon_for_Outbound_Powered_Flyby.jpg', 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Artemis_I_SLS_at_LC-39B.jpg/1280px-Artemis_I_SLS_at_LC-39B.jpg']
+    images: ['https://upload.wikimedia.org/wikipedia/commons/5/53/Artemis_II_Live_Launch_Coverage_-_SLS_Launch_Vehicle_Camera%2C_Switched_Feed_%28KSC-20260401-MH-AJN01-0001%29.webm', 'https://upload.wikimedia.org/wikipedia/commons/c/c7/Artemis_I_%E2%80%93_SLS_Launch_and_Mission_Animation_%E2%80%93_Jan_2021_%28767297104813%29.webm', 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Orion_Approaches_Moon_for_Outbound_Powered_Flyby.jpg/1280px-Orion_Approaches_Moon_for_Outbound_Powered_Flyby.jpg']
   }
 ];
 

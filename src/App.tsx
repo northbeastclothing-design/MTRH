@@ -136,7 +136,7 @@ const CATEGORY_DESCRIPTIONS: Record<string, string> = {
 
 const isVideoUrl = (url: string) => {
   if (!url) return false;
-  const videoExtensions = ['.mp4', '.webm', '.ogg', '.mov'];
+  const videoExtensions = ['.mp4', '.webm', '.ogg', '.ogv', '.mov'];
   const lowerUrl = url.trim().toLowerCase();
   return videoExtensions.some(ext => lowerUrl.includes(ext)) || 
          lowerUrl.includes('youtube.com/embed') || 
