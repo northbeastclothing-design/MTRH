@@ -23452,51 +23452,339 @@ const chunk_historic_extensions: any[] = [
     id: 'famous-freemasons',
     parentId: 'freemasonry',
     name: 'Famous Freemasons',
-    description: `A listing of the top 30 most famous and influential historical Freemasons, their lodges, and their historical contributions:
-     
-     <table class="w-full text-sm text-left border-collapse border border-slate-700 mt-4">
-       <thead>
-         <tr class="bg-slate-800">
-           <th class="border border-slate-700 p-2">Name</th>
-           <th class="border border-slate-700 p-2">Lodge / Membership</th>
-           <th class="border border-slate-700 p-2">Significance</th>
-         </tr>
-       </thead>
-       <tbody>
-         <tr><td class="border border-slate-700 p-2"><b>George Washington</b></td><td class="border border-slate-700 p-2">Fredericksburg Lodge No. 4, VA</td><td class="border border-slate-700 p-2">First President of the United States, General of the Continental Army.</td></tr>
-         <tr><td class="border border-slate-700 p-2"><b>Benjamin Franklin</b></td><td class="border border-slate-700 p-2">St. John's Lodge, Philadelphia, PA</td><td class="border border-slate-700 p-2">US Founding Father, printer, scientist, diplomat, Grand Master of Pennsylvania.</td></tr>
-         <tr><td class="border border-slate-700 p-2"><b>Voltaire</b></td><td class="border border-slate-700 p-2">Loge des Neuf Sœurs, Paris, France</td><td class="border border-slate-700 p-2">French Enlightenment writer, historian, and philosopher.</td></tr>
-         <tr><td class="border border-slate-700 p-2"><b>Wolfgang Amadeus Mozart</b></td><td class="border border-slate-700 p-2">Lodge Zur Wohltätigkeit, Vienna, Austria</td><td class="border border-slate-700 p-2">Composer; integrated Masonic themes into his opera <i>The Magic Flute</i>.</td></tr>
-         <tr><td class="border border-slate-700 p-2"><b>Winston Churchill</b></td><td class="border border-slate-700 p-2">Studholme Alliance Lodge No. 1591, London</td><td class="border border-slate-700 p-2">Prime Minister of the United Kingdom during World War II.</td></tr>
-         <tr><td class="border border-slate-700 p-2"><b>Mark Twain</b></td><td class="border border-slate-700 p-2">Polar Star Lodge No. 79, St. Louis, MO</td><td class="border border-slate-700 p-2">Iconic American author and humorist (Samuel Langhorne Clemens).</td></tr>
-         <tr><td class="border border-slate-700 p-2"><b>Buzz Aldrin</b></td><td class="border border-slate-700 p-2">Montclair Lodge No. 144, NJ / Tranquility Lodge No. 2000</td><td class="border border-slate-700 p-2">Apollo 11 Astronaut, second man to walk on the Moon; carried a Masonic flag.</td></tr>
-         <tr><td class="border border-slate-700 p-2"><b>Franklin D. Roosevelt</b></td><td class="border border-slate-700 p-2">Holland Lodge No. 8, New York City</td><td class="border border-slate-700 p-2">32nd President of the United States during the Great Depression and WWII.</td></tr>
-         <tr><td class="border border-slate-700 p-2"><b>Theodore Roosevelt</b></td><td class="border border-slate-700 p-2">Matinecock Lodge No. 806, Oyster Bay, NY</td><td class="border border-slate-700 p-2">26th President of the United States, conservationist, Nobel laureate.</td></tr>
-         <tr><td class="border border-slate-700 p-2"><b>Harry S. Truman</b></td><td class="border border-slate-700 p-2">Belton Lodge No. 450, Grand Master of MO</td><td class="border border-slate-700 p-2">33rd President of the United States; oversaw end of WWII and founding of UN.</td></tr>
-         <tr><td class="border border-slate-700 p-2"><b>John Wayne</b></td><td class="border border-slate-700 p-2">Marion Morrison Lodge No. 700, CA</td><td class="border border-slate-700 p-2">Legendary American Academy Award-winning Western film actor.</td></tr>
-         <tr><td class="border border-slate-700 p-2"><b>Arthur Conan Doyle</b></td><td class="border border-slate-700 p-2">Phoenix Lodge No. 257, Southsea, England</td><td class="border border-slate-700 p-2">British writer, physician, creator of the detective Sherlock Holmes.</td></tr>
-         <tr><td class="border border-slate-700 p-2"><b>Alexander Fleming</b></td><td class="border border-slate-700 p-2">Misericordia Lodge No. 3286, London</td><td class="border border-slate-700 p-2">Scottish physician and microbiologist, Nobel laureate, discovered Penicillin.</td></tr>
-         <tr><td class="border border-slate-700 p-2"><b>Simon Bolivar</b></td><td class="border border-slate-700 p-2">Lodge Order and Liberty No. 2, Peru</td><td class="border border-slate-700 p-2">"El Libertador", Venezuelan military leader who led independence of South America.</td></tr>
-         <tr><td class="border border-slate-700 p-2"><b>Marquis de Lafayette</b></td><td class="border border-slate-700 p-2">Military Lodge, France / Union Lodge, DE</td><td class="border border-slate-700 p-2">French aristocrat and general who fought in American Revolutionary War.</td></tr>
-         <tr><td class="border border-slate-700 p-2"><b>Rudyard Kipling</b></td><td class="border border-slate-700 p-2">Lodge Hope and Perseverance No. 782, India</td><td class="border border-slate-700 p-2">English journalist, short-story writer, Nobel laureate, wrote <i>The Jungle Book</i>.</td></tr>
-         <tr><td class="border border-slate-700 p-2"><b>Harry Houdini</b></td><td class="border border-slate-700 p-2">St. Cecile Lodge No. 568, New York City</td><td class="border border-slate-700 p-2">World-famous Hungarian-American illusionist and escape artist.</td></tr>
-         <tr><td class="border border-slate-700 p-2"><b>Oscar Wilde</b></td><td class="border border-slate-700 p-2">Apollo University Lodge No. 357, Oxford</td><td class="border border-slate-700 p-2">Irish poet, dramatist, and author of <i>The Picture of Dorian Gray</i>.</td></tr>
-         <tr><td class="border border-slate-700 p-2"><b>Douglas MacArthur</b></td><td class="border border-slate-700 p-2">Manila Lodge No. 1, Philippines</td><td class="border border-slate-700 p-2">U.S. Five-Star General, Field Marshal of Philippine Army, Allied Commander.</td></tr>
-         <tr><td class="border border-slate-700 p-2"><b>J. Edgar Hoover</b></td><td class="border border-slate-700 p-2">Federal Lodge No. 1, Washington D.C.</td><td class="border border-slate-700 p-2">First Director of the Federal Bureau of Investigation (FBI).</td></tr>
-         <tr><td class="border border-slate-700 p-2"><b>Paul Revere</b></td><td class="border border-slate-700 p-2">Lodge of Saint Andrew, Boston, MA</td><td class="border border-slate-700 p-2">American silversmith, patriot, hero of the midnight ride, Grand Master of MA.</td></tr>
-         <tr><td class="border border-slate-700 p-2"><b>John Hancock</b></td><td class="border border-slate-700 p-2">Lodge of Saint Andrew, Boston, MA</td><td class="border border-slate-700 p-2">President of Second Continental Congress, first signer of Declaration.</td></tr>
-         <tr><td class="border border-slate-700 p-2"><b>Davy Crockett</b></td><td class="border border-slate-700 p-2">Weakly Lodge No. 143, TN</td><td class="border border-slate-700 p-2">American folk hero, frontiersman, soldier, politician; died at the Alamo.</td></tr>
-         <tr><td class="border border-slate-700 p-2"><b>Henry Ford</b></td><td class="border border-slate-700 p-2">Palestine Lodge No. 357, Detroit, MI</td><td class="border border-slate-700 p-2">Industrialist, founder of Ford Motor Company, developer of assembly line.</td></tr>
-         <tr><td class="border border-slate-700 p-2"><b>Walter Chrysler</b></td><td class="border border-slate-700 p-2">Apollo Lodge No. 297, KS</td><td class="border border-slate-700 p-2">Automotive pioneer, founder of Chrysler Corporation.</td></tr>
-         <tr><td class="border border-slate-700 p-2"><b>Steve Wozniak</b></td><td class="border border-slate-700 p-2">Charity Lodge No. 362, Campbell, CA</td><td class="border border-slate-700 p-2">Co-founder of Apple Inc., developer of Apple I and Apple II computers.</td></tr>
-         <tr><td class="border border-slate-700 p-2"><b>Gene Autry</b></td><td class="border border-slate-700 p-2">Catoosa Lodge No. 185, OK</td><td class="border border-slate-700 p-2">"The Singing Cowboy", legendary American actor, singer, and businessman.</td></tr>
-         <tr><td class="border border-slate-700 p-2"><b>Edwin Markham</b></td><td class="border border-slate-700 p-2">Acacia Lodge No. 85, CA</td><td class="border border-slate-700 p-2">American poet, author of "The Man with the Hoe", Poet Laureate of Oregon.</td></tr>
-         <tr><td class="border border-slate-700 p-2"><b>Charles Lindbergh</b></td><td class="border border-slate-700 p-2">Keystone Lodge No. 243, St. Louis, MO</td><td class="border border-slate-700 p-2">Aviator, military officer, author; made the first solo transatlantic flight.</td></tr>
-         <tr><td class="border border-slate-700 p-2"><b>Duke of Wellington</b></td><td class="border border-slate-700 p-2">Lodge No. 494, Trim, Ireland</td><td class="border border-slate-700 p-2">Arthur Wellesley, Anglo-Irish soldier, victor at Waterloo, British Prime Minister.</td></tr>
-       </tbody>
-     </table>`,
+    description: `A directory of the most prominent and influential historical figureheads who were initiated members of the Masonic Fraternity, including presidents, philosophers, scientists, and writers.`,
     layer: 'The Occult',
     sources: ['Masonic Historical Records', 'Lodge Charters and Ledgers']
+  },
+  {
+    id: 'freemason-george-washington',
+    parentId: 'famous-freemasons',
+    name: 'George Washington',
+    description: `Initiated in Fredericksburg Lodge No. 4, VA. First President of the United States, General of the Continental Army, and Founding Father.`,
+    layer: 'The Occult',
+    sources: ['Masonic Historical Records', 'Fraternity Membership Archives'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg/960px-Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg'
+    ]
+  },
+  {
+    id: 'freemason-benjamin-franklin',
+    parentId: 'famous-freemasons',
+    name: 'Benjamin Franklin',
+    description: `Initiated in St. John's Lodge, Philadelphia, PA. US Founding Father, printer, scientist, diplomat, and Grand Master of Pennsylvania.`,
+    layer: 'The Occult',
+    sources: ['Masonic Historical Records', 'Fraternity Membership Archives'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Joseph_Siffrein_Duplessis_-_Benjamin_Franklin_-_Google_Art_Project.jpg/960px-Joseph_Siffrein_Duplessis_-_Benjamin_Franklin_-_Google_Art_Project.jpg'
+    ]
+  },
+  {
+    id: 'freemason-voltaire',
+    parentId: 'famous-freemasons',
+    name: 'Voltaire',
+    description: `Initiated in Loge des Neuf Sœurs, Paris, France. French Enlightenment writer, historian, and philosopher famous for his advocacy of civil liberties.`,
+    layer: 'The Occult',
+    sources: ['Masonic Historical Records', 'Fraternity Membership Archives'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Nicolas_de_Largilli%C3%A8re_-_Portrait_de_Voltaire_%281694-1778%29_en_1718_-_P208_-_mus%C3%A9e_Carnavalet_-_5_%28cropped%29.jpg/960px-Nicolas_de_Largilli%C3%A8re_-_Portrait_de_Voltaire_%281694-1778%29_en_1718_-_P208_-_mus%C3%A9e_Carnavalet_-_5_%28cropped%29.jpg'
+    ]
+  },
+  {
+    id: 'freemason-wolfgang-amadeus-mozart',
+    parentId: 'famous-freemasons',
+    name: 'Wolfgang Amadeus Mozart',
+    description: `Initiated in Lodge Zur Wohltätigkeit, Vienna, Austria. Composer of the Classical era; famously integrated Masonic themes and symbols into his opera The Magic Flute.`,
+    layer: 'The Occult',
+    sources: ['Masonic Historical Records', 'Fraternity Membership Archives'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/The_Mozart_Family_-_Wolfgang_Amadeus_Mozart_headshot.jpg/960px-The_Mozart_Family_-_Wolfgang_Amadeus_Mozart_headshot.jpg'
+    ]
+  },
+  {
+    id: 'freemason-winston-churchill',
+    parentId: 'famous-freemasons',
+    name: 'Winston Churchill',
+    description: `Initiated in Studholme Alliance Lodge No. 1591, London. Prime Minister of the United Kingdom who led the British Empire to victory during World War II.`,
+    layer: 'The Occult',
+    sources: ['Masonic Historical Records', 'Fraternity Membership Archives'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Sir_Winston_Churchill_-_19086236948_%28restored%29.jpg/960px-Sir_Winston_Churchill_-_19086236948_%28restored%29.jpg'
+    ]
+  },
+  {
+    id: 'freemason-mark-twain',
+    parentId: 'famous-freemasons',
+    name: 'Mark Twain',
+    description: `Initiated in Polar Star Lodge No. 79, St. Louis, MO. Iconic American author and humorist (Samuel Langhorne Clemens), creator of Tom Sawyer and Huckleberry Finn.`,
+    layer: 'The Occult',
+    sources: ['Masonic Historical Records', 'Fraternity Membership Archives'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/7/7a/Mark_Twain_by_AF_Bradley_%28cropped_2%29.jpg'
+    ]
+  },
+  {
+    id: 'freemason-buzz-aldrin',
+    parentId: 'famous-freemasons',
+    name: 'Buzz Aldrin',
+    description: `Initiated in Montclair Lodge No. 144, NJ / Tranquility Lodge No. 2000. Apollo 11 Astronaut, second man to walk on the Moon; carried a Masonic flag to the lunar surface.`,
+    layer: 'The Occult',
+    sources: ['Masonic Historical Records', 'Fraternity Membership Archives'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Buzz_Aldrin.jpg/960px-Buzz_Aldrin.jpg'
+    ]
+  },
+  {
+    id: 'freemason-franklin-d-roosevelt',
+    parentId: 'famous-freemasons',
+    name: 'Franklin D. Roosevelt',
+    description: `Initiated in Holland Lodge No. 8, New York City. 32nd President of the United States, who led the nation through the Great Depression and World War II.`,
+    layer: 'The Occult',
+    sources: ['Masonic Historical Records', 'Fraternity Membership Archives'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/FDR-1944-Campaign-Portrait_%283x4_retouched%2C_cropped%29.jpg/960px-FDR-1944-Campaign-Portrait_%283x4_retouched%2C_cropped%29.jpg'
+    ]
+  },
+  {
+    id: 'freemason-theodore-roosevelt',
+    parentId: 'famous-freemasons',
+    name: 'Theodore Roosevelt',
+    description: `Initiated in Matinecock Lodge No. 806, Oyster Bay, NY. 26th President of the United States, conservationist, military commander, and Nobel Peace Prize laureate.`,
+    layer: 'The Occult',
+    sources: ['Masonic Historical Records', 'Fraternity Membership Archives'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Theodore_Roosevelt_by_the_Pach_Bros_%284x5_cropped%29.jpg/960px-Theodore_Roosevelt_by_the_Pach_Bros_%284x5_cropped%29.jpg'
+    ]
+  },
+  {
+    id: 'freemason-harry-s-truman',
+    parentId: 'famous-freemasons',
+    name: 'Harry S. Truman',
+    description: `Initiated in Belton Lodge No. 450, Grand Master of MO. 33rd President of the United States; oversaw the end of World War II and the establishment of the United Nations.`,
+    layer: 'The Occult',
+    sources: ['Masonic Historical Records', 'Fraternity Membership Archives'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/0/0b/TRUMAN_58-766-06_%28cropped%29.jpg'
+    ]
+  },
+  {
+    id: 'freemason-john-wayne',
+    parentId: 'famous-freemasons',
+    name: 'John Wayne',
+    description: `Initiated in Marion Morrison Lodge No. 700, CA. Legendary American Academy Award-winning Western film actor and pop-culture icon.`,
+    layer: 'The Occult',
+    sources: ['Masonic Historical Records', 'Fraternity Membership Archives'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/7/7b/John_Wayne_-_still_portrait.jpg'
+    ]
+  },
+  {
+    id: 'freemason-arthur-conan-doyle',
+    parentId: 'famous-freemasons',
+    name: 'Arthur Conan Doyle',
+    description: `Initiated in Phoenix Lodge No. 257, Southsea, England. British writer and physician, creator of the legendary detective Sherlock Holmes.`,
+    layer: 'The Occult',
+    sources: ['Masonic Historical Records', 'Fraternity Membership Archives'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Arthur_Conan_Doyle_by_Walter_Benington%2C_1914.png/960px-Arthur_Conan_Doyle_by_Walter_Benington%2C_1914.png'
+    ]
+  },
+  {
+    id: 'freemason-alexander-fleming',
+    parentId: 'famous-freemasons',
+    name: 'Alexander Fleming',
+    description: `Initiated in Misericordia Lodge No. 3286, London. Scottish physician and microbiologist, Nobel laureate, famous for discovering Penicillin.`,
+    layer: 'The Occult',
+    sources: ['Masonic Historical Records', 'Fraternity Membership Archives'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Synthetic_Production_of_Penicillin_TR1468.jpg/960px-Synthetic_Production_of_Penicillin_TR1468.jpg'
+    ]
+  },
+  {
+    id: 'freemason-simón-bolívar',
+    parentId: 'famous-freemasons',
+    name: 'Simón Bolívar',
+    description: `Initiated in Lodge Order and Liberty No. 2, Peru. El Libertador, Venezuelan military leader who led the war of independence against Spain in South America.`,
+    layer: 'The Occult',
+    sources: ['Masonic Historical Records', 'Fraternity Membership Archives'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Sim%C3%B3n_Bol%C3%ADvar._Toro_Moreno%2C_Luis._1922%2C_Legislative_Palace%2C_La_Paz.png/960px-Sim%C3%B3n_Bol%C3%ADvar._Toro_Moreno%2C_Luis._1922%2C_Legislative_Palace%2C_La_Paz.png'
+    ]
+  },
+  {
+    id: 'freemason-marquis-de-lafayette',
+    parentId: 'famous-freemasons',
+    name: 'Marquis de Lafayette',
+    description: `Initiated in Military Lodge, France / Union Lodge, DE. French aristocrat and general who served as a key officer in the American Revolutionary War under Washington.`,
+    layer: 'The Occult',
+    sources: ['Masonic Historical Records', 'Fraternity Membership Archives'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Gilbert_du_Motier_Marquis_de_Lafayette.PNG/960px-Gilbert_du_Motier_Marquis_de_Lafayette.PNG'
+    ]
+  },
+  {
+    id: 'freemason-rudyard-kipling',
+    parentId: 'famous-freemasons',
+    name: 'Rudyard Kipling',
+    description: `Initiated in Lodge Hope and Perseverance No. 782, India. English journalist, short-story writer, Nobel laureate, famous author of The Jungle Book.`,
+    layer: 'The Occult',
+    sources: ['Masonic Historical Records', 'Fraternity Membership Archives'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Rudyard_Kipling_%28portrait%29.jpg/960px-Rudyard_Kipling_%28portrait%29.jpg'
+    ]
+  },
+  {
+    id: 'freemason-harry-houdini',
+    parentId: 'famous-freemasons',
+    name: 'Harry Houdini',
+    description: `Initiated in St. Cecile Lodge No. 568, New York City. World-famous Hungarian-American illusionist, stunt performer, and escape artist.`,
+    layer: 'The Occult',
+    sources: ['Masonic Historical Records', 'Fraternity Membership Archives'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Harry_Handcuff_Houdini_Crop.jpg/960px-Harry_Handcuff_Houdini_Crop.jpg'
+    ]
+  },
+  {
+    id: 'freemason-oscar-wilde',
+    parentId: 'famous-freemasons',
+    name: 'Oscar Wilde',
+    description: `Initiated in Apollo University Lodge No. 357, Oxford. Irish poet, playwright, and aestheticist, author of The Picture of Dorian Gray.`,
+    layer: 'The Occult',
+    sources: ['Masonic Historical Records', 'Fraternity Membership Archives'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Oscar_Wilde_by_Napoleon_Sarony._Three-quarter-length_photograph%2C_seated_%28cropped%29.jpg/960px-Oscar_Wilde_by_Napoleon_Sarony._Three-quarter-length_photograph%2C_seated_%28cropped%29.jpg'
+    ]
+  },
+  {
+    id: 'freemason-douglas-macarthur',
+    parentId: 'famous-freemasons',
+    name: 'Douglas MacArthur',
+    description: `Initiated in Manila Lodge No. 1, Philippines. U.S. Five-Star General, Field Marshal of the Philippine Army, Allied Supreme Commander in the Pacific.`,
+    layer: 'The Occult',
+    sources: ['Masonic Historical Records', 'Fraternity Membership Archives'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/MacArthur_Manila_%28cropped2%29.jpg/960px-MacArthur_Manila_%28cropped2%29.jpg'
+    ]
+  },
+  {
+    id: 'freemason-j-edgar-hoover',
+    parentId: 'famous-freemasons',
+    name: 'J. Edgar Hoover',
+    description: `Initiated in Federal Lodge No. 1, Washington D.C.. First and founding Director of the Federal Bureau of Investigation (FBI), serving for 48 years.`,
+    layer: 'The Occult',
+    sources: ['Masonic Historical Records', 'Fraternity Membership Archives'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Hoover-JEdgar-LOC.jpg/960px-Hoover-JEdgar-LOC.jpg'
+    ]
+  },
+  {
+    id: 'freemason-paul-revere',
+    parentId: 'famous-freemasons',
+    name: 'Paul Revere',
+    description: `Initiated in Lodge of Saint Andrew, Boston, MA. American silversmith, patriot, hero of the midnight ride, Grand Master of the Grand Lodge of Massachusetts.`,
+    layer: 'The Occult',
+    sources: ['Masonic Historical Records', 'Fraternity Membership Archives'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/J_S_Copley_-_Paul_Revere_%28cropped%29.jpg/960px-J_S_Copley_-_Paul_Revere_%28cropped%29.jpg'
+    ]
+  },
+  {
+    id: 'freemason-john-hancock',
+    parentId: 'famous-freemasons',
+    name: 'John Hancock',
+    description: `Initiated in Lodge of Saint Andrew, Boston, MA. President of the Second Continental Congress and first signer of the United States Declaration of Independence.`,
+    layer: 'The Occult',
+    sources: ['Masonic Historical Records', 'Fraternity Membership Archives'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/John_Hancock_1770.jpg/960px-John_Hancock_1770.jpg'
+    ]
+  },
+  {
+    id: 'freemason-davy-crockett',
+    parentId: 'famous-freemasons',
+    name: 'Davy Crockett',
+    description: `Initiated in Weakly Lodge No. 143, TN. American folk hero, frontiersman, soldier, congressman, who died defending the Alamo.`,
+    layer: 'The Occult',
+    sources: ['Masonic Historical Records', 'Fraternity Membership Archives'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Davy_Crockett_Portrait_by_Chester_Harding.jpg/960px-Davy_Crockett_Portrait_by_Chester_Harding.jpg'
+    ]
+  },
+  {
+    id: 'freemason-henry-ford',
+    parentId: 'famous-freemasons',
+    name: 'Henry Ford',
+    description: `Initiated in Palestine Lodge No. 357, Detroit, MI. Industrialist, founder of Ford Motor Company, developer of the assembly line and mass production.`,
+    layer: 'The Occult',
+    sources: ['Masonic Historical Records', 'Fraternity Membership Archives'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Henry_Ford_portrait_1915_original_%283x4_cropped%29.png/960px-Henry_Ford_portrait_1915_original_%283x4_cropped%29.png'
+    ]
+  },
+  {
+    id: 'freemason-walter-chrysler',
+    parentId: 'famous-freemasons',
+    name: 'Walter Chrysler',
+    description: `Initiated in Apollo Lodge No. 297, KS. Industrialist and automotive pioneer, founder of Chrysler Corporation.`,
+    layer: 'The Occult',
+    sources: ['Masonic Historical Records', 'Fraternity Membership Archives'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Walter_Chrysler_in_1937.jpg/960px-Walter_Chrysler_in_1937.jpg'
+    ]
+  },
+  {
+    id: 'freemason-steve-wozniak',
+    parentId: 'famous-freemasons',
+    name: 'Steve Wozniak',
+    description: `Initiated in Charity Lodge No. 362, Campbell, CA. Co-founder of Apple Inc., developer of Apple I and Apple II personal computers.`,
+    layer: 'The Occult',
+    sources: ['Masonic Historical Records', 'Fraternity Membership Archives'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Steve_Wozniak_by_Gage_Skidmore_3_%28cropped%29.jpg/960px-Steve_Wozniak_by_Gage_Skidmore_3_%28cropped%29.jpg'
+    ]
+  },
+  {
+    id: 'freemason-gene-autry',
+    parentId: 'famous-freemasons',
+    name: 'Gene Autry',
+    description: `Initiated in Catoosa Lodge No. 185, OK. The Singing Cowboy, actor, singer, and businessman who became a major radio and television star.`,
+    layer: 'The Occult',
+    sources: ['Masonic Historical Records', 'Fraternity Membership Archives'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Gene_Autry%2C_NPG_94_39.jpg/960px-Gene_Autry%2C_NPG_94_39.jpg'
+    ]
+  },
+  {
+    id: 'freemason-edwin-markham',
+    parentId: 'famous-freemasons',
+    name: 'Edwin Markham',
+    description: `Initiated in Acacia Lodge No. 85, CA. American poet, author of The Man with the Hoe, Poet Laureate of Oregon.`,
+    layer: 'The Occult',
+    sources: ['Masonic Historical Records', 'Fraternity Membership Archives'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/EdwinMarkham.png/960px-EdwinMarkham.png'
+    ]
+  },
+  {
+    id: 'freemason-charles-lindbergh',
+    parentId: 'famous-freemasons',
+    name: 'Charles Lindbergh',
+    description: `Initiated in Keystone Lodge No. 243, St. Louis, MO. Aviator and military officer who made the first solo transatlantic flight in history (1927).`,
+    layer: 'The Occult',
+    sources: ['Masonic Historical Records', 'Fraternity Membership Archives'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Charles_Lindbergh_%28Harris_%26_Ewing_photo%2C_cropped%29.jpg/960px-Charles_Lindbergh_%28Harris_%26_Ewing_photo%2C_cropped%29.jpg'
+    ]
+  },
+  {
+    id: 'freemason-duke-of-wellington',
+    parentId: 'famous-freemasons',
+    name: 'Duke of Wellington',
+    description: `Initiated in Lodge No. 494, Trim, Ireland. Arthur Wellesley, Anglo-Irish general who defeated Napoleon at Waterloo and served as UK Prime Minister.`,
+    layer: 'The Occult',
+    sources: ['Masonic Historical Records', 'Fraternity Membership Archives'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Sir_Arthur_Wellesley%2C_1st_Duke_of_Wellington.jpg/960px-Sir_Arthur_Wellesley%2C_1st_Duke_of_Wellington.jpg'
+    ]
   },
   {
     id: 'masonic-lodges',
