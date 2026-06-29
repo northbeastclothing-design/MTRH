@@ -7888,6 +7888,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'anomaly-UFO-1000',
     parentId: 'ufo-sightings-br',
+    relatedIds: ['ufo-type-tictac'],
     name: 'USS Nimitz UFO Incident - Tic Tac (2004)',
     description: 'During training off San Diego, radar operators and Navy fighter pilots, including Commander David Fravor, encountered a highly agile, solid white Tic-Tac-shaped craft. The object performed physics-defying maneuvers and accelerated at extreme speeds, captured on cockpit FLIR camera.',
     layer: 'UFOs - Sightings',
@@ -7897,6 +7898,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'anomaly-UFO-1001',
     parentId: 'ufo-sightings-br',
+    relatedIds: ['ufo-type-triangle'],
     name: 'Belgian UFO Wave (1989-1990)',
     description: 'A series of sightings of silent, low-flying, massive triangular craft with three bright white lights and a central red flashing light, monitored by thousands of citizens and tracked by Belgian Air Force F-16 interceptors on radar.',
     layer: 'UFOs - Sightings',
@@ -7924,6 +7926,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'anomaly-UFO-1004',
     parentId: 'ufo-sightings-br',
+    relatedIds: ['ufo-type-tictac'],
     name: 'Gimbal & GoFast UFO Encounters (2015)',
     description: 'Declassified cockpit sensor videos captured by Navy F/A-18 fighter pilots showing unidentified anomalous objects moving at high speeds against the wind and rotating, prompting military announcements regarding UAP investigation programs.',
     layer: 'UFOs - Sightings',
@@ -7933,6 +7936,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'anomaly-UFO-1005',
     parentId: 'ufo-sightings-br',
+    relatedIds: ['ufo-type-saucer'],
     name: 'Chicago O\'Hare UFO Sighting (2006)',
     description: 'A metallic, saucer-shaped craft hovered silently over Terminal C at Chicago O\'Hare Airport before accelerating vertically at extreme speed, punching a clean circular hole in the thick cloud cover, witnessed by pilots and airline employees.',
     layer: 'UFOs - Sightings',
@@ -7942,6 +7946,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'anomaly-UFO-1006',
     parentId: 'ufo-sightings-br',
+    relatedIds: ['ufo-type-saucer'],
     name: 'Westall UFO Incident - Melbourne, Australia (1966)',
     description: 'An encounter witnessed by over 200 students and teachers at two Melbourne schools. A grey saucer-shaped craft was observed landing in a nearby paddock, rising, and flying away. Witnesses claim they were pressured by authorities to remain silent.',
     layer: 'UFOs - Sightings',
@@ -7969,6 +7974,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'anomaly-UFO-1009',
     parentId: 'ufo-sightings-br',
+    relatedIds: ['ufo-type-orb'],
     name: 'Colares UFO Incident - Operation Saucer (1977)',
     description: 'A wave of UFO sightings in which residents of Colares, Brazil, reported being beamed with intense light rays causing burn marks, puncture wounds, and blood loss. The Brazilian Air Force investigated under the classified \'Operation Saucer\'.',
     layer: 'UFOs - Sightings',
@@ -7987,6 +7993,7 @@ const chunk_1: any[] = [  {
   },  {
     id: 'anomaly-UFO-1011',
     parentId: 'ufo-sightings-br',
+    relatedIds: ['ufo-type-cigar'],
     name: 'Newark, New Jersey (Cylinder Shaped UFO)',
     description: '7/2018 - This long cylinder shaped object was seen over Newark',
     layer: 'UFOs - Sightings',
@@ -8005,14 +8012,14 @@ const chunk_1: any[] = [  {
     parentId: 'ufo-sightings-br',
     name: 'Roswell Crash (1947)',
     description: 'The famous crash of a mysterious object in Roswell, New Mexico, initially reported as a "flying disc" and later retracting to a weather balloon.',
-    relatedIds: ['area-51', 'dumbs'],
+    relatedIds: ['area-51', 'dumbs', 'ufo-type-saucer'],
     sources: ['MUFON (Mutual UFO Network) Database', 'Project Blue Book Archives']
   },  {
     id: 'foo-fighters',
     parentId: 'ufo-sightings-br',
     name: 'Foo Fighters (WWII)',
     description: 'Glowing metallic spheres and lights reported by Allied and Axis pilots during World War II, showing intelligent maneuvers and tracking aircraft.',
-    relatedIds: ['ufos-anomalies'],
+    relatedIds: ['ufos-anomalies', 'ufo-type-orb'],
     sources: ['MUFON (Mutual UFO Network) Database', 'Project Blue Book Archives']
   },  {
     id: 'crop-circles-br',
@@ -10146,7 +10153,7 @@ const chunk_2: any[] = [  {
     parentId: 'crop-circles-br',
     name: 'Chilbolton Message',
     description: 'A crop circle pattern matching a response to the SETI Arecibo message, appearing near the Chilbolton radio telescope in 2001.',
-    relatedIds: ['ufos-anomalies'],
+    relatedIds: ['ufos-anomalies', 'ufo-type-orb'],
     sources: ['BLT Research Team Reports']
   },  {
     id: 'julia-set',
@@ -15330,7 +15337,7 @@ const chunk_4: any[] = [  {
     parentId: 'cryptid-sightings-br',
     name: 'Mothman',
     description: 'A winged, red-eyed humanoid creature sighted in Point Pleasant, West Virginia, historically associated with impending disasters.',
-    relatedIds: ['ufos-anomalies'],
+    relatedIds: ['ufos-anomalies', 'ufo-type-orb'],
     sources: ['Regional Cryptid Databases', 'Folklore Society Archives']
   },  {
     id: 'nessie',
@@ -23800,6 +23807,63 @@ const chunk_historic_extensions: any[] = [
     name: 'Hadron Colliders',
     description: `A directory of high-energy particle accelerators designed to collide hadron beams at relativistic speeds, analyzing high-energy physics anomalies. Conspiratorial theories link these facilities to portals, space-time dilation, and interdimensional research.`,
     layer: 'Hadron Colliders'
+  },
+  {
+    id: 'ufo-type-saucer',
+    parentId: 'ufo-types',
+    name: 'Flying Saucers / Discs',
+    description: `Classic disk or dome-shaped aerial craft, often metallic, representing the post-WWII wave of UFO sightings (such as Roswell, Westall, and Chicago O'Hare).`,
+    layer: 'UFOs - Sightings',
+    sources: ['MUFON Database', 'Project Blue Book Records'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Supposed_UFO%2C_Passaic%2C_New_Jersey_%28cropped%29.jpg/960px-Supposed_UFO%2C_Passaic%2C_New_Jersey_%28cropped%29.jpg'
+    ],
+    relatedIds: ['anomaly-UFO-1005', 'anomaly-UFO-1006', 'roswell-incident']
+  },
+  {
+    id: 'ufo-type-cigar',
+    parentId: 'ufo-types',
+    name: 'Cigar-Shaped Cylinders',
+    description: `Elongated, cylindrical metallic craft, often reported as giant mother ships launching smaller circular disc craft.`,
+    layer: 'UFOs - Sightings',
+    sources: ['MUFON Database', 'Project Blue Book Records'],
+    relatedIds: ['anomaly-UFO-1011']
+  },
+  {
+    id: 'ufo-type-triangle',
+    parentId: 'ufo-types',
+    name: 'Silent Black Triangles',
+    description: `Massive, silent, triangular craft with bright lights at each corner, frequently observed in the late 20th century (such as the Belgian UFO wave). Conspiratorial research links them to black-budget stealth craft like the TR-3B.`,
+    layer: 'UFOs - Sightings',
+    sources: ['MUFON Database', 'Project Blue Book Records'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/8/8c/Vaguebelge%28reconstitution%29.png'
+    ],
+    relatedIds: ['anomaly-UFO-1001']
+  },
+  {
+    id: 'ufo-type-orb',
+    parentId: 'ufo-types',
+    name: 'Luminous Shifting Orbs',
+    description: `Bright, glowing spheres of energy or light that track military aircraft and demonstrate highly agile, intelligent flight patterns. First reported widely during WWII as "Foo Fighters".`,
+    layer: 'UFOs - Sightings',
+    sources: ['MUFON Database', 'Project Blue Book Records'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Foo_Fighter_WWII_germany.png/960px-Foo_Fighter_WWII_germany.png'
+    ],
+    relatedIds: ['foo-fighters', 'anomaly-UFO-1009']
+  },
+  {
+    id: 'ufo-type-tictac',
+    parentId: 'ufo-types',
+    name: 'Tic-Tac UAPs',
+    description: `Solid white, oblong, capsule-shaped craft with no wings or visible propulsion, famous for its deployment during the 2004 USS Nimitz radar encounter.`,
+    layer: 'UFOs - Sightings',
+    sources: ['MUFON Database', 'Project Blue Book Records'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/FLIR1_Official_UAP_Footage_from_the_USG_for_Public_Release.webm/330px--FLIR1_Official_UAP_Footage_from_the_USG_for_Public_Release.webm.jpg'
+    ],
+    relatedIds: ['anomaly-UFO-1000', 'anomaly-UFO-1004']
   }
 ];
 
