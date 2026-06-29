@@ -807,7 +807,7 @@ const LAYER_CONFIG: Record<string, { color: string; icon: string }> = {
   'Enochian Sites': { color: '#FF9F63', icon: '/icons/icon-enochian-lore.svg' },
   'Giants & Nephilim': { color: '#ECCE81', icon: '/icons/icon-giants.svg' },
   'Biblical Figures': { color: '#90C2FF', icon: '/icons/icon-biblical-bloodlines.svg' },
-  'Religion': { color: '#90C2FF', icon: '/icons/icon-biblical-bloodlines.svg' },
+  'Religion': { color: '#90C2FF', icon: '/icons/icon-religion.svg' },
   'Myths / Legends': { color: '#FFF96A', icon: '/icons/icon-greek-mythology.svg' },
   'Biblical Events': { color: '#91FFC4', icon: '/icons/icon-biblical-bloodlines-1.svg' },
   'UFOs - Sightings': { color: '#C2FFBD', icon: '/icons/icon-ufo-sightings.svg' },

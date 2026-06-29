@@ -70,7 +70,7 @@ const LAYER_ICONS: Record<string, string> = {
   'Enochian Sites': '/icons/icon-enochian-lore.svg',
   'Giants & Nephilim': '/icons/icon-giants.svg',
   'Biblical Figures': '/icons/icon-biblical-bloodlines.svg',
-  'Religion': '/icons/icon-biblical-bloodlines.svg',
+  'Religion': '/icons/icon-religion.svg',
   'Myths / Legends': '/icons/icon-greek-mythology.svg',
   'Biblical Events': '/icons/icon-biblical-bloodlines-1.svg',
   'UFOs - Sightings': '/icons/icon-ufo-sightings.svg',
