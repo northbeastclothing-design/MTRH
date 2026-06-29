@@ -71,6 +71,8 @@ const LAYER_ICONS: Record<string, string> = {
   'Giants & Nephilim': '/icons/icon-giants.svg',
   'Biblical Figures': '/icons/icon-biblical-bloodlines.svg',
   'Religion': '/icons/icon-religion.svg',
+  'Masonic Lodges': '/icons/icon-alchemy-occult.svg',
+  'Hadron Colliders': '/icons/icon-portals.svg',
   'Myths / Legends': '/icons/icon-greek-mythology.svg',
   'Biblical Events': '/icons/icon-biblical-bloodlines-1.svg',
   'UFOs - Sightings': '/icons/icon-ufo-sightings.svg',

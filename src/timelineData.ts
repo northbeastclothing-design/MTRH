@@ -3831,6 +3831,87 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
       description: 'The uncrewed Artemis I flight test launches from Cape Canaveral, performing a lunar flyby and returning to Earth, marking the official operational debut of the SLS and Orion spacecraft.',
       source: 'NASA Mission Reports'
     },
+    {
+      id: 'chi-rho-vision-event',
+      name: 'Constantines Chi Rho Vision',
+      type: 'event',
+      layer: 'biblical-events',
+      start: 312,
+      description: 'Roman Emperor Constantine the Great reports a vision of the Chi Rho symbol in the sky before the Battle of Milvian Bridge, leading to his victory and conversion.',
+      source: 'Life of Constantine (Eusebius)'
+    },
+    {
+      id: 'project-sun-streak-event',
+      name: 'Project Sun Streak Initiated',
+      type: 'event',
+      layer: 'secret-gov-programs',
+      start: 1985,
+      description: 'The DIA initiates Project Sun Streak to study declassified remote viewing and psychic intelligence, carrying forward the work of Grill Flame.',
+      source: 'Declassified DIA Records'
+    },
+    {
+      id: 'plutarch-writing-event',
+      name: 'Plutarch Writing at Delphi',
+      type: 'event',
+      layer: 'greek-mythology',
+      start: 100,
+      description: 'Greek essayist and priest Plutarch writes his Parallel Lives and Moralia at Delphi, documenting anomalies like aerial shields and early lunar habitability theories.',
+      source: 'Plutarch Moralia'
+    },
+    {
+      id: 'vimanas-mahabharata-event',
+      name: 'Vimana Epoch of Sanskrit Epics',
+      type: 'event',
+      layer: 'ancient-civilizations',
+      start: -3000,
+      description: 'Prehistoric flying palaces and chariots called Vimanas are recorded in Sanskrit epics during the Kurukshetra War epoch in ancient India.',
+      source: 'Mahabharata Sanskrit Epics'
+    },
+    {
+      id: 'canyon-de-chelly-dwellings-event',
+      name: 'Anasazi Cliff Construction',
+      type: 'event',
+      layer: 'ancient-civilizations',
+      start: 1100,
+      description: 'Anasazi Builders construct the White House Cliff Dwellings in Canyon de Chelly, Arizona, creating stone architecture linked to subterranean Hopi legends.',
+      source: 'National Park Service Archeology Reports'
+    },
+    {
+      id: 'ugle-foundation-event',
+      name: 'Foundation of Premier Grand Lodge',
+      type: 'event',
+      layer: 'alchemy-occult',
+      start: 1717,
+      description: 'Four London taverns unite to form the Premier Grand Lodge of England, establishing modern organised Freemasonry.',
+      source: 'Masonic Constitutions of 1723'
+    },
+    {
+      id: 'detroit-masonic-temple-event',
+      name: 'Detroit Masonic Temple Dedication',
+      type: 'event',
+      layer: 'alchemy-occult',
+      start: 1926,
+      description: 'The Detroit Masonic Temple, the largest Masonic temple in the world, is formally dedicated on Temple Avenue, featuring massive Gothic and Masonic architecture.',
+      source: 'Detroit Historical Records'
+    },
+    {
+      id: 'cern-lhc-startup-event',
+      name: 'Large Hadron Collider Startup',
+      type: 'event',
+      layer: 'secret-gov-programs',
+      start: 2008,
+      description: 'The Large Hadron Collider at CERN goes online near Geneva, launching a new era of particle collisions and experimental space-time anomalies research.',
+      source: 'CERN Laboratory Logs'
+    },
+    {
+      id: 'ssc-abandonment-event',
+      name: 'SSC Super Collider Cancelled',
+      type: 'event',
+      layer: 'secret-gov-programs',
+      start: 1993,
+      description: 'The United States Congress cancels construction of the massive Superconducting Super Collider in Waxahachie, Texas, leaving 14 miles of tunnels abandoned.',
+      source: 'Congressional Record'
+    },
         {
       id: 'saint-john-vianney-exhumation-event',
       name: 'St. John Vianney Exhumed Incorrupt',
@@ -4410,6 +4491,15 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'project-gemini-start': { lng: -80.6077, lat: 28.5721, locationName: 'Cape Canaveral Space Force Station (FL)', category: 'NASA / Space' },
   'project-apollo-start': { lng: -80.6077, lat: 28.5721, locationName: 'Kennedy Space Center (Cape Canaveral, FL)', category: 'NASA / Space' },
   'artemis-program-event': { lng: -80.6041, lat: 28.6272, locationName: 'Launch Complex 39B (Cape Canaveral, FL)', category: 'NASA / Space' },
+  'chi-rho-vision-event': { lng: 12.4729, lat: 41.9358, locationName: 'Milvian Bridge (Rome, Italy)', category: 'Religion' },
+  'project-sun-streak-event': { lng: -76.7325, lat: 39.1118, locationName: 'Fort Meade (Maryland, USA)', category: 'Secret Government Programs' },
+  'plutarch-writing-event': { lng: 22.5011, lat: 38.4824, locationName: 'Sanctuary of Apollo (Delphi, Greece)', category: 'Myths / Legends' },
+  'vimanas-mahabharata-event': { lng: 76.8197, lat: 29.9695, locationName: 'Kurukshetra War Site (Haryana, India)', category: 'Myths / Legends' },
+  'canyon-de-chelly-dwellings-event': { lng: -109.5383, lat: 36.1553, locationName: 'Canyon de Chelly National Monument (Arizona, USA)', category: 'Archaeological Finds' },
+  'ugle-foundation-event': { lng: -0.1213, lat: 51.5152, locationName: 'Freemasons Hall (London, UK)', category: 'Masonic Lodges' },
+  'detroit-masonic-temple-event': { lng: -83.0598, lat: 42.3418, locationName: 'Detroit Masonic Temple (Detroit, USA)', category: 'Masonic Lodges' },
+  'cern-lhc-startup-event': { lng: 6.0557, lat: 46.2330, locationName: 'CERN Large Hadron Collider (Geneva, Switzerland)', category: 'Hadron Colliders' },
+  'ssc-abandonment-event': { lng: -96.8486, lat: 32.3951, locationName: 'Superconducting Super Collider Tunnels (Waxahachie, USA)', category: 'Hadron Colliders' },
   'saint-francis-stigmata-event': { lng: 12.6056, lat: 43.0744, locationName: 'Basilica of St. Francis (Assisi, Italy)', category: 'Religion' },
   'saint-john-vianney-exhumation-event': { lng: 4.8219, lat: 45.9926, locationName: 'Basilica of Ars (Ars-sur-Formans, France)', category: 'Religion' },
   'saint-silvan-martyrdom-event': { lng: 18.1105, lat: 42.6409, locationName: 'Church of St. Blaise (Dubrovnik, Croatia)', category: 'Religion' },

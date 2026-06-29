@@ -30447,5 +30447,327 @@
       "https://upload.wikimedia.org/wikipedia/commons/5/5d/Teresa_de_Jes%C3%BAs_%28cropped%29.jpg",
       "https://upload.wikimedia.org/wikipedia/commons/2/20/Cornaro_chapel_in_Santa_Maria_della_Vittoria_in_Rome_HDR.jpg"
     ]
+  },
+  {
+    "id": "anomaly-chi-rho-milvian-bridge",
+    "name": "Chi Rho Constantine Vision - Milvian Bridge, Italy",
+    "category": "Religion",
+    "type": "Point",
+    "coordinates": {
+      "lng": 12.4729,
+      "lat": 41.9358
+    },
+    "date": 312,
+    "description": "Historical site of the Battle of Milvian Bridge where Constantine the Great experienced his famous vision of the Chi Rho symbol.",
+    "source": "Life of Constantine (Eusebius)",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/6/6d/Constantine_and_Helena._Mosaic_in_Saint_Isaac%27s_Cathedral.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-project-sun-streak-ft-meade",
+    "name": "Project Sun Streak - Fort Meade, USA",
+    "category": "Secret Government Programs",
+    "type": "Point",
+    "coordinates": {
+      "lng": -76.7325,
+      "lat": 39.1118
+    },
+    "date": 1985,
+    "description": "Headquarters of the DIA Project Sun Streak remote viewing and psychic espionage operations.",
+    "source": "Declassified DIA Documents",
+    "images": [
+      "https://dn721503.ca.archive.org/0/items/CIA-RDP96-00788R001900760001-9/CIA-RDP96-00788R001900760001-9.pdf"
+    ]
+  },
+  {
+    "id": "anomaly-plutarch-delphi",
+    "name": "Plutarch Writings - Delphi, Greece",
+    "category": "Myths / Legends",
+    "type": "Point",
+    "coordinates": {
+      "lng": 22.5011,
+      "lat": 38.4824
+    },
+    "date": 100,
+    "description": "Sanctuary of Apollo at Delphi, where Plutarch served as a priest and recorded anomalous aerial shield sightings and lunar habitability speculations.",
+    "source": "Plutarch Moralia",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/0/02/Plutarch_of_Chaeronea-03-removebg-preview.png"
+    ]
+  },
+  {
+    "id": "anomaly-vimanas-kurukshetra",
+    "name": "Mahabharata Vimanas - Kurukshetra, India",
+    "category": "Myths / Legends",
+    "type": "Point",
+    "coordinates": {
+      "lng": 76.8197,
+      "lat": 29.9695
+    },
+    "date": -3000,
+    "description": "Sanskrit battlefield epicentre where Vimana flying palaces and chariots were reportedly deployed in ancient warfare.",
+    "source": "The Mahabharata Sanskrit Epics",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/e/ea/10th-century_shikhara%2C_half_plan_section%2C_Nilakantha_Mahadeva_Hindu_temple%2C_Sunak_Gujarat_India.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-canyon-de-chelly-ruins",
+    "name": "Anasazi Cliff Dwellings - Canyon de Chelly, USA",
+    "category": "Archaeological Finds",
+    "type": "Point",
+    "coordinates": {
+      "lng": -109.5383,
+      "lat": 36.1553
+    },
+    "date": 1100,
+    "description": "Ancient Anasazi ruins and rock carvings in Arizona associated with Hopi legends of the Ant People and subterranean portal entrances.",
+    "source": "National Park Service Archaeology Reviews",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/4/4d/White_House_Ruins%2C_Canyon_de_Chelly_1.jpg"
+    ]
+  },
+  {
+    "id": "masonic-lodge-ugle",
+    "name": "United Grand Lodge of England (Freemasons Hall)",
+    "category": "Masonic Lodges",
+    "type": "Point",
+    "coordinates": {
+      "lng": -0.1213,
+      "lat": 51.5152
+    },
+    "date": 1717,
+    "description": "The administrative headquarters of the United Grand Lodge of England, serving as the historical cradle of modern organised Freemasonry.",
+    "source": "UGLE Official Archives",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Freemasons_Hall_%28West_Entrance_-_01%29.jpg/1280px-Freemasons_Hall_%28West_Entrance_-_01%29.jpg"
+    ]
+  },
+  {
+    "id": "masonic-lodge-gof",
+    "name": "Grand Orient de France (Mus\u00e9e de la Franc-ma\u00e7onnerie)",
+    "category": "Masonic Lodges",
+    "type": "Point",
+    "coordinates": {
+      "lng": 2.3423,
+      "lat": 48.8772
+    },
+    "date": 1773,
+    "description": "The headquarters of the Grand Orient de France, the oldest Masonic body in Continental Europe, housing the museum of Freemasonry.",
+    "source": "GODF Historical Library",
+    "images": []
+  },
+  {
+    "id": "masonic-lodge-philadelphia",
+    "name": "Masonic Temple of Philadelphia",
+    "category": "Masonic Lodges",
+    "type": "Point",
+    "coordinates": {
+      "lng": -75.1627,
+      "lat": 39.9536
+    },
+    "date": 1873,
+    "description": "A magnificent Victorian Masonic structure in Pennsylvania featuring grand halls themed around classic Egyptian, Ionic, and Corinthian architectures.",
+    "source": "Grand Lodge of Pennsylvania Archives",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Masonic_Temple_in_Philadelphia.jpg/1280px-Masonic_Temple_in_Philadelphia.jpg"
+    ]
+  },
+  {
+    "id": "masonic-lodge-house-temple",
+    "name": "House of the Temple (Scottish Rite Southern Jurisdiction)",
+    "category": "Masonic Lodges",
+    "type": "Point",
+    "coordinates": {
+      "lng": -77.0355,
+      "lat": 38.9137
+    },
+    "date": 1915,
+    "description": "The grand headquarters of the Scottish Rite of Freemasonry in Washington D.C., designed by John Russell Pope to mirror the ancient Tomb of Mausolus.",
+    "source": "Scottish Rite Supreme Council Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/House_of_the_Temple.JPG/1280px-House_of_the_Temple.JPG"
+    ]
+  },
+  {
+    "id": "masonic-lodge-ny",
+    "name": "Grand Lodge of New York",
+    "category": "Masonic Lodges",
+    "type": "Point",
+    "coordinates": {
+      "lng": -73.9918,
+      "lat": 40.7423
+    },
+    "date": 1781,
+    "description": "The grand lodge representing Masonic assemblies in the state of New York, housing a vast collection of colonial Masonic relics and charters.",
+    "source": "Grand Lodge of New York Archives",
+    "images": []
+  },
+  {
+    "id": "masonic-lodge-alexandria",
+    "name": "George Washington Masonic National Memorial",
+    "category": "Masonic Lodges",
+    "type": "Point",
+    "coordinates": {
+      "lng": -77.0658,
+      "lat": 38.8078
+    },
+    "date": 1932,
+    "description": "A prominent landmark tower in Alexandria, Virginia, built by American Freemasons to honor the Masonic legacy of President George Washington.",
+    "source": "GWMNM Foundation Logs",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Front_View_of_George_Washington_Masonic_National_Memorial.jpg/1280px-Front_View_of_George_Washington_Masonic_National_Memorial.jpg"
+    ]
+  },
+  {
+    "id": "masonic-lodge-detroit",
+    "name": "Detroit Masonic Temple",
+    "category": "Masonic Lodges",
+    "type": "Point",
+    "coordinates": {
+      "lng": -83.0598,
+      "lat": 42.3418
+    },
+    "date": 1926,
+    "description": "The largest Masonic Temple in the world, constructed with over 1,000 rooms, theatres, and ritual chambers featuring Gothic and Masonic motifs.",
+    "source": "Detroit Masonic Temple Association",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/f/f2/Detroit_Masonic_Temple_-_Detroit_Michigan.jpg"
+    ]
+  },
+  {
+    "id": "masonic-lodge-tenerife",
+    "name": "Masonic Temple of Santa Cruz de Tenerife",
+    "category": "Masonic Lodges",
+    "type": "Point",
+    "coordinates": {
+      "lng": -16.2536,
+      "lat": 28.4682
+    },
+    "date": 1904,
+    "description": "One of Spain's most significant historical Masonic structures, featuring complex Egyptian Revival styling on its exterior facade.",
+    "source": "Spanish Historical Heritage Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/b/b8/Santacruzmasontemple03.jpg"
+    ]
+  },
+  {
+    "id": "masonic-lodge-scotland",
+    "name": "Grand Lodge of Scotland",
+    "category": "Masonic Lodges",
+    "type": "Point",
+    "coordinates": {
+      "lng": -3.1979,
+      "lat": 55.9525
+    },
+    "date": 1736,
+    "description": "The governing body for Scottish Freemasonry, headquartering some of the oldest active continuous lodges in the world.",
+    "source": "Grand Lodge of Scotland Charters",
+    "images": []
+  },
+  {
+    "id": "masonic-lodge-swiss",
+    "name": "Freemasonry Museum Lodge of Switzerland",
+    "category": "Masonic Lodges",
+    "type": "Point",
+    "coordinates": {
+      "lng": 7.4474,
+      "lat": 46.948
+    },
+    "date": 1844,
+    "description": "Historical Masonic Lodge museum in Bern, Switzerland, showcasing Swiss Alpine Masonic traditions.",
+    "source": "Grand Lodge Alpina of Switzerland Logs",
+    "images": []
+  },
+  {
+    "id": "collider-lhc",
+    "name": "Large Hadron Collider (CERN)",
+    "category": "Hadron Colliders",
+    "type": "Point",
+    "coordinates": {
+      "lng": 6.0557,
+      "lat": 46.233
+    },
+    "date": 2008,
+    "description": "The world's largest and most powerful particle accelerator, operating inside a 27-kilometre ring under the Franco-Swiss border.",
+    "source": "CERN Official Documentation",
+    "images": []
+  },
+  {
+    "id": "collider-rhic",
+    "name": "Relativistic Heavy Ion Collider (RHIC)",
+    "category": "Hadron Colliders",
+    "type": "Point",
+    "coordinates": {
+      "lng": -72.8753,
+      "lat": 40.8719
+    },
+    "date": 2000,
+    "description": "A heavy-ion collider located at Brookhaven National Laboratory in Upton, New York, designed to recreate conditions of the Early Universe.",
+    "source": "Brookhaven National Laboratory Logs",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/A_section_of_Relativistic_Heavy_Ion_Collider.jpg/1280px-A_section_of_Relativistic_Heavy_Ion_Collider.jpg"
+    ]
+  },
+  {
+    "id": "collider-tevatron",
+    "name": "Fermilab Tevatron (Decommissioned)",
+    "category": "Hadron Colliders",
+    "type": "Point",
+    "coordinates": {
+      "lng": -88.2562,
+      "lat": 41.8322
+    },
+    "date": 1983,
+    "description": "The landmark proton-antiproton accelerator at Fermi National Accelerator Laboratory, which discovered the top quark before decommissioning in 2011.",
+    "source": "Fermilab Historical Archives",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Fermilab_Robert_Rathbun_Wilson_Hall_2011.jpg/1280px-Fermilab_Robert_Rathbun_Wilson_Hall_2011.jpg"
+    ]
+  },
+  {
+    "id": "collider-ssc",
+    "name": "Superconducting Super Collider (SSC - Cancelled Tunnels)",
+    "category": "Hadron Colliders",
+    "type": "Point",
+    "coordinates": {
+      "lng": -96.8486,
+      "lat": 32.3951
+    },
+    "date": 1993,
+    "description": "The abandoned construction site of a planned 87-kilometre ring collider in Texas, which was cancelled by Congress after spending billions.",
+    "source": "SSC Project Technical Audits",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Ssc_mdl.JPG/1280px-Ssc_mdl.JPG"
+    ]
+  },
+  {
+    "id": "collider-kekb",
+    "name": "SuperKEKB Electron-Positron Collider",
+    "category": "Hadron Colliders",
+    "type": "Point",
+    "coordinates": {
+      "lng": 140.0761,
+      "lat": 36.1558
+    },
+    "date": 2018,
+    "description": "An electron-positron collider at KEK in Tsukuba, Japan, designed to search for physics anomalies in the B-meson system.",
+    "source": "KEK High Energy Accelerator Research Logs",
+    "images": []
+  },
+  {
+    "id": "collider-bepc",
+    "name": "Beijing Electron Positron Collider (BEPC)",
+    "category": "Hadron Colliders",
+    "type": "Point",
+    "coordinates": {
+      "lng": 116.3218,
+      "lat": 39.9123
+    },
+    "date": 1988,
+    "description": "An electron-positron collider operating at the Institute of High Energy Physics in Beijing, China, facilitating Charm and Tau physics.",
+    "source": "IHEP Beijing Laboratory Records",
+    "images": []
   }
 ]

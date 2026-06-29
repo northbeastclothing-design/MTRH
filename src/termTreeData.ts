@@ -23362,7 +23362,160 @@ const chunk_saints: any[] = [
   }
 ];
 
+const chunk_historic_extensions: any[] = [
+  {
+    id: 'chi-rho',
+    parentId: 'christianity',
+    name: 'Chi Rho',
+    description: `An early Christian symbol formed by superimposing the first two letters (XP) of the Greek word for Christ (XPIΣTOΣ). According to historical accounts, Roman Emperor Constantine the Great saw the symbol in a vision before the Battle of the Milvian Bridge in 312 CE, hearing the words "In hoc signo vinces" (In this sign you shall conquer), leading to his victory and the subsequent legalization of Christianity.`,
+    layer: 'Religion',
+    timelineId: 'chi-rho-vision-event',
+    mapFeatureId: 'anomaly-chi-rho-milvian-bridge',
+    sources: ['Life of Constantine (Eusebius)', 'Roman Imperial Coinage Records'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/6/6d/Constantine_and_Helena._Mosaic_in_Saint_Isaac%27s_Cathedral.jpg'
+    ]
+  },
+  {
+    id: 'project-sun-streak',
+    parentId: 'project-stargate',
+    name: 'Project Sun Streak',
+    description: `A secret U.S. government intelligence project (1985–1990) under the Defense Intelligence Agency (DIA) that continued the remote viewing, psychic espionage, and astral projection research of Project Grill Flame. It was later merged back into Project Stargate.`,
+    layer: 'Secret Government Programs',
+    timelineId: 'project-sun-streak-event',
+    mapFeatureId: 'anomaly-project-sun-streak-ft-meade',
+    sources: ['Declassified DIA Documents (Released 1995)', 'CIA Freedom of Information Act Archives'],
+    images: [
+      'https://dn721503.ca.archive.org/0/items/CIA-RDP96-00788R001900760001-9/CIA-RDP96-00788R001900760001-9.pdf'
+    ],
+    relatedIds: ['project-stargate', 'gateway-process']
+  },
+  {
+    id: 'lam-entity',
+    parentId: 'amalantrah-working',
+    name: 'Lam',
+    description: `An entity contacted by the English occultist Aleister Crowley during the Amalantrah Working rituals in New York City in 1918. Crowley drew a portrait of Lam, depicting an entity with an elongated, bulbous bald head and large eyes, which famously pre-dates modern pop-culture depictions of the "Grey alien" archetype by several decades. Typhonian occultist Kenneth Grant later identified Lam as a gateway to extraterrestrial intelligences.`,
+    layer: 'The Occult',
+    relatedIds: ['aleister-crowley', 'amalantrah-working'],
+    sources: ['The Equinox (Aleister Crowley)', 'Kenneth Grant\'s Outside the Circles of Time'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/3/31/Supposed_channeled_entity_by_occultist_crowley.jpg'
+    ]
+  },
+  {
+    id: 'plutarch',
+    parentId: 'greek-mythology',
+    name: 'Plutarch',
+    description: `Greek philosopher, historian, biographer, and priest of Apollo at Delphi (c. 46 – 119 CE). His works, including the 'Parallel Lives' and various essays, are highly studied in alternative archaeology for recording strange historical anomalies, such as aerial shields at Aegospotami and discussions regarding the habitability of the Moon.`,
+    layer: 'Myths / Legends',
+    timelineId: 'plutarch-writing-event',
+    mapFeatureId: 'anomaly-plutarch-delphi',
+    sources: ['Parallel Lives (Plutarch)', 'Moralia (Plutarch)'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/0/02/Plutarch_of_Chaeronea-03-removebg-preview.png'
+    ]
+  },
+  {
+    id: 'vimanas',
+    parentId: 'ancient-texts',
+    name: 'Vimanas',
+    description: `Mythological flying palaces or chariots described in ancient Sanskrit epics (such as the Ramayana and Mahabharata) and the Vaimanika Shastra. Described as multi-decked, circular or cylinder-shaped craft powered by mercury engines or liquid propulsion, Vimanas are frequently cited by alternative historians as evidence of advanced prehistoric aerospace technology or ancient space travel.`,
+    layer: 'Myths / Legends',
+    timelineId: 'vimanas-mahabharata-event',
+    mapFeatureId: 'anomaly-vimanas-kurukshetra',
+    sources: ['The Mahabharata', 'The Ramayana', 'The Vaimanika Shastra'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/e/ea/10th-century_shikhara%2C_half_plan_section%2C_Nilakantha_Mahadeva_Hindu_temple%2C_Sunak_Gujarat_India.jpg'
+    ]
+  },
+  {
+    id: 'canyon-de-chelly',
+    parentId: 'ancient-civilizations',
+    name: 'Canyon de Chelly',
+    description: `A sandstone canyon in northeastern Arizona, within the Navajo Nation, inhabited continuously for nearly 5,000 years. Famous for its Anasazi ruins, Spider Rock, and historic petroglyphs and pictographs (including the Spanish Expedition mural). Conspiratorial research links the canyon's ancient dwellings and rock art to legends of the Hopi "Ant People" and subterranean portals.`,
+    layer: 'Archaeological Finds',
+    timelineId: 'canyon-de-chelly-dwellings-event',
+    mapFeatureId: 'anomaly-canyon-de-chelly-ruins',
+    sources: ['National Park Service Historical Overviews', 'Hopi Oral Traditions'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/4/4d/White_House_Ruins%2C_Canyon_de_Chelly_1.jpg'
+    ]
+  },
+  {
+    id: 'freemasonry',
+    parentId: 'alchemy-occult',
+    name: 'Freemasonry',
+    description: `An international fraternal organisation and secret society that arose from the guilds of stonemasons in the late 16th century. Revering the "Great Architect of the Universe," Freemasonry incorporates complex degrees, initiations, and symbols (such as the Square and Compasses and the Eye of Providence) that are heavily featured in alternative histories of geopolitical power.`,
+    layer: 'The Occult'
+  },
+  {
+    id: 'famous-freemasons',
+    parentId: 'freemasonry',
+    name: 'Famous Freemasons',
+    description: `A listing of the top 30 most famous and influential historical Freemasons, their lodges, and their historical contributions:
+     
+     <table class="w-full text-sm text-left border-collapse border border-slate-700 mt-4">
+       <thead>
+         <tr class="bg-slate-800">
+           <th class="border border-slate-700 p-2">Name</th>
+           <th class="border border-slate-700 p-2">Lodge / Membership</th>
+           <th class="border border-slate-700 p-2">Significance</th>
+         </tr>
+       </thead>
+       <tbody>
+         <tr><td class="border border-slate-700 p-2"><b>George Washington</b></td><td class="border border-slate-700 p-2">Fredericksburg Lodge No. 4, VA</td><td class="border border-slate-700 p-2">First President of the United States, General of the Continental Army.</td></tr>
+         <tr><td class="border border-slate-700 p-2"><b>Benjamin Franklin</b></td><td class="border border-slate-700 p-2">St. John's Lodge, Philadelphia, PA</td><td class="border border-slate-700 p-2">US Founding Father, printer, scientist, diplomat, Grand Master of Pennsylvania.</td></tr>
+         <tr><td class="border border-slate-700 p-2"><b>Voltaire</b></td><td class="border border-slate-700 p-2">Loge des Neuf Sœurs, Paris, France</td><td class="border border-slate-700 p-2">French Enlightenment writer, historian, and philosopher.</td></tr>
+         <tr><td class="border border-slate-700 p-2"><b>Wolfgang Amadeus Mozart</b></td><td class="border border-slate-700 p-2">Lodge Zur Wohltätigkeit, Vienna, Austria</td><td class="border border-slate-700 p-2">Composer; integrated Masonic themes into his opera <i>The Magic Flute</i>.</td></tr>
+         <tr><td class="border border-slate-700 p-2"><b>Winston Churchill</b></td><td class="border border-slate-700 p-2">Studholme Alliance Lodge No. 1591, London</td><td class="border border-slate-700 p-2">Prime Minister of the United Kingdom during World War II.</td></tr>
+         <tr><td class="border border-slate-700 p-2"><b>Mark Twain</b></td><td class="border border-slate-700 p-2">Polar Star Lodge No. 79, St. Louis, MO</td><td class="border border-slate-700 p-2">Iconic American author and humorist (Samuel Langhorne Clemens).</td></tr>
+         <tr><td class="border border-slate-700 p-2"><b>Buzz Aldrin</b></td><td class="border border-slate-700 p-2">Montclair Lodge No. 144, NJ / Tranquility Lodge No. 2000</td><td class="border border-slate-700 p-2">Apollo 11 Astronaut, second man to walk on the Moon; carried a Masonic flag.</td></tr>
+         <tr><td class="border border-slate-700 p-2"><b>Franklin D. Roosevelt</b></td><td class="border border-slate-700 p-2">Holland Lodge No. 8, New York City</td><td class="border border-slate-700 p-2">32nd President of the United States during the Great Depression and WWII.</td></tr>
+         <tr><td class="border border-slate-700 p-2"><b>Theodore Roosevelt</b></td><td class="border border-slate-700 p-2">Matinecock Lodge No. 806, Oyster Bay, NY</td><td class="border border-slate-700 p-2">26th President of the United States, conservationist, Nobel laureate.</td></tr>
+         <tr><td class="border border-slate-700 p-2"><b>Harry S. Truman</b></td><td class="border border-slate-700 p-2">Belton Lodge No. 450, Grand Master of MO</td><td class="border border-slate-700 p-2">33rd President of the United States; oversaw end of WWII and founding of UN.</td></tr>
+         <tr><td class="border border-slate-700 p-2"><b>John Wayne</b></td><td class="border border-slate-700 p-2">Marion Morrison Lodge No. 700, CA</td><td class="border border-slate-700 p-2">Legendary American Academy Award-winning Western film actor.</td></tr>
+         <tr><td class="border border-slate-700 p-2"><b>Arthur Conan Doyle</b></td><td class="border border-slate-700 p-2">Phoenix Lodge No. 257, Southsea, England</td><td class="border border-slate-700 p-2">British writer, physician, creator of the detective Sherlock Holmes.</td></tr>
+         <tr><td class="border border-slate-700 p-2"><b>Alexander Fleming</b></td><td class="border border-slate-700 p-2">Misericordia Lodge No. 3286, London</td><td class="border border-slate-700 p-2">Scottish physician and microbiologist, Nobel laureate, discovered Penicillin.</td></tr>
+         <tr><td class="border border-slate-700 p-2"><b>Simon Bolivar</b></td><td class="border border-slate-700 p-2">Lodge Order and Liberty No. 2, Peru</td><td class="border border-slate-700 p-2">"El Libertador", Venezuelan military leader who led independence of South America.</td></tr>
+         <tr><td class="border border-slate-700 p-2"><b>Marquis de Lafayette</b></td><td class="border border-slate-700 p-2">Military Lodge, France / Union Lodge, DE</td><td class="border border-slate-700 p-2">French aristocrat and general who fought in American Revolutionary War.</td></tr>
+         <tr><td class="border border-slate-700 p-2"><b>Rudyard Kipling</b></td><td class="border border-slate-700 p-2">Lodge Hope and Perseverance No. 782, India</td><td class="border border-slate-700 p-2">English journalist, short-story writer, Nobel laureate, wrote <i>The Jungle Book</i>.</td></tr>
+         <tr><td class="border border-slate-700 p-2"><b>Harry Houdini</b></td><td class="border border-slate-700 p-2">St. Cecile Lodge No. 568, New York City</td><td class="border border-slate-700 p-2">World-famous Hungarian-American illusionist and escape artist.</td></tr>
+         <tr><td class="border border-slate-700 p-2"><b>Oscar Wilde</b></td><td class="border border-slate-700 p-2">Apollo University Lodge No. 357, Oxford</td><td class="border border-slate-700 p-2">Irish poet, dramatist, and author of <i>The Picture of Dorian Gray</i>.</td></tr>
+         <tr><td class="border border-slate-700 p-2"><b>Douglas MacArthur</b></td><td class="border border-slate-700 p-2">Manila Lodge No. 1, Philippines</td><td class="border border-slate-700 p-2">U.S. Five-Star General, Field Marshal of Philippine Army, Allied Commander.</td></tr>
+         <tr><td class="border border-slate-700 p-2"><b>J. Edgar Hoover</b></td><td class="border border-slate-700 p-2">Federal Lodge No. 1, Washington D.C.</td><td class="border border-slate-700 p-2">First Director of the Federal Bureau of Investigation (FBI).</td></tr>
+         <tr><td class="border border-slate-700 p-2"><b>Paul Revere</b></td><td class="border border-slate-700 p-2">Lodge of Saint Andrew, Boston, MA</td><td class="border border-slate-700 p-2">American silversmith, patriot, hero of the midnight ride, Grand Master of MA.</td></tr>
+         <tr><td class="border border-slate-700 p-2"><b>John Hancock</b></td><td class="border border-slate-700 p-2">Lodge of Saint Andrew, Boston, MA</td><td class="border border-slate-700 p-2">President of Second Continental Congress, first signer of Declaration.</td></tr>
+         <tr><td class="border border-slate-700 p-2"><b>Davy Crockett</b></td><td class="border border-slate-700 p-2">Weakly Lodge No. 143, TN</td><td class="border border-slate-700 p-2">American folk hero, frontiersman, soldier, politician; died at the Alamo.</td></tr>
+         <tr><td class="border border-slate-700 p-2"><b>Henry Ford</b></td><td class="border border-slate-700 p-2">Palestine Lodge No. 357, Detroit, MI</td><td class="border border-slate-700 p-2">Industrialist, founder of Ford Motor Company, developer of assembly line.</td></tr>
+         <tr><td class="border border-slate-700 p-2"><b>Walter Chrysler</b></td><td class="border border-slate-700 p-2">Apollo Lodge No. 297, KS</td><td class="border border-slate-700 p-2">Automotive pioneer, founder of Chrysler Corporation.</td></tr>
+         <tr><td class="border border-slate-700 p-2"><b>Steve Wozniak</b></td><td class="border border-slate-700 p-2">Charity Lodge No. 362, Campbell, CA</td><td class="border border-slate-700 p-2">Co-founder of Apple Inc., developer of Apple I and Apple II computers.</td></tr>
+         <tr><td class="border border-slate-700 p-2"><b>Gene Autry</b></td><td class="border border-slate-700 p-2">Catoosa Lodge No. 185, OK</td><td class="border border-slate-700 p-2">"The Singing Cowboy", legendary American actor, singer, and businessman.</td></tr>
+         <tr><td class="border border-slate-700 p-2"><b>Edwin Markham</b></td><td class="border border-slate-700 p-2">Acacia Lodge No. 85, CA</td><td class="border border-slate-700 p-2">American poet, author of "The Man with the Hoe", Poet Laureate of Oregon.</td></tr>
+         <tr><td class="border border-slate-700 p-2"><b>Charles Lindbergh</b></td><td class="border border-slate-700 p-2">Keystone Lodge No. 243, St. Louis, MO</td><td class="border border-slate-700 p-2">Aviator, military officer, author; made the first solo transatlantic flight.</td></tr>
+         <tr><td class="border border-slate-700 p-2"><b>Duke of Wellington</b></td><td class="border border-slate-700 p-2">Lodge No. 494, Trim, Ireland</td><td class="border border-slate-700 p-2">Arthur Wellesley, Anglo-Irish soldier, victor at Waterloo, British Prime Minister.</td></tr>
+       </tbody>
+     </table>`,
+    layer: 'The Occult',
+    sources: ['Masonic Historical Records', 'Lodge Charters and Ledgers']
+  },
+  {
+    id: 'masonic-lodges',
+    parentId: 'freemasonry',
+    name: 'Masonic Lodges',
+    description: `A directory of grand and historical Masonic lodges and temples established across the globe, serving as the local centers of Masonic assembly and esoteric ritual.`,
+    layer: 'Masonic Lodges'
+  },
+  {
+    id: 'hadron-colliders',
+    parentId: 'secret-government-programs',
+    name: 'Hadron Colliders',
+    description: `A directory of high-energy particle accelerators designed to collide hadron beams at relativistic speeds, analyzing high-energy physics anomalies. Conspiratorial theories link these facilities to portals, space-time dilation, and interdimensional research.`,
+    layer: 'Hadron Colliders'
+  }
+];
+
 export const TERM_TREE_DATA: TermNode[] = [
+  ...chunk_historic_extensions,
   ...chunk_saints,
   ...chunk_nasa,
   ...chunk_new_additions,
