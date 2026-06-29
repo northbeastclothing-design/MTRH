@@ -15910,7 +15910,10 @@ const chunk_4: any[] = [  {
     description: 'Etched deep into a Peruvian hillside, this giant geoglyph points directly toward the Nazca Lines and the global lay line grid. Some believe it represents a lightning bolt of the god Viracocha, while others suggest it served as a navigational beacon for ancient trans-oceanic—or celestial—navigators.',
     layer: 'Megaliths / Structures',
     mapFeatureId: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-7',
-    sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
+    sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Paracas_Candelabra_-_Ica%2C_Peru.jpg/960px-Paracas_Candelabra_-_Ica%2C_Peru.jpg'
+    ]
   },  {
     id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-8',
     parentId: 'geoglyphs-br',
@@ -23867,7 +23870,38 @@ const chunk_historic_extensions: any[] = [
   }
 ];
 
+const chunk_geoglyphs: any[] = [
+  {
+    id: 'palpa-geoglyphs',
+    parentId: 'geoglyphs-br',
+    name: 'Palpa Geoglyphs',
+    description: `A series of massive, ancient geoglyphs and earthworks etched into flat mountaintops and hillsides in the Palpa Valley, Peru. Created primarily by the Paracas culture (c. 800 BCE – 100 BCE) and later the Nazca, these lines depict zoomorphic figures, geometric patterns, and complex humanoid figure groups (such as the 'Paracas Family'). Unlike the Nazca Lines, which are only fully visible from the air, the Palpa geoglyphs are often etched on hillsides, making them visible from the ground.`,
+    layer: 'Megaliths / Structures',
+    mapFeatureId: 'anomaly-palpa-geoglyphs',
+    timelineId: 'palpa-geoglyphs-event',
+    sources: ['UNESCO World Heritage Catalog', 'Maria Reiche Center Research Logs'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/7/7f/05-Palpa_Lines-nX-22.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/4/41/05-Palpa_Lines-nX-34.jpg'
+    ]
+  },
+  {
+    id: 'paracas-geoglyphs',
+    parentId: 'geoglyphs-br',
+    name: 'Paracas Geoglyphs',
+    description: `The ancient geoglyphs and hillside earthworks created by the Paracas culture (c. 800–100 BCE), predating the Nazca Lines by centuries. These geoglyphs are characterized by being etched onto sloping hillsides rather than flat plains and frequently depict complex humanoid figure networks, warriors, and high-status individuals, suggesting they served as clan markers or sacred pilgrimage paths.`,
+    layer: 'Megaliths / Structures',
+    mapFeatureId: 'anomaly-paracas-geoglyphs',
+    timelineId: 'paracas-geoglyphs-event',
+    sources: ['Archaeological Field Surveys in Ica', 'Paracas Culture Studies'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/f/f2/05-Palpa_Lines-nX-33.jpg'
+    ]
+  }
+];
+
 export const TERM_TREE_DATA: TermNode[] = [
+  ...chunk_geoglyphs,
   ...chunk_historic_extensions,
   ...chunk_saints,
   ...chunk_nasa,

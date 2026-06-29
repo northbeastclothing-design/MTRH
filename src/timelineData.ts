@@ -3832,6 +3832,24 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
       source: 'NASA Mission Reports'
     },
     {
+      id: 'paracas-geoglyphs-event',
+      name: 'Paracas Hillside Geoglyphs Etched',
+      type: 'event',
+      layer: 'ancient-civilizations',
+      start: -400,
+      description: 'The Paracas culture designs and carves humanoid geoglyphs onto hillsides in the Ica valley, predating the Nazca Lines by centuries.',
+      source: 'Paracas Culture Archaeological Overviews'
+    },
+    {
+      id: 'palpa-geoglyphs-event',
+      name: 'Palpa Valley Geoglyphs Designed',
+      type: 'event',
+      layer: 'ancient-civilizations',
+      start: -200,
+      description: 'Ancient artists etch giant geometric figures and the famous Paracas Family geoglyph onto the hillsides and mountaintops of the Palpa Valley.',
+      source: 'UNESCO World Heritage Registration'
+    },
+    {
       id: 'chi-rho-vision-event',
       name: 'Constantines Chi Rho Vision',
       type: 'event',
@@ -4491,6 +4509,8 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'project-gemini-start': { lng: -80.6077, lat: 28.5721, locationName: 'Cape Canaveral Space Force Station (FL)', category: 'NASA / Space' },
   'project-apollo-start': { lng: -80.6077, lat: 28.5721, locationName: 'Kennedy Space Center (Cape Canaveral, FL)', category: 'NASA / Space' },
   'artemis-program-event': { lng: -80.6041, lat: 28.6272, locationName: 'Launch Complex 39B (Cape Canaveral, FL)', category: 'NASA / Space' },
+  'paracas-geoglyphs-event': { lng: -75.1844, lat: -14.5828, locationName: 'Llipata Hillside Geoglyphs (Ica, Peru)', category: 'Archaeological Finds' },
+  'palpa-geoglyphs-event': { lng: -75.1472, lat: -14.5298, locationName: 'Palpa Valley Geoglyphs (Palpa, Peru)', category: 'Archaeological Finds' },
   'chi-rho-vision-event': { lng: 12.4729, lat: 41.9358, locationName: 'Milvian Bridge (Rome, Italy)', category: 'Religion' },
   'project-sun-streak-event': { lng: -76.7325, lat: 39.1118, locationName: 'Fort Meade (Maryland, USA)', category: 'Secret Government Programs' },
   'plutarch-writing-event': { lng: 22.5011, lat: 38.4824, locationName: 'Sanctuary of Apollo (Delphi, Greece)', category: 'Myths / Legends' },

@@ -16981,7 +16981,9 @@
     "date": null,
     "description": "Etched deep into a Peruvian hillside, this giant geoglyph points directly toward the Nazca Lines and the global lay line grid. Some believe it represents a lightning bolt of the god Viracocha, while others suggest it served as a navigational beacon for ancient trans-oceanic\u2014or celestial\u2014navigators.",
     "source": "",
-    "images": []
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Paracas_Candelabra_-_Ica%2C_Peru.jpg/960px-Paracas_Candelabra_-_Ica%2C_Peru.jpg"
+    ]
   },
   {
     "id": "anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-8",
@@ -30769,5 +30771,38 @@
     "description": "An electron-positron collider operating at the Institute of High Energy Physics in Beijing, China, facilitating Charm and Tau physics.",
     "source": "IHEP Beijing Laboratory Records",
     "images": []
+  },
+  {
+    "id": "anomaly-palpa-geoglyphs",
+    "name": "Palpa Geoglyphs - Palpa, Peru",
+    "category": "Megaliths / Dolmans / Petroglyphs / Geoglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lng": -75.1472,
+      "lat": -14.5298
+    },
+    "date": -200,
+    "description": "Mountaintop and hillside geoglyphs in the Palpa Valley depicting geometric shapes and complex humanoid figure groups created by the Paracas and Nazca cultures.",
+    "source": "UNESCO World Heritage Catalog",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/7/7f/05-Palpa_Lines-nX-22.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/4/41/05-Palpa_Lines-nX-34.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-paracas-geoglyphs",
+    "name": "Paracas Geoglyphs (Llipata) - Ica, Peru",
+    "category": "Megaliths / Dolmans / Petroglyphs / Geoglyphs",
+    "type": "Point",
+    "coordinates": {
+      "lng": -75.1844,
+      "lat": -14.5828
+    },
+    "date": -400,
+    "description": "hillside geoglyphs in Llipata showing complex humanoid families and warriors carved by the Paracas culture, predating the Nazca Lines.",
+    "source": "Archaeological Field Surveys in Ica",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/f/f2/05-Palpa_Lines-nX-33.jpg"
+    ]
   }
 ]
