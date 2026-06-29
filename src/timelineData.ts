@@ -3832,6 +3832,69 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
       source: 'NASA Mission Reports'
     },
     {
+      id: 'saint-francis-stigmata-event',
+      name: 'St. Francis Receives Stigmata',
+      type: 'event',
+      layer: 'biblical-events',
+      start: 1224,
+      description: 'Saint Francis of Assisi receives the stigmata (crucifixion wounds of Christ) on Mount La Verna, the first recorded case in history.',
+      source: 'Life of Saint Francis (Bonaventure)'
+    },
+    {
+      id: 'saint-joan-of-arc-victory-event',
+      name: 'Joan of Arc Relieves Orléans',
+      type: 'event',
+      layer: 'biblical-events',
+      start: 1429,
+      description: 'Joan of Arc, guided by mystical voices, leads French forces to victory at the Siege of Orléans, changing the course of the Hundred Years War.',
+      source: 'French Royal Chronicles'
+    },
+    {
+      id: 'saint-anthony-tomb-event',
+      name: 'St. Anthony Tongue Incorrupt',
+      type: 'event',
+      layer: 'biblical-events',
+      start: 1263,
+      description: 'Thirty years after death, Saint Anthony of Paduas tomb is opened. His body is dust, but his tongue is found perfectly fresh and glistening.',
+      source: 'Padua Basilica Records'
+    },
+    {
+      id: 'saint-bernadette-exhumation-event',
+      name: 'St. Bernadette Exhumation',
+      type: 'event',
+      layer: 'biblical-events',
+      start: 1909,
+      description: 'Thirty years after her death, Saint Bernadette of Soubirous is exhumed in Nevers, France, and her body is found completely intact and incorrupt.',
+      source: 'Lourdes Medical Committee'
+    },
+    {
+      id: 'saint-padre-pio-stigmata-event',
+      name: 'Padre Pio Receives Stigmata',
+      type: 'event',
+      layer: 'biblical-events',
+      start: 1918,
+      description: 'Padre Pio receives the visible stigmata wounds during prayer in the choir of San Giovanni Rotondo, which remained open and bleeding for 50 years.',
+      source: 'Capuchin Convent Logs'
+    },
+    {
+      id: 'saint-catherine-medal-event',
+      name: 'Miraculous Medal Visions',
+      type: 'event',
+      layer: 'biblical-events',
+      start: 1830,
+      description: 'Saint Catherine Labouré receives visions of the Virgin Mary in Paris, instructing her to strike and distribute the Miraculous Medal.',
+      source: 'Rue du Bac Chapel Archives'
+    },
+    {
+      id: 'saint-rita-death-event',
+      name: 'Death of Saint Rita',
+      type: 'event',
+      layer: 'biblical-events',
+      start: 1457,
+      description: 'Saint Rita of Cascia dies. Her body immediately begins to emit a sweet fragrance and shows complete resistance to decomposition, remaining incorrupt.',
+      source: 'Augustinian Cascia Archives'
+    },
+    {
       id: 'wernher-von-braun-event',
       name: 'von Braun Named MSFC Director',
       type: 'event',
@@ -4311,6 +4374,13 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'project-gemini-start': { lng: -80.6077, lat: 28.5721, locationName: 'Cape Canaveral Space Force Station (FL)', category: 'NASA / Space' },
   'project-apollo-start': { lng: -80.6077, lat: 28.5721, locationName: 'Kennedy Space Center (Cape Canaveral, FL)', category: 'NASA / Space' },
   'artemis-program-event': { lng: -80.6041, lat: 28.6272, locationName: 'Launch Complex 39B (Cape Canaveral, FL)', category: 'NASA / Space' },
+  'saint-francis-stigmata-event': { lng: 12.6056, lat: 43.0744, locationName: 'Basilica of St. Francis (Assisi, Italy)', category: 'Religion' },
+  'saint-joan-of-arc-victory-event': { lng: 1.0993, lat: 49.4431, locationName: 'Rouen (Joan of Arc Martyrdom, France)', category: 'Religion' },
+  'saint-anthony-tomb-event': { lng: 11.8800, lat: 45.4014, locationName: 'Basilica of St. Anthony (Padua, Italy)', category: 'Religion' },
+  'saint-bernadette-exhumation-event': { lng: 3.1633, lat: 46.9934, locationName: 'Espace Bernadette Soubirous (Nevers, France)', category: 'Religion' },
+  'saint-padre-pio-stigmata-event': { lng: 15.7032, lat: 41.7073, locationName: 'Sanctuary of St. Pio (San Giovanni Rotondo, Italy)', category: 'Religion' },
+  'saint-catherine-medal-event': { lng: 2.3242, lat: 48.8508, locationName: 'Miraculous Medal Chapel (Paris, France)', category: 'Religion' },
+  'saint-rita-death-event': { lng: 13.0135, lat: 42.7161, locationName: 'Basilica of Santa Rita (Cascia, Italy)', category: 'Religion' },
   'wernher-von-braun-event': { lng: -86.6534, lat: 34.7119, locationName: 'U.S. Space & Rocket Center (Huntsville, AL)', category: 'NASA / Space' },
   'elon-musk-event': { lng: -118.3278, lat: 33.9207, locationName: 'SpaceX HQ (Hawthorne, CA)', category: 'NASA / Space' },
   'jeff-bezos-event': { lng: -122.2370, lat: 47.3802, locationName: 'Blue Origin HQ (Kent, WA)', category: 'NASA / Space' },

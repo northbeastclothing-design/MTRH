@@ -23177,7 +23177,128 @@ const chunk_nasa: any[] = [
   }
 ];
 
+
+
+const chunk_saints: any[] = [
+  {
+    id: 'saints-root',
+    parentId: 'christianity',
+    name: 'Saints & Miracles',
+    description: `The holy men and women recognized by the Christian tradition, and the supernatural phenomena, relics, and miracles (including bodily incorruptibility) associated with their lives and remains.`,
+    layer: 'Religion'
+  },
+  {
+    id: 'saints-stories',
+    parentId: 'saints-root',
+    name: 'Saints & Stories',
+    description: `Renowned historical saints associated with mystical visions, miraculous interventions, or anomalous spiritual phenomena.`,
+    layer: 'Religion'
+  },
+  {
+    id: 'saint-francis-assisi',
+    parentId: 'saints-stories',
+    name: 'Saint Francis of Assisi',
+    description: `Italian Catholic friar and mystic who founded the Franciscans. Celebrated for his radical poverty and deep connection to nature, he is historically significant as the first recorded person to receive the stigmata (mystical crucifixion wounds) in 1224.`,
+    layer: 'Religion',
+    timelineId: 'saint-francis-stigmata-event',
+    mapFeatureId: 'anomaly-saint-francis-assisi',
+    sources: ['The Life of Saint Francis (Bonaventure)', 'Assisi Archives'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/d/da/Giotto_-_Saint_Francis_Receiving_the_Stigmata.jpg'
+    ]
+  },
+  {
+    id: 'saint-joan-of-arc',
+    parentId: 'saints-stories',
+    name: 'Saint Joan of Arc',
+    description: `French peasant girl who led French armies to victory in the Hundred Years' War. Guided by mystical visions and voices of Saint Michael, Saint Catherine, and Saint Margaret, she achieved legendary status before her martyrdom in Rouen.`,
+    layer: 'Religion',
+    timelineId: 'saint-joan-of-arc-victory-event',
+    mapFeatureId: 'anomaly-saint-joan-of-arc',
+    sources: ['Trial of Condemnation of Joan of Arc', 'French Royal Chronicles'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/2/2b/Ingres_coronation_charles_vii.jpg'
+    ]
+  },
+  {
+    id: 'saint-anthony-padua',
+    parentId: 'saints-stories',
+    name: 'Saint Anthony of Padua',
+    description: `Portuguese Franciscan friar and doctor of the Church, revered as the patron saint of lost things. When his tomb was opened 32 years after his death, his tongue was found completely fresh, moist, and incorrupt, while his body had turned to dust.`,
+    layer: 'Religion',
+    timelineId: 'saint-anthony-tomb-event',
+    mapFeatureId: 'anomaly-saint-anthony-padua',
+    sources: ['The Book of Miracles of Saint Anthony', 'Padua Basilica Annals'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/8/8d/Saint_Anthony_of_Padua%2C_fresco_Benozzo_Gozzoli%2C_Church_Santa_Maria_in_Aracoeli%2C_Rome%2C_Italy.jpg'
+    ]
+  },
+  {
+    id: 'incorruptible-saints',
+    parentId: 'saints-root',
+    name: 'Incorruptible Saints',
+    description: `Christian saints whose deceased bodies have miraculously resisted natural decay, remaining intact, flexible, and lifelike without any artificial embalming or chemical preservation.`,
+    layer: 'Religion'
+  },
+  {
+    id: 'saint-bernadette-soubirous',
+    parentId: 'incorruptible-saints',
+    name: 'Saint Bernadette of Soubirous',
+    description: `French visionary who witnessed 18 apparitions of the Virgin Mary at Lourdes. Decades after her death, her body was exhumed multiple times and found completely intact, soft, and incorrupt. Her body remains on public display in a crystal reliquary in Nevers.`,
+    layer: 'Religion',
+    timelineId: 'saint-bernadette-exhumation-event',
+    mapFeatureId: 'anomaly-saint-bernadette-soubirous',
+    sources: ['Lourdes Apparition Documents', 'Medical Commission Reports of Nevers'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/8/87/Bernadette_Soubirous_Nevers.png',
+      'https://upload.wikimedia.org/wikipedia/commons/9/98/Bernadette_Soubirous.jpg'
+    ]
+  },
+  {
+    id: 'saint-padre-pio',
+    parentId: 'incorruptible-saints',
+    name: 'Saint Padre Pio of Pietrelcina',
+    description: `Italian Capuchin friar, priest, and mystic. Celebrated for displaying the stigmata wounds for 50 years, bilocating, and reading minds in confession. His body was exhumed 40 years after his death and found largely incorrupt, now displayed in a crystal reliquary in San Giovanni Rotondo.`,
+    layer: 'Religion',
+    timelineId: 'saint-padre-pio-stigmata-event',
+    mapFeatureId: 'anomaly-saint-padre-pio',
+    sources: ['The Mystery of the Stigmata', 'San Giovanni Rotondo Convent Logs'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/c/c0/Padre_Pio_Stigmata.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/8/8d/S.Giovanni_Rotondo_%2819%29.jpg'
+    ]
+  },
+  {
+    id: 'saint-catherine-laboure',
+    parentId: 'incorruptible-saints',
+    name: 'Saint Catherine Labouré',
+    description: `French sister of the Daughters of Charity who received Marian visions instructing her to design the Miraculous Medal. Exhumed 57 years after her death in 1933, her body was found perfectly preserved, with blue eyes still open. She lies in the Rue du Bac chapel in Paris.`,
+    layer: 'Religion',
+    timelineId: 'saint-catherine-medal-event',
+    mapFeatureId: 'anomaly-saint-catherine-laboure',
+    sources: ['Chapel of the Miraculous Medal Archives', 'Visions of Catherine Labouré'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/e/e0/Bac.Catherine.Cercueil.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/e/e8/Catherine-Labour%C3%A9-apparition_3.jpg'
+    ]
+  },
+  {
+    id: 'saint-rita-cascia',
+    parentId: 'incorruptible-saints',
+    name: 'Saint Rita of Cascia',
+    description: `Italian widow and Augustinian nun known as the patron saint of impossible causes. She bore a painful partial stigmata wound on her forehead. Her incorrupt body remains preserved in Cascia, and historical accounts claim it has moved or opened its eyes over the centuries.`,
+    layer: 'Religion',
+    timelineId: 'saint-rita-death-event',
+    mapFeatureId: 'anomaly-saint-rita-cascia',
+    sources: ['Augustinian Cascia Archives', 'Rita of Cascia: Patron of Impossible Causes'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/1/1b/Santa_Rita_da_Cascia.jpg'
+    ]
+  }
+];
+
 export const TERM_TREE_DATA: TermNode[] = [
+  ...chunk_saints,
   ...chunk_nasa,
   ...chunk_new_additions,
   ...chunk_new_religion,

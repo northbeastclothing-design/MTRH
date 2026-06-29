@@ -30264,5 +30264,120 @@
     "images": [
       "https://upload.wikimedia.org/wikipedia/commons/b/bb/ISS_63_Behnken_in_Bigelow_Expandable_Activity_Module.jpg"
     ]
+  },
+  {
+    "id": "anomaly-saint-francis-assisi",
+    "name": "Saint Francis of Assisi",
+    "category": "Religion",
+    "type": "Point",
+    "coordinates": {
+      "lng": 12.6056,
+      "lat": 43.0744
+    },
+    "date": 1224,
+    "description": "Founder of the Franciscans, who received the first recorded stigmata wounds on his body at Mount La Verna in 1224.",
+    "source": "Life of Saint Francis (Bonaventure)",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/d/da/Giotto_-_Saint_Francis_Receiving_the_Stigmata.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-saint-joan-of-arc",
+    "name": "Saint Joan of Arc",
+    "category": "Religion",
+    "type": "Point",
+    "coordinates": {
+      "lng": 1.0993,
+      "lat": 49.4431
+    },
+    "date": 1429,
+    "description": "French visionary guided by Saint Michael and others, who won key victories in the Hundred Years War before being martyred in Rouen.",
+    "source": "French Royal Chronicles",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/2/2b/Ingres_coronation_charles_vii.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-saint-anthony-padua",
+    "name": "Saint Anthony of Padua",
+    "category": "Religion",
+    "type": "Point",
+    "coordinates": {
+      "lng": 11.88,
+      "lat": 45.4014
+    },
+    "date": 1263,
+    "description": "Franciscan doctor of the Church whose tongue was miraculously found fresh, glistening, and completely incorrupt 30 years after his death.",
+    "source": "Padua Basilica Annals",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/8/8d/Saint_Anthony_of_Padua%2C_fresco_Benozzo_Gozzoli%2C_Church_Santa_Maria_in_Aracoeli%2C_Rome%2C_Italy.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-saint-bernadette-soubirous",
+    "name": "Saint Bernadette of Soubirous",
+    "category": "Religion",
+    "type": "Point",
+    "coordinates": {
+      "lng": 3.1633,
+      "lat": 46.9934
+    },
+    "date": 1909,
+    "description": "Marian visionary of Lourdes whose body was exhumed multiple times and found completely intact and incorrupt, resting now in Nevers.",
+    "source": "Lourdes Medical Committee",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/8/87/Bernadette_Soubirous_Nevers.png",
+      "https://upload.wikimedia.org/wikipedia/commons/9/98/Bernadette_Soubirous.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-saint-padre-pio",
+    "name": "Saint Padre Pio",
+    "category": "Religion",
+    "type": "Point",
+    "coordinates": {
+      "lng": 15.7032,
+      "lat": 41.7073
+    },
+    "date": 1918,
+    "description": "Capuchin priest who displayed the stigmata for 50 years; his exhumed body remains intact in San Giovanni Rotondo.",
+    "source": "Capuchin Convent Logs",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/c/c0/Padre_Pio_Stigmata.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/8/8d/S.Giovanni_Rotondo_%2819%29.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-saint-catherine-laboure",
+    "name": "Saint Catherine Labour\u00e9",
+    "category": "Religion",
+    "type": "Point",
+    "coordinates": {
+      "lng": 2.3242,
+      "lat": 48.8508
+    },
+    "date": 1830,
+    "description": "Sister of Charity who designed the Miraculous Medal. Her body, exhumed in 1933, lies fully incorrupt with eyes open in Paris.",
+    "source": "Chapel of the Miraculous Medal Archives",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/e/e0/Bac.Catherine.Cercueil.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/e/e8/Catherine-Labour%C3%A9-apparition_3.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-saint-rita-cascia",
+    "name": "Saint Rita of Cascia",
+    "category": "Religion",
+    "type": "Point",
+    "coordinates": {
+      "lng": 13.0135,
+      "lat": 42.7161
+    },
+    "date": 1457,
+    "description": "Augustinian nun with forehead wound whose incorrupt body rests in Cascia, Italy, reported to open its eyes or move over the centuries.",
+    "source": "Augustinian Cascia Archives",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/1/1b/Santa_Rita_da_Cascia.jpg"
+    ]
   }
 ]
