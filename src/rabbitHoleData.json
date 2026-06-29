@@ -29541,7 +29541,10 @@
     "date": 1962,
     "description": "A series of high-altitude nuclear tests conducted by the United States over Johnston Atoll in 1962. In alternative research, these tests are popularized as a covert attempt to probe or breach the Earth's atmospheric dome or firmament.",
     "source": "Defense Atomic Support Agency Reports / Fringe Cosmology Literature",
-    "images": []
+    "images": [
+      "https://archive.org/download/StarfishPrimeInterimReportByCommanderJTF8/Starfish%20Prime%20Interim%20Report%20By%20Commander%20JTF-8.mp4",
+      "https://archive.org/download/OperationDOMINICNuclearTests1962/OperationDOMINICNuclearTests1962_512kb.mp4"
+    ]
   },
   {
     "id": "anomaly-Secret-Government-Programs-Bilderberg",

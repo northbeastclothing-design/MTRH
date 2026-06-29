@@ -21299,7 +21299,11 @@ const chunk_6: any[] = [
     sources: ['Defense Atomic Support Agency Reports', 'Fringe Cosmology Literature'],
     mapFeatureId: 'anomaly-Secret-Government-Programs-Fishbowl',
     timelineId: 'operation-fishbowl',
-    relatedIds: ['secret-government-programs']
+    relatedIds: ['secret-government-programs'],
+    images: [
+      'https://archive.org/download/StarfishPrimeInterimReportByCommanderJTF8/Starfish%20Prime%20Interim%20Report%20By%20Commander%20JTF-8.mp4',
+      'https://archive.org/download/OperationDOMINICNuclearTests1962/OperationDOMINICNuclearTests1962_512kb.mp4'
+    ]
   },
   {
     id: 'gateway-process',
@@ -23685,6 +23689,9 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Secret Government Programs',
     timelineId: 'operation-highjump',
     relatedIds: ['ufo-sightings-br', 'agartha-inner-earth', 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-25', 'secret-government-programs'],
+    images: [
+      'https://archive.org/download/xsited-zDPLEBfYIvIQ/xsited-zDPLEBfYIvIQ.ia.mp4'
+    ],
     sources: ['Declassified Admiral Byrd Logs', 'Military Expedition Archives']
   },  {
     id: 'philadelphia-experiment',
@@ -23741,6 +23748,9 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Secret Government Programs',
     timelineId: 'project-blue-book',
     relatedIds: ['j-allen-hynek', 'edward-ruppelt', 'john-samford', 'jacques-vallee'],
+    images: [
+      'https://archive.org/download/yt_JHeZjJgO9Ns/JHeZjJgO9Ns.ia.mp4'
+    ],
     sources: ['U.S. Air Force Project Blue Book Archives', 'National Archives (NARA)']
   },  {
     id: 'majestic-12',
@@ -23860,6 +23870,9 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'A program designed to utilize "peaceful nuclear explosions" for massive construction projects, such as digging canals, artificial harbors, and blasting mountain passes.',
     layer: 'Secret Government Programs',
     timelineId: 'project-plowshare',
+    images: [
+      'https://archive.org/download/0374_GNOME_Project_M03201_05_00_48_00/0374_GNOME_Project_M03201_05_00_48_00_3mb.mp4'
+    ],
     sources: ['Lawrence Livermore National Laboratory Archives', 'AEC Peaceful Nuclear Explosions Project Papers']
   },  {
     id: 'project-1794',
@@ -23868,7 +23881,10 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'A secret military aeronautical development project with Avro Canada to build a supersonic, vertical take-off and landing (VTOL) flying saucer designed to intercept bombers.',
     layer: 'Secret Government Programs',
     timelineId: 'project-1794',
-    images: ['https://documents.theblackvault.com/documents/ufos/1794.pdf'],
+    images: [
+      'https://archive.org/download/yt_kdSo31A9j_I/kdSo31A9j_I.mp4',
+      'https://documents.theblackvault.com/documents/ufos/1794.pdf'
+    ],
     sources: ['Declassified USAF Records (Released 2012)', 'Avro Canada Aeronautical Studies']
   },  {
     id: 'operation-gladio',
