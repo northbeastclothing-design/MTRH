@@ -23418,6 +23418,7 @@ const chunk_historic_extensions: any[] = [
   {
     id: 'vimanas',
     parentId: 'ancient-texts',
+    secondaryParentIds: ['ufo-types'],
     name: 'Vimanas',
     description: `Mythological flying palaces or chariots described in ancient Sanskrit epics (such as the Ramayana and Mahabharata) and the Vaimanika Shastra. Described as multi-decked, circular or cylinder-shaped craft powered by mercury engines or liquid propulsion, Vimanas are frequently cited by alternative historians as evidence of advanced prehistoric aerospace technology or ancient space travel.`,
     layer: 'Myths / Legends',
