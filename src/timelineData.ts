@@ -3831,7 +3831,43 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
       description: 'The uncrewed Artemis I flight test launches from Cape Canaveral, performing a lunar flyby and returning to Earth, marking the official operational debut of the SLS and Orion spacecraft.',
       source: 'NASA Mission Reports'
     },
+        {
+      id: 'saint-john-vianney-exhumation-event',
+      name: 'St. John Vianney Exhumed Incorrupt',
+      type: 'event',
+      layer: 'biblical-events',
+      start: 1904,
+      description: 'The body of Saint John Vianney, the Curé dArs, is exhumed during the canonization process and found fully incorrupt.',
+      source: 'Ars-sur-Formans Archives'
+    },
     {
+      id: 'saint-silvan-martyrdom-event',
+      name: 'Martyrdom of Saint Silvan',
+      type: 'event',
+      layer: 'biblical-events',
+      start: 350,
+      description: 'Saint Silvan of Alexandria is martyred. His body, which exhibits complete resistance to decomposition, is later placed in Dubrovnik.',
+      source: 'Dubrovnik Cathedral Historical Records'
+    },
+    {
+      id: 'saint-charbel-light-event',
+      name: 'Mystical Light Over Charbel Tomb',
+      type: 'event',
+      layer: 'biblical-events',
+      start: 1898,
+      description: 'Following the death of Saint Charbel Makhlouf, a brilliant white light glows over his tomb in Annaya for 45 days, prompting exhumation.',
+      source: 'Monastery of Saint Maron Annals'
+    },
+    {
+      id: 'saint-teresa-ecstasy-event',
+      name: 'St. Teresa Ecstasy Vision',
+      type: 'event',
+      layer: 'biblical-events',
+      start: 1559,
+      description: 'Saint Teresa of Avila experiences her famous transverberation vision, where an angel pierces her heart with a golden lance of divine love.',
+      source: 'Autobiography of St. Teresa'
+    },
+{
       id: 'saint-francis-stigmata-event',
       name: 'St. Francis Receives Stigmata',
       type: 'event',
@@ -4375,6 +4411,10 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'project-apollo-start': { lng: -80.6077, lat: 28.5721, locationName: 'Kennedy Space Center (Cape Canaveral, FL)', category: 'NASA / Space' },
   'artemis-program-event': { lng: -80.6041, lat: 28.6272, locationName: 'Launch Complex 39B (Cape Canaveral, FL)', category: 'NASA / Space' },
   'saint-francis-stigmata-event': { lng: 12.6056, lat: 43.0744, locationName: 'Basilica of St. Francis (Assisi, Italy)', category: 'Religion' },
+  'saint-john-vianney-exhumation-event': { lng: 4.8219, lat: 45.9926, locationName: 'Basilica of Ars (Ars-sur-Formans, France)', category: 'Religion' },
+  'saint-silvan-martyrdom-event': { lng: 18.1105, lat: 42.6409, locationName: 'Church of St. Blaise (Dubrovnik, Croatia)', category: 'Religion' },
+  'saint-charbel-light-event': { lng: 35.7031, lat: 34.0847, locationName: 'Monastery of St. Maron (Annaya, Lebanon)', category: 'Religion' },
+  'saint-teresa-ecstasy-event': { lng: -5.5137, lat: 40.8252, locationName: 'Convento de la Anunciacion (Alba de Tormes, Spain)', category: 'Religion' },
   'saint-joan-of-arc-victory-event': { lng: 1.0993, lat: 49.4431, locationName: 'Rouen (Joan of Arc Martyrdom, France)', category: 'Religion' },
   'saint-anthony-tomb-event': { lng: 11.8800, lat: 45.4014, locationName: 'Basilica of St. Anthony (Padua, Italy)', category: 'Religion' },
   'saint-bernadette-exhumation-event': { lng: 3.1633, lat: 46.9934, locationName: 'Espace Bernadette Soubirous (Nevers, France)', category: 'Religion' },

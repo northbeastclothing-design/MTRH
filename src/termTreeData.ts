@@ -23234,6 +23234,35 @@ const chunk_saints: any[] = [
     ]
   },
   {
+    id: 'saint-charbel-makhlouf',
+    parentId: 'saints-stories',
+    secondaryParentIds: ['incorruptible-saints'],
+    name: 'Saint Charbel Makhlouf',
+    description: `Lebanese Maronite monk and hermit who lived in the Monastery of Saint Maron. After his death, a bright mystical light shone above his grave for 45 days. Upon exhumation, his body was found completely incorrupt and floating in a mixture of sweat and blood, which continued to secrete from his skin for decades, performing numerous documented healings.`,
+    layer: 'Religion',
+    timelineId: 'saint-charbel-light-event',
+    mapFeatureId: 'anomaly-saint-charbel-makhlouf',
+    sources: ['Monastery of Saint Maron Annals', 'Maronite Patriarchate Documents'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/1/18/Saint_Charbel_mosaic_portrait.jpg'
+    ]
+  },
+  {
+    id: 'saint-teresa-avila',
+    parentId: 'saints-stories',
+    secondaryParentIds: ['incorruptible-saints'],
+    name: 'Saint Teresa of Avila',
+    description: `Spanish noblewoman, Carmelite nun, and major Christian mystic. She experienced intense states of mystical ecstasy, most famously the 'transverberation' of her heart by an angel. Her body and heart remain incorrupt and are preserved in Alba de Tormes, Spain.`,
+    layer: 'Religion',
+    timelineId: 'saint-teresa-ecstasy-event',
+    mapFeatureId: 'anomaly-saint-teresa-avila',
+    sources: ['The Life of Teresa of Jesus (Autobiography)', 'Carmelite Archives'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/5/5d/Teresa_de_Jes%C3%BAs_%28cropped%29.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/2/20/Cornaro_chapel_in_Santa_Maria_della_Vittoria_in_Rome_HDR.jpg'
+    ]
+  },
+  {
     id: 'incorruptible-saints',
     parentId: 'saints-root',
     name: 'Incorruptible Saints',
@@ -23243,6 +23272,7 @@ const chunk_saints: any[] = [
   {
     id: 'saint-bernadette-soubirous',
     parentId: 'incorruptible-saints',
+    secondaryParentIds: ['saints-stories'],
     name: 'Saint Bernadette of Soubirous',
     description: `French visionary who witnessed 18 apparitions of the Virgin Mary at Lourdes. Decades after her death, her body was exhumed multiple times and found completely intact, soft, and incorrupt. Her body remains on public display in a crystal reliquary in Nevers.`,
     layer: 'Religion',
@@ -23257,6 +23287,7 @@ const chunk_saints: any[] = [
   {
     id: 'saint-padre-pio',
     parentId: 'incorruptible-saints',
+    secondaryParentIds: ['saints-stories'],
     name: 'Saint Padre Pio of Pietrelcina',
     description: `Italian Capuchin friar, priest, and mystic. Celebrated for displaying the stigmata wounds for 50 years, bilocating, and reading minds in confession. His body was exhumed 40 years after his death and found largely incorrupt, now displayed in a crystal reliquary in San Giovanni Rotondo.`,
     layer: 'Religion',
@@ -23271,6 +23302,7 @@ const chunk_saints: any[] = [
   {
     id: 'saint-catherine-laboure',
     parentId: 'incorruptible-saints',
+    secondaryParentIds: ['saints-stories'],
     name: 'Saint Catherine Labouré',
     description: `French sister of the Daughters of Charity who received Marian visions instructing her to design the Miraculous Medal. Exhumed 57 years after her death in 1933, her body was found perfectly preserved, with blue eyes still open. She lies in the Rue du Bac chapel in Paris.`,
     layer: 'Religion',
@@ -23285,6 +23317,7 @@ const chunk_saints: any[] = [
   {
     id: 'saint-rita-cascia',
     parentId: 'incorruptible-saints',
+    secondaryParentIds: ['saints-stories'],
     name: 'Saint Rita of Cascia',
     description: `Italian widow and Augustinian nun known as the patron saint of impossible causes. She bore a painful partial stigmata wound on her forehead. Her incorrupt body remains preserved in Cascia, and historical accounts claim it has moved or opened its eyes over the centuries.`,
     layer: 'Religion',
@@ -23293,6 +23326,34 @@ const chunk_saints: any[] = [
     sources: ['Augustinian Cascia Archives', 'Rita of Cascia: Patron of Impossible Causes'],
     images: [
       'https://upload.wikimedia.org/wikipedia/commons/1/1b/Santa_Rita_da_Cascia.jpg'
+    ]
+  },
+  {
+    id: 'saint-john-vianney',
+    parentId: 'incorruptible-saints',
+    secondaryParentIds: ['saints-stories'],
+    name: 'Saint John Vianney',
+    description: `Known as the Curé d'Ars, he was a French parish priest famous for his intense ascetical life, his gift of spiritual counsel in the confessional, and reported physical attacks by demonic entities. Exhumed in 1904, his body was found fully incorrupt and is preserved under a protective wax mask in Ars-sur-Formans.`,
+    layer: 'Religion',
+    timelineId: 'saint-john-vianney-exhumation-event',
+    mapFeatureId: 'anomaly-saint-john-vianney',
+    sources: ['Ars Parish Records', 'John Vianney Exhumation Commission Reports'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/3/34/Johnvianney.jpg'
+    ]
+  },
+  {
+    id: 'saint-silvan-alexandria',
+    parentId: 'incorruptible-saints',
+    secondaryParentIds: ['saints-stories'],
+    name: 'Saint Silvan of Alexandria',
+    description: `Early Christian martyr whose body, dating back to the 4th century, has miraculously resisted decomposition for over 1,600 years. Exhibiting soft, un-decayed skin, he is dressed in embroidered vestments inside a glass reliquary in Dubrovnik, Croatia.`,
+    layer: 'Religion',
+    timelineId: 'saint-silvan-martyrdom-event',
+    mapFeatureId: 'anomaly-saint-silvan-alexandria',
+    sources: ['Dubrovnik Cathedral Archives', 'Saints Relics Historical Surveys'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/a/a2/Supposed_%28incorruptible%29_body_of_St._Silvan%2C_Church_of_St._Blaise%2C_Dubrovnik%2C_1715_%281%29_%2829870530210%29.jpg'
     ]
   }
 ];

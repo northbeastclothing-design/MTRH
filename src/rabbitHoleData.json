@@ -30379,5 +30379,70 @@
     "images": [
       "https://upload.wikimedia.org/wikipedia/commons/1/1b/Santa_Rita_da_Cascia.jpg"
     ]
+  },
+  {
+    "id": "anomaly-saint-john-vianney",
+    "name": "Saint John Vianney",
+    "category": "Religion",
+    "type": "Point",
+    "coordinates": {
+      "lng": 4.8219,
+      "lat": 45.9926
+    },
+    "date": 1904,
+    "description": "Known as the Cur\u00e9 d'Ars, his fully incorrupt body rests in Ars-sur-Formans, France, renowned for his intense battles with demonic forces.",
+    "source": "Ars Parish Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/3/34/Johnvianney.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-saint-silvan-alexandria",
+    "name": "Saint Silvan of Alexandria",
+    "category": "Religion",
+    "type": "Point",
+    "coordinates": {
+      "lng": 18.1105,
+      "lat": 42.6409
+    },
+    "date": 350,
+    "description": "4th-century martyr whose body has remained remarkably un-decayed for over 1,600 years, displayed in a glass casket in Dubrovnik, Croatia.",
+    "source": "Dubrovnik Cathedral Archives",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/a/a2/Supposed_%28incorruptible%29_body_of_St._Silvan%2C_Church_of_St._Blaise%2C_Dubrovnik%2C_1715_%281%29_%2829870530210%29.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-saint-charbel-makhlouf",
+    "name": "Saint Charbel Makhlouf",
+    "category": "Religion",
+    "type": "Point",
+    "coordinates": {
+      "lng": 35.7031,
+      "lat": 34.0847
+    },
+    "date": 1898,
+    "description": "Lebanese hermit whose grave glowed with bright light for 45 days. His body remained fully incorrupt and secreted sweat and blood for decades.",
+    "source": "Monastery of Saint Maron Annals",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/1/18/Saint_Charbel_mosaic_portrait.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-saint-teresa-avila",
+    "name": "Saint Teresa of Avila",
+    "category": "Religion",
+    "type": "Point",
+    "coordinates": {
+      "lng": -5.5137,
+      "lat": 40.8252
+    },
+    "date": 1559,
+    "description": "Spanish mystic whose body and heart remain incorrupt. She famously recorded an angel transverberating her heart with a golden lance.",
+    "source": "Autobiography of St. Teresa",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/5/5d/Teresa_de_Jes%C3%BAs_%28cropped%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/2/20/Cornaro_chapel_in_Santa_Maria_della_Vittoria_in_Rome_HDR.jpg"
+    ]
   }
 ]
