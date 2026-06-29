@@ -22666,14 +22666,48 @@ const chunk_nasa: any[] = [
   {
     id: 'nasa-root',
     name: 'Nasa / Space',
-    description: 'The civil space agency of the United States, spaceports, laboratories, and programs associated with historical lunar landings, interplanetary science, and advanced launch systems.',
+    description: `Historical lunar landings, private aerospace endeavors, spaceports, space stations, and founders of the modern rocket age.`,
     layer: 'NASA / Space'
   },
   {
-    id: 'anomaly-Nasa-Space-Cape-Canaveral',
+    id: 'space-agencies',
     parentId: 'nasa-root',
+    name: 'Space Agencies & Companies',
+    description: `National space agencies and commercial aerospace corporations pioneering rocket design, satellite systems, and human space flight.`,
+    layer: 'NASA / Space'
+  },
+  {
+    id: 'nasa-agency',
+    parentId: 'space-agencies',
+    name: 'NASA',
+    description: `The National Aeronautics and Space Administration, the US civil space agency. Established in 1958, it led Projects Mercury, Gemini, Apollo, Skylab, the Space Shuttle, and the Artemis program.`,
+    layer: 'NASA / Space'
+  },
+  {
+    id: 'nasa-figureheads',
+    parentId: 'nasa-agency',
+    name: 'Figureheads',
+    description: `Architects, directors, and engineers who founded and shaped NASA's spaceflight programs.`,
+    layer: 'NASA / Space'
+  },
+  {
+    id: 'wernher-von-braun',
+    parentId: 'nasa-figureheads',
+    name: 'Wernher von Braun',
+    description: `German-American aerospace engineer and space architect. He pioneered the V-2 rocket in Germany, was brought to the US under Project Paperclip, and served as NASA's first Director of the Marshall Space Flight Center, designing the Saturn V moon rocket.`,
+    layer: 'NASA / Space',
+    timelineId: 'wernher-von-braun-event',
+    mapFeatureId: 'anomaly-wernher-von-braun',
+    sources: ['MSFC Historical Office', 'Wernher von Braun: Crusader for Space'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/f/ff/Wernher_von_Braun.jpg'
+    ]
+  },
+  {
+    id: 'anomaly-Nasa-Space-Cape-Canaveral',
+    parentId: 'nasa-agency',
     name: 'Kennedy Space Center (Cape Canaveral)',
-    description: "NASA's primary launch facility for human spaceflight. Established in 1962, it has served as the launch point for all Apollo lunar missions and Space Shuttle operations. Alternative theorists point to the geographic alignment of its launchpads, connections to military rocket development, and alleged anomalies in early Apollo mission footage and photography.",
+    description: `NASA's primary launch facility for human spaceflight. Established in 1962, it has served as the launch point for all Apollo lunar missions and Space Shuttle operations. Alternative theorists point to the geographic alignment of its launchpads, connections to military rocket development, and alleged anomalies in early Apollo mission footage and photography.`,
     layer: 'NASA / Space',
     mapFeatureId: 'anomaly-Nasa-Space-Cape-Canaveral',
     timelineId: 'apollo-11-landing-event',
@@ -22686,9 +22720,9 @@ const chunk_nasa: any[] = [
   },
   {
     id: 'anomaly-Nasa-Space-Vandenberg',
-    parentId: 'nasa-root',
+    parentId: 'nasa-agency',
     name: 'Vandenberg Space Force Base',
-    description: 'A major military and civil spaceport in California. Used by NASA for polar orbit launches, satellite deployments, and classified joint operations with the National Reconnaissance Office (NRO). Alternative space researchers associate Vandenberg with top-secret space defense programs and satellite-based monitoring anomalies.',
+    description: `A major military and civil spaceport in California. Used by NASA for polar orbit launches, satellite deployments, and classified joint operations with the National Reconnaissance Office (NRO). Alternative space researchers associate Vandenberg with top-secret space defense programs and satellite-based monitoring anomalies.`,
     layer: 'NASA / Space',
     mapFeatureId: 'anomaly-Nasa-Space-Vandenberg',
     sources: ['U.S. Space Force Fact Sheets', 'NRO Archives'],
@@ -22700,9 +22734,9 @@ const chunk_nasa: any[] = [
   },
   {
     id: 'anomaly-Nasa-Space-JPL',
-    parentId: 'nasa-root',
+    parentId: 'nasa-agency',
     name: 'Jet Propulsion Laboratory (JPL)',
-    description: "Federally funded R&D center managed by Caltech. Originally established in the 1930s by rocket pioneer and O.T.O. occultist Jack Parsons, Frank Malina, and the 'Suicide Squad.' JPL pioneered early jet propulsion and spacecraft control. Its history is heavily linked to alternative theories of ritual magic and occult symbolism underlying civilian space exploration.",
+    description: `Federally funded R&D center managed by Caltech. Originally established in the 1930s by rocket pioneer and O.T.O. occultist Jack Parsons, Frank Malina, and the 'Suicide Squad.' JPL pioneered early jet propulsion and spacecraft control. Its history is heavily linked to alternative theories of ritual magic and occult symbolism underlying civilian space exploration.`,
     layer: 'NASA / Space',
     mapFeatureId: 'anomaly-Nasa-Space-JPL',
     timelineId: 'jpl-founded-event',
@@ -22715,39 +22749,39 @@ const chunk_nasa: any[] = [
   },
   {
     id: 'anomaly-Nasa-Space-HQ',
-    parentId: 'nasa-root',
+    parentId: 'nasa-agency',
     name: 'NASA Headquarters',
-    description: 'The central administrative headquarters of NASA in Washington, D.C. Established in 1958, it coordinates all NASA operations, aeronautics research, and space exploration projects. Conspiracists view it as the decision center for major civilian space coverups, photo redaction, and global space communication policies.',
+    description: `The central administrative headquarters of NASA in Washington, D.C. Established in 1958, it coordinates all NASA operations, aeronautics research, and space exploration projects. Conspiracists view it as the decision center for major civilian space coverups, photo redaction, and global space communication policies.`,
     layer: 'NASA / Space',
     mapFeatureId: 'anomaly-Nasa-Space-HQ',
     timelineId: 'nasa-founded-event',
     sources: ['NASA Official Records'],
     images: [
-      'https://upload.wikimedia.org/wikipedia/commons/8/83/Restored_Apollo_11_Moonwalk_-_Original_NASA_EVA_Mission_Video_-_Walking_on_the_Moon.webm',
-      'https://upload.wikimedia.org/wikipedia/commons/7/79/Historic_Apollo_11_Moonwalk_Footage.webm',
+      'https://upload.wikimedia.org/wikipedia/commons/transcoded/c/c3/Apollo_11_Moonwalk_Montage.webm/Apollo_11_Moonwalk_Montage.webm.240p.vp9.webm',
+      'https://upload.wikimedia.org/wikipedia/commons/transcoded/8/83/Restored_Apollo_11_Moonwalk_-_Original_NASA_EVA_Mission_Video_-_Walking_on_the_Moon.webm/Restored_Apollo_11_Moonwalk_-_Original_NASA_EVA_Mission_Video_-_Walking_on_the_Moon.webm.240p.vp9.webm',
       'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/NASA_HQ_Building.jpg/1280px-NASA_HQ_Building.jpg'
     ]
   },
   {
     id: 'anomaly-Nasa-Space-Artemis-Program',
-    parentId: 'nasa-root',
+    parentId: 'nasa-agency',
     name: 'Artemis Program SLS Launchpad (LC-39B)',
-    description: 'Launch Complex 39B at Kennedy Space Center, the primary launchpad for the Space Launch System (SLS) carrying the Orion spacecraft for the Artemis lunar missions.',
+    description: `Launch Complex 39B at Kennedy Space Center, the primary launchpad for the Space Launch System (SLS) carrying the Orion spacecraft for the Artemis lunar missions.`,
     layer: 'NASA / Space',
     mapFeatureId: 'anomaly-Nasa-Space-Artemis-Program',
     timelineId: 'artemis-program-event',
     sources: ['NASA Artemis Program Overview'],
     images: [
-      'https://upload.wikimedia.org/wikipedia/commons/5/53/Artemis_II_Live_Launch_Coverage_-_SLS_Launch_Vehicle_Camera%2C_Switched_Feed_%28KSC-20260401-MH-AJN01-0001%29.webm',
+      'https://upload.wikimedia.org/wikipedia/commons/transcoded/5/53/Artemis_II_Live_Launch_Coverage_-_SLS_Launch_Vehicle_Camera%2C_Switched_Feed_%28KSC-20260401-MH-AJN01-0001%29.webm/Artemis_II_Live_Launch_Coverage_-_SLS_Launch_Vehicle_Camera%2C_Switched_Feed_%28KSC-20260401-MH-AJN01-0001%29.webm.240p.vp9.webm',
       'https://upload.wikimedia.org/wikipedia/commons/c/c7/Artemis_I_%E2%80%93_SLS_Launch_and_Mission_Animation_%E2%80%93_Jan_2021_%28767297104813%29.webm',
       'https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Orion_Approaches_Moon_for_Outbound_Powered_Flyby.jpg/1280px-Orion_Approaches_Moon_for_Outbound_Powered_Flyby.jpg'
     ]
   },
   {
     id: 'project-mercury',
-    parentId: 'nasa-root',
+    parentId: 'nasa-agency',
     name: 'Project Mercury',
-    description: 'The first U.S. human spaceflight program, designed to put an astronaut into Earth orbit and safely recover them. It successfully launched six crewed flights between 1961 and 1963.',
+    description: `The first U.S. human spaceflight program, designed to put an astronaut into Earth orbit and safely recover them. It successfully launched six crewed flights between 1961 and 1963.`,
     layer: 'NASA / Space',
     timelineId: 'project-mercury-start',
     sources: ['NASA Project Mercury History Office'],
@@ -22760,7 +22794,7 @@ const chunk_nasa: any[] = [
     id: 'mercury-atlas-6',
     parentId: 'project-mercury',
     name: 'Mercury-Atlas 6 (Friendship 7)',
-    description: 'The first crewed orbital flight by the United States, piloted by astronaut John Glenn on February 20, 1962, marking a major milestone in the Space Race.',
+    description: `The first crewed orbital flight by the United States, piloted by astronaut John Glenn on February 20, 1962, marking a major milestone in the Space Race.`,
     layer: 'NASA / Space',
     sources: ['NASA MA-6 Mission Report'],
     images: [
@@ -22770,62 +22804,197 @@ const chunk_nasa: any[] = [
   },
   {
     id: 'project-gemini',
-    parentId: 'nasa-root',
+    parentId: 'nasa-agency',
     name: 'Project Gemini',
-    description: 'The second U.S. human spaceflight program, focused on developing orbital rendezvous, docking, and extravehicular activity (EVA) techniques, preparing the foundation for the Apollo lunar missions.',
+    description: `The second U.S. human spaceflight program, focused on developing orbital rendezvous, docking, and extravehicular activity (EVA) techniques, preparing the foundation for the Apollo lunar missions.`,
     layer: 'NASA / Space',
     timelineId: 'project-gemini-start',
     sources: ['NASA Gemini Program Summaries'],
     images: [
       'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Ed_White_First_American_Spacewalker_-_GPN-2000-001180.jpg/1280px-Ed_White_First_American_Spacewalker_-_GPN-2000-001180.jpg',
-      'https://upload.wikimedia.org/wikipedia/commons/5/5d/The_Four_Days_of_Gemini_4_%284K_60FPS%29.webm'
+      'https://upload.wikimedia.org/wikipedia/commons/transcoded/5/5d/The_Four_Days_of_Gemini_4_%284K_60FPS%29.webm/The_Four_Days_of_Gemini_4_%284K_60FPS%29.webm.240p.vp9.webm'
     ]
   },
   {
     id: 'gemini-4',
     parentId: 'project-gemini',
     name: 'Gemini 4',
-    description: 'The second crewed spaceflight of the Gemini series in June 1965, during which Ed White performed the first American spacewalk (EVA).',
+    description: `The second crewed spaceflight of the Gemini series in June 1965, during which Ed White performed the first American spacewalk (EVA).`,
     layer: 'NASA / Space',
     sources: ['NASA Gemini IV Mission Summary'],
     images: [
       'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Ed_White_First_American_Spacewalker_-_GPN-2000-001180.jpg/1280px-Ed_White_First_American_Spacewalker_-_GPN-2000-001180.jpg',
-      'https://upload.wikimedia.org/wikipedia/commons/5/5d/The_Four_Days_of_Gemini_4_%284K_60FPS%29.webm'
+      'https://upload.wikimedia.org/wikipedia/commons/transcoded/5/5d/The_Four_Days_of_Gemini_4_%284K_60FPS%29.webm/The_Four_Days_of_Gemini_4_%284K_60FPS%29.webm.240p.vp9.webm'
     ]
   },
   {
     id: 'project-apollo',
-    parentId: 'nasa-root',
+    parentId: 'nasa-agency',
     name: 'Project Apollo',
-    description: "NASA's historic lunar landing program, which succeeded in landing the first humans on the Moon in 1969. Heavily analyzed in alternative circles for potential launch-pad anomalies and Masonic symbolic alignments.",
+    description: `NASA's historic lunar landing program, which succeeded in landing the first humans on the Moon in 1969. Heavily analyzed in alternative circles for potential launch-pad anomalies and Masonic symbolic alignments.`,
     layer: 'NASA / Space',
     timelineId: 'project-apollo-start',
     sources: ['NASA Apollo Mission Logs'],
     images: [
       'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Apollo_4_Launch_-_GPN-2000-000044.jpg/1280px-Apollo_4_Launch_-_GPN-2000-000044.jpg',
-      'https://upload.wikimedia.org/wikipedia/commons/f/fd/Power_for_Apollo_-_Saturn_V.webm'
+      'https://upload.wikimedia.org/wikipedia/commons/transcoded/f/fd/Power_for_Apollo_-_Saturn_V.webm/Power_for_Apollo_-_Saturn_V.webm.240p.vp9.webm'
+    ]
+  },
+  {
+    id: 'apollo-7',
+    parentId: 'project-apollo',
+    name: 'Apollo 7',
+    description: `The first crewed mission of the Apollo program, launched in October 1968. Piloted by Wally Schirra, Donn Eisele, and Walter Cunningham, it tested the Command and Service Module in Earth orbit.`,
+    layer: 'NASA / Space',
+    timelineId: 'apollo-7-event',
+    sources: ['NASA Mission Reports'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/d/d2/Apollo_7_launch.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/transcoded/7/7d/The_Flight_of_Apollo_7_%281968%29.webm/The_Flight_of_Apollo_7_%281968%29.webm.240p.vp9.webm'
+    ]
+  },
+  {
+    id: 'apollo-8',
+    parentId: 'project-apollo',
+    name: 'Apollo 8',
+    description: `The first crewed spacecraft to reach and orbit the Moon, returning safely to Earth. Frank Borman, Jim Lovell, and William Anders read from Genesis on Christmas Eve 1968.`,
+    layer: 'NASA / Space',
+    timelineId: 'apollo-8-event',
+    sources: ['NASA Historical Data Book'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/a/a8/NASA-Apollo8-Dec24-Earthrise.jpg'
+    ]
+  },
+  {
+    id: 'apollo-9',
+    parentId: 'project-apollo',
+    name: 'Apollo 9',
+    description: `The first crewed flight test of the complete Apollo spacecraft, including the Lunar Module, in Earth orbit in March 1969.`,
+    layer: 'NASA / Space',
+    timelineId: 'apollo-9-event',
+    sources: ['NASA Mission Summary'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/a/a0/Apollo_9_launch.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/transcoded/f/f0/Apollo_9_16mm_Film_1969.webm/Apollo_9_16mm_Film_1969.webm.240p.vp9.webm'
+    ]
+  },
+  {
+    id: 'apollo-10',
+    parentId: 'project-apollo',
+    name: 'Apollo 10',
+    description: `The dress rehearsal for the first Moon landing, descending the Lunar Module "Snoopy" to within 8.4 nautical miles of the lunar surface in May 1969.`,
+    layer: 'NASA / Space',
+    timelineId: 'apollo-10-event',
+    sources: ['NASA Mission Logs'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/f/f6/Apollo_10_launch.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/b/bb/Apollo_10_Lunar_Module.jpg'
     ]
   },
   {
     id: 'apollo-11-landing-codex',
     parentId: 'project-apollo',
     name: 'Apollo 11 Moon Landing',
-    description: "Astronauts Neil Armstrong and Buzz Aldrin land the Apollo Lunar Module on the Moon, a historic feat that alternative researchers study for anomalous broadcast transmissions, shadows, and Masonic symbolic gestures.",
+    description: `Astronauts Neil Armstrong and Buzz Aldrin land the Apollo Lunar Module on the Moon, a historic feat that alternative researchers study for anomalous broadcast transmissions, shadows, and Masonic symbolic gestures.`,
     layer: 'NASA / Space',
     timelineId: 'apollo-11-landing-event',
     sources: ['NASA Mission Logs', 'Apollo 11 Press Kit'],
     images: [
       'https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/A_Man_on_the_Moon%2C_AS11-40-5903_%28cropped%29.jpg/1280px-A_Man_on_the_Moon%2C_AS11-40-5903_%28cropped%29.jpg',
-      'https://upload.wikimedia.org/wikipedia/commons/8/88/Jack_King%27s_Apollo_11_Launch_Commentary_o4OBKOlgmfo.webm',
-      'https://upload.wikimedia.org/wikipedia/commons/7/79/Historic_Apollo_11_Moonwalk_Footage.webm',
-      'https://upload.wikimedia.org/wikipedia/commons/8/83/Restored_Apollo_11_Moonwalk_-_Original_NASA_EVA_Mission_Video_-_Walking_on_the_Moon.webm'
+      'https://upload.wikimedia.org/wikipedia/commons/transcoded/c/c3/Apollo_11_Moonwalk_Montage.webm/Apollo_11_Moonwalk_Montage.webm.240p.vp9.webm',
+      'https://upload.wikimedia.org/wikipedia/commons/transcoded/8/83/Restored_Apollo_11_Moonwalk_-_Original_NASA_EVA_Mission_Video_-_Walking_on_the_Moon.webm/Restored_Apollo_11_Moonwalk_-_Original_NASA_EVA_Mission_Video_-_Walking_on_the_Moon.webm.240p.vp9.webm',
+      'https://upload.wikimedia.org/wikipedia/commons/8/88/Jack_King%27s_Apollo_11_Launch_Commentary_o4OBKOlgmfo.webm'
+    ]
+  },
+  {
+    id: 'apollo-12',
+    parentId: 'project-apollo',
+    name: 'Apollo 12',
+    description: `The second crewed lunar landing, executing a precision touchdown in the Ocean of Storms near the Surveyor 3 probe in November 1969.`,
+    layer: 'NASA / Space',
+    timelineId: 'apollo-12-event',
+    sources: ['NASA Mission Logs'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/e/e6/Apollo_12_-_Pete%27s_12_O%27clock_LM_Pan.webp',
+      'https://upload.wikimedia.org/wikipedia/commons/3/30/Apollo_12_-_Surveyor_Scoop_Arm.webp',
+      'https://upload.wikimedia.org/wikipedia/commons/4/44/Apollo_12_launch.jpg'
+    ]
+  },
+  {
+    id: 'apollo-13',
+    parentId: 'project-apollo',
+    name: 'Apollo 13',
+    description: `An oxygen tank explosion en route to the Moon aborts the landing, forcing a dramatic loop around the Moon using the Lunar Module as a lifeboat in April 1970.`,
+    layer: 'NASA / Space',
+    timelineId: 'apollo-13-event',
+    sources: ['Rogers Commission Report'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/b/b6/Apollo_13_-_View_of_the_Moon_out_a_LM_window.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/3/32/View_of_damaged_Apollo_13_Service_Module_from_the_Lunar-Command_Modules_%28as13-59-8500%29.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/b/b3/Apollo_13_LM_with_Mailbox.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/transcoded/1/19/Apollo_13_-_Home_Safe.webm/Apollo_13_-_Home_Safe.webm.240p.vp9.webm'
+    ]
+  },
+  {
+    id: 'apollo-14',
+    parentId: 'project-apollo',
+    name: 'Apollo 14',
+    description: `The third successful crewed lunar landing, launching in January 1971. Piloted by Alan Shepard who hit two golf balls on the lunar surface.`,
+    layer: 'NASA / Space',
+    timelineId: 'apollo-14-event',
+    sources: ['NASA Mission Logs'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/5/5d/Apollo_14_launch.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/e/e8/Shepard_Next_to_Modular_Equipment_Transporter_%289457425147%29.jpg'
+    ]
+  },
+  {
+    id: 'apollo-15',
+    parentId: 'project-apollo',
+    name: 'Apollo 15',
+    description: `The first "J-mission," featuring an extended stay on the Moon and the first use of the Lunar Roving Vehicle to explore the Hadley-Apennine region in July 1971.`,
+    layer: 'NASA / Space',
+    timelineId: 'apollo-15-event',
+    sources: ['NASA Mission Logs'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/f/fe/Apollo_15_flag%2C_rover%2C_LM%2C_Irwin.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/transcoded/d/d5/Apollo_15_Lunar_Rover_EVA2.webm/Apollo_15_Lunar_Rover_EVA2.webm.240p.vp9.webm',
+      'https://upload.wikimedia.org/wikipedia/commons/2/2b/Apollo_15_launch.jpg'
+    ]
+  },
+  {
+    id: 'apollo-16',
+    parentId: 'project-apollo',
+    name: 'Apollo 16',
+    description: `The fifth successful crewed lunar landing mission, launched in April 1972, exploring the Descartes Highlands.`,
+    layer: 'NASA / Space',
+    timelineId: 'apollo-16-event',
+    sources: ['NASA Mission Logs'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/b/b3/John_W._Young_on_the_Moon.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/transcoded/6/6e/Lunar_Grand_Prix.webm/Lunar_Grand_Prix.webm.240p.vp9.webm',
+      'https://upload.wikimedia.org/wikipedia/commons/0/0b/Apollo_16_Saturn_V_launch.jpg'
+    ]
+  },
+  {
+    id: 'apollo-17',
+    parentId: 'project-apollo',
+    name: 'Apollo 17',
+    description: `The final mission of the Apollo lunar landing program, launching in December 1972 and featuring geologist Harrison Schmitt.`,
+    layer: 'NASA / Space',
+    timelineId: 'apollo-17-event',
+    sources: ['NASA Mission Logs'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/2/2c/Apollo_17_Harrison_H._Schmitt_and_Tracy%27s_Rock_-_AS17-140-21493%2BAS17-140-21497_2025.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/transcoded/0/04/Apollo_17_EVA_NASA.webm/Apollo_17_EVA_NASA.webm.240p.vp9.webm',
+      'https://upload.wikimedia.org/wikipedia/commons/4/44/Apollo_17_launch.jpg'
     ]
   },
   {
     id: 'skylab-program-codex',
-    parentId: 'nasa-root',
+    parentId: 'nasa-agency',
     name: 'Skylab Program',
-    description: "The first United States space station, launched and operated by NASA from 1973 to 1979. It was occupied by three crewed missions who conducted solar physics, Earth observation, and materials science experiments.",
+    description: `The first United States space station, launched and operated by NASA from 1973 to 1979. It was occupied by three crewed missions who conducted solar physics, Earth observation, and materials science experiments.`,
     layer: 'NASA / Space',
     sources: ['Skylab: A Chronology', 'NASA Archives'],
     images: [
@@ -22834,9 +23003,9 @@ const chunk_nasa: any[] = [
   },
   {
     id: 'space-shuttle-program-codex',
-    parentId: 'nasa-root',
+    parentId: 'nasa-agency',
     name: 'Space Shuttle Program',
-    description: "The fourth human spaceflight program carried out by NASA, which accomplished routine transportation for Earth-to-orbit crew and cargo from 1981 to 2011, deploying the Hubble Space Telescope and building the ISS.",
+    description: `The fourth human spaceflight program carried out by NASA, which accomplished routine transportation for Earth-to-orbit crew and cargo from 1981 to 2011, deploying the Hubble Space Telescope and building the ISS.`,
     layer: 'NASA / Space',
     sources: ['Space Shuttle Decision', 'NASA Shuttle Mission Reports'],
     images: [
@@ -22848,7 +23017,7 @@ const chunk_nasa: any[] = [
     id: 'space-shuttle-challenger',
     parentId: 'space-shuttle-program-codex',
     name: 'Space Shuttle Challenger (STS-51-L)',
-    description: 'The tragic tenth mission of the Space Shuttle Challenger, which broke apart 73 seconds into flight on January 28, 1986, leading to the loss of all seven crew members and suspending the program for 32 months.',
+    description: `The tragic tenth mission of the Space Shuttle Challenger, which broke apart 73 seconds into flight on January 28, 1986, leading to the loss of all seven crew members and suspending the program for 32 months.`,
     layer: 'NASA / Space',
     sources: ['Rogers Commission Report', 'NASA Challenger Archives'],
     images: [
@@ -22860,12 +23029,150 @@ const chunk_nasa: any[] = [
     id: 'space-shuttle-atlantis',
     parentId: 'space-shuttle-program-codex',
     name: 'Space Shuttle Atlantis (STS-129)',
-    description: 'The 31st flight of Space Shuttle Atlantis in November 2009, which delivered critical components and spare parts to the International Space Station.',
+    description: `The 31st flight of Space Shuttle Atlantis in November 2009, which delivered critical components and spare parts to the International Space Station.`,
     layer: 'NASA / Space',
     sources: ['NASA STS-129 Mission Overview'],
     images: [
       'https://upload.wikimedia.org/wikipedia/commons/4/4f/STS-129_Atlantis_Ready_to_Fly.jpg',
       'https://upload.wikimedia.org/wikipedia/commons/8/89/Launch_of_Space_Shuttle_Atlantis_STS-129.webm'
+    ]
+  },
+  {
+    id: 'spacex-root',
+    parentId: 'space-agencies',
+    name: 'SpaceX',
+    description: `Space Exploration Technologies Corp. (SpaceX) is a private American aerospace manufacturer and space transportation company founded in 2002 by Elon Musk, pioneering reusable orbital rocketry.`,
+    layer: 'NASA / Space'
+  },
+  {
+    id: 'spacex-figureheads',
+    parentId: 'spacex-root',
+    name: 'Figureheads',
+    description: `Founders and key engineering figureheads driving SpaceX innovation.`,
+    layer: 'NASA / Space'
+  },
+  {
+    id: 'elon-musk',
+    parentId: 'spacex-figureheads',
+    name: 'Elon Musk',
+    description: `Business magnate, engineer, and tech entrepreneur. He is the founder, CEO, and Chief Engineer of SpaceX, establishing the company in 2002 to make humanity a multiplanetary species.`,
+    layer: 'NASA / Space',
+    timelineId: 'elon-musk-event',
+    mapFeatureId: 'anomaly-elon-musk',
+    sources: ['SpaceX Press Center', 'Elon Musk biography (Ashlee Vance)'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/8/85/Elon_Musk_Royal_Society_%28crop1%29.jpg'
+    ]
+  },
+  {
+    id: 'spacex-falcon-heavy',
+    parentId: 'spacex-root',
+    name: 'Falcon Heavy Demonstration',
+    description: `The historic first test flight of the Falcon Heavy rocket in February 2018, launching Elon Musk's Tesla Roadster with the "Starman" mannequin into a heliocentric orbit.`,
+    layer: 'NASA / Space',
+    timelineId: 'spacex-falcon-heavy-event',
+    sources: ['SpaceX Mission Data'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/b/b2/Elon_Musk%27s_Tesla_Roadster_%2840110297852%29.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/transcoded/3/3d/Falcon_Heavy_test_flight.webm/Falcon_Heavy_test_flight.webm.240p.vp9.webm',
+      'https://upload.wikimedia.org/wikipedia/commons/6/60/Falcon-heavy-crop.jpg'
+    ]
+  },
+  {
+    id: 'spacex-crew-dragon',
+    parentId: 'spacex-root',
+    name: 'Crew Dragon Demo-2',
+    description: `The first crewed flight of the SpaceX Crew Dragon spacecraft in May 2020, carrying NASA astronauts Bob Behnken and Doug Hurley to the International Space Station, restoring domestic crewed flight capability.`,
+    layer: 'NASA / Space',
+    timelineId: 'spacex-crew-dragon-event',
+    sources: ['NASA/SpaceX Press Kit'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/0/00/SpaceX_Demo-2_Launch_%28NHQ202005300009%29.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/transcoded/f/f4/Crew_Dragon_launch_off_Cape_Canaveral_%28CIRA_2020-05-29%29.webm/Crew_Dragon_launch_off_Cape_Canaveral_%28CIRA_2020-05-29%29.webm.240p.vp9.webm'
+    ]
+  },
+  {
+    id: 'spacex-starship',
+    parentId: 'spacex-root',
+    name: 'Starship flight tests',
+    description: `Developmental orbital test flights of the fully reusable, super-heavy Starship rocket from Starbase in Boca Chica, Texas.`,
+    layer: 'NASA / Space',
+    timelineId: 'spacex-starship-event',
+    sources: ['SpaceX Development Logs'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/3/3a/Starship_full_stack.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/transcoded/6/6b/Fourth_Launch_for_SpaceX%E2%80%99s_Starship_%28CIRA_2024-06-06_-_nolabels%29.webm/Fourth_Launch_for_SpaceX%E2%80%99s_Starship_%28CIRA_2024-06-06_-_nolabels%29.webm.240p.vp9.webm'
+    ]
+  },
+  {
+    id: 'blue-origin-root',
+    parentId: 'space-agencies',
+    name: 'Blue Origin',
+    description: `A private aerospace manufacturer and suborbital spaceflight services company founded in 2000 by Jeff Bezos, focused on developing reusable rocket systems and suborbital human spaceflight.`,
+    layer: 'NASA / Space'
+  },
+  {
+    id: 'blue-origin-figureheads',
+    parentId: 'blue-origin-root',
+    name: 'Figureheads',
+    description: `Founders and directors steering Blue Origin's aerospace engineering missions.`,
+    layer: 'NASA / Space'
+  },
+  {
+    id: 'jeff-bezos',
+    parentId: 'blue-origin-figureheads',
+    name: 'Jeff Bezos',
+    description: `American entrepreneur, tech investor, and founder of Blue Origin. He established the company in 2000 to enable a future where millions of people live and work in space, starting with reusable launch vehicles like New Shepard and New Glenn.`,
+    layer: 'NASA / Space',
+    timelineId: 'jeff-bezos-event',
+    mapFeatureId: 'anomaly-jeff-bezos',
+    sources: ['Blue Origin Media Archives', 'Amazon & Blue Origin history logs'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/9/91/Jeff_Bezos%27_iconic_laugh_crop.jpg'
+    ]
+  },
+  {
+    id: 'blue-origin-new-glenn',
+    parentId: 'blue-origin-root',
+    name: 'New Glenn Rocket Launch',
+    description: `The heavy-lift orbital launch vehicle New Glenn developed by Blue Origin, featuring a reusable first stage and designed to launch satellites and payloads from LC-36.`,
+    layer: 'NASA / Space',
+    timelineId: 'blue-origin-new-glenn-event',
+    sources: ['Blue Origin Launch Reports'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Blue_Origin_logo.svg/1280px-Blue_Origin_logo.svg.png',
+      'https://upload.wikimedia.org/wikipedia/commons/transcoded/b/bc/Blue_Origin%E2%80%99s_New_Glenn_Rocket_Launch_From_Florida_%28CIRA_2025-01-16_-_nolabels%29.webm/Blue_Origin%E2%80%99s_New_Glenn_Rocket_Launch_From_Florida_%28CIRA_2025-01-16_-_nolabels%29.webm.240p.vp9.webm'
+    ]
+  },
+  {
+    id: 'bigelow-aerospace',
+    parentId: 'space-agencies',
+    name: 'Bigelow Aerospace',
+    description: `An American space technology company founded in 1999 by Robert Bigelow. It specialized in building expandable space station modules, launching Genesis I and II, and deploying the BEAM module to the International Space Station.`,
+    layer: 'NASA / Space',
+    sources: ['Bigelow Aerospace official reports', 'NASA ISS Partnership briefs'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/b/bb/ISS_63_Behnken_in_Bigelow_Expandable_Activity_Module.jpg'
+    ]
+  },
+  {
+    id: 'bigelow-figureheads',
+    parentId: 'bigelow-aerospace',
+    name: 'Figureheads',
+    description: `Key founders and funding figures behind Bigelow's aerospace development.`,
+    layer: 'NASA / Space'
+  },
+  {
+    id: 'robert-bigelow',
+    parentId: 'bigelow-figureheads',
+    name: 'Robert Bigelow',
+    description: `Real estate mogul and space entrepreneur. He founded Bigelow Aerospace in 1999 to build orbital habitats, and famously funded paranormal/UFO research through the National Institute for Discovery Science (NIDS) and the acquisition of Skinwalker Ranch.`,
+    layer: 'NASA / Space',
+    timelineId: 'robert-bigelow-event',
+    mapFeatureId: 'anomaly-robert-bigelow',
+    sources: ['NIDS Archives', 'Skinwalker Ranch investigations'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/d/d4/Robert_Bigelow_and_Lori_Garver_at_the_Bigelow_Aerospace_facilities.jpg'
     ]
   }
 ];
@@ -23948,7 +24255,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },  {
     id: 'jack-parsons',
     parentId: 'historical-alchemists',
-    secondaryParentIds: ['ordo-templi-orientis'],
+    secondaryParentIds: ['ordo-templi-orientis', 'nasa-figureheads'],
     name: 'Jack Parsons',
     description: 'Brilliant JPL co-founder and rocket scientist who privately led the Agape Lodge of the O.T.O., performing the famous Babalon Working rituals with L. Ron Hubbard.',
     timelineId: 'jack-parsons',

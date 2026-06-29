@@ -1965,6 +1965,7 @@ export default function CodexPage({
                                 />
                               ) : (
                                 <video
+                                  key={imgUrl}
                                   controls
                                   referrerPolicy="no-referrer"
                                   style={{ width: '100%', height: '100%', objectFit: 'contain' }}
@@ -2722,6 +2723,7 @@ export default function CodexPage({
                     />
                   ) : (
                     <video
+                      key={imgUrl}
                       controls
                       autoPlay
                       referrerPolicy="no-referrer"

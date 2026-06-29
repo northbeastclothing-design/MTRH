@@ -3831,6 +3831,168 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
       description: 'The uncrewed Artemis I flight test launches from Cape Canaveral, performing a lunar flyby and returning to Earth, marking the official operational debut of the SLS and Orion spacecraft.',
       source: 'NASA Mission Reports'
     },
+    {
+      id: 'wernher-von-braun-event',
+      name: 'von Braun Named MSFC Director',
+      type: 'event',
+      layer: 'nasa-space',
+      start: 1960,
+      description: 'Wernher von Braun is appointed the first Director of the Marshall Space Flight Center at Huntsville, Alabama, leading the development of the Saturn V moon rocket.',
+      source: 'NASA Marshall History Office'
+    },
+    {
+      id: 'elon-musk-event',
+      name: 'SpaceX Founded by Elon Musk',
+      type: 'event',
+      layer: 'nasa-space',
+      start: 2002,
+      description: 'Elon Musk establishes SpaceX in Hawthorne, California, to revolutionize space transport and enable the colonization of Mars.',
+      source: 'SpaceX Mission Statements'
+    },
+    {
+      id: 'jeff-bezos-event',
+      name: 'Blue Origin Founded by Jeff Bezos',
+      type: 'event',
+      layer: 'nasa-space',
+      start: 2000,
+      description: 'Jeff Bezos establishes Blue Origin in Kent, Washington, to develop reusable rocket engines and suborbital spaceflight technologies.',
+      source: 'Blue Origin Mission Records'
+    },
+    {
+      id: 'robert-bigelow-event',
+      name: 'Bigelow Aerospace Founded',
+      type: 'event',
+      layer: 'nasa-space',
+      start: 1999,
+      description: 'Robert Bigelow establishes Bigelow Aerospace to manufacture expandable space habitat designs based on NASA transhab technology.',
+      source: 'Bigelow Corporate History'
+    },
+    {
+      id: 'apollo-7-event',
+      name: 'Apollo 7 Mission',
+      type: 'event',
+      layer: 'nasa-space',
+      start: 1968,
+      description: 'The first crewed mission of the Apollo program, testing the Command and Service Module in Earth orbit.',
+      source: 'NASA Mission Reports'
+    },
+    {
+      id: 'apollo-8-event',
+      name: 'Apollo 8 Mission',
+      type: 'event',
+      layer: 'nasa-space',
+      start: 1968,
+      description: 'The first crewed spacecraft to reach and orbit the Moon, returning safely to Earth.',
+      source: 'NASA Historical Data Book'
+    },
+    {
+      id: 'apollo-9-event',
+      name: 'Apollo 9 Mission',
+      type: 'event',
+      layer: 'nasa-space',
+      start: 1969,
+      description: 'The first crewed flight test of the complete Apollo spacecraft, including the Lunar Module, in Earth orbit.',
+      source: 'NASA Mission Summary'
+    },
+    {
+      id: 'apollo-10-event',
+      name: 'Apollo 10 Mission',
+      type: 'event',
+      layer: 'nasa-space',
+      start: 1969,
+      description: 'The dress rehearsal for the first Moon landing, descending the Lunar Module to within 8.4 nautical miles of the surface.',
+      source: 'NASA Mission Logs'
+    },
+    {
+      id: 'apollo-12-event',
+      name: 'Apollo 12 Mission',
+      type: 'event',
+      layer: 'nasa-space',
+      start: 1969,
+      description: 'The second crewed lunar landing, executing a precision touchdown in the Ocean of Storms.',
+      source: 'NASA Mission Logs'
+    },
+    {
+      id: 'apollo-13-event',
+      name: 'Apollo 13 Mission',
+      type: 'event',
+      layer: 'nasa-space',
+      start: 1970,
+      description: 'An oxygen tank explosion en route to the Moon aborts the landing, forcing a dramatic rescue mission.',
+      source: 'Rogers Commission Report'
+    },
+    {
+      id: 'apollo-14-event',
+      name: 'Apollo 14 Mission',
+      type: 'event',
+      layer: 'nasa-space',
+      start: 1971,
+      description: 'The third successful crewed lunar landing, piloted by Alan Shepard who hit golf balls on the Moon.',
+      source: 'NASA Mission Logs'
+    },
+    {
+      id: 'apollo-15-event',
+      name: 'Apollo 15 Mission',
+      type: 'event',
+      layer: 'nasa-space',
+      start: 1971,
+      description: 'The first J-mission, utilizing the Lunar Roving Vehicle to explore the Hadley-Apennine region.',
+      source: 'NASA Mission Logs'
+    },
+    {
+      id: 'apollo-16-event',
+      name: 'Apollo 16 Mission',
+      type: 'event',
+      layer: 'nasa-space',
+      start: 1972,
+      description: 'The fifth crewed lunar landing, exploring the Descartes Highlands.',
+      source: 'NASA Mission Logs'
+    },
+    {
+      id: 'apollo-17-event',
+      name: 'Apollo 17 Mission',
+      type: 'event',
+      layer: 'nasa-space',
+      start: 1972,
+      description: 'The final mission of the Apollo lunar landing program, featuring geologist Harrison Schmitt.',
+      source: 'NASA Mission Logs'
+    },
+    {
+      id: 'spacex-falcon-heavy-event',
+      name: 'Falcon Heavy Demonstration',
+      type: 'event',
+      layer: 'nasa-space',
+      start: 2018,
+      description: 'SpaceX launches the Falcon Heavy Demonstration, sending a Tesla Roadster and Starman into heliocentric orbit.',
+      source: 'SpaceX Mission Data'
+    },
+    {
+      id: 'spacex-crew-dragon-event',
+      name: 'Crew Dragon Demo-2',
+      type: 'event',
+      layer: 'nasa-space',
+      start: 2020,
+      description: 'SpaceX launches the first crewed private spacecraft to the International Space Station, restoring domestic crewed flight capability.',
+      source: 'NASA/SpaceX Press Kit'
+    },
+    {
+      id: 'spacex-starship-event',
+      name: 'Starship flight tests',
+      type: 'event',
+      layer: 'nasa-space',
+      start: 2023,
+      description: 'SpaceX begins orbital flight tests of the fully reusable, super-heavy Starship rocket from Starbase.',
+      source: 'SpaceX Development Logs'
+    },
+    {
+      id: 'blue-origin-new-glenn-event',
+      name: 'New Glenn Rocket Launch',
+      type: 'event',
+      layer: 'nasa-space',
+      start: 2025,
+      description: 'Blue Origin launches its heavy-lift New Glenn rocket from Launch Complex 36 at Cape Canaveral.',
+      source: 'Blue Origin Launch Reports'
+    },
     // --- ESOTERIC/OCCULT TIMELINE ITEMS ---
     {
       id: 'amalantrah-working-event',
@@ -4149,6 +4311,24 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'project-gemini-start': { lng: -80.6077, lat: 28.5721, locationName: 'Cape Canaveral Space Force Station (FL)', category: 'NASA / Space' },
   'project-apollo-start': { lng: -80.6077, lat: 28.5721, locationName: 'Kennedy Space Center (Cape Canaveral, FL)', category: 'NASA / Space' },
   'artemis-program-event': { lng: -80.6041, lat: 28.6272, locationName: 'Launch Complex 39B (Cape Canaveral, FL)', category: 'NASA / Space' },
+  'wernher-von-braun-event': { lng: -86.6534, lat: 34.7119, locationName: 'U.S. Space & Rocket Center (Huntsville, AL)', category: 'NASA / Space' },
+  'elon-musk-event': { lng: -118.3278, lat: 33.9207, locationName: 'SpaceX HQ (Hawthorne, CA)', category: 'NASA / Space' },
+  'jeff-bezos-event': { lng: -122.2370, lat: 47.3802, locationName: 'Blue Origin HQ (Kent, WA)', category: 'NASA / Space' },
+  'robert-bigelow-event': { lng: -115.1102, lat: 36.2415, locationName: 'Bigelow Aerospace HQ (Las Vegas, NV)', category: 'NASA / Space' },
+  'apollo-7-event': { lng: -80.5612, lat: 28.5218, locationName: 'Launch Complex 34 (Cape Canaveral, FL)', category: 'NASA / Space' },
+  'apollo-8-event': { lng: -80.6041, lat: 28.6083, locationName: 'Launch Complex 39A (Cape Canaveral, FL)', category: 'NASA / Space' },
+  'apollo-9-event': { lng: -80.6041, lat: 28.6083, locationName: 'Launch Complex 39A (Cape Canaveral, FL)', category: 'NASA / Space' },
+  'apollo-10-event': { lng: -80.6041, lat: 28.6083, locationName: 'Launch Complex 39A (Cape Canaveral, FL)', category: 'NASA / Space' },
+  'apollo-12-event': { lng: -80.6041, lat: 28.6083, locationName: 'Launch Complex 39A (Cape Canaveral, FL)', category: 'NASA / Space' },
+  'apollo-13-event': { lng: -80.6041, lat: 28.6083, locationName: 'Launch Complex 39A (Cape Canaveral, FL)', category: 'NASA / Space' },
+  'apollo-14-event': { lng: -80.6041, lat: 28.6083, locationName: 'Launch Complex 39A (Cape Canaveral, FL)', category: 'NASA / Space' },
+  'apollo-15-event': { lng: -80.6041, lat: 28.6083, locationName: 'Launch Complex 39A (Cape Canaveral, FL)', category: 'NASA / Space' },
+  'apollo-16-event': { lng: -80.6041, lat: 28.6083, locationName: 'Launch Complex 39A (Cape Canaveral, FL)', category: 'NASA / Space' },
+  'apollo-17-event': { lng: -80.6041, lat: 28.6083, locationName: 'Launch Complex 39A (Cape Canaveral, FL)', category: 'NASA / Space' },
+  'spacex-falcon-heavy-event': { lng: -80.6041, lat: 28.6083, locationName: 'Launch Complex 39A (Cape Canaveral, FL)', category: 'NASA / Space' },
+  'spacex-crew-dragon-event': { lng: -80.6041, lat: 28.6083, locationName: 'Launch Complex 39A (Cape Canaveral, FL)', category: 'NASA / Space' },
+  'spacex-starship-event': { lng: -97.1558, lat: 25.9972, locationName: 'SpaceX Starbase (Boca Chica, TX)', category: 'NASA / Space' },
+  'blue-origin-new-glenn-event': { lng: -80.5393, lat: 28.4716, locationName: 'Launch Complex 36 (Cape Canaveral, FL)', category: 'NASA / Space' },
   'amalantrah-working-event': { lng: -73.9712, lat: 40.7831, locationName: 'Central Park West (New York City, NY)', category: 'The Occult' },
   'scientology-founded-event': { lng: -118.2437, lat: 34.0522, locationName: 'Los Angeles, CA', category: 'The Occult' },
   'l-ron-hubbard-lifespan': { lng: -118.1565, lat: 34.1350, locationName: 'Pasadena Agape Lodge (Pasadena, CA)', category: 'The Occult' },

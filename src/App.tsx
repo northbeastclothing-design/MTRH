@@ -3994,6 +3994,71 @@ function App() {
     return groups;
   }, [visibleData, uniqueCategories, likes]);
 
+  // Scroll to the selected feature in the left sidebar list when it changes
+  useEffect(() => {
+    if (!selectedFeature || currentPage !== 'map') return;
+
+    // 1. Auto-expand the categories this location belongs to in the sidebar
+    const categories = selectedFeature.categories || (selectedFeature.category ? [selectedFeature.category] : []);
+    if (categories.length > 0) {
+      setExpandedLayers(prev => {
+        let updated = false;
+        const next = { ...prev };
+        categories.forEach((cat: string) => {
+          if (!next[cat]) {
+            next[cat] = true;
+            updated = true;
+          }
+        });
+        return updated ? next : prev;
+      });
+
+      // Auto-enable the layers if they are currently off
+      setActiveLayers(prev => {
+        let updated = false;
+        const next = { ...prev };
+        categories.forEach((cat: string) => {
+          if (next[cat] === false) {
+            next[cat] = true;
+            updated = true;
+          }
+        });
+        return updated ? next : prev;
+      });
+    }
+
+    // 2. Expand visible counts if the item is pagination-hidden
+    let updatedVisibleCounts = false;
+    const newCounts = { ...visibleCounts };
+    
+    categories.forEach((cat: string) => {
+      const locationsInLayer = groupedLocations[cat] || [];
+      const itemIndex = locationsInLayer.findIndex(loc => loc.id === selectedFeature.id);
+      if (itemIndex !== -1) {
+        const currentLimit = visibleCounts[cat] || 100;
+        if (itemIndex >= currentLimit) {
+          // Set limit to include this item + buffer
+          newCounts[cat] = itemIndex + 50;
+          updatedVisibleCounts = true;
+        }
+      }
+    });
+
+    if (updatedVisibleCounts) {
+      setVisibleCounts(newCounts);
+    }
+
+    // 3. Scroll to the element after a brief timeout to let DOM updates / animations settle
+    const timer = setTimeout(() => {
+      const element = document.getElementById(`sidebar-item-${selectedFeature.id}`);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }, 150);
+
+    return () => clearTimeout(timer);
+  }, [selectedFeature, currentPage, groupedLocations, visibleCounts]);
+
   useEffect(() => {
     if (!mapboxgl.supported() || !bgMapContainer.current) return;
 
@@ -6566,6 +6631,7 @@ function App() {
                                         return (
                                           <motion.div 
                                             key={loc.id} 
+                                            id={`sidebar-item-${loc.id}`}
                                             variants={{
                                               hidden: { opacity: 0, x: -10 },
                                               show: { opacity: 1, x: 0 }
@@ -6968,6 +7034,7 @@ function App() {
                                           const mimeType = curAsset.url.toLowerCase().endsWith('.webm') ? 'video/webm' : curAsset.url.toLowerCase().endsWith('.ogv') ? 'video/ogg' : 'video/mp4';
                                           return (
                                             <video
+                                              key={videoSrc}
                                               muted
                                               playsInline
                                               preload="metadata"

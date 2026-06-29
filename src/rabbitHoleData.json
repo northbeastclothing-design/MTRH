@@ -29918,8 +29918,8 @@
     "description": "The central administrative headquarters of NASA in Washington, D.C. Established in 1958, it coordinates all NASA operations, aeronautics research, and space exploration projects. Conspiracists view it as the decision center for major civilian space coverups, photo redaction, and global space communication policies.",
     "source": "NASA Official Records",
     "images": [
-      "https://upload.wikimedia.org/wikipedia/commons/8/83/Restored_Apollo_11_Moonwalk_-_Original_NASA_EVA_Mission_Video_-_Walking_on_the_Moon.webm",
-      "https://upload.wikimedia.org/wikipedia/commons/7/79/Historic_Apollo_11_Moonwalk_Footage.webm",
+      "https://upload.wikimedia.org/wikipedia/commons/transcoded/c/c3/Apollo_11_Moonwalk_Montage.webm/Apollo_11_Moonwalk_Montage.webm.240p.vp9.webm",
+      "https://upload.wikimedia.org/wikipedia/commons/transcoded/8/83/Restored_Apollo_11_Moonwalk_-_Original_NASA_EVA_Mission_Video_-_Walking_on_the_Moon.webm/Restored_Apollo_11_Moonwalk_-_Original_NASA_EVA_Mission_Video_-_Walking_on_the_Moon.webm.240p.vp9.webm",
       "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/NASA_HQ_Building.jpg/1280px-NASA_HQ_Building.jpg"
     ]
   },
@@ -29939,6 +29939,330 @@
       "https://upload.wikimedia.org/wikipedia/commons/5/53/Artemis_II_Live_Launch_Coverage_-_SLS_Launch_Vehicle_Camera%2C_Switched_Feed_%28KSC-20260401-MH-AJN01-0001%29.webm",
       "https://upload.wikimedia.org/wikipedia/commons/c/c7/Artemis_I_%E2%80%93_SLS_Launch_and_Mission_Animation_%E2%80%93_Jan_2021_%28767297104813%29.webm",
       "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Orion_Approaches_Moon_for_Outbound_Powered_Flyby.jpg/1280px-Orion_Approaches_Moon_for_Outbound_Powered_Flyby.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-apollo-7",
+    "name": "Apollo 7 Mission",
+    "category": "NASA / Space",
+    "type": "Point",
+    "coordinates": {
+      "lng": -80.5612,
+      "lat": 28.5218
+    },
+    "date": 1968,
+    "description": "The first crewed mission of the Apollo program, launched in October 1968. Piloted by Wally Schirra, Donn Eisele, and Walter Cunningham, it tested the Command and Service Module in Earth orbit.",
+    "source": "NASA Mission Reports",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/d/d2/Apollo_7_launch.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/transcoded/7/7d/The_Flight_of_Apollo_7_%281968%29.webm/The_Flight_of_Apollo_7_%281968%29.webm.240p.vp9.webm"
+    ]
+  },
+  {
+    "id": "anomaly-apollo-8",
+    "name": "Apollo 8 Mission",
+    "category": "NASA / Space",
+    "type": "Point",
+    "coordinates": {
+      "lng": -80.6041,
+      "lat": 28.6083
+    },
+    "date": 1968,
+    "description": "The first crewed spacecraft to reach and orbit the Moon, returning safely to Earth. Frank Borman, Jim Lovell, and William Anders read from Genesis on Christmas Eve 1968.",
+    "source": "NASA Historical Data Book",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/a/a8/NASA-Apollo8-Dec24-Earthrise.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-apollo-9",
+    "name": "Apollo 9 Mission",
+    "category": "NASA / Space",
+    "type": "Point",
+    "coordinates": {
+      "lng": -80.6041,
+      "lat": 28.6083
+    },
+    "date": 1969,
+    "description": "The first crewed flight test of the complete Apollo spacecraft, including the Lunar Module, in Earth orbit in March 1969.",
+    "source": "NASA Mission Summary",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/a/a0/Apollo_9_launch.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/transcoded/f/f0/Apollo_9_16mm_Film_1969.webm/Apollo_9_16mm_Film_1969.webm.240p.vp9.webm"
+    ]
+  },
+  {
+    "id": "anomaly-apollo-10",
+    "name": "Apollo 10 Mission",
+    "category": "NASA / Space",
+    "type": "Point",
+    "coordinates": {
+      "lng": -80.6041,
+      "lat": 28.6083
+    },
+    "date": 1969,
+    "description": "The dress rehearsal for the first Moon landing, descending the Lunar Module \"Snoopy\" to within 8.4 nautical miles of the lunar surface in May 1969.",
+    "source": "NASA Mission Logs",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/f/f6/Apollo_10_launch.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/b/bb/Apollo_10_Lunar_Module.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-apollo-12",
+    "name": "Apollo 12 Mission",
+    "category": "NASA / Space",
+    "type": "Point",
+    "coordinates": {
+      "lng": -80.6041,
+      "lat": 28.6083
+    },
+    "date": 1969,
+    "description": "The second crewed lunar landing, executing a precision touchdown in the Ocean of Storms near the Surveyor 3 probe in November 1969.",
+    "source": "NASA Mission Logs",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/e/e6/Apollo_12_-_Pete%27s_12_O%27clock_LM_Pan.webp",
+      "https://upload.wikimedia.org/wikipedia/commons/3/30/Apollo_12_-_Surveyor_Scoop_Arm.webp",
+      "https://upload.wikimedia.org/wikipedia/commons/4/44/Apollo_12_launch.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-apollo-13",
+    "name": "Apollo 13 Mission",
+    "category": "NASA / Space",
+    "type": "Point",
+    "coordinates": {
+      "lng": -80.6041,
+      "lat": 28.6083
+    },
+    "date": 1970,
+    "description": "An oxygen tank explosion en route to the Moon aborts the landing, forcing a dramatic loop around the Moon using the Lunar Module as a lifeboat in April 1970.",
+    "source": "Rogers Commission Report",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/b/b6/Apollo_13_-_View_of_the_Moon_out_a_LM_window.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/3/32/View_of_damaged_Apollo_13_Service_Module_from_the_Lunar-Command_Modules_%28as13-59-8500%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/b/b3/Apollo_13_LM_with_Mailbox.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/transcoded/1/19/Apollo_13_-_Home_Safe.webm/Apollo_13_-_Home_Safe.webm.240p.vp9.webm"
+    ]
+  },
+  {
+    "id": "anomaly-apollo-14",
+    "name": "Apollo 14 Mission",
+    "category": "NASA / Space",
+    "type": "Point",
+    "coordinates": {
+      "lng": -80.6041,
+      "lat": 28.6083
+    },
+    "date": 1971,
+    "description": "The third successful crewed lunar landing, launching in January 1971. Piloted by Alan Shepard who hit two golf balls on the lunar surface.",
+    "source": "NASA Mission Logs",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/5/5d/Apollo_14_launch.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/e/e8/Shepard_Next_to_Modular_Equipment_Transporter_%289457425147%29.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-apollo-15",
+    "name": "Apollo 15 Mission",
+    "category": "NASA / Space",
+    "type": "Point",
+    "coordinates": {
+      "lng": -80.6041,
+      "lat": 28.6083
+    },
+    "date": 1971,
+    "description": "The first \"J-mission,\" featuring an extended stay on the Moon and the first use of the Lunar Roving Vehicle to explore the Hadley-Apennine region in July 1971.",
+    "source": "NASA Mission Logs",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/f/fe/Apollo_15_flag%2C_rover%2C_LM%2C_Irwin.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/transcoded/d/d5/Apollo_15_Lunar_Rover_EVA2.webm/Apollo_15_Lunar_Rover_EVA2.webm.240p.vp9.webm",
+      "https://upload.wikimedia.org/wikipedia/commons/2/2b/Apollo_15_launch.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-apollo-16",
+    "name": "Apollo 16 Mission",
+    "category": "NASA / Space",
+    "type": "Point",
+    "coordinates": {
+      "lng": -80.6041,
+      "lat": 28.6083
+    },
+    "date": 1972,
+    "description": "The fifth successful crewed lunar landing mission, launched in April 1972, exploring the Descartes Highlands.",
+    "source": "NASA Mission Logs",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/b/b3/John_W._Young_on_the_Moon.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/transcoded/6/6e/Lunar_Grand_Prix.webm/Lunar_Grand_Prix.webm.240p.vp9.webm",
+      "https://upload.wikimedia.org/wikipedia/commons/0/0b/Apollo_16_Saturn_V_launch.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-apollo-17",
+    "name": "Apollo 17 Mission",
+    "category": "NASA / Space",
+    "type": "Point",
+    "coordinates": {
+      "lng": -80.6041,
+      "lat": 28.6083
+    },
+    "date": 1972,
+    "description": "The final mission of the Apollo lunar landing program, launching in December 1972 and featuring geologist Harrison Schmitt.",
+    "source": "NASA Mission Logs",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/2/2c/Apollo_17_Harrison_H._Schmitt_and_Tracy%27s_Rock_-_AS17-140-21493%2BAS17-140-21497_2025.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/transcoded/0/04/Apollo_17_EVA_NASA.webm/Apollo_17_EVA_NASA.webm.240p.vp9.webm",
+      "https://upload.wikimedia.org/wikipedia/commons/4/44/Apollo_17_launch.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-spacex-falcon-heavy",
+    "name": "Falcon Heavy Demonstration",
+    "category": "NASA / Space",
+    "type": "Point",
+    "coordinates": {
+      "lng": -80.6083,
+      "lat": 28.6083
+    },
+    "date": 2018,
+    "description": "The historic first test flight of the Falcon Heavy rocket in February 2018, launching Elon Musk's Tesla Roadster with the \"Starman\" mannequin into a heliocentric orbit.",
+    "source": "SpaceX Mission Data",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/b/b2/Elon_Musk%27s_Tesla_Roadster_%2840110297852%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/transcoded/3/3d/Falcon_Heavy_test_flight.webm/Falcon_Heavy_test_flight.webm.240p.vp9.webm",
+      "https://upload.wikimedia.org/wikipedia/commons/6/60/Falcon-heavy-crop.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-spacex-crew-dragon",
+    "name": "Crew Dragon Demo-2",
+    "category": "NASA / Space",
+    "type": "Point",
+    "coordinates": {
+      "lng": -80.6083,
+      "lat": 28.6083
+    },
+    "date": 2020,
+    "description": "The first crewed flight of the SpaceX Crew Dragon spacecraft in May 2020, carrying NASA astronauts Bob Behnken and Doug Hurley to the International Space Station, restoring domestic crewed flight capability.",
+    "source": "NASA/SpaceX Press Kit",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/0/00/SpaceX_Demo-2_Launch_%28NHQ202005300009%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/transcoded/f/f4/Crew_Dragon_launch_off_Cape_Canaveral_%28CIRA_2020-05-29%29.webm/Crew_Dragon_launch_off_Cape_Canaveral_%28CIRA_2020-05-29%29.webm.240p.vp9.webm"
+    ]
+  },
+  {
+    "id": "anomaly-spacex-starship",
+    "name": "Starship Flight Tests",
+    "category": "NASA / Space",
+    "type": "Point",
+    "coordinates": {
+      "lng": -97.1558,
+      "lat": 25.9972
+    },
+    "date": 2023,
+    "description": "Developmental orbital test flights of the fully reusable, super-heavy Starship rocket from Starbase in Boca Chica, Texas.",
+    "source": "SpaceX Development Logs",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/3/3a/Starship_full_stack.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/transcoded/6/6b/Fourth_Launch_for_SpaceX%E2%80%99s_Starship_%28CIRA_2024-06-06_-_nolabels%29.webm/Fourth_Launch_for_SpaceX%E2%80%99s_Starship_%28CIRA_2024-06-06_-_nolabels%29.webm.240p.vp9.webm"
+    ]
+  },
+  {
+    "id": "anomaly-blue-origin-new-glenn",
+    "name": "New Glenn Rocket Launch",
+    "category": "NASA / Space",
+    "type": "Point",
+    "coordinates": {
+      "lng": -80.5393,
+      "lat": 28.4716
+    },
+    "date": 2025,
+    "description": "The heavy-lift orbital launch vehicle New Glenn developed by Blue Origin, featuring a reusable first stage and designed to launch satellites and payloads from LC-36.",
+    "source": "Blue Origin Launch Reports",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Blue_Origin_logo.svg/1280px-Blue_Origin_logo.svg.png",
+      "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/bc/Blue_Origin%E2%80%99s_New_Glenn_Rocket_Launch_From_Florida_%28CIRA_2025-01-16_-_nolabels%29.webm/Blue_Origin%E2%80%99s_New_Glenn_Rocket_Launch_From_Florida_%28CIRA_2025-01-16_-_nolabels%29.webm.240p.vp9.webm"
+    ]
+  },
+  {
+    "id": "anomaly-wernher-von-braun",
+    "name": "Wernher von Braun",
+    "category": "NASA / Space",
+    "type": "Point",
+    "coordinates": {
+      "lng": -86.6534,
+      "lat": 34.7119
+    },
+    "date": 1960,
+    "description": "Marshall Space Flight Center first Director. Architect of the Saturn V moon rocket, who spearheaded US ballistic missile design and Project Paperclip operations.",
+    "source": "MSFC Historical Office",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/f/ff/Wernher_von_Braun.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-elon-musk",
+    "name": "Elon Musk",
+    "category": "NASA / Space",
+    "type": "Point",
+    "coordinates": {
+      "lng": -118.3278,
+      "lat": 33.9207
+    },
+    "date": 2002,
+    "description": "Founder and Chief Engineer of SpaceX, who established the company in Hawthorne, California, aiming to revolutionize space transportation and colonize Mars.",
+    "source": "SpaceX Press Center",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/8/85/Elon_Musk_Royal_Society_%28crop1%29.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-jeff-bezos",
+    "name": "Jeff Bezos",
+    "category": "NASA / Space",
+    "type": "Point",
+    "coordinates": {
+      "lng": -122.237,
+      "lat": 47.3802
+    },
+    "date": 2000,
+    "description": "Founder of Blue Origin, establishing the company in Kent, Washington, to develop reusable rocket systems and orbital infrastructure.",
+    "source": "Blue Origin Media Archives",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/9/91/Jeff_Bezos%27_iconic_laugh_crop.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-robert-bigelow",
+    "name": "Robert Bigelow",
+    "category": "NASA / Space",
+    "type": "Point",
+    "coordinates": {
+      "lng": -115.1102,
+      "lat": 36.2415
+    },
+    "date": 1999,
+    "description": "Founder of Bigelow Aerospace. Heavily invested in paranormal/UFO research through the National Institute for Discovery Science (NIDS) and the acquisition of Skinwalker Ranch.",
+    "source": "NIDS Archives",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/d/d4/Robert_Bigelow_and_Lori_Garver_at_the_Bigelow_Aerospace_facilities.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-bigelow-aerospace",
+    "name": "Bigelow Aerospace",
+    "category": "NASA / Space",
+    "type": "Point",
+    "coordinates": {
+      "lng": -115.1102,
+      "lat": 36.2415
+    },
+    "date": 1999,
+    "description": "Space technology startup company founded by Robert Bigelow, specializing in designing expandable space habitat modules such as BEAM on the ISS.",
+    "source": "Bigelow Aerospace official reports",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/b/bb/ISS_63_Behnken_in_Bigelow_Expandable_Activity_Module.jpg"
     ]
   }
 ]
