@@ -193,9 +193,44 @@ export default function TimelinePage({
     );
   }, [selectedItem]);
   
+  // Choose initial maximized era randomly, or matching the selected item
+  const [initialMaximizedEraId] = useState<string>(() => {
+    if (selectedItem) {
+      const selectedEra = ERAS_CONFIG.find(e => e.layer === selectedItem.layer);
+      if (selectedEra) return selectedEra.id;
+    }
+    const randomIndex = Math.floor(Math.random() * ERAS_CONFIG.length);
+    return ERAS_CONFIG[randomIndex].id;
+  });
+
   // Viewport states: start and end year
-  const [viewStart, setViewStart] = useState(-4100);
-  const [viewEnd, setViewEnd] = useState(-1600);
+  const [viewStart, setViewStart] = useState<number>(() => {
+    if (selectedItem) {
+      const start = selectedItem.start;
+      const end = selectedItem.type === 'lifespan' ? (selectedItem.end ?? selectedItem.start) : selectedItem.start;
+      const duration = Math.abs(end - start);
+      const span = Math.max(100, duration * 1.5);
+      return start - (span - duration) / 2;
+    }
+    const era = ERAS_CONFIG.find(e => e.id === initialMaximizedEraId) || ERAS_CONFIG[0];
+    const duration = era.end - era.start;
+    const padding = Math.max(10, Math.round(duration * 0.05));
+    return era.start - padding;
+  });
+
+  const [viewEnd, setViewEnd] = useState<number>(() => {
+    if (selectedItem) {
+      const start = selectedItem.start;
+      const end = selectedItem.type === 'lifespan' ? (selectedItem.end ?? selectedItem.start) : selectedItem.start;
+      const duration = Math.abs(end - start);
+      const span = Math.max(100, duration * 1.5);
+      return end + (span - duration) / 2;
+    }
+    const era = ERAS_CONFIG.find(e => e.id === initialMaximizedEraId) || ERAS_CONFIG[0];
+    const duration = era.end - era.start;
+    const padding = Math.max(10, Math.round(duration * 0.05));
+    return era.end + padding;
+  });
   
   // Active Eras state (merged layers)
   const [activeEras, setActiveEras] = useState<Record<string, boolean>>({
@@ -259,13 +294,10 @@ export default function TimelinePage({
 
   // Collapsed eras state
   const [collapsedEras, setCollapsedEras] = useState<Record<string, boolean>>(() => {
-    const initial: Record<string, boolean> = { 'biblical-patriarchs': true };
-    if (selectedItem) {
-      const selectedEra = ERAS_CONFIG.find(e => e.layer === selectedItem.layer);
-      if (selectedEra) {
-        initial[selectedEra.id] = false;
-      }
-    }
+    const initial: Record<string, boolean> = {};
+    ERAS_CONFIG.forEach(era => {
+      initial[era.id] = era.id !== initialMaximizedEraId;
+    });
     return initial;
   });
 
@@ -369,8 +401,16 @@ export default function TimelinePage({
         };
         requestAnimationFrame(step);
       }
-    }, 50); // Small timeout to allow active state DOM updates
+    }, 50);
   };
+
+  // Auto-scroll vertically to the maximized era group on mount
+  useEffect(() => {
+    const era = ERAS_CONFIG.find(e => e.id === initialMaximizedEraId);
+    if (era) {
+      scrollToEraGroup(era.layer);
+    }
+  }, [initialMaximizedEraId]);
 
   // Drag Handlers
   const handleMouseDown = (e: React.MouseEvent) => {
@@ -418,10 +458,19 @@ export default function TimelinePage({
 
   // Reset viewport to default
   const handleReset = () => {
-    animateViewport(-4100, -1600);
-    scrollToEraGroup('biblical-patriarchs');
+    const era = ERAS_CONFIG.find(e => e.id === initialMaximizedEraId) || ERAS_CONFIG[0];
+    const duration = era.end - era.start;
+    const padding = Math.max(10, Math.round(duration * 0.05));
+    animateViewport(era.start - padding, era.end + padding);
+    scrollToEraGroup(era.layer);
+    
+    const resetCollapsed: Record<string, boolean> = {};
+    ERAS_CONFIG.forEach(e => {
+      resetCollapsed[e.id] = e.id !== initialMaximizedEraId;
+    });
+    setCollapsedEras(resetCollapsed);
+
     setErasOrder(ERAS_CONFIG.map(e => e.id));
-    setCollapsedEras({});
     setSearchQuery('');
   };
 
@@ -798,7 +847,7 @@ export default function TimelinePage({
   // highlightColor is defined above recursively based on hovered item
 
   return (
-    <div style={{ flex: 1, display: 'flex', flexDirection: 'column', background: isMapDarkMode ? 'rgba(0, 0, 0, 0.85)' : 'rgba(255, 255, 255, 0.85)', color: theme.text, overflow: 'hidden', borderTop: `1px solid #000000`, position: 'relative' }}>
+    <div style={{ flex: 1, display: 'flex', flexDirection: 'column', background: isMapDarkMode ? 'rgba(0, 0, 0, 0.85)' : 'rgba(255, 255, 255, 0.85)', color: theme.text, overflow: 'hidden', borderTop: `1px solid ${theme.border}`, position: 'relative' }}>
       
       {/* TIMELINE VIEWPORT SCROLLER (TOP/CENTER) */}
       <div 
@@ -871,6 +920,16 @@ export default function TimelinePage({
                     }}
                     onDragEnd={() => setDraggingEraId(null)}
                     onDragOver={(e) => handleDragOverEra(e, era.id)}
+                    onDoubleClick={() => {
+                      const nextCollapsed = !isCollapsed;
+                      setCollapsedEras(p => ({ ...p, [era.id]: nextCollapsed }));
+                      if (!nextCollapsed) {
+                        const duration = era.end - era.start;
+                        const padding = Math.max(10, Math.round(duration * 0.05));
+                        animateViewport(era.start - padding, era.end + padding);
+                        scrollToEraGroup(era.layer);
+                      }
+                    }}
                     style={{ 
                       height: '36px', 
                       padding: '0 24px', 
@@ -914,7 +973,14 @@ export default function TimelinePage({
                     <button
                       onClick={(e) => {
                         e.stopPropagation();
-                        setCollapsedEras(p => ({ ...p, [era.id]: !p[era.id] }));
+                        const nextCollapsed = !isCollapsed;
+                        setCollapsedEras(p => ({ ...p, [era.id]: nextCollapsed }));
+                        if (!nextCollapsed) {
+                          const duration = era.end - era.start;
+                          const padding = Math.max(10, Math.round(duration * 0.05));
+                          animateViewport(era.start - padding, era.end + padding);
+                          scrollToEraGroup(era.layer);
+                        }
                       }}
                       onMouseDown={(e) => e.stopPropagation()}
                       style={{
@@ -956,7 +1022,13 @@ export default function TimelinePage({
                         marginLeft: '-4px'
                       }} 
                     />
-                    <span style={{ fontSize: '10px', fontWeight: 'bold', letterSpacing: '1.5px', textTransform: 'uppercase', color: theme.text }}>
+                    <span style={{ 
+                      fontSize: '10px', 
+                      fontWeight: 'bold', 
+                      letterSpacing: '1px', 
+                      fontFamily: '"Space Mono", monospace',
+                      color: theme.text 
+                    }}>
                       {era.name} {isCollapsed && <span style={{ fontSize: '8px', opacity: 0.5, letterSpacing: '1px', textTransform: 'lowercase', fontStyle: 'italic', marginLeft: '6px' }}>(collapsed)</span>}
                     </span>
 
@@ -996,7 +1068,7 @@ export default function TimelinePage({
                             display: 'flex',
                             alignItems: 'center',
                             gap: '6px',
-                            boxShadow: '0 2px 6px rgba(0,0,0,0.15)',
+                            boxShadow: 'none',
                             transition: 'all 0.2s ease',
                             pointerEvents: 'auto',
                             height: '24px',
@@ -1166,6 +1238,9 @@ export default function TimelinePage({
                           const isHovered = hoveredItemId === item.id;
                           const isSelected = selectedItem?.id === item.id;
                           const isSolidHighlight = solidHighlightedIds.has(item.id);
+                          const pointMask = isHovered || isSelected || isSolidHighlight
+                            ? 'none'
+                            : 'linear-gradient(to right, #000 calc(100% - 16px), transparent 100%)';
                           
                           return (
                             <div
@@ -1181,6 +1256,7 @@ export default function TimelinePage({
                               style={{
                                 position: 'absolute',
                                 left: `${xStart}%`,
+                                width: isHovered || isSelected || isSolidHighlight ? 'auto' : `${distToNext}%`,
                                 height: '24px',
                                 top: '6px',
                                 display: 'flex',
@@ -1194,6 +1270,7 @@ export default function TimelinePage({
                                 style={{
                                   display: 'flex',
                                   alignItems: 'center',
+                                  width: isHovered || isSelected || isSolidHighlight ? 'auto' : '100%',
                                   height: '24px',
                                   borderRadius: '12px',
                                   padding: (isHovered || isSelected || isSolidHighlight) ? '0 12px' : '0',
@@ -1257,7 +1334,11 @@ export default function TimelinePage({
                                     position: 'relative',
                                     zIndex: 1,
                                     display: 'inline-flex',
-                                    alignItems: 'center'
+                                    alignItems: 'center',
+                                    overflow: 'hidden',
+                                    maxWidth: isHovered || isSelected || isSolidHighlight ? 'none' : 'calc(100% - 24px)',
+                                    WebkitMaskImage: pointMask,
+                                    maskImage: pointMask
                                   }}>
                                     {item.isPeopleGroup && item.subLabel === 'Possible Nephilim Bloodline' && (
                                       <span style={{
@@ -1546,6 +1627,7 @@ export default function TimelinePage({
                         fontSize: '8px',
                         fontWeight: 'bold',
                         letterSpacing: '1px',
+                        fontFamily: '"Space Mono", monospace',
                         display: 'inline-block'
                       }}>
                         {era.name}
@@ -1838,11 +1920,26 @@ export default function TimelinePage({
               <input
                 type="range"
                 min="0"
-                max="253450"
-                value={253500 - Math.round(span)}
+                max="100"
+                step="0.1"
+                value={(() => {
+                  const MIN_SPAN = 50;
+                  const MAX_SPAN = 253500;
+                  const logMin = Math.log(MIN_SPAN);
+                  const logMax = Math.log(MAX_SPAN);
+                  const currentLog = Math.log(Math.max(MIN_SPAN, Math.min(MAX_SPAN, span)));
+                  const pct = (currentLog - logMin) / (logMax - logMin);
+                  return Math.max(0, Math.min(100, (1 - pct) * 100));
+                })()}
                 onChange={(e) => {
-                  const val = parseInt(e.target.value, 10);
-                  const newSpan = 253500 - val;
+                  const val = parseFloat(e.target.value);
+                  const MIN_SPAN = 50;
+                  const MAX_SPAN = 253500;
+                  const logMin = Math.log(MIN_SPAN);
+                  const logMax = Math.log(MAX_SPAN);
+                  const pct = 1 - (val / 100);
+                  const logSpan = logMin + pct * (logMax - logMin);
+                  const newSpan = Math.exp(logSpan);
                   const centerYear = viewStart + span / 2;
                   setViewStart(centerYear - newSpan / 2);
                   setViewEnd(centerYear + newSpan / 2);

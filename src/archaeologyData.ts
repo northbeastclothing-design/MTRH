@@ -14,6 +14,7 @@ export interface ArchaeologicalFind {
   source: string;
   images: string[];
   socialLink?: string;
+  subLabel?: string;
 }
 
 export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
@@ -709,5 +710,109 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
     source: "Utah State Parks / @freetherabbitspodcast",
     images: ["https://www.instagram.com/p/DZK35-UDYJa/media/?size=l"],
     socialLink: "https://www.instagram.com/p/DZK35-UDYJa/"
+  },
+  {
+    id: "archaeology-og-bashan",
+    name: "Kingdom of Bashan (King Og's Stronghold) - Golan Heights / Syria",
+    category: "Giants & Nephilim",
+    type: "Point",
+    coordinates: { lng: 36.1030, lat: 32.6140 },
+    date: -1406,
+    displayDate: "c. 1406 BC",
+    description: "The historical territory of Bashan, ruled by King Og, the last of the giant Rephaim. According to scripture, Moses and the Israelites conquered his kingdom, which was famous for its colossal basalt megaliths, 'cities with high walls, gates, and bars,' and his massive iron bedstead.",
+    source: "Numbers 21, Deuteronomy 3, Free The Rabbits Podcast",
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/127303_ghost_wheel_golan_heights_PikiWiki_Israel.jpg/1280px-127303_ghost_wheel_golan_heights_PikiWiki_Israel.jpg"],
+    subLabel: "Possible Nephilim Bloodline"
+  },
+  {
+    id: "archaeology-sihon-heshbon",
+    name: "City of Heshbon (King Sihon's Capital) - Jordan",
+    category: "Giants & Nephilim",
+    type: "Point",
+    coordinates: { lng: 35.8110, lat: 31.8310 },
+    date: -1406,
+    displayDate: "c. 1406 BC",
+    description: "The ancient capital city of Heshbon, ruled by Sihon, King of the Amorites. Sihon refused to let the Israelites pass through his territory, leading to his defeat. The Amorite giants are historically noted in scripture for their cedar-like height and oak-like strength.",
+    source: "Numbers 21, Deuteronomy 2, Amos 2:9, Free The Rabbits Podcast",
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Tell_Hesban_%28Column%29.jpg/1280px-Tell_Hesban_%28Column%29.jpg"],
+    subLabel: "Possible Nephilim Bloodline"
+  },
+  {
+    id: "archaeology-zuzim-ham",
+    name: "Ancient Region of Ham (Zuzim Stronghold) - Jordan",
+    category: "Giants & Nephilim",
+    type: "Point",
+    coordinates: { lng: 35.8500, lat: 32.2200 },
+    date: -1900,
+    displayDate: "c. 1900 BC",
+    description: "The biblical region of Ham (Transjordan), inhabited by the Zuzim, an ancient tribe of giant stature. They were defeated during the War of the Kings by Chedorlaomer. They are often identified with the Ammonite giant tribe called Zamzummim.",
+    source: "Genesis 14:5, Deuteronomy 2:20, Free The Rabbits Podcast",
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Mount_Nebo_BW_6.JPG/1280px-Mount_Nebo_BW_6.JPG"],
+    subLabel: "Possible Nephilim Bloodline"
+  },
+  {
+    id: "archaeology-arba-hebron",
+    name: "Kiriath-Arba (City of Arba) - Hebron",
+    category: "Giants & Nephilim",
+    type: "Point",
+    coordinates: { lng: 35.0998, lat: 31.5298 },
+    date: -1450,
+    displayDate: "c. 1450 BC",
+    description: "The ancient city of Hebron, originally called Kiriath-Arba after Arba, the greatest man among the giant Anakim. Arba founded the city, which became a stronghold of his giant descendants (Ahiman, Sheshai, and Talmai) before Caleb conquered it.",
+    source: "Joshua 14:15, Joshua 15:13-14, Free The Rabbits Podcast",
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Hebron_Cave_of_the_Patriarchs.jpg/1280px-Hebron_Cave_of_the_Patriarchs.jpg"],
+    subLabel: "Possible Nephilim Bloodline"
+  },
+  {
+    id: "archaeology-rapha-gath",
+    name: "Valley of Rephaim & Gath (Rapha Stronghold) - Israel",
+    category: "Giants & Nephilim",
+    type: "Point",
+    coordinates: { lng: 34.8500, lat: 31.7000 },
+    date: -1000,
+    displayDate: "c. 1000 BC",
+    description: "Gath of the Philistines, the ancestral home of Rapha, the progenitor of the giants of Gath. From this lineage came Goliath, Ishbi-Benob, Saph, Lahmi, and the unnamed giant with 24 fingers and toes who fought against King David and his mighty men.",
+    source: "2-Samuel-21:16-22, 1-Chronicles-20:4-8, Free The Rabbits Podcast",
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Tel-Tsafit-206.jpg/1280px-Tel-Tsafit-206.jpg"],
+    subLabel: "Possible Nephilim Bloodline"
+  },
+  {
+    id: "archaeology-amorite-giants",
+    name: "Amorite Giant Territories - Jordan Valley",
+    category: "Giants & Nephilim",
+    type: "Point",
+    coordinates: { lng: 35.6000, lat: 31.9000 },
+    date: -1450,
+    displayDate: "c. 1450 BC",
+    description: "The ancient mountain territories inhabited by the Amorites. Described by the prophet Amos as possessing height like the height of the cedars and strength like the oaks, the Amorites were key giant-like adversaries during the Israelite conquest.",
+    source: "Amos 2:9, Numbers 13:29, Free The Rabbits Podcast",
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Cuneiform_Clay_Tablets_from_Amorite_Kingdom_of_Mari%2C_1st_Half_of_2nd_Mill._BC.jpg/1280px-Cuneiform_Clay_Tablets_from_Amorite_Kingdom_of_Mari%2C_1st_Half_of_2nd_Mill._BC.jpg"],
+    subLabel: "Possible Nephilim Bloodline"
+  },
+  {
+    id: "archaeology-goliath-gath",
+    name: "Goliath of Gath (Giant Champion Site) - Tel es-Safi",
+    category: "Giants & Nephilim",
+    type: "Point",
+    coordinates: { lng: 34.8467, lat: 31.6997 },
+    date: -1010,
+    displayDate: "c. 1010 BC",
+    description: "The historical ruins of Gath (Tel es-Safi), home of Goliath, the 9-foot-tall Philistine champion slain by David. Archaeological excavations at Gath have unearthed massive Iron Age fortification walls and an early Philistine inscription bearing names etymologically similar to Goliath.",
+    source: "1 Samuel 17, Tel es-Safi Excavation Reports, Free The Rabbits Podcast",
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Cafit030.jpg/1280px-Cafit030.jpg"],
+    subLabel: "Possible Nephilim Bloodline"
+  },
+  {
+    id: "archaeology-book-of-giants-hermon",
+    name: "Dead Sea Caves (Book of Giants Discovery) - Qumran",
+    category: "Giants & Nephilim",
+    type: "Point",
+    coordinates: { lng: 35.4597, lat: 31.7411 },
+    date: -2348,
+    displayDate: "Pre-Flood Era (Found 1947 AD)",
+    description: "The Qumran caves where the apocryphal 'Book of Giants' was discovered. This manuscript names specific pre-Flood giant hybrids—Ohyah, Hahyah, and Mahway—detailing their giant activities, messenger missions to Enoch, and prophetic dreams regarding their doom in the upcoming Flood.",
+    source: "Dead Sea Scrolls Qumran Cave 4, Free The Rabbits Podcast",
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Qumran.jpeg/1280px-Qumran.jpeg"],
+    subLabel: "Possible Nephilim Bloodline"
   }
 ];

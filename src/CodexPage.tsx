@@ -1,7 +1,8 @@
 // Codex Page Component
 import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, Flag } from 'lucide-react';
+import { createPortal } from 'react-dom';
+import { X, Flag, Play } from 'lucide-react';
 import { TERM_TREE_DATA, TermNode, TranslationInfo } from './termTreeData';
 import { TIMELINE_LOCATIONS } from './timelineData';
 
@@ -45,6 +46,7 @@ const LAYER_COLORS: Record<string, string> = {
   'Cattle Mutilations': '#D59CF1',
   'Crop Circles': '#FFF96A',
   "D.U.M.B.'s": '#BAEAF4',
+  'Particle Accelerators': '#90E9FF',
   'Ghosts & Hauntings': '#BDC4FF',
   'Megaliths / Structures': '#FFFBA6',
   'Rock Art & Cave Paintings': '#FFCBA6',
@@ -72,7 +74,7 @@ const LAYER_ICONS: Record<string, string> = {
   'Biblical Figures': '/icons/icon-biblical-bloodlines.svg',
   'Religion': '/icons/icon-religion.svg',
   'Masonic Lodges': '/icons/icon-alchemy-occult.svg',
-  'Hadron Colliders': '/icons/icon-portals.svg',
+  'Particle Accelerators': '/icons/icon-cern.svg',
   'Myths / Legends': '/icons/icon-greek-mythology.svg',
   'Biblical Events': '/icons/icon-biblical-bloodlines-1.svg',
   'UFOs - Sightings': '/icons/icon-ufo-sightings.svg',
@@ -117,6 +119,382 @@ interface SVGLinePath {
   isRelated: boolean;
   isDottedParentLink?: boolean;
 }
+
+const isPdfUrl = (url: string) => {
+  if (!url) return false;
+  const lowerUrl = url.trim().toLowerCase();
+  return lowerUrl.includes('.pdf') || 
+         lowerUrl.includes('docs.google.com/viewer') || 
+         (lowerUrl.includes('web.archive.org') && lowerUrl.includes('/https://') && lowerUrl.split('https://')[1]?.includes('.pdf'));
+};
+
+const isAudioUrl = (url: string) => {
+  if (!url) return false;
+  const audioExtensions = ['.mp3', '.wav', '.ogg', '.aac', '.m4a', '.flac'];
+  const lowerUrl = url.trim().toLowerCase();
+  return audioExtensions.some(ext => lowerUrl.includes(ext));
+};
+
+const getPdfViewerSrcDoc = (pdfUrl: string) => {
+  const proxyUrl = `${window.location.origin}/api/proxy-resource?url=${encodeURIComponent(pdfUrl)}`;
+  return `<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Declassified Dossier Viewer</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #0e0e0e;
+      color: #eaeaea;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      font-family: monospace, system-ui, -apple-system, sans-serif;
+      overflow: hidden;
+    }
+    header {
+      background-color: #141414;
+      border-bottom: 1px solid #222;
+      padding: 10px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      font-weight: bold;
+      text-transform: uppercase;
+      flex-shrink: 0;
+    }
+    .badge {
+      background: #ef4444;
+      color: #fff;
+      padding: 2px 6px;
+      border-radius: 2px;
+      font-size: 9px;
+    }
+    #viewer-container {
+      flex-grow: 1;
+      overflow: auto;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 24px;
+      background: radial-gradient(circle, #151515 0%, #080808 100%);
+    }
+    .pdf-page-wrapper {
+      background: white;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+      border: 1px solid #222;
+      position: relative;
+    }
+    canvas {
+      display: block;
+      max-width: 100%;
+    }
+    footer {
+      background-color: #141414;
+      border-top: 1px solid #222;
+      padding: 10px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    .controls {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    button {
+      background: #1f1f1f;
+      border: 1px solid #333;
+      color: #999;
+      cursor: pointer;
+      padding: 6px 12px;
+      font-size: 10px;
+      font-family: inherit;
+      font-weight: bold;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: all 0.2s;
+    }
+    button:hover:not(:disabled) {
+      background: #999;
+      color: #000;
+      border-color: #999;
+    }
+    button:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+    #page-indicator {
+      font-size: 10px;
+      color: #888;
+      letter-spacing: 1px;
+    }
+    #status {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      pointer-events: none;
+    }
+    .spinner {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 2px solid rgba(255,255,255,0.1);
+      border-radius: 50%;
+      border-top-color: #ef4444;
+      animation: spin 0.8s linear infinite;
+      margin-bottom: 12px;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <span class="badge">CLASSIFIED</span>
+      <span>Dossier Intelligence File</span>
+    </div>
+    <div style="color: #666; font-size: 9px;">PAGE RENDERER ACTIVE</div>
+  </header>
+
+  <div id="viewer-container">
+    <div id="status">
+      <div class="spinner"></div>
+      <div id="status-text" style="font-size: 11px; letter-spacing: 2px; color: #888; line-height: 1.6;">DECLASSIFIED DATA STREAM LOADING...</div>
+    </div>
+    <div class="pdf-page-wrapper" id="page-wrapper" style="display: none;">
+      <canvas id="pdf-canvas"></canvas>
+    </div>
+  </div>
+
+  <footer>
+    <div class="controls">
+      <button id="prev-btn" disabled>PREV</button>
+      <span id="page-indicator">PAGE <span id="current-page">0</span> / <span id="total-pages">0</span></span>
+      <button id="next-btn" disabled>NEXT</button>
+    </div>
+    <div class="controls">
+      <button id="zoom-out-btn" disabled>ZOOM -</button>
+      <button id="zoom-in-btn" disabled>ZOOM +</button>
+    </div>
+  </footer>
+
+  <script>
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js';
+
+    var pdfDoc = null;
+    var pageNum = 1;
+    var pageRendering = false;
+    var pageNumPending = null;
+    var scale = 1.25;
+    var canvas = document.getElementById('pdf-canvas');
+    var ctx = canvas.getContext('2d');
+    var pageWrapper = document.getElementById('page-wrapper');
+    var statusEl = document.getElementById('status');
+    var statusTextEl = document.getElementById('status-text');
+
+    var prevBtn = document.getElementById('prev-btn');
+    var nextBtn = document.getElementById('next-btn');
+    var zoomInBtn = document.getElementById('zoom-in-btn');
+    var zoomOutBtn = document.getElementById('zoom-out-btn');
+    var currentPageEl = document.getElementById('current-page');
+    var totalPagesEl = document.getElementById('total-pages');
+
+    function renderPage(num) {
+      pageRendering = true;
+      statusEl.style.display = 'block';
+      if (statusTextEl) {
+        statusTextEl.textContent = 'RENDERING PAGE ' + num + '...';
+      }
+      
+      pdfDoc.getPage(num).then(function(page) {
+        var viewport = page.getViewport({ scale: scale });
+        canvas.height = viewport.height;
+        canvas.width = viewport.width;
+
+        pageWrapper.style.width = viewport.width + 'px';
+        pageWrapper.style.height = viewport.height + 'px';
+        pageWrapper.style.display = 'block';
+
+        var renderContext = {
+          canvasContext: ctx,
+          viewport: viewport
+        };
+        var renderTask = page.render(renderContext);
+
+        renderTask.promise.then(function() {
+          pageRendering = false;
+          statusEl.style.display = 'none';
+
+          if (pageNumPending !== null) {
+            renderPage(pageNumPending);
+            pageNumPending = null;
+          }
+        });
+      });
+
+      currentPageEl.textContent = num;
+      prevBtn.disabled = num <= 1;
+      nextBtn.disabled = num >= pdfDoc.numPages;
+    }
+
+    function queueRenderPage(num) {
+      if (pageRendering) {
+        pageNumPending = num;
+      } else {
+        renderPage(num);
+      }
+    }
+
+    zoomInBtn.addEventListener('click', function() {
+      if (scale >= 3.0) return;
+      scale += 0.25;
+      renderPage(pageNum);
+    });
+
+    zoomOutBtn.addEventListener('click', function() {
+      if (scale <= 0.75) return;
+      scale -= 0.25;
+      renderPage(pageNum);
+    });
+
+    prevBtn.addEventListener('click', function() {
+      if (pageNum <= 1) return;
+      pageNum--;
+      queueRenderPage(pageNum);
+    });
+
+    nextBtn.addEventListener('click', function() {
+      if (pageNum >= pdfDoc.numPages) return;
+      pageNum++;
+      queueRenderPage(pageNum);
+    });
+
+    var pdfUrl = '${proxyUrl}';
+    var loadingTask = pdfjsLib.getDocument({
+      url: pdfUrl,
+      withCredentials: false
+    });
+
+    loadingTask.onProgress = function(progressData) {
+      if (statusTextEl) {
+        if (progressData && progressData.total > 0) {
+          var percent = Math.round((progressData.loaded / progressData.total) * 100);
+          statusTextEl.innerHTML = 'DECLASSIFIED DATA STREAM LOADING...<br><span style="color: #ef4444; font-weight: bold; font-family: monospace; font-size: 14px; margin-top: 8px; display: inline-block;">' + percent + '% COMPLETE</span>';
+        } else if (progressData && progressData.loaded > 0) {
+          var kb = Math.round(progressData.loaded / 1024);
+          statusTextEl.innerHTML = 'DECLASSIFIED DATA STREAM LOADING...<br><span style="color: #ef4444; font-weight: bold; font-family: monospace; font-size: 14px; margin-top: 8px; display: inline-block;">' + kb + ' KB LOADED</span>';
+        }
+      }
+    };
+
+    loadingTask.promise.then(function(pdfDoc_) {
+      pdfDoc = pdfDoc_;
+      totalPagesEl.textContent = pdfDoc.numPages;
+      zoomInBtn.disabled = false;
+      zoomOutBtn.disabled = false;
+      renderPage(pageNum);
+    }).catch(function(err) {
+      console.error('PDF loading error:', err);
+      var errMsg = err ? (err.message || err.toString()) : 'Unknown error';
+      statusEl.innerHTML = '<div style="color: #ef4444; font-size: 11px; margin-bottom: 8px;">[ TRANSMISSION ERROR ]</div>' +
+        '<div style="font-size: 10px; color: #aaa; max-width: 350px; line-height: 1.6; margin: 0 auto; font-family: monospace;">' +
+        'Failed to parse classified records directly on proxy stream.<br>' +
+        '<span style="color: #ef4444; word-break: break-all; width: 100%; display: inline-block;">' + errMsg + '</span><br><br>' +
+        'Please use "OPEN SOURCE FILE" below for direct raw viewing.</div>';
+    });
+  </script>
+</body>
+</html>`;
+};
+
+interface CombinedAsset {
+  url: string;
+  type: 'image' | 'video' | 'audio' | 'pdf';
+  pdfUrl?: string;
+  isCombined?: boolean;
+}
+
+const getFilenameWithNoExtension = (url: string) => {
+  if (!url) return '';
+  const trimmedUrl = url.trim();
+  const parts = trimmedUrl.split('/');
+  const filename = parts[parts.length - 1];
+  const dotIndex = filename.lastIndexOf('.');
+  if (dotIndex !== -1) {
+    return filename.substring(0, dotIndex).toLowerCase();
+  }
+  return filename.toLowerCase();
+};
+
+const getCombinedAssets = (images: string[]): CombinedAsset[] => {
+  if (!images || images.length === 0) return [];
+  
+  const pdfs = images.filter(isPdfUrl);
+  const others = images.filter(url => !isPdfUrl(url));
+  
+  const combined: CombinedAsset[] = [];
+  const processedPdfs = new Set<string>();
+  const processedOthers = new Set<string>();
+
+  // Attempt to match each non-PDF with its PDF counterpart
+  others.forEach(otherUrl => {
+    const baseOther = getFilenameWithNoExtension(otherUrl);
+    
+    const matchedPdf = pdfs.find(pdfUrl => {
+      const basePdf = getFilenameWithNoExtension(pdfUrl);
+      return (baseOther === basePdf) || 
+             (baseOther.includes(basePdf) && basePdf.length > 5) || 
+             (basePdf.includes(baseOther) && baseOther.length > 5);
+    });
+
+    if (matchedPdf) {
+      combined.push({
+        url: otherUrl,
+        type: isVideoUrl(otherUrl) ? 'video' : (isAudioUrl(otherUrl) ? 'audio' : 'image'),
+        pdfUrl: matchedPdf,
+        isCombined: true
+      });
+      processedPdfs.add(matchedPdf);
+      processedOthers.add(otherUrl);
+    }
+  });
+
+  // Add any remaining non-PDFs
+  others.forEach(otherUrl => {
+    if (!processedOthers.has(otherUrl)) {
+      combined.push({
+        url: otherUrl,
+        type: isVideoUrl(otherUrl) ? 'video' : (isAudioUrl(otherUrl) ? 'audio' : 'image')
+      });
+    }
+  });
+
+  // Add any remaining PDFs which were not matched to any preview image
+  pdfs.forEach(pdfUrl => {
+    if (!processedPdfs.has(pdfUrl)) {
+      combined.push({
+        url: pdfUrl,
+        type: 'pdf'
+      });
+    }
+  });
+
+  // Put videos first, whilst otherwise preserving their order
+  const videos = combined.filter(asset => asset.type === 'video');
+  const nonVideos = combined.filter(asset => asset.type !== 'video');
+  return [...videos, ...nonVideos];
+};
 
 const MISSING_IMAGE_URL = '/icons/icon-missing-image.svg';
 
@@ -198,6 +576,18 @@ const cleanAndProxyImageUrl = (url: any) => {
   return trimmedUrl;
 };
 
+const toTitleCase = (str: string) => {
+  if (!str) return '';
+  // If it's an acronym like D.U.M.B.S. or all caps like UFO, keep it
+  if (str.includes('.') || (str === str.toUpperCase() && str.length > 1)) return str;
+  const titled = str
+    .toLowerCase()
+    .split(' ')
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+  return titled.replace(/\bufos\b/gi, 'UFOs');
+};
+
 export default function CodexPage({
   theme,
   isMapDarkMode,
@@ -223,7 +613,8 @@ export default function CodexPage({
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [brokenImages, setBrokenImages] = useState<Record<string, boolean>>({});
   const [isImageLoading, setIsImageLoading] = useState(false);
-  const [isFullscreenActive, setIsFullscreenActive] = useState(false);
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  const [isLightboxImageLoading, setIsLightboxImageLoading] = useState(false);
 
   const columnsContainerRef = useRef<HTMLDivElement>(null);
   const svgOverlayRef = useRef<SVGSVGElement>(null);
@@ -243,6 +634,10 @@ export default function CodexPage({
     if (!activeTermId) return null;
     return nodes.find(t => t.id === activeTermId) || null;
   }, [activeTermId, nodes]);
+
+  const activeAssets = useMemo(() => {
+    return getCombinedAssets(activeTermNode?.images || []);
+  }, [activeTermNode]);
 
   const activeRootColor = useMemo(() => {
     const rootCatNode = selectedPath[0] ? nodes.find(n => n.id === selectedPath[0]) : null;
@@ -447,6 +842,7 @@ export default function CodexPage({
       case '#74f8f3': // Archaeological Finds
         return '#005c5c'; // Dark teal
       case '#baeaf4': // D.U.M.B.'s
+      case '#90e9ff': // Particle Accelerators (CERN)
         return '#114b59'; // Dark blue-teal
       case '#90c2ff': // Biblical Figures
       case '#bdc4ff': // Ghosts & Hauntings / Blurred
@@ -1166,25 +1562,62 @@ export default function CodexPage({
     }
   }, [selectedTermId]);
 
+  // Reset image index when switching locations
   useEffect(() => {
     setActiveImageIndex(0);
-    setIsImageLoading(true);
-  }, [activeTermId]);
+    setIsLightboxOpen(false);
+    if (activeTermNode && activeAssets && activeAssets.length > 0) {
+      setIsImageLoading(true);
+    }
+  }, [activeTermNode, activeAssets]);
+
+  // Set image loading state when image index changes
+  useEffect(() => {
+    if (activeTermNode && activeAssets && activeAssets.length > 0) {
+      const currentAsset = activeAssets[activeImageIndex];
+      const currentUrl = currentAsset?.url;
+      if (isVideoUrl(currentUrl) || isPdfUrl(currentUrl) || isAudioUrl(currentUrl) || currentAsset?.pdfUrl) {
+        setIsImageLoading(false);
+      } else {
+        setIsImageLoading(true);
+      }
+    }
+  }, [activeImageIndex, activeTermNode, activeAssets]);
+
+  // Handle lightbox image loading when assets index or lightbox open state changes
+  useEffect(() => {
+    if (isLightboxOpen && activeTermNode && activeAssets && activeAssets.length > 0) {
+      setIsLightboxImageLoading(true);
+    }
+  }, [activeImageIndex, isLightboxOpen, activeTermNode, activeAssets]);
+
+  // Escape/Arrow keys for lightbox
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (isLightboxOpen) {
+        if (e.key === 'Escape') setIsLightboxOpen(false);
+        if (e.key === 'ArrowRight') {
+          setActiveImageIndex(prev => (prev + 1) % activeAssets.length);
+        }
+        if (e.key === 'ArrowLeft') {
+          setActiveImageIndex(prev => (prev - 1 + activeAssets.length) % activeAssets.length);
+        }
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isLightboxOpen, activeTermNode, activeAssets]);
 
   const handlePrevImage = (e: React.MouseEvent) => {
     e.stopPropagation();
-    if (!activeTermNode || !activeTermNode.images) return;
-    setActiveImageIndex(prev => 
-      prev === 0 ? activeTermNode.images!.length - 1 : prev - 1
-    );
+    if (!activeAssets || activeAssets.length === 0) return;
+    setActiveImageIndex(prev => (prev - 1 + activeAssets.length) % activeAssets.length);
   };
 
   const handleNextImage = (e: React.MouseEvent) => {
     e.stopPropagation();
-    if (!activeTermNode || !activeTermNode.images) return;
-    setActiveImageIndex(prev => 
-      prev === activeTermNode.images!.length - 1 ? 0 : prev + 1
-    );
+    if (!activeAssets || activeAssets.length === 0) return;
+    setActiveImageIndex(prev => (prev + 1) % activeAssets.length);
   };
 
   // Poll line positions during slide transitions to ensure SVG paths follow animated columns in real-time
@@ -1227,7 +1660,7 @@ export default function CodexPage({
         color: theme.text,
         overflow: 'hidden',
         position: 'relative',
-        borderTop: '1px solid #000000' // Black divider line across the top of the term tree area
+        borderTop: `1px solid ${theme.border}` // Dynamic divider line across the top of the term tree area
       }}
     >
       <style>{`
@@ -1305,7 +1738,7 @@ export default function CodexPage({
               border: 'none',
               outline: 'none',
               boxSizing: 'border-box',
-              background: 'transparent',
+              background: theme.bg,
               color: theme.text
             }}
           />
@@ -1610,7 +2043,6 @@ export default function CodexPage({
                               fontWeight: '700',
                               fontFamily: '"Space Mono", monospace',
                               letterSpacing: '0.5px',
-                              textTransform: 'uppercase',
                               whiteSpace: 'nowrap',
                               overflow: 'hidden',
                               textOverflow: 'ellipsis',
@@ -1880,7 +2312,7 @@ export default function CodexPage({
                           fontFamily: '"Space Mono", monospace',
                           color: theme.text
                         }}>
-                          {rootCat.name.toUpperCase()}
+                          {toTitleCase(rootCat.name)}
                         </span>
                       </>
                     );
@@ -1902,7 +2334,7 @@ export default function CodexPage({
                 }}
               >
                 {/* Image Gallery at the very top (styled like map page dossier) */}
-                {activeTermNode.images && activeTermNode.images.length > 0 && (
+                {activeAssets && activeAssets.length > 0 && (
                   <div style={{ width: '100%', position: 'relative', borderBottom: `1px solid ${theme.border}`, flexShrink: 0 }}>
                     <div 
                       style={{ 
@@ -1916,99 +2348,229 @@ export default function CodexPage({
                         position: 'relative'
                       }}
                     >
-                      {/* Fullscreen button */}
-                      <motion.button
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                        onClick={() => setIsFullscreenActive(true)}
-                        style={{
-                          position: 'absolute',
-                          top: '12px',
-                          right: '12px',
-                          width: '32px',
-                          height: '32px',
-                          borderRadius: '4px',
-                          background: 'rgba(0, 0, 0, 0.5)',
-                          border: '1px solid rgba(255, 255, 255, 0.2)',
-                          cursor: 'pointer',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          zIndex: 10,
-                          backdropFilter: 'blur(4px)'
-                        }}
-                        title="View Fullscreen"
-                      >
-                        <img 
-                          src="/icons/icon-expand.svg" 
-                          style={{ width: '16px', height: '16px', filter: 'invert(1)' }} 
-                          alt="Fullscreen"
-                        />
-                      </motion.button>
-
                       {(() => {
-                        const imgUrl = activeTermNode.images[activeImageIndex];
-                        if (!imgUrl) return null;
+                        const curAsset = activeAssets[activeImageIndex];
+                        if (!curAsset) return null;
 
-                        const isBroken = !!brokenImages[imgUrl];
-                        const imgSrc = isBroken ? MISSING_IMAGE_URL : cleanAndProxyImageUrl(imgUrl);
-
-                        if (isVideoUrl(imgUrl) && !isBroken) {
-                          const embedUrl = getEmbedUrl(imgUrl);
-                          return (
-                            <div style={{ width: '100%', height: '100%', position: 'relative', overflow: 'hidden' }}>
-                              {(imgUrl.includes('youtube.com') || imgUrl.includes('youtu.be')) ? (
-                                <iframe
-                                  src={`${embedUrl}?autoplay=0&controls=1&mute=1`}
-                                  frameBorder="0"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowFullScreen
-                                  style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0 }}
-                                />
-                              ) : (
-                                <video
-                                  key={imgUrl}
-                                  controls
-                                  referrerPolicy="no-referrer"
-                                  style={{ width: '100%', height: '100%', objectFit: 'contain' }}
-                                >
-                                  <source src={imgUrl.startsWith('http') ? `/api/proxy-resource?url=${encodeURIComponent(imgUrl)}` : imgUrl} type={imgUrl.toLowerCase().endsWith('.webm') ? 'video/webm' : imgUrl.toLowerCase().endsWith('.ogv') ? 'video/ogg' : 'video/mp4'} />
-                                  Your browser does not support the video tag.
-                                </video>
-                              )}
-                            </div>
-                          );
-                        }
+                        const showPdfBadge = !!(curAsset.pdfUrl || curAsset.type === 'pdf');
+                        const isBroken = !!(brokenImages[curAsset.url] || curAsset.url === MISSING_IMAGE_URL || curAsset.url?.includes('icon-missing-image.svg'));
+                        const imgSrc = isBroken ? MISSING_IMAGE_URL : cleanAndProxyImageUrl(curAsset.url);
 
                         return (
                           <>
-                            {isImageLoading && !isBroken && (
+                            {isImageLoading && curAsset.type === 'image' && !curAsset.pdfUrl && (
                               <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: theme.bg, display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 3 }}>
                                 <div className="loading-spinner" />
                               </div>
                             )}
 
-                            <motion.img 
-                              key={`${activeTermNode.id}-${activeImageIndex}`}
-                              initial={{ opacity: 0 }}
-                              animate={{ opacity: isImageLoading ? 0 : 1 }}
-                              transition={{ duration: 0.3 }}
-                              src={imgSrc} 
-                              alt={`${activeTermNode.name} asset viewport`} 
-                              referrerPolicy="no-referrer"
-                              onLoad={() => setIsImageLoading(false)}
-                              onError={() => {
-                                setIsImageLoading(false);
-                                setBrokenImages(prev => ({ ...prev, [imgUrl]: true }));
-                              }}
-                              style={{ 
-                                width: isBroken ? '48px' : '100%', 
-                                height: isBroken ? '48px' : '100%', 
-                                objectFit: isBroken ? 'contain' : 'cover',                     
-                                backgroundColor: 'transparent',           
-                                filter: isBroken ? (isMapDarkMode ? 'invert(1)' : 'none') : 'none'
-                              }}
-                            />
+                            {curAsset.type === 'pdf' ? (
+                              <div 
+                                onClick={() => setIsLightboxOpen(true)}
+                                style={{ 
+                                  width: '100%', 
+                                  height: '100%', 
+                                  position: 'relative', 
+                                  cursor: 'pointer',
+                                  overflow: 'hidden',
+                                  display: 'flex',
+                                  alignItems: 'center',
+                                  justifyContent: 'center',
+                                  backgroundColor: isMapDarkMode ? '#141414' : '#fafafa',
+                                  border: `1px solid ${theme.border}`
+                                }}
+                              >
+                                {/* Background Paper Mockup */}
+                                <div style={{
+                                  width: '130px',
+                                  height: '180px',
+                                  backgroundColor: isMapDarkMode ? '#1e1e1e' : '#ffffff',
+                                  border: `1px solid ${isMapDarkMode ? '#333333' : '#e0e0e0'}`,
+                                  boxShadow: '0 8px 20px rgba(0,0,0,0.3)',
+                                  padding: '16px 12px',
+                                  position: 'relative',
+                                  display: 'flex',
+                                  flexDirection: 'column',
+                                  justifyContent: 'space-between'
+                                }}>
+                                  {/* Styled typewriter horizontal lines to mimic official records */}
+                                  <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                                    <div style={{ height: '6px', width: '80%', backgroundColor: isMapDarkMode ? '#3a3a3a' : '#d2d2d2' }} />
+                                    <div style={{ height: '6px', width: '50%', backgroundColor: isMapDarkMode ? '#3a3a3a' : '#eaeaea' }} />
+                                    {/* Redacted text block */}
+                                    <div style={{ height: '6px', width: '90%', backgroundColor: isMapDarkMode ? '#ffffff' : '#000000' }} />
+                                    <div style={{ height: '6px', width: '35%', backgroundColor: isMapDarkMode ? '#3a3a3a' : '#d2d2d2' }} />
+                                    <div style={{ height: '6px', width: '70%', backgroundColor: isMapDarkMode ? '#ffffff' : '#000000' }} />
+                                  </div>
+
+                                  {/* Diagonal Classified Stamp */}
+                                  <div style={{
+                                    position: 'absolute',
+                                    top: '45%',
+                                    left: '50%',
+                                    transform: 'translate(-50%, -50%) rotate(-25deg)',
+                                    border: '2px double #ef4444',
+                                    color: '#ef4444',
+                                    padding: '1px 6px',
+                                    fontFamily: '"Space Mono", monospace',
+                                    fontSize: '7px',
+                                    fontWeight: 'bold',
+                                    zIndex: 1,
+                                    letterSpacing: '1px',
+                                    borderRadius: '2px',
+                                    opacity: 0.85,
+                                    textTransform: 'uppercase'
+                                  }}>
+                                    DECLASSIFIED
+                                  </div>
+
+                                  {/* Lower border line */}
+                                  <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                                    <div style={{ height: '2px', width: '100%', backgroundColor: isMapDarkMode ? '#333333' : '#eaeaea' }} />
+                                    <div style={{ fontSize: '6px', color: theme.textDim, fontFamily: '"Space Mono", monospace', letterSpacing: '0.5px', textTransform: 'uppercase' }}>
+                                      RECORD DOSSIER
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            ) : curAsset.type === 'video' ? (
+                              <div 
+                                onClick={() => setIsLightboxOpen(true)}
+                                style={{ 
+                                  width: '100%', 
+                                  height: '100%', 
+                                  position: 'relative', 
+                                  cursor: 'pointer',
+                                  overflow: 'hidden',
+                                  display: 'flex',
+                                  alignItems: 'center',
+                                  justifyContent: 'center'
+                                }}
+                              >
+                                <div style={{ width: '100%', height: '100%', pointerEvents: 'none', overflow: 'hidden', position: 'relative' }}>
+                                  {(curAsset.url.includes('youtube.com') || 
+                                   curAsset.url.includes('youtu.be') || 
+                                   curAsset.url.includes('dvidshub.net/video/')) ? (
+                                    <iframe
+                                      src={curAsset.url.includes('dvidshub.net/video/') ? getEmbedUrl(curAsset.url) : `${getEmbedUrl(curAsset.url)}?autoplay=0&controls=0&mute=1`}
+                                      style={curAsset.url.includes('dvidshub.net/video/') ? {
+                                        border: 'none',
+                                        position: 'absolute',
+                                        top: 0,
+                                        left: '50%',
+                                        transform: 'translateX(-50%)',
+                                        width: '165%',
+                                        height: '190%'
+                                      } : { 
+                                        border: 'none', 
+                                        position: 'absolute',
+                                        top: '50%',
+                                        left: '50%',
+                                        transform: 'translate(-50%, -50%)',
+                                        width: '180%', 
+                                        height: '180%'
+                                      }}
+                                      title="Video asset viewport"
+                                    />
+                                  ) : (
+                                    (() => {
+                                      const videoSrc = curAsset.url.startsWith('http')
+                                        ? `/api/proxy-resource?url=${encodeURIComponent(curAsset.url)}`
+                                        : curAsset.url;
+                                      const mimeType = curAsset.url.toLowerCase().endsWith('.webm') ? 'video/webm' : curAsset.url.toLowerCase().endsWith('.ogv') ? 'video/ogg' : 'video/mp4';
+                                      return (
+                                        <video
+                                          key={videoSrc}
+                                          muted
+                                          playsInline
+                                          preload="metadata"
+                                          referrerPolicy="no-referrer"
+                                          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                        >
+                                          <source src={videoSrc} type={mimeType} />
+                                        </video>
+                                      );
+                                    })()
+                                  )}
+                                </div>
+                                
+                                {/* Play overlay */}
+                                <div style={{
+                                  position: 'absolute',
+                                  top: 0,
+                                  left: 0,
+                                  right: 0,
+                                  bottom: 0,
+                                  background: 'rgba(0, 0, 0, 0.3)',
+                                  display: 'flex',
+                                  alignItems: 'center',
+                                  justifyContent: 'center',
+                                  zIndex: 1
+                                }}>
+                                  <motion.div
+                                    whileHover={{ scale: 1.15, backgroundColor: 'rgba(0, 0, 0, 0.85)' }}
+                                    whileTap={{ scale: 0.92 }}
+                                    transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                                    style={{
+                                      width: '56px',
+                                      height: '56px',
+                                      borderRadius: '50%',
+                                      background: 'rgba(0, 0, 0, 0.70)',
+                                      border: `1px solid ${theme.border || 'rgba(255,255,255,0.45)'}`,
+                                      display: 'flex',
+                                      alignItems: 'center',
+                                      justifyContent: 'center',
+                                      boxShadow: '0 8px 32px rgba(0,0,0,0.4)',
+                                      color: '#ffffff'
+                                    }}
+                                  >
+                                    <Play size={20} fill="currentColor" style={{ marginLeft: '3px' }} />
+                                  </motion.div>
+                                </div>
+                              </div>
+                            ) : curAsset.type === 'audio' ? (
+                              <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: isMapDarkMode ? '#030303' : '#f9f9f9', gap: '20px', padding: '24px' }}>
+                                <div style={{ width: '64px', height: '64px', borderRadius: '50%', background: isMapDarkMode ? '#222' : '#eee', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: theme.text }}>
+                                    <path d="M9 18V5l12-2v13"></path>
+                                    <circle cx="6" cy="18" r="3"></circle>
+                                    <circle cx="18" cy="16" r="3"></circle>
+                                  </svg>
+                                </div>
+                                <audio 
+                                  src={curAsset.url} 
+                                  controls 
+                                  style={{ width: '100%', height: '40px' }} 
+                                />
+                                <p style={{ color: theme.textDim, fontSize: '9px', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: 'bold' }}>Audio Intelligence Intercept</p>
+                              </div>
+                            ) : (
+                              <motion.img 
+                                key={`${activeTermNode.id}-${activeImageIndex}`}
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: isImageLoading ? 0 : 1 }}
+                                transition={{ duration: 0.3 }}
+                                onClick={() => setIsLightboxOpen(true)}
+                                src={imgSrc} 
+                                alt={`${activeTermNode.name} asset viewport`} 
+                                referrerPolicy="no-referrer"
+                                onLoad={() => setIsImageLoading(false)}
+                                onError={() => {
+                                  setIsImageLoading(false);
+                                  if (curAsset.url) {
+                                    setBrokenImages(prev => ({ ...prev, [curAsset.url]: true }));
+                                  }
+                                }}
+                                style={{ 
+                                  width: isBroken ? '48px' : '100%', 
+                                  height: isBroken ? '48px' : '100%', 
+                                  objectFit: isBroken ? 'contain' : 'cover',                     
+                                  backgroundColor: 'transparent',           
+                                  filter: isBroken ? (isMapDarkMode ? 'invert(1)' : 'none') : 'none',
+                                  cursor: 'pointer'
+                                }}
+                              />
+                            )}
                           </>
                         );
                       })()}
@@ -2024,7 +2586,7 @@ export default function CodexPage({
                         pointerEvents: 'none'
                       }}>
                         <div style={{ display: 'flex', gap: '4px', flex: 1, justifyContent: 'flex-start', pointerEvents: 'auto' }}>
-                          {activeTermNode.images.length > 1 && (
+                          {activeAssets.length > 1 && (
                             <>
                               <motion.button 
                                 whileHover={{ opacity: 0.7 }}
@@ -2078,8 +2640,8 @@ export default function CodexPage({
                           )}
                         </div>
 
-                        {activeTermNode.images.length > 1 && (
-                          <div style={{ display: 'flex', flex: 1, justifyContent: 'center' }}>
+                        {activeAssets.length > 1 && (
+                          <div style={{ display: 'flex', flex: 1, justifyContent: 'center', pointerEvents: 'auto' }}>
                             <div style={{ 
                               background: 'rgba(0, 0, 0, 0.65)', 
                               backdropFilter: 'blur(2px)',
@@ -2096,11 +2658,35 @@ export default function CodexPage({
                               textAlign: 'center',
                               whiteSpace: 'nowrap'
                             }}>
-                              {activeImageIndex + 1}/{activeTermNode.images.length}
+                              {activeImageIndex + 1}/{activeAssets.length}
                             </div>
                           </div>
                         )}
-                        <div style={{ display: 'flex', flex: 1, justifyContent: 'flex-end' }} />
+                        
+                        <div style={{ display: 'flex', flex: 1, justifyContent: 'flex-end', pointerEvents: 'auto' }}>
+                          <motion.button 
+                            whileHover={{ scale: 1.1, backgroundColor: isMapDarkMode ? '#222' : '#f0f0f0' }}
+                            onClick={() => setIsLightboxOpen(true)} 
+                            title="Expand image to Fullscreen Lightbox"
+                            style={{ 
+                              background: theme.bg, 
+                              border: `1px solid ${theme.border}`, 
+                              borderRadius: '50%', 
+                              width: '30px', 
+                              height: '30px', 
+                              cursor: 'pointer', 
+                              display: 'flex', 
+                              alignItems: 'center', 
+                              justifyContent: 'center',
+                              boxShadow: 'none',
+                              padding: 0,
+                              fontFamily: '"Space Mono", monospace',
+                              transition: 'background-color 0.2s ease'
+                            }}
+                          >
+                            <img src="/icons/icon-expand.svg" style={{ width: '30px', height: '30px', filter: theme.invert }} alt="expand" />
+                          </motion.button>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -2124,7 +2710,6 @@ export default function CodexPage({
                     margin: '0 0 8px 0', 
                     textAlign: 'left', 
                     letterSpacing: '-0.5px',
-                    textTransform: 'uppercase',
                     display: 'flex',
                     alignItems: 'center',
                     gap: '8px'
@@ -2178,6 +2763,7 @@ export default function CodexPage({
                           fontSize: '11px',
                           fontWeight: 'bold',
                           fontFamily: '"Space Mono", monospace',
+                          letterSpacing: '0.05em',
                           transition: 'all 0.2s ease',
                           whiteSpace: 'nowrap'
                         }}
@@ -2206,6 +2792,7 @@ export default function CodexPage({
                           fontSize: '11px',
                           fontWeight: 'bold',
                           fontFamily: '"Space Mono", monospace',
+                          letterSpacing: '0.05em',
                           transition: 'all 0.2s ease',
                           whiteSpace: 'nowrap'
                         }}
@@ -2237,6 +2824,7 @@ export default function CodexPage({
                           fontSize: '11px',
                           fontWeight: 'bold',
                           fontFamily: '"Space Mono", monospace',
+                          letterSpacing: '0.05em',
                           transition: 'all 0.2s ease',
                           whiteSpace: 'nowrap'
                         }}
@@ -2269,7 +2857,7 @@ export default function CodexPage({
                             color: '#000000',
                             cursor: 'default',
                             textTransform: 'uppercase',
-                            letterSpacing: '0.5px',
+                            letterSpacing: '0.05em',
                             fontFamily: '"Space Mono", monospace'
                           }}
                         >
@@ -2650,110 +3238,274 @@ export default function CodexPage({
         }} 
       />
 
-      {/* Fullscreen Lightbox Overlay */}
-      {isFullscreenActive && activeTermNode && activeTermNode.images && activeTermNode.images.length > 0 && (() => {
-        const imgUrl = activeTermNode.images[activeImageIndex];
-        if (!imgUrl) return null;
-        const isBroken = !!brokenImages[imgUrl];
-        const imgSrc = isBroken ? MISSING_IMAGE_URL : cleanAndProxyImageUrl(imgUrl);
-
-        return (
-          <div 
-            style={{
-              position: 'fixed',
-              top: 0,
-              left: 0,
-              width: '100vw',
-              height: '100vh',
-              background: 'rgba(0, 0, 0, 0.9)',
-              backdropFilter: 'blur(10px)',
-              zIndex: 9999,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              cursor: 'zoom-out'
-            }}
-            onClick={() => setIsFullscreenActive(false)}
+      {/* FULL SCREEN LIGHTBOX MODAL ARCHITECTURE */}
+      <AnimatePresence>
+        {isLightboxOpen && activeTermNode && activeAssets && activeAssets.length > 0 && createPortal(
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+            onClick={() => setIsLightboxOpen(false)}
+            style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: 'rgba(0, 0, 0, 0.95)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 9999, cursor: 'zoom-out', fontFamily: '"Space Mono", monospace' }}
           >
-            {/* Close button */}
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                setIsFullscreenActive(false);
-              }}
-              style={{
-                position: 'absolute',
-                top: '24px',
-                right: '24px',
-                width: '44px',
-                height: '44px',
-                borderRadius: '50%',
-                background: 'rgba(255, 255, 255, 0.1)',
-                border: '1px solid rgba(255, 255, 255, 0.2)',
-                cursor: 'pointer',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: '#fff',
-                fontSize: '24px',
-                zIndex: 10000
-              }}
+            <motion.button 
+              initial={{ y: -20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              whileHover={{ opacity: 0.7 }}
+              onClick={() => setIsLightboxOpen(false)} 
+              style={{ position: 'absolute', top: '24px', right: '24px', background: 'none', border: 'none', color: '#ffffff', fontSize: '12px', fontWeight: 'bold', cursor: 'pointer', fontFamily: '"Space Mono", monospace', letterSpacing: '1px', zIndex: 10001, display: 'flex', alignItems: 'center', gap: '8px' }}
             >
-              ✕
-            </button>
-
-            {/* Media Content */}
+              <img src="/icons/icon-x.svg" style={{ width: '24px', height: '24px', filter: 'invert(1)' }} alt="close" />
+              CLOSE
+            </motion.button>
+  
             <div 
               style={{ 
-                width: '90vw',
-                height: '90vh',
+                position: 'relative', 
+                width: '100%', 
+                height: '100%', 
+                padding: '64px', 
+                boxSizing: 'border-box',
                 display: 'flex', 
+                flexDirection: 'column',
                 alignItems: 'center', 
                 justifyContent: 'center' 
-              }}
-              onClick={(e) => e.stopPropagation()}
+              }} 
+              onClick={e => e.stopPropagation()}
             >
-              {isVideoUrl(imgUrl) && !isBroken ? (
-                <div style={{ width: '100%', height: '100%', position: 'relative' }}>
-                  {imgUrl.includes('youtube.com') || imgUrl.includes('youtu.be') ? (
-                    <iframe
-                      src={`${getEmbedUrl(imgUrl)}?autoplay=1`}
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      style={{ width: '100%', height: '100%' }}
-                    />
-                  ) : (
-                    <video
-                      key={imgUrl}
-                      controls
-                      autoPlay
-                      referrerPolicy="no-referrer"
-                      style={{ width: '100%', height: '100%', objectFit: 'contain' }}
-                    >
-                      <source src={imgUrl.startsWith('http') ? `/api/proxy-resource?url=${encodeURIComponent(imgUrl)}` : imgUrl} type={imgUrl.toLowerCase().endsWith('.webm') ? 'video/webm' : imgUrl.toLowerCase().endsWith('.ogv') ? 'video/ogg' : 'video/mp4'} />
-                      Your browser does not support the video tag.
-                    </video>
-                  )}
-                </div>
-              ) : (
-                <img 
-                  src={imgSrc} 
-                  alt={activeTermNode.name} 
-                  referrerPolicy="no-referrer"
-                  style={{ 
-                    maxWidth: '100%', 
-                    maxHeight: '100%', 
-                    objectFit: 'contain', 
-                    boxShadow: '0 20px 50px rgba(0, 0, 0, 0.5)',
-                    border: '1px solid rgba(255, 255, 255, 0.1)' 
-                  }} 
-                />
+              {(() => {
+                const curAsset = activeAssets[activeImageIndex];
+                if (!curAsset) return null;
+
+                const isPdf = !!(curAsset.type === 'pdf' || curAsset.pdfUrl);
+                const actualPdfUrl = curAsset.pdfUrl || (curAsset.type === 'pdf' ? curAsset.url : undefined);
+                const isBroken = !!(brokenImages[curAsset.url] || curAsset.url === MISSING_IMAGE_URL || curAsset.url?.includes('icon-missing-image.svg'));
+                const imgSrc = isBroken ? MISSING_IMAGE_URL : cleanAndProxyImageUrl(curAsset.url);
+
+                return (
+                  <>
+                    {isLightboxImageLoading && curAsset.type === 'image' && !curAsset.pdfUrl && (
+                      <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 10 }}>
+                        <div className="loading-spinner" style={{ borderTopColor: '#ffffff' }} />
+                      </div>
+                    )}
+        
+                    <AnimatePresence mode="wait">
+                      {isPdf && actualPdfUrl ? (
+                        <motion.div
+                          key={`lightbox-pdf-${activeTermNode.id}-${activeImageIndex}`}
+                          initial={{ opacity: 0, scale: 0.95 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          exit={{ opacity: 0, scale: 1.05 }}
+                          transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                          style={{ width: '90%', height: '90%', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px' }}
+                        >
+                          <div style={{ width: '100%', height: '100%', position: 'relative', overflow: 'hidden', boxShadow: '0 20px 50px rgba(0,0,0,0.5)', border: '1px solid rgba(255,255,255,0.1)', background: '#fff' }}>
+                            <iframe
+                              srcDoc={getPdfViewerSrcDoc(actualPdfUrl)}
+                              style={{ width: '100%', height: '100%', border: 'none', background: '#ffffff' }}
+                              title="Declassified Document Archive"
+                            />
+                            <div style={{ position: 'absolute', top: '10px', right: '10px', background: 'rgba(0,0,0,0.4)', padding: '4px 8px', borderRadius: '4px', fontSize: '9px', color: '#fff', pointerEvents: 'none' }}>
+                              If dossier fails to display, use "OPEN SOURCE FILE" below
+                            </div>
+                          </div>
+                        </motion.div>
+                      ) : curAsset.type === 'video' ? (
+                        <motion.div
+                          key={`lightbox-video-${activeTermNode.id}-${activeImageIndex}`}
+                          initial={{ opacity: 0, scale: 0.95 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          exit={{ opacity: 0, scale: 1.05 }}
+                          transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                          style={{ 
+                            width: 'min(80vw, calc((100vh - 220px) * 16 / 9))',
+                            height: 'min(calc(100vh - 220px), calc(80vw * 9 / 16))',
+                            maxWidth: '100%',
+                            maxHeight: 'calc(100vh - 220px)',
+                            display: 'flex', 
+                            alignItems: 'center', 
+                            justifyContent: 'center',
+                            position: 'relative',
+                            overflow: 'hidden'
+                          }}
+                        >
+                          {(curAsset.url.includes('youtube.com') || 
+                            curAsset.url.includes('youtu.be') || 
+                            curAsset.url.includes('dvidshub.net/video/')) ? (
+                            <iframe
+                              src={getEmbedUrl(curAsset.url)}
+                              style={{ 
+                                width: '100%', 
+                                height: curAsset.url.includes('dvidshub.net/video/') ? '110%' : '100%', 
+                                border: 'none', 
+                                boxShadow: '0 20px 50px rgba(0,0,0,0.5)',
+                                position: 'absolute',
+                                top: 0,
+                                left: 0
+                              }}
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowFullScreen
+                              title="High resolution dossier archive asset"
+                            />
+                          ) : (
+                            (() => {
+                              const videoSrc = curAsset.url.startsWith('http')
+                                ? `/api/proxy-resource?url=${encodeURIComponent(curAsset.url)}`
+                                : curAsset.url;
+                              const mimeType = curAsset.url.toLowerCase().endsWith('.webm') ? 'video/webm' : curAsset.url.toLowerCase().endsWith('.ogv') ? 'video/ogg' : 'video/mp4';
+                              return (
+                                <video
+                                  controls
+                                  autoPlay
+                                  referrerPolicy="no-referrer"
+                                  style={{ width: '100%', height: '100%', outline: 'none', boxShadow: '0 20px 50px rgba(0,0,0,0.5)' }}
+                                >
+                                  <source src={videoSrc} type={mimeType} />
+                                  Your browser does not support the video tag.
+                                </video>
+                              );
+                            })()
+                          )}
+                        </motion.div>
+                      ) : curAsset.type === 'audio' ? (
+                        <motion.div
+                          key={`lightbox-audio-${activeTermNode.id}-${activeImageIndex}`}
+                          initial={{ opacity: 0, scale: 0.95 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          exit={{ opacity: 0, scale: 1.05 }}
+                          transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                          style={{ width: '80%', height: '80%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(255,255,255,0.05)', borderRadius: '12px', gap: '32px', padding: '48px' }}
+                        >
+                          <div style={{ width: '128px', height: '128px', borderRadius: '50%', background: '#222', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: '#ffffff' }}>
+                              <path d="M9 18V5l12-2v13"></path>
+                              <circle cx="6" cy="18" r="3"></circle>
+                              <circle cx="18" cy="16" r="3"></circle>
+                            </svg>
+                          </div>
+                          <audio 
+                            src={curAsset.url} 
+                            controls 
+                            autoPlay
+                            style={{ width: '100%', maxWidth: '600px', height: '54px' }} 
+                          />
+                          <div style={{ textAlign: 'center' }}>
+                            <p style={{ color: '#ffffff', fontSize: '14px', textTransform: 'uppercase', letterSpacing: '4px', fontWeight: 'bold', marginBottom: '8px' }}>AUDIO INTELLIGENCE INTERCEPT</p>
+                            <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '10px' }}>{activeTermNode.name} - DIRECT SIGNAL CAPTURE</p>
+                          </div>
+                        </motion.div>
+                      ) : (
+                        <motion.img 
+                          key={`${activeTermNode.id}-${activeImageIndex}`}
+                          initial={{ opacity: 0, scale: 0.95 }}
+                          animate={{ opacity: isLightboxImageLoading ? 0 : 1, scale: 1 }}
+                          exit={{ opacity: 0, scale: 1.05 }}
+                          transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                          src={imgSrc} 
+                          alt="High resolution dossier archive asset" 
+                          referrerPolicy="no-referrer"
+                          onLoad={() => setIsLightboxImageLoading(false)}
+                          onError={() => {
+                            setIsLightboxImageLoading(false);
+                            if (curAsset.url) {
+                              setBrokenImages(prev => ({ ...prev, [curAsset.url]: true }));
+                            }
+                          }}
+                          style={{ 
+                            maxWidth: '100%', 
+                            maxHeight: '100%', 
+                            objectFit: 'contain', 
+                            margin: 'auto',
+                            backgroundColor: 'transparent',
+                            width: isBroken ? '96px' : 'auto',
+                            height: isBroken ? '96px' : 'auto',
+                            filter: isBroken ? 'invert(1)' : 'none'
+                          }}
+                        />
+                      )}
+                    </AnimatePresence>
+        
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '16px', width: '100%' }}>
+                      <motion.div 
+                        initial={{ y: 20, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        style={{ 
+                          margin: '24px 0 0 0',
+                          color: '#ffffff', 
+                          fontSize: '11px', 
+                          fontFamily: '"Space Mono", monospace', 
+                          whiteSpace: 'nowrap', 
+                          backgroundColor: 'rgba(0,0,0,0.6)', 
+                          padding: '6px 16px', 
+                          borderRadius: '20px', 
+                          letterSpacing: '0.5px',
+                          textAlign: 'center',
+                          zIndex: 10001
+                        }}>
+                        FILE ASSET {activeImageIndex + 1} OF {activeAssets.length} — {activeTermNode.name.toUpperCase()}
+                      </motion.div>
+        
+                      {isPdf && actualPdfUrl && (
+                        <a 
+                          href={actualPdfUrl} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          style={{ 
+                            backgroundColor: '#000000',
+                            color: '#ffffff',
+                            border: '1px solid #ffffff',
+                            padding: '12px 24px',
+                            borderRadius: '4px',
+                            fontSize: '11px',
+                            fontWeight: 'bold',
+                            textDecoration: 'none',
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '10px',
+                            letterSpacing: '1.5px',
+                            boxShadow: '0 8px 24px rgba(0,0,0,0.5)',
+                            zIndex: 10002,
+                            textTransform: 'uppercase'
+                          }}
+                        >
+                          <img src="/icons/icon-expand.svg" style={{ width: '18px', height: '18px', filter: 'invert(1)' }} alt="open" />
+                          OPEN FULL PDF IN NEW TAB
+                        </a>
+                      )}
+                    </div>
+                  </>
+                );
+              })()}
+  
+              {activeAssets.length > 1 && (
+                <>
+                  <motion.button 
+                    initial={{ x: -20, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    whileHover={{ scale: 1.1, backgroundColor: '#ffffff' }}
+                    onClick={handlePrevImage} 
+                    style={{ position: 'absolute', left: '24px', top: '50%', transform: 'translateY(-50%)', background: '#000000', border: '1px solid #ffffff', borderRadius: '50%', width: '64px', height: '64px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 12px rgba(0,0,0,0.3)', zIndex: 10002, transition: 'background-color 0.2s ease' }}
+                  >
+                    <img src="/icons/icon-arrow-left.svg" style={{ width: '12px', height: '24px' }} alt="prev" className="lightbox-nav-icon" />
+                  </motion.button>
+                  <motion.button 
+                    initial={{ x: 20, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    whileHover={{ scale: 1.1, backgroundColor: '#ffffff' }}
+                    onClick={handleNextImage} 
+                    style={{ position: 'absolute', right: '24px', top: '50%', transform: 'translateY(-50%)', background: '#000000', border: '1px solid #ffffff', borderRadius: '50%', width: '64px', height: '64px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 12px rgba(0,0,0,0.3)', zIndex: 10002, transition: 'background-color 0.2s ease' }}
+                  >
+                    <img src="/icons/icon-arrow-left.svg" style={{ width: '12px', height: '24px', transform: 'rotate(180deg)' }} alt="next" className="lightbox-nav-icon" />
+                  </motion.button>
+                </>
               )}
             </div>
-          </div>
-        );
-      })()}
+          </motion.div>,
+          document.body
+        )}
+      </AnimatePresence>
     </div>
   );
 }

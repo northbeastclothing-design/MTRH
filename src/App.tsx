@@ -237,7 +237,7 @@ const getPdfViewerSrcDoc = (pdfUrl: string) => {
       font-size: 10px;
       font-family: inherit;
       font-weight: bold;
-      letter-spacing: 1px;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
       transition: all 0.2s;
     }
@@ -5893,6 +5893,7 @@ function App() {
                 cursor: 'pointer',
                 borderRadius: '16px',
                 textTransform: 'uppercase',
+                letterSpacing: '0.05em',
                 transition: 'all 0.2s ease'
               }}
             >
@@ -5917,6 +5918,7 @@ function App() {
                   cursor: 'pointer',
                   borderRadius: '16px',
                   textTransform: 'uppercase',
+                  letterSpacing: '0.05em',
                   transition: 'all 0.2s ease'
                 }}
               >
@@ -5957,6 +5959,7 @@ function App() {
                   cursor: 'pointer',
                   borderRadius: '16px',
                   textTransform: 'uppercase',
+                  letterSpacing: '0.05em',
                   transition: 'all 0.2s ease'
                 }}
               >
@@ -6072,6 +6075,7 @@ function App() {
                     cursor: 'pointer',
                     borderRadius: '16px',
                     textTransform: 'uppercase',
+                    letterSpacing: '0.05em',
                     display: 'flex',
                     alignItems: 'center',
                     gap: '6px',
@@ -6507,7 +6511,7 @@ function App() {
                           <span style={{ 
                             fontSize: '10px', 
                             lineHeight: '24px',
-                            fontWeight: '700', 
+                            fontWeight: isActive ? '700' : '400', 
                             fontFamily: '"Space Mono", monospace', 
                             opacity: isActive ? 1 : 0.5,
                             transition: 'opacity 0.3s ease-in-out'
@@ -6711,7 +6715,7 @@ function App() {
                                                 color: '#000000',
                                                 cursor: 'pointer',
                                                 textTransform: 'uppercase',
-                                                letterSpacing: '0.6px',
+                                                letterSpacing: '0.05em',
                                                 fontFamily: '"Space Mono", monospace',
                                                 fontStyle: 'normal',
                                                 transition: 'transform 0.1s ease, box-shadow 0.1s ease',
@@ -6738,7 +6742,7 @@ function App() {
                                                 color: '#000000',
                                                 cursor: 'pointer',
                                                 textTransform: 'uppercase',
-                                                letterSpacing: '0.6px',
+                                                letterSpacing: '0.05em',
                                                 fontFamily: '"Space Mono", monospace',
                                                 fontStyle: 'normal',
                                                 transition: 'transform 0.1s ease, box-shadow 0.1s ease',
@@ -7494,7 +7498,7 @@ function App() {
                               color: '#000000',
                               cursor: 'pointer',
                               textTransform: 'uppercase',
-                              letterSpacing: '0.5px',
+                              letterSpacing: '0.05em',
                               fontFamily: '"Space Mono", monospace',
                               transition: 'transform 0.1s ease, box-shadow 0.1s ease'
                             }}
@@ -7985,6 +7989,7 @@ function App() {
                           fontSize: '9px',
                           fontWeight: 700,
                           textTransform: 'uppercase',
+                          letterSpacing: '0.05em',
                           boxSizing: 'border-box',
                           whiteSpace: 'nowrap',
                         }}
@@ -8913,7 +8918,8 @@ function App() {
                         fontWeight: 'bold',
                         fontFamily: '"Space Mono", monospace',
                         cursor: 'pointer',
-                        textTransform: 'none',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.05em',
                         borderRadius: '30px',
                         transition: 'all 0.2s',
                         display: 'flex',
@@ -8929,7 +8935,7 @@ function App() {
                         e.currentTarget.style.color = isMapDarkMode ? '#000000' : '#ffffff';
                       }}
                     >
-                      Donate
+                      DONATE
                     </button>
                     <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" style={{ display: 'none' }} />
                   </form>
@@ -9268,7 +9274,8 @@ function App() {
                     fontWeight: 'bold',
                     fontFamily: '"Space Mono", monospace',
                     cursor: 'pointer',
-                    textTransform: 'none',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.05em',
                     borderRadius: '30px',
                     transition: 'all 0.2s',
                     display: 'flex',
@@ -9284,7 +9291,7 @@ function App() {
                     e.currentTarget.style.color = '#ffffff';
                   }}
                 >
-                  Explore
+                  EXPLORE
                 </button>
 
                 <form 
@@ -9310,7 +9317,8 @@ function App() {
                       fontWeight: 'bold',
                       fontFamily: '"Space Mono", monospace',
                       cursor: 'pointer',
-                      textTransform: 'none',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.05em',
                       borderRadius: '30px',
                       transition: 'all 0.2s',
                       display: 'flex',
@@ -9326,7 +9334,7 @@ function App() {
                       e.currentTarget.style.color = '#000000';
                     }}
                   >
-                    Donate
+                    DONATE
                   </button>
                   <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" style={{ display: 'none' }} />
                 </form>
@@ -9377,6 +9385,7 @@ function App() {
               cursor: 'pointer',
               textDecoration: 'underline',
               textTransform: 'uppercase',
+              letterSpacing: '0.05em',
               fontSize: '10px',
               marginLeft: '12px'
             }}
@@ -10629,6 +10638,7 @@ function App() {
                       fontWeight: 700,
                       cursor: 'pointer',
                       fontFamily: '"Space Mono", monospace',
+                      letterSpacing: '0.05em',
                       marginTop: '8px'
                     }}
                   >
@@ -10867,6 +10877,7 @@ function App() {
                       fontWeight: 700,
                       cursor: 'pointer',
                       textTransform: 'uppercase',
+                      letterSpacing: '0.05em',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
@@ -10921,6 +10932,7 @@ function App() {
                         fontFamily: '"Space Mono", monospace',
                         cursor: 'pointer',
                         fontWeight: 700,
+                        letterSpacing: '0.05em',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
@@ -12254,6 +12266,7 @@ function App() {
                           fontWeight: 700,
                           cursor: 'pointer',
                           textTransform: 'uppercase',
+                          letterSpacing: '0.05em',
                           padding: '4px 0',
                           transition: 'color 0.2s'
                         }}
@@ -12279,6 +12292,7 @@ function App() {
                               cursor: 'pointer',
                               borderRadius: '16px',
                               textTransform: 'uppercase',
+                              letterSpacing: '0.05em',
                               display: 'inline-flex',
                               alignItems: 'center',
                               justifyContent: 'center',
@@ -12306,6 +12320,7 @@ function App() {
                             cursor: 'pointer',
                             borderRadius: '16px',
                             textTransform: 'uppercase',
+                            letterSpacing: '0.05em',
                             display: 'inline-flex',
                             alignItems: 'center',
                             justifyContent: 'center',
