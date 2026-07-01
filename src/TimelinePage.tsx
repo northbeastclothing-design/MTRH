@@ -1244,11 +1244,11 @@ export default function TimelinePage({
                             </React.Fragment>
                           );
                         } else {
-                          // Singular Event Circle with Hover & Selected Pill Backgrounds
                           const isHovered = hoveredItemId === item.id;
                           const isSelected = selectedItem?.id === item.id;
                           const isSolidHighlight = solidHighlightedIds.has(item.id);
-                          const pointMask = isHovered || isSelected || isSolidHighlight
+                          const hasNext = !!nextItem;
+                          const pointMask = isHovered || isSelected || isSolidHighlight || !hasNext
                             ? 'none'
                             : 'linear-gradient(to right, #000 calc(100% - 16px), transparent 100%)';
                           
@@ -1266,7 +1266,7 @@ export default function TimelinePage({
                               style={{
                                 position: 'absolute',
                                 left: `${xStart}%`,
-                                width: isHovered || isSelected || isSolidHighlight ? 'auto' : `${distToNext}%`,
+                                width: isHovered || isSelected || isSolidHighlight || !hasNext ? 'auto' : `${distToNext}%`,
                                 height: '24px',
                                 top: '6px',
                                 display: 'flex',
@@ -1280,7 +1280,7 @@ export default function TimelinePage({
                                 style={{
                                   display: 'flex',
                                   alignItems: 'center',
-                                  width: isHovered || isSelected || isSolidHighlight ? 'auto' : '100%',
+                                  width: isHovered || isSelected || isSolidHighlight || !hasNext ? 'auto' : '100%',
                                   height: '24px',
                                   borderRadius: '12px',
                                   padding: (isHovered || isSelected || isSolidHighlight) ? '0 12px' : '0',
@@ -1346,7 +1346,8 @@ export default function TimelinePage({
                                     display: 'inline-flex',
                                     alignItems: 'center',
                                     overflow: 'hidden',
-                                    maxWidth: isHovered || isSelected || isSolidHighlight ? 'none' : 'calc(100% - 24px)',
+                                    width: isHovered || isSelected || isSolidHighlight || !hasNext ? 'auto' : '100%',
+                                    maxWidth: isHovered || isSelected || isSolidHighlight || !hasNext ? 'none' : 'calc(100% - 24px)',
                                     WebkitMaskImage: pointMask,
                                     maskImage: pointMask
                                   }}>
