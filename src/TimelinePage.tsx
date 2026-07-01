@@ -1052,7 +1052,17 @@ export default function TimelinePage({
                           onMouseUp={(e) => e.stopPropagation()}
                           onClick={(e) => {
                             e.stopPropagation();
-                            handleItemClick(offscreenNav.item);
+                            if (isCollapsed) {
+                              setCollapsedEras(p => ({ ...p, [era.id]: false }));
+                            }
+                            const item = offscreenNav.item;
+                            const itemCenter = item.start + (item.type === 'lifespan' ? (item.end ?? item.start) - item.start : 0) / 2;
+                            const itemLength = item.type === 'lifespan' ? Math.abs((item.end ?? item.start) - item.start) : 0;
+                            const currentSpan = viewEnd - viewStart;
+                            const targetSpan = Math.max(currentSpan, itemLength * 1.5);
+                            const targetStart = itemCenter - targetSpan / 2;
+                            const targetEnd = itemCenter + targetSpan / 2;
+                            animateViewport(targetStart, targetEnd);
                           }}
                           style={{
                             marginLeft: 'auto',
