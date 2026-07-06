@@ -348,7 +348,7 @@ export default function TimelinePage({
   // Format years nicely (e.g. 4,004 BC, 30 AD)
   const formatYear = (year: number) => {
     const absYear = Math.round(Math.abs(year));
-    const formattedAbs = absYear.toLocaleString();
+    const formattedAbs = absYear < 10000 ? String(absYear) : absYear.toLocaleString();
     return year < 0 ? `${formattedAbs} BC` : `${formattedAbs} AD`;
   };
 

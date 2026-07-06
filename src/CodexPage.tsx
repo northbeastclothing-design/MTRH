@@ -39,6 +39,7 @@ const LAYER_COLORS: Record<string, string> = {
   'Bigfoot Sightings': '#C6986D',
   'Cryptid Sightings': '#AFFFEC',
   'Underworld Entrances': '#D3C5FB',
+  'Portals / Stargates': '#F9B6DB',
   'Ancient Texts': '#F6E8C1',
   'Burial Mounds': '#B3C77B',
   'Cave Systems': '#B9BDAD',
@@ -81,6 +82,7 @@ const LAYER_ICONS: Record<string, string> = {
   'Bigfoot Sightings': '/icons/icon-bigfoot-sightings.svg',
   'Cryptid Sightings': '/icons/icon-cryptid-sightings.svg',
   'Underworld Entrances': '/icons/icon-entrances-to-underworld.svg',
+  'Portals / Stargates': '/icons/icon-portals.svg',
   'Ancient Texts': '/icons/icon-ancient-texts.svg',
   'Burial Mounds': '/icons/icon-burial-mounds.svg',
   'Cave Systems': '/icons/icon-caves.svg',
@@ -859,6 +861,8 @@ export default function CodexPage({
         return '#754215'; // Dark brown-orange
       case '#c6986d': // Bigfoot
         return '#5c3f25'; // Dark chocolate brown
+      case '#f9b6db': // Portals / Stargates
+        return '#850d51'; // Dark magenta/pink
       case '#d3c5fb': // Underworld Entrances
       case '#d29bff': // War.gov UFO files 02
         return '#472280'; // Dark violet/purple
@@ -1056,12 +1060,18 @@ export default function CodexPage({
       const currentId = selectedPath[i];
       const currentNode = nodes.find(n => n.id === currentId);
       const children = nodes.filter(n => {
+        // Exclude if already in the path up to this point
         if (selectedPath.slice(0, i + 1).includes(n.id)) return false;
         
+        // Exclude if it's in the current vertical list (column i)
+        const inCurrentVerticalList = list[i].nodes.some(node => node.id === n.id);
+        if (inCurrentVerticalList) return false;
+
         const isChild = n.parentId === currentId || n.secondaryParentIds?.includes(currentId);
+        const isRelated = currentNode && currentNode.relatedIds?.includes(n.id);
         const isParent = currentNode && (currentNode.parentId === n.id || currentNode.secondaryParentIds?.includes(n.id));
         
-        return isChild || isParent;
+        return isChild || isRelated || isParent;
       }).sort((a, b) => a.name.localeCompare(b.name));
 
       if (children.length > 0) {

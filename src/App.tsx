@@ -121,6 +121,8 @@ const CATEGORY_DESCRIPTIONS: Record<string, string> = {
   'Burial Mounds': 'Ancient earthworks and ceremonial mounds marking the resting places of unknown civilizations.',
   'Dolmans': 'Mysterious single-chamber megalithic tombs consisting of massive upright stones.',
   'Underworld Entrances': 'Purported Entrances to the Underworld from lore, legends, and modern times.',
+  'Portals / Stargates': 'Purported or speculative stargates, portals, and interdimensional gateways documented in ancient lore, modern whistleblower accounts, and anomalous zones.',
+  'Particle Accelerators': 'A directory of high-energy particle accelerators designed to facilitate high-energy physics research and space-time anomaly studies.',
   'Ghosts & Hauntings': 'Areas reported to have high levels of paranormal activity and spectral apparitions.',
   'National Parks & Reserves': 'The intersection of vast wilderness and unexplained disappearances.',
   'Missing 411': 'Mysterious disappearances of people in national parks and wilderness areas documented by David Paulides.',
@@ -666,6 +668,8 @@ const processIncomingRecord = (item: any, index: number) => {
   else if (lowerCat.includes('ufo') || lowerCat.includes('uap')) normalizedCategory = 'UFOs - Sightings';
   else if (lowerCat.includes('ley') || lowerCat.includes('ley-line') || lowerCat === 'ley lines') normalizedCategory = 'Ley Lines';
   else if (lowerCat.includes('cryptid')) normalizedCategory = 'Cryptid Sightings';
+  else if (lowerCat.includes('cern') || lowerCat.includes('hadron') || lowerCat.includes('collider') || lowerCat.includes('accelerator')) normalizedCategory = 'Particle Accelerators';
+  else if ((lowerCat.includes('stargate') || lowerCat.includes('portal')) && !lowerCat.includes('underworld') && !lowerCat.includes('entrance')) normalizedCategory = 'Portals / Stargates';
   else if (lowerCat.includes('entrance') || lowerCat.includes('underworld')) normalizedCategory = 'Underworld Entrances';
   else if (lowerCat.includes('ancient people') || lowerCat.includes('people group')) normalizedCategory = 'Ancient People Groups';
   else if (lowerCat.includes('ancient') || lowerCat.includes('text')) normalizedCategory = 'Ancient Texts';
@@ -809,13 +813,14 @@ const LAYER_CONFIG: Record<string, { color: string; icon: string }> = {
   'Biblical Figures': { color: '#90C2FF', icon: '/icons/icon-biblical-bloodlines.svg' },
   'Religion': { color: '#90C2FF', icon: '/icons/icon-religion.svg' },
   'Masonic Lodges': { color: '#ECCE81', icon: '/icons/icon-alchemy-occult.svg' },
-  'Hadron Colliders': { color: '#BAEAF4', icon: '/icons/icon-portals.svg' },
+  'Particle Accelerators': { color: '#90E9FF', icon: '/icons/icon-cern.svg' },
   'Myths / Legends': { color: '#FFF96A', icon: '/icons/icon-greek-mythology.svg' },
   'Biblical Events': { color: '#91FFC4', icon: '/icons/icon-biblical-bloodlines-1.svg' },
   'UFOs - Sightings': { color: '#C2FFBD', icon: '/icons/icon-ufo-sightings.svg' },
   'Bigfoot Sightings': { color: '#C6986D', icon: '/icons/icon-bigfoot-sightings.svg' },
   'Cryptid Sightings': { color: '#AFFFEC', icon: '/icons/icon-cryptid-sightings.svg' },
   'Underworld Entrances': { color: '#D3C5FB', icon: '/icons/icon-entrances-to-underworld.svg' },
+  'Portals / Stargates': { color: '#F9B6DB', icon: '/icons/icon-portals.svg' },
   'Ancient Texts': { color: '#F6E8C1', icon: '/icons/icon-ancient-texts.svg' },
   'Burial Mounds': { color: '#B3C77B', icon: '/icons/icon-burial-mounds.svg' },
   'Cave Systems': { color: '#B9BDAD', icon: '/icons/icon-caves.svg' },
@@ -3024,7 +3029,34 @@ function App() {
       const featureId = params.get('featureId');
       if (featureId) {
         const matched = combinedPointsAndLinesData.find(item => String(item.id) === featureId);
-        if (matched) setSelectedFeature(matched);
+        if (matched) {
+          setSelectedFeature(matched);
+          const categories = matched.categories || (matched.category ? [matched.category] : []);
+          if (categories.length > 0) {
+            setActiveLayers(prev => {
+              const next = { ...prev };
+              let changed = false;
+              categories.forEach((cat: string) => {
+                if (next[cat] !== true) {
+                  next[cat] = true;
+                  changed = true;
+                }
+              });
+              return changed ? next : prev;
+            });
+            setExpandedLayers(prev => {
+              const next = { ...prev };
+              let changed = false;
+              categories.forEach((cat: string) => {
+                if (!next[cat]) {
+                  next[cat] = true;
+                  changed = true;
+                }
+              });
+              return changed ? next : prev;
+            });
+          }
+        }
       } else {
         setSelectedFeature(null);
       }
@@ -4015,18 +4047,6 @@ function App() {
         return updated ? next : prev;
       });
 
-      // Auto-enable the layers if they are currently off
-      setActiveLayers(prev => {
-        let updated = false;
-        const next = { ...prev };
-        categories.forEach((cat: string) => {
-          if (next[cat] === false) {
-            next[cat] = true;
-            updated = true;
-          }
-        });
-        return updated ? next : prev;
-      });
     }
 
     // 2. Expand visible counts if the item is pagination-hidden
@@ -4060,6 +4080,16 @@ function App() {
 
     return () => clearTimeout(timer);
   }, [selectedFeature, currentPage, groupedLocations, visibleCounts]);
+
+  // Clear selected feature if its layer is toggled off (e.g., via "All off" or manual toggle)
+  useEffect(() => {
+    if (selectedFeature) {
+      const category = selectedFeature.category || selectedFeature.categories?.[0];
+      if (category && activeLayers[category] === false) {
+        setSelectedFeature(null);
+      }
+    }
+  }, [activeLayers, selectedFeature]);
 
   useEffect(() => {
     if (!mapboxgl.supported() || !bgMapContainer.current) return;
@@ -6491,7 +6521,7 @@ function App() {
                           justifyContent: 'space-between', 
                           cursor: 'pointer', 
                           background: isActive ? theme.bg : (isMapDarkMode ? '#1a1a1a' : '#EFEFEF'),
-                          border: `1px solid ${theme.border}`,
+                          border: isActive ? `1px solid ${theme.border}` : '1px solid transparent',
                           borderRadius: '16px',
                           boxSizing: 'border-box',
                           color: theme.text,
@@ -7521,10 +7551,10 @@ function App() {
                           DATE: <span style={{ fontStyle: 'normal', fontWeight: '400' }}>
                             {selectedFeature.displayDate || (selectedFeature.date !== null && selectedFeature.date !== undefined
                               ? (selectedFeature.date < 0 
-                                ? `${Math.abs(selectedFeature.date).toLocaleString()} BC` 
+                                ? `${Math.abs(selectedFeature.date) < 10000 ? Math.abs(selectedFeature.date) : Math.abs(selectedFeature.date).toLocaleString()} BC` 
                                 : (selectedFeature.date > 2050 
-                                  ? `${selectedFeature.date.toLocaleString()} AD (Future Prophecy)` 
-                                  : `${selectedFeature.date.toLocaleString()} AD`))
+                                  ? `${selectedFeature.date < 10000 ? selectedFeature.date : selectedFeature.date.toLocaleString()} AD (Future Prophecy)` 
+                                  : `${selectedFeature.date < 10000 ? selectedFeature.date : selectedFeature.date.toLocaleString()} AD`))
                               : 'UNSPECIFIED')}
                           </span>
                         </div>

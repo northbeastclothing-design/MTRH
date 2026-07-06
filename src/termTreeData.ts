@@ -1720,9 +1720,11 @@ const chunk_0: any[] = [  {
     id: 'brahma',
     parentId: 'hindu-pantheon',
     name: 'Brahma',
-    description: 'God of creation Job/Domain: God of creation. Correlated characters: Ptah (Egyptian), Chaos (Greek).',
-    sources: ['Manusmriti', 'Brahma Purana'],
-    isApocryphal: true
+    description: 'The Hindu god of creation, completing the Trimurti along with Vishnu (the preserver) and Shiva (the destroyer). According to the Puranas, Brahma self-incarnated in a golden egg (Hiranyagarbha) or emerged from a lotus arising from Vishnu\'s navel, and created the various realms of the cosmos.',
+    isApocryphal: true,
+    relatedIds: ['hindu-pantheon', 'hinduism', 'shiva', 'vishnu'],
+    sources: ['Brahma Purana', 'Manusmriti', 'The Vedas'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Brahma%2C_dal_soffitto_del_tempio_di_huchchappaiyya_gudi%2C_aihole_%28balgakot%29%2C_karnataka%2C_VII_secolo_%28cropped%29.jpg/1280px-Brahma%2C_dal_soffitto_del_tempio_di_huchchappaiyya_gudi%2C_aihole_%28balgakot%29%2C_karnataka%2C_VII_secolo_%28cropped%29.jpg']
   },  {
     id: 'durga',
     parentId: 'hindu-pantheon',
@@ -1748,9 +1750,11 @@ const chunk_0: any[] = [  {
     id: 'krishna',
     parentId: 'hindu-pantheon',
     name: 'Krishna',
-    description: 'God of love, compassion, and protection',
-    sources: ['Mahabharata', 'Bhagavad Gita', 'Bhagavata Purana'],
-    isApocryphal: true
+    description: 'A major deity in Hinduism, worshipped as the eighth avatar of Vishnu and as a supreme god in his own right. He is the divine speaker of the Bhagavad Gita, delivering theological, philosophical, and ethical instructions to the warrior Arjuna on the battlefield of Kurukshetra.',
+    isApocryphal: true,
+    relatedIds: ['hindu-pantheon', 'hinduism', 'vedas', 'vishnu'],
+    sources: ['Bhagavad Gita', 'Bhagavata Purana', 'Mahabharata'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Krishna_Holds_Up_Mount_Govardhan_%28MET_70694%29_cropped.png/1280px-Krishna_Holds_Up_Mount_Govardhan_%28MET_70694%29_cropped.png']
   },  {
     id: 'lakshmi',
     parentId: 'hindu-pantheon',
@@ -1777,6 +1781,7 @@ const chunk_0: any[] = [  {
     parentId: 'hindu-pantheon',
     name: 'Vishnu',
     description: 'God of preservation and order Job/Domain: God of preservation and order. Correlated characters: Osiris (Egyptian), Dionysus (Greek), Mithra (Persian).',
+    relatedIds: ['brahma', 'krishna', 'vedas'],
     sources: ['Rigveda', 'Bhagavad Gita', 'Vishnu Purana'],
     isApocryphal: true
   },  {
@@ -7210,13 +7215,6 @@ const chunk_1: any[] = [  {
     bibleVerses: ['And the angels, the children of heaven, saw them and lusted after them, and said to one another: \'Come, let us choose us wives from among the children of men and beget us children.\' — 1 Enoch 6:2 (https://www.sacred-texts.com/bib/boe/boe009.htm)'],
     isApocryphal: true
   },  {
-    id: 'alchemy',
-    parentId: 'watchers',
-    name: 'Alchemy',
-    description: 'The ancient art of transmuting metals and achieving spiritual purification, historically claimed in apocryphal texts to be a forbidden celestial art taught to humans by the Watchers.',
-    relatedIds: ['watchers', 'emerald-tablets'],
-    bibleVerses: ['And Semjâzâ taught enchantments, and root-clippings, and Armârôs the resolving of enchantments, and Barâqîjâl taught astrology... — 1 Enoch 8:3 (https://www.sacred-texts.com/bib/boe/boe011.htm)']
-  },  {
     id: 'pharmakia',
     parentId: 'watchers',
     name: 'Pharmakia',
@@ -7847,13 +7845,17 @@ const chunk_1: any[] = [  {
   },  {
     id: 'archaeology-ark-of-covenant-axum',
     parentId: 'biblical-discoveries',
+    secondaryParentIds: ['israelites'],
     name: 'Ark of the Covenant Sanctuary (Axum)',
     description: 'The Chapel of the Tablet at the Church of Our Lady Mary of Zion in Axum, Ethiopia. Local tradition holds that the Ark of the Covenant was brought to Ethiopia by Menelik I, the son of King Solomon and the Queen of Sheba, and has been guarded continuously by a succession of celibate monks who never leave the sanctuary.',
-    layer: 'Biblical Discoveries',
     mapFeatureId: 'archaeology-ark-of-covenant-axum',
+    layer: 'Biblical Discoveries',
+    sources: ['Archaeological Excavation Reports', 'Ethiopian Orthodox Tradition', 'Historical Geography Database'],
     images: ['https://upload.wikimedia.org/wikipedia/commons/b/bc/ET_Axum_asv2018-01_img31_StMary_of_Zion_Church.jpg'],
-    sources: ['Archaeological Excavation Reports', 'Historical Geography Database'],
-    bibleVerses: ['And they shall make an ark of shittim wood: two cubits and a half shall be the length thereof, and a cubit and a half the breadth thereof, and a cubit and a half the height thereof. — Exodus 25:10 (https://www.biblegateway.com/passage/?search=Exodus+25%3A10)', 'And the temple of God was opened in heaven, and there was seen in his temple the ark of his testament... — Revelation 11:19 (https://www.biblegateway.com/passage/?search=Revelation+11%3A19)']
+    bibleVerses: [
+      'And the temple of God was opened in heaven, and there was seen in his temple the ark of his testament... — Revelation 11:19 (https://www.biblegateway.com/passage/?search=Revelation+11%3A19)',
+      'And they shall make an ark of shittim wood: two cubits and a half shall be the length thereof, and a cubit and a half the breadth thereof, and a cubit and a half the height thereof. — Exodus 25:10 (https://www.biblegateway.com/passage/?search=Exodus+25%3A10)'
+    ]
   },  {
     id: 'archaeology-sodom-gomorrah',
     parentId: 'biblical-discoveries',
@@ -7867,13 +7869,17 @@ const chunk_1: any[] = [  {
   },  {
     id: 'archaeology-hezekiahs-tunnel-inscription',
     parentId: 'biblical-discoveries',
-    name: 'Hezekiah\'s Tunnel Inscription',
+    secondaryParentIds: ['israelites'],
+    name: "Hezekiah's Tunnel Inscription",
     description: 'An ancient Paleo-Hebrew inscription carved into the wall of Hezekiah\'s Tunnel, celebrating the moment when two teams of stone excavators, digging from opposite ends, successfully met in the center. The tunnel was dug to secure Jerusalem\'s water supply during the Assyrian siege led by Sennacherib, confirming 2 Kings 20.',
-    layer: 'Biblical Discoveries',
     mapFeatureId: 'archaeology-hezekiahs-tunnel-inscription',
+    layer: 'Biblical Discoveries',
+    sources: ['Archaeological Excavation Reports', 'Historical Geography Database', 'Historical Records'],
     images: ['https://upload.wikimedia.org/wikipedia/commons/a/af/Siloam_Inscription_2.jpg'],
-    sources: ['Archaeological Excavation Reports', 'Historical Geography Database'],
-    bibleVerses: ['And the rest of the acts of Hezekiah, and all his might, and how he made a pool, and a conduit, and brought water into the city, are they not written in the book of the chronicles of the kings of Judah? — 2 Kings 20:20 (https://www.biblegateway.com/passage/?search=2+Kings+20%3A20)', 'This same Hezekiah also stopped the upper watercourse of Gihon, and brought it straight down to the west side of the city of David. And Hezekiah prospered in all his works. — 2 Chronicles 32:30 (https://www.biblegateway.com/passage/?search=2+Chronicles+32%3A30)']
+    bibleVerses: [
+      'And the rest of the acts of Hezekiah, and all his might, and how he made a pool, and a conduit, and brought water into the city, are they not written in the book of the chronicles of the kings of Judah? — 2 Kings 20:20 (https://www.biblegateway.com/passage/?search=2+Kings+20%3A20)',
+      'This same Hezekiah also stopped the upper watercourse of Gihon, and brought it straight down to the west side of the city of David. And Hezekiah prospered in all his works. — 2 Chronicles 32:30 (https://www.biblegateway.com/passage/?search=2+Chronicles+32%3A30)'
+    ]
   },  {
     id: 'archaeology-garden-tomb',
     parentId: 'biblical-discoveries',
@@ -7887,73 +7893,95 @@ const chunk_1: any[] = [  {
   },  {
     id: 'archaeology-dead-sea-scrolls',
     parentId: 'biblical-discoveries',
+    secondaryParentIds: ['tribe-of-judah'],
     name: 'The Dead Sea Scrolls',
     description: 'Ancient Jewish religious manuscripts found in the Qumran Caves near the Dead Sea. They include the oldest surviving manuscripts of entire books of the Hebrew Bible (excluding Esther), biblical commentaries, and sectarian texts, providing unprecedented insight into Second Temple Judaism.',
-    layer: 'Biblical Discoveries',
     mapFeatureId: 'archaeology-dead-sea-scrolls',
+    layer: 'Biblical Discoveries',
+    sources: ['Archaeological Excavation Reports', 'Historical Geography Database', 'Israel Museum, Jerusalem'],
     images: ['https://upload.wikimedia.org/wikipedia/commons/a/a6/Dead_Sea_Scrolls.jpg'],
-    sources: ['Archaeological Excavation Reports', 'Historical Geography Database'],
-    bibleVerses: ['The grass withereth, the flower fadeth: but the word of our God shall stand for ever. — Isaiah 40:8 (https://www.biblegateway.com/passage/?search=Isaiah+40%3A8)']
+    bibleVerses: [
+      'The grass withereth, the flower fadeth: but the word of our God shall stand for ever. — Isaiah 40:8 (https://www.biblegateway.com/passage/?search=Isaiah+40%3A8)'
+    ]
   },  {
     id: 'archaeology-tel-dan-stele',
     parentId: 'biblical-discoveries',
-    name: 'Tel Dan \'House of David\' Stele',
+    secondaryParentIds: ['israelites'],
+    name: "Tel Dan 'House of David' Stele",
     description: 'A fragmented basalt stele discovered in northern Israel. Written in Old Aramaic, it records victories over Israel by a king of Aram-Damascus. Crucially, the inscription contains the words \'Beit David\' (House of David), representing the first extra-biblical historical validation of King David\'s dynasty.',
-    layer: 'Biblical Discoveries',
     mapFeatureId: 'archaeology-tel-dan-stele',
+    layer: 'Biblical Discoveries',
+    sources: ['Archaeological Excavation Reports', 'Historical Geography Database', 'Israel Museum, Jerusalem'],
     images: ['https://upload.wikimedia.org/wikipedia/commons/4/40/JRSLM_300116_Tel_Dan_Stele_01.jpg'],
-    sources: ['Archaeological Excavation Reports', 'Historical Geography Database'],
-    bibleVerses: ['And he went with Joram the son of Ahab to the war against Hazael king of Syria in Ramoth-gilead; and the Syrians wounded Joram. — 2 Kings 8:28 (https://www.biblegateway.com/passage/?search=2+Kings+8%3A28)']
+    bibleVerses: [
+      'And he went with Joram the son of Ahab to the war against Hazael king of Syria in Ramoth-gilead; and the Syrians wounded Joram. — 2 Kings 8:28 (https://www.biblegateway.com/passage/?search=2+Kings+8%3A28)'
+    ]
   },  {
     id: 'archaeology-cyrus-cylinder',
     parentId: 'biblical-discoveries',
+    secondaryParentIds: ['tribe-of-judah'],
     name: 'The Cyrus Cylinder',
     description: 'An ancient clay cylinder inscribed in Akkadian cuneiform by Cyrus the Great of Persia. It describes his conquest of Babylon and his policy of repatriating displaced peoples and restoring their temples, which directly corroborates the Biblical decree in the Book of Ezra allowing the Jews to return and rebuild Jerusalem.',
-    layer: 'Biblical Discoveries',
     mapFeatureId: 'archaeology-cyrus-cylinder',
+    layer: 'Biblical Discoveries',
+    sources: ['Archaeological Excavation Reports', 'British Museum', 'Historical Geography Database'],
     images: ['https://upload.wikimedia.org/wikipedia/commons/e/e5/Cyrus_Cylinder_front.jpg'],
-    sources: ['Archaeological Excavation Reports', 'Historical Geography Database'],
-    bibleVerses: ['Thus saith Cyrus king of Persia, The Lord God of heaven hath given me all the kingdoms of the earth; and he hath charged me to build him an house at Jerusalem, which is in Judah. — Ezra 1:2 (https://www.biblegateway.com/passage/?search=Ezra+1%3A2)']
+    bibleVerses: [
+      'Thus saith Cyrus king of Persia, The Lord God of heaven hath given me all the kingdoms of the earth; and he hath charged me to build him an house at Jerusalem, which is in Judah. — Ezra 1:2 (https://www.biblegateway.com/passage/?search=Ezra+1%3A2)'
+    ]
   },  {
     id: 'archaeology-ketef-hinnom',
     parentId: 'biblical-discoveries',
+    secondaryParentIds: ['tribe-of-judah'],
     name: 'Ketef Hinnom Silver Scrolls',
     description: 'Two tiny rolled silver scrolls discovered in a tomb chamber at Ketef Hinnom. Once unrolled and deciphered using advanced imaging, they were found to contain the Priestly Blessing from Numbers 6:24-26. They are the oldest surviving fragments of a biblical text ever discovered, predating the Dead Sea Scrolls by 300+ years.',
-    layer: 'Biblical Discoveries',
     mapFeatureId: 'archaeology-ketef-hinnom',
+    layer: 'Biblical Discoveries',
+    sources: ['Archaeological Excavation Reports', 'Historical Geography Database', 'Israel Museum, Jerusalem'],
     images: ['https://upload.wikimedia.org/wikipedia/commons/7/70/KetefHinom.jpg'],
-    sources: ['Archaeological Excavation Reports', 'Historical Geography Database'],
-    bibleVerses: ['The Lord bless thee, and keep thee: The Lord make his face shine upon thee, and be gracious unto thee: The Lord lift up his countenance upon thee, and give thee peace. — Numbers 6:24-26 (https://www.biblegateway.com/passage/?search=Numbers+6%3A24-26)']
+    bibleVerses: [
+      'The Lord bless thee, and keep thee: The Lord make his face shine upon thee, and be gracious unto thee: The Lord lift up his countenance upon thee, and give thee peace. — Numbers 6:24-26 (https://www.biblegateway.com/passage/?search=Numbers+6%3A24-26)'
+    ]
   },  {
     id: 'archaeology-pilate-stone',
     parentId: 'biblical-discoveries',
+    secondaryParentIds: ['tribe-of-judah'],
     name: 'The Pilate Stone',
     description: 'A damaged block of carved limestone found at Caesarea Maritima. The latin inscription clearly mentions \'Pontius Pilatus, Prefect of Judaea,\' who dedicated a building in honor of Emperor Tiberius. It is the first physical archaeological artifact confirming the existence and title of Pontius Pilate.',
-    layer: 'Biblical Discoveries',
     mapFeatureId: 'archaeology-pilate-stone',
+    layer: 'Biblical Discoveries',
+    sources: ['Archaeological Excavation Reports', 'Historical Geography Database', 'Israel Museum, Jerusalem'],
     images: ['https://upload.wikimedia.org/wikipedia/commons/e/e1/Pilate_Inscription.JPG'],
-    sources: ['Archaeological Excavation Reports', 'Historical Geography Database'],
-    bibleVerses: ['And when they had bound him, they led him away, and delivered him to Pontius Pilate the governor. — Matthew 27:2 (https://www.biblegateway.com/passage/?search=Matthew+27%3A2)']
+    bibleVerses: [
+      'And when they had bound him, they led him away, and delivered him to Pontius Pilate the governor. — Matthew 27:2 (https://www.biblegateway.com/passage/?search=Matthew+27%3A2)'
+    ]
   },  {
     id: 'archaeology-pool-of-siloam',
     parentId: 'biblical-discoveries',
+    secondaryParentIds: ['tribe-of-judah'],
     name: 'The Pool of Siloam',
     description: 'A rock-cut pool on the southern slope of the City of David, fed by the Gihon Spring. Initially built by King Hezekiah in the 8th century BC to secure the city\'s water supply, it was later expanded in the Second Temple era. It is famously referenced in the Gospel of John as the location where Jesus healed a blind man.',
-    layer: 'Biblical Discoveries',
     mapFeatureId: 'archaeology-pool-of-siloam',
+    layer: 'Biblical Discoveries',
+    sources: ['Archaeological Excavation Reports', 'City of David Archaeological Site', 'Historical Geography Database'],
     images: ['https://upload.wikimedia.org/wikipedia/commons/8/80/City_of_David_-_Pool_of_Siloam_IMG_5931.JPG'],
-    sources: ['Archaeological Excavation Reports', 'Historical Geography Database'],
-    bibleVerses: ['And said unto him, Go, wash in the pool of Siloam, (which is by interpretation, Sent.) He went his way therefore, and washed, and came seeing. — John 9:7 (https://www.biblegateway.com/passage/?search=John+9%3A7)', 'But the gate of the fountain repaired Shallun... and the wall of the pool of Siloah by the king\'s garden, and unto the stairs that go down from the city of David. — Nehemiah 3:15 (https://www.biblegateway.com/passage/?search=Nehemiah+3%3A15)']
+    bibleVerses: [
+      'And said unto him, Go, wash in the pool of Siloam, (which is by interpretation, Sent.) He went his way therefore, and washed, and came seeing. — John 9:7 (https://www.biblegateway.com/passage/?search=John+9%3A7)',
+      'But the gate of the fountain repaired Shallun... and the wall of the pool of Siloah by the king\'s garden, and unto the stairs that go down from the city of David. — Nehemiah 3:15 (https://www.biblegateway.com/passage/?search=Nehemiah+3%3A15)'
+    ]
   },  {
     id: 'archaeology-mesha-stele',
     parentId: 'biblical-discoveries',
+    secondaryParentIds: ['israelites'],
     name: 'The Mesha Stele (Moabite Stone)',
     description: 'A basalt monument erected by King Mesha of Moab. The Moabite inscription describes how Moab was oppressed by Omri, King of Israel, and how Mesha threw off Israelite rule. It contains direct references to Israel, the House of David, and Yahweh, corroborating and supplementing accounts in 2 Kings 3.',
-    layer: 'Biblical Discoveries',
     mapFeatureId: 'archaeology-mesha-stele',
+    layer: 'Biblical Discoveries',
+    sources: ['Archaeological Excavation Reports', 'Historical Geography Database', 'Louvre Museum, Paris'],
     images: ['https://upload.wikimedia.org/wikipedia/commons/7/7b/P1120870_Louvre_st%C3%A8le_de_M%C3%A9sha_AO5066_rwk.JPG'],
-    sources: ['Archaeological Excavation Reports', 'Historical Geography Database'],
-    bibleVerses: ['And Mesha king of Moab was a sheepmaster, and rendered unto the king of Israel an hundred thousand lambs, and an hundred thousand rams, with the wool. But it came to pass, when Ahab was dead, that the king of Moab rebelled against the king of Israel. — 2 Kings 3:4-5 (https://www.biblegateway.com/passage/?search=2+Kings+3%3A4-5)']
+    bibleVerses: [
+      'And Mesha king of Moab was a sheepmaster, and rendered unto the king of Israel an hundred thousand lambs, and an hundred thousand rams, with the wool. But it came to pass, when Ahab was dead, that the king of Moab rebelled against the king of Israel. — 2 Kings 3:4-5 (https://www.biblegateway.com/passage/?search=2+Kings+3%3A4-5)'
+    ]
   },  {
     id: 'archaeology-house-of-peter',
     parentId: 'biblical-discoveries',
@@ -15644,6 +15672,94 @@ const chunk_4: any[] = [  {
     relatedIds: ['cryptids-hauntings'],
     sources: ['Regional Folklore & Paranormal Archives', 'Society for Psychical Research']
   },  {
+    id: 'portals-stargates',
+    parentId: 'supernatural-anomalies',
+    name: 'Portals / Stargates',
+    description: 'Purported or speculative stargates, wormholes, and interdimensional gateways documented in ancient lore, modern whistleblower accounts, and anomalous zones.',
+    relatedIds: ['underworld', 'mt-shasta', 'sedona', 'megaliths-structures'],
+    layer: 'Portals / Stargates'
+  },  {
+    id: 'anomaly-Portals---Stargates-0',
+    parentId: 'portals-stargates',
+    name: 'Aramu Muru (Gate of the Gods)',
+    description: 'A mysterious door-like structure carved into solid red rock near Lake Titicaca, Peru. Local legends describe it as a gateway through which gods passed to enter our world, and alternative theorists claim it is an ancient stargate that can be activated by sacred sound frequencies.',
+    layer: 'Portals / Stargates',
+    mapFeatureId: 'anomaly-Portals---Stargates-0',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/0/02/Doorway-lg.jpg'],
+    sources: ['Wikipedia', 'Esoteric & Paranormal Records']
+  },  {
+    id: 'anomaly-Portals---Stargates-1',
+    parentId: 'portals-stargates',
+    name: 'Abu Ghurab Altar',
+    description: 'An ancient Egyptian sun temple site featuring a massive, circular alabaster altar basin. Esoteric researchers suggest the site was designed to harness acoustic harmonic resonance, functioning as a star portal to connect with extraterrestrial cosmic forces.',
+    layer: 'Portals / Stargates',
+    mapFeatureId: 'anomaly-Portals---Stargates-1',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/e/e0/Altar_Sun_Temple_Niuserre.JPG'],
+    sources: ['Wikipedia', 'Esoteric & Paranormal Records']
+  },  {
+    id: 'anomaly-Portals---Stargates-2',
+    parentId: 'portals-stargates',
+    name: 'Abydos Osireion Portal',
+    description: 'Located behind the Temple of Seti I in Egypt, this megalithic subterranean structure contains massive granite pillars. Speculative accounts associate the site with hidden dimensional portal technology and ancient stargate gateways.',
+    layer: 'Portals / Stargates',
+    mapFeatureId: 'anomaly-Portals---Stargates-2',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Osireion_01.JPG/1280px-Osireion_01.JPG'],
+    sources: ['Wikipedia', 'Esoteric & Paranormal Records']
+  },  {
+    id: 'anomaly-Portals---Stargates-3',
+    parentId: 'portals-stargates',
+    name: "Devil's Gate Dam Gateway",
+    description: "A rock formation in Pasadena, California, resembling a devil's profile. In the late 1930s, occultist Jack Parsons and L. Ron Hubbard allegedly performed Enochian babalon working rituals here to open a physical portal between dimensions.",
+    layer: 'Portals / Stargates',
+    mapFeatureId: 'anomaly-Portals---Stargates-3',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/0/05/Devil%27s_gate.jpg'],
+    sources: ['Wikipedia', 'Esoteric & Paranormal Records']
+  },  {
+    id: 'anomaly-Portals---Stargates-4',
+    parentId: 'portals-stargates',
+    name: 'Sedona Vortexes (Bell Rock)',
+    description: 'A famous red rock formation in Arizona believed to contain a powerful electromagnetic energy vortex. Alternative practitioners and portal researchers report anomalous activity, light manifestations, and dimensional warping at the site.',
+    layer: 'Portals / Stargates',
+    mapFeatureId: 'anomaly-Portals---Stargates-4',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Sedona_Arizona-27527-6.jpg/1280px-Sedona_Arizona-27527-6.jpg'],
+    sources: ['Wikipedia', 'Esoteric & Paranormal Records']
+  },  {
+    id: 'anomaly-Portals---Stargates-5',
+    parentId: 'portals-stargates',
+    name: 'Gate of the Sun (Tiwanaku)',
+    description: "A massive megalithic stone archway carved from a single block of diorite at Tiwanaku, Bolivia. The intricate carvings of the 'Weeping God' and surrounding calendar symbols lead alternative researchers to claim it represents a dormant interdimensional gateway.",
+    layer: 'Portals / Stargates',
+    mapFeatureId: 'anomaly-Portals---Stargates-5',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Zonnepoort_tiwanaku.jpg/1280px-Zonnepoort_tiwanaku.jpg'],
+    sources: ['Wikipedia', 'Esoteric & Paranormal Records']
+  },  {
+    id: 'anomaly-Portals---Stargates-6',
+    parentId: 'portals-stargates',
+    name: 'Superstition Mountains Portal',
+    description: 'A rugged mountain range east of Phoenix, Arizona, surrounded by stories of mysterious disappearances, electromagnetic anomalies, and temporal shifts. Local legends and researchers describe it as a highly active portal zone.',
+    layer: 'Portals / Stargates',
+    mapFeatureId: 'anomaly-Portals---Stargates-6',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/2021_Superstition_Mountains_from_Lost_Dutchman_State_Park_2.jpg/1280px-2021_Superstition_Mountains_from_Lost_Dutchman_State_Park_2.jpg'],
+    sources: ['Wikipedia', 'Esoteric & Paranormal Records']
+  },  {
+    id: 'anomaly-Portals---Stargates-7',
+    parentId: 'portals-stargates',
+    name: 'Mount Shasta Portal',
+    description: 'A majestic stratovolcano in northern California considered a key planetary energy node. Lore recounts multiple interdimensional gateways, subterranean tunnels leading to Telos, and frequent encounters with anomalous light craft.',
+    layer: 'Portals / Stargates',
+    mapFeatureId: 'anomaly-Portals---Stargates-7',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/MtShasta_aerial.JPG/1280px-MtShasta_aerial.JPG'],
+    sources: ['Wikipedia', 'Esoteric & Paranormal Records']
+  },  {
+    id: 'anomaly-Portals---Stargates-8',
+    parentId: 'portals-stargates',
+    name: 'Sakwala Chakraya (Ranmasu Uyana)',
+    description: 'A complex circular petroglyph carved onto a cliff face in Anuradhapura, Sri Lanka. Alternative historians suggest the engraving is an ancient stargate map or chart detailing the navigation codes to travel between other dimensions and solar systems.',
+    layer: 'Portals / Stargates',
+    mapFeatureId: 'anomaly-Portals---Stargates-8',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Ranmasu_Uyana.jpg/1280px-Ranmasu_Uyana.jpg'],
+    sources: ['Wikipedia', 'Esoteric & Paranormal Records']
+  },  {
     id: 'underworld',
     parentId: 'supernatural-anomalies',
     name: 'Underworld Entrances',
@@ -17804,7 +17920,7 @@ const chunk_4: any[] = [  {
     parentId: 'ancient-texts',
     name: 'Epic of Gilgamesh',
     description: 'A Mesopotamian epic poem containing the Sumerian story of the Great Flood survived by Utnapishtim, bearing strong similarities to the Genesis narrative.',
-    relatedIds: ['great-flood', 'noah-fig', 'nimrod-fig']
+    relatedIds: ['great-flood', 'noah-fig', 'nimrod-fig', 'enkidu', 'enki']
   },  {
     id: 'codex-dead-sea-scrolls',
     parentId: 'ancient-texts',
@@ -17886,12 +18002,13 @@ const chunk_4: any[] = [  {
   },  {
     id: 'archaeology-rosetta-stone',
     parentId: 'archaeological-finds-br',
+    secondaryParentIds: ['egyptian-civilization'],
     name: 'The Rosetta Stone',
     description: 'The Rosetta Stone is a granodiorite stele inscribed with three versions of a decree issued in Memphis in 196 BC on behalf of King Ptolemy V. Because it presents the same text in Ancient Egyptian hieroglyphs, Demotic script, and Ancient Greek, it provided the vital key to modern translation and decipherment of Egyptian hieroglyphs.',
-    layer: 'Archaeological Finds',
     mapFeatureId: 'archaeology-rosetta-stone',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/2/23/Rosetta_Stone.JPG'],
-    sources: ['Archaeological Field Surveys', 'Historical Chronology Database']
+    layer: 'Archaeological Finds',
+    sources: ['Archaeological Field Surveys', 'British Museum / Historical Records', 'Historical Chronology Database'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/2/23/Rosetta_Stone.JPG']
   },  {
     id: 'archaeology-antikythera-mechanism',
     parentId: 'archaeological-finds-br',
@@ -17904,12 +18021,13 @@ const chunk_4: any[] = [  {
   },  {
     id: 'archaeology-tutankhamun-tomb',
     parentId: 'archaeological-finds-br',
+    secondaryParentIds: ['egyptian-civilization'],
     name: 'Tomb of Tutankhamun (KV62)',
     description: 'The virtually intact royal tomb of the 18th-dynasty Pharaoh Tutankhamun, discovered by British archaeologist Howard Carter. It contained over 5,000 pristine artifacts, including the iconic solid gold death mask, nested sarcophagi, gilded chariots, and royal treasures.',
-    layer: 'Archaeological Finds',
     mapFeatureId: 'archaeology-tutankhamun-tomb',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/2/27/CairoEgMuseumTaaMaskMostlyPhotographed.jpg'],
-    sources: ['Archaeological Field Surveys', 'Historical Chronology Database']
+    layer: 'Archaeological Finds',
+    sources: ['Archaeological Field Surveys', 'Grand Egyptian Museum / Historical Records', 'Historical Chronology Database'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/2/27/CairoEgMuseumTaaMaskMostlyPhotographed.jpg']
   },  {
     id: 'archaeology-mohenjo-daro',
     parentId: 'archaeological-finds-br',
@@ -21868,7 +21986,7 @@ const chunk_6: any[] = [
     parentId: 'biblical-apocryphal',
     name: 'Zoroastrianism',
     description: 'Ancient Persian dualistic religion founded by the prophet Zoroaster (Zarathustra), who received revelations from the creator deity Ahura Mazda recorded in the Gathas/Avesta. While traditional Zoroastrianism does not mention Jesus, alternative and historical scholars note striking parallels between his role and the Zoroastrian prophecy of the Saoshyant (a future virgin-born savior who overcomes evil).',
-    relatedIds: ['esoteric-traditions'],
+    relatedIds: ['esoteric-traditions', 'faravahar', 'gathas', 'avesta', 'zarathustra'],
     timelineId: 'zoroastrianism-origins',
     mapFeatureId: 'anomaly-Religions-Zoroastrianism',
     sources: ['Avesta', 'Gathas']
@@ -21896,12 +22014,13 @@ const chunk_6: any[] = [
   {
     id: 'rosicrucianism',
     parentId: 'biblical-apocryphal',
+    secondaryParentIds: ['magical-orders'],
     name: 'Rosicrucianism',
     description: 'Esoteric Christian movement purportedly founded by Christian Rosenkreutz in the 15th century and announced via anonymous 17th-century manifestos written by German scholars. It depicts Jesus as the ultimate exemplar of human spiritual evolution, viewing the Crucifixion and Resurrection as alchemical symbols for the transmutation of the soul.',
-    relatedIds: ['alchemy', 'freemasonry', 'francis-bacon-philosopher'],
     timelineId: 'rosicrucianism-origins',
     mapFeatureId: 'anomaly-Religions-Rosicrucianism',
-    sources: ['Fama Fraternitatis (1614)', 'Confessio Fraternitatis', 'Chymical Wedding of Christian Rosenkreutz']
+    relatedIds: ['alchemy', 'christian-rosenkreuz', 'francis-bacon-philosopher', 'freemasonry', 'magical-orders'],
+    sources: ['Chymical Wedding of Christian Rosenkreutz', 'Confessio Fraternitatis', 'Confessio Fraternitatis (1615)', 'Fama Fraternitatis (1614)']
   },
   {
     id: 'catholicism',
@@ -22824,15 +22943,15 @@ const chunk_nasa: any[] = [
   {
     id: 'wernher-von-braun',
     parentId: 'nasa-figureheads',
-    name: 'Wernher von Braun',
-    description: `German-American aerospace engineer and space architect. He pioneered the V-2 rocket in Germany, was brought to the US under Project Paperclip, and served as NASA's first Director of the Marshall Space Flight Center, designing the Saturn V moon rocket.`,
-    layer: 'NASA / Space',
+    secondaryParentIds: ['operation-paperclip'],
+    name: 'Dr. Wernher von Braun',
+    description: 'German-American aerospace engineer and space architect. He pioneered the V-2 rocket in Germany, was brought to the US under Project Paperclip, and served as NASA\'s first Director of the Marshall Space Flight Center, designing the Saturn V moon rocket.',
     timelineId: 'wernher-von-braun-event',
     mapFeatureId: 'anomaly-wernher-von-braun',
-    sources: ['MSFC Historical Office', 'Wernher von Braun: Crusader for Space'],
-    images: [
-      'https://upload.wikimedia.org/wikipedia/commons/f/ff/Wernher_von_Braun.jpg'
-    ]
+    layer: 'NASA / Space',
+    relatedIds: ['operation-paperclip', 'project-horizon'],
+    sources: ['MSFC Historical Office', 'NARA Operation Paperclip Files', 'NASA Marshall Space Flight Center History', 'Wernher von Braun: Crusader for Space'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/f/ff/Wernher_von_Braun.jpg']
   },
   {
     id: 'anomaly-Nasa-Space-Cape-Canaveral',
@@ -23520,14 +23639,13 @@ const chunk_historic_extensions: any[] = [
   {
     id: 'lam-entity',
     parentId: 'amalantrah-working',
-    name: 'Lam',
-    description: `An entity contacted by the English occultist Aleister Crowley during the Amalantrah Working rituals in New York City in 1918. Crowley drew a portrait of Lam, depicting an entity with an elongated, bulbous bald head and large eyes, which famously pre-dates modern pop-culture depictions of the "Grey alien" archetype by several decades. Typhonian occultist Kenneth Grant later identified Lam as a gateway to extraterrestrial intelligences.`,
+    secondaryParentIds: ['thelema'],
+    name: 'Lam (The Entity)',
+    description: 'An entity contacted by Aleister Crowley during the Amalantrah Working in 1918. Crowley drew a portrait of Lam, depicting a being with a bulbous head, large dark eyes, and a small mouth—bearing a striking resemblance to modern reports of "Grey" extraterrestrials. The "Cult of Lam" refers to modern esoteric groups (often associated with the Typhonian Order) that perform rituals to establish contact with this entity, viewing Lam as a trans-dimensional gateway or gateway to stellar consciousness.',
     layer: 'The Occult',
-    relatedIds: ['aleister-crowley', 'amalantrah-working'],
-    sources: ['The Equinox (Aleister Crowley)', 'Kenneth Grant\'s Outside the Circles of Time'],
-    images: [
-      'https://upload.wikimedia.org/wikipedia/commons/3/31/Supposed_channeled_entity_by_occultist_crowley.jpg'
-    ]
+    relatedIds: ['aiwass', 'aleister-crowley', 'amalantrah-working', 'typhonian-order'],
+    sources: ["Kenneth Grant's Outside the Circles of Time", 'The Equinox (Aleister Crowley)'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/3/31/Supposed_channeled_entity_by_occultist_crowley.jpg']
   },
   {
     id: 'plutarch',
@@ -23572,9 +23690,11 @@ const chunk_historic_extensions: any[] = [
   {
     id: 'freemasonry',
     parentId: 'alchemy-occult',
+    secondaryParentIds: ['magical-orders'],
     name: 'Freemasonry',
-    description: `An international fraternal organisation and secret society that arose from the guilds of stonemasons in the late 16th century. Revering the "Great Architect of the Universe," Freemasonry incorporates complex degrees, initiations, and symbols (such as the Square and Compasses and the Eye of Providence) that are heavily featured in alternative histories of geopolitical power.`,
-    layer: 'The Occult'
+    description: 'An international fraternal organisation and secret society that arose from the guilds of stonemasons in the late 16th century. Revering the "Great Architect of the Universe," Freemasonry incorporates complex degrees, initiations, and symbols (such as the Square and Compasses and the Eye of Providence) that are heavily featured in alternative histories of geopolitical power.',
+    relatedIds: ['albert-pike', 'elias-ashmole', 'knights-templar', 'magical-orders', 'rosicrucianism'],
+    sources: ['Morals and Dogma (Albert Pike)', 'The Constitutions of the Free-Masons (1723)']
   },
   {
     id: 'famous-freemasons',
@@ -24187,7 +24307,341 @@ const chunk_geoglyphs: any[] = [
   }
 ];
 
+const chunk_user_additions_2: any[] = [
+  {
+    id: 'magick',
+    parentId: 'esoteric-traditions',
+    name: 'Magick',
+    description: 'Occult term popularized by Aleister Crowley, spelled with a "k" to distinguish the performance of real magic from stage magic. It is defined as the science and art of causing change to occur in conformity with will, often utilizing ritual, ceremony, and symbol to interface with deeper dimensions of consciousness or reality.',
+    relatedIds: ['aleister-crowley', 'thelema', 'esoteric-traditions', 'ordo-templi-orientis', 'witchcraft-folk-magic'],
+    sources: ['Magick in Theory and Practice (Aleister Crowley)', 'Book 4']
+  }, {
+    id: 'great-wall-of-china',
+    parentId: 'megaliths-structures',
+    name: 'Great Wall of China',
+    description: 'A massive series of ancient fortifications and stone walls built across the historical northern borders of ancient Chinese empires, constructed primarily to protect against nomadic incursions. In alternative archaeology, esoteric geography, and grid alignment theories, the Great Wall is scrutinized as a titanic, earth-anchored energy conductor, built along major terrestrial ley lines to manipulate regional geomantic energies (Feng Shui) and control planetary etheric flows.',
+    relatedIds: ['megaliths-structures', 'ley-lines-br'],
+    mapFeatureId: 'great-wall-of-china-feature',
+    sources: ['Historical Border Fortifications of China', 'Geomantic Grid Studies'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/The_Great_Wall_of_China_at_Jinshanling-edit.jpg/1280px-The_Great_Wall_of_China_at_Jinshanling-edit.jpg']
+  }, {
+    id: 'vedas',
+    parentId: 'hinduism',
+    name: 'The Vedas',
+    description: 'The oldest and most sacred scriptures of Hinduism, composed in Sanskrit between 1500 and 500 BCE. They are divided into four collections: Rigveda, Yajurveda, Samaveda, and Atharvaveda, containing hymns, prayers, and philosophical treatises. Alternative and ancient astronaut theories often claim the Vedas describe advanced ancient technology, such as vimanas (flying crafts) and ancient nuclear warfare.',
+    relatedIds: ['hinduism', 'hindu-pantheon', 'vishnu', 'ancient-texts'],
+    sources: ['Rigveda', 'Yajurveda', 'The Upanishads'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/1500-1200_BCE_Rigveda%2C_manuscript_page_sample_i%2C_Mandala_1%2C_Hymn_1_%28Sukta_1%29%2C_Adhyaya_1%2C_lines_1.1.1_to_1.1.9%2C_Sanskrit%2C_Devanagari.jpg/1280px-1500-1200_BCE_Rigveda%2C_manuscript_page_sample_i%2C_Mandala_1%2C_Hymn_1_%28Sukta_1%29%2C_Adhyaya_1%2C_lines_1.1.1_to_1.1.9%2C_Sanskrit%2C_Devanagari.jpg']
+  }, {
+    id: 'faravahar',
+    parentId: 'zoroastrianism',
+    name: 'The Faravahar',
+    description: 'One of the most prominent symbols of Zoroastrianism, representing the Fravashi (personal guardian spirit). It depicts a winged disc with a human figure, symbolizing the soul\'s progression, divine grace (Farr), and the union of good thoughts, good words, and good deeds.',
+    relatedIds: ['zoroastrianism', 'zarathustra'],
+    sources: ['Zoroastrian Iconography Studies', 'Sacred Symbols of Ancient Persia'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Faravahar.svg/1280px-Faravahar.svg.png']
+  }, {
+    id: 'gathas',
+    parentId: 'zoroastrianism',
+    secondaryParentIds: ['ancient-texts'],
+    name: 'The Gathas',
+    description: 'A collection of 17 hymns composed by the prophet Zarathustra (Zoroaster) himself. They form the core liturgy of the Zoroastrian tradition and are preserved within the Yasna section of the Avesta, expressing the direct theological and philosophical revelations received from Ahura Mazda.',
+    relatedIds: ['zoroastrianism', 'avesta', 'zarathustra'],
+    sources: ['The Gathas of Zarathustra', 'Yasna Liturgy']
+  }, {
+    id: 'avesta',
+    parentId: 'zoroastrianism',
+    secondaryParentIds: ['ancient-texts'],
+    name: 'The Avesta',
+    description: 'The primary collection of sacred texts of Zoroastrianism, composed in the ancient Avestan language. It includes liturgies (Yasna, Visperad), prayers (Khordeh Avesta), hymns (Yashts), and laws regarding purification and cosmology (Vendidad).',
+    relatedIds: ['zoroastrianism', 'gathas', 'zarathustra'],
+    sources: ['The Avesta: Sacred Books of the East']
+  }, {
+    id: 'zarathustra',
+    parentId: 'zoroastrianism',
+    secondaryParentIds: ['philosophers-br'],
+    name: 'Zarathustra (Zoroaster)',
+    description: 'An ancient Persian spiritual founder and philosopher who established Zoroastrianism, the world\'s first major monotheistic/dualistic religion. He replaced the polytheistic Persian pantheon with the worship of Ahura Mazda (the Wise Lord) and introduced the cosmic struggle between Asha (truth) and Druj (chaos/deceit).',
+    relatedIds: ['zoroastrianism', 'gathas', 'avesta', 'faravahar'],
+    sources: ['Zoroastrian Tradition: An Introduction'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Yazd%2C_Templo_del_Fuego_%282000%29_02_%28cropped%29.jpg/1280px-Yazd%2C_Templo_del_Fuego_%282000%29_02_%28cropped%29.jpg']
+  }, {
+    id: 'gilgal-refaim',
+    parentId: 'megaliths-structures',
+    name: 'Gilgal Refaim (Wheel of Giants)',
+    description: 'An ancient megalithic monument consisting of concentric stone rings in the Golan Heights, dating back to 3000–4000 BCE. Known in Hebrew as Gilgal Refaim (Wheel of Giants) and in Arabic as Rujm el-Hiri (Stone Heap of the Wild Cat), it is associated in biblical and alternative lore with the Rephaim, an ancient race of biblical giants mentioned in the Old Testament.',
+    relatedIds: ['megaliths-structures', 'nephilim-br'],
+    mapFeatureId: 'gilgal-refaim-feature',
+    sources: ['Archaeological Surveys of the Golan Heights', 'Biblical Archaeology Review'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/127303_ghost_wheel_golan_heights_PikiWiki_Israel.jpg/1280px-127303_ghost_wheel_golan_heights_PikiWiki_Israel.jpg']
+  }, {
+    id: 'gematria',
+    parentId: 'kabbalah',
+    name: 'Gematria',
+    description: 'An esoteric system of assigning numerical values to Hebrew letters, words, and phrases, permitting the discovery of hidden mystical connections between different terms of identical value. Widely utilized in Kabbalistic literature, hermeticism, and Western occultism to decode scriptural texts.',
+    relatedIds: ['kabbalah', 'sefer-yetzirah', 'golem'],
+    sources: ['The Kabbalah Unveiled (S.L. MacGregor Mathers)', 'Gematria (Aleister Crowley)'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/8/8f/Cabalistic-Gematria.png']
+  }, {
+    id: 'akashic-records',
+    parentId: 'theosophy',
+    name: 'Akashic Records',
+    description: 'In Theosophy and New Age philosophy, a compendium of all cosmic events, thoughts, words, emotions, and intent ever to have occurred in the past, present, or future, encoded in a non-physical plane of existence (Akasha). Esotericists claim the records can be accessed through altered states of consciousness, meditation, or remote viewing.',
+    relatedIds: ['theosophy', 'remote-viewing', 'astrology-cosmology'],
+    sources: ['The Akashic Records (Edgar Cayce)', 'Isis Unveiled (H.P. Blavatsky)']
+  }, {
+    id: 'tim-taylor',
+    parentId: 'ufo-whistleblowers',
+    secondaryParentIds: ['nasa-figureheads'],
+    name: 'Tim Taylor (Tyler D.)',
+    description: 'A high-level aerospace engineer and NASA contractor featured pseudonymously as "Tyler D." in Dr. Diana Pasulka\'s book "American Cosmic." He is described as a brilliant inventor who holds numerous patents, leads clandestine space technology programs, and claims to receive operational inspiration and scientific breakthroughs through direct communication with non-human intelligences or download events at sacred anomalies (portals).',
+    relatedIds: ['nasa-agency', 'ufos', 'project-apollo'],
+    sources: ['American Cosmic (Dr. Diana Pasulka)']
+  }, {
+    id: 'church-of-set',
+    parentId: 'magical-orders',
+    name: 'Temple of Set',
+    description: 'An initiatory occult society founded in 1975 by Michael Aquino and other members of the Church of Satan who departed due to administrative and philosophical disagreements. The Temple focuses on the deity Set, viewed not as a devil but as the initiator of individual consciousness and self-deification, separating itself from LaVeyan materialist Satanism in favor of an esoteric, dualistic philosophy.',
+    relatedIds: ['michael-aquino', 'church-of-satan', 'aleister-crowley', 'thelema'],
+    sources: ['The Temple of Set (Michael A. Aquino)', 'Black Magic']
+  }, {
+    id: 'church-of-satan',
+    parentId: 'magical-orders',
+    name: 'Church of Satan',
+    description: 'An occult organization dedicated to LaVeyan Satanism, founded in San Francisco, California, on Walpurgisnacht (April 30), 1966, by Anton Szandor LaVey. Rather than worshipping a literal devil, the Church views Satan as an archetype representing individual liberty, carnality, and rational self-interest, rejecting spiritualism and christian morality in favor of a codification of human instinct.',
+    relatedIds: ['anton-lavey', 'church-of-set', 'michael-aquino'],
+    mapFeatureId: 'church-of-satan-hq',
+    sources: ['The Satanic Bible (Anton LaVey)', 'The Church of Satan (Michael A. Aquino)'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Baphosimb.svg/1280px-Baphosimb.svg.png']
+  }, {
+    id: 'anton-lavey',
+    parentId: 'historical-alchemists',
+    name: 'Anton Szandor LaVey',
+    description: 'American author, occultist, musician, and founder of the Church of Satan and the religion of LaVeyan Satanism. He authored The Satanic Bible in 1969, which synthesized occult ritualism with materialist and social Darwinist philosophy. Often spelled "Anton Leveigh" in phonetic transcriptions.',
+    relatedIds: ['church-of-satan', 'church-of-set', 'michael-aquino'],
+    sources: ['The Satanic Bible', 'The Secret Life of a Satanist (Blanche Barton)']
+  }, {
+    id: 'prima-materia',
+    parentId: 'alchemy',
+    name: 'Prima Materia',
+    description: 'In alchemy, the formless, chaotic prime matter or base substance from which all material things are created, serving as the starting point for the Magnum Opus (Great Work). Alchemists sought to purify this chaotic base substance to extract the Philosopher\'s Stone, symbolic of spiritual purification and enlightenment.',
+    relatedIds: ['alchemy', 'historical-alchemists', 'brazen-head'],
+    sources: ['The Hermetic Museum', 'Alchemical Writings of Paracelsus']
+  }, {
+    id: 'typhonian-order',
+    parentId: 'magical-orders',
+    name: 'Typhonian Order',
+    description: 'An occult organization originally founded by Kenneth Grant in 1973 as the Typhonian O.T.O., emphasizing Crowleyan Thelema combined with extraterrestrial/Lovecraftian entities (the Typhonian Tradition), stellar gnosis, and interactions with non-human intelligences. Grant asserted that Thelemic entities like Aiwass and Lam represent extraterrestrial currents affecting human evolution.',
+    relatedIds: ['aleister-crowley', 'thelema', 'aiwass', 'lam-entity', 'ordo-templi-orientis'],
+    sources: ['The Magical Revival (Kenneth Grant)', 'Outside the Circles of Time']
+  }, {
+    id: 'abuldiz',
+    parentId: 'amalantrah-working',
+    name: 'Abuldiz',
+    description: 'An intelligence or entity contacted by Aleister Crowley and Mary Desti during the "Abuldiz Working" in Switzerland and Italy between 1911 and 1912. The entity, manifesting as an old, cloaked man with a long white beard, directed Crowley to purchase a specific edition of the Equinox and travel to Naples, which ultimately led to the dictation and compilation of Crowley\'s influential "Book 4" (Liber ABA).',
+    relatedIds: ['aleister-crowley', 'amalantrah-working', 'thelema'],
+    sources: ['The Abuldiz Working (Aleister Crowley)', 'Book 4 (Liber ABA)']
+  }, {
+    id: 'amalantrah-entity',
+    parentId: 'thelema',
+    name: 'Amalantrah',
+    description: 'An entity or discarnate intelligence contacted by Aleister Crowley during the "Amalantrah Working" in New York in 1918. Appearing to Crowley and his "Scarlet Woman" Roddie Minor (manifested as the Camel), Amalantrah was described as an old wizard or king-like figure. The entity delivered cryptic magical instructions and claimed to facilitate access to non-human realms, foreshadowing modern UFO and alien contact experiences.',
+    relatedIds: ['amalantrah-working', 'aleister-crowley', 'thelema', 'lam-entity'],
+    sources: ['The Amalantrah Working Logs (Aleister Crowley)', 'Magick Without Tears']
+  }, {
+    id: 'enkidu',
+    parentId: 'myths-legends-root',
+    secondaryParentIds: ['sumerian-civilization'],
+    name: 'Enkidu',
+    description: 'In Sumerian mythology and the Epic of Gilgamesh, a wild man created by the gods from clay and water to serve as a rival and companion to the king Gilgamesh. Initially living in the wild among animals, he is civilized through association with a temple priestess. In alternative and cryptozoological lore, Enkidu is occasionally interpreted as a representation of an ancient hominid, a Neanderthal relic, or a Bigfoot-like cryptid before domestication.',
+    relatedIds: ['gilgamesh-text', 'sumerian-civilization', 'bigfoot-br'],
+    sources: ['Epic of Gilgamesh', 'Sumerian Mythology Studies']
+  }, {
+    id: 'enki',
+    parentId: 'sumerian-civilization',
+    secondaryParentIds: ['myths-legends-root'],
+    name: 'Enki',
+    description: 'The ancient Sumerian god of water, wisdom, crafts, and creation, later known as Ea in Akkadian. In Sumerian creation myths, Enki is the divine protector of humanity who saves them from the Great Deluge, advising Atrahasis to build an ark. In alternative archaeology and ancient astronaut narratives, Enki is reframed as a senior extraterrestrial scientist of the Anunnaki who cloned or genetically engineered Homo sapiens to work in ancient mines.',
+    relatedIds: ['anunnaki', 'sumerian-civilization', 'nephilim-br', 'gilgamesh-text'],
+    sources: ['Sumerian Clay Tablets', 'Atrahasis Epic', 'Enuma Elis'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/8/87/Enki%28Ea%29.jpg']
+  }, {
+    id: 'wormwood',
+    parentId: 'future-prophecy',
+    name: 'Wormwood',
+    description: 'A star or celestial body mentioned in the Book of Revelation (8:11) that falls from heaven to earth upon the blowing of the third trumpet, turning one-third of the waters bitter and causing many to die. In alternative circles, Wormwood is equated with the rogue planet Nibiru/Nemesis, cosmic impact hazards, or the Chernobyl disaster (as "Chernobyl" translates to "wormwood" or mugwort in Ukrainian).',
+    relatedIds: ['future-prophecy', 'anunnaki', 'ufo-sightings-br'],
+    sources: ['Book of Revelation (8:10-11)', 'Chernobyl Historical Accounts', 'Alternative Astronomy Texts']
+  }, {
+    id: 'michael-aquino',
+    parentId: 'historical-alchemists',
+    name: 'Michael A. Aquino',
+    description: 'An officer in the U.S. Army specializing in psychological warfare (PsyOp) and the founder of the Temple of Set in 1975. He was initially a high-ranking member of the Church of Satan under Anton LaVey, but left to establish a more esoteric philosophy focused on the self-deification of the individual and Setian metaphysics.',
+    relatedIds: ['church-of-satan', 'church-of-set', 'anton-lavey'],
+    sources: ['The Temple of Set (Michael A. Aquino)', 'Extreme Prejudice']
+  }, {
+    id: 'thomas-aquinas',
+    parentId: 'saints-root',
+    secondaryParentIds: ['philosophers-br'],
+    name: 'Thomas Aquinas',
+    description: 'An immensely influential 13th-century Catholic Dominican friar, philosopher, and Doctor of the Church, known for synthesizing Aristotelian philosophy with Christian theology in his Summa Theologiae. In esoteric and alchemical lore, Aquinas is famously associated with the legend of the Brazen Head—a prophetic bronze automaton constructed by his teacher Roger Bacon or Albertus Magnus, which Aquinas reportedly destroyed after it wouldn\'t stop talking.',
+    relatedIds: ['brazen-head', 'saints-stories', 'christianity'],
+    sources: ['Summa Theologiae', 'Medieval Legends of the Philosophers'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/St-thomas-aquinasFXD.jpg/1280px-St-thomas-aquinasFXD.jpg']
+  }, {
+    id: 'brazen-head',
+    parentId: 'alchemy',
+    name: 'The Brazen Head',
+    description: 'A legendary bronze or brass automaton attributed to medieval alchemists and scholars, including Roger Bacon, Albertus Magnus, and Thomas Aquinas. Reputedly constructed using astrological alignments and alchemical principles, the head could answer any question and speak the future. The most famous legend states that after working on the head for years, Bacon missed its brief hour of speech, and it was destroyed by Thomas Aquinas or crumbled to dust.',
+    relatedIds: ['alchemy', 'thomas-aquinas', 'prima-materia'],
+    sources: ['Famous History of Friar Bacon', 'Medieval Alchemical Folklore']
+  }, {
+    id: 'baal-deity',
+    parentId: 'myths-legends-root',
+    name: 'Baal',
+    description: 'An ancient Semitic title meaning "lord" or "owner," which became the name of the principal Canaanite storm, fertility, and agricultural deity (Baal Hadad). In the Old Testament, Baal is depicted as the chief rival of Yahweh, leading to theological struggles and depictions of human sacrifice. In demonology, Baal is transformed into Bael, a primary king of the underworld.',
+    relatedIds: ['demonology', 'myths-legends-root', 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-19'],
+    sources: ['Ugaritic Clay Tablets (Baal Cycle)', 'The Bible (Book of Kings)'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Baal_thunderbolt_Louvre_AO15775.jpg/1280px-Baal_thunderbolt_Louvre_AO15775.jpg']
+  }, {
+    id: 'sefer-yetzirah',
+    parentId: 'kabbalah',
+    secondaryParentIds: ['ancient-texts'],
+    name: 'Sefer Yetzirah',
+    description: 'The "Book of Creation," one of the earliest extant texts of Jewish mysticism. Written in Hebrew, it describes how the universe was created by God through the 32 paths of wisdom, consisting of the 10 Sephirot (divine emanations) and the 22 letters of the Hebrew alphabet. It is the primary theoretical foundation for Kabbalistic gematria and the creation of the Golem.',
+    relatedIds: ['kabbalah', 'gematria', 'golem'],
+    sources: ['Sefer Yetzirah (Translation by Aryeh Kaplan)'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/4/45/Yetzirah.png']
+  }, {
+    id: 'book-of-the-dead',
+    parentId: 'ancient-texts',
+    name: 'Book of the Dead',
+    description: 'A modern term for ancient funerary texts designed to assist a deceased person\'s journey through the underworld (Duat) or afterlife. Most famously, the Egyptian Book of the Dead (Book of Coming Forth by Day) contains magic spells, amulets, and instructions for passing trials like the Weighing of the Heart. The Tibetan Book of the Dead (Bardo Thodol) guides the consciousness through the intermediate state (Bardo) between death and rebirth.',
+    relatedIds: ['ancient-texts', 'egyptian-civilization', 'underworld'],
+    sources: ['The Egyptian Book of the Dead', 'The Bardo Thodol'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/6/63/El_pesado_del_coraz%C3%B3n_en_el_Papiro_de_Hunefer.jpg']
+  }, {
+    id: 'josephus',
+    parentId: 'philosophers-br',
+    secondaryParentIds: ['ancient-texts'],
+    name: 'Flavius Josephus',
+    description: 'A 1st-century Romano-Jewish historian and hagiographer born in Jerusalem. His major works, "The Jewish War" and "Antiquities of the Jews," provide invaluable historical documentation of Jewish history, the Roman Empire, the Herodian Dynasty, and early Christian events. In alternative history, Josephus is studied for his accounts of the massive stones of the Temple, ancient giants (Rephaim), and the lineage of the biblical patriarchs.',
+    relatedIds: ['israelites', 'christianity', 'biblical-apocryphal'],
+    sources: ['Antiquities of the Jews', 'The Jewish War'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Joseph%2C_son_of_Gorian%2C_called_Flavius_Josephus_%28cropped%29.jpg/1280px-Joseph%2C_son_of_Gorian%2C_called_Flavius_Josephus_%28cropped%29.jpg']
+  }, {
+    id: 'talmud',
+    parentId: 'judaism',
+    secondaryParentIds: ['ancient-texts'],
+    name: 'The Talmud',
+    description: 'The central text of Rabbinic Judaism and the primary source of Jewish religious law (Halakha) and theology. It consists of the Mishnah (c. 200 CE), a written compendium of Jewish oral law, and the Gemara (c. 500 CE), an elucidation and commentary on the Mishnah. In esoteric lore, the Talmud is studied for its discussions on angelology, demonology (such as Asmodeus), and mystical practices.',
+    relatedIds: ['judaism', 'kabbalah', 'golem'],
+    sources: ['Babylonian Talmud', 'Jerusalem Talmud'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Talmud-Druck_von_Daniel_Bomberg_und_Ambrosius_Froben.jpg/1280px-Talmud-Druck_von_Daniel_Bomberg_und_Ambrosius_Froben.jpg']
+  }, {
+    id: 'majestic-12',
+    parentId: 'secret-government-programs',
+    name: 'Majestic 12 (MJ-12)',
+    description: 'The code name of a purported secret committee of scientists, military leaders, and government officials formed in 1947 by executive order of U.S. President Harry S. Truman. Its alleged purpose was to facilitate the recovery, containment, and reverse-engineering of crashed extraterrestrial spacecraft and their occupants, most notably following the Roswell UFO incident.',
+    timelineId: 'majestic-12',
+    layer: 'Secret Government Programs',
+    relatedIds: ['philip-corso', 'project-blue-book', 'richard-dolan', 'roscoe-hillenkoetter', 'secret-government-programs', 'stanton-friedman', 'timothy-good', 'ufos'],
+    sources: ['FBI Vault (Conspiratorial Document Leak Archives)', 'Investigative Research Manuscripts', 'Roswell Incident Investigations', 'The MJ-12 Documents']
+  }, {
+    id: 'invisible-college',
+    parentId: 'magical-orders',
+    secondaryParentIds: ['ufology-researchers'],
+    name: 'The Invisible College',
+    description: 'Historically, a precursor group of 17th-century natural philosophers who met secretly to discuss scientific and esoteric ideas, eventually giving rise to the Royal Society of London. In modern ufology, the term was adopted by Dr. J. Allen Hynek and Dr. Jacques Vallée to describe an informal network of scientists, academics, and intelligence officials who quietly analyzed UFO sightings, crop circles, and anomalous phenomena outside official channels.',
+    relatedIds: ['ufos', 'magical-orders', 'tim-taylor'],
+    sources: ['The Invisible College (Jacques Vallée)', 'UFOs: Past, Present, and Future']
+  }, {
+    id: 'kiswah',
+    parentId: 'islam',
+    name: 'The Kiswah',
+    description: 'The holy black silk drape embroidered with gold Quranic calligraphy that covers the Kaaba in Mecca, Saudi Arabia. It is replaced annually during the Hajj pilgrimage. In esoteric symbolism, the Kiswah represents the veil separating the physical world from the divine presence, holding deep significance in Sufi and mystical Islamic traditions.',
+    relatedIds: ['islam', 'kabah', 'black-cube-symbol'],
+    sources: ['Islamic Architectural History', 'Sufi Symbology']
+  }, {
+    id: 'tesseract',
+    parentId: 'astrology-cosmology',
+    secondaryParentIds: ['esoteric-traditions'],
+    name: 'Tesseract',
+    description: 'A 4D hypercube, representing the four-dimensional analogue of a cube. In sacred geometry, mysticism, and alternative physics, the tesseract is studied as a model for higher-dimensional space, portal construction, and the structure of the cosmos. Some theories relate it to the three-dimensional Kaaba, viewing the Black Cube as a collapsed or unfolded representation of a higher-dimensional tesseract.',
+    relatedIds: ['black-cube-symbol', 'kabah', 'astrology-cosmology'],
+    sources: ['Sacred Geometry (Robert Lawlor)', 'Flatland (Edwin A. Abbott)'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/5/55/8-cell-simple.gif']
+  }, {
+    id: 'kabah',
+    parentId: 'islam',
+    name: 'The Kaaba',
+    description: 'A building at the center of Islam\'s most important mosque, Al-Masjid al-Haram, in Mecca, Saudi Arabia. It is the most sacred site in Islam, toward which Muslims around the world face during prayer. In esoteric, historical, and alternative archaeology, the Kaaba is examined as an ancient planetary energy node (ley line intersection), a symbolic black cube representing space-time limits, and the resting place of the Black Stone—purported to be a meteoric relic.',
+    relatedIds: ['islam', 'kiswah', 'black-cube-symbol', 'tesseract'],
+    mapFeatureId: 'anomaly-Religions-Islam',
+    sources: ['Islamic Heritage Studies', 'Mecca: A Literary History'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/The_Ka%27ba%2C_Great_Mosque_of_Mecca%2C_Saudi_Arabia_%284%29.jpg/1280px-The_Ka%27ba%2C_Great_Mosque_of_Mecca%2C_Saudi_Arabia_%284%29.jpg']
+  }, {
+    id: 'black-cube-symbol',
+    parentId: 'esoteric-traditions',
+    name: 'The Black Cube',
+    description: 'An ancient and cross-cultural esoteric symbol representing Saturn, the material world, time (Chronos), boundaries, and physical reality. In occultism and conspiracy research, the Black Cube is tracked across various global traditions—including the Kaaba in Mecca, the Jewish Tefillin, and corporate or governmental monuments—as a representation of space-time containment, limitations, or matrix control.',
+    relatedIds: ['esoteric-traditions', 'kabah', 'kiswah', 'tesseract'],
+    sources: ['Saturnian Occult Studies', 'Symbols of the Occult']
+  }, {
+    id: 'muslim-practitioner',
+    parentId: 'islam',
+    name: 'Muslim',
+    description: 'A practitioner of Islam, meaning "one who submits to God." In the broader esoteric and historical scope of the codex, Muslims are tracked through history as preservers of ancient Hermetic, alchemical, and Greek scientific texts during the Islamic Golden Age, contributing significantly to Sufi mysticism, mathematical sacred geometry, and western esotericism.',
+    relatedIds: ['islam', 'islam-sunni', 'islam-shia', 'islam-sufism'],
+    sources: ['History of Islamic Philosophy', 'The Sufi Path of Love']
+  }, {
+    id: 'holy-spirit',
+    parentId: 'christianity',
+    name: 'Holy Spirit',
+    description: 'In mainstream Christian theology, the third person of the Trinity, representing the active presence of God in the world. In Gnostic and esoteric traditions, the Holy Spirit is often identified with the feminine Aeon Sophia, or the active spiritual energy (Ruach HaKodesh in Hebrew, Shekhinah) that illuminates the human soul, leading to gnosis and divine union.',
+    relatedIds: ['christianity', 'sophia-gnostic', 'soul-essence'],
+    sources: ['Christian Mysticism', 'The Gnostic Gospels'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Rom%2C_Vatikan%2C_Basilika_St._Peter%2C_Die_Taube_des_Heiligen_Geistes_%28Cathedra_Petri%2C_Bernini%29.jpg/1280px-Rom%2C_Vatikan%2C_Basilika_St._Peter%2C_Die_Taube_des_Heiligen_Geistes_%28Cathedra_Petri%2C_Bernini%29.jpg']
+  }, {
+    id: 'soul-essence',
+    parentId: 'esoteric-traditions',
+    name: 'The Soul',
+    description: 'The incorporeal essence of a living being, believed to contain individual consciousness, memory, and spiritual life. Across world religions, alchemy, and occult philosophies, the soul (referred to as Nephesh/Neshamah in Hebrew, Psyche in Greek, or Atman in Sanskrit) is viewed as an immortal spark that descends into the material plane, undergoes karmic cycles, and seeks ascension or reunification with the divine source.',
+    relatedIds: ['esoteric-traditions', 'akashic-records', 'holy-spirit', 'alchemy'],
+    sources: ['Phaedo (Plato)', 'The Upanishads', 'Tome of the Soul (Paracelsus)']
+  }, {
+    id: 'aiwass',
+    parentId: 'thelema',
+    name: 'Aiwass (Aiwaz)',
+    description: 'The voice or discarnate entity that Aleister Crowley claimed dictated "The Book of the Law" (Liber AL vel Legis) to him in Cairo, Egypt, over three days in April 1904. Crowley described Aiwass as an intelligence of superhuman power and knowledge, identifying him as his own Holy Guardian Angel and a messenger of the god Hoor-paar-kraat. In Typhonian and alternative ufology circles, Aiwass is often compared to a non-human intelligence or extraterrestrial visitor, sharing qualities with the Grey alien Lam.',
+    relatedIds: ['aleister-crowley', 'thelema', 'lam-entity', 'typhonian-order'],
+    sources: ['The Book of the Law (Aleister Crowley)', 'The Confessions of Aleister Crowley']
+  }, {
+    id: 'remote-viewing',
+    parentId: 'secret-government-programs',
+    name: 'Remote Viewing',
+    description: 'A mental faculty where an individual claims to perceive details about a distant or unseen target using extrasensory perception. Under projects like the Stargate Project (1978–1995), the CIA and U.S. Army sponsored scientific research into remote viewing at the Stanford Research Institute (SRI). Prominent remote viewers like Ingo Swann and Joseph McMoneagle claimed to have successfully scanned remote Soviet military bases, underground facilities, and even extraterrestrial installations on the Moon and Mars.',
+    relatedIds: ['secret-government-programs', 'project-mkultra', 'akashic-records'],
+    sources: ['Stargate Project Archives (CIA)', 'Penetration (Ingo Swann)']
+  }, {
+    id: 'moonchild-concept',
+    parentId: 'thelema',
+    name: 'Moonchild',
+    description: 'A novel written by Aleister Crowley in 1917, detailing a magical war between two orders of magicians. More broadly, the term refers to an advanced magical operation designed to incarnate a non-physical spirit or intelligence into a human child at conception, bypassed through intense ceremonial sex magic. This concept served as the principal inspiration for Jack Parsons and L. Ron Hubbard\'s Babalon Working in 1946.',
+    relatedIds: ['aleister-crowley', 'thelema', 'jack-parsons', 'babalon-working'],
+    sources: ['Moonchild (Aleister Crowley)', 'The Babalon Working (Jack Parsons)']
+  }, {
+    id: 'babalon-working',
+    parentId: 'thelema',
+    name: 'Babalon Working',
+    description: 'A series of sex magic rituals performed by rocket scientist Jack Parsons and Scientology founder L. Ron Hubbard in 1946. Inspired by Aleister Crowley\'s writings and the Book of Enoch, their goal was to manifest an incarnation of the divine feminine archetype Babalon on Earth, initiating a new aeon of individual liberty.',
+    relatedIds: ['jack-parsons', 'l-ron-hubbard', 'aleister-crowley', 'thelema', 'moonchild-concept'],
+    sources: ['The Book of Babalon (Jack Parsons)', 'Sex and Rocketry (John Carter)']
+  }
+];
+
 export const TERM_TREE_DATA: TermNode[] = [
+  ...chunk_user_additions_2,
   ...chunk_geoglyphs,
   ...chunk_historic_extensions,
   ...chunk_saints,
@@ -24339,22 +24793,6 @@ export const TERM_TREE_DATA: TermNode[] = [
     relatedIds: ['megaliths-structures', 'emerald-tablet', 'hermeticism'],
     sources: ['Ancient Egyptian Records', 'Hermetic Literature']
   },  {
-    id: 'archaeology-tutankhamun-tomb',
-    parentId: 'egyptian-civilization',
-    name: 'Tomb of Tutankhamun (KV62)',
-    description: 'The virtually intact royal tomb of the 18th-dynasty Pharaoh Tutankhamun, containing over 5,000 pristine artifacts.',
-    layer: 'Archaeological Finds',
-    mapFeatureId: 'archaeology-tutankhamun-tomb',
-    sources: ['Grand Egyptian Museum / Historical Records']
-  },  {
-    id: 'archaeology-rosetta-stone',
-    parentId: 'egyptian-civilization',
-    name: 'The Rosetta Stone',
-    description: 'A granodiorite stele inscribed with three versions of a decree, providing the key to modern translation of Egyptian hieroglyphs.',
-    layer: 'Archaeological Finds',
-    mapFeatureId: 'archaeology-rosetta-stone',
-    sources: ['British Museum / Historical Records']
-  },  {
     id: 'israelites',
     parentId: 'people-groups',
     name: 'Kingdom of Israel',
@@ -24365,38 +24803,6 @@ export const TERM_TREE_DATA: TermNode[] = [
     relatedIds: ['biblical-apocryphal', 'reign-david', 'reign-solomon-temple'],
     sources: ['Bible', 'Ancient Near East Chronology']
   },  {
-    id: 'archaeology-hezekiahs-tunnel-inscription',
-    parentId: 'israelites',
-    name: "Hezekiah's Tunnel Inscription",
-    description: 'An ancient Hebrew inscription documenting the excavation of the water tunnel built under King Hezekiah.',
-    layer: 'Biblical Discoveries',
-    mapFeatureId: 'archaeology-hezekiahs-tunnel-inscription',
-    sources: ['Historical Records']
-  },  {
-    id: 'archaeology-ark-of-covenant-axum',
-    parentId: 'israelites',
-    name: 'Ark of the Covenant (Axum Claims)',
-    description: 'The sacred vessel constructed by the Israelites to hold the tablets of the Ten Commandments, claimed to reside in Axum, Ethiopia.',
-    layer: 'Biblical Discoveries',
-    mapFeatureId: 'archaeology-ark-of-covenant-axum',
-    sources: ['Ethiopian Orthodox Tradition']
-  },  {
-    id: 'archaeology-tel-dan-stele',
-    parentId: 'israelites',
-    name: "Tel Dan 'House of David' Stele",
-    description: 'A basalt victory monument recording victories over Israel, containing the first extra-biblical reference to the House of David.',
-    layer: 'Biblical Discoveries',
-    mapFeatureId: 'archaeology-tel-dan-stele',
-    sources: ['Israel Museum, Jerusalem']
-  },  {
-    id: 'archaeology-mesha-stele',
-    parentId: 'israelites',
-    name: 'The Mesha Stele (Moabite Stone)',
-    description: 'A monument recording Moabite King Mesha\'s rebellion against Israelite rule, mentioning Israel and Yahweh.',
-    layer: 'Biblical Discoveries',
-    mapFeatureId: 'archaeology-mesha-stele',
-    sources: ['Louvre Museum, Paris']
-  },  {
     id: 'tribe-of-judah',
     parentId: 'people-groups',
     name: 'Tribe of Judah',
@@ -24406,46 +24812,6 @@ export const TERM_TREE_DATA: TermNode[] = [
     mapFeatureId: 'archaeology-pool-of-siloam',
     relatedIds: ['israelites', 'royal-bloodlines', 'judah'],
     sources: ['Bible', 'Jewish Historical Annals']
-  },  {
-    id: 'archaeology-pool-of-siloam',
-    parentId: 'tribe-of-judah',
-    name: 'The Pool of Siloam',
-    description: 'A rock-cut reservoir in Jerusalem associated with water supply securement and the healing of the blind man in the Gospel of John.',
-    layer: 'Biblical Discoveries',
-    mapFeatureId: 'archaeology-pool-of-siloam',
-    sources: ['City of David Archaeological Site']
-  },  {
-    id: 'archaeology-ketef-hinnom',
-    parentId: 'tribe-of-judah',
-    name: 'Ketef Hinnom Silver Scrolls',
-    description: 'Two tiny rolled silver scrolls containing the Priestly Blessing, representing the oldest surviving fragments of a biblical text.',
-    layer: 'Biblical Discoveries',
-    mapFeatureId: 'archaeology-ketef-hinnom',
-    sources: ['Israel Museum, Jerusalem']
-  },  {
-    id: 'archaeology-dead-sea-scrolls',
-    parentId: 'tribe-of-judah',
-    name: 'The Dead Sea Scrolls',
-    description: 'Ancient Jewish religious manuscripts discovered in the Qumran caves, including the oldest surviving biblical texts.',
-    layer: 'Biblical Discoveries',
-    mapFeatureId: 'archaeology-dead-sea-scrolls',
-    sources: ['Israel Museum, Jerusalem']
-  },  {
-    id: 'archaeology-cyrus-cylinder',
-    parentId: 'tribe-of-judah',
-    name: 'The Cyrus Cylinder',
-    description: 'An ancient clay cylinder recording Persian King Cyrus\'s decree repatriating Jews to rebuild Jerusalem.',
-    layer: 'Biblical Discoveries',
-    mapFeatureId: 'archaeology-cyrus-cylinder',
-    sources: ['British Museum']
-  },  {
-    id: 'archaeology-pilate-stone',
-    parentId: 'tribe-of-judah',
-    name: 'The Pilate Stone',
-    description: 'A limestone block bearing an inscription mentioning Pontius Pilate, Prefect of Judaea.',
-    layer: 'Biblical Discoveries',
-    mapFeatureId: 'archaeology-pilate-stone',
-    sources: ['Israel Museum, Jerusalem']
   },  {
     id: 'sumerian-civilization',
     parentId: 'people-groups',
@@ -24579,15 +24945,6 @@ export const TERM_TREE_DATA: TermNode[] = [
       'https://archive.org/download/yt_JHeZjJgO9Ns/JHeZjJgO9Ns.ia.mp4'
     ],
     sources: ['U.S. Air Force Project Blue Book Archives', 'National Archives (NARA)']
-  },  {
-    id: 'majestic-12',
-    parentId: 'secret-government-programs',
-    name: 'Majestic 12 (MJ-12)',
-    description: 'A conspiracy theory regarding a secret committee of scientists, military leaders, and government officials formed in 1947 by President Harry S. Truman to facilitate recovery and investigation of alien spacecraft.',
-    layer: 'Secret Government Programs',
-    timelineId: 'majestic-12',
-    relatedIds: ['roscoe-hillenkoetter', 'stanton-friedman', 'philip-corso', 'richard-dolan', 'timothy-good'],
-    sources: ['FBI Vault (Conspiratorial Document Leak Archives)', 'Investigative Research Manuscripts']
   },  {
     id: 'project-deep-freeze',
     parentId: 'secret-government-programs',
@@ -24919,13 +25276,6 @@ export const TERM_TREE_DATA: TermNode[] = [
     relatedIds: ['project-mkultra'],
     sources: ['Trance Formation of America (1995)']
   },  {
-    id: 'wernher-von-braun',
-    parentId: 'operation-paperclip',
-    name: 'Dr. Wernher von Braun',
-    description: 'German rocket engineer who pioneered the V-2 combat rocket. Recruited to the U.S. under Operation Paperclip, he became the architect of the Saturn V rocket and director of NASA\'s Marshall Space Flight Center.',
-    relatedIds: ['operation-paperclip', 'project-horizon'],
-    sources: ['NARA Operation Paperclip Files', 'NASA Marshall Space Flight Center History']
-  },  {
     id: 'hubertus-strughold',
     parentId: 'operation-paperclip',
     name: 'Hubertus Strughold',
@@ -24988,10 +25338,12 @@ export const TERM_TREE_DATA: TermNode[] = [
   },  {
     id: 'alchemy',
     parentId: 'esoteric-traditions',
+    secondaryParentIds: ['watchers'],
     name: 'Alchemy',
-    description: 'The ancient art and science of transmuting matter, particularly base metals into gold, and achieving spiritual purification and immortality (the Great Work).',
-    relatedIds: ['hermeticism', 'emerald-tablet', 'isaac-newton', 'nicolas-flamel', 'paracelsus', 'elias-ashmole', 'john-dee'],
-    sources: ['The Mirror of Alchymy', 'Alchemical Archives']
+    description: 'The ancient art and science of transmuting matter, particularly base metals into gold, and achieving spiritual purification and immortality (the Great Work). Apocryphal texts claim it was a forbidden celestial art taught to humanity by the Watchers.',
+    relatedIds: ['hermeticism', 'emerald-tablet', 'isaac-newton', 'nicolas-flamel', 'paracelsus', 'elias-ashmole', 'john-dee', 'watchers'],
+    sources: ['The Mirror of Alchymy', 'Alchemical Archives', 'Book of Enoch'],
+    bibleVerses: ['And Semjâzâ taught enchantments, and root-clippings, and Armârôs the resolving of enchantments, and Barâqîjâl taught astrology... — 1 Enoch 8:3 (https://www.sacred-texts.com/bib/boe/boe011.htm)']
   },  {
     id: 'philosophers-stone',
     parentId: 'alchemy',
@@ -25025,8 +25377,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     id: 'kabbalah',
     parentId: 'esoteric-traditions',
     name: 'Kabbalah',
-    description: 'An esoteric method, discipline, and school of thought in Jewish mysticism, later adapted by Western occultists to form Christian and Hermetic Kabbalah.',
-    relatedIds: ['esoteric-traditions', 'hermetic-order-golden-dawn'],
+    description: 'An esoteric method, discipline, and school of thought in Jewish mysticism (also spelled Kabalah or Qabalah), later adapted by Western occultists to form Christian and Hermetic Kabbalah.',
+    relatedIds: ['esoteric-traditions', 'hermetic-order-golden-dawn', 'sefer-yetzirah', 'gematria'],
     sources: ['The Zohar', 'Sefer Yetzirah']
   },  {
     id: 'golem',
@@ -25096,20 +25448,6 @@ export const TERM_TREE_DATA: TermNode[] = [
     mapFeatureId: 'knights-hospitaller-founded',
     relatedIds: ['magical-orders', 'knights-templar', 'blessed-gerard'],
     sources: ['The Knights Hospitaller (H. J. A. Sire)', 'Occult history archives']
-  },  {
-    id: 'rosicrucianism',
-    parentId: 'magical-orders',
-    name: 'Rosicrucianism',
-    description: 'An esoteric cultural movement claiming to possess secret wisdom passed down from antiquity, announced in the early 17th century by anonymous manifestos.',
-    relatedIds: ['magical-orders', 'freemasonry', 'christian-rosenkreuz'],
-    sources: ['Fama Fraternitatis (1614)', 'Confessio Fraternitatis (1615)']
-  },  {
-    id: 'freemasonry',
-    parentId: 'magical-orders',
-    name: 'Freemasonry',
-    description: 'A fraternal organisation rich in geometry, architectural symbols, and moral allegories, often linked in occult lore to the Knights Templar and Solomon\'s Temple.',
-    relatedIds: ['magical-orders', 'rosicrucianism', 'knights-templar', 'elias-ashmole', 'albert-pike'],
-    sources: ['The Constitutions of the Free-Masons (1723)', 'Morals and Dogma (Albert Pike)']
   },  {
     id: 'illuminati',
     parentId: 'magical-orders',
@@ -25199,14 +25537,14 @@ export const TERM_TREE_DATA: TermNode[] = [
     secondaryParentIds: ['freemasonry'],
     name: 'Elias Ashmole',
     description: 'English antiquarian, politician, and student of alchemy. He was one of the earliest speculative Freemasons recorded (initiated in 1646) and possessed a massive library of alchemical and Hermetic manuscripts.',
-    relatedIds: ['freemasonry', 'alchemy'],
+    relatedIds: ['freemasonry', 'alchemy', 'theatrum-chemicum-britannicum'],
     sources: ['The Diary and Will of Elias Ashmole', 'Ashmolean Library Archives']
   },  {
     id: 'paracelsus',
     parentId: 'historical-alchemists',
     name: 'Paracelsus',
     description: 'Swiss physician, alchemist, and occultist who pioneered iatrochemistry (using chemistry in medicine) and wrote extensively on elementals and hermetic philosophy.',
-    relatedIds: ['alchemy', 'historical-alchemists'],
+    relatedIds: ['alchemy', 'historical-alchemists', 'homunculus', 'tria-prima'],
     sources: ['Archidoxes of Alchemy', 'Paracelsus: Essential Readings']
   },  {
     id: 'isaac-newton',
@@ -25274,7 +25612,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'English occultist, ceremonial magician, and founder of Thelema. He established the Abbey of Thelema and famously purchased Boleskine House to perform the Abramelin ritual.',
     timelineId: 'aleister-crowley',
     mapFeatureId: 'aleister-crowley',
-    relatedIds: ['ordo-templi-orientis', 'hermetic-order-golden-dawn', 'jack-parsons', 'abbey-of-thelema', 'thelema', 'macgregor-mathers', 'theodor-reuss'],
+    relatedIds: ['ordo-templi-orientis', 'hermetic-order-golden-dawn', 'jack-parsons', 'abbey-of-thelema', 'thelema', 'macgregor-mathers', 'theodor-reuss', 'magick', 'abuldiz', 'amalantrah-entity', 'lam-entity', 'moonchild-concept'],
     images: ['https://upload.wikimedia.org/wikipedia/commons/4/40/Aleister_Crowley%2C_thinker.jpg'],
     sources: ['The Book of the Law', 'Magick in Theory and Practice', 'Boleskine House Archives']
   },  {
@@ -25326,5 +25664,775 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Cattle Mutilations'
   },
   ...chunk_6,
+  {
+    id: 'rel-figure-jesus',
+    parentId: 'christianity',
+    name: 'Jesus of Nazareth',
+    description: 'Central figure of Christianity, revered as the Son of God and the Messiah. In esoteric lore, his lost years are associated with secret travels to India, Tibet, and Egypt, and his teachings are seen as an initiation into the divine spark within.',
+    timelineId: 'rel-figure-jesus',
+    mapFeatureId: 'rel-figure-jesus',
+    sources: ['Canonical Gospels / Apocrypha'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/3/3b/Spas_vsederzhitel_sinay_%28cropped1%29.jpg"]
+  },
+  {
+    id: 'rel-figure-saint-paul',
+    parentId: 'christianity',
+    name: 'Saint Paul the Apostle',
+    description: 'One of the most influential leaders in early Christianity, whose epistles shaped Christian theology. Occultists and alternative historians often study his mystical vision on the Road to Damascus as a high-spiritual initiation event.',
+    timelineId: 'rel-figure-saint-paul',
+    mapFeatureId: 'rel-figure-saint-paul',
+    sources: ['Acts of the Apostles / Pauline Epistles'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/4/4a/Fresco_of_Saint_Paul_at_Ephesus.jpg"]
+  },
+  {
+    id: 'rel-figure-saint-peter',
+    parentId: 'christianity',
+    name: 'Saint Peter',
+    description: 'Apostle of Jesus and the first Bishop of Rome (Pope). Ancient legends ascribe to him mystical battles in Rome against Simon Magus, a Samaritan sorcerer who claimed to possess supernatural occult powers.',
+    timelineId: 'rel-figure-saint-peter',
+    mapFeatureId: 'rel-figure-saint-peter',
+    sources: ['Acts of Saint Peter / Church Traditions'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/f/fb/Saint_Peter-Sinai_%286th_Century%29_Crop.jpg"]
+  },
+  {
+    id: 'rel-figure-saint-augustine',
+    parentId: 'christianity',
+    name: 'Saint Augustine of Hippo',
+    description: 'One of the most important Latin Church Fathers. His writings (like Confessions and City of God) merged Platonic philosophy with Christian theology, laying the foundation for Western Christian mysticism.',
+    timelineId: 'rel-figure-saint-augustine',
+    mapFeatureId: 'rel-figure-saint-augustine',
+    sources: ['Confessions of Saint Augustine'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/e/ea/Saint_Augustine_by_Philippe_de_Champaigne.jpg"]
+  },
+  {
+    id: 'rel-figure-constantine',
+    parentId: 'christianity',
+    name: 'Constantine the Great',
+    description: 'Roman Emperor who legalized Christianity through the Edict of Milan and convened the First Council of Nicaea, establishing orthodox Christian dogma and altering the course of world history.',
+    timelineId: 'rel-figure-constantine',
+    mapFeatureId: 'rel-figure-constantine',
+    sources: ['Life of Constantine (Eusebius)'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/c/c8/Statua_di_Costantino_ai_musei_capitolini.jpg"]
+  },
+  {
+    id: 'rel-adherent-jrr-tolkien',
+    parentId: 'christianity',
+    name: 'J.R.R. Tolkien',
+    description: 'Devout Catholic English writer and scholar, whose Middle-earth legendarium served as a complex mythological vehicle. Alternative researchers suggest his stories encoded deep pre-deluvian history, lost continents, and angelic battles.',
+    timelineId: 'rel-adherent-jrr-tolkien',
+    mapFeatureId: 'rel-adherent-jrr-tolkien',
+    sources: ['Tolkien Letters / Mythopoeia Studies'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/d/d4/J._R._R._Tolkien%2C_ca._1925.jpg"]
+  },
+  {
+    id: 'rel-adherent-mlk-jr',
+    parentId: 'christianity',
+    name: 'Martin Luther King Jr.',
+    description: 'American Baptist minister and civil rights leader who advocated nonviolence. His rhetoric was deeply rooted in prophetic Christian theology, preaching a message of spiritual liberation and the \'Beloved Community\'.',
+    timelineId: 'rel-adherent-mlk-jr',
+    mapFeatureId: 'rel-adherent-mlk-jr',
+    sources: ['MLK Speeches / Theological Essays'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/0/05/Martin_Luther_King%2C_Jr..jpg"]
+  },
+  {
+    id: 'rel-adherent-isaac-newton',
+    parentId: 'christianity',
+    name: 'Isaac Newton',
+    description: 'Famous physicist who was also a deeply esoteric Christian. He spent decades researching biblical chronology, alchemy, and the measurements of Solomon\'s Temple, which he believed contained structural codes of the universe.',
+    timelineId: 'rel-adherent-isaac-newton',
+    mapFeatureId: 'rel-adherent-isaac-newton',
+    sources: ['Newtonian Occult Manuscripts'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/f/f7/Portrait_of_Sir_Isaac_Newton%2C_1689_%28brightened%29.jpg"]
+  },
+  {
+    id: 'rel-adherent-cs-lewis',
+    parentId: 'christianity',
+    name: 'C.S. Lewis',
+    description: 'Oxford scholar, novelist, and highly influential lay Christian apologist who authored The Chronicles of Narnia and Mere Christianity, defending core orthodox faith through literary allegory.',
+    timelineId: 'rel-adherent-cs-lewis',
+    mapFeatureId: 'rel-adherent-cs-lewis',
+    sources: ['Lewis Biographies / Christian Apologetics'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/2/27/CS_Lewis_photo_on_dust_jacket.jpg"]
+  },
+  {
+    id: 'rel-adherent-johnny-cash',
+    parentId: 'christianity',
+    name: 'Johnny Cash',
+    description: 'Legendary American country singer-songwriter and devout Christian convert, who recorded gospel albums, wrote a novel about the Apostle Paul, and associated his music with redemption, faith, and the struggles of the soul.',
+    timelineId: 'rel-adherent-johnny-cash',
+    mapFeatureId: 'rel-adherent-johnny-cash',
+    sources: ['Cash Autobiographies / Gospel Music History'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/c/c2/Johnny_Cash_1977.jpg"]
+  },
+  {
+    id: 'rel-adherent-florence-nightingale',
+    parentId: 'christianity',
+    name: 'Florence Nightingale',
+    description: 'Founder of modern nursing and social reformer who recorded deep Christian mystical experiences, believing her nursing work was a direct, divine calling to serve God by relieving human suffering.',
+    timelineId: 'rel-adherent-florence-nightingale',
+    mapFeatureId: 'rel-adherent-florence-nightingale',
+    sources: ['Nightingale Theological Writings'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/a/ab/Florence_Nightingale_%28H_Hering_NPG_x82368%29.jpg"]
+  },
+  {
+    id: 'rel-figure-moses',
+    parentId: 'judaism',
+    name: 'Moses',
+    description: 'Hebrew prophet and lawgiver who led the Israelites out of Egypt and received the Torah on Mount Sinai. Esoteric traditions link his wisdom to the secret mystery schools of ancient Egypt and the magical arts of Hermes.',
+    timelineId: 'rel-figure-moses',
+    mapFeatureId: 'rel-figure-moses',
+    sources: ['Torah / Kabbalistic Texts'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/4/4a/Rembrandt_Harmensz._van_Rijn_079.jpg"]
+  },
+  {
+    id: 'rel-figure-abraham',
+    parentId: 'judaism',
+    name: 'Abraham',
+    description: 'Patriarch of the monotheistic Abrahamic religions. Ancient Midrashic lore claims he possessed an astronomical tablet and initiated disciples into secret laws of creation, later compiled into the Sefer Yetzirah (Book of Formation).',
+    timelineId: 'rel-figure-abraham',
+    mapFeatureId: 'rel-figure-abraham',
+    sources: ['Genesis / Midrash Rabbah'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/4/42/Guercino_Abramo_ripudia_Agar_%28cropped_2%29.jpg"]
+  },
+  {
+    id: 'rel-figure-king-david',
+    parentId: 'judaism',
+    name: 'King David',
+    description: 'The second king of the United Kingdom of Israel and Judah, to whom the authorship of the Psalms is traditionally attributed. He established Jerusalem as the spiritual and political center of Judaism.',
+    timelineId: 'rel-figure-king-david',
+    mapFeatureId: 'rel-figure-king-david',
+    sources: ['Books of Samuel / Book of Psalms'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/9/94/King_David%2C_the_King_of_Israel.jpg"]
+  },
+  {
+    id: 'rel-adherent-albert-einstein',
+    parentId: 'judaism',
+    name: 'Albert Einstein',
+    description: 'Renowned theoretical physicist of Jewish heritage. He identified his spiritual beliefs with Spinoza\'s pantheism, describing a deep cosmic religious feeling and awe before the harmony of natural laws.',
+    timelineId: 'rel-adherent-albert-einstein',
+    mapFeatureId: 'rel-adherent-albert-einstein',
+    sources: ['Einstein\'s Writings on Religion / Spinoza Studies'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/2/28/Albert_Einstein_Head_cleaned.jpg"]
+  },
+  {
+    id: 'rel-adherent-maimonides',
+    parentId: 'judaism',
+    name: 'Maimonides',
+    description: 'Preeminent medieval Jewish philosopher and physician who authored the Guide for the Perplexed, seeking to harmonize Torah with Aristotelian science, while encoding secret layers of allegorical interpretation for initiates.',
+    timelineId: 'rel-adherent-maimonides',
+    mapFeatureId: 'rel-adherent-maimonides',
+    sources: ['Guide for the Perplexed / Mishneh Torah'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/3/38/Portrait_of_Moses_Maimonides_in_Thesaurus_antiquitatum_sacrarum.tif"]
+  },
+  {
+    id: 'rel-adherent-franz-kafka',
+    parentId: 'judaism',
+    name: 'Franz Kafka',
+    description: 'Bohemian Jewish writer whose surreal, bureaucratic nightmares are interpreted by scholars as modern Kabbalistic parables of human alienation, the hiddenness of the divine, and the inaccessible nature of the absolute law.',
+    timelineId: 'rel-adherent-franz-kafka',
+    mapFeatureId: 'rel-adherent-franz-kafka',
+    sources: ['Kafka Diaries / Kabbalistic Literary Studies'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/2/26/Franz_Kafka%2C_1923.jpg"]
+  },
+  {
+    id: 'rel-adherent-spinoza',
+    parentId: 'judaism',
+    name: 'Baruch Spinoza',
+    description: 'Dutch-Jewish philosopher who laid the groundwork for the Enlightenment. Despite being excommunicated from the Jewish community for his pantheistic views, he defined \'God or Nature\' as the single infinite substance.',
+    timelineId: 'rel-adherent-spinoza',
+    mapFeatureId: 'rel-adherent-spinoza',
+    sources: ['Ethics (Spinoza) / Jewish Philosophy History'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/e/ea/Spinoza.jpg"]
+  },
+  {
+    id: 'rel-adherent-bernstein',
+    parentId: 'judaism',
+    name: 'Leonard Bernstein',
+    description: 'Celebrated American composer and conductor whose works (such as the Kaddish Symphony and Chichester Psalms) directly explored Jewish liturgy, theology, and the eternal dialogue between humanity and the divine.',
+    timelineId: 'rel-adherent-bernstein',
+    mapFeatureId: 'rel-adherent-bernstein',
+    sources: ['Bernstein Musical Archives'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/1/11/Leonard_Bernstein_by_Jack_Mitchell_%28high_quality%29.jpg"]
+  },
+  {
+    id: 'rel-adherent-freud',
+    parentId: 'judaism',
+    name: 'Sigmund Freud',
+    description: 'Founder of psychoanalysis, who identified as a cultural Jew. In works like Moses and Monotheism, he psychoanalyzed the origins of Jewish monotheism, linking it to the historical legacy of the Egyptian Aten cult.',
+    timelineId: 'rel-adherent-freud',
+    mapFeatureId: 'rel-adherent-freud',
+    sources: ['Moses and Monotheism (Freud)'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/3/36/Sigmund_Freud%2C_by_Max_Halberstadt_%28cropped%29.jpg"]
+  },
+  {
+    id: 'rel-adherent-wiesel',
+    parentId: 'judaism',
+    name: 'Elie Wiesel',
+    description: 'Holocaust survivor, Nobel laureate, and author of Night. He used his Jewish faith, Hassidic stories, and theological wrestling with the problem of evil to serve as a moral voice against indifference and human suffering.',
+    timelineId: 'rel-adherent-wiesel',
+    mapFeatureId: 'rel-adherent-wiesel',
+    sources: ['Wiesel Memoirs / Holocaust Studies'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/d/da/ELIE_WIESEL_%285112581267%29.jpg"]
+  },
+  {
+    id: 'rel-adherent-golda-meir',
+    parentId: 'judaism',
+    name: 'Golda Meir',
+    description: 'Historic statesman and Prime Minister of Israel who championed Zionist history and Jewish cultural identity, serving as a prominent international symbol of Jewish resilience during the mid-20th century.',
+    timelineId: 'rel-adherent-golda-meir',
+    mapFeatureId: 'rel-adherent-golda-meir',
+    sources: ['Meir Autobiography / Israeli State Archives'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/c/c7/Golda_Meir_03265u-2_%28cropped%29.jpg"]
+  },
+  {
+    id: 'rel-figure-muhammad',
+    parentId: 'islam',
+    name: 'Prophet Muhammad',
+    description: 'The founder of Islam who received the divine revelations of the Quran. Sufi mystics revere his Night Journey (Isra and Mi\'raj)—an ascension through the seven heavens to the Divine Presence—as the ultimate blueprint for spiritual ascension.',
+    timelineId: 'rel-figure-muhammad',
+    mapFeatureId: 'rel-figure-muhammad',
+    sources: ['Hadith / Early Islamic Biographies'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/7/73/Al-Masjid_AL-Nabawi_Door.jpg"]
+  },
+  {
+    id: 'rel-figure-ali',
+    parentId: 'islam',
+    name: 'Ali ibn Abi Talib',
+    description: 'Cousin and son-in-law of Muhammad, first Shia Imam. In esoteric Sufism, he is viewed as the gatekeeper of mystical knowledge (Batin) and the father of spiritual knight-errantry and metaphysical wisdom.',
+    timelineId: 'rel-figure-ali',
+    mapFeatureId: 'rel-figure-ali',
+    sources: ['Nahj al-Balagha / Sufi Order Genealogies'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/c/cc/Istanbul_-_Santa_Sofia_-_Medall%C3%B3_%28cropped%29.JPG"]
+  },
+  {
+    id: 'rel-figure-al-ghazali',
+    parentId: 'islam',
+    name: 'Al-Ghazali',
+    description: 'Highly influential Persian Islamic theologian, jurist, and Sufi mystic, whose works (like The Incoherence of the Philosophers and The Revival of the Religious Sciences) reconciled orthodox Sunni theology with mystical Sufi practice.',
+    timelineId: 'rel-figure-al-ghazali',
+    mapFeatureId: 'rel-figure-al-ghazali',
+    sources: ['Revival of the Religious Sciences (Al-Ghazali)'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/e/ed/The_tomb_of_Imam_Al-Ghazali.jpg"]
+  },
+  {
+    id: 'rel-adherent-muhammad-ali',
+    parentId: 'islam',
+    name: 'Muhammad Ali',
+    description: 'Legendary heavyweight boxer and convert to Sunni Islam (formerly Nation of Islam). He used his global platform to champion civil rights and spiritual values, viewing his athletic talents as a gift to serve divine purpose.',
+    timelineId: 'rel-adherent-muhammad-ali',
+    mapFeatureId: 'rel-adherent-muhammad-ali',
+    sources: ['Ali Autobiographies / Civil Rights History'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/8/89/Muhammad_Ali_NYWTS.jpg"]
+  },
+  {
+    id: 'rel-adherent-malcolm-x',
+    parentId: 'islam',
+    name: 'Malcolm X (el-Hajj Malik el-Shabazz)',
+    description: 'Influential civil rights leader who converted to Sunni Islam. His transformational pilgrimage to Mecca (Hajj) shifted his perspective toward universal brotherhood, reshaping his spiritual fight for human rights.',
+    timelineId: 'rel-adherent-malcolm-x',
+    mapFeatureId: 'rel-adherent-malcolm-x',
+    sources: ['Autobiography of Malcolm X'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/2/21/Malcolm_X_1963_press_photo.jpg"]
+  },
+  {
+    id: 'rel-adherent-rumi',
+    parentId: 'islam',
+    name: 'Jalal al-Din Muhammad Rumi',
+    description: '13th-century Persian poet and Sufi mystic, whose poems celebrate ecstatic union with the divine. He founded the Mevlevi Order (Whirling Dervishes), using music and dance as a physical ritual to achieve cosmic harmony.',
+    timelineId: 'rel-adherent-rumi',
+    mapFeatureId: 'rel-adherent-rumi',
+    sources: ['Masnavi-ye Ma\'navi / Divan-e Shams'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/e/ea/%D9%85%D9%88%D9%84%D8%A7%D9%86%D8%A7_%D8%A7%D8%AB%D8%B1_%D8%AD%D8%B3%DB%8C%D9%86_%D8%A8%D9%87%D8%B2%D8%A7%D8%AF_%28cropped%29.jpg"]
+  },
+  {
+    id: 'rel-adherent-ibn-sina',
+    parentId: 'islam',
+    name: 'Ibn Sina (Avicenna)',
+    description: 'Preeminent polymath of the Islamic Golden Age. He wrote the Canon of Medicine and the Book of Healing, merging Islamic theology, Aristotelian philosophy, and Neoplatonism to describe the soul and creation.',
+    timelineId: 'rel-adherent-ibn-sina',
+    mapFeatureId: 'rel-adherent-ibn-sina',
+    sources: ['Book of Healing / Avicennian Studies'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/1/1a/Avicenna_Bust%2C_left_profile_%28cropped%29.jpg"]
+  },
+  {
+    id: 'rel-adherent-ibn-battuta',
+    parentId: 'islam',
+    name: 'Ibn Battuta',
+    description: 'Greatest Islamic explorer and traveler of the pre-modern world, who journeyed across Africa, the Middle East, India, and China, documenting the diverse cultures of the Islamic world (Dar al-Islam).',
+    timelineId: 'rel-adherent-ibn-battuta',
+    mapFeatureId: 'rel-adherent-ibn-battuta',
+    sources: ['The Rihla (Travels of Ibn Battuta)'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/9/9c/Handmade_oil_painting_reproduction_of_Ibn_Battuta_in_Egypt%2C_a_painting_by_Hippolyte_Leon_Benett..jpg"]
+  },
+  {
+    id: 'rel-adherent-chappelle',
+    parentId: 'islam',
+    name: 'Dave Chappelle',
+    description: 'Acclaimed American stand-up comedian and actor who converted to Islam in 1991. He credits his faith with giving him a moral compass, grounding him against the spiritual challenges of fame and Hollywood.',
+    timelineId: 'rel-adherent-chappelle',
+    mapFeatureId: 'rel-adherent-chappelle',
+    sources: ['Chappelle Interviews / Celebrity Conversion Profiles'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/5/5e/Dave_Chappelle_at_Preamiere_of_%22Dave_Chappelle_In_Real_Life%22_%282%29_%28cropped_2%29.jpg"]
+  },
+  {
+    id: 'rel-adherent-abdul-jabbar',
+    parentId: 'islam',
+    name: 'Kareem Abdul-Jabbar',
+    description: 'NBA legend, writer, and cultural icon who converted to Islam in 1971. He has used his prominent public voice to advocate for racial equality, social justice, and a deeper understanding of Islam.',
+    timelineId: 'rel-adherent-abdul-jabbar',
+    mapFeatureId: 'rel-adherent-abdul-jabbar',
+    sources: ['Abdul-Jabbar Autobiography / Civil Rights History'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/a/a0/Kareem_Abdul-Jabbar_May_2014.jpg"]
+  },
+  {
+    id: 'rel-adherent-cat-stevens',
+    parentId: 'islam',
+    name: 'Cat Stevens (Yusuf Islam)',
+    description: 'Famous British folk singer-songwriter who converted to Islam in 1977 following a near-drowning experience. He dedicated his life to education, philanthropy, and representing Islamic music and culture globally.',
+    timelineId: 'rel-adherent-cat-stevens',
+    mapFeatureId: 'rel-adherent-cat-stevens',
+    sources: ['Yusuf Islam Biographies / Conversion Essays'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/a/a0/Cat_Stevens_Glastonbury_2023_-2.jpg"]
+  },
+  {
+    id: 'rel-figure-buddha',
+    parentId: 'buddhism',
+    name: 'Siddhartha Gautama (The Buddha)',
+    description: 'Spiritual teacher who founded Buddhism. Esoteric Vajrayana traditions claim he transmitted secret Tantras (like the Kalachakra) directly to King Suchandra of the subterranean kingdom of Shambhala to preserve them for a future golden age.',
+    timelineId: 'rel-figure-buddha',
+    mapFeatureId: 'rel-figure-buddha',
+    sources: ['Pali Canon / Kalachakra Tantra'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/c/cf/Buddha_in_Sarnath_Museum.jpg"]
+  },
+  {
+    id: 'rel-figure-nagarjuna',
+    parentId: 'buddhism',
+    name: 'Nagarjuna',
+    description: 'One of the most important Buddhist philosophers, founder of the Madhyamaka school. Legend states he retrieved the sacred Prajnaparamita Sutras (Wisdom Teachings) from the Nagas (serpentine beings) who guarded them in their underwater palace.',
+    timelineId: 'rel-figure-nagarjuna',
+    mapFeatureId: 'rel-figure-nagarjuna',
+    sources: ['Madhyamaka Karika / Buddhist Lore'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/e/e3/Nagarjuna_with_84_mahasiddha_cropped.jpg"]
+  },
+  {
+    id: 'rel-figure-bodhidharma',
+    parentId: 'buddhism',
+    name: 'Bodhidharma',
+    description: 'Buddhist monk traditionally credited as the transmitter of Chan/Zen Buddhism to China. Famous for his years of wall-gazing meditation at the Shaolin Temple and establishing the spiritual framework for martial arts.',
+    timelineId: 'rel-figure-bodhidharma',
+    mapFeatureId: 'rel-figure-bodhidharma',
+    sources: ['Zen Monastic Chronicles'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/a/a2/BodhidharmaYoshitoshi1887.jpg"]
+  },
+  {
+    id: 'rel-figure-thich-nhat-hanh',
+    parentId: 'buddhism',
+    name: 'Thich Nhat Hanh',
+    description: 'Renowned Vietnamese Zen master, poet, and peace activist who coined the term \'Engaged Buddhism\', integrating mindfulness with social action and global peace movements.',
+    timelineId: 'rel-figure-thich-nhat-hanh',
+    mapFeatureId: 'rel-figure-thich-nhat-hanh',
+    sources: ['Miracle of Mindfulness / Plum Village Archives'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/1/1b/Thich_Nhat_Hanh_12_%28cropped%29.jpg"]
+  },
+  {
+    id: 'rel-adherent-dalai-lama',
+    parentId: 'buddhism',
+    name: '14th Dalai Lama (Tenzin Gyatso)',
+    description: 'Spiritual leader of Tibetan Buddhism. Esoteric traditions view him as the incarnation of Avalokiteshvara, the bodhisattva of compassion, and the earthly guardian of the secrets of Shambhala and the Kalachakra lineages.',
+    timelineId: 'rel-adherent-dalai-lama',
+    mapFeatureId: 'rel-adherent-dalai-lama',
+    sources: ['Tibetan Government-in-Exile Records'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/f/fb/The_Dalai_Lama_in_2012.jpg"]
+  },
+  {
+    id: 'rel-adherent-steve-jobs',
+    parentId: 'buddhism',
+    name: 'Steve Jobs',
+    description: 'Co-founder of Apple who traveled to India in 1974 seeking spiritual enlightenment and became a lifelong practitioner of Zen Buddhism. He credited Zen philosophy with shaping his minimalist design aesthetics and focus.',
+    timelineId: 'rel-adherent-steve-jobs',
+    mapFeatureId: 'rel-adherent-steve-jobs',
+    sources: ['Steve Jobs Biography (Walter Isaacson) / Zen Studies'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/5/51/Steve_Jobs_Headshot_2010_%28cropped_4%29.jpg"]
+  },
+  {
+    id: 'rel-adherent-richard-gere',
+    parentId: 'buddhism',
+    name: 'Richard Gere',
+    description: 'Famous actor and devout student of Tibetan Buddhism. A close disciple of the 14th Dalai Lama, he is an active advocate for Tibetan human rights and promoter of Buddhist philosophy and meditation in the West.',
+    timelineId: 'rel-adherent-richard-gere',
+    mapFeatureId: 'rel-adherent-richard-gere',
+    sources: ['Discourses on Tibetan Buddhist Studies'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/9/99/Richard_Gere-69101.jpg"]
+  },
+  {
+    id: 'rel-adherent-keanu-reeves',
+    parentId: 'buddhism',
+    name: 'Keanu Reeves',
+    description: 'Famous actor who played Prince Siddhartha in Bernardo Bertolucci\'s 1993 film Little Buddha. He underwent extensive Buddhist training for the role and maintains a deep philosophical respect for Buddhist mindfulness and ethics.',
+    timelineId: 'rel-adherent-keanu-reeves',
+    mapFeatureId: 'rel-adherent-keanu-reeves',
+    sources: ['Film Production Records / Actor Interviews'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/b/b4/Keanu_Reeves_at_TIFF_2025_02_%28Cropped%29.jpg"]
+  },
+  {
+    id: 'rel-adherent-leonard-cohen',
+    parentId: 'buddhism',
+    name: 'Leonard Cohen',
+    description: 'Acclaimed Canadian singer-songwriter who spent years living at Mount Baldy Zen Center, becoming an ordained Rinzai Zen Buddhist monk, taking the name Jikan (\'Silence\'). His music deeply reflects Zen themes of detachment.',
+    timelineId: 'rel-adherent-leonard-cohen',
+    mapFeatureId: 'rel-adherent-leonard-cohen',
+    sources: ['Cohen Biographies / Zen Monastic Records'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/b/b4/Leonard_Cohen%2C_1988_01.jpg"]
+  },
+  {
+    id: 'rel-adherent-herbie-hancock',
+    parentId: 'buddhism',
+    name: 'Herbie Hancock',
+    description: 'Legendary jazz pianist and composer who has practiced Nichiren Buddhism for decades. He credits his daily practice of chanting Nam Myoho Renge Kyo with unlocking creative flow and global humanistic values.',
+    timelineId: 'rel-adherent-herbie-hancock',
+    mapFeatureId: 'rel-adherent-herbie-hancock',
+    sources: ['SGI Member Profiles / Jazz Biographies'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/6/6d/Herbie_Hancock_2023.jpg"]
+  },
+  {
+    id: 'rel-adherent-tina-turner',
+    parentId: 'buddhism',
+    name: 'Tina Turner',
+    description: 'Legendary American rock singer who converted to Nichiren Buddhism in 1973. She attributed her survival, inner strength, and career revival to her spiritual chanting practice, writing books on Buddhist wisdom.',
+    timelineId: 'rel-adherent-tina-turner',
+    mapFeatureId: 'rel-adherent-tina-turner',
+    sources: ['Turner Memoirs / SGI History'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/3/32/Tina_Turner_1985_%28cropped%29.jpg"]
+  },
+  {
+    id: 'rel-figure-adi-shankara',
+    parentId: 'hinduism',
+    name: 'Adi Shankara',
+    description: '8th-century philosopher and theologian who consolidated the doctrine of Advaita Vedanta (non-dualism). He traveled across India establishing monastic centers, asserting the absolute identity of Atman (soul) and Brahman (divine source).',
+    timelineId: 'rel-figure-adi-shankara',
+    mapFeatureId: 'rel-figure-adi-shankara',
+    sources: ['Shankara Bhashyas / Advaita Treatises'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/e/e3/Raja_Ravi_Varma_-_Sankaracharya.jpg"]
+  },
+  {
+    id: 'rel-figure-ramakrishna',
+    parentId: 'hinduism',
+    name: 'Sri Ramakrishna Paramahansa',
+    description: '19th-century Indian mystic and yogi who experienced ecstatic states of communion with the divine mother Kali and verified through direct practice that all religious paths lead to the same non-dual realization.',
+    timelineId: 'rel-figure-ramakrishna',
+    mapFeatureId: 'rel-figure-ramakrishna',
+    sources: ['Gospel of Sri Ramakrishna'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/a/a1/Ramakrishna.jpg"]
+  },
+  {
+    id: 'rel-figure-vivekananda',
+    parentId: 'hinduism',
+    name: 'Swami Vivekananda',
+    description: 'Indian Hindu monk who introduced Vedanta and Yoga to the Western world at the 1893 Parliament of Religions in Chicago, teaching the spiritual unity of all religions and the divine nature of the human soul.',
+    timelineId: 'rel-figure-vivekananda',
+    mapFeatureId: 'rel-figure-vivekananda',
+    sources: ['Complete Works of Swami Vivekananda'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/0/0b/Swami_Vivekananda-1893-09-signed.jpg"]
+  },
+  {
+    id: 'rel-figure-yogananda',
+    parentId: 'hinduism',
+    name: 'Paramahansa Yogananda',
+    description: 'Renowned yogi and guru who introduced millions of Westerners to Kriya Yoga through his Autobiography of a Yogi. He taught the underlying unity between the teachings of Jesus and Krishna.',
+    timelineId: 'rel-figure-yogananda',
+    mapFeatureId: 'rel-figure-yogananda',
+    sources: ['Autobiography of a Yogi'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/3/3f/Paramahansa_Yogananda_Standard_Pose.jpg"]
+  },
+  {
+    id: 'rel-figure-prabhupada',
+    parentId: 'hinduism',
+    name: 'A.C. Bhaktivedanta Swami Prabhupada',
+    description: 'Indian spiritual teacher who founded the International Society for Krishna Consciousness (ISKCON), translating major Vedic scriptures and bringing Gaudiya Vaishnavism chanting to the global stage.',
+    timelineId: 'rel-figure-prabhupada',
+    mapFeatureId: 'rel-figure-prabhupada',
+    sources: ['ISKCON Foundational Texts / Prabhupada Biographies'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/b/bc/Prabhupada_singing_%28Germany_1974%29.jpg"]
+  },
+  {
+    id: 'rel-figure-neem-karoli-baba',
+    parentId: 'hinduism',
+    name: 'Neem Karoli Baba',
+    description: 'Venerated Hindu guru and devotee of Hanuman. His Kainchi Dham ashram became a major spiritual sanctuary, drawing seekers like Ram Dass, Steve Jobs, and Julia Roberts to practice unconditional love and service.',
+    timelineId: 'rel-figure-neem-karoli-baba',
+    mapFeatureId: 'rel-figure-neem-karoli-baba',
+    sources: ['Miracle of Love (Ram Dass)'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/6/66/Neemkaroli_14.jpg"]
+  },
+  {
+    id: 'rel-adherent-george-harrison',
+    parentId: 'hinduism',
+    name: 'George Harrison',
+    description: 'Lead guitarist of the Beatles who embraced Gaudiya Vaishnavism (Hinduism) after visiting India. He incorporated Indian spirituality, meditation, and instruments into his music, funding the first Hare Krishna temple in London.',
+    timelineId: 'rel-adherent-george-harrison',
+    mapFeatureId: 'rel-adherent-george-harrison',
+    sources: ['George Harrison Biographies / ISKCON History'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/2/28/George-wa-portrait.jpg"]
+  },
+  {
+    id: 'rel-adherent-julia-roberts',
+    parentId: 'hinduism',
+    name: 'Julia Roberts',
+    description: 'Award-winning actress who converted to Hinduism while filming Eat Pray Love. She became a devotee of Neem Karoli Baba, practicing yoga and chanting as part of her spiritual life.',
+    timelineId: 'rel-adherent-julia-roberts',
+    mapFeatureId: 'rel-adherent-julia-roberts',
+    sources: ['Interviews on Hindu conversion'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/d/d3/Julia_Roberts_2025.jpg"]
+  },
+  {
+    id: 'rel-adherent-mahatma-gandhi',
+    parentId: 'hinduism',
+    name: 'Mahatma Gandhi',
+    description: 'Indian lawyer and political ethicist who led the successful campaign for India\'s independence using nonviolent resistance. His philosophy of Satyagraha (truth-force) was deeply rooted in the Bhagavad Gita and Hindu concepts of Ahimsa.',
+    timelineId: 'rel-adherent-mahatma-gandhi',
+    mapFeatureId: 'rel-adherent-mahatma-gandhi',
+    sources: ['Gandhi\'s Autobiography / Satyagraha Essays'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/7/7a/Mahatma-Gandhi%2C_studio%2C_1931.jpg"]
+  },
+  {
+    id: 'rel-adherent-tagore',
+    parentId: 'hinduism',
+    name: 'Rabindranath Tagore',
+    description: 'Genius Bengali polymath, poet, and Nobel laureate who reshaped literature and music, blending deep Upanishadic spiritual pantheism and humanism into his poems (Gitanjali).',
+    timelineId: 'rel-adherent-tagore',
+    mapFeatureId: 'rel-adherent-tagore',
+    sources: ['Tagore Literary Archives'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/6/62/1926_Rabindrath_Tagore.jpg"]
+  },
+  {
+    id: 'rel-adherent-ramanujan',
+    parentId: 'hinduism',
+    name: 'Srinivasa Ramanujan',
+    description: 'Genius Indian mathematician who credited his ground-breaking mathematical discoveries and formulas to active dreams and revelations sent by his family goddess, Namagiri Thayar of Namakkal.',
+    timelineId: 'rel-adherent-ramanujan',
+    mapFeatureId: 'rel-adherent-ramanujan',
+    sources: ['Ramanujan Mathematical Notebooks'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/d/d0/Srinivasa_Ramanujan-Add._MS_a94_version2_%28cropped%29.jpg"]
+  },
+  {
+    id: 'rel-figure-l-ron-hubbard',
+    parentId: 'scientology',
+    name: 'L. Ron Hubbard',
+    description: 'American writer, occultist, and founder of Scientology. Prior to launching Dianetics, he participated in the Babalon Working rituals with rocket scientist Jack Parsons in Pasadena to open an interdimensional gateway.',
+    timelineId: 'rel-figure-l-ron-hubbard',
+    mapFeatureId: 'rel-figure-l-ron-hubbard',
+    sources: ['Dianetics / Occult Biography of Parsons and Hubbard'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/1/11/L._Ron_Hubbard_in_1950_%28cropped_3x4%29.jpg"]
+  },
+  {
+    id: 'rel-figure-david-miscavige',
+    parentId: 'scientology',
+    name: 'David Miscavige',
+    description: 'Leader of the Church of Scientology, holding the title of Chairman of the Board of the Religious Technology Center, who oversaw the expansion of the church\'s global facilities and the preservation of L. Ron Hubbard\'s works.',
+    timelineId: 'rel-figure-david-miscavige',
+    mapFeatureId: 'rel-figure-david-miscavige',
+    sources: ['Church of Scientology Leadership Records'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/4/4c/David_Miscavige_chairman_001_2024_%28cropped%29.jpg"]
+  },
+  {
+    id: 'rel-adherent-tom-cruise',
+    parentId: 'scientology',
+    name: 'Tom Cruise',
+    description: 'World-famous actor and prominent advocate for Scientology. He credits the application of Hubbard\'s teachings with his immense success and serves as one of the religion\'s highest-ranking public figures.',
+    timelineId: 'rel-adherent-tom-cruise',
+    mapFeatureId: 'rel-adherent-tom-cruise',
+    sources: ['Scientology Publications / Public Interviews'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/2/23/Tom_Cruise_at_53rd_Saturn_Awards_2026-01.jpg"]
+  },
+  {
+    id: 'rel-adherent-john-travolta',
+    parentId: 'scientology',
+    name: 'John Travolta',
+    description: 'Award-winning actor who joined Scientology in 1975. He has been one of the church\'s most loyal public supporters, crediting Scientology\'s spiritual counseling techniques with helping him navigate his career and personal life.',
+    timelineId: 'rel-adherent-john-travolta',
+    mapFeatureId: 'rel-adherent-john-travolta',
+    sources: ['Travolta Interviews / Scientology History'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/d/db/John_Travolta_signature.svg"]
+  },
+  {
+    id: 'rel-adherent-beck',
+    parentId: 'scientology',
+    name: 'Beck Hansen (Beck)',
+    description: 'Famous American alternative rock musician who was raised in Scientology by his parents and identified as a Scientologist for most of his life, discussing its influence on his creative mindset and work ethic.',
+    timelineId: 'rel-adherent-beck',
+    mapFeatureId: 'rel-adherent-beck',
+    sources: ['Music Biographies / Artist Interviews'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/5/56/BeckMSG190718-13_%2847065153261%29_%28cropped%29.jpg"]
+  },
+  {
+    id: 'rel-adherent-kirstie-alley',
+    parentId: 'scientology',
+    name: 'Kirstie Alley',
+    description: 'Well-known American actress and prominent Scientologist, who credited the church\'s drug rehabilitation program Narconon with saving her life, becoming a highly vocal public advocate of the system.',
+    timelineId: 'rel-adherent-kirstie-alley',
+    mapFeatureId: 'rel-adherent-kirstie-alley',
+    sources: ['Alley Biographies / Narconon Testimonials'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/2/23/KirstieAlley1994.jpg"]
+  },
+  {
+    id: 'rel-adherent-elisabeth-moss',
+    parentId: 'scientology',
+    name: 'Elisabeth Moss',
+    description: 'Award-winning actress who was raised in Scientology and has publicly defended her faith, describing the religion\'s focus on self-realization, personal freedom, and communication as key components of her career.',
+    timelineId: 'rel-adherent-elisabeth-moss',
+    mapFeatureId: 'rel-adherent-elisabeth-moss',
+    sources: ['Moss Public Interviews / Celebrity Profiles'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/2/23/Elisabeth_Moss_2026_%28cropped%29.jpg"]
+  },
+  {
+    id: 'rel-adherent-danny-masterson',
+    parentId: 'scientology',
+    name: 'Danny Masterson',
+    description: 'Actor who was raised in a multi-generational Scientology family and long served as a prominent celebrity supporter, before becoming involved in high-profile legal controversies regarding the church\'s internal arbitration rules.',
+    timelineId: 'rel-adherent-danny-masterson',
+    mapFeatureId: 'rel-adherent-danny-masterson',
+    sources: ['L.A. Court Records / Scientology Legal History'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/a/a5/Danny_Masterson_%28cropped%29.jpg"]
+  },
+  {
+    id: 'rel-adherent-chick-corea',
+    parentId: 'scientology',
+    name: 'Chick Corea',
+    description: 'Legendary jazz fusion keyboardist, composer, and Scientologist, who credited L. Ron Hubbard\'s study tech and administrative systems with helping organize his musical collaborations and creative focus.',
+    timelineId: 'rel-adherent-chick-corea',
+    mapFeatureId: 'rel-adherent-chick-corea',
+    sources: ['Corea Memoirs / Jazz History'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/e/ea/Chick_Corea_1976.JPG"]
+  },
+  {
+    id: 'rel-adherent-nancy-cartwright',
+    parentId: 'scientology',
+    name: 'Nancy Cartwright',
+    description: 'Renowned American voice actress (voice of Bart Simpson) and high-level Scientologist, who famously donated tens of millions of dollars to the church\'s building programs and theological archives.',
+    timelineId: 'rel-adherent-nancy-cartwright',
+    mapFeatureId: 'rel-adherent-nancy-cartwright',
+    sources: ['Cartwright Autobiography / IAS Records'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/f/fa/NancyCartwright2019_%28cropped%29.png"]
+  },
+  {
+    id: 'rel-adherent-peña',
+    parentId: 'scientology',
+    name: 'Michael Peña',
+    description: 'Acclaimed character actor who joined Scientology in 2000. He credits the church\'s communication courses and spiritual counseling with dramatically improving his confidence and acting capabilities.',
+    timelineId: 'rel-adherent-peña',
+    mapFeatureId: 'rel-adherent-peña',
+    sources: ['Peña Interviews / Celebrity Profiles'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/d/de/Michael_Pe%C3%B1a-4389.jpg"]
+  },
+  {
+    id: 'rel-figure-joseph-smith',
+    parentId: 'mormonism',
+    name: 'Joseph Smith Jr.',
+    description: 'Founder of Mormonism, who claimed to translate ancient golden plates delivered by the Angel Moroni. Alternative historians point to his early use of seer stones and folk magic as part of his spiritual translation method.',
+    timelineId: 'rel-figure-joseph-smith',
+    mapFeatureId: 'rel-figure-joseph-smith',
+    sources: ['Book of Mormon / History of the Church'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/8/86/Joseph_Smith%2C_Jr._portrait_owned_by_Joseph_Smith_III.jpg"]
+  },
+  {
+    id: 'rel-figure-brigham-young',
+    parentId: 'mormonism',
+    name: 'Brigham Young',
+    description: 'Second president of the Latter-day Saint church, who led the Mormon pioneers on their exodus across the plains to the Salt Lake Valley, establishing the extensive network of settlements that form the modern Mormon corridor.',
+    timelineId: 'rel-figure-brigham-young',
+    mapFeatureId: 'rel-figure-brigham-young',
+    sources: ['Pioneer Journals / LDS History'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/0/06/Charles_William_Carter_-_Brigham_Young_-_Google_Art_Project_%283x4_cropped%29.jpg"]
+  },
+  {
+    id: 'rel-adherent-mitt-romney',
+    parentId: 'mormonism',
+    name: 'Mitt Romney',
+    description: 'American politician, businessman, and prominent member of the Latter-day Saint church. He served as a bishop and stake president in Boston, representing the public face of mainstream Mormonism during his 2012 presidential run.',
+    timelineId: 'rel-adherent-mitt-romney',
+    mapFeatureId: 'rel-adherent-mitt-romney',
+    sources: ['LDS Church Membership Profiles / Political Biographies'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/7/7f/Mitt_Romney_official_US_Senate_portrait.jpg"]
+  },
+  {
+    id: 'rel-adherent-brandon-sanderson',
+    parentId: 'mormonism',
+    name: 'Brandon Sanderson',
+    description: 'Bestselling fantasy novelist and active member of the Latter-day Saint church. His complex magic systems, cosmological world-building, and themes of godhood and ascension in the Cosmere show subtle influences from LDS theology.',
+    timelineId: 'rel-adherent-brandon-sanderson',
+    mapFeatureId: 'rel-adherent-brandon-sanderson',
+    sources: ['Cosmere Metaphysics Discussions / Sanderson Interviews'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/6/6b/Brandon_Sanderson_at_MCM_Comic_Con_London_22_May_2026_02.jpg"]
+  },
+  {
+    id: 'rel-adherent-gladys-knight',
+    parentId: 'mormonism',
+    name: 'Gladys Knight (\'Empress of Soul\')',
+    description: 'Legendary singer and songwriter who converted to Mormonism in 1997. She founded the Saints Unified Voices choir to bring gospel-style music to LDS worship, showcasing the diversity of modern Latter-day Saint adherents.',
+    timelineId: 'rel-adherent-gladys-knight',
+    mapFeatureId: 'rel-adherent-gladys-knight',
+    sources: ['Knight Autobiographies / LDS Conversion Stories'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/6/63/Gladys_Knight_1997.jpg"]
+  },
+  {
+    id: 'rel-adherent-orson-scott-card',
+    parentId: 'mormonism',
+    name: 'Orson Scott Card',
+    description: 'Prominent science fiction author of Ender\'s Game and practicing LDS member. A direct descendant of Brigham Young, his novels explore ethical choices, community, and themes of human divinity linked to Mormon ideals.',
+    timelineId: 'rel-adherent-orson-scott-card',
+    mapFeatureId: 'rel-adherent-orson-scott-card',
+    sources: ['LDS Literary Histories / Card Biographies'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/6/6e/Orson_Scott_Card_at_BYU_Symposium_20080216_closeup.jpg"]
+  },
+  {
+    id: 'rel-adherent-stephenie-meyer',
+    parentId: 'mormonism',
+    name: 'Stephenie Meyer',
+    description: 'Bestselling author of the Twilight saga and devout Latter-day Saint. Scholars note her popular vampire novels encode themes of eternal marriage, physical chastity, and spiritual transformation rooted in LDS lifestyle practices.',
+    timelineId: 'rel-adherent-stephenie-meyer',
+    mapFeatureId: 'rel-adherent-stephenie-meyer',
+    sources: ['Twilight Reception and LDS Culture Studies'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/6/63/Stephenie_Meyer_by_Gage_Skidmore.jpg"]
+  },
+  {
+    id: 'rel-adherent-donny-osmond',
+    parentId: 'mormonism',
+    name: 'Donny Osmond',
+    description: 'Legendary teen pop idol and member of the famous Osmond singing family. He and his family served as highly visible global ambassadors for the LDS church during their television and concert career.',
+    timelineId: 'rel-adherent-donny-osmond',
+    mapFeatureId: 'rel-adherent-donny-osmond',
+    sources: ['Osmond Family Histories / LDS Media Studies'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/6/62/Donny_Osmond_%28OTRS%29.jpg"]
+  },
+  {
+    id: 'rel-adherent-ken-jennings',
+    parentId: 'mormonism',
+    name: 'Ken Jennings',
+    description: 'Jeopardy! host, author, and holder of the longest winning streak in game show history. Raised in a devout Latter-day Saint family, he served an LDS mission in Madrid, Spain.',
+    timelineId: 'rel-adherent-ken-jennings',
+    mapFeatureId: 'rel-adherent-ken-jennings',
+    sources: ['Jennings Biographies / LDS Mission Logs'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/a/af/Ken_Jennings_cropped_retouched.jpg"]
+  },
+  {
+    id: 'rel-adherent-lindsey-stirling',
+    parentId: 'mormonism',
+    name: 'Lindsey Stirling',
+    description: 'Acclaimed American violinist, dancer, and performance artist. A Brigham Young University alumna and active LDS member, she frequently highlights her faith and missionary service in her video messages.',
+    timelineId: 'rel-adherent-lindsey-stirling',
+    mapFeatureId: 'rel-adherent-lindsey-stirling',
+    sources: ['Stirling Autobiography / BYU Alumni Records'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/4/44/Lindsey_Stirling_01_26_2018_-3_%2826271970618%29.jpg"]
+  },
+  {
+    id: 'rel-adherent-harry-reid',
+    parentId: 'mormonism',
+    name: 'Harry Reid',
+    description: 'Former United States Senator and Senate Majority Leader who converted to Mormonism in college, representing a highly prominent, liberal political face of Latter-day Saint history.',
+    timelineId: 'rel-adherent-harry-reid',
+    mapFeatureId: 'rel-adherent-harry-reid',
+    sources: ['Reid Biography / Nevada Political Records'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/6/63/Harry_Reid_official_portrait_2009_%28cropped%29.jpg"]
+  },
 ];
 

@@ -4429,6 +4429,700 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
       isPeopleGroup: true,
       subLabel: 'Possible Nephilim Bloodline'
     }
+,
+  {
+    id: 'rel-figure-jesus',
+    name: 'Jesus of Nazareth',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 30,
+    description: 'Central figure of Christianity, revered as the Son of God and the Messiah. In esoteric lore, his lost years are associated with secret travels to India, Tibet, and Egypt, and his teachings are seen as an initiation into the divine spark within.',
+    source: 'Canonical Gospels / Apocrypha'
+  },
+  {
+    id: 'rel-figure-saint-paul',
+    name: 'Saint Paul the Apostle',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 67,
+    description: 'One of the most influential leaders in early Christianity, whose epistles shaped Christian theology. Occultists and alternative historians often study his mystical vision on the Road to Damascus as a high-spiritual initiation event.',
+    source: 'Acts of the Apostles / Pauline Epistles'
+  },
+  {
+    id: 'rel-figure-saint-peter',
+    name: 'Saint Peter',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 64,
+    description: 'Apostle of Jesus and the first Bishop of Rome (Pope). Ancient legends ascribe to him mystical battles in Rome against Simon Magus, a Samaritan sorcerer who claimed to possess supernatural occult powers.',
+    source: 'Acts of Saint Peter / Church Traditions'
+  },
+  {
+    id: 'rel-figure-saint-augustine',
+    name: 'Saint Augustine of Hippo',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 430,
+    description: 'One of the most important Latin Church Fathers. His writings (like Confessions and City of God) merged Platonic philosophy with Christian theology, laying the foundation for Western Christian mysticism.',
+    source: 'Confessions of Saint Augustine'
+  },
+  {
+    id: 'rel-figure-constantine',
+    name: 'Constantine the Great',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 337,
+    description: 'Roman Emperor who legalized Christianity through the Edict of Milan and convened the First Council of Nicaea, establishing orthodox Christian dogma and altering the course of world history.',
+    source: 'Life of Constantine (Eusebius)'
+  },
+  {
+    id: 'rel-adherent-jrr-tolkien',
+    name: 'J.R.R. Tolkien',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1937,
+    description: 'Devout Catholic English writer and scholar, whose Middle-earth legendarium served as a complex mythological vehicle. Alternative researchers suggest his stories encoded deep pre-deluvian history, lost continents, and angelic battles.',
+    source: 'Tolkien Letters / Mythopoeia Studies'
+  },
+  {
+    id: 'rel-adherent-mlk-jr',
+    name: 'Martin Luther King Jr.',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1963,
+    description: 'American Baptist minister and civil rights leader who advocated nonviolence. His rhetoric was deeply rooted in prophetic Christian theology, preaching a message of spiritual liberation and the \'Beloved Community\'.',
+    source: 'MLK Speeches / Theological Essays'
+  },
+  {
+    id: 'rel-adherent-isaac-newton',
+    name: 'Isaac Newton',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1687,
+    description: 'Famous physicist who was also a deeply esoteric Christian. He spent decades researching biblical chronology, alchemy, and the measurements of Solomon\'s Temple, which he believed contained structural codes of the universe.',
+    source: 'Newtonian Occult Manuscripts'
+  },
+  {
+    id: 'rel-adherent-cs-lewis',
+    name: 'C.S. Lewis',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1950,
+    description: 'Oxford scholar, novelist, and highly influential lay Christian apologist who authored The Chronicles of Narnia and Mere Christianity, defending core orthodox faith through literary allegory.',
+    source: 'Lewis Biographies / Christian Apologetics'
+  },
+  {
+    id: 'rel-adherent-johnny-cash',
+    name: 'Johnny Cash',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1977,
+    description: 'Legendary American country singer-songwriter and devout Christian convert, who recorded gospel albums, wrote a novel about the Apostle Paul, and associated his music with redemption, faith, and the struggles of the soul.',
+    source: 'Cash Autobiographies / Gospel Music History'
+  },
+  {
+    id: 'rel-adherent-florence-nightingale',
+    name: 'Florence Nightingale',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1854,
+    description: 'Founder of modern nursing and social reformer who recorded deep Christian mystical experiences, believing her nursing work was a direct, divine calling to serve God by relieving human suffering.',
+    source: 'Nightingale Theological Writings'
+  },
+  {
+    id: 'rel-figure-moses',
+    name: 'Moses',
+    type: 'event',
+    layer: 'biblical-events',
+    start: -1300,
+    description: 'Hebrew prophet and lawgiver who led the Israelites out of Egypt and received the Torah on Mount Sinai. Esoteric traditions link his wisdom to the secret mystery schools of ancient Egypt and the magical arts of Hermes.',
+    source: 'Torah / Kabbalistic Texts'
+  },
+  {
+    id: 'rel-figure-abraham',
+    name: 'Abraham',
+    type: 'event',
+    layer: 'biblical-events',
+    start: -1800,
+    description: 'Patriarch of the monotheistic Abrahamic religions. Ancient Midrashic lore claims he possessed an astronomical tablet and initiated disciples into secret laws of creation, later compiled into the Sefer Yetzirah (Book of Formation).',
+    source: 'Genesis / Midrash Rabbah'
+  },
+  {
+    id: 'rel-figure-king-david',
+    name: 'King David',
+    type: 'event',
+    layer: 'biblical-events',
+    start: -1000,
+    description: 'The second king of the United Kingdom of Israel and Judah, to whom the authorship of the Psalms is traditionally attributed. He established Jerusalem as the spiritual and political center of Judaism.',
+    source: 'Books of Samuel / Book of Psalms'
+  },
+  {
+    id: 'rel-adherent-albert-einstein',
+    name: 'Albert Einstein',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1905,
+    description: 'Renowned theoretical physicist of Jewish heritage. He identified his spiritual beliefs with Spinoza\'s pantheism, describing a deep cosmic religious feeling and awe before the harmony of natural laws.',
+    source: 'Einstein\'s Writings on Religion / Spinoza Studies'
+  },
+  {
+    id: 'rel-adherent-maimonides',
+    name: 'Maimonides',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1190,
+    description: 'Preeminent medieval Jewish philosopher and physician who authored the Guide for the Perplexed, seeking to harmonize Torah with Aristotelian science, while encoding secret layers of allegorical interpretation for initiates.',
+    source: 'Guide for the Perplexed / Mishneh Torah'
+  },
+  {
+    id: 'rel-adherent-franz-kafka',
+    name: 'Franz Kafka',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1915,
+    description: 'Bohemian Jewish writer whose surreal, bureaucratic nightmares are interpreted by scholars as modern Kabbalistic parables of human alienation, the hiddenness of the divine, and the inaccessible nature of the absolute law.',
+    source: 'Kafka Diaries / Kabbalistic Literary Studies'
+  },
+  {
+    id: 'rel-adherent-spinoza',
+    name: 'Baruch Spinoza',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1670,
+    description: 'Dutch-Jewish philosopher who laid the groundwork for the Enlightenment. Despite being excommunicated from the Jewish community for his pantheistic views, he defined \'God or Nature\' as the single infinite substance.',
+    source: 'Ethics (Spinoza) / Jewish Philosophy History'
+  },
+  {
+    id: 'rel-adherent-bernstein',
+    name: 'Leonard Bernstein',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1963,
+    description: 'Celebrated American composer and conductor whose works (such as the Kaddish Symphony and Chichester Psalms) directly explored Jewish liturgy, theology, and the eternal dialogue between humanity and the divine.',
+    source: 'Bernstein Musical Archives'
+  },
+  {
+    id: 'rel-adherent-freud',
+    name: 'Sigmund Freud',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1913,
+    description: 'Founder of psychoanalysis, who identified as a cultural Jew. In works like Moses and Monotheism, he psychoanalyzed the origins of Jewish monotheism, linking it to the historical legacy of the Egyptian Aten cult.',
+    source: 'Moses and Monotheism (Freud)'
+  },
+  {
+    id: 'rel-adherent-wiesel',
+    name: 'Elie Wiesel',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1960,
+    description: 'Holocaust survivor, Nobel laureate, and author of Night. He used his Jewish faith, Hassidic stories, and theological wrestling with the problem of evil to serve as a moral voice against indifference and human suffering.',
+    source: 'Wiesel Memoirs / Holocaust Studies'
+  },
+  {
+    id: 'rel-adherent-golda-meir',
+    name: 'Golda Meir',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1969,
+    description: 'Historic statesman and Prime Minister of Israel who championed Zionist history and Jewish cultural identity, serving as a prominent international symbol of Jewish resilience during the mid-20th century.',
+    source: 'Meir Autobiography / Israeli State Archives'
+  },
+  {
+    id: 'rel-figure-muhammad',
+    name: 'Prophet Muhammad',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 622,
+    description: 'The founder of Islam who received the divine revelations of the Quran. Sufi mystics revere his Night Journey (Isra and Mi\'raj)—an ascension through the seven heavens to the Divine Presence—as the ultimate blueprint for spiritual ascension.',
+    source: 'Hadith / Early Islamic Biographies'
+  },
+  {
+    id: 'rel-figure-ali',
+    name: 'Ali ibn Abi Talib',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 661,
+    description: 'Cousin and son-in-law of Muhammad, first Shia Imam. In esoteric Sufism, he is viewed as the gatekeeper of mystical knowledge (Batin) and the father of spiritual knight-errantry and metaphysical wisdom.',
+    source: 'Nahj al-Balagha / Sufi Order Genealogies'
+  },
+  {
+    id: 'rel-figure-al-ghazali',
+    name: 'Al-Ghazali',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1111,
+    description: 'Highly influential Persian Islamic theologian, jurist, and Sufi mystic, whose works (like The Incoherence of the Philosophers and The Revival of the Religious Sciences) reconciled orthodox Sunni theology with mystical Sufi practice.',
+    source: 'Revival of the Religious Sciences (Al-Ghazali)'
+  },
+  {
+    id: 'rel-adherent-muhammad-ali',
+    name: 'Muhammad Ali',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1964,
+    description: 'Legendary heavyweight boxer and convert to Sunni Islam (formerly Nation of Islam). He used his global platform to champion civil rights and spiritual values, viewing his athletic talents as a gift to serve divine purpose.',
+    source: 'Ali Autobiographies / Civil Rights History'
+  },
+  {
+    id: 'rel-adherent-malcolm-x',
+    name: 'Malcolm X (el-Hajj Malik el-Shabazz)',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1964,
+    description: 'Influential civil rights leader who converted to Sunni Islam. His transformational pilgrimage to Mecca (Hajj) shifted his perspective toward universal brotherhood, reshaping his spiritual fight for human rights.',
+    source: 'Autobiography of Malcolm X'
+  },
+  {
+    id: 'rel-adherent-rumi',
+    name: 'Jalal al-Din Muhammad Rumi',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1273,
+    description: '13th-century Persian poet and Sufi mystic, whose poems celebrate ecstatic union with the divine. He founded the Mevlevi Order (Whirling Dervishes), using music and dance as a physical ritual to achieve cosmic harmony.',
+    source: 'Masnavi-ye Ma\'navi / Divan-e Shams'
+  },
+  {
+    id: 'rel-adherent-ibn-sina',
+    name: 'Ibn Sina (Avicenna)',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1037,
+    description: 'Preeminent polymath of the Islamic Golden Age. He wrote the Canon of Medicine and the Book of Healing, merging Islamic theology, Aristotelian philosophy, and Neoplatonism to describe the soul and creation.',
+    source: 'Book of Healing / Avicennian Studies'
+  },
+  {
+    id: 'rel-adherent-ibn-battuta',
+    name: 'Ibn Battuta',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1354,
+    description: 'Greatest Islamic explorer and traveler of the pre-modern world, who journeyed across Africa, the Middle East, India, and China, documenting the diverse cultures of the Islamic world (Dar al-Islam).',
+    source: 'The Rihla (Travels of Ibn Battuta)'
+  },
+  {
+    id: 'rel-adherent-chappelle',
+    name: 'Dave Chappelle',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1998,
+    description: 'Acclaimed American stand-up comedian and actor who converted to Islam in 1991. He credits his faith with giving him a moral compass, grounding him against the spiritual challenges of fame and Hollywood.',
+    source: 'Chappelle Interviews / Celebrity Conversion Profiles'
+  },
+  {
+    id: 'rel-adherent-abdul-jabbar',
+    name: 'Kareem Abdul-Jabbar',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1971,
+    description: 'NBA legend, writer, and cultural icon who converted to Islam in 1971. He has used his prominent public voice to advocate for racial equality, social justice, and a deeper understanding of Islam.',
+    source: 'Abdul-Jabbar Autobiography / Civil Rights History'
+  },
+  {
+    id: 'rel-adherent-cat-stevens',
+    name: 'Cat Stevens (Yusuf Islam)',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1977,
+    description: 'Famous British folk singer-songwriter who converted to Islam in 1977 following a near-drowning experience. He dedicated his life to education, philanthropy, and representing Islamic music and culture globally.',
+    source: 'Yusuf Islam Biographies / Conversion Essays'
+  },
+  {
+    id: 'rel-figure-buddha',
+    name: 'Siddhartha Gautama (The Buddha)',
+    type: 'event',
+    layer: 'biblical-events',
+    start: -480,
+    description: 'Spiritual teacher who founded Buddhism. Esoteric Vajrayana traditions claim he transmitted secret Tantras (like the Kalachakra) directly to King Suchandra of the subterranean kingdom of Shambhala to preserve them for a future golden age.',
+    source: 'Pali Canon / Kalachakra Tantra'
+  },
+  {
+    id: 'rel-figure-nagarjuna',
+    name: 'Nagarjuna',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 200,
+    description: 'One of the most important Buddhist philosophers, founder of the Madhyamaka school. Legend states he retrieved the sacred Prajnaparamita Sutras (Wisdom Teachings) from the Nagas (serpentine beings) who guarded them in their underwater palace.',
+    source: 'Madhyamaka Karika / Buddhist Lore'
+  },
+  {
+    id: 'rel-figure-bodhidharma',
+    name: 'Bodhidharma',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 530,
+    description: 'Buddhist monk traditionally credited as the transmitter of Chan/Zen Buddhism to China. Famous for his years of wall-gazing meditation at the Shaolin Temple and establishing the spiritual framework for martial arts.',
+    source: 'Zen Monastic Chronicles'
+  },
+  {
+    id: 'rel-figure-thich-nhat-hanh',
+    name: 'Thich Nhat Hanh',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1967,
+    description: 'Renowned Vietnamese Zen master, poet, and peace activist who coined the term \'Engaged Buddhism\', integrating mindfulness with social action and global peace movements.',
+    source: 'Miracle of Mindfulness / Plum Village Archives'
+  },
+  {
+    id: 'rel-adherent-dalai-lama',
+    name: '14th Dalai Lama (Tenzin Gyatso)',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1959,
+    description: 'Spiritual leader of Tibetan Buddhism. Esoteric traditions view him as the incarnation of Avalokiteshvara, the bodhisattva of compassion, and the earthly guardian of the secrets of Shambhala and the Kalachakra lineages.',
+    source: 'Tibetan Government-in-Exile Records'
+  },
+  {
+    id: 'rel-adherent-steve-jobs',
+    name: 'Steve Jobs',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1974,
+    description: 'Co-founder of Apple who traveled to India in 1974 seeking spiritual enlightenment and became a lifelong practitioner of Zen Buddhism. He credited Zen philosophy with shaping his minimalist design aesthetics and focus.',
+    source: 'Steve Jobs Biography (Walter Isaacson) / Zen Studies'
+  },
+  {
+    id: 'rel-adherent-richard-gere',
+    name: 'Richard Gere',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1978,
+    description: 'Famous actor and devout student of Tibetan Buddhism. A close disciple of the 14th Dalai Lama, he is an active advocate for Tibetan human rights and promoter of Buddhist philosophy and meditation in the West.',
+    source: 'Discourses on Tibetan Buddhist Studies'
+  },
+  {
+    id: 'rel-adherent-keanu-reeves',
+    name: 'Keanu Reeves',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1993,
+    description: 'Famous actor who played Prince Siddhartha in Bernardo Bertolucci\'s 1993 film Little Buddha. He underwent extensive Buddhist training for the role and maintains a deep philosophical respect for Buddhist mindfulness and ethics.',
+    source: 'Film Production Records / Actor Interviews'
+  },
+  {
+    id: 'rel-adherent-leonard-cohen',
+    name: 'Leonard Cohen',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1996,
+    description: 'Acclaimed Canadian singer-songwriter who spent years living at Mount Baldy Zen Center, becoming an ordained Rinzai Zen Buddhist monk, taking the name Jikan (\'Silence\'). His music deeply reflects Zen themes of detachment.',
+    source: 'Cohen Biographies / Zen Monastic Records'
+  },
+  {
+    id: 'rel-adherent-herbie-hancock',
+    name: 'Herbie Hancock',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1972,
+    description: 'Legendary jazz pianist and composer who has practiced Nichiren Buddhism for decades. He credits his daily practice of chanting Nam Myoho Renge Kyo with unlocking creative flow and global humanistic values.',
+    source: 'SGI Member Profiles / Jazz Biographies'
+  },
+  {
+    id: 'rel-adherent-tina-turner',
+    name: 'Tina Turner',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1973,
+    description: 'Legendary American rock singer who converted to Nichiren Buddhism in 1973. She attributed her survival, inner strength, and career revival to her spiritual chanting practice, writing books on Buddhist wisdom.',
+    source: 'Turner Memoirs / SGI History'
+  },
+  {
+    id: 'rel-figure-adi-shankara',
+    name: 'Adi Shankara',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 820,
+    description: '8th-century philosopher and theologian who consolidated the doctrine of Advaita Vedanta (non-dualism). He traveled across India establishing monastic centers, asserting the absolute identity of Atman (soul) and Brahman (divine source).',
+    source: 'Shankara Bhashyas / Advaita Treatises'
+  },
+  {
+    id: 'rel-figure-ramakrishna',
+    name: 'Sri Ramakrishna Paramahansa',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1886,
+    description: '19th-century Indian mystic and yogi who experienced ecstatic states of communion with the divine mother Kali and verified through direct practice that all religious paths lead to the same non-dual realization.',
+    source: 'Gospel of Sri Ramakrishna'
+  },
+  {
+    id: 'rel-figure-vivekananda',
+    name: 'Swami Vivekananda',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1893,
+    description: 'Indian Hindu monk who introduced Vedanta and Yoga to the Western world at the 1893 Parliament of Religions in Chicago, teaching the spiritual unity of all religions and the divine nature of the human soul.',
+    source: 'Complete Works of Swami Vivekananda'
+  },
+  {
+    id: 'rel-figure-yogananda',
+    name: 'Paramahansa Yogananda',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1920,
+    description: 'Renowned yogi and guru who introduced millions of Westerners to Kriya Yoga through his Autobiography of a Yogi. He taught the underlying unity between the teachings of Jesus and Krishna.',
+    source: 'Autobiography of a Yogi'
+  },
+  {
+    id: 'rel-figure-prabhupada',
+    name: 'A.C. Bhaktivedanta Swami Prabhupada',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1966,
+    description: 'Indian spiritual teacher who founded the International Society for Krishna Consciousness (ISKCON), translating major Vedic scriptures and bringing Gaudiya Vaishnavism chanting to the global stage.',
+    source: 'ISKCON Foundational Texts / Prabhupada Biographies'
+  },
+  {
+    id: 'rel-figure-neem-karoli-baba',
+    name: 'Neem Karoli Baba',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1973,
+    description: 'Venerated Hindu guru and devotee of Hanuman. His Kainchi Dham ashram became a major spiritual sanctuary, drawing seekers like Ram Dass, Steve Jobs, and Julia Roberts to practice unconditional love and service.',
+    source: 'Miracle of Love (Ram Dass)'
+  },
+  {
+    id: 'rel-adherent-george-harrison',
+    name: 'George Harrison',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1968,
+    description: 'Lead guitarist of the Beatles who embraced Gaudiya Vaishnavism (Hinduism) after visiting India. He incorporated Indian spirituality, meditation, and instruments into his music, funding the first Hare Krishna temple in London.',
+    source: 'George Harrison Biographies / ISKCON History'
+  },
+  {
+    id: 'rel-adherent-julia-roberts',
+    name: 'Julia Roberts',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 2010,
+    description: 'Award-winning actress who converted to Hinduism while filming Eat Pray Love. She became a devotee of Neem Karoli Baba, practicing yoga and chanting as part of her spiritual life.',
+    source: 'Interviews on Hindu conversion'
+  },
+  {
+    id: 'rel-adherent-mahatma-gandhi',
+    name: 'Mahatma Gandhi',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1915,
+    description: 'Indian lawyer and political ethicist who led the successful campaign for India\'s independence using nonviolent resistance. His philosophy of Satyagraha (truth-force) was deeply rooted in the Bhagavad Gita and Hindu concepts of Ahimsa.',
+    source: 'Gandhi\'s Autobiography / Satyagraha Essays'
+  },
+  {
+    id: 'rel-adherent-tagore',
+    name: 'Rabindranath Tagore',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1913,
+    description: 'Genius Bengali polymath, poet, and Nobel laureate who reshaped literature and music, blending deep Upanishadic spiritual pantheism and humanism into his poems (Gitanjali).',
+    source: 'Tagore Literary Archives'
+  },
+  {
+    id: 'rel-adherent-ramanujan',
+    name: 'Srinivasa Ramanujan',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1918,
+    description: 'Genius Indian mathematician who credited his ground-breaking mathematical discoveries and formulas to active dreams and revelations sent by his family goddess, Namagiri Thayar of Namakkal.',
+    source: 'Ramanujan Mathematical Notebooks'
+  },
+  {
+    id: 'rel-figure-l-ron-hubbard',
+    name: 'L. Ron Hubbard',
+    type: 'event',
+    layer: 'alchemy-occult',
+    start: 1954,
+    description: 'American writer, occultist, and founder of Scientology. Prior to launching Dianetics, he participated in the Babalon Working rituals with rocket scientist Jack Parsons in Pasadena to open an interdimensional gateway.',
+    source: 'Dianetics / Occult Biography of Parsons and Hubbard'
+  },
+  {
+    id: 'rel-figure-david-miscavige',
+    name: 'David Miscavige',
+    type: 'event',
+    layer: 'alchemy-occult',
+    start: 1986,
+    description: 'Leader of the Church of Scientology, holding the title of Chairman of the Board of the Religious Technology Center, who oversaw the expansion of the church\'s global facilities and the preservation of L. Ron Hubbard\'s works.',
+    source: 'Church of Scientology Leadership Records'
+  },
+  {
+    id: 'rel-adherent-tom-cruise',
+    name: 'Tom Cruise',
+    type: 'event',
+    layer: 'alchemy-occult',
+    start: 1990,
+    description: 'World-famous actor and prominent advocate for Scientology. He credits the application of Hubbard\'s teachings with his immense success and serves as one of the religion\'s highest-ranking public figures.',
+    source: 'Scientology Publications / Public Interviews'
+  },
+  {
+    id: 'rel-adherent-john-travolta',
+    name: 'John Travolta',
+    type: 'event',
+    layer: 'alchemy-occult',
+    start: 1975,
+    description: 'Award-winning actor who joined Scientology in 1975. He has been one of the church\'s most loyal public supporters, crediting Scientology\'s spiritual counseling techniques with helping him navigate his career and personal life.',
+    source: 'Travolta Interviews / Scientology History'
+  },
+  {
+    id: 'rel-adherent-beck',
+    name: 'Beck Hansen (Beck)',
+    type: 'event',
+    layer: 'alchemy-occult',
+    start: 1994,
+    description: 'Famous American alternative rock musician who was raised in Scientology by his parents and identified as a Scientologist for most of his life, discussing its influence on his creative mindset and work ethic.',
+    source: 'Music Biographies / Artist Interviews'
+  },
+  {
+    id: 'rel-adherent-kirstie-alley',
+    name: 'Kirstie Alley',
+    type: 'event',
+    layer: 'alchemy-occult',
+    start: 1979,
+    description: 'Well-known American actress and prominent Scientologist, who credited the church\'s drug rehabilitation program Narconon with saving her life, becoming a highly vocal public advocate of the system.',
+    source: 'Alley Biographies / Narconon Testimonials'
+  },
+  {
+    id: 'rel-adherent-elisabeth-moss',
+    name: 'Elisabeth Moss',
+    type: 'event',
+    layer: 'alchemy-occult',
+    start: 2007,
+    description: 'Award-winning actress who was raised in Scientology and has publicly defended her faith, describing the religion\'s focus on self-realization, personal freedom, and communication as key components of her career.',
+    source: 'Moss Public Interviews / Celebrity Profiles'
+  },
+  {
+    id: 'rel-adherent-danny-masterson',
+    name: 'Danny Masterson',
+    type: 'event',
+    layer: 'alchemy-occult',
+    start: 1998,
+    description: 'Actor who was raised in a multi-generational Scientology family and long served as a prominent celebrity supporter, before becoming involved in high-profile legal controversies regarding the church\'s internal arbitration rules.',
+    source: 'L.A. Court Records / Scientology Legal History'
+  },
+  {
+    id: 'rel-adherent-chick-corea',
+    name: 'Chick Corea',
+    type: 'event',
+    layer: 'alchemy-occult',
+    start: 1968,
+    description: 'Legendary jazz fusion keyboardist, composer, and Scientologist, who credited L. Ron Hubbard\'s study tech and administrative systems with helping organize his musical collaborations and creative focus.',
+    source: 'Corea Memoirs / Jazz History'
+  },
+  {
+    id: 'rel-adherent-nancy-cartwright',
+    name: 'Nancy Cartwright',
+    type: 'event',
+    layer: 'alchemy-occult',
+    start: 1991,
+    description: 'Renowned American voice actress (voice of Bart Simpson) and high-level Scientologist, who famously donated tens of millions of dollars to the church\'s building programs and theological archives.',
+    source: 'Cartwright Autobiography / IAS Records'
+  },
+  {
+    id: 'rel-adherent-peña',
+    name: 'Michael Peña',
+    type: 'event',
+    layer: 'alchemy-occult',
+    start: 2000,
+    description: 'Acclaimed character actor who joined Scientology in 2000. He credits the church\'s communication courses and spiritual counseling with dramatically improving his confidence and acting capabilities.',
+    source: 'Peña Interviews / Celebrity Profiles'
+  },
+  {
+    id: 'rel-figure-joseph-smith',
+    name: 'Joseph Smith Jr.',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1830,
+    description: 'Founder of Mormonism, who claimed to translate ancient golden plates delivered by the Angel Moroni. Alternative historians point to his early use of seer stones and folk magic as part of his spiritual translation method.',
+    source: 'Book of Mormon / History of the Church'
+  },
+  {
+    id: 'rel-figure-brigham-young',
+    name: 'Brigham Young',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1847,
+    description: 'Second president of the Latter-day Saint church, who led the Mormon pioneers on their exodus across the plains to the Salt Lake Valley, establishing the extensive network of settlements that form the modern Mormon corridor.',
+    source: 'Pioneer Journals / LDS History'
+  },
+  {
+    id: 'rel-adherent-mitt-romney',
+    name: 'Mitt Romney',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 2012,
+    description: 'American politician, businessman, and prominent member of the Latter-day Saint church. He served as a bishop and stake president in Boston, representing the public face of mainstream Mormonism during his 2012 presidential run.',
+    source: 'LDS Church Membership Profiles / Political Biographies'
+  },
+  {
+    id: 'rel-adherent-brandon-sanderson',
+    name: 'Brandon Sanderson',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 2005,
+    description: 'Bestselling fantasy novelist and active member of the Latter-day Saint church. His complex magic systems, cosmological world-building, and themes of godhood and ascension in the Cosmere show subtle influences from LDS theology.',
+    source: 'Cosmere Metaphysics Discussions / Sanderson Interviews'
+  },
+  {
+    id: 'rel-adherent-gladys-knight',
+    name: 'Gladys Knight (\'Empress of Soul\')',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1997,
+    description: 'Legendary singer and songwriter who converted to Mormonism in 1997. She founded the Saints Unified Voices choir to bring gospel-style music to LDS worship, showcasing the diversity of modern Latter-day Saint adherents.',
+    source: 'Knight Autobiographies / LDS Conversion Stories'
+  },
+  {
+    id: 'rel-adherent-orson-scott-card',
+    name: 'Orson Scott Card',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1985,
+    description: 'Prominent science fiction author of Ender\'s Game and practicing LDS member. A direct descendant of Brigham Young, his novels explore ethical choices, community, and themes of human divinity linked to Mormon ideals.',
+    source: 'LDS Literary Histories / Card Biographies'
+  },
+  {
+    id: 'rel-adherent-stephenie-meyer',
+    name: 'Stephenie Meyer',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 2005,
+    description: 'Bestselling author of the Twilight saga and devout Latter-day Saint. Scholars note her popular vampire novels encode themes of eternal marriage, physical chastity, and spiritual transformation rooted in LDS lifestyle practices.',
+    source: 'Twilight Reception and LDS Culture Studies'
+  },
+  {
+    id: 'rel-adherent-donny-osmond',
+    name: 'Donny Osmond',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1970,
+    description: 'Legendary teen pop idol and member of the famous Osmond singing family. He and his family served as highly visible global ambassadors for the LDS church during their television and concert career.',
+    source: 'Osmond Family Histories / LDS Media Studies'
+  },
+  {
+    id: 'rel-adherent-ken-jennings',
+    name: 'Ken Jennings',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 2004,
+    description: 'Jeopardy! host, author, and holder of the longest winning streak in game show history. Raised in a devout Latter-day Saint family, he served an LDS mission in Madrid, Spain.',
+    source: 'Jennings Biographies / LDS Mission Logs'
+  },
+  {
+    id: 'rel-adherent-lindsey-stirling',
+    name: 'Lindsey Stirling',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 2010,
+    description: 'Acclaimed American violinist, dancer, and performance artist. A Brigham Young University alumna and active LDS member, she frequently highlights her faith and missionary service in her video messages.',
+    source: 'Stirling Autobiography / BYU Alumni Records'
+  },
+  {
+    id: 'rel-adherent-harry-reid',
+    name: 'Harry Reid',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 2007,
+    description: 'Former United States Senator and Senate Majority Leader who converted to Mormonism in college, representing a highly prominent, liberal political face of Latter-day Saint history.',
+    source: 'Reid Biography / Nevada Political Records'
+  }
   ];
 
 export interface TimelineLocation {
@@ -4722,7 +5416,84 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'peter-levenda-lifespan': { lng: -73.9712, lat: 40.7831, locationName: 'New York City, NY', category: 'The Occult' },
   'robin-hood-legends-era': { lng: -1.0772, lat: 53.2045, locationName: 'Sherwood Forest (Nottinghamshire, England)', category: 'Myths / Legends' },
   'arthurian-legend-era': { lng: -4.7600, lat: 50.6672, locationName: 'Tintagel Castle (Cornwall, England)', category: 'Myths / Legends' },
-  'tomb-king-arthur-discovered': { lng: -2.7161, lat: 51.1462, locationName: 'Glastonbury Abbey (Somerset, England)', category: 'Myths / Legends' }
+  'tomb-king-arthur-discovered': { lng: -2.7161, lat: 51.1462, locationName: 'Glastonbury Abbey (Somerset, England)', category: 'Myths / Legends' },
+  'rel-figure-jesus': { lng: 35.3035, lat: 32.7019, locationName: 'Jesus of Nazareth (Associated Location)', category: 'Religion' },
+  'rel-figure-saint-paul': { lng: 34.8953, lat: 36.9164, locationName: 'Saint Paul the Apostle (Associated Location)', category: 'Religion' },
+  'rel-figure-saint-peter': { lng: 35.6267, lat: 32.8883, locationName: 'Saint Peter (Associated Location)', category: 'Religion' },
+  'rel-figure-saint-augustine': { lng: 7.7554, lat: 36.9028, locationName: 'Saint Augustine of Hippo (Associated Location)', category: 'Religion' },
+  'rel-figure-constantine': { lng: 12.4964, lat: 41.9028, locationName: 'Constantine the Great (Associated Location)', category: 'Religion' },
+  'rel-adherent-jrr-tolkien': { lng: -1.2577, lat: 51.752, locationName: 'J.R.R. Tolkien (Associated Location)', category: 'Religion' },
+  'rel-adherent-mlk-jr': { lng: -84.388, lat: 33.749, locationName: 'Martin Luther King Jr. (Associated Location)', category: 'Religion' },
+  'rel-adherent-isaac-newton': { lng: -0.6272, lat: 52.8093, locationName: 'Isaac Newton (Associated Location)', category: 'Religion' },
+  'rel-adherent-cs-lewis': { lng: -1.2577, lat: 51.752, locationName: 'C.S. Lewis (Associated Location)', category: 'Religion' },
+  'rel-adherent-johnny-cash': { lng: -91.2429, lat: 35.2506, locationName: 'Johnny Cash (Associated Location)', category: 'Religion' },
+  'rel-adherent-florence-nightingale': { lng: 11.2558, lat: 43.7696, locationName: 'Florence Nightingale (Associated Location)', category: 'Religion' },
+  'rel-figure-moses': { lng: 33.975, lat: 28.5392, locationName: 'Moses (Associated Location)', category: 'Religion' },
+  'rel-figure-abraham': { lng: 46.1044, lat: 30.9628, locationName: 'Abraham (Associated Location)', category: 'Religion' },
+  'rel-figure-king-david': { lng: 35.2137, lat: 31.7683, locationName: 'King David (Associated Location)', category: 'Religion' },
+  'rel-adherent-albert-einstein': { lng: 9.9876, lat: 48.4011, locationName: 'Albert Einstein (Associated Location)', category: 'Religion' },
+  'rel-adherent-maimonides': { lng: -4.7794, lat: 37.8882, locationName: 'Maimonides (Associated Location)', category: 'Religion' },
+  'rel-adherent-franz-kafka': { lng: 14.4378, lat: 50.0755, locationName: 'Franz Kafka (Associated Location)', category: 'Religion' },
+  'rel-adherent-spinoza': { lng: 4.8952, lat: 52.3702, locationName: 'Baruch Spinoza (Associated Location)', category: 'Religion' },
+  'rel-adherent-bernstein': { lng: -71.1856, lat: 42.6006, locationName: 'Leonard Bernstein (Associated Location)', category: 'Religion' },
+  'rel-adherent-freud': { lng: 17.8292, lat: 49.6409, locationName: 'Sigmund Freud (Associated Location)', category: 'Religion' },
+  'rel-adherent-wiesel': { lng: 23.8914, lat: 47.9286, locationName: 'Elie Wiesel (Associated Location)', category: 'Religion' },
+  'rel-adherent-golda-meir': { lng: 30.5234, lat: 50.4501, locationName: 'Golda Meir (Associated Location)', category: 'Religion' },
+  'rel-figure-muhammad': { lng: 39.8262, lat: 21.3891, locationName: 'Prophet Muhammad (Associated Location)', category: 'Religion' },
+  'rel-figure-ali': { lng: 44.325, lat: 31.9958, locationName: 'Ali ibn Abi Talib (Associated Location)', category: 'Religion' },
+  'rel-figure-al-ghazali': { lng: 59.62, lat: 36.48, locationName: 'Al-Ghazali (Associated Location)', category: 'Religion' },
+  'rel-adherent-muhammad-ali': { lng: -85.7585, lat: 38.2527, locationName: 'Muhammad Ali (Associated Location)', category: 'Religion' },
+  'rel-adherent-malcolm-x': { lng: -95.998, lat: 41.2565, locationName: 'Malcolm X (el-Hajj Malik el-Shabazz) (Associated Location)', category: 'Religion' },
+  'rel-adherent-rumi': { lng: 32.505, lat: 37.8748, locationName: 'Jalal al-Din Muhammad Rumi (Associated Location)', category: 'Religion' },
+  'rel-adherent-ibn-sina': { lng: 64.425, lat: 39.775, locationName: 'Ibn Sina (Avicenna) (Associated Location)', category: 'Religion' },
+  'rel-adherent-ibn-battuta': { lng: -5.8333, lat: 35.7833, locationName: 'Ibn Battuta (Associated Location)', category: 'Religion' },
+  'rel-adherent-chappelle': { lng: -77.0369, lat: 38.9072, locationName: 'Dave Chappelle (Associated Location)', category: 'Religion' },
+  'rel-adherent-abdul-jabbar': { lng: -73.9442, lat: 40.6782, locationName: 'Kareem Abdul-Jabbar (Associated Location)', category: 'Religion' },
+  'rel-adherent-cat-stevens': { lng: -0.1278, lat: 51.5074, locationName: 'Cat Stevens (Yusuf Islam) (Associated Location)', category: 'Religion' },
+  'rel-figure-buddha': { lng: 83.2764, lat: 27.4705, locationName: 'Siddhartha Gautama (The Buddha) (Associated Location)', category: 'Religion' },
+  'rel-figure-nagarjuna': { lng: 79.2319, lat: 16.5256, locationName: 'Nagarjuna (Associated Location)', category: 'Religion' },
+  'rel-figure-bodhidharma': { lng: 79.7028, lat: 12.9167, locationName: 'Bodhidharma (Associated Location)', category: 'Religion' },
+  'rel-figure-thich-nhat-hanh': { lng: 107.5796, lat: 16.4678, locationName: 'Thich Nhat Hanh (Associated Location)', category: 'Religion' },
+  'rel-adherent-dalai-lama': { lng: 76.3244, lat: 32.219, locationName: '14th Dalai Lama (Tenzin Gyatso) (Associated Location)', category: 'Religion' },
+  'rel-adherent-steve-jobs': { lng: -122.4194, lat: 37.7749, locationName: 'Steve Jobs (Associated Location)', category: 'Religion' },
+  'rel-adherent-richard-gere': { lng: -75.1652, lat: 39.9526, locationName: 'Richard Gere (Associated Location)', category: 'Religion' },
+  'rel-adherent-keanu-reeves': { lng: 35.5018, lat: 33.8938, locationName: 'Keanu Reeves (Associated Location)', category: 'Religion' },
+  'rel-adherent-leonard-cohen': { lng: -73.5673, lat: 45.5017, locationName: 'Leonard Cohen (Associated Location)', category: 'Religion' },
+  'rel-adherent-herbie-hancock': { lng: -87.6298, lat: 41.8781, locationName: 'Herbie Hancock (Associated Location)', category: 'Religion' },
+  'rel-adherent-tina-turner': { lng: -89.2662, lat: 35.6881, locationName: 'Tina Turner (Associated Location)', category: 'Religion' },
+  'rel-figure-adi-shankara': { lng: 76.4389, lat: 10.1633, locationName: 'Adi Shankara (Associated Location)', category: 'Religion' },
+  'rel-figure-ramakrishna': { lng: 87.7333, lat: 22.8833, locationName: 'Sri Ramakrishna Paramahansa (Associated Location)', category: 'Religion' },
+  'rel-figure-vivekananda': { lng: 88.3639, lat: 22.5726, locationName: 'Swami Vivekananda (Associated Location)', category: 'Religion' },
+  'rel-figure-yogananda': { lng: 83.4116, lat: 26.7606, locationName: 'Paramahansa Yogananda (Associated Location)', category: 'Religion' },
+  'rel-figure-prabhupada': { lng: 88.3639, lat: 22.5726, locationName: 'A.C. Bhaktivedanta Swami Prabhupada (Associated Location)', category: 'Religion' },
+  'rel-figure-neem-karoli-baba': { lng: 79.4667, lat: 29.3667, locationName: 'Neem Karoli Baba (Associated Location)', category: 'Religion' },
+  'rel-adherent-george-harrison': { lng: -2.9916, lat: 53.4084, locationName: 'George Harrison (Associated Location)', category: 'Religion' },
+  'rel-adherent-julia-roberts': { lng: -84.5144, lat: 33.8839, locationName: 'Julia Roberts (Associated Location)', category: 'Religion' },
+  'rel-adherent-mahatma-gandhi': { lng: 69.6006, lat: 21.6417, locationName: 'Mahatma Gandhi (Associated Location)', category: 'Religion' },
+  'rel-adherent-tagore': { lng: 88.3639, lat: 22.5726, locationName: 'Rabindranath Tagore (Associated Location)', category: 'Religion' },
+  'rel-adherent-ramanujan': { lng: 77.7172, lat: 11.341, locationName: 'Srinivasa Ramanujan (Associated Location)', category: 'Religion' },
+  'rel-figure-l-ron-hubbard': { lng: -118.2437, lat: 34.0522, locationName: 'L. Ron Hubbard (Associated Location)', category: 'Religion' },
+  'rel-figure-david-miscavige': { lng: -75.1652, lat: 39.9526, locationName: 'David Miscavige (Associated Location)', category: 'Religion' },
+  'rel-adherent-tom-cruise': { lng: -76.1474, lat: 43.0481, locationName: 'Tom Cruise (Associated Location)', category: 'Religion' },
+  'rel-adherent-john-travolta': { lng: -73.9926, lat: 40.8929, locationName: 'John Travolta (Associated Location)', category: 'Religion' },
+  'rel-adherent-beck': { lng: -118.2437, lat: 34.0522, locationName: 'Beck Hansen (Beck) (Associated Location)', category: 'Religion' },
+  'rel-adherent-kirstie-alley': { lng: -97.3375, lat: 37.6889, locationName: 'Kirstie Alley (Associated Location)', category: 'Religion' },
+  'rel-adherent-elisabeth-moss': { lng: -118.2437, lat: 34.0522, locationName: 'Elisabeth Moss (Associated Location)', category: 'Religion' },
+  'rel-adherent-danny-masterson': { lng: -73.135, lat: 40.8256, locationName: 'Danny Masterson (Associated Location)', category: 'Religion' },
+  'rel-adherent-chick-corea': { lng: -71.0395, lat: 42.4001, locationName: 'Chick Corea (Associated Location)', category: 'Religion' },
+  'rel-adherent-nancy-cartwright': { lng: -84.1916, lat: 39.7589, locationName: 'Nancy Cartwright (Associated Location)', category: 'Religion' },
+  'rel-adherent-peña': { lng: -87.6298, lat: 41.8781, locationName: 'Michael Peña (Associated Location)', category: 'Religion' },
+  'rel-figure-joseph-smith': { lng: -72.4578, lat: 43.7917, locationName: 'Joseph Smith Jr. (Associated Location)', category: 'Religion' },
+  'rel-figure-brigham-young': { lng: -72.8711, lat: 42.7911, locationName: 'Brigham Young (Associated Location)', category: 'Religion' },
+  'rel-adherent-mitt-romney': { lng: -83.0458, lat: 42.3314, locationName: 'Mitt Romney (Associated Location)', category: 'Religion' },
+  'rel-adherent-brandon-sanderson': { lng: -96.7026, lat: 40.8136, locationName: 'Brandon Sanderson (Associated Location)', category: 'Religion' },
+  'rel-adherent-gladys-knight': { lng: -84.388, lat: 33.749, locationName: 'Gladys Knight (\'Empress of Soul\') (Associated Location)', category: 'Religion' },
+  'rel-adherent-orson-scott-card': { lng: -119.2773, lat: 46.2857, locationName: 'Orson Scott Card (Associated Location)', category: 'Religion' },
+  'rel-adherent-stephenie-meyer': { lng: -72.6736, lat: 41.7658, locationName: 'Stephenie Meyer (Associated Location)', category: 'Religion' },
+  'rel-adherent-donny-osmond': { lng: -111.9738, lat: 41.223, locationName: 'Donny Osmond (Associated Location)', category: 'Religion' },
+  'rel-adherent-ken-jennings': { lng: -122.3762, lat: 47.8091, locationName: 'Ken Jennings (Associated Location)', category: 'Religion' },
+  'rel-adherent-lindsey-stirling': { lng: -117.8677, lat: 33.7456, locationName: 'Lindsey Stirling (Associated Location)', category: 'Religion' },
+  'rel-adherent-harry-reid': { lng: -114.92, lat: 35.4661, locationName: 'Harry Reid (Associated Location)', category: 'Religion' }
 };
 
 export interface Waypoint {
