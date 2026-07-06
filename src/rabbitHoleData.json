@@ -32379,5 +32379,37 @@
     "images": [
       "https://upload.wikimedia.org/wikipedia/commons/6/63/Harry_Reid_official_portrait_2009_%28cropped%29.jpg"
     ]
+  },
+  {
+    "id": "temple-of-set-hq",
+    "name": "Temple of Set Headquarters",
+    "category": "The Occult",
+    "type": "Point",
+    "coordinates": {
+      "lng": -122.427,
+      "lat": 37.769
+    },
+    "date": 1975,
+    "description": "Headquarters of the Temple of Set, an esoteric initiatory occult society founded in San Francisco in 1975 by Michael Aquino and other Church of Satan dissidents. The organization emphasizes individual consciousness, self-deification, and Setian metaphysics.",
+    "source": "The Temple of Set Records / Esoteric Occultism",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Seth_with_Was_and_Ankh.svg/1280px-Seth_with_Was_and_Ankh.svg.png"
+    ]
+  },
+  {
+    "id": "ancient-temple-of-set",
+    "name": "Temple of Set at Ombos",
+    "category": "Archaeology",
+    "type": "Point",
+    "coordinates": {
+      "lng": 32.7236,
+      "lat": 25.8972
+    },
+    "date": -3000,
+    "description": "The ancient Temple of Set at Ombos (Naqada), Egypt, which served as the primary cult center for the deity Set during the Early Dynastic and Old Kingdom periods. The site is a focal point for researchers exploring Setian metaphysics, stellar alignments, and early Egyptian cosmological currents.",
+    "source": "Historical Archaeology of Ancient Egypt / Ombos Excavation Reports",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Seth_deity.svg/1280px-Seth_deity.svg.png"
+    ]
   }
 ]

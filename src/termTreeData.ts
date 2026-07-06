@@ -1580,6 +1580,7 @@ const chunk_0: any[] = [  {
     parentId: 'egyptian-pantheon',
     name: 'Horus',
     description: 'Sky god and protector of the pharaoh Job/Domain: God of the sky, kingship, and protection. Correlated characters: Apollo (Greek), Hermes (Greek), Vishnu (Hindu).',
+    relatedIds: ['egyptian-set'],
     sources: ['Pyramid Texts', 'Egyptian Book of the Dead'],
     isApocryphal: true
   },  {
@@ -1587,6 +1588,7 @@ const chunk_0: any[] = [  {
     parentId: 'egyptian-pantheon',
     name: 'Isis',
     description: 'Goddess of motherhood, magic, healing, and protection Job/Domain: Goddess of motherhood, magic, healing, and protection. Correlated characters: Demeter (Greek), Hera (Greek), Parvati (Hindu).',
+    relatedIds: ['egyptian-set'],
     sources: ['Pyramid Texts', 'Egyptian Book of the Dead'],
     isApocryphal: true
   },  {
@@ -1622,6 +1624,7 @@ const chunk_0: any[] = [  {
     parentId: 'egyptian-pantheon',
     name: 'Osiris',
     description: 'God of the underworld, agriculture, fertility, and rebirth Job/Domain: God of the underworld, agriculture, fertility, and rebirth. Correlated characters: Dionysus (Greek), Hades (Greek), Osiris (Hindu).',
+    relatedIds: ['egyptian-set'],
     sources: ['Pyramid Texts', "Plutarch's De Iside et Osiride"],
     isApocryphal: true
   },  {
@@ -1636,15 +1639,18 @@ const chunk_0: any[] = [  {
     parentId: 'egyptian-pantheon',
     name: 'Ra',
     description: 'Sun god Job/Domain: God of the sun, creation, order, and light. Correlated characters: Helios (Greek), Apollo (Greek), Mithra (Persian).',
+    relatedIds: ['egyptian-set'],
     sources: ['Egyptian Book of the Dead', 'Litany of Re'],
     isApocryphal: true
   },  {
-    id: 'seth',
+    id: 'egyptian-set',
     parentId: 'egyptian-pantheon',
-    name: 'Seth',
-    description: 'God of chaos, disorder, and the desert',
-    timelineId: 'seth',
-    sources: ['Pyramid Texts', 'Egyptian Book of the Dead'],
+    name: 'Set',
+    description: 'The ancient Egyptian god of chaos, storms, violence, deserts, and foreign lands. Unlike other deities, Set represents the principle of individuality, separation, and dynamic struggle. In esoteric philosophy and Setian metaphysics, he is revered not as a force of evil, but as the initiator of human consciousness, self-deification, and the non-natural evolution of the intellect, directly opposing the cosmic stasis represented by Osiris.',
+    mapFeatureId: 'ancient-temple-of-set',
+    relatedIds: ['church-of-set', 'typhonian-order', 'michael-aquino', 'osiris', 'horus', 'isis', 'ra'],
+    sources: ['Pyramid Texts', 'Egyptian Book of the Dead', 'De Iside et Osiride (Plutarch)'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Seth_deity.svg/1280px-Seth_deity.svg.png'],
     isApocryphal: true
   },  {
     id: 'thoth',
@@ -24402,13 +24408,16 @@ const chunk_user_additions_2: any[] = [
     parentId: 'magical-orders',
     name: 'Temple of Set',
     description: 'An initiatory occult society founded in 1975 by Michael Aquino and other members of the Church of Satan who departed due to administrative and philosophical disagreements. The Temple focuses on the deity Set, viewed not as a devil but as the initiator of individual consciousness and self-deification, separating itself from LaVeyan materialist Satanism in favor of an esoteric, dualistic philosophy.',
-    relatedIds: ['michael-aquino', 'church-of-satan', 'aleister-crowley', 'thelema'],
+    timelineId: 'temple-of-set-founding',
+    mapFeatureId: 'temple-of-set-hq',
+    relatedIds: ['egyptian-set', 'michael-aquino', 'church-of-satan', 'aleister-crowley', 'thelema'],
     sources: ['The Temple of Set (Michael A. Aquino)', 'Black Magic']
   }, {
     id: 'church-of-satan',
     parentId: 'magical-orders',
     name: 'Church of Satan',
     description: 'An occult organization dedicated to LaVeyan Satanism, founded in San Francisco, California, on Walpurgisnacht (April 30), 1966, by Anton Szandor LaVey. Rather than worshipping a literal devil, the Church views Satan as an archetype representing individual liberty, carnality, and rational self-interest, rejecting spiritualism and christian morality in favor of a codification of human instinct.',
+    timelineId: 'church-of-satan-founding',
     relatedIds: ['anton-lavey', 'church-of-set', 'michael-aquino'],
     mapFeatureId: 'church-of-satan-hq',
     sources: ['The Satanic Bible (Anton LaVey)', 'The Church of Satan (Michael A. Aquino)'],
@@ -24432,7 +24441,7 @@ const chunk_user_additions_2: any[] = [
     parentId: 'magical-orders',
     name: 'Typhonian Order',
     description: 'An occult organization originally founded by Kenneth Grant in 1973 as the Typhonian O.T.O., emphasizing Crowleyan Thelema combined with extraterrestrial/Lovecraftian entities (the Typhonian Tradition), stellar gnosis, and interactions with non-human intelligences. Grant asserted that Thelemic entities like Aiwass and Lam represent extraterrestrial currents affecting human evolution.',
-    relatedIds: ['aleister-crowley', 'thelema', 'aiwass', 'lam-entity', 'ordo-templi-orientis'],
+    relatedIds: ['egyptian-set', 'aleister-crowley', 'thelema', 'aiwass', 'lam-entity', 'ordo-templi-orientis'],
     sources: ['The Magical Revival (Kenneth Grant)', 'Outside the Circles of Time']
   }, {
     id: 'abuldiz',
@@ -24477,7 +24486,7 @@ const chunk_user_additions_2: any[] = [
     parentId: 'historical-alchemists',
     name: 'Michael A. Aquino',
     description: 'An officer in the U.S. Army specializing in psychological warfare (PsyOp) and the founder of the Temple of Set in 1975. He was initially a high-ranking member of the Church of Satan under Anton LaVey, but left to establish a more esoteric philosophy focused on the self-deification of the individual and Setian metaphysics.',
-    relatedIds: ['church-of-satan', 'church-of-set', 'anton-lavey'],
+    relatedIds: ['egyptian-set', 'church-of-satan', 'church-of-set', 'anton-lavey'],
     sources: ['The Temple of Set (Michael A. Aquino)', 'Extreme Prejudice']
   }, {
     id: 'thomas-aquinas',

@@ -4258,6 +4258,24 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
       description: 'American historian and author who documented the connections between occultism, intelligence networks, and historical conspiracies.',
       source: 'Occult History Literature'
     },
+    {
+      id: 'church-of-satan-founding',
+      name: 'Church of Satan Founded',
+      type: 'event',
+      layer: 'alchemy-occult',
+      start: 1966,
+      description: 'Anton Szandor LaVey establishes the Church of Satan in San Francisco, California, codifying the principles of LaVeyan Satanism.',
+      source: 'The Satanic Bible / Church of Satan History'
+    },
+    {
+      id: 'temple-of-set-founding',
+      name: 'Temple of Set Founded',
+      type: 'event',
+      layer: 'alchemy-occult',
+      start: 1975,
+      description: 'Michael Aquino and other former members of the Church of Satan found the Temple of Set in San Francisco, introducing an initiatory philosophy of individual consciousness and Setian metaphysics.',
+      source: 'The Temple of Set / Michael Aquino Writings'
+    },
     // --- MYTHS & LEGENDS TIMELINE ITEMS ---
     {
       id: 'robin-hood-legends-era',
@@ -5302,6 +5320,8 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'lucis-trust-founded': { lng: -73.9669, lat: 40.7516, locationName: '866 United Nations Plaza (New York, NY)', category: 'The Occult' },
   'robert-maxwell': { lng: -1.2335, lat: 51.7589, locationName: 'Headington Hill Hall (Oxford, England)', category: 'The Occult' },
   'maxwell-pergamon': { lng: -1.2335, lat: 51.7589, locationName: 'Headington Hill Hall (Oxford, England)', category: 'The Occult' },
+  'church-of-satan-founding': { lng: -122.4855, lat: 37.7845, locationName: 'The Black House (San Francisco, CA)', category: 'The Occult' },
+  'temple-of-set-founding': { lng: -122.427, lat: 37.769, locationName: 'San Francisco, California', category: 'The Occult' },
   
   // Ancient Civilizations / People Groups
   'timeline-egyptian-civilization': { lng: 31.1342, lat: 29.9792, locationName: 'Great Pyramids of Giza (Egypt)', category: 'Ancient People Groups' },
