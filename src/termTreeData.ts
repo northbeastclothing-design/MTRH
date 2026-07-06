@@ -15694,7 +15694,7 @@ const chunk_4: any[] = [  {
     description: 'An ancient Egyptian sun temple site featuring a massive, circular alabaster altar basin. Esoteric researchers suggest the site was designed to harness acoustic harmonic resonance, functioning as a star portal to connect with extraterrestrial cosmic forces.',
     layer: 'Portals / Stargates',
     mapFeatureId: 'anomaly-Portals---Stargates-1',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/e/e0/Altar_Sun_Temple_Niuserre.JPG'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/b/be/Solar_Temple_of_Niuserre_-_Altar.jpg'],
     sources: ['Wikipedia', 'Esoteric & Paranormal Records']
   },  {
     id: 'anomaly-Portals---Stargates-2',
