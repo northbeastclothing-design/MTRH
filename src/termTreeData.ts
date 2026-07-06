@@ -25665,8 +25665,50 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   ...chunk_6,
   {
-    id: 'rel-figure-jesus',
+    id: 'christianity-members',
     parentId: 'christianity',
+    name: 'Prominent Members',
+    description: 'Prominent figures, historical leaders, and famous adherents of Christianity.'
+  },
+  {
+    id: 'judaism-members',
+    parentId: 'judaism',
+    name: 'Prominent Members',
+    description: 'Prominent figures, historical leaders, and famous adherents of Judaism.'
+  },
+  {
+    id: 'islam-members',
+    parentId: 'islam',
+    name: 'Prominent Members',
+    description: 'Prominent figures, historical leaders, and famous adherents of Islam.'
+  },
+  {
+    id: 'buddhism-members',
+    parentId: 'buddhism',
+    name: 'Prominent Members',
+    description: 'Prominent figures, historical leaders, and famous adherents of Buddhism.'
+  },
+  {
+    id: 'hinduism-members',
+    parentId: 'hinduism',
+    name: 'Prominent Members',
+    description: 'Prominent figures, historical leaders, and famous adherents of Hinduism.'
+  },
+  {
+    id: 'scientology-members',
+    parentId: 'scientology',
+    name: 'Prominent Members',
+    description: 'Prominent figures, historical leaders, and famous adherents of Scientology.'
+  },
+  {
+    id: 'mormonism-members',
+    parentId: 'mormonism',
+    name: 'Prominent Members',
+    description: 'Prominent figures, historical leaders, and famous adherents of Mormonism.'
+  },
+  {
+    id: 'rel-figure-jesus',
+    parentId: 'christianity-members',
     name: 'Jesus of Nazareth',
     description: 'Central figure of Christianity, revered as the Son of God and the Messiah. In esoteric lore, his lost years are associated with secret travels to India, Tibet, and Egypt, and his teachings are seen as an initiation into the divine spark within.',
     timelineId: 'rel-figure-jesus',
@@ -25676,7 +25718,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-figure-saint-paul',
-    parentId: 'christianity',
+    parentId: 'christianity-members',
     name: 'Saint Paul the Apostle',
     description: 'One of the most influential leaders in early Christianity, whose epistles shaped Christian theology. Occultists and alternative historians often study his mystical vision on the Road to Damascus as a high-spiritual initiation event.',
     timelineId: 'rel-figure-saint-paul',
@@ -25686,7 +25728,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-figure-saint-peter',
-    parentId: 'christianity',
+    parentId: 'christianity-members',
     name: 'Saint Peter',
     description: 'Apostle of Jesus and the first Bishop of Rome (Pope). Ancient legends ascribe to him mystical battles in Rome against Simon Magus, a Samaritan sorcerer who claimed to possess supernatural occult powers.',
     timelineId: 'rel-figure-saint-peter',
@@ -25696,7 +25738,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-figure-saint-augustine',
-    parentId: 'christianity',
+    parentId: 'christianity-members',
     name: 'Saint Augustine of Hippo',
     description: 'One of the most important Latin Church Fathers. His writings (like Confessions and City of God) merged Platonic philosophy with Christian theology, laying the foundation for Western Christian mysticism.',
     timelineId: 'rel-figure-saint-augustine',
@@ -25706,7 +25748,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-figure-constantine',
-    parentId: 'christianity',
+    parentId: 'christianity-members',
     name: 'Constantine the Great',
     description: 'Roman Emperor who legalized Christianity through the Edict of Milan and convened the First Council of Nicaea, establishing orthodox Christian dogma and altering the course of world history.',
     timelineId: 'rel-figure-constantine',
@@ -25716,7 +25758,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-jrr-tolkien',
-    parentId: 'christianity',
+    parentId: 'christianity-members',
     name: 'J.R.R. Tolkien',
     description: 'Devout Catholic English writer and scholar, whose Middle-earth legendarium served as a complex mythological vehicle. Alternative researchers suggest his stories encoded deep pre-deluvian history, lost continents, and angelic battles.',
     timelineId: 'rel-adherent-jrr-tolkien',
@@ -25726,7 +25768,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-mlk-jr',
-    parentId: 'christianity',
+    parentId: 'christianity-members',
     name: 'Martin Luther King Jr.',
     description: 'American Baptist minister and civil rights leader who advocated nonviolence. His rhetoric was deeply rooted in prophetic Christian theology, preaching a message of spiritual liberation and the \'Beloved Community\'.',
     timelineId: 'rel-adherent-mlk-jr',
@@ -25736,7 +25778,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-isaac-newton',
-    parentId: 'christianity',
+    parentId: 'christianity-members',
     name: 'Isaac Newton',
     description: 'Famous physicist who was also a deeply esoteric Christian. He spent decades researching biblical chronology, alchemy, and the measurements of Solomon\'s Temple, which he believed contained structural codes of the universe.',
     timelineId: 'rel-adherent-isaac-newton',
@@ -25746,7 +25788,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-cs-lewis',
-    parentId: 'christianity',
+    parentId: 'christianity-members',
     name: 'C.S. Lewis',
     description: 'Oxford scholar, novelist, and highly influential lay Christian apologist who authored The Chronicles of Narnia and Mere Christianity, defending core orthodox faith through literary allegory.',
     timelineId: 'rel-adherent-cs-lewis',
@@ -25756,7 +25798,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-johnny-cash',
-    parentId: 'christianity',
+    parentId: 'christianity-members',
     name: 'Johnny Cash',
     description: 'Legendary American country singer-songwriter and devout Christian convert, who recorded gospel albums, wrote a novel about the Apostle Paul, and associated his music with redemption, faith, and the struggles of the soul.',
     timelineId: 'rel-adherent-johnny-cash',
@@ -25766,7 +25808,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-florence-nightingale',
-    parentId: 'christianity',
+    parentId: 'christianity-members',
     name: 'Florence Nightingale',
     description: 'Founder of modern nursing and social reformer who recorded deep Christian mystical experiences, believing her nursing work was a direct, divine calling to serve God by relieving human suffering.',
     timelineId: 'rel-adherent-florence-nightingale',
@@ -25776,7 +25818,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-figure-moses',
-    parentId: 'judaism',
+    parentId: 'judaism-members',
     name: 'Moses',
     description: 'Hebrew prophet and lawgiver who led the Israelites out of Egypt and received the Torah on Mount Sinai. Esoteric traditions link his wisdom to the secret mystery schools of ancient Egypt and the magical arts of Hermes.',
     timelineId: 'rel-figure-moses',
@@ -25786,7 +25828,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-figure-abraham',
-    parentId: 'judaism',
+    parentId: 'judaism-members',
     name: 'Abraham',
     description: 'Patriarch of the monotheistic Abrahamic religions. Ancient Midrashic lore claims he possessed an astronomical tablet and initiated disciples into secret laws of creation, later compiled into the Sefer Yetzirah (Book of Formation).',
     timelineId: 'rel-figure-abraham',
@@ -25796,7 +25838,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-figure-king-david',
-    parentId: 'judaism',
+    parentId: 'judaism-members',
     name: 'King David',
     description: 'The second king of the United Kingdom of Israel and Judah, to whom the authorship of the Psalms is traditionally attributed. He established Jerusalem as the spiritual and political center of Judaism.',
     timelineId: 'rel-figure-king-david',
@@ -25806,7 +25848,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-albert-einstein',
-    parentId: 'judaism',
+    parentId: 'judaism-members',
     name: 'Albert Einstein',
     description: 'Renowned theoretical physicist of Jewish heritage. He identified his spiritual beliefs with Spinoza\'s pantheism, describing a deep cosmic religious feeling and awe before the harmony of natural laws.',
     timelineId: 'rel-adherent-albert-einstein',
@@ -25816,7 +25858,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-maimonides',
-    parentId: 'judaism',
+    parentId: 'judaism-members',
     name: 'Maimonides',
     description: 'Preeminent medieval Jewish philosopher and physician who authored the Guide for the Perplexed, seeking to harmonize Torah with Aristotelian science, while encoding secret layers of allegorical interpretation for initiates.',
     timelineId: 'rel-adherent-maimonides',
@@ -25826,7 +25868,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-franz-kafka',
-    parentId: 'judaism',
+    parentId: 'judaism-members',
     name: 'Franz Kafka',
     description: 'Bohemian Jewish writer whose surreal, bureaucratic nightmares are interpreted by scholars as modern Kabbalistic parables of human alienation, the hiddenness of the divine, and the inaccessible nature of the absolute law.',
     timelineId: 'rel-adherent-franz-kafka',
@@ -25836,7 +25878,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-spinoza',
-    parentId: 'judaism',
+    parentId: 'judaism-members',
     name: 'Baruch Spinoza',
     description: 'Dutch-Jewish philosopher who laid the groundwork for the Enlightenment. Despite being excommunicated from the Jewish community for his pantheistic views, he defined \'God or Nature\' as the single infinite substance.',
     timelineId: 'rel-adherent-spinoza',
@@ -25846,7 +25888,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-bernstein',
-    parentId: 'judaism',
+    parentId: 'judaism-members',
     name: 'Leonard Bernstein',
     description: 'Celebrated American composer and conductor whose works (such as the Kaddish Symphony and Chichester Psalms) directly explored Jewish liturgy, theology, and the eternal dialogue between humanity and the divine.',
     timelineId: 'rel-adherent-bernstein',
@@ -25856,7 +25898,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-freud',
-    parentId: 'judaism',
+    parentId: 'judaism-members',
     name: 'Sigmund Freud',
     description: 'Founder of psychoanalysis, who identified as a cultural Jew. In works like Moses and Monotheism, he psychoanalyzed the origins of Jewish monotheism, linking it to the historical legacy of the Egyptian Aten cult.',
     timelineId: 'rel-adherent-freud',
@@ -25866,7 +25908,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-wiesel',
-    parentId: 'judaism',
+    parentId: 'judaism-members',
     name: 'Elie Wiesel',
     description: 'Holocaust survivor, Nobel laureate, and author of Night. He used his Jewish faith, Hassidic stories, and theological wrestling with the problem of evil to serve as a moral voice against indifference and human suffering.',
     timelineId: 'rel-adherent-wiesel',
@@ -25876,7 +25918,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-golda-meir',
-    parentId: 'judaism',
+    parentId: 'judaism-members',
     name: 'Golda Meir',
     description: 'Historic statesman and Prime Minister of Israel who championed Zionist history and Jewish cultural identity, serving as a prominent international symbol of Jewish resilience during the mid-20th century.',
     timelineId: 'rel-adherent-golda-meir',
@@ -25886,7 +25928,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-figure-muhammad',
-    parentId: 'islam',
+    parentId: 'islam-members',
     name: 'Prophet Muhammad',
     description: 'The founder of Islam who received the divine revelations of the Quran. Sufi mystics revere his Night Journey (Isra and Mi\'raj)—an ascension through the seven heavens to the Divine Presence—as the ultimate blueprint for spiritual ascension.',
     timelineId: 'rel-figure-muhammad',
@@ -25896,7 +25938,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-figure-ali',
-    parentId: 'islam',
+    parentId: 'islam-members',
     name: 'Ali ibn Abi Talib',
     description: 'Cousin and son-in-law of Muhammad, first Shia Imam. In esoteric Sufism, he is viewed as the gatekeeper of mystical knowledge (Batin) and the father of spiritual knight-errantry and metaphysical wisdom.',
     timelineId: 'rel-figure-ali',
@@ -25906,7 +25948,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-figure-al-ghazali',
-    parentId: 'islam',
+    parentId: 'islam-members',
     name: 'Al-Ghazali',
     description: 'Highly influential Persian Islamic theologian, jurist, and Sufi mystic, whose works (like The Incoherence of the Philosophers and The Revival of the Religious Sciences) reconciled orthodox Sunni theology with mystical Sufi practice.',
     timelineId: 'rel-figure-al-ghazali',
@@ -25916,7 +25958,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-muhammad-ali',
-    parentId: 'islam',
+    parentId: 'islam-members',
     name: 'Muhammad Ali',
     description: 'Legendary heavyweight boxer and convert to Sunni Islam (formerly Nation of Islam). He used his global platform to champion civil rights and spiritual values, viewing his athletic talents as a gift to serve divine purpose.',
     timelineId: 'rel-adherent-muhammad-ali',
@@ -25926,7 +25968,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-malcolm-x',
-    parentId: 'islam',
+    parentId: 'islam-members',
     name: 'Malcolm X (el-Hajj Malik el-Shabazz)',
     description: 'Influential civil rights leader who converted to Sunni Islam. His transformational pilgrimage to Mecca (Hajj) shifted his perspective toward universal brotherhood, reshaping his spiritual fight for human rights.',
     timelineId: 'rel-adherent-malcolm-x',
@@ -25936,7 +25978,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-rumi',
-    parentId: 'islam',
+    parentId: 'islam-members',
     name: 'Jalal al-Din Muhammad Rumi',
     description: '13th-century Persian poet and Sufi mystic, whose poems celebrate ecstatic union with the divine. He founded the Mevlevi Order (Whirling Dervishes), using music and dance as a physical ritual to achieve cosmic harmony.',
     timelineId: 'rel-adherent-rumi',
@@ -25946,7 +25988,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-ibn-sina',
-    parentId: 'islam',
+    parentId: 'islam-members',
     name: 'Ibn Sina (Avicenna)',
     description: 'Preeminent polymath of the Islamic Golden Age. He wrote the Canon of Medicine and the Book of Healing, merging Islamic theology, Aristotelian philosophy, and Neoplatonism to describe the soul and creation.',
     timelineId: 'rel-adherent-ibn-sina',
@@ -25956,7 +25998,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-ibn-battuta',
-    parentId: 'islam',
+    parentId: 'islam-members',
     name: 'Ibn Battuta',
     description: 'Greatest Islamic explorer and traveler of the pre-modern world, who journeyed across Africa, the Middle East, India, and China, documenting the diverse cultures of the Islamic world (Dar al-Islam).',
     timelineId: 'rel-adherent-ibn-battuta',
@@ -25966,7 +26008,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-chappelle',
-    parentId: 'islam',
+    parentId: 'islam-members',
     name: 'Dave Chappelle',
     description: 'Acclaimed American stand-up comedian and actor who converted to Islam in 1991. He credits his faith with giving him a moral compass, grounding him against the spiritual challenges of fame and Hollywood.',
     timelineId: 'rel-adherent-chappelle',
@@ -25976,7 +26018,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-abdul-jabbar',
-    parentId: 'islam',
+    parentId: 'islam-members',
     name: 'Kareem Abdul-Jabbar',
     description: 'NBA legend, writer, and cultural icon who converted to Islam in 1971. He has used his prominent public voice to advocate for racial equality, social justice, and a deeper understanding of Islam.',
     timelineId: 'rel-adherent-abdul-jabbar',
@@ -25986,7 +26028,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-cat-stevens',
-    parentId: 'islam',
+    parentId: 'islam-members',
     name: 'Cat Stevens (Yusuf Islam)',
     description: 'Famous British folk singer-songwriter who converted to Islam in 1977 following a near-drowning experience. He dedicated his life to education, philanthropy, and representing Islamic music and culture globally.',
     timelineId: 'rel-adherent-cat-stevens',
@@ -25996,7 +26038,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-figure-buddha',
-    parentId: 'buddhism',
+    parentId: 'buddhism-members',
     name: 'Siddhartha Gautama (The Buddha)',
     description: 'Spiritual teacher who founded Buddhism. Esoteric Vajrayana traditions claim he transmitted secret Tantras (like the Kalachakra) directly to King Suchandra of the subterranean kingdom of Shambhala to preserve them for a future golden age.',
     timelineId: 'rel-figure-buddha',
@@ -26006,7 +26048,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-figure-nagarjuna',
-    parentId: 'buddhism',
+    parentId: 'buddhism-members',
     name: 'Nagarjuna',
     description: 'One of the most important Buddhist philosophers, founder of the Madhyamaka school. Legend states he retrieved the sacred Prajnaparamita Sutras (Wisdom Teachings) from the Nagas (serpentine beings) who guarded them in their underwater palace.',
     timelineId: 'rel-figure-nagarjuna',
@@ -26016,7 +26058,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-figure-bodhidharma',
-    parentId: 'buddhism',
+    parentId: 'buddhism-members',
     name: 'Bodhidharma',
     description: 'Buddhist monk traditionally credited as the transmitter of Chan/Zen Buddhism to China. Famous for his years of wall-gazing meditation at the Shaolin Temple and establishing the spiritual framework for martial arts.',
     timelineId: 'rel-figure-bodhidharma',
@@ -26026,7 +26068,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-figure-thich-nhat-hanh',
-    parentId: 'buddhism',
+    parentId: 'buddhism-members',
     name: 'Thich Nhat Hanh',
     description: 'Renowned Vietnamese Zen master, poet, and peace activist who coined the term \'Engaged Buddhism\', integrating mindfulness with social action and global peace movements.',
     timelineId: 'rel-figure-thich-nhat-hanh',
@@ -26036,7 +26078,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-dalai-lama',
-    parentId: 'buddhism',
+    parentId: 'buddhism-members',
     name: '14th Dalai Lama (Tenzin Gyatso)',
     description: 'Spiritual leader of Tibetan Buddhism. Esoteric traditions view him as the incarnation of Avalokiteshvara, the bodhisattva of compassion, and the earthly guardian of the secrets of Shambhala and the Kalachakra lineages.',
     timelineId: 'rel-adherent-dalai-lama',
@@ -26046,7 +26088,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-steve-jobs',
-    parentId: 'buddhism',
+    parentId: 'buddhism-members',
     name: 'Steve Jobs',
     description: 'Co-founder of Apple who traveled to India in 1974 seeking spiritual enlightenment and became a lifelong practitioner of Zen Buddhism. He credited Zen philosophy with shaping his minimalist design aesthetics and focus.',
     timelineId: 'rel-adherent-steve-jobs',
@@ -26056,7 +26098,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-richard-gere',
-    parentId: 'buddhism',
+    parentId: 'buddhism-members',
     name: 'Richard Gere',
     description: 'Famous actor and devout student of Tibetan Buddhism. A close disciple of the 14th Dalai Lama, he is an active advocate for Tibetan human rights and promoter of Buddhist philosophy and meditation in the West.',
     timelineId: 'rel-adherent-richard-gere',
@@ -26066,7 +26108,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-keanu-reeves',
-    parentId: 'buddhism',
+    parentId: 'buddhism-members',
     name: 'Keanu Reeves',
     description: 'Famous actor who played Prince Siddhartha in Bernardo Bertolucci\'s 1993 film Little Buddha. He underwent extensive Buddhist training for the role and maintains a deep philosophical respect for Buddhist mindfulness and ethics.',
     timelineId: 'rel-adherent-keanu-reeves',
@@ -26076,7 +26118,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-leonard-cohen',
-    parentId: 'buddhism',
+    parentId: 'buddhism-members',
     name: 'Leonard Cohen',
     description: 'Acclaimed Canadian singer-songwriter who spent years living at Mount Baldy Zen Center, becoming an ordained Rinzai Zen Buddhist monk, taking the name Jikan (\'Silence\'). His music deeply reflects Zen themes of detachment.',
     timelineId: 'rel-adherent-leonard-cohen',
@@ -26086,7 +26128,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-herbie-hancock',
-    parentId: 'buddhism',
+    parentId: 'buddhism-members',
     name: 'Herbie Hancock',
     description: 'Legendary jazz pianist and composer who has practiced Nichiren Buddhism for decades. He credits his daily practice of chanting Nam Myoho Renge Kyo with unlocking creative flow and global humanistic values.',
     timelineId: 'rel-adherent-herbie-hancock',
@@ -26096,7 +26138,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-tina-turner',
-    parentId: 'buddhism',
+    parentId: 'buddhism-members',
     name: 'Tina Turner',
     description: 'Legendary American rock singer who converted to Nichiren Buddhism in 1973. She attributed her survival, inner strength, and career revival to her spiritual chanting practice, writing books on Buddhist wisdom.',
     timelineId: 'rel-adherent-tina-turner',
@@ -26106,7 +26148,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-figure-adi-shankara',
-    parentId: 'hinduism',
+    parentId: 'hinduism-members',
     name: 'Adi Shankara',
     description: '8th-century philosopher and theologian who consolidated the doctrine of Advaita Vedanta (non-dualism). He traveled across India establishing monastic centers, asserting the absolute identity of Atman (soul) and Brahman (divine source).',
     timelineId: 'rel-figure-adi-shankara',
@@ -26116,7 +26158,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-figure-ramakrishna',
-    parentId: 'hinduism',
+    parentId: 'hinduism-members',
     name: 'Sri Ramakrishna Paramahansa',
     description: '19th-century Indian mystic and yogi who experienced ecstatic states of communion with the divine mother Kali and verified through direct practice that all religious paths lead to the same non-dual realization.',
     timelineId: 'rel-figure-ramakrishna',
@@ -26126,7 +26168,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-figure-vivekananda',
-    parentId: 'hinduism',
+    parentId: 'hinduism-members',
     name: 'Swami Vivekananda',
     description: 'Indian Hindu monk who introduced Vedanta and Yoga to the Western world at the 1893 Parliament of Religions in Chicago, teaching the spiritual unity of all religions and the divine nature of the human soul.',
     timelineId: 'rel-figure-vivekananda',
@@ -26136,7 +26178,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-figure-yogananda',
-    parentId: 'hinduism',
+    parentId: 'hinduism-members',
     name: 'Paramahansa Yogananda',
     description: 'Renowned yogi and guru who introduced millions of Westerners to Kriya Yoga through his Autobiography of a Yogi. He taught the underlying unity between the teachings of Jesus and Krishna.',
     timelineId: 'rel-figure-yogananda',
@@ -26146,7 +26188,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-figure-prabhupada',
-    parentId: 'hinduism',
+    parentId: 'hinduism-members',
     name: 'A.C. Bhaktivedanta Swami Prabhupada',
     description: 'Indian spiritual teacher who founded the International Society for Krishna Consciousness (ISKCON), translating major Vedic scriptures and bringing Gaudiya Vaishnavism chanting to the global stage.',
     timelineId: 'rel-figure-prabhupada',
@@ -26156,7 +26198,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-figure-neem-karoli-baba',
-    parentId: 'hinduism',
+    parentId: 'hinduism-members',
     name: 'Neem Karoli Baba',
     description: 'Venerated Hindu guru and devotee of Hanuman. His Kainchi Dham ashram became a major spiritual sanctuary, drawing seekers like Ram Dass, Steve Jobs, and Julia Roberts to practice unconditional love and service.',
     timelineId: 'rel-figure-neem-karoli-baba',
@@ -26166,7 +26208,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-george-harrison',
-    parentId: 'hinduism',
+    parentId: 'hinduism-members',
     name: 'George Harrison',
     description: 'Lead guitarist of the Beatles who embraced Gaudiya Vaishnavism (Hinduism) after visiting India. He incorporated Indian spirituality, meditation, and instruments into his music, funding the first Hare Krishna temple in London.',
     timelineId: 'rel-adherent-george-harrison',
@@ -26176,7 +26218,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-julia-roberts',
-    parentId: 'hinduism',
+    parentId: 'hinduism-members',
     name: 'Julia Roberts',
     description: 'Award-winning actress who converted to Hinduism while filming Eat Pray Love. She became a devotee of Neem Karoli Baba, practicing yoga and chanting as part of her spiritual life.',
     timelineId: 'rel-adherent-julia-roberts',
@@ -26186,7 +26228,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-mahatma-gandhi',
-    parentId: 'hinduism',
+    parentId: 'hinduism-members',
     name: 'Mahatma Gandhi',
     description: 'Indian lawyer and political ethicist who led the successful campaign for India\'s independence using nonviolent resistance. His philosophy of Satyagraha (truth-force) was deeply rooted in the Bhagavad Gita and Hindu concepts of Ahimsa.',
     timelineId: 'rel-adherent-mahatma-gandhi',
@@ -26196,7 +26238,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-tagore',
-    parentId: 'hinduism',
+    parentId: 'hinduism-members',
     name: 'Rabindranath Tagore',
     description: 'Genius Bengali polymath, poet, and Nobel laureate who reshaped literature and music, blending deep Upanishadic spiritual pantheism and humanism into his poems (Gitanjali).',
     timelineId: 'rel-adherent-tagore',
@@ -26206,7 +26248,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-ramanujan',
-    parentId: 'hinduism',
+    parentId: 'hinduism-members',
     name: 'Srinivasa Ramanujan',
     description: 'Genius Indian mathematician who credited his ground-breaking mathematical discoveries and formulas to active dreams and revelations sent by his family goddess, Namagiri Thayar of Namakkal.',
     timelineId: 'rel-adherent-ramanujan',
@@ -26216,7 +26258,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-figure-l-ron-hubbard',
-    parentId: 'scientology',
+    parentId: 'scientology-members',
     name: 'L. Ron Hubbard',
     description: 'American writer, occultist, and founder of Scientology. Prior to launching Dianetics, he participated in the Babalon Working rituals with rocket scientist Jack Parsons in Pasadena to open an interdimensional gateway.',
     timelineId: 'rel-figure-l-ron-hubbard',
@@ -26226,7 +26268,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-figure-david-miscavige',
-    parentId: 'scientology',
+    parentId: 'scientology-members',
     name: 'David Miscavige',
     description: 'Leader of the Church of Scientology, holding the title of Chairman of the Board of the Religious Technology Center, who oversaw the expansion of the church\'s global facilities and the preservation of L. Ron Hubbard\'s works.',
     timelineId: 'rel-figure-david-miscavige',
@@ -26236,7 +26278,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-tom-cruise',
-    parentId: 'scientology',
+    parentId: 'scientology-members',
     name: 'Tom Cruise',
     description: 'World-famous actor and prominent advocate for Scientology. He credits the application of Hubbard\'s teachings with his immense success and serves as one of the religion\'s highest-ranking public figures.',
     timelineId: 'rel-adherent-tom-cruise',
@@ -26246,7 +26288,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-john-travolta',
-    parentId: 'scientology',
+    parentId: 'scientology-members',
     name: 'John Travolta',
     description: 'Award-winning actor who joined Scientology in 1975. He has been one of the church\'s most loyal public supporters, crediting Scientology\'s spiritual counseling techniques with helping him navigate his career and personal life.',
     timelineId: 'rel-adherent-john-travolta',
@@ -26256,7 +26298,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-beck',
-    parentId: 'scientology',
+    parentId: 'scientology-members',
     name: 'Beck Hansen (Beck)',
     description: 'Famous American alternative rock musician who was raised in Scientology by his parents and identified as a Scientologist for most of his life, discussing its influence on his creative mindset and work ethic.',
     timelineId: 'rel-adherent-beck',
@@ -26266,7 +26308,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-kirstie-alley',
-    parentId: 'scientology',
+    parentId: 'scientology-members',
     name: 'Kirstie Alley',
     description: 'Well-known American actress and prominent Scientologist, who credited the church\'s drug rehabilitation program Narconon with saving her life, becoming a highly vocal public advocate of the system.',
     timelineId: 'rel-adherent-kirstie-alley',
@@ -26276,7 +26318,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-elisabeth-moss',
-    parentId: 'scientology',
+    parentId: 'scientology-members',
     name: 'Elisabeth Moss',
     description: 'Award-winning actress who was raised in Scientology and has publicly defended her faith, describing the religion\'s focus on self-realization, personal freedom, and communication as key components of her career.',
     timelineId: 'rel-adherent-elisabeth-moss',
@@ -26286,7 +26328,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-danny-masterson',
-    parentId: 'scientology',
+    parentId: 'scientology-members',
     name: 'Danny Masterson',
     description: 'Actor who was raised in a multi-generational Scientology family and long served as a prominent celebrity supporter, before becoming involved in high-profile legal controversies regarding the church\'s internal arbitration rules.',
     timelineId: 'rel-adherent-danny-masterson',
@@ -26296,7 +26338,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-chick-corea',
-    parentId: 'scientology',
+    parentId: 'scientology-members',
     name: 'Chick Corea',
     description: 'Legendary jazz fusion keyboardist, composer, and Scientologist, who credited L. Ron Hubbard\'s study tech and administrative systems with helping organize his musical collaborations and creative focus.',
     timelineId: 'rel-adherent-chick-corea',
@@ -26306,7 +26348,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-nancy-cartwright',
-    parentId: 'scientology',
+    parentId: 'scientology-members',
     name: 'Nancy Cartwright',
     description: 'Renowned American voice actress (voice of Bart Simpson) and high-level Scientologist, who famously donated tens of millions of dollars to the church\'s building programs and theological archives.',
     timelineId: 'rel-adherent-nancy-cartwright',
@@ -26316,7 +26358,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-peña',
-    parentId: 'scientology',
+    parentId: 'scientology-members',
     name: 'Michael Peña',
     description: 'Acclaimed character actor who joined Scientology in 2000. He credits the church\'s communication courses and spiritual counseling with dramatically improving his confidence and acting capabilities.',
     timelineId: 'rel-adherent-peña',
@@ -26326,7 +26368,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-figure-joseph-smith',
-    parentId: 'mormonism',
+    parentId: 'mormonism-members',
     name: 'Joseph Smith Jr.',
     description: 'Founder of Mormonism, who claimed to translate ancient golden plates delivered by the Angel Moroni. Alternative historians point to his early use of seer stones and folk magic as part of his spiritual translation method.',
     timelineId: 'rel-figure-joseph-smith',
@@ -26336,7 +26378,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-figure-brigham-young',
-    parentId: 'mormonism',
+    parentId: 'mormonism-members',
     name: 'Brigham Young',
     description: 'Second president of the Latter-day Saint church, who led the Mormon pioneers on their exodus across the plains to the Salt Lake Valley, establishing the extensive network of settlements that form the modern Mormon corridor.',
     timelineId: 'rel-figure-brigham-young',
@@ -26346,7 +26388,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-mitt-romney',
-    parentId: 'mormonism',
+    parentId: 'mormonism-members',
     name: 'Mitt Romney',
     description: 'American politician, businessman, and prominent member of the Latter-day Saint church. He served as a bishop and stake president in Boston, representing the public face of mainstream Mormonism during his 2012 presidential run.',
     timelineId: 'rel-adherent-mitt-romney',
@@ -26356,7 +26398,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-brandon-sanderson',
-    parentId: 'mormonism',
+    parentId: 'mormonism-members',
     name: 'Brandon Sanderson',
     description: 'Bestselling fantasy novelist and active member of the Latter-day Saint church. His complex magic systems, cosmological world-building, and themes of godhood and ascension in the Cosmere show subtle influences from LDS theology.',
     timelineId: 'rel-adherent-brandon-sanderson',
@@ -26366,7 +26408,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-gladys-knight',
-    parentId: 'mormonism',
+    parentId: 'mormonism-members',
     name: 'Gladys Knight (\'Empress of Soul\')',
     description: 'Legendary singer and songwriter who converted to Mormonism in 1997. She founded the Saints Unified Voices choir to bring gospel-style music to LDS worship, showcasing the diversity of modern Latter-day Saint adherents.',
     timelineId: 'rel-adherent-gladys-knight',
@@ -26376,7 +26418,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-orson-scott-card',
-    parentId: 'mormonism',
+    parentId: 'mormonism-members',
     name: 'Orson Scott Card',
     description: 'Prominent science fiction author of Ender\'s Game and practicing LDS member. A direct descendant of Brigham Young, his novels explore ethical choices, community, and themes of human divinity linked to Mormon ideals.',
     timelineId: 'rel-adherent-orson-scott-card',
@@ -26386,7 +26428,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-stephenie-meyer',
-    parentId: 'mormonism',
+    parentId: 'mormonism-members',
     name: 'Stephenie Meyer',
     description: 'Bestselling author of the Twilight saga and devout Latter-day Saint. Scholars note her popular vampire novels encode themes of eternal marriage, physical chastity, and spiritual transformation rooted in LDS lifestyle practices.',
     timelineId: 'rel-adherent-stephenie-meyer',
@@ -26396,7 +26438,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-donny-osmond',
-    parentId: 'mormonism',
+    parentId: 'mormonism-members',
     name: 'Donny Osmond',
     description: 'Legendary teen pop idol and member of the famous Osmond singing family. He and his family served as highly visible global ambassadors for the LDS church during their television and concert career.',
     timelineId: 'rel-adherent-donny-osmond',
@@ -26406,7 +26448,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-ken-jennings',
-    parentId: 'mormonism',
+    parentId: 'mormonism-members',
     name: 'Ken Jennings',
     description: 'Jeopardy! host, author, and holder of the longest winning streak in game show history. Raised in a devout Latter-day Saint family, he served an LDS mission in Madrid, Spain.',
     timelineId: 'rel-adherent-ken-jennings',
@@ -26416,7 +26458,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-lindsey-stirling',
-    parentId: 'mormonism',
+    parentId: 'mormonism-members',
     name: 'Lindsey Stirling',
     description: 'Acclaimed American violinist, dancer, and performance artist. A Brigham Young University alumna and active LDS member, she frequently highlights her faith and missionary service in her video messages.',
     timelineId: 'rel-adherent-lindsey-stirling',
@@ -26426,7 +26468,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-adherent-harry-reid',
-    parentId: 'mormonism',
+    parentId: 'mormonism-members',
     name: 'Harry Reid',
     description: 'Former United States Senator and Senate Majority Leader who converted to Mormonism in college, representing a highly prominent, liberal political face of Latter-day Saint history.',
     timelineId: 'rel-adherent-harry-reid',
@@ -26435,4 +26477,3 @@ export const TERM_TREE_DATA: TermNode[] = [
     images: ["https://upload.wikimedia.org/wikipedia/commons/6/63/Harry_Reid_official_portrait_2009_%28cropped%29.jpg"]
   },
 ];
-

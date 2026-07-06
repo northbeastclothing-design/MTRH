@@ -2694,7 +2694,7 @@ export default function CodexPage({
                               transition: 'background-color 0.2s ease'
                             }}
                           >
-                            <img src="/icons/icon-expand.svg" style={{ width: '30px', height: '30px', filter: theme.invert }} alt="expand" />
+                            <img src="/icons/icon-expand.svg" style={{ width: '30px', height: '30px', filter: theme.invert, pointerEvents: 'none' }} alt="expand" />
                           </motion.button>
                         </div>
                       </div>
@@ -3249,9 +3249,10 @@ export default function CodexPage({
       />
 
       {/* FULL SCREEN LIGHTBOX MODAL ARCHITECTURE */}
-      <AnimatePresence>
-        {isLightboxOpen && activeTermNode && activeAssets && activeAssets.length > 0 && createPortal(
-          <motion.div 
+      {createPortal(
+        <AnimatePresence>
+          {isLightboxOpen && activeTermNode && activeAssets && activeAssets.length > 0 && (
+            <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -3512,10 +3513,11 @@ export default function CodexPage({
                 </>
               )}
             </div>
-          </motion.div>,
-          document.body
+          </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence>,
+      document.body
+    )}
     </div>
   );
 }
