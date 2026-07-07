@@ -23037,6 +23037,141 @@ const chunk_new_additions: any[] = [
     mapFeatureId: 'haarp-facility-alaska',
     images: ['https://upload.wikimedia.org/wikipedia/commons/9/9f/High_Frequency_Active_Auroral_Research_Program_site.jpg'],
     sources: ['HAARP Technical Reports (UAF)', 'Angels Don\'t Play This HAARP (Nick Begich)']
+  }, {
+    id: 'taboo-occult',
+    parentId: 'alchemy-occult',
+    name: 'Taboo',
+    description: "A social or religious custom forbidding or restricting a particular practice, association, or discussion. In alternative history and comparative religion, taboos often surround sacred megaliths, occult words of power, or divine bloodlines, representing ancient boundaries between the profane and the initiate.",
+    relatedIds: ['alchemy-occult', 'curse-occult'],
+    images: []
+  }, {
+    id: 'curse-occult',
+    parentId: 'alchemy-occult',
+    name: 'Curse',
+    description: "A solemn utterance intended to invoke a supernatural power to inflict harm or punishment on someone or something. From Roman curse tablets (defixiones) to the curses of Tutankhamun's tomb and the Hope Diamond, alternative history examines curses as remnants of ancient psychic technology, spiritual warnings, or energetic patterns.",
+    relatedIds: ['alchemy-occult', 'taboo-occult', 'pharaohs-curse', 'hope-diamond-curse'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/6/6c/The_Curse_Tablets_-_Roman_Baths_%28Bath%29.jpg'],
+    sources: ['The Curse Tablets - Roman Baths Museum']
+  }, {
+    id: 'pharaohs-curse',
+    parentId: 'curse-occult',
+    name: 'Curse of the Pharaohs',
+    description: "The alleged curse that plagues anyone who enters or disturbs the tomb of an ancient Egyptian pharaoh, particularly Tutankhamun's tomb (KV62). Following the 1922 discovery by Howard Carter, several excavation team members died under mysterious or untimely circumstances, fueling global media sensation and theories on ancient bio-defenses or protective occult wards.",
+    relatedIds: ['curse-occult', 'archaeology-tutankhamun-tomb'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/2/27/CairoEgMuseumTaaMaskMostlyPhotographed.jpg'],
+    mapFeatureId: 'archaeology-tutankhamun-tomb',
+    sources: ['Excavation Journals of Howard Carter', 'The Tomb of Tut-Ankh-Amen (Howard Carter)']
+  }, {
+    id: 'hope-diamond-curse',
+    parentId: 'curse-occult',
+    name: 'The Hope Diamond Curse',
+    description: "The legendary curse associated with the 45.52-carat deep blue diamond, originally mined in Kollur, India. Lore claims the gem was stolen from a statue of the Hindu goddess Sita, resulting in misfortune, madness, ruin, and tragic deaths for its subsequent owners, including Jean-Baptiste Tavernier, King Louis XVI, Marie Antoinette, and Evalyn Walsh McLean.",
+    relatedIds: ['curse-occult'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/1/15/Hope_Diamond.jpg'],
+    mapFeatureId: 'hope-diamond-location',
+    sources: ['Smithsonian Institution Records', 'Gemological Institute of America Historical Archives']
+  }, {
+    id: 'voodoo-religion',
+    parentId: 'biblical-apocryphal',
+    name: 'Voodoo (Vodou)',
+    description: "A syncretic religion developed by Afro-diasporic communities in Haiti, Louisiana, and Cuba, blending West African Vodun practices with Roman Catholicism and indigenous Taíno beliefs. Esoterically focused on direct communion and possession by the Loa spirits, it is often misunderstood in popular culture.",
+    relatedIds: ['biblical-apocryphal', 'alchemy-occult', 'voodoo-doll-occult'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/d/df/Haitian_vodou_altar_to_Petwo%2C_Rada%2C_and_Gede_spirits%3B_November_5%2C_2010..jpg'],
+    mapFeatureId: 'voodoo-altar-haiti',
+    sources: ['The Drum and the Hoe: Life and Lore of the Haitian People (Harold Courlander)']
+  }, {
+    id: 'voodoo-doll-occult',
+    parentId: 'alchemy-occult',
+    name: 'Voodoo Doll',
+    description: "A representation of a person, typically a doll made of cloth, wax, or straw, used in folk magic and witchcraft (historically known as a poppet). While popularized as a malicious Haitian Voodoo practice by Western pop culture, it actually originates from European folk magic and ancient Greek *kolossoi*, acting as a physical focus for psychic influence.",
+    relatedIds: ['alchemy-occult', 'voodoo-religion'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/6/67/Paignton_Poppet_in_the_Museum_of_Witchcraft_and_Magic.jpg'],
+    sources: ['Museum of Witchcraft and Magic (Boscastle, UK)', 'Greek and Roman Necromancy (Daniel Ogden)']
+  }, {
+    id: 'apkallu-sages',
+    parentId: 'sumerian-kings',
+    name: 'Apkallu',
+    description: "In Mesopotamian mythology, the seven demi-god sages created by the god Enki to bring civilization, moral codes, agriculture, and writing to humanity. Depicted as half-fish or bird-headed hybrids, alternative theorists often link them to pre-flood ancient builders, Watchers, or interdimensional visitors.",
+    relatedIds: ['sumerian-kings', 'anunnaki', 'cainites-lineage'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/8/8f/Nimrud_Apkallu.jpg'],
+    mapFeatureId: 'apkallu-eridu-sumer',
+    sources: ['Mesopotamian Civilizations (The Epic of Gilgamesh)', 'Cuneiform Tablets of Eridu']
+  }, {
+    id: 'ollantaytambo-terraces',
+    parentId: 'megaliths-structures',
+    name: 'Ollantaytambo Terraces',
+    description: "An ancient Inca fortress and town situated at the northern end of the Sacred Valley. It is famous for its massive, perfectly fitted polygonal blocks of rose granite weighing up to 50 tons, which alternative theorists suggest are remains of a pre-Incan high-technology civilization that survived global cataclysms.",
+    relatedIds: ['megaliths-structures', 'sacred-valley-peru', 'viracocha-deity'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/a/a3/Ollantaytambo_-_53031685431.jpg'],
+    mapFeatureId: 'ollantaytambo-site',
+    sources: ['Inca Architecture and Engineering (Jean-Pierre Protzen)', 'Terraces of Ollantaytambo Field Surveys']
+  }, {
+    id: 'se-ti-cah-giants',
+    parentId: 'people-groups',
+    name: 'Se-ti-cah',
+    description: "A legendary tribe of red-haired giants described in Paiute oral history. According to the legend, they were hostile cannibals who were eventually trapped and burned alive in Lovelock Cave by a coalition of tribes. Archaeological excavations in the 20th century uncovered massive duck decoys, sandals, and large mummified remains, fueling theories of pre-Columbian giants.",
+    relatedIds: ['people-groups', 'nephilim-br', 'native-american-mythology'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/a/a4/Entrance_to_Lovelock_Cave%2C_Near_Lovelock%2C_Nevada_%28529142604%29.jpg'],
+    sources: ['Paiute Oral Tradition (Sarah Winnemucca)', 'Lovelock Cave Archaeological Reports', 'Instagram Reel Discussion (https://www.instagram.com/reel/DYMvQt1uKoN/?igsh=MWNlc3Jub3ZnYzN3Zw==)'],
+    mapFeatureId: 'se-ti-cah-lovelock-cave'
+  }, {
+    id: 'viracocha-deity',
+    parentId: 'myths-legends-root',
+    name: 'Viracocha',
+    description: "The great creator deity in pre-Inca and Inca mythology, depicted as a staff-bearing god. He was said to have risen from Lake Titicaca to create the sun, moon, stars, and humanity at Tiwanaku. Alternative historians associate his legend of a bearded, light-skinned teacher with a lost global civilizing race.",
+    relatedIds: ['myths-legends-root', 'ollantaytambo-terraces', 'hindu-pantheon'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/9/9d/Viracocha_%28porta_do_sol_-_detalhe%29.jpg'],
+    mapFeatureId: 'viracocha-tiwanaku-bolivia',
+    sources: ['Narratives of the Rites and Laws of the Yncas (Clements Markham)', 'Tiwanaku Archaeological Excavation Reports']
+  }, {
+    id: 'marvel-myth-origins',
+    parentId: 'myths-legends-root',
+    name: 'Marvel Mythological Origins',
+    description: "The Marvel universe adapts ancient human myths into superhero lore. Most notably, Asgard and its deities (Thor, Loki, Odin, Hela) are pulled from Norse cosmology, while others are drawn from Greek, Egyptian, and Mesopotamian pantheons. In alternative history, this represents the transition of ancient religious archetypes into modern digital mythology and media symbols.",
+    relatedIds: ['myths-legends-root', 'norse-pantheon', 'greek-mythology'],
+    images: []
+  }, {
+    id: 'karahan-tepe-site',
+    parentId: 'megaliths-structures',
+    name: 'Karahan Tepe',
+    description: "An ancient archaeological site in Sanliurfa, Turkey, dating to the Pre-Pottery Neolithic (c. 9400–8200 BC). Like its sister site Göbekli Tepe, it features T-shaped pillars, human head carvings, and sophisticated structural architecture, challenging traditional models of human social development and hunter-gatherer capacities.",
+    relatedIds: ['megaliths-structures', 'gobekli-tepe-site', 'apkallu-sages'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/0/09/Karahan_Tepe_overview.jpg'],
+    mapFeatureId: 'karahan-tepe-location',
+    sources: ['Karahan Tepe Excavation Project Reports', 'Pre-Pottery Neolithic Studies in Southeastern Anatolia']
+  }, {
+    id: 'roman-dodecahedron-artifact',
+    parentId: 'archaeological-finds-br',
+    name: 'Roman Dodecahedron',
+    description: "A hollow, twelve-sided bronze artifact with pentagonal faces containing circular holes of varying sizes and knobs on each corner, dating from the 2nd to 4th centuries AD. Found across northwestern Europe, their function remains a mystery, speculated to be knitting devices, surveying tools, calendars, or occult divining objects.",
+    relatedIds: ['archaeological-finds-br', 'curse-occult'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/7/79/Roman_dodecahedron.jpg'],
+    mapFeatureId: 'roman-dodecahedron-find',
+    sources: ['Gallo-Roman Museum of Tongeren Exhibit Catalogs', 'The Roman Dodecahedron: An Archaeological Mystery']
+  }, {
+    id: 'niflheim-realm',
+    parentId: 'norse-pantheon',
+    name: 'Niflheim',
+    description: "The primordial realm of ice, mist, and cold in Norse cosmology. It is one of the Nine Realms of Yggdrasil, situated beneath the world tree. Alternative mythology links it to ancient descriptions of a prehistoric Ice Age, cosmic cold, or polar shifts.",
+    relatedIds: ['norse-pantheon', 'helheim-realm', 'marvel-myth-origins'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/c/c5/Helheim_-_Niflheim_2013_-_02-03-2013_%288554468812%29.jpg'],
+    sources: ['The Prose Edda (Snorri Sturluson)', 'Norse Mythology Studies']
+  }, {
+    id: 'helheim-realm',
+    parentId: 'norse-pantheon',
+    name: 'Helheim',
+    description: "The realm of the dead in Norse cosmology, ruled by the goddess Hela (Hel). It is the destination for those who died of old age or disease, rather than in battle. Alternative history interprets this realm as a symbolic representation of the subterranean underworld or planetary cataclysms.",
+    relatedIds: ['norse-pantheon', 'niflheim-realm', 'valhalla-hall', 'marvel-myth-origins'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/6/6a/Hermod_before_Hela.jpg'],
+    sources: ['The Poetic Edda', 'Norse Underworld Mythology']
+  }, {
+    id: 'valhalla-hall',
+    parentId: 'norse-pantheon',
+    name: 'Valhalla',
+    description: "Odin's grand hall in Asgard, where fallen warriors (Einherjar) who died heroically in battle are led by Valkyries to prepare for the final conflict of Ragnarok. Esoterically, it represents the reward of the heroic path and ancient stellar initiation rites.",
+    relatedIds: ['norse-pantheon', 'helheim-realm', 'marvel-myth-origins'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/e/e2/Walhall_by_Emil_Doepler.jpg'],
+    sources: ['The Prose Edda', 'Norse Mythology (Emil Doepler Illustrations)']
   }
 ];
 

@@ -5232,6 +5232,70 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     start: 1993,
     description: 'The High-frequency Active Auroral Research Program (HAARP) facility in Gakona, Alaska, begins operations.',
     source: 'HAARP Documentation'
+  }, {
+    id: 'karahan-tepe-site',
+    name: 'Karahan Tepe Site Founded',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: -9400,
+    description: 'Establishment of the megalithic sanctuary at Karahan Tepe in modern Turkey, contemporaneous with Gobekli Tepe.',
+    source: 'Karahan Excavations'
+  }, {
+    id: 'apkallu-sages',
+    name: 'Apkallu Sages Era',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: -4000,
+    description: 'Mesopotamian cuneiform accounts record the arrival of the Apkallu, seven demi-god sages who brought civilizing arts to Sumer.',
+    source: 'Eridu Genesis'
+  }, {
+    id: 'se-ti-cah-giants',
+    name: 'Si-Te-Cah Lovelock Culture',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: -1500,
+    description: 'Initial dates of Lovelock Cave occupation associated in Paiute oral history with the red-haired Si-Te-Cah giants.',
+    source: 'Lovelock Cave Archaeology'
+  }, {
+    id: 'viracocha-deity',
+    name: 'Viracocha Cult at Tiwanaku',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: -1000,
+    description: 'Emergence of cultural iconography depicting the creator god Viracocha at the Tiwanaku site in modern Bolivia.',
+    source: 'Tiwanaku Excavations'
+  }, {
+    id: 'voodoo-religion',
+    name: 'Bois Caïman Vodou Ceremony',
+    type: 'event',
+    layer: 'black-nobility',
+    start: 1791,
+    description: 'A historic Vodou ceremony led by Dutty Boukman, serving as the catalyst for the Haitian Revolution.',
+    source: 'Haitian Revolution Archives'
+  }, {
+    id: 'roman-dodecahedron-artifact',
+    name: 'Roman Dodecahedrons Discovered',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: 200,
+    description: 'Approximate peak use of the mysterious twelve-sided bronze dodecahedrons across the Gallo-Roman empire.',
+    source: 'Gallo-Roman Archaeology'
+  }, {
+    id: 'hope-diamond-curse',
+    name: 'Hope Diamond Acquired',
+    type: 'event',
+    layer: 'black-nobility',
+    start: 1668,
+    description: 'Jean-Baptiste Tavernier sells the Tavernier Blue diamond (later the Hope Diamond) to King Louis XIV of France.',
+    source: 'Tavernier Voyages'
+  }, {
+    id: 'ollantaytambo-terraces',
+    name: 'Ollantaytambo Construction',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: 1440,
+    description: 'Traditional dating of Ollantaytambo\'s expansion under Pachacuti, incorporating massive megalithic stone blocks.',
+    source: 'Inca History'
   }];
 
 export interface TimelineLocation {
@@ -5615,7 +5679,15 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'bill-cooper': { lng: -109.2909, lat: 34.1112, locationName: 'Eagar, Arizona', category: 'Secret Government Programs' },
   'behold-pale-horse': { lng: -109.2909, lat: 34.1112, locationName: 'Eagar, Arizona', category: 'Secret Government Programs' },
   'vatican-observatory': { lng: -109.8920, lat: 32.7016, locationName: 'Mount Graham, Arizona', category: 'NASA / Space' },
-  'haarp-facility': { lng: -145.1502, lat: 62.3934, locationName: 'Gakona, Alaska', category: 'Secret Government Programs' }
+  'haarp-facility': { lng: -145.1502, lat: 62.3934, locationName: 'Gakona, Alaska', category: 'Secret Government Programs' },
+  'karahan-tepe-site': { lng: 39.2963, lat: 37.0945, locationName: 'Sanliurfa Province, Turkey', category: 'Ancient Ruins' },
+  'apkallu-sages': { lng: 45.9961, lat: 30.8158, locationName: 'Eridu, Iraq', category: 'Ancient Texts' },
+  'se-ti-cah-giants': { lng: -118.5264, lat: 40.1697, locationName: 'Lovelock Cave, Nevada', category: 'Supernatural / Anomalies' },
+  'viracocha-deity': { lng: -68.6784, lat: -16.5548, locationName: 'Tiwanaku, Bolivia', category: 'Ancient Texts' },
+  'voodoo-religion': { lng: -72.3333, lat: 18.5333, locationName: 'Bois Caïman, Haiti', category: 'Religion' },
+  'roman-dodecahedron-artifact': { lng: 5.4648, lat: 50.7811, locationName: 'Tongeren, Belgium', category: 'Archaeological Finds' },
+  'hope-diamond-curse': { lng: -77.0260, lat: 38.8913, locationName: 'Smithsonian Museum, Washington D.C.', category: 'The Occult' },
+  'ollantaytambo-terraces': { lng: -72.2633, lat: -13.2575, locationName: 'Ollantaytambo, Peru', category: 'Ancient Ruins' }
 };
 
 export interface Waypoint {

@@ -32537,5 +32537,133 @@
     "images": [
       "https://upload.wikimedia.org/wikipedia/commons/9/9f/High_Frequency_Active_Auroral_Research_Program_site.jpg"
     ]
+  },
+  {
+    "id": "voodoo-altar-haiti",
+    "name": "Bois Caïman (Haitian Vodou Ceremony)",
+    "category": "The Occult",
+    "type": "Point",
+    "coordinates": {
+      "lng": -72.3333,
+      "lat": 18.5333
+    },
+    "date": 1791,
+    "description": "Bois Caïman near Port-au-Prince, Haiti, the site of the historic August 1791 Vodou ceremony that launched the Haitian Revolution, serving as a sacred site of spiritual connection and syncretic power.",
+    "source": "Haitian Historical Society",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/d/df/Haitian_vodou_altar_to_Petwo%2C_Rada%2C_and_Gede_spirits%3B_November_5%2C_2010..jpg"
+    ]
+  },
+  {
+    "id": "apkallu-eridu-sumer",
+    "name": "Eridu (Ancient Mesopotamian Holy City)",
+    "category": "Ancient Ruins",
+    "type": "Point",
+    "coordinates": {
+      "lng": 45.9961,
+      "lat": 30.8158
+    },
+    "date": -4000,
+    "description": "Ancient Eridu in modern Iraq, revered as the oldest city in southern Mesopotamia and the sacred home of Enki, the god who created the Apkallu sages to bring civilization to humanity.",
+    "source": "Mesopotamian Archaeology & Cuneiform Texts",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/8/8f/Nimrud_Apkallu.jpg"
+    ]
+  },
+  {
+    "id": "ollantaytambo-site",
+    "name": "Ollantaytambo Megalithic Site",
+    "category": "Ancient Ruins",
+    "type": "Point",
+    "coordinates": {
+      "lng": -72.2633,
+      "lat": -13.2575
+    },
+    "date": 1440,
+    "description": "Ollantaytambo fortress in Peru, featuring giant polygonal blocks of rose granite weighing up to 50 tons, fitted together with laser-like precision, attributed by alternative theorists to a lost high-technology civilization.",
+    "source": "Sacred Valley Archaeological Surveys",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/a/a3/Ollantaytambo_-_53031685431.jpg"
+    ]
+  },
+  {
+    "id": "se-ti-cah-lovelock-cave",
+    "name": "Lovelock Cave (Si-Te-Cah Giants)",
+    "category": "Supernatural / Anomalies",
+    "type": "Point",
+    "coordinates": {
+      "lng": -118.5264,
+      "lat": 40.1697
+    },
+    "date": -1500,
+    "description": "Lovelock Cave in Nevada, the legendary site where the Paiute coalition trapped and burned alive the Si-Te-Cah, a hostile tribe of red-haired giants, yielding artifacts of giant mummies and massive artifacts during excavation.",
+    "source": "Lovelock Cave Archaeological Survey Reports",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/a/a4/Entrance_to_Lovelock_Cave%2C_Near_Lovelock%2C_Nevada_%28529142604%29.jpg"
+    ]
+  },
+  {
+    "id": "viracocha-tiwanaku-bolivia",
+    "name": "Tiwanaku (Gate of the Sun / Viracocha)",
+    "category": "Ancient Ruins",
+    "type": "Point",
+    "coordinates": {
+      "lng": -68.6784,
+      "lat": -16.5548
+    },
+    "date": -1000,
+    "description": "The monumental ruins of Tiwanaku near Lake Titicaca, Bolivia, featuring the Gate of the Sun with carvings representing the creator god Viracocha, esoterically linked to ancient light-skinned civilizers.",
+    "source": "Tiwanaku Excavation Project",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/9/9d/Viracocha_%28porta_do_sol_-_detalhe%29.jpg"
+    ]
+  },
+  {
+    "id": "karahan-tepe-location",
+    "name": "Karahan Tepe Megalithic Complex",
+    "category": "Ancient Ruins",
+    "type": "Point",
+    "coordinates": {
+      "lng": 39.2963,
+      "lat": 37.0945
+    },
+    "date": -9400,
+    "description": "Karahan Tepe in Turkey, a monumental Pre-Pottery Neolithic site dating back to c. 9400 BC, containing T-shaped pillars and human reliefs, predating agriculture and challenging classical timeline models of civilizational development.",
+    "source": "Pre-Pottery Neolithic Research Team",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/0/09/Karahan_Tepe_overview.jpg"
+    ]
+  },
+  {
+    "id": "roman-dodecahedron-find",
+    "name": "Gallo-Roman Dodecahedron Find (Tongeren)",
+    "category": "Archaeological Finds",
+    "type": "Point",
+    "coordinates": {
+      "lng": 5.4648,
+      "lat": 50.7811
+    },
+    "date": 200,
+    "description": "The Gallo-Roman Museum in Tongeren, Belgium, housing a famous specimen of the Roman dodecahedron, an enigmatic twelve-sided bronze artifact with pentagonal holes and corner knobs, whose true function remains completely unexplained.",
+    "source": "Tongeren Gallo-Roman Museum Archives",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/7/79/Roman_dodecahedron.jpg"
+    ]
+  },
+  {
+    "id": "hope-diamond-location",
+    "name": "Smithsonian (Hope Diamond Curse)",
+    "category": "The Occult",
+    "type": "Point",
+    "coordinates": {
+      "lng": -77.0260,
+      "lat": 38.8913
+    },
+    "date": 1668,
+    "description": "The Smithsonian National Museum of Natural History in Washington D.C., the final resting place of the Hope Diamond, a deep blue 45.52-carat gem notorious for the string of tragic deaths, bankruptcy, and misfortune that followed its owners.",
+    "source": "Smithsonian Gem & Mineral Collection Archives",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/1/15/Hope_Diamond.jpg"
+    ]
   }
 ]
