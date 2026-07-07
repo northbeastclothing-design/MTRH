@@ -22919,10 +22919,10 @@ const chunk_new_additions: any[] = [
     id: 'vatican-central',
     parentId: 'catholicism',
     name: 'The Vatican',
-    description: "The administrative and spiritual center of the Roman Catholic Church and the world's smallest independent sovereign state, governed by the Pope. In alternative history, it is heavily scrutinized for its immense historical power, suppression of apocryphal texts, and deep connection to global aristocratic lineages (the Black Nobility).",
+    description: "The administrative and spiritual center of the Roman Catholic Church and the world's smallest independent sovereign state, governed by the Pope. In alternative history, it is scrutinized for its immense historical power, suppression of apocryphal texts, and deep connection to global aristocratic lineages (the Black Nobility).",
     relatedIds: ['catholicism', 'vatican-archive', 'vatican-observatory', 'lucifer-telescope', 'black-nobility'],
     mapFeatureId: 'vatican-central-location',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/St_Peter%27s_Basilica_from_the_Engelsburg.jpg/1280px-St_Peter%27s_Basilica_from_the_Engelsburg.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/f/f5/Basilica_di_San_Pietro_in_Vaticano_September_2015-1a.jpg'],
     sources: ['Catechism of the Catholic Church', 'Holy See Diplomatic Records']
   }, {
     id: 'vatican-archive',
@@ -22940,7 +22940,7 @@ const chunk_new_additions: any[] = [
     description: "One of the oldest active astronomical research institutions in the world, founded in 1582 to reform the Julian calendar. Headquartered at Castel Gandolfo, Italy, and operating the Vatican Advanced Technology Telescope (VATT) at the Mount Graham International Observatory in Arizona, it represents the intersection of Catholic theology and astronomical science.",
     relatedIds: ['vatican-central', 'lucifer-telescope', 'nasa-root'],
     mapFeatureId: 'vatican-observatory-location',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Castel_Gandolfo_observatory.jpg/1280px-Castel_Gandolfo_observatory.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/8/89/Castel_Gandolfo%2C_Pontifical_palace_and_Vatican_Observatory%2C.jpg'],
     sources: ['Vatican Observatory Publications', 'Specola Vaticana Historical Records']
   }, {
     id: 'lucifer-telescope',
@@ -22949,7 +22949,7 @@ const chunk_new_additions: any[] = [
     description: "A high-tech near-infrared instrument (Large Binocular Telescope Near-infrared Utility with Camera and Integral Field Unit for Extragalactic Research) operated by German astronomical institutes at Mount Graham, Arizona. Because it is mounted on the Large Binocular Telescope adjacent to the Vatican Advanced Technology Telescope (VATT), its name and location have spawned widespread conspiracy theories about Vatican astronomers searching for extraterrestrial life or incoming cosmic anomalies.",
     relatedIds: ['vatican-observatory', 'vatican-central', 'ufos'],
     mapFeatureId: 'mount-graham-observatory',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Large_Binocular_Telescope.jpg/1280px-Large_Binocular_Telescope.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/4/4a/LargeBinoTelescope_NASA.jpg'],
     sources: ['Large Binocular Telescope Consortium Reports', 'Vatican Advanced Technology Telescope Technical Specs']
   }, {
     id: 'bill-cooper',
@@ -22978,7 +22978,7 @@ const chunk_new_additions: any[] = [
     sources: ['Passport to Magonia: From Folklore to Flying Saucers (Jacques Vallée)']
   }, {
     id: 'tubal-cain',
-    parentId: 'biblical-apocryphal',
+    parentId: 'cainites-lineage',
     name: 'Tubal-Cain',
     description: "A biblical patriarch mentioned in Genesis 4:22 as the son of Lamech and Zillah, and a descendant of Cain. Described as the 'instructor of every artificer in brass and iron', he is esoterically revered in masonic lore and occult traditions as the primordial blacksmith, associated with metallurgy, ancient technology, and the preservation of antediluvian knowledge.",
     relatedIds: ['cainites-lineage', 'naamah-nemah', 'nephilim-br', 'freemasonry'],
@@ -22986,7 +22986,7 @@ const chunk_new_additions: any[] = [
     sources: ['Book of Genesis', 'Masonic Symbolism and Legend']
   }, {
     id: 'naamah-nemah',
-    parentId: 'biblical-apocryphal',
+    parentId: 'cainites-lineage',
     name: 'Naamah (Nemah)',
     description: "A biblical figure mentioned in Genesis 4:22 as the daughter of Lamech and Zillah, and sister of Tubal-Cain. In rabbinic literature, Gnostic texts, and occult lore, Naamah is depicted as a singer of seductive songs, an initiator of metallurgy, and in some traditions, a demonic entity (mother of demons or consort of Samael) who survived the Great Flood, carrying the bloodline of Cain into the post-diluvian world.",
     relatedIds: ['cainites-lineage', 'tubal-cain', 'nephilim-br', 'lilith'],
@@ -22994,7 +22994,7 @@ const chunk_new_additions: any[] = [
     sources: ['Genesis Rabbah', 'The Zohar', 'Zoharistic Kabbalah']
   }, {
     id: 'cainites-lineage',
-    parentId: 'biblical-apocryphal',
+    parentId: 'people-groups',
     name: 'The Cainites (Lineage of Cain)',
     description: "The biblical descendants of Cain, including Enoch (not the patriarch), Irad, Mehujael, Methushael, Lamech, and his children Jabal, Jubal, Tubal-Cain, and Naamah. In apocryphal literature and alternative history, the Cainites represent a parallel human lineage that intermarried with the Watchers/Nephilim, developing advanced technology, metalworking, music, and cities before the Great Flood.",
     relatedIds: ['nephilim-br', 'tubal-cain', 'naamah-nemah', 'flood-evt'],
