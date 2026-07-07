@@ -1,5 +1,5 @@
 // Mapping The Rabbit Hole App Component
-import React, { useState, useMemo, useEffect, useRef } from 'react';
+import React, { useState, useMemo, useEffect, useRef, useCallback } from 'react';
 import { createPortal } from 'react-dom';
 import { motion, AnimatePresence, animate } from 'motion/react';
 import mapboxgl from 'mapbox-gl';
@@ -906,6 +906,100 @@ const getMatchScore = (featName: string, targetName: string) => {
 
   return 0;
 };
+
+const contentVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.01
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, x: -10 },
+  show: { opacity: 1, x: 0 }
+};
+
+interface SidebarListItemProps {
+  loc: any;
+  isSelected: boolean;
+  pillColor: string;
+  isMapDarkMode: boolean;
+  theme: any;
+  onItemClick: (loc: any) => void;
+}
+
+const SidebarListItem = React.memo(({ loc, isSelected, pillColor, isMapDarkMode, theme, onItemClick }: SidebarListItemProps) => {
+  const handleClick = () => {
+    onItemClick(loc);
+  };
+
+  const localToTitleCase = (str: string) => {
+    if (!str) return '';
+    if (str.includes('.') || (str === str.toUpperCase() && str.length > 1)) return str;
+    const titled = str
+      .toLowerCase()
+      .split(' ')
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+    return titled.replace(/\bufos\b/gi, 'UFOs');
+  };
+
+  return (
+    <motion.div 
+      id={`sidebar-item-${loc.id}`}
+      variants={itemVariants}
+      onClick={handleClick} 
+      onMouseEnter={(e) => {
+        if (!isSelected) e.currentTarget.style.backgroundColor = isMapDarkMode ? 'rgba(255,255,255,0.1)' : pillColor;
+      }}
+      onMouseLeave={(e) => {
+        if (!isSelected) e.currentTarget.style.backgroundColor = 'transparent';
+      }}
+      style={{ 
+        height: '24px',
+        borderRadius: '12px',
+        padding: '0 12px 0 2px', 
+        fontSize: '10px', 
+        cursor: 'pointer', 
+        display: 'flex', 
+        alignItems: 'center', 
+        gap: '8px', 
+        background: isSelected ? theme.text : 'transparent', 
+        color: isSelected ? theme.bg : theme.text,
+        textAlign: 'left', 
+        fontFamily: '"Space Mono", monospace', 
+        textTransform: 'capitalize',
+        margin: '2px 0',
+        width: '100%',
+        transition: 'background-color 0.2s ease, color 0.2s ease'
+      }} 
+      className="nested-item"
+    >
+      <div 
+        style={{
+          width: '24px',
+          height: '24px',
+          minWidth: '24px',
+          backgroundColor: isSelected ? theme.bg : theme.text,
+          WebkitMaskImage: 'url(/icons/icon-map-pin.svg)',
+          maskImage: 'url(/icons/icon-map-pin.svg)',
+          WebkitMaskSize: '24px 24px',
+          maskSize: '24px 24px',
+          WebkitMaskPosition: 'center',
+          maskPosition: 'center',
+          WebkitMaskRepeat: 'no-repeat',
+          maskRepeat: 'no-repeat'
+        }} 
+      />
+      <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+        {localToTitleCase(loc.name)}
+      </span>
+    </motion.div>
+  );
+});
 
 function App() {
   const mapContainer = useRef<HTMLDivElement>(null);
@@ -3216,7 +3310,7 @@ function App() {
   const darkModeRef = useRef(isMapDarkMode);
 
   // Theme Constants
-  const theme = {
+  const theme = useMemo(() => ({
     bg: isMapDarkMode ? '#000000' : '#ffffff',
     bgTransparent: isMapDarkMode ? 'rgba(0, 0, 0, 0.9)' : 'rgba(255, 255, 255, 0.9)',
     text: isMapDarkMode ? '#ffffff' : '#000000',
@@ -3224,7 +3318,7 @@ function App() {
     border: isMapDarkMode ? '#ffffff' : '#000000',
     borderLight: isMapDarkMode ? '#333333' : '#eeeeee',
     invert: isMapDarkMode ? 'invert(1)' : 'none'
-  };
+  }), [isMapDarkMode]);
 
   useEffect(() => {
     darkModeRef.current = isMapDarkMode;
@@ -3242,9 +3336,9 @@ function App() {
   })();
 
   const isMainMapRotatingRef = useRef(initialShouldRotate);
-  const stopMainMapRotation = () => {
+  const stopMainMapRotation = useCallback(() => {
     isMainMapRotatingRef.current = false;
-  };
+  }, []);
 
   const MAP_STYLE_LIGHT = 'mapbox://styles/mapbox/light-v11';
   const MAP_STYLE_DARK = 'mapbox://styles/mapbox/dark-v11';
@@ -4028,6 +4122,12 @@ function App() {
     return groups;
   }, [visibleData, uniqueCategories, likes]);
 
+  const groupedLocationsRef = useRef(groupedLocations);
+  groupedLocationsRef.current = groupedLocations;
+
+  const visibleCountsRef = useRef(visibleCounts);
+  visibleCountsRef.current = visibleCounts;
+
   // Scroll to the selected feature in the left sidebar list when it changes
   useEffect(() => {
     if (!selectedFeature || currentPage !== 'map') return;
@@ -4046,18 +4146,19 @@ function App() {
         });
         return updated ? next : prev;
       });
-
     }
 
     // 2. Expand visible counts if the item is pagination-hidden
     let updatedVisibleCounts = false;
-    const newCounts = { ...visibleCounts };
+    const currentVisibleCounts = visibleCountsRef.current;
+    const newCounts = { ...currentVisibleCounts };
+    const currentGroupedLocations = groupedLocationsRef.current;
     
     categories.forEach((cat: string) => {
-      const locationsInLayer = groupedLocations[cat] || [];
+      const locationsInLayer = currentGroupedLocations[cat] || [];
       const itemIndex = locationsInLayer.findIndex(loc => loc.id === selectedFeature.id);
       if (itemIndex !== -1) {
-        const currentLimit = visibleCounts[cat] || 100;
+        const currentLimit = currentVisibleCounts[cat] || 100;
         if (itemIndex >= currentLimit) {
           // Set limit to include this item + buffer
           newCounts[cat] = itemIndex + 50;
@@ -4079,7 +4180,7 @@ function App() {
     }, 150);
 
     return () => clearTimeout(timer);
-  }, [selectedFeature, currentPage, groupedLocations, visibleCounts]);
+  }, [selectedFeature, currentPage]);
 
   // Clear selected feature if its layer is toggled off (e.g., via "All off" or manual toggle)
   useEffect(() => {
@@ -4904,7 +5005,7 @@ function App() {
     }
   };
 
-  const handleLocationItemClick = (feature: any) => {
+  const handleLocationItemClick = useCallback((feature: any) => {
     stopMainMapRotation();
     if (!feature || !feature.coordinates || !mapRef.current) return;
 
@@ -4975,7 +5076,7 @@ function App() {
       duration: 1500,
       essential: true
     });
-  };
+  }, [stopMainMapRotation]);
 
   useEffect(() => {
     if (mapRef.current && selectedFeature) {
@@ -6646,15 +6747,7 @@ function App() {
                                 initial="hidden"
                                 animate="show"
                                 exit="hidden"
-                                variants={{
-                                  hidden: { opacity: 0 },
-                                  show: {
-                                    opacity: 1,
-                                    transition: {
-                                      staggerChildren: 0.03
-                                    }
-                                  }
-                                }}
+                                variants={contentVariants}
                                 style={{ display: 'flex', flexDirection: 'column', width: '100%' }}
                               >
                                 {(() => {
@@ -6665,60 +6758,15 @@ function App() {
                                         const isSelected = selectedFeature?.id === loc.id;
                                         const pillColor = layerColors[layerName] || '#e5e5e5';
                                         return (
-                                          <motion.div 
-                                            key={loc.id} 
-                                            id={`sidebar-item-${loc.id}`}
-                                            variants={{
-                                              hidden: { opacity: 0, x: -10 },
-                                              show: { opacity: 1, x: 0 }
-                                            }}
-                                            onClick={() => handleLocationItemClick(loc)} 
-                                            onMouseEnter={(e) => {
-                                              if (!isSelected) e.currentTarget.style.backgroundColor = isMapDarkMode ? 'rgba(255,255,255,0.1)' : pillColor;
-                                            }}
-                                            onMouseLeave={(e) => {
-                                              if (!isSelected) e.currentTarget.style.backgroundColor = 'transparent';
-                                            }}
-                                            style={{ 
-                                              height: '24px',
-                                              borderRadius: '12px',
-                                              padding: '0 12px 0 2px', 
-                                              fontSize: '10px', 
-                                              cursor: 'pointer', 
-                                              display: 'flex', 
-                                              alignItems: 'center', 
-                                              gap: '8px', 
-                                              background: isSelected ? theme.text : 'transparent', 
-                                              color: isSelected ? theme.bg : theme.text,
-                                              textAlign: 'left', 
-                                              fontFamily: '"Space Mono", monospace', 
-                                              textTransform: 'capitalize',
-                                              margin: '2px 0',
-                                              width: '100%',
-                                              transition: 'background-color 0.2s ease, color 0.2s ease'
-                                            }} 
-                                            className="nested-item"
-                                          >
-                                            <div 
-                                              style={{
-                                                width: '24px',
-                                                height: '24px',
-                                                minWidth: '24px',
-                                                backgroundColor: isSelected ? theme.bg : theme.text,
-                                                WebkitMaskImage: 'url(/icons/icon-map-pin.svg)',
-                                                maskImage: 'url(/icons/icon-map-pin.svg)',
-                                                WebkitMaskSize: '24px 24px',
-                                                maskSize: '24px 24px',
-                                                WebkitMaskPosition: 'center',
-                                                maskPosition: 'center',
-                                                WebkitMaskRepeat: 'no-repeat',
-                                                maskRepeat: 'no-repeat'
-                                              }} 
-                                            />
-                                            <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                                              {toTitleCase(loc.name)}
-                                            </span>
-                                          </motion.div>
+                                          <SidebarListItem
+                                            key={loc.id}
+                                            loc={loc}
+                                            isSelected={isSelected}
+                                            pillColor={pillColor}
+                                            isMapDarkMode={isMapDarkMode}
+                                            theme={theme}
+                                            onItemClick={handleLocationItemClick}
+                                          />
                                         );
                                       })}
                                       {locationsInLayer.length > maxVisible && (

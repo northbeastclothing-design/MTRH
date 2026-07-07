@@ -646,6 +646,20 @@ const chunk_0: any[] = [  {
     sources: ['Book of Isaiah', 'Latin Vulgate Translation'],
     bibleVerses: ['How art thou fallen from heaven, O Lucifer, son of the morning! how art thou cut down to the ground, which didst weaken the nations! — Isaiah 14:12 (https://www.biblegateway.com/passage/?search=Isaiah+14%3A12)', 'Thou hast been in Eden the garden of God; every precious stone was thy covering... thou art the anointed cherub that covereth... — Ezekiel 28:13-14 (https://www.biblegateway.com/passage/?search=Ezekiel+28%3A13-14)']
   },  {
+    id: 'satan',
+    parentId: 'fallen-angel',
+    name: 'Satan',
+    description: 'The adversary, accuser, and personification of evil in Abrahamic religions. Evolving from a divine prosecutor in the Hebrew Bible (ha-Satan) to the chief opponent of God and commander of fallen angels in Christian and Islamic theology.',
+    translations: [
+      { lang: 'Hebrew', original: 'שָׂטָן', translit: 'Satan', meaning: 'Adversary / Accuser' }
+    ],
+    relatedIds: ['lucifer', 'egyptian-set', 'church-of-satan', 'church-of-set', 'michael-aquino', 'anton-lavey', 'fallen-angel'],
+    sources: ['Hebrew Bible', 'New Testament', 'Book of Enoch'],
+    bibleVerses: [
+      'Now there was a day when the sons of God came to present themselves before Yahweh, and Satan also came among them. — Job 1:6 (https://www.biblegateway.com/passage/?search=Job+1%3A6)',
+      'He seized the dragon, the old serpent, who is the devil and Satan, and bound him for a thousand years. — Revelation 20:2 (https://www.biblegateway.com/passage/?search=Revelation+20%3A2)'
+    ]
+  },  {
     id: 'yekun',
     parentId: 'fallen-angel',
     name: 'Yekun',
@@ -1648,7 +1662,7 @@ const chunk_0: any[] = [  {
     name: 'Set',
     description: 'The ancient Egyptian god of chaos, storms, violence, deserts, and foreign lands. Unlike other deities, Set represents the principle of individuality, separation, and dynamic struggle. In esoteric philosophy and Setian metaphysics, he is revered not as a force of evil, but as the initiator of human consciousness, self-deification, and the non-natural evolution of the intellect, directly opposing the cosmic stasis represented by Osiris.',
     mapFeatureId: 'ancient-temple-of-set',
-    relatedIds: ['church-of-set', 'typhonian-order', 'michael-aquino', 'osiris', 'horus', 'isis', 'ra'],
+    relatedIds: ['church-of-set', 'typhonian-order', 'michael-aquino', 'osiris', 'horus', 'isis', 'ra', 'satan'],
     sources: ['Pyramid Texts', 'Egyptian Book of the Dead', 'De Iside et Osiride (Plutarch)'],
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Seth_deity.svg/1280px-Seth_deity.svg.png'],
     isApocryphal: true
@@ -24410,7 +24424,7 @@ const chunk_user_additions_2: any[] = [
     description: 'An initiatory occult society founded in 1975 by Michael Aquino and other members of the Church of Satan who departed due to administrative and philosophical disagreements. The Temple focuses on the deity Set, viewed not as a devil but as the initiator of individual consciousness and self-deification, separating itself from LaVeyan materialist Satanism in favor of an esoteric, dualistic philosophy.',
     timelineId: 'temple-of-set-founding',
     mapFeatureId: 'temple-of-set-hq',
-    relatedIds: ['egyptian-set', 'michael-aquino', 'church-of-satan', 'aleister-crowley', 'thelema'],
+    relatedIds: ['egyptian-set', 'michael-aquino', 'church-of-satan', 'aleister-crowley', 'thelema', 'satan', 'anton-lavey'],
     sources: ['The Temple of Set (Michael A. Aquino)', 'Black Magic']
   }, {
     id: 'church-of-satan',
@@ -24418,7 +24432,7 @@ const chunk_user_additions_2: any[] = [
     name: 'Church of Satan',
     description: 'An occult organization dedicated to LaVeyan Satanism, founded in San Francisco, California, on Walpurgisnacht (April 30), 1966, by Anton Szandor LaVey. Rather than worshipping a literal devil, the Church views Satan as an archetype representing individual liberty, carnality, and rational self-interest, rejecting spiritualism and christian morality in favor of a codification of human instinct.',
     timelineId: 'church-of-satan-founding',
-    relatedIds: ['anton-lavey', 'church-of-set', 'michael-aquino'],
+    relatedIds: ['anton-lavey', 'church-of-set', 'michael-aquino', 'satan'],
     mapFeatureId: 'church-of-satan-hq',
     sources: ['The Satanic Bible (Anton LaVey)', 'The Church of Satan (Michael A. Aquino)'],
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Baphosimb.svg/1280px-Baphosimb.svg.png']
@@ -24427,7 +24441,7 @@ const chunk_user_additions_2: any[] = [
     parentId: 'historical-alchemists',
     name: 'Anton Szandor LaVey',
     description: 'American author, occultist, musician, and founder of the Church of Satan and the religion of LaVeyan Satanism. He authored The Satanic Bible in 1969, which synthesized occult ritualism with materialist and social Darwinist philosophy. Often spelled "Anton Leveigh" in phonetic transcriptions.',
-    relatedIds: ['church-of-satan', 'church-of-set', 'michael-aquino'],
+    relatedIds: ['church-of-satan', 'church-of-set', 'michael-aquino', 'satan'],
     sources: ['The Satanic Bible', 'The Secret Life of a Satanist (Blanche Barton)']
   }, {
     id: 'prima-materia',
@@ -24486,7 +24500,7 @@ const chunk_user_additions_2: any[] = [
     parentId: 'historical-alchemists',
     name: 'Michael A. Aquino',
     description: 'An officer in the U.S. Army specializing in psychological warfare (PsyOp) and the founder of the Temple of Set in 1975. He was initially a high-ranking member of the Church of Satan under Anton LaVey, but left to establish a more esoteric philosophy focused on the self-deification of the individual and Setian metaphysics.',
-    relatedIds: ['egyptian-set', 'church-of-satan', 'church-of-set', 'anton-lavey'],
+    relatedIds: ['egyptian-set', 'church-of-satan', 'church-of-set', 'anton-lavey', 'satan'],
     sources: ['The Temple of Set (Michael A. Aquino)', 'Extreme Prejudice']
   }, {
     id: 'thomas-aquinas',
