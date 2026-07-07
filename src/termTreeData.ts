@@ -22915,6 +22915,124 @@ const chunk_new_additions: any[] = [
     relatedIds: ['arthurian-legend', 'king-arthur-char'],
     sources: ['Glastonbury Abbey Chronicles', 'Gerald of Wales Writings'],
     isApocryphal: true
+  }, {
+    id: 'vatican-central',
+    parentId: 'catholicism',
+    name: 'The Vatican',
+    description: "The administrative and spiritual center of the Roman Catholic Church and the world's smallest independent sovereign state, governed by the Pope. In alternative history, it is heavily scrutinized for its immense historical power, suppression of apocryphal texts, and deep connection to global aristocratic lineages (the Black Nobility).",
+    relatedIds: ['catholicism', 'vatican-archive', 'vatican-observatory', 'lucifer-telescope', 'black-nobility'],
+    mapFeatureId: 'vatican-central-location',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/St_Peter%27s_Basilica_from_the_Engelsburg.jpg/1280px-St_Peter%27s_Basilica_from_the_Engelsburg.jpg'],
+    sources: ['Catechism of the Catholic Church', 'Holy See Diplomatic Records']
+  }, {
+    id: 'vatican-archive',
+    parentId: 'vatican-central',
+    name: 'Vatican Apostolic Archive',
+    description: "The central depository for all state papers, papal correspondence, account books, and administrative records of the Holy See, dating back to the 8th century. Formerly known as the Vatican Secret Archive, it is a frequent focus of alternative history theories claiming it houses suppressed gospels, ancient records of Nephilim giants, and evidence of extraterrestrial contact.",
+    relatedIds: ['vatican-central', 'catholicism', 'book-of-giants', 'book-of-enoch'],
+    mapFeatureId: 'vatican-archive-location',
+    images: ['/images/vatican_archive.jpg'],
+    sources: ['Holy See Archival Catalogs', 'The Secret Archives of the Vatican (Maria Luisa Ambrosini)']
+  }, {
+    id: 'vatican-observatory',
+    parentId: 'vatican-central',
+    name: 'The Vatican Observatory',
+    description: "One of the oldest active astronomical research institutions in the world, founded in 1582 to reform the Julian calendar. Headquartered at Castel Gandolfo, Italy, and operating the Vatican Advanced Technology Telescope (VATT) at the Mount Graham International Observatory in Arizona, it represents the intersection of Catholic theology and astronomical science.",
+    relatedIds: ['vatican-central', 'lucifer-telescope', 'nasa-root'],
+    mapFeatureId: 'vatican-observatory-location',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Castel_Gandolfo_observatory.jpg/1280px-Castel_Gandolfo_observatory.jpg'],
+    sources: ['Vatican Observatory Publications', 'Specola Vaticana Historical Records']
+  }, {
+    id: 'lucifer-telescope',
+    parentId: 'vatican-observatory',
+    name: 'The LUCIFER Telescope',
+    description: "A high-tech near-infrared instrument (Large Binocular Telescope Near-infrared Utility with Camera and Integral Field Unit for Extragalactic Research) operated by German astronomical institutes at Mount Graham, Arizona. Because it is mounted on the Large Binocular Telescope adjacent to the Vatican Advanced Technology Telescope (VATT), its name and location have spawned widespread conspiracy theories about Vatican astronomers searching for extraterrestrial life or incoming cosmic anomalies.",
+    relatedIds: ['vatican-observatory', 'vatican-central', 'ufos'],
+    mapFeatureId: 'mount-graham-observatory',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Large_Binocular_Telescope.jpg/1280px-Large_Binocular_Telescope.jpg'],
+    sources: ['Large Binocular Telescope Consortium Reports', 'Vatican Advanced Technology Telescope Technical Specs']
+  }, {
+    id: 'bill-cooper',
+    parentId: 'ufology-researchers',
+    name: 'Milton William Cooper',
+    description: "An American conspiracy theorist, author, and radio host best known for his 1991 book 'Behold a Pale Horse'. A former U.S. Navy intelligence briefing team member, Cooper synthesized ideas about the Illuminati, UFO cover-ups, and the New World Order, becoming a foundational figure in modern alternative research. He was killed in a shootout with sheriff's deputies at his home in Eagar, Arizona, in 2001.",
+    relatedIds: ['behold-pale-horse', 'ufology-researchers', 'secret-government-programs'],
+    mapFeatureId: 'bill-cooper-shootout-location',
+    images: ['/images/bill_cooper.jpg'],
+    sources: ['Behold a Pale Horse (Milton William Cooper)', 'Hour of the Time Radio Broadcasts']
+  }, {
+    id: 'behold-pale-horse',
+    parentId: 'ufology-researchers',
+    name: 'Behold a Pale Horse',
+    description: "An influential underground conspiracy book published in 1991 by Milton William Cooper. The text synthesizes theories concerning the Illuminati, secret societies, UFO cover-ups, Bilderberg Group plots, and global government control, serving as a foundational text for modern alternative research and militia movements.",
+    relatedIds: ['bill-cooper', 'secret-government-programs', 'ufos'],
+    images: ['/images/behold_pale_horse.jpg'],
+    sources: ['Behold a Pale Horse (Milton William Cooper)']
+  }, {
+    id: 'passport-to-magonia',
+    parentId: 'ufology-researchers',
+    name: 'Passport to Magonia',
+    description: "A groundbreaking 1969 book by Dr. Jacques Vallée. Subtitled 'From Folklore to Flying Saucers', the text argues that modern UFO sightings, close encounters, and alien abductions are identical to historical folklore concerning fairies, elves, demons, and medieval accounts of celestial voyages to the mythical land of Magonia, suggesting a singular, interdimensional intelligence.",
+    relatedIds: ['jacques-vallee', 'ufology-researchers', 'myths-legends-root'],
+    images: ['/images/passport_to_magonia.jpg'],
+    sources: ['Passport to Magonia: From Folklore to Flying Saucers (Jacques Vallée)']
+  }, {
+    id: 'tubal-cain',
+    parentId: 'biblical-apocryphal',
+    name: 'Tubal-Cain',
+    description: "A biblical patriarch mentioned in Genesis 4:22 as the son of Lamech and Zillah, and a descendant of Cain. Described as the 'instructor of every artificer in brass and iron', he is esoterically revered in masonic lore and occult traditions as the primordial blacksmith, associated with metallurgy, ancient technology, and the preservation of antediluvian knowledge.",
+    relatedIds: ['cainites-lineage', 'naamah-nemah', 'nephilim-br', 'freemasonry'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Tubal-cain.jpg/640px-Tubal-cain.jpg'],
+    sources: ['Book of Genesis', 'Masonic Symbolism and Legend']
+  }, {
+    id: 'naamah-nemah',
+    parentId: 'biblical-apocryphal',
+    name: 'Naamah (Nemah)',
+    description: "A biblical figure mentioned in Genesis 4:22 as the daughter of Lamech and Zillah, and sister of Tubal-Cain. In rabbinic literature, Gnostic texts, and occult lore, Naamah is depicted as a singer of seductive songs, an initiator of metallurgy, and in some traditions, a demonic entity (mother of demons or consort of Samael) who survived the Great Flood, carrying the bloodline of Cain into the post-diluvian world.",
+    relatedIds: ['cainites-lineage', 'tubal-cain', 'nephilim-br', 'lilith'],
+    sources: ['Genesis Rabbah', 'The Zohar', 'Zoharistic Kabbalah']
+  }, {
+    id: 'cainites-lineage',
+    parentId: 'biblical-apocryphal',
+    name: 'The Cainites (Lineage of Cain)',
+    description: "The biblical descendants of Cain, including Enoch (not the patriarch), Irad, Mehujael, Methushael, Lamech, and his children Jabal, Jubal, Tubal-Cain, and Naamah. In apocryphal literature and alternative history, the Cainites represent a parallel human lineage that intermarried with the Watchers/Nephilim, developing advanced technology, metalworking, music, and cities before the Great Flood.",
+    relatedIds: ['nephilim-br', 'tubal-cain', 'naamah-nemah', 'flood-evt'],
+    sources: ['Book of Genesis', 'The Book of Enoch', 'Hebrew Apocrypha']
+  }, {
+    id: 'mahabharata-epic',
+    parentId: 'myths-legends-root',
+    name: 'The Mahabharata',
+    description: "One of the two major ancient Sanskrit epics of India, detailing the Kurukshetra War between the Pandavas and Kauravas. In ancient astronaut and alternative history circles, the epic's descriptions of flying celestial chariots (Vimanas) and destructive weapons (Astra, Brahmastra) that vaporized armies are interpreted as accounts of prehistoric nuclear warfare and advanced extraterrestrial technologies.",
+    relatedIds: ['vedas', 'myths-legends-root'],
+    mapFeatureId: 'kurukshetra-battlefield',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Kurukshetra_floor_painting.jpg/1280px-Kurukshetra_floor_painting.jpg'],
+    sources: ['Mahabharata (attributed to Vyasa)', 'Vedic Cosmography Studies']
+  }, {
+    id: 'jesters-nephilim-connection',
+    parentId: 'myths-legends-root',
+    name: 'The Jester Archetype',
+    description: "Historically, court jesters, fools, and tricksters held a unique position allowed to speak taboo truths to power. In modern folklore, DMT experience reports, and alternative history, the Jester, Clown, and trickster entities (like Harley Quinn) are viewed as archetypal gatekeepers or interdimensional beings linked to the Nephilim. They represent cosmic chaos, mockery of material reality, and the duality of hidden wisdom masked by madness.",
+    relatedIds: ['nephilim-br', 'dmt-experiences', 'myths-legends-root'],
+    images: ['/images/jester_nephilim.jpg'],
+    sources: ['Fools and Jesters at the English Court (John Doran)', 'The Archetypes and the Collective Unconscious (Carl Jung)']
+  }, {
+    id: 'internet-cern-origins',
+    parentId: 'secret-government-programs',
+    name: 'The Internet & CERN',
+    description: "The World Wide Web was invented at CERN (European Organization for Nuclear Research) in 1989 by Sir Tim Berners-Lee to share information among scientists. In alternative history and conspiracy lore, the internet's birth at a particle physics lab studying high-energy collisions is seen as a coordinated effort to build a global digital matrix, facilitating collective human consciousness synchronization alongside CERN's experiments in bridging dimensional doorways.",
+    relatedIds: ['cern-observatory', 'haarp-facility', 'secret-government-programs'],
+    mapFeatureId: 'cern-hq-switzerland',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Cern_large_hadron_collider.jpg/1280px-Cern_large_hadron_collider.jpg'],
+    sources: ['CERN Historical Archives', 'A Short History of the Web (CERN)']
+  }, {
+    id: 'haarp-facility',
+    parentId: 'secret-government-programs',
+    name: 'HAARP',
+    description: "The High-frequency Active Auroral Research Program (HAARP) is a scientific program operating a high-power transmitter facility in Gakona, Alaska, to study the ionosphere. In alternative science and conspiracy circles, HAARP is widely rumored to be a secret weather-modification weapon, mind-control transmitter, and geophysical weapon capable of triggering earthquakes.",
+    relatedIds: ['internet-cern-origins', 'secret-government-programs'],
+    mapFeatureId: 'haarp-facility-alaska',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/HAARP_Gakona_Alaska.jpg/1280px-HAARP_Gakona_Alaska.jpg'],
+    sources: ['HAARP Technical Reports (UAF)', 'Angels Don\'t Play This HAARP (Nick Begich)']
   }
 ];
 

@@ -32411,5 +32411,133 @@
     "images": [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Seth_deity.svg/1280px-Seth_deity.svg.png"
     ]
+  },
+  {
+    "id": "vatican-central-location",
+    "name": "The Vatican",
+    "category": "The Occult",
+    "type": "Point",
+    "coordinates": {
+      "lng": 12.4534,
+      "lat": 41.9029
+    },
+    "date": 325,
+    "description": "The headquarters of the Roman Catholic Church, historically established over the tomb of St. Peter. In alternative history, it is viewed as the seat of deep occult archives and sovereign power.",
+    "source": "Vatican Historical Society",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/St_Peter%27s_Basilica_from_the_Engelsburg.jpg/1280px-St_Peter%27s_Basilica_from_the_Engelsburg.jpg"
+    ]
+  },
+  {
+    "id": "vatican-archive-location",
+    "name": "Vatican Apostolic Archive",
+    "category": "The Occult",
+    "type": "Point",
+    "coordinates": {
+      "lng": 12.4545,
+      "lat": 41.9045
+    },
+    "date": 1612,
+    "description": "The central repository containing state papers, papal correspondence, and historical records of the Holy See. It is the subject of numerous conspiracy theories regarding suppressed historical knowledge.",
+    "source": "Maria Luisa Ambrosini",
+    "images": [
+      "/images/vatican_archive.jpg"
+    ]
+  },
+  {
+    "id": "vatican-observatory-location",
+    "name": "The Vatican Observatory (Castel Gandolfo)",
+    "category": "NASA / Space",
+    "type": "Point",
+    "coordinates": {
+      "lng": 12.6506,
+      "lat": 41.7470
+    },
+    "date": 1582,
+    "description": "Headquarters of the Specola Vaticana, one of the oldest active astronomical research institutions in the world, founded during the Gregorian calendar reform.",
+    "source": "Specola Vaticana Publications",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Castel_Gandolfo_observatory.jpg/1280px-Castel_Gandolfo_observatory.jpg"
+    ]
+  },
+  {
+    "id": "mount-graham-observatory",
+    "name": "The VATT & LUCIFER Telescope (Mount Graham)",
+    "category": "NASA / Space",
+    "type": "Point",
+    "coordinates": {
+      "lng": -109.892,
+      "lat": 32.7016
+    },
+    "date": 1993,
+    "description": "The Mount Graham International Observatory in Arizona, housing the Vatican Advanced Technology Telescope (VATT) alongside the LUCIFER near-infrared instrument, generating intense speculation about extraterrestrial observation projects.",
+    "source": "Large Binocular Telescope Consortium",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Large_Binocular_Telescope.jpg/1280px-Large_Binocular_Telescope.jpg"
+    ]
+  },
+  {
+    "id": "bill-cooper-shootout-location",
+    "name": "Eagar, Arizona (Bill Cooper Memorial)",
+    "category": "Secret Government Programs",
+    "type": "Point",
+    "coordinates": {
+      "lng": -109.2909,
+      "lat": 34.1112
+    },
+    "date": 2001,
+    "description": "The location of the Eagar, Arizona shootout where conspiracy author Milton William Cooper ('Behold a Pale Horse') was killed by sheriff's deputies after years of exposing secret government conspiracies.",
+    "source": "Eagar Police Incident Logs",
+    "images": [
+      "/images/bill_cooper.jpg"
+    ]
+  },
+  {
+    "id": "kurukshetra-battlefield",
+    "name": "Kurukshetra Battlefield (Mahabharata)",
+    "category": "Ancient Texts",
+    "type": "Point",
+    "coordinates": {
+      "lng": 76.8180,
+      "lat": 29.9697
+    },
+    "date": -3102,
+    "description": "The ancient battlefield in Haryana, India, where the epic Kurukshetra War described in the Mahabharata took place. Fringe theorists suggest its description of fiery celestial weapons represents prehistoric nuclear conflicts.",
+    "source": "The Mahabharata / Ancient Indian Archaeology",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Kurukshetra_floor_painting.jpg/1280px-Kurukshetra_floor_painting.jpg"
+    ]
+  },
+  {
+    "id": "cern-hq-switzerland",
+    "name": "CERN Headquarters & Birth of the Internet",
+    "category": "Particle Accelerators",
+    "type": "Point",
+    "coordinates": {
+      "lng": 6.0763,
+      "lat": 46.2330
+    },
+    "date": 1989,
+    "description": "CERN near Geneva, Switzerland, where Tim Berners-Lee invented the World Wide Web in 1989. Esoteric theories tie the birth of the web to high-energy physics experiments aiming to open interdimensional gateways.",
+    "source": "CERN Historical Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Cern_large_hadron_collider.jpg/1280px-Cern_large_hadron_collider.jpg"
+    ]
+  },
+  {
+    "id": "haarp-facility-alaska",
+    "name": "HAARP Research Facility",
+    "category": "Secret Government Programs",
+    "type": "Point",
+    "coordinates": {
+      "lng": -145.1502,
+      "lat": 62.3934
+    },
+    "date": 1993,
+    "description": "The High-frequency Active Auroral Research Program (HAARP) facility in Gakona, Alaska, consisting of a high-power radio frequency transmitter array. Widely suspected in alternative circles of weather modification and ionospheric weapons testing.",
+    "source": "UAF HAARP Documentation",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/HAARP_Gakona_Alaska.jpg/1280px-HAARP_Gakona_Alaska.jpg"
+    ]
   }
 ]

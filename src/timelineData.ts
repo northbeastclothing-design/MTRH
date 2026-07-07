@@ -5140,8 +5140,99 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     start: 2007,
     description: 'Former United States Senator and Senate Majority Leader who converted to Mormonism in college, representing a highly prominent, liberal political face of Latter-day Saint history.',
     source: 'Reid Biography / Nevada Political Records'
-  }
-  ];
+  }, {
+    id: 'tubal-cain',
+    name: 'Tubal-Cain',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -3200,
+    end: -2400,
+    description: 'Biblical metalworker, instructor of every artificer in brass and iron, descendant of Cain. Esoterically revered in masonic lore and occult traditions as the primordial blacksmith.',
+    source: 'Genesis 4:22'
+  }, {
+    id: 'naamah-nemah',
+    name: 'Naamah (Nemah)',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -3180,
+    end: -2380,
+    description: 'Sister of Tubal-Cain, daughter of Lamech and Zillah. In rabbinic and Gnostic traditions, Naamah is depicted as a singer of seductive songs, an initiator of metallurgy, and a surviving bloodline of Cain.',
+    source: 'Genesis 4:22'
+  }, {
+    id: 'cainites-lineage',
+    name: 'Cainite Dynasty',
+    type: 'lifespan',
+    layer: 'biblical-patriarchs',
+    start: -3900,
+    end: -2348,
+    description: 'The parallel human bloodline descending from Cain, noted for inventing metallurgy, city-building, music, and tools, heavily influenced by or intermarried with Enochian Watchers before the Great Flood.',
+    source: 'Genesis 4'
+  }, {
+    id: 'mahabharata-epic',
+    name: 'Kurukshetra War (Mahabharata)',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: -3102,
+    description: 'Traditional date of the epic Kurukshetra War in India, described in the Mahabharata, interpreted by ancient astronaut theorists as prehistoric nuclear warfare.',
+    source: 'The Mahabharata'
+  }, {
+    id: 'vatican-archive',
+    name: 'Vatican Secret Archives Founded',
+    type: 'event',
+    layer: 'black-nobility',
+    start: 1612,
+    description: 'Pope Paul V establishes the Vatican Secret Archives, centralizing the Holy See’s state papers, letters, and administrative acts.',
+    source: 'Holy See Archives'
+  }, {
+    id: 'passport-to-magonia',
+    name: 'Passport to Magonia Released',
+    type: 'event',
+    layer: 'nasa-space',
+    start: 1969,
+    description: 'Jacques Vallée publishes Passport to Magonia, connecting modern UFO sightings and abductions directly to historical folklore, fairy encounters, and demons.',
+    source: 'Passport to Magonia'
+  }, {
+    id: 'internet-cern-origins',
+    name: 'World Wide Web Invented at CERN',
+    type: 'event',
+    layer: 'nasa-space',
+    start: 1989,
+    description: 'Tim Berners-Lee invents the World Wide Web at CERN, laying the groundwork for the modern global internet.',
+    source: 'CERN Archives'
+  }, {
+    id: 'bill-cooper',
+    name: 'Milton William Cooper',
+    type: 'lifespan',
+    layer: 'secret-gov-programs',
+    start: 1943,
+    end: 2001,
+    description: 'Life of Milton William "Bill" Cooper, author of Behold a Pale Horse, radio broadcaster who warned of secret governments and UFO cover-ups, killed in a shootout in Eagar, AZ.',
+    source: 'Behold a Pale Horse'
+  }, {
+    id: 'behold-pale-horse',
+    name: 'Behold a Pale Horse Published',
+    type: 'event',
+    layer: 'secret-gov-programs',
+    start: 1991,
+    description: 'Bill Cooper publishes Behold a Pale Horse, introducing major underground ideas on secret treaties, alien cover-ups, and the New World Order.',
+    source: 'Behold a Pale Horse'
+  }, {
+    id: 'vatican-observatory',
+    name: 'VATT Completed at Mount Graham',
+    type: 'event',
+    layer: 'nasa-space',
+    start: 1993,
+    description: 'The Vatican Observatory completes construction of the Vatican Advanced Technology Telescope (VATT) at Mount Graham, Arizona, next to the Large Binocular Telescope.',
+    source: 'Specola Vaticana'
+  }, {
+    id: 'haarp-facility',
+    name: 'HAARP Facility Active',
+    type: 'event',
+    layer: 'secret-gov-programs',
+    start: 1993,
+    description: 'The High-frequency Active Auroral Research Program (HAARP) facility in Gakona, Alaska, begins operations.',
+    source: 'HAARP Documentation'
+  }];
 
 export interface TimelineLocation {
   lng: number;
@@ -5513,7 +5604,18 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'rel-adherent-donny-osmond': { lng: -111.9738, lat: 41.223, locationName: 'Donny Osmond (Associated Location)', category: 'Religion' },
   'rel-adherent-ken-jennings': { lng: -122.3762, lat: 47.8091, locationName: 'Ken Jennings (Associated Location)', category: 'Religion' },
   'rel-adherent-lindsey-stirling': { lng: -117.8677, lat: 33.7456, locationName: 'Lindsey Stirling (Associated Location)', category: 'Religion' },
-  'rel-adherent-harry-reid': { lng: -114.92, lat: 35.4661, locationName: 'Harry Reid (Associated Location)', category: 'Religion' }
+  'rel-adherent-harry-reid': { lng: -114.92, lat: 35.4661, locationName: 'Harry Reid (Associated Location)', category: 'Religion' },
+  'tubal-cain': { lng: 49.500, lat: 32.000, locationName: 'Land of Nod', category: 'Biblical Figures' },
+  'naamah-nemah': { lng: 49.500, lat: 32.000, locationName: 'Land of Nod', category: 'Biblical Figures' },
+  'cainites-lineage': { lng: 49.500, lat: 32.000, locationName: 'Land of Nod', category: 'Biblical Figures' },
+  'mahabharata-epic': { lng: 76.8180, lat: 29.9697, locationName: 'Kurukshetra, Haryana, India', category: 'Ancient Texts' },
+  'vatican-archive': { lng: 12.4545, lat: 41.9045, locationName: 'Vatican City', category: 'The Occult' },
+  'passport-to-magonia': { lng: 6.0763, lat: 46.2330, locationName: 'Geneva, Switzerland', category: 'NASA / Space' },
+  'internet-cern-origins': { lng: 6.0763, lat: 46.2330, locationName: 'CERN (Geneva, Switzerland)', category: 'Particle Accelerators' },
+  'bill-cooper': { lng: -109.2909, lat: 34.1112, locationName: 'Eagar, Arizona', category: 'Secret Government Programs' },
+  'behold-pale-horse': { lng: -109.2909, lat: 34.1112, locationName: 'Eagar, Arizona', category: 'Secret Government Programs' },
+  'vatican-observatory': { lng: -109.8920, lat: 32.7016, locationName: 'Mount Graham, Arizona', category: 'NASA / Space' },
+  'haarp-facility': { lng: -145.1502, lat: 62.3934, locationName: 'Gakona, Alaska', category: 'Secret Government Programs' }
 };
 
 export interface Waypoint {
