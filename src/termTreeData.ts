@@ -22982,6 +22982,7 @@ const chunk_new_additions: any[] = [
     name: 'Tubal-Cain',
     description: "A biblical patriarch mentioned in Genesis 4:22 as the son of Lamech and Zillah, and a descendant of Cain. Described as the 'instructor of every artificer in brass and iron', he is esoterically revered in masonic lore and occult traditions as the primordial blacksmith, associated with metallurgy, ancient technology, and the preservation of antediluvian knowledge.",
     relatedIds: ['cainites-lineage', 'naamah-nemah', 'nephilim-br', 'freemasonry'],
+    bibleVerses: ['And Zillah, she also bare Tubalcain, an instructer of every artificer in brass and iron: and the sister of Tubalcain was Naamah. — Genesis 4:22 (https://www.biblegateway.com/passage/?search=Genesis+4%3A22)'],
     images: ['https://upload.wikimedia.org/wikipedia/commons/3/3e/Giohargius_Tubalcain_%28cropped%29.JPG'],
     sources: ['Book of Genesis', 'Masonic Symbolism and Legend']
   }, {
@@ -22990,6 +22991,7 @@ const chunk_new_additions: any[] = [
     name: 'Naamah (Nemah)',
     description: "A biblical figure mentioned in Genesis 4:22 as the daughter of Lamech and Zillah, and sister of Tubal-Cain. In rabbinic literature, Gnostic texts, and occult lore, Naamah is depicted as a singer of seductive songs, an initiator of metallurgy, and in some traditions, a demonic entity (mother of demons or consort of Samael) who survived the Great Flood, carrying the bloodline of Cain into the post-diluvian world.",
     relatedIds: ['cainites-lineage', 'tubal-cain', 'nephilim-br', 'lilith'],
+    bibleVerses: ['And Zillah, she also bare Tubalcain, an instructer of every artificer in brass and iron: and the sister of Tubalcain was Naamah. — Genesis 4:22 (https://www.biblegateway.com/passage/?search=Genesis+4%3A22)'],
     images: ['https://upload.wikimedia.org/wikipedia/commons/7/76/Orvieto080.jpg'],
     sources: ['Genesis Rabbah', 'The Zohar', 'Zoharistic Kabbalah']
   }, {
@@ -22998,6 +23000,7 @@ const chunk_new_additions: any[] = [
     name: 'The Cainites (Lineage of Cain)',
     description: "The biblical descendants of Cain, including Enoch (not the patriarch), Irad, Mehujael, Methushael, Lamech, and his children Jabal, Jubal, Tubal-Cain, and Naamah. In apocryphal literature and alternative history, the Cainites represent a parallel human lineage that intermarried with the Watchers/Nephilim, developing advanced technology, metalworking, music, and cities before the Great Flood.",
     relatedIds: ['nephilim-br', 'tubal-cain', 'naamah-nemah', 'flood-evt'],
+    bibleVerses: ['And Cain went out from the presence of the Lord, and dwelt in the land of Nod, on the east of Eden. And Cain knew his wife; and she conceived, and bare Enoch: and he builded a city, and called the name of the city, after the name of his son, Enoch. — Genesis 4:16-17 (https://www.biblegateway.com/passage/?search=Genesis+4%3A16-17)'],
     sources: ['Book of Genesis', 'The Book of Enoch', 'Hebrew Apocrypha']
   }, {
     id: 'mahabharata-epic',
