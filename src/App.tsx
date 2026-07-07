@@ -1042,6 +1042,7 @@ function App() {
   const [geocodeResults, setGeocodeResults] = useState<any[]>([]);
   const [isSearchingGeocode, setIsSearchingGeocode] = useState(false);
   const [showSearchResults, setShowSearchResults] = useState(false);
+  const [searchActiveIndex, setSearchActiveIndex] = useState(-1);
   const [pointsAndLinesData, setPointsAndLinesData] = useState<any[]>([]);
   const [rabbitHoleData, setRabbitHoleData] = useState<any[]>([]);
   const [ufoData, setUfoData] = useState<any[]>([]);
@@ -1308,6 +1309,10 @@ function App() {
     }, 500);
 
     return () => clearTimeout(timer);
+  }, [searchQuery]);
+
+  useEffect(() => {
+    setSearchActiveIndex(-1);
   }, [searchQuery]);
 
   const handleGeocodeSelect = (result: any) => {
@@ -6386,6 +6391,30 @@ function App() {
                   value={searchQuery}
                   onFocus={() => setShowSearchResults(true)}
                   onChange={(e) => setSearchQuery(e.target.value)}
+                  onKeyDown={(e) => {
+                    const visibleSearchData = searchData.slice(0, 10);
+                    const totalResultsCount = visibleSearchData.length + geocodeResults.length;
+                    if (!showSearchResults || totalResultsCount === 0) return;
+
+                    if (e.key === 'ArrowDown') {
+                      e.preventDefault();
+                      setSearchActiveIndex(prev => (prev + 1) % totalResultsCount);
+                    } else if (e.key === 'ArrowUp') {
+                      e.preventDefault();
+                      setSearchActiveIndex(prev => (prev - 1 + totalResultsCount) % totalResultsCount);
+                    } else if (e.key === 'Enter') {
+                      if (searchActiveIndex >= 0 && searchActiveIndex < totalResultsCount) {
+                        e.preventDefault();
+                        if (searchActiveIndex < visibleSearchData.length) {
+                          handleSearchItemSelect(visibleSearchData[searchActiveIndex]);
+                        } else {
+                          handleGeocodeSelect(geocodeResults[searchActiveIndex - visibleSearchData.length]);
+                        }
+                      }
+                    } else if (e.key === 'Escape') {
+                      setShowSearchResults(false);
+                    }
+                  }}
                   style={{
                     width: '100%',
                     padding: '10px 32px 10px 12px',
@@ -6456,25 +6485,36 @@ function App() {
                       {searchData.length > 0 && (
                         <div style={{ borderBottom: `1px solid ${theme.borderLight}` }}>
                           <div style={{ padding: '8px 12px', fontSize: '10px', background: isMapDarkMode ? '#1a1a1a' : '#f8f8f8', borderBottom: `1px solid ${theme.borderLight}`, fontWeight: 'bold' }}>RESEARCH ARCHIVES</div>
-                          {searchData.slice(0, 10).map((item, idx) => (
-                            <div 
-                              key={`data-${idx}`}
-                              onClick={() => handleSearchItemSelect(item)}
-                              className={isMapDarkMode ? "hover:bg-gray-800" : "hover:bg-gray-50"}
-                              style={{ padding: '10px 12px', cursor: 'pointer', borderBottom: idx < searchData.slice(0, 10).length - 1 ? `1px solid ${theme.borderLight}` : 'none', display: 'flex', alignItems: 'center', gap: '8px' }}
-                            >
-                              <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: layerColors[item.categories[0]] || (isMapDarkMode ? '#fff' : '#000') }} />
-                              <div style={{ display: 'flex', flexDirection: 'column' }}>
-                                <span style={{ fontSize: '11px', fontWeight: 'bold' }}>{item.name}</span>
-                                <span style={{ fontSize: '9px', color: theme.textDim }}>
-                                  {item.categories[0]}
-                                  {activeLayers[item.categories[0]] === false && (
-                                    <span style={{ marginLeft: '6px', opacity: 0.6 }}>(layer off — will enable)</span>
-                                  )}
-                                </span>
+                          {searchData.slice(0, 10).map((item, idx) => {
+                            const isSelected = searchActiveIndex === idx;
+                            return (
+                              <div 
+                                key={`data-${idx}`}
+                                onClick={() => handleSearchItemSelect(item)}
+                                className={isMapDarkMode ? "hover:bg-gray-800" : "hover:bg-gray-50"}
+                                style={{ 
+                                  padding: '10px 12px', 
+                                  cursor: 'pointer', 
+                                  borderBottom: idx < searchData.slice(0, 10).length - 1 ? `1px solid ${theme.borderLight}` : 'none', 
+                                  display: 'flex', 
+                                  alignItems: 'center', 
+                                  gap: '8px',
+                                  background: isSelected ? (isMapDarkMode ? '#1f2937' : '#f3f4f6') : 'transparent'
+                                }}
+                              >
+                                <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: layerColors[item.categories[0]] || (isMapDarkMode ? '#fff' : '#000') }} />
+                                <div style={{ display: 'flex', flexDirection: 'column' }}>
+                                  <span style={{ fontSize: '11px', fontWeight: 'bold' }}>{item.name}</span>
+                                  <span style={{ fontSize: '9px', color: theme.textDim }}>
+                                    {item.categories[0]}
+                                    {activeLayers[item.categories[0]] === false && (
+                                      <span style={{ marginLeft: '6px', opacity: 0.6 }}>(layer off — will enable)</span>
+                                    )}
+                                  </span>
+                                </div>
                               </div>
-                            </div>
-                          ))}
+                            );
+                          })}
                         </div>
                       )}
 
@@ -6482,17 +6522,28 @@ function App() {
                       {geocodeResults.length > 0 && (
                         <div>
                           <div style={{ padding: '8px 12px', fontSize: '10px', background: isMapDarkMode ? '#1a1a1a' : '#f8f8f8', borderBottom: `1px solid ${theme.borderLight}`, fontWeight: 'bold' }}>WORLD LOCATIONS</div>
-                          {geocodeResults.map((result, idx) => (
-                            <div 
-                              key={`geo-${idx}`}
-                              onClick={() => handleGeocodeSelect(result)}
-                              className={isMapDarkMode ? "hover:bg-gray-800" : "hover:bg-gray-50"}
-                              style={{ padding: '10px 12px', cursor: 'pointer', borderBottom: idx < geocodeResults.length - 1 ? `1px solid ${theme.borderLight}` : 'none', display: 'flex', alignItems: 'center', gap: '8px' }}
-                            >
-                              <img src="/icons/icon-map-pin.svg" style={{ width: '12px', filter: theme.invert }} alt="pin" />
-                              <span style={{ fontSize: '11px' }}>{result.place_name}</span>
-                            </div>
-                          ))}
+                          {geocodeResults.map((result, idx) => {
+                            const isSelected = searchActiveIndex === searchData.slice(0, 10).length + idx;
+                            return (
+                              <div 
+                                key={`geo-${idx}`}
+                                onClick={() => handleGeocodeSelect(result)}
+                                className={isMapDarkMode ? "hover:bg-gray-800" : "hover:bg-gray-50"}
+                                style={{ 
+                                  padding: '10px 12px', 
+                                  cursor: 'pointer', 
+                                  borderBottom: idx < geocodeResults.length - 1 ? `1px solid ${theme.borderLight}` : 'none', 
+                                  display: 'flex', 
+                                  alignItems: 'center', 
+                                  gap: '8px',
+                                  background: isSelected ? (isMapDarkMode ? '#1f2937' : '#f3f4f6') : 'transparent'
+                                }}
+                              >
+                                <img src="/icons/icon-map-pin.svg" style={{ width: '12px', filter: theme.invert }} alt="pin" />
+                                <span style={{ fontSize: '11px' }}>{result.place_name}</span>
+                              </div>
+                            );
+                          })}
                         </div>
                       )}
 

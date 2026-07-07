@@ -608,6 +608,7 @@ export default function CodexPage({
   const hoveredTermId = hoveredTerm?.id || null;
   const hoveredLevel = hoveredTerm?.level ?? null;
   const [searchQuery, setSearchQuery] = useState('');
+  const [searchActiveIndex, setSearchActiveIndex] = useState(-1);
   const [lines, setLines] = useState<SVGLinePath[]>([]);
   const [scrollSize, setScrollSize] = useState({ width: 0, height: 0 });
   const [isRightCollapsed, setIsRightCollapsed] = useState(true);
@@ -627,6 +628,10 @@ export default function CodexPage({
   const lastMousePosRef = useRef({ x: 0, y: 0, time: 0 });
   const inertiaFrameRef = useRef<number | null>(null);
 
+
+  useEffect(() => {
+    setSearchActiveIndex(-1);
+  }, [searchQuery]);
 
   // Derive active selection node (last element in selected path)
   const selectedTermId = selectedPath[selectedPath.length - 1] || null;
@@ -1740,6 +1745,26 @@ export default function CodexPage({
             placeholder="SEARCH DATABASE..."
             value={searchQuery}
             onChange={e => setSearchQuery(e.target.value)}
+            onKeyDown={(e) => {
+              if (searchSuggestions.length === 0) return;
+              if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                setSearchActiveIndex(prev => (prev + 1) % searchSuggestions.length);
+              } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                setSearchActiveIndex(prev => (prev - 1 + searchSuggestions.length) % searchSuggestions.length);
+              } else if (e.key === 'Enter') {
+                if (searchActiveIndex >= 0 && searchActiveIndex < searchSuggestions.length) {
+                  e.preventDefault();
+                  const node = searchSuggestions[searchActiveIndex];
+                  const path = getPathToRoot(node.id);
+                  setSelectedPath(path);
+                  setSearchQuery('');
+                }
+              } else if (e.key === 'Escape') {
+                setSearchQuery('');
+              }
+            }}
             style={{
               width: '100%',
               padding: '8px 24px 8px 8px',
@@ -1797,8 +1822,9 @@ export default function CodexPage({
             }}
           >
             {searchSuggestions.length > 0 ? (
-              searchSuggestions.map(node => {
+              searchSuggestions.map((node, idx) => {
                 const parentLabel = getParentPathLabel(node);
+                const isSelected = searchActiveIndex === idx;
                 return (
                   <div
                     key={node.id}
@@ -1809,6 +1835,9 @@ export default function CodexPage({
                       const path = getPathToRoot(node.id);
                       setSelectedPath(path);
                       setSearchQuery('');
+                    }}
+                    style={{
+                      background: isSelected ? (isMapDarkMode ? '#222222' : '#f5f5f5') : undefined
                     }}
                   >
                       <span style={{

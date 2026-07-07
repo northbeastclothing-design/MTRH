@@ -32441,7 +32441,7 @@
     "description": "The central repository containing state papers, papal correspondence, and historical records of the Holy See. It is the subject of numerous conspiracy theories regarding suppressed historical knowledge.",
     "source": "Maria Luisa Ambrosini",
     "images": [
-      "/images/vatican_archive.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/9/97/Interiors_of_Vatican_Secret_Archives.png"
     ]
   },
   {
@@ -32488,9 +32488,7 @@
     "date": 2001,
     "description": "The location of the Eagar, Arizona shootout where conspiracy author Milton William Cooper ('Behold a Pale Horse') was killed by sheriff's deputies after years of exposing secret government conspiracies.",
     "source": "Eagar Police Incident Logs",
-    "images": [
-      "/images/bill_cooper.jpg"
-    ]
+    "images": []
   },
   {
     "id": "kurukshetra-battlefield",
@@ -32505,7 +32503,7 @@
     "description": "The ancient battlefield in Haryana, India, where the epic Kurukshetra War described in the Mahabharata took place. Fringe theorists suggest its description of fiery celestial weapons represents prehistoric nuclear conflicts.",
     "source": "The Mahabharata / Ancient Indian Archaeology",
     "images": [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Kurukshetra_floor_painting.jpg/1280px-Kurukshetra_floor_painting.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/d/da/The_Pandava_and_Kaurava_armies_face_each_other.JPG"
     ]
   },
   {
@@ -32521,7 +32519,7 @@
     "description": "CERN near Geneva, Switzerland, where Tim Berners-Lee invented the World Wide Web in 1989. Esoteric theories tie the birth of the web to high-energy physics experiments aiming to open interdimensional gateways.",
     "source": "CERN Historical Records",
     "images": [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Cern_large_hadron_collider.jpg/1280px-Cern_large_hadron_collider.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/1/1d/CERN_Large_Hadron_Collider.jpg"
     ]
   },
   {
@@ -32537,7 +32535,7 @@
     "description": "The High-frequency Active Auroral Research Program (HAARP) facility in Gakona, Alaska, consisting of a high-power radio frequency transmitter array. Widely suspected in alternative circles of weather modification and ionospheric weapons testing.",
     "source": "UAF HAARP Documentation",
     "images": [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/HAARP_Gakona_Alaska.jpg/1280px-HAARP_Gakona_Alaska.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/9/9f/High_Frequency_Active_Auroral_Research_Program_site.jpg"
     ]
   }
 ]
