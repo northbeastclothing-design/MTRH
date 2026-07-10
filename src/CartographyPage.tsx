@@ -27,6 +27,7 @@ interface HistoricalMap {
   url: string;
   aspectRatio: number;
   pinColor?: string;
+  era: string;
 }
 
 // High-resolution digital archives and Wikimedia collections
@@ -38,70 +39,8 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     description: "The oldest known map of the world, carved onto a clay tablet. It places Babylon at the center of the Euphrates, encircled by a ring of bitter waters and triangular outer islands.",
     url: "https://upload.wikimedia.org/wikipedia/commons/1/1b/Map_of_the_World_from_Sippar%2C_Iraq%2C_6th_century_BCE._British_Museum.jpg",
     aspectRatio: 0.9202,
-    pinColor: '#FF9BE1' // Neon pink
-  },
-  {
-    id: 'gleason',
-    name: "Gleason's New Standard Map",
-    year: "1892",
-    description: "An azimuthal equidistant projection showing the world flattened as a disk, surrounded by an ice wall. Heavily cited in flat earth and esoteric cartography models.",
-    url: "https://iiif.digitalcommonwealth.org/iiif/2/commonwealth:7h149v867/full/4000,/0/default.jpg",
-    aspectRatio: 0.7025,
-    pinColor: '#FF5E97' // Contrasting deep pink (removes brand purple hardcoding)
-  },
-  {
-    id: 'hereford',
-    name: "Hereford Mappa Mundi",
-    year: "c. 1300",
-    description: "The largest surviving medieval European world map, displaying theological, geographical, and historical narratives in a circular frame centered on Jerusalem.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/9/92/Hereford_Mappa_Mundi.jpg",
-    aspectRatio: 0.8421,
-    pinColor: '#74F8F3' // Neon teal
-  },
-  {
-    id: 'kangnido',
-    name: "Kangnido Map",
-    year: "1402",
-    description: "An early Joseon-dynasty Korean map detailing East Asia, the Silk Road, India, and Africa, representing the collision of Western Islamic and Far Eastern Chinese cartographical findings.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/1/1d/GeneralMapOfDistancesAndHistoricCapitals.jpg",
-    aspectRatio: 1.2413,
-    pinColor: '#FF9BE1' // Neon pink
-  },
-  {
-    id: 'tartaria',
-    name: "Map of Tartaria",
-    year: "1606",
-    description: "Jodocus Hondius's seminal engraving of the Great Empire of Tartary, detailing geographical regions, rivers, and cities spanning across Northern Asia and Russia.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Tartaria_by_Jodocus_Hondius.jpg/3840px-Tartaria_by_Jodocus_Hondius.jpg",
-    aspectRatio: 1.3904,
-    pinColor: '#90E9FF' // Neon cyan
-  },
-  {
-    id: 'orontius',
-    name: "Orontius Finaeus Map",
-    year: "1531",
-    description: "A famous heart-shaped cordiform projection created by French mathematician Oronce Fine, depicting a massive, detailed Antarctic landmass centuries before its official discovery.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/c/c9/Oronce_Fine_1531.jpg",
-    aspectRatio: 1.3474,
-    pinColor: '#74F8F3' // Neon teal
-  },
-  {
-    id: 'ortelius',
-    name: "Ortelius World Map",
-    year: "1570",
-    description: "Abraham Ortelius's landmark 'Typus Orbis Terrarum' world map, published as the opening plate of the first modern atlas, mapping Tartaria, the Americas, and speculative polar coastlines.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/OrteliusWorldMap1570.jpg/3840px-OrteliusWorldMap1570.jpg",
-    aspectRatio: 1.4683,
-    pinColor: '#BAEAF4' // Light cyan
-  },
-  {
-    id: 'pangaea',
-    name: "Pangea Politica Map",
-    year: "Modern (335M BC)",
-    description: "A detailed scientific and political reconstruction by Massimo Pietrobon mapping modern country borders onto the prehistoric supercontinent of Pangaea.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Pangea_political.jpg",
-    aspectRatio: 1.0082,
-    pinColor: '#FF9F63' // Bright orange
+    pinColor: '#FF9BE1',
+    era: 'ancient'
   },
   {
     id: 'peutinger',
@@ -110,7 +49,8 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     description: "An incredibly elongated map showing the cursus publicus (Roman road network) spanning from southern Britain all the way to India, optimized for traveler itinerary rather than shape accuracy.",
     url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/TabulaPeutingeriana.jpg/3840px-TabulaPeutingeriana.jpg",
     aspectRatio: 13.0612,
-    pinColor: '#91FFC4' // Mint green
+    pinColor: '#91FFC4',
+    era: 'ancient'
   },
   {
     id: 'ptolemy',
@@ -119,7 +59,8 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     description: "A classical Renaissance restoration of Claudius Ptolemy's geographical coordinates, showing the known world of the Roman Empire extending from Hibernia (Ireland) to China.",
     url: "https://upload.wikimedia.org/wikipedia/commons/2/23/PtolemyWorldMap.jpg",
     aspectRatio: 1.4612,
-    pinColor: '#FFF96A' // Bright yellow
+    pinColor: '#FFF96A',
+    era: 'ancient'
   },
   {
     id: 'tabula-rogeriana',
@@ -128,7 +69,128 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     description: "Drawn by the Arab scholar Al-Idrisi for King Roger II of Sicily. It represented the most advanced geographical synthesis of the medieval world, oriented with South at the top.",
     url: "https://upload.wikimedia.org/wikipedia/commons/d/d3/TabulaRogeriana.jpg",
     aspectRatio: 2.2069,
-    pinColor: '#90C2FF' // Light blue
+    pinColor: '#90C2FF',
+    era: 'early-medieval'
+  },
+  {
+    id: 'psalter',
+    name: "Psalter Mappa Mundi",
+    year: "c. 1260",
+    description: "A detailed medieval miniature map from a psalter. It depicts the world inside a circular frame with Christ presiding above, flanked by angels.",
+    url: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Psalter_world_map.jpg",
+    aspectRatio: 0.7838,
+    pinColor: '#BAEAF4',
+    era: 'early-medieval'
+  },
+  {
+    id: 'hereford',
+    name: "Hereford Mappa Mundi",
+    year: "c. 1300",
+    description: "The largest surviving medieval European world map, displaying theological, geographical, and historical narratives in a circular frame centered on Jerusalem.",
+    url: "https://upload.wikimedia.org/wikipedia/commons/9/92/Hereford_Mappa_Mundi.jpg",
+    aspectRatio: 0.8421,
+    pinColor: '#74F8F3',
+    era: 'early-medieval'
+  },
+  {
+    id: 'catalan',
+    name: "Catalan Atlas",
+    year: "c. 1375",
+    description: "The pinnacle of medieval cartography from the Majorcan school, drawn by Abraham Cresques. It illustrates the Silk Road, West African empires, and Marco Polo's travels.",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/1375_Atlas_Catalan_Abraham_Cresques.jpg/1280px-1375_Atlas_Catalan_Abraham_Cresques.jpg",
+    aspectRatio: 1.8396,
+    pinColor: '#91FFC4',
+    era: 'late-medieval'
+  },
+  {
+    id: 'kangnido',
+    name: "Kangnido Map",
+    year: "1402",
+    description: "An early Joseon-dynasty Korean map detailing East Asia, the Silk Road, India, and Africa, representing the collision of Western Islamic and Far Eastern Chinese cartographical findings.",
+    url: "https://upload.wikimedia.org/wikipedia/commons/1/1d/GeneralMapOfDistancesAndHistoricCapitals.jpg",
+    aspectRatio: 1.2413,
+    pinColor: '#FF9BE1',
+    era: 'late-medieval'
+  },
+  {
+    id: 'borgia',
+    name: "Borgia World Map",
+    year: "c. 1430",
+    description: "A highly complex, non-theocentric map engraved on a circular copper plate, showing Asia, Europe, and Africa with mythological illustrations and kingdoms.",
+    url: "https://upload.wikimedia.org/wikipedia/commons/e/eb/Mapa_de_Borgia_XV.jpg",
+    aspectRatio: 1.0,
+    pinColor: '#FF9F63',
+    era: 'late-medieval'
+  },
+  {
+    id: 'waldseemuller',
+    name: "Waldseemüller World Map",
+    year: "1507",
+    description: "Martin Waldseemüller's monumental map, the first to use the name 'America' and represent the New World as a separate landmass between the Atlantic and Pacific.",
+    url: "https://upload.wikimedia.org/wikipedia/commons/c/c0/Waldseemuller_map_2.jpg",
+    aspectRatio: 1.7513,
+    pinColor: '#74F8F3',
+    era: 'renaissance'
+  },
+  {
+    id: 'pirireis',
+    name: "Piri Reis Map",
+    year: "1513",
+    description: "The surviving fragment of a world map compiled by Ottoman admiral Piri Reis, showcasing highly accurate coastlines of Western Europe, North Africa, and Brazil.",
+    url: "https://upload.wikimedia.org/wikipedia/commons/7/70/Piri_reis_world_map_01.jpg",
+    aspectRatio: 0.75,
+    pinColor: '#90E9FF',
+    era: 'renaissance'
+  },
+  {
+    id: 'orontius',
+    name: "Orontius Finaeus Map",
+    year: "1531",
+    description: "A famous heart-shaped cordiform projection created by French mathematician Oronce Fine, depicting a massive, detailed Antarctic landmass centuries before its official discovery.",
+    url: "https://upload.wikimedia.org/wikipedia/commons/c/c9/Oronce_Fine_1531.jpg",
+    aspectRatio: 1.3474,
+    pinColor: '#74F8F3',
+    era: 'renaissance'
+  },
+  {
+    id: 'ortelius',
+    name: "Ortelius World Map",
+    year: "1570",
+    description: "Abraham Ortelius's landmark 'Typus Orbis Terrarum' world map, published as the opening plate of the first modern atlas, mapping Tartaria, the Americas, and speculative polar coastlines.",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/OrteliusWorldMap1570.jpg/3840px-OrteliusWorldMap1570.jpg",
+    aspectRatio: 1.4683,
+    pinColor: '#BAEAF4',
+    era: 'renaissance'
+  },
+  {
+    id: 'tartaria',
+    name: "Map of Tartaria",
+    year: "1606",
+    description: "Jodocus Hondius's seminal engraving of the Great Empire of Tartary, detailing geographical regions, rivers, and cities spanning across Northern Asia and Russia.",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Tartaria_by_Jodocus_Hondius.jpg/3840px-Tartaria_by_Jodocus_Hondius.jpg",
+    aspectRatio: 1.3904,
+    pinColor: '#90E9FF',
+    era: 'renaissance'
+  },
+  {
+    id: 'gleason',
+    name: "Gleason's New Standard Map",
+    year: "1892",
+    description: "An azimuthal equidistant projection showing the world flattened as a disk, surrounded by an ice wall. Heavily cited in flat earth and esoteric cartography models.",
+    url: "https://iiif.digitalcommonwealth.org/iiif/2/commonwealth:7h149v867/full/4000,/0/default.jpg",
+    aspectRatio: 0.7025,
+    pinColor: '#FF5E97',
+    era: 'modern'
+  },
+  {
+    id: 'pangaea',
+    name: "Pangea Politica Map",
+    year: "Modern (335M BC)",
+    description: "A detailed scientific and political reconstruction by Massimo Pietrobon mapping modern country borders onto the prehistoric supercontinent of Pangaea.",
+    url: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Pangea_political.jpg",
+    aspectRatio: 1.0082,
+    pinColor: '#FF9F63',
+    era: 'speculative'
   }
 ];
 
@@ -272,6 +334,15 @@ const updateMapOverlay = (map: mapboxgl.Map, hMap: HistoricalMap, customUrl?: st
   }
 };
 
+const ERAS = [
+  { id: 'ancient', name: "Ancient Maps", period: "6,200 BCE – 600 CE" },
+  { id: 'early-medieval', name: "Early Medieval Maps", period: "600 – 1300 CE" },
+  { id: 'late-medieval', name: "Late Medieval Maps", period: "1300 – 1500 CE" },
+  { id: 'renaissance', name: "Renaissance Maps", period: "1492 – 1800 CE" },
+  { id: 'modern', name: "Modern & Projections", period: "1800 – Present" },
+  { id: 'speculative', name: "Speculative & Reconstruction", period: "" }
+];
+
 export default function CartographyPage({ theme, isMapDarkMode }: CartographyPageProps) {
   const [selectedMap, setSelectedMap] = useState<HistoricalMap>(HISTORICAL_MAPS[0]);
   const [loadedThumbnails, setLoadedThumbnails] = useState<Record<string, boolean>>({});
@@ -279,6 +350,22 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
   const [showNotes, setShowNotes] = useState<boolean>(true);
   const [isAddMode, setIsAddMode] = useState<boolean>(false);
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState<boolean>(false);
+
+  const [expandedEras, setExpandedEras] = useState<Record<string, boolean>>(() => {
+    const initialMap = HISTORICAL_MAPS[0];
+    return {
+      [initialMap.era]: true
+    };
+  });
+
+  useEffect(() => {
+    if (selectedMap) {
+      setExpandedEras(prev => ({
+        ...prev,
+        [selectedMap.era]: true
+      }));
+    }
+  }, [selectedMap]);
 
   
   // Note Submission state
@@ -1058,176 +1145,305 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
             background: 'transparent'
           }}
         >
-          <span style={{ fontSize: '9px', color: theme.textDim, letterSpacing: '1.5px', fontWeight: 'bold' }}>SELECT MAP TO EXPLORE</span>
-          {HISTORICAL_MAPS.map((hMap) => {
-            const isSelected = hMap.id === selectedMap.id;
+          <span style={{ fontSize: '9px', color: theme.textDim, letterSpacing: '1.5px', fontWeight: 'bold', marginBottom: '4px' }}>SELECT MAP TO EXPLORE</span>
+          {ERAS.map((era) => {
+            const eraMaps = [...HISTORICAL_MAPS]
+              .filter(m => m.era === era.id)
+              .map(m => ({
+                ...m,
+                cleanName: m.name.replace(/^The\s+/i, '')
+              }))
+              .sort((a, b) => a.cleanName.localeCompare(b.cleanName));
+
+            if (eraMaps.length === 0) return null;
+
+            const isExpanded = !!expandedEras[era.id];
+
             return (
-              <motion.div
-                key={hMap.id}
-                onClick={() => setSelectedMap(hMap)}
-                role="button"
-                tabIndex={0}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    setSelectedMap(hMap);
-                  }
-                }}
-                whileHover={{
-                  scale: 1.02,
-                  y: -2,
-                  boxShadow: '0 8px 24px rgba(0,0,0,0.15)'
-                }}
-                style={{
-                  width: '100%',
-                  background: 'transparent',
-                  color: theme.text,
-                  border: isSelected ? '3px solid #000000' : `1px solid ${theme.border}`,
-                  padding: 0,
-                  textAlign: 'left',
-                  cursor: 'pointer',
-                  borderRadius: '20px',
-                  overflow: 'hidden',
-                  transition: 'background-color 0.2s ease, border-color 0.2s ease, border-width 0.1s ease',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'stretch',
-                  flexShrink: 0
-                }}
-              >
-                {/* THUMBNAIL */}
-                <div style={{
-                  position: 'relative',
-                  width: '100%',
-                  height: '112px',
-                  borderBottom: `1px solid ${isSelected ? '#000000' : theme.border}`,
-                  overflow: 'hidden',
-                  background: isMapDarkMode ? '#111' : '#eee',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  flexShrink: 0
-                }}>
-                  {/* Globe Icon in top-left with map-specific background pin color */}
-                  <svg 
-                    width="30" 
-                    height="30" 
-                    viewBox="0 0 30 30" 
-                    fill="none" 
-                    xmlns="http://www.w3.org/2000/svg"
-                    style={{ 
-                      position: 'absolute',
-                      top: '4px',
-                      left: '4px',
-                      zIndex: 2
-                    }}
-                  >
-                    <g clipPath={`url(#clip0_carto_thumb_${hMap.id})`}>
-                      <circle cx="15" cy="15" r="15" fill={hMap.pinColor || '#FF5E97'} />
-                      <path d="M6 15C6 19.9705 10.0294 24 15 24C19.9705 24 24 19.9705 24 15C24 10.0294 19.9705 6 15 6C10.0294 6 6 10.0294 6 15Z" stroke="black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
-                      <path d="M15.9 6.04431C15.9 6.04431 18.6 9.59987 18.6 14.9998C18.6 20.3998 15.9 23.9555 15.9 23.9555" stroke="black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
-                      <path d="M14.1 23.9555C14.1 23.9555 11.4 20.3998 11.4 14.9998C11.4 9.59987 14.1 6.04431 14.1 6.04431" stroke="black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
-                      <path d="M6.56665 18.15H23.4333" stroke="black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
-                      <path d="M6.56665 11.85H23.4333" stroke="black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
-                    </g>
-                    <defs>
-                      <clipPath id={`clip0_carto_thumb_${hMap.id}`}>
-                        <rect width="30" height="30" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-
-                  {/* Pin Counter Badge in top-right corner */}
-                  {notes.length > 0 && (() => {
-                    const pinCount = notes.filter(point => point.mapId === hMap.id).length;
-                    if (pinCount === 0) return null;
-                    return (
-                      <div style={{
-                        position: 'absolute',
-                        top: '4px',
-                        right: '4px',
-                        background: 'rgba(0, 0, 0, 0.65)',
-                        backdropFilter: 'blur(2px)',
-                        color: '#ffffff',
+              <div key={era.id} style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                {/* Accordion Header */}
+                <motion.div
+                  onClick={() => setExpandedEras(prev => ({ ...prev, [era.id]: !prev[era.id] }))}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      setExpandedEras(prev => ({ ...prev, [era.id]: !prev[era.id] }));
+                    }
+                  }}
+                  whileHover={{
+                    scale: 1.01,
+                    y: -1,
+                    boxShadow: '0 4px 12px rgba(0,0,0,0.05)'
+                  }}
+                  style={{
+                    background: theme.bg,
+                    border: `1px solid ${theme.border}`,
+                    borderRadius: '12px',
+                    padding: '10px 14px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    cursor: 'pointer',
+                    userSelect: 'none',
+                    transition: 'border-color 0.2s ease, background-color 0.2s ease'
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center' }}>
+                    {/* SVG Folder Icon */}
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ marginRight: '8px', opacity: 0.6, color: theme.text }}>
+                      <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
+                    </svg>
+                    <div style={{ display: 'flex', flexDirection: 'column' }}>
+                      <span style={{
                         fontSize: '11px',
+                        fontWeight: 'bold',
                         fontFamily: '"Space Mono", monospace',
-                        fontWeight: '400',
-                        height: '30px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '6px',
-                        padding: '0 16px 0 4px',
-                        borderRadius: '15px',
-                        letterSpacing: '0.5px',
-                        whiteSpace: 'nowrap',
-                        zIndex: 2,
-                        pointerEvents: 'none'
+                        color: theme.text,
+                        lineHeight: '13px'
                       }}>
-                        <img 
-                          src="/icons/icon-map-pin.svg"
-                          style={{
-                            width: '24px',
-                            height: '24px',
-                            filter: 'brightness(0) invert(1)'
-                          }}
-                          alt="pin icon"
-                        />
-                        <span>{pinCount}</span>
-                      </div>
-                    );
-                  })()}
-
-                  {!loadedThumbnails[hMap.id] && (
-                    <div className="loading-spinner" style={{
-                      position: 'absolute',
-                      borderTopColor: isMapDarkMode ? '#ffffff' : '#000000'
-                    }} />
-                  )}
-                  <img 
-                    src={`/api/proxy-resource?url=${encodeURIComponent(hMap.url)}`}
-                    alt={hMap.name}
-                    onLoad={() => setLoadedThumbnails(prev => ({ ...prev, [hMap.id]: true }))}
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      objectFit: 'cover',
-                      opacity: loadedThumbnails[hMap.id] ? (isSelected ? 0.95 : 0.75) : 0,
-                      transition: 'opacity 0.2s ease'
-                    }}
-                  />
-                </div>                 {/* TEXT CONTENT */}
-                <div style={{ 
-                  display: 'flex', 
-                  flexDirection: 'column', 
-                  gap: '6px', 
-                  padding: '12px 14px',
-                  background: isSelected ? (hMap.pinColor || '#FF5E97') : 'transparent',
-                  color: isSelected ? '#000000' : theme.text,
-                  transition: 'background-color 0.2s ease, color 0.2s ease'
-                }}>
-                  <span style={{ fontSize: '11px', fontWeight: 'bold', letterSpacing: '0.5px', lineHeight: '14px' }}>
-                    {hMap.name}
-                  </span>
-                  <div style={{ 
-                    fontSize: '8px', 
-                    fontWeight: 'bold', 
-                    fontFamily: '"Space Mono", monospace', 
-                    letterSpacing: '1px',
-                    opacity: isSelected ? 0.8 : 0.6,
-                    color: isSelected ? '#000000' : theme.textDim
-                  }}>
-                    CREATION DATE: {hMap.year}
+                        {era.name}
+                      </span>
+                      {era.period && (
+                        <span style={{
+                          fontSize: '8px',
+                          color: theme.textDim,
+                          letterSpacing: '0.5px',
+                          marginTop: '1px'
+                        }}>
+                          {era.period}
+                        </span>
+                      )}
+                    </div>
                   </div>
-                  <p style={{
-                    fontSize: '9px',
-                    lineHeight: '13px',
-                    margin: 0,
-                    opacity: isSelected ? 0.9 : 0.7,
-                    color: isSelected ? '#000000' : theme.textDim
+
+                  <div style={{ display: 'flex', alignItems: 'center' }}>
+                    {/* Map Count Badge */}
+                    <div style={{
+                      height: '18px',
+                      padding: '0 8px',
+                      background: theme.text,
+                      color: theme.bg,
+                      borderRadius: '9px',
+                      fontSize: '9px',
+                      fontWeight: 'bold',
+                      fontFamily: '"Space Mono", monospace',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      minWidth: '18px'
+                    }}>
+                      {eraMaps.length}
+                    </div>
+
+                    {/* Chevron Arrow */}
+                    <motion.img
+                      src="/icons/icon-arrow-left.svg"
+                      alt="chevron"
+                      style={{
+                        width: '6px',
+                        height: '10px',
+                        marginLeft: '10px',
+                        filter: theme.invert
+                      }}
+                      animate={{ rotate: isExpanded ? -90 : 180 }}
+                      transition={{ duration: 0.2 }}
+                    />
+                  </div>
+                </motion.div>
+
+                {/* Accordion Content wrapper */}
+                <motion.div
+                  initial={false}
+                  animate={{
+                    height: isExpanded ? 'auto' : 0,
+                    opacity: isExpanded ? 1 : 0
+                  }}
+                  transition={{ duration: 0.25, ease: 'easeInOut' }}
+                  style={{ overflow: 'hidden' }}
+                >
+                  <div style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '12px',
+                    padding: '4px 0 12px 0'
                   }}>
-                    {hMap.description}
-                  </p>
-                </div>
-              </motion.div>
+                    {eraMaps.map((hMap) => {
+                      const isSelected = hMap.id === selectedMap.id;
+                      return (
+                        <motion.div
+                          key={hMap.id}
+                          onClick={() => setSelectedMap(hMap)}
+                          role="button"
+                          tabIndex={0}
+                          onKeyDown={(e) => {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                              setSelectedMap(hMap);
+                            }
+                          }}
+                          whileHover={{
+                            scale: 1.02,
+                            y: -2,
+                            boxShadow: '0 8px 24px rgba(0,0,0,0.15)'
+                          }}
+                          style={{
+                            width: '100%',
+                            background: 'transparent',
+                            color: theme.text,
+                            border: isSelected ? '3px solid #000000' : `1px solid ${theme.border}`,
+                            padding: 0,
+                            textAlign: 'left',
+                            cursor: 'pointer',
+                            borderRadius: '20px',
+                            overflow: 'hidden',
+                            transition: 'background-color 0.2s ease, border-color 0.2s ease, border-width 0.1s ease',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'stretch',
+                            flexShrink: 0
+                          }}
+                        >
+                          {/* THUMBNAIL */}
+                          <div style={{
+                            position: 'relative',
+                            width: '100%',
+                            height: '112px',
+                            borderBottom: `1px solid ${isSelected ? '#000000' : theme.border}`,
+                            overflow: 'hidden',
+                            background: isMapDarkMode ? '#111' : '#eee',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            flexShrink: 0
+                          }}>
+                            {/* Globe Icon in top-left with map-specific background pin color */}
+                            <svg
+                              width="30"
+                              height="30"
+                              viewBox="0 0 30 30"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                              style={{
+                                position: 'absolute',
+                                top: '4px',
+                                left: '4px',
+                                zIndex: 2
+                              }}
+                            >
+                              <g clipPath={`url(#clip0_carto_thumb_${hMap.id})`}>
+                                <circle cx="15" cy="15" r="15" fill={hMap.pinColor || '#FF5E97'} />
+                                <path d="M6 15C6 19.9705 10.0294 24 15 24C19.9705 24 24 19.9705 24 15C24 10.0294 19.9705 6 15 6C10.0294 6 6 10.0294 6 15Z" stroke="black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+                                <path d="M15.9 6.04431C15.9 6.04431 18.6 9.59987 18.6 14.9998C18.6 20.3998 15.9 23.9555 15.9 23.9555" stroke="black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+                                <path d="M14.1 23.9555C14.1 23.9555 11.4 20.3998 11.4 14.9998C11.4 9.59987 14.1 6.04431 14.1 6.04431" stroke="black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+                                <path d="M6.56665 18.15H23.4333" stroke="black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+                                <path d="M6.56665 11.85H23.4333" stroke="black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+                              </g>
+                              <defs>
+                                <clipPath id={`clip0_carto_thumb_${hMap.id}`}>
+                                  <rect width="30" height="30" fill="white" />
+                                </clipPath>
+                              </defs>
+                            </svg>
+
+                            {/* Pin Counter Badge in top-right corner */}
+                            {notes.length > 0 && (() => {
+                              const pinCount = notes.filter(point => point.mapId === hMap.id).length;
+                              if (pinCount === 0) return null;
+                              return (
+                                <div style={{
+                                  position: 'absolute',
+                                  top: '4px',
+                                  right: '4px',
+                                  background: 'rgba(0, 0, 0, 0.65)',
+                                  backdropFilter: 'blur(2px)',
+                                  color: '#ffffff',
+                                  fontSize: '11px',
+                                  fontFamily: '"Space Mono", monospace',
+                                  fontWeight: '400',
+                                  height: '30px',
+                                  display: 'flex',
+                                  alignItems: 'center',
+                                  gap: '6px',
+                                  padding: '0 16px 0 4px',
+                                  borderRadius: '15px',
+                                  letterSpacing: '0.5px',
+                                  whiteSpace: 'nowrap',
+                                  zIndex: 2,
+                                  pointerEvents: 'none'
+                                }}>
+                                  <img
+                                    src="/icons/icon-map-pin.svg"
+                                    style={{
+                                      width: '24px',
+                                      height: '24px',
+                                      filter: 'brightness(0) invert(1)'
+                                    }}
+                                    alt="pin icon"
+                                  />
+                                  <span>{pinCount}</span>
+                                </div>
+                              );
+                            })()}
+
+                            {!loadedThumbnails[hMap.id] && (
+                              <div className="loading-spinner" style={{
+                                position: 'absolute',
+                                borderTopColor: isMapDarkMode ? '#ffffff' : '#000000'
+                              }} />
+                            )}
+                            <img
+                              src={`/api/proxy-resource?url=${encodeURIComponent(hMap.url)}`}
+                              alt={hMap.name}
+                              onLoad={() => setLoadedThumbnails(prev => ({ ...prev, [hMap.id]: true }))}
+                              style={{
+                                width: '100%',
+                                height: '100%',
+                                objectFit: 'cover',
+                                opacity: loadedThumbnails[hMap.id] ? (isSelected ? 0.95 : 0.75) : 0,
+                                transition: 'opacity 0.2s ease'
+                              }}
+                            />
+                          </div>
+
+                          {/* TEXT CONTENT */}
+                          <div style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            gap: '6px',
+                            padding: '12px 14px',
+                            background: isSelected ? (hMap.pinColor || '#FF5E97') : 'transparent',
+                            color: isSelected ? '#000000' : theme.text,
+                            transition: 'background-color 0.2s ease, color 0.2s ease'
+                          }}>
+                            <span style={{ fontSize: '11px', fontWeight: 'bold', letterSpacing: '0.5px', lineHeight: '14px' }}>
+                              {hMap.name}
+                            </span>
+                            <div style={{
+                              fontSize: '8px',
+                              fontWeight: 'bold',
+                              fontFamily: '"Space Mono", monospace',
+                              letterSpacing: '1px',
+                              opacity: isSelected ? 0.8 : 0.6,
+                              color: isSelected ? '#000000' : theme.textDim
+                            }}>
+                              CREATION DATE: {hMap.year}
+                            </div>
+                            <p style={{
+                              fontSize: '9px',
+                              lineHeight: '13px',
+                              margin: 0,
+                              opacity: isSelected ? 0.9 : 0.7,
+                              color: isSelected ? '#000000' : theme.textDim
+                            }}>
+                              {hMap.description}
+                            </p>
+                          </div>
+                        </motion.div>
+                      );
+                    })}
+                  </div>
+                </motion.div>
+              </div>
             );
           })}
         </div>
