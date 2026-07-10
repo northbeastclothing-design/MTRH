@@ -62,6 +62,7 @@
 
 .custom-mapbox-popup {
   z-index: 1000 !important;
+  pointer-events: none !important;
 }
 
 /* Custom Mapbox Popup Styling */

@@ -802,6 +802,52 @@ ${modLink}
     }
   });
 
+  // Cartography page points API
+  app.get("/api/cartography-points", async (req, res) => {
+    const mapId = req.query.mapId as string;
+    try {
+      const list = await safeGetCollection('cartography_points');
+      const filtered = mapId ? list.filter(item => item.mapId === mapId) : list;
+      
+      // Sort chronologically (newest first)
+      filtered.sort((a, b) => {
+        const tA = a.createdAt ? new Date(a.createdAt).getTime() : 0;
+        const tB = b.createdAt ? new Date(b.createdAt).getTime() : 0;
+        return tB - tA;
+      });
+      
+      res.json({ success: true, points: filtered });
+    } catch (err: any) {
+      console.error("Server-side cartography points fetch failed:", err);
+      res.status(500).json({ error: err.message || "Failed to fetch points" });
+    }
+  });
+
+  app.post("/api/cartography-points/create", async (req, res) => {
+    try {
+      const { mapId, lng, lat, note } = req.body;
+      if (!mapId || lng === undefined || lat === undefined || !note) {
+        return res.status(400).json({ error: "Missing required parameters" });
+      }
+      
+      const pointId = `carto_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`;
+      const pointData = {
+        mapId,
+        lng: Number(lng),
+        lat: Number(lat),
+        note: String(note).trim().substring(0, 120),
+        createdAt: dbAdmin ? admin.firestore.FieldValue.serverTimestamp() : new Date().toISOString()
+      };
+      
+      const docId = await safeAddDocument('cartography_points', pointId, pointData);
+      console.log(`Cartography Server-Bypass: Created point ${docId}`);
+      res.json({ success: true, id: docId });
+    } catch (err: any) {
+      console.error("Server-side cartography point creation failed:", err);
+      res.status(500).json({ error: err.message || "Failed to create point" });
+    }
+  });
+
   app.get("/api/overrides", async (req, res) => {
     try {
       const list = await safeGetCollection('overrides');
@@ -873,8 +919,7 @@ ${modLink}
         'User-Agent': 'MTRH-Interactive-Map/1.0 (contact: info@mtrhmap.org; development)',
         'Accept': '*/*',
         'Accept-Language': 'en-US,en;q=0.9',
-        'Referer': referer,
-        'Host': domain
+        'Referer': referer
       };
 
       // Forward client Range header if requested

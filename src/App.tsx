@@ -14,6 +14,7 @@ import firebaseConfig from '../firebase-applet-config.json';
 
 import TimelinePage from './TimelinePage';
 import CodexPage from './CodexPage';
+import CartographyPage from './CartographyPage';
 import { TIMELINE_ITEMS, TIMELINE_LOCATIONS, BIBLICAL_TRAVEL_PATHS, Waypoint, TravelPath } from './timelineData';
 // import { ARCHAEOLOGICAL_FINDS_DATA } from './archaeologyData';
 import { TERM_TREE_DATA } from './termTreeData';
@@ -1058,10 +1059,11 @@ function App() {
   const [isMapLoaded, setIsMapLoaded] = useState(false);
   const [isDataCompiled, setIsDataCompiled] = useState(false);
   const [showAboutModal, setShowAboutModal] = useState(true);
-  const [currentPage, setCurrentPage] = useState<'map' | 'timeline' | 'codex'>(() => {
+  const [currentPage, setCurrentPage] = useState<'map' | 'timeline' | 'codex' | 'cartography'>(() => {
     const path = window.location.pathname.toLowerCase();
     if (path.startsWith('/timeline')) return 'timeline';
     if (path.startsWith('/codex')) return 'codex';
+    if (path.startsWith('/cartography')) return 'cartography';
     return 'map';
   });
   const [selectedTimelineItem, setSelectedTimelineItem] = useState<any | null>(null);
@@ -3119,6 +3121,9 @@ function App() {
       } else if (path.startsWith('/mod') || path.startsWith('/moderator') || path.startsWith('/moderate')) {
         setCurrentPage('map');
         setIsModeratorOpen(true);
+      } else if (path.startsWith('/cartography')) {
+        setCurrentPage('cartography');
+        setIsModeratorOpen(false);
       } else {
         setCurrentPage('map');
         setIsModeratorOpen(false);
@@ -3173,6 +3178,7 @@ function App() {
     if (isModeratorOpen) path = '/moderator';
     else if (currentPage === 'timeline') path = '/timeline';
     else if (currentPage === 'codex') path = '/codex';
+    else if (currentPage === 'cartography') path = '/cartography';
 
     const params = new URLSearchParams(window.location.search);
 
@@ -5949,10 +5955,10 @@ function App() {
             right: 0,
             bottom: 0,
             pointerEvents: 'none',
-            opacity: (currentPage === 'codex' || currentPage === 'timeline') ? 1.0 : 0,
+            opacity: (currentPage === 'codex' || currentPage === 'timeline' || currentPage === 'cartography') ? 1.0 : 0,
             zIndex: 1,
             transition: 'opacity 0.3s ease, visibility 0.3s ease',
-            visibility: (currentPage === 'codex' || currentPage === 'timeline') ? 'visible' : 'hidden'
+            visibility: (currentPage === 'codex' || currentPage === 'timeline' || currentPage === 'cartography') ? 'visible' : 'hidden'
           }}
         />
         
@@ -5991,7 +5997,7 @@ function App() {
             zIndex: 20, 
             pointerEvents: 'none', 
             position: 'relative',
-            background: (currentPage === 'map' || currentPage === 'codex' || currentPage === 'timeline') ? 'transparent' : (isMapDarkMode ? '#000000' : '#ffffff'),
+            background: (currentPage === 'map' || currentPage === 'codex' || currentPage === 'timeline' || currentPage === 'cartography') ? 'transparent' : (isMapDarkMode ? '#000000' : '#ffffff'),
             transition: 'background-color 0.3s ease'
           }}
         >
@@ -6019,7 +6025,7 @@ function App() {
                   : (isMapDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.05)')
               }}
               style={{
-                background: currentPage === 'map' ? theme.text : 'transparent',
+                background: currentPage === 'map' ? theme.text : (isMapDarkMode ? 'rgba(255, 255, 255, 0)' : 'rgba(0, 0, 0, 0)'),
                 color: currentPage === 'map' ? theme.bg : theme.text,
                 border: 'none',
                 padding: '6px 18px',
@@ -6044,7 +6050,7 @@ function App() {
                     : (isMapDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.05)')
                 }}
                 style={{
-                  background: currentPage === 'timeline' ? theme.text : 'transparent',
+                  background: currentPage === 'timeline' ? theme.text : (isMapDarkMode ? 'rgba(255, 255, 255, 0)' : 'rgba(0, 0, 0, 0)'),
                   color: currentPage === 'timeline' ? theme.bg : theme.text,
                   border: 'none',
                   padding: '6px 18px',
@@ -6085,7 +6091,7 @@ function App() {
                     : (isMapDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.05)')
                 }}
                 style={{
-                  background: currentPage === 'codex' ? theme.text : 'transparent',
+                  background: currentPage === 'codex' ? theme.text : (isMapDarkMode ? 'rgba(255, 255, 255, 0)' : 'rgba(0, 0, 0, 0)'),
                   color: currentPage === 'codex' ? theme.bg : theme.text,
                   border: 'none',
                   padding: '6px 18px',
@@ -6116,6 +6122,32 @@ function App() {
                   animation: 'radar-pulse 2s infinite'
                 }} />
               )}
+            </div>
+            <div style={{ position: 'relative', display: 'inline-block' }}>
+              <motion.button 
+                onClick={() => setCurrentPage('cartography')}
+                whileHover={{
+                  background: currentPage === 'cartography'
+                    ? (isMapDarkMode ? '#cccccc' : '#333333')
+                    : (isMapDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.05)')
+                }}
+                style={{
+                  background: currentPage === 'cartography' ? theme.text : (isMapDarkMode ? 'rgba(255, 255, 255, 0)' : 'rgba(0, 0, 0, 0)'),
+                  color: currentPage === 'cartography' ? theme.bg : theme.text,
+                  border: 'none',
+                  padding: '6px 18px',
+                  fontSize: '10px',
+                  fontFamily: '"Space Mono", monospace',
+                  fontWeight: 700,
+                  cursor: 'pointer',
+                  borderRadius: '16px',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.05em',
+                  transition: 'all 0.2s ease'
+                }}
+              >
+                Cartography
+              </motion.button>
             </div>
           </div>
 
@@ -8683,6 +8715,34 @@ function App() {
             onSelectedTermChange={(node) => {
               setSelectedCodexNode(node);
             }}
+          />
+        </div>
+
+        {/* Cartography Panel */}
+        <div
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            display: 'flex',
+            flexDirection: 'column',
+            overflow: 'hidden',
+            width: '100%',
+            height: '100%',
+            pointerEvents: currentPage === 'cartography' ? 'auto' : 'none',
+            visibility: currentPage === 'cartography' ? 'visible' : 'hidden',
+            opacity: currentPage === 'cartography' ? 1 : 0,
+            transition: 'opacity 0.3s ease, visibility 0.3s ease',
+            zIndex: currentPage === 'cartography' ? 12 : 0
+          }}
+        >
+          <CartographyPage
+            theme={theme}
+            isMapDarkMode={isMapDarkMode}
+            db={db}
+            auth={auth}
           />
         </div>
       </div>
