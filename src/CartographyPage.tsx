@@ -1173,14 +1173,16 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
           style={{
             flex: 1,
             overflowY: 'scroll',
-            padding: '16px 20px',
+            padding: '0 20px 16px 20px',
             display: 'flex',
             flexDirection: 'column',
-            gap: '12px',
+            gap: '0',
             background: 'transparent'
           }}
         >
-          <span style={{ fontSize: '9px', color: theme.textDim, letterSpacing: '1.5px', fontWeight: 'bold', marginBottom: '4px' }}>SELECT MAP TO EXPLORE</span>
+          <span style={{ fontSize: '9px', color: theme.textDim, letterSpacing: '1.5px', fontWeight: 'bold', marginTop: '16px', marginBottom: '12px' }}>SELECT MAP TO EXPLORE</span>
+          {/* STICKY TOP SPACER FOR 15PX PADDING + MASKING */}
+          <div style={{ position: 'sticky', top: 0, height: '15px', background: theme.bg, zIndex: 11, flexShrink: 0 }} />
           {ERAS.map((era) => {
             const eraMaps = [...HISTORICAL_MAPS]
               .filter(m => m.era === era.id)
@@ -1195,81 +1197,86 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
             const isExpanded = !!expandedEras[era.id];
 
             return (
-              <div key={era.id} style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                {/* Accordion Header */}
-                <motion.div
-                  onClick={() => setExpandedEras(prev => ({ ...prev, [era.id]: !prev[era.id] }))}
-                  role="button"
-                  tabIndex={0}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                      setExpandedEras(prev => ({ ...prev, [era.id]: !prev[era.id] }));
-                    }
-                  }}
-                  whileHover={{
-                    scale: 1.01,
-                    y: -0.5
-                  }}
-                  style={{
-                    display: 'flex', 
-                    alignItems: 'center', 
-                    padding: '0', 
-                    height: '32px',
-                    justifyContent: 'space-between', 
-                    cursor: 'pointer', 
-                    background: theme.bg,
-                    border: `1px solid ${theme.border}`,
-                    borderRadius: '16px',
-                    boxSizing: 'border-box',
-                    color: theme.text,
-                    transition: 'background-color 0.2s ease, border-color 0.2s ease',
-                    position: 'sticky',
-                    top: '-16px',
-                    zIndex: 10
-                  }}
-                >
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flex: 1, textAlign: 'left' }}>
-                    <div style={{ width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                      <div style={{
-                        width: '22px',
-                        height: '22px',
-                        borderRadius: '50%',
+              <div key={era.id} style={{ display: 'flex', flexDirection: 'column', width: '100%', position: 'relative' }}>
+                {/* STICKY CONTAINER WITH BACKGROUND TO MASK SCROLLING TEXT */}
+                <div style={{ 
+                  position: 'sticky', 
+                  top: '15px', 
+                  zIndex: 10, 
+                  background: theme.bg,
+                  padding: '3px 0'
+                }}>
+                  {/* Accordion Header */}
+                  <motion.div
+                    onClick={() => setExpandedEras(prev => ({ ...prev, [era.id]: !prev[era.id] }))}
+                    role="button"
+                    tabIndex={0}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        setExpandedEras(prev => ({ ...prev, [era.id]: !prev[era.id] }));
+                      }
+                    }}
+                    whileHover={{
+                      scale: 1.01,
+                      y: -0.5
+                    }}
+                    style={{
+                      display: 'flex', 
+                      alignItems: 'center', 
+                      padding: '0', 
+                      height: '32px',
+                      justifyContent: 'space-between', 
+                      cursor: 'pointer', 
+                      background: theme.bg,
+                      border: `1px solid ${theme.border}`,
+                      borderRadius: '16px',
+                      boxSizing: 'border-box',
+                      color: theme.text,
+                      transition: 'background-color 0.2s ease, border-color 0.2s ease',
+                      overflow: 'hidden'
+                    }}
+                  >
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flex: 1, textAlign: 'left' }}>
+                      <div style={{ 
+                        width: '30px', 
+                        height: '30px', 
+                        display: 'flex', 
+                        alignItems: 'center', 
+                        justifyContent: 'center',
                         background: getEraFolderBgColor(era.id),
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center'
+                        flexShrink: 0
                       }}>
                         {/* SVG Folder Icon */}
-                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5">
                           <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
                         </svg>
                       </div>
+                      <span style={{
+                        fontSize: '10px',
+                        lineHeight: '24px',
+                        fontWeight: '700',
+                        fontFamily: '"Space Mono", monospace',
+                        color: theme.text
+                      }}>
+                        {era.name}
+                      </span>
                     </div>
-                    <span style={{
-                      fontSize: '10px',
-                      lineHeight: '24px',
-                      fontWeight: '700',
-                      fontFamily: '"Space Mono", monospace',
-                      color: theme.text
-                    }}>
-                      {era.name}
-                    </span>
-                  </div>
 
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0' }} onClick={e => e.stopPropagation()}>
-                    <motion.button 
-                      whileHover={{ opacity: 0.6 }}
-                      onClick={() => setExpandedEras(p => ({ ...p, [era.id]: !isExpanded }))}
-                      style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-                    >
-                      <img 
-                        src={isExpanded ? "https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/icons/icon-arrow-up.svg" : "https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/icons/icon-arrow-down.svg"} 
-                        style={{ width: '30px', height: '30px', filter: theme.invert }} 
-                        alt="expand" 
-                      />
-                    </motion.button>
-                  </div>
-                </motion.div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0' }} onClick={e => e.stopPropagation()}>
+                      <motion.button 
+                        whileHover={{ opacity: 0.6 }}
+                        onClick={() => setExpandedEras(p => ({ ...p, [era.id]: !isExpanded }))}
+                        style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                      >
+                        <img 
+                          src={isExpanded ? "https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/icons/icon-arrow-up.svg" : "https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/icons/icon-arrow-down.svg"} 
+                          style={{ width: '30px', height: '30px', filter: theme.invert }} 
+                          alt="expand" 
+                        />
+                      </motion.button>
+                    </div>
+                  </motion.div>
+                </div>
 
                 {/* Accordion Content wrapper */}
                 <motion.div
