@@ -391,10 +391,10 @@ const EraAccordionHeader = ({ era, isExpanded, theme, onToggleExpand, getEraFold
   return (
     <div style={{ 
       position: 'sticky', 
-      top: '16px', 
+      top: '15px', 
       zIndex: 10, 
       background: theme.bg,
-      padding: '0'
+      padding: '3px 20px'
     }}>
       {/* Accordion Header */}
       <motion.div
@@ -1277,28 +1277,28 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
 
         {/* MAP GALLERY SELECTOR LIST */}
         <div 
-          className="custom-sidebar-scrollbar"
+          className="custom-scrollbar"
           style={{
             flex: 1,
             overflowY: 'scroll',
-            padding: '16px 20px',
+            padding: '0 0 15px 0',
             display: 'flex',
             flexDirection: 'column',
             gap: '12px',
             background: 'transparent'
           }}
         >
-          <span style={{ fontSize: '9px', color: theme.textDim, letterSpacing: '1.5px', fontWeight: 'bold', marginTop: '16px', marginBottom: '12px' }}>SELECT MAP TO EXPLORE</span>
-          {/* STICKY TOP SPACER FOR 16PX PADDING + MASKING */}
-          <div style={{ position: 'sticky', top: 0, height: '16px', background: theme.bg, zIndex: 11, margin: '0 -20px', padding: '0 20px', flexShrink: 0 }} />
+          <span style={{ fontSize: '9px', color: theme.textDim, letterSpacing: '1.5px', fontWeight: 'bold', padding: '16px 20px 4px 20px' }}>SELECT MAP TO EXPLORE</span>
+          {/* STICKY TOP SPACER FOR 15PX PADDING + MASKING */}
+          <div style={{ position: 'sticky', top: 0, height: '15px', background: theme.bg, zIndex: 11, flexShrink: 0 }} />
           {ERAS.map((era) => {
             const eraMaps = [...HISTORICAL_MAPS]
-              .filter(m => m.era === era.id)
-              .map(m => ({
-                ...m,
-                cleanName: m.name.replace(/^The\s+/i, '')
-              }))
-              .sort((a, b) => a.cleanName.localeCompare(b.cleanName));
+               .filter(m => m.era === era.id)
+               .map(m => ({
+                 ...m,
+                 cleanName: m.name.replace(/^The\s+/i, '')
+               }))
+               .sort((a, b) => a.cleanName.localeCompare(b.cleanName));
 
             if (eraMaps.length === 0) return null;
 
@@ -1328,7 +1328,7 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
                     display: 'flex',
                     flexDirection: 'column',
                     gap: '12px',
-                    padding: '4px 15px 12px 15px'
+                    padding: '4px 35px 12px 35px'
                   }}>
                     {eraMaps.map((hMap) => {
                       const isSelected = hMap.id === selectedMap.id;
