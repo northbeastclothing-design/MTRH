@@ -1157,12 +1157,6 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
     }}>
       {/* 20PX FAR LEFT PROTECTIVE SIDE STRIP */}
       <div 
-        onWheel={(e) => {
-          const scrollEl = document.querySelector('.custom-scrollbar');
-          if (scrollEl) {
-            scrollEl.scrollTop += e.deltaY;
-          }
-        }}
         style={{
           position: 'absolute',
           top: 0,

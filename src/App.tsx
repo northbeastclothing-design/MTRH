@@ -6457,12 +6457,6 @@ function App() {
               borderColor: theme.border
             }}
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            onWheel={(e) => {
-              const scrollEl = document.querySelector('.custom-sidebar-scrollbar');
-              if (scrollEl) {
-                scrollEl.scrollTop += e.deltaY;
-              }
-            }}
             style={{ position: 'absolute', top: 0, left: 0, width: '20px', borderRight: '1px solid', borderTop: '1px solid', zIndex: 100, pointerEvents: 'auto' }} 
           />
           <motion.div 
