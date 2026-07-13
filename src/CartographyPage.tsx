@@ -391,7 +391,7 @@ const EraAccordionHeader = ({ era, isExpanded, theme, onToggleExpand, getEraFold
   return (
     <div style={{ 
       position: 'sticky', 
-      top: '15px', 
+      top: '8px', 
       zIndex: 10, 
       background: theme.bg,
       padding: '3px 20px 0px 20px'
@@ -1284,13 +1284,13 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
             padding: '0 0 15px 0',
             display: 'flex',
             flexDirection: 'column',
-            gap: '12px',
+            gap: '3px',
             background: 'transparent'
           }}
         >
           <span style={{ fontSize: '9px', color: theme.textDim, letterSpacing: '1.5px', fontWeight: 'bold', padding: '16px 20px 2px 20px' }}>SELECT MAP TO EXPLORE</span>
-          {/* STICKY TOP SPACER FOR 15PX PADDING + MASKING */}
-          <div style={{ position: 'sticky', top: 0, height: '15px', background: theme.bg, zIndex: 11, flexShrink: 0 }} />
+          {/* STICKY TOP SPACER FOR 8PX PADDING + MASKING */}
+          <div style={{ position: 'sticky', top: 0, height: '8px', background: theme.bg, zIndex: 11, flexShrink: 0 }} />
           {ERAS.map((era) => {
             const eraMaps = [...HISTORICAL_MAPS]
                .filter(m => m.era === era.id)
@@ -1328,7 +1328,7 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
                     display: 'flex',
                     flexDirection: 'column',
                     gap: '12px',
-                    padding: '4px 35px 12px 35px'
+                    padding: '12px 35px 12px 35px'
                   }}>
                     {eraMaps.map((hMap) => {
                       const isSelected = hMap.id === selectedMap.id;
