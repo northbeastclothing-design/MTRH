@@ -343,6 +343,29 @@ const ERAS = [
   { id: 'speculative', name: "Speculative & Reconstruction", period: "" }
 ];
 
+const getThumbnailUrl = (url: string): string => {
+  if (url.includes('iiif.digitalcommonwealth.org')) {
+    return url.replace('/full/4000,', '/full/500,');
+  }
+  if (url.includes('upload.wikimedia.org/wikipedia/commons/')) {
+    if (url.includes('/commons/thumb/')) {
+      const parts = url.split('/');
+      const filename = parts[parts.length - 2];
+      parts[parts.length - 1] = `500px-${filename}`;
+      return parts.join('/');
+    } else {
+      const parts = url.split('/commons/');
+      if (parts.length === 2) {
+        const filePart = parts[1];
+        const fileParts = filePart.split('/');
+        const filename = fileParts[fileParts.length - 1];
+        return `https://upload.wikimedia.org/wikipedia/commons/thumb/${filePart}/500px-${filename}`;
+      }
+    }
+  }
+  return url;
+};
+
 export default function CartographyPage({ theme, isMapDarkMode }: CartographyPageProps) {
   const [selectedMap, setSelectedMap] = useState<HistoricalMap>(HISTORICAL_MAPS[0]);
   const [loadedThumbnails, setLoadedThumbnails] = useState<Record<string, boolean>>({});
@@ -1137,7 +1160,7 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
           className="custom-sidebar-scrollbar"
           style={{
             flex: 1,
-            overflowY: 'auto',
+            overflowY: 'scroll',
             padding: '16px 20px',
             display: 'flex',
             flexDirection: 'column',
@@ -1173,82 +1196,64 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
                   }}
                   whileHover={{
                     scale: 1.01,
-                    y: -1,
-                    boxShadow: '0 4px 12px rgba(0,0,0,0.05)'
+                    y: -0.5
                   }}
                   style={{
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    padding: '0', 
+                    height: '32px',
+                    justifyContent: 'space-between', 
+                    cursor: 'pointer', 
                     background: theme.bg,
                     border: `1px solid ${theme.border}`,
-                    borderRadius: '12px',
-                    padding: '10px 14px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                    cursor: 'pointer',
-                    userSelect: 'none',
-                    transition: 'border-color 0.2s ease, background-color 0.2s ease'
+                    borderRadius: '16px',
+                    boxSizing: 'border-box',
+                    color: theme.text,
+                    transition: 'background-color 0.2s ease, border-color 0.2s ease'
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center' }}>
-                    {/* SVG Folder Icon */}
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ marginRight: '8px', opacity: 0.6, color: theme.text }}>
-                      <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
-                    </svg>
-                    <div style={{ display: 'flex', flexDirection: 'column' }}>
-                      <span style={{
-                        fontSize: '11px',
-                        fontWeight: 'bold',
-                        fontFamily: '"Space Mono", monospace',
-                        color: theme.text,
-                        lineHeight: '13px'
-                      }}>
-                        {era.name}
-                      </span>
-                      {era.period && (
-                        <span style={{
-                          fontSize: '8px',
-                          color: theme.textDim,
-                          letterSpacing: '0.5px',
-                          marginTop: '1px'
-                        }}>
-                          {era.period}
-                        </span>
-                      )}
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flex: 1, textAlign: 'left' }}>
+                    <div style={{ width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                      {/* SVG Folder Icon */}
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ opacity: 0.8, color: theme.text }}>
+                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
+                      </svg>
                     </div>
+                    <span style={{
+                      fontSize: '10px',
+                      lineHeight: '24px',
+                      fontWeight: '700',
+                      fontFamily: '"Space Mono", monospace',
+                      color: theme.text
+                    }}>
+                      {era.name}
+                    </span>
                   </div>
 
-                  <div style={{ display: 'flex', alignItems: 'center' }}>
-                    {/* Map Count Badge */}
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0' }} onClick={e => e.stopPropagation()}>
+                    {/* Map Count Badge next to the arrow */}
                     <div style={{
-                      height: '18px',
-                      padding: '0 8px',
-                      background: theme.text,
-                      color: theme.bg,
-                      borderRadius: '9px',
                       fontSize: '9px',
-                      fontWeight: 'bold',
+                      fontWeight: '700',
                       fontFamily: '"Space Mono", monospace',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      minWidth: '18px'
+                      color: theme.textDim,
+                      marginRight: '2px',
+                      opacity: 0.7
                     }}>
-                      {eraMaps.length}
+                      ({eraMaps.length})
                     </div>
-
-                    {/* Chevron Arrow */}
-                    <motion.img
-                      src="/icons/icon-arrow-left.svg"
-                      alt="chevron"
-                      style={{
-                        width: '6px',
-                        height: '10px',
-                        marginLeft: '10px',
-                        filter: theme.invert
-                      }}
-                      animate={{ rotate: isExpanded ? -90 : 180 }}
-                      transition={{ duration: 0.2 }}
-                    />
+                    <motion.button 
+                      whileHover={{ opacity: 0.6 }}
+                      onClick={() => setExpandedEras(p => ({ ...p, [era.id]: !isExpanded }))}
+                      style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                    >
+                      <img 
+                        src={isExpanded ? "https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/icons/icon-arrow-up.svg" : "https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/icons/icon-arrow-down.svg"} 
+                        style={{ width: '30px', height: '30px', filter: theme.invert }} 
+                        alt="expand" 
+                      />
+                    </motion.button>
                   </div>
                 </motion.div>
 
@@ -1260,13 +1265,13 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
                     opacity: isExpanded ? 1 : 0
                   }}
                   transition={{ duration: 0.25, ease: 'easeInOut' }}
-                  style={{ overflow: 'hidden' }}
+                  style={{ overflow: isExpanded ? 'visible' : 'hidden' }}
                 >
                   <div style={{
                     display: 'flex',
                     flexDirection: 'column',
                     gap: '12px',
-                    padding: '4px 0 12px 0'
+                    padding: '4px 4px 12px 4px'
                   }}>
                     {eraMaps.map((hMap) => {
                       const isSelected = hMap.id === selectedMap.id;
@@ -1392,15 +1397,16 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
                               }} />
                             )}
                             <img
-                              src={`/api/proxy-resource?url=${encodeURIComponent(hMap.url)}`}
+                              src={`/api/proxy-resource?url=${encodeURIComponent(getThumbnailUrl(hMap.url))}`}
                               alt={hMap.name}
                               onLoad={() => setLoadedThumbnails(prev => ({ ...prev, [hMap.id]: true }))}
                               style={{
                                 width: '100%',
                                 height: '100%',
                                 objectFit: 'cover',
+                                transform: 'scale(1.18)',
                                 opacity: loadedThumbnails[hMap.id] ? (isSelected ? 0.95 : 0.75) : 0,
-                                transition: 'opacity 0.2s ease'
+                                transition: 'opacity 0.2s ease, transform 0.2s ease'
                               }}
                             />
                           </div>
