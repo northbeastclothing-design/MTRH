@@ -385,6 +385,7 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
   const [showNotes, setShowNotes] = useState<boolean>(true);
   const [isAddMode, setIsAddMode] = useState<boolean>(false);
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState<boolean>(false);
+  const [hoveredEras, setHoveredEras] = useState<Record<string, boolean>>({});
 
   const [expandedEras, setExpandedEras] = useState<Record<string, boolean>>(() => {
     const initialMap = HISTORICAL_MAPS[0];
@@ -1173,16 +1174,14 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
           style={{
             flex: 1,
             overflowY: 'scroll',
-            padding: '0 0 15px 0',
+            padding: '16px 20px',
             display: 'flex',
             flexDirection: 'column',
-            gap: '0',
+            gap: '12px',
             background: 'transparent'
           }}
         >
-          <span style={{ fontSize: '9px', color: theme.textDim, letterSpacing: '1.5px', fontWeight: 'bold', marginTop: '16px', marginBottom: '12px', padding: '0 16px' }}>SELECT MAP TO EXPLORE</span>
-          {/* STICKY TOP SPACER FOR 15PX PADDING + MASKING */}
-          <div style={{ position: 'sticky', top: 0, height: '15px', background: theme.bg, zIndex: 11, flexShrink: 0 }} />
+          <span style={{ fontSize: '9px', color: theme.textDim, letterSpacing: '1.5px', fontWeight: 'bold', marginTop: '16px', marginBottom: '12px' }}>SELECT MAP TO EXPLORE</span>
           {ERAS.map((era) => {
             const eraMaps = [...HISTORICAL_MAPS]
               .filter(m => m.era === era.id)
@@ -1201,24 +1200,22 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
                 {/* STICKY CONTAINER WITH BACKGROUND TO MASK SCROLLING TEXT */}
                 <div style={{ 
                   position: 'sticky', 
-                  top: '15px', 
+                  top: '-16px', 
                   zIndex: 10, 
                   background: theme.bg,
-                  padding: '0 16px'
+                  padding: '0'
                 }}>
                   {/* Accordion Header */}
                   <motion.div
                     onClick={() => setExpandedEras(prev => ({ ...prev, [era.id]: !prev[era.id] }))}
+                    onMouseEnter={() => setHoveredEras(p => ({ ...p, [era.id]: true }))}
+                    onMouseLeave={() => setHoveredEras(p => ({ ...p, [era.id]: false }))}
                     role="button"
                     tabIndex={0}
                     onKeyDown={(e) => {
                       if (e.key === 'Enter' || e.key === ' ') {
                         setExpandedEras(prev => ({ ...prev, [era.id]: !prev[era.id] }));
                       }
-                    }}
-                    whileHover={{
-                      scale: 1.01,
-                      y: -0.5
                     }}
                     style={{
                       display: 'flex', 
@@ -1233,18 +1230,35 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
                       boxSizing: 'border-box',
                       color: theme.text,
                       transition: 'background-color 0.2s ease, border-color 0.2s ease',
-                      overflow: 'hidden'
+                      overflow: 'hidden',
+                      position: 'relative'
                     }}
                   >
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flex: 1, textAlign: 'left' }}>
+                    {/* EXPANDING BACKGROUND OVERLAY */}
+                    <motion.div
+                      animate={{
+                        width: hoveredEras[era.id] ? '100%' : '30px',
+                        borderRadius: hoveredEras[era.id] ? '16px' : '50%'
+                      }}
+                      transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                      style={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        height: '100%',
+                        background: getEraFolderBgColor(era.id),
+                        zIndex: 0,
+                        pointerEvents: 'none'
+                      }}
+                    />
+
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flex: 1, textAlign: 'left', zIndex: 1, position: 'relative' }}>
                       <div style={{ 
                         width: '30px', 
                         height: '30px', 
-                        borderRadius: '50%',
                         display: 'flex', 
                         alignItems: 'center', 
                         justifyContent: 'center',
-                        background: getEraFolderBgColor(era.id),
                         flexShrink: 0
                       }}>
                         {/* SVG Folder Icon */}
@@ -1263,7 +1277,7 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
                       </span>
                     </div>
 
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0' }} onClick={e => e.stopPropagation()}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0', zIndex: 1, position: 'relative' }} onClick={e => e.stopPropagation()}>
                       <motion.button 
                         whileHover={{ opacity: 0.6 }}
                         onClick={() => setExpandedEras(p => ({ ...p, [era.id]: !isExpanded }))}
@@ -1293,7 +1307,7 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
                     display: 'flex',
                     flexDirection: 'column',
                     gap: '12px',
-                    padding: '4px 31px 12px 37px'
+                    padding: '4px 15px 12px 15px'
                   }}>
                     {eraMaps.map((hMap) => {
                       const isSelected = hMap.id === selectedMap.id;

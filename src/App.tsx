@@ -1479,6 +1479,7 @@ function App() {
   const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1200);
   const [scrollbarWidth, setScrollbarWidth] = useState(0);
   const [selectedCodexNode, setSelectedCodexNode] = useState<any>(null);
+  const [hoveredLayers, setHoveredLayers] = useState<Record<string, boolean>>({});
 
   // Submission Form State
   const [isSubmitOpen, setIsSubmitOpen] = useState(false);
@@ -6696,7 +6697,7 @@ function App() {
                       background: theme.bg,
                       padding: '3px 16px' 
                     }}>
-                      <div 
+                      <motion.div 
                         style={{ 
                           display: 'flex', 
                           alignItems: 'center', 
@@ -6709,11 +6710,33 @@ function App() {
                           borderRadius: '16px',
                           boxSizing: 'border-box',
                           color: theme.text,
-                          transition: 'background 0.3s ease-in-out'
+                          transition: 'background 0.3s ease-in-out',
+                          position: 'relative',
+                          overflow: 'hidden'
                         }}
+                        onMouseEnter={() => setHoveredLayers(p => ({ ...p, [layerName]: true }))}
+                        onMouseLeave={() => setHoveredLayers(p => ({ ...p, [layerName]: false }))}
                         onClick={() => setExpandedLayers(p => ({ ...p, [layerName]: !isExpanded }))}
                       >
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flex: 1, textAlign: 'left' }}>
+                        {/* EXPANDING BACKGROUND OVERLAY */}
+                        <motion.div
+                          animate={{
+                            width: hoveredLayers[layerName] ? '100%' : '30px',
+                            borderRadius: hoveredLayers[layerName] ? '16px' : '50%'
+                          }}
+                          transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                          style={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            height: '100%',
+                            background: pillColor,
+                            zIndex: 0,
+                            pointerEvents: 'none'
+                          }}
+                        />
+
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flex: 1, textAlign: 'left', zIndex: 1, position: 'relative' }}>
                           <div style={{ width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                             <img 
                               src={getCategoryIcon(layerName)} 
@@ -6733,7 +6756,7 @@ function App() {
                             {toTitleCase(layerName)}
                           </span>
                         </div>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '0' }} onClick={e => e.stopPropagation()}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '0', zIndex: 1, position: 'relative' }} onClick={e => e.stopPropagation()}>
                           <motion.button 
                             whileHover={{ opacity: 0.6 }}
                             onClick={() => setActiveLayers(p => ({ ...p, [layerName]: !p[layerName] }))} 
@@ -6768,7 +6791,7 @@ function App() {
                             <img src={isExpanded ? "https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/icons/icon-arrow-up.svg" : "https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/icons/icon-arrow-down.svg"} style={{ width: '30px', height: '30px', filter: theme.invert }} alt="expand" />
                           </motion.button>
                         </div>
-                      </div>
+                      </motion.div>
                     </div>
 
                     {isExpanded && (
