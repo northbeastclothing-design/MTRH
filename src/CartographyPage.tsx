@@ -345,12 +345,12 @@ const ERAS = [
 
 const getEraFolderBgColor = (eraId: string): string => {
   switch (eraId) {
-    case 'ancient': return '#FF6B6B';
-    case 'early-medieval': return '#FCC419';
-    case 'late-medieval': return '#51CF66';
-    case 'renaissance': return '#4DABF7';
-    case 'modern': return '#FF922B';
-    case 'speculative': return '#D0BFFF';
+    case 'ancient': return '#FFCBA6';
+    case 'early-medieval': return '#B3C77B';
+    case 'late-medieval': return '#D3C5FB';
+    case 'renaissance': return '#90C2FF';
+    case 'modern': return '#FF9F63';
+    case 'speculative': return '#F9B6DB';
     default: return '#e5e5e5';
   }
 };
@@ -1204,7 +1204,7 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
                   top: '15px', 
                   zIndex: 10, 
                   background: theme.bg,
-                  padding: '3px 16px'
+                  padding: '0 16px'
                 }}>
                   {/* Accordion Header */}
                   <motion.div
@@ -1293,7 +1293,7 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
                     display: 'flex',
                     flexDirection: 'column',
                     gap: '12px',
-                    padding: '4px 16px 12px 22px'
+                    padding: '4px 31px 12px 37px'
                   }}>
                     {eraMaps.map((hMap) => {
                       const isSelected = hMap.id === selectedMap.id;
