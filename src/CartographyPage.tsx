@@ -1153,16 +1153,11 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
       color: theme.text,
       fontFamily: '"Space Mono", monospace',
       position: 'relative',
-      borderTop: `1px solid ${theme.border}`
+      borderTop: `1px solid ${theme.border}`,
+      pointerEvents: 'none'
     }}>
       {/* 20PX FAR LEFT PROTECTIVE SIDE STRIP */}
       <div 
-        onWheel={(e) => {
-          const scrollEl = document.getElementById('cartography-scrollbar');
-          if (scrollEl) {
-            scrollEl.scrollTop += e.deltaY;
-          }
-        }}
         style={{
           position: 'absolute',
           top: 0,
@@ -1526,7 +1521,8 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
         flex: 1,
         height: '100%',
         position: 'relative',
-        zIndex: 1
+        zIndex: 1,
+        pointerEvents: 'auto'
       }}>
         {/* MAP DIV */}
         <div ref={mapContainerRef} style={{ width: '100%', height: '100%' }} />
