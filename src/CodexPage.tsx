@@ -2068,8 +2068,7 @@ export default function CodexPage({
                         {!isSelected && (
                           <motion.div
                             animate={{
-                              width: isHovered ? '100%' : '30px',
-                              borderRadius: isHovered ? '16px' : '50%'
+                              width: isHovered ? '100%' : '32px'
                             }}
                             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                             style={{
@@ -2078,6 +2077,7 @@ export default function CodexPage({
                               left: 0,
                               height: '100%',
                               background: nodeColor || '#b6a6ff',
+                              borderRadius: '16px',
                               zIndex: 0,
                               pointerEvents: 'none'
                             }}

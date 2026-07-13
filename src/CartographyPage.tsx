@@ -1237,8 +1237,7 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
                     {/* EXPANDING BACKGROUND OVERLAY */}
                     <motion.div
                       animate={{
-                        width: hoveredEras[era.id] ? '100%' : '30px',
-                        borderRadius: hoveredEras[era.id] ? '16px' : '50%'
+                        width: hoveredEras[era.id] ? '100%' : '32px'
                       }}
                       transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                       style={{
@@ -1247,6 +1246,7 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
                         left: 0,
                         height: '100%',
                         background: getEraFolderBgColor(era.id),
+                        borderRadius: '16px',
                         zIndex: 0,
                         pointerEvents: 'none'
                       }}

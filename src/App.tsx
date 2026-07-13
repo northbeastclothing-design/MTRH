@@ -6721,8 +6721,7 @@ function App() {
                         {/* EXPANDING BACKGROUND OVERLAY */}
                         <motion.div
                           animate={{
-                            width: hoveredLayers[layerName] ? '100%' : '30px',
-                            borderRadius: hoveredLayers[layerName] ? '16px' : '50%'
+                            width: hoveredLayers[layerName] ? '100%' : '32px'
                           }}
                           transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                           style={{
@@ -6731,6 +6730,7 @@ function App() {
                             left: 0,
                             height: '100%',
                             background: pillColor,
+                            borderRadius: '16px',
                             zIndex: 0,
                             pointerEvents: 'none'
                           }}
