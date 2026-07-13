@@ -6457,7 +6457,13 @@ function App() {
               borderColor: theme.border
             }}
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            style={{ position: 'absolute', top: 0, left: 0, width: '20px', borderRight: '1px solid', borderTop: '1px solid', zIndex: 100, pointerEvents: 'auto' }} 
+            onClick={() => {
+              const scrollEl = document.querySelector('.custom-sidebar-scrollbar');
+              if (scrollEl) {
+                scrollEl.scrollTo({ top: 0, behavior: 'smooth' });
+              }
+            }}
+            style={{ position: 'absolute', top: 0, left: 0, width: '20px', borderRight: '1px solid', borderTop: '1px solid', zIndex: 100, pointerEvents: 'auto', cursor: 'pointer' }} 
           />
           <motion.div 
             initial={false}

@@ -1156,17 +1156,26 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
       borderTop: `1px solid ${theme.border}`
     }}>
       {/* 20PX FAR LEFT PROTECTIVE SIDE STRIP */}
-      <div style={{
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        bottom: 0,
-        width: '20px',
-        background: theme.bg,
-        borderRight: `1px solid ${theme.border}`,
-        zIndex: 10,
-        pointerEvents: 'auto'
-      }} />
+      <div 
+        onClick={() => {
+          const scrollEl = document.querySelector('.custom-scrollbar');
+          if (scrollEl) {
+            scrollEl.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+        }}
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          bottom: 0,
+          width: '20px',
+          background: theme.bg,
+          borderRight: `1px solid ${theme.border}`,
+          zIndex: 10,
+          pointerEvents: 'auto',
+          cursor: 'pointer'
+        }} 
+      />
 
       {/* SIDEBAR PANEL */}
       <motion.div 
