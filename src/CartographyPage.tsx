@@ -345,12 +345,12 @@ const ERAS = [
 
 const getEraFolderBgColor = (eraId: string): string => {
   switch (eraId) {
-    case 'ancient': return '#FF5E97';
-    case 'early-medieval': return '#FFCC00';
-    case 'late-medieval': return '#00FF66';
-    case 'renaissance': return '#00FFE0';
-    case 'modern': return '#FF6600';
-    case 'speculative': return '#CC00FF';
+    case 'ancient': return '#FF6B6B';
+    case 'early-medieval': return '#FCC419';
+    case 'late-medieval': return '#51CF66';
+    case 'renaissance': return '#4DABF7';
+    case 'modern': return '#FF922B';
+    case 'speculative': return '#D0BFFF';
     default: return '#e5e5e5';
   }
 };
@@ -1173,14 +1173,14 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
           style={{
             flex: 1,
             overflowY: 'scroll',
-            padding: '0 20px 16px 20px',
+            padding: '0 0 15px 0',
             display: 'flex',
             flexDirection: 'column',
             gap: '0',
             background: 'transparent'
           }}
         >
-          <span style={{ fontSize: '9px', color: theme.textDim, letterSpacing: '1.5px', fontWeight: 'bold', marginTop: '16px', marginBottom: '12px' }}>SELECT MAP TO EXPLORE</span>
+          <span style={{ fontSize: '9px', color: theme.textDim, letterSpacing: '1.5px', fontWeight: 'bold', marginTop: '16px', marginBottom: '12px', padding: '0 16px' }}>SELECT MAP TO EXPLORE</span>
           {/* STICKY TOP SPACER FOR 15PX PADDING + MASKING */}
           <div style={{ position: 'sticky', top: 0, height: '15px', background: theme.bg, zIndex: 11, flexShrink: 0 }} />
           {ERAS.map((era) => {
@@ -1204,7 +1204,7 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
                   top: '15px', 
                   zIndex: 10, 
                   background: theme.bg,
-                  padding: '3px 0'
+                  padding: '3px 16px'
                 }}>
                   {/* Accordion Header */}
                   <motion.div
@@ -1240,6 +1240,7 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
                       <div style={{ 
                         width: '30px', 
                         height: '30px', 
+                        borderRadius: '50%',
                         display: 'flex', 
                         alignItems: 'center', 
                         justifyContent: 'center',
@@ -1292,7 +1293,7 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
                     display: 'flex',
                     flexDirection: 'column',
                     gap: '12px',
-                    padding: '4px 4px 12px 4px'
+                    padding: '4px 16px 12px 22px'
                   }}>
                     {eraMaps.map((hMap) => {
                       const isSelected = hMap.id === selectedMap.id;
