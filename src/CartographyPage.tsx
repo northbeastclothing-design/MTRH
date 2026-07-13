@@ -339,9 +339,21 @@ const ERAS = [
   { id: 'early-medieval', name: "Early Medieval Maps", period: "600 – 1300 CE" },
   { id: 'late-medieval', name: "Late Medieval Maps", period: "1300 – 1500 CE" },
   { id: 'renaissance', name: "Renaissance Maps", period: "1492 – 1800 CE" },
-  { id: 'modern', name: "Modern & Projections", period: "1800 – Present" },
-  { id: 'speculative', name: "Speculative & Reconstruction", period: "" }
+  { id: 'modern', name: "Modern / Projections", period: "1800 – Present" },
+  { id: 'speculative', name: "Speculative / Reconstruction", period: "" }
 ];
+
+const getEraFolderBgColor = (eraId: string): string => {
+  switch (eraId) {
+    case 'ancient': return '#FF5E97';
+    case 'early-medieval': return '#FFCC00';
+    case 'late-medieval': return '#00FF66';
+    case 'renaissance': return '#00FFE0';
+    case 'modern': return '#FF6600';
+    case 'speculative': return '#CC00FF';
+    default: return '#e5e5e5';
+  }
+};
 
 const getThumbnailUrl = (url: string): string => {
   if (url.includes('iiif.digitalcommonwealth.org')) {
@@ -1210,15 +1222,28 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
                     borderRadius: '16px',
                     boxSizing: 'border-box',
                     color: theme.text,
-                    transition: 'background-color 0.2s ease, border-color 0.2s ease'
+                    transition: 'background-color 0.2s ease, border-color 0.2s ease',
+                    position: 'sticky',
+                    top: '-16px',
+                    zIndex: 10
                   }}
                 >
                   <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flex: 1, textAlign: 'left' }}>
                     <div style={{ width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                      {/* SVG Folder Icon */}
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ opacity: 0.8, color: theme.text }}>
-                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
-                      </svg>
+                      <div style={{
+                        width: '22px',
+                        height: '22px',
+                        borderRadius: '50%',
+                        background: getEraFolderBgColor(era.id),
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center'
+                      }}>
+                        {/* SVG Folder Icon */}
+                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5">
+                          <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
+                        </svg>
+                      </div>
                     </div>
                     <span style={{
                       fontSize: '10px',
@@ -1232,17 +1257,6 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
                   </div>
 
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0' }} onClick={e => e.stopPropagation()}>
-                    {/* Map Count Badge next to the arrow */}
-                    <div style={{
-                      fontSize: '9px',
-                      fontWeight: '700',
-                      fontFamily: '"Space Mono", monospace',
-                      color: theme.textDim,
-                      marginRight: '2px',
-                      opacity: 0.7
-                    }}>
-                      ({eraMaps.length})
-                    </div>
                     <motion.button 
                       whileHover={{ opacity: 0.6 }}
                       onClick={() => setExpandedEras(p => ({ ...p, [era.id]: !isExpanded }))}
