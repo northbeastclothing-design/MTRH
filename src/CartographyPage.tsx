@@ -394,7 +394,7 @@ const EraAccordionHeader = ({ era, isExpanded, theme, onToggleExpand, getEraFold
       top: '15px', 
       zIndex: 10, 
       background: theme.bg,
-      padding: '3px 20px'
+      padding: '3px 20px 0px 20px'
     }}>
       {/* Accordion Header */}
       <motion.div
@@ -1288,7 +1288,7 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
             background: 'transparent'
           }}
         >
-          <span style={{ fontSize: '9px', color: theme.textDim, letterSpacing: '1.5px', fontWeight: 'bold', padding: '16px 20px 4px 20px' }}>SELECT MAP TO EXPLORE</span>
+          <span style={{ fontSize: '9px', color: theme.textDim, letterSpacing: '1.5px', fontWeight: 'bold', padding: '16px 20px 2px 20px' }}>SELECT MAP TO EXPLORE</span>
           {/* STICKY TOP SPACER FOR 15PX PADDING + MASKING */}
           <div style={{ position: 'sticky', top: 0, height: '15px', background: theme.bg, zIndex: 11, flexShrink: 0 }} />
           {ERAS.map((era) => {
