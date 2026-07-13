@@ -4373,9 +4373,9 @@ function App() {
     bgMap.on('style.load', () => {
       const isDark = darkModeRef.current;
       bgMap.setFog({
-        color: isDark ? 'rgb(4, 4, 16)' : 'rgb(238, 238, 238)',
-        'high-color': isDark ? 'rgb(12, 12, 36)' : 'rgb(230, 230, 230)',
-        'space-color': isDark ? 'rgb(2, 2, 8)' : 'rgb(245, 245, 245)',
+        color: isDark ? 'rgb(4, 4, 16)' : 'rgb(245, 245, 245)',
+        'high-color': isDark ? 'rgb(12, 12, 36)' : 'rgb(240, 240, 240)',
+        'space-color': isDark ? 'rgb(2, 2, 8)' : 'rgb(250, 250, 250)',
         'horizon-blend': 0.15,
         'star-intensity': isDark ? 0.35 : 0.0
       });
@@ -4384,7 +4384,7 @@ function App() {
           bgMap.setPaintProperty('background', 'background-color', isDark ? '#000000' : '#ffffff');
         }
         if (bgMap.getLayer('water')) {
-          bgMap.setPaintProperty('water', 'fill-color', isDark ? '#111111' : '#e2e2e2');
+          bgMap.setPaintProperty('water', 'fill-color', isDark ? '#111111' : '#f0f0f0');
         }
       } catch (e) {
         // Ignore style manipulation errors

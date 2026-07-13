@@ -884,8 +884,9 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
     if (!container) return;
 
     const handleWheel = (e: WheelEvent) => {
-      // If scroll target is within the sidebar, allow normal scrolling
-      if (sidebarRef.current?.contains(e.target as Node)) {
+      const target = e.target as HTMLElement;
+      // If scroll target is within the sidebar or the far-left protective strip, allow normal scrolling
+      if (sidebarRef.current?.contains(target) || target.classList?.contains('far-left-strip')) {
         return;
       }
       // Otherwise, prevent default browser wheel behavior (scrolling the page)
@@ -1158,6 +1159,7 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
     }}>
       {/* 20PX FAR LEFT PROTECTIVE SIDE STRIP */}
       <div 
+        className="far-left-strip"
         style={{
           position: 'absolute',
           top: 0,
