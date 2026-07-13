@@ -590,6 +590,126 @@ const toTitleCase = (str: string) => {
   return titled.replace(/\bufos\b/gi, 'UFOs');
 };
 
+interface CodexCategoryHeaderProps {
+  key?: any;
+  node: TermNode;
+  isSelected: boolean;
+  isMapDarkMode: boolean;
+  theme: any;
+  nodeColor: string;
+  nodeIcon: string;
+  hasChildren: boolean;
+  onNodeClick: () => void;
+}
+
+const CodexCategoryHeader = ({
+  node,
+  isSelected,
+  isMapDarkMode,
+  theme,
+  nodeColor,
+  nodeIcon,
+  hasChildren,
+  onNodeClick
+}: CodexCategoryHeaderProps) => {
+  const [isHovered, setIsHovered] = useState(false);
+  return (
+    <motion.div
+      id={`node-pill-${node.id}-0`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onClick={onNodeClick}
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        padding: '0',
+        height: '32px',
+        cursor: 'pointer',
+        background: isSelected
+          ? '#000000'
+          : (isMapDarkMode ? '#1a1a1a' : '#ffffff'),
+        border: isSelected
+          ? `1px solid ${isMapDarkMode ? '#ffffff' : '#000000'}`
+          : `1px solid ${theme.border}`,
+        borderRadius: '16px',
+        boxSizing: 'border-box',
+        color: isSelected ? '#ffffff' : theme.text,
+        transition: 'all 0.2s ease',
+        position: 'relative',
+        zIndex: isSelected ? 15 : 5,
+        boxShadow: isSelected ? `0 0 10px ${nodeColor}44` : 'none',
+        overflow: 'hidden'
+      }}
+    >
+      {/* EXPANDING BACKGROUND OVERLAY */}
+      {!isSelected && (
+        <motion.div
+          animate={{
+            width: isHovered ? '100%' : '32px'
+          }}
+          transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            height: '100%',
+            background: nodeColor || '#b6a6ff',
+            borderRadius: '16px',
+            zIndex: 0,
+            pointerEvents: 'none'
+          }}
+        />
+      )}
+
+      {/* Left icon and text wrapper */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flex: 1, textAlign: 'left', overflow: 'hidden', zIndex: 1, position: 'relative' }}>
+        <div style={{ width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+          <img
+            src={nodeIcon}
+            style={{ width: '30px', height: '30px' }}
+            alt={node.name}
+            draggable={false}
+          />
+        </div>
+        <span
+          style={{
+            fontSize: '10px',
+            lineHeight: '24px',
+            fontWeight: '700',
+            fontFamily: '"Space Mono", monospace',
+            letterSpacing: '0.5px',
+            whiteSpace: 'nowrap',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            opacity: 1,
+            color: isSelected ? '#ffffff' : theme.text
+          }}
+        >
+          {node.name}
+        </span>
+      </div>
+
+      {/* Right pointing arrow */}
+      {hasChildren && (
+        <div style={{ width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, zIndex: 1, position: 'relative' }}>
+          <img
+            src="/icons/icon-arrow-down.svg"
+            style={{
+              width: '30px',
+              height: '30px',
+              transform: 'rotate(-90deg)', // pointing right
+              filter: isSelected ? 'invert(1)' : theme.invert
+            }}
+            alt="arrow"
+            draggable={false}
+          />
+        </div>
+      )}
+    </motion.div>
+  );
+};
+
 export default function CodexPage({
   theme,
   isMapDarkMode,
@@ -2035,100 +2155,17 @@ export default function CodexPage({
                   // Column 0 / Level 0: Main Category terms (style identical to map page sidebar layer list, minus visibility toggle)
                   if (colIdx === 0) {
                     return (
-                      <motion.div
+                      <CodexCategoryHeader
                         key={node.id}
-                        id={`node-pill-${node.id}-${colIdx}`}
-                        onMouseEnter={() => setHoveredTerm({ id: node.id, level: colIdx })}
-                        onMouseLeave={() => setHoveredTerm(null)}
-                        onClick={() => handleNodeClick(node, colIdx)}
-                        style={{
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'space-between',
-                          padding: '0',
-                          height: '32px',
-                          cursor: 'pointer',
-                          background: isSelected
-                            ? '#000000'
-                            : (isMapDarkMode ? '#1a1a1a' : '#ffffff'),
-                          border: (selectedTermId === node.id)
-                            ? `1px solid ${isMapDarkMode ? '#ffffff' : '#000000'}`
-                            : `1px solid ${theme.border}`,
-                          borderRadius: '16px',
-                          boxSizing: 'border-box',
-                          color: isSelected ? '#ffffff' : theme.text, // Text is white when selected over black background
-                          transition: 'all 0.2s ease',
-                          position: 'relative',
-                          zIndex: isSelected ? 15 : 5,
-                          boxShadow: isSelected ? `0 0 10px ${nodeColor}44` : 'none',
-                          overflow: 'hidden'
-                        }}
-                      >
-                        {/* EXPANDING BACKGROUND OVERLAY */}
-                        {!isSelected && (
-                          <motion.div
-                            animate={{
-                              width: isHovered ? '100%' : '32px'
-                            }}
-                            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                            style={{
-                              position: 'absolute',
-                              top: 0,
-                              left: 0,
-                              height: '100%',
-                              background: nodeColor || '#b6a6ff',
-                              borderRadius: '16px',
-                              zIndex: 0,
-                              pointerEvents: 'none'
-                            }}
-                          />
-                        )}
-
-                        {/* Left icon and text wrapper */}
-                         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flex: 1, textAlign: 'left', overflow: 'hidden', zIndex: 1, position: 'relative' }}>
-                          <div style={{ width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                            <img
-                              src={nodeIcon}
-                              style={{ width: '30px', height: '30px' }}
-                              alt={node.name}
-                              draggable={false}
-                            />
-                          </div>
-                          <span
-                            style={{
-                              fontSize: '10px',
-                              lineHeight: '24px',
-                              fontWeight: '700',
-                              fontFamily: '"Space Mono", monospace',
-                              letterSpacing: '0.5px',
-                              whiteSpace: 'nowrap',
-                              overflow: 'hidden',
-                              textOverflow: 'ellipsis',
-                              opacity: 1,
-                              color: isSelected ? '#ffffff' : theme.text
-                            }}
-                          >
-                            {node.name}
-                          </span>
-                        </div>
-
-                        {/* Right pointing arrow (matching sidebar expand chevron but pointing right) */}
-                        {hasChildren && (
-                          <div style={{ width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, zIndex: 1, position: 'relative' }}>
-                            <img
-                              src="/icons/icon-arrow-down.svg"
-                              style={{
-                                width: '30px',
-                                height: '30px',
-                                transform: 'rotate(-90deg)', // pointing right
-                                filter: isSelected ? 'invert(1)' : theme.invert
-                              }}
-                              alt="arrow"
-                              draggable={false}
-                            />
-                          </div>
-                        )}
-                      </motion.div>
+                        node={node}
+                        isSelected={isSelected}
+                        isMapDarkMode={isMapDarkMode}
+                        theme={theme}
+                        nodeColor={nodeColor}
+                        nodeIcon={nodeIcon}
+                        hasChildren={hasChildren}
+                        onNodeClick={() => handleNodeClick(node, colIdx)}
+                      />
                     );
                   }
 

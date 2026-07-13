@@ -378,6 +378,114 @@ const getThumbnailUrl = (url: string): string => {
   return url;
 };
 
+interface EraAccordionHeaderProps {
+  era: typeof ERAS[number];
+  isExpanded: boolean;
+  theme: any;
+  onToggleExpand: () => void;
+  getEraFolderBgColor: (eraId: string) => string;
+}
+
+const EraAccordionHeader = ({ era, isExpanded, theme, onToggleExpand, getEraFolderBgColor }: EraAccordionHeaderProps) => {
+  const [isHovered, setIsHovered] = useState(false);
+  return (
+    <div style={{ 
+      position: 'sticky', 
+      top: '-16px', 
+      zIndex: 10, 
+      background: theme.bg,
+      padding: '0'
+    }}>
+      {/* Accordion Header */}
+      <motion.div
+        onClick={onToggleExpand}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        role="button"
+        tabIndex={0}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            onToggleExpand();
+          }
+        }}
+        style={{
+          display: 'flex', 
+          alignItems: 'center', 
+          padding: '0', 
+          height: '32px',
+          justifyContent: 'space-between', 
+          cursor: 'pointer', 
+          background: theme.bg,
+          border: `1px solid ${theme.border}`,
+          borderRadius: '16px',
+          boxSizing: 'border-box',
+          color: theme.text,
+          transition: 'background-color 0.2s ease, border-color 0.2s ease',
+          overflow: 'hidden',
+          position: 'relative'
+        }}
+      >
+        {/* EXPANDING BACKGROUND OVERLAY */}
+        <motion.div
+          animate={{
+            width: isHovered ? '100%' : '32px'
+          }}
+          transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            height: '100%',
+            background: getEraFolderBgColor(era.id),
+            borderRadius: '16px',
+            zIndex: 0,
+            pointerEvents: 'none'
+          }}
+        />
+
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flex: 1, textAlign: 'left', zIndex: 1, position: 'relative' }}>
+          <div style={{ 
+            width: '30px', 
+            height: '30px', 
+            display: 'flex', 
+            alignItems: 'center', 
+            justifyContent: 'center',
+            flexShrink: 0
+          }}>
+            {/* SVG Folder Icon */}
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5">
+              <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
+            </svg>
+          </div>
+          <span style={{
+            fontSize: '10px',
+            lineHeight: '24px',
+            fontWeight: '700',
+            fontFamily: '"Space Mono", monospace',
+            color: theme.text
+          }}>
+            {era.name}
+          </span>
+        </div>
+
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0', zIndex: 1, position: 'relative' }} onClick={e => e.stopPropagation()}>
+          <motion.button 
+            whileHover={{ opacity: 0.6 }}
+            onClick={onToggleExpand}
+            style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+          >
+            <img 
+              src={isExpanded ? "https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/icons/icon-arrow-up.svg" : "https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/icons/icon-arrow-down.svg"} 
+              style={{ width: '30px', height: '30px', filter: theme.invert }} 
+              alt="expand" 
+            />
+          </motion.button>
+        </div>
+      </motion.div>
+    </div>
+  );
+};
+
 export default function CartographyPage({ theme, isMapDarkMode }: CartographyPageProps) {
   const [selectedMap, setSelectedMap] = useState<HistoricalMap>(HISTORICAL_MAPS[0]);
   const [loadedThumbnails, setLoadedThumbnails] = useState<Record<string, boolean>>({});
@@ -385,7 +493,6 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
   const [showNotes, setShowNotes] = useState<boolean>(true);
   const [isAddMode, setIsAddMode] = useState<boolean>(false);
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState<boolean>(false);
-  const [hoveredEras, setHoveredEras] = useState<Record<string, boolean>>({});
 
   const [expandedEras, setExpandedEras] = useState<Record<string, boolean>>(() => {
     const initialMap = HISTORICAL_MAPS[0];
@@ -1197,101 +1304,13 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
 
             return (
               <div key={era.id} style={{ display: 'flex', flexDirection: 'column', width: '100%', position: 'relative' }}>
-                {/* STICKY CONTAINER WITH BACKGROUND TO MASK SCROLLING TEXT */}
-                <div style={{ 
-                  position: 'sticky', 
-                  top: '-16px', 
-                  zIndex: 10, 
-                  background: theme.bg,
-                  padding: '0'
-                }}>
-                  {/* Accordion Header */}
-                  <motion.div
-                    onClick={() => setExpandedEras(prev => ({ ...prev, [era.id]: !prev[era.id] }))}
-                    onMouseEnter={() => setHoveredEras(p => ({ ...p, [era.id]: true }))}
-                    onMouseLeave={() => setHoveredEras(p => ({ ...p, [era.id]: false }))}
-                    role="button"
-                    tabIndex={0}
-                    onKeyDown={(e) => {
-                      if (e.key === 'Enter' || e.key === ' ') {
-                        setExpandedEras(prev => ({ ...prev, [era.id]: !prev[era.id] }));
-                      }
-                    }}
-                    style={{
-                      display: 'flex', 
-                      alignItems: 'center', 
-                      padding: '0', 
-                      height: '32px',
-                      justifyContent: 'space-between', 
-                      cursor: 'pointer', 
-                      background: theme.bg,
-                      border: `1px solid ${theme.border}`,
-                      borderRadius: '16px',
-                      boxSizing: 'border-box',
-                      color: theme.text,
-                      transition: 'background-color 0.2s ease, border-color 0.2s ease',
-                      overflow: 'hidden',
-                      position: 'relative'
-                    }}
-                  >
-                    {/* EXPANDING BACKGROUND OVERLAY */}
-                    <motion.div
-                      animate={{
-                        width: hoveredEras[era.id] ? '100%' : '32px'
-                      }}
-                      transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                      style={{
-                        position: 'absolute',
-                        top: 0,
-                        left: 0,
-                        height: '100%',
-                        background: getEraFolderBgColor(era.id),
-                        borderRadius: '16px',
-                        zIndex: 0,
-                        pointerEvents: 'none'
-                      }}
-                    />
-
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flex: 1, textAlign: 'left', zIndex: 1, position: 'relative' }}>
-                      <div style={{ 
-                        width: '30px', 
-                        height: '30px', 
-                        display: 'flex', 
-                        alignItems: 'center', 
-                        justifyContent: 'center',
-                        flexShrink: 0
-                      }}>
-                        {/* SVG Folder Icon */}
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5">
-                          <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
-                        </svg>
-                      </div>
-                      <span style={{
-                        fontSize: '10px',
-                        lineHeight: '24px',
-                        fontWeight: '700',
-                        fontFamily: '"Space Mono", monospace',
-                        color: theme.text
-                      }}>
-                        {era.name}
-                      </span>
-                    </div>
-
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0', zIndex: 1, position: 'relative' }} onClick={e => e.stopPropagation()}>
-                      <motion.button 
-                        whileHover={{ opacity: 0.6 }}
-                        onClick={() => setExpandedEras(p => ({ ...p, [era.id]: !isExpanded }))}
-                        style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-                      >
-                        <img 
-                          src={isExpanded ? "https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/icons/icon-arrow-up.svg" : "https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/icons/icon-arrow-down.svg"} 
-                          style={{ width: '30px', height: '30px', filter: theme.invert }} 
-                          alt="expand" 
-                        />
-                      </motion.button>
-                    </div>
-                  </motion.div>
-                </div>
+                <EraAccordionHeader
+                  era={era}
+                  isExpanded={isExpanded}
+                  theme={theme}
+                  onToggleExpand={() => setExpandedEras(prev => ({ ...prev, [era.id]: !prev[era.id] }))}
+                  getEraFolderBgColor={getEraFolderBgColor}
+                />
 
                 {/* Accordion Content wrapper */}
                 <motion.div

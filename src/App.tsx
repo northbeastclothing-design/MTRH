@@ -1002,6 +1002,141 @@ const SidebarListItem = React.memo(({ loc, isSelected, pillColor, isMapDarkMode,
   );
 });
 
+interface CategoryLayerHeaderProps {
+  layerName: string;
+  isActive: boolean;
+  isExpanded: boolean;
+  theme: any;
+  isMapDarkMode: boolean;
+  pillColor: string;
+  getCategoryIcon: (cat: string) => string;
+  toTitleCase: (str: string) => string;
+  isLayerLoading: (cat: string) => boolean;
+  onToggleActive: () => void;
+  onToggleExpand: () => void;
+}
+
+const CategoryLayerHeader = ({
+  layerName,
+  isActive,
+  isExpanded,
+  theme,
+  isMapDarkMode,
+  pillColor,
+  getCategoryIcon,
+  toTitleCase,
+  isLayerLoading,
+  onToggleActive,
+  onToggleExpand
+}: CategoryLayerHeaderProps) => {
+  const [isHovered, setIsHovered] = useState(false);
+  return (
+    <div style={{ 
+      position: 'sticky', 
+      top: '15px', 
+      zIndex: 12, 
+      background: theme.bg,
+      padding: '3px 16px' 
+    }}>
+      <motion.div 
+        style={{ 
+          display: 'flex', 
+          alignItems: 'center', 
+          padding: '0', 
+          height: '32px',
+          justifyContent: 'space-between', 
+          cursor: 'pointer', 
+          background: isActive ? theme.bg : (isMapDarkMode ? '#1a1a1a' : '#EFEFEF'),
+          border: isActive ? `1px solid ${theme.border}` : '1px solid transparent',
+          borderRadius: '16px',
+          boxSizing: 'border-box',
+          color: theme.text,
+          transition: 'background 0.3s ease-in-out',
+          position: 'relative',
+          overflow: 'hidden'
+        }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        onClick={onToggleExpand}
+      >
+        {/* EXPANDING BACKGROUND OVERLAY */}
+        <motion.div
+          animate={{
+            width: isHovered ? '100%' : '32px'
+          }}
+          transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            height: '100%',
+            background: pillColor,
+            borderRadius: '16px',
+            zIndex: 0,
+            pointerEvents: 'none'
+          }}
+        />
+
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flex: 1, textAlign: 'left', zIndex: 1, position: 'relative' }}>
+          <div style={{ width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <img 
+              src={getCategoryIcon(layerName)} 
+              onError={(e) => { e.currentTarget.src = '/icons/icon-cave-drawings.svg'; }}
+              style={{ width: '30px', height: '30px' }} 
+              alt={layerName} 
+            />
+          </div>
+          <span style={{ 
+            fontSize: '10px', 
+            lineHeight: '24px',
+            fontWeight: isActive ? '700' : '400', 
+            fontFamily: '"Space Mono", monospace', 
+            opacity: isActive ? 1 : 0.5,
+            transition: 'opacity 0.3s ease-in-out'
+          }}>
+            {toTitleCase(layerName)}
+          </span>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0', zIndex: 1, position: 'relative' }} onClick={e => e.stopPropagation()}>
+          <motion.button 
+            whileHover={{ opacity: 0.6 }}
+            onClick={onToggleActive} 
+            style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, display: 'flex', alignItems: 'center' }}
+          >
+            {isLayerLoading(layerName) ? (
+              <div style={{
+                width: '31px',
+                height: '30px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}>
+                <div style={{
+                  width: '14px',
+                  height: '14px',
+                  borderRadius: '50%',
+                  border: `2px solid ${isMapDarkMode ? '#333' : '#ddd'}`,
+                  borderTopColor: '#b6a6ff',
+                  animation: 'spinMapAsset 0.8s linear infinite'
+                }} />
+              </div>
+            ) : (
+              <img src={isActive ? "https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/icons/icon-eye-open.svg" : "https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/icons/icon-eye-closed.svg"} style={{ width: '31px', height: '30px', filter: theme.invert }} alt="toggle" />
+            )}
+          </motion.button>
+          <motion.button 
+            whileHover={{ opacity: 0.6 }}
+            onClick={onToggleExpand}
+            style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+          >
+            <img src={isExpanded ? "https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/icons/icon-arrow-up.svg" : "https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/icons/icon-arrow-down.svg"} style={{ width: '30px', height: '30px', filter: theme.invert }} alt="expand" />
+          </motion.button>
+        </div>
+      </motion.div>
+    </div>
+  );
+};
+
 function App() {
   const mapContainer = useRef<HTMLDivElement>(null);
   const mapRef = useRef<mapboxgl.Map | null>(null);
@@ -1479,7 +1614,6 @@ function App() {
   const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1200);
   const [scrollbarWidth, setScrollbarWidth] = useState(0);
   const [selectedCodexNode, setSelectedCodexNode] = useState<any>(null);
-  const [hoveredLayers, setHoveredLayers] = useState<Record<string, boolean>>({});
 
   // Submission Form State
   const [isSubmitOpen, setIsSubmitOpen] = useState(false);
@@ -6689,110 +6823,19 @@ function App() {
 
                 return (
                   <div key={layerName} style={{ display: 'flex', flexDirection: 'column', width: '100%', position: 'relative' }}>
-                    {/* STICKY CONTAINER WITH BACKGROUND TO MASK SCROLLING TEXT */}
-                    <div style={{ 
-                      position: 'sticky', 
-                      top: '15px', 
-                      zIndex: 12, 
-                      background: theme.bg,
-                      padding: '3px 16px' 
-                    }}>
-                      <motion.div 
-                        style={{ 
-                          display: 'flex', 
-                          alignItems: 'center', 
-                          padding: '0', 
-                          height: '32px',
-                          justifyContent: 'space-between', 
-                          cursor: 'pointer', 
-                          background: isActive ? theme.bg : (isMapDarkMode ? '#1a1a1a' : '#EFEFEF'),
-                          border: isActive ? `1px solid ${theme.border}` : '1px solid transparent',
-                          borderRadius: '16px',
-                          boxSizing: 'border-box',
-                          color: theme.text,
-                          transition: 'background 0.3s ease-in-out',
-                          position: 'relative',
-                          overflow: 'hidden'
-                        }}
-                        onMouseEnter={() => setHoveredLayers(p => ({ ...p, [layerName]: true }))}
-                        onMouseLeave={() => setHoveredLayers(p => ({ ...p, [layerName]: false }))}
-                        onClick={() => setExpandedLayers(p => ({ ...p, [layerName]: !isExpanded }))}
-                      >
-                        {/* EXPANDING BACKGROUND OVERLAY */}
-                        <motion.div
-                          animate={{
-                            width: hoveredLayers[layerName] ? '100%' : '32px'
-                          }}
-                          transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                          style={{
-                            position: 'absolute',
-                            top: 0,
-                            left: 0,
-                            height: '100%',
-                            background: pillColor,
-                            borderRadius: '16px',
-                            zIndex: 0,
-                            pointerEvents: 'none'
-                          }}
-                        />
-
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flex: 1, textAlign: 'left', zIndex: 1, position: 'relative' }}>
-                          <div style={{ width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                            <img 
-                              src={getCategoryIcon(layerName)} 
-                              onError={(e) => { e.currentTarget.src = '/icons/icon-cave-drawings.svg'; }}
-                              style={{ width: '30px', height: '30px' }} 
-                              alt={layerName} 
-                            />
-                          </div>
-                          <span style={{ 
-                            fontSize: '10px', 
-                            lineHeight: '24px',
-                            fontWeight: isActive ? '700' : '400', 
-                            fontFamily: '"Space Mono", monospace', 
-                            opacity: isActive ? 1 : 0.5,
-                            transition: 'opacity 0.3s ease-in-out'
-                          }}>
-                            {toTitleCase(layerName)}
-                          </span>
-                        </div>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '0', zIndex: 1, position: 'relative' }} onClick={e => e.stopPropagation()}>
-                          <motion.button 
-                            whileHover={{ opacity: 0.6 }}
-                            onClick={() => setActiveLayers(p => ({ ...p, [layerName]: !p[layerName] }))} 
-                            style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, display: 'flex', alignItems: 'center' }}
-                          >
-                            {isLayerLoading(layerName) ? (
-                              <div style={{
-                                width: '31px',
-                                height: '30px',
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center'
-                              }}>
-                                <div style={{
-                                  width: '14px',
-                                  height: '14px',
-                                  borderRadius: '50%',
-                                  border: `2px solid ${isMapDarkMode ? '#333' : '#ddd'}`,
-                                  borderTopColor: '#b6a6ff',
-                                  animation: 'spinMapAsset 0.8s linear infinite'
-                                }} />
-                              </div>
-                            ) : (
-                              <img src={isActive ? "https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/icons/icon-eye-open.svg" : "https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/icons/icon-eye-closed.svg"} style={{ width: '31px', height: '30px', filter: theme.invert }} alt="toggle" />
-                            )}
-                          </motion.button>
-                          <motion.button 
-                            whileHover={{ opacity: 0.6 }}
-                            onClick={() => setExpandedLayers(p => ({ ...p, [layerName]: !isExpanded }))}
-                            style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-                          >
-                            <img src={isExpanded ? "https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/icons/icon-arrow-up.svg" : "https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/icons/icon-arrow-down.svg"} style={{ width: '30px', height: '30px', filter: theme.invert }} alt="expand" />
-                          </motion.button>
-                        </div>
-                      </motion.div>
-                    </div>
+                    <CategoryLayerHeader
+                      layerName={layerName}
+                      isActive={isActive}
+                      isExpanded={isExpanded}
+                      theme={theme}
+                      isMapDarkMode={isMapDarkMode}
+                      pillColor={pillColor}
+                      getCategoryIcon={getCategoryIcon}
+                      toTitleCase={toTitleCase}
+                      isLayerLoading={isLayerLoading}
+                      onToggleActive={() => setActiveLayers(p => ({ ...p, [layerName]: !p[layerName] }))}
+                      onToggleExpand={() => setExpandedLayers(p => ({ ...p, [layerName]: !isExpanded }))}
+                    />
 
                     {isExpanded && (
                       <motion.div 
