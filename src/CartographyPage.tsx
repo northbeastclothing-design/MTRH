@@ -1158,7 +1158,7 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
       {/* 20PX FAR LEFT PROTECTIVE SIDE STRIP */}
       <div 
         onWheel={(e) => {
-          const scrollEl = document.querySelector('.custom-scrollbar');
+          const scrollEl = document.getElementById('cartography-scrollbar');
           if (scrollEl) {
             scrollEl.scrollTop += e.deltaY;
           }
@@ -1258,7 +1258,7 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
             }}
           >
             <g clipPath="url(#clip0_carto_header)">
-              <circle cx="15" cy="15" r="15" fill="#eeeeee" />
+              <circle cx="15" cy="15" r="15" fill="#ffffff" />
               <path d="M6 15C6 19.9705 10.0294 24 15 24C19.9705 24 24 19.9705 24 15C24 10.0294 19.9705 6 15 6C10.0294 6 6 10.0294 6 15Z" stroke="black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
               <path d="M15.9 6.04431C15.9 6.04431 18.6 9.59987 18.6 14.9998C18.6 20.3998 15.9 23.9555 15.9 23.9555" stroke="black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
               <path d="M14.1 23.9555C14.1 23.9555 11.4 20.3998 11.4 14.9998C11.4 9.59987 14.1 6.04431 14.1 6.04431" stroke="black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
@@ -1285,6 +1285,7 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
 
         {/* MAP GALLERY SELECTOR LIST */}
         <div 
+          id="cartography-scrollbar"
           className="custom-scrollbar"
           style={{
             flex: 1,
