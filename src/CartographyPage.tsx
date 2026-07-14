@@ -40,7 +40,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     description: "A famous Neolithic wall painting from Çatalhöyük, Turkey, depicting a closely packed town layout of box-like houses in plan view, flanked by an erupting two-peaked volcano.",
     url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Museum_of_Anatolian_Civilizations_%C3%87atalh%C3%B6y%C3%BCk_mural_City_or_Leopard_skin_Detail_in_2011_07.jpg/1280px-Museum_of_Anatolian_Civilizations_%C3%87atalh%C3%B6y%C3%BCk_mural_City_or_Leopard_skin_Detail_in_2011_07.jpg",
     aspectRatio: 1.4553,
-    pinColor: '#FF9BE1',
+    pinColor: '#00E5FF',
     era: 'ancient'
   },
   {
@@ -50,7 +50,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     description: "The oldest known map of the world, carved onto a clay tablet. It places Babylon at the center of the Euphrates, encircled by a ring of bitter waters and triangular outer islands.",
     url: "https://upload.wikimedia.org/wikipedia/commons/1/1b/Map_of_the_World_from_Sippar%2C_Iraq%2C_6th_century_BCE._British_Museum.jpg",
     aspectRatio: 0.9202,
-    pinColor: '#FF9BE1',
+    pinColor: '#FF2A85',
     era: 'ancient'
   },
   {
@@ -60,7 +60,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     description: "A modern cartographical reconstruction of the ecumene according to Eratosthenes, introducing the system of parallels and meridians to measure the spherical Earth.",
     url: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Mappa_di_Eratostene.jpg/1280px-Mappa_di_Eratostene.jpg",
     aspectRatio: 1.6424,
-    pinColor: '#FFF96A',
+    pinColor: '#FF3D00',
     era: 'ancient'
   },
   {
@@ -70,7 +70,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     description: "A classical Renaissance restoration of Claudius Ptolemy's geographical coordinates, showing the known world of the Roman Empire extending from Hibernia (Ireland) to China.",
     url: "https://upload.wikimedia.org/wikipedia/commons/2/23/PtolemyWorldMap.jpg",
     aspectRatio: 1.4612,
-    pinColor: '#FFF96A',
+    pinColor: '#FF1744',
     era: 'ancient'
   },
   {
@@ -80,7 +80,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     description: "An incredibly elongated map showing the cursus publicus (Roman road network) spanning from southern Britain all the way to India, optimized for traveler itinerary rather than shape accuracy.",
     url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/TabulaPeutingeriana.jpg/3840px-TabulaPeutingeriana.jpg",
     aspectRatio: 13.0612,
-    pinColor: '#91FFC4',
+    pinColor: '#D500F9',
     era: 'ancient'
   },
   // EARLY MEDIEVAL
@@ -91,7 +91,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     description: "One of the oldest surviving non-T-O style medieval world maps, preserved in the Albi Cathedral library, showing a horseshoe-shaped Mediterranean basin and surrounding lands.",
     url: "https://upload.wikimedia.org/wikipedia/commons/1/18/Mappa_mundi_dAlbi.png",
     aspectRatio: 0.8128,
-    pinColor: '#B3C77B',
+    pinColor: '#CCFF00',
     era: 'early-medieval'
   },
   {
@@ -101,7 +101,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     description: "An Anglo-Saxon world map representing the East at the top, displaying unique early political geography, mountain ranges, and biblical events.",
     url: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Cotton_world_map.jpg/1280px-Cotton_world_map.jpg",
     aspectRatio: 0.8224,
-    pinColor: '#74F8F3',
+    pinColor: '#FF6D00',
     era: 'early-medieval'
   },
   {
@@ -111,7 +111,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     description: "Drawn by the Arab scholar Al-Idrisi for King Roger II of Sicily. It represented the most advanced geographical synthesis of the medieval world, oriented with South at the top.",
     url: "https://upload.wikimedia.org/wikipedia/commons/d/d3/TabulaRogeriana.jpg",
     aspectRatio: 2.2069,
-    pinColor: '#90C2FF',
+    pinColor: '#2979FF',
     era: 'early-medieval'
   },
   {
@@ -121,7 +121,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     description: "A detailed medieval miniature map from a psalter. It depicts the world inside a circular frame with Christ presiding above, flanked by angels.",
     url: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Psalter_world_map.jpg",
     aspectRatio: 0.7838,
-    pinColor: '#BAEAF4',
+    pinColor: '#00FF66',
     era: 'early-medieval'
   },
   {
@@ -131,7 +131,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     description: "The largest surviving medieval European world map, displaying theological, geographical, and historical narratives in a circular frame centered on Jerusalem.",
     url: "https://upload.wikimedia.org/wikipedia/commons/9/92/Hereford_Mappa_Mundi.jpg",
     aspectRatio: 0.8421,
-    pinColor: '#74F8F3',
+    pinColor: '#00E676',
     era: 'early-medieval'
   },
   // LATE MEDIEVAL
@@ -142,7 +142,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     description: "The pinnacle of medieval cartography from the Majorcan school, drawn by Abraham Cresques. It illustrates the Silk Road, West African empires, and Marco Polo's travels.",
     url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/1375_Atlas_Catalan_Abraham_Cresques.jpg/1280px-1375_Atlas_Catalan_Abraham_Cresques.jpg",
     aspectRatio: 1.8396,
-    pinColor: '#91FFC4',
+    pinColor: '#FF1744',
     era: 'late-medieval'
   },
   {
@@ -152,7 +152,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     description: "An early Joseon-dynasty Korean map detailing East Asia, the Silk Road, India, and Africa, representing the collision of Western Islamic and Far Eastern Chinese cartographical findings.",
     url: "https://upload.wikimedia.org/wikipedia/commons/1/1d/GeneralMapOfDistancesAndHistoricCapitals.jpg",
     aspectRatio: 1.2413,
-    pinColor: '#FF9BE1',
+    pinColor: '#FFEA00',
     era: 'late-medieval'
   },
   {
@@ -162,7 +162,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     description: "Venetian cartographer Andrea Bianco's circular world map from his portolan atlas, depicting the Atlantic islands, sailing lines, and early compass wind roses.",
     url: "https://upload.wikimedia.org/wikipedia/commons/9/99/Biancomap.jpg",
     aspectRatio: 1.3060,
-    pinColor: '#D3C5FB',
+    pinColor: '#FF2A85',
     era: 'late-medieval'
   },
   {
@@ -172,7 +172,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     description: "A highly complex, non-theocentric map engraved on a circular copper plate, showing Asia, Europe, and Africa with mythological illustrations and kingdoms.",
     url: "https://upload.wikimedia.org/wikipedia/commons/e/eb/Mapa_de_Borgia_XV.jpg",
     aspectRatio: 1.0,
-    pinColor: '#FF9F63',
+    pinColor: '#00E5FF',
     era: 'late-medieval'
   },
   {
@@ -182,7 +182,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     description: "Created by Venetian monk Fra Mauro, it represents the absolute zenith of medieval cartography, incorporating Portuguese maritime expeditions and oriented with South at the top.",
     url: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/FraMauroDetailedMapCorrectOrientation.jpg/1280px-FraMauroDetailedMapCorrectOrientation.jpg",
     aspectRatio: 1.0,
-    pinColor: '#FF9BE1',
+    pinColor: '#FF3D00',
     era: 'late-medieval'
   },
   // RENAISSANCE
@@ -193,7 +193,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     description: "Martin Waldseemüller's monumental map, the first to use the name 'America' and represent the New World as a separate landmass between the Atlantic and Pacific.",
     url: "https://upload.wikimedia.org/wikipedia/commons/c/c0/Waldseemuller_map_2.jpg",
     aspectRatio: 1.7513,
-    pinColor: '#74F8F3',
+    pinColor: '#E040FB',
     era: 'renaissance'
   },
   {
@@ -203,7 +203,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     description: "The surviving fragment of a world map compiled by Ottoman admiral Piri Reis, showcasing highly accurate coastlines of Western Europe, North Africa, and Brazil.",
     url: "https://upload.wikimedia.org/wikipedia/commons/7/70/Piri_reis_world_map_01.jpg",
     aspectRatio: 0.75,
-    pinColor: '#90E9FF',
+    pinColor: '#FF6D00',
     era: 'renaissance'
   },
   {
@@ -213,7 +213,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     description: "A famous heart-shaped cordiform projection created by French mathematician Oronce Fine, depicting a massive, detailed Antarctic landmass centuries before its official discovery.",
     url: "https://upload.wikimedia.org/wikipedia/commons/c/c9/Oronce_Fine_1531.jpg",
     aspectRatio: 1.3474,
-    pinColor: '#74F8F3',
+    pinColor: '#D500F9',
     era: 'renaissance'
   },
   {
@@ -223,7 +223,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     description: "Abraham Ortelius's landmark 'Typus Orbis Terrarum' world map, published as the opening plate of the first modern atlas, mapping Tartaria, the Americas, and speculative polar coastlines.",
     url: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/OrteliusWorldMap1570.jpg/3840px-OrteliusWorldMap1570.jpg",
     aspectRatio: 1.4683,
-    pinColor: '#BAEAF4',
+    pinColor: '#D50000',
     era: 'renaissance'
   },
   {
@@ -233,7 +233,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     description: "Jodocus Hondius's seminal engraving of the Great Empire of Tartary, detailing geographical regions, rivers, and cities spanning across Northern Asia and Russia.",
     url: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Tartaria_by_Jodocus_Hondius.jpg/3840px-Tartaria_by_Jodocus_Hondius.jpg",
     aspectRatio: 1.3904,
-    pinColor: '#90E9FF',
+    pinColor: '#FF2A85',
     era: 'renaissance'
   },
   // MODERN
@@ -244,7 +244,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     description: "An azimuthal equidistant projection showing the world flattened as a disk, surrounded by an ice wall. Heavily cited in flat earth and esoteric cartography models.",
     url: "https://iiif.digitalcommonwealth.org/iiif/2/commonwealth:7h149v867/full/4000,/0/default.jpg",
     aspectRatio: 0.7025,
-    pinColor: '#FF5E97',
+    pinColor: '#00FF66',
     era: 'modern'
   },
   {
@@ -254,7 +254,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     description: "A low-distortion world map projection designed by Oswald Winkel, balancing size and conformal distortions. It was adopted as the standard world map of the National Geographic Society.",
     url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Winkel_triple_projection_SW.jpg/1280px-Winkel_triple_projection_SW.jpg",
     aspectRatio: 1.6307,
-    pinColor: '#FF5E97',
+    pinColor: '#FF1744',
     era: 'modern'
   },
   {
@@ -264,7 +264,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     description: "An interrupted, equal-area pseudocylindrical projection designed by J. Paul Goode to minimize continental shape distortion by dividing ocean sections.",
     url: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Goode_homolosine_projection_SW.jpg/1280px-Goode_homolosine_projection_SW.jpg",
     aspectRatio: 2.2867,
-    pinColor: '#FF9F63',
+    pinColor: '#CCFF00',
     era: 'modern'
   },
   {
@@ -274,7 +274,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     description: "A compromise map projection developed by Arthur H. Robinson, designed to present a visually balanced representation of the entire world with mild distortions across all metrics.",
     url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Robinson_projection_SW.jpg/1280px-Robinson_projection_SW.jpg",
     aspectRatio: 1.6288,
-    pinColor: '#FF9F63',
+    pinColor: '#FF2A85',
     era: 'modern'
   },
   {
@@ -284,7 +284,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     description: "An equal-area cylindrical projection map that presents landmasses in their correct relative proportions, reducing the high-latitude enlargement seen in Mercator maps.",
     url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Gall%E2%80%93Peters_projection_SW.jpg/1280px-Gall%E2%80%93Peters_projection_SW.jpg",
     aspectRatio: 1.5662,
-    pinColor: '#BAEAF4',
+    pinColor: '#FF6D00',
     era: 'modern'
   },
   // SPECULATIVE
@@ -295,7 +295,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     description: "A detailed scientific and political reconstruction by Massimo Pietrobon mapping modern country borders onto the prehistoric supercontinent of Pangaea.",
     url: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Pangea_political.jpg",
     aspectRatio: 1.0082,
-    pinColor: '#FF9F63',
+    pinColor: '#FF007F',
     era: 'speculative'
   },
   {
@@ -305,7 +305,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     description: "A paleogeographic reconstruction of the prehistoric supercontinent Rodinia, which assembled prior to Pangaea during the Neoproterozoic era.",
     url: "https://upload.wikimedia.org/wikipedia/commons/5/5a/Rodinia_900Ma.jpg",
     aspectRatio: 1.0000,
-    pinColor: '#D0BFFF',
+    pinColor: '#FFEA00',
     era: 'speculative'
   },
   {
@@ -315,7 +315,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     description: "A paleogeographic and geological reconstruction mapping the assembly of East and West Gondwana, uniting modern South America, Africa, India, and Australia.",
     url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Parna%C3%ADba_gondwana.png/1280px-Parna%C3%ADba_gondwana.png",
     aspectRatio: 1.1313,
-    pinColor: '#FF9BE1',
+    pinColor: '#D50000',
     era: 'speculative'
   },
   {
@@ -325,7 +325,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     description: "German scholar Athanasius Kircher's speculative map of the lost island continent of Atlantis, featured in 'Mundus Subterraneus' and oriented with South at the top.",
     url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Atlantis_Kircher_Mundus_subterraneus_1678.jpg/1280px-Atlantis_Kircher_Mundus_subterraneus_1678.jpg",
     aspectRatio: 1.5039,
-    pinColor: '#F9B6DB',
+    pinColor: '#00FF66',
     era: 'speculative'
   },
   {
@@ -335,7 +335,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     description: "Gerardus Mercator's Arctic projection map showcasing a speculative polar landmass divided by four massive channels, centered on a black rock magnetic mountain (Rupes Nigra).",
     url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Mercator_north_pole_1595.jpg/1280px-Mercator_north_pole_1595.jpg",
     aspectRatio: 1.0585,
-    pinColor: '#FF9F63',
+    pinColor: '#FF2A85',
     era: 'speculative'
   }
 ];
@@ -1119,7 +1119,7 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
         closeOnClick: false,
         className: 'hover-tooltip-popup',
         anchor: 'bottom',
-        offset: [0, -17]
+        offset: [0, -26]
       });
     }
 
