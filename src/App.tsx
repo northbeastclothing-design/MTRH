@@ -6174,7 +6174,7 @@ function App() {
             }}
           >
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '12px' }}>
-              <div style={{ width: '48px', height: '48px', borderRadius: '50%', border: '2px solid #333', borderTopColor: '#b6a6ff', animation: 'spinMapAsset 0.8s linear infinite' }} />
+              <div style={{ width: '48px', height: '48px', borderRadius: '50%', border: '2px solid #333', borderTopColor: '#FF9BE1', animation: 'introSpinColor 4s linear infinite' }} />
             </div>
             <div style={{ textAlign: 'center' }}>
               <span style={{ fontSize: '14px', fontWeight: 'bold', letterSpacing: '2px', textTransform: 'uppercase', display: 'block', marginBottom: '4px' }}>INITIALIZING DATA CORES</span>
@@ -9468,6 +9468,33 @@ function App() {
         @keyframes spinMapAsset {
           0% { transform: rotate(0deg); }
           100% { transform: rotate(360deg); }
+        }
+
+        @keyframes introSpinColor {
+          0% {
+            transform: rotate(0deg);
+            border-top-color: #FF9BE1;
+          }
+          20% {
+            transform: rotate(360deg);
+            border-top-color: #B297FF;
+          }
+          40% {
+            transform: rotate(720deg);
+            border-top-color: #FF9F63;
+          }
+          60% {
+            transform: rotate(1080deg);
+            border-top-color: #90C2FF;
+          }
+          80% {
+            transform: rotate(1440deg);
+            border-top-color: #91FFC4;
+          }
+          100% {
+            transform: rotate(1800deg);
+            border-top-color: #FF9BE1;
+          }
         }
 
         @keyframes radar-pulse {
