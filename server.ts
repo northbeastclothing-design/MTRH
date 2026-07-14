@@ -848,6 +848,26 @@ ${modLink}
     }
   });
 
+  app.post("/api/moderate/cartography-points/delete", async (req, res) => {
+    try {
+      const { pointId } = req.body;
+      const isAuthorized = await verifyAdminAccess(req);
+      if (!isAuthorized) {
+        return res.status(403).json({ error: "BYPASS CODE DENIED OR UNAUTHORIZED SESSION." });
+      }
+      if (!pointId) {
+        return res.status(400).json({ error: "Missing point ID." });
+      }
+
+      await safeDeleteDocument('cartography_points', pointId);
+      console.log(`Cartography Server-Bypass: Deleted point ${pointId}`);
+      res.json({ success: true });
+    } catch (err: any) {
+      console.error("Server-side cartography point deletion failed:", err);
+      res.status(500).json({ error: err.message || "Failed to delete cartography point on server" });
+    }
+  });
+
   app.get("/api/overrides", async (req, res) => {
     try {
       const list = await safeGetCollection('overrides');

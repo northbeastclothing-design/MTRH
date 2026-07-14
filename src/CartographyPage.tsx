@@ -1128,9 +1128,8 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
 
     // Get dynamic diameter based on map zoom to scale pins exactly like the main map
     const getTargetDiameter = (currentZoom: number) => {
-      // Circle radius on main map is 3.5px at zoom 3 and 8px at zoom 12.
-      // Diameter is 2 * radius = 7px at zoom 3 and 16px at zoom 12.
-      return Math.max(7, Math.min(16, 7 + (currentZoom - 3)));
+      // 2x larger: min size 14px, max size 32px (double the original 7px to 16px)
+      return Math.max(14, Math.min(32, 14 + (currentZoom - 3) * 2));
     };
 
     const initialDiameter = getTargetDiameter(map.getZoom());
@@ -1138,8 +1137,8 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
     mapNotes.forEach((point) => {
       // Create custom vintage styled HTML marker container
       const el = document.createElement('div');
-      el.style.width = '16px'; // Allow bounds for largest scaled sizes (max size is 16px)
-      el.style.height = '16px';
+      el.style.width = '32px'; // Allow bounds for largest scaled sizes (max size is 32px)
+      el.style.height = '32px';
       el.style.cursor = 'pointer';
       el.style.display = 'flex';
       el.style.alignItems = 'center';
@@ -1150,6 +1149,9 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
 
       // Inner dot styled exactly like unclustered circular pins on the main map
       const elInner = document.createElement('div');
+      elInner.className = 'pulsing-cartography-pin';
+      elInner.style.setProperty('--pin-pulse-color', `${currentPinColor}B3`);
+      elInner.style.setProperty('--pin-pulse-color-fade', `${currentPinColor}00`);
       elInner.style.width = `${initialDiameter}px`;
       elInner.style.height = `${initialDiameter}px`;
       elInner.style.borderRadius = '50%';
@@ -1303,6 +1305,22 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
       borderTop: `1px solid ${theme.border}`,
       pointerEvents: 'none'
     }}>
+      <style>{`
+        @keyframes pinPulse {
+          0% {
+            box-shadow: 0 0 0 0 var(--pin-pulse-color, rgba(255, 94, 151, 0.7));
+          }
+          70% {
+            box-shadow: 0 0 0 12px var(--pin-pulse-color-fade, rgba(255, 94, 151, 0));
+          }
+          100% {
+            box-shadow: 0 0 0 0 var(--pin-pulse-color-fade, rgba(255, 94, 151, 0));
+          }
+        }
+        .pulsing-cartography-pin {
+          animation: pinPulse 2s infinite ease-in-out;
+        }
+      `}</style>
       {/* 20PX FAR LEFT PROTECTIVE SIDE STRIP */}
       <div 
         className="far-left-strip"

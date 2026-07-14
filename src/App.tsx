@@ -1278,6 +1278,41 @@ function App() {
     }
   };
 
+  const fetchCartographyPointsForMod = async () => {
+    try {
+      const res = await fetch('/api/cartography-points');
+      if (res.ok) {
+        const data = await res.json();
+        setModCartographyPoints(data.points || []);
+      }
+    } catch (err) {
+      console.error("Failed to fetch cartography points for moderator:", err);
+    }
+  };
+
+  const handleDeleteCartoPoint = async (pointId: string) => {
+    if (!window.confirm("ARE YOU SURE YOU WANT TO PURGE THIS CARTOGRAPHY PIN PERMANENTLY?")) return;
+    try {
+      setDeletingCartoPointId(pointId);
+      const authParams = await getModeratorHeadersAndBody({ pointId });
+      const res = await fetch('/api/moderate/cartography-points/delete', {
+        method: 'POST',
+        headers: authParams.headers,
+        body: authParams.body
+      });
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.error || `Server status ${res.status}`);
+      }
+      setModeratorReloadTrigger(prev => prev + 1);
+    } catch (err: any) {
+      console.error("Failed to delete cartography point:", err);
+      alert(`Deletion Failed: ${err.message || err}`);
+    } finally {
+      setDeletingCartoPointId(null);
+    }
+  };
+
 
   const combinedPointsAndLinesData = useMemo(() => {
     const approvedMapSubmissions = approvedSubmissions.filter(item => 
@@ -1684,8 +1719,12 @@ function App() {
   const [submittingRejectionId, setSubmittingRejectionId] = useState<string | null>(null);
   const [moderatorReloadTrigger, setModeratorReloadTrigger] = useState(0);
   const [isModMinimized, setIsModMinimized] = useState(false);
-  const [activeModTab, setActiveModTab] = useState<'pending' | 'approved' | 'reports'>('pending');
+  const [activeModTab, setActiveModTab] = useState<'pending' | 'approved' | 'reports' | 'cartography'>('pending');
   const [submittingRevocationId, setSubmittingRevocationId] = useState<string | null>(null);
+
+  // Custom Cartography Pins Moderation States
+  const [modCartographyPoints, setModCartographyPoints] = useState<any[]>([]);
+  const [deletingCartoPointId, setDeletingCartoPointId] = useState<string | null>(null);
 
   // Inaccuracy Reporting States
   const [isReportOpen, setIsReportOpen] = useState(false);
@@ -3722,6 +3761,72 @@ function App() {
     });
 
     fetchReportsFromServer();
+
+    return () => {
+      isMounted = false;
+      unsubscribe();
+      if (fallbackInterval) {
+        clearInterval(fallbackInterval);
+      }
+    };
+  }, [isModeratorAuthenticated, moderatorReloadTrigger]);
+
+  // Listen to custom cartography points for moderators
+  useEffect(() => {
+    if (!isModeratorAuthenticated) {
+      setModCartographyPoints([]);
+      return;
+    }
+
+    let isMounted = true;
+    let fallbackInterval: any = null;
+
+    const fetchCartoFromServer = async () => {
+      try {
+        const response = await fetch('/api/cartography-points');
+        if (!response.ok) {
+          throw new Error(`Server status ${response.status}`);
+        }
+        const data = await response.json();
+        if (isMounted) {
+          setModCartographyPoints(data.points || []);
+        }
+      } catch (err: any) {
+        console.warn("Server-side cartography points fetch failed:", err);
+      }
+    };
+
+    // Try listening to firestore collection dynamically first
+    const q = collection(db, 'cartography_points');
+    const unsubscribe = onSnapshot(q, (snapshot) => {
+      const pointsList: any[] = [];
+      snapshot.forEach((doc) => {
+        const data = doc.data();
+        pointsList.push({
+          id: doc.id,
+          ...data
+        });
+      });
+
+      // Sort by createdAt descending
+      pointsList.sort((a, b) => {
+        const dateA = a.createdAt ? new Date(a.createdAt).getTime() : 0;
+        const dateB = b.createdAt ? new Date(b.createdAt).getTime() : 0;
+        return dateB - dateA;
+      });
+
+      if (isMounted) {
+        setModCartographyPoints(pointsList);
+      }
+    }, (error) => {
+      console.warn("Could not load cartography points directly from Firestore client. Switching to server proxy...", error);
+      fetchCartoFromServer();
+      if (isMounted && !fallbackInterval) {
+        fallbackInterval = setInterval(fetchCartoFromServer, 5000);
+      }
+    });
+
+    fetchCartoFromServer();
 
     return () => {
       isMounted = false;
@@ -11326,6 +11431,23 @@ function App() {
                     >
                       INACCURACY REPORTS ({reports.filter(r => r.status === 'pending').length})
                     </button>
+                    <button
+                      onClick={() => setActiveModTab('cartography')}
+                      style={{
+                        padding: '10px 16px',
+                        fontSize: '10px',
+                        fontWeight: 'bold',
+                        fontFamily: '"Space Mono", monospace',
+                        background: activeModTab === 'cartography' ? (isMapDarkMode ? 'rgba(255, 204, 0, 0.1)' : 'rgba(0,0,0,0.05)') : 'transparent',
+                        color: activeModTab === 'cartography' ? (isMapDarkMode ? '#ffcc00' : '#000000') : (isMapDarkMode ? '#999999' : '#666666'),
+                        border: 'none',
+                        borderBottom: activeModTab === 'cartography' ? (isMapDarkMode ? '2.5px solid #ffcc00' : '2.5px solid #000000') : '2.5px solid transparent',
+                        cursor: 'pointer',
+                        letterSpacing: '0.5px'
+                      }}
+                    >
+                      CARTOGRAPHY PINS ({modCartographyPoints.length})
+                    </button>
                   </div>
 
                   {activeModTab === 'pending' && (
@@ -12184,6 +12306,74 @@ function App() {
                         )}
                       </div>
                     ))}
+                        </div>
+                      )}
+                    </div>
+                  )}
+
+                  {activeModTab === 'cartography' && (
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                      <span style={{ fontSize: '9px', color: isMapDarkMode ? theme.textDim : '#000000', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+                        Cartography Custom Pins (Purge test pins or user entries dropped on historical projections):
+                      </span>
+
+                      {modCartographyPoints.length === 0 ? (
+                        <div style={{ padding: '40px 0', textAlign: 'center', border: `1px dashed ${theme.borderLight}`, color: isMapDarkMode ? theme.textDim : '#000000', fontSize: '11px', fontWeight: 'bold' }}>
+                          No custom cartography pins discovered in the database.
+                        </div>
+                      ) : (
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', maxHeight: '50vh', overflowY: 'auto', paddingRight: '4px' }}>
+                          {modCartographyPoints.map((point) => (
+                            <div 
+                              key={point.id} 
+                              style={{ 
+                                border: `1.5px solid ${theme.border}`, 
+                                padding: '16px', 
+                                backgroundColor: isMapDarkMode ? 'rgba(255,255,255,0.02)' : '#ffffff',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                gap: '12px',
+                                boxShadow: isMapDarkMode ? 'none' : '0 2px 8px rgba(0,0,0,0.05)'
+                              }}
+                            >
+                              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '16px' }}>
+                                <div style={{ flex: 1 }}>
+                                  <h5 style={{ margin: '0 0 4px 0', fontSize: '13px', fontWeight: 'bold', color: theme.text }}>{point.note}</h5>
+                                  <div style={{ display: 'flex', gap: '12px', fontSize: '9px', color: isMapDarkMode ? theme.textDim : '#000000', fontWeight: isMapDarkMode ? 'normal' : '500', flexWrap: 'wrap', alignItems: 'center' }}>
+                                    <span>MAP ID: <strong style={{ color: isMapDarkMode ? '#ffcc00' : '#000000' }}>{point.mapId}</strong></span>
+                                    <span>COORDS: <strong>[{point.lat?.toFixed(5)}, {point.lng?.toFixed(5)}]</strong></span>
+                                    {point.createdAt ? (
+                                      <span>CREATED: <strong>{typeof point.createdAt === 'string' ? point.createdAt : (point.createdAt._seconds ? new Date(point.createdAt._seconds * 1000).toLocaleString() : 'N/A')}</strong></span>
+                                    ) : null}
+                                  </div>
+                                </div>
+
+                                <button
+                                  disabled={deletingCartoPointId === point.id}
+                                  onClick={() => handleDeleteCartoPoint(point.id)}
+                                  style={{
+                                    background: 'transparent',
+                                    color: '#ff4d4d',
+                                    border: '1.5px solid #ff4d4d',
+                                    padding: '0 16px',
+                                    height: '32px',
+                                    borderRadius: '16px',
+                                    fontSize: '9px',
+                                    fontWeight: 'bold',
+                                    cursor: 'pointer',
+                                    fontFamily: '"Space Mono", monospace',
+                                    textTransform: 'uppercase',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    boxSizing: 'border-box'
+                                  }}
+                                >
+                                  {deletingCartoPointId === point.id ? 'PURGING...' : 'DELETE PIN'}
+                                </button>
+                              </div>
+                            </div>
+                          ))}
                         </div>
                       )}
                     </div>
