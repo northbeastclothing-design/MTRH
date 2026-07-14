@@ -32557,7 +32557,7 @@
   {
     "id": "apkallu-eridu-sumer",
     "name": "Eridu (Ancient Mesopotamian Holy City)",
-    "category": "Ancient Ruins",
+    "category": "Archaeological Finds",
     "type": "Point",
     "coordinates": {
       "lng": 45.9961,
@@ -32573,7 +32573,7 @@
   {
     "id": "ollantaytambo-site",
     "name": "Ollantaytambo Megalithic Site",
-    "category": "Ancient Ruins",
+    "category": "Archaeological Finds",
     "type": "Point",
     "coordinates": {
       "lng": -72.2633,
@@ -32589,7 +32589,7 @@
   {
     "id": "se-ti-cah-lovelock-cave",
     "name": "Lovelock Cave (Si-Te-Cah Giants)",
-    "category": "Supernatural / Anomalies",
+    "category": "Giants & Nephilim",
     "type": "Point",
     "coordinates": {
       "lng": -118.5264,
@@ -32605,7 +32605,7 @@
   {
     "id": "viracocha-tiwanaku-bolivia",
     "name": "Tiwanaku (Gate of the Sun / Viracocha)",
-    "category": "Ancient Ruins",
+    "category": "Archaeological Finds",
     "type": "Point",
     "coordinates": {
       "lng": -68.6784,
@@ -32621,7 +32621,7 @@
   {
     "id": "karahan-tepe-location",
     "name": "Karahan Tepe Megalithic Complex",
-    "category": "Ancient Ruins",
+    "category": "Archaeological Finds",
     "type": "Point",
     "coordinates": {
       "lng": 39.2963,

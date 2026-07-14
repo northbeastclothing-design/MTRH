@@ -673,6 +673,7 @@ const processIncomingRecord = (item: any, index: number) => {
   else if ((lowerCat.includes('stargate') || lowerCat.includes('portal')) && !lowerCat.includes('underworld') && !lowerCat.includes('entrance')) normalizedCategory = 'Portals / Stargates';
   else if (lowerCat.includes('entrance') || lowerCat.includes('underworld')) normalizedCategory = 'Underworld Entrances';
   else if (lowerCat.includes('ancient people') || lowerCat.includes('people group')) normalizedCategory = 'Ancient People Groups';
+  else if (lowerCat.includes('ancient ruins')) normalizedCategory = 'Archaeological Finds';
   else if (lowerCat.includes('ancient') || lowerCat.includes('text')) normalizedCategory = 'Ancient Texts';
   else if (lowerCat.includes('burial') || lowerCat.includes('mound')) normalizedCategory = 'Burial Mounds';
   else if (lowerCat.includes('cave') || lowerCat.includes('drawing')) normalizedCategory = 'Rock Art & Cave Paintings';

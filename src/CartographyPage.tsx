@@ -1602,7 +1602,8 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
                             {!loadedThumbnails[hMap.id] && (
                               <div className="loading-spinner" style={{
                                 position: 'absolute',
-                                borderTopColor: isMapDarkMode ? '#ffffff' : '#000000'
+                                border: `2px solid ${isMapDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)'}`,
+                                borderTopColor: hMap.pinColor || '#FF5E97'
                               }} />
                             )}
                             <img
@@ -1905,7 +1906,7 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
                 borderRadius: '50%', 
                 border: '2px solid', 
                 borderColor: isMapDarkMode ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.06)', 
-                borderTopColor: theme.text, 
+                borderTopColor: selectedMap.pinColor || '#FF5E97', 
                 animation: 'spinMapAsset 0.8s linear infinite',
                 marginBottom: '4px'
               }} />
@@ -1939,7 +1940,7 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
                 <div style={{
                   width: `${loadProgress}%`,
                   height: '100%',
-                  background: theme.text,
+                  background: selectedMap.pinColor || '#FF5E97',
                   transition: 'width 0.1s linear'
                 }} />
               </div>
@@ -1972,7 +1973,18 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
                 transition: 'left 0.5s ease'
               }}
             >
-              <Navigation size={12} style={{ transform: 'rotate(45deg)' }} />
+              <img
+                src="/icons/icon-arrow-down.svg"
+                style={{
+                  width: '14px',
+                  height: '14px',
+                  transform: 'rotate(-90deg)',
+                  filter: 'brightness(0)',
+                  pointerEvents: 'none'
+                }}
+                alt="arrow"
+                draggable={false}
+              />
               Click anywhere on the historical projection to place a pin
             </motion.div>
           )}

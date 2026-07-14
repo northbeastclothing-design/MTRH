@@ -5680,14 +5680,14 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'behold-pale-horse': { lng: -109.2909, lat: 34.1112, locationName: 'Eagar, Arizona', category: 'Secret Government Programs' },
   'vatican-observatory': { lng: -109.8920, lat: 32.7016, locationName: 'Mount Graham, Arizona', category: 'NASA / Space' },
   'haarp-facility': { lng: -145.1502, lat: 62.3934, locationName: 'Gakona, Alaska', category: 'Secret Government Programs' },
-  'karahan-tepe-site': { lng: 39.2963, lat: 37.0945, locationName: 'Sanliurfa Province, Turkey', category: 'Ancient Ruins' },
+  'karahan-tepe-site': { lng: 39.2963, lat: 37.0945, locationName: 'Sanliurfa Province, Turkey', category: 'Archaeological Finds' },
   'apkallu-sages': { lng: 45.9961, lat: 30.8158, locationName: 'Eridu, Iraq', category: 'Ancient Texts' },
-  'se-ti-cah-giants': { lng: -118.5264, lat: 40.1697, locationName: 'Lovelock Cave, Nevada', category: 'Supernatural / Anomalies' },
+  'se-ti-cah-giants': { lng: -118.5264, lat: 40.1697, locationName: 'Lovelock Cave, Nevada', category: 'Giants & Nephilim' },
   'viracocha-deity': { lng: -68.6784, lat: -16.5548, locationName: 'Tiwanaku, Bolivia', category: 'Ancient Texts' },
   'voodoo-religion': { lng: -72.3333, lat: 18.5333, locationName: 'Bois Caïman, Haiti', category: 'Religion' },
   'roman-dodecahedron-artifact': { lng: 5.4648, lat: 50.7811, locationName: 'Tongeren, Belgium', category: 'Archaeological Finds' },
   'hope-diamond-curse': { lng: -77.0260, lat: 38.8913, locationName: 'Smithsonian Museum, Washington D.C.', category: 'The Occult' },
-  'ollantaytambo-terraces': { lng: -72.2633, lat: -13.2575, locationName: 'Ollantaytambo, Peru', category: 'Ancient Ruins' }
+  'ollantaytambo-terraces': { lng: -72.2633, lat: -13.2575, locationName: 'Ollantaytambo, Peru', category: 'Archaeological Finds' }
 };
 
 export interface Waypoint {
