@@ -32,6 +32,17 @@ interface HistoricalMap {
 
 // High-resolution digital archives and Wikimedia collections
 const HISTORICAL_MAPS: HistoricalMap[] = [
+  // ANCIENT
+  {
+    id: 'catalhoyuk',
+    name: "Çatalhöyük Mural",
+    year: "c. 6200 BCE",
+    description: "A famous Neolithic wall painting from Çatalhöyük, Turkey, depicting a closely packed town layout of box-like houses in plan view, flanked by an erupting two-peaked volcano.",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Museum_of_Anatolian_Civilizations_%C3%87atalh%C3%B6y%C3%BCk_mural_City_or_Leopard_skin_Detail_in_2011_07.jpg/1280px-Museum_of_Anatolian_Civilizations_%C3%87atalh%C3%B6y%C3%BCk_mural_City_or_Leopard_skin_Detail_in_2011_07.jpg",
+    aspectRatio: 1.4553,
+    pinColor: '#FF9BE1',
+    era: 'ancient'
+  },
   {
     id: 'babylonian',
     name: "Babylonian Map of the World",
@@ -40,6 +51,26 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     url: "https://upload.wikimedia.org/wikipedia/commons/1/1b/Map_of_the_World_from_Sippar%2C_Iraq%2C_6th_century_BCE._British_Museum.jpg",
     aspectRatio: 0.9202,
     pinColor: '#FF9BE1',
+    era: 'ancient'
+  },
+  {
+    id: 'eratosthenes',
+    name: "Eratosthenes' World Map",
+    year: "c. 194 BCE",
+    description: "A modern cartographical reconstruction of the ecumene according to Eratosthenes, introducing the system of parallels and meridians to measure the spherical Earth.",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Mappa_di_Eratostene.jpg/1280px-Mappa_di_Eratostene.jpg",
+    aspectRatio: 1.6424,
+    pinColor: '#FFF96A',
+    era: 'ancient'
+  },
+  {
+    id: 'ptolemy',
+    name: "Ptolemy’s Geography",
+    year: "c. 150 AD",
+    description: "A classical Renaissance restoration of Claudius Ptolemy's geographical coordinates, showing the known world of the Roman Empire extending from Hibernia (Ireland) to China.",
+    url: "https://upload.wikimedia.org/wikipedia/commons/2/23/PtolemyWorldMap.jpg",
+    aspectRatio: 1.4612,
+    pinColor: '#FFF96A',
     era: 'ancient'
   },
   {
@@ -52,15 +83,26 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     pinColor: '#91FFC4',
     era: 'ancient'
   },
+  // EARLY MEDIEVAL
   {
-    id: 'ptolemy',
-    name: "Ptolemy’s Geography",
-    year: "c. 150 AD",
-    description: "A classical Renaissance restoration of Claudius Ptolemy's geographical coordinates, showing the known world of the Roman Empire extending from Hibernia (Ireland) to China.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/2/23/PtolemyWorldMap.jpg",
-    aspectRatio: 1.4612,
-    pinColor: '#FFF96A',
-    era: 'ancient'
+    id: 'albi',
+    name: "Albi Mappa Mundi",
+    year: "c. 8th Century",
+    description: "One of the oldest surviving non-T-O style medieval world maps, preserved in the Albi Cathedral library, showing a horseshoe-shaped Mediterranean basin and surrounding lands.",
+    url: "https://upload.wikimedia.org/wikipedia/commons/1/18/Mappa_mundi_dAlbi.png",
+    aspectRatio: 0.8128,
+    pinColor: '#B3C77B',
+    era: 'early-medieval'
+  },
+  {
+    id: 'cotton',
+    name: "Cotton World Map",
+    year: "c. 1025",
+    description: "An Anglo-Saxon world map representing the East at the top, displaying unique early political geography, mountain ranges, and biblical events.",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Cotton_world_map.jpg/1280px-Cotton_world_map.jpg",
+    aspectRatio: 0.8224,
+    pinColor: '#74F8F3',
+    era: 'early-medieval'
   },
   {
     id: 'tabula-rogeriana',
@@ -92,6 +134,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     pinColor: '#74F8F3',
     era: 'early-medieval'
   },
+  // LATE MEDIEVAL
   {
     id: 'catalan',
     name: "Catalan Atlas",
@@ -113,6 +156,16 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     era: 'late-medieval'
   },
   {
+    id: 'bianco',
+    name: "Andrea Bianco Map",
+    year: "1436",
+    description: "Venetian cartographer Andrea Bianco's circular world map from his portolan atlas, depicting the Atlantic islands, sailing lines, and early compass wind roses.",
+    url: "https://upload.wikimedia.org/wikipedia/commons/9/99/Biancomap.jpg",
+    aspectRatio: 1.3060,
+    pinColor: '#D3C5FB',
+    era: 'late-medieval'
+  },
+  {
     id: 'borgia',
     name: "Borgia World Map",
     year: "c. 1430",
@@ -122,6 +175,17 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     pinColor: '#FF9F63',
     era: 'late-medieval'
   },
+  {
+    id: 'framauro',
+    name: "Fra Mauro Map",
+    year: "1459",
+    description: "Created by Venetian monk Fra Mauro, it represents the absolute zenith of medieval cartography, incorporating Portuguese maritime expeditions and oriented with South at the top.",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/FraMauroDetailedMapCorrectOrientation.jpg/1280px-FraMauroDetailedMapCorrectOrientation.jpg",
+    aspectRatio: 1.0,
+    pinColor: '#FF9BE1',
+    era: 'late-medieval'
+  },
+  // RENAISSANCE
   {
     id: 'waldseemuller',
     name: "Waldseemüller World Map",
@@ -172,6 +236,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     pinColor: '#90E9FF',
     era: 'renaissance'
   },
+  // MODERN
   {
     id: 'gleason',
     name: "Gleason's New Standard Map",
@@ -183,12 +248,93 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     era: 'modern'
   },
   {
+    id: 'winkeltripel',
+    name: "Winkel Tripel Projection",
+    year: "1921",
+    description: "A low-distortion world map projection designed by Oswald Winkel, balancing size and conformal distortions. It was adopted as the standard world map of the National Geographic Society.",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Winkel_triple_projection_SW.jpg/1280px-Winkel_triple_projection_SW.jpg",
+    aspectRatio: 1.6307,
+    pinColor: '#FF5E97',
+    era: 'modern'
+  },
+  {
+    id: 'goode',
+    name: "Goode Homolosine Map",
+    year: "1923",
+    description: "An interrupted, equal-area pseudocylindrical projection designed by J. Paul Goode to minimize continental shape distortion by dividing ocean sections.",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Goode_homolosine_projection_SW.jpg/1280px-Goode_homolosine_projection_SW.jpg",
+    aspectRatio: 2.2867,
+    pinColor: '#FF9F63',
+    era: 'modern'
+  },
+  {
+    id: 'robinson',
+    name: "Robinson Projection",
+    year: "1963",
+    description: "A compromise map projection developed by Arthur H. Robinson, designed to present a visually balanced representation of the entire world with mild distortions across all metrics.",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Robinson_projection_SW.jpg/1280px-Robinson_projection_SW.jpg",
+    aspectRatio: 1.6288,
+    pinColor: '#FF9F63',
+    era: 'modern'
+  },
+  {
+    id: 'gallpeters',
+    name: "Gall-Peters Projection",
+    year: "1973",
+    description: "An equal-area cylindrical projection map that presents landmasses in their correct relative proportions, reducing the high-latitude enlargement seen in Mercator maps.",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Gall%E2%80%93Peters_projection_SW.jpg/1280px-Gall%E2%80%93Peters_projection_SW.jpg",
+    aspectRatio: 1.5662,
+    pinColor: '#BAEAF4',
+    era: 'modern'
+  },
+  // SPECULATIVE
+  {
     id: 'pangaea',
     name: "Pangea Politica Map",
     year: "Modern (335M BC)",
     description: "A detailed scientific and political reconstruction by Massimo Pietrobon mapping modern country borders onto the prehistoric supercontinent of Pangaea.",
     url: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Pangea_political.jpg",
     aspectRatio: 1.0082,
+    pinColor: '#FF9F63',
+    era: 'speculative'
+  },
+  {
+    id: 'rodinia',
+    name: "Rodinia Reconstruction",
+    year: "Modern (900M BC)",
+    description: "A paleogeographic reconstruction of the prehistoric supercontinent Rodinia, which assembled prior to Pangaea during the Neoproterozoic era.",
+    url: "https://upload.wikimedia.org/wikipedia/commons/5/5a/Rodinia_900Ma.jpg",
+    aspectRatio: 1.0000,
+    pinColor: '#D0BFFF',
+    era: 'speculative'
+  },
+  {
+    id: 'gondwana',
+    name: "Gondwana Reconstruction",
+    year: "Modern (550M BC)",
+    description: "A paleogeographic and geological reconstruction mapping the assembly of East and West Gondwana, uniting modern South America, Africa, India, and Australia.",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Parna%C3%ADba_gondwana.png/1280px-Parna%C3%ADba_gondwana.png",
+    aspectRatio: 1.1313,
+    pinColor: '#FF9BE1',
+    era: 'speculative'
+  },
+  {
+    id: 'atlantis',
+    name: "Kircher's Atlantis",
+    year: "1669",
+    description: "German scholar Athanasius Kircher's speculative map of the lost island continent of Atlantis, featured in 'Mundus Subterraneus' and oriented with South at the top.",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Atlantis_Kircher_Mundus_subterraneus_1678.jpg/1280px-Atlantis_Kircher_Mundus_subterraneus_1678.jpg",
+    aspectRatio: 1.5039,
+    pinColor: '#F9B6DB',
+    era: 'speculative'
+  },
+  {
+    id: 'hyperborea',
+    name: "Mercator's Hyperborea",
+    year: "1595",
+    description: "Gerardus Mercator's Arctic projection map showcasing a speculative polar landmass divided by four massive channels, centered on a black rock magnetic mountain (Rupes Nigra).",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Mercator_north_pole_1595.jpg/1280px-Mercator_north_pole_1595.jpg",
+    aspectRatio: 1.0585,
     pinColor: '#FF9F63',
     era: 'speculative'
   }
