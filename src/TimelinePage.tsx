@@ -136,14 +136,14 @@ const ERAS_CONFIG = [
     desc: 'Charlemagne, Alfred the Great, and British Monarchs down to King Charles III.'
   },
   {
-    id: 'secret-gov-programs',
-    name: 'Secret Government Programs',
+    id: 'government-conspiracies',
+    name: 'Government Conspiracies',
     start: 1940,
     end: 2026,
     color: '#FF5C5C', // Vibrant classified red
-    icon: '/icons/icon-secret-government-programs.svg',
-    layer: 'secret-gov-programs',
-    desc: 'Declassified military projects, chemical mind control, psychic remote viewing research, and classified aerospace programs.'
+    icon: '/icons/icon-government-conspiracies.svg',
+    layer: 'government-conspiracies',
+    desc: 'Declassified military projects, chemical mind control, psychic espionage, and government conspiracies or hidden agendas.'
   },
   {
     id: 'sumerian-antediluvian',
@@ -242,7 +242,7 @@ export default function TimelinePage({
     'royal-bloodlines': true,
     'enochian-lore': true,
     'future-prophecy': true,
-    'secret-gov-programs': true,
+    'government-conspiracies': true,
     'nasa-space': true,
     'ancient-civilizations': true,
     'alchemy-occult': true,

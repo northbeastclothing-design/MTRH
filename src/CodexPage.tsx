@@ -59,7 +59,7 @@ const LAYER_COLORS: Record<string, string> = {
   'Ley Lines': '#FF5E97',
   'Archaeological Finds': '#74F8F3',
   'Biblical Discoveries': '#D49459',
-  'Secret Government Programs': '#FF5C5C',
+  'Government Conspiracies': '#FF5C5C',
   'NASA / Space': '#BACEF4',
   'The Occult': '#59DCB7',
   'People Groups': '#BCA7C7',
@@ -101,7 +101,7 @@ const LAYER_ICONS: Record<string, string> = {
   'Ley Lines': '/icons/icon-ley-lines.svg',
   'Archaeological Finds': '/icons/icon-archaeological-finds.svg',
   'Biblical Discoveries': '/icons/icon-biblical-discoveries.svg',
-  'Secret Government Programs': '/icons/icon-secret-government-programs.svg',
+  'Government Conspiracies': '/icons/icon-government-conspiracies.svg',
   'NASA / Space': '/icons/icon-nasa.svg',
   'The Occult': '/icons/icon-alchemy-occult.svg',
   'People Groups': '/icons/icon-people-groups.svg',
@@ -926,7 +926,7 @@ export default function CodexPage({
     if (curr.id === 'myths-legends-root') return '#FFF96A'; // Yellow/Gold (Myths / Legends)
     if (curr.id === 'megaliths-structures') return '#FFFBA6'; // Yellow/Gold (Megaliths)
     if (curr.id === 'supernatural-anomalies') return '#C2FFBD'; // Green (U.F.O. Sightings)
-    if (curr.id === 'secret-government-programs') return '#FF5C5C'; // Red (Secret Government Programs)
+    if (curr.id === 'government-conspiracies') return '#FF5C5C'; // Red (Government Conspiracies)
     if (curr.id === 'alchemy-occult') return '#59DCB7'; // Mint/Teal (The Occult)
     if (curr.id === 'people-groups') return '#BCA7C7'; // Lavender (People Groups)
     if (curr.id === 'nasa-root') return '#BACEF4'; // Light Blue (NASA / Space)
@@ -974,7 +974,7 @@ export default function CodexPage({
       case '#90c2ff': // Biblical Figures
       case '#bdc4ff': // Ghosts & Hauntings / Blurred
         return '#1c447d'; // Dark navy blue
-      case '#ff5c5c': // Secret Government Programs
+      case '#ff5c5c': // Government Conspiracies
         return '#b31b1b'; // Dark red/crimson
       case '#ff9be1': // UFOs - War.gov
       case '#ff5e97': // Ley Lines
@@ -1005,7 +1005,7 @@ export default function CodexPage({
     if (node.id === 'myths-legends-root') return LAYER_ICONS['Myths / Legends'];
     if (node.id === 'megaliths-structures') return LAYER_ICONS['Megaliths / Structures'];
     if (node.id === 'supernatural-anomalies') return LAYER_ICONS['UFOs - Sightings'];
-    if (node.id === 'secret-government-programs') return LAYER_ICONS['Secret Government Programs'];
+    if (node.id === 'government-conspiracies') return LAYER_ICONS['Government Conspiracies'];
     if (node.id === 'alchemy-occult') return LAYER_ICONS['The Occult'];
     if (node.id === 'people-groups') return LAYER_ICONS['People Groups'];
     if (node.id === 'nasa-root') return LAYER_ICONS['NASA / Space'];
@@ -1019,7 +1019,7 @@ export default function CodexPage({
       if (parentId === 'myths-legends-root') return LAYER_ICONS['Myths / Legends'];
       if (parentId === 'megaliths-structures') return LAYER_ICONS['Megaliths / Structures'];
       if (parentId === 'supernatural-anomalies') return LAYER_ICONS['UFOs - Sightings'];
-      if (parentId === 'secret-government-programs') return LAYER_ICONS['Secret Government Programs'];
+      if (parentId === 'government-conspiracies') return LAYER_ICONS['Government Conspiracies'];
       if (parentId === 'alchemy-occult') return LAYER_ICONS['The Occult'];
       if (parentId === 'people-groups') return LAYER_ICONS['People Groups'];
       if (parentId === 'nasa-root') return LAYER_ICONS['NASA / Space'];

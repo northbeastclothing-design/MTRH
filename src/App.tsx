@@ -698,7 +698,7 @@ const processIncomingRecord = (item: any, index: number) => {
   else if (lowerCat.includes('meteor') || lowerCat.includes('crater') || lowerCat.includes('impact structure')) normalizedCategory = 'Meteor Impact Craters';
   else if (lowerCat.includes('archaeological') || lowerCat.includes('archaeology')) normalizedCategory = 'Archaeological Finds';
   else if (lowerCat.includes('biblical find') || lowerCat.includes('biblical discover') || lowerCat === 'biblical finds' || lowerCat === 'biblical discoveries') normalizedCategory = 'Biblical Discoveries';
-  else if (lowerCat.includes('government program') || lowerCat.includes('secret government') || lowerCat.includes('classified program')) normalizedCategory = 'Secret Government Programs';
+  else if (lowerCat.includes('government program') || lowerCat.includes('secret government') || lowerCat.includes('classified program') || lowerCat.includes('government conspiracy') || lowerCat.includes('conspiracy')) normalizedCategory = 'Government Conspiracies';
   else if (lowerCat.includes('alchemy') || lowerCat.includes('occult') || lowerCat.includes('hermeticism') || lowerCat.includes('thelema')) normalizedCategory = 'The Occult';
 
   // Smart imagery injection for map points lacking media (megaliths, underworld entrances, national parks, mounds)
@@ -841,7 +841,7 @@ const LAYER_CONFIG: Record<string, { color: string; icon: string }> = {
   'Ley Lines': { color: '#FF5E97', icon: '/icons/icon-ley-lines.svg' },
   'Archaeological Finds': { color: '#74F8F3', icon: '/icons/icon-archaeological-finds.svg' },
   'Biblical Discoveries': { color: '#D49459', icon: '/icons/icon-biblical-discoveries.svg' },
-  'Secret Government Programs': { color: '#FF5C5C', icon: '/icons/icon-secret-government-programs.svg' },
+  'Government Conspiracies': { color: '#FF5C5C', icon: '/icons/icon-government-conspiracies.svg' },
   'NASA / Space': { color: '#BACEF4', icon: '/icons/icon-nasa.svg' },
   'The Occult': { color: '#59DCB7', icon: '/icons/icon-alchemy-occult.svg' },
   'Ancient People Groups': { color: '#BCA7C7', icon: '/icons/icon-people-groups.svg' },
@@ -1227,7 +1227,7 @@ function App() {
       layerName === 'UFOs - War.gov' ||
       layerName === 'UFOs - Brazillian Archives' ||
       layerName === 'UFOs - Sightings' ||
-      layerName === 'Secret Government Programs'
+      layerName === 'Government Conspiracies'
     ) {
       return ufoData.length === 0;
     }
@@ -1408,7 +1408,7 @@ function App() {
   }, [approvedSubmissions, overrides]);
 
   const uniqueCategories = useMemo(() => {
-    const order = ['UFOs - War.gov', 'UFOs - Brazillian Archives', 'UFOs - Sightings', 'Secret Government Programs', 'Giants & Nephilim'];
+    const order = ['UFOs - War.gov', 'UFOs - Brazillian Archives', 'UFOs - Sightings', 'Government Conspiracies', 'Giants & Nephilim'];
     const allCategories = Object.keys(LAYER_CONFIG).filter(cat => cat !== 'Default');
     return allCategories.sort((a, b) => {
       const sA = String(a);
@@ -1429,7 +1429,7 @@ function App() {
       'Myths / Legends',
       'Megaliths / Structures',
       'Supernatural / Anomalies',
-      'Secret Government Programs',
+      'Government Conspiracies',
       'The Occult'
     ];
     return Array.from(new Set(cats));
@@ -2185,7 +2185,7 @@ function App() {
                   <option value="royal-bloodlines">Royal Bloodlines</option>
                   <option value="illuminati-bloodlines">13 Illuminati Bloodlines</option>
                   <option value="black-nobility">13 Black Nobility Families</option>
-                  <option value="secret-gov-programs">Secret Government Programs</option>
+                  <option value="government-conspiracies">Government Conspiracies</option>
                   <option value="nasa-space">NASA / Space</option>
                   <option value="ancient-civilizations">Ancient People Groups</option>
                   <option value="alchemy-occult">The Occult</option>
@@ -4042,7 +4042,7 @@ function App() {
   useEffect(() => {
     const loadDatasets = async () => {
       // 1. UFO Datasets
-      const hasUfoActive = activeLayers['UFOs - War.gov'] || activeLayers['UFOs - Brazillian Archives'] || activeLayers['UFOs - Sightings'] || activeLayers['Secret Government Programs'];
+      const hasUfoActive = activeLayers['UFOs - War.gov'] || activeLayers['UFOs - Brazillian Archives'] || activeLayers['UFOs - Sightings'] || activeLayers['Government Conspiracies'];
       if (hasUfoActive && ufoData.length === 0) {
         try {
           const [ufo1, ufo2, war1, war2, war3, br] = await Promise.all([
@@ -4126,7 +4126,7 @@ function App() {
       // 5. Core Rabbit Hole data
       const needsRabbitHole = Object.keys(activeLayers).some(k => 
         activeLayers[k] && 
-        k !== 'UFOs - War.gov' && k !== 'UFOs - Brazillian Archives' && k !== 'UFOs - Sightings' && k !== 'Secret Government Programs' &&
+        k !== 'UFOs - War.gov' && k !== 'UFOs - Brazillian Archives' && k !== 'UFOs - Sightings' && k !== 'Government Conspiracies' &&
         k !== 'Archaeological Finds' && k !== 'Biblical Discoveries' &&
         k !== 'Missing 411' && k !== 'Cave Systems' && k !== 'Alien Abductions' && k !== 'Cattle Mutilations'
       );
@@ -10473,7 +10473,7 @@ function App() {
                             <option value="royal-bloodlines">Royal Bloodlines</option>
                             <option value="illuminati-bloodlines">13 Illuminati Bloodlines</option>
                             <option value="black-nobility">13 Black Nobility Families</option>
-                            <option value="secret-gov-programs">Secret Government Programs</option>
+                            <option value="government-conspiracies">Government Conspiracies</option>
                             <option value="nasa-space">NASA / Space</option>
                             <option value="ancient-civilizations">Ancient People Groups</option>
                             <option value="alchemy-occult">The Occult</option>

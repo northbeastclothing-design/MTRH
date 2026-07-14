@@ -21545,13 +21545,13 @@ const chunk_6: any[] = [
   },
   {
     id: 'operation-fishbowl',
-    parentId: 'secret-government-programs',
+    parentId: 'government-conspiracies',
     name: 'Operation Fishbowl',
     description: 'A series of high-altitude nuclear tests conducted by the United States over Johnston Atoll in 1962. In alternative research, these tests are popularized as a covert attempt to probe or breach the Earth\'s atmospheric dome or firmament.',
     sources: ['Defense Atomic Support Agency Reports', 'Fringe Cosmology Literature'],
     mapFeatureId: 'operation-fishbowl',
     timelineId: 'operation-fishbowl',
-    relatedIds: ['secret-government-programs'],
+    relatedIds: ['government-conspiracies'],
     images: [
       'https://archive.org/download/StarfishPrimeInterimReportByCommanderJTF8/Starfish%20Prime%20Interim%20Report%20By%20Commander%20JTF-8.mp4',
       'https://archive.org/download/OperationDOMINICNuclearTests1962/OperationDOMINICNuclearTests1962_512kb.mp4'
@@ -21568,11 +21568,11 @@ const chunk_6: any[] = [
   },
   {
     id: 'gate-program-education',
-    parentId: 'secret-government-programs',
+    parentId: 'government-conspiracies',
     name: 'The GATE Program (Gifted & Talented)',
     description: 'The Gifted and Talented Education (GATE) programs in public schools. In conspiracy research and survivor testimonies, these programs are sometimes theorized to serve as selective screening and recruitment mechanisms for classified government intelligence projects, cognitive profiling, or early-stage psychological experiments targeting high-potential children.',
     sources: ['Alternative Education Research', 'Conspiracy Theory Literature'],
-    relatedIds: ['secret-government-programs', 'project-mkultra']
+    relatedIds: ['government-conspiracies', 'project-mkultra']
   },
   {
     id: 'coral-castle',
@@ -21625,7 +21625,7 @@ const chunk_6: any[] = [
     name: 'Bilderberg Group',
     description: 'An annual private conference established in 1954 to foster dialogue between political, financial, and industrial elites of Europe and North America. Conspiracy researchers view the invitation-only, off-the-record meetings as a shadow global government coordinating international policies and trade.',
     sources: ['Bilderberg Official Archives', 'Fringe Geopolitical Research'],
-    mapFeatureId: 'anomaly-Secret-Government-Programs-Bilderberg',
+    mapFeatureId: 'anomaly-Government-Conspiracies-Bilderberg',
     relatedIds: ['illuminati-bloodlines', 'illuminati']
   },
   {
@@ -22956,7 +22956,7 @@ const chunk_new_additions: any[] = [
     parentId: 'ufology-researchers',
     name: 'Milton William Cooper',
     description: "An American conspiracy theorist, author, and radio host best known for his 1991 book 'Behold a Pale Horse'. A former U.S. Navy intelligence briefing team member, Cooper synthesized ideas about the Illuminati, UFO cover-ups, and the New World Order, becoming a foundational figure in modern alternative research. He was killed in a shootout with sheriff's deputies at his home in Eagar, Arizona, in 2001.",
-    relatedIds: ['behold-pale-horse', 'ufology-researchers', 'secret-government-programs'],
+    relatedIds: ['behold-pale-horse', 'ufology-researchers', 'government-conspiracies'],
     mapFeatureId: 'bill-cooper-shootout-location',
     images: [],
     sources: ['Behold a Pale Horse (Milton William Cooper)', 'Hour of the Time Radio Broadcasts']
@@ -22965,7 +22965,7 @@ const chunk_new_additions: any[] = [
     parentId: 'ufology-researchers',
     name: 'Behold a Pale Horse',
     description: "An influential underground conspiracy book published in 1991 by Milton William Cooper. The text synthesizes theories concerning the Illuminati, secret societies, UFO cover-ups, Bilderberg Group plots, and global government control, serving as a foundational text for modern alternative research and militia movements.",
-    relatedIds: ['bill-cooper', 'secret-government-programs', 'ufos'],
+    relatedIds: ['bill-cooper', 'government-conspiracies', 'ufos'],
     images: [],
     sources: ['Behold a Pale Horse (Milton William Cooper)']
   }, {
@@ -23021,19 +23021,19 @@ const chunk_new_additions: any[] = [
     sources: ['Fools and Jesters at the English Court (John Doran)', 'The Archetypes and the Collective Unconscious (Carl Jung)']
   }, {
     id: 'internet-cern-origins',
-    parentId: 'secret-government-programs',
+    parentId: 'government-conspiracies',
     name: 'The Internet & CERN',
     description: "The World Wide Web was invented at CERN (European Organization for Nuclear Research) in 1989 by Sir Tim Berners-Lee to share information among scientists. In alternative history and conspiracy lore, the internet's birth at a particle physics lab studying high-energy collisions is seen as a coordinated effort to build a global digital matrix, facilitating collective human consciousness synchronization alongside CERN's experiments in bridging dimensional doorways.",
-    relatedIds: ['cern-observatory', 'haarp-facility', 'secret-government-programs'],
+    relatedIds: ['cern-observatory', 'haarp-facility', 'government-conspiracies'],
     mapFeatureId: 'cern-hq-switzerland',
     images: ['https://upload.wikimedia.org/wikipedia/commons/1/1d/CERN_Large_Hadron_Collider.jpg'],
     sources: ['CERN Historical Archives', 'A Short History of the Web (CERN)']
   }, {
     id: 'haarp-facility',
-    parentId: 'secret-government-programs',
+    parentId: 'government-conspiracies',
     name: 'HAARP',
     description: "The High-frequency Active Auroral Research Program (HAARP) is a scientific program operating a high-power transmitter facility in Gakona, Alaska, to study the ionosphere. In alternative science and conspiracy circles, HAARP is widely rumored to be a secret weather-modification weapon, mind-control transmitter, and geophysical weapon capable of triggering earthquakes.",
-    relatedIds: ['internet-cern-origins', 'secret-government-programs'],
+    relatedIds: ['internet-cern-origins', 'government-conspiracies'],
     mapFeatureId: 'haarp-facility-alaska',
     images: ['https://upload.wikimedia.org/wikipedia/commons/9/9f/High_Frequency_Active_Auroral_Research_Program_site.jpg'],
     sources: ['HAARP Technical Reports (UAF)', 'Angels Don\'t Play This HAARP (Nick Begich)']
@@ -23904,7 +23904,7 @@ const chunk_historic_extensions: any[] = [
     parentId: 'project-stargate',
     name: 'Project Sun Streak',
     description: `A secret U.S. government intelligence project (1985–1990) under the Defense Intelligence Agency (DIA) that continued the remote viewing, psychic espionage, and astral projection research of Project Grill Flame. It was later merged back into Project Stargate.`,
-    layer: 'Secret Government Programs',
+    layer: 'Government Conspiracies',
     timelineId: 'project-sun-streak-event',
     mapFeatureId: 'anomaly-project-sun-streak-ft-meade',
     sources: ['Declassified DIA Documents (Released 1995)', 'CIA Freedom of Information Act Archives'],
@@ -24320,7 +24320,7 @@ const chunk_historic_extensions: any[] = [
   },
   {
     id: 'particle-accelerators',
-    parentId: 'secret-government-programs',
+    parentId: 'government-conspiracies',
     name: 'Particle Accelerators',
     description: `A directory of high-energy particle accelerators designed to accelerate charged particles to relativistic speeds, facilitating high-energy physics research and space-time anomaly studies. Conspiratorial theories link these facilities to portals, space-time dilation, and interdimensional research.`,
     layer: 'Particle Accelerators'
@@ -24820,12 +24820,12 @@ const chunk_user_additions_2: any[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Talmud-Druck_von_Daniel_Bomberg_und_Ambrosius_Froben.jpg/1280px-Talmud-Druck_von_Daniel_Bomberg_und_Ambrosius_Froben.jpg']
   }, {
     id: 'majestic-12',
-    parentId: 'secret-government-programs',
+    parentId: 'government-conspiracies',
     name: 'Majestic 12 (MJ-12)',
     description: 'The code name of a purported secret committee of scientists, military leaders, and government officials formed in 1947 by executive order of U.S. President Harry S. Truman. Its alleged purpose was to facilitate the recovery, containment, and reverse-engineering of crashed extraterrestrial spacecraft and their occupants, most notably following the Roswell UFO incident.',
     timelineId: 'majestic-12',
-    layer: 'Secret Government Programs',
-    relatedIds: ['philip-corso', 'project-blue-book', 'richard-dolan', 'roscoe-hillenkoetter', 'secret-government-programs', 'stanton-friedman', 'timothy-good', 'ufos'],
+    layer: 'Government Conspiracies',
+    relatedIds: ['philip-corso', 'project-blue-book', 'richard-dolan', 'roscoe-hillenkoetter', 'government-conspiracies', 'stanton-friedman', 'timothy-good', 'ufos'],
     sources: ['FBI Vault (Conspiratorial Document Leak Archives)', 'Investigative Research Manuscripts', 'Roswell Incident Investigations', 'The MJ-12 Documents']
   }, {
     id: 'invisible-college',
@@ -24898,10 +24898,10 @@ const chunk_user_additions_2: any[] = [
     sources: ['The Book of the Law (Aleister Crowley)', 'The Confessions of Aleister Crowley']
   }, {
     id: 'remote-viewing',
-    parentId: 'secret-government-programs',
+    parentId: 'government-conspiracies',
     name: 'Remote Viewing',
     description: 'A mental faculty where an individual claims to perceive details about a distant or unseen target using extrasensory perception. Under projects like the Stargate Project (1978–1995), the CIA and U.S. Army sponsored scientific research into remote viewing at the Stanford Research Institute (SRI). Prominent remote viewers like Ingo Swann and Joseph McMoneagle claimed to have successfully scanned remote Soviet military bases, underground facilities, and even extraterrestrial installations on the Moon and Mars.',
-    relatedIds: ['secret-government-programs', 'project-mkultra', 'akashic-records'],
+    relatedIds: ['government-conspiracies', 'project-mkultra', 'akashic-records'],
     sources: ['Stargate Project Archives (CIA)', 'Penetration (Ingo Swann)']
   }, {
     id: 'moonchild-concept',
@@ -24962,7 +24962,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'A legendary 13-foot-tall, red-haired humanoid giant with six fingers and toes reportedly killed by a U.S. Army squad in a remote mountain cave in Kandahar, Afghanistan, in 2002. The incident, first detailed by military whistleblowers, alleges that the giant killed one soldier with a spear before being brought down by concentrated rifle fire. The body was reportedly airlifted away on a military cargo helicopter, and the encounter remains subject to a strict government cover-up, linking it in alternative circles to modern surviving Nephilim remnants.',
     mapFeatureId: 'anomaly-Giants-Kandahar-Giant',
     timelineId: 'kandahar-giant-event',
-    relatedIds: ['nephilim-br', 'secret-government-programs'],
+    relatedIds: ['nephilim-br', 'government-conspiracies'],
     sources: ['Military Whistleblower Testimony', 'Fringe Research Databases']
   },  {
     id: 'archons',
@@ -25156,47 +25156,47 @@ export const TERM_TREE_DATA: TermNode[] = [
   },  {
     id: 'operation-highjump',
     parentId: 'ufo-sightings-br',
-    secondaryParentIds: ['secret-government-programs'],
+    secondaryParentIds: ['government-conspiracies'],
     name: 'Operation Highjump (Antarctic Clashes)',
     description: 'A massive 1946–1947 US Navy expedition to Antarctica led by Admiral Richard E. Byrd, which abruptly retreated amidst rumors of conflicts with advanced, disc-shaped aircraft operating from geothermal hollows or a secret redoubt (Base 211).',
-    layer: 'Secret Government Programs',
+    layer: 'Government Conspiracies',
     timelineId: 'operation-highjump',
-    relatedIds: ['ufo-sightings-br', 'agartha-inner-earth', 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-25', 'secret-government-programs'],
+    relatedIds: ['ufo-sightings-br', 'agartha-inner-earth', 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-25', 'government-conspiracies'],
     images: [
       'https://archive.org/download/xsited-zDPLEBfYIvIQ/xsited-zDPLEBfYIvIQ.ia.mp4'
     ],
     sources: ['Declassified Admiral Byrd Logs', 'Military Expedition Archives']
   },  {
     id: 'philadelphia-experiment',
-    parentId: 'secret-government-programs',
+    parentId: 'government-conspiracies',
     secondaryParentIds: ['space-anomalies-br'],
     name: 'The Philadelphia Experiment',
     description: 'A rumored 1943 US military experiment ("Project Rainbow") in which the destroyer escort USS Eldridge was allegedly rendered completely invisible, resulting in physical teleportation, temporal distortion, and severe molecular displacement among the crew.',
-    layer: 'Secret Government Programs',
+    layer: 'Government Conspiracies',
     timelineId: 'philadelphia-experiment',
     relatedIds: ['the-veil', 'supernatural-anomalies', 'space-anomalies-br'],
     sources: ['Project Rainbow Records', 'Fringe Physics Literature']
   },  {
-    id: 'secret-government-programs',
-    name: 'Secret Government Programs',
+    id: 'government-conspiracies',
+    name: 'Government Conspiracies',
     description: 'Declassified military projects, psychological operations, clandestine intelligence agency experiments, and conspiracy theory research programs in the United States and abroad.',
-    layer: 'Secret Government Programs'
+    layer: 'Government Conspiracies'
   },  {
     id: 'project-mkultra',
-    parentId: 'secret-government-programs',
+    parentId: 'government-conspiracies',
     name: 'Project MKUltra',
     description: 'A clandestine CIA mind control and chemical interrogation program launched in 1953, utilizing drugs, sensory deprivation, and hypnosis on unwitting subjects.',
-    layer: 'Secret Government Programs',
+    layer: 'Government Conspiracies',
     timelineId: 'project-mkultra',
     relatedIds: ['sidney-gottlieb', 'ewen-cameron', 'cathy-obrien'],
     images: ['https://upload.wikimedia.org/wikipedia/commons/0/01/ProjectMKULTRA_Senate_Report.pdf'],
     sources: ['CIA Declassified Archives', 'Joint Congressional Committee Investigation Reports (1977)']
   },  {
     id: 'project-stargate',
-    parentId: 'secret-government-programs',
+    parentId: 'government-conspiracies',
     name: 'Project Stargate',
     description: 'A declassified U.S. Army unit established in 1978 to investigate the potential of psychic phenomena, specifically remote viewing, for military and intelligence espionage.',
-    layer: 'Secret Government Programs',
+    layer: 'Government Conspiracies',
     timelineId: 'project-stargate',
     relatedIds: ['joe-mcmoneagle', 'uri-geller', 'ingo-swann', 'russell-targ', 'hal-puthoff', 'albert-stubblebine'],
     images: [
@@ -25206,19 +25206,19 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['DIA Declassified Documents', 'CIA Archives (Released 1995)']
   },  {
     id: 'operation-paperclip',
-    parentId: 'secret-government-programs',
+    parentId: 'government-conspiracies',
     name: 'Operation Paperclip',
     description: 'A secret program of the Joint Intelligence Objectives Agency in 1945 in which more than 1,600 German scientists, engineers, and technicians were recruited to the U.S. for government employment.',
-    layer: 'Secret Government Programs',
+    layer: 'Government Conspiracies',
     timelineId: 'operation-paperclip',
     relatedIds: ['wernher-von-braun', 'hubertus-strughold'],
     sources: ['National Archives and Records Administration (NARA) Records', 'Marshall Space Flight Center History Office']
   },  {
     id: 'project-blue-book',
-    parentId: 'secret-government-programs',
+    parentId: 'government-conspiracies',
     name: 'Project Blue Book',
     description: 'The systematic study of unidentified flying objects (UFOs) conducted by the United States Air Force from 1952 to 1969, analyzing over 12,000 reports of aerial anomalies.',
-    layer: 'Secret Government Programs',
+    layer: 'Government Conspiracies',
     timelineId: 'project-blue-book',
     relatedIds: ['j-allen-hynek', 'edward-ruppelt', 'john-samford', 'jacques-vallee'],
     images: [
@@ -25227,30 +25227,30 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['U.S. Air Force Project Blue Book Archives', 'National Archives (NARA)']
   },  {
     id: 'project-deep-freeze',
-    parentId: 'secret-government-programs',
+    parentId: 'government-conspiracies',
     name: 'Project Deep Freeze',
     description: 'A series of U.S. military expeditions to Antarctica starting in 1955 under the leadership of Admiral Richard E. Byrd. While officially established for scientific research and to secure geological data, alternative researchers argue the operations were part of a highly militarized cover-up. Conspiratorial theories suggest the expeditions were designed to locate hidden openings to the Hollow Earth, search for ancient ruins beneath the ice sheet, and investigate rumors of secret Nazi bases in New Swabia (Neuschwabenland).',
-    layer: 'Secret Government Programs',
+    layer: 'Government Conspiracies',
     timelineId: 'deep-freeze-expedition',
-    relatedIds: ['secret-government-programs', 'operation-highjump', 'admiral-byrd', 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-25'],
+    relatedIds: ['government-conspiracies', 'operation-highjump', 'admiral-byrd', 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-25'],
     sources: ['U.S. Navy Declassified Records', 'Antarctic Expedition Journals']
   },  {
     id: 'die-glocke',
-    parentId: 'secret-government-programs',
+    parentId: 'government-conspiracies',
     name: 'Die Glocke (The Bell)',
     description: 'A rumored top-secret Nazi scientific project or Wunderwaffe (wonder weapon) developed during the final stages of World War II near the Wenceslaus mine on the Polish border. Described as a metallic bell-shaped device housing spinning counter-rotating cylinders of a mysterious violet liquid codenamed "Xerum-525," Die Glocke was reportedly linked to anti-gravity propulsion, extreme radiation, and time-space dilation experiments. Its development was spearheaded by SS General Jakob Sporrenberg and remains one of the most famous legends of Nazi occult physics.',
-    layer: 'Secret Government Programs',
+    layer: 'Government Conspiracies',
     timelineId: 'die-glocke-development',
-    relatedIds: ['secret-government-programs', 'operation-paperclip', 'ss-ahnenerbe', 'heinrich-himmler'],
+    relatedIds: ['government-conspiracies', 'operation-paperclip', 'ss-ahnenerbe', 'heinrich-himmler'],
     sources: ['Nick Cook\'s The Hunt for Zero Point', 'SS Trial Documents']
   },  {
     id: 'ss-ahnenerbe',
-    parentId: 'secret-government-programs',
+    parentId: 'government-conspiracies',
     name: 'SS Ahnenerbe',
     description: 'The Ancestral Heritage (Ahnenerbe) research institute established in 1935 by Reichsführer-SS Heinrich Himmler to investigate the history, archaeology, and occult sciences of the Aryan race. The Ahnenerbe funded scientific expeditions to Tibet (led by Ernst Schäfer), Antarctica, Sweden, and Iraq to locate ancient esoteric knowledge, search for runic power, and retrieve religious relics like the Holy Grail and the Spear of Destiny to empower the SS.',
-    layer: 'Secret Government Programs',
+    layer: 'Government Conspiracies',
     timelineId: 'ahnenerbe-founded',
-    relatedIds: ['secret-government-programs', 'heinrich-himmler', 'vril-society'],
+    relatedIds: ['government-conspiracies', 'heinrich-himmler', 'vril-society'],
     sources: ['Ahnenerbe SS Research Files', 'Nuremberg Trial Records']
   },  {
     id: 'heinrich-himmler',
@@ -25261,78 +25261,78 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Historical SS Biographies', 'Nuremberg Trial Records']
   },  {
     id: 'project-pegasus-time',
-    parentId: 'secret-government-programs',
+    parentId: 'government-conspiracies',
     name: 'Project Pegasus (Time Travel)',
     description: 'A rumored secret defense program allegedly conducted by DARPA and the CIA in the late 1960s and early 1970s. According to whistleblower claims (specifically from Andrew Basiago), Project Pegasus successfully developed teleportation and time-travel technologies using Nikola Tesla\'s physical papers. The project reportedly used young children to test holographic time portals, sending them to historical events and future eras, and remains a major component of modern time-travel conspiracy lore.',
-    layer: 'Secret Government Programs',
+    layer: 'Government Conspiracies',
     timelineId: 'project-pegasus-event',
-    relatedIds: ['secret-government-programs', 'nikola-tesla', 'montauk-project'],
+    relatedIds: ['government-conspiracies', 'nikola-tesla', 'montauk-project'],
     sources: ['Conspiracy Research Databases', 'Whistleblower Testimonies']
   },  {
     id: 'operation-northwoods',
-    parentId: 'secret-government-programs',
+    parentId: 'government-conspiracies',
     name: 'Operation Northwoods',
     description: 'A proposed 1962 false flag operation against Cuba, planning staged acts of terrorism on U.S. soil to justify military intervention, which was rejected by President John F. Kennedy.',
-    layer: 'Secret Government Programs',
+    layer: 'Government Conspiracies',
     timelineId: 'operation-northwoods',
     images: ['https://nsarchive2.gwu.edu/news/20010430/northwoods.pdf'],
     sources: ['Joint Chiefs of Staff Declassified Memorandums', 'National Security Archive']
   },  {
     id: 'montauk-project',
-    parentId: 'secret-government-programs',
+    parentId: 'government-conspiracies',
     name: 'Montauk Project',
     description: 'A conspiracy theory alleging a series of secret United States government projects at Camp Hero in Montauk, Long Island, focused on exotic physics research, time travel, and mind control.',
-    layer: 'Secret Government Programs',
+    layer: 'Government Conspiracies',
     timelineId: 'montauk-project',
     sources: ['Camp Hero Declassified History Logs', 'Esoteric Physics Research Papers']
   },  {
     id: 'operation-mockingbird',
-    parentId: 'secret-government-programs',
+    parentId: 'government-conspiracies',
     name: 'Operation Mockingbird',
     description: 'A clandestine CIA campaign launched in the early 1950s to influence domestic and foreign media, recruiting leading American journalists into a network to present intelligence propaganda.',
-    layer: 'Secret Government Programs',
+    layer: 'Government Conspiracies',
     timelineId: 'operation-mockingbird',
     sources: ['Church Committee Reports', 'Clandestine CIA Activity Logs']
   },  {
     id: 'operation-sea-spray',
-    parentId: 'secret-government-programs',
+    parentId: 'government-conspiracies',
     name: 'Operation Sea-Spray',
     description: 'A secret U.S. Navy biological warfare experiment in which the bacteria Serratia marcescens was sprayed over the San Francisco Bay Area to study vulnerability to biological attacks, causing multiple infections.',
-    layer: 'Secret Government Programs',
+    layer: 'Government Conspiracies',
     timelineId: 'operation-sea-spray',
     sources: ['U.S. Senate Subcommittee Hearings', 'Biological Warfare History Archives']
   },  {
     id: 'project-sunshine',
-    parentId: 'secret-government-programs',
+    parentId: 'government-conspiracies',
     name: 'Project Sunshine',
     description: 'A clandestine research project by the AEC and USAF to determine the effects of radioactive fallout on human tissue, notoriously gathering baby tissue and bones without parental consent.',
-    layer: 'Secret Government Programs',
+    layer: 'Government Conspiracies',
     timelineId: 'project-sunshine',
     sources: ['Atomic Energy Commission Records', 'Nuclear Medicine Historical Reviews']
   },  {
     id: 'project-horizon',
-    parentId: 'secret-government-programs',
+    parentId: 'government-conspiracies',
     name: 'Project Horizon',
     description: 'A secret military study proposing the establishment of a manned, fortified military outpost on the Moon to facilitate defense, communications, and space surveillance.',
-    layer: 'Secret Government Programs',
+    layer: 'Government Conspiracies',
     timelineId: 'project-horizon',
     images: ['https://nsarchive2.gwu.edu/NSAEBB/NSAEBB479/docs/EBB-Moon01_sm.pdf'],
     sources: ['U.S. Department of the Army Declassified Files', 'Lunar Exploration History Archives']
   },  {
     id: 'project-iceworm',
-    parentId: 'secret-government-programs',
+    parentId: 'government-conspiracies',
     name: 'Project Iceworm',
     description: 'A secret U.S. Army program to build a massive network of mobile nuclear missile launch sites under the Greenland ice sheet under the cover of Camp Century\'s scientific base.',
-    layer: 'Secret Government Programs',
+    layer: 'Government Conspiracies',
     timelineId: 'project-iceworm',
     images: ['https://web.archive.org/web/20210926224338/https://apps.dtic.mil/sti/pdfs/AD0477706.pdf'],
     sources: ['Danish Foreign Policy Institute Reports', 'Camp Century Construction Records']
   },  {
     id: 'project-plowshare',
-    parentId: 'secret-government-programs',
+    parentId: 'government-conspiracies',
     name: 'Project Plowshare',
     description: 'A program designed to utilize "peaceful nuclear explosions" for massive construction projects, such as digging canals, artificial harbors, and blasting mountain passes.',
-    layer: 'Secret Government Programs',
+    layer: 'Government Conspiracies',
     timelineId: 'project-plowshare',
     images: [
       'https://archive.org/download/0374_GNOME_Project_M03201_05_00_48_00/0374_GNOME_Project_M03201_05_00_48_00_3mb.mp4'
@@ -25340,10 +25340,10 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Lawrence Livermore National Laboratory Archives', 'AEC Peaceful Nuclear Explosions Project Papers']
   },  {
     id: 'project-1794',
-    parentId: 'secret-government-programs',
+    parentId: 'government-conspiracies',
     name: 'Project 1794',
     description: 'A secret military aeronautical development project with Avro Canada to build a supersonic, vertical take-off and landing (VTOL) flying saucer designed to intercept bombers.',
-    layer: 'Secret Government Programs',
+    layer: 'Government Conspiracies',
     timelineId: 'project-1794',
     images: [
       'https://archive.org/download/yt_kdSo31A9j_I/kdSo31A9j_I.mp4',
@@ -25352,34 +25352,34 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Declassified USAF Records (Released 2012)', 'Avro Canada Aeronautical Studies']
   },  {
     id: 'operation-gladio',
-    parentId: 'secret-government-programs',
+    parentId: 'government-conspiracies',
     name: 'Operation Gladio',
     description: 'A clandestine NATO stay-behind network set up during the Cold War to organize armed resistance in the event of a Soviet invasion, which allegedly engaged in false flag operations.',
-    layer: 'Secret Government Programs',
+    layer: 'Government Conspiracies',
     timelineId: 'operation-gladio',
     sources: ['Italian Parliamentary Investigations', 'NATO Clandestine Planning Files']
   },  {
     id: 'operation-lac',
-    parentId: 'secret-government-programs',
+    parentId: 'government-conspiracies',
     name: 'Operation LAC',
     description: 'A series of chemical warfare dispersal tests conducted by the U.S. Army, spraying zinc cadmium sulfide over vast areas of the United States to test dispersion patterns.',
-    layer: 'Secret Government Programs',
+    layer: 'Government Conspiracies',
     timelineId: 'operation-lac',
     sources: ['National Research Council Review', 'Army Chemical Corps Archives']
   },  {
     id: 'operation-chase',
-    parentId: 'secret-government-programs',
+    parentId: 'government-conspiracies',
     name: 'Operation CHASE',
     description: 'A U.S. military program of disposing of chemical weapons and conventional munitions by loading them onto old cargo ships and deliberately sinking them in the deep Atlantic Ocean.',
-    layer: 'Secret Government Programs',
+    layer: 'Government Conspiracies',
     timelineId: 'operation-chase',
     sources: ['U.S. Navy Declassified Reports', 'Environmental Ocean Dumping Records']
   },  {
     id: 'whistleblowers',
-    parentId: 'secret-government-programs',
+    parentId: 'government-conspiracies',
     name: 'Whistleblowers',
     description: 'Individuals from the intelligence community, military, and government contractors who have leaked or officially testified about classified surveillance, secret operations, or coverups.',
-    layer: 'Secret Government Programs'
+    layer: 'Government Conspiracies'
   },  {
     id: 'ufos',
     parentId: 'supernatural-anomalies',
@@ -25465,7 +25465,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     secondaryParentIds: ['ufology-researchers'],
     name: 'David Grusch',
     description: 'Former U.S. Air Force officer and intelligence official who testified under oath to Congress in 2023, claiming that the U.S. government operates a secret, decades-long UAP crash retrieval and reverse-engineering program possessing non-human craft and biologics.',
-    relatedIds: ['secret-government-programs', 'ufo-sightings-br'],
+    relatedIds: ['government-conspiracies', 'ufo-sightings-br'],
     sources: ['Congressional Hearing on UAP (July 2023)', 'Inspector General Complaint Filing']
   },  {
     id: 'bob-lazar',
@@ -25588,14 +25588,14 @@ export const TERM_TREE_DATA: TermNode[] = [
     parentId: 'whistleblowers',
     name: 'Edward Snowden',
     description: 'Former CIA employee and NSA contractor who leaked highly classified information in 2013, exposing global bulk surveillance programs (like PRISM) operated by the NSA and the Five Eyes intelligence alliance.',
-    relatedIds: ['secret-government-programs'],
+    relatedIds: ['government-conspiracies'],
     sources: ['NSA Declassified Documents', 'Citizenfour Documentary Files']
   },  {
     id: 'chelsea-manning',
     parentId: 'whistleblowers',
     name: 'Chelsea Manning',
     description: 'Former U.S. Army intelligence analyst who leaked nearly 750,000 military and diplomatic documents to WikiLeaks in 2010, exposing battlefield logs, classified videos, and secret diplomatic communications.',
-    relatedIds: ['secret-government-programs'],
+    relatedIds: ['government-conspiracies'],
     sources: ['WikiLeaks Iraq and Afghan War Logs', 'U.S. Army Court-Martial Proceedings']
   },  {
     id: 'alchemy-occult',

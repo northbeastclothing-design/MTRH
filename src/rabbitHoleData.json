@@ -29532,9 +29532,9 @@
     "images": []
   },
   {
-    "id": "anomaly-Secret-Government-Programs-Bilderberg",
+    "id": "anomaly-Government-Conspiracies-Bilderberg",
     "name": "First Bilderberg Conference - Oosterbeek, Netherlands",
-    "category": "Secret Government Programs",
+    "category": "Government Conspiracies",
     "type": "Point",
     "coordinates": {
       "lng": 5.834167,
@@ -29812,9 +29812,9 @@
     "images": []
   },
   {
-    "id": "anomaly-Secret-Government-Programs-Die-Glocke",
+    "id": "anomaly-Government-Conspiracies-Die-Glocke",
     "name": "Die Glocke (Wenceslaus Mine) - Ludwikowice K\u0142odzkie, Poland",
-    "category": "Secret Government Programs",
+    "category": "Government Conspiracies",
     "type": "Point",
     "coordinates": {
       "lng": 16.5011,
@@ -29826,9 +29826,9 @@
     "images": []
   },
   {
-    "id": "anomaly-Secret-Government-Programs-Deep-Freeze",
+    "id": "anomaly-Government-Conspiracies-Deep-Freeze",
     "name": "Project Deep Freeze - South Pole Station, Antarctica",
-    "category": "Secret Government Programs",
+    "category": "Government Conspiracies",
     "type": "Point",
     "coordinates": {
       "lng": 0.0,
@@ -30452,7 +30452,7 @@
   {
     "id": "anomaly-project-sun-streak-ft-meade",
     "name": "Project Sun Streak - Fort Meade, USA",
-    "category": "Secret Government Programs",
+    "category": "Government Conspiracies",
     "type": "Point",
     "coordinates": {
       "lng": -76.7325,
@@ -32479,7 +32479,7 @@
   {
     "id": "bill-cooper-shootout-location",
     "name": "Eagar, Arizona (Bill Cooper Memorial)",
-    "category": "Secret Government Programs",
+    "category": "Government Conspiracies",
     "type": "Point",
     "coordinates": {
       "lng": -109.2909,
@@ -32525,7 +32525,7 @@
   {
     "id": "haarp-facility-alaska",
     "name": "HAARP Research Facility",
-    "category": "Secret Government Programs",
+    "category": "Government Conspiracies",
     "type": "Point",
     "coordinates": {
       "lng": -145.1502,
