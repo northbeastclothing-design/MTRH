@@ -96,8 +96,12 @@ const chunk_0: any[] = [  {
   },  {
     id: 'elohim',
     parentId: 'christianity',
-    name: 'Angelology',
-    description: 'The study of angels, heavenly hosts, and divine messengers. In biblical cosmology, it encompasses the angelic hierarchies, the heavenly council, and the hosts of spiritual beings ruling under God, historically referred to by the Hebrew term Elohim.'
+    name: 'Angelology / Elohim',
+    description: 'The study of angels, heavenly hosts, and divine messengers. In biblical cosmology, it encompasses the angelic hierarchies, the heavenly council, and spiritual beings historically referred to by the Hebrew term Elohim. In alternative history and ancient astronaut theories, the plural nature of the word Elohim ("gods" or "divine ones") is interpreted as referring to an advanced extraterrestrial race, such as the Anunnaki, who engineered early humanity.',
+    layer: 'Biblical Figures',
+    relatedIds: ['anunnaki', 'nephilim-br', 'christianity'],
+    sources: ['Hebrew Bible (Genesis)', 'Sumerian Clay Tablets', 'Ancient Astronaut Theory Literature'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Elohim.svg/1280px-Elohim.svg.png']
   },  {
     id: 'angel',
     parentId: 'elohim',
@@ -851,7 +855,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'egyptian-pantheon',
-    parentId: 'pantheons-mythology-br',
+    parentId: 'myths-legends-root',
     name: 'Egyptian Pantheon',
     description: 'The ancient Egyptian gods and goddesses representing cosmological forces, kingship, and underworld judgments.',
     isApocryphal: true
@@ -16083,7 +16087,8 @@ const chunk_4: any[] = [  {
     name: 'Derinkuyu Underground City',
     description: 'An ancient multi-level underground city in Turkey, large enough to shelter 20,000 people along with livestock and food stores.',
     relatedIds: ['ancient-sites', 'megaliths'],
-    sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
+    sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Derinkuyu_Underground_City_9910_Nevit.jpg/960px-Derinkuyu_Underground_City_9910_Nevit.jpg']
   },  {
     id: 'megaliths',
     parentId: 'megaliths-structures',
@@ -23953,7 +23958,7 @@ const chunk_historic_extensions: any[] = [
   },
   {
     id: 'canyon-de-chelly',
-    parentId: 'ancient-civilizations',
+    parentId: 'archaeological-finds-br',
     name: 'Canyon de Chelly',
     description: `A sandstone canyon in northeastern Arizona, within the Navajo Nation, inhabited continuously for nearly 5,000 years. Famous for its Anasazi ruins, Spider Rock, and historic petroglyphs and pictographs (including the Spanish Expedition mural). Conspiratorial research links the canyon's ancient dwellings and rock art to legends of the Hopi "Ant People" and subterranean portals.`,
     layer: 'Archaeological Finds',
@@ -24920,7 +24925,900 @@ const chunk_user_additions_2: any[] = [
   }
 ];
 
+const chunk_us_presidents: any[] = [
+  {
+    id: 'us-presidents',
+    parentId: 'government-conspiracies',
+    name: 'US Presidents',
+    description: 'A directory of US Presidents and the historical conspiracies, anomalies, secret society connections, and cover-ups associated with their administrations.',
+    layer: 'Government Conspiracies'
+  },
+  {
+    id: 'pres-george-washington',
+    parentId: 'us-presidents',
+    name: '01. George Washington',
+    description: 'Freemason who laid the Capitol cornerstone in a Masonic ceremony. Conspiracies involve the geomantic laying out of Washington D.C. according to occult and astrological principles.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-george-washington',
+    relatedIds: ['famous-freemasons', 'government-conspiracies'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg/1280px-Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg']
+  },
+  {
+    id: 'pres-john-adams',
+    parentId: 'us-presidents',
+    name: '02. John Adams',
+    description: 'The rise of the Illuminati scare in New England under his administration and the restrictive Alien and Sedition Acts designed to suppress political dissent.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-john-adams',
+    relatedIds: ['government-conspiracies'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/John_Adams_Portrait.jpg/1280px-John_Adams_Portrait.jpg']
+  },
+  {
+    id: 'pres-thomas-jefferson',
+    parentId: 'us-presidents',
+    name: '03. Thomas Jefferson',
+    description: 'Author of the \'Jefferson Bible\' who removed supernatural elements. Under his watch, explorer Meriwether Lewis died under mysterious circumstances, rumored to be an assassination.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-thomas-jefferson',
+    relatedIds: ['government-conspiracies', 'ancient-texts'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Official_Presidential_portrait_of_Thomas_Jefferson_%28by_Rembrandt_Peale%2C_1800%29.jpg/1280px-Official_Presidential_portrait_of_Thomas_Jefferson_%28by_Rembrandt_Peale%2C_1800%29.jpg']
+  },
+  {
+    id: 'pres-james-madison',
+    parentId: 'us-presidents',
+    name: '04. James Madison',
+    description: 'Rebuilt the White House following its burning in the War of 1812, incorporating geomantic patterns and occult symbols in the architectural layout of the capital.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-james-madison',
+    relatedIds: ['government-conspiracies'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/James_Madison.jpg/1280px-James_Madison.jpg']
+  },
+  {
+    id: 'pres-james-monroe',
+    parentId: 'us-presidents',
+    name: '05. James Monroe',
+    description: 'Formulated the Monroe Doctrine, viewed by some alternative historians as the blueprint for US hegemony and globalist expansion under secret guidelines.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-james-monroe',
+    relatedIds: ['government-conspiracies'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/James_Monroe_White_House_portrait_1819_%28cropped%29%282%29.jpg/1280px-James_Monroe_White_House_portrait_1819_%28cropped%29%282%29.jpg']
+  },
+  {
+    id: 'pres-john-quincy-adams',
+    parentId: 'us-presidents',
+    name: '06. John Quincy Adams',
+    description: 'Authorized a federal expedition to the South Pole to search for the entrance to the Hollow Earth, supporting John Cleves Symmes Jr.\'s theories.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-john-quincy-adams',
+    relatedIds: ['government-conspiracies', 'underworld-entrances'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/JQA_Photo_Crop_%28cropped%29.jpg/1280px-JQA_Photo_Crop_%28cropped%29.jpg']
+  },
+  {
+    id: 'pres-andrew-jackson',
+    parentId: 'us-presidents',
+    name: '07. Andrew Jackson',
+    description: 'Fought the central banking monopolies by vetoing the Second Bank of the United States. Survived an assassination attempt by a shooter claiming to be a British king.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-andrew-jackson',
+    relatedIds: ['government-conspiracies'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Andrew_jackson_head_%28cropped%29.jpg/1280px-Andrew_jackson_head_%28cropped%29.jpg']
+  },
+  {
+    id: 'pres-martin-van-buren',
+    parentId: 'us-presidents',
+    name: '08. Martin Van Buren',
+    description: 'Navigated the political fallout of the Morgan Affair, which catalyzed the rise of the Anti-Masonic Party in American politics.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-martin-van-buren',
+    relatedIds: ['government-conspiracies', 'famous-freemasons'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Martin_Van_Buren_by_Mathew_Brady_c1855-58-%284%29.jpg/960px-Martin_Van_Buren_by_Mathew_Brady_c1855-58-%284%29.jpg']
+  },
+  {
+    id: 'pres-william-henry-harrison',
+    parentId: 'us-presidents',
+    name: '09. William Henry Harrison',
+    description: 'Died in office just 31 days into his term, initiating the \'Curse of Tippecanoe\' (or Tecumseh\'s Curse) affecting presidents elected in years ending in zero.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-william-henry-harrison',
+    relatedIds: ['government-conspiracies'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/William_Henry_Harrison_crop.jpg/1280px-William_Henry_Harrison_crop.jpg']
+  },
+  {
+    id: 'pres-john-tyler',
+    parentId: 'us-presidents',
+    name: '10. John Tyler',
+    description: 'Annexed Texas through a joint resolution, aligning his administration with Southern expansionist agendas and secret military pacts.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-john-tyler',
+    relatedIds: ['government-conspiracies'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Tyler%2C_John%2C_by_Healy_%281842%2C_NPG_2019_13%29_%28cropped%29.jpg/960px-Tyler%2C_John%2C_by_Healy_%281842%2C_NPG_2019_13%29_%28cropped%29.jpg']
+  },
+  {
+    id: 'pres-james-k-polk',
+    parentId: 'us-presidents',
+    name: '11. James K. Polk',
+    description: 'Orchestrated the Mexican-American War by sending troops into disputed territory, a move denounced by contemporaries as a manufactured pretext for expansion.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-james-k-polk',
+    relatedIds: ['government-conspiracies'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Polk_crop.jpg/1280px-Polk_crop.jpg']
+  },
+  {
+    id: 'pres-zachary-taylor',
+    parentId: 'us-presidents',
+    name: '12. Zachary Taylor',
+    description: 'Died suddenly in office from suspected poisoning, prompting his exhumation in 1991 to test for arsenic, though results were deemed inconclusive.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-zachary-taylor',
+    relatedIds: ['government-conspiracies'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Zachary_Taylor_restored_and_cropped_%283.5x4.5_cropped%29_%282%29.jpg/500px-Zachary_Taylor_restored_and_cropped_%283.5x4.5_cropped%29_%282%29.jpg']
+  },
+  {
+    id: 'pres-millard-fillmore',
+    parentId: 'us-presidents',
+    name: '13. Millard Fillmore',
+    description: 'Maintained close ties to the nativist Know-Nothing Party, a semi-secret society whose members swore oaths to keep foreign influence out of government.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-millard-fillmore',
+    relatedIds: ['government-conspiracies'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Millard_Fillmore_Better_Crop_%28cropped%29.jpg/1280px-Millard_Fillmore_Better_Crop_%28cropped%29.jpg']
+  },
+  {
+    id: 'pres-franklin-pierce',
+    parentId: 'us-presidents',
+    name: '14. Franklin Pierce',
+    description: 'Backed the expansionist Young America movement and the Gadsden Purchase, rumored to be part of a secret plan to establish a slaveholding empire.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-franklin-pierce',
+    relatedIds: ['government-conspiracies'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Mathew_Brady_-_Franklin_Pierce_-_alternate_crop_%28cropped%29%282%29.jpg/1280px-Mathew_Brady_-_Franklin_Pierce_-_alternate_crop_%28cropped%29%282%29.jpg']
+  },
+  {
+    id: 'pres-james-buchanan',
+    parentId: 'us-presidents',
+    name: '15. James Buchanan',
+    description: 'Allowed Southern cabinet officers to transfer federal weapons to Southern arsenals prior to the Civil War, leading to accusations of cabinet-level treason.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-james-buchanan',
+    relatedIds: ['government-conspiracies'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/James_Buchanan.jpg/500px-James_Buchanan.jpg']
+  },
+  {
+    id: 'pres-abraham-lincoln',
+    parentId: 'us-presidents',
+    name: '16. Abraham Lincoln',
+    description: 'Assassinated by John Wilkes Booth under conspiracies linking the plot to the Confederate Secret Service, Knights of the Golden Circle, and international bankers.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-abraham-lincoln',
+    relatedIds: ['government-conspiracies'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Abraham_Lincoln_1863_Portrait_%283x4_cropped%29.jpg/1280px-Abraham_Lincoln_1863_Portrait_%283x4_cropped%29.jpg']
+  },
+  {
+    id: 'pres-andrew-johnson',
+    parentId: 'us-presidents',
+    name: '17. Andrew Johnson',
+    description: 'Accused of having foreknowledge of or involvement in Lincoln\'s assassination, with rumors linking him to Knights of the Golden Circle conspirators. Impeached in 1868 for violating the Tenure of Office Act following a power struggle with Radical Republicans over Reconstruction.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-andrew-johnson',
+    relatedIds: ['government-conspiracies'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Andrew_Johnson_photo_portrait_head_and_shoulders%2C_c1870-1880-Edit1.jpg/1280px-Andrew_Johnson_photo_portrait_head_and_shoulders%2C_c1870-1880-Edit1.jpg']
+  },
+  {
+    id: 'pres-ulysses-s-grant',
+    parentId: 'us-presidents',
+    name: '18. Ulysses S. Grant',
+    description: 'Faced the 1869 Gold Ring conspiracy, where Wall Street speculators Jay Gould and James Fisk attempted to corner the gold market using cabinet connections.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-ulysses-s-grant',
+    relatedIds: ['government-conspiracies'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Ulysses_S._Grant_1870-1880_%28cropped%29.jpg/1280px-Ulysses_S._Grant_1870-1880_%28cropped%29.jpg']
+  },
+  {
+    id: 'pres-rutherford-b-hayes',
+    parentId: 'us-presidents',
+    name: '19. Rutherford B. Hayes',
+    description: 'Awarded the presidency through the highly contested Compromise of 1877, resolved in a series of backroom political deals.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-rutherford-b-hayes',
+    relatedIds: ['government-conspiracies'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/President_Rutherford_Hayes_1870_-_1880_Restored.jpg/1280px-President_Rutherford_Hayes_1870_-_1880_Restored.jpg']
+  },
+  {
+    id: 'pres-james-a-garfield',
+    parentId: 'us-presidents',
+    name: '20. James A. Garfield',
+    description: 'Assassinated by Charles Guiteau, who claimed divine instruction. His death was the second under the Curse of Tippecanoe.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-james-a-garfield',
+    relatedIds: ['government-conspiracies'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/James_Abram_Garfield%2C_photo_portrait_seated.jpg/1280px-James_Abram_Garfield%2C_photo_portrait_seated.jpg']
+  },
+  {
+    id: 'pres-chester-a-arthur',
+    parentId: 'us-presidents',
+    name: '21. Chester A. Arthur',
+    description: 'Faced persistent rumors during his campaign and presidency that he was actually born in Canada, making him ineligible for office.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-chester-a-arthur',
+    relatedIds: ['government-conspiracies'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Chester_A._Arthur_by_Abraham_Bogardus_%28cropped%29_%282%29.jpg/1280px-Chester_A._Arthur_by_Abraham_Bogardus_%28cropped%29_%282%29.jpg']
+  },
+  {
+    id: 'pres-grover-cleveland',
+    parentId: 'us-presidents',
+    name: '22. Grover Cleveland',
+    description: 'Underwent a secret surgical procedure on a yacht to remove a cancerous jaw tumor, concealed from the public to prevent a Wall Street panic.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-grover-cleveland',
+    relatedIds: ['government-conspiracies'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/StephenGroverCleveland.jpg/500px-StephenGroverCleveland.jpg']
+  },
+  {
+    id: 'pres-benjamin-harrison',
+    parentId: 'us-presidents',
+    name: '23. Benjamin Harrison',
+    description: 'Presided over the admission of six Western states; alternative histories tie his term to the occult geometry of the Washington Meridian.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-benjamin-harrison',
+    relatedIds: ['government-conspiracies'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Pach_Brothers_-_Benjamin_Harrison_%28cropped%29_%28cropped%29.jpg/1280px-Pach_Brothers_-_Benjamin_Harrison_%28cropped%29_%28cropped%29.jpg']
+  },
+  {
+    id: 'pres-grover-cleveland-2',
+    parentId: 'us-presidents',
+    name: '24. Grover Cleveland',
+    description: 'Serving non-consecutive terms, Cleveland maintained tight monetary policies and faced populism, with esoteric rumors citing secret alliances with Eastern bankers.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-grover-cleveland-2',
+    relatedIds: ['government-conspiracies'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/StephenGroverCleveland.jpg/500px-StephenGroverCleveland.jpg']
+  },
+  {
+    id: 'pres-william-mckinley',
+    parentId: 'us-presidents',
+    name: '25. William McKinley',
+    description: 'Assassinated by anarchist Leon Czolgosz. Conspiracy theories suggest his assassination was encouraged by deep-state elements to install Theodore Roosevelt.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-william-mckinley',
+    relatedIds: ['government-conspiracies'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/McKinley_%28cropped%29.jpg/1280px-McKinley_%28cropped%29.jpg']
+  },
+  {
+    id: 'pres-theodore-roosevelt',
+    parentId: 'us-presidents',
+    name: '26. Theodore Roosevelt',
+    description: 'Member of the Bohemian Club, oversaw the expansion of the Secret Service, and carved Masonic alignments into the construction of Mount Rushmore.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-theodore-roosevelt',
+    relatedIds: ['government-conspiracies', 'alchemy-occult'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Theodore_Roosevelt_by_the_Pach_Bros_%284x5_cropped%29_%282%29.jpg/1280px-Theodore_Roosevelt_by_the_Pach_Bros_%284x5_cropped%29_%282%29.jpg']
+  },
+  {
+    id: 'pres-william-howard-taft',
+    parentId: 'us-presidents',
+    name: '27. William Howard Taft',
+    description: 'Initiated into Yale\'s secret society Skull and Bones in 1878, maintaining high-level connections to the fraternity throughout his career.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-william-howard-taft',
+    relatedIds: ['government-conspiracies'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/William_Howard_Taft_by_Pach_Brothers_%283x4_ropped%29_%28cropped%29.jpg/1280px-William_Howard_Taft_by_Pach_Brothers_%283x4_ropped%29_%28cropped%29.jpg']
+  },
+  {
+    id: 'pres-woodrow-wilson',
+    parentId: 'us-presidents',
+    name: '28. Woodrow Wilson',
+    description: 'Signed the Federal Reserve Act of 1913 after secret meetings at Jekyll Island, and proposed the League of Nations, early steps toward a New World Order.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-woodrow-wilson',
+    relatedIds: ['government-conspiracies'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/President_Woodrow_Wilson_Harris_%26_Ewing_%283x4_cropped_b%29.jpg/1280px-President_Woodrow_Wilson_Harris_%26_Ewing_%283x4_cropped_b%29.jpg']
+  },
+  {
+    id: 'pres-warren-g-harding',
+    parentId: 'us-presidents',
+    name: '29. Warren G. Harding',
+    description: 'Died mysteriously in office; rumors alleged he was poisoned by his wife or political rivals to cover up the Teapot Dome scandals.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-warren-g-harding',
+    relatedIds: ['government-conspiracies'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Warren_G._Harding_1920s_portrait_%283x4_cropped%29_%28cropped%29.jpg/1280px-Warren_G._Harding_1920s_portrait_%283x4_cropped%29_%28cropped%29.jpg']
+  },
+  {
+    id: 'pres-calvin-coolidge',
+    parentId: 'us-presidents',
+    name: '30. Calvin Coolidge',
+    description: 'Dedicated Mount Rushmore in 1927, an engineering project that alternative historians link to geomantic alignments and ancient stone monuments.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-calvin-coolidge',
+    relatedIds: ['government-conspiracies'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/President_Calvin_Coolidge%2C_1924_portrait_photograph_%283x4_cropped_2%29.jpeg/1280px-President_Calvin_Coolidge%2C_1924_portrait_photograph_%283x4_cropped_2%29.jpeg']
+  },
+  {
+    id: 'pres-herbert-hoover',
+    parentId: 'us-presidents',
+    name: '31. Herbert Hoover',
+    description: 'Member of the Bohemian Club who attended annual encampments at Bohemian Grove, where elites perform rituals like the Cremation of Care.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-herbert-hoover',
+    relatedIds: ['government-conspiracies'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/President_Hoover_portrait.jpg/1280px-President_Hoover_portrait.jpg']
+  },
+  {
+    id: 'pres-franklin-d-roosevelt',
+    parentId: 'us-presidents',
+    name: '32. Franklin D. Roosevelt',
+    description: 'Executive Order 6102 criminalizing gold ownership. Promoted the Great Seal (All-Seeing Eye) on the dollar bill and agreed to secret spheres of influence at Yalta.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-franklin-d-roosevelt',
+    relatedIds: ['government-conspiracies', 'famous-freemasons'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/FDR-1944-Campaign-Portrait_%283x4_retouched%2C_cropped%29.jpg/1280px-FDR-1944-Campaign-Portrait_%283x4_retouched%2C_cropped%29.jpg']
+  },
+  {
+    id: 'pres-harry-s-truman',
+    parentId: 'us-presidents',
+    name: '33. Harry S. Truman',
+    description: 'Formed the CIA and NSA under the National Security Act of 1947, and allegedly created the Majestic-12 committee to cover up the Roswell UFO crash.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-harry-s-truman',
+    relatedIds: ['government-conspiracies', 'famous-freemasons', 'majestic-12'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/TRUMAN_58-766-06_%28cropped%29.jpg/500px-TRUMAN_58-766-06_%28cropped%29.jpg']
+  },
+  {
+    id: 'pres-dwight-d-eisenhower',
+    parentId: 'us-presidents',
+    name: '34. Dwight D. Eisenhower',
+    description: 'Rumored to have had a secret meeting with extraterrestrial emissaries at Holloman Air Force Base in 1954, and warned of the rise of the Military-Industrial Complex.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-dwight-d-eisenhower',
+    relatedIds: ['government-conspiracies'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Dwight_D._Eisenhower%2C_official_photo_portrait%2C_May_29%2C_1959_%28cropped%29%283%29.jpg/1280px-Dwight_D._Eisenhower%2C_official_photo_portrait%2C_May_29%2C_1959_%28cropped%29%283%29.jpg']
+  },
+  {
+    id: 'pres-john-f-kennedy',
+    parentId: 'us-presidents',
+    name: '35. John F. Kennedy',
+    description: 'Assassinated in Dallas under conspiracies involving the CIA, Federal Reserve (Executive Order 11110), and military contractors after he rejected Operation Northwoods.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-john-f-kennedy',
+    relatedIds: ['government-conspiracies'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/John_F._Kennedy%2C_White_House_color_photo_portrait.jpg/1280px-John_F._Kennedy%2C_White_House_color_photo_portrait.jpg']
+  },
+  {
+    id: 'pres-lyndon-b-johnson',
+    parentId: 'us-presidents',
+    name: '36. Lyndon B. Johnson',
+    description: 'Accused of orchestrating the JFK assassination. Utilized the fabricated Gulf of Tonkin incident in 1964 to escalate US involvement in the Vietnam War.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-lyndon-b-johnson',
+    relatedIds: ['government-conspiracies'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Lyndon_B._Johnson%2C_photo_portrait%2C_color_%283x4_cropped%29%282%29.jpg/960px-Lyndon_B._Johnson%2C_photo_portrait%2C_color_%283x4_cropped%29%282%29.jpg']
+  },
+  {
+    id: 'pres-richard-nixon',
+    parentId: 'us-presidents',
+    name: '37. Richard Nixon',
+    description: 'Ended the gold standard in the 1971 Nixon Shock. Resigned from office in 1974 facing certain impeachment over the Watergate cover-up, which alternative historians view as a deep-state soft coup.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-richard-nixon',
+    relatedIds: ['government-conspiracies'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Richard_Nixon_presidential_portrait_%282%29.jpg/1280px-Richard_Nixon_presidential_portrait_%282%29.jpg']
+  },
+  {
+    id: 'pres-gerald-ford',
+    parentId: 'us-presidents',
+    name: '38. Gerald Ford',
+    description: 'Member of the Warren Commission who aggressively defended the single-bullet theory. Survived two assassination attempts by cult followers.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-gerald-ford',
+    relatedIds: ['government-conspiracies'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Gerald_Ford_presidential_portrait_%28cropped%29.jpg/1280px-Gerald_Ford_presidential_portrait_%28cropped%29.jpg']
+  },
+  {
+    id: 'pres-jimmy-carter',
+    parentId: 'us-presidents',
+    name: '39. Jimmy Carter',
+    description: 'Co-founder of the Trilateral Commission, who officially reported a UFO sighting and was allegedly denied access to Area 51 briefings by the CIA.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-jimmy-carter',
+    relatedIds: ['government-conspiracies'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Jimmy_Carter_Official_Portrait2_%283x4_cropped%29.jpg/1280px-Jimmy_Carter_Official_Portrait2_%283x4_cropped%29.jpg']
+  },
+  {
+    id: 'pres-ronald-reagan',
+    parentId: 'us-presidents',
+    name: '40. Ronald Reagan',
+    description: 'Linked to the October Surprise conspiracy. Survived an assassination attempt by John Hinckley Jr., whose family had close ties to George H.W. Bush.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-ronald-reagan',
+    relatedIds: ['government-conspiracies'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Official_Portrait_of_President_Reagan_1981.jpg/1280px-Official_Portrait_of_President_Reagan_1981.jpg']
+  },
+  {
+    id: 'pres-george-h-w-bush',
+    parentId: 'us-presidents',
+    name: '41. George H. W. Bush',
+    description: 'Skull and Bones member, former CIA Director, and key architect of the post-Cold War \'New World Order,\' which he famously declared in public speeches.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-george-h-w-bush',
+    relatedIds: ['government-conspiracies'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/George_H._W._Bush_presidential_portrait_%28cropped%29_%282%29.jpg/1280px-George_H._W._Bush_presidential_portrait_%28cropped%29_%282%29.jpg']
+  },
+  {
+    id: 'pres-bill-clinton',
+    parentId: 'us-presidents',
+    name: '42. Bill Clinton',
+    description: 'Associated with the Mena, Arkansas drug-smuggling investigations, Whitewater, the \'Clinton Body Count\' list, and flights on Jeffrey Epstein\'s private jet. Impeached in 1998 on charges of perjury and obstruction of justice stemming from the Lewinsky scandal investigations.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-bill-clinton',
+    relatedIds: ['government-conspiracies'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Bill_Clinton_%28cropped_4%29.jpg/1280px-Bill_Clinton_%28cropped_4%29.jpg']
+  },
+  {
+    id: 'pres-george-w-bush',
+    parentId: 'us-presidents',
+    name: '43. George W. Bush',
+    description: 'Skull and Bones member whose administration presided over the 9/11 attacks, the Patriot Act, and the invasion of Iraq based on false intelligence.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-george-w-bush',
+    relatedIds: ['government-conspiracies'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/George-W-Bush_%28cropped_2%29.jpeg/1280px-George-W-Bush_%28cropped_2%29.jpeg']
+  },
+  {
+    id: 'pres-barack-obama',
+    parentId: 'us-presidents',
+    name: '44. Barack Obama',
+    description: 'Target of the \'birther\' birth certificate conspiracy. Greatly expanded drone warfare and surveillance state programs under the guidance of intelligence agencies.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-barack-obama',
+    relatedIds: ['government-conspiracies'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/President_Barack_Obama.jpg/1280px-President_Barack_Obama.jpg']
+  },
+  {
+    id: 'pres-donald-trump',
+    parentId: 'us-presidents',
+    name: '45. Donald Trump',
+    description: 'Central figure of the QAnon movement, which claimed he was fighting a deep-state cabal. Associated socially with financier Jeffrey Epstein in New York and Florida prior to the latter\'s criminal charges. Impeached twice: in 2019 for abuse of power and obstruction of Congress, and in 2021 for incitement of insurrection. Delayed the release of the final JFK assassination files.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-donald-trump',
+    relatedIds: ['government-conspiracies'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Official_Presidential_Portrait_of_President_Donald_J._Trump_%282025%29_%28cropped%29%282%29.jpg/1280px-Official_Presidential_Portrait_of_President_Donald_J._Trump_%282025%29_%28cropped%29%282%29.jpg']
+  },
+  {
+    id: 'pres-joe-biden',
+    parentId: 'us-presidents',
+    name: '46. Joe Biden',
+    description: 'Associated with corruption allegations in Ukraine, globalist agendas linked to the World Economic Forum\'s Great Reset, and rumors of cognitive decline cover-ups.',
+    layer: 'Government Conspiracies',
+    timelineId: 'pres-joe-biden',
+    relatedIds: ['government-conspiracies'],
+    sources: ['White House Historical Association', 'U.S. National Archives (NARA)', 'Alternative History Research Files'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/1280px-Joe_Biden_presidential_portrait.jpg']
+  },
+];
+
+const chunk_37_new_items: any[] = [
+  {
+    id: 'enochian-lore',
+    parentId: 'alchemy-occult',
+    name: 'Enochian Lore',
+    description: 'The system of angelic magic, language, and celestial cosmology received by John Dee and Edward Kelley in the late 16th century.',
+    layer: 'The Occult',
+    relatedIds: ['enochian-language', 'john-dee', 'edward-kelley', 'medimi']
+  },
+  {
+    id: 'enochian-language',
+    parentId: 'enochian-lore',
+    name: 'Enochian Language',
+    description: 'An occult or angelic language recorded in the private journals of John Dee and Edward Kelley in late 16th-century England. They claimed the language was revealed to them directly by angels and was the original language spoken by Adam and Enoch.',
+    layer: 'The Occult',
+    relatedIds: ['enochian-lore', 'john-dee', 'edward-kelley', 'medimi'],
+    sources: ['John Dee\'s Spiritual Diaries', 'The Enochian Evocation of Dr. John Dee (Geoffrey James)'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/John_Dee_Ashmolean.jpg/1280px-John_Dee_Ashmolean.jpg'],
+    mapFeatureId: 'enochian-language'
+  },
+  {
+    id: 'medimi',
+    parentId: 'enochian-lore',
+    name: 'Medimi (John Dee\'s Angel)',
+    description: 'An angelic entity who appeared to John Dee and Edward Kelley during their scrying sessions. Medimi appeared as a young girl, delivering Enochian letters, spiritual messages, and instructions for alchemical works.',
+    layer: 'The Occult',
+    relatedIds: ['enochian-lore', 'john-dee', 'edward-kelley', 'enochian-language'],
+    sources: ['Mysteriorum Liber Primus (John Dee)', 'A True & Faithful Relation (Meric Casaubon)'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/John_Dee_Ashmolean.jpg/1280px-John_Dee_Ashmolean.jpg'],
+    mapFeatureId: 'medimi'
+  },
+  {
+    id: 'edward-kelley',
+    parentId: 'historical-alchemists',
+    secondaryParentIds: ['enochian-lore'],
+    name: 'Edward Kelley',
+    description: 'An English Renaissance medium, alchemist, and scryer. He worked closely with John Dee, acting as the primary medium to channel the Enochian language and spiritual communications from angelic entities, and later claimed to have achieved the transmutation of base metals into gold in Prague.',
+    layer: 'The Occult',
+    relatedIds: ['historical-alchemists', 'john-dee', 'enochian-language', 'enochian-lore'],
+    sources: ['The Alchemical Writings of Edward Kelly', 'Dr. John Dee: Elizabethan Scholar and Occultist (Charlotte Fell-Smith)'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Edward_Kelly_prophet_or_seer_to_Dr_Dee_02355.jpg/1280px-Edward_Kelly_prophet_or_seer_to_Dr_Dee_02355.jpg'],
+    mapFeatureId: 'edward-kelley'
+  },
+  {
+    id: 'hellfire-club',
+    parentId: 'magical-orders',
+    name: 'The Hellfire Club',
+    description: 'An exclusive association founded in 1746 by Sir Francis Dashwood, comprising prominent British politicians and societal elites. The club met at West Wycombe Caves and Medmenham Abbey, participating in parodies of religious rituals, pagan devotion, and hedonistic feasts, sparking widespread rumors of Satanism and political collusion.',
+    layer: 'The Occult',
+    relatedIds: ['magical-orders', 'freemasonry'],
+    sources: ['The Hellfire Clubs (Geoffrey Ashe)', 'The Life and Times of Sir Francis Dashwood (John Kemp)'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/The_Hellfire_Club%2C_Dublin.jpg/1280px-The_Hellfire_Club%2C_Dublin.jpg'],
+    mapFeatureId: 'hellfire-club'
+  },
+  {
+    id: 'solomon',
+    parentId: 'biblical-figures',
+    name: 'Solomon',
+    description: 'King of Israel and builder of the First Temple in Jerusalem. Renowned for his wisdom, wealth, and power, he is also prominent in esoteric traditions (such as the Testament of Solomon and Kabbalah) as a master exorcist who commanded demons to build the temple using a magical signet ring.',
+    layer: 'Biblical Figures',
+    relatedIds: ['lesser-key-solomon', 'biblical-figures', 'judaism'],
+    sources: ['Hebrew Bible (1 Kings)', 'Testament of Solomon', 'Jewish Antiquities (Josephus)'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Simeon_Solomon%2C_King_Solomon%2C_1872_or_1874%2C_NGA_76152_%28cropped%29.jpg/1280px-Simeon_Solomon%2C_King_Solomon%2C_1872_or_1874%2C_NGA_76152_%28cropped%29.jpg'],
+    mapFeatureId: 'solomon'
+  },
+  {
+    id: 'lesser-key-solomon',
+    parentId: 'esoteric-traditions',
+    name: 'The Lesser Key of Solomon',
+    description: 'An anonymous 17th-century grimoire of ceremonial magic, compiling demonological lore and magical pentacles. It describes the seventy-two demons allegedly bound and commanded by King Solomon, establishing a cornerstone of modern Goetic magic.',
+    layer: 'The Occult',
+    relatedIds: ['solomon', 'esoteric-traditions'],
+    sources: ['Lemegeton Clavicula Salomonis', 'The Goetia of the Lesser Key of Solomon (S. L. MacGregor Mathers)'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Goetia_seal_of_solomon.svg/1280px-Goetia_seal_of_solomon.svg.png'],
+    mapFeatureId: 'lesser-key-solomon'
+  },
+  {
+    id: 'black-sun',
+    parentId: 'magical-orders',
+    name: 'Black Sun',
+    description: 'An esoteric symbol consisting of twelve radial sig runes, famously depicted as a green or black mosaic on the floor of Wewelsburg Castle. In occult conspiracy lore, it is associated with Nazi mysticism, Vril energy, and secret polar societies.',
+    layer: 'The Occult',
+    relatedIds: ['magical-orders'],
+    sources: ['Black Sun: Aryan Cults, Esoteric Nazism, and the Politics of Identity (Nicholas Goodrick-Clarke)'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/BlackSun.svg/500px-BlackSun.svg.png'],
+    mapFeatureId: 'black-sun'
+  },
+  {
+    id: 'princess-diana',
+    parentId: 'government-conspiracies',
+    name: 'Princess Diana',
+    description: 'Princess of Wales whose tragic death in a Paris car crash in 1997 sparked a multitude of conspiracy theories. Theories range from allegations of MI6 involvement and royal orchestration to theories involving ritual symbolism and paparazzi setups.',
+    layer: 'Government Conspiracies',
+    relatedIds: ['government-conspiracies'],
+    sources: ['The Diana Inquest Report (Lord Stevens)', 'Conspiracy literature'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Diana%2C_Princess_of_Wales_1997_%282%29.jpg/500px-Diana%2C_Princess_of_Wales_1997_%282%29.jpg'],
+    mapFeatureId: 'princess-diana'
+  },
+  {
+    id: 'aryan-race',
+    parentId: 'people-groups',
+    name: 'Aryan Race',
+    description: 'A term historically referring to Indo-Iranian language speakers in antiquity, which was co-opted by 19th and 20th-century racial theorists and occult groups (such as the Thule Society) to describe a hypothetical, superior primordial race linked to lost continents like Hyperborea or Atlantis.',
+    layer: 'Ancient People Groups',
+    relatedIds: ['people-groups', 'esoteric-traditions'],
+    sources: ['Lectures on the Science of Language (Max Müller)', 'The Secret Doctrine (H. P. Blavatsky)'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Max_Muller.jpg/1280px-Max_Muller.jpg'],
+    mapFeatureId: 'aryan-race'
+  },
+  {
+    id: 'ebstorf-map',
+    parentId: 'esoteric-traditions',
+    name: 'Ebstorf Map',
+    description: 'A monumental 13th-century medieval Mappa Mundi discovered in Ebstorf Abbey. Map shows the world as the body of Christ, with Jerusalem at the center, containing numerous depictions of mythological beasts, monsters, and biblical events.',
+    layer: 'Ancient Texts',
+    relatedIds: ['esoteric-traditions'],
+    sources: ['Mappa Mundi Records', 'Ebstorf Monastery Archives'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Ebstorfer_Weltkarte_2.jpg/500px-Ebstorfer_Weltkarte_2.jpg'],
+    mapFeatureId: 'ebstorf-map'
+  },
+  {
+    id: 'wyvern',
+    parentId: 'myths-legends-root',
+    name: 'Wyvern',
+    description: 'A legendary winged dragon-like creature in European folklore and heraldry, depicted with two legs, two wings, and a barbed tail. Associated with strength, war, and protection in medieval Welsh and British heraldic traditions.',
+    layer: 'Myths / Legends',
+    relatedIds: ['myths-legends-root'],
+    sources: ['Medieval Bestiaries', 'British Heraldry Manuals'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Y_Draig_Aur_Owain_Glynd%C5%B5r.jpg/250px-Y_Draig_Aur_Owain_Glynd%C5%B5r.jpg'],
+    mapFeatureId: 'wyvern'
+  },
+  {
+    id: 'rachels-tomb',
+    parentId: 'biblical-figures',
+    name: 'Rachel\'s Tomb',
+    description: 'The traditional burial site of the biblical matriarch Rachel, wife of Jacob. Located near Bethlehem, it has been a sacred site of pilgrimage for Jews, Christians, and Muslims for millennia, symbolizing maternal protection and redemption.',
+    layer: 'Biblical Discoveries',
+    relatedIds: ['judaism', 'christianity'],
+    sources: ['Hebrew Bible (Genesis 35)', 'Pilgrimage Itineraries'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/%D7%91%D7%99%D7%AA_%D7%9C%D7%97%D7%9D_-_%D7%A7%D7%91%D7%A8_%D7%A8%D7%97%D7%9C-JNF016063.jpeg/1280px-%D7%91%D7%99%D7%AA_%D7%9C%D7%97%D7%9D_-_%D7%A7%D7%91%D7%A8_%D7%A8%D7%97%D7%9C-JNF016063.jpeg'],
+    mapFeatureId: 'rachels-tomb'
+  },
+  {
+    id: 'jesuits',
+    parentId: 'magical-orders',
+    name: 'Jesuits',
+    description: 'The Society of Jesus, a religious order of the Catholic Church founded in 1540 by Ignatius of Loyola. In political and occult conspiracy theories, the Jesuits are frequently cast as an omnipotent secret network operating behind major historical events and controlling global education and science.',
+    layer: 'The Occult',
+    relatedIds: ['magical-orders', 'christianity'],
+    sources: ['The Secret History of the Jesuits (Edmond Paris)', 'Jesuit Constitution and Historical Chronicles'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Ihs-logo.svg/960px-Ihs-logo.svg.png'],
+    mapFeatureId: 'jesuits'
+  },
+  {
+    id: 'nazarites',
+    parentId: 'biblical-figures',
+    name: 'Nazarites',
+    description: 'Individuals in ancient Israel who took a sacred vow of consecration to God, undertaking to abstain from alcohol, avoid cutting their hair, and remain ritually pure. Famous historical Nazarites include Samson, Samuel, and John the Baptist.',
+    layer: 'Biblical Figures',
+    relatedIds: ['judaism', 'christianity', 'biblical-figures'],
+    sources: ['Bible (Numbers 6)', 'Talmud (Tractate Nazir)'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Lucas_Cranach_d.%C3%84._-_Simson_bezwingt_den_L%C3%B6wen.jpg/1280px-Lucas_Cranach_d.%C3%84._-_Simson_bezwingt_den_L%C3%B6wen.jpg'],
+    mapFeatureId: 'nazarites'
+  },
+  {
+    id: 'stylites',
+    parentId: 'christianity',
+    name: 'Stylites',
+    description: 'Christian ascetics in the early Byzantine Empire who stood on platforms atop high pillars (stylos) to pray and fast, living there for years or decades in extreme self-denial to draw closer to the divine.',
+    layer: 'Religion',
+    relatedIds: ['christianity'],
+    sources: ['The Lives of the Pillar Saints', 'Byzantine Church Histories'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Simeon_Stylites_the_Elder_and_Simeon_Stylites_the_Younger%2C_1699.jpg/960px-Simeon_Stylites_the_Elder_and_Simeon_Stylites_the_Younger%2C_1699.jpg'],
+    mapFeatureId: 'stylites'
+  },
+  {
+    id: 'jack-sarfatti',
+    parentId: 'ufology-researchers',
+    name: 'Jack Sarfatti',
+    description: 'An American theoretical physicist known for his controversial ideas on quantum consciousness, back-reaction, and faster-than-light travel. He has worked on the physics of UFO propulsion and claims to have received mysterious phone calls from a computer aboard a spacecraft in his youth.',
+    layer: 'UFOs - Sightings',
+    relatedIds: ['ufology-researchers', 'ufos'],
+    sources: ['Superminds (John Taylor)', 'Destiny Matrix (Jack Sarfatti)'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Jack_Sarfatti_%28cropped%29_2.jpg/1280px-Jack_Sarfatti_%28cropped%29_2.jpg'],
+    mapFeatureId: 'jack-sarfatti'
+  },
+  {
+    id: 'cults',
+    parentId: 'magical-orders',
+    name: 'Cults',
+    description: 'Highly cohesive spiritual or philosophical groups defined by intense devotion to a charismatic leader and isolation from mainstream society. Historically scrutinized for psychological coercion, secret doctrines, and catastrophic terminations.',
+    layer: 'The Occult',
+    relatedIds: ['magical-orders'],
+    sources: ['Cults in Our Midst (Margaret Singer)', 'Sociology of Secret Religions'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Peoples_Temple_logo.svg/1280px-Peoples_Temple_logo.svg.png'],
+    mapFeatureId: 'cults'
+  },
+  {
+    id: 'mennonite',
+    parentId: 'christianity',
+    name: 'Mennonites',
+    description: 'A Christian denomination originating during the 16th-century Protestant Reformation, characterized by Anabaptist theology, strict pacifism, simple living, and community-centered lifestyle practices.',
+    layer: 'Religion',
+    relatedIds: ['christianity'],
+    sources: ['The Mennonite Encyclopedia', 'Anabaptist History Records'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Mennonite_World_Conference_logo.svg/500px-Mennonite_World_Conference_logo.svg.png'],
+    mapFeatureId: 'mennonite'
+  },
+  {
+    id: 'phil-schneider',
+    parentId: 'ufo-whistleblowers',
+    name: 'Phil Schneider',
+    description: 'An explosive whistleblower and structural engineer who claimed to have participated in the construction of deep underground military bases (D.U.M.B.s). He famously claimed to have survived a violent underground shootout with gray extraterrestrials at Dulce Base in 1979 before dying under mysterious circumstances in 1996.',
+    layer: 'UFOs - Sightings',
+    relatedIds: ['ufo-whistleblowers', 'ufos', 'government-conspiracies'],
+    sources: ['Dulce Base Underground Lectures (Schneider)', 'Dulce Base Conspiracy Chronicles'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/PHIL_SCHNEIDER.jpg/500px-PHIL_SCHNEIDER.jpg'],
+    mapFeatureId: 'phil-schneider'
+  },
+  {
+    id: 'chronovisor',
+    parentId: 'supernatural-anomalies',
+    name: 'Chronovisor',
+    description: 'A legendary time-viewer device allegedly constructed in the 1950s by an international team of scientists, including Father Pellegrino Ernetti. The device was rumored to detect electromagnetic residue left by past events, allowing users to view historical events like the crucifixion of Christ.',
+    layer: 'Portals / Stargates',
+    relatedIds: ['supernatural-anomalies'],
+    sources: ['Le Nouveau Mystère du Vatican (Father François Brune)', 'Father Ernetti\'s Chronovisor Report'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Cripta_Santuario_Amore_Misericordioso_Collevalenza.jpg/1280px-Cripta_Santuario_Amore_Misericordioso_Collevalenza.jpg'],
+    mapFeatureId: 'chronovisor'
+  },
+  {
+    id: 'aeon-of-horus',
+    parentId: 'esoteric-traditions',
+    name: 'The Aeon of Horus',
+    description: 'A central concept in Aleister Crowley\'s spiritual system, Thelema. The Aeon of Horus is defined as the current era of human spiritual development, characterized by self-realization, individual liberty ("Do what thou wilt"), and the divine child archetype, superseding the prior Aeons of Isis and Osiris.',
+    layer: 'The Occult',
+    relatedIds: ['esoteric-traditions', 'aleister-crowley'],
+    sources: ['The Book of the Law (Aleister Crowley)', 'Thelema Occult Texts'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Aleister_Crowley%2C_Golden_Dawn.jpg/500px-Aleister_Crowley%2C_Golden_Dawn.jpg'],
+    mapFeatureId: 'aeon-of-horus'
+  },
+  {
+    id: 'zouwu',
+    parentId: 'chinese-mythology',
+    name: 'Zouwu',
+    description: 'A legendary, benevolent beast in ancient Chinese mythology, described in the Shan Hai Jing (Classic of Mountains and Seas) as a forest creature the size of a tiger, possessing a multi-colored pattern and a tail longer than its body, capable of traveling immense distances in a single bound.',
+    layer: 'Myths / Legends',
+    relatedIds: ['chinese-mythology'],
+    sources: ['Classic of Mountains and Seas (Shan Hai Jing)', 'Imperial Encyclopaedia of Animal Kingdom'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Imperial_Encyclopaedia_-_Animal_Kingdom_-_pic152_-_%E9%A8%B6%E8%99%9E%E5%9C%96.png/1280px-Imperial_Encyclopaedia_-_Animal_Kingdom_-_pic152_-_%E9%A8%B6%E8%99%9E%E5%9C%96.png'],
+    mapFeatureId: 'zouwu'
+  },
+  {
+    id: 'shuimu',
+    parentId: 'chinese-mythology',
+    name: 'Shuimu',
+    description: 'Also known as Shuimu Niangniang (Water Mother Goddess), a Chinese deity of springs and rivers in Taoist and folk traditions. Associated with fertility, rain, and water purification, she is historically worshipped in temples near natural springs.',
+    layer: 'Myths / Legends',
+    relatedIds: ['chinese-mythology'],
+    sources: ['Chinese Water Goddess Folklore', 'Jinci Temple Inscriptions'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Goddess_Temple_Jinsi.JPG/1280px-Goddess_Temple_Jinsi.JPG'],
+    mapFeatureId: 'shuimu'
+  },
+  {
+    id: 'shui-gui',
+    parentId: 'chinese-mythology',
+    name: 'Shui Gui',
+    description: 'Water ghosts in Chinese folklore, representing the spirits of drowned individuals who lurk in rivers, lakes, and pools. Legend says they attempt to drag swimmers underwater to steal their life force in order to achieve reincarnation.',
+    layer: 'Myths / Legends',
+    relatedIds: ['chinese-mythology'],
+    sources: ['Classic Ghost Stories (Ming Dynasty)', 'Chinese Water Spirits and Folklore'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/%E6%98%8E_%E9%83%91%E9%87%8D_%E6%90%9C%E5%B1%B1%E5%9B%BE17.jpg/1280px-%E6%98%8E_%E9%83%91%E9%87%8D_%E6%90%9C%E5%B1%B1%E5%9B%BE17.jpg'],
+    mapFeatureId: 'shui-gui'
+  },
+  {
+    id: 'shui-hu',
+    parentId: 'chinese-mythology',
+    name: 'Shui Hu',
+    description: 'An amphibious water-dwelling creature in Chinese and Japanese (Kappa) folklore. Described as child-sized with webbed hands, a turtle-like shell, and a fluid-filled cavity on top of its head which holds its magical power.',
+    layer: 'Myths / Legends',
+    relatedIds: ['chinese-mythology'],
+    sources: ['Kyoka Hyaku-Monogatari', 'Chinese and Japanese Cryptid Compendiums'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Kyoka_Hyaku-Monogatari_Kappa.jpg/500px-Kyoka_Hyaku-Monogatari_Kappa.jpg'],
+    mapFeatureId: 'shui-hu'
+  },
+  {
+    id: 'wangxiang',
+    parentId: 'chinese-mythology',
+    name: 'Wangxiang',
+    description: 'A mythical, mountain-dwelling spirit in ancient Chinese folklore, described as a multi-legged shape-shifting creature that feeds on the souls of the deceased or leads travelers astray in dense forests.',
+    layer: 'Myths / Legends',
+    relatedIds: ['chinese-mythology'],
+    sources: ['Classic of Mountains and Seas (Shan Hai Jing)', 'Sino-Tibetan Mountain Legends'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/NLC403-312001066437-18606_%E5%B1%B1%E6%B5%B7%E7%B6%93_%E5%8D%B7%E4%BA%94.pdf/page1-1280px-NLC403-312001066437-18606_%E5%B1%B1%E6%B5%B7%E7%B6%93_%E5%8D%B7%E4%BA%94.pdf.jpg'],
+    mapFeatureId: 'wangxiang'
+  },
+  {
+    id: 'mjolnir',
+    parentId: 'norse-pantheon',
+    name: 'Mjölnir',
+    description: 'The legendary hammer of Thor, the Norse god of thunder. Crafted by the dwarves Brokkr and Sindri, Mjölnir was capable of leveling mountains and would always return to Thor\'s hand, serving as a powerful symbol of protection and divine order.',
+    layer: 'Myths / Legends',
+    relatedIds: ['norse-pantheon'],
+    sources: ['Prose Edda (Snorri Sturluson)', 'Poetic Edda'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Claes_Kurck_Sk%C3%A5ne_hammer_-_HST_DIG55488_original.jpg/1280px-Claes_Kurck_Sk%C3%A5ne_hammer_-_HST_DIG55488_original.jpg'],
+    mapFeatureId: 'mjolnir'
+  },
+  {
+    id: 'excalibur',
+    parentId: 'myths-legends-root',
+    name: 'Excalibur',
+    description: 'The legendary sword of King Arthur, possessing magical properties and symbolizing sovereign authority over Britain. In Arthurian romance, it was given to Arthur by the Lady of the Lake and later returned to her upon his death.',
+    layer: 'Myths / Legends',
+    relatedIds: ['myths-legends-root'],
+    sources: ['Le Morte d\'Arthur (Sir Thomas Malory)', 'Arthurian Legends Collection'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Arthur-Pyle_Excalibur_the_Sword.JPG/500px-Arthur-Pyle_Excalibur_the_Sword.JPG'],
+    mapFeatureId: 'excalibur'
+  },
+  {
+    id: 'atenism',
+    parentId: 'biblical-apocryphal',
+    name: 'Atenism',
+    description: 'The ancient Egyptian religious movement founded by Pharaoh Akhenaten in the 14th century BCE, centered on the sole worship of the sun-disk deity Aten. It represents one of the earliest documented forms of monotheism, which alternative historians frequently link to the origins of Abrahamic religions.',
+    layer: 'Religion',
+    relatedIds: ['biblical-apocryphal', 'judaism'],
+    sources: ['Great Hymn to the Aten', 'Amarna Archeological Records'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/La_salle_dAkhenaton_%281356-1340_av_J.C.%29_%28Mus%C3%A9e_du_Caire%29_%282076972086%29.jpg/500px-La_salle_dAkhenaton_%281356-1340_av_J.C.%29_%28Mus%C3%A9e_du_Caire%29_%282076972086%29.jpg'],
+    mapFeatureId: 'atenism'
+  },
+  {
+    id: 'ark-of-the-covenant',
+    parentId: 'biblical-discoveries',
+    name: 'Ark of the Covenant',
+    description: 'A sacred, gold-plated wooden chest described in the Book of Exodus as containing the stone tablets of the Ten Commandments. According to biblical tradition, it possessed immense power, leveling city walls and striking down those who touched it, and its current whereabouts remain one of history\'s greatest mysteries.',
+    layer: 'Biblical Discoveries',
+    relatedIds: ['biblical-discoveries', 'christianity', 'judaism'],
+    sources: ['Bible (Book of Exodus)', 'Ethiopian Royal Chronicles (Kebra Nagast)'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Tissot_Moses_and_Joshua_in_the_Tabernacle.jpg/1280px-Tissot_Moses_and_Joshua_in_the_Tabernacle.jpg'],
+    mapFeatureId: 'ark-of-the-covenant'
+  },
+  {
+    id: 'ant-people',
+    parentId: 'navajo-hopi-lore',
+    name: 'The Ant People',
+    description: 'Benevolent subterranean creatures in Hopi mythology who sheltered early humans in their underground caves during the destruction of the First and Second Worlds. Ancient astronaut theorists compare the Ant People (Anu Sinom) to Sumerian accounts of the Anunnaki.',
+    layer: 'Myths / Legends',
+    relatedIds: ['navajo-hopi-lore', 'anunnaki'],
+    sources: ['Hopi Mythology and Oral Traditions (Frank Waters)', 'Book of the Hopi'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Hopi_woman_with_a_traditional_pot_and_traditional_clothing.png/500px-Hopi_woman_with_a_traditional_pot_and_traditional_clothing.png'],
+    mapFeatureId: 'ant-people'
+  },
+  {
+    id: 'doeg',
+    parentId: 'biblical-figures',
+    name: 'Doeg',
+    description: 'Doeg the Edomite, an official under King Saul who is infamous in the biblical account for executing eighty-five priests at Saul\'s command in the city of Nob, after they aided David.',
+    layer: 'Biblical Figures',
+    relatedIds: ['biblical-figures'],
+    sources: ['Bible (1 Samuel 21-22)', 'Jewish Midrashic Literature'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Psalm_51%2C_Quit_gloriaris_in_malitia%2C_qui_potens_es_in_iniquitate%2C_Doeh_kills_Achimelech_en_the_priests_of_Nob_-_Psalter_of_Eleanor_of_Aquitaine_%28ca._1185%29_-_KB_76_F_13%2C_folium_074v_%28cropped%29.jpg/1280px-Psalm_51%2C_Quit_gloriaris_in_malitia%2C_qui_potens_es_in_iniquitate%2C_Doeh_kills_Achimelech_en_the_priests_of_Nob_-_Psalter_of_Eleanor_of_Aquitaine_%28ca._1185%29_-_KB_76_F_13%2C_folium_074v_%28cropped%29.jpg'],
+    mapFeatureId: 'doeg'
+  },
+  {
+    id: 'atlantis',
+    parentId: 'megaliths-structures',
+    name: 'Atlantis (Richat Structure)',
+    description: 'The legendary advanced island civilization first described by the Greek philosopher Plato. While traditionally searched for in the Atlantic Ocean, modern alternative theorists identify the concentric ringed geological formation of the Richat Structure in Mauritania as a prime candidate for the physical ruins of Atlantis.',
+    layer: 'Megaliths / Structures',
+    relatedIds: ['megaliths-structures'],
+    sources: ['Timaeus & Critias (Plato)', 'Eye of the Sahara Geological Studies'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Richat_Structure_ISS030-E-12516.jpg/250px-Richat_Structure_ISS030-E-12516.jpg'],
+    mapFeatureId: 'atlantis'
+  }
+];
+
 export const TERM_TREE_DATA: TermNode[] = [
+  ...chunk_37_new_items,
+  ...chunk_us_presidents,
   ...chunk_user_additions_2,
   ...chunk_geoglyphs,
   ...chunk_historic_extensions,
@@ -25809,8 +26707,9 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Elizabethan mathematician, astronomer, astrologer, and adviser to Queen Elizabeth I. He devoted much of his life to alchemy, divination, and Hermetic philosophy, famously channeling the Enochian system of magic with medium Edward Kelley.',
     timelineId: 'john-dee',
     mapFeatureId: 'john-dee',
-    relatedIds: ['historical-alchemists', 'enochian-lore', 'alchemy'],
-    sources: ['The Private Diary of Dr. John Dee', 'John Dee: The World of an Elizabethan Magus (Peter French)']
+    relatedIds: ['historical-alchemists', 'enochian-language', 'alchemy', 'edward-kelley', 'voynich-manuscript'],
+    sources: ['The Private Diary of Dr. John Dee', 'John Dee: The World of an Elizabethan Magus (Peter French)'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/John_Dee_Ashmolean.jpg/250px-John_Dee_Ashmolean.jpg']
   },  {
     id: 'elias-ashmole',
     parentId: 'historical-alchemists',
@@ -25825,7 +26724,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     name: 'Paracelsus',
     description: 'Swiss physician, alchemist, and occultist who pioneered iatrochemistry (using chemistry in medicine) and wrote extensively on elementals and hermetic philosophy.',
     relatedIds: ['alchemy', 'historical-alchemists', 'homunculus', 'tria-prima'],
-    sources: ['Archidoxes of Alchemy', 'Paracelsus: Essential Readings']
+    sources: ['Archidoxes of Alchemy', 'Paracelsus: Essential Readings'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Paracelsus.jpg/220px-Paracelsus.jpg']
   },  {
     id: 'isaac-newton',
     parentId: 'historical-alchemists',

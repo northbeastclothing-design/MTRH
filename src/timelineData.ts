@@ -5296,7 +5296,468 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     start: 1440,
     description: 'Traditional dating of Ollantaytambo\'s expansion under Pachacuti, incorporating massive megalithic stone blocks.',
     source: 'Inca History'
-  }];
+  },
+  {
+    id: 'pres-george-washington',
+    name: '01. George Washington',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1789,
+    end: 1797,
+    description: 'Administration of George Washington, the 1st U.S. President. Freemason who laid the Capitol cornerstone in a Masonic ceremony. Conspiracies involve the geomantic laying out of Washington D.C. according to occult and astrological principles.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-john-adams',
+    name: '02. John Adams',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1797,
+    end: 1801,
+    description: 'Administration of John Adams, the 2nd U.S. President. The rise of the Illuminati scare in New England under his administration and the restrictive Alien and Sedition Acts designed to suppress political dissent.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-thomas-jefferson',
+    name: '03. Thomas Jefferson',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1801,
+    end: 1809,
+    description: 'Administration of Thomas Jefferson, the 3rd U.S. President. Author of the \'Jefferson Bible\' who removed supernatural elements. Under his watch, explorer Meriwether Lewis died under mysterious circumstances, rumored to be an assassination.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-james-madison',
+    name: '04. James Madison',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1809,
+    end: 1817,
+    description: 'Administration of James Madison, the 4th U.S. President. Rebuilt the White House following its burning in the War of 1812, incorporating geomantic patterns and occult symbols in the architectural layout of the capital.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-james-monroe',
+    name: '05. James Monroe',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1817,
+    end: 1825,
+    description: 'Administration of James Monroe, the 5th U.S. President. Formulated the Monroe Doctrine, viewed by some alternative historians as the blueprint for US hegemony and globalist expansion under secret guidelines.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-john-quincy-adams',
+    name: '06. John Quincy Adams',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1825,
+    end: 1829,
+    description: 'Administration of John Quincy Adams, the 6th U.S. President. Authorized a federal expedition to the South Pole to search for the entrance to the Hollow Earth, supporting John Cleves Symmes Jr.\'s theories.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-andrew-jackson',
+    name: '07. Andrew Jackson',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1829,
+    end: 1837,
+    description: 'Administration of Andrew Jackson, the 7th U.S. President. Fought the central banking monopolies by vetoing the Second Bank of the United States. Survived an assassination attempt by a shooter claiming to be a British king.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-martin-van-buren',
+    name: '08. Martin Van Buren',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1837,
+    end: 1841,
+    description: 'Administration of Martin Van Buren, the 8th U.S. President. Navigated the political fallout of the Morgan Affair, which catalyzed the rise of the Anti-Masonic Party in American politics.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-william-henry-harrison',
+    name: '09. William Henry Harrison',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1841,
+    end: 1841,
+    description: 'Administration of William Henry Harrison, the 9th U.S. President. Died in office just 31 days into his term, initiating the \'Curse of Tippecanoe\' (or Tecumseh\'s Curse) affecting presidents elected in years ending in zero.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-john-tyler',
+    name: '10. John Tyler',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1841,
+    end: 1845,
+    description: 'Administration of John Tyler, the 10th U.S. President. Annexed Texas through a joint resolution, aligning his administration with Southern expansionist agendas and secret military pacts.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-james-k-polk',
+    name: '11. James K. Polk',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1845,
+    end: 1849,
+    description: 'Administration of James K. Polk, the 11th U.S. President. Orchestrated the Mexican-American War by sending troops into disputed territory, a move denounced by contemporaries as a manufactured pretext for expansion.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-zachary-taylor',
+    name: '12. Zachary Taylor',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1849,
+    end: 1850,
+    description: 'Administration of Zachary Taylor, the 12th U.S. President. Died suddenly in office from suspected poisoning, prompting his exhumation in 1991 to test for arsenic, though results were deemed inconclusive.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-millard-fillmore',
+    name: '13. Millard Fillmore',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1850,
+    end: 1853,
+    description: 'Administration of Millard Fillmore, the 13th U.S. President. Maintained close ties to the nativist Know-Nothing Party, a semi-secret society whose members swore oaths to keep foreign influence out of government.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-franklin-pierce',
+    name: '14. Franklin Pierce',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1853,
+    end: 1857,
+    description: 'Administration of Franklin Pierce, the 14th U.S. President. Backed the expansionist Young America movement and the Gadsden Purchase, rumored to be part of a secret plan to establish a slaveholding empire.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-james-buchanan',
+    name: '15. James Buchanan',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1857,
+    end: 1861,
+    description: 'Administration of James Buchanan, the 15th U.S. President. Allowed Southern cabinet officers to transfer federal weapons to Southern arsenals prior to the Civil War, leading to accusations of cabinet-level treason.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-abraham-lincoln',
+    name: '16. Abraham Lincoln',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1861,
+    end: 1865,
+    description: 'Administration of Abraham Lincoln, the 16th U.S. President. Assassinated by John Wilkes Booth under conspiracies linking the plot to the Confederate Secret Service, Knights of the Golden Circle, and international bankers.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-andrew-johnson',
+    name: '17. Andrew Johnson',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1865,
+    end: 1869,
+    description: 'Administration of Andrew Johnson, the 17th U.S. President. Accused of having foreknowledge of or involvement in Lincoln\'s assassination, with rumors linking him to Knights of the Golden Circle conspirators. Impeached in 1868 for violating the Tenure of Office Act following a power struggle with Radical Republicans over Reconstruction.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-ulysses-s-grant',
+    name: '18. Ulysses S. Grant',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1869,
+    end: 1877,
+    description: 'Administration of Ulysses S. Grant, the 18th U.S. President. Faced the 1869 Gold Ring conspiracy, where Wall Street speculators Jay Gould and James Fisk attempted to corner the gold market using cabinet connections.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-rutherford-b-hayes',
+    name: '19. Rutherford B. Hayes',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1877,
+    end: 1881,
+    description: 'Administration of Rutherford B. Hayes, the 19th U.S. President. Awarded the presidency through the highly contested Compromise of 1877, resolved in a series of backroom political deals.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-james-a-garfield',
+    name: '20. James A. Garfield',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1881,
+    end: 1881,
+    description: 'Administration of James A. Garfield, the 20th U.S. President. Assassinated by Charles Guiteau, who claimed divine instruction. His death was the second under the Curse of Tippecanoe.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-chester-a-arthur',
+    name: '21. Chester A. Arthur',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1881,
+    end: 1885,
+    description: 'Administration of Chester A. Arthur, the 21st U.S. President. Faced persistent rumors during his campaign and presidency that he was actually born in Canada, making him ineligible for office.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-grover-cleveland',
+    name: '22. Grover Cleveland',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1885,
+    end: 1889,
+    description: 'Administration of Grover Cleveland, the 22nd U.S. President. Underwent a secret surgical procedure on a yacht to remove a cancerous jaw tumor, concealed from the public to prevent a Wall Street panic.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-benjamin-harrison',
+    name: '23. Benjamin Harrison',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1889,
+    end: 1893,
+    description: 'Administration of Benjamin Harrison, the 23rd U.S. President. Presided over the admission of six Western states; alternative histories tie his term to the occult geometry of the Washington Meridian.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-grover-cleveland-2',
+    name: '24. Grover Cleveland',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1893,
+    end: 1897,
+    description: 'Administration of Grover Cleveland, the 24th U.S. President. Serving non-consecutive terms, Cleveland maintained tight monetary policies and faced populism, with esoteric rumors citing secret alliances with Eastern bankers.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-william-mckinley',
+    name: '25. William McKinley',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1897,
+    end: 1901,
+    description: 'Administration of William McKinley, the 25th U.S. President. Assassinated by anarchist Leon Czolgosz. Conspiracy theories suggest his assassination was encouraged by deep-state elements to install Theodore Roosevelt.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-theodore-roosevelt',
+    name: '26. Theodore Roosevelt',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1901,
+    end: 1909,
+    description: 'Administration of Theodore Roosevelt, the 26th U.S. President. Member of the Bohemian Club, oversaw the expansion of the Secret Service, and carved Masonic alignments into the construction of Mount Rushmore.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-william-howard-taft',
+    name: '27. William Howard Taft',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1909,
+    end: 1913,
+    description: 'Administration of William Howard Taft, the 27th U.S. President. Initiated into Yale\'s secret society Skull and Bones in 1878, maintaining high-level connections to the fraternity throughout his career.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-woodrow-wilson',
+    name: '28. Woodrow Wilson',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1913,
+    end: 1921,
+    description: 'Administration of Woodrow Wilson, the 28th U.S. President. Signed the Federal Reserve Act of 1913 after secret meetings at Jekyll Island, and proposed the League of Nations, early steps toward a New World Order.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-warren-g-harding',
+    name: '29. Warren G. Harding',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1921,
+    end: 1923,
+    description: 'Administration of Warren G. Harding, the 29th U.S. President. Died mysteriously in office; rumors alleged he was poisoned by his wife or political rivals to cover up the Teapot Dome scandals.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-calvin-coolidge',
+    name: '30. Calvin Coolidge',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1923,
+    end: 1929,
+    description: 'Administration of Calvin Coolidge, the 30th U.S. President. Dedicated Mount Rushmore in 1927, an engineering project that alternative historians link to geomantic alignments and ancient stone monuments.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-herbert-hoover',
+    name: '31. Herbert Hoover',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1929,
+    end: 1933,
+    description: 'Administration of Herbert Hoover, the 31st U.S. President. Member of the Bohemian Club who attended annual encampments at Bohemian Grove, where elites perform rituals like the Cremation of Care.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-franklin-d-roosevelt',
+    name: '32. Franklin D. Roosevelt',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1933,
+    end: 1945,
+    description: 'Administration of Franklin D. Roosevelt, the 32nd U.S. President. Executive Order 6102 criminalizing gold ownership. Promoted the Great Seal (All-Seeing Eye) on the dollar bill and agreed to secret spheres of influence at Yalta.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-harry-s-truman',
+    name: '33. Harry S. Truman',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1945,
+    end: 1953,
+    description: 'Administration of Harry S. Truman, the 33rd U.S. President. Formed the CIA and NSA under the National Security Act of 1947, and allegedly created the Majestic-12 committee to cover up the Roswell UFO crash.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-dwight-d-eisenhower',
+    name: '34. Dwight D. Eisenhower',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1953,
+    end: 1961,
+    description: 'Administration of Dwight D. Eisenhower, the 34th U.S. President. Rumored to have had a secret meeting with extraterrestrial emissaries at Holloman Air Force Base in 1954, and warned of the rise of the Military-Industrial Complex.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-john-f-kennedy',
+    name: '35. John F. Kennedy',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1961,
+    end: 1963,
+    description: 'Administration of John F. Kennedy, the 35th U.S. President. Assassinated in Dallas under conspiracies involving the CIA, Federal Reserve (Executive Order 11110), and military contractors after he rejected Operation Northwoods.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-lyndon-b-johnson',
+    name: '36. Lyndon B. Johnson',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1963,
+    end: 1969,
+    description: 'Administration of Lyndon B. Johnson, the 36th U.S. President. Accused of orchestrating the JFK assassination. Utilized the fabricated Gulf of Tonkin incident in 1964 to escalate US involvement in the Vietnam War.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-richard-nixon',
+    name: '37. Richard Nixon',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1969,
+    end: 1974,
+    description: 'Administration of Richard Nixon, the 37th U.S. President. Ended the gold standard in the 1971 Nixon Shock. Resigned from office in 1974 facing certain impeachment over the Watergate cover-up, which alternative historians view as a deep-state soft coup.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-gerald-ford',
+    name: '38. Gerald Ford',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1974,
+    end: 1977,
+    description: 'Administration of Gerald Ford, the 38th U.S. President. Member of the Warren Commission who aggressively defended the single-bullet theory. Survived two assassination attempts by cult followers.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-jimmy-carter',
+    name: '39. Jimmy Carter',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1977,
+    end: 1881,
+    description: 'Administration of Jimmy Carter, the 39th U.S. President. Co-founder of the Trilateral Commission, who officially reported a UFO sighting and was allegedly denied access to Area 51 briefings by the CIA.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-ronald-reagan',
+    name: '40. Ronald Reagan',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1981,
+    end: 1989,
+    description: 'Administration of Ronald Reagan, the 40th U.S. President. Linked to the October Surprise conspiracy. Survived an assassination attempt by John Hinckley Jr., whose family had close ties to George H.W. Bush.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-george-h-w-bush',
+    name: '41. George H. W. Bush',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1989,
+    end: 1993,
+    description: 'Administration of George H. W. Bush, the 41st U.S. President. Skull and Bones member, former CIA Director, and key architect of the post-Cold War \'New World Order,\' which he famously declared in public speeches.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-bill-clinton',
+    name: '42. Bill Clinton',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 1993,
+    end: 2001,
+    description: 'Administration of Bill Clinton, the 42nd U.S. President. Associated with the Mena, Arkansas drug-smuggling investigations, Whitewater, the \'Clinton Body Count\' list, and flights on Jeffrey Epstein\'s private jet. Impeached in 1998 on charges of perjury and obstruction of justice stemming from the Lewinsky scandal investigations.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-george-w-bush',
+    name: '43. George W. Bush',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 2001,
+    end: 2009,
+    description: 'Administration of George W. Bush, the 43rd U.S. President. Skull and Bones member whose administration presided over the 9/11 attacks, the Patriot Act, and the invasion of Iraq based on false intelligence.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-barack-obama',
+    name: '44. Barack Obama',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 2009,
+    end: 2017,
+    description: 'Administration of Barack Obama, the 44th U.S. President. Target of the \'birther\' birth certificate conspiracy. Greatly expanded drone warfare and surveillance state programs under the guidance of intelligence agencies.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-donald-trump',
+    name: '45. Donald Trump',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 2017,
+    end: 2021,
+    description: 'Administration of Donald Trump, the 45th U.S. President. Central figure of the QAnon movement, which claimed he was fighting a deep-state cabal. Associated socially with financier Jeffrey Epstein in New York and Florida prior to the latter\'s criminal charges. Impeached twice: in 2019 for abuse of power and obstruction of Congress, and in 2021 for incitement of insurrection. Delayed the release of the final JFK assassination files.',
+    source: 'U.S. Presidential Archives'
+  },
+  {
+    id: 'pres-joe-biden',
+    name: '46. Joe Biden',
+    type: 'lifespan',
+    layer: 'government-conspiracies',
+    start: 2021,
+    end: 2026,
+    description: 'Administration of Joe Biden, the 46th U.S. President. Associated with corruption allegations in Ukraine, globalist agendas linked to the World Economic Forum\'s Great Reset, and rumors of cognitive decline cover-ups.',
+    source: 'U.S. Presidential Archives'
+  },
+];
 
 export interface TimelineLocation {
   lng: number;
@@ -5306,7 +5767,53 @@ export interface TimelineLocation {
 }
 
 export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
-  // Biblical Patriarchs (Figures)
+  'pres-george-washington': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-john-adams': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-thomas-jefferson': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-james-madison': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-james-monroe': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-john-quincy-adams': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-andrew-jackson': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-martin-van-buren': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-william-henry-harrison': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-john-tyler': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-james-k-polk': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-zachary-taylor': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-millard-fillmore': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-franklin-pierce': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-james-buchanan': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-abraham-lincoln': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-andrew-johnson': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-ulysses-s-grant': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-rutherford-b-hayes': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-james-a-garfield': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-chester-a-arthur': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-grover-cleveland': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-benjamin-harrison': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-grover-cleveland-2': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-william-mckinley': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-theodore-roosevelt': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-william-howard-taft': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-woodrow-wilson': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-warren-g-harding': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-calvin-coolidge': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-herbert-hoover': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-franklin-d-roosevelt': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-harry-s-truman': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-dwight-d-eisenhower': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-john-f-kennedy': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-lyndon-b-johnson': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-richard-nixon': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-gerald-ford': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-jimmy-carter': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-ronald-reagan': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-george-h-w-bush': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-bill-clinton': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-george-w-bush': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-barack-obama': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-donald-trump': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+  'pres-joe-biden': { lng: -77.036, lat: 38.907, locationName: 'Washington D.C. (White House)', category: 'Government Conspiracies' },
+// Biblical Patriarchs (Figures)
   'adam': { lng: 47.432, lat: 31.015, locationName: 'Garden of Eden', category: 'Biblical Figures' },
   'eve': { lng: 47.432, lat: 31.015, locationName: 'Garden of Eden', category: 'Biblical Figures' },
   'cain': { lng: 49.500, lat: 32.000, locationName: 'Land of Nod', category: 'Biblical Figures' },

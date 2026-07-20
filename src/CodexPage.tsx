@@ -2390,11 +2390,13 @@ export default function CodexPage({
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                   {(() => {
                     const rootCat = getRootCategory(activeTermNode);
+                    console.log("MTRH_DEBUG_ICON:", rootCat.id, rootCat.name, "-> icon:", getNodeIcon(rootCat));
                     return (
                       <>
                         <div style={{ width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                           <img 
                             src={getNodeIcon(rootCat)} 
+                            onError={(e) => { e.currentTarget.src = '/icons/icon-cave-drawings.svg'; }}
                             style={{ width: '30px', height: '30px' }} 
                             alt="category-icon" 
                             draggable={false}

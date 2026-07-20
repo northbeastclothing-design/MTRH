@@ -1,5 +1,5 @@
 // Cartography Page Component - Old World Maps Viewer
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import mapboxgl from 'mapbox-gl';
 import { X, Map as MapIcon, Plus, Eye, EyeOff, Navigation, AlertTriangle, Loader2, Globe } from 'lucide-react';
@@ -29,6 +29,156 @@ interface HistoricalMap {
   pinColor?: string;
   era: string;
 }
+
+interface TranslationHotspot {
+  id: string;
+  mapId: string;
+  name: string;
+  originalText: string;
+  translatedText: string;
+  context: string;
+  coordinates: [number, number][]; // A list of coordinates forming a polygon
+}
+
+const TRANSLATION_HOTSPOTS: TranslationHotspot[] = [
+  // Kircher's Atlantis - Literal text translations matching exact map inscriptions
+  {
+    id: 'atlantis-title',
+    mapId: 'atlantis',
+    name: 'Main Title Cartouche (Top Header)',
+    originalText: 'Situs Insulæ Atlantidis, à mari olim absorptæ ex mente Ægyptiorum et Platonis descriptio',
+    translatedText: 'Site of the Island of Atlantis, swallowed of old by the sea, according to the description of the Egyptians and Plato',
+    context: 'The main banner inscription across the top of Kircher\'s 1669 map from Mundus Subterraneus. Note that the map is oriented with South at the top.',
+    coordinates: [
+      [-70, 58],
+      [70, 58],
+      [70, 42],
+      [-70, 42],
+      [-70, 58]
+    ]
+  },
+  {
+    id: 'atlantis-island',
+    mapId: 'atlantis',
+    name: 'Insula Atlantis (Center Island)',
+    originalText: 'Insula Atlantis',
+    translatedText: 'Island of Atlantis',
+    context: 'Text printed directly across the sunken continent in the middle of the ocean.',
+    coordinates: [
+      [-25, 12],
+      [25, 12],
+      [25, -12],
+      [-25, -12],
+      [-25, 12]
+    ]
+  },
+  {
+    id: 'atlantis-oceanus',
+    mapId: 'atlantis',
+    name: 'Oceanus Atlanticus (North Ocean)',
+    originalText: 'Oceanus Atlanticus',
+    translatedText: 'Atlantic Ocean',
+    context: 'Inscription over the ocean waters above the island.',
+    coordinates: [
+      [-45, 40],
+      [45, 40],
+      [45, 18],
+      [-45, 18],
+      [-45, 40]
+    ]
+  },
+  {
+    id: 'atlantis-hispania',
+    mapId: 'atlantis',
+    name: 'Hispania & Gallia (Upper-Left Coast)',
+    originalText: 'Hispania / Gallia',
+    translatedText: 'Spain / Gaul (France)',
+    context: 'Inscriptions labeling the European coast (Iberian Peninsula and France) on the left side of the map.',
+    coordinates: [
+      [-110, 35],
+      [-55, 35],
+      [-55, 10],
+      [-110, 10],
+      [-110, 35]
+    ]
+  },
+  {
+    id: 'atlantis-africa',
+    mapId: 'atlantis',
+    name: 'Africa (Lower-Left Coast)',
+    originalText: 'Africa',
+    translatedText: 'Africa',
+    context: 'Inscription labeling the African continent on the lower-left.',
+    coordinates: [
+      [-110, -5],
+      [-55, -5],
+      [-55, -35],
+      [-110, -35],
+      [-110, -5]
+    ]
+  },
+  {
+    id: 'atlantis-america',
+    mapId: 'atlantis',
+    name: 'America (Right Coast)',
+    originalText: 'America',
+    translatedText: 'America',
+    context: 'Inscription labeling the American landmass on the right side of Kircher\'s map.',
+    coordinates: [
+      [55, 30],
+      [115, 30],
+      [115, -20],
+      [55, -20],
+      [55, 30]
+    ]
+  },
+  // Fra Mauro Map
+  {
+    id: 'framauro-mediterranean',
+    mapId: 'framauro',
+    name: 'Mar Mediteraneum',
+    originalText: 'Mar Mediteraneum',
+    translatedText: 'The Mediterranean Sea',
+    context: 'The central hub of early medieval cartography. Fra Mauro detailed the Mediterranean coastlines with impressive accuracy derived from portolan charts.',
+    coordinates: [
+      [-15, 15],
+      [15, 15],
+      [15, -15],
+      [-15, -15],
+      [-15, 15]
+    ]
+  },
+  {
+    id: 'framauro-abassia',
+    mapId: 'framauro',
+    name: 'Abassia (Abyssinia)',
+    originalText: 'Abassia / Ethiopia',
+    translatedText: 'Ethiopia / East Africa',
+    context: 'Fra Mauro incorporated information from Ethiopian delegates to the Council of Florence (1438-1445), mapping the Horn of Africa with rich geographic detail.',
+    coordinates: [
+      [-30, 60],
+      [10, 60],
+      [10, 35],
+      [-30, 35],
+      [-30, 60]
+    ]
+  },
+  {
+    id: 'framauro-chataio',
+    mapId: 'framauro',
+    name: 'Chataio (Cathay)',
+    originalText: 'Chataio o Cathayo / Tartaria',
+    translatedText: 'Cathay (Northern China) / Land of the Tartars',
+    context: 'This region on the bottom-left shows major cities and paths mentioned by Marco Polo in his travels across Asia.',
+    coordinates: [
+      [-65, -30],
+      [-25, -30],
+      [-25, -60],
+      [-65, -60],
+      [-65, -30]
+    ]
+  }
+];
 
 // High-resolution digital archives and Wikimedia collections
 const HISTORICAL_MAPS: HistoricalMap[] = [
@@ -112,6 +262,16 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     url: "https://upload.wikimedia.org/wikipedia/commons/d/d3/TabulaRogeriana.jpg",
     aspectRatio: 2.2069,
     pinColor: '#B297FF',
+    era: 'early-medieval'
+  },
+  {
+    id: 'ebstorf-map',
+    name: "Ebstorf Map",
+    year: "c. 1239",
+    description: "A monumental medieval world map, found in a convent at Ebstorf, depicting the Earth with Christ's body containing the entire creation (head at top, hands at sides, feet at bottom).",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Ebstorfer_Weltkarte_2.jpg/500px-Ebstorfer_Weltkarte_2.jpg",
+    aspectRatio: 1.006,
+    pinColor: '#FFF96A',
     era: 'early-medieval'
   },
   {
@@ -396,14 +556,17 @@ const cleanUpMapOverlay = (map: mapboxgl.Map) => {
     'historical-map-layer-0',
     'historical-map-layer-1',
     'historical-map-layer-2',
-    'historical-map-layer-3'
+    'historical-map-layer-3',
+    'hotspots-fill',
+    'hotspots-outline'
   ];
   const sources = [
     'historical-map-src',
     'historical-map-src-0',
     'historical-map-src-1',
     'historical-map-src-2',
-    'historical-map-src-3'
+    'historical-map-src-3',
+    'hotspots-src'
   ];
 
   layers.forEach(l => {
@@ -411,6 +574,70 @@ const cleanUpMapOverlay = (map: mapboxgl.Map) => {
   });
   sources.forEach(s => {
     if (map.getSource(s)) map.removeSource(s);
+  });
+};
+
+const updateHotspotsOverlay = (map: mapboxgl.Map, mapId: string) => {
+  if (map.getLayer('hotspots-fill')) map.removeLayer('hotspots-fill');
+  if (map.getLayer('hotspots-outline')) map.removeLayer('hotspots-outline');
+  if (map.getSource('hotspots-src')) map.removeSource('hotspots-src');
+
+  const currentHotspots = TRANSLATION_HOTSPOTS.filter(h => h.mapId === mapId);
+  if (currentHotspots.length === 0) return;
+
+  const features = currentHotspots.map((h, idx) => ({
+    type: 'Feature',
+    id: idx + 1, // numeric id required for Mapbox setFeatureState
+    properties: {
+      id: h.id,
+      name: h.name,
+      originalText: h.originalText,
+      translatedText: h.translatedText,
+      context: h.context
+    },
+    geometry: {
+      type: 'Polygon',
+      coordinates: [h.coordinates]
+    }
+  }));
+
+  map.addSource('hotspots-src', {
+    type: 'geojson',
+    data: {
+      type: 'FeatureCollection',
+      features: features as any
+    }
+  });
+
+  map.addLayer({
+    id: 'hotspots-fill',
+    type: 'fill',
+    source: 'hotspots-src',
+    paint: {
+      'fill-color': '#74F8F3', // Cyan/turquoise highlight
+      'fill-opacity': [
+        'case',
+        ['boolean', ['feature-state', 'hover'], false],
+        0.25,
+        0.04
+      ]
+    }
+  });
+
+  map.addLayer({
+    id: 'hotspots-outline',
+    type: 'line',
+    source: 'hotspots-src',
+    paint: {
+      'line-color': '#74F8F3',
+      'line-width': 1.5,
+      'line-opacity': [
+        'case',
+        ['boolean', ['feature-state', 'hover'], false],
+        0.8,
+        0.25
+      ]
+    }
   });
 };
 
@@ -653,6 +880,67 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
   const [isAddMode, setIsAddMode] = useState<boolean>(false);
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState<boolean>(false);
 
+  // Search state matching map page exactly
+  const [searchQuery, setSearchQuery] = useState<string>('');
+  const [showSearchResults, setShowSearchResults] = useState<boolean>(false);
+  const [searchActiveIndex, setSearchActiveIndex] = useState<number>(-1);
+  const pendingTargetPointRef = useRef<{ lng: number; lat: number } | null>(null);
+
+  // Match maps based on searchQuery
+  const matchedMaps = useMemo(() => {
+    const cleanQuery = searchQuery.trim().toLowerCase();
+    if (cleanQuery === '') return [];
+    return HISTORICAL_MAPS.filter(m => 
+      m.name.toLowerCase().includes(cleanQuery) ||
+      m.description.toLowerCase().includes(cleanQuery) ||
+      m.year.toLowerCase().includes(cleanQuery)
+    );
+  }, [searchQuery]);
+
+  // Match notes based on searchQuery
+  const matchedNotes = useMemo(() => {
+    const cleanQuery = searchQuery.trim().toLowerCase();
+    if (cleanQuery === '') return [];
+    return notes.filter(n => 
+      n.note.toLowerCase().includes(cleanQuery)
+    );
+  }, [searchQuery, notes]);
+
+  const visibleMaps = matchedMaps.slice(0, 10);
+  const visibleNotes = matchedNotes.slice(0, 10);
+  const totalResultsCount = visibleMaps.length + visibleNotes.length;
+
+  const handleMapSelect = (hMap: HistoricalMap) => {
+    setSelectedMap(hMap);
+    setSearchQuery('');
+    setShowSearchResults(false);
+  };
+
+  const handleNoteSelect = (notePoint: SavedPoint) => {
+    const matchingMap = HISTORICAL_MAPS.find(m => m.id === notePoint.mapId);
+    if (!matchingMap) return;
+
+    setSearchQuery('');
+    setShowSearchResults(false);
+
+    if (matchingMap.id === selectedMap.id) {
+      const map = mapRef.current;
+      if (map) {
+        const sidebarWidth = isSidebarCollapsed ? 40 : 340;
+        map.easeTo({
+          center: [notePoint.lng, notePoint.lat],
+          zoom: Math.max(3, map.getZoom()),
+          padding: { left: sidebarWidth },
+          duration: 1000,
+          essential: true
+        });
+      }
+    } else {
+      pendingTargetPointRef.current = { lng: notePoint.lng, lat: notePoint.lat };
+      setSelectedMap(matchingMap);
+    }
+  };
+
   const [expandedEras, setExpandedEras] = useState<Record<string, boolean>>(() => {
     const initialMap = HISTORICAL_MAPS[0];
     return {
@@ -668,6 +956,18 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
       }));
     }
   }, [selectedMap]);
+
+  // Scroll selected map card into view in the sidebar
+  useEffect(() => {
+    if (!selectedMap) return;
+    const timer = setTimeout(() => {
+      const element = document.getElementById(`map-card-${selectedMap.id}`);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }, 150);
+    return () => clearTimeout(timer);
+  }, [selectedMap.id]);
 
   
   // Note Submission state
@@ -841,6 +1141,7 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
 
     map.on('load', () => {
       updateMapOverlay(map, selectedMap, mapImageUrl);
+      updateHotspotsOverlay(map, selectedMap.id);
       setIsMapReady(true);
     });
 
@@ -858,12 +1159,13 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
     };
   }, []); // Run once on mount
 
-  // 4. Update the raster image URL & coordinates when selection or fetched image url updates
+  // 4. Update the raster image URL, coordinates, and hotspots when selection or fetched image url updates
   useEffect(() => {
     const map = mapRef.current;
     if (!map || !isMapReady) return;
 
     updateMapOverlay(map, selectedMap, mapImageUrl);
+    updateHotspotsOverlay(map, selectedMap.id);
   }, [selectedMap.id, mapImageUrl, isMapReady]);
 
   // 5. Position camera and trigger entry zoom-in animation when the new map image finishes loading
@@ -901,9 +1203,12 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
     minZoomLimitRef.current = dynamicMinZoom;
     map.setMinZoom(dynamicMinZoom);
 
+    const pendingTarget = pendingTargetPointRef.current;
     const targetZoom = selectedMap.aspectRatio < visibleAspectRatio ? zoomWidth : zoomHeight;
     setCoverZoom(targetZoom);
-    const snapCenter: [number, number] = [0, 0];
+    const snapCenter: [number, number] = pendingTarget 
+      ? [pendingTarget.lng, pendingTarget.lat] 
+      : [0, 0];
     targetCenterRef.current = snapCenter;
 
     // Snap instantly to the new map's center, scaled down to 50% size (1.0 zoom level down)
@@ -929,11 +1234,13 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
 
       activeMap.easeTo({
         center: snapCenter,
-        zoom: targetZoom,
+        zoom: pendingTarget ? Math.max(3, targetZoom) : targetZoom,
         padding: { left: sidebarWidth },
         duration: 1200,
         essential: true
       });
+      // Clear pending target point after use
+      pendingTargetPointRef.current = null;
     });
   }, [mapImageUrl, isMapReady]);
 
@@ -1109,6 +1416,94 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
       console.warn("Failed to set Mapbox background paint:", e);
     }
   }, [isMapDarkMode, isMapReady]);
+
+  // 7.5. Handle translation hotspot interactions (hover highlights and popups)
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !isMapReady) return;
+
+    let hoveredHotspotId: string | number | null = null;
+
+    const handleMouseMove = (e: any) => {
+      if (e.features && e.features.length > 0) {
+        map.getCanvas().style.cursor = 'pointer';
+        const feature = e.features[0];
+        const featureId = feature.id || feature.properties?.id;
+
+        if (hoveredHotspotId !== featureId) {
+          if (hoveredHotspotId !== null) {
+            map.setFeatureState(
+              { source: 'hotspots-src', id: hoveredHotspotId },
+              { hover: false }
+            );
+          }
+
+          hoveredHotspotId = featureId;
+          if (hoveredHotspotId !== null) {
+            map.setFeatureState(
+              { source: 'hotspots-src', id: hoveredHotspotId },
+              { hover: true }
+            );
+          }
+
+          if (hoverPopupRef.current) {
+            const props = feature.properties;
+            const tooltipContainer = document.createElement('div');
+            tooltipContainer.className = 'label-fade-in';
+            tooltipContainer.style.background = '#000000';
+            tooltipContainer.style.color = '#ffffff';
+            tooltipContainer.style.border = `1px solid ${theme.border}`;
+            tooltipContainer.style.padding = '12px';
+            tooltipContainer.style.borderRadius = '8px';
+            tooltipContainer.style.fontSize = '11px';
+            tooltipContainer.style.fontFamily = '"Space Mono", monospace';
+            tooltipContainer.style.maxWidth = '250px';
+            tooltipContainer.style.pointerEvents = 'none'; // Critical hover stability fix!
+            tooltipContainer.style.boxShadow = '0 4px 20px rgba(0,0,0,0.5)';
+
+            tooltipContainer.innerHTML = `
+              <div style="font-weight: bold; border-bottom: 1px solid ${theme.borderLight}; padding-bottom: 4px; margin-bottom: 6px; color: #74F8F3; font-family: 'Space Mono', monospace;">${props.name}</div>
+              <div style="font-style: italic; margin-bottom: 4px; font-family: 'Space Mono', monospace; color: #ffffff;">"${props.originalText}"</div>
+              <div style="font-weight: bold; margin-bottom: 6px; color: #ffffff; font-family: 'Space Mono', monospace;">→ ${props.translatedText}</div>
+              <div style="font-size: 9px; opacity: 0.85; color: #bbbbbb; line-height: 12px; font-family: 'Space Mono', monospace;">${props.context}</div>
+            `;
+
+            hoverPopupRef.current
+              .setLngLat(e.lngLat)
+              .setDOMContent(tooltipContainer)
+              .addTo(map);
+          }
+        }
+      }
+    };
+
+    const handleMouseLeave = () => {
+      map.getCanvas().style.cursor = '';
+      if (hoveredHotspotId !== null) {
+        map.setFeatureState(
+          { source: 'hotspots-src', id: hoveredHotspotId },
+          { hover: false }
+        );
+        hoveredHotspotId = null;
+      }
+      if (hoverPopupRef.current) {
+        hoverPopupRef.current.remove();
+      }
+    };
+
+    map.on('mousemove', 'hotspots-fill', handleMouseMove);
+    map.on('mouseleave', 'hotspots-fill', handleMouseLeave);
+
+    return () => {
+      if (map) {
+        map.off('mousemove', 'hotspots-fill', handleMouseMove);
+        map.off('mouseleave', 'hotspots-fill', handleMouseLeave);
+      }
+      if (hoverPopupRef.current) {
+        hoverPopupRef.current.remove();
+      }
+    };
+  }, [isMapDarkMode, theme, isMapReady]);
 
   // 8. Render markers onto the Mapbox instance with dynamic zoom scaling
   useEffect(() => {
@@ -1457,6 +1852,177 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
           </span>
         </div>
 
+        {/* SEARCH BAR CONTAINER */}
+        <div style={{ padding: '16px', borderBottom: `1px solid ${theme.border}`, background: theme.bg, flexShrink: 0, zIndex: 100 }}>
+          <div style={{ position: 'relative', width: '100%' }}>
+            <input 
+              type="text" 
+              placeholder="SEARCH HISTORICAL MAPS OR NOTES..." 
+              value={searchQuery}
+              onFocus={() => setShowSearchResults(true)}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              onKeyDown={(e) => {
+                if (!showSearchResults || totalResultsCount === 0) return;
+
+                if (e.key === 'ArrowDown') {
+                  e.preventDefault();
+                  setSearchActiveIndex(prev => (prev + 1) % totalResultsCount);
+                } else if (e.key === 'ArrowUp') {
+                  e.preventDefault();
+                  setSearchActiveIndex(prev => (prev - 1 + totalResultsCount) % totalResultsCount);
+                } else if (e.key === 'Enter') {
+                  if (searchActiveIndex >= 0 && searchActiveIndex < totalResultsCount) {
+                    e.preventDefault();
+                    if (searchActiveIndex < visibleMaps.length) {
+                      handleMapSelect(visibleMaps[searchActiveIndex]);
+                    } else {
+                      handleNoteSelect(visibleNotes[searchActiveIndex - visibleMaps.length]);
+                    }
+                  }
+                } else if (e.key === 'Escape') {
+                  setShowSearchResults(false);
+                }
+              }}
+              style={{
+                width: '100%',
+                padding: '10px 32px 10px 12px',
+                fontSize: '11px',
+                fontFamily: '"Space Mono", monospace',
+                border: `1px solid ${theme.border}`,
+                borderRadius: '0px',
+                outline: 'none',
+                boxSizing: 'border-box',
+                background: isMapDarkMode ? '#000000' : '#ffffff',
+                color: theme.text
+              }}
+            />
+            {searchQuery && (
+              <motion.button
+                whileHover={{ opacity: 0.7 }}
+                onClick={() => {
+                  setSearchQuery('');
+                }}
+                style={{
+                  position: 'absolute',
+                  right: '8px',
+                  top: '50%',
+                  transform: 'translateY(-50%)',
+                  background: 'none',
+                  border: 'none',
+                  cursor: 'pointer',
+                  padding: '4px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  zIndex: 21
+                }}
+              >
+                <X size={14} color={theme.text} />
+              </motion.button>
+            )}
+
+            {/* SEARCH RESULTS DROPDOWN */}
+            <AnimatePresence>
+              {showSearchResults && (searchQuery.trim().length > 1) && (
+                <>
+                  {/* OVERLAY TO CLOSE DROPDOWN */}
+                  <div 
+                    style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, zIndex: 999 }} 
+                    onClick={() => setShowSearchResults(false)}
+                  />
+                  
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    style={{
+                      position: 'absolute',
+                      top: '42px',
+                      left: 0,
+                      right: 0,
+                      background: theme.bg,
+                      border: `1px solid ${theme.border}`,
+                      maxHeight: '400px',
+                      overflowY: 'auto',
+                      zIndex: 1000,
+                      boxShadow: isMapDarkMode ? '0 4px 20px rgba(0,0,0,0.5)' : '0 4px 12px rgba(0,0,0,0.1)'
+                    }}
+                  >
+                    {/* HISTORICAL MAPS */}
+                    {visibleMaps.length > 0 && (
+                      <div style={{ borderBottom: visibleNotes.length > 0 ? `1px solid ${theme.borderLight}` : 'none' }}>
+                        <div style={{ padding: '8px 12px', fontSize: '10px', background: isMapDarkMode ? '#1a1a1a' : '#f8f8f8', borderBottom: `1px solid ${theme.borderLight}`, fontWeight: 'bold', color: theme.text }}>HISTORICAL MAPS</div>
+                        {visibleMaps.map((hMap, idx) => {
+                          const isSelected = searchActiveIndex === idx;
+                          return (
+                            <div 
+                              key={`map-${hMap.id}`}
+                              onClick={() => handleMapSelect(hMap)}
+                              className={isMapDarkMode ? "hover:bg-gray-800" : "hover:bg-gray-50"}
+                              style={{ 
+                                padding: '10px 12px', 
+                                cursor: 'pointer', 
+                                borderBottom: idx < visibleMaps.length - 1 ? `1px solid ${theme.borderLight}` : 'none', 
+                                display: 'flex', 
+                                alignItems: 'center', 
+                                gap: '8px',
+                                background: isSelected ? (isMapDarkMode ? '#1f2937' : '#f3f4f6') : 'transparent'
+                              }}
+                            >
+                              <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: hMap.pinColor || '#FF5E97' }} />
+                              <div style={{ display: 'flex', flexDirection: 'column' }}>
+                                <span style={{ fontSize: '11px', fontWeight: 'bold', color: theme.text }}>{hMap.name}</span>
+                                <span style={{ fontSize: '9px', color: theme.textDim }}>{hMap.year}</span>
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    )}
+
+                    {/* MAP PINS / NOTES */}
+                    {visibleNotes.length > 0 && (
+                      <div>
+                        <div style={{ padding: '8px 12px', fontSize: '10px', background: isMapDarkMode ? '#1a1a1a' : '#f8f8f8', borderBottom: `1px solid ${theme.borderLight}`, fontWeight: 'bold', color: theme.text }}>MAP PINS / NOTES</div>
+                        {visibleNotes.map((notePoint, idx) => {
+                          const isSelected = searchActiveIndex === visibleMaps.length + idx;
+                          const noteMap = HISTORICAL_MAPS.find(m => m.id === notePoint.mapId);
+                          return (
+                            <div 
+                              key={`note-${notePoint.id}`}
+                              onClick={() => handleNoteSelect(notePoint)}
+                              className={isMapDarkMode ? "hover:bg-gray-800" : "hover:bg-gray-50"}
+                              style={{ 
+                                padding: '10px 12px', 
+                                cursor: 'pointer', 
+                                borderBottom: idx < visibleNotes.length - 1 ? `1px solid ${theme.borderLight}` : 'none', 
+                                display: 'flex', 
+                                alignItems: 'center', 
+                                gap: '8px',
+                                background: isSelected ? (isMapDarkMode ? '#1f2937' : '#f3f4f6') : 'transparent'
+                              }}
+                            >
+                              <img src="/icons/icon-map-pin.svg" style={{ width: '12px', filter: theme.invert }} alt="pin" />
+                              <div style={{ display: 'flex', flexDirection: 'column' }}>
+                                <span style={{ fontSize: '11px', color: theme.text }}>{notePoint.note}</span>
+                                <span style={{ fontSize: '9px', color: theme.textDim }}>Map: {noteMap?.name || 'Unknown'}</span>
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    )}
+
+                    {visibleMaps.length === 0 && visibleNotes.length === 0 && (
+                      <div style={{ padding: '20px', textAlign: 'center', fontSize: '11px', color: '#999' }}>NO RESULTS FOUND</div>
+                    )}
+                  </motion.div>
+                </>
+              )}
+            </AnimatePresence>
+          </div>
+        </div>
+
         {/* MAP GALLERY SELECTOR LIST */}
         <div 
           id="cartography-scrollbar"
@@ -1518,6 +2084,7 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
                       return (
                         <motion.div
                           key={hMap.id}
+                          id={`map-card-${hMap.id}`}
                           onClick={() => setSelectedMap(hMap)}
                           role="button"
                           tabIndex={0}

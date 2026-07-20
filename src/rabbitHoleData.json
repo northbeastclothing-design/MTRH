@@ -32665,5 +32665,523 @@
     "images": [
       "https://upload.wikimedia.org/wikipedia/commons/1/15/Hope_Diamond.jpg"
     ]
+  },
+  {
+    "id": "medimi",
+    "name": "Medimi (John Dee's Angel)",
+    "category": "The Occult",
+    "type": "Point",
+    "coordinates": {
+      "lng": -0.270,
+      "lat": 51.467
+    },
+    "description": "An angelic entity who appeared to John Dee and Edward Kelley during their scrying sessions. Medimi appeared as a young girl, delivering Enochian letters, spiritual messages, and instructions for alchemical works.",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/John_Dee_Ashmolean.jpg/1280px-John_Dee_Ashmolean.jpg"
+    ]
+  },
+  {
+    "id": "hellfire-club",
+    "name": "The Hellfire Club",
+    "category": "The Occult",
+    "type": "Point",
+    "coordinates": {
+      "lng": -0.798,
+      "lat": 51.634
+    },
+    "description": "An exclusive association founded in 1746 by Sir Francis Dashwood, comprising prominent British politicians and societal elites. The club met at West Wycombe Caves and Medmenham Abbey, participating in parodies of religious rituals, pagan devotion, and hedonistic feasts, sparking widespread rumors of Satanism and political collusion.",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/The_Hellfire_Club%2C_Dublin.jpg/1280px-The_Hellfire_Club%2C_Dublin.jpg"
+    ]
+  },
+  {
+    "id": "solomon",
+    "name": "Solomon",
+    "category": "Biblical Figures",
+    "type": "Point",
+    "coordinates": {
+      "lng": 35.2354,
+      "lat": 31.7780
+    },
+    "description": "King of Israel and builder of the First Temple in Jerusalem. Renowned for his wisdom, wealth, and power, he is also prominent in esoteric traditions (such as the Testament of Solomon and Kabbalah) as a master exorcist who commanded demons to build the temple using a magical signet ring.",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Simeon_Solomon%2C_King_Solomon%2C_1872_or_1874%2C_NGA_76152_%28cropped%29.jpg/1280px-Simeon_Solomon%2C_King_Solomon%2C_1872_or_1874%2C_NGA_76152_%28cropped%29.jpg"
+    ]
+  },
+  {
+    "id": "lesser-key-solomon",
+    "name": "The Lesser Key of Solomon",
+    "category": "The Occult",
+    "type": "Point",
+    "coordinates": {
+      "lng": 35.2354,
+      "lat": 31.7780
+    },
+    "description": "An anonymous 17th-century grimoire of ceremonial magic, compiling demonological lore and magical pentacles. It describes the seventy-two demons allegedly bound and commanded by King Solomon, establishing a cornerstone of modern Goetic magic.",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Goetia_seal_of_solomon.svg/1280px-Goetia_seal_of_solomon.svg.png"
+    ]
+  },
+  {
+    "id": "black-sun",
+    "name": "Black Sun",
+    "category": "The Occult",
+    "type": "Point",
+    "coordinates": {
+      "lng": 8.650,
+      "lat": 51.606
+    },
+    "description": "An esoteric symbol consisting of twelve radial sig runes, famously depicted as a green or black mosaic on the floor of Wewelsburg Castle. In occult conspiracy lore, it is associated with Nazi mysticism, Vril energy, and secret polar societies.",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/BlackSun.svg/500px-BlackSun.svg.png"
+    ]
+  },
+  {
+    "id": "princess-diana",
+    "name": "Princess Diana",
+    "category": "Government Conspiracies",
+    "type": "Point",
+    "coordinates": {
+      "lng": 2.3018,
+      "lat": 48.8643
+    },
+    "description": "Princess of Wales whose tragic death in a Paris car crash in 1997 sparked a multitude of conspiracy theories. Theories range from allegations of MI6 involvement and royal orchestration to theories involving ritual symbolism and paparazzi setups.",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Diana%2C_Princess_of_Wales_1997_%282%29.jpg/500px-Diana%2C_Princess_of_Wales_1997_%282%29.jpg"
+    ]
+  },
+  {
+    "id": "derinkuyu",
+    "name": "Derinkuyu Underground City",
+    "category": "Underworld Entrances",
+    "type": "Point",
+    "coordinates": {
+      "lng": 34.7352,
+      "lat": 38.3736
+    },
+    "description": "An ancient multi-level underground city in Turkey, large enough to shelter 20,000 people along with livestock and food stores.",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Derinkuyu_Underground_City_9910_Nevit.jpg/960px-Derinkuyu_Underground_City_9910_Nevit.jpg"
+    ]
+  },
+  {
+    "id": "aryan-race",
+    "name": "Aryan Race",
+    "category": "Ancient People Groups",
+    "type": "Point",
+    "coordinates": {
+      "lng": 66.897,
+      "lat": 36.758
+    },
+    "description": "A term historically referring to Indo-Iranian language speakers in antiquity, which was co-opted by 19th and 20th-century racial theorists and occult groups (such as the Thule Society) to describe a hypothetical, superior primordial race linked to lost continents like Hyperborea or Atlantis.",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Max_Muller.jpg/1280px-Max_Muller.jpg"
+    ]
+  },
+  {
+    "id": "ebstorf-map",
+    "name": "Ebstorf Map",
+    "category": "Ancient Texts",
+    "type": "Point",
+    "coordinates": {
+      "lng": 10.4128,
+      "lat": 53.0311
+    },
+    "description": "A monumental 13th-century medieval Mappa Mundi discovered in Ebstorf Abbey. Map shows the world as the body of Christ, with Jerusalem at the center, containing numerous depictions of mythological beasts, monsters, and biblical events.",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Ebstorfer_Weltkarte_2.jpg/500px-Ebstorfer_Weltkarte_2.jpg"
+    ]
+  },
+  {
+    "id": "wyvern",
+    "name": "Wyvern",
+    "category": "Myths / Legends",
+    "type": "Point",
+    "coordinates": {
+      "lng": -2.719,
+      "lat": 51.812
+    },
+    "description": "A legendary winged dragon-like creature in European folklore and heraldry, depicted with two legs, two wings, and a barbed tail. Associated with strength, war, and protection in medieval Welsh and British heraldic traditions.",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Y_Draig_Aur_Owain_Glynd%C5%B5r.jpg/250px-Y_Draig_Aur_Owain_Glynd%C5%B5r.jpg"
+    ]
+  },
+  {
+    "id": "rachels-tomb",
+    "name": "Rachel's Tomb",
+    "category": "Biblical Discoveries",
+    "type": "Point",
+    "coordinates": {
+      "lng": 35.2012,
+      "lat": 31.7067
+    },
+    "description": "The traditional burial site of the biblical matriarch Rachel, wife of Jacob. Located near Bethlehem, it has been a sacred site of pilgrimage for Jews, Christians, and Muslims for millennia, symbolizing maternal protection and redemption.",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/%D7%91%D7%99%D7%AA_%D7%9C%D7%97%D7%9D_-_%D7%A7%D7%91%D7%A8_%D7%A8%D7%97%D7%9C-JNF016063.jpeg/1280px-%D7%91%D7%99%D7%AA_%D7%9C%D7%97%D7%9D_-_%D7%A7%D7%91%D7%A8_%D7%A8%D7%97%D7%9C-JNF016063.jpeg"
+    ]
+  },
+  {
+    "id": "jesuits",
+    "name": "Jesuits",
+    "category": "The Occult",
+    "type": "Point",
+    "coordinates": {
+      "lng": 12.4798,
+      "lat": 41.8959
+    },
+    "description": "The Society of Jesus, a religious order of the Catholic Church founded in 1540 by Ignatius of Loyola. In political and occult conspiracy theories, the Jesuits are frequently cast as an omnipotent secret network operating behind major historical events and controlling global education and science.",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Ihs-logo.svg/960px-Ihs-logo.svg.png"
+    ]
+  },
+  {
+    "id": "nazarites",
+    "name": "Nazarites",
+    "category": "Biblical Figures",
+    "type": "Point",
+    "coordinates": {
+      "lng": 35.2895,
+      "lat": 32.0558
+    },
+    "description": "Individuals in ancient Israel who took a sacred vow of consecration to God, undertaking to abstain from alcohol, avoid cutting their hair, and remain ritually pure. Famous historical Nazarites include Samson, Samuel, and John the Baptist.",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Lucas_Cranach_d.%C3%84._-_Simson_bezwingt_den_L%C3%B6wen.jpg/1280px-Lucas_Cranach_d.%C3%84._-_Simson_bezwingt_den_L%C3%B6wen.jpg"
+    ]
+  },
+  {
+    "id": "stylites",
+    "name": "Stylites",
+    "category": "Religion",
+    "type": "Point",
+    "coordinates": {
+      "lng": 36.8436,
+      "lat": 36.3342
+    },
+    "description": "Christian ascetics in the early Byzantine Empire who stood on platforms atop high pillars (stylos) to pray and fast, living there for years or decades in extreme self-denial to draw closer to the divine.",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Simeon_Stylites_the_Elder_and_Simeon_Stylites_the_Younger%2C_1699.jpg/960px-Simeon_Stylites_the_Elder_and_Simeon_Stylites_the_Younger%2C_1699.jpg"
+    ]
+  },
+  {
+    "id": "jack-sarfatti",
+    "name": "Jack Sarfatti",
+    "category": "UFOs - Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -122.4194,
+      "lat": 37.7749
+    },
+    "description": "An American theoretical physicist known for his controversial ideas on quantum consciousness, back-reaction, and faster-than-light travel. He has worked on the physics of UFO propulsion and claims to have received mysterious phone calls from a computer aboard a spacecraft in his youth.",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Jack_Sarfatti_%28cropped%29_2.jpg/1280px-Jack_Sarfatti_%28cropped%29_2.jpg"
+    ]
+  },
+  {
+    "id": "cults",
+    "name": "Cults",
+    "category": "The Occult",
+    "type": "Point",
+    "coordinates": {
+      "lng": -59.897,
+      "lat": 7.705
+    },
+    "description": "Highly cohesive spiritual or philosophical groups defined by intense devotion to a charismatic leader and isolation from mainstream society. Historically scrutinized for psychological coercion, secret doctrines, and catastrophic terminations.",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Peoples_Temple_logo.svg/1280px-Peoples_Temple_logo.svg.png"
+    ]
+  },
+  {
+    "id": "mennonite",
+    "name": "Mennonites",
+    "category": "Religion",
+    "type": "Point",
+    "coordinates": {
+      "lng": 8.5417,
+      "lat": 47.3769
+    },
+    "description": "A Christian denomination originating during the 16th-century Protestant Reformation, characterized by Anabaptist theology, strict pacifism, simple living, and community-centered lifestyle practices.",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Mennonite_World_Conference_logo.svg/500px-Mennonite_World_Conference_logo.svg.png"
+    ]
+  },
+  {
+    "id": "phil-schneider",
+    "name": "Phil Schneider",
+    "category": "UFOs - Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -106.9856,
+      "lat": 36.9392
+    },
+    "description": "An explosive whistleblower and structural engineer who claimed to have participated in the construction of deep underground military bases (D.U.M.B.s). He famously claimed to have survived a violent underground shootout with gray extraterrestrials at Dulce Base in 1979 before dying under mysterious circumstances in 1996.",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/PHIL_SCHNEIDER.jpg/500px-PHIL_SCHNEIDER.jpg"
+    ]
+  },
+  {
+    "id": "chronovisor",
+    "name": "Chronovisor",
+    "category": "Portals / Stargates",
+    "type": "Point",
+    "coordinates": {
+      "lng": 12.4534,
+      "lat": 41.9029
+    },
+    "description": "A legendary time-viewer device allegedly constructed in the 1950s by an international team of scientists, including Father Pellegrino Ernetti. The device was rumored to detect electromagnetic residue left by past events, allowing users to view historical events like the crucifixion of Christ.",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Cripta_Santuario_Amore_Misericordioso_Collevalenza.jpg/1280px-Cripta_Santuario_Amore_Misericordioso_Collevalenza.jpg"
+    ]
+  },
+  {
+    "id": "aeon-of-horus",
+    "name": "The Aeon of Horus",
+    "category": "The Occult",
+    "type": "Point",
+    "coordinates": {
+      "lng": 31.1342,
+      "lat": 29.9792
+    },
+    "description": "A central concept in Aleister Crowley's spiritual system, Thelema. The Aeon of Horus is defined as the current era of human spiritual development, characterized by self-realization, individual liberty (\"Do what thou wilt\"), and the divine child archetype, superseding the prior Aeons of Isis and Osiris.",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Aleister_Crowley%2C_Golden_Dawn.jpg/500px-Aleister_Crowley%2C_Golden_Dawn.jpg"
+    ]
+  },
+  {
+    "id": "elohim",
+    "name": "Elohim",
+    "category": "Biblical Figures",
+    "type": "Point",
+    "coordinates": {
+      "lng": 35.7725,
+      "lat": 33.3164
+    },
+    "description": "The study of angels, heavenly hosts, and divine messengers. In biblical cosmology, it encompasses the angelic hierarchies, the heavenly council, and spiritual beings historically referred to by the Hebrew term Elohim.",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Elohim.svg/1280px-Elohim.svg.png"
+    ]
+  },
+  {
+    "id": "zouwu",
+    "name": "Zouwu",
+    "category": "Myths / Legends",
+    "type": "Point",
+    "coordinates": {
+      "lng": 94.25,
+      "lat": 36.25
+    },
+    "description": "A legendary, benevolent beast in ancient Chinese mythology, described in the Shan Hai Jing (Classic of Mountains and Seas) as a forest creature the size of a tiger, possessing a multi-colored pattern and a tail longer than its body, capable of traveling immense distances in a single bound.",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Imperial_Encyclopaedia_-_Animal_Kingdom_-_pic152_-_%E9%A8%B6%E8%99%9E%E5%9C%96.png/1280px-Imperial_Encyclopaedia_-_Animal_Kingdom_-_pic152_-_%E9%A8%B6%E8%99%9E%E5%9C%96.png"
+    ]
+  },
+  {
+    "id": "shuimu",
+    "name": "Shuimu",
+    "category": "Myths / Legends",
+    "type": "Point",
+    "coordinates": {
+      "lng": 112.4419,
+      "lat": 37.7081
+    },
+    "description": "Also known as Shuimu Niangniang (Water Mother Goddess), a Chinese deity of springs and rivers in Taoist and folk traditions. Associated with fertility, rain, and water purification, she is historically worshipped in temples near natural springs.",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Goddess_Temple_Jinsi.JPG/1280px-Goddess_Temple_Jinsi.JPG"
+    ]
+  },
+  {
+    "id": "shui-gui",
+    "name": "Shui Gui",
+    "category": "Myths / Legends",
+    "type": "Point",
+    "coordinates": {
+      "lng": 114.3055,
+      "lat": 30.5928
+    },
+    "description": "Water ghosts in Chinese folklore, representing the spirits of drowned individuals who lurk in rivers, lakes, and pools. Legend says they attempt to drag swimmers underwater to steal their life force in order to achieve reincarnation.",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/%E6%98%8E_%E9%83%91%E9%87%8D_%E6%90%9C%E5%B1%B1%E5%9B%BE17.jpg/1280px-%E6%98%8E_%E9%83%91%E9%87%8D_%E6%90%9C%E5%B1%B1%E5%9B%BE17.jpg"
+    ]
+  },
+  {
+    "id": "shui-hu",
+    "name": "Shui Hu",
+    "category": "Myths / Legends",
+    "type": "Point",
+    "coordinates": {
+      "lng": 136.0333,
+      "lat": 35.3333
+    },
+    "description": "An amphibious water-dwelling creature in Chinese and Japanese (Kappa) folklore. Described as child-sized with webbed hands, a turtle-like shell, and a fluid-filled cavity on top of its head which holds its magical power.",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Kyoka_Hyaku-Monogatari_Kappa.jpg/500px-Kyoka_Hyaku-Monogatari_Kappa.jpg"
+    ]
+  },
+  {
+    "id": "wangxiang",
+    "name": "Wangxiang",
+    "category": "Myths / Legends",
+    "type": "Point",
+    "coordinates": {
+      "lng": 117.1000,
+      "lat": 36.2500
+    },
+    "description": "A mythical, mountain-dwelling spirit in ancient Chinese folklore, described as a multi-legged shape-shifting creature that feeds on the souls of the deceased or leads travelers astray in dense forests.",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/NLC403-312001066437-18606_%E5%B1%B1%E6%B5%B7%E7%B6%93_%E5%8D%B7%E4%BA%94.pdf/page1-1280px-NLC403-312001066437-18606_%E5%B1%B1%E6%B5%B7%E7%B6%93_%E5%8D%B7%E4%BA%94.pdf.jpg"
+    ]
+  },
+  {
+    "id": "mjolnir",
+    "name": "Mjölnir",
+    "category": "Myths / Legends",
+    "type": "Point",
+    "coordinates": {
+      "lng": 17.6333,
+      "lat": 59.8333
+    },
+    "description": "The legendary hammer of Thor, the Norse god of thunder. Crafted by the dwarves Brokkr and Sindri, Mjölnir was capable of leveling mountains and would always return to Thor's hand, serving as a powerful symbol of protection and divine order.",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Claes_Kurck_Sk%C3%A5ne_hammer_-_HST_DIG55488_original.jpg/1280px-Claes_Kurck_Sk%C3%A5ne_hammer_-_HST_DIG55488_original.jpg"
+    ]
+  },
+  {
+    "id": "excalibur",
+    "name": "Excalibur",
+    "category": "Myths / Legends",
+    "type": "Point",
+    "coordinates": {
+      "lng": -4.598,
+      "lat": 50.505
+    },
+    "description": "The legendary sword of King Arthur, possessing magical properties and symbolizing sovereign authority over Britain. In Arthurian romance, it was given to Arthur by the Lady of the Lake and later returned to her upon his death.",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Arthur-Pyle_Excalibur_the_Sword.JPG/500px-Arthur-Pyle_Excalibur_the_Sword.JPG"
+    ]
+  },
+  {
+    "id": "atenism",
+    "name": "Atenism",
+    "category": "Religion",
+    "type": "Point",
+    "coordinates": {
+      "lng": 30.898,
+      "lat": 27.636
+    },
+    "description": "The ancient Egyptian religious movement founded by Pharaoh Akhenaten in the 14th century BCE, centered on the sole worship of the sun-disk deity Aten. It represents one of the earliest documented forms of monotheism, which alternative historians frequently link to the origins of Abrahamic religions.",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/La_salle_dAkhenaton_%281356-1340_av_J.C.%29_%28Mus%C3%A9e_du_Caire%29_%282076972086%29.jpg/500px-La_salle_dAkhenaton_%281356-1340_av_J.C.%29_%28Mus%C3%A9e_du_Caire%29_%282076972086%29.jpg"
+    ]
+  },
+  {
+    "id": "ark-of-the-covenant",
+    "name": "Ark of the Covenant",
+    "category": "Biblical Discoveries",
+    "type": "Point",
+    "coordinates": {
+      "lng": 38.7186,
+      "lat": 14.1302
+    },
+    "description": "A sacred, gold-plated wooden chest described in the Book of Exodus as containing the stone tablets of the Ten Commandments. According to biblical tradition, it possessed immense power, leveling city walls and striking down those who touched it, and its current whereabouts remain one of history's greatest mysteries.",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Tissot_Moses_and_Joshua_in_the_Tabernacle.jpg/1280px-Tissot_Moses_and_Joshua_in_the_Tabernacle.jpg"
+    ]
+  },
+  {
+    "id": "ant-people",
+    "name": "The Ant People",
+    "category": "Myths / Legends",
+    "type": "Point",
+    "coordinates": {
+      "lng": -110.6394,
+      "lat": 35.8756
+    },
+    "description": "Benevolent subterranean creatures in Hopi mythology who sheltered early humans in their underground caves during the destruction of the First and Second Worlds. Ancient astronaut theorists compare the Ant People (Anu Sinom) to Sumerian accounts of the Anunnaki.",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Hopi_woman_with_a_traditional_pot_and_traditional_clothing.png/500px-Hopi_woman_with_a_traditional_pot_and_traditional_clothing.png"
+    ]
+  },
+  {
+    "id": "doeg",
+    "name": "Doeg",
+    "category": "Biblical Figures",
+    "type": "Point",
+    "coordinates": {
+      "lng": 35.244,
+      "lat": 31.792
+    },
+    "description": "Doeg the Edomite, an official under King Saul who is infamous in the biblical account for executing eighty-five priests at Saul's command in the city of Nob, after they aided David.",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Psalm_51%2C_Quit_gloriaris_in_malitia%2C_qui_potens_es_in_iniquitate%2C_Doeh_kills_Achimelech_en_the_priests_of_Nob_-_Psalter_of_Eleanor_of_Aquitaine_%28ca._1185%29_-_KB_76_F_13%2C_folium_074v_%28cropped%29.jpg/1280px-Psalm_51%2C_Quit_gloriaris_in_malitia%2C_qui_potens_es_in_iniquitate%2C_Doeh_kills_Achimelech_en_the_priests_of_Nob_-_Psalter_of_Eleanor_of_Aquitaine_%28ca._1185%29_-_KB_76_F_13%2C_folium_074v_%28cropped%29.jpg"
+    ]
+  },
+  {
+    "id": "atlantis",
+    "name": "Atlantis (Richat Structure)",
+    "category": "Megaliths / Structures",
+    "type": "Point",
+    "coordinates": {
+      "lng": -11.4028,
+      "lat": 21.1278
+    },
+    "description": "The legendary advanced island civilization first described by the Greek philosopher Plato. While traditionally searched for in the Atlantic Ocean, modern alternative theorists identify the concentric ringed geological formation of the Richat Structure in Mauritania as a prime candidate for the physical ruins of Atlantis.",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Richat_Structure_ISS030-E-12516.jpg/250px-Richat_Structure_ISS030-E-12516.jpg"
+    ]
+  },
+  {
+    "id": "enochian-language",
+    "name": "Enochian Language",
+    "category": "The Occult",
+    "type": "Point",
+    "coordinates": {
+      "lng": -0.270,
+      "lat": 51.467
+    },
+    "description": "An occult or angelic language recorded in the private journals of John Dee and Edward Kelley in late 16th-century England. They claimed the language was revealed to them directly by angels and was the original language spoken by Adam and Enoch.",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/John_Dee_Ashmolean.jpg/1280px-John_Dee_Ashmolean.jpg"
+    ]
+  },
+  {
+    "id": "john-dee",
+    "name": "John Dee",
+    "category": "The Occult",
+    "type": "Point",
+    "coordinates": {
+      "lng": -0.270,
+      "lat": 51.467
+    },
+    "description": "English mathematician, astronomer, astrologer, occultist, and advisor to Queen Elizabeth I. He devoted much of his life to alchemy, divination, and Hermetic philosophy, famously attempting to contact angels with Edward Kelley.",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/John_Dee_Ashmolean.jpg/250px-John_Dee_Ashmolean.jpg"
+    ]
+  },
+  {
+    "id": "edward-kelley",
+    "name": "Edward Kelley",
+    "category": "The Occult",
+    "type": "Point",
+    "coordinates": {
+      "lng": -0.270,
+      "lat": 51.467
+    },
+    "description": "An English Renaissance medium, alchemist, and scryer. He worked closely with John Dee, acting as the primary medium to channel the Enochian language and spiritual communications from angelic entities, and later claimed to have achieved the transmutation of base metals into gold in Prague.",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Edward_Kelly_prophet_or_seer_to_Dr_Dee_02355.jpg/1280px-Edward_Kelly_prophet_or_seer_to_Dr_Dee_02355.jpg"
+    ]
+  },
+  {
+    "id": "voynich-manuscript",
+    "name": "The Voynich Manuscript",
+    "category": "Ancient Texts",
+    "type": "Point",
+    "coordinates": {
+      "lng": 12.6978,
+      "lat": 41.8086
+    },
+    "description": "An illustrated medieval codex written in an unknown writing system (Voynich script). Carbon-dated to the early 15th century, the manuscript contains botanical, astronomical, biological, and cosmological drawings, and has resisted all attempts at decryption.",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Voynich_Manuscript_%2832%29.jpg/500px-Voynich_Manuscript_%2832%29.jpg"
+    ]
   }
 ]
