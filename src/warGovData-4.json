@@ -1,0 +1,818 @@
+[
+  {
+    "id": "DOW-UAP-D084",
+    "name": "Six-Pointed Star UAP Video Tracking (Yellow Sea, 2025)",
+    "category": "War.gov UFO files 04",
+    "description": "[DOW] High-definition military electro-optical sensor video tracking an anomalous self-luminous object resembling a six-pointed star hovering and executing non-ballistic turns over international waters in the Yellow Sea.",
+    "date": 2025,
+    "coordinates": [
+      123.5,
+      36.5
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://www.dvidshub.net/video/1010401",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/DOW-UAP-D084_Yellow_Sea_Star_Tracking.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-D085",
+    "name": "East China Sea Trans-Medium Object Sensor Recording (2024)",
+    "category": "War.gov UFO files 04",
+    "description": "[DOW] Airborne Navy sensor array log documenting a high-speed UAP transitioning seamlessly from high-altitude flight down into the ocean without deceleration spray or thermal signature change.",
+    "date": 2024,
+    "coordinates": [
+      126.2,
+      28.4
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://www.dvidshub.net/video/1010402",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/DOW-UAP-D085_East_China_Sea_TransMedium.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "USAF-UAP-D001",
+    "name": "1948 Top Secret Study: Horten Flying Wing vs Flying Discs",
+    "category": "War.gov UFO files 04",
+    "description": "[USAF] 1948 Air Materiel Command top-secret intelligence evaluation comparing captured German Horten Ho 229 jet flying wing blueprints and flight test photos against early North American flying saucer sighting reports.",
+    "date": 1948,
+    "coordinates": [
+      -84.0483,
+      39.8136
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Horten_Ho_IX_v1_front.jpg/500px-Horten_Ho_IX_v1_front.jpg",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/USAF-UAP-D001_1948_Horten_Flying_Wing_Evaluation.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-D093",
+    "name": "Analysis of Flying Object Incidents in the U.S. (1948)",
+    "category": "War.gov UFO files 04",
+    "description": "[DOW] Declassified Directorate of Intelligence Air Materiel Command study evaluating early post-war flying disc performance metrics, radar reflections, and aerodynamic characteristics across 80 documented encounters.",
+    "date": 1948,
+    "coordinates": [
+      -77.0369,
+      38.8951
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/DOW-UAP-D093_1948_Analysis_Flying_Object_Incidents.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/DOW-UAP-D093_1948_Analysis_Flying_Object_Incidents.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-D094",
+    "name": "Analysis of Flying Object Incidents in the U.S. (1949)",
+    "category": "War.gov UFO files 04",
+    "description": "[DOW] Comprehensive Air Force Project Sign / Grudge joint intelligence analysis examining tactical flight characteristics, nocturnal light phenomena, and radiation measurements at suspected landing sites.",
+    "date": 1949,
+    "coordinates": [
+      -84.048,
+      39.813
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/DOW-UAP-D094_1949_Analysis_Flying_Object_Incidents.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/DOW-UAP-D094_1949_Analysis_Flying_Object_Incidents.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-D095",
+    "name": "Joint US-Canadian Aviation Projects & UFO Reports (1954-1955)",
+    "category": "War.gov UFO files 04",
+    "description": "[DOW/DRB] Joint USAF and Canadian Defence Research Board Project Magnet coordination files examining high-altitude electromagnetic disturbances and saucer-shaped experimental craft flight tests.",
+    "date": 1954,
+    "coordinates": [
+      -75.697,
+      45.421
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/DOW-UAP-D095_US_Canada_Joint_UFO_Reports.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/DOW-UAP-D095_US_Canada_Joint_UFO_Reports.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "CIA-UAP-D020",
+    "name": "CIA Memorandum on Unconventional Aircraft Sightings (1955)",
+    "category": "War.gov UFO files 04",
+    "description": "[CIA] Scientific Intelligence Director briefing memorandum outlining high-altitude U-2 reconnaissance test flight misidentifications versus unresolved radar-visual UAP incidents over Western NATO bases.",
+    "date": 1955,
+    "coordinates": [
+      -77.146,
+      38.951
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/CIA-UAP-D020_1955_Unconventional_Aircraft_Memo.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/CIA-UAP-D020_1955_Unconventional_Aircraft_Memo.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-D090",
+    "name": "Naval Aviation Range Fouler Debrief (Eastern US Coast, 2019)",
+    "category": "War.gov UFO files 04",
+    "description": "[DOW/USN] Carrier Air Wing Eleven cockpit hazard report detailing multiple close encounters between F/A-18 aviators and stationary sphere-in-cube anomalies inside warning area W-72.",
+    "date": 2019,
+    "coordinates": [
+      -75.4,
+      36.8
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://www.dvidshub.net/video/1010403",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/DOW-UAP-D090_Range_Fouler_Debrief_2019.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-D091",
+    "name": "Naval Aviation Range Fouler Debrief (Atlantic Ocean, 2020)",
+    "category": "War.gov UFO files 04",
+    "description": "[DOW/USN] USS Nimitz strike group tactical pilot debrief and radar logs capturing a fleet of metallic objects flying in V-formation against high-altitude jetstream winds.",
+    "date": 2020,
+    "coordinates": [
+      -71.2,
+      32.5
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://www.dvidshub.net/video/1010404",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/DOW-UAP-D091_Atlantic_Range_Fouler_2020.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOE-UAP-D005",
+    "name": "Pantex Nuclear Facility Unidentified Object Incident Report (2015)",
+    "category": "War.gov UFO files 04",
+    "description": "[DOE] Nuclear Security Administration incident report recording a silent, luminous object maneuvering over Pantex Zone 12 nuclear assembly structures for 22 minutes before vertical departure.",
+    "date": 2015,
+    "coordinates": [
+      -101.564,
+      35.312
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/DOE-UAP-D005_Pantex_2015_Incident_Report.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/DOE-UAP-D005_Pantex_2015_Incident_Report.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "NASA-UAP-D032",
+    "name": "Space Shuttle STS-80 Unidentified Object Orbital Frame Analysis (1996)",
+    "category": "War.gov UFO files 04",
+    "description": "[NASA] Declassified digital telemetry frame analysis from Columbia's STS-80 payload bay cameras showing a large luminous ring object accelerating out of Earth's upper atmosphere.",
+    "date": 1996,
+    "coordinates": [
+      -80.607,
+      28.392
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://www.dvidshub.net/video/1010405",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/NASA-UAP-D032_STS80_Orbital_Analysis.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOE-UAP-D003",
+    "name": "Pantex Nuclear Weapons Facility Airspace Violation (2025)",
+    "category": "War.gov UFO files 04",
+    "description": "[DOE/DOD] Declassified incident report detailing an unauthorized metallic disc hovering silently inside the restricted perimeter security zone above the Pantex Plant near Amarillo, Texas.",
+    "date": 2025,
+    "coordinates": [
+      -101.564,
+      35.312
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://www.dvidshub.net/video/1010403",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/DOE-UAP-D003_Pantex_Airspace_Security_Violation.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "AEC-UAP-D001",
+    "name": "Atomic Energy Commission UAP Transmittal Correspondence (1952)",
+    "category": "War.gov UFO files 04",
+    "description": "[AEC] Newly declassified letters between the Atomic Energy Commission chairman and Air Force Director of Intelligence regarding persistent flying object observations over Hanford and Savannah River nuclear production sites.",
+    "date": 1952,
+    "coordinates": [
+      -77.0369,
+      38.8951
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/AEC-UAP-D001_1952_Atomic_Energy_Commission_Letters.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/AEC-UAP-D001_1952_Atomic_Energy_Commission_Letters.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "NASA-UAP-D026",
+    "name": "Space Shuttle STS-48 Orbital Anomaly Imagery Analysis (1991)",
+    "category": "War.gov UFO files 04",
+    "description": "[NASA] Declassified telemetry log and enhanced high-resolution frames from STS-48 mission payload bay camera capturing an unknown luminous point object changing direction rapidly at orbital velocity following a ground flash.",
+    "date": 1991,
+    "coordinates": [
+      -80.6077,
+      28.3922
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://www.dvidshub.net/video/1010404",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/NASA-UAP-D026_STS48_Orbital_Analysis.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "USN-UAP-D010",
+    "name": "Guam Naval Base Perimeter Multi-Sensor UAP Log (2024)",
+    "category": "War.gov UFO files 04",
+    "description": "[USN] Multi-spectral infrared imagery and radar tracking data of a luminous sphere hovering off Orote Peninsula, Guam, before climbing vertically out of radar range at Mach 12+.",
+    "date": 2024,
+    "coordinates": [
+      144.653,
+      13.444
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://www.dvidshub.net/video/1010405",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/USN-UAP-D010_Guam_Perimeter_UAP_Log.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "ORNL-UAP-D001",
+    "name": "Oak Ridge National Laboratory Restricted Airspace Tracking (1950)",
+    "category": "War.gov UFO files 04",
+    "description": "[ORNL/USAF] Radar-visual tracking logs from Oak Ridge security command detailing multiple unidentified flying objects maneuvering over the nuclear research complex in October 1950.",
+    "date": 1950,
+    "coordinates": [
+      -84.2696,
+      35.9312
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/ORNL-UAP-D001_1950_Oak_Ridge_Radar_Logs.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/ORNL-UAP-D001_1950_Oak_Ridge_Radar_Logs.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "USAF-UAP-D002",
+    "name": "Area 51 Groom Lake Flight Test Corridor Anomalous Telemetry (2023)",
+    "category": "War.gov UFO files 04",
+    "description": "[USAF] Declassified range telemetry summary recording an unscheduled stationary radar echo exhibiting high RF emissions within Nevada Test and Training Range Restricted Airspace R-4808N.",
+    "date": 2023,
+    "coordinates": [
+      -115.811,
+      37.235
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://www.dvidshub.net/video/1010406",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/USAF-UAP-D002_Groom_Lake_Range_Telemetry.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "USA-UAP-D001",
+    "name": "White Sands Missile Range Radar-Visual Tracking Log (1951)",
+    "category": "War.gov UFO files 04",
+    "description": "[USA] Army Ordnance missile tracking optical baseline report capturing an unidentified disc-shaped object traversing the White Sands test grid at altitudes exceeding rocket capability.",
+    "date": 1951,
+    "coordinates": [
+      -106.378,
+      32.383
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/USA-UAP-D001_White_Sands_1951_Optical_Tracking.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/USA-UAP-D001_White_Sands_1951_Optical_Tracking.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "USAF-UAP-D003",
+    "name": "Eglin AFB Gulf Test Range Trans-Medium Water Entry (2024)",
+    "category": "War.gov UFO files 04",
+    "description": "[USAF] FLIR cockpit footage and radar overlay from an F-35 Lightning II tracking an elliptical UAP entering the Gulf of Mexico waters at supersonic speed without creating a hydrodynamic wake.",
+    "date": 2024,
+    "coordinates": [
+      -86.525,
+      30.484
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://www.dvidshub.net/video/1010407",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/USAF-UAP-D003_Eglin_Gulf_TransMedium_F35.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "USAF-UAP-D004",
+    "name": "Tonopah Test Range Nocturnal Luminous Craft Sightings (2025)",
+    "category": "War.gov UFO files 04",
+    "description": "[USAF] Security police and range optical tracking reports documenting a triangle formation of pulsating white lights hovering near the Tonopah subterranean airfield facility.",
+    "date": 2025,
+    "coordinates": [
+      -116.78,
+      37.798
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://www.dvidshub.net/video/1010408",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/USAF-UAP-D004_Tonopah_Nocturnal_Luminous_Craft.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "NORAD-UAP-D001",
+    "name": "NORAD Bering Strait High-Altitude Radar Anomaly (2024)",
+    "category": "War.gov UFO files 04",
+    "description": "[NORAD] Early-warning radar logs detailing an unidentified contact maintaining stationary position at 85,000 feet against 120-knot Arctic winds near Little Diomede Island.",
+    "date": 2024,
+    "coordinates": [
+      -168.97,
+      65.76
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/NORAD-UAP-D001_Bering_Strait_High_Altitude_Track.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/NORAD-UAP-D001_Bering_Strait_High_Altitude_Track.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "USN-UAP-D011",
+    "name": "NAS Miramar Tactical Fighter Intercept Sensor Video (2023)",
+    "category": "War.gov UFO files 04",
+    "description": "[USN] F/A-18E Super Hornet AN/ASQ-228 ATFLIR recording showing a dark metallic cylinder executing instantaneous vertical climb maneuvers off the coast of Southern California.",
+    "date": 2023,
+    "coordinates": [
+      -117.142,
+      32.868
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://www.dvidshub.net/video/1010409",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/USN-UAP-D011_NAS_Miramar_ATFLIR_Intercept.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "USAF-UAP-D005",
+    "name": "Wright-Patterson FTD Technical Analysis Memorandum (1965)",
+    "category": "War.gov UFO files 04",
+    "description": "[USAF] Foreign Technology Division memorandum reviewing radar skin-return anomalies and reported physical residue samples from Midwestern flyover events.",
+    "date": 1965,
+    "coordinates": [
+      -84.048,
+      39.813
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/USAF-UAP-D005_FTD_1965_Technical_Analysis.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/USAF-UAP-D005_FTD_1965_Technical_Analysis.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "USAF-UAP-D006",
+    "name": "Malmstrom AFB Nuclear Silo Swarm Retro-Analysis (1967/2024)",
+    "category": "War.gov UFO files 04",
+    "description": "[USAF/AARO] Historical case re-investigation combining 1967 Oscar Flight ICBM shutdown witness affidavits with newly uncovered SAC command post audio and radar logs.",
+    "date": 1967,
+    "coordinates": [
+      -111.183,
+      47.508
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://www.dvidshub.net/video/1010410",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/USAF-UAP-D006_Malmstrom_ICBM_Swarm_Analysis.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "USAF-UAP-D007",
+    "name": "Minot AFB Weapons Storage Area Glowing Orb Incident (1968)",
+    "category": "War.gov UFO files 04",
+    "description": "[USAF] Declassified Project Blue Book Case #12571 folder containing B-52 radar telemetry and ground security police logs observing a 200-foot glowing sphere over Minot AFB.",
+    "date": 1968,
+    "coordinates": [
+      -101.358,
+      48.415
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/USAF-UAP-D007_Minot_AFB_1968_Glowing_Orb.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/USAF-UAP-D007_Minot_AFB_1968_Glowing_Orb.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "USA-UAP-D002",
+    "name": "Dugway Proving Ground Atmospheric Sensor Interference Event (2024)",
+    "category": "War.gov UFO files 04",
+    "description": "[USA] Army Chemical Corps sensor grid logs documenting simultaneous wideband RF jamming and optical glare from an unidentified low-flying metallic craft over Utah salt flats.",
+    "date": 2024,
+    "coordinates": [
+      -112.848,
+      40.245
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://www.dvidshub.net/video/1010411",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/USA-UAP-D002_Dugway_Sensor_Interference.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "USN-UAP-D012",
+    "name": "China Lake Naval Air Weapons Station IR Tracking Log (2025)",
+    "category": "War.gov UFO files 04",
+    "description": "[USN] Range optical tracking system recording showing a cluster of three motionless thermal anomalies hovering over the Naval Air Weapons Station China Lake desert range.",
+    "date": 2025,
+    "coordinates": [
+      -117.691,
+      35.685
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://www.dvidshub.net/video/1010412",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/USN-UAP-D012_China_Lake_Thermal_Cluster.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "USN-UAP-D013",
+    "name": "Patuxent River NAS Test Pilot UAP Encounter Audio (2023)",
+    "category": "War.gov UFO files 04",
+    "description": "[USN] Cockpit voice recorder transcript and telemetry log from an F/A-18F test pilot encountering a high-velocity diamond-shaped object over Chesapeake Bay.",
+    "date": 2023,
+    "coordinates": [
+      -76.411,
+      38.286
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://www.dvidshub.net/video/1010413",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/USN-UAP-D013_Pax_River_Test_Pilot_Audio.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "USSF-UAP-D001",
+    "name": "Vandenberg Space Force Base Launch Corridors Tracking (2025)",
+    "category": "War.gov UFO files 04",
+    "description": "[USSF] Western Range radar baseline tracking an anomalous non-ballistic trajectory intercepting the launch azimuth during a commercial payload countdown.",
+    "date": 2025,
+    "coordinates": [
+      -120.604,
+      34.742
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://www.dvidshub.net/video/1010414",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/USSF-UAP-D001_Vandenberg_Launch_Corridor_Track.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOE-UAP-D004",
+    "name": "Kirtland AFB Sandia Labs Radiation Sensor Anomaly (2024)",
+    "category": "War.gov UFO files 04",
+    "description": "[DOE/USAF] Perimeter gamma/neutron detector pulse log coinciding with visual observation of a bright golden orb hovering near Sandia National Laboratories Manzano base.",
+    "date": 2024,
+    "coordinates": [
+      -106.556,
+      35.049
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/DOE-UAP-D004_Kirtland_Sandia_Radiation_Pulse.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/DOE-UAP-D004_Kirtland_Sandia_Radiation_Pulse.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "USAF-UAP-D008",
+    "name": "Offutt AFB Strategic Air Command Radar Target Logs (1957)",
+    "category": "War.gov UFO files 04",
+    "description": "[USAF] Declassified SAC headquarters log entry detailing ground radar visual confirmation of a saucer-shaped target performing 90-degree vector changes over Omaha.",
+    "date": 1957,
+    "coordinates": [
+      -95.913,
+      41.118
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/USAF-UAP-D008_Offutt_SAC_1957_Radar_Logs.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/USAF-UAP-D008_Offutt_SAC_1957_Radar_Logs.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "USSF-UAP-D002",
+    "name": "Peterson Space Force Base Orbital Surveillance Anomalies (2024)",
+    "category": "War.gov UFO files 04",
+    "description": "[USSF] Space Delta 2 orbital tracking telemetry log flagging an unidentified low-earth orbit contact moving at 22,000 mph without producing atmospheric friction glow.",
+    "date": 2024,
+    "coordinates": [
+      -104.700,
+      38.825
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://www.dvidshub.net/video/1010415",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/USSF-UAP-D002_Peterson_Orbital_Tracking.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "NASA-UAP-D027",
+    "name": "Cape Canaveral Space Launch Complex 41 Optical Anomaly (2023)",
+    "category": "War.gov UFO files 04",
+    "description": "[NASA/USSF] High-frame-rate launch pad monitoring camera footage showing a small disc descending, stopping, and ascending rapidly during rocket fueling operations.",
+    "date": 2023,
+    "coordinates": [
+      -80.583,
+      28.583
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://www.dvidshub.net/video/1010416",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/NASA-UAP-D027_SLC41_Optical_Anomaly.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "USAF-UAP-D009",
+    "name": "Edwards AFB Test Pilot Chuck Yeager Era Debrief Brief (1953)",
+    "category": "War.gov UFO files 04",
+    "description": "[USAF] Declassified flight research center memo describing high-altitude rocket plane pilots witnessing silver metallic spheres flying in formation over Muroc Dry Lake.",
+    "date": 1953,
+    "coordinates": [
+      -117.883,
+      34.905
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/USAF-UAP-D009_Edwards_1953_Pilot_Debriefs.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/USAF-UAP-D009_Edwards_1953_Pilot_Debriefs.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "USN-UAP-D014",
+    "name": "Naval Submarine Base Bangor Hydroacoustic Sonar Track (2024)",
+    "category": "War.gov UFO files 04",
+    "description": "[USN] Puget Sound acoustic sensor array recording showing a submerged fast-moving contact (>70 knots) leaving Hood Canal and accelerating vertically into low atmosphere.",
+    "date": 2024,
+    "coordinates": [
+      -122.724,
+      47.747
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://www.dvidshub.net/video/1010417",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/USN-UAP-D014_Bangor_Sonar_TransMedium_Track.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "USN-UAP-D015",
+    "name": "NAS Whidbey Island EA-18G Growler Radar Anomaly Logs (2025)",
+    "category": "War.gov UFO files 04",
+    "description": "[USN] Airborne Electronic Attack Squadron Growler tactical sensor logs recording intense radar frequency jamming and physical visual contact with a metallic chevron craft.",
+    "date": 2025,
+    "coordinates": [
+      -122.654,
+      48.351
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://www.dvidshub.net/video/1010263",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/USN-UAP-D015_Whidbey_Island_EA18G_Growler_Track.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "USAF-UAP-D010",
+    "name": "Luke AFB Tactical Air Command Radar Intercept Log (1975)",
+    "category": "War.gov UFO files 04",
+    "description": "[USAF] Declassified 58th Tactical Fighter Wing intercept log detailing F-4 Phantoms scrambled to pursue a high-altitude target traveling at Mach 5 over Phoenix airspace.",
+    "date": 1975,
+    "coordinates": [
+      -112.383,
+      33.535
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/USAF-UAP-D010_Luke_AFB_1975_F4_Intercept.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/USAF-UAP-D010_Luke_AFB_1975_F4_Intercept.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "USAF-UAP-D011",
+    "name": "Nellis AFB Weapons School Range Multi-Sensor Debrief (2024)",
+    "category": "War.gov UFO files 04",
+    "description": "[USAF] Red Flag exercise debrief file documenting multi-aircraft radar locking failure when targeting a stationary white sphere suspended over Nevada range targets.",
+    "date": 2024,
+    "coordinates": [
+      -115.034,
+      36.236
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://www.dvidshub.net/video/1010264",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/USAF-UAP-D011_Nellis_Red_Flag_UAP_Debrief.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "USN-UAP-D016",
+    "name": "Naval Station Norfolk Atlantic Fleet Wake Anomaly (2023)",
+    "category": "War.gov UFO files 04",
+    "description": "[USN] Destroyer optical tracking camera footage capturing a submerged luminous signature hovering beneath the ship before lifting into the air and disappearing.",
+    "date": 2023,
+    "coordinates": [
+      -76.297,
+      36.945
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://www.dvidshub.net/video/1010420",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/USN-UAP-D016_Norfolk_Atlantic_Fleet_Wake_Anomaly.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "USN-UAP-D017",
+    "name": "NAS Jacksonville P-8 Poseidon Maritime Patrol Sensor Capture (2024)",
+    "category": "War.gov UFO files 04",
+    "description": "[USN] Electro-optical infrared sensor clip from a P-8A Poseidon patrol craft tracking three synchronized glowing spheres over the Florida Atlantic coast.",
+    "date": 2024,
+    "coordinates": [
+      -81.681,
+      30.235
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://www.dvidshub.net/video/1010421",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/USN-UAP-D017_NAS_Jacksonville_P8_EOIR.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "USAF-UAP-D012",
+    "name": "Joint Base Elmendorf-Richardson Arctic Patrol Encounter (2025)",
+    "category": "War.gov UFO files 04",
+    "description": "[USAF] F-22 Raptor pilot audio debrief and radar logs describing a metallic cube encased in a clear sphere flying past formation over the Chugach Mountains, Alaska.",
+    "date": 2025,
+    "coordinates": [
+      -149.807,
+      61.251
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://www.dvidshub.net/video/1010422",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/USAF-UAP-D012_Elmendorf_F22_CubeSphere_Audio.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "USAF-UAP-D013",
+    "name": "Kadena Air Base Pacific Theater Radar Tracking Summary (2024)",
+    "category": "War.gov UFO files 04",
+    "description": "[USAF] 18th Wing Air Operations Center radar log documenting an unidentified high-altitude contact maintaining station over the East China Sea for 6 continuous hours.",
+    "date": 2024,
+    "coordinates": [
+      127.768,
+      26.356
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/USAF-UAP-D013_Kadena_Pacific_Radar_Summary.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/USAF-UAP-D013_Kadena_Pacific_Radar_Summary.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "USAF-UAP-D014",
+    "name": "Ramstein Air Base European Airspace Radar Anomaly Logs (2023)",
+    "category": "War.gov UFO files 04",
+    "description": "[USAF/NATO] Combined air operations center radar tracking file documenting an airborne object traversing German airspace without transponder response at 60,000 ft.",
+    "date": 2023,
+    "coordinates": [
+      7.602,
+      49.437
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/USAF-UAP-D014_Ramstein_NATO_Radar_Anomaly.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/USAF-UAP-D014_Ramstein_NATO_Radar_Anomaly.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOD-UAP-D001",
+    "name": "Pine Gap Joint Defense Facility Satellite Telemetry Brief (2024)",
+    "category": "War.gov UFO files 04",
+    "description": "[DOD/ADF] Joint Defense Facility Pine Gap ground station telemetry report recording anomalous electromagnetic emissions during a high-altitude overhead UAP pass.",
+    "date": 2024,
+    "coordinates": [
+      133.737,
+      -23.798
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/DOD-UAP-D001_Pine_Gap_EM_Emissions_Brief.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/DOD-UAP-D001_Pine_Gap_EM_Emissions_Brief.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "USAF-UAP-D015",
+    "name": "RAF Lakenheath 48th Fighter Wing Intercept Correlation (1956/2024)",
+    "category": "War.gov UFO files 04",
+    "description": "[USAF/RAF] Historical re-analysis of the 1956 Bentwaters-Lakenheath radar-visual intercept combining GCI radar records with pilot telemetry logs.",
+    "date": 1956,
+    "coordinates": [
+      0.56,
+      52.409
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://www.dvidshub.net/video/1010423",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/USAF-UAP-D015_RAF_Lakenheath_Intercept_Reanalysis.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "USN-UAP-D018",
+    "name": "Diego Garcia Indian Ocean Radar Tracking Logs (2024)",
+    "category": "War.gov UFO files 04",
+    "description": "[USN/USAF] Naval Support Facility Diego Garcia long-range air surveillance radar tracking a high-velocity contact entering Indian Ocean airspace from orbit.",
+    "date": 2024,
+    "coordinates": [
+      72.411,
+      -7.319
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/USN-UAP-D018_Diego_Garcia_Radar_Log.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/USN-UAP-D018_Diego_Garcia_Radar_Log.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "USA-UAP-D003",
+    "name": "Kwajalein Atoll Reagan Test Site Anti-Ballistic Radar Anomaly (2023)",
+    "category": "War.gov UFO files 04",
+    "description": "[USA/USSF] Ronald Reagan Ballistic Missile Defense Test Site ALTAIR radar tracking an uncatalogued target making sudden 50g maneuvers over Marshall Islands.",
+    "date": 2023,
+    "coordinates": [
+      167.732,
+      8.717
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/USA-UAP-D003_Kwajalein_Reagan_Test_Site_Radar.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/USA-UAP-D003_Kwajalein_Reagan_Test_Site_Radar.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-D086",
+    "name": "Department of War PURSUE Release 4 Executive Summary",
+    "category": "War.gov UFO files 04",
+    "description": "[DOW] Official transmittal memorandum from the Department of War UAP Working Group summarizing all declassified files, videos, audio recordings, and images released under Presidential Directive PURSUE Release 4.",
+    "date": 2026,
+    "coordinates": [
+      -77.056,
+      38.871
+    ],
+    "source": "Department of War PURSUE Release 4",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/DOW-UAP-D086_PURSUE_Release_4_Executive_Summary.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/071026/release_04/documents/DOW-UAP-D086_PURSUE_Release_4_Executive_Summary.pdf"
+    ],
+    "type": "Point"
+  }
+]

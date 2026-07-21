@@ -48,6 +48,7 @@ const ufoData2: any[] = [];
 const warGovData: any[] = [];
 const warGovData2: any[] = [];
 const warGovData3: any[] = [];
+const warGovData4: any[] = [];
 const brazilianUfoData: any[] = [];
 
 const getSafeData = (data: any) => {
@@ -62,6 +63,7 @@ const realUfoData = [
   ...getSafeData(warGovData),
   ...getSafeData(warGovData2),
   ...getSafeData(warGovData3),
+  ...getSafeData(warGovData4),
   ...getSafeData(brazilianUfoData)
 ];
 
@@ -4045,12 +4047,13 @@ function App() {
       const hasUfoActive = activeLayers['UFOs - War.gov'] || activeLayers['UFOs - Brazillian Archives'] || activeLayers['UFOs - Sightings'] || activeLayers['Government Conspiracies'];
       if (hasUfoActive && ufoData.length === 0) {
         try {
-          const [ufo1, ufo2, war1, war2, war3, br] = await Promise.all([
+          const [ufo1, ufo2, war1, war2, war3, war4, br] = await Promise.all([
             import('./ufoData-1.json'),
             import('./ufoData-2.json'),
             import('./warGovData.json'),
             import('./warGovData-2.json'),
             import('./warGovData-3.json'),
+            import('./warGovData-4.json'),
             import('./brazilianUfoData.json')
           ]);
           setUfoData([
@@ -4059,6 +4062,7 @@ function App() {
             ...getSafeData(war1),
             ...getSafeData(war2),
             ...getSafeData(war3),
+            ...getSafeData(war4),
             ...getSafeData(br)
           ]);
         } catch (err) {

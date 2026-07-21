@@ -41,95 +41,95 @@ interface TranslationHotspot {
 }
 
 const TRANSLATION_HOTSPOTS: TranslationHotspot[] = [
-  // Kircher's Atlantis - Literal text translations matching exact map inscriptions
+  // Kircher's Atlantis - Triangulated text selection boxes aligned to physical screenshot landmarks
   {
     id: 'atlantis-title',
     mapId: 'atlantis',
-    name: 'Main Title Cartouche (Top Header)',
+    name: 'Top-Left Title Cartouche',
     originalText: 'Situs Insulæ Atlantidis, à mari olim absorptæ ex mente Ægyptiorum et Platonis descriptio',
     translatedText: 'Site of the Island of Atlantis, swallowed of old by the sea, according to the description of the Egyptians and Plato',
-    context: 'The main banner inscription across the top of Kircher\'s 1669 map from Mundus Subterraneus. Note that the map is oriented with South at the top.',
+    context: 'The decorative scroll banner printed in the upper-left corner of Kircher\'s 1669 engraving.',
     coordinates: [
-      [-70, 58],
-      [70, 58],
-      [70, 42],
-      [-70, 42],
-      [-70, 58]
-    ]
-  },
-  {
-    id: 'atlantis-island',
-    mapId: 'atlantis',
-    name: 'Insula Atlantis (Center Island)',
-    originalText: 'Insula Atlantis',
-    translatedText: 'Island of Atlantis',
-    context: 'Text printed directly across the sunken continent in the middle of the ocean.',
-    coordinates: [
-      [-25, 12],
-      [25, 12],
-      [25, -12],
-      [-25, -12],
-      [-25, 12]
-    ]
-  },
-  {
-    id: 'atlantis-oceanus',
-    mapId: 'atlantis',
-    name: 'Oceanus Atlanticus (North Ocean)',
-    originalText: 'Oceanus Atlanticus',
-    translatedText: 'Atlantic Ocean',
-    context: 'Inscription over the ocean waters above the island.',
-    coordinates: [
-      [-45, 40],
-      [45, 40],
-      [45, 18],
-      [-45, 18],
-      [-45, 40]
-    ]
-  },
-  {
-    id: 'atlantis-hispania',
-    mapId: 'atlantis',
-    name: 'Hispania & Gallia (Upper-Left Coast)',
-    originalText: 'Hispania / Gallia',
-    translatedText: 'Spain / Gaul (France)',
-    context: 'Inscriptions labeling the European coast (Iberian Peninsula and France) on the left side of the map.',
-    coordinates: [
-      [-110, 35],
-      [-55, 35],
-      [-55, 10],
-      [-110, 10],
-      [-110, 35]
+      [-114, 35],
+      [-54, 35],
+      [-54, -15],
+      [-114, -15],
+      [-114, 35]
     ]
   },
   {
     id: 'atlantis-africa',
     mapId: 'atlantis',
-    name: 'Africa (Lower-Left Coast)',
+    name: 'Africa',
     originalText: 'Africa',
     translatedText: 'Africa',
-    context: 'Inscription labeling the African continent on the lower-left.',
+    context: 'Text label printed directly below the cartouche on the left landmass.',
     coordinates: [
-      [-110, -5],
-      [-55, -5],
-      [-55, -35],
-      [-110, -35],
-      [-110, -5]
+      [-105, -18],
+      [-70, -18],
+      [-70, -32],
+      [-105, -32],
+      [-105, -18]
+    ]
+  },
+  {
+    id: 'atlantis-hispania',
+    mapId: 'atlantis',
+    name: 'Hispania & Gallia',
+    originalText: 'Hispania / Gallia',
+    translatedText: 'Spain / Gaul (France)',
+    context: 'Text labels for Europe on the lower-left continent below Africa.',
+    coordinates: [
+      [-105, -38],
+      [-60, -38],
+      [-60, -58],
+      [-105, -58],
+      [-105, -38]
+    ]
+  },
+  {
+    id: 'atlantis-island',
+    mapId: 'atlantis',
+    name: 'Insula Atlantis',
+    originalText: 'Insula Atlantis',
+    translatedText: 'Island of Atlantis',
+    context: 'Text printed directly across the central green sunken island.',
+    coordinates: [
+      [10, 20],
+      [75, 20],
+      [75, -25],
+      [10, -25],
+      [10, 20]
+    ]
+  },
+  {
+    id: 'atlantis-oceanus',
+    mapId: 'atlantis',
+    name: 'Oceanus Atlanticus',
+    originalText: 'Oceanus Atlanticus',
+    translatedText: 'Atlantic Ocean',
+    context: 'Inscription over the ocean waters between the cartouche and the island.',
+    coordinates: [
+      [-50, -32],
+      [10, -32],
+      [10, -48],
+      [-50, -48],
+      [-50, -32]
     ]
   },
   {
     id: 'atlantis-america',
     mapId: 'atlantis',
-    name: 'America (Right Coast)',
+    name: 'America',
     originalText: 'America',
     translatedText: 'America',
-    context: 'Inscription labeling the American landmass on the right side of Kircher\'s map.',
+    context: 'Text label for the American landmass on the right side of the map.',
     coordinates: [
-      [55, 30],
-      [115, 30],
-      [115, -20],
-      [55, -20],
-      [55, 30]
+      [85, 35],
+      [125, 35],
+      [125, -25],
+      [85, -25],
+      [85, 35]
     ]
   },
   // Fra Mauro Map
