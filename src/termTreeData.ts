@@ -86,6 +86,90 @@ const chunk_0: any[] = [  {
     name: 'Megaliths / Structures',
     description: 'Ancient monolithic ruins, prehistoric earthworks, grid alignments, deep underground military bases, and planetary anomalies.'
   },  {
+    id: 'old-world-structures',
+    name: 'Old World Structures',
+    description: 'Famous historic castles, medieval fortresses, royal strongholds, and grand old-world architectural marvels across the globe.'
+  },  {
+    id: 'structure-bran-castle-node',
+    parentId: 'old-world-structures',
+    name: 'Bran Castle (Dracula\'s Castle)',
+    description: 'Perched dramatically on a steep cliff in the Carpathian Mountains, Bran Castle is a famous medieval fortress completed in 1388, widely associated with Dracula legend and Vlad the Impaler.',
+    layer: 'Old World Structures',
+    mapFeatureId: 'structure-bran-castle',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Castelul_Bran2.jpg/500px-Castelul_Bran2.jpg']
+  },  {
+    id: 'structure-neuschwanstein-node',
+    parentId: 'old-world-structures',
+    name: 'Neuschwanstein Castle',
+    description: 'Commissioned by King Ludwig II of Bavaria as a personal retreat and homage to Richard Wagner, featuring fairytale Romanesque Revival turrets set high above the Bavarian Alps.',
+    layer: 'Old World Structures',
+    mapFeatureId: 'structure-neuschwanstein',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Schloss_Neuschwanstein_2013.jpg/500px-Schloss_Neuschwanstein_2013.jpg']
+  },  {
+    id: 'structure-edinburgh-castle-node',
+    parentId: 'old-world-structures',
+    name: 'Edinburgh Castle',
+    description: 'A historic fortress dominating the skyline of Edinburgh from atop Castle Rock, an extinct volcanic crag with human occupation dating back to the Iron Age.',
+    layer: 'Old World Structures',
+    mapFeatureId: 'structure-edinburgh-castle',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/City_of_Edinburgh_-_Edinburgh_Castle_-_20140421004403.jpg/500px-City_of_Edinburgh_-_Edinburgh_Castle_-_20140421004403.jpg']
+  },  {
+    id: 'structure-mont-saint-michel-node',
+    parentId: 'old-world-structures',
+    name: 'Mont-Saint-Michel Abbey & Citadel',
+    description: 'A medieval island commune and fortified Benedictine abbey perched on a rocky islet off Normandy, surrounded by dramatic tidal sea swells.',
+    layer: 'Old World Structures',
+    mapFeatureId: 'structure-mont-saint-michel',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Mont-Saint-Michel_vu_du_ciel.jpg/500px-Mont-Saint-Michel_vu_du_ciel.jpg']
+  },  {
+    id: 'structure-alcazar-segovia-node',
+    parentId: 'old-world-structures',
+    name: 'Alcázar of Segovia',
+    description: 'A vessel-shaped medieval castle in Spain with conical turrets, serving as a favorite royal residence for the monarchs of Castile.',
+    layer: 'Old World Structures',
+    mapFeatureId: 'structure-alcazar-segovia',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Panor%C3%A1mica_Oto%C3%B1o_Alc%C3%A1zar_de_Segovia.jpg/500px-Panor%C3%A1mica_Oto%C3%B1o_Alc%C3%A1zar_de_Segovia.jpg']
+  },  {
+    id: 'structure-himeji-castle-node',
+    parentId: 'old-world-structures',
+    name: 'Himeji Castle (White Heron Castle)',
+    description: 'Prototypical Japanese castle architecture with brilliant white plaster walls resembling a bird taking flight, surviving WWII unscathed.',
+    layer: 'Old World Structures',
+    mapFeatureId: 'structure-himeji-castle',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Himeji_castle_in_may_2015.jpg/500px-Himeji_castle_in_may_2015.jpg']
+  },  {
+    id: 'structure-prague-castle-node',
+    parentId: 'old-world-structures',
+    name: 'Prague Castle',
+    description: 'The largest ancient castle complex in the world, spanning over 70,000 square meters and housing St. Vitus Cathedral and Bohemian royal palaces.',
+    layer: 'Old World Structures',
+    mapFeatureId: 'structure-prague-castle',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Karl%C5%AFv_most_Praha%2C_Star%C3%A9_M%C4%9Bsto_20170810_007.jpg/500px-Karl%C5%AFv_most_Praha%2C_Star%C3%A9_M%C4%9Bsto_20170810_007.jpg']
+  },  {
+    id: 'structure-windsor-castle-node',
+    parentId: 'old-world-structures',
+    name: 'Windsor Castle',
+    description: 'Founded by William the Conqueror in 1070 CE, Windsor Castle is the oldest and largest continually inhabited castle in the world.',
+    layer: 'Old World Structures',
+    mapFeatureId: 'structure-windsor-castle',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Windsor_Castle_at_Sunset_-_Nov_2006.jpg/500px-Windsor_Castle_at_Sunset_-_Nov_2006.jpg']
+  },  {
+    id: 'structure-castel-del-monte-node',
+    parentId: 'old-world-structures',
+    name: 'Castel del Monte',
+    description: 'An octagonal 13th-century fortress built by Emperor Frederick II in Apulia, renowned for its mathematical precision and sacred geometric alignments.',
+    layer: 'Old World Structures',
+    mapFeatureId: 'structure-castel-del-monte',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Castel_del_Monte_-_Andria.jpg/500px-Castel_del_Monte_-_Andria.jpg']
+  },  {
+    id: 'structure-chambord-node',
+    parentId: 'old-world-structures',
+    name: 'Château de Chambord',
+    description: 'French Renaissance masterpiece constructed by King Francis I, featuring a monumental double-helix staircase attributed to Leonardo da Vinci.',
+    layer: 'Old World Structures',
+    mapFeatureId: 'structure-chambord',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Aerial_image_of_Ch%C3%A2teau_de_Chambord_%28view_from_the_southeast%29.jpg/500px-Aerial_image_of_Ch%C3%A2teau_de_Chambord_%28view_from_the_southeast%29.jpg']
+  },  {
     id: 'supernatural-anomalies',
     name: 'Supernatural / Anomalies',
     description: 'Extraterrestrial encounters, cryptid sightings, localized hauntings, portal gateways, and cosmic space-time anomalies.'

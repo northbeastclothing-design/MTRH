@@ -146,6 +146,16 @@ const ERAS_CONFIG = [
     desc: 'Declassified military projects, chemical mind control, psychic espionage, and government conspiracies or hidden agendas.'
   },
   {
+    id: 'old-world-structures',
+    name: 'Old World Structures',
+    start: -2500,
+    end: 1900,
+    color: '#B5CED5',
+    icon: '/icons/icon-old-world-structures.svg',
+    layer: 'old-world-structures',
+    desc: 'Famous historic castles, fortresses, medieval strongholds, and grand old-world architectural marvels across the globe.'
+  },
+  {
     id: 'sumerian-antediluvian',
     name: 'Sumerian Kings List',
     start: -245000,

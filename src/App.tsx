@@ -132,11 +132,20 @@ const CATEGORY_DESCRIPTIONS: Record<string, string> = {
   'Cave Systems': 'USGS documented locations of caves, caverns, grottos, and sinkholes.',
   'Alien Abductions': 'Documentation of major reported extraterrestrial abduction cases and close encounters.',
   'Cattle Mutilations': 'Reports of unexplained livestock deaths characterized by bloodless surgical-like tissue removal and a lack of tracks.',
+  'Old World Structures': 'Famous castles, medieval strongholds, royal fortresses, and grand old-world architectural marvels across the globe.',
   'Crop Circles': 'Intricate patterns appearing in fields, often appearing overnight with no clear earthly explanation.',
   'Meteor Impact Craters': 'Confirmed impact structures on Earth created by ancient meteorite collisions, marking catastrophic cosmic encounters throughout geological history.',
   'Archaeological Finds': 'Remarkable historical excavations, lost citadels, and ancient artifacts rewriting human origin timelines.',
   'Biblical Discoveries': 'Archaeological discoveries, inscriptions, and sacred sanctuaries validating accounts from biblical history.',
-  'Ancient People Groups': 'Ancient Mesoamerican civilizations, Native American tribes, and lost people groups of antiquity.'
+  'Ancient People Groups': 'Ancient Mesoamerican civilizations, Native American tribes, and lost people groups of antiquity.',
+  'Religion': 'Scriptural records, sacred sanctuaries, angelic hierarchies, canonical and apocryphal traditions.',
+  'Masonic Lodges': 'Historic Masonic temples, esoteric lodges, secret societies, and fraternity headquarters across the world.',
+  'Myths / Legends': 'Ancient pantheons, legendary sagas, mythical beasts, and hero epics from world civilizations.',
+  'Ley Lines': 'Telluric energy currents, ancient alignments, sacred geometric axes, and planetary grid nodes.',
+  'Government Conspiracies': 'Declassified military operations, black budget projects, covert intelligence programs, and hidden agendas.',
+  'NASA / Space': 'Civilian aerospace achievements, space program launch sites, historical milestones, and lunar exploration missions.',
+  'The Occult': 'Hermeticism, alchemy, esoteric rituals, grimoires, and hidden mystical traditions through the ages.',
+  'Supernatural / Anomalies': 'Extraterrestrial encounters, cryptid sightings, localized hauntings, portal gateways, and cosmic space-time anomalies.'
 };
 
 const isVideoUrl = (url: string) => {
@@ -701,6 +710,7 @@ const processIncomingRecord = (item: any, index: number) => {
   else if (lowerCat.includes('archaeological') || lowerCat.includes('archaeology')) normalizedCategory = 'Archaeological Finds';
   else if (lowerCat.includes('biblical find') || lowerCat.includes('biblical discover') || lowerCat === 'biblical finds' || lowerCat === 'biblical discoveries') normalizedCategory = 'Biblical Discoveries';
   else if (lowerCat.includes('government program') || lowerCat.includes('secret government') || lowerCat.includes('classified program') || lowerCat.includes('government conspiracy') || lowerCat.includes('conspiracy')) normalizedCategory = 'Government Conspiracies';
+  else if (lowerCat.includes('old world structure') || lowerCat.includes('castle') || lowerCat === 'old world structures') normalizedCategory = 'Old World Structures';
   else if (lowerCat.includes('alchemy') || lowerCat.includes('occult') || lowerCat.includes('hermeticism') || lowerCat.includes('thelema')) normalizedCategory = 'The Occult';
 
   // Smart imagery injection for map points lacking media (megaliths, underworld entrances, national parks, mounds)
@@ -816,7 +826,7 @@ const LAYER_CONFIG: Record<string, { color: string; icon: string }> = {
   'Giants & Nephilim': { color: '#ECCE81', icon: '/icons/icon-giants.svg' },
   'Biblical Figures': { color: '#90C2FF', icon: '/icons/icon-biblical-bloodlines.svg' },
   'Religion': { color: '#90C2FF', icon: '/icons/icon-religion.svg' },
-  'Masonic Lodges': { color: '#ECCE81', icon: '/icons/icon-alchemy-occult.svg' },
+  'Masonic Lodges': { color: '#ECCE81', icon: '/icons/icon-masonic-lodges.svg' },
   'Particle Accelerators': { color: '#90E9FF', icon: '/icons/icon-cern.svg' },
   'Myths / Legends': { color: '#FFF96A', icon: '/icons/icon-greek-mythology.svg' },
   'Biblical Events': { color: '#91FFC4', icon: '/icons/icon-biblical-bloodlines-1.svg' },
@@ -825,7 +835,7 @@ const LAYER_CONFIG: Record<string, { color: string; icon: string }> = {
   'Cryptid Sightings': { color: '#AFFFEC', icon: '/icons/icon-cryptid-sightings.svg' },
   'Underworld Entrances': { color: '#D3C5FB', icon: '/icons/icon-entrances-to-underworld.svg' },
   'Portals / Stargates': { color: '#F9B6DB', icon: '/icons/icon-portals.svg' },
-  'Ancient Texts': { color: '#F6E8C1', icon: '/icons/icon-ancient-texts.svg' },
+  'Ancient Texts': { color: '#F7E8C1', icon: '/icons/icon-ancient-texts.svg' },
   'Burial Mounds': { color: '#B3C77B', icon: '/icons/icon-burial-mounds.svg' },
   'Cave Systems': { color: '#B9BDAD', icon: '/icons/icon-caves.svg' },
   'Alien Abductions': { color: '#C0F06E', icon: '/icons/icon-alien.svg' },
@@ -834,8 +844,9 @@ const LAYER_CONFIG: Record<string, { color: string; icon: string }> = {
   'D.U.M.B.\'s': { color: '#BAEAF4', icon: '/icons/icon-dumbs.svg' },
   'Ghosts & Hauntings': { color: '#BDC4FF', icon: '/icons/icon-ghosts.svg' },
   'Megaliths / Structures': { color: '#FFFBA6', icon: '/icons/icon-megaliths.svg' },
+  'Old World Structures': { color: '#B5CED5', icon: '/icons/icon-old-world-structures.svg' },
 
-  'Rock Art & Cave Paintings': { color: '#FFCBA6', icon: '/icons/icon-petroglyphs.svg' },
+  'Rock Art & Cave Paintings': { color: '#FFABA6', icon: '/icons/icon-petroglyphs.svg' },
   'National Parks & Reserves': { color: '#9FF3BC', icon: '/icons/icon-national-parks-reserves.svg' },
   'Missing 411': { color: '#CBDF8E', icon: '/icons/icon-missing-411.svg' },
   'Blurred on Google Maps': { color: '#BDC4FF', icon: '/icons/icon-blurred-on-google.svg' },
@@ -1046,12 +1057,12 @@ const CategoryLayerHeader = ({
           display: 'flex', 
           alignItems: 'center', 
           padding: '0', 
-          height: '32px',
+          height: '30px',
           justifyContent: 'space-between', 
           cursor: 'pointer', 
           background: isActive ? theme.bg : (isMapDarkMode ? '#1a1a1a' : '#EFEFEF'),
           border: isActive ? `1px solid ${theme.border}` : '1px solid transparent',
-          borderRadius: '16px',
+          borderRadius: '15px',
           boxSizing: 'border-box',
           color: theme.text,
           transition: 'background 0.3s ease-in-out',
@@ -1065,7 +1076,7 @@ const CategoryLayerHeader = ({
         {/* EXPANDING BACKGROUND OVERLAY */}
         <motion.div
           animate={{
-            width: isHovered ? '100%' : '32px'
+            width: isHovered ? '100%' : '30px'
           }}
           transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
           style={{
@@ -1074,14 +1085,14 @@ const CategoryLayerHeader = ({
             left: 0,
             height: '100%',
             background: pillColor,
-            borderRadius: '16px',
+            borderRadius: '15px',
             zIndex: 0,
             pointerEvents: 'none'
           }}
         />
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flex: 1, textAlign: 'left', zIndex: 1, position: 'relative' }}>
-          <div style={{ width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <div style={{ width: '30px', height: '30px', minWidth: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <img 
               src={getCategoryIcon(layerName)} 
               onError={(e) => { e.currentTarget.src = '/icons/icon-cave-drawings.svg'; }}
@@ -1190,6 +1201,7 @@ function App() {
   const [cavesData, setCavesData] = useState<any[]>([]);
   const [alienAbductionData, setAlienAbductionData] = useState<any[]>([]);
   const [cattleMutilationData, setCattleMutilationData] = useState<any[]>([]);
+  const [oldWorldStructuresData, setOldWorldStructuresData] = useState<any[]>([]);
   const [savedPasscode, setSavedPasscode] = useState('');
   const [approvedSubmissions, setApprovedSubmissions] = useState<any[]>([]);
   const [isLiveLoading, setIsLiveLoading] = useState(true);
@@ -1218,6 +1230,9 @@ function App() {
     }
     if (layerName === 'Cattle Mutilations') {
       return cattleMutilationData.length === 0;
+    }
+    if (layerName === 'Old World Structures') {
+      return oldWorldStructuresData.length === 0;
     }
     if (layerName === 'Missing 411') {
       return missing411Data.length === 0;
@@ -1430,6 +1445,7 @@ function App() {
       'Religion',
       'Myths / Legends',
       'Megaliths / Structures',
+      'Old World Structures',
       'Supernatural / Anomalies',
       'Government Conspiracies',
       'The Occult'
@@ -4127,12 +4143,22 @@ function App() {
         }
       }
 
+      // 4d. Old World Structures
+      if (activeLayers['Old World Structures'] && oldWorldStructuresData.length === 0) {
+        try {
+          const module = await import('./oldWorldStructuresData');
+          setOldWorldStructuresData(getSafeData(module.OLD_WORLD_STRUCTURES_DATA));
+        } catch (err) {
+          console.error("Failed to load Old World Structures data:", err);
+        }
+      }
+
       // 5. Core Rabbit Hole data
       const needsRabbitHole = Object.keys(activeLayers).some(k => 
         activeLayers[k] && 
         k !== 'UFOs - War.gov' && k !== 'UFOs - Brazillian Archives' && k !== 'UFOs - Sightings' && k !== 'Government Conspiracies' &&
         k !== 'Archaeological Finds' && k !== 'Biblical Discoveries' &&
-        k !== 'Missing 411' && k !== 'Cave Systems' && k !== 'Alien Abductions' && k !== 'Cattle Mutilations'
+        k !== 'Missing 411' && k !== 'Cave Systems' && k !== 'Alien Abductions' && k !== 'Cattle Mutilations' && k !== 'Old World Structures'
       );
       if (needsRabbitHole && rabbitHoleData.length === 0) {
         try {
@@ -4154,7 +4180,7 @@ function App() {
         setIsDataCompiled(false);
         const safeLocalData = getSafeData(rabbitHoleData);
         const safeUfoData = getSafeData(ufoData);
-        const combinedRawData = [...safeLocalData, ...safeUfoData, ...archaeologyData, ...missing411Data, ...cavesData, ...alienAbductionData, ...cattleMutilationData];
+        const combinedRawData = [...safeLocalData, ...safeUfoData, ...archaeologyData, ...missing411Data, ...cavesData, ...alienAbductionData, ...cattleMutilationData, ...oldWorldStructuresData];
         
         const initialBuffer = combinedRawData
           .map((item, idx) => processIncomingRecord(item, idx))
@@ -4248,7 +4274,7 @@ function App() {
     };
 
     compileVerifiedIntel();
-  }, [rabbitHoleData, ufoData, archaeologyData, missing411Data, cavesData, alienAbductionData, cattleMutilationData, overrides]);
+  }, [rabbitHoleData, ufoData, archaeologyData, missing411Data, cavesData, alienAbductionData, cattleMutilationData, oldWorldStructuresData, overrides]);
 
   useEffect(() => {
     if (uniqueCategories.length > 0 && !hasRandomizedRef.current) {

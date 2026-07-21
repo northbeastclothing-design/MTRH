@@ -2,7 +2,7 @@ export interface TimelineItem {
   id: string;
   name: string;
   type: 'lifespan' | 'event';
-  layer: 'biblical-patriarchs' | 'biblical-events' | 'sumerian-kings' | 'greek-mythology' | 'merovingian-bloodlines' | 'royal-bloodlines' | 'enochian-lore' | 'future-prophecy' | 'government-conspiracies' | 'ancient-civilizations' | 'alchemy-occult' | 'illuminati-bloodlines' | 'black-nobility' | 'nasa-space';
+  layer: 'biblical-patriarchs' | 'biblical-events' | 'sumerian-kings' | 'greek-mythology' | 'merovingian-bloodlines' | 'royal-bloodlines' | 'enochian-lore' | 'future-prophecy' | 'government-conspiracies' | 'ancient-civilizations' | 'alchemy-occult' | 'illuminati-bloodlines' | 'black-nobility' | 'nasa-space' | 'old-world-structures';
   start: number; // BCE is negative, CE is positive
   end?: number;  // Only for 'lifespan'
   description: string;
@@ -5757,6 +5757,114 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     description: 'Administration of Joe Biden, the 46th U.S. President. Associated with corruption allegations in Ukraine, globalist agendas linked to the World Economic Forum\'s Great Reset, and rumors of cognitive decline cover-ups.',
     source: 'U.S. Presidential Archives'
   },
+  {
+    id: 'structure-prague-castle-tl',
+    name: 'Prague Castle Founded',
+    type: 'event',
+    layer: 'old-world-structures',
+    start: 870,
+    description: 'Founded by Prince Bořivoj of the Přemyslid dynasty, Prague Castle grew into the world\'s largest ancient castle complex.',
+    source: 'Prague Castle Administration'
+  },
+  {
+    id: 'structure-mont-saint-michel-tl',
+    name: 'Mont-Saint-Michel Abbey Established',
+    type: 'event',
+    layer: 'old-world-structures',
+    start: 966,
+    description: 'Duke Richard I of Normandy establishes the Benedictine abbey on the tidal island of Mont-Saint-Michel.',
+    source: 'Centre des Monuments Nationaux'
+  },
+  {
+    id: 'structure-hohensalzburg-tl',
+    name: 'Hohensalzburg Fortress Construction Begins',
+    type: 'event',
+    layer: 'old-world-structures',
+    start: 1077,
+    description: 'Archbishop Gebhard von Helfenstein orders construction of Hohensalzburg Fortress atop Festungsberg peak.',
+    source: 'Salzburg Castle Administration'
+  },
+  {
+    id: 'structure-windsor-castle-tl',
+    name: 'Windsor Castle Founded by William the Conqueror',
+    type: 'event',
+    layer: 'old-world-structures',
+    start: 1070,
+    description: 'William the Conqueror constructs the initial motte-and-bailey timber castle overlooking the River Thames.',
+    source: 'Royal Collection Trust'
+  },
+  {
+    "id": "structure-carcassonne-tl",
+    "name": "Cité de Carcassonne Citadel Fortified",
+    "type": "event",
+    "layer": "old-world-structures",
+    "start": 1125,
+    "description": "Bernard Aton IV Trencavel builds the Château Comtal within Carcassonne's double concentric outer walls.",
+    "source": "French Monuments Authority"
+  },
+  {
+    id: 'structure-castel-del-monte-tl',
+    name: 'Castel del Monte Commissioned by Frederick II',
+    type: 'event',
+    layer: 'old-world-structures',
+    start: 1240,
+    description: 'Holy Roman Emperor Frederick II commissions the mathematical octagonal fortress of Castel del Monte in Apulia.',
+    source: 'Ministero della Cultura Italia'
+  },
+  {
+    id: 'structure-malbork-castle-tl',
+    name: 'Malbork Castle Built by Teutonic Knights',
+    type: 'event',
+    layer: 'old-world-structures',
+    start: 1274,
+    description: 'The Teutonic Order of German Crusader Knights constructs Malbork Castle, the largest brick castle in the world.',
+    source: 'Malbork Castle Museum'
+  },
+  {
+    id: 'structure-himeji-castle-tl',
+    name: 'Himeji Castle Fortified',
+    type: 'event',
+    layer: 'old-world-structures',
+    start: 1333,
+    description: 'Akamatsu Norimura builds a fort atop Himeyama hill, later expanded into the famous White Heron Castle.',
+    source: 'Himeji Board of Education'
+  },
+  {
+    id: 'structure-bran-castle-tl',
+    name: 'Bran Castle Construction Completed',
+    type: 'event',
+    layer: 'old-world-structures',
+    start: 1388,
+    description: 'The Saxons of Kronstadt complete Bran Castle on a steep Transylvanian cliff post to defend against Ottoman armies.',
+    source: 'Bran Castle Museum'
+  },
+  {
+    id: 'structure-corvin-castle-tl',
+    name: 'Corvin Castle Built by John Hunyadi',
+    type: 'event',
+    layer: 'old-world-structures',
+    start: 1446,
+    description: 'John Hunyadi erects the majestic Gothic-Renaissance fortress of Corvin Castle in Hunedoara, Romania.',
+    source: 'Corvin Castle Museum'
+  },
+  {
+    id: 'structure-chambord-tl',
+    name: 'Château de Chambord Construction Begins',
+    type: 'event',
+    layer: 'old-world-structures',
+    start: 1519,
+    description: 'King Francis I begins construction of Château de Chambord, featuring Leonardo da Vinci\'s famous double-helix staircase.',
+    source: 'Domaine National de Chambord'
+  },
+  {
+    id: 'structure-neuschwanstein-tl',
+    name: 'Neuschwanstein Castle Foundation Laid',
+    type: 'event',
+    layer: 'old-world-structures',
+    start: 1869,
+    description: 'King Ludwig II of Bavaria lays the foundation stone for Neuschwanstein Castle high in the Bavarian Alps.',
+    source: 'Bavarian Palace Department'
+  }
 ];
 
 export interface TimelineLocation {
