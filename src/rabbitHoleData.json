@@ -32458,6 +32458,22 @@
     ]
   },
   {
+    "id": "rel-figure-spencer-kimball",
+    "name": "Spencer W. Kimball",
+    "category": "Religion",
+    "type": "Point",
+    "coordinates": {
+      "lng": -111.8910,
+      "lat": 40.7608
+    },
+    "date": 1973,
+    "description": "The 12th president of the Church of Jesus Christ of Latter-day Saints. He is widely remembered for his book 'The Miracle of Forgiveness' (1969), which popularized the LDS folk belief identifying Bigfoot as the biblical Cain, and his 1978 revelation extending the priesthood to all worthy male members regardless of race.",
+    "source": "The Miracle of Forgiveness (1969) / LDS History",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Spencer_W._Kimball3.JPG/330px-Spencer_W._Kimball3.JPG"
+    ]
+  },
+  {
     "id": "rel-adherent-brandon-sanderson",
     "name": "Brandon Sanderson",
     "category": "Religion",

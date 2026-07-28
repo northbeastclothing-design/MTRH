@@ -27918,6 +27918,17 @@ export const TERM_TREE_DATA: TermNode[] = [
     images: ["https://upload.wikimedia.org/wikipedia/commons/7/7f/Mitt_Romney_official_US_Senate_portrait.jpg"]
   },
   {
+    id: 'rel-figure-spencer-kimball',
+    parentId: 'mormonism-members',
+    name: 'Spencer W. Kimball',
+    description: 'The 12th president of the Church of Jesus Christ of Latter-day Saints. He is widely remembered for his book \'The Miracle of Forgiveness\' (1969), which popularized the LDS folk belief identifying Bigfoot as the biblical Cain, and his 1978 revelation extending the priesthood to all worthy male members regardless of race.',
+    timelineId: 'rel-figure-spencer-kimball',
+    mapFeatureId: 'rel-figure-spencer-kimball',
+    relatedIds: ['anomaly-Bigfoot-cain-node'],
+    sources: ['The Miracle of Forgiveness (1969)', 'LDS Church Historical Records'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Spencer_W._Kimball3.JPG/330px-Spencer_W._Kimball3.JPG']
+  },
+  {
     id: 'rel-adherent-brandon-sanderson',
     parentId: 'mormonism-members',
     name: 'Brandon Sanderson',
@@ -37816,6 +37827,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'A widely-known account in Latter-day Saint folklore originating from early apostle David W. Patten, who reported encountering a tall, hairy, dark-skinned being in Tennessee in 1835 that identified himself as the biblical Cain. The story was later popularized in Spencer W. Kimball\'s book \'The Miracle of Forgiveness\', leading to the folk belief conflating Cain with Bigfoot.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-cain',
+    relatedIds: ['rel-figure-spencer-kimball'],
     sources: ['The Life of David W. Patten (1900)', 'The Miracle of Forgiveness (1969)'],
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Spencer_W._Kimball3.JPG/330px-Spencer_W._Kimball3.JPG']
   }

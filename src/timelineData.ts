@@ -5079,6 +5079,15 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     source: 'LDS Church Membership Profiles / Political Biographies'
   },
   {
+    id: 'rel-figure-spencer-kimball',
+    name: 'Spencer W. Kimball',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1973,
+    description: 'The 12th president of the Church of Jesus Christ of Latter-day Saints. He is widely remembered for his book \'The Miracle of Forgiveness\' (1969), which popularized the LDS folk belief identifying Bigfoot as the biblical Cain, and his 1978 revelation extending the priesthood to all worthy male members regardless of race.',
+    source: 'The Miracle of Forgiveness (1969) / LDS History'
+  },
+  {
     id: 'rel-adherent-brandon-sanderson',
     name: 'Brandon Sanderson',
     type: 'event',
@@ -6286,6 +6295,7 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'rel-figure-joseph-smith': { lng: -72.4578, lat: 43.7917, locationName: 'Joseph Smith Jr. (Associated Location)', category: 'Religion' },
   'rel-figure-brigham-young': { lng: -72.8711, lat: 42.7911, locationName: 'Brigham Young (Associated Location)', category: 'Religion' },
   'rel-adherent-mitt-romney': { lng: -83.0458, lat: 42.3314, locationName: 'Mitt Romney (Associated Location)', category: 'Religion' },
+  'rel-figure-spencer-kimball': { lng: -111.8910, lat: 40.7608, locationName: 'Spencer W. Kimball (Associated Location)', category: 'Religion' },
   'rel-adherent-brandon-sanderson': { lng: -96.7026, lat: 40.8136, locationName: 'Brandon Sanderson (Associated Location)', category: 'Religion' },
   'rel-adherent-gladys-knight': { lng: -84.388, lat: 33.749, locationName: 'Gladys Knight (\'Empress of Soul\') (Associated Location)', category: 'Religion' },
   'rel-adherent-orson-scott-card': { lng: -119.2773, lat: 46.2857, locationName: 'Orson Scott Card (Associated Location)', category: 'Religion' },
