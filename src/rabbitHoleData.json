@@ -33183,5 +33183,357 @@
     "images": [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Voynich_Manuscript_%2832%29.jpg/500px-Voynich_Manuscript_%2832%29.jpg"
     ]
+  },
+  {
+    "id": "anomaly-Crop-Circles-356",
+    "name": "Ilchester Formation (Somerset)",
+    "category": "Crop Circles",
+    "type": "Point",
+    "coordinates": {
+      "lng": -2.684,
+      "lat": 51.002
+    },
+    "date": 2026,
+    "description": "A small cross with a ring formation reported in an oilseed rape (canola) field in Ilchester, Somerset, marking the early start of the 2026 season.",
+    "source": "Temporary Temples Crop Circle Archives",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Crop-Circles-357",
+    "name": "Waden Hill Dumbbell (Wiltshire)",
+    "category": "Crop Circles",
+    "type": "Point",
+    "coordinates": {
+      "lng": -1.854,
+      "lat": 51.428
+    },
+    "date": 2026,
+    "description": "A small dumbbell crop circle formation reported in yellow oilseed rape on the slopes of Waden Hill, near the ancient Avebury stone circle.",
+    "source": "Temporary Temples Crop Circle Archives",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Crop-Circles-358",
+    "name": "Jack's Plantation Pentagram (Wiltshire)",
+    "category": "Crop Circles",
+    "type": "Point",
+    "coordinates": {
+      "lng": -1.782,
+      "lat": 51.365
+    },
+    "date": 2026,
+    "description": "A large pentagonal design discovered in a barley field near Jack's Plantation, Wiltshire, displaying advanced five-fold symmetry.",
+    "source": "Temporary Temples Crop Circle Archives",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Crop-Circles-359",
+    "name": "Kingweston Spinner (Somerset)",
+    "category": "Crop Circles",
+    "type": "Point",
+    "coordinates": {
+      "lng": -2.714,
+      "lat": 51.087
+    },
+    "date": 2026,
+    "description": "A beautiful six-fold spinner design in a barley field in Kingweston, Somerset, which reportedly formed in two distinct stages.",
+    "source": "Temporary Temples Crop Circle Archives",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Crop-Circles-360",
+    "name": "White Sheet Hill Four-Fold (Wiltshire)",
+    "category": "Crop Circles",
+    "type": "Point",
+    "coordinates": {
+      "lng": -2.261,
+      "lat": 51.103
+    },
+    "date": 2026,
+    "description": "A clean four-fold geometric design reported in a barley field at White Sheet Hill, near Mere, Wiltshire, measuring roughly 75 meters in diameter.",
+    "source": "Temporary Temples Crop Circle Archives",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Crop-Circles-361",
+    "name": "Ditcheat Three-Fold (Somerset)",
+    "category": "Crop Circles",
+    "type": "Point",
+    "coordinates": {
+      "lng": -2.531,
+      "lat": 51.127
+    },
+    "date": 2026,
+    "description": "A precise three-fold geometric formation discovered in a wheat field in Ditcheat, Somerset.",
+    "source": "Temporary Temples Crop Circle Archives",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Crop-Circles-362",
+    "name": "Great Wishford Formation (Wiltshire)",
+    "category": "Crop Circles",
+    "type": "Point",
+    "coordinates": {
+      "lng": -1.890,
+      "lat": 51.116
+    },
+    "date": 2026,
+    "description": "A neat three-fold design appearing overnight in a wheat field at Great Wishford, Wiltshire.",
+    "source": "Temporary Temples Crop Circle Archives",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Crop-Circles-363",
+    "name": "Morgans Hill Fragment (Wiltshire)",
+    "category": "Crop Circles",
+    "type": "Point",
+    "coordinates": {
+      "lng": -1.956,
+      "lat": 51.405
+    },
+    "date": 2026,
+    "description": "A possible three-fold or nine-fold design reported at Morgans Hill, Wiltshire. The formation was cut out by the farmer shortly after discovery to prevent visitors from entering the field.",
+    "source": "Temporary Temples Crop Circle Archives",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Crop-Circles-364",
+    "name": "Kingweston Eight-Fold (Somerset)",
+    "category": "Crop Circles",
+    "type": "Point",
+    "coordinates": {
+      "lng": -2.714,
+      "lat": 51.087
+    },
+    "date": 2026,
+    "description": "An intricate eight-fold crop circle formation reported in a wheat field in Kingweston, Somerset, marking the second major event at this location in 2026.",
+    "source": "Temporary Temples Crop Circle Archives",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Crop-Circles-365",
+    "name": "Zürcher Weinland Double Spiral (Switzerland)",
+    "category": "Crop Circles",
+    "type": "Point",
+    "coordinates": {
+      "lng": 8.651,
+      "lat": 47.602
+    },
+    "date": 2026,
+    "description": "A rare continental European formation discovered in Switzerland, featuring a double spiral pattern laid out in a wheat field.",
+    "source": "Temporary Temples Crop Circle Archives",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Crop-Circles-366",
+    "name": "Etchilhampton Quintuplet (Wiltshire)",
+    "category": "Crop Circles",
+    "type": "Point",
+    "coordinates": {
+      "lng": -1.936,
+      "lat": 51.341
+    },
+    "date": 2026,
+    "description": "A quintuplet pattern consisting of five circles arranged symmetrically inside a large containing ring, reported at Etchilhampton Hill, Wiltshire.",
+    "source": "Temporary Temples Crop Circle Archives",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Crop-Circles-367",
+    "name": "Alfred's Castle Formation (Oxfordshire)",
+    "category": "Crop Circles",
+    "type": "Point",
+    "coordinates": {
+      "lng": -1.591,
+      "lat": 51.554
+    },
+    "date": 2026,
+    "description": "An impressive formation approximately 75 meters in diameter, reported near the iron age hillfort of Alfred's Castle in Oxfordshire.",
+    "source": "Temporary Temples Crop Circle Archives",
+    "images": [
+      "https://www.youtube.com/watch?v=lAeC93xVDrQ"
+    ]
+  },
+  {
+    "id": "anomaly-Crop-Circles-368",
+    "name": "Etchilhampton Multi-Ring (Wiltshire)",
+    "category": "Crop Circles",
+    "type": "Point",
+    "coordinates": {
+      "lng": -1.936,
+      "lat": 51.341
+    },
+    "date": 2026,
+    "description": "The second formation of the season appearing at Etchilhampton Hill, Wiltshire, featuring a complex array of rings and nested circles.",
+    "source": "Temporary Temples Crop Circle Archives",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Crop-Circles-369",
+    "name": "Zeal's Knoll Circle (Wiltshire)",
+    "category": "Crop Circles",
+    "type": "Point",
+    "coordinates": {
+      "lng": -2.268,
+      "lat": 51.109
+    },
+    "date": 2026,
+    "description": "A distinct circular design reported in Mere at Zeal's Knoll, Wiltshire, attracting significant interest from aerial photographers.",
+    "source": "Temporary Temples Crop Circle Archives",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Crop-Circles-370",
+    "name": "Tidcombe 3D Formation (Wiltshire)",
+    "category": "Crop Circles",
+    "type": "Point",
+    "coordinates": {
+      "lng": -1.595,
+      "lat": 51.312
+    },
+    "date": 2026,
+    "description": "A striking 3D-effect crop circle approximately 70 meters in diameter, discovered in a wheat field on Maccombe Down near Tidcombe, Wiltshire.",
+    "source": "Temporary Temples Crop Circle Archives",
+    "images": [
+      "https://www.youtube.com/watch?v=n6MtlH_M4Ng"
+    ]
+  },
+  {
+    "id": "anomaly-Crop-Circles-371",
+    "name": "Roundway Hill Star (Wiltshire)",
+    "category": "Crop Circles",
+    "type": "Point",
+    "coordinates": {
+      "lng": -1.974,
+      "lat": 51.378
+    },
+    "date": 2026,
+    "description": "A highly complex partial star design approximately 85 meters in diameter, reported in a wheat field at Roundway Hill near Devizes, Wiltshire.",
+    "source": "Temporary Temples Crop Circle Archives",
+    "images": [
+      "https://www.youtube.com/watch?v=kgtA5dgvVYQ"
+    ]
+  },
+  {
+    "id": "anomaly-Crop-Circles-372",
+    "name": "Milk Hill Three-Fold (Wiltshire)",
+    "category": "Crop Circles",
+    "type": "Point",
+    "coordinates": {
+      "lng": -1.849,
+      "lat": 51.373
+    },
+    "date": 2026,
+    "description": "A simple but beautiful three-fold crop circle design measuring 40 meters in diameter, reported on the slopes of Milk Hill, Wiltshire.",
+    "source": "Temporary Temples Crop Circle Archives",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Crop-Circles-373",
+    "name": "Avebury Rings (Wiltshire)",
+    "category": "Crop Circles",
+    "type": "Point",
+    "coordinates": {
+      "lng": -1.855,
+      "lat": 51.428
+    },
+    "date": 2026,
+    "description": "A complex collection of circles and rings appearing in close proximity to the historic Avebury Henge stone circle, Wiltshire.",
+    "source": "Temporary Temples Crop Circle Archives",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Crop-Circles-374",
+    "name": "Wayland's Smithy Event (Oxfordshire)",
+    "category": "Crop Circles",
+    "type": "Point",
+    "coordinates": {
+      "lng": -1.598,
+      "lat": 51.566
+    },
+    "date": 2026,
+    "description": "A new crop circle formation reported near the ancient Neolithic chambered long barrow of Wayland's Smithy, Oxfordshire.",
+    "source": "Temporary Temples Crop Circle Archives",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Crop-Circles-375",
+    "name": "Devizes Geometric (Wiltshire)",
+    "category": "Crop Circles",
+    "type": "Point",
+    "coordinates": {
+      "lng": -1.996,
+      "lat": 51.352
+    },
+    "date": 2026,
+    "description": "A geometric pattern appearing in a field near Devizes, Wiltshire, a historic region for crop circle sightings.",
+    "source": "Temporary Temples Crop Circle Archives",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Crop-Circles-376",
+    "name": "Liddington Pictogram (Wiltshire)",
+    "category": "Crop Circles",
+    "type": "Point",
+    "coordinates": {
+      "lng": -1.704,
+      "lat": 51.542
+    },
+    "date": 2026,
+    "description": "A long, intricate pictogram consisting of symbols laid out in a wheat field near Liddington, Wiltshire.",
+    "source": "Temporary Temples Crop Circle Archives",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Crop-Circles-377",
+    "name": "Fox Hill Formation (Wiltshire)",
+    "category": "Crop Circles",
+    "type": "Point",
+    "coordinates": {
+      "lng": -1.684,
+      "lat": 51.545
+    },
+    "date": 2026,
+    "description": "A geometric crop circle reported near Fox Hill, Wiltshire, in late July, continuing the active summer season.",
+    "source": "Temporary Temples Crop Circle Archives",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg"
+    ]
   }
 ]

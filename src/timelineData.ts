@@ -649,8 +649,17 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     layer: 'biblical-events',
     start: -966,
     end: -959,
-    description: 'The building of the First Temple in Jerusalem on Mount Moriah by King Solomon, taking seven years.',
-    source: '1 Kings 6'
+    description: 'The building of the First Temple in Jerusalem on Mount Moriah by King Solomon, taking seven years. According to rabbinic tradition, the stones were shaped without iron tools using the miraculous Shamir.',
+    source: '1 Kings 6 / Sotah 48b'
+  },
+  {
+    id: 'fae-gamadim-timeline',
+    name: 'The Gammadim of Tyre',
+    type: 'event',
+    layer: 'biblical-events',
+    start: -586,
+    description: 'Ezekiel (27:11) records the Gammadim (translated as pygmies/dwarfs in the Vulgate) guarding the towers of Tyre. Alternative researchers associate them with ancient global legends of dwarf guardians.',
+    source: 'Ezekiel 27:11'
   },
   {
     id: 'evt-split-kingdom',
@@ -3394,8 +3403,8 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
       layer: 'illuminati-bloodlines',
       start: 1850,
       end: 2026,
-      description: 'A powerful Asian dynasty representing wealth and industrial power, often linked in esoteric narratives to Chinese secret societies (Triads) and international finance.',
-      source: 'Fritz Springmeier - Bloodlines of the Illuminati',
+      description: 'A powerful Asian dynasty representing wealth and industrial power. In global Nephilim bloodline theories (like those of Gary Wayne), the Li family is identified as a principal Eastern branch of the "dragon bloodline," connecting ancient Chinese dynastic legends (like the Dragon Kings and the Yellow Emperor) to the same post-flood hybrid lineages that shaped Western empires, claiming they guard the same occult secrets as European royalty.',
+      source: 'Fritz Springmeier - Bloodlines of the Illuminati / Blurry Creatures Podcast (EP: 442)',
       isPeopleGroup: true,
       subLabel: 'Possible Nephilim Bloodline'
     },
@@ -3553,8 +3562,8 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
       layer: 'black-nobility',
       start: 1917,
       end: 2026,
-      description: 'The official reigning house of the United Kingdom, created in 1917 by King George V renaming the British branch of Saxe-Coburg-Gotha to distance the monarchy from its German roots during World War I.',
-      source: 'British Royal Archives',
+      description: 'The official reigning house of the United Kingdom. Alternative theories (such as those by Gary Wayne) connect the Windsors to the Nephilim pedigree, pointing to their Rh-negative mystery, O-negative blood groups, coded royal heraldry, and King Charles III\'s claimed descent from Vlad the Impaler as markers of this lineage.',
+      source: 'British Royal Archives / Blurry Creatures Podcast (EP: 442)',
       isPeopleGroup: true,
       subLabel: 'Possible Nephilim Bloodline'
     },
@@ -6009,6 +6018,7 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'evt-split-kingdom': { lng: 35.277, lat: 32.213, locationName: 'Shechem', category: 'Biblical Events' },
   'evt-fall-samaria': { lng: 35.189, lat: 32.276, locationName: 'Samaria', category: 'Biblical Events' },
   'evt-fall-jerusalem': { lng: 35.235, lat: 31.778, locationName: 'Jerusalem', category: 'Biblical Events' },
+  'fae-gamadim-timeline': { lng: 35.196, lat: 33.271, locationName: 'Tyre (Lebanon)', category: 'Biblical Events' },
   'evt-temple-rebuilt': { lng: 35.235, lat: 31.778, locationName: 'Temple Mount', category: 'Biblical Events' },
   'evt-christ-birth': { lng: 35.201, lat: 31.704, locationName: 'Bethlehem', category: 'Biblical Events' },
   'evt-crucifixion': { lng: 35.229, lat: 31.778, locationName: 'Golgotha', category: 'Biblical Events' },

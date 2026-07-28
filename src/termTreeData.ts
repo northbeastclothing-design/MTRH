@@ -1758,7 +1758,8 @@ const chunk_0: any[] = [  {
     id: 'thoth',
     parentId: 'egyptian-pantheon',
     name: 'Thoth',
-    description: 'God of wisdom, knowledge, and writing',
+    description: 'God of wisdom, knowledge, and writing. In esoteric traditions, he is syncretized with Hermes Trismegistus and is associated with the creation of the Emerald Tablets (or the Emerald Tablet) and the Book of Thoth.',
+    relatedIds: ['emerald-tablet', 'hermes-trismegistus-philosopher', 'book-of-thoth'],
     sources: ['Egyptian Book of the Dead', 'Hermetic Corpus'],
     isApocryphal: true
   },  {
@@ -2014,6 +2015,14 @@ const chunk_0: any[] = [  {
     name: 'Royal & Esoteric Bloodlines',
     description: 'Lineages of power tracing through the Merovingian dynasty, royal houses, and ancient genealogical lineages.'
   },  {
+    id: 'bloodline-gene-of-isis',
+    parentId: 'bloodlines-genealogy',
+    name: 'Gene of Isis (Dragon & Fairy Bloodlines)',
+    description: 'An alleged ancient esoteric lineage (also referred to as elven, fairy, or dragon bloodlines) traced by occult societies and royal dynasties back to the Nephilim of Genesis 6. Esoteric researcher Gary Wayne asserts that Western figures like King Arthur, Vlad the Impaler (Dracula), and the Tuatha Dé Danann represent branches of this single buried family tree. In the East, this lineage is linked to the Chinese Li bloodline, the legendary "Dragon Kings," and claims of divine descent by emperors descending from the Yellow Emperor or solar deities like Amaterasu. The lineage is associated with the Rh-negative/O-negative blood groups, coded royal heraldry, and the preservation of a counterfeit pedigree intended to usher in the Antichrist.',
+    layer: 'black-nobility',
+    relatedIds: ['nobility-windsor', 'king-arthur-char', 'fae-tuatha-de-danann', 'bloodline-li', 'rev_antichrist'],
+    sources: ['Blurry Creatures Podcast (EP: 442)', 'The Genesis 6 Conspiracy by Gary Wayne']
+  },  {
     id: 'merovingian-bloodlines',
     parentId: 'bloodlines-genealogy',
     name: 'Merovingian Dynasty',
@@ -2109,11 +2118,12 @@ const chunk_0: any[] = [  {
     id: 'bloodline-li',
     parentId: 'illuminati-bloodlines',
     name: 'Li Bloodline',
-    description: 'A prominent East Asian family representing immense industrial wealth and political influence in Hong Kong and China. Conspiracy literature frequently links this lineage to international finance, shipping monopolies, and secret societies.',
+    description: 'A prominent East Asian family representing immense industrial wealth and political influence in Hong Kong and China. In global Nephilim bloodline theories (like those of Gary Wayne), the Li family is identified as a principal Eastern branch of the "dragon bloodline," connecting ancient Chinese dynastic legends (like the Dragon Kings and the Yellow Emperor) to the same post-flood hybrid lineages that shaped Western empires, claiming they guard the same occult secrets as European royalty.',
     layer: 'illuminati-bloodlines',
     timelineId: 'bloodline-li',
     subLabel: 'Possible Nephilim Bloodline',
-    sources: ['Bloodlines of the Illuminati by Fritz Springmeier', 'East Asian Economic History']
+    relatedIds: ['bloodline-gene-of-isis'],
+    sources: ['Bloodlines of the Illuminati by Fritz Springmeier', 'East Asian Economic History', 'Blurry Creatures Podcast (EP: 442)']
   },  {
     id: 'bloodline-onassis',
     parentId: 'illuminati-bloodlines',
@@ -2232,11 +2242,12 @@ const chunk_0: any[] = [  {
     id: 'nobility-windsor',
     parentId: 'black-nobility',
     name: 'Windsor Bloodline',
-    description: 'The royal house of the United Kingdom, renamed in 1917 from the House of Saxe-Coburg-Gotha. They have reigned over the British Empire and Commonwealth, representing a highly visible and influential branch of European nobility.',
+    description: 'The royal house of the United Kingdom, renamed in 1917 from the House of Saxe-Coburg-Gotha. In alternative eschatology (such as the theories of Gary Wayne), the Windsors are linked to the Nephilim pedigree, pointing to their Rh-negative mystery, O-negative blood groups, coded royal heraldry, and King Charles III\'s claimed descent from Vlad the Impaler as markers of this lineage.',
     layer: 'black-nobility',
     timelineId: 'nobility-windsor',
     subLabel: 'Possible Nephilim Bloodline',
-    sources: ['British Royal Archives', 'Windsor Castle Historical Society']
+    relatedIds: ['bloodline-gene-of-isis'],
+    sources: ['British Royal Archives', 'Windsor Castle Historical Society', 'Blurry Creatures Podcast (EP: 442)']
   },  {
     id: 'nobility-romanov',
     parentId: 'black-nobility',
@@ -7687,9 +7698,10 @@ const chunk_1: any[] = [  {
     id: 'rev_antichrist',
     parentId: 'future-prophecy',
     name: 'Rise of the Beast (Antichrist)',
-    description: 'The final 3.5 years (42 months) of the Tribulation where the Beast rules the earth, wages war against the saints, and enforces the Mark of the Beast.',
+    description: 'The final 3.5 years (42 months) of the Tribulation where the Beast rules the earth, wages war against the saints, and enforces the Mark of the Beast. Conspiracy researchers assert that elite bloodlines are tracking these lines to build a counterfeit pedigree for the Antichrist, establishing his claim to global rule through ancient lineages (the Gene of Isis).',
     timelineId: 'rev_antichrist',
-    sources: ['Biblical Prophecy Texts', 'Eschatological Literature'],
+    relatedIds: ['bloodline-gene-of-isis'],
+    sources: ['Biblical Prophecy Texts', 'Eschatological Literature', 'Blurry Creatures Podcast (EP: 442)'],
     bibleVerses: ['Then I stood on the sand of the sea. I saw a beast coming up out of the sea, having ten horns and seven heads. On his horns were ten crowns, and on his heads, blasphemous names. The beast which I saw was like a leopard, and his feet were like those of a bear, and his mouth like the mouth of a lion. The dragon gave him his power, his throne, and great authority. — Revelation 13:1-2 (https://www.biblegateway.com/passage/?search=Revelation+13%3A1-2)', 'I saw another beast coming up out of the earth. He had two horns like a lamb, and he spoke like a dragon. He exercises all the authority of the first beast in his presence. He makes the earth and those who dwell in it to worship the first beast, whose fatal wound was healed. — Revelation 13:11-12 (https://www.biblegateway.com/passage/?search=Revelation+13%3A11-12)', 'Let no one deceive you in any way. For it will not be, unless the rebellion comes first, and the man of sin is revealed, the son of destruction, he who opposes and exalts himself against all that is called God or that is worshiped; so that he sits as God in the temple of God, setting himself up as God. — 2 Thessalonians 2:3-4 (https://www.biblegateway.com/passage/?search=2+Thessalonians+2%3A3-4)']
   },  {
     id: 'rev_second_coming',
@@ -10388,6 +10400,204 @@ const chunk_2: any[] = [  {
     mapFeatureId: 'anomaly-Crop-Circles-355',
     images: ['https://www.youtube.com/watch?v=u1OpLJVa-B0'],
     sources: ['BLT Research Team Reports', 'Temporary Temples Crop Circle Archives']
+  },  {
+    id: 'anomaly-Crop-Circles-356',
+    parentId: 'crop-circle-formations',
+    name: 'Ilchester Formation (Somerset)',
+    description: 'A small cross with a ring formation reported in an oilseed rape (canola) field in Ilchester, Somerset, marking the early start of the 2026 season.',
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-356',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg'],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },  {
+    id: 'anomaly-Crop-Circles-357',
+    parentId: 'crop-circle-formations',
+    name: 'Waden Hill Dumbbell (Wiltshire)',
+    description: 'A small dumbbell crop circle formation reported in yellow oilseed rape on the slopes of Waden Hill, near the ancient Avebury stone circle.',
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-357',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg'],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },  {
+    id: 'anomaly-Crop-Circles-358',
+    parentId: 'crop-circle-formations',
+    name: 'Jack\'s Plantation Pentagram (Wiltshire)',
+    description: 'A large pentagonal design discovered in a barley field near Jack\'s Plantation, Wiltshire, displaying advanced five-fold symmetry.',
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-358',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg'],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },  {
+    id: 'anomaly-Crop-Circles-359',
+    parentId: 'crop-circle-formations',
+    name: 'Kingweston Spinner (Somerset)',
+    description: 'A beautiful six-fold spinner design in a barley field in Kingweston, Somerset, which reportedly formed in two distinct stages.',
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-359',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg'],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },  {
+    id: 'anomaly-Crop-Circles-360',
+    parentId: 'crop-circle-formations',
+    name: 'White Sheet Hill Four-Fold (Wiltshire)',
+    description: 'A clean four-fold geometric design reported in a barley field at White Sheet Hill, near Mere, Wiltshire, measuring roughly 75 meters in diameter.',
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-360',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg'],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },  {
+    id: 'anomaly-Crop-Circles-361',
+    parentId: 'crop-circle-formations',
+    name: 'Ditcheat Three-Fold (Somerset)',
+    description: 'A precise three-fold geometric formation discovered in a wheat field in Ditcheat, Somerset.',
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-361',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg'],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },  {
+    id: 'anomaly-Crop-Circles-362',
+    parentId: 'crop-circle-formations',
+    name: 'Great Wishford Formation (Wiltshire)',
+    description: 'A neat three-fold design appearing overnight in a wheat field at Great Wishford, Wiltshire.',
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-362',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg'],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },  {
+    id: 'anomaly-Crop-Circles-363',
+    parentId: 'crop-circle-formations',
+    name: 'Morgans Hill Fragment (Wiltshire)',
+    description: 'A possible three-fold or nine-fold design reported at Morgans Hill, Wiltshire. The formation was cut out by the farmer shortly after discovery to prevent visitors from entering the field.',
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-363',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg'],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },  {
+    id: 'anomaly-Crop-Circles-364',
+    parentId: 'crop-circle-formations',
+    name: 'Kingweston Eight-Fold (Somerset)',
+    description: 'An intricate eight-fold crop circle formation reported in a wheat field in Kingweston, Somerset, marking the second major event at this location in 2026.',
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-364',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg'],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },  {
+    id: 'anomaly-Crop-Circles-365',
+    parentId: 'crop-circle-formations',
+    name: 'Zürcher Weinland Double Spiral (Switzerland)',
+    description: 'A rare continental European formation discovered in Switzerland, featuring a double spiral pattern laid out in a wheat field.',
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-365',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg'],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },  {
+    id: 'anomaly-Crop-Circles-366',
+    parentId: 'crop-circle-formations',
+    name: 'Etchilhampton Quintuplet (Wiltshire)',
+    description: 'A quintuplet pattern consisting of five circles arranged symmetrically inside a large containing ring, reported at Etchilhampton Hill, Wiltshire.',
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-366',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg'],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },  {
+    id: 'anomaly-Crop-Circles-367',
+    parentId: 'crop-circle-formations',
+    name: 'Alfred\'s Castle Formation (Oxfordshire)',
+    description: 'An impressive formation approximately 75 meters in diameter, reported near the iron age hillfort of Alfred\'s Castle in Oxfordshire.',
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-367',
+    images: ['https://www.youtube.com/watch?v=lAeC93xVDrQ'],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },  {
+    id: 'anomaly-Crop-Circles-368',
+    parentId: 'crop-circle-formations',
+    name: 'Etchilhampton Multi-Ring (Wiltshire)',
+    description: 'The second formation of the season appearing at Etchilhampton Hill, Wiltshire, featuring a complex array of rings and nested circles.',
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-368',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg'],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },  {
+    id: 'anomaly-Crop-Circles-369',
+    parentId: 'crop-circle-formations',
+    name: 'Zeal\'s Knoll Circle (Wiltshire)',
+    description: 'A distinct circular design reported in Mere at Zeal\'s Knoll, Wiltshire, attracting significant interest from aerial photographers.',
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-369',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg'],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },  {
+    id: 'anomaly-Crop-Circles-370',
+    parentId: 'crop-circle-formations',
+    name: 'Tidcombe 3D Formation (Wiltshire)',
+    description: 'A striking 3D-effect crop circle approximately 70 meters in diameter, discovered in a wheat field on Maccombe Down near Tidcombe, Wiltshire.',
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-370',
+    images: ['https://www.youtube.com/watch?v=n6MtlH_M4Ng'],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },  {
+    id: 'anomaly-Crop-Circles-371',
+    parentId: 'crop-circle-formations',
+    name: 'Roundway Hill Star (Wiltshire)',
+    description: 'A highly complex partial star design approximately 85 meters in diameter, reported in a wheat field at Roundway Hill near Devizes, Wiltshire.',
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-371',
+    images: ['https://www.youtube.com/watch?v=kgtA5dgvVYQ'],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },  {
+    id: 'anomaly-Crop-Circles-372',
+    parentId: 'crop-circle-formations',
+    name: 'Milk Hill Three-Fold (Wiltshire)',
+    description: 'A simple but beautiful three-fold crop circle design measuring 40 meters in diameter, reported on the slopes of Milk Hill, Wiltshire.',
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-372',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg'],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },  {
+    id: 'anomaly-Crop-Circles-373',
+    parentId: 'crop-circle-formations',
+    name: 'Avebury Rings (Wiltshire)',
+    description: 'A complex collection of circles and rings appearing in close proximity to the historic Avebury Henge stone circle, Wiltshire.',
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-373',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg'],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },  {
+    id: 'anomaly-Crop-Circles-374',
+    parentId: 'crop-circle-formations',
+    name: 'Wayland\'s Smithy Event (Oxfordshire)',
+    description: 'A new crop circle formation reported near the ancient Neolithic chambered long barrow of Wayland\'s Smithy, Oxfordshire.',
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-374',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg'],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },  {
+    id: 'anomaly-Crop-Circles-375',
+    parentId: 'crop-circle-formations',
+    name: 'Devizes Geometric (Wiltshire)',
+    description: 'A geometric pattern appearing in a field near Devizes, Wiltshire, a historic region for crop circle sightings.',
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-375',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg'],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },  {
+    id: 'anomaly-Crop-Circles-376',
+    parentId: 'crop-circle-formations',
+    name: 'Liddington Pictogram (Wiltshire)',
+    description: 'A long, intricate pictogram consisting of symbols laid out in a wheat field near Liddington, Wiltshire.',
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-376',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg'],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },  {
+    id: 'anomaly-Crop-Circles-377',
+    parentId: 'crop-circle-formations',
+    name: 'Fox Hill Formation (Wiltshire)',
+    description: 'A geometric crop circle reported near Fox Hill, Wiltshire, in late July, continuing the active summer season.',
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-377',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg'],
+    sources: ['Temporary Temples Crop Circle Archives']
   },  {
     id: 'chilbolton',
     parentId: 'crop-circles-br',
@@ -17985,17 +18195,9 @@ const chunk_4: any[] = [  {
     parentId: 'ancient-texts',
     name: 'Book of Thoth',
     description: 'A legendary book containing sacred spells and cosmic secrets, attributed to Thoth, the Egyptian god of wisdom and writing. Allegedly written by Thoth\'s own hand, it was said to contain spells enabling the reader to understand the language of beasts and behold the gods themselves.',
-    relatedIds: ['thoth', 'emerald-tablets'],
+    relatedIds: ['thoth', 'emerald-tablet'],
     bibleVerses: ['The Book of Thoth contains all the wisdom of the gods and the secrets of the sky and earth... — Ancient Egyptian papyri (https://www.sacred-texts.com/egy/index.htm)'],
     sources: ['Ancient Egyptian Papyri', 'Hermetic Literature']
-  },  {
-    id: 'emerald-tablets',
-    parentId: 'ancient-texts',
-    name: 'Emerald Tablets',
-    description: 'A foundational hermetic text containing the famous phrase \'as above, so below,\' preserving the cosmic keys to alchemy, natural law, and spiritual transmutation. Historically attributed to Hermes Trismegistus (syncretized with Thoth).',
-    relatedIds: ['thoth', 'book-of-thoth'],
-    bibleVerses: ['That which is below is like that which is above, and that which is above is like that which is below, to do the miracles of one only thing. — Hermetic Emerald Tablet (https://www.sacred-texts.com/alc/emerald.htm)'],
-    sources: ['Hermetic Corpus', 'Tabula Smaragdina']
   },  {
     id: 'library-of-alexandria',
     parentId: 'ancient-texts',
@@ -21888,9 +22090,9 @@ const chunk_6: any[] = [
     id: 'fae-tuatha-de-danann',
     parentId: 'fae',
     name: 'Tuatha Dé Danann (Aos Sí)',
-    description: 'The "People of the Goddess Danu"—a supernatural race of god-like beings in Irish mythology. After losing Ireland to the Milesians, they retreated into the hollow hills (mounds) and became the Sidhe/faerie folk.',
-    sources: ['Lebor Gabála Érenn (Book of Invasions)', 'Annals of the Four Masters'],
-    relatedIds: ['mounds']
+    description: 'The "People of the Goddess Danu"—a supernatural race of god-like beings in Irish mythology. After losing Ireland to the Milesians, they retreated into the hollow hills (mounds) and became the Sidhe/faerie folk. Esoteric researchers like Gary Wayne link the Tuatha Dé Danann to the Nephilim, identifying them as the "fairy" branch of the dragon bloodline (the Gene of Isis) that preserved pre-flood ancient knowledge.',
+    relatedIds: ['mounds', 'bloodline-gene-of-isis'],
+    sources: ['Lebor Gabála Érenn (Book of Invasions)', 'Annals of the Four Masters', 'Blurry Creatures Podcast (EP: 442)']
   },
   {
     id: 'fae-nymphs',
@@ -21927,6 +22129,16 @@ const chunk_6: any[] = [
     name: 'Dwarves',
     description: 'Subterranean Germanic and Norse fae renowned for mining, metallurgy, and crafting magical items (like Mjolnir and Draupnir). They dwell in Svartalfheim and are rich in runes and esoteric metalcraft.',
     sources: ['Poetic Edda', 'Nibelungenlied']
+  },
+  {
+    id: 'fae-gamadim',
+    parentId: 'fae',
+    secondaryParentIds: ['biblical-figures'],
+    name: 'Gamadim (Gammadims)',
+    description: 'A race of small warriors or watchmen mentioned in Ezekiel 27:11 as guarding the high towers of Tyre. The Hebrew root "gomed" translates to a cubit or a span, indicating short stature. In early translations like the Latin Vulgate, they are rendered as pygmies (Pygmaei). In rabbinic tradition and alternative history, they are associated with ancient races of dwarfs, pygmies, or little people who guarded ancient strongholds across the globe.',
+    layer: 'Biblical Figures',
+    relatedIds: ['fae-dwarves', 'biblical-figures'],
+    sources: ['Hebrew Bible (Ezekiel 27:11)', 'Latin Vulgate', 'Talmudic Commentaries']
   },
   {
     id: 'fae-mermaids-sirens',
@@ -22028,7 +22240,7 @@ const chunk_6: any[] = [
     name: 'Hermes Trismegistus',
     description: 'The legendary syncretic figure combining the Greek god Hermes and the Egyptian god Thoth. Revered as the author of the Hermetica, he is the foundational patron of Hermeticism, alchemy, and astrology, famously associated with the Emerald Tablet.',
     mapFeatureId: 'anomaly-Philosophers-Hermes',
-    relatedIds: ['alchemy', 'ouroboros-esoteric'],
+    relatedIds: ['alchemy', 'ouroboros-esoteric', 'emerald-tablet', 'thoth'],
     sources: ['Corpus Hermeticum', 'The Emerald Tablet']
   },
   {
@@ -22962,9 +23174,9 @@ const chunk_new_additions: any[] = [
     id: 'king-arthur-char',
     parentId: 'arthurian-legend',
     name: 'King Arthur',
-    description: "The legendary British sovereign who pulled the sword from the stone, established the fellowship of the Round Table at Camelot, and defended Britain against Saxon invaders.",
-    relatedIds: ['arthurian-legend', 'merlin-wizard-char', 'excalibur-lore', 'round-table-knights', 'tomb-king-arthur'],
-    sources: ['Geoffrey of Monmouth Writings', 'Le Morte d\'Arthur'],
+    description: "The legendary British sovereign who pulled the sword from the stone, established the fellowship of the Round Table at Camelot, and defended Britain against Saxon invaders. In esoteric giant theories, Arthur is viewed as a historical branch of the hybrid Nephilim/fairy lineage (the Gene of Isis) preserved through secret royal lines.",
+    relatedIds: ['arthurian-legend', 'merlin-wizard-char', 'excalibur-lore', 'round-table-knights', 'tomb-king-arthur', 'bloodline-gene-of-isis'],
+    sources: ['Geoffrey of Monmouth Writings', 'Le Morte d\'Arthur', 'Blurry Creatures Podcast (EP: 442)'],
     isApocryphal: true
   },
   {
@@ -25585,10 +25797,20 @@ const chunk_37_new_items: any[] = [
     name: 'Solomon',
     description: 'King of Israel and builder of the First Temple in Jerusalem. Renowned for his wisdom, wealth, and power, he is also prominent in esoteric traditions (such as the Testament of Solomon and Kabbalah) as a master exorcist who commanded demons to build the temple using a magical signet ring.',
     layer: 'Biblical Figures',
-    relatedIds: ['lesser-key-solomon', 'biblical-figures', 'judaism'],
+    relatedIds: ['lesser-key-solomon', 'biblical-figures', 'judaism', 'solomons-shamir'],
     sources: ['Hebrew Bible (1 Kings)', 'Testament of Solomon', 'Jewish Antiquities (Josephus)'],
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Simeon_Solomon%2C_King_Solomon%2C_1872_or_1874%2C_NGA_76152_%28cropped%29.jpg/1280px-Simeon_Solomon%2C_King_Solomon%2C_1872_or_1874%2C_NGA_76152_%28cropped%29.jpg'],
     mapFeatureId: 'solomon'
+  },
+  {
+    id: 'solomons-shamir',
+    parentId: 'solomon',
+    name: "Solomon's Shamir",
+    description: "A legendary substance, object, or tiny worm mentioned in the Talmud and Midrashim that King Solomon used to cut the massive stones of the First Temple without using iron tools (as iron, being a metal of war, was prohibited on the altar). Wrapped in wool and stored in a lead container filled with barley bran because of its destructive power, the Shamir is interpreted in alternative archaeology as a high-tech artifact, such as a sonic resonator, radioactive material, or a focused laser-like device.",
+    layer: 'Biblical Figures',
+    relatedIds: ['solomon'],
+    sources: ['Talmud (Sotah 48b)', 'Midrash Tehillim', 'Hebrew Bible (1 Kings 6:7)'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Solomon%27s_shamir.png/1280px-Solomon%27s_shamir.png']
   },
   {
     id: 'lesser-key-solomon',
@@ -26629,12 +26851,14 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['De Natura Rerum (Paracelsus)']
   },  {
     id: 'emerald-tablet',
-    parentId: 'esoteric-traditions',
+    parentId: 'ancient-texts',
+    secondaryParentIds: ['esoteric-traditions'],
     name: 'The Emerald Tablet',
-    description: 'A legendary Hermetic text reputed to contain the secrets of the prima materia and alchemical transmutation, famous for the core precept: "As above, so below."',
-    relatedIds: ['hermeticism', 'alchemy', 'isaac-newton'],
+    description: 'A legendary Hermetic text reputed to contain the secrets of the prima materia and alchemical transmutation, famous for the core precept: "As above, so below." The tablet (or tablets) preserves the cosmic keys to alchemy, natural law, and spiritual transmutation, and is historically and esoterically attributed to the legendary sage Hermes Trismegistus, who is syncretized with the ancient Egyptian god of wisdom, Thoth.',
+    relatedIds: ['hermeticism', 'alchemy', 'isaac-newton', 'thoth', 'hermes-trismegistus-philosopher', 'book-of-thoth'],
+    bibleVerses: ['That which is below is like that which is above, and that which is above is like that which is below, to do the miracles of one only thing. — Hermetic Emerald Tablet (https://www.sacred-texts.com/alc/emerald.htm)'],
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Leipzig_tablet_text.jpg/1280px-Leipzig_tablet_text.jpg'],
-    sources: ['Tabula Smaragdina Translation (Isaac Newton)', 'Chrysopoeia of Cleopatra']
+    sources: ['Hermetic Corpus', 'Tabula Smaragdina', 'Tabula Smaragdina Translation (Isaac Newton)', 'Chrysopoeia of Cleopatra']
   },  {
     id: 'kabbalah',
     parentId: 'esoteric-traditions',
@@ -27739,5 +27963,272 @@ export const TERM_TREE_DATA: TermNode[] = [
     mapFeatureId: 'rel-adherent-harry-reid',
     sources: ['Reid Biography / Nevada Political Records'],
     images: ["https://upload.wikimedia.org/wikipedia/commons/6/63/Harry_Reid_official_portrait_2009_%28cropped%29.jpg"]
+  },
+  {
+    id: 'egyptian-symbols',
+    parentId: 'egyptian-pantheon',
+    name: 'Egyptian Symbols',
+    description: 'Sacred symbols, amulets, and hieroglyphic concepts of ancient Egypt, representing cosmological order, protection, and eternal life.',
+    isApocryphal: true
+  },
+  {
+    id: 'egyptian-ankh',
+    parentId: 'egyptian-symbols',
+    name: 'Ankh',
+    description: 'The Ankh (key of life) is a cross with a loop at the top. In the hieroglyphic system of writing, it represents the concept of eternal life. It frequently appears in Egyptian tomb paintings and other art. It is also known as the "key of the Nile" representing the union between Osiris and Isis.',
+    relatedIds: ['osiris', 'isis'],
+    sources: ['Ancient Egyptian Papyri', 'Tomb Paintings'],
+    images: ['https://www.cleopatraegypttours.com/wp-content/uploads/2019/10/The-Ankh.jpg']
+  },
+  {
+    id: 'egyptian-djed',
+    parentId: 'egyptian-symbols',
+    name: 'Djed',
+    description: 'The Djed is a pillar-like symbol representing stability and strength. Known as "The Backbone of Osiris," this symbol is Osirian in nature and is primarily associated with themes of rebirth, resurrection, and regeneration.',
+    relatedIds: ['osiris', 'egyptian-tiet'],
+    sources: ['Pyramid Texts', 'Egyptian Book of the Dead'],
+    images: ['https://www.cleopatraegypttours.com/wp-content/uploads/2019/10/Djed.jpg']
+  },
+  {
+    id: 'egyptian-eye-of-horus',
+    parentId: 'egyptian-symbols',
+    name: 'Wadjet Eye (Eye of Horus)',
+    description: 'The Eye of Horus (Wadjet Eye) represents sacrifice, healing, protection, and royal power. Used as a protective amulet against envy, illness, and evil spirits, it was placed on the pharaoh\'s mummy for protection in the tomb. In myth, Horus used his eye to restore life to his father Osiris.',
+    relatedIds: ['horus', 'osiris', 'egyptian-eye-of-ra'],
+    sources: ['Egyptian Book of the Dead', 'Pyramid Texts'],
+    images: ['https://www.cleopatraegypttours.com/wp-content/uploads/2019/10/Wadjet-Eye.jpg']
+  },
+  {
+    id: 'egyptian-eye-of-ra',
+    parentId: 'egyptian-symbols',
+    name: 'Eye of Ra',
+    description: 'The Eye of Ra symbolizes the sun, power, and the feminine counterpart to Ra. It acts as an independent entity that protects Ra and destroys his enemies. In mythology, it is identified with the personification of goddesses such as Wadjet, Hathor, Mut, Sekhmet, and Bastet.',
+    relatedIds: ['ra', 'hathor', 'bastet', 'egyptian-eye-of-horus'],
+    sources: ['Litany of Re', 'Egyptian Book of the Dead'],
+    images: ['https://www.cleopatraegypttours.com/wp-content/uploads/2019/10/Eye-Of-Ra.jpg']
+  },
+  {
+    id: 'egyptian-was',
+    parentId: 'egyptian-symbols',
+    name: '\'Was\' Sceptre',
+    description: 'The Was Sceptre is a symbol of power, dominion, and authority of the gods and the king. It features a straight shaft, a crooked handle in the shape of an animal head (resembling the god Set), and a forked base, ensuring the continuance of the king\'s prosperity.',
+    relatedIds: ['egyptian-set'],
+    sources: ['Tomb Paintings', 'Temple Reliefs'],
+    images: ['https://www.cleopatraegypttours.com/wp-content/uploads/2019/10/Was-Symbol.jpg']
+  },
+  {
+    id: 'egyptian-scarab',
+    parentId: 'egyptian-symbols',
+    name: 'Scarab Beetle',
+    description: 'The Scarab Beetle (Khepri) represents the sun, creation, rebirth, and transformation. As one of the most popular Egyptian amulets, scarabs were placed over the hearts of the deceased to protect them in the afterlife and guide their transformation.',
+    relatedIds: ['ra'],
+    sources: ['Egyptian Book of the Dead', 'Heart Scarabs'],
+    images: ['https://www.cleopatraegypttours.com/wp-content/uploads/2019/10/Scarab-beetle.jpg']
+  },
+  {
+    id: 'egyptian-cartouche',
+    parentId: 'egyptian-symbols',
+    name: 'Cartouche',
+    description: 'A Cartouche is an oval loop representing a protective rope enclosing the royal name. Linked to the sun and eternal protection, it guarded the pharaoh\'s name from evil spirits in this life and the next. Its shape is esoterically associated with the ouroboros.',
+    relatedIds: ['egyptian-ouroboros'],
+    sources: ['Hieroglyphic Inscriptions', 'Royal Tombs'],
+    images: ['https://www.cleopatraegypttours.com/wp-content/uploads/2019/10/Cartouche.jpg']
+  },
+  {
+    id: 'egyptian-lotus',
+    parentId: 'egyptian-symbols',
+    name: 'Lotus',
+    description: 'The Lotus flower represents rebirth, renewal, and the sun, rising from the water each morning. The white and blue lotus symbolized the unification of Upper and Lower Egypt and was widely used in ancient medicine, perfumes, and spiritual rituals.',
+    relatedIds: ['osiris', 'isis'],
+    sources: ['Tomb Paintings', 'Edfu Temple Texts'],
+    images: ['https://www.cleopatraegypttours.com/wp-content/uploads/2019/10/lotus-symbol.jpg']
+  },
+  {
+    id: 'egyptian-uraeus',
+    parentId: 'egyptian-symbols',
+    name: 'Uraeus',
+    description: 'The Uraeus is the rearing cobra symbol representing the goddess Wadjet and royal authority. Worn on the crowns of pharaohs, it was believed to embody magical powers and spit fire to protect the king from his enemies. It was gifted to the kings by the god Geb.',
+    relatedIds: ['geb'],
+    sources: ['Royal Crown Reliefs', 'Pyramid Texts'],
+    images: ['https://www.cleopatraegypttours.com/wp-content/uploads/2019/10/uraeus-symbol.jpg']
+  },
+  {
+    id: 'egyptian-ka',
+    parentId: 'egyptian-symbols',
+    name: 'Ka',
+    description: 'The Ka is the spiritual double or life force born with a person that survives death. It required physical offerings, statues, and mummification to preserve its connection to the physical world, living in the tomb\'s burial chamber. In hieroglyphs, it is shown as upstretched arms.',
+    relatedIds: ['egyptian-ba'],
+    sources: ['Pyramid Texts', 'Coffin Texts'],
+    images: ['https://www.cleopatraegypttours.com/wp-content/uploads/2019/10/ka-symbol.jpg']
+  },
+  {
+    id: 'egyptian-ba',
+    parentId: 'egyptian-symbols',
+    name: 'Ba',
+    description: 'The Ba represents a person\'s unique personality and soul in the spirit world. Depicted as a human-headed bird, the Ba leaves the body after death to soar among the stars, returning regularly to visit the tomb and reunite with the body and Ka to achieve eternal life.',
+    relatedIds: ['egyptian-ka'],
+    sources: ['Egyptian Book of the Dead', 'Coffin Texts'],
+    images: ['https://www.cleopatraegypttours.com/wp-content/uploads/2019/10/BA-symbol.jpg']
+  },
+  {
+    id: 'egyptian-canopic-jars',
+    parentId: 'egyptian-symbols',
+    name: 'Canopic Jars',
+    description: 'Canopic Jars are four containers used to preserve the internal organs of the deceased for the afterlife. Each jar represents one of the Four Sons of Horus: Imsety (man, liver), Duamutef (jackal, stomach), Hapi (baboon, lungs), and Qebehsenuf (falcon, intestines).',
+    relatedIds: ['horus', 'osiris'],
+    sources: ['Mummification Rituals', 'Egyptian Book of the Dead'],
+    images: ['https://www.cleopatraegypttours.com/wp-content/uploads/2019/10/Canopic-Jar.jpg']
+  },
+  {
+    id: 'egyptian-winged-sun',
+    parentId: 'egyptian-symbols',
+    name: 'Winged Sun',
+    description: 'The Winged Sun (Behdety) is a solar symbol representing the midday sun god Behedti. Used as a protective amulet over temple doorways and on royal stelae, it provided divine protection and represented solar divinity across various ancient Near Eastern cultures.',
+    relatedIds: ['ra'],
+    sources: ['Temple Architecture', 'Stelae Inscriptions'],
+    images: ['https://www.cleopatraegypttours.com/wp-content/uploads/2019/10/egyptian-winged-sun.jpg']
+  },
+  {
+    id: 'egyptian-ouroboros',
+    parentId: 'egyptian-symbols',
+    name: 'Egyptian Ouroboros',
+    description: 'The Egyptian Ouroboros is a circular snake biting its own tail, symbolizing infinity, the sun\'s daily journey (the solar disk of Aten), rebirth, and the cyclical nature of time. In the Book of the Dead, it is associated with the creator god Atum rising from chaotic waters.',
+    relatedIds: ['ouroboros-esoteric', 'atum'],
+    sources: ['Book of the Netherworld', 'Egyptian Book of the Dead'],
+    images: ['https://www.cleopatraegypttours.com/wp-content/uploads/2019/10/Egyptian-Ouroboros.jpg']
+  },
+  {
+    id: 'egyptian-amenta',
+    parentId: 'egyptian-symbols',
+    name: 'Amenta',
+    description: 'Amenta represents the Underworld (realm of the dead) and the horizon where the sun sets. Originally denoting the western bank of the Nile where tombs were built, the symbol evolved to represent Duat, the spiritual realm ruled by Osiris.',
+    relatedIds: ['osiris'],
+    sources: ['Egyptian Book of the Dead', 'Tomb Architecture'],
+    images: ['https://www.cleopatraegypttours.com/wp-content/uploads/2019/10/AMENTA.jpg']
+  },
+  {
+    id: 'egyptian-tiet',
+    parentId: 'egyptian-symbols',
+    name: 'Tiet (Knot of Isis)',
+    description: 'The Tiet (Tyet), known as the Knot of Isis or the Blood of Isis, is a symbol resembling the Ankh. Linked to the goddess Isis, it represents life and protection. Often paired with the Djed of Osiris, it denotes the dual nature of life and spiritual fertility.',
+    relatedIds: ['isis', 'osiris', 'egyptian-djed', 'egyptian-ankh'],
+    sources: ['Egyptian Book of the Dead', 'Amuletic Spells'],
+    images: ['https://www.cleopatraegypttours.com/wp-content/uploads/2019/10/Tiet-The-Knot-Of-Isis.jpg']
+  },
+  {
+    id: 'egyptian-feather-of-maat',
+    parentId: 'egyptian-symbols',
+    name: 'Feather of Maat',
+    description: 'The Feather of Maat represents truth, balance, and justice. In the Hall of Two Truths, the heart of the deceased is weighed against Maat\'s feather. If equal or lighter, the soul goes to paradise (Aaru); if heavier, it is consumed by the monster Ammit.',
+    relatedIds: ['maat', 'osiris'],
+    sources: ['Egyptian Book of the Dead', 'Judgment Scenes'],
+    images: ['https://www.cleopatraegypttours.com/wp-content/uploads/2019/10/Feather-Of-Maat.jpg']
+  },
+  {
+    id: 'egyptian-crook-flail',
+    parentId: 'egyptian-symbols',
+    name: 'Crook and Flail',
+    description: 'The Crook (Heka) and Flail (Nekhakha) are symbols of royal power and divine authority. Originally emblems of Osiris, they represent the pharaoh\'s dual role: the shepherd crook denotes leading and caring for the people, while the flail symbolizes provider of food.',
+    relatedIds: ['osiris'],
+    sources: ['Royal Sarcophagi', 'Temple Reliefs'],
+    images: ['https://www.cleopatraegypttours.com/wp-content/uploads/2019/10/Crook-and-flail.jpg']
+  },
+  {
+    id: 'egyptian-deshret',
+    parentId: 'egyptian-symbols',
+    name: 'Deshret Crown',
+    description: 'The Deshret (Red Crown) represents Lower Egypt and the protective goddess Wadjet. It is also associated with the fertile land of Kemet and the territory of the god Set. When combined with the White Crown, it forms the unified crown of Egypt.',
+    relatedIds: ['egyptian-hedjet', 'egyptian-pschent', 'egyptian-set'],
+    sources: ['Pharaonic Reliefs', 'Temple of Horus'],
+    images: ['https://www.cleopatraegypttours.com/wp-content/uploads/2019/10/Deshret-Crown.jpg']
+  },
+  {
+    id: 'egyptian-hedjet',
+    parentId: 'egyptian-symbols',
+    name: 'Hedjet Crown',
+    description: 'The Hedjet (White Crown) represents the kingdom of Upper Egypt. It is associated with the vulture goddess Nekhbet. Following the unification of Upper and Lower Egypt, it was merged with the Red Crown to symbolize total sovereignty.',
+    relatedIds: ['egyptian-deshret', 'egyptian-pschent'],
+    sources: ['Pharaonic Reliefs', 'Palermo Stone'],
+    images: ['https://www.cleopatraegypttours.com/wp-content/uploads/2019/10/Hedjet-Crown.jpg']
+  },
+  {
+    id: 'egyptian-pschent',
+    parentId: 'egyptian-symbols',
+    name: 'Pschent Crown',
+    description: 'The Pschent is the Double Crown of Egypt, formed by combining the Deshret (Red Crown) and the Hedjet (White Crown). It symbolizes the unification of Upper and Lower Egypt and the pharaoh\'s total rule and authority over the entire land.',
+    relatedIds: ['egyptian-deshret', 'egyptian-hedjet'],
+    sources: ['Pharaonic Reliefs', 'Temple of Osiris'],
+    images: ['https://www.cleopatraegypttours.com/wp-content/uploads/2019/10/Pschent-Crown.jpg']
+  },
+  {
+    id: 'egyptian-tree-of-life',
+    parentId: 'egyptian-symbols',
+    name: 'Tree of Life',
+    description: 'The Egyptian Tree of Life (associated with palm and sycamore trees) represents eternal life, knowledge of time\'s cycles, and creation. Growing at the gates of heaven near Ra, it first appeared at the Heliopolis Temple of the Sun when Ra arose.',
+    relatedIds: ['ra'],
+    sources: ['Heliopolis Sun Temple Texts', 'Egyptian Mythology'],
+    images: ['https://www.cleopatraegypttours.com/wp-content/uploads/2019/10/Tree-of-Life-symbol.jpg']
+  },
+  {
+    id: 'egyptian-seba',
+    parentId: 'egyptian-symbols',
+    name: 'Seba',
+    description: 'The Seba is a star symbol representing the stars, constellations, and the underworld Duat. The Egyptians decorated temple ceilings and tomb interiors with it. A star inside a circle represented Duat, where stars descend at night to accompany the Sun.',
+    relatedIds: ['ra'],
+    sources: ['Tomb Ceiling Decorations', 'Astronomical Papyri'],
+    images: ['https://www.cleopatraegypttours.com/wp-content/uploads/2019/10/Seba.jpg']
+  },
+  {
+    id: 'egyptian-ajet',
+    parentId: 'egyptian-symbols',
+    name: 'Ajet',
+    description: 'Ajet represents the horizon where the sun rises and sets, embodying sunrise and sunset. Guiding Ra\'s path, it features the solar disk between two mountain peaks (Djew). It is guarded by the double-lion underworld god Aker, representing yesterday and today.',
+    relatedIds: ['ra'],
+    sources: ['Book of the Dead', 'Tomb Drawings'],
+    images: ['https://www.cleopatraegypttours.com/wp-content/uploads/2019/10/Ajet-symbols.jpg']
+  },
+  {
+    id: 'egyptian-menat',
+    parentId: 'egyptian-symbols',
+    name: 'Menat',
+    description: 'The Menat is a ritual heavy necklace associated with the goddess Hathor. Believed to be the physical conduit of Hathor\'s power, it symbolizes fertility, rebirth, life, and cosmic renewal, often used as an amulet of protection.',
+    relatedIds: ['hathor'],
+    sources: ['Hathor Temple Reliefs', 'Ritual Amulets'],
+    images: ['https://www.cleopatraegypttours.com/wp-content/uploads/2019/10/Menat-egyptian-symbol.jpg']
+  },
+  {
+    id: 'egyptian-sistrum',
+    parentId: 'egyptian-symbols',
+    name: 'Sistrum',
+    description: 'The Sistrum is a sacred rattle instrument used in temple dances and rituals to worship the goddesses Hathor, Isis, and Bastet. Resembling the Ankh symbol, it featured a handle and metal rings that made sound, representing joy, festivity, and banishing chaos.',
+    relatedIds: ['hathor', 'isis', 'bastet', 'egyptian-ankh'],
+    sources: ['Temple Ritual Scenes', 'Hieroglyphic Texts'],
+    images: ['https://www.cleopatraegypttours.com/wp-content/uploads/2019/10/Sistrum.jpg']
+  },
+  {
+    id: 'egyptian-nemyss',
+    parentId: 'egyptian-symbols',
+    name: 'Nemyss',
+    description: 'The Nemyss is the folded linen ritual headdress worn by pharaohs, famously seen on King Tutankhamun\'s gold sarcophagus. Rising from the forehead and hanging over the shoulders, it symbolized royal authority and remains a key vestment in Kemetic rituals.',
+    sources: ['Sarcophagi Inscriptions', 'Pharaonic Statues'],
+    images: ['https://www.cleopatraegypttours.com/wp-content/uploads/2019/10/Nemyss-Egyptian-symbol.jpg']
+  },
+  {
+    id: 'egyptian-obelisk',
+    parentId: 'egyptian-symbols',
+    name: 'Obelisk',
+    description: 'The Obelisk is a monolithic tall stone structure with a pyramid-shaped tip (pyramidion). Erected to honor and invoke the protection of the sun god Ra, it represented Earth\'s generative energies and power, serving as a physical dwelling place for the deity.',
+    relatedIds: ['ra'],
+    sources: ['Karnak Temple Stelae', 'Solar Obelisks'],
+    images: ['https://www.cleopatraegypttours.com/wp-content/uploads/2019/10/Obelisk-Egyptian-symbol.jpg']
+  },
+  {
+    id: 'egyptian-shen-ring',
+    parentId: 'egyptian-symbols',
+    name: 'Shen Ring',
+    description: 'The Shen Ring (Shenu) is a knotted circular rope symbol representing eternity, infinite protection, and the solar disk. Often depicted carried by divine falcons, it was highly revered as a magic circle of power, shielding against diseases and hostile forces.',
+    relatedIds: ['ra'],
+    sources: ['Tomb Paintings', 'Royal Papyri'],
+    images: ['https://www.cleopatraegypttours.com/wp-content/uploads/2019/10/Shenu-Egyptian-symbol.jpg']
   },
 ];
