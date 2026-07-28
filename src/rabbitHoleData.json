@@ -50493,5 +50493,21 @@
     "images": [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Library_of_Ashurbanipal.jpg/500px-Library_of_Ashurbanipal.jpg"
     ]
+  },
+  {
+    "id": "anomaly-Bigfoot-cain",
+    "name": "David W. Patten's Encounter with Cain (Bigfoot Folklore)",
+    "category": "Bigfoot",
+    "type": "Point",
+    "coordinates": {
+      "lng": -86.2911,
+      "lat": 35.8486
+    },
+    "date": 1835,
+    "description": "Early Latter-day Saint Apostle David W. Patten reported encountering a tall, dark, hairy man walking beside his mule in Tennessee around 1835. The being identified himself as the biblical Cain, stating he was cursed to wander the earth without dying. Later published in Patten's 1900 biography and quoted in Spencer W. Kimball's book 'The Miracle of Forgiveness', this encounter became the primary basis of Mormon folklore conflating Cain with Bigfoot.",
+    "source": "The Life of David W. Patten / The Miracle of Forgiveness",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Spencer_W._Kimball3.JPG/330px-Spencer_W._Kimball3.JPG"
+    ]
   }
 ]

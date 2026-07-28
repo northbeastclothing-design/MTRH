@@ -2839,6 +2839,7 @@ const chunk_0: any[] = [  {
     description: 'Eldest son of Adam and Eve. Slew his brother Abel and was marked by God.',
     layer: 'biblical-patriarchs',
     timelineId: 'cain',
+    relatedIds: ['anomaly-Bigfoot-cain-node'],
     sources: ['Bible', 'Historical Chronology Database'],
     bibleVerses: ['The man knew Eve his wife. She conceived, and gave birth to Cain, and said, “I have gotten a man with Yahweh’s help.” — Genesis 4:1 (https://www.biblegateway.com/passage/?search=Genesis+4%3A1)', 'Cain said to Abel, his brother, “Let’s go into the field.” While they were in the field, Cain rose up against Abel, his brother, and killed him. — Genesis 4:8 (https://www.biblegateway.com/passage/?search=Genesis+4%3A8)', 'unlike Cain, who was of the evil one, and killed his brother. Why did he kill him? Because his deeds were evil, and his brother’s righteous. — 1 John 3:12 (https://www.biblegateway.com/passage/?search=1+John+3%3A12)']
   },  {
@@ -21735,6 +21736,24 @@ const chunk_6: any[] = [
     bibleVerses: [
       'Saul then said to his attendants, "Find me a woman who is a medium, so I may go and inquire of her." "There is one in Endor," they said. — 1 Samuel 28:7 (https://www.biblegateway.com/passage/?search=1+Samuel+28%3A7)'
     ]
+  }, {
+    id: 'seer-stones',
+    parentId: 'witchcraft-folk-magic',
+    name: 'Seer Stones (Seeing Stones)',
+    description: 'Polished or naturally smooth stones used in folk magic, scrying, and treasure-digging traditions. Historically, practitioners (known as "scryers" or "peepers") would place these stones in a hat or dark vessel to exclude light, claiming the stone would reveal hidden treasures, lost objects, or spiritual visions. In early 19th-century America, folk magic practices utilized these stones, notably by Joseph Smith Jr., who used seer stones in a top hat to discover treasure and later to translate the gold plates of the Book of Mormon.',
+    layer: 'The Occult',
+    relatedIds: ['rel-figure-joseph-smith', 'witchcraft-folk-magic'],
+    sources: ['Early Mormonism and the Magic World View (D. Michael Quinn)', 'Historical Records of Joseph Smith\'s Seer Stones'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/JosephSmithTranslating.jpg/500px-JosephSmithTranslating.jpg']
+  }, {
+    id: 'dowsing-rods',
+    parentId: 'witchcraft-folk-magic',
+    name: 'Dowsing Rods (Divining Rods)',
+    description: 'Y-shaped or L-shaped metal or wooden rods used in the practice of dowsing (also known as divining or water witching). Dowsers walk over a patch of land while holding the rods, expecting them to rotate, cross, or dip when passing over underground water, minerals, buried treasure, or graves. Historically associated with folk magic and geomancy, the practice has been used by various historical figures, including early Latter-day Saint leaders such as Oliver Cowdery, who utilized a divining rod (described in early revelations as the "rod of Aaron" or "gift of working with the rod").',
+    layer: 'The Occult',
+    relatedIds: ['rel-figure-joseph-smith', 'witchcraft-folk-magic'],
+    sources: ['The Divining Rod: A History (Arthur J. Ellis)', 'LDS Doctrine and Covenants (Section 8: early revisions)'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/18th_century_dowser.jpg/500px-18th_century_dowser.jpg']
   },
 
   // ── SUPERNATURAL ENTITIES ─────────────────────────────────────────────────
@@ -25059,8 +25078,20 @@ const chunk_user_additions_2: any[] = [
     parentId: 'historical-alchemists',
     name: 'Michael A. Aquino',
     description: 'An officer in the U.S. Army specializing in psychological warfare (PsyOp) and the founder of the Temple of Set in 1975. He was initially a high-ranking member of the Church of Satan under Anton LaVey, but left to establish a more esoteric philosophy focused on the self-deification of the individual and Setian metaphysics.',
-    relatedIds: ['egyptian-set', 'church-of-satan', 'church-of-set', 'anton-lavey', 'satan'],
+    relatedIds: ['egyptian-set', 'church-of-satan', 'church-of-set', 'anton-lavey', 'satan', 'paul-vallely'],
     sources: ['The Temple of Set (Michael A. Aquino)', 'Extreme Prejudice']
+  }, {
+    id: 'paul-vallely',
+    parentId: 'government-conspiracies',
+    name: 'Maj. Gen. Paul E. Vallely',
+    description: 'A retired U.S. Army Major General who served in various military command and staff positions, including Commander of the 7th Psychological Operations Group. In 1980, he co-authored a controversial concept paper titled "From PSYOP to MindWar: The Psychology of Victory" with then-Major Michael A. Aquino. The paper proposed a psychological warfare doctrine that transcended traditional PsyOps by targeting both adversarial and domestic consciousness to preemptively neutralize conflict. In his post-military career, Vallely has served on the advisory council of Turning Point USA (TPUSA) and founded the Stand Up America US Foundation.',
+    layer: 'Government Conspiracies',
+    relatedIds: ['michael-aquino', 'government-conspiracies'],
+    sources: [
+      'From PSYOP to MindWar: The Psychology of Victory (Paul E. Vallely and Michael A. Aquino)',
+      'Turning Point USA Advisory Board Directories'
+    ],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Vallely.jpg/500px-Vallely.jpg']
   }, {
     id: 'thomas-aquinas',
     parentId: 'saints-root',
@@ -27862,6 +27893,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     description: 'Founder of Mormonism, who claimed to translate ancient golden plates delivered by the Angel Moroni. Alternative historians point to his early use of seer stones and folk magic as part of his spiritual translation method.',
     timelineId: 'rel-figure-joseph-smith',
     mapFeatureId: 'rel-figure-joseph-smith',
+    relatedIds: ['seer-stones', 'dowsing-rods'],
     sources: ['Book of Mormon / History of the Church'],
     images: ["https://upload.wikimedia.org/wikipedia/commons/8/86/Joseph_Smith%2C_Jr._portrait_owned_by_Joseph_Smith_III.jpg"]
   },
@@ -37775,5 +37807,16 @@ export const TERM_TREE_DATA: TermNode[] = [
     mapFeatureId: 'anomaly-Ancient-Texts-cuneiform',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Library_of_Ashurbanipal.jpg/500px-Library_of_Ashurbanipal.jpg'],
     sources: ['Library of Ashurbanipal / British Museum']
+  },
+  {
+    id: 'anomaly-Bigfoot-cain-node',
+    parentId: 'bigfoot-sightings-br',
+    secondaryParentIds: ['cain', 'bigfoot-br'],
+    name: 'Cain as Bigfoot (Mormon Folklore)',
+    description: 'A widely-known account in Latter-day Saint folklore originating from early apostle David W. Patten, who reported encountering a tall, hairy, dark-skinned being in Tennessee in 1835 that identified himself as the biblical Cain. The story was later popularized in Spencer W. Kimball\'s book \'The Miracle of Forgiveness\', leading to the folk belief conflating Cain with Bigfoot.',
+    layer: 'Bigfoot Sightings',
+    mapFeatureId: 'anomaly-Bigfoot-cain',
+    sources: ['The Life of David W. Patten (1900)', 'The Miracle of Forgiveness (1969)'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Spencer_W._Kimball3.JPG/330px-Spencer_W._Kimball3.JPG']
   }
 ];
