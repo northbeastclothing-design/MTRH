@@ -24,6 +24,7 @@ interface CodexPageProps {
   focusedTermId?: string | null;
   onFocusedTermConsumed?: () => void;
   codexNodes?: TermNode[];
+  trackCustomEvent?: (eventName: string, params?: any) => void;
 }
 
 const LAYER_COLORS: Record<string, string> = {
@@ -727,7 +728,8 @@ export default function CodexPage({
   onSelectedTermChange,
   focusedTermId,
   onFocusedTermConsumed,
-  codexNodes
+  codexNodes,
+  trackCustomEvent
 }: CodexPageProps) {
   const nodes = codexNodes || TERM_TREE_DATA;
 
@@ -769,6 +771,42 @@ export default function CodexPage({
     if (!activeTermId) return null;
     return nodes.find(t => t.id === activeTermId) || null;
   }, [activeTermId, nodes]);
+
+  // Track Codex search queries with a 1.5s debounce
+  useEffect(() => {
+    if (!searchQuery.trim() || !trackCustomEvent) return;
+    const timer = setTimeout(() => {
+      trackCustomEvent('codex_search', { search_query: searchQuery.trim() });
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, [searchQuery, trackCustomEvent]);
+
+  // Track Codex node selection clicks
+  useEffect(() => {
+    if (!selectedTermId || !trackCustomEvent) return;
+    const node = nodes.find(n => n.id === selectedTermId);
+    if (node) {
+      trackCustomEvent('select_codex_node', {
+        node_id: node.id,
+        node_name: node.name,
+        node_category: getRootCategory(node).name
+      });
+    }
+  }, [selectedTermId, trackCustomEvent]);
+
+  // Track when full-screen media lightbox is opened in Codex
+  useEffect(() => {
+    if (isLightboxOpen && trackCustomEvent && activeTermNode) {
+      const curAsset = getCombinedAssets(activeTermNode.images || [])[activeImageIndex];
+      if (curAsset) {
+        trackCustomEvent('view_media', {
+          media_url: curAsset.url,
+          media_type: curAsset.type || 'unknown',
+          associated_feature: activeTermNode.name
+        });
+      }
+    }
+  }, [isLightboxOpen, activeTermNode, activeImageIndex, trackCustomEvent]);
 
   const activeAssets = useMemo(() => {
     return getCombinedAssets(activeTermNode?.images || []);
@@ -2645,10 +2683,18 @@ export default function CodexPage({
                                   </svg>
                                 </div>
                                 <audio 
-                                  src={curAsset.url} 
-                                  controls 
-                                  style={{ width: '100%', height: '40px' }} 
-                                />
+                                   src={curAsset.url} 
+                                   controls 
+                                   style={{ width: '100%', height: '40px' }} 
+                                   onPlay={() => {
+                                     if (trackCustomEvent && activeTermNode) {
+                                       trackCustomEvent('play_audio', {
+                                         audio_url: curAsset.url,
+                                         associated_feature: activeTermNode.name
+                                       });
+                                     }
+                                   }}
+                                 />
                                 <p style={{ color: theme.textDim, fontSize: '9px', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: 'bold' }}>Audio Intelligence Intercept</p>
                               </div>
                             ) : (

@@ -8,7 +8,7 @@ import { X, Heart, Play, Upload, Plus, Link, MapPin, Lock, Check, Trash2, Shield
 import { initializeApp } from 'firebase/app';
 import { getFirestore, doc, getDoc, setDoc, updateDoc, increment, collection, onSnapshot, serverTimestamp, query, where, addDoc, deleteDoc } from 'firebase/firestore';
 import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } from 'firebase/auth';
-import { getAnalytics, isSupported } from 'firebase/analytics';
+import { getAnalytics, isSupported, logEvent } from 'firebase/analytics';
 // @ts-ignore
 import firebaseConfig from '../firebase-applet-config.json';
 
@@ -26,11 +26,23 @@ const firebaseApp = initializeApp(firebaseConfig);
 const db = getFirestore(firebaseApp, firebaseConfig.firestoreDatabaseId);
 const auth = getAuth(firebaseApp);
 
+export let analytics: any = null;
+
+export const trackCustomEvent = (eventName: string, params?: any) => {
+  if (analytics) {
+    try {
+      logEvent(analytics, eventName, params);
+    } catch (e) {
+      console.warn("Failed to log analytics event:", e);
+    }
+  }
+};
+
 // Initialize Analytics conditionally if a Measurement ID exists
 if (firebaseConfig.measurementId) {
   isSupported().then((supported) => {
     if (supported) {
-      getAnalytics(firebaseApp);
+      analytics = getAnalytics(firebaseApp);
       console.log("Firebase Analytics initialized successfully.");
     }
   });
@@ -1220,8 +1232,37 @@ function App() {
     if (path.startsWith('/cartography')) return 'cartography';
     return 'map';
   });
+
+  // Track dynamic page views in our Single Page App (SPA)
+  useEffect(() => {
+    trackCustomEvent('page_view', {
+      page_title: currentPage.toUpperCase(),
+      page_path: `/${currentPage}`,
+      page_location: window.location.href
+    });
+  }, [currentPage]);
+
+  // Track map search queries with a 1.5s debounce
+  useEffect(() => {
+    if (!searchQuery.trim()) return;
+    const timer = setTimeout(() => {
+      trackCustomEvent('map_search', { search_query: searchQuery.trim() });
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, [searchQuery]);
+
   const [selectedTimelineItem, setSelectedTimelineItem] = useState<any | null>(null);
   const [activeWaypointIndex, setActiveWaypointIndex] = useState<number | null>(null);
+
+  // Track timeline event selections
+  useEffect(() => {
+    if (selectedTimelineItem && currentPage === 'timeline') {
+      trackCustomEvent('select_timeline_event', {
+        event_year: selectedTimelineItem.year,
+        event_title: selectedTimelineItem.title
+      });
+    }
+  }, [selectedTimelineItem, currentPage]);
 
   const isLayerLoading = (layerName: string): boolean => {
     if (!activeLayers[layerName]) return false;
@@ -5305,6 +5346,13 @@ function App() {
     stopMainMapRotation();
     if (!feature || !feature.coordinates || !mapRef.current) return;
 
+    // Track map pin click event
+    trackCustomEvent('select_map_pin', {
+      pin_id: feature.id || 'unknown',
+      pin_name: feature.name || 'unknown',
+      pin_category: feature.categories?.[0] || feature.category || 'unknown'
+    });
+
     // Record if hover popup was active to determine click transition style
     wasHoverTooltipVisibleRef.current = !!hoverPopupRef.current;
 
@@ -6040,6 +6088,16 @@ function App() {
     e.stopPropagation();
     setIsLightboxImageLoading(true);
     setIsLightboxOpen(true);
+
+    // Track full screen media view
+    const curAsset = activeAssets?.[activeImageIndex];
+    if (curAsset) {
+      trackCustomEvent('view_media', {
+        media_url: curAsset.url,
+        media_type: curAsset.type || 'unknown',
+        associated_feature: selectedFeature?.name || 'unknown'
+      });
+    }
   };
 
   const toTitleCase = (str: string) => {
@@ -6983,7 +7041,14 @@ function App() {
                       getCategoryIcon={getCategoryIcon}
                       toTitleCase={toTitleCase}
                       isLayerLoading={isLayerLoading}
-                      onToggleActive={() => setActiveLayers(p => ({ ...p, [layerName]: !p[layerName] }))}
+                      onToggleActive={() => {
+                        const nextActive = !isActive;
+                        trackCustomEvent('toggle_layer', {
+                          layer_name: layerName,
+                          is_enabled: nextActive
+                        });
+                        setActiveLayers(p => ({ ...p, [layerName]: nextActive }));
+                      }}
                       onToggleExpand={() => setExpandedLayers(p => ({ ...p, [layerName]: !isExpanded }))}
                     />
 
@@ -7478,6 +7543,10 @@ function App() {
                                       src={curAsset.url} 
                                       controls 
                                       style={{ width: '100%', height: '40px' }} 
+                                      onPlay={() => trackCustomEvent('play_audio', {
+                                        audio_url: curAsset.url,
+                                        associated_feature: selectedFeature?.name || 'unknown'
+                                      })}
                                     />
                                     <p style={{ color: theme.textDim, fontSize: '9px', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: 'bold' }}>Audio Intelligence Intercept</p>
                                   </div>
@@ -8879,6 +8948,7 @@ function App() {
           <CodexPage
             theme={theme}
             codexNodes={combinedCodexNodes}
+            trackCustomEvent={trackCustomEvent}
             isMapDarkMode={isMapDarkMode}
             focusedTermId={focusedCodexTermId}
             onFocusedTermConsumed={() => setFocusedCodexTermId(null)}
