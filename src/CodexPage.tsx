@@ -562,6 +562,11 @@ const cleanAndProxyImageUrl = (url: any) => {
   }
 
   const lowerUrl = trimmedUrl.toLowerCase();
+  
+  if (lowerUrl.includes('temporarytemples.co.uk')) {
+    return `https://images.weserv.nl/?url=${encodeURIComponent(trimmedUrl)}`;
+  }
+
   const isWiki = lowerUrl.includes('wikimedia.org') || lowerUrl.includes('wikipedia.org');
   
   if (

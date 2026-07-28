@@ -595,6 +595,10 @@ const cleanAndProxyImageUrl = (url: any) => {
   // or that already fully support highly reliable direct client-side loading (like Unsplash/Wonders of the world).
   const lowerUrl = trimmedUrl.toLowerCase();
   
+  if (lowerUrl.includes('temporarytemples.co.uk')) {
+    return `https://images.weserv.nl/?url=${encodeURIComponent(trimmedUrl)}`;
+  }
+
   const isLocal = typeof window !== 'undefined' && (
     window.location.hostname === 'localhost' || 
     window.location.hostname === '127.0.0.1' ||

@@ -28231,4 +28231,9294 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Tomb Paintings', 'Royal Papyri'],
     images: ['https://www.cleopatraegypttours.com/wp-content/uploads/2019/10/Shenu-Egyptian-symbol.jpg']
   },
+  {
+    id: 'anomaly-Crop-Circles-378',
+    parentId: 'crop-circle-formations',
+    name: "Crop Circles 2026 Formation",
+    description: "A crop circle formation appearing at Crop Circles 2026 in Wiltshire, England, during the 2026 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-378',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_06_29_silbury_hill_barley_wiltshire_ef.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-379',
+    parentId: 'crop-circle-formations',
+    name: "Ludwell Formation",
+    description: "A crop circle formation appearing at Ludwell in Wiltshire, England, during the 2025 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-379',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2025/07/Ludwell-2025-edit.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-380',
+    parentId: 'crop-circle-formations',
+    name: "Cerne Abbas Formation",
+    description: "A crop circle formation appearing at Cerne Abbas in Dorset, England, during the 2025 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-380',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2025/07/1.-Cerne-Abbas-Dorset-10-07-25-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-381',
+    parentId: 'crop-circle-formations',
+    name: "Castley Hill Formation",
+    description: "A crop circle formation appearing at Castley Hill in nr Somerton, England, during the 2025 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-381',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2025/07/Castley-Hill-web_2025-07-09_19-56-55.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-382',
+    parentId: 'crop-circle-formations',
+    name: "Ware Formation",
+    description: "A crop circle formation appearing at Ware in Devon (nr Lyme Regis), England, during the 2025 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-382',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2025/07/1.Ware-Farm-nr-Lyme-Regis-28-06-25-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-383',
+    parentId: 'crop-circle-formations',
+    name: "Hackpen Hill Formation",
+    description: "A crop circle formation appearing at Hackpen Hill in Wiltshire, England, during the 2025 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-383',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2025/07/DJI_0633-Hackpen-Hill-1.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-384',
+    parentId: 'crop-circle-formations',
+    name: "Kingsdon Formation",
+    description: "A crop circle formation appearing at Kingsdon in Somerset, England, during the 2025 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-384',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2025/06/Bondip-Hill-nr-Kingsdon-Somerset-17-06-25-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-385',
+    parentId: 'crop-circle-formations',
+    name: "Avebury Formation",
+    description: "A crop circle formation appearing at Avebury in Wiltshire, England, during the 2025 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-385',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2025/06/Ben-Sasson_web_20250609_060840_small-2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-386',
+    parentId: 'crop-circle-formations',
+    name: "Crop Circles 2025 Formation",
+    description: "A crop circle formation appearing at Crop Circles 2025 in Wiltshire, England, during the 2025 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-386',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_06_29_silbury_hill_barley_wiltshire_ef.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-387',
+    parentId: 'crop-circle-formations',
+    name: "Etchilhampton Formation",
+    description: "A crop circle formation appearing at Etchilhampton in Wilts (Stage 2), England, during the 2024 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-387',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2024/08/1.-website-Etchilhampton-Stage-2-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-388',
+    parentId: 'crop-circle-formations',
+    name: "Etchilhampton Formation",
+    description: "A crop circle formation appearing at Etchilhampton in Wiltshire, England, during the 2024 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-388',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2024/08/2.-Etchilhampton-Hill-Wilts-08-08-24-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-389',
+    parentId: 'crop-circle-formations',
+    name: "Stoke Charity (nr Sutton Scotney) Formation",
+    description: "A crop circle formation appearing at Stoke Charity (nr Sutton Scotney) in Hampshire, England, during the 2024 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-389',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2024/07/1.-Stoke-Charity-Hants-28-07-24-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-390',
+    parentId: 'crop-circle-formations',
+    name: "Marten (nr Marlborough) Formation",
+    description: "A crop circle formation appearing at Marten (nr Marlborough) in Wiltshire, England, during the 2024 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-390',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2024/07/1.-Marten-Wilts-23-07-24-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-391',
+    parentId: 'crop-circle-formations',
+    name: "Badbury Rings (nr. Shapwick) Formation",
+    description: "A crop circle formation appearing at Badbury Rings (nr. Shapwick) in Dorset, England, during the 2024 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-391',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2024/07/Ben-Sasson_final_20240719_202300_small.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-392',
+    parentId: 'crop-circle-formations',
+    name: "Normanton Down (nr. Stonehenge) Formation",
+    description: "A crop circle formation appearing at Normanton Down (nr. Stonehenge) in Wiltshire, England, during the 2024 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-392',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2024/07/1.-Normanton-Down-14-07-24-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-393',
+    parentId: 'crop-circle-formations',
+    name: "Stonehenge (nr. visitor centre) Formation",
+    description: "A crop circle formation appearing at Stonehenge (nr. visitor centre) in Wiltshire, England, during the 2024 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-393',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2024/07/2.Stonehenge-Visitors-Ctr-30-06-24-OH2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-394',
+    parentId: 'crop-circle-formations',
+    name: "Crop Circles 2024 Formation",
+    description: "A crop circle formation appearing at Crop Circles 2024 in Wiltshire, England, during the 2024 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-394',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_06_29_silbury_hill_barley_wiltshire_ef.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-395',
+    parentId: 'crop-circle-formations',
+    name: "Roundway Hill Formation",
+    description: "A crop circle formation appearing at Roundway Hill in Wiltshire, England, during the 2023 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-395',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2023/08/DSC5641-Roundway-Wilts-13-08-23-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-396',
+    parentId: 'crop-circle-formations',
+    name: "Cley Hill Formation",
+    description: "A crop circle formation appearing at Cley Hill in Wiltshire, England, during the 2023 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-396',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2023/08/DSC5629-Cley-Hill-Wilts-10-08-23-OH-1.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-397',
+    parentId: 'crop-circle-formations',
+    name: "Wayland's Smithy Formation",
+    description: "A crop circle formation appearing at Wayland's Smithy in Wiltshire, England, during the 2023 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-397',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2023/08/DSC5626-Waylands-Smithy-04-08-2023-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-398',
+    parentId: 'crop-circle-formations',
+    name: "Preston Candover Formation",
+    description: "A crop circle formation appearing at Preston Candover in Hampshire, England, during the 2023 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-398',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2023/08/DSC5603-Preston-Candover-Hants-02-08-23-OH3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-399',
+    parentId: 'crop-circle-formations',
+    name: "Westbury Formation",
+    description: "A crop circle formation appearing at Westbury in Wiltshire, England, during the 2023 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-399',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2023/08/Westbury-30-07-23-HN2-144-1.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-400',
+    parentId: 'crop-circle-formations',
+    name: "West Meon Formation",
+    description: "A crop circle formation appearing at West Meon in Hampshire, England, during the 2023 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-400',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2023/08/DSC5553-West-Meon-Hants-30-07-23-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-401',
+    parentId: 'crop-circle-formations',
+    name: "Charlton Formation",
+    description: "A crop circle formation appearing at Charlton in Hampshire, England, during the 2023 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-401',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2023/08/DSC5539-Charlton-Hants-25-07-23-OH-1.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-402',
+    parentId: 'crop-circle-formations',
+    name: "Barton Stacey Belt Formation",
+    description: "A crop circle formation appearing at Barton Stacey Belt in Hampshire, England, during the 2023 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-402',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2023/07/DSC5509-South-Wonston-Hants-09-07-23-OH2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-403',
+    parentId: 'crop-circle-formations',
+    name: "Lane End Formation",
+    description: "A crop circle formation appearing at Lane End in Hampshire, England, during the 2023 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-403',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2023/08/DSC5575-Lane-End-Down-Hants-09-07-23-OHsun.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-404',
+    parentId: 'crop-circle-formations',
+    name: "Norton Bavant Formation",
+    description: "A crop circle formation appearing at Norton Bavant in Wiltshire, England, during the 2023 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-404',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2023/07/1.Norton-Plantation-Nr-Norton-Bavant-Wilts-07-07-23-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-405',
+    parentId: 'crop-circle-formations',
+    name: "Micheldever Formation",
+    description: "A crop circle formation appearing at Micheldever in Hants (2), England, during the 2023 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-405',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2023/07/DSC5478-Micheldever-1-Hants-04-07-23-OH.jpg","https://temporarytemples.co.uk/wp-content/uploads/2023/07/DSC5480-Micheldever-2-Hants-04-07-23-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-406',
+    parentId: 'crop-circle-formations',
+    name: "Owlsebury Formation",
+    description: "A crop circle formation appearing at Owlsebury in Hampshire, England, during the 2023 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-406',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2023/07/1.-_DSC5424-Owslebury-Hants-26-06-23-OH-Geo.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-407',
+    parentId: 'crop-circle-formations',
+    name: "Bishopstrow Formation",
+    description: "A crop circle formation appearing at Bishopstrow in Wiltshire, England, during the 2023 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-407',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2023/06/1.-Eastleigh-Court-Wilts-18-06-23-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-408',
+    parentId: 'crop-circle-formations',
+    name: "Roundway Down Formation",
+    description: "A crop circle formation appearing at Roundway Down in Wiltshire, England, during the 2023 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-408',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2023/06/11-June-Roundawy.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-409',
+    parentId: 'crop-circle-formations',
+    name: "Potterne Hill Formation",
+    description: "A crop circle formation appearing at Potterne Hill in Wiltshire, England, during the 2023 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-409',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2023/06/2.-Potterne-Wilts-07-06-23-OH2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-410',
+    parentId: 'crop-circle-formations',
+    name: "Winterbourne Bassett Formation",
+    description: "A crop circle formation appearing at Winterbourne Bassett in Wiltshire, England, during the 2023 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-410',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2023/06/1.-Winterbourne-Bassett-04-06-23-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-411',
+    parentId: 'crop-circle-formations',
+    name: "Broad Hinton Formation",
+    description: "A crop circle formation appearing at Broad Hinton in Wiltshire, England, during the 2023 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-411',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2023/06/2.Broad-Hinton-Wilts-28-05-23-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-412',
+    parentId: 'crop-circle-formations',
+    name: "Crop Circles 2023 Formation",
+    description: "A crop circle formation appearing at Crop Circles 2023 in Wiltshire, England, during the 2023 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-412',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2020/04/DSC6467-Willoughby-Hedge-Wilts-08-05-18-TU2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-413',
+    parentId: 'crop-circle-formations',
+    name: "Alton Priors Formation",
+    description: "A crop circle formation appearing at Alton Priors in Wiltshire, England, during the 2022 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-413',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2022/08/80.-Alton-Priors-Wilts-03-08-22-OH4.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-414',
+    parentId: 'crop-circle-formations',
+    name: "Tawsmead Copse Formation",
+    description: "A crop circle formation appearing at Tawsmead Copse in Wiltshire, England, during the 2022 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-414',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2022/07/62.Tawsmead-Copse-Wilts-OH3cal.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-415',
+    parentId: 'crop-circle-formations',
+    name: "Barbury Castle Formation",
+    description: "A crop circle formation appearing at Barbury Castle in Wiltshire, England, during the 2022 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-415',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2022/07/38.-Barbury-Castle-Wilts-17-07-22-OH-.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-416',
+    parentId: 'crop-circle-formations',
+    name: "Little Horton Formation",
+    description: "A crop circle formation appearing at Little Horton in Wiltshire, England, during the 2022 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-416',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2022/07/31.-Lay-Wood-Devizes-14-07-22-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-417',
+    parentId: 'crop-circle-formations',
+    name: "Chilcomb Formation",
+    description: "A crop circle formation appearing at Chilcomb in Hampshire, England, during the 2022 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-417',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2022/07/25.-Morestead-Hants-12-07-22-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-418',
+    parentId: 'crop-circle-formations',
+    name: "Froxfield Formation",
+    description: "A crop circle formation appearing at Froxfield in Wiltshire, England, during the 2022 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-418',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2022/07/1.-Cake-Wood-Froxfield-Wilts-09-07-22-Barley-OHHF.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-419',
+    parentId: 'crop-circle-formations',
+    name: "Micheldever Station Formation",
+    description: "A crop circle formation appearing at Micheldever Station in Hampshire, England, during the 2022 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-419',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2022/07/15.-Micheldever-Station-Hants-03-07-22-Wheat-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-420',
+    parentId: 'crop-circle-formations',
+    name: "Hippenscombe Formation",
+    description: "A crop circle formation appearing at Hippenscombe in Wiltshire, England, during the 2022 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-420',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2022/05/1.-Little-Down-nr-Hippenscombe-Wilts-22-05-22-Barley-HFOH-.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-421',
+    parentId: 'crop-circle-formations',
+    name: "Crab Wood Formation",
+    description: "A crop circle formation appearing at Crab Wood in Hampshire, England, during the 2022 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-421',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2022/04/1.-Crab-Wood-Winchester-Hants-24-04-22-OSR-OH-1.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-422',
+    parentId: 'crop-circle-formations',
+    name: "Roundway Hill Formation",
+    description: "A crop circle formation appearing at Roundway Hill in Wiltshire, England, during the 2021 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-422',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2021/08/1b.-Roundway-Hill-Wilts-15-08-21-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-423',
+    parentId: 'crop-circle-formations',
+    name: "Watership Down Formation",
+    description: "A crop circle formation appearing at Watership Down in Hampshire, England, during the 2021 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-423',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2021/08/2.-Watership-Down-Sydmonton-Hants-11-08-21-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-424',
+    parentId: 'crop-circle-formations',
+    name: "Marten Formation",
+    description: "A crop circle formation appearing at Marten in Wiltshire, England, during the 2021 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-424',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2021/08/2.-Roman-Rd-Marten-Wilts-08-08-21-Low.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-425',
+    parentId: 'crop-circle-formations',
+    name: "West Meon Formation",
+    description: "A crop circle formation appearing at West Meon in Hampshire, England, during the 2021 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-425',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2021/08/1.-Kitts-Ln-West-Meon-Hants-08-08-21-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-426',
+    parentId: 'crop-circle-formations',
+    name: "Swarraton Formation",
+    description: "A crop circle formation appearing at Swarraton in Hampshire, England, during the 2021 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-426',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2021/08/2.-Spiers-Lane-Swarraton-Hants-01-08-21-OH2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-427',
+    parentId: 'crop-circle-formations',
+    name: "Tufton Formation",
+    description: "A crop circle formation appearing at Tufton in Hampshire, England, during the 2021 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-427',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2021/07/1.-Tufton-Hants-20-07-21-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-428',
+    parentId: 'crop-circle-formations',
+    name: "Upham Formation",
+    description: "A crop circle formation appearing at Upham in Hampshire, England, during the 2021 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-428',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2021/07/1.-Uphan-Hants-18-07-21-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-429',
+    parentId: 'crop-circle-formations',
+    name: "Longwood Warren Formation",
+    description: "A crop circle formation appearing at Longwood Warren in Hampshire, England, during the 2021 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-429',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2021/07/1.-Longwood-Warren-Hants-04-07-21-OHSA-.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-430',
+    parentId: 'crop-circle-formations',
+    name: "Avebury Formation",
+    description: "A crop circle formation appearing at Avebury in Wiltshire, England, during the 2021 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-430',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2021/07/2.-Avebury-Stone-Circle-Wilts-02-07-21-OHSA.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-431',
+    parentId: 'crop-circle-formations',
+    name: "Fulley Wood Formation",
+    description: "A crop circle formation appearing at Fulley Wood in Hampshire, England, during the 2021 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-431',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2021/06/2.-Fulley-Wood-Hants-21-06-21-OH2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-432',
+    parentId: 'crop-circle-formations',
+    name: "Ludgershall Formation",
+    description: "A crop circle formation appearing at Ludgershall in Wiltshire, England, during the 2021 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-432',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2021/06/Ludgershall-Wilts-14th-June-2021-Barley-OHH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-433',
+    parentId: 'crop-circle-formations',
+    name: "South Wonston Formation",
+    description: "A crop circle formation appearing at South Wonston in Hampshire, England, during the 2021 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-433',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2021/06/3.-South-Wonston-Hants-08-06-21-L.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-434',
+    parentId: 'crop-circle-formations',
+    name: "Crop Circles 2021 Formation",
+    description: "A crop circle formation appearing at Crop Circles 2021 in Wiltshire, England, during the 2021 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-434',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2020/04/DSC6467-Willoughby-Hedge-Wilts-08-05-18-TU2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-435',
+    parentId: 'crop-circle-formations',
+    name: "Marden Copse Formation",
+    description: "A crop circle formation appearing at Marden Copse in Wiltshire, England, during the 2020 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-435',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2020/09/1.-Marden-Copse-Chirton-Wilts-07-09-20-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-436',
+    parentId: 'crop-circle-formations',
+    name: "Uffington Castle Formation",
+    description: "A crop circle formation appearing at Uffington Castle in Oxfordshire, England, during the 2020 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-436',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2020/08/1.-Uffington-Castle-Oxon-09-08-20-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-437',
+    parentId: 'crop-circle-formations',
+    name: "Patney Bridge Formation",
+    description: "A crop circle formation appearing at Patney Bridge in Wiltshire, England, during the 2020 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-437',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2020/08/1.-Patney-Bridge-Wilts-08-08-20-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-438',
+    parentId: 'crop-circle-formations',
+    name: "Etchilhampton (2) Formation",
+    description: "A crop circle formation appearing at Etchilhampton (2) in Wiltshire, England, during the 2020 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-438',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2020/07/1.-Etchilhampton-2-Wilts-26-07-20-OH-.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-439',
+    parentId: 'crop-circle-formations',
+    name: "Danebury Ring Formation",
+    description: "A crop circle formation appearing at Danebury Ring in Hampshire, England, during the 2020 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-439',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2020/07/1.-Danebury-Hillfort-Hants-21-07-20-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-440',
+    parentId: 'crop-circle-formations',
+    name: "Etchilhampton Formation",
+    description: "A crop circle formation appearing at Etchilhampton in Wiltshire, England, during the 2020 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-440',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2020/07/1.-Etchilhampton-Wilts-17-07-20-OH2S.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-441',
+    parentId: 'crop-circle-formations',
+    name: "Eastern Royal Formation",
+    description: "A crop circle formation appearing at Eastern Royal in Wiltshire, England, during the 2020 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-441',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2020/07/Easton-Royal-Wilts-10-07-20-OHT.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-442',
+    parentId: 'crop-circle-formations',
+    name: "Longwood Warren Formation",
+    description: "A crop circle formation appearing at Longwood Warren in Hampshire, England, during the 2020 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-442',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2020/07/1.-Longwood-Warren-Winchester-Hants-29-06-20-OHS-1.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-443',
+    parentId: 'crop-circle-formations',
+    name: "Ogbourne St. George Formation",
+    description: "A crop circle formation appearing at Ogbourne St. George in Wiltshire, England, during the 2020 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-443',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2020/06/1.-Smeathes-Plantation-Ogbourne-St-George-Wilts-25-06-20-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-444',
+    parentId: 'crop-circle-formations',
+    name: "Stanton St. Bernard Formation",
+    description: "A crop circle formation appearing at Stanton St. Bernard in Wiltshire, England, during the 2020 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-444',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2020/07/1.-Stanton-St-Bernard-Wilts-07-07-20-OHS.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-445',
+    parentId: 'crop-circle-formations',
+    name: "Berwick Bassett Formation",
+    description: "A crop circle formation appearing at Berwick Bassett in Wiltshire, England, during the 2020 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-445',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2020/06/1-Berwick-Bassett-Clump-Wilts-21-06-20-OH-.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-446',
+    parentId: 'crop-circle-formations',
+    name: "Wilton Formation",
+    description: "A crop circle formation appearing at Wilton in Wiltshire, England, during the 2020 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-446',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2020/06/Hunts-Down-nr-Wilton-Wilts-17-06-20-OHTIM.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-447',
+    parentId: 'crop-circle-formations',
+    name: "Burderop Down Formation",
+    description: "A crop circle formation appearing at Burderop Down in Wiltshire, England, during the 2020 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-447',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2020/06/2.-Burderop-Down-Barbury-Castle-Wilts-14-06-20-OH2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-448',
+    parentId: 'crop-circle-formations',
+    name: "Sixpenny Handley Formation",
+    description: "A crop circle formation appearing at Sixpenny Handley in Dorset, England, during the 2020 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-448',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2020/06/1.-Sixpenny-Handley-Dorset-31-05-20-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-449',
+    parentId: 'crop-circle-formations',
+    name: "Cley Hill Formation",
+    description: "A crop circle formation appearing at Cley Hill in Wiltshire, England, during the 2020 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-449',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2020/06/2.Cley-Hill-Wilts-30-05-20-OH2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-450',
+    parentId: 'crop-circle-formations',
+    name: "Crop Circles 2020 Formation",
+    description: "A crop circle formation appearing at Crop Circles 2020 in Wiltshire, England, during the 2020 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-450',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2020/04/DSC6467-Willoughby-Hedge-Wilts-08-05-18-TU2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-451',
+    parentId: 'crop-circle-formations',
+    name: "Stanton St. Bernard Formation",
+    description: "A crop circle formation appearing at Stanton St. Bernard in Wiltshire, England, during the 2019 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-451',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2019/08/205.-Stanton-St-Bernard-Wilts-24-08-19-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-452',
+    parentId: 'crop-circle-formations',
+    name: "Etchilhampton Formation",
+    description: "A crop circle formation appearing at Etchilhampton in Wiltshire, England, during the 2019 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-452',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2019/08/188.-Etchilhampton-Wilts-20-08-19-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-453',
+    parentId: 'crop-circle-formations',
+    name: "Preston Candover Formation",
+    description: "A crop circle formation appearing at Preston Candover in Hampshire, England, during the 2019 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-453',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2019/08/167.-Preston-Candover-Hants-11-08-19-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-454',
+    parentId: 'crop-circle-formations',
+    name: "Tufton Formation",
+    description: "A crop circle formation appearing at Tufton in Hampshire, England, during the 2019 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-454',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2019/08/800edited.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-455',
+    parentId: 'crop-circle-formations',
+    name: "Clear Wood Formation",
+    description: "A crop circle formation appearing at Clear Wood in Wiltshire, England, during the 2019 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-455',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2019/08/160.-Clear-Wood-Upton-Scudamore-Wilts-28-07-19-OH-.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-456',
+    parentId: 'crop-circle-formations',
+    name: "Barton Stacey Formation",
+    description: "A crop circle formation appearing at Barton Stacey in Hampshire, England, during the 2019 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-456',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2019/07/145.-Barton-Stacey-Hants-28-07-19-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-457',
+    parentId: 'crop-circle-formations',
+    name: "Pepperbox Hill Formation",
+    description: "A crop circle formation appearing at Pepperbox Hill in Wiltshire, England, during the 2019 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-457',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2019/07/124.-Pepperbox-Hill-West-Grimstead-Wilts-23-07-19-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-458',
+    parentId: 'crop-circle-formations',
+    name: "Westbury White Horse Formation",
+    description: "A crop circle formation appearing at Westbury White Horse in Wiltshire, England, during the 2019 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-458',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2019/07/114.-Westbury-WH-Bratton-Wilts-20-07-19-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-459',
+    parentId: 'crop-circle-formations',
+    name: "Fulley Wood Formation",
+    description: "A crop circle formation appearing at Fulley Wood in Hampshire, England, during the 2019 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-459',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2019/07/94.-Fulley-Wood-nr-Tichborne-Hants-16-07-19-OH3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-460',
+    parentId: 'crop-circle-formations',
+    name: "Farley Mount Formation",
+    description: "A crop circle formation appearing at Farley Mount in Hampshire, England, during the 2019 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-460',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2019/07/77.-Farley-Mount-nr-Beacon-Hill-Plantation-Hants-07-07-19-OH4.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-461',
+    parentId: 'crop-circle-formations',
+    name: "Yarnbury Castle Formation",
+    description: "A crop circle formation appearing at Yarnbury Castle in Wiltshire, England, during the 2019 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-461',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2019/07/65.-Yarnbury-Castle-Hill-Fort-nr-Steeple-Langford-Wilts-03-07-19-OH-.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-462',
+    parentId: 'crop-circle-formations',
+    name: "Danebury Ring Formation",
+    description: "A crop circle formation appearing at Danebury Ring in Hampshire, England, during the 2019 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-462',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2019/07/51.-Danebury-Hillfort-nr-Stockbridge-Hants-01.07.19-OH-.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-463',
+    parentId: 'crop-circle-formations',
+    name: "Bishops Sutton Formation",
+    description: "A crop circle formation appearing at Bishops Sutton in Hampshire, England, during the 2019 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-463',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2019/07/47.-Scrubbs-Lane-nr-Bishops-Sutton-Hants-29-06-19-OH2-1.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-464',
+    parentId: 'crop-circle-formations',
+    name: "Netherne-on-the-Hill Formation",
+    description: "A crop circle formation appearing at Netherne-on-the-Hill in Surrey, England, during the 2019 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-464',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2019/06/30.-Sparticles-Wood-nr-Netherme-on-the-Hill-Surrey-21-06-19-OH2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-465',
+    parentId: 'crop-circle-formations',
+    name: "Owslebury Formation",
+    description: "A crop circle formation appearing at Owslebury in Hampshire, England, during the 2019 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-465',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2019/06/10.-Belmore-Lane-Owslebury-Hants-11-06-19-OH.-jpg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-466',
+    parentId: 'crop-circle-formations',
+    name: "Long Wood Formation",
+    description: "A crop circle formation appearing at Long Wood in Hampshire, England, during the 2019 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-466',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2019/06/4.-Littleton-and-Harestock-Hants-02-06-19-OH4.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-467',
+    parentId: 'crop-circle-formations',
+    name: "Crop Circles 2019 Formation",
+    description: "A crop circle formation appearing at Crop Circles 2019 in Wiltshire, England, during the 2019 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-467',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2018/03/2018holding.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-468',
+    parentId: 'crop-circle-formations',
+    name: "Norridge Wood Formation",
+    description: "A crop circle formation appearing at Norridge Wood in Wiltshire, England, during the 2018 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-468',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2018/08/DSC7778-2-Norridge-Wood-Warminster-14-08-18-OH2-e1534615698643.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-469',
+    parentId: 'crop-circle-formations',
+    name: "Mixon Formation",
+    description: "A crop circle formation appearing at Mixon in Wiltshire, England, during the 2018 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-469',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2018/08/DSC7730-1-Mixon-Wilts-10-08-18-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-470',
+    parentId: 'crop-circle-formations',
+    name: "Hackpen Hill (3) Formation",
+    description: "A crop circle formation appearing at Hackpen Hill (3) in Wiltshire, England, during the 2018 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-470',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2018/08/DSC7609-1-Hackpen-Hill-3-Wilts-30-07-18-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-471',
+    parentId: 'crop-circle-formations',
+    name: "Chesterton Windmill Formation",
+    description: "A crop circle formation appearing at Chesterton Windmill in Warks, England, during the 2018 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-471',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2018/07/DSC7523-1-Chesterton-Windmill-Warks-26-07-18-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-472',
+    parentId: 'crop-circle-formations',
+    name: "Fovant Formation",
+    description: "A crop circle formation appearing at Fovant in Wiltshire, England, during the 2018 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-472',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2018/07/DSC7389-1-Gurston-Ashes-Wilts-24-07-18-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-473',
+    parentId: 'crop-circle-formations',
+    name: "Longbarrow at All Cannings Formation",
+    description: "A crop circle formation appearing at Longbarrow at All Cannings in Wiltshire, England, during the 2018 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-473',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2018/07/All-Cannings-Long-Barrow-Wilts-21-07-18-OHALT.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-474',
+    parentId: 'crop-circle-formations',
+    name: "Kingweston Formation",
+    description: "A crop circle formation appearing at Kingweston in Somerset, England, during the 2018 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-474',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2018/07/DSC7280-1-Muncombe-Hill-Somerset-14-07-18-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-475',
+    parentId: 'crop-circle-formations',
+    name: "Winterbourne Bassett Formation",
+    description: "A crop circle formation appearing at Winterbourne Bassett in Wiltshire, England, during the 2018 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-475',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2018/07/DSC7245-2-Winterbourne-Bassett-Wilts-14-07-18-OH2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-476',
+    parentId: 'crop-circle-formations',
+    name: "Longwood Warren Formation",
+    description: "A crop circle formation appearing at Longwood Warren in Hampshire, England, during the 2018 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-476',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2018/07/DSC7061-1-Longwood-Warren-Hants-10-07-18-OH1.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-477',
+    parentId: 'crop-circle-formations',
+    name: "Coneybury Henge Formation",
+    description: "A crop circle formation appearing at Coneybury Henge in Wiltshire, England, during the 2018 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-477',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2018/07/DSC7158-1-Coneybury-Henge-Wilts-08-07-18-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-478',
+    parentId: 'crop-circle-formations',
+    name: "Martinsell Hill Formation",
+    description: "A crop circle formation appearing at Martinsell Hill in Wiltshire, England, during the 2018 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-478',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2018/10/GEOM-MARTINSELL2018-MAIN.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-479',
+    parentId: 'crop-circle-formations',
+    name: "Yarnbury Castle Formation",
+    description: "A crop circle formation appearing at Yarnbury Castle in Wiltshire, England, during the 2018 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-479',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2018/06/DSC6944-3-Yarnbury-Castle-Wilts-24-06-18-OH3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-480',
+    parentId: 'crop-circle-formations',
+    name: "Hackpen Hill (2) Formation",
+    description: "A crop circle formation appearing at Hackpen Hill (2) in Wiltshire, England, during the 2018 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-480',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2018/06/DSC6906-3-Hackpen-Hill-2-Wilts-23-06-18-OH3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-481',
+    parentId: 'crop-circle-formations',
+    name: "Devil's Den Formation",
+    description: "A crop circle formation appearing at Devil's Den in Wiltshire, England, during the 2018 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-481',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2018/06/DevilsDen2018edit800.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-482',
+    parentId: 'crop-circle-formations',
+    name: "Winterbourne Stoke Down Formation",
+    description: "A crop circle formation appearing at Winterbourne Stoke Down in Wiltshire, England, during the 2018 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-482',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2018/06/DSC6777-1-Winterbourne-Stoke-Down-Wilts-17-06-18-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-483',
+    parentId: 'crop-circle-formations',
+    name: "Keysley Down Formation",
+    description: "A crop circle formation appearing at Keysley Down in Wiltshire, England, during the 2018 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-483',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2018/06/DSC6669-Keysley-Down-nr-Chicklade-Wilts-10-06-18-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-484',
+    parentId: 'crop-circle-formations',
+    name: "Hackpen Hill Formation",
+    description: "A crop circle formation appearing at Hackpen Hill in Wiltshire, England, during the 2018 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-484',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2018/06/DSC6707-Hackpen-Hill-Wilts-09-06-18-OH2-.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-485',
+    parentId: 'crop-circle-formations',
+    name: "Ackling Dyke Formation",
+    description: "A crop circle formation appearing at Ackling Dyke in Dorset, England, during the 2018 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-485',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2018/06/DSC6606-5-Ackling-Dyke-Dorset-04-06-18-OH3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-486',
+    parentId: 'crop-circle-formations',
+    name: "Bishops Cannings Down Formation",
+    description: "A crop circle formation appearing at Bishops Cannings Down in Wiltshire, England, during the 2018 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-486',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2018/06/DSC6656-1-Bishops-Cannings-Down-Wilts-03-06-18-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-487',
+    parentId: 'crop-circle-formations',
+    name: "Baunton Formation",
+    description: "A crop circle formation appearing at Baunton in Gloucestershire, England, during the 2018 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-487',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2018/06/DSC6636-1-White-Way-Baunton-Glos-02-06-18-.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-488',
+    parentId: 'crop-circle-formations',
+    name: "Buckland Down Formation",
+    description: "A crop circle formation appearing at Buckland Down in Dorset, England, during the 2018 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-488',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2018/05/DSC6515-1-Buckland-Down-Dorset-26-05-18-OH-.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-489',
+    parentId: 'crop-circle-formations',
+    name: "Willoughby Hedge Formation",
+    description: "A crop circle formation appearing at Willoughby Hedge in Wiltshire, England, during the 2018 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-489',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2018/05/DSC6399-6-Willoughby-Hedge-Wilts-08-05-18-L2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-490',
+    parentId: 'crop-circle-formations',
+    name: "Crop Circles 2018 Formation",
+    description: "A crop circle formation appearing at Crop Circles 2018 in Wiltshire, England, during the 2018 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-490',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2018/03/2018holding.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-491',
+    parentId: 'crop-circle-formations',
+    name: "Wooton Wawen Formation",
+    description: "A crop circle formation appearing at Wooton Wawen in Warks, England, during the 2017 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-491',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2017/08/212-Monarchs-Way-nr-Wooton-Wawen-Warks-07-08-17-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-492',
+    parentId: 'crop-circle-formations',
+    name: "Rollright Stones Formation",
+    description: "A crop circle formation appearing at Rollright Stones in Oxfordshire, England, during the 2017 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-492',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2017/08/190-The-Rollright-Stones-Oxon-05-08-17-OH2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-493',
+    parentId: 'crop-circle-formations',
+    name: "Hannington Formation",
+    description: "A crop circle formation appearing at Hannington in Wiltshire, England, during the 2017 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-493',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2017/08/170-Bydemill-Copse-Hannington-Wilts-04-08-17-OH1.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-494',
+    parentId: 'crop-circle-formations',
+    name: "Cley Hill Formation",
+    description: "A crop circle formation appearing at Cley Hill in Wiltshire, England, during the 2017 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-494',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2017/07/131-Cley-Hill-18-07-17-OH3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-495',
+    parentId: 'crop-circle-formations',
+    name: "Hackpen Hill Formation",
+    description: "A crop circle formation appearing at Hackpen Hill in Wiltshire, England, during the 2017 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-495',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2017/07/126-Hackpen-Hill-nr-Broad-Hinton-08-07-17-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-496',
+    parentId: 'crop-circle-formations',
+    name: "Battlesbury Camp Formation",
+    description: "A crop circle formation appearing at Battlesbury Camp in Wiltshire, England, during the 2017 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-496',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2017/07/112-Battlesbury-Camp-05-07-17-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-497',
+    parentId: 'crop-circle-formations',
+    name: "Boreham Wood Formation",
+    description: "A crop circle formation appearing at Boreham Wood in Wiltshire, England, during the 2017 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-497',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2017/07/101-Boreham-Wood-01-07-17-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-498',
+    parentId: 'crop-circle-formations',
+    name: "Langdean Bottom Formation",
+    description: "A crop circle formation appearing at Langdean Bottom in Wiltshire, England, during the 2017 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-498',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2017/07/82-Langdean-Bottom-26-06-17-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-499',
+    parentId: 'crop-circle-formations',
+    name: "Longwood Warren Formation",
+    description: "A crop circle formation appearing at Longwood Warren in Hampshire, England, during the 2017 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-499',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2017/06/74-Longwood-Warren-17-06-17-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-500',
+    parentId: 'crop-circle-formations',
+    name: "Badbury Rings Formation",
+    description: "A crop circle formation appearing at Badbury Rings in Dorset, England, during the 2017 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-500',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2017/06/64-Target-Wood-Badbury-Rings-16-06-17-OH2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-501',
+    parentId: 'crop-circle-formations',
+    name: "Maiden Bradley Formation",
+    description: "A crop circle formation appearing at Maiden Bradley in Wiltshire, England, during the 2017 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-501',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2017/06/GEOM-MB2017-6.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-502',
+    parentId: 'crop-circle-formations',
+    name: "Woolstone Hill Formation",
+    description: "A crop circle formation appearing at Woolstone Hill in Oxfordshire, England, during the 2017 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-502',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2017/06/55-Woolstone-Hill-Ashbury-Oxon-04-06-17-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-503',
+    parentId: 'crop-circle-formations',
+    name: "The Sanctuary Formation",
+    description: "A crop circle formation appearing at The Sanctuary in Wiltshire, England, during the 2017 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-503',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2017/06/47-The-Sanctuary-Avebury-Wilts-03-06-17-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-504',
+    parentId: 'crop-circle-formations',
+    name: "Chicklade Formation",
+    description: "A crop circle formation appearing at Chicklade in Wiltshire, England, during the 2017 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-504',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2017/06/41-Fonthill-Down-nr-Chicklade-Wilts-30-05-17-Barley.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-505',
+    parentId: 'crop-circle-formations',
+    name: "Broad Hinton Formation",
+    description: "A crop circle formation appearing at Broad Hinton in Wilts (2), England, during the 2017 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-505',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2017/06/31-Broad-Hinton-2-Wilts-28-05-17-Barley-OH.jpg","https://temporarytemples.co.uk/wp-content/uploads/2017/06/28-Broad-Hinton-1-Wilts-28-05-17-Barley-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-506',
+    parentId: 'crop-circle-formations',
+    name: "Chilcomb Formation",
+    description: "A crop circle formation appearing at Chilcomb in Hampshire, England, during the 2017 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-506',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2017/05/23-Gipsy-Lane-Nr-Winchester-Hants-25-05-2017-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-507',
+    parentId: 'crop-circle-formations',
+    name: "Milk Hill Formation",
+    description: "A crop circle formation appearing at Milk Hill in Wiltshire, England, during the 2017 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-507',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2017/05/15-Milk-Hill-nr-Stanton-St-Bernard-Wilts-25-05-2017-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-508',
+    parentId: 'crop-circle-formations',
+    name: "Cerne Abbas Formation",
+    description: "A crop circle formation appearing at Cerne Abbas in Dorset, England, during the 2017 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-508',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2017/05/GEOM-CA2017-FI.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-509',
+    parentId: 'crop-circle-formations',
+    name: "Stitchcombe Formation",
+    description: "A crop circle formation appearing at Stitchcombe in Wiltshire, England, during the 2017 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-509',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2017/05/GEOM-STITCH-2017-4.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-510',
+    parentId: 'crop-circle-formations',
+    name: "Willoughby Hedge Formation",
+    description: "A crop circle formation appearing at Willoughby Hedge in Wiltshire, England, during the 2017 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-510',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2017/05/9-Willoughby-Hedge-Nr-Mere-Wilts-04-05-17-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-511',
+    parentId: 'crop-circle-formations',
+    name: "Oliver's Castle Formation",
+    description: "A crop circle formation appearing at Oliver's Castle in Wiltshire, England, during the 2017 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-511',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2017/05/6-Olivers-Castle-Nr-Devizes-Wilts-24-04-17-L2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-512',
+    parentId: 'crop-circle-formations',
+    name: "Waden Hill Formation",
+    description: "A crop circle formation appearing at Waden Hill in Wiltshire, England, during the 2017 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-512',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2017/05/1-Waden-Hill-Nr-Avebury-Wilts-22-04-17-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-513',
+    parentId: 'crop-circle-formations',
+    name: "Welcome to the 2017 Crop Circle Season! Formation",
+    description: "A crop circle formation appearing at Welcome to the 2017 Crop Circle Season! in Wiltshire, England, during the 2017 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-513',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2017/04/image1.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-514',
+    parentId: 'crop-circle-formations',
+    name: "Overton Hill Formation",
+    description: "A crop circle formation appearing at Overton Hill in Wiltshire, England, during the 2016 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-514',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2016/09/DSC5225-Overton-Hill-nr-East-Kennett-Wilts-27-08-16-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-515',
+    parentId: 'crop-circle-formations',
+    name: "Cooks Plantation Formation",
+    description: "A crop circle formation appearing at Cooks Plantation in Wiltshire, England, during the 2016 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-515',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2016/09/DSC5220-Cooks-Plantation-nr-Beckhampton-Wilts-27-08-16-OH2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-516',
+    parentId: 'crop-circle-formations',
+    name: "All Cannings Formation",
+    description: "A crop circle formation appearing at All Cannings in Wiltshire, England, during the 2016 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-516',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2016/08/DSC5156-All-Cannings-Wilts-24-08-2016-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-517',
+    parentId: 'crop-circle-formations',
+    name: "Nursteed Farm Formation",
+    description: "A crop circle formation appearing at Nursteed Farm in Wiltshire, England, during the 2016 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-517',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2016/08/DSC5123-Nursteed-Farm-Wilts-17-08-2016-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-518',
+    parentId: 'crop-circle-formations',
+    name: "Ansty Formation",
+    description: "A crop circle formation appearing at Ansty in Wiltshire, England, during the 2016 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-518',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2016/08/DSC5015-Ansty-Wilts-12-08-2016-OH2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-519',
+    parentId: 'crop-circle-formations',
+    name: "Etchilhampton Hill Formation",
+    description: "A crop circle formation appearing at Etchilhampton Hill in Wiltshire, England, during the 2016 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-519',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2016/08/DSC4925-Etchilhampton-Hill-08-08-2016-OH4.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-520',
+    parentId: 'crop-circle-formations',
+    name: "Bratton Camp Formation",
+    description: "A crop circle formation appearing at Bratton Camp in Wiltshire, England, during the 2016 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-520',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2016/08/DSC4876-Bratton-Camp-Wilts-04-08-16-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-521',
+    parentId: 'crop-circle-formations',
+    name: "Chilcomb Ranges Formation",
+    description: "A crop circle formation appearing at Chilcomb Ranges in Hampshire, England, during the 2016 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-521',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2016/08/DSC4855-Chilcomb-Ranges-Winchester-Hants-03-08-2016-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-522',
+    parentId: 'crop-circle-formations',
+    name: "Cley Hill Formation",
+    description: "A crop circle formation appearing at Cley Hill in Wiltshire, England, during the 2016 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-522',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2016/08/DSC4780-Cley-Hill-Wilts-30-07-2016-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-523',
+    parentId: 'crop-circle-formations',
+    name: "Matterley Basin Formation",
+    description: "A crop circle formation appearing at Matterley Basin in Hampshire, England, during the 2016 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-523',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2016/08/DSC4805-Matterley-Basin-Winchester-25-07-2016-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-524',
+    parentId: 'crop-circle-formations',
+    name: "Calstone Wellington Formation",
+    description: "A crop circle formation appearing at Calstone Wellington in Wiltshire, England, during the 2016 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-524',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2016/07/DSC4701-Ranscomb-Bottom-nr-Calstone-Wellington-Wilts-23-07-16-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-525',
+    parentId: 'crop-circle-formations',
+    name: "Figsbury Ring Formation",
+    description: "A crop circle formation appearing at Figsbury Ring in Wiltshire, England, during the 2016 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-525',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2016/07/DSC4761-Figsbury-Ring-Firsdown-Wilts-22-07-16-OH2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-526',
+    parentId: 'crop-circle-formations',
+    name: "Reigate Formation",
+    description: "A crop circle formation appearing at Reigate in Surrey, England, during the 2016 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-526',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2016/07/DSC4647-Reigate-Hill-nr-Reigate-Surrey-19-07-2016-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-527',
+    parentId: 'crop-circle-formations',
+    name: "Devizes Formation",
+    description: "A crop circle formation appearing at Devizes in Wiltshire, England, during the 2016 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-527',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2016/07/DSC4633-Wessex-Ridgeway-Devizes-Wilts-16-07-2016-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-528',
+    parentId: 'crop-circle-formations',
+    name: "Hackpen Hill Formation",
+    description: "A crop circle formation appearing at Hackpen Hill in Wilts (2), England, during the 2016 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-528',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2016/07/DSC4605-Hackpen-Hill-nr-Broad-Hinton-16-07-2016-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-529',
+    parentId: 'crop-circle-formations',
+    name: "Wilton Windmill Formation",
+    description: "A crop circle formation appearing at Wilton Windmill in Wiltshire, England, during the 2016 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-529',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2016/07/DSC4603-Wilton-Windmill-Wilts-15-07-2016-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-530',
+    parentId: 'crop-circle-formations',
+    name: "Twyford Formation",
+    description: "A crop circle formation appearing at Twyford in Hampshire, England, during the 2016 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-530',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2016/07/DSC4544-Northfields-nr-Twyford-Hants-11-07-2016-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-531',
+    parentId: 'crop-circle-formations',
+    name: "Stonehenge Formation",
+    description: "A crop circle formation appearing at Stonehenge in Wiltshire, England, during the 2016 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-531',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2016/07/DSC4500-Stonehenge-08-07-2016-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-532',
+    parentId: 'crop-circle-formations',
+    name: "White Sheet Hill Formation",
+    description: "A crop circle formation appearing at White Sheet Hill in Wiltshire, England, during the 2016 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-532',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2016/07/DSC4577-White-Sheet-Hill-Stourton-Wilts-29-06-2016-OH3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-533',
+    parentId: 'crop-circle-formations',
+    name: "Popham Hants Formation",
+    description: "A crop circle formation appearing at Popham Hants in Wiltshire, England, during the 2016 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-533',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2016/06/DSC4477-Blackwood-nr-Popham-Hants-27-06-2016-OH2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-534',
+    parentId: 'crop-circle-formations',
+    name: "Tichborne Formation",
+    description: "A crop circle formation appearing at Tichborne in Hampshire, England, during the 2016 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-534',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2016/06/DSC4428-Fulley-Wood-nr-Tichborne-Hampshire-OH2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-535',
+    parentId: 'crop-circle-formations',
+    name: "Hackpen Hill Formation",
+    description: "A crop circle formation appearing at Hackpen Hill in Wiltshire, England, during the 2016 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-535',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2016/06/DSC4485-The-Ridgeway-nr-Hackpen-Hill-Wilts-23-06-2016-OH2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-536',
+    parentId: 'crop-circle-formations',
+    name: "Chilcomb Down Formation",
+    description: "A crop circle formation appearing at Chilcomb Down in Hampshire, England, during the 2016 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-536',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2016/06/DSC4415-Chilcomb-Down-Hants-21-06-2016-OH2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-537',
+    parentId: 'crop-circle-formations',
+    name: "Wylye Formation",
+    description: "A crop circle formation appearing at Wylye in Wiltshire, England, during the 2016 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-537',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2016/07/DSC4523-Ox-Drove-nr-Wylye16-06-2016-OH2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-538',
+    parentId: 'crop-circle-formations',
+    name: "Mere (2) Formation",
+    description: "A crop circle formation appearing at Mere (2) in Wiltshire, England, during the 2016 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-538',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2016/06/DSC4330-Castle-Hill-Mere-Wilts-06-06-2016-Low.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-539',
+    parentId: 'crop-circle-formations',
+    name: "Mere (1) Formation",
+    description: "A crop circle formation appearing at Mere (1) in Wiltshire, England, during the 2016 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-539',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2016/06/DSC4275-Willoughby-Hedge-Nr-Mere-Wilts-05-05-2016-Low3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-540',
+    parentId: 'crop-circle-formations',
+    name: "Silbury Hill Formation",
+    description: "A crop circle formation appearing at Silbury Hill in Wiltshire, England, during the 2016 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-540',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2016/06/DSC4318-Silbury-Hill-Nr-Avebury-Wilts-04-05-2016-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-541',
+    parentId: 'crop-circle-formations',
+    name: "Etchilhampton 2 Formation",
+    description: "A crop circle formation appearing at Etchilhampton 2 in Wiltshire, England, during the 2015 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-541',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/08/DSC4212-Etchilhampton-2-19-08-15-OH2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-542',
+    parentId: 'crop-circle-formations',
+    name: "Fox Hill Formation",
+    description: "A crop circle formation appearing at Fox Hill in Wiltshire, England, during the 2015 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-542',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/08/DSC4106-Fox-Hill-nr-Liddington-Wilts-09-08-2015-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-543',
+    parentId: 'crop-circle-formations',
+    name: "Hampton Lucy Formation",
+    description: "A crop circle formation appearing at Hampton Lucy in Warwickshire, England, during the 2015 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-543',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/08/DSC4138-Hampton-Lucy-Warwickshire-08-08-15-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-544',
+    parentId: 'crop-circle-formations',
+    name: "Bowerchalke Formation",
+    description: "A crop circle formation appearing at Bowerchalke in Wiltshire, England, during the 2015 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-544',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/08/DSC4058-Ox-Drove-nr-Bowerchalke-Wilts-08-08-15.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-545',
+    parentId: 'crop-circle-formations',
+    name: "Etchilhampton Formation",
+    description: "A crop circle formation appearing at Etchilhampton in Wiltshire, England, during the 2015 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-545',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/08/DSC4066-Etchilhampton-04-08-15-OHS.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-546',
+    parentId: 'crop-circle-formations',
+    name: "Maiden Castle Formation",
+    description: "A crop circle formation appearing at Maiden Castle in Dorset, England, during the 2015 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-546',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/07/DSC3791-Madien-Castle-Dorset-26-07-15-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-547',
+    parentId: 'crop-circle-formations',
+    name: "Uffcott Down Formation",
+    description: "A crop circle formation appearing at Uffcott Down in Wiltshire, England, during the 2015 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-547',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/07/DSC3924-Uffcott-Down-Wilts-25-07-15-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-548',
+    parentId: 'crop-circle-formations',
+    name: "Fairford Formation",
+    description: "A crop circle formation appearing at Fairford in Gloucestershire, England, during the 2015 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-548',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/07/DSC3691-Fairford-21-07-15-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-549',
+    parentId: 'crop-circle-formations',
+    name: "Ockley Hill Formation",
+    description: "A crop circle formation appearing at Ockley Hill in Surrey, England, during the 2015 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-549',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/07/DSC3646-Ockley-Hill-Merstham-19-07-15-OH4.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-550',
+    parentId: 'crop-circle-formations',
+    name: "Haselor Formation",
+    description: "A crop circle formation appearing at Haselor in Warwickshire, England, during the 2015 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-550',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/07/DSC3627-Haselor-Warks-19-07-15-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-551',
+    parentId: 'crop-circle-formations',
+    name: "Rollright Stones Formation",
+    description: "A crop circle formation appearing at Rollright Stones in Oxfordshire, England, during the 2015 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-551',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/07/DSC3495-Rollright-Stones-Oxon-15-07-15-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-552',
+    parentId: 'crop-circle-formations',
+    name: "Winterbourne Stoke Down Formation",
+    description: "A crop circle formation appearing at Winterbourne Stoke Down in Wiltshire, England, during the 2015 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-552',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/07/DSC3369-Winterbourne-Stoke-Down-Wilts-10-07-15-OH3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-553',
+    parentId: 'crop-circle-formations',
+    name: "Devil's Den Formation",
+    description: "A crop circle formation appearing at Devil's Den in Wiltshire, England, during the 2015 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-553',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/07/DSC3304-Devils-Den-Wilts-09-07-15-LOW.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-554',
+    parentId: 'crop-circle-formations',
+    name: "Clearbury Ring Formation",
+    description: "A crop circle formation appearing at Clearbury Ring in Wiltshire, England, during the 2015 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-554',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/07/DSC3442-Clearbury-Ring-nr-Nunton-Wilts-07-07-15-OHF2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-555',
+    parentId: 'crop-circle-formations',
+    name: "Knoll Down Formation",
+    description: "A crop circle formation appearing at Knoll Down in Wiltshire, England, during the 2015 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-555',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/06/DSC3256-Knoll-Down-Nr-BeckhamptonWilts-29-06-15-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-556',
+    parentId: 'crop-circle-formations',
+    name: "West Amesbury Formation",
+    description: "A crop circle formation appearing at West Amesbury in Wiltshire, England, during the 2015 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-556',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/06/DSC3125-West-Amesbury-Wilts-24-06-15-Wheat-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-557',
+    parentId: 'crop-circle-formations',
+    name: "Sunnyside Formation",
+    description: "A crop circle formation appearing at Sunnyside in nr Redlynch, England, during the 2015 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-557',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/06/DSC3218-Sunnyside-Nr-Redlynch-Somerset-22-06-15-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-558',
+    parentId: 'crop-circle-formations',
+    name: "Uffcott Formation",
+    description: "A crop circle formation appearing at Uffcott in Wiltshire, England, during the 2015 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-558',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/06/DSC3015-Uffcott-Wilts-21-06-15-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-559',
+    parentId: 'crop-circle-formations',
+    name: "West Woods Formation",
+    description: "A crop circle formation appearing at West Woods in Lockeridge, England, during the 2015 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-559',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/06/DSC3265-Westwoods-nr-LockeridgeWilts-21-06-15-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-560',
+    parentId: 'crop-circle-formations',
+    name: "Green Street Formation",
+    description: "A crop circle formation appearing at Green Street in Wiltshire, England, during the 2015 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-560',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/06/DSC3057-Green-St-Avebury-Wilts-21-06-15-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-561',
+    parentId: 'crop-circle-formations',
+    name: "Margery Formation",
+    description: "A crop circle formation appearing at Margery in Surrey, England, during the 2015 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-561',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/06/DSC2975-Blackhorse-Ln-Margery-Surrey-16-06-15-OH2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-562',
+    parentId: 'crop-circle-formations',
+    name: "Stanton St. Bernard Formation",
+    description: "A crop circle formation appearing at Stanton St. Bernard in Wiltshire, England, during the 2015 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-562',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/06/DSC2878-Stanton-St-Bernard-Wilts-16-06-15-OH.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-563',
+    parentId: 'crop-circle-formations',
+    name: "Stoford Formation",
+    description: "A crop circle formation appearing at Stoford in Wiltshire, England, during the 2015 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-563',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/06/DSC2696-Stoford-Newton-Barrow-Wilts-15-06-15-L4.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-564',
+    parentId: 'crop-circle-formations',
+    name: "Foxley Road Formation",
+    description: "A crop circle formation appearing at Foxley Road in Sherston, England, during the 2015 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-564',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/06/DSC2789-Foxley-Rd-Sherston-Wilts-09-06-15-L2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-565',
+    parentId: 'crop-circle-formations',
+    name: "Fox Ground Down Formation",
+    description: "A crop circle formation appearing at Fox Ground Down in Dorset, England, during the 2015 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-565',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/06/DSC2666-Fox-Ground-Down-30-05-2015-OH2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-566',
+    parentId: 'crop-circle-formations',
+    name: "Manton Drove Formation",
+    description: "A crop circle formation appearing at Manton Drove in Wiltshire, England, during the 2015 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-566',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/05/Manton-Drove-Wiltshire-24th-May-2015-Wheat-CUT.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-567',
+    parentId: 'crop-circle-formations',
+    name: "Ackling Dyke (2) Formation",
+    description: "A crop circle formation appearing at Ackling Dyke (2) in Dorset, England, during the 2014 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-567',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2014_08_22_ackling_dyke_nr_sixpenny_hadley_dorset_1.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-568',
+    parentId: 'crop-circle-formations',
+    name: "Nettle Hill Formation",
+    description: "A crop circle formation appearing at Nettle Hill in Warwickshire, England, during the 2014 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-568',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2014_08_16_nettle_hill_ansty_warwickshire_2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-569',
+    parentId: 'crop-circle-formations',
+    name: "Mixon Formation",
+    description: "A crop circle formation appearing at Mixon in Wiltshire, England, during the 2014 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-569',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2014_08_12_mixon_etchilhampton_wiltshire_1.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-570',
+    parentId: 'crop-circle-formations',
+    name: "Green Street (2) Formation",
+    description: "A crop circle formation appearing at Green Street (2) in Avebury, England, during the 2014 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-570',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2014_08_08_green_street_nr_avebury_wiltshire_3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-571',
+    parentId: 'crop-circle-formations',
+    name: "The Ridgeway Formation",
+    description: "A crop circle formation appearing at The Ridgeway in Wiltshire, England, during the 2014 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-571',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/03/the_ridgeway_hackpen_hill_wiltshire_UK_06_08_14_121.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-572',
+    parentId: 'crop-circle-formations',
+    name: "East Kennett Formation",
+    description: "A crop circle formation appearing at East Kennett in Wiltshire, England, during the 2014 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-572',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2014_08_06_east_kennettt_wiltshire_uk_2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-573',
+    parentId: 'crop-circle-formations',
+    name: "Cow Dow Formation",
+    description: "A crop circle formation appearing at Cow Dow in E. Kennett, England, during the 2014 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-573',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2014_08_05_cow_down_nr_east_kennett_wiltshire_uk_7.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-574',
+    parentId: 'crop-circle-formations',
+    name: "Trodd's Copse Formation",
+    description: "A crop circle formation appearing at Trodd's Copse in Hampshire, England, during the 2014 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-574',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2014_08_04_trodds_copse_nr_tichborne_hampshire_uk_4.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-575',
+    parentId: 'crop-circle-formations',
+    name: "Roundway Hill 2014 Formation",
+    description: "A crop circle formation appearing at Roundway Hill 2014 in Wiltshire, England, during the 2014 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-575',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2014_07_30_roundway_hill_nr_devizes_wiltshire_uk_1.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-576',
+    parentId: 'crop-circle-formations',
+    name: "Green Street (1) Formation",
+    description: "A crop circle formation appearing at Green Street (1) in Avebury, England, during the 2014 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-576',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2014_07_29_green_street_nr_avebury_wiltshire_uk_3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-577',
+    parentId: 'crop-circle-formations',
+    name: "Etchilhampton Hill Formation",
+    description: "A crop circle formation appearing at Etchilhampton Hill in Wiltshire, England, during the 2014 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-577',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/08/etchilhampton_hill_wiltshire_UK_27_07_14_90.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-578',
+    parentId: 'crop-circle-formations',
+    name: "Cherington Formation",
+    description: "A crop circle formation appearing at Cherington in Gloucestershire, England, during the 2014 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-578',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/08/parkes_hill_plantation_nr_cherington_gloucestershire_UK_27_07_14_91.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-579',
+    parentId: 'crop-circle-formations',
+    name: "Welsh Way Formation",
+    description: "A crop circle formation appearing at Welsh Way in Barnsley, England, during the 2014 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-579',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/08/welsh_way_nr_barnsley_gloucestershire_UK_22_07_14_82.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-580',
+    parentId: 'crop-circle-formations',
+    name: "Forest Hill Formation",
+    description: "A crop circle formation appearing at Forest Hill in Wiltshire, England, during the 2014 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-580',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/forest_hill_nr_marlborough_wiltshire_UK_16_-07_14_81.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-581',
+    parentId: 'crop-circle-formations',
+    name: "Tetbury Lane Formation",
+    description: "A crop circle formation appearing at Tetbury Lane in Wiltshire, England, during the 2014 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-581',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/tetbury_lane_nr_charlton_wiltshire_UK_08_07_14_65.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-582',
+    parentId: 'crop-circle-formations',
+    name: "Hackpen Hill Formation",
+    description: "A crop circle formation appearing at Hackpen Hill in Wiltshire, England, during the 2014 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-582',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/hackpen_hill_wiltshire_UK_second_stage_09_-07_14_72.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-583',
+    parentId: 'crop-circle-formations',
+    name: "Wilmington Longman Formation",
+    description: "A crop circle formation appearing at Wilmington Longman in East Sussex, England, during the 2014 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-583',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/wilmington_longman_wilmington_east_-sussex_UK_03_07_14_58.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-584',
+    parentId: 'crop-circle-formations',
+    name: "Ackling Dyke Formation",
+    description: "A crop circle formation appearing at Ackling Dyke in Dorset, England, during the 2014 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-584',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/08/ackling_dyke_nr_sixpenny_handley_dorset_UK_29_06_14_49.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-585',
+    parentId: 'crop-circle-formations',
+    name: "West Kennett Longbarrow Formation",
+    description: "A crop circle formation appearing at West Kennett Longbarrow in Wiltshire, England, during the 2014 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-585',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/08/west_kennett_longbarrow_wiltshire_UK_22_06_14_47.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-586',
+    parentId: 'crop-circle-formations',
+    name: "Blackwood Formation",
+    description: "A crop circle formation appearing at Blackwood in Hampshire, England, during the 2014 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-586',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/08/black_wood_popham_hampshire_UK_21_06_14_38.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-587',
+    parentId: 'crop-circle-formations',
+    name: "Harewell Lane Formation",
+    description: "A crop circle formation appearing at Harewell Lane in Worcestershire, England, during the 2014 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-587',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/08/harewell_lane_nr_besford_worcestershire_UK_18.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-588',
+    parentId: 'crop-circle-formations',
+    name: "Chilcomb Down Formation",
+    description: "A crop circle formation appearing at Chilcomb Down in Hampshire, England, during the 2014 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-588',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2014_06_06_chilcomb_down_winchester_hampshire_uk_4.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-589',
+    parentId: 'crop-circle-formations',
+    name: "East Field Formation",
+    description: "A crop circle formation appearing at East Field in Alton Barnes, England, during the 2013 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-589',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_06_02_east_field_alton_barnes_wiltshire_oilseed_rape_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_06_02_east_field_alton_barnes_wiltshire_oilseed_rape_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_06_02_east_field_alton_barnes_wiltshire_oilseed_rape_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_06_02_east_field_alton_barnes_wiltshire_oilseed_rape_l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_06_02_east_field_alton_barnes_wiltshire_oilseed_rape_low.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-590',
+    parentId: 'crop-circle-formations',
+    name: "Yatesbury Formation",
+    description: "A crop circle formation appearing at Yatesbury in Wiltshire, England, during the 2013 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-590',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_06_21_yatesbury_wiltshire_barley_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_06_21_yatesbury_wiltshire_barley_l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-591',
+    parentId: 'crop-circle-formations',
+    name: "Stanton St Bernard Formation",
+    description: "A crop circle formation appearing at Stanton St Bernard in Wiltshire, England, during the 2013 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-591',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_06_21_stanton_st_bernard_wiltshire_barley_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_06_21_stanton_st_bernard_wiltshire_barley_cl.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_06_21_stanton_st_bernard_wiltshire_barley_oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_06_21_stanton_st_bernard_wiltshire_barley_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_06_21_stanton_st_bernard_wiltshire_barley_l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-592',
+    parentId: 'crop-circle-formations',
+    name: "Horton Bridge Formation",
+    description: "A crop circle formation appearing at Horton Bridge in Wiltshire, England, during the 2013 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-592',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_06_23_horton_bridge_wiltshire_barley_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_06_23_horton_bridge_wiltshire_barley_cl.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-593',
+    parentId: 'crop-circle-formations',
+    name: "Yatesbury Formation",
+    description: "A crop circle formation appearing at Yatesbury in Wiltshire, England, during the 2013 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-593',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_06_25_yatesbury_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_06_25_yatesbury_wiltshire_wheat_l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-594',
+    parentId: 'crop-circle-formations',
+    name: "Silbury Hill Formation",
+    description: "A crop circle formation appearing at Silbury Hill in Wiltshire, England, during the 2013 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-594',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_06_25_silbury_hill_wiltshire_barley_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_06_25_silbury_hill_wiltshire_barley_oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_06_25_silbury_hill_wiltshire_barley_cl.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_06_25_silbury_hill_wiltshire_barley_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_06_25_silbury_hill_wiltshire_barley_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_06_25_silbury_hill_wiltshire_barley_p.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_06_25_silbury_hill_wiltshire_barley_p2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_06_25_silbury_hill_wiltshire_barley_p3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_06_25_silbury_hill_wiltshire_barley_p4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_06_25_silbury_hill_wiltshire_barley_p5.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-595',
+    parentId: 'crop-circle-formations',
+    name: "Silbury Hill Formation",
+    description: "A crop circle formation appearing at Silbury Hill in Wiltshire, England, during the 2013 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-595',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_06_29_silbury_hill_barley_wiltshire_ef.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-596',
+    parentId: 'crop-circle-formations',
+    name: "Silbury Hill Formation",
+    description: "A crop circle formation appearing at Silbury Hill in Wiltshire, England, during the 2013 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-596',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_02_01_silbury_hill_barley_wiltshire_2013_ef2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-597',
+    parentId: 'crop-circle-formations',
+    name: "Silbury Hill Formation",
+    description: "A crop circle formation appearing at Silbury Hill in Wiltshire, England, during the 2013 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-597',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_03_01_silbury_hill_barley_wiltshire_2013_ef3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-598',
+    parentId: 'crop-circle-formations',
+    name: "Silbury Hill Formation",
+    description: "A crop circle formation appearing at Silbury Hill in Wiltshire, England, during the 2013 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-598',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_04_01_silbury_hill_barley_wiltshire_2013_ef4.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-599',
+    parentId: 'crop-circle-formations',
+    name: "The Ridgeway Avebury Formation",
+    description: "A crop circle formation appearing at The Ridgeway Avebury in Wiltshire, England, during the 2013 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-599',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_07_06_the_ridgeway_avebury_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_07_06_the_ridgeway_avebury_wiltshire_wheat_oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_07_06_the_ridgeway_avebury_wiltshire_wheat_oh3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_07_06_the_ridgeway_avebury_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_07_06_the_ridgeway_avebury_wiltshire_wheat_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_07_06_the_ridgeway_avebury_wiltshire_wheat_l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_07_06_the_ridgeway_avebury_wiltshire_wheat_cl.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_07_06_the_ridgeway_avebury_wiltshire_wheat_sp.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_07_06_the_ridgeway_avebury_wiltshire_wheat_sc.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-600',
+    parentId: 'crop-circle-formations',
+    name: "Silbury Hill Formation",
+    description: "A crop circle formation appearing at Silbury Hill in Wiltshire, England, during the 2013 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-600',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_07_07_silbury_hill_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_07_07_silbury_hill_wiltshire_wheat_oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_07_07_silbury_hill_wiltshire_wheat_oh3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_07_07_silbury_hill_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_07_07_silbury_hill_wiltshire_wheat_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_07_07_silbury_hill_wiltshire_wheat_l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_07_07_silbury_hill_wiltshire_wheat_l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_07_07_silbury_hill_wiltshire_wheat_low.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_07_07_silbury_hill_wiltshire_wheat_low2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-601',
+    parentId: 'crop-circle-formations',
+    name: "Hoden nr Evesham Formation",
+    description: "A crop circle formation appearing at Hoden nr Evesham in Worcestershire, England, during the 2013 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-601',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_07_13_hoden_nr_evesham_worcestershire_barley_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_07_13_hoden_nr_evesham_worcestershire_barley_l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-602',
+    parentId: 'crop-circle-formations',
+    name: "Hackpen Hill Formation",
+    description: "A crop circle formation appearing at Hackpen Hill in Wiltshire, England, during the 2013 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-602',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_07_15_hackpen_hill_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_07_15_hackpen_hill_wiltshire_wheat_oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_07_15_hackpen_hill_wiltshire_wheat_cl.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_07_15_hackpen_hill_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_07_15_hackpen_hill_wiltshire_wheat_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_07_15_hackpen_hill_wiltshire_wheat_p.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_07_15_hackpen_hill_wiltshire_wheat_p2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_07_15_hackpen_hill_wiltshire_wheat_p4.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-603',
+    parentId: 'crop-circle-formations',
+    name: "All Cannings Formation",
+    description: "A crop circle formation appearing at All Cannings in Wiltshire, England, during the 2013 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-603',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_07_15_all_cannings_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_07_15_all_cannings_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_07_15_all_cannings_wiltshire_wheat_l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-604',
+    parentId: 'crop-circle-formations',
+    name: "Roundway Devizes Formation",
+    description: "A crop circle formation appearing at Roundway Devizes in Wiltshire, England, during the 2013 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-604',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_07_24_roundway_nr_devizes_wiltshire_oats_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_07_24_roundway_nr_devizes_wiltshire_oats_oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_07_24_roundway_nr_devizes_wiltshire_oats_oh3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_07_24_roundway_nr_devizes_wiltshire_oats_oh4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_07_24_roundway_nr_devizes_wiltshire_oats_l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-605',
+    parentId: 'crop-circle-formations',
+    name: "Chirton Formation",
+    description: "A crop circle formation appearing at Chirton in Wiltshire, England, during the 2013 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-605',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_07_31_chirton_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_07_31_chirton_wiltshire_wheat_p.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-606',
+    parentId: 'crop-circle-formations',
+    name: "Normanton Down nr Stonehenge Formation",
+    description: "A crop circle formation appearing at Normanton Down nr Stonehenge in Wiltshire, England, during the 2013 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-606',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_01_normanton_down_nr_stonehenge_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_01_normanton_down_nr_stonehenge_wiltshire_wheat_oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_01_normanton_down_nr_stonehenge_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_01_normanton_down_nr_stonehenge_wiltshire_wheat_l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-607',
+    parentId: 'crop-circle-formations',
+    name: "Normanton Down Barrows Formation",
+    description: "A crop circle formation appearing at Normanton Down Barrows in nr Stonehenge, England, during the 2013 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-607',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_01_the_barrows_at_normanton_down_nr_stonehenge_wiltshire_wheat_l3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-608',
+    parentId: 'crop-circle-formations',
+    name: "Milk Hill Formation",
+    description: "A crop circle formation appearing at Milk Hill in Wiltshire, England, during the 2013 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-608',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_01_milk_hill_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_01_milk_hill_wiltshire_wheat_oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_01_milk_hill_wiltshire_wheat_oh3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_01_milk_hill_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_01_milk_hill_wiltshire_wheat_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_01_milk_hill_wiltshire_wheat_l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_01_milk_hill_wiltshire_wheat_l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_01_milk_hill_wiltshire_wheat_l5.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_01_milk_hill_wiltshire_wheat_low.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-609',
+    parentId: 'crop-circle-formations',
+    name: "Monument Hill Etchilhampton Formation",
+    description: "A crop circle formation appearing at Monument Hill Etchilhampton in Wiltshire, England, during the 2013 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-609',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_06_monument_hill_etchilhampton_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_06_monument_hill_etchilhampton_wiltshire_wheat_oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_06_monument_hill_etchilhampton_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_06_monument_hill_etchilhampton_wiltshire_wheat_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_06_monument_hill_etchilhampton_wiltshire_wheat_fe.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_06_monument_hill_etchilhampton_wiltshire_wheat_p.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_06_monument_hill_etchilhampton_wiltshire_wheat_p2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_06_monument_hill_etchilhampton_wiltshire_wheat_p3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_06_monument_hill_etchilhampton_wiltshire_wheat_p4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_06_monument_hill_etchilhampton_wiltshire_wheat_p5.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_06_monument_hill_etchilhampton_wiltshire_wheat_p6.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_06_monument_hill_etchilhampton_wiltshire_wheat_p7.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_06_monument_hill_etchilhampton_wiltshire_wheat_p8.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_06_monument_hill_etchilhampton_wiltshire_wheat_p9.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-610',
+    parentId: 'crop-circle-formations',
+    name: "Penning nr Silbury Hill Formation",
+    description: "A crop circle formation appearing at Penning nr Silbury Hill in Wiltshire, England, during the 2013 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-610',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_08_beckhampton_penning_nr_silbury_hill_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_08_beckhampton_penning_nr_silbury_hill_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_08_beckhampton_penning_nr_silbury_hill_wheat_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_08_beckhampton_penning_nr_silbury_hill_wheat_l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_08_beckhampton_penning_nr_silbury_hill_wheat_l4.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-611',
+    parentId: 'crop-circle-formations',
+    name: "Chute Causeway nr Tidcombe Formation",
+    description: "A crop circle formation appearing at Chute Causeway nr Tidcombe in Wiltshire, England, during the 2013 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-611',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_10_chute_causeway_nr_tidcombe_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_10_chute_causeway_nr_tidcombe_wiltshire_wheat_oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_10_chute_causeway_nr_tidcombe_wiltshire_wheat_cl.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_10_chute_causeway_nr_tidcombe_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_10_chute_causeway_nr_tidcombe_wiltshire_wheat_p.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_10_chute_causeway_nr_tidcombe_wiltshire_wheat_p2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_10_chute_causeway_nr_tidcombe_wiltshire_wheat_p3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_10_chute_causeway_nr_tidcombe_wiltshire_wheat_p4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_10_chute_causeway_nr_tidcombe_wiltshire_wheat_p5.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_10_chute_causeway_nr_tidcombe_wiltshire_wheat_p6.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_10_chute_causeway_nr_tidcombe_wiltshire_wheat_gs.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-612',
+    parentId: 'crop-circle-formations',
+    name: "Hackpen Hill (2) Formation",
+    description: "A crop circle formation appearing at Hackpen Hill (2) in Wiltshire, England, during the 2013 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-612',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_11_hackpen_hill_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_11_hackpen_hill_wiltshire_wheat_oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_11_hackpen_hill_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_11_hackpen_hill_wiltshire_wheat_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_11_hackpen_hill_wiltshire_wheat_p.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_11_hackpen_hill_wiltshire_wheat_p2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_11_hackpen_hill_wiltshire_wheat_p3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_11_hackpen_hill_wiltshire_wheat_p4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_11_hackpen_hill_wiltshire_wheat_p5.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_11_hackpen_hill_wiltshire_wheat_p6.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-613',
+    parentId: 'crop-circle-formations',
+    name: "West Kennett Longbarrow Formation",
+    description: "A crop circle formation appearing at West Kennett Longbarrow in Wiltshire, England, during the 2013 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-613',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_13_west_kennett_longbarrow_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_13_west_kennett_longbarrow_wiltshire_wheat_oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_13_west_kennett_longbarrow_wiltshire_wheat_oh3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_13_west_kennett_longbarrow_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_13_west_kennett_longbarrow_wiltshire_wheat_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_13_west_kennett_longbarrow_wiltshire_wheat_l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_13_west_kennett_longbarrow_wiltshire_wheat_l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_13_west_kennett_longbarrow_wiltshire_wheat_ohv.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_13_west_kennett_longbarrow_wiltshire_wheat_ohv2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-614',
+    parentId: 'crop-circle-formations',
+    name: "Hackpen Hill (3) Formation",
+    description: "A crop circle formation appearing at Hackpen Hill (3) in Wiltshire, England, during the 2013 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-614',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_13_hackpen_hill_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_13_hackpen_hill_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_13_hackpen_hill_wiltshire_wheat_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_13_hackpen_hill_wiltshire_wheat_l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_13_hackpen_hill_wiltshire_wheat_l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_13_hackpen_hill_wiltshire_wheat_l5.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_13_hackpen_hill_wiltshire_wheat_low.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-615',
+    parentId: 'crop-circle-formations',
+    name: "Etchilhampton Hill Formation",
+    description: "A crop circle formation appearing at Etchilhampton Hill in Wiltshire, England, during the 2013 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-615',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_19_etchilhampton_hill_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_19_etchilhampton_hill_wiltshire_wheat_oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_19_etchilhampton_hill_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_19_etchilhampton_hill_wiltshire_wheat_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_19_etchilhampton_hill_wiltshire_wheat_p.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_19_etchilhampton_hill_wiltshire_wheat_p2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_19_etchilhampton_hill_wiltshire_wheat_p3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_19_etchilhampton_hill_wiltshire_wheat_p4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_19_etchilhampton_hill_wiltshire_wheat_p5.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_19_etchilhampton_hill_wiltshire_wheat_p6.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_19_etchilhampton_hill_wiltshire_wheat_p7.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_19_etchilhampton_hill_wiltshire_wheat_p8.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_19_etchilhampton_hill_wiltshire_wheat_grd.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_19_etchilhampton_hill_wiltshire_wheat_grd2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_19_etchilhampton_hill_wiltshire_wheat_grd3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_19_etchilhampton_hill_wiltshire_wheat_grd4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_19_etchilhampton_hill_wiltshire_wheat_grd5.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_19_etchilhampton_hill_wiltshire_wheat_grd6.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_19_etchilhampton_hill_wiltshire_wheat_grd7.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_19_etchilhampton_hill_wiltshire_wheat_grd8.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_19_etchilhampton_hill_wiltshire_wheat_grd9.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-616',
+    parentId: 'crop-circle-formations',
+    name: "Silbury Hill Formation",
+    description: "A crop circle formation appearing at Silbury Hill in Wiltshire, England, during the 2013 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-616',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_19_silbury_hill_wiltshire_sh-e1431620619857.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-617',
+    parentId: 'crop-circle-formations',
+    name: "Silbury Hill Formation",
+    description: "A crop circle formation appearing at Silbury Hill in Wiltshire, England, during the 2013 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-617',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_19_silbury_hill_wiltshire_sh2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-618',
+    parentId: 'crop-circle-formations',
+    name: "Silbury Hill Formation",
+    description: "A crop circle formation appearing at Silbury Hill in Wiltshire, England, during the 2013 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-618',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_19_silbury_hill_wiltshire_sh3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-619',
+    parentId: 'crop-circle-formations',
+    name: "Marden Henge Formation",
+    description: "A crop circle formation appearing at Marden Henge in Wiltshire, England, during the 2013 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-619',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_23_marden_henge_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_23_marden_henge_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_23_marden_henge_wiltshire_wheat_l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-620',
+    parentId: 'crop-circle-formations',
+    name: "Cooks Plantation nr Beckhampton Formation",
+    description: "A crop circle formation appearing at Cooks Plantation nr Beckhampton in Wiltshire, England, during the 2013 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-620',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_23_cooks_plantation_nr_beckhampton_wiltshire_wheat_ohm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_23_cooks_plantation_nr_beckhampton_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_23_cooks_plantation_nr_beckhampton_wiltshire_wheat_oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_23_cooks_plantation_nr_beckhampton_wiltshire_wheat_oh3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_23_cooks_plantation_nr_beckhampton_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_23_cooks_plantation_nr_beckhampton_wiltshire_wheat_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_23_cooks_plantation_nr_beckhampton_wiltshire_wheat_l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_23_cooks_plantation_nr_beckhampton_wiltshire_wheat_l4-e1431621124403.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_23_cooks_plantation_nr_beckhampton_wiltshire_wheat_low.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_23_cooks_plantation_nr_beckhampton_wiltshire_wheat_low2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-621',
+    parentId: 'crop-circle-formations',
+    name: "Hackpen Hill 2 (Stage 2) Formation",
+    description: "A crop circle formation appearing at Hackpen Hill 2 (Stage 2) in Wiltshire, England, during the 2013 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-621',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_31_hackpen_hill_wiltshire_wheat_ohad.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_31_hackpen_hill_wiltshire_wheat_clad.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_31_hackpen_hill_wiltshire_wheat_lad.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_31_hackpen_hill_wiltshire_wheat_oh2ad.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2013_08_31_hackpen_hill_wiltshire_wheat_l2ad.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-622',
+    parentId: 'crop-circle-formations',
+    name: "Hill Barn East Kennett Formation",
+    description: "A crop circle formation appearing at Hill Barn East Kennett in Wiltshire, England, during the 2012 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-622',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_04_15_hill_barn_east_kennett_wiltshire_oilseed_rape_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_04_15_hill_barn_east_kennett_wiltshire_oilseed_rape_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_04_15_hill_barn_east_kennett_wiltshire_oilseed_rape_l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-623',
+    parentId: 'crop-circle-formations',
+    name: "Yarnbury Castle near Winterbourne Stoke Formation",
+    description: "A crop circle formation appearing at Yarnbury Castle near Winterbourne Stoke in Wiltshire, England, during the 2012 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-623',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_04_28_yarnbury_castle_nr_winterbourne_stoke_wiltshire_oilseed_rape_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_04_28_yarnbury_castle_nr_winterbourne_stoke_wiltshire_oilseed_rape_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_04_28_yarnbury_castle_nr_winterbourne_stoke_wiltshire_oilseed_rape_l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_04_28_yarnbury_castle_nr_winterbourne_stoke_wiltshire_oilseed_rape_ts.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_04_28_yarnbury_castle_nr_winterbourne_stoke_wiltshire_oilseed_rape_ts2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_04_28_yarnbury_castle_nr_winterbourne_stoke_wiltshire_oilseed_rape_l3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-624',
+    parentId: 'crop-circle-formations',
+    name: "Water Eaton Copse Hannington Formation",
+    description: "A crop circle formation appearing at Water Eaton Copse Hannington in Wiltshire, England, during the 2012 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-624',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_05_12_water_eaton_copse_hannington_wiltshire_oilseed_rape_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_05_12_water_eaton_copse_hannington_wiltshire_oilseed_rape_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_05_12_water_eaton_copse_hannington_wiltshire_oilseed_rape_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_05_12_water_eaton_copse_hannington_wiltshire_oilseed_rape_l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_05_12_water_eaton_copse_hannington_wiltshire_oilseed_rape_ts.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_05_12_water_eaton_copse_hannington_wiltshire_oilseed_rape_l4.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-625',
+    parentId: 'crop-circle-formations',
+    name: "Ashmead Break Hannington Formation",
+    description: "A crop circle formation appearing at Ashmead Break Hannington in Wiltshire, England, during the 2012 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-625',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_05_13_ashmead_break_hannington_wiltshire_oilseed_rape_l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-626',
+    parentId: 'crop-circle-formations',
+    name: "Uffington White Horse Formation",
+    description: "A crop circle formation appearing at Uffington White Horse in Oxfordshire, England, during the 2012 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-626',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_05_19_uffington_white_horse_oxfordshire_oilseed_rape_l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-627',
+    parentId: 'crop-circle-formations',
+    name: "Steve Alexander At Work Uffington White Horse Formation",
+    description: "A crop circle formation appearing at Steve Alexander At Work Uffington White Horse in Oxfordshire, England, during the 2012 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-627',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_05_22_steve_alexander_at_work_uffington_white_horse_oxfordshire_sa.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-628',
+    parentId: 'crop-circle-formations',
+    name: "Uffington White Horse Formation",
+    description: "A crop circle formation appearing at Uffington White Horse in Oxfordshire, England, during the 2012 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-628',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_05_22_uffington_white_horse_oxfordshire_fe.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-629',
+    parentId: 'crop-circle-formations',
+    name: "Silbury Hill Formation",
+    description: "A crop circle formation appearing at Silbury Hill in Wiltshire, England, during the 2012 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-629',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_06_12_silbury_hill_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_06_12_silbury_hill_wiltshire_wheat_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_06_12_silbury_hill_wiltshire_wheat_l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_06_12_silbury_hill_wiltshire_wheat_l4.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-630',
+    parentId: 'crop-circle-formations',
+    name: "Silbury Hill Formation",
+    description: "A crop circle formation appearing at Silbury Hill in Wiltshire, England, during the 2012 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-630',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_06_13_silbury_hill_wiltshire_wheat_barley_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_06_13_silbury_hill_wiltshire_wheat_barley_l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-631',
+    parentId: 'crop-circle-formations',
+    name: "Frome Formation",
+    description: "A crop circle formation appearing at Frome in Somerset, England, during the 2012 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-631',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_06_17_frome_somerset_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_06_17_frome_somerset_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_06_17_frome_somerset_wheat_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_06_17_frome_somerset_wheat_l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_06_17_frome_somerset_wheat_p.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_06_17_frome_somerset_wheat_p2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_06_17_frome_somerset_wheat_p3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_06_17_frome_somerset_wheat_p4.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-632',
+    parentId: 'crop-circle-formations',
+    name: "Golden Ball Hill Formation",
+    description: "A crop circle formation appearing at Golden Ball Hill in Wiltshire, England, during the 2012 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-632',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_06_20_golden_ball_hill_wiltshire_wheat_l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_06_20_golden_ball_hill_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_06_20_golden_ball_hill_wiltshire_wheat_l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-633',
+    parentId: 'crop-circle-formations',
+    name: "Adams Grave near Alton Barnes Formation",
+    description: "A crop circle formation appearing at Adams Grave near Alton Barnes in Wiltshire, England, during the 2012 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-633',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_06_25_adams_grave_nr_alton_barnes_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_06_25_adams_grave_nr_alton_barnes_wiltshire_wheat_cut2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_06_25_adams_grave_nr_alton_barnes_wiltshire_wheat_cut3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_06_25_adams_grave_nr_alton_barnes_wiltshire_wheat_cut.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-634',
+    parentId: 'crop-circle-formations',
+    name: "Storm Over Formation",
+    description: "A crop circle formation appearing at Storm Over in Wiltshire, England, during the 2012 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-634',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_06_29_storm_over_wiltshire_landscape_st.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-635',
+    parentId: 'crop-circle-formations',
+    name: "Wanborough Plain near Liddington Formation",
+    description: "A crop circle formation appearing at Wanborough Plain near Liddington in Wiltshire, England, during the 2012 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-635',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_01_wanborough_plain_nr_liddington_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_01_wanborough_plain_nr_liddington_wiltshire_wheat_oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_01_wanborough_plain_nr_liddington_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_01_wanborough_plain_nr_liddington_wiltshire_wheat_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_01_wanborough_plain_nr_liddington_wiltshire_wheat_l3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-636',
+    parentId: 'crop-circle-formations',
+    name: "Waden Hill near Avebury Formation",
+    description: "A crop circle formation appearing at Waden Hill near Avebury in Wiltshire, England, during the 2012 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-636',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_01_waden_hill_nr_avebury_wiltshire_wheat_l5.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_01_waden_hill_nr_avebury_wiltshire_wheat_l6.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_01_waden_hill_nr_avebury_wiltshire_wheat_l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_01_waden_hill_nr_avebury_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_01_waden_hill_nr_avebury_wiltshire_wheat_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_01_waden_hill_nr_avebury_wiltshire_wheat_l3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-637',
+    parentId: 'crop-circle-formations',
+    name: "Chilcomb Down near Winchester Formation",
+    description: "A crop circle formation appearing at Chilcomb Down near Winchester in Hampshire, England, during the 2012 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-637',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_01_chilcomb_down_nr_winchester_hampshire_barley_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_01_chilcomb_down_nr_winchester_hampshire_barley_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_01_chilcomb_down_nr_winchester_hampshire_barley_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_01_chilcomb_down_nr_winchester_hampshire_barley_l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_01_chilcomb_down_nr_winchester_hampshire_barley_l4.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-638',
+    parentId: 'crop-circle-formations',
+    name: "Boreham Wood near Lockeridge Formation",
+    description: "A crop circle formation appearing at Boreham Wood near Lockeridge in Wiltshire, England, during the 2012 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-638',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_05_boreham_wood_nr_lockeridge_wiltshire_wheat_cl.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_05_boreham_wood_nr_lockeridge_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_05_boreham_wood_nr_lockeridge_wiltshire_wheat_oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_05_boreham_wood_nr_lockeridge_wiltshire_wheat_oh3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-639',
+    parentId: 'crop-circle-formations',
+    name: "Picked Hill near Wilcot Formation",
+    description: "A crop circle formation appearing at Picked Hill near Wilcot in Wiltshire, England, during the 2012 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-639',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_09_picked_hill_nr_wilcot_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_09_picked_hill_nr_wilcot_wiltshire_wheat_l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-640',
+    parentId: 'crop-circle-formations',
+    name: "Corley near Coventry Formation",
+    description: "A crop circle formation appearing at Corley near Coventry in Warwickshire, England, during the 2012 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-640',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_11_corley_nr_coventry_warwickshire_wheat_oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_11_corley_nr_coventry_warwickshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_11_corley_nr_coventry_warwickshire_wheat_l6.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_11_corley_nr_coventry_warwickshire_wheat_l5.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_11_corley_nr_coventry_warwickshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_11_corley_nr_coventry_warwickshire_wheat_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_11_corley_nr_coventry_warwickshire_wheat_l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_11_corley_nr_coventry_warwickshire_wheat_l4.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-641',
+    parentId: 'crop-circle-formations',
+    name: "Longwood Warren near Winchester Formation",
+    description: "A crop circle formation appearing at Longwood Warren near Winchester in Hampshire, England, during the 2012 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-641',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_23_longwood_warren_nr_winchester_hampshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_23_longwood_warren_nr_winchester_hampshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_23_longwood_warren_nr_winchester_hampshire_wheat_rs.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_23_longwood_warren_nr_winchester_hampshire_wheat_rs2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-642',
+    parentId: 'crop-circle-formations',
+    name: "East Kennett Formation",
+    description: "A crop circle formation appearing at East Kennett in Wiltshire, England, during the 2012 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-642',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_26_east_kennett_wiltshire_wheat_oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_26_east_kennett_wiltshire_wheat_oh3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_26_east_kennett_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_26_east_kennett_wiltshire_wheat_l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_26_east_kennett_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_26_east_kennett_wiltshire_wheat_l5.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_26_east_kennett_wiltshire_wheat_l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_26_east_kennett_wiltshire_wheat_l6.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_26_east_kennett_wiltshire_wheat_l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-643',
+    parentId: 'crop-circle-formations',
+    name: "Olivers Castle Formation",
+    description: "A crop circle formation appearing at Olivers Castle in Wiltshire, England, during the 2012 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-643',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_26_olivers_castle_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_26_olivers_castle_wiltshire_wheat_l5.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_26_olivers_castle_wiltshire_wheat_l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_26_olivers_castle_wiltshire_wheat_l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_26_olivers_castle_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_26_olivers_castle_wiltshire_wheat_l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-644',
+    parentId: 'crop-circle-formations',
+    name: "Jubilee Copse near Hannington Formation",
+    description: "A crop circle formation appearing at Jubilee Copse near Hannington in Wiltshire, England, during the 2012 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-644',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_28_jubilee_copse_nr_hannington_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_28_jubilee_copse_nr_hannington_wiltshire_wheat_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_28_jubilee_copse_nr_hannington_wiltshire_wheat_l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-645',
+    parentId: 'crop-circle-formations',
+    name: "Ogbourne Down Formation",
+    description: "A crop circle formation appearing at Ogbourne Down in Wiltshire, England, during the 2012 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-645',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_29_ogbourne_down_wiltshire_linseed_oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_29_ogbourne_down_wiltshire_linseed_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_29_ogbourne_down_wiltshire_linseed_l6.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_29_ogbourne_down_wiltshire_linseed_l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_29_ogbourne_down_wiltshire_linseed_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_29_ogbourne_down_wiltshire_linseed_l5.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_29_ogbourne_down_wiltshire_linseed_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_29_ogbourne_down_wiltshire_linseed_l4.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-646',
+    parentId: 'crop-circle-formations',
+    name: "Owslebury near Winchester Formation",
+    description: "A crop circle formation appearing at Owslebury near Winchester in Hampshire, England, during the 2012 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-646',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_29_owslebury_nr_winchester_hampshire_wheat_oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_29_owslebury_nr_winchester_hampshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_29_owslebury_nr_winchester_hampshire_wheat_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_29_owslebury_nr_winchester_hampshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_29_owslebury_nr_winchester_hampshire_wheat_l3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-647',
+    parentId: 'crop-circle-formations',
+    name: "Windmill Hill near Avebury Formation",
+    description: "A crop circle formation appearing at Windmill Hill near Avebury in Wiltshire, England, during the 2012 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-647',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_07_31_windmill_hill_nr_avebury_wiltshire_wheat_oh.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-648',
+    parentId: 'crop-circle-formations',
+    name: "Avebury Stone Circle Formation",
+    description: "A crop circle formation appearing at Avebury Stone Circle in Wiltshire, England, during the 2012 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-648',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_01_avebury_stone_circle_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_01_avebury_stone_circle_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_01_avebury_stone_circle_wiltshire_wheat_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_01_avebury_stone_circle_wiltshire_wheat_l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_01_avebury_stone_circle_wiltshire_wheat_l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_01_avebury_stone_circle_wiltshire_av.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-649',
+    parentId: 'crop-circle-formations',
+    name: "Wootton Rivers Formation",
+    description: "A crop circle formation appearing at Wootton Rivers in Wiltshire, England, during the 2012 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-649',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_02_wootton_rivers_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_02_wootton_rivers_wiltshire_wheat_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_02_wootton_rivers_wiltshire_wheat_l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_02_wootton_rivers_wiltshire_wheat_l4.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-650',
+    parentId: 'crop-circle-formations',
+    name: "Milk Hill near Stanton St Bernard Formation",
+    description: "A crop circle formation appearing at Milk Hill near Stanton St Bernard in Wiltshire, England, during the 2012 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-650',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_05_milk_hill_nr_stanton_st_bernard_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_05_milk_hill_nr_stanton_st_bernard_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_05_milk_hill_nr_stanton_st_bernard_wiltshire_wheat_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_05_milk_hill_nr_stanton_st_bernard_wiltshire_wheat_l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_05_milk_hill_nr_stanton_st_bernard_wiltshire_wheat_p.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_05_milk_hill_nr_stanton_st_bernard_wiltshire_wheat_p2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_05_milk_hill_nr_stanton_st_bernard_wiltshire_wheat_p5.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_05_milk_hill_nr_stanton_st_bernard_wiltshire_wheat_p4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_05_milk_hill_nr_stanton_st_bernard_wiltshire_wheat_p3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-651',
+    parentId: 'crop-circle-formations',
+    name: "Longwood Rd near Owslebury Formation",
+    description: "A crop circle formation appearing at Longwood Rd near Owslebury in Hampshire, England, during the 2012 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-651',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_05_longwood_rd_nr_owslebury_hampshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_05_longwood_rd_nr_owslebury_hampshire_wheat_l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-652',
+    parentId: 'crop-circle-formations',
+    name: "Cheesefoot Head near Winchester Formation",
+    description: "A crop circle formation appearing at Cheesefoot Head near Winchester in Hampshire, England, during the 2012 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-652',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_09_cheesefoot_head_nr_winchester_hampshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_09_cheesefoot_head_nr_winchester_hampshire_wheat_oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_09_cheesefoot_head_nr_winchester_hampshire_wheat_oh3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_09_cheesefoot_head_nr_winchester_hampshire_wheat_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_09_cheesefoot_head_nr_winchester_hampshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_09_cheesefoot_head_nr_winchester_hampshire_wheat_oh4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_09_cheesefoot_head_nr_winchester_hampshire_wheat_sc.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-653',
+    parentId: 'crop-circle-formations',
+    name: "Cheesefoot Head near Winchester Formation",
+    description: "A crop circle formation appearing at Cheesefoot Head near Winchester in Hampshire, England, during the 2012 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-653',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_10_cheesefoot_head_nr_winchester_hampshire_boomtown_fair_cl.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_10_cheesefoot_head_nr_winchester_hampshire_boomtown_fair_l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-654',
+    parentId: 'crop-circle-formations',
+    name: "Bishops Cannings near Devizes Formation",
+    description: "A crop circle formation appearing at Bishops Cannings near Devizes in Wiltshire, England, during the 2012 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-654',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_11_bishops_cannings_nr_devizes_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_11_bishops_cannings_nr_devizes_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_11_bishops_cannings_nr_devizes_wiltshire_wheat_low.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_11_bishops_cannings_nr_devizes_wiltshire_wheat_low2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-655',
+    parentId: 'crop-circle-formations',
+    name: "Devils Den near Fyfield Formation",
+    description: "A crop circle formation appearing at Devils Den near Fyfield in Wiltshire, England, during the 2012 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-655',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_12_devils_den_nr_fyfield_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_12_devils_den_nr_fyfield_wiltshire_wheat_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_12_devils_den_nr_fyfield_wiltshire_wheat_l3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-656',
+    parentId: 'crop-circle-formations',
+    name: "Wappenbury near Royal Leamington Spa Formation",
+    description: "A crop circle formation appearing at Wappenbury near Royal Leamington Spa in Warwickshire, England, during the 2012 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-656',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_15_wappenbury_nr_royal_leamington_spa_warwickshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_15_wappenbury_nr_royal_leamington_spa_warwickshire_wheat_l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_15_wappenbury_nr_royal_leamington_spa_warwickshire_wheat_l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_15_wappenbury_nr_royal_leamington_spa_warwickshire_wheat_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_15_wappenbury_nr_royal_leamington_spa_warwickshire_wheat_l5.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_15_wappenbury_nr_royal_leamington_spa_warwickshire_wheat_oh.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-657',
+    parentId: 'crop-circle-formations',
+    name: "Hackpen Hill Wheat Formation",
+    description: "A crop circle formation appearing at Hackpen Hill Wheat in Wiltshire, England, during the 2012 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-657',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2012_08_11_near_harvest_wheat_windmill_hill_formation_wh.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-658',
+    parentId: 'crop-circle-formations',
+    name: "Alton Barnes White Horse Formation",
+    description: "A crop circle formation appearing at Alton Barnes White Horse in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-658',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_04_27_alton_barnes_white_horse_wiltshire_oilseed_rape.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_04_27_alton_barnes_white_horse_wiltshire_oilseed_rape_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_04_27_alton_barnes_white_horse_wiltshire_27_2011_oilseed_rape_l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-659',
+    parentId: 'crop-circle-formations',
+    name: "Silbury Hill Formation",
+    description: "A crop circle formation appearing at Silbury Hill in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-659',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/004_Silbury_Hill_Wiltshire_29th_April_2011_Oilseed_Rape_L.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_04_29_silbury_hill_wiltshire_29_2011_oilseed_rape_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_04_29_silbury_hill_wiltshire_29_2011_oilseed_rape_l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_04_29_silbury_hill_wiltshire_29_2011_oilseed_rape_l4.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-660',
+    parentId: 'crop-circle-formations',
+    name: "Alton Barnes Formation",
+    description: "A crop circle formation appearing at Alton Barnes in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-660',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_05_03_alton_barnes_wiltshire_white_horse_ghost.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-661',
+    parentId: 'crop-circle-formations',
+    name: "Hannington Formation",
+    description: "A crop circle formation appearing at Hannington in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-661',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_05_07_hannington_wiltshire_7_2011_oilseed_rape_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_05_07_hannington_wiltshire_7_2011_oilseed_rape_l1.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_05_07_hannington_wiltshire_7_2011_oilseed_rape_l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_05_07_hannington_wiltshire_oilseed_rape_fe.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-662',
+    parentId: 'crop-circle-formations',
+    name: "Castle Hill Fort Formation",
+    description: "A crop circle formation appearing at Castle Hill Fort in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-662',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_05_08_castle_hill_fort_wiltshire.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-663',
+    parentId: 'crop-circle-formations',
+    name: "Woodborough Hill near Alton Barnes Formation",
+    description: "A crop circle formation appearing at Woodborough Hill near Alton Barnes in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-663',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_05_03_woodborough_hill_nr_alton_barnes_wilts.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-664',
+    parentId: 'crop-circle-formations',
+    name: "East Kennett Formation",
+    description: "A crop circle formation appearing at East Kennett in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-664',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_05_17_east_kennett_wiltshire_barley_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_05_17_east_kennett_wiltshire_barley_cl.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_05_17_east_kennett_wiltshire_17_2011_barley_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_05_17_east_kennett_wiltshire_barley_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_05_17_east_kennett_wiltshire_barley_p.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_05_17_east_kennett_wiltshire_17_2011_barley_p2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_05_17_east_kennett_wiltshire_barley_grd.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-665',
+    parentId: 'crop-circle-formations',
+    name: "Burderop Down near Barbury Castle Formation",
+    description: "A crop circle formation appearing at Burderop Down near Barbury Castle in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-665',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_05_22_burderop_down_nr_barbury_castle_wiltshire_barley_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_05_22_burderop_down_nr_barbury_castle_wiltshire_22_2011_barley_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_05_22_burderop_down_nr_barbury_castle_wiltshire_22_2011_barley_l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_05_22_burderop_down_nr_barbury_castle_wiltshire_barley_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_05_22_burderop_down_nr_barbury_castle_wiltshire_barley_fe.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-666',
+    parentId: 'crop-circle-formations',
+    name: "Barbury Castle Hill Fort Formation",
+    description: "A crop circle formation appearing at Barbury Castle Hill Fort in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-666',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_05_22_barbury_castle_hill_fort_wiltshire.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-667',
+    parentId: 'crop-circle-formations',
+    name: "The Sanctuary near Avebury Formation",
+    description: "A crop circle formation appearing at The Sanctuary near Avebury in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-667',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_05_28_the_sanctuary_nr_avebury_wiltshire_barley_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_05_28_the_sanctuary_nr_avebury_wiltshire_28_2011_barley_oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_05_28_the_sanctuary_nr_avebury_wiltshire_28_2011_barley_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_05_28_the_sanctuary_nr_avebury_wiltshire_28_2011_barley_oh3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_05_28_the_sanctuary_nr_avebury_wiltshire_barley_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_05_28_the_sanctuary_nr_avebury_wiltshire_28_2011_barley_l5.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_05_28_the_sanctuary_nr_avebury_wiltshire_28_2011_barley_l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_05_28_the_sanctuary_nr_avebury_wiltshire_28_2011_barley_l3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-668',
+    parentId: 'crop-circle-formations',
+    name: "Hackpen Hill Formation",
+    description: "A crop circle formation appearing at Hackpen Hill in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-668',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_05_30_hackpen_hill_wiltshire_barley_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_05_30_hackpen_hill_wiltshire_30_2011_barley_oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_05_30_hackpen_hill_wiltshire_barley_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_05_30_hackpen_hill_wiltshire_30_2011_barley_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_05_30_hackpen_hill_wiltshire_30_2011_barley_l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_05_30_hackpen_hill_wiltshire_30_2011_barley_l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_05_30_hackpen_hill_wiltshire_30_2011_barley_low2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_05_30_hackpen_hill_wiltshire_barley_low.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_05_30_hackpen_hill_wiltshire_30_2011_barley_low3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-669',
+    parentId: 'crop-circle-formations',
+    name: "Wilton Windmill Formation",
+    description: "A crop circle formation appearing at Wilton Windmill in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-669',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_01_wilton_windmill_wiltshire_1_2011_wheat_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_01_wilton_windmill_wiltshire_1_2011_wheat_l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_01_wilton_windmill_wiltshire_1_2011_wheat_l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_01_wilton_windmill_wiltshire_wheat_l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-670',
+    parentId: 'crop-circle-formations',
+    name: "Kingstone Coombes Formation",
+    description: "A crop circle formation appearing at Kingstone Coombes in Oxfordshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-670',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_08_kingstone_coombes_oxfordshire_barley_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_08_kingstone_coombes_oxfordshire_barley_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_08_kingstone_coombes_oxfordshire_8_2011_barley_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_08_kingstone_coombes_oxfordshire_barley_low.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_08_kingstone_coombes_oxfordshire_8_2011_barley_low2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_08_kingstone_coombes_oxfordshire_barley_p.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-671',
+    parentId: 'crop-circle-formations',
+    name: "Kings Somborne Formation",
+    description: "A crop circle formation appearing at Kings Somborne in Hampshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-671',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_18_kings_somborne_hampshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_18_kings_somborne_hampshire_18_2011_wheat_low2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_18_kings_somborne_hampshire_wheat_low.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_18_kings_somborne_hampshire_wheat_low3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_18_kings_somborne_hampshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_18_kings_somborne_hampshire_wheat_l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-672',
+    parentId: 'crop-circle-formations',
+    name: "Winterbourne Stoke near Stonehenge Formation",
+    description: "A crop circle formation appearing at Winterbourne Stoke near Stonehenge in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-672',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_20_winterbourne_stoke_nr_stonehenge_wiltshire_barley_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_20_winterbourne_stoke_nr_stonehenge_wiltshire_barley_oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_20_winterbourne_stoke_nr_stonehenge_wiltshire_barley_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_20_winterbourne_stoke_nr_stonehenge_wiltshire_barley_l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-673',
+    parentId: 'crop-circle-formations',
+    name: "Winterbourne Stoke 2 near Stonehenge Formation",
+    description: "A crop circle formation appearing at Winterbourne Stoke 2 near Stonehenge in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-673',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_21_winterbourne_stoke_nr_stonehenge_wiltshire_barley_oh3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_21_winterbourne_stoke_nr_stonehenge_wiltshire_barley_l3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-674',
+    parentId: 'crop-circle-formations',
+    name: "Stanton St Bernard Formation",
+    description: "A crop circle formation appearing at Stanton St Bernard in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-674',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_21_stanton_st_bernard_wiltshire_wheat_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_21_stanton_st_bernard_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_21_stanton_st_bernard_wiltshire_wheat_l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_21_stanton_st_bernard_wiltshire_wheat_pfe.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_21_stanton_st_bernard_wiltshire_wheat_p.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_21_stanton_st_bernard_wiltshire_wheat_pfe2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_21_stanton_st_bernard_wiltshire_wheat_don.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-675',
+    parentId: 'crop-circle-formations',
+    name: "West Woods near Lockeridge Formation",
+    description: "A crop circle formation appearing at West Woods near Lockeridge in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-675',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_21_west_woods_nr_lockeridge_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_21_west_woods_nr_lockeridge_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_21_west_woods_nr_lockeridge_wiltshire_wheat_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_21_west_woods_nr_lockeridge_wiltshire_wheat_pfe.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_21_west_woods_nr_lockeridge_wiltshire_wheat_p1.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_21_west_woods_nr_lockeridge_wiltshire_wheat_p2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_21_west_woods_nr_lockeridge_wiltshire_wheat_p3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-676',
+    parentId: 'crop-circle-formations',
+    name: "East Kennett Formation",
+    description: "A crop circle formation appearing at East Kennett in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-676',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_22_east_kennett_wiltshire_barley_2nd_stage_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_22_east_kennett_wiltshire_barley_2nd_stage_l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-677',
+    parentId: 'crop-circle-formations',
+    name: "Honey Street Alton Barnes Formation",
+    description: "A crop circle formation appearing at Honey Street Alton Barnes in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-677',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_26_honey_street_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_26_honey_street_wiltshire_wheat_l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-678',
+    parentId: 'crop-circle-formations',
+    name: "Fonthill Down near Chicklade Formation",
+    description: "A crop circle formation appearing at Fonthill Down near Chicklade in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-678',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_27_fonthill_down_nr_chicklade_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_27_fonthill_down_nr_chicklade_wiltshire_wheat_oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_27_fonthill_down_nr_chicklade_wiltshire_wheat_l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-679',
+    parentId: 'crop-circle-formations',
+    name: "Allington Formation",
+    description: "A crop circle formation appearing at Allington in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-679',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_28_allington_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_28_allington_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_28_allington_wiltshire_wheat_l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-680',
+    parentId: 'crop-circle-formations',
+    name: "Charlbury HIll Formation",
+    description: "A crop circle formation appearing at Charlbury HIll in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-680',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_29_charlbury_hill_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_29_charlbury_hill_wiltshire_wheat_spr.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-681',
+    parentId: 'crop-circle-formations',
+    name: "Charlbury Hill 2 Formation",
+    description: "A crop circle formation appearing at Charlbury Hill 2 in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-681',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_29_charlbury_hill_wiltshire_wheat_ring.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-682',
+    parentId: 'crop-circle-formations',
+    name: "Barbury Castle Formation",
+    description: "A crop circle formation appearing at Barbury Castle in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-682',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_02_barbury_castle_wiltshire_barley_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_02_barbury_castle_wiltshire_barley_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_02_barbury_castle_wiltshire_barley_l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-683',
+    parentId: 'crop-circle-formations',
+    name: "Honey Street Alton Barnes Formation",
+    description: "A crop circle formation appearing at Honey Street Alton Barnes in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-683',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_04_honey_street_wiltshire_wheat_l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_04_honey_street_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_04_honey_street_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_04_honey_street_wiltshire_wheat_l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-684',
+    parentId: 'crop-circle-formations',
+    name: "Honey Street 2 Alton Barnes Formation",
+    description: "A crop circle formation appearing at Honey Street 2 Alton Barnes in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-684',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_04_02_honey_street2_wiltshire_4th_july_2011_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_04_02_honey_street2_wiltshire_4th_july_2011_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_04_02_honey_street2_wiltshire_4th_july_2011_wheat_l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-685',
+    parentId: 'crop-circle-formations',
+    name: "Honey Street Alton Barnes Formation",
+    description: "A crop circle formation appearing at Honey Street Alton Barnes in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-685',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_05_honey_street_wiltshire_wheat_oh_2nd_stage_st1.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_05_honey_street_wiltshire_wheat_oh_2nd_stage_st2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_05_honey_street_wiltshire_wheat_oh_2nd_stage_st3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-686',
+    parentId: 'crop-circle-formations',
+    name: "Milk Hill Formation",
+    description: "A crop circle formation appearing at Milk Hill in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-686',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_08_milk_hill_wiltshire_wheat_cl_2nd_stage_st2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_08_milk_hill_wiltshire_wheat_cl_2nd_stage_st1.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_08_milk_hill_wiltshire_wheat_l_2nd_stage_st3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_08_milk_hill_wiltshire_wheat_l_2nd_stage_st4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_08_milk_hill_wiltshire_wheat_l_2nd_stage_p.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_08_milk_hill_wiltshire_wheat_l_2nd_stage_p2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_08_milk_hill_wiltshire_wheat_l_2nd_stage_p3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_08_milk_hill_wiltshire_wheat_l_2nd_stage_p6.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_08_milk_hill_wiltshire_wheat_l_2nd_stage_p5.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_08_milk_hill_wiltshire_wheat_l_2nd_stage_p4.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-687',
+    parentId: 'crop-circle-formations',
+    name: "Alton Barnes White Horse Formation",
+    description: "A crop circle formation appearing at Alton Barnes White Horse in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-687',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_09_alton_barnes_white_horse_wiltshire_abwh.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-688',
+    parentId: 'crop-circle-formations',
+    name: "Stonehenge Formation",
+    description: "A crop circle formation appearing at Stonehenge in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-688',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_13_stonehenge_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_13_stonehenge_wiltshire_wheat_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_13_stonehenge_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_13_stonehenge_wiltshire_wheat_l3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-689',
+    parentId: 'crop-circle-formations',
+    name: "Stonehenge Formation",
+    description: "A crop circle formation appearing at Stonehenge in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-689',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_06_22_stonehenge_wiltshire_close_to_winterbourne_stoke_crop_circles_mo.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-690',
+    parentId: 'crop-circle-formations',
+    name: "Windmill Hill Avebury Formation",
+    description: "A crop circle formation appearing at Windmill Hill Avebury in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-690',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_13_windmill_hill_avebury_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_13_windmill_hill_avebury_wiltshire_wheat_oh3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_13_windmill_hill_avebury_wiltshire_wheat_oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_13_windmill_hill_avebury_wiltshire_wheat_oh4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_13_windmill_hill_avebury_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_13_windmill_hill_avebury_wiltshire_wheat_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_13_windmill_hill_avebury_wiltshire_wheat_cl.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_13_windmill_hill_avebury_wiltshire_wheat_p.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_13_windmill_hill_avebury_wiltshire_wheat_p2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-691',
+    parentId: 'crop-circle-formations',
+    name: "Chaddenwick Hill near Mere Formation",
+    description: "A crop circle formation appearing at Chaddenwick Hill near Mere in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-691',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_13_chaddenwick_hill_nr_mere_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_13_chaddenwick_hill_nr_mere_wiltshire_wheat_oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_13_chaddenwick_hill_nr_mere_wiltshire_wheat_l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_13_chaddenwick_hill_nr_mere_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_13_chaddenwick_hill_nr_mere_wiltshire_wheat_l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-692',
+    parentId: 'crop-circle-formations',
+    name: "Overton Down Avebury Formation",
+    description: "A crop circle formation appearing at Overton Down Avebury in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-692',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_18_overton_down_avebury_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_18_overton_down_avebury_wiltshire_wheat_l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-693',
+    parentId: 'crop-circle-formations',
+    name: "Cherhill Down Formation",
+    description: "A crop circle formation appearing at Cherhill Down in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-693',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_20_cherhill_down_wiltshire_wheat_oh.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-694',
+    parentId: 'crop-circle-formations',
+    name: "Temple Balsall Formation",
+    description: "A crop circle formation appearing at Temple Balsall in Warwickshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-694',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_03_temple_balsall_warwickshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_03_temple_balsall_warwickshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_03_temple_balsall_warwickshire_03_2011_wheat_l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_03_temple_balsall_warwickshire_03_2011_wheat_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_03_temple_balsall_warwickshire_03_2011_wheat_l4.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-695',
+    parentId: 'crop-circle-formations',
+    name: "East Kennett Formation",
+    description: "A crop circle formation appearing at East Kennett in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-695',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_22_east_kennett_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_22_east_kennett_wiltshire_wheat_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_22_east_kennett_wiltshire_wheat_l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_22_east_kennett_wiltshire_wheat_l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-696',
+    parentId: 'crop-circle-formations',
+    name: "Roundway Hill Formation",
+    description: "A crop circle formation appearing at Roundway Hill in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-696',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_23_roundway_hill_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_23_roundway_hill_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_23_roundway_hill_wiltshire_wheat_l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-697',
+    parentId: 'crop-circle-formations',
+    name: "West Kennett Long Barrow Formation",
+    description: "A crop circle formation appearing at West Kennett Long Barrow in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-697',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_25_west_kennett_long_barrow_wiltshire_barley_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_25_west_kennett_long_barrow_wiltshire_barley_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_25_west_kennett_long_barrow_wiltshire_barley_p2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_25_west_kennett_long_barrow_wiltshire_barley_p.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-698',
+    parentId: 'crop-circle-formations',
+    name: "Etchilhampton Hill Formation",
+    description: "A crop circle formation appearing at Etchilhampton Hill in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-698',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_25_etchilhampton_hill_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_25_etchilhampton_hill_wiltshire_wheat_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_25_etchilhampton_hill_wiltshire_wheat_l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_25_etchilhampton_hill_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_25_etchilhampton_hill_wiltshire_wheat_fe.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-699',
+    parentId: 'crop-circle-formations',
+    name: "Windmill Hill Formation",
+    description: "A crop circle formation appearing at Windmill Hill in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-699',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_26_windmill_hill_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_26_windmill_hill_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_26_windmill_hill_wiltshire_wheat_p3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_26_windmill_hill_wiltshire_wheat_p4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_26_windmill_hill_wiltshire_wheat_p.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_26_windmill_hill_wiltshire_wheat_p2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_26_windmill_hill_wiltshire_wheat_grd.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_26_windmill_hill_wiltshire_wheat_grd2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_26_windmill_hill_wiltshire_wheat_grd3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_26_windmill_hill_wiltshire_wheat_grd4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_26_windmill_hill_wiltshire_wheat_grd5.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-700',
+    parentId: 'crop-circle-formations',
+    name: "Cherhill White Horse Formation",
+    description: "A crop circle formation appearing at Cherhill White Horse in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-700',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_27_cherhill_white_horse_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_27_cherhill_white_horse_wiltshire_wheat_l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-701',
+    parentId: 'crop-circle-formations',
+    name: "West Woodhay Down Inkpen Formation",
+    description: "A crop circle formation appearing at West Woodhay Down Inkpen in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-701',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_29_west_woodhay_down_inkpen_wiltshire_wheat_l_cut.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_29_west_woodhay_down_inkpen_wiltshire_wheat_oh_cut.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-702',
+    parentId: 'crop-circle-formations',
+    name: "Silbury Hill Formation",
+    description: "A crop circle formation appearing at Silbury Hill in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-702',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_08_02_silbury_hill_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_08_02_silbury_hill_wiltshire_wheat_l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-703',
+    parentId: 'crop-circle-formations',
+    name: "Waylands Smithy Formation",
+    description: "A crop circle formation appearing at Waylands Smithy in Oxfordshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-703',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_08_04_waylands_smithy_oxfordshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_08_04_waylands_smithy_oxfordshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_08_04_waylands_smithy_oxfordshire_wheat_low.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_08_04_waylands_smithy_oxfordshire_wheat_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_08_04_waylands_smithy_oxfordshire_wheat_l3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-704',
+    parentId: 'crop-circle-formations',
+    name: "Uffington White Horse Formation",
+    description: "A crop circle formation appearing at Uffington White Horse in Oxfordshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-704',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_08_05_uffington_white_horse_oxfordshire_whl4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_08_05_uffington_white_horse_oxfordshire_whl3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_08_05_uffington_white_horse_oxfordshire_whl.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_08_05_uffington_white_horse_oxfordshire_whl2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-705',
+    parentId: 'crop-circle-formations',
+    name: "Bishops Cannings Formation",
+    description: "A crop circle formation appearing at Bishops Cannings in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-705',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_08_04_bishops_cannings_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_08_04_bishops_cannings_wiltshire_wheat_l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-706',
+    parentId: 'crop-circle-formations',
+    name: "Temple Farm Rockley Formation",
+    description: "A crop circle formation appearing at Temple Farm Rockley in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-706',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_08_07_temple_farm_rockley_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_08_07_temple_farm_rockley_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_08_07_temple_farm_rockley_wiltshire_wheat_low.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-707',
+    parentId: 'crop-circle-formations',
+    name: "Avebury Stone Circle Formation",
+    description: "A crop circle formation appearing at Avebury Stone Circle in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-707',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_07_28_avebury_stone_circle_wiltshire_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_08_16_avebury_stone_circle_wiltshire_l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-708',
+    parentId: 'crop-circle-formations',
+    name: "Furze Knoll near Calne Formation",
+    description: "A crop circle formation appearing at Furze Knoll near Calne in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-708',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_08_06_furze_knoll_nr_calne_wiltshire_6_2011_wheat_l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_08_06_furze_knoll_nr_calne_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_08_06_furze_knoll_nr_calne_wiltshire_wheat_oh.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-709',
+    parentId: 'crop-circle-formations',
+    name: "Silbury Hill Formation",
+    description: "A crop circle formation appearing at Silbury Hill in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-709',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_08_05_silbury_hill_wiltshire_l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-710',
+    parentId: 'crop-circle-formations',
+    name: "Giants Grave near Oare Formation",
+    description: "A crop circle formation appearing at Giants Grave near Oare in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-710',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_08_10_giants_grave_near_oare_wiltshire_wheat_oh.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-711',
+    parentId: 'crop-circle-formations',
+    name: "Cooks Plantation near Beckhampton Formation",
+    description: "A crop circle formation appearing at Cooks Plantation near Beckhampton in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-711',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_08_13_cooks_plantation_near_beckhampton_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_08_13_cooks_plantation_near_beckhampton_wiltshire_wheat_oh3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_08_13_cooks_plantation_near_beckhampton_wiltshire_wheat_oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_08_13_cooks_plantation_near_beckhampton_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_08_13_cooks_plantation_near_beckhampton_wiltshire_wheat_l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-712',
+    parentId: 'crop-circle-formations',
+    name: "Knoll Down near Beckhampton Formation",
+    description: "A crop circle formation appearing at Knoll Down near Beckhampton in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-712',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_08_13_knoll_down_near_beckhampton_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_08_13_knoll_down_near_beckhampton_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_08_13_knoll_down_near_beckhampton_wiltshire_wheat_l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-713',
+    parentId: 'crop-circle-formations',
+    name: "Jubilee Plantation near Cherhill Formation",
+    description: "A crop circle formation appearing at Jubilee Plantation near Cherhill in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-713',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_08_15_jubilee_plantation_near_cherhill_wiltshire_wheat_oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_08_15_jubilee_plantation_near_cherhill_wiltshire_wheat_oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_08_15_jubilee_plantation_near_cherhill_wiltshire_wheat_oh3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_08_15_jubilee_plantation_near_cherhill_wiltshire_wheat_l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_08_15_jubilee_plantation_near_cherhill_wiltshire_wheat_l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-714',
+    parentId: 'crop-circle-formations',
+    name: "Olivers Castle In The Clouds Formation",
+    description: "A crop circle formation appearing at Olivers Castle In The Clouds in Wiltshire, England, during the 2011 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-714',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2011_08_05_olivers_castle_in_the_cloud_wessex_l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-715',
+    parentId: 'crop-circle-formations',
+    name: "Old Sarum near Salisbury Formation",
+    description: "A crop circle formation appearing at Old Sarum near Salisbury in Wiltshire, England, during the 2010 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-715',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_05_05_old-sarum-nr-salisbury-wiltshire-oilseed-rape-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_05_05_old-sarum-nr-salisbury-wiltshire-5-2010-oilseedrape-oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_05_05_old-sarum-nr-salisbury-wiltshire-5-2010-oilseed-rape-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_05_05_old-sarum-nr-salisbury-wiltshire-5-2010-oilseed-rape-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_05_05_old-sarum-nr-salisbury-wiltshire-5-2010-oilseed-rape-l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_05_05_old-sarum-nr-salisbury-wiltshire-oilseed-rape-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-716',
+    parentId: 'crop-circle-formations',
+    name: "Stonehenge Formation",
+    description: "A crop circle formation appearing at Stonehenge in Wiltshire, England, during the 2010 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-716',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_05_09_stonehenge-wiltshire-9-2010-oilseed-rape-l6.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_05_09_stonehenge-wiltshire-9-2010-oilseed-rape-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_05_09_stonehenge-wiltshire-oilseed-rape-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_05_09_stonehenge-wiltshire-9-2010-oilseed-rape-l5.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_05_09_stonehenge-wiltshire-9-2010-oilseed-rape-oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_05_09_stonehenge-wiltshire-oilseed-rape-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_05_09_stonehenge-wiltshire-9-2010-oilseed-rape-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_05_09_stonehenge-wiltshire-9-2010-oilseed-rape-l4.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-717',
+    parentId: 'crop-circle-formations',
+    name: "Yarnbury Castle Hillfort Formation",
+    description: "A crop circle formation appearing at Yarnbury Castle Hillfort in Wiltshire, England, during the 2010 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-717',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_05_16_yarnbury-castle-hillfort-wiltshire-oilseed-rape-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_05_16_yarnbury-castle-hillfort-wiltshire-16-2010-oilseed-rape-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_05_16_yarnbury-castle-hillfort-wiltshire-oilseed-rape-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_05_16_yarnbury-castle-hillfort-wiltshire-16-2010-oilseed-rape-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_05_16_yarnbury-castle-hillfort-wiltshire-oilseed-rape-sring.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_05_16_yarnbury-castle-hillfort-wiltshire-16-2010-oilseed-rape-sring2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_01_01_yarnbury-castle-hillfort-wiltshire-hf.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_01_02_yarnbury-castle-hillfort-wiltshire-hf2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-718',
+    parentId: 'crop-circle-formations',
+    name: "Wilton Windmill Formation",
+    description: "A crop circle formation appearing at Wilton Windmill in Wiltshire, England, during the 2010 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-718',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_05_22_wilton-windmill-wiltshire-oilseed-rape-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_05_22_wilton-windmill-wiltshire-oilseed-rape-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_05_22_wilton-windmill-wiltshire-22-2010-oilseed-rape-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_05_22_wilton-windmill-wiltshire-22-2010-oilseed-rape-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_05_22_wilton-windmill-wiltshire-22-2010-oilseed-rape-l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_05_22_wilton-windmill-wiltshire-22-2010-oilseed-rape-l5.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-719',
+    parentId: 'crop-circle-formations',
+    name: "West Woods Lockeridge Formation",
+    description: "A crop circle formation appearing at West Woods Lockeridge in Wiltshire, England, during the 2010 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-719',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_05_31_west-woods-lockeridge-wiltshire-oilseed-rape-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_05_31_west-woods-lockeridge-wiltshire-31-2010-oilseed-rape-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_05_31_west-woods-lockeridge-wiltshire-oilseed-rape-oh.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-720',
+    parentId: 'crop-circle-formations',
+    name: "Silbury Hill Formation",
+    description: "A crop circle formation appearing at Silbury Hill in Wiltshire, England, during the 2010 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-720',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_05_31_silbury-hill-wiltshire-barley-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_05_31_silbury-hill-wiltshire-31-2010-barley-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_05_31_silbury-hill-wiltshire-barley-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_05_31_silbury-hill-wiltshire-31-2010-barley-l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_05_31_silbury-hill-wiltshire-31-2010-barley-l3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-721',
+    parentId: 'crop-circle-formations',
+    name: "Liddington Castle Formation",
+    description: "A crop circle formation appearing at Liddington Castle in Wiltshire, England, during the 2010 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-721',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_02_liddington-castle-wiltshire-barley-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_02_liddington-castle-wiltshire-2-2010-barley-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_02_liddington-castle-wiltshire-2-2010-barley-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_02_liddington-castle-wiltshire-barley-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_02_liddington-castle-wiltshire-barley-loh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_02_liddington-castle-wiltshire-2-2010-barley-l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_02_liddington-castle-wiltshire-2-2010-barley-l5.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_02_liddington-castle-wiltshire-2-2010-barley-low1.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_02_liddington-castle-wiltshire-2-2010-barley-low3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_02_liddington-castle-wiltshire-2-2010-barley-low2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_02_liddington-castle-wiltshire-2-2010-barley-low4.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-722',
+    parentId: 'crop-circle-formations',
+    name: "Codford Circle Formation",
+    description: "A crop circle formation appearing at Codford Circle in Wiltshire, England, during the 2010 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-722',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_03_codford-circle-wiltshire-barlet-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_03_codford-circle-wiltshire-3-2010-barlet-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_03_codford-circle-wiltshire-3-2010-barlet-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_03_codford-circle-wiltshire-barlet-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_03_codford-circle-wiltshire-3-2010-barlet-l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_03_codford-circle-wiltshire.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-723',
+    parentId: 'crop-circle-formations',
+    name: "Stoney Littleton Longbarrow Formation",
+    description: "A crop circle formation appearing at Stoney Littleton Longbarrow in Somerset, England, during the 2010 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-723',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_07_stoney-littleton-longbarrow-somerset-broad-beans-oh.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-724',
+    parentId: 'crop-circle-formations',
+    name: "Stoney Littleton Longbarrow Formation",
+    description: "A crop circle formation appearing at Stoney Littleton Longbarrow in Somerset, England, during the 2010 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-724',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_07_stoney-littleton-longbarrow-somerset-7-2010-broad-beans-oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_07_stoney-littleton-longbarrow-somerset-broad-beans-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_07_stoney-littleton-longbarrow-somerset-7-2010-broad-beans-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_07_stoney-littleton-longbarrow-somerset-7-2010-broad-beans-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_07_stoney-littleton-longbarrow-somerset-7-2010-broad-beans-l4.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-725',
+    parentId: 'crop-circle-formations',
+    name: "Walbury Hill Fort Combe Formation",
+    description: "A crop circle formation appearing at Walbury Hill Fort Combe in Berkshire, England, during the 2010 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-725',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_12_walbury-hill-fort-combe-berkshire-barley-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_12_walbury-hill-fort-combe-berkshire-12-2010-barley-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_12_walbury-hill-fort-combe-berkshire-barley-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_12_walbury-hill-fort-combe-berkshire-12-2010-barley-l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_12_walbury-hill-fort-combe-berkshire-12-2010-barley-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_12_walbury-hill-fort-combe-berkshire-12-2010-barley-l5.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_12_walbury-hill-fort-combe-berkshire-12-2010-barley-l6.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-726',
+    parentId: 'crop-circle-formations',
+    name: "Chirton Bottom Wedhampton Formation",
+    description: "A crop circle formation appearing at Chirton Bottom Wedhampton in Wiltshire, England, during the 2010 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-726',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_16_chirton-bottom-wedhampton-wiltshire-barley-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_16_chirton-bottom-wedhampton-wiltshire-barley-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_16_chirton-bottom-wedhampton-wiltshire-16-2010-barley-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_16_chirton-bottom-wedhampton-wiltshire-16-2010-barley-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_16_chirton-bottom-wedhampton-wiltshire-16-2010-barley-l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_16_chirton-bottom-wedhampton-wiltshire-16-2010-barley-oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_16_chirton-bottom-wedhampton-wiltshire-16-2010-barley-l5.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-727',
+    parentId: 'crop-circle-formations',
+    name: "Oare Formation",
+    description: "A crop circle formation appearing at Oare in Wiltshire, England, during the 2010 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-727',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_21_oare-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_21_oare-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_21_oare-wiltshire-21-2010-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_21_oare-wiltshire-21-2010-wheat-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_21_oare-wiltshire-21-2010-wheat-l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_21_oare-wiltshire-21-2010-wheat-l5.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_21_oare-wiltshire-21-2010-wheat-l6.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-728',
+    parentId: 'crop-circle-formations',
+    name: "Forest Hill Savernake Forest Formation",
+    description: "A crop circle formation appearing at Forest Hill Savernake Forest in Wiltshire, England, during the 2010 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-728',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_23_forest-hill-savernake-forest-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_23_forest-hill-savernake-forest-wiltshire-23-2010-wheat-oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_23_forest-hill-savernake-forest-wiltshire-23-2010-wheat-oh3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_23_forest-hill-savernake-forest-wiltshire-23-2010-wheat-oh4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_23_forest-hill-savernake-forest-wiltshire-23-2010-wheat-oh5.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_23_forest-hill-savernake-forest-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_23_forest-hill-savernake-forest-wiltshire-23-2010-wheat-l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_23_forest-hill-savernake-forest-wiltshire-23-2010-wheat-l5.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_23_forest-hill-savernake-forest-wiltshire-23-2010-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_23_forest-hill-savernake-forest-wiltshire-23-2010-wheat-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_23_forest-hill-savernake-forest-wiltshire-wheat-low.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_23_forest-hill-savernake-forest-wiltshire-23-2010-wheat-low2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_23_forest-hill-savernake-forest-wiltshire-23-2010-wheat-low4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_23_forest-hill-savernake-forest-wiltshire-23-2010-wheat-low3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-729',
+    parentId: 'crop-circle-formations',
+    name: "White Sheet Hill near Mere Formation",
+    description: "A crop circle formation appearing at White Sheet Hill near Mere in Wiltshire, England, during the 2010 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-729',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_25_white-sheet-hill-near-mere-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_25_white-sheet-hill-near-mere-wiltshire-25-2010-wheat-oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_25_white-sheet-hill-near-mere-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_25_white-sheet-hill-near-mere-wiltshire-25-2010-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_25_white-sheet-hill-near-mere-wiltshire-25-2010-wheat-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_25_white-sheet-hill-near-mere-wiltshire-25-2010-wheat-l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_25_white-sheet-hill-near-mere-wiltshire-25-2010-wheat-l5.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_25_white-sheet-hill-near-mere-wiltshire-25-2010-wheat-l6.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_06_25_white-sheet-hill-near-mere-wiltshire-25-2010-wheat-l7.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-730',
+    parentId: 'crop-circle-formations',
+    name: "Chisbury Ring near Chisbury Formation",
+    description: "A crop circle formation appearing at Chisbury Ring near Chisbury in Wiltshire, England, during the 2010 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-730',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_03_chisbury-ring-near-chisbury-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_03_chisbury-ring-near-chisbury-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_03_chisbury-ring-near-chisbury-wiltshire-3-2010-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_03_chisbury-ring-near-chisbury-wiltshire-3-2010-wheat-l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_03_chisbury-ring-near-chisbury-wiltshire-3-2010-wheat-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_03_chisbury-ring-near-chisbury-wiltshire-3-2010-wheat-p1.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_03_chisbury-ring-near-chisbury-wiltshire-3-2010-wheat-p2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_03_chisbury-ring-near-chisbury-wiltshire-3-2010-wheat-p3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_03_chisbury-ring-near-chisbury-wiltshire-3-2010-wheat-p4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_03_chisbury-ring-near-chisbury-wiltshire-3-2010-wheat-p5.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_03_chisbury-ring-near-chisbury-wiltshire-wheat-sn.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-731',
+    parentId: 'crop-circle-formations',
+    name: "Chisbury Chapel Formation",
+    description: "A crop circle formation appearing at Chisbury Chapel in Wiltshire, England, during the 2010 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-731',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_03_chisbury-chapel-wiltshire-view-1.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_03_chisbury-chapel-wiltshire-view-2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_03_chisbury-chapel-wiltshire-view-3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_03_chisbury-chapel-wiltshire-view-4.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-732',
+    parentId: 'crop-circle-formations',
+    name: "Danebury Ring near Andover Formation",
+    description: "A crop circle formation appearing at Danebury Ring near Andover in Hampshire, England, during the 2010 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-732',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_06_danebury-ring-near-andover-hampshire-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_06_danebury-ring-near-andover-hampshire-cl.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_06_danebury-ring-near-andover-hampshire-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_06_danebury-ring-near-andover-hampshire-6-2010-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_06_danebury-ring-near-andover-hampshire-drhf.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_06_danebury-ring-near-andover-hampshire-6-2010-p1.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_06_danebury-ring-near-andover-hampshire-6-2010-p2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_06_danebury-ring-near-andover-hampshire-6-2010-p3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_06_danebury-ring-near-andover-hampshire-gpc.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_06_danebury-ring-near-andover-hampshire-gr.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-733',
+    parentId: 'crop-circle-formations',
+    name: "Cley Hill Warminster Formation",
+    description: "A crop circle formation appearing at Cley Hill Warminster in Wiltshire, England, during the 2010 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-733',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_09_cley-hill-warminster-wiltshire-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_09_cley-hill-warminster-wiltshire-cl.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_09_cley-hill-warminster-wiltshire-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_09_cley-hill-warminster-wiltshire-9-2010-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_09_cley-hill-warminster-wiltshire-9-2010-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_01_01_clay-hill-warminster-wiltshire-h.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-734',
+    parentId: 'crop-circle-formations',
+    name: "Guys Cliffe near Old Milverton Formation",
+    description: "A crop circle formation appearing at Guys Cliffe near Old Milverton in Warwickshire, England, during the 2010 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-734',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_10_guys-cliffe-nr-old-milverton-warwickshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_10_guys-cliffe-near-old-milverton-warwickshire-2010-wheat-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-735',
+    parentId: 'crop-circle-formations',
+    name: "Fosbury Camp near Vernham Dean Formation",
+    description: "A crop circle formation appearing at Fosbury Camp near Vernham Dean in Wiltshire, England, during the 2010 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-735',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_17_fosbury-camp-nr-vernham-dean-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_17_fosbury-camp-nr-vernham-dean-wiltshire-wheat-cl.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_17_fosbury-camp-nr-vernham-dean-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_17_fosbury-camp-nr-vernham-dean-wiltshire-17-2010-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_17_fosbury-camp-nr-vernham-dean-wiltshire-17-2010-wheat-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_17_fosbury-camp-nr-vernham-dean-wiltshire-17-2010-wheat-l4.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-736',
+    parentId: 'crop-circle-formations',
+    name: "Alton Barnes White Horse Formation",
+    description: "A crop circle formation appearing at Alton Barnes White Horse in Wiltshire, England, during the 2010 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-736',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_25_alton-barnes-white-horse-wiltshire-25-2010-wheat-oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_25_alton-barnes-white-horse-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_25_alton-barnes-white-horse-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_25_alton-barnes-white-horse-wiltshire-25-2010-wheat-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-737',
+    parentId: 'crop-circle-formations',
+    name: "Roundway Hill near Devizes Formation",
+    description: "A crop circle formation appearing at Roundway Hill near Devizes in Wiltshire, England, during the 2010 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-737',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_01_01_roundway-hill-nr-devizes-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_01_01_roundway-hill-nr-devizes-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_01_02_roundway-hill-nr-devizes-wiltshire-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_01_04_roundway-hill-nr-devizes-wiltshire-wheat-l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_01_03_roundway-hill-nr-devizes-wiltshire-wheat-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_01_05_roundway-hill-nr-devizes-wiltshire-wheat-l5.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-738',
+    parentId: 'crop-circle-formations',
+    name: "East Field Alton Priors Formation",
+    description: "A crop circle formation appearing at East Field Alton Priors in Wiltshire, England, during the 2010 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-738',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_26_east-field-alton-priors-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_26_east-field-alton-priors-wiltshire-wheat-ll.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_26_east-field-alton-priors-wiltshire-wheat-low.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_26_east-field-alton-priors-wiltshire-26-2010-wheat-low2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_26_east-field-alton-priors-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_26_east-field-alton-priors-wiltshire-26-2010-wheat-low3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_26_east-field-alton-priors-wiltshire-26-2010-wheat-low4.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-739',
+    parentId: 'crop-circle-formations',
+    name: "Windmill Hill Formation",
+    description: "A crop circle formation appearing at Windmill Hill in Wiltshire, England, during the 2010 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-739',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_27_windmill-hill-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_27_windmill-hill-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_27_windmill-hill-wiltshire-wheat-cl.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-740',
+    parentId: 'crop-circle-formations',
+    name: "Beggars Knoll near Westbury Formation",
+    description: "A crop circle formation appearing at Beggars Knoll near Westbury in Wiltshire, England, during the 2010 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-740',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_27_beggars-knoll-nr-westbury-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_27_beggars-knoll-nr-westbury-wiltshire-27-2010-wheat-oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_27_beggars-knoll-nr-westbury-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_27_beggars-knoll-nr-westbury-wiltshire-27-2010-wheat-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-741',
+    parentId: 'crop-circle-formations',
+    name: "Stanton St Bernard Formation",
+    description: "A crop circle formation appearing at Stanton St Bernard in Wiltshire, England, during the 2010 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-741',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_28_stanton-st-bernard-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_28_stanton-st-bernard-wiltshire-28-2010-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_28_stanton-st-bernard-wiltshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-742',
+    parentId: 'crop-circle-formations',
+    name: "Wickham Green North M4 Formation",
+    description: "A crop circle formation appearing at Wickham Green North M4 in Berkshire, England, during the 2010 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-742',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_04_wickham-green-north-m4-berkshire-29-2010-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_04_wickham-green-north-m4-berkshire-29-2010-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_04_wickham-green-north-m4-berkshire-29-2010-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_04_wickham-green-north-m4-berkshire-29-2010-wheat-ohbw1.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-743',
+    parentId: 'crop-circle-formations',
+    name: "Wickham Green South M4 Formation",
+    description: "A crop circle formation appearing at Wickham Green South M4 in Berkshire, England, during the 2010 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-743',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_04_wickham-green-south-m4-berkshire-29-2010-wheat-oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_04_wickham-green-south-m4-berkshire-29-2010-wheat-lss.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_04_wickham-green-south-m4-berkshire-29-2010-wheat-ls.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_07_04_wickham-green-south-m4-berkshire-29-2010-wheat-ohbw2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-744',
+    parentId: 'crop-circle-formations',
+    name: "Stanton Circle And Ring 2010 And Hummingbird Ghost 2009 Formation",
+    description: "A crop circle formation appearing at Stanton Circle And Ring 2010 And Hummingbird Ghost 2009 in Wiltshire, England, during the 2010 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-744',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_01_01_stanton-circle-and-ring-and-hummingbird-ghost-gloucestershire-shg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-745',
+    parentId: 'crop-circle-formations',
+    name: "East Field Alton Barnes Formation",
+    description: "A crop circle formation appearing at East Field Alton Barnes in Wiltshire, England, during the 2010 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-745',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_08_03_east-field-alton-barnes-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_08_03_east-field-alton-barnes-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_08_03_east-field-alton-barnes-wiltshire-3-2010-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_08_03_east-field-alton-barnes-wiltshire-3-2010-wheat-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_08_03_east-field-alton-barnes-wiltshire-3-2010-wheat-l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_08_03_east-field-alton-barnes-wiltshire-3-2010-wheat-low2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_08_03_east-field-alton-barnes-wiltshire-3-2010-wheat-low3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_08_03_east-field-alton-barnes-wiltshire-wheat-low.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-746',
+    parentId: 'crop-circle-formations',
+    name: "Whitefield Hill Woodsend Formation",
+    description: "A crop circle formation appearing at Whitefield Hill Woodsend in Wiltshire, England, during the 2010 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-746',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_08_03_whitefield-hill-woodsend-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_08_03_whitefield-hill-woodsend-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_08_03_whitefield-hill-woodsend-wiltshire-3-2010-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_08_03_whitefield-hill-woodsend-wiltshire-3-2010-wheat-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_08_03_whitefield-hill-woodsend-wiltshire-3-2010-wheat-oh2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-747',
+    parentId: 'crop-circle-formations',
+    name: "Lurkeley Hill East Kennett Formation",
+    description: "A crop circle formation appearing at Lurkeley Hill East Kennett in Wiltshire, England, during the 2010 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-747',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_08_03_lurkeley-hill-east-kennett-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_08_03_lurkeley-hill-east-kennett-wiltshire-3-2010-wheat-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_08_03_lurkeley-hill-east-kennett-wiltshire-3-2010-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_08_03_lurkeley-hill-east-kennett-wiltshire-3-2010-wheat-l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_08_03_lurkeley-hill-east-kennett-wiltshire-wheat-oh.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-748',
+    parentId: 'crop-circle-formations',
+    name: "Stanton Bridge near Honey Street Formation",
+    description: "A crop circle formation appearing at Stanton Bridge near Honey Street in Wiltshire, England, during the 2010 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-748',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_08_08_stanton-bridge-near-honey-street-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_08_08_stanton-bridge-nr-honey-street-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_08_08_stanton-bridge-near-honey-street-wiltshire-8-2010-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_08_08_stanton-bridge-nr-honey-street-wiltshire-8-2010-wheat-l3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-749',
+    parentId: 'crop-circle-formations',
+    name: "Horton near Devizes Formation",
+    description: "A crop circle formation appearing at Horton near Devizes in Wiltshire, England, during the 2010 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-749',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_08_09_horton-nr-devizes-wiltshire-9-2010-wheat-l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_08_09_horton-nr-devizes-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_08_09_horton-nr-devizes-wiltshire-9-2010-wheat-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_08_09_horton-nr-devizes-wiltshire-9-2010-wheat-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-750',
+    parentId: 'crop-circle-formations',
+    name: "Northdowns near Beckhampton Formation",
+    description: "A crop circle formation appearing at Northdowns near Beckhampton in Wiltshire, England, during the 2010 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-750',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_08_13_northdowns-near-beckhampton-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_08_13_northdowns-near-beckhampton-wiltshire-13-2010-wheat-oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_08_13_northdowns-near-beckhampton-wiltshire-13-2010-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_08_13_northdowns-near-beckhampton-wiltshire-13-2010-wheat-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_08_13_northdowns-near-beckhampton-wiltshire-13-2010-wheat-l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_08_13_northdowns-near-beckhampton-wiltshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-751',
+    parentId: 'crop-circle-formations',
+    name: "The Ridgeway near Avebury Avenue Formation",
+    description: "A crop circle formation appearing at The Ridgeway near Avebury Avenue in Wiltshire, England, during the 2010 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-751',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_08_16_the-ridgeway-nr-avebury-avenue-wiltshire-maize-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_08_16_the-ridgeway-nr-avebury-avenue-wiltshire-maize-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_08_16_the-ridgeway-nr-avebury-avenue-wiltshire-16-2010-maize-l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_08_16_the-ridgeway-nr-avebury-avenue-wiltshire-16-2010-maize-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_08_16_the-ridgeway-nr-avebury-avenue-wiltshire-16-2010-maize-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-752',
+    parentId: 'crop-circle-formations',
+    name: "Avebury Stone Circle And Silbury Hill Formation",
+    description: "A crop circle formation appearing at Avebury Stone Circle And Silbury Hill in Wiltshire, England, during the 2010 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-752',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_08_16_avebury-stone-circle-and-silbury-hill-wiltshire.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-753',
+    parentId: 'crop-circle-formations',
+    name: "Rybury Camp The Last Flight Formation",
+    description: "A crop circle formation appearing at Rybury Camp The Last Flight in Wiltshire, England, during the 2010 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-753',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2010_08_16_rybury-camp-the-last-flight-wiltshire.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-754',
+    parentId: 'crop-circle-formations',
+    name: "The Ridgeway Formation",
+    description: "A crop circle formation appearing at The Ridgeway in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-754',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_04_14_the-ridgeway-wiltshire-14-april-2009-oilseed-rape-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_04_14_the-ridgeway-wiltshire-14-april-2009-oilseed-rape-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_04_14_the-ridgeway-wiltshire-14-april-2009-oilseed-rape-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_04_14_the-ridgeway-wiltshire-14-april-2009-oilseed-rape-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_04_14_the-round-barrow-and-formation-wiltshire-rf.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-755',
+    parentId: 'crop-circle-formations',
+    name: "West Kennett Long Barrow Formation",
+    description: "A crop circle formation appearing at West Kennett Long Barrow in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-755',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_04_19_west-kennett-long-barrow-wiltshire-19-april-2009-oilseed-rape-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_04_19_west-kennett-long-barrow-wiltshire-19-april-2009-oilseed-rape-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_04_19_west-kennett-long-barrow-wiltshire-19-april-2009-oilseed-rape-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_04_19_west-kennett-longbarrow-wiltshire-19-april-2009-oilseed-rape-l3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-756',
+    parentId: 'crop-circle-formations',
+    name: "Avebury Rutlands Farm Formation",
+    description: "A crop circle formation appearing at Avebury Rutlands Farm in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-756',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_04_23_avebury-rutlands-farm-wiltshire-23-2009-oilseed-rape-oh-2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_04_23_avebury-rutlands-farm-wiltshire-oilseed-rape-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_04_23_avebury-rutlands-farm-wiltshire-23-2009-oilseed-rape-g2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_04_23_avebury-rutlands-farm-wiltshire-oilseed-rape-g.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_04_23_avebury-rutlands-farm-wiltshire-23-2009-oilseed-rape-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_04_23_avebury-rutlands-farm-wiltshire-oilseed-rape-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_04_23_avebury-rutlands-farm-wiltshire-23-2009-oilseed-rape-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-757',
+    parentId: 'crop-circle-formations',
+    name: "Morgans Hill Formation",
+    description: "A crop circle formation appearing at Morgans Hill in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-757',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_04_24_morgans-hill-wiltshire-oilseed-rape-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_04_24_morgans-hill-wiltshire-24-2009-oilseed-rape-oh-2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_04_24_morgans-hill-wiltshire-24-2009-oilseed-rape-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_04_24_morgans-hill-wiltshire-24-2009-oilseed-rape-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_04_24_morgans-hill-wiltshire-oilseed-rape-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-758',
+    parentId: 'crop-circle-formations',
+    name: "Roundway Hill Formation",
+    description: "A crop circle formation appearing at Roundway Hill in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-758',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_04_29_roundway-hill-wiltshire-oilseed-rape-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_04_29_roundway-hill-wiltshire-29-2009-oilseed-rape-oh-2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_04_29_roundway-hill-wiltshire-oilseed-rape-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_04_29_roundway-hill-wiltshire-oilseed-rape-lb.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_04_29_roundway-hill-wiltshire-29-2009-oilseed-rape-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_04_29_roundway-hill-wiltshire-29-2009-oilseed-rape-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_04_29_roundway-hill-wiltshire-oilseed-rape-lh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_04_29_roundway-hill-wiltshire-29-2009-oilseed-rape-l4.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-759',
+    parentId: 'crop-circle-formations',
+    name: "East Kennett Long Barrow Formation",
+    description: "A crop circle formation appearing at East Kennett Long Barrow in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-759',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_03_east-kennett-long-barrow-wiltshire-oilseed-rape-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_03_east-kennett-long-barrow-wiltshire-3-2009-oilseed-rape-lo-5.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_03_east-kennett-long-barrow-wiltshire-3-2009-oilseed-rape-oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_03_east-kennett-long-barrow-wiltshire-3-2009-oilseedrape-lo3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_03_east-kennett-long-barrow-wiltshire-3-2009-oilseed-rape-lo1.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_03_east-kennett-long-barrow-wiltshire-3-2009-oilseed-rape-lo2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_03_east-kennett-long-barrow-wiltshire-3-2009-oilseed-rape-lo-4.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-760',
+    parentId: 'crop-circle-formations',
+    name: "Clatford Formation",
+    description: "A crop circle formation appearing at Clatford in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-760',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_04_clatford-wiltshire-oilseed-rape-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_04_clatford-wiltshire-oilseed-rape-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_04_clatford-wiltshire-4-2009-oilseed-rape-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_04_clatford-wiltshire-4-2009-oilseed-rape-l5.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_04_clatford-wiltshire-4-2009-oilseed-rape-l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_04_clatford-wiltshire-4-2009-oilseed-rape-l6.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_04_clatford-wiltshire-4-2009-oilseed-rape-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_04_clatford-wiltshire-oilseed-rape-lo.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_04_clatford-wiltshire-4-2009-oilseed-rapel-o2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_04_clatford-wiltshire-4-2009-oilseed-rape-lo3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_04_clatford-wiltshire-4-2009-oilseed-rape-lo4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_04_clatford-wiltshire-4-2009-oilseed-rape-lo5.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_04_clatford-wiltshire-4-2009-oilseed-rape-lo6.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-761',
+    parentId: 'crop-circle-formations',
+    name: "All Cannings Bridge Formation",
+    description: "A crop circle formation appearing at All Cannings Bridge in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-761',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_06_all-cannings-bridge-wiltshire-oilseed-rape-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_06_all-cannings-bridge-wiltshire-oilseed-rape-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_06_all-cannings-bridge-wiltshire-6-2009-oilseed-rape-l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_06_all-cannings-bridge-wiltshire-6-2009-oilseed-rape-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_06_all-cannings-bridge-wiltshire-6-2009-oilseed-rape-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_06_all-cannings-bridge-wiltshire-oilseed-rape-fv.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_06_all-cannings-bridge-wiltshire-6-2009-oilseed-rape-lo2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_06_all-cannings-bridge-wiltshire-oilseed-rape-lo.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_06_all-cannings-bridge-wiltshire-6-2009-oilseed-rape-lo3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-762',
+    parentId: 'crop-circle-formations',
+    name: "Peaks Down Formation",
+    description: "A crop circle formation appearing at Peaks Down in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-762',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_09_peaks-down-wiltshire-oilseed-rape-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_09_peaks-down-wiltshire-9-2009-oilseed-rape-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_09_peaks-down-wiltshire-oilseed-rape-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-763',
+    parentId: 'crop-circle-formations',
+    name: "Roundway Hill Formation",
+    description: "A crop circle formation appearing at Roundway Hill in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-763',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_10_roundway-hill-wiltshire-oilseed-rape-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_10_roundway-hill-wiltshire-10-2009-oilseed-rape-oh-2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_10_roundway-hill-wiltshire-oilseed-rape-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-764',
+    parentId: 'crop-circle-formations',
+    name: "Wroughton Formation",
+    description: "A crop circle formation appearing at Wroughton in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-764',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_24_wroughton-wiltshire-barley-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_24_wroughton-wiltshire-barley-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_24_wroughton-wiltshire-24-2009-barley-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-765',
+    parentId: 'crop-circle-formations',
+    name: "Bishops Cannings Formation",
+    description: "A crop circle formation appearing at Bishops Cannings in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-765',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_24_bishops-canningswiltshire-barley-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_24_bishops-cannings-wiltshire-barley-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-766',
+    parentId: 'crop-circle-formations',
+    name: "Windmill Hill near Avebury Formation",
+    description: "A crop circle formation appearing at Windmill Hill near Avebury in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-766',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_25_windmill-hill-near-avebury-wiltshire-barley-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_25_windmill-hill-near-avebury-wiltshire-25-2009-barley-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_25_windmill-hill-near-avebury-wiltshire-barley-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_25_windmill-hill-near-avebury-wiltshire-25-2009-barley-low-2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_25_windmill-hill-near-avebury-wiltshire-barley-low.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_25_windmill-hill-near-avebury-wiltshire-25-2009-barley-low-3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_25_windmill-hill-near-avebury-wiltshire-25-2009-barley-low-4.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-767',
+    parentId: 'crop-circle-formations',
+    name: "Kingston Coombes near Waylands Smithy Formation",
+    description: "A crop circle formation appearing at Kingston Coombes near Waylands Smithy in Oxfordshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-767',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_29_kingston-coombes-near-waylands-smithy-oxfordshire-barley-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_29_kingston-coombes-near-waylands-smithy-oxfordshire-29-2009-barley-oh-2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_29_kingston-coombes-near-waylands-smithy-oxfordshire-29-2009-barley-oh-3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_29_kingston-coombes-near-waylands-smithy-oxfordshire-29-2009-barley-oh-4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_29_kingston-coombes-near-waylands-smithy-oxfordshire-barley-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_29_kingston-coombes-near-waylands-smithy-oxfordshire-29-2009-barley-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_29_kingston-coombes-near-waylands-smithy-oxfordshire-29-2009-barley-l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_05_29_kingston-coombes-near-waylands-smithy-oxfordshire-29-2009-barley-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-768',
+    parentId: 'crop-circle-formations',
+    name: "Knoll Down Formation",
+    description: "A crop circle formation appearing at Knoll Down in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-768',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_01_knoll-down-wiltshire-barley-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_01_knoll-down-wiltshire-barley-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_01_knoll-down-wiltshire-1-2009-barley-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_01_knoll-down-wiltshire-1-2009-barley-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-769',
+    parentId: 'crop-circle-formations',
+    name: "Milk Hill Formation",
+    description: "A crop circle formation appearing at Milk Hill in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-769',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_02_milk-hill-wiltshire-barley-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_02_milk-hill-wiltshire-2-2009-barley-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_02_milk-hill-wiltshire-barley-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_02_milk-hill-wiltshire-2-2009-barley-l3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-770',
+    parentId: 'crop-circle-formations',
+    name: "Little London near Yatesbury Formation",
+    description: "A crop circle formation appearing at Little London near Yatesbury in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-770',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_03_little-london-nr-yatesbury-wiltshire-3-2009-barley-oh-2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_03_little-london-nr-yatesbury-wiltshire-barley-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_03_little-london-nr-yatesbury-wiltshire-barley-cl.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_03_little-london-nr-yatesbury-wiltshire-barley-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-771',
+    parentId: 'crop-circle-formations',
+    name: "New Farm Chiseldon Formation",
+    description: "A crop circle formation appearing at New Farm Chiseldon in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-771',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_05_new-farm-chiseldon-wiltshire-barley-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_05_new-farm-chiseldon-wiltshire-barley-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_05_new-farm-chiseldon-wiltshire-5-2009-barley-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-772',
+    parentId: 'crop-circle-formations',
+    name: "Bishops Cannings Formation",
+    description: "A crop circle formation appearing at Bishops Cannings in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-772',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_08_bishops-cannings-wiltshire-8-2009-barley-oh-2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_08_bishops-cannings-wiltshire-barley-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_08_bishops-cannings-wiltshire-barley-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_08_bishops-cannings-wiltshire-8-2009-barley-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_08_bishops-cannings-wiltshire-8-2009-barley-l3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-773',
+    parentId: 'crop-circle-formations',
+    name: "Little London near Yatesbury Formation",
+    description: "A crop circle formation appearing at Little London near Yatesbury in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-773',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_12_little-london-near-yatesbury-wiltshire-barley-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_12_little-london-near-yatesbury-wiltshire-barley-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_12_little-london-near-yatesbury-wiltshire-12-2009-barley-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_12_little-london-near-yatesbury-wiltshire-12-2009-barley-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_12_little-london-near-yatesbury-wiltshire-12-2009-barley-l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_12_littlelondon-near-yatesbury-wiltshire-barley-fe.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_12_littlelondon-near-yatesbury-wiltshire-12-2009-barley-fe-2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_12_little-london-near-yatesbury-wiltshire-12-2009-barley-low-2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_12_little-london-near-yatesbury-wiltshire-12-2009-barley-low-3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_12_little-london-near-yatesbury-wiltshire-barley-low.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-774',
+    parentId: 'crop-circle-formations',
+    name: "Waylands Smithy Formation",
+    description: "A crop circle formation appearing at Waylands Smithy in Oxfordshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-774',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_12_waylandssmithy-oxfordshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_12_waylandssmithy-oxfordshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-775',
+    parentId: 'crop-circle-formations',
+    name: "Milk Hill Formation",
+    description: "A crop circle formation appearing at Milk Hill in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-775',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_13_milk-hill-wiltshire-barley-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_13_milk-hill-wiltshire-barley-low.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_13_milk-hill-wiltshire-barley-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-776',
+    parentId: 'crop-circle-formations',
+    name: "South Field Alton Priors Formation",
+    description: "A crop circle formation appearing at South Field Alton Priors in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-776',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_13_south-field-alton-priors-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_13_south-field-alton-priors-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_13_south-field-alton-priors-wiltshire-13-2009-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_13_south-field-alton-priors-wiltshire-wheat-low.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_13_south-field-alton-priors-wiltshire-13-2009-wheat-low-2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_13_south-field-alton-priors-wiltshire-13-2009-wheat-low-3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_13_south-field-alton-priors-wiltshire-13-2009-wheat-low-4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_13_south-field-alton-priors-wiltshire-13-2009-wheat-low-5.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-777',
+    parentId: 'crop-circle-formations',
+    name: "Barbury Castle Formation",
+    description: "A crop circle formation appearing at Barbury Castle in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-777',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_14_barbury-castle-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_14_barbury-castle-wiltshire-wheat-cl.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_14_barbury-castle-wiltshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-778',
+    parentId: 'crop-circle-formations',
+    name: "Alton Barnes White Horse Formation",
+    description: "A crop circle formation appearing at Alton Barnes White Horse in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-778',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_21_alton-barnes-white-horse-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_21_alton-barnes-white-horse-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_21_alton-barnes-white-horse-wiltshire-21-2009-wheat-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-779',
+    parentId: 'crop-circle-formations',
+    name: "East Kennett Formation",
+    description: "A crop circle formation appearing at East Kennett in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-779',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_21_east-kennett-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_21_east-kennett-wiltshire-21-2009-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_21_east-kennett-wiltshire-21-2009-wheat-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_21_east-kennett-wiltshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-780',
+    parentId: 'crop-circle-formations',
+    name: "Rough Hill near Winterbourne Bassett Formation",
+    description: "A crop circle formation appearing at Rough Hill near Winterbourne Bassett in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-780',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_24_rough-hill-near-winterbourne-bassett-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_24_rough-hill-near-winterbourne-bassett-wiltshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-781',
+    parentId: 'crop-circle-formations',
+    name: "Martinsell Hill Formation",
+    description: "A crop circle formation appearing at Martinsell Hill in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-781',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_25_martinsell-hill-wiltshire-25-2009-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_25_martinsell-hill-wiltshire-25-2009-wheat-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_25_martinsell-hill-wiltshire-25-2009-wheat-oh-2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_25_martinsell-hill-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_25_martinsell-hill-wiltshire-wheat-cl.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_25_martinsell-hill-wiltshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-782',
+    parentId: 'crop-circle-formations',
+    name: "South Field Alton Priors Formation",
+    description: "A crop circle formation appearing at South Field Alton Priors in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-782',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_27_south-field-alton-priors-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_27_south-field-alton-priors-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_27_south-field-alton-priors-wiltshire-27-2009-wheat-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_27_south-field-alton-priors-wiltshire-27-2009-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_27_south-field-alton-priors-wiltshire-27-2009-wheat-l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_27_south-field-alton-priors-wiltshire-wheat-cl-alien.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-783',
+    parentId: 'crop-circle-formations',
+    name: "Knoll Down Beckhampton Formation",
+    description: "A crop circle formation appearing at Knoll Down Beckhampton in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-783',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_28_knoll-down-beckhampton-wiltshire-wheat-oh.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-784',
+    parentId: 'crop-circle-formations',
+    name: "Pewsey White Horse Formation",
+    description: "A crop circle formation appearing at Pewsey White Horse in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-784',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_28_pewsey-white-horse-wiltshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-785',
+    parentId: 'crop-circle-formations',
+    name: "Alton Barnes White Horse Formation",
+    description: "A crop circle formation appearing at Alton Barnes White Horse in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-785',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_29_alton-barnes-white-horse-wiltshire-29-2009-wheat-oh-2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_29_alton-barnes-white-horse-wiltshire-29-2009-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_29_alton-barnes-white-horse-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_06_29_alton-barnes-white-horse-wiltshire-wheat-oh.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-786',
+    parentId: 'crop-circle-formations',
+    name: "Waden Hill Avebury Formation",
+    description: "A crop circle formation appearing at Waden Hill Avebury in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-786',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_01_waden-hill-avebury-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_01_waden-hill-avebury-wiltshire-1-2009-wheat-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_01_waden-hill-avebury-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_01_waden-hill-avebury-wiltshire-1-2009-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_01_waden-hill-avebury-wiltshire-1-2009-wheat-l4.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-787',
+    parentId: 'crop-circle-formations',
+    name: "Wansdyke Path Stanton St Bernard Formation",
+    description: "A crop circle formation appearing at Wansdyke Path Stanton St Bernard in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-787',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_02_wansdyke-path-stanton-st-bernard-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_02_wansdyke-path-stanton-st-bernard-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_02_wansdyke-path-stanton-st-bernard-wiltshire-2-2009-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_02_wansdyke-path-stanton-st-bernard-wiltshire-2-2009-wheat-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_02_wansdyke-path-stanton-st-bernard-wiltshire-2-2009-wheat-l4.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-788',
+    parentId: 'crop-circle-formations',
+    name: "West Down near Formation",
+    description: "A crop circle formation appearing at West Down near in Beckhampton, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-788',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_04_west-down-near-beckhampton-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_04_west-down-near-beckhampton-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-789',
+    parentId: 'crop-circle-formations',
+    name: "Silbury Hill Formation",
+    description: "A crop circle formation appearing at Silbury Hill in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-789',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_05_silbury-hill-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_05_silbury-hill-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_05_silbury-hill-wiltshire-5-2009-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_05_silbury-hill-wiltshire-5-2009-wheat-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_05_silbury-hill-wiltshire-5-2009-wheat-l4.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-790',
+    parentId: 'crop-circle-formations',
+    name: "Honey Street Alton Barnes Formation",
+    description: "A crop circle formation appearing at Honey Street Alton Barnes in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-790',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_06_honey-street-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_06_honey-street-wiltshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-791',
+    parentId: 'crop-circle-formations',
+    name: "Cannings Cross Farm Allington Formation",
+    description: "A crop circle formation appearing at Cannings Cross Farm Allington in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-791',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_10_cannings-cross-farm-allington-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_10_cannings-cross-farm-allington-wiltshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-792',
+    parentId: 'crop-circle-formations',
+    name: "East Field Alton Barnes Formation",
+    description: "A crop circle formation appearing at East Field Alton Barnes in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-792',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_14_east-field-alton-barnes-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_14_east-field-alton-barnes-wiltshire-14-2009-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_14_east-field-alton-barneswiltshire-14-2009-wheat-cl2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_14_east-field-alton-barnes-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_14_east-field-alton-barnes-wiltshire-wheat-cl.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-793',
+    parentId: 'crop-circle-formations',
+    name: "Grey Wethers Formation",
+    description: "A crop circle formation appearing at Grey Wethers in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-793',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_14_grey-wethers-wiltshire-wheat-oh.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-794',
+    parentId: 'crop-circle-formations',
+    name: "Martinsell Hill Formation",
+    description: "A crop circle formation appearing at Martinsell Hill in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-794',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_19_martinsell-hill-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_19_martinsell-hill-wiltshire-19-2009-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_19_martinsell-hill-wiltshire-wheat-cl.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_19_martinsell-hill-wiltshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-795',
+    parentId: 'crop-circle-formations',
+    name: "Liddington Castle Formation",
+    description: "A crop circle formation appearing at Liddington Castle in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-795',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_19_liddington-castle-wiltshire-19-2009-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_19_liddington-castle-wiltshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-796',
+    parentId: 'crop-circle-formations',
+    name: "Woodborough Hill Formation",
+    description: "A crop circle formation appearing at Woodborough Hill in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-796',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_22_woodborough-hill-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_22_woodborough-hill-wiltshire-wheatl.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_22_woodborough-hill-wiltshire-22-2009-wheat-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-797',
+    parentId: 'crop-circle-formations',
+    name: "Smeathes Plantation Formation",
+    description: "A crop circle formation appearing at Smeathes Plantation in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-797',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_24_smeathes-plantation-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_24_smeathes-plantation-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_24_smeathes-plantation-wiltshire-24-2009-wheat-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-798',
+    parentId: 'crop-circle-formations',
+    name: "Ogbourne St Andrew Formation",
+    description: "A crop circle formation appearing at Ogbourne St Andrew in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-798',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_29_ogbourne-st-andrew-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_29_ogbourne-st-andrew-wiltshire-29-2009-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_29_ogbourne-st-andrew-wiltshire-29-2009-wheat-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_29_ogbourne-st-andrew-wiltshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-799',
+    parentId: 'crop-circle-formations',
+    name: "Winterbourne Bassett Formation",
+    description: "A crop circle formation appearing at Winterbourne Bassett in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-799',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_31_winterbourne-bassett-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_31_winterbourne-bassett-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_31_winterbourne-bassett-wiltshire-31-2009-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_07_31_winterbourne-bassett-wiltshire-31-2009-wheat-l3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-800',
+    parentId: 'crop-circle-formations',
+    name: "Morgans Hill Formation",
+    description: "A crop circle formation appearing at Morgans Hill in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-800',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_08_02_morgans-hill-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_08_02_morgans-hill-wiltshire-2-2009-wheat-ls12.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_08_02_morgans-hill-wiltshire-2-2009-wheat-ls11.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_08_02_morgans-hill-wiltshire-2-2009-wheat-ls9.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_08_02_morgans-hill-wiltshire-wheat-ls.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_08_02_morgans-hill-wiltshire-2-2009-wheat-ls10.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_08_02_morgans-hill-wiltshire-2-2009-wheat-ls2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_08_02_morgans-hill-wiltshire-2-2009-wheat-ls8.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_08_02_morgans-hill-wiltshire-2-2009-wheat-ls7.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_08_02_morgans-hill-wiltshire-2-2009-wheat-ls6.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_08_02_morgans-hill-wiltshire-2-2009-wheat-ls3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_08_02_morgans-hill-wiltshire-2-2009-wheat-ls4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_08_02_morgans-hill-wiltshire-2-2009-wheat-ls5.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-801',
+    parentId: 'crop-circle-formations',
+    name: "Windmill Hill Formation",
+    description: "A crop circle formation appearing at Windmill Hill in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-801',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_08_06_windmill-hill-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_08_06_windmill-hill-wiltshire-6-2009-wheat-oh-2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_08_06_windmill-hill-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_08_06_windmill-hill-wiltshire-6-2009-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_08_06_windmill-hill-wiltshire-6-2009-wheat-l3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-802',
+    parentId: 'crop-circle-formations',
+    name: "West Overton Formation",
+    description: "A crop circle formation appearing at West Overton in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-802',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_08_09_west-overton-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_08_09_west-overton-wiltshire-9-2009-wheat-oh-2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_08_09_west-overton-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_08_09_west-overton-wiltshire-9-2009-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_08_09_west-overton-wiltshire-9-2009-wheat-cl2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_08_09_west-overton-wiltshire-9-2009-wheat-cl3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_08_09_west-overton-wiltshire-wheat-cl.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-803',
+    parentId: 'crop-circle-formations',
+    name: "Bishops Sutton Formation",
+    description: "A crop circle formation appearing at Bishops Sutton in Hampshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-803',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_08_09_bishops-sutton-hampshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_08_09_bishops-sutton-hampshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-804',
+    parentId: 'crop-circle-formations',
+    name: "Woodborough Hill Formation",
+    description: "A crop circle formation appearing at Woodborough Hill in Wiltshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-804',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_08_10_woodborough-hill-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_08_10_woodborough-hill-wiltshire-10-2009-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_08_10_woodborough-hill-wiltshire-10-2009-wheat-l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_08_10_woodborough-hill-wiltshire-10-2009-wheat-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_08_10_woodborough-hill-wiltshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-805',
+    parentId: 'crop-circle-formations',
+    name: "Waylands Smithy Formation",
+    description: "A crop circle formation appearing at Waylands Smithy in Oxfordshire, England, during the 2009 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-805',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_08_29_waylands-smithy-oxfordshire-maize-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_08_29_waylands-smithy-oxfordshire-29-2009-maize-l5.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_08_29_waylands-smithy-oxfordshire-29-2009-maize-l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_08_29_waylands-smithy-oxfordshire-maize-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_08_29_waylands-smithy-oxfordshire-29-2009-maize-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2009_08_29_waylands-smithy-oxfordshire-29-2009-maize-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-806',
+    parentId: 'crop-circle-formations',
+    name: "Waden Hill Avebury Formation",
+    description: "A crop circle formation appearing at Waden Hill Avebury in Wiltshire, England, during the 2008 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-806',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_04_20_waden-hill-avebury-wiltshire-oilseed-rape-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_04_20_waden-hill-avebury-wiltshire-oilseed-rape-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_04_20_waden-hill-avebury-wiltshire-oilseed-rape-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-807',
+    parentId: 'crop-circle-formations',
+    name: "Milk Hill Formation",
+    description: "A crop circle formation appearing at Milk Hill in Wiltshire, England, during the 2008 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-807',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_05_04_milk-hill-wiltshire-oilseed-rape-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_05_04_milk-hill-wiltshire-oilseed-rape-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_05_04_milk-hill-wiltshire-oilseed-rape-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-808',
+    parentId: 'crop-circle-formations',
+    name: "Avebury Ave Formation",
+    description: "A crop circle formation appearing at Avebury Ave in Wiltshire, England, during the 2008 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-808',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_05_08_avebury-ave-wiltshire-oilseed-rape-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_05_08_avebury-ave-wiltshire-oilseed-rape-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_05_08_avebury-ave-wiltshire-oilseed-rape-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_05_08_avebury-ave-wiltshire-oilseed-rape-l3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-809',
+    parentId: 'crop-circle-formations',
+    name: "Hackpen Hill Formation",
+    description: "A crop circle formation appearing at Hackpen Hill in Wiltshire, England, during the 2008 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-809',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_05_24_-hackpen-hill-wiltshire-barley-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_05_24_hackpen-hill-wiltshire-barley-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_05_24_-hackpen-hill-wiltshire-barley-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_05_24_-hackpen-hill-wiltshire-barley-l3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-810',
+    parentId: 'crop-circle-formations',
+    name: "West Kennett Long Barrow Formation",
+    description: "A crop circle formation appearing at West Kennett Long Barrow in Wiltshire, England, during the 2008 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-810',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_06_09_west-kennett-long-barrow-wiltshire-barley-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_06_09_west-kennett-long-barrow-wiltshire-barley-oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_06_09_west-kennett-long-barrow-wiltshire-barley-cl.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_06_09_west-kennett-long-barrow-wiltshire-barley-cl2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_06_09_west-kennett-long-barrow-wiltshire-barley-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_06_09_west-kennett-long-barrow-wiltshire-barley-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_06_09_west-kennett-long-barrow-wiltshire-barley-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_06_09_west-kennett-long-barrow-wiltshire-barley-l4.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-811',
+    parentId: 'crop-circle-formations',
+    name: "North Down Formation",
+    description: "A crop circle formation appearing at North Down in Wiltshire, England, during the 2008 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-811',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_06_10_north-down-wiltshire-barley.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-812',
+    parentId: 'crop-circle-formations',
+    name: "The Ridgeway Formation",
+    description: "A crop circle formation appearing at The Ridgeway in Wiltshire, England, during the 2008 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-812',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_06_15_the-ridgeway-wiltshire-barley-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_06_15_the-ridgeway-wiltshire-barley-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_06_15_the-ridgeway-wiltshire-barley-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_06_15_the-ridgeway-wiltshire-barley-l3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-813',
+    parentId: 'crop-circle-formations',
+    name: "Winterbourne Bassett Formation",
+    description: "A crop circle formation appearing at Winterbourne Bassett in Wiltshire, England, during the 2008 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-813',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_06_18_winterbourne-bassett-wiltshire-wheat.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-814',
+    parentId: 'crop-circle-formations',
+    name: "Furze Knoll near Morgans Hill Formation",
+    description: "A crop circle formation appearing at Furze Knoll near Morgans Hill in Wiltshire, England, during the 2008 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-814',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_06_20_furze-knoll-nr-morgans-hill-wiltshire-barley-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_06_20_furze-knoll-nr-morgans-hill-wiltshire-barley-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_06_20_furze-knoll-nr-morgans-hill-wiltshire-barley-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_06_20_furze-knoll-nr-morgans-hill-wiltshire-barley-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_06_20_furze-knoll-nr-morgans-hill-wiltshire-barley-l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_06_20_furze-knoll-nr-morgans-hill-wiltshire-barley-l5.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-815',
+    parentId: 'crop-circle-formations',
+    name: "Horton Formation",
+    description: "A crop circle formation appearing at Horton in Wiltshire, England, during the 2008 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-815',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_06_24_horton-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_06_24_horton-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_06_24_horton-wiltshire-wheat-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-816',
+    parentId: 'crop-circle-formations',
+    name: "All Cannings Formation",
+    description: "A crop circle formation appearing at All Cannings in Wiltshire, England, during the 2008 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-816',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_06_30_all-cannings-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_06_30_all-cannings-wiltshire-wheat-oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_06_30_all-cannings-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_06_30_all-cannings-wiltshire-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_06_30_all-cannings-wiltshire-wheat-l3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-817',
+    parentId: 'crop-circle-formations',
+    name: "The Sanctuary near Avebury Formation",
+    description: "A crop circle formation appearing at The Sanctuary near Avebury in Wiltshire, England, during the 2008 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-817',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_01_60-the-sanctuary-nr-avebury-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_01_the-sancturary-nr-avebury-wiltshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-818',
+    parentId: 'crop-circle-formations',
+    name: "Honey Street near The Barge Inn Formation",
+    description: "A crop circle formation appearing at Honey Street near The Barge Inn in Wiltshire, England, during the 2008 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-818',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_04_62-honey-street-nr-the-barge-inn-wiltshire-wheat.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-819',
+    parentId: 'crop-circle-formations',
+    name: "East Kennett Formation",
+    description: "A crop circle formation appearing at East Kennett in Wiltshire, England, during the 2008 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-819',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_09_east-kennett-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_09_east-kennett-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_09_east-kennett-wiltshire-wheat-cl.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-820',
+    parentId: 'crop-circle-formations',
+    name: "East Field Alton Barnes Formation",
+    description: "A crop circle formation appearing at East Field Alton Barnes in Wiltshire, England, during the 2008 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-820',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_09_east-field-alton-barnes-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_09_east-field-alton-barnes-wiltshire-wheat-oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_09_east-field-alton-barnes-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_09_65-east-field-alton-barnes-wiltshire-wheat-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-821',
+    parentId: 'crop-circle-formations',
+    name: "Burderop Formation",
+    description: "A crop circle formation appearing at Burderop in Wiltshire, England, during the 2008 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-821',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_09_burderop-wiltshire-barley-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_09_burderop-wiltshire-barley-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-822',
+    parentId: 'crop-circle-formations',
+    name: "Charlbury Hill Formation",
+    description: "A crop circle formation appearing at Charlbury Hill in Oxfordshire, England, during the 2008 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-822',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_14_charlbury-hill-oxfordshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_14_charlbury-hill-oxfordshire-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_14_-charlbury-hill-oxfordshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_14_charlbury-hill-oxfordshire-wheat-l3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-823',
+    parentId: 'crop-circle-formations',
+    name: "Buckland Formation",
+    description: "A crop circle formation appearing at Buckland in Oxfordshire, England, during the 2008 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-823',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_14_buckland-oxfordshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_14_buckland-oxfordshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_14_buckland-oxfordshire-wheat-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-824',
+    parentId: 'crop-circle-formations',
+    name: "Avebury Manor Formation",
+    description: "A crop circle formation appearing at Avebury Manor in Wiltshire, England, during the 2008 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-824',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_15_avebury-manor-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_15_avebury-manor-wiltshire-wheat-oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_15_avebury-manor-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_15_avebury-manor-wiltshire-wheat-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-825',
+    parentId: 'crop-circle-formations',
+    name: "Avebury Henge Formation",
+    description: "A crop circle formation appearing at Avebury Henge in Wiltshire, England, during the 2008 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-825',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_15_avebury-henge-from-the-air-wiltshire-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-826',
+    parentId: 'crop-circle-formations',
+    name: "West Woods near Lockeridge Formation",
+    description: "A crop circle formation appearing at West Woods near Lockeridge in Wiltshire, England, during the 2008 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-826',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_17_west-woods-nr-lockeridge-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_17_west-woods-nr-lockeridge-wiltshire-wheat-oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_17_west-woods-nr-lockeridge-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_17_west-woods-nr-lockeridge-wiltshire-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_17_west-woods-nr-lockeridge-wiltshire-wheat-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_17_west-woods-nr-lockeridge-wiltshire-wheat-l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_17_west-woods-nr-lockeridge-wiltshire-wheat-cl.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_17_west-woods-nr-lockeridge-wiltshire-wheat-cl2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_17_west-woods-nr-lockeridge-wiltshire-wheat-cl3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-827',
+    parentId: 'crop-circle-formations',
+    name: "Hillside Farm West Woods Formation",
+    description: "A crop circle formation appearing at Hillside Farm West Woods in Wiltshire, England, during the 2008 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-827',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_20_hillside-farm-west-woods-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_20_hillside-farm-west-woods-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_20_hillside-farm-west-woods-wiltshire-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_20_hillside-farm-west-woods-wiltshire-wheat-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_20_hillside-farm-west-woods-wiltshire-wheat-cl.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_20_hillside-farm-west-woods-wiltshire-wheat-cl2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_20_hillside-farm-west-woods-wiltshire-wheat-cl3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-828',
+    parentId: 'crop-circle-formations',
+    name: "Devils Den near Clatford Formation",
+    description: "A crop circle formation appearing at Devils Den near Clatford in Wiltshire, England, during the 2008 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-828',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_20_devils-den-nr-clatford-wiltshire-barley-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_20_devils-den-nr-clatford-wiltshire-barley-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_20_devils-den-nr-clatford-wiltshire-barley-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-829',
+    parentId: 'crop-circle-formations',
+    name: "The Devils Den Formation",
+    description: "A crop circle formation appearing at The Devils Den in Wiltshire, England, during the 2008 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-829',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_20_the-devils-den-from-the-air-wiltshire.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-830',
+    parentId: 'crop-circle-formations',
+    name: "Avebury Manor 2 Formation",
+    description: "A crop circle formation appearing at Avebury Manor 2 in Wiltshire, England, during the 2008 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-830',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_01_02_avebury-manor-2-wiltshire-23-07-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_01_02_avebury-manor-2-wiltshire-23-07-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_01_02_avebury-manor-2-wiltshire-23-07-wheat-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-831',
+    parentId: 'crop-circle-formations',
+    name: "Southfield Alton Priors Formation",
+    description: "A crop circle formation appearing at Southfield Alton Priors in Wiltshire, England, during the 2008 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-831',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_22_southfield-alton-priors-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_22_southfield-alton-priors-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_22_southfield-alton-priors-wiltshire-wheat-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-832',
+    parentId: 'crop-circle-formations',
+    name: "Beckhampton Formation",
+    description: "A crop circle formation appearing at Beckhampton in Wiltshire, England, during the 2008 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-832',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_26_beckhampton-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_26_beckhampton-wiltshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-833',
+    parentId: 'crop-circle-formations',
+    name: "East Field Alton Barnes 2 Formation",
+    description: "A crop circle formation appearing at East Field Alton Barnes 2 in Wiltshire, England, during the 2008 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-833',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_02_east-field-2-wiltshire-27-2008-wheat-oh.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-834',
+    parentId: 'crop-circle-formations',
+    name: "Honey Street Alton Barnes 2 Formation",
+    description: "A crop circle formation appearing at Honey Street Alton Barnes 2 in Wiltshire, England, during the 2008 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-834',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_02_honey-street-2-wiltshire-27-2008-wheat.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-835',
+    parentId: 'crop-circle-formations',
+    name: "Waylands Smithy Formation",
+    description: "A crop circle formation appearing at Waylands Smithy in Oxfordshire, England, during the 2008 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-835',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_27_waylands-smithy-oxfordshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_27_waylands-smithy-oxfordshire-27-2008-wheat-oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_27_waylands-smithy-oxfordshire-27-2008-wheat-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_27_waylands-smithy-oxfordshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_27_waylands-smithy-oxfordshire-27-2008-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_27_waylands-smithy-oxfordshire-27-2008-wheat-l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_27_waylands-smithy-oxfordshire-wheat-ll.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_27_waylands-smithy-oxfordshire-27-2008-wheat-ll2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_27_waylands-smithy-oxfordshire-27-2008-wheat-ll3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_27_waylands-smithy-oxfordshire-27-2008-wheat-ll4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_27_waylands-smithy-oxfordshire-27-2008-wheat-ll5.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_27_waylands-smithy-oxfordshire-27-2008-wheat-ll6.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-836',
+    parentId: 'crop-circle-formations',
+    name: "Martinsell Hill Formation",
+    description: "A crop circle formation appearing at Martinsell Hill in Wiltshire, England, during the 2008 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-836',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_27_martinsell-hill-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_27_martinsell-hill-wiltshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-837',
+    parentId: 'crop-circle-formations',
+    name: "Honey Street Alton Barnes Formation",
+    description: "A crop circle formation appearing at Honey Street Alton Barnes in Wiltshire, England, during the 2008 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-837',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_27_honey-street-alton-barnes-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_27_honey-street-alton-barnes-wiltshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-838',
+    parentId: 'crop-circle-formations',
+    name: "West Down Beckhampton Formation",
+    description: "A crop circle formation appearing at West Down Beckhampton in Wiltshire, England, during the 2008 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-838',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_28_west-down-beckhampton-wiltshire-oh.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-839',
+    parentId: 'crop-circle-formations',
+    name: "Knoll Down Beckhampton Formation",
+    description: "A crop circle formation appearing at Knoll Down Beckhampton in Wiltshire, England, during the 2008 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-839',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_07_28_knoll-down-beckhampton-wiltshire-wheat.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-840',
+    parentId: 'crop-circle-formations',
+    name: "Watchfield Formation",
+    description: "A crop circle formation appearing at Watchfield in Oxfordshire, England, during the 2008 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-840',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_08_01_watchfield-oxfordshire-wheat.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_08_01_watchfield-oxfordshire-01-2008-wheat-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-841',
+    parentId: 'crop-circle-formations',
+    name: "Cherhill Formation",
+    description: "A crop circle formation appearing at Cherhill in Wiltshire, England, during the 2008 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-841',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_08_07_cherhill-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_08_07_cherhill-wiltshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-842',
+    parentId: 'crop-circle-formations',
+    name: "Milk Hill Formation",
+    description: "A crop circle formation appearing at Milk Hill in Wiltshire, England, during the 2008 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-842',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_08_08_milk-hill-wiltshire-wheat.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_08_08_milk-hill-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_08_08_milk-hill-wiltshire-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_08_08_milk-hill-wiltshire-8-2008-wheat-l3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-843',
+    parentId: 'crop-circle-formations',
+    name: "Hens Wood near Little Firth Formation",
+    description: "A crop circle formation appearing at Hens Wood near Little Firth in Wiltshire, England, during the 2008 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-843',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_08_08_hens-wood-nr-little-firth-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_08_08_hens-wood-nr-little-firth-wiltshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-844',
+    parentId: 'crop-circle-formations',
+    name: "Etchilhampton Hill Formation",
+    description: "A crop circle formation appearing at Etchilhampton Hill in Wiltshire, England, during the 2008 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-844',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_08_15_etchilhampton-hill-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_08_15_etchilhampton-hill-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_08_15_etchilhampton-hill-wiltshire-15-2008-wheat-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_08_15_etchilhampton-hill-wiltshire-15-2008-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_08_15_etchilhampton-hill-wiltshire-15-2008-wheat-l6.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_08_15_etchilhampton-hill-wiltshire-15-2008-wheat-l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_08_15_etchilhampton-hill-wiltshire-15-2008-wheat-oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_08_15_etchilhampton-hill-wiltshire-15-2008-wheat-l5.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-845',
+    parentId: 'crop-circle-formations',
+    name: "Olivers Castle Formation",
+    description: "A crop circle formation appearing at Olivers Castle in Wiltshire, England, during the 2008 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-845',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_08_16_olivers-castle-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_08_16_olivers-castle-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_01_16_olivers-castle-wiltshire-16-aug-2008-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2008_01_16_olivers-castle-wiltshire-16-aug-2008-wheat-fe.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-846',
+    parentId: 'crop-circle-formations',
+    name: "Olivers Castle Formation",
+    description: "A crop circle formation appearing at Olivers Castle in Wiltshire, England, during the 2007 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-846',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_04_15_olivers-castle-wiltshire-oilseed-rape-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_04_15_olivers-castle-wiltshire-oilseed-rape-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-847',
+    parentId: 'crop-circle-formations',
+    name: "Chilcomb Down Formation",
+    description: "A crop circle formation appearing at Chilcomb Down in Hampshire, England, during the 2007 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-847',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_04_22_chilcomb-down-hampshire-oilseed-rape-oh.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-848',
+    parentId: 'crop-circle-formations',
+    name: "Wexcombe Down Formation",
+    description: "A crop circle formation appearing at Wexcombe Down in Wiltshire, England, during the 2007 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-848',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_05_22_wexcombe-down-wiltshire-barley-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_05_22_wexcombe-down-wiltshire-barley-l1.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-849',
+    parentId: 'crop-circle-formations',
+    name: "Wexcombe Down Formation",
+    description: "A crop circle formation appearing at Wexcombe Down in Wiltshire, England, during the 2007 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-849',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_05_22_wexcombe-down-wiltshire-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-850',
+    parentId: 'crop-circle-formations',
+    name: "Morgans Hill Formation",
+    description: "A crop circle formation appearing at Morgans Hill in Wiltshire, England, during the 2007 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-850',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_05_18_-morgans-hill-wiltshire-barley-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_05_18_morgans-hill-wiltshire-barley-l1.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_05_18_morgans-hill-wiltshire-barley-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-851',
+    parentId: 'crop-circle-formations',
+    name: "Winterbourne Monkton Formation",
+    description: "A crop circle formation appearing at Winterbourne Monkton in Wiltshire, England, during the 2007 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-851',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_05_23_winterbourne-monkton-wiltshire-barley-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_05_23_winterbourne-monkton-wiltshire-barley-l1.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_05_23_winterbourne-monkton-wiltshire-barley-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-852',
+    parentId: 'crop-circle-formations',
+    name: "Yatesbury Formation",
+    description: "A crop circle formation appearing at Yatesbury in Wiltshire, England, during the 2007 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-852',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_05_30_-yatesbury-wiltshire-barley.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-853',
+    parentId: 'crop-circle-formations',
+    name: "East Filed Alton Barnes Formation",
+    description: "A crop circle formation appearing at East Filed Alton Barnes in Wiltshire, England, during the 2007 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-853',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_06_03_east-filed-wiltshire-wheat.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-854',
+    parentId: 'crop-circle-formations',
+    name: "Abbots Down Formation",
+    description: "A crop circle formation appearing at Abbots Down in Wiltshire, England, during the 2007 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-854',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_06_05_abbots-down-wiltshire-barley-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_06_05_abbots-down-wiltshire-barley-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/17-Abbots-Down-Wilts-05-06-2007-Barley-L2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-855',
+    parentId: 'crop-circle-formations',
+    name: "Alton Barnes White Horse Formation",
+    description: "A crop circle formation appearing at Alton Barnes White Horse in Wiltshire, England, during the 2007 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-855',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_06_05_abbots-down-wiltshire-barley-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-856',
+    parentId: 'crop-circle-formations',
+    name: "Easton Royal Formation",
+    description: "A crop circle formation appearing at Easton Royal in Wiltshire, England, during the 2007 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-856',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_06_10_easton-royal-wiltshire-barley-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_06_10_easton-royal-wiltshire-barley-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-857',
+    parentId: 'crop-circle-formations',
+    name: "Westbury White Horse Formation",
+    description: "A crop circle formation appearing at Westbury White Horse in Wiltshire, England, during the 2007 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-857',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_06_13_westbury-white-horse-wiltshire-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_06_13_westbury-white-horse-wiltshire-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-858',
+    parentId: 'crop-circle-formations',
+    name: "Manton Formation",
+    description: "A crop circle formation appearing at Manton in Wiltshire, England, during the 2007 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-858',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_06_22_manton-wiltshire-reported-barley.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-859',
+    parentId: 'crop-circle-formations',
+    name: "West Woods Lockeridge Formation",
+    description: "A crop circle formation appearing at West Woods Lockeridge in Wiltshire, England, during the 2007 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-859',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_06_24_west-woods-lockeridge-wiltshire-wheat.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-860',
+    parentId: 'crop-circle-formations',
+    name: "West Kennett Longbarrow Formation",
+    description: "A crop circle formation appearing at West Kennett Longbarrow in Wiltshire, England, during the 2007 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-860',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_06_28_west-kennett-longbarrow-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_06_28_west-kennett-longbarrow-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_06_28_west-kennett-longbarrow-wiltshire-wheat-p.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_06_28_west-kennett-longbarrow-wiltshire-wheat-p2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_06_28_west-kennett-longbarrow-wiltshire-wheat.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-861',
+    parentId: 'crop-circle-formations',
+    name: "Golden Ball Hill Formation",
+    description: "A crop circle formation appearing at Golden Ball Hill in Wiltshire, England, during the 2007 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-861',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_06_29_golden-ball-hill-wiltshire-wheat-oh.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-862',
+    parentId: 'crop-circle-formations',
+    name: "East Field Alton Barnes Formation",
+    description: "A crop circle formation appearing at East Field Alton Barnes in Wiltshire, England, during the 2007 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-862',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_07_east-field-alton-barnes-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_07_east-field-alton-barnes-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_07_east-field-alton-barnes-wiltshire-wheat-p.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_07_east-field-alton-barnes-wiltshire-wheat-p2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_07_east-field-alton-barnes-wiltshire-wheat-p3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-863',
+    parentId: 'crop-circle-formations',
+    name: "Stantonbury Hill Formation",
+    description: "A crop circle formation appearing at Stantonbury Hill in Somerset, England, during the 2007 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-863',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_07_stantonbury-hill-somerset-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_07_stantonbury-hill-somerset-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-864',
+    parentId: 'crop-circle-formations',
+    name: "Wootton Rivers Formation",
+    description: "A crop circle formation appearing at Wootton Rivers in Wiltshire, England, during the 2007 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-864',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_11_wootton-rivers-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_11_wootton-rivers-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_11_wootton-rivers-wiltshire-wheat-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-865',
+    parentId: 'crop-circle-formations',
+    name: "Stanton Bridge Formation",
+    description: "A crop circle formation appearing at Stanton Bridge in Wiltshire, England, during the 2007 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-865',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_14_stanton-bridge-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_14_stanton-bridge-wiltshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-866',
+    parentId: 'crop-circle-formations',
+    name: "Hailey Wood Ashbury Formation",
+    description: "A crop circle formation appearing at Hailey Wood Ashbury in Oxfordshire, England, during the 2007 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-866',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_16_hailey-wood-ashbury-oxfordshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_16_hailey-wood-ashbury-oxfordshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_16_-hailey-wood-ashbury-oxfordshire-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_16_hailey-wood-ashbury-oxfordshire-wheat-cl.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_16_hailey-wood-ashbury-oxfordshire-wheat-c2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-867',
+    parentId: 'crop-circle-formations',
+    name: "Hinton Down Bishopstone Formation",
+    description: "A crop circle formation appearing at Hinton Down Bishopstone in Oxfordshire, England, during the 2007 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-867',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_16_hinton-down-bishopstone-oxfordshire-wheat-oh-2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_16_hinton-down-bishopstone-oxfordshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_16_hinton-down-bishopstone-oxfordshire-wheat-cl.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-868',
+    parentId: 'crop-circle-formations',
+    name: "All Cannings Formation",
+    description: "A crop circle formation appearing at All Cannings in Wiltshire, England, during the 2007 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-868',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_17_all-cannings-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_17_all-cannings-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_17_all-cannings-wiltshire-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_17_all-cannings-wiltshire-wheat-cl.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-869',
+    parentId: 'crop-circle-formations',
+    name: "Wilton Water Formation",
+    description: "A crop circle formation appearing at Wilton Water in Wiltshire, England, during the 2007 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-869',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_18_wilton-water-wiltshire-oats-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_18_wilton-water-wiltshire-oats-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-870',
+    parentId: 'crop-circle-formations',
+    name: "Whites Hill Ramsbury Formation",
+    description: "A crop circle formation appearing at Whites Hill Ramsbury in Wiltshire, England, during the 2007 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-870',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_18_whites-hill-ramsbury-wiltshire-wheat.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-871',
+    parentId: 'crop-circle-formations',
+    name: "Martinsell Hill Formation",
+    description: "A crop circle formation appearing at Martinsell Hill in Wiltshire, England, during the 2007 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-871',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_19_martinsell-hill-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_19_martinsell-hill-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_19_martinsell-hill-wiltshire-wheat-cl.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_19_martinsell-hill-wiltshire-wheat-cl2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_19_martinsell-hill-wiltshire-wheat-cl3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-872',
+    parentId: 'crop-circle-formations',
+    name: "Stanton St Bernard Formation",
+    description: "A crop circle formation appearing at Stanton St Bernard in Wiltshire, England, during the 2007 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-872',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_19_stanton-st-bernard-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_19_stanton-st-bernard-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_19_stanton-st-bernard-wiltshire-wheat-p.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_19_stanton-st-bernard-wiltshire-wheat-p2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-873',
+    parentId: 'crop-circle-formations',
+    name: "West Kennett Longbarrow Formation",
+    description: "A crop circle formation appearing at West Kennett Longbarrow in Wiltshire, England, during the 2007 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-873',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_25_west-kennett-longbarrow-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_25_west-kennett-longbarrow-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_25_west-kennett-longbarrow-wiltshire-wheat-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-874',
+    parentId: 'crop-circle-formations',
+    name: "Tidcombe Down Formation",
+    description: "A crop circle formation appearing at Tidcombe Down in Wiltshire, England, during the 2007 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-874',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_26_tidcombe-down-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_26_tidcombe-down-wiltshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-875',
+    parentId: 'crop-circle-formations',
+    name: "Avebury Green Street Formation",
+    description: "A crop circle formation appearing at Avebury Green Street in Wiltshire, England, during the 2007 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-875',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_29_avebury-green-street-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_08_29_avebury-green-street-wiltshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-876',
+    parentId: 'crop-circle-formations',
+    name: "Etchilhampton Hill Formation",
+    description: "A crop circle formation appearing at Etchilhampton Hill in Wiltshire, England, during the 2007 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-876',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_07_30_etchilhampton-hill-wiltshire.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-877',
+    parentId: 'crop-circle-formations',
+    name: "Sugar Hill Aldbourne Formation",
+    description: "A crop circle formation appearing at Sugar Hill Aldbourne in Wiltshire, England, during the 2007 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-877',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_08_01_sugar-hill-aldbourne-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_08_01_sugar-hill-aldbourne-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_08_01_sugar-hill-aldbourne-wiltshire-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_08_01_sugar-hill-aldbourne-wiltshire-wheat-p1.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_08_01_sugar-hill-aldbourne-wiltshire-wheat-p2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_08_01_sugar-hill-aldbourne-wiltshire-wheat-p3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_08_01_sugar-hill-aldbourne-wiltshire-wheat-p4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_08_01_sugar-hill-aldbourne-wiltshire-wheat-p5.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_08_01_sugar-hill-aldbourne-wiltshire-wheat-p6.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-878',
+    parentId: 'crop-circle-formations',
+    name: "Pewsey White Horse Formation",
+    description: "A crop circle formation appearing at Pewsey White Horse in Wiltshire, England, during the 2007 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-878',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_08_04_pewsey-white-horse-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_08_04_pewsey-white-horse-wiltshire-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_08_04_pewsey-white-horse-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_08_04_pewsey-white-horse-wiltshire-wheat-fe.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_08_04_pewsey-white-horse-wiltshire-wheat-cl.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_08_04_pewsey-white-horse-wiltshire-wheat-cl2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-879',
+    parentId: 'crop-circle-formations',
+    name: "West Woods Formation",
+    description: "A crop circle formation appearing at West Woods in Wiltshire, England, during the 2007 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-879',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_08_09_west-woods-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_08_09_west-woods-wiltshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-880',
+    parentId: 'crop-circle-formations',
+    name: "Stanton St Bernard Formation",
+    description: "A crop circle formation appearing at Stanton St Bernard in Wiltshire, England, during the 2007 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-880',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_08_12_stanton-st-bernard-wiltshire-wheat.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-881',
+    parentId: 'crop-circle-formations',
+    name: "West Overton Formation",
+    description: "A crop circle formation appearing at West Overton in Wiltshire, England, during the 2007 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-881',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_08_17_west-overton-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_08_17_west-overton-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_08_17_west-overton-wiltshire-wheat-cl.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_08_17_west-overton-wiltshire-wheat-cl2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_08_17_west-overton-wiltshire-wheat-cl3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2007_08_17_west-overton-wiltshire-wheat-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-882',
+    parentId: 'crop-circle-formations',
+    name: "West Overton Formation",
+    description: "A crop circle formation appearing at West Overton in Wiltshire, England, during the 2006 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-882',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_06_09_west-overton-wiltshire-wheat.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-883',
+    parentId: 'crop-circle-formations',
+    name: "Silbury Hill Formation",
+    description: "A crop circle formation appearing at Silbury Hill in Wiltshire, England, during the 2006 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-883',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_06_21_silbury-hill-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_06_21_silbury-hill-wiltshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-884',
+    parentId: 'crop-circle-formations',
+    name: "Windmill Hill Formation",
+    description: "A crop circle formation appearing at Windmill Hill in Wiltshire, England, during the 2006 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-884',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_06_30_windmill-hill-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_06_30_windmill-hill-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_06_30_-windmill-hill-wiltshire-wheat-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_06_30_windmill-hill-wiltshire-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_06_30_windmill-hill-wiltshire-wheat-cl.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_06_30_windmill-hill-wiltshire-wheat-cl2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-885',
+    parentId: 'crop-circle-formations',
+    name: "Savernake Forest Formation",
+    description: "A crop circle formation appearing at Savernake Forest in Wiltshire, England, during the 2006 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-885',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_06_savernake-forest-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_06_savernake-forest-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_06_savernake-forest-wiltshire-wheat-p3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_06_savernake-forest-wiltshire-wheat-p4.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-886',
+    parentId: 'crop-circle-formations',
+    name: "Savernake Forrest Formation",
+    description: "A crop circle formation appearing at Savernake Forrest in Wiltshire, England, during the 2006 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-886',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_06_savernake-forrest-wiltshire-wheat-p.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_06_savernake-forrest-wiltshire-wheat-p2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-887',
+    parentId: 'crop-circle-formations',
+    name: "Uffington Castle Formation",
+    description: "A crop circle formation appearing at Uffington Castle in Oxfordshire, England, during the 2006 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-887',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_08_uffington-castle-oxfordshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_08_uffington-castle-oxfordshire-wheat-oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_08_uffington-castle-oxfordshire-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_08_uffington-castle-oxfordshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_08_uffington-castle-oxfordshire-wheat-p.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_08_uffington-castle-oxfordshire-wheat-p3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_08_uffington-castle-oxfordshire-wheat-p2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-888',
+    parentId: 'crop-circle-formations',
+    name: "Wayland&#039;s Smithy Formation",
+    description: "A crop circle formation appearing at Wayland&#039;s Smithy in Oxfordshire, England, during the 2006 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-888',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_08_waylands-smithy-oxfordshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_08_waylands-smithy-oxfordshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_08_waylands-smithy-oxfordshire-wheat-p.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_08_waylands-smithy-oxfordshire-wheat-p2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_08_waylands-smithy-oxfordshire-wheat-p3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_08_waylands-smithy-oxfordshire-wheat-p4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_08_waylands-smithy-oxfordshire-wheat-p5.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-889',
+    parentId: 'crop-circle-formations',
+    name: "Charlbury Hill Formation",
+    description: "A crop circle formation appearing at Charlbury Hill in Oxfordshire, England, during the 2006 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-889',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_09_charlbury-hill-oxfordshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_09_charlbury-hill-oxfordshire-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_09_charlbury-hill-oxfordshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_09_charlbury-hill-oxfordshire-wheat-oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_09_charlbury-hill-oxfordshire-wheat-cl.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-890',
+    parentId: 'crop-circle-formations',
+    name: "Aldbourne Formation",
+    description: "A crop circle formation appearing at Aldbourne in Wiltshire, England, during the 2006 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-890',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_14_aldbourne-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_14_aldbourne-wiltshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-891',
+    parentId: 'crop-circle-formations',
+    name: "Straight Soley Formation",
+    description: "A crop circle formation appearing at Straight Soley in Berkshire, England, during the 2006 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-891',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_20_straight-soley-berkshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_20_straight-soley-berkshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_20_straight-soley-berkshire-wheat-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-892',
+    parentId: 'crop-circle-formations',
+    name: "Milk Hill Formation",
+    description: "A crop circle formation appearing at Milk Hill in Wiltshire, England, during the 2006 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-892',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_22_milk-hill-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_22_milk-hill-wiltshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-893',
+    parentId: 'crop-circle-formations',
+    name: "Windmill Hill Formation",
+    description: "A crop circle formation appearing at Windmill Hill in Wiltshire, England, during the 2006 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-893',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_23_windmill-hill-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_23_windmill-hill-wiltshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-894',
+    parentId: 'crop-circle-formations',
+    name: "Gander Down Formation",
+    description: "A crop circle formation appearing at Gander Down in Hampshire, England, during the 2006 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-894',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_24_gander-down-hampshire-wheat-oh-e1430393111761.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_24_gander-down-hampshire-wheat-l-e1430394201299.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_24_gander-down-hampshire-whear-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-895',
+    parentId: 'crop-circle-formations',
+    name: "East Kennett Formation",
+    description: "A crop circle formation appearing at East Kennett in Wiltshire, England, during the 2006 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-895',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_26_east-kennett-wiltshire-wheat.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-896',
+    parentId: 'crop-circle-formations',
+    name: "East Field Alton Barnes Formation",
+    description: "A crop circle formation appearing at East Field Alton Barnes in Wiltshire, England, during the 2006 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-896',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_28_east-field-alton-barnes-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_28_east-field-alton-barnes-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_28_east-field-alton-barnes-wiltshire-wheat-p.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_28_east-field-alton-barnes-wiltshire-wheat-p2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_28_east-field-alton-barnes-wiltshire-wheat-p3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_28_east-field-alton-barnes-wiltshire-wheat-gr.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-897',
+    parentId: 'crop-circle-formations',
+    name: "Toot Balden Formation",
+    description: "A crop circle formation appearing at Toot Balden in Oxfordshire, England, during the 2006 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-897',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_30_toot-balden-oxfordshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_07_30_toot-balden-oxfordshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-898',
+    parentId: 'crop-circle-formations',
+    name: "Blowingstone Hill Nr Kingston Lisle Formation",
+    description: "A crop circle formation appearing at Blowingstone Hill Nr Kingston Lisle in Oxfordshire, England, during the 2006 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-898',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_08_05_blowingstone-hill-nr-kingston-lisle-oxfordshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_08_05_blowingstone-hill-nr-kingston-lisle-oxfordshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_08_05_blowingstone-hill-nr-kingston-lisle-oxfordshire-wheat-p.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_08_05_blowingstone-hill-nr-kingston-lisle-oxfordshire-wheat-p2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_08_05_blowingstone-hill-nr-kingston-lisle-oxfordshire-wheat-p3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_08_05_blowingstone-hill-nr-kingston-lisle-oxfordshire-wheat-p4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_08_05_blowingstone-hill-nr-kingston-lisle-oxfordshire-wheat-p5.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-899',
+    parentId: 'crop-circle-formations',
+    name: "Etchilhampton Hill Formation",
+    description: "A crop circle formation appearing at Etchilhampton Hill in Wiltshire, England, during the 2006 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-899',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_08_14_etchilhampton-hill-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_08_14_etchilhampton-hill-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2006_08_14_etchilhampton-hill-wiltshire-wheat-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-900',
+    parentId: 'crop-circle-formations',
+    name: "Golden Ball Hill Formation",
+    description: "A crop circle formation appearing at Golden Ball Hill in Wiltshire, England, during the 2005 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-900',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_05_01_golden-ball-hill-wiltshire-oilseed-rape.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-901',
+    parentId: 'crop-circle-formations',
+    name: "Bishops Sutton Formation",
+    description: "A crop circle formation appearing at Bishops Sutton in Hampshire, England, during the 2005 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-901',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_05_03_bishops-sutton-hampshire-oilseed-rape.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-902',
+    parentId: 'crop-circle-formations',
+    name: "Stanton St Bernard Formation",
+    description: "A crop circle formation appearing at Stanton St Bernard in Wiltshire, England, during the 2005 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-902',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_05_29_stanton-st-bernard-wiltshire-barley.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-903',
+    parentId: 'crop-circle-formations',
+    name: "Beckhampton Formation",
+    description: "A crop circle formation appearing at Beckhampton in Wiltshire, England, during the 2005 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-903',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_06_05_beckhampton-wiltshire-barley-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_06_05_beckhampton-wiltshire-barley-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_06_05_beckhampton-wiltshire-barley-l3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_06_05_beckhampton-wiltshire-barley-l4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_06_05_beckhampton-wiltshire-barley-fl.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-904',
+    parentId: 'crop-circle-formations',
+    name: "Clatford Bottom Formation",
+    description: "A crop circle formation appearing at Clatford Bottom in Wiltshire, England, during the 2005 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-904',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_06_12_clatford-bottom-wiltshire-barley-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_06_12_clatford-bottom-wiltshire-barley-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-905',
+    parentId: 'crop-circle-formations',
+    name: "Monkton Down Formation",
+    description: "A crop circle formation appearing at Monkton Down in Wiltshire, England, during the 2005 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-905',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_06_20_monkton-down-wiltshire-wheat.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-906',
+    parentId: 'crop-circle-formations',
+    name: "Stephen Castle Down Formation",
+    description: "A crop circle formation appearing at Stephen Castle Down in Hampshire, England, during the 2005 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-906',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_06_20_stephen-castle-down-hampshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_06_20_stephen-castle-down-hampshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-907',
+    parentId: 'crop-circle-formations',
+    name: "West Woods Lockeridge Formation",
+    description: "A crop circle formation appearing at West Woods Lockeridge in Wiltshire, England, during the 2005 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-907',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_06_22_west-woods-lockeridge-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_06_22_west-woods-lockeridge-wiltshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-908',
+    parentId: 'crop-circle-formations',
+    name: "Lurkeley Hill East Kennett Formation",
+    description: "A crop circle formation appearing at Lurkeley Hill East Kennett in Wiltshire, England, during the 2005 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-908',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_06_22_lurkeley-hill-east-kennett-wiltshire-barley-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_06_22_lurkeley-hill-east-kennett-wiltshire-barley-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-909',
+    parentId: 'crop-circle-formations',
+    name: "Windmill Hill Formation",
+    description: "A crop circle formation appearing at Windmill Hill in Wiltshire, England, during the 2005 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-909',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_06_23_windmill-hill-nr-avebury-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_06_23_windmill-hill-nr-avebury-wiltshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-910',
+    parentId: 'crop-circle-formations',
+    name: "East Field Alton Barnes Formation",
+    description: "A crop circle formation appearing at East Field Alton Barnes in Wiltshire, England, during the 2005 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-910',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_07_03_east-field-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_07_03_east-field-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_07_03_east-field-wiltshire-wheat-p.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_07_03_east-field-wiltshire-wheat-p2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-911',
+    parentId: 'crop-circle-formations',
+    name: "Horton Formation",
+    description: "A crop circle formation appearing at Horton in Wiltshire, England, during the 2005 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-911',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_07_03_horton-wiltshire-wheat-e1430150259190.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-912',
+    parentId: 'crop-circle-formations',
+    name: "Silbury Hill Formation",
+    description: "A crop circle formation appearing at Silbury Hill in Wiltshire, England, during the 2005 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-912',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_07_09_silbury-hill-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_07_09_silbury-hill-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_07_09_silbury-hill-wiltshire-wheat-p.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_07_09_silbury-hill-wiltshire-p2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_07_09_silbury-hill-wiltshire-wheat-p3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_07_09_silbury-hill-wiltshire-wheat-g.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-913',
+    parentId: 'crop-circle-formations',
+    name: "Lane End Down Formation",
+    description: "A crop circle formation appearing at Lane End Down in Hampshire, England, during the 2005 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-913',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_07_10_lane-end-down-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_07_10_lane-end-down-wiltshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-914',
+    parentId: 'crop-circle-formations',
+    name: "Waden Hill Formation",
+    description: "A crop circle formation appearing at Waden Hill in Wiltshire, England, during the 2005 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-914',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_07_16_waden-hill-avebury-wiltshire-wheat.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_07_16_waden-hill-avebury-wiltshire-wheat-p.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-915',
+    parentId: 'crop-circle-formations',
+    name: "Milk Hill Formation",
+    description: "A crop circle formation appearing at Milk Hill in Wiltshire, England, during the 2005 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-915',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_07_17_milk-hill-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_07_17_milk-hill-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_07_17_milk-hill-wiltshire-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_07_17_milk-hill-wiltshire-wheat-p.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-916',
+    parentId: 'crop-circle-formations',
+    name: "East Field Alton Barnes Formation",
+    description: "A crop circle formation appearing at East Field Alton Barnes in Wiltshire, England, during the 2005 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-916',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_07_18_east-field-alton-barnes-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_07_18_east-field-alton-barnes-wiltshire-wheat-oh.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-917',
+    parentId: 'crop-circle-formations',
+    name: "Savernake Forest Formation",
+    description: "A crop circle formation appearing at Savernake Forest in Wiltshire, England, during the 2005 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-917',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_07_19_savernake-forest-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_07_19_savernake-forest-wiltshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-918',
+    parentId: 'crop-circle-formations',
+    name: "East Kennett Formation",
+    description: "A crop circle formation appearing at East Kennett in Wiltshire, England, during the 2005 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-918',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_07_24_east-kennett-wiltshire-wheat.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-919',
+    parentId: 'crop-circle-formations',
+    name: "Avebury Henge Formation",
+    description: "A crop circle formation appearing at Avebury Henge in Wiltshire, England, during the 2005 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-919',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_07_24_avebury-henge-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_07_24_avebury-henge-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_07_24_avebury-henge-wiltshire-wheat-l2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_07_24_avebury-henge-wiltshire-wheat-p.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_07_24_avebury-henge-wiltshire-wheat-p2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_07_24_avebury-henge-wiltshire-wheat-p3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-920',
+    parentId: 'crop-circle-formations',
+    name: "Aldbourne (1) Formation",
+    description: "A crop circle formation appearing at Aldbourne (1) in Wiltshire, England, during the 2005 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-920',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_07_24_aldbourne-a-wiltshire-wheat.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_07_24_aldbourne-a-wiltshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-921',
+    parentId: 'crop-circle-formations',
+    name: "Aldbourne (2) Formation",
+    description: "A crop circle formation appearing at Aldbourne (2) in Wiltshire, England, during the 2005 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-921',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_07_24_aldbourne-b-wiltshire-wheat.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-922',
+    parentId: 'crop-circle-formations',
+    name: "Avebury Manor Formation",
+    description: "A crop circle formation appearing at Avebury Manor in Wiltshire, England, during the 2005 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-922',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_07_27_avebury-manor-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_07_27_avebury-manor-wiltshire-wheat-p.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-923',
+    parentId: 'crop-circle-formations',
+    name: "Avebury Avenue Formation",
+    description: "A crop circle formation appearing at Avebury Avenue in Wiltshire, England, during the 2005 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-923',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_07_29_avebury-avenue-wiltshire-wheat.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-924',
+    parentId: 'crop-circle-formations',
+    name: "The Ridgeway Avebury Formation",
+    description: "A crop circle formation appearing at The Ridgeway Avebury in Wiltshire, England, during the 2005 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-924',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_07_31_the-ridgeway-above-avebury-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_07_31_the-ridgeway-above-avebury-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_07_31_the-ridgeway-above-avebury-wiltshire-wheat-p.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_07_31_the-ridgeway-above-avebury-wiltshire-wheat-p2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_07_31_the-ridgeway-above-avebury-wiltshire-wheat-p3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-925',
+    parentId: 'crop-circle-formations',
+    name: "Collingbourne Kingston Formation",
+    description: "A crop circle formation appearing at Collingbourne Kingston in Wiltshire, England, during the 2005 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-925',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_08_03_collingbourne-kingston-wiltshire-borage-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_08_03_collingbourne-kingston-wiltshire-borage-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_08_03_collingbourne-kingston-wiltshire-borage-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-926',
+    parentId: 'crop-circle-formations',
+    name: "Shalbourne Formation",
+    description: "A crop circle formation appearing at Shalbourne in Wiltshire, England, during the 2005 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-926',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_08_09_shalbourne-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_08_09_shalbourne-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_08_09_shalbourne-wiltshire-wheat-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-927',
+    parentId: 'crop-circle-formations',
+    name: "Marden (1) Formation",
+    description: "A crop circle formation appearing at Marden (1) in Wiltshire, England, during the 2005 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-927',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_08_09_marden-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_08_09_marden-wiltshire-wheat-oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_08_09_marden-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_08_09_marden-wiltshire-wheat-p.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_08_09_marden-a-wiltshire-wheat-p2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_08_09_marden-a-wiltshire-wheat-p3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_08_09_marden-a-wiltshire-wheat-p4.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-928',
+    parentId: 'crop-circle-formations',
+    name: "Wayland&#039;s Smithy Formation",
+    description: "A crop circle formation appearing at Wayland&#039;s Smithy in Oxfordshire, England, during the 2005 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-928',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_08_09_waylands-smithy-oxfordshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_08_09_waylands-smithy-oxfordshire-wheat-cl.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_08_09_waylands-smithy-oxfordshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_08_09_waylands-smithy-oxfordshire-wheat-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-929',
+    parentId: 'crop-circle-formations',
+    name: "Woolstone Hill Formation",
+    description: "A crop circle formation appearing at Woolstone Hill in Oxfordshire, England, during the 2005 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-929',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_08_13_woolstone-hill-oxfordshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_08_13_woolstone-hill-oxfordshire-wheat-oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_08_13_woolstone-hill-oxfordshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_08_13_woolstone-hill-oxfordshire-wheat-ls.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_08_13_woolstone-hill-oxfordshire-wheat-cl.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_08_13_woolstone-hill-oxfordshire-wheat-p.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_08_13_woolstone-hill-oxfordshire-wheat-p2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_08_13_woolstone-hill-oxfordshire-wheat-p3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-930',
+    parentId: 'crop-circle-formations',
+    name: "Cherhill Formation",
+    description: "A crop circle formation appearing at Cherhill in Wiltshire, England, during the 2005 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-930',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_08_21_cherhill-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_08_21_cherhill-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_08_21_cherhill-wiltshire-wheat-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-931',
+    parentId: 'crop-circle-formations',
+    name: "East Field Alton Barnes Formation",
+    description: "A crop circle formation appearing at East Field Alton Barnes in Wiltshire, England, during the 2005 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-931',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_08_21_east-field-alton-barnes-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_08_21_east-field-alton-barnes-wiltshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-932',
+    parentId: 'crop-circle-formations',
+    name: "Marden (2) Formation",
+    description: "A crop circle formation appearing at Marden (2) in Wiltshire, England, during the 2005 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-932',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_08_21_marden-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2005_08_21_marden-wiltshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-933',
+    parentId: 'crop-circle-formations',
+    name: "Porchester Formation",
+    description: "A crop circle formation appearing at Porchester in Hampshire, England, during the 2004 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-933',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_06_10_porchester-hampshire-barley-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_06_10_porchester-hampshire-barley-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_06_10_porchester-hampshire-barley-oh2-e1430136220305.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-934',
+    parentId: 'crop-circle-formations',
+    name: "Honey Street Formation",
+    description: "A crop circle formation appearing at Honey Street in Wiltshire, England, during the 2004 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-934',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_06_16_honey-st-alton-barnes-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_06_16_honey-st-alton-barnes-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_06_16_honey-st-alton-barnes-wiltshire-wheat-p.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-935',
+    parentId: 'crop-circle-formations',
+    name: "East Field Alton Barnes Formation",
+    description: "A crop circle formation appearing at East Field Alton Barnes in Wiltshire, England, during the 2004 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-935',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_06_20_east-field-alton-barnes-wiltshire-wheat-fe.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_06_20_east-field-alton-barnes-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_06_20_east-field-alton-barnes-wiltshire-wheat-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-936',
+    parentId: 'crop-circle-formations',
+    name: "Milk Hill Alton Barnes Formation",
+    description: "A crop circle formation appearing at Milk Hill Alton Barnes in Wiltshire, England, during the 2004 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-936',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_06_26_milk-hill-alton-barnes-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_06_26_milk-hill-alton-barnes-wiltshire-wheat-fe.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_06_26_milk-hill-alton-barnes-wiltshire-wheat-p.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_06_26_milk-hill-alton-barnes-wiltshire-wheat-p2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_06_26_milk-hill-alton-barnes-wiltshire-wheat-p3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-937',
+    parentId: 'crop-circle-formations',
+    name: "Market Lavington Formation",
+    description: "A crop circle formation appearing at Market Lavington in Wiltshire, England, during the 2004 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-937',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_06_30_market-lavington-wiltshire-wheat.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-938',
+    parentId: 'crop-circle-formations',
+    name: "Coombe Abbey Formation",
+    description: "A crop circle formation appearing at Coombe Abbey in Warwickshire, England, during the 2004 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-938',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_07_05_coombe-abbey-warwickshire-wheat.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-939',
+    parentId: 'crop-circle-formations',
+    name: "Market Lavington (2) Formation",
+    description: "A crop circle formation appearing at Market Lavington (2) in Wiltshire, England, during the 2004 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-939',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_07_05_market-lavington-wiltshire-wheat.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-940',
+    parentId: 'crop-circle-formations',
+    name: "Steyning Bowl (Cissbury) Formation",
+    description: "A crop circle formation appearing at Steyning Bowl (Cissbury) in Sussex, England, during the 2004 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-940',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_07_11_steyning-bowl-cissbury-sussex-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_07_11_steyning-bowl-cissbury-sussex-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-941',
+    parentId: 'crop-circle-formations',
+    name: "North Newnton Formation",
+    description: "A crop circle formation appearing at North Newnton in Wiltshire, England, during the 2004 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-941',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_07_13_north-newnton-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_07_13_north-newnton-wiltshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-942',
+    parentId: 'crop-circle-formations',
+    name: "West Kennett Longbarrow Formation",
+    description: "A crop circle formation appearing at West Kennett Longbarrow in Wiltshire, England, during the 2004 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-942',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_07_13_west-kennett-avebury-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_07_13_west-kennett-avebury-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_07_13_west-kennett-avebury-wiltshire-wheat-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-943',
+    parentId: 'crop-circle-formations',
+    name: "South Field Formation",
+    description: "A crop circle formation appearing at South Field in Alton Barnes, England, during the 2004 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-943',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_07_15_south-field-alton-barnes-wiltshire-wheat.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-944',
+    parentId: 'crop-circle-formations',
+    name: "North Down Formation",
+    description: "A crop circle formation appearing at North Down in Wiltshire, England, during the 2004 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-944',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_07_15_north-down-wiltshire-barley.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-945',
+    parentId: 'crop-circle-formations',
+    name: "Bury Hill Formation",
+    description: "A crop circle formation appearing at Bury Hill in Hampshire, England, during the 2004 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-945',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_01_01_bury-hill-hampshire-barley-july-2004.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-946',
+    parentId: 'crop-circle-formations',
+    name: "Windmill Hill Formation",
+    description: "A crop circle formation appearing at Windmill Hill in Wiltshire, England, during the 2004 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-946',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_07_17_windmill-hill-avebury-wiltshire-wheat-fe.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_07_17_windmill-hill-avebury-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_07_17_windmill-hill-avebury-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_07_17_windmill-hill-avebury-wiltshire-wheat-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-947',
+    parentId: 'crop-circle-formations',
+    name: "Pewsey White Horse Formation",
+    description: "A crop circle formation appearing at Pewsey White Horse in (1), England, during the 2004 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-947',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_07_20_pewsey-white-horse-wiltshire-wheat.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-948',
+    parentId: 'crop-circle-formations',
+    name: "Pewsey White Horse (2) Formation",
+    description: "A crop circle formation appearing at Pewsey White Horse (2) in Wiltshire, England, during the 2004 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-948',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_07_22_pewsey-white-horse-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_07_22_pewsey-white-horse-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_07_22_pewsey-white-horse-wiltshire-wheat-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-949',
+    parentId: 'crop-circle-formations',
+    name: "Etchilhampton Formation",
+    description: "A crop circle formation appearing at Etchilhampton in Wiltshire, England, during the 2004 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-949',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_07_25_etchilhampton-wiltshire-wheat.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-950',
+    parentId: 'crop-circle-formations',
+    name: "Golden Ball Hill Alton Barnes Formation",
+    description: "A crop circle formation appearing at Golden Ball Hill Alton Barnes in Wiltshire, England, during the 2004 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-950',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_07_26_golden-ball-hill-alton-barnes-wiltshire-wheat-fe.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_07_26_golden-ball-hill-alton-barnes-wiltshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-951',
+    parentId: 'crop-circle-formations',
+    name: "Forest Hill Marlborough Formation",
+    description: "A crop circle formation appearing at Forest Hill Marlborough in Wiltshire, England, during the 2004 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-951',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_07_27_forest-hill-marlborough-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_07_27_forest-hill-marlborough-wiltshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-952',
+    parentId: 'crop-circle-formations',
+    name: "Green Street Avebury Formation",
+    description: "A crop circle formation appearing at Green Street Avebury in Wiltshire, England, during the 2004 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-952',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_07_28_green-street-avebury-wiltshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-953',
+    parentId: 'crop-circle-formations',
+    name: "Beacon Hill Newbury Formation",
+    description: "A crop circle formation appearing at Beacon Hill Newbury in Berkshire, England, during the 2004 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-953',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_07_28_beacon-hill-newbury-berkshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_07_28_beacon-hill-newbury-berkshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-954',
+    parentId: 'crop-circle-formations',
+    name: "Tan Hill Formation",
+    description: "A crop circle formation appearing at Tan Hill in Wiltshire, England, during the 2004 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-954',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_07_28_tan-hill-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_07_28_tan-hill-wiltshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-955',
+    parentId: 'crop-circle-formations',
+    name: "West Kennett Formation",
+    description: "A crop circle formation appearing at West Kennett in Wiltshire, England, during the 2004 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-955',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_07_30_west-kennett-avebury-wiltshire-wheat-oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_07_30_west-kennett-avebury-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_07_30_west-kennett-avebury-wiltshire-wheat-p.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_07_30_west-kennett-avebury-wiltshire-wheat-p2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/West-Kennett-Avebury-Wiltshire-30th-July-2004-Wheat-P3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-956',
+    parentId: 'crop-circle-formations',
+    name: "West Kennett Wiltshire Formation",
+    description: "A crop circle formation appearing at West Kennett Wiltshire in Wiltshire, England, during the 2004 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-956',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_07_30_west-kennett-avebury-wiltshire-wheat-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-957',
+    parentId: 'crop-circle-formations',
+    name: "West Meon Formation",
+    description: "A crop circle formation appearing at West Meon in Hampshire, England, during the 2004 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-957',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_01_01_west-meon-hampshire-wheat-august-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_01_01_west-meon-hampshire-wheat-august-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-958',
+    parentId: 'crop-circle-formations',
+    name: "Silbury Hill Formation",
+    description: "A crop circle formation appearing at Silbury Hill in Wiltshire, England, during the 2004 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-958',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_08_02_silbury-hill-avebury-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_08_02_silbury-hill-avebury-wiltshire-wheat-oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_08_02_silbury-hill-avebury-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_08_02_silbury-hill-avebury-wiltshire-wheat-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-959',
+    parentId: 'crop-circle-formations',
+    name: "Silbury Hill Formation",
+    description: "A crop circle formation appearing at Silbury Hill in Wiltshire, England, during the 2004 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-959',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_01_01_silbury-hill-wiltshire-wheat-august-2004.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-960',
+    parentId: 'crop-circle-formations',
+    name: "Etchilhampton Hill Formation",
+    description: "A crop circle formation appearing at Etchilhampton Hill in Wiltshire, England, during the 2004 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-960',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_08_03_etchilhampton-hill-wiltshire-wheat.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-961',
+    parentId: 'crop-circle-formations',
+    name: "Blacklands Formation",
+    description: "A crop circle formation appearing at Blacklands in Calne, England, during the 2004 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-961',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_08_03_blacklands-calne-wiltshire-wheat.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-962',
+    parentId: 'crop-circle-formations',
+    name: "Forest Hill Formation",
+    description: "A crop circle formation appearing at Forest Hill in Aldbourne, England, during the 2004 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-962',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_08_06_forest-hill-aldbourne-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_08_06_forest-hill-aldbourne-wiltshire-wheat-fe.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_08_06_forest-hill-aldbourne-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_08_06_forest-hill-aldbourne-wiltshire-wheat-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-963',
+    parentId: 'crop-circle-formations',
+    name: "Wilton Windmill Formation",
+    description: "A crop circle formation appearing at Wilton Windmill in Wiltshire, England, during the 2004 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-963',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_08_07_wilton-windmill-wiltshire-wheat-oh.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_08_07_wilton-windmill-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_08_07_wilton-windmill-wiltshire-wheat-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-964',
+    parentId: 'crop-circle-formations',
+    name: "Shelbourne Formation",
+    description: "A crop circle formation appearing at Shelbourne in Wiltshire, England, during the 2004 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-964',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_08_07_shelbourne-wiltshire-wheat-oh-e1430140297146.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_08_07_shelbourne-wiltshire-wheat-oh2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_08_07_shelbourne-wiltshire-wheat-l.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2004_08_07_shelbourne-wiltshire-wheat-l2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-965',
+    parentId: 'crop-circle-formations',
+    name: "West Overton Formation",
+    description: "A crop circle formation appearing at West Overton in Wiltshire, England, during the 2003 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-965',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/04/West-Overton-Wiltshire-21st-May-2003-Barley-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-966',
+    parentId: 'crop-circle-formations',
+    name: "Ogbourne St George Formation",
+    description: "A crop circle formation appearing at Ogbourne St George in Wiltshire, England, during the 2003 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-966',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2003_06_15_ogbourne-st-george-wiltshire-wheat-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2003_06_15_ogbourne-st-george-wiltshire-wheat-l-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2003_06_15_ogbourne-st-george-wiltshire-wheat-l-mf.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-967',
+    parentId: 'crop-circle-formations',
+    name: "Stanton St Bernard Formation",
+    description: "A crop circle formation appearing at Stanton St Bernard in Wiltshire, England, during the 2003 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-967',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2003_06_15_stanton-st-bernard-wiltshire-wheat-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2003_06_15_stanton-st-bernard-wiltshire-wheat-l-mf.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-968',
+    parentId: 'crop-circle-formations',
+    name: "Milk Hill Formation",
+    description: "A crop circle formation appearing at Milk Hill in Wiltshire, England, during the 2003 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-968',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2003_06_17_milk-hill-wiltshire-wheat-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2003_06_17_milk-hill-wiltshire-wheat-l-mf.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Milk-Hill-Wiltshire-17th-June-2003-Wheat-L2-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-969',
+    parentId: 'crop-circle-formations',
+    name: "Waden Hill Formation",
+    description: "A crop circle formation appearing at Waden Hill in Wiltshire, England, during the 2003 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-969',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2003_06_21_waden-hill-wiltshire-what-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2003_06_21_waden-hill-wiltshire-what-l-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2003_06_21_waden-hill-wiltshire-what-l2-mf.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-970',
+    parentId: 'crop-circle-formations',
+    name: "West Overton Formation",
+    description: "A crop circle formation appearing at West Overton in Wiltshire, England, during the 2003 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-970',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/04/West-Overton-Wiltshire-22nd-June-2003-Wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-971',
+    parentId: 'crop-circle-formations',
+    name: "Tan Hill Formation",
+    description: "A crop circle formation appearing at Tan Hill in Wiltshire, England, during the 2003 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-971',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2003_06_24_tan-hill-wiltshire-wheat-l-mf.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2003_06_24_tan-hill-wiltshire-wheat-oh-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-972',
+    parentId: 'crop-circle-formations',
+    name: "Litchfield Formation",
+    description: "A crop circle formation appearing at Litchfield in Hampshire, England, during the 2003 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-972',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2003_07_04_litchfield-hampshire-wheat-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Litchfield-Hampshire-4th-July-2003-Wheat-L-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-973',
+    parentId: 'crop-circle-formations',
+    name: "Dunley Formation",
+    description: "A crop circle formation appearing at Dunley in Hampshire, England, during the 2003 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-973',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/04/Dunley-Hampshire-4th-July-2003-Linseed-OH-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2003_07_04_dunley-hampshire-linseed-mf.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-974',
+    parentId: 'crop-circle-formations',
+    name: "Green Street Avebury Formation",
+    description: "A crop circle formation appearing at Green Street Avebury in Wiltshire, England, during the 2003 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-974',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2003_07_06_avebury-green-street-wiltshire-wheat-oh-mf.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Green-St-Avebury-Wiltshire-6th-July-2003-Wheat-OH-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2003_07_06_avebury-green-street-wiltshire-wheat-l-mf.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2003_07_06_avebury-green-street-wiltshire-wheat-l2-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Green-St-Avebury-Wiltshire-6th-July-2003-Wheat-L3-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2003_07_06_avebury-green-street-wiltshire-wheat-ls-mf.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2003_07_06_avebury-green-street-wiltshire-wheat-p-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Green-St-Avebury-Wiltshire-6th-July-2003-Wheat-P3-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Green-St-Avebury-Wiltshire-6th-July-2003-Wheat-P2-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-975',
+    parentId: 'crop-circle-formations',
+    name: "Beckhampton Formation",
+    description: "A crop circle formation appearing at Beckhampton in Wiltshire, England, during the 2003 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-975',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2003_07_13_beckhampton-wiltshire-wheat-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2003_07_13_beckhampton-wiltshire-wheat-cl-mf.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2003_07_13_beckhampton-wiltshire-wheat-l-mf.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Beckhampton-Wiltshire-13th-July-2003-Wheat-L2-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2003_07_13_beckhampton-wiltshire-wheat-p-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2003_07_13_beckhampton-wiltshire-wheat-p2-35-mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Beckhampton-Wiltshire-13th-July-2003-Wheat-P3-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-976',
+    parentId: 'crop-circle-formations',
+    name: "Weyhill Formation",
+    description: "A crop circle formation appearing at Weyhill in Hampshire, England, during the 2003 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-976',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2003_07_18_weyhill-hampshire-wheat-oh-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-977',
+    parentId: 'crop-circle-formations',
+    name: "Beckhampton Formation",
+    description: "A crop circle formation appearing at Beckhampton in Wiltshire, England, during the 2003 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-977',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2003_07_19_beckhampton-avebury-wiltshire-wheat-oh-mf.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-978',
+    parentId: 'crop-circle-formations',
+    name: "Beckhampton Formation",
+    description: "A crop circle formation appearing at Beckhampton in Wiltshire, England, during the 2003 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-978',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/04/Beckhampton-Wiltshire-22nd-July-2003-Wheat-L-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-979',
+    parentId: 'crop-circle-formations',
+    name: "Chisbury Formation",
+    description: "A crop circle formation appearing at Chisbury in Wiltshire, England, during the 2003 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-979',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2003_07_22_chisbury-wiltshire-wheat-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2003_07_22_chisbury-wiltshire-wheat-l-mf.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2003_07_22_chisbury-wiltshire-wheat-cl-mf.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-980',
+    parentId: 'crop-circle-formations',
+    name: "West Overton Formation",
+    description: "A crop circle formation appearing at West Overton in Wiltshire, England, during the 2003 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-980',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/04/West-Overton-Wiltshire-22nd-July-2003-Wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-981',
+    parentId: 'crop-circle-formations',
+    name: "Woodborogh Hill Formation",
+    description: "A crop circle formation appearing at Woodborogh Hill in Wiltshire, England, during the 2003 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-981',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/04/Woodborogh-Hill-Wiltshire-24th-July-2003-Wheat-L3-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-982',
+    parentId: 'crop-circle-formations',
+    name: "West Overton (Stage 1) Formation",
+    description: "A crop circle formation appearing at West Overton (Stage 1) in Wiltshire, England, during the 2003 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-982',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2003_01_01_west-overton-wiltshire-wheat-1st-stage-30-07-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-983',
+    parentId: 'crop-circle-formations',
+    name: "East Field Alton Barnes Formation",
+    description: "A crop circle formation appearing at East Field Alton Barnes in Wiltshire, England, during the 2003 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-983',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2003_08_02_east-field-alton-barnes-wiltshire-wheat-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/East-Field-Alton-Barnes-Wiltshire-2nd-August-2003-Wheat-L-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-984',
+    parentId: 'crop-circle-formations',
+    name: "Morgans Hill Formation",
+    description: "A crop circle formation appearing at Morgans Hill in Wiltshire, England, during the 2003 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-984',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2003_08_03_morgans-hill-wiltshire-wheat-l-mf.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2003_08_03_morgans-hill-wiltshire-wheat-l2-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2003_08_03_morgans-hill-wiltshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-985',
+    parentId: 'crop-circle-formations',
+    name: "Adams Grave Formation",
+    description: "A crop circle formation appearing at Adams Grave in Wiltshire, England, during the 2003 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-985',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2003_08_04_adams-grave-alton-barnes-wiltshire-wheat-oh-mf.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2003_08_04_adams-grave-alton-barnes-wiltshire-wheat-l-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-986',
+    parentId: 'crop-circle-formations',
+    name: "West Overton Stage 2 Formation",
+    description: "A crop circle formation appearing at West Overton Stage 2 in Wiltshire, England, during the 2003 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-986',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2003_08_02_west-overton-wiltshire-wheat-2nd-stage-08-08-l-mf.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/West-Overton-Wiltshire-2nd-Stage-8th-August-2003-Wheat-L2-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/West-Overton-Wiltshire-2nd-Stage-8th-August-2003-Wheat-L3-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-987',
+    parentId: 'crop-circle-formations',
+    name: "South Field Alton Barnes Formation",
+    description: "A crop circle formation appearing at South Field Alton Barnes in Wiltshire, England, during the 2003 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-987',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2003_08_08_south-field-alton-barnes-wiltshire-wheat-oh-35-mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2003_08_08_south-field-alton-barnes-wiltshire-wheat-l-mf.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-988',
+    parentId: 'crop-circle-formations',
+    name: "Another Molecule? Formation",
+    description: "A crop circle formation appearing at Another Molecule? in Wiltshire, England, during the 2003 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-988',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2003_08_10_north-down-wiltshire-wheat-mf.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-989',
+    parentId: 'crop-circle-formations',
+    name: "Avebury Trusloe Formation",
+    description: "A crop circle formation appearing at Avebury Trusloe in Wiltshire, England, during the 2002 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-989',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_06_02_-avebury-trusloe-wiltshire-barley-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_06_02_avebury-trusloe-wiltshire-barley-l-mfa3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_06_02_avebury-trusloe-wiltshire-barley-l2-mfa3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Avebury-Trusloe-Wiltshire-2nd-June-2002-Barley-L2-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-990',
+    parentId: 'crop-circle-formations',
+    name: "Silbury Hill Formation",
+    description: "A crop circle formation appearing at Silbury Hill in Wiltshire, England, during the 2002 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-990',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/04/Silbury-Hill-Wiltshire-3rd-June-2002-Barley-OH-35-mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Silbury-Hill-Wiltshire-3rd-June-2002-Barley-CL-35-mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Silbury-Hill-Wiltshire-3rd-June-2002-Barley-L2-35-mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Silbury-Hill-Wiltshire-3rd-June-2002-Barley-L-35-mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-991',
+    parentId: 'crop-circle-formations',
+    name: "Avebury Henge Formation",
+    description: "A crop circle formation appearing at Avebury Henge in Wiltshire, England, during the 2002 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-991',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_06_22_avebury-henge-wiltshire-wheat-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_06_22_avebury-henge-wiltshire-wheat-l-mfa3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-992',
+    parentId: 'crop-circle-formations',
+    name: "West Overton Formation",
+    description: "A crop circle formation appearing at West Overton in Wiltshire, England, during the 2002 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-992',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_06_23_west-overton-wiltshire-barley-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_06_23_west-overton-wiltshire-barley-l-mf.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-993',
+    parentId: 'crop-circle-formations',
+    name: "Uffington Formation",
+    description: "A crop circle formation appearing at Uffington in Oxfordshire, England, during the 2002 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-993',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_06_23_uffington-white-horse-oxfordshire-wheat-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_06_23_uffington-white-horse-oxfordshire-wheat-l-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-994',
+    parentId: 'crop-circle-formations',
+    name: "Liss Formation",
+    description: "A crop circle formation appearing at Liss in Hampshire, England, during the 2002 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-994',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_07_01_liss-hampshire-wheat-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_07_01_liss-hampshire-wheat-l-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-995',
+    parentId: 'crop-circle-formations',
+    name: "Stonehenge Formation",
+    description: "A crop circle formation appearing at Stonehenge in Wiltshire, England, during the 2002 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-995',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_07_04_stonehenge-wiltshire-wheat-oh-mfa3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_07_04_stonehenge-wiltshire-wheat-ls-mfa3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Stonehenge-Wiltshire-4th-july-2002-OH2-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Stonehenge-Wiltshire-4th-july-2002-CL-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_07_04_stonehenge-wiltshire-wheat-l-mfa3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Stonehenge-Wiltshire-4th-july-2002-LB-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-996',
+    parentId: 'crop-circle-formations',
+    name: "Englishcoombe Formation",
+    description: "A crop circle formation appearing at Englishcoombe in Avon, England, during the 2002 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-996',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_07_07_englishcoombe-nr-bath-avon-wheat-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Englishcoombe-Avon-7th-July-2002-Wheat-OH-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-997',
+    parentId: 'crop-circle-formations',
+    name: "West Overton Formation",
+    description: "A crop circle formation appearing at West Overton in Wiltshire, England, during the 2002 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-997',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_07_09_west-overton-wiltshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-998',
+    parentId: 'crop-circle-formations',
+    name: "Bishops Cannings Formation",
+    description: "A crop circle formation appearing at Bishops Cannings in Wiltshire, England, during the 2002 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-998',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_07_12_bishops-cannings-wiltshire-wheat-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Bishops-Cannings-Wiltshire-12th-July-2002-Wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-999',
+    parentId: 'crop-circle-formations',
+    name: "Pewsey White Horse Formation",
+    description: "A crop circle formation appearing at Pewsey White Horse in Wiltshire, England, during the 2002 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-999',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_07_17_pewsey-white-horse-wiltshire-wheat-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_07_17_pewsey-white-horse-wiltshire-wheat-lmf.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1000',
+    parentId: 'crop-circle-formations',
+    name: "Windmill Hill Formation",
+    description: "A crop circle formation appearing at Windmill Hill in Wiltshire, England, during the 2002 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1000',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_07_18_windmill-hill-wiltshire-wheat-oh-mfa3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Windmill-Hill-Wiltshire-18th-July-2002-Wheat-OH2-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_07_18_windmill-hill-wiltshire-wheat-l-mfa3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1001',
+    parentId: 'crop-circle-formations',
+    name: "Highclere Formation",
+    description: "A crop circle formation appearing at Highclere in Hampshire, England, during the 2002 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1001',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_07_21_highclere-hampshire-wheat-lswmf.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_07_21_highclere-hampshire-wheat-oh-35mmneg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1002',
+    parentId: 'crop-circle-formations',
+    name: "South Field Alton Barnes Formation",
+    description: "A crop circle formation appearing at South Field Alton Barnes in Wiltshire, England, during the 2002 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1002',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_07_22_south-field-alton-barnes-wiltshire-wheat-oh-mfa3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1003',
+    parentId: 'crop-circle-formations',
+    name: "South Field Alton Barnes Formation",
+    description: "A crop circle formation appearing at South Field Alton Barnes in Wiltshire, England, during the 2002 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1003',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_07_22_south-field-alton-barnes-wiltshire-wheat-l-mfa3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/South-Field-Alton-Barnes-Wiltshire-22nd-July-2002-Wheat-OH2-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1004',
+    parentId: 'crop-circle-formations',
+    name: "Barbury Castle Formation",
+    description: "A crop circle formation appearing at Barbury Castle in Wiltshire, England, during the 2002 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1004',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_07_24_barbury-castle-wiltshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1005',
+    parentId: 'crop-circle-formations',
+    name: "Honey Street (stage 1) Formation",
+    description: "A crop circle formation appearing at Honey Street (stage 1) in Wiltshire, England, during the 2002 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1005',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_07_26_honey-street-wiltshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1006',
+    parentId: 'crop-circle-formations',
+    name: "Honey Street (Stage 2) Formation",
+    description: "A crop circle formation appearing at Honey Street (Stage 2) in Wiltshire, England, during the 2002 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1006',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_07_27_honey-street-wiltshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1007',
+    parentId: 'crop-circle-formations',
+    name: "Avebury Henge Formation",
+    description: "A crop circle formation appearing at Avebury Henge in Wiltshire, England, during the 2002 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1007',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_07_28_avebury-henge-wiltshire-wheat-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_07_28_avebury-henge-wiltshire-wheat-mfa3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1008',
+    parentId: 'crop-circle-formations',
+    name: "Etchilhampton Formation",
+    description: "A crop circle formation appearing at Etchilhampton in Wiltshire, England, during the 2002 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1008',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/04/Etchilhampton-Wiltshire-28th-July-2002-Wheat-OH-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Etchilhampton-Wiltshire-28th-July-2002-Wheat-L-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1009',
+    parentId: 'crop-circle-formations',
+    name: "Knoll Down Formation",
+    description: "A crop circle formation appearing at Knoll Down in Wiltshire, England, during the 2002 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1009',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_07_28_knoll-down-wiltshire-wheat-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_07_28_knoll-down-wiltshire-wheat-cl-mfyb-e1429273246423.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1010',
+    parentId: 'crop-circle-formations',
+    name: "Weyhill Formation",
+    description: "A crop circle formation appearing at Weyhill in Andover, England, during the 2002 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1010',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_07_28_weyhill-andover-hampshire-wheat-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Weyhill-Hampshire-28th-July-2002-Wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1011',
+    parentId: 'crop-circle-formations',
+    name: "Windmill Hill Formation",
+    description: "A crop circle formation appearing at Windmill Hill in Wiltshire, England, during the 2002 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1011',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_08_02_windmill-hill-wiltshire-wheat-oh-35mm-e1429273556145.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_08_02_windmill-hill-wiltshire-wheat-l-mfa3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1012',
+    parentId: 'crop-circle-formations',
+    name: "Chirton Formation",
+    description: "A crop circle formation appearing at Chirton in Wiltshire, England, during the 2002 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1012',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_08_07_chirton-wiltshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1013',
+    parentId: 'crop-circle-formations',
+    name: "Etchilhampton Formation",
+    description: "A crop circle formation appearing at Etchilhampton in Wiltshire, England, during the 2002 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1013',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_08_11_etchilhampton-wiltshire-wheat-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_08_11_etchilhampton-wiltshire-wheat-l-mfa3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Etchilhampton-Wiltshire-11th-August-2002-Wheat-L2-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Etchilhampton-Wiltshire-11th-August-2002-Wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1014',
+    parentId: 'crop-circle-formations',
+    name: "East Field Alton Barnes Formation",
+    description: "A crop circle formation appearing at East Field Alton Barnes in Wiltshire, England, during the 2002 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1014',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/04/East-Field-Alton-Barnes-Wiltshire-14th-August-2002-Wheat-CL-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1015',
+    parentId: 'crop-circle-formations',
+    name: "Farley Mount Formation",
+    description: "A crop circle formation appearing at Farley Mount in Hampshire, England, during the 2002 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1015',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_08_15_farley-mount-hampshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1016',
+    parentId: 'crop-circle-formations',
+    name: "West Stowell Formation",
+    description: "A crop circle formation appearing at West Stowell in Wiltshire, England, during the 2002 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1016',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_08_15_west-stowell-wiltshire-wheat-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_08_15_west-stowell-wiltshire-wheat-l-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1017',
+    parentId: 'crop-circle-formations',
+    name: "Sparsholt Nr Winchester Formation",
+    description: "A crop circle formation appearing at Sparsholt Nr Winchester in Hampshire, England, during the 2002 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1017',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_08_15_sparsholt-nr-winchester-hampshire-wheat-oh-mfa3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_08_15_sparsholt-nr-winchester-hampshire-wheat-l-mfa3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_08_15_sparsholt-nr-winchester-hampshire-wheat-l2-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Sparsholt-nr-Winchester-Hampshire-15th-August-2002-Wheat-OH2-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Sparsholt-nr-Winchester-Hampshire-15th-August-2002-Wheat-L4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Sparsholt-nr-Winchester-Hampshire-15th-August-2002-Wheat-L3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_08_15_sparsholt-nr-winchester-hampshire-wheat-p-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_08_15_sparsholt-nr-winchester-hampshire-wheat-p2-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1018',
+    parentId: 'crop-circle-formations',
+    name: "Avebury Sanctuary Formation",
+    description: "A crop circle formation appearing at Avebury Sanctuary in Wiltshire, England, during the 2002 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1018',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_08_18_avebury-sanctuary-wiltshire-wheat-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Avebury-Sanctuary-Wiltshire-18th-August-2002-LL-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Avebury-Sanctuary-Wiltshire-18th-August-2002-LH-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1019',
+    parentId: 'crop-circle-formations',
+    name: "Silbury Hill Formation",
+    description: "A crop circle formation appearing at Silbury Hill in Wiltshire, England, during the 2002 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1019',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_08_26_silbury-hill-wiltshire-wheat-oh-mfa.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Silbury-Hill-Wiltshire-26th-August-2002-Wheat-OH3-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Silbury-Hill-Wiltshire-26th-August-2002-Wheat-OH2-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_08_26_silbury-hill-wiltshire-wheat-l-mfa3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1020',
+    parentId: 'crop-circle-formations',
+    name: "Crooked Soley Formation",
+    description: "A crop circle formation appearing at Crooked Soley in Berkshire, England, during the 2002 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1020',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_08_28_crooked-soley-berkshire-wheat-oh-mfa3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_08_28_crooked-soley-berkshire-wheat-oh2-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_08_28_crooked-soley-berkshire-wheat-l2-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/10/2002_08_28_crooked-soley-berkshire-wheat-l-mfa3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Crooked-Soley-Berkshire-28th-August-2002-L3-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1021',
+    parentId: 'crop-circle-formations',
+    name: "Hurn Airport Formation",
+    description: "A crop circle formation appearing at Hurn Airport in Dorset, England, during the 2001 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1021',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2001_05_19_hurn-airport-dorset-oilseed-rape-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2001_05_19_hurn-airport-dorset-oilseed-rape-l-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1022',
+    parentId: 'crop-circle-formations',
+    name: "Barbury Castle Formation",
+    description: "A crop circle formation appearing at Barbury Castle in Wiltshire, England, during the 2001 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1022',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2001_05_27_barbury-castle-wiltshire-barley-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Barbury-Castle-Wiltshire-27th-May-2001-Barley-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1023',
+    parentId: 'crop-circle-formations',
+    name: "East Field Formation",
+    description: "A crop circle formation appearing at East Field in Alton Barnes, England, during the 2001 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1023',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2001_06_21_east-field-pyramid-alton-barnes-wiltshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1024',
+    parentId: 'crop-circle-formations',
+    name: "East Kennett Formation",
+    description: "A crop circle formation appearing at East Kennett in Wiltshire, England, during the 2001 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1024',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2001_06_21_east-kennett-wiltshire-barley-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1025',
+    parentId: 'crop-circle-formations',
+    name: "Beckhampton Gallops Formation",
+    description: "A crop circle formation appearing at Beckhampton Gallops in Wiltshire, England, during the 2001 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1025',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2001_06_22_beckhampton-gallops-wiltshire-wheat-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2001_06_22_beckhampton-gallops-wiltshire-wheat-l-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Beckhampton-Gallops-Wiltshire-22nd-June-2001-Wheat-L2-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1026',
+    parentId: 'crop-circle-formations',
+    name: "West Kennett Longbarrow Formation",
+    description: "A crop circle formation appearing at West Kennett Longbarrow in Wiltshire, England, during the 2001 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1026',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/04/West-Kennett-Longbarrow-Wiltshire-24th-June-2001-Wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1027',
+    parentId: 'crop-circle-formations',
+    name: "Great Shelford (1) Formation",
+    description: "A crop circle formation appearing at Great Shelford (1) in Cambridgshire, England, during the 2001 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1027',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2001_07_11_great-shelford-cambridgeshire-wheat-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2001_07_11_great-shelford-cambridgeshire-wheat-l-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2001_07_11_great-shelford-cambridgeshire-wheat-cl-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2001_07_11_great-shelford-cambridgeshire-wheat-cl2-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1028',
+    parentId: 'crop-circle-formations',
+    name: "Windmill Hill Formation",
+    description: "A crop circle formation appearing at Windmill Hill in Wiltshire, England, during the 2001 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1028',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2001_07_14_windmill-hill-wiltshire-wheat-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2001_07_14_windmill-hill-wiltshire-wheat-cl-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1029',
+    parentId: 'crop-circle-formations',
+    name: "Chilcomb Down Formation",
+    description: "A crop circle formation appearing at Chilcomb Down in Hampshire, England, during the 2001 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1029',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2001_07_15_chilcombe-down-hampshire-wheat-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Chilcombe-Down-Hampshire-15th-July-2001-Wheat-L-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1030',
+    parentId: 'crop-circle-formations',
+    name: "Lane End Down Formation",
+    description: "A crop circle formation appearing at Lane End Down in Hampshire, England, during the 2001 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1030',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/04/25-Lane-End-Down-Hampshire-22-07-01-Wheat-L-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2001_07_22_lane-end-down-hampshire-wheat-l-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1031',
+    parentId: 'crop-circle-formations',
+    name: "Newton St Loe Formation",
+    description: "A crop circle formation appearing at Newton St Loe in Avon, England, during the 2001 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1031',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2001_07_24_newton-st-loe-avon-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1032',
+    parentId: 'crop-circle-formations',
+    name: "Beckhampton Formation",
+    description: "A crop circle formation appearing at Beckhampton in Wiltshire, England, during the 2001 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1032',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2001_07_24_beckhampton-wiltshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1033',
+    parentId: 'crop-circle-formations',
+    name: "Great Shelford Formation",
+    description: "A crop circle formation appearing at Great Shelford in Cambridgeshire, England, during the 2001 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1033',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2001_07_25_great-shelford-angel-cambridgeshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1034',
+    parentId: 'crop-circle-formations',
+    name: "Cliffords Hill Formation",
+    description: "A crop circle formation appearing at Cliffords Hill in Wiltshire, England, during the 2001 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1034',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2001_07_28_cliffords-hill-wiltshire-wheat-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2001_07_28_cliffords-hill-wiltshire-wheat-l-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1035',
+    parentId: 'crop-circle-formations',
+    name: "Old Shaw Village Formation",
+    description: "A crop circle formation appearing at Old Shaw Village in Wiltshire, England, during the 2001 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1035',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2001_07_28_old-shaw-village-wiltshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1036',
+    parentId: 'crop-circle-formations',
+    name: "West Meon Formation",
+    description: "A crop circle formation appearing at West Meon in Hampshire, England, during the 2001 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1036',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2001_07_28_west-meon-hampshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1037',
+    parentId: 'crop-circle-formations',
+    name: "West Tisted Formation",
+    description: "A crop circle formation appearing at West Tisted in Hampshire, England, during the 2001 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1037',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2001_07_28_west-tisted-hampshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1038',
+    parentId: 'crop-circle-formations',
+    name: "Beckhampton Formation",
+    description: "A crop circle formation appearing at Beckhampton in Wiltshire, England, during the 2001 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1038',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/04/Beckhampton-Wiltshire-28th-June-2001-Wheat-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Beckhampton-Wiltshire-28th-June-2001-Wheat-L-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1039',
+    parentId: 'crop-circle-formations',
+    name: "Honey Street Formation",
+    description: "A crop circle formation appearing at Honey Street in Wiltshire, England, during the 2001 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1039',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2001_08_04_honey-street-wiltshire-oh-wheat-35mmneg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2001_08_04_honey-street-wiltshire-l-wheat-mf.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1040',
+    parentId: 'crop-circle-formations',
+    name: "Alton Priors Formation",
+    description: "A crop circle formation appearing at Alton Priors in Wiltshire, England, during the 2001 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1040',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2001_08_06_alton-priors-wiltshire-wheat-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2001_08_06_alton-priors-wiltshire-wheat-l-mfyb.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1041',
+    parentId: 'crop-circle-formations',
+    name: "Woodborough Hill Formation",
+    description: "A crop circle formation appearing at Woodborough Hill in Wiltshire, England, during the 2001 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1041',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2001_08_10_woodborough-hill-wiltshire-wheat-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2001_08_10_woodborough-hill-wiltshire-wheat-l-mfyb.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1042',
+    parentId: 'crop-circle-formations',
+    name: "Avebury Manor Formation",
+    description: "A crop circle formation appearing at Avebury Manor in Wiltshire, England, during the 2001 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1042',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2001_08_11_avebury-manor-wiltshire-wheat-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Avebury-Manor-Wiltshire-11th-August-2001-Wheat-L-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1043',
+    parentId: 'crop-circle-formations',
+    name: "Englishcombe Nr Bath Formation",
+    description: "A crop circle formation appearing at Englishcombe Nr Bath in Somerset, England, during the 2001 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1043',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2001_08_12_englishcombe-nr-bath-somerset-wheat-l-mf.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1044',
+    parentId: 'crop-circle-formations',
+    name: "Huish Formation",
+    description: "A crop circle formation appearing at Huish in Wiltshire, England, during the 2001 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1044',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2001_08_14_huish-wiltshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1045',
+    parentId: 'crop-circle-formations',
+    name: "Huish 2 Formation",
+    description: "A crop circle formation appearing at Huish 2 in Wiltshire, England, during the 2001 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1045',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2001_01_02_huish-2-wiltshire-14-08-wheat-oh-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1046',
+    parentId: 'crop-circle-formations',
+    name: "Chilbolton Radio Telescope Formation",
+    description: "A crop circle formation appearing at Chilbolton Radio Telescope in Hampshire, England, during the 2001 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1046',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2001_08_20_the-message-chilbolton-radio-telescope-hampshire-wheat-oh-35mmneg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1047',
+    parentId: 'crop-circle-formations',
+    name: "Chilbolton Radio Telescope 2 Formation",
+    description: "A crop circle formation appearing at Chilbolton Radio Telescope 2 in Hampshire, England, during the 2001 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1047',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2001_08_14_the-face-chilbolton-radio-telescope-hampshire-wheat-oh.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1048',
+    parentId: 'crop-circle-formations',
+    name: "Chilbolton Radio Telescope (both) Formation",
+    description: "A crop circle formation appearing at Chilbolton Radio Telescope (both) in Hampshire, England, during the 2001 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1048',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2001_01_01_chilbolton-radio-telescope-hampshire-wheat-both-crop-circles-l.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1049',
+    parentId: 'crop-circle-formations',
+    name: "Acton Turville Formation",
+    description: "A crop circle formation appearing at Acton Turville in Gloustershire, England, during the 2001 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1049',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2001_08_15_acton-turville-gloucestershire-wheat-35mmneg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1050',
+    parentId: 'crop-circle-formations',
+    name: "Cherhill Formation",
+    description: "A crop circle formation appearing at Cherhill in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1050',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/04/Cherhill-Wiltshire-26th-April-2000-Oilseed-Rape-P-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1051',
+    parentId: 'crop-circle-formations',
+    name: "Lockeridge Formation",
+    description: "A crop circle formation appearing at Lockeridge in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1051',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/04/Cherhill-Wiltshire-26th-April-2000-Oilseed-Rape-G2-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Cherhill-Wiltshire-26th-April-2000-Oilseed-Rape-G-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1052',
+    parentId: 'crop-circle-formations',
+    name: "Beckhampton Formation",
+    description: "A crop circle formation appearing at Beckhampton in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1052',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_06_11_beckhampton-wiltshire-barley-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1053',
+    parentId: 'crop-circle-formations',
+    name: "Beckhampton Formation",
+    description: "A crop circle formation appearing at Beckhampton in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1053',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_06_12_beckhampton-wiltshire-barley-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1054',
+    parentId: 'crop-circle-formations',
+    name: "Beckhampton Formation",
+    description: "A crop circle formation appearing at Beckhampton in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1054',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_01_01_beckhampton-wiltshire-both-barley-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1055',
+    parentId: 'crop-circle-formations',
+    name: "Wexcombe Formation",
+    description: "A crop circle formation appearing at Wexcombe in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1055',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_06_12_wexcombe-wiltshire-barley-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Wexcombe-Wiltshire-12th-June-2000-Barley-OH2-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1056',
+    parentId: 'crop-circle-formations',
+    name: "Silbury Hill Formation",
+    description: "A crop circle formation appearing at Silbury Hill in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1056',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_06_12_silbury-hill-avebury-wiltshire-barley-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_06_12_silbury-hill-avebury-wiltshire-barley-p-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Silbury-Hill-Wiltshire-12th-June-2000-Barley-P3-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Silbury-Hill-Wiltshire-12th-June-2000-Barley-P2-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_06_12_silbury-hill-avebury-wiltshire-barley-l-mfyb.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1057',
+    parentId: 'crop-circle-formations',
+    name: "Bishops Cannings Down Formation",
+    description: "A crop circle formation appearing at Bishops Cannings Down in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1057',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_06_18_bishops-cannings-down-wiltshire-wheat-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_06_18_bishops-cannings-down-wiltshire-wheat-p-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Bishops-Cannings-Down-Wiltshire-18th-June-2000-Wheat-P-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1058',
+    parentId: 'crop-circle-formations',
+    name: "East Field Alton Barnes Formation",
+    description: "A crop circle formation appearing at East Field Alton Barnes in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1058',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_06_20_east-field-wiltshire-barley-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1059',
+    parentId: 'crop-circle-formations',
+    name: "West Overton Formation",
+    description: "A crop circle formation appearing at West Overton in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1059',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/04/West-Overton-Wiltshire-23rd-June-2000-Wheat-OH-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_06_23_west-overton-wiltshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1060',
+    parentId: 'crop-circle-formations',
+    name: "Stanton St Bernard Formation",
+    description: "A crop circle formation appearing at Stanton St Bernard in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1060',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_06_25_stanton-st-bernard-wiltshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1061',
+    parentId: 'crop-circle-formations',
+    name: "Bishops Cannings Formation",
+    description: "A crop circle formation appearing at Bishops Cannings in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1061',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_06_27_bishops-cannings-wiltshire-wheat-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_06_27_bishops-cannings-wiltshire-wheat-l-mfyb.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1062',
+    parentId: 'crop-circle-formations',
+    name: "Milk Hill Formation",
+    description: "A crop circle formation appearing at Milk Hill in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1062',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_07_01_milk-hill-wiltshire-wheat-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_07_01_milk-hill-wiltshire-wheat-l-mfyb.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_07_01_milk-hill-wiltshire-wheat-p-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Milk-Hill-Wiltshire-1st-July-2000-Wheat-P4-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Milk-Hill-Wiltshire-1st-July-2000-Wheat-P3-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1063',
+    parentId: 'crop-circle-formations',
+    name: "Milk Hill Formation",
+    description: "A crop circle formation appearing at Milk Hill in Wiltshire 1st July 2000, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1063',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/04/Milk-Hill-Wiltshire-1st-July-2000-Wheat-P2-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1064',
+    parentId: 'crop-circle-formations',
+    name: "Stephen Castle Down Formation",
+    description: "A crop circle formation appearing at Stephen Castle Down in Hampshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1064',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_07_01_stephen-castle-down-hampshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1065',
+    parentId: 'crop-circle-formations',
+    name: "Silbury Hill Formation",
+    description: "A crop circle formation appearing at Silbury Hill in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1065',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/04/Silbury-Hill-Wiltshire-6th-July-2000-Wheat-L2-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Silbury-Hill-Wiltshire-6th-July-2000-Wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1066',
+    parentId: 'crop-circle-formations',
+    name: "Honey St Formation",
+    description: "A crop circle formation appearing at Honey St in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1066',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_07_08_honey-st-wiltshire-wheat-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_07_08_honey-st-wiltshire-wheat-l-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1067',
+    parentId: 'crop-circle-formations',
+    name: "Adams Grave Alton Barnes Formation",
+    description: "A crop circle formation appearing at Adams Grave Alton Barnes in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1067',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_07_12_adams-grave-alton-barnes-wiltshire-wheat-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Adams-Grave-Alton-Barnes-Wiltshire-12th-July-2000-Wheat-P-35-mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Adams-Grave-Alton-Barnes-Wiltshire-12th-July-2000-Wheat-P2-35-mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1068',
+    parentId: 'crop-circle-formations',
+    name: "East Kennett Formation",
+    description: "A crop circle formation appearing at East Kennett in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1068',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_07_12_east-kennett-wiltshire-wheat-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/East-Kennett-Wiltshire-12th-July-2000-Wheat-CL-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/East-Kennett-Wiltshire-12th-July-2000-Wheat-P3-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/East-Kennett-Wiltshire-12th-July-2000-Wheat-P2-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/East-Kennett-Wiltshire-12th-July-2000-Wheat-P-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/East-Kennett-Wiltshire-12th-July-2000-Wheat-L-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1069',
+    parentId: 'crop-circle-formations',
+    name: "Golden Ball Hill Formation",
+    description: "A crop circle formation appearing at Golden Ball Hill in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1069',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_07_14_golden-ball-hill-wiltshire-wheat-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_07_14_golden-ball-hill-wiltshire-wheat-cl-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_07_14_golden-ball-hill-wiltshire-wheat-l-mfyb.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Golden-Ball-Hill-Wiltshire-14th-July-2000-Wheat-L-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1070',
+    parentId: 'crop-circle-formations',
+    name: "Picked Hill Formation",
+    description: "A crop circle formation appearing at Picked Hill in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1070',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_07_14_picked-hill-wiltshire-barley-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_07_14_picked-hill-wiltshire-barley-l-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1071',
+    parentId: 'crop-circle-formations',
+    name: "Bishops Sutton Formation",
+    description: "A crop circle formation appearing at Bishops Sutton in Hampshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1071',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_07_15_bishops-sutton-hampshire-wheat-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_07_15_bishops-sutton-hampshire-wheat-l-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1072',
+    parentId: 'crop-circle-formations',
+    name: "Avebury Down Formation",
+    description: "A crop circle formation appearing at Avebury Down in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1072',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_07_16_avebury-down-wiltshire-wheat-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Avebury-Down-Wiltshire-16th-July-2000-Wheat-P-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1073',
+    parentId: 'crop-circle-formations',
+    name: "Avebury Down Formation",
+    description: "A crop circle formation appearing at Avebury Down in Wiltshire 16th July 2000, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1073',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/04/Avebury-Down-Wiltshire-16th-July-2000-Wheat-P2-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1074',
+    parentId: 'crop-circle-formations',
+    name: "Old Shaw Village Formation",
+    description: "A crop circle formation appearing at Old Shaw Village in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1074',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_07_16_old-shaw-village-wiltshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1075',
+    parentId: 'crop-circle-formations',
+    name: "West Lavington Formation",
+    description: "A crop circle formation appearing at West Lavington in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1075',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_07_18_west-lavington-wiltshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1076',
+    parentId: 'crop-circle-formations',
+    name: "Stonehenge Formation",
+    description: "A crop circle formation appearing at Stonehenge in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1076',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_07_19_stonehenge-wiltshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1077',
+    parentId: 'crop-circle-formations',
+    name: "Woodborough Hill Formation",
+    description: "A crop circle formation appearing at Woodborough Hill in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1077',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_07_19_woodborough-hill-hampshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1078',
+    parentId: 'crop-circle-formations',
+    name: "Lockeridge Formation",
+    description: "A crop circle formation appearing at Lockeridge in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1078',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_07_19_lockeridge-wiltshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1079',
+    parentId: 'crop-circle-formations',
+    name: "Everleigh Ashes Formation",
+    description: "A crop circle formation appearing at Everleigh Ashes in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1079',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_07_19_everleigh-ashes-wiltshire-wheat-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_07_19_everleigh-ashes-wiltshire-wheat-l-mfyb.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1080',
+    parentId: 'crop-circle-formations',
+    name: "Avebury Trusloe Formation",
+    description: "A crop circle formation appearing at Avebury Trusloe in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1080',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_07_22_avebury-trusloe-avebury-wiltshire-wheat-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Avebury-Trusloe-Wiltshire-22nd-July-2000-Wheat-P-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Avebury-Trusloe-Wiltshire-22nd-July-2000-Wheat-P2-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Avebury-Trusloe-Wiltshire-22nd-July-2000-Wheat-P3-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Avebury-Trusloe-Wiltshire-22nd-July-2000-Wheat-P4-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1081',
+    parentId: 'crop-circle-formations',
+    name: "Uffington Formation",
+    description: "A crop circle formation appearing at Uffington in Oxfordshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1081',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_07_22_avebury-trusloe-avebury-wiltshire-wheat-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_07_22_avebury-trusloe-avebury-wiltshire-wheat-l-mfyb.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1082',
+    parentId: 'crop-circle-formations',
+    name: "West Tisted Formation",
+    description: "A crop circle formation appearing at West Tisted in Hampshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1082',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_07_23_west-tisted-hampshire-wheat-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_07_23_west-tisted-hampshire-wheat-l-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1083',
+    parentId: 'crop-circle-formations',
+    name: "Hodson Formation",
+    description: "A crop circle formation appearing at Hodson in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1083',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_07_23_hodson-wiltshire-wheat-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Hodson-Wiltshire-23rd-July-2000-Wheat-OH2-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1084',
+    parentId: 'crop-circle-formations',
+    name: "Silbury Hill Formation",
+    description: "A crop circle formation appearing at Silbury Hill in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1084',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_07_24_silbury-hill-wiltshire-wheat-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_07_24_silbury-hill-wiltshire-wheat-l-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1085',
+    parentId: 'crop-circle-formations',
+    name: "North Down Formation",
+    description: "A crop circle formation appearing at North Down in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1085',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_07_25_north-down-wiltshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1086',
+    parentId: 'crop-circle-formations',
+    name: "North Down 2 Formation",
+    description: "A crop circle formation appearing at North Down 2 in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1086',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_01_02_north-down-2-wiltshire-25-07-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1087',
+    parentId: 'crop-circle-formations',
+    name: "Blacklands Formation",
+    description: "A crop circle formation appearing at Blacklands in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1087',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_07_30_blacklands-wiltshire-wheat-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Blacklands-Wiltshire-30th-July-2000-Wheat-OH2-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1088',
+    parentId: 'crop-circle-formations',
+    name: "Allington Down Formation",
+    description: "A crop circle formation appearing at Allington Down in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1088',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_08_01_allington-down-wiltshire-wheat-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_08_01_allington-down-wiltshire-wheat-l-mfyb.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1089',
+    parentId: 'crop-circle-formations',
+    name: "Giants Grave Oare Formation",
+    description: "A crop circle formation appearing at Giants Grave Oare in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1089',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_08_03_giants-grave-oare-wiltshire-wheat-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_08_03_giants-grave-oare-wiltshire-wheat-l-mfyb.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1090',
+    parentId: 'crop-circle-formations',
+    name: "Broadbury Banks 1 Formation",
+    description: "A crop circle formation appearing at Broadbury Banks 1 in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1090',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_05_01_broadbury-banks-1-wiltshire-05-08-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1091',
+    parentId: 'crop-circle-formations',
+    name: "Broadbury Banks 2 Formation",
+    description: "A crop circle formation appearing at Broadbury Banks 2 in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1091',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_05_02_broadbury-banks-2-wiltshire-05-08-wheat-oh-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1092',
+    parentId: 'crop-circle-formations',
+    name: "Broadbury Banks Formation",
+    description: "A crop circle formation appearing at Broadbury Banks in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1092',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_06_03_broadbury-banks-wiltshire-wheat-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Broadbury-Banks-Wiltshire-6th-Aug-2000-Wheat-L-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1093',
+    parentId: 'crop-circle-formations',
+    name: "Horton Formation",
+    description: "A crop circle formation appearing at Horton in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1093',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_08_06_horton-wiltshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1094',
+    parentId: 'crop-circle-formations',
+    name: "Pewsey Formation",
+    description: "A crop circle formation appearing at Pewsey in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1094',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_08_07_pewsey-wiltshire-wheat-oh-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1095',
+    parentId: 'crop-circle-formations',
+    name: "All Cannings Formation",
+    description: "A crop circle formation appearing at All Cannings in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1095',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_08_07_all-cannings-wiltshire-wheat-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/All-Cannings-Wiltshire-7th-August-2000-Wheat-CL-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/All-Cannings-Wiltshire-7th-August-2000-Wheat-L-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1096',
+    parentId: 'crop-circle-formations',
+    name: "All Cannings Bridge Formation",
+    description: "A crop circle formation appearing at All Cannings Bridge in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1096',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_08_08_all-cannings-bridge-wiltshire-wheat-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_08_08_all-cannings-bridge-wiltshire-wheat-l-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/All-Cannings-Bridge-Wiltshire-8th-August-2000-Wheat-G2-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/All-Cannings-Bridge-Wiltshire-8th-August-2000-Wheat-G-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1097',
+    parentId: 'crop-circle-formations',
+    name: "Martinsell Hill Formation",
+    description: "A crop circle formation appearing at Martinsell Hill in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1097',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_08_10_martinsell-hill-wiltshire-wheat-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_08_10_martinsell-hill-wiltshire-wheat-l-mfyb.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1098',
+    parentId: 'crop-circle-formations',
+    name: "Nr Winchester Formation",
+    description: "A crop circle formation appearing at Nr Winchester in Hampshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1098',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_08_01_nr-winchester-hampshire-2000-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1099',
+    parentId: 'crop-circle-formations',
+    name: "Picked Hill Formation",
+    description: "A crop circle formation appearing at Picked Hill in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1099',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_08_13_picked-hill-wiltshire-wheat-oh-mfyb.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_08_13_picked-hill-wiltshire-wheat-l-mfyb.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Picked-Hill-Wiltshire-13th-Aug-2000-Wheat-L-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1100',
+    parentId: 'crop-circle-formations',
+    name: "Chilbolton Radio Telescope Formation",
+    description: "A crop circle formation appearing at Chilbolton Radio Telescope in Hampshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1100',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_08_13_chilbolton-radio-telescope-hampshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1101',
+    parentId: 'crop-circle-formations',
+    name: "Broadbury Banks Formation",
+    description: "A crop circle formation appearing at Broadbury Banks in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1101',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_08_01_broadbury-banks-wiltshire-2000-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1102',
+    parentId: 'crop-circle-formations',
+    name: "West Overton Hill Formation",
+    description: "A crop circle formation appearing at West Overton Hill in Wiltshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1102',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/04/West-Overton-Hill-Wiltshire-24th-Aug-2000-Wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1103',
+    parentId: 'crop-circle-formations',
+    name: "Chilcomb Down Winchester Formation",
+    description: "A crop circle formation appearing at Chilcomb Down Winchester in Hampshire, England, during the 2000 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1103',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/2000_08_01_chilcomb-down-winchester-hampshire-2000-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1104',
+    parentId: 'crop-circle-formations',
+    name: "Over Wallop Formation",
+    description: "A crop circle formation appearing at Over Wallop in Hampshire, England, during the 1999 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1104',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_04_03_over-wallop-hampshire-oilseed-rape-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Over-Wallop-Hampshire-3rd-April-1999-OSR-OH2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Over-Wallop-Hampshire-3rd-April-1999-OSR-OH3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1105',
+    parentId: 'crop-circle-formations',
+    name: "Bishops Cannings Formation",
+    description: "A crop circle formation appearing at Bishops Cannings in Wiltshire, England, during the 1999 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1105',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_04_15_bishops-cannings-wiltshire-oilseed-rape-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Bishops-Cannings-Wiltshire-15th-April-1999-OSR-L.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1106',
+    parentId: 'crop-circle-formations',
+    name: "Milk Hill Formation",
+    description: "A crop circle formation appearing at Milk Hill in Wiltshire, England, during the 1999 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1106',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_04_15_milk-hill-wiltshire-oilseed-rape-mfyb.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1107',
+    parentId: 'crop-circle-formations',
+    name: "Woodborough Hill Formation",
+    description: "A crop circle formation appearing at Woodborough Hill in Wiltshire, England, during the 1999 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1107',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_04_30_woodborough-hill-wiltshire-oilseed-rape-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Woodborough-Hill-Wiltshire-30th-April-1999-L.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1108',
+    parentId: 'crop-circle-formations',
+    name: "Everleigh Formation",
+    description: "A crop circle formation appearing at Everleigh in Wiltshire, England, during the 1999 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1108',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_05_01_everleigh-wiltshire-1999-oilseed-rape-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1109',
+    parentId: 'crop-circle-formations',
+    name: "Milk Hill Formation",
+    description: "A crop circle formation appearing at Milk Hill in Wiltshire, England, during the 1999 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1109',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_05_02_milk-hill-wiltshire-oilseed-rape-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Milk-Hill-Wiltshire-2nd-May-1999-OH2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1110',
+    parentId: 'crop-circle-formations',
+    name: "Middle Wallop Formation",
+    description: "A crop circle formation appearing at Middle Wallop in Hampshire, England, during the 1999 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1110',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_05_02_middle-wallop-hampshire-oilseed-rape-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1111',
+    parentId: 'crop-circle-formations',
+    name: "Middle Wallop Formation",
+    description: "A crop circle formation appearing at Middle Wallop in Hampshire, England, during the 1999 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1111',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/04/Middle-Wallop-Wiltshire-2nd-May-1999-OH2-OSR.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1112',
+    parentId: 'crop-circle-formations',
+    name: "Penton Grafton Formation",
+    description: "A crop circle formation appearing at Penton Grafton in Hampshire, England, during the 1999 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1112',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_05_30_penton-grafton-hampshire-barley-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Penton-Grafton-Hampshire-30th-May-1999-Barley-CL.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Penton-Grafton-Hampshire-30th-May-1999-Wheat-L.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_05_30_penton-grafton-hampshire-barley-p-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Penton-Grafton-Hampshire-30th-May-1999-Barley-P3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1113',
+    parentId: 'crop-circle-formations',
+    name: "Penton Grafton Formation",
+    description: "A crop circle formation appearing at Penton Grafton in Hampshire 30th May 1999, England, during the 1999 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1113',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/04/Penton-Grafton-Hampshire-30th-May-1999-Barley-P2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1114',
+    parentId: 'crop-circle-formations',
+    name: "Penton Grafton Formation",
+    description: "A crop circle formation appearing at Penton Grafton in Hampshire 30th May 1999, England, during the 1999 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1114',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/04/Penton-Grafton-Hampshire-30th-May-1999-Wheat-KG.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1115',
+    parentId: 'crop-circle-formations',
+    name: "Barbury Castle Formation",
+    description: "A crop circle formation appearing at Barbury Castle in Wiltshire, England, during the 1999 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1115',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_05_31_barbury-castle-wiltshire-barley-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Barbury-Castle-Wiltshire-31st-May-1999-Barley-OH2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Barbury-Castle-Wiltshire-31st-May-1999-Barley-L.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Barbury-Castle-Wiltshire-31st-May-1999-Barley-Le-2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Barbury-Castle-Wiltshire-31st-May-1999-Barley.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_05_31_barbury-castle-wiltshire-barley-p-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Barbury-Castle-Wiltshire-31st-May-1999-Barley-Le-.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1116',
+    parentId: 'crop-circle-formations',
+    name: "Chilbolton Radio Telescope Formation",
+    description: "A crop circle formation appearing at Chilbolton Radio Telescope in Hampshire, England, during the 1999 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1116',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_06_12_chilbolton-radio-telescope-hampshire-barley-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1117',
+    parentId: 'crop-circle-formations',
+    name: "East Field Alton Barnes Formation",
+    description: "A crop circle formation appearing at East Field Alton Barnes in Wiltshire, England, during the 1999 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1117',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_06_12_east-field-alton-barnes-wiltshire-barley-l-mfyb.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/East-Field-Alton-Barnes-Wilts-12th-June-1999-Barley-P2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/East-Field-Alton-Barnes-Wilts-12th-June-1999-Barley-P3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/East-Field-Alton-Barnes-Wilts-12th-June-1999-Barley-P4tif.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/East-Field-Alton-Barnes-Wilts-12th-June-1999-Barley-P5.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/East-Field-Alton-Barnes-Wilts-12th-June-1999-Barley-P6.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/East-Field-Alton-Barnes-Wilts-12th-June-1999-Barley-P7.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_06_12_east-field-alton-barnes-wiltshire-barley-p-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1118',
+    parentId: 'crop-circle-formations',
+    name: "East Field 2 Alton Barnes Formation",
+    description: "A crop circle formation appearing at East Field 2 Alton Barnes in Wiltshire, England, during the 1999 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1118',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_12_02_east-field-2-alton-barnes-wiltshire-12-06-barley-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/East-Field-2-Alton-Barnes-Wilts-12th-June-1999-Barley-P.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/East-Field-2-Alton-Barnes-Wilts-12th-June-1999-Barley-P2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_12_02_east-field-2-alton-barnes-wiltshire-12-06-barley-p-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/East-Field-2-Alton-Barnes-Wilts-12th-June-1999-Barley-P3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1119',
+    parentId: 'crop-circle-formations',
+    name: "East Field 1 and 2 Alton Barnes Formation",
+    description: "A crop circle formation appearing at East Field 1 and 2 Alton Barnes in Wiltshire, England, during the 1999 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1119',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/04/East-Field-1-and-2-Alton-Barnes-Wilts-12th-June-1999-BO-Barley.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1120',
+    parentId: 'crop-circle-formations',
+    name: "Pewsey White Horse Formation",
+    description: "A crop circle formation appearing at Pewsey White Horse in Wiltshire, England, during the 1999 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1120',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_06_16_pewsey-white-horse-wiltshire-barley-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_06_16_pewsey-white-horse-wiltshire-barley-l-mfyb.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1121',
+    parentId: 'crop-circle-formations',
+    name: "Silbury Hill Formation",
+    description: "A crop circle formation appearing at Silbury Hill in Wiltshire, England, during the 1999 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1121',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_06_19_silbury-hill-wiltshire-wheat-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_06_20_silbury-hill-wiltshire-wheat-l-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_06_19_silbury-hill-wiltshire-wheat-p-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_06_19_silbury-hill-wiltshire-wheat-p2-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Silbury-Hill-Wiltshire-19th-June-1999-Wheat-P3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1122',
+    parentId: 'crop-circle-formations',
+    name: "Aldbourne Formation",
+    description: "A crop circle formation appearing at Aldbourne in Wiltshire, England, during the 1999 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1122',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_06_20_aldbourne-wiltshire-barley-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_06_20_aldbourne-wiltshire-barley-l-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1123',
+    parentId: 'crop-circle-formations',
+    name: "Avebury Trusloe Formation",
+    description: "A crop circle formation appearing at Avebury Trusloe in Wiltshire, England, during the 1999 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1123',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_06_20_avebury-trusloe-wiltshire-wheat-oh-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1124',
+    parentId: 'crop-circle-formations',
+    name: "Stanton St Bernard Formation",
+    description: "A crop circle formation appearing at Stanton St Bernard in Wiltshire, England, during the 1999 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1124',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/04/Avebury-Trusloe-Wilts-20th-June-1999-Barley-L.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_06_23_stanton-st-bernard-wiltshire-wheat-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Stanton-St-Bernard-Wilts-23rd-June-1999-Wheat-OH2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1125',
+    parentId: 'crop-circle-formations',
+    name: "Allington Down Formation",
+    description: "A crop circle formation appearing at Allington Down in Wiltshire, England, during the 1999 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1125',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_06_23_allington-down-wiltshire-wheat-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_06_23_allington-down-wiltshire-wheat-l-mfyb.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_06_23_allington-down-wiltshire-wheat-p-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_06_23_allington-down-wiltshire-wheat-p2-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_06_23_allington-down-wiltshire-wheat-p3-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1126',
+    parentId: 'crop-circle-formations',
+    name: "Avebury Trusloe Formation",
+    description: "A crop circle formation appearing at Avebury Trusloe in Wiltshire, England, during the 1999 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1126',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_06_23_avebury-trusloe-wiltshire-barley-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Avebury-Trusloe-Wilts-23rd-June-1999-Barley-OH2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1127',
+    parentId: 'crop-circle-formations',
+    name: "West Overton Formation",
+    description: "A crop circle formation appearing at West Overton in Wiltshire, England, during the 1999 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1127',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_06_23_west-overton-wiltshire-wheat-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/West-Overton-Wilts-23rd-June-1999-Wheat-OH2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/West-Overton-Wilts-23rd-June-1999-Wheat-CLtif.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1128',
+    parentId: 'crop-circle-formations',
+    name: "Stanton St Bernard Formation",
+    description: "A crop circle formation appearing at Stanton St Bernard in Wiltshire, England, during the 1999 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1128',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_06_25_stanton-st-bernard-wiltshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1129',
+    parentId: 'crop-circle-formations',
+    name: "Allington Down Formation",
+    description: "A crop circle formation appearing at Allington Down in Wiltshire, England, during the 1999 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1129',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_06_26_allington-down-wiltshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1130',
+    parentId: 'crop-circle-formations',
+    name: "Rockley Formation",
+    description: "A crop circle formation appearing at Rockley in Wiltshire, England, during the 1999 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1130',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_07_10_rockley-wiltshire-wheat-p-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Rockley-Wiltshire-10th-July-1999-Wheat-P2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1131',
+    parentId: 'crop-circle-formations',
+    name: "Windmill Hill Formation",
+    description: "A crop circle formation appearing at Windmill Hill in Wiltshire, England, during the 1999 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1131',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_07_16_windmill-hill-wiltshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1132',
+    parentId: 'crop-circle-formations',
+    name: "Honey Street Formation",
+    description: "A crop circle formation appearing at Honey Street in Wiltshire, England, during the 1999 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1132',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_07_16_honey-street-wiltshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1133',
+    parentId: 'crop-circle-formations',
+    name: "Cherhill Formation",
+    description: "A crop circle formation appearing at Cherhill in Wiltshire, England, during the 1999 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1133',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_07_18_cherhill-wiltshire-wheat-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_07_18_cherhill-wiltshire-wheat-l-mfyb.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_07_18_cherhill-wiltshire-wheat-p-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_07_18_cherhill-wiltshire-wheat-p2-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Cherhill-Wilts-18th-July-1999-Wheat-P4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Cherhill-Wilts-18th-July-1999-Wheat-P3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1134',
+    parentId: 'crop-circle-formations',
+    name: "Devils Den Formation",
+    description: "A crop circle formation appearing at Devils Den in Wiltshire, England, during the 1999 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1134',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_07_19_devils-den-wiltshire-wheat-oh-mfyb.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_07_19_devils-den-wiltshire-wheat-p-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_07_19_devils-den-wiltshire-wheat-p2-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Devils-Den-Wilts-19th-July-1999-Wheat-P4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Devils-Den-Wilts-19th-July-1999-Wheat-P3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1135',
+    parentId: 'crop-circle-formations',
+    name: "East Kennett Formation",
+    description: "A crop circle formation appearing at East Kennett in Wiltshire, England, during the 1999 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1135',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_07_20_east-kennett-wiltshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1136',
+    parentId: 'crop-circle-formations',
+    name: "Liddington Castle Formation",
+    description: "A crop circle formation appearing at Liddington Castle in Wiltshire, England, during the 1999 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1136',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_07_21_liddington-castle-wiltshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1137',
+    parentId: 'crop-circle-formations',
+    name: "Barbury Castle Formation",
+    description: "A crop circle formation appearing at Barbury Castle in Wiltshire, England, during the 1999 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1137',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_07_23_barbury-castle-wiltshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1138',
+    parentId: 'crop-circle-formations',
+    name: "Silbury Hill Formation",
+    description: "A crop circle formation appearing at Silbury Hill in Wiltshire, England, during the 1999 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1138',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_07_24_silbury-hill-wiltshire-wheat-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_07_24_silbury-hill-wiltshire-wheat-cl-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_07_24_silbury-hill-wiltshire-wheat-l-mfyb.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Silbury-Wilts-24th-July-1999-Wheat-P2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Silbury-Wilts-24th-July-1999-Wheat-P.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1139',
+    parentId: 'crop-circle-formations',
+    name: "Beckhampton Formation",
+    description: "A crop circle formation appearing at Beckhampton in Wiltshire, England, during the 1999 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1139',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_07_28_beckhampton-wiltshire-wheat-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_07_28_beckhampton-wiltshire-wheat-cl-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_07_28_beckhampton-wiltshire-wheat-l-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1140',
+    parentId: 'crop-circle-formations',
+    name: "Roundway Formation",
+    description: "A crop circle formation appearing at Roundway in Wiltshire, England, during the 1999 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1140',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_07_31_roundway-wiltshire-wheat-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Roundway-Wilts-31st-July-1999-L-Wheat.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1141',
+    parentId: 'crop-circle-formations',
+    name: "West Kennett Longbarrow Formation",
+    description: "A crop circle formation appearing at West Kennett Longbarrow in Wiltshire, England, during the 1999 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1141',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_08_04_west-kennett-longbarrow-wiltshire-wheat-35mm-e1700748855169.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1142',
+    parentId: 'crop-circle-formations',
+    name: "Barbury Castle Formation",
+    description: "A crop circle formation appearing at Barbury Castle in Wiltshire, England, during the 1999 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1142',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1999_08_05_barbury-castle-wiltshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1143',
+    parentId: 'crop-circle-formations',
+    name: "Weyhill Formation",
+    description: "A crop circle formation appearing at Weyhill in Hampshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1143',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_04_18_weyhill-hampshire-oilseed-rape-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1144',
+    parentId: 'crop-circle-formations',
+    name: "Chiseldon Formation",
+    description: "A crop circle formation appearing at Chiseldon in Wiltshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1144',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_04_20_chiseldon-wiltshire-oilseed-rape-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1145',
+    parentId: 'crop-circle-formations',
+    name: "West Kennett Longbarrow Formation",
+    description: "A crop circle formation appearing at West Kennett Longbarrow in Wiltshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1145',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_05_04_west-kennett-longbarrow-wiltshire-oilseed-rape-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_05_04_west-kennett-longbarrow-wiltshire-oilseed-rape-p2-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_05_04_west-kennett-longbarrow-wiltshire-oilseed-rape-p-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_05_04_west-kennett-longbarrow-wiltshire-oilseed-rape-l-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1146',
+    parentId: 'crop-circle-formations',
+    name: "Bishops Cannings Formation",
+    description: "A crop circle formation appearing at Bishops Cannings in Wiltshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1146',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_05_04_bishops-cannings-wiltshire-barley-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Bishops-Can-1998-P.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1147',
+    parentId: 'crop-circle-formations',
+    name: "Avebury Formation",
+    description: "A crop circle formation appearing at Avebury in Wiltshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1147',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_05_01_avebury-wiltshire-1998-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1148',
+    parentId: 'crop-circle-formations',
+    name: "Beckhampton Formation",
+    description: "A crop circle formation appearing at Beckhampton in Wiltshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1148',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_05_01_beckhampton-wiltshire-1998-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1149',
+    parentId: 'crop-circle-formations',
+    name: "Goodworth Clatford (Bury Hill) Formation",
+    description: "A crop circle formation appearing at Goodworth Clatford (Bury Hill) in Hampshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1149',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_05_10_goodworth-clatford-bury-hill-hampshire-oilseed-rape-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1150',
+    parentId: 'crop-circle-formations',
+    name: "Chiseldon Formation",
+    description: "A crop circle formation appearing at Chiseldon in Wiltshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1150',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_05_19_chiseldon-wiltshire-oilseed-rape-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Chiseldon-19-May-1998.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1151',
+    parentId: 'crop-circle-formations',
+    name: "West Overton Formation",
+    description: "A crop circle formation appearing at West Overton in Wiltshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1151',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_05_23_west-overton-wiltshire-oilseed-rape-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1152',
+    parentId: 'crop-circle-formations',
+    name: "West Overton Formation",
+    description: "A crop circle formation appearing at West Overton in Wiltshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1152',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_05_25_west-overton-wiltshire-barley-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1153',
+    parentId: 'crop-circle-formations',
+    name: "Lockeridge Formation",
+    description: "A crop circle formation appearing at Lockeridge in Wiltshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1153',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_05_25_lockeridge-wiltshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1154',
+    parentId: 'crop-circle-formations',
+    name: "West Overton Formation",
+    description: "A crop circle formation appearing at West Overton in Wiltshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1154',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_05_31_west-overton-wiltshire-grass-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/West-Overton-May-1998-L.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1155',
+    parentId: 'crop-circle-formations',
+    name: "West Overton Formation",
+    description: "A crop circle formation appearing at West Overton in Wiltshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1155',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_06_03_west-overton-wiltshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1156',
+    parentId: 'crop-circle-formations',
+    name: "West Kennett Formation",
+    description: "A crop circle formation appearing at West Kennett in Wiltshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1156',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_06_08_west-kennett-wiltshire-wheat-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1157',
+    parentId: 'crop-circle-formations',
+    name: "East Kennett Formation",
+    description: "A crop circle formation appearing at East Kennett in Wiltshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1157',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_06_08_east-kennett-wiltshire-barley-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1158',
+    parentId: 'crop-circle-formations',
+    name: "West Overton Formation",
+    description: "A crop circle formation appearing at West Overton in Wiltshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1158',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_06_16_west-overton-wiltshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1159',
+    parentId: 'crop-circle-formations',
+    name: "Privett Formation",
+    description: "A crop circle formation appearing at Privett in Hampshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1159',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_06_16_privett-hampshire-oats-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1160',
+    parentId: 'crop-circle-formations',
+    name: "Chiseldon Formation",
+    description: "A crop circle formation appearing at Chiseldon in Wiltshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1160',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/04/21-chiseldon-wiltshire-19-06-98-wheat-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_06_19_chiseldon-wiltshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1161',
+    parentId: 'crop-circle-formations',
+    name: "Avebury Trusloe Formation",
+    description: "A crop circle formation appearing at Avebury Trusloe in Wiltshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1161',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_06_20_avebury-trusloe-wiltshire-barley-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_06_20_avebury-trusloe-wiltshire-barley-p-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Avebury-T-P2-1998.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1162',
+    parentId: 'crop-circle-formations',
+    name: "Shepton Mallet Formation",
+    description: "A crop circle formation appearing at Shepton Mallet in Somerset, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1162',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/04/Shepton-Mallet-Somerset-20-June-1998.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1163',
+    parentId: 'crop-circle-formations',
+    name: "Lockeridge Formation",
+    description: "A crop circle formation appearing at Lockeridge in Wiltshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1163',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_06_22_lockeridge-wiltshire-wheat-oh-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_06_22_lockeridge-wiltshire-wheat-p-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1164',
+    parentId: 'crop-circle-formations',
+    name: "Clatford Formation",
+    description: "A crop circle formation appearing at Clatford in Wiltshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1164',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_06_22_clatford-wiltshire-barley-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1165',
+    parentId: 'crop-circle-formations',
+    name: "Clanfield Formation",
+    description: "A crop circle formation appearing at Clanfield in Hampshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1165',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_06_22_clanfield-hampshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1166',
+    parentId: 'crop-circle-formations',
+    name: "Blandford Forum Formation",
+    description: "A crop circle formation appearing at Blandford Forum in Dorset, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1166',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_06_23_blandford-forum-dorset-wheat-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Blandford-Forum-1998-L.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1167',
+    parentId: 'crop-circle-formations',
+    name: "Owlesbury Formation",
+    description: "A crop circle formation appearing at Owlesbury in Hampshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1167',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/04/Owlesbury-Hants-OH-1998.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Owlesbury-Hants-P-1998.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1168',
+    parentId: 'crop-circle-formations',
+    name: "Avebury Avenue Formation",
+    description: "A crop circle formation appearing at Avebury Avenue in Wiltshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1168',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_07_03_avebury-avenue-wiltshire-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_07_03_avebury-avenue-wiltshire-p-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1169',
+    parentId: 'crop-circle-formations',
+    name: "Martock Formation",
+    description: "A crop circle formation appearing at Martock in Somerset, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1169',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/04/Martock-Somerset-03-07-98.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1170',
+    parentId: 'crop-circle-formations',
+    name: "Oare Formation",
+    description: "A crop circle formation appearing at Oare in Wiltshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1170',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_07_08_oare-wiltshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1171',
+    parentId: 'crop-circle-formations',
+    name: "Marlborough Formation",
+    description: "A crop circle formation appearing at Marlborough in Wiltshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1171',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_07_08_marlborough-wiltshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1172',
+    parentId: 'crop-circle-formations',
+    name: "Danebury Ring Formation",
+    description: "A crop circle formation appearing at Danebury Ring in Hampshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1172',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_06_08_danebury-ring-hampshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1173',
+    parentId: 'crop-circle-formations',
+    name: "Fareham Formation",
+    description: "A crop circle formation appearing at Fareham in Hampshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1173',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_07_09_fareham-hampshire-barley-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_07_09_fareham-hampshire-barley-l-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1174',
+    parentId: 'crop-circle-formations',
+    name: "East Field Alton Barnes Formation",
+    description: "A crop circle formation appearing at East Field Alton Barnes in Wiltshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1174',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_07_09_east-field-alton-barnes-wiltshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1175',
+    parentId: 'crop-circle-formations',
+    name: "Dadford Formation",
+    description: "A crop circle formation appearing at Dadford in Buckinghamshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1175',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_07_10_dadford-buckinghamshire-wheat-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Dadford-1998-L.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1176',
+    parentId: 'crop-circle-formations',
+    name: "West Woods Lockeridge Formation",
+    description: "A crop circle formation appearing at West Woods Lockeridge in Wiltshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1176',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_07_10_west-woods-lockeridge-wiltshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1177',
+    parentId: 'crop-circle-formations',
+    name: "Gander Down Formation",
+    description: "A crop circle formation appearing at Gander Down in Hampshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1177',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_07_10_gander-down-hampshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1178',
+    parentId: 'crop-circle-formations',
+    name: "Cherhill Formation",
+    description: "A crop circle formation appearing at Cherhill in Wiltshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1178',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/04/Cherhill-18-07-1998.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1179',
+    parentId: 'crop-circle-formations',
+    name: "Beckhampton Formation",
+    description: "A crop circle formation appearing at Beckhampton in Wiltshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1179',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_07_21_beckhampton-wiltshire-wheat-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Beckhampton-21-July-1998-L.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1180',
+    parentId: 'crop-circle-formations',
+    name: "Silbury Hill Formation",
+    description: "A crop circle formation appearing at Silbury Hill in Wiltshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1180',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/04/Silbury-hill-22-July-1998.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Silbury-hill-22-July-1998-P.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Silbury-hill-22-July-1998-L.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1181',
+    parentId: 'crop-circle-formations',
+    name: "Milk Hill 1 Formation",
+    description: "A crop circle formation appearing at Milk Hill 1 in Wiltshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1181',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/04/Milk-hill-2-25-July-1998.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1182',
+    parentId: 'crop-circle-formations',
+    name: "Milk Hill 2 Formation",
+    description: "A crop circle formation appearing at Milk Hill 2 in Wiltshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1182',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/04/Milk-hill-25-July-1998.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1183',
+    parentId: 'crop-circle-formations',
+    name: "Milk Hill 1 and 2 Formation",
+    description: "A crop circle formation appearing at Milk Hill 1 and 2 in Wiltshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1183',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/04/Milk-hill-Both-25-July-1998.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1184',
+    parentId: 'crop-circle-formations',
+    name: "Cheriton Formation",
+    description: "A crop circle formation appearing at Cheriton in Hampshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1184',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_07_31_cheriton-hampshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1185',
+    parentId: 'crop-circle-formations',
+    name: "Avebury Formation",
+    description: "A crop circle formation appearing at Avebury in Wiltshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1185',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_08_02_avebury-wiltshire-wheat-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_08_02_avebury-wiltshire-wheat-l2-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_08_02_avebury-wiltshire-wheat-l-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1186',
+    parentId: 'crop-circle-formations',
+    name: "Danebury Ring Formation",
+    description: "A crop circle formation appearing at Danebury Ring in Hampshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1186',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/04/43-danebury-ring-hampshire-02-08-98-wheat-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/44-danebury-ring-hampshire-02-08-98-wheat-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/45-danebury-ring-hampshire-02-08-98-wheat-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_08_02_danebury-ring-hampshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1187',
+    parentId: 'crop-circle-formations',
+    name: "West Woods Lockeridge Formation",
+    description: "A crop circle formation appearing at West Woods Lockeridge in Wiltshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1187',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_08_06_west-woods-lockeridge-wiltshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1188',
+    parentId: 'crop-circle-formations',
+    name: "Beckhampton Formation",
+    description: "A crop circle formation appearing at Beckhampton in Wiltshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1188',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_08_08_beckhampton-wiltshire-wheat-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_08_08_beckhampton-wiltshire-wheat-pf-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Beckhampton-P3-1998.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1189',
+    parentId: 'crop-circle-formations',
+    name: "Beckhampton Formation",
+    description: "A crop circle formation appearing at Beckhampton in Wiltshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1189',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_08_08_beckhampton-wiltshire-wheat-p2-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1190',
+    parentId: 'crop-circle-formations',
+    name: "Tawsmead Copse West Stowell Formation",
+    description: "A crop circle formation appearing at Tawsmead Copse West Stowell in Wiltshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1190',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_08_09_tawsmead-copse-west-stowell-wiltshire-wheat-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_08_09_tawsmead-copse-west-stowell-wiltshire-wheat-p-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Tawsmead-Copse-1998-P3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Tawsmead-Copse-1998-P2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1191',
+    parentId: 'crop-circle-formations',
+    name: "Yatesbury Formation",
+    description: "A crop circle formation appearing at Yatesbury in Wiltshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1191',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_08_10_yatesbury-wiltshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1192',
+    parentId: 'crop-circle-formations',
+    name: "Stanton St Bernard Formation",
+    description: "A crop circle formation appearing at Stanton St Bernard in Wiltshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1192',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_08_17_stanton-st-bernard-wiltshire-linseed-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1193',
+    parentId: 'crop-circle-formations',
+    name: "The Sanctuary Nr Avebury Formation",
+    description: "A crop circle formation appearing at The Sanctuary Nr Avebury in Wiltshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1193',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_08_19_the-sanctuary-nr-avebury-wiltshire-wheat-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1998_08_19_the-sanctuary-nr-avebury-wiltshire-wheat-p-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Tha-Sanctuary-1998-P2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1194',
+    parentId: 'crop-circle-formations',
+    name: "Avebury Formation",
+    description: "A crop circle formation appearing at Avebury in Wiltshire, England, during the 1998 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1194',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/04/Avebury-23-Aug-1998.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1195',
+    parentId: 'crop-circle-formations',
+    name: "Barbury Castle Formation",
+    description: "A crop circle formation appearing at Barbury Castle in Wiltshire, England, during the 1997 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1195',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1997_04_19_barbury-castle-wiltshire-oilseed-rape-oh-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Barbury-Castle-Wiltshire-1997-OHCL.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1997_04_19_barbury-castle-wiltshire-oilseed-rape-p-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Barbury-Castle-1996-P.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1196',
+    parentId: 'crop-circle-formations',
+    name: "Burderop Down (near Barbury Castle) Formation",
+    description: "A crop circle formation appearing at Burderop Down (near Barbury Castle) in Wiltshire, England, during the 1997 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1196',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1997_05_04_burderop-down-near-barbury-castle-wiltshire-oilseed-rape-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1197',
+    parentId: 'crop-circle-formations',
+    name: "Winterbourne Bassett Formation",
+    description: "A crop circle formation appearing at Winterbourne Bassett in Wiltshire, England, during the 1997 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1197',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1997_06_01_winterbourne-bassett-wiltshire-barley-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Win-Bass-1997-P.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1198',
+    parentId: 'crop-circle-formations',
+    name: "Stonehenge Formation",
+    description: "A crop circle formation appearing at Stonehenge in Wiltshire, England, during the 1997 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1198',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1997_06_09_stonehenge-wiltshire-barley-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1997_06_09_stonehenge-wiltshire-barley-l-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1199',
+    parentId: 'crop-circle-formations',
+    name: "Rockley Down Formation",
+    description: "A crop circle formation appearing at Rockley Down in Wiltshire, England, during the 1997 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1199',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1997_06_11_rockley-down-wiltshire-barley-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1200',
+    parentId: 'crop-circle-formations',
+    name: "Upham Formation",
+    description: "A crop circle formation appearing at Upham in Hampshire, England, during the 1997 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1200',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1997_06_14_upham-hampshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1201',
+    parentId: 'crop-circle-formations',
+    name: "Danebury Hill Formation",
+    description: "A crop circle formation appearing at Danebury Hill in Hampshire, England, during the 1997 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1201',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1997_06_18_danebury-hill-hampshire-wheat-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1202',
+    parentId: 'crop-circle-formations',
+    name: "Kilmeston Formation",
+    description: "A crop circle formation appearing at Kilmeston in Hampshire, England, during the 1997 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1202',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1997_06_19_kilmeston-hampshire-wheat-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1203',
+    parentId: 'crop-circle-formations',
+    name: "Morestead Formation",
+    description: "A crop circle formation appearing at Morestead in Hampshire, England, during the 1997 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1203',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1997_06_21_morestead-hampshire-wheat-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1204',
+    parentId: 'crop-circle-formations',
+    name: "Teglease Down Nr East Meon Formation",
+    description: "A crop circle formation appearing at Teglease Down Nr East Meon in Hampshire, England, during the 1997 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1204',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/04/11-teglease-down-nr-east-meon-hants-30-06-97-wheat-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1205',
+    parentId: 'crop-circle-formations',
+    name: "Cheriton Formation",
+    description: "A crop circle formation appearing at Cheriton in Hampshire, England, during the 1997 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1205',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1997_07_04_cheriton-hampshire-wheat-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1206',
+    parentId: 'crop-circle-formations',
+    name: "Headbourne Worthy Formation",
+    description: "A crop circle formation appearing at Headbourne Worthy in Hampshire, England, during the 1997 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1206',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1997_07_06_headbourne-worthy-hampshire-wheat-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1207',
+    parentId: 'crop-circle-formations',
+    name: "Alton Priors Formation",
+    description: "A crop circle formation appearing at Alton Priors in Wiltshire, England, during the 1997 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1207',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1997_07_11_alton-priors-wiltshire-wheat-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1208',
+    parentId: 'crop-circle-formations',
+    name: "Bishops Canning Formation",
+    description: "A crop circle formation appearing at Bishops Canning in Wiltshire, England, during the 1997 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1208',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1997_07_12_bishops-canning-wiltshire-wheat-oh-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1997_07_12_bishops-canning-wiltshire-wheat-p2-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Bish-Can-1997-P3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1209',
+    parentId: 'crop-circle-formations',
+    name: "Lane End Down Formation",
+    description: "A crop circle formation appearing at Lane End Down in Hampshire, England, during the 1997 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1209',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1997_07_12_lane-end-down-hampshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1210',
+    parentId: 'crop-circle-formations',
+    name: "Cley Hill Warminster Formation",
+    description: "A crop circle formation appearing at Cley Hill Warminster in Wiltshire, England, during the 1997 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1210',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1997_07_14_cley-hill-warminster-wiltshire-wheat-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Clay-Hill-L-1997.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1997_07_14_cley-hill-warminster-wiltshire-wheat-p-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Image1.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1211',
+    parentId: 'crop-circle-formations',
+    name: "Henwood Formation",
+    description: "A crop circle formation appearing at Henwood in Hampshire, England, during the 1997 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1211',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1997_07_14_henwood-hampshire-wheat-oh-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1997_07_14_henwood-hampshire-wheat-p-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Henwood-1997-2.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Henwood-1997-P3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Henwood-1997-RS.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1212',
+    parentId: 'crop-circle-formations',
+    name: "Olivers Castle Formation",
+    description: "A crop circle formation appearing at Olivers Castle in Wiltshire, England, during the 1997 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1212',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1997_07_23_olivers-castle-wiltshire-wheat-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1213',
+    parentId: 'crop-circle-formations',
+    name: "Silbury Hill Formation",
+    description: "A crop circle formation appearing at Silbury Hill in Wiltshire, England, during the 1997 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1213',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1997_07_23_silbury-hill-wiltshire-wheat-oh-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1997_07_23_silbury-hill-wiltshire-wheat-l-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Silbury-Hill-P3-1997.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Silbury-Hill-P2-1997.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Silbury-Hill-P-1997.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1214',
+    parentId: 'crop-circle-formations',
+    name: "Etchilhampton Grid Formation",
+    description: "A crop circle formation appearing at Etchilhampton Grid in Wiltshire, England, during the 1997 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1214',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1997_01_01_etchilhampton-1-wiltshire-30-07-wheat-oh-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1997_01_01_etchilhampton-1-wiltshire-30-07-wheat-p-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Etchilhampton-997-P4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Etchilhampton-997-P3.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Etchilhampton-997-P2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1215',
+    parentId: 'crop-circle-formations',
+    name: "Etchilhampton Star Formation",
+    description: "A crop circle formation appearing at Etchilhampton Star in Wiltshire, England, during the 1997 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1215',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1997_01_02_etchilhampton-2-wiltshire-30-07-wheat-oh-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1997_01_02_etchilhampton-2-wiltshire-30-07-wheat-p-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1997_01_02_etchilhampton-2-wiltshire-30-07-wheat-p2-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Etchilhampton-2-997-P4.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Etchilhampton-2-997-P3.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1216',
+    parentId: 'crop-circle-formations',
+    name: "Etchilhampton Grid and Star Formation",
+    description: "A crop circle formation appearing at Etchilhampton Grid and Star in Wiltshire, England, during the 1997 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1216',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1997_01_02_etchilhampton-2-wiltshire-30-07-wheat-l-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1217',
+    parentId: 'crop-circle-formations',
+    name: "Keysley Down Formation",
+    description: "A crop circle formation appearing at Keysley Down in Wiltshire, England, during the 1997 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1217',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1997_07_31_keysley-down-wiltshire-wheat-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1218',
+    parentId: 'crop-circle-formations',
+    name: "Avebury Down Formation",
+    description: "A crop circle formation appearing at Avebury Down in Wiltshire, England, during the 1997 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1218',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1997_07_31_liddington-castle-wiltshire-wheat-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Avebury-Down-1997-OH2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1219',
+    parentId: 'crop-circle-formations',
+    name: "Liddington Castle Formation",
+    description: "A crop circle formation appearing at Liddington Castle in Wiltshire, England, during the 1997 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1219',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/04/35-liddington-castle-wiltshire-01-08-97-wheat-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1997_08_01_liddington-castle-wiltshire-wheat-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1220',
+    parentId: 'crop-circle-formations',
+    name: "Whitchurch Nr Andover Formation",
+    description: "A crop circle formation appearing at Whitchurch Nr Andover in Hampshire, England, during the 1997 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1220',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1997_08_04_whitchurch-nr-andover-hampshire-wheat-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1221',
+    parentId: 'crop-circle-formations',
+    name: "Vernham Dean Formation",
+    description: "A crop circle formation appearing at Vernham Dean in Hampshire, England, during the 1997 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1221',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1997_08_05_vernham-dean-hampshire-wheat-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1222',
+    parentId: 'crop-circle-formations',
+    name: "Coate Formation",
+    description: "A crop circle formation appearing at Coate in Wiltshire, England, during the 1997 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1222',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1997_08_08_coate-wiltshire-wheat-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Coate-1997-OH2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1223',
+    parentId: 'crop-circle-formations',
+    name: "Milk Hill Formation",
+    description: "A crop circle formation appearing at Milk Hill in Wiltshire, England, during the 1997 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1223',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1997_08_08_milk-hill-wiltshire-wheat-oh-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1997_08_08_milk-hill-wiltshire-wheat-p-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1997_08_08_milk-hill-wiltshire-wheat-p2-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1997_08_08_milk-hill-wiltshire-wheat-p3-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Milk-hill-1997-P5.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/04/Milk-hill-1997-P4.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1224',
+    parentId: 'crop-circle-formations',
+    name: "Hackpen Hill Formation",
+    description: "A crop circle formation appearing at Hackpen Hill in Wiltshire, England, during the 1997 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1224',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1997_08_18_hackpen-hill-wiltshire-wheat-35mm.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1225',
+    parentId: 'crop-circle-formations',
+    name: "Girton Formation",
+    description: "A crop circle formation appearing at Girton in Cambridgeshire, England, during the 1996 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1225',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_05_11_girton-cambridgeshire-oilseed-rape-oh-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_05_11_girton-cambridgeshire-oilseed-rape-p-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_05_11_girton-cambridgeshire-oilseed-rape-p2-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1226',
+    parentId: 'crop-circle-formations',
+    name: "Goodworth Clatford Formation",
+    description: "A crop circle formation appearing at Goodworth Clatford in Hampshire, England, during the 1996 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1226',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_05_15_goodworth-clatford-hampshire-barley-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1227',
+    parentId: 'crop-circle-formations',
+    name: "Silbury Hill Formation",
+    description: "A crop circle formation appearing at Silbury Hill in Wiltshire, England, during the 1996 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1227',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/03/4-silbury-hill-wiltshire-01-06-96-barley-oh-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_06_01_silbury-hill-wiltshire-barley-oh-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1228',
+    parentId: 'crop-circle-formations',
+    name: "Cherhill Formation",
+    description: "A crop circle formation appearing at Cherhill in Wiltshire, England, during the 1996 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1228',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_06_01_cherhill-wiltshire-barley-p-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1229',
+    parentId: 'crop-circle-formations',
+    name: "East Oakley 1 Formation",
+    description: "A crop circle formation appearing at East Oakley 1 in Hampshire, England, during the 1996 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1229',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_02_01_east-oakley-1-hampshire-02-06-oilseed-rape-oh-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_02_01_east-oakley-1-hampshire-02-06-oilseed-rape-p-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1230',
+    parentId: 'crop-circle-formations',
+    name: "East Oakley 2 Formation",
+    description: "A crop circle formation appearing at East Oakley 2 in Hampshire, England, during the 1996 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1230',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_02_02_east-oakley-2-hampshire-02-06-oilseed-rape-oh-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1231',
+    parentId: 'crop-circle-formations',
+    name: "Ropley Formation",
+    description: "A crop circle formation appearing at Ropley in Hampshire, England, during the 1996 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1231',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_06_04_ropley-hampshire-wheat-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1232',
+    parentId: 'crop-circle-formations',
+    name: "Girton Formation",
+    description: "A crop circle formation appearing at Girton in Cambridgeshire, England, during the 1996 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1232',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_06_11_girton-cambridgeshire-barley-oh-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_06_11_girton-cambridgeshire-barley-p-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Girton-Cambridgeshire-11th-June-1996-Barley-P2-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1233',
+    parentId: 'crop-circle-formations',
+    name: "Hannington Formation",
+    description: "A crop circle formation appearing at Hannington in Hampshire, England, during the 1996 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1233',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_06_17_hannington-hampshire-wheat-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1234',
+    parentId: 'crop-circle-formations',
+    name: "East Field Alton Barnes Formation",
+    description: "A crop circle formation appearing at East Field Alton Barnes in Wiltshire, England, during the 1996 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1234',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_06_17_east-field-alton-barnes-wiltshire-barley-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1235',
+    parentId: 'crop-circle-formations',
+    name: "Clarken Green Formation",
+    description: "A crop circle formation appearing at Clarken Green in Hampshire, England, during the 1996 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1235',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_06_18_clarken-green-hampshire-barley-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1236',
+    parentId: 'crop-circle-formations',
+    name: "East Oakley Formation",
+    description: "A crop circle formation appearing at East Oakley in Hampshire, England, during the 1996 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1236',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_07_07_east-oakley-hampshire-wheat-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_07_07_east-oakley-hampshire-wheat-p-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/East-Oakley-Hampshire-7th-July-1996-Wheat-P2-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/East-Oakley-Hampshire-7th-July-1996-Wheat-P3-35mm.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/East-Oakley-P3-1996.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1237',
+    parentId: 'crop-circle-formations',
+    name: "Stonehenge Formation",
+    description: "A crop circle formation appearing at Stonehenge in Wiltshire, England, during the 1996 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1237',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_07_07_stonehenge-wiltshire-wheat-oh-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_07_07_stonehenge-wiltshire-wheat-l-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_07_07_stonehenge-wiltshire-wheat-l2-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_07_07_stonehenge-wiltshire-wheat-l3-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1238',
+    parentId: 'crop-circle-formations',
+    name: "Little Bury Green Formation",
+    description: "A crop circle formation appearing at Little Bury Green in Essex, England, during the 1996 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1238',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_07_13_little-bury-green-essex-barley-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1239',
+    parentId: 'crop-circle-formations',
+    name: "East Kennett Avebury Formation",
+    description: "A crop circle formation appearing at East Kennett Avebury in Wiltshire, England, during the 1996 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1239',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_07_13_east-kennet-avebury-wiltshire-wheat-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1240',
+    parentId: 'crop-circle-formations',
+    name: "East Kennett Formation",
+    description: "A crop circle formation appearing at East Kennett in Avebury, England, during the 1996 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1240',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/03/East-Kennet-Avebury-Wiltshire-13th-July-1996-Wheat-P-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/East-Kennet-Avebury-Wiltshire-13th-July-1996-Wheat-P2-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1241',
+    parentId: 'crop-circle-formations',
+    name: "Roundway Devizes Formation",
+    description: "A crop circle formation appearing at Roundway Devizes in Wiltshire, England, during the 1996 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1241',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_07_20_roundway-devizes-wiltshire-wheat-oh-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_07_20_roundway-devizes-wiltshire-wheat-cl-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1242',
+    parentId: 'crop-circle-formations',
+    name: "Longparish Formation",
+    description: "A crop circle formation appearing at Longparish in Hampshire, England, during the 1996 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1242',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_07_26_longparish-hampshire-barley-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1243',
+    parentId: 'crop-circle-formations',
+    name: "Windmill Hill Formation",
+    description: "A crop circle formation appearing at Windmill Hill in Wiltshire, England, during the 1996 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1243',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_07_29_windmill-hill-wiltshire-wheat-oh-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_07_29_windmill-hill-wiltshire-wheat-l-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_07_29_windmill-hill-wiltshire-wheat-p-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_07_29_windmill-hill-wiltshire-wheat-p2-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_07_29_windmill-hill-wiltshire-wheat-p3-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_07_29_windmill-hill-wiltshire-wheat-p4-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1244',
+    parentId: 'crop-circle-formations',
+    name: "Etchilhampton Formation",
+    description: "A crop circle formation appearing at Etchilhampton in Wiltshire, England, during the 1996 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1244',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_07_29_etchilhampton-wiltshire-wheat-oh-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_07_29_etchilhampton-wiltshire-wheat-p-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_07_29_etchilhampton-wiltshire-wheat-p2-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1245',
+    parentId: 'crop-circle-formations',
+    name: "Ashbury Formation",
+    description: "A crop circle formation appearing at Ashbury in Oxfordshire, England, during the 1996 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1245',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_08_01_ashbury-oxfordshire-wheat-oh-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_08_01_ashbury-oxfordshire-wheat-p-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1246',
+    parentId: 'crop-circle-formations',
+    name: "Liddington Castle Formation",
+    description: "A crop circle formation appearing at Liddington Castle in Wiltshire, England, during the 1996 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1246',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_08_02_liddington-castle-wiltshire-wheat-oh-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_08_02_liddington-castle-wiltshire-wheat-p-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_08_02_liddington-castle-wiltshire-wheat-p2-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Liddington-Castle-Wiltshire-2nd-August-1996-1-Wheat-P6-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Liddington-Castle-Wiltshire-2nd-August-1996-1-Wheat-P5-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Liddington-Castle-Wiltshire-2nd-August-1996-1-Wheat-P4-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Liddington-Castle-Wiltshire-2nd-August-1996-1-Wheat-P3-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1247',
+    parentId: 'crop-circle-formations',
+    name: "Liddington Castle 2 Formation",
+    description: "A crop circle formation appearing at Liddington Castle 2 in Wiltshire, England, during the 1996 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1247',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/03/42-liddington-castle-2-wiltshire-02-08-96-wheat-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_02_02_liddington-castle-2-wiltshire-02-08-wheat-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1248',
+    parentId: 'crop-circle-formations',
+    name: "Liddington Castle Both Formation",
+    description: "A crop circle formation appearing at Liddington Castle Both in Wiltshire, England, during the 1996 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1248',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_08_02_liddington-castle-both-wiltshire-wheat-l-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1249',
+    parentId: 'crop-circle-formations',
+    name: "Barton Le Clay Formation",
+    description: "A crop circle formation appearing at Barton Le Clay in Bedfordshire, England, during the 1996 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1249',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_08_06_barton-le-clay-bedfordshire-wheat-oh-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Barton-le-Clay-Bedfordshire-6th-August-1996-Wheat-L-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1250',
+    parentId: 'crop-circle-formations',
+    name: "Olivers Castle Devizes Formation",
+    description: "A crop circle formation appearing at Olivers Castle Devizes in Wiltshire, England, during the 1996 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1250',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1996_08_11_olivers-castle-devizes-wiltshire-wheat-oh-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1251',
+    parentId: 'crop-circle-formations',
+    name: "West Overton Hill Formation",
+    description: "A crop circle formation appearing at West Overton Hill in Wiltshire, England, during the 1995 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1251',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1995_05_08_west-overton-hill-wiltshire-oilseed-rape-35mm-sca.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1252',
+    parentId: 'crop-circle-formations',
+    name: "Quidhampton Formation",
+    description: "A crop circle formation appearing at Quidhampton in Hampshire, England, during the 1995 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1252',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1995_05_11_quidhampton-hampshire-oilseed-rape-oh-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1995_05_11_quidhampton-hampshire-oilseed-rape-l-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Quidhampton-Hampshire-11th-May-1995-Oilseed-Rape-P-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Quidhampton-Hampshire-11th-May-1995-Oilseed-Rape-P2-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1253',
+    parentId: 'crop-circle-formations',
+    name: "Beckhampton Formation",
+    description: "A crop circle formation appearing at Beckhampton in Wiltshire, England, during the 1995 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1253',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1995_05_29_beckhampton-wiltshire-barley-oh-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1995_05_29_beckhampton-wiltshire-barley-p-35mm-neg-sca.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Beckhampton-Wiltshire-29th-May-1995-Barley-P2-35mm-neg-scan.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Beckhampton-Wiltshire-29th-May-1995-Barley-P3-35mm-neg-scan.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1254',
+    parentId: 'crop-circle-formations',
+    name: "Bratton Castle Formation",
+    description: "A crop circle formation appearing at Bratton Castle in Wiltshire, England, during the 1995 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1254',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1995_06_06_bratton-castle-wiltshire-barley-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Bratton-Castle-Wiltshire-6th-June-1995-Barley-P-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1255',
+    parentId: 'crop-circle-formations',
+    name: "Cowdown Formation",
+    description: "A crop circle formation appearing at Cowdown in Andover, England, during the 1995 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1255',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1995_06_11_cowdown-andover-hampshire-oats-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1256',
+    parentId: 'crop-circle-formations',
+    name: "Telegraph Hill Formation",
+    description: "A crop circle formation appearing at Telegraph Hill in nr Winchester, England, during the 1995 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1256',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1995_06_12_telegraph-hill-nr-winchester-hampshire-barley-oh-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1995_06_12_telegraph-hill-nr-winchester-hampshire-barley-cl-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Telegraph-Hill-nr-Winchester-Hampshire-12th-June-1995-Barley-L-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1995_06_12_telegraph-hill-nr-winchester-hampshire-barley-p1-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1995_06_12_telegraph-hill-nr-winchester-hampshire-barley-p2-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1995_06_12_telegraph-hill-nr-winchester-hampshire-barley-p3-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Telegraph-Hill-nr-Winchester-Hampshire-12th-June-1995-Barley-RS-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Telegraph-Hill-nr-Winchester-Hampshire-12th-June-1995-Barley-With-Addition-L-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1257',
+    parentId: 'crop-circle-formations',
+    name: "Danebury Hillfort Formation",
+    description: "A crop circle formation appearing at Danebury Hillfort in Hampshire, England, during the 1995 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1257',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1995_06_16_danebury-hillfort-hampshire-barley-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Danebury-Hillfort-Hampshire-16th-June-1995-Barley-P-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1258',
+    parentId: 'crop-circle-formations',
+    name: "Cowdown Formation",
+    description: "A crop circle formation appearing at Cowdown in nr Andover, England, during the 1995 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1258',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1995_06_18_cowdown-nr-andover-hampshire-wheat-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Cowden-nr-Andover-Hampshire-18th-June-1995-Wheat-P-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Cowden-nr-Andover-Hampshire-18th-June-1995-Wheat-P2-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1259',
+    parentId: 'crop-circle-formations',
+    name: "Bishops Sutton Formation",
+    description: "A crop circle formation appearing at Bishops Sutton in Hampshire, England, during the 1995 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1259',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1995_06_20_bishops-sutton-hampshire-wheat-oh-35mm-neg-sca.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1995_06_20_bishops-sutton-hampshire-wheat-p-35mm-neg-sca.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Bishops-Sutton-Hampshire-20th-June-1995-Wheat-P2-35mm-neg-scan.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Bishops-Sutton-Hampshire-20th-June-1995-Wheat-P4-35mm-neg-scan.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Bishops-Sutton-Hampshire-20th-June-1995-Wheat-P3-35mm-neg-scan.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1260',
+    parentId: 'crop-circle-formations',
+    name: "Gander Down Formation",
+    description: "A crop circle formation appearing at Gander Down in Hampshire, England, during the 1995 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1260',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1995_06_20_gander-down-hampshire-wheat-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1261',
+    parentId: 'crop-circle-formations',
+    name: "Longwood Warren Formation",
+    description: "A crop circle formation appearing at Longwood Warren in Hampshire, England, during the 1995 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1261',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1995_06_26_longwood-warren-hamshire-barley-oh-35mm-neg-sca.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1995_06_26_longwood-warren-hampshire-barley-p-35mm-neg-sca.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1262',
+    parentId: 'crop-circle-formations',
+    name: "Andover Formation",
+    description: "A crop circle formation appearing at Andover in Hampshire, England, during the 1995 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1262',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/03/Andover-Hampshire-July-1995-Wheat-35mm-neg-2.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1263',
+    parentId: 'crop-circle-formations',
+    name: "Punchbowl Formation",
+    description: "A crop circle formation appearing at Punchbowl in Cheesefoot Head, England, during the 1995 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1263',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1995_07_04_punchbowl-cheesefoot-head-winchester-hampshire-oats-35mm-neg-sca.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Punchbowl-Cheesefoot-Head-Winchester-Hampshire-4th-July-1995-Oats-RS-35mm-neg-scan.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1264',
+    parentId: 'crop-circle-formations',
+    name: "Brockwood Park Formation",
+    description: "A crop circle formation appearing at Brockwood Park in Hampshire, England, during the 1995 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1264',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1995_07_01_brockwood-park-hampshire-july-1995-wheat-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1265',
+    parentId: 'crop-circle-formations',
+    name: "Litchfield Formation",
+    description: "A crop circle formation appearing at Litchfield in Hampshire, England, during the 1995 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1265',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1995_07_06_litchfield-hampshire-wheat-35mm-neg-sca.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Litchfield-Hampshire-6th-July-Wheat-L-35mm-neg-scan.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Litchfield-Hampshire-6th-July-Wheat-P-35mm-neg-scan.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Litchfield-Hampshire-6th-July-Wheat-P2-35mm-neg-scan.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Litchfield-Hampshire-6th-July-Wheat-P3-35mm-neg-scan.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1266',
+    parentId: 'crop-circle-formations',
+    name: "Whitchurch Formation",
+    description: "A crop circle formation appearing at Whitchurch in Hampshire, England, during the 1995 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1266',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1995_07_07_whitchurch-hampshire-wheat-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1267',
+    parentId: 'crop-circle-formations',
+    name: "Kingsclere Formation",
+    description: "A crop circle formation appearing at Kingsclere in Hampshire, England, during the 1995 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1267',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1995_07_15_kingsclere-hampshire-wheat-oh-35mm-neg-sca.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1995_07_15_kingsclere-hampshire-wheat-p-35mm-neg-sca.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Kingsclere-Hampshire-mid-July-1995-Wheat-P2-35mm-neg-scan.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Kingsclere-Hampshire-mid-July-1995-Wheat-P3-35mm-neg-scan.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1268',
+    parentId: 'crop-circle-formations',
+    name: "Harewood Formation",
+    description: "A crop circle formation appearing at Harewood in Hampshire, England, during the 1995 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1268',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1995_07_01_harewood-hampshire-july-1995-wheat-35mm-neg-e1426680509509.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1269',
+    parentId: 'crop-circle-formations',
+    name: "Exton Formation",
+    description: "A crop circle formation appearing at Exton in Hampshire, England, during the 1995 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1269',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1995_07_01_exton-hampshire-july-1995-wheat-35mm-neg-sca.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1270',
+    parentId: 'crop-circle-formations',
+    name: "Exton Formation",
+    description: "A crop circle formation appearing at Exton in Hampshire, England, during the 1995 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1270',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1995_07_01_exton-hampshire-july-1995-wheat-p-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1995_02_01_exton-hampshire-july-1995-wheat-p2-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Exton-Hampshire-July-1995-Wheat-P2-35mm-neg-scan.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Exton-Hampshire-July-1995-Wheat-P3-35mm-neg-scan.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1271',
+    parentId: 'crop-circle-formations',
+    name: "Stockbridge Down Formation",
+    description: "A crop circle formation appearing at Stockbridge Down in Hampshire, England, during the 1995 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1271',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1995_07_01_stockbridge-down-hampshire-july-1995-wheat-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1272',
+    parentId: 'crop-circle-formations',
+    name: "East Meon Formation",
+    description: "A crop circle formation appearing at East Meon in Hampshire, England, during the 1995 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1272',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1995_07_01_east-meon-hampshire-july-1995-wheat-35mm-oh-neg-sca.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1995_07_01_east-meon-hampshire-july-1995-wheat-p-35mm-neg-sca.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/East-Meon-Hampshire-July-1995-Wheat-P2-35mm-neg-scan.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/East-Meon-Hampshire-July-1995-Wheat-P3-35mm-neg-scan.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/East-Meon-Hampshire-July-1995-Wheat-P4-35mm-neg-scan.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/East-Meon-Hampshire-July-1995-Wheat-P5-35mm-neg-scan.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1273',
+    parentId: 'crop-circle-formations',
+    name: "Goodworth Clatford Formation",
+    description: "A crop circle formation appearing at Goodworth Clatford in Hampshire, England, during the 1995 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1273',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1995_07_01_goodworth-clatford-hampshire-july-1995-barley-35mm-neg-sca.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Goodworth-Clatford-Hampshire-July-1995-Barley-P-35mm-neg-scan.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Goodworth-Clatford-Hampshire-July-1995-Barley-P2-35mm-neg-scan.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1274',
+    parentId: 'crop-circle-formations',
+    name: "Winterbourne Bassett Formation",
+    description: "A crop circle formation appearing at Winterbourne Bassett in Wiltshire, England, during the 1995 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1274',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1995_07_23_winterbourne-bassett-wilts-wheat-35mm-neg-sca.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Winterbourne-Bassett-Wiltshire-23rd-July-1995-Wheat-P2-35mm-neg-scan.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Winterbourne-Bassett-Wiltshire-23rd-July-1995-Wheat-P3-35mm-neg-scan.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1275',
+    parentId: 'crop-circle-formations',
+    name: "Winterbourne Bassett Formation",
+    description: "A crop circle formation appearing at Winterbourne Bassett in Wiltshire, England, during the 1995 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1275',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/03/Winterbourne-Bassett-Wiltshire-23rd-July-1995-Wheat-P-35mm-neg-scan.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1276',
+    parentId: 'crop-circle-formations',
+    name: "Andover Formation",
+    description: "A crop circle formation appearing at Andover in Hampshire, England, during the 1995 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1276',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1995_07_01_andover-hampshire-july-1995-wheat-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1277',
+    parentId: 'crop-circle-formations',
+    name: "Roundway Formation",
+    description: "A crop circle formation appearing at Roundway in Wiltshire, England, during the 1995 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1277',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1995_07_20_roundway-wiltshire-wheat-35mm-neg-sca.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1278',
+    parentId: 'crop-circle-formations',
+    name: "Winterbourne Stoke Formation",
+    description: "A crop circle formation appearing at Winterbourne Stoke in Wiltshire, England, during the 1995 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1278',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1995_07_01_winterbourne-stoke-wiltshire-july-1995-wheat-35mm-neg-sca.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1279',
+    parentId: 'crop-circle-formations',
+    name: "The Sanctuary Nr Avebury Formation",
+    description: "A crop circle formation appearing at The Sanctuary Nr Avebury in Wiltshire, England, during the 1994 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1279',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_04_25_the-sanctuary-nr-avebury-wilts-oilseed-rape-35mm-neg-sca.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_04_25_the-sanctuary-nr-avebury-wilts-oilseed-rape-35mmsepia-neg-sca.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1280',
+    parentId: 'crop-circle-formations',
+    name: "Cheesefoot Head Formation",
+    description: "A crop circle formation appearing at Cheesefoot Head in Hampshire, England, during the 1994 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1280',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_05_01_cheesefoot-head-hants-oilseed-rape-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1281',
+    parentId: 'crop-circle-formations',
+    name: "Furze Knoll Formation",
+    description: "A crop circle formation appearing at Furze Knoll in Wiltshire, England, during the 1994 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1281',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_05_07_furze-knoll-devizes-wilts-oilseed-rape-35mm-neg-sca.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Furze-Knoll-Wiltshire-7th-May-1994-Oilseed-Rape-P2-35mm-neg-scan.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Furze-Knoll-Wiltshire-7th-May-1994-Oilseed-Rape-GS-35mm-neg-scan.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Furze-Knoll-Wiltshire-7th-May-1994-Oilseed-Rape-GS2-35mm-neg-scan.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1282',
+    parentId: 'crop-circle-formations',
+    name: "Avebury Avenue Formation",
+    description: "A crop circle formation appearing at Avebury Avenue in Wiltshire, England, during the 1994 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1282',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/03/Avebury-Avenue-Wiltshire-30th-June-1994-Wheat-RS-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Avebury-Avenue-Wiltshire-30th-June-1994-Wheat-P-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Avebury-Avenue-Wiltshire-30th-June-1994-Wheat-P2-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Avebury-Avenue-Wiltshire-30th-June-1994-Wheat-P3-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1283',
+    parentId: 'crop-circle-formations',
+    name: "Beacon Hill Burghclere Formation",
+    description: "A crop circle formation appearing at Beacon Hill Burghclere in Hampshire, England, during the 1994 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1283',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_07_01_beacon-hill-burghclere-hants-wheat-and-rye-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1284',
+    parentId: 'crop-circle-formations',
+    name: "Punch Bowl Cheesefoot Head Winchester Formation",
+    description: "A crop circle formation appearing at Punch Bowl Cheesefoot Head Winchester in Hampshire, England, during the 1994 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1284',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_07_01_punch-bowl-cheesefoot-head-winchester-hants-wheat-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1285',
+    parentId: 'crop-circle-formations',
+    name: "Uffington White Horse Formation",
+    description: "A crop circle formation appearing at Uffington White Horse in Oxfordshire, England, during the 1994 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1285',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_01_01_uffington-white-horse-oxfordshire-wheat-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1286',
+    parentId: 'crop-circle-formations',
+    name: "Bishops Cannings Formation",
+    description: "A crop circle formation appearing at Bishops Cannings in Wiltshire, England, during the 1994 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1286',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_07_15_bishops-cannings-wiltshire-wheat-oh-35mm-neg-sca.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_07_15_bishops-cannings-wiltshire-wheat-p-35mm-neg-sca.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_07_15_bishops-cannings-wiltshire-wheat-p2-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_07_15_bishops-cannings-wiltshire-wheat-p3-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1287',
+    parentId: 'crop-circle-formations',
+    name: "Bishops Cannings Formation",
+    description: "A crop circle formation appearing at Bishops Cannings in Wiltshire, England, during the 1994 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1287',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/03/Bishops-Cannings-Wiltshire-15th-July-1994-Wheat-OH2-35mm-neg-scan.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1288',
+    parentId: 'crop-circle-formations',
+    name: "Hackpen Hill Formation",
+    description: "A crop circle formation appearing at Hackpen Hill in Wiltshire, England, during the 1994 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1288',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_08_01_hackpen-hill-wiltshire-wheat-oh-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_08_01_hackpen-hill-wiltshire-wheat-p-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_02_01_hackpen-hill-wiltshire-august-wheat-p2-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1289',
+    parentId: 'crop-circle-formations',
+    name: "Wilsford Formation",
+    description: "A crop circle formation appearing at Wilsford in Wiltshire, England, during the 1994 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1289',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_07_15_wilsford-hampshire-wheat-oh-35mm-neg-sca.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_07_15_wilsford-hampshire-wheat-p-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Wilsford-Wiltshire-15th-July-1994-Wheat-P2-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Wilsford-Wiltshire-15th-July-1994-Wheat-RS-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1290',
+    parentId: 'crop-circle-formations',
+    name: "East Field Alton Barnes Formation",
+    description: "A crop circle formation appearing at East Field Alton Barnes in Wiltshire, England, during the 1994 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1290',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_07_21_east-field-alton-barnes-wilts-wheat-oh-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_07_21_east-field-alton-barnes-wilts-wheat-p-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_07_21_east-field-alton-barnes-wilts-wheat-p2-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1291',
+    parentId: 'crop-circle-formations',
+    name: "West Stowell Formation",
+    description: "A crop circle formation appearing at West Stowell in Wiltshire, England, during the 1994 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1291',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_07_04_west-stowell-wiltshire-wheat-oh-35mm-neg-sca.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_07_04_west-stowell-wiltshire-wheat-p-35mm-neg-sca.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_07_04_west-stowell-wiltshire-wheat-p2-35mm-neg-sca.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_07_04_west-stowell-wiltshire-wheat-p3-35mm-neg-sca.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/West-Stowell-Wiltshire-23rd-July-1994-Wheat-PFE-35mm-neg-scan.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/West-Stowell-Wiltshire-23rd-July-1994-Wheat-P4-35mm-neg-scan.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/West-Stowell-Wiltshire-23rd-July-1994-Wheat-P5-35mm-neg-scan.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/West-Stowell-Wiltshire-23rd-July-1994-Wheat-P6-35mm-neg-scan.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1292',
+    parentId: 'crop-circle-formations',
+    name: "Avebury Ave Formation",
+    description: "A crop circle formation appearing at Avebury Ave in Wiltshire, England, during the 1994 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1292',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_07_23_avebury-ave-wiltshire-wheat-oh-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1293',
+    parentId: 'crop-circle-formations',
+    name: "Avebury Avenue Formation",
+    description: "A crop circle formation appearing at Avebury Avenue in Wiltshire, England, during the 1994 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1293',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2015/03/Avebury-Avenue-Wiltshire-23rd-July-1994-Wheat-P2-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Avebury-Avenue-Wiltshire-23rd-July-1994-Wheat-P3-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Avebury-Avenue-Wiltshire-23rd-July-1994-Wheat-P-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Avebury-Avenue-Wiltshire-23rd-July-1994-Wheat-P4-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1294',
+    parentId: 'crop-circle-formations',
+    name: "Beacon Hill Burghclere Formation",
+    description: "A crop circle formation appearing at Beacon Hill Burghclere in Hampshire, England, during the 1994 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1294',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_07_01_beacon-hill-burghclere-hants-wheat-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1295',
+    parentId: 'crop-circle-formations',
+    name: "Uffington Formation",
+    description: "A crop circle formation appearing at Uffington in Oxfordshire, England, during the 1994 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1295',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_07_01_uffington-oxfordshire-wheat-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1296',
+    parentId: 'crop-circle-formations',
+    name: "Olivers Castle Formation",
+    description: "A crop circle formation appearing at Olivers Castle in Wiltshire, England, during the 1994 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1296',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_07_01_olivers-castle-wiltshire-wheat-oh-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_07_01_olivers-castle-wiltshire-wheat-l-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_07_01_olivers-castle-wiltshire-wheat-p-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Olivers-Castle-Wiltshire-July-1994-Wheat-P2-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/Olivers-Castle-Wiltshire-July-1994-Wheat-P3-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1297',
+    parentId: 'crop-circle-formations',
+    name: "Hazeley Down Formation",
+    description: "A crop circle formation appearing at Hazeley Down in Hampshire, England, during the 1994 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1297',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_08_01_nr-andover-hampshire-wheat-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1298',
+    parentId: 'crop-circle-formations',
+    name: "Burghclere Formation",
+    description: "A crop circle formation appearing at Burghclere in Hampshire, England, during the 1994 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1298',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_07_01_burghclere-hants-rye-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1299',
+    parentId: 'crop-circle-formations',
+    name: "West Overton Formation",
+    description: "A crop circle formation appearing at West Overton in Wiltshire, England, during the 1994 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1299',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_07_28_west-overton-wiltshire-wheat-35mm-neg-sca.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/West-Overton-Wiltshire-28th-July-1994-Wheat-P-35mm-neg-scan.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/West-Overton-Wiltshire-28th-July-1994-Wheat-P2-35mm-neg-scan.jpg","https://temporarytemples.co.uk/wp-content/uploads/2015/03/West-Overton-Wiltshire-28th-July-1994-Wheat-P3-35mm-neg-scan.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1300',
+    parentId: 'crop-circle-formations',
+    name: "Cheesefoot Head Formation",
+    description: "A crop circle formation appearing at Cheesefoot Head in Hampshire, England, during the 1994 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1300',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_07_08_cheesefoot-head-hants-wheat-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1301',
+    parentId: 'crop-circle-formations',
+    name: "Brockwood Park Formation",
+    description: "A crop circle formation appearing at Brockwood Park in Hampshire, England, during the 1994 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1301',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_07_30_brockwood-park-hants-oats-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1302',
+    parentId: 'crop-circle-formations',
+    name: "West Meon Formation",
+    description: "A crop circle formation appearing at West Meon in Hampshire, England, during the 1994 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1302',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_07_01_west-meon-hampshire-wheat-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_07_01_west-meon-hampshire-barley-oh-35mm-neg.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_07_01_west-meon-hampshire-barley-p-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1303',
+    parentId: 'crop-circle-formations',
+    name: "West Meon Formation",
+    description: "A crop circle formation appearing at West Meon in Hampshire, England, during the 1994 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1303',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_07_01_west-meon-hampshire-barley-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1304',
+    parentId: 'crop-circle-formations',
+    name: "Froxfield Formation",
+    description: "A crop circle formation appearing at Froxfield in Wiltshire, England, during the 1994 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1304',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_08_05_froxfield-wiltshire-wheat-35mm-neg-sca.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1305',
+    parentId: 'crop-circle-formations',
+    name: "Froxfield Formation",
+    description: "A crop circle formation appearing at Froxfield in Wiltshire, England, during the 1994 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1305',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_08_01_froxfield-wiltshire-wheat-35mm-neg.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1306',
+    parentId: 'crop-circle-formations',
+    name: "Avebury Henge Formation",
+    description: "A crop circle formation appearing at Avebury Henge in Wiltshire, England, during the 1994 season.",
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1306',
+    images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_08_11_avebury-henge-wiltshire-wheat-oh-35mm-neg-sca.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_08_11_avebury-henge-wiltshire-wheat-p-35mm-neg-sca.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_08_11_avebury-henge-wiltshire-wheat-p2-35mmm-neg-sca.jpg"],
+    sources: ['Temporary Temples Crop Circle Archives']
+  },
 ];
