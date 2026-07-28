@@ -1753,7 +1753,7 @@ const chunk_0: any[] = [  {
     mapFeatureId: 'ancient-temple-of-set',
     relatedIds: ['church-of-set', 'typhonian-order', 'michael-aquino', 'osiris', 'horus', 'isis', 'ra', 'satan'],
     sources: ['Pyramid Texts', 'Egyptian Book of the Dead', 'De Iside et Osiride (Plutarch)'],
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Seth_deity.svg/1280px-Seth_deity.svg.png'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Set.svg/500px-Set.svg.png'],
     isApocryphal: true
   },  {
     id: 'thoth',
