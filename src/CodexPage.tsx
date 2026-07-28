@@ -976,6 +976,7 @@ export default function CodexPage({
     if (curr.id === 'alchemy-occult') return '#59DCB7'; // Mint/Teal (The Occult)
     if (curr.id === 'people-groups') return '#BCA7C7'; // Lavender (People Groups)
     if (curr.id === 'nasa-root') return '#BACEF4'; // Light Blue (NASA / Space)
+    if (curr.id === 'old-world-structures') return '#B5CED5'; // Slate Blue-Gray (Old World Structures)
     
     return LAYER_COLORS['Default'];
   }
@@ -1041,6 +1042,8 @@ export default function CodexPage({
         return '#322280'; // Dark indigo
       case '#bca7c7': // People Groups
         return '#502d66'; // Dark purple/lavender
+      case '#b5ced5': // Old World Structures
+        return '#3c4f57'; // Dark slate blue-gray
       default:
         return color;
     }

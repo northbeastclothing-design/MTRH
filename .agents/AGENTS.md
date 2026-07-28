@@ -35,3 +35,11 @@ When choosing or changing colors for map layers, pins, themes, or UI components,
 * `#B5CED5` (Old World Structures / Slate Blue-Gray)
 * `#b6a6ff` (Default / Purple-Blue)
 
+
+## Codex Node & Layer Color Mapping Consistency Protocol
+Whenever adding or updating a root category/layer in the Map, Timeline, or Codex:
+1. **Define in LAYER_COLORS / LAYER_CONFIG**: Add the layer name and color mapping to `LAYER_COLORS` and `LAYER_ICONS` in `src/CodexPage.tsx`, and `LAYER_CONFIG` in `src/App.tsx`.
+2. **Explicitly Map in `getNodeColor`**: If the layer maps to a root node in `TERM_TREE_DATA` (defined in `src/termTreeData.ts`), you MUST explicitly map its root node ID to its theme color in the `getNodeColor` function in `src/CodexPage.tsx`. Do not let it fall back to the default purple-blue (`#b6a6ff`).
+3. **Contrast Adjustments**: Add the corresponding contrast-adjusted dark color for the light mode theme in `adjustColorForContrast` inside `src/CodexPage.tsx`.
+
+
