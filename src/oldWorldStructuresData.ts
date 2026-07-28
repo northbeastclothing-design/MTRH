@@ -16,21 +16,6 @@ export interface OldWorldStructureCase {
 
 export const OLD_WORLD_STRUCTURES_DATA: OldWorldStructureCase[] = [
   {
-    "id": "structure-bran-castle",
-    "name": "Bran Castle (Dracula's Castle) - Bran, Romania",
-    "category": "Old World Structures",
-    "type": "Point",
-    "coordinates": {
-      "lng": 25.3672,
-      "lat": 45.5149
-    },
-    "date": 1388,
-    "displayDate": "1388 CE",
-    "description": "Perched dramatically on a steep cliff in the Carpathian Mountains between Transylvania and Wallachia, Bran Castle is a famous medieval fortress completed in 1388. Widely associated with Bram Stoker's Dracula legend and Vlad the Impaler, this Gothic stronghold served as a strategic military customs post and defensive bastion against Ottoman expansion.",
-    "source": "Romanian Ministry of Culture / Bran Castle Museum Archives",
-    "images": ["https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Castelul_Bran2.jpg/500px-Castelul_Bran2.jpg"]
-  },
-  {
     "id": "structure-neuschwanstein",
     "name": "Neuschwanstein Castle - Schwangau, Germany",
     "category": "Old World Structures",

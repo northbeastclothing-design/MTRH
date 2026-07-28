@@ -818,7 +818,12 @@ const processIncomingRecord = (item: any, index: number) => {
     }
   }
 
-  const tagsSet = new Set([normalizedCategory]);
+  const tagsSet = new Set<string>();
+  if (Array.isArray(item.categories)) {
+    item.categories.forEach((cat: string) => tagsSet.add(cat));
+  } else {
+    tagsSet.add(normalizedCategory);
+  }
 
   return {
     ...item,

@@ -27450,6 +27450,10 @@
     "id": "anomaly-Ghosts---Hauntings-12",
     "name": "Bran Castle",
     "category": "Ghosts & Hauntings",
+    "categories": [
+      "Ghosts & Hauntings",
+      "Old World Structures"
+    ],
     "type": "Point",
     "coordinates": {
       "lng": 25.3672,
@@ -50084,6 +50088,410 @@
       "https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_08_11_avebury-henge-wiltshire-wheat-oh-35mm-neg-sca.jpg",
       "https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_08_11_avebury-henge-wiltshire-wheat-p-35mm-neg-sca.jpg",
       "https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_08_11_avebury-henge-wiltshire-wheat-p2-35mmm-neg-sca.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-mermaids",
+    "name": "Fiji Mermaid & Kealakekua Bay Merfolk Sightings",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -155.9244,
+      "lat": 19.4795
+    },
+    "date": 1842,
+    "description": "Historical records of human-like aquatic cryptids span centuries. While Kealakekua Bay in Hawaii is steeped in indigenous and early European sailor accounts of merfolk, public interest peaked in 1842 when P.T. Barnum exhibited the 'Fiji Mermaid'—a mummified monkey-fish hybrid that triggered international debates on evolutionary anomalies and cryptozology.",
+    "source": "Fiji Museum Archives / Kealakekua Bay Historical Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Kealakekua_Bay_in_the_morning.jpg/500px-Kealakekua_Bay_in_the_morning.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Ancient-Texts-pliny",
+    "name": "Pliny the Elder's Naturalis Historia - Pompeii",
+    "category": "Ancient Texts",
+    "type": "Point",
+    "coordinates": {
+      "lng": 14.4267,
+      "lat": 40.8224
+    },
+    "date": 77,
+    "description": "Pliny the Elder, a Roman commander and naturalist, published 'Naturalis Historia' in 77 CE, cataloging all natural knowledge. Pliny died at the base of Mount Vesuvius in Pompeii while attempting to rescue citizens from the eruption. His masterwork documented early geographic grids alongside legendary cryptids like basilisks, manticores, and dragons.",
+    "source": "Naturalis Historia (Pliny the Elder)",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Grande_Illustrazione_del_Lombardo_Veneto_Vol_3_Plinio_Secondo_300dpi.jpg/500px-Grande_Illustrazione_del_Lombardo_Veneto_Vol_3_Plinio_Secondo_300dpi.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Ancient-Texts-herodotus",
+    "name": "Herodotus' The Histories - Halicarnassus",
+    "category": "Ancient Texts",
+    "type": "Point",
+    "coordinates": {
+      "lng": 27.4305,
+      "lat": 37.0344
+    },
+    "date": -440,
+    "description": "Herodotus, writing from Halicarnassus (modern Bodrum, Turkey) around 440 BCE, established the field of history. Alongside political wars, his writings recorded bizarre phenomena, ancient Egyptian rituals, and reports of fantastic creatures, including giant gold-digging ants, winged serpents in Arabia, and the lifecycle of the legendary phoenix.",
+    "source": "The Histories (Herodotus)",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Marble_bust_of_Herodotos_MET_DT11742_%28cropped%29.jpg/500px-Marble_bust_of_Herodotos_MET_DT11742_%28cropped%29.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Ancient-Texts-marcopolo",
+    "name": "Marco Polo's Travels - Venice",
+    "category": "Ancient Texts",
+    "type": "Point",
+    "coordinates": {
+      "lng": 12.3357,
+      "lat": 45.4371
+    },
+    "date": 1300,
+    "description": "Venetian merchant Marco Polo dictated his travels while imprisoned in Genoa around 1298-1300 CE. His memoirs documented the wealth and customs of the Mongol Empire. His journals also introduced Europeans to strange zoological anomalies, describing large 'dragons' (crocodiles) that hunted tigers and 'unicorns' (rhinoceroses) that bathed in mud.",
+    "source": "The Travels of Marco Polo",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Frontispice_%C3%A9dition_de_Nuremberg_1477_%28cropped%29.png/330px-Frontispice_%C3%A9dition_de_Nuremberg_1477_%28cropped%29.png"
+    ]
+  },
+  {
+    "id": "structure-leif-erikson-vinland",
+    "name": "L'Anse aux Meadows (Leif Erikson's Vinland Settlement)",
+    "categories": ["Megaliths / Structures", "Old World Structures"],
+    "category": "Megaliths / Structures",
+    "type": "Point",
+    "coordinates": {
+      "lng": -55.5325,
+      "lat": 51.5953
+    },
+    "date": 1000,
+    "description": "L'Anse aux Meadows in Newfoundland is the only authenticated Norse site in North America. Dating to around 1000 CE, the timber-and-sod buildings match the geographic descriptions of 'Vinland' in Icelandic Sagas. Led by explorer Leif Erikson, these settlements represent the earliest European landfall in the Americas.",
+    "source": "UNESCO World Heritage Centre / Parks Canada",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Authentic_Viking_recreation.jpg/500px-Authentic_Viking_recreation.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-The-Occult-santeria",
+    "name": "Regla Santería Shrine - Havana, Cuba",
+    "category": "The Occult",
+    "type": "Point",
+    "coordinates": {
+      "lng": -82.3315,
+      "lat": 23.1256
+    },
+    "date": 1800,
+    "description": "Santería (Regla de Ocha) is a syncretic religion that developed in Cuba among Yoruba slaves. Located historically around Regla in Havana, Santería fuses West African spiritualism and communication with intermediate deities (Orishas) with Roman Catholic saint veneration. Practices encompass ritual possession, animal offerings, and sacred batá drumming.",
+    "source": "Afro-Cuban Ethnographic Studies / Religious Archives",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Havana_-_Cuba_-_0616.jpg/500px-Havana_-_Cuba_-_0616.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Cryptid-Sightings-littlepeople",
+    "name": "Pryor Mountains (Little People Sacred Site)",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -108.3167,
+      "lat": 45.1667
+    },
+    "date": 1932,
+    "description": "Native American oral traditions describe the 'Little People'—small, highly aggressive supernatural humanoids. The Crow Nation considers the Pryor Mountains in Montana to be the sacred home of the Nirumbee (Little People). Public interest erupted in 1932 when the 'San Pedro Mountains Mummy', a 14-inch mummified humanoid skull, was discovered in Wyoming.",
+    "source": "Crow Nation Oral Histories / Smithsonian Archives",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/The_Pryors_Billings.JPG/500px-The_Pryors_Billings.JPG"
+    ]
+  },
+  {
+    "id": "anomaly-UFOs---Sightings-orbs",
+    "name": "Hessdalen Light Orbs - Norway",
+    "categories": ["UFOs - Sightings", "Ghosts & Hauntings"],
+    "category": "UFOs - Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": 11.2333,
+      "lat": 62.7833
+    },
+    "date": 1981,
+    "description": "Hessdalen Valley in Norway is famous for recurring luminous, orb-like light anomalies. Active since at least the 1930s, intense activity between 1981 and 1984 drew global scientific investigation. The glowing orbs hover, float, and split, exhibiting strong electromagnetic signatures and mysterious radar-only reflections.",
+    "source": "Hessdalen Observatory Scientific Project Logs",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Hessdalen_-_Fo30141603210085.jpg/500px-Hessdalen_-_Fo30141603210085.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Alien-Abductions-hopkinsville",
+    "name": "Kelly-Hopkinsville Goblin Encounter",
+    "category": "Alien Abductions",
+    "type": "Point",
+    "coordinates": {
+      "lng": -87.4789,
+      "lat": 36.9697
+    },
+    "date": 1955,
+    "description": "On August 21, 1955, the Sutton family farm in Kelly, near Hopkinsville, Kentucky, reported a close encounter with small, glowing humanoid entities. Described as three-foot-tall 'goblins' with oversized heads, large ears, and metallic skin, the family claimed to hold them off with gunfire for hours. The case is one of the most famous in ufology.",
+    "source": "Christian County Sheriff Records / Project Blue Book Logs",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Hopkinsville_First_Presbyterian.JPG/500px-Hopkinsville_First_Presbyterian.JPG"
+    ]
+  },
+  {
+    "id": "anomaly-Myths---Legends-goblins",
+    "name": "Dartmoor Goblin Lore (Wistman's Wood)",
+    "category": "Myths / Legends",
+    "type": "Point",
+    "coordinates": {
+      "lng": -3.9833,
+      "lat": 50.5667
+    },
+    "date": 1850,
+    "description": "Goblins and pixies are small, mischievous subterranean spirits in British folklore. In Dartmoor, England, Wistman's Wood—an ancient, moss-draped dwarf oak forest—is historically associated with pixies and elemental goblins. Folktales warn of travelers being 'pixie-led' off cliffs or lured into hollow stone tors by these entities.",
+    "source": "Devonshire Folklore Collections",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Wistman%27s_Wood_in_winter.jpg/500px-Wistman%27s_Wood_in_winter.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Myths---Legends-duende",
+    "name": "Tata Duende Sanctuary - San Ignacio, Belize",
+    "category": "Myths / Legends",
+    "type": "Point",
+    "coordinates": {
+      "lng": -89.0667,
+      "lat": 17.1500
+    },
+    "date": 1900,
+    "description": "In Iberian and Latin American folklore, the Duende is a small, goblin-like elemental spirit. In Belize, Mayan and Mestizo legends describe the 'Tata Duende' as a short, bearded forest guardian wearing a large red hat, possessing backward-pointing feet, and lacking thumbs. He is said to protect children and punish abusers of forest animals.",
+    "source": "Belizean Folklore Archives / Mayan Mythologies",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Goya_-_Caprichos_%2849%29.jpg/500px-Goya_-_Caprichos_%2849%29.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Ancient-People-Groups-medjay",
+    "name": "Medjay Elite Nubian Garrison - Aswan",
+    "category": "Ancient People Groups",
+    "type": "Point",
+    "coordinates": {
+      "lng": 32.8998,
+      "lat": 24.0889
+    },
+    "date": -2400,
+    "description": "The Medjay were originally a nomadic Nubian people group inhabiting the Eastern Desert near Aswan. Renowned for their tracking, combat, and archery skills, they were recruited by the Egyptian Pharaohs during the Middle Kingdom. They evolved into an elite paramilitary force, royal guards, and desert scouts, eventually giving rise to the modern concept of police.",
+    "source": "Egyptian Old Kingdom Inscriptions / Nubian Excavation Data",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Nubians_at_Aswan.jpg/500px-Nubians_at_Aswan.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-The-Occult-nostradamus",
+    "name": "Nostradamus Residence - Salon-de-Provence",
+    "category": "The Occult",
+    "type": "Point",
+    "coordinates": {
+      "lng": 5.0972,
+      "lat": 43.6406
+    },
+    "date": 1555,
+    "description": "Michel de Nostredame (Nostradamus) was a French astrologer, physician, and seer who lived and died in Salon-de-Provence. In 1555, he published 'Les Prophéties', a collection of 942 poetic quatrains. Believers credit him with predicting major world events (such as the Great Fire of London, rise of dictators, and world wars) using occult scrying methods.",
+    "source": "Les Prophéties (Nostradamus)",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Nostradamus_by_Cesar.jpg/500px-Nostradamus_by_Cesar.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-The-Occult-mothershipton",
+    "name": "Mother Shipton's Cave - Knaresborough",
+    "category": "The Occult",
+    "type": "Point",
+    "coordinates": {
+      "lng": -1.4706,
+      "lat": 53.9989
+    },
+    "date": 1530,
+    "description": "Ursula Southeil (Mother Shipton) was a legendary English prophetess born in Knaresborough. Living during the reign of Henry VIII, she is associated with a cave and a petrifying well that turns wooden objects into stone. Her quatrains predicted the Great Plague, the Great Fire of London, the defeat of the Spanish Armada, and the invention of telegraphs and aircraft.",
+    "source": "Knaresborough Historical Society",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Charlotte-gale-mother-shiptons-12x8-4393.jpg/500px-Charlotte-gale-mother-shiptons-12x8-4393.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Ancient-People-Groups-akhenaten",
+    "name": "Amarna (Monotheistic Capital of Akhenaten)",
+    "category": "Ancient People Groups",
+    "type": "Point",
+    "coordinates": {
+      "lng": 30.9036,
+      "lat": 27.6517
+    },
+    "date": -1353,
+    "description": "Pharaoh Akhenaten revolutionized Egypt by establishing a monotheistic religion centering on the worship of the Aten (Sun Disk). He founded a new capital city at Akhetaten (modern Amarna). Akhenaten, his queen Nefertiti, and their daughters were depicted in art with unusually elongated skulls and thin limbs, inspiring alternate theories regarding the royal lineage's origins.",
+    "source": "Amarna Excavation Project / Egyptian Museum Archives",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/GD-EG-Caire-Mus%C3%A9e061.JPG/500px-GD-EG-Caire-Mus%C3%A9e061.JPG"
+    ]
+  },
+  {
+    "id": "anomaly-The-Occult-akashic",
+    "name": "Akashic Record Origin (Adyar Theosophical HQ)",
+    "category": "The Occult",
+    "type": "Point",
+    "coordinates": {
+      "lng": 80.2514,
+      "lat": 13.0103
+    },
+    "date": 1888,
+    "description": "The Akashic Records represent a non-physical cosmic database containing the energetic imprint of all thoughts, words, actions, and history ever to occur in the universe. Derived from Sanskrit 'akasha' (ether), the concept was popularized in the West at the Theosophical Society in Adyar, Chennai, by Madame Blavatsky and Edgar Cayce.",
+    "source": "The Secret Doctrine (Helena Blavatsky) / A.R.E. Archives",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Map_Adyar.png/500px-Map_Adyar.png"
+    ]
+  },
+  {
+    "id": "structure-dharmarajeshwar-monolithic",
+    "name": "Dharmarajeshwar Rock-Cut Monolithic Temple",
+    "categories": ["Megaliths / Structures", "Old World Structures"],
+    "category": "Megaliths / Structures",
+    "type": "Point",
+    "coordinates": {
+      "lng": 75.3283,
+      "lat": 24.1958
+    },
+    "date": 800,
+    "description": "Dharmarajeshwar is a magnificent rock-cut Hindu temple in Mandsaur, Madhya Pradesh, carved directly out of solid basalt hill during the 8th-9th centuries. Similar to the Kailash Temple, workers carved a deep trench into the hill, leaving a massive central block of stone that was then intricately sculpted from top to bottom into a temple complex.",
+    "source": "Archaeological Survey of India (ASI) Records",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/0111321_Pasupatinath_temple%2C_Mandsaur_Madhya_Pradesh_138.jpg/500px-0111321_Pasupatinath_temple%2C_Mandsaur_Madhya_Pradesh_138.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Underworld-Entrances-hades",
+    "name": "Greek Hades Portal (Cape Matapan Cave)",
+    "category": "Underworld Entrances",
+    "type": "Point",
+    "coordinates": {
+      "lng": 22.4853,
+      "lat": 36.4025
+    },
+    "date": -800,
+    "description": "In Greek mythology, Hades is the underworld realm of the dead. Cape Matapan (Tainaron Cave) in Greece was considered the primary geographic gate to Hades, used by Heracles and Orpheus. The underworld is divided into distinct places: Elysium for heroes, the Asphodel Meadows for common souls, and Tartarus—the deep abyss of torment.",
+    "source": "The Iliad & The Odyssey (Homer) / Geographic Logs",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Cape_Matapan_08.JPG/500px-Cape_Matapan_08.JPG"
+    ]
+  },
+  {
+    "id": "anomaly-Underworld-Entrances-xibalba",
+    "name": "ATM Cave (Mayan Underworld Xibalba Gate)",
+    "category": "Underworld Entrances",
+    "type": "Point",
+    "coordinates": {
+      "lng": -88.9719,
+      "lat": 17.1864
+    },
+    "date": 250,
+    "description": "Xibalba is the multi-layered Mayan underworld described in the Popol Vuh as a realm of trials ruled by twelve death lords. Actun Tunichil Muknal (ATM Cave) in Belize served as a major entrance. The cave contains ancient Mayan pottery, sacrificial structures, and crystalized skeletons (such as the 'Crystal Maiden') sacrificed to the underworld lords.",
+    "source": "Popol Vuh / Belize Archaeological Studies",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Actun_Tunichil_Muknal.jpg/500px-Actun_Tunichil_Muknal.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Underworld-Entrances-helheim",
+    "name": "Norse Helheim & Tjängvide Runestone",
+    "category": "Underworld Entrances",
+    "type": "Point",
+    "coordinates": {
+      "lng": 5.8624,
+      "lat": 61.5978
+    },
+    "date": 900,
+    "description": "In Norse mythology, Helheim (or Hel) is the cold, misty underworld ruled by the goddess Hel, where those who die of sickness or old age go. Reached by crossing the gold-leafed bridge Gjallarbrú over the river Gjöll, Helheim is historically depicted on ancient Norse runestones (such as the Tjängvide stone) depicting riders traveling to the halls of the dead.",
+    "source": "Prose Edda (Snorri Sturluson) / Gotland Runestone Registry",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Tj%C3%A4ngvide.jpg/500px-Tj%C3%A4ngvide.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Underworld-Entrances-diyu",
+    "name": "Chinese Diyu (Fengdu Ghost City Portal)",
+    "category": "Underworld Entrances",
+    "type": "Point",
+    "coordinates": {
+      "lng": 107.7289,
+      "lat": 29.8719
+    },
+    "date": 200,
+    "description": "Diyu is the Chinese Buddhist and Taoist underworld, consisting of multiple courts and chambers where souls are judged. Fengdu Ghost City, built on Ming Mountain, serves as the legendary geographic gate to Diyu. The site contains temples and statues depicting the trials of the Underworld, including the Bridge of Helplessness and Guimen Gate.",
+    "source": "Fengdu Temple Archives / Chinese Underworld Folklore",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/%E5%B9%BD%E9%83%BD.JPG/500px-%E5%B9%BD%E9%83%BD.JPG"
+    ]
+  },
+  {
+    "id": "structure-church-st-george-lalibela",
+    "name": "Biete Giyorgis (Monolithic Church of St. George)",
+    "categories": ["Megaliths / Structures", "Old World Structures"],
+    "category": "Megaliths / Structures",
+    "type": "Point",
+    "coordinates": {
+      "lng": 39.0417,
+      "lat": 12.0319
+    },
+    "date": 1200,
+    "description": "Biete Giyorgis (Church of St. George) in Lalibela, Ethiopia, is the most famous of eleven monolithic rock-cut churches built during the reign of King Lalibela. Carved vertically downwards out of solid volcanic tuff, this spectacular cruciform church stands inside a deep trench and is connected to other churches by subterranean tunnels.",
+    "source": "UNESCO World Heritage Centre / Ethiopian Ministry of Culture",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lalibela%2C_san_giorgio%2C_esterno_24.jpg/500px-Lalibela%2C_san_giorgio%2C_esterno_24.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Ancient-Texts-codexgigas",
+    "name": "Codex Gigas (The Devil's Bible) - Broumov",
+    "category": "Ancient Texts",
+    "type": "Point",
+    "coordinates": {
+      "lng": 16.3314,
+      "lat": 50.5858
+    },
+    "date": 1229,
+    "description": "The Codex Gigas is the largest surviving medieval manuscript in the world, created at the Benedictine monastery of Podlažice and later housed in Broumov. Famous for a massive, full-page illustration of the Devil, legend claims a monk condemned to be walled up alive wrote the entire book in a single night with the Devil's assistance.",
+    "source": "National Library of Sweden / Broumov Monastery Archives",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Devil_codex_Gigas.jpg/500px-Devil_codex_Gigas.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Ancient-Texts-sanskrit",
+    "name": "Rigveda Sanskrit Cosmological Compilations",
+    "category": "Ancient Texts",
+    "type": "Point",
+    "coordinates": {
+      "lng": 75.3412,
+      "lat": 31.3260
+    },
+    "date": -1500,
+    "description": "Sanskrit is the ancient Indo-Aryan liturgical language of India. The Rigveda, compiled in the Punjab region around 1500 BCE, represents the oldest surviving Sanskrit text. It contains complex astronomical and cosmological hymns, alongside descriptions of divine aerial vehicles (Vimanas) and celestial weapons that form the basis of alternative histories.",
+    "source": "Rigveda Samhita / Bhandarkar Oriental Research Institute",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/BhagavadGita-19th-century-Illustrated-Sanskrit-Chapter_1.20.21.jpg/500px-BhagavadGita-19th-century-Illustrated-Sanskrit-Chapter_1.20.21.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Ancient-Texts-cuneiform",
+    "name": "Library of Ashurbanipal Sumerian Cuneiform Tablets",
+    "category": "Ancient Texts",
+    "type": "Point",
+    "coordinates": {
+      "lng": 43.1558,
+      "lat": 36.3683
+    },
+    "date": -650,
+    "description": "Cuneiform is one of the earliest systems of writing, developed by the Sumerians in Mesopotamia. The Library of Ashurbanipal in Nineveh (modern Mosul, Iraq) housed thousands of cuneiform clay tablets, including the Epic of Gilgamesh and the Enuma Elish creation myth, recording Mesopotamian cosmologies and the deeds of the Anunnaki.",
+    "source": "British Museum Ashurbanipal Collection",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Library_of_Ashurbanipal.jpg/500px-Library_of_Ashurbanipal.jpg"
     ]
   }
 ]

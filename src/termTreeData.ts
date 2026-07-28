@@ -92,10 +92,11 @@ const chunk_0: any[] = [  {
   },  {
     id: 'structure-bran-castle-node',
     parentId: 'old-world-structures',
+    secondaryParentIds: ['hauntings-br'],
     name: 'Bran Castle (Dracula\'s Castle)',
     description: 'Perched dramatically on a steep cliff in the Carpathian Mountains, Bran Castle is a famous medieval fortress completed in 1388, widely associated with Dracula legend and Vlad the Impaler.',
     layer: 'Old World Structures',
-    mapFeatureId: 'structure-bran-castle',
+    mapFeatureId: 'anomaly-Ghosts---Hauntings-12',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Castelul_Bran2.jpg/500px-Castelul_Bran2.jpg']
   },  {
     id: 'structure-neuschwanstein-node',
@@ -37521,4 +37522,258 @@ export const TERM_TREE_DATA: TermNode[] = [
     images: ["https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_08_11_avebury-henge-wiltshire-wheat-oh-35mm-neg-sca.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_08_11_avebury-henge-wiltshire-wheat-p-35mm-neg-sca.jpg","https://temporarytemples.co.uk/wp-content/uploads/2014/07/1994_08_11_avebury-henge-wiltshire-wheat-p2-35mmm-neg-sca.jpg"],
     sources: ['Temporary Temples Crop Circle Archives']
   },
+  {
+    id: 'anomaly-Cryptid-Sightings-mermaids',
+    parentId: 'cryptid-sightings-br',
+    name: 'Mermaids & Merfolk Sightings',
+    description: 'Cryptid human-like marine creatures reported globally. While Kealakekua Bay, Hawaii, contains native accounts of merfolk, public interest erupted in 1842 with P.T. Barnum\'s Fiji Mermaid exhibition—a mummified monkey-fish construct.',
+    layer: 'Cryptid Sightings',
+    mapFeatureId: 'anomaly-Cryptid-Sightings-mermaids',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Kealakekua_Bay_in_the_morning.jpg/500px-Kealakekua_Bay_in_the_morning.jpg'],
+    sources: ['Fiji Museum Records', 'Historical Maritime Logs']
+  },
+  {
+    id: 'anomaly-Ancient-Texts-pliny',
+    parentId: 'ancient-texts',
+    name: 'Pliny the Elder',
+    description: 'Roman commander, naturalist, and author of Naturalis Historia. His encyclopedic compilation of Roman knowledge cataloged legendary races, cryptids (such as basilisks and dragons), and geographic mapping principles.',
+    layer: 'Ancient Texts',
+    mapFeatureId: 'anomaly-Ancient-Texts-pliny',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Grande_Illustrazione_del_Lombardo_Veneto_Vol_3_Plinio_Secondo_300dpi.jpg/500px-Grande_Illustrazione_del_Lombardo_Veneto_Vol_3_Plinio_Secondo_300dpi.jpg'],
+    sources: ['Naturalis Historia']
+  },
+  {
+    id: 'anomaly-Ancient-Texts-herodotus',
+    parentId: 'ancient-texts',
+    name: 'Herodotus',
+    description: 'The Greek historian known as the Father of History. His work \'The Histories\' documented the Greco-Persian wars, regional ethnographies, and legendary creatures, including giant gold-digging ants and Arabian winged serpents.',
+    layer: 'Ancient Texts',
+    mapFeatureId: 'anomaly-Ancient-Texts-herodotus',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Marble_bust_of_Herodotos_MET_DT11742_%28cropped%29.jpg/500px-Marble_bust_of_Herodotos_MET_DT11742_%28cropped%29.jpg'],
+    sources: ['The Histories']
+  },
+  {
+    id: 'anomaly-Ancient-Texts-marcopolo',
+    parentId: 'ancient-texts',
+    name: 'Marco Polo',
+    description: 'Venetian merchant and explorer. His book \'The Travels of Marco Polo\' introduced Europe to Central Asia and China. His travel logs described zoological anomalies like sumatran \'unicorns\' (rhinoceroses) and \'dragons\' (crocodiles).',
+    layer: 'Ancient Texts',
+    mapFeatureId: 'anomaly-Ancient-Texts-marcopolo',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Frontispice_%C3%A9dition_de_Nuremberg_1477_%28cropped%29.png/330px-Frontispice_%C3%A9dition_de_Nuremberg_1477_%28cropped%29.png'],
+    sources: ['The Travels of Marco Polo']
+  },
+  {
+    id: 'structure-leif-erikson-vinland-node',
+    parentId: 'old-world-structures',
+    secondaryParentIds: ['myths-legends-root'],
+    name: 'Vinland (L\'Anse aux Meadows Norse Settlement)',
+    description: 'An 11th-century Norse settlement in Newfoundland, Canada, matching Vinland descriptions in Icelandic Sagas. Led by Leif Erikson, it stands as the oldest confirmed European settlement in the Americas.',
+    layer: 'Old World Structures',
+    mapFeatureId: 'structure-leif-erikson-vinland',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Authentic_Viking_recreation.jpg/500px-Authentic_Viking_recreation.jpg'],
+    sources: ['Parks Canada / Saga of the Greenlanders']
+  },
+  {
+    id: 'anomaly-The-Occult-santeria',
+    parentId: 'alchemy-occult',
+    name: 'Santería (Regla de Ocha)',
+    description: 'A syncretic religion developed in Cuba by Yoruba slaves, blending West African spirit communication with Roman Catholic saint worship. Centers on the veneration of Orishas, trance states, and ritual drumming.',
+    layer: 'The Occult',
+    mapFeatureId: 'anomaly-The-Occult-santeria',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Havana_-_Cuba_-_0616.jpg/500px-Havana_-_Cuba_-_0616.jpg'],
+    sources: ['Afro-Cuban Anthropological Records']
+  },
+  {
+    id: 'anomaly-Cryptid-Sightings-littlepeople',
+    parentId: 'cryptid-sightings-br',
+    name: 'Little People Lore',
+    description: 'Legends of small, magical, or aggressive humanoids across global folklore. In North America, the Crow Nation regards the Pryor Mountains as the home of the Nirumbee (Little People), spirits who grant power and visions to tribal chiefs.',
+    layer: 'Cryptid Sightings',
+    mapFeatureId: 'anomaly-Cryptid-Sightings-littlepeople',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/The_Pryors_Billings.JPG/500px-The_Pryors_Billings.JPG'],
+    sources: ['Crow Tribal Tradition / Smithsonian Institution']
+  },
+  {
+    id: 'anomaly-UFOs---Sightings-orbs',
+    parentId: 'ufo-sightings-br',
+    name: 'Luminous Orbs (Hessdalen Lights)',
+    description: 'Orb-like atmospheric light anomalies. Famous in Norway\'s Hessdalen Valley, these glowing spheres hover, accelerate, and split, exhibiting electromagnetic fields and radar returns that challenge physical science.',
+    layer: 'UFOs - Sightings',
+    mapFeatureId: 'anomaly-UFOs---Sightings-orbs',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Hessdalen_-_Fo30141603210085.jpg/500px-Hessdalen_-_Fo30141603210085.jpg'],
+    sources: ['Hessdalen Project Database']
+  },
+  {
+    id: 'anomaly-Alien-Abductions-hopkinsville',
+    parentId: 'alien-abductions-br',
+    name: 'Kelly-Hopkinsville Goblins',
+    description: 'The famous 1955 close encounter in Kelly, Kentucky. A family reported three-foot-tall, large-eared, glowing metallic creatures besieging their farmhouse, triggering a major civil and military police response.',
+    layer: 'Alien Abductions',
+    mapFeatureId: 'anomaly-Alien-Abductions-hopkinsville',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Hopkinsville_First_Presbyterian.JPG/500px-Hopkinsville_First_Presbyterian.JPG'],
+    sources: ['Sheriff Investigation Logs / Project Blue Book Case File']
+  },
+  {
+    id: 'anomaly-Myths---Legends-goblins',
+    parentId: 'myths-legends-root',
+    name: 'Goblins & Pixies (Wistman\'s Wood)',
+    description: 'Grotesque, small subterranean elementals in European folklore. In Dartmoor, England, Wistman\'s Wood is heavily tied to tales of pixies and goblins who lead travelers astray in the rocky tors.',
+    layer: 'Myths / Legends',
+    mapFeatureId: 'anomaly-Myths---Legends-goblins',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Wistman%27s_Wood_in_winter.jpg/500px-Wistman%27s_Wood_in_winter.jpg'],
+    sources: ['English Folklore Compilations']
+  },
+  {
+    id: 'anomaly-Myths---Legends-duende',
+    parentId: 'myths-legends-root',
+    name: 'Duendes',
+    description: 'Small, goblin-like forest guardians in Spanish and Latin American folklore. Belizean legends depict the \'Tata Duende\' as a red-hatted bearded figure with backward-pointing feet who protects jungle wildlife.',
+    layer: 'Myths / Legends',
+    mapFeatureId: 'anomaly-Myths---Legends-duende',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Goya_-_Caprichos_%2849%29.jpg/500px-Goya_-_Caprichos_%2849%29.jpg'],
+    sources: ['Belizean and Mayan Folklore Studies']
+  },
+  {
+    id: 'anomaly-Ancient-People-Groups-medjay',
+    parentId: 'people-groups',
+    name: 'The Medjay',
+    description: 'An ancient elite Nubian police force and desert scouts recruited by Egyptian Pharaohs. Known for tracking and archery, their name eventually became synonymous with law enforcement.',
+    layer: 'Ancient People Groups',
+    mapFeatureId: 'anomaly-Ancient-People-Groups-medjay',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Nubians_at_Aswan.jpg/500px-Nubians_at_Aswan.jpg'],
+    sources: ['Egyptian Middle Kingdom Inscriptions']
+  },
+  {
+    id: 'anomaly-The-Occult-nostradamus',
+    parentId: 'alchemy-occult',
+    name: 'Nostradamus & His Prophecies',
+    description: 'French astrologer and physician Michel de Nostredame. In 1555 he published \'Les Prophéties\', a collection of 942 rhymed quatrains believed by many to predict major historical global conflicts and disasters.',
+    layer: 'The Occult',
+    mapFeatureId: 'anomaly-The-Occult-nostradamus',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Nostradamus_by_Cesar.jpg/500px-Nostradamus_by_Cesar.jpg'],
+    sources: ['Les Prophéties (1555)']
+  },
+  {
+    id: 'anomaly-The-Occult-mothershipton',
+    parentId: 'alchemy-occult',
+    name: 'Mother Shipton & English Prophecy',
+    description: 'Ursula Southeil, a legendary 16th-century English prophetess. Living near a petrifying well in Knaresborough, her quatrains predicted the Great Fire of London, iron ships, and motorized carriages.',
+    layer: 'The Occult',
+    mapFeatureId: 'anomaly-The-Occult-mothershipton',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Charlotte-gale-mother-shiptons-12x8-4393.jpg/500px-Charlotte-gale-mother-shiptons-12x8-4393.jpg'],
+    sources: ['History of Mother Shipton (1686)']
+  },
+  {
+    id: 'anomaly-Ancient-People-Groups-akhenaten',
+    parentId: 'people-groups',
+    name: 'Pharaoh Akhenaten & Amarna Art',
+    description: 'The 18th-dynasty Egyptian pharaoh who initiated monotheistic Aten worship. His new capital, Amarna, featured art depicting the royal family with extremely elongated skulls and limbs, inspiring alternative lineage theories.',
+    layer: 'Ancient People Groups',
+    mapFeatureId: 'anomaly-Ancient-People-Groups-akhenaten',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/GD-EG-Caire-Mus%C3%A9e061.JPG/500px-GD-EG-Caire-Mus%C3%A9e061.JPG'],
+    sources: ['Amarna Period Excavation Reports']
+  },
+  {
+    id: 'anomaly-The-Occult-akashic',
+    parentId: 'alchemy-occult',
+    name: 'The Akashic Records',
+    description: 'A non-physical database in occult belief containing the energetic records of all universal history and thoughts. Popularized by Western Theosophical organizations, it draws from the Sanskrit concept of Akasha (ether).',
+    layer: 'The Occult',
+    mapFeatureId: 'anomaly-The-Occult-akashic',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Map_Adyar.png/500px-Map_Adyar.png'],
+    sources: ['The Secret Doctrine (Madame Blavatsky)']
+  },
+  {
+    id: 'structure-dharmarajeshwar-monolithic-node',
+    parentId: 'megaliths-structures',
+    secondaryParentIds: ['old-world-structures'],
+    name: 'Dharmarajeshwar Monolithic Temple',
+    description: 'An 8th-century rock-cut Hindu temple in Madhya Pradesh, India. Excavated out of solid basalt hill, this monolithic structure showcases extreme architectural skill in carving detailed temples from solid rock.',
+    layer: 'Megaliths / Structures',
+    mapFeatureId: 'structure-dharmarajeshwar-monolithic',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/0111321_Pasupatinath_temple%2C_Mandsaur_Madhya_Pradesh_138.jpg/500px-0111321_Pasupatinath_temple%2C_Mandsaur_Madhya_Pradesh_138.jpg'],
+    sources: ['ASI Temple Architecture Guides']
+  },
+  {
+    id: 'anomaly-Underworld-Entrances-hades',
+    parentId: 'underworld',
+    name: 'Hades & Tartarus (Greek Underworld)',
+    description: 'The Greek realm of the dead, accessible through Tainaron Cave. It features distinct zones like the Elysian Fields, the Asphodel Meadows, and the deep abyss of Tartarus where Titans were imprisoned.',
+    layer: 'Underworld Entrances',
+    mapFeatureId: 'anomaly-Underworld-Entrances-hades',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Cape_Matapan_08.JPG/500px-Cape_Matapan_08.JPG'],
+    sources: ['Homeric Hymns / Hesiod\'s Theogony']
+  },
+  {
+    id: 'anomaly-Underworld-Entrances-xibalba',
+    parentId: 'underworld',
+    name: 'Xibalba (Mayan Underworld)',
+    description: 'The Mayan underworld of trials ruled by twelve death lords, famously entered through Belize\'s ATM Cave. Features mythological places like the Dark House, Razor House, and Bat Palace.',
+    layer: 'Underworld Entrances',
+    mapFeatureId: 'anomaly-Underworld-Entrances-xibalba',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Actun_Tunichil_Muknal.jpg/500px-Actun_Tunichil_Muknal.jpg'],
+    sources: ['The Popol Vuh']
+  },
+  {
+    id: 'anomaly-Underworld-Entrances-helheim',
+    parentId: 'underworld',
+    name: 'Helheim (Norse Underworld)',
+    description: 'The Norse cold underworld ruled by the goddess Hel, where those dying of sickness or age go. Traversed via the golden bridge Gjallarbrú over the river Gjöll.',
+    layer: 'Underworld Entrances',
+    mapFeatureId: 'anomaly-Underworld-Entrances-helheim',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Tj%C3%A4ngvide.jpg/500px-Tj%C3%A4ngvide.jpg'],
+    sources: ['Prose Edda']
+  },
+  {
+    id: 'anomaly-Underworld-Entrances-diyu',
+    parentId: 'underworld',
+    name: 'Diyu (Chinese Underworld)',
+    description: 'The traditional Chinese underworld. Fengdu Ghost City on Ming Mountain is the historic gate, featuring landmarks like the Bridge of Helplessness and the Guimen Gate of Judgment.',
+    layer: 'Underworld Entrances',
+    mapFeatureId: 'anomaly-Underworld-Entrances-diyu',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/%E5%B9%BD%E9%83%BD.JPG/500px-%E5%B9%BD%E9%83%BD.JPG'],
+    sources: ['Diyu Buddhist and Taoist Treatises']
+  },
+  {
+    id: 'structure-church-st-george-lalibela-node',
+    parentId: 'megaliths-structures',
+    secondaryParentIds: ['old-world-structures'],
+    name: 'Church of St. George (Lalibela)',
+    description: 'A monolithic cruciform church in Lalibela, Ethiopia, carved downwards out of solid volcanic tuff during the 12th century. Represents a monumental engineering achievement linked by tunnels to other rock churches.',
+    layer: 'Megaliths / Structures',
+    mapFeatureId: 'structure-church-st-george-lalibela',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lalibela%2C_san_giorgio%2C_esterno_24.jpg/500px-Lalibela%2C_san_giorgio%2C_esterno_24.jpg'],
+    sources: ['UNESCO Lalibela Monolith Survey']
+  },
+  {
+    id: 'anomaly-Ancient-Texts-codexgigas',
+    parentId: 'ancient-texts',
+    secondaryParentIds: ['alchemy-occult'],
+    name: 'Codex Gigas (The Devil\'s Bible)',
+    description: 'The largest surviving medieval manuscript. Famous for its full-page portrait of the Devil, legend claims it was written in a single night by a monk with demonic aid to preserve historical and occult texts.',
+    layer: 'Ancient Texts',
+    mapFeatureId: 'anomaly-Ancient-Texts-codexgigas',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Devil_codex_Gigas.jpg/500px-Devil_codex_Gigas.jpg'],
+    sources: ['Broumov Benedictine Archive']
+  },
+  {
+    id: 'anomaly-Ancient-Texts-sanskrit',
+    parentId: 'ancient-texts',
+    name: 'Sanskrit Liturgical Texts',
+    description: 'The ancient Indo-Aryan language. Oldest texts like the Rigveda preserve detailed cosmologies, philosophical hymns, and descriptions of advanced aerial vehicles (Vimanas) that figure in alternative history.',
+    layer: 'Ancient Texts',
+    mapFeatureId: 'anomaly-Ancient-Texts-sanskrit',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/BhagavadGita-19th-century-Illustrated-Sanskrit-Chapter_1.20.21.jpg/500px-BhagavadGita-19th-century-Illustrated-Sanskrit-Chapter_1.20.21.jpg'],
+    sources: ['Vedic Compilations (Rigveda)']
+  },
+  {
+    id: 'anomaly-Ancient-Texts-cuneiform',
+    parentId: 'ancient-texts',
+    name: 'Sumerian Cuneiform Tablets',
+    description: 'One of the earliest writing systems. Found in Ashurbanipal\'s library, cuneiform clay tablets record Mesopotamian creation myths, deluge accounts, and the histories of the Anunnaki gods.',
+    layer: 'Ancient Texts',
+    mapFeatureId: 'anomaly-Ancient-Texts-cuneiform',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Library_of_Ashurbanipal.jpg/500px-Library_of_Ashurbanipal.jpg'],
+    sources: ['Library of Ashurbanipal / British Museum']
+  }
 ];
