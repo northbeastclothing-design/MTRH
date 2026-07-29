@@ -16704,6 +16704,7 @@ const chunk_4: any[] = [  {
     layer: 'Megaliths / Structures',
     mapFeatureId: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-36',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Chichen_Itza_3.jpg/1280px-Chichen_Itza_3.jpg'],
+    relatedIds: ['feathered-serpent'],
     sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
   },  {
     id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-38',
@@ -16714,6 +16715,7 @@ const chunk_4: any[] = [  {
     layer: 'Megaliths / Structures',
     mapFeatureId: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-38',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Teotihuac%C3%A1n-5973.JPG/1280px-Teotihuac%C3%A1n-5973.JPG'],
+    relatedIds: ['feathered-serpent'],
     sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
   },  {
     id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-39',
@@ -22017,10 +22019,11 @@ const chunk_6: any[] = [
   {
     id: 'feathered-serpent',
     parentId: 'dragons-br',
+    secondaryParentIds: ['andean-mesoamerican-lore'],
     name: 'Feathered Serpent (Quetzalcoatl)',
     description: 'A prominent Mesoamerican deity shaped as a winged, plumed serpent. Worshiped by the Aztecs and Mayans (as Kukulkan), it was associated with wind, rain, learning, and the creation of humanity, with architectural manifestations at Chichen Itza.',
     sources: ['Popol Vuh', 'Florentine Codex'],
-    relatedIds: ['dragons-br', 'pyramids']
+    relatedIds: ['dragons-br', 'mayan-civilization', 'aztec-civilization', 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-36', 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-38']
   },
   {
     id: 'fafnir-norse',
@@ -26263,7 +26266,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Archaeological Finds',
     timelineId: 'timeline-mayan-civilization',
     mapFeatureId: 'archaeology-mayan-copan',
-    relatedIds: ['underworld', 'atlantis-lost', 'crop-circles-br'],
+    relatedIds: ['underworld', 'atlantis-lost', 'crop-circles-br', 'feathered-serpent'],
     sources: ['Popol Vuh', 'Mayan Hieroglyphic Records']
   },  {
     id: 'archaeology-mayan-copan',
@@ -26281,7 +26284,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Archaeological Finds',
     timelineId: 'timeline-aztec-civilization',
     mapFeatureId: 'archaeology-aztec-tenochtitlan',
-    relatedIds: ['megaliths', 'atlantis-lost'],
+    relatedIds: ['megaliths', 'atlantis-lost', 'feathered-serpent'],
     sources: ['Codex Florentino', 'Nahuatl Oral History']
   },  {
     id: 'archaeology-aztec-tenochtitlan',
