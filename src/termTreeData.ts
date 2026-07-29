@@ -35,6 +35,34 @@ const chunk_0: any[] = [  {
     description: 'Ancient pantheons, legendary sagas, mythical beasts, and hero epics from Greek, Norse, Egyptian, Chinese, and other civilizations.'
   },
   {
+    id: 'mesopotamian-mythology',
+    parentId: 'myths-legends-root',
+    name: 'Mesopotamian & Sumerian Lore',
+    description: 'Pantheons, epics, and lists of ancient deities and rulers from Sumer, Akkad, Babylon, and Assyria.',
+    isApocryphal: true
+  },
+  {
+    id: 'canaanite-mythology',
+    parentId: 'myths-legends-root',
+    name: 'Canaanite & Levantine Lore',
+    description: 'Ancient religious and mythological narratives from the Levant, including Canaanite, Phoenician, and Ugaritic deities.',
+    isApocryphal: true
+  },
+  {
+    id: 'andean-mesoamerican-lore',
+    parentId: 'myths-legends-root',
+    name: 'Andean & Mesoamerican Lore',
+    description: 'Cosmologies, creator deities, and oral traditions of the Inca, Maya, Aztec, and other ancient civilizations of the Americas.',
+    isApocryphal: true
+  },
+  {
+    id: 'folklore-archetypes-comparative',
+    parentId: 'myths-legends-root',
+    name: 'Folklore Archetypes & Comparative Myths',
+    description: 'Universal comparative archetypes and the modern adaptation of ancient mythological themes in pop culture.',
+    isApocryphal: true
+  },
+  {
     id: 'chinese-mythology',
     parentId: 'myths-legends-root',
     name: 'Chinese Pantheon & Lore',
@@ -25005,6 +25033,14 @@ const chunk_user_additions_2: any[] = [
     relatedIds: ['egyptian-set', 'michael-aquino', 'church-of-satan', 'aleister-crowley', 'thelema', 'satan', 'anton-lavey'],
     sources: ['The Temple of Set (Michael A. Aquino)', 'Black Magic']
   }, {
+    id: 'enkidu',
+    parentId: 'mesopotamian-mythology',
+    secondaryParentIds: ['sumerian-civilization'],
+    name: 'Enkidu',
+    description: 'In Sumerian mythology and the Epic of Gilgamesh, a wild man created by the gods from clay and water to serve as a rival and companion to the king Gilgamesh. Initially living in the wild among animals, he is civilized through association with a temple priestess. In alternative and cryptozoological lore, Enkidu is occasionally interpreted as a representation of an ancient hominid, a Neanderthal relic, or a Bigfoot-like cryptid before domestication.',
+    relatedIds: ['gilgamesh-text', 'sumerian-civilization', 'bigfoot-br'],
+    sources: ['Epic of Gilgamesh', 'Sumerian Mythology Studies']
+  }, {
     id: 'church-of-satan',
     parentId: 'magical-orders',
     name: 'Church of Satan',
@@ -25049,14 +25085,6 @@ const chunk_user_additions_2: any[] = [
     description: 'An entity or discarnate intelligence contacted by Aleister Crowley during the "Amalantrah Working" in New York in 1918. Appearing to Crowley and his "Scarlet Woman" Roddie Minor (manifested as the Camel), Amalantrah was described as an old wizard or king-like figure. The entity delivered cryptic magical instructions and claimed to facilitate access to non-human realms, foreshadowing modern UFO and alien contact experiences.',
     relatedIds: ['amalantrah-working', 'aleister-crowley', 'thelema', 'lam-entity'],
     sources: ['The Amalantrah Working Logs (Aleister Crowley)', 'Magick Without Tears']
-  }, {
-    id: 'enkidu',
-    parentId: 'myths-legends-root',
-    secondaryParentIds: ['sumerian-civilization'],
-    name: 'Enkidu',
-    description: 'In Sumerian mythology and the Epic of Gilgamesh, a wild man created by the gods from clay and water to serve as a rival and companion to the king Gilgamesh. Initially living in the wild among animals, he is civilized through association with a temple priestess. In alternative and cryptozoological lore, Enkidu is occasionally interpreted as a representation of an ancient hominid, a Neanderthal relic, or a Bigfoot-like cryptid before domestication.',
-    relatedIds: ['gilgamesh-text', 'sumerian-civilization', 'bigfoot-br'],
-    sources: ['Epic of Gilgamesh', 'Sumerian Mythology Studies']
   }, {
     id: 'enki',
     parentId: 'sumerian-civilization',
@@ -25901,11 +25929,12 @@ const chunk_37_new_items: any[] = [
   },
   {
     id: 'wyvern',
-    parentId: 'myths-legends-root',
+    parentId: 'mythical-creatures',
+    secondaryParentIds: ['dragons-br'],
     name: 'Wyvern',
     description: 'A legendary winged dragon-like creature in European folklore and heraldry, depicted with two legs, two wings, and a barbed tail. Associated with strength, war, and protection in medieval Welsh and British heraldic traditions.',
     layer: 'Myths / Legends',
-    relatedIds: ['myths-legends-root'],
+    relatedIds: ['mythical-creatures', 'dragons-br'],
     sources: ['Medieval Bestiaries', 'British Heraldry Manuals'],
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Y_Draig_Aur_Owain_Glynd%C5%B5r.jpg/250px-Y_Draig_Aur_Owain_Glynd%C5%B5r.jpg'],
     mapFeatureId: 'wyvern'
@@ -26088,11 +26117,11 @@ const chunk_37_new_items: any[] = [
   },
   {
     id: 'excalibur',
-    parentId: 'myths-legends-root',
+    parentId: 'arthurian-legend',
     name: 'Excalibur',
     description: 'The legendary sword of King Arthur, possessing magical properties and symbolizing sovereign authority over Britain. In Arthurian romance, it was given to Arthur by the Lady of the Lake and later returned to her upon his death.',
     layer: 'Myths / Legends',
-    relatedIds: ['myths-legends-root'],
+    relatedIds: ['arthurian-legend', 'king-arthur-char'],
     sources: ['Le Morte d\'Arthur (Sir Thomas Malory)', 'Arthurian Legends Collection'],
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Arthur-Pyle_Excalibur_the_Sword.JPG/500px-Arthur-Pyle_Excalibur_the_Sword.JPG'],
     mapFeatureId: 'excalibur'
