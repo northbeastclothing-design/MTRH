@@ -32724,7 +32724,23 @@
     "description": "The ancient battlefield in Haryana, India, where the epic Kurukshetra War described in the Mahabharata took place. Fringe theorists suggest its description of fiery celestial weapons represents prehistoric nuclear conflicts.",
     "source": "The Mahabharata / Ancient Indian Archaeology",
     "images": [
-      "https://upload.wikimedia.org/wikipedia/commons/d/da/The_Pandava_and_Kaurava_armies_face_each_other.JPG"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Kurukshetra.jpg/500px-Kurukshetra.jpg"
+    ]
+  },
+  {
+    "id": "ayodhya-ramayana",
+    "name": "Ayodhya (Ramayana)",
+    "category": "Ancient Texts",
+    "type": "Point",
+    "coordinates": {
+      "lng": 82.1997,
+      "lat": 26.7980
+    },
+    "date": -5000,
+    "description": "The ancient city of Ayodhya in Uttar Pradesh, India, celebrated as the birthplace of Lord Rama and the setting for the Ramayana. The epic describes Rama's battles and voyages, featuring the celestial aerial vehicle Pushpaka Vimana.",
+    "source": "The Ramayana / Ancient Indian Epics",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/R%C4%81ma_slays_R%C4%81va%E1%B9%87a.png/500px-R%C4%81ma_slays_R%C4%81va%E1%B9%87a.png"
     ]
   },
   {

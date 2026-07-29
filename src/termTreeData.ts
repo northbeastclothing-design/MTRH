@@ -23355,13 +23355,24 @@ const chunk_new_additions: any[] = [
     sources: ['Book of Genesis', 'The Book of Enoch', 'Hebrew Apocrypha']
   }, {
     id: 'mahabharata-epic',
-    parentId: 'myths-legends-root',
+    parentId: 'ancient-texts',
     name: 'The Mahabharata',
     description: "One of the two major ancient Sanskrit epics of India, detailing the Kurukshetra War between the Pandavas and Kauravas. In ancient astronaut and alternative history circles, the epic's descriptions of flying celestial chariots (Vimanas) and destructive weapons (Astra, Brahmastra) that vaporized armies are interpreted as accounts of prehistoric nuclear warfare and advanced extraterrestrial technologies.",
-    relatedIds: ['vedas', 'myths-legends-root'],
+    layer: 'Ancient Texts',
+    relatedIds: ['vedas', 'ramayana-epic', 'vimanas'],
     mapFeatureId: 'kurukshetra-battlefield',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/d/da/The_Pandava_and_Kaurava_armies_face_each_other.JPG'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Kurukshetra.jpg/500px-Kurukshetra.jpg'],
     sources: ['Mahabharata (attributed to Vyasa)', 'Vedic Cosmography Studies']
+  }, {
+    id: 'ramayana-epic',
+    parentId: 'ancient-texts',
+    name: 'The Ramayana',
+    description: "One of the two major ancient Sanskrit epics of India, detailing the life and adventures of Lord Rama. The epic describes Rama's battles and voyages, featuring the celestial aerial vehicle Pushpaka Vimana, which are interpreted by alternative historians as prehistoric flying technology.",
+    layer: 'Ancient Texts',
+    relatedIds: ['vedas', 'mahabharata-epic', 'vimanas'],
+    mapFeatureId: 'ayodhya-ramayana',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/R%C4%81ma_slays_R%C4%81va%E1%B9%87a.png/500px-R%C4%81ma_slays_R%C4%81va%E1%B9%87a.png'],
+    sources: ['The Ramayana (attributed to Valmiki)', 'Ancient Sanskrit Literature Studies']
   }, {
     id: 'jesters-nephilim-connection',
     parentId: 'myths-legends-root',
@@ -24290,8 +24301,8 @@ const chunk_historic_extensions: any[] = [
   },
   {
     id: 'vimanas',
-    parentId: 'ancient-texts',
-    secondaryParentIds: ['ufo-types'],
+    parentId: 'mahabharata-epic',
+    secondaryParentIds: ['ramayana-epic', 'ufo-types'],
     name: 'Vimanas',
     description: `Mythological flying palaces or chariots described in ancient Sanskrit epics (such as the Ramayana and Mahabharata) and the Vaimanika Shastra. Described as multi-decked, circular or cylinder-shaped craft powered by mercury engines or liquid propulsion, Vimanas are frequently cited by alternative historians as evidence of advanced prehistoric aerospace technology or ancient space travel.`,
     layer: 'Myths / Legends',
