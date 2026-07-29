@@ -977,6 +977,7 @@ export default function CodexPage({
     if (curr.id === 'people-groups') return '#BCA7C7'; // Lavender (People Groups)
     if (curr.id === 'nasa-root') return '#BACEF4'; // Light Blue (NASA / Space)
     if (curr.id === 'old-world-structures') return '#B5CED5'; // Slate Blue-Gray (Old World Structures)
+    if (curr.id === 'ancient-texts') return '#F7E8C1'; // Pale Sand (Ancient Texts)
     
     return LAYER_COLORS['Default'];
   }
@@ -1003,6 +1004,7 @@ export default function CodexPage({
       case '#fff96a': // Crop Circles
       case '#fffba6': // Megaliths
         return '#705b00'; // Very dark gold/yellow
+      case '#f7e8c1': // Ancient Texts
       case '#f6e8c1': // Ancient Texts
       case '#ecce81': // Giants & Nephilim
         return '#604e1e'; // Dark brown/gold
@@ -1059,6 +1061,7 @@ export default function CodexPage({
     if (node.id === 'alchemy-occult') return LAYER_ICONS['The Occult'];
     if (node.id === 'people-groups') return LAYER_ICONS['People Groups'];
     if (node.id === 'nasa-root') return LAYER_ICONS['NASA / Space'];
+    if (node.id === 'ancient-texts') return LAYER_ICONS['Ancient Texts'];
 
     if (node.layer && LAYER_ICONS[node.layer]) {
       return LAYER_ICONS[node.layer];
@@ -1074,6 +1077,7 @@ export default function CodexPage({
       if (parentId === 'alchemy-occult') return LAYER_ICONS['The Occult'];
       if (parentId === 'people-groups') return LAYER_ICONS['People Groups'];
       if (parentId === 'nasa-root') return LAYER_ICONS['NASA / Space'];
+      if (parentId === 'ancient-texts') return LAYER_ICONS['Ancient Texts'];
 
       const parent = nodes.find(n => n.id === parentId);
       if (parent && parent.layer && LAYER_ICONS[parent.layer]) {

@@ -18218,8 +18218,7 @@ const chunk_4: any[] = [  {
     sources: ['Prehistoric Art Catalogs', 'Archaeological Site Inventories']
   },  {
     id: 'ancient-texts',
-    parentId: 'megaliths-structures',
-    name: 'Ancient Texts & Tablets',
+    name: 'Ancient Texts',
     description: 'Written records from ancient civilizations that preserve historical memories of floods, giants, and celestial deities.',
     layer: 'Ancient Texts'
   },  {
