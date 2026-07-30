@@ -866,6 +866,7 @@ const LAYER_CONFIG: Record<string, { color: string; icon: string }> = {
   'Ghosts & Hauntings': { color: '#BDC4FF', icon: '/icons/icon-ghosts.svg' },
   'Megaliths / Structures': { color: '#FFFBA6', icon: '/icons/icon-megaliths.svg' },
   'Old World Structures': { color: '#B5CED5', icon: '/icons/icon-old-world-structures.svg' },
+  'Vanished Ships / Aircraft': { color: '#E7EC5B', icon: '/icons/icon-vanished-ships-aircraft.svg' },
 
   'Rock Art & Cave Paintings': { color: '#FFABA6', icon: '/icons/icon-petroglyphs.svg' },
   'National Parks & Reserves': { color: '#9FF3BC', icon: '/icons/icon-national-parks-reserves.svg' },
@@ -1223,6 +1224,7 @@ function App() {
   const [alienAbductionData, setAlienAbductionData] = useState<any[]>([]);
   const [cattleMutilationData, setCattleMutilationData] = useState<any[]>([]);
   const [oldWorldStructuresData, setOldWorldStructuresData] = useState<any[]>([]);
+  const [vanishedShipsAircraftData, setVanishedShipsAircraftData] = useState<any[]>([]);
   const [savedPasscode, setSavedPasscode] = useState('');
   const [approvedSubmissions, setApprovedSubmissions] = useState<any[]>([]);
   const [isLiveLoading, setIsLiveLoading] = useState(true);
@@ -1283,6 +1285,9 @@ function App() {
     }
     if (layerName === 'Old World Structures') {
       return oldWorldStructuresData.length === 0;
+    }
+    if (layerName === 'Vanished Ships / Aircraft') {
+      return vanishedShipsAircraftData.length === 0;
     }
     if (layerName === 'Missing 411') {
       return missing411Data.length === 0;
@@ -4203,12 +4208,23 @@ function App() {
         }
       }
 
+      // 4e. Vanished Ships / Aircraft
+      if (activeLayers['Vanished Ships / Aircraft'] && vanishedShipsAircraftData.length === 0) {
+        try {
+          const module = await import('./vanishedShipsAircraftData');
+          setVanishedShipsAircraftData(getSafeData(module.VANISHED_SHIPS_AIRCRAFT_DATA));
+        } catch (err) {
+          console.error("Failed to load Vanished Ships / Aircraft data:", err);
+        }
+      }
+
       // 5. Core Rabbit Hole data
       const needsRabbitHole = Object.keys(activeLayers).some(k => 
         activeLayers[k] && 
         k !== 'UFOs - War.gov' && k !== 'UFOs - Brazillian Archives' && k !== 'UFOs - Sightings' && k !== 'Government Conspiracies' &&
         k !== 'Archaeological Finds' && k !== 'Biblical Discoveries' &&
-        k !== 'Missing 411' && k !== 'Cave Systems' && k !== 'Alien Abductions' && k !== 'Cattle Mutilations' && k !== 'Old World Structures'
+        k !== 'Missing 411' && k !== 'Cave Systems' && k !== 'Alien Abductions' && k !== 'Cattle Mutilations' && k !== 'Old World Structures' &&
+        k !== 'Vanished Ships / Aircraft'
       );
       if (needsRabbitHole && rabbitHoleData.length === 0) {
         try {
@@ -4230,7 +4246,7 @@ function App() {
         setIsDataCompiled(false);
         const safeLocalData = getSafeData(rabbitHoleData);
         const safeUfoData = getSafeData(ufoData);
-        const combinedRawData = [...safeLocalData, ...safeUfoData, ...archaeologyData, ...missing411Data, ...cavesData, ...alienAbductionData, ...cattleMutilationData, ...oldWorldStructuresData];
+        const combinedRawData = [...safeLocalData, ...safeUfoData, ...archaeologyData, ...missing411Data, ...cavesData, ...alienAbductionData, ...cattleMutilationData, ...oldWorldStructuresData, ...vanishedShipsAircraftData];
         
         const initialBuffer = combinedRawData
           .map((item, idx) => processIncomingRecord(item, idx))
@@ -4324,7 +4340,7 @@ function App() {
     };
 
     compileVerifiedIntel();
-  }, [rabbitHoleData, ufoData, archaeologyData, missing411Data, cavesData, alienAbductionData, cattleMutilationData, oldWorldStructuresData, overrides]);
+  }, [rabbitHoleData, ufoData, archaeologyData, missing411Data, cavesData, alienAbductionData, cattleMutilationData, oldWorldStructuresData, vanishedShipsAircraftData, overrides]);
 
   useEffect(() => {
     if (uniqueCategories.length > 0 && !hasRandomizedRef.current) {

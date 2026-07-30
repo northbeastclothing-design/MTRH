@@ -67,6 +67,7 @@ const LAYER_COLORS: Record<string, string> = {
   'Masonic Lodges': '#ECCE81',
   'People Groups': '#BCA7C7',
   'Ancient People Groups': '#BCA7C7',
+  'Vanished Ships / Aircraft': '#E7EC5B',
   'Default': '#b6a6ff'
 };
 
@@ -97,6 +98,7 @@ const LAYER_ICONS: Record<string, string> = {
   'Megaliths / Structures': '/icons/icon-megaliths.svg',
   'Old World Structures': '/icons/icon-old-world-structures.svg',
   'Rock Art & Cave Paintings': '/icons/icon-petroglyphs.svg',
+  'Vanished Ships / Aircraft': '/icons/icon-vanished-ships-aircraft.svg',
 
   'National Parks & Reserves': '/icons/icon-national-parks-reserves.svg',
   'Missing 411': '/icons/icon-missing-411.svg',
@@ -963,10 +965,12 @@ export default function CodexPage({
   function getNodeColor(node: TermNode): string {
     let curr = node;
     while (curr.parentId) {
+      if (curr.id === 'vanished-ships-aircraft') return '#E7EC5B';
       const parent = nodes.find(n => n.id === curr.parentId);
       if (!parent) break;
       curr = parent;
     }
+    if (curr.id === 'vanished-ships-aircraft') return '#E7EC5B';
 
     if (curr.id === 'biblical-apocryphal') return '#90C2FF'; // Blue (Biblical Figures)
     if (curr.id === 'myths-legends-root') return '#FFF96A'; // Yellow/Gold (Myths / Legends)
@@ -1046,12 +1050,15 @@ export default function CodexPage({
         return '#502d66'; // Dark purple/lavender
       case '#b5ced5': // Old World Structures
         return '#3c4f57'; // Dark slate blue-gray
+      case '#e7ec5b': // Vanished Ships / Aircraft
+        return '#616600'; // Dark olive green/yellow
       default:
         return color;
     }
   }
 
   const getNodeIcon = (node: TermNode): string => {
+    if (node.id === 'vanished-ships-aircraft') return LAYER_ICONS['Vanished Ships / Aircraft'];
     if (node.id === 'biblical-apocryphal') return LAYER_ICONS['Biblical Figures'];
     if (node.id === 'myths-legends-root') return LAYER_ICONS['Myths / Legends'];
     if (node.id === 'megaliths-structures') return LAYER_ICONS['Megaliths / Structures'];
@@ -1068,6 +1075,7 @@ export default function CodexPage({
     }
     let parentId = node.parentId;
     while (parentId) {
+      if (parentId === 'vanished-ships-aircraft') return LAYER_ICONS['Vanished Ships / Aircraft'];
       if (parentId === 'biblical-apocryphal') return LAYER_ICONS['Biblical Figures'];
       if (parentId === 'myths-legends-root') return LAYER_ICONS['Myths / Legends'];
       if (parentId === 'megaliths-structures') return LAYER_ICONS['Megaliths / Structures'];

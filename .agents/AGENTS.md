@@ -33,6 +33,7 @@ When choosing or changing colors for map layers, pins, themes, or UI components,
 * `#59DCB7` (Masonic Lodges / The Occult / Teal)
 * `#BCA7C7` (Ancient People Groups / Muted Lavender)
 * `#B5CED5` (Old World Structures / Slate Blue-Gray)
+* `#E7EC5B` (Vanished Ships / Aircraft / Lime-Yellow)
 * `#b6a6ff` (Default / Purple-Blue)
 
 

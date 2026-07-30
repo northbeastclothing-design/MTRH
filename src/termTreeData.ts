@@ -27224,6 +27224,111 @@ export const TERM_TREE_DATA: TermNode[] = [
     name: 'Cattle Mutilations',
     description: 'Reports of unexplained livestock deaths characterized by bloodless surgical-like tissue removal and a lack of tracks.',
     layer: 'Cattle Mutilations'
+  },  {
+    id: 'vanished-ships-aircraft',
+    parentId: 'supernatural-anomalies',
+    name: 'Vanished Ships / Aircraft',
+    description: 'Mysterious disappearances of maritime vessels and airplanes throughout history, often associated with geographic anomalies, electromagnetic aberrations, or unexplained atmospheric phenomena.',
+    layer: 'Vanished Ships / Aircraft'
+  },  {
+    id: 'flight-19-node',
+    parentId: 'vanished-ships-aircraft',
+    name: 'Flight 19',
+    description: 'A squadron of five US Navy TBF Avenger torpedo bombers that disappeared on December 5, 1945, during a routine training flight over the Bermuda Triangle.',
+    layer: 'Vanished Ships / Aircraft',
+    mapFeatureId: 'flight-19',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Grumman_TBF-1_Avengers_of_VGS-29_in_flight_over_Norfolk%2C_Virginia_%28USA%29%2C_on_1_September_1942_%2880-G-427475%29.jpg/500px-Grumman_TBF-1_Avengers_of_VGS-29_in_flight_over_Norfolk%2C_Virginia_%28USA%29%2C_on_1_September_1942_%2880-G-427475%29.jpg'],
+    sources: ['US Navy Official Records']
+  },  {
+    id: 'mh370-node',
+    parentId: 'vanished-ships-aircraft',
+    name: 'Malaysia Airlines Flight MH370',
+    description: 'A Boeing 777-200ER passenger jet that disappeared on March 8, 2014, while flying from Kuala Lumpur to Beijing. Despite massive search efforts, the main wreckage was never found.',
+    layer: 'Vanished Ships / Aircraft',
+    mapFeatureId: 'mh370',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/MAS_plane.jpg/500px-MAS_plane.jpg'],
+    sources: ['JACC MH370 Safety Investigation Report']
+  },  {
+    id: 'amelia-earhart-node',
+    parentId: 'vanished-ships-aircraft',
+    name: 'Amelia Earhart Disappearance',
+    description: 'Aviation pioneer Amelia Earhart and navigator Fred Noonan vanished on July 2, 1937, near Howland Island during an attempt to fly around the globe.',
+    layer: 'Vanished Ships / Aircraft',
+    mapFeatureId: 'amelia-earhart',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Amelia_Earhart_standing_under_nose_of_her_Lockheed_Model_10-E_Electra%2C_small_%28cropped%29.jpg/500px-Amelia_Earhart_standing_under_nose_of_her_Lockheed_Model_10-E_Electra%2C_small_%28cropped%29.jpg'],
+    sources: ['Purdue University Earhart Papers']
+  },  {
+    id: 'uss-cyclops-node',
+    parentId: 'vanished-ships-aircraft',
+    name: 'USS Cyclops',
+    description: 'A US Navy collier ship that disappeared in March 1918 in the Bermuda Triangle region with 306 crew and passengers, representing the single largest non-combat loss of life in US Navy history.',
+    layer: 'Vanished Ships / Aircraft',
+    mapFeatureId: 'uss-cyclops',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/USS_Cyclops_in_Hudson_River_19111003.jpg/500px-USS_Cyclops_in_Hudson_River_19111003.jpg'],
+    sources: ['US Navy Historical Records']
+  },  {
+    id: 'ss-cotopaxi-node',
+    parentId: 'vanished-ships-aircraft',
+    name: 'SS Cotopaxi',
+    description: 'A merchant steamer that vanished in December 1925 in the Bermuda Triangle. Its wreckage was discovered and identified in 2020 off St. Augustine, Florida.',
+    layer: 'Vanished Ships / Aircraft',
+    mapFeatureId: 'ss-cotopaxi',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/American_steamship_SS_Cotopaxi_%28built_1918%29.png/500px-American_steamship_SS_Cotopaxi_%28built_1918%29.png'],
+    sources: ['NOAA Wreck Database']
+  },  {
+    id: 'mary-celeste-node',
+    parentId: 'vanished-ships-aircraft',
+    name: 'Mary Celeste',
+    description: 'An American merchant brigantine found sailing crewless and abandoned near the Azores in December 1872, with cargo intact and the lifeboat missing.',
+    layer: 'Vanished Ships / Aircraft',
+    mapFeatureId: 'mary-celeste',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Mary_Celeste_as_Amazon_in_1861_%28cropped%29.jpg/500px-Mary_Celeste_as_Amazon_in_1861_%28cropped%29.jpg'],
+    sources: ['Gibraltar Admiralty Court Records']
+  },  {
+    id: 'carroll-a-deering-node',
+    parentId: 'vanished-ships-aircraft',
+    name: 'Carroll A. Deering',
+    description: 'A five-masted commercial schooner found run aground and completely abandoned in January 1921 off Cape Hatteras, North Carolina, with its entire crew and papers missing.',
+    layer: 'Vanished Ships / Aircraft',
+    mapFeatureId: 'carroll-a-deering',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Deering2.jpg/250px-Deering2.jpg'],
+    sources: ['FBI Disappearance Investigation (1921)']
+  },  {
+    id: 'ss-waratah-node',
+    parentId: 'vanished-ships-aircraft',
+    name: 'SS Waratah',
+    description: 'An English passenger steamship that vanished in July 1909 off the eastern coast of South Africa while traveling from Durban to Cape Town, with 211 people aboard.',
+    layer: 'Vanished Ships / Aircraft',
+    mapFeatureId: 'ss-waratah',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/SS_Waratah_FL601368.jpg/500px-SS_Waratah_FL601368.jpg'],
+    sources: ['British Board of Trade Inquiry']
+  },  {
+    id: 'uss-scorpion-node',
+    parentId: 'vanished-ships-aircraft',
+    name: 'USS Scorpion (SSN-589)',
+    description: 'A nuclear-powered submarine that vanished in May 1968 in the Atlantic Ocean southwest of the Azores with 99 crew members on board.',
+    layer: 'Vanished Ships / Aircraft',
+    mapFeatureId: 'uss-scorpion',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/NH_97214_USS_Scorpion_%28SSN-589%29_%28cropped%29.tif/lossy-page1-500px-NH_97214_USS_Scorpion_%28SSN-589%29_%28cropped%29.tif.jpg'],
+    sources: ['US Navy Court of Inquiry Records']
+  },  {
+    id: 'franklin-expedition-node',
+    parentId: 'vanished-ships-aircraft',
+    name: "Franklin's Lost Expedition",
+    description: 'A British Arctic exploration voyage under Sir John Franklin that vanished in 1845 attempting to traverse the Northwest Passage. The wrecks of HMS Erebus and Terror were found in 2014 and 2016.',
+    layer: 'Vanished Ships / Aircraft',
+    mapFeatureId: 'franklin-expedition',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Franklin%27s-Lost-Expedition.png/500px-Franklin%27s-Lost-Expedition.png'],
+    sources: ['Parks Canada Undersea Archaeology Surveys']
+  },  {
+    id: 'flying-tiger-739-node',
+    parentId: 'vanished-ships-aircraft',
+    name: 'Flying Tiger Line Flight 739',
+    description: 'A chartered Lockheed Super Constellation aircraft carrying 93 US soldiers that vanished on March 15, 1962, over the western Pacific Ocean on a flight to the Philippines.',
+    layer: 'Vanished Ships / Aircraft',
+    mapFeatureId: 'flying-tiger-739',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Lockheed_L-1049H_N6918C_FTL_LGW_29.08.64.jpg/500px-Lockheed_L-1049H_N6918C_FTL_LGW_29.08.64.jpg'],
+    sources: ['Civil Aeronautics Board Investigation']
   },
   ...chunk_6,
   {
@@ -37872,5 +37977,189 @@ export const TERM_TREE_DATA: TermNode[] = [
     relatedIds: ['rel-figure-spencer-kimball'],
     sources: ['The Life of David W. Patten (1900)', 'The Miracle of Forgiveness (1969)'],
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Spencer_W._Kimball3.JPG/330px-Spencer_W._Kimball3.JPG']
+  }, {
+    id: 'jfk-assassination',
+    parentId: 'government-conspiracies',
+    name: 'JFK Assassination',
+    description: 'The assassination of President John F. Kennedy on November 22, 1963, in Dealey Plaza, Dallas. The official Warren Commission concluded Lee Harvey Oswald acted alone. However, alternative research and conspiracy theories point to a deep state cover-up, suggesting involvement by the CIA, organized crime, or military-industrial figures, with bullet trajectories pointing to a second gunman on the Grassy Knoll.',
+    layer: 'Government Conspiracies',
+    mapFeatureId: 'jfk-assassination-site',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Dealey_Plaza_2003.jpg/500px-Dealey_Plaza_2003.jpg'],
+    sources: ['Warren Commission Report', 'House Select Committee on Assassinations (HSCA)', 'Crossfire: The Plot That Killed Kennedy (Jim Marrs)']
+  }, {
+    id: 'trump-assassination-attempt',
+    parentId: 'government-conspiracies',
+    name: 'Trump Assassination Attempt',
+    description: 'The July 13, 2024 assassination attempt on former President Donald Trump during a campaign rally in Butler, Pennsylvania. A sniper fired multiple shots from a nearby rooftop, wounding Trump in the ear. Extensive conspiracy theories quickly emerged, pointing to severe Secret Service security lapses, allegations of multiple shooters, and theories of deep state orchestration to prevent his re-election.',
+    layer: 'Government Conspiracies',
+    mapFeatureId: 'trump-assassination-site',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Butler_Farm_Show_Airport_Trump_Rally_2024_02_%28cropped%29.jpg/500px-Butler_Farm_Show_Airport_Trump_Rally_2024_02_%28cropped%29.jpg'],
+    sources: ['Secret Service Investigations', 'House Homeland Security Committee Testimony', 'Independent Rally Video/Audio Analysis']
+  }, {
+    id: 'mlk-assassination',
+    parentId: 'government-conspiracies',
+    name: 'MLK Jr. Assassination',
+    description: 'The assassination of civil rights leader Martin Luther King Jr. on April 4, 1968, at the Lorraine Motel in Memphis, Tennessee. While James Earl Ray was convicted as a lone assassin, King\'s family and alternative researchers believe he was a scapegoat. In a 1999 civil suit (King Family v. Jowers), a Memphis jury concluded that local, state, and federal government agencies (including the FBI and military) were party to a conspiracy to assassinate King.',
+    layer: 'Government Conspiracies',
+    mapFeatureId: 'mlk-assassination-site',
+    images: ['https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/c/c7/Martin_Luther_King_Jr_NYWTS_2.jpg'],
+    sources: ['Memphis Civil Court Records (King Family v. Jowers)', 'House Select Committee on Assassinations (HSCA)', 'Orders to Kill (William F. Pepper)']
+  }, {
+    id: 'acoustic-kitty',
+    parentId: 'government-conspiracies',
+    name: 'Acoustic Kitty',
+    description: 'A bizarre $20 million CIA Cold War project in the 1960s that surgically altered a cat, implanting a microphone in its ear, a radio transmitter at the base of its skull, and an antenna in its tail. During its first field test outside the Soviet Embassy in Washington, D.C., the cat was immediately run over by a taxi. Conspiracy researchers suggest the project\'s public failure was a cover to hide more advanced acoustic surveillance programs, or that it was a front for occult animal telemetry experiments.',
+    layer: 'Government Conspiracies',
+    mapFeatureId: 'soviet-embassy-dc-kitty',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Seal_of_the_Central_Intelligence_Agency.svg/500px-Seal_of_the_Central_Intelligence_Agency.svg.png'],
+    sources: ['Declassified CIA Science and Technology Documents', 'The Wizards of Langley (Jeffrey T. Richelson)', 'CIA Directorate of Science & Technology Memorandums']
+  }, {
+    id: 'mk-ultra-congressional-hearings',
+    parentId: 'government-conspiracies',
+    name: 'MK-Ultra Congressional Connections',
+    description: 'Recent declassifications and transcripts from Congressional Oversight hearings have renewed focus on the CIA\'s mind control program, Project MK-Ultra. Alternative researchers and investigative journalists point to evidence that high-profile figures—including Charles Manson (programmed during his prison stays), Timothy McVeigh (who claimed a microchip implant and military psychiatric contact), and Ted Kaczynski (who underwent psychological stress experiments at Harvard under Dr. Henry Murray)—were subjects of MK-Ultra programming or psychiatric trials designed to create sleeper agents.',
+    layer: 'Government Conspiracies',
+    mapFeatureId: 'fort-detrick-mkultra',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/DeclassifiedMKULTRA.jpg/500px-DeclassifiedMKULTRA.jpg'],
+    sources: ['House Oversight Committee Congressional Hearings', 'Joint Hearing on Project MKUltra (1977)', 'Chaos: Charles Manson, the CIA, and the Secret History of the Sixties (Tom O\'Neill)']
+  }, {
+    id: 'choronzon-demon',
+    parentId: 'alchemy-occult',
+    name: 'Choronzon',
+    description: 'Choronzon is a demon or inhabitant of the Abyss first described in the Enochian diaries of John Dee and Edward Kelley, and later popularized in Thelema by Aleister Crowley, who invoked it in the Algerian desert in 1909. Regarded as the dweller in the abyss and the personification of chaos, ego, and illusion, Choronzon represents the ultimate spiritual obstacle to ascension, scattering thoughts and dissolving the seeker\'s identity.',
+    layer: 'The Occult',
+    mapFeatureId: 'crowley-choronzon-invocation',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Crowley_unicursal_hexagram.svg/500px-Crowley_unicursal_hexagram.svg.png'],
+    sources: ['The Vision and the Voice (Aleister Crowley)', 'John Dee\'s Enochian Journals', 'The Equinox (Occult Journal)']
+  }, {
+    id: 'georgia-guidestones',
+    parentId: 'government-conspiracies',
+    name: 'The Georgia Guidestones',
+    description: 'A granite monument erected in Elbert County, Georgia, in 1980 by a pseudonymous man named "R.C. Christian," representing a secret group. Inscribed with ten guidelines in eight languages, the first guideline called for maintaining the world population under 500 million in perpetual balance with nature. Conspiracy theorists linked the stones to Rosicrucianism, globalist eugenics, and the New World Order. The monument was mysteriously bombed and subsequently demolished in July 2022.',
+    layer: 'Government Conspiracies',
+    mapFeatureId: 'georgia-guidestones-site',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Georgia_Guidestones%2C_Elbert_County%2C_GA%2C_US_%2805%29.jpg/500px-Georgia_Guidestones%2C_Elbert_County%2C_GA%2C_US_%2805%29.jpg'],
+    sources: ['Common Sense Renewed (R.C. Christian)', 'Elbert County Police Investigation July 2022', 'Georgia Guidestones Documentary (Dark Clouds over Elberton)']
+  }, {
+    id: 'mayan-calendar',
+    parentId: 'ancient-texts',
+    name: 'The Mayan Calendar',
+    description: 'The sophisticated Mesoamerican calendrical system developed by the Maya, consisting of interlocking cycles (Tzolkin, Haab, and the Long Count). Famously, the completion of the 13th b\'ak\'tun cycle on December 21, 2012, triggered global end-of-the-world prophecies. In alternative history and ancient astronaut lore, the calendar\'s extreme astronomical precision is interpreted as evidence of lost high-technology cycles or cosmic schedules taught by extraterrestrial sky-gods.',
+    layer: 'Ancient Texts',
+    mapFeatureId: 'mayan-calendar-origin',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Chichen_Itza_3.jpg/500px-Chichen_Itza_3.jpg'],
+    sources: ['Maya Calendrical Inscriptions', 'The Mayan Factor (José Argüelles)', 'The 2012 Phenomenon: Astronomical Realities']
+  }, {
+    id: 'shroud-of-turin',
+    parentId: 'biblical-apocryphal',
+    name: 'The Shroud of Turin',
+    description: 'A 14-foot linen cloth housed in the Cathedral of Saint John the Baptist in Turin, Italy, bearing the faint negative image of a crucified man. While a 1988 radiocarbon dating test suggested a medieval origin, sindonologists and alternative researchers dispute the sample\'s integrity. They argue the image could only have been formed by a brief, high-energy burst of vacuum ultraviolet radiation or supernatural energy during the resurrection, which scorched only the topmost fibers of the cloth without leaving pigment.',
+    layer: 'Biblical Figures',
+    mapFeatureId: 'turin-cathedral-shroud',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Turin_shroud_positive_and_negative_displaying_original_color_information_708_x_465_pixels_94_KB.jpg/500px-Turin_shroud_positive_and_negative_displaying_original_color_information_708_x_465_pixels_94_KB.jpg'],
+    sources: ['Shroud of Turin Research Project (STURP) Reports', 'The Turin Shroud: Inquest (Ian Wilson)', 'Radiocarbon Dating of the Shroud of Turin (Nature 1989)']
+  }, {
+    id: 'sudarium-of-oviedo',
+    parentId: 'biblical-apocryphal',
+    name: 'Sudarium of Oviedo',
+    description: 'The Sudarium of Oviedo is a bloodstained linen cloth kept in the Cámara Santa of the Cathedral of Oviedo, Spain. It is believed to be the sweat cloth wrapped around the head of Jesus Christ following his crucifixion (John 20:7). Forensic and bloodstain pattern studies have revealed striking correlations with the Shroud of Turin, including identical AB blood type, pollen remnants from Palestine, and matching facial contours. This has fueled alternate theories regarding supernatural resurrection energy and the forgery of carbon-dating results.',
+    layer: 'Biblical Figures',
+    mapFeatureId: 'oviedo-cathedral-sudarium',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Santo_Sudario_Oviedo.jpg/500px-Santo_Sudario_Oviedo.jpg'],
+    sources: ['Studies of the Sudarium of Oviedo (Centro Español de Sindonología)', 'The Sudarium of Oviedo (Mark Guscin)', 'Gospel of John 20:7']
+  }, {
+    id: 'davids-mighty-men',
+    parentId: 'biblical-apocryphal',
+    name: 'David\'s Mighty Men',
+    description: 'A legendary group of elite warriors who fought alongside King David, also known as the Gibborim (Hebrew for "mighty ones" or "giants"). Mentioned in 2 Samuel 23, they performed superhuman feats of combat, slaying hundreds of enemies single-handedly. Alternative interpretations link their superhuman strength to nephilim remnants, divine gene-editing, or spiritual empowerment, placing them as a class of holy giant-slayers.',
+    layer: 'Biblical Figures',
+    mapFeatureId: 'city-of-david-jerusalem',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/King_David%2C_the_King_of_Israel.jpg/500px-King_David%2C_the_King_of_Israel.jpg'],
+    sources: ['2 Samuel 23', '1 Chronicles 11', 'Antiquities of the Jews (Josephus)']
+  }, {
+    id: 'mighty-men-jashobeam',
+    parentId: 'davids-mighty-men',
+    name: 'Jashobeam',
+    description: 'Jashobeam the Tachmonite was the chief of King David\'s three primary mighty men (the Three). He is recorded in 2 Samuel 23:8 as having raised his spear against 800 men, whom he slew in a single encounter. Alternative analyses of the text suggest his extreme battle capacity points to a breed of genetically or spiritually enhanced warriors, or pre-flood combat technology.',
+    layer: 'Biblical Figures',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/King_David%2C_the_King_of_Israel.jpg/500px-King_David%2C_the_King_of_Israel.jpg'],
+    sources: ['2 Samuel 23:8', '1 Chronicles 11:11']
+  }, {
+    id: 'mighty-men-eleazar',
+    parentId: 'davids-mighty-men',
+    name: 'Eleazar',
+    description: 'Eleazar, son of Dodo the Ahohite, was one of the three primary mighty men. At Pas Dammim, he stood his ground against a Philistine army when the other Israelite soldiers retreated. He fought so intensely and for so long that his hand grew tired and froze to his sword. Fringe researchers highlight this physiological reaction as a potential state of ancient battle-trance or altered nervous state.',
+    layer: 'Biblical Figures',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/King_David%2C_the_King_of_Israel.jpg/500px-King_David%2C_the_King_of_Israel.jpg'],
+    sources: ['2 Samuel 23:9-10', '1 Chronicles 11:12']
+  }, {
+    id: 'mighty-men-shammah',
+    parentId: 'davids-mighty-men',
+    name: 'Shammah',
+    description: 'Shammah, son of Agee the Hararite, was the third member of the elite Three. When a Philistine raiding party gathered at a field of lentils and the Israelite army fled, Shammah took his stand in the middle of the field, defended it, and struck down the Philistines. The victory is cited as an example of localized divine intervention or defensive martial arts lost to history.',
+    layer: 'Biblical Figures',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/King_David%2C_the_King_of_Israel.jpg/500px-King_David%2C_the_King_of_Israel.jpg'],
+    sources: ['2 Samuel 23:11-12']
+  }, {
+    id: 'mighty-men-abishai',
+    parentId: 'davids-mighty-men',
+    name: 'Abishai',
+    description: 'Abishai, the brother of Joab and son of Zeruiah, was the leader of the second tier of mighty men (the Thirty). He famously wielded his spear against 300 men and killed them, earning a reputation second only to the Three. During combat, he also saved King David\'s life by slaying the giant Ishbi-Benob. Fringe historians interpret Abishai\'s accomplishments as proof of elite training and giant-hunting specialization.',
+    layer: 'Biblical Figures',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/King_David%2C_the_King_of_Israel.jpg/500px-King_David%2C_the_King_of_Israel.jpg'],
+    sources: ['2 Samuel 23:18-19', '2 Samuel 21:16-17']
+  }, {
+    id: 'mighty-men-benaiah',
+    parentId: 'davids-mighty-men',
+    name: 'Benaiah',
+    description: 'Benaiah, son of Jehoiada, was a legendary mighty man who commanded David\'s bodyguard. He is famous for three exploits: slaying two of Moab\'s greatest warriors (ariels/lion-like men), descending into a pit on a snowy day to kill a wild lion, and killing a giant Egyptian with the giant\'s own spear. Alternate historians argue Benaiah was a specialist in neutralizing genetic hybrids and Nephilim descendants.',
+    layer: 'Biblical Figures',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/King_David%2C_the_King_of_Israel.jpg/500px-King_David%2C_the_King_of_Israel.jpg'],
+    sources: ['2 Samuel 23:20-23', '1 Chronicles 11:22-25']
+  }, {
+    id: 'ariels-of-moab',
+    parentId: 'biblical-apocryphal',
+    name: 'Ariels of Moab (Lion-like Men)',
+    description: 'Mentioned in 2 Samuel 23:20 as two "ariels" (literally "lion of God" or "lion-like men") of Moab slain by Benaiah. Historical and theological analyses differ, but fringe researchers and alternative historians suggest the term describes half-human, half-animal hybrids resulting from ancient genetic experiments, or a remnant clan of Nephilim giants who wore animal headdresses and possessed beast-like strength.',
+    layer: 'Giants & Nephilim',
+    mapFeatureId: 'moab-wilderness-site',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Kingdoms_around_Israel_830_map.svg/500px-Kingdoms_around_Israel_830_map.svg.png'],
+    sources: ['2 Samuel 23:20', '1 Chronicles 11:22', 'Legends of the Jews (Louis Ginzberg)']
+  }, {
+    id: 'cynocephali-race',
+    parentId: 'folklore-archetypes-comparative',
+    name: 'Cynocephali',
+    description: 'The Cynocephali are a mythical race of dog-headed humans reported in antiquity by travelers and historians including Pliny the Elder, Herodotus, and Marco Polo, who claimed they inhabited parts of India, Africa, and the Black Sea region. Cryptozoologists theorize they represent an extinct hominid line or survival of a Miocene-era primate, while alternative historians suggest genetic manipulation or dimensional portals.',
+    layer: 'Myths / Legends',
+    mapFeatureId: 'punjab-cynocephali-site',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Schedel%27sche_Weltchronik-Dog_head.jpg/500px-Schedel%27sche_Weltchronik-Dog_head.jpg'],
+    sources: ['Natural History (Pliny the Elder)', 'Indica (Megasthenes)', 'The Travels of Marco Polo']
+  }, {
+    id: 'dogheaded-men-moab',
+    parentId: 'cynocephali-race',
+    name: 'Dogheaded Men of Moab',
+    description: 'A regional variant of the cynocephali legends associated with the desert wilderness of Moab (modern Jordan). Ancient travelers and medieval bestiaries described dog-headed beast-men roaming the desolate canyons east of the Dead Sea. Fringe biblical scholars suggest these creature accounts are linked to the biblical \'Seirim\' (satyrs or hairy demons) and the \'Ariels\' of Moab slain by King David\'s champions.',
+    layer: 'Myths / Legends',
+    mapFeatureId: 'moab-cynocephali-site',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Kievskaya_psaltir_kinocefal.jpg/500px-Kievskaya_psaltir_kinocefal.jpg'],
+    sources: ['Medieval Syriac Chronicles', 'Moabite Stone Commentary', 'Lexicon of Hebrew Myths']
+  }, {
+    id: 'st-christopher-dogheaded',
+    parentId: 'cynocephali-race',
+    name: 'St. Christopher the Dogheaded Saint',
+    description: 'In Eastern Orthodox iconography, Saint Christopher is frequently depicted with the head of a dog (known as Christopher Cynocephalus). Eastern Christian tradition relates he was a giant warrior from the land of the Cynocephali (dog-headed men) who converted to Christianity. In alternative history and werewolf lore, this iconography is interpreted literally as historical evidence of a genetic canine-human hybrid, or an ancient warrior clan practicing skinwalker-style transformation rituals.',
+    layer: 'Myths / Legends',
+    mapFeatureId: 'lycia-st-christopher',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Saint_christopher_cynocephalus.gif/500px-Saint_christopher_cynocephalus.gif'],
+    sources: ['Eastern Orthodox Synaxarion', 'The Golden Legend (Jacobus de Voragine)', 'Iconography of the Cynocephalic Saint Christopher (Walter)']
+  }, {
+    id: 'joplin-butterfly-people',
+    parentId: 'supernatural-anomalies',
+    name: 'The Joplin Butterfly People',
+    description: 'Supernatural encounters reported by numerous children in the aftermath of the EF5 tornado that struck Joplin, Missouri, on May 22, 2011. Children reported seeing beautiful, luminous butterfly-like beings or angels who hovered over them, shielded them from flying debris, and comforted them. Paranormal researchers compare these sightings to cryptids (like the Mothman), angelic interventions, or protective manifestations of the collective subconscious under extreme trauma.',
+    layer: 'Cryptid Sightings',
+    mapFeatureId: 'joplin-tornado-site',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Joplin%2C_Missouri_tornado_of_2011.jpg/500px-Joplin%2C_Missouri_tornado_of_2011.jpg'],
+    sources: ['The Butterfly People of Joplin (Local Testimony)', 'Joplin Globe Coverage May 2011', 'Paranormal Encounter Archives']
   }
 ];
