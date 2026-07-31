@@ -17,6 +17,8 @@ interface CartographyPageProps {
   isMapDarkMode: boolean;
   db: any;
   auth: any;
+  selectedMapId?: string;
+  onMapSelect?: (mapId: string) => void;
 }
 
 interface HistoricalMap {
@@ -28,6 +30,7 @@ interface HistoricalMap {
   aspectRatio: number;
   pinColor?: string;
   era: string;
+  disableResolutionUpgrade?: boolean;
 }
 
 interface TranslationHotspot {
@@ -40,145 +43,7 @@ interface TranslationHotspot {
   coordinates: [number, number][]; // A list of coordinates forming a polygon
 }
 
-const TRANSLATION_HOTSPOTS: TranslationHotspot[] = [
-  // Kircher's Atlantis - Triangulated text selection boxes aligned to physical screenshot landmarks
-  {
-    id: 'atlantis-title',
-    mapId: 'atlantis',
-    name: 'Top-Left Title Cartouche',
-    originalText: 'Situs Insulæ Atlantidis, à mari olim absorptæ ex mente Ægyptiorum et Platonis descriptio',
-    translatedText: 'Site of the Island of Atlantis, swallowed of old by the sea, according to the description of the Egyptians and Plato',
-    context: 'The decorative scroll banner printed in the upper-left corner of Kircher\'s 1669 engraving.',
-    coordinates: [
-      [-114, 35],
-      [-54, 35],
-      [-54, -15],
-      [-114, -15],
-      [-114, 35]
-    ]
-  },
-  {
-    id: 'atlantis-africa',
-    mapId: 'atlantis',
-    name: 'Africa',
-    originalText: 'Africa',
-    translatedText: 'Africa',
-    context: 'Text label printed directly below the cartouche on the left landmass.',
-    coordinates: [
-      [-105, -18],
-      [-70, -18],
-      [-70, -32],
-      [-105, -32],
-      [-105, -18]
-    ]
-  },
-  {
-    id: 'atlantis-hispania',
-    mapId: 'atlantis',
-    name: 'Hispania & Gallia',
-    originalText: 'Hispania / Gallia',
-    translatedText: 'Spain / Gaul (France)',
-    context: 'Text labels for Europe on the lower-left continent below Africa.',
-    coordinates: [
-      [-105, -38],
-      [-60, -38],
-      [-60, -58],
-      [-105, -58],
-      [-105, -38]
-    ]
-  },
-  {
-    id: 'atlantis-island',
-    mapId: 'atlantis',
-    name: 'Insula Atlantis',
-    originalText: 'Insula Atlantis',
-    translatedText: 'Island of Atlantis',
-    context: 'Text printed directly across the central green sunken island.',
-    coordinates: [
-      [10, 20],
-      [75, 20],
-      [75, -25],
-      [10, -25],
-      [10, 20]
-    ]
-  },
-  {
-    id: 'atlantis-oceanus',
-    mapId: 'atlantis',
-    name: 'Oceanus Atlanticus',
-    originalText: 'Oceanus Atlanticus',
-    translatedText: 'Atlantic Ocean',
-    context: 'Inscription over the ocean waters between the cartouche and the island.',
-    coordinates: [
-      [-50, -32],
-      [10, -32],
-      [10, -48],
-      [-50, -48],
-      [-50, -32]
-    ]
-  },
-  {
-    id: 'atlantis-america',
-    mapId: 'atlantis',
-    name: 'America',
-    originalText: 'America',
-    translatedText: 'America',
-    context: 'Text label for the American landmass on the right side of the map.',
-    coordinates: [
-      [85, 35],
-      [125, 35],
-      [125, -25],
-      [85, -25],
-      [85, 35]
-    ]
-  },
-  // Fra Mauro Map
-  {
-    id: 'framauro-mediterranean',
-    mapId: 'framauro',
-    name: 'Mar Mediteraneum',
-    originalText: 'Mar Mediteraneum',
-    translatedText: 'The Mediterranean Sea',
-    context: 'The central hub of early medieval cartography. Fra Mauro detailed the Mediterranean coastlines with impressive accuracy derived from portolan charts.',
-    coordinates: [
-      [-15, 15],
-      [15, 15],
-      [15, -15],
-      [-15, -15],
-      [-15, 15]
-    ]
-  },
-  {
-    id: 'framauro-abassia',
-    mapId: 'framauro',
-    name: 'Abassia (Abyssinia)',
-    originalText: 'Abassia / Ethiopia',
-    translatedText: 'Ethiopia / East Africa',
-    context: 'Fra Mauro incorporated information from Ethiopian delegates to the Council of Florence (1438-1445), mapping the Horn of Africa with rich geographic detail.',
-    coordinates: [
-      [-30, 60],
-      [10, 60],
-      [10, 35],
-      [-30, 35],
-      [-30, 60]
-    ]
-  },
-  {
-    id: 'framauro-chataio',
-    mapId: 'framauro',
-    name: 'Chataio (Cathay)',
-    originalText: 'Chataio o Cathayo / Tartaria',
-    translatedText: 'Cathay (Northern China) / Land of the Tartars',
-    context: 'This region on the bottom-left shows major cities and paths mentioned by Marco Polo in his travels across Asia.',
-    coordinates: [
-      [-65, -30],
-      [-25, -30],
-      [-25, -60],
-      [-65, -60],
-      [-65, -30]
-    ]
-  }
-];
+const TRANSLATION_HOTSPOTS: TranslationHotspot[] = [];
 
 // High-resolution digital archives and Wikimedia collections
 const HISTORICAL_MAPS: HistoricalMap[] = [
@@ -198,7 +63,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     name: "Babylonian Map of the World",
     year: "c. 600 BC",
     description: "The oldest known map of the world, carved onto a clay tablet. It places Babylon at the center of the Euphrates, encircled by a ring of bitter waters and triangular outer islands.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/1/1b/Map_of_the_World_from_Sippar%2C_Iraq%2C_6th_century_BCE._British_Museum.jpg",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Map_of_the_World_from_Sippar%2C_Iraq%2C_6th_century_BCE._British_Museum.jpg/1280px-Map_of_the_World_from_Sippar%2C_Iraq%2C_6th_century_BCE._British_Museum.jpg",
     aspectRatio: 0.9202,
     pinColor: '#FFF96A',
     era: 'ancient'
@@ -218,7 +83,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     name: "Ptolemy’s Geography",
     year: "c. 150 AD",
     description: "A classical Renaissance restoration of Claudius Ptolemy's geographical coordinates, showing the known world of the Roman Empire extending from Hibernia (Ireland) to China.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/2/23/PtolemyWorldMap.jpg",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/PtolemyWorldMap.jpg/1280px-PtolemyWorldMap.jpg",
     aspectRatio: 1.4612,
     pinColor: '#FF5C5C',
     era: 'ancient'
@@ -239,7 +104,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     name: "Albi Mappa Mundi",
     year: "c. 8th Century",
     description: "One of the oldest surviving non-T-O style medieval world maps, preserved in the Albi Cathedral library, showing a horseshoe-shaped Mediterranean basin and surrounding lands.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/1/18/Mappa_mundi_dAlbi.png",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Mappa_mundi_dAlbi.png/500px-Mappa_mundi_dAlbi.png",
     aspectRatio: 0.8128,
     pinColor: '#B297FF',
     era: 'early-medieval'
@@ -259,7 +124,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     name: "Tabula Rogeriana",
     year: "1154",
     description: "Drawn by the Arab scholar Al-Idrisi for King Roger II of Sicily. It represented the most advanced geographical synthesis of the medieval world, oriented with South at the top.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/d/d3/TabulaRogeriana.jpg",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/TabulaRogeriana.jpg/1280px-TabulaRogeriana.jpg",
     aspectRatio: 2.2069,
     pinColor: '#B297FF',
     era: 'early-medieval'
@@ -279,7 +144,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     name: "Psalter Mappa Mundi",
     year: "c. 1260",
     description: "A detailed medieval miniature map from a psalter. It depicts the world inside a circular frame with Christ presiding above, flanked by angels.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Psalter_world_map.jpg",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Psalter_world_map.jpg/500px-Psalter_world_map.jpg",
     aspectRatio: 0.7838,
     pinColor: '#C0F06E',
     era: 'early-medieval'
@@ -310,10 +175,11 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     name: "Kangnido Map",
     year: "1402",
     description: "An early Joseon-dynasty Korean map detailing East Asia, the Silk Road, India, and Africa, representing the collision of Western Islamic and Far Eastern Chinese cartographical findings.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/1/1d/GeneralMapOfDistancesAndHistoricCapitals.jpg",
-    aspectRatio: 1.2413,
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/%ED%98%BC%EC%9D%BC%EA%B0%95%EB%A6%AC%EC%97%AD%EB%8C%80%EA%B5%AD%EB%8F%84%EC%A7%80%EB%8F%84_%281%29.JPG/1920px-%ED%98%BC%EC%9D%BC%EA%B0%95%EB%A6%AC%EC%97%AD%EB%8C%80%EA%B5%AD%EB%8F%84%EC%A7%80%EB%8F%84_%281%29.JPG",
+    aspectRatio: 1.7813,
     pinColor: '#FFF96A',
-    era: 'late-medieval'
+    era: 'late-medieval',
+    disableResolutionUpgrade: true
   },
   {
     id: 'bianco',
@@ -330,20 +196,22 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     name: "Borgia World Map",
     year: "c. 1430",
     description: "A highly complex, non-theocentric map engraved on a circular copper plate, showing Asia, Europe, and Africa with mythological illustrations and kingdoms.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/e/eb/Mapa_de_Borgia_XV.jpg",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Mapa_de_Borgia_XV.jpg/1280px-Mapa_de_Borgia_XV.jpg",
     aspectRatio: 1.0,
     pinColor: '#74F8F3',
-    era: 'late-medieval'
+    era: 'late-medieval',
+    disableResolutionUpgrade: true
   },
   {
     id: 'framauro',
     name: "Fra Mauro Map",
     year: "1459",
     description: "Created by Venetian monk Fra Mauro, it represents the absolute zenith of medieval cartography, incorporating Portuguese maritime expeditions and oriented with South at the top.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/FraMauroDetailedMapCorrectOrientation.jpg/1280px-FraMauroDetailedMapCorrectOrientation.jpg",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Fra_Mauro_Map_FactumArte.jpg/1920px-Fra_Mauro_Map_FactumArte.jpg",
     aspectRatio: 1.0,
     pinColor: '#FF5C5C',
-    era: 'late-medieval'
+    era: 'late-medieval',
+    disableResolutionUpgrade: true
   },
   // RENAISSANCE
   {
@@ -351,7 +219,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     name: "Waldseemüller World Map",
     year: "1507",
     description: "Martin Waldseemüller's monumental map, the first to use the name 'America' and represent the New World as a separate landmass between the Atlantic and Pacific.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/c/c0/Waldseemuller_map_2.jpg",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Waldseemuller_map_2.jpg/1280px-Waldseemuller_map_2.jpg",
     aspectRatio: 1.7513,
     pinColor: '#FF5E97',
     era: 'renaissance'
@@ -361,7 +229,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     name: "Piri Reis Map",
     year: "1513",
     description: "The surviving fragment of a world map compiled by Ottoman admiral Piri Reis, showcasing highly accurate coastlines of Western Europe, North Africa, and Brazil.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/7/70/Piri_reis_world_map_01.jpg",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Piri_reis_world_map_01.jpg/1280px-Piri_reis_world_map_01.jpg",
     aspectRatio: 0.75,
     pinColor: '#FF9F63',
     era: 'renaissance'
@@ -387,6 +255,26 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     era: 'renaissance'
   },
   {
+    id: 'islandia',
+    name: "Islandia (Map of Iceland)",
+    year: "1585",
+    description: "Abraham Ortelius's legendary engraving of Iceland, renowned for its vivid depictions of Mount Hekla erupting, polar bears on icebergs, and a massive array of fantastical sea monsters.",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/1591_map_of_Iceland_by_Abraham_Ortelius.jpg/3840px-1591_map_of_Iceland_by_Abraham_Ortelius.jpg",
+    aspectRatio: 1.3853,
+    pinColor: '#FFF96A',
+    era: 'renaissance'
+  },
+  {
+    id: 'urbanomonti',
+    name: "Urbano Monti Planisphere",
+    year: "1587",
+    description: "The largest early world map known, drawn by Urbano Monti in Milan. Centered on the North Pole, it uses an advanced azimuthal equidistant projection and displays mythological creatures.",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/1587_Planisphere_Urbano_Monti_%2816th_century_Milan%2C_Italy%29.jpg/3840px-1587_Planisphere_Urbano_Monti_%2816th_century_Milan%2C_Italy%29.jpg",
+    aspectRatio: 0.9987,
+    pinColor: '#F7E8C1',
+    era: 'renaissance'
+  },
+  {
     id: 'tartaria',
     name: "Map of Tartaria",
     year: "1606",
@@ -405,6 +293,16 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     url: "https://iiif.digitalcommonwealth.org/iiif/2/commonwealth:7h149v867/full/4000,/0/default.jpg",
     aspectRatio: 0.7025,
     pinColor: '#C0F06E',
+    era: 'modern'
+  },
+  {
+    id: 'ferguson-flat-earth',
+    name: "Ferguson's Square and Stationary Earth Map",
+    year: "1893",
+    description: "Professor Orlando Ferguson's highly elaborate cosmology diagram asserting the Earth is a square, stationary basin with a central concave globe, citing numerous Biblical texts.",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Map_of_the_square_and_stationary_earth_-_four_hundred_passages_in_the_Bible_that_condemn_the_Globe_Theory%2C_or_the_Flying_Earth%2C_and_none_sustain_it_%3B_this_map_is_the_Bible_map_of_the_world_LOC_2011594831.jpg/3840px-Map_of_the_square_and_stationary_earth_-_four_hundred_passages_in_the_Bible_that_condemn_the_Globe_Theory%2C_or_the_Flying_Earth%2C_and_none_sustain_it_%3B_this_map_is_the_Bible_map_of_the_world_LOC_2011594831.jpg",
+    aspectRatio: 1.4494,
+    pinColor: '#b6a6ff',
     era: 'modern'
   },
   {
@@ -469,16 +367,6 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     era: 'speculative'
   },
   {
-    id: 'gondwana',
-    name: "Gondwana Reconstruction",
-    year: "Modern (550M BC)",
-    description: "A paleogeographic and geological reconstruction mapping the assembly of East and West Gondwana, uniting modern South America, Africa, India, and Australia.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Parna%C3%ADba_gondwana.png/1280px-Parna%C3%ADba_gondwana.png",
-    aspectRatio: 1.1313,
-    pinColor: '#FF5C5C',
-    era: 'speculative'
-  },
-  {
     id: 'atlantis',
     name: "Kircher's Atlantis",
     year: "1669",
@@ -493,12 +381,49 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     name: "Mercator's Hyperborea",
     year: "1595",
     description: "Gerardus Mercator's Arctic projection map showcasing a speculative polar landmass divided by four massive channels, centered on a black rock magnetic mountain (Rupes Nigra).",
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Mercator_north_pole_1595.jpg/1280px-Mercator_north_pole_1595.jpg",
-    aspectRatio: 1.0585,
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Gerardus_Mercator%2C_Septentrionalium_terrarum_descriptio_%28FL37810599_3148101%29.jpg/3840px-Gerardus_Mercator%2C_Septentrionalium_terrarum_descriptio_%28FL37810599_3148101%29.jpg",
+    aspectRatio: 1.2084,
     pinColor: '#B297FF',
+    era: 'speculative'
+  },
+  {
+    id: 'chart-of-hell',
+    name: "Chart of Hell (La Carte de l'Enfer)",
+    year: "c. 1480",
+    description: "Sandro Botticelli's detailed and terrifying depiction of the underworld, illustrating the nine concentric circles of Dante's Inferno, tapering to Lucifer at the center of the earth.",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Sandro_Botticelli_-_La_Carte_de_l%27Enfer.jpg/1280px-Sandro_Botticelli_-_La_Carte_de_l%27Enfer.jpg",
+    aspectRatio: 1.4319,
+    pinColor: '#D3C5FB',
+    era: 'speculative'
+  },
+  {
+    id: 'sigillum',
+    name: "Sigillum Dei Æmeth (Seal of Truth)",
+    year: "c. 1582",
+    description: "John Dee's complex Enochian cosmology seal, representing the cosmic order, names of angels, and mystical dimensions of the universe revealed to him and Edward Kelley.",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Sigillum_Dei_%C3%86meth.jpg/500px-Sigillum_Dei_%C3%86meth.jpg",
+    aspectRatio: 1.5000,
+    pinColor: '#FF9F63',
+    era: 'speculative'
+  },
+  {
+    id: 'hebrew-cosmology',
+    name: "Early Hebrew Cosmology Diagram",
+    year: "Modern Reconstruction",
+    description: "A diagrammatic representation of ancient biblical cosmology, featuring the dome firmament, the waters above and below, the pillars of the earth, and the underworld of Sheol.",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Early_Hebrew_Conception_of_the_Universe.png/500px-Early_Hebrew_Conception_of_the_Universe.png",
+    aspectRatio: 1.0964,
+    pinColor: '#90C2FF',
     era: 'speculative'
   }
 ];
+
+const getProxyOrDirectUrl = (url: string): string => {
+  if (url.includes('upload.wikimedia.org')) {
+    return `https://images.weserv.nl/?url=${encodeURIComponent(url)}`;
+  }
+  return `/api/proxy-resource?url=${encodeURIComponent(url)}`;
+};
 
 interface SavedPoint {
   id: string;
@@ -551,21 +476,29 @@ const calculateMaxBounds = (coords: [[number, number], [number, number], [number
 
 // Helper to remove any existing historical map sources and layers
 const cleanUpMapOverlay = (map: mapboxgl.Map) => {
+  const maxSlices = 25;
+  for (let i = 0; i < maxSlices; i++) {
+    const resolutions = ['low', 'high'];
+    resolutions.forEach(res => {
+      const lyr = `historical-map-layer-${i}-${res}`;
+      const src = `historical-map-src-${i}-${res}`;
+      if (map.getLayer(lyr)) map.removeLayer(lyr);
+      if (map.getSource(src)) map.removeSource(src);
+    });
+    // Backwards compatibility for old names
+    const oldLyr = `historical-map-layer-${i}`;
+    const oldSrc = `historical-map-src-${i}`;
+    if (map.getLayer(oldLyr)) map.removeLayer(oldLyr);
+    if (map.getSource(oldSrc)) map.removeSource(oldSrc);
+  }
+
   const layers = [
     'historical-map-layer',
-    'historical-map-layer-0',
-    'historical-map-layer-1',
-    'historical-map-layer-2',
-    'historical-map-layer-3',
     'hotspots-fill',
     'hotspots-outline'
   ];
   const sources = [
     'historical-map-src',
-    'historical-map-src-0',
-    'historical-map-src-1',
-    'historical-map-src-2',
-    'historical-map-src-3',
     'hotspots-src'
   ];
 
@@ -642,17 +575,16 @@ const updateHotspotsOverlay = (map: mapboxgl.Map, mapId: string) => {
 };
 
 // Helper to add/update the raster historical map sources and layers
-const updateMapOverlay = (map: mapboxgl.Map, hMap: HistoricalMap, customUrl?: string) => {
-  cleanUpMapOverlay(map);
-
+const updateMapOverlay = (map: mapboxgl.Map, hMap: HistoricalMap, slices: ImageSlice[], resolution: 'low' | 'high') => {
   const coords = calculateBounds(hMap.aspectRatio);
   const minLng = coords[0][0];
   const maxLng = coords[1][0];
   const maxLat = coords[0][1];
   const minLat = coords[2][1];
 
-  if (hMap.id === 'peutinger' && !customUrl) {
-    // Sliced high-resolution multi-source rendering for the Peutinger Table
+  if (hMap.id === 'peutinger' && slices.length <= 1) {
+    // Sliced high-resolution multi-source rendering for the Peutinger Table using local files
+    cleanUpMapOverlay(map);
     const segmentLngWidth = (maxLng - minLng) / 4;
     for (let i = 0; i < 4; i++) {
       const segMinLng = minLng + i * segmentLngWidth;
@@ -686,24 +618,71 @@ const updateMapOverlay = (map: mapboxgl.Map, hMap: HistoricalMap, customUrl?: st
       });
     }
   } else {
-    // Standard single-source map overlay rendering
-    const url = customUrl || `/api/proxy-resource?url=${encodeURIComponent(hMap.url)}`;
-    map.addSource('historical-map-src', {
-      type: 'image',
-      url: url,
-      coordinates: coords
-    });
+    // Standard slices rendering (dynamic grids or single images) using resolution suffixes to prevent popping
+    const lngSpan = maxLng - minLng;
+    const latSpan = maxLat - minLat;
 
-    map.addLayer({
-      id: 'historical-map-layer',
-      type: 'raster',
-      source: 'historical-map-src',
-      paint: {
-        'raster-fade-duration': 150,
-        'raster-opacity': 1,
-        'raster-opacity-transition': { duration: 300 }
+    slices.forEach((slice, index) => {
+      const srcId = `historical-map-src-${index}-${resolution}`;
+      const lyrId = `historical-map-layer-${index}-${resolution}`;
+
+      const cellMinLng = minLng + (slice.col / slice.cols) * lngSpan;
+      const cellMaxLng = minLng + ((slice.col + 1) / slice.cols) * lngSpan;
+      const cellMaxLat = maxLat - (slice.row / slice.rows) * latSpan;
+      const cellMinLat = maxLat - ((slice.row + 1) / slice.rows) * latSpan;
+
+      const cellCoords = [
+        [cellMinLng, cellMaxLat],
+        [cellMaxLng, cellMaxLat],
+        [cellMaxLng, cellMinLat],
+        [cellMinLng, cellMinLat]
+      ];
+
+      const existingSource = map.getSource(srcId) as mapboxgl.ImageSource | undefined;
+      if (existingSource) {
+        existingSource.updateImage({
+          url: slice.url,
+          coordinates: cellCoords as any
+        });
+      } else {
+        map.addSource(srcId, {
+          type: 'image',
+          url: slice.url,
+          coordinates: cellCoords as any
+        });
+
+        // Insert new layer below hotspots to keep annotations interactive
+        const beforeId = map.getLayer('hotspots-fill') ? 'hotspots-fill' : undefined;
+        map.addLayer({
+          id: lyrId,
+          type: 'raster',
+          source: srcId,
+          paint: {
+            'raster-fade-duration': 150,
+            'raster-opacity': 1,
+            'raster-opacity-transition': { duration: 300 }
+          }
+        }, beforeId);
       }
     });
+
+    // Schedule clean up of the other resolution's sources and layers to avoid overlay leaks and flickering
+    const otherResolution = resolution === 'low' ? 'high' : 'low';
+    setTimeout(() => {
+      // Check if map is still ready/mounted before cleaning up
+      try {
+        if (!map.getStyle()) return;
+        const maxSlices = 25;
+        for (let i = 0; i < maxSlices; i++) {
+          const oldLyr = `historical-map-layer-${i}-${otherResolution}`;
+          const oldSrc = `historical-map-src-${i}-${otherResolution}`;
+          if (map.getLayer(oldLyr)) map.removeLayer(oldLyr);
+          if (map.getSource(oldSrc)) map.removeSource(oldSrc);
+        }
+      } catch (e) {
+        // Map might have been unmounted during timeout
+      }
+    }, 400);
   }
 };
 
@@ -872,8 +851,145 @@ const EraAccordionHeader = ({ era, isExpanded, theme, onToggleExpand, getEraFold
   );
 };
 
-export default function CartographyPage({ theme, isMapDarkMode }: CartographyPageProps) {
-  const [selectedMap, setSelectedMap] = useState<HistoricalMap>(HISTORICAL_MAPS[0]);
+// Helper to parse the width from Wikipedia / IIIF URLs
+const getUrlWidth = (url: string): number => {
+  if (url.includes('/commons/thumb/')) {
+    const match = url.match(/\/(\d+)px-/);
+    if (match) return parseInt(match[1], 10);
+  }
+  if (url.includes('/full/')) {
+    const match = url.match(/\/full\/(\d+),?\/?/);
+    if (match) return parseInt(match[1], 10);
+  }
+  return 4000; // Default fallback to high resolution
+};
+
+// Helper to update the resolution of the map URL dynamically
+const getMapUrlForWidth = (url: string, width: number) => {
+  if (url.includes('/commons/thumb/')) {
+    const regex = /\/(\d+)px-([^\/]+)$/;
+    if (regex.test(url)) {
+      return url.replace(regex, `/${width}px-$2`);
+    }
+  }
+  if (url.includes('/full/')) {
+    const iiifRegex = /\/full\/(\d+),?\/?/;
+    if (iiifRegex.test(url)) {
+      return url.replace(iiifRegex, `/full/${width},/`);
+    }
+  }
+  return url;
+};
+
+// Helper to resolve the raw original Wikipedia file URL from a thumbnail URL
+const getWikipediaRawUrl = (url: string) => {
+  if (!url.includes('/commons/thumb/')) return url;
+  return url
+    .replace('/commons/thumb/', '/commons/')
+    .replace(/\/(\d+)px-[^\/]+$/, '');
+};
+
+interface ImageSlice {
+  url: string;
+  col: number;
+  row: number;
+  cols: number;
+  rows: number;
+}
+
+const sliceImage = (imageBlob: Blob): Promise<ImageSlice[]> => {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    const objectUrl = URL.createObjectURL(imageBlob);
+    img.src = objectUrl;
+    img.onload = async () => {
+      URL.revokeObjectURL(objectUrl);
+      const width = img.width;
+      const height = img.height;
+
+      // Determine grid size dynamically (each tile max ~3000px)
+      const cols = Math.ceil(width / 3000);
+      const rows = Math.ceil(height / 3000);
+
+      if (cols === 1 && rows === 1) {
+        // No slicing needed
+        resolve([{
+          url: URL.createObjectURL(imageBlob),
+          col: 0,
+          row: 0,
+          cols: 1,
+          rows: 1
+        }]);
+        return;
+      }
+
+      const colWidth = Math.floor(width / cols);
+      const rowHeight = Math.floor(height / rows);
+      const slices: ImageSlice[] = [];
+
+      try {
+        for (let r = 0; r < rows; r++) {
+          for (let c = 0; c < cols; c++) {
+            const canvas = document.createElement('canvas');
+            const sx = c * colWidth;
+            const sy = r * rowHeight;
+            
+            // Handle edges to cover entire image
+            const sw = (c === cols - 1) ? (width - sx) : colWidth;
+            const sh = (r === rows - 1) ? (height - sy) : rowHeight;
+
+            canvas.width = sw;
+            canvas.height = sh;
+            const ctx = canvas.getContext('2d');
+            if (ctx) {
+              ctx.drawImage(img, sx, sy, sw, sh, 0, 0, sw, sh);
+            }
+
+            const sliceBlob = await new Promise<Blob | null>((res) => {
+              canvas.toBlob((b) => res(b), 'image/jpeg', 0.85);
+            });
+
+            if (sliceBlob) {
+              slices.push({
+                url: URL.createObjectURL(sliceBlob),
+                col: c,
+                row: r,
+                cols,
+                rows
+              });
+            }
+          }
+        }
+        resolve(slices);
+      } catch (err) {
+        reject(err);
+      }
+    };
+    img.onerror = (err) => {
+      URL.revokeObjectURL(objectUrl);
+      reject(err);
+    };
+  });
+};
+
+export default function CartographyPage({ 
+  theme, 
+  isMapDarkMode, 
+  db, 
+  auth, 
+  selectedMapId, 
+  onMapSelect 
+}: CartographyPageProps) {
+  // Try to initialize using selectedMapId if provided, else fallback to index 0
+  const initialMap = useMemo(() => {
+    if (selectedMapId) {
+      const match = HISTORICAL_MAPS.find(m => m.id === selectedMapId);
+      if (match) return match;
+    }
+    return HISTORICAL_MAPS[0];
+  }, [selectedMapId]);
+
+  const [selectedMap, setSelectedMap] = useState<HistoricalMap>(initialMap);
   const [loadedThumbnails, setLoadedThumbnails] = useState<Record<string, boolean>>({});
   const [notes, setNotes] = useState<SavedPoint[]>([]);
   const [showNotes, setShowNotes] = useState<boolean>(true);
@@ -885,6 +1001,50 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
   const [showSearchResults, setShowSearchResults] = useState<boolean>(false);
   const [searchActiveIndex, setSearchActiveIndex] = useState<number>(-1);
   const pendingTargetPointRef = useRef<{ lng: number; lat: number } | null>(null);
+
+  const [currentResolution, setCurrentResolution] = useState<'low' | 'high'>('low');
+  const currentResolutionRef = useRef<'low' | 'high'>('low');
+  const lastMapIdRef = useRef<string>('');
+  const lastFetchedMapIdRef = useRef<string>('');
+  const selectedMapRef = useRef<HistoricalMap>(selectedMap);
+
+  useEffect(() => {
+    currentResolutionRef.current = currentResolution;
+  }, [currentResolution]);
+
+  useEffect(() => {
+    selectedMapRef.current = selectedMap;
+  }, [selectedMap]);
+
+  // Reset resolution back to 'low' when switching maps
+  useEffect(() => {
+    setCurrentResolution('low');
+  }, [selectedMap.id]);
+
+  const originalWidth = useMemo(() => getUrlWidth(selectedMap.url), [selectedMap.url]);
+  const lowResWidth = useMemo(() => {
+    if (selectedMap.disableResolutionUpgrade) return originalWidth;
+    return Math.min(1280, originalWidth);
+  }, [originalWidth, selectedMap.disableResolutionUpgrade]);
+  const highResWidth = originalWidth;
+
+  const targetUrl = useMemo(() => {
+    if (selectedMap.disableResolutionUpgrade) {
+      return selectedMap.url;
+    }
+    const width = currentResolution === 'low' ? lowResWidth : highResWidth;
+    return getMapUrlForWidth(selectedMap.url, width);
+  }, [selectedMap.url, currentResolution, lowResWidth, highResWidth, selectedMap.disableResolutionUpgrade]);
+
+  // Sync prop selectedMapId down to internal selectedMap state
+  useEffect(() => {
+    if (selectedMapId) {
+      const match = HISTORICAL_MAPS.find(m => m.id === selectedMapId);
+      if (match && match.id !== selectedMap.id) {
+        setSelectedMap(match);
+      }
+    }
+  }, [selectedMapId, selectedMap.id]);
 
   // Match maps based on searchQuery
   const matchedMaps = useMemo(() => {
@@ -914,6 +1074,9 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
     setSelectedMap(hMap);
     setSearchQuery('');
     setShowSearchResults(false);
+    if (onMapSelect) {
+      onMapSelect(hMap.id);
+    }
   };
 
   const handleNoteSelect = (notePoint: SavedPoint) => {
@@ -922,6 +1085,10 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
 
     setSearchQuery('');
     setShowSearchResults(false);
+
+    if (onMapSelect) {
+      onMapSelect(matchingMap.id);
+    }
 
     if (matchingMap.id === selectedMap.id) {
       const map = mapRef.current;
@@ -978,7 +1145,8 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
 
   // Progressive loader state
   const [loadProgress, setLoadProgress] = useState<number | null>(null);
-  const [mapImageUrl, setMapImageUrl] = useState<string>('');
+  const [mapImageSlices, setMapImageSlices] = useState<ImageSlice[]>([]);
+  const [isMapSwitchLoading, setIsMapSwitchLoading] = useState<boolean>(false);
   const [isMapReady, setIsMapReady] = useState<boolean>(false);
   const [mapZoom, setMapZoom] = useState<number>(1.5);
   const [coverZoom, setCoverZoom] = useState<number>(1.5);
@@ -993,6 +1161,23 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
   const minZoomLimitRef = useRef<number>(0.1);
   const targetCenterRef = useRef<[number, number]>([0, 0]);
   const isEasingRef = useRef<boolean>(false);
+  const lastPositionedMapIdRef = useRef<string>('');
+  const prevSlicesRef = useRef<ImageSlice[]>([]);
+
+  // Revoke Object URLs for slices on change or unmount to prevent memory leaks
+  useEffect(() => {
+    const prevSlices = prevSlicesRef.current;
+    prevSlicesRef.current = mapImageSlices;
+
+    return () => {
+      const currentUrls = new Set(mapImageSlices.map(s => s.url));
+      prevSlices.forEach(slice => {
+        if (slice.url.startsWith('blob:') && !currentUrls.has(slice.url)) {
+          URL.revokeObjectURL(slice.url);
+        }
+      });
+    };
+  }, [mapImageSlices]);
 
   // Refs for callbacks to prevent stale closures
   const isAddModeRef = useRef(isAddMode);
@@ -1025,18 +1210,37 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
   useEffect(() => {
     if (selectedMap.id === 'peutinger') {
       setLoadProgress(null);
-      setMapImageUrl('');
+      setMapImageSlices([{
+        url: '',
+        col: 0,
+        row: 0,
+        cols: 1,
+        rows: 1
+      }]);
+      setIsMapSwitchLoading(false);
       return;
     }
 
     let active = true;
     const controller = new AbortController();
-    setLoadProgress(0);
+    
+    // Only clear the map image slices and show the full page progress loader when switching maps.
+    // When upgrading resolution, keep the low-res image visible on the map.
+    const isMapSwitch = lastFetchedMapIdRef.current !== selectedMap.id;
+    if (isMapSwitch) {
+      setMapImageSlices([]);
+      setLoadProgress(0);
+      setIsMapSwitchLoading(true);
+      lastFetchedMapIdRef.current = selectedMap.id;
+    } else {
+      setLoadProgress(0);
+      setIsMapSwitchLoading(false);
+    }
 
     const fetchImageProgress = async () => {
       try {
         // Route through proxy-resource endpoint to bypass CORS and user hotlink protections
-        const proxiedUrl = `/api/proxy-resource?url=${encodeURIComponent(selectedMap.url)}`;
+        const proxiedUrl = getProxyOrDirectUrl(targetUrl);
         const response = await fetch(proxiedUrl, { signal: controller.signal });
         if (!response.ok) throw new Error("Image fetch response failed");
 
@@ -1045,8 +1249,15 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
 
         if (!reader) {
           if (active) {
-            setMapImageUrl(proxiedUrl);
+            setMapImageSlices([{
+              url: proxiedUrl,
+              col: 0,
+              row: 0,
+              cols: 1,
+              rows: 1
+            }]);
             setLoadProgress(null);
+            setIsMapSwitchLoading(false);
           }
           return;
         }
@@ -1069,27 +1280,46 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
 
         if (!active) return;
 
-        // Create Blob and local Object URL
+        // Create Blob and slice it
         const blob = new Blob(chunks);
-        const localUrl = URL.createObjectURL(blob);
-
-        // Revoke the previous Object URL to avoid leaks
-        if (prevBlobUrlRef.current && prevBlobUrlRef.current.startsWith('blob:')) {
-          URL.revokeObjectURL(prevBlobUrlRef.current);
+        try {
+          const slices = await sliceImage(blob);
+          if (active) {
+            setMapImageSlices(slices);
+            setLoadProgress(null);
+            setIsMapSwitchLoading(false);
+          }
+        } catch (sliceErr) {
+          console.warn("Failed to slice image, falling back to original blob URL:", sliceErr);
+          const localUrl = URL.createObjectURL(blob);
+          if (active) {
+            setMapImageSlices([{
+              url: localUrl,
+              col: 0,
+              row: 0,
+              cols: 1,
+              rows: 1
+            }]);
+            setLoadProgress(null);
+            setIsMapSwitchLoading(false);
+          }
         }
-        prevBlobUrlRef.current = localUrl;
-
-        setMapImageUrl(localUrl);
-        setLoadProgress(null);
       } catch (err: any) {
         if (err.name === 'AbortError') {
           return;
         }
         console.warn("Failed to load map with progress, falling back to proxy URL:", err);
         if (active) {
-          const proxiedUrl = `/api/proxy-resource?url=${encodeURIComponent(selectedMap.url)}`;
-          setMapImageUrl(proxiedUrl);
+          const proxiedUrl = getProxyOrDirectUrl(targetUrl);
+          setMapImageSlices([{
+            url: proxiedUrl,
+            col: 0,
+            row: 0,
+            cols: 1,
+            rows: 1
+          }]);
           setLoadProgress(null);
+          setIsMapSwitchLoading(false);
         }
       }
     };
@@ -1100,7 +1330,7 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
       active = false;
       controller.abort();
     };
-  }, [selectedMap.url]);
+  }, [targetUrl]);
 
   // 3. Initialize Mapbox Map ONCE on mount
   useEffect(() => {
@@ -1140,8 +1370,6 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
 
 
     map.on('load', () => {
-      updateMapOverlay(map, selectedMap, mapImageUrl);
-      updateHotspotsOverlay(map, selectedMap.id);
       setIsMapReady(true);
     });
 
@@ -1153,7 +1381,21 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
       }
     });
 
+    const handleZoom = () => {
+      const zoom = map.getZoom();
+      if (selectedMapRef.current.disableResolutionUpgrade) {
+        return;
+      }
+      if (zoom >= 3.0 && currentResolutionRef.current === 'low') {
+        setCurrentResolution('high');
+      } else if (zoom < 2.5 && currentResolutionRef.current === 'high') {
+        setCurrentResolution('low');
+      }
+    };
+    map.on('zoom', handleZoom);
+
     return () => {
+      map.off('zoom', handleZoom);
       map.remove();
       mapRef.current = null;
     };
@@ -1164,14 +1406,25 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
     const map = mapRef.current;
     if (!map || !isMapReady) return;
 
-    updateMapOverlay(map, selectedMap, mapImageUrl);
+    if (lastMapIdRef.current !== selectedMap.id) {
+      cleanUpMapOverlay(map);
+      lastMapIdRef.current = selectedMap.id;
+    }
+
+    updateMapOverlay(map, selectedMap, mapImageSlices, currentResolution);
     updateHotspotsOverlay(map, selectedMap.id);
-  }, [selectedMap.id, mapImageUrl, isMapReady]);
+  }, [selectedMap.id, mapImageSlices, isMapReady, currentResolution]);
 
   // 5. Position camera and trigger entry zoom-in animation when the new map image finishes loading
   useEffect(() => {
     const map = mapRef.current;
-    if (!map || !isMapReady || !mapImageUrl) return;
+    if (!map || !isMapReady || mapImageSlices.length === 0) return;
+
+    if (lastPositionedMapIdRef.current === selectedMap.id) {
+      // Already positioned this map, do not reset camera on resolution upgrade!
+      return;
+    }
+    lastPositionedMapIdRef.current = selectedMap.id;
 
     const coords = calculateBounds(selectedMap.aspectRatio);
     const minLng = coords[0][0];
@@ -1242,7 +1495,7 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
       // Clear pending target point after use
       pendingTargetPointRef.current = null;
     });
-  }, [mapImageUrl, isMapReady]);
+  }, [mapImageSlices, isMapReady]);
 
   // 6. Clamp camera center dynamically using Mapbox's native maxBounds constraint
   useEffect(() => {
@@ -1384,15 +1637,21 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
     const map = mapRef.current;
     if (!map || !isMapReady) return;
     try {
-      if (loadProgress !== null) {
-        map.setPaintProperty('historical-map-layer', 'raster-opacity', 0);
-      } else {
-        map.setPaintProperty('historical-map-layer', 'raster-opacity', 1);
+      const targetOpacity = isMapSwitchLoading ? 0 : 1;
+      const maxSlices = 25;
+      for (let i = 0; i < maxSlices; i++) {
+        const lyrId = `historical-map-layer-${i}`;
+        if (map.getLayer(lyrId)) {
+          map.setPaintProperty(lyrId, 'raster-opacity', targetOpacity);
+        }
+      }
+      if (map.getLayer('historical-map-layer')) {
+        map.setPaintProperty('historical-map-layer', 'raster-opacity', targetOpacity);
       }
     } catch (e) {
       console.warn("Failed to set raster opacity:", e);
     }
-  }, [loadProgress, isMapReady]);
+  }, [isMapSwitchLoading, isMapReady]);
 
   // 6. Update cursor based on Add Mode state
   useEffect(() => {
@@ -1420,7 +1679,7 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
   // 7.5. Handle translation hotspot interactions (hover highlights and popups)
   useEffect(() => {
     const map = mapRef.current;
-    if (!map || !isMapReady) return;
+    if (!map || !isMapReady || !map.getLayer('hotspots-fill')) return;
 
     let hoveredHotspotId: string | number | null = null;
 
@@ -2085,12 +2344,12 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
                         <motion.div
                           key={hMap.id}
                           id={`map-card-${hMap.id}`}
-                          onClick={() => setSelectedMap(hMap)}
+                          onClick={() => handleMapSelect(hMap)}
                           role="button"
                           tabIndex={0}
                           onKeyDown={(e) => {
                             if (e.key === 'Enter' || e.key === ' ') {
-                              setSelectedMap(hMap);
+                              handleMapSelect(hMap);
                             }
                           }}
                           whileHover={{
@@ -2205,7 +2464,7 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
                               }} />
                             )}
                             <img
-                              src={`/api/proxy-resource?url=${encodeURIComponent(getThumbnailUrl(hMap.url))}`}
+                              src={getProxyOrDirectUrl(getThumbnailUrl(hMap.url))}
                               alt={hMap.name}
                               onLoad={() => setLoadedThumbnails(prev => ({ ...prev, [hMap.id]: true }))}
                               style={{
@@ -2477,7 +2736,7 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
 
         {/* PROGRESS LOADING OVERLAY */}
         <AnimatePresence>
-          {loadProgress !== null && (
+          {isMapSwitchLoading && loadProgress !== null && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -2542,6 +2801,84 @@ export default function CartographyPage({ theme, isMapDarkMode }: CartographyPag
                   transition: 'width 0.1s linear'
                 }} />
               </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* SUBTLE RESOLUTION UPGRADE LOADER */}
+        <AnimatePresence>
+          {!isMapSwitchLoading && loadProgress !== null && (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, y: '-40%', x: '-50%' }}
+              animate={{ opacity: 1, scale: 1, y: '-50%', x: '-50%' }}
+              exit={{ opacity: 0, scale: 0.9, y: '-40%', x: '-50%' }}
+              transition={{ duration: 0.3, ease: 'easeOut' }}
+              style={{
+                position: 'absolute',
+                top: '50%',
+                left: isSidebarCollapsed ? 'calc(50% + 10px)' : 'calc(50% + 160px)',
+                background: isMapDarkMode ? 'rgba(6, 6, 6, 0.85)' : 'rgba(255, 255, 255, 0.85)',
+                backdropFilter: 'blur(10px)',
+                border: `1.5px solid ${selectedMap.pinColor || '#FF5E97'}`,
+                borderRadius: '12px',
+                padding: '18px 24px',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '12px',
+                zIndex: 50,
+                pointerEvents: 'none',
+                boxShadow: isMapDarkMode 
+                  ? `0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px ${(selectedMap.pinColor || '#FF5E97')}33` 
+                  : '0 10px 30px rgba(0,0,0,0.15)',
+                transition: 'left 0.5s ease',
+                fontFamily: '"Space Mono", monospace'
+              }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <div style={{ 
+                  width: '16px', 
+                  height: '16px', 
+                  borderRadius: '50%', 
+                  border: '2px solid', 
+                  borderColor: isMapDarkMode ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.06)', 
+                  borderTopColor: selectedMap.pinColor || '#FF5E97', 
+                  animation: 'spinMapAsset 0.8s linear infinite'
+                }} />
+                <span style={{ 
+                  fontSize: '11px', 
+                  fontWeight: '700', 
+                  letterSpacing: '2px',
+                  textTransform: 'uppercase',
+                  color: theme.text
+                }}>
+                  UPGRADING RESOLUTION
+                </span>
+              </div>
+              <div style={{
+                width: '180px',
+                height: '3px',
+                background: isMapDarkMode ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.06)',
+                position: 'relative',
+                borderRadius: '2px',
+                overflow: 'hidden'
+              }}>
+                <div style={{
+                  width: `${loadProgress}%`,
+                  height: '100%',
+                  background: selectedMap.pinColor || '#FF5E97',
+                  transition: 'width 0.1s linear'
+                }} />
+              </div>
+              <span style={{ 
+                fontSize: '9px', 
+                fontWeight: 'bold', 
+                letterSpacing: '1px',
+                color: theme.textDim
+              }}>
+                {loadProgress}% COMPLETE
+              </span>
             </motion.div>
           )}
         </AnimatePresence>

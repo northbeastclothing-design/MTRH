@@ -516,7 +516,11 @@ const isVideoUrl = (url: string) => {
          lowerUrl.includes('youtu.be/') ||
          lowerUrl.includes('vimeo.com') || 
          lowerUrl.includes('dvidshub.net/video/embed') ||
-         lowerUrl.includes('dvidshub.net/video/');
+         lowerUrl.includes('dvidshub.net/video/') ||
+         lowerUrl.includes('twitter.com/i/status/') ||
+         lowerUrl.includes('twitter.com/status/') ||
+         lowerUrl.includes('x.com/i/status/') ||
+         lowerUrl.includes('x.com/status/');
 };
 
 const getEmbedUrl = (url: string) => {
@@ -541,6 +545,17 @@ const getEmbedUrl = (url: string) => {
     const parts = trimmed.split('/video/')[1]?.split('/');
     const videoId = parts ? parts[0] : '';
     return `https://www.dvidshub.net/video/embed/${videoId}`;
+  }
+
+  // Twitter / X
+  if (trimmed.includes('twitter.com/') || trimmed.includes('x.com/')) {
+    if (trimmed.includes('platform.twitter.com/embed/')) {
+      return trimmed;
+    }
+    const match = trimmed.match(/\/status\/(\d+)/);
+    if (match && match[1]) {
+      return `https://platform.twitter.com/embed/Tweet.html?id=${match[1]}&theme=dark`;
+    }
   }
 
   return trimmed;
@@ -2610,9 +2625,11 @@ export default function CodexPage({
                                 <div style={{ width: '100%', height: '100%', pointerEvents: 'none', overflow: 'hidden', position: 'relative' }}>
                                   {(curAsset.url.includes('youtube.com') || 
                                    curAsset.url.includes('youtu.be') || 
-                                   curAsset.url.includes('dvidshub.net/video/')) ? (
+                                   curAsset.url.includes('dvidshub.net/video/') ||
+                                   curAsset.url.includes('twitter.com') ||
+                                   curAsset.url.includes('x.com')) ? (
                                     <iframe
-                                      src={curAsset.url.includes('dvidshub.net/video/') ? getEmbedUrl(curAsset.url) : `${getEmbedUrl(curAsset.url)}?autoplay=0&controls=0&mute=1`}
+                                      src={(curAsset.url.includes('dvidshub.net/video/') || curAsset.url.includes('twitter.com') || curAsset.url.includes('x.com')) ? getEmbedUrl(curAsset.url) : `${getEmbedUrl(curAsset.url)}?autoplay=0&controls=0&mute=1`}
                                       style={curAsset.url.includes('dvidshub.net/video/') ? {
                                         border: 'none',
                                         position: 'absolute',
@@ -3502,7 +3519,9 @@ export default function CodexPage({
                         >
                           {(curAsset.url.includes('youtube.com') || 
                             curAsset.url.includes('youtu.be') || 
-                            curAsset.url.includes('dvidshub.net/video/')) ? (
+                            curAsset.url.includes('dvidshub.net/video/') ||
+                            curAsset.url.includes('twitter.com') ||
+                            curAsset.url.includes('x.com')) ? (
                             <iframe
                               src={getEmbedUrl(curAsset.url)}
                               style={{ 

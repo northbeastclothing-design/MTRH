@@ -170,7 +170,11 @@ const isVideoUrl = (url: string) => {
          lowerUrl.includes('youtu.be/') ||
          lowerUrl.includes('vimeo.com') || 
          lowerUrl.includes('dvidshub.net/video/embed') ||
-         lowerUrl.includes('dvidshub.net/video/');
+         lowerUrl.includes('dvidshub.net/video/') ||
+         lowerUrl.includes('twitter.com/i/status/') ||
+         lowerUrl.includes('twitter.com/status/') ||
+         lowerUrl.includes('x.com/i/status/') ||
+         lowerUrl.includes('x.com/status/');
 };
 
 const isPdfUrl = (url: string) => {
@@ -569,6 +573,14 @@ const getEmbedUrl = (url: string) => {
     // If it's a DVIDS image page, we might want the thumbnail but it's complex
     // For now, let it be handled by proxy if it's a direct image link
     return trimmed;
+  }
+
+  // Twitter / X
+  if (trimmed.includes('twitter.com/') || trimmed.includes('x.com/')) {
+    const match = trimmed.match(/(?:status|status\/|i\/status\/)(\d+)/);
+    if (match && match[1]) {
+      return `https://platform.twitter.com/embed/Tweet.html?id=${match[1]}`;
+    }
   }
 
   return trimmed;
@@ -1238,6 +1250,10 @@ function App() {
     if (path.startsWith('/codex')) return 'codex';
     if (path.startsWith('/cartography')) return 'cartography';
     return 'map';
+  });
+  const [selectedCartographyMapId, setSelectedCartographyMapId] = useState<string>(() => {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('mapId') || 'catalhoyuk';
   });
 
   // Track dynamic page views in our Single Page App (SPA)
@@ -3372,6 +3388,10 @@ function App() {
       } else if (path.startsWith('/cartography')) {
         setCurrentPage('cartography');
         setIsModeratorOpen(false);
+        const mapId = params.get('mapId');
+        if (mapId) {
+          setSelectedCartographyMapId(mapId);
+        }
       } else {
         setCurrentPage('map');
         setIsModeratorOpen(false);
@@ -3450,13 +3470,19 @@ function App() {
       params.delete('termId');
     }
 
+    if (currentPage === 'cartography' && selectedCartographyMapId) {
+      params.set('mapId', String(selectedCartographyMapId));
+    } else {
+      params.delete('mapId');
+    }
+
     const searchStr = params.toString();
     const newURL = path + (searchStr ? `?${searchStr}` : '');
     
     if (window.location.pathname !== path || window.location.search !== (searchStr ? `?${searchStr}` : '')) {
       window.history.pushState(null, '', newURL);
     }
-  }, [currentPage, isModeratorOpen, selectedTimelineItem, selectedCodexNode]);
+  }, [currentPage, isModeratorOpen, selectedTimelineItem, selectedCodexNode, selectedCartographyMapId]);
 
   // 3. Sync selectedFeature selection to URL search params (replace state)
   useEffect(() => {
@@ -4823,6 +4849,20 @@ function App() {
       
       if (map.getLayer('water')) {
         map.setPaintProperty('water', 'fill-color', waterColor);
+      }
+
+      // Hide POI and transit layers to keep the map clean and prevent confusing default markers
+      try {
+        const style = map.getStyle();
+        if (style && style.layers) {
+          for (const layer of style.layers) {
+            if (layer.id.includes('poi') || layer.id.includes('transit')) {
+              map.setLayoutProperty(layer.id, 'visibility', 'none');
+            }
+          }
+        }
+      } catch (e) {
+        console.error("Failed to hide POI/transit layers:", e);
       }
 
       const iconsToLoad = [
@@ -7473,9 +7513,11 @@ function App() {
                                     <div style={{ width: '100%', height: '100%', pointerEvents: 'none', overflow: 'hidden', position: 'relative' }}>
                                       {(curAsset.url.includes('youtube.com') || 
                                        curAsset.url.includes('youtu.be') || 
-                                       curAsset.url.includes('dvidshub.net/video/')) ? (
+                                       curAsset.url.includes('dvidshub.net/video/') ||
+                                       curAsset.url.includes('twitter.com') ||
+                                       curAsset.url.includes('x.com')) ? (
                                         <iframe
-                                          src={curAsset.url.includes('dvidshub.net/video/') ? getEmbedUrl(curAsset.url) : `${getEmbedUrl(curAsset.url)}?autoplay=0&controls=0&mute=1`}
+                                          src={(curAsset.url.includes('dvidshub.net/video/') || curAsset.url.includes('twitter.com') || curAsset.url.includes('x.com')) ? getEmbedUrl(curAsset.url) : `${getEmbedUrl(curAsset.url)}?autoplay=0&controls=0&mute=1`}
                                           style={curAsset.url.includes('dvidshub.net/video/') ? {
                                             border: 'none',
                                             position: 'absolute',
@@ -9050,6 +9092,8 @@ function App() {
             isMapDarkMode={isMapDarkMode}
             db={db}
             auth={auth}
+            selectedMapId={selectedCartographyMapId}
+            onMapSelect={setSelectedCartographyMapId}
           />
         </div>
       </div>
@@ -9149,7 +9193,9 @@ function App() {
                         >
                           {(curAsset.url.includes('youtube.com') || 
                             curAsset.url.includes('youtu.be') || 
-                            curAsset.url.includes('dvidshub.net/video/')) ? (
+                            curAsset.url.includes('dvidshub.net/video/') ||
+                            curAsset.url.includes('twitter.com') ||
+                            curAsset.url.includes('x.com')) ? (
                             <iframe
                               src={getEmbedUrl(curAsset.url)}
                               style={{ 

@@ -46,7 +46,8 @@ export const VANISHED_SHIPS_AIRCRAFT_DATA: VanishedCase[] = [
     description: "A Boeing 777-200ER passenger jet that disappeared from radar while flying from Kuala Lumpur to Beijing. Despite an extensive multi-national search in the southern Indian Ocean, only minor debris has been recovered, and the main wreckage remains unfound.",
     source: "JACC MH370 Safety Investigation Report",
     images: [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/MAS_plane.jpg/500px-MAS_plane.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/MAS_plane.jpg/500px-MAS_plane.jpg",
+      "https://www.youtube.com/watch?v=IQEtBFz4vPc"
     ]
   },
   {
