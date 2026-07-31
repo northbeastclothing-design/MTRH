@@ -419,8 +419,9 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
 ];
 
 const getProxyOrDirectUrl = (url: string): string => {
-  if (url.includes('upload.wikimedia.org')) {
-    return `https://images.weserv.nl/?url=${encodeURIComponent(url)}`;
+  const lowerUrl = url.toLowerCase();
+  if (lowerUrl.includes('wikimedia.org') || lowerUrl.includes('wikipedia.org')) {
+    return url; // Bypass proxy for Wikimedia/Wikipedia to avoid 429 rate limit
   }
   return `/api/proxy-resource?url=${encodeURIComponent(url)}`;
 };
@@ -1359,7 +1360,8 @@ export default function CartographyPage({
           id: 'background',
           type: 'background',
           paint: {
-            'background-color': 'transparent'
+            'background-color': '#000000',
+            'background-opacity': 0
           }
         }
       ]
