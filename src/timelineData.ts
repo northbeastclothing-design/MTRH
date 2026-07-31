@@ -6322,7 +6322,13 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'voodoo-religion': { lng: -72.3333, lat: 18.5333, locationName: 'Bois Caïman, Haiti', category: 'Religion' },
   'roman-dodecahedron-artifact': { lng: 5.4648, lat: 50.7811, locationName: 'Tongeren, Belgium', category: 'Archaeological Finds' },
   'hope-diamond-curse': { lng: -77.0260, lat: 38.8913, locationName: 'Smithsonian Museum, Washington D.C.', category: 'The Occult' },
-  'ollantaytambo-terraces': { lng: -72.2633, lat: -13.2575, locationName: 'Ollantaytambo, Peru', category: 'Archaeological Finds' }
+  'ollantaytambo-terraces': { lng: -72.2633, lat: -13.2575, locationName: 'Ollantaytambo, Peru', category: 'Archaeological Finds' },
+  'discovery-qumran': { lng: 35.4597, lat: 31.7411, locationName: 'Qumran Caves (Dead Sea Scrolls)', category: 'Ancient Texts' },
+  'discovery-sinai': { lng: 33.9760, lat: 28.5560, locationName: "St. Catherine's Monastery (Codex Sinaiticus)", category: 'Ancient Texts' },
+  'discovery-oxyrhynchus': { lng: 30.7500, lat: 28.5333, locationName: 'Oxyrhynchus, Egypt (Biblical Papyri)', category: 'Ancient Texts' },
+  'discovery-fayum': { lng: 30.8400, lat: 29.3100, locationName: 'Fayum, Egypt (Rylands Library P52)', category: 'Ancient Texts' },
+  'discovery-ketef-hinnom': { lng: 35.2269, lat: 31.7719, locationName: 'Ketef Hinnom, Jerusalem (Silver Scrolls)', category: 'Ancient Texts' },
+  'discovery-vatican': { lng: 12.4545, lat: 41.9045, locationName: 'Vatican Library (Codex Vaticanus)', category: 'Ancient Texts' }
 };
 
 export interface Waypoint {

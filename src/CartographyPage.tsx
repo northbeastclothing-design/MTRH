@@ -1983,7 +1983,7 @@ export default function CartographyPage({
       width: '100%',
       height: '100%',
       display: 'flex',
-      background: 'transparent',
+      background: isMapDarkMode ? 'rgba(0, 0, 0, 0.85)' : 'rgba(255, 255, 255, 0.85)',
       color: theme.text,
       fontFamily: '"Space Mono", monospace',
       position: 'relative',

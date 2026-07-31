@@ -18263,7 +18263,677 @@ const chunk_4: any[] = [  {
     name: 'Epic of Gilgamesh',
     description: 'A Mesopotamian epic poem containing the Sumerian story of the Great Flood survived by Utnapishtim, bearing strong similarities to the Genesis narrative.',
     relatedIds: ['great-flood', 'noah-fig', 'nimrod-fig', 'enkidu', 'enki']
-  },  {
+  },,
+  {
+    id: 'holy-bible',
+    parentId: 'ancient-texts',
+    name: 'The Holy Bible',
+    description: 'A canonical collection of sacred texts in Judaism and Christianity, divided into the Old Testament (Hebrew Bible) and the New Testament. Alternative historians and biblical archaeologists study these texts for historical records of early cosmic anomalies, ancient giants, global cataclysms, and lost world civilizations.',
+    layer: 'Ancient Texts',
+    relatedIds: ['codex-dead-sea-scrolls', 'codex-sinaiticus', 'book-of-enoch', 'noah-fig', 'giants-nephilim-br'],
+    sources: ['Hebrew Bible (Masoretic Text)', 'Septuagint (LXX)', 'Vulgate', 'Biblical Papyri']
+  },
+  {
+    id: 'bible-book-genesis',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/1QIsa_b.jpg/500px-1QIsa_b.jpg'],
+    name: 'Genesis',
+    description: "Traditional/Attributed Author: Moses. Critical/Modern Consensus: Composite source traditions (J, E, D, P) compiled and edited over centuries, finalized post-exilic period (c. 6th–5th centuries BCE). Earliest Manuscript: 4QGen-Exod (c. 100–50 BCE), a fragment containing portions of both Genesis and Exodus, discovered in Cave 4 at Qumran in 1952.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-qumran',
+    sources: ["Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-exodus',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/1QIsa_b.jpg/500px-1QIsa_b.jpg'],
+    name: 'Exodus',
+    description: "Traditional/Attributed Author: Moses. Critical/Modern Consensus: Composite source traditions compiled and edited during the post-exilic period (c. 6th–5th centuries BCE). Earliest Manuscript: 4QExod-Lev (c. 250 BCE), containing early fragments of Exodus and Leviticus, discovered in Cave 4 at Qumran.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-qumran',
+    sources: ["Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-leviticus',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/1QIsa_b.jpg/500px-1QIsa_b.jpg'],
+    name: 'Leviticus',
+    description: "Traditional/Attributed Author: Moses. Critical/Modern Consensus: Priestly source (P) materials compiled and revised during or immediately after the Babylonian exile (c. 6th–5th centuries BCE). Earliest Manuscript: 4QExod-Lev (c. 250 BCE), containing early fragments of Exodus and Leviticus, discovered in Cave 4 at Qumran.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-qumran',
+    sources: ["Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-numbers',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Ketef_hinom_scrolls.JPG/500px-Ketef_hinom_scrolls.JPG'],
+    name: 'Numbers',
+    description: "Traditional/Attributed Author: Moses. Critical/Modern Consensus: Composite Priestly and non-Priestly source texts compiled in the post-exilic era. Earliest Manuscript: Ketef Hinnom Silver Scrolls (c. 600 BCE, containing the Priestly Blessing, found in Jerusalem in 1979) and 4QNum (c. 150-100 BCE, from Qumran).",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-ketef-hinnom',
+    sources: ["Ketef Hinnom Scrolls","Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-deuteronomy',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/1QIsa_b.jpg/500px-1QIsa_b.jpg'],
+    name: 'Deuteronomy',
+    description: "Traditional/Attributed Author: Moses. Critical/Modern Consensus: Deuteronomistic school, closely linked to the temple reforms under King Josiah of Judah (c. 7th century BCE). Earliest Manuscript: 4QDeut (c. 150–100 BCE), a well-preserved scroll fragment containing the Decalogue, found in Cave 4 at Qumran.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-qumran',
+    sources: ["Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-joshua',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/1QIsa_b.jpg/500px-1QIsa_b.jpg'],
+    name: 'Joshua',
+    description: "Traditional/Attributed Author: Joshua. Critical/Modern Consensus: Part of the Deuteronomistic History (Deuteronomy through 2 Kings), compiled/edited during the Babylonian exile (c. 6th century BCE). Earliest Manuscript: 4QJosh (c. 100 BCE), discovered in Cave 4 at Qumran.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-qumran',
+    sources: ["Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-judges',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/1QIsa_b.jpg/500px-1QIsa_b.jpg'],
+    name: 'Judges',
+    description: "Traditional/Attributed Author: Samuel. Critical/Modern Consensus: Deuteronomistic History, compiled and revised during the Babylonian exile from older tribal hero stories. Earliest Manuscript: 4QJudg (c. 100–50 BCE), discovered in Cave 4 at Qumran.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-qumran',
+    sources: ["Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-ruth',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/1QIsa_b.jpg/500px-1QIsa_b.jpg'],
+    name: 'Ruth',
+    description: "Traditional/Attributed Author: Samuel. Critical/Modern Consensus: Anonymous, likely written during the post-exilic period (c. 5th–4th centuries BCE) as a polemic for foreign marriage inclusion. Earliest Manuscript: 2QRuth (c. 50 CE), discovered in Cave 2 at Qumran in 1952.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-qumran',
+    sources: ["Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-1samuel',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/1QIsa_b.jpg/500px-1QIsa_b.jpg'],
+    name: '1 Samuel',
+    description: "Traditional/Attributed Author: Samuel, Nathan, and Gad. Critical/Modern Consensus: Deuteronomistic History, compiled and unified from disparate prophetic and royal annals during the exile. Earliest Manuscript: 4QSam (c. 200–100 BCE), containing extensive fragments of the Samuel narrative, found in Cave 4 at Qumran.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-qumran',
+    sources: ["Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-2samuel',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/1QIsa_b.jpg/500px-1QIsa_b.jpg'],
+    name: '2 Samuel',
+    description: "Traditional/Attributed Author: Samuel, Nathan, and Gad. Critical/Modern Consensus: Deuteronomistic History, compiled and unified from disparate prophetic and royal annals during the exile. Earliest Manuscript: 4QSam (c. 200–100 BCE), containing extensive fragments of the Samuel narrative, found in Cave 4 at Qumran.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-qumran',
+    sources: ["Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-1kings',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/1QIsa_b.jpg/500px-1QIsa_b.jpg'],
+    name: '1 Kings',
+    description: "Traditional/Attributed Author: Jeremiah. Critical/Modern Consensus: Deuteronomistic History, compiling royal court records and Elijah/Elisha narrative cycles during the exile. Earliest Manuscript: 5QKings (c. 50 BCE–50 CE), discovered in Cave 5 at Qumran in 1952.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-qumran',
+    sources: ["Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-2kings',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/1QIsa_b.jpg/500px-1QIsa_b.jpg'],
+    name: '2 Kings',
+    description: "Traditional/Attributed Author: Jeremiah. Critical/Modern Consensus: Deuteronomistic History, compiling royal court records and prophetic narrative cycles during the exile. Earliest Manuscript: 5QKings (c. 50 BCE–50 CE), discovered in Cave 5 at Qumran in 1952.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-qumran',
+    sources: ["Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-1chronicles',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/1QIsa_b.jpg/500px-1QIsa_b.jpg'],
+    name: '1 Chronicles',
+    description: "Traditional/Attributed Author: Ezra. Critical/Modern Consensus: An anonymous post-exilic levitical scribe (\"The Chronicler\"), written c. 4th century BCE to re-establish genealogical legitimacy. Earliest Manuscript: 4QChr (c. 150–100 BCE), discovered in Cave 4 at Qumran.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-qumran',
+    sources: ["Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-2chronicles',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/1QIsa_b.jpg/500px-1QIsa_b.jpg'],
+    name: '2 Chronicles',
+    description: "Traditional/Attributed Author: Ezra. Critical/Modern Consensus: An anonymous post-exilic levitical scribe (\"The Chronicler\"), written c. 4th century BCE to re-establish genealogical legitimacy. Earliest Manuscript: 4QChr (c. 150–100 BCE), discovered in Cave 4 at Qumran.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-qumran',
+    sources: ["Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-ezra',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/1QIsa_b.jpg/500px-1QIsa_b.jpg'],
+    name: 'Ezra',
+    description: "Traditional/Attributed Author: Ezra. Critical/Modern Consensus: Anonymous editor compiling memoirs of Ezra and Nehemiah during the Hellenistic period (c. 4th century BCE). Earliest Manuscript: 4QEzra (c. 150–100 BCE), discovered in Cave 4 at Qumran.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-qumran',
+    sources: ["Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-nehemiah',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/1QIsa_b.jpg/500px-1QIsa_b.jpg'],
+    name: 'Nehemiah',
+    description: "Traditional/Attributed Author: Nehemiah. Critical/Modern Consensus: Anonymous editor compiling memoirs of Ezra and Nehemiah during the Hellenistic period (c. 4th century BCE). Earliest Manuscript: 4QEzra (c. 150–100 BCE), discovered in Cave 4 at Qumran.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-qumran',
+    sources: ["Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-esther',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Codex_Vaticanus_end_or_Luke.jpg/500px-Codex_Vaticanus_end_or_Luke.jpg'],
+    name: 'Esther',
+    description: "Traditional/Attributed Author: The Great Assembly. Critical/Modern Consensus: Anonymous Jewish author living in the Eastern diaspora, composed Hellenistic period (c. 3rd–2nd centuries BCE). Earliest Manuscript: Codex Vaticanus (c. 325–350 CE). Strikingly, Esther is the only Hebrew Bible book not represented among the Dead Sea Scrolls at Qumran.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-vatican',
+    sources: ["Codex Vaticanus","Codex Sinaiticus","Codex Alexandrinus"]
+  },
+  {
+    id: 'bible-book-job',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/1QIsa_b.jpg/500px-1QIsa_b.jpg'],
+    name: 'Job',
+    description: "Traditional/Attributed Author: Moses. Critical/Modern Consensus: Anonymous Israelite sage, composed c. 6th–4th centuries BCE, drawing on older Near Eastern folk tales of a righteous sufferer. Earliest Manuscript: 4QJob (c. 150–100 BCE) and Paleo-Hebrew fragments (4QpaleoJob), discovered in Cave 4 at Qumran.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-qumran',
+    sources: ["Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-psalms',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/1QIsa_b.jpg/500px-1QIsa_b.jpg'],
+    name: 'Psalms',
+    description: "Traditional/Attributed Author: King David, Asaph, Sons of Korah, Solomon, Moses. Critical/Modern Consensus: A composite hymnbook compiling songs from the Davidic monarchy through post-exilic worship, finalized c. 3rd century BCE. Earliest Manuscript: 4QPs (c. 150 BCE), a fragmentary collection of several psalms, discovered in Cave 4 at Qumran.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-qumran',
+    sources: ["Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-proverbs',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/1QIsa_b.jpg/500px-1QIsa_b.jpg'],
+    name: 'Proverbs',
+    description: "Traditional/Attributed Author: King Solomon, Agur, Lemuel. Critical/Modern Consensus: An anthology of Israelite wisdom literature compiled in several distinct stages between the 10th and 5th centuries BCE. Earliest Manuscript: 4QProv (c. 50 BCE–50 CE), discovered in Cave 4 at Qumran.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-qumran',
+    sources: ["Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-ecclesiastes',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/1QIsa_b.jpg/500px-1QIsa_b.jpg'],
+    name: 'Ecclesiastes',
+    description: "Traditional/Attributed Author: King Solomon. Critical/Modern Consensus: An anonymous sage (\"Qoheleth\"), written post-exilic period (c. 3rd century BCE) containing Persian and Greek linguistic influences. Earliest Manuscript: 4QQoh (c. 150–100 BCE), discovered in Cave 4 at Qumran.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-qumran',
+    sources: ["Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-songofsolomon',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/1QIsa_b.jpg/500px-1QIsa_b.jpg'],
+    name: 'Song of Solomon',
+    description: "Traditional/Attributed Author: King Solomon. Critical/Modern Consensus: Anonymous collection of lyric love poetry, compiled post-exilic Hellenistic period (c. 3rd century BCE). Earliest Manuscript: 4QCant (c. 50 BCE), discovered in Cave 4 at Qumran.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-qumran',
+    sources: ["Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-isaiah',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/1QIsa_b.jpg/500px-1QIsa_b.jpg'],
+    name: 'Isaiah',
+    description: "Traditional/Attributed Author: Isaiah son of Amoz. Critical/Modern Consensus: Written by three distinct groups: Proto-Isaiah (ch. 1–39, 8th century BCE), Deutero-Isaiah (ch. 40–55, exilic 6th century BCE), and Trito-Isaiah (ch. 56–66, post-exilic). Earliest Manuscript: The Great Isaiah Scroll (1QIsa-a), discovered intact in Cave 1 at Qumran in 1947, dating to c. 125 BCE.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-qumran',
+    sources: ["Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-jeremiah',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/1QIsa_b.jpg/500px-1QIsa_b.jpg'],
+    name: 'Jeremiah',
+    description: "Traditional/Attributed Author: Jeremiah. Critical/Modern Consensus: Jeremiah son of Hilkiah, compiled and expanded by his scribe Baruch son of Neriah and Deuteronomic redactors. Earliest Manuscript: 4QJer (c. 200 BCE), presenting the shorter Hebrew text tradition that underlies the Greek Septuagint, found in Cave 4 at Qumran.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-qumran',
+    sources: ["Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-lamentations',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/1QIsa_b.jpg/500px-1QIsa_b.jpg'],
+    name: 'Lamentations',
+    description: "Traditional/Attributed Author: Jeremiah. Critical/Modern Consensus: Anonymous poet mourning the destruction of Jerusalem, written c. 586 BCE shortly after the Babylonian siege. Earliest Manuscript: 3QLam (c. 50 BCE–50 CE), discovered in Cave 3 at Qumran in 1952.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-qumran',
+    sources: ["Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-ezekiel',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/1QIsa_b.jpg/500px-1QIsa_b.jpg'],
+    name: 'Ezekiel',
+    description: "Traditional/Attributed Author: Ezekiel. Critical/Modern Consensus: Ezekiel himself, compiled in Babylon (c. 6th century BCE) and edited by his priestly disciples. Earliest Manuscript: 1QEz (c. 50 BCE–50 CE), discovered in Cave 1 at Qumran.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-qumran',
+    sources: ["Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-daniel',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/1QIsa_b.jpg/500px-1QIsa_b.jpg'],
+    name: 'Daniel',
+    description: "Traditional/Attributed Author: Daniel. Critical/Modern Consensus: Anonymous Maccabean compiler incorporating older exilic folklore stories, written c. 165–164 BCE during Antiochus IV Epiphanes' persecution. Earliest Manuscript: 1QDan (c. 125 BCE), discovered in Cave 1 at Qumran.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-qumran',
+    sources: ["Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-hosea',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/1QIsa_b.jpg/500px-1QIsa_b.jpg'],
+    name: 'Hosea',
+    description: "Traditional/Attributed Author: Hosea. Critical/Modern Consensus: The prophet Hosea, edited into the Book of the Twelve Minor Prophets during the post-exilic period. Earliest Manuscript: 4QMinorProphets (4QXII-a, c. 150–100 BCE), discovered in Cave 4 at Qumran.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-qumran',
+    sources: ["Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-joel',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/1QIsa_b.jpg/500px-1QIsa_b.jpg'],
+    name: 'Joel',
+    description: "Traditional/Attributed Author: Joel. Critical/Modern Consensus: The prophet Joel, edited into the Book of the Twelve Minor Prophets during the post-exilic period. Earliest Manuscript: 4QMinorProphets (4QXII-a, c. 150–100 BCE), discovered in Cave 4 at Qumran.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-qumran',
+    sources: ["Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-amos',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/1QIsa_b.jpg/500px-1QIsa_b.jpg'],
+    name: 'Amos',
+    description: "Traditional/Attributed Author: Amos. Critical/Modern Consensus: The prophet Amos, edited into the Book of the Twelve Minor Prophets during the post-exilic period. Earliest Manuscript: 4QMinorProphets (4QXII-a, c. 150–100 BCE), discovered in Cave 4 at Qumran.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-qumran',
+    sources: ["Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-obadiah',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/1QIsa_b.jpg/500px-1QIsa_b.jpg'],
+    name: 'Obadiah',
+    description: "Traditional/Attributed Author: Obadiah. Critical/Modern Consensus: The prophet Obadiah, edited into the Book of the Twelve Minor Prophets during the post-exilic period. Earliest Manuscript: 4QMinorProphets (4QXII-a, c. 150–100 BCE), discovered in Cave 4 at Qumran.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-qumran',
+    sources: ["Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-jonah',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/1QIsa_b.jpg/500px-1QIsa_b.jpg'],
+    name: 'Jonah',
+    description: "Traditional/Attributed Author: Jonah (or written about him). Critical/Modern Consensus: Anonymous satirical author, written post-exilic period (c. 5th–4th centuries BCE) criticizing isolationist theology. Earliest Manuscript: 4QMinorProphets (4QXII-a, c. 150–100 BCE), discovered in Cave 4 at Qumran.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-qumran',
+    sources: ["Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-micah',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/1QIsa_b.jpg/500px-1QIsa_b.jpg'],
+    name: 'Micah',
+    description: "Traditional/Attributed Author: Micah. Critical/Modern Consensus: The prophet Micah, edited into the Book of the Twelve Minor Prophets during the post-exilic period. Earliest Manuscript: 4QMinorProphets (4QXII-a, c. 150–100 BCE), discovered in Cave 4 at Qumran.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-qumran',
+    sources: ["Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-nahum',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/1QIsa_b.jpg/500px-1QIsa_b.jpg'],
+    name: 'Nahum',
+    description: "Traditional/Attributed Author: Nahum. Critical/Modern Consensus: The prophet Nahum, edited into the Book of the Twelve Minor Prophets during the post-exilic period. Earliest Manuscript: 4QMinorProphets (4QXII-a, c. 150–100 BCE), discovered in Cave 4 at Qumran.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-qumran',
+    sources: ["Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-habakkuk',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/1QIsa_b.jpg/500px-1QIsa_b.jpg'],
+    name: 'Habakkuk',
+    description: "Traditional/Attributed Author: Habakkuk. Critical/Modern Consensus: The prophet Habakkuk, edited into the Book of the Twelve Minor Prophets during the post-exilic period. Earliest Manuscript: 4QMinorProphets (4QXII-a, c. 150–100 BCE) and the Habakkuk Commentary (1QpHab), discovered in Cave 1 at Qumran in 1947.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-qumran',
+    sources: ["Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-zephaniah',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/1QIsa_b.jpg/500px-1QIsa_b.jpg'],
+    name: 'Zephaniah',
+    description: "Traditional/Attributed Author: Zephaniah. Critical/Modern Consensus: The prophet Zephaniah, edited into the Book of the Twelve Minor Prophets during the post-exilic period. Earliest Manuscript: 4QMinorProphets (4QXII-a, c. 150–100 BCE), discovered in Cave 4 at Qumran.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-qumran',
+    sources: ["Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-haggai',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/1QIsa_b.jpg/500px-1QIsa_b.jpg'],
+    name: 'Haggai',
+    description: "Traditional/Attributed Author: Haggai. Critical/Modern Consensus: The prophet Haggai, edited into the Book of the Twelve Minor Prophets during the post-exilic period. Earliest Manuscript: 4QMinorProphets (4QXII-a, c. 150–100 BCE), discovered in Cave 4 at Qumran.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-qumran',
+    sources: ["Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-zechariah',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/1QIsa_b.jpg/500px-1QIsa_b.jpg'],
+    name: 'Zechariah',
+    description: "Traditional/Attributed Author: Zechariah. Critical/Modern Consensus: The prophet Zechariah (ch. 1-8) and later post-exilic additions (ch. 9-14) edited into the Minor Prophets. Earliest Manuscript: 4QMinorProphets (4QXII-a, c. 150–100 BCE), discovered in Cave 4 at Qumran.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-qumran',
+    sources: ["Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-malachi',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/1QIsa_b.jpg/500px-1QIsa_b.jpg'],
+    name: 'Malachi',
+    description: "Traditional/Attributed Author: Malachi. Critical/Modern Consensus: Anonymous prophet (\"Malachi\" means \"My Messenger\"), written c. 5th century BCE and edited into the Minor Prophets. Earliest Manuscript: 4QMinorProphets (4QXII-a, c. 150–100 BCE), discovered in Cave 4 at Qumran.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-qumran',
+    sources: ["Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-matthew',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Codex_Sinaiticus_Matthew_6,4-32.JPG/500px-Codex_Sinaiticus_Matthew_6,4-32.JPG'],
+    name: 'Matthew',
+    description: "Traditional/Attributed Author: Matthew the apostle (tax collector). Critical/Modern Consensus: Anonymous Greek-speaking Christian, written c. 80–90 CE, using the Gospel of Mark and the hypothetical Q source. Earliest Manuscript: Papyrus 104 (P104, c. 150–200 CE), a fragment containing portions of Matthew 21, discovered in Oxyrhynchus, Egypt.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-oxyrhynchus',
+    sources: ["Oxyrhynchus Papyri","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-mark',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Codex_Sinaiticus_Matthew_6,4-32.JPG/500px-Codex_Sinaiticus_Matthew_6,4-32.JPG'],
+    name: 'Mark',
+    description: "Traditional/Attributed Author: John Mark (companion of Peter). Critical/Modern Consensus: Anonymous Christian scribe, written c. 66–70 CE during the First Jewish-Roman War, serving as the primary source for Matthew and Luke. Earliest Manuscript: Papyrus 137 (P137, c. 150–250 CE), a fragment containing portions of Mark 1, discovered in Oxyrhynchus, Egypt.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-oxyrhynchus',
+    sources: ["Oxyrhynchus Papyri","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-luke',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Codex_Sinaiticus_Matthew_6,4-32.JPG/500px-Codex_Sinaiticus_Matthew_6,4-32.JPG'],
+    name: 'Luke',
+    description: "Traditional/Attributed Author: Luke the physician (companion of Paul). Critical/Modern Consensus: Anonymous Greek writer, composed c. 80–90 CE alongside the Book of Acts as a two-volume history of Christian origins. Earliest Manuscript: Papyrus 75 (P75, c. 175–225 CE), a substantial papyrus codex containing extensive portions of Luke and John, found in Egypt.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-oxyrhynchus',
+    sources: ["Bodmer Papyri","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-john',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Codex_Sinaiticus_Matthew_6,4-32.JPG/500px-Codex_Sinaiticus_Matthew_6,4-32.JPG'],
+    name: 'John',
+    description: "Traditional/Attributed Author: John the Apostle (beloved disciple). Critical/Modern Consensus: Composed in stages by a Johannine community, finalized c. 90–110 CE, displaying a unique theological perspective distinct from the synoptic gospels. Earliest Manuscript: Rylands Library Papyrus P52 (c. 125–175 CE), a small fragment containing John 18:31-33, discovered in the Fayum region, Egypt in 1920. It is the oldest undisputed New Testament manuscript fragment.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-fayum',
+    sources: ["Rylands Papyri","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-acts',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Codex_Sinaiticus_Matthew_6,4-32.JPG/500px-Codex_Sinaiticus_Matthew_6,4-32.JPG'],
+    name: 'Acts',
+    description: "Traditional/Attributed Author: Luke the physician. Critical/Modern Consensus: Anonymous Greek writer, composed c. 80–90 CE as the second volume to the Gospel of Luke. Earliest Manuscript: Papyrus 45 (P45, c. 200–250 CE), a Chester Beatty Papyrus containing fragments of Acts and the Synoptic Gospels, found in Egypt.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-oxyrhynchus',
+    sources: ["Chester Beatty Papyri","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-romans',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Codex_Sinaiticus_Matthew_1,1-2,5.JPG/500px-Codex_Sinaiticus_Matthew_1,1-2,5.JPG'],
+    name: 'Romans',
+    description: "Traditional/Attributed Author: Apostle Paul. Critical/Modern Consensus: Universally accepted as an authentic letter of Paul, dictated to his scribe Tertius, written c. 57 CE from Corinth. Earliest Manuscript: Papyrus 46 (P46, c. 200 CE), the oldest collection of Paul's epistles, discovered in Fayum, Egypt in 1930.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-fayum',
+    sources: ["Chester Beatty Papyri","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-1corinthians',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Codex_Sinaiticus_Matthew_1,1-2,5.JPG/500px-Codex_Sinaiticus_Matthew_1,1-2,5.JPG'],
+    name: '1 Corinthians',
+    description: "Traditional/Attributed Author: Apostle Paul. Critical/Modern Consensus: Universally accepted as an authentic letter of Paul, written c. 53–54 CE from Ephesus to the church in Corinth. Earliest Manuscript: Papyrus 46 (P46, c. 200 CE), the oldest collection of Paul's epistles, discovered in Fayum, Egypt in 1930.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-fayum',
+    sources: ["Chester Beatty Papyri","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-2corinthians',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Codex_Sinaiticus_Matthew_1,1-2,5.JPG/500px-Codex_Sinaiticus_Matthew_1,1-2,5.JPG'],
+    name: '2 Corinthians',
+    description: "Traditional/Attributed Author: Apostle Paul. Critical/Modern Consensus: Universally accepted as an authentic letter of Paul, compiled from multiple distinct letters written c. 55 CE. Earliest Manuscript: Papyrus 46 (P46, c. 200 CE), the oldest collection of Paul's epistles, discovered in Fayum, Egypt in 1930.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-fayum',
+    sources: ["Chester Beatty Papyri","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-galatians',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Codex_Sinaiticus_Matthew_1,1-2,5.JPG/500px-Codex_Sinaiticus_Matthew_1,1-2,5.JPG'],
+    name: 'Galatians',
+    description: "Traditional/Attributed Author: Apostle Paul. Critical/Modern Consensus: Universally accepted as an authentic letter of Paul, written c. 48–55 CE defending his apostolic authority. Earliest Manuscript: Papyrus 46 (P46, c. 200 CE), the oldest collection of Paul's epistles, discovered in Fayum, Egypt in 1930.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-fayum',
+    sources: ["Chester Beatty Papyri","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-ephesians',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Codex_Sinaiticus_Matthew_1,1-2,5.JPG/500px-Codex_Sinaiticus_Matthew_1,1-2,5.JPG'],
+    name: 'Ephesians',
+    description: "Traditional/Attributed Author: Apostle Paul. Critical/Modern Consensus: Disputed; likely written by a disciple or later follower of Paul (c. 80–90 CE) due to stylistic divergences from undisputed letters. Earliest Manuscript: Papyrus 46 (P46, c. 200 CE), the oldest collection of Paul's epistles, discovered in Fayum, Egypt in 1930.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-fayum',
+    sources: ["Chester Beatty Papyri","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-philippians',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Codex_Sinaiticus_Matthew_1,1-2,5.JPG/500px-Codex_Sinaiticus_Matthew_1,1-2,5.JPG'],
+    name: 'Philippians',
+    description: "Traditional/Attributed Author: Apostle Paul. Critical/Modern Consensus: Universally accepted as an authentic letter of Paul, written c. 55–62 CE during his imprisonment. Earliest Manuscript: Papyrus 46 (P46, c. 200 CE), the oldest collection of Paul's epistles, discovered in Fayum, Egypt in 1930.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-fayum',
+    sources: ["Chester Beatty Papyri","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-colossians',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Codex_Sinaiticus_Matthew_1,1-2,5.JPG/500px-Codex_Sinaiticus_Matthew_1,1-2,5.JPG'],
+    name: 'Colossians',
+    description: "Traditional/Attributed Author: Apostle Paul. Critical/Modern Consensus: Disputed; possibly written by Paul or a close associate (c. 60–80 CE) dealing with a localized syncretic heresy. Earliest Manuscript: Papyrus 46 (P46, c. 200 CE), the oldest collection of Paul's epistles, discovered in Fayum, Egypt in 1930.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-fayum',
+    sources: ["Chester Beatty Papyri","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-1thessalonians',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Codex_Sinaiticus_Matthew_1,1-2,5.JPG/500px-Codex_Sinaiticus_Matthew_1,1-2,5.JPG'],
+    name: '1 Thessalonians',
+    description: "Traditional/Attributed Author: Apostle Paul. Critical/Modern Consensus: Universally accepted as Paul's earliest surviving authentic letter, written c. 50–51 CE from Corinth. Earliest Manuscript: Papyrus 46 (P46, c. 200 CE), the oldest collection of Paul's epistles, discovered in Fayum, Egypt in 1930.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-fayum',
+    sources: ["Chester Beatty Papyri","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-2thessalonians',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Codex_Sinaiticus_Matthew_1,1-2,5.JPG/500px-Codex_Sinaiticus_Matthew_1,1-2,5.JPG'],
+    name: '2 Thessalonians',
+    description: "Traditional/Attributed Author: Apostle Paul. Critical/Modern Consensus: Disputed; style and theology regarding the eschaton differ from 1 Thessalonians, possibly pseudepigraphal (c. 80–100 CE). Earliest Manuscript: Codex Sinaiticus and Codex Vaticanus (c. 325–360 CE). It is notably absent from the extant portions of Papyrus 46.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-sinai',
+    sources: ["Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-1timothy',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Codex_Sinaiticus_Matthew_1,1-2,5.JPG/500px-Codex_Sinaiticus_Matthew_1,1-2,5.JPG'],
+    name: '1 Timothy',
+    description: "Traditional/Attributed Author: Apostle Paul. Critical/Modern Consensus: Pseudepigraphal; part of the Pastoral Epistles written by an anonymous Christian leader c. 100–140 CE to establish church hierarchy. Earliest Manuscript: Codex Sinaiticus and Codex Vaticanus (c. 325–360 CE). The Pastoral Epistles were not included in Papyrus 46.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-sinai',
+    sources: ["Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-2timothy',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Codex_Sinaiticus_Matthew_1,1-2,5.JPG/500px-Codex_Sinaiticus_Matthew_1,1-2,5.JPG'],
+    name: '2 Timothy',
+    description: "Traditional/Attributed Author: Apostle Paul. Critical/Modern Consensus: Pseudepigraphal; part of the Pastoral Epistles written by an anonymous Christian leader c. 100–140 CE to establish church hierarchy. Earliest Manuscript: Codex Sinaiticus and Codex Vaticanus (c. 325–360 CE). The Pastoral Epistles were not included in Papyrus 46.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-sinai',
+    sources: ["Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-titus',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Codex_Sinaiticus_Matthew_1,1-2,5.JPG/500px-Codex_Sinaiticus_Matthew_1,1-2,5.JPG'],
+    name: 'Titus',
+    description: "Traditional/Attributed Author: Apostle Paul. Critical/Modern Consensus: Pseudepigraphal; part of the Pastoral Epistles written by an anonymous Christian leader c. 100–140 CE to establish church hierarchy. Earliest Manuscript: Papyrus 32 (P32, c. 200 CE), a fragment containing portions of Titus 1-2, discovered in Oxyrhynchus, Egypt.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-oxyrhynchus',
+    sources: ["Oxyrhynchus Papyri","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-philemon',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Codex_Sinaiticus_Matthew_1,1-2,5.JPG/500px-Codex_Sinaiticus_Matthew_1,1-2,5.JPG'],
+    name: 'Philemon',
+    description: "Traditional/Attributed Author: Apostle Paul. Critical/Modern Consensus: Universally accepted as an authentic letter of Paul, written c. 55–62 CE regarding a runaway slave named Onesimus. Earliest Manuscript: Papyrus 87 (P87, c. 250 CE), containing early fragments of Philemon, discovered in Fayum, Egypt.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-fayum',
+    sources: ["Chester Beatty Papyri","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-hebrews',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Codex_Sinaiticus_Matthew_1,1-2,5.JPG/500px-Codex_Sinaiticus_Matthew_1,1-2,5.JPG'],
+    name: 'Hebrews',
+    description: "Traditional/Attributed Author: Apostle Paul. Critical/Modern Consensus: Anonymous Christian sermon, written c. 60–90 CE by an educated Hellenistic Jewish writer (hypotheses include Apollos or Barnabas). Earliest Manuscript: Papyrus 46 (P46, c. 200 CE), which groups Hebrews immediately following Romans, discovered in Fayum, Egypt.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-fayum',
+    sources: ["Chester Beatty Papyri","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-james',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Codex_Sinaiticus_Matthew_1,1-2,5.JPG/500px-Codex_Sinaiticus_Matthew_1,1-2,5.JPG'],
+    name: 'James',
+    description: "Traditional/Attributed Author: James, brother of Jesus (leader of Jerusalem church). Critical/Modern Consensus: Anonymous Christian letter composed in high literary Greek, written c. 80–110 CE, reflecting Jewish wisdom traditions. Earliest Manuscript: Papyrus 20 (P20, c. 250 CE), containing early fragments of James, discovered in Oxyrhynchus, Egypt.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-oxyrhynchus',
+    sources: ["Oxyrhynchus Papyri","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-1peter',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Codex_Sinaiticus_Matthew_1,1-2,5.JPG/500px-Codex_Sinaiticus_Matthew_1,1-2,5.JPG'],
+    name: '1 Peter',
+    description: "Traditional/Attributed Author: Apostle Peter. Critical/Modern Consensus: Disputed; composed in polished Greek from Rome (\"Babylon\") c. 70–100 CE, possibly by a secretary or disciple of Peter. Earliest Manuscript: Papyrus 72 (P72, c. 200–300 CE), a Bodmer papyrus containing the oldest copy of 1 & 2 Peter and Jude, found in Egypt.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-oxyrhynchus',
+    sources: ["Bodmer Papyri","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-2peter',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Codex_Sinaiticus_Matthew_1,1-2,5.JPG/500px-Codex_Sinaiticus_Matthew_1,1-2,5.JPG'],
+    name: '2 Peter',
+    description: "Traditional/Attributed Author: Apostle Peter. Critical/Modern Consensus: Universally rejected by critical scholars; a pseudepigraphal defense of the Parousia written c. 110–150 CE, referencing Jude and Pauline collections. Earliest Manuscript: Papyrus 72 (P72, c. 200–300 CE), a Bodmer papyrus containing the oldest copy of 1 & 2 Peter and Jude, found in Egypt.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-oxyrhynchus',
+    sources: ["Bodmer Papyri","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-1john',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Codex_Sinaiticus_Matthew_1,1-2,5.JPG/500px-Codex_Sinaiticus_Matthew_1,1-2,5.JPG'],
+    name: '1 John',
+    description: "Traditional/Attributed Author: John the Apostle. Critical/Modern Consensus: Anonymous Christian tract written c. 90–110 CE by the author of the Gospel of John or from the same Johannine community. Earliest Manuscript: Papyrus 9 (P9, c. 250 CE), containing portions of 1 John 4, discovered in Oxyrhynchus, Egypt.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-oxyrhynchus',
+    sources: ["Oxyrhynchus Papyri","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-2john',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Codex_Sinaiticus_Matthew_1,1-2,5.JPG/500px-Codex_Sinaiticus_Matthew_1,1-2,5.JPG'],
+    name: '2 John',
+    description: "Traditional/Attributed Author: John the Apostle. Critical/Modern Consensus: Written c. 90–110 CE by \"The Presbyter\" (The Elder) from the Johannine community to a local house church. Earliest Manuscript: Codex Sinaiticus and Codex Vaticanus (c. 325–360 CE). It is extremely short and has no surviving early papyri.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-sinai',
+    sources: ["Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-3john',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Codex_Sinaiticus_Matthew_1,1-2,5.JPG/500px-Codex_Sinaiticus_Matthew_1,1-2,5.JPG'],
+    name: '3 John',
+    description: "Traditional/Attributed Author: John the Apostle. Critical/Modern Consensus: Written c. 90–110 CE by \"The Presbyter\" (The Elder) to an individual named Gaius regarding church hospitality. Earliest Manuscript: Codex Sinaiticus and Codex Vaticanus (c. 325–360 CE). Like 2 John, it has no early surviving papyri fragments.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-sinai',
+    sources: ["Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-jude',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Codex_Sinaiticus_Matthew_1,1-2,5.JPG/500px-Codex_Sinaiticus_Matthew_1,1-2,5.JPG'],
+    name: 'Jude',
+    description: "Traditional/Attributed Author: Jude, brother of Jesus and James. Critical/Modern Consensus: Anonymous Christian epistle written c. 80–110 CE, notable for quoting the apocryphal Book of Enoch and Assumption of Moses. Earliest Manuscript: Papyrus 72 (P72, c. 200–300 CE), a Bodmer papyrus containing the oldest copy of Jude, found in Egypt.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-oxyrhynchus',
+    sources: ["Bodmer Papyri","Codex Sinaiticus","Codex Vaticanus"]
+  },
+  {
+    id: 'bible-book-revelation',
+    parentId: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Codex_Sinaiticus_Matthew_1,1-2,5.JPG/500px-Codex_Sinaiticus_Matthew_1,1-2,5.JPG'],
+    name: 'Revelation',
+    description: "Traditional/Attributed Author: John the Apostle. Critical/Modern Consensus: John of Patmos (a Jewish-Christian prophet distinct from the author of the Gospel of John), written c. 95 CE during Domitian's reign. Earliest Manuscript: Papyrus 47 (P47, c. 250–300 CE), a Chester Beatty Papyrus containing substantial portions of Revelation, found in Egypt.",
+    layer: 'Ancient Texts',
+    mapFeatureId: 'discovery-oxyrhynchus',
+    sources: ["Chester Beatty Papyri","Codex Sinaiticus"]
+  },
+  {
     id: 'codex-dead-sea-scrolls',
     parentId: 'ancient-texts',
     name: 'The Dead Sea Scrolls',
