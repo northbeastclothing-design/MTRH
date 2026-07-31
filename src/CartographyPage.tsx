@@ -990,6 +990,21 @@ export default function CartographyPage({
   }, [selectedMapId]);
 
   const [selectedMap, setSelectedMap] = useState<HistoricalMap>(initialMap);
+  const minorLines = [30, 60, 90, 120, 150, 180, 210, 240, 270];
+  const minorStroke = isMapDarkMode ? 'rgba(255,255,255,0.07)' : 'rgba(0,0,0,0.07)';
+  const majorStroke = isMapDarkMode ? 'rgba(255,255,255,0.18)' : 'rgba(0,0,0,0.18)';
+
+  const svgGrid = `data:image/svg+xml,${encodeURIComponent(`
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300">
+  ${minorLines.map(pos => `
+    <line x1="${pos}" y1="0" x2="${pos}" y2="300" stroke="${minorStroke}" stroke-dasharray="2,2" />
+    <line x1="0" y1="${pos}" x2="300" y2="${pos}" stroke="${minorStroke}" stroke-dasharray="2,2" />
+  `).join('')}
+  <line x1="0" y1="0" x2="0" y2="300" stroke="${majorStroke}" stroke-dasharray="4,4" />
+  <line x1="0" y1="0" x2="300" y2="0" stroke="${majorStroke}" stroke-dasharray="4,4" />
+</svg>
+`)}`;
+
   const [loadedThumbnails, setLoadedThumbnails] = useState<Record<string, boolean>>({});
   const [notes, setNotes] = useState<SavedPoint[]>([]);
   const [showNotes, setShowNotes] = useState<boolean>(true);
@@ -1344,7 +1359,7 @@ export default function CartographyPage({
           id: 'background',
           type: 'background',
           paint: {
-            'background-color': isMapDarkMode ? '#0d0d0d' : '#f4f4f4'
+            'background-color': 'transparent'
           }
         }
       ]
@@ -1361,8 +1376,9 @@ export default function CartographyPage({
       pitchWithRotate: false,
       touchZoomRotate: true,
       renderWorldCopies: false, // Prevents repeating maps horizontally when zoomed out
-      scrollZoom: { around: 'center' } // Always zoom around the center point
-    });
+      scrollZoom: { around: 'center' }, // Always zoom around the center point
+      alpha: true // Enable transparent canvas for background globe/grid visibility
+    } as any);
 
     mapRef.current = map;
     map.dragPan.enable({ inertia: false } as any); // Disable dragging momentum natively
@@ -1965,7 +1981,7 @@ export default function CartographyPage({
       width: '100%',
       height: '100%',
       display: 'flex',
-      background: isMapDarkMode ? '#000000' : '#ffffff',
+      background: 'transparent',
       color: theme.text,
       fontFamily: '"Space Mono", monospace',
       position: 'relative',
@@ -2528,10 +2544,12 @@ export default function CartographyPage({
         height: '100%',
         position: 'relative',
         zIndex: 1,
-        pointerEvents: 'auto'
+        pointerEvents: 'auto',
+        backgroundImage: `url("${svgGrid}")`,
+        backgroundRepeat: 'repeat'
       }}>
         {/* MAP DIV */}
-        <div ref={mapContainerRef} style={{ width: '100%', height: '100%' }} />
+        <div ref={mapContainerRef} style={{ width: '100%', height: '100%', background: 'transparent' }} />
 
         {/* MAP VIEW TITLE OVERLAY - TOP RIGHT (NO ICON) */}
         <div style={{
