@@ -1453,6 +1453,7 @@ function App() {
     }));
     const rawNodes = [...TERM_TREE_DATA, ...approvedCodexSubmissions];
     return rawNodes.map((node: any) => {
+      if (!node || !node.id) return null;
       const override = overrides[String(node.id)];
       if (override) {
         return {
@@ -1461,7 +1462,7 @@ function App() {
         };
       }
       return node;
-    });
+    }).filter((node): node is any => node !== null);
   }, [approvedSubmissions, overrides]);
 
   // Combine static Timeline items and approved user Timeline submissions
@@ -3377,7 +3378,7 @@ function App() {
         setIsModeratorOpen(false);
         const termId = params.get('termId');
         if (termId) {
-          const matched = TERM_TREE_DATA.find(node => String(node.id) === termId);
+          const matched = TERM_TREE_DATA.find(node => node && node.id && String(node.id) === termId);
           if (matched) setSelectedCodexNode(matched);
         } else {
           setSelectedCodexNode(null);

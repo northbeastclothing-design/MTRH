@@ -197,9 +197,11 @@ export default function TimelinePage({
   const codexTerm = useMemo(() => {
     if (!selectedItem) return null;
     return TERM_TREE_DATA.find(node => 
-      node.timelineId === selectedItem.id ||
-      node.id === selectedItem.id ||
-      (node.name && selectedItem.name && node.name.toLowerCase() === selectedItem.name.toLowerCase())
+      node && (
+        node.timelineId === selectedItem.id ||
+        node.id === selectedItem.id ||
+        (node.name && selectedItem.name && node.name.toLowerCase() === selectedItem.name.toLowerCase())
+      )
     );
   }, [selectedItem]);
   

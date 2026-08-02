@@ -50797,5 +50797,197 @@
     "images": [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Joplin%2C_Missouri_tornado_of_2011.jpg/500px-Joplin%2C_Missouri_tornado_of_2011.jpg"
     ]
+  },
+  {
+    "id": "anomaly-Ancient-Texts-vaticanus",
+    "name": "Vatican Library (Codex Vaticanus)",
+    "category": "Ancient Texts",
+    "type": "Point",
+    "coordinates": {
+      "lng": 12.4545,
+      "lat": 41.9045
+    },
+    "date": 1475,
+    "description": "Preserved in the Vatican Library since at least its first cataloging in 1475, Codex Vaticanus (Graecus 1209) is one of the oldest extant manuscripts of the Greek Bible, dated to the early 4th century.",
+    "source": "Vatican Library Graecus 1209",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Codex_Vaticanus_B%2C_2Thess._3%2C11-18%2C_Hebr._1%2C1-2%2C2.jpg/500px-Codex_Vaticanus_B%2C_2Thess._3%2C11-18%2C_Hebr._1%2C1-2%2C2.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Ancient-Texts-alexandrinus",
+    "name": "Alexandria (Codex Alexandrinus)",
+    "category": "Ancient Texts",
+    "type": "Point",
+    "coordinates": {
+      "lng": 29.9187,
+      "lat": 31.2001
+    },
+    "date": 1627,
+    "description": "The 5th-century Greek Bible manuscript Codex Alexandrinus was brought from Alexandria to Constantinople and eventually presented to King Charles I of England in 1627, serving as a landmark witness to early biblical text.",
+    "source": "British Library Royal MS 1 D V-VIII",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Codex_Alexandrinus_f41v_-_Luke.jpg/500px-Codex_Alexandrinus_f41v_-_Luke.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Ancient-Texts-samaritan",
+    "name": "Mount Gerizim (Samaritan Pentateuch)",
+    "category": "Ancient Texts",
+    "type": "Point",
+    "coordinates": {
+      "lng": 35.2736,
+      "lat": 32.1992
+    },
+    "date": -400,
+    "description": "The Samaritan Pentateuch, a version of the Torah written in the Samaritan alphabet, has been preserved by the Samaritan community at Mount Gerizim for centuries. It contains independent textual variants distinct from the Masoretic Text.",
+    "source": "Samaritan Community Archives / Mount Gerizim",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Samaritan_Pentateuch_%28detail%29.jpg/500px-Samaritan_Pentateuch_%28detail%29.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Ancient-Texts-masoretic",
+    "name": "Tiberias (Masoretic Text)",
+    "category": "Ancient Texts",
+    "type": "Point",
+    "coordinates": {
+      "lng": 35.5392,
+      "lat": 32.7944
+    },
+    "date": 930,
+    "description": "The Masoretes worked in Tiberias (along the Sea of Galilee) to compile the authoritative Hebrew text of the Bible, adding vowel points and marginal notes to preserve the exact pronunciation and phrasing of the scriptures.",
+    "source": "Aleppo Codex / Tiberias Masoretic Schools",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Aleppo_Codex_Joshua_1_1.jpg/500px-Aleppo_Codex_Joshua_1_1.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Ancient-Texts-septuagint",
+    "name": "Alexandria (Septuagint translation)",
+    "category": "Ancient Texts",
+    "type": "Point",
+    "coordinates": {
+      "lng": 29.9187,
+      "lat": 31.2001
+    },
+    "date": -250,
+    "description": "Commissioned under Ptolemy II Philadelphus in Alexandria, the Septuagint is the earliest Greek translation of the Hebrew scriptures, translated by seventy-two Jewish scholars in the 3rd century BCE.",
+    "source": "Letter of Aristeas / Alexandrian Archives",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Codex_Vaticanus_%281_Esdras_1-55_to_2-5%29_%28The_S.S._Teacher%27s_Edition-The_Holy_Bible%29.jpg/500px-Codex_Vaticanus_%281_Esdras_1-55_to_2-5%29_%28The_S.S._Teacher%27s_Edition-The_Holy_Bible%29.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Ancient-Texts-rylands",
+    "name": "Fayum (Rylands Library Papyrus P52)",
+    "category": "Ancient Texts",
+    "type": "Point",
+    "coordinates": {
+      "lng": 30.8400,
+      "lat": 29.3100
+    },
+    "date": 1920,
+    "description": "A tiny fragment of papyrus containing passages from the Gospel of John (John 18:31-33, 37-38), discovered in the Fayum region of Egypt and dated to approximately 125-175 CE. It represents the oldest undisputed New Testament manuscript fragment.",
+    "source": "John Rylands Library (Manchester)",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Manchester%2C_John_Rylands_Library_Ms_Greek_P_457_%28Papyrus_52%29_recto_John_18%2C_31-33.jpg/500px-Manchester%2C_John_Rylands_Library_Ms_Greek_P_457_%28Papyrus_52%29_recto_John_18%2C_31-33.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Ancient-Texts-chesterbeatty",
+    "name": "Fayum (Chester Beatty Papyri)",
+    "category": "Ancient Texts",
+    "type": "Point",
+    "coordinates": {
+      "lng": 30.8400,
+      "lat": 29.3100
+    },
+    "date": 1930,
+    "description": "Acquired by Alfred Chester Beatty in 1930, these eleven papyrus codices containing Greek biblical writings (dating from the 2nd to 4th centuries CE) were found in the Fayum Oasis in Egypt, providing extremely early evidence of the Gospels and Paul's letters.",
+    "source": "Chester Beatty Library (Dublin)",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Dublin%2C_Chester_Beatty_Ms_Papyrus_45_BP_I_ff.13-14_Luke_11.50-12.12%3B_12.18-37%3B_12.42-13.1%3B_13.jpg/500px-Dublin%2C_Chester_Beatty_Ms_Papyrus_45_BP_I_ff.13-14_Luke_11.50-12.12%3B_12.18-37%3B_12.42-13.1%3B_13.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Ancient-Texts-bodmer",
+    "name": "Pabau (Bodmer Papyri)",
+    "category": "Ancient Texts",
+    "type": "Point",
+    "coordinates": {
+      "lng": 32.6396,
+      "lat": 25.6872
+    },
+    "date": 1952,
+    "description": "Discovered in Pabau (near Dishna, Egypt) in 1952, these twenty-two papyrus manuscripts preserve early copies of the Gospels of Luke and John, alongside classical writings, dating to around 200 CE.",
+    "source": "Bodmer Library (Geneva)",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Geneva%2C_Bodmer_Lab_Ms_Papyrus_66_%28P.Bodmer_II_-_PB_2%29_fol._1r.jpg/500px-Geneva%2C_Bodmer_Lab_Ms_Papyrus_66_%28P.Bodmer_II_-_PB_2%29_fol._1r.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Ancient-Texts-oxyrhynchus",
+    "name": "Oxyrhynchus (Oxyrhynchus Papyri)",
+    "category": "Ancient Texts",
+    "type": "Point",
+    "coordinates": {
+      "lng": 30.7500,
+      "lat": 28.5333
+    },
+    "date": 1897,
+    "description": "Excavated by Bernard Grenfell and Arthur Hunt at ancient Oxyrhynchus, Egypt, this site yielded thousands of papyri from the Ptolemaic and Roman eras, preserving numerous early fragments of the Greek Bible and apocryphal works.",
+    "source": "Egypt Exploration Society",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/P._Oxy._I_29.jpg/500px-P._Oxy._I_29.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Ancient-Texts-ketefhinnom",
+    "name": "Jerusalem (Ketef Hinnom Silver Scrolls)",
+    "category": "Ancient Texts",
+    "type": "Point",
+    "coordinates": {
+      "lng": 35.2269,
+      "lat": 31.7719
+    },
+    "date": -600,
+    "description": "Two tiny rolled silver scrolls discovered in 1979 in a tomb at Ketef Hinnom near Jerusalem. Dated to the late 7th century BCE, they contain the Priestly Blessing, making them the oldest surviving citations of a biblical text.",
+    "source": "Israel Museum / Gabriel Barkay Excavations",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/KetefHinom.jpg/500px-KetefHinom.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Ancient-Texts-vulgate",
+    "name": "Bethlehem (Latin Vulgate)",
+    "category": "Ancient Texts",
+    "type": "Point",
+    "coordinates": {
+      "lng": 35.2089,
+      "lat": 31.7054
+    },
+    "date": 382,
+    "description": "Commissioned by Pope Damasus I in 382 CE, Jerome translated the scriptures into Latin in a Bethlehem cave. This translation, the Vulgate, became the standard Bible for Western Christianity.",
+    "source": "Codex Amiatinus / Jerome's Epistles",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Cod._Sangallensis_63_%28277%29.jpg/500px-Cod._Sangallensis_63_%28277%29.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-Ancient-Texts-peshitta",
+    "name": "Edessa (Syriac Peshitta)",
+    "category": "Ancient Texts",
+    "type": "Point",
+    "coordinates": {
+      "lng": 38.7913,
+      "lat": 37.1583
+    },
+    "date": 150,
+    "description": "Compiled in the Syriac dialect of Aramaic, the Peshitta originated in Edessa (modern Sanliurfa, Turkey) around the 2nd century CE, serving as the standard biblical version for the Church of the East.",
+    "source": "Khabouris Codex",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Peshitta_%281%29.jpg/500px-Peshitta_%281%29.jpg"
+    ]
   }
 ]

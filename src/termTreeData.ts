@@ -18263,7 +18263,7 @@ const chunk_4: any[] = [  {
     name: 'Epic of Gilgamesh',
     description: 'A Mesopotamian epic poem containing the Sumerian story of the Great Flood survived by Utnapishtim, bearing strong similarities to the Genesis narrative.',
     relatedIds: ['great-flood', 'noah-fig', 'nimrod-fig', 'enkidu', 'enki']
-  },,
+  },
   {
     id: 'holy-bible',
     parentId: 'ancient-texts',
@@ -38832,4 +38832,198 @@ export const TERM_TREE_DATA: TermNode[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Joplin%2C_Missouri_tornado_of_2011.jpg/500px-Joplin%2C_Missouri_tornado_of_2011.jpg'],
     sources: ['The Butterfly People of Joplin (Local Testimony)', 'Joplin Globe Coverage May 2011', 'Paranormal Encounter Archives']
   }
+].filter(Boolean);
+
+const chunk_bible_sources: TermNode[] = [
+  {
+    id: 'codex-vaticanus',
+    parentId: 'ancient-texts',
+    name: 'Codex Vaticanus',
+    description: 'A 4th-century Greek uncial manuscript of the Bible, representing one of the oldest and most complete surviving witnesses to the Greek Bible (Septuagint and New Testament), preserved in the Vatican Library since at least the 15th century.',
+    layer: 'Ancient Texts',
+    mapFeatureId: 'anomaly-Ancient-Texts-vaticanus',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Codex_Vaticanus_B%2C_2Thess._3%2C11-18%2C_Hebr._1%2C1-2%2C2.jpg/500px-Codex_Vaticanus_B%2C_2Thess._3%2C11-18%2C_Hebr._1%2C1-2%2C2.jpg'],
+    sources: ['Vatican Library Graecus 1209']
+  },
+  {
+    id: 'codex-alexandrinus',
+    parentId: 'ancient-texts',
+    name: 'Codex Alexandrinus',
+    description: 'A 5th-century Greek manuscript of the Bible, containing the majority of the Septuagint and the New Testament. It is one of the earliest and most complete of the great codices, alongside Codex Sinaiticus and Codex Vaticanus.',
+    layer: 'Ancient Texts',
+    mapFeatureId: 'anomaly-Ancient-Texts-alexandrinus',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Codex_Alexandrinus_f41v_-_Luke.jpg/500px-Codex_Alexandrinus_f41v_-_Luke.jpg'],
+    sources: ['British Library Royal MS 1 D V-VIII']
+  },
+  {
+    id: 'samaritan-pentateuch',
+    parentId: 'ancient-texts',
+    name: 'Samaritan Pentateuch',
+    description: 'A manuscript of the first five books of the Hebrew Bible, written in the Samaritan alphabet and used by the Samaritans. It preserves independent readings that diverge from both the Masoretic Text and the Septuagint, notably on Mount Gerizim.',
+    layer: 'Ancient Texts',
+    mapFeatureId: 'anomaly-Ancient-Texts-samaritan',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Samaritan_Pentateuch_%28detail%29.jpg/500px-Samaritan_Pentateuch_%28detail%29.jpg'],
+    sources: ['Samaritan Community Archives', 'Nablus Manuscripts']
+  },
+  {
+    id: 'masoretic-text',
+    parentId: 'ancient-texts',
+    name: 'Masoretic Text',
+    description: 'The authoritative Hebrew and Aramaic text of the Tanakh (Hebrew Bible) for Rabbinic Judaism, meticulously copied, edited, and distributed by a group of Jews known as the Masoretes between the 7th and 10th centuries CE. Housed in key codices like the Aleppo Codex.',
+    layer: 'Ancient Texts',
+    mapFeatureId: 'anomaly-Ancient-Texts-masoretic',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Aleppo_Codex_Joshua_1_1.jpg/500px-Aleppo_Codex_Joshua_1_1.jpg'],
+    sources: ['Aleppo Codex', 'Leningrad Codex']
+  },
+  {
+    id: 'septuagint',
+    parentId: 'ancient-texts',
+    name: 'Septuagint (LXX)',
+    description: 'The earliest surviving Greek translation of the Hebrew Bible (the Pentateuch), completed in Alexandria, Egypt, in the 3rd century BCE. Legend records that seventy-two Jewish scholars independently produced identical translations, serving as the primary Old Testament text for the early Christian Church.',
+    layer: 'Ancient Texts',
+    mapFeatureId: 'anomaly-Ancient-Texts-septuagint',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Codex_Vaticanus_%281_Esdras_1-55_to_2-5%29_%28The_S.S._Teacher%27s_Edition-The_Holy_Bible%29.jpg/500px-Codex_Vaticanus_%281_Esdras_1-55_to_2-5%29_%28The_S.S._Teacher%27s_Edition-The_Holy_Bible%29.jpg'],
+    sources: ['Letter of Aristeas', 'Codex Vaticanus']
+  },
+  {
+    id: 'rylands-papyri',
+    parentId: 'ancient-texts',
+    name: 'Rylands Library Papyrus P52',
+    description: 'A tiny fragment of papyrus, generally accepted as the earliest surviving manuscript record of a New Testament text (specifically the Gospel of John 18:31–33, 37–38), dated to approximately 125–175 CE and discovered in the Fayum region of Egypt.',
+    layer: 'Ancient Texts',
+    mapFeatureId: 'anomaly-Ancient-Texts-rylands',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Manchester%2C_John_Rylands_Library_Ms_Greek_P_457_%28Papyrus_52%29_recto_John_18%2C_31-33.jpg/500px-Manchester%2C_John_Rylands_Library_Ms_Greek_P_457_%28Papyrus_52%29_recto_John_18%2C_31-33.jpg'],
+    sources: ['John Rylands Library Collection']
+  },
+  {
+    id: 'chester-beatty-papyri',
+    parentId: 'ancient-texts',
+    name: 'Chester Beatty Papyri',
+    description: 'A group of eleven ancient papyrus codices of biblical texts, acquired by collector Chester Beatty. Written in Greek and dating from the 2nd to 4th centuries CE, they contain some of the oldest surviving portions of the Gospels, Acts, and Pauline Epistles.',
+    layer: 'Ancient Texts',
+    mapFeatureId: 'anomaly-Ancient-Texts-chesterbeatty',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Dublin%2C_Chester_Beatty_Ms_Papyrus_45_BP_I_ff.13-14_Luke_11.50-12.12%3B_12.18-37%3B_12.42-13.1%3B_13.jpg/500px-Dublin%2C_Chester_Beatty_Ms_Papyrus_45_BP_I_ff.13-14_Luke_11.50-12.12%3B_12.18-37%3B_12.42-13.1%3B_13.jpg'],
+    sources: ['Chester Beatty Library (Dublin)']
+  },
+  {
+    id: 'bodmer-papyri',
+    parentId: 'ancient-texts',
+    name: 'Bodmer Papyri',
+    description: 'A collection of twenty-two papyrus manuscripts discovered in Pabau (near Dishna), Egypt, in 1952. Written in Greek and Coptic, they include early Christian texts, classical literature, and extremely early copies of the Gospels of Luke and John (dated c. 200 CE).',
+    layer: 'Ancient Texts',
+    mapFeatureId: 'anomaly-Ancient-Texts-bodmer',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Geneva%2C_Bodmer_Lab_Ms_Papyrus_66_%28P.Bodmer_II_-_PB_2%29_fol._1r.jpg/500px-Geneva%2C_Bodmer_Lab_Ms_Papyrus_66_%28P.Bodmer_II_-_PB_2%29_fol._1r.jpg'],
+    sources: ['Bodmer Library (Geneva)']
+  },
+  {
+    id: 'oxyrhynchus-papyri',
+    parentId: 'ancient-texts',
+    name: 'Oxyrhynchus Papyri',
+    description: 'A vast group of manuscripts discovered by archaeologists Bernard Grenfell and Arthur Hunt at an ancient garbage dump near Oxyrhynchus, Egypt. Dating from the Ptolemaic to Arab periods, they preserve thousands of Greek and Latin texts, including numerous early biblical fragments.',
+    layer: 'Ancient Texts',
+    mapFeatureId: 'anomaly-Ancient-Texts-oxyrhynchus',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/P._Oxy._I_29.jpg/500px-P._Oxy._I_29.jpg'],
+    sources: ['Egypt Exploration Society / Grenfell & Hunt Excavations']
+  },
+  {
+    id: 'ketef-hinnom',
+    parentId: 'ancient-texts',
+    name: 'Ketef Hinnom Silver Scrolls',
+    description: 'Two tiny rolled silver scrolls discovered in 1979 in a burial cave at Ketef Hinnom, Jerusalem. Dating to the late 7th century BCE, they contain the Priestly Blessing from the Book of Numbers, representing the oldest surviving citations of a biblical text.',
+    layer: 'Ancient Texts',
+    mapFeatureId: 'anomaly-Ancient-Texts-ketefhinnom',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/KetefHinom.jpg/500px-KetefHinom.jpg'],
+    sources: ['Israel Museum Archaeologists / Gabriel Barkay Excavations']
+  },
+  {
+    id: 'vulgate',
+    parentId: 'ancient-texts',
+    name: 'Latin Vulgate',
+    description: 'A late 4th-century Latin translation of the Bible, commissioned by Pope Damasus I and translated primarily by Jerome of Stridon in Bethlehem. It became the definitive, officially sanctioned Latin Bible of the Catholic Church for over a thousand years.',
+    layer: 'Ancient Texts',
+    mapFeatureId: 'anomaly-Ancient-Texts-vulgate',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Cod._Sangallensis_63_%28277%29.jpg/500px-Cod._Sangallensis_63_%28277%29.jpg'],
+    sources: ['Codex Amiatinus', 'Jerome\'s Epistles']
+  },
+  {
+    id: 'peshitta',
+    parentId: 'ancient-texts',
+    name: 'Syriac Peshitta',
+    description: 'The standard version of the Bible in the Syriac Christian tradition, written in the Syriac dialect of Aramaic. Developed between the 2nd and 5th centuries CE, it represents a crucial early witness to both the Hebrew Bible and Greek New Testament texts.',
+    layer: 'Ancient Texts',
+    mapFeatureId: 'anomaly-Ancient-Texts-peshitta',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Peshitta_%281%29.jpg/500px-Peshitta_%281%29.jpg'],
+    sources: ['Khabouris Codex', 'Syriac Orthodox Patriarchate']
+  }
 ];
+
+TERM_TREE_DATA.push(...chunk_bible_sources);
+
+// Number the books of the Bible sequentially to preserve their canonical order in the sorted UI
+const bibleBooks = TERM_TREE_DATA.filter(n => n && n.parentId === 'holy-bible');
+bibleBooks.forEach((book, idx) => {
+  const numStr = String(idx + 1).padStart(2, '0');
+  book.name = `${numStr}. ${book.name}`;
+});
+
+// Map of source name in "sources" fields to the new term ID
+const sourceNameToIdMap: Record<string, string> = {
+  "Dead Sea Scrolls": "codex-dead-sea-scrolls",
+  "Codex Sinaiticus": "codex-sinaiticus",
+  "Codex Vaticanus": "codex-vaticanus",
+  "Codex Alexandrinus": "codex-alexandrinus",
+  "Samaritan Pentateuch": "samaritan-pentateuch",
+  "Masoretic Text": "masoretic-text",
+  "Septuagint (LXX)": "septuagint",
+  "Septuagint": "septuagint",
+  "Rylands Papyri": "rylands-papyri",
+  "Chester Beatty Papyri": "chester-beatty-papyri",
+  "Bodmer Papyri": "bodmer-papyri",
+  "Oxyrhynchus Papyri": "oxyrhynchus-papyri",
+  "Ketef Hinnom Scrolls": "ketef-hinnom",
+  "Silver Scrolls": "ketef-hinnom",
+  "Vulgate": "vulgate",
+  "Peshitta": "peshitta"
+};
+
+// Establish reciprocal relatedIds links
+TERM_TREE_DATA.forEach(node => {
+  if (node && node.parentId === 'holy-bible' && node.sources) {
+    node.sources.forEach(src => {
+      const sourceId = sourceNameToIdMap[src];
+      if (sourceId) {
+        if (!node.relatedIds) node.relatedIds = [];
+        if (!node.relatedIds.includes(sourceId)) {
+          node.relatedIds.push(sourceId);
+        }
+        
+        const sourceNode = TERM_TREE_DATA.find(n => n && n.id === sourceId);
+        if (sourceNode) {
+          if (!sourceNode.relatedIds) sourceNode.relatedIds = [];
+          if (!sourceNode.relatedIds.includes(node.id)) {
+            sourceNode.relatedIds.push(node.id);
+          }
+        }
+      }
+    });
+  }
+});
+
+// Link the parent "holy-bible" term to all the source texts
+const holyBibleNode = TERM_TREE_DATA.find(n => n && n.id === 'holy-bible');
+if (holyBibleNode) {
+  Object.values(sourceNameToIdMap).forEach(sourceId => {
+    if (!holyBibleNode.relatedIds) holyBibleNode.relatedIds = [];
+    if (!holyBibleNode.relatedIds.includes(sourceId)) {
+      holyBibleNode.relatedIds.push(sourceId);
+    }
+    const sourceNode = TERM_TREE_DATA.find(n => n && n.id === sourceId);
+    if (sourceNode) {
+      if (!sourceNode.relatedIds) sourceNode.relatedIds = [];
+      if (!sourceNode.relatedIds.includes('holy-bible')) {
+        sourceNode.relatedIds.push('holy-bible');
+      }
+    }
+  });
+}
+
