@@ -1291,6 +1291,11 @@ export default function CodexPage({
     return list;
   }, [selectedPath, nodes]);
 
+  // Dynamic canvas width based on current active columns count to prevent cutoff
+  const canvasWidth = useMemo(() => {
+    return Math.max(4000, 1200 + columns.length * 300 + 1000);
+  }, [columns]);
+
   // Pre-indexed set of all node IDs that act as parents, secondary parents, or have related IDs for O(1) render lookups
   const nodeSubItemSet = useMemo(() => {
     const parentIdSet = new Set<string>();
@@ -2150,7 +2155,7 @@ export default function CodexPage({
         <div
           ref={canvasRef}
           style={{
-            width: '4000px',
+            width: `${canvasWidth}px`,
             height: '3000px',
             position: 'relative',
             backgroundImage: `url("${svgGrid}")`,
@@ -2164,7 +2169,7 @@ export default function CodexPage({
               position: 'absolute',
               top: 0,
               left: 0,
-              width: '4000px',
+              width: `${canvasWidth}px`,
               height: '3000px',
               pointerEvents: 'none',
               zIndex: 4
@@ -2408,7 +2413,7 @@ export default function CodexPage({
             position: 'absolute',
             top: 0,
             left: 0,
-            width: '4000px',
+            width: `${canvasWidth}px`,
             height: '3000px',
             pointerEvents: 'none',
             zIndex: 6
