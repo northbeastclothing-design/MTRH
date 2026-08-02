@@ -1301,9 +1301,11 @@ export default function CodexPage({
 
     const container = columnsContainerRef.current;
     
-    setScrollSize({
-      width: Math.max(container.scrollWidth, container.clientWidth),
-      height: Math.max(container.scrollHeight, container.clientHeight)
+    const newWidth = Math.max(container.scrollWidth, container.clientWidth);
+    const newHeight = Math.max(container.scrollHeight, container.clientHeight);
+    setScrollSize(prev => {
+      if (prev.width === newWidth && prev.height === newHeight) return prev;
+      return { width: newWidth, height: newHeight };
     });
 
     const containerRect = container.getBoundingClientRect();
@@ -1768,7 +1770,7 @@ export default function CodexPage({
       } else {
         container.scrollTo({
           left: targetScrollLeft,
-          top: targetScrollTop,
+          top: container.scrollTop,
           behavior: 'smooth'
         });
       }
