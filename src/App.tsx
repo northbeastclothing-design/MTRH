@@ -9016,6 +9016,7 @@ function App() {
             isMapDarkMode={isMapDarkMode}
             focusedTermId={focusedCodexTermId}
             onFocusedTermConsumed={() => setFocusedCodexTermId(null)}
+            isActive={currentPage === 'codex'}
             onViewOnMap={(layerName, featureSearchTerm) => {
               stopMainMapRotation();
               setCurrentPage('map');

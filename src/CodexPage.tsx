@@ -1,5 +1,5 @@
 // Codex Page Component
-import React, { useState, useEffect, useMemo, useRef } from 'react';
+import React, { useState, useEffect, useMemo, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { createPortal } from 'react-dom';
 import { X, Flag, Play } from 'lucide-react';
@@ -25,6 +25,7 @@ interface CodexPageProps {
   onFocusedTermConsumed?: () => void;
   codexNodes?: TermNode[];
   trackCustomEvent?: (eventName: string, params?: any) => void;
+  isActive?: boolean;
 }
 
 const LAYER_COLORS: Record<string, string> = {
@@ -746,7 +747,8 @@ export default function CodexPage({
   focusedTermId,
   onFocusedTermConsumed,
   codexNodes,
-  trackCustomEvent
+  trackCustomEvent,
+  isActive
 }: CodexPageProps) {
   const nodes = (codexNodes || TERM_TREE_DATA).filter((n): n is TermNode => !!(n && n.id));
 
@@ -1293,6 +1295,12 @@ export default function CodexPage({
   const handleNodeClick = (node: TermNode, level: number) => {
     const path = [...selectedPath.slice(0, level), node.id];
     setSelectedPath(path);
+
+    // Center on the newly expanded sublayer list (level + 1)
+    const targetCol = level + 1;
+    setTimeout(() => {
+      centerOnColumn(targetCol, false);
+    }, 50);
   };
 
   // Update selection pathways and cross-links lines
@@ -1301,9 +1309,11 @@ export default function CodexPage({
 
     const container = columnsContainerRef.current;
     
-    setScrollSize({
-      width: Math.max(container.scrollWidth, container.clientWidth),
-      height: Math.max(container.scrollHeight, container.clientHeight)
+    const newWidth = Math.max(container.scrollWidth, container.clientWidth);
+    const newHeight = Math.max(container.scrollHeight, container.clientHeight);
+    setScrollSize(prev => {
+      if (prev.width === newWidth && prev.height === newHeight) return prev;
+      return { width: newWidth, height: newHeight };
     });
 
     const containerRect = container.getBoundingClientRect();
@@ -1732,31 +1742,31 @@ export default function CodexPage({
     };
   }, []);
 
-  // Auto-center selected terms vertically within their columns (aligning them to a single horizontal line)
-  const isInitialMountRef = useRef(true);
+  // Helper to center the container on a specified column horizontally and vertically
+  const centerOnColumn = useCallback((colIdx: number, isInstant: boolean = false) => {
+    let timer: any;
 
-  // Smoothly center the columns container on the active column and vertical midpoint (single horizontal selections line)
-  useEffect(() => {
-    const timer = setTimeout(() => {
+    const performScroll = () => {
       const container = columnsContainerRef.current;
       if (!container) return;
-      
+
       const viewportWidth = container.clientWidth;
       const viewportHeight = container.clientHeight;
-      
-      // Determine which column to center
-      const targetColIdx = Math.min(selectedPath.length, columns.length - 1);
-      const colCenterX = 1200 + targetColIdx * 300 + 130;
-      
-      // If the sidebar is expanded (not collapsed), offset the center to the left
+
+      // Ensure layout pass is complete (scrollWidth expanded) before scroll assignment
+      if (viewportWidth === 0 || viewportHeight === 0 || container.scrollWidth <= viewportWidth) {
+        timer = setTimeout(performScroll, 50);
+        return;
+      }
+
+      const colCenterX = 1200 + colIdx * 300 + 130;
       const sidebarOffset = isRightCollapsed ? 0 : 300;
       const targetScrollLeft = colCenterX - (viewportWidth - sidebarOffset) / 2;
       const targetScrollTop = 1500 - viewportHeight / 2;
-      
-      if (isInitialMountRef.current) {
+
+      if (isInstant) {
         container.scrollLeft = targetScrollLeft;
         container.scrollTop = targetScrollTop;
-        isInitialMountRef.current = false;
       } else {
         container.scrollTo({
           left: targetScrollLeft,
@@ -1764,9 +1774,17 @@ export default function CodexPage({
           behavior: 'smooth'
         });
       }
-    }, 150); // slight delay to allow rendering
-    return () => clearTimeout(timer);
-  }, [selectedPath, columns, isRightCollapsed]);
+    };
+
+    performScroll();
+  }, [isRightCollapsed]);
+
+  // Initial entrance/navigation scroll centering (centers Column 0 on load/tab switch)
+  useEffect(() => {
+    if (isActive !== false) {
+      centerOnColumn(0, true);
+    }
+  }, [isActive, centerOnColumn]);
 
   // Automatically expand sidebar when a term is selected
   useEffect(() => {
@@ -2142,9 +2160,16 @@ export default function CodexPage({
           {columns.map((column, colIdx) => {
             const selectedNodeId = selectedPath[colIdx];
             const selIdx = column.nodes.findIndex(n => n.id === selectedNodeId);
-            const activeSelIdx = selIdx >= 0 ? selIdx : 0;
-            const Y_item = activeSelIdx * 40 + 16; // 32px height + 8px gap, center is at 16px
-            const colTop = 1500 - Y_item;
+            let colTop = 1500;
+            if (colIdx === 0 && selectedPath.length === 0) {
+              // Center Column 0 vertically only on initial page load when no category has been selected yet
+              const totalHeight = column.nodes.length * 40 - 8;
+              colTop = 1500 - totalHeight / 2;
+            } else {
+              const activeSelIdx = selIdx >= 0 ? selIdx : 0;
+              const Y_item = activeSelIdx * 40 + 16; // 32px height + 8px gap, center is at 16px
+              colTop = 1500 - Y_item;
+            }
             const colLeft = 1200 + colIdx * 300;
 
             return (
