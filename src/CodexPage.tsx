@@ -1296,8 +1296,12 @@ export default function CodexPage({
     const path = [...selectedPath.slice(0, level), node.id];
     setSelectedPath(path);
 
-    // Center on the newly expanded sublayer list (level + 1)
-    const targetCol = level + 1;
+    // Check if the clicked node has subitems / children
+    const hasChildren = nodes.some(c => c.parentId === node.id || (c.secondaryParentIds && c.secondaryParentIds.includes(node.id)));
+
+    // If it has children, center on the newly expanded sublayer column (level + 1).
+    // If it has no children, stay centered on the current column (level).
+    const targetCol = hasChildren ? level + 1 : level;
     setTimeout(() => {
       centerOnColumn(targetCol, false);
     }, 50);
@@ -2253,7 +2257,7 @@ export default function CodexPage({
                   const nodeColor = colIdx === 0 ? getNodeColor(node) : activeRootColor;
                   const nodeIcon = getNodeIcon(node);
 
-                  const hasChildren = nodes.some(c => c.parentId === node.id);
+                  const hasChildren = nodes.some(c => c.parentId === node.id || (c.secondaryParentIds && c.secondaryParentIds.includes(node.id)));
 
                   // Column 0 / Level 0: Main Category terms (style identical to map page sidebar layer list, minus visibility toggle)
                   if (colIdx === 0) {
