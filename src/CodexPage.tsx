@@ -1291,28 +1291,40 @@ export default function CodexPage({
     return list;
   }, [selectedPath, nodes]);
 
-  // Helper to determine if a node will generate sub-items/children in the next column
-  const checkNodeHasSubItems = useCallback((node: TermNode, colIdx: number, currentPath: string[] = selectedPath, currentListNodes: TermNode[] = []) => {
-    const pathUpToHere = [...currentPath.slice(0, colIdx), node.id];
-    return nodes.some(n => {
-      if (pathUpToHere.includes(n.id)) return false;
-      if (currentListNodes.some(item => item.id === n.id)) return false;
+  // Pre-indexed set of all node IDs that act as parents, secondary parents, or have related IDs for O(1) render lookups
+  const nodeSubItemSet = useMemo(() => {
+    const parentIdSet = new Set<string>();
+    const secondarySet = new Set<string>();
+    const relatedSet = new Set<string>();
 
-      const isChild = n.parentId === node.id || n.secondaryParentIds?.includes(node.id);
-      const isRelated = node.relatedIds?.includes(n.id);
-      const isParent = node.parentId === n.id || node.secondaryParentIds?.includes(n.id);
-
-      return isChild || isRelated || isParent;
+    nodes.forEach(n => {
+      if (n.parentId) parentIdSet.add(n.parentId);
+      if (n.secondaryParentIds) {
+        n.secondaryParentIds.forEach(pId => secondarySet.add(pId));
+      }
+      if (n.relatedIds) {
+        n.relatedIds.forEach(rId => relatedSet.add(rId));
+      }
     });
-  }, [nodes, selectedPath]);
+
+    return { parentIdSet, secondarySet, relatedSet };
+  }, [nodes]);
+
+  // Ultra-fast O(1) lookup to determine if a node will generate sub-items/children in the next column
+  const checkNodeHasSubItems = useCallback((node: TermNode) => {
+    return (
+      nodeSubItemSet.parentIdSet.has(node.id) ||
+      nodeSubItemSet.secondarySet.has(node.id) ||
+      nodeSubItemSet.relatedSet.has(node.id)
+    );
+  }, [nodeSubItemSet]);
 
   // Handle term node selection click
   const handleNodeClick = (node: TermNode, level: number) => {
     const path = [...selectedPath.slice(0, level), node.id];
     setSelectedPath(path);
 
-    const currentColNodes = columns[level]?.nodes || [];
-    const hasChildren = checkNodeHasSubItems(node, level, path, currentColNodes);
+    const hasChildren = checkNodeHasSubItems(node);
 
     // If it has children, center on the newly expanded sublayer column (level + 1).
     // If it has no children, stay centered on the current column (level).
@@ -2272,7 +2284,7 @@ export default function CodexPage({
                   const nodeColor = colIdx === 0 ? getNodeColor(node) : activeRootColor;
                   const nodeIcon = getNodeIcon(node);
 
-                  const hasChildren = checkNodeHasSubItems(node, colIdx, selectedPath, column.nodes);
+                  const hasChildren = checkNodeHasSubItems(node);
 
                   // Column 0 / Level 0: Main Category terms (style identical to map page sidebar layer list, minus visibility toggle)
                   if (colIdx === 0) {
