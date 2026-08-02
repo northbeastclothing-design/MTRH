@@ -1291,13 +1291,28 @@ export default function CodexPage({
     return list;
   }, [selectedPath, nodes]);
 
+  // Helper to determine if a node will generate sub-items/children in the next column
+  const checkNodeHasSubItems = useCallback((node: TermNode, colIdx: number, currentPath: string[] = selectedPath, currentListNodes: TermNode[] = []) => {
+    const pathUpToHere = [...currentPath.slice(0, colIdx), node.id];
+    return nodes.some(n => {
+      if (pathUpToHere.includes(n.id)) return false;
+      if (currentListNodes.some(item => item.id === n.id)) return false;
+
+      const isChild = n.parentId === node.id || n.secondaryParentIds?.includes(node.id);
+      const isRelated = node.relatedIds?.includes(n.id);
+      const isParent = node.parentId === n.id || node.secondaryParentIds?.includes(n.id);
+
+      return isChild || isRelated || isParent;
+    });
+  }, [nodes, selectedPath]);
+
   // Handle term node selection click
   const handleNodeClick = (node: TermNode, level: number) => {
     const path = [...selectedPath.slice(0, level), node.id];
     setSelectedPath(path);
 
-    // Check if the clicked node has subitems / children
-    const hasChildren = nodes.some(c => c.parentId === node.id || (c.secondaryParentIds && c.secondaryParentIds.includes(node.id)));
+    const currentColNodes = columns[level]?.nodes || [];
+    const hasChildren = checkNodeHasSubItems(node, level, path, currentColNodes);
 
     // If it has children, center on the newly expanded sublayer column (level + 1).
     // If it has no children, stay centered on the current column (level).
@@ -2257,7 +2272,7 @@ export default function CodexPage({
                   const nodeColor = colIdx === 0 ? getNodeColor(node) : activeRootColor;
                   const nodeIcon = getNodeIcon(node);
 
-                  const hasChildren = nodes.some(c => c.parentId === node.id || (c.secondaryParentIds && c.secondaryParentIds.includes(node.id)));
+                  const hasChildren = checkNodeHasSubItems(node, colIdx, selectedPath, column.nodes);
 
                   // Column 0 / Level 0: Main Category terms (style identical to map page sidebar layer list, minus visibility toggle)
                   if (colIdx === 0) {
@@ -2497,7 +2512,6 @@ export default function CodexPage({
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                   {(() => {
                     const rootCat = getRootCategory(activeTermNode);
-                    console.log("MTRH_DEBUG_ICON:", rootCat.id, rootCat.name, "-> icon:", getNodeIcon(rootCat));
                     return (
                       <>
                         <div style={{ width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
