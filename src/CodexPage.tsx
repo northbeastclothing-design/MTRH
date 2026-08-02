@@ -1301,11 +1301,9 @@ export default function CodexPage({
 
     const container = columnsContainerRef.current;
     
-    const newWidth = Math.max(container.scrollWidth, container.clientWidth);
-    const newHeight = Math.max(container.scrollHeight, container.clientHeight);
-    setScrollSize(prev => {
-      if (prev.width === newWidth && prev.height === newHeight) return prev;
-      return { width: newWidth, height: newHeight };
+    setScrollSize({
+      width: Math.max(container.scrollWidth, container.clientWidth),
+      height: Math.max(container.scrollHeight, container.clientHeight)
     });
 
     const containerRect = container.getBoundingClientRect();
@@ -1739,20 +1737,12 @@ export default function CodexPage({
 
   // Smoothly center the columns container on the active column and vertical midpoint (single horizontal selections line)
   useEffect(() => {
-    let timer: any;
-
-    const centerScroll = () => {
+    const timer = setTimeout(() => {
       const container = columnsContainerRef.current;
       if (!container) return;
       
       const viewportWidth = container.clientWidth;
       const viewportHeight = container.clientHeight;
-      
-      // Ensure the container's scroll bounds have expanded (layout pass complete) before applying scroll offsets
-      if (viewportWidth === 0 || viewportHeight === 0 || container.scrollWidth <= viewportWidth) {
-        timer = setTimeout(centerScroll, 50);
-        return;
-      }
       
       // Determine which column to center
       const targetColIdx = Math.min(selectedPath.length, columns.length - 1);
@@ -1770,13 +1760,11 @@ export default function CodexPage({
       } else {
         container.scrollTo({
           left: targetScrollLeft,
-          top: container.scrollTop,
+          top: targetScrollTop,
           behavior: 'smooth'
         });
       }
-    };
-
-    timer = setTimeout(centerScroll, 50);
+    }, 150); // slight delay to allow rendering
     return () => clearTimeout(timer);
   }, [selectedPath, columns, isRightCollapsed]);
 
@@ -2154,16 +2142,9 @@ export default function CodexPage({
           {columns.map((column, colIdx) => {
             const selectedNodeId = selectedPath[colIdx];
             const selIdx = column.nodes.findIndex(n => n.id === selectedNodeId);
-            let colTop = 1500;
-            if (colIdx === 0 && selectedPath.length === 0) {
-              // Center Column 0 vertically only on initial page load when no category has been selected yet
-              const totalHeight = column.nodes.length * 40 - 8;
-              colTop = 1500 - totalHeight / 2;
-            } else {
-              const activeSelIdx = selIdx >= 0 ? selIdx : 0;
-              const Y_item = activeSelIdx * 40 + 16; // 32px height + 8px gap, center is at 16px
-              colTop = 1500 - Y_item;
-            }
+            const activeSelIdx = selIdx >= 0 ? selIdx : 0;
+            const Y_item = activeSelIdx * 40 + 16; // 32px height + 8px gap, center is at 16px
+            const colTop = 1500 - Y_item;
             const colLeft = 1200 + colIdx * 300;
 
             return (
