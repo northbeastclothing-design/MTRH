@@ -235,10 +235,9 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle, transparent 20%, #000000 80%),
-              linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
               linear-gradient(90deg, rgba(255, 99, 99, 0.05), rgba(145, 255, 196, 0.02), rgba(144, 233, 255, 0.05));
-  background-size: 100% 100%, 100% 4px, 6px 100%;
+  background-size: 100% 4px, 6px 100%;
   opacity: 0.85;
   z-index: 2;
 }

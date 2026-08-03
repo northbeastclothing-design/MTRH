@@ -1257,25 +1257,12 @@ function App() {
   });
 
   const [glitchPhase, setGlitchPhase] = useState<'idle' | 'out' | 'whiteout' | 'in'>('idle');
-  const [glitchText, setGlitchText] = useState('');
 
   const setCurrentPage = useCallback((targetPage: 'map' | 'timeline' | 'codex' | 'cartography') => {
     setCurrentPageReal(current => {
       if (current === targetPage) return current;
 
       setGlitchPhase('out');
-      const glitchPhrases = [
-        'DECRYPTING DATABASE SECTOR...',
-        'SYNAPSE LINK ESTABLISHED...',
-        'OVERRIDING MAIN PANEL...',
-        'CONNECTING TO ENCRYPTED LAYER...',
-        'DOWNLINK IN PROGRESS...',
-        'PARSING ARCHIVE NODES...',
-        'RECONSTRUCTING GEOMETRIES...',
-        'DECRYPTION KEY ACCEPTED...',
-        'ESTABLISHING SECURE CONNECTION...'
-      ];
-      setGlitchText(glitchPhrases[Math.floor(Math.random() * glitchPhrases.length)]);
 
       // 300ms: Swap page during whiteout
       setTimeout(() => {
@@ -13064,11 +13051,6 @@ function App() {
             <div className="glitch-bar" />
             <div className="glitch-bar" style={{ animationDelay: '0.1s', animationDuration: '0.25s' }} />
             <div className="glitch-bar" style={{ animationDelay: '0.18s', animationDuration: '0.2s' }} />
-
-            {/* Glowing decryption status text */}
-            <div className="glitch-text">
-              {glitchText}
-            </div>
           </motion.div>
         )}
       </AnimatePresence>
