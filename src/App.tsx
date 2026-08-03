@@ -13052,10 +13052,12 @@ function App() {
             <div className="glitch-bar" style={{ animationDelay: '0.1s', animationDuration: '0.25s' }} />
             <div className="glitch-bar" style={{ animationDelay: '0.18s', animationDuration: '0.2s' }} />
 
-            {/* Blocky Glitch Chunks */}
-            <div className="glitch-block" />
-            <div className="glitch-block" style={{ animationDelay: '0.08s', animationDuration: '0.2s' }} />
-            <div className="glitch-block" style={{ animationDelay: '0.15s', animationDuration: '0.3s' }} />
+            {/* Blocky Glitch Chunks (Randomly sized, randomly placed, difference-blended) */}
+            <div className="glitch-block-base glitch-block-1" />
+            <div className="glitch-block-base glitch-block-2" />
+            <div className="glitch-block-base glitch-block-3" />
+            <div className="glitch-block-base glitch-block-4" />
+            <div className="glitch-block-base glitch-block-5" />
           </motion.div>
         )}
       </AnimatePresence>
