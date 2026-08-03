@@ -4304,15 +4304,8 @@ function App() {
         }
       }
 
-      // 5. Core Rabbit Hole data
-      const needsRabbitHole = Object.keys(activeLayers).some(k => 
-        activeLayers[k] && 
-        k !== 'UFOs - War.gov' && k !== 'UFOs - Brazillian Archives' && k !== 'UFOs - Sightings' && k !== 'Government Conspiracies' &&
-        k !== 'Archaeological Finds' && k !== 'Biblical Discoveries' &&
-        k !== 'Missing 411' && k !== 'Cave Systems' && k !== 'Alien Abductions' && k !== 'Cattle Mutilations' && k !== 'Old World Structures' &&
-        k !== 'Vanished Ships / Aircraft'
-      );
-      if (needsRabbitHole && rabbitHoleData.length === 0) {
+      // 5. Core Rabbit Hole data (loaded immediately on mount to prevent map loading screen pop-in/race conditions)
+      if (rabbitHoleData.length === 0) {
         try {
           const module = await import('./rabbitHoleData.json');
           setRabbitHoleData(getSafeData(module));
@@ -4327,8 +4320,15 @@ function App() {
 
   useEffect(() => {
     const compileVerifiedIntel = () => {
+      if (rabbitHoleData.length === 0) {
+        // Wait until core rabbit hole data is loaded before compiling/dismissing loading screen
+        return;
+      }
+
       try {
-        setIsLiveLoading(true);
+        if (isInitialLoad) {
+          setIsLiveLoading(true);
+        }
         setIsDataCompiled(false);
         const safeLocalData = getSafeData(rabbitHoleData);
         const safeUfoData = getSafeData(ufoData);
@@ -4426,7 +4426,7 @@ function App() {
     };
 
     compileVerifiedIntel();
-  }, [rabbitHoleData, ufoData, archaeologyData, missing411Data, cavesData, alienAbductionData, cattleMutilationData, oldWorldStructuresData, vanishedShipsAircraftData, overrides]);
+  }, [rabbitHoleData, ufoData, archaeologyData, missing411Data, cavesData, alienAbductionData, cattleMutilationData, oldWorldStructuresData, vanishedShipsAircraftData, overrides, isInitialLoad]);
 
   useEffect(() => {
     if (uniqueCategories.length > 0 && !hasRandomizedRef.current) {
@@ -5467,6 +5467,8 @@ function App() {
     stopMainMapRotation();
     if (!feature || !feature.coordinates || !mapRef.current) return;
 
+    playAudio('pin_click');
+
     // Track map pin click event
     trackCustomEvent('select_map_pin', {
       pin_id: feature.id || 'unknown',
@@ -6093,6 +6095,7 @@ function App() {
         map.on('click', 'selected-travel-waypoints-circles', (e) => {
           if (!e.features || !e.features.length) return;
           (e as any)._clickHandled = true;
+          playAudio('pin_click');
           const properties = e.features[0].properties;
           const geometry = e.features[0].geometry;
           
