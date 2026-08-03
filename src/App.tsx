@@ -15,6 +15,7 @@ import firebaseConfig from '../firebase-applet-config.json';
 import TimelinePage from './TimelinePage';
 import CodexPage from './CodexPage';
 import CartographyPage from './CartographyPage';
+import { playAudio } from './utils/audio';
 import { TIMELINE_ITEMS, TIMELINE_LOCATIONS, BIBLICAL_TRAVEL_PATHS, Waypoint, TravelPath } from './timelineData';
 // import { ARCHAEOLOGICAL_FINDS_DATA } from './archaeologyData';
 import { TERM_TREE_DATA } from './termTreeData';
@@ -1103,9 +1104,9 @@ const CategoryLayerHeader = ({
           position: 'relative',
           overflow: 'hidden'
         }}
-        onMouseEnter={() => setIsHovered(true)}
+        onMouseEnter={() => { setIsHovered(true); playAudio('hover'); }}
         onMouseLeave={() => setIsHovered(false)}
-        onClick={onToggleExpand}
+        onClick={() => { onToggleExpand(); playAudio('click'); }}
       >
         {/* EXPANDING BACKGROUND OVERLAY */}
         <motion.div
@@ -1148,7 +1149,8 @@ const CategoryLayerHeader = ({
         <div style={{ display: 'flex', alignItems: 'center', gap: '0', zIndex: 1, position: 'relative' }} onClick={e => e.stopPropagation()}>
           <motion.button 
             whileHover={{ opacity: 0.6 }}
-            onClick={onToggleActive} 
+            onMouseEnter={() => playAudio('hover')}
+            onClick={() => { onToggleActive(); playAudio('click'); }} 
             style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, display: 'flex', alignItems: 'center' }}
           >
             {isLayerLoading(layerName) ? (
@@ -1174,7 +1176,8 @@ const CategoryLayerHeader = ({
           </motion.button>
           <motion.button 
             whileHover={{ opacity: 0.6 }}
-            onClick={onToggleExpand}
+            onMouseEnter={() => playAudio('hover')}
+            onClick={() => { onToggleExpand(); playAudio('click'); }}
             style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
           >
             <img src={isExpanded ? "https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/icons/icon-arrow-up.svg" : "https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/icons/icon-arrow-down.svg"} style={{ width: '30px', height: '30px', filter: theme.invert }} alt="expand" />
@@ -1262,6 +1265,8 @@ function App() {
     setCurrentPageReal(current => {
       if (current === targetPage) return current;
 
+      playAudio('click');
+      playAudio('transition');
       setGlitchPhase('out');
 
       // 150ms: Swap page during whiteout (cut in half from 300ms)
@@ -3575,15 +3580,43 @@ function App() {
     // Safety fallback: if 6 seconds pass, dismiss the loader anyway to prevent softlock
     const fallbackTimeout = setTimeout(() => {
       console.warn("Loader safety timeout reached. Dismissing loader.");
-      setIsLiveLoading(false);
-      setIsInitialLoad(false);
+      setGlitchPhase('out');
+      playAudio('transition');
+
+      setTimeout(() => {
+        setGlitchPhase('whiteout');
+        setIsLiveLoading(false);
+        setIsInitialLoad(false);
+      }, 150);
+
+      setTimeout(() => {
+        setGlitchPhase('in');
+      }, 225);
+
+      setTimeout(() => {
+        setGlitchPhase('idle');
+      }, 400);
     }, 6000);
 
     if (isMapLoaded && isDataCompiled) {
       // Add a small buffer (e.g. 500ms) for smooth rendering transition
       const successTimeout = setTimeout(() => {
-        setIsLiveLoading(false);
-        setIsInitialLoad(false);
+        setGlitchPhase('out');
+        playAudio('transition');
+
+        setTimeout(() => {
+          setGlitchPhase('whiteout');
+          setIsLiveLoading(false);
+          setIsInitialLoad(false);
+        }, 150);
+
+        setTimeout(() => {
+          setGlitchPhase('in');
+        }, 225);
+
+        setTimeout(() => {
+          setGlitchPhase('idle');
+        }, 400);
       }, 500);
       return () => {
         clearTimeout(fallbackTimeout);
@@ -6453,6 +6486,7 @@ function App() {
           }}>
             <motion.button 
               onClick={() => setCurrentPage('map')}
+              onMouseEnter={() => playAudio('hover')}
               whileHover={{
                 background: currentPage === 'map'
                   ? (isMapDarkMode ? '#cccccc' : '#333333')
@@ -6478,6 +6512,7 @@ function App() {
             <div style={{ position: 'relative', display: 'inline-block' }}>
               <motion.button 
                 onClick={() => setCurrentPage('timeline')}
+                onMouseEnter={() => playAudio('hover')}
                 whileHover={{
                   background: currentPage === 'timeline'
                     ? (isMapDarkMode ? '#cccccc' : '#333333')
@@ -6519,6 +6554,7 @@ function App() {
             <div style={{ position: 'relative', display: 'inline-block' }}>
               <motion.button 
                 onClick={() => setCurrentPage('codex')}
+                onMouseEnter={() => playAudio('hover')}
                 whileHover={{
                   background: currentPage === 'codex'
                     ? (isMapDarkMode ? '#cccccc' : '#333333')
@@ -6560,6 +6596,7 @@ function App() {
             <div style={{ position: 'relative', display: 'inline-block' }}>
               <motion.button 
                 onClick={() => setCurrentPage('cartography')}
+                onMouseEnter={() => playAudio('hover')}
                 whileHover={{
                   background: currentPage === 'cartography'
                     ? (isMapDarkMode ? '#cccccc' : '#333333')
@@ -6598,7 +6635,8 @@ function App() {
                 {isMapDarkMode ? 'DARK MODE' : 'LIGHT MODE'}
               </span>
               <button 
-                onClick={() => setIsMapDarkMode(!isMapDarkMode)}
+                onClick={() => { setIsMapDarkMode(!isMapDarkMode); playAudio('click'); }}
+                onMouseEnter={() => playAudio('hover')}
                 style={{
                   width: '32px',
                   height: '16px',
@@ -13054,7 +13092,6 @@ function App() {
 
             {/* Blocky Glitch Chunks (Randomly sized, randomly placed, difference-blended) */}
             <div className="glitch-block-base glitch-block-1" />
-            <div className="glitch-block-base glitch-block-2" />
           </motion.div>
         )}
       </AnimatePresence>

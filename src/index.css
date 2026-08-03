@@ -293,10 +293,10 @@
 }
 
 @keyframes glitchBlockAnim1 {
-  0% { top: 5%; left: 3%; width: 30vw; height: 180px; transform: translate(-25px, 0); opacity: 0.55; }
-  33% { top: 70%; left: 60%; width: 25vw; height: 60px; transform: translate(18px, 0); opacity: 0; }
-  66% { top: 35%; left: 12%; width: 45vw; height: 140px; transform: translate(-15px, 0); opacity: 0.7; }
-  100% { top: 5%; left: 3%; width: 30vw; height: 180px; transform: translate(-25px, 0); opacity: 0.55; }
+  0% { top: 5%; left: 3%; width: 15vw; height: 90px; transform: translate(-25px, 0); opacity: 0.55; }
+  33% { top: 70%; left: 60%; width: 12vw; height: 30px; transform: translate(18px, 0); opacity: 0; }
+  66% { top: 35%; left: 12%; width: 22vw; height: 70px; transform: translate(-15px, 0); opacity: 0.7; }
+  100% { top: 5%; left: 3%; width: 15vw; height: 90px; transform: translate(-25px, 0); opacity: 0.55; }
 }
 
 @keyframes glitchBlockAnim2 {
