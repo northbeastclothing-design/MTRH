@@ -1256,6 +1256,42 @@ function App() {
     return params.get('mapId') || 'catalhoyuk';
   });
 
+  const [glitchState, setGlitchState] = useState({ isActive: false, text: '' });
+  const isFirstPageRenderRef = useRef(true);
+
+  // Trigger cyberpunk glitch transition overlay on page change
+  useEffect(() => {
+    // Skip initial mount render to prevent full screen flicker when the database first loads
+    if (isFirstPageRenderRef.current) {
+      isFirstPageRenderRef.current = false;
+      return;
+    }
+
+    const glitchPhrases = [
+      'DECRYPTING DATABASE SECTOR...',
+      'SYNAPSE LINK ESTABLISHED...',
+      'OVERRIDING MAIN PANEL...',
+      'CONNECTING TO ENCRYPTED LAYER...',
+      'DOWNLINK IN PROGRESS...',
+      'PARSING ARCHIVE NODES...',
+      'RECONSTRUCTING GEOMETRIES...',
+      'DECRYPTION KEY ACCEPTED...',
+      'ESTABLISHING SECURE CONNECTION...'
+    ];
+    const randomText = glitchPhrases[Math.floor(Math.random() * glitchPhrases.length)];
+
+    setGlitchState({
+      isActive: true,
+      text: randomText
+    });
+
+    const timer = setTimeout(() => {
+      setGlitchState(prev => ({ ...prev, isActive: false }));
+    }, 450); // Glitch runs for 450ms
+
+    return () => clearTimeout(timer);
+  }, [currentPage]);
+
   // Track dynamic page views in our Single Page App (SPA)
   useEffect(() => {
     trackCustomEvent('page_view', {
@@ -12998,8 +13034,33 @@ function App() {
           </>
         )}
       </AnimatePresence>
+
+      {/* CYBERPUNK GLITCH TRANSITION OVERLAY */}
+      <AnimatePresence>
+        {glitchState.isActive && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.15 }}
+            className="glitch-transition-container"
+          >
+            {/* Flickering visual static blocks */}
+            <div className="glitch-grid" />
+            <div className="glitch-scanlines" />
+            <div className="glitch-bar" />
+            <div className="glitch-bar" style={{ animationDelay: '0.1s', animationDuration: '0.2s' }} />
+            <div className="glitch-bar" style={{ animationDelay: '0.18s', animationDuration: '0.25s' }} />
+
+            {/* Glowing decryption status text */}
+            <div className="glitch-text">
+              {glitchState.text}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
 
-  export default App;
+export default App;

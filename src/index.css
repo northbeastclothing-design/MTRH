@@ -149,4 +149,123 @@
   }
 }
 
+/* Cyber Glitch Transition Animation Styles */
+.glitch-transition-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99999;
+  background: #000000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  pointer-events: none;
+  font-family: 'Space Mono', monospace;
+  color: #FF9BE1; /* UFOs - War.gov Light Pink color */
+}
+
+/* Horizontal glitch bars slicing the screen */
+.glitch-bar {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background: rgba(178, 151, 255, 0.15); /* Muted Purple */
+  height: 12px;
+  animation: glitchBarAnim 0.3s steps(10, end) infinite;
+}
+
+@keyframes glitchBarAnim {
+  0% { top: 12%; height: 5px; background: rgba(255, 159, 99, 0.2); }
+  20% { top: 78%; height: 35px; background: rgba(144, 233, 255, 0.18); }
+  40% { top: 43%; height: 18px; background: rgba(236, 206, 129, 0.2); }
+  60% { top: 92%; height: 4px; background: rgba(145, 255, 196, 0.25); }
+  80% { top: 31%; height: 50px; background: rgba(249, 182, 219, 0.15); }
+  100% { top: 57%; height: 15px; background: rgba(178, 151, 255, 0.2); }
+}
+
+/* Main text glitch animation */
+.glitch-text {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  position: relative;
+  text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+              -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+              0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  animation: glitchTextAnim 400ms infinite;
+  z-index: 10;
+}
+
+@keyframes glitchTextAnim {
+  0% {
+    text-shadow: 1.5px 0 0 rgba(255, 155, 225, 0.8), -1px -2px 0 rgba(144, 233, 255, 0.8);
+    transform: translate(0);
+  }
+  20% {
+    text-shadow: -2px 1.5px 0 rgba(255, 155, 225, 0.8), 2px -1px 0 rgba(144, 233, 255, 0.8);
+    transform: translate(-1.5px, 1px) skewX(-3deg);
+  }
+  40% {
+    text-shadow: 1px -1.5px 0 rgba(255, 155, 225, 0.8), -2px 2px 0 rgba(144, 233, 255, 0.8);
+    transform: translate(1px, -1px) skewX(2deg);
+  }
+  60% {
+    text-shadow: 2px 0 0 rgba(255, 155, 225, 0.8), -1.5px -1.5px 0 rgba(144, 233, 255, 0.8);
+    transform: translate(-1px, -0.5px) skewX(0);
+  }
+  80% {
+    text-shadow: -1.5px -1px 0 rgba(255, 155, 225, 0.8), 1px 2px 0 rgba(144, 233, 255, 0.8);
+    transform: translate(0.5px, 1.5px) skewX(-1deg);
+  }
+  100% {
+    text-shadow: 1.5px 1.5px 0 rgba(255, 155, 225, 0.8), -2px -1px 0 rgba(144, 233, 255, 0.8);
+    transform: translate(0);
+  }
+}
+
+/* Digital grid static overlay background */
+.glitch-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, transparent 20%, #000000 80%),
+              linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+              linear-gradient(90deg, rgba(255, 99, 99, 0.05), rgba(145, 255, 196, 0.02), rgba(144, 233, 255, 0.05));
+  background-size: 100% 100%, 100% 4px, 6px 100%;
+  opacity: 0.85;
+  z-index: 2;
+}
+
+/* CRT flickering scanlines overlay */
+.glitch-scanlines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0),
+    rgba(255,255,255,0) 50%,
+    rgba(0, 0, 0, 0.35) 50%,
+    rgba(0, 0, 0, 0.35)
+  );
+  background-size: 100% 4px;
+  animation: flickerScan 0.12s infinite;
+  z-index: 3;
+}
+
+@keyframes flickerScan {
+  0% { opacity: 0.7; }
+  50% { opacity: 0.9; }
+  100% { opacity: 0.7; }
+}
+
 
