@@ -1104,9 +1104,9 @@ const CategoryLayerHeader = ({
           position: 'relative',
           overflow: 'hidden'
         }}
-        onMouseEnter={() => { setIsHovered(true); playAudio('hover'); }}
+        onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        onClick={() => { onToggleExpand(); playAudio('click'); }}
+        onClick={onToggleExpand}
       >
         {/* EXPANDING BACKGROUND OVERLAY */}
         <motion.div
@@ -1149,8 +1149,7 @@ const CategoryLayerHeader = ({
         <div style={{ display: 'flex', alignItems: 'center', gap: '0', zIndex: 1, position: 'relative' }} onClick={e => e.stopPropagation()}>
           <motion.button 
             whileHover={{ opacity: 0.6 }}
-            onMouseEnter={() => playAudio('hover')}
-            onClick={() => { onToggleActive(); playAudio('click'); }} 
+            onClick={onToggleActive} 
             style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, display: 'flex', alignItems: 'center' }}
           >
             {isLayerLoading(layerName) ? (
@@ -1176,8 +1175,7 @@ const CategoryLayerHeader = ({
           </motion.button>
           <motion.button 
             whileHover={{ opacity: 0.6 }}
-            onMouseEnter={() => playAudio('hover')}
-            onClick={() => { onToggleExpand(); playAudio('click'); }}
+            onClick={onToggleExpand}
             style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
           >
             <img src={isExpanded ? "https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/icons/icon-arrow-up.svg" : "https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/icons/icon-arrow-down.svg"} style={{ width: '30px', height: '30px', filter: theme.invert }} alt="expand" />
@@ -6486,7 +6484,6 @@ function App() {
           }}>
             <motion.button 
               onClick={() => setCurrentPage('map')}
-              onMouseEnter={() => playAudio('hover')}
               whileHover={{
                 background: currentPage === 'map'
                   ? (isMapDarkMode ? '#cccccc' : '#333333')
@@ -6512,7 +6509,6 @@ function App() {
             <div style={{ position: 'relative', display: 'inline-block' }}>
               <motion.button 
                 onClick={() => setCurrentPage('timeline')}
-                onMouseEnter={() => playAudio('hover')}
                 whileHover={{
                   background: currentPage === 'timeline'
                     ? (isMapDarkMode ? '#cccccc' : '#333333')
@@ -6554,7 +6550,6 @@ function App() {
             <div style={{ position: 'relative', display: 'inline-block' }}>
               <motion.button 
                 onClick={() => setCurrentPage('codex')}
-                onMouseEnter={() => playAudio('hover')}
                 whileHover={{
                   background: currentPage === 'codex'
                     ? (isMapDarkMode ? '#cccccc' : '#333333')
@@ -6596,7 +6591,6 @@ function App() {
             <div style={{ position: 'relative', display: 'inline-block' }}>
               <motion.button 
                 onClick={() => setCurrentPage('cartography')}
-                onMouseEnter={() => playAudio('hover')}
                 whileHover={{
                   background: currentPage === 'cartography'
                     ? (isMapDarkMode ? '#cccccc' : '#333333')
@@ -6635,8 +6629,7 @@ function App() {
                 {isMapDarkMode ? 'DARK MODE' : 'LIGHT MODE'}
               </span>
               <button 
-                onClick={() => { setIsMapDarkMode(!isMapDarkMode); playAudio('click'); }}
-                onMouseEnter={() => playAudio('hover')}
+                onClick={() => setIsMapDarkMode(!isMapDarkMode)}
                 style={{
                   width: '32px',
                   height: '16px',
