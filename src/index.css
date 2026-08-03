@@ -331,7 +331,7 @@
 
 /* Screen shake animation during glitch out phase */
 .glitch-screen-shake {
-  animation: screenShakeAnim 0.3s linear infinite;
+  animation: screenShakeAnim 0.15s linear infinite;
 }
 
 @keyframes screenShakeAnim {
@@ -345,7 +345,7 @@
 
 /* Settle animation during glitch in phase */
 .glitch-screen-settle {
-  animation: screenSettleAnim 0.4s ease-out forwards;
+  animation: screenSettleAnim 0.2s ease-out forwards;
 }
 
 @keyframes screenSettleAnim {

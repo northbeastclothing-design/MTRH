@@ -1264,21 +1264,21 @@ function App() {
 
       setGlitchPhase('out');
 
-      // 300ms: Swap page during whiteout
+      // 150ms: Swap page during whiteout (cut in half from 300ms)
       setTimeout(() => {
         setGlitchPhase('whiteout');
         setCurrentPageReal(targetPage);
-      }, 300);
+      }, 150);
 
-      // 450ms: Settle new page glitch
+      // 225ms: Settle new page glitch (cut in half from 450ms)
       setTimeout(() => {
         setGlitchPhase('in');
-      }, 450);
+      }, 225);
 
-      // 800ms: Settle completes
+      // 400ms: Settle completes (cut in half from 800ms)
       setTimeout(() => {
         setGlitchPhase('idle');
-      }, 800);
+      }, 400);
 
       return current;
     });
@@ -13055,9 +13055,6 @@ function App() {
             {/* Blocky Glitch Chunks (Randomly sized, randomly placed, difference-blended) */}
             <div className="glitch-block-base glitch-block-1" />
             <div className="glitch-block-base glitch-block-2" />
-            <div className="glitch-block-base glitch-block-3" />
-            <div className="glitch-block-base glitch-block-4" />
-            <div className="glitch-block-base glitch-block-5" />
           </motion.div>
         )}
       </AnimatePresence>
