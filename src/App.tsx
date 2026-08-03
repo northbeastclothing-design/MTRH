@@ -1244,7 +1244,7 @@ function App() {
   const [isMapLoaded, setIsMapLoaded] = useState(false);
   const [isDataCompiled, setIsDataCompiled] = useState(false);
   const [showAboutModal, setShowAboutModal] = useState(true);
-  const [currentPage, setCurrentPage] = useState<'map' | 'timeline' | 'codex' | 'cartography'>(() => {
+  const [currentPage, setCurrentPageReal] = useState<'map' | 'timeline' | 'codex' | 'cartography'>(() => {
     const path = window.location.pathname.toLowerCase();
     if (path.startsWith('/timeline')) return 'timeline';
     if (path.startsWith('/codex')) return 'codex';
@@ -1256,41 +1256,46 @@ function App() {
     return params.get('mapId') || 'catalhoyuk';
   });
 
-  const [glitchState, setGlitchState] = useState({ isActive: false, text: '' });
-  const isFirstPageRenderRef = useRef(true);
+  const [glitchPhase, setGlitchPhase] = useState<'idle' | 'out' | 'whiteout' | 'in'>('idle');
+  const [glitchText, setGlitchText] = useState('');
 
-  // Trigger cyberpunk glitch transition overlay on page change
-  useEffect(() => {
-    // Skip initial mount render to prevent full screen flicker when the database first loads
-    if (isFirstPageRenderRef.current) {
-      isFirstPageRenderRef.current = false;
-      return;
-    }
+  const setCurrentPage = useCallback((targetPage: 'map' | 'timeline' | 'codex' | 'cartography') => {
+    setCurrentPageReal(current => {
+      if (current === targetPage) return current;
 
-    const glitchPhrases = [
-      'DECRYPTING DATABASE SECTOR...',
-      'SYNAPSE LINK ESTABLISHED...',
-      'OVERRIDING MAIN PANEL...',
-      'CONNECTING TO ENCRYPTED LAYER...',
-      'DOWNLINK IN PROGRESS...',
-      'PARSING ARCHIVE NODES...',
-      'RECONSTRUCTING GEOMETRIES...',
-      'DECRYPTION KEY ACCEPTED...',
-      'ESTABLISHING SECURE CONNECTION...'
-    ];
-    const randomText = glitchPhrases[Math.floor(Math.random() * glitchPhrases.length)];
+      setGlitchPhase('out');
+      const glitchPhrases = [
+        'DECRYPTING DATABASE SECTOR...',
+        'SYNAPSE LINK ESTABLISHED...',
+        'OVERRIDING MAIN PANEL...',
+        'CONNECTING TO ENCRYPTED LAYER...',
+        'DOWNLINK IN PROGRESS...',
+        'PARSING ARCHIVE NODES...',
+        'RECONSTRUCTING GEOMETRIES...',
+        'DECRYPTION KEY ACCEPTED...',
+        'ESTABLISHING SECURE CONNECTION...'
+      ];
+      setGlitchText(glitchPhrases[Math.floor(Math.random() * glitchPhrases.length)]);
 
-    setGlitchState({
-      isActive: true,
-      text: randomText
+      // 300ms: Swap page during whiteout
+      setTimeout(() => {
+        setGlitchPhase('whiteout');
+        setCurrentPageReal(targetPage);
+      }, 300);
+
+      // 450ms: Settle new page glitch
+      setTimeout(() => {
+        setGlitchPhase('in');
+      }, 450);
+
+      // 800ms: Settle completes
+      setTimeout(() => {
+        setGlitchPhase('idle');
+      }, 800);
+
+      return current;
     });
-
-    const timer = setTimeout(() => {
-      setGlitchState(prev => ({ ...prev, isActive: false }));
-    }, 450); // Glitch runs for 450ms
-
-    return () => clearTimeout(timer);
-  }, [currentPage]);
+  }, []);
 
   // Track dynamic page views in our Single Page App (SPA)
   useEffect(() => {
@@ -6375,6 +6380,7 @@ function App() {
       </AnimatePresence>
 
       <div 
+        className={glitchPhase === 'out' ? 'glitch-screen-shake' : (glitchPhase === 'in' ? 'glitch-screen-settle' : '')}
         style={{ 
           height: '100vh', 
           display: 'flex', 
@@ -13037,25 +13043,35 @@ function App() {
 
       {/* CYBERPUNK GLITCH TRANSITION OVERLAY */}
       <AnimatePresence>
-        {glitchState.isActive && (
+        {glitchPhase !== 'idle' && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.15 }}
+            transition={{ duration: 0.1 }}
             className="glitch-transition-container"
+            style={{
+              background: glitchPhase === 'whiteout' 
+                ? '#ffffff' 
+                : (glitchPhase === 'out' ? 'rgba(0, 0, 0, 0.55)' : '#000000'),
+              transition: 'background 0.08s ease'
+            }}
           >
-            {/* Flickering visual static blocks */}
-            <div className="glitch-grid" />
-            <div className="glitch-scanlines" />
-            <div className="glitch-bar" />
-            <div className="glitch-bar" style={{ animationDelay: '0.1s', animationDuration: '0.2s' }} />
-            <div className="glitch-bar" style={{ animationDelay: '0.18s', animationDuration: '0.25s' }} />
+            {glitchPhase !== 'whiteout' && (
+              <>
+                {/* Flickering visual static blocks */}
+                <div className="glitch-grid" />
+                <div className="glitch-scanlines" />
+                <div className="glitch-bar" />
+                <div className="glitch-bar" style={{ animationDelay: '0.1s', animationDuration: '0.25s' }} />
+                <div className="glitch-bar" style={{ animationDelay: '0.18s', animationDuration: '0.2s' }} />
 
-            {/* Glowing decryption status text */}
-            <div className="glitch-text">
-              {glitchState.text}
-            </div>
+                {/* Glowing decryption status text */}
+                <div className="glitch-text">
+                  {glitchText}
+                </div>
+              </>
+            )}
           </motion.div>
         )}
       </AnimatePresence>

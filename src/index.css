@@ -268,4 +268,30 @@
   100% { opacity: 0.7; }
 }
 
+/* Screen shake animation during glitch out phase */
+.glitch-screen-shake {
+  animation: screenShakeAnim 0.3s linear infinite;
+  filter: hue-rotate(12deg) saturate(1.25);
+}
+
+@keyframes screenShakeAnim {
+  0% { transform: translate(0, 0) skewX(0); }
+  20% { transform: translate(-3px, 2px) skewX(-1deg); }
+  40% { transform: translate(2px, -1px) skewX(1deg); }
+  60% { transform: translate(-1px, -2px) skewX(0); }
+  80% { transform: translate(3px, 1px) skewX(0.5deg); }
+  100% { transform: translate(0, 0) skewX(0); }
+}
+
+/* Settle animation during glitch in phase */
+.glitch-screen-settle {
+  animation: screenSettleAnim 0.4s ease-out forwards;
+}
+
+@keyframes screenSettleAnim {
+  0% { transform: translate(2px, -2px); opacity: 0.92; }
+  50% { transform: translate(-1px, 1px); opacity: 0.98; }
+  100% { transform: translate(0, 0); opacity: 1; }
+}
+
 
