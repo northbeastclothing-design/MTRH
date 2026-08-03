@@ -185,30 +185,72 @@ export function playAudio(type: SFXType) {
       playNoise(ctx, now, 0.015, 'highpass', 4000, 1.5, 0.01);
 
     } else if (type === 'transition') {
-      // Bright high pitch multiple digital tings ("ting-ting-ting-ting")
-      const tings = [1800, 2400, 3000, 3600];
-      const spacing = 0.07; // 70ms spacing between tings
+      // Futuristic digital/sci-fi glitch whoosh (inspired by futuristic noises 236386)
+      const duration = 0.35; // 350ms total
+      
+      // 1. Stuttering Glitch Carrier
+      const carrier = ctx.createOscillator();
+      const modulator = ctx.createOscillator();
+      const modGain = ctx.createGain();
+      const carrierGain = ctx.createGain();
+      const filter = ctx.createBiquadFilter();
 
-      tings.forEach((freq, index) => {
-        const time = now + index * spacing;
+      carrier.type = 'sawtooth';
+      carrier.frequency.setValueAtTime(650, now);
+      carrier.frequency.exponentialRampToValueAtTime(120, now + duration - 0.05);
+
+      modulator.type = 'square';
+      modulator.frequency.setValueAtTime(55, now); // Stutter rate 55Hz
+      modulator.frequency.linearRampToValueAtTime(30, now + duration);
+
+      modGain.gain.setValueAtTime(250, now); // FM depth
+      modGain.gain.exponentialRampToValueAtTime(80, now + duration);
+
+      filter.type = 'bandpass';
+      filter.Q.setValueAtTime(3.5, now);
+      filter.frequency.setValueAtTime(2500, now);
+      filter.frequency.exponentialRampToValueAtTime(450, now + duration);
+
+      carrierGain.gain.setValueAtTime(0.015, now);
+      carrierGain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
+
+      modulator.connect(modGain);
+      modGain.connect(carrier.frequency);
+      carrier.connect(filter);
+      filter.connect(carrierGain);
+      carrierGain.connect(ctx.destination);
+
+      modulator.start(now);
+      carrier.start(now);
+      modulator.stop(now + duration);
+      carrier.stop(now + duration);
+
+      // 2. High-Tech Cyber Chirp Header (staggered micro-ticks)
+      const chirpFreqs = [3200, 4000, 4800];
+      chirpFreqs.forEach((freq, idx) => {
+        const time = now + idx * 0.015;
         const osc = ctx.createOscillator();
         const gain = ctx.createGain();
-
         osc.type = 'sine';
         osc.frequency.setValueAtTime(freq, time);
-
-        gain.gain.setValueAtTime(0.015, time);
-        gain.gain.exponentialRampToValueAtTime(0.0001, time + 0.1);
-
+        gain.gain.setValueAtTime(0.008, time);
+        gain.gain.exponentialRampToValueAtTime(0.0001, time + 0.015);
         osc.connect(gain);
         gain.connect(ctx.destination);
-
         osc.start(time);
-        osc.stop(time + 0.12);
-
-        // Add a micro crisp highpass noise transient for each ting
-        playNoise(ctx, time, 0.008, 'highpass', 6000, 1.2, 0.004);
+        osc.stop(time + 0.018);
       });
+
+      // 3. Stuttering White Noise Burst
+      // We will play 5 short noise bursts to create a texturized digital static "crackle"
+      const burstCount = 5;
+      const burstDuration = 0.03;
+      const burstSpacing = 0.06;
+      for (let i = 0; i < burstCount; i++) {
+        const time = now + i * burstSpacing;
+        const noiseFreq = 3000 - i * 500;
+        playNoise(ctx, time, burstDuration, 'bandpass', noiseFreq, 4, 0.008);
+      }
 
     } else if (type === 'panel') {
       // High-tech slide/whoosh pneumatic feedback
@@ -263,38 +305,44 @@ export function playAudio(type: SFXType) {
       osc2.stop(now + 0.25);
 
     } else if (type === 'pin_click') {
-      // High-pitch dual digital chirp (Ghost Recon style telemetry sound)
-      const osc1 = ctx.createOscillator();
-      const osc2 = ctx.createOscillator();
-      const gain1 = ctx.createGain();
-      const gain2 = ctx.createGain();
+      // Resonant, glassy AI system confirmation chime (inspired by ui-ai-system-notification-537631)
+      const duration = 0.35;
+      const chimeGain = ctx.createGain();
+      chimeGain.gain.setValueAtTime(0.015, now);
+      chimeGain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
+      chimeGain.connect(ctx.destination);
 
-      // Chirp 1 (pitch sweep up)
-      osc1.type = 'sine';
-      osc1.frequency.setValueAtTime(2200, now);
-      osc1.frequency.exponentialRampToValueAtTime(3200, now + 0.025);
-      gain1.gain.setValueAtTime(0.015, now);
-      gain1.gain.exponentialRampToValueAtTime(0.0001, now + 0.025);
-      osc1.connect(gain1);
-      gain1.connect(ctx.destination);
-      osc1.start(now);
-      osc1.stop(now + 0.028);
+      // Glassy Triad: B5 (987.77Hz), E6 (1318.51Hz), B6 (1975.53Hz)
+      const notes = [
+        { freq: 987.77, delay: 0.0 },
+        { freq: 1318.51, delay: 0.03 },
+        { freq: 1975.53, delay: 0.06 }
+      ];
 
-      // Chirp 2 (staggered & sweeping down)
-      const delay = 0.025;
-      osc2.type = 'sine';
-      osc2.frequency.setValueAtTime(2800, now + delay);
-      osc2.frequency.exponentialRampToValueAtTime(1800, now + delay + 0.02);
-      gain2.gain.setValueAtTime(0.012, now + delay);
-      gain2.gain.exponentialRampToValueAtTime(0.0001, now + delay + 0.02);
-      osc2.connect(gain2);
-      gain2.connect(ctx.destination);
-      osc2.start(now + delay);
-      osc2.stop(now + delay + 0.022);
+      notes.forEach((note) => {
+        const time = now + note.delay;
+        const osc = ctx.createOscillator();
+        const localGain = ctx.createGain();
 
-      // Accent high-frequency ticks
-      playNoise(ctx, now, 0.008, 'highpass', 6000, 1.2, 0.006);
-      playNoise(ctx, now + delay, 0.008, 'highpass', 7000, 1.5, 0.005);
+        osc.type = 'sine';
+        
+        // Pitch attack sweep for digital feel
+        osc.frequency.setValueAtTime(note.freq * 1.3, time);
+        osc.frequency.exponentialRampToValueAtTime(note.freq, time + 0.02);
+
+        localGain.gain.setValueAtTime(1.0, time);
+        localGain.gain.exponentialRampToValueAtTime(0.0001, time + duration - note.delay);
+
+        osc.connect(localGain);
+        localGain.connect(chimeGain);
+
+        osc.start(time);
+        osc.stop(time + duration - note.delay + 0.01);
+      });
+
+      // Air strike transient (glassy hammer touch)
+      playNoise(ctx, now, 0.02, 'bandpass', 2400, 3.5, 0.01);
+      playNoise(ctx, now + 0.03, 0.015, 'bandpass', 3200, 4.0, 0.006);
     }
   } catch (error) {
     console.warn('Tactical SFX failed to play:', error);
