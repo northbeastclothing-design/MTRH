@@ -13048,30 +13048,27 @@ function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.1 }}
+            transition={{ duration: 0.12 }}
             className="glitch-transition-container"
             style={{
-              background: glitchPhase === 'whiteout' 
-                ? '#ffffff' 
-                : (glitchPhase === 'out' ? 'rgba(0, 0, 0, 0.55)' : '#000000'),
-              transition: 'background 0.08s ease'
+              background: isMapDarkMode 
+                ? (glitchPhase === 'whiteout' ? 'rgba(20, 20, 20, 0.45)' : 'rgba(0, 0, 0, 0.25)')
+                : (glitchPhase === 'whiteout' ? 'rgba(240, 240, 240, 0.45)' : 'rgba(255, 255, 255, 0.25)'),
+              color: isMapDarkMode ? '#FF9BE1' : '#111111',
+              transition: 'background 0.12s ease'
             }}
           >
-            {glitchPhase !== 'whiteout' && (
-              <>
-                {/* Flickering visual static blocks */}
-                <div className="glitch-grid" />
-                <div className="glitch-scanlines" />
-                <div className="glitch-bar" />
-                <div className="glitch-bar" style={{ animationDelay: '0.1s', animationDuration: '0.25s' }} />
-                <div className="glitch-bar" style={{ animationDelay: '0.18s', animationDuration: '0.2s' }} />
+            {/* Flickering visual static blocks */}
+            <div className="glitch-grid" />
+            <div className="glitch-scanlines" />
+            <div className="glitch-bar" />
+            <div className="glitch-bar" style={{ animationDelay: '0.1s', animationDuration: '0.25s' }} />
+            <div className="glitch-bar" style={{ animationDelay: '0.18s', animationDuration: '0.2s' }} />
 
-                {/* Glowing decryption status text */}
-                <div className="glitch-text">
-                  {glitchText}
-                </div>
-              </>
-            )}
+            {/* Glowing decryption status text */}
+            <div className="glitch-text">
+              {glitchText}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
