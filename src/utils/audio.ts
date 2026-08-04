@@ -164,6 +164,42 @@ if (typeof window !== 'undefined') {
 /**
  * Play dynamic techy/digital sound effects
  */
+let pendingSFX: Set<SFXType> = new Set();
+let microtaskScheduled = false;
+
+function processPendingSFX(ctx: AudioContext) {
+  if (pendingSFX.size === 0) return;
+
+  // Prioritize pending sound effects to avoid double-playing clashes in the same event tick
+  let chosenType: SFXType | null = null;
+  const priorityList: SFXType[] = [
+    'transition',
+    'pin_click',
+    'click_major',
+    'click',
+    'hover_major',
+    'hover',
+    'chime',
+    'panel'
+  ];
+
+  for (const t of priorityList) {
+    if (pendingSFX.has(t)) {
+      chosenType = t;
+      break;
+    }
+  }
+
+  pendingSFX.clear();
+
+  if (chosenType) {
+    playAudioDirect(ctx, chosenType);
+  }
+}
+
+/**
+ * Play dynamic techy/digital sound effects (coalesced per microtask to prevent double-triggering)
+ */
 export function playAudio(type: SFXType) {
   try {
     const ctx = getAudioContext();
@@ -179,113 +215,129 @@ export function playAudio(type: SFXType) {
       }
     }
 
+    pendingSFX.add(type);
+
+    if (!microtaskScheduled) {
+      microtaskScheduled = true;
+      Promise.resolve().then(() => {
+        microtaskScheduled = false;
+        processPendingSFX(ctx);
+      });
+    }
+  } catch (error) {
+    console.warn('Tactical SFX scheduling failed:', error);
+  }
+}
+
+function playAudioDirect(ctx: AudioContext, type: SFXType) {
+  try {
     const now = ctx.currentTime;
 
-    // If it's a file-backed sound
-    const path = SFX_PATHS[type];
-    if (path) {
-      const buffer = audioBufferCache[path];
-      if (buffer) {
+  // If it's a file-backed sound
+  const path = SFX_PATHS[type];
+  if (path) {
+    const buffer = audioBufferCache[path];
+    if (buffer) {
+      const source = ctx.createBufferSource();
+      source.buffer = buffer;
+      
+      // Custom adjustments based on SFX type
+      if (type === 'hover_major') {
+        source.playbackRate.value = 1.15; // slightly higher pitch
+      } else if (type === 'click_major') {
+        source.playbackRate.value = 0.85; // heavier, lower pitch
+      }
+      
+      // Create gain node for volume adjustments
+      const gainNode = ctx.createGain();
+      let volume = 1.0;
+      if (type === 'click' || type === 'click_major' || type === 'pin_click') {
+        volume = 0.18; // lower click volume to 18% of original (60% of previous 30% setting)
+      }
+      gainNode.gain.setValueAtTime(volume, now);
+      
+      source.connect(gainNode);
+      gainNode.connect(ctx.destination);
+      source.start(0);
+      return;
+    } else {
+      // Fallback: try to fetch and play it asynchronously
+      loadAudioFile(ctx, path).then(buf => {
         const source = ctx.createBufferSource();
-        source.buffer = buffer;
-        
-        // Custom adjustments based on SFX type
+        source.buffer = buf;
         if (type === 'hover_major') {
-          source.playbackRate.value = 1.15; // slightly higher pitch
+          source.playbackRate.value = 1.15;
         } else if (type === 'click_major') {
-          source.playbackRate.value = 0.85; // heavier, lower pitch
+          source.playbackRate.value = 0.85;
         }
         
-        // Create gain node for volume adjustments
         const gainNode = ctx.createGain();
         let volume = 1.0;
         if (type === 'click' || type === 'click_major' || type === 'pin_click') {
-          volume = 0.18; // lower click volume to 18% of original (60% of previous 30% setting)
+          volume = 0.18;
         }
-        gainNode.gain.setValueAtTime(volume, now);
+        gainNode.gain.setValueAtTime(volume, ctx.currentTime);
         
         source.connect(gainNode);
         gainNode.connect(ctx.destination);
         source.start(0);
-        return;
-      } else {
-        // Fallback: try to fetch and play it asynchronously
-        loadAudioFile(ctx, path).then(buf => {
-          const source = ctx.createBufferSource();
-          source.buffer = buf;
-          if (type === 'hover_major') {
-            source.playbackRate.value = 1.15;
-          } else if (type === 'click_major') {
-            source.playbackRate.value = 0.85;
-          }
-          
-          const gainNode = ctx.createGain();
-          let volume = 1.0;
-          if (type === 'click' || type === 'click_major' || type === 'pin_click') {
-            volume = 0.18;
-          }
-          gainNode.gain.setValueAtTime(volume, ctx.currentTime);
-          
-          source.connect(gainNode);
-          gainNode.connect(ctx.destination);
-          source.start(0);
-        }).catch(err => {
-          console.warn("Async SFX play failed:", err);
-        });
-        return;
-      }
+      }).catch(err => {
+        console.warn("Async SFX play failed:", err);
+      });
+      return;
     }
+  }
 
-    // Fallbacks for custom synthesizers
-    if (type === 'panel') {
-      const osc = ctx.createOscillator();
-      const gain = ctx.createGain();
-      const filter = ctx.createBiquadFilter();
+  // Fallbacks for custom synthesizers
+  if (type === 'panel') {
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    const filter = ctx.createBiquadFilter();
 
-      osc.type = 'sine';
-      osc.frequency.setValueAtTime(300, now);
-      osc.frequency.exponentialRampToValueAtTime(700, now + 0.12);
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(300, now);
+    osc.frequency.exponentialRampToValueAtTime(700, now + 0.12);
 
-      filter.type = 'bandpass';
-      filter.Q.setValueAtTime(2.5, now);
-      filter.frequency.setValueAtTime(500, now);
-      filter.frequency.exponentialRampToValueAtTime(1800, now + 0.15);
+    filter.type = 'bandpass';
+    filter.Q.setValueAtTime(2.5, now);
+    filter.frequency.setValueAtTime(500, now);
+    filter.frequency.exponentialRampToValueAtTime(1800, now + 0.15);
 
-      gain.gain.setValueAtTime(0.012, now);
-      gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.16);
+    gain.gain.setValueAtTime(0.012, now);
+    gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.16);
 
-      osc.connect(filter);
-      filter.connect(gain);
-      gain.connect(ctx.destination);
+    osc.connect(filter);
+    filter.connect(gain);
+    gain.connect(ctx.destination);
 
-      osc.start(now);
-      osc.stop(now + 0.16);
+    osc.start(now);
+    osc.stop(now + 0.16);
 
-      playNoise(ctx, now, 0.15, 'bandpass', 1000, 3, 0.008);
+    playNoise(ctx, now, 0.15, 'bandpass', 1000, 3, 0.008);
 
-    } else if (type === 'chime') {
-      const osc1 = ctx.createOscillator();
-      const osc2 = ctx.createOscillator();
-      const gain = ctx.createGain();
+  } else if (type === 'chime') {
+    const osc1 = ctx.createOscillator();
+    const osc2 = ctx.createOscillator();
+    const gain = ctx.createGain();
 
-      osc1.type = 'sine';
-      osc1.frequency.setValueAtTime(1200, now);
+    osc1.type = 'sine';
+    osc1.frequency.setValueAtTime(1200, now);
 
-      osc2.type = 'sine';
-      osc2.frequency.setValueAtTime(1800, now + 0.04);
+    osc2.type = 'sine';
+    osc2.frequency.setValueAtTime(1800, now + 0.04);
 
-      gain.gain.setValueAtTime(0.012, now);
-      gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.22);
+    gain.gain.setValueAtTime(0.012, now);
+    gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.22);
 
-      osc1.connect(gain);
-      osc2.connect(gain);
-      gain.connect(ctx.destination);
+    osc1.connect(gain);
+    osc2.connect(gain);
+    gain.connect(ctx.destination);
 
-      osc1.start(now);
-      osc2.start(now + 0.04);
-      osc1.stop(now + 0.25);
-      osc2.stop(now + 0.25);
-    }
+    osc1.start(now);
+    osc2.start(now + 0.04);
+    osc1.stop(now + 0.25);
+    osc2.stop(now + 0.25);
+  }
   } catch (error) {
     console.warn('Tactical SFX failed to play:', error);
   }
@@ -393,12 +445,22 @@ if (typeof window !== 'undefined' && !(window as any).__MTRH_AUDIO_LISTENERS_INI
 
       if (isNavClick) return;
 
-      // Skip default click sound for all map clicks (canvas, pins, markers, controls) inside mapbox containers
-      // We exclude popups so that click events inside popups (close button, links) still play UI sounds
-      const isMapClick =
-        (target.closest('.mapboxgl-map') !== null ||
-         target.closest('.map-container') !== null) &&
-        target.closest('.mapboxgl-popup') === null;
+      // Skip default click sound for all map clicks (canvas, pins, markers, controls) inside mapbox containers.
+      // We check the composed event path to handle elements that were unmounted/detached from the DOM during event dispatching.
+      // We exclude popups so that click events inside popups (close button, links) still play UI sounds.
+      const path = e.composedPath();
+      const isMapClick = path.some(el => {
+        if (!(el instanceof HTMLElement)) return false;
+        return (
+          el.classList.contains('mapboxgl-map') ||
+          el.classList.contains('map-container') ||
+          el.classList.contains('mapboxgl-canvas') ||
+          el.id === 'map'
+        );
+      }) && !path.some(el => {
+        if (!(el instanceof HTMLElement)) return false;
+        return el.classList.contains('mapboxgl-popup');
+      });
 
       if (isMapClick) return;
 
