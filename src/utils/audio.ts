@@ -165,7 +165,7 @@ if (typeof window !== 'undefined') {
  * Play dynamic techy/digital sound effects
  */
 let pendingSFX: Set<SFXType> = new Set();
-let microtaskScheduled = false;
+let timerScheduled = false;
 
 function processPendingSFX(ctx: AudioContext) {
   if (pendingSFX.size === 0) return;
@@ -198,7 +198,7 @@ function processPendingSFX(ctx: AudioContext) {
 }
 
 /**
- * Play dynamic techy/digital sound effects (coalesced per microtask to prevent double-triggering)
+ * Play dynamic techy/digital sound effects (coalesced per event tick via setTimeout to prevent double-triggering)
  */
 export function playAudio(type: SFXType) {
   try {
@@ -217,12 +217,12 @@ export function playAudio(type: SFXType) {
 
     pendingSFX.add(type);
 
-    if (!microtaskScheduled) {
-      microtaskScheduled = true;
-      Promise.resolve().then(() => {
-        microtaskScheduled = false;
+    if (!timerScheduled) {
+      timerScheduled = true;
+      setTimeout(() => {
+        timerScheduled = false;
         processPendingSFX(ctx);
-      });
+      }, 0);
     }
   } catch (error) {
     console.warn('Tactical SFX scheduling failed:', error);
