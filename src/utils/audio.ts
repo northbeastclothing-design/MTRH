@@ -191,7 +191,16 @@ export function playAudio(type: SFXType) {
           source.playbackRate.value = 0.85; // heavier, lower pitch
         }
         
-        source.connect(ctx.destination);
+        // Create gain node for volume adjustments
+        const gainNode = ctx.createGain();
+        let volume = 1.0;
+        if (type === 'click' || type === 'click_major' || type === 'pin_click') {
+          volume = 0.5; // lower click volume by 50%
+        }
+        gainNode.gain.setValueAtTime(volume, now);
+        
+        source.connect(gainNode);
+        gainNode.connect(ctx.destination);
         source.start(0);
         return;
       } else {
@@ -204,7 +213,16 @@ export function playAudio(type: SFXType) {
           } else if (type === 'click_major') {
             source.playbackRate.value = 0.85;
           }
-          source.connect(ctx.destination);
+          
+          const gainNode = ctx.createGain();
+          let volume = 1.0;
+          if (type === 'click' || type === 'click_major' || type === 'pin_click') {
+            volume = 0.5;
+          }
+          gainNode.gain.setValueAtTime(volume, ctx.currentTime);
+          
+          source.connect(gainNode);
+          gainNode.connect(ctx.destination);
           source.start(0);
         }).catch(err => {
           console.warn("Async SFX play failed:", err);
@@ -362,12 +380,19 @@ if (typeof window !== 'undefined' && !(window as any).__MTRH_AUDIO_LISTENERS_INI
 
       if (!interactiveEl) return;
 
+      // Skip click sound entirely for nav clicks, as they trigger page transitions which play transition audio
+      const isNavClick =
+        interactiveEl.classList.contains('nav-btn') ||
+        (interactiveEl.innerText &&
+          /^(MAP|TIMELINE|CODEX|CARTOGRAPHY)$/i.test(interactiveEl.innerText.trim()));
+
+      if (isNavClick) return;
+
       // Determine major vs minor click sound
       const isMajor =
         interactiveEl.getAttribute('data-sfx') === 'major' ||
-        interactiveEl.classList.contains('nav-btn') ||
         (interactiveEl.innerText &&
-          /^(MAP|TIMELINE|CODEX|CARTOGRAPHY|ABOUT|CLOSE|SUBMIT|PLAY|FILTER)$/i.test(
+          /^(ABOUT|CLOSE|SUBMIT|PLAY|FILTER)$/i.test(
             interactiveEl.innerText.trim()
           ));
 

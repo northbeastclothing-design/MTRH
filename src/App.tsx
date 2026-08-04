@@ -1263,7 +1263,6 @@ function App() {
     setCurrentPageReal(current => {
       if (current === targetPage) return current;
 
-      playAudio('click');
       playAudio('transition');
       setGlitchPhase('out');
 
