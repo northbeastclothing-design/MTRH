@@ -172,6 +172,11 @@ export function playAudio(type: SFXType) {
     // Resume context if suspended (required by browsers on first interaction)
     if (ctx.state === 'suspended') {
       ctx.resume().catch(() => {});
+      // Do not play/queue transient transition/hover sounds if the context is suspended,
+      // as they would be queued and play out-of-sync when resumed by a future user click.
+      if (type === 'transition' || type === 'hover' || type === 'hover_major') {
+        return;
+      }
     }
 
     const now = ctx.currentTime;
@@ -195,7 +200,7 @@ export function playAudio(type: SFXType) {
         const gainNode = ctx.createGain();
         let volume = 1.0;
         if (type === 'click' || type === 'click_major' || type === 'pin_click') {
-          volume = 0.5; // lower click volume by 50%
+          volume = 0.3; // lower click volume to 30% of original
         }
         gainNode.gain.setValueAtTime(volume, now);
         
@@ -217,7 +222,7 @@ export function playAudio(type: SFXType) {
           const gainNode = ctx.createGain();
           let volume = 1.0;
           if (type === 'click' || type === 'click_major' || type === 'pin_click') {
-            volume = 0.5;
+            volume = 0.3;
           }
           gainNode.gain.setValueAtTime(volume, ctx.currentTime);
           
@@ -387,6 +392,17 @@ if (typeof window !== 'undefined' && !(window as any).__MTRH_AUDIO_LISTENERS_INI
           /^(MAP|TIMELINE|CODEX|CARTOGRAPHY)$/i.test(interactiveEl.innerText.trim()));
 
       if (isNavClick) return;
+
+      // Skip default click sound for map pins, markers, and map canvas clicks (they play pin_click separately)
+      const isMapClick =
+        interactiveEl.classList.contains('mapboxgl-marker') ||
+        interactiveEl.classList.contains('map-pin') ||
+        interactiveEl.classList.contains('mapboxgl-canvas') ||
+        interactiveEl.closest('.mapboxgl-marker') !== null ||
+        interactiveEl.closest('.map-pin') !== null ||
+        interactiveEl.closest('.mapboxgl-canvas') !== null;
+
+      if (isMapClick) return;
 
       // Determine major vs minor click sound
       const isMajor =
