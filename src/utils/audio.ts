@@ -200,7 +200,7 @@ export function playAudio(type: SFXType) {
         const gainNode = ctx.createGain();
         let volume = 1.0;
         if (type === 'click' || type === 'click_major' || type === 'pin_click') {
-          volume = 0.3; // lower click volume to 30% of original
+          volume = 0.18; // lower click volume to 18% of original (60% of previous 30% setting)
         }
         gainNode.gain.setValueAtTime(volume, now);
         
@@ -222,7 +222,7 @@ export function playAudio(type: SFXType) {
           const gainNode = ctx.createGain();
           let volume = 1.0;
           if (type === 'click' || type === 'click_major' || type === 'pin_click') {
-            volume = 0.3;
+            volume = 0.18;
           }
           gainNode.gain.setValueAtTime(volume, ctx.currentTime);
           
@@ -393,14 +393,12 @@ if (typeof window !== 'undefined' && !(window as any).__MTRH_AUDIO_LISTENERS_INI
 
       if (isNavClick) return;
 
-      // Skip default click sound for map pins, markers, and map canvas clicks (they play pin_click separately)
+      // Skip default click sound for all map clicks (canvas, pins, markers, controls) inside mapbox containers
+      // We exclude popups so that click events inside popups (close button, links) still play UI sounds
       const isMapClick =
-        interactiveEl.classList.contains('mapboxgl-marker') ||
-        interactiveEl.classList.contains('map-pin') ||
-        interactiveEl.classList.contains('mapboxgl-canvas') ||
-        interactiveEl.closest('.mapboxgl-marker') !== null ||
-        interactiveEl.closest('.map-pin') !== null ||
-        interactiveEl.closest('.mapboxgl-canvas') !== null;
+        (target.closest('.mapboxgl-map') !== null ||
+         target.closest('.map-container') !== null) &&
+        target.closest('.mapboxgl-popup') === null;
 
       if (isMapClick) return;
 
