@@ -1581,7 +1581,7 @@ export default function CartographyPage({
       
       prevSidebarCollapsedRef.current = isSidebarCollapsed;
 
-      const newBottomPadding = isSidebarCollapsed ? 108 : (window.innerHeight * 0.7);
+      const newBottomPadding = isSidebarCollapsed ? 112 : (window.innerHeight * 0.7);
 
       // Suspend maxBounds constraint during transition to prevent camera drift/jerkiness
       isEasingRef.current = true;
@@ -1628,7 +1628,7 @@ export default function CartographyPage({
 
       const sidebarWidth = isSidebarCollapsed ? 40 : 340;
       const viewableWidth = isMobile ? W : Math.max(0, W - sidebarWidth);
-      const viewableHeight = isMobile ? Math.max(0, H - (isSidebarCollapsed ? 108 : H * 0.7)) : H;
+      const viewableHeight = isMobile ? Math.max(0, H - (isSidebarCollapsed ? 112 : H * 0.7)) : H;
 
       const currentZoom = map.getZoom();
       setMapZoom(currentZoom);
@@ -2124,7 +2124,7 @@ export default function CartographyPage({
         ref={sidebarRef}
         initial={false}
         animate={isMobile ? {
-          height: isSidebarCollapsed ? '108px' : '70vh',
+          height: isSidebarCollapsed ? 'calc(112px + max(12px, env(safe-area-inset-bottom, 12px)))' : '70vh',
           left: 0,
           right: 0,
           bottom: 0
@@ -2144,7 +2144,8 @@ export default function CartographyPage({
           flexDirection: 'column',
           zIndex: isMobile ? 10000 : 5,
           pointerEvents: 'auto',
-          flexShrink: 0
+          flexShrink: 0,
+          paddingBottom: isMobile ? 'env(safe-area-inset-bottom, 0px)' : 0
         }}
       >
         {isMobile && (
@@ -2878,7 +2879,7 @@ export default function CartographyPage({
         {/* CONTROLS OVERLAY - BOTTOM LEFT */}
         <div style={{
           position: 'absolute',
-          bottom: isMobile ? '148px' : '20px',
+          bottom: isMobile ? 'calc(152px + max(12px, env(safe-area-inset-bottom, 12px)))' : '20px',
           left: isMobile ? '20px' : (isSidebarCollapsed ? '40px' : '340px'),
           display: 'flex',
           alignItems: 'center',

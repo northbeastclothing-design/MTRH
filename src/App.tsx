@@ -10611,12 +10611,12 @@ function App() {
             top: 0,
             left: 0,
             right: 0,
-            bottom: isMobile ? 108 : 0,
+            bottom: isMobile ? 'calc(120px + max(12px, env(safe-area-inset-bottom, 12px)))' : 0,
             display: 'flex',
             flexDirection: 'column',
             overflow: 'hidden',
             width: '100%',
-            height: isMobile ? 'calc(100% - 108px)' : '100%',
+            height: isMobile ? 'calc(100% - 120px - max(12px, env(safe-area-inset-bottom, 12px)))' : '100%',
             pointerEvents: currentPage === 'timeline' ? 'auto' : 'none',
             visibility: currentPage === 'timeline' ? 'visible' : 'hidden',
             opacity: currentPage === 'timeline' ? 1 : 0,
@@ -10660,12 +10660,20 @@ function App() {
             top: 0,
             left: 0,
             right: 0,
-            bottom: isMobile ? 60 : 0,
+            bottom: isMobile 
+              ? (selectedCodexNode 
+                ? 'calc(110px + max(12px, env(safe-area-inset-bottom, 12px)))' 
+                : 'calc(72px + max(12px, env(safe-area-inset-bottom, 12px)))') 
+              : 0,
             display: 'flex',
             flexDirection: 'column',
             overflow: 'hidden',
             width: '100%',
-            height: isMobile ? 'calc(100% - 60px)' : '100%',
+            height: isMobile 
+              ? (selectedCodexNode 
+                ? 'calc(100% - 110px - max(12px, env(safe-area-inset-bottom, 12px)))' 
+                : 'calc(100% - 72px - max(12px, env(safe-area-inset-bottom, 12px)))') 
+              : '100%',
             pointerEvents: currentPage === 'codex' ? 'auto' : 'none',
             visibility: currentPage === 'codex' ? 'visible' : 'hidden',
             opacity: currentPage === 'codex' ? 1 : 0,
@@ -10772,7 +10780,14 @@ function App() {
           <div 
             className="mobile-bottom-drawer"
             style={{
-              height: currentPage === 'map' ? (isMobileDrawerExpanded ? '70vh' : '108px') : (currentPage === 'codex' ? (selectedCodexNode ? (isMobileDrawerExpanded ? '70vh' : '108px') : '60px') : (currentPage === 'timeline' ? '108px' : '60px')),
+              height: currentPage === 'map' 
+                ? (isMobileDrawerExpanded ? '70vh' : 'calc(72px + max(12px, env(safe-area-inset-bottom, 12px)))') 
+                : (currentPage === 'codex' 
+                  ? (selectedCodexNode ? (isMobileDrawerExpanded ? '70vh' : 'calc(110px + max(12px, env(safe-area-inset-bottom, 12px)))') : 'calc(72px + max(12px, env(safe-area-inset-bottom, 12px)))') 
+                  : (currentPage === 'timeline' 
+                    ? 'calc(120px + max(12px, env(safe-area-inset-bottom, 12px)))' 
+                    : 'calc(72px + max(12px, env(safe-area-inset-bottom, 12px)))')),
+              paddingBottom: 'env(safe-area-inset-bottom, 0px)',
               background: theme.bg,
               color: theme.text,
               borderColor: theme.border,
@@ -14909,10 +14924,43 @@ function App() {
                 const common: React.CSSProperties = {
                   position: 'fixed',
                   zIndex: 100000,
-                  width: '320px',
+                  width: isMobile ? 'calc(100vw - 32px)' : '320px',
+                  maxWidth: isMobile ? '360px' : 'none',
                   pointerEvents: 'auto',
                   overflow: 'hidden'
                 };
+
+                if (isMobile) {
+                  switch (currentStep.placement) {
+                    case 'timeline-button':
+                    case 'codex-button':
+                    case 'submit-intel':
+                      return {
+                        ...common,
+                        left: '50%',
+                        top: '75px',
+                        transform: 'translateX(-50%)'
+                      };
+                    case 'timeline':
+                    case 'left-sidebar':
+                      return {
+                        ...common,
+                        left: '50%',
+                        bottom: 'calc(140px + max(12px, env(safe-area-inset-bottom, 12px)))',
+                        transform: 'translateX(-50%)'
+                      };
+                    case 'center':
+                    case 'map-viewport':
+                    case 'right-sidebar':
+                    default:
+                      return {
+                        ...common,
+                        top: '50%',
+                        left: '50%',
+                        transform: 'translate(-50%, -50%)'
+                      };
+                  }
+                }
 
                 switch (currentStep.placement) {
                   case 'timeline-button':
@@ -14974,6 +15022,10 @@ function App() {
               })();
 
               const arrowStyle: React.CSSProperties = (() => {
+                if (isMobile) {
+                  return { display: 'none' };
+                }
+
                 const common: React.CSSProperties = {
                   position: 'absolute',
                   width: 0,
