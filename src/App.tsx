@@ -8508,7 +8508,7 @@ function App() {
   };
 
   return (
-    <div style={{ width: scrollbarWidth ? `calc(100vw - ${scrollbarWidth}px)` : '100vw', minHeight: '100vh', background: '#ffffff', color: '#000000', fontFamily: '"Space Mono", monospace', overflowX: 'hidden', textAlign: 'left' }}>
+    <div style={{ width: scrollbarWidth ? `calc(100vw - ${scrollbarWidth}px)` : '100vw', minHeight: isMobile ? '100dvh' : '100vh', height: isMobile ? '100dvh' : 'auto', background: '#ffffff', color: '#000000', fontFamily: '"Space Mono", monospace', overflowX: 'hidden', overflowY: 'hidden', textAlign: 'left', position: isMobile ? 'fixed' : 'relative', inset: isMobile ? 0 : 'auto' }}>
       
 
       {/* GLOBAL FULL-SCREEN LOADER OVERLAY */}
@@ -8523,7 +8523,7 @@ function App() {
               top: 0,
               left: 0,
               width: scrollbarWidth ? `calc(100vw - ${scrollbarWidth}px)` : '100vw',
-              height: '100vh',
+              height: isMobile ? '100dvh' : '100vh',
               backgroundColor: '#000000',
               color: '#ffffff',
               display: 'flex',
@@ -8549,7 +8549,7 @@ function App() {
       <div 
         className={glitchPhase === 'out' ? 'glitch-screen-shake' : (glitchPhase === 'in' ? 'glitch-screen-settle' : '')}
         style={{ 
-          height: '100vh', 
+          height: isMobile ? '100dvh' : '100vh', 
           display: 'flex', 
           flexDirection: 'column', 
           position: 'relative', 
@@ -10781,7 +10781,7 @@ function App() {
             className="mobile-bottom-drawer"
             style={{
               height: currentPage === 'map' 
-                ? (isMobileDrawerExpanded ? '70vh' : 'calc(72px + max(12px, env(safe-area-inset-bottom, 12px)))') 
+                ? (isMobileDrawerExpanded ? '70vh' : 'calc(108px + max(12px, env(safe-area-inset-bottom, 12px)))') 
                 : (currentPage === 'codex' 
                   ? (selectedCodexNode ? (isMobileDrawerExpanded ? '70vh' : 'calc(110px + max(12px, env(safe-area-inset-bottom, 12px)))') : 'calc(72px + max(12px, env(safe-area-inset-bottom, 12px)))') 
                   : (currentPage === 'timeline' 
@@ -14862,7 +14862,35 @@ function App() {
 
             {/* Tooltip Dialog */}
             {(() => {
-              const onboardingSteps = [
+              const mobileOnboardingSteps = [
+                {
+                  title: "1. WELCOME TO MTRH",
+                  content: "This interactive portal maps global anomalies, classified files, and historic archives. Let's take a quick tour to get you started.",
+                  placement: "center"
+                },
+                {
+                  title: "2. SEARCH & FILTERS",
+                  content: "Use the bottom tray to search archives, toggle map layers (UFOs, Bigfoot, underworld entrances, D.U.M.B.s), and randomize active anomalies.",
+                  placement: "bottom-filters"
+                },
+                {
+                  title: "3. INTERACTIVE MAP",
+                  content: "Drag to explore the globe and pinch to zoom. Tap any coordinate pin or highlighted anomaly boundary to inspect its dossier archive.",
+                  placement: "map-viewport"
+                },
+                {
+                  title: "4. DOSSIER & TIMELINE",
+                  content: "Selecting coordinates opens their classified files, photos, and chronological events in the bottom tray tabs.",
+                  placement: "bottom-details"
+                },
+                {
+                  title: "5. EXPANDED VIEWS & MENU",
+                  content: "Tap the Menu button in the top right to access the full Interactive Timeline, the Codex tree database, Cartography maps, and Submit Evidence.",
+                  placement: "top-menu"
+                }
+              ];
+
+              const desktopOnboardingSteps = [
                 {
                   title: "1. WELCOME TO MTRH GUIDE",
                   content: "This interactive portal maps global anomalies, classified files, and historic archives. Let's take a quick step-by-step tour to help you get started.",
@@ -14905,6 +14933,8 @@ function App() {
                 }
               ];
 
+              const onboardingSteps = isMobile ? mobileOnboardingSteps : desktopOnboardingSteps;
+
               const currentStep = onboardingSteps[onboardingStep];
               if (!currentStep) return null;
 
@@ -14932,30 +14962,27 @@ function App() {
 
                 if (isMobile) {
                   switch (currentStep.placement) {
-                    case 'timeline-button':
-                    case 'codex-button':
-                    case 'submit-intel':
+                    case 'top-menu':
                       return {
                         ...common,
                         left: '50%',
                         top: '75px',
                         transform: 'translateX(-50%)'
                       };
-                    case 'timeline':
-                    case 'left-sidebar':
+                    case 'bottom-filters':
+                    case 'bottom-details':
                       return {
                         ...common,
                         left: '50%',
-                        bottom: 'calc(140px + max(12px, env(safe-area-inset-bottom, 12px)))',
+                        bottom: 'calc(130px + max(12px, env(safe-area-inset-bottom, 12px)))',
                         transform: 'translateX(-50%)'
                       };
                     case 'center':
                     case 'map-viewport':
-                    case 'right-sidebar':
                     default:
                       return {
                         ...common,
-                        top: '50%',
+                        top: '48%',
                         left: '50%',
                         transform: 'translate(-50%, -50%)'
                       };
@@ -15022,16 +15049,43 @@ function App() {
               })();
 
               const arrowStyle: React.CSSProperties = (() => {
-                if (isMobile) {
-                  return { display: 'none' };
-                }
-
                 const common: React.CSSProperties = {
                   position: 'absolute',
                   width: 0,
                   height: 0,
                   borderStyle: 'solid',
                 };
+
+                if (isMobile) {
+                  switch (currentStep.placement) {
+                    case 'top-menu':
+                      return {
+                        ...common,
+                        top: '-10px',
+                        right: '22px',
+                        borderWidth: '0 8px 10px 8px',
+                        borderColor: `transparent transparent ${tooltipTheme.bg} transparent`,
+                      };
+                    case 'bottom-filters':
+                      return {
+                        ...common,
+                        bottom: '-10px',
+                        left: '55px',
+                        borderWidth: '10px 8px 0 8px',
+                        borderColor: `${tooltipTheme.bg} transparent transparent transparent`,
+                      };
+                    case 'bottom-details':
+                      return {
+                        ...common,
+                        bottom: '-10px',
+                        left: '175px',
+                        borderWidth: '10px 8px 0 8px',
+                        borderColor: `${tooltipTheme.bg} transparent transparent transparent`,
+                      };
+                    default:
+                      return { display: 'none' };
+                  }
+                }
 
                 switch (currentStep.placement) {
                   case 'timeline-button':

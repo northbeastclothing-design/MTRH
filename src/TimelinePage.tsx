@@ -2128,7 +2128,30 @@ export default function TimelinePage({
 
             {/* Tooltip Dialog */}
             {(() => {
-              const onboardingSteps = [
+              const mobileOnboardingSteps = [
+                {
+                  title: "1. TIMELINE OVERVIEW",
+                  content: "This timeline visualizes bloodlines, historic events, and esoteric lore across pre-flood Sumerian reigns, biblical genealogies, and Frankish kingdoms.",
+                  placement: "center"
+                },
+                {
+                  title: "2. ERAS & TRACKS",
+                  content: "Tap any era row to expand its historical figures, lifespans, and events. Drag the grip handles on the left to reorder eras.",
+                  placement: "top-eras"
+                },
+                {
+                  title: "3. INTERACTIVE NAVIGATION",
+                  content: "Swipe or drag horizontally to pan through history. Tap any figure to inspect their profile or view their interconnected relationship network.",
+                  placement: "center"
+                },
+                {
+                  title: "4. TIME SPAN & SEARCH",
+                  content: "Use the bottom tray to search timeline events, zoom in and out, adjust the active date span, or reset the viewport.",
+                  placement: "bottom-controls"
+                }
+              ];
+
+              const desktopOnboardingSteps = [
                 {
                   title: "1. WELCOME TO THE TIMELINE",
                   content: "This timeline visualizes bloodlines, historic events, and esoteric lore across pre-flood Sumerian reigns, biblical genealogies, and Frankish kingdoms. Let's take a quick tour.",
@@ -2151,6 +2174,8 @@ export default function TimelinePage({
                 }
               ];
 
+              const onboardingSteps = isMobile ? mobileOnboardingSteps : desktopOnboardingSteps;
+
               const currentStep = onboardingSteps[onboardingStep];
               if (!currentStep) return null;
 
@@ -2169,10 +2194,38 @@ export default function TimelinePage({
                 const common: React.CSSProperties = {
                   position: 'fixed',
                   zIndex: 100000,
-                  width: '320px',
+                  width: isMobile ? 'calc(100vw - 32px)' : '320px',
+                  maxWidth: isMobile ? '360px' : 'none',
                   pointerEvents: 'auto',
                   transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
                 };
+
+                if (isMobile) {
+                  switch (currentStep.placement) {
+                    case 'top-eras':
+                      return {
+                        ...common,
+                        top: '120px',
+                        left: '50%',
+                        transform: 'translateX(-50%)'
+                      };
+                    case 'bottom-controls':
+                      return {
+                        ...common,
+                        bottom: 'calc(130px + max(12px, env(safe-area-inset-bottom, 12px)))',
+                        left: '50%',
+                        transform: 'translateX(-50%)'
+                      };
+                    case 'center':
+                    default:
+                      return {
+                        ...common,
+                        top: '50%',
+                        left: '50%',
+                        transform: 'translate(-50%, -50%)'
+                      };
+                  }
+                }
 
                 switch (currentStep.placement) {
                   case 'center':
@@ -2209,6 +2262,31 @@ export default function TimelinePage({
                   height: 0,
                   borderStyle: 'solid',
                 };
+
+                if (isMobile) {
+                  switch (currentStep.placement) {
+                    case 'top-eras':
+                      return {
+                        ...common,
+                        top: '-10px',
+                        left: '50%',
+                        transform: 'translateX(-50%)',
+                        borderWidth: '0 8px 10px 8px',
+                        borderColor: `transparent transparent ${tooltipTheme.bg} transparent`,
+                      };
+                    case 'bottom-controls':
+                      return {
+                        ...common,
+                        bottom: '-10px',
+                        left: '50%',
+                        transform: 'translateX(-50%)',
+                        borderWidth: '10px 8px 0 8px',
+                        borderColor: `${tooltipTheme.bg} transparent transparent transparent`,
+                      };
+                    default:
+                      return { display: 'none' };
+                  }
+                }
 
                 switch (currentStep.placement) {
                   case 'timeline-content':
