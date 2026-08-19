@@ -32,6 +32,8 @@ interface HistoricalMap {
   pinColor?: string;
   era: string;
   disableResolutionUpgrade?: boolean;
+  highResUrl?: string;
+  highResWidth?: number;
 }
 
 interface TranslationHotspot {
@@ -273,7 +275,9 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/1587_Planisphere_Urbano_Monti_%2816th_century_Milan%2C_Italy%29.jpg/3840px-1587_Planisphere_Urbano_Monti_%2816th_century_Milan%2C_Italy%29.jpg",
     aspectRatio: 0.9987,
     pinColor: '#F7E8C1',
-    era: 'renaissance'
+    era: 'renaissance',
+    highResUrl: "https://upload.wikimedia.org/wikipedia/commons/5/53/1587_Planisphere_Urbano_Monti_%2816th_century_Milan%2C_Italy%29.jpg",
+    highResWidth: 7760
   },
   {
     id: 'tartaria',
@@ -420,9 +424,10 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
 ];
 
 const getProxyOrDirectUrl = (url: string): string => {
+  if (!url) return url;
   const lowerUrl = url.toLowerCase();
   if (lowerUrl.includes('wikimedia.org') || lowerUrl.includes('wikipedia.org')) {
-    return url; // Bypass proxy for Wikimedia/Wikipedia to avoid 429 rate limit
+    return `https://images.weserv.nl/?url=${encodeURIComponent(url)}`;
   }
   return `/api/proxy-resource?url=${encodeURIComponent(url)}`;
 };
@@ -1049,7 +1054,11 @@ export default function CartographyPage({
     setCurrentResolution('low');
   }, [selectedMap.id]);
 
-  const originalWidth = useMemo(() => getUrlWidth(selectedMap.url), [selectedMap.url]);
+  const originalWidth = useMemo(() => {
+    if (selectedMap.highResWidth) return selectedMap.highResWidth;
+    return getUrlWidth(selectedMap.url);
+  }, [selectedMap.url, selectedMap.highResWidth]);
+
   const lowResWidth = useMemo(() => {
     if (selectedMap.disableResolutionUpgrade) return originalWidth;
     return Math.min(1280, originalWidth);
@@ -1060,9 +1069,17 @@ export default function CartographyPage({
     if (selectedMap.disableResolutionUpgrade) {
       return selectedMap.url;
     }
+    if (currentResolution === 'high') {
+      if (selectedMap.highResUrl) {
+        return selectedMap.highResUrl;
+      }
+      if (selectedMap.url.includes('/commons/thumb/')) {
+        return getWikipediaRawUrl(selectedMap.url);
+      }
+    }
     const width = currentResolution === 'low' ? lowResWidth : highResWidth;
     return getMapUrlForWidth(selectedMap.url, width);
-  }, [selectedMap.url, currentResolution, lowResWidth, highResWidth, selectedMap.disableResolutionUpgrade]);
+  }, [selectedMap.url, selectedMap.highResUrl, currentResolution, lowResWidth, highResWidth, selectedMap.disableResolutionUpgrade]);
 
   // Sync prop selectedMapId down to internal selectedMap state
   useEffect(() => {
