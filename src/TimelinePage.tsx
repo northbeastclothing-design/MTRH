@@ -22,6 +22,13 @@ interface TimelinePageProps {
   onViewOnCodex?: (termId: string) => void;
   timelineItems?: TimelineItem[];
   approvedSubmissions?: any[];
+  isMobile?: boolean;
+  searchQuery?: string;
+  onSearchQueryChange?: (query: string) => void;
+  viewStart?: number;
+  setViewStart?: (start: number) => void;
+  viewEnd?: number;
+  setViewEnd?: (end: number) => void;
 }
 
 const ERAS_CONFIG = [
@@ -186,7 +193,14 @@ export default function TimelinePage({
   onFlagItem,
   onViewOnCodex,
   timelineItems,
-  approvedSubmissions
+  approvedSubmissions,
+  isMobile,
+  searchQuery: propsSearchQuery,
+  onSearchQueryChange,
+  viewStart: propsViewStart,
+  setViewStart: propsSetViewStart,
+  viewEnd: propsViewEnd,
+  setViewEnd: propsSetViewEnd
 }: TimelinePageProps) {
   const items = timelineItems || TIMELINE_ITEMS;
 
@@ -216,7 +230,7 @@ export default function TimelinePage({
   });
 
   // Viewport states: start and end year
-  const [viewStart, setViewStart] = useState<number>(() => {
+  const [localViewStart, setLocalViewStart] = useState<number>(() => {
     if (selectedItem) {
       const start = selectedItem.start;
       const end = selectedItem.type === 'lifespan' ? (selectedItem.end ?? selectedItem.start) : selectedItem.start;
@@ -230,7 +244,7 @@ export default function TimelinePage({
     return era.start - padding;
   });
 
-  const [viewEnd, setViewEnd] = useState<number>(() => {
+  const [localViewEnd, setLocalViewEnd] = useState<number>(() => {
     if (selectedItem) {
       const start = selectedItem.start;
       const end = selectedItem.type === 'lifespan' ? (selectedItem.end ?? selectedItem.start) : selectedItem.start;
@@ -243,6 +257,11 @@ export default function TimelinePage({
     const padding = Math.max(10, Math.round(duration * 0.05));
     return era.end + padding;
   });
+
+  const viewStart = propsViewStart !== undefined ? propsViewStart : localViewStart;
+  const setViewStart = propsSetViewStart !== undefined ? propsSetViewStart : setLocalViewStart;
+  const viewEnd = propsViewEnd !== undefined ? propsViewEnd : localViewEnd;
+  const setViewEnd = propsSetViewEnd !== undefined ? propsSetViewEnd : setLocalViewEnd;
   
   // Active Eras state (merged layers)
   const [activeEras, setActiveEras] = useState<Record<string, boolean>>({
@@ -283,7 +302,9 @@ export default function TimelinePage({
   const span = viewEnd - viewStart;
 
   // Search query state
-  const [searchQuery, setSearchQuery] = useState('');
+  const [localSearchQuery, setLocalSearchQuery] = useState('');
+  const searchQuery = propsSearchQuery !== undefined ? propsSearchQuery : localSearchQuery;
+  const setSearchQuery = onSearchQueryChange !== undefined ? onSearchQueryChange : setLocalSearchQuery;
 
   // Eras order state for reordering
   const [erasOrder, setErasOrder] = useState<string[]>(() => {
@@ -308,7 +329,7 @@ export default function TimelinePage({
   const [collapsedEras, setCollapsedEras] = useState<Record<string, boolean>>(() => {
     const initial: Record<string, boolean> = {};
     ERAS_CONFIG.forEach(era => {
-      initial[era.id] = era.id !== initialMaximizedEraId;
+      initial[era.id] = isMobile ? true : (era.id !== initialMaximizedEraId);
     });
     return initial;
   });
@@ -418,11 +439,19 @@ export default function TimelinePage({
 
   // Auto-scroll vertically to the maximized era group on mount
   useEffect(() => {
+    if (isMobile) {
+      // Start scrolled to the top of the list on mobile
+      const container = scrollContainerRef.current;
+      if (container) {
+        container.scrollTop = 0;
+      }
+      return;
+    }
     const era = ERAS_CONFIG.find(e => e.id === initialMaximizedEraId);
     if (era) {
       scrollToEraGroup(era.layer);
     }
-  }, [initialMaximizedEraId]);
+  }, [initialMaximizedEraId, isMobile]);
 
   // Drag Handlers
   const handleMouseDown = (e: React.MouseEvent) => {
@@ -478,7 +507,7 @@ export default function TimelinePage({
     
     const resetCollapsed: Record<string, boolean> = {};
     ERAS_CONFIG.forEach(e => {
-      resetCollapsed[e.id] = e.id !== initialMaximizedEraId;
+      resetCollapsed[e.id] = isMobile ? true : (e.id !== initialMaximizedEraId);
     });
     setCollapsedEras(resetCollapsed);
 
@@ -575,18 +604,26 @@ export default function TimelinePage({
 
     if (span > 150000) {
       majorInterval = 50000; mediumInterval = 25000; minorInterval = 10000;
-    } else if (span > 50000) {
+    } else if (span > 40000) {
+      majorInterval = 20000; mediumInterval = 10000; minorInterval = 2000;
+    } else if (span > 20000) {
       majorInterval = 10000; mediumInterval = 5000; minorInterval = 2000;
-    } else if (span > 15000) {
+    } else if (span > 8000) {
       majorInterval = 5000; mediumInterval = 2500; minorInterval = 1000;
-    } else if (span > 5000) {
-      majorInterval = 1000; mediumInterval = 500; minorInterval = 100;
+    } else if (span > 3500) {
+      majorInterval = 2000; mediumInterval = 1000; minorInterval = 200;
     } else if (span > 1500) {
+      majorInterval = 1000; mediumInterval = 500; minorInterval = 100;
+    } else if (span > 700) {
       majorInterval = 500; mediumInterval = 250; minorInterval = 50;
-    } else if (span > 500) {
-      majorInterval = 100; mediumInterval = 50; minorInterval = 10;
+    } else if (span > 300) {
+      majorInterval = 200; mediumInterval = 100; minorInterval = 20;
     } else if (span > 150) {
+      majorInterval = 100; mediumInterval = 50; minorInterval = 10;
+    } else if (span > 70) {
       majorInterval = 50; mediumInterval = 25; minorInterval = 5;
+    } else if (span > 30) {
+      majorInterval = 20; mediumInterval = 10; minorInterval = 2;
     } else {
       majorInterval = 10; mediumInterval = 5; minorInterval = 1;
     }
@@ -952,6 +989,7 @@ export default function TimelinePage({
                       gap: '10px',
                       position: 'sticky',
                       top: 0,
+                      left: 0,
                       zIndex: 10,
                       pointerEvents: 'auto',
                       cursor: 'grab',
@@ -960,16 +998,12 @@ export default function TimelinePage({
                     }}
                   >
                     {/* Drag Handle */}
-                    <div style={{ display: 'flex', alignItems: 'center', cursor: 'grab', marginRight: '-2px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', cursor: 'grab', marginRight: '-2px', flexShrink: 0 }}>
                       <svg 
                         width="10" 
                         height="14" 
                         viewBox="0 0 24 24" 
-                        fill="none" 
-                        stroke={theme.textDim} 
-                        strokeWidth="3.5" 
-                        strokeLinecap="round" 
-                        strokeLinejoin="round"
+                        fill={theme.textDim} 
                         style={{ opacity: 0.45 }}
                       >
                         <circle cx="9" cy="5" r="1.5" />
@@ -1005,7 +1039,8 @@ export default function TimelinePage({
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        marginLeft: '-4px'
+                        marginLeft: '-4px',
+                        flexShrink: 0
                       }}
                       title={isCollapsed ? "Expand Era" : "Collapse Era"}
                     >
@@ -1031,7 +1066,8 @@ export default function TimelinePage({
                         width: '30px', 
                         display: 'block',
                         objectFit: 'contain',
-                        marginLeft: '-4px'
+                        marginLeft: '-4px',
+                        flexShrink: 0
                       }} 
                     />
                     <span style={{ 
@@ -1039,9 +1075,15 @@ export default function TimelinePage({
                       fontWeight: 'bold', 
                       letterSpacing: '1px', 
                       fontFamily: '"Space Mono", monospace',
-                      color: theme.text 
+                      color: theme.text,
+                      whiteSpace: 'nowrap',
+                      overflow: 'hidden',
+                      flex: 1,
+                      minWidth: 0,
+                      WebkitMaskImage: 'linear-gradient(to right, rgba(0,0,0,1) calc(100% - 20px), rgba(0,0,0,0) 100%)',
+                      maskImage: 'linear-gradient(to right, rgba(0,0,0,1) calc(100% - 20px), rgba(0,0,0,0) 100%)'
                     }}>
-                      {era.name} {isCollapsed && <span style={{ fontSize: '8px', opacity: 0.5, letterSpacing: '1px', textTransform: 'lowercase', fontStyle: 'italic', marginLeft: '6px' }}>(collapsed)</span>}
+                      {era.name}
                     </span>
 
                     <AnimatePresence>
@@ -1094,7 +1136,9 @@ export default function TimelinePage({
                             transition: 'all 0.2s ease',
                             pointerEvents: 'auto',
                             height: '24px',
-                            boxSizing: 'border-box'
+                            boxSizing: 'border-box',
+                            whiteSpace: 'nowrap',
+                            flexShrink: 0
                           }}
                         >
                           {offscreenNav.direction === 'left' ? (
@@ -1113,11 +1157,11 @@ export default function TimelinePage({
                               >
                                 <polyline points="15 18 9 12 15 6" />
                               </svg>
-                              <span>SCROLL TO CONTENT</span>
+                              <span>{isMobile ? 'TO CONTENT' : 'SCROLL TO CONTENT'}</span>
                             </>
                           ) : (
                             <>
-                              <span>SCROLL TO CONTENT</span>
+                              <span>{isMobile ? 'TO CONTENT' : 'SCROLL TO CONTENT'}</span>
                               <svg 
                                 xmlns="http://www.w3.org/2000/svg" 
                                 width="10" 
@@ -1859,198 +1903,201 @@ export default function TimelinePage({
       </div>
 
       {/* BOTTOM CONTROLS PANEL (BOTTOM BAR) */}
-      <div 
-        style={{
-          height: '64px',
-          background: theme.bg,
-          borderTop: `1px solid ${theme.border}`,
-          padding: '0 24px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          zIndex: 200,
-          boxSizing: 'border-box',
-          position: 'relative',
-          pointerEvents: 'auto',
-          flexShrink: 0
-        }}
-      >
-        {/* Left: Search input */}
-        <div style={{ position: 'relative', width: '220px', flexShrink: 0 }}>
-          <input 
-            type="text" 
-            placeholder="SEARCH TIMELINE EVENTS..." 
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            style={{
-              width: '100%',
-              padding: '8px 30px 8px 10px',
-              fontSize: '10.5px',
-              fontFamily: '"Space Mono", monospace',
-              border: `1px solid ${theme.border}`,
-              borderRadius: '0px',
-              outline: 'none',
-              boxSizing: 'border-box',
-              background: isMapDarkMode ? '#000000' : '#ffffff',
-              color: theme.text,
-              height: '32px'
-            }}
-          />
-          {searchQuery && (
-            <motion.button
-              whileHover={{ opacity: 0.7 }}
-              onClick={() => setSearchQuery('')}
+      {!isMobile && (
+        <div 
+          style={{
+            height: '64px',
+            background: theme.bg,
+            borderTop: `1px solid ${theme.border}`,
+            padding: '0 24px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            zIndex: 200,
+            boxSizing: 'border-box',
+            position: 'relative',
+            pointerEvents: 'auto',
+            flexShrink: 0
+          }}
+        >
+          {/* Left: Search input */}
+          <div style={{ position: 'relative', width: '220px', flexShrink: 0 }}>
+            <input 
+              type="text" 
+              placeholder="SEARCH TIMELINE EVENTS..." 
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
               style={{
-                position: 'absolute',
-                right: '6px',
-                top: '50%',
-                transform: 'translateY(-50%)',
-                background: 'none',
-                border: 'none',
-                cursor: 'pointer',
-                padding: '4px',
+                width: '100%',
+                padding: '8px 30px 8px 10px',
+                fontSize: '10.5px',
+                fontFamily: '"Space Mono", monospace',
+                border: `1px solid ${theme.border}`,
+                borderRadius: '0px',
+                outline: 'none',
+                boxSizing: 'border-box',
+                background: isMapDarkMode ? '#000000' : '#ffffff',
+                color: theme.text,
+                height: '32px'
+              }}
+            />
+            {searchQuery && (
+              <motion.button
+                whileHover={{ opacity: 0.7 }}
+                onClick={() => setSearchQuery('')}
+                style={{
+                  position: 'absolute',
+                  right: '6px',
+                  top: '50%',
+                  transform: 'translateY(-50%)',
+                  background: 'none',
+                  border: 'none',
+                  cursor: 'pointer',
+                  padding: '4px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  zIndex: 21
+                }}
+              >
+                <X size={12} color={theme.text} />
+              </motion.button>
+            )}
+          </div>
+
+          {/* Right: Zoom controls styled exactly like the map page timeline zoom bar */}
+          <div style={{ 
+            display: 'flex', 
+            flexDirection: 'row',
+            alignItems: 'center', 
+            gap: '12px', 
+            justifyContent: 'flex-end',
+            position: 'relative'
+          }}>
+            {/* Zoom controls inline unit */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexShrink: 0 }}>
+              <img 
+                src="/icons/icon-zoom-out.svg" 
+                onClick={() => handleZoom(1.3)}
+                style={{ width: '24px', height: '24px', filter: theme.invert, cursor: 'pointer', opacity: span >= 253500 ? 0.3 : 1 }} 
+                title="Zoom Out"
+                alt="zoom out" 
+              />
+              
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', position: 'relative', width: '120px', justifyContent: 'center' }}>
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  step="0.1"
+                  value={(() => {
+                    const MIN_SPAN = 50;
+                    const MAX_SPAN = 253500;
+                    const logMin = Math.log(MIN_SPAN);
+                    const logMax = Math.log(MAX_SPAN);
+                    const currentLog = Math.log(Math.max(MIN_SPAN, Math.min(MAX_SPAN, span)));
+                    const pct = (currentLog - logMin) / (logMax - logMin);
+                    return Math.max(0, Math.min(100, (1 - pct) * 100));
+                  })()}
+                  onChange={(e) => {
+                    const val = parseFloat(e.target.value);
+                    const MIN_SPAN = 50;
+                    const MAX_SPAN = 253500;
+                    const logMin = Math.log(MIN_SPAN);
+                    const logMax = Math.log(MAX_SPAN);
+                    const pct = 1 - (val / 100);
+                    const logSpan = logMin + pct * (logMax - logMin);
+                    const newSpan = Math.exp(logSpan);
+                    const centerYear = viewStart + span / 2;
+                    setViewStart(centerYear - newSpan / 2);
+                    setViewEnd(centerYear + newSpan / 2);
+                  }}
+                  style={{
+                    width: '100%',
+                    height: '2px',
+                    background: theme.text,
+                    outline: 'none',
+                    cursor: 'pointer',
+                    margin: 0
+                  }}
+                  className="timeline-zoom-slider"
+                />
+                <span style={{ 
+                  position: 'absolute', 
+                  top: '12px', 
+                  fontSize: '7px', 
+                  color: theme.textDim, 
+                  textAlign: 'center', 
+                  letterSpacing: '0.5px',
+                  whiteSpace: 'nowrap'
+                }}>
+                  SPAN: {Math.round(span).toLocaleString()} YEARS
+                </span>
+              </div>
+
+              <img 
+                src="/icons/icon-zoom-in.svg" 
+                onClick={() => handleZoom(0.7)}
+                style={{ width: '24px', height: '24px', filter: theme.invert, cursor: 'pointer', opacity: span <= 50 ? 0.3 : 1 }} 
+                title="Zoom In"
+                alt="zoom in" 
+              />
+            </div>
+
+            <button
+              onClick={handleReset}
+              title="Reset View"
+              style={{
+                height: '32px',
+                padding: '0 12px',
+                background: 'transparent',
+                border: `1px solid ${theme.border}`,
+                color: theme.text,
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                zIndex: 21
+                gap: '6px',
+                cursor: 'pointer',
+                transition: 'all 0.15s ease',
+                borderRadius: '16px',
+                fontFamily: '"Space Mono", monospace',
+                fontSize: '9px',
+                fontWeight: 700,
+                textTransform: 'uppercase',
+                boxSizing: 'border-box'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = theme.text;
+                e.currentTarget.style.color = theme.bg;
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'transparent';
+                e.currentTarget.style.color = theme.text;
               }}
             >
-              <X size={12} color={theme.text} />
-            </motion.button>
-          )}
-        </div>
+              <RotateCcw size={10} strokeWidth={2.5} />
+              <span>Reset</span>
+            </button>
 
-        {/* Right: Zoom controls styled exactly like the map page timeline zoom bar */}
-        <div style={{ 
-          display: 'flex', 
-          flexDirection: 'row',
-          alignItems: 'center', 
-          gap: '12px', 
-          justifyContent: 'flex-end',
-          position: 'relative'
-        }}>
-          {/* Zoom controls inline unit */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexShrink: 0 }}>
-            <img 
-              src="/icons/icon-zoom-out.svg" 
-              onClick={() => handleZoom(1.3)}
-              style={{ width: '24px', height: '24px', filter: theme.invert, cursor: 'pointer', opacity: span >= 253500 ? 0.3 : 1 }} 
-              title="Zoom Out"
-              alt="zoom out" 
-            />
-            
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', position: 'relative', width: '120px', justifyContent: 'center' }}>
-              <input
-                type="range"
-                min="0"
-                max="100"
-                step="0.1"
-                value={(() => {
-                  const MIN_SPAN = 50;
-                  const MAX_SPAN = 253500;
-                  const logMin = Math.log(MIN_SPAN);
-                  const logMax = Math.log(MAX_SPAN);
-                  const currentLog = Math.log(Math.max(MIN_SPAN, Math.min(MAX_SPAN, span)));
-                  const pct = (currentLog - logMin) / (logMax - logMin);
-                  return Math.max(0, Math.min(100, (1 - pct) * 100));
-                })()}
-                onChange={(e) => {
-                  const val = parseFloat(e.target.value);
-                  const MIN_SPAN = 50;
-                  const MAX_SPAN = 253500;
-                  const logMin = Math.log(MIN_SPAN);
-                  const logMax = Math.log(MAX_SPAN);
-                  const pct = 1 - (val / 100);
-                  const logSpan = logMin + pct * (logMax - logMin);
-                  const newSpan = Math.exp(logSpan);
-                  const centerYear = viewStart + span / 2;
-                  setViewStart(centerYear - newSpan / 2);
-                  setViewEnd(centerYear + newSpan / 2);
-                }}
-                style={{
-                  width: '100%',
-                  height: '2px',
-                  background: theme.text,
-                  outline: 'none',
-                  cursor: 'pointer',
-                  margin: 0
-                }}
-                className="timeline-zoom-slider"
-              />
-              <span style={{ 
-                position: 'absolute', 
-                top: '12px', 
-                fontSize: '7px', 
-                color: theme.textDim, 
-                textAlign: 'center', 
-                letterSpacing: '0.5px',
-                whiteSpace: 'nowrap'
-              }}>
-                SPAN: {Math.round(span).toLocaleString()} YEARS
-              </span>
-            </div>
-
-            <img 
-              src="/icons/icon-zoom-in.svg" 
-              onClick={() => handleZoom(0.7)}
-              style={{ width: '24px', height: '24px', filter: theme.invert, cursor: 'pointer', opacity: span <= 50 ? 0.3 : 1 }} 
-              title="Zoom In"
-              alt="zoom in" 
-            />
+            {/* Pulsing highlight overlay for onboarding controls */}
+            {onboardingStep === 3 && (
+              <div style={{
+                position: 'absolute',
+                top: '-6px',
+                left: '-6px',
+                right: '-6px',
+                bottom: '-6px',
+                border: '3px solid #b6a6ff',
+                boxShadow: '0 0 15px rgba(182, 166, 255, 0.5)',
+                pointerEvents: 'none',
+                zIndex: 9999,
+                borderRadius: '19px',
+                animation: 'radar-pulse 2s infinite'
+              }} />
+            )}
           </div>
-
-          <button
-            onClick={handleReset}
-            title="Reset View"
-            style={{
-              height: '32px',
-              padding: '0 12px',
-              background: 'transparent',
-              border: `1px solid ${theme.border}`,
-              color: theme.text,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: '6px',
-              cursor: 'pointer',
-              transition: 'all 0.15s ease',
-              borderRadius: '16px',
-              fontFamily: '"Space Mono", monospace',
-              fontSize: '9px',
-              fontWeight: 700,
-              textTransform: 'uppercase',
-              boxSizing: 'border-box'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.background = theme.text;
-              e.currentTarget.style.color = theme.bg;
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.background = 'transparent';
-              e.currentTarget.style.color = theme.text;
-            }}
-          >
-            <RotateCcw size={10} strokeWidth={2.5} />
-            <span>Reset</span>
-          </button>
-
-          {/* Pulsing highlight overlay for onboarding controls */}
-          {onboardingStep === 3 && (
-            <div style={{
-              position: 'absolute',
-              top: '-6px',
-              left: '-6px',
-              right: '-6px',
-              bottom: '-6px',
-              border: '3px solid #b6a6ff',
-              boxShadow: '0 0 15px rgba(182, 166, 255, 0.5)',
-              pointerEvents: 'none',
-              zIndex: 9999,
-              borderRadius: '19px',
-              animation: 'radar-pulse 2s infinite'
-            }} />
-          )}
         </div>
+      )}
 
       {/* ONBOARDING TOUR */}
       <AnimatePresence>
@@ -2360,7 +2407,6 @@ export default function TimelinePage({
           }
         }
       `}</style>
-      </div>
     </div>
   );
 }

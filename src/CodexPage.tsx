@@ -26,6 +26,10 @@ interface CodexPageProps {
   codexNodes?: TermNode[];
   trackCustomEvent?: (eventName: string, params?: any) => void;
   isActive?: boolean;
+  isMobile?: boolean;
+  isMobileDrawerExpanded?: boolean;
+  searchQuery?: string;
+  onSearchQueryChange?: (query: string) => void;
 }
 
 const LAYER_COLORS: Record<string, string> = {
@@ -748,7 +752,11 @@ export default function CodexPage({
   onFocusedTermConsumed,
   codexNodes,
   trackCustomEvent,
-  isActive
+  isActive,
+  isMobile,
+  isMobileDrawerExpanded,
+  searchQuery: propsSearchQuery,
+  onSearchQueryChange
 }: CodexPageProps) {
   const nodes = (codexNodes || TERM_TREE_DATA).filter((n): n is TermNode => !!(n && n.id));
 
@@ -756,7 +764,9 @@ export default function CodexPage({
   const [hoveredTerm, setHoveredTerm] = useState<{ id: string; level: number } | null>(null);
   const hoveredTermId = hoveredTerm?.id || null;
   const hoveredLevel = hoveredTerm?.level ?? null;
-  const [searchQuery, setSearchQuery] = useState('');
+  const [localSearchQuery, setLocalSearchQuery] = useState('');
+  const searchQuery = propsSearchQuery !== undefined ? propsSearchQuery : localSearchQuery;
+  const setSearchQuery = onSearchQueryChange !== undefined ? onSearchQueryChange : setLocalSearchQuery;
   const [searchActiveIndex, setSearchActiveIndex] = useState(-1);
   const [lines, setLines] = useState<SVGLinePath[]>([]);
   const [scrollSize, setScrollSize] = useState({ width: 0, height: 0 });
@@ -767,7 +777,6 @@ export default function CodexPage({
   const [isImageLoading, setIsImageLoading] = useState(false);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [isLightboxImageLoading, setIsLightboxImageLoading] = useState(false);
-
   const columnsContainerRef = useRef<HTMLDivElement>(null);
   const svgOverlayRef = useRef<SVGSVGElement>(null);
   const canvasRef = useRef<HTMLDivElement>(null);
@@ -776,7 +785,7 @@ export default function CodexPage({
   const dragVelocityRef = useRef({ x: 0, y: 0 });
   const lastMousePosRef = useRef({ x: 0, y: 0, time: 0 });
   const inertiaFrameRef = useRef<number | null>(null);
-
+  const hasCenteredInitialRef = useRef(false);
 
   useEffect(() => {
     setSearchActiveIndex(-1);
@@ -915,19 +924,7 @@ export default function CodexPage({
     return path;
   };
 
-  // Handle external focus on a specific term
-  useEffect(() => {
-    if (focusedTermId) {
-      const path = getPathToRoot(focusedTermId);
-      if (path.length > 0) {
-        setSelectedPath(path);
-        setIsRightCollapsed(false);
-      }
-      if (onFocusedTermConsumed) {
-        onFocusedTermConsumed();
-      }
-    }
-  }, [focusedTermId, onFocusedTermConsumed]);
+
 
   // Compute search suggestions list for dropdown suggest panel
   const searchSuggestions = useMemo(() => {
@@ -1335,7 +1332,7 @@ export default function CodexPage({
     // If it has no children, stay centered on the current column (level).
     const targetCol = hasChildren ? level + 1 : level;
     setTimeout(() => {
-      centerOnColumn(targetCol, false);
+      centerOnNode(node.id, targetCol, false);
     }, 50);
   };
 
@@ -1778,8 +1775,8 @@ export default function CodexPage({
     };
   }, []);
 
-  // Helper to center the container on a specified column horizontally and vertically
-  const centerOnColumn = useCallback((colIdx: number, isInstant: boolean = false) => {
+  // Helper to center the container on a specified node and column horizontally and vertically
+  const centerOnNode = useCallback((nodeId: string | null, colIdx: number, isInstant: boolean = false) => {
     let timer: any;
 
     const performScroll = () => {
@@ -1795,10 +1792,42 @@ export default function CodexPage({
         return;
       }
 
+      // 1. Horizontal Scroll Centering
       const colCenterX = 1200 + colIdx * 300 + 130;
-      const sidebarOffset = isRightCollapsed ? 0 : 300;
+      const sidebarOffset = isMobile ? 0 : (isRightCollapsed ? 0 : 300);
       const targetScrollLeft = colCenterX - (viewportWidth - sidebarOffset) / 2;
-      const targetScrollTop = 1500 - viewportHeight / 2;
+
+      // 2. Vertical Scroll Centering
+      let targetScrollTop = 1500 - viewportHeight / 2; // Default fallback to center of column layout
+
+      if (nodeId) {
+        // Find the specific node pill element
+        let element: HTMLElement | null = null;
+        for (let c = 0; c < 10; c++) {
+          const el = document.getElementById(`node-pill-${nodeId}-${c}`);
+          if (el) {
+            element = el;
+            break;
+          }
+        }
+
+        if (element) {
+          const containerRect = container.getBoundingClientRect();
+          const elementRect = element.getBoundingClientRect();
+          
+          // Calculate vertical center relative to scroll container content height coordinates
+          const elementYInScroll = elementRect.top - containerRect.top + container.scrollTop;
+          
+          let viewableHeight = viewportHeight;
+          if (isMobile) {
+            // Subtract bottom drawer overlap height to find active vertical center in viewable upper viewport
+            const drawerHeight = isMobileDrawerExpanded ? viewportHeight * 0.7 : (selectedTermId ? 108 : 60);
+            viewableHeight = viewportHeight - drawerHeight;
+          }
+          
+          targetScrollTop = (elementYInScroll + elementRect.height / 2) - viewableHeight / 2;
+        }
+      }
 
       if (isInstant) {
         container.scrollLeft = targetScrollLeft;
@@ -1813,14 +1842,59 @@ export default function CodexPage({
     };
 
     performScroll();
-  }, [isRightCollapsed]);
+  }, [isRightCollapsed, isMobile, isMobileDrawerExpanded, selectedTermId]);
 
   // Initial entrance/navigation scroll centering (centers Column 0 on load/tab switch)
   useEffect(() => {
     if (isActive !== false) {
-      centerOnColumn(0, true);
+      if (!hasCenteredInitialRef.current) {
+        centerOnNode(null, 0, true);
+        hasCenteredInitialRef.current = true;
+      }
+    } else {
+      hasCenteredInitialRef.current = false;
     }
-  }, [isActive, centerOnColumn]);
+  }, [isActive, centerOnNode]);
+
+  // Automatically center the selected node when mobile drawer collapses/expands
+  useEffect(() => {
+    if (isMobile && selectedTermId && selectedPath.length > 0) {
+      const activeNode = nodes.find(n => n.id === selectedTermId);
+      const hasChildren = activeNode ? checkNodeHasSubItems(activeNode) : false;
+      const targetCol = hasChildren ? selectedPath.length : selectedPath.length - 1;
+
+      // Start scrolling instantly in sync with drawer height animation
+      centerOnNode(selectedTermId, targetCol, false);
+
+      // Recenter again after drawer finishes its 400ms transition to correct for settled bounds
+      const timer = setTimeout(() => {
+        centerOnNode(selectedTermId, targetCol, false);
+      }, 450);
+      return () => clearTimeout(timer);
+    }
+  }, [isMobileDrawerExpanded, isMobile, selectedTermId, selectedPath.length, centerOnNode, nodes, checkNodeHasSubItems]);
+
+  // Handle external focus on a specific term
+  useEffect(() => {
+    if (focusedTermId) {
+      const path = getPathToRoot(focusedTermId);
+      if (path.length > 0) {
+        setSelectedPath(path);
+        setIsRightCollapsed(false);
+
+        // Center on the focused node horizontally and vertically
+        const targetNode = nodes.find(n => n.id === focusedTermId);
+        const hasChildren = targetNode ? checkNodeHasSubItems(targetNode) : false;
+        const targetCol = hasChildren ? path.length : path.length - 1;
+        setTimeout(() => {
+          centerOnNode(focusedTermId, targetCol, false);
+        }, 150);
+      }
+      if (onFocusedTermConsumed) {
+        onFocusedTermConsumed();
+      }
+    }
+  }, [focusedTermId, onFocusedTermConsumed, checkNodeHasSubItems, centerOnNode, nodes]);
 
   // Automatically expand sidebar when a term is selected
   useEffect(() => {
@@ -1970,170 +2044,172 @@ export default function CodexPage({
       `}</style>
 
       {/* FLOATING SEARCH BAR IN THE TOP LEFT (separate from canvas) */}
-      <div 
-        style={{ 
-          position: 'absolute',
-          top: '20px',
-          left: '32px',
-          width: '260px',
-          zIndex: 10,
-          background: theme.bg,
-          border: `1px solid ${theme.border}`,
-          padding: '4px 8px',
-          boxSizing: 'border-box',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          minHeight: '40px',
-          ...({
-            '--hover-bg': isMapDarkMode ? '#222222' : '#f5f5f5',
-            '--border-light': theme.borderLight
-          } as React.CSSProperties)
-        }}
-      >
-        <div style={{ position: 'relative', width: '100%', display: 'flex', alignItems: 'center' }}>
-          <input
-            type="text"
-            placeholder="SEARCH DATABASE..."
-            value={searchQuery}
-            onChange={e => setSearchQuery(e.target.value)}
-            onKeyDown={(e) => {
-              if (searchSuggestions.length === 0) return;
-              if (e.key === 'ArrowDown') {
-                e.preventDefault();
-                setSearchActiveIndex(prev => (prev + 1) % searchSuggestions.length);
-              } else if (e.key === 'ArrowUp') {
-                e.preventDefault();
-                setSearchActiveIndex(prev => (prev - 1 + searchSuggestions.length) % searchSuggestions.length);
-              } else if (e.key === 'Enter') {
-                if (searchActiveIndex >= 0 && searchActiveIndex < searchSuggestions.length) {
+      {!isMobile && (
+        <div 
+          style={{ 
+            position: 'absolute',
+            top: '20px',
+            left: '32px',
+            width: '260px',
+            zIndex: 10,
+            background: theme.bg,
+            border: `1px solid ${theme.border}`,
+            padding: '4px 8px',
+            boxSizing: 'border-box',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            minHeight: '40px',
+            ...({
+              '--hover-bg': isMapDarkMode ? '#222222' : '#f5f5f5',
+              '--border-light': theme.borderLight
+            } as React.CSSProperties)
+          }}
+        >
+          <div style={{ position: 'relative', width: '100%', display: 'flex', alignItems: 'center' }}>
+            <input
+              type="text"
+              placeholder="SEARCH DATABASE..."
+              value={searchQuery}
+              onChange={e => setSearchQuery(e.target.value)}
+              onKeyDown={(e) => {
+                if (searchSuggestions.length === 0) return;
+                if (e.key === 'ArrowDown') {
                   e.preventDefault();
-                  const node = searchSuggestions[searchActiveIndex];
-                  const path = getPathToRoot(node.id);
-                  setSelectedPath(path);
+                  setSearchActiveIndex(prev => (prev + 1) % searchSuggestions.length);
+                } else if (e.key === 'ArrowUp') {
+                  e.preventDefault();
+                  setSearchActiveIndex(prev => (prev - 1 + searchSuggestions.length) % searchSuggestions.length);
+                } else if (e.key === 'Enter') {
+                  if (searchActiveIndex >= 0 && searchActiveIndex < searchSuggestions.length) {
+                    e.preventDefault();
+                    const node = searchSuggestions[searchActiveIndex];
+                    const path = getPathToRoot(node.id);
+                    setSelectedPath(path);
+                    setSearchQuery('');
+                  }
+                } else if (e.key === 'Escape') {
                   setSearchQuery('');
                 }
-              } else if (e.key === 'Escape') {
-                setSearchQuery('');
-              }
-            }}
-            style={{
-              width: '100%',
-              padding: '8px 24px 8px 8px',
-              fontSize: '11px',
-              fontFamily: '"Space Mono", monospace',
-              border: 'none',
-              outline: 'none',
-              boxSizing: 'border-box',
-              background: theme.bg,
-              color: theme.text
-            }}
-          />
-          {searchQuery && (
-            <motion.button
-              whileHover={{ opacity: 0.7 }}
-              onClick={() => setSearchQuery('')}
+              }}
+              style={{
+                width: '100%',
+                padding: '8px 24px 8px 8px',
+                fontSize: '11px',
+                fontFamily: '"Space Mono", monospace',
+                border: 'none',
+                outline: 'none',
+                boxSizing: 'border-box',
+                background: theme.bg,
+                color: theme.text
+              }}
+            />
+            {searchQuery && (
+              <motion.button
+                whileHover={{ opacity: 0.7 }}
+                onClick={() => setSearchQuery('')}
+                style={{
+                  position: 'absolute',
+                  right: '4px',
+                  background: 'none',
+                  border: 'none',
+                  cursor: 'pointer',
+                  padding: '4px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  zIndex: 21
+                }}
+              >
+                <X size={14} color={theme.text} />
+              </motion.button>
+            )}
+          </div>
+
+          {/* Suggestion Dropdown Panel */}
+          {searchQuery.trim() !== '' && (
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.15 }}
               style={{
                 position: 'absolute',
-                right: '4px',
-                background: 'none',
-                border: 'none',
-                cursor: 'pointer',
-                padding: '4px',
+                top: '39px', // align right under the border
+                left: '-1px',
+                width: '260px',
+                background: theme.bg,
+                border: `1px solid ${theme.border}`,
+                borderTop: 'none',
+                maxHeight: '260px',
+                overflowY: 'auto',
+                zIndex: 11,
+                boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
                 display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                zIndex: 21
+                flexDirection: 'column'
               }}
             >
-              <X size={14} color={theme.text} />
-            </motion.button>
-          )}
-        </div>
-
-        {/* Suggestion Dropdown Panel */}
-        {searchQuery.trim() !== '' && (
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.15 }}
-            style={{
-              position: 'absolute',
-              top: '39px', // align right under the border
-              left: '-1px',
-              width: '260px',
-              background: theme.bg,
-              border: `1px solid ${theme.border}`,
-              borderTop: 'none',
-              maxHeight: '260px',
-              overflowY: 'auto',
-              zIndex: 11,
-              boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
-              display: 'flex',
-              flexDirection: 'column'
-            }}
-          >
-            {searchSuggestions.length > 0 ? (
-              searchSuggestions.map((node, idx) => {
-                const parentLabel = getParentPathLabel(node);
-                const isSelected = searchActiveIndex === idx;
-                return (
-                  <div
-                    key={node.id}
-                    className="search-suggestion-item"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      e.preventDefault();
-                      const path = getPathToRoot(node.id);
-                      setSelectedPath(path);
-                      setSearchQuery('');
-                    }}
-                    style={{
-                      background: isSelected ? (isMapDarkMode ? '#222222' : '#f5f5f5') : undefined
-                    }}
-                  >
-                      <span style={{
-                        fontSize: '9px',
-                        fontWeight: '700',
-                        fontFamily: '"Space Mono", monospace',
-                        color: theme.text,
-                        letterSpacing: '0.5px',
-                        textTransform: 'uppercase'
-                      }}>
-                        {node.subLabel === 'Possible Nephilim Bloodline' && (
-                          <span style={{ marginRight: '6px', color: 'currentColor', fontWeight: '900' }}>✖</span>
-                        )}
-                        {node.name}
-                      </span>
-                      {parentLabel && (
+              {searchSuggestions.length > 0 ? (
+                searchSuggestions.map((node, idx) => {
+                  const parentLabel = getParentPathLabel(node);
+                  const isSelected = searchActiveIndex === idx;
+                  return (
+                    <div
+                      key={node.id}
+                      className="search-suggestion-item"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        e.preventDefault();
+                        const path = getPathToRoot(node.id);
+                        setSelectedPath(path);
+                        setSearchQuery('');
+                      }}
+                      style={{
+                        background: isSelected ? (isMapDarkMode ? '#222222' : '#f5f5f5') : undefined
+                      }}
+                    >
                         <span style={{
-                          fontSize: '8px',
+                          fontSize: '9px',
+                          fontWeight: '700',
                           fontFamily: '"Space Mono", monospace',
-                          color: theme.textDim,
+                          color: theme.text,
                           letterSpacing: '0.5px',
-                          textTransform: 'uppercase',
-                          marginTop: '2px'
+                          textTransform: 'uppercase'
                         }}>
-                          IN {parentLabel}
+                          {node.subLabel === 'Possible Nephilim Bloodline' && (
+                            <span style={{ marginRight: '6px', color: 'currentColor', fontWeight: '900' }}>✖</span>
+                          )}
+                          {node.name}
                         </span>
-                      )}
-                    </div>
-                  );
-                })
-              ) : (
-                <div style={{
-                  padding: '12px 16px',
-                  fontSize: '9px',
-                  fontFamily: '"Space Mono", monospace',
-                  color: theme.textDim,
-                  letterSpacing: '0.5px'
-                }}>
-                  NO MATCHES FOUND
-                </div>
-              )}
-            </motion.div>
-          )}
-      </div>
+                        {parentLabel && (
+                          <span style={{
+                            fontSize: '8px',
+                            fontFamily: '"Space Mono", monospace',
+                            color: theme.textDim,
+                            letterSpacing: '0.5px',
+                            textTransform: 'uppercase',
+                            marginTop: '2px'
+                          }}>
+                            IN {parentLabel}
+                          </span>
+                        )}
+                      </div>
+                    );
+                  })
+                ) : (
+                  <div style={{
+                    padding: '12px 16px',
+                    fontSize: '9px',
+                    fontFamily: '"Space Mono", monospace',
+                    color: theme.textDim,
+                    letterSpacing: '0.5px'
+                  }}>
+                    NO MATCHES FOUND
+                  </div>
+                )}
+              </motion.div>
+            )}
+        </div>
+      )}
 
       {/* LEFT AREA: HORIZONTALLY AND VERTICALLY DRAGGABLE INFINITE CANVAS */}
       <div
@@ -2443,693 +2519,672 @@ export default function CodexPage({
       </div>
 
       {/* RIGHT SIDEBAR: DOSSIER SIDEBAR WINDOW PANEL */}
-      <motion.div 
-        initial={false}
-        animate={{ 
-          right: isRightCollapsed ? -280 : 20,
-          background: isMapDarkMode ? 'rgba(10, 10, 10, 0.85)' : 'rgba(255, 255, 255, 0.85)',
-          borderColor: theme.border,
-          opacity: 1
-        }}
-        transition={{ 
-          right: { type: 'spring', stiffness: 240, damping: 28 },
-          default: { duration: 0.5, ease: [0.16, 1, 0.3, 1] }
-        }}
-        style={{ 
-          position: 'absolute',
-          top: 0,
-          bottom: 0,
-          width: '300px',
-          borderLeft: `1px solid ${theme.border}`,
-          display: 'flex', 
-          flexDirection: 'column', 
-          overflow: 'visible', 
-          zIndex: 15, 
-          fontFamily: '"Space Mono", monospace',
-          pointerEvents: 'auto',
-          color: theme.text,
-          backdropFilter: 'blur(8px)'
-        }}
-      >
-        {/* ABSOLUTE POSITIONED FIXED TAB FOR RIGHT SIDEBAR */}
-        <motion.button 
-          whileHover={{ opacity: 0.8 }}
-          onClick={() => setIsRightCollapsed(!isRightCollapsed)}
-          title={isRightCollapsed ? "Maximize Dossier" : "Minimize Dossier"}
-          style={{
+      {!isMobile && (
+        <motion.div 
+          initial={false}
+          animate={{ 
+            right: isRightCollapsed ? (isMobile ? '-100%' : -280) : (isMobile ? 0 : 20),
+            background: isMapDarkMode ? 'rgba(10, 10, 10, 0.85)' : 'rgba(255, 255, 255, 0.85)',
+            borderColor: theme.border,
+            opacity: 1
+          }}
+          transition={{ 
+            right: { type: 'spring', stiffness: 240, damping: 28 },
+            default: { duration: 0.5, ease: [0.16, 1, 0.3, 1] }
+          }}
+          style={{ 
             position: 'absolute',
-            top: '-1px',
-            left: '-20px',
-            width: '20px',
-            height: '41px',
-            background: theme.text,
-            color: theme.bg,
-            border: 'none',
-            cursor: 'pointer',
-            zIndex: 25,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            padding: 0
+            top: 0,
+            bottom: 0,
+            width: isMobile ? '100%' : '300px',
+            borderLeft: isMobile ? 'none' : `1px solid ${theme.border}`,
+            display: 'flex', 
+            flexDirection: 'column', 
+            overflow: 'visible', 
+            zIndex: isMobile ? 10000 : 15, 
+            fontFamily: '"Space Mono", monospace',
+            pointerEvents: 'auto',
+            color: theme.text,
+            backdropFilter: 'blur(8px)'
           }}
         >
-          <img 
-            src="/icons/icon-arrow-left.svg" 
-            alt="toggle" 
-            style={{ 
-              width: '6px', 
-              height: '12px', 
-              transform: isRightCollapsed ? 'none' : 'rotate(180deg)',
-              filter: theme.invert
-            }} 
-            draggable={false}
-          />
-        </motion.button>
+          {/* ABSOLUTE POSITIONED FIXED TAB FOR RIGHT SIDEBAR */}
+          {!isMobile && (
+            <motion.button 
+            whileHover={{ opacity: 0.8 }}
+            onClick={() => setIsRightCollapsed(!isRightCollapsed)}
+            title={isRightCollapsed ? "Maximize Dossier" : "Minimize Dossier"}
+            style={{
+              position: 'absolute',
+              top: '-1px',
+              left: '-20px',
+              width: '20px',
+              height: '41px',
+              background: theme.text,
+              color: theme.bg,
+              border: 'none',
+              cursor: 'pointer',
+              zIndex: 25,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: 0
+            }}
+          >
+            <img 
+              src="/icons/icon-arrow-left.svg" 
+              alt="toggle" 
+              style={{ 
+                width: '6px', 
+                height: '12px', 
+                transform: isRightCollapsed ? 'none' : 'rotate(180deg)',
+                filter: theme.invert
+              }} 
+              draggable={false}
+            />
+          </motion.button>
+          )}
 
-        <AnimatePresence mode="wait">
-          {activeTermNode ? (
-            <motion.div 
-              key={activeTermNode.id}
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -15 }}
-              transition={{ duration: 0.32, ease: [0.16, 1, 0.3, 1] }}
-              style={{ display: 'flex', flexDirection: 'column', height: '100%', textAlign: 'left' }}
-            >
-              {/* Header Top Bar */}
-              <div style={{ 
-                height: '40px', 
-                padding: '0 16px', 
-                borderBottom: `1px solid ${theme.border}`, 
-                display: 'flex', 
-                alignItems: 'center', 
-                background: theme.bg, 
-                flexShrink: 0 
-              }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  {(() => {
-                    const rootCat = getRootCategory(activeTermNode);
-                    return (
-                      <>
-                        <div style={{ width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                          <img 
-                            src={getNodeIcon(rootCat)} 
-                            onError={(e) => { e.currentTarget.src = '/icons/icon-cave-drawings.svg'; }}
-                            style={{ width: '30px', height: '30px' }} 
-                            alt="category-icon" 
-                            draggable={false}
-                          />
-                        </div>
-                        <span style={{ 
-                          fontWeight: '700', 
-                          fontSize: '11px', 
-                          letterSpacing: '1px', 
-                          fontFamily: '"Space Mono", monospace',
-                          color: theme.text
-                        }}>
-                          {toTitleCase(rootCat.name)}
-                        </span>
-                      </>
-                    );
-                  })()}
-                </div>
-              </div>
-
-              {/* Scrollable details area */}
-              <div 
-                className="no-scrollbar" 
-                style={{ 
-                  flex: 1, 
-                  overflowY: 'auto', 
-                  overflowX: 'hidden', 
-                  textAlign: 'left', 
-                  display: 'flex', 
-                  flexDirection: 'column', 
-                  paddingBottom: '40px' 
-                }}
+          <AnimatePresence mode="wait">
+            {activeTermNode ? (
+              <motion.div 
+                key={activeTermNode.id}
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -15 }}
+                transition={{ duration: 0.32, ease: [0.16, 1, 0.3, 1] }}
+                style={{ display: 'flex', flexDirection: 'column', height: '100%', textAlign: 'left' }}
               >
-                {/* Image Gallery at the very top (styled like map page dossier) */}
-                {activeAssets && activeAssets.length > 0 && (
-                  <div style={{ width: '100%', position: 'relative', borderBottom: `1px solid ${theme.border}`, flexShrink: 0 }}>
-                    <div 
-                      style={{ 
-                        width: '100%', 
-                        height: '260px', 
-                        backgroundColor: isMapDarkMode ? '#0a0a0a' : '#f0f0f0', 
-                        overflow: 'hidden', 
-                        display: 'flex', 
-                        alignItems: 'center', 
-                        justifyContent: 'center', 
-                        position: 'relative'
+                {/* Header Top Bar */}
+                <div style={{ 
+                  height: '40px', 
+                  padding: '0 16px', 
+                  borderBottom: `1px solid ${theme.border}`, 
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  background: theme.bg, 
+                  flexShrink: 0 
+                }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    {(() => {
+                      const rootCat = getRootCategory(activeTermNode);
+                      return (
+                        <>
+                          <div style={{ width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            <img 
+                              src={getNodeIcon(rootCat)} 
+                              onError={(e) => { e.currentTarget.src = '/icons/icon-cave-drawings.svg'; }}
+                              style={{ width: '30px', height: '30px' }} 
+                              alt="category-icon" 
+                              draggable={false}
+                            />
+                          </div>
+                          <span style={{ 
+                            fontWeight: '700', 
+                            fontSize: '11px', 
+                            letterSpacing: '1px', 
+                            fontFamily: '"Space Mono", monospace',
+                            color: theme.text
+                          }}>
+                            {toTitleCase(rootCat.name)}
+                          </span>
+                        </>
+                      );
+                    })()}
+                  </div>
+                  {isMobile && (
+                    <button
+                      onClick={() => setIsRightCollapsed(true)}
+                      style={{
+                        marginLeft: 'auto',
+                        background: 'none',
+                        border: 'none',
+                        cursor: 'pointer',
+                        display: 'flex',
+                        alignItems: 'center',
+                        color: theme.text,
+                        padding: '4px'
                       }}
                     >
-                      {(() => {
-                        const curAsset = activeAssets[activeImageIndex];
-                        if (!curAsset) return null;
+                      <X size={18} />
+                    </button>
+                  )}
+                </div>
 
-                        const showPdfBadge = !!(curAsset.pdfUrl || curAsset.type === 'pdf');
-                        const isBroken = !!(brokenImages[curAsset.url] || curAsset.url === MISSING_IMAGE_URL || curAsset.url?.includes('icon-missing-image.svg'));
-                        const imgSrc = isBroken ? MISSING_IMAGE_URL : cleanAndProxyImageUrl(curAsset.url);
+                {/* Scrollable details area */}
+                <div 
+                  className="no-scrollbar" 
+                  style={{ 
+                    flex: 1, 
+                    overflowY: 'auto', 
+                    overflowX: 'hidden', 
+                    textAlign: 'left', 
+                    display: 'flex', 
+                    flexDirection: 'column', 
+                    paddingBottom: '40px' 
+                  }}
+                >
+                  {/* Image Gallery at the very top (styled like map page dossier) */}
+                  {activeAssets && activeAssets.length > 0 && (
+                    <div style={{ width: '100%', position: 'relative', borderBottom: `1px solid ${theme.border}`, flexShrink: 0 }}>
+                      <div 
+                        style={{ 
+                          width: '100%', 
+                          height: '260px', 
+                          backgroundColor: isMapDarkMode ? '#0a0a0a' : '#f0f0f0', 
+                          overflow: 'hidden', 
+                          display: 'flex', 
+                          alignItems: 'center', 
+                          justifyContent: 'center', 
+                          position: 'relative'
+                        }}
+                      >
+                        {(() => {
+                          const curAsset = activeAssets[activeImageIndex];
+                          if (!curAsset) return null;
 
-                        return (
-                          <>
-                            {isImageLoading && curAsset.type === 'image' && !curAsset.pdfUrl && (
-                              <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: theme.bg, display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 3 }}>
-                                <div className="loading-spinner" />
-                              </div>
-                            )}
+                          const showPdfBadge = !!(curAsset.pdfUrl || curAsset.type === 'pdf');
+                          const isBroken = !!(brokenImages[curAsset.url] || curAsset.url === MISSING_IMAGE_URL || curAsset.url?.includes('icon-missing-image.svg'));
+                          const imgSrc = isBroken ? MISSING_IMAGE_URL : cleanAndProxyImageUrl(curAsset.url);
 
-                            {curAsset.type === 'pdf' ? (
-                              <div 
-                                onClick={() => setIsLightboxOpen(true)}
-                                style={{ 
-                                  width: '100%', 
-                                  height: '100%', 
-                                  position: 'relative', 
-                                  cursor: 'pointer',
-                                  overflow: 'hidden',
-                                  display: 'flex',
-                                  alignItems: 'center',
-                                  justifyContent: 'center',
-                                  backgroundColor: isMapDarkMode ? '#141414' : '#fafafa',
-                                  border: `1px solid ${theme.border}`
-                                }}
-                              >
-                                {/* Background Paper Mockup */}
-                                <div style={{
-                                  width: '130px',
-                                  height: '180px',
-                                  backgroundColor: isMapDarkMode ? '#1e1e1e' : '#ffffff',
-                                  border: `1px solid ${isMapDarkMode ? '#333333' : '#e0e0e0'}`,
-                                  boxShadow: '0 8px 20px rgba(0,0,0,0.3)',
-                                  padding: '16px 12px',
-                                  position: 'relative',
-                                  display: 'flex',
-                                  flexDirection: 'column',
-                                  justifyContent: 'space-between'
-                                }}>
-                                  {/* Styled typewriter horizontal lines to mimic official records */}
-                                  <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                                    <div style={{ height: '6px', width: '80%', backgroundColor: isMapDarkMode ? '#3a3a3a' : '#d2d2d2' }} />
-                                    <div style={{ height: '6px', width: '50%', backgroundColor: isMapDarkMode ? '#3a3a3a' : '#eaeaea' }} />
-                                    {/* Redacted text block */}
-                                    <div style={{ height: '6px', width: '90%', backgroundColor: isMapDarkMode ? '#ffffff' : '#000000' }} />
-                                    <div style={{ height: '6px', width: '35%', backgroundColor: isMapDarkMode ? '#3a3a3a' : '#d2d2d2' }} />
-                                    <div style={{ height: '6px', width: '70%', backgroundColor: isMapDarkMode ? '#ffffff' : '#000000' }} />
-                                  </div>
+                          return (
+                            <>
+                              {isImageLoading && curAsset.type === 'image' && !curAsset.pdfUrl && (
+                                <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: theme.bg, display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 3 }}>
+                                  <div className="loading-spinner" />
+                                </div>
+                              )}
 
-                                  {/* Diagonal Classified Stamp */}
+                              {curAsset.type === 'pdf' ? (
+                                <div 
+                                  onClick={() => setIsLightboxOpen(true)}
+                                  style={{ 
+                                    width: '100%', 
+                                    height: '100%', 
+                                    position: 'relative', 
+                                    cursor: 'pointer',
+                                    overflow: 'hidden',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    backgroundColor: isMapDarkMode ? '#141414' : '#fafafa',
+                                    border: `1px solid ${theme.border}`
+                                  }}
+                                >
+                                  {/* Background Paper Mockup */}
                                   <div style={{
-                                    position: 'absolute',
-                                    top: '45%',
-                                    left: '50%',
-                                    transform: 'translate(-50%, -50%) rotate(-25deg)',
-                                    border: '2px double #ef4444',
-                                    color: '#ef4444',
-                                    padding: '1px 6px',
-                                    fontFamily: '"Space Mono", monospace',
-                                    fontSize: '7px',
-                                    fontWeight: 'bold',
-                                    zIndex: 1,
-                                    letterSpacing: '1px',
-                                    borderRadius: '2px',
-                                    opacity: 0.85,
-                                    textTransform: 'uppercase'
+                                    width: '130px',
+                                    height: '180px',
+                                    backgroundColor: isMapDarkMode ? '#1e1e1e' : '#ffffff',
+                                    border: `1px solid ${isMapDarkMode ? '#333333' : '#e0e0e0'}`,
+                                    boxShadow: '0 8px 20px rgba(0,0,0,0.3)',
+                                    padding: '16px 12px',
+                                    position: 'relative',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    justifyContent: 'space-between'
                                   }}>
-                                    DECLASSIFIED
-                                  </div>
+                                    {/* Styled typewriter horizontal lines to mimic official records */}
+                                    <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                                      <div style={{ height: '6px', width: '80%', backgroundColor: isMapDarkMode ? '#3a3a3a' : '#d2d2d2' }} />
+                                      <div style={{ height: '6px', width: '50%', backgroundColor: isMapDarkMode ? '#3a3a3a' : '#eaeaea' }} />
+                                      {/* Redacted text block */}
+                                      <div style={{ height: '6px', width: '90%', backgroundColor: isMapDarkMode ? '#ffffff' : '#000000' }} />
+                                      <div style={{ height: '6px', width: '35%', backgroundColor: isMapDarkMode ? '#3a3a3a' : '#d2d2d2' }} />
+                                      <div style={{ height: '6px', width: '70%', backgroundColor: isMapDarkMode ? '#ffffff' : '#000000' }} />
+                                    </div>
 
-                                  {/* Lower border line */}
-                                  <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                                    <div style={{ height: '2px', width: '100%', backgroundColor: isMapDarkMode ? '#333333' : '#eaeaea' }} />
-                                    <div style={{ fontSize: '6px', color: theme.textDim, fontFamily: '"Space Mono", monospace', letterSpacing: '0.5px', textTransform: 'uppercase' }}>
-                                      RECORD DOSSIER
+                                    {/* Diagonal Classified Stamp */}
+                                    <div style={{
+                                      position: 'absolute',
+                                      top: '45%',
+                                      left: '50%',
+                                      transform: 'translate(-50%, -50%) rotate(-25deg)',
+                                      border: '2px double #ef4444',
+                                      color: '#ef4444',
+                                      padding: '1px 6px',
+                                      fontFamily: '"Space Mono", monospace',
+                                      fontSize: '7px',
+                                      fontWeight: 'bold',
+                                      zIndex: 1,
+                                      letterSpacing: '1px',
+                                      borderRadius: '2px',
+                                      opacity: 0.85,
+                                      textTransform: 'uppercase'
+                                    }}>
+                                      DECLASSIFIED
+                                    </div>
+
+                                    {/* Lower border line */}
+                                    <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                                      <div style={{ height: '2px', width: '100%', backgroundColor: isMapDarkMode ? '#333333' : '#eaeaea' }} />
+                                      <div style={{ fontSize: '6px', color: theme.textDim, fontFamily: '"Space Mono", monospace', letterSpacing: '0.5px', textTransform: 'uppercase' }}>
+                                        RECORD DOSSIER
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
-                              </div>
-                            ) : curAsset.type === 'video' ? (
-                              <div 
-                                onClick={() => setIsLightboxOpen(true)}
-                                style={{ 
-                                  width: '100%', 
-                                  height: '100%', 
-                                  position: 'relative', 
-                                  cursor: 'pointer',
-                                  overflow: 'hidden',
-                                  display: 'flex',
-                                  alignItems: 'center',
-                                  justifyContent: 'center'
-                                }}
-                              >
-                                <div style={{ width: '100%', height: '100%', pointerEvents: 'none', overflow: 'hidden', position: 'relative' }}>
-                                  {(curAsset.url.includes('youtube.com') || 
-                                   curAsset.url.includes('youtu.be') || 
-                                   curAsset.url.includes('dvidshub.net/video/') ||
-                                   curAsset.url.includes('twitter.com') ||
-                                   curAsset.url.includes('x.com')) ? (
-                                    <iframe
-                                      src={(curAsset.url.includes('dvidshub.net/video/') || curAsset.url.includes('twitter.com') || curAsset.url.includes('x.com')) ? getEmbedUrl(curAsset.url) : `${getEmbedUrl(curAsset.url)}?autoplay=0&controls=0&mute=1`}
-                                      style={curAsset.url.includes('dvidshub.net/video/') ? {
-                                        border: 'none',
-                                        position: 'absolute',
-                                        top: 0,
-                                        left: '50%',
-                                        transform: 'translateX(-50%)',
-                                        width: '165%',
-                                        height: '190%'
-                                      } : { 
-                                        border: 'none', 
-                                        position: 'absolute',
-                                        top: '50%',
-                                        left: '50%',
-                                        transform: 'translate(-50%, -50%)',
-                                        width: '180%', 
-                                        height: '180%'
-                                      }}
-                                      title="Video asset viewport"
-                                    />
-                                  ) : (
-                                    (() => {
-                                      const videoSrc = curAsset.url.startsWith('http')
-                                        ? `/api/proxy-resource?url=${encodeURIComponent(curAsset.url)}`
-                                        : curAsset.url;
-                                      const mimeType = curAsset.url.toLowerCase().endsWith('.webm') ? 'video/webm' : curAsset.url.toLowerCase().endsWith('.ogv') ? 'video/ogg' : 'video/mp4';
-                                      return (
-                                        <video
-                                          key={videoSrc}
-                                          muted
-                                          playsInline
-                                          preload="metadata"
-                                          referrerPolicy="no-referrer"
-                                          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                                        >
-                                          <source src={videoSrc} type={mimeType} />
-                                        </video>
-                                      );
-                                    })()
-                                  )}
-                                </div>
-                                
-                                {/* Play overlay */}
-                                <div style={{
-                                  position: 'absolute',
-                                  top: 0,
-                                  left: 0,
-                                  right: 0,
-                                  bottom: 0,
-                                  background: 'rgba(0, 0, 0, 0.3)',
-                                  display: 'flex',
-                                  alignItems: 'center',
-                                  justifyContent: 'center',
-                                  zIndex: 1
-                                }}>
-                                  <motion.div
-                                    whileHover={{ scale: 1.15, backgroundColor: 'rgba(0, 0, 0, 0.85)' }}
-                                    whileTap={{ scale: 0.92 }}
-                                    transition={{ type: "spring", stiffness: 400, damping: 25 }}
-                                    style={{
-                                      width: '56px',
-                                      height: '56px',
-                                      borderRadius: '50%',
-                                      background: 'rgba(0, 0, 0, 0.70)',
-                                      border: `1px solid ${theme.border || 'rgba(255,255,255,0.45)'}`,
-                                      display: 'flex',
-                                      alignItems: 'center',
-                                      justifyContent: 'center',
-                                      boxShadow: '0 8px 32px rgba(0,0,0,0.4)',
-                                      color: '#ffffff'
-                                    }}
-                                  >
-                                    <Play size={20} fill="currentColor" style={{ marginLeft: '3px' }} />
-                                  </motion.div>
-                                </div>
-                              </div>
-                            ) : curAsset.type === 'audio' ? (
-                              <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: isMapDarkMode ? '#030303' : '#f9f9f9', gap: '20px', padding: '24px' }}>
-                                <div style={{ width: '64px', height: '64px', borderRadius: '50%', background: isMapDarkMode ? '#222' : '#eee', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: theme.text }}>
-                                    <path d="M9 18V5l12-2v13"></path>
-                                    <circle cx="6" cy="18" r="3"></circle>
-                                    <circle cx="18" cy="16" r="3"></circle>
-                                  </svg>
-                                </div>
-                                <audio 
-                                   src={curAsset.url} 
-                                   controls 
-                                   style={{ width: '100%', height: '40px' }} 
-                                   onPlay={() => {
-                                     if (trackCustomEvent && activeTermNode) {
-                                       trackCustomEvent('play_audio', {
-                                         audio_url: curAsset.url,
-                                         associated_feature: activeTermNode.name
-                                       });
-                                     }
-                                   }}
-                                 />
-                                <p style={{ color: theme.textDim, fontSize: '9px', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: 'bold' }}>Audio Intelligence Intercept</p>
-                              </div>
-                            ) : (
-                              <motion.img 
-                                key={`${activeTermNode.id}-${activeImageIndex}`}
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: isImageLoading ? 0 : 1 }}
-                                transition={{ duration: 0.3 }}
-                                onClick={() => setIsLightboxOpen(true)}
-                                src={imgSrc} 
-                                alt={`${activeTermNode.name} asset viewport`} 
-                                referrerPolicy="no-referrer"
-                                onLoad={() => setIsImageLoading(false)}
-                                onError={() => {
-                                  setIsImageLoading(false);
-                                  if (curAsset.url) {
-                                    setBrokenImages(prev => ({ ...prev, [curAsset.url]: true }));
-                                  }
-                                }}
-                                style={{ 
-                                  width: isBroken ? '48px' : '100%', 
-                                  height: isBroken ? '48px' : '100%', 
-                                  objectFit: isBroken ? 'contain' : 'cover',                     
-                                  backgroundColor: 'transparent',           
-                                  filter: isBroken ? (isMapDarkMode ? 'invert(1)' : 'none') : 'none',
-                                  cursor: 'pointer'
-                                }}
-                              />
-                            )}
-                          </>
-                        );
-                      })()}
-                      
-                      <div style={{ 
-                        position: 'absolute', 
-                        bottom: '4px', 
-                        left: '4px', right: '4px', 
-                        display: 'flex', 
-                        alignItems: 'center', 
-                        justifyContent: 'space-between', 
-                        zIndex: 2,
-                        pointerEvents: 'none'
-                      }}>
-                        <div style={{ display: 'flex', gap: '4px', flex: 1, justifyContent: 'flex-start', pointerEvents: 'auto' }}>
-                          {activeAssets.length > 1 && (
-                            <>
-                              <motion.button 
-                                whileHover={{ opacity: 0.7 }}
-                                onClick={handlePrevImage} 
-                                style={{ 
-                                  background: theme.bg, 
-                                  border: `1px solid ${theme.border}`, 
-                                  borderRadius: '50%', 
-                                  width: '30px', 
-                                  height: '30px', 
-                                  cursor: 'pointer', 
-                                  padding: '0',
-                                  display: 'flex', 
-                                  alignItems: 'center', 
-                                  justifyContent: 'center',
-                                  boxShadow: 'none',
-                                  fontFamily: '"Space Mono", monospace'
-                                }}
-                              >
-                                <img 
-                                  src="/icons/icon-arrow-left.svg" 
-                                  style={{ width: '6px', height: '12px', filter: isMapDarkMode ? 'brightness(0) invert(1)' : 'brightness(0)' }} 
-                                  alt="prev" 
-                                />
-                              </motion.button>
-                              <motion.button 
-                                whileHover={{ opacity: 0.7 }}
-                                onClick={handleNextImage} 
-                                style={{ 
-                                  background: theme.bg, 
-                                  border: `1px solid ${theme.border}`, 
-                                  borderRadius: '50%', 
-                                  width: '30px', 
-                                  height: '30px', 
-                                  cursor: 'pointer', 
-                                  padding: '0',
-                                  display: 'flex', 
-                                  alignItems: 'center', 
-                                  justifyContent: 'center',
-                                  boxShadow: 'none',
-                                  fontFamily: '"Space Mono", monospace'
-                                }}
-                              >
-                                <img 
-                                  src="/icons/icon-arrow-left.svg" 
-                                  style={{ width: '6px', height: '12px', transform: 'rotate(180deg)', filter: isMapDarkMode ? 'brightness(0) invert(1)' : 'brightness(0)' }} 
-                                  alt="next" 
-                                />
-                              </motion.button>
-                            </>
-                          )}
-                        </div>
+                              ) : curAsset.type === 'video' ? (
+                                <div 
+                                  onClick={() => setIsLightboxOpen(true)}
+                                  style={{ 
+                                    width: '100%', 
+                                    height: '100%', 
+                                    position: 'relative', 
+                                    cursor: 'pointer',
+                                    overflow: 'hidden',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center'
+                                  }}
+                                >
+                                  <div style={{ width: '100%', height: '100%', pointerEvents: 'none', overflow: 'hidden', position: 'relative' }}>
+                                    {(curAsset.url.includes('youtube.com') || 
+                                     curAsset.url.includes('youtu.be') || 
+                                     curAsset.url.includes('dvidshub.net/video/') ||
+                                     curAsset.url.includes('twitter.com') ||
+                                     curAsset.url.includes('x.com')) ? (
+                                      <iframe
+                                        src={(curAsset.url.includes('dvidshub.net/video/') || curAsset.url.includes('twitter.com') || curAsset.url.includes('x.com')) ? getEmbedUrl(curAsset.url) : `${getEmbedUrl(curAsset.url)}?autoplay=0&controls=0&mute=1`}
+                                        style={curAsset.url.includes('dvidshub.net/video/') ? {
+                                          border: 'none',
+                                          position: 'absolute',
+                                          top: 0,
+                                          left: '50%',
+                                          transform: 'translateX(-50%)',
+                                          width: '165%',
+                                          height: '190%'
+                                        } : { 
+                                          border: 'none', 
+                                          position: 'absolute',
+                                          top: '50%',
+                                          left: '50%',
+                                          transform: 'translate(-50%, -50%)',
+                                          width: '180%', 
+                                          height: '180%'
+                                        }}
+                                        title="Video asset viewport"
+                                      />
+                                    ) : (
+                                      (() => {
+                                        const videoSrc = curAsset.url.startsWith('http')
+                                          ? `/api/proxy-resource?url=${encodeURIComponent(curAsset.url)}`
+                                          : curAsset.url;
+                                        const mimeType = curAsset.url.toLowerCase().endsWith('.webm') ? 'video/webm' : curAsset.url.toLowerCase().endsWith('.ogv') ? 'video/ogg' : 'video/mp4';
+                                        return (
+                                          <video
+                                            key={videoSrc}
+                                            muted
+                                            playsInline
+                                            preload="metadata"
+                                            referrerPolicy="no-referrer"
+                                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                          >
+                                            <source src={videoSrc} type={mimeType} />
+                                          </video>
+                                        );
+                                      })()
+                                    )}
+                                  </div>
 
-                        {activeAssets.length > 1 && (
-                          <div style={{ display: 'flex', flex: 1, justifyContent: 'center', pointerEvents: 'auto' }}>
-                            <div style={{ 
-                              background: 'rgba(0, 0, 0, 0.65)', 
-                              backdropFilter: 'blur(2px)',
-                              color: '#ffffff', 
-                              fontSize: '11px', 
-                              fontFamily: '"Space Mono", monospace',
-                              fontWeight: '700',
-                              height: '30px',
-                              display: 'flex',
-                              alignItems: 'center',
-                              padding: '0 16px', 
-                              borderRadius: '15px', 
-                              letterSpacing: '0.5px',
-                              textAlign: 'center',
-                              whiteSpace: 'nowrap'
-                            }}>
-                              {activeImageIndex + 1}/{activeAssets.length}
-                            </div>
+                                  {/* Play overlay */}
+                                  <div style={{
+                                    position: 'absolute',
+                                    top: 0,
+                                    left: 0,
+                                    right: 0,
+                                    bottom: 0,
+                                    background: 'rgba(0, 0, 0, 0.3)',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    zIndex: 1
+                                  }}>
+                                    <motion.div
+                                      whileHover={{ scale: 1.15, backgroundColor: 'rgba(0, 0, 0, 0.85)' }}
+                                      whileTap={{ scale: 0.92 }}
+                                      transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                                      style={{
+                                        width: '56px',
+                                        height: '56px',
+                                        borderRadius: '50%',
+                                        background: 'rgba(0, 0, 0, 0.70)',
+                                        border: `1px solid ${theme.border || 'rgba(255,255,255,0.45)'}`,
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        boxShadow: '0 8px 32px rgba(0,0,0,0.4)',
+                                        color: '#ffffff'
+                                      }}
+                                    >
+                                      <Play size={20} fill="currentColor" style={{ marginLeft: '3px' }} />
+                                    </motion.div>
+                                  </div>
+                                </div>
+                              ) : curAsset.type === 'audio' ? (
+                                <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: isMapDarkMode ? '#030303' : '#f9f9f9', gap: '20px', padding: '24px' }}>
+                                  <div style={{ width: '64px', height: '64px', borderRadius: '50%', background: isMapDarkMode ? '#222' : '#eee', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: theme.text }}>
+                                      <path d="M9 18V5l12-2v13"></path>
+                                      <circle cx="6" cy="18" r="3"></circle>
+                                      <circle cx="18" cy="16" r="3"></circle>
+                                    </svg>
+                                  </div>
+                                  <audio 
+                                     src={curAsset.url} 
+                                     controls 
+                                     style={{ width: '100%', height: '40px' }} 
+                                     onPlay={() => {
+                                       if (trackCustomEvent && activeTermNode) {
+                                         trackCustomEvent('play_audio', {
+                                           audio_url: curAsset.url,
+                                           associated_feature: activeTermNode.name
+                                         });
+                                       }
+                                     }}
+                                   />
+                                  <p style={{ color: theme.textDim, fontSize: '9px', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: 'bold' }}>Audio Intelligence Intercept</p>
+                                </div>
+                              ) : (
+                                <motion.img 
+                                  key={`${activeTermNode.id}-${activeImageIndex}`}
+                                  initial={{ opacity: 0 }}
+                                  animate={{ opacity: isImageLoading ? 0 : 1 }}
+                                  transition={{ duration: 0.3 }}
+                                  onClick={() => setIsLightboxOpen(true)}
+                                  src={imgSrc} 
+                                  alt={`${activeTermNode.name} asset viewport`} 
+                                  referrerPolicy="no-referrer"
+                                  onLoad={() => setIsImageLoading(false)}
+                                  onError={() => {
+                                    setIsImageLoading(false);
+                                    if (curAsset.url) {
+                                      setBrokenImages(prev => ({ ...prev, [curAsset.url]: true }));
+                                    }
+                                  }}
+                                  style={{ 
+                                    width: isBroken ? '48px' : '100%', 
+                                    height: isBroken ? '48px' : '100%', 
+                                    objectFit: isBroken ? 'contain' : 'cover',                     
+                                    backgroundColor: 'transparent',           
+                                    filter: isBroken ? (isMapDarkMode ? 'invert(1)' : 'none') : 'none',
+                                    cursor: 'pointer'
+                                  }}
+                                />
+                              )}
+                            </>
+                          );
+                        })()}
+
+                        <div style={{ 
+                          position: 'absolute', 
+                          bottom: '4px', 
+                          left: '4px', right: '4px', 
+                          display: 'flex', 
+                          alignItems: 'center', 
+                          justifyContent: 'space-between', 
+                          zIndex: 2,
+                          pointerEvents: 'none'
+                        }}>
+                          <div style={{ display: 'flex', gap: '4px', flex: 1, justifyContent: 'flex-start', pointerEvents: 'auto' }}>
+                            {activeAssets.length > 1 && (
+                              <>
+                                <motion.button 
+                                  whileHover={{ opacity: 0.7 }}
+                                  onClick={handlePrevImage} 
+                                  style={{ 
+                                    background: theme.bg, 
+                                    border: `1px solid ${theme.border}`, 
+                                    borderRadius: '50%', 
+                                    width: '30px', 
+                                    height: '30px', 
+                                    cursor: 'pointer', 
+                                    padding: '0',
+                                    display: 'flex', 
+                                    alignItems: 'center', 
+                                    justifyContent: 'center',
+                                    boxShadow: 'none',
+                                    fontFamily: '"Space Mono", monospace'
+                                  }}
+                                >
+                                  <img 
+                                    src="/icons/icon-arrow-left.svg" 
+                                    style={{ width: '6px', height: '12px', filter: isMapDarkMode ? 'brightness(0) invert(1)' : 'brightness(0)' }} 
+                                    alt="prev" 
+                                  />
+                                </motion.button>
+                                <motion.button 
+                                  whileHover={{ opacity: 0.7 }}
+                                  onClick={handleNextImage} 
+                                  style={{ 
+                                    background: theme.bg, 
+                                    border: `1px solid ${theme.border}`, 
+                                    borderRadius: '50%', 
+                                    width: '30px', 
+                                    height: '30px', 
+                                    cursor: 'pointer', 
+                                    padding: '0',
+                                    display: 'flex', 
+                                    alignItems: 'center', 
+                                    justifyContent: 'center',
+                                    boxShadow: 'none',
+                                    fontFamily: '"Space Mono", monospace'
+                                  }}
+                                >
+                                  <img 
+                                    src="/icons/icon-arrow-left.svg" 
+                                    style={{ width: '6px', height: '12px', transform: 'rotate(180deg)', filter: isMapDarkMode ? 'brightness(0) invert(1)' : 'brightness(0)' }} 
+                                    alt="next" 
+                                  />
+                                </motion.button>
+                              </>
+                            )}
                           </div>
-                        )}
-                        
-                        <div style={{ display: 'flex', flex: 1, justifyContent: 'flex-end', pointerEvents: 'auto' }}>
-                          <motion.button 
-                            whileHover={{ scale: 1.1, backgroundColor: isMapDarkMode ? '#222' : '#f0f0f0' }}
-                            onClick={() => setIsLightboxOpen(true)} 
-                            title="Expand image to Fullscreen Lightbox"
-                            style={{ 
-                              background: theme.bg, 
-                              border: `1px solid ${theme.border}`, 
-                              borderRadius: '50%', 
-                              width: '30px', 
-                              height: '30px', 
-                              cursor: 'pointer', 
-                              display: 'flex', 
-                              alignItems: 'center', 
-                              justifyContent: 'center',
-                              boxShadow: 'none',
-                              padding: 0,
-                              fontFamily: '"Space Mono", monospace',
-                              transition: 'background-color 0.2s ease'
-                            }}
-                          >
-                            <img src="/icons/icon-expand.svg" style={{ width: '30px', height: '30px', filter: theme.invert, pointerEvents: 'none' }} alt="expand" />
-                          </motion.button>
+
+                          {activeAssets.length > 1 && (
+                            <div style={{ display: 'flex', flex: 1, justifyContent: 'center', pointerEvents: 'auto' }}>
+                              <div style={{ 
+                                background: 'rgba(0, 0, 0, 0.65)', 
+                                backdropFilter: 'blur(2px)',
+                                color: '#ffffff', 
+                                fontSize: '11px', 
+                                fontFamily: '"Space Mono", monospace',
+                                fontWeight: '700',
+                                height: '30px',
+                                display: 'flex',
+                                alignItems: 'center',
+                                padding: '0 16px', 
+                                borderRadius: '15px', 
+                                letterSpacing: '0.5px',
+                                textAlign: 'center',
+                                whiteSpace: 'nowrap'
+                              }}>
+                                {activeImageIndex + 1}/{activeAssets.length}
+                              </div>
+                            </div>
+                          )}
+
+                          <div style={{ display: 'flex', flex: 1, justifyContent: 'flex-end', pointerEvents: 'auto' }}>
+                            <motion.button 
+                              whileHover={{ scale: 1.1, backgroundColor: isMapDarkMode ? '#222' : '#f0f0f0' }}
+                              onClick={() => setIsLightboxOpen(true)} 
+                              title="Expand image to Fullscreen Lightbox"
+                              style={{ 
+                                background: theme.bg, 
+                                border: `1px solid ${theme.border}`, 
+                                borderRadius: '50%', 
+                                width: '30px', 
+                                height: '30px', 
+                                cursor: 'pointer', 
+                                display: 'flex', 
+                                alignItems: 'center', 
+                                justifyContent: 'center',
+                                boxShadow: 'none',
+                                padding: 0,
+                                fontFamily: '"Space Mono", monospace',
+                                transition: 'background-color 0.2s ease'
+                              }}
+                            >
+                              <img src="/icons/icon-expand.svg" style={{ width: '30px', height: '30px', filter: theme.invert, pointerEvents: 'none' }} alt="expand" />
+                            </motion.button>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                )}
-
-                {/* Rest of the details content padded beneath the image gallery */}
-                <div 
-                  style={{ 
-                    padding: '24px', 
-                    textAlign: 'left',
-                    flex: 1
-                  }}
-                >
-                  {/* Title */}
-                  <h1 style={{ 
-                    fontFamily: '"Space Mono", monospace',
-                    fontWeight: '400', 
-                    fontSize: '32px', 
-                    lineHeight: '36px',
-                    color: theme.text, 
-                    margin: '0 0 8px 0', 
-                    textAlign: 'left', 
-                    letterSpacing: '-0.5px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '8px'
-                  }}>
-
-                    {activeTermNode.subLabel === 'Possible Nephilim Bloodline' && (
-                      <span style={{
-                        marginRight: '12px',
-                        fontWeight: 900,
-                        fontSize: '44px',
-                        lineHeight: 1,
-                        WebkitTextStroke: '3px currentColor',
-                        flexShrink: 0
-                      }}>✖</span>
-                    )}
-                    {activeTermNode.name}
-                  </h1>
-
-                  {/* SubLabel */}
-                  {activeTermNode.subLabel && (
-                    <div style={{
-                      fontSize: '10px',
-                      fontWeight: 'bold',
-                      color: isMapDarkMode ? '#ff5c5c' : '#b31b1b',
-                      letterSpacing: '1px',
-                      textTransform: 'uppercase',
-                      marginBottom: '12px',
-                      fontFamily: '"Space Mono", monospace'
-                    }}>
-                      [{activeTermNode.subLabel}]
-                    </div>
                   )}
 
-                  {/* Actions Row (Flag, View on Map, View on Timeline) */}
-                  <div style={{ display: 'flex', gap: '8px', marginBottom: '16px', flexWrap: 'wrap' }}>
-                    {onFlagItem && (
-                      <motion.button
-                        whileTap={{ scale: 0.95 }}
-                        whileHover={{ scale: 1.05 }}
-                        onClick={() => onFlagItem(activeTermNode)}
-                        style={{
-                          display: 'flex',
-                          alignItems: 'center',
-                          gap: '6px',
-                          background: 'transparent',
-                          color: isMapDarkMode ? '#fff' : '#000',
-                          border: `1px solid ${isMapDarkMode ? '#fff' : '#000'}`,
-                          padding: '6px 12px',
-                          borderRadius: '16px',
-                          cursor: 'pointer',
-                          fontSize: '11px',
-                          fontWeight: 'bold',
-                          fontFamily: '"Space Mono", monospace',
-                          letterSpacing: '0.05em',
-                          transition: 'all 0.2s ease',
-                          whiteSpace: 'nowrap'
-                        }}
-                        title="Report inaccuracy / flag this term"
-                      >
-                        <Flag size={13} />
-                        <span>FLAG</span>
-                      </motion.button>
+                  {/* Rest of the details content padded beneath the image gallery */}
+                  <div 
+                    style={{ 
+                      padding: '24px', 
+                      textAlign: 'left',
+                      flex: 1
+                    }}
+                  >
+                    {/* Title */}
+                    <h1 style={{ 
+                      fontFamily: '"Space Mono", monospace',
+                      fontWeight: '400', 
+                      fontSize: '32px', 
+                      lineHeight: '36px',
+                      color: theme.text, 
+                      margin: '0 0 8px 0', 
+                      textAlign: 'left', 
+                      letterSpacing: '-0.5px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '8px'
+                    }}>
+
+                      {activeTermNode.subLabel === 'Possible Nephilim Bloodline' && (
+                        <span style={{
+                          marginRight: '12px',
+                          fontWeight: 900,
+                          fontSize: '44px',
+                          lineHeight: 1,
+                          WebkitTextStroke: '3px currentColor',
+                          flexShrink: 0
+                        }}>✖</span>
+                      )}
+                      {activeTermNode.name}
+                    </h1>
+
+                    {/* SubLabel */}
+                    {activeTermNode.subLabel && (
+                      <div style={{
+                        fontSize: '10px',
+                        fontWeight: 'bold',
+                        color: isMapDarkMode ? '#ff5c5c' : '#b31b1b',
+                        letterSpacing: '1px',
+                        textTransform: 'uppercase',
+                        marginBottom: '12px',
+                        fontFamily: '"Space Mono", monospace'
+                      }}>
+                        [{activeTermNode.subLabel}]
+                      </div>
                     )}
 
-                    {resolvedMapInfo && (
-                      <motion.button
-                        whileTap={{ scale: 0.95 }}
-                        whileHover={{ scale: 1.05 }}
-                        onClick={() => onViewOnMap(resolvedMapInfo.layer, resolvedMapInfo.featureSearchTerm)}
-                        style={{
-                          display: 'flex',
-                          alignItems: 'center',
-                          gap: '6px',
-                          background: 'transparent',
-                          color: isMapDarkMode ? '#fff' : '#000',
-                          border: `1px solid ${isMapDarkMode ? '#fff' : '#000'}`,
-                          padding: '6px 12px',
-                          borderRadius: '16px',
-                          cursor: 'pointer',
-                          fontSize: '11px',
-                          fontWeight: 'bold',
-                          fontFamily: '"Space Mono", monospace',
-                          letterSpacing: '0.05em',
-                          transition: 'all 0.2s ease',
-                          whiteSpace: 'nowrap'
-                        }}
-                      >
-                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                          <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon>
-                          <line x1="9" y1="3" x2="9" y2="18"></line>
-                          <line x1="15" y1="6" x2="15" y2="21"></line>
-                        </svg>
-                        <span>VIEW ON MAP</span>
-                      </motion.button>
-                    )}
-
-                    {activeTermNode.timelineId && (
-                      <motion.button
-                        whileTap={{ scale: 0.95 }}
-                        whileHover={{ scale: 1.05 }}
-                        onClick={() => onViewOnTimeline(activeTermNode.timelineId!)}
-                        style={{
-                          display: 'flex',
-                          alignItems: 'center',
-                          gap: '6px',
-                          background: 'transparent',
-                          color: isMapDarkMode ? '#fff' : '#000',
-                          border: `1px solid ${isMapDarkMode ? '#fff' : '#000'}`,
-                          padding: '6px 12px',
-                          borderRadius: '16px',
-                          cursor: 'pointer',
-                          fontSize: '11px',
-                          fontWeight: 'bold',
-                          fontFamily: '"Space Mono", monospace',
-                          letterSpacing: '0.05em',
-                          transition: 'all 0.2s ease',
-                          whiteSpace: 'nowrap'
-                        }}
-                      >
-                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                          <circle cx="12" cy="12" r="10"></circle>
-                          <polyline points="12 6 12 12 16 14"></polyline>
-                        </svg>
-                        <span>TIMELINE VIEW</span>
-                      </motion.button>
-                    )}
-                  </div>
-
-                  {/* Tag Pills (Category layer + Related terms) */}
-                  {((activeTermNode.layer) || (activeTermNode.relatedIds && activeTermNode.relatedIds.length > 0)) && (
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '24px', justifyContent: 'flex-start' }}>
-                      {/* Node's own Layer tag */}
-                      {activeTermNode.layer && (
-                        <button 
-                          style={{ 
-                            height: '24px',
-                            display: 'inline-flex',
+                    {/* Actions Row (Flag, View on Map, View on Timeline) */}
+                    <div style={{ display: 'flex', gap: '8px', marginBottom: '16px', flexWrap: 'wrap' }}>
+                      {onFlagItem && (
+                        <motion.button
+                          whileTap={{ scale: 0.95 }}
+                          whileHover={{ scale: 1.05 }}
+                          onClick={() => onFlagItem(activeTermNode)}
+                          style={{
+                            display: 'flex',
                             alignItems: 'center',
-                            fontSize: '10px', 
-                            fontWeight: '400', 
-                            padding: '0 12px', 
-                            borderRadius: '12px', 
-                            background: activeRootColor, 
-                            border: 'none',
-                            color: '#000000',
-                            cursor: 'default',
-                            textTransform: 'uppercase',
+                            gap: '6px',
+                            background: 'transparent',
+                            color: isMapDarkMode ? '#fff' : '#000',
+                            border: `1px solid ${isMapDarkMode ? '#fff' : '#000'}`,
+                            padding: '6px 12px',
+                            borderRadius: '16px',
+                            cursor: 'pointer',
+                            fontSize: '11px',
+                            fontWeight: 'bold',
+                            fontFamily: '"Space Mono", monospace',
                             letterSpacing: '0.05em',
-                            fontFamily: '"Space Mono", monospace'
+                            transition: 'all 0.2s ease',
+                            whiteSpace: 'nowrap'
                           }}
+                          title="Report inaccuracy / flag this term"
                         >
-                          {activeTermNode.layer}
-                        </button>
+                          <Flag size={13} />
+                          <span>FLAG</span>
+                        </motion.button>
                       )}
 
-                      {/* Related term tags */}
-                      {activeTermNode.relatedIds?.map(relId => {
-                        const relNode = nodes.find(t => t.id === relId);
-                        if (!relNode) return null;
-                        
-                        // Prevent duplicate category tags
-                        if (activeTermNode.layer && relNode.name.toLowerCase() === activeTermNode.layer.toLowerCase()) {
-                          return null;
-                        }
+                      {resolvedMapInfo && (
+                        <motion.button
+                          whileTap={{ scale: 0.95 }}
+                          whileHover={{ scale: 1.05 }}
+                          onClick={() => onViewOnMap(resolvedMapInfo.layer, resolvedMapInfo.featureSearchTerm)}
+                          style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '6px',
+                            background: 'transparent',
+                            color: isMapDarkMode ? '#fff' : '#000',
+                            border: `1px solid ${isMapDarkMode ? '#fff' : '#000'}`,
+                            padding: '6px 12px',
+                            borderRadius: '16px',
+                            cursor: 'pointer',
+                            fontSize: '11px',
+                            fontWeight: 'bold',
+                            fontFamily: '"Space Mono", monospace',
+                            letterSpacing: '0.05em',
+                            transition: 'all 0.2s ease',
+                            whiteSpace: 'nowrap'
+                          }}
+                        >
+                          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                            <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon>
+                            <line x1="9" y1="3" x2="9" y2="18"></line>
+                            <line x1="15" y1="6" x2="15" y2="21"></line>
+                          </svg>
+                          <span>VIEW ON MAP</span>
+                        </motion.button>
+                      )}
 
-                        const relColor = getNodeColor(relNode);
+                      {activeTermNode.timelineId && (
+                        <motion.button
+                          whileTap={{ scale: 0.95 }}
+                          whileHover={{ scale: 1.05 }}
+                          onClick={() => onViewOnTimeline(activeTermNode.timelineId!)}
+                          style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '6px',
+                            background: 'transparent',
+                            color: isMapDarkMode ? '#fff' : '#000',
+                            border: `1px solid ${isMapDarkMode ? '#fff' : '#000'}`,
+                            padding: '6px 12px',
+                            borderRadius: '16px',
+                            cursor: 'pointer',
+                            fontSize: '11px',
+                            fontWeight: 'bold',
+                            fontFamily: '"Space Mono", monospace',
+                            letterSpacing: '0.05em',
+                            transition: 'all 0.2s ease',
+                            whiteSpace: 'nowrap'
+                          }}
+                        >
+                          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                          </svg>
+                          <span>TIMELINE VIEW</span>
+                        </motion.button>
+                      )}
+                    </div>
 
-                        return (
+                    {/* Tag Pills (Category layer + Related terms) */}
+                    {((activeTermNode.layer) || (activeTermNode.relatedIds && activeTermNode.relatedIds.length > 0)) && (
+                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '24px', justifyContent: 'flex-start' }}>
+                        {/* Node's own Layer tag */}
+                        {activeTermNode.layer && (
                           <button 
-                            key={relId} 
-                            onClick={() => {
-                              const path = getPathToRoot(relId);
-                              setSelectedPath(path);
-                            }}
-                            title={`Navigate to ${relNode.name}`}
                             style={{ 
                               height: '24px',
                               display: 'inline-flex',
@@ -3138,350 +3193,394 @@ export default function CodexPage({
                               fontWeight: '400', 
                               padding: '0 12px', 
                               borderRadius: '12px', 
-                              background: relColor, 
+                              background: activeRootColor, 
                               border: 'none',
                               color: '#000000',
-                              cursor: 'pointer',
+                              cursor: 'default',
                               textTransform: 'uppercase',
-                              letterSpacing: '0.5px',
-                              fontFamily: '"Space Mono", monospace',
-                              transition: 'transform 0.1s ease, box-shadow 0.1s ease'
-                            }}
-                            onMouseEnter={e => {
-                              e.currentTarget.style.transform = 'scale(1.05)';
-                            }}
-                            onMouseLeave={e => {
-                              e.currentTarget.style.transform = 'none';
+                              letterSpacing: '0.05em',
+                              fontFamily: '"Space Mono", monospace'
                             }}
                           >
-                            {relNode.name}
+                            {activeTermNode.layer}
                           </button>
-                        );
-                      })}
-                    </div>
-                  )}
+                        )}
 
-                {/* Linguistic Translations */}
-                {activeTermNode.translations && activeTermNode.translations.length > 0 && (
-                  <div
-                    style={{
-                      border: `1px solid ${theme.borderLight}`,
-                      borderRadius: '8px',
-                      padding: '16px',
-                      background: isMapDarkMode ? 'rgba(255,255,255,0.03)' : 'rgba(0,0,0,0.02)',
-                      marginBottom: '24px'
-                    }}
-                  >
-                    <h3
-                      style={{
-                        fontFamily: '"Space Mono", monospace',
-                        fontWeight: '700',
-                        fontSize: '11px',
-                        lineHeight: '22px',
-                        textTransform: 'uppercase',
-                        color: theme.text,
-                        margin: '0 0 12px 0'
-                      }}
-                    >
-                      Linguistic Roots
-                    </h3>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                      {activeTermNode.translations.map((trans, tIdx) => (
-                        <div
-                          key={tIdx}
+                        {/* Related term tags */}
+                        {activeTermNode.relatedIds?.map(relId => {
+                          const relNode = nodes.find(t => t.id === relId);
+                          if (!relNode) return null;
+
+                          // Prevent duplicate category tags
+                          if (activeTermNode.layer && relNode.name.toLowerCase() === activeTermNode.layer.toLowerCase()) {
+                            return null;
+                          }
+
+                          const relColor = getNodeColor(relNode);
+
+                          return (
+                            <button 
+                              key={relId} 
+                              onClick={() => {
+                                const path = getPathToRoot(relId);
+                                setSelectedPath(path);
+                              }}
+                              title={`Navigate to ${relNode.name}`}
+                              style={{ 
+                                height: '24px',
+                                display: 'inline-flex',
+                                alignItems: 'center',
+                                fontSize: '10px', 
+                                fontWeight: '400', 
+                                padding: '0 12px', 
+                                borderRadius: '12px', 
+                                background: relColor, 
+                                border: 'none',
+                                color: '#000000',
+                                cursor: 'pointer',
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.5px',
+                                fontFamily: '"Space Mono", monospace',
+                                transition: 'transform 0.1s ease, box-shadow 0.1s ease'
+                              }}
+                              onMouseEnter={e => {
+                                  e.currentTarget.style.transform = 'scale(1.05)';
+                              }}
+                              onMouseLeave={e => {
+                                  e.currentTarget.style.transform = 'none';
+                              }}
+                            >
+                              {relNode.name}
+                            </button>
+                          );
+                        })}
+                      </div>
+                    )}
+
+                    {/* Linguistic Translations */}
+                    {activeTermNode.translations && activeTermNode.translations.length > 0 && (
+                      <div
+                        style={{
+                          border: `1px solid ${theme.borderLight}`,
+                          borderRadius: '8px',
+                          padding: '16px',
+                          background: isMapDarkMode ? 'rgba(255,255,255,0.03)' : 'rgba(0,0,0,0.02)',
+                          marginBottom: '24px'
+                        }}
+                      >
+                        <h3
                           style={{
-                            display: 'flex',
-                            alignItems: 'baseline',
-                            justifyContent: 'space-between',
-                            flexWrap: 'wrap',
-                            gap: '8px',
-                            borderBottom: tIdx < activeTermNode.translations!.length - 1 ? `1px dashed ${theme.borderLight}` : 'none',
-                            paddingBottom: tIdx < activeTermNode.translations!.length - 1 ? '12px' : '0'
+                            fontFamily: '"Space Mono", monospace',
+                            fontWeight: '700',
+                            fontSize: '11px',
+                            lineHeight: '22px',
+                            textTransform: 'uppercase',
+                            color: theme.text,
+                            margin: '0 0 12px 0'
                           }}
                         >
-                          <div style={{ display: 'flex', flexDirection: 'column' }}>
-                            <span style={{ fontSize: '8.5px', fontWeight: 'bold', textTransform: 'uppercase', color: adjustColorForContrast(activeRootColor), letterSpacing: '0.5px' }}>
-                              {trans.lang}
-                            </span>
-                            <span style={{ fontSize: '11px', fontWeight: 'bold', color: theme.text, fontFamily: '"Space Mono", monospace' }}>
-                              {trans.translit}
-                            </span>
-                            <span style={{ fontSize: '10px', fontStyle: 'italic', color: theme.textDim }}>
-                              "{trans.meaning}"
-                            </span>
-                          </div>
-                          
-                          <div
-                            style={{
-                              fontSize: '24px',
-                              fontWeight: 'bold',
-                              color: theme.text,
-                              fontFamily: trans.lang === 'Hebrew' ? 'serif' : '"Space Mono", monospace',
-                              letterSpacing: '1px'
-                            }}
-                          >
-                            {trans.original}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {/* Description */}
-                <div style={{ paddingTop: '0', textAlign: 'left', marginBottom: '24px' }}>
-                  <div style={{ fontFamily: '"Space Mono", monospace', fontWeight: '700', fontSize: '11px', lineHeight: '22px', textTransform: 'uppercase' }}>
-                    DESCRIPTION:
-                  </div>
-                  <p style={{ 
-                    fontFamily: '"Space Mono", monospace',
-                    fontWeight: '400',
-                    fontSize: '10px', 
-                    lineHeight: '22px', 
-                    color: theme.text,
-                    marginTop: '4px', 
-                    whiteSpace: 'pre-line', 
-                    textAlign: 'left' 
-                  }}>
-                    {activeTermNode.description}
-                  </p>
-                </div>
-
-                {/* Scripture references */}
-                {activeTermNode.bibleVerses && activeTermNode.bibleVerses.length > 0 && (
-                  <div 
-                    style={{ 
-                      marginTop: '24px', 
-                      borderTop: `1px solid ${theme.borderLight || theme.border}`, 
-                      paddingTop: '20px', 
-                      display: 'flex', 
-                      flexDirection: 'column', 
-                      gap: '10px',
-                      marginBottom: '24px'
-                    }}
-                  >
-                    <div style={{ fontFamily: '"Space Mono", monospace', fontWeight: '700', fontSize: '11px', lineHeight: '22px', textTransform: 'uppercase' }}>
-                      SCRIPTURE REFERENCES:
-                    </div>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                      {activeTermNode.bibleVerses.map((verse, vIdx) => {
-                        const [quote, citation] = verse.split(' — ');
-                        return (
-                          <div
-                            key={vIdx}
-                            style={{
-                              borderLeft: `2px solid ${activeRootColor}`,
-                              paddingLeft: '12px',
-                              paddingTop: '2px',
-                              paddingBottom: '2px',
-                              display: 'flex',
-                              flexDirection: 'column',
-                              gap: '4px'
-                            }}
-                          >
-                            <span style={{ fontSize: '10px', fontStyle: 'italic', lineHeight: '1.5', color: theme.text }}>
-                              "{quote}"
-                            </span>
-                            {citation && (() => {
-                              const urlRegex = /(https?:\/\/[^\s\)]+)/g;
-                              const match = citation.match(urlRegex);
-                              if (match) {
-                                const url = match[0];
-                                const displayText = citation.replace(`(${url})`, '').trim();
-                                return (
-                                  <span style={{ fontSize: '8.5px', fontWeight: 'bold', color: adjustColorForContrast(activeRootColor), letterSpacing: '0.5px' }}>
-                                    — {displayText.toUpperCase()}{' '}
-                                    <a
-                                      href={url}
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                      style={{
-                                        color: adjustColorForContrast(activeRootColor),
-                                        textDecoration: 'underline',
-                                        opacity: 0.85,
-                                        marginLeft: '4px',
-                                        cursor: 'pointer'
-                                      }}
-                                    >
-                                      [LINK]
-                                    </a>
-                                  </span>
-                                );
-                              }
-                              return (
-                                <span style={{ fontSize: '8.5px', fontWeight: 'bold', color: adjustColorForContrast(activeRootColor), letterSpacing: '0.5px' }}>
-                                  — {citation.toUpperCase()}
+                          Linguistic Roots
+                        </h3>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                          {activeTermNode.translations.map((trans, tIdx) => (
+                            <div
+                              key={tIdx}
+                              style={{
+                                display: 'flex',
+                                alignItems: 'baseline',
+                                justifyContent: 'space-between',
+                                flexWrap: 'wrap',
+                                gap: '8px',
+                                borderBottom: tIdx < activeTermNode.translations!.length - 1 ? `1px dashed ${theme.borderLight}` : 'none',
+                                paddingBottom: tIdx < activeTermNode.translations!.length - 1 ? '12px' : '0'
+                              }}
+                            >
+                              <div style={{ display: 'flex', flexDirection: 'column' }}>
+                                <span style={{ fontSize: '8.5px', fontWeight: 'bold', textTransform: 'uppercase', color: adjustColorForContrast(activeRootColor), letterSpacing: '0.5px' }}>
+                                  {trans.lang}
                                 </span>
-                              );
-                            })()}
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </div>
-                )}
+                                <span style={{ fontSize: '11px', fontWeight: 'bold', color: theme.text, fontFamily: '"Space Mono", monospace' }}>
+                                  {trans.translit}
+                                </span>
+                                <span style={{ fontSize: '10px', fontStyle: 'italic', color: theme.textDim }}>
+                                  "{trans.meaning}"
+                                </span>
+                              </div>
 
-                {/* Primary Sources & Ancient Texts */}
-                {activeTermNode.sources && activeTermNode.sources.length > 0 && (
-                  <div 
-                    style={{ 
-                      marginTop: '24px', 
-                      borderTop: `1px solid ${theme.borderLight || theme.border}`, 
-                      paddingTop: '20px', 
-                      display: 'flex', 
-                      flexDirection: 'column', 
-                      gap: '10px',
-                      marginBottom: '24px'
-                    }}
-                  >
-                    <div style={{ fontFamily: '"Space Mono", monospace', fontWeight: '700', fontSize: '11px', lineHeight: '22px', textTransform: 'uppercase', color: theme.text }}>
-                      PRIMARY SOURCES & ANCIENT TEXTS:
-                    </div>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
-                      {activeTermNode.sources.map((source, sIdx) => {
-                        const rootColor = activeRootColor;
-                        return (
-                          <div
-                            key={sIdx}
-                            style={{
-                              fontFamily: '"Space Mono", monospace',
-                              fontSize: '9px',
-                              fontWeight: 'bold',
-                              padding: '4px 8px',
-                              borderRadius: '4px',
-                              backgroundColor: `${rootColor}15`,
-                              border: `1px solid ${rootColor}30`,
-                              color: adjustColorForContrast(rootColor),
-                              whiteSpace: 'nowrap'
-                            }}
-                          >
-                            {source.trim().toUpperCase() === 'CANONICAL SCRIPTURE' ? 'BIBLE' : source.toUpperCase()}
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </div>
-                )}
-
-                {/* Legend explanation for Apocryphal tag */}
-                {isOnlyApocryphal(activeTermNode) && (
-                  <div 
-                    style={{ 
-                      marginTop: '24px',
-                      borderTop: `1px solid ${theme.borderLight || theme.border}`,
-                      paddingTop: '20px',
-                      marginBottom: '24px'
-                    }}
-                  >
-                    <div 
-                      style={{ 
-                        padding: '12px',
-                        border: `1px solid ${isMapDarkMode ? 'rgba(255, 92, 92, 0.4)' : 'rgba(179, 27, 27, 0.4)'}`,
-                        borderRadius: '8px',
-                        background: isMapDarkMode ? 'rgba(255, 92, 92, 0.04)' : 'rgba(255, 92, 92, 0.02)',
-                      }}
-                    >
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
-                        <span 
-                          style={{ 
-                            display: 'inline-flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            fontSize: '11px',
-                            lineHeight: '1',
-                            fontWeight: '900',
-                            color: isMapDarkMode ? '#ff5c5c' : '#b31b1b',
-                            fontFamily: '"Space Mono", monospace',
-                          }}
-                        >
-                          ✖
-                        </span>
-                        <span style={{ fontSize: '9px', fontWeight: 'bold', fontFamily: '"Space Mono", monospace', color: isMapDarkMode ? '#ff5c5c' : '#b31b1b' }}>
-                          APOCRYPHAL INDICATOR
-                        </span>
+                              <div
+                                style={{
+                                  fontSize: '24px',
+                                  fontWeight: 'bold',
+                                  color: theme.text,
+                                  fontFamily: trans.lang === 'Hebrew' ? 'serif' : '"Space Mono", monospace',
+                                  letterSpacing: '1px'
+                                }}
+                              >
+                                {trans.original}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
                       </div>
-                      <p style={{ fontSize: '8.5px', lineHeight: '1.4', color: isMapDarkMode ? '#ffb3b3' : '#801c1c', margin: 0, fontFamily: '"Space Mono", monospace' }}>
-                        Represents apocryphal, non-canonical, or mythological entries outside of canonical scripture.
+                    )}
+
+                    {/* Description */}
+                    <div style={{ paddingTop: '0', textAlign: 'left', marginBottom: '24px' }}>
+                      <div style={{ fontFamily: '"Space Mono", monospace', fontWeight: '700', fontSize: '11px', lineHeight: '22px', textTransform: 'uppercase' }}>
+                        DESCRIPTION:
+                      </div>
+                      <p style={{ 
+                        fontFamily: '"Space Mono", monospace',
+                        fontWeight: '400',
+                        fontSize: '10px', 
+                        lineHeight: '22px', 
+                        color: theme.text,
+                        marginTop: '4px', 
+                        whiteSpace: 'pre-line', 
+                        textAlign: 'left' 
+                      }}>
+                        {activeTermNode.description}
                       </p>
                     </div>
-                  </div>
-                )}
 
-                {/* Legend explanation for Nephilim Bloodline tag */}
-                {activeTermNode.subLabel === 'Possible Nephilim Bloodline' && (
-                  <div 
-                    style={{ 
-                      marginTop: '24px',
-                      borderTop: `1px solid ${theme.borderLight || theme.border}`,
-                      paddingTop: '20px',
-                      marginBottom: '24px'
-                    }}
-                  >
-                    <div 
-                      style={{ 
-                        padding: '12px',
-                        border: `1px solid ${isMapDarkMode ? 'rgba(255, 92, 92, 0.4)' : 'rgba(179, 27, 27, 0.4)'}`,
-                        borderRadius: '8px',
-                        background: isMapDarkMode ? 'rgba(255, 92, 92, 0.04)' : 'rgba(255, 92, 92, 0.02)',
-                      }}
-                    >
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
-                        <span 
+                    {/* Scripture references */}
+                    {activeTermNode.bibleVerses && activeTermNode.bibleVerses.length > 0 && (
+                      <div 
+                        style={{ 
+                          marginTop: '24px', 
+                          borderTop: `1px solid ${theme.borderLight || theme.border}`, 
+                          paddingTop: '20px', 
+                          display: 'flex', 
+                          flexDirection: 'column', 
+                          gap: '10px',
+                          marginBottom: '24px'
+                        }}
+                      >
+                        <div style={{ fontFamily: '"Space Mono", monospace', fontWeight: '700', fontSize: '11px', lineHeight: '22px', textTransform: 'uppercase' }}>
+                          SCRIPTURE REFERENCES:
+                        </div>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                          {activeTermNode.bibleVerses.map((verse, vIdx) => {
+                            const [quote, citation] = verse.split(' — ');
+                            return (
+                              <div
+                                key={vIdx}
+                                style={{
+                                  borderLeft: `2px solid ${activeRootColor}`,
+                                  paddingLeft: '12px',
+                                  paddingTop: '2px',
+                                  paddingBottom: '2px',
+                                  display: 'flex',
+                                  flexDirection: 'column',
+                                  gap: '4px'
+                                }}
+                              >
+                                <span style={{ fontSize: '10px', fontStyle: 'italic', lineHeight: '1.5', color: theme.text }}>
+                                  "{quote}"
+                                </span>
+                                {citation && (() => {
+                                  const urlRegex = /(https?:\/\/[^\s\)]+)/g;
+                                  const match = citation.match(urlRegex);
+                                  if (match) {
+                                    const url = match[0];
+                                    const displayText = citation.replace(`(${url})`, '').trim();
+                                    return (
+                                      <span style={{ fontSize: '8.5px', fontWeight: 'bold', color: adjustColorForContrast(activeRootColor), letterSpacing: '0.5px' }}>
+                                        — {displayText.toUpperCase()}{' '}
+                                        <a
+                                          href={url}
+                                          target="_blank"
+                                          rel="noopener noreferrer"
+                                          style={{
+                                            color: adjustColorForContrast(activeRootColor),
+                                            textDecoration: 'underline',
+                                            opacity: 0.85,
+                                            marginLeft: '4px',
+                                            cursor: 'pointer'
+                                          }}
+                                        >
+                                          [LINK]
+                                        </a>
+                                      </span>
+                                    );
+                                  }
+                                  return (
+                                    <span style={{ fontSize: '8.5px', fontWeight: 'bold', color: adjustColorForContrast(activeRootColor), letterSpacing: '0.5px' }}>
+                                      — {citation.toUpperCase()}
+                                    </span>
+                                  );
+                                })()}
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Primary Sources & Ancient Texts */}
+                    {activeTermNode.sources && activeTermNode.sources.length > 0 && (
+                      <div 
+                        style={{ 
+                          marginTop: '24px', 
+                          borderTop: `1px solid ${theme.borderLight || theme.border}`, 
+                          paddingTop: '20px', 
+                          display: 'flex', 
+                          flexDirection: 'column', 
+                          gap: '10px',
+                          marginBottom: '24px'
+                        }}
+                      >
+                        <div style={{ fontFamily: '"Space Mono", monospace', fontWeight: '700', fontSize: '11px', lineHeight: '22px', textTransform: 'uppercase', color: theme.text }}>
+                          PRIMARY SOURCES & ANCIENT TEXTS:
+                        </div>
+                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
+                          {activeTermNode.sources.map((source, sIdx) => {
+                            const rootColor = activeRootColor;
+                            return (
+                              <div
+                                key={sIdx}
+                                style={{
+                                  fontFamily: '"Space Mono", monospace',
+                                  fontSize: '9px',
+                                  fontWeight: 'bold',
+                                  padding: '4px 8px',
+                                  borderRadius: '4px',
+                                  backgroundColor: `${rootColor}15`,
+                                  border: `1px solid ${rootColor}30`,
+                                  color: adjustColorForContrast(rootColor),
+                                  whiteSpace: 'nowrap'
+                                }}
+                              >
+                                {source.trim().toUpperCase() === 'CANONICAL SCRIPTURE' ? 'BIBLE' : source.toUpperCase()}
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Legend explanation for Apocryphal tag */}
+                    {isOnlyApocryphal(activeTermNode) && (
+                      <div 
+                        style={{ 
+                          marginTop: '24px',
+                          borderTop: `1px solid ${theme.borderLight || theme.border}`,
+                          paddingTop: '20px',
+                          marginBottom: '24px'
+                        }}
+                      >
+                        <div 
                           style={{ 
-                            display: 'inline-flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            fontSize: '11px',
-                            lineHeight: '1',
-                            fontWeight: '900',
-                            color: isMapDarkMode ? '#ff5c5c' : '#b31b1b',
-                            fontFamily: '"Space Mono", monospace',
+                            padding: '12px',
+                            border: `1px solid ${isMapDarkMode ? 'rgba(255, 92, 92, 0.4)' : 'rgba(179, 27, 27, 0.4)'}`,
+                            borderRadius: '8px',
+                            background: isMapDarkMode ? 'rgba(255, 92, 92, 0.04)' : 'rgba(255, 92, 92, 0.02)',
                           }}
                         >
-                          ✖
-                        </span>
-                        <span style={{ fontSize: '9px', fontWeight: 'bold', fontFamily: '"Space Mono", monospace', color: isMapDarkMode ? '#ff5c5c' : '#b31b1b' }}>
-                          NEPHILIM BLOODLINE INDICATOR
-                        </span>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
+                            <span 
+                              style={{ 
+                                display: 'inline-flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                fontSize: '11px',
+                                lineHeight: '1',
+                                fontWeight: '900',
+                                color: isMapDarkMode ? '#ff5c5c' : '#b31b1b',
+                                fontFamily: '"Space Mono", monospace',
+                              }}
+                            >
+                              ✖
+                            </span>
+                            <span style={{ fontSize: '9px', fontWeight: 'bold', fontFamily: '"Space Mono", monospace', color: isMapDarkMode ? '#ff5c5c' : '#b31b1b' }}>
+                              APOCRYPHAL INDICATOR
+                            </span>
+                          </div>
+                          <p style={{ fontSize: '8.5px', lineHeight: '1.4', color: isMapDarkMode ? '#ffb3b3' : '#801c1c', margin: 0, fontFamily: '"Space Mono", monospace' }}>
+                            Represents apocryphal, non-canonical, or mythological entries outside of canonical scripture.
+                          </p>
+                        </div>
                       </div>
-                      <p style={{ fontSize: '8.5px', lineHeight: '1.4', color: isMapDarkMode ? '#ffb3b3' : '#801c1c', margin: 0, fontFamily: '"Space Mono", monospace' }}>
-                        Represents a people group historically associated with or suspected of carrying Nephilim giant lineage.
-                      </p>
-                    </div>
-                  </div>
-                )}
+                    )}
 
-              </div>
-            </div>
-          </motion.div>
-          ) : (
-            <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', color: theme.textDim, fontSize: '10px', fontFamily: '"Space Mono", monospace', letterSpacing: '1.5px', textTransform: 'uppercase', padding: '24px', textAlign: 'center' }}>
-              SELECT A TERM TO REVIEW DETAILS & TIES
-            </div>
-          )}
-        </AnimatePresence>
-      </motion.div>
+                    {/* Legend explanation for Nephilim Bloodline tag */}
+                    {activeTermNode.subLabel === 'Possible Nephilim Bloodline' && (
+                      <div 
+                        style={{ 
+                          marginTop: '24px',
+                          borderTop: `1px solid ${theme.borderLight || theme.border}`,
+                          paddingTop: '20px',
+                          marginBottom: '24px'
+                        }}
+                      >
+                        <div 
+                          style={{ 
+                            padding: '12px',
+                            border: `1px solid ${isMapDarkMode ? 'rgba(255, 92, 92, 0.4)' : 'rgba(179, 27, 27, 0.4)'}`,
+                            borderRadius: '8px',
+                            background: isMapDarkMode ? 'rgba(255, 92, 92, 0.04)' : 'rgba(255, 92, 92, 0.02)',
+                          }}
+                        >
+                          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
+                            <span 
+                              style={{ 
+                                display: 'inline-flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                fontSize: '11px',
+                                lineHeight: '1',
+                                fontWeight: '900',
+                                color: isMapDarkMode ? '#ff5c5c' : '#b31b1b',
+                                fontFamily: '"Space Mono", monospace',
+                              }}
+                            >
+                              ✖
+                            </span>
+                            <span style={{ fontSize: '9px', fontWeight: 'bold', fontFamily: '"Space Mono", monospace', color: isMapDarkMode ? '#ff5c5c' : '#b31b1b' }}>
+                              NEPHILIM BLOODLINE INDICATOR
+                            </span>
+                          </div>
+                          <p style={{ fontSize: '8.5px', lineHeight: '1.4', color: isMapDarkMode ? '#ffb3b3' : '#801c1c', margin: 0, fontFamily: '"Space Mono", monospace' }}>
+                            Represents a people group historically associated with or suspected of carrying Nephilim giant lineage.
+                          </p>
+                        </div>
+                      </div>
+                    )}
+
+                  </div>
+                </div>
+              </motion.div>
+              ) : (
+                <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', color: theme.textDim, fontSize: '10px', fontFamily: '"Space Mono", monospace', letterSpacing: '1.5px', textTransform: 'uppercase', padding: '24px', textAlign: 'center' }}>
+                  SELECT A TERM TO REVIEW DETAILS & TIES
+                </div>
+              )}
+          </AnimatePresence>
+        </motion.div>
+      )}
 
       {/* FIXED RIGHT EDGE MASK BAR */}
-      <motion.div 
-        initial={false}
-        animate={{ 
-          background: isMapDarkMode ? 'rgba(10, 10, 10, 0.85)' : 'rgba(255, 255, 255, 0.85)',
-          borderColor: theme.border
-        }}
-        transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-        style={{ 
-          position: 'absolute', 
-          top: 0, 
-          right: 0, 
-          bottom: 0, 
-          width: '20px', 
-          borderLeft: `1px solid ${theme.border}`, 
-          zIndex: 100, 
-          pointerEvents: 'auto',
-          backdropFilter: 'blur(8px)'
-        }} 
-      />
+      {!isMobile && (
+        <motion.div 
+          initial={false}
+          animate={{ 
+            background: isMapDarkMode ? 'rgba(10, 10, 10, 0.85)' : 'rgba(255, 255, 255, 0.85)',
+            borderColor: theme.border
+          }}
+          transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+          style={{ 
+            position: 'absolute', 
+            top: 0, 
+            right: 0, 
+            bottom: 0, 
+            width: '20px', 
+            borderLeft: `1px solid ${theme.border}`, 
+            zIndex: 100, 
+            pointerEvents: 'auto',
+            backdropFilter: 'blur(8px)'
+          }} 
+        />
+      )}
 
       {/* FULL SCREEN LIGHTBOX MODAL ARCHITECTURE */}
       {createPortal(

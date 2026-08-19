@@ -4,7 +4,7 @@ import { createPortal } from 'react-dom';
 import { motion, AnimatePresence, animate } from 'motion/react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import { X, Heart, Play, Upload, Plus, Link, MapPin, Lock, Check, Trash2, ShieldAlert, ChevronDown, Shield, Eye, EyeOff, Shuffle, Flag, AlertTriangle, Instagram, ExternalLink, RotateCcw } from 'lucide-react';
+import { X, Heart, Play, Upload, Plus, Link, MapPin, Lock, Check, Trash2, ShieldAlert, ChevronDown, Shield, Eye, EyeOff, Shuffle, Flag, AlertTriangle, Instagram, ExternalLink, RotateCcw, Menu, Calendar } from 'lucide-react';
 import { initializeApp } from 'firebase/app';
 import { getFirestore, doc, getDoc, setDoc, updateDoc, increment, collection, onSnapshot, serverTimestamp, query, where, addDoc, deleteDoc } from 'firebase/firestore';
 import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } from 'firebase/auth';
@@ -1092,12 +1092,12 @@ const CategoryLayerHeader = ({
           display: 'flex', 
           alignItems: 'center', 
           padding: '0', 
-          height: '30px',
+          height: '32px',
           justifyContent: 'space-between', 
           cursor: 'pointer', 
           background: isActive ? theme.bg : (isMapDarkMode ? '#1a1a1a' : '#EFEFEF'),
           border: isActive ? `1px solid ${theme.border}` : '1px solid transparent',
-          borderRadius: '15px',
+          borderRadius: '16px',
           boxSizing: 'border-box',
           color: theme.text,
           transition: 'background 0.3s ease-in-out',
@@ -1111,7 +1111,7 @@ const CategoryLayerHeader = ({
         {/* EXPANDING BACKGROUND OVERLAY */}
         <motion.div
           animate={{
-            width: isHovered ? '100%' : '30px'
+            width: isHovered ? '100%' : '32px'
           }}
           transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
           style={{
@@ -1120,14 +1120,14 @@ const CategoryLayerHeader = ({
             left: 0,
             height: '100%',
             background: pillColor,
-            borderRadius: '15px',
+            borderRadius: '16px',
             zIndex: 0,
             pointerEvents: 'none'
           }}
         />
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flex: 1, textAlign: 'left', zIndex: 1, position: 'relative' }}>
-          <div style={{ width: '30px', height: '30px', minWidth: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <div style={{ width: '32px', height: '32px', minWidth: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
             <img 
               src={getCategoryIcon(layerName)} 
               onError={(e) => { e.currentTarget.src = '/icons/icon-cave-drawings.svg'; }}
@@ -1307,6 +1307,23 @@ function App() {
   const [selectedTimelineItem, setSelectedTimelineItem] = useState<any | null>(null);
   const [activeWaypointIndex, setActiveWaypointIndex] = useState<number | null>(null);
 
+  const [codexSearchQuery, setCodexSearchQuery] = useState('');
+  const [timelineSearchQuery, setTimelineSearchQuery] = useState('');
+  const [timelineViewStart, setTimelineViewStart] = useState<number>(-10000);
+  const [timelineViewEnd, setTimelineViewEnd] = useState<number>(2026);
+
+  // Sync timeline viewports when a timeline item is selected
+  useEffect(() => {
+    if (selectedTimelineItem) {
+      const start = selectedTimelineItem.start;
+      const end = selectedTimelineItem.type === 'lifespan' ? (selectedTimelineItem.end ?? selectedTimelineItem.start) : selectedTimelineItem.start;
+      const duration = Math.abs(end - start);
+      const span = Math.max(100, duration * 1.5);
+      setTimelineViewStart(start - (span - duration) / 2);
+      setTimelineViewEnd(end + (span - duration) / 2);
+    }
+  }, [selectedTimelineItem]);
+
   // Track timeline event selections
   useEffect(() => {
     if (selectedTimelineItem && currentPage === 'timeline') {
@@ -1316,6 +1333,20 @@ function App() {
       });
     }
   }, [selectedTimelineItem, currentPage]);
+
+  const handleTimelineZoom = (factor: number) => {
+    const span = timelineViewEnd - timelineViewStart;
+    const centerYear = timelineViewStart + span / 2;
+    const newSpan = Math.max(50, Math.min(253500, span * factor));
+    setTimelineViewStart(centerYear - newSpan / 2);
+    setTimelineViewEnd(centerYear + newSpan / 2);
+  };
+
+  const handleTimelineReset = () => {
+    setTimelineViewStart(-10000);
+    setTimelineViewEnd(2026);
+    setTimelineSearchQuery('');
+  };
 
   const isLayerLoading = (layerName: string): boolean => {
     if (!activeLayers[layerName]) return false;
@@ -1494,6 +1525,48 @@ function App() {
       return node;
     }).filter((node): node is any => node !== null);
   }, [approvedSubmissions, overrides]);
+
+  // Compute Codex suggestions in App.tsx
+  const codexSuggestions = useMemo(() => {
+    if (!codexSearchQuery.trim()) return [];
+    const query = codexSearchQuery.toLowerCase().trim();
+    // Filter out null/undefined nodes from combinedCodexNodes
+    const nodes = (combinedCodexNodes || []).filter((n): n is any => !!(n && n.id && n.name));
+    const matches = nodes.filter(node => {
+      const nameMatch = node.name.toLowerCase().includes(query);
+      const descMatch = node.description ? node.description.toLowerCase().includes(query) : false;
+      const transMatch = node.translations?.some((t: any) =>
+        (t.original || '').toLowerCase().includes(query) ||
+        (t.translit || '').toLowerCase().includes(query) ||
+        (t.meaning || '').toLowerCase().includes(query)
+      );
+      const verseMatch = node.bibleVerses?.some((v: any) => (v || '').toLowerCase().includes(query));
+
+      return nameMatch || descMatch || transMatch || verseMatch;
+    });
+
+    return matches.sort((a, b) => {
+      const aNameLower = a.name.toLowerCase();
+      const bNameLower = b.name.toLowerCase();
+      
+      const aExact = aNameLower === query;
+      const bExact = bNameLower === query;
+      if (aExact && !bExact) return -1;
+      if (!aExact && bExact) return 1;
+
+      const aStartsWith = aNameLower.startsWith(query);
+      const bStartsWith = bNameLower.startsWith(query);
+      if (aStartsWith && !bStartsWith) return -1;
+      if (!aStartsWith && bStartsWith) return 1;
+
+      const aContainsName = aNameLower.includes(query);
+      const bContainsName = bNameLower.includes(query);
+      if (aContainsName && !bContainsName) return -1;
+      if (!aContainsName && bContainsName) return 1;
+
+      return 0;
+    }).slice(0, 10);
+  }, [codexSearchQuery, combinedCodexNodes]);
 
   // Combine static Timeline items and approved user Timeline submissions
   const combinedTimelineItems = useMemo(() => {
@@ -1770,6 +1843,10 @@ function App() {
   const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1200);
   const [scrollbarWidth, setScrollbarWidth] = useState(0);
   const [selectedCodexNode, setSelectedCodexNode] = useState<any>(null);
+  const isMobile = windowWidth < 1024;
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileDrawerExpanded, setIsMobileDrawerExpanded] = useState(false);
+  const [mobileActiveTab, setMobileActiveTab] = useState<'filters' | 'details' | 'timeline'>('filters');
 
   // Submission Form State
   const [isSubmitOpen, setIsSubmitOpen] = useState(false);
@@ -3537,8 +3614,11 @@ function App() {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   
   const activeAssets = useMemo(() => {
+    if (currentPage === 'codex' && selectedCodexNode) {
+      return getCombinedAssets(selectedCodexNode.images || []);
+    }
     return getCombinedAssets(selectedFeature?.images || []);
-  }, [selectedFeature]);
+  }, [selectedFeature, selectedCodexNode, currentPage]);
   
   const [isImageLoading, setIsImageLoading] = useState(false);
   const [isLightboxImageLoading, setIsLightboxImageLoading] = useState(false);
@@ -4149,13 +4229,13 @@ function App() {
   useEffect(() => {
     setActiveImageIndex(0);
     setIsLightboxOpen(false);
-    if (selectedFeature && activeAssets && activeAssets.length > 0) {
+    if ((selectedFeature || selectedCodexNode) && activeAssets && activeAssets.length > 0) {
       setIsImageLoading(true);
     }
-  }, [selectedFeature, activeAssets]);
+  }, [selectedFeature, selectedCodexNode, activeAssets]);
 
   useEffect(() => {
-    if (selectedFeature && activeAssets && activeAssets.length > 0) {
+    if ((selectedFeature || selectedCodexNode) && activeAssets && activeAssets.length > 0) {
       const currentAsset = activeAssets[activeImageIndex];
       const currentUrl = currentAsset?.url;
       if (isVideoUrl(currentUrl) || isPdfUrl(currentUrl) || isAudioUrl(currentUrl) || currentAsset?.pdfUrl) {
@@ -4739,7 +4819,7 @@ function App() {
       container: mapContainer.current,
       style: isMapDarkMode ? MAP_STYLE_DARK : MAP_STYLE_LIGHT, 
       center: (!isNaN(urlLat) && !isNaN(urlLng)) ? [urlLng, urlLat] : [-98.5795, 39.8283], 
-      zoom: !isNaN(urlZoom) ? urlZoom : 4.0,
+      zoom: !isNaN(urlZoom) ? urlZoom : (isMobile ? 2.2 : 4.0),
       projection: { name: 'globe' } as any,
       trackResize: true
     });
@@ -5492,6 +5572,10 @@ function App() {
     setSelectedFeature(feature);
     setIsRightCollapsed(false);
     setActiveWaypointIndex(null);
+    if (windowWidth < 1024) {
+      setMobileActiveTab('details');
+      setIsMobileDrawerExpanded(true);
+    }
 
     // Auto-expand the categories this location belongs to in the sidebar
     if (feature.categories && Array.isArray(feature.categories)) {
@@ -5527,22 +5611,38 @@ function App() {
       });
 
       if (minLng !== Infinity && maxLng !== -Infinity) {
+        const pad = windowWidth < 1024 ? { top: 0, bottom: window.innerHeight * 0.7, left: 0, right: 0 } : 120;
         mapRef.current.fitBounds(
           [[minLng, minLat], [maxLng, maxLat]],
-          { padding: 120, maxZoom: 8, duration: 1500 }
+          { padding: pad, maxZoom: 8, duration: 1500 }
         );
         return;
       }
     }
 
     const flyTarget = feature.coordinates;
+    const paddingVal = windowWidth < 1024 ? { top: 0, bottom: window.innerHeight * 0.7, left: 0, right: 0 } : { top: 0, bottom: 0, left: 0, right: 0 };
     mapRef.current.flyTo({ 
       center: flyTarget, 
       zoom: 10, 
       duration: 1500,
-      essential: true
+      essential: true,
+      padding: paddingVal
     });
-  }, [stopMainMapRotation]);
+  }, [stopMainMapRotation, windowWidth]);
+
+  useEffect(() => {
+    if (isMobile && mapRef.current && selectedFeature) {
+      const coords = selectedFeature.type === 'LineString' ? selectedFeature.coordinates[0] : selectedFeature.coordinates;
+      const bottomPadding = isMobileDrawerExpanded ? window.innerHeight * 0.7 : 95;
+      mapRef.current.easeTo({
+        center: coords,
+        padding: { top: 0, bottom: bottomPadding, left: 0, right: 0 },
+        duration: 500,
+        essential: true
+      });
+    }
+  }, [isMobileDrawerExpanded, isMobile, selectedFeature]);
 
   useEffect(() => {
     if (mapRef.current && selectedFeature) {
@@ -6319,50 +6419,2097 @@ function App() {
     setSearchQuery(tag);
   };
 
-  return (
-    <div style={{ width: scrollbarWidth ? `calc(100vw - ${scrollbarWidth}px)` : '100vw', minHeight: '100vh', background: '#ffffff', color: '#000000', fontFamily: '"Space Mono", monospace', overflowX: 'hidden', textAlign: 'left' }}>
-      
-      {/* MOBILE BLOCKER OVERLAY */}
-      <AnimatePresence>
-        {windowWidth < 1024 && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+  const renderMobileFilters = () => {
+    return (
+      <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+        {/* Layer control buttons */}
+        <div style={{ display: 'flex', gap: '6px', marginBottom: '12px', marginTop: '12px', flexShrink: 0, padding: '0 16px' }}>
+          <motion.button
+            whileHover={{ scale: 1.02, backgroundColor: isMapDarkMode ? '#161616' : '#f0f0f0' }}
+            whileTap={{ scale: 0.98 }}
+            onClick={handleAllLayersOn}
             style={{
-              position: 'fixed',
-              top: 0,
-              left: 0,
-              width: scrollbarWidth ? `calc(100vw - ${scrollbarWidth}px)` : '100vw',
-              height: '100vh',
-              background: '#000000',
-              zIndex: 1000000,
+              flex: 1,
+              padding: '8px 4px',
+              fontSize: '9px',
+              fontWeight: '700',
+              letterSpacing: '0.5px',
+              fontFamily: '"Space Mono", monospace',
+              border: `1px solid ${theme.border}`,
+              borderRadius: '9999px',
+              cursor: 'pointer',
+              background: 'none',
+              color: theme.text,
               display: 'flex',
-              flexDirection: 'column',
               alignItems: 'center',
               justifyContent: 'center',
-              padding: '40px',
-              textAlign: 'center',
-              color: '#ffffff'
+              gap: '4px',
+              transition: 'background-color 0.2s ease'
             }}
           >
-            <div style={{ padding: '0', maxWidth: '400px', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '24px' }}>
-              <img 
-                src="https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/mtrh-square-white.svg" 
-                alt="MTRH Logo" 
-                style={{ width: '120px' }} 
-              />
-              <div style={{ width: '40px', height: '1px', background: '#fff' }} />
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                <span style={{ fontSize: '11px', fontWeight: 'bold', letterSpacing: '2px', textTransform: 'uppercase' }}>Optimized for Desktop</span>
-                <p style={{ fontSize: '11px', lineHeight: '20px', color: '#a3a3a3', margin: 0 }}>
-                  To provide the best experience for exploring our archives and interactive mapping tools, please visit MTRH on a desktop computer.
+            <Eye size={11} color={theme.text} />
+            ALL ON
+          </motion.button>
+
+          <motion.button
+            whileHover={{ scale: 1.02, backgroundColor: isMapDarkMode ? '#161616' : '#f0f0f0' }}
+            whileTap={{ scale: 0.98 }}
+            onClick={handleAllLayersOff}
+            style={{
+              flex: 1,
+              padding: '8px 4px',
+              fontSize: '9px',
+              fontWeight: '700',
+              letterSpacing: '0.5px',
+              fontFamily: '"Space Mono", monospace',
+              border: `1px solid ${theme.border}`,
+              borderRadius: '9999px',
+              cursor: 'pointer',
+              background: 'none',
+              color: theme.text,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '4px',
+              transition: 'background-color 0.2s ease'
+            }}
+          >
+            <EyeOff size={11} color={theme.text} />
+            ALL OFF
+          </motion.button>
+
+          <motion.button
+            whileHover={{ scale: 1.02, backgroundColor: isMapDarkMode ? '#161616' : '#f0f0f0' }}
+            whileTap={{ scale: 0.98 }}
+            onClick={handleRandomizeLayers}
+            style={{
+              flex: 1,
+              padding: '8px 4px',
+              fontSize: '9px',
+              fontWeight: '700',
+              letterSpacing: '0.5px',
+              fontFamily: '"Space Mono", monospace',
+              border: `1px solid ${theme.border}`,
+              borderRadius: '9999px',
+              cursor: 'pointer',
+              background: 'none',
+              color: theme.text,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '4px',
+              transition: 'background-color 0.2s ease'
+            }}
+          >
+            <Shuffle size={11} color={theme.text} />
+            SHUFFLE
+          </motion.button>
+        </div>
+
+        {/* Scrollable list of category layers */}
+        <div className="custom-scrollbar" style={{ flex: 1, overflowY: 'auto' }}>
+          {uniqueCategories.map(layerName => {
+            const isExpanded = !!expandedLayers[layerName];
+            const locationsInLayer = groupedLocations[layerName] || [];
+            const pillColor = layerColors[layerName] || '#e5e5e5';
+            const isActive = activeLayers[layerName] !== false;
+
+            return (
+              <div key={`mob-filter-${layerName}`} style={{ display: 'flex', flexDirection: 'column', width: '100%', marginBottom: '4px' }}>
+                <CategoryLayerHeader
+                  layerName={layerName}
+                  isActive={isActive}
+                  isExpanded={isExpanded}
+                  theme={theme}
+                  isMapDarkMode={isMapDarkMode}
+                  pillColor={pillColor}
+                  getCategoryIcon={getCategoryIcon}
+                  toTitleCase={toTitleCase}
+                  isLayerLoading={isLayerLoading}
+                  onToggleActive={() => {
+                    const nextActive = !isActive;
+                    trackCustomEvent('toggle_layer', {
+                      layer_name: layerName,
+                      is_enabled: nextActive
+                    });
+                    setActiveLayers(p => ({ ...p, [layerName]: nextActive }));
+                  }}
+                  onToggleExpand={() => setExpandedLayers(p => ({ ...p, [layerName]: !isExpanded }))}
+                />
+
+                {isExpanded && (
+                  <div style={{ background: theme.bg, padding: '4px 0', textAlign: 'left' }}>
+                    <div style={{ display: 'flex', flexDirection: 'column', paddingLeft: '16px', paddingRight: '4px' }}>
+                      {CATEGORY_DESCRIPTIONS[layerName] && (
+                        <div style={{ 
+                          fontSize: '10px', 
+                          lineHeight: '1.4',
+                          color: theme.textDim,
+                          paddingBottom: '8px',
+                          paddingLeft: '2px',
+                          fontFamily: '"Space Mono", monospace',
+                          fontStyle: 'italic'
+                        }}>
+                          {CATEGORY_DESCRIPTIONS[layerName]}
+                        </div>
+                      )}
+                      {locationsInLayer.map(loc => {
+                        const isSelected = selectedFeature?.id === loc.id;
+                        return (
+                          <div
+                            key={`mob-loc-${loc.id}`}
+                            onClick={() => handleLocationItemClick(loc)}
+                            style={{
+                              padding: '10px 8px',
+                              cursor: 'pointer',
+                              borderBottom: `1px solid ${theme.borderLight}`,
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'space-between',
+                              background: isSelected ? (isMapDarkMode ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.04)') : 'transparent',
+                              color: isSelected ? '#b6a6ff' : theme.text,
+                              fontSize: '11px',
+                              fontFamily: '"Space Mono", monospace'
+                            }}
+                          >
+                            <span>{loc.name}</span>
+                            {loc.date && <span style={{ color: theme.textDim, fontSize: '9px' }}>{loc.date}</span>}
+                          </div>
+                        );
+                      })}
+                      {locationsInLayer.length === 0 && (
+                        <div style={{ padding: '8px', fontSize: '9px', color: theme.textDim }}>
+                          {!isActive ? "Toggle on visibility to view data" : "NO ASSETS IN RANGE"}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    );
+  };
+
+  const renderMobileDetails = () => {
+    if (!selectedFeature) {
+      return (
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%', padding: '40px', color: theme.textDim, textAlign: 'center' }}>
+          <img src="/icons/icon-rabbit-hole.svg" alt="logo" style={{ width: '48px', height: '48px', opacity: 0.2, marginBottom: '16px', filter: theme.invert }} />
+          <div style={{ fontSize: '11px', fontWeight: 'bold', letterSpacing: '1px', textTransform: 'uppercase' }}>Select a coordinate</div>
+          <div style={{ fontSize: '9px', marginTop: '4px' }}>to view complete dossier archive.</div>
+          
+          <div style={{
+            marginTop: '20px',
+            padding: '12px 16px',
+            borderLeft: `2px solid ${theme.border}`,
+            background: isMapDarkMode ? 'rgba(255, 255, 255, 0.03)' : 'rgba(0, 0, 0, 0.02)',
+            fontFamily: '"Space Mono", monospace',
+            fontSize: '10px',
+            lineHeight: '1.6',
+            color: theme.textDim,
+            fontStyle: 'italic',
+            textAlign: 'center',
+            maxWidth: '240px'
+          }}>
+            "At the bottom of every rabbit hole you will find God."
+          </div>
+        </div>
+      );
+    }
+    return renderDossierInnerContent();
+  };
+
+  // Codex mobile dossier details rendering helpers
+  const getCodexPathToRoot = (nodeId: string) => {
+    const path: string[] = [];
+    let curr = combinedCodexNodes.find(n => n && n.id === nodeId);
+    while (curr) {
+      path.push(curr.id);
+      curr = curr.parentId ? combinedCodexNodes.find(n => n && n.id === curr.parentId) : undefined;
+    }
+    return path;
+  };
+
+  const getCodexNodeColor = (node: any) => {
+    let curr = node;
+    while (curr.parentId) {
+      if (curr.id === 'vanished-ships-aircraft') return '#E7EC5B';
+      const parent = combinedCodexNodes.find(n => n && n.id === curr.parentId);
+      if (!parent) break;
+      curr = parent;
+    }
+    if (curr.id === 'vanished-ships-aircraft') return '#E7EC5B';
+
+    if (curr.id === 'biblical-apocryphal') return '#90C2FF'; // Blue (Biblical Figures)
+    if (curr.id === 'myths-legends-root') return '#FFF96A'; // Yellow/Gold (Myths / Legends)
+    if (curr.id === 'megaliths-structures') return '#FFFBA6'; // Yellow/Gold (Megaliths)
+    if (curr.id === 'supernatural-anomalies') return '#C2FFBD'; // Green (U.F.O. Sightings)
+    if (curr.id === 'government-conspiracies') return '#FF5C5C'; // Red (Government Conspiracies)
+    if (curr.id === 'alchemy-occult') return '#59DCB7'; // Mint/Teal (The Occult)
+    if (curr.id === 'people-groups') return '#BCA7C7'; // Lavender (People Groups)
+    if (curr.id === 'nasa-root') return '#BACEF4'; // Light Blue (NASA / Space)
+    if (curr.id === 'old-world-structures') return '#B5CED5'; // Slate Blue-Gray (Old World Structures)
+    if (curr.id === 'ancient-texts') return '#F7E8C1'; // Pale Sand (Ancient Texts)
+    
+    return '#b6a6ff'; // Default
+  };
+
+  const getCodexRootCategory = (node: any) => {
+    let curr = node;
+    while (curr.parentId) {
+      const parent = combinedCodexNodes.find(n => n && n.id === curr.parentId);
+      if (!parent) break;
+      curr = parent;
+    }
+    return curr;
+  };
+
+  const isCodexOnlyApocryphal = (node: any): boolean => {
+    if (!node.isApocryphal) return false;
+    const path = getCodexPathToRoot(node.id);
+    const isMythOrOccult = path.includes('myths-legends-root') || path.includes('alchemy-occult');
+    if (isMythOrOccult) return true;
+
+    const biblicalExclusions = ['fallen-angel', 'demons', 'nephilim-br', 'watchers', 'giants'];
+    if (biblicalExclusions.includes(node.id)) return true;
+
+    if (node.bibleVerses && node.bibleVerses.length > 0) {
+      const canonicalBooks = [
+        'Genesis', 'Exodus', 'Leviticus', 'Numbers', 'Deuteronomy', 'Joshua', 'Judges', 'Ruth',
+        '1 Samuel', '2 Samuel', '1 Kings', '2 Kings', '1 Chronicles', '2 Chronicles', 'Ezra', 'Nehemiah', 'Esther',
+        'Job', 'Psalms', 'Psalm', 'Proverbs', 'Ecclesiastes', 'Song of Solomon', 'Isaiah', 'Jeremiah', 'Lamentations',
+        'Ezekiel', 'Daniel', 'Hosea', 'Joel', 'Amos', 'Obadiah', 'Jonah', 'Micah', 'Nahum', 'Habakkuk',
+        'Zephaniah', 'Haggai', 'Zechariah', 'Malachi',
+        'Matthew', 'Mark', 'Luke', 'John', 'Acts', 'Romans', '1 Corinthians', '2 Corinthians', 'Galatians', 'Ephesians',
+        'Philippians', 'Colossians', '1 Thessalonians', '2 Thessalonians', '1 Timothy', '2 Timothy', 'Titus', 'Philemon',
+        'Hebrews', 'James', '1 Peter', '2 Peter', '1 John', '2 John', '3 John', 'Jude', 'Revelation'
+      ];
+      
+      const hasCanonicalVerse = node.bibleVerses.some((verse: string) => {
+        const parts = verse.split(' — ');
+        if (parts.length < 2) return false;
+        const citation = parts[1].toLowerCase();
+        return canonicalBooks.some(book => citation.includes(book.toLowerCase()));
+      });
+      if (hasCanonicalVerse) return false;
+    }
+
+    const hasBibleSource = node.sources?.some((s: string) => s.toLowerCase() === 'bible');
+    if (hasBibleSource) return false;
+
+    return true;
+  };
+
+  const adjustCodexColorForContrast = (color: string): string => {
+    if (isMapDarkMode) return color;
+    if (color === '#FFF96A') return '#b39200';
+    if (color === '#FFFBA6') return '#998d00';
+    if (color === '#C2FFBD') return '#1b8010';
+    if (color === '#E7EC5B') return '#868c07';
+    if (color === '#F7E8C1') return '#8f773f';
+    if (color === '#BACEF4') return '#2b4d8c';
+    if (color === '#B5CED5') return '#4a6770';
+    if (color === '#FF5C5C') return '#b31b1b';
+    return color;
+  };
+
+  const getCodexNodeIcon = (node: any) => {
+    const layerIcons: Record<string, string> = {
+      'UFOs - War.gov': '/icons/icon-ufos-wargov.svg',
+      'UFOs - Brazillian Archives': '/icons/icon-ufos-brazilian.svg',
+      'Enochian Sites': '/icons/icon-enochian.svg',
+      'Giants & Nephilim': '/icons/icon-nephilim.svg',
+      'Biblical Figures': '/icons/icon-biblical-figures.svg',
+      'Particle Accelerators': '/icons/icon-particle-accelerators.svg',
+      'Myths / Legends': '/icons/icon-myths-legends.svg',
+      'Biblical Events': '/icons/icon-biblical-events.svg',
+      'UFOs - Sightings': '/icons/icon-ufos-sightings.svg',
+      'Bigfoot Sightings': '/icons/icon-bigfoot.svg',
+      'Cryptid Sightings': '/icons/icon-cryptids.svg',
+      'Underworld Entrances': '/icons/icon-underworld.svg',
+      'Portals / Stargates': '/icons/icon-stargates.svg',
+      'Ancient Texts': '/icons/icon-ancient-texts.svg',
+      'Rock Art & Cave Paintings': '/icons/icon-cave-drawings.svg',
+      'Masonic Lodges / The Occult': '/icons/icon-occult.svg',
+      'Ancient People Groups': '/icons/icon-ancient-peoples.svg',
+      'Old World Structures': '/icons/icon-old-world-structures.svg',
+      'Vanished Ships / Aircraft': '/icons/icon-vanished-ships.svg'
+    };
+    return layerIcons[node.layer || ''] || layerIcons[node.name || ''] || '/icons/icon-cave-drawings.svg';
+  };
+
+  const renderCodexMobileDetails = () => {
+    const activeTermNode = selectedCodexNode;
+    if (!activeTermNode) return null;
+
+    const activeRoot = getCodexRootCategory(activeTermNode);
+    const activeRootColor = getCodexNodeColor(activeRoot);
+
+    const resolvedMapInfo = (() => {
+      const isParentNode = combinedCodexNodes.some(n => n && n.parentId === activeTermNode.id);
+      if (isParentNode && !activeTermNode.mapFeatureId) return null;
+      
+      if (activeTermNode.layer) {
+        return {
+          layer: activeTermNode.layer,
+          featureSearchTerm: activeTermNode.mapFeatureId || activeTermNode.id || activeTermNode.name
+        };
+      }
+      
+      let curr = activeTermNode;
+      while (curr.parentId) {
+        const parent = combinedCodexNodes.find(n => n && n.id === curr.parentId);
+        if (!parent) break;
+        curr = parent;
+      }
+      
+      if (curr.layer) {
+        return {
+          layer: curr.layer,
+          featureSearchTerm: activeTermNode.mapFeatureId || activeTermNode.id || activeTermNode.name
+        };
+      }
+      
+      return null;
+    })();
+
+    const handleViewOnMapClick = (layerName: string, featureSearchTerm: string) => {
+      stopMainMapRotation();
+      setCurrentPage('map');
+      setActiveLayers(prev => ({
+        ...prev,
+        [layerName]: true
+      }));
+      setExpandedLayers(prev => ({
+        ...prev,
+        [layerName]: true
+      }));
+      if (featureSearchTerm) {
+        let mapRecord = combinedPointsAndLinesData.find(r => String(r.id) === featureSearchTerm);
+        if (!mapRecord) {
+          mapRecord = combinedPointsAndLinesData.find(r => 
+            String(r.name).toLowerCase().includes(featureSearchTerm.toLowerCase())
+          );
+        }
+        setSearchQuery('');
+        if (mapRecord) {
+          setTimeout(() => {
+            handleLocationItemClick(mapRecord);
+          }, 100);
+        }
+      }
+    };
+
+    return (
+      <div className="custom-sidebar-scrollbar" style={{ flex: 1, overflowY: 'auto', overflowX: 'hidden', textAlign: 'left', paddingBottom: '15px' }}>
+        {activeAssets && activeAssets.length > 0 && (
+          <div style={{ width: '100%', position: 'relative', borderBottom: `1px solid ${theme.border}` }}>
+            <div 
+              style={{ 
+                width: '100%', 
+                height: '260px', 
+                backgroundColor: isMapDarkMode ? '#0a0a0a' : '#f0f0f0', 
+                overflow: 'hidden', 
+                display: 'flex', 
+                alignItems: 'center', 
+                justifyContent: 'center', 
+                position: 'relative'
+              }}
+            >
+              {(() => {
+                const curAsset = activeAssets[activeImageIndex];
+                if (!curAsset) return null;
+
+                const showPdfBadge = !!(curAsset.pdfUrl || curAsset.type === 'pdf');
+                const isBroken = !!(brokenImages[curAsset.url] || curAsset.url === MISSING_IMAGE_URL || curAsset.url?.includes('icon-missing-image.svg'));
+                const imgSrc = isBroken ? MISSING_IMAGE_URL : cleanAndProxyImageUrl(curAsset.url);
+
+                return (
+                  <>
+                    {isImageLoading && curAsset.type === 'image' && !curAsset.pdfUrl && (
+                      <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: theme.bg, display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 3 }}>
+                        <div className="loading-spinner" />
+                      </div>
+                    )}
+
+                    {curAsset.type === 'pdf' ? (
+                      <div 
+                        onClick={() => setIsLightboxOpen(true)}
+                        style={{ 
+                          width: '100%', 
+                          height: '100%', 
+                          position: 'relative', 
+                          cursor: 'pointer',
+                          overflow: 'hidden',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          backgroundColor: isMapDarkMode ? '#141414' : '#fafafa',
+                          border: `1px solid ${theme.border}`
+                        }}
+                      >
+                        {/* Background Paper Mockup */}
+                        <div style={{
+                          width: '130px',
+                          height: '180px',
+                          backgroundColor: isMapDarkMode ? '#1e1e1e' : '#ffffff',
+                          border: `1px solid ${isMapDarkMode ? '#333333' : '#e0e0e0'}`,
+                          boxShadow: '0 8px 20px rgba(0,0,0,0.3)',
+                          padding: '16px 12px',
+                          position: 'relative',
+                          display: 'flex',
+                          flexDirection: 'column',
+                          justifyContent: 'space-between'
+                        }}>
+                          {/* Styled typewriter horizontal lines to mimic official records */}
+                          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                            <div style={{ height: '6px', width: '80%', backgroundColor: isMapDarkMode ? '#3a3a3a' : '#d2d2d2' }} />
+                            <div style={{ height: '6px', width: '50%', backgroundColor: isMapDarkMode ? '#3a3a3a' : '#eaeaea' }} />
+                            {/* Redacted text block */}
+                            <div style={{ height: '6px', width: '90%', backgroundColor: isMapDarkMode ? '#ffffff' : '#000000' }} />
+                            <div style={{ height: '6px', width: '35%', backgroundColor: isMapDarkMode ? '#3a3a3a' : '#d2d2d2' }} />
+                            <div style={{ height: '6px', width: '70%', backgroundColor: isMapDarkMode ? '#ffffff' : '#000000' }} />
+                          </div>
+
+                          {/* Diagonal Classified Stamp */}
+                          <div style={{
+                            position: 'absolute',
+                            top: '45%',
+                            left: '50%',
+                            transform: 'translate(-50%, -50%) rotate(-25deg)',
+                            border: '2px double #ef4444',
+                            color: '#ef4444',
+                            padding: '1px 6px',
+                            fontFamily: '"Space Mono", monospace',
+                            fontSize: '7px',
+                            fontWeight: 'bold',
+                            zIndex: 1,
+                            letterSpacing: '1px',
+                            borderRadius: '2px',
+                            opacity: 0.85,
+                            textTransform: 'uppercase'
+                          }}>
+                            DECLASSIFIED
+                          </div>
+
+                          {/* Lower border line */}
+                          <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                            <div style={{ height: '2px', width: '100%', backgroundColor: isMapDarkMode ? '#333333' : '#eaeaea' }} />
+                            <div style={{ fontSize: '6px', color: theme.textDim, fontFamily: '"Space Mono", monospace', letterSpacing: '0.5px', textTransform: 'uppercase' }}>
+                              RECORD DOSSIER
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ) : curAsset.type === 'video' ? (
+                      <div 
+                        onClick={() => setIsLightboxOpen(true)}
+                        style={{ 
+                          width: '100%', 
+                          height: '100%', 
+                          position: 'relative', 
+                          cursor: 'pointer',
+                          overflow: 'hidden',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center'
+                        }}
+                      >
+                        <div style={{ width: '100%', height: '100%', pointerEvents: 'none', overflow: 'hidden', position: 'relative' }}>
+                          {(curAsset.url.includes('youtube.com') || 
+                           curAsset.url.includes('youtu.be') || 
+                           curAsset.url.includes('dvidshub.net/video/') ||
+                           curAsset.url.includes('twitter.com') ||
+                           curAsset.url.includes('x.com')) ? (
+                            <iframe
+                              src={(curAsset.url.includes('dvidshub.net/video/') || curAsset.url.includes('twitter.com') || curAsset.url.includes('x.com')) ? getEmbedUrl(curAsset.url) : `${getEmbedUrl(curAsset.url)}?autoplay=0&controls=0&mute=1`}
+                              style={curAsset.url.includes('dvidshub.net/video/') ? {
+                                border: 'none',
+                                position: 'absolute',
+                                top: 0,
+                                left: '50%',
+                                transform: 'translateX(-50%)',
+                                width: '165%',
+                                height: '190%'
+                              } : { 
+                                border: 'none', 
+                                position: 'absolute',
+                                top: '50%',
+                                left: '50%',
+                                transform: 'translate(-50%, -50%)',
+                                width: '180%', 
+                                height: '180%'
+                              }}
+                              title="Video asset viewport"
+                            />
+                          ) : (
+                            (() => {
+                              const videoSrc = curAsset.url.startsWith('http')
+                                ? `/api/proxy-resource?url=${encodeURIComponent(curAsset.url)}`
+                                : curAsset.url;
+                              const mimeType = curAsset.url.toLowerCase().endsWith('.webm') ? 'video/webm' : curAsset.url.toLowerCase().endsWith('.ogv') ? 'video/ogg' : 'video/mp4';
+                              return (
+                                <video
+                                  key={videoSrc}
+                                  muted
+                                  playsInline
+                                  preload="metadata"
+                                  referrerPolicy="no-referrer"
+                                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                >
+                                  <source src={videoSrc} type={mimeType} />
+                                </video>
+                              );
+                            })()
+                          )}
+                        </div>
+
+                        {/* Play overlay */}
+                        <div style={{
+                          position: 'absolute',
+                          top: 0,
+                          left: 0,
+                          right: 0,
+                          bottom: 0,
+                          background: 'rgba(0, 0, 0, 0.3)',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          zIndex: 1
+                        }}>
+                          <motion.div
+                            whileHover={{ scale: 1.15, backgroundColor: 'rgba(0, 0, 0, 0.85)' }}
+                            whileTap={{ scale: 0.92 }}
+                            transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                            style={{
+                              width: '56px',
+                              height: '56px',
+                              borderRadius: '50%',
+                              background: 'rgba(0, 0, 0, 0.70)',
+                              border: `1px solid ${theme.border || 'rgba(255,255,255,0.45)'}`,
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              boxShadow: '0 8px 32px rgba(0,0,0,0.4)',
+                              color: '#ffffff'
+                            }}
+                          >
+                            <Play size={20} fill="currentColor" style={{ marginLeft: '3px' }} />
+                          </motion.div>
+                        </div>
+                      </div>
+                    ) : curAsset.type === 'audio' ? (
+                      <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: isMapDarkMode ? '#030303' : '#f9f9f9', gap: '20px', padding: '24px' }}>
+                        <div style={{ width: '64px', height: '64px', borderRadius: '50%', background: isMapDarkMode ? '#222' : '#eee', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: theme.text }}>
+                            <path d="M9 18V5l12-2v13"></path>
+                            <circle cx="6" cy="18" r="3"></circle>
+                            <circle cx="18" cy="16" r="3"></circle>
+                          </svg>
+                        </div>
+                        <audio 
+                           src={curAsset.url} 
+                           controls 
+                           style={{ width: '100%', height: '40px' }} 
+                           onPlay={() => {
+                             if (trackCustomEvent && activeTermNode) {
+                               trackCustomEvent('play_audio', {
+                                 audio_url: curAsset.url,
+                                 associated_feature: activeTermNode.name
+                               });
+                             }
+                           }}
+                         />
+                        <p style={{ color: theme.textDim, fontSize: '9px', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: 'bold' }}>Audio Intelligence Intercept</p>
+                      </div>
+                    ) : (
+                      <motion.img 
+                        key={`${activeTermNode.id}-${activeImageIndex}`}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: isImageLoading ? 0 : 1 }}
+                        transition={{ duration: 0.3 }}
+                        onClick={() => setIsLightboxOpen(true)}
+                        src={imgSrc} 
+                        alt={`${activeTermNode.name} asset viewport`} 
+                        referrerPolicy="no-referrer"
+                        onLoad={() => setIsImageLoading(false)}
+                        onError={() => {
+                          setIsImageLoading(false);
+                          if (curAsset.url) {
+                            setBrokenImages(prev => ({ ...prev, [curAsset.url]: true }));
+                          }
+                        }}
+                        style={{ 
+                          width: isBroken ? '48px' : '100%', 
+                          height: isBroken ? '48px' : '100%', 
+                          objectFit: isBroken ? 'contain' : 'cover',                     
+                          backgroundColor: 'transparent',           
+                          filter: isBroken ? (isMapDarkMode ? 'invert(1)' : 'none') : 'none',
+                          cursor: 'pointer'
+                        }}
+                      />
+                    )}
+                  </>
+                );
+              })()}
+
+              <div style={{ 
+                position: 'absolute', 
+                bottom: '4px', 
+                left: '4px', right: '4px', 
+                display: 'flex', 
+                alignItems: 'center', 
+                justifyContent: 'space-between', 
+                zIndex: 2,
+                pointerEvents: 'none'
+              }}>
+                <div style={{ display: 'flex', gap: '4px', flex: 1, justifyContent: 'flex-start', pointerEvents: 'auto' }}>
+                  {activeAssets.length > 1 && (
+                    <>
+                      <motion.button 
+                        whileHover={{ opacity: 0.7 }}
+                        onClick={handlePrevImage} 
+                        style={{ 
+                          background: theme.bg, 
+                          border: `1px solid ${theme.border}`, 
+                          borderRadius: '50%', 
+                          width: '30px', 
+                          height: '30px', 
+                          cursor: 'pointer', 
+                          padding: '0',
+                          display: 'flex', 
+                          alignItems: 'center', 
+                          justifyContent: 'center',
+                          boxShadow: 'none',
+                          fontFamily: '"Space Mono", monospace'
+                        }}
+                      >
+                        <img 
+                          src="/icons/icon-arrow-left.svg" 
+                          style={{ width: '6px', height: '12px', filter: isMapDarkMode ? 'brightness(0) invert(1)' : 'brightness(0)' }} 
+                          alt="prev" 
+                        />
+                      </motion.button>
+                      <motion.button 
+                        whileHover={{ opacity: 0.7 }}
+                        onClick={handleNextImage} 
+                        style={{ 
+                          background: theme.bg, 
+                          border: `1px solid ${theme.border}`, 
+                          borderRadius: '50%', 
+                          width: '30px', 
+                          height: '30px', 
+                          cursor: 'pointer', 
+                          padding: '0',
+                          display: 'flex', 
+                          alignItems: 'center', 
+                          justifyContent: 'center',
+                          boxShadow: 'none',
+                          fontFamily: '"Space Mono", monospace'
+                        }}
+                      >
+                        <img 
+                          src="/icons/icon-arrow-left.svg" 
+                          style={{ width: '6px', height: '12px', transform: 'rotate(180deg)', filter: isMapDarkMode ? 'brightness(0) invert(1)' : 'brightness(0)' }} 
+                          alt="next" 
+                        />
+                      </motion.button>
+                    </>
+                  )}
+                </div>
+
+                {activeAssets.length > 1 && (
+                  <div style={{ display: 'flex', flex: 1, justifyContent: 'center', pointerEvents: 'auto' }}>
+                    <div style={{ 
+                      background: 'rgba(0, 0, 0, 0.65)', 
+                      backdropFilter: 'blur(2px)',
+                      color: '#ffffff', 
+                      fontSize: '11px', 
+                      fontFamily: '"Space Mono", monospace',
+                      fontWeight: '700',
+                      height: '30px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      padding: '0 16px', 
+                      borderRadius: '15px', 
+                      letterSpacing: '0.5px',
+                      textAlign: 'center',
+                      whiteSpace: 'nowrap'
+                    }}>
+                      {activeImageIndex + 1}/{activeAssets.length}
+                    </div>
+                  </div>
+                )}
+
+                <div style={{ display: 'flex', flex: 1, justifyContent: 'flex-end', pointerEvents: 'auto' }}>
+                  <motion.button 
+                    whileHover={{ scale: 1.1, backgroundColor: isMapDarkMode ? '#222' : '#f0f0f0' }}
+                    onClick={() => setIsLightboxOpen(true)} 
+                    title="Expand image to Fullscreen Lightbox"
+                    style={{ 
+                      background: theme.bg, 
+                      border: `1px solid ${theme.border}`, 
+                      borderRadius: '50%', 
+                      width: '30px', 
+                      height: '30px', 
+                      cursor: 'pointer', 
+                      display: 'flex', 
+                      alignItems: 'center', 
+                      justifyContent: 'center',
+                      boxShadow: 'none',
+                      padding: 0,
+                      fontFamily: '"Space Mono", monospace',
+                      transition: 'background-color 0.2s ease'
+                    }}
+                  >
+                    <img src="/icons/icon-expand.svg" style={{ width: '30px', height: '30px', filter: theme.invert, pointerEvents: 'none' }} alt="expand" />
+                  </motion.button>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Rest of the details content padded beneath the image gallery */}
+        <div style={{ padding: '24px', textAlign: 'left', flex: 1 }}>
+          {/* Title */}
+          <h1 style={{ 
+            fontFamily: '"Space Mono", monospace',
+            fontWeight: '400', 
+            fontSize: '32px', 
+            lineHeight: '36px',
+            color: theme.text, 
+            margin: '0 0 8px 0', 
+            textAlign: 'left', 
+            letterSpacing: '-0.5px',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px'
+          }}>
+            {activeTermNode.subLabel === 'Possible Nephilim Bloodline' && (
+              <span style={{
+                marginRight: '12px',
+                fontWeight: 900,
+                fontSize: '44px',
+                lineHeight: 1,
+                WebkitTextStroke: '3px currentColor',
+                flexShrink: 0
+              }}>✖</span>
+            )}
+            {activeTermNode.name}
+          </h1>
+
+          {/* SubLabel */}
+          {activeTermNode.subLabel && (
+            <div style={{
+              fontSize: '10px',
+              fontWeight: 'bold',
+              color: isMapDarkMode ? '#ff5c5c' : '#b31b1b',
+              letterSpacing: '1px',
+              textTransform: 'uppercase',
+              marginBottom: '12px',
+              fontFamily: '"Space Mono", monospace'
+            }}>
+              [{activeTermNode.subLabel}]
+            </div>
+          )}
+
+          {/* Actions Row */}
+          <div style={{ display: 'flex', gap: '8px', marginBottom: '16px', flexWrap: 'wrap' }}>
+            <motion.button
+              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.05 }}
+              onClick={() => {
+                setReportedFeature(activeTermNode);
+                setReportReason('Inaccurate Description');
+                setReportDetails('');
+                setReportSuccess(null);
+                setReportError(null);
+                setIsReportOpen(true);
+              }}
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '6px',
+                background: 'transparent',
+                color: isMapDarkMode ? '#fff' : '#000',
+                border: `1px solid ${isMapDarkMode ? '#fff' : '#000'}`,
+                padding: '6px 12px',
+                borderRadius: '16px',
+                cursor: 'pointer',
+                fontSize: '11px',
+                fontWeight: 'bold',
+                fontFamily: '"Space Mono", monospace',
+                letterSpacing: '0.05em',
+                transition: 'all 0.2s ease',
+                whiteSpace: 'nowrap'
+              }}
+              title="Report inaccuracy / flag this term"
+            >
+              <Flag size={13} />
+              <span>FLAG</span>
+            </motion.button>
+
+            {resolvedMapInfo && (
+              <motion.button
+                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 }}
+                onClick={() => handleViewOnMapClick(resolvedMapInfo.layer, resolvedMapInfo.featureSearchTerm)}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                  background: 'transparent',
+                  color: isMapDarkMode ? '#fff' : '#000',
+                  border: `1px solid ${isMapDarkMode ? '#fff' : '#000'}`,
+                  padding: '6px 12px',
+                  borderRadius: '16px',
+                  cursor: 'pointer',
+                  fontSize: '11px',
+                  fontWeight: 'bold',
+                  fontFamily: '"Space Mono", monospace',
+                  letterSpacing: '0.05em',
+                  transition: 'all 0.2s ease',
+                  whiteSpace: 'nowrap'
+                }}
+              >
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon>
+                  <line x1="9" y1="3" x2="9" y2="18"></line>
+                  <line x1="15" y1="6" x2="15" y2="21"></line>
+                </svg>
+                <span>VIEW ON MAP</span>
+              </motion.button>
+            )}
+
+            {activeTermNode.timelineId && (
+              <motion.button
+                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 }}
+                onClick={() => handleViewOnTimeline(activeTermNode.timelineId!)}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                  background: 'transparent',
+                  color: isMapDarkMode ? '#fff' : '#000',
+                  border: `1px solid ${isMapDarkMode ? '#fff' : '#000'}`,
+                  padding: '6px 12px',
+                  borderRadius: '16px',
+                  cursor: 'pointer',
+                  fontSize: '11px',
+                  fontWeight: 'bold',
+                  fontFamily: '"Space Mono", monospace',
+                  letterSpacing: '0.05em',
+                  transition: 'all 0.2s ease',
+                  whiteSpace: 'nowrap'
+                }}
+              >
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span>TIMELINE VIEW</span>
+              </motion.button>
+            )}
+          </div>
+
+          {/* Tag Pills */}
+          {((activeTermNode.layer) || (activeTermNode.relatedIds && activeTermNode.relatedIds.length > 0)) && (
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '24px', justifyContent: 'flex-start' }}>
+              {activeTermNode.layer && (
+                <button 
+                  style={{ 
+                    height: '24px',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    fontSize: '10px', 
+                    fontWeight: '400', 
+                    padding: '0 12px', 
+                    borderRadius: '12px', 
+                    background: activeRootColor, 
+                    border: 'none',
+                    color: '#000000',
+                    cursor: 'default',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.05em',
+                    fontFamily: '"Space Mono", monospace'
+                  }}
+                >
+                  {activeTermNode.layer}
+                </button>
+              )}
+
+              {activeTermNode.relatedIds?.map(relId => {
+                const relNode = combinedCodexNodes.find(t => t && t.id === relId);
+                if (!relNode) return null;
+                if (activeTermNode.layer && relNode.name.toLowerCase() === activeTermNode.layer.toLowerCase()) {
+                  return null;
+                }
+                const relColor = getCodexNodeColor(relNode);
+                return (
+                  <button 
+                    key={relId} 
+                    onClick={() => {
+                      setSelectedCodexNode(relNode);
+                      setFocusedCodexTermId(relNode.id);
+                    }}
+                    title={`Navigate to ${relNode.name}`}
+                    style={{ 
+                      height: '24px',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      fontSize: '10px', 
+                      fontWeight: '400', 
+                      padding: '0 12px', 
+                      borderRadius: '12px', 
+                      background: relColor, 
+                      border: 'none',
+                      color: '#000000',
+                      cursor: 'pointer',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.5px',
+                      fontFamily: '"Space Mono", monospace'
+                    }}
+                  >
+                    {relNode.name}
+                  </button>
+                );
+              })}
+            </div>
+          )}
+
+          {/* Linguistic Translations */}
+          {activeTermNode.translations && activeTermNode.translations.length > 0 && (
+            <div style={{ border: `1px solid ${theme.borderLight}`, borderRadius: '8px', padding: '16px', background: isMapDarkMode ? 'rgba(255,255,255,0.03)' : 'rgba(0,0,0,0.02)', marginBottom: '24px' }}>
+              <h3 style={{ fontFamily: '"Space Mono", monospace', fontWeight: '700', fontSize: '11px', lineHeight: '22px', textTransform: 'uppercase', color: theme.text, margin: '0 0 12px 0' }}>
+                Linguistic Roots
+              </h3>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                {activeTermNode.translations.map((trans, tIdx) => (
+                  <div key={tIdx} style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', flexWrap: 'wrap', gap: '8px', borderBottom: tIdx < activeTermNode.translations!.length - 1 ? `1px dashed ${theme.borderLight}` : 'none', paddingBottom: tIdx < activeTermNode.translations!.length - 1 ? '12px' : '0' }}>
+                    <div style={{ display: 'flex', flexDirection: 'column' }}>
+                      <span style={{ fontSize: '8.5px', fontWeight: 'bold', textTransform: 'uppercase', color: adjustCodexColorForContrast(activeRootColor), letterSpacing: '0.5px' }}>
+                        {trans.lang}
+                      </span>
+                      <span style={{ fontSize: '11px', fontWeight: 'bold', color: theme.text, fontFamily: '"Space Mono", monospace' }}>
+                        {trans.translit}
+                      </span>
+                      <span style={{ fontSize: '10px', fontStyle: 'italic', color: theme.textDim }}>
+                        "{trans.meaning}"
+                      </span>
+                    </div>
+                    <div style={{ fontSize: '24px', fontWeight: 'bold', color: theme.text, fontFamily: trans.lang === 'Hebrew' ? 'serif' : '"Space Mono", monospace', letterSpacing: '1px' }}>
+                      {trans.original}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Description */}
+          <div style={{ paddingTop: '0', textAlign: 'left', marginBottom: '24px' }}>
+            <div style={{ fontFamily: '"Space Mono", monospace', fontWeight: '700', fontSize: '11px', lineHeight: '22px', textTransform: 'uppercase' }}>
+              DESCRIPTION:
+            </div>
+            <p style={{ fontFamily: '"Space Mono", monospace', fontWeight: '400', fontSize: '10px', lineHeight: '22px', color: theme.text, marginTop: '4px', whiteSpace: 'pre-line', textAlign: 'left' }}>
+              {activeTermNode.description}
+            </p>
+          </div>
+
+          {/* Scripture references */}
+          {activeTermNode.bibleVerses && activeTermNode.bibleVerses.length > 0 && (
+            <div style={{ marginTop: '24px', borderTop: `1px solid ${theme.borderLight || theme.border}`, paddingTop: '20px', display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '24px' }}>
+              <div style={{ fontFamily: '"Space Mono", monospace', fontWeight: '700', fontSize: '11px', lineHeight: '22px', textTransform: 'uppercase' }}>
+                SCRIPTURE REFERENCES:
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                {activeTermNode.bibleVerses.map((verse, vIdx) => {
+                  const [quote, citation] = verse.split(' — ');
+                  return (
+                    <div key={vIdx} style={{ borderLeft: `2px solid ${activeRootColor}`, paddingLeft: '12px', paddingTop: '2px', paddingBottom: '2px', display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                      <span style={{ fontSize: '10px', fontStyle: 'italic', lineHeight: '1.5', color: theme.text }}>
+                        "{quote}"
+                      </span>
+                      {citation && (() => {
+                        const urlRegex = /(https?:\/\/[^\s\)]+)/g;
+                        const match = citation.match(urlRegex);
+                        if (match) {
+                          const url = match[0];
+                          const displayText = citation.replace(`(${url})`, '').trim();
+                          return (
+                            <span style={{ fontSize: '8.5px', fontWeight: 'bold', color: adjustCodexColorForContrast(activeRootColor), letterSpacing: '0.5px' }}>
+                              — {displayText.toUpperCase()}{' '}
+                              <a href={url} target="_blank" rel="noopener noreferrer" style={{ color: adjustCodexColorForContrast(activeRootColor), textDecoration: 'underline', opacity: 0.85, marginLeft: '4px', cursor: 'pointer' }}>
+                                [LINK]
+                              </a>
+                            </span>
+                          );
+                        }
+                        return (
+                          <span style={{ fontSize: '8.5px', fontWeight: 'bold', color: adjustCodexColorForContrast(activeRootColor), letterSpacing: '0.5px' }}>
+                            — {citation.toUpperCase()}
+                          </span>
+                        );
+                      })()}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          {/* Primary Sources & Ancient Texts */}
+          {activeTermNode.sources && activeTermNode.sources.length > 0 && (
+            <div style={{ marginTop: '24px', borderTop: `1px solid ${theme.borderLight || theme.border}`, paddingTop: '20px', display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '24px' }}>
+              <div style={{ fontFamily: '"Space Mono", monospace', fontWeight: '700', fontSize: '11px', lineHeight: '22px', textTransform: 'uppercase', color: theme.text }}>
+                PRIMARY SOURCES & ANCIENT TEXTS:
+              </div>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
+                {activeTermNode.sources.map((source, sIdx) => {
+                  const rootColor = activeRootColor;
+                  return (
+                    <div key={sIdx} style={{ fontFamily: '"Space Mono", monospace', fontSize: '9px', fontWeight: 'bold', padding: '4px 8px', borderRadius: '4px', backgroundColor: `${rootColor}15`, border: `1px solid ${rootColor}30`, color: adjustCodexColorForContrast(rootColor), whiteSpace: 'nowrap' }}>
+                      {source.trim().toUpperCase() === 'CANONICAL SCRIPTURE' ? 'BIBLE' : source.toUpperCase()}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          {/* Legend explanation for Apocryphal tag */}
+          {isCodexOnlyApocryphal(activeTermNode) && (
+            <div style={{ marginTop: '24px', borderTop: `1px solid ${theme.borderLight || theme.border}`, paddingTop: '20px', marginBottom: '24px' }}>
+              <div style={{ padding: '12px', border: `1px solid ${isMapDarkMode ? 'rgba(255, 92, 92, 0.4)' : 'rgba(179, 27, 27, 0.4)'}`, borderRadius: '8px', background: isMapDarkMode ? 'rgba(255, 92, 92, 0.04)' : 'rgba(255, 92, 92, 0.02)' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
+                  <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '11px', lineHeight: '1', fontWeight: '900', color: isMapDarkMode ? '#ff5c5c' : '#b31b1b', fontFamily: '"Space Mono", monospace' }}>✖</span>
+                  <span style={{ fontSize: '9px', fontWeight: 'bold', fontFamily: '"Space Mono", monospace', color: isMapDarkMode ? '#ff5c5c' : '#b31b1b' }}>
+                    APOCRYPHAL INDICATOR
+                  </span>
+                </div>
+                <p style={{ fontSize: '8.5px', lineHeight: '1.4', color: isMapDarkMode ? '#ffb3b3' : '#801c1c', margin: 0, fontFamily: '"Space Mono", monospace' }}>
+                  Represents apocryphal, non-canonical, or mythological entries outside of canonical scripture.
                 </p>
               </div>
             </div>
-          </motion.div>
+          )}
+
+          {/* Legend explanation for Nephilim Bloodline tag */}
+          {activeTermNode.subLabel === 'Possible Nephilim Bloodline' && (
+            <div style={{ marginTop: '24px', borderTop: `1px solid ${theme.borderLight || theme.border}`, paddingTop: '20px', marginBottom: '24px' }}>
+              <div style={{ padding: '12px', border: `1px solid ${isMapDarkMode ? 'rgba(255, 92, 92, 0.4)' : 'rgba(179, 27, 27, 0.4)'}`, borderRadius: '8px', background: isMapDarkMode ? 'rgba(255, 92, 92, 0.04)' : 'rgba(255, 92, 92, 0.02)' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
+                  <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '11px', lineHeight: '1', fontWeight: '900', color: isMapDarkMode ? '#ff5c5c' : '#b31b1b', fontFamily: '"Space Mono", monospace' }}>✖</span>
+                  <span style={{ fontSize: '9px', fontWeight: 'bold', fontFamily: '"Space Mono", monospace', color: isMapDarkMode ? '#ff5c5c' : '#b31b1b' }}>
+                    NEPHILIM BLOODLINE INDICATOR
+                  </span>
+                </div>
+                <p style={{ fontSize: '8.5px', lineHeight: '1.4', color: isMapDarkMode ? '#ffb3b3' : '#801c1c', margin: 0, fontFamily: '"Space Mono", monospace' }}>
+                  Represents a people group historically associated with or suspected of carrying Nephilim giant lineage.
+                </p>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  };
+
+  const renderMobileTimeline = () => {
+    const formatTimelineYear = (y: number) => {
+      const rounded = Math.round(y);
+      if (rounded < 0) return `${Math.abs(rounded)} BC`;
+      return `${rounded} AD`;
+    };
+
+    // Filter locations to those in range and active
+    const activeLocations = combinedPointsAndLinesData.filter(loc => {
+      const cat = loc.categories?.[0] || loc.category;
+      if (activeLayers[cat] === false) return false;
+      return loc.date >= yearRange.start && loc.date <= yearRange.end;
+    }).sort((a, b) => a.date - b.date);
+
+    return (
+      <div style={{ display: 'flex', flexDirection: 'column', height: '100%', fontFamily: '"Space Mono", monospace', padding: '0 12px', boxSizing: 'border-box' }}>
+        {/* Sliders and Reset */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '14px', marginBottom: '16px', borderBottom: `1px solid ${theme.borderLight}`, paddingTop: '16px', paddingBottom: '16px', flexShrink: 0 }}>
+          <div style={{ display: 'flex', position: 'relative', justifyContent: 'center', alignItems: 'center', minHeight: '30px' }}>
+            <span style={{ fontSize: '12px', fontWeight: 'bold', color: theme.text, textAlign: 'center' }}>
+              {formatTimelineYear(yearRange.start)} – {formatTimelineYear(yearRange.end)}
+            </span>
+            <button
+              onClick={() => {
+                setYearRange({ start: timeBounds.min, end: timeBounds.max });
+              }}
+              style={{
+                position: 'absolute',
+                right: 0,
+                height: '26px',
+                padding: '0 10px',
+                background: 'transparent',
+                border: `1px solid ${theme.border}`,
+                color: theme.text,
+                borderRadius: '13px',
+                fontSize: '10px',
+                textTransform: 'uppercase',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '4px'
+              }}
+            >
+              <RotateCcw size={10} />
+              Reset
+            </button>
+          </div>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', padding: '0 4px' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+              <span style={{ fontSize: '9px', color: theme.textDim, fontWeight: 'bold', letterSpacing: '0.5px' }}>START DATE</span>
+              <input
+                type="range"
+                min={timeBounds.min}
+                max={yearRange.end}
+                step={1}
+                value={yearRange.start}
+                onChange={(e) => {
+                  const val = parseFloat(e.target.value);
+                  setYearRange(prev => ({ ...prev, start: val }));
+                }}
+                className="figma-slider-thumb-left"
+                style={{ 
+                  width: '100%', 
+                  height: '2px', 
+                  background: theme.text, 
+                  outline: 'none', 
+                  cursor: 'pointer',
+                  WebkitAppearance: 'none',
+                  appearance: 'none',
+                  marginTop: '8px',
+                  marginBottom: '8px'
+                }}
+              />
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+              <span style={{ fontSize: '9px', color: theme.textDim, fontWeight: 'bold', letterSpacing: '0.5px' }}>END DATE</span>
+              <input
+                type="range"
+                min={yearRange.start}
+                max={timeBounds.max}
+                step={1}
+                value={yearRange.end}
+                onChange={(e) => {
+                  const val = parseFloat(e.target.value);
+                  setYearRange(prev => ({ ...prev, end: val }));
+                }}
+                className="figma-slider-thumb-right"
+                style={{ 
+                  width: '100%', 
+                  height: '2px', 
+                  background: theme.text, 
+                  outline: 'none', 
+                  cursor: 'pointer',
+                  WebkitAppearance: 'none',
+                  appearance: 'none',
+                  marginTop: '8px',
+                  marginBottom: '8px'
+                }}
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Scrollable list of events in range */}
+        <span style={{ fontSize: '9px', color: theme.textDim, fontWeight: 'bold', letterSpacing: '1px', marginBottom: '8px', display: 'block', paddingLeft: '4px' }}>
+          CHRONOLOGY IN RANGE ({activeLocations.length})
+        </span>
+        <div className="custom-scrollbar" style={{ flex: 1, overflowY: 'auto', marginRight: 0, padding: '0 4px' }}>
+          {activeLocations.map((loc, idx) => {
+            const isSelected = selectedFeature?.id === loc.id;
+            const cat = loc.categories?.[0] || loc.category;
+            const dotColor = layerColors[cat] || '#b6a6ff';
+            return (
+              <div
+                key={`mob-time-loc-${loc.id}-${idx}`}
+                onClick={() => {
+                  handleLocationItemClick(loc);
+                  setMobileActiveTab('details');
+                }}
+                style={{
+                  padding: '10px 8px',
+                  cursor: 'pointer',
+                  borderBottom: `1px solid ${theme.borderLight}`,
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  background: isSelected ? (isMapDarkMode ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.04)') : 'transparent',
+                }}
+              >
+                <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: dotColor, flexShrink: 0 }} />
+                <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
+                  <span style={{ fontSize: '11px', fontWeight: 'bold', color: theme.text }}>{loc.name}</span>
+                  <span style={{ fontSize: '9px', color: theme.textDim }}>{formatTimelineYear(loc.date)}</span>
+                </div>
+              </div>
+            );
+          })}
+          {activeLocations.length === 0 && (
+            <div style={{ padding: '20px 0', textAlign: 'center', fontSize: '11px', color: theme.textDim }}>
+              NO ASSETS IN RANGE
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  };
+
+  const renderDossierInnerContent = () => {
+    if (!selectedFeature) return null;
+    return (
+      <div className="custom-sidebar-scrollbar" style={{ flex: 1, overflowY: 'auto', overflowX: 'hidden', textAlign: 'left', paddingBottom: '15px' }}>
+        {activeAssets && activeAssets.length > 0 && (
+          <div style={{ width: '100%', position: 'relative', borderBottom: `1px solid ${theme.border}` }}>
+            <div 
+              style={{ 
+                width: '100%', 
+                height: '260px', 
+                backgroundColor: isMapDarkMode ? '#0a0a0a' : '#f0f0f0', 
+                overflow: 'hidden', 
+                display: 'flex', 
+                alignItems: 'center', 
+                justifyContent: 'center', 
+                position: 'relative'
+              }}
+            >
+              {(() => {
+                const curAsset = activeAssets[activeImageIndex];
+                if (!curAsset) return null;
+
+                const showPdfBadge = !!(curAsset.pdfUrl || curAsset.type === 'pdf');
+                const isBroken = !!(brokenImages[curAsset.url] || curAsset.url === MISSING_IMAGE_URL || curAsset.url?.includes('icon-missing-image.svg'));
+                const imgSrc = isBroken ? MISSING_IMAGE_URL : cleanAndProxyImageUrl(curAsset.url);
+
+                return (
+                  <>
+                    {isImageLoading && curAsset.type === 'image' && !curAsset.pdfUrl && (
+                      <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: theme.bg, display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 3 }}>
+                        <div className="loading-spinner" />
+                      </div>
+                    )}
+
+                    {curAsset.type === 'pdf' ? (
+                      <div 
+                        onClick={handleOpenLightbox}
+                        style={{ 
+                          width: '100%', 
+                          height: '100%', 
+                          position: 'relative', 
+                          cursor: 'pointer',
+                          overflow: 'hidden',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          backgroundColor: isMapDarkMode ? '#141414' : '#fafafa',
+                          border: `1px solid ${theme.border}`
+                        }}
+                      >
+                        {/* Background Paper Mockup */}
+                        <div style={{
+                          width: '130px',
+                          height: '180px',
+                          backgroundColor: isMapDarkMode ? '#1e1e1e' : '#ffffff',
+                          border: `1px solid ${isMapDarkMode ? '#333333' : '#e0e0e0'}`,
+                          boxShadow: '0 8px 20px rgba(0,0,0,0.3)',
+                          padding: '16px 12px',
+                          position: 'relative',
+                          display: 'flex',
+                          flexDirection: 'column',
+                          justifyContent: 'space-between'
+                        }}>
+                          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                            <div style={{ height: '6px', width: '80%', backgroundColor: isMapDarkMode ? '#3a3a3a' : '#d2d2d2' }} />
+                            <div style={{ height: '6px', width: '50%', backgroundColor: isMapDarkMode ? '#3a3a3a' : '#eaeaea' }} />
+                            <div style={{ height: '6px', width: '90%', backgroundColor: isMapDarkMode ? '#ffffff' : '#000000' }} />
+                            <div style={{ height: '6px', width: '35%', backgroundColor: isMapDarkMode ? '#3a3a3a' : '#d2d2d2' }} />
+                            <div style={{ height: '6px', width: '70%', backgroundColor: isMapDarkMode ? '#ffffff' : '#000000' }} />
+                          </div>
+
+                          <div style={{
+                            position: 'absolute',
+                            top: '45%',
+                            left: '50%',
+                            transform: 'translate(-50%, -50%) rotate(-25deg)',
+                            border: '2px double #ef4444',
+                            color: '#ef4444',
+                            padding: '1px 6px',
+                            fontFamily: '"Space Mono", monospace',
+                            fontSize: '7px',
+                            fontWeight: 'bold',
+                            zIndex: 1,
+                            letterSpacing: '1px',
+                            borderRadius: '2px',
+                            opacity: 0.85,
+                            textTransform: 'uppercase'
+                          }}>
+                            DECLASSIFIED
+                          </div>
+                          
+                          <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                            <div style={{ height: '2px', width: '100%', backgroundColor: isMapDarkMode ? '#333333' : '#eaeaea' }} />
+                            <div style={{ fontSize: '6px', color: theme.textDim, fontFamily: '"Space Mono", monospace', letterSpacing: '0.5px', textTransform: 'uppercase' }}>
+                              RECORD DOSSIER
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ) : curAsset.type === 'video' ? (
+                      <div 
+                        onClick={handleOpenLightbox}
+                        style={{ 
+                          width: '100%', 
+                          height: '100%', 
+                          position: 'relative', 
+                          cursor: 'pointer',
+                          overflow: 'hidden',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center'
+                        }}
+                      >
+                        <div style={{ width: '100%', height: '100%', pointerEvents: 'none', overflow: 'hidden', position: 'relative' }}>
+                          {(curAsset.url.includes('youtube.com') || 
+                           curAsset.url.includes('youtu.be') || 
+                           curAsset.url.includes('dvidshub.net/video/') ||
+                           curAsset.url.includes('twitter.com') ||
+                           curAsset.url.includes('x.com')) ? (
+                            <iframe
+                              src={(curAsset.url.includes('dvidshub.net/video/') || curAsset.url.includes('twitter.com') || curAsset.url.includes('x.com')) ? getEmbedUrl(curAsset.url) : `${getEmbedUrl(curAsset.url)}?autoplay=0&controls=0&mute=1`}
+                              style={curAsset.url.includes('dvidshub.net/video/') ? {
+                                border: 'none',
+                                position: 'absolute',
+                                top: 0,
+                                left: '50%',
+                                transform: 'translateX(-50%)',
+                                width: '165%',
+                                height: '190%'
+                              } : { 
+                                border: 'none', 
+                                position: 'absolute',
+                                top: '50%',
+                                left: '50%',
+                                transform: 'translate(-50%, -50%)',
+                                width: '180%', 
+                                height: '180%'
+                              }}
+                              title="Video asset viewport"
+                            />
+                          ) : (
+                            (() => {
+                              const videoSrc = curAsset.url.startsWith('http')
+                                ? `/api/proxy-resource?url=${encodeURIComponent(curAsset.url)}`
+                                : curAsset.url;
+                              const mimeType = curAsset.url.toLowerCase().endsWith('.webm') ? 'video/webm' : curAsset.url.toLowerCase().endsWith('.ogv') ? 'video/ogg' : 'video/mp4';
+                              return (
+                                <video
+                                  key={videoSrc}
+                                  muted
+                                  playsInline
+                                  preload="metadata"
+                                  referrerPolicy="no-referrer"
+                                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                >
+                                  <source src={videoSrc} type={mimeType} />
+                                </video>
+                              );
+                            })()
+                          )}
+                        </div>
+                        
+                        <div style={{
+                          position: 'absolute',
+                          top: 0,
+                          left: 0,
+                          right: 0,
+                          bottom: 0,
+                          background: 'rgba(0, 0, 0, 0.3)',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          zIndex: 1
+                        }}>
+                          <motion.div
+                            whileHover={{ scale: 1.15, backgroundColor: 'rgba(0, 0, 0, 0.85)' }}
+                            whileTap={{ scale: 0.92 }}
+                            transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                            style={{
+                              width: '56px',
+                              height: '56px',
+                              borderRadius: '50%',
+                              background: 'rgba(0, 0, 0, 0.70)',
+                              border: `1px solid ${theme.border || 'rgba(255,255,255,0.45)'}`,
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              boxShadow: '0 8px 32px rgba(0,0,0,0.4)',
+                              color: '#ffffff'
+                            }}
+                          >
+                            <Play size={20} fill="currentColor" style={{ marginLeft: '3px' }} />
+                          </motion.div>
+                        </div>
+                      </div>
+                    ) : curAsset.type === 'audio' ? (
+                      <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: isMapDarkMode ? '#030303' : '#f9f9f9', gap: '20px', padding: '24px' }}>
+                        <div style={{ width: '64px', height: '64px', borderRadius: '50%', background: isMapDarkMode ? '#222' : '#eee', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: theme.text }}>
+                            <path d="M9 18V5l12-2v13"></path>
+                            <circle cx="6" cy="18" r="3"></circle>
+                            <circle cx="18" cy="16" r="3"></circle>
+                          </svg>
+                        </div>
+                        <audio 
+                          src={curAsset.url} 
+                          controls 
+                          style={{ width: '100%', height: '40px' }} 
+                          onPlay={() => trackCustomEvent('play_audio', {
+                            audio_url: curAsset.url,
+                            associated_feature: selectedFeature?.name || 'unknown'
+                          })}
+                        />
+                        <p style={{ color: theme.textDim, fontSize: '9px', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: 'bold' }}>Audio Intelligence Intercept</p>
+                      </div>
+                    ) : (
+                      <motion.img 
+                        key={`${selectedFeature.id}-${activeImageIndex}`}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: isImageLoading ? 0 : 1 }}
+                        transition={{ duration: 0.3 }}
+                        onClick={handleOpenLightbox}
+                        src={imgSrc} 
+                        alt={`${selectedFeature.name} asset viewport`} 
+                        referrerPolicy="no-referrer"
+                        onLoad={() => setIsImageLoading(false)}
+                        onError={(e) => {
+                          setIsImageLoading(false);
+                          if (curAsset.url) {
+                            setBrokenImages(prev => ({ ...prev, [curAsset.url]: true }));
+                          }
+                        }}
+                        style={{ 
+                          width: isBroken ? '48px' : '100%', 
+                          height: isBroken ? '48px' : '100%', 
+                          cursor: 'pointer',                        
+                          objectFit: isBroken ? 'contain' : 'cover',                     
+                          backgroundColor: 'transparent',           
+                          filter: isBroken ? (isMapDarkMode ? 'invert(1)' : 'none') : 'none'
+                        }}
+                      />
+                    )}
+
+                    {showPdfBadge && (
+                      <div style={{
+                        position: 'absolute',
+                        top: '12px',
+                        right: '12px',
+                        height: '24px',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        fontSize: '10px', 
+                        fontWeight: '400', 
+                        padding: '0 12px', 
+                        borderRadius: '12px', 
+                        background: layerColors[selectedFeature.categories?.[0]] || '#e5e5e5', 
+                        border: 'none',
+                        color: '#000000',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.5px',
+                        fontFamily: '"Space Mono", monospace',
+                        boxShadow: '0 4px 12px rgba(0,0,0,0.25)',
+                        zIndex: 5,
+                        gap: '6px'
+                      }}>
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+                          <polyline points="14 2 14 8 20 8" />
+                        </svg>
+                        <span style={{ fontSize: '9px', fontWeight: 'bold' }}>PDF</span>
+                      </div>
+                    )}
+                  </>
+                );
+              })()}
+              
+              <div style={{ 
+                position: 'absolute', 
+                bottom: '4px', 
+                left: '4px', right: '4px', 
+                display: 'flex', 
+                alignItems: 'center', 
+                justifyContent: 'space-between', 
+                zIndex: 2,
+                pointerEvents: 'none'
+              }}>
+                <div style={{ display: 'flex', gap: '4px', flex: 1, justifyContent: 'flex-start', pointerEvents: 'auto' }}>
+                  {activeAssets.length > 1 && (
+                    <>
+                      <motion.button 
+                        whileHover={{ opacity: 0.7 }}
+                        onClick={handlePrevImage} 
+                        style={{ 
+                          background: theme.bg, 
+                          border: `1px solid ${theme.border}`, 
+                          borderRadius: '50%', 
+                          width: '30px', 
+                          height: '30px', 
+                          cursor: 'pointer', 
+                          padding: '0',
+                          display: 'flex', 
+                          alignItems: 'center', 
+                          justifyContent: 'center',
+                          boxShadow: 'none',
+                          fontFamily: '"Space Mono", monospace'
+                        }}
+                      >
+                        <img 
+                          src="/icons/icon-arrow-left.svg" 
+                          style={{ width: '6px', height: '12px', filter: isMapDarkMode ? 'brightness(0) invert(1)' : 'brightness(0)' }} 
+                          alt="prev" 
+                        />
+                      </motion.button>
+                      <motion.button 
+                        whileHover={{ opacity: 0.7 }}
+                        onClick={handleNextImage} 
+                        style={{ 
+                          background: theme.bg, 
+                          border: `1px solid ${theme.border}`, 
+                          borderRadius: '50%', 
+                          width: '30px', 
+                          height: '30px', 
+                          cursor: 'pointer', 
+                          padding: '0',
+                          display: 'flex', 
+                          alignItems: 'center', 
+                          justifyContent: 'center',
+                          boxShadow: 'none',
+                          fontFamily: '"Space Mono", monospace'
+                        }}
+                      >
+                        <img 
+                          src="/icons/icon-arrow-left.svg" 
+                          style={{ width: '6px', height: '12px', transform: 'rotate(180deg)', filter: isMapDarkMode ? 'brightness(0) invert(1)' : 'brightness(0)' }} 
+                          alt="next" 
+                        />
+                      </motion.button>
+                    </>
+                  )}
+                </div>
+
+                {activeAssets.length > 1 && (
+                  <div style={{ display: 'flex', justifyContent: 'center', pointerEvents: 'auto' }}>
+                    <div style={{ 
+                      background: 'rgba(0, 0, 0, 0.65)', 
+                      backdropFilter: 'blur(2px)',
+                      color: '#ffffff', 
+                      fontSize: '11px', 
+                      fontFamily: '"Space Mono", monospace',
+                      fontWeight: '700',
+                      height: '30px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      padding: '0 16px', 
+                      borderRadius: '15px', 
+                      letterSpacing: '0.5px',
+                      textAlign: 'center',
+                      whiteSpace: 'nowrap'
+                    }}>
+                      {activeImageIndex + 1}/{activeAssets.length}
+                    </div>
+                  </div>
+                )}
+
+                <div style={{ display: 'flex', flex: 1, justifyContent: 'flex-end', pointerEvents: 'auto' }}>
+                  <motion.button 
+                    whileHover={{ scale: 1.1, backgroundColor: isMapDarkMode ? '#222' : '#f0f0f0' }}
+                    onClick={handleOpenLightbox} 
+                    title="Expand image to Fullscreen Lightbox"
+                    style={{ 
+                      background: theme.bg, 
+                      border: `1px solid ${theme.border}`, 
+                      borderRadius: '50%', 
+                      width: '30px', 
+                      height: '30px', 
+                      cursor: 'pointer', 
+                      display: 'flex', 
+                      alignItems: 'center', 
+                      justifyContent: 'center',
+                      boxShadow: 'none',
+                      padding: 0,
+                      fontFamily: '"Space Mono", monospace',
+                      transition: 'background-color 0.2s ease'
+                    }}
+                  >
+                    <img src="/icons/icon-expand.svg" style={{ width: '30px', height: '30px', filter: theme.invert }} alt="expand" />
+                  </motion.button>
+                </div>
+              </div>
+            </div>
+          </div>
         )}
-      </AnimatePresence>
+
+        <div style={{ padding: '24px', textAlign: 'left' }}>
+          <h1 style={{ 
+            fontFamily: '"Space Mono", monospace',
+            fontWeight: '400', 
+            fontSize: '32px', 
+            lineHeight: '36px',
+            color: theme.text, 
+            margin: '0 0 8px 0', 
+            textAlign: 'left', 
+            letterSpacing: '-0.5px',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px'
+          }}>
+            {selectedFeature.isPeopleGroup && (
+              <span style={{
+                marginRight: '12px',
+                fontWeight: 900,
+                fontSize: '44px',
+                lineHeight: 1,
+                WebkitTextStroke: '3px currentColor',
+                flexShrink: 0
+              }}>✖</span>
+            )}
+            {toTitleCase(selectedFeature.name)}
+          </h1>
+
+          {selectedFeature.subLabel && (
+            <div style={{
+              fontSize: '11px',
+              fontWeight: 'bold',
+              color: '#ef4444',
+              fontFamily: '"Space Mono", monospace',
+              letterSpacing: '1px',
+              textTransform: 'uppercase',
+              marginBottom: '12px'
+            }}>
+              [{selectedFeature.subLabel}]
+            </div>
+          )}
+
+          <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '12px', marginBottom: '16px' }}>
+            <motion.button
+              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.05 }}
+              onClick={() => handleLike(selectedFeature.id)}
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '6px',
+                background: isMapDarkMode ? '#fff' : '#000',
+                color: isMapDarkMode ? '#000' : '#fff',
+                border: 'none',
+                padding: '6px 12px',
+                borderRadius: '16px',
+                cursor: 'pointer',
+                fontSize: '11px',
+                fontWeight: 'bold',
+                fontFamily: '"Space Mono", monospace',
+                opacity: userLikedIds.has(String(selectedFeature.id).replace(/[^a-zA-Z0-9_\-]/g, '_')) ? 1 : 0.7,
+                transition: 'opacity 0.2s ease',
+                whiteSpace: 'nowrap'
+              }}
+            >
+              <Heart size={14} fill={userLikedIds.has(String(selectedFeature.id).replace(/[^a-zA-Z0-9_\-]/g, '_')) ? (isMapDarkMode ? "#000" : "#fff") : "none"} />
+              <span>{likes[String(selectedFeature.id).replace(/[^a-zA-Z0-9_\-]/g, '_')] || 0}</span>
+            </motion.button>
+
+            <motion.button
+              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.05 }}
+              onClick={() => {
+                setReportedFeature(selectedFeature);
+                setReportReason('Incorrect Coordinates / Location');
+                setReportDetails('');
+                setReportSuccess(null);
+                setReportError(null);
+                setIsReportOpen(true);
+              }}
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '6px',
+                background: 'transparent',
+                color: isMapDarkMode ? '#fff' : '#000',
+                border: `1px solid ${isMapDarkMode ? '#fff' : '#000'}`,
+                padding: '6px 12px',
+                borderRadius: '16px',
+                cursor: 'pointer',
+                fontSize: '11px',
+                fontWeight: 'bold',
+                fontFamily: '"Space Mono", monospace',
+                transition: 'all 0.2s ease',
+                whiteSpace: 'nowrap'
+              }}
+              title="Report inaccuracy / flag this point"
+            >
+              <Flag size={13} />
+              <span>FLAG</span>
+            </motion.button>
+
+            {combinedTimelineItems.some(t => String(t.id) === String(selectedFeature.id)) && (
+              <motion.button
+                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 }}
+                onClick={() => handleViewOnTimeline(selectedFeature.id)}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  background: 'transparent',
+                  color: isMapDarkMode ? '#fff' : '#000',
+                  border: `1px solid ${isMapDarkMode ? '#fff' : '#000'}`,
+                  padding: '6px 12px',
+                  borderRadius: '16px',
+                  cursor: 'pointer',
+                  fontSize: '11px',
+                  fontWeight: 'bold',
+                  fontFamily: '"Space Mono", monospace',
+                  transition: 'all 0.2s ease',
+                  whiteSpace: 'nowrap'
+                }}
+              >
+                <span>TIMELINE VIEW</span>
+              </motion.button>
+            )}
+
+            {(() => {
+              const codexNode = getCodexTermForMapFeature(selectedFeature);
+              if (!codexNode) return null;
+              return (
+                <motion.button
+                  whileTap={{ scale: 0.95 }}
+                  whileHover={{ scale: 1.05 }}
+                  onClick={() => {
+                    setFocusedCodexTermId(codexNode.id);
+                    setCurrentPage('codex');
+                  }}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    background: 'transparent',
+                    color: isMapDarkMode ? '#fff' : '#000',
+                    border: `1px solid ${isMapDarkMode ? '#fff' : '#000'}`,
+                    padding: '6px 12px',
+                    borderRadius: '16px',
+                    cursor: 'pointer',
+                    fontSize: '11px',
+                    fontWeight: 'bold',
+                    fontFamily: '"Space Mono", monospace',
+                    transition: 'all 0.2s ease',
+                    whiteSpace: 'nowrap'
+                  }}
+                >
+                  <span>CODEX VIEW</span>
+                </motion.button>
+              );
+            })()}
+
+            {selectedFeature.socialLink && (
+              <motion.a
+                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 }}
+                href={selectedFeature.socialLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                  background: 'transparent',
+                  color: isMapDarkMode ? '#fff' : '#000',
+                  border: `1px solid ${isMapDarkMode ? '#fff' : '#000'}`,
+                  padding: '6px 12px',
+                  borderRadius: '16px',
+                  cursor: 'pointer',
+                  fontSize: '11px',
+                  fontWeight: 'bold',
+                  fontFamily: '"Space Mono", monospace',
+                  transition: 'all 0.2s ease',
+                  whiteSpace: 'nowrap',
+                  textDecoration: 'none'
+                }}
+              >
+                {selectedFeature.socialLink.toLowerCase().includes('instagram.com') ? (
+                  <Instagram size={13} />
+                ) : (
+                  <ExternalLink size={13} />
+                )}
+                <span>
+                  {selectedFeature.socialLink.toLowerCase().includes('instagram.com') ? 'INSTAGRAM' : 'X.COM'}
+                </span>
+              </motion.a>
+            )}
+          </div>
+          
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '24px', justifyContent: 'flex-start' }}>
+            {selectedFeature.categories?.map((tag: string) => (
+              <button 
+                key={tag} 
+                onClick={() => handleTagClick(tag)}
+                title={`Click to filter list by ${tag}`}
+                style={{ 
+                  height: '24px',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  fontSize: '10px', 
+                  fontWeight: '400', 
+                  padding: '0 12px', 
+                  borderRadius: '12px', 
+                  background: layerColors[tag] || '#e5e5e5', 
+                  border: 'none',
+                  color: '#000000',
+                  cursor: 'pointer',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.05em',
+                  fontFamily: '"Space Mono", monospace',
+                  transition: 'transform 0.1s ease, box-shadow 0.1s ease'
+                }}
+                className="interactive-tag-pill"
+              >
+                {tag}
+              </button>
+            ))}
+          </div>
+
+          <div style={{ 
+            display: 'flex', 
+            flexDirection: 'column', 
+            gap: '8px', 
+            paddingTop: '0', 
+            marginBottom: '20px', 
+            textAlign: 'left' 
+          }}>
+            <div style={{ fontFamily: '"Space Mono", monospace', fontWeight: '700', fontStyle: 'italic', fontSize: '10px', lineHeight: '22px' }}>
+              DATE: <span style={{ fontStyle: 'normal', fontWeight: '400' }}>
+                {selectedFeature.displayDate || (selectedFeature.date !== null && selectedFeature.date !== undefined
+                  ? (selectedFeature.date < 0 
+                    ? `${Math.abs(selectedFeature.date) < 10000 ? Math.abs(selectedFeature.date) : Math.abs(selectedFeature.date).toLocaleString()} BC` 
+                    : (selectedFeature.date > 2050 
+                      ? `${selectedFeature.date < 10000 ? selectedFeature.date : selectedFeature.date.toLocaleString()} AD (Future Prophecy)` 
+                      : `${selectedFeature.date < 10000 ? selectedFeature.date : selectedFeature.date.toLocaleString()} AD`))
+                  : 'UNSPECIFIED')}
+              </span>
+            </div>
+            <div style={{ fontFamily: '"Space Mono", monospace', fontWeight: '700', fontStyle: 'italic', fontSize: '10px', lineHeight: '22px' }}>
+              LOCATION: <span style={{ fontStyle: 'normal', fontWeight: '400' }}>{(() => {
+                  if (!selectedFeature.coordinates) return 'UNKNOWN';
+                  const coordsStr = selectedFeature.type === 'LineString' 
+                    ? `LINESTRING START: ${selectedFeature.coordinates[0][1].toFixed(4)}, ${selectedFeature.coordinates[0][0].toFixed(4)}`
+                    : `${selectedFeature.coordinates[1].toFixed(4)}, ${selectedFeature.coordinates[0].toFixed(4)}`;
+                  
+                  if (selectedFeature.locationName) {
+                    return `${selectedFeature.locationName} (${coordsStr})`;
+                  }
+                  return coordsStr;
+                })()}</span>
+            </div>
+            {selectedFeature.source && (
+              <div style={{ fontFamily: '"Space Mono", monospace', fontWeight: '700', fontStyle: 'italic', fontSize: '10px', lineHeight: '22px' }}>
+                SOURCE: <span style={{ fontStyle: 'normal', fontWeight: '400' }}>{selectedFeature.source}</span>
+              </div>
+            )}
+          </div>
+
+          <div style={{ paddingTop: '0', textAlign: 'left' }}>
+            <div style={{ fontFamily: '"Space Mono", monospace', fontWeight: '700', fontSize: '11px', lineHeight: '22px' }}>DESCRIPTION:</div>
+            <p style={{ 
+              fontFamily: '"Space Mono", monospace',
+              fontWeight: '400',
+              fontSize: '10px', 
+              lineHeight: '22px', 
+              color: theme.text,
+              marginTop: '4px', 
+              whiteSpace: 'pre-line', 
+              textAlign: 'left' 
+            }}>
+              {selectedFeature.description}
+            </p>
+          </div>
+
+          {(() => {
+            const travelPath = BIBLICAL_TRAVEL_PATHS[selectedFeature.id];
+            if (!travelPath) return null;
+            const categoryColor = layerColors[selectedFeature.categories?.[0]] || '#90C2FF';
+            return (
+              <div style={{ marginTop: '24px', borderTop: `1px solid ${theme.borderLight || theme.border}`, paddingTop: '20px' }}>
+                <div style={{ fontFamily: '"Space Mono", monospace', fontWeight: '700', fontSize: '11px', lineHeight: '22px', marginBottom: '12px', letterSpacing: '1px', textTransform: 'uppercase' }}>
+                  JOURNEY PATH & LOG
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0px', position: 'relative', paddingLeft: '14px' }}>
+                  <div style={{
+                    position: 'absolute',
+                    left: '4px',
+                    top: '8px',
+                    bottom: '8px',
+                    width: '1px',
+                    borderLeft: `1.5px dashed ${theme.border}`
+                  }} />
+
+                  {travelPath.waypoints.map((wp, idx) => (
+                    <div 
+                      key={idx} 
+                      onClick={() => {
+                        setActiveWaypointIndex(idx);
+                        if (mapRef.current) {
+                          mapRef.current.flyTo({
+                            center: [wp.lng, wp.lat],
+                            zoom: 8.5,
+                            duration: 1500,
+                            essential: true
+                          });
+                          
+                          if (activeTravelPopupRef.current) {
+                            fadeOutPopup(activeTravelPopupRef.current);
+                          }
+
+                          activeTravelPopupRef.current = new mapboxgl.Popup({ closeButton: false, className: 'custom-mapbox-popup', anchor: 'bottom' })
+                            .setLngLat([wp.lng, wp.lat])
+                            .setHTML(`<div style="font-family: 'Space Mono', monospace; font-size: 11px; padding: 4px; border-radius: 4px; max-width: 200px; text-align: left;">
+                              <strong style="display: block; margin-bottom: 2px; font-size: 12px; color: #fff;">${wp.locationName}</strong>
+                              ${wp.displayDate ? `<span style="font-size: 10px; font-style: italic; color: #aaa; display: block; margin-bottom: 6px;">${wp.displayDate}</span>` : ''}
+                              <p style="margin: 0; font-size: 10px; line-height: 1.4; color: #ddd;">${wp.description || ''}</p>
+                            </div>`)
+                            .addTo(mapRef.current);
+                        }
+                      }}
+                      onMouseEnter={(e) => {
+                        if (idx !== activeWaypointIndex) e.currentTarget.style.opacity = '0.9';
+                      }}
+                      onMouseLeave={(e) => {
+                        if (idx !== activeWaypointIndex) e.currentTarget.style.opacity = '0.65';
+                      }}
+                      style={{
+                        position: 'relative',
+                        paddingBottom: idx === travelPath.waypoints.length - 1 ? '0' : '20px',
+                        cursor: 'pointer',
+                        opacity: idx === activeWaypointIndex ? 1.0 : 0.65,
+                        transition: 'opacity 0.2s ease',
+                        textAlign: 'left'
+                      }}
+                    >
+                      <div style={{
+                        position: 'absolute',
+                        left: '-14px',
+                        top: idx === activeWaypointIndex ? '10px' : '4px',
+                        width: idx === activeWaypointIndex ? '9px' : '7px',
+                        height: idx === activeWaypointIndex ? '9px' : '7px',
+                        borderRadius: '50%',
+                        background: categoryColor,
+                        border: `1.5px solid ${theme.bg}`,
+                        boxShadow: `0 0 0 1px ${theme.border}`,
+                        transform: 'translateX(-50%)',
+                        transition: 'all 0.2s ease',
+                        zIndex: 2
+                      }} />
+
+                      <div style={{ 
+                        fontFamily: '"Space Mono", monospace', 
+                        fontSize: '10px',
+                        background: idx === activeWaypointIndex 
+                          ? (isMapDarkMode ? 'rgba(255, 255, 255, 0.05)' : 'rgba(0, 0, 0, 0.03)')
+                          : 'transparent',
+                        borderRadius: '6px',
+                        padding: idx === activeWaypointIndex ? '6px 8px' : '0px',
+                        transition: 'all 0.2s ease',
+                        border: idx === activeWaypointIndex ? `1px solid ${categoryColor}` : 'none',
+                        paddingLeft: idx === activeWaypointIndex ? '8px' : '0px'
+                      }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: '8px' }}>
+                          <span style={{ 
+                            fontWeight: '700', 
+                            color: theme.text
+                          }}>{wp.locationName}</span>
+                          {wp.displayDate && (
+                            <span style={{ fontSize: '9px', opacity: 0.65, fontWeight: 'normal', color: theme.text }}>{wp.displayDate}</span>
+                          )}
+                        </div>
+                        <p style={{ margin: '4px 0 0 0', fontSize: '9px', lineClamp: 2, color: idx === activeWaypointIndex ? theme.text : theme.textDim }}>
+                          {wp.description}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          })()}
+
+          {activeFigures && activeFigures.length > 0 && (
+            <div style={{ marginTop: '24px', borderTop: `1px solid ${theme.borderLight || theme.border}`, paddingTop: '20px' }}>
+              <div style={{ fontFamily: '"Space Mono", monospace', fontWeight: '700', fontSize: '11px', lineHeight: '22px', marginBottom: '12px', letterSpacing: '1px', textTransform: 'uppercase' }}>
+                ACTIVE FIGURES DURING EVENT
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                {activeFigures.map(fig => (
+                  <div 
+                    key={fig.id}
+                    onClick={() => {
+                      const matchedRecord = combinedPointsAndLinesData.find(item => String(item.id) === String(fig.id));
+                      if (matchedRecord) {
+                        handleLocationItemClick(matchedRecord);
+                      } else {
+                        if (fig.coords && mapRef.current) {
+                          mapRef.current.flyTo({
+                            center: fig.coords,
+                            zoom: 8.5,
+                            duration: 1500
+                          });
+                        }
+                      }
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.backgroundColor = isMapDarkMode ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.05)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.backgroundColor = 'transparent';
+                    }}
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      padding: '8px',
+                      borderRadius: '6px',
+                      cursor: 'pointer',
+                      transition: 'background-color 0.2s ease',
+                      border: `1px solid ${theme.borderLight || theme.border}`
+                    }}
+                  >
+                    <div style={{ display: 'flex', justifyContent: 'space-between', fontFamily: '"Space Mono", monospace', fontSize: '10px', fontWeight: '700' }}>
+                      <span style={{ color: theme.text }}>{fig.name}</span>
+                      <span style={{ opacity: 0.65, fontWeight: 'normal' }}>Age: {fig.age}</span>
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '4px', marginTop: '4px', fontFamily: '"Space Mono", monospace', fontSize: '9px', color: theme.textDim }}>
+                      <MapPin size={10} style={{ filter: theme.invert }} />
+                      <span>Location: {fig.locationName}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  };
+
+  return (
+    <div style={{ width: scrollbarWidth ? `calc(100vw - ${scrollbarWidth}px)` : '100vw', minHeight: '100vh', background: '#ffffff', color: '#000000', fontFamily: '"Space Mono", monospace', overflowX: 'hidden', textAlign: 'left' }}>
+      
 
       {/* GLOBAL FULL-SCREEN LOADER OVERLAY */}
       <AnimatePresence>
@@ -6455,291 +8602,558 @@ function App() {
         {/* BRAND HEADER COMPONENT */}
         <header 
           style={{ 
-            height: '118px', 
+            height: isMobile ? '56px' : '118px', 
             display: 'flex', 
             alignItems: 'center', 
             justifyContent: 'space-between', 
-            padding: '0 20px 0 0', 
+            padding: isMobile ? '0 16px' : '0 20px 0 0', 
             flexShrink: 0, 
             zIndex: 20, 
             pointerEvents: 'none', 
             position: 'relative',
-            background: (currentPage === 'map' || currentPage === 'codex' || currentPage === 'timeline' || currentPage === 'cartography') ? 'transparent' : (isMapDarkMode ? '#000000' : '#ffffff'),
-            transition: 'background-color 0.3s ease'
+            background: isMobile ? '#000000' : ((currentPage === 'map' || currentPage === 'codex' || currentPage === 'timeline' || currentPage === 'cartography') ? 'transparent' : (isMapDarkMode ? '#000000' : '#ffffff')),
+            borderBottom: isMobile ? (isMobileMenuOpen ? '1px solid #ffffff' : '1px solid transparent') : 'none',
+            transition: 'background-color 0.3s ease, border-color 0.3s ease'
           }}
         >
-          <img src="/mtrh-horiz-words.svg" alt="MTRH Logo" style={{ height: '78px', width: '232px', pointerEvents: 'auto', filter: theme.invert }} />
+          <img 
+            src={isMobile ? '/MTRH-logo-horiz-nowords-white.svg' : '/mtrh-horiz-words.svg'} 
+            alt="MTRH Logo" 
+            style={{ 
+              height: isMobile ? '42px' : '78px', 
+              width: 'auto', 
+              pointerEvents: 'auto', 
+              filter: isMobile ? 'none' : theme.invert,
+              position: isMobile ? 'absolute' : 'relative',
+              left: isMobile ? (isMobileMenuOpen ? '16px' : '50%') : 'auto',
+              transform: isMobile ? (isMobileMenuOpen ? 'none' : 'translateX(-50%)') : 'none',
+              transition: 'left 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)'
+            }} 
+          />
           
-          {/* CENTER NAVIGATION PILL */}
-          <div style={{
-            position: 'absolute',
-            left: '50%',
-            transform: 'translateX(-50%)',
-            pointerEvents: 'auto',
-            zIndex: 30,
-            display: 'flex',
-            gap: '8px',
-            border: `1px solid ${theme.border}`,
-            padding: '4px',
-            borderRadius: '20px',
-            background: theme.bgTransparent
-          }}>
-            <motion.button 
-              onClick={() => setCurrentPage('map')}
-              whileHover={{
-                background: currentPage === 'map'
-                  ? (isMapDarkMode ? '#cccccc' : '#333333')
-                  : (isMapDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.05)')
-              }}
+          {isMobile ? (
+            <motion.button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              animate={{ rotate: isMobileMenuOpen ? 180 : 0 }}
+              transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
               style={{
-                background: currentPage === 'map' ? theme.text : (isMapDarkMode ? 'rgba(255, 255, 255, 0)' : 'rgba(0, 0, 0, 0)'),
-                color: currentPage === 'map' ? theme.bg : theme.text,
+                background: 'transparent',
                 border: 'none',
-                padding: '6px 18px',
-                fontSize: '10px',
-                fontFamily: '"Space Mono", monospace',
-                fontWeight: 700,
                 cursor: 'pointer',
-                borderRadius: '16px',
-                textTransform: 'uppercase',
-                letterSpacing: '0.05em',
-                transition: 'all 0.2s ease'
+                pointerEvents: 'auto',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: '44px',
+                height: '44px',
+                padding: 0,
+                marginLeft: 'auto',
+                gap: '4px',
+                position: 'relative'
               }}
             >
-              Map
+              {/* Top line */}
+              <motion.div
+                animate={isMobileMenuOpen ? { rotate: 45, y: 5.5 } : { rotate: 0, y: 0 }}
+                transition={{ duration: 0.3, ease: 'easeInOut' }}
+                style={{
+                  width: '17px',
+                  height: '1.5px',
+                  backgroundColor: '#ffffff',
+                  originX: '8.5px',
+                  originY: '0.75px'
+                }}
+              />
+              {/* Middle line */}
+              <motion.div
+                animate={isMobileMenuOpen ? { opacity: 0, scale: 0.5 } : { opacity: 1, scale: 1 }}
+                transition={{ duration: 0.2, ease: 'easeInOut' }}
+                style={{
+                  width: '17px',
+                  height: '1.5px',
+                  backgroundColor: '#ffffff'
+                }}
+              />
+              {/* Bottom line */}
+              <motion.div
+                animate={isMobileMenuOpen ? { rotate: -45, y: -5.5 } : { rotate: 0, y: 0 }}
+                transition={{ duration: 0.3, ease: 'easeInOut' }}
+                style={{
+                  width: '17px',
+                  height: '1.5px',
+                  backgroundColor: '#ffffff',
+                  originX: '8.5px',
+                  originY: '0.75px'
+                }}
+              />
             </motion.button>
-            <div style={{ position: 'relative', display: 'inline-block' }}>
-              <motion.button 
-                onClick={() => setCurrentPage('timeline')}
-                whileHover={{
-                  background: currentPage === 'timeline'
-                    ? (isMapDarkMode ? '#cccccc' : '#333333')
-                    : (isMapDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.05)')
-                }}
-                style={{
-                  background: currentPage === 'timeline' ? theme.text : (isMapDarkMode ? 'rgba(255, 255, 255, 0)' : 'rgba(0, 0, 0, 0)'),
-                  color: currentPage === 'timeline' ? theme.bg : theme.text,
-                  border: 'none',
-                  padding: '6px 18px',
-                  fontSize: '10px',
-                  fontFamily: '"Space Mono", monospace',
-                  fontWeight: 700,
-                  cursor: 'pointer',
-                  borderRadius: '16px',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.05em',
-                  transition: 'all 0.2s ease'
-                }}
-              >
-                Timeline
-              </motion.button>
-              {onboardingStep === 4 && (
-                <div style={{
-                  position: 'absolute',
-                  top: '-3px',
-                  left: '-3px',
-                  right: '-3px',
-                  bottom: '-3px',
-                  border: '3px solid #b6a6ff',
-                  boxShadow: '0 0 15px rgba(182, 166, 255, 0.5)',
-                  pointerEvents: 'none',
-                  zIndex: 9999,
-                  borderRadius: '19px',
-                  animation: 'radar-pulse 2s infinite'
-                }} />
-              )}
-            </div>
-            <div style={{ position: 'relative', display: 'inline-block' }}>
-              <motion.button 
-                onClick={() => setCurrentPage('codex')}
-                whileHover={{
-                  background: currentPage === 'codex'
-                    ? (isMapDarkMode ? '#cccccc' : '#333333')
-                    : (isMapDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.05)')
-                }}
-                style={{
-                  background: currentPage === 'codex' ? theme.text : (isMapDarkMode ? 'rgba(255, 255, 255, 0)' : 'rgba(0, 0, 0, 0)'),
-                  color: currentPage === 'codex' ? theme.bg : theme.text,
-                  border: 'none',
-                  padding: '6px 18px',
-                  fontSize: '10px',
-                  fontFamily: '"Space Mono", monospace',
-                  fontWeight: 700,
-                  cursor: 'pointer',
-                  borderRadius: '16px',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.05em',
-                  transition: 'all 0.2s ease'
-                }}
-              >
-                Codex
-              </motion.button>
-              {onboardingStep === 5 && (
-                <div style={{
-                  position: 'absolute',
-                  top: '-3px',
-                  left: '-3px',
-                  right: '-3px',
-                  bottom: '-3px',
-                  border: '3px solid #b6a6ff',
-                  boxShadow: '0 0 15px rgba(182, 166, 255, 0.5)',
-                  pointerEvents: 'none',
-                  zIndex: 9999,
-                  borderRadius: '19px',
-                  animation: 'radar-pulse 2s infinite'
-                }} />
-              )}
-            </div>
-            <div style={{ position: 'relative', display: 'inline-block' }}>
-              <motion.button 
-                onClick={() => setCurrentPage('cartography')}
-                whileHover={{
-                  background: currentPage === 'cartography'
-                    ? (isMapDarkMode ? '#cccccc' : '#333333')
-                    : (isMapDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.05)')
-                }}
-                style={{
-                  background: currentPage === 'cartography' ? theme.text : (isMapDarkMode ? 'rgba(255, 255, 255, 0)' : 'rgba(0, 0, 0, 0)'),
-                  color: currentPage === 'cartography' ? theme.bg : theme.text,
-                  border: 'none',
-                  padding: '6px 18px',
-                  fontSize: '10px',
-                  fontFamily: '"Space Mono", monospace',
-                  fontWeight: 700,
-                  cursor: 'pointer',
-                  borderRadius: '16px',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.05em',
-                  transition: 'all 0.2s ease'
-                }}
-              >
-                Cartography
-              </motion.button>
-            </div>
-          </div>
-
-          {/* THEME TOGGLE: FIXED TO RIGHT */}
-          <div style={{ pointerEvents: 'auto', display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '8px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span style={{ 
-                fontSize: '9px', 
-                fontFamily: '"Space Mono", monospace', 
-                fontWeight: 700, 
-                color: theme.text,
-                letterSpacing: '1px'
+          ) : (
+            <>
+              {/* CENTER NAVIGATION PILL */}
+              <div style={{
+                position: 'absolute',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                pointerEvents: 'auto',
+                zIndex: 30,
+                display: 'flex',
+                gap: '8px',
+                border: `1px solid ${theme.border}`,
+                padding: '4px',
+                borderRadius: '20px',
+                background: theme.bgTransparent
               }}>
-                {isMapDarkMode ? 'DARK MODE' : 'LIGHT MODE'}
-              </span>
-              <button 
-                onClick={() => setIsMapDarkMode(!isMapDarkMode)}
-                style={{
-                  width: '32px',
-                  height: '16px',
-                  borderRadius: '8px',
-                  background: isMapDarkMode ? '#ffffff' : '#eee', 
-                  border: `1px solid ${theme.border}`,
-                  position: 'relative',
-                  cursor: 'pointer',
-                  padding: 0,
-                  transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
-                }}
-              >
-                <div style={{
-                  width: '10px',
-                  height: '10px',
-                  borderRadius: '50%',
-                  background: isMapDarkMode ? '#000' : '#000',
-                  position: 'absolute',
-                  top: '2px',
-                  left: isMapDarkMode ? '19px' : '2px',
-                  transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
-                }} />
-              </button>
-            </div>
-
-            {/* ACTION LINK BUTTONS FOR SUBMISSIONS AND DESIGNATED MODERATION */}
-            <div style={{ display: 'flex', gap: '8px', marginTop: '2px' }}>
-              <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
-                <motion.button
-                  onClick={() => {
-                    setSubmissionSuccess(null);
-                    setSubmissionError(null);
-                    if (currentPage === 'codex') {
-                      if (selectedCodexNode) {
-                        let curr = selectedCodexNode;
-                        let limit = 10;
-                        while (curr && curr.parentId && limit > 0) {
-                          const p = combinedCodexNodes.find((x: any) => x.id === curr.parentId);
-                          if (!p) break;
-                          curr = p;
-                          limit--;
-                        }
-                        const rootId = curr?.id;
-                        if (rootId === 'biblical-apocryphal') {
-                          setSubCategory('Religion');
-                        } else if (rootId === 'myths-legends-root') {
-                          setSubCategory('Myths / Legends');
-                        } else if (rootId === 'megaliths-structures') {
-                          setSubCategory('Megaliths / Structures');
-                        } else if (rootId === 'supernatural-anomalies') {
-                          setSubCategory('Supernatural / Anomalies');
-                        } else {
-                          setSubCategory('Religion');
-                        }
-                      } else {
-                        setSubCategory('Religion');
-                      }
-                    } else {
-                      setSubCategory('UFOs - Sightings');
-                    }
-                    setIsSubmitOpen(true);
-                  }}
+                <motion.button 
+                  onClick={() => setCurrentPage('map')}
                   whileHover={{
-                    background: isMapDarkMode ? '#cccccc' : '#333333',
-                    scale: 1.02
+                    background: currentPage === 'map'
+                      ? (isMapDarkMode ? '#cccccc' : '#333333')
+                      : (isMapDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.05)')
                   }}
                   style={{
-                    background: isMapDarkMode ? '#ffffff' : '#000000',
-                    color: isMapDarkMode ? '#000000' : '#ffffff',
-                    border: `1px solid ${theme.border}`,
-                    padding: '0 16px',
-                    height: '32px',
-                    fontSize: '9px',
+                    background: currentPage === 'map' ? theme.text : (isMapDarkMode ? 'rgba(255, 255, 255, 0)' : 'rgba(0, 0, 0, 0)'),
+                    color: currentPage === 'map' ? theme.bg : theme.text,
+                    border: 'none',
+                    padding: '6px 18px',
+                    fontSize: '10px',
                     fontFamily: '"Space Mono", monospace',
                     fontWeight: 700,
                     cursor: 'pointer',
                     borderRadius: '16px',
                     textTransform: 'uppercase',
                     letterSpacing: '0.05em',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '6px',
-                    boxSizing: 'border-box',
                     transition: 'all 0.2s ease'
                   }}
                 >
-                  <Plus size={10} strokeWidth={3} />
-                  <span>SUBMIT INTEL</span>
+                  Map
                 </motion.button>
-                {currentPage === 'map' && onboardingStep === 7 && (
-                  <div style={{
-                    position: 'absolute',
-                    top: '-3px',
-                    left: '-3px',
-                    right: '-3px',
-                    bottom: '-3px',
-                    border: '3px solid #b6a6ff',
-                    boxShadow: '0 0 15px rgba(182, 166, 255, 0.5)',
-                    pointerEvents: 'none',
-                    zIndex: 9999,
-                    borderRadius: '19px',
-                    animation: 'radar-pulse 2s infinite'
-                  }} />
-                )}
+                <div style={{ position: 'relative', display: 'inline-block' }}>
+                  <motion.button 
+                    onClick={() => setCurrentPage('timeline')}
+                    whileHover={{
+                      background: currentPage === 'timeline'
+                        ? (isMapDarkMode ? '#cccccc' : '#333333')
+                        : (isMapDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.05)')
+                    }}
+                    style={{
+                      background: currentPage === 'timeline' ? theme.text : (isMapDarkMode ? 'rgba(255, 255, 255, 0)' : 'rgba(0, 0, 0, 0)'),
+                      color: currentPage === 'timeline' ? theme.bg : theme.text,
+                      border: 'none',
+                      padding: '6px 18px',
+                      fontSize: '10px',
+                      fontFamily: '"Space Mono", monospace',
+                      fontWeight: 700,
+                      cursor: 'pointer',
+                      borderRadius: '16px',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.05em',
+                      transition: 'all 0.2s ease'
+                    }}
+                  >
+                    Timeline
+                  </motion.button>
+                  {onboardingStep === 4 && (
+                    <div style={{
+                      position: 'absolute',
+                      top: '-3px',
+                      left: '-3px',
+                      right: '-3px',
+                      bottom: '-3px',
+                      border: '3px solid #b6a6ff',
+                      boxShadow: '0 0 15px rgba(182, 166, 255, 0.5)',
+                      pointerEvents: 'none',
+                      zIndex: 9999,
+                      borderRadius: '19px',
+                      animation: 'radar-pulse 2s infinite'
+                    }} />
+                  )}
+                </div>
+                <div style={{ position: 'relative', display: 'inline-block' }}>
+                  <motion.button 
+                    onClick={() => setCurrentPage('codex')}
+                    whileHover={{
+                      background: currentPage === 'codex'
+                        ? (isMapDarkMode ? '#cccccc' : '#333333')
+                        : (isMapDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.05)')
+                    }}
+                    style={{
+                      background: currentPage === 'codex' ? theme.text : (isMapDarkMode ? 'rgba(255, 255, 255, 0)' : 'rgba(0, 0, 0, 0)'),
+                      color: currentPage === 'codex' ? theme.bg : theme.text,
+                      border: 'none',
+                      padding: '6px 18px',
+                      fontSize: '10px',
+                      fontFamily: '"Space Mono", monospace',
+                      fontWeight: 700,
+                      cursor: 'pointer',
+                      borderRadius: '16px',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.05em',
+                      transition: 'all 0.2s ease'
+                    }}
+                  >
+                    Codex
+                  </motion.button>
+                  {onboardingStep === 5 && (
+                    <div style={{
+                      position: 'absolute',
+                      top: '-3px',
+                      left: '-3px',
+                      right: '-3px',
+                      bottom: '-3px',
+                      border: '3px solid #b6a6ff',
+                      boxShadow: '0 0 15px rgba(182, 166, 255, 0.5)',
+                      pointerEvents: 'none',
+                      zIndex: 9999,
+                      borderRadius: '19px',
+                      animation: 'radar-pulse 2s infinite'
+                    }} />
+                  )}
+                </div>
+                <div style={{ position: 'relative', display: 'inline-block' }}>
+                  <motion.button 
+                    onClick={() => setCurrentPage('cartography')}
+                    whileHover={{
+                      background: currentPage === 'cartography'
+                        ? (isMapDarkMode ? '#cccccc' : '#333333')
+                        : (isMapDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.05)')
+                    }}
+                    style={{
+                      background: currentPage === 'cartography' ? theme.text : (isMapDarkMode ? 'rgba(255, 255, 255, 0)' : 'rgba(0, 0, 0, 0)'),
+                      color: currentPage === 'cartography' ? theme.bg : theme.text,
+                      border: 'none',
+                      padding: '6px 18px',
+                      fontSize: '10px',
+                      fontFamily: '"Space Mono", monospace',
+                      fontWeight: 700,
+                      cursor: 'pointer',
+                      borderRadius: '16px',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.05em',
+                      transition: 'all 0.2s ease'
+                    }}
+                  >
+                    Cartography
+                  </motion.button>
+                </div>
               </div>
-            </div>
-          </div>
+
+              {/* THEME TOGGLE: FIXED TO RIGHT */}
+              <div style={{ pointerEvents: 'auto', display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '8px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <span style={{ 
+                    fontSize: '9px', 
+                    fontFamily: '"Space Mono", monospace', 
+                    fontWeight: 700, 
+                    color: theme.text,
+                    letterSpacing: '1px'
+                  }}>
+                    {isMapDarkMode ? 'DARK MODE' : 'LIGHT MODE'}
+                  </span>
+                  <button 
+                    onClick={() => setIsMapDarkMode(!isMapDarkMode)}
+                    style={{
+                      width: '32px',
+                      height: '16px',
+                      borderRadius: '8px',
+                      background: isMapDarkMode ? '#ffffff' : '#eee', 
+                      border: `1px solid ${theme.border}`,
+                      position: 'relative',
+                      cursor: 'pointer',
+                      padding: 0,
+                      transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
+                    }}
+                  >
+                    <div style={{
+                      width: '10px',
+                      height: '10px',
+                      borderRadius: '50%',
+                      background: isMapDarkMode ? '#000' : '#000',
+                      position: 'absolute',
+                      top: '2px',
+                      left: isMapDarkMode ? '19px' : '2px',
+                      transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
+                    }} />
+                  </button>
+                </div>
+
+                {/* ACTION LINK BUTTONS FOR SUBMISSIONS AND DESIGNATED MODERATION */}
+                <div style={{ display: 'flex', gap: '8px', marginTop: '2px' }}>
+                  <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
+                    <motion.button
+                      onClick={() => {
+                        setSubmissionSuccess(null);
+                        setSubmissionError(null);
+                        if (currentPage === 'codex') {
+                          if (selectedCodexNode) {
+                            let curr = selectedCodexNode;
+                            let limit = 10;
+                            while (curr && curr.parentId && limit > 0) {
+                              const p = combinedCodexNodes.find((x: any) => x.id === curr.parentId);
+                              if (!p) break;
+                              curr = p;
+                              limit--;
+                            }
+                            const rootId = curr?.id;
+                            if (rootId === 'biblical-apocryphal') {
+                              setSubCategory('Religion');
+                            } else if (rootId === 'myths-legends-root') {
+                              setSubCategory('Myths / Legends');
+                            } else if (rootId === 'megaliths-structures') {
+                              setSubCategory('Megaliths / Structures');
+                            } else if (rootId === 'supernatural-anomalies') {
+                              setSubCategory('Supernatural / Anomalies');
+                            } else {
+                              setSubCategory('Religion');
+                            }
+                          } else {
+                            setSubCategory('Religion');
+                          }
+                        } else {
+                          setSubCategory('UFOs - Sightings');
+                        }
+                        setIsSubmitOpen(true);
+                      }}
+                      whileHover={{
+                        background: isMapDarkMode ? '#cccccc' : '#333333',
+                        scale: 1.02
+                      }}
+                      style={{
+                        background: isMapDarkMode ? '#ffffff' : '#000000',
+                        color: isMapDarkMode ? '#000000' : '#ffffff',
+                        border: `1px solid ${theme.border}`,
+                        padding: '0 16px',
+                        height: '32px',
+                        fontSize: '9px',
+                        fontFamily: '"Space Mono", monospace',
+                        fontWeight: 700,
+                        cursor: 'pointer',
+                        borderRadius: '16px',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.05em',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '6px',
+                        boxSizing: 'border-box',
+                        transition: 'all 0.2s ease'
+                      }}
+                    >
+                      <Plus size={10} strokeWidth={3} />
+                      <span>SUBMIT INTEL</span>
+                    </motion.button>
+                    {currentPage === 'map' && onboardingStep === 7 && (
+                      <div style={{
+                        position: 'absolute',
+                        top: '-3px',
+                        left: '-3px',
+                        right: '-3px',
+                        bottom: '-3px',
+                        border: '3px solid #b6a6ff',
+                        boxShadow: '0 0 15px rgba(182, 166, 255, 0.5)',
+                        pointerEvents: 'none',
+                        zIndex: 9999,
+                        borderRadius: '19px',
+                        animation: 'radar-pulse 2s infinite'
+                      }} />
+                    )}
+                  </div>
+                </div>
+              </div>
+            </>
+          )}
         </header>
+
+        {/* MOBILE FULL-SCREEN MENU OVERLAY */}
+        <AnimatePresence>
+          {isMobile && isMobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+              style={{
+                position: 'fixed',
+                top: '56px',
+                left: 0,
+                right: 0,
+                bottom: 0,
+                background: isMapDarkMode ? '#ffffff' : '#000000',
+                zIndex: 50000,
+                overflowY: 'auto',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                padding: '32px 24px',
+                boxSizing: 'border-box',
+                borderTop: `1px solid ${isMapDarkMode ? 'rgba(0,0,0,0.1)' : 'rgba(255,255,255,0.1)'}`
+              }}
+            >
+              {/* NAVIGATION LINKS */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '28px', marginBottom: '32px', width: '100%', alignItems: 'center' }}>
+                {['map', 'timeline', 'codex', 'cartography'].map((page) => (
+                  <button
+                    key={page}
+                    onClick={() => {
+                      setCurrentPage(page as any);
+                      setIsMobileMenuOpen(false);
+                    }}
+                    style={{
+                      background: 'transparent',
+                      border: 'none',
+                      color: currentPage === page ? '#b6a6ff' : (isMapDarkMode ? '#000000' : '#ffffff'),
+                      fontSize: '18px',
+                      fontWeight: 'bold',
+                      fontFamily: '"Space Mono", monospace',
+                      textTransform: 'uppercase',
+                      textAlign: 'center',
+                      padding: '8px 0',
+                      cursor: 'pointer',
+                      letterSpacing: '2px',
+                      borderBottom: currentPage === page ? `2px solid #b6a6ff` : 'none'
+                    }}
+                  >
+                    {page}
+                  </button>
+                ))}
+              </div>
+
+              <hr style={{ border: 'none', borderTop: `1px solid ${isMapDarkMode ? 'rgba(0,0,0,0.15)' : 'rgba(255,255,255,0.15)'}`, margin: '0 0 24px 0', width: '100%', maxWidth: '280px' }} />
+
+              {/* CONTROLS (Theme & Submit Intel) */}
+              <div style={{ display: 'flex', flexDirection: 'row', gap: '24px', marginBottom: '32px', alignItems: 'center', justifyContent: 'center', width: '100%' }}>
+                {/* Theme Toggle */}
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                  <span style={{ fontSize: '11px', fontWeight: 'bold', color: isMapDarkMode ? '#000000' : '#ffffff', letterSpacing: '1px', whiteSpace: 'nowrap' }}>
+                    {isMapDarkMode ? 'DARK' : 'LIGHT'}
+                  </span>
+                  <button 
+                    onClick={() => setIsMapDarkMode(!isMapDarkMode)}
+                    style={{
+                      width: '40px',
+                      height: '20px',
+                      borderRadius: '10px',
+                      background: isMapDarkMode ? '#000000' : '#ffffff', 
+                      border: `1px solid ${isMapDarkMode ? '#000000' : '#ffffff'}`,
+                      position: 'relative',
+                      cursor: 'pointer',
+                      padding: 0,
+                      transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
+                    }}
+                  >
+                    <div style={{
+                      width: '14px',
+                      height: '14px',
+                      borderRadius: '50%',
+                      background: isMapDarkMode ? '#ffffff' : '#000000',
+                      position: 'absolute',
+                      top: '2px',
+                      left: isMapDarkMode ? '22px' : '2px',
+                      transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
+                    }} />
+                  </button>
+                </div>
+
+                {/* Submit Intel Button */}
+                <button
+                  onClick={() => {
+                    setSubmissionSuccess(null);
+                    setSubmissionError(null);
+                    setSubCategory('UFOs - Sightings');
+                    setIsSubmitOpen(true);
+                    setIsMobileMenuOpen(false);
+                  }}
+                  style={{
+                    background: isMapDarkMode ? '#000000' : '#ffffff',
+                    color: isMapDarkMode ? '#ffffff' : '#000000',
+                    border: `1px solid ${isMapDarkMode ? '#000000' : '#ffffff'}`,
+                    padding: '12px 24px',
+                    fontSize: '11px',
+                    fontFamily: '"Space Mono", monospace',
+                    fontWeight: 'bold',
+                    cursor: 'pointer',
+                    borderRadius: '24px',
+                    textTransform: 'uppercase',
+                    letterSpacing: '1px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '8px',
+                    width: 'auto'
+                  }}
+                >
+                  <Plus size={14} strokeWidth={3} />
+                  <span>SUBMIT INTEL</span>
+                </button>
+              </div>
+
+              <hr style={{ border: 'none', borderTop: `1px solid ${isMapDarkMode ? 'rgba(0,0,0,0.15)' : 'rgba(255,255,255,0.15)'}`, margin: '0 0 24px 0', width: '100%', maxWidth: '280px' }} />
+
+              {/* FOOTER CONTENTS */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', marginTop: 'auto', paddingBottom: '24px', width: '100%', alignItems: 'center' }}>
+                <div style={{ textAlign: 'center' }}>
+                  <h4 style={{ fontSize: '14px', fontWeight: 'bold', margin: '0 0 12px 0', color: isMapDarkMode ? '#000000' : '#ffffff', letterSpacing: '1px' }}>FRIENDS</h4>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '10px', fontWeight: 'bold', alignItems: 'center' }}>
+                    <a href="https://northbeastclothing.com/" target="_blank" rel="noopener noreferrer" style={{ color: isMapDarkMode ? 'rgba(0,0,0,0.5)' : 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>NORTH BEAST CO.</a>
+                    <a href="https://blurrycreatures.com/?srsltid=AfmBOorjjAxrHwi6VEgrMm-dxLlVFFb_yFGO3YDacaky_IXZDdgcWNcg" target="_blank" rel="noopener noreferrer" style={{ color: isMapDarkMode ? 'rgba(0,0,0,0.5)' : 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>BLURRY CREATURES</a>
+                    <a href="https://www.theconfessionalspodcast.com/" target="_blank" rel="noopener noreferrer" style={{ color: isMapDarkMode ? 'rgba(0,0,0,0.5)' : 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>THE CONFESSIONALS</a>
+                    <a href="https://www.instagram.com/giants_of_ancientamerica/" target="_blank" rel="noopener noreferrer" style={{ color: isMapDarkMode ? 'rgba(0,0,0,0.5)' : 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>GIANTS OF ANCIENT AMERICA</a>
+                    <a href="https://www.instagram.com/freetherabbitspodcast/" target="_blank" rel="noopener noreferrer" style={{ color: isMapDarkMode ? 'rgba(0,0,0,0.5)' : 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>FREE THE RABBITS</a>
+                    <a href="https://www.21cdstudios.com/" target="_blank" rel="noopener noreferrer" style={{ color: isMapDarkMode ? 'rgba(0,0,0,0.5)' : 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>21CD</a>
+                  </div>
+                </div>
+
+                <div style={{ textAlign: 'center' }}>
+                  <h4 style={{ fontSize: '14px', fontWeight: 'bold', margin: '0 0 12px 0', color: isMapDarkMode ? '#000000' : '#ffffff', letterSpacing: '1px' }}>CONTACT</h4>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '10px', alignItems: 'center' }}>
+                    <span style={{ color: isMapDarkMode ? 'rgba(0,0,0,0.5)' : 'rgba(255,255,255,0.5)' }}>Questions? Wanna help?</span>
+                    <a href="mailto:mappingtherabbithole@gmail.com" style={{ color: isMapDarkMode ? '#000000' : '#ffffff', fontWeight: 'bold', textDecoration: 'underline' }}>mappingtherabbithole@gmail.com</a>
+                  </div>
+                </div>
+
+                <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+                  <form 
+                    action="https://www.paypal.com/donate" 
+                    method="post" 
+                    target="_blank" 
+                    style={{ display: 'block', margin: 0, padding: 0, width: '100%', maxWidth: '240px' }}
+                  >
+                    <input type="hidden" name="business" value="GZV5QVK7KNBVE" />
+                    <input type="hidden" name="no_recurring" value="0" />
+                    <input type="hidden" name="item_name" value="I do this because I love it! But anything is greatly appreciated!" />
+                    <input type="hidden" name="currency_code" value="USD" />
+                    <button 
+                      type="submit"
+                      style={{
+                        width: '100%',
+                        height: '40px',
+                        backgroundColor: 'transparent',
+                        color: isMapDarkMode ? '#000000' : '#ffffff',
+                        border: `1.5px solid ${isMapDarkMode ? '#000000' : '#ffffff'}`,
+                        fontSize: '11px',
+                        fontWeight: 'bold',
+                        fontFamily: '"Space Mono", monospace',
+                        cursor: 'pointer',
+                        textTransform: 'uppercase',
+                        letterSpacing: '1px',
+                        borderRadius: '20px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center'
+                      }}
+                    >
+                      DONATE
+                    </button>
+                  </form>
+                </div>
+
+                <div style={{ opacity: 0.5, color: isMapDarkMode ? 'rgba(0,0,0,0.5)' : 'rgba(255,255,255,0.5)', fontSize: '9px', textAlign: 'center', marginTop: '16px' }}>
+                  Copyright North Beast LLC 2026.<br />All rights reserved.
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
 
         {/* CORE WORKSPACE FRAMING GRID — NOW FULL BLEED OVERLAY ENVIRONMENT */}
         <div style={{ flex: 1, position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: 'column', width: '100%', height: '100%' }}>
@@ -6781,30 +9195,35 @@ function App() {
           )}
           
           {/* PROTECTIVE SIDE STRIPS */}
-          <motion.div 
-            initial={false}
-            animate={{ 
-              bottom: isTimelineCollapsed ? '0px' : '150px',
-              background: theme.bg,
-              borderColor: theme.border
-            }}
-            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            style={{ position: 'absolute', top: 0, left: 0, width: '20px', borderRight: '1px solid', borderTop: '1px solid', zIndex: 100, pointerEvents: 'auto' }} 
-          />
-          <motion.div 
-            initial={false}
-            animate={{ 
-              bottom: isTimelineCollapsed ? '0px' : '150px',
-              background: theme.bg,
-              borderColor: theme.border
-            }}
-            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            style={{ position: 'absolute', top: 0, right: 0, width: '20px', borderLeft: '1px solid', borderTop: '1px solid', zIndex: 100, pointerEvents: 'auto' }} 
-          />
+          {!isMobile && (
+            <>
+              <motion.div 
+                initial={false}
+                animate={{ 
+                  bottom: isTimelineCollapsed ? '0px' : '150px',
+                  background: theme.bg,
+                  borderColor: theme.border
+                }}
+                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                style={{ position: 'absolute', top: 0, left: 0, width: '20px', borderRight: '1px solid', borderTop: '1px solid', zIndex: 100, pointerEvents: 'auto' }} 
+              />
+              <motion.div 
+                initial={false}
+                animate={{ 
+                  bottom: isTimelineCollapsed ? '0px' : '150px',
+                  background: theme.bg,
+                  borderColor: theme.border
+                }}
+                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                style={{ position: 'absolute', top: 0, right: 0, width: '20px', borderLeft: '1px solid', borderTop: '1px solid', zIndex: 100, pointerEvents: 'auto' }} 
+              />
+            </>
+          )}
 
           {/* LEFT COMPONENT: FILTERS MANAGEMENT PANEL */}
-          <motion.div 
-            className="custom-sidebar-scrollbar"
+          {!isMobile && (
+            <motion.div 
+              className="custom-sidebar-scrollbar"
             initial={false}
             animate={{ 
               left: isLeftCollapsed ? -280 : 20,
@@ -6923,7 +9342,7 @@ function App() {
                     borderRadius: '0px',
                     outline: 'none',
                     boxSizing: 'border-box',
-                    background: isMapDarkMode ? '#000000' : '#ffffff',
+                    background: '#000000',
                     color: theme.text
                   }}
                 />
@@ -7339,10 +9758,12 @@ function App() {
               })}
             </div>
           </motion.div>
+          )}
 
           {/* RIGHT COMPONENT: DOSSIER SIDEBAR WINDOW PANEL */}
-          <motion.div 
-            initial={false}
+          {!isMobile && (
+            <motion.div 
+              initial={false}
             animate={{ 
               right: isRightCollapsed ? -280 : 20,
               bottom: isTimelineCollapsed ? 0 : 150,
@@ -7459,851 +9880,7 @@ function App() {
                   </div>
 
                   <div className="custom-sidebar-scrollbar" style={{ flex: 1, overflowY: 'auto', overflowX: 'hidden', textAlign: 'left', paddingBottom: '15px' }}>
-                    
-                    {activeAssets && activeAssets.length > 0 && (
-                      <div style={{ width: '100%', position: 'relative', borderBottom: `1px solid ${theme.border}` }}>
-                        <div 
-                          style={{ 
-                            width: '100%', 
-                            height: '260px', 
-                            backgroundColor: isMapDarkMode ? '#0a0a0a' : '#f0f0f0', 
-                            overflow: 'hidden', 
-                            display: 'flex', 
-                            alignItems: 'center', 
-                            justifyContent: 'center', 
-                            position: 'relative'
-                          }}
-                        >
-                          {(() => {
-                            const curAsset = activeAssets[activeImageIndex];
-                            if (!curAsset) return null;
-
-                            const showPdfBadge = !!(curAsset.pdfUrl || curAsset.type === 'pdf');
-                            const isBroken = !!(brokenImages[curAsset.url] || curAsset.url === MISSING_IMAGE_URL || curAsset.url?.includes('icon-missing-image.svg'));
-                            const imgSrc = isBroken ? MISSING_IMAGE_URL : cleanAndProxyImageUrl(curAsset.url);
-
-                            return (
-                              <>
-                                {isImageLoading && curAsset.type === 'image' && !curAsset.pdfUrl && (
-                                  <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: theme.bg, display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 3 }}>
-                                    <div className="loading-spinner" />
-                                  </div>
-                                )}
-
-                                {curAsset.type === 'pdf' ? (
-                                  <div 
-                                    onClick={handleOpenLightbox}
-                                    style={{ 
-                                      width: '100%', 
-                                      height: '100%', 
-                                      position: 'relative', 
-                                      cursor: 'pointer',
-                                      overflow: 'hidden',
-                                      display: 'flex',
-                                      alignItems: 'center',
-                                      justifyContent: 'center',
-                                      backgroundColor: isMapDarkMode ? '#141414' : '#fafafa',
-                                      border: `1px solid ${theme.border}`
-                                    }}
-                                  >
-                                    {/* Background Paper Mockup */}
-                                    <div style={{
-                                      width: '130px',
-                                      height: '180px',
-                                      backgroundColor: isMapDarkMode ? '#1e1e1e' : '#ffffff',
-                                      border: `1px solid ${isMapDarkMode ? '#333333' : '#e0e0e0'}`,
-                                      boxShadow: '0 8px 20px rgba(0,0,0,0.3)',
-                                      padding: '16px 12px',
-                                      position: 'relative',
-                                      display: 'flex',
-                                      flexDirection: 'column',
-                                      justifyContent: 'space-between'
-                                    }}>
-                                      {/* Styled typewriter horizontal lines to mimic official records */}
-                                      <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                                        <div style={{ height: '6px', width: '80%', backgroundColor: isMapDarkMode ? '#3a3a3a' : '#d2d2d2' }} />
-                                        <div style={{ height: '6px', width: '50%', backgroundColor: isMapDarkMode ? '#3a3a3a' : '#eaeaea' }} />
-                                        {/* Redacted text block */}
-                                        <div style={{ height: '6px', width: '90%', backgroundColor: isMapDarkMode ? '#ffffff' : '#000000' }} />
-                                        <div style={{ height: '6px', width: '35%', backgroundColor: isMapDarkMode ? '#3a3a3a' : '#d2d2d2' }} />
-                                        <div style={{ height: '6px', width: '70%', backgroundColor: isMapDarkMode ? '#ffffff' : '#000000' }} />
-                                      </div>
-
-                                      {/* Diagonal Classified Stamp */}
-                                      <div style={{
-                                        position: 'absolute',
-                                        top: '45%',
-                                        left: '50%',
-                                        transform: 'translate(-50%, -50%) rotate(-25deg)',
-                                        border: '2px double #ef4444',
-                                        color: '#ef4444',
-                                        padding: '1px 6px',
-                                        fontFamily: '"Space Mono", monospace',
-                                        fontSize: '7px',
-                                        fontWeight: 'bold',
-                                        zIndex: 1,
-                                        letterSpacing: '1px',
-                                        borderRadius: '2px',
-                                        opacity: 0.85,
-                                        textTransform: 'uppercase'
-                                      }}>
-                                        DECLASSIFIED
-                                      </div>
-
-                                      {/* Lower border line */}
-                                      <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                                        <div style={{ height: '2px', width: '100%', backgroundColor: isMapDarkMode ? '#333333' : '#eaeaea' }} />
-                                        <div style={{ fontSize: '6px', color: theme.textDim, fontFamily: '"Space Mono", monospace', letterSpacing: '0.5px', textTransform: 'uppercase' }}>
-                                          RECORD DOSSIER
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                ) : curAsset.type === 'video' ? (
-                                  <div 
-                                    onClick={handleOpenLightbox}
-                                    style={{ 
-                                      width: '100%', 
-                                      height: '100%', 
-                                      position: 'relative', 
-                                      cursor: 'pointer',
-                                      overflow: 'hidden',
-                                      display: 'flex',
-                                      alignItems: 'center',
-                                      justifyContent: 'center'
-                                    }}
-                                  >
-                                    <div style={{ width: '100%', height: '100%', pointerEvents: 'none', overflow: 'hidden', position: 'relative' }}>
-                                      {(curAsset.url.includes('youtube.com') || 
-                                       curAsset.url.includes('youtu.be') || 
-                                       curAsset.url.includes('dvidshub.net/video/') ||
-                                       curAsset.url.includes('twitter.com') ||
-                                       curAsset.url.includes('x.com')) ? (
-                                        <iframe
-                                          src={(curAsset.url.includes('dvidshub.net/video/') || curAsset.url.includes('twitter.com') || curAsset.url.includes('x.com')) ? getEmbedUrl(curAsset.url) : `${getEmbedUrl(curAsset.url)}?autoplay=0&controls=0&mute=1`}
-                                          style={curAsset.url.includes('dvidshub.net/video/') ? {
-                                            border: 'none',
-                                            position: 'absolute',
-                                            top: 0,
-                                            left: '50%',
-                                            transform: 'translateX(-50%)',
-                                            width: '165%',
-                                            height: '190%'
-                                          } : { 
-                                            border: 'none', 
-                                            position: 'absolute',
-                                            top: '50%',
-                                            left: '50%',
-                                            transform: 'translate(-50%, -50%)',
-                                            width: '180%', 
-                                            height: '180%'
-                                          }}
-                                          title="Video asset viewport"
-                                        />
-                                      ) : (
-                                        (() => {
-                                          const videoSrc = curAsset.url.startsWith('http')
-                                            ? `/api/proxy-resource?url=${encodeURIComponent(curAsset.url)}`
-                                            : curAsset.url;
-                                          const mimeType = curAsset.url.toLowerCase().endsWith('.webm') ? 'video/webm' : curAsset.url.toLowerCase().endsWith('.ogv') ? 'video/ogg' : 'video/mp4';
-                                          return (
-                                            <video
-                                              key={videoSrc}
-                                              muted
-                                              playsInline
-                                              preload="metadata"
-                                              referrerPolicy="no-referrer"
-                                              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                                            >
-                                              <source src={videoSrc} type={mimeType} />
-                                            </video>
-                                          );
-                                        })()
-                                      )}
-                                    </div>
-                                    
-                                    {/* Play overlay */}
-                                    <div style={{
-                                      position: 'absolute',
-                                      top: 0,
-                                      left: 0,
-                                      right: 0,
-                                      bottom: 0,
-                                      background: 'rgba(0, 0, 0, 0.3)',
-                                      display: 'flex',
-                                      alignItems: 'center',
-                                      justifyContent: 'center',
-                                      zIndex: 1
-                                    }}>
-                                      <motion.div
-                                        whileHover={{ scale: 1.15, backgroundColor: 'rgba(0, 0, 0, 0.85)' }}
-                                        whileTap={{ scale: 0.92 }}
-                                        transition={{ type: "spring", stiffness: 400, damping: 25 }}
-                                        style={{
-                                          width: '56px',
-                                          height: '56px',
-                                          borderRadius: '50%',
-                                          background: 'rgba(0, 0, 0, 0.70)',
-                                          border: `1px solid ${theme.border || 'rgba(255,255,255,0.45)'}`,
-                                          display: 'flex',
-                                          alignItems: 'center',
-                                          justifyContent: 'center',
-                                          boxShadow: '0 8px 32px rgba(0,0,0,0.4)',
-                                          color: '#ffffff'
-                                        }}
-                                      >
-                                        <Play size={20} fill="currentColor" style={{ marginLeft: '3px' }} />
-                                      </motion.div>
-                                    </div>
-                                  </div>
-                                ) : curAsset.type === 'audio' ? (
-                                  <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: isMapDarkMode ? '#030303' : '#f9f9f9', gap: '20px', padding: '24px' }}>
-                                    <div style={{ width: '64px', height: '64px', borderRadius: '50%', background: isMapDarkMode ? '#222' : '#eee', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: theme.text }}>
-                                        <path d="M9 18V5l12-2v13"></path>
-                                        <circle cx="6" cy="18" r="3"></circle>
-                                        <circle cx="18" cy="16" r="3"></circle>
-                                      </svg>
-                                    </div>
-                                    <audio 
-                                      src={curAsset.url} 
-                                      controls 
-                                      style={{ width: '100%', height: '40px' }} 
-                                      onPlay={() => trackCustomEvent('play_audio', {
-                                        audio_url: curAsset.url,
-                                        associated_feature: selectedFeature?.name || 'unknown'
-                                      })}
-                                    />
-                                    <p style={{ color: theme.textDim, fontSize: '9px', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: 'bold' }}>Audio Intelligence Intercept</p>
-                                  </div>
-                                ) : (
-                                  <motion.img 
-                                    key={`${selectedFeature.id}-${activeImageIndex}`}
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: isImageLoading ? 0 : 1 }}
-                                    transition={{ duration: 0.3 }}
-                                    onClick={handleOpenLightbox}
-                                    src={imgSrc} 
-                                    alt={`${selectedFeature.name} asset viewport`} 
-                                    referrerPolicy="no-referrer"
-                                    onLoad={() => setIsImageLoading(false)}
-                                    onError={(e) => {
-                                      setIsImageLoading(false);
-                                      if (curAsset.url) {
-                                        setBrokenImages(prev => ({ ...prev, [curAsset.url]: true }));
-                                      }
-                                    }}
-                                    style={{ 
-                                        width: isBroken ? '48px' : '100%', 
-                                         height: isBroken ? '48px' : '100%', 
-                                         cursor: 'pointer',                        
-                                         objectFit: isBroken ? 'contain' : 'cover',                     
-                                         backgroundColor: 'transparent',           
-                                         filter: isBroken ? (isMapDarkMode ? 'invert(1)' : 'none') : 'none'
-                                      }}
-                                  />
-                                )}
-
-                                {/* Little PDF Icon badge in top right corner if PDF url is associated */}
-                                {showPdfBadge && (
-                                  <div style={{
-                                    position: 'absolute',
-                                    top: '12px',
-                                    right: '12px',
-                                    height: '24px',
-                                    display: 'inline-flex',
-                                    alignItems: 'center',
-                                    fontSize: '10px', 
-                                    fontWeight: '400', 
-                                    padding: '0 12px', 
-                                    borderRadius: '12px', 
-                                    background: layerColors[selectedFeature.categories?.[0]] || '#e5e5e5', 
-                                    border: 'none',
-                                    color: '#000000',
-                                    textTransform: 'uppercase',
-                                    letterSpacing: '0.5px',
-                                    fontFamily: '"Space Mono", monospace',
-                                    boxShadow: '0 4px 12px rgba(0,0,0,0.25)',
-                                    zIndex: 5,
-                                    gap: '6px'
-                                  }}>
-                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                                      <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
-                                      <polyline points="14 2 14 8 20 8" />
-                                    </svg>
-                                    <span style={{ fontSize: '9px', fontWeight: 'bold' }}>PDF</span>
-                                  </div>
-                                )}
-                              </>
-                            );
-                          })()}
-                          
-                          <div style={{ 
-                            position: 'absolute', 
-                            bottom: '4px', 
-                            left: '4px', right: '4px', 
-                            display: 'flex', 
-                            alignItems: 'center', 
-                            justifyContent: 'space-between', 
-                            zIndex: 2,
-                            pointerEvents: 'none'
-                          }}>
-                            <div style={{ display: 'flex', gap: '4px', flex: 1, justifyContent: 'flex-start', pointerEvents: 'auto' }}>
-                              {activeAssets.length > 1 && (
-                                <>
-                                  <motion.button 
-                                    whileHover={{ opacity: 0.7 }}
-                                    onClick={handlePrevImage} 
-                                    style={{ 
-                                      background: theme.bg, 
-                                      border: `1px solid ${theme.border}`, 
-                                      borderRadius: '50%', 
-                                      width: '30px', 
-                                      height: '30px', 
-                                      cursor: 'pointer', 
-                                      padding: '0',
-                                      display: 'flex', 
-                                      alignItems: 'center', 
-                                      justifyContent: 'center',
-                                      boxShadow: 'none',
-                                      fontFamily: '"Space Mono", monospace'
-                                    }}
-                                  >
-                                    <img 
-                                      src="/icons/icon-arrow-left.svg" 
-                                      style={{ width: '6px', height: '12px', filter: isMapDarkMode ? 'brightness(0) invert(1)' : 'brightness(0)' }} 
-                                      alt="prev" 
-                                    />
-                                  </motion.button>
-                                  <motion.button 
-                                    whileHover={{ opacity: 0.7 }}
-                                    onClick={handleNextImage} 
-                                    style={{ 
-                                      background: theme.bg, 
-                                      border: `1px solid ${theme.border}`, 
-                                      borderRadius: '50%', 
-                                      width: '30px', 
-                                      height: '30px', 
-                                      cursor: 'pointer', 
-                                      padding: '0',
-                                      display: 'flex', 
-                                      alignItems: 'center', 
-                                      justifyContent: 'center',
-                                      boxShadow: 'none',
-                                      fontFamily: '"Space Mono", monospace'
-                                    }}
-                                  >
-                                    <img 
-                                      src="/icons/icon-arrow-left.svg" 
-                                      style={{ width: '6px', height: '12px', transform: 'rotate(180deg)', filter: isMapDarkMode ? 'brightness(0) invert(1)' : 'brightness(0)' }} 
-                                      alt="next" 
-                                    />
-                                  </motion.button>
-                                </>
-                              )}
-                            </div>
-
-                            {activeAssets.length > 1 && (
-                              <div style={{ display: 'flex', justifyContent: 'center', pointerEvents: 'auto' }}>
-                                <div style={{ 
-                                  background: 'rgba(0, 0, 0, 0.65)', 
-                                  backdropFilter: 'blur(2px)',
-                                  color: '#ffffff', 
-                                  fontSize: '11px', 
-                                  fontFamily: '"Space Mono", monospace',
-                                  fontWeight: '700',
-                                  height: '30px',
-                                  display: 'flex',
-                                  alignItems: 'center',
-                                  padding: '0 16px', 
-                                  borderRadius: '15px', 
-                                  letterSpacing: '0.5px',
-                                  textAlign: 'center',
-                                  whiteSpace: 'nowrap'
-                                }}>
-                                  {activeImageIndex + 1}/{activeAssets.length}
-                                </div>
-                              </div>
-                            )}
-
-                            <div style={{ display: 'flex', flex: 1, justifyContent: 'flex-end', pointerEvents: 'auto' }}>
-                              <motion.button 
-                                whileHover={{ scale: 1.1, backgroundColor: isMapDarkMode ? '#222' : '#f0f0f0' }}
-                                onClick={handleOpenLightbox} 
-                                title="Expand image to Fullscreen Lightbox"
-                                style={{ 
-                                  background: theme.bg, 
-                                  border: `1px solid ${theme.border}`, 
-                                  borderRadius: '50%', 
-                                  width: '30px', 
-                                  height: '30px', 
-                                  cursor: 'pointer', 
-                                  display: 'flex', 
-                                  alignItems: 'center', 
-                                  justifyContent: 'center',
-                                  boxShadow: 'none',
-                                  padding: 0,
-                                  fontFamily: '"Space Mono", monospace',
-                                  transition: 'background-color 0.2s ease'
-                                }}
-                              >
-                                <img src="/icons/icon-expand.svg" style={{ width: '30px', height: '30px', filter: theme.invert }} alt="expand" />
-                              </motion.button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-
-                    <div style={{ padding: '24px', textAlign: 'left' }}>
-                      
-                      <h1 style={{ 
-                        fontFamily: '"Space Mono", monospace',
-                        fontWeight: '400', 
-                        fontSize: '32px', 
-                        lineHeight: '36px',
-                        color: theme.text, 
-                        margin: '0 0 8px 0', 
-                        textAlign: 'left', 
-                        letterSpacing: '-0.5px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '8px'
-                      }}>
-                        {selectedFeature.isPeopleGroup && (
-                          <span style={{
-                            marginRight: '12px',
-                            fontWeight: 900,
-                            fontSize: '44px',
-                            lineHeight: 1,
-                            WebkitTextStroke: '3px currentColor',
-                            flexShrink: 0
-                          }}>✖</span>
-                        )}
-                        {toTitleCase(selectedFeature.name)}
-                      </h1>
-
-                      {selectedFeature.subLabel && (
-                        <div style={{
-                          fontSize: '11px',
-                          fontWeight: 'bold',
-                          color: '#ef4444',
-                          fontFamily: '"Space Mono", monospace',
-                          letterSpacing: '1px',
-                          textTransform: 'uppercase',
-                          marginBottom: '12px'
-                        }}>
-                          [{selectedFeature.subLabel}]
-                        </div>
-                      )}
-
-                      <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '12px', marginBottom: '16px' }}>
-                        <motion.button
-                          whileTap={{ scale: 0.95 }}
-                          whileHover={{ scale: 1.05 }}
-                          onClick={() => handleLike(selectedFeature.id)}
-                          style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '6px',
-                            background: isMapDarkMode ? '#fff' : '#000',
-                            color: isMapDarkMode ? '#000' : '#fff',
-                            border: 'none',
-                            padding: '6px 12px',
-                            borderRadius: '16px',
-                            cursor: 'pointer',
-                            fontSize: '11px',
-                            fontWeight: 'bold',
-                            fontFamily: '"Space Mono", monospace',
-                            opacity: userLikedIds.has(String(selectedFeature.id).replace(/[^a-zA-Z0-9_\-]/g, '_')) ? 1 : 0.7,
-                            transition: 'opacity 0.2s ease',
-                            whiteSpace: 'nowrap'
-                          }}
-                        >
-                          <Heart size={14} fill={userLikedIds.has(String(selectedFeature.id).replace(/[^a-zA-Z0-9_\-]/g, '_')) ? (isMapDarkMode ? "#000" : "#fff") : "none"} />
-                          <span>{likes[String(selectedFeature.id).replace(/[^a-zA-Z0-9_\-]/g, '_')] || 0}</span>
-                        </motion.button>
-
-                        <motion.button
-                          whileTap={{ scale: 0.95 }}
-                          whileHover={{ scale: 1.05 }}
-                          onClick={() => {
-                            setReportedFeature(selectedFeature);
-                            setReportReason('Incorrect Coordinates / Location');
-                            setReportDetails('');
-                            setReportSuccess(null);
-                            setReportError(null);
-                            setIsReportOpen(true);
-                          }}
-                          style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '6px',
-                            background: 'transparent',
-                            color: isMapDarkMode ? '#fff' : '#000',
-                            border: `1px solid ${isMapDarkMode ? '#fff' : '#000'}`,
-                            padding: '6px 12px',
-                            borderRadius: '16px',
-                            cursor: 'pointer',
-                            fontSize: '11px',
-                            fontWeight: 'bold',
-                            fontFamily: '"Space Mono", monospace',
-                            transition: 'all 0.2s ease',
-                            whiteSpace: 'nowrap'
-                          }}
-                          title="Report inaccuracy / flag this point"
-                        >
-                          <Flag size={13} />
-                          <span>FLAG</span>
-                        </motion.button>
-
-                        {combinedTimelineItems.some(t => String(t.id) === String(selectedFeature.id)) && (
-                          <motion.button
-                            whileTap={{ scale: 0.95 }}
-                            whileHover={{ scale: 1.05 }}
-                            onClick={() => handleViewOnTimeline(selectedFeature.id)}
-                            style={{
-                              display: 'flex',
-                              alignItems: 'center',
-                              background: 'transparent',
-                              color: isMapDarkMode ? '#fff' : '#000',
-                              border: `1px solid ${isMapDarkMode ? '#fff' : '#000'}`,
-                              padding: '6px 12px',
-                              borderRadius: '16px',
-                              cursor: 'pointer',
-                              fontSize: '11px',
-                              fontWeight: 'bold',
-                              fontFamily: '"Space Mono", monospace',
-                              transition: 'all 0.2s ease',
-                              whiteSpace: 'nowrap'
-                            }}
-                          >
-                            <span>TIMELINE VIEW</span>
-                          </motion.button>
-                        )}
-
-                        {(() => {
-                          const codexNode = getCodexTermForMapFeature(selectedFeature);
-                          if (!codexNode) return null;
-                          return (
-                            <motion.button
-                              whileTap={{ scale: 0.95 }}
-                              whileHover={{ scale: 1.05 }}
-                              onClick={() => {
-                                setFocusedCodexTermId(codexNode.id);
-                                setCurrentPage('codex');
-                              }}
-                              style={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                background: 'transparent',
-                                color: isMapDarkMode ? '#fff' : '#000',
-                                border: `1px solid ${isMapDarkMode ? '#fff' : '#000'}`,
-                                padding: '6px 12px',
-                                borderRadius: '16px',
-                                cursor: 'pointer',
-                                fontSize: '11px',
-                                fontWeight: 'bold',
-                                fontFamily: '"Space Mono", monospace',
-                                transition: 'all 0.2s ease',
-                                whiteSpace: 'nowrap'
-                              }}
-                            >
-                              <span>CODEX VIEW</span>
-                            </motion.button>
-                          );
-                        })()}
-
-                        {selectedFeature.socialLink && (
-                          <motion.a
-                            whileTap={{ scale: 0.95 }}
-                            whileHover={{ scale: 1.05 }}
-                            href={selectedFeature.socialLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            style={{
-                              display: 'flex',
-                              alignItems: 'center',
-                              gap: '6px',
-                              background: 'transparent',
-                              color: isMapDarkMode ? '#fff' : '#000',
-                              border: `1px solid ${isMapDarkMode ? '#fff' : '#000'}`,
-                              padding: '6px 12px',
-                              borderRadius: '16px',
-                              cursor: 'pointer',
-                              fontSize: '11px',
-                              fontWeight: 'bold',
-                              fontFamily: '"Space Mono", monospace',
-                              transition: 'all 0.2s ease',
-                              whiteSpace: 'nowrap',
-                              textDecoration: 'none'
-                            }}
-                          >
-                            {selectedFeature.socialLink.toLowerCase().includes('instagram.com') ? (
-                              <Instagram size={13} />
-                            ) : (
-                              <ExternalLink size={13} />
-                            )}
-                            <span>
-                              {selectedFeature.socialLink.toLowerCase().includes('instagram.com') ? 'INSTAGRAM' : 'X.COM'}
-                            </span>
-                          </motion.a>
-                        )}
-                      </div>
-                      
-                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '24px', justifyContent: 'flex-start' }}>
-                        {selectedFeature.categories?.map((tag: string) => (
-                          <button 
-                            key={tag} 
-                            onClick={() => handleTagClick(tag)}
-                            title={`Click to filter list by ${tag}`}
-                            style={{ 
-                              height: '24px',
-                              display: 'inline-flex',
-                              alignItems: 'center',
-                              fontSize: '10px', 
-                              fontWeight: '400', 
-                              padding: '0 12px', 
-                              borderRadius: '12px', 
-                              background: layerColors[tag] || '#e5e5e5', 
-                              border: 'none',
-                              color: '#000000',
-                              cursor: 'pointer',
-                              textTransform: 'uppercase',
-                              letterSpacing: '0.05em',
-                              fontFamily: '"Space Mono", monospace',
-                              transition: 'transform 0.1s ease, box-shadow 0.1s ease'
-                            }}
-                            className="interactive-tag-pill"
-                          >
-                            {tag}
-                          </button>
-                        ))}
-                      </div>
-
-                      <div style={{ 
-                        display: 'flex', 
-                        flexDirection: 'column', 
-                        gap: '8px', 
-                        paddingTop: '0', 
-                        marginBottom: '20px', 
-                        textAlign: 'left' 
-                      }}>
-                        <div style={{ fontFamily: '"Space Mono", monospace', fontWeight: '700', fontStyle: 'italic', fontSize: '10px', lineHeight: '22px' }}>
-                          DATE: <span style={{ fontStyle: 'normal', fontWeight: '400' }}>
-                            {selectedFeature.displayDate || (selectedFeature.date !== null && selectedFeature.date !== undefined
-                              ? (selectedFeature.date < 0 
-                                ? `${Math.abs(selectedFeature.date) < 10000 ? Math.abs(selectedFeature.date) : Math.abs(selectedFeature.date).toLocaleString()} BC` 
-                                : (selectedFeature.date > 2050 
-                                  ? `${selectedFeature.date < 10000 ? selectedFeature.date : selectedFeature.date.toLocaleString()} AD (Future Prophecy)` 
-                                  : `${selectedFeature.date < 10000 ? selectedFeature.date : selectedFeature.date.toLocaleString()} AD`))
-                              : 'UNSPECIFIED')}
-                          </span>
-                        </div>
-                        <div style={{ fontFamily: '"Space Mono", monospace', fontWeight: '700', fontStyle: 'italic', fontSize: '10px', lineHeight: '22px' }}>
-                          LOCATION: <span style={{ fontStyle: 'normal', fontWeight: '400' }}>{(() => {
-                              if (!selectedFeature.coordinates) return 'UNKNOWN';
-                              const coordsStr = selectedFeature.type === 'LineString' 
-                                ? `LINESTRING START: ${selectedFeature.coordinates[0][1].toFixed(4)}, ${selectedFeature.coordinates[0][0].toFixed(4)}`
-                                : `${selectedFeature.coordinates[1].toFixed(4)}, ${selectedFeature.coordinates[0].toFixed(4)}`;
-                              
-                              if (selectedFeature.locationName) {
-                                return `${selectedFeature.locationName} (${coordsStr})`;
-                              }
-                              return coordsStr;
-                            })()}</span>
-                        </div>
-                        {selectedFeature.source && (
-                          <div style={{ fontFamily: '"Space Mono", monospace', fontWeight: '700', fontStyle: 'italic', fontSize: '10px', lineHeight: '22px' }}>
-                            SOURCE: <span style={{ fontStyle: 'normal', fontWeight: '400' }}>{selectedFeature.source}</span>
-                          </div>
-                        )}
-                      </div>
-
-                      <div style={{ paddingTop: '0', textAlign: 'left' }}>
-                        <div style={{ fontFamily: '"Space Mono", monospace', fontWeight: '700', fontSize: '11px', lineHeight: '22px' }}>DESCRIPTION:</div>
-                        <p style={{ 
-                          fontFamily: '"Space Mono", monospace',
-                          fontWeight: '400',
-                          fontSize: '10px', 
-                          lineHeight: '22px', 
-                          color: theme.text,
-                          marginTop: '4px', 
-                          whiteSpace: 'pre-line', 
-                          textAlign: 'left' 
-                        }}>
-                          {selectedFeature.description}
-                        </p>
-                      </div>
-
-                      {(() => {
-                        const travelPath = BIBLICAL_TRAVEL_PATHS[selectedFeature.id];
-                        if (!travelPath) return null;
-                        const categoryColor = layerColors[selectedFeature.categories?.[0]] || '#90C2FF';
-                        return (
-                          <div style={{ marginTop: '24px', borderTop: `1px solid ${theme.borderLight || theme.border}`, paddingTop: '20px' }}>
-                            <div style={{ fontFamily: '"Space Mono", monospace', fontWeight: '700', fontSize: '11px', lineHeight: '22px', marginBottom: '12px', letterSpacing: '1px', textTransform: 'uppercase' }}>
-                              JOURNEY PATH & LOG
-                            </div>
-                            <div style={{ display: 'flex', flexDirection: 'column', gap: '0px', position: 'relative', paddingLeft: '14px' }}>
-                              {/* Vertical line connecting steps */}
-                              <div style={{
-                                position: 'absolute',
-                                left: '4px',
-                                top: '8px',
-                                bottom: '8px',
-                                width: '1px',
-                                borderLeft: `1.5px dashed ${theme.border}`
-                              }} />
-
-                              {travelPath.waypoints.map((wp, idx) => (
-                                <div 
-                                  key={idx} 
-                                  onClick={() => {
-                                    setActiveWaypointIndex(idx);
-                                    if (mapRef.current) {
-                                      mapRef.current.flyTo({
-                                        center: [wp.lng, wp.lat],
-                                        zoom: 8.5,
-                                        duration: 1500,
-                                        essential: true
-                                      });
-                                      
-                                      // Trigger a temporary popup on the map for this waypoint
-                                      if (activeTravelPopupRef.current) {
-                                        fadeOutPopup(activeTravelPopupRef.current);
-                                      }
-
-                                      activeTravelPopupRef.current = new mapboxgl.Popup({ closeButton: false, className: 'custom-mapbox-popup', anchor: 'bottom' })
-                                        .setLngLat([wp.lng, wp.lat])
-                                        .setHTML(`<div style="font-family: 'Space Mono', monospace; font-size: 11px; padding: 4px; border-radius: 4px; max-width: 200px; text-align: left;">
-                                          <strong style="display: block; margin-bottom: 2px; font-size: 12px; color: #fff;">${wp.locationName}</strong>
-                                          ${wp.displayDate ? `<span style="font-size: 10px; font-style: italic; color: #aaa; display: block; margin-bottom: 6px;">${wp.displayDate}</span>` : ''}
-                                          <p style="margin: 0; font-size: 10px; line-height: 1.4; color: #ddd;">${wp.description || ''}</p>
-                                        </div>`)
-                                        .addTo(mapRef.current);
-                                    }
-                                  }}
-                                  onMouseEnter={(e) => {
-                                    if (idx !== activeWaypointIndex) e.currentTarget.style.opacity = '0.9';
-                                  }}
-                                  onMouseLeave={(e) => {
-                                    if (idx !== activeWaypointIndex) e.currentTarget.style.opacity = '0.65';
-                                  }}
-                                  style={{
-                                    position: 'relative',
-                                    paddingBottom: idx === travelPath.waypoints.length - 1 ? '0' : '20px',
-                                    cursor: 'pointer',
-                                    opacity: idx === activeWaypointIndex ? 1.0 : 0.65,
-                                    transition: 'opacity 0.2s ease',
-                                    textAlign: 'left'
-                                  }}
-                                >
-                                  {/* Stepper node circle */}
-                                  <div style={{
-                                    position: 'absolute',
-                                    left: '-14px',
-                                    top: idx === activeWaypointIndex ? '10px' : '4px',
-                                    width: idx === activeWaypointIndex ? '9px' : '7px',
-                                    height: idx === activeWaypointIndex ? '9px' : '7px',
-                                    borderRadius: '50%',
-                                    background: categoryColor,
-                                    border: `1.5px solid ${theme.bg}`,
-                                    boxShadow: `0 0 0 1px ${theme.border}`,
-                                    transform: 'translateX(-50%)',
-                                    transition: 'all 0.2s ease',
-                                    zIndex: 2
-                                  }} />
-
-                                  {/* Waypoint details */}
-                                  <div style={{ 
-                                    fontFamily: '"Space Mono", monospace', 
-                                    fontSize: '10px',
-                                    background: idx === activeWaypointIndex 
-                                      ? (isMapDarkMode ? 'rgba(255, 255, 255, 0.05)' : 'rgba(0, 0, 0, 0.03)')
-                                      : 'transparent',
-                                    borderRadius: '6px',
-                                    padding: idx === activeWaypointIndex ? '6px 8px' : '0px',
-                                    transition: 'all 0.2s ease',
-                                    border: idx === activeWaypointIndex ? `1px solid ${categoryColor}` : 'none',
-                                    paddingLeft: idx === activeWaypointIndex ? '8px' : '0px'
-                                  }}>
-                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: '8px' }}>
-                                      <span style={{ 
-                                        fontWeight: '700', 
-                                        color: theme.text
-                                      }}>{wp.locationName}</span>
-                                      {wp.displayDate && (
-                                        <span style={{ fontSize: '9px', opacity: 0.65, fontWeight: 'normal', color: theme.text }}>{wp.displayDate}</span>
-                                      )}
-                                    </div>
-                                    <p style={{ margin: '4px 0 0 0', fontSize: '9px', lineHeight: '14px', color: idx === activeWaypointIndex ? theme.text : theme.textDim }}>
-                                      {wp.description}
-                                    </p>
-                                  </div>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-                        );
-                      })()}
-
-                      {activeFigures && activeFigures.length > 0 && (
-                        <div style={{ marginTop: '24px', borderTop: `1px solid ${theme.borderLight || theme.border}`, paddingTop: '20px' }}>
-                          <div style={{ fontFamily: '"Space Mono", monospace', fontWeight: '700', fontSize: '11px', lineHeight: '22px', marginBottom: '12px', letterSpacing: '1px', textTransform: 'uppercase' }}>
-                            ACTIVE FIGURES DURING EVENT
-                          </div>
-                          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                            {activeFigures.map(fig => (
-                              <div 
-                                key={fig.id}
-                                onClick={() => {
-                                  // Find figure in map dataset
-                                  const matchedRecord = combinedPointsAndLinesData.find(item => String(item.id) === String(fig.id));
-                                  if (matchedRecord) {
-                                    handleLocationItemClick(matchedRecord);
-                                  } else {
-                                    // Or fly map to estimated coordinates
-                                    if (fig.coords && mapRef.current) {
-                                      mapRef.current.flyTo({
-                                        center: fig.coords,
-                                        zoom: 8.5,
-                                        duration: 1500
-                                      });
-                                    }
-                                  }
-                                }}
-                                onMouseEnter={(e) => {
-                                  e.currentTarget.style.backgroundColor = isMapDarkMode ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.05)';
-                                }}
-                                onMouseLeave={(e) => {
-                                  e.currentTarget.style.backgroundColor = 'transparent';
-                                }}
-                                style={{
-                                  display: 'flex',
-                                  flexDirection: 'column',
-                                  padding: '8px',
-                                  borderRadius: '6px',
-                                  cursor: 'pointer',
-                                  transition: 'background-color 0.2s ease',
-                                  border: `1px solid ${theme.borderLight || theme.border}`
-                                }}
-                              >
-                                <div style={{ display: 'flex', justifyContent: 'space-between', fontFamily: '"Space Mono", monospace', fontSize: '10px', fontWeight: '700' }}>
-                                  <span style={{ color: theme.text }}>{fig.name}</span>
-                                  <span style={{ opacity: 0.65, fontWeight: 'normal' }}>Age: {fig.age}</span>
-                                </div>
-                                <div style={{ display: 'flex', alignItems: 'center', gap: '4px', marginTop: '4px', fontFamily: '"Space Mono", monospace', fontSize: '9px', color: theme.textDim }}>
-                                  <MapPin size={10} style={{ filter: theme.invert }} />
-                                  <span>Location: {fig.locationName}</span>
-                                </div>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-                    </div>
-
+                    {renderDossierInnerContent()}
                   </div>
                 </motion.div>
               ) : (
@@ -8317,14 +9894,32 @@ function App() {
                   <img src="/icons/icon-rabbit-hole.svg" alt="logo" style={{ width: '48px', height: '48px', opacity: 0.2, marginBottom: '16px', filter: theme.invert }} />
                   <div style={{ fontSize: '11px', fontWeight: 'bold', letterSpacing: '1px', textTransform: 'uppercase' }}>Select a coordinate</div>
                   <div style={{ fontSize: '9px', marginTop: '4px' }}>to view complete dossier archive.</div>
+
+                  <div style={{
+                    marginTop: '20px',
+                    padding: '12px 16px',
+                    borderLeft: `2px solid ${theme.border}`,
+                    background: isMapDarkMode ? 'rgba(255, 255, 255, 0.03)' : 'rgba(0, 0, 0, 0.02)',
+                    fontFamily: '"Space Mono", monospace',
+                    fontSize: '10px',
+                    lineHeight: '1.6',
+                    color: theme.textDim,
+                    fontStyle: 'italic',
+                    textAlign: 'center',
+                    maxWidth: '240px'
+                  }}>
+                    "At the bottom of every rabbit hole you will find God."
+                  </div>
                 </motion.div>
               )}
             </AnimatePresence>
           </motion.div>
+          )}
 
           {/* HORIZONTAL COMPONENT: TIMELINE CONTROLS AS FLOATING ABSOLUTE OVERLAY */}
-          <motion.div 
-            initial={false}
+          {!isMobile && (
+            <motion.div 
+              initial={false}
             animate={{ 
               bottom: isTimelineCollapsed ? -150 : 0,
               background: theme.bg,
@@ -9005,7 +10600,7 @@ function App() {
               </AnimatePresence>
             </div>
           </motion.div>
-
+          )}
         </div>
         </div>
 
@@ -9016,12 +10611,12 @@ function App() {
             top: 0,
             left: 0,
             right: 0,
-            bottom: 0,
+            bottom: isMobile ? 108 : 0,
             display: 'flex',
             flexDirection: 'column',
             overflow: 'hidden',
             width: '100%',
-            height: '100%',
+            height: isMobile ? 'calc(100% - 108px)' : '100%',
             pointerEvents: currentPage === 'timeline' ? 'auto' : 'none',
             visibility: currentPage === 'timeline' ? 'visible' : 'hidden',
             opacity: currentPage === 'timeline' ? 1 : 0,
@@ -9035,6 +10630,13 @@ function App() {
             timelineItems={combinedTimelineItems}
             selectedItem={selectedTimelineItem}
             setSelectedItem={setSelectedTimelineItem}
+            isMobile={isMobile}
+            searchQuery={timelineSearchQuery}
+            onSearchQueryChange={setTimelineSearchQuery}
+            viewStart={timelineViewStart}
+            setViewStart={setTimelineViewStart}
+            viewEnd={timelineViewEnd}
+            setViewEnd={setTimelineViewEnd}
             onViewOnMap={handleViewOnMap}
             onFlagItem={(item) => {
               setReportedFeature(item);
@@ -9058,12 +10660,12 @@ function App() {
             top: 0,
             left: 0,
             right: 0,
-            bottom: 0,
+            bottom: isMobile ? 60 : 0,
             display: 'flex',
             flexDirection: 'column',
             overflow: 'hidden',
             width: '100%',
-            height: '100%',
+            height: isMobile ? 'calc(100% - 60px)' : '100%',
             pointerEvents: currentPage === 'codex' ? 'auto' : 'none',
             visibility: currentPage === 'codex' ? 'visible' : 'hidden',
             opacity: currentPage === 'codex' ? 1 : 0,
@@ -9079,6 +10681,10 @@ function App() {
             focusedTermId={focusedCodexTermId}
             onFocusedTermConsumed={() => setFocusedCodexTermId(null)}
             isActive={currentPage === 'codex'}
+            isMobile={isMobile}
+            isMobileDrawerExpanded={isMobileDrawerExpanded}
+            searchQuery={codexSearchQuery}
+            onSearchQueryChange={setCodexSearchQuery}
             onViewOnMap={(layerName, featureSearchTerm) => {
               stopMainMapRotation();
               setCurrentPage('map');
@@ -9158,13 +10764,535 @@ function App() {
             auth={auth}
             selectedMapId={selectedCartographyMapId}
             onMapSelect={setSelectedCartographyMapId}
+            isMobile={isMobile}
           />
         </div>
+
+        {isMobile && currentPage !== 'cartography' && (
+          <div 
+            className="mobile-bottom-drawer"
+            style={{
+              height: currentPage === 'map' ? (isMobileDrawerExpanded ? '70vh' : '108px') : (currentPage === 'codex' ? (selectedCodexNode ? (isMobileDrawerExpanded ? '70vh' : '108px') : '60px') : (currentPage === 'timeline' ? '108px' : '60px')),
+              background: theme.bg,
+              color: theme.text,
+              borderColor: theme.border,
+              zIndex: 10000,
+              overflow: 'visible',
+              display: 'flex',
+              flexDirection: 'column'
+            }}
+          >
+            {/* Timeline-style centered black tab toggle */}
+            {(currentPage === 'map' || (currentPage === 'codex' && selectedCodexNode)) && (
+              <motion.button
+                whileHover={{ opacity: 0.8 }}
+                onClick={() => setIsMobileDrawerExpanded(!isMobileDrawerExpanded)}
+                title={isMobileDrawerExpanded ? 'Minimize Panel' : 'Maximize Panel'}
+                style={{
+                  position: 'absolute',
+                  top: '-20px',
+                  left: '50%',
+                  transform: 'translateX(-50%)',
+                  width: '40px',
+                  height: '20px',
+                  background: theme.text,
+                  color: theme.bg,
+                  border: 'none',
+                  cursor: 'pointer',
+                  zIndex: 10001,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  padding: 0,
+                  borderRadius: 0,
+                }}
+              >
+                <img
+                  src="/icons/icon-arrow-left.svg"
+                  alt="toggle"
+                  style={{
+                    width: '6px',
+                    height: '12px',
+                    transform: isMobileDrawerExpanded ? 'rotate(270deg)' : 'rotate(90deg)',
+                    filter: isMapDarkMode ? 'brightness(0)' : 'none',
+                  }}
+                />
+              </motion.button>
+            )}
+
+            {/* Search bar - Map Page */}
+            {currentPage === 'map' && (
+              <div className="mobile-search-bar-container" style={{ borderColor: theme.border, background: theme.bg, flexShrink: 0 }}>
+                <div style={{ position: 'relative', width: '100%' }}>
+                  <input 
+                    type="text" 
+                    placeholder="SEARCH ARCHIVES OR LOCATIONS..." 
+                    value={searchQuery}
+                    onFocus={() => {
+                      setShowSearchResults(true);
+                      setIsMobileDrawerExpanded(true);
+                    }}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    style={{
+                      width: '100%',
+                      padding: '10px 32px 10px 12px',
+                      fontSize: '11px',
+                      fontFamily: '"Space Mono", monospace',
+                      border: `1px solid ${theme.border}`,
+                      borderRadius: '0px',
+                      outline: 'none',
+                      boxSizing: 'border-box',
+                      background: isMapDarkMode ? '#000000' : '#ffffff',
+                      color: theme.text
+                    }}
+                  />
+                  {searchQuery && (
+                    <button
+                      onClick={() => { setSearchQuery(''); setGeocodeResults([]); }}
+                      style={{ position: 'absolute', right: '8px', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', cursor: 'pointer', padding: '4px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: theme.text }}
+                    >
+                      <X size={14} />
+                    </button>
+                  )}
+                  {/* SEARCH RESULTS DROPDOWN */}
+                  <AnimatePresence>
+                    {showSearchResults && (searchQuery.trim().length > 1) && (
+                      <>
+                        <div 
+                          style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, zIndex: 999 }} 
+                          onClick={() => setShowSearchResults(false)}
+                        />
+                        <div
+                          style={{
+                            position: 'absolute',
+                            bottom: '42px',
+                            left: 0,
+                            right: 0,
+                            background: theme.bg,
+                            border: `1px solid ${theme.border}`,
+                            maxHeight: '250px',
+                            overflowY: 'auto',
+                            zIndex: 1000,
+                            boxShadow: isMapDarkMode ? '0 -4px 20px rgba(0,0,0,0.5)' : '0 -4px 12px rgba(0,0,0,0.1)'
+                          }}
+                        >
+                          {searchData.length > 0 && (
+                            <div style={{ borderBottom: `1px solid ${theme.borderLight}` }}>
+                              <div style={{ padding: '8px 12px', fontSize: '10px', background: isMapDarkMode ? '#1a1a1a' : '#f8f8f8', borderBottom: `1px solid ${theme.borderLight}`, fontWeight: 'bold' }}>RESEARCH ARCHIVES</div>
+                              {searchData.slice(0, 10).map((item, idx) => (
+                                <div 
+                                  key={`mob-data-${idx}`}
+                                  onClick={() => { handleSearchItemSelect(item); if (currentPage !== 'map') setCurrentPage('map'); }}
+                                  style={{ padding: '10px 12px', cursor: 'pointer', borderBottom: `1px solid ${theme.borderLight}`, display: 'flex', alignItems: 'center', gap: '8px', color: theme.text }}
+                                >
+                                  <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: layerColors[item.categories[0]] || '#b6a6ff' }} />
+                                  <div style={{ display: 'flex', flexDirection: 'column' }}>
+                                    <span style={{ fontSize: '11px', fontWeight: 'bold' }}>{item.name}</span>
+                                    <span style={{ fontSize: '9px', color: theme.textDim }}>{item.categories[0]}</span>
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          )}
+                          {geocodeResults.length > 0 && (
+                            <div>
+                              <div style={{ padding: '8px 12px', fontSize: '10px', background: isMapDarkMode ? '#1a1a1a' : '#f8f8f8', borderBottom: `1px solid ${theme.borderLight}`, fontWeight: 'bold' }}>GEOGRAPHIC COORDINATES</div>
+                              {geocodeResults.map((result, idx) => (
+                                <div 
+                                  key={`mob-geo-${idx}`}
+                                  onClick={() => { handleGeocodeSelect(result); if (currentPage !== 'map') setCurrentPage('map'); }}
+                                  style={{ padding: '10px 12px', cursor: 'pointer', borderBottom: `1px solid ${theme.borderLight}`, display: 'flex', alignItems: 'center', gap: '8px', color: theme.text }}
+                                >
+                                  <img src="/icons/icon-map-pin.svg" style={{ width: '12px', filter: theme.invert }} alt="pin" />
+                                  <span style={{ fontSize: '11px' }}>{result.place_name}</span>
+                                </div>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      </>
+                    )}
+                  </AnimatePresence>
+                </div>
+              </div>
+            )}
+
+            {/* Search bar - Codex Page */}
+            {currentPage === 'codex' && (
+              <div className="mobile-search-bar-container" style={{ borderColor: theme.border, background: theme.bg, flexShrink: 0, padding: '10px 12px 14px 12px' }}>
+                <div style={{ position: 'relative', width: '100%' }}>
+                  <input 
+                    type="text" 
+                    placeholder="SEARCH DATABASE..." 
+                    value={codexSearchQuery}
+                    onFocus={() => setShowSearchResults(true)}
+                    onChange={(e) => setCodexSearchQuery(e.target.value)}
+                    style={{
+                      width: '100%',
+                      padding: '10px 32px 10px 12px',
+                      fontSize: '11px',
+                      fontFamily: '"Space Mono", monospace',
+                      border: `1px solid ${theme.border}`,
+                      borderRadius: '0px',
+                      outline: 'none',
+                      boxSizing: 'border-box',
+                      background: isMapDarkMode ? '#000000' : '#ffffff',
+                      color: theme.text
+                    }}
+                  />
+                  {codexSearchQuery && (
+                    <button
+                      onClick={() => setCodexSearchQuery('')}
+                      style={{ position: 'absolute', right: '8px', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', cursor: 'pointer', padding: '4px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: theme.text }}
+                    >
+                      <X size={14} />
+                    </button>
+                  )}
+                  {/* CODEX SUGGESTIONS POPUP (Positions upwards) */}
+                  <AnimatePresence>
+                    {showSearchResults && (codexSearchQuery.trim().length > 0) && (
+                      <>
+                        <div 
+                          style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, zIndex: 999 }} 
+                          onClick={() => setShowSearchResults(false)}
+                        />
+                        <div
+                          style={{
+                            position: 'absolute',
+                            bottom: '42px',
+                            left: 0,
+                            right: 0,
+                            background: theme.bg,
+                            border: `1px solid ${theme.border}`,
+                            maxHeight: '250px',
+                            overflowY: 'auto',
+                            zIndex: 1000,
+                            boxShadow: isMapDarkMode ? '0 -4px 20px rgba(0,0,0,0.5)' : '0 -4px 12px rgba(0,0,0,0.1)'
+                          }}
+                        >
+                          {codexSuggestions.length > 0 ? (
+                            codexSuggestions.map((node, idx) => (
+                              <div 
+                                key={`mob-codex-suggest-${idx}`}
+                                onClick={() => {
+                                  setSelectedCodexNode(node);
+                                  setFocusedCodexTermId(node.id);
+                                  setCodexSearchQuery('');
+                                  setShowSearchResults(false);
+                                }}
+                                style={{ 
+                                  padding: '10px 12px', 
+                                  cursor: 'pointer', 
+                                  borderBottom: `1px solid ${theme.borderLight}`, 
+                                  color: theme.text,
+                                  fontFamily: '"Space Mono", monospace',
+                                  fontSize: '11px'
+                                }}
+                              >
+                                {node.name}
+                              </div>
+                            ))
+                          ) : (
+                            <div style={{ padding: '12px', textAlign: 'center', fontSize: '10px', color: theme.textDim, fontFamily: '"Space Mono", monospace' }}>
+                              NO MATCHES FOUND
+                            </div>
+                          )}
+                        </div>
+                      </>
+                    )}
+                  </AnimatePresence>
+                </div>
+              </div>
+            )}
+
+            {/* Codex Page Dossier status bar & Details content */}
+            {currentPage === 'codex' && selectedCodexNode && (
+              <>
+                {/* Status Bar / Dossier Header */}
+                <div 
+                  onClick={() => setIsMobileDrawerExpanded(!isMobileDrawerExpanded)}
+                  style={{ 
+                    height: '48px', 
+                    borderTop: `1px solid ${theme.borderLight}`, 
+                    borderBottom: `1px solid ${theme.border}`,
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center', 
+                    padding: '0 16px', 
+                    background: theme.bg,
+                    flexShrink: 0,
+                    cursor: 'pointer',
+                    userSelect: 'none'
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <div style={{ width: '20px', height: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                      <img 
+                        src={getCodexNodeIcon(selectedCodexNode)} 
+                        onError={(e) => { e.currentTarget.src = '/icons/icon-cave-drawings.svg'; }}
+                        style={{ width: '20px', height: '20px' }} 
+                        alt="category-icon" 
+                        draggable={false}
+                      />
+                    </div>
+                    <span style={{ fontSize: '9px', fontWeight: 'bold', color: theme.textDim, fontFamily: '"Space Mono", monospace', letterSpacing: '1px', lineHeight: 1 }}>DOSSIER:</span>
+                    <span style={{ fontSize: '11px', fontWeight: 'bold', color: theme.text, fontFamily: '"Space Mono", monospace', lineHeight: 1 }}>{selectedCodexNode.name.toUpperCase()}</span>
+                  </div>
+                </div>
+
+                {/* Details Content (when expanded) */}
+                {isMobileDrawerExpanded && (
+                  <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
+                    {renderCodexMobileDetails()}
+                  </div>
+                )}
+              </>
+            )}
+
+            {/* Search bar & Span Controls - Timeline Page */}
+            {currentPage === 'timeline' && (
+              <div style={{ display: 'flex', flexDirection: 'column', flexShrink: 0 }}>
+                {/* Search Bar */}
+                <div className="mobile-search-bar-container" style={{ borderColor: theme.border, background: theme.bg, borderBottom: 'none' }}>
+                  <div style={{ position: 'relative', width: '100%' }}>
+                    <input 
+                      type="text" 
+                      placeholder="SEARCH TIMELINE EVENTS..." 
+                      value={timelineSearchQuery}
+                      onChange={(e) => setTimelineSearchQuery(e.target.value)}
+                      style={{
+                        width: '100%',
+                        padding: '10px 32px 10px 12px',
+                        fontSize: '11px',
+                        fontFamily: '"Space Mono", monospace',
+                        border: `1px solid ${theme.border}`,
+                        borderRadius: '0px',
+                        outline: 'none',
+                        boxSizing: 'border-box',
+                        background: isMapDarkMode ? '#000000' : '#ffffff',
+                        color: theme.text
+                      }}
+                    />
+                    {timelineSearchQuery && (
+                      <button
+                        onClick={() => setTimelineSearchQuery('')}
+                        style={{ position: 'absolute', right: '8px', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', cursor: 'pointer', padding: '4px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: theme.text }}
+                      >
+                        <X size={14} />
+                      </button>
+                    )}
+                  </div>
+                </div>
+
+                {/* Time Span Controls */}
+                <div style={{ display: 'flex', flexDirection: 'column', padding: '8px 16px 6px 16px', height: '54px', borderTop: `1px solid ${theme.borderLight}`, background: theme.bg, boxSizing: 'border-box', justifyContent: 'center' }}>
+                  {/* Top Row: Zoom Out, Slider Column, Zoom In, Reset Button */}
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', width: '100%' }}>
+                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', flex: 1 }}>
+                      <img 
+                        src="/icons/icon-zoom-out.svg" 
+                        onClick={() => handleTimelineZoom(1.3)}
+                        style={{ width: '20px', height: '20px', filter: theme.invert, cursor: 'pointer', opacity: (timelineViewEnd - timelineViewStart) >= 253500 ? 0.3 : 1, marginTop: '0px' }} 
+                        title="Zoom Out"
+                        alt="zoom out" 
+                      />
+                      
+                      <div style={{ display: 'flex', flexDirection: 'column', flex: 1, position: 'relative' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', height: '20px' }}>
+                          <input
+                            type="range"
+                            min="0"
+                            max="100"
+                            step="0.1"
+                            value={(() => {
+                              const MIN_SPAN = 50;
+                              const MAX_SPAN = 253500;
+                              const logMin = Math.log(MIN_SPAN);
+                              const logMax = Math.log(MAX_SPAN);
+                              const span = timelineViewEnd - timelineViewStart;
+                              const currentLog = Math.log(Math.max(MIN_SPAN, Math.min(MAX_SPAN, span)));
+                              const pct = (currentLog - logMin) / (logMax - logMin);
+                              return Math.max(0, Math.min(100, (1 - pct) * 100));
+                            })()}
+                            onChange={(e) => {
+                              const val = parseFloat(e.target.value);
+                              const MIN_SPAN = 50;
+                              const MAX_SPAN = 253500;
+                              const logMin = Math.log(MIN_SPAN);
+                              const logMax = Math.log(MAX_SPAN);
+                              const pct = 1 - (val / 100);
+                              const logSpan = logMin + pct * (logMax - logMin);
+                              const newSpan = Math.exp(logSpan);
+                              const span = timelineViewEnd - timelineViewStart;
+                              const centerYear = timelineViewStart + span / 2;
+                              setTimelineViewStart(centerYear - newSpan / 2);
+                              setTimelineViewEnd(centerYear + newSpan / 2);
+                            }}
+                            className="timeline-zoom-slider"
+                            style={{
+                              width: '100%',
+                              height: '2px',
+                              background: theme.text,
+                              outline: 'none',
+                              cursor: 'pointer',
+                              margin: 0
+                            }}
+                          />
+                        </div>
+                        {/* Span text is centered horizontally within the slider range */}
+                        <div style={{ display: 'flex', justifyContent: 'center', width: '100%', marginTop: '3px' }}>
+                          <span style={{ 
+                            fontSize: '7px', 
+                            color: theme.textDim, 
+                            textAlign: 'center', 
+                            letterSpacing: '0.5px',
+                            whiteSpace: 'nowrap',
+                            fontFamily: '"Space Mono", monospace'
+                          }}>
+                            SPAN: {Math.round(timelineViewEnd - timelineViewStart).toLocaleString()} YEARS
+                          </span>
+                        </div>
+                      </div>
+
+                      <img 
+                        src="/icons/icon-zoom-in.svg" 
+                        onClick={() => handleTimelineZoom(0.7)}
+                        style={{ width: '20px', height: '20px', filter: theme.invert, cursor: 'pointer', opacity: (timelineViewEnd - timelineViewStart) <= 50 ? 0.3 : 1, marginTop: '0px' }} 
+                        title="Zoom In"
+                        alt="zoom in" 
+                      />
+                    </div>
+
+                    <button
+                      onClick={handleTimelineReset}
+                      title="Reset View"
+                      style={{
+                        height: '20px',
+                        padding: '0 8px',
+                        background: 'transparent',
+                        border: `1px solid ${theme.border}`,
+                        color: theme.text,
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        gap: '4px',
+                        cursor: 'pointer',
+                        borderRadius: '10px',
+                        fontFamily: '"Space Mono", monospace',
+                        fontSize: '9px',
+                        fontWeight: 'bold',
+                        letterSpacing: '0.5px',
+                        flexShrink: 0,
+                        marginTop: '0px'
+                      }}
+                    >
+                      <RotateCcw size={10} />
+                      RESET
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Tab Buttons - always visible, selecting also expands if collapsed (Map Page only) */}
+            {currentPage === 'map' && (
+              <div className="mobile-tabs-container" style={{ borderColor: theme.border, background: theme.bg, flexShrink: 0 }}>
+                {(['filters', 'details', 'timeline'] as const).map((tab, idx) => {
+                  const isActive = mobileActiveTab === tab;
+                  const labels = ['FILTERS', 'DETAILS', 'TIMELINE'];
+                  // Inactive layer colors: #EFEFEF bg / text 50% opacity in light; #1a1a1a bg / text 50% opacity in dark
+                  const inactiveBg = isMapDarkMode ? '#1a1a1a' : '#EFEFEF';
+                  const inactiveColor = isMapDarkMode ? 'rgba(255,255,255,0.45)' : 'rgba(0,0,0,0.45)';
+                  const icons = [
+                    <img 
+                      key="f" 
+                      src="/icons/icon-filter.svg" 
+                      style={{ 
+                        width: '30px', 
+                        height: '30px', 
+                        background: 'transparent',
+                        filter: isActive 
+                          ? 'brightness(0)' 
+                          : (isMapDarkMode ? 'invert(1)' : 'none'), 
+                        opacity: isActive ? 1 : 0.45 
+                      }} 
+                      alt="Filters" 
+                    />,
+                    <img 
+                      key="d" 
+                      src="/icons/icon-map-pin.svg" 
+                      style={{ 
+                        width: '30px', 
+                        height: '30px', 
+                        background: 'transparent',
+                        filter: isActive 
+                          ? 'brightness(0)' 
+                          : (isMapDarkMode ? 'invert(1)' : 'none'), 
+                        opacity: isActive ? 1 : 0.45 
+                      }} 
+                      alt="Details" 
+                    />,
+                    <img 
+                      key="t" 
+                      src="/icons/icon-timeline.svg" 
+                      style={{ 
+                        width: '30px', 
+                        height: '30px', 
+                        background: 'transparent',
+                        filter: isActive 
+                          ? 'brightness(0)' 
+                          : (isMapDarkMode ? 'invert(1)' : 'none'), 
+                        opacity: isActive ? 1 : 0.45 
+                      }} 
+                      alt="Timeline" 
+                    />
+                  ];
+                  return (
+                    <button
+                      key={tab}
+                      onClick={() => {
+                        setMobileActiveTab(tab);
+                        if (currentPage !== 'map') setCurrentPage('map');
+                        setIsMobileDrawerExpanded(true);
+                      }}
+                      className="mobile-tab-btn"
+                      style={{
+                        background: isActive ? '#ffffff' : inactiveBg,
+                        color: isActive ? '#000000' : inactiveColor,
+                        fontWeight: isActive ? '700' : '400',
+                        borderRight: idx < 2 ? `1px solid ${theme.border}` : 'none',
+                        borderBottom: isActive ? 'none' : '1px solid #000000',
+                        fontSize: '9px',
+                        letterSpacing: '1px',
+                        gap: '0px',
+                      }}
+                    >
+                      {icons[idx]}
+                      <span>{labels[idx]}</span>
+                    </button>
+                  );
+                })}
+              </div>
+            )}
+
+            {/* Drawer Content (Map Page only) */}
+            {currentPage === 'map' && isMobileDrawerExpanded && (
+              <div style={{ flex: 1, overflowY: 'auto', background: theme.bg, display: 'flex', flexDirection: 'column' }}>
+                {/* Tab content */}
+                <div style={{ flex: 1, overflowY: 'auto' }}>
+                  {mobileActiveTab === 'filters' && renderMobileFilters()}
+                  {mobileActiveTab === 'details' && renderMobileDetails()}
+                  {mobileActiveTab === 'timeline' && renderMobileTimeline()}
+                </div>
+              </div>
+            )}
+          </div>
+        )}
       </div>
 
       </div>      {/* FULL SCREEN LIGHTBOX MODAL ARCHITECTURE */}
       <AnimatePresence>
-        {isLightboxOpen && selectedFeature && activeAssets && activeAssets.length > 0 && (
+        {isLightboxOpen && (selectedFeature || selectedCodexNode) && activeAssets && activeAssets.length > 0 && (
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -9370,7 +11498,7 @@ function App() {
                           textAlign: 'center',
                           zIndex: 10001
                         }}>
-                        FILE ASSET {activeImageIndex + 1} OF {activeAssets.length} — {selectedFeature.name.toUpperCase()}
+                        FILE ASSET {activeImageIndex + 1} OF {activeAssets.length} — {(selectedFeature?.name || selectedCodexNode?.name || '').toUpperCase()}
                       </motion.div>
         
                       {isPdf && actualPdfUrl && (
@@ -9432,125 +11560,127 @@ function App() {
         )}
       </AnimatePresence>
 
-      <footer style={{ 
-        background: isMapDarkMode ? '#ffffff' : '#000000', 
-        color: isMapDarkMode ? '#000000' : '#ffffff', 
-        minHeight: '270px', 
-        boxSizing: 'border-box', 
-        paddingTop: '50px',
-        paddingBottom: '60px',
-        display: 'flex', 
-        alignItems: 'flex-start',
-        justifyContent: 'flex-start',
-        textAlign: 'left', 
-        fontFamily: '"Space Mono", monospace',
-        width: '100%',
-        overflow: 'hidden'
-      }}>
-        <div style={{ 
+      {!isMobile && (
+        <footer style={{ 
+          background: isMapDarkMode ? '#ffffff' : '#000000', 
+          color: isMapDarkMode ? '#000000' : '#ffffff', 
+          minHeight: '270px', 
+          boxSizing: 'border-box', 
+          paddingTop: '50px',
+          paddingBottom: '60px',
           display: 'flex', 
-          width: '100%', 
-          justifyContent: 'space-between',
-          padding: '0 60px 0 0'
+          alignItems: 'flex-start',
+          justifyContent: 'flex-start',
+          textAlign: 'left', 
+          fontFamily: '"Space Mono", monospace',
+          width: '100%',
+          overflow: 'hidden'
         }}>
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'space-between', alignSelf: 'stretch' }}>
-            <img 
-              src="/mtrh-horiz-words.svg" 
-              alt="MTRH Logo" 
-              style={{ 
-                width: '232px', 
-                height: '78px',
-                display: 'block',
-                filter: isMapDarkMode ? 'invert(1)' : 'none'
-              }} 
-            />
-            <div style={{ 
-              marginLeft: '35px',
-              opacity: 0.5,
-              color: isMapDarkMode ? '#000000' : '#ffffff', 
-              fontSize: '10px', 
-              fontWeight: 'normal', 
-              lineHeight: '1.5', 
-              textTransform: 'none' 
-            }}>
-              Copyright North Beast LLC 2026.<br /> All rights reserved.
-            </div>
-          </div>
-          
-          {/* RIGHT: CONTENT COLUMNS - Aligned right */}
           <div style={{ 
             display: 'flex', 
-            gap: '80px'
+            width: '100%', 
+            justifyContent: 'space-between',
+            padding: '0 60px 0 0'
           }}>
-            <div style={{ textAlign: 'right' }}>
-              <h4 style={{ fontSize: '20px', fontWeight: 'bold', margin: '0 0 20px 0', color: isMapDarkMode ? '#000000' : '#ffffff', textAlign: 'right', fontFamily: '"Space Mono", monospace' }}>FRIENDS</h4>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', fontSize: '10px', fontWeight: 'bold', color: isMapDarkMode ? '#000000' : '#ffffff', textAlign: 'right', fontFamily: '"Space Mono", monospace', textTransform: 'uppercase' }}>
-                <a href="https://northbeastclothing.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>NORTH BEAST CO.</a>
-                <a href="https://blurrycreatures.com/?srsltid=AfmBOorjjAxrHwi6VEgrMm-dxLlVFFb_yFGO3YDacaky_IXZDdgcWNcg" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>BLURRY CREATURES</a>
-                <a href="https://www.theconfessionalspodcast.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>THE CONFESSIONALS</a>
-                <a href="https://www.instagram.com/giants_of_ancientamerica/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>GIANTS OF ANCIENT AMERICA</a>
-                <a href="https://www.instagram.com/freetherabbitspodcast/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>FREE THE RABBITS</a>
-                <a href="https://www.21cdstudios.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>21CD</a>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'space-between', alignSelf: 'stretch' }}>
+              <img 
+                src="/mtrh-horiz-words.svg" 
+                alt="MTRH Logo" 
+                style={{ 
+                  width: '232px', 
+                  height: '78px',
+                  display: 'block',
+                  filter: isMapDarkMode ? 'invert(1)' : 'none'
+                }} 
+              />
+              <div style={{ 
+                marginLeft: '35px',
+                opacity: 0.5,
+                color: isMapDarkMode ? '#000000' : '#ffffff', 
+                fontSize: '10px', 
+                fontWeight: 'normal', 
+                lineHeight: '1.5', 
+                textTransform: 'none' 
+              }}>
+                Copyright North Beast LLC 2026.<br /> All rights reserved.
               </div>
             </div>
+            
+            {/* RIGHT: CONTENT COLUMNS - Aligned right */}
+            <div style={{ 
+              display: 'flex', 
+              gap: '80px'
+            }}>
+              <div style={{ textTransform: 'uppercase', textAlign: 'right' }}>
+                <h4 style={{ fontSize: '20px', fontWeight: 'bold', margin: '0 0 20px 0', color: isMapDarkMode ? '#000000' : '#ffffff', textAlign: 'right', fontFamily: '"Space Mono", monospace' }}>FRIENDS</h4>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', fontSize: '10px', fontWeight: 'bold', color: isMapDarkMode ? '#000000' : '#ffffff', textAlign: 'right', fontFamily: '"Space Mono", monospace', textTransform: 'uppercase' }}>
+                  <a href="https://northbeastclothing.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>NORTH BEAST CO.</a>
+                  <a href="https://blurrycreatures.com/?srsltid=AfmBOorjjAxrHwi6VEgrMm-dxLlVFFb_yFGO3YDacaky_IXZDdgcWNcg" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>BLURRY CREATURES</a>
+                  <a href="https://www.theconfessionalspodcast.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>THE CONFESSIONALS</a>
+                  <a href="https://www.instagram.com/giants_of_ancientamerica/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>GIANTS OF ANCIENT AMERICA</a>
+                  <a href="https://www.instagram.com/freetherabbitspodcast/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>FREE THE RABBITS</a>
+                  <a href="https://www.21cdstudios.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>21CD</a>
+                </div>
+              </div>
 
-            <div style={{ textAlign: 'right' }}>
-              <h4 style={{ fontSize: '20px', fontWeight: 'bold', margin: '0 0 20px 0', color: isMapDarkMode ? '#000000' : '#ffffff', textAlign: 'right', fontFamily: '"Space Mono", monospace' }}>CONTACT</h4>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', fontSize: '10px', fontWeight: 'bold', color: isMapDarkMode ? '#000000' : '#ffffff', textAlign: 'right', fontFamily: '"Space Mono", monospace' }}>
-                <span style={{ fontWeight: 'normal', textTransform: 'none' }}>Questions? Wanna help?</span>
-                <a href="mailto:mappingtherabbithole@gmail.com" style={{ color: 'inherit', textDecoration: 'underline', textTransform: 'none' }}>mappingtherabbithole@gmail.com</a>
-                
-                <div style={{ marginTop: '24px', display: 'flex', justifyContent: 'flex-end' }}>
-                  <form 
-                    action="https://www.paypal.com/donate" 
-                    method="post" 
-                    target="_blank" 
-                    style={{ display: 'inline-block', margin: 0, padding: 0 }}
-                  >
-                    <input type="hidden" name="business" value="GZV5QVK7KNBVE" />
-                    <input type="hidden" name="no_recurring" value="0" />
-                    <input type="hidden" name="item_name" value="I do this because I love it! But anything is greatly appreciated!" />
-                    <input type="hidden" name="currency_code" value="USD" />
-                    <button 
-                      type="submit"
-                      style={{
-                        width: '140px',
-                        height: '30px',
-                        backgroundColor: 'transparent',
-                        color: isMapDarkMode ? '#000000' : '#ffffff',
-                        border: `1.5px solid ${isMapDarkMode ? '#000000' : '#ffffff'}`,
-                        padding: '0',
-                        fontSize: '10px',
-                        fontWeight: 'bold',
-                        fontFamily: '"Space Mono", monospace',
-                        cursor: 'pointer',
-                        textTransform: 'uppercase',
-                        letterSpacing: '0.05em',
-                        borderRadius: '30px',
-                        transition: 'all 0.2s',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center'
-                      }}
-                      onMouseOver={(e) => {
-                        e.currentTarget.style.backgroundColor = isMapDarkMode ? '#000000' : '#ffffff';
-                        e.currentTarget.style.color = isMapDarkMode ? '#ffffff' : '#000000';
-                      }}
-                      onMouseOut={(e) => {
-                        e.currentTarget.style.backgroundColor = 'transparent';
-                        e.currentTarget.style.color = isMapDarkMode ? '#000000' : '#ffffff';
-                      }}
+              <div style={{ textAlign: 'right' }}>
+                <h4 style={{ fontSize: '20px', fontWeight: 'bold', margin: '0 0 20px 0', color: isMapDarkMode ? '#000000' : '#ffffff', textAlign: 'right', fontFamily: '"Space Mono", monospace' }}>CONTACT</h4>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', fontSize: '10px', fontWeight: 'bold', color: isMapDarkMode ? '#000000' : '#ffffff', textAlign: 'right', fontFamily: '"Space Mono", monospace' }}>
+                  <span style={{ fontWeight: 'normal', textTransform: 'none' }}>Questions? Wanna help?</span>
+                  <a href="mailto:mappingtherabbithole@gmail.com" style={{ color: 'inherit', textDecoration: 'underline', textTransform: 'none' }}>mappingtherabbithole@gmail.com</a>
+                  
+                  <div style={{ marginTop: '24px', display: 'flex', justifyContent: 'flex-end' }}>
+                    <form 
+                      action="https://www.paypal.com/donate" 
+                      method="post" 
+                      target="_blank" 
+                      style={{ display: 'inline-block', margin: 0, padding: 0 }}
                     >
-                      DONATE
-                    </button>
-                    <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" style={{ display: 'none' }} />
-                  </form>
+                      <input type="hidden" name="business" value="GZV5QVK7KNBVE" />
+                      <input type="hidden" name="no_recurring" value="0" />
+                      <input type="hidden" name="item_name" value="I do this because I love it! But anything is greatly appreciated!" />
+                      <input type="hidden" name="currency_code" value="USD" />
+                      <button 
+                        type="submit"
+                        style={{
+                          width: '140px',
+                          height: '30px',
+                          backgroundColor: 'transparent',
+                          color: isMapDarkMode ? '#000000' : '#ffffff',
+                          border: `1.5px solid ${isMapDarkMode ? '#000000' : '#ffffff'}`,
+                          padding: '0',
+                          fontSize: '10px',
+                          fontWeight: 'bold',
+                          fontFamily: '"Space Mono", monospace',
+                          cursor: 'pointer',
+                          textTransform: 'uppercase',
+                          letterSpacing: '0.05em',
+                          borderRadius: '30px',
+                          transition: 'all 0.2s',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center'
+                        }}
+                        onMouseOver={(e) => {
+                          e.currentTarget.style.backgroundColor = isMapDarkMode ? '#000000' : '#ffffff';
+                          e.currentTarget.style.color = isMapDarkMode ? '#ffffff' : '#000000';
+                        }}
+                        onMouseOut={(e) => {
+                          e.currentTarget.style.backgroundColor = 'transparent';
+                          e.currentTarget.style.color = isMapDarkMode ? '#000000' : '#ffffff';
+                        }}
+                      >
+                        DONATE
+                      </button>
+                      <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" style={{ display: 'none' }} />
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </footer>
+        </footer>
+      )}
 
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
@@ -9766,9 +11896,9 @@ function App() {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              zIndex: 9999,
+              zIndex: 30000,
               fontFamily: '"Space Mono", monospace',
-              padding: '20px'
+              padding: isMobile ? '12px' : '20px'
             }}
           >
             <motion.div 
@@ -9778,38 +11908,41 @@ function App() {
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               style={{
                 backgroundColor: '#ffffff',
-                width: '671px',
-                height: '530px',
+                width: isMobile ? 'calc(100vw - 24px)' : '671px',
+                height: isMobile ? 'auto' : '530px',
+                maxHeight: isMobile ? '90vh' : 'none',
                 position: 'relative',
                 textAlign: 'center',
                 boxShadow: '0 20px 50px rgba(0,0,0,0.5)',
-                overflow: 'hidden',
+                overflowY: isMobile ? 'auto' : 'hidden',
+                overflowX: 'hidden',
                 display: 'flex',
-                flexDirection: 'column'
+                flexDirection: 'column',
+                boxSizing: 'border-box'
               }}
             >
-            {/* TOP SECTION: 671x208 */}
+            {/* TOP SECTION */}
             <div style={{
               backgroundImage: 'url("https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/overlay-map-bg-%402x.png")',
-              backgroundSize: '100% 100%',
+              backgroundSize: 'cover',
               backgroundPosition: 'center',
-              height: '208px',
-              minHeight: '208px',
+              height: isMobile ? '120px' : '208px',
+              minHeight: isMobile ? '120px' : '208px',
               width: '100%',
               display: 'flex',
               alignItems: 'center',
               position: 'relative',
               flexShrink: 0
             }}>
-              {/* LOGO BOX: 232x78 vertically centered on the left */}
+              {/* LOGO BOX: vertically centered on the left */}
               <div style={{
                 position: 'absolute',
                 left: '0',
                 top: '50%',
                 transform: 'translateY(-50%)',
                 backgroundColor: '#000000',
-                width: '232px',
-                height: '78px',
+                width: isMobile ? '180px' : '232px',
+                height: isMobile ? '60px' : '78px',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
@@ -9818,12 +11951,12 @@ function App() {
                 <img 
                   src="https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/mtrh-horiz-words.svg" 
                   alt="MTRH Logo" 
-                  style={{ width: '232px', height: '78px' }} 
+                  style={{ width: '100%', height: '100%', objectFit: 'contain', padding: isMobile ? '4px' : '0' }} 
                   referrerPolicy="no-referrer"
                 />
               </div>
 
-              {/* ICONS IMAGE: 312x208 on the right */}
+              {/* ICONS IMAGE: showing on right (taking up 40% on mobile) */}
               <img 
                 src="https://raw.githubusercontent.com/northbeastclothing-design/MTRH/main/public/overlay-icons-%402x.png" 
                 alt="Icons Grid" 
@@ -9831,32 +11964,35 @@ function App() {
                   position: 'absolute',
                   right: '0',
                   top: '0',
-                  width: '312px',
-                  height: '208px',
-                  zIndex: 2,
-                  objectFit: 'contain'
+                  width: isMobile ? '40%' : '312px',
+                  height: '100%',
+                  zIndex: 1,
+                  objectFit: 'cover',
+                  objectPosition: 'left center'
                 }} 
                 referrerPolicy="no-referrer"
               />
             </div>
             
-            {/* BOTTOM SECTION CONTENT: remaining height is 268px */}
+            {/* BOTTOM SECTION CONTENT */}
             <div style={{
-              padding: '40px 0',
+              padding: isMobile ? '24px 16px' : '40px 24px',
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
               flex: 1,
-              justifyContent: 'center'
+              justifyContent: 'center',
+              boxSizing: 'border-box'
             }}>
               <h2 style={{
                 fontFamily: '"Space Mono", monospace',
-                fontSize: '28px',
+                fontSize: isMobile ? '20px' : '28px',
                 fontWeight: 'normal',
                 marginBottom: '20px',
                 color: '#000000',
                 lineHeight: '1.2',
-                width: '570px',
+                width: '100%',
+                maxWidth: '570px',
                 textAlign: 'center'
               }}>
                 We are Mapping the Rabbit Hole
@@ -9864,10 +12000,11 @@ function App() {
               
               <p style={{
                 fontFamily: '"Space Mono", monospace',
-                fontSize: '12px',
-                lineHeight: '20px',
+                fontSize: isMobile ? '11px' : '12px',
+                lineHeight: isMobile ? '18px' : '20px',
                 color: '#000000',
-                width: '570px',
+                width: '100%',
+                maxWidth: '570px',
                 marginBottom: '16px',
                 textAlign: 'center'
               }}>
@@ -9876,10 +12013,11 @@ function App() {
 
               <p style={{
                 fontFamily: '"Space Mono", monospace',
-                fontSize: '11px',
-                lineHeight: '18px',
+                fontSize: isMobile ? '10px' : '11px',
+                lineHeight: isMobile ? '16px' : '18px',
                 color: '#666666',
-                width: '570px',
+                width: '100%',
+                maxWidth: '570px',
                 marginBottom: '30px',
                 textAlign: 'center',
                 fontStyle: 'italic'
@@ -9889,10 +12027,13 @@ function App() {
 
               <div style={{
                 display: 'flex',
-                gap: '16px',
+                flexDirection: isMobile ? 'column' : 'row',
+                gap: isMobile ? '12px' : '16px',
                 justifyContent: 'center',
                 alignItems: 'center',
-                marginBottom: '30px'
+                marginBottom: '30px',
+                width: isMobile ? '100%' : 'auto',
+                boxSizing: 'border-box'
               }}>
                 <button 
                   onClick={() => setShowAboutModal(false)}
@@ -9931,7 +12072,7 @@ function App() {
                   action="https://www.paypal.com/donate" 
                   method="post" 
                   target="_blank" 
-                  style={{ display: 'inline-block', margin: 0, padding: 0 }}
+                  style={{ display: 'inline-block', margin: 0, padding: 0, width: '200px' }}
                 >
                   <input type="hidden" name="business" value="GZV5QVK7KNBVE" />
                   <input type="hidden" name="no_recurring" value="0" />
@@ -12769,7 +14910,8 @@ function App() {
                   position: 'fixed',
                   zIndex: 100000,
                   width: '320px',
-                  pointerEvents: 'auto'
+                  pointerEvents: 'auto',
+                  overflow: 'hidden'
                 };
 
                 switch (currentStep.placement) {
@@ -12923,7 +15065,8 @@ function App() {
                       fontFamily: '"Space Mono", monospace',
                       boxSizing: 'border-box',
                       position: 'relative',
-                      boxShadow: isMapDarkMode ? '0 10px 40px rgba(0, 0, 0, 0.4)' : '0 10px 40px rgba(0, 0, 0, 0.3)'
+                      boxShadow: isMapDarkMode ? '0 10px 40px rgba(0, 0, 0, 0.4)' : '0 10px 40px rgba(0, 0, 0, 0.3)',
+                      overflow: 'hidden'
                     }}
                     role="dialog"
                     aria-labelledby="tour-title"

@@ -12,4 +12,7 @@ coverage/
 __pycache__/
 scratch/
 .local_db/
+.chrome-profile/
+task.md
+src/task.md
 

@@ -19,6 +19,7 @@ interface CartographyPageProps {
   auth: any;
   selectedMapId?: string;
   onMapSelect?: (mapId: string) => void;
+  isMobile?: boolean;
 }
 
 interface HistoricalMap {
@@ -659,11 +660,20 @@ const updateMapOverlay = (map: mapboxgl.Map, hMap: HistoricalMap, slices: ImageS
           type: 'raster',
           source: srcId,
           paint: {
-            'raster-fade-duration': 150,
-            'raster-opacity': 1,
+            'raster-fade-duration': 0, // Disable internal fade to avoid double opacity transitions
+            'raster-opacity': 0, // Start fully transparent to fade in on top of other resolution
             'raster-opacity-transition': { duration: 300 }
           }
         }, beforeId);
+
+        // Transition opacity to 1 on the next frame for a smooth fade-in
+        requestAnimationFrame(() => {
+          try {
+            if (map.getLayer(lyrId)) {
+              map.setPaintProperty(lyrId, 'raster-opacity', 1);
+            }
+          } catch (e) {}
+        });
       }
     });
 
@@ -683,7 +693,7 @@ const updateMapOverlay = (map: mapboxgl.Map, hMap: HistoricalMap, slices: ImageS
       } catch (e) {
         // Map might have been unmounted during timeout
       }
-    }, 400);
+    }, 500);
   }
 };
 
@@ -979,7 +989,8 @@ export default function CartographyPage({
   db, 
   auth, 
   selectedMapId, 
-  onMapSelect 
+  onMapSelect,
+  isMobile
 }: CartographyPageProps) {
   // Try to initialize using selectedMapId if provided, else fallback to index 0
   const initialMap = useMemo(() => {
@@ -1010,7 +1021,7 @@ export default function CartographyPage({
   const [notes, setNotes] = useState<SavedPoint[]>([]);
   const [showNotes, setShowNotes] = useState<boolean>(true);
   const [isAddMode, setIsAddMode] = useState<boolean>(false);
-  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState<boolean>(false);
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState<boolean>(isMobile ?? false);
 
   // Search state matching map page exactly
   const [searchQuery, setSearchQuery] = useState<string>('');
@@ -1022,6 +1033,7 @@ export default function CartographyPage({
   const currentResolutionRef = useRef<'low' | 'high'>('low');
   const lastMapIdRef = useRef<string>('');
   const lastFetchedMapIdRef = useRef<string>('');
+  const loadedMapIdRef = useRef<string>('');
   const selectedMapRef = useRef<HistoricalMap>(selectedMap);
 
   useEffect(() => {
@@ -1162,6 +1174,7 @@ export default function CartographyPage({
   // Progressive loader state
   const [loadProgress, setLoadProgress] = useState<number | null>(null);
   const [mapImageSlices, setMapImageSlices] = useState<ImageSlice[]>([]);
+  const [slicesResolution, setSlicesResolution] = useState<'low' | 'high'>('low');
   const [isMapSwitchLoading, setIsMapSwitchLoading] = useState<boolean>(false);
   const [isMapReady, setIsMapReady] = useState<boolean>(false);
   const [mapZoom, setMapZoom] = useState<number>(1.5);
@@ -1233,6 +1246,7 @@ export default function CartographyPage({
         cols: 1,
         rows: 1
       }]);
+      loadedMapIdRef.current = 'peutinger';
       setIsMapSwitchLoading(false);
       return;
     }
@@ -1245,6 +1259,8 @@ export default function CartographyPage({
     const isMapSwitch = lastFetchedMapIdRef.current !== selectedMap.id;
     if (isMapSwitch) {
       setMapImageSlices([]);
+      setSlicesResolution('low');
+      loadedMapIdRef.current = '';
       setLoadProgress(0);
       setIsMapSwitchLoading(true);
       lastFetchedMapIdRef.current = selectedMap.id;
@@ -1272,6 +1288,8 @@ export default function CartographyPage({
               cols: 1,
               rows: 1
             }]);
+            setSlicesResolution(currentResolution);
+            loadedMapIdRef.current = selectedMap.id;
             setLoadProgress(null);
             setIsMapSwitchLoading(false);
           }
@@ -1302,6 +1320,8 @@ export default function CartographyPage({
           const slices = await sliceImage(blob);
           if (active) {
             setMapImageSlices(slices);
+            setSlicesResolution(currentResolution);
+            loadedMapIdRef.current = selectedMap.id;
             setLoadProgress(null);
             setIsMapSwitchLoading(false);
           }
@@ -1316,6 +1336,8 @@ export default function CartographyPage({
               cols: 1,
               rows: 1
             }]);
+            setSlicesResolution(currentResolution);
+            loadedMapIdRef.current = selectedMap.id;
             setLoadProgress(null);
             setIsMapSwitchLoading(false);
           }
@@ -1334,6 +1356,8 @@ export default function CartographyPage({
             cols: 1,
             rows: 1
           }]);
+          setSlicesResolution(currentResolution);
+          loadedMapIdRef.current = selectedMap.id;
           setLoadProgress(null);
           setIsMapSwitchLoading(false);
         }
@@ -1387,8 +1411,22 @@ export default function CartographyPage({
 
 
 
+    const handleMove = () => {
+      const container = mapContainerRef.current?.parentElement;
+      if (!container) return;
+      try {
+        const pixelPoint = map.project([0, 0]);
+        const ratio = 0.7; // moves at 70% of canvas speed (30% lag)
+        const x = pixelPoint.x * (1 - ratio);
+        const y = pixelPoint.y * (1 - ratio);
+        container.style.backgroundPosition = `${x}px ${y}px`;
+      } catch (err) {}
+    };
+    map.on('move', handleMove);
+
     map.on('load', () => {
       setIsMapReady(true);
+      handleMove();
     });
 
     // Add pointer down / click interactions for note drop
@@ -1400,6 +1438,9 @@ export default function CartographyPage({
     });
 
     const handleZoom = () => {
+      if (isEasingRef.current) {
+        return; // Disable resolution transitions during camera animations/easing!
+      }
       const zoom = map.getZoom();
       if (selectedMapRef.current.disableResolutionUpgrade) {
         return;
@@ -1414,6 +1455,7 @@ export default function CartographyPage({
 
     return () => {
       map.off('zoom', handleZoom);
+      map.off('move', handleMove);
       map.remove();
       mapRef.current = null;
     };
@@ -1429,9 +1471,14 @@ export default function CartographyPage({
       lastMapIdRef.current = selectedMap.id;
     }
 
-    updateMapOverlay(map, selectedMap, mapImageSlices, currentResolution);
+    if (loadedMapIdRef.current !== selectedMap.id || mapImageSlices.length === 0) {
+      cleanUpMapOverlay(map);
+      return;
+    }
+
+    updateMapOverlay(map, selectedMap, mapImageSlices, slicesResolution);
     updateHotspotsOverlay(map, selectedMap.id);
-  }, [selectedMap.id, mapImageSlices, isMapReady, currentResolution]);
+  }, [selectedMap.id, mapImageSlices, isMapReady, slicesResolution]);
 
   // 5. Position camera and trigger entry zoom-in animation when the new map image finishes loading
   useEffect(() => {
@@ -1482,11 +1529,12 @@ export default function CartographyPage({
       : [0, 0];
     targetCenterRef.current = snapCenter;
 
-    // Snap instantly to the new map's center, scaled down to 50% size (1.0 zoom level down)
-    map.setZoom(Math.max(0.1, targetZoom - 1.0));
+    const finalZoom = pendingTarget ? Math.max(3, targetZoom) : targetZoom;
+    // Snap instantly to the final target zoom level to lose the scaling transition on entry
+    map.setZoom(finalZoom);
     map.setCenter(snapCenter);
 
-    // Ease in zoom-scale animation up to targetZoom (100% cover size) in the next frame
+    // Ease in centering/padding transition horizontally in the next frame
     isEasingRef.current = true;
     requestAnimationFrame(() => {
       const activeMap = mapRef.current;
@@ -1505,15 +1553,58 @@ export default function CartographyPage({
 
       activeMap.easeTo({
         center: snapCenter,
-        zoom: pendingTarget ? Math.max(3, targetZoom) : targetZoom,
-        padding: { left: sidebarWidth },
+        zoom: finalZoom,
+        padding: isMobile 
+          ? { top: 0, bottom: isSidebarCollapsed ? 108 : window.innerHeight * 0.7, left: 0, right: 0 }
+          : { left: sidebarWidth },
         duration: 1200,
         essential: true
       });
       // Clear pending target point after use
       pendingTargetPointRef.current = null;
     });
-  }, [mapImageSlices, isMapReady]);
+  }, [mapImageSlices, isMapReady, isMobile, isSidebarCollapsed]);
+
+  const prevSidebarCollapsedRef = useRef<boolean | null>(null);
+
+  // 5.5 Keep the map centered in the viewable area when mobile bottom drawer collapses/expands
+  useEffect(() => {
+    const map = mapRef.current;
+    if (isMobile && map && isMapReady && mapImageSlices.length > 0) {
+      if (prevSidebarCollapsedRef.current === null) {
+        prevSidebarCollapsedRef.current = isSidebarCollapsed;
+        return;
+      }
+      if (prevSidebarCollapsedRef.current === isSidebarCollapsed) {
+        return;
+      }
+      
+      prevSidebarCollapsedRef.current = isSidebarCollapsed;
+
+      const newBottomPadding = isSidebarCollapsed ? 108 : (window.innerHeight * 0.7);
+
+      // Suspend maxBounds constraint during transition to prevent camera drift/jerkiness
+      isEasingRef.current = true;
+      map.setMaxBounds(null);
+
+      const onMoveEnd = () => {
+        isEasingRef.current = false;
+        map.off('moveend', onMoveEnd);
+        // Force clamp updates under new padding bounds once transition settles
+        map.fire('zoom');
+      };
+      map.on('moveend', onMoveEnd);
+
+      const currentCenter = map.getCenter();
+
+      map.easeTo({
+        center: currentCenter,
+        padding: { top: 0, bottom: newBottomPadding, left: 0, right: 0 },
+        duration: 500,
+        essential: true
+      });
+    }
+  }, [isSidebarCollapsed, isMobile, isMapReady, mapImageSlices]);
 
   // 6. Clamp camera center dynamically using Mapbox's native maxBounds constraint
   useEffect(() => {
@@ -1535,6 +1626,10 @@ export default function CartographyPage({
       const W = map.getCanvas().clientWidth;
       const H = map.getCanvas().clientHeight;
 
+      const sidebarWidth = isSidebarCollapsed ? 40 : 340;
+      const viewableWidth = isMobile ? W : Math.max(0, W - sidebarWidth);
+      const viewableHeight = isMobile ? Math.max(0, H - (isSidebarCollapsed ? 108 : H * 0.7)) : H;
+
       const currentZoom = map.getZoom();
       setMapZoom(currentZoom);
 
@@ -1543,10 +1638,10 @@ export default function CartographyPage({
       
       // Calculate degrees per pixel for the current zoom
       const degreesPerPixelLng = 360 / (256 * Math.pow(2, currentZoom));
-      const viewportLngSpan = W * degreesPerPixelLng;
+      const viewportLngSpan = viewableWidth * degreesPerPixelLng;
 
       const pixelsPerRadian = (256 * Math.pow(2, currentZoom)) / (2 * Math.PI);
-      const viewportYSpan = H / pixelsPerRadian;
+      const viewportYSpan = viewableHeight / pixelsPerRadian;
 
       // Convert map bounds maxLat/minLat to Mercator Y radians
       const maxLatRad = maxLat * Math.PI / 180;
@@ -1561,8 +1656,8 @@ export default function CartographyPage({
       // If the map is smaller than the viewport in either dimension (meaning the user is zoomed out
       // enough to see the whole map), disable bounds entirely to prevent Mapbox coordinate locks.
       if (
-        mapWidthPixels < W || 
-        mapHeightPixels < H || 
+        mapWidthPixels < viewableWidth || 
+        mapHeightPixels < viewableHeight || 
         viewportLngSpan >= 360 || 
         viewportYSpan >= 2 * Math.PI
       ) {
@@ -1572,14 +1667,14 @@ export default function CartographyPage({
 
       // Calculate horizontal and vertical padding:
       // Since map is guaranteed to be larger than the viewport in both dimensions here,
-      // allow dragging until 100px remains on screen (requires W/2 - 100 pad, and H/2 - 100 pad)
-      const padLngPixels = Math.max(0, W / 2 - 100);
+      // allow dragging until 100px remains on screen (requires viewableWidth/2 - 100 pad, and viewableHeight/2 - 100 pad)
+      const padLngPixels = Math.max(0, viewableWidth / 2 - 100);
       const padLng = padLngPixels * degreesPerPixelLng;
 
       const targetMinLng = minLng - padLng;
       const targetMaxLng = maxLng + padLng;
 
-      const padLatPixels = Math.max(0, H / 2 - 100);
+      const padLatPixels = Math.max(0, viewableHeight / 2 - 100);
       const padY = padLatPixels / pixelsPerRadian;
 
       const yMaxAllowed = yMax + padY;
@@ -1611,7 +1706,7 @@ export default function CartographyPage({
         activeMap.setMaxBounds(null);
       }
     };
-  }, [selectedMap.id, isMapReady]);
+  }, [selectedMap.id, isMapReady, isSidebarCollapsed, isMobile]);
 
 
 
@@ -1636,10 +1731,10 @@ export default function CartographyPage({
     };
   }, [isMapReady]);
 
-  // Re-center map and animate camera padding when sidebar collapse state changes
+  // Re-center map and animate camera padding when desktop sidebar collapse state changes
   useEffect(() => {
     const map = mapRef.current;
-    if (!map || !isMapReady) return;
+    if (!map || !isMapReady || isMobile) return;
 
     const sidebarWidth = isSidebarCollapsed ? 40 : 340;
 
@@ -1648,7 +1743,7 @@ export default function CartographyPage({
       duration: 500, // Matches sidebar CSS transition duration
       essential: true
     });
-  }, [isSidebarCollapsed, isMapReady]);
+  }, [isSidebarCollapsed, isMapReady, isMobile]);
 
   // 5. Update raster layer visibility / opacity during loading
   useEffect(() => {
@@ -2007,45 +2102,90 @@ export default function CartographyPage({
         }
       `}</style>
       {/* 20PX FAR LEFT PROTECTIVE SIDE STRIP */}
-      <div 
-        className="far-left-strip"
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          bottom: 0,
-          width: '20px',
-          background: theme.bg,
-          borderRight: `1px solid ${theme.border}`,
-          zIndex: 10,
-          pointerEvents: 'auto'
-        }} 
-      />
+      {!isMobile && (
+        <div 
+          className="far-left-strip"
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            bottom: 0,
+            width: '20px',
+            background: theme.bg,
+            borderRight: `1px solid ${theme.border}`,
+            zIndex: 10,
+            pointerEvents: 'auto'
+          }} 
+        />
+      )}
 
       {/* SIDEBAR PANEL */}
       <motion.div 
         ref={sidebarRef}
         initial={false}
-        animate={{ 
+        animate={isMobile ? {
+          height: isSidebarCollapsed ? '108px' : '70vh',
+          left: 0,
+          right: 0,
+          bottom: 0
+        } : { 
           left: isSidebarCollapsed ? -280 : 20,
+          top: 0,
+          bottom: 0
         }}
         transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
         style={{
-          position: 'absolute',
-          top: 0,
-          bottom: 0,
-          width: '300px',
-          borderRight: `1px solid ${theme.border}`,
+          position: isMobile ? 'fixed' : 'absolute',
+          width: isMobile ? '100%' : '300px',
+          borderRight: isMobile ? 'none' : `1px solid ${theme.border}`,
+          borderTop: isMobile ? `1px solid ${theme.border}` : 'none',
           background: theme.bg,
           display: 'flex',
           flexDirection: 'column',
-          zIndex: 5,
+          zIndex: isMobile ? 10000 : 5,
           pointerEvents: 'auto',
           flexShrink: 0
         }}
       >
+        {isMobile && (
+          <motion.button
+            whileHover={{ opacity: 0.8 }}
+            onClick={() => setIsSidebarCollapsed(!isSidebarCollapsed)}
+            title={!isSidebarCollapsed ? 'Minimize Panel' : 'Maximize Panel'}
+            style={{
+              position: 'absolute',
+              top: '-20px',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              width: '40px',
+              height: '20px',
+              background: theme.text,
+              color: theme.bg,
+              border: 'none',
+              cursor: 'pointer',
+              zIndex: 10001,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: 0,
+              borderRadius: 0,
+            }}
+          >
+            <img
+              src="/icons/icon-arrow-left.svg"
+              alt="toggle"
+              style={{
+                width: '6px',
+                height: '12px',
+                transform: !isSidebarCollapsed ? 'rotate(270deg)' : 'rotate(90deg)',
+                filter: isMapDarkMode ? 'brightness(0)' : 'none',
+              }}
+            />
+          </motion.button>
+        )}
         {/* ABSOLUTE POSITIONED FIXED BUTTON TAB FOR SIDEBAR COLLAPSE */}
-        <motion.button 
+        {!isMobile && (
+          <motion.button 
           whileHover={{ opacity: 0.8 }}
           onClick={() => setIsSidebarCollapsed(!isSidebarCollapsed)}
           title={isSidebarCollapsed ? "Maximize Maps" : "Minimize Maps"}
@@ -2077,57 +2217,62 @@ export default function CartographyPage({
             }} 
           />
         </motion.button>
+        )}
 
         {/* TITLE HEADER */}
-        <div style={{ 
-          height: '40px', 
-          padding: '0 16px', 
-          borderBottom: `1px solid ${theme.border}`, 
-          display: 'flex', 
-          alignItems: 'center', 
-          justifyContent: 'flex-end', 
-          background: 'transparent', 
-          flexShrink: 0, 
-          zIndex: 20 
-        }}>
-          <svg 
-            width="30" 
-            height="30" 
-            viewBox="0 0 30 30" 
-            fill="none" 
-            xmlns="http://www.w3.org/2000/svg"
-            style={{ 
-              marginRight: '3px',
-              filter: theme.invert,
-              display: 'inline-block',
-              verticalAlign: 'middle'
-            }}
-          >
-            <g clipPath="url(#clip0_carto_header)">
-              <circle cx="15" cy="15" r="15" fill="#ffffff" />
-              <path d="M6 15C6 19.9705 10.0294 24 15 24C19.9705 24 24 19.9705 24 15C24 10.0294 19.9705 6 15 6C10.0294 6 6 10.0294 6 15Z" stroke="black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
-              <path d="M15.9 6.04431C15.9 6.04431 18.6 9.59987 18.6 14.9998C18.6 20.3998 15.9 23.9555 15.9 23.9555" stroke="black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
-              <path d="M14.1 23.9555C14.1 23.9555 11.4 20.3998 11.4 14.9998C11.4 9.59987 14.1 6.04431 14.1 6.04431" stroke="black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
-              <path d="M6.56665 18.15H23.4333" stroke="black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
-              <path d="M6.56665 11.85H23.4333" stroke="black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
-            </g>
-            <defs>
-              <clipPath id="clip0_carto_header">
-                <rect width="30" height="30" fill="white" />
-              </clipPath>
-            </defs>
-          </svg>
-          <span style={{ 
-            fontWeight: '700', 
-            fontSize: '20px', 
-            lineHeight: '24px', 
-            textTransform: 'uppercase', 
-            fontFamily: '"Space Mono", monospace',
-            color: theme.text
+        {!isMobile && (
+          <div style={{ 
+            height: '40px', 
+            padding: '0 16px', 
+            borderBottom: `1px solid ${theme.border}`, 
+            display: 'flex', 
+            alignItems: 'center', 
+            justifyContent: 'flex-end', 
+            background: 'transparent', 
+            flexShrink: 0, 
+            zIndex: 20 
           }}>
-            MAPS
-          </span>
-        </div>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <svg 
+                width="30" 
+                height="30" 
+                viewBox="0 0 30 30" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg"
+                style={{ 
+                  marginRight: '3px',
+                  filter: theme.invert,
+                  display: 'inline-block',
+                  verticalAlign: 'middle'
+                }}
+              >
+                <g clipPath="url(#clip0_carto_header)">
+                  <circle cx="15" cy="15" r="15" fill="#ffffff" />
+                  <path d="M6 15C6 19.9705 10.0294 24 15 24C19.9705 24 24 19.9705 24 15C24 10.0294 19.9705 6 15 6C10.0294 6 6 10.0294 6 15Z" stroke="black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M15.9 6.04431C15.9 6.04431 18.6 9.59987 18.6 14.9998C18.6 20.3998 15.9 23.9555 15.9 23.9555" stroke="black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M14.1 23.9555C14.1 23.9555 11.4 20.3998 11.4 14.9998C11.4 9.59987 14.1 6.04431 14.1 6.04431" stroke="black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M6.56665 18.15H23.4333" stroke="black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M6.56665 11.85H23.4333" stroke="black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_carto_header)">
+                    <rect width="30" height="30" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <span style={{ 
+                fontWeight: '700', 
+                fontSize: '20px', 
+                lineHeight: '24px', 
+                textTransform: 'uppercase', 
+                fontFamily: '"Space Mono", monospace',
+                color: theme.text
+              }}>
+                MAPS
+              </span>
+            </div>
+          </div>
+        )}
 
         {/* SEARCH BAR CONTAINER */}
         <div style={{ padding: '16px', borderBottom: `1px solid ${theme.border}`, background: theme.bg, flexShrink: 0, zIndex: 100 }}>
@@ -2300,244 +2445,301 @@ export default function CartographyPage({
           </div>
         </div>
 
+        {/* If mobile, render centered maps header here (below search bar) with no X close button */}
+        {isMobile && (
+          <div style={{ 
+            height: '40px', 
+            padding: '0 16px', 
+            borderBottom: `1px solid ${theme.border}`, 
+            display: 'flex', 
+            alignItems: 'center', 
+            justifyContent: 'center', 
+            background: 'transparent', 
+            flexShrink: 0, 
+            zIndex: 20 
+          }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <svg 
+                width="30" 
+                height="30" 
+                viewBox="0 0 30 30" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg"
+                style={{ 
+                  marginRight: '6px',
+                  filter: theme.invert,
+                  display: 'inline-block',
+                  verticalAlign: 'middle'
+                }}
+              >
+                <g clipPath="url(#clip0_carto_header_mob)">
+                  <circle cx="15" cy="15" r="15" fill="#ffffff" />
+                  <path d="M6 15C6 19.9705 10.0294 24 15 24C19.9705 24 24 19.9705 24 15C24 10.0294 19.9705 6 15 6C10.0294 6 6 10.0294 6 15Z" stroke="black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M15.9 6.04431C15.9 6.04431 18.6 9.59987 18.6 14.9998C18.6 20.3998 15.9 23.9555 15.9 23.9555" stroke="black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M14.1 23.9555C14.1 23.9555 11.4 20.3998 11.4 14.9998C11.4 9.59987 14.1 6.04431 14.1 6.04431" stroke="black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M6.56665 18.15H23.4333" stroke="black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M6.56665 11.85H23.4333" stroke="black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_carto_header_mob)">
+                    <rect width="30" height="30" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <span style={{ 
+                fontWeight: '700', 
+                fontSize: '18px', 
+                lineHeight: '24px', 
+                textTransform: 'uppercase', 
+                fontFamily: '"Space Mono", monospace',
+                color: theme.text
+              }}>
+                MAPS
+              </span>
+            </div>
+          </div>
+        )}
+
         {/* MAP GALLERY SELECTOR LIST */}
-        <div 
-          id="cartography-scrollbar"
-          className="custom-scrollbar"
-          style={{
-            flex: 1,
-            overflowY: 'scroll',
-            padding: '0 0 15px 0',
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '3px',
-            background: 'transparent'
-          }}
-        >
-          <span style={{ fontSize: '9px', color: theme.textDim, letterSpacing: '1.5px', fontWeight: 'bold', padding: '16px 20px 2px 20px' }}>SELECT MAP TO EXPLORE</span>
-          {/* STICKY TOP SPACER FOR 8PX PADDING + MASKING */}
-          <div style={{ position: 'sticky', top: 0, height: '8px', background: theme.bg, zIndex: 11, flexShrink: 0 }} />
-          {ERAS.map((era) => {
-            const eraMaps = [...HISTORICAL_MAPS]
-               .filter(m => m.era === era.id)
-               .map(m => ({
-                 ...m,
-                 cleanName: m.name.replace(/^The\s+/i, '')
-               }))
-               .sort((a, b) => a.cleanName.localeCompare(b.cleanName));
+        {(!isMobile || !isSidebarCollapsed) && (
+          <div 
+            id="cartography-scrollbar"
+            className="custom-scrollbar"
+            style={{
+              flex: 1,
+              overflowY: 'scroll',
+              padding: '0 0 15px 0',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '3px',
+              background: 'transparent'
+            }}
+          >
+            <span style={{ fontSize: '9px', color: theme.textDim, letterSpacing: '1.5px', fontWeight: 'bold', padding: '16px 20px 2px 20px' }}>SELECT MAP TO EXPLORE</span>
+            {/* STICKY TOP SPACER FOR 8PX PADDING + MASKING */}
+            <div style={{ position: 'sticky', top: 0, height: '8px', background: theme.bg, zIndex: 11, flexShrink: 0 }} />
+            {ERAS.map((era) => {
+              const eraMaps = [...HISTORICAL_MAPS]
+                 .filter(m => m.era === era.id)
+                 .map(m => ({
+                   ...m,
+                   cleanName: m.name.replace(/^The\s+/i, '')
+                 }))
+                 .sort((a, b) => a.cleanName.localeCompare(b.cleanName));
 
-            if (eraMaps.length === 0) return null;
+              if (eraMaps.length === 0) return null;
 
-            const isExpanded = !!expandedEras[era.id];
+              const isExpanded = !!expandedEras[era.id];
 
-            return (
-              <div key={era.id} style={{ display: 'flex', flexDirection: 'column', width: '100%', position: 'relative' }}>
-                <EraAccordionHeader
-                  era={era}
-                  isExpanded={isExpanded}
-                  theme={theme}
-                  onToggleExpand={() => setExpandedEras(prev => ({ ...prev, [era.id]: !prev[era.id] }))}
-                  getEraFolderBgColor={getEraFolderBgColor}
-                />
+              return (
+                <div key={era.id} style={{ display: 'flex', flexDirection: 'column', width: '100%', position: 'relative' }}>
+                  <EraAccordionHeader
+                    era={era}
+                    isExpanded={isExpanded}
+                    theme={theme}
+                    onToggleExpand={() => setExpandedEras(prev => ({ ...prev, [era.id]: !prev[era.id] }))}
+                    getEraFolderBgColor={getEraFolderBgColor}
+                  />
 
-                {/* Accordion Content wrapper */}
-                <motion.div
-                  initial={false}
-                  animate={{
-                    height: isExpanded ? 'auto' : 0,
-                    opacity: isExpanded ? 1 : 0
-                  }}
-                  transition={{ duration: 0.25, ease: 'easeInOut' }}
-                  style={{ overflow: isExpanded ? 'visible' : 'hidden' }}
-                >
-                  <div style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    gap: '12px',
-                    padding: '12px 35px 12px 35px'
-                  }}>
-                    {eraMaps.map((hMap) => {
-                      const isSelected = hMap.id === selectedMap.id;
-                      return (
-                        <motion.div
-                          key={hMap.id}
-                          id={`map-card-${hMap.id}`}
-                          onClick={() => handleMapSelect(hMap)}
-                          role="button"
-                          tabIndex={0}
-                          onKeyDown={(e) => {
-                            if (e.key === 'Enter' || e.key === ' ') {
-                              handleMapSelect(hMap);
-                            }
-                          }}
-                          whileHover={{
-                            scale: 1.02,
-                            y: -2,
-                            boxShadow: '0 8px 24px rgba(0,0,0,0.15)'
-                          }}
-                          style={{
-                            width: '100%',
-                            background: 'transparent',
-                            color: theme.text,
-                            border: isSelected ? '3px solid #000000' : `1px solid ${theme.border}`,
-                            padding: 0,
-                            textAlign: 'left',
-                            cursor: 'pointer',
-                            borderRadius: '20px',
-                            overflow: 'hidden',
-                            transition: 'background-color 0.2s ease, border-color 0.2s ease, border-width 0.1s ease',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: 'stretch',
-                            flexShrink: 0
-                          }}
-                        >
-                          {/* THUMBNAIL */}
-                          <div style={{
-                            position: 'relative',
-                            width: '100%',
-                            height: '112px',
-                            borderBottom: `1px solid ${isSelected ? '#000000' : theme.border}`,
-                            overflow: 'hidden',
-                            background: isMapDarkMode ? '#111' : '#eee',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            flexShrink: 0
-                          }}>
-                            {/* Globe Icon in top-left with map-specific background pin color */}
-                            <svg
-                              width="30"
-                              height="30"
-                              viewBox="0 0 30 30"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                              style={{
-                                position: 'absolute',
-                                top: '4px',
-                                left: '4px',
-                                zIndex: 2
-                              }}
-                            >
-                              <g clipPath={`url(#clip0_carto_thumb_${hMap.id})`}>
-                                <circle cx="15" cy="15" r="15" fill={hMap.pinColor || '#FF5E97'} />
-                                <path d="M6 15C6 19.9705 10.0294 24 15 24C19.9705 24 24 19.9705 24 15C24 10.0294 19.9705 6 15 6C10.0294 6 6 10.0294 6 15Z" stroke="black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
-                                <path d="M15.9 6.04431C15.9 6.04431 18.6 9.59987 18.6 14.9998C18.6 20.3998 15.9 23.9555 15.9 23.9555" stroke="black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
-                                <path d="M14.1 23.9555C14.1 23.9555 11.4 20.3998 11.4 14.9998C11.4 9.59987 14.1 6.04431 14.1 6.04431" stroke="black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
-                                <path d="M6.56665 18.15H23.4333" stroke="black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
-                                <path d="M6.56665 11.85H23.4333" stroke="black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
-                              </g>
-                              <defs>
-                                <clipPath id={`clip0_carto_thumb_${hMap.id}`}>
-                                  <rect width="30" height="30" fill="white" />
-                                </clipPath>
-                              </defs>
-                            </svg>
-
-                            {/* Pin Counter Badge in top-right corner */}
-                            {notes.length > 0 && (() => {
-                              const pinCount = notes.filter(point => point.mapId === hMap.id).length;
-                              if (pinCount === 0) return null;
-                              return (
-                                <div style={{
+                  {/* Accordion Content wrapper */}
+                  <motion.div
+                    initial={false}
+                    animate={{
+                      height: isExpanded ? 'auto' : 0,
+                      opacity: isExpanded ? 1 : 0
+                    }}
+                    transition={{ duration: 0.25, ease: 'easeInOut' }}
+                    style={{ overflow: isExpanded ? 'visible' : 'hidden' }}
+                  >
+                    <div style={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      gap: '12px',
+                      padding: '12px 35px 12px 35px'
+                    }}>
+                      {eraMaps.map((hMap) => {
+                        const isSelected = hMap.id === selectedMap.id;
+                        return (
+                          <motion.div
+                            key={hMap.id}
+                            id={`map-card-${hMap.id}`}
+                            onClick={() => handleMapSelect(hMap)}
+                            role="button"
+                            tabIndex={0}
+                            onKeyDown={(e) => {
+                              if (e.key === 'Enter' || e.key === ' ') {
+                                handleMapSelect(hMap);
+                              }
+                            }}
+                            whileHover={{
+                              scale: 1.02,
+                              y: -2,
+                              boxShadow: '0 8px 24px rgba(0,0,0,0.15)'
+                            }}
+                            style={{
+                              width: '100%',
+                              background: 'transparent',
+                              color: theme.text,
+                              border: isSelected ? '3px solid #000000' : `1px solid ${theme.border}`,
+                              padding: 0,
+                              textAlign: 'left',
+                              cursor: 'pointer',
+                              borderRadius: '20px',
+                              overflow: 'hidden',
+                              transition: 'background-color 0.2s ease, border-color 0.2s ease, border-width 0.1s ease',
+                              display: 'flex',
+                              flexDirection: 'column',
+                              alignItems: 'stretch',
+                              flexShrink: 0
+                            }}
+                          >
+                            {/* THUMBNAIL */}
+                            <div style={{
+                              position: 'relative',
+                              width: '100%',
+                              height: '112px',
+                              borderBottom: `1px solid ${isSelected ? '#000000' : theme.border}`,
+                              overflow: 'hidden',
+                              background: isMapDarkMode ? '#111' : '#eee',
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              flexShrink: 0
+                            }}>
+                              {/* Globe Icon in top-left with map-specific background pin color */}
+                              <svg
+                                width="30"
+                                height="30"
+                                viewBox="0 0 30 30"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                style={{
                                   position: 'absolute',
                                   top: '4px',
-                                  right: '4px',
-                                  background: 'rgba(0, 0, 0, 0.65)',
-                                  backdropFilter: 'blur(2px)',
-                                  color: '#ffffff',
-                                  fontSize: '11px',
-                                  fontFamily: '"Space Mono", monospace',
-                                  fontWeight: '400',
-                                  height: '30px',
-                                  display: 'flex',
-                                  alignItems: 'center',
-                                  gap: '6px',
-                                  padding: '0 16px 0 4px',
-                                  borderRadius: '15px',
-                                  letterSpacing: '0.5px',
-                                  whiteSpace: 'nowrap',
-                                  zIndex: 2,
-                                  pointerEvents: 'none'
-                                }}>
-                                  <img
-                                    src="/icons/icon-map-pin.svg"
-                                    style={{
-                                      width: '24px',
-                                      height: '24px',
-                                      filter: 'brightness(0) invert(1)'
-                                    }}
-                                    alt="pin icon"
-                                  />
-                                  <span>{pinCount}</span>
-                                </div>
-                              );
-                            })()}
+                                  left: '4px',
+                                  zIndex: 2
+                                }}
+                              >
+                                <g clipPath={`url(#clip0_carto_thumb_${hMap.id})`}>
+                                  <circle cx="15" cy="15" r="15" fill={hMap.pinColor || '#FF5E97'} />
+                                  <path d="M6 15C6 19.9705 10.0294 24 15 24C19.9705 24 24 19.9705 24 15C24 10.0294 19.9705 6 15 6C10.0294 6 6 10.0294 6 15Z" stroke="black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+                                  <path d="M15.9 6.04431C15.9 6.04431 18.6 9.59987 18.6 14.9998C18.6 20.3998 15.9 23.9555 15.9 23.9555" stroke="black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+                                  <path d="M14.1 23.9555C14.1 23.9555 11.4 20.3998 11.4 14.9998C11.4 9.59987 14.1 6.04431 14.1 6.04431" stroke="black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+                                  <path d="M6.56665 18.15H23.4333" stroke="black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+                                  <path d="M6.56665 11.85H23.4333" stroke="black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+                                </g>
+                                <defs>
+                                  <clipPath id={`clip0_carto_thumb_${hMap.id}`}>
+                                    <rect width="30" height="30" fill="white" />
+                                  </clipPath>
+                                </defs>
+                              </svg>
 
-                            {!loadedThumbnails[hMap.id] && (
-                              <div className="loading-spinner" style={{
-                                position: 'absolute',
-                                border: `2px solid ${isMapDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)'}`,
-                                borderTopColor: hMap.pinColor || '#FF5E97'
-                              }} />
-                            )}
-                            <img
-                              src={getProxyOrDirectUrl(getThumbnailUrl(hMap.url))}
-                              alt={hMap.name}
-                              onLoad={() => setLoadedThumbnails(prev => ({ ...prev, [hMap.id]: true }))}
-                              style={{
-                                width: '100%',
-                                height: '100%',
-                                objectFit: 'cover',
-                                transform: 'scale(1.18)',
-                                opacity: loadedThumbnails[hMap.id] ? (isSelected ? 0.95 : 0.75) : 0,
-                                transition: 'opacity 0.2s ease, transform 0.2s ease'
-                              }}
-                            />
-                          </div>
+                              {/* Pin Counter Badge in top-right corner */}
+                              {notes.length > 0 && (() => {
+                                const pinCount = notes.filter(point => point.mapId === hMap.id).length;
+                                if (pinCount === 0) return null;
+                                return (
+                                  <div style={{
+                                    position: 'absolute',
+                                    top: '4px',
+                                    right: '4px',
+                                    background: 'rgba(0, 0, 0, 0.65)',
+                                    backdropFilter: 'blur(2px)',
+                                    color: '#ffffff',
+                                    fontSize: '11px',
+                                    fontFamily: '"Space Mono", monospace',
+                                    fontWeight: '400',
+                                    height: '30px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '6px',
+                                    padding: '0 16px 0 4px',
+                                    borderRadius: '15px',
+                                    letterSpacing: '0.5px',
+                                    whiteSpace: 'nowrap',
+                                    zIndex: 2,
+                                    pointerEvents: 'none'
+                                  }}>
+                                    <img
+                                      src="/icons/icon-map-pin.svg"
+                                      style={{
+                                        width: '24px',
+                                        height: '24px',
+                                        filter: 'brightness(0) invert(1)'
+                                      }}
+                                      alt="pin icon"
+                                    />
+                                    <span>{pinCount}</span>
+                                  </div>
+                                );
+                              })()}
 
-                          {/* TEXT CONTENT */}
-                          <div style={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            gap: '6px',
-                            padding: '12px 14px',
-                            background: isSelected ? (hMap.pinColor || '#FF5E97') : 'transparent',
-                            color: isSelected ? '#000000' : theme.text,
-                            transition: 'background-color 0.2s ease, color 0.2s ease'
-                          }}>
-                            <span style={{ fontSize: '11px', fontWeight: 'bold', letterSpacing: '0.5px', lineHeight: '14px' }}>
-                              {hMap.name}
-                            </span>
-                            <div style={{
-                              fontSize: '8px',
-                              fontWeight: 'bold',
-                              fontFamily: '"Space Mono", monospace',
-                              letterSpacing: '1px',
-                              opacity: isSelected ? 0.8 : 0.6,
-                              color: isSelected ? '#000000' : theme.textDim
-                            }}>
-                              CREATION DATE: {hMap.year}
+                              {!loadedThumbnails[hMap.id] && (
+                                <div className="loading-spinner" style={{
+                                  position: 'absolute',
+                                  border: `2px solid ${isMapDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)'}`,
+                                  borderTopColor: hMap.pinColor || '#FF5E97'
+                                }} />
+                              )}
+                              <img
+                                src={getProxyOrDirectUrl(getThumbnailUrl(hMap.url))}
+                                alt={hMap.name}
+                                onLoad={() => setLoadedThumbnails(prev => ({ ...prev, [hMap.id]: true }))}
+                                style={{
+                                  width: '100%',
+                                  height: '100%',
+                                  objectFit: 'cover',
+                                  transform: 'scale(1.18)',
+                                  opacity: loadedThumbnails[hMap.id] ? (isSelected ? 0.95 : 0.75) : 0,
+                                  transition: 'opacity 0.2s ease, transform 0.2s ease'
+                                }}
+                              />
                             </div>
-                            <p style={{
-                              fontSize: '9px',
-                              lineHeight: '13px',
-                              margin: 0,
-                              opacity: isSelected ? 0.9 : 0.7,
-                              color: isSelected ? '#000000' : theme.textDim
+
+                            {/* TEXT CONTENT */}
+                            <div style={{
+                              display: 'flex',
+                              flexDirection: 'column',
+                              gap: '6px',
+                              padding: '12px 14px',
+                              background: isSelected ? (hMap.pinColor || '#FF5E97') : 'transparent',
+                              color: isSelected ? '#000000' : theme.text,
+                              transition: 'background-color 0.2s ease, color 0.2s ease'
                             }}>
-                              {hMap.description}
-                            </p>
-                          </div>
-                        </motion.div>
-                      );
-                    })}
-                  </div>
-                </motion.div>
-              </div>
-            );
-          })}
-        </div>
+                              <span style={{ fontSize: '11px', fontWeight: 'bold', letterSpacing: '0.5px', lineHeight: '14px' }}>
+                                {hMap.name}
+                              </span>
+                              <div style={{
+                                fontSize: '8px',
+                                fontWeight: 'bold',
+                                fontFamily: '"Space Mono", monospace',
+                                letterSpacing: '1px',
+                                opacity: isSelected ? 0.8 : 0.6,
+                                color: isSelected ? '#000000' : theme.textDim
+                              }}>
+                                CREATION DATE: {hMap.year}
+                              </div>
+                              <p style={{
+                                fontSize: '9px',
+                                lineHeight: '13px',
+                                margin: 0,
+                                opacity: isSelected ? 0.9 : 0.7,
+                                color: isSelected ? '#000000' : theme.textDim
+                              }}>
+                                {hMap.description}
+                              </p>
+                            </div>
+                          </motion.div>
+                        );
+                      })}
+                    </div>
+                  </motion.div>
+                </div>
+              );
+            })}
+          </div>
+        )}
       </motion.div>
 
       {/* FULLSCREEN MAP CANVAS AREA */}
@@ -2553,24 +2755,35 @@ export default function CartographyPage({
         {/* MAP DIV */}
         <div ref={mapContainerRef} style={{ width: '100%', height: '100%', background: 'transparent' }} />
 
-        {/* MAP VIEW TITLE OVERLAY - TOP RIGHT (NO ICON) */}
-        <div style={{
-          position: 'absolute',
-          top: '0',
-          right: '0',
-          zIndex: 10,
-          background: '#000000',
-          color: '#ffffff',
-          borderLeft: '1px solid rgba(255, 255, 255, 0.15)',
-          borderBottom: '1px solid rgba(255, 255, 255, 0.15)',
-          padding: '0 16px',
-          height: '40px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          pointerEvents: 'auto'
-        }}>
-          <span style={{ fontSize: '10px', fontWeight: 'bold', fontFamily: '"Space Mono", monospace', letterSpacing: '1px' }}>
+        {/* MAP VIEW TITLE OVERLAY - TOP RIGHT (DESKTOP) / FULL WIDTH CENTERED (MOBILE) */}
+        <div 
+          onClick={() => {
+            if (isMobile) setIsSidebarCollapsed(false);
+          }}
+          style={{
+            position: 'absolute',
+            top: '0',
+            right: '0',
+            left: isMobile ? '0' : 'auto',
+            zIndex: 10,
+            background: isMobile ? 'rgba(0, 0, 0, 0.80)' : '#000000',
+            color: '#ffffff',
+            borderLeft: isMobile ? 'none' : '1px solid rgba(255, 255, 255, 0.15)',
+            borderBottom: '1px solid rgba(255, 255, 255, 0.15)',
+            padding: '0 16px',
+            height: '40px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '8px',
+            pointerEvents: isMobile ? 'auto' : 'none',
+            cursor: isMobile ? 'pointer' : 'default',
+            backdropFilter: isMobile ? 'blur(4px)' : 'none',
+            WebkitBackdropFilter: isMobile ? 'blur(4px)' : 'none',
+          }}
+        >
+          {isMobile && <MapIcon size={14} />}
+          <span style={{ fontSize: isMobile ? '11px' : '10px', fontWeight: 'bold', fontFamily: '"Space Mono", monospace', letterSpacing: isMobile ? '1.5px' : '1px', textTransform: isMobile ? 'uppercase' : 'none' }}>
             {selectedMap.name} ({selectedMap.year})
           </span>
         </div>
@@ -2578,7 +2791,7 @@ export default function CartographyPage({
         {/* CUSTOM PILL ZOOM CONTROLLER */}
         <div style={{
           position: 'absolute',
-          bottom: '20px',
+          bottom: isMobile ? '148px' : '20px',
           right: '20px',
           zIndex: 10,
           display: 'flex',
@@ -2589,7 +2802,8 @@ export default function CartographyPage({
           padding: '0',
           boxShadow: '0 4px 12px rgba(0,0,0,0.25)',
           border: '1px solid rgba(255,255,255,0.1)',
-          pointerEvents: 'auto'
+          pointerEvents: 'auto',
+          transition: 'bottom 0.5s ease'
         }}>
           {/* Zoom Out Button */}
           <motion.button
@@ -2664,14 +2878,14 @@ export default function CartographyPage({
         {/* CONTROLS OVERLAY - BOTTOM LEFT */}
         <div style={{
           position: 'absolute',
-          bottom: '20px',
-          left: isSidebarCollapsed ? '40px' : '340px',
+          bottom: isMobile ? '148px' : '20px',
+          left: isMobile ? '20px' : (isSidebarCollapsed ? '40px' : '340px'),
           display: 'flex',
           alignItems: 'center',
           gap: '12px',
           zIndex: 10,
           pointerEvents: 'none',
-          transition: 'left 0.5s ease'
+          transition: 'left 0.5s ease, bottom 0.5s ease'
         }}>
           {/* Add Pin Button */}
           <motion.button
@@ -2764,7 +2978,7 @@ export default function CartographyPage({
               style={{
                 position: 'absolute',
                 top: 0,
-                left: isSidebarCollapsed ? '20px' : '320px',
+                left: isMobile ? '0' : (isSidebarCollapsed ? '20px' : '320px'),
                 right: 0,
                 bottom: 0,
                 background: theme.bg,
@@ -2836,7 +3050,7 @@ export default function CartographyPage({
               style={{
                 position: 'absolute',
                 top: '50%',
-                left: isSidebarCollapsed ? 'calc(50% + 10px)' : 'calc(50% + 160px)',
+                left: isMobile ? '50%' : (isSidebarCollapsed ? 'calc(50% + 10px)' : 'calc(50% + 160px)'),
                 background: isMapDarkMode ? 'rgba(6, 6, 6, 0.85)' : 'rgba(255, 255, 255, 0.85)',
                 backdropFilter: 'blur(10px)',
                 border: `1.5px solid ${selectedMap.pinColor || '#FF5E97'}`,
@@ -2912,8 +3126,8 @@ export default function CartographyPage({
               exit={{ opacity: 0, y: 20, x: '-50%' }}
               style={{
                 position: 'absolute',
-                bottom: '24px',
-                left: isSidebarCollapsed ? 'calc(50% + 10px)' : 'calc(50% + 160px)',
+                bottom: isMobile ? '132px' : '24px',
+                left: isMobile ? '50%' : (isSidebarCollapsed ? 'calc(50% + 10px)' : 'calc(50% + 160px)'),
                 background: selectedMap.pinColor || '#FF5E97',
                 color: '#000000',
                 padding: '8px 14px',
@@ -2925,7 +3139,7 @@ export default function CartographyPage({
                 zIndex: 4,
                 boxShadow: '0 4px 10px rgba(0,0,0,0.3)',
                 whiteSpace: 'nowrap',
-                transition: 'left 0.5s ease'
+                transition: 'left 0.5s ease, bottom 0.5s ease'
               }}
             >
               <img
