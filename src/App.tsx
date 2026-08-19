@@ -9321,12 +9321,20 @@ function App() {
                       e.preventDefault();
                       setSearchActiveIndex(prev => (prev - 1 + totalResultsCount) % totalResultsCount);
                     } else if (e.key === 'Enter') {
+                      (e.currentTarget as HTMLInputElement).blur();
                       if (searchActiveIndex >= 0 && searchActiveIndex < totalResultsCount) {
                         e.preventDefault();
                         if (searchActiveIndex < visibleSearchData.length) {
                           handleSearchItemSelect(visibleSearchData[searchActiveIndex]);
                         } else {
                           handleGeocodeSelect(geocodeResults[searchActiveIndex - visibleSearchData.length]);
+                        }
+                      } else if (totalResultsCount > 0) {
+                        e.preventDefault();
+                        if (visibleSearchData.length > 0) {
+                          handleSearchItemSelect(visibleSearchData[0]);
+                        } else if (geocodeResults.length > 0) {
+                          handleGeocodeSelect(geocodeResults[0]);
                         }
                       }
                     } else if (e.key === 'Escape') {
@@ -10848,6 +10856,11 @@ function App() {
                       setIsMobileDrawerExpanded(true);
                     }}
                     onChange={(e) => setSearchQuery(e.target.value)}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') {
+                        (e.currentTarget as HTMLInputElement).blur();
+                      }
+                    }}
                     style={{
                       width: '100%',
                       height: '38px',
@@ -10881,15 +10894,18 @@ function App() {
                         <div
                           style={{
                             position: 'absolute',
-                            bottom: '42px',
+                            top: isMobileDrawerExpanded ? '42px' : 'auto',
+                            bottom: isMobileDrawerExpanded ? 'auto' : '42px',
                             left: 0,
                             right: 0,
                             background: theme.bg,
                             border: `1px solid ${theme.border}`,
-                            maxHeight: '250px',
+                            maxHeight: isMobileDrawerExpanded ? 'calc(70vh - 110px)' : '250px',
                             overflowY: 'auto',
                             zIndex: 1000,
-                            boxShadow: isMapDarkMode ? '0 -4px 20px rgba(0,0,0,0.5)' : '0 -4px 12px rgba(0,0,0,0.1)'
+                            boxShadow: isMobileDrawerExpanded 
+                              ? (isMapDarkMode ? '0 4px 20px rgba(0,0,0,0.5)' : '0 4px 12px rgba(0,0,0,0.1)')
+                              : (isMapDarkMode ? '0 -4px 20px rgba(0,0,0,0.5)' : '0 -4px 12px rgba(0,0,0,0.1)')
                           }}
                         >
                           {searchData.length > 0 && (
@@ -10941,8 +10957,16 @@ function App() {
                     type="text" 
                     placeholder="SEARCH DATABASE..." 
                     value={codexSearchQuery}
-                    onFocus={() => setShowSearchResults(true)}
+                    onFocus={() => {
+                      setShowSearchResults(true);
+                      setIsMobileDrawerExpanded(true);
+                    }}
                     onChange={(e) => setCodexSearchQuery(e.target.value)}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') {
+                        (e.currentTarget as HTMLInputElement).blur();
+                      }
+                    }}
                     style={{
                       width: '100%',
                       height: '38px',
@@ -10965,7 +10989,7 @@ function App() {
                       <X size={14} />
                     </button>
                   )}
-                  {/* CODEX SUGGESTIONS POPUP (Positions upwards) */}
+                  {/* CODEX SUGGESTIONS POPUP */}
                   <AnimatePresence>
                     {showSearchResults && (codexSearchQuery.trim().length > 0) && (
                       <>
@@ -10976,15 +11000,18 @@ function App() {
                         <div
                           style={{
                             position: 'absolute',
-                            bottom: '42px',
+                            top: isMobileDrawerExpanded ? '42px' : 'auto',
+                            bottom: isMobileDrawerExpanded ? 'auto' : '42px',
                             left: 0,
                             right: 0,
                             background: theme.bg,
                             border: `1px solid ${theme.border}`,
-                            maxHeight: '250px',
+                            maxHeight: isMobileDrawerExpanded ? 'calc(70vh - 110px)' : '250px',
                             overflowY: 'auto',
                             zIndex: 1000,
-                            boxShadow: isMapDarkMode ? '0 -4px 20px rgba(0,0,0,0.5)' : '0 -4px 12px rgba(0,0,0,0.1)'
+                            boxShadow: isMobileDrawerExpanded 
+                              ? (isMapDarkMode ? '0 4px 20px rgba(0,0,0,0.5)' : '0 4px 12px rgba(0,0,0,0.1)')
+                              : (isMapDarkMode ? '0 -4px 20px rgba(0,0,0,0.5)' : '0 -4px 12px rgba(0,0,0,0.1)')
                           }}
                         >
                           {codexSuggestions.length > 0 ? (
@@ -11076,6 +11103,11 @@ function App() {
                       placeholder="SEARCH TIMELINE EVENTS..." 
                       value={timelineSearchQuery}
                       onChange={(e) => setTimelineSearchQuery(e.target.value)}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter') {
+                          (e.currentTarget as HTMLInputElement).blur();
+                        }
+                      }}
                       style={{
                         width: '100%',
                         height: '38px',

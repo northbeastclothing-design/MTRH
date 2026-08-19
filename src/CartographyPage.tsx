@@ -2302,9 +2302,32 @@ export default function CartographyPage({
               type="text" 
               placeholder="SEARCH HISTORICAL MAPS OR NOTES..." 
               value={searchQuery}
-              onFocus={() => setShowSearchResults(true)}
+              onFocus={() => {
+                setShowSearchResults(true);
+                if (isMobile) setIsSidebarCollapsed(false);
+              }}
               onChange={(e) => setSearchQuery(e.target.value)}
               onKeyDown={(e) => {
+                if (e.key === 'Enter') {
+                  (e.currentTarget as HTMLInputElement).blur();
+                  if (searchActiveIndex >= 0 && searchActiveIndex < totalResultsCount) {
+                    e.preventDefault();
+                    if (searchActiveIndex < visibleMaps.length) {
+                      handleMapSelect(visibleMaps[searchActiveIndex]);
+                    } else {
+                      handleNoteSelect(visibleNotes[searchActiveIndex - visibleMaps.length]);
+                    }
+                  } else if (totalResultsCount > 0) {
+                    e.preventDefault();
+                    if (visibleMaps.length > 0) {
+                      handleMapSelect(visibleMaps[0]);
+                    } else if (visibleNotes.length > 0) {
+                      handleNoteSelect(visibleNotes[0]);
+                    }
+                  }
+                  return;
+                }
+
                 if (!showSearchResults || totalResultsCount === 0) return;
 
                 if (e.key === 'ArrowDown') {
@@ -2313,15 +2336,6 @@ export default function CartographyPage({
                 } else if (e.key === 'ArrowUp') {
                   e.preventDefault();
                   setSearchActiveIndex(prev => (prev - 1 + totalResultsCount) % totalResultsCount);
-                } else if (e.key === 'Enter') {
-                  if (searchActiveIndex >= 0 && searchActiveIndex < totalResultsCount) {
-                    e.preventDefault();
-                    if (searchActiveIndex < visibleMaps.length) {
-                      handleMapSelect(visibleMaps[searchActiveIndex]);
-                    } else {
-                      handleNoteSelect(visibleNotes[searchActiveIndex - visibleMaps.length]);
-                    }
-                  }
                 } else if (e.key === 'Escape') {
                   setShowSearchResults(false);
                 }
@@ -2381,15 +2395,18 @@ export default function CartographyPage({
                     exit={{ opacity: 0, y: -10 }}
                     style={{
                       position: 'absolute',
-                      top: '42px',
+                      top: (isMobile && isSidebarCollapsed) ? 'auto' : '42px',
+                      bottom: (isMobile && isSidebarCollapsed) ? '42px' : 'auto',
                       left: 0,
                       right: 0,
                       background: theme.bg,
                       border: `1px solid ${theme.border}`,
-                      maxHeight: '400px',
+                      maxHeight: isMobile ? (isSidebarCollapsed ? '250px' : 'calc(70vh - 110px)') : '400px',
                       overflowY: 'auto',
                       zIndex: 1000,
-                      boxShadow: isMapDarkMode ? '0 4px 20px rgba(0,0,0,0.5)' : '0 4px 12px rgba(0,0,0,0.1)'
+                      boxShadow: (isMobile && isSidebarCollapsed)
+                        ? (isMapDarkMode ? '0 -4px 20px rgba(0,0,0,0.5)' : '0 -4px 12px rgba(0,0,0,0.1)')
+                        : (isMapDarkMode ? '0 4px 20px rgba(0,0,0,0.5)' : '0 4px 12px rgba(0,0,0,0.1)')
                     }}
                   >
                     {/* HISTORICAL MAPS */}
