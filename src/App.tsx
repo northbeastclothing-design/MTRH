@@ -10611,12 +10611,12 @@ function App() {
             top: 0,
             left: 0,
             right: 0,
-            bottom: isMobile ? 'calc(120px + max(12px, env(safe-area-inset-bottom, 12px)))' : 0,
+            bottom: isMobile ? 'calc(108px + max(12px, env(safe-area-inset-bottom, 12px)))' : 0,
             display: 'flex',
             flexDirection: 'column',
             overflow: 'hidden',
             width: '100%',
-            height: isMobile ? 'calc(100% - 120px - max(12px, env(safe-area-inset-bottom, 12px)))' : '100%',
+            height: isMobile ? 'calc(100% - 108px - max(12px, env(safe-area-inset-bottom, 12px)))' : '100%',
             pointerEvents: currentPage === 'timeline' ? 'auto' : 'none',
             visibility: currentPage === 'timeline' ? 'visible' : 'hidden',
             opacity: currentPage === 'timeline' ? 1 : 0,
@@ -10662,8 +10662,8 @@ function App() {
             right: 0,
             bottom: isMobile 
               ? (selectedCodexNode 
-                ? 'calc(110px + max(12px, env(safe-area-inset-bottom, 12px)))' 
-                : 'calc(72px + max(12px, env(safe-area-inset-bottom, 12px)))') 
+                ? 'calc(102px + max(12px, env(safe-area-inset-bottom, 12px)))' 
+                : 'calc(54px + max(12px, env(safe-area-inset-bottom, 12px)))') 
               : 0,
             display: 'flex',
             flexDirection: 'column',
@@ -10671,8 +10671,8 @@ function App() {
             width: '100%',
             height: isMobile 
               ? (selectedCodexNode 
-                ? 'calc(100% - 110px - max(12px, env(safe-area-inset-bottom, 12px)))' 
-                : 'calc(100% - 72px - max(12px, env(safe-area-inset-bottom, 12px)))') 
+                ? 'calc(100% - 102px - max(12px, env(safe-area-inset-bottom, 12px)))' 
+                : 'calc(100% - 54px - max(12px, env(safe-area-inset-bottom, 12px)))') 
               : '100%',
             pointerEvents: currentPage === 'codex' ? 'auto' : 'none',
             visibility: currentPage === 'codex' ? 'visible' : 'hidden',
@@ -10783,10 +10783,10 @@ function App() {
               height: currentPage === 'map' 
                 ? (isMobileDrawerExpanded ? '70vh' : 'calc(108px + max(12px, env(safe-area-inset-bottom, 12px)))') 
                 : (currentPage === 'codex' 
-                  ? (selectedCodexNode ? (isMobileDrawerExpanded ? '70vh' : 'calc(110px + max(12px, env(safe-area-inset-bottom, 12px)))') : 'calc(72px + max(12px, env(safe-area-inset-bottom, 12px)))') 
+                  ? (selectedCodexNode ? (isMobileDrawerExpanded ? '70vh' : 'calc(102px + max(12px, env(safe-area-inset-bottom, 12px)))') : 'calc(54px + max(12px, env(safe-area-inset-bottom, 12px)))') 
                   : (currentPage === 'timeline' 
-                    ? 'calc(120px + max(12px, env(safe-area-inset-bottom, 12px)))' 
-                    : 'calc(72px + max(12px, env(safe-area-inset-bottom, 12px)))')),
+                    ? 'calc(108px + max(12px, env(safe-area-inset-bottom, 12px)))' 
+                    : 'calc(54px + max(12px, env(safe-area-inset-bottom, 12px)))')),
               paddingBottom: 'env(safe-area-inset-bottom, 0px)',
               background: theme.bg,
               color: theme.text,
@@ -10837,7 +10837,7 @@ function App() {
 
             {/* Search bar - Map Page */}
             {currentPage === 'map' && (
-              <div className="mobile-search-bar-container" style={{ borderColor: theme.border, background: theme.bg, flexShrink: 0 }}>
+              <div className="mobile-search-bar-container" style={{ padding: '8px 16px', borderBottom: `1px solid ${theme.border}`, background: theme.bg, flexShrink: 0 }}>
                 <div style={{ position: 'relative', width: '100%' }}>
                   <input 
                     type="text" 
@@ -10850,7 +10850,8 @@ function App() {
                     onChange={(e) => setSearchQuery(e.target.value)}
                     style={{
                       width: '100%',
-                      padding: '10px 32px 10px 12px',
+                      height: '38px',
+                      padding: '0 32px 0 12px',
                       fontSize: '11px',
                       fontFamily: '"Space Mono", monospace',
                       border: `1px solid ${theme.border}`,
@@ -10934,7 +10935,7 @@ function App() {
 
             {/* Search bar - Codex Page */}
             {currentPage === 'codex' && (
-              <div className="mobile-search-bar-container" style={{ borderColor: theme.border, background: theme.bg, flexShrink: 0, padding: '10px 12px 14px 12px' }}>
+              <div className="mobile-search-bar-container" style={{ padding: '8px 16px', borderBottom: `1px solid ${theme.border}`, background: theme.bg, flexShrink: 0 }}>
                 <div style={{ position: 'relative', width: '100%' }}>
                   <input 
                     type="text" 
@@ -10944,7 +10945,8 @@ function App() {
                     onChange={(e) => setCodexSearchQuery(e.target.value)}
                     style={{
                       width: '100%',
-                      padding: '10px 32px 10px 12px',
+                      height: '38px',
+                      padding: '0 32px 0 12px',
                       fontSize: '11px',
                       fontFamily: '"Space Mono", monospace',
                       border: `1px solid ${theme.border}`,
@@ -11028,13 +11030,12 @@ function App() {
                   onClick={() => setIsMobileDrawerExpanded(!isMobileDrawerExpanded)}
                   style={{ 
                     height: '48px', 
-                    borderTop: `1px solid ${theme.borderLight}`, 
                     borderBottom: `1px solid ${theme.border}`,
                     display: 'flex', 
                     alignItems: 'center', 
                     justifyContent: 'center', 
                     padding: '0 16px', 
-                    background: theme.bg,
+                    background: theme.bg, 
                     flexShrink: 0,
                     cursor: 'pointer',
                     userSelect: 'none'
@@ -11068,7 +11069,7 @@ function App() {
             {currentPage === 'timeline' && (
               <div style={{ display: 'flex', flexDirection: 'column', flexShrink: 0 }}>
                 {/* Search Bar */}
-                <div className="mobile-search-bar-container" style={{ borderColor: theme.border, background: theme.bg, borderBottom: 'none' }}>
+                <div className="mobile-search-bar-container" style={{ padding: '8px 16px', borderBottom: `1px solid ${theme.border}`, background: theme.bg, flexShrink: 0 }}>
                   <div style={{ position: 'relative', width: '100%' }}>
                     <input 
                       type="text" 
@@ -11077,7 +11078,8 @@ function App() {
                       onChange={(e) => setTimelineSearchQuery(e.target.value)}
                       style={{
                         width: '100%',
-                        padding: '10px 32px 10px 12px',
+                        height: '38px',
+                        padding: '0 32px 0 12px',
                         fontSize: '11px',
                         fontFamily: '"Space Mono", monospace',
                         border: `1px solid ${theme.border}`,
@@ -11100,7 +11102,7 @@ function App() {
                 </div>
 
                 {/* Time Span Controls */}
-                <div style={{ display: 'flex', flexDirection: 'column', padding: '8px 16px 6px 16px', height: '54px', borderTop: `1px solid ${theme.borderLight}`, background: theme.bg, boxSizing: 'border-box', justifyContent: 'center' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', padding: '8px 16px', height: '54px', borderBottom: `1px solid ${theme.border}`, background: theme.bg, boxSizing: 'border-box', justifyContent: 'center', flexShrink: 0 }}>
                   {/* Top Row: Zoom Out, Slider Column, Zoom In, Reset Button */}
                   <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', width: '100%' }}>
                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', flex: 1 }}>
@@ -11211,7 +11213,7 @@ function App() {
 
             {/* Tab Buttons - always visible, selecting also expands if collapsed (Map Page only) */}
             {currentPage === 'map' && (
-              <div className="mobile-tabs-container" style={{ borderColor: theme.border, background: theme.bg, flexShrink: 0 }}>
+              <div className="mobile-tabs-container" style={{ height: '54px', borderBottom: `1px solid ${theme.border}`, borderColor: theme.border, background: theme.bg, flexShrink: 0 }}>
                 {(['filters', 'details', 'timeline'] as const).map((tab, idx) => {
                   const isActive = mobileActiveTab === tab;
                   const labels = ['FILTERS', 'DOSSIER', 'TIMELINE'];
@@ -11223,8 +11225,8 @@ function App() {
                       key="f" 
                       src="/icons/icon-filter.svg" 
                       style={{ 
-                        width: '30px', 
-                        height: '30px', 
+                        width: '22px', 
+                        height: '22px', 
                         background: 'transparent',
                         filter: isActive 
                           ? 'brightness(0)' 
@@ -11237,8 +11239,8 @@ function App() {
                       key="d" 
                       src="/icons/icon-map-pin.svg" 
                       style={{ 
-                        width: '30px', 
-                        height: '30px', 
+                        width: '22px', 
+                        height: '22px', 
                         background: 'transparent',
                         filter: isActive 
                           ? 'brightness(0)' 
@@ -11251,8 +11253,8 @@ function App() {
                       key="t" 
                       src="/icons/icon-timeline.svg" 
                       style={{ 
-                        width: '30px', 
-                        height: '30px', 
+                        width: '22px', 
+                        height: '22px', 
                         background: 'transparent',
                         filter: isActive 
                           ? 'brightness(0)' 
@@ -11272,18 +11274,27 @@ function App() {
                       }}
                       className="mobile-tab-btn"
                       style={{
+                        flex: 1,
+                        display: 'flex',
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        gap: '6px',
                         background: isActive ? '#ffffff' : inactiveBg,
                         color: isActive ? '#000000' : inactiveColor,
                         fontWeight: isActive ? '700' : '400',
                         borderRight: idx < 2 ? `1px solid ${theme.border}` : 'none',
-                        borderBottom: isActive ? 'none' : '1px solid #000000',
-                        fontSize: '9px',
+                        borderBottom: 'none',
+                        fontSize: '10px',
                         letterSpacing: '1px',
-                        gap: '0px',
+                        padding: '0 4px',
+                        boxSizing: 'border-box'
                       }}
                     >
-                      {icons[idx]}
-                      <span>{labels[idx]}</span>
+                      <div style={{ width: '22px', height: '22px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                        {icons[idx]}
+                      </div>
+                      <span style={{ lineHeight: 1 }}>{labels[idx]}</span>
                     </button>
                   );
                 })}

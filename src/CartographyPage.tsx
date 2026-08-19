@@ -1400,7 +1400,8 @@ export default function CartographyPage({
       maxZoom: 9,
       dragRotate: false,
       pitchWithRotate: false,
-      touchZoomRotate: true,
+      touchZoomRotate: { around: 'center' } as any,
+      touchPitch: false,
       renderWorldCopies: false, // Prevents repeating maps horizontally when zoomed out
       scrollZoom: { around: 'center' }, // Always zoom around the center point
       alpha: true // Enable transparent canvas for background globe/grid visibility
@@ -1408,6 +1409,8 @@ export default function CartographyPage({
 
     mapRef.current = map;
     map.dragPan.enable({ inertia: false } as any); // Disable dragging momentum natively
+    map.touchZoomRotate.enable({ around: 'center' } as any);
+    map.touchZoomRotate.disableRotation();
 
 
 
@@ -1581,7 +1584,7 @@ export default function CartographyPage({
       
       prevSidebarCollapsedRef.current = isSidebarCollapsed;
 
-      const newBottomPadding = isSidebarCollapsed ? 112 : (window.innerHeight * 0.7);
+      const newBottomPadding = isSidebarCollapsed ? 108 : (window.innerHeight * 0.7);
 
       // Suspend maxBounds constraint during transition to prevent camera drift/jerkiness
       isEasingRef.current = true;
@@ -2124,7 +2127,7 @@ export default function CartographyPage({
         ref={sidebarRef}
         initial={false}
         animate={isMobile ? {
-          height: isSidebarCollapsed ? 'calc(112px + max(12px, env(safe-area-inset-bottom, 12px)))' : '70vh',
+          height: isSidebarCollapsed ? 'calc(108px + max(12px, env(safe-area-inset-bottom, 12px)))' : '70vh',
           left: 0,
           right: 0,
           bottom: 0
@@ -2276,7 +2279,7 @@ export default function CartographyPage({
         )}
 
         {/* SEARCH BAR CONTAINER */}
-        <div style={{ padding: '16px', borderBottom: `1px solid ${theme.border}`, background: theme.bg, flexShrink: 0, zIndex: 100 }}>
+        <div style={{ padding: isMobile ? '8px 16px' : '16px', borderBottom: `1px solid ${theme.border}`, background: theme.bg, flexShrink: 0, zIndex: 100 }}>
           <div style={{ position: 'relative', width: '100%' }}>
             <input 
               type="text" 
@@ -2308,7 +2311,8 @@ export default function CartographyPage({
               }}
               style={{
                 width: '100%',
-                padding: '10px 32px 10px 12px',
+                height: isMobile ? '38px' : 'auto',
+                padding: isMobile ? '0 32px 0 12px' : '10px 32px 10px 12px',
                 fontSize: '11px',
                 fontFamily: '"Space Mono", monospace',
                 border: `1px solid ${theme.border}`,
@@ -2449,7 +2453,7 @@ export default function CartographyPage({
         {/* If mobile, render centered maps header here (below search bar) with no X close button */}
         {isMobile && (
           <div style={{ 
-            height: '40px', 
+            height: '54px', 
             padding: '0 16px', 
             borderBottom: `1px solid ${theme.border}`, 
             display: 'flex', 
@@ -2789,92 +2793,7 @@ export default function CartographyPage({
           </span>
         </div>
 
-        {/* CUSTOM PILL ZOOM CONTROLLER */}
-        <div style={{
-          position: 'absolute',
-          bottom: isMobile ? '148px' : '20px',
-          right: '20px',
-          zIndex: 10,
-          display: 'flex',
-          alignItems: 'center',
-          background: '#000000',
-          borderRadius: '15px',
-          height: '30px',
-          padding: '0',
-          boxShadow: '0 4px 12px rgba(0,0,0,0.25)',
-          border: '1px solid rgba(255,255,255,0.1)',
-          pointerEvents: 'auto',
-          transition: 'bottom 0.5s ease'
-        }}>
-          {/* Zoom Out Button */}
-          <motion.button
-            onClick={() => {
-              const activeMap = mapRef.current;
-              if (activeMap) {
-                activeMap.easeTo({ zoom: Math.max(minZoomLimitRef.current, activeMap.getZoom() - 0.5), duration: 200 });
-              }
-            }}
-            whileHover={{ scale: 1.08 }}
-            whileTap={{ scale: 0.95 }}
-            style={{
-              width: '30px',
-              height: '30px',
-              borderRadius: '50%',
-              background: '#ffffff',
-              border: '1px solid #000000',
-              color: '#000000',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              cursor: 'pointer',
-              padding: 0,
-              marginLeft: '-1px'
-            }}
-          >
-            <span style={{ fontSize: '16px', fontWeight: 'bold', lineHeight: 1 }}>—</span>
-          </motion.button>
 
-          {/* Zoom Percentage Label */}
-          <span style={{
-            color: '#ffffff',
-            fontSize: '10px',
-            fontWeight: 'bold',
-            fontFamily: '"Space Mono", monospace',
-            minWidth: '50px',
-            textAlign: 'center',
-            userSelect: 'none'
-          }}>
-            {Math.round(Math.pow(2, mapZoom - coverZoom) * 100)}%
-          </span>
-
-          {/* Zoom In Button */}
-          <motion.button
-            onClick={() => {
-              const activeMap = mapRef.current;
-              if (activeMap) {
-                activeMap.easeTo({ zoom: Math.min(9, activeMap.getZoom() + 0.5), duration: 200 });
-              }
-            }}
-            whileHover={{ scale: 1.08 }}
-            whileTap={{ scale: 0.95 }}
-            style={{
-              width: '30px',
-              height: '30px',
-              borderRadius: '50%',
-              background: '#ffffff',
-              border: '1px solid #000000',
-              color: '#000000',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              cursor: 'pointer',
-              padding: 0,
-              marginRight: '-1px'
-            }}
-          >
-            <span style={{ fontSize: '18px', fontWeight: 'normal', lineHeight: 1 }}>+</span>
-          </motion.button>
-        </div>
 
         {/* CONTROLS OVERLAY - BOTTOM LEFT */}
         <div style={{
