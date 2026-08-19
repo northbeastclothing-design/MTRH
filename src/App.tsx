@@ -8753,7 +8753,7 @@ function App() {
                   >
                     Timeline
                   </motion.button>
-                  {onboardingStep === 4 && (
+                  {!isMobile && onboardingStep === 4 && (
                     <div style={{
                       position: 'absolute',
                       top: '-3px',
@@ -8794,7 +8794,7 @@ function App() {
                   >
                     Codex
                   </motion.button>
-                  {onboardingStep === 5 && (
+                  {!isMobile && onboardingStep === 5 && (
                     <div style={{
                       position: 'absolute',
                       top: '-3px',
@@ -9178,7 +9178,7 @@ function App() {
             }}
           >
             <div style={{ flex: 1, position: 'relative', overflow: 'hidden', pointerEvents: 'none', width: '100%', height: '100%' }}>
-          {onboardingStep === 2 && (
+          {!isMobile && onboardingStep === 2 && (
             <div style={{
               position: 'absolute',
               left: isLeftCollapsed ? '20px' : '320px',
@@ -9790,7 +9790,7 @@ function App() {
               color: theme.text
             }}
           >
-            {onboardingStep === 6 && (
+            {!isMobile && onboardingStep === 6 && (
               <div style={{
                 position: 'absolute',
                 top: 0,
@@ -9943,7 +9943,7 @@ function App() {
               color: theme.text
             }}
           >
-            {onboardingStep === 3 && (
+            {!isMobile && onboardingStep === 3 && (
               <div style={{
                 position: 'absolute',
                 top: 0,
@@ -11214,7 +11214,7 @@ function App() {
               <div className="mobile-tabs-container" style={{ borderColor: theme.border, background: theme.bg, flexShrink: 0 }}>
                 {(['filters', 'details', 'timeline'] as const).map((tab, idx) => {
                   const isActive = mobileActiveTab === tab;
-                  const labels = ['FILTERS', 'DETAILS', 'TIMELINE'];
+                  const labels = ['FILTERS', 'DOSSIER', 'TIMELINE'];
                   // Inactive layer colors: #EFEFEF bg / text 50% opacity in light; #1a1a1a bg / text 50% opacity in dark
                   const inactiveBg = isMapDarkMode ? '#1a1a1a' : '#EFEFEF';
                   const inactiveColor = isMapDarkMode ? 'rgba(255,255,255,0.45)' : 'rgba(0,0,0,0.45)';
@@ -11245,7 +11245,7 @@ function App() {
                           : (isMapDarkMode ? 'invert(1)' : 'none'), 
                         opacity: isActive ? 1 : 0.45 
                       }} 
-                      alt="Details" 
+                      alt="Dossier" 
                     />,
                     <img 
                       key="t" 
@@ -14961,32 +14961,12 @@ function App() {
                 };
 
                 if (isMobile) {
-                  switch (currentStep.placement) {
-                    case 'top-menu':
-                      return {
-                        ...common,
-                        left: '50%',
-                        top: '75px',
-                        transform: 'translateX(-50%)'
-                      };
-                    case 'bottom-filters':
-                    case 'bottom-details':
-                      return {
-                        ...common,
-                        left: '50%',
-                        bottom: 'calc(130px + max(12px, env(safe-area-inset-bottom, 12px)))',
-                        transform: 'translateX(-50%)'
-                      };
-                    case 'center':
-                    case 'map-viewport':
-                    default:
-                      return {
-                        ...common,
-                        top: '48%',
-                        left: '50%',
-                        transform: 'translate(-50%, -50%)'
-                      };
-                  }
+                  return {
+                    ...common,
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%)'
+                  };
                 }
 
                 switch (currentStep.placement) {
@@ -15057,34 +15037,7 @@ function App() {
                 };
 
                 if (isMobile) {
-                  switch (currentStep.placement) {
-                    case 'top-menu':
-                      return {
-                        ...common,
-                        top: '-10px',
-                        right: '22px',
-                        borderWidth: '0 8px 10px 8px',
-                        borderColor: `transparent transparent ${tooltipTheme.bg} transparent`,
-                      };
-                    case 'bottom-filters':
-                      return {
-                        ...common,
-                        bottom: '-10px',
-                        left: '55px',
-                        borderWidth: '10px 8px 0 8px',
-                        borderColor: `${tooltipTheme.bg} transparent transparent transparent`,
-                      };
-                    case 'bottom-details':
-                      return {
-                        ...common,
-                        bottom: '-10px',
-                        left: '175px',
-                        borderWidth: '10px 8px 0 8px',
-                        borderColor: `${tooltipTheme.bg} transparent transparent transparent`,
-                      };
-                    default:
-                      return { display: 'none' };
-                  }
+                  return { display: 'none' };
                 }
 
                 switch (currentStep.placement) {

@@ -482,6 +482,79 @@ export default function TimelinePage({
     setViewEnd(clampedStart + currentSpan);
   };
 
+  // Touch Drag & Pinch Handlers for Mobile
+  const touchStartYRef = useRef<number>(0);
+  const isTouchPanningHorizontalRef = useRef<boolean | null>(null);
+  const pinchStartDistRef = useRef<number | null>(null);
+  const pinchStartSpanRef = useRef<number>(span);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    if (e.touches.length === 2) {
+      const dist = Math.hypot(
+        e.touches[0].clientX - e.touches[1].clientX,
+        e.touches[0].clientY - e.touches[1].clientY
+      );
+      pinchStartDistRef.current = dist;
+      pinchStartSpanRef.current = viewEnd - viewStart;
+      return;
+    }
+    if (e.touches.length !== 1) return;
+    const touch = e.touches[0];
+    setIsDragging(true);
+    setStartX(touch.clientX);
+    touchStartYRef.current = touch.clientY;
+    setStartViewStart(viewStart);
+    hasDraggedRef.current = false;
+    isTouchPanningHorizontalRef.current = null;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (e.touches.length === 2 && pinchStartDistRef.current !== null) {
+      const dist = Math.hypot(
+        e.touches[0].clientX - e.touches[1].clientX,
+        e.touches[0].clientY - e.touches[1].clientY
+      );
+      const scale = pinchStartDistRef.current / dist;
+      const centerYear = viewStart + (viewEnd - viewStart) / 2;
+      const newSpan = Math.max(50, Math.min(253500, pinchStartSpanRef.current * scale));
+      setViewStart(centerYear - newSpan / 2);
+      setViewEnd(centerYear + newSpan / 2);
+      return;
+    }
+    if (e.touches.length !== 1 || !scrollContainerRef.current) return;
+    const touch = e.touches[0];
+    const deltaX = touch.clientX - startX;
+    const deltaY = touch.clientY - touchStartYRef.current;
+
+    // Detect direction on initial movement threshold
+    if (isTouchPanningHorizontalRef.current === null) {
+      if (Math.abs(deltaX) > 6 || Math.abs(deltaY) > 6) {
+        isTouchPanningHorizontalRef.current = Math.abs(deltaX) > Math.abs(deltaY);
+      }
+    }
+
+    if (isTouchPanningHorizontalRef.current) {
+      hasDraggedRef.current = true;
+      const viewportWidth = scrollContainerRef.current.clientWidth;
+      const yearsPerPixel = (viewEnd - viewStart) / viewportWidth;
+      const deltaYears = deltaX * yearsPerPixel;
+      
+      const newStart = startViewStart - deltaYears;
+      const currentSpan = viewEnd - viewStart;
+      
+      const clampedStart = Math.max(-250000, Math.min(3500 - currentSpan, newStart));
+      
+      setViewStart(clampedStart);
+      setViewEnd(clampedStart + currentSpan);
+    }
+  };
+
+  const handleTouchEnd = () => {
+    setIsDragging(false);
+    isTouchPanningHorizontalRef.current = null;
+    pinchStartDistRef.current = null;
+  };
+
   const handleMouseUpOrLeave = (e: React.MouseEvent) => {
     setIsDragging(false);
     if (e.type === 'mouseup' && !hasDraggedRef.current && selectedItem) {
@@ -905,13 +978,18 @@ export default function TimelinePage({
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUpOrLeave}
         onMouseLeave={handleMouseUpOrLeave}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+        onTouchCancel={handleTouchEnd}
         className="custom-sidebar-scrollbar"
         style={{
           flex: 1,
           overflowX: 'hidden',
           overflowY: 'auto',
           cursor: isDragging ? 'grabbing' : 'grab',
-          userSelect: 'none'
+          userSelect: 'none',
+          touchAction: 'pan-y'
         }}
       >
         <div style={{ minWidth: '100%', height: `${Math.max(400, trackOffsets.totalHeight)}px`, position: 'relative' }}>
@@ -1280,7 +1358,7 @@ export default function TimelinePage({
                                 </span>
                               </div>
                               {/* Pulsing highlight overlay for onboarding */}
-                              {((onboardingStep === 1 && item.id === 'adam') || 
+                              {!isMobile && ((onboardingStep === 1 && item.id === 'adam') || 
                                 (onboardingStep === 2 && (item.id === 'adam' || item.id === 'eve'))) && (
                                 <div style={{
                                   position: 'absolute',
@@ -2080,7 +2158,7 @@ export default function TimelinePage({
             </button>
 
             {/* Pulsing highlight overlay for onboarding controls */}
-            {onboardingStep === 3 && (
+            {!isMobile && onboardingStep === 3 && (
               <div style={{
                 position: 'absolute',
                 top: '-6px',
@@ -2201,30 +2279,12 @@ export default function TimelinePage({
                 };
 
                 if (isMobile) {
-                  switch (currentStep.placement) {
-                    case 'top-eras':
-                      return {
-                        ...common,
-                        top: '120px',
-                        left: '50%',
-                        transform: 'translateX(-50%)'
-                      };
-                    case 'bottom-controls':
-                      return {
-                        ...common,
-                        bottom: 'calc(130px + max(12px, env(safe-area-inset-bottom, 12px)))',
-                        left: '50%',
-                        transform: 'translateX(-50%)'
-                      };
-                    case 'center':
-                    default:
-                      return {
-                        ...common,
-                        top: '50%',
-                        left: '50%',
-                        transform: 'translate(-50%, -50%)'
-                      };
-                  }
+                  return {
+                    ...common,
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%)'
+                  };
                 }
 
                 switch (currentStep.placement) {
@@ -2256,37 +2316,16 @@ export default function TimelinePage({
               })();
 
               const arrowStyle: React.CSSProperties = (() => {
+                if (isMobile) {
+                  return { display: 'none' };
+                }
+
                 const common: React.CSSProperties = {
                   position: 'absolute',
                   width: 0,
                   height: 0,
                   borderStyle: 'solid',
                 };
-
-                if (isMobile) {
-                  switch (currentStep.placement) {
-                    case 'top-eras':
-                      return {
-                        ...common,
-                        top: '-10px',
-                        left: '50%',
-                        transform: 'translateX(-50%)',
-                        borderWidth: '0 8px 10px 8px',
-                        borderColor: `transparent transparent ${tooltipTheme.bg} transparent`,
-                      };
-                    case 'bottom-controls':
-                      return {
-                        ...common,
-                        bottom: '-10px',
-                        left: '50%',
-                        transform: 'translateX(-50%)',
-                        borderWidth: '10px 8px 0 8px',
-                        borderColor: `${tooltipTheme.bg} transparent transparent transparent`,
-                      };
-                    default:
-                      return { display: 'none' };
-                  }
-                }
 
                 switch (currentStep.placement) {
                   case 'timeline-content':
