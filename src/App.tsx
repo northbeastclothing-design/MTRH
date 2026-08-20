@@ -10964,7 +10964,7 @@ function App() {
                     {showSearchResults && (searchQuery.trim().length > 1) && (
                       <>
                         <div 
-                          style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, zIndex: 999 }} 
+                          style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, zIndex: 10005 }} 
                           onClick={() => setShowSearchResults(false)}
                         />
                         <div
@@ -10978,7 +10978,7 @@ function App() {
                             border: `1px solid ${theme.border}`,
                             maxHeight: isMobileDrawerExpanded ? 'calc(70vh - 110px)' : '250px',
                             overflowY: 'auto',
-                            zIndex: 1000,
+                            zIndex: 10010,
                             boxShadow: isMobileDrawerExpanded 
                               ? (isMapDarkMode ? '0 4px 20px rgba(0,0,0,0.5)' : '0 4px 12px rgba(0,0,0,0.1)')
                               : (isMapDarkMode ? '0 -4px 20px rgba(0,0,0,0.5)' : '0 -4px 12px rgba(0,0,0,0.1)')
@@ -11070,7 +11070,7 @@ function App() {
                     {showSearchResults && (codexSearchQuery.trim().length > 0) && (
                       <>
                         <div 
-                          style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, zIndex: 999 }} 
+                          style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, zIndex: 10005 }} 
                           onClick={() => setShowSearchResults(false)}
                         />
                         <div
@@ -11084,7 +11084,7 @@ function App() {
                             border: `1px solid ${theme.border}`,
                             maxHeight: isMobileDrawerExpanded ? 'calc(70vh - 110px)' : '250px',
                             overflowY: 'auto',
-                            zIndex: 1000,
+                            zIndex: 10010,
                             boxShadow: isMobileDrawerExpanded 
                               ? (isMapDarkMode ? '0 4px 20px rgba(0,0,0,0.5)' : '0 4px 12px rgba(0,0,0,0.1)')
                               : (isMapDarkMode ? '0 -4px 20px rgba(0,0,0,0.5)' : '0 -4px 12px rgba(0,0,0,0.1)')
@@ -11228,7 +11228,7 @@ function App() {
                       {showSearchResults && currentPage === 'timeline' && (timelineSearchQuery.trim().length > 0) && (
                         <>
                           <div 
-                            style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, zIndex: 999 }} 
+                            style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, zIndex: 10005 }} 
                             onClick={() => setShowSearchResults(false)}
                           />
                           <div
@@ -11242,7 +11242,7 @@ function App() {
                               border: `1px solid ${theme.border}`,
                               maxHeight: '250px',
                               overflowY: 'auto',
-                              zIndex: 1000,
+                              zIndex: 10010,
                               boxShadow: isMapDarkMode ? '0 -4px 20px rgba(0,0,0,0.5)' : '0 -4px 12px rgba(0,0,0,0.1)'
                             }}
                           >
