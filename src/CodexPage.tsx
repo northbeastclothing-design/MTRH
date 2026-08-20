@@ -1617,6 +1617,40 @@ export default function CodexPage({
     };
   };
 
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    if (e.touches.length !== 1) return;
+
+    if (searchQuery) {
+      setSearchQuery('');
+    }
+
+    if (inertiaFrameRef.current !== null) {
+      cancelAnimationFrame(inertiaFrameRef.current);
+      inertiaFrameRef.current = null;
+    }
+    
+    const target = e.target as HTMLElement;
+    if (target.closest('button') || target.closest('input') || target.closest('a')) {
+      return;
+    }
+    
+    const container = columnsContainerRef.current;
+    if (!container) return;
+    
+    const touch = e.touches[0];
+    dragVelocityRef.current = { x: 0, y: 0 };
+    lastMousePosRef.current = { x: touch.pageX, y: touch.pageY, time: performance.now() };
+    
+    activeDragRef.current = {
+      startX: touch.pageX,
+      startY: touch.pageY,
+      scrollLeft: container.scrollLeft,
+      scrollTop: container.scrollTop,
+      container,
+      hasDragged: false
+    };
+  };
+
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       const drag = activeDragRef.current;
@@ -1643,6 +1677,34 @@ export default function CodexPage({
       lastMousePosRef.current = { x: e.pageX, y: e.pageY, time: now };
       
       // Pan main container horizontally and vertically (Miro board style)
+      drag.container.scrollLeft = drag.scrollLeft - deltaX;
+      drag.container.scrollTop = drag.scrollTop - deltaY;
+    };
+
+    const handleTouchMove = (e: TouchEvent) => {
+      const drag = activeDragRef.current;
+      if (!drag || e.touches.length !== 1) return;
+      
+      const touch = e.touches[0];
+      const deltaX = touch.pageX - drag.startX;
+      const deltaY = touch.pageY - drag.startY;
+      
+      if (Math.abs(deltaX) > 4 || Math.abs(deltaY) > 4) {
+        if (!drag.hasDragged) {
+          drag.hasDragged = true;
+          document.body.classList.add('is-grabbing');
+        }
+      }
+
+      const now = performance.now();
+      const dt = now - lastMousePosRef.current.time;
+      if (dt > 0) {
+        const vx = touch.pageX - lastMousePosRef.current.x;
+        const vy = touch.pageY - lastMousePosRef.current.y;
+        dragVelocityRef.current = { x: vx, y: vy };
+      }
+      lastMousePosRef.current = { x: touch.pageX, y: touch.pageY, time: now };
+      
       drag.container.scrollLeft = drag.scrollLeft - deltaX;
       drag.container.scrollTop = drag.scrollTop - deltaY;
     };
@@ -1686,7 +1748,7 @@ export default function CodexPage({
           }
           
           // Prevent next click event on pill items if dragged
-          const preventClick = (captureEvent: MouseEvent) => {
+          const preventClick = (captureEvent: Event) => {
             captureEvent.stopPropagation();
             captureEvent.preventDefault();
           };
@@ -1699,12 +1761,22 @@ export default function CodexPage({
       }
     };
 
+    const handleTouchEnd = () => {
+      handleMouseUp();
+    };
+
     window.addEventListener('mousemove', handleMouseMove);
     window.addEventListener('mouseup', handleMouseUp);
+    window.addEventListener('touchmove', handleTouchMove, { passive: true });
+    window.addEventListener('touchend', handleTouchEnd);
+    window.addEventListener('touchcancel', handleTouchEnd);
 
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('mouseup', handleMouseUp);
+      window.removeEventListener('touchmove', handleTouchMove);
+      window.removeEventListener('touchend', handleTouchEnd);
+      window.removeEventListener('touchcancel', handleTouchEnd);
       if (inertiaFrameRef.current !== null) {
         cancelAnimationFrame(inertiaFrameRef.current);
       }
@@ -2216,6 +2288,7 @@ export default function CodexPage({
         ref={columnsContainerRef}
         className="no-scrollbar drag-container-select-none"
         onMouseDown={handleMouseDown}
+        onTouchStart={handleTouchStart}
         style={{
           width: '100%',
           height: '100%',
@@ -2224,7 +2297,8 @@ export default function CodexPage({
           position: 'relative',
           background: 'rgba(0, 0, 0, 0)', // Use zero opacity color to ensure pointer event capture in all browsers
           cursor: 'grab',
-          zIndex: 3
+          zIndex: 3,
+          touchAction: 'none'
         }}
       >
         {/* The 2D Canvas */}
