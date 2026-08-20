@@ -1236,7 +1236,15 @@ function App() {
   const [isInitialLoad, setIsInitialLoad] = useState(true);
   const [isMapLoaded, setIsMapLoaded] = useState(false);
   const [isDataCompiled, setIsDataCompiled] = useState(false);
-  const [showAboutModal, setShowAboutModal] = useState(true);
+  const [showAboutModal, setShowAboutModal] = useState(() => {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const hasDeepLink = params.has('termId') || params.has('itemId') || params.has('featureId') || params.has('mapId') || params.has('lat') || params.has('lng');
+      return !hasDeepLink;
+    } catch (e) {
+      return true;
+    }
+  });
   const [currentPage, setCurrentPageReal] = useState<'map' | 'timeline' | 'codex' | 'cartography'>(() => {
     const path = window.location.pathname.toLowerCase();
     if (path.startsWith('/timeline')) return 'timeline';
@@ -3487,7 +3495,10 @@ function App() {
         const termId = params.get('termId');
         if (termId) {
           const matched = TERM_TREE_DATA.find(node => node && node.id && String(node.id) === termId);
-          if (matched) setSelectedCodexNode(matched);
+          if (matched) {
+            setSelectedCodexNode(matched);
+            setFocusedCodexTermId(termId);
+          }
         } else {
           setSelectedCodexNode(null);
         }
@@ -3708,8 +3719,10 @@ function App() {
   // Onboarding Tour Trigger (after entering About Modal or manually requested)
   useEffect(() => {
     if (!showAboutModal && !isLiveLoading) {
+      const params = new URLSearchParams(window.location.search);
+      const hasDeepLink = params.has('termId') || params.has('itemId') || params.has('featureId') || params.has('mapId') || params.has('lat') || params.has('lng');
       const completed = localStorage.getItem('mtrh_onboarding_completed');
-      if (!completed) {
+      if (!completed && !hasDeepLink) {
         setOnboardingStep(0);
       }
     }
@@ -11078,37 +11091,44 @@ function App() {
             {currentPage === 'codex' && (
               <>
                 {/* Status Bar / Dossier Header (if node selected) */}
-                {selectedCodexNode && (
-                  <div 
-                    onClick={() => setIsMobileDrawerExpanded(!isMobileDrawerExpanded)}
-                    style={{ 
-                      height: '48px', 
-                      borderBottom: `1px solid ${theme.border}`,
-                      display: 'flex', 
-                      alignItems: 'center', 
-                      justifyContent: 'center', 
-                      padding: '0 16px', 
-                      background: theme.bg, 
-                      flexShrink: 0,
-                      cursor: 'pointer',
-                      userSelect: 'none'
-                    }}
-                  >
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                      <div style={{ width: '20px', height: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <img 
-                          src={getCodexNodeIcon(selectedCodexNode)} 
-                          onError={(e) => { e.currentTarget.src = '/icons/icon-cave-drawings.svg'; }}
-                          style={{ width: '20px', height: '20px' }} 
-                          alt="category-icon" 
-                          draggable={false}
-                        />
+                {selectedCodexNode && (() => {
+                  const rootCat = getCodexRootCategory(selectedCodexNode);
+                  const rootCatName = rootCat ? (rootCat.layer || rootCat.name) : '';
+                  const rootCatIcon = getCodexNodeIcon(rootCat);
+                  return (
+                    <div 
+                      onClick={() => setIsMobileDrawerExpanded(!isMobileDrawerExpanded)}
+                      style={{ 
+                        height: '48px', 
+                        borderBottom: `1px solid ${theme.border}`,
+                        display: 'flex', 
+                        alignItems: 'center', 
+                        justifyContent: 'center', 
+                        padding: '0 16px', 
+                        background: theme.bg, 
+                        flexShrink: 0,
+                        cursor: 'pointer',
+                        userSelect: 'none'
+                      }}
+                    >
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                        <div style={{ width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                          <img 
+                            src={rootCatIcon} 
+                            onError={(e) => { e.currentTarget.src = '/icons/icon-cave-drawings.svg'; }}
+                            style={{ width: '30px', height: '30px' }} 
+                            alt="category-icon" 
+                            draggable={false}
+                          />
+                        </div>
+                        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                          <span style={{ fontSize: '9px', fontWeight: 'bold', color: theme.textDim, fontFamily: '"Space Mono", monospace', letterSpacing: '1px', lineHeight: 1.2 }}>{rootCatName.toUpperCase()}</span>
+                          <span style={{ fontSize: '11px', fontWeight: 'bold', color: theme.text, fontFamily: '"Space Mono", monospace', lineHeight: 1.2 }}>{selectedCodexNode.name.toUpperCase()}</span>
+                        </div>
                       </div>
-                      <span style={{ fontSize: '9px', fontWeight: 'bold', color: theme.textDim, fontFamily: '"Space Mono", monospace', letterSpacing: '1px', lineHeight: 1 }}>DOSSIER:</span>
-                      <span style={{ fontSize: '11px', fontWeight: 'bold', color: theme.text, fontFamily: '"Space Mono", monospace', lineHeight: 1 }}>{selectedCodexNode.name.toUpperCase()}</span>
                     </div>
-                  </div>
-                )}
+                  );
+                })()}
 
                 {/* Details Content (when expanded) */}
                 {isMobileDrawerExpanded && (

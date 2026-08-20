@@ -1321,6 +1321,7 @@ export default function CodexPage({
 
   // Handle term node selection click
   const handleNodeClick = (node: TermNode, level: number) => {
+    userHasPannedRef.current = false;
     const path = [...selectedPath.slice(0, level), node.id];
     setSelectedPath(path);
 
@@ -1568,6 +1569,9 @@ export default function CodexPage({
     };
   }, [selectedPath, columns, activeTermId, hoveredLevel, searchQuery, nodes]);
 
+  // Track if user has manually panned/dragged the canvas away from auto-centered position
+  const userHasPannedRef = useRef<boolean>(false);
+
   // Mouse drag-to-scroll panning like a Miro board
   const activeDragRef = useRef<{
     startX: number;
@@ -1660,6 +1664,7 @@ export default function CodexPage({
       if (Math.abs(deltaX) > 4 || Math.abs(deltaY) > 4) {
         if (!drag.hasDragged) {
           drag.hasDragged = true;
+          userHasPannedRef.current = true;
           document.body.classList.add('is-grabbing');
         }
       }
@@ -1690,6 +1695,7 @@ export default function CodexPage({
       if (Math.abs(deltaX) > 4 || Math.abs(deltaY) > 4) {
         if (!drag.hasDragged) {
           drag.hasDragged = true;
+          userHasPannedRef.current = true;
           document.body.classList.add('is-grabbing');
         }
       }
@@ -1926,9 +1932,9 @@ export default function CodexPage({
     }
   }, [isActive, centerOnNode]);
 
-  // Automatically center the selected node when mobile drawer collapses/expands
+  // Automatically center the selected node when mobile drawer collapses/expands (only if user hasn't manually panned)
   useEffect(() => {
-    if (isMobile && selectedTermId && selectedPath.length > 0) {
+    if (isMobile && selectedTermId && selectedPath.length > 0 && !userHasPannedRef.current) {
       const activeNode = nodes.find(n => n.id === selectedTermId);
       const hasChildren = activeNode ? checkNodeHasSubItems(activeNode) : false;
       const targetCol = hasChildren ? selectedPath.length : selectedPath.length - 1;
@@ -1938,7 +1944,9 @@ export default function CodexPage({
 
       // Recenter again after drawer finishes its 400ms transition to correct for settled bounds
       const timer = setTimeout(() => {
-        centerOnNode(selectedTermId, targetCol, false);
+        if (!userHasPannedRef.current) {
+          centerOnNode(selectedTermId, targetCol, false);
+        }
       }, 450);
       return () => clearTimeout(timer);
     }
@@ -1947,6 +1955,7 @@ export default function CodexPage({
   // Handle external focus on a specific term
   useEffect(() => {
     if (focusedTermId) {
+      userHasPannedRef.current = false;
       const path = getPathToRoot(focusedTermId);
       if (path.length > 0) {
         setSelectedPath(path);
