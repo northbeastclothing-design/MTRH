@@ -1599,6 +1599,15 @@ function App() {
     });
   }, [approvedSubmissions, overrides]);
 
+  const timelineSearchResults = useMemo(() => {
+    const query = timelineSearchQuery.trim().toLowerCase();
+    if (!query) return [];
+    return combinedTimelineItems.filter(item => 
+      item.name.toLowerCase().includes(query) ||
+      (item.description && item.description.toLowerCase().includes(query))
+    ).slice(0, 10);
+  }, [timelineSearchQuery, combinedTimelineItems]);
+
   const uniqueCategories = useMemo(() => {
     const order = ['UFOs - War.gov', 'UFOs - Brazillian Archives', 'UFOs - Sightings', 'Government Conspiracies', 'Giants & Nephilim'];
     const allCategories = Object.keys(LAYER_CONFIG).filter(cat => cat !== 'Default');
@@ -6743,7 +6752,31 @@ function App() {
 
   const renderCodexMobileDetails = () => {
     const activeTermNode = selectedCodexNode;
-    if (!activeTermNode) return null;
+    if (!activeTermNode) {
+      return (
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%', padding: '40px', color: theme.textDim, textAlign: 'center' }}>
+          <img src="/icons/icon-rabbit-hole.svg" alt="logo" style={{ width: '48px', height: '48px', opacity: 0.2, marginBottom: '16px', filter: theme.invert }} />
+          <div style={{ fontSize: '11px', fontWeight: 'bold', letterSpacing: '1px', textTransform: 'uppercase' }}>Select a node</div>
+          <div style={{ fontSize: '9px', marginTop: '4px' }}>to view complete dossier archive.</div>
+          
+          <div style={{
+            marginTop: '20px',
+            padding: '12px 16px',
+            borderLeft: `2px solid ${theme.border}`,
+            background: isMapDarkMode ? 'rgba(255, 255, 255, 0.03)' : 'rgba(0, 0, 0, 0.02)',
+            fontFamily: '"Space Mono", monospace',
+            fontSize: '10px',
+            lineHeight: '1.6',
+            color: theme.textDim,
+            fontStyle: 'italic',
+            textAlign: 'center',
+            maxWidth: '240px'
+          }}>
+            "At the bottom of every rabbit hole you will find God."
+          </div>
+        </div>
+      );
+    }
 
     const activeRoot = getCodexRootCategory(activeTermNode);
     const activeRootColor = getCodexNodeColor(activeRoot);
@@ -10791,7 +10824,7 @@ function App() {
               height: currentPage === 'map' 
                 ? (isMobileDrawerExpanded ? '70vh' : 'calc(108px + max(12px, env(safe-area-inset-bottom, 12px)))') 
                 : (currentPage === 'codex' 
-                  ? (selectedCodexNode ? (isMobileDrawerExpanded ? '70vh' : 'calc(102px + max(12px, env(safe-area-inset-bottom, 12px)))') : 'calc(54px + max(12px, env(safe-area-inset-bottom, 12px)))') 
+                  ? (isMobileDrawerExpanded ? '70vh' : (selectedCodexNode ? 'calc(102px + max(12px, env(safe-area-inset-bottom, 12px)))' : 'calc(54px + max(12px, env(safe-area-inset-bottom, 12px)))'))
                   : (currentPage === 'timeline' 
                     ? 'calc(108px + max(12px, env(safe-area-inset-bottom, 12px)))' 
                     : 'calc(54px + max(12px, env(safe-area-inset-bottom, 12px)))')),
@@ -10806,7 +10839,7 @@ function App() {
             }}
           >
             {/* Timeline-style centered black tab toggle */}
-            {(currentPage === 'map' || (currentPage === 'codex' && selectedCodexNode)) && (
+            {(currentPage === 'map' || currentPage === 'codex') && (
               <motion.button
                 whileHover={{ opacity: 0.8 }}
                 onClick={() => setIsMobileDrawerExpanded(!isMobileDrawerExpanded)}
@@ -11050,38 +11083,40 @@ function App() {
             )}
 
             {/* Codex Page Dossier status bar & Details content */}
-            {currentPage === 'codex' && selectedCodexNode && (
+            {currentPage === 'codex' && (
               <>
-                {/* Status Bar / Dossier Header */}
-                <div 
-                  onClick={() => setIsMobileDrawerExpanded(!isMobileDrawerExpanded)}
-                  style={{ 
-                    height: '48px', 
-                    borderBottom: `1px solid ${theme.border}`,
-                    display: 'flex', 
-                    alignItems: 'center', 
-                    justifyContent: 'center', 
-                    padding: '0 16px', 
-                    background: theme.bg, 
-                    flexShrink: 0,
-                    cursor: 'pointer',
-                    userSelect: 'none'
-                  }}
-                >
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <div style={{ width: '20px', height: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                      <img 
-                        src={getCodexNodeIcon(selectedCodexNode)} 
-                        onError={(e) => { e.currentTarget.src = '/icons/icon-cave-drawings.svg'; }}
-                        style={{ width: '20px', height: '20px' }} 
-                        alt="category-icon" 
-                        draggable={false}
-                      />
+                {/* Status Bar / Dossier Header (if node selected) */}
+                {selectedCodexNode && (
+                  <div 
+                    onClick={() => setIsMobileDrawerExpanded(!isMobileDrawerExpanded)}
+                    style={{ 
+                      height: '48px', 
+                      borderBottom: `1px solid ${theme.border}`,
+                      display: 'flex', 
+                      alignItems: 'center', 
+                      justifyContent: 'center', 
+                      padding: '0 16px', 
+                      background: theme.bg, 
+                      flexShrink: 0,
+                      cursor: 'pointer',
+                      userSelect: 'none'
+                    }}
+                  >
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                      <div style={{ width: '20px', height: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                        <img 
+                          src={getCodexNodeIcon(selectedCodexNode)} 
+                          onError={(e) => { e.currentTarget.src = '/icons/icon-cave-drawings.svg'; }}
+                          style={{ width: '20px', height: '20px' }} 
+                          alt="category-icon" 
+                          draggable={false}
+                        />
+                      </div>
+                      <span style={{ fontSize: '9px', fontWeight: 'bold', color: theme.textDim, fontFamily: '"Space Mono", monospace', letterSpacing: '1px', lineHeight: 1 }}>DOSSIER:</span>
+                      <span style={{ fontSize: '11px', fontWeight: 'bold', color: theme.text, fontFamily: '"Space Mono", monospace', lineHeight: 1 }}>{selectedCodexNode.name.toUpperCase()}</span>
                     </div>
-                    <span style={{ fontSize: '9px', fontWeight: 'bold', color: theme.textDim, fontFamily: '"Space Mono", monospace', letterSpacing: '1px', lineHeight: 1 }}>DOSSIER:</span>
-                    <span style={{ fontSize: '11px', fontWeight: 'bold', color: theme.text, fontFamily: '"Space Mono", monospace', lineHeight: 1 }}>{selectedCodexNode.name.toUpperCase()}</span>
                   </div>
-                </div>
+                )}
 
                 {/* Details Content (when expanded) */}
                 {isMobileDrawerExpanded && (
@@ -11102,10 +11137,18 @@ function App() {
                       type="text" 
                       placeholder="SEARCH TIMELINE EVENTS..." 
                       value={timelineSearchQuery}
-                      onChange={(e) => setTimelineSearchQuery(e.target.value)}
+                      onFocus={() => setShowSearchResults(true)}
+                      onChange={(e) => {
+                        setTimelineSearchQuery(e.target.value);
+                        setShowSearchResults(true);
+                      }}
                       onKeyDown={(e) => {
                         if (e.key === 'Enter') {
                           (e.currentTarget as HTMLInputElement).blur();
+                          if (timelineSearchResults.length > 0) {
+                            setSelectedTimelineItem(timelineSearchResults[0]);
+                            setShowSearchResults(false);
+                          }
                         }
                       }}
                       style={{
@@ -11130,6 +11173,66 @@ function App() {
                         <X size={14} />
                       </button>
                     )}
+                    {/* TIMELINE SEARCH SUGGESTIONS POPUP (Positions UPWARDS above search bar) */}
+                    <AnimatePresence>
+                      {showSearchResults && currentPage === 'timeline' && (timelineSearchQuery.trim().length > 0) && (
+                        <>
+                          <div 
+                            style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, zIndex: 999 }} 
+                            onClick={() => setShowSearchResults(false)}
+                          />
+                          <div
+                            style={{
+                              position: 'absolute',
+                              bottom: '42px',
+                              top: 'auto',
+                              left: 0,
+                              right: 0,
+                              background: theme.bg,
+                              border: `1px solid ${theme.border}`,
+                              maxHeight: '250px',
+                              overflowY: 'auto',
+                              zIndex: 1000,
+                              boxShadow: isMapDarkMode ? '0 -4px 20px rgba(0,0,0,0.5)' : '0 -4px 12px rgba(0,0,0,0.1)'
+                            }}
+                          >
+                            {timelineSearchResults.length > 0 ? (
+                              timelineSearchResults.map((item, idx) => (
+                                <div 
+                                  key={`mob-timeline-suggest-${idx}`}
+                                  onClick={() => {
+                                    setSelectedTimelineItem(item);
+                                    setShowSearchResults(false);
+                                  }}
+                                  style={{ 
+                                    padding: '10px 12px', 
+                                    cursor: 'pointer', 
+                                    borderBottom: `1px solid ${theme.borderLight}`, 
+                                    color: theme.text,
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'space-between',
+                                    gap: '8px'
+                                  }}
+                                >
+                                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                    <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: layerColors[item.layer] || '#b6a6ff' }} />
+                                    <span style={{ fontSize: '11px', fontWeight: 'bold', fontFamily: '"Space Mono", monospace' }}>{item.name}</span>
+                                  </div>
+                                  <span style={{ fontSize: '9px', color: theme.textDim, fontFamily: '"Space Mono", monospace' }}>
+                                    {item.start < 0 ? `${Math.abs(item.start)} BC` : `${item.start} AD`}
+                                  </span>
+                                </div>
+                              ))
+                            ) : (
+                              <div style={{ padding: '12px', textAlign: 'center', fontSize: '10px', color: theme.textDim, fontFamily: '"Space Mono", monospace' }}>
+                                NO MATCHES FOUND
+                              </div>
+                            )}
+                          </div>
+                        </>
+                      )}
+                    </AnimatePresence>
                   </div>
                 </div>
 

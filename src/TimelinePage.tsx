@@ -305,6 +305,16 @@ export default function TimelinePage({
   const [localSearchQuery, setLocalSearchQuery] = useState('');
   const searchQuery = propsSearchQuery !== undefined ? propsSearchQuery : localSearchQuery;
   const setSearchQuery = onSearchQueryChange !== undefined ? onSearchQueryChange : setLocalSearchQuery;
+  const [showSearchDropdown, setShowSearchDropdown] = useState(false);
+
+  const timelineSearchResults = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase();
+    if (!q) return [];
+    return items.filter(item => 
+      item.name.toLowerCase().includes(q) ||
+      (item.description && item.description.toLowerCase().includes(q))
+    ).slice(0, 10);
+  }, [searchQuery, items]);
 
   // Eras order state for reordering
   const [erasOrder, setErasOrder] = useState<string[]>(() => {
@@ -1999,12 +2009,25 @@ export default function TimelinePage({
           }}
         >
           {/* Left: Search input */}
-          <div style={{ position: 'relative', width: '220px', flexShrink: 0 }}>
+          <div style={{ position: 'relative', width: '260px', flexShrink: 0 }}>
             <input 
               type="text" 
               placeholder="SEARCH TIMELINE EVENTS..." 
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              onFocus={() => setShowSearchDropdown(true)}
+              onChange={(e) => {
+                setSearchQuery(e.target.value);
+                setShowSearchDropdown(true);
+              }}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') {
+                  (e.currentTarget as HTMLInputElement).blur();
+                  if (timelineSearchResults.length > 0) {
+                    handleItemClick(timelineSearchResults[0]);
+                    setShowSearchDropdown(false);
+                  }
+                }
+              }}
               style={{
                 width: '100%',
                 padding: '8px 30px 8px 10px',
@@ -2041,6 +2064,66 @@ export default function TimelinePage({
                 <X size={12} color={theme.text} />
               </motion.button>
             )}
+            {/* TIMELINE SEARCH DROPDOWN (UPWARDS) */}
+            <AnimatePresence>
+              {showSearchDropdown && (searchQuery.trim().length > 0) && (
+                <>
+                  <div 
+                    style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, zIndex: 999 }} 
+                    onClick={() => setShowSearchDropdown(false)}
+                  />
+                  <div
+                    style={{
+                      position: 'absolute',
+                      bottom: '36px',
+                      top: 'auto',
+                      left: 0,
+                      width: '280px',
+                      background: theme.bg,
+                      border: `1px solid ${theme.border}`,
+                      maxHeight: '260px',
+                      overflowY: 'auto',
+                      zIndex: 1000,
+                      boxShadow: isMapDarkMode ? '0 -4px 20px rgba(0,0,0,0.5)' : '0 -4px 12px rgba(0,0,0,0.1)'
+                    }}
+                  >
+                    {timelineSearchResults.length > 0 ? (
+                      timelineSearchResults.map((item, idx) => (
+                        <div 
+                          key={`desk-timeline-suggest-${idx}`}
+                          onClick={() => {
+                            handleItemClick(item);
+                            setShowSearchDropdown(false);
+                          }}
+                          style={{ 
+                            padding: '9px 12px', 
+                            cursor: 'pointer', 
+                            borderBottom: `1px solid ${theme.borderLight}`, 
+                            color: theme.text,
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'space-between',
+                            gap: '8px'
+                          }}
+                        >
+                          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', overflow: 'hidden' }}>
+                            <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: LAYER_COLORS[item.layer] || '#b6a6ff', flexShrink: 0 }} />
+                            <span style={{ fontSize: '10.5px', fontWeight: 'bold', fontFamily: '"Space Mono", monospace', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{item.name}</span>
+                          </div>
+                          <span style={{ fontSize: '9px', color: theme.textDim, fontFamily: '"Space Mono", monospace', flexShrink: 0 }}>
+                            {item.start < 0 ? `${Math.abs(item.start)} BC` : `${item.start} AD`}
+                          </span>
+                        </div>
+                      ))
+                    ) : (
+                      <div style={{ padding: '12px', textAlign: 'center', fontSize: '10px', color: theme.textDim, fontFamily: '"Space Mono", monospace' }}>
+                        NO MATCHES FOUND
+                      </div>
+                    )}
+                  </div>
+                </>
+              )}
+            </AnimatePresence>
           </div>
 
           {/* Right: Zoom controls styled exactly like the map page timeline zoom bar */}
