@@ -1310,14 +1310,30 @@ export default function CodexPage({
     return { parentIdSet, secondarySet, relatedSet };
   }, [nodes]);
 
-  // Ultra-fast O(1) lookup to determine if a node will generate sub-items/children in the next column
-  const checkNodeHasSubItems = useCallback((node: TermNode) => {
-    return (
-      nodeSubItemSet.parentIdSet.has(node.id) ||
-      nodeSubItemSet.secondarySet.has(node.id) ||
-      nodeSubItemSet.relatedSet.has(node.id)
-    );
-  }, [nodeSubItemSet]);
+  // Dynamic lookup to determine if a node will generate valid sub-items/children in the next column
+  const checkNodeHasSubItems = useCallback((node: TermNode, colIdx?: number, currentColumnNodes?: TermNode[]) => {
+    if (colIdx === undefined || !currentColumnNodes) {
+      return (
+        nodeSubItemSet.parentIdSet.has(node.id) ||
+        nodeSubItemSet.secondarySet.has(node.id) ||
+        nodeSubItemSet.relatedSet.has(node.id)
+      );
+    }
+
+    const currentPathSlice = selectedPath.slice(0, colIdx + 1);
+    const colNodeIds = new Set(currentColumnNodes.map(n => n.id));
+
+    return nodes.some(n => {
+      if (currentPathSlice.includes(n.id)) return false;
+      if (colNodeIds.has(n.id)) return false;
+
+      const isChild = n.parentId === node.id || n.secondaryParentIds?.includes(node.id);
+      const isRelated = node.relatedIds?.includes(n.id);
+      const isParent = node.parentId === n.id || node.secondaryParentIds?.includes(n.id);
+
+      return isChild || isRelated || isParent;
+    });
+  }, [nodeSubItemSet, selectedPath, nodes]);
 
   // Handle term node selection click
   const handleNodeClick = (node: TermNode, level: number) => {
@@ -1325,7 +1341,7 @@ export default function CodexPage({
     const path = [...selectedPath.slice(0, level), node.id];
     setSelectedPath(path);
 
-    const hasChildren = checkNodeHasSubItems(node);
+    const hasChildren = checkNodeHasSubItems(node, level, columns[level]?.nodes);
 
     // If it has children, center on the newly expanded sublayer column (level + 1).
     // If it has no children, stay centered on the current column (level).
@@ -1874,7 +1890,7 @@ export default function CodexPage({
       const targetScrollLeft = colCenterX - (viewportWidth - sidebarOffset) / 2;
 
       // 2. Vertical Scroll Centering
-      let targetScrollTop = 1500 - viewportHeight / 2; // Default fallback to center of column layout
+      let targetScrollTop = 3000 - viewportHeight / 2; // Default fallback to center of column layout
 
       if (nodeId) {
         // Find the specific node pill element
@@ -2313,7 +2329,7 @@ export default function CodexPage({
           ref={canvasRef}
           style={{
             width: `${canvasWidth}px`,
-            height: '3000px',
+            height: '6000px',
             position: 'relative',
             backgroundImage: `url("${svgGrid}")`,
             backgroundRepeat: 'repeat'
@@ -2327,7 +2343,7 @@ export default function CodexPage({
               top: 0,
               left: 0,
               width: `${canvasWidth}px`,
-              height: '3000px',
+              height: '6000px',
               pointerEvents: 'none',
               zIndex: 4
             }}
@@ -2353,15 +2369,15 @@ export default function CodexPage({
           {columns.map((column, colIdx) => {
             const selectedNodeId = selectedPath[colIdx];
             const selIdx = column.nodes.findIndex(n => n.id === selectedNodeId);
-            let colTop = 1500;
+            let colTop = 3000;
             if (colIdx === 0 && selectedPath.length === 0) {
               // Center Column 0 vertically only on initial page load when no category has been selected yet
               const totalHeight = column.nodes.length * 40 - 8;
-              colTop = 1500 - totalHeight / 2;
+              colTop = 3000 - totalHeight / 2;
             } else {
               const activeSelIdx = selIdx >= 0 ? selIdx : 0;
               const Y_item = activeSelIdx * 40 + 16; // 32px height + 8px gap, center is at 16px
-              colTop = 1500 - Y_item;
+              colTop = 3000 - Y_item;
             }
             const colLeft = 1200 + colIdx * 300;
 
@@ -2446,7 +2462,7 @@ export default function CodexPage({
                   const nodeColor = colIdx === 0 ? getNodeColor(node) : activeRootColor;
                   const nodeIcon = getNodeIcon(node);
 
-                  const hasChildren = checkNodeHasSubItems(node);
+                  const hasChildren = checkNodeHasSubItems(node, colIdx, column.nodes);
 
                   // Column 0 / Level 0: Main Category terms (style identical to map page sidebar layer list, minus visibility toggle)
                   if (colIdx === 0) {
@@ -2571,7 +2587,7 @@ export default function CodexPage({
             top: 0,
             left: 0,
             width: `${canvasWidth}px`,
-            height: '3000px',
+            height: '6000px',
             pointerEvents: 'none',
             zIndex: 6
           }}
