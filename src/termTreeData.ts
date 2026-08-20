@@ -38959,6 +38959,137 @@ const chunk_bible_sources: TermNode[] = [
 
 TERM_TREE_DATA.push(...chunk_bible_sources);
 
+const chunk_user_requested_terms: any[] = [
+  {
+    id: 'nietzsche',
+    parentId: 'alchemy-occult',
+    name: 'Friedrich Nietzsche',
+    description: 'German philosopher (1844–1900) known for concepts like the Übermensch, Will to Power, Eternal Recurrence, and "God is dead." In esoteric and occult lore, Nietzsche\'s writings heavily influenced early 20th-century occultism, the Order of the Golden Dawn, Aleister Crowley\'s Thelema, and nationalist esoteric movements.',
+    layer: 'The Occult',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Nietzsche1879.jpg/500px-Nietzsche1879.jpg'],
+    sources: ['Thus Spoke Zarathustra', 'The Will to Power', 'Esoteric Influences on Modern Philosophy'],
+    relatedIds: ['aleister-crowley', 'historical-alchemists']
+  },
+  {
+    id: 'blemmyes',
+    parentId: 'myths-legends-root',
+    name: 'Blemmye (Headless Men)',
+    description: 'Legendary race of headless humanoids described in ancient and medieval geography (Herodotus, Pliny the Elder, Mandeville). Possessing eyes and mouths on their chests, they inhabited Nubia/Libya in classical accounts and became an enduring symbol of monstrous races at the edge of the known world.',
+    layer: 'Cryptid Sightings',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Blemmyes_map.jpg/500px-Blemmyes_map.jpg'],
+    sources: ['Pliny the Elder - Natural History', 'Herodotus - Histories', 'Travels of Sir John Mandeville'],
+    relatedIds: ['cryptid-sightings', 'monsters-cryptids']
+  },
+  {
+    id: 'cyclopean-architecture',
+    parentId: 'old-world-structures',
+    name: 'Cyclopean Architecture',
+    description: 'Style of ancient megalithic masonry constructed with massive, unworked or rudely squared limestone boulders fitted together without mortar. Named by classical Greeks after the legendary Cyclopes, who were believed to be the only beings capable of moving such colossal stones (seen at Mycenae, Tiryns, Sacsayhuamán, and Alatri).',
+    layer: 'Old World Structures',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Mykene_BW_2017-10-10_13-23-40.jpg/500px-Mykene_BW_2017-10-10_13-23-40.jpg'],
+    sources: ['Pausanias - Description of Greece', 'Mycenaean Archaeology Records'],
+    relatedIds: ['old-world-structures', 'megaliths-structures']
+  },
+  {
+    id: 'kumburgaz-ufo',
+    parentId: 'ufos',
+    name: 'Kumburgaz UFO Video',
+    description: 'Famous series of night-vision UFO video footage captured between 2007 and 2009 by night watchman Yalcin Yalman in Kumburgaz, Turkey. Examined by the SIRIUS UFO Space Sciences Research Center and TÜBİTAK (National Technology Research Council), the zoomed footage depicts a disc-shaped craft hovering over the Sea of Marmara with two humanoid figures visible inside the cockpit area.',
+    layer: 'UFOs - Sightings',
+    timelineId: 'kumburgaz-ufo',
+    mapFeatureId: 'kumburgaz-ufo',
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Kumburgaz_UFO_2009.jpg/500px-Kumburgaz_UFO_2009.jpg',
+      'https://www.youtube.com/embed/0my1weBD67w'
+    ],
+    sources: ['SIRIUS UFO Space Sciences Research Center Report', 'TÜBİTAK Analysis', 'Corridor Crew Breakdown (https://www.reddit.com/r/Corridor/comments/1enaqyq/whats_your_take_on_the_kumburgaz_video_real_or/)'],
+    relatedIds: ['ufos', 'ufo-sightings']
+  },
+  {
+    id: 'longyou-caves',
+    parentId: 'old-world-structures',
+    name: 'Longyou Caves',
+    description: 'Vast subterranean artificial caverns carved into siltstone in Zhejiang, China, dating back over 2,000 years to the Han Dynasty or earlier. Discovered in 1992, 24 carved caves feature uniform diagonal chisel marks, massive support pillars, and precise geometric engineering, with no historical record of their construction or purpose.',
+    layer: 'Underworld Entrances',
+    timelineId: 'longyou-caves',
+    mapFeatureId: 'longyou-caves',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Longyou_Xiaonanhai_Shishi_2016.12.11_16-10-51.jpg/500px-Longyou_Xiaonanhai_Shishi_2016.12.11_16-10-51.jpg'],
+    sources: ['Chinese Underground Engineering Survey (1992)', 'Zhejiang Archaeological Records'],
+    relatedIds: ['old-world-structures', 'underground-tunnels-bases']
+  },
+  {
+    id: 'menehune',
+    parentId: 'myths-legends-root',
+    name: 'Menehune',
+    description: 'Ancient race of small-statured legendary people in Hawaiian mythology who inhabit hidden valleys and forests. Celebrated for their master craftsmanship, stonemasonry, and engineering accomplishments (such as the Alekoko Fishpond and Kīkīaola aqueduct on Kauaʻi), reportedly constructed in a single night.',
+    layer: 'Cryptid Sightings',
+    timelineId: 'menehune',
+    mapFeatureId: 'menehune',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Alekoko_fishpond.jpg/500px-Alekoko_fishpond.jpg'],
+    sources: ['Fornander Collection of Hawaiian Antiquities and Folk-lore', 'Kauaʻi Historical Society Archives'],
+    relatedIds: ['myths-legends-root', 'cryptid-sightings']
+  },
+  {
+    id: 'jeffrey-epstein',
+    parentId: 'alchemy-occult',
+    name: 'Jeffrey Epstein',
+    description: 'Financier and convicted sex offender who operated a high-level global influence, blackmail, and trafficking network based out of Little Saint James in the US Virgin Islands, Manhattan, and Palm Beach. Linked to intelligence figures, politicians, scientists, and financial elites, prompting speculation around blackmail operations, esoteric temple architecture, and black-budget funding.',
+    layer: 'The Occult',
+    timelineId: 'jeffrey-epstein',
+    mapFeatureId: 'jeffrey-epstein',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/5/59/Jeffrey_Epstein_mug_shot_%28cropped%29.jpg'],
+    sources: ['US Virgin Islands Court Records', 'Southern District of New York Indictment (2019)'],
+    relatedIds: ['ghislaine-maxwell', 'robert-maxwell']
+  },
+  {
+    id: 'ghislaine-maxwell',
+    parentId: 'jeffrey-epstein',
+    name: 'Ghislaine Maxwell',
+    description: 'British socialite and daughter of media mogul and intelligence operative Robert Maxwell. Convicted in 2021 for her role facilitating Jeffrey Epstein\'s international trafficking network. Served as key liaison connecting financial elites, royal family members, and high-level political figures.',
+    layer: 'The Occult',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Fed29jail5bbtjeh.JPG/500px-Fed29jail5bbtjeh.JPG'],
+    sources: ['SDNY Trial Transcripts (2021)', 'Robert Maxwell: Israel\'s Superspy'],
+    relatedIds: ['jeffrey-epstein', 'robert-maxwell']
+  },
+  {
+    id: 'kal-el-superman',
+    parentId: 'folklore-archetypes-comparative',
+    name: 'Kal-El (Superman & Occult Origins)',
+    description: 'Comic book archetype created in 1938 by Jerry Siegel and Joe Shuster. Kal-El (Hebrew: קַל-אֵל, interpreted as "Voice of God" or "Vessel of God") incorporates deep esoteric and biblical motifs: sent in a cradle-craft before his planet\'s destruction (Moses motif), possessing solar-powered superhuman strength (Samson / Apollo), and bearing Enochian-style angelic naming conventions (the \'-El\' suffix shared with Michael, Gabriel, Metatron).',
+    layer: 'Myths / Legends',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Don%27t_be_scared_Superman_graffiti_Tel_Aviv.jpg/500px-Don%27t_be_scared_Superman_graffiti_Tel_Aviv.jpg'],
+    sources: ['Action Comics No. 1 (1938)', 'Up, Up, and Oy Vey: How Jewish History, Culture, and Values Shaped the Comic Book Superhero (Simcha Weinstein)'],
+    relatedIds: ['folklore-archetypes-comparative', 'myths-legends-root']
+  },
+  {
+    id: 'skinny-bob',
+    parentId: 'ufos',
+    name: 'Skinny Bob',
+    description: 'Notorious series of leaked videos uploaded to YouTube in 2011 by user "ivan0135," purporting to show KGB archival footage of an Extraterrestrial Biological Entity (EBE) nicknamed "Skinny Bob." Features high-detail footage of a Grey alien wearing a suit, a flying saucer crash site, and EBE height measurements, remaining a heavily debated topic in UFO forensics and CGI leak analysis.',
+    layer: 'UFOs - Sightings',
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Gray_Alien_at_UFO_Museum%2C_Roswell_%28cropped%29.jpg/500px-Gray_Alien_at_UFO_Museum%2C_Roswell_%28cropped%29.jpg',
+      'https://www.youtube.com/embed/GQToaAqPMvY'
+    ],
+    sources: ['ivan0135 YouTube Archive (2011)', 'SkinnyBob.info Forensics', 'X Analysis (https://x.com/i/status/2075692034631835733)'],
+    relatedIds: ['ufos', 'ufo-whistleblowers']
+  },
+  {
+    id: 'khazars',
+    parentId: 'people-groups',
+    name: 'Khazars',
+    description: 'Semi-nomadic Turkic people who created a major commercial empire in the North Caucasus and Volga delta (7th–10th centuries). Noted in historical and conspiracy literature for the ruling elite\'s mass conversion to Judaism in the 8th or 9th century under Khagan Bulan, making Khazaria a focal point in medieval trade routes, Silk Road geopolitics, and modern esoteric theories regarding European lineage.',
+    layer: 'Ancient People Groups',
+    timelineId: 'khazars',
+    mapFeatureId: 'khazars',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Chasaren.jpg/500px-Chasaren.jpg'],
+    sources: ['The Thirteenth Tribe (Arthur Koestler)', 'The Khazar Correspondence (950s)', 'Instagram Reel Overview (https://www.instagram.com/reel/Daf32x6lfZJ/?igsh=MWQwNXEwNGdkY2p4Mg==)'],
+    relatedIds: ['people-groups']
+  }
+];
+
+TERM_TREE_DATA.push(...chunk_user_requested_terms);
+
 // Number the books of the Bible sequentially to preserve their canonical order in the sorted UI
 const bibleBooks = TERM_TREE_DATA.filter(n => n && n.parentId === 'holy-bible');
 bibleBooks.forEach((book, idx) => {

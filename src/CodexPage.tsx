@@ -32,7 +32,7 @@ interface CodexPageProps {
   onSearchQueryChange?: (query: string) => void;
 }
 
-const LAYER_COLORS: Record<string, string> = {
+export const LAYER_COLORS: Record<string, string> = {
   'UFOs - War.gov': '#FF9BE1',
   'UFOs - Brazillian Archives': '#B297FF',
   'Enochian Sites': '#FF9F63',
@@ -586,14 +586,12 @@ const cleanAndProxyImageUrl = (url: any) => {
 
   const lowerUrl = trimmedUrl.toLowerCase();
   
-  if (lowerUrl.includes('temporarytemples.co.uk')) {
+  const isWiki = lowerUrl.includes('wikimedia.org') || lowerUrl.includes('wikipedia.org');
+  if (isWiki || lowerUrl.includes('temporarytemples.co.uk')) {
     return `https://images.weserv.nl/?url=${encodeURIComponent(trimmedUrl)}`;
   }
-
-  const isWiki = lowerUrl.includes('wikimedia.org') || lowerUrl.includes('wikipedia.org');
   
   if (
-    isWiki ||
     lowerUrl.includes('unsplash.com') ||
     lowerUrl.includes('cloudfront.net') ||
     lowerUrl.includes('wonders-of-the-world.net') ||

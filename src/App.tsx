@@ -620,20 +620,12 @@ const cleanAndProxyImageUrl = (url: any) => {
   // or that already fully support highly reliable direct client-side loading (like Unsplash/Wonders of the world).
   const lowerUrl = trimmedUrl.toLowerCase();
   
-  if (lowerUrl.includes('temporarytemples.co.uk')) {
+  const isWiki = lowerUrl.includes('wikimedia.org') || lowerUrl.includes('wikipedia.org');
+  if (isWiki || lowerUrl.includes('temporarytemples.co.uk')) {
     return `https://images.weserv.nl/?url=${encodeURIComponent(trimmedUrl)}`;
   }
-
-  const isLocal = typeof window !== 'undefined' && (
-    window.location.hostname === 'localhost' || 
-    window.location.hostname === '127.0.0.1' ||
-    window.location.hostname.startsWith('192.168.')
-  );
-
-  const isWiki = lowerUrl.includes('wikimedia.org') || lowerUrl.includes('wikipedia.org');
   
   if (
-    isWiki ||
     lowerUrl.includes('unsplash.com') ||
     lowerUrl.includes('cloudfront.net') ||
     lowerUrl.includes('wonders-of-the-world.net') ||
@@ -9383,7 +9375,7 @@ function App() {
                     borderRadius: '0px',
                     outline: 'none',
                     boxSizing: 'border-box',
-                    background: '#000000',
+                    background: theme.bg,
                     color: theme.text
                   }}
                 />

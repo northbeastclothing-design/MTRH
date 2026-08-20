@@ -6109,6 +6109,11 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'lucis-trust-founded': { lng: -73.9669, lat: 40.7516, locationName: '866 United Nations Plaza (New York, NY)', category: 'The Occult' },
   'robert-maxwell': { lng: -1.2335, lat: 51.7589, locationName: 'Headington Hill Hall (Oxford, England)', category: 'The Occult' },
   'maxwell-pergamon': { lng: -1.2335, lat: 51.7589, locationName: 'Headington Hill Hall (Oxford, England)', category: 'The Occult' },
+  'jeffrey-epstein': { lng: -64.825, lat: 18.300, locationName: 'Little Saint James (US Virgin Islands)', category: 'The Occult' },
+  'kumburgaz-ufo': { lng: 28.468, lat: 41.034, locationName: 'Kumburgaz (Sea of Marmara, Turkey)', category: 'UFOs - Sightings' },
+  'longyou-caves': { lng: 119.149, lat: 29.062, locationName: 'Longyou Caves (Zhejiang, China)', category: 'Underworld Entrances' },
+  'menehune': { lng: -159.366, lat: 21.954, locationName: 'Alekoko Menehune Fishpond (Kauaʻi, Hawaii)', category: 'Cryptid Sightings' },
+  'khazars': { lng: 48.030, lat: 46.349, locationName: 'Atil (Khazar Khaganate Capital)', category: 'Ancient People Groups' },
   'church-of-satan-founding': { lng: -122.4855, lat: 37.7845, locationName: 'The Black House (San Francisco, CA)', category: 'The Occult' },
   'temple-of-set-founding': { lng: -122.427, lat: 37.769, locationName: 'San Francisco, California', category: 'The Occult' },
   

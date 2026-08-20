@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { TIMELINE_ITEMS, TimelineItem, TIMELINE_LOCATIONS } from './timelineData';
 import { RotateCcw, MapPin, Flag, X } from 'lucide-react';
 import { TERM_TREE_DATA } from './termTreeData';
+import { LAYER_COLORS } from './CodexPage';
 
 interface TimelinePageProps {
   theme: {
