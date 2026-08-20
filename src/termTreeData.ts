@@ -38966,7 +38966,7 @@ const chunk_user_requested_terms: any[] = [
     name: 'Friedrich Nietzsche',
     description: 'German philosopher (1844–1900) known for concepts like the Übermensch, Will to Power, Eternal Recurrence, and "God is dead." In esoteric and occult lore, Nietzsche\'s writings heavily influenced early 20th-century occultism, the Order of the Golden Dawn, Aleister Crowley\'s Thelema, and nationalist esoteric movements.',
     layer: 'The Occult',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Nietzsche1879.jpg/500px-Nietzsche1879.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Nietzsche187a.jpg/330px-Nietzsche187a.jpg'],
     sources: ['Thus Spoke Zarathustra', 'The Will to Power', 'Esoteric Influences on Modern Philosophy'],
     relatedIds: ['aleister-crowley', 'historical-alchemists']
   },
@@ -38999,7 +38999,7 @@ const chunk_user_requested_terms: any[] = [
     timelineId: 'kumburgaz-ufo',
     mapFeatureId: 'kumburgaz-ufo',
     images: [
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Kumburgaz_UFO_2009.jpg/500px-Kumburgaz_UFO_2009.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/e/dd/Sea_of_Marmara_map.svg/500px-Sea_of_Marmara_map.svg.png',
       'https://www.youtube.com/embed/0my1weBD67w'
     ],
     sources: ['SIRIUS UFO Space Sciences Research Center Report', 'TÜBİTAK Analysis', 'Corridor Crew Breakdown (https://www.reddit.com/r/Corridor/comments/1enaqyq/whats_your_take_on_the_kumburgaz_video_real_or/)'],
