@@ -1,0 +1,648 @@
+[
+  {
+    "id": "DOW-UAP-D099",
+    "name": "Intelligence Review of 'Ghost Rocket' Incidents (Scandinavia, 1947)",
+    "category": "War.gov UFO files 05",
+    "description": "[DOW] Declassified intelligence summary reviewing Scandinavian 'Ghost Rocket' reports from 1946–1947. Document details military investigations into high-speed, fireball-like projectiles displaying non-ballistic trajectories.",
+    "date": 1947,
+    "coordinates": [
+      18.0686,
+      59.3293
+    ],
+    "source": "Department of War PURSUE Release 5",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/DOW-UAP-D099_Ghost_Rockets_1947.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/DOW-UAP-D099_Ghost_Rockets_1947.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-D100",
+    "name": "USAF Memoranda on UAP (Project Sign, 1948)",
+    "category": "War.gov UFO files 05",
+    "description": "[DOW/USAF] Historical declassified collection of memoranda and administrative correspondence regarding the establishment and initial findings of Project Sign, the Air Force's first formal UAP investigation program.",
+    "date": 1948,
+    "coordinates": [
+      -84.0483,
+      39.8136
+    ],
+    "source": "Department of War PURSUE Release 5",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/DOW-UAP-D100_Project_Sign_1948.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/DOW-UAP-D100_Project_Sign_1948.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-D101",
+    "name": "Gulf of Oman 'Cold Orbs' AC-130J Incident Report (2021)",
+    "category": "War.gov UFO files 05",
+    "description": "[DOW] Intelligence Information Report detailing a UAP encounter involving a Special Operations AC-130J gunship crew. Aircrew observed approximately 25 'cold orbs' hovering near the water, maneuvering aggressively at calculated speeds between 250 and 1,300 mph without visual thermal signature.",
+    "date": 2021,
+    "coordinates": [
+      58.5,
+      24.5
+    ],
+    "source": "Department of War PURSUE Release 5",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/DOW-UAP-D101_IIR_Unresolved-UAP-Report-Gulf-of-Oman_2021.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/DOW-UAP-D101_IIR_Unresolved-UAP-Report-Gulf-of-Oman_2021.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "FBI-UAP-D026",
+    "name": "FD-302: 'Dark Translucent Triangle' Witness Interview (2023)",
+    "category": "War.gov UFO files 05",
+    "description": "[FBI] FD-302 report detailing a witness account of a large, dark, translucent triangular object hovering silently near Colorado Springs, Colorado. The object appeared to refract light, distorting the stars behind it.",
+    "date": 2023,
+    "coordinates": [
+      -104.8214,
+      38.8339
+    ],
+    "source": "Department of War PURSUE Release 5",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D026_FD-302_Dark-Translucent-Triangle_2023.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D026_FD-302_Dark-Translucent-Triangle_2023.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "FBI-UAP-D027",
+    "name": "Digital Rendering: Dark Translucent Triangle Sighting (2023)",
+    "category": "War.gov UFO files 05",
+    "description": "[FBI] Reconstructed digital rendering based on witness drawings and telemetry files, illustrating the structure and optical distortion of the translucent UAP reported over Colorado Springs.",
+    "date": 2023,
+    "coordinates": [
+      -104.83,
+      38.84
+    ],
+    "source": "Department of War PURSUE Release 5",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D027_Digital-Rendering_Dark-Translucent-Triangle_2023.jpg",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D027_Digital-Rendering_Dark-Translucent-Triangle_2023.jpg"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "FBI-UAP-D028",
+    "name": "FD-302: 'Dark Triangle with Lights' Witness Interview (2011)",
+    "category": "War.gov UFO files 05",
+    "description": "[FBI] Historical witness interview report detailing a massive, silent triangular craft with bright perimeter lights that hovered over suburban Colorado Springs before executing a high-acceleration lateral departure.",
+    "date": 2011,
+    "coordinates": [
+      -104.80,
+      38.82
+    ],
+    "source": "Department of War PURSUE Release 5",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D028_FD-302_Dark-Triangle-with-Lights_2011.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D028_FD-302_Dark-Triangle-with-Lights_2011.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "FBI-UAP-D029",
+    "name": "Digital Rendering: Dark Triangle with Lights Sighting (2011)",
+    "category": "War.gov UFO files 05",
+    "description": "[FBI] Declassified digital drawing and visual reconstruction of the 2011 triangular object, highlighting the geometry of the craft and location of the white perimeter lights.",
+    "date": 2011,
+    "coordinates": [
+      -104.79,
+      38.81
+    ],
+    "source": "Department of War PURSUE Release 5",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D029_Digital-Rendering_Dark-Triangle-with-Lights_2011.jpg",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D029_Digital-Rendering_Dark-Triangle-with-Lights_2011.jpg"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "FBI-UAP-D030",
+    "name": "FD-302: 'Large Triangle with Red Lights' Sighting Report (2023)",
+    "category": "War.gov UFO files 05",
+    "description": "[FBI] Standard interview record detailing a witness account of an enormous black triangular UAP that emerged from a distorted, 'pixelated' cloud formation over Colorado Springs, moving silently before accelerating at extreme speeds.",
+    "date": 2023,
+    "coordinates": [
+      -104.8214,
+      38.8339
+    ],
+    "source": "Department of War PURSUE Release 5",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D030_FD-302_Large-Triangle-with-Red-Lights_2023.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D030_FD-302_Large-Triangle-with-Red-Lights_2023.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "FBI-UAP-D031",
+    "name": "Digital Rendering: Large Triangle with Red Lights (2023)",
+    "category": "War.gov UFO files 05",
+    "description": "[FBI] Reconstructed graphic illustrating the large triangular craft as it emerged from the pixelated cloud, showing three red lights on the underside apexes.",
+    "date": 2023,
+    "coordinates": [
+      -104.85,
+      38.85
+    ],
+    "source": "Department of War PURSUE Release 5",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D031_Digital-Rendering_Large-Triangle-with-Red-Lights_2023.jpg",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D031_Digital-Rendering_Large-Triangle-with-Red-Lights_2023.jpg"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "FBI-UAP-D032",
+    "name": "FD-302: Special Agent Firsthand Sighting Interview (2026)",
+    "category": "War.gov UFO files 05",
+    "description": "[FBI] FD-302 interview record of a federal Special Agent who observed and thermally recorded multiple unidentified 'black hot' objects moving slowly over a mountain range in the western U.S.",
+    "date": 2026,
+    "coordinates": [
+      -105.7821,
+      39.7392
+    ],
+    "source": "Department of War PURSUE Release 5",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D032_FD-302_Special-Agent-Firsthand-Sighting_2026.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D032_FD-302_Special-Agent-Firsthand-Sighting_2026.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "FBI-UAP-D033",
+    "name": "Special Agent Black Hawk Scale Reference Memo (2026)",
+    "category": "War.gov UFO files 05",
+    "description": "[FBI] Internal memorandum reviewing the thermal signature reference data from the Special Agent's recording. Details the inclusion of a U.S. Army Black Hawk helicopter within the same sensor frame to establish physical dimensions and altitude metrics.",
+    "date": 2026,
+    "coordinates": [
+      -105.80,
+      39.75
+    ],
+    "source": "Department of War PURSUE Release 5",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D033_Black-Hawk-Scale-Reference-Memo_2026.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D033_Black-Hawk-Scale-Reference-Memo_2026.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "FBI-UAP-D037",
+    "name": "FD-302: 'Multiple Red Lights' Sighting & Temporal Anomaly (2026)",
+    "category": "War.gov UFO files 05",
+    "description": "[FBI] Witness interview outlining a cluster of red lights executing synchronized flight paths in the Western US. Account includes details of an anomalous physical effect where the witness's analogue mechanical watch jumped 25 minutes fast during the event.",
+    "date": 2026,
+    "coordinates": [
+      -121.7603,
+      46.8523
+    ],
+    "source": "Department of War PURSUE Release 5",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D037_FD-302_Multiple-Red-Lights_2026.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D037_FD-302_Multiple-Red-Lights_2026.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "FBI-UAP-D042",
+    "name": "Digital Rendering: Multiple Red Lights (2026)",
+    "category": "War.gov UFO files 05",
+    "description": "[FBI] Visual reconstruction mapping the multiple red lights reported over the Cascade Mountains, detailing their spherical shape and dynamic orbital patterns.",
+    "date": 2026,
+    "coordinates": [
+      -121.78,
+      46.86
+    ],
+    "source": "Department of War PURSUE Release 5",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D042_Digital-Rendering-2_Multiple-Red-Lights_2026.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D042_Digital-Rendering-2_Multiple-Red-Lights_2026.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOS-UAP-D001",
+    "name": "Bahia UAP Incident Diplomatic Cable I (1963)",
+    "category": "War.gov UFO files 05",
+    "description": "[DOS] Declassified State Department diplomatic telegram detailing an investigation into UAP sightings and magnetic interference events reported over the state of Bahia, Brazil.",
+    "date": 1963,
+    "coordinates": [
+      -38.5016,
+      -12.9778
+    ],
+    "source": "Department of War PURSUE Release 5",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/DOS-UAP-D001_Bahia-Brazil-Incident_1963.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/DOS-UAP-D001_Bahia-Brazil-Incident_1963.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOS-UAP-D002",
+    "name": "Bahia UAP Incident Diplomatic Cable II (1963)",
+    "category": "War.gov UFO files 05",
+    "description": "[DOS] Follow-up diplomatic communication analyzing local radar returns and joint US-Brazilian military security assessments regarding the Bahia objects.",
+    "date": 1963,
+    "coordinates": [
+      -38.52,
+      -12.99
+    ],
+    "source": "Department of War PURSUE Release 5",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/DOS-UAP-D002_Bahia-Brazil-Radar-Analysis_1963.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/DOS-UAP-D002_Bahia-Brazil-Radar-Analysis_1963.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "EOP-UAP-D001",
+    "name": "NASC Memorandum: 'Space Alien Race Question' (1963)",
+    "category": "War.gov UFO files 05",
+    "description": "[EOP/NASC] National Aeronautics and Space Council policy memo examining potential social and security implications of confirming non-human intelligence, outlining coordination plans for the White House.",
+    "date": 1963,
+    "coordinates": [
+      -77.0365,
+      38.8977
+    ],
+    "source": "Department of War PURSUE Release 5",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/EOP-UAP-D001_NASC_Space_Alien_Race_Question_1963.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/EOP-UAP-D001_NASC_Space_Alien_Race_Question_1963.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "CIA-UAP-D022",
+    "name": "CIA Memorandum: Puerto Rico Coast Incident (1965)",
+    "category": "War.gov UFO files 05",
+    "description": "[CIA] Scientific Intelligence memoranda documenting radar-visual tracking and Navy pilot observations of a submerged/aerial trans-medium craft off the western coast of Puerto Rico.",
+    "date": 1965,
+    "coordinates": [
+      -66.5901,
+      18.2208
+    ],
+    "source": "Department of War PURSUE Release 5",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/CIA-UAP-D022_Puerto-Rico-Incident_1965.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/CIA-UAP-D022_Puerto-Rico-Incident_1965.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "CIA-UAP-D024",
+    "name": "CIA Report: High-Altitude Sphere Encounter (Kabul, 2002)",
+    "category": "War.gov UFO files 05",
+    "description": "[CIA] Declassified report outlining military personnel reports of a small, reflective sphere traversing restricted airspace at extreme altitude near Kabul, Afghanistan.",
+    "date": 2002,
+    "coordinates": [
+      69.1725,
+      34.5285
+    ],
+    "source": "Department of War PURSUE Release 5",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/CIA-UAP-D024_Kabul_Sphere_2002.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/CIA-UAP-D024_Kabul_Sphere_2002.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "CIA-UAP-D025",
+    "name": "CIA Intercept Memo: Kabul Spherical Objects (2002)",
+    "category": "War.gov UFO files 05",
+    "description": "[CIA] Follow-up scientific intelligence memo evaluating electronic monitoring and signals intelligence metrics collected during the Kabul sphere encounters.",
+    "date": 2002,
+    "coordinates": [
+      69.19,
+      34.54
+    ],
+    "source": "Department of War PURSUE Release 5",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/CIA-UAP-D025_Kabul_Signals_Intercept_2002.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/CIA-UAP-D025_Kabul_Signals_Intercept_2002.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-D102",
+    "name": "Holloman AFB Declassified Visual Encounter Report (1964)",
+    "category": "War.gov UFO files 05",
+    "description": "[DOW] Air Force report summarizing range radar and visual logs recording three disc-shaped objects descending near the Holloman AFB landing strip in April 1964.",
+    "date": 1964,
+    "coordinates": [
+      -106.0792,
+      32.8522
+    ],
+    "source": "Department of War PURSUE Release 5",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/DOW-UAP-D102_Holloman-AFB_1964.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/DOW-UAP-D102_Holloman-AFB_1964.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-D103",
+    "name": "Kirtland AFB Weapons Storage Area Radar Logs (1980)",
+    "category": "War.gov UFO files 05",
+    "description": "[DOW] Declassified military police radar files and security logs recording an unidentified contact maneuvering directly over the nuclear weapons storage complex.",
+    "date": 1980,
+    "coordinates": [
+      -106.505,
+      35.039
+    ],
+    "source": "Department of War PURSUE Release 5",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/DOW-UAP-D103_Kirtland-AFB-Storage-Radar_1980.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/DOW-UAP-D103_Kirtland-AFB-Storage-Radar_1980.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-D104",
+    "name": "Malmstrom AFB Missile Flight Shutdown Assessment (1975)",
+    "category": "War.gov UFO files 05",
+    "description": "[DOW] Internal Strategic Air Command engineering report reviewing systemic control line failures during the November 1975 UAP swarm flyover above Malmstrom AFB missile fields.",
+    "date": 1975,
+    "coordinates": [
+      -111.183,
+      47.508
+    ],
+    "source": "Department of War PURSUE Release 5",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/DOW-UAP-D104_Malmstrom-AFB-Shutdown_1975.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/DOW-UAP-D104_Malmstrom-AFB-Shutdown_1975.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "FBI-UAP-PR007",
+    "name": "Special Agent Mountain Range Handheld Thermal Video (2026)",
+    "category": "War.gov UFO files 05",
+    "description": "[FBI] Declassified infrared video captured by a Special Agent on a handheld thermal imaging sensor, showing 'black hot' slow-moving spherical craft passing near a Black Hawk helicopter.",
+    "date": 2026,
+    "coordinates": [
+      -105.7821,
+      39.7392
+    ],
+    "source": "Department of War PURSUE Release 5",
+    "images": [
+      "https://www.dvidshub.net/video/1010360",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-PR007_Thermal-Video.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-PR117",
+    "name": "Gulf of Oman AC-130J Infrared Sighting Video I (2021)",
+    "category": "War.gov UFO files 05",
+    "description": "[DOW] Electro-optical infrared (EO/IR) sensor clip showing multiple cold spherical objects maneuvering dynamically near the sea surface during live-fire gunnery operations.",
+    "date": 2021,
+    "coordinates": [
+      58.5,
+      24.5
+    ],
+    "source": "Department of War PURSUE Release 5",
+    "images": [
+      "https://www.dvidshub.net/video/1010361",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/DOW-UAP-PR117_Gulf-of-Oman-Thermal-Clip-1.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-PR118",
+    "name": "Gulf of Oman AC-130J Flight Telemetry Track (2021)",
+    "category": "War.gov UFO files 05",
+    "description": "[DOW] Flight deck sensor screen capture illustrating radar overlays and dynamic vector trackings of the cold orbs near the gunship.",
+    "date": 2021,
+    "coordinates": [
+      58.52,
+      24.52
+    ],
+    "source": "Department of War PURSUE Release 5",
+    "images": [
+      "https://www.dvidshub.net/video/1010362",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/DOW-UAP-PR118_Gulf-of-Oman-Telemetry.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-PR119",
+    "name": "Gulf of Oman Target Acquisition Cam Frame (2021)",
+    "category": "War.gov UFO files 05",
+    "description": "[DOW] Mission sensor frame recording a close flyby of a single spherical UAP, showing no tail pipe, wings, or hot exhaust plumes.",
+    "date": 2021,
+    "coordinates": [
+      58.48,
+      24.48
+    ],
+    "source": "Department of War PURSUE Release 5",
+    "images": [
+      "https://www.dvidshub.net/video/1010363",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/DOW-UAP-PR119_Gulf-of-Oman-Sensor-Frame.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-PR120",
+    "name": "Gulf of Oman Multi-Sensor Thermal Track (2021)",
+    "category": "War.gov UFO files 05",
+    "description": "[DOW] Multi-spectral infrared video capturing five cold orbs flying in close, coordinated formation resembling maritime mammal movements.",
+    "date": 2021,
+    "coordinates": [
+      58.55,
+      24.55
+    ],
+    "source": "Department of War PURSUE Release 5",
+    "images": [
+      "https://www.dvidshub.net/video/1010364",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/DOW-UAP-PR120_Gulf-of-Oman-Thermal-Track.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-PR121",
+    "name": "Gulf of Oman Cockpit Audio & Radar Overlay (2021)",
+    "category": "War.gov UFO files 05",
+    "description": "[DOW] Declassified audio track sync and radar recording illustrating the gunship crew's verbal target descriptions and weapons system lock failures.",
+    "date": 2021,
+    "coordinates": [
+      58.45,
+      24.45
+    ],
+    "source": "Department of War PURSUE Release 5",
+    "images": [
+      "https://www.dvidshub.net/video/1010365",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/DOW-UAP-PR121_Gulf-of-Oman-Audio-Radar.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-PR122",
+    "name": "Gulf of Oman AC-130J Tracking Log Video (2021)",
+    "category": "War.gov UFO files 05",
+    "description": "[DOW] Target tracking sensor recording illustrating the objects accelerating from a hover to over Mach 2 in a fraction of a second.",
+    "date": 2021,
+    "coordinates": [
+      58.50,
+      24.50
+    ],
+    "source": "Department of War PURSUE Release 5",
+    "images": [
+      "https://www.dvidshub.net/video/1010366",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/DOW-UAP-PR122_Gulf-of-Oman-Tracking.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-PR123",
+    "name": "Navy UAPTF Pacific Sighting Video I (2019)",
+    "category": "War.gov UFO files 05",
+    "description": "[DOW/USN] Declassified video captured from USS Omaha deck cameras showing a dark spherical object hovering over the Pacific Ocean before descending slowly into the water.",
+    "date": 2019,
+    "coordinates": [
+      -125.0,
+      32.0
+    ],
+    "source": "Department of War PURSUE Release 5",
+    "images": [
+      "https://www.dvidshub.net/video/1010367",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/DOW-UAP-PR123_Pacific-Sighting-Video.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-PR124",
+    "name": "Navy UAPTF Pacific Radar Recording (2019)",
+    "category": "War.gov UFO files 05",
+    "description": "[DOW/USN] CIC radar room screen recording showing multiple target returns swarming a Navy destroyer group off San Diego.",
+    "date": 2019,
+    "coordinates": [
+      -125.1,
+      32.1
+    ],
+    "source": "Department of War PURSUE Release 5",
+    "images": [
+      "https://www.dvidshub.net/video/1010368",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/DOW-UAP-PR124_Pacific-Radar-CIC.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-PR125",
+    "name": "Navy UAPTF Pacific Crew Visual Overlay (2019)",
+    "category": "War.gov UFO files 05",
+    "description": "[DOW/USN] High-resolution optical bridge capture and visual triangulation record of multiple illuminated spheres hovering around Navy vessels.",
+    "date": 2019,
+    "coordinates": [
+      -124.9,
+      31.9
+    ],
+    "source": "Department of War PURSUE Release 5",
+    "images": [
+      "https://www.dvidshub.net/video/1010369",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/DOW-UAP-PR125_Pacific-Visual-Overlay.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-PR126",
+    "name": "Navy UAPTF Pacific Forward FLIR Record (2019)",
+    "category": "War.gov UFO files 05",
+    "description": "[DOW/USN] Forward-Looking Infrared sensor clip showing a spherical target flying alongside a Navy vessel at low altitude.",
+    "date": 2019,
+    "coordinates": [
+      -125.2,
+      32.2
+    ],
+    "source": "Department of War PURSUE Release 5",
+    "images": [
+      "https://www.dvidshub.net/video/1010370",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/DOW-UAP-PR126_Pacific-Forward-FLIR.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-PR127",
+    "name": "Navy UAPTF Pacific Pilot Debriefing Video (2019)",
+    "category": "War.gov UFO files 05",
+    "description": "[DOW/USN] Recorded debriefing interview of Navy pilots describing the physical characteristics and kinematics of the fast-moving Pacific spheres.",
+    "date": 2019,
+    "coordinates": [
+      -124.8,
+      31.8
+    ],
+    "source": "Department of War PURSUE Release 5",
+    "images": [
+      "https://www.dvidshub.net/video/1010371",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/DOW-UAP-PR127_Pacific-Pilot-Debrief.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-PR128",
+    "name": "CENTCOM Middle East Drone FLIR Video I (2025)",
+    "category": "War.gov UFO files 05",
+    "description": "[DOW] MQ-9 Reaper drone FLIR sensor clip tracking a spherical, metallic object traversing Middle Eastern airspace at high speed without wings or flight control surfaces.",
+    "date": 2025,
+    "coordinates": [
+      44.0,
+      33.0
+    ],
+    "source": "Department of War PURSUE Release 5",
+    "images": [
+      "https://www.dvidshub.net/video/1010376",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/DOW-UAP-PR128_CENTCOM-Drone-FLIR-1.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-PR129",
+    "name": "CENTCOM Middle East Ground Radar Track (2025)",
+    "category": "War.gov UFO files 05",
+    "description": "[DOW] Ground radar array logs recording multiple fast-moving contacts displaying non-ballistic behavior over operational areas.",
+    "date": 2025,
+    "coordinates": [
+      44.1,
+      33.1
+    ],
+    "source": "Department of War PURSUE Release 5",
+    "images": [
+      "https://www.dvidshub.net/video/1010377",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/DOW-UAP-PR129_CENTCOM-Ground-Radar.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-PR130",
+    "name": "CENTCOM Middle East Mission Sensor Log (2025)",
+    "category": "War.gov UFO files 05",
+    "description": "[DOW] Tactical data network logs detailing UAP observations and sensor anomalies reported by CENTCOM air assets.",
+    "date": 2025,
+    "coordinates": [
+      43.9,
+      32.9
+    ],
+    "source": "Department of War PURSUE Release 5",
+    "images": [
+      "https://www.dvidshub.net/video/1010374",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/DOW-UAP-PR130_CENTCOM-Sensor-Log.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-PR131",
+    "name": "CENTCOM Middle East Drone FLIR Video II (2025)",
+    "category": "War.gov UFO files 05",
+    "description": "[DOW] Follow-up MQ-9 thermal recording tracking a high-velocity spherical object executing sudden vector changes over complex desert terrain.",
+    "date": 2025,
+    "coordinates": [
+      44.2,
+      33.2
+    ],
+    "source": "Department of War PURSUE Release 5",
+    "images": [
+      "https://www.dvidshub.net/video/1010375",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/DOW-UAP-PR131_CENTCOM-Drone-FLIR-2.pdf"
+    ],
+    "type": "Point"
+  }
+]
