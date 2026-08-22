@@ -162,6 +162,16 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     pinColor: '#59DCB7',
     era: 'early-medieval'
   },
+  {
+    id: 'framauro1459',
+    name: "Fra Mauro Mappa Mundi",
+    year: "1459 AD",
+    description: "A breathtaking circular planisphere painted by Camaldolese monk Fra Mauro. Oriented with South at the top, it incorporates detailed Arab and European geographic records of Asia, Africa, and the Indian Ocean prior to the Age of Discovery.",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Fra_Mauro_Map_FactumArte.jpg/1280px-Fra_Mauro_Map_FactumArte.jpg",
+    aspectRatio: 1.0,
+    pinColor: '#59DCB7',
+    era: 'early-medieval'
+  },
   // LATE MEDIEVAL
   {
     id: 'catalan',

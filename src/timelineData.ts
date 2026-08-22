@@ -6114,6 +6114,11 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'longyou-caves': { lng: 119.149, lat: 29.062, locationName: 'Longyou Caves (Zhejiang, China)', category: 'Underworld Entrances' },
   'menehune': { lng: -159.366, lat: 21.954, locationName: 'Alekoko Menehune Fishpond (Kauaʻi, Hawaii)', category: 'Cryptid Sightings' },
   'khazars': { lng: 48.030, lat: 46.349, locationName: 'Atil (Khazar Khaganate Capital)', category: 'Ancient People Groups' },
+  'polycarp': { lng: 27.138, lat: 38.419, locationName: 'Smyrna (Izmir, Turkey)', category: 'Religion' },
+  'moundbuilders': { lng: -90.062, lat: 38.655, locationName: 'Monks Mound (Cahokia Mounds, Illinois)', category: 'Burial Mounds' },
+  'hopewell-culture': { lng: -82.434, lat: 40.052, locationName: 'Newark Earthworks (Newark, Ohio)', category: 'Burial Mounds' },
+  'mississippian-culture': { lng: -90.062, lat: 38.655, locationName: 'Cahokia Mounds (Collinsville, Illinois)', category: 'Burial Mounds' },
+  'fort-ancient-culture': { lng: -83.430, lat: 39.025, locationName: 'Serpent Mound (Adams County, Ohio)', category: 'Burial Mounds' },
   'church-of-satan-founding': { lng: -122.4855, lat: 37.7845, locationName: 'The Black House (San Francisco, CA)', category: 'The Occult' },
   'temple-of-set-founding': { lng: -122.427, lat: 37.769, locationName: 'San Francisco, California', category: 'The Occult' },
   

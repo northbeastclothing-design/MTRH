@@ -39085,6 +39085,99 @@ const chunk_user_requested_terms: any[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Chasaren.jpg/500px-Chasaren.jpg'],
     sources: ['The Thirteenth Tribe (Arthur Koestler)', 'The Khazar Correspondence (950s)', 'Instagram Reel Overview (https://www.instagram.com/reel/Daf32x6lfZJ/?igsh=MWQwNXEwNGdkY2p4Mg==)'],
     relatedIds: ['people-groups']
+  },
+  {
+    id: 'polycarp',
+    parentId: 'biblical-apocryphal',
+    name: 'Polycarp of Smyrna',
+    description: '2nd-century Christian bishop of Smyrna, Apostolic Father, and direct disciple of John the Apostle. Recorded by Irenaeus, Polycarp served as a crucial link between the original eyewitnesses of Jesus Christ and early Christian theology. He was martyred around 155 CE in the amphitheater of Smyrna, refusing to burn incense to the Roman emperor.',
+    layer: 'Religion',
+    timelineId: 'polycarp',
+    mapFeatureId: 'polycarp',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Saint_Polycarp_mosaic_Smyrna.jpg/500px-Saint_Polycarp_mosaic_Smyrna.jpg'],
+    sources: ['Epistle of Polycarp to the Philippians', 'Martyrdom of Polycarp (c. 155 CE)', 'Irenaeus - Against Heresies'],
+    relatedIds: ['john-the-apostle', 'biblical-apocryphal', 'biblical-figures']
+  },
+  {
+    id: 'moundbuilders',
+    parentId: 'people-groups',
+    name: 'Moundbuilders',
+    description: 'Prehistoric Native American civilizations across North America who constructed massive earthen burial, effigy, and platform mounds across the Mississippi, Ohio, and Missouri river valleys between 3500 BCE and the 16th century. In antiquarian and esoteric lore, mound sites are celebrated for their sophisticated astronomical alignments, copper metallurgy, and historical records of giant skeleton discoveries.',
+    layer: 'Burial Mounds',
+    timelineId: 'moundbuilders',
+    mapFeatureId: 'moundbuilders',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Cahokia_Mounds_Monks_Mound.jpg/500px-Cahokia_Mounds_Monks_Mound.jpg'],
+    sources: ['Smithsonian Institution Mound Explorations (1894)', 'Cahokia Mounds Historical Record'],
+    relatedIds: ['adena-culture', 'hopewell-culture', 'mississippian-culture', 'fort-ancient-culture', 'burial-mounds']
+  },
+  {
+    id: 'adena-culture',
+    parentId: 'moundbuilders',
+    name: 'Adena Culture',
+    description: 'Early Woodland Period moundbuilding culture (c. 1000 BCE – 100 CE) centered in the Ohio River Valley (Ohio, West Virginia, Indiana, Kentucky). Renowned for constructing large conical burial mounds (such as Grave Creek Mound and Adena Mound), tubular pipes, engraved stone tablets, and elaborate copper gorgets.',
+    layer: 'Burial Mounds',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Grave_Creek_Mound_2008.jpg/500px-Grave_Creek_Mound_2008.jpg'],
+    sources: ['Grave Creek Mound Archaeological Survey', 'Ohio Historical Society Archives'],
+    relatedIds: ['moundbuilders', 'hopewell-culture', 'burial-mounds']
+  },
+  {
+    id: 'hopewell-culture',
+    parentId: 'moundbuilders',
+    name: 'Hopewell Culture',
+    description: 'Middle Woodland Period civilization (c. 100 BCE – 500 CE) famous for constructing vast geometric earthworks (such as the Newark Earthworks and Mound City), complex lunar/solar alignments, and an extensive transcontinental trade network exchanging Rocky Mountain obsidian, Gulf Coast copper, and Michigan mica.',
+    layer: 'Burial Mounds',
+    timelineId: 'hopewell-culture',
+    mapFeatureId: 'hopewell-culture',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Newark_Earthworks_Octagon.jpg/500px-Newark_Earthworks_Octagon.jpg'],
+    sources: ['Ancient Monuments of the Mississippi Valley (Squier & Davis, 1848)', 'Newark Earthworks State Memorial'],
+    relatedIds: ['moundbuilders', 'adena-culture', 'mississippian-culture']
+  },
+  {
+    id: 'mississippian-culture',
+    parentId: 'moundbuilders',
+    name: 'Mississippian Culture',
+    description: 'Late prehistoric moundbuilder civilization (c. 800 – 1600 CE) characterized by large urban ceremonial centers with massive truncated pyramid platform mounds, intensive maize agriculture, chiefdom politics, and intricate Southeastern Ceremonial Complex artwork.',
+    layer: 'Burial Mounds',
+    timelineId: 'mississippian-culture',
+    mapFeatureId: 'mississippian-culture',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Cahokia_Mounds_Monks_Mound.jpg/500px-Cahokia_Mounds_Monks_Mound.jpg'],
+    sources: ['Cahokia: Ancient America\'s Great City on the Mississippi', 'Southeastern Archaeological Conference Records'],
+    relatedIds: ['moundbuilders', 'hopewell-culture', 'cahokia']
+  },
+  {
+    id: 'fort-ancient-culture',
+    parentId: 'moundbuilders',
+    name: 'Fort Ancient Culture',
+    description: 'Late prehistoric culture (c. 1000 – 1750 CE) in southern Ohio and northern Kentucky along the Ohio River Valley. Attributed with constructing or refurbishing the world-famous Serpent Mound effigy in Adams County, Ohio.',
+    layer: 'Burial Mounds',
+    timelineId: 'fort-ancient-culture',
+    mapFeatureId: 'fort-ancient-culture',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Serpent_Mound%2C_Peebles%2C_Ohio_04.jpg/500px-Serpent_Mound%2C_Peebles%2C_Ohio_04.jpg'],
+    sources: ['Serpent Mound State Memorial Records', 'Ohio Historical Society Research'],
+    relatedIds: ['moundbuilders', 'hopewell-culture']
+  },
+  {
+    id: 'ubermensch',
+    parentId: 'nietzsche',
+    name: 'Übermensch (The Overman)',
+    description: 'Philosophical concept introduced by Friedrich Nietzsche in "Thus Spoke Zarathustra" (1883), representing the self-mastered individual who transcends conventional morality to create new meaning. In esoteric traditions and pop culture, the concept heavily influenced early 20th-century occult secret societies, Hermetic Order of the Golden Dawn lore, Thelema, and served as the direct conceptual precursor to Siegel and Shuster\'s creation of Superman (Kal-El).',
+    layer: 'The Occult',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Nietzsche187a.jpg/330px-Nietzsche187a.jpg'],
+    sources: ['Thus Spoke Zarathustra (Nietzsche, 1883)', 'The Reign of the Superman (Siegel & Shuster, 1933)'],
+    relatedIds: ['nietzsche', 'kal-el-superman', 'folklore-archetypes-comparative']
+  },
+  {
+    id: 'interstellar-uap-alien',
+    parentId: 'ufos',
+    name: 'Interstellar UAP & Alien Anomaly',
+    description: 'Anomalous Unidentified Aerial Phenomena (UAP) and high-altitude trans-medium vehicle recordings captured via military FLIR/infrared sensors and high-resolution tracking telemetry. Displays non-ballistic acceleration, instant directional shifts, and trans-medium liquid-to-air travel without visible thermal plumes or aerodynamic control surfaces.',
+    layer: 'UFOs - Sightings',
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Gray_Alien_at_UFO_Museum%2C_Roswell_%28cropped%29.jpg/500px-Gray_Alien_at_UFO_Museum%2C_Roswell_%28cropped%29.jpg',
+      'https://www.youtube.com/embed/0my1weBD67w'
+    ],
+    sources: ['Interstellar UAP Analysis', 'Military FLIR/Infrared UAP Telemetry', 'UAP Whistleblower Testimony'],
+    relatedIds: ['ufos', 'ufo-sightings', 'skinny-bob', 'kumburgaz-ufo']
   }
 ];
 
