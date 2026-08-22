@@ -39094,7 +39094,7 @@ const chunk_user_requested_terms: any[] = [
     layer: 'Religion',
     timelineId: 'polycarp',
     mapFeatureId: 'polycarp',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Saint_Polycarp_mosaic_Smyrna.jpg/500px-Saint_Polycarp_mosaic_Smyrna.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Polycarp_of_Smyrna2.jpg/330px-Polycarp_of_Smyrna2.jpg'],
     sources: ['Epistle of Polycarp to the Philippians', 'Martyrdom of Polycarp (c. 155 CE)', 'Irenaeus - Against Heresies'],
     relatedIds: ['john-the-apostle', 'biblical-apocryphal', 'biblical-figures']
   },
@@ -39106,7 +39106,7 @@ const chunk_user_requested_terms: any[] = [
     layer: 'Burial Mounds',
     timelineId: 'moundbuilders',
     mapFeatureId: 'moundbuilders',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Cahokia_Mounds_Monks_Mound.jpg/500px-Cahokia_Mounds_Monks_Mound.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Monks_Mound_in_July.JPG/330px-Monks_Mound_in_July.JPG'],
     sources: ['Smithsonian Institution Mound Explorations (1894)', 'Cahokia Mounds Historical Record'],
     relatedIds: ['adena-culture', 'hopewell-culture', 'mississippian-culture', 'fort-ancient-culture', 'burial-mounds']
   },
@@ -39116,7 +39116,7 @@ const chunk_user_requested_terms: any[] = [
     name: 'Adena Culture',
     description: 'Early Woodland Period moundbuilding culture (c. 1000 BCE – 100 CE) centered in the Ohio River Valley (Ohio, West Virginia, Indiana, Kentucky). Renowned for constructing large conical burial mounds (such as Grave Creek Mound and Adena Mound), tubular pipes, engraved stone tablets, and elaborate copper gorgets.',
     layer: 'Burial Mounds',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Grave_Creek_Mound_2008.jpg/500px-Grave_Creek_Mound_2008.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Ohio_Arch_Cultures_map_HRoe_2008.jpg/330px-Ohio_Arch_Cultures_map_HRoe_2008.jpg'],
     sources: ['Grave Creek Mound Archaeological Survey', 'Ohio Historical Society Archives'],
     relatedIds: ['moundbuilders', 'hopewell-culture', 'burial-mounds']
   },
@@ -39128,7 +39128,7 @@ const chunk_user_requested_terms: any[] = [
     layer: 'Burial Mounds',
     timelineId: 'hopewell-culture',
     mapFeatureId: 'hopewell-culture',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Newark_Earthworks_Octagon.jpg/500px-Newark_Earthworks_Octagon.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Hopewell_Exchange_Network_HRoe_2010.jpg/330px-Hopewell_Exchange_Network_HRoe_2010.jpg'],
     sources: ['Ancient Monuments of the Mississippi Valley (Squier & Davis, 1848)', 'Newark Earthworks State Memorial'],
     relatedIds: ['moundbuilders', 'adena-culture', 'mississippian-culture']
   },
@@ -39140,7 +39140,7 @@ const chunk_user_requested_terms: any[] = [
     layer: 'Burial Mounds',
     timelineId: 'mississippian-culture',
     mapFeatureId: 'mississippian-culture',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Cahokia_Mounds_Monks_Mound.jpg/500px-Cahokia_Mounds_Monks_Mound.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Monks_Mound_in_July.JPG/330px-Monks_Mound_in_July.JPG'],
     sources: ['Cahokia: Ancient America\'s Great City on the Mississippi', 'Southeastern Archaeological Conference Records'],
     relatedIds: ['moundbuilders', 'hopewell-culture', 'cahokia']
   },
