@@ -6478,7 +6478,7 @@ const chunk_1: any[] = [  {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-240',
     parentId: 'giant-skeletal-finds',
     name: '17 ft Petrified Giant Skeleton - Flagstaff, Arizona',
-    description: 'Very large petrified Giant skeleton possibly between 11’-17’ tall discovered in cavern near Flagstaff, Arizona. Footprints 👣 in the stone floor were also seen with a stride of five feet.',
+    description: 'Very large petrified Giant skeleton possibly between 11’-17’ tall discovered in cavern near Flagstaff, Arizona. Footprints in the stone floor were also seen with a stride of five feet.',
     layer: 'Giants & Nephilim',
     mapFeatureId: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-240',
     images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6I0-76NdwZzxvLhfdYrXWHUm6BIuy_D4TeMX4ZrLtYaw141HYNBMyfc22AyT7Z0uCnHGbLHGEV4DOiaZiiRI7Bj8DSUa2TGQoIvLcLFT8Ydi68p0VR38zTBatEz2aQ7Sj673JtMFGa_oy9wCnAsqTDz7xoLuJWTU9u-qThg9HEsm5_TUTe5YNAU3JRrJ6bGGwGh7AqUfqSIWpQclV8SMiFuzstvRW8s09VgSABUOLp5gW2N0ZnkpL1C4A?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5ywOOMINNPHTHOVL7OMsWxXeg3UQh6Qe1_Q9hNFS-2rHmtorWwolVWPfs32mqhUgiUgbfRK7oCNSDJ4kbqQJ8x9Or2WzFgOGrEsddwe38tTGEuPVm1EBgXkFeYg6tfY5zKlBYtlFecSe598cwRuNF4GCimTaNMV0WzSBgWD-jP9zDsipwjMN4knZsfoCqwRZRgJk9hon4HBkKRo1dMgrF-yulctinj-RUN2Sytjd8DK8aIzKsW_-o19_E?authuser=0&fife=s16383', 'https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6Z30tbXRlyqllZ_fvvOzHEOLkPRCbF7pO4mPbMNCDgyevmAffC7K8USQBjTgHD4-PZflpdOIONDNmrAt4k5eOXJNdoFxUu1aTYy8N_FWrgyLtl8C8ZaSn0A4Hw1JkxOSjS8YcM1OaOzHdwEukEHTPMB4dUuou-9nVZDagajn1YlB2XuMjl9B-U7ecpvnW1kQzZnSUyIcaSD8u9FinqKf5KvKHQ8X2eQjBJ0G6stDsiNW8gI385ezrZEzM?authuser=0&fife=s16383'],
