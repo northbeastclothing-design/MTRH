@@ -435,10 +435,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
 
 const getProxyOrDirectUrl = (url: string): string => {
   if (!url) return url;
-  const lowerUrl = url.toLowerCase();
-  if (lowerUrl.includes('wikimedia.org') || lowerUrl.includes('wikipedia.org')) {
-    return `https://images.weserv.nl/?url=${encodeURIComponent(url)}`;
-  }
+  if (url.startsWith('/')) return url;
   return `/api/proxy-resource?url=${encodeURIComponent(url)}`;
 };
 

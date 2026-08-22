@@ -624,7 +624,7 @@ const cleanAndProxyImageUrl = (url: any) => {
   
   const isWiki = lowerUrl.includes('wikimedia.org') || lowerUrl.includes('wikipedia.org');
   if (isWiki || lowerUrl.includes('temporarytemples.co.uk')) {
-    return `https://images.weserv.nl/?url=${encodeURIComponent(trimmedUrl)}`;
+    return `/api/proxy-resource?url=${encodeURIComponent(trimmedUrl)}`;
   }
   
   if (
