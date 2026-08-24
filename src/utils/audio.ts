@@ -4,6 +4,11 @@ let bgMusicNode: AudioBufferSourceNode | null = null;
 let bgMusicGainNode: GainNode | null = null;
 const BG_MUSIC_PATH = '/sfx/background-music-freesound_community-natural-armonics-at-136-25159.mp3';
 
+function isTabActive(): boolean {
+  if (typeof document === 'undefined') return true;
+  return !document.hidden && document.visibilityState === 'visible';
+}
+
 function getAudioContext(): AudioContext | null {
   if (typeof window === 'undefined') return null;
   if (!audioCtx) {
@@ -12,6 +17,15 @@ function getAudioContext(): AudioContext | null {
       audioCtx = new AudioContextClass();
     }
   }
+
+  // If the browser tab is currently hidden or backgrounded, suspend AudioContext and do not play audio
+  if (!isTabActive()) {
+    if (audioCtx && audioCtx.state === 'running') {
+      audioCtx.suspend().catch(() => {});
+    }
+    return audioCtx;
+  }
+
   if (audioCtx && audioCtx.state === 'suspended') {
     audioCtx.resume().then(() => {
       startBackgroundMusic(audioCtx!);
@@ -477,4 +491,55 @@ if (typeof window !== 'undefined' && !(window as any).__MTRH_AUDIO_LISTENERS_INI
       // Silent catch
     }
   }, true); // Use capture phase to ensure it triggers before event stopPropagation inside pages
+
+  // Automatic Tab Visibility & Active Focus Listener
+  // Instantly suspends background music and UI audio whenever the browser tab is hidden or backgrounded,
+  // and resumes audio seamlessly when the user returns to the active tab.
+  const handleVisibilityChange = () => {
+    try {
+      if (!audioCtx) return;
+
+      const isHidden = document.hidden || document.visibilityState === 'hidden';
+
+      if (isHidden) {
+        if (audioCtx.state === 'running') {
+          audioCtx.suspend().catch(() => {});
+        }
+        // Pause any HTML5 audio or video elements playing on the page
+        document.querySelectorAll('audio, video').forEach(media => {
+          try {
+            (media as HTMLMediaElement).pause();
+          } catch (e) {}
+        });
+      } else if (document.visibilityState === 'visible') {
+        if (audioCtx.state === 'suspended') {
+          audioCtx.resume().then(() => {
+            startBackgroundMusic(audioCtx!);
+          }).catch(() => {});
+        }
+      }
+    } catch (err) {
+      // Silent catch
+    }
+  };
+
+  document.addEventListener('visibilitychange', handleVisibilityChange);
+
+  window.addEventListener('blur', () => {
+    try {
+      if (audioCtx && audioCtx.state === 'running') {
+        audioCtx.suspend().catch(() => {});
+      }
+    } catch (e) {}
+  });
+
+  window.addEventListener('focus', () => {
+    try {
+      if (audioCtx && !document.hidden && document.visibilityState === 'visible' && audioCtx.state === 'suspended') {
+        audioCtx.resume().then(() => {
+          startBackgroundMusic(audioCtx!);
+        }).catch(() => {});
+      }
+    } catch (e) {}
+  });
 }
