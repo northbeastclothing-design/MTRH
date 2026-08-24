@@ -1120,7 +1120,7 @@ const CategoryLayerHeader = ({
           }}
         />
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flex: 1, textAlign: 'left', zIndex: 1, position: 'relative' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flex: 1, minWidth: 0, textAlign: 'left', zIndex: 1, position: 'relative', overflow: 'hidden' }}>
           <div style={{ width: '32px', height: '32px', minWidth: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
             <img 
               src={getCategoryIcon(layerName)} 
@@ -1129,14 +1129,25 @@ const CategoryLayerHeader = ({
               alt={layerName} 
             />
           </div>
-          <span style={{ 
-            fontSize: '10px', 
-            lineHeight: '24px',
-            fontWeight: isActive ? '700' : '400', 
-            fontFamily: '"Space Mono", monospace', 
-            opacity: isActive ? 1 : 0.5,
-            transition: 'opacity 0.3s ease-in-out'
-          }}>
+          <span 
+            title={toTitleCase(layerName)}
+            style={{ 
+              fontSize: '10px', 
+              lineHeight: '24px',
+              fontWeight: isActive ? '700' : '400', 
+              fontFamily: '"Space Mono", monospace', 
+              opacity: isActive ? 1 : 0.5,
+              transition: 'opacity 0.3s ease-in-out',
+              whiteSpace: 'nowrap',
+              overflow: 'hidden',
+              textOverflow: 'clip',
+              maskImage: 'linear-gradient(to right, #000 70%, transparent 100%)',
+              WebkitMaskImage: 'linear-gradient(to right, #000 70%, transparent 100%)',
+              display: 'block',
+              flex: 1,
+              minWidth: 0
+            }}
+          >
             {toTitleCase(layerName)}
           </span>
         </div>

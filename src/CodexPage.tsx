@@ -702,6 +702,7 @@ const CodexCategoryHeader = ({
           />
         </div>
         <span
+          title={node.name}
           style={{
             fontSize: '10px',
             lineHeight: '24px',
@@ -710,9 +711,13 @@ const CodexCategoryHeader = ({
             letterSpacing: '0.5px',
             whiteSpace: 'nowrap',
             overflow: 'hidden',
-            textOverflow: 'ellipsis',
+            textOverflow: 'clip',
+            maskImage: 'linear-gradient(to right, #000 70%, transparent 100%)',
+            WebkitMaskImage: 'linear-gradient(to right, #000 70%, transparent 100%)',
             opacity: 1,
-            color: isSelected ? '#ffffff' : theme.text
+            color: isSelected ? '#ffffff' : theme.text,
+            flex: 1,
+            minWidth: 0
           }}
         >
           {node.name}
