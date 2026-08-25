@@ -1,5 +1,18 @@
 [
   {
+    "id": "kumburgaz-ufo",
+    "name": "Kumburgaz UFO Footage",
+    "category": "UFOs - Sightings",
+    "description": "Famous series of night-vision UFO video footage captured between 2007 and 2009 by night watchman Yalcin Yalman in Kumburgaz, Turkey. Examined by the SIRIUS UFO Space Sciences Research Center and TÜBİTAK (National Technology Research Council), the zoomed footage depicts a disc-shaped craft hovering over the Sea of Marmara with two humanoid figures visible inside the cockpit area.",
+    "date": 2007,
+    "coordinates": [
+      28.468,
+      41.034
+    ],
+    "source": "SIRIUS UFO Space Sciences Research Center Report / TÜBİTAK Analysis",
+    "type": "Point"
+  },
+  {
     "id": "ufo-real-ki1bx4hnj",
     "name": "San Marcos, Texas (#4hnj)",
     "category": "UFO / UAP Sightings",

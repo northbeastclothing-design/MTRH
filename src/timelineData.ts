@@ -5235,15 +5235,6 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     description: 'Bill Cooper publishes Behold a Pale Horse, introducing major underground ideas on secret treaties, alien cover-ups, and the New World Order.',
     source: 'Behold a Pale Horse'
   }, {
-    id: 'kumburgaz-ufo',
-    name: 'Kumburgaz UFO Footage',
-    type: 'event',
-    layer: 'UFOs - Sightings',
-    start: 2007,
-    end: 2009,
-    description: 'Famous series of night-vision UFO video footage captured between 2007 and 2009 by night watchman Yalcin Yalman in Kumburgaz, Turkey. Examined by the SIRIUS UFO Space Sciences Research Center and TÜBİTAK (National Technology Research Council), the zoomed footage depicts a disc-shaped craft hovering over the Sea of Marmara with two humanoid figures visible inside the cockpit area.',
-    source: 'SIRIUS UFO Space Sciences Research Center Report / TÜBİTAK Analysis'
-  }, {
     id: 'vatican-observatory',
     name: 'VATT Completed at Mount Graham',
     type: 'event',
