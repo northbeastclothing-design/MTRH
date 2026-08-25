@@ -1243,7 +1243,13 @@ function App() {
   const [cattleMutilationData, setCattleMutilationData] = useState<any[]>([]);
   const [oldWorldStructuresData, setOldWorldStructuresData] = useState<any[]>([]);
   const [vanishedShipsAircraftData, setVanishedShipsAircraftData] = useState<any[]>([]);
-  const [savedPasscode, setSavedPasscode] = useState('');
+  const [savedPasscode, setSavedPasscode] = useState(() => {
+    try {
+      return sessionStorage.getItem('mtrh_mod_passcode') || '';
+    } catch (e) {
+      return '';
+    }
+  });
   const [approvedSubmissions, setApprovedSubmissions] = useState<any[]>([]);
   const [isLiveLoading, setIsLiveLoading] = useState(true);
   const [isInitialLoad, setIsInitialLoad] = useState(true);
@@ -1251,6 +1257,20 @@ function App() {
   const [isDataCompiled, setIsDataCompiled] = useState(false);
   const [showAboutModal, setShowAboutModal] = useState(() => {
     try {
+      const path = window.location.pathname.toLowerCase();
+      const hash = window.location.hash.toLowerCase();
+      const isModUrl = 
+        path === '/mod' || 
+        path === '/moderator' || 
+        path === '/moderate' || 
+        path.endsWith('/mod') || 
+        path.endsWith('/moderator') || 
+        path.endsWith('/moderate') || 
+        hash.includes('mod') || 
+        hash.includes('moderator') || 
+        hash.includes('moderate');
+      if (isModUrl) return false;
+
       const params = new URLSearchParams(window.location.search);
       const hasDeepLink = params.has('termId') || params.has('itemId') || params.has('featureId') || params.has('mapId') || params.has('lat') || params.has('lng');
       return !hasDeepLink;
@@ -1432,6 +1452,9 @@ function App() {
       }
 
       setSavedPasscode(moderatorPasscode);
+      try {
+        sessionStorage.setItem('mtrh_mod_passcode', moderatorPasscode);
+      } catch (e) {}
       setIsModeratorAuthenticated(true);
       setModeratorPasscode('');
     } catch (err: any) {
@@ -1930,7 +1953,13 @@ function App() {
     );
   });
   const [moderatorPasscode, setModeratorPasscode] = useState('');
-  const [isModeratorAuthenticated, setIsModeratorAuthenticated] = useState(false);
+  const [isModeratorAuthenticated, setIsModeratorAuthenticated] = useState(() => {
+    try {
+      return !!sessionStorage.getItem('mtrh_mod_passcode');
+    } catch (e) {
+      return false;
+    }
+  });
   const [moderatorError, setModeratorError] = useState<string | null>(null);
   const [currentUser, setCurrentUser] = useState<any>(null);
   const [pendingSubmissions, setPendingSubmissions] = useState<any[]>([]);
@@ -1938,7 +1967,29 @@ function App() {
   const [submittingRejectionId, setSubmittingRejectionId] = useState<string | null>(null);
   const [moderatorReloadTrigger, setModeratorReloadTrigger] = useState(0);
   const [isModMinimized, setIsModMinimized] = useState(false);
-  const [activeModTab, setActiveModTab] = useState<'pending' | 'approved' | 'reports' | 'cartography'>('pending');
+  // Helper to parse active mod tab from URL search or hash
+  const getInitialModTab = (): 'pending' | 'approved' | 'reports' | 'cartography' => {
+    try {
+      const searchParams = new URLSearchParams(window.location.search);
+      let tab = searchParams.get('tab');
+      if (!tab && window.location.hash.includes('tab=')) {
+        const hashQuery = window.location.hash.substring(window.location.hash.indexOf('?') + 1);
+        const hashParams = new URLSearchParams(hashQuery);
+        tab = hashParams.get('tab');
+      }
+      if (!tab && (window.location.pathname.toLowerCase().includes('reports') || window.location.hash.toLowerCase().includes('reports'))) {
+        tab = 'reports';
+      }
+      if (tab === 'reports' || tab === 'approved' || tab === 'cartography' || tab === 'pending') {
+        return tab;
+      }
+    } catch (e) {
+      // fallback
+    }
+    return 'pending';
+  };
+
+  const [activeModTab, setActiveModTab] = useState<'pending' | 'approved' | 'reports' | 'cartography'>(getInitialModTab);
   const [submittingRevocationId, setSubmittingRevocationId] = useState<string | null>(null);
 
   // Custom Cartography Pins Moderation States
@@ -2014,12 +2065,31 @@ function App() {
       if (isModUrl) {
         setIsModeratorOpen(true);
         setIsModMinimized(false);
+        const targetTab = getInitialModTab();
+        if (targetTab) {
+          setActiveModTab(targetTab);
+        }
       }
     };
     checkModUrl();
     window.addEventListener('hashchange', checkModUrl);
-    return () => window.removeEventListener('hashchange', checkModUrl);
+    window.addEventListener('popstate', checkModUrl);
+    return () => {
+      window.removeEventListener('hashchange', checkModUrl);
+      window.removeEventListener('popstate', checkModUrl);
+    };
   }, []);
+
+  // Auto-switch to reports tab if user opens moderator desk without specifying a tab, pending submissions is empty, but pending inaccuracy reports exist
+  useEffect(() => {
+    if (isModeratorOpen && activeModTab === 'pending' && pendingSubmissions.length === 0) {
+      const hasPendingReports = reports.some(r => r.status === 'pending');
+      const searchParams = new URLSearchParams(window.location.search);
+      if (!searchParams.has('tab') && hasPendingReports) {
+        setActiveModTab('reports');
+      }
+    }
+  }, [isModeratorOpen, pendingSubmissions.length, reports]);
 
   const handleStartEdit = (sub: any) => {
     setEditingSubId(sub.id);
@@ -3518,6 +3588,10 @@ function App() {
       } else if (path.startsWith('/mod') || path.startsWith('/moderator') || path.startsWith('/moderate')) {
         setCurrentPage('map');
         setIsModeratorOpen(true);
+        const targetTab = getInitialModTab();
+        if (targetTab) {
+          setActiveModTab(targetTab);
+        }
       } else if (path.startsWith('/cartography')) {
         setCurrentPage('cartography');
         setIsModeratorOpen(false);
@@ -3731,15 +3805,17 @@ function App() {
 
   // Onboarding Tour Trigger (after entering About Modal or manually requested)
   useEffect(() => {
-    if (!showAboutModal && !isLiveLoading) {
+    if (!showAboutModal && !isLiveLoading && !isModeratorOpen) {
       const params = new URLSearchParams(window.location.search);
       const hasDeepLink = params.has('termId') || params.has('itemId') || params.has('featureId') || params.has('mapId') || params.has('lat') || params.has('lng');
       const completed = localStorage.getItem('mtrh_onboarding_completed');
       if (!completed && !hasDeepLink) {
         setOnboardingStep(0);
       }
+    } else if (isModeratorOpen) {
+      setOnboardingStep(null);
     }
-  }, [showAboutModal, isLiveLoading]);
+  }, [showAboutModal, isLiveLoading, isModeratorOpen]);
 
   // Synchronize UI panels with onboarding steps
   useEffect(() => {
@@ -3968,7 +4044,6 @@ function App() {
     }
 
     let isMounted = true;
-    let fallbackInterval: any = null;
 
     const fetchReportsFromServer = async () => {
       try {
@@ -3982,15 +4057,26 @@ function App() {
           throw new Error(`Server status ${response.status}`);
         }
         const data = await response.json();
-        if (isMounted) {
-          setReports(data.reports || []);
+        if (isMounted && Array.isArray(data.reports)) {
+          setReports(prev => {
+            const map = new Map();
+            (prev || []).forEach((r: any) => { if (r && r.id) map.set(String(r.id), r); });
+            (data.reports || []).forEach((r: any) => { if (r && r.id) map.set(String(r.id), r); });
+            const list = Array.from(map.values());
+            list.sort((a, b) => {
+              const dateA = a.createdAt ? new Date(a.createdAt).getTime() : 0;
+              const dateB = b.createdAt ? new Date(b.createdAt).getTime() : 0;
+              return dateB - dateA;
+            });
+            return list;
+          });
         }
       } catch (err: any) {
         console.warn("Server-side reports fetch failed:", err);
       }
     };
 
-    // Try listening to firestore snapshot first
+    // Listen to client-side firestore snapshot if available
     const q = collection(db, 'reports');
     const unsubscribe = onSnapshot(q, (snapshot) => {
       const reportsList: any[] = [];
@@ -4007,32 +4093,31 @@ function App() {
         });
       });
 
-      // Sort by createdAt descending
-      reportsList.sort((a, b) => {
-        const dateA = a.createdAt ? new Date(a.createdAt).getTime() : 0;
-        const dateB = b.createdAt ? new Date(b.createdAt).getTime() : 0;
-        return dateB - dateA;
-      });
-
-      if (isMounted) {
-        setReports(reportsList);
+      if (isMounted && reportsList.length > 0) {
+        setReports(prev => {
+          const map = new Map();
+          (prev || []).forEach((r: any) => { if (r && r.id) map.set(String(r.id), r); });
+          reportsList.forEach((r: any) => { if (r && r.id) map.set(String(r.id), r); });
+          const list = Array.from(map.values());
+          list.sort((a, b) => {
+            const dateA = a.createdAt ? new Date(a.createdAt).getTime() : 0;
+            const dateB = b.createdAt ? new Date(b.createdAt).getTime() : 0;
+            return dateB - dateA;
+          });
+          return list;
+        });
       }
     }, (error) => {
-      console.warn("Could not load reports list directly from Firestore client. Switching to secure server proxy...", error);
-      fetchReportsFromServer();
-      if (isMounted && !fallbackInterval) {
-        fallbackInterval = setInterval(fetchReportsFromServer, 5000);
-      }
+      console.warn("Direct Firestore reports listener unhandled, using server fallback:", error);
     });
 
     fetchReportsFromServer();
+    const interval = setInterval(fetchReportsFromServer, 5000);
 
     return () => {
       isMounted = false;
       unsubscribe();
-      if (fallbackInterval) {
-        clearInterval(fallbackInterval);
-      }
+      clearInterval(interval);
     };
   }, [isModeratorAuthenticated, moderatorReloadTrigger]);
 
@@ -4112,11 +4197,11 @@ function App() {
 
     const reportId = `report_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`;
     const reportData = {
-      pointId: String(reportedFeature.id),
-      pointName: String(reportedFeature.name || reportedFeature.title || 'Unnamed Point'),
-      pointCategory: String(reportedFeature.category || reportedFeature.layer || 'General'),
-      reason: reportReason,
-      details: reportDetails.trim(),
+      pointId: String(reportedFeature.id).slice(0, 128),
+      pointName: String(reportedFeature.name || reportedFeature.title || 'Unnamed Point').slice(0, 200),
+      pointCategory: String(reportedFeature.category || reportedFeature.layer || 'General').slice(0, 100),
+      reason: reportReason.slice(0, 100),
+      details: reportDetails.trim().slice(0, 2000),
       status: 'pending',
       createdAt: new Date().toISOString()
     };
@@ -4156,6 +4241,7 @@ function App() {
       }
     } finally {
       setIsSubmittingReport(false);
+      setModeratorReloadTrigger(prev => prev + 1);
     }
   };
 
@@ -8604,7 +8690,7 @@ function App() {
 
       {/* GLOBAL FULL-SCREEN LOADER OVERLAY */}
       <AnimatePresence>
-        {(isInitialLoad && isLiveLoading) && (
+        {(isInitialLoad && isLiveLoading && !isModeratorOpen) && (
           <motion.div 
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -12106,7 +12192,7 @@ function App() {
 
       {/* ABOUT MODAL */}
       <AnimatePresence>
-        {showAboutModal && (
+        {(showAboutModal && !isModeratorOpen) && (
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

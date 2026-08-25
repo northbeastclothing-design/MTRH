@@ -678,7 +678,7 @@ ${modLink}
 
       // Trigger inaccuracy report email notification in the background
       const appUrl = process.env.APP_URL || "https://mappingtherabbithole.com";
-      const modLink = `${appUrl}/moderator`;
+      const modLink = `${appUrl}/moderator?tab=reports`;
       
       const subject = `[MTRH] Inaccuracy Flag: ${reportData.pointName}`;
       const textBody = `An inaccuracy flag (report) has been submitted for moderation review.
