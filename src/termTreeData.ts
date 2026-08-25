@@ -39169,14 +39169,16 @@ const chunk_user_requested_terms: any[] = [
   {
     id: 'interstellar-uap-alien',
     parentId: 'ufos',
-    name: 'Interstellar UAP & Alien Anomaly',
-    description: 'Anomalous Unidentified Aerial Phenomena (UAP) and high-altitude trans-medium vehicle recordings captured via military FLIR/infrared sensors and high-resolution tracking telemetry. Displays non-ballistic acceleration, instant directional shifts, and trans-medium liquid-to-air travel without visible thermal plumes or aerodynamic control surfaces.',
+    name: 'Kumburgaz UFO Footage',
+    description: 'Famous series of night-vision UFO video footage captured between 2007 and 2009 by night watchman Yalcin Yalman in Kumburgaz, Turkey. Examined by the SIRIUS UFO Space Sciences Research Center and TÜBİTAK (National Technology Research Council), the zoomed footage depicts a disc-shaped craft hovering over the Sea of Marmara with two humanoid figures visible inside the cockpit area.',
     layer: 'UFOs - Sightings',
+    timelineId: 'kumburgaz-ufo',
+    mapFeatureId: 'kumburgaz-ufo',
     images: [
       'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Gray_Alien_at_UFO_Museum%2C_Roswell_%28cropped%29.jpg/500px-Gray_Alien_at_UFO_Museum%2C_Roswell_%28cropped%29.jpg',
       'https://www.youtube.com/embed/0my1weBD67w'
     ],
-    sources: ['Interstellar UAP Analysis', 'Military FLIR/Infrared UAP Telemetry', 'UAP Whistleblower Testimony'],
+    sources: ['SIRIUS UFO Space Sciences Research Center Report', 'TÜBİTAK Analysis', 'Military FLIR/Infrared UAP Telemetry'],
     relatedIds: ['ufos', 'ufo-sightings', 'skinny-bob', 'kumburgaz-ufo']
   }
 ];
