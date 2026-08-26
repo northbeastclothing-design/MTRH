@@ -11789,42 +11789,69 @@ function App() {
                             backgroundColor: 'transparent',
                             width: isBroken ? '96px' : 'auto',
                             height: isBroken ? '96px' : 'auto',
-                            filter: isBroken ? 'invert(1)' : 'none'
                           }}
                         />
                       )}
                     </AnimatePresence>
-        
-                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '16px', width: '100%' }}>
-                      <motion.div 
-                        initial={{ y: 20, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        style={{ 
-                          margin: '24px 0 0 0',
-                          color: '#ffffff', 
-                          fontSize: '11px', 
-                          fontFamily: '"Space Mono", monospace', 
-                          whiteSpace: 'nowrap', 
-                          backgroundColor: 'rgba(0,0,0,0.6)', 
-                          padding: '6px 16px', 
-                          borderRadius: '20px', 
-                          letterSpacing: '0.5px',
-                          textAlign: 'center',
-                          zIndex: 10001
-                        }}>
-                        FILE ASSET {activeImageIndex + 1} OF {activeAssets.length} — {(selectedFeature?.name || selectedCodexNode?.name || '').toUpperCase()}
-                      </motion.div>
-        
+
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '12px', width: '100%', marginTop: '16px', zIndex: 1000001 }}>
+                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', width: '100%' }}>
+                        {activeAssets.length > 1 && (
+                          <motion.button 
+                            whileHover={{ scale: 1.1, backgroundColor: '#ffffff' }}
+                            whileTap={{ scale: 0.95 }}
+                            onClick={(e) => { e.stopPropagation(); handlePrevImage(); }} 
+                            style={{ background: '#000000', border: '1px solid #ffffff', borderRadius: '50%', width: '40px', height: '40px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 12px rgba(0,0,0,0.3)', zIndex: 1000002, transition: 'background-color 0.2s ease', flexShrink: 0 }}
+                          >
+                            <img src="/icons/icon-arrow-left.svg" style={{ width: '10px', height: '18px' }} alt="prev" />
+                          </motion.button>
+                        )}
+
+                        <motion.div 
+                          initial={{ y: 20, opacity: 0 }}
+                          animate={{ y: 0, opacity: 1 }}
+                          style={{ 
+                            color: '#ffffff', 
+                            fontSize: '11px', 
+                            fontFamily: '"Space Mono", monospace', 
+                            whiteSpace: 'nowrap', 
+                            backgroundColor: 'rgba(0,0,0,0.6)', 
+                            padding: '8px 18px', 
+                            borderRadius: '20px', 
+                            border: '1px solid rgba(255,255,255,0.2)',
+                            letterSpacing: '0.5px',
+                            textAlign: 'center',
+                            zIndex: 1000001,
+                            overflow: 'hidden',
+                            textOverflow: 'ellipsis',
+                            maxWidth: '70vw'
+                          }}>
+                          FILE ASSET {activeImageIndex + 1} OF {activeAssets.length} — {(selectedFeature?.name || selectedCodexNode?.name || '').toUpperCase()}
+                        </motion.div>
+
+                        {activeAssets.length > 1 && (
+                          <motion.button 
+                            whileHover={{ scale: 1.1, backgroundColor: '#ffffff' }}
+                            whileTap={{ scale: 0.95 }}
+                            onClick={(e) => { e.stopPropagation(); handleNextImage(); }} 
+                            style={{ background: '#000000', border: '1px solid #ffffff', borderRadius: '50%', width: '40px', height: '40px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 12px rgba(0,0,0,0.3)', zIndex: 1000002, transition: 'background-color 0.2s ease', flexShrink: 0 }}
+                          >
+                            <img src="/icons/icon-arrow-left.svg" style={{ width: '10px', height: '18px', transform: 'rotate(180deg)' }} alt="next" />
+                          </motion.button>
+                        )}
+                      </div>
+
                       {isPdf && actualPdfUrl && (
                         <a 
                           href={actualPdfUrl} 
                           target="_blank" 
                           rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
                           style={{ 
                             backgroundColor: '#000000',
                             color: '#ffffff',
                             border: '1px solid #ffffff',
-                            padding: '12px 24px',
+                            padding: '10px 20px',
                             borderRadius: '4px',
                             fontSize: '11px',
                             fontWeight: 'bold',
@@ -11834,11 +11861,11 @@ function App() {
                             gap: '10px',
                             letterSpacing: '1.5px',
                             boxShadow: '0 8px 24px rgba(0,0,0,0.5)',
-                            zIndex: 10002,
+                            zIndex: 1000002,
                             textTransform: 'uppercase'
                           }}
                         >
-                          <img src="/icons/icon-expand.svg" style={{ width: '18px', height: '18px', filter: 'invert(1)' }} alt="open" />
+                          <img src="/icons/icon-expand.svg" style={{ width: '16px', height: '16px', filter: 'invert(1)' }} alt="open" />
                           OPEN FULL PDF IN NEW TAB
                         </a>
                       )}
@@ -11846,29 +11873,6 @@ function App() {
                   </>
                 );
               })()}
-  
-              {activeAssets.length > 1 && (
-                <>
-                  <motion.button 
-                    initial={{ x: -20, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    whileHover={{ scale: 1.1, backgroundColor: '#ffffff' }}
-                    onClick={handlePrevImage} 
-                    style={{ position: 'absolute', left: '24px', top: '50%', transform: 'translateY(-50%)', background: '#000000', border: '1px solid #ffffff', borderRadius: '50%', width: '64px', height: '64px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 12px rgba(0,0,0,0.3)', zIndex: 10002, transition: 'background-color 0.2s ease' }}
-                  >
-                    <img src="/icons/icon-arrow-left.svg" style={{ width: '12px', height: '24px' }} alt="prev" className="lightbox-nav-icon" />
-                  </motion.button>
-                  <motion.button 
-                    initial={{ x: 20, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    whileHover={{ scale: 1.1, backgroundColor: '#ffffff' }}
-                    onClick={handleNextImage} 
-                    style={{ position: 'absolute', right: '24px', top: '50%', transform: 'translateY(-50%)', background: '#000000', border: '1px solid #ffffff', borderRadius: '50%', width: '64px', height: '64px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 12px rgba(0,0,0,0.3)', zIndex: 10002, transition: 'background-color 0.2s ease' }}
-                  >
-                    <img src="/icons/icon-arrow-left.svg" style={{ width: '12px', height: '24px', transform: 'rotate(180deg)' }} alt="next" className="lightbox-nav-icon" />
-                  </motion.button>
-                </>
-              )}
             </div>
           </motion.div>
         )}
