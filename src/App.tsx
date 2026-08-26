@@ -11601,25 +11601,27 @@ function App() {
           </div>
         )}
       </div>
+      </div>
 
-      </div>      {/* FULL SCREEN LIGHTBOX MODAL ARCHITECTURE */}
-      <AnimatePresence>
-        {isLightboxOpen && (selectedFeature || selectedCodexNode) && activeAssets && activeAssets.length > 0 && (
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            onClick={() => setIsLightboxOpen(false)}
-            style={{ position: 'fixed', top: 0, left: 0, width: scrollbarWidth ? `calc(100vw - ${scrollbarWidth}px)` : '100vw', height: '100vh', background: 'rgba(0, 0, 0, 0.95)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 9999, cursor: 'zoom-out', fontFamily: '"Space Mono", monospace' }}
-          >
-            <motion.button 
-              initial={{ y: -20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              whileHover={{ opacity: 0.7 }}
-              onClick={() => setIsLightboxOpen(false)} 
-              style={{ position: 'absolute', top: '24px', right: '24px', background: 'none', border: 'none', color: '#ffffff', fontSize: '12px', fontWeight: 'bold', cursor: 'pointer', fontFamily: '"Space Mono", monospace', letterSpacing: '1px', zIndex: 10001, display: 'flex', alignItems: 'center', gap: '8px' }}
+      {/* FULL SCREEN LIGHTBOX MODAL ARCHITECTURE */}
+      {createPortal(
+        <AnimatePresence>
+          {isLightboxOpen && (selectedFeature || selectedCodexNode) && activeAssets && activeAssets.length > 0 && (
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+              onClick={() => setIsLightboxOpen(false)}
+              style={{ position: 'fixed', top: 0, left: 0, width: scrollbarWidth ? `calc(100vw - ${scrollbarWidth}px)` : '100vw', height: '100vh', background: 'rgba(0, 0, 0, 0.95)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 999999, cursor: 'zoom-out', fontFamily: '"Space Mono", monospace' }}
             >
+              <motion.button 
+                initial={{ y: -20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                whileHover={{ opacity: 0.7 }}
+                onClick={() => setIsLightboxOpen(false)} 
+                style={{ position: 'absolute', top: '24px', right: '24px', background: 'none', border: 'none', color: '#ffffff', fontSize: '12px', fontWeight: 'bold', cursor: 'pointer', fontFamily: '"Space Mono", monospace', letterSpacing: '1px', zIndex: 1000000, display: 'flex', alignItems: 'center', gap: '8px' }}
+              >
               <img src="/icons/icon-x.svg" style={{ width: '24px', height: '24px', filter: 'invert(1)' }} alt="close" />
               CLOSE
             </motion.button>
@@ -11870,7 +11872,9 @@ function App() {
             </div>
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence>,
+      document.body
+    )}
 
       {!isMobile && (
         <footer style={{ 
