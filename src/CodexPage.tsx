@@ -2049,15 +2049,17 @@ export default function CodexPage({
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isLightboxOpen, activeTermNode, activeAssets]);
 
-  const handlePrevImage = (e: React.MouseEvent) => {
-    e.stopPropagation();
+  const handlePrevImage = (e?: React.MouseEvent) => {
+    if (e) e.stopPropagation();
     if (!activeAssets || activeAssets.length === 0) return;
+    setIsLightboxImageLoading(true);
     setActiveImageIndex(prev => (prev - 1 + activeAssets.length) % activeAssets.length);
   };
 
-  const handleNextImage = (e: React.MouseEvent) => {
-    e.stopPropagation();
+  const handleNextImage = (e?: React.MouseEvent) => {
+    if (e) e.stopPropagation();
     if (!activeAssets || activeAssets.length === 0) return;
+    setIsLightboxImageLoading(true);
     setActiveImageIndex(prev => (prev + 1) % activeAssets.length);
   };
 
@@ -3880,10 +3882,11 @@ export default function CodexPage({
                       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', width: '100%' }}>
                         {activeAssets.length > 1 && (
                           <motion.button 
-                            whileHover={{ scale: 1.1, backgroundColor: '#ffffff' }}
+                            whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.95 }}
-                            onClick={(e) => { e.stopPropagation(); handlePrevImage(); }} 
-                            style={{ background: '#000000', border: '1px solid #ffffff', borderRadius: '50%', width: '40px', height: '40px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 12px rgba(0,0,0,0.3)', zIndex: 1000002, transition: 'background-color 0.2s ease', flexShrink: 0 }}
+                            onClick={(e) => handlePrevImage(e)} 
+                            className="lightbox-nav-btn"
+                            aria-label="Previous asset"
                           >
                             <img src="/icons/icon-arrow-left.svg" style={{ width: '10px', height: '18px' }} alt="prev" />
                           </motion.button>
@@ -3913,10 +3916,11 @@ export default function CodexPage({
 
                         {activeAssets.length > 1 && (
                           <motion.button 
-                            whileHover={{ scale: 1.1, backgroundColor: '#ffffff' }}
+                            whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.95 }}
-                            onClick={(e) => { e.stopPropagation(); handleNextImage(); }} 
-                            style={{ background: '#000000', border: '1px solid #ffffff', borderRadius: '50%', width: '40px', height: '40px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 12px rgba(0,0,0,0.3)', zIndex: 1000002, transition: 'background-color 0.2s ease', flexShrink: 0 }}
+                            onClick={(e) => handleNextImage(e)} 
+                            className="lightbox-nav-btn"
+                            aria-label="Next asset"
                           >
                             <img src="/icons/icon-arrow-left.svg" style={{ width: '10px', height: '18px', transform: 'rotate(180deg)' }} alt="next" />
                           </motion.button>

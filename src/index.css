@@ -146,6 +146,31 @@ html, body, #root {
   transform-origin: bottom center;
 }
 
+/* Lightbox navigation button hover styling */
+.lightbox-nav-btn {
+  background: #000000;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1000002;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.lightbox-nav-btn:hover {
+  background-color: #ffffff !important;
+}
+
+.lightbox-nav-btn:hover img {
+  filter: invert(1) !important;
+}
+
 .hover-tooltip-popup .mapboxgl-popup-tip {
   display: none !important;
 }
