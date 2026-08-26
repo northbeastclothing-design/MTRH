@@ -3896,17 +3896,17 @@ export default function CodexPage({
                             color: '#ffffff', 
                             fontSize: '11px', 
                             fontFamily: '"Space Mono", monospace', 
-                            whiteSpace: 'nowrap', 
-                            backgroundColor: 'rgba(0,0,0,0.6)', 
+                            whiteSpace: 'normal', 
+                            wordBreak: 'break-word',
+                            lineHeight: '1.4',
+                            backgroundColor: 'rgba(0,0,0,0.75)', 
                             padding: '8px 18px', 
-                            borderRadius: '20px', 
+                            borderRadius: '16px', 
                             border: '1px solid rgba(255,255,255,0.2)',
                             letterSpacing: '0.5px',
                             textAlign: 'center',
                             zIndex: 1000001,
-                            overflow: 'hidden',
-                            textOverflow: 'ellipsis',
-                            maxWidth: '70vw'
+                            maxWidth: 'min(75vw, 600px)'
                           }}>
                           FILE ASSET {activeImageIndex + 1} OF {activeAssets.length} — {activeTermNode.name.toUpperCase()}
                         </motion.div>

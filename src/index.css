@@ -87,6 +87,9 @@ html, body, #root {
   padding: 12px !important;
   animation: popupEntrance 0.22s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
   transform-origin: bottom center;
+  max-width: min(80vw, 260px) !important;
+  word-wrap: break-word !important;
+  word-break: break-word !important;
 }
 
 .custom-mapbox-popup .mapboxgl-popup-tip {
@@ -125,7 +128,7 @@ html, body, #root {
 .hover-tooltip-popup {
   z-index: 1001 !important;
   pointer-events: none !important;
-  max-width: none !important;
+  max-width: min(80vw, 240px) !important;
   width: auto !important;
   overflow: visible !important;
 }
@@ -136,7 +139,7 @@ html, body, #root {
   box-shadow: none !important;
   padding: 0 !important;
   pointer-events: none !important;
-  max-width: none !important;
+  max-width: min(80vw, 240px) !important;
   width: auto !important;
   overflow: visible !important;
   animation: popupEntrance 0.15s ease-out forwards;

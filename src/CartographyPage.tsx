@@ -1980,15 +1980,21 @@ export default function CartographyPage({
           tooltipContainer.innerText = point.note;
           tooltipContainer.style.background = isMapDarkMode ? '#ffffff' : '#000000';
           tooltipContainer.style.color = isMapDarkMode ? '#000000' : '#ffffff';
-          tooltipContainer.style.padding = '0 12px';
-          tooltipContainer.style.height = '22px';
+          tooltipContainer.style.padding = '5px 12px';
+          tooltipContainer.style.minHeight = '22px';
+          tooltipContainer.style.height = 'auto';
           tooltipContainer.style.display = 'flex';
           tooltipContainer.style.alignItems = 'center';
-          tooltipContainer.style.borderRadius = '50px';
+          tooltipContainer.style.justifyContent = 'center';
+          tooltipContainer.style.borderRadius = '12px';
           tooltipContainer.style.fontSize = '10px';
           tooltipContainer.style.fontWeight = '500';
           tooltipContainer.style.fontFamily = '"Space Mono", monospace';
-          tooltipContainer.style.whiteSpace = 'nowrap';
+          tooltipContainer.style.whiteSpace = 'normal';
+          tooltipContainer.style.wordBreak = 'break-word';
+          tooltipContainer.style.maxWidth = 'min(80vw, 240px)';
+          tooltipContainer.style.textAlign = 'center';
+          tooltipContainer.style.lineHeight = '1.3';
           tooltipContainer.style.position = 'relative';
           tooltipContainer.style.pointerEvents = 'none';
           

@@ -5400,15 +5400,21 @@ function App() {
             tooltipContainer.innerText = matchedRecord.name.toLowerCase().split(' ').map((word: string) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
             tooltipContainer.style.background = darkModeRef.current ? '#ffffff' : '#000000';
             tooltipContainer.style.color = darkModeRef.current ? '#000000' : '#ffffff';
-            tooltipContainer.style.padding = '0 12px';
-            tooltipContainer.style.height = '22px';
+            tooltipContainer.style.padding = '5px 12px';
+            tooltipContainer.style.minHeight = '22px';
+            tooltipContainer.style.height = 'auto';
             tooltipContainer.style.display = 'flex';
             tooltipContainer.style.alignItems = 'center';
-            tooltipContainer.style.borderRadius = '50px';
+            tooltipContainer.style.justifyContent = 'center';
+            tooltipContainer.style.borderRadius = '12px';
             tooltipContainer.style.fontSize = '10px';
             tooltipContainer.style.fontWeight = '500';
             tooltipContainer.style.fontFamily = '"Space Mono", monospace';
-            tooltipContainer.style.whiteSpace = 'nowrap';
+            tooltipContainer.style.whiteSpace = 'normal';
+            tooltipContainer.style.wordBreak = 'break-word';
+            tooltipContainer.style.maxWidth = 'min(80vw, 240px)';
+            tooltipContainer.style.textAlign = 'center';
+            tooltipContainer.style.lineHeight = '1.3';
             tooltipContainer.style.position = 'relative';
             tooltipContainer.style.pointerEvents = 'none';
             
@@ -5532,15 +5538,21 @@ function App() {
             tooltipContainer.innerText = matchedRecord.name.toLowerCase().split(' ').map((word: string) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
             tooltipContainer.style.background = darkModeRef.current ? '#ffffff' : '#000000';
             tooltipContainer.style.color = darkModeRef.current ? '#000000' : '#ffffff';
-            tooltipContainer.style.padding = '0 12px';
-            tooltipContainer.style.height = '22px';
+            tooltipContainer.style.padding = '5px 12px';
+            tooltipContainer.style.minHeight = '22px';
+            tooltipContainer.style.height = 'auto';
             tooltipContainer.style.display = 'flex';
             tooltipContainer.style.alignItems = 'center';
-            tooltipContainer.style.borderRadius = '50px';
+            tooltipContainer.style.justifyContent = 'center';
+            tooltipContainer.style.borderRadius = '12px';
             tooltipContainer.style.fontSize = '10px';
             tooltipContainer.style.fontWeight = '500';
             tooltipContainer.style.fontFamily = '"Space Mono", monospace';
-            tooltipContainer.style.whiteSpace = 'nowrap';
+            tooltipContainer.style.whiteSpace = 'normal';
+            tooltipContainer.style.wordBreak = 'break-word';
+            tooltipContainer.style.maxWidth = 'min(80vw, 240px)';
+            tooltipContainer.style.textAlign = 'center';
+            tooltipContainer.style.lineHeight = '1.3';
             tooltipContainer.style.position = 'relative';
             tooltipContainer.style.pointerEvents = 'none';
             
@@ -5797,15 +5809,21 @@ function App() {
       label.innerText = selectedFeature.name.toLowerCase().split(' ').map((word: string) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
       label.style.background = isMapDarkMode ? '#ffffff' : '#000000';
       label.style.color = isMapDarkMode ? '#000000' : '#ffffff';
-      label.style.padding = '0 12px';
-      label.style.height = '22px';
+      label.style.padding = '5px 12px';
+      label.style.minHeight = '22px';
+      label.style.height = 'auto';
       label.style.display = 'flex';
       label.style.alignItems = 'center';
-      label.style.borderRadius = '50px';
+      label.style.justifyContent = 'center';
+      label.style.borderRadius = '12px';
       label.style.fontSize = '10px';
       label.style.fontWeight = '500';
       label.style.fontFamily = '"Space Mono", monospace';
-      label.style.whiteSpace = 'nowrap';
+      label.style.whiteSpace = 'normal';
+      label.style.wordBreak = 'break-word';
+      label.style.maxWidth = 'min(80vw, 240px)';
+      label.style.textAlign = 'center';
+      label.style.lineHeight = '1.3';
       label.style.marginBottom = '14px';
       label.style.position = 'relative';
 
@@ -11814,17 +11832,17 @@ function App() {
                             color: '#ffffff', 
                             fontSize: '11px', 
                             fontFamily: '"Space Mono", monospace', 
-                            whiteSpace: 'nowrap', 
-                            backgroundColor: 'rgba(0,0,0,0.6)', 
+                            whiteSpace: 'normal', 
+                            wordBreak: 'break-word',
+                            lineHeight: '1.4',
+                            backgroundColor: 'rgba(0,0,0,0.75)', 
                             padding: '8px 18px', 
-                            borderRadius: '20px', 
+                            borderRadius: '16px', 
                             border: '1px solid rgba(255,255,255,0.2)',
                             letterSpacing: '0.5px',
                             textAlign: 'center',
                             zIndex: 1000001,
-                            overflow: 'hidden',
-                            textOverflow: 'ellipsis',
-                            maxWidth: '70vw'
+                            maxWidth: 'min(75vw, 600px)'
                           }}>
                           FILE ASSET {activeImageIndex + 1} OF {activeAssets.length} — {(selectedFeature?.name || selectedCodexNode?.name || '').toUpperCase()}
                         </motion.div>
