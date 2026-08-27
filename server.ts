@@ -1243,8 +1243,17 @@ ${modLink}
     }
   });
 
+  let viteDevServer: any = null;
+  if (!isProduction) {
+    const { createServer: createViteServer } = await import("vite");
+    viteDevServer = await createViteServer({
+      server: { middlewareMode: true },
+      appType: "spa",
+    });
+  }
+
   // HTML OGP Dynamic Metadata Middleware
-  app.use((req, res, next) => {
+  app.use(async (req, res, next) => {
     const accept = req.headers.accept || '';
     if (req.method === 'GET' && accept.includes('text/html') && !req.path.startsWith('/assets/') && !path.extname(req.path)) {
       const host = req.get('host') || 'mtrhmap.org';
@@ -1271,6 +1280,14 @@ ${modLink}
         html = html.replace(/<meta property="twitter:image" content=".*?" \/>/gi, `<meta property="twitter:image" content="${escapeHtml(meta.image)}" />`);
         html = html.replace(/<meta property="twitter:url" content=".*?" \/>/gi, `<meta property="twitter:url" content="${escapeHtml(meta.url)}" />`);
 
+        if (!isProduction && viteDevServer) {
+          try {
+            html = await viteDevServer.transformIndexHtml(req.originalUrl, html);
+          } catch (e) {
+            console.error('Vite transformIndexHtml error:', e);
+          }
+        }
+
         res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
         res.setHeader('Pragma', 'no-cache');
         res.setHeader('Expires', '0');
@@ -1283,13 +1300,8 @@ ${modLink}
   });
 
   // Vite middleware for development
-  if (!isProduction) {
-    const { createServer: createViteServer } = await import("vite");
-    const vite = await createViteServer({
-      server: { middlewareMode: true },
-      appType: "spa",
-    });
-    app.use(vite.middlewares);
+  if (!isProduction && viteDevServer) {
+    app.use(viteDevServer.middlewares);
   } else {
     const distPath = path.join(process.cwd(), 'dist');
     
@@ -1314,9 +1326,7 @@ ${modLink}
       const fullUrl = `${protocol}://${host}${req.originalUrl}`;
       const meta = getOgpMetaForRequest(req.path, req.query, fullUrl);
 
-      const indexPath = isProduction 
-        ? path.join(distPath, 'index.html') 
-        : path.join(process.cwd(), 'index.html');
+      const indexPath = path.join(distPath, 'index.html');
 
       if (fs.existsSync(indexPath)) {
         let html = fs.readFileSync(indexPath, 'utf8');
