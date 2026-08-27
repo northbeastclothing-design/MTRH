@@ -1974,7 +1974,7 @@ export default function TimelinePage({
                           onClick={() => {
                             const shareUrl = `${window.location.origin}/timeline?itemId=${encodeURIComponent(selectedItem.id)}`;
                             const category = selectedItem.layer || 'Timeline Event';
-                            const imageUrl = selectedItem.images?.[0]?.url;
+                            const imageUrl = (selectedItem as any).images?.[0]?.url;
                             openShareModal(selectedItem.name || 'MTRH Timeline Event', selectedItem.description || '', shareUrl, category, imageUrl);
                           }}
                           style={{
