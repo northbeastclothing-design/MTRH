@@ -164,13 +164,33 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
   },
   {
     id: 'framauro1459',
-    name: "Fra Mauro Mappa Mundi",
-    year: "1459 AD",
-    description: "A breathtaking circular planisphere painted by Camaldolese monk Fra Mauro. Oriented with South at the top, it incorporates detailed Arab and European geographic records of Asia, Africa, and the Indian Ocean prior to the Age of Discovery.",
+    name: "Fra Mauro Mappa Mundi (1459 CE)",
+    year: "1459 CE",
+    description: "Created in 1459 CE by Venetian monk and cartographer Fra Mauro at the Monastery of St. Michael in Murano, Venice. Commissioned by King Afonso V of Portugal, this circular planisphere represents the absolute pinnacle of medieval cartography. Oriented with South at the top, it integrates Portuguese maritime discoveries, Arab trade logs, and Marco Polo's Asian itineraries without adhering to traditional religious geography.",
     url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Fra_Mauro_Map_FactumArte.jpg/1280px-Fra_Mauro_Map_FactumArte.jpg",
     aspectRatio: 1.0,
     pinColor: '#59DCB7',
     era: 'early-medieval'
+  },
+  {
+    id: 'enochian-firmament',
+    name: "Flammarion Engraving (The Firmament & Cosmology)",
+    year: "1888 CE (Ancient Cosmology Model)",
+    description: "First published in French astronomer and author Camille Flammarion's 1888 book 'L'atmosphère: météorologie populaire'. Executed as a wood engraving by an unknown artist (possibly under Flammarion's supervision), it depicts a medieval traveler kneeling at the horizon where Earth meets the sky. Poking his head beyond the hemispherical firmament dome, he beholds the wheeling mechanical gears, divine light, and multi-layered celestial spheres of cosmic creation, reflecting ancient Enochian, Hebrew, and classical cosmological models.",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Flammarion.jpg/1280px-Flammarion.jpg",
+    aspectRatio: 1.33,
+    pinColor: '#F7E8C1',
+    era: 'ancient'
+  },
+  {
+    id: 'celestial-planisphaerium',
+    name: "Cellarius Celestial Star Map",
+    year: "1660",
+    description: "Andreas Cellarius' famous star map and celestial planisphere from the Harmonia Macrocosmica atlas, illustrating the Ptolemaic, Copernican, and Tycho Brahe planetary systems.",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Harmonia_Macrocosmica_Star_Atlas.jpg/1280px-Harmonia_Macrocosmica_Star_Atlas.jpg",
+    aspectRatio: 1.18,
+    pinColor: '#BACEF4',
+    era: 'early-modern'
   },
   // LATE MEDIEVAL
   {
@@ -212,17 +232,6 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     url: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Mapa_de_Borgia_XV.jpg/1280px-Mapa_de_Borgia_XV.jpg",
     aspectRatio: 1.0,
     pinColor: '#74F8F3',
-    era: 'late-medieval',
-    disableResolutionUpgrade: true
-  },
-  {
-    id: 'framauro',
-    name: "Fra Mauro Map",
-    year: "1459",
-    description: "Created by Venetian monk Fra Mauro, it represents the absolute zenith of medieval cartography, incorporating Portuguese maritime expeditions and oriented with South at the top.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Fra_Mauro_Map_FactumArte.jpg/1920px-Fra_Mauro_Map_FactumArte.jpg",
-    aspectRatio: 1.0,
-    pinColor: '#FF5C5C',
     era: 'late-medieval',
     disableResolutionUpgrade: true
   },

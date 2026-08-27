@@ -936,8 +936,8 @@ ${modLink}
       const domain = new URL(url).hostname;
       
       const headers: Record<string, string> = {
-        'User-Agent': 'MTRH-Interactive-Map/1.0 (contact: info@mtrhmap.org; development)',
-        'Accept': '*/*',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+        'Accept': 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
         'Accept-Language': 'en-US,en;q=0.9',
         'Referer': referer
       };
@@ -947,7 +947,26 @@ ${modLink}
         headers['Range'] = req.headers.range;
       }
 
-      const response = await fetch(url, { headers });
+      let response = await fetch(url, { headers });
+
+      // If upstream returns 429 Too Many Requests (Wikimedia rate-limiting), fallback via high-reliability Cloudflare CDN image proxy
+      if (response.status === 429 || response.status === 403) {
+        try {
+          const cleanUrl = url.replace(/^https?:\/\//i, '');
+          const proxyFallbackUrl = `https://images.weserv.nl/?url=${cleanUrl}`;
+          const fallbackRes = await fetch(proxyFallbackUrl, {
+            headers: {
+              'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+              'Accept': 'image/*,*/*'
+            }
+          });
+          if (fallbackRes.ok) {
+            response = fallbackRes;
+          }
+        } catch (fallbackErr) {
+          console.warn(`[Proxy Fallback] Fallback fetch failed for ${url}:`, fallbackErr);
+        }
+      }
       
       // Set status code matching upstream response (e.g. 206 for Partial Content, 200 for full resource)
       res.statusCode = response.status;

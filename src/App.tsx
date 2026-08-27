@@ -17,7 +17,9 @@ import CodexPage from './CodexPage';
 import CartographyPage from './CartographyPage';
 import { playAudio } from './utils/audio';
 import { TIMELINE_ITEMS, TIMELINE_LOCATIONS, BIBLICAL_TRAVEL_PATHS, Waypoint, TravelPath } from './timelineData';
-// import { ARCHAEOLOGICAL_FINDS_DATA } from './archaeologyData';
+import { ARCHAEOLOGICAL_FINDS_DATA } from './archaeologyData';
+import { OLD_WORLD_STRUCTURES_DATA } from './oldWorldStructuresData';
+import { DATA_CENTERS_DATA } from './dataCentersData';
 import { TERM_TREE_DATA } from './termTreeData';
 // import { MISSING_411_DATA } from './missing411Data';
 // import { CAVES_DATA } from './cavesData';
@@ -50,7 +52,6 @@ if (firebaseConfig.measurementId) {
 }
 
 // Heavy datasets will be loaded dynamically on demand
-const ARCHAEOLOGICAL_FINDS_DATA: any[] = [];
 const MISSING_411_DATA: any[] = [];
 const CAVES_DATA: any[] = [];
 const ALIEN_ABDUCTION_DATA: any[] = [];
@@ -620,26 +621,9 @@ const cleanAndProxyImageUrl = (url: any) => {
 
   // Bypass proxy for domains that block server-side IPs (like Wikipedia/Wikimedia 403s/429s on Cloud Run)
   // or that already fully support highly reliable direct client-side loading (like Unsplash/Wonders of the world).
-  const lowerUrl = trimmedUrl.toLowerCase();
-  
-  const isWiki = lowerUrl.includes('wikimedia.org') || lowerUrl.includes('wikipedia.org');
-  if (isWiki || lowerUrl.includes('temporarytemples.co.uk')) {
-    return `/api/proxy-resource?url=${encodeURIComponent(trimmedUrl)}`;
-  }
-  
-  if (
-    lowerUrl.includes('unsplash.com') ||
-    lowerUrl.includes('cloudfront.net') ||
-    lowerUrl.includes('wonders-of-the-world.net') ||
-    lowerUrl.includes('circleresearcharchive.com')
-  ) {
-    return trimmedUrl;
-  }
-
-  // Route everything through our local server proxy, which is highly reliable, 
-  // bypasses SameSite cookie limitations, and avoids rate limiting of public proxies.
   if (trimmedUrl.startsWith('http')) {
-    return `/api/proxy-resource?url=${encodeURIComponent(trimmedUrl)}`;
+    if (trimmedUrl.includes('weserv.nl')) return trimmedUrl;
+    return `https://images.weserv.nl/?url=${trimmedUrl}`;
   }
 
   return trimmedUrl;
@@ -887,6 +871,7 @@ const LAYER_CONFIG: Record<string, { color: string; icon: string }> = {
   'NASA / Space': { color: '#BACEF4', icon: '/icons/icon-nasa.svg' },
   'The Occult': { color: '#59DCB7', icon: '/icons/icon-alchemy-occult.svg' },
   'Ancient People Groups': { color: '#BCA7C7', icon: '/icons/icon-people-groups.svg' },
+  'Data Centers': { color: '#90E9FF', icon: '/icons/icon-cern.svg' },
   'Default': { color: '#b6a6ff', icon: '/icons/icon-map-pin.svg' }
 };
 
@@ -1269,10 +1254,20 @@ function App() {
         hash.includes('mod') || 
         hash.includes('moderator') || 
         hash.includes('moderate');
-      if (isModUrl) return false;
+      const isSpecialPage = 
+        isModUrl || 
+        path.includes('deck') || 
+        hash.includes('deck') ||
+        path.includes('timeline') ||
+        hash.includes('timeline') ||
+        path.includes('codex') ||
+        hash.includes('codex') ||
+        path.includes('cartography') ||
+        hash.includes('cartography');
+      if (isSpecialPage) return false;
 
       const params = new URLSearchParams(window.location.search);
-      const hasDeepLink = params.has('termId') || params.has('itemId') || params.has('featureId') || params.has('mapId') || params.has('lat') || params.has('lng');
+      const hasDeepLink = params.has('termId') || params.has('itemId') || params.has('featureId') || params.has('mapId') || params.has('lat') || params.has('lng') || params.get('page') === 'deck';
       return !hasDeepLink;
     } catch (e) {
       return true;
@@ -1280,9 +1275,10 @@ function App() {
   });
   const [currentPage, setCurrentPageReal] = useState<'map' | 'timeline' | 'codex' | 'cartography'>(() => {
     const path = window.location.pathname.toLowerCase();
-    if (path.startsWith('/timeline')) return 'timeline';
-    if (path.startsWith('/codex')) return 'codex';
-    if (path.startsWith('/cartography')) return 'cartography';
+    const hash = window.location.hash.toLowerCase();
+    if (path.startsWith('/timeline') || hash.includes('timeline')) return 'timeline';
+    if (path.startsWith('/codex') || hash.includes('codex')) return 'codex';
+    if (path.startsWith('/cartography') || hash.includes('cartography')) return 'cartography';
     return 'map';
   });
   const [selectedCartographyMapId, setSelectedCartographyMapId] = useState<string>(() => {
@@ -4526,7 +4522,20 @@ function App() {
         setIsDataCompiled(false);
         const safeLocalData = getSafeData(rabbitHoleData);
         const safeUfoData = getSafeData(ufoData);
-        const combinedRawData = [...safeLocalData, ...safeUfoData, ...archaeologyData, ...missing411Data, ...cavesData, ...alienAbductionData, ...cattleMutilationData, ...oldWorldStructuresData, ...vanishedShipsAircraftData];
+        const combinedRawData = [
+          ...safeLocalData, 
+          ...safeUfoData, 
+          ...ARCHAEOLOGICAL_FINDS_DATA,
+          ...archaeologyData, 
+          ...missing411Data, 
+          ...cavesData, 
+          ...alienAbductionData, 
+          ...cattleMutilationData, 
+          ...OLD_WORLD_STRUCTURES_DATA,
+          ...oldWorldStructuresData, 
+          ...vanishedShipsAircraftData,
+          ...DATA_CENTERS_DATA
+        ];
         
         const initialBuffer = combinedRawData
           .map((item, idx) => processIncomingRecord(item, idx))
@@ -9625,7 +9634,9 @@ function App() {
                                   background: isSelected ? (isMapDarkMode ? '#1f2937' : '#f3f4f6') : 'transparent'
                                 }}
                               >
-                                <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: layerColors[item.categories[0]] || (isMapDarkMode ? '#fff' : '#000') }} />
+                                <svg width="8" height="8" viewBox="0 0 8 8" style={{ width: '8px', height: '8px', minWidth: '8px', minHeight: '8px', flexShrink: 0, display: 'block' }}>
+                                  <circle cx="4" cy="4" r="4" fill={layerColors[item.categories[0]] || (isMapDarkMode ? '#fff' : '#000')} />
+                                </svg>
                                 <div style={{ display: 'flex', flexDirection: 'column' }}>
                                   <span style={{ fontSize: '11px', fontWeight: 'bold' }}>{item.name}</span>
                                   <span style={{ fontSize: '9px', color: theme.textDim }}>
@@ -11114,7 +11125,9 @@ function App() {
                                   onClick={() => { handleSearchItemSelect(item); if (currentPage !== 'map') setCurrentPage('map'); }}
                                   style={{ padding: '10px 12px', cursor: 'pointer', borderBottom: `1px solid ${theme.borderLight}`, display: 'flex', alignItems: 'center', gap: '8px', color: theme.text }}
                                 >
-                                  <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: layerColors[item.categories[0]] || '#b6a6ff' }} />
+                                  <svg width="8" height="8" viewBox="0 0 8 8" style={{ width: '8px', height: '8px', minWidth: '8px', minHeight: '8px', flexShrink: 0, display: 'block' }}>
+                                    <circle cx="4" cy="4" r="4" fill={layerColors[item.categories[0]] || '#b6a6ff'} />
+                                  </svg>
                                   <div style={{ display: 'flex', flexDirection: 'column' }}>
                                     <span style={{ fontSize: '11px', fontWeight: 'bold' }}>{item.name}</span>
                                     <span style={{ fontSize: '9px', color: theme.textDim }}>{item.categories[0]}</span>
@@ -11387,7 +11400,9 @@ function App() {
                                   }}
                                 >
                                   <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                                    <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: layerColors[item.layer] || '#b6a6ff' }} />
+                                    <svg width="8" height="8" viewBox="0 0 8 8" style={{ width: '8px', height: '8px', minWidth: '8px', minHeight: '8px', flexShrink: 0, display: 'block' }}>
+                                      <circle cx="4" cy="4" r="4" fill={layerColors[item.layer] || '#b6a6ff'} />
+                                    </svg>
                                     <span style={{ fontSize: '11px', fontWeight: 'bold', fontFamily: '"Space Mono", monospace' }}>{item.name}</span>
                                   </div>
                                   <span style={{ fontSize: '9px', color: theme.textDim, fontFamily: '"Space Mono", monospace' }}>

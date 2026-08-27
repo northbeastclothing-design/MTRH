@@ -20203,7 +20203,7 @@ const chunk_5: any[] = [  {
     images: ['https://upload.wikimedia.org/wikipedia/commons/b/b5/NRU-OD-N-Aiwo_Hotel.jpg'],
     sources: ['Satellite Imagery Archives', 'Official Government Mapping Agencies']
   },  {
-    id: 'haarp-facility',
+    id: 'haarp-facility-blurred',
     parentId: 'google-blurred',
     name: 'HAARP Facility (Alaska)',
     description: 'The High-frequency Active Auroral Research Program ionospheric heater, frequently linked in conspiracy space to weather modification and earth energies.',
@@ -39179,6 +39179,219 @@ const chunk_user_requested_terms: any[] = [
     ],
     sources: ['SIRIUS UFO Space Sciences Research Center Report', 'TÜBİTAK Analysis', 'Military FLIR/Infrared UAP Telemetry'],
     relatedIds: ['ufos', 'ufo-sightings', 'skinny-bob', 'kumburgaz-ufo']
+  },
+  {
+    id: 'enoch-family-jared',
+    parentId: 'enochian-lore',
+    name: 'Jared (Father of Enoch)',
+    description: 'Mentioned in Genesis 5:18 and 2 Enoch as the fifth patriarch in the line of Seth and father of Enoch. His name in Hebrew means "to descend", denoting the era when the Watchers descended upon Mount Hermon.',
+    layer: 'Enochian Sites',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Qumran.jpeg/1280px-Qumran.jpeg'],
+    sources: ['2 Enoch', 'Book of Jubilees', 'Genesis 5:18']
+  },
+  {
+    id: 'enoch-family-methuselah',
+    parentId: 'enochian-lore',
+    name: 'Methuselah (Son of Enoch)',
+    description: 'Enoch\'s oldest son who lived 969 years (the longest recorded lifespan in Biblical literature). In 2 Enoch, Methuselah was appointed by the people to construct an altar at Achuzan and lead the priesthood following Enoch\'s bodily translation into heaven.',
+    layer: 'Enochian Sites',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Qumran.jpeg/1280px-Qumran.jpeg'],
+    sources: ['1 Enoch', '2 Enoch', 'Genesis 5:27']
+  },
+  {
+    id: 'enoch-family-lamech',
+    parentId: 'enochian-lore',
+    name: 'Lamech (Grandson of Enoch)',
+    description: 'Son of Methuselah and father of Noah. According to the Genesis Apocryphon found at Qumran, Lamech suspected his newborn son Noah was fathered by a Watcher due to his glowing skin, requiring Methuselah to travel to the ends of the Earth to consult Enoch.',
+    layer: 'Enochian Sites',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Qumran.jpeg/1280px-Qumran.jpeg'],
+    sources: ['1 Enoch (Book of Noah)', 'Genesis Apocryphon 1Q20', 'Genesis 5:28']
+  },
+  {
+    id: 'enoch-family-noah',
+    parentId: 'enochian-lore',
+    name: 'Noah (Great-Grandson of Enoch)',
+    description: 'The righteous patriarch instructed by God and Enoch\'s revelations to construct the Ark to preserve human and animal life through the Great Deluge.',
+    layer: 'Biblical Figures',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Noahs_Ark_on_Mount_Ararat_by_Simon_de_Myle.jpg/500px-Noahs_Ark_on_Mount_Ararat_by_Simon_de_Myle.jpg'],
+    sources: ['Genesis 6-9', '1 Enoch', 'Book of Jubilees']
+  },
+  {
+    id: 'enoch-family-regim-radim',
+    parentId: 'enochian-lore',
+    name: 'Regim & Radim (Younger Sons of Enoch)',
+    description: 'Enoch\'s younger sons recorded specifically in 2 Enoch 2:1, who received their father\'s final oral testimonies and heavenly scrolls prior to his second and final ascension.',
+    layer: 'Enochian Sites',
+    sources: ['2 Enoch 2:1', 'Secrets of Enoch']
+  },
+  {
+    id: 'enoch2-pravuil',
+    parentId: 'angelic-hierarchy',
+    name: 'Archangel Pravuil (Vretil - The Scribe)',
+    description: 'Featured in 2 Enoch 22-23 as the archangel whose wisdom is swift like the wind. Pravuil was commanded by the Lord to hand Enoch a reed pen and 360 books of heavenly secret knowledge to transcribe.',
+    layer: 'Religion',
+    sources: ['2 Enoch 22:11', 'Secrets of Enoch']
+  },
+  {
+    id: 'enoch2-grigori',
+    parentId: 'angelic-hierarchy',
+    name: 'The Grigori (Watchers of the 5th Heaven)',
+    description: 'In 2 Enoch 18, Enoch is shown the 5th Heaven where 200,000 Grigori (Silent Watchers) sat in grief and silence due to their fallen brethren. Enoch urged them to resume their heavenly liturgies.',
+    layer: 'Enochian Sites',
+    sources: ['2 Enoch 18:1-9']
+  },
+  {
+    id: 'enoch3-metatron',
+    parentId: 'angelic-hierarchy',
+    name: 'Metatron (The Supreme Prince of Presence)',
+    description: 'Detailed extensively in 3 Enoch (Hebrew Enoch), Metatron is the glorified transformation of Enoch after being taken to heaven. Known as the King of Angels, Lesser YHWH, and Prince of the World.',
+    layer: 'Religion',
+    sources: ['3 Enoch (Hebrew Enoch)', 'Babylonian Talmud Sanhedrin 38b', 'Zohar']
+  },
+  {
+    id: 'enoch-10-heavens',
+    parentId: 'enochian-lore',
+    name: 'Hierarchy of the 10 Heavens',
+    description: 'The cosmological layout of the 10 celestial realms revealed to Enoch in 2 Enoch: 1st (Atmosphere & Dew), 2nd (Rebel Angels Prison), 3rd (Paradise & Hell), 4th (Sun/Moon Gates), 5th (Grigori), 6th (Archangels), 7th (Throne of Glory), 8th-10th (Muzaloth & Divine Essence).',
+    layer: 'Religion',
+    sources: ['2 Enoch 1-22', '3 Enoch Hekhalot']
+  },
+  {
+    id: 'deity-anu',
+    parentId: 'mesopotamian-mythology',
+    name: 'Anu (Sky Father)',
+    description: 'The supreme Sky God and monarch of the Anunnaki pantheon in Mesopotamian, Sumerian, and Babylonian mythology.',
+    layer: 'Myths / Legends',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Cylinder_seal_Lugalanda_Louvre_AO2414.jpg/500px-Cylinder_seal_Lugalanda_Louvre_AO2414.jpg'],
+    sources: ['Epic of Gilgamesh', 'Enuma Elish']
+  },
+  {
+    id: 'deity-enlil',
+    parentId: 'mesopotamian-mythology',
+    name: 'Enlil (Lord of Storms & Decrees)',
+    description: 'Sumerian god of wind, air, earth, and storms, who held the Tablet of Destinies and decreed the Great Deluge.',
+    layer: 'Myths / Legends',
+    sources: ['Atrahasis Epic', 'Sumerian Creation Myths']
+  },
+  {
+    id: 'deity-enki',
+    parentId: 'mesopotamian-mythology',
+    name: 'Enki / Ea (Lord of Water & Wisdom)',
+    description: 'Sumerian deity of freshwater (Abzu), crafts, magic, and creation who saved humanity by warning Utnapishtim of the coming Flood.',
+    layer: 'Myths / Legends',
+    sources: ['Enki and Ninhursag', 'Atrahasis Epic']
+  },
+  {
+    id: 'deity-ra',
+    parentId: 'myths-legends-root',
+    name: 'Ra (Sun God & Creator)',
+    description: 'The primary deity of ancient Egyptian religion, representing the sun at noon, creator of the cosmos, and ruler of the sky.',
+    layer: 'Myths / Legends',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Re-Horakhty.svg/500px-Re-Horakhty.svg.png'],
+    sources: ['Book of the Dead', 'Pyramid Texts']
+  },
+  {
+    id: 'deity-osiris',
+    parentId: 'myths-legends-root',
+    name: 'Osiris (Lord of the Underworld)',
+    description: 'Egyptian god of the afterlife, resurrection, and agriculture, slain by Seth and resurrected by Isis.',
+    layer: 'Myths / Legends',
+    sources: ['Osiris Myth', 'Pyramid Texts']
+  },
+  {
+    id: 'deity-zeus',
+    parentId: 'greek-mythology',
+    name: 'Zeus (King of Olympians)',
+    description: 'Sky and thunder god of ancient Greece who ruled as king of the gods from Mount Olympus.',
+    layer: 'Myths / Legends',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Zeus_Otricoli_Pio-Clementino_Inv257.jpg/500px-Zeus_Otricoli_Pio-Clementino_Inv257.jpg'],
+    sources: ['Hesiod Theogony', 'Homer Iliad']
+  },
+  {
+    id: 'deity-odin',
+    parentId: 'myths-legends-root',
+    name: 'Odin (Norse Allfather)',
+    description: 'The widely revered king of the Aesir in Norse mythology, associated with wisdom, healing, royalty, gallows, knowledge, war, and the runes.',
+    layer: 'Myths / Legends',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Odin_by_Georg_von_Rosen_%281886%29.jpg/500px-Odin_by_Georg_von_Rosen_%281886%29.jpg'],
+    sources: ['Poetic Edda', 'Prose Edda']
+  },
+  {
+    id: 'bible-history-manuscripts',
+    parentId: 'holy-bible',
+    name: 'Historical Bible Manuscripts & Archeology',
+    description: 'Comprehensive timeline of major manuscript discoveries validating biblical literature: Qumran Dead Sea Scrolls (1947), Codex Sinaiticus (1844), Codex Vaticanus (15th Century), and Papyrus 52 (c. 125 AD).',
+    layer: 'Biblical Discoveries',
+    sources: ['Dead Sea Scrolls Institute', 'British Library Codex Sinaiticus Project']
+  },
+  {
+    id: 'realm-sheol-hades',
+    parentId: 'biblical-apocryphal',
+    name: 'Sheol & Hades (Abode of the Dead)',
+    description: 'The ancient underworld realm where departed spirits resided before judgment, depicted across Hebrew, Intertestamental, and Early Christian literature.',
+    layer: 'Religion',
+    sources: ['Luke 16:19-31', 'Psalm 16:10', '1 Enoch 22']
+  },
+  {
+    id: 'gov-conspiracy-usa-mkultra',
+    parentId: 'government-conspiracies',
+    name: 'Project MKUltra',
+    description: 'Top-secret CIA human experimentation program (1953–1973) designed to develop drug-assisted mind control, psychological torture, and behavioral modification techniques.',
+    layer: 'Government Conspiracies',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Declassified_MKUltra_Document.jpg/500px-Declassified_MKUltra_Document.jpg'],
+    sources: ['1977 Senate Select Committee on Intelligence Hearing (Church Committee)', 'CIA FOIA Reading Room']
+  },
+  {
+    id: 'gov-conspiracy-usa-paperclip',
+    parentId: 'government-conspiracies',
+    name: 'Operation Paperclip',
+    description: 'Secret United States intelligence program in which over 1,600 German scientists, engineers, and technicians were brought to the US post-WWII to lead American aerospace and defense research.',
+    layer: 'Government Conspiracies',
+    sources: ['Operation Paperclip (Annie Jacobsen)', 'National Archives Records Administration (NARA)']
+  },
+  {
+    id: 'gov-conspiracy-russia-duga',
+    parentId: 'government-conspiracies',
+    name: 'Duga Over-The-Horizon Radar (Russian Woodpecker)',
+    description: 'Enormous Soviet over-the-horizon (OTH) radar antenna array built near Chernobyl, Ukraine. Broadcasting an infamous 10 Hz repetitive clicking sound heard worldwide on shortwave radio, it spawned rumors of Soviet mind-control experiments.',
+    layer: 'Government Conspiracies',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Duga_radar_Chernobyl-2_2019.jpg/500px-Duga_radar_Chernobyl-2_2019.jpg'],
+    sources: ['IEEE Spectrum Historical Radar Archives', 'Chernobyl Exclusion Zone Records']
+  },
+  {
+    id: 'pharma-thalidomide-scandal',
+    parentId: 'government-conspiracies',
+    name: 'Thalidomide Pharmaceutical Scandal',
+    description: 'In the late 1950s and early 1960s, thalidomide was marketed worldwide as a safe sedative and morning sickness drug, resulting in over 10,000 infants born with severe limb malformations (phocomelia). The crisis revolutionized modern pharmaceutical regulation.',
+    layer: 'Government Conspiracies',
+    sources: ['FDA Historical Records (Dr. Frances Kelsey)', 'World Health Organization Drug Safety Reports']
+  },
+  {
+    id: 'bigfoot-todd-standing',
+    parentId: 'bigfoot-sightings',
+    name: 'Todd Standing Sasquatch Video (Nordegg, Alberta)',
+    description: 'High-definition video footage captured by Canadian researcher Todd Standing in the wilderness near Nordegg, Alberta, showing close-up facial features of Sasquatch specimens.',
+    layer: 'Bigfoot Sightings',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Bigfoot_statue_Willow_Creek.jpg/500px-Bigfoot_statue_Willow_Creek.jpg'],
+    sources: ['Discover Bigfoot (Todd Standing Documentary)', 'BFRO Case Files']
+  },
+  {
+    id: 'sumerian-king-list',
+    parentId: 'mesopotamian-mythology',
+    name: 'Sumerian King List (Weld-Blundell Prism)',
+    description: 'An ancient clay cuneiform prism listing the kings of Sumer and their reign lengths. Divided into pre-flood (antediluvian) kings who reigned for thousands of years (e.g. Alulim reigning 28,800 years) and post-flood kings whose lifespans shortened.',
+    layer: 'Ancient Texts',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Sumerian_King_List_Weld-Blundell_Prism.jpg/500px-Sumerian_King_List_Weld-Blundell_Prism.jpg'],
+    sources: ['Ashmolean Museum Oxford', 'Sumerian Cuneiform Corpus']
+  },
+  {
+    id: 'ancient-flood-myths',
+    parentId: 'myths-legends-root',
+    name: 'Comparative Global Flood Myths',
+    description: 'Over 200 ancient cultures across the globe share cataclysmic deluge narratives: Epic of Gilgamesh (Utnapishtim), Genesis (Noah), Deucalion (Greek), Matsya (Hindu Avatar), Gun-Yu (China), and Popol Vuh (Maya).',
+    layer: 'Myths / Legends',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Noahs_Ark_on_Mount_Ararat_by_Simon_de_Myle.jpg/500px-Noahs_Ark_on_Mount_Ararat_by_Simon_de_Myle.jpg'],
+    sources: ['Comparative Mythology (Joseph Campbell)', 'Epic of Gilgamesh Tablet XI']
   }
 ];
 

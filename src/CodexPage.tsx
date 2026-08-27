@@ -72,11 +72,13 @@ export const LAYER_COLORS: Record<string, string> = {
   'Masonic Lodges': '#ECCE81',
   'People Groups': '#BCA7C7',
   'Ancient People Groups': '#BCA7C7',
+  'Data Centers': '#90E9FF',
   'Vanished Ships / Aircraft': '#E7EC5B',
   'Default': '#b6a6ff'
 };
 
 const LAYER_ICONS: Record<string, string> = {
+  'Data Centers': '/icons/icon-cern.svg',
   'UFOs - War.gov': '/icons/icon-ufo-wargov.svg',
   'UFOs - Brazillian Archives': '/icons/icon-ufo-brazilian.svg',
   'Enochian Sites': '/icons/icon-enochian-lore.svg',
@@ -584,24 +586,9 @@ const cleanAndProxyImageUrl = (url: any) => {
     return trimmedUrl;
   }
 
-  const lowerUrl = trimmedUrl.toLowerCase();
-  
-  const isWiki = lowerUrl.includes('wikimedia.org') || lowerUrl.includes('wikipedia.org');
-  if (isWiki || lowerUrl.includes('temporarytemples.co.uk')) {
-    return `/api/proxy-resource?url=${encodeURIComponent(trimmedUrl)}`;
-  }
-  
-  if (
-    lowerUrl.includes('unsplash.com') ||
-    lowerUrl.includes('cloudfront.net') ||
-    lowerUrl.includes('wonders-of-the-world.net') ||
-    lowerUrl.includes('circleresearcharchive.com')
-  ) {
-    return trimmedUrl;
-  }
-
   if (trimmedUrl.startsWith('http')) {
-    return `/api/proxy-resource?url=${encodeURIComponent(trimmedUrl)}`;
+    if (trimmedUrl.includes('weserv.nl')) return trimmedUrl;
+    return `https://images.weserv.nl/?url=${trimmedUrl}`;
   }
 
   return trimmedUrl;
@@ -777,6 +764,7 @@ export default function CodexPage({
   
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [brokenImages, setBrokenImages] = useState<Record<string, boolean>>({});
+  const [codexViewMode, setCodexViewMode] = useState<'tree' | 'cloud' | 'web'>('tree');
   const [isImageLoading, setIsImageLoading] = useState(false);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [isLightboxImageLoading, setIsLightboxImageLoading] = useState(false);
@@ -2355,21 +2343,21 @@ export default function CodexPage({
               zIndex: 4
             }}
           >
-            {lines.map(line => {
-              const isDotted = line.isRelated || line.isDottedParentLink;
-              return (
-                <path
-                  key={line.id}
-                  d={line.d}
-                  fill="none"
-                  stroke={theme.text}
-                  strokeWidth="2"
-                  strokeDasharray={isDotted ? "4,4" : "none"}
-                  opacity={line.isRelated ? 0.6 : (line.isDottedParentLink ? 0.75 : 0.85)}
-                />
-              );
-            })}
-          </svg>
+              {lines.map(line => {
+                const isDotted = line.isRelated || line.isDottedParentLink;
+                return (
+                  <path
+                    key={line.id}
+                    d={line.d}
+                    fill="none"
+                    stroke={theme.text}
+                    strokeWidth="2"
+                    strokeDasharray={isDotted ? "4,4" : "none"}
+                    opacity={line.isRelated ? 0.6 : (line.isDottedParentLink ? 0.75 : 0.85)}
+                  />
+                );
+              })}
+            </svg>
 
         {/* Columns positioned absolutely on the 2D Canvas */}
         <AnimatePresence>
@@ -2378,7 +2366,6 @@ export default function CodexPage({
             const selIdx = column.nodes.findIndex(n => n.id === selectedNodeId);
             let colTop = 3000;
             if (colIdx === 0 && selectedPath.length === 0) {
-              // Center Column 0 vertically only on initial page load when no category has been selected yet
               const totalHeight = column.nodes.length * 40 - 8;
               colTop = 3000 - totalHeight / 2;
             } else {

@@ -359,5 +359,155 @@ export const OLD_WORLD_STRUCTURES_DATA: OldWorldStructureCase[] = [
     "description": "Perched atop the Festungsberg cliff in Salzburg, Hohensalzburg Fortress is one of the largest fully preserved medieval castles in Europe. Commissioned in 1077 by Archbishop Gebhard, it was continuously expanded with massive bastions, mechanical cable funiculars, and royal chambers.",
     "source": "Salzburg Museum & Castle Fortress Administration",
     "images": ["https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Salzburg_-_Festung_Hohensalzburg.JPG/500px-Salzburg_-_Festung_Hohensalzburg.JPG"]
+  },
+  {
+    "id": "structure-bran-castle",
+    "name": "Bran Castle (Dracula's Castle) - Bran, Romania",
+    "category": "Old World Structures",
+    "type": "Point",
+    "coordinates": {
+      "lng": 25.3672,
+      "lat": 45.5152
+    },
+    "date": 1377,
+    "displayDate": "1377 CE",
+    "description": "Constructed by the Saxons of Kronstadt in 1377 under charter from King Louis I of Hungary, Bran Castle commands a dramatic cliffside pass between Transylvania and Wallachia. Infamous for its historical association with Vlad the Impaler and Bram Stoker's Dracula legend.",
+    "source": "National Museum of Bran",
+    "images": ["https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Castelul_Bran2.jpg/500px-Castelul_Bran2.jpg"]
+  },
+  {
+    "id": "structure-bodiam-castle",
+    "name": "Bodiam Castle - East Sussex, England",
+    "category": "Old World Structures",
+    "type": "Point",
+    "coordinates": {
+      "lng": 0.5435,
+      "lat": 51.0023
+    },
+    "date": 1385,
+    "displayDate": "1385 CE",
+    "description": "Built in 1385 by Sir Edward Dalyngrigge with permission from Richard II to defend the area against French invasion during the Hundred Years' War. Featuring a complete moat, quadrangular plan, and massive corner towers, it is a quintessential medieval moated fortress.",
+    "source": "National Trust UK",
+    "images": ["https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Bodiam-castle-10My8-1197.jpg/500px-Bodiam-castle-10My8-1197.jpg"]
+  },
+  {
+    "id": "structure-spis-castle",
+    "name": "Spiš Castle (Spišský Hrad) - Spišské Podhradie, Slovakia",
+    "category": "Old World Structures",
+    "type": "Point",
+    "coordinates": {
+      "lng": 20.7681,
+      "lat": 48.9995
+    },
+    "date": 1209,
+    "displayDate": "1209 CE",
+    "description": "One of the largest castle complexes in Central Europe covering over 4 hectares. Founded in the 12th century on a travertine cliff, Spiš Castle withstood the Mongol invasions of 1241 and served as the royal administrative hub of Spiš County.",
+    "source": "Slovak National Museum",
+    "images": ["https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Burg_Hohenzollern_10-2016.jpg/500px-Burg_Hohenzollern_10-2016.jpg"]
+  },
+  {
+    "id": "structure-carcassonne",
+    "name": "Citadel of Carcassonne - Carcassonne, France",
+    "category": "Old World Structures",
+    "type": "Point",
+    "coordinates": {
+      "lng": 2.3631,
+      "lat": 43.2070
+    },
+    "date": 1247,
+    "displayDate": "1247 CE",
+    "description": "A fortified medieval citadel boasting 3 kilometers of double outer walls and 52 watchtowers. Restored by Eugène Viollet-le-Duc in the 19th century, Carcassonne played a central role during the Albigensian Crusade and the Cathar wars.",
+    "source": "Centre des Monuments Nationaux",
+    "images": ["https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/1_carcassonne_aerial_2016.jpg/500px-1_carcassonne_aerial_2016.jpg"]
+  },
+  {
+    "id": "structure-conwy-castle",
+    "name": "Conwy Castle - Conwy, Wales",
+    "category": "Old World Structures",
+    "type": "Point",
+    "coordinates": {
+      "lng": -3.8258,
+      "lat": 53.2804
+    },
+    "date": 1283,
+    "displayDate": "1283 CE",
+    "description": "Built by Edward I during his conquest of Wales between 1283 and 1289. Designed by master architect James of St. George, Conwy features eight massive towers and complete curtain walls integrated into the town fortification.",
+    "source": "Cadw Welsh Historic Monuments",
+    "images": ["https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Conwy_Castle%2C_water_view1.jpg/500px-Conwy_Castle%2C_water_view1.jpg"]
+  },
+  {
+    "id": "structure-eilean-donan",
+    "name": "Eilean Donan Castle - Highland, Scotland",
+    "category": "Old World Structures",
+    "type": "Point",
+    "coordinates": {
+      "lng": -5.5161,
+      "lat": 57.2739
+    },
+    "date": 1220,
+    "displayDate": "1220 CE",
+    "description": "Situated on a small tidal island where three sea lochs meet in the Western Highlands. Originally built in the 13th century as a defense against Viking incursions, it was destroyed during the 1719 Jacobite rising and meticulously reconstructed in the 20th century.",
+    "source": "Conchra Charitable Trust",
+    "images": ["https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Eilean_Donan_Castle%2C_Scotland_-_Jan_2011.jpg/500px-Eilean_Donan_Castle%2C_Scotland_-_Jan_2011.jpg"]
+  },
+  {
+    "id": "structure-hohenzollern",
+    "name": "Hohenzollern Castle - Bisingen, Germany",
+    "category": "Old World Structures",
+    "type": "Point",
+    "coordinates": {
+      "lng": 8.9675,
+      "lat": 48.3249
+    },
+    "date": 1061,
+    "displayDate": "1061 CE",
+    "description": "The ancestral seat of the Imperial House of Hohenzollern, crowning Mount Hohenzollern at an elevation of 855 meters. The current Neo-Gothic fortress was rebuilt by King Frederick William IV of Prussia between 1850 and 1867.",
+    "source": "Burg Hohenzollern Administration",
+    "images": ["https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Burg_Hohenzollern_10-2016.jpg/500px-Burg_Hohenzollern_10-2016.jpg"]
+  },
+  {
+    "id": "structure-osaka-castle",
+    "name": "Osaka Castle - Osaka, Japan",
+    "category": "Old World Structures",
+    "type": "Point",
+    "coordinates": {
+      "lng": 135.5259,
+      "lat": 34.6873
+    },
+    "date": 1583,
+    "displayDate": "1583 CE",
+    "description": "Construction started in 1583 by Toyotomi Hideyoshi as the centerpiece of his unified Japan. Surrounded by colossal stone ramparts, deep moats, and gold leaf decorations, Osaka Castle played a pivotal role in the Siege of Osaka (1614–1615).",
+    "source": "Osaka Castle Museum",
+    "images": ["https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Osaka_Castle_03bs3200.jpg/500px-Osaka_Castle_03bs3200.jpg"]
+  },
+  {
+    "id": "structure-mehrangarh-fort",
+    "name": "Mehrangarh Fort - Jodhpur, India",
+    "category": "Old World Structures",
+    "type": "Point",
+    "coordinates": {
+      "lng": 73.0185,
+      "lat": 26.2978
+    },
+    "date": 1459,
+    "displayDate": "1459 CE",
+    "description": "Rising 122 meters above Jodhpur's blue city skyline, Mehrangarh was founded by Rao Jodha in 1459. Enclosed by imposing walls up to 36 meters high, the fort encompasses ornate palaces, courtyards, and ancient battle scarred gates.",
+    "source": "Mehrangarh Museum Trust",
+    "images": ["https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Mehrangarh_Fort_sanhita.jpg/500px-Mehrangarh_Fort_sanhita.jpg"]
+  },
+  {
+    "id": "structure-cairo-citadel",
+    "name": "Citadel of Saladin - Cairo, Egypt",
+    "category": "Old World Structures",
+    "type": "Point",
+    "coordinates": {
+      "lng": 31.2597,
+      "lat": 30.0299
+    },
+    "date": 1176,
+    "displayDate": "1176 CE",
+    "description": "A medieval Islamic fortification constructed by Saladin on Mokattam Hill in 1176 to protect Cairo against Crusader forces. Served as the seat of government in Egypt for over 700 years until the late 19th century.",
+    "source": "Egyptian Ministry of Tourism and Antiquities",
+    "images": ["https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Flickr_-_HuTect_ShOts_-_Citadel_of_Salah_El.Din_and_Masjid_Muhammad_Ali_%D9%82%D9%84%D8%B9%D8%A9_%D8%B5%D9%84%D8%A7%D8%AD_%D8%A7%D9%84%D8%AF%D9%8A%D9%86_%D8%A7%D9%84%D8%A3%D9%8A%D9%88%D8%A8%D9%8A_%D9%88%D9%85%D8%B3%D8%AC%D8%AF_%D9%85%D8%AD%D9%85%D8%AF_%D8%B9%D9%84%D9%8A_-_Cairo_-_Egypt_-_17_04_2010_%284%29.jpg/500px-thumbnail.jpg"]
   }
 ];
