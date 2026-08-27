@@ -2,7 +2,9 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import mapboxgl from 'mapbox-gl';
-import { X, Map as MapIcon, Plus, Eye, EyeOff, Navigation, AlertTriangle, Loader2, Globe } from 'lucide-react';
+import { X, Map as MapIcon, Plus, Eye, EyeOff, Navigation, AlertTriangle, Loader2, Globe, Share2 } from 'lucide-react';
+import { handleShare } from './utils/share';
+import { ShareModal } from './ShareModal';
 
 interface CartographyPageProps {
   theme: {
@@ -1043,6 +1045,35 @@ export default function CartographyPage({
   const [showNotes, setShowNotes] = useState<boolean>(true);
   const [isAddMode, setIsAddMode] = useState<boolean>(false);
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState<boolean>(isMobile ?? false);
+
+  const [shareToast, setShareToast] = useState<string | null>(null);
+  const showShareToast = (msg: string) => {
+    setShareToast(msg);
+    setTimeout(() => {
+      setShareToast(null);
+    }, 2500);
+  };
+
+  const [shareModalData, setShareModalData] = useState<{
+    isOpen: boolean;
+    title: string;
+    text?: string;
+    url: string;
+  }>({
+    isOpen: false,
+    title: '',
+    text: '',
+    url: ''
+  });
+
+  const openShareModal = (title: string, text: string, url: string) => {
+    setShareModalData({
+      isOpen: true,
+      title,
+      text,
+      url
+    });
+  };
 
   // Search state matching map page exactly
   const [searchQuery, setSearchQuery] = useState<string>('');
@@ -2790,6 +2821,35 @@ export default function CartographyPage({
                               }}>
                                 {hMap.description}
                               </p>
+                              {isSelected && (
+                                <div style={{ display: 'flex', marginTop: '4px' }}>
+                                  <button
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      const shareUrl = `${window.location.origin}/cartography?mapId=${encodeURIComponent(hMap.id)}`;
+                                      openShareModal(hMap.name, hMap.description || '', shareUrl);
+                                    }}
+                                    style={{
+                                      display: 'inline-flex',
+                                      alignItems: 'center',
+                                      gap: '4px',
+                                      background: 'transparent',
+                                      color: '#000000',
+                                      border: '1px solid #000000',
+                                      padding: '3px 8px',
+                                      borderRadius: '12px',
+                                      fontSize: '9px',
+                                      fontWeight: 'bold',
+                                      fontFamily: '"Space Mono", monospace',
+                                      cursor: 'pointer'
+                                    }}
+                                    title="Share this map"
+                                  >
+                                    <Share2 size={10} />
+                                    <span>SHARE</span>
+                                  </button>
+                                </div>
+                              )}
                             </div>
                           </motion.div>
                         );
@@ -2863,6 +2923,38 @@ export default function CartographyPage({
           pointerEvents: 'none',
           transition: 'left 0.5s ease, bottom 0.5s ease'
         }}>
+          {/* Share Map Button */}
+          <motion.button
+            onClick={() => {
+              const shareUrl = `${window.location.origin}/cartography?mapId=${encodeURIComponent(selectedMap.id)}`;
+              openShareModal(selectedMap.name, selectedMap.description || '', shareUrl);
+            }}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.95 }}
+            style={{
+              background: isMapDarkMode ? '#ffffff' : '#000000',
+              color: isMapDarkMode ? '#000000' : '#ffffff',
+              border: `1px solid ${theme.border}`,
+              padding: '0 16px',
+              height: '32px',
+              fontSize: '9px',
+              fontFamily: '"Space Mono", monospace',
+              fontWeight: 700,
+              cursor: 'pointer',
+              borderRadius: '16px',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '6px',
+              pointerEvents: 'auto',
+              boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+              transition: 'all 0.15s ease'
+            }}
+            title="Share this historical map"
+          >
+            <Share2 size={10} strokeWidth={3} />
+            <span>SHARE</span>
+          </motion.button>
+
           {/* Add Pin Button */}
           <motion.button
             onClick={() => setIsAddMode(!isAddMode)}
@@ -3332,6 +3424,52 @@ export default function CartographyPage({
             </motion.div>
           )}
         </AnimatePresence>
+
+        {/* SHARE TOAST NOTIFICATION */}
+        <AnimatePresence>
+          {shareToast && (
+            <motion.div
+              initial={{ opacity: 0, y: -20, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -20, scale: 0.95 }}
+              style={{
+                position: 'fixed',
+                top: '24px',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                zIndex: 999999,
+                background: isMapDarkMode ? '#000000' : '#ffffff',
+                color: isMapDarkMode ? '#ffffff' : '#000000',
+                border: `1px solid ${isMapDarkMode ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0.3)'}`,
+                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.5)',
+                padding: '10px 20px',
+                borderRadius: '20px',
+                fontFamily: '"Space Mono", monospace',
+                fontSize: '12px',
+                fontWeight: 'bold',
+                letterSpacing: '0.05em',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+                pointerEvents: 'none'
+              }}
+            >
+              <Share2 size={14} style={{ color: '#91FFC4' }} />
+              <span>{shareToast}</span>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* SHARE MODAL POPUP */}
+        <ShareModal
+          isOpen={shareModalData.isOpen}
+          onClose={() => setShareModalData(prev => ({ ...prev, isOpen: false }))}
+          title={shareModalData.title}
+          text={shareModalData.text}
+          url={shareModalData.url}
+          isMapDarkMode={isMapDarkMode}
+          onShowToast={showShareToast}
+        />
       </div>
     </div>
   );

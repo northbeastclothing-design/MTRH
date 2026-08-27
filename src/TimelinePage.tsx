@@ -1,7 +1,9 @@
 import React, { useState, useMemo, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { TIMELINE_ITEMS, TimelineItem, TIMELINE_LOCATIONS } from './timelineData';
-import { RotateCcw, MapPin, Flag, X } from 'lucide-react';
+import { RotateCcw, MapPin, Flag, X, Share2 } from 'lucide-react';
+import { handleShare } from './utils/share';
+import { ShareModal } from './ShareModal';
 import { TERM_TREE_DATA } from './termTreeData';
 import { LAYER_COLORS } from './CodexPage';
 
@@ -207,6 +209,35 @@ export default function TimelinePage({
 
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const hasDraggedRef = useRef(false);
+
+  const [shareToast, setShareToast] = useState<string | null>(null);
+  const showShareToast = (msg: string) => {
+    setShareToast(msg);
+    setTimeout(() => {
+      setShareToast(null);
+    }, 2500);
+  };
+
+  const [shareModalData, setShareModalData] = useState<{
+    isOpen: boolean;
+    title: string;
+    text?: string;
+    url: string;
+  }>({
+    isOpen: false,
+    title: '',
+    text: '',
+    url: ''
+  });
+
+  const openShareModal = (title: string, text: string, url: string) => {
+    setShareModalData({
+      isOpen: true,
+      title,
+      text,
+      url
+    });
+  };
 
   // Match the active timeline item to a Codex term
   const codexTerm = useMemo(() => {
@@ -1932,6 +1963,37 @@ export default function TimelinePage({
                             <span>FLAG</span>
                           </button>
                         )}
+
+                        <button
+                          onClick={() => {
+                            const shareUrl = `${window.location.origin}/timeline?itemId=${encodeURIComponent(selectedItem.id)}`;
+                            openShareModal(selectedItem.name || 'MTRH Timeline Event', selectedItem.description || '', shareUrl);
+                          }}
+                          style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            flex: 1,
+                            background: 'transparent',
+                            color: tooltipTheme.text,
+                            border: `1px solid ${tooltipTheme.text}`,
+                            padding: '6px 14px',
+                            fontSize: '9px',
+                            fontFamily: '"Space Mono", monospace',
+                            fontWeight: 700,
+                            cursor: 'pointer',
+                            borderRadius: '16px',
+                            textTransform: 'uppercase',
+                            transition: 'all 0.2s ease',
+                            boxSizing: 'border-box',
+                            gap: '6px',
+                            whiteSpace: 'nowrap'
+                          }}
+                          title="Share this timeline event"
+                        >
+                          <Share2 size={11} />
+                          <span>SHARE</span>
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -2591,6 +2653,52 @@ export default function TimelinePage({
           </>
         )}
       </AnimatePresence>
+
+      {/* SHARE TOAST NOTIFICATION */}
+      <AnimatePresence>
+        {shareToast && (
+          <motion.div
+            initial={{ opacity: 0, y: -20, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -20, scale: 0.95 }}
+            style={{
+              position: 'fixed',
+              top: '24px',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              zIndex: 999999,
+              background: isMapDarkMode ? '#000000' : '#ffffff',
+              color: isMapDarkMode ? '#ffffff' : '#000000',
+              border: `1px solid ${isMapDarkMode ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0.3)'}`,
+              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.5)',
+              padding: '10px 20px',
+              borderRadius: '20px',
+              fontFamily: '"Space Mono", monospace',
+              fontSize: '12px',
+              fontWeight: 'bold',
+              letterSpacing: '0.05em',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
+              pointerEvents: 'none'
+            }}
+          >
+            <Share2 size={14} style={{ color: '#91FFC4' }} />
+            <span>{shareToast}</span>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* SHARE MODAL POPUP */}
+      <ShareModal
+        isOpen={shareModalData.isOpen}
+        onClose={() => setShareModalData(prev => ({ ...prev, isOpen: false }))}
+        title={shareModalData.title}
+        text={shareModalData.text}
+        url={shareModalData.url}
+        isMapDarkMode={isMapDarkMode}
+        onShowToast={showShareToast}
+      />
 
       <style>{`
         @keyframes radar-pulse {

@@ -2,7 +2,9 @@
 import React, { useState, useEffect, useMemo, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { createPortal } from 'react-dom';
-import { X, Flag, Play } from 'lucide-react';
+import { X, Flag, Play, Share2 } from 'lucide-react';
+import { handleShare } from './utils/share';
+import { ShareModal } from './ShareModal';
 import { TERM_TREE_DATA, TermNode, TranslationInfo } from './termTreeData';
 import { TIMELINE_LOCATIONS } from './timelineData';
 
@@ -750,7 +752,20 @@ export default function CodexPage({
 }: CodexPageProps) {
   const nodes = (codexNodes || TERM_TREE_DATA).filter((n): n is TermNode => !!(n && n.id));
 
-  const [selectedPath, setSelectedPath] = useState<string[]>([]);
+  const [selectedPath, setSelectedPath] = useState<string[]>(() => {
+    if (focusedTermId) {
+      const allNodes = (codexNodes || TERM_TREE_DATA).filter((n): n is TermNode => !!(n && n.id));
+      const path: string[] = [];
+      let curr: string | null = focusedTermId;
+      while (curr) {
+        path.unshift(curr);
+        const node = allNodes.find(n => n.id === curr);
+        curr = node?.parentId || null;
+      }
+      return path;
+    }
+    return [];
+  });
   const [hoveredTerm, setHoveredTerm] = useState<{ id: string; level: number } | null>(null);
   const hoveredTermId = hoveredTerm?.id || null;
   const hoveredLevel = hoveredTerm?.level ?? null;
@@ -767,6 +782,34 @@ export default function CodexPage({
   const [codexViewMode, setCodexViewMode] = useState<'tree' | 'cloud' | 'web'>('tree');
   const [isImageLoading, setIsImageLoading] = useState(false);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  const [shareToast, setShareToast] = useState<string | null>(null);
+  const showShareToast = useCallback((msg: string) => {
+    setShareToast(msg);
+    setTimeout(() => {
+      setShareToast(null);
+    }, 2500);
+  }, []);
+
+  const [shareModalData, setShareModalData] = useState<{
+    isOpen: boolean;
+    title: string;
+    text?: string;
+    url: string;
+  }>({
+    isOpen: false,
+    title: '',
+    text: '',
+    url: ''
+  });
+
+  const openShareModal = useCallback((title: string, text: string, url: string) => {
+    setShareModalData({
+      isOpen: true,
+      title,
+      text,
+      url
+    });
+  }, []);
   const [isLightboxImageLoading, setIsLightboxImageLoading] = useState(false);
   const columnsContainerRef = useRef<HTMLDivElement>(null);
   const svgOverlayRef = useRef<SVGSVGElement>(null);
@@ -1965,21 +2008,44 @@ export default function CodexPage({
   useEffect(() => {
     if (focusedTermId) {
       userHasPannedRef.current = false;
+      hasCenteredInitialRef.current = true;
       const path = getPathToRoot(focusedTermId);
       if (path.length > 0) {
         setSelectedPath(path);
         setIsRightCollapsed(false);
 
-        // Center on the focused node horizontally and vertically
+        // Center on the focused node horizontally and vertically once DOM node is rendered
         const targetNode = nodes.find(n => n.id === focusedTermId);
         const hasChildren = targetNode ? checkNodeHasSubItems(targetNode) : false;
         const targetCol = hasChildren ? path.length : path.length - 1;
-        setTimeout(() => {
-          centerOnNode(focusedTermId, targetCol, false);
-        }, 150);
-      }
-      if (onFocusedTermConsumed) {
-        onFocusedTermConsumed();
+
+        let attempts = 0;
+        const tryCenter = () => {
+          let element: HTMLElement | null = null;
+          for (let c = 0; c < 10; c++) {
+            const el = document.getElementById(`node-pill-${focusedTermId}-${c}`);
+            if (el) {
+              element = el;
+              break;
+            }
+          }
+
+          if (element || attempts > 8) {
+            centerOnNode(focusedTermId, targetCol, false);
+            if (onFocusedTermConsumed) {
+              onFocusedTermConsumed();
+            }
+          } else {
+            attempts++;
+            setTimeout(tryCenter, 50);
+          }
+        };
+
+        setTimeout(tryCenter, 50);
+      } else {
+        if (onFocusedTermConsumed) {
+          onFocusedTermConsumed();
+        }
       }
     }
   }, [focusedTermId, onFocusedTermConsumed, checkNodeHasSubItems, centerOnNode, nodes]);
@@ -3204,6 +3270,36 @@ export default function CodexPage({
                         </motion.button>
                       )}
 
+                      <motion.button
+                        whileTap={{ scale: 0.95 }}
+                        whileHover={{ scale: 1.05 }}
+                        onClick={() => {
+                          const shareUrl = `${window.location.origin}/codex?termId=${encodeURIComponent(activeTermNode.id)}`;
+                          openShareModal(activeTermNode.name, activeTermNode.description || '', shareUrl);
+                        }}
+                        style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: '6px',
+                          background: 'transparent',
+                          color: isMapDarkMode ? '#fff' : '#000',
+                          border: `1px solid ${isMapDarkMode ? '#fff' : '#000'}`,
+                          padding: '6px 12px',
+                          borderRadius: '16px',
+                          cursor: 'pointer',
+                          fontSize: '11px',
+                          fontWeight: 'bold',
+                          fontFamily: '"Space Mono", monospace',
+                          letterSpacing: '0.05em',
+                          transition: 'all 0.2s ease',
+                          whiteSpace: 'nowrap'
+                        }}
+                        title="Share this term"
+                      >
+                        <Share2 size={13} />
+                        <span>SHARE</span>
+                      </motion.button>
+
                       {resolvedMapInfo && (
                         <motion.button
                           whileTap={{ scale: 0.95 }}
@@ -3948,6 +4044,51 @@ export default function CodexPage({
       </AnimatePresence>,
       document.body
     )}
+      {/* SHARE TOAST NOTIFICATION */}
+      <AnimatePresence>
+        {shareToast && (
+          <motion.div
+            initial={{ opacity: 0, y: -20, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -20, scale: 0.95 }}
+            style={{
+              position: 'fixed',
+              top: '24px',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              zIndex: 999999,
+              background: isMapDarkMode ? '#000000' : '#ffffff',
+              color: isMapDarkMode ? '#ffffff' : '#000000',
+              border: `1px solid ${isMapDarkMode ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0.3)'}`,
+              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.5)',
+              padding: '10px 20px',
+              borderRadius: '20px',
+              fontFamily: '"Space Mono", monospace',
+              fontSize: '12px',
+              fontWeight: 'bold',
+              letterSpacing: '0.05em',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
+              pointerEvents: 'none'
+            }}
+          >
+            <Share2 size={14} style={{ color: '#91FFC4' }} />
+            <span>{shareToast}</span>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* SHARE MODAL POPUP */}
+      <ShareModal
+        isOpen={shareModalData.isOpen}
+        onClose={() => setShareModalData(prev => ({ ...prev, isOpen: false }))}
+        title={shareModalData.title}
+        text={shareModalData.text}
+        url={shareModalData.url}
+        isMapDarkMode={isMapDarkMode}
+        onShowToast={showShareToast}
+      />
     </div>
   );
 }

@@ -4,7 +4,9 @@ import { createPortal } from 'react-dom';
 import { motion, AnimatePresence, animate } from 'motion/react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import { X, Heart, Play, Upload, Plus, Link, MapPin, Lock, Check, Trash2, ShieldAlert, ChevronDown, Shield, Eye, EyeOff, Shuffle, Flag, AlertTriangle, Instagram, ExternalLink, RotateCcw, Menu, Calendar } from 'lucide-react';
+import { X, Heart, Play, Upload, Plus, Link, MapPin, Lock, Check, Trash2, ShieldAlert, ChevronDown, Shield, Eye, EyeOff, Shuffle, Flag, AlertTriangle, Instagram, ExternalLink, RotateCcw, Menu, Calendar, Share2 } from 'lucide-react';
+import { handleShare } from './utils/share';
+import { ShareModal } from './ShareModal';
 import { initializeApp } from 'firebase/app';
 import { getFirestore, doc, getDoc, setDoc, updateDoc, increment, collection, onSnapshot, serverTimestamp, query, where, addDoc, deleteDoc } from 'firebase/firestore';
 import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } from 'firebase/auth';
@@ -1333,7 +1335,16 @@ function App() {
     return () => clearTimeout(timer);
   }, [searchQuery]);
 
-  const [selectedTimelineItem, setSelectedTimelineItem] = useState<any | null>(null);
+  const [selectedTimelineItem, setSelectedTimelineItem] = useState<any | null>(() => {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const itemId = params.get('itemId');
+      if (itemId) {
+        return TIMELINE_ITEMS.find(item => String(item.id) === itemId) || null;
+      }
+    } catch (e) {}
+    return null;
+  });
   const [activeWaypointIndex, setActiveWaypointIndex] = useState<number | null>(null);
 
   const [codexSearchQuery, setCodexSearchQuery] = useState('');
@@ -1803,11 +1814,30 @@ function App() {
   const [dragStartTimelineStart, setDragStartTimelineStart] = useState(0);
   const timelineRef = useRef<HTMLDivElement>(null);
   
+  const initialUrlParamsRef = useRef<{
+    featureId: string | null;
+    termId: string | null;
+    itemId: string | null;
+    mapId: string | null;
+  }>({
+    featureId: typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('featureId') : null,
+    termId: typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('termId') : null,
+    itemId: typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('itemId') : null,
+    mapId: typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('mapId') : null
+  });
+  const hasProcessedInitialDeepLinkRef = useRef(false);
+
   const [selectedFeature, setSelectedFeature] = useState<any>(null);
   const selectedFeatureRef = useRef<any>(null);
   selectedFeatureRef.current = selectedFeature;
   const wasHoverTooltipVisibleRef = useRef(false);
-  const [focusedCodexTermId, setFocusedCodexTermId] = useState<string | null>(null);
+  const [focusedCodexTermId, setFocusedCodexTermId] = useState<string | null>(() => {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      return params.get('termId') || null;
+    } catch (e) {}
+    return null;
+  });
 
   // Helper to resolve map features to codex nodes
   const getCodexTermForMapFeature = (feature: any) => {
@@ -1883,7 +1913,16 @@ function App() {
   const [isStyleLoaded, setIsStyleLoaded] = useState(false);
   const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1200);
   const [scrollbarWidth, setScrollbarWidth] = useState(0);
-  const [selectedCodexNode, setSelectedCodexNode] = useState<any>(null);
+  const [selectedCodexNode, setSelectedCodexNode] = useState<any>(() => {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const termId = params.get('termId');
+      if (termId) {
+        return TERM_TREE_DATA.find(node => node && node.id && String(node.id) === termId) || null;
+      }
+    } catch (e) {}
+    return null;
+  });
   const isMobile = windowWidth < 1024;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileDrawerExpanded, setIsMobileDrawerExpanded] = useState(false);
@@ -3551,7 +3590,9 @@ function App() {
     });
   }, [timelineWindowStart, timelineWindowSpan]);
 
-  // 1. Synchronize initial state and back/forward browser navigation from URL
+
+
+  // 1b. Synchronize back/forward browser navigation from URL popstate
   useEffect(() => {
     const handlePopState = () => {
       const path = window.location.pathname;
@@ -3598,53 +3639,24 @@ function App() {
       } else {
         setCurrentPage('map');
         setIsModeratorOpen(false);
-      }
-
-      // Sync selectedFeature
-      const featureId = params.get('featureId');
-      if (featureId) {
-        const matched = combinedPointsAndLinesData.find(item => String(item.id) === featureId);
-        if (matched) {
-          setSelectedFeature(matched);
-          const categories = matched.categories || (matched.category ? [matched.category] : []);
-          if (categories.length > 0) {
-            setActiveLayers(prev => {
-              const next = { ...prev };
-              let changed = false;
-              categories.forEach((cat: string) => {
-                if (next[cat] !== true) {
-                  next[cat] = true;
-                  changed = true;
-                }
-              });
-              return changed ? next : prev;
-            });
-            setExpandedLayers(prev => {
-              const next = { ...prev };
-              let changed = false;
-              categories.forEach((cat: string) => {
-                if (!next[cat]) {
-                  next[cat] = true;
-                  changed = true;
-                }
-              });
-              return changed ? next : prev;
-            });
-          }
+        const featureId = params.get('featureId');
+        if (featureId) {
+          const matched = combinedPointsAndLinesData.find(item => String(item.id) === featureId);
+          if (matched) setSelectedFeature(matched);
+        } else {
+          setSelectedFeature(null);
         }
-      } else {
-        setSelectedFeature(null);
       }
     };
 
     window.addEventListener('popstate', handlePopState);
-    handlePopState();
-
     return () => window.removeEventListener('popstate', handlePopState);
   }, [combinedPointsAndLinesData]);
 
   // 2. Sync page and navigation changes to URL history path
   useEffect(() => {
+    if (!hasProcessedInitialDeepLinkRef.current) return;
+
     let path = '/';
     if (isModeratorOpen) path = '/moderator';
     else if (currentPage === 'timeline') path = '/timeline';
@@ -3663,19 +3675,19 @@ function App() {
 
     if (currentPage === 'timeline' && selectedTimelineItem) {
       params.set('itemId', String(selectedTimelineItem.id));
-    } else {
+    } else if (currentPage === 'timeline' && !initialUrlParamsRef.current.itemId) {
       params.delete('itemId');
     }
 
     if (currentPage === 'codex' && selectedCodexNode) {
       params.set('termId', String(selectedCodexNode.id));
-    } else {
+    } else if (currentPage === 'codex' && !initialUrlParamsRef.current.termId) {
       params.delete('termId');
     }
 
     if (currentPage === 'cartography' && selectedCartographyMapId) {
       params.set('mapId', String(selectedCartographyMapId));
-    } else {
+    } else if (currentPage === 'cartography' && !initialUrlParamsRef.current.mapId) {
       params.delete('mapId');
     }
 
@@ -3689,11 +3701,13 @@ function App() {
 
   // 3. Sync selectedFeature selection to URL search params (replace state)
   useEffect(() => {
+    if (!hasProcessedInitialDeepLinkRef.current) return;
+
     if (currentPage === 'map' && !isModeratorOpen) {
       const params = new URLSearchParams(window.location.search);
       if (selectedFeature) {
         params.set('featureId', String(selectedFeature.id));
-      } else {
+      } else if (!initialUrlParamsRef.current.featureId) {
         params.delete('featureId');
       }
       const searchStr = params.toString();
@@ -3707,6 +3721,35 @@ function App() {
 
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  
+  const [shareToast, setShareToast] = useState<string | null>(null);
+  const showShareToast = useCallback((msg: string) => {
+    setShareToast(msg);
+    setTimeout(() => {
+      setShareToast(null);
+    }, 2500);
+  }, []);
+
+  const [shareModalData, setShareModalData] = useState<{
+    isOpen: boolean;
+    title: string;
+    text?: string;
+    url: string;
+  }>({
+    isOpen: false,
+    title: '',
+    text: '',
+    url: ''
+  });
+
+  const openShareModal = useCallback((title: string, text: string, url: string) => {
+    setShareModalData({
+      isOpen: true,
+      title,
+      text,
+      url
+    });
+  }, []);
   
   const activeAssets = useMemo(() => {
     if (currentPage === 'codex' && selectedCodexNode) {
@@ -5680,7 +5723,11 @@ function App() {
 
   const handleLocationItemClick = useCallback((feature: any) => {
     stopMainMapRotation();
-    if (!feature || !feature.coordinates || !mapRef.current) return;
+    if (!feature || !feature.coordinates) return;
+    if (!mapRef.current) {
+      setTimeout(() => handleLocationItemClick(feature), 150);
+      return;
+    }
 
     playAudio('pin_click');
 
@@ -5713,8 +5760,15 @@ function App() {
       setIsMobileDrawerExpanded(true);
     }
 
-    // Auto-expand the categories this location belongs to in the sidebar
+    // Auto-enable and expand the categories this location belongs to in the sidebar
     if (feature.categories && Array.isArray(feature.categories)) {
+      setActiveLayers(prev => {
+        const next = { ...prev };
+        feature.categories.forEach((cat: string) => {
+          next[cat] = true;
+        });
+        return next;
+      });
       setExpandedLayers(prev => {
         const next = { ...prev };
         feature.categories.forEach((cat: string) => {
@@ -5723,6 +5777,10 @@ function App() {
         return next;
       });
     } else if (feature.category) {
+      setActiveLayers(prev => ({
+        ...prev,
+        [feature.category]: true
+      }));
       setExpandedLayers(prev => ({
         ...prev,
         [feature.category]: true
@@ -5766,6 +5824,23 @@ function App() {
       padding: paddingVal
     });
   }, [stopMainMapRotation, windowWidth]);
+
+  // Process initial deep link parameters once data is compiled, Map is loaded, and handleLocationItemClick is ready
+  useEffect(() => {
+    if (hasProcessedInitialDeepLinkRef.current) return;
+    if (!isMapLoaded || !combinedPointsAndLinesData || combinedPointsAndLinesData.length === 0) return;
+
+    const featureId = initialUrlParamsRef.current.featureId;
+    if (featureId) {
+      const matched = combinedPointsAndLinesData.find(item => String(item.id) === featureId);
+      if (matched) {
+        hasProcessedInitialDeepLinkRef.current = true;
+        handleLocationItemClick(matched);
+        return;
+      }
+    }
+    hasProcessedInitialDeepLinkRef.current = true;
+  }, [isMapLoaded, combinedPointsAndLinesData, handleLocationItemClick]);
 
   useEffect(() => {
     if (isMobile && mapRef.current && selectedFeature) {
@@ -7457,6 +7532,36 @@ function App() {
               <span>FLAG</span>
             </motion.button>
 
+            <motion.button
+              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.05 }}
+              onClick={() => {
+                const shareUrl = `${window.location.origin}/codex?termId=${encodeURIComponent(activeTermNode.id)}`;
+                openShareModal(activeTermNode.name, activeTermNode.description || '', shareUrl);
+              }}
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '6px',
+                background: 'transparent',
+                color: isMapDarkMode ? '#fff' : '#000',
+                border: `1px solid ${isMapDarkMode ? '#fff' : '#000'}`,
+                padding: '6px 12px',
+                borderRadius: '16px',
+                cursor: 'pointer',
+                fontSize: '11px',
+                fontWeight: 'bold',
+                fontFamily: '"Space Mono", monospace',
+                letterSpacing: '0.05em',
+                transition: 'all 0.2s ease',
+                whiteSpace: 'nowrap'
+              }}
+              title="Share this term"
+            >
+              <Share2 size={13} />
+              <span>SHARE</span>
+            </motion.button>
+
             {resolvedMapInfo && (
               <motion.button
                 whileTap={{ scale: 0.95 }}
@@ -8363,6 +8468,36 @@ function App() {
             >
               <Flag size={13} />
               <span>FLAG</span>
+            </motion.button>
+
+            <motion.button
+              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.05 }}
+              onClick={() => {
+                const shareUrl = `${window.location.origin}/?featureId=${encodeURIComponent(selectedFeature.id)}`;
+                const title = selectedFeature.name || selectedFeature.title || 'MTRH Map Location';
+                openShareModal(title, selectedFeature.description || '', shareUrl);
+              }}
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '6px',
+                background: 'transparent',
+                color: isMapDarkMode ? '#fff' : '#000',
+                border: `1px solid ${isMapDarkMode ? '#fff' : '#000'}`,
+                padding: '6px 12px',
+                borderRadius: '16px',
+                cursor: 'pointer',
+                fontSize: '11px',
+                fontWeight: 'bold',
+                fontFamily: '"Space Mono", monospace',
+                transition: 'all 0.2s ease',
+                whiteSpace: 'nowrap'
+              }}
+              title="Share this location"
+            >
+              <Share2 size={13} />
+              <span>SHARE</span>
             </motion.button>
 
             {combinedTimelineItems.some(t => String(t.id) === String(selectedFeature.id)) && (
@@ -15628,6 +15763,52 @@ function App() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* SHARE TOAST NOTIFICATION */}
+      <AnimatePresence>
+        {shareToast && (
+          <motion.div
+            initial={{ opacity: 0, y: -20, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -20, scale: 0.95 }}
+            style={{
+              position: 'fixed',
+              top: '24px',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              zIndex: 999999,
+              background: isMapDarkMode ? '#000000' : '#ffffff',
+              color: isMapDarkMode ? '#ffffff' : '#000000',
+              border: `1px solid ${isMapDarkMode ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0.3)'}`,
+              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.5)',
+              padding: '10px 20px',
+              borderRadius: '20px',
+              fontFamily: '"Space Mono", monospace',
+              fontSize: '12px',
+              fontWeight: 'bold',
+              letterSpacing: '0.05em',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
+              pointerEvents: 'none'
+            }}
+          >
+            <Share2 size={14} style={{ color: '#91FFC4' }} />
+            <span>{shareToast}</span>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* SHARE MODAL POPUP */}
+      <ShareModal
+        isOpen={shareModalData.isOpen}
+        onClose={() => setShareModalData(prev => ({ ...prev, isOpen: false }))}
+        title={shareModalData.title}
+        text={shareModalData.text}
+        url={shareModalData.url}
+        isMapDarkMode={isMapDarkMode}
+        onShowToast={showShareToast}
+      />
     </div>
   );
 }
