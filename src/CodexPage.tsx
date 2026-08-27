@@ -4082,14 +4082,14 @@ export default function CodexPage({
               left: '50%',
               transform: 'translateX(-50%)',
               zIndex: 10000000,
-              background: isMapDarkMode ? '#000000' : '#ffffff',
-              color: isMapDarkMode ? '#ffffff' : '#000000',
-              border: `1px solid ${isMapDarkMode ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0.3)'}`,
-              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.5)',
+              background: '#91FFC4',
+              color: '#000000',
+              border: '1px solid rgba(0, 0, 0, 0.2)',
+              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4)',
               padding: '10px 20px',
-              borderRadius: '20px',
+              borderRadius: '24px',
               fontFamily: '"Space Mono", monospace',
-              fontSize: '12px',
+              fontSize: '11px',
               fontWeight: 'bold',
               letterSpacing: '0.05em',
               display: 'flex',
@@ -4098,7 +4098,7 @@ export default function CodexPage({
               pointerEvents: 'none'
             }}
           >
-            <Share2 size={14} style={{ color: '#91FFC4' }} />
+            <Share2 size={14} style={{ color: '#000000' }} />
             <span>{shareToast}</span>
           </motion.div>
         )}
