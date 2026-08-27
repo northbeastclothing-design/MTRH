@@ -5,6 +5,7 @@ import { createPortal } from 'react-dom';
 import { X, Flag, Play, Share2 } from 'lucide-react';
 import { handleShare } from './utils/share';
 import { ShareModal } from './ShareModal';
+import { updateClientOgpTags } from './utils/ogp';
 import { TERM_TREE_DATA, TermNode, TranslationInfo } from './termTreeData';
 import { TIMELINE_LOCATIONS } from './timelineData';
 
@@ -816,6 +817,23 @@ export default function CodexPage({
       imageUrl
     });
   }, []);
+
+  useEffect(() => {
+    if (activeTermNode) {
+      const title = `${activeTermNode.name} | Codex Research Archive | MTRH Map`;
+      const description = activeTermNode.description || 'Declassified dossier and anomaly research on MTRH Interactive Map.';
+      const image = activeTermNode.images?.[0];
+      const url = window.location.href;
+      updateClientOgpTags({ title, description, url, image });
+    } else {
+      updateClientOgpTags({
+        title: 'Codex Knowledge Tree | MTRH Interactive Map',
+        description: 'Explore interconnected nodes, historical cross-references, and classified research categories.',
+        url: window.location.href
+      });
+    }
+  }, [activeTermNode]);
+
   const [isLightboxImageLoading, setIsLightboxImageLoading] = useState(false);
   const columnsContainerRef = useRef<HTMLDivElement>(null);
   const svgOverlayRef = useRef<SVGSVGElement>(null);

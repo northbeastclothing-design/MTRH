@@ -18,6 +18,7 @@ import TimelinePage from './TimelinePage';
 import CodexPage from './CodexPage';
 import CartographyPage from './CartographyPage';
 import { playAudio } from './utils/audio';
+import { updateClientOgpTags } from './utils/ogp';
 import { TIMELINE_ITEMS, TIMELINE_LOCATIONS, BIBLICAL_TRAVEL_PATHS, Waypoint, TravelPath } from './timelineData';
 import { ARCHAEOLOGICAL_FINDS_DATA } from './archaeologyData';
 import { OLD_WORLD_STRUCTURES_DATA } from './oldWorldStructuresData';
@@ -4383,6 +4384,28 @@ function App() {
       console.error("Like operation failed", error);
     }
   };
+
+  useEffect(() => {
+    if (selectedFeature) {
+      const title = `${selectedFeature.name} | Dossier Archive | MTRH Map`;
+      const description = selectedFeature.description || 'Declassified dossier and anomaly research on MTRH Interactive Map.';
+      const image = selectedFeature.images?.[0] || selectedFeature.imageUrl;
+      const url = window.location.href;
+      updateClientOgpTags({ title, description, url, image });
+    } else if (selectedCodexNode) {
+      const title = `${selectedCodexNode.name} | Codex Research Archive | MTRH Map`;
+      const description = selectedCodexNode.description || 'Declassified dossier and anomaly research on MTRH Interactive Map.';
+      const image = selectedCodexNode.images?.[0];
+      const url = window.location.href;
+      updateClientOgpTags({ title, description, url, image });
+    } else if (currentPage === 'map') {
+      updateClientOgpTags({
+        title: 'MTRH Interactive Map | Mapping The Rabbit Hole',
+        description: 'Interactive geospatial map and intelligence archive exploring declassified operations, anomalies, ancient monuments, and firmament cosmology.',
+        url: window.location.href
+      });
+    }
+  }, [selectedFeature, selectedCodexNode, currentPage]);
 
   useEffect(() => {
     setActiveImageIndex(0);

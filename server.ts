@@ -6,11 +6,120 @@ import admin from "firebase-admin";
 import nodemailer from "nodemailer";
 import dotenv from "dotenv";
 
+import { TERM_TREE_DATA } from './src/termTreeData';
+import { DATA_CENTERS_DATA } from './src/dataCentersData';
+import { ARCHAEOLOGICAL_FINDS_DATA } from './src/archaeologyData';
+import { OLD_WORLD_STRUCTURES_DATA } from './src/oldWorldStructuresData';
+import { TIMELINE_ITEMS } from './src/timelineData';
+
 // Load environment variables
 dotenv.config();
 
 const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
 const isProduction = process.env.NODE_ENV === "production" || !!process.env.K_SERVICE || (typeof __filename !== "undefined" && __filename.includes("dist"));
+
+const HISTORICAL_MAPS: Record<string, { name: string; description: string; url: string }> = {
+  'catalhoyuk': {
+    name: 'Çatalhöyük Map (6600 BCE)',
+    description: 'Discovered during excavations of the ancient Neolithic settlement of Çatalhöyük in Anatolia, Turkey. Depicts a town plan with individual dwellings and the erupting double-peaked volcano of Hasan Dağı.',
+    url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/%C3%87atalh%C3%B6y%C3%BCk_map.jpg/800px-%C3%87atalh%C3%B6y%C3%BCk_map.jpg'
+  },
+  'fra-mauro': {
+    name: 'Fra Mauro Mappa Mundi (1459 CE)',
+    description: 'A monumental 15th-century circular world map produced by the Venetian monk Fra Mauro. Renowned for its extraordinary detail, orientation with South at the top, and integration of medieval Asian geographic knowledge.',
+    url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/FraMauroDetailedMap.jpg/800px-FraMauroDetailedMap.jpg'
+  },
+  'piri-reis': {
+    name: 'Piri Reis Map (1513 CE)',
+    description: 'A famous pre-modern world map compiled by Ottoman admiral and cartographer Piri Reis. Shows the western coasts of Europe, North Africa, Brazil, and an ice-free Antarctic coastline.',
+    url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Piri_reis_map_of_1513_surface.jpg/800px-Piri_reis_map_of_1513_surface.jpg'
+  },
+  'urbano-monte': {
+    name: 'Urbano Monte Planisphere (1587 CE)',
+    description: 'A massive 60-sheet hand-drawn manuscript map created by Milanese cartographer Urbano Monte. Depicts the Earth as a north-polar azimuthal projection with advanced cosmological detail and fantastical creatures.',
+    url: 'https://davidrumsey.realityengines.com/tiles/1587-Urbano-Monte/dzi.jpg'
+  },
+  'flammarion': {
+    name: 'Flammarion Engraving (1888 CE)',
+    description: 'A famous 19th-century wood engraving illustrating a pilgrim kneeling and peering through the atmospheric sky dome or firmament to behold the celestial mechanics of the cosmos behind the curtain.',
+    url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flammarion_1888_article_capitile_4_figure_14.jpg/800px-Flammarion_1888_article_capitile_4_figure_14.jpg'
+  }
+};
+
+function getOgpMetaForRequest(reqPath: string, query: Record<string, any>, fullUrl: string) {
+  const { featureId, termId, itemId, mapId } = query;
+
+  let title = '';
+  let description = '';
+  let image = '';
+
+  if (mapId && HISTORICAL_MAPS[String(mapId)]) {
+    const map = HISTORICAL_MAPS[String(mapId)];
+    title = `${map.name} | Historical Cartography | MTRH Map`;
+    description = map.description;
+    image = map.url;
+  } else if (termId) {
+    const node = TERM_TREE_DATA.find(n => n.id === String(termId));
+    if (node) {
+      title = `${node.name} | Codex Research Archive | MTRH Map`;
+      description = node.description || 'Declassified dossier and anomaly research on MTRH Interactive Map.';
+      image = node.images?.[0] || '';
+    }
+  } else if (featureId || itemId) {
+    const targetId = String(featureId || itemId);
+    const dcItem = DATA_CENTERS_DATA.find(n => n.id === targetId);
+    const archItem = ARCHAEOLOGICAL_FINDS_DATA.find(n => n.id === targetId);
+    const oldWorldItem = OLD_WORLD_STRUCTURES_DATA.find(n => n.id === targetId);
+    const timelineItem = TIMELINE_ITEMS.find(n => String(n.id) === targetId);
+    const codexItem = TERM_TREE_DATA.find(n => n.id === targetId || n.mapFeatureId === targetId || n.timelineId === targetId);
+
+    const found = dcItem || archItem || oldWorldItem || timelineItem || codexItem;
+    if (found) {
+      title = `${found.name} | Dossier Archive | MTRH Map`;
+      description = found.description || 'Declassified dossier and anomaly research on MTRH Interactive Map.';
+      image = found.images?.[0] || (found as any).imageUrl || '';
+    }
+  }
+
+  if (!title) {
+    const lowerPath = reqPath.toLowerCase();
+    if (lowerPath.includes('/codex')) {
+      title = 'Codex Knowledge Tree | MTRH Interactive Map';
+      description = 'Explore interconnected nodes, historical cross-references, and classified research categories.';
+    } else if (lowerPath.includes('/timeline')) {
+      title = 'Chronological Timeline Archive | MTRH Interactive Map';
+      description = 'Trace historical events, declassified releases, and anomaly sightings through time.';
+    } else if (lowerPath.includes('/cartography')) {
+      title = 'Historical Cartography Collection | MTRH Interactive Map';
+      description = 'Inspect high-resolution historical maps, ancient worldviews, and firmament projections.';
+    } else {
+      title = 'MTRH Interactive Map | Mapping The Rabbit Hole';
+      description = 'Interactive geospatial map and intelligence archive exploring declassified operations, anomalies, ancient monuments, and firmament cosmology.';
+    }
+  }
+
+  if (image && image.startsWith('http') && !image.includes('weserv.nl')) {
+    image = `https://images.weserv.nl/?url=${image}`;
+  } else if (!image) {
+    image = 'https://uap-files.pages.dev/preview-banner.jpg';
+  }
+
+  return {
+    title,
+    description,
+    image,
+    url: fullUrl
+  };
+}
+
+function escapeHtml(str: string) {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
 
 // Initialize Firebase Admin with applet configuration
 let firebaseProjectId: string | null = null;
@@ -1134,6 +1243,45 @@ ${modLink}
     }
   });
 
+  // HTML OGP Dynamic Metadata Middleware
+  app.use((req, res, next) => {
+    const accept = req.headers.accept || '';
+    if (req.method === 'GET' && accept.includes('text/html') && !req.path.startsWith('/assets/') && !path.extname(req.path)) {
+      const host = req.get('host') || 'mtrhmap.org';
+      const protocol = req.protocol || 'https';
+      const fullUrl = `${protocol}://${host}${req.originalUrl}`;
+      const meta = getOgpMetaForRequest(req.path, req.query, fullUrl);
+
+      const indexPath = isProduction 
+        ? path.join(process.cwd(), 'dist', 'index.html') 
+        : path.join(process.cwd(), 'index.html');
+
+      if (fs.existsSync(indexPath)) {
+        let html = fs.readFileSync(indexPath, 'utf8');
+
+        html = html.replace(/<title>.*?<\/title>/gi, `<title>${escapeHtml(meta.title)}</title>`);
+        html = html.replace(/<meta name="title" content=".*?" \/>/gi, `<meta name="title" content="${escapeHtml(meta.title)}" />`);
+        html = html.replace(/<meta name="description" content=".*?" \/>/gi, `<meta name="description" content="${escapeHtml(meta.description)}" />`);
+        html = html.replace(/<meta property="og:title" content=".*?" \/>/gi, `<meta property="og:title" content="${escapeHtml(meta.title)}" />`);
+        html = html.replace(/<meta property="og:description" content=".*?" \/>/gi, `<meta property="og:description" content="${escapeHtml(meta.description)}" />`);
+        html = html.replace(/<meta property="og:image" content=".*?" \/>/gi, `<meta property="og:image" content="${escapeHtml(meta.image)}" />`);
+        html = html.replace(/<meta property="og:url" content=".*?" \/>/gi, `<meta property="og:url" content="${escapeHtml(meta.url)}" />`);
+        html = html.replace(/<meta property="twitter:title" content=".*?" \/>/gi, `<meta property="twitter:title" content="${escapeHtml(meta.title)}" />`);
+        html = html.replace(/<meta property="twitter:description" content=".*?" \/>/gi, `<meta property="twitter:description" content="${escapeHtml(meta.description)}" />`);
+        html = html.replace(/<meta property="twitter:image" content=".*?" \/>/gi, `<meta property="twitter:image" content="${escapeHtml(meta.image)}" />`);
+        html = html.replace(/<meta property="twitter:url" content=".*?" \/>/gi, `<meta property="twitter:url" content="${escapeHtml(meta.url)}" />`);
+
+        res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+        res.setHeader('Pragma', 'no-cache');
+        res.setHeader('Expires', '0');
+        res.setHeader('Content-Type', 'text/html; charset=UTF-8');
+        res.send(html);
+        return;
+      }
+    }
+    next();
+  });
+
   // Vite middleware for development
   if (!isProduction) {
     const { createServer: createViteServer } = await import("vite");
@@ -1161,11 +1309,38 @@ ${modLink}
         return;
       }
 
-      // Serve index.html with cache-disabling headers so normal reloads always fetch the latest assets
-      res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
-      res.setHeader('Pragma', 'no-cache');
-      res.setHeader('Expires', '0');
-      res.sendFile(path.join(distPath, 'index.html'));
+      const host = req.get('host') || 'mtrhmap.org';
+      const protocol = req.protocol || 'https';
+      const fullUrl = `${protocol}://${host}${req.originalUrl}`;
+      const meta = getOgpMetaForRequest(req.path, req.query, fullUrl);
+
+      const indexPath = isProduction 
+        ? path.join(distPath, 'index.html') 
+        : path.join(process.cwd(), 'index.html');
+
+      if (fs.existsSync(indexPath)) {
+        let html = fs.readFileSync(indexPath, 'utf8');
+
+        html = html.replace(/<title>.*?<\/title>/gi, `<title>${escapeHtml(meta.title)}</title>`);
+        html = html.replace(/<meta name="title" content=".*?" \/>/gi, `<meta name="title" content="${escapeHtml(meta.title)}" />`);
+        html = html.replace(/<meta name="description" content=".*?" \/>/gi, `<meta name="description" content="${escapeHtml(meta.description)}" />`);
+        html = html.replace(/<meta property="og:title" content=".*?" \/>/gi, `<meta property="og:title" content="${escapeHtml(meta.title)}" />`);
+        html = html.replace(/<meta property="og:description" content=".*?" \/>/gi, `<meta property="og:description" content="${escapeHtml(meta.description)}" />`);
+        html = html.replace(/<meta property="og:image" content=".*?" \/>/gi, `<meta property="og:image" content="${escapeHtml(meta.image)}" />`);
+        html = html.replace(/<meta property="og:url" content=".*?" \/>/gi, `<meta property="og:url" content="${escapeHtml(meta.url)}" />`);
+        html = html.replace(/<meta property="twitter:title" content=".*?" \/>/gi, `<meta property="twitter:title" content="${escapeHtml(meta.title)}" />`);
+        html = html.replace(/<meta property="twitter:description" content=".*?" \/>/gi, `<meta property="twitter:description" content="${escapeHtml(meta.description)}" />`);
+        html = html.replace(/<meta property="twitter:image" content=".*?" \/>/gi, `<meta property="twitter:image" content="${escapeHtml(meta.image)}" />`);
+        html = html.replace(/<meta property="twitter:url" content=".*?" \/>/gi, `<meta property="twitter:url" content="${escapeHtml(meta.url)}" />`);
+
+        res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+        res.setHeader('Pragma', 'no-cache');
+        res.setHeader('Expires', '0');
+        res.setHeader('Content-Type', 'text/html; charset=UTF-8');
+        res.send(html);
+      } else {
+        res.status(500).send('Index HTML not found');
+      }
     });
   }
 

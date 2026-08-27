@@ -5,6 +5,7 @@ import mapboxgl from 'mapbox-gl';
 import { X, Map as MapIcon, Plus, Eye, EyeOff, Navigation, AlertTriangle, Loader2, Globe, Share2 } from 'lucide-react';
 import { handleShare } from './utils/share';
 import { ShareModal } from './ShareModal';
+import { updateClientOgpTags } from './utils/ogp';
 
 interface CartographyPageProps {
   theme: {
@@ -1080,6 +1081,22 @@ export default function CartographyPage({
       imageUrl
     });
   };
+
+  useEffect(() => {
+    if (selectedMap) {
+      const title = `${selectedMap.name} | Historical Cartography | MTRH Map`;
+      const description = selectedMap.description || 'Inspect high-resolution historical maps, ancient worldviews, and firmament projections.';
+      const image = selectedMap.url;
+      const url = window.location.href;
+      updateClientOgpTags({ title, description, url, image });
+    } else {
+      updateClientOgpTags({
+        title: 'Historical Cartography Collection | MTRH Interactive Map',
+        description: 'Inspect high-resolution historical maps, ancient worldviews, and firmament projections.',
+        url: window.location.href
+      });
+    }
+  }, [selectedMap]);
 
   // Search state matching map page exactly
   const [searchQuery, setSearchQuery] = useState<string>('');

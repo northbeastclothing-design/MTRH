@@ -4,6 +4,7 @@ import { TIMELINE_ITEMS, TimelineItem, TIMELINE_LOCATIONS } from './timelineData
 import { RotateCcw, MapPin, Flag, X, Share2 } from 'lucide-react';
 import { handleShare } from './utils/share';
 import { ShareModal } from './ShareModal';
+import { updateClientOgpTags } from './utils/ogp';
 import { TERM_TREE_DATA } from './termTreeData';
 import { LAYER_COLORS } from './CodexPage';
 
@@ -244,6 +245,22 @@ export default function TimelinePage({
       imageUrl
     });
   };
+
+  useEffect(() => {
+    if (selectedItem) {
+      const title = `${selectedItem.name} | Timeline Event | MTRH Map`;
+      const description = selectedItem.description || 'Trace historical events, declassified releases, and anomaly sightings through time.';
+      const image = selectedItem.images?.[0];
+      const url = window.location.href;
+      updateClientOgpTags({ title, description, url, image });
+    } else {
+      updateClientOgpTags({
+        title: 'Chronological Timeline Archive | MTRH Interactive Map',
+        description: 'Trace historical events, declassified releases, and anomaly sightings through time.',
+        url: window.location.href
+      });
+    }
+  }, [selectedItem]);
 
   // Match the active timeline item to a Codex term
   const codexTerm = useMemo(() => {
