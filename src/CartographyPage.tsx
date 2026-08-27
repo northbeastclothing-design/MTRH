@@ -3443,7 +3443,7 @@ export default function CartographyPage({
                 top: '24px',
                 left: '50%',
                 transform: 'translateX(-50%)',
-                zIndex: 999999,
+                zIndex: 10000000,
                 background: isMapDarkMode ? '#000000' : '#ffffff',
                 color: isMapDarkMode ? '#ffffff' : '#000000',
                 border: `1px solid ${isMapDarkMode ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0.3)'}`,

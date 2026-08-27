@@ -28,7 +28,6 @@ export const ShareModal: React.FC<ShareModalProps> = ({
   const [copied, setCopied] = useState(false);
   const [viewMode, setViewMode] = useState<'menu' | 'story_creator'>('menu');
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [isGeneratingStory, setIsGeneratingStory] = useState(false);
 
   // Reset mode on open/close
   useEffect(() => {
@@ -70,46 +69,7 @@ export const ShareModal: React.FC<ShareModalProps> = ({
     const tweetText = `Check out "${title}" on MTRH Interactive Map:`;
     const intentUrl = `https://x.com/intent/tweet?text=${encodeURIComponent(tweetText)}&url=${encodeURIComponent(url)}`;
     window.open(intentUrl, '_blank', 'noopener,noreferrer');
-    onShowToast('Opening X (Twitter)...');
-    onClose();
-  };
-
-  const handleShareFacebook = () => {
-    const fbUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
-    window.open(fbUrl, '_blank', 'noopener,noreferrer');
-    onShowToast('Opening Facebook...');
-    onClose();
-  };
-
-  const handleShareInstagramFeed = async () => {
-    await copyToClipboard();
-    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-    
-    onShowToast('Link copied! Opening Instagram...');
-    if (isMobile) {
-      window.location.href = 'instagram://app';
-      setTimeout(() => {
-        window.open('https://www.instagram.com/', '_blank', 'noopener,noreferrer');
-      }, 1200);
-    } else {
-      window.open('https://www.instagram.com/', '_blank', 'noopener,noreferrer');
-    }
-    onClose();
-  };
-
-  const handleShareTikTok = async () => {
-    await copyToClipboard();
-    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-
-    onShowToast('Link copied! Opening TikTok...');
-    if (isMobile) {
-      window.location.href = 'snssdk1128://';
-      setTimeout(() => {
-        window.open('https://www.tiktok.com/upload', '_blank', 'noopener,noreferrer');
-      }, 1200);
-    } else {
-      window.open('https://www.tiktok.com/upload', '_blank', 'noopener,noreferrer');
-    }
+    onShowToast('Opening X...');
     onClose();
   };
 
@@ -124,10 +84,10 @@ export const ShareModal: React.FC<ShareModalProps> = ({
         onClose();
       } catch (err: any) {
         if (err.name === 'AbortError') return;
-        await handleCopyLink();
+        onClose();
       }
     } else {
-      await handleCopyLink();
+      onClose();
     }
   };
 
@@ -140,8 +100,6 @@ export const ShareModal: React.FC<ShareModalProps> = ({
     canvas.height = 1920;
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
-
-    setIsGeneratingStory(true);
 
     // 1. Dark Radial Background
     const bgGrad = ctx.createRadialGradient(540, 960, 100, 540, 960, 1200);
@@ -235,7 +193,7 @@ export const ShareModal: React.FC<ShareModalProps> = ({
       if (text) {
         ctx.font = '28px "Space Mono", monospace';
         ctx.fillStyle = 'rgba(255, 255, 255, 0.75)';
-        const cleanText = text.replace(/<[^>]*>?/gm, ''); // strip HTML tags
+        const cleanText = text.replace(/<[^>]*>?/gm, '');
         const textWords = cleanText.split(' ');
         let textLine = '';
         let lineCount = 0;
@@ -280,11 +238,9 @@ export const ShareModal: React.FC<ShareModalProps> = ({
       ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
       ctx.textAlign = 'center';
       ctx.fillText('MAP THE REAL HISTORY • MTRH.APP', 540, 1680);
-
-      setIsGeneratingStory(false);
     };
 
-    // 5. Draw Optional Hero Image or Text Layout
+    // Draw Optional Hero Image or Text Layout
     if (imageUrl) {
       const img = new Image();
       img.crossOrigin = 'anonymous';
@@ -300,7 +256,6 @@ export const ShareModal: React.FC<ShareModalProps> = ({
         ctx.roundRect(imgX, imgY, imgW, imgH, 20);
         ctx.clip();
 
-        // Draw image cover scaled
         const aspect = img.width / img.height;
         let drawW = imgW;
         let drawH = imgW / aspect;
@@ -313,7 +268,6 @@ export const ShareModal: React.FC<ShareModalProps> = ({
 
         ctx.drawImage(img, dx, dy, drawW, drawH);
 
-        // Dark gradient overlay at bottom of image
         const imgGrad = ctx.createLinearGradient(0, imgY + imgH - 120, 0, imgY + imgH);
         imgGrad.addColorStop(0, 'rgba(0,0,0,0)');
         imgGrad.addColorStop(1, 'rgba(13,13,15,0.9)');
@@ -353,7 +307,7 @@ export const ShareModal: React.FC<ShareModalProps> = ({
       a.click();
       document.body.removeChild(a);
 
-      onShowToast('Instagram Story Graphic saved! Open Instagram to share.');
+      onShowToast('Story graphic saved! Open Instagram to post.');
     } catch (err) {
       console.error('Failed to download image', err);
       onShowToast('Could not save graphic. Try holding down on graphic to save.');
@@ -491,7 +445,7 @@ export const ShareModal: React.FC<ShareModalProps> = ({
                 </div>
               </div>
 
-              {/* Share Options */}
+              {/* Share Options List */}
               <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                 {/* Story Creator Button */}
                 <motion.button
@@ -555,7 +509,7 @@ export const ShareModal: React.FC<ShareModalProps> = ({
                   <span>{copied ? 'LINK COPIED TO CLIPBOARD' : 'COPY LINK TO CLIPBOARD'}</span>
                 </motion.button>
 
-                {/* Share on X (Twitter) */}
+                {/* Share on X */}
                 <motion.button
                   whileTap={{ scale: 0.98 }}
                   whileHover={{ scale: 1.01 }}
@@ -581,92 +535,7 @@ export const ShareModal: React.FC<ShareModalProps> = ({
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                   </svg>
-                  <span>SHARE ON X (TWITTER)</span>
-                </motion.button>
-
-                {/* Share on Facebook */}
-                <motion.button
-                  whileTap={{ scale: 0.98 }}
-                  whileHover={{ scale: 1.01 }}
-                  onClick={handleShareFacebook}
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '12px',
-                    width: '100%',
-                    padding: '12px 16px',
-                    borderRadius: '14px',
-                    background: '#1877F2',
-                    color: '#ffffff',
-                    border: 'none',
-                    cursor: 'pointer',
-                    fontSize: '11px',
-                    fontWeight: 'bold',
-                    fontFamily: '"Space Mono", monospace',
-                    letterSpacing: '0.5px',
-                    transition: 'all 0.15s ease'
-                  }}
-                >
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                  </svg>
-                  <span>SHARE ON FACEBOOK</span>
-                </motion.button>
-
-                {/* Share on Instagram (Post) */}
-                <motion.button
-                  whileTap={{ scale: 0.98 }}
-                  whileHover={{ scale: 1.01 }}
-                  onClick={handleShareInstagramFeed}
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '12px',
-                    width: '100%',
-                    padding: '12px 16px',
-                    borderRadius: '14px',
-                    background: 'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)',
-                    color: '#ffffff',
-                    border: 'none',
-                    cursor: 'pointer',
-                    fontSize: '11px',
-                    fontWeight: 'bold',
-                    fontFamily: '"Space Mono", monospace',
-                    letterSpacing: '0.5px',
-                    transition: 'all 0.15s ease'
-                  }}
-                >
-                  <Instagram size={16} />
-                  <span>SHARE ON INSTAGRAM (POST)</span>
-                </motion.button>
-
-                {/* Share on TikTok */}
-                <motion.button
-                  whileTap={{ scale: 0.98 }}
-                  whileHover={{ scale: 1.01 }}
-                  onClick={handleShareTikTok}
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '12px',
-                    width: '100%',
-                    padding: '12px 16px',
-                    borderRadius: '14px',
-                    background: '#000000',
-                    color: '#ffffff',
-                    border: '1px solid #fe2c55',
-                    cursor: 'pointer',
-                    fontSize: '11px',
-                    fontWeight: 'bold',
-                    fontFamily: '"Space Mono", monospace',
-                    letterSpacing: '0.5px',
-                    transition: 'all 0.15s ease'
-                  }}
-                >
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.394 6.394 0 0 0-5.378 1.905A6.388 6.388 0 0 0 3 15.658c.005 3.535 2.868 6.393 6.408 6.393a6.389 6.389 0 0 0 6.39-6.393V9.33a8.217 8.217 0 0 0 4.791 1.524V7.41a4.787 4.787 0 0 1-1.000-.724z"/>
-                  </svg>
-                  <span>SHARE ON TIKTOK</span>
+                  <span>SHARE ON X</span>
                 </motion.button>
 
                 {/* Native Mobile Share Sheet */}
