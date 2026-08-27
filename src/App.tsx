@@ -3735,19 +3735,25 @@ function App() {
     title: string;
     text?: string;
     url: string;
+    category?: string;
+    imageUrl?: string;
   }>({
     isOpen: false,
     title: '',
     text: '',
-    url: ''
+    url: '',
+    category: '',
+    imageUrl: ''
   });
 
-  const openShareModal = useCallback((title: string, text: string, url: string) => {
+  const openShareModal = useCallback((title: string, text: string, url: string, category?: string, imageUrl?: string) => {
     setShareModalData({
       isOpen: true,
       title,
       text,
-      url
+      url,
+      category,
+      imageUrl
     });
   }, []);
   
@@ -7537,7 +7543,9 @@ function App() {
               whileHover={{ scale: 1.05 }}
               onClick={() => {
                 const shareUrl = `${window.location.origin}/codex?termId=${encodeURIComponent(activeTermNode.id)}`;
-                openShareModal(activeTermNode.name, activeTermNode.description || '', shareUrl);
+                const category = activeTermNode.layer || (activeTermNode.categories ? activeTermNode.categories[0] : '');
+                const imageUrl = activeTermNode.images?.[0]?.url;
+                openShareModal(activeTermNode.name, activeTermNode.description || '', shareUrl, category, imageUrl);
               }}
               style={{
                 display: 'flex',
@@ -8476,7 +8484,9 @@ function App() {
               onClick={() => {
                 const shareUrl = `${window.location.origin}/?featureId=${encodeURIComponent(selectedFeature.id)}`;
                 const title = selectedFeature.name || selectedFeature.title || 'MTRH Map Location';
-                openShareModal(title, selectedFeature.description || '', shareUrl);
+                const category = selectedFeature.categories?.[0] || selectedFeature.category || '';
+                const imageUrl = selectedFeature.images?.[0]?.url;
+                openShareModal(title, selectedFeature.description || '', shareUrl, category, imageUrl);
               }}
               style={{
                 display: 'flex',
@@ -15806,6 +15816,8 @@ function App() {
         title={shareModalData.title}
         text={shareModalData.text}
         url={shareModalData.url}
+        category={shareModalData.category}
+        imageUrl={shareModalData.imageUrl}
         isMapDarkMode={isMapDarkMode}
         onShowToast={showShareToast}
       />

@@ -223,19 +223,25 @@ export default function TimelinePage({
     title: string;
     text?: string;
     url: string;
+    category?: string;
+    imageUrl?: string;
   }>({
     isOpen: false,
     title: '',
     text: '',
-    url: ''
+    url: '',
+    category: '',
+    imageUrl: ''
   });
 
-  const openShareModal = (title: string, text: string, url: string) => {
+  const openShareModal = (title: string, text: string, url: string, category?: string, imageUrl?: string) => {
     setShareModalData({
       isOpen: true,
       title,
       text,
-      url
+      url,
+      category,
+      imageUrl
     });
   };
 
@@ -1967,7 +1973,9 @@ export default function TimelinePage({
                         <button
                           onClick={() => {
                             const shareUrl = `${window.location.origin}/timeline?itemId=${encodeURIComponent(selectedItem.id)}`;
-                            openShareModal(selectedItem.name || 'MTRH Timeline Event', selectedItem.description || '', shareUrl);
+                            const category = selectedItem.layer || 'Timeline Event';
+                            const imageUrl = selectedItem.images?.[0]?.url;
+                            openShareModal(selectedItem.name || 'MTRH Timeline Event', selectedItem.description || '', shareUrl, category, imageUrl);
                           }}
                           style={{
                             display: 'flex',
@@ -2696,6 +2704,8 @@ export default function TimelinePage({
         title={shareModalData.title}
         text={shareModalData.text}
         url={shareModalData.url}
+        category={shareModalData.category}
+        imageUrl={shareModalData.imageUrl}
         isMapDarkMode={isMapDarkMode}
         onShowToast={showShareToast}
       />

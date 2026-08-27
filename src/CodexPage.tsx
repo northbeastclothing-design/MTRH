@@ -795,19 +795,25 @@ export default function CodexPage({
     title: string;
     text?: string;
     url: string;
+    category?: string;
+    imageUrl?: string;
   }>({
     isOpen: false,
     title: '',
     text: '',
-    url: ''
+    url: '',
+    category: '',
+    imageUrl: ''
   });
 
-  const openShareModal = useCallback((title: string, text: string, url: string) => {
+  const openShareModal = useCallback((title: string, text: string, url: string, category?: string, imageUrl?: string) => {
     setShareModalData({
       isOpen: true,
       title,
       text,
-      url
+      url,
+      category,
+      imageUrl
     });
   }, []);
   const [isLightboxImageLoading, setIsLightboxImageLoading] = useState(false);
@@ -3275,7 +3281,9 @@ export default function CodexPage({
                         whileHover={{ scale: 1.05 }}
                         onClick={() => {
                           const shareUrl = `${window.location.origin}/codex?termId=${encodeURIComponent(activeTermNode.id)}`;
-                          openShareModal(activeTermNode.name, activeTermNode.description || '', shareUrl);
+                          const category = activeTermNode.layer || (activeTermNode.categories ? activeTermNode.categories[0] : '');
+                          const imageUrl = activeTermNode.images?.[0]?.url;
+                          openShareModal(activeTermNode.name, activeTermNode.description || '', shareUrl, category, imageUrl);
                         }}
                         style={{
                           display: 'flex',
@@ -4086,6 +4094,8 @@ export default function CodexPage({
         title={shareModalData.title}
         text={shareModalData.text}
         url={shareModalData.url}
+        category={shareModalData.category}
+        imageUrl={shareModalData.imageUrl}
         isMapDarkMode={isMapDarkMode}
         onShowToast={showShareToast}
       />

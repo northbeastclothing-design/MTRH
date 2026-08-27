@@ -1059,19 +1059,25 @@ export default function CartographyPage({
     title: string;
     text?: string;
     url: string;
+    category?: string;
+    imageUrl?: string;
   }>({
     isOpen: false,
     title: '',
     text: '',
-    url: ''
+    url: '',
+    category: '',
+    imageUrl: ''
   });
 
-  const openShareModal = (title: string, text: string, url: string) => {
+  const openShareModal = (title: string, text: string, url: string, category?: string, imageUrl?: string) => {
     setShareModalData({
       isOpen: true,
       title,
       text,
-      url
+      url,
+      category,
+      imageUrl
     });
   };
 
@@ -2827,7 +2833,7 @@ export default function CartographyPage({
                                     onClick={(e) => {
                                       e.stopPropagation();
                                       const shareUrl = `${window.location.origin}/cartography?mapId=${encodeURIComponent(hMap.id)}`;
-                                      openShareModal(hMap.name, hMap.description || '', shareUrl);
+                                      openShareModal(hMap.name, hMap.description || '', shareUrl, 'Historical Cartography', hMap.url);
                                     }}
                                     style={{
                                       display: 'inline-flex',
@@ -2927,7 +2933,7 @@ export default function CartographyPage({
           <motion.button
             onClick={() => {
               const shareUrl = `${window.location.origin}/cartography?mapId=${encodeURIComponent(selectedMap.id)}`;
-              openShareModal(selectedMap.name, selectedMap.description || '', shareUrl);
+              openShareModal(selectedMap.name, selectedMap.description || '', shareUrl, 'Historical Cartography', selectedMap.url);
             }}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.95 }}
@@ -3467,6 +3473,8 @@ export default function CartographyPage({
           title={shareModalData.title}
           text={shareModalData.text}
           url={shareModalData.url}
+          category={shareModalData.category}
+          imageUrl={shareModalData.imageUrl}
           isMapDarkMode={isMapDarkMode}
           onShowToast={showShareToast}
         />
