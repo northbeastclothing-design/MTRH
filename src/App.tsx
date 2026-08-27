@@ -7153,9 +7153,7 @@ function App() {
                             />
                           ) : (
                             (() => {
-                              const videoSrc = curAsset.url.startsWith('http')
-                                ? `/api/proxy-resource?url=${encodeURIComponent(curAsset.url)}`
-                                : curAsset.url;
+                              const videoSrc = curAsset.url;
                               const mimeType = curAsset.url.toLowerCase().endsWith('.webm') ? 'video/webm' : curAsset.url.toLowerCase().endsWith('.ogv') ? 'video/ogg' : 'video/mp4';
                               return (
                                 <video
@@ -8017,9 +8015,7 @@ function App() {
                             />
                           ) : (
                             (() => {
-                              const videoSrc = curAsset.url.startsWith('http')
-                                ? `/api/proxy-resource?url=${encodeURIComponent(curAsset.url)}`
-                                : curAsset.url;
+                              const videoSrc = curAsset.url;
                               const mimeType = curAsset.url.toLowerCase().endsWith('.webm') ? 'video/webm' : curAsset.url.toLowerCase().endsWith('.ogv') ? 'video/ogg' : 'video/mp4';
                               return (
                                 <video
@@ -11754,9 +11750,7 @@ function App() {
                             />
                           ) : (
                             (() => {
-                              const videoSrc = curAsset.url.startsWith('http')
-                                ? `/api/proxy-resource?url=${encodeURIComponent(curAsset.url)}`
-                                : curAsset.url;
+                              const videoSrc = curAsset.url;
                               const mimeType = curAsset.url.toLowerCase().endsWith('.webm') ? 'video/webm' : curAsset.url.toLowerCase().endsWith('.ogv') ? 'video/ogg' : 'video/mp4';
                               return (
                                 <video
