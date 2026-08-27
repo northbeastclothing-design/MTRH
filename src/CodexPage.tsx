@@ -818,6 +818,14 @@ export default function CodexPage({
     });
   }, []);
 
+  const selectedTermId = selectedPath[selectedPath.length - 1] || null;
+  const activeTermId = selectedTermId || hoveredTermId;
+
+  const activeTermNode = useMemo(() => {
+    if (!activeTermId) return null;
+    return nodes.find(t => t.id === activeTermId) || null;
+  }, [activeTermId, nodes]);
+
   useEffect(() => {
     if (activeTermNode) {
       const title = `${activeTermNode.name} | Codex Research Archive | MTRH Map`;
@@ -848,15 +856,6 @@ export default function CodexPage({
   useEffect(() => {
     setSearchActiveIndex(-1);
   }, [searchQuery]);
-
-  // Derive active selection node (last element in selected path)
-  const selectedTermId = selectedPath[selectedPath.length - 1] || null;
-  const activeTermId = selectedTermId || hoveredTermId;
-
-  const activeTermNode = useMemo(() => {
-    if (!activeTermId) return null;
-    return nodes.find(t => t.id === activeTermId) || null;
-  }, [activeTermId, nodes]);
 
   // Track Codex search queries with a 1.5s debounce
   useEffect(() => {
