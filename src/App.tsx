@@ -607,6 +607,15 @@ const cleanAndProxyImageUrl = (url: any) => {
   
   const trimmedUrl = url.trim();
   if (trimmedUrl.includes('icon-missing-image.svg')) return MISSING_IMAGE_URL;
+
+  // Handle local uploaded files - never send /uploads/ through weserv.nl or external proxies
+  if (trimmedUrl.includes('/uploads/')) {
+    const uploadIndex = trimmedUrl.indexOf('/uploads/');
+    return trimmedUrl.substring(uploadIndex);
+  }
+  if (trimmedUrl.startsWith('uploads/')) {
+    return '/' + trimmedUrl;
+  }
   
   // If already proxied, or is a blob/data URL, don't proxy again
   if (
@@ -619,6 +628,11 @@ const cleanAndProxyImageUrl = (url: any) => {
 
   // Do NOT proxy videos, PDFs, or audio as images
   if (isVideoUrl(trimmedUrl) || isPdfUrl(trimmedUrl) || isAudioUrl(trimmedUrl)) {
+    return trimmedUrl;
+  }
+
+  // Bypass proxy for localhost / internal IPs
+  if (trimmedUrl.includes('localhost') || trimmedUrl.includes('127.0.0.1')) {
     return trimmedUrl;
   }
 
@@ -3616,7 +3630,7 @@ function App() {
         setIsModeratorOpen(false);
         const itemId = params.get('itemId');
         if (itemId) {
-          const matched = TIMELINE_ITEMS.find(item => String(item.id) === itemId);
+          const matched = combinedTimelineItems.find(item => String(item.id) === itemId);
           if (matched) setSelectedTimelineItem(matched);
         } else {
           setSelectedTimelineItem(null);
@@ -3626,7 +3640,7 @@ function App() {
         setIsModeratorOpen(false);
         const termId = params.get('termId');
         if (termId) {
-          const matched = TERM_TREE_DATA.find(node => node && node.id && String(node.id) === termId);
+          const matched = combinedCodexNodes.find(node => node && node.id && String(node.id) === termId);
           if (matched) {
             setSelectedCodexNode(matched);
             setFocusedCodexTermId(termId);
@@ -3663,7 +3677,7 @@ function App() {
 
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
-  }, [combinedPointsAndLinesData]);
+  }, [combinedPointsAndLinesData, combinedCodexNodes, combinedTimelineItems]);
 
   // 2. Sync page and navigation changes to URL history path
   useEffect(() => {
@@ -5869,6 +5883,14 @@ function App() {
     });
   }, [stopMainMapRotation, windowWidth]);
 
+  // Safety timeout for initial deep link processing
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      hasProcessedInitialDeepLinkRef.current = true;
+    }, 4000);
+    return () => clearTimeout(timer);
+  }, []);
+
   // Process initial deep link parameters once data is compiled, Map is loaded, and handleLocationItemClick is ready
   useEffect(() => {
     if (hasProcessedInitialDeepLinkRef.current) return;
@@ -5882,9 +5904,35 @@ function App() {
         handleLocationItemClick(matched);
         return;
       }
+    } else {
+      hasProcessedInitialDeepLinkRef.current = true;
     }
-    hasProcessedInitialDeepLinkRef.current = true;
-  }, [isMapLoaded, combinedPointsAndLinesData, handleLocationItemClick]);
+  }, [isMapLoaded, combinedPointsAndLinesData, handleLocationItemClick, approvedSubmissions]);
+
+  // Process initial Codex deep link parameter once combinedCodexNodes updates
+  useEffect(() => {
+    const termId = initialUrlParamsRef.current.termId;
+    if (!termId || selectedCodexNode) return;
+    if (combinedCodexNodes && combinedCodexNodes.length > 0) {
+      const matched = combinedCodexNodes.find(node => node && node.id && String(node.id) === termId);
+      if (matched) {
+        setSelectedCodexNode(matched);
+        setFocusedCodexTermId(termId);
+      }
+    }
+  }, [combinedCodexNodes, selectedCodexNode]);
+
+  // Process initial Timeline deep link parameter once combinedTimelineItems updates
+  useEffect(() => {
+    const itemId = initialUrlParamsRef.current.itemId;
+    if (!itemId || selectedTimelineItem) return;
+    if (combinedTimelineItems && combinedTimelineItems.length > 0) {
+      const matched = combinedTimelineItems.find(item => item && item.id && String(item.id) === itemId);
+      if (matched) {
+        setSelectedTimelineItem(matched);
+      }
+    }
+  }, [combinedTimelineItems, selectedTimelineItem]);
 
   useEffect(() => {
     if (isMobile && mapRef.current && selectedFeature) {

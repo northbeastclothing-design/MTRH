@@ -405,10 +405,15 @@ async function startServer() {
 
   // Ensure uploads directory exists and is statically served
   const uploadsDir = path.join(process.cwd(), "uploads");
+  const publicUploadsDir = path.join(process.cwd(), "public", "uploads");
   if (!fs.existsSync(uploadsDir)) {
     fs.mkdirSync(uploadsDir, { recursive: true });
   }
+  if (!fs.existsSync(publicUploadsDir)) {
+    fs.mkdirSync(publicUploadsDir, { recursive: true });
+  }
   app.use("/uploads", express.static(uploadsDir));
+  app.use("/uploads", express.static(publicUploadsDir));
 
   // File Upload Route
   app.post("/api/upload", async (req, res) => {
@@ -428,8 +433,15 @@ async function startServer() {
       const buffer = Buffer.from(base64Content, 'base64');
       const sanitizedFilename = `${Date.now()}-${filename.replace(/[^a-zA-Z0-9.-]/g, '_')}`;
       const filePath = path.join(uploadsDir, sanitizedFilename);
+      const publicFilePath = path.join(publicUploadsDir, sanitizedFilename);
 
       await fs.promises.writeFile(filePath, buffer);
+      try {
+        await fs.promises.writeFile(publicFilePath, buffer);
+      } catch (e) {
+        console.warn("Could not mirror file to publicUploadsDir", e);
+      }
+
       console.log(`Uploaded file saved to: ${filePath}`);
 
       res.json({ url: `/uploads/${sanitizedFilename}` });

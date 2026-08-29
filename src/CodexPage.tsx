@@ -577,6 +577,15 @@ const cleanAndProxyImageUrl = (url: any) => {
   const trimmedUrl = url.trim();
   if (trimmedUrl.includes('icon-missing-image.svg')) return MISSING_IMAGE_URL;
 
+  // Handle local uploaded files - never send /uploads/ through weserv.nl or external proxies
+  if (trimmedUrl.includes('/uploads/')) {
+    const uploadIndex = trimmedUrl.indexOf('/uploads/');
+    return trimmedUrl.substring(uploadIndex);
+  }
+  if (trimmedUrl.startsWith('uploads/')) {
+    return '/' + trimmedUrl;
+  }
+
   if (isVideoUrl(trimmedUrl)) {
     return trimmedUrl;
   }
@@ -586,6 +595,11 @@ const cleanAndProxyImageUrl = (url: any) => {
     trimmedUrl.startsWith('data:') || 
     trimmedUrl.startsWith('blob:')
   ) {
+    return trimmedUrl;
+  }
+
+  // Bypass proxy for localhost / internal IPs
+  if (trimmedUrl.includes('localhost') || trimmedUrl.includes('127.0.0.1')) {
     return trimmedUrl;
   }
 
