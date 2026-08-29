@@ -12763,7 +12763,7 @@ function App() {
               justifyContent: 'center',
               zIndex: 9999,
               fontFamily: '"Space Mono", monospace',
-              padding: '20px'
+              padding: isMobile ? '8px' : '20px'
             }}
           >
             <motion.button 
@@ -12771,10 +12771,10 @@ function App() {
               animate={{ y: 0, opacity: 1 }}
               whileHover={{ opacity: 0.7 }}
               onClick={() => setIsSubmitOpen(false)} 
-              style={{ position: 'absolute', top: '24px', right: '24px', background: 'none', border: 'none', color: '#ffffff', fontSize: '12px', fontWeight: 'bold', cursor: 'pointer', fontFamily: '"Space Mono", monospace', letterSpacing: '1px', zIndex: 10001, display: 'flex', alignItems: 'center', gap: '8px' }}
+              style={{ position: 'absolute', top: isMobile ? '12px' : '24px', right: isMobile ? '12px' : '24px', background: 'none', border: 'none', color: '#ffffff', fontSize: '11px', fontWeight: 'bold', cursor: 'pointer', fontFamily: '"Space Mono", monospace', letterSpacing: '1px', zIndex: 10001, display: 'flex', alignItems: 'center', gap: '6px' }}
             >
-              <img src="/icons/icon-x.svg" style={{ width: '24px', height: '24px', filter: 'invert(1)' }} alt="close" />
-              CLOSE
+              <img src="/icons/icon-x.svg" style={{ width: isMobile ? '18px' : '24px', height: isMobile ? '18px' : '24px', filter: 'invert(1)' }} alt="close" />
+              {isMobile ? "" : "CLOSE"}
             </motion.button>
 
             <motion.div
@@ -12785,10 +12785,10 @@ function App() {
                 backgroundColor: isMapDarkMode ? '#0a0a0a' : '#ffffff',
                 color: isMapDarkMode ? '#ffffff' : '#000000',
                 border: `1px solid ${theme.border}`,
-                padding: '28px',
-                width: '640px',
-                maxWidth: '100%',
-                maxHeight: '85vh',
+                padding: isMobile ? '16px 12px' : '28px',
+                width: '100%',
+                maxWidth: '640px',
+                maxHeight: isMobile ? '94vh' : '85vh',
                 overflowY: 'auto',
                 display: 'flex',
                 flexDirection: 'column',
@@ -12798,9 +12798,9 @@ function App() {
               }}
             >
               {/* Header */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', borderBottom: `2px solid ${theme.border}`, paddingBottom: '12px', marginBottom: '20px' }}>
-                <span style={{ fontWeight: 700, fontSize: '12px', letterSpacing: '1.5px', textTransform: 'uppercase' }}>Input Intel //</span>
-                <p style={{ margin: 0, fontSize: '11px', color: theme.textDim, lineHeight: '16px' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', borderBottom: `2px solid ${theme.border}`, paddingBottom: '12px', marginBottom: '16px', paddingRight: isMobile ? '32px' : '0' }}>
+                <span style={{ fontWeight: 700, fontSize: isMobile ? '11px' : '12px', letterSpacing: '1px', textTransform: 'uppercase' }}>Input Intel //</span>
+                <p style={{ margin: 0, fontSize: '10px', color: theme.textDim, lineHeight: '15px' }}>
                   Thank you for contributing to mapping the rabbit hole. Your intelligence submissions help build our collective community map.
                 </p>
               </div>
@@ -12980,7 +12980,7 @@ function App() {
                       setIsSubmitting(false);
                     }
                   }} 
-                  style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}
+                  style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}
                 >
                   <div>
                     <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: theme.text }}>NAME OF ANOMALY / SIGNATURE *</label>
@@ -13000,22 +13000,24 @@ function App() {
                         fontFamily: '"Space Mono", monospace'
                       }}
                     />
-                                 {/* DESTINATION REGISTRIES */}
-                  <div style={{ paddingTop: '12px' }}>
+                  </div>
+
+                  {/* DESTINATION REGISTRIES */}
+                  <div style={{ paddingTop: '8px' }}>
                     <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>DESTINATION REGISTRIES * (SELECT AT LEAST ONE)</label>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginTop: '8px', marginBottom: '14px' }}>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginTop: '6px', marginBottom: '12px' }}>
                       <label style={{ 
                         display: 'flex', 
                         alignItems: 'center', 
-                        gap: '8px', 
-                        fontSize: '11px', 
+                        gap: '6px', 
+                        fontSize: '10.5px', 
                         cursor: 'pointer', 
                         color: theme.text,
                         backgroundColor: subDestinations.includes('map') 
                           ? (isMapDarkMode ? 'rgba(255, 255, 255, 0.12)' : 'rgba(0, 0, 0, 0.08)') 
                           : (isMapDarkMode ? 'rgba(255, 255, 255, 0.04)' : 'rgba(0, 0, 0, 0.03)'),
                         border: `1px solid ${subDestinations.includes('map') ? theme.border : theme.borderLight}`,
-                        padding: '6px 14px',
+                        padding: '5px 12px',
                         borderRadius: '20px',
                         transition: 'all 0.2s ease',
                         userSelect: 'none'
@@ -13037,15 +13039,15 @@ function App() {
                       <label style={{ 
                         display: 'flex', 
                         alignItems: 'center', 
-                        gap: '8px', 
-                        fontSize: '11px', 
+                        gap: '6px', 
+                        fontSize: '10.5px', 
                         cursor: 'pointer', 
                         color: theme.text,
                         backgroundColor: subDestinations.includes('codex') 
                           ? (isMapDarkMode ? 'rgba(255, 255, 255, 0.12)' : 'rgba(0, 0, 0, 0.08)') 
                           : (isMapDarkMode ? 'rgba(255, 255, 255, 0.04)' : 'rgba(0, 0, 0, 0.03)'),
                         border: `1px solid ${subDestinations.includes('codex') ? theme.border : theme.borderLight}`,
-                        padding: '6px 14px',
+                        padding: '5px 12px',
                         borderRadius: '20px',
                         transition: 'all 0.2s ease',
                         userSelect: 'none'
@@ -13067,15 +13069,15 @@ function App() {
                       <label style={{ 
                         display: 'flex', 
                         alignItems: 'center', 
-                        gap: '8px', 
-                        fontSize: '11px', 
+                        gap: '6px', 
+                        fontSize: '10.5px', 
                         cursor: 'pointer', 
                         color: theme.text,
                         backgroundColor: subDestinations.includes('timeline') 
                           ? (isMapDarkMode ? 'rgba(255, 255, 255, 0.12)' : 'rgba(0, 0, 0, 0.08)') 
                           : (isMapDarkMode ? 'rgba(255, 255, 255, 0.04)' : 'rgba(0, 0, 0, 0.03)'),
                         border: `1px solid ${subDestinations.includes('timeline') ? theme.border : theme.borderLight}`,
-                        padding: '6px 14px',
+                        padding: '5px 12px',
                         borderRadius: '20px',
                         transition: 'all 0.2s ease',
                         userSelect: 'none'
@@ -13100,8 +13102,8 @@ function App() {
                   {subDestinations.includes('map') && (
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', borderLeft: `2px solid ${theme.borderLight}`, paddingLeft: '12px', marginTop: '4px' }}>
                       <div style={{ fontSize: '12px', fontWeight: 'bold', color: theme.textDim, letterSpacing: '0.5px' }}>MAP CONFIGURATION</div>
-                      <div style={{ display: 'flex', gap: '16px', zIndex: 10002 }}>
-                        <div style={{ flex: 1, position: 'relative' }}>
+                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', zIndex: 10002 }}>
+                        <div style={{ flex: '1 1 200px', position: 'relative' }}>
                           <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: theme.text }}>REGISTRY LAYER / CODEX CATEGORY *</label>
                           <div style={{ position: 'relative' }}>
                             <button
@@ -13178,7 +13180,7 @@ function App() {
                           </div>
                         </div>
 
-                        <div style={{ width: '180px' }}>
+                        <div style={{ flex: isMobile ? '1 1 100%' : '0 0 160px' }}>
                           <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: theme.text }}>YEAR OF OCCURRENCE</label>
                           <input 
                             type="text" 
@@ -13199,9 +13201,9 @@ function App() {
                       </div>
 
                       {/* Geolocation auto-pinpoint input block matching requirement 3 */}
-                      <div style={{ background: isMapDarkMode ? 'rgba(255,255,255,0.02)' : 'rgba(0,0,0,0.02)', border: `1px dashed ${theme.borderLight}`, padding: '14px', borderRadius: '2px' }}>
+                      <div style={{ background: isMapDarkMode ? 'rgba(255,255,255,0.02)' : 'rgba(0,0,0,0.02)', border: `1px dashed ${theme.borderLight}`, padding: '12px', borderRadius: '2px' }}>
                         <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: theme.text }}>GEOGRAPHIC GEO-SEARCH (AUTO-FILL COORDINATES)</label>
-                        <div style={{ display: 'flex', gap: '8px' }}>
+                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                           <input
                             type="text"
                             placeholder="Type place name/address (e.g., Mount Shasta, CA)..."
@@ -13214,7 +13216,7 @@ function App() {
                               }
                             }}
                             style={{
-                              flex: 1,
+                              flex: '1 1 180px',
                               background: 'transparent',
                               border: `1px solid ${theme.border}`,
                               padding: '6px 12px',
@@ -13241,7 +13243,8 @@ function App() {
                               display: 'flex',
                               alignItems: 'center',
                               justifyContent: 'center',
-                              boxSizing: 'border-box'
+                              boxSizing: 'border-box',
+                              flex: isMobile ? '1 1 100%' : 'none'
                             }}
                           >
                             {isSubGeocoding ? 'FINDING...' : 'RESOLVE'}
@@ -13305,14 +13308,15 @@ function App() {
                       {/* Lat/Lng Pin coordinates */}
                       <div>
                         <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: theme.text }}>COORDINATES REGISTRATION (OPTIONAL)</label>
-                        <div style={{ display: 'flex', gap: '12px' }}>
+                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                           <input 
                             type="text" 
                             placeholder="Latitude (e.g. 41.4091)" 
                             value={subLatitude} 
                             onChange={(e) => setSubLatitude(e.target.value)}
                             style={{
-                              flex: 1,
+                              flex: '1 1 calc(50% - 4px)',
+                              minWidth: '120px',
                               background: 'transparent',
                               border: `1px solid ${theme.border}`,
                               padding: '8px 12px',
@@ -13327,7 +13331,8 @@ function App() {
                             value={subLongitude} 
                             onChange={(e) => setSubLongitude(e.target.value)}
                             style={{
-                              flex: 1,
+                              flex: '1 1 calc(50% - 4px)',
+                              minWidth: '120px',
                               background: 'transparent',
                               border: `1px solid ${theme.border}`,
                               padding: '8px 12px',
@@ -13357,7 +13362,8 @@ function App() {
                               justifyContent: 'center',
                               gap: '6px',
                               fontFamily: '"Space Mono", monospace',
-                              boxSizing: 'border-box'
+                              boxSizing: 'border-box',
+                              flex: isMobile ? '1 1 100%' : 'none'
                             }}
                           >
                             <MapPin size={10} strokeWidth={2.5} />
@@ -13404,8 +13410,8 @@ function App() {
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', borderLeft: `2px solid ${theme.borderLight}`, paddingLeft: '12px', marginTop: '4px' }}>
                       <div style={{ fontSize: '12px', fontWeight: 'bold', color: theme.textDim, letterSpacing: '0.5px' }}>TIMELINE CONFIGURATION</div>
                       
-                      <div style={{ display: 'flex', gap: '12px' }}>
-                        <div style={{ flex: 1 }}>
+                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+                        <div style={{ flex: '1 1 180px' }}>
                           <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: theme.text }}>TIMELINE LAYER / ERA *</label>
                           <select
                             value={subTimelineLayer}
@@ -13437,7 +13443,7 @@ function App() {
                           </select>
                         </div>
 
-                        <div style={{ width: '120px' }}>
+                        <div style={{ flex: isMobile ? '1 1 100%' : '0 0 120px' }}>
                           <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: theme.text }}>ENTRY TYPE</label>
                           <select
                             value={subTimelineType}
@@ -13458,8 +13464,8 @@ function App() {
                         </div>
                       </div>
 
-                      <div style={{ display: 'flex', gap: '12px' }}>
-                        <div style={{ flex: 1 }}>
+                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+                        <div style={{ flex: '1 1 140px' }}>
                           <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: theme.text }}>
                             {subTimelineType === 'lifespan' ? 'YEAR OF BIRTH (START) *' : 'YEAR OF OCCURRENCE *'}
                           </label>
@@ -13481,7 +13487,7 @@ function App() {
                         </div>
 
                         {subTimelineType === 'lifespan' && (
-                          <div style={{ flex: 1 }}>
+                          <div style={{ flex: '1 1 140px' }}>
                             <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: theme.text }}>YEAR OF DEATH (END)</label>
                             <input
                               type="text"
@@ -13504,11 +13510,11 @@ function App() {
 
                       {/* Lineage relationships for Lifespans */}
                       {subTimelineType === 'lifespan' && (
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', background: isMapDarkMode ? 'rgba(255,255,255,0.01)' : 'rgba(0,0,0,0.01)', padding: '10px', border: `1px solid ${theme.borderLight}` }}>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', background: isMapDarkMode ? 'rgba(255,255,255,0.01)' : 'rgba(0,0,0,0.01)', padding: '10px', border: `1px solid ${theme.borderLight}` }}>
                           <div style={{ fontSize: '10px', fontWeight: 'bold', color: theme.textDim, letterSpacing: '0.5px' }}>FAMILY TREE LINEAGE (OPTIONAL)</div>
                           
-                          <div style={{ display: 'flex', gap: '8px' }}>
-                            <div style={{ flex: 1 }}>
+                          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                            <div style={{ flex: '1 1 calc(33.333% - 6px)', minWidth: '95px' }}>
                               <label style={{ fontSize: '9.5px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>FATHER</label>
                               <select
                                 value={subTimelineFatherId}
@@ -13534,7 +13540,7 @@ function App() {
                               </select>
                             </div>
 
-                            <div style={{ flex: 1 }}>
+                            <div style={{ flex: '1 1 calc(33.333% - 6px)', minWidth: '95px' }}>
                               <label style={{ fontSize: '9.5px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>MOTHER</label>
                               <select
                                 value={subTimelineMotherId}
@@ -13560,7 +13566,7 @@ function App() {
                               </select>
                             </div>
 
-                            <div style={{ flex: 1 }}>
+                            <div style={{ flex: '1 1 calc(33.333% - 6px)', minWidth: '95px' }}>
                               <label style={{ fontSize: '9.5px', fontWeight: 'bold', display: 'block', marginBottom: '4px', color: theme.text }}>SPOUSE</label>
                               <select
                                 value={subTimelineSpouseId}
@@ -13590,7 +13596,6 @@ function App() {
                       )}
                     </div>
                   )}
-    </div>
 
                   <div>
                     <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: theme.text }}>NARRATIVE RECORD & DATA LOG *</label>
@@ -13810,8 +13815,8 @@ function App() {
                             const isFile = url.startsWith('/uploads/');
                             const displayName = isFile ? url.replace('/uploads/', '') : url;
                             return (
-                              <div key={idx} style={{ padding: '4px 8px', background: isMapDarkMode ? '#222' : '#eeeeee', border: `1px solid ${theme.border}`, fontSize: '9px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                                <span style={{ maxWidth: '240px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{displayName}</span>
+                              <div key={idx} style={{ padding: '4px 8px', background: isMapDarkMode ? '#222' : '#eeeeee', border: `1px solid ${theme.border}`, fontSize: '9px', display: 'flex', alignItems: 'center', gap: '8px', maxWidth: '100%' }}>
+                                <span style={{ maxWidth: isMobile ? '160px' : '240px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{displayName}</span>
                                 <button 
                                   type="button" 
                                   onClick={() => {
@@ -13830,9 +13835,9 @@ function App() {
                   </div>
 
                   {/* SUBMITTER / CONTRIBUTOR INFO (OPTIONAL) */}
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginTop: '12px' }}>
-                    <div style={{ display: 'flex', gap: '12px' }}>
-                      <div style={{ flex: 1 }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginTop: '12px' }}>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+                      <div style={{ flex: '1 1 140px' }}>
                         <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: theme.text }}>CONTRIBUTOR / SUBMITTER NAME (OPTIONAL)</label>
                         <input 
                           type="text" 
@@ -13850,7 +13855,7 @@ function App() {
                           }}
                         />
                       </div>
-                      <div style={{ flex: 1 }}>
+                      <div style={{ flex: '1 1 140px' }}>
                         <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: theme.text }}>SUBMITTER EMAIL (OPTIONAL / PRIVATE)</label>
                         <input 
                           type="email" 
@@ -13895,7 +13900,7 @@ function App() {
                     </div>
                   )}
 
-                  <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '12px', borderTop: `1px solid ${theme.border}`, paddingTop: '16px' }}>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'flex-end', gap: '10px', borderTop: `1px solid ${theme.border}`, paddingTop: '16px' }}>
                     <button 
                       type="button" 
                       onClick={() => setIsSubmitOpen(false)} 
@@ -13913,7 +13918,8 @@ function App() {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        boxSizing: 'border-box'
+                        boxSizing: 'border-box',
+                        flex: isMobile ? '1 1 calc(50% - 5px)' : 'none'
                       }}
                     >
                       CANCEL
@@ -13936,7 +13942,8 @@ function App() {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        boxSizing: 'border-box'
+                        boxSizing: 'border-box',
+                        flex: isMobile ? '1 1 calc(50% - 5px)' : 'none'
                       }}
                     >
                       {isSubmitting ? "TRANSMITTING..." : "SUBMIT INTEL"}
@@ -13968,7 +13975,7 @@ function App() {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              padding: '20px'
+              padding: isMobile ? '8px' : '20px'
             }}
           >
             <motion.div
@@ -13978,20 +13985,22 @@ function App() {
               style={{
                 width: '100%',
                 maxWidth: '480px',
+                maxHeight: isMobile ? '94vh' : '85vh',
+                overflowY: 'auto',
                 background: isMapDarkMode ? 'rgba(18, 18, 18, 0.85)' : 'rgba(255, 255, 255, 0.9)',
                 border: `1.5px solid ${isMapDarkMode ? '#ef4444' : '#b91c1c'}`,
                 backdropFilter: 'blur(20px)',
                 borderRadius: '8px',
-                padding: '24px',
+                padding: isMobile ? '16px 12px' : '24px',
                 color: theme.text,
                 fontFamily: '"Space Mono", monospace',
                 boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.5)'
               }}
             >
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px', borderBottom: `1px solid ${theme.border}`, paddingBottom: '12px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', borderBottom: `1px solid ${theme.border}`, paddingBottom: '12px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <Flag size={18} style={{ color: isMapDarkMode ? '#ef4444' : '#b91c1c' }} />
-                  <span style={{ fontWeight: 'bold', fontSize: '14px', letterSpacing: '1px', textTransform: 'uppercase' }}>
+                  <Flag size={16} style={{ color: isMapDarkMode ? '#ef4444' : '#b91c1c' }} />
+                  <span style={{ fontWeight: 'bold', fontSize: isMobile ? '11px' : '13px', letterSpacing: '0.5px', textTransform: 'uppercase' }}>
                     FLAG ANOMALY INACCURACY
                   </span>
                 </div>
@@ -14032,7 +14041,7 @@ function App() {
                   </button>
                 </div>
               ) : (
-                <form onSubmit={handleReportSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                <form onSubmit={handleReportSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
                   <div style={{ fontSize: '10px', color: theme.textDim, textTransform: 'uppercase', lineHeight: '15px' }}>
                     You are flagging: <strong style={{ color: theme.text }}>{reportedFeature.name || reportedFeature.title || 'Unnamed Point'}</strong>
                     <br />
@@ -14105,7 +14114,7 @@ function App() {
                     </div>
                   )}
 
-                  <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '12px', borderTop: `1px solid ${theme.border}`, paddingTop: '16px' }}>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'flex-end', gap: '10px', borderTop: `1px solid ${theme.border}`, paddingTop: '16px' }}>
                     <button
                       type="button"
                       onClick={() => setIsReportOpen(false)}
@@ -14123,7 +14132,8 @@ function App() {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        boxSizing: 'border-box'
+                        boxSizing: 'border-box',
+                        flex: isMobile ? '1 1 calc(50% - 5px)' : 'none'
                       }}
                     >
                       CANCEL
@@ -14146,7 +14156,8 @@ function App() {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        boxSizing: 'border-box'
+                        boxSizing: 'border-box',
+                        flex: isMobile ? '1 1 calc(50% - 5px)' : 'none'
                       }}
                     >
                       {isSubmittingReport ? "TRANSMITTING..." : "SUBMIT REPORT"}
