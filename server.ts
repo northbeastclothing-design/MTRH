@@ -409,11 +409,18 @@ async function startServer() {
   if (!fs.existsSync(uploadsDir)) {
     fs.mkdirSync(uploadsDir, { recursive: true });
   }
-  if (!fs.existsSync(publicUploadsDir)) {
-    fs.mkdirSync(publicUploadsDir, { recursive: true });
+  try {
+    if (!fs.existsSync(publicUploadsDir)) {
+      fs.mkdirSync(publicUploadsDir, { recursive: true });
+    }
+  } catch (e) {
+    console.warn("Could not create publicUploadsDir:", e);
   }
+
   app.use("/uploads", express.static(uploadsDir));
-  app.use("/uploads", express.static(publicUploadsDir));
+  try {
+    app.use("/uploads", express.static(publicUploadsDir));
+  } catch (e) {}
 
   // File Upload Route
   app.post("/api/upload", async (req, res) => {
