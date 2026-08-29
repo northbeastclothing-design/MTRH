@@ -21,6 +21,10 @@ export interface TermNode {
   images?: string[];
   sources?: string[];
   subLabel?: string;
+  submitterName?: string;
+  submitterEmail?: string;
+  submitterLink?: string;
+  socialLink?: string;
 }
 
 

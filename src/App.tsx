@@ -1965,6 +1965,7 @@ function App() {
   const [subTimelineSpouseId, setSubTimelineSpouseId] = useState('');
   const [subSubmitterName, setSubSubmitterName] = useState('');
   const [subSubmitterEmail, setSubSubmitterEmail] = useState('');
+  const [subSubmitterLink, setSubSubmitterLink] = useState('');
 
   // Onboarding Tour State
   const [onboardingStep, setOnboardingStep] = useState<number | null>(null);
@@ -2803,54 +2804,64 @@ function App() {
             <div style={{ border: `1px dashed ${theme.border}`, padding: '12px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', position: 'relative', cursor: 'pointer' }}>
               <input 
                 type="file" 
+                multiple
                 accept="image/*,video/*,audio/*,application/pdf"
                 onChange={async (e) => {
-                  const file = e.target.files?.[0];
-                  if (!file) return;
+                  const files = Array.from(e.target.files || []) as File[];
+                  if (files.length === 0) return;
 
                   setIsEditUploading(true);
-                  try {
-                    const reader = new FileReader();
-                    reader.onload = async () => {
-                      const base64 = reader.result as string;
-                      const base64Data = base64.split(',')[1] || base64;
+                  setModeratorError(null);
 
-                      try {
-                        const response = await fetch('/api/upload', {
-                          method: 'POST',
-                          headers: { 'Content-Type': 'application/json' },
-                          body: JSON.stringify({
-                            filename: file.name,
-                            fileData: base64Data
-                          })
-                        });
+                  const uploadedUrls: string[] = [];
+                  const errors: string[] = [];
 
-                        if (!response.ok) {
-                          throw new Error(`Upload failed with status: ${response.status}`);
-                        }
+                  for (const file of files) {
+                    try {
+                      const base64Data = await new Promise<string>((resolve, reject) => {
+                        const reader = new FileReader();
+                        reader.onload = () => {
+                          const base64 = reader.result as string;
+                          resolve(base64.split(',')[1] || base64);
+                        };
+                        reader.onerror = () => reject(new Error(`Failed to read file ${file.name}`));
+                        reader.readAsDataURL(file);
+                      });
 
-                        const data = await response.json();
-                        if (data && data.url) {
-                          setEditMediaList(prev => [...prev, data.url]);
-                        } else {
-                          throw new Error("Invalid response schema from upload endpoint");
-                        }
-                      } catch (err: any) {
-                        console.error("Upload Error:", err);
-                        setModeratorError(`Upload failed: ${err.message || err}`);
-                      } finally {
-                        setIsEditUploading(false);
+                      const response = await fetch('/api/upload', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                          filename: file.name,
+                          fileData: base64Data
+                        })
+                      });
+
+                      if (!response.ok) {
+                        throw new Error(`Upload failed for ${file.name} with status: ${response.status}`);
                       }
-                    };
-                    reader.onerror = () => {
-                      setModeratorError("Failed to read local file.");
-                      setIsEditUploading(false);
-                    };
-                    reader.readAsDataURL(file);
-                  } catch (fileErr: any) {
-                    console.error(fileErr);
-                    setIsEditUploading(false);
+
+                      const data = await response.json();
+                      if (data && data.url) {
+                        uploadedUrls.push(data.url);
+                      } else {
+                        throw new Error(`Invalid response for ${file.name}`);
+                      }
+                    } catch (err: any) {
+                      console.error("Upload API Error:", err);
+                      errors.push(err.message || String(err));
+                    }
                   }
+
+                  if (uploadedUrls.length > 0) {
+                    setEditMediaList(prev => [...prev, ...uploadedUrls]);
+                  }
+                  if (errors.length > 0) {
+                    setModeratorError(`Upload error(s): ${errors.join('; ')}`);
+                  }
+
+                  setIsEditUploading(false);
+                  e.target.value = '';
                 }}
                 style={{
                   position: 'absolute',
@@ -2864,7 +2875,7 @@ function App() {
               />
               <Upload size={16} style={{ marginBottom: '4px' }} />
               <span style={{ fontSize: '9px' }}>
-                {isEditUploading ? "UPLOADING FILE..." : "CLICK TO ADD FILE"}
+                {isEditUploading ? "UPLOADING FILES..." : "CLICK TO ADD FILE(S)"}
               </span>
             </div>
           )}
@@ -3964,6 +3975,10 @@ function App() {
           coordinates: data.coordinates,
           images: data.images || [],
           source: data.source || 'User Submission',
+          submitterName: data.submitterName || '',
+          submitterEmail: data.submitterEmail || '',
+          submitterLink: data.submitterLink || data.socialLink || '',
+          socialLink: data.socialLink || data.submitterLink || '',
           isSubmitted: true,
           type: 'Point',
           destinations: data.destinations || ['map'],
@@ -8590,41 +8605,53 @@ function App() {
               );
             })()}
 
-            {selectedFeature.socialLink && (
-              <motion.a
-                whileTap={{ scale: 0.95 }}
-                whileHover={{ scale: 1.05 }}
-                href={selectedFeature.socialLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '6px',
-                  background: 'transparent',
-                  color: isMapDarkMode ? '#fff' : '#000',
-                  border: `1px solid ${isMapDarkMode ? '#fff' : '#000'}`,
-                  padding: '6px 12px',
-                  borderRadius: '16px',
-                  cursor: 'pointer',
-                  fontSize: '11px',
-                  fontWeight: 'bold',
-                  fontFamily: '"Space Mono", monospace',
-                  transition: 'all 0.2s ease',
-                  whiteSpace: 'nowrap',
-                  textDecoration: 'none'
-                }}
-              >
-                {selectedFeature.socialLink.toLowerCase().includes('instagram.com') ? (
-                  <Instagram size={13} />
-                ) : (
-                  <ExternalLink size={13} />
-                )}
-                <span>
-                  {selectedFeature.socialLink.toLowerCase().includes('instagram.com') ? 'INSTAGRAM' : 'X.COM'}
-                </span>
-              </motion.a>
-            )}
+            {(selectedFeature.submitterLink || selectedFeature.socialLink) && (() => {
+              const link = (selectedFeature.submitterLink || selectedFeature.socialLink) as string;
+              const linkLower = link.toLowerCase();
+              let icon = <ExternalLink size={13} />;
+              let label = 'LINK / WEBSITE';
+
+              if (linkLower.includes('instagram.com')) {
+                icon = <Instagram size={13} />;
+                label = 'INSTAGRAM';
+              } else if (linkLower.includes('x.com') || linkLower.includes('twitter.com')) {
+                label = 'X.COM';
+              } else if (linkLower.includes('youtube.com') || linkLower.includes('youtu.be')) {
+                label = 'YOUTUBE';
+              } else if (linkLower.includes('tiktok.com')) {
+                label = 'TIKTOK';
+              }
+
+              return (
+                <motion.a
+                  whileTap={{ scale: 0.95 }}
+                  whileHover={{ scale: 1.05 }}
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '6px',
+                    background: 'transparent',
+                    color: isMapDarkMode ? '#fff' : '#000',
+                    border: `1px solid ${isMapDarkMode ? '#fff' : '#000'}`,
+                    padding: '6px 12px',
+                    borderRadius: '16px',
+                    cursor: 'pointer',
+                    fontSize: '11px',
+                    fontWeight: 'bold',
+                    fontFamily: '"Space Mono", monospace',
+                    transition: 'all 0.2s ease',
+                    whiteSpace: 'nowrap',
+                    textDecoration: 'none'
+                  }}
+                >
+                  {icon}
+                  <span>{label}</span>
+                </motion.a>
+              );
+            })()}
           </div>
           
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '24px', justifyContent: 'flex-start' }}>
@@ -8692,6 +8719,35 @@ function App() {
             {selectedFeature.source && (
               <div style={{ fontFamily: '"Space Mono", monospace', fontWeight: '700', fontStyle: 'italic', fontSize: '10px', lineHeight: '22px' }}>
                 SOURCE: <span style={{ fontStyle: 'normal', fontWeight: '400' }}>{selectedFeature.source}</span>
+              </div>
+            )}
+            {(selectedFeature.submitterName || selectedFeature.submitterLink || selectedFeature.socialLink) && (
+              <div style={{ fontFamily: '"Space Mono", monospace', fontWeight: '700', fontStyle: 'italic', fontSize: '10px', lineHeight: '22px' }}>
+                INTEL CONTRIBUTOR: <span style={{ fontStyle: 'normal', fontWeight: '400' }}>
+                  {selectedFeature.submitterName ? (
+                    (selectedFeature.submitterLink || selectedFeature.socialLink) ? (
+                      <a 
+                        href={selectedFeature.submitterLink || selectedFeature.socialLink} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        style={{ color: '#b6a6ff', textDecoration: 'underline', fontWeight: '600' }}
+                      >
+                        {selectedFeature.submitterName}
+                      </a>
+                    ) : (
+                      <strong>{selectedFeature.submitterName}</strong>
+                    )
+                  ) : (
+                    <a 
+                      href={selectedFeature.submitterLink || selectedFeature.socialLink} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      style={{ color: '#b6a6ff', textDecoration: 'underline', fontWeight: '600' }}
+                    >
+                      {selectedFeature.submitterLink || selectedFeature.socialLink}
+                    </a>
+                  )}
+                </span>
               </div>
             )}
           </div>
@@ -12822,7 +12878,9 @@ function App() {
                       timelineMotherId: (subDestinations.includes('timeline') && subTimelineType === 'lifespan') ? subTimelineMotherId : '',
                       timelineSpouseId: (subDestinations.includes('timeline') && subTimelineType === 'lifespan') ? subTimelineSpouseId : '',
                       submitterName: subSubmitterName.trim(),
-                      submitterEmail: subSubmitterEmail.trim()
+                      submitterEmail: subSubmitterEmail.trim(),
+                      submitterLink: subSubmitterLink.trim(),
+                      socialLink: subSubmitterLink.trim()
                     };
 
                     if (hasCoords) {
@@ -12858,7 +12916,9 @@ function App() {
                           timelineMotherId: (subDestinations.includes('timeline') && subTimelineType === 'lifespan') ? subTimelineMotherId : '',
                           timelineSpouseId: (subDestinations.includes('timeline') && subTimelineType === 'lifespan') ? subTimelineSpouseId : '',
                           submitterName: subSubmitterName.trim() || undefined,
-                          submitterEmail: subSubmitterEmail.trim() || undefined
+                          submitterEmail: subSubmitterEmail.trim() || undefined,
+                          submitterLink: subSubmitterLink.trim() || undefined,
+                          socialLink: subSubmitterLink.trim() || undefined
                         })
                       });
                       
@@ -12885,6 +12945,7 @@ function App() {
                       setSubTimelineSpouseId('');
                       setSubSubmitterName('');
                       setSubSubmitterEmail('');
+                      setSubSubmitterLink('');
                     } catch (err: any) {
                       console.warn("Server proxy submission failed, trying direct Firestore fallback:", err);
                       try {
@@ -12910,6 +12971,7 @@ function App() {
                         setSubTimelineSpouseId('');
                         setSubSubmitterName('');
                         setSubSubmitterEmail('');
+                        setSubSubmitterLink('');
                       } catch (fallbackErr: any) {
                         console.error("Firestore submission fallback error:", fallbackErr);
                         setSubmissionError(`Transmission Failure: ${fallbackErr.message || fallbackErr}`);
@@ -13662,20 +13724,30 @@ function App() {
                       <div style={{ border: `1px dashed ${theme.border}`, padding: '16px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', position: 'relative', cursor: 'pointer' }}>
                         <input 
                           type="file" 
+                          multiple
                           accept="image/*,video/*,audio/*,application/pdf"
                           onChange={async (e) => {
-                            const file = e.target.files?.[0];
-                            if (!file) return;
+                            const files = Array.from(e.target.files || []) as File[];
+                            if (files.length === 0) return;
 
                             setIsUploading(true);
                             setSubmissionError(null);
 
-                            const reader = new FileReader();
-                            reader.onload = async () => {
-                              const base64 = reader.result as string;
-                              const base64Data = base64.split(',')[1] || base64;
+                            const uploadedUrls: string[] = [];
+                            const errors: string[] = [];
 
+                            for (const file of files) {
                               try {
+                                const base64Data = await new Promise<string>((resolve, reject) => {
+                                  const reader = new FileReader();
+                                  reader.onload = () => {
+                                    const base64 = reader.result as string;
+                                    resolve(base64.split(',')[1] || base64);
+                                  };
+                                  reader.onerror = () => reject(new Error(`Failed to read file ${file.name}`));
+                                  reader.readAsDataURL(file);
+                                });
+
                                 const response = await fetch('/api/upload', {
                                   method: 'POST',
                                   headers: { 'Content-Type': 'application/json' },
@@ -13686,29 +13758,30 @@ function App() {
                                 });
 
                                 if (!response.ok) {
-                                  throw new Error(`Upload failed with status: ${response.status}`);
+                                  throw new Error(`Upload failed for ${file.name} with status: ${response.status}`);
                                 }
 
                                 const data = await response.json();
                                 if (data && data.url) {
-                                  setSubMediaList(prev => [...prev, data.url]);
+                                  uploadedUrls.push(data.url);
                                 } else {
-                                  throw new Error("Invalid response schema from upload endpoint");
+                                  throw new Error(`Invalid response for ${file.name}`);
                                 }
                               } catch (err: any) {
                                 console.error("Upload API Error:", err);
-                                setSubmissionError(`Staging failed: ${err.message || err}`);
-                              } finally {
-                                setIsUploading(false);
+                                errors.push(err.message || String(err));
                               }
-                            };
-                            
-                            reader.onerror = () => {
-                              setSubmissionError("Failed to read file local stream.");
-                              setIsUploading(false);
-                            };
+                            }
 
-                            reader.readAsDataURL(file);
+                            if (uploadedUrls.length > 0) {
+                              setSubMediaList(prev => [...prev, ...uploadedUrls]);
+                            }
+                            if (errors.length > 0) {
+                              setSubmissionError(`Upload error(s): ${errors.join('; ')}`);
+                            }
+
+                            setIsUploading(false);
+                            e.target.value = '';
                           }}
                           style={{
                             position: 'absolute',
@@ -13721,8 +13794,8 @@ function App() {
                           }}
                         />
                         <Upload size={20} style={{ marginBottom: '8px' }} />
-                        <span style={{ fontSize: '9px' }}>
-                          {isUploading ? "UPLOADING FILE..." : "CLICK OR DRAG FILES HERE TO STAGE"}
+                        <span style={{ fontSize: '9px', fontWeight: 'bold' }}>
+                          {isUploading ? "UPLOADING FILES..." : "CLICK OR DRAG FILES HERE TO STAGE (MULTIPLE ALLOWED)"}
                         </span>
                         <span style={{ fontSize: '8px', color: theme.textDim, marginTop: '4px' }}>PNG, JPG, MP4, MP3, PDF compatible</span>
                       </div>
@@ -13756,33 +13829,53 @@ function App() {
                     )}
                   </div>
 
-                  {/* SUBMITTER CONTACT INFO (OPTIONAL) */}
-                  <div style={{ display: 'flex', gap: '12px', marginTop: '12px' }}>
-                    <div style={{ flex: 1 }}>
-                      <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: theme.text }}>SUBMITTER NAME (OPTIONAL)</label>
+                  {/* SUBMITTER / CONTRIBUTOR INFO (OPTIONAL) */}
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginTop: '12px' }}>
+                    <div style={{ display: 'flex', gap: '12px' }}>
+                      <div style={{ flex: 1 }}>
+                        <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: theme.text }}>CONTRIBUTOR / SUBMITTER NAME (OPTIONAL)</label>
+                        <input 
+                          type="text" 
+                          placeholder="e.g., Agent Mulder" 
+                          value={subSubmitterName} 
+                          onChange={(e) => setSubSubmitterName(e.target.value)}
+                          style={{
+                            width: '100%',
+                            background: 'transparent',
+                            border: `1px solid ${theme.border}`,
+                            padding: '8px 12px',
+                            fontSize: '11px',
+                            color: theme.text,
+                            fontFamily: '"Space Mono", monospace'
+                          }}
+                        />
+                      </div>
+                      <div style={{ flex: 1 }}>
+                        <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: theme.text }}>SUBMITTER EMAIL (OPTIONAL / PRIVATE)</label>
+                        <input 
+                          type="email" 
+                          placeholder="e.g., mulder@fbi.gov" 
+                          value={subSubmitterEmail} 
+                          onChange={(e) => setSubSubmitterEmail(e.target.value)}
+                          style={{
+                            width: '100%',
+                            background: 'transparent',
+                            border: `1px solid ${theme.border}`,
+                            padding: '8px 12px',
+                            fontSize: '11px',
+                            color: theme.text,
+                            fontFamily: '"Space Mono", monospace'
+                          }}
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: theme.text }}>CONTRIBUTOR SOCIAL MEDIA OR WEBSITE LINK (OPTIONAL)</label>
                       <input 
                         type="text" 
-                        placeholder="e.g., Agent Mulder" 
-                        value={subSubmitterName} 
-                        onChange={(e) => setSubSubmitterName(e.target.value)}
-                        style={{
-                          width: '100%',
-                          background: 'transparent',
-                          border: `1px solid ${theme.border}`,
-                          padding: '8px 12px',
-                          fontSize: '11px',
-                          color: theme.text,
-                          fontFamily: '"Space Mono", monospace'
-                        }}
-                      />
-                    </div>
-                    <div style={{ flex: 1 }}>
-                      <label style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: theme.text }}>SUBMITTER EMAIL (OPTIONAL)</label>
-                      <input 
-                        type="email" 
-                        placeholder="e.g., mulder@fbi.gov" 
-                        value={subSubmitterEmail} 
-                        onChange={(e) => setSubSubmitterEmail(e.target.value)}
+                        placeholder="e.g., https://x.com/username, https://instagram.com/user, or https://mywebsite.com" 
+                        value={subSubmitterLink} 
+                        onChange={(e) => setSubSubmitterLink(e.target.value)}
                         style={{
                           width: '100%',
                           background: 'transparent',
@@ -14085,7 +14178,7 @@ function App() {
               justifyContent: 'center',
               zIndex: 9999,
               fontFamily: '"Space Mono", monospace',
-              padding: '20px'
+              padding: isMobile ? '8px' : '20px'
             }}
           >
             <motion.div
@@ -14096,10 +14189,10 @@ function App() {
                 backgroundColor: isMapDarkMode ? '#0a0a0a' : '#ffffff',
                 color: isMapDarkMode ? '#ffffff' : '#000000',
                 border: `1.5px solid ${theme.border}`,
-                padding: '28px',
-                width: '720px',
-                maxWidth: '100%',
-                maxHeight: '85vh',
+                padding: isMobile ? '16px 12px' : '28px',
+                width: '100%',
+                maxWidth: '720px',
+                maxHeight: isMobile ? '94vh' : '85vh',
                 overflowY: 'auto',
                 display: 'flex',
                 flexDirection: 'column',
@@ -14109,12 +14202,12 @@ function App() {
               }}
             >
               {/* Header */}
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: `2.5px solid ${theme.border}`, paddingBottom: '12px', marginBottom: '20px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px', borderBottom: `2.5px solid ${theme.border}`, paddingBottom: '12px', marginBottom: '16px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                   <Shield size={14} color={isMapDarkMode ? '#ffcc00' : '#000000'} />
-                  <span style={{ fontWeight: 700, fontSize: '11px', letterSpacing: '1px' }}>MTRH // DECISIONAL MODERATION DESK</span>
+                  <span style={{ fontWeight: 700, fontSize: isMobile ? '10px' : '11px', letterSpacing: '0.5px' }}>MTRH // DECISIONAL MODERATION DESK</span>
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                   {isModeratorAuthenticated && (
                     <button 
                       onClick={() => setIsModMinimized(true)} 
@@ -14131,7 +14224,7 @@ function App() {
                         fontFamily: '"Space Mono", monospace' 
                       }}
                     >
-                      MINIMIZE DESK
+                      {isMobile ? "MINIMIZE" : "MINIMIZE DESK"}
                     </button>
                   )}
                   <button onClick={() => setIsModeratorOpen(false)} style={{ background: 'transparent', border: 'none', color: theme.text, cursor: 'pointer', padding: 0, display: 'flex', alignItems: 'center' }}>
@@ -14264,10 +14357,10 @@ function App() {
                 </div>
               ) : (
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: isMapDarkMode ? '#141414' : '#f8f8f8', padding: '10px 14px', border: `1px solid ${theme.border}` }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                      <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#ffcc00' }} />
-                      <span style={{ fontSize: '10px', fontWeight: 'bold' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px', background: isMapDarkMode ? '#141414' : '#f8f8f8', padding: '10px 14px', border: `1px solid ${theme.border}` }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
+                      <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#ffcc00', flexShrink: 0 }} />
+                      <span style={{ fontSize: '10px', fontWeight: 'bold', wordBreak: 'break-word' }}>
                         ACTIVE MOD DESK SESSION: {currentUser?.email || "Local Bypass Override Profile"}
                       </span>
                     </div>
@@ -14301,11 +14394,23 @@ function App() {
                     </div>
                   )}
 
-                  <div style={{ display: 'flex', borderBottom: `1px solid ${theme.borderLight}`, gap: '4px', marginBottom: '8px' }}>
+                  <div 
+                    className="no-scrollbar"
+                    style={{ 
+                      display: 'flex', 
+                      borderBottom: `1px solid ${theme.borderLight}`, 
+                      gap: '4px', 
+                      marginBottom: '8px',
+                      overflowX: 'auto',
+                      whiteSpace: 'nowrap',
+                      width: '100%',
+                      paddingBottom: '2px'
+                    }}
+                  >
                     <button
                       onClick={() => setActiveModTab('pending')}
                       style={{
-                        padding: '10px 16px',
+                        padding: '10px 14px',
                         fontSize: '10px',
                         fontWeight: 'bold',
                         fontFamily: '"Space Mono", monospace',
@@ -14314,7 +14419,8 @@ function App() {
                         border: 'none',
                         borderBottom: activeModTab === 'pending' ? (isMapDarkMode ? '2.5px solid #ffcc00' : '2.5px solid #000000') : '2.5px solid transparent',
                         cursor: 'pointer',
-                        letterSpacing: '0.5px'
+                        letterSpacing: '0.5px',
+                        flexShrink: 0
                       }}
                     >
                       PENDING REVIEW ({pendingSubmissions.length})
@@ -14322,7 +14428,7 @@ function App() {
                     <button
                       onClick={() => setActiveModTab('approved')}
                       style={{
-                        padding: '10px 16px',
+                        padding: '10px 14px',
                         fontSize: '10px',
                         fontWeight: 'bold',
                         fontFamily: '"Space Mono", monospace',
@@ -14331,7 +14437,8 @@ function App() {
                         border: 'none',
                         borderBottom: activeModTab === 'approved' ? (isMapDarkMode ? '2.5px solid #ffcc00' : '2.5px solid #000000') : '2.5px solid transparent',
                         cursor: 'pointer',
-                        letterSpacing: '0.5px'
+                        letterSpacing: '0.5px',
+                        flexShrink: 0
                       }}
                     >
                       APPROVED INTEL AUDIT ({approvedSubmissions.length})
@@ -14339,7 +14446,7 @@ function App() {
                     <button
                       onClick={() => setActiveModTab('reports')}
                       style={{
-                        padding: '10px 16px',
+                        padding: '10px 14px',
                         fontSize: '10px',
                         fontWeight: 'bold',
                         fontFamily: '"Space Mono", monospace',
@@ -14348,7 +14455,8 @@ function App() {
                         border: 'none',
                         borderBottom: activeModTab === 'reports' ? (isMapDarkMode ? '2.5px solid #ffcc00' : '2.5px solid #000000') : '2.5px solid transparent',
                         cursor: 'pointer',
-                        letterSpacing: '0.5px'
+                        letterSpacing: '0.5px',
+                        flexShrink: 0
                       }}
                     >
                       INACCURACY REPORTS ({reports.filter(r => r.status === 'pending').length})
@@ -14356,7 +14464,7 @@ function App() {
                     <button
                       onClick={() => setActiveModTab('cartography')}
                       style={{
-                        padding: '10px 16px',
+                        padding: '10px 14px',
                         fontSize: '10px',
                         fontWeight: 'bold',
                         fontFamily: '"Space Mono", monospace',
@@ -14365,7 +14473,8 @@ function App() {
                         border: 'none',
                         borderBottom: activeModTab === 'cartography' ? (isMapDarkMode ? '2.5px solid #ffcc00' : '2.5px solid #000000') : '2.5px solid transparent',
                         cursor: 'pointer',
-                        letterSpacing: '0.5px'
+                        letterSpacing: '0.5px',
+                        flexShrink: 0
                       }}
                     >
                       CARTOGRAPHY PINS ({modCartographyPoints.length})
@@ -14474,10 +14583,11 @@ function App() {
                                     </div>
                                   )}
 
-                                  {(sub.submitterName || sub.submitterEmail) && (
+                                  {(sub.submitterName || sub.submitterEmail || sub.submitterLink || sub.socialLink) && (
                                     <div style={{ fontSize: '9px', color: isMapDarkMode ? theme.textDim : '#000000', borderTop: `1px dashed ${theme.borderLight}`, paddingTop: '4px', marginTop: '4px' }}>
-                                      SUBMITTER CONTACT: <strong style={{ color: theme.text }}>{sub.submitterName || 'Anonymous'}</strong>
+                                      SUBMITTER / CONTRIBUTOR: <strong style={{ color: theme.text }}>{sub.submitterName || 'Anonymous'}</strong>
                                       {sub.submitterEmail && <> | <a href={`mailto:${sub.submitterEmail}`} style={{ color: '#b6a6ff', textDecoration: 'underline' }}>{sub.submitterEmail}</a></>}
+                                      {(sub.submitterLink || sub.socialLink) && <> | <a href={sub.submitterLink || sub.socialLink} target="_blank" rel="noopener noreferrer" style={{ color: '#b6a6ff', textDecoration: 'underline' }}>{sub.submitterLink || sub.socialLink}</a></>}
                                     </div>
                                   )}
 
@@ -14518,8 +14628,8 @@ function App() {
                                     </div>
                                   )}
 
-                                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderTop: `1px solid ${theme.borderLight}`, paddingTop: '12px', marginTop: '4px' }}>
-                                    <div style={{ display: 'flex', gap: '8px' }}>
+                                  <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', justifyContent: 'space-between', alignItems: isMobile ? 'stretch' : 'center', gap: '8px', borderTop: `1px solid ${theme.borderLight}`, paddingTop: '12px', marginTop: '4px' }}>
+                                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', width: isMobile ? '100%' : 'auto' }}>
                                       {sub.coordinates && Array.isArray(sub.coordinates) && sub.coordinates.length === 2 && isValidLngLat(sub.coordinates[0], sub.coordinates[1]) && (
                                         <button
                                           onClick={() => {
@@ -14551,8 +14661,10 @@ function App() {
                                             cursor: 'pointer',
                                             display: 'flex',
                                             alignItems: 'center',
+                                            justifyContent: 'center',
                                             gap: '6px',
-                                            boxSizing: 'border-box'
+                                            boxSizing: 'border-box',
+                                            flex: isMobile ? '1 1 calc(50% - 4px)' : 'none'
                                           }}
                                         >
                                           <Eye size={12} />
@@ -14576,14 +14688,15 @@ function App() {
                                           display: 'flex',
                                           alignItems: 'center',
                                           justifyContent: 'center',
-                                          boxSizing: 'border-box'
+                                          boxSizing: 'border-box',
+                                          flex: isMobile ? '1 1 calc(50% - 4px)' : 'none'
                                         }}
                                       >
                                         EDIT INTEL
                                       </button>
                                     </div>
 
-                                    <div style={{ display: 'flex', gap: '10px' }}>
+                                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', width: isMobile ? '100%' : 'auto' }}>
                                       <button
                                         disabled={submittingApprovalId !== null || submittingRejectionId !== null}
                                         onClick={async () => {
@@ -14627,7 +14740,8 @@ function App() {
                                           display: 'flex',
                                           alignItems: 'center',
                                           justifyContent: 'center',
-                                          boxSizing: 'border-box'
+                                          boxSizing: 'border-box',
+                                          flex: isMobile ? '1 1 calc(50% - 4px)' : 'none'
                                         }}
                                       >
                                         {submittingRejectionId === sub.id ? "REJECTING..." : "REJECT / DELETE"}
@@ -14677,7 +14791,8 @@ function App() {
                                           display: 'flex',
                                           alignItems: 'center',
                                           justifyContent: 'center',
-                                          boxSizing: 'border-box'
+                                          boxSizing: 'border-box',
+                                          flex: isMobile ? '1 1 calc(50% - 4px)' : 'none'
                                         }}
                                       >
                                         {submittingApprovalId === sub.id ? "APPROVING..." : "APPROVE ENTRY"}
@@ -14795,10 +14910,11 @@ function App() {
                                     </div>
                                   )}
 
-                                  {(sub.submitterName || sub.submitterEmail) && (
+                                  {(sub.submitterName || sub.submitterEmail || sub.submitterLink || sub.socialLink) && (
                                     <div style={{ fontSize: '9px', color: isMapDarkMode ? theme.textDim : '#000000', borderTop: `1px dashed ${theme.borderLight}`, paddingTop: '4px', marginTop: '4px' }}>
-                                      SUBMITTER CONTACT: <strong style={{ color: theme.text }}>{sub.submitterName || 'Anonymous'}</strong>
+                                      SUBMITTER / CONTRIBUTOR: <strong style={{ color: theme.text }}>{sub.submitterName || 'Anonymous'}</strong>
                                       {sub.submitterEmail && <> | <a href={`mailto:${sub.submitterEmail}`} style={{ color: '#b6a6ff', textDecoration: 'underline' }}>{sub.submitterEmail}</a></>}
+                                      {(sub.submitterLink || sub.socialLink) && <> | <a href={sub.submitterLink || sub.socialLink} target="_blank" rel="noopener noreferrer" style={{ color: '#b6a6ff', textDecoration: 'underline' }}>{sub.submitterLink || sub.socialLink}</a></>}
                                     </div>
                                   )}
 
@@ -14839,8 +14955,8 @@ function App() {
                                     </div>
                                   )}
 
-                                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderTop: `1px solid ${theme.borderLight}`, paddingTop: '12px', marginTop: '4px' }}>
-                                    <div style={{ display: 'flex', gap: '8px' }}>
+                                  <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', justifyContent: 'space-between', alignItems: isMobile ? 'stretch' : 'center', gap: '8px', borderTop: `1px solid ${theme.borderLight}`, paddingTop: '12px', marginTop: '4px' }}>
+                                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', width: isMobile ? '100%' : 'auto' }}>
                                       {sub.coordinates && Array.isArray(sub.coordinates) && sub.coordinates.length === 2 && isValidLngLat(sub.coordinates[0], sub.coordinates[1]) && (
                                         <button
                                           onClick={() => {
@@ -14872,8 +14988,10 @@ function App() {
                                             cursor: 'pointer',
                                             display: 'flex',
                                             alignItems: 'center',
+                                            justifyContent: 'center',
                                             gap: '6px',
-                                            boxSizing: 'border-box'
+                                            boxSizing: 'border-box',
+                                            flex: isMobile ? '1 1 calc(50% - 4px)' : 'none'
                                           }}
                                         >
                                           <Eye size={12} />
@@ -14897,14 +15015,15 @@ function App() {
                                           display: 'flex',
                                           alignItems: 'center',
                                           justifyContent: 'center',
-                                          boxSizing: 'border-box'
+                                          boxSizing: 'border-box',
+                                          flex: isMobile ? '1 1 calc(50% - 4px)' : 'none'
                                         }}
                                       >
                                         EDIT INTEL
                                       </button>
                                     </div>
 
-                                    <div style={{ display: 'flex', gap: '10px' }}>
+                                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', width: isMobile ? '100%' : 'auto' }}>
                                       <button
                                         disabled={submittingRevocationId !== null || submittingRejectionId !== null}
                                         onClick={async () => {
@@ -14950,7 +15069,8 @@ function App() {
                                           display: 'flex',
                                           alignItems: 'center',
                                           justifyContent: 'center',
-                                          boxSizing: 'border-box'
+                                          boxSizing: 'border-box',
+                                          flex: isMobile ? '1 1 calc(50% - 4px)' : 'none'
                                         }}
                                       >
                                         {submittingRevocationId === sub.id ? "REVOKING..." : "REVOKE TO REVIEW"}
@@ -15000,7 +15120,8 @@ function App() {
                                           display: 'flex',
                                           alignItems: 'center',
                                           justifyContent: 'center',
-                                          boxSizing: 'border-box'
+                                          boxSizing: 'border-box',
+                                          flex: isMobile ? '1 1 calc(50% - 4px)' : 'none'
                                         }}
                                       >
                                         {submittingRejectionId === sub.id ? "DELETING..." : "DELETE PERMANENTLY"}
@@ -15084,8 +15205,8 @@ function App() {
                                     {report.details || <em style={{ color: theme.textDim }}>No supporting details provided.</em>}
                                   </div>
 
-                                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderTop: `1px solid ${theme.borderLight}`, paddingTop: '12px' }}>
-                                    <div style={{ display: 'flex', gap: '8px' }}>
+                                  <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', justifyContent: 'space-between', alignItems: isMobile ? 'stretch' : 'center', gap: '8px', borderTop: `1px solid ${theme.borderLight}`, paddingTop: '12px' }}>
+                                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', width: isMobile ? '100%' : 'auto' }}>
                                       {(() => {
                                         const mapRecord = combinedPointsAndLinesData.find(item => String(item.id) === String(report.pointId));
                                         if (!mapRecord || !mapRecord.coordinates) return null;
@@ -15111,8 +15232,10 @@ function App() {
                                               cursor: 'pointer',
                                               display: 'flex',
                                               alignItems: 'center',
+                                              justifyContent: 'center',
                                               gap: '6px',
-                                              boxSizing: 'border-box'
+                                              boxSizing: 'border-box',
+                                              flex: isMobile ? '1 1 calc(50% - 4px)' : 'none'
                                             }}
                                           >
                                             <Eye size={12} />
@@ -15159,8 +15282,10 @@ function App() {
                                             cursor: 'pointer',
                                             display: 'flex',
                                             alignItems: 'center',
+                                            justifyContent: 'center',
                                             gap: '6px',
-                                            boxSizing: 'border-box'
+                                            boxSizing: 'border-box',
+                                            flex: isMobile ? '1 1 calc(50% - 4px)' : 'none'
                                           }}
                                         >
                                           EDIT
@@ -15168,7 +15293,7 @@ function App() {
                                       )}
                                     </div>
 
-                                    <div style={{ display: 'flex', gap: '8px' }}>
+                                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', width: isMobile ? '100%' : 'auto' }}>
                                       <button
                                         disabled={submittingReportActionId !== null}
                                         onClick={async () => {
@@ -15176,54 +15301,56 @@ function App() {
                                           if (!confirmed) return;
                                           await handleReportAction(report.id, 'delete');
                                         }}
-                                  style={{
-                                    background: 'transparent',
-                                    color: isMapDarkMode ? '#ff3333' : '#d32f2f',
-                                    border: isMapDarkMode ? '1px solid #ff3333' : '1.5px solid #d32f2f',
-                                    padding: '0 16px',
-                                    height: '32px',
-                                    borderRadius: '16px',
-                                    fontSize: '9px',
-                                    fontFamily: '"Space Mono", monospace',
-                                    fontWeight: 700,
-                                    cursor: 'pointer',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    boxSizing: 'border-box'
-                                  }}
-                                >
-                                  {submittingReportActionId === report.id ? "DELETING..." : "DELETE REPORT"}
-                                </button>
+                                        style={{
+                                          background: 'transparent',
+                                          color: isMapDarkMode ? '#ff3333' : '#d32f2f',
+                                          border: isMapDarkMode ? '1px solid #ff3333' : '1.5px solid #d32f2f',
+                                          padding: '0 16px',
+                                          height: '32px',
+                                          borderRadius: '16px',
+                                          fontSize: '9px',
+                                          fontFamily: '"Space Mono", monospace',
+                                          fontWeight: 700,
+                                          cursor: 'pointer',
+                                          display: 'flex',
+                                          alignItems: 'center',
+                                          justifyContent: 'center',
+                                          boxSizing: 'border-box',
+                                          flex: isMobile ? '1 1 calc(50% - 4px)' : 'none'
+                                        }}
+                                      >
+                                        {submittingReportActionId === report.id ? "DELETING..." : "DELETE REPORT"}
+                                      </button>
                                 
-                                {report.status === 'pending' && (
-                                  <button
-                                    disabled={submittingReportActionId !== null}
-                                    onClick={async () => {
-                                      await handleReportAction(report.id, 'resolve');
-                                    }}
-                                    style={{
-                                      background: isMapDarkMode ? '#00cc00' : '#000000',
-                                      color: isMapDarkMode ? '#000000' : '#ffffff',
-                                      border: `1.5px solid ${isMapDarkMode ? '#00cc00' : '#000000'}`,
-                                      padding: '0 16px',
-                                      height: '32px',
-                                      borderRadius: '16px',
-                                      fontSize: '9px',
-                                      fontFamily: '"Space Mono", monospace',
-                                      fontWeight: 700,
-                                      cursor: 'pointer',
-                                      display: 'flex',
-                                      alignItems: 'center',
-                                      justifyContent: 'center',
-                                      boxSizing: 'border-box'
-                                    }}
-                                  >
-                                    {submittingReportActionId === report.id ? "RESOLVING..." : "MARK RESOLVED"}
-                                  </button>
-                                )}
-                              </div>
-                            </div>
+                                      {report.status === 'pending' && (
+                                        <button
+                                          disabled={submittingReportActionId !== null}
+                                          onClick={async () => {
+                                            await handleReportAction(report.id, 'resolve');
+                                          }}
+                                          style={{
+                                            background: isMapDarkMode ? '#00cc00' : '#000000',
+                                            color: isMapDarkMode ? '#000000' : '#ffffff',
+                                            border: `1.5px solid ${isMapDarkMode ? '#00cc00' : '#000000'}`,
+                                            padding: '0 16px',
+                                            height: '32px',
+                                            borderRadius: '16px',
+                                            fontSize: '9px',
+                                            fontFamily: '"Space Mono", monospace',
+                                            fontWeight: 700,
+                                            cursor: 'pointer',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
+                                            boxSizing: 'border-box',
+                                            flex: isMobile ? '1 1 calc(50% - 4px)' : 'none'
+                                          }}
+                                        >
+                                          {submittingReportActionId === report.id ? "RESOLVING..." : "MARK RESOLVED"}
+                                        </button>
+                                      )}
+                                    </div>
+                                  </div>
                           </>
                         )}
                       </div>

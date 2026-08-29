@@ -568,6 +568,7 @@ async function startServer() {
         date,
         source,
         socialLink,
+        submitterLink,
         destinations,
         codexParentId,
         timelineLayer,
@@ -585,6 +586,10 @@ async function startServer() {
       }
 
       const submissionId = `user_${Date.now()}`;
+      const effectiveLink = (submitterLink && typeof submitterLink === 'string' && submitterLink.trim()) 
+        ? submitterLink.trim() 
+        : ((socialLink && typeof socialLink === 'string' && socialLink.trim()) ? socialLink.trim() : '');
+
       const submissionData: any = {
         name: name.trim(),
         category: category,
@@ -601,7 +606,9 @@ async function startServer() {
         timelineMotherId: timelineMotherId || '',
         timelineSpouseId: timelineSpouseId || '',
         submitterName: (submitterName && typeof submitterName === 'string') ? submitterName.trim() : '',
-        submitterEmail: (submitterEmail && typeof submitterEmail === 'string') ? submitterEmail.trim() : ''
+        submitterEmail: (submitterEmail && typeof submitterEmail === 'string') ? submitterEmail.trim() : '',
+        submitterLink: effectiveLink,
+        socialLink: effectiveLink
       };
 
       if (coordinates !== undefined && coordinates !== null) {
@@ -613,9 +620,6 @@ async function startServer() {
       }
       if (source && typeof source === 'string' && source.trim()) {
         submissionData.source = source.trim();
-      }
-      if (socialLink && typeof socialLink === 'string' && socialLink.trim()) {
-        submissionData.socialLink = socialLink.trim();
       }
 
       await safeAddDocument('submissions', submissionId, submissionData);

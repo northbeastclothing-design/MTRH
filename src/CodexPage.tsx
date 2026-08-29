@@ -3669,6 +3669,50 @@ export default function CodexPage({
                       </div>
                     )}
 
+                    {/* Intel Contributor */}
+                    {(activeTermNode.submitterName || activeTermNode.submitterLink || activeTermNode.socialLink) && (
+                      <div 
+                        style={{ 
+                          marginTop: '24px', 
+                          borderTop: `1px solid ${theme.borderLight || theme.border}`, 
+                          paddingTop: '16px', 
+                          display: 'flex', 
+                          flexDirection: 'column', 
+                          gap: '6px',
+                          marginBottom: '24px'
+                        }}
+                      >
+                        <div style={{ fontFamily: '"Space Mono", monospace', fontWeight: '700', fontSize: '11px', lineHeight: '22px', textTransform: 'uppercase', color: theme.text }}>
+                          INTEL CONTRIBUTOR:
+                        </div>
+                        <div style={{ fontFamily: '"Space Mono", monospace', fontSize: '10px', color: theme.text }}>
+                          {activeTermNode.submitterName ? (
+                            (activeTermNode.submitterLink || activeTermNode.socialLink) ? (
+                              <a 
+                                href={activeTermNode.submitterLink || activeTermNode.socialLink} 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                style={{ color: '#b6a6ff', textDecoration: 'underline', fontWeight: 'bold' }}
+                              >
+                                {activeTermNode.submitterName}
+                              </a>
+                            ) : (
+                              <strong>{activeTermNode.submitterName}</strong>
+                            )
+                          ) : (
+                            <a 
+                              href={activeTermNode.submitterLink || activeTermNode.socialLink} 
+                              target="_blank" 
+                              rel="noopener noreferrer" 
+                              style={{ color: '#b6a6ff', textDecoration: 'underline', fontWeight: 'bold' }}
+                            >
+                              {activeTermNode.submitterLink || activeTermNode.socialLink}
+                            </a>
+                          )}
+                        </div>
+                      </div>
+                    )}
+
                     {/* Legend explanation for Apocryphal tag */}
                     {isOnlyApocryphal(activeTermNode) && (
                       <div 

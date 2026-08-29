@@ -12,6 +12,11 @@ export interface TimelineItem {
   spouseId?: string; // For spouse relationship tracking
   isPeopleGroup?: boolean;
   subLabel?: string;
+  images?: string[];
+  submitterName?: string;
+  submitterEmail?: string;
+  submitterLink?: string;
+  socialLink?: string;
 }
 
 export const TIMELINE_ITEMS: TimelineItem[] = [
