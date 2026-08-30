@@ -494,6 +494,55 @@ const getFilenameWithNoExtension = (url: string) => {
   return filename.toLowerCase();
 };
 
+const compressImageToDataUrl = (file: File, maxWidth = 1200, maxHeight = 1200, quality = 0.82): Promise<string> => {
+  return new Promise((resolve, reject) => {
+    if (isVideoUrl(file.name) || isPdfUrl(file.name) || isAudioUrl(file.name)) {
+      const reader = new FileReader();
+      reader.onload = () => resolve(reader.result as string);
+      reader.onerror = reject;
+      reader.readAsDataURL(file);
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const img = new Image();
+      img.onload = () => {
+        let width = img.width;
+        let height = img.height;
+
+        if (width > maxWidth || height > maxHeight) {
+          if (width > height) {
+            height = Math.round((height * maxWidth) / width);
+            width = maxWidth;
+          } else {
+            width = Math.round((width * maxHeight) / height);
+            height = maxHeight;
+          }
+        }
+
+        const canvas = document.createElement('canvas');
+        canvas.width = width;
+        canvas.height = height;
+        const ctx = canvas.getContext('2d');
+        if (ctx) {
+          ctx.drawImage(img, 0, 0, width, height);
+          const dataUrl = canvas.toDataURL('image/jpeg', quality);
+          resolve(dataUrl);
+        } else {
+          resolve(e.target?.result as string);
+        }
+      };
+      img.onerror = () => {
+        resolve(e.target?.result as string);
+      };
+      img.src = e.target?.result as string;
+    };
+    reader.onerror = reject;
+    reader.readAsDataURL(file);
+  });
+};
+
 const getCombinedAssets = (images: string[]): CombinedAsset[] => {
   if (!images || images.length === 0) return [];
   
@@ -2832,37 +2881,20 @@ function App() {
 
                   for (const file of files) {
                     try {
-                      const base64Data = await new Promise<string>((resolve, reject) => {
-                        const reader = new FileReader();
-                        reader.onload = () => {
-                          const base64 = reader.result as string;
-                          resolve(base64.split(',')[1] || base64);
-                        };
-                        reader.onerror = () => reject(new Error(`Failed to read file ${file.name}`));
-                        reader.readAsDataURL(file);
-                      });
-
-                      const response = await fetch('/api/upload', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({
-                          filename: file.name,
-                          fileData: base64Data
-                        })
-                      });
-
-                      if (!response.ok) {
-                        throw new Error(`Upload failed for ${file.name} with status: ${response.status}`);
-                      }
-
-                      const data = await response.json();
-                      if (data && data.url) {
-                        uploadedUrls.push(data.url);
+                      if (file.type.startsWith('image/')) {
+                        const dataUrl = await compressImageToDataUrl(file);
+                        uploadedUrls.push(dataUrl);
                       } else {
-                        throw new Error(`Invalid response for ${file.name}`);
+                        const base64Data = await new Promise<string>((resolve, reject) => {
+                          const reader = new FileReader();
+                          reader.onload = () => resolve(reader.result as string);
+                          reader.onerror = reject;
+                          reader.readAsDataURL(file);
+                        });
+                        uploadedUrls.push(base64Data);
                       }
                     } catch (err: any) {
-                      console.error("Upload API Error:", err);
+                      console.error("Upload Processing Error:", err);
                       errors.push(err.message || String(err));
                     }
                   }
@@ -13791,37 +13823,20 @@ function App() {
 
                             for (const file of files) {
                               try {
-                                const base64Data = await new Promise<string>((resolve, reject) => {
-                                  const reader = new FileReader();
-                                  reader.onload = () => {
-                                    const base64 = reader.result as string;
-                                    resolve(base64.split(',')[1] || base64);
-                                  };
-                                  reader.onerror = () => reject(new Error(`Failed to read file ${file.name}`));
-                                  reader.readAsDataURL(file);
-                                });
-
-                                const response = await fetch('/api/upload', {
-                                  method: 'POST',
-                                  headers: { 'Content-Type': 'application/json' },
-                                  body: JSON.stringify({
-                                    filename: file.name,
-                                    fileData: base64Data
-                                  })
-                                });
-
-                                if (!response.ok) {
-                                  throw new Error(`Upload failed for ${file.name} with status: ${response.status}`);
-                                }
-
-                                const data = await response.json();
-                                if (data && data.url) {
-                                  uploadedUrls.push(data.url);
+                                if (file.type.startsWith('image/')) {
+                                  const dataUrl = await compressImageToDataUrl(file);
+                                  uploadedUrls.push(dataUrl);
                                 } else {
-                                  throw new Error(`Invalid response for ${file.name}`);
+                                  const base64Data = await new Promise<string>((resolve, reject) => {
+                                    const reader = new FileReader();
+                                    reader.onload = () => resolve(reader.result as string);
+                                    reader.onerror = reject;
+                                    reader.readAsDataURL(file);
+                                  });
+                                  uploadedUrls.push(base64Data);
                                 }
                               } catch (err: any) {
-                                console.error("Upload API Error:", err);
+                                console.error("Upload Processing Error:", err);
                                 errors.push(err.message || String(err));
                               }
                             }
