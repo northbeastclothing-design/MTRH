@@ -12841,7 +12841,7 @@ function App() {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              zIndex: 9999,
+              zIndex: 99999,
               fontFamily: '"Space Mono", monospace',
               padding: isMobile ? '8px' : '20px'
             }}
@@ -14250,7 +14250,7 @@ function App() {
               display: isModMinimized ? 'none' : 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              zIndex: 9999,
+              zIndex: 99999,
               fontFamily: '"Space Mono", monospace',
               padding: isMobile ? '8px' : '20px'
             }}
