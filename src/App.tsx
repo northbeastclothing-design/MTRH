@@ -4,7 +4,7 @@ import { createPortal } from 'react-dom';
 import { motion, AnimatePresence, animate } from 'motion/react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import { X, Heart, Play, Upload, Plus, Link, MapPin, Lock, Check, Trash2, ShieldAlert, ChevronDown, Shield, Eye, EyeOff, Shuffle, Flag, AlertTriangle, Instagram, ExternalLink, RotateCcw, Menu, Calendar, Share2 } from 'lucide-react';
+import { X, Heart, Play, Upload, Plus, Link, MapPin, Lock, Check, Trash2, ShieldAlert, ChevronDown, Shield, Eye, EyeOff, Shuffle, Flag, AlertTriangle, Instagram, ExternalLink, RotateCcw, Menu, Calendar, Share2, CheckCircle, Edit3 } from 'lucide-react';
 import { handleShare } from './utils/share';
 import { ShareModal } from './ShareModal';
 import { initializeApp } from 'firebase/app';
@@ -2091,6 +2091,60 @@ function App() {
 
   const [activeModTab, setActiveModTab] = useState<'pending' | 'approved' | 'reports' | 'cartography'>(getInitialModTab);
   const [submittingRevocationId, setSubmittingRevocationId] = useState<string | null>(null);
+  const [previewSub, setPreviewSub] = useState<any | null>(null);
+
+  const handlePreviewIntel = useCallback((sub: any) => {
+    if (!sub) return;
+
+    const fullFeature: any = {
+      id: sub.id,
+      name: sub.name || 'Unidentified Intel',
+      description: sub.description || '',
+      coordinates: sub.coordinates || [0, 0],
+      category: sub.category || 'Uncategorized Anomalies',
+      categories: [sub.category || 'Uncategorized Anomalies'],
+      type: 'Point',
+      isSubmitted: true,
+      date: sub.date ? Number(sub.date) : 0,
+      images: sub.images || [],
+      source: sub.source || null,
+      submitterName: sub.submitterName || null,
+      submitterEmail: sub.submitterEmail || null,
+      submitterLink: sub.submitterLink || sub.socialLink || null,
+      socialLink: sub.socialLink || sub.submitterLink || null,
+      destinations: sub.destinations || ['map'],
+      timelineLayer: sub.timelineLayer || null,
+      timelineType: sub.timelineType || null,
+      timelineEnd: sub.timelineEnd || null,
+      timelineFatherId: sub.timelineFatherId || null,
+      timelineMotherId: sub.timelineMotherId || null,
+      timelineSpouseId: sub.timelineSpouseId || null,
+      codexParentId: sub.codexParentId || null
+    };
+
+    const dests = sub.destinations || ['map'];
+
+    if (dests.includes('codex') && !dests.includes('map')) {
+      setCurrentPage('codex');
+      setSelectedCodexNode(fullFeature);
+      setFocusedCodexTermId(sub.id);
+    } else if (dests.includes('timeline') && !dests.includes('map')) {
+      setCurrentPage('timeline');
+      setSelectedTimelineItem(fullFeature);
+    } else {
+      setCurrentPage('map');
+      setSelectedFeature(fullFeature);
+      if (mapRef.current && sub.coordinates && Array.isArray(sub.coordinates) && sub.coordinates.length === 2 && isValidLngLat(sub.coordinates[0], sub.coordinates[1])) {
+        mapRef.current.flyTo({ center: sub.coordinates, zoom: 14, duration: 1200 });
+      }
+    }
+
+    if (isMobile) {
+      setIsMobileDrawerExpanded(true);
+    }
+
+    setIsModMinimized(true);
+  }, [isMobile]);
 
   // Custom Cartography Pins Moderation States
   const [modCartographyPoints, setModCartographyPoints] = useState<any[]>([]);
@@ -3162,6 +3216,260 @@ function App() {
             }}
           >
             {isSavingEdit ? 'SAVING...' : 'SAVE CHANGES'}
+          </button>
+        </div>
+      </div>
+    );
+  };
+
+  const handleApproveSubmission = useCallback(async (docId: string, sub: any) => {
+    setSubmittingApprovalId(docId);
+    setModeratorError(null);
+    try {
+      const authParams = await getModeratorHeadersAndBody({ docId });
+      const response = await fetch('/api/moderate/approve', {
+        method: 'POST',
+        headers: authParams.headers,
+        body: authParams.body
+      });
+      if (!response.ok) {
+        const errData = await response.json();
+        throw new Error(errData.error || `Server status ${response.status}`);
+      }
+    } catch (err: any) {
+      console.warn("Server-side approval failed, falling back to direct Firestore update:", err);
+      try {
+        await updateDoc(doc(db, 'submissions', docId), {
+          status: 'approved'
+        });
+      } catch (fallbackErr: any) {
+        console.error("Firestore approval fallback error:", fallbackErr);
+        setModeratorError(`Moderation Failed: ${fallbackErr.message || "Ensure you are authorized or signed in."}`);
+      }
+    } finally {
+      setSubmittingApprovalId(null);
+      setModeratorReloadTrigger(prev => prev + 1);
+    }
+  }, [getModeratorHeadersAndBody]);
+
+  const renderPreviewModal = (sub: any) => {
+    if (!sub) return null;
+    const categoryColor = layerColors[sub.category] || '#b6a6ff';
+    const hasImages = sub.images && Array.isArray(sub.images) && sub.images.length > 0;
+    const dests = sub.destinations || ['map'];
+
+    return (
+      <div 
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: isMapDarkMode ? '#0a0a0a' : '#ffffff',
+          color: isMapDarkMode ? '#ffffff' : '#000000',
+          zIndex: 500,
+          overflowY: 'auto',
+          padding: isMobile ? '16px 12px' : '24px',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '16px',
+          boxSizing: 'border-box'
+        }}
+      >
+        {/* Header Bar */}
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: `1px solid ${theme.border}`, paddingBottom: '12px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <Eye size={16} color={categoryColor} />
+            <span style={{ fontSize: '11px', fontWeight: 'bold', letterSpacing: '1px', textTransform: 'uppercase' }}>
+              INTEL DOSSIER PREVIEW
+            </span>
+          </div>
+          <button
+            onClick={() => setPreviewSub(null)}
+            style={{
+              background: 'transparent',
+              border: `1px solid ${theme.border}`,
+              color: theme.text,
+              padding: '4px 12px',
+              borderRadius: '14px',
+              fontSize: '10px',
+              fontWeight: 700,
+              cursor: 'pointer',
+              fontFamily: '"Space Mono", monospace'
+            }}
+          >
+            CLOSE PREVIEW
+          </button>
+        </div>
+
+        {/* Category Pill & Destinations */}
+        <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '8px' }}>
+          <span 
+            style={{ 
+              fontSize: '9px', 
+              fontWeight: 'bold', 
+              padding: '2px 8px', 
+              backgroundColor: categoryColor, 
+              color: '#000000',
+              borderRadius: '2px',
+              textTransform: 'uppercase' 
+            }}
+          >
+            {sub.category || 'Uncategorized'}
+          </span>
+          {sub.date ? (
+            <span style={{ fontSize: '10px', fontWeight: 'bold', color: theme.textDim }}>
+              YEAR: {sub.date}
+            </span>
+          ) : null}
+          <div style={{ display: 'flex', gap: '4px', marginLeft: 'auto' }}>
+            {dests.map((d: string) => (
+              <span key={d} style={{ fontSize: '8px', fontWeight: 'bold', border: `1px solid ${theme.borderLight}`, padding: '1px 5px', borderRadius: '2px', textTransform: 'uppercase' }}>
+                {d}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Title */}
+        <h3 style={{ margin: 0, fontSize: isMobile ? '16px' : '18px', fontWeight: 'bold', color: theme.text, fontFamily: '"Space Mono", monospace' }}>
+          {sub.name || 'Unidentified Intel'}
+        </h3>
+
+        {/* Coordinates Banner if available */}
+        {sub.coordinates && Array.isArray(sub.coordinates) && sub.coordinates.length === 2 && isValidLngLat(sub.coordinates[0], sub.coordinates[1]) && (
+          <div style={{ fontSize: '9.5px', color: theme.textDim, fontFamily: '"Space Mono", monospace', background: isMapDarkMode ? 'rgba(255,255,255,0.03)' : 'rgba(0,0,0,0.03)', padding: '6px 10px', borderLeft: `2px solid ${categoryColor}` }}>
+            GEOSPATIAL COORDS: [{sub.coordinates[1]}, {sub.coordinates[0]}]
+          </div>
+        )}
+
+        {/* Media Preview Gallery */}
+        {hasImages && (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', border: `1px solid ${theme.borderLight}`, padding: '10px', background: isMapDarkMode ? 'rgba(255,255,255,0.01)' : 'rgba(0,0,0,0.01)' }}>
+            <span style={{ fontSize: '9.5px', fontWeight: 'bold', color: theme.text, letterSpacing: '0.5px' }}>
+              ATTACHED MEDIA ({sub.images.length})
+            </span>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+              {sub.images.map((imgUrl: string, idx: number) => (
+                <div key={idx} style={{ maxWidth: '160px', maxHeight: '120px', overflow: 'hidden', border: `1px solid ${theme.border}` }}>
+                  {renderMediaPreview(imgUrl)}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Description Text */}
+        <div style={{ borderTop: `1px solid ${theme.borderLight}`, paddingTop: '10px' }}>
+          <span style={{ fontSize: '9.5px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: theme.textDim }}>
+            DOSSIER INTELLIGENCE SUMMARY:
+          </span>
+          <p style={{ margin: 0, fontSize: '11px', lineHeight: '18px', color: theme.text, whiteSpace: 'pre-line', fontFamily: '"Space Mono", monospace' }}>
+            {sub.description || 'No descriptive details provided.'}
+          </p>
+        </div>
+
+        {/* Source Link */}
+        {sub.source && (
+          <div style={{ fontSize: '9.5px', color: theme.textDim, borderTop: `1px dashed ${theme.borderLight}`, paddingTop: '8px' }}>
+            SOURCE DOCUMENTATION: <strong style={{ color: theme.text }}>{sub.source}</strong>
+          </div>
+        )}
+
+        {/* Submitter Attribution */}
+        {(sub.submitterName || sub.submitterEmail || sub.submitterLink || sub.socialLink) && (
+          <div style={{ fontSize: '9.5px', color: theme.textDim, borderTop: `1px dashed ${theme.borderLight}`, paddingTop: '8px' }}>
+            SUBMITTER / CONTRIBUTOR: <strong style={{ color: theme.text }}>{sub.submitterName || 'Anonymous'}</strong>
+            {sub.submitterEmail && <> | <a href={`mailto:${sub.submitterEmail}`} style={{ color: '#b6a6ff', textDecoration: 'underline' }}>{sub.submitterEmail}</a></>}
+            {(sub.submitterLink || sub.socialLink) && <> | <a href={sub.submitterLink || sub.socialLink} target="_blank" rel="noopener noreferrer" style={{ color: '#b6a6ff', textDecoration: 'underline' }}>{sub.submitterLink || sub.socialLink}</a></>}
+          </div>
+        )}
+
+        {/* Bottom Action Row */}
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginTop: 'auto', paddingTop: '16px', borderTop: `1px solid ${theme.border}` }}>
+          {sub.coordinates && Array.isArray(sub.coordinates) && sub.coordinates.length === 2 && isValidLngLat(sub.coordinates[0], sub.coordinates[1]) && (
+            <button
+              onClick={() => {
+                setPreviewSub(null);
+                handlePreviewIntel(sub);
+              }}
+              style={{
+                flex: isMobile ? '1 1 100%' : '1',
+                background: isMapDarkMode ? '#ffffff' : '#000000',
+                color: isMapDarkMode ? '#000000' : '#ffffff',
+                border: 'none',
+                height: '36px',
+                borderRadius: '18px',
+                fontSize: '10px',
+                fontWeight: 700,
+                cursor: 'pointer',
+                fontFamily: '"Space Mono", monospace',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '6px'
+              }}
+            >
+              <Eye size={14} />
+              FLY TO & INSPECT LIVE ON MAP
+            </button>
+          )}
+
+          {sub.status === 'pending' && (
+            <button
+              onClick={async () => {
+                setPreviewSub(null);
+                await handleApproveSubmission(sub.id, sub);
+              }}
+              style={{
+                flex: isMobile ? '1 1 calc(50% - 4px)' : 'none',
+                background: '#00cc00',
+                color: '#ffffff',
+                border: 'none',
+                padding: '0 16px',
+                height: '36px',
+                borderRadius: '18px',
+                fontSize: '10px',
+                fontWeight: 700,
+                cursor: 'pointer',
+                fontFamily: '"Space Mono", monospace',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '6px'
+              }}
+            >
+              <CheckCircle size={14} />
+              APPROVE INTEL
+            </button>
+          )}
+
+          <button
+            onClick={() => {
+              setPreviewSub(null);
+              handleStartEdit(sub);
+            }}
+            style={{
+              flex: isMobile ? '1 1 calc(50% - 4px)' : 'none',
+              background: 'transparent',
+              color: theme.text,
+              border: `1px solid ${theme.border}`,
+              padding: '0 16px',
+              height: '36px',
+              borderRadius: '18px',
+              fontSize: '10px',
+              fontWeight: 700,
+              cursor: 'pointer',
+              fontFamily: '"Space Mono", monospace',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '6px'
+            }}
+          >
+            <Edit3 size={14} />
+            EDIT INTEL
           </button>
         </div>
       </div>
@@ -14275,6 +14583,8 @@ function App() {
                 textAlign: 'left'
               }}
             >
+              {previewSub && renderPreviewModal(previewSub)}
+
               {/* Header */}
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px', borderBottom: `2.5px solid ${theme.border}`, paddingBottom: '12px', marginBottom: '16px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
@@ -14706,22 +15016,7 @@ function App() {
                                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', width: isMobile ? '100%' : 'auto' }}>
                                       {sub.coordinates && Array.isArray(sub.coordinates) && sub.coordinates.length === 2 && isValidLngLat(sub.coordinates[0], sub.coordinates[1]) && (
                                         <button
-                                          onClick={() => {
-                                            if (mapRef.current) {
-                                              const mockFeature = {
-                                                id: sub.id,
-                                                name: sub.name,
-                                                description: sub.description,
-                                                coordinates: sub.coordinates,
-                                                categories: [sub.category],
-                                                type: 'Point',
-                                                isSubmitted: true
-                                              };
-                                              setSelectedFeature(mockFeature);
-                                              mapRef.current.flyTo({ center: sub.coordinates, zoom: 14 });
-                                              setIsModMinimized(true);
-                                            }
-                                          }}
+                                          onClick={() => setPreviewSub(sub)}
                                           style={{
                                             background: 'transparent',
                                             color: theme.text,
@@ -15034,20 +15329,8 @@ function App() {
                                       {sub.coordinates && Array.isArray(sub.coordinates) && sub.coordinates.length === 2 && isValidLngLat(sub.coordinates[0], sub.coordinates[1]) && (
                                         <button
                                           onClick={() => {
-                                            if (mapRef.current) {
-                                              const mockFeature = {
-                                                id: sub.id,
-                                                name: sub.name,
-                                                description: sub.description,
-                                                coordinates: sub.coordinates,
-                                                categories: [sub.category],
-                                                type: 'Point',
-                                                isSubmitted: true
-                                              };
-                                              setSelectedFeature(mockFeature);
-                                              mapRef.current.flyTo({ center: sub.coordinates, zoom: 14 });
-                                              setIsModMinimized(true);
-                                            }
+                                            setPreviewSub(sub);
+                                            setIsModMinimized(true);
                                           }}
                                           style={{
                                             background: 'transparent',
@@ -15286,13 +15569,7 @@ function App() {
                                         if (!mapRecord || !mapRecord.coordinates) return null;
                                         return (
                                           <button
-                                            onClick={() => {
-                                              if (mapRef.current) {
-                                                setSelectedFeature(mapRecord);
-                                                mapRef.current.flyTo({ center: mapRecord.coordinates, zoom: 14 });
-                                                setIsModMinimized(true);
-                                              }
-                                            }}
+                                            onClick={() => setPreviewSub(mapRecord)}
                                             style={{
                                               background: 'transparent',
                                               color: theme.text,
