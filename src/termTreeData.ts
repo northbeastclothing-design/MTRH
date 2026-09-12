@@ -8277,23 +8277,6 @@ const chunk_1: any[] = [  {
     images: ['https://upload.wikimedia.org/wikipedia/commons/b/bd/Washington_National_%281944%29.jpg', 'https://upload.wikimedia.org/wikipedia/commons/1/13/1952_UFO_Flap_-_Air_Force_frequency_graph_of_UFO_reports.png'],
     sources: ['MUFON (Mutual UFO Network) Database', 'Project Blue Book Archives']
   },  {
-    id: 'anomaly-UFO-1011',
-    parentId: 'ufo-sightings-br',
-    relatedIds: ['ufo-type-cigar'],
-    name: 'Newark, New Jersey (Cylinder Shaped UFO)',
-    description: '7/2018 - This long cylinder shaped object was seen over Newark',
-    layer: 'UFOs - Sightings',
-    mapFeatureId: 'anomaly-UFO-1011',
-    sources: ['MUFON (Mutual UFO Network) Database', 'Project Blue Book Archives']
-  },  {
-    id: 'anomaly-UFO-1012',
-    parentId: 'ufo-sightings-br',
-    name: 'Jersey City, New Jersey (Blue UFO)',
-    description: '',
-    layer: 'UFOs - Sightings',
-    mapFeatureId: 'anomaly-UFO-1012',
-    sources: ['MUFON (Mutual UFO Network) Database', 'Project Blue Book Archives']
-  },  {
     id: 'roswell-incident',
     parentId: 'ufo-sightings-br',
     name: 'Roswell Crash (1947)',
@@ -25549,8 +25532,7 @@ const chunk_historic_extensions: any[] = [
     name: 'Cigar-Shaped Cylinders',
     description: `Elongated, cylindrical metallic craft, often reported as giant mother ships launching smaller circular disc craft.`,
     layer: 'UFOs - Sightings',
-    sources: ['MUFON Database', 'Project Blue Book Records'],
-    relatedIds: ['anomaly-UFO-1011']
+    sources: ['MUFON Database', 'Project Blue Book Records']
   },
   {
     id: 'ufo-type-triangle',

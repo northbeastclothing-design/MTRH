@@ -695,6 +695,56 @@ const cleanAndProxyImageUrl = (url: any) => {
   return trimmedUrl;
 };
 
+const normalizeCategoryName = (rawCategory: string, displayDescription: string = '', safeName: string = ''): string => {
+  const lowerCat = rawCategory.toLowerCase();
+  let normalizedCategory = rawCategory;
+  if (lowerCat.includes('cave system') || lowerCat === 'cave systems') normalizedCategory = 'Cave Systems';
+  else if (lowerCat.includes('alien abduction') || lowerCat.includes('abduction')) normalizedCategory = 'Alien Abductions';
+  else if (lowerCat.includes('cattle mutilation') || lowerCat.includes('livestock mutilation') || lowerCat.includes('mutilation')) normalizedCategory = 'Cattle Mutilations';
+  else if (lowerCat.includes('enochian') || lowerCat.includes('watcher') || lowerCat.includes('angel') || lowerCat === 'enochian sites') normalizedCategory = 'Enochian Sites';
+  else if (lowerCat.includes('bigfoot') || lowerCat.includes('sasquatch')) normalizedCategory = 'Bigfoot Sightings';
+  else if (lowerCat.includes('giant') || lowerCat.includes('nephilim') || lowerCat.includes('giants')) normalizedCategory = 'Giants & Nephilim';
+  else if (lowerCat.includes('brazilian') || lowerCat === 'brazilian ufo archives' || lowerCat.includes('brazillian')) normalizedCategory = 'UFOs - Brazillian Archives';
+  else if (lowerCat.includes('war.gov') || lowerCat.includes('aaro') || lowerCat.includes('official release') || lowerCat.includes('declassified')) normalizedCategory = 'UFOs - War.gov';
+  else if (lowerCat.includes('ufo') || lowerCat.includes('u.f.o') || lowerCat.includes('uap')) normalizedCategory = 'UFOs - Sightings';
+  else if (lowerCat.includes('ley') || lowerCat.includes('ley-line') || lowerCat === 'ley lines') normalizedCategory = 'Ley Lines';
+  else if (lowerCat.includes('cryptid')) normalizedCategory = 'Cryptid Sightings';
+  else if (lowerCat.includes('cern') || lowerCat.includes('hadron') || lowerCat.includes('collider') || lowerCat.includes('accelerator')) normalizedCategory = 'Particle Accelerators';
+  else if ((lowerCat.includes('stargate') || lowerCat.includes('portal')) && !lowerCat.includes('underworld') && !lowerCat.includes('entrance')) normalizedCategory = 'Portals / Stargates';
+  else if (lowerCat.includes('entrance') || lowerCat.includes('underworld')) normalizedCategory = 'Underworld Entrances';
+  else if (lowerCat.includes('ancient people') || lowerCat.includes('people group')) normalizedCategory = 'Ancient People Groups';
+  else if (lowerCat.includes('ancient ruins')) normalizedCategory = 'Archaeological Finds';
+  else if (lowerCat.includes('ancient') || lowerCat.includes('text')) normalizedCategory = 'Ancient Texts';
+  else if (lowerCat.includes('burial') || lowerCat.includes('mound')) normalizedCategory = 'Burial Mounds';
+  else if (lowerCat.includes('cave') || lowerCat.includes('drawing')) normalizedCategory = 'Rock Art & Cave Paintings';
+  else if (lowerCat.includes('megaliths / dolmans / petroglyphs / geoglyphs')) {
+    const descLower = displayDescription.toLowerCase();
+    const nameLower = safeName.toLowerCase();
+    if (descLower.includes('petroglyph') || descLower.includes('rock art') || nameLower.includes('rock art') || nameLower.includes('petroglyph') || descLower.includes('cave painting') || descLower.includes('cave art')) {
+      normalizedCategory = 'Rock Art & Cave Paintings';
+    } else {
+      normalizedCategory = 'Megaliths / Structures';
+    }
+  }
+  else if (lowerCat.includes('petroglyph') || lowerCat.includes('rock art')) normalizedCategory = 'Rock Art & Cave Paintings';
+  else if (lowerCat.includes('geoglyph') || lowerCat.includes('earthwork')) normalizedCategory = 'Megaliths / Structures';
+  else if (lowerCat.includes('crop') || lowerCat.includes('circle')) normalizedCategory = 'Crop Circles';
+  else if (lowerCat.includes('megalith')) normalizedCategory = 'Megaliths / Structures';
+  else if (lowerCat.includes('dumb') || lowerCat.includes('d.u.m.b')) normalizedCategory = "D.U.M.B.'s";
+  else if (lowerCat.includes('ghost') || lowerCat.includes('haunt')) normalizedCategory = 'Ghosts & Hauntings';
+  else if (lowerCat.includes('national park') || lowerCat.includes('reserve')) normalizedCategory = 'National Parks & Reserves';
+  else if (lowerCat.includes('missing 411') || lowerCat === 'missing 411') normalizedCategory = 'Missing 411';
+  else if (lowerCat.includes('blurred')) normalizedCategory = 'Blurred on Google Maps';
+  else if (lowerCat.includes('meteor') || lowerCat.includes('crater') || lowerCat.includes('impact structure')) normalizedCategory = 'Meteor Impact Craters';
+  else if (lowerCat.includes('archaeological') || lowerCat.includes('archaeology')) normalizedCategory = 'Archaeological Finds';
+  else if (lowerCat.includes('biblical find') || lowerCat.includes('biblical discover') || lowerCat === 'biblical finds' || lowerCat === 'biblical discoveries') normalizedCategory = 'Biblical Discoveries';
+  else if (lowerCat.includes('government program') || lowerCat.includes('secret government') || lowerCat.includes('classified program') || lowerCat.includes('government conspiracy') || lowerCat.includes('conspiracy')) normalizedCategory = 'Government Conspiracies';
+  else if (lowerCat.includes('old world structure') || lowerCat.includes('castle') || lowerCat === 'old world structures') normalizedCategory = 'Old World Structures';
+  else if (lowerCat.includes('alchemy') || lowerCat.includes('occult') || lowerCat.includes('hermeticism') || lowerCat.includes('thelema')) normalizedCategory = 'The Occult';
+
+  return normalizedCategory;
+};
+
 const processIncomingRecord = (item: any, index: number) => {
   const safeId = item.id || `rec-id-${index}-${Date.now()}`;
   
@@ -740,51 +790,7 @@ const processIncomingRecord = (item: any, index: number) => {
   });
 
   const displayDescription = safeDescription.trim() || "No further diagnostic descriptive intelligence available in active log sheets.";
-  const lowerCat = rawCategory.toLowerCase();
-  let normalizedCategory = rawCategory;
-  if (lowerCat.includes('cave system') || lowerCat === 'cave systems') normalizedCategory = 'Cave Systems';
-  else if (lowerCat.includes('alien abduction') || lowerCat.includes('abduction')) normalizedCategory = 'Alien Abductions';
-  else if (lowerCat.includes('cattle mutilation') || lowerCat.includes('livestock mutilation') || lowerCat.includes('mutilation')) normalizedCategory = 'Cattle Mutilations';
-  else if (lowerCat.includes('enochian') || lowerCat.includes('watcher') || lowerCat.includes('angel') || lowerCat === 'enochian sites') normalizedCategory = 'Enochian Sites';
-  else if (lowerCat.includes('bigfoot') || lowerCat.includes('sasquatch')) normalizedCategory = 'Bigfoot Sightings';
-  else if (lowerCat.includes('giant') || lowerCat.includes('nephilim') || lowerCat.includes('giants')) normalizedCategory = 'Giants & Nephilim';
-  else if (lowerCat.includes('brazilian') || lowerCat === 'brazilian ufo archives' || lowerCat.includes('brazillian')) normalizedCategory = 'UFOs - Brazillian Archives';
-  else if (lowerCat.includes('war.gov') || lowerCat.includes('aaro') || lowerCat.includes('official release') || lowerCat.includes('declassified')) normalizedCategory = 'UFOs - War.gov';
-  else if (lowerCat.includes('ufo') || lowerCat.includes('uap')) normalizedCategory = 'UFOs - Sightings';
-  else if (lowerCat.includes('ley') || lowerCat.includes('ley-line') || lowerCat === 'ley lines') normalizedCategory = 'Ley Lines';
-  else if (lowerCat.includes('cryptid')) normalizedCategory = 'Cryptid Sightings';
-  else if (lowerCat.includes('cern') || lowerCat.includes('hadron') || lowerCat.includes('collider') || lowerCat.includes('accelerator')) normalizedCategory = 'Particle Accelerators';
-  else if ((lowerCat.includes('stargate') || lowerCat.includes('portal')) && !lowerCat.includes('underworld') && !lowerCat.includes('entrance')) normalizedCategory = 'Portals / Stargates';
-  else if (lowerCat.includes('entrance') || lowerCat.includes('underworld')) normalizedCategory = 'Underworld Entrances';
-  else if (lowerCat.includes('ancient people') || lowerCat.includes('people group')) normalizedCategory = 'Ancient People Groups';
-  else if (lowerCat.includes('ancient ruins')) normalizedCategory = 'Archaeological Finds';
-  else if (lowerCat.includes('ancient') || lowerCat.includes('text')) normalizedCategory = 'Ancient Texts';
-  else if (lowerCat.includes('burial') || lowerCat.includes('mound')) normalizedCategory = 'Burial Mounds';
-  else if (lowerCat.includes('cave') || lowerCat.includes('drawing')) normalizedCategory = 'Rock Art & Cave Paintings';
-  else if (lowerCat.includes('megaliths / dolmans / petroglyphs / geoglyphs')) {
-    const descLower = displayDescription.toLowerCase();
-    const nameLower = safeName.toLowerCase();
-    if (descLower.includes('petroglyph') || descLower.includes('rock art') || nameLower.includes('rock art') || nameLower.includes('petroglyph') || descLower.includes('cave painting') || descLower.includes('cave art')) {
-      normalizedCategory = 'Rock Art & Cave Paintings';
-    } else {
-      normalizedCategory = 'Megaliths / Structures';
-    }
-  }
-  else if (lowerCat.includes('petroglyph') || lowerCat.includes('rock art')) normalizedCategory = 'Rock Art & Cave Paintings';
-  else if (lowerCat.includes('geoglyph') || lowerCat.includes('earthwork')) normalizedCategory = 'Megaliths / Structures';
-  else if (lowerCat.includes('crop') || lowerCat.includes('circle')) normalizedCategory = 'Crop Circles';
-  else if (lowerCat.includes('megalith')) normalizedCategory = 'Megaliths / Structures';
-  else if (lowerCat.includes('dumb') || lowerCat.includes('d.u.m.b')) normalizedCategory = 'D.U.M.B.\'s';
-  else if (lowerCat.includes('ghost') || lowerCat.includes('haunt')) normalizedCategory = 'Ghosts & Hauntings';
-  else if (lowerCat.includes('national park') || lowerCat.includes('reserve')) normalizedCategory = 'National Parks & Reserves';
-  else if (lowerCat.includes('missing 411') || lowerCat === 'missing 411') normalizedCategory = 'Missing 411';
-  else if (lowerCat.includes('blurred')) normalizedCategory = 'Blurred on Google Maps';
-  else if (lowerCat.includes('meteor') || lowerCat.includes('crater') || lowerCat.includes('impact structure')) normalizedCategory = 'Meteor Impact Craters';
-  else if (lowerCat.includes('archaeological') || lowerCat.includes('archaeology')) normalizedCategory = 'Archaeological Finds';
-  else if (lowerCat.includes('biblical find') || lowerCat.includes('biblical discover') || lowerCat === 'biblical finds' || lowerCat === 'biblical discoveries') normalizedCategory = 'Biblical Discoveries';
-  else if (lowerCat.includes('government program') || lowerCat.includes('secret government') || lowerCat.includes('classified program') || lowerCat.includes('government conspiracy') || lowerCat.includes('conspiracy')) normalizedCategory = 'Government Conspiracies';
-  else if (lowerCat.includes('old world structure') || lowerCat.includes('castle') || lowerCat === 'old world structures') normalizedCategory = 'Old World Structures';
-  else if (lowerCat.includes('alchemy') || lowerCat.includes('occult') || lowerCat.includes('hermeticism') || lowerCat.includes('thelema')) normalizedCategory = 'The Occult';
+  const normalizedCategory = normalizeCategoryName(rawCategory, displayDescription, safeName);
 
   // Smart imagery injection for map points lacking media (megaliths, underworld entrances, national parks, mounds)
   // ONLY use high-quality location-specific historical/documentary assets for actual landmarks.
@@ -877,7 +883,7 @@ const processIncomingRecord = (item: any, index: number) => {
 
   const tagsSet = new Set<string>();
   if (Array.isArray(item.categories)) {
-    item.categories.forEach((cat: string) => tagsSet.add(cat));
+    item.categories.forEach((cat: string) => tagsSet.add(normalizeCategoryName(cat, displayDescription, safeName)));
   } else {
     tagsSet.add(normalizedCategory);
   }

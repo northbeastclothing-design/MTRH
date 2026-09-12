@@ -28461,40 +28461,7 @@
       "Cryptid Sightings"
     ]
   },
-  {
-    "id": "anomaly-UFO-1011",
-    "name": "Newark, New Jersey (Cylinder Shaped UFO)",
-    "category": "UFOs - Sightings",
-    "type": "Point",
-    "coordinates": {
-      "lng": -74.1693525,
-      "lat": 40.7327953
-    },
-    "date": 2018,
-    "description": "7/2018 - This long cylinder shaped object was seen over Newark",
-    "source": "",
-    "images": [],
-    "categories": [
-      "U.F.O. Sightings"
-    ]
-  },
-  {
-    "id": "anomaly-UFO-1012",
-    "name": "Jersey City, New Jersey (Blue UFO)",
-    "category": "UFOs - Sightings",
-    "type": "Point",
-    "coordinates": {
-      "lng": -74.0584054,
-      "lat": 40.6872753
-    },
-    "date": null,
-    "description": "",
-    "source": "",
-    "images": [],
-    "categories": [
-      "U.F.O. Sightings"
-    ]
-  },
+
   {
     "id": "anomaly-Cryptid-Sightings-20",
     "name": "Loch Ness Monster Sighting",
