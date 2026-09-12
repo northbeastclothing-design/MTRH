@@ -317,20 +317,23 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     name: "Buache’s Physical Planisphere",
     year: "1753 AD",
     description: "Philippe Buache's revolutionary physical planisphere depicting a central ice-free Antarctic ocean basin, subterranean water channels, and mountain chains linking the continents under early speculative physical geology.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Buache1753Map.jpg/1280px-Buache1753Map.jpg",
-    aspectRatio: 1.3,
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Buache1753Map.jpg/1920px-Buache1753Map.jpg",
+    aspectRatio: 1.4617,
     pinColor: '#59DCB7',
-    era: '18th-19th'
+    era: '18th-19th',
+    highResUrl: "https://upload.wikimedia.org/wikipedia/commons/b/b3/Buache1753Map.jpg",
+    highResWidth: 2811
   },
   {
     id: 'middleton1892',
     name: "Middleton’s Pioneer Map of the World",
     year: "c. 1892 AD",
     description: "A famous 19th-century flat-earth planar cartography chart by Christopher Middleton depicting the world as an immovable plane, featuring ancient post-Diluvian migrations, biblical firmament circles, and polar projection lines.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Middletons_pioneer_map_of_the_world%2C_%28as_a%3F%29_plane_and_immoveable_%288347346144%29.jpg/1280px-Middletons_pioneer_map_of_the_world%2C_%28as_a%3F%29_plane_and_immoveable_%288347346144%29.jpg",
-    aspectRatio: 1.4,
+    url: "https://upload.wikimedia.org/wikipedia/commons/1/14/Middletons_pioneer_map_of_the_world%2C_%28as_a%3F%29_plane_and_immoveable_%288347346144%29.jpg",
+    aspectRatio: 1.0582,
     pinColor: '#C0F06E',
-    era: '18th-19th'
+    era: '18th-19th',
+    disableResolutionUpgrade: true
   },
   {
     id: 'gleason',
