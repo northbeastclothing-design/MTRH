@@ -3286,9 +3286,9 @@ function App() {
         {/* Header Bar */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: `1px solid ${theme.border}`, paddingBottom: '12px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <Eye size={16} color={categoryColor} />
-            <span style={{ fontSize: '11px', fontWeight: 'bold', letterSpacing: '1px', textTransform: 'uppercase' }}>
-              INTEL DOSSIER PREVIEW
+            <Eye size={18} color={categoryColor} />
+            <span style={{ fontSize: '15px', fontWeight: 'bold', letterSpacing: '0.2px' }}>
+              Intel Dossier Preview
             </span>
           </div>
           <button
@@ -3313,25 +3313,24 @@ function App() {
         <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '8px' }}>
           <span 
             style={{ 
-              fontSize: '9px', 
+              fontSize: '9.5px', 
               fontWeight: 'bold', 
               padding: '2px 8px', 
               backgroundColor: categoryColor, 
               color: '#000000',
-              borderRadius: '2px',
-              textTransform: 'uppercase' 
+              borderRadius: '2px'
             }}
           >
             {sub.category || 'Uncategorized'}
           </span>
           {sub.date ? (
             <span style={{ fontSize: '10px', fontWeight: 'bold', color: theme.textDim }}>
-              YEAR: {sub.date}
+              Year: {sub.date}
             </span>
           ) : null}
           <div style={{ display: 'flex', gap: '4px', marginLeft: 'auto' }}>
             {dests.map((d: string) => (
-              <span key={d} style={{ fontSize: '8px', fontWeight: 'bold', border: `1px solid ${theme.borderLight}`, padding: '1px 5px', borderRadius: '2px', textTransform: 'uppercase' }}>
+              <span key={d} style={{ fontSize: '8.5px', fontWeight: 'bold', border: `1px solid ${theme.borderLight}`, padding: '1px 5px', borderRadius: '2px' }}>
                 {d}
               </span>
             ))}
@@ -3345,16 +3344,16 @@ function App() {
 
         {/* Coordinates Banner if available */}
         {sub.coordinates && Array.isArray(sub.coordinates) && sub.coordinates.length === 2 && isValidLngLat(sub.coordinates[0], sub.coordinates[1]) && (
-          <div style={{ fontSize: '9.5px', color: theme.textDim, fontFamily: '"Space Mono", monospace', background: isMapDarkMode ? 'rgba(255,255,255,0.03)' : 'rgba(0,0,0,0.03)', padding: '6px 10px', borderLeft: `2px solid ${categoryColor}` }}>
-            GEOSPATIAL COORDS: [{sub.coordinates[1]}, {sub.coordinates[0]}]
+          <div style={{ fontSize: '10px', color: theme.textDim, fontFamily: '"Space Mono", monospace', background: isMapDarkMode ? 'rgba(255,255,255,0.03)' : 'rgba(0,0,0,0.03)', padding: '6px 10px', borderLeft: `2px solid ${categoryColor}` }}>
+            Geospatial coords: [{sub.coordinates[1]}, {sub.coordinates[0]}]
           </div>
         )}
 
         {/* Media Preview Gallery */}
         {hasImages && (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', border: `1px solid ${theme.borderLight}`, padding: '10px', background: isMapDarkMode ? 'rgba(255,255,255,0.01)' : 'rgba(0,0,0,0.01)' }}>
-            <span style={{ fontSize: '9.5px', fontWeight: 'bold', color: theme.text, letterSpacing: '0.5px' }}>
-              ATTACHED MEDIA ({sub.images.length})
+            <span style={{ fontSize: '10.5px', fontWeight: 'bold', color: theme.text, letterSpacing: '0.2px' }}>
+              Attached media ({sub.images.length})
             </span>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
               {sub.images.map((imgUrl: string, idx: number) => (
@@ -3368,25 +3367,25 @@ function App() {
 
         {/* Description Text */}
         <div style={{ borderTop: `1px solid ${theme.borderLight}`, paddingTop: '10px' }}>
-          <span style={{ fontSize: '9.5px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: theme.textDim }}>
-            DOSSIER INTELLIGENCE SUMMARY:
+          <span style={{ fontSize: '10.5px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: theme.textDim }}>
+            Dossier intelligence summary:
           </span>
-          <p style={{ margin: 0, fontSize: '11px', lineHeight: '18px', color: theme.text, whiteSpace: 'pre-line', fontFamily: '"Space Mono", monospace' }}>
+          <p style={{ margin: 0, fontSize: '11.5px', lineHeight: '18px', color: theme.text, whiteSpace: 'pre-line', fontFamily: '"Space Mono", monospace' }}>
             {sub.description || 'No descriptive details provided.'}
           </p>
         </div>
 
         {/* Source Link */}
         {sub.source && (
-          <div style={{ fontSize: '9.5px', color: theme.textDim, borderTop: `1px dashed ${theme.borderLight}`, paddingTop: '8px' }}>
-            SOURCE DOCUMENTATION: <strong style={{ color: theme.text }}>{sub.source}</strong>
+          <div style={{ fontSize: '10px', color: theme.textDim, borderTop: `1px dashed ${theme.borderLight}`, paddingTop: '8px' }}>
+            Source documentation: <strong style={{ color: theme.text }}>{sub.source}</strong>
           </div>
         )}
 
         {/* Submitter Attribution */}
         {(sub.submitterName || sub.submitterEmail || sub.submitterLink || sub.socialLink) && (
-          <div style={{ fontSize: '9.5px', color: theme.textDim, borderTop: `1px dashed ${theme.borderLight}`, paddingTop: '8px' }}>
-            SUBMITTER / CONTRIBUTOR: <strong style={{ color: theme.text }}>{sub.submitterName || 'Anonymous'}</strong>
+          <div style={{ fontSize: '10px', color: theme.textDim, borderTop: `1px dashed ${theme.borderLight}`, paddingTop: '8px' }}>
+            Submitter / Contributor: <strong style={{ color: theme.text }}>{sub.submitterName || 'Anonymous'}</strong>
             {sub.submitterEmail && <> | <a href={`mailto:${sub.submitterEmail}`} style={{ color: '#b6a6ff', textDecoration: 'underline' }}>{sub.submitterEmail}</a></>}
             {(sub.submitterLink || sub.socialLink) && <> | <a href={sub.submitterLink || sub.socialLink} target="_blank" rel="noopener noreferrer" style={{ color: '#b6a6ff', textDecoration: 'underline' }}>{sub.submitterLink || sub.socialLink}</a></>}
           </div>
@@ -14579,7 +14578,7 @@ function App() {
                 border: `1.5px solid ${theme.border}`,
                 padding: isMobile ? '16px 12px' : '28px',
                 width: '100%',
-                maxWidth: '720px',
+                maxWidth: '860px',
                 maxHeight: isMobile ? '94vh' : '85vh',
                 overflowY: 'auto',
                 display: 'flex',
@@ -14593,32 +14592,13 @@ function App() {
 
               {/* Header */}
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px', borderBottom: `2.5px solid ${theme.border}`, paddingBottom: '12px', marginBottom: '16px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <Shield size={14} color={isMapDarkMode ? '#ffcc00' : '#000000'} />
-                  <span style={{ fontWeight: 700, fontSize: isMobile ? '10px' : '11px', letterSpacing: '0.5px' }}>MTRH // DECISIONAL MODERATION DESK</span>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                  <Shield size={18} color={isMapDarkMode ? '#ffcc00' : '#000000'} />
+                  <span style={{ fontWeight: 700, fontSize: isMobile ? '13px' : '16px', letterSpacing: '0.2px' }}>MTRH Decisional Moderation Desk</span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                  {isModeratorAuthenticated && (
-                    <button 
-                      onClick={() => setIsModMinimized(true)} 
-                      title="Minimize modal to inspect underlay map"
-                      style={{ 
-                        background: 'transparent', 
-                        border: '1px solid currentColor', 
-                        borderRadius: '2px',
-                        color: isMapDarkMode ? theme.textDim : '#000000', 
-                        fontSize: '9px',
-                        fontWeight: 'bold',
-                        cursor: 'pointer', 
-                        padding: '2px 8px', 
-                        fontFamily: '"Space Mono", monospace' 
-                      }}
-                    >
-                      {isMobile ? "MINIMIZE" : "MINIMIZE DESK"}
-                    </button>
-                  )}
                   <button onClick={() => setIsModeratorOpen(false)} style={{ background: 'transparent', border: 'none', color: theme.text, cursor: 'pointer', padding: 0, display: 'flex', alignItems: 'center' }}>
-                    <X size={16} />
+                    <X size={18} />
                   </button>
                 </div>
               </div>
@@ -14627,8 +14607,8 @@ function App() {
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', alignItems: 'center', justifyContent: 'center', padding: '36px 0' }}>
                   <ShieldAlert size={48} strokeWidth={1.5} color={isMapDarkMode ? '#ffcc00' : '#000000'} />
                   <div style={{ textAlign: 'center' }}>
-                    <h4 style={{ fontSize: '11px', fontWeight: 'bold', marginBottom: '6px', letterSpacing: '1px' }}>ADMIN SECURITY GATE SECUREMTRH_1</h4>
-                    <p style={{ fontSize: '10px', color: isMapDarkMode ? theme.textDim : '#000000', fontWeight: isMapDarkMode ? 'normal' : '500', margin: 0, width: '360px', lineHeight: '18px' }}>Authenticating under the owner account jhuffman710@gmail.com grants full write authority over map submissions.</p>
+                    <h4 style={{ fontSize: '15px', fontWeight: 'bold', marginBottom: '6px', letterSpacing: '0.2px' }}>Admin Security Gate</h4>
+                    <p style={{ fontSize: '11px', color: isMapDarkMode ? theme.textDim : '#000000', fontWeight: isMapDarkMode ? 'normal' : '500', margin: 0, width: '360px', lineHeight: '18px' }}>Authenticating under the owner account jhuffman710@gmail.com grants full write authority over map submissions.</p>
                   </div>
 
                   <button
@@ -14665,7 +14645,7 @@ function App() {
 
                   <div style={{ width: '100%', display: 'flex', alignItems: 'center', gap: '12px', margin: '8px 0', maxWidth: '300px' }}>
                     <div style={{ flex: 1, height: '1px', background: theme.borderLight }} />
-                    <span style={{ fontSize: '9px', color: isMapDarkMode ? theme.textDim : '#000000', fontWeight: 'bold' }}>OR SECRETS BYPASS</span>
+                    <span style={{ fontSize: '10px', color: isMapDarkMode ? theme.textDim : '#000000', fontWeight: 'bold' }}>Or Secret Passcode Bypass</span>
                     <div style={{ flex: 1, height: '1px', background: theme.borderLight }} />
                   </div>
 
@@ -14750,8 +14730,8 @@ function App() {
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px', background: isMapDarkMode ? '#141414' : '#f8f8f8', padding: '10px 14px', border: `1px solid ${theme.border}` }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
                       <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#ffcc00', flexShrink: 0 }} />
-                      <span style={{ fontSize: '10px', fontWeight: 'bold', wordBreak: 'break-word' }}>
-                        ACTIVE MOD DESK SESSION: {currentUser?.email || "Local Bypass Override Profile"}
+                      <span style={{ fontSize: '11px', fontWeight: 600, wordBreak: 'break-word' }}>
+                        Active Mod Desk Session: {currentUser?.email || "Local Bypass Override Profile"}
                       </span>
                     </div>
                     <button 
@@ -14788,11 +14768,10 @@ function App() {
                     className="no-scrollbar"
                     style={{ 
                       display: 'flex', 
+                      flexWrap: 'wrap',
                       borderBottom: `1px solid ${theme.borderLight}`, 
-                      gap: '4px', 
-                      marginBottom: '8px',
-                      overflowX: 'auto',
-                      whiteSpace: 'nowrap',
+                      gap: '6px', 
+                      marginBottom: '12px',
                       width: '100%',
                       paddingBottom: '2px'
                     }}
@@ -14800,9 +14779,9 @@ function App() {
                     <button
                       onClick={() => setActiveModTab('pending')}
                       style={{
-                        padding: '10px 14px',
-                        fontSize: '10px',
-                        fontWeight: 'bold',
+                        padding: '8px 14px',
+                        fontSize: '10.5px',
+                        fontWeight: 700,
                         fontFamily: '"Space Mono", monospace',
                         background: activeModTab === 'pending' ? (isMapDarkMode ? 'rgba(255, 204, 0, 0.1)' : 'rgba(0,0,0,0.05)') : 'transparent',
                         color: activeModTab === 'pending' ? (isMapDarkMode ? '#ffcc00' : '#000000') : (isMapDarkMode ? '#999999' : '#666666'),
@@ -14818,9 +14797,9 @@ function App() {
                     <button
                       onClick={() => setActiveModTab('approved')}
                       style={{
-                        padding: '10px 14px',
-                        fontSize: '10px',
-                        fontWeight: 'bold',
+                        padding: '8px 14px',
+                        fontSize: '10.5px',
+                        fontWeight: 700,
                         fontFamily: '"Space Mono", monospace',
                         background: activeModTab === 'approved' ? (isMapDarkMode ? 'rgba(255, 204, 0, 0.1)' : 'rgba(0,0,0,0.05)') : 'transparent',
                         color: activeModTab === 'approved' ? (isMapDarkMode ? '#ffcc00' : '#000000') : (isMapDarkMode ? '#999999' : '#666666'),
@@ -14836,9 +14815,9 @@ function App() {
                     <button
                       onClick={() => setActiveModTab('reports')}
                       style={{
-                        padding: '10px 14px',
-                        fontSize: '10px',
-                        fontWeight: 'bold',
+                        padding: '8px 14px',
+                        fontSize: '10.5px',
+                        fontWeight: 700,
                         fontFamily: '"Space Mono", monospace',
                         background: activeModTab === 'reports' ? (isMapDarkMode ? 'rgba(255, 204, 0, 0.1)' : 'rgba(0,0,0,0.05)') : 'transparent',
                         color: activeModTab === 'reports' ? (isMapDarkMode ? '#ffcc00' : '#000000') : (isMapDarkMode ? '#999999' : '#666666'),
@@ -14854,9 +14833,9 @@ function App() {
                     <button
                       onClick={() => setActiveModTab('cartography')}
                       style={{
-                        padding: '10px 14px',
-                        fontSize: '10px',
-                        fontWeight: 'bold',
+                        padding: '8px 14px',
+                        fontSize: '10.5px',
+                        fontWeight: 700,
                         fontFamily: '"Space Mono", monospace',
                         background: activeModTab === 'cartography' ? (isMapDarkMode ? 'rgba(255, 204, 0, 0.1)' : 'rgba(0,0,0,0.05)') : 'transparent',
                         color: activeModTab === 'cartography' ? (isMapDarkMode ? '#ffcc00' : '#000000') : (isMapDarkMode ? '#999999' : '#666666'),
@@ -14873,8 +14852,8 @@ function App() {
 
                   {activeModTab === 'pending' && (
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
-                      <span style={{ fontSize: '9.5px', color: isMapDarkMode ? theme.textDim : '#000000', fontWeight: 'bold', letterSpacing: '0.5px' }}>
-                        SUBMISSIONS PENDING FORMAL DECLASSIFICATION APPROVAL:
+                      <span style={{ fontSize: '12.5px', color: isMapDarkMode ? theme.text : '#000000', fontWeight: 700, letterSpacing: '0.2px' }}>
+                        Submissions pending formal declassification approval:
                       </span>
 
                       {pendingSubmissions.length === 0 ? (
@@ -14902,15 +14881,15 @@ function App() {
                                 <>
                                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                                     <div>
-                                      <h5 style={{ margin: '0 0 4px 0', fontSize: '13px', fontWeight: 'bold', color: theme.text }}>{sub.name}</h5>
-                                      <div style={{ display: 'flex', gap: '12px', fontSize: '9px', color: isMapDarkMode ? theme.textDim : '#000000', fontWeight: isMapDarkMode ? 'normal' : '500', flexWrap: 'wrap', alignItems: 'center' }}>
+                                      <h5 style={{ margin: '0 0 4px 0', fontSize: '14px', fontWeight: 'bold', color: theme.text }}>{sub.name}</h5>
+                                      <div style={{ display: 'flex', gap: '12px', fontSize: '9.5px', color: isMapDarkMode ? theme.textDim : '#000000', fontWeight: isMapDarkMode ? 'normal' : '500', flexWrap: 'wrap', alignItems: 'center' }}>
                                         {(!sub.destinations || sub.destinations.includes('map')) && (
                                           <>
-                                            <span>LAYER: <strong style={{ color: isMapDarkMode ? '#ffffff' : '#000000', textDecoration: isMapDarkMode ? 'none' : 'underline' }}>{sub.category}</strong></span>
-                                            <span>COORDS: <strong style={{ color: isMapDarkMode ? '#ffffff' : '#000000' }}>[{sub.coordinates?.[1]}, {sub.coordinates?.[0]}]</strong></span>
+                                            <span>Layer: <strong style={{ color: isMapDarkMode ? '#ffffff' : '#000000', textDecoration: isMapDarkMode ? 'none' : 'underline' }}>{sub.category}</strong></span>
+                                            <span>Coords: <strong style={{ color: isMapDarkMode ? '#ffffff' : '#000000' }}>[{sub.coordinates?.[1]}, {sub.coordinates?.[0]}]</strong></span>
                                           </>
                                         )}
-                                        {sub.date && <span>YEAR: <strong style={{ color: isMapDarkMode ? '#ffffff' : '#000000' }}>{sub.date}</strong></span>}
+                                        {sub.date && <span>Year: <strong style={{ color: isMapDarkMode ? '#ffffff' : '#000000' }}>{sub.date}</strong></span>}
                                       </div>
 
                                       {/* Destinations & Parenting Parameters */}
@@ -14936,25 +14915,25 @@ function App() {
 
                                       {/* Codex Parent metadata */}
                                       {sub.destinations?.includes('codex') && (
-                                        <div style={{ fontSize: '8.5px', color: theme.textDim, marginTop: '4px' }}>
-                                          CODEX PARENT: <strong style={{ color: theme.text }}>{combinedCodexNodes.find(n => n.id === sub.codexParentId)?.name || 'Root Category'}</strong>
+                                        <div style={{ fontSize: '9px', color: theme.textDim, marginTop: '4px' }}>
+                                          Codex parent: <strong style={{ color: theme.text }}>{combinedCodexNodes.find(n => n.id === sub.codexParentId)?.name || 'Root Category'}</strong>
                                         </div>
                                       )}
 
                                       {/* Timeline configuration metadata */}
                                       {sub.destinations?.includes('timeline') && (
                                         <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', marginTop: '4px' }}>
-                                          <div style={{ fontSize: '8.5px', color: theme.textDim }}>
-                                            TIMELINE ERA: <strong style={{ color: theme.text }}>{sub.timelineLayer}</strong> | TYPE: <strong style={{ color: theme.text }}>{sub.timelineType?.toUpperCase()}</strong>
+                                          <div style={{ fontSize: '9px', color: theme.textDim }}>
+                                            Timeline era: <strong style={{ color: theme.text }}>{sub.timelineLayer}</strong> | Type: <strong style={{ color: theme.text }}>{sub.timelineType}</strong>
                                             {sub.timelineType === 'lifespan' && sub.timelineEnd && (
-                                              <> | DEATH YEAR: <strong style={{ color: theme.text }}>{sub.timelineEnd}</strong></>
+                                              <> | Death year: <strong style={{ color: theme.text }}>{sub.timelineEnd}</strong></>
                                             )}
                                           </div>
                                           {sub.timelineType === 'lifespan' && (sub.timelineFatherId || sub.timelineMotherId || sub.timelineSpouseId) && (
-                                            <div style={{ fontSize: '8.5px', color: theme.textDim }}>
-                                              {sub.timelineFatherId && <>FATHER: <strong style={{ color: theme.text }}>{combinedTimelineItems.find(t => t.id === sub.timelineFatherId)?.name || sub.timelineFatherId}</strong> </>}
-                                              {sub.timelineMotherId && <>MOTHER: <strong style={{ color: theme.text }}>{combinedTimelineItems.find(t => t.id === sub.timelineMotherId)?.name || sub.timelineMotherId}</strong> </>}
-                                              {sub.timelineSpouseId && <>SPOUSE: <strong style={{ color: theme.text }}>{combinedTimelineItems.find(t => t.id === sub.timelineSpouseId)?.name || sub.timelineSpouseId}</strong> </>}
+                                            <div style={{ fontSize: '9px', color: theme.textDim }}>
+                                              {sub.timelineFatherId && <>Father: <strong style={{ color: theme.text }}>{combinedTimelineItems.find(t => t.id === sub.timelineFatherId)?.name || sub.timelineFatherId}</strong> </>}
+                                              {sub.timelineMotherId && <>Mother: <strong style={{ color: theme.text }}>{combinedTimelineItems.find(t => t.id === sub.timelineMotherId)?.name || sub.timelineMotherId}</strong> </>}
+                                              {sub.timelineSpouseId && <>Spouse: <strong style={{ color: theme.text }}>{combinedTimelineItems.find(t => t.id === sub.timelineSpouseId)?.name || sub.timelineSpouseId}</strong> </>}
                                             </div>
                                           )}
                                         </div>
@@ -14963,19 +14942,19 @@ function App() {
                                     <span style={{ padding: '2px 6px', background: isMapDarkMode ? '#ffa500' : '#000000', color: isMapDarkMode ? '#000000' : '#ffffff', fontSize: '8.5px', fontWeight: 'bold', borderRadius: '1.5px' }}>Pending</span>
                                   </div>
 
-                                  <p style={{ margin: 0, fontSize: '10.5px', lineHeight: '16px', color: isMapDarkMode ? theme.textDim : '#000000', fontWeight: isMapDarkMode ? 'normal' : '500', whiteSpace: 'pre-line' }}>
+                                  <p style={{ margin: 0, fontSize: '11px', lineHeight: '16px', color: isMapDarkMode ? theme.textDim : '#000000', fontWeight: isMapDarkMode ? 'normal' : '500', whiteSpace: 'pre-line' }}>
                                     {sub.description}
                                   </p>
 
                                   {sub.source && (
-                                    <div style={{ fontSize: '9px', color: isMapDarkMode ? theme.textDim : '#000000', fontStyle: 'italic' }}>
+                                    <div style={{ fontSize: '9.5px', color: isMapDarkMode ? theme.textDim : '#000000', fontStyle: 'italic' }}>
                                       Source: <strong>{sub.source}</strong>
                                     </div>
                                   )}
 
                                   {(sub.submitterName || sub.submitterEmail || sub.submitterLink || sub.socialLink) && (
-                                    <div style={{ fontSize: '9px', color: isMapDarkMode ? theme.textDim : '#000000', borderTop: `1px dashed ${theme.borderLight}`, paddingTop: '4px', marginTop: '4px' }}>
-                                      SUBMITTER / CONTRIBUTOR: <strong style={{ color: theme.text }}>{sub.submitterName || 'Anonymous'}</strong>
+                                    <div style={{ fontSize: '9.5px', color: isMapDarkMode ? theme.textDim : '#000000', borderTop: `1px dashed ${theme.borderLight}`, paddingTop: '4px', marginTop: '4px' }}>
+                                      Submitter / Contributor: <strong style={{ color: theme.text }}>{sub.submitterName || 'Anonymous'}</strong>
                                       {sub.submitterEmail && <> | <a href={`mailto:${sub.submitterEmail}`} style={{ color: '#b6a6ff', textDecoration: 'underline' }}>{sub.submitterEmail}</a></>}
                                       {(sub.submitterLink || sub.socialLink) && <> | <a href={sub.submitterLink || sub.socialLink} target="_blank" rel="noopener noreferrer" style={{ color: '#b6a6ff', textDecoration: 'underline' }}>{sub.submitterLink || sub.socialLink}</a></>}
                                     </div>
@@ -14983,7 +14962,7 @@ function App() {
 
                                   {sub.images && sub.images.length > 0 && (
                                     <div style={{ borderTop: `1px solid ${theme.borderLight}`, paddingTop: '10px' }}>
-                                      <span style={{ fontSize: '9px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: isMapDarkMode ? theme.text : '#000000' }}>ATTACHMENTS DETECTED:</span>
+                                      <span style={{ fontSize: '9.5px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: isMapDarkMode ? theme.text : '#000000' }}>Attachments detected:</span>
                                       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '10px' }}>
                                         {sub.images.map((imgUrl: string, index: number) => {
                                           const isFile = imgUrl.startsWith('/uploads/');
@@ -15185,8 +15164,8 @@ function App() {
 
                   {activeModTab === 'approved' && (
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
-                      <span style={{ fontSize: '9px', color: isMapDarkMode ? theme.textDim : '#000000', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-                        Approved Intel Audit Log (Revoke intel back to pending screen or purge wrong entries):
+                      <span style={{ fontSize: '12.5px', color: isMapDarkMode ? theme.text : '#000000', fontWeight: 700, letterSpacing: '0.2px' }}>
+                        Approved intel audit log (revoke intel back to pending screen or purge wrong entries):
                       </span>
 
                       {approvedSubmissions.length === 0 ? (
@@ -15214,15 +15193,15 @@ function App() {
                                 <>
                                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                                     <div>
-                                      <h5 style={{ margin: '0 0 4px 0', fontSize: '13px', fontWeight: 'bold', color: theme.text }}>{sub.name}</h5>
-                                      <div style={{ display: 'flex', gap: '12px', fontSize: '9px', color: isMapDarkMode ? theme.textDim : '#000000', fontWeight: isMapDarkMode ? 'normal' : '500', flexWrap: 'wrap', alignItems: 'center' }}>
+                                      <h5 style={{ margin: '0 0 4px 0', fontSize: '14px', fontWeight: 'bold', color: theme.text }}>{sub.name}</h5>
+                                      <div style={{ display: 'flex', gap: '12px', fontSize: '9.5px', color: isMapDarkMode ? theme.textDim : '#000000', fontWeight: isMapDarkMode ? 'normal' : '500', flexWrap: 'wrap', alignItems: 'center' }}>
                                         {(!sub.destinations || sub.destinations.includes('map')) && (
                                           <>
-                                            <span>LAYER: <strong style={{ color: isMapDarkMode ? (layerColors[sub.category] || '#b6a6ff') : '#000000', textDecoration: isMapDarkMode ? 'none' : 'underline' }}>{sub.category}</strong></span>
-                                            <span>COORDS: <strong>[{sub.coordinates?.[1]}, {sub.coordinates?.[0]}]</strong></span>
+                                            <span>Layer: <strong style={{ color: isMapDarkMode ? (layerColors[sub.category] || '#b6a6ff') : '#000000', textDecoration: isMapDarkMode ? 'none' : 'underline' }}>{sub.category}</strong></span>
+                                            <span>Coords: <strong>[{sub.coordinates?.[1]}, {sub.coordinates?.[0]}]</strong></span>
                                           </>
                                         )}
-                                        {sub.date ? <span>YEAR: <strong>{sub.date}</strong></span> : null}
+                                        {sub.date ? <span>Year: <strong>{sub.date}</strong></span> : null}
                                       </div>
 
                                       {/* Destinations & Parenting Parameters */}
@@ -15248,25 +15227,25 @@ function App() {
 
                                       {/* Codex Parent metadata */}
                                       {sub.destinations?.includes('codex') && (
-                                        <div style={{ fontSize: '8.5px', color: theme.textDim, marginTop: '4px' }}>
-                                          CODEX PARENT: <strong style={{ color: theme.text }}>{combinedCodexNodes.find(n => n.id === sub.codexParentId)?.name || 'Root Category'}</strong>
+                                        <div style={{ fontSize: '9px', color: theme.textDim, marginTop: '4px' }}>
+                                          Codex parent: <strong style={{ color: theme.text }}>{combinedCodexNodes.find(n => n.id === sub.codexParentId)?.name || 'Root Category'}</strong>
                                         </div>
                                       )}
 
                                       {/* Timeline configuration metadata */}
                                       {sub.destinations?.includes('timeline') && (
                                         <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', marginTop: '4px' }}>
-                                          <div style={{ fontSize: '8.5px', color: theme.textDim }}>
-                                            TIMELINE ERA: <strong style={{ color: theme.text }}>{sub.timelineLayer}</strong> | TYPE: <strong style={{ color: theme.text }}>{sub.timelineType?.toUpperCase()}</strong>
+                                          <div style={{ fontSize: '9px', color: theme.textDim }}>
+                                            Timeline era: <strong style={{ color: theme.text }}>{sub.timelineLayer}</strong> | Type: <strong style={{ color: theme.text }}>{sub.timelineType}</strong>
                                             {sub.timelineType === 'lifespan' && sub.timelineEnd && (
-                                              <> | DEATH YEAR: <strong style={{ color: theme.text }}>{sub.timelineEnd}</strong></>
+                                              <> | Death year: <strong style={{ color: theme.text }}>{sub.timelineEnd}</strong></>
                                             )}
                                           </div>
                                           {sub.timelineType === 'lifespan' && (sub.timelineFatherId || sub.timelineMotherId || sub.timelineSpouseId) && (
-                                            <div style={{ fontSize: '8.5px', color: theme.textDim }}>
-                                              {sub.timelineFatherId && <>FATHER: <strong style={{ color: theme.text }}>{combinedTimelineItems.find(t => t.id === sub.timelineFatherId)?.name || sub.timelineFatherId}</strong> </>}
-                                              {sub.timelineMotherId && <>MOTHER: <strong style={{ color: theme.text }}>{combinedTimelineItems.find(t => t.id === sub.timelineMotherId)?.name || sub.timelineMotherId}</strong> </>}
-                                              {sub.timelineSpouseId && <>SPOUSE: <strong style={{ color: theme.text }}>{combinedTimelineItems.find(t => t.id === sub.timelineSpouseId)?.name || sub.timelineSpouseId}</strong> </>}
+                                            <div style={{ fontSize: '9px', color: theme.textDim }}>
+                                              {sub.timelineFatherId && <>Father: <strong style={{ color: theme.text }}>{combinedTimelineItems.find(t => t.id === sub.timelineFatherId)?.name || sub.timelineFatherId}</strong> </>}
+                                              {sub.timelineMotherId && <>Mother: <strong style={{ color: theme.text }}>{combinedTimelineItems.find(t => t.id === sub.timelineMotherId)?.name || sub.timelineMotherId}</strong> </>}
+                                              {sub.timelineSpouseId && <>Spouse: <strong style={{ color: theme.text }}>{combinedTimelineItems.find(t => t.id === sub.timelineSpouseId)?.name || sub.timelineSpouseId}</strong> </>}
                                             </div>
                                           )}
                                         </div>
@@ -15275,19 +15254,19 @@ function App() {
                                     <span style={{ padding: '2px 6px', background: isMapDarkMode ? 'rgba(0, 204, 0, 0.1)' : '#000000', border: isMapDarkMode ? '1px solid #00cc00' : '1px solid #000000', color: isMapDarkMode ? '#00cc00' : '#ffffff', fontSize: '8.5px', fontWeight: 'bold', borderRadius: '1.5px' }}>Approved</span>
                                   </div>
 
-                                  <p style={{ margin: 0, fontSize: '10.5px', lineHeight: '16px', color: isMapDarkMode ? theme.textDim : '#000000', fontWeight: isMapDarkMode ? 'normal' : '500', whiteSpace: 'pre-line' }}>
+                                  <p style={{ margin: 0, fontSize: '11px', lineHeight: '16px', color: isMapDarkMode ? theme.textDim : '#000000', fontWeight: isMapDarkMode ? 'normal' : '500', whiteSpace: 'pre-line' }}>
                                     {sub.description}
                                   </p>
 
                                   {sub.source && (
-                                    <div style={{ fontSize: '9px', color: isMapDarkMode ? theme.textDim : '#000000', fontStyle: 'italic' }}>
+                                    <div style={{ fontSize: '9.5px', color: isMapDarkMode ? theme.textDim : '#000000', fontStyle: 'italic' }}>
                                       Source: <strong>{sub.source}</strong>
                                     </div>
                                   )}
 
                                   {(sub.submitterName || sub.submitterEmail || sub.submitterLink || sub.socialLink) && (
-                                    <div style={{ fontSize: '9px', color: isMapDarkMode ? theme.textDim : '#000000', borderTop: `1px dashed ${theme.borderLight}`, paddingTop: '4px', marginTop: '4px' }}>
-                                      SUBMITTER / CONTRIBUTOR: <strong style={{ color: theme.text }}>{sub.submitterName || 'Anonymous'}</strong>
+                                    <div style={{ fontSize: '9.5px', color: isMapDarkMode ? theme.textDim : '#000000', borderTop: `1px dashed ${theme.borderLight}`, paddingTop: '4px', marginTop: '4px' }}>
+                                      Submitter / Contributor: <strong style={{ color: theme.text }}>{sub.submitterName || 'Anonymous'}</strong>
                                       {sub.submitterEmail && <> | <a href={`mailto:${sub.submitterEmail}`} style={{ color: '#b6a6ff', textDecoration: 'underline' }}>{sub.submitterEmail}</a></>}
                                       {(sub.submitterLink || sub.socialLink) && <> | <a href={sub.submitterLink || sub.socialLink} target="_blank" rel="noopener noreferrer" style={{ color: '#b6a6ff', textDecoration: 'underline' }}>{sub.submitterLink || sub.socialLink}</a></>}
                                     </div>
@@ -15295,7 +15274,7 @@ function App() {
 
                                   {sub.images && sub.images.length > 0 && (
                                     <div style={{ borderTop: `1px solid ${theme.borderLight}`, paddingTop: '10px' }}>
-                                      <span style={{ fontSize: '10px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: isMapDarkMode ? theme.text : '#000000' }}>ATTACHMENTS DETECTED:</span>
+                                      <span style={{ fontSize: '9.5px', fontWeight: 'bold', display: 'block', marginBottom: '6px', color: isMapDarkMode ? theme.text : '#000000' }}>Attachments detected:</span>
                                       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '10px' }}>
                                         {sub.images.map((imgUrl: string, index: number) => {
                                           const isFile = imgUrl.startsWith('/uploads/');
@@ -15334,10 +15313,7 @@ function App() {
                                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', width: isMobile ? '100%' : 'auto' }}>
                                       {sub.coordinates && Array.isArray(sub.coordinates) && sub.coordinates.length === 2 && isValidLngLat(sub.coordinates[0], sub.coordinates[1]) && (
                                         <button
-                                          onClick={() => {
-                                            setPreviewSub(sub);
-                                            setIsModMinimized(true);
-                                          }}
+                                          onClick={() => setPreviewSub(sub)}
                                           style={{
                                             background: 'transparent',
                                             color: theme.text,
@@ -15502,8 +15478,8 @@ function App() {
 
                   {activeModTab === 'reports' && (
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
-                      <span style={{ fontSize: '9px', color: isMapDarkMode ? theme.textDim : '#000000', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-                        INACCURACY REPORTS LOG:
+                      <span style={{ fontSize: '12.5px', color: isMapDarkMode ? theme.text : '#000000', fontWeight: 700, letterSpacing: '0.2px' }}>
+                        Inaccuracy reports log:
                       </span>
 
                       {reports.length === 0 ? (
@@ -15532,7 +15508,7 @@ function App() {
                                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                                     <div>
                                       <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
-                                        <h5 style={{ margin: 0, fontSize: '13px', fontWeight: 'bold', color: theme.text }}>
+                                        <h5 style={{ margin: 0, fontSize: '14px', fontWeight: 'bold', color: theme.text }}>
                                           {report.pointName}
                                         </h5>
                                         <span style={{ fontSize: '8px', padding: '2px 6px', background: layerColors[report.pointCategory] || '#e5e5e5', color: '#000', borderRadius: '4px', textTransform: 'none', fontFamily: '"Space Mono", monospace', fontWeight: 'bold' }}>
@@ -15552,8 +15528,8 @@ function App() {
                                           {report.status}
                                         </span>
                                       </div>
-                                      <div style={{ fontSize: '9px', color: theme.textDim, fontFamily: '"Space Mono", monospace' }}>
-                                        TARGET ID: {report.pointId} | REPORT ID: {report.id}
+                                      <div style={{ fontSize: '9.5px', color: theme.textDim, fontFamily: '"Space Mono", monospace' }}>
+                                        Target ID: {report.pointId} | Report ID: {report.id}
                                       </div>
                                     </div>
                                     <span style={{ fontSize: '10px', color: theme.textDim, whiteSpace: 'nowrap' }}>
@@ -15562,8 +15538,8 @@ function App() {
                                   </div>
 
                                   <div style={{ padding: '10px', background: isMapDarkMode ? 'rgba(0,0,0,0.2)' : 'rgba(0,0,0,0.02)', borderLeft: `3px solid ${isMapDarkMode ? '#ef4444' : '#b91c1c'}`, fontSize: '11px', lineHeight: '16px', color: theme.text }}>
-                                    <div style={{ fontWeight: 'bold', fontSize: '10px', textTransform: 'uppercase', color: isMapDarkMode ? '#ef4444' : '#b91c1c', marginBottom: '4px' }}>
-                                      REASON: {report.reason}
+                                    <div style={{ fontWeight: 'bold', fontSize: '10px', color: isMapDarkMode ? '#ef4444' : '#b91c1c', marginBottom: '4px' }}>
+                                      Reason: {report.reason}
                                     </div>
                                     {report.details || <em style={{ color: theme.textDim }}>No supporting details provided.</em>}
                                   </div>
@@ -15719,8 +15695,8 @@ function App() {
 
                   {activeModTab === 'cartography' && (
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
-                      <span style={{ fontSize: '9px', color: isMapDarkMode ? theme.textDim : '#000000', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-                        Cartography Custom Pins (Purge test pins or user entries dropped on historical projections):
+                      <span style={{ fontSize: '12.5px', color: isMapDarkMode ? theme.text : '#000000', fontWeight: 700, letterSpacing: '0.2px' }}>
+                        Cartography custom pins (purge test pins or user entries dropped on historical projections):
                       </span>
 
                       {modCartographyPoints.length === 0 ? (
@@ -15744,12 +15720,12 @@ function App() {
                             >
                               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '16px' }}>
                                 <div style={{ flex: 1 }}>
-                                  <h5 style={{ margin: '0 0 4px 0', fontSize: '13px', fontWeight: 'bold', color: theme.text }}>{point.note}</h5>
-                                  <div style={{ display: 'flex', gap: '12px', fontSize: '9px', color: isMapDarkMode ? theme.textDim : '#000000', fontWeight: isMapDarkMode ? 'normal' : '500', flexWrap: 'wrap', alignItems: 'center' }}>
-                                    <span>MAP ID: <strong style={{ color: isMapDarkMode ? '#ffcc00' : '#000000' }}>{point.mapId}</strong></span>
-                                    <span>COORDS: <strong>[{point.lat?.toFixed(5)}, {point.lng?.toFixed(5)}]</strong></span>
+                                  <h5 style={{ margin: '0 0 4px 0', fontSize: '14px', fontWeight: 'bold', color: theme.text }}>{point.note}</h5>
+                                  <div style={{ display: 'flex', gap: '12px', fontSize: '9.5px', color: isMapDarkMode ? theme.textDim : '#000000', fontWeight: isMapDarkMode ? 'normal' : '500', flexWrap: 'wrap', alignItems: 'center' }}>
+                                    <span>Map ID: <strong style={{ color: isMapDarkMode ? '#ffcc00' : '#000000' }}>{point.mapId}</strong></span>
+                                    <span>Coords: <strong>[{point.lat?.toFixed(5)}, {point.lng?.toFixed(5)}]</strong></span>
                                     {point.createdAt ? (
-                                      <span>CREATED: <strong>{typeof point.createdAt === 'string' ? point.createdAt : (point.createdAt._seconds ? new Date(point.createdAt._seconds * 1000).toLocaleString() : 'N/A')}</strong></span>
+                                      <span>Created: <strong>{typeof point.createdAt === 'string' ? point.createdAt : (point.createdAt._seconds ? new Date(point.createdAt._seconds * 1000).toLocaleString() : 'N/A')}</strong></span>
                                     ) : null}
                                   </div>
                                 </div>
