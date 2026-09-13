@@ -14727,7 +14727,7 @@ function App() {
                 </div>
               ) : (
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px', background: isMapDarkMode ? '#141414' : '#f8f8f8', padding: '10px 14px', border: `1px solid ${theme.border}` }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px', background: isMapDarkMode ? '#141414' : '#f8f8f8', padding: '10px 16px', borderRadius: '20px', border: `1px solid ${theme.border}` }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
                       <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#ffcc00', flexShrink: 0 }} />
                       <span style={{ fontSize: '11px', fontWeight: 600, wordBreak: 'break-word' }}>
