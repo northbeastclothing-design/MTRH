@@ -14594,7 +14594,7 @@ function App() {
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px', borderBottom: `2.5px solid ${theme.border}`, paddingBottom: '12px', marginBottom: '16px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                   <Shield size={18} color={isMapDarkMode ? '#ffcc00' : '#000000'} />
-                  <span style={{ fontWeight: 700, fontSize: isMobile ? '13px' : '16px', letterSpacing: '0.2px' }}>MTRH Decisional Moderation Desk</span>
+                  <span style={{ fontWeight: 400, fontSize: isMobile ? '13px' : '16px', letterSpacing: '0.2px' }}>MTRH Decisional Moderation Desk</span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                   <button onClick={() => setIsModeratorOpen(false)} style={{ background: 'transparent', border: 'none', color: theme.text, cursor: 'pointer', padding: 0, display: 'flex', alignItems: 'center' }}>
