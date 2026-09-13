@@ -577,13 +577,23 @@ const cleanAndProxyImageUrl = (url: any) => {
   const trimmedUrl = url.trim();
   if (trimmedUrl.includes('icon-missing-image.svg')) return MISSING_IMAGE_URL;
 
-  // Handle local uploaded files - never send /uploads/ through weserv.nl or external proxies
-  if (trimmedUrl.includes('/uploads/')) {
-    const uploadIndex = trimmedUrl.indexOf('/uploads/');
-    return trimmedUrl.substring(uploadIndex);
+  // Handle local uploaded files (e.g. '/uploads/abc.jpg', 'uploads/abc.jpg', or 'http://localhost:3000/uploads/abc.jpg')
+  // NEVER truncate external domains (like WordPress sites with /wp-content/uploads/)!
+  if (trimmedUrl.startsWith('/uploads/')) {
+    return trimmedUrl;
   }
   if (trimmedUrl.startsWith('uploads/')) {
     return '/' + trimmedUrl;
+  }
+  if (trimmedUrl.startsWith('http://') || trimmedUrl.startsWith('https://')) {
+    try {
+      const parsed = new URL(trimmedUrl);
+      const isLocalHost = parsed.hostname === 'localhost' || parsed.hostname === '127.0.0.1' || 
+        (typeof window !== 'undefined' && parsed.host === window.location.host);
+      if (isLocalHost && parsed.pathname.startsWith('/uploads/')) {
+        return parsed.pathname;
+      }
+    } catch (_) {}
   }
 
   if (isVideoUrl(trimmedUrl)) {
@@ -3088,9 +3098,20 @@ export default function CodexPage({
                                   alt={`${activeTermNode.name} asset viewport`} 
                                   referrerPolicy="no-referrer"
                                   onLoad={() => setIsImageLoading(false)}
-                                  onError={() => {
+                                  onError={(e) => {
                                     setIsImageLoading(false);
                                     if (curAsset.url) {
+                                      const target = e.currentTarget;
+                                      const currentSrc = target.src || '';
+                                      const rawUrl = curAsset.url;
+                                      if (currentSrc.includes('weserv.nl') && !currentSrc.includes('/api/proxy-resource')) {
+                                        target.src = `/api/proxy-resource?url=${encodeURIComponent(rawUrl)}`;
+                                        return;
+                                      }
+                                      if (currentSrc.includes('/api/proxy-resource') && target.src !== rawUrl) {
+                                        target.src = rawUrl;
+                                        return;
+                                      }
                                       setBrokenImages(prev => ({ ...prev, [curAsset.url]: true }));
                                     }
                                   }}
@@ -4020,9 +4041,20 @@ export default function CodexPage({
                           alt="High resolution dossier archive asset" 
                           referrerPolicy="no-referrer"
                           onLoad={() => setIsLightboxImageLoading(false)}
-                          onError={() => {
+                          onError={(e) => {
                             setIsLightboxImageLoading(false);
                             if (curAsset.url) {
+                              const target = e.currentTarget;
+                              const currentSrc = target.src || '';
+                              const rawUrl = curAsset.url;
+                              if (currentSrc.includes('weserv.nl') && !currentSrc.includes('/api/proxy-resource')) {
+                                target.src = `/api/proxy-resource?url=${encodeURIComponent(rawUrl)}`;
+                                return;
+                              }
+                              if (currentSrc.includes('/api/proxy-resource') && target.src !== rawUrl) {
+                                target.src = rawUrl;
+                                return;
+                              }
                               setBrokenImages(prev => ({ ...prev, [curAsset.url]: true }));
                             }
                           }}
