@@ -689,7 +689,7 @@ const cleanAndProxyImageUrl = (url: any) => {
   // or that already fully support highly reliable direct client-side loading (like Unsplash/Wonders of the world).
   if (trimmedUrl.startsWith('http')) {
     if (trimmedUrl.includes('weserv.nl')) return trimmedUrl;
-    return `https://images.weserv.nl/?url=${trimmedUrl}`;
+    return `https://images.weserv.nl/?url=${encodeURIComponent(trimmedUrl)}`;
   }
 
   return trimmedUrl;
@@ -878,6 +878,10 @@ const processIncomingRecord = (item: any, index: number) => {
           'https://upload.wikimedia.org/wikipedia/commons/a/ac/Golan_Heights_-_Gamla_view.jpg'
         ];
       }
+    } else if (lowerNormalizedCat === 'crop circles') {
+      safeImages = [
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Aerial_View_of_the_Crop_Circle_in_Diessenhofen_15.07.2008_16-44-41.JPG/960px-Aerial_View_of_the_Crop_Circle_in_Diessenhofen_15.07.2008_16-44-41.JPG'
+      ];
     }
   }
 

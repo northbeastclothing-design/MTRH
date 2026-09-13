@@ -8486,7 +8486,7 @@ const chunk_1: any[] = [  {
     description: 'Formation in the world-famous East Field of Alton Barnes. A primary location for crop circle study for decades.',
     layer: 'Crop Circles',
     mapFeatureId: 'anomaly-Crop-Circles-23',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/6/62/Inside_a_crop_circle%2C_Alton_Barnes.jpg', 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Alton_Barnes_crop_circle_c._1995-1.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/6/62/Inside_a_crop_circle%2C_Alton_Barnes.jpg', 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Alton_Barnes_crop_circle_c._1995-1.jpg/960px-Alton_Barnes_crop_circle_c._1995-1.jpg'],
     sources: ['BLT Research Team Reports', 'Temporary Temples Crop Circle Archives']
   },  {
     id: 'anomaly-Crop-Circles-24',

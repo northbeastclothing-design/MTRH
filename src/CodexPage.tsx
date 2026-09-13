@@ -605,7 +605,7 @@ const cleanAndProxyImageUrl = (url: any) => {
 
   if (trimmedUrl.startsWith('http')) {
     if (trimmedUrl.includes('weserv.nl')) return trimmedUrl;
-    return `https://images.weserv.nl/?url=${trimmedUrl}`;
+    return `https://images.weserv.nl/?url=${encodeURIComponent(trimmedUrl)}`;
   }
 
   return trimmedUrl;
