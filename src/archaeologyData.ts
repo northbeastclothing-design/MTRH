@@ -367,7 +367,7 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
     displayDate: "c. 450 BC (Reported by Herodotus)",
     description: "A narrow mountain pass situated opposite the ancient city of Buto, described by the Greek historian Herodotus. He reported seeing massive heaps of bones and spines belonging to winged serpents that flew from Arabia toward Egypt every spring, only to be intercepted and destroyed by ibises. The creatures were described as bat-winged, serpentine, and resembling water snakes.",
     source: "Herodotus, Histories (Book II.75) / @classical_presbyterian",
-    images: ["https://www.instagram.com/p/DZLsVsaOGIf/media/?size=l"],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Marble_bust_of_Herodotos_MET_DT11742_%28cropped%29.jpg/1280px-Marble_bust_of_Herodotos_MET_DT11742_%28cropped%29.jpg"],
     socialLink: "https://www.instagram.com/p/DZLsVsaOGIf/"
   },
   {
@@ -380,7 +380,7 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
     displayDate: "330 BC (Reported by Alexander the Great)",
     description: "During Alexander the Great's invasion of India, his army encountered a massive, sacred serpent living in a cavern in the territory of King Abisarus. Recorded by Claudius Aelianus (On Animals) and Alexander's lieutenant Onesicritus, the creature was revered as a god by local inhabitants. When the passing army disturbed the cavern, the serpent reportedly emerged, hissing and snorting violently, with eyes described as the size of Macedonian shields.",
     source: "Aelian, On the Nature of Animals (Book XV) / @classical_presbyterian",
-    images: ["https://www.instagram.com/p/DY_IpTVOaiJ/media/?size=l"],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/The_Dragon_of_India_from_Cosmographia_%281544%29_by_Sebastian_M%C3%BCnster.jpg/1280px-The_Dragon_of_India_from_Cosmographia_%281544%29_by_Sebastian_M%C3%BCnster.jpg"],
     socialLink: "https://www.instagram.com/p/DY_IpTVOaiJ/"
   },
   {
@@ -393,7 +393,7 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
     displayDate: "c. 250 BC (Reported)",
     description: "According to Roman author Claudius Aelianus (On Animals), ancient Greek rulers imported massive live dragons from Ethiopia. Aelian described Ethiopia as a land renowned for giant serpents, noting they were the largest in the known world and were occasionally captured for exhibition in the courts of Hellenistic Egypt.",
     source: "Aelian, On the Nature of Animals (Book II.21) / @classical_presbyterian",
-    images: ["https://www.instagram.com/p/DZGlPQtlfjY/media/?size=l"],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Ethiopian_St._George_And_The_Dragon_-_Detail_%282848032429%29.jpg/1280px-Ethiopian_St._George_And_The_Dragon_-_Detail_%282848032429%29.jpg"],
     socialLink: "https://www.instagram.com/p/DZGlPQtlfjY/"
   },
   {
@@ -406,7 +406,7 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
     displayDate: "1882 AD (Encounter)",
     description: "An 1882 report published in the Los Angeles Times described a bizarre encounter in the Colorado Desert where a Southern Pacific train was intercepted by a 30-foot-long winged, serpent-like creature near Dos Palmas. Witnesses reported that the train collided with the beast, triggering a violent attack where the creature broke windows and shook the passenger cars before flying away.",
     source: "Los Angeles Times (1882) / @classical_presbyterian",
-    images: ["https://www.instagram.com/p/DYBJEK6Cefe/media/?size=l"],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Dos_Palmas_Preserve_Area_of_Critical_Environmental_Concern%2C_California_%2815473839010%29.jpg/1280px-Dos_Palmas_Preserve_Area_of_Critical_Environmental_Concern%2C_California_%2815473839010%29.jpg"],
     socialLink: "https://www.instagram.com/p/DYBJEK6Cefe/"
   },
   // ==================== GIANTS & NEPHILIM ====================
@@ -708,7 +708,7 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
     displayDate: "Prehistoric (Indian Cave)",
     description: "Over 100 deep hand-shaped impressions, known as petrosomatoglyphs, pressed into the soft Entrada Sandstone of Indian Cave along the Panorama Trail. Unlike carved petroglyphs, these indentations were formed by centuries of individuals repeatedly rubbing or pressing their hands into the fragile rock, wearing down the sand grains to leave deep, smooth finger and palm grooves.",
     source: "Utah State Parks / @freetherabbitspodcast",
-    images: ["https://www.instagram.com/p/DZK35-UDYJa/media/?size=l"],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Indian_Cave_in_Kodachrome_Basin_State_Park.jpg/1280px-Indian_Cave_in_Kodachrome_Basin_State_Park.jpg"],
     socialLink: "https://www.instagram.com/p/DZK35-UDYJa/"
   },
   {
