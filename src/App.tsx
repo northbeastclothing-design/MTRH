@@ -150,6 +150,7 @@ const CATEGORY_DESCRIPTIONS: Record<string, string> = {
   'Missing 411': 'Mysterious disappearances of people in national parks and wilderness areas documented by David Paulides.',
   'Cave Systems': 'USGS documented locations of caves, caverns, grottos, and sinkholes.',
   'Alien Abductions': 'Documentation of major reported extraterrestrial abduction cases and close encounters.',
+  'Alien Sightings': 'Visual records, photographs, footage, and encounter evidence of extraterrestrial and anomalous entities, including analyzed and debunked cases.',
   'Cattle Mutilations': 'Reports of unexplained livestock deaths characterized by bloodless surgical-like tissue removal and a lack of tracks.',
   'Old World Structures': 'Famous castles, medieval strongholds, royal fortresses, and grand old-world architectural marvels across the globe.',
   'Crop Circles': 'Intricate patterns appearing in fields, often appearing overnight with no clear earthly explanation.',
@@ -699,6 +700,7 @@ const cleanAndProxyImageUrl = (url: any) => {
   // or that already fully support highly reliable direct client-side loading (like Unsplash/Wonders of the world).
   if (trimmedUrl.startsWith('http')) {
     if (trimmedUrl.includes('weserv.nl')) return trimmedUrl;
+    if (trimmedUrl.includes('imgur.com')) return trimmedUrl;
     return `https://images.weserv.nl/?url=${encodeURIComponent(trimmedUrl)}`;
   }
 
@@ -709,6 +711,7 @@ const normalizeCategoryName = (rawCategory: string, displayDescription: string =
   const lowerCat = rawCategory.toLowerCase();
   let normalizedCategory = rawCategory;
   if (lowerCat.includes('cave system') || lowerCat === 'cave systems') normalizedCategory = 'Cave Systems';
+  else if (lowerCat.includes('alien sighting') || lowerCat.includes('alien sightings')) normalizedCategory = 'Alien Sightings';
   else if (lowerCat.includes('alien abduction') || lowerCat.includes('abduction')) normalizedCategory = 'Alien Abductions';
   else if (lowerCat.includes('cattle mutilation') || lowerCat.includes('livestock mutilation') || lowerCat.includes('mutilation')) normalizedCategory = 'Cattle Mutilations';
   else if (lowerCat.includes('enochian') || lowerCat.includes('watcher') || lowerCat.includes('angel') || lowerCat === 'enochian sites') normalizedCategory = 'Enochian Sites';
@@ -937,6 +940,7 @@ const LAYER_CONFIG: Record<string, { color: string; icon: string }> = {
   'Burial Mounds': { color: '#B3C77B', icon: '/icons/icon-burial-mounds.svg' },
   'Cave Systems': { color: '#B9BDAD', icon: '/icons/icon-caves.svg' },
   'Alien Abductions': { color: '#C0F06E', icon: '/icons/icon-alien.svg' },
+  'Alien Sightings': { color: '#90E9FF', icon: '/icons/icon-alien-sightings.svg' },
   'Cattle Mutilations': { color: '#D59CF1', icon: '/icons/icon-cow.svg' },
   'Crop Circles': { color: '#FFF96A', icon: '/icons/icon-crop-circles.svg' },
   'D.U.M.B.\'s': { color: '#BAEAF4', icon: '/icons/icon-dumbs.svg' },
@@ -1311,6 +1315,7 @@ function App() {
   const [missing411Data, setMissing411Data] = useState<any[]>([]);
   const [cavesData, setCavesData] = useState<any[]>([]);
   const [alienAbductionData, setAlienAbductionData] = useState<any[]>([]);
+  const [alienSightingsData, setAlienSightingsData] = useState<any[]>([]);
   const [cattleMutilationData, setCattleMutilationData] = useState<any[]>([]);
   const [oldWorldStructuresData, setOldWorldStructuresData] = useState<any[]>([]);
   const [vanishedShipsAircraftData, setVanishedShipsAircraftData] = useState<any[]>([]);
@@ -1480,6 +1485,9 @@ function App() {
     }
     if (layerName === 'Alien Abductions') {
       return alienAbductionData.length === 0;
+    }
+    if (layerName === 'Alien Sightings') {
+      return alienSightingsData.length === 0;
     }
     if (layerName === 'Cattle Mutilations') {
       return cattleMutilationData.length === 0;
@@ -4924,6 +4932,16 @@ function App() {
         }
       }
 
+      // 4bb. Alien Sightings
+      if (activeLayers['Alien Sightings'] && alienSightingsData.length === 0) {
+        try {
+          const module = await import('./alienSightingsData');
+          setAlienSightingsData(getSafeData(module.ALIEN_SIGHTINGS_DATA));
+        } catch (err) {
+          console.error("Failed to load alien sightings data:", err);
+        }
+      }
+
       // 4c. Cattle Mutilations
       if (activeLayers['Cattle Mutilations'] && cattleMutilationData.length === 0) {
         try {
@@ -4990,6 +5008,7 @@ function App() {
           ...missing411Data, 
           ...cavesData, 
           ...alienAbductionData, 
+          ...alienSightingsData, 
           ...cattleMutilationData, 
           ...OLD_WORLD_STRUCTURES_DATA,
           ...oldWorldStructuresData, 
@@ -5089,7 +5108,7 @@ function App() {
     };
 
     compileVerifiedIntel();
-  }, [rabbitHoleData, ufoData, archaeologyData, missing411Data, cavesData, alienAbductionData, cattleMutilationData, oldWorldStructuresData, vanishedShipsAircraftData, overrides, isInitialLoad]);
+  }, [rabbitHoleData, ufoData, archaeologyData, missing411Data, cavesData, alienAbductionData, alienSightingsData, cattleMutilationData, oldWorldStructuresData, vanishedShipsAircraftData, overrides, isInitialLoad]);
 
   useEffect(() => {
     if (uniqueCategories.length > 0 && !hasRandomizedRef.current) {
@@ -7408,6 +7427,7 @@ function App() {
       'Burial Mounds': '/icons/icon-burial-mounds.svg',
       'Cave Systems': '/icons/icon-caves.svg',
       'Alien Abductions': '/icons/icon-alien.svg',
+      'Alien Sightings': '/icons/icon-alien-sightings.svg',
       'Cattle Mutilations': '/icons/icon-cow.svg',
       'Crop Circles': '/icons/icon-crop-circles.svg',
       "D.U.M.B.'s": '/icons/icon-dumbs.svg',

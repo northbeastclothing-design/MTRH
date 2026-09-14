@@ -20,6 +20,7 @@ const LAYER_ICONS: Record<string, string> = {
   'Burial Mounds': '/icons/icon-burial-mounds.svg',
   'Cave Systems': '/icons/icon-caves.svg',
   'Alien Abductions': '/icons/icon-alien.svg',
+  'Alien Sightings': '/icons/icon-alien-sightings.svg',
   'Cattle Mutilations': '/icons/icon-cow.svg',
   'Crop Circles': '/icons/icon-crop-circles.svg',
   "D.U.M.B.'s": '/icons/icon-dumbs.svg',

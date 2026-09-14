@@ -64,7 +64,8 @@ const chunk_0: any[] = [  {
     parentId: 'myths-legends-root',
     name: 'Folklore Archetypes & Comparative Myths',
     description: 'Universal comparative archetypes and the modern adaptation of ancient mythological themes in pop culture.',
-    isApocryphal: true
+    isApocryphal: true,
+    relatedIds: ['kal-el-superman', 'ancient-flood-myths']
   },
   {
     id: 'chinese-mythology',
@@ -1570,6 +1571,7 @@ const chunk_0: any[] = [  {
     layer: 'greek-mythology',
     timelineId: 'gk-deucalion-flood',
     sources: ["Hesiod's Theogony", "Homer's Iliad & Odyssey"],
+    relatedIds: ['ancient-flood-myths', 'greek-mythology'],
     isApocryphal: true
   },  {
     id: 'gk-cadmus-thebes',
@@ -4073,7 +4075,7 @@ const chunk_0: any[] = [  {
     translations: [
       { lang: 'Hebrew', original: 'נֹחַ', translit: 'Noach', meaning: 'Rest / Comfort' }
     ],
-    relatedIds: ['great-flood', 'noahs-ark-find', 'gilgamesh-text'],
+    relatedIds: ['great-flood', 'noahs-ark-find', 'gilgamesh-text', 'ancient-flood-myths'],
     bibleVerses: ['Noah was a righteous man, blameless among the people of his time, and he walked faithfully with God. — Genesis 6:9', 'By faith Noah, when warned about things not yet seen, in holy fear built an ark to save his family... — Hebrews 11:7'],
     timelineId: 'noah',
     sources: ['Bible', 'Historical Chronology Database']
@@ -7957,7 +7959,7 @@ const chunk_1: any[] = [  {
       { lang: 'Hebrew', original: 'מַבּוּל', translit: 'Mabbul', meaning: 'Deluge / Destruction' },
       { lang: 'Greek', original: 'Κατακλυσμός', translit: 'Kataklysmos', meaning: 'Inundation / Wash Down' }
     ],
-    relatedIds: ['noah-fig', 'noahs-ark-find', 'gilgamesh-text', 'gobekli-tepe'],
+    relatedIds: ['noah-fig', 'noahs-ark-find', 'gilgamesh-text', 'gobekli-tepe', 'ancient-flood-myths'],
     bibleVerses: ['In the six hundredth year of Noah’s life, in the second month, on the seventeenth day of the month, on the same day all the fountains of the great deep burst open, and the sky’s windows opened. It rained on the earth forty days and forty nights. — Genesis 7:11-12 (https://www.biblegateway.com/passage/?search=Genesis+7%3A11-12)', 'Every living thing was destroyed that was on the surface of the ground, including man, livestock, creeping things, and birds of the sky. They were destroyed from the earth. Only Noah was left, and those who were with him in the ship. — Genesis 7:23 (https://www.biblegateway.com/passage/?search=Genesis+7%3A23)', 'For as in those days which were before the flood they were eating and drinking, marrying and giving in marriage, until the day that Noah entered into the ship, and they didn’t know until the flood came, and took them all away, so will be the coming of the Son of Man. — Matthew 24:38-39 (https://www.biblegateway.com/passage/?search=Matthew+24%3A38-39)'],
     timelineId: 'evt-great-flood',
     sources: ['Bible', 'Ancient Historical Chronicles']
@@ -8241,22 +8243,151 @@ const chunk_1: any[] = [  {
     sources: ['MUFON (Mutual UFO Network) Database', 'Project Blue Book Archives']
   },  {
     id: 'anomaly-UFO-1007',
-    parentId: 'ufo-sightings-br',
-    name: 'Ariel School UFO Incident - Ruwa, Zimbabwe (1994)',
-    description: 'Sixty-two students at the Ariel School in Ruwa reported seeing one or more silver craft land in a field near their school and witnessing humanoid beings emerge, who communicated telepathic messages regarding environmental preservation.',
-    layer: 'UFOs - Sightings',
-    mapFeatureId: 'anomaly-UFO-1007',
-    images: ['https://www.youtube.com/watch?v=gRtp_jUCq0o'],
-    sources: ['MUFON (Mutual UFO Network) Database', 'Project Blue Book Archives']
+    parentId: 'alien-sightings-br',
+    name: 'Ariel School Telepathic Humanoids Encounter (1994)',
+    description: '[UNEXPLAINED / MASS EYEWITNESS CORROBORATION] Sixty-two schoolchildren in Ruwa, Zimbabwe witnessed a silver disc and small craft land beyond the playground, observing slender black-suited humanoid figures with large black almond eyes who communicated telepathic warnings regarding environmental devastation.',
+    layer: 'Alien Sightings',
+    mapFeatureId: 'alien-sighting-ariel-school-1994',
+    images: [
+      'https://www.youtube.com/watch?v=gRtp_jUCq0o',
+      'https://i.imgur.com/reGFXWp.png',
+      'https://i.imgur.com/io3NHj4.png',
+      'https://i.imgur.com/Q5k1Niu.png',
+      'https://i.imgur.com/ppLEwj1.png',
+      'https://i.imgur.com/s8HYxER.png',
+      'https://i.imgur.com/dQtQwgU.png',
+      'https://i.imgur.com/rC41mKU.png',
+      'https://i.imgur.com/zyZ6kT6.png',
+      'https://i.imgur.com/kdBAqeP.jpg',
+      'https://i.imgur.com/boXuDKG.png',
+      'https://i.imgur.com/Mp1sCyl.jpg',
+      'https://i.imgur.com/TkDyyTQ.png',
+      'https://i.imgur.com/U9aucbg.png',
+      'https://i.imgur.com/OC1fOT5.png',
+      'https://i.imgur.com/i2TAVMC.png',
+      'https://i.imgur.com/ThKAQ1Z.png',
+      'https://i.imgur.com/hMwCdI5.png',
+      'https://i.imgur.com/6IohltX.png',
+      'https://i.imgur.com/OClswJx.png',
+      'https://i.imgur.com/jA3EJMG.png',
+      'https://i.imgur.com/hD5IkA8.png',
+      'https://i.imgur.com/QxMHBNr.png',
+      'https://i.imgur.com/MxmxhS5.png',
+      'https://i.imgur.com/pUnhO94.png',
+      'https://i.imgur.com/qget8SM.png',
+      'https://i.imgur.com/tHxWiuv.png',
+      'https://i.imgur.com/jOzlbk4.png',
+      'https://i.imgur.com/8MOgR64.png',
+      'https://i.imgur.com/YmdpBNr.jpg',
+      'https://i.imgur.com/S3KcZbe.png',
+      'https://i.imgur.com/AdrWzCG.png',
+      'https://i.imgur.com/vnvTF74.png',
+      'https://i.imgur.com/LLyTVzY.jpg',
+      'https://i.imgur.com/p7uNLDh.jpg',
+      'https://i.imgur.com/JFlBP3P.jpg',
+      'https://i.imgur.com/CzokMI5.png',
+      'https://i.imgur.com/D8JqfFR.png',
+      'https://i.imgur.com/Zmpir3j.png',
+      'https://i.imgur.com/hE5CBI4.png',
+      'https://i.imgur.com/DxIvQKk.png',
+      'https://i.imgur.com/4SXbBDK.png',
+      'https://i.imgur.com/T9aHb2P.png',
+      'https://i.imgur.com/fvGAVge.png',
+      'https://i.imgur.com/6uPPTa6.png',
+      'https://i.imgur.com/ua4pm3v.png',
+      'https://i.imgur.com/RLujrpU.png',
+      'https://i.imgur.com/ZZavyMV.png',
+      'https://i.imgur.com/faWUMmc.png',
+      'https://i.imgur.com/Iw1AJ86.png',
+      'https://i.imgur.com/jGbCHaN.png',
+      'https://i.imgur.com/F7HlF9f.jpg',
+      'https://i.imgur.com/FGCxoW6.png',
+      'https://i.imgur.com/MNe8lQa.png',
+      'https://i.imgur.com/DBmFXwp.png',
+      'https://i.imgur.com/w7sJDLT.png',
+      'https://i.imgur.com/q3jFMHB.png',
+      'https://i.imgur.com/j0OkUuy.png',
+      'https://i.imgur.com/g0zMHSR.png',
+      'https://i.imgur.com/Yjx04bk.png',
+      'https://i.imgur.com/CA5oeQv.png',
+      'https://i.imgur.com/9TNHVLR.png',
+      'https://i.imgur.com/4YX0McQ.png',
+      'https://i.imgur.com/T1HYuFa.jpg',
+      'https://i.imgur.com/lWBdtyK.png',
+      'https://i.imgur.com/X6DkxhC.jpg',
+      'https://i.imgur.com/739aDya.png',
+      'https://i.imgur.com/Tijvlua.png',
+      'https://i.imgur.com/tq307Ma.png',
+      'https://i.imgur.com/pwfUJOd.jpg',
+      'https://i.imgur.com/QebQ0XY.png',
+      'https://i.imgur.com/lSMtS30.png',
+      'https://i.imgur.com/gjQAkyZ.png',
+      'https://i.imgur.com/AB6Uu3D.png',
+      'https://i.imgur.com/eIZRNy2.png',
+      'https://i.imgur.com/YIM3DN7.png',
+      'https://i.imgur.com/n6wJUly.png',
+      'https://i.imgur.com/zaDMGhv.png',
+      'https://i.imgur.com/w9fFM6h.png',
+      'https://i.imgur.com/2tpR7dC.jpg',
+      'https://i.imgur.com/ksnEC9e.png',
+      'https://i.imgur.com/8zXv9qp.jpg',
+      'https://i.imgur.com/OheMVbP.jpg',
+      'https://i.imgur.com/yZXFG0g.png',
+      'https://i.imgur.com/FLKdYSV.png',
+      'https://i.imgur.com/npachwz.jpg',
+      'https://i.imgur.com/u08NXA5.png',
+      'https://i.imgur.com/4oMnDO9.png',
+      'https://i.imgur.com/HGNkXC0.png'
+    ],
+    sources: ['Dr. John E. Mack (Harvard University) Field Interviews', 'Cynthia Hind African UFO Research']
   },  {
     id: 'anomaly-UFO-1008',
-    parentId: 'ufo-sightings-br',
-    name: 'Valensole UFO Incident - Valensole, France (1965)',
-    description: 'Lavender farmer Maurice Masse reported seeing an egg-shaped craft land in his field and observing two small humanoid figures. The landing left physical traces in the soil and caused Masse to experience temporary paralysis.',
-    layer: 'UFOs - Sightings',
-    mapFeatureId: 'anomaly-UFO-1008',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/8/8d/Valensole_humanoid.png'],
-    sources: ['MUFON (Mutual UFO Network) Database', 'Project Blue Book Archives']
+    parentId: 'alien-sightings-br',
+    relatedIds: ['alien-sighting-socorro-1964-node'],
+    name: 'Valensole Humanoid Encounter & Paralysis (1965)',
+    description: '[UNEXPLAINED / PHYSICAL TRACE CORROBORATION] Lavender farmer Maurice Masse encountered an egg-shaped craft and two small humanoid entities in Valensole, France. One entity aimed a device paralyzing Masse, while leaving deep calcinated impressions in the soil.',
+    layer: 'Alien Sightings',
+    mapFeatureId: 'alien-sighting-valensole-1965',
+    images: [
+      'https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/8/8d/Valensole_humanoid.png',
+      'https://images.weserv.nl/?url=https://i.redd.it/u8ehgxwzcl5g1.jpg'
+    ],
+    sources: ['French National Gendarmerie Case File', 'GEPAN Archive / Aimé Michel Investigation']
+  },  {
+    id: 'alien-sighting-socorro-1964-node',
+    parentId: 'alien-sightings-br',
+    relatedIds: ['anomaly-UFO-1008'],
+    name: 'Socorro Egg Craft & Occupant Encounter (Lonnie Zamora - 1964)',
+    description: '[UNEXPLAINED / PHYSICAL TRACE CORROBORATION] Police Sergeant Lonnie Zamora observed a white egg-shaped craft on four landing gear struts with a distinctive red insignia and two small humanoid figures in white coveralls in an arroyo outside Socorro, New Mexico. The craft blasted off with a roar and blue flame, leaving four deep trapezoidal landing gear depressions and scorched greasewood bushes in one of Project Blue Book\'s definitive unexplained landing cases.',
+    layer: 'Alien Sightings',
+    mapFeatureId: 'alien-sighting-socorro-1964',
+    images: [
+      'https://images.weserv.nl/?url=https://i.redd.it/9o0x5x80dl5g1.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Lonnie_Zamora-tuig_van_24_April_1964_te_Secorro%2C_NM%2C_a.jpg/500px-Lonnie_Zamora-tuig_van_24_April_1964_te_Secorro%2C_NM%2C_a.jpg',
+      'https://images.weserv.nl/?url=https://i.redd.it/u8ehgxwzcl5g1.jpg',
+      'https://www.youtube.com/watch?v=4ZkRTFqoLqM'
+    ],
+    sources: ['Project Blue Book Official Archive', 'FBI Declassified Memo', 'Dr. J. Allen Hynek Case File']
+  },  {
+    id: 'alien-sighting-nazca-tridactyl-node',
+    parentId: 'alien-sightings-br',
+    relatedIds: ['alien-sighting-atacama-ata-node'],
+    name: 'Nazca Tridactyl Mummies & Implants',
+    description: '[CONTROVERSIAL / SCIENTIFICALLY DEBATED - ANOMALOUS BIOLOGICALS] Desiccant-preserved tridactyl humanoid corpses with three elongated fingers and toes, elongated craniums, and metal alloy implants discovered in subterranean desert chambers near Nazca and Palpa, Peru. Subjected to extensive CT tomography, DICOM reconstructions, and international forensic examination.',
+    layer: 'Alien Sightings',
+    mapFeatureId: 'alien-sighting-nazca-tridactyl-2017',
+    images: [
+      'https://images.weserv.nl/?url=https://i.redd.it/bcrsqvb5yjkh1.jpg',
+      'https://images.weserv.nl/?url=https://i.redd.it/a9x1h5c5yjkh1.jpg',
+      'https://images.weserv.nl/?url=https://i.redd.it/th5vpxb5yjkh1.jpg',
+      'https://images.weserv.nl/?url=https://i.redd.it/l60wy3c5yjkh1.jpg',
+      'https://images.weserv.nl/?url=https%3A%2F%2Fexternal-preview.redd.it%2Fmedical-scans-of-the-new-tridactyl-v0-aTFuOTFmdWI2bGtoMcIryHGQ2P4g2Wm-zlKorDi-CphFyWQZp8v2C29LIhbZ.png%3Fwidth%3D1080%26crop%3Dsmart%26format%3Dpjpg%26auto%3Dwebp%26s%3Dea37bd380b1ef0d08696650b64078cf2d89ae94e',
+      'https://images.weserv.nl/?url=https%3A%2F%2Fexternal-preview.redd.it%2Fdicom-files-of-suyay-are-now-available-for-research-v0-ZjY4b2w0bzZ6eW9oMQ4Q4xZWNaKp_MdPrYDgEttrBuNrDlhruo3kqu9ikVPJ.png%3Fwidth%3D1080%26crop%3Dsmart%26format%3Dpjpg%26auto%3Dwebp%26s%3D352c01b9e2ac1b5d8f2086f9efe98ee776f84d63',
+      'https://images.weserv.nl/?url=https%3A%2F%2Fexternal-preview.redd.it%2Fdicom-files-for-the-insectoid-humanoid-specimen-known-as-v0-NjFxY2FtdWZpZW1oMe7zw4TS2YgoxPoOzn1I_46iDHCWlSYZVm2y7A2dmBit.png%3Fformat%3Dpjpg%26auto%3Dwebp%26s%3D9d5a29d612494de5a9d236856c186305ab0eb43f',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Wiki_JM.jpg/500px-Wiki_JM.jpg',
+      'https://www.youtube.com/watch?v=SA4WOZH2cZg'
+    ],
+    sources: ['Inkarri Cultural Institute', 'UNICA Forensic Investigation', 'Mexican Congressional Hearings (2023)']
   },  {
     id: 'anomaly-UFO-1009',
     parentId: 'ufo-sightings-br',
@@ -18249,7 +18380,7 @@ const chunk_4: any[] = [  {
     parentId: 'ancient-texts',
     name: 'Epic of Gilgamesh',
     description: 'A Mesopotamian epic poem containing the Sumerian story of the Great Flood survived by Utnapishtim, bearing strong similarities to the Genesis narrative.',
-    relatedIds: ['great-flood', 'noah-fig', 'nimrod-fig', 'enkidu', 'enki']
+    relatedIds: ['great-flood', 'noah-fig', 'nimrod-fig', 'enkidu', 'enki', 'ancient-flood-myths']
   },
   {
     id: 'holy-bible',
@@ -27874,6 +28005,159 @@ export const TERM_TREE_DATA: TermNode[] = [
     name: 'Alien Abductions',
     description: 'Documentation of major reported extraterrestrial abduction cases and close encounters.',
     layer: 'Alien Abductions'
+  },  {
+    id: 'abduction-hill-1961',
+    parentId: 'alien-abductions-br',
+    name: 'Betty and Barney Hill Abduction',
+    description: 'The seminal September 1961 New Hampshire encounter that established modern abduction lore and the Grey alien archetype. Betty and Barney Hill experienced two hours of missing time in the White Mountains, corroborated by Pease AFB radar returns, hypnotic regression with Dr. Benjamin Simon, Barney\'s sketch of the entity, and Betty\'s iconic Zeta Reticuli star map.',
+    layer: 'Alien Abductions',
+    timelineId: 'abduction-hill-1961',
+    mapFeatureId: 'abduction-hill-1961',
+    images: [
+      'https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/en/2/26/Barney_Hill_hypnosis_sketch_Feb_22%2C_1962_-_cropped_downrezed.png',
+      'https://images.weserv.nl/?url=https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/BH_Star_map.png/500px-BH_Star_map.png',
+      'https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/en/1/1d/Barney_Hill%2C_Betty_Hill_and_dog%2C_Desley.jpg'
+    ],
+    sources: ["John G. Fuller - 'The Interrupted Journey'", 'Dr. Benjamin Simon Transcripts', 'Pease AFB Radar Records', 'Marjorie Fish Astronomical Analysis'],
+    relatedIds: ['zeta-reticuli', 'greys', 'alien-abductions-br']
+  },  {
+    id: 'alien-sightings-br',
+    parentId: 'supernatural-anomalies',
+    name: 'Alien Sightings',
+    description: 'Visual records, photographs, footage, and encounter evidence of extraterrestrial and anomalous entities, including forensic analyses, debunked hoaxes, and unexplained encounters.',
+    layer: 'Alien Sightings'
+  },
+  {
+    id: 'alien-sighting-santilli-autopsy-node',
+    parentId: 'alien-sightings-br',
+    name: "Roswell Recovered Entities & 'Alien Autopsy' Film",
+    description: "[HISTORIC CONTROVERSY / HOAX RECONSTRUCTION] Accounts of extraterrestrial bodies recovered from the 1947 Roswell crash examined at Roswell Army Air Field, combined with Ray Santilli and Spyros Melaris's infamous 1995 'Alien Autopsy' 16mm film footage broadcast by Fox, later confessed to be a staged reconstruction.",
+    layer: 'Alien Sightings',
+    mapFeatureId: 'alien-sighting-santilli-autopsy-1995',
+    images: [
+      'https://www.youtube.com/watch?v=m9lTaQMvDvs'
+    ],
+    sources: ['Roswell Army Air Field 509th Records / Glenn Dennis Testimony / Spyros Melaris & John Humphreys Confessions'],
+    relatedIds: ['roswell-incident']
+  },  {
+    id: 'alien-sighting-solway-spaceman-node',
+    parentId: 'alien-sightings-br',
+    name: 'Solway Firth Spaceman Photograph',
+    description: "[EXPLAINED / IDENTIFIED - ACCIDENTAL OVEREXPOSURE] Jim Templeton's 1964 photo on Burgh Marsh depicting what appeared to be an astronaut behind his daughter; analysis confirmed it was Templeton's wife Annie overexposed by sunlight.",
+    layer: 'Alien Sightings',
+    mapFeatureId: 'alien-sighting-solway-spaceman-1964',
+    images: ['https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/en/6/65/SolwayfirthSpaceman.jpg'],
+    sources: ['Cumbria Police Archives / Kodak Analysis']
+  },  {
+    id: 'alien-sighting-hopkinsville-node',
+    parentId: 'alien-sightings-br',
+    name: 'Kelly-Hopkinsville Goblins Encounter',
+    description: '[UNEXPLAINED / AIR FORCE INVESTIGATED] The Sutton and Taylor families fought a four-hour siege against small metallic-skinned humanoid beings with glowing eyes and clawed hands hovering around their Kentucky farmhouse.',
+    layer: 'Alien Sightings',
+    mapFeatureId: 'alien-sighting-hopkinsville-1955',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Hopkinsville_goblin.png/500px-Hopkinsville_goblin.png'],
+    sources: ['Christian County Sheriff Logs / Project Blue Book']
+  },  {
+    id: 'alien-sighting-flatwoods-node',
+    parentId: 'alien-sightings-br',
+    name: 'Flatwoods Monster / Green Monster',
+    description: '[UNEXPLAINED / CONTROVERSIAL] A 10-foot entity with a dark spade cowl, glowing eyes, and pleated green torso that hissed and floated toward terrified youths in West Virginia, causing temporary toxic illness.',
+    layer: 'Alien Sightings',
+    mapFeatureId: 'alien-sighting-flatwoods-1952',
+    images: [
+      'https://images.weserv.nl/?url=https://i.redd.it/ke595k0tg6rf1.jpg',
+      'https://images.weserv.nl/?url=https://i.redd.it/ndylmq0tg6rf1.jpg',
+      'https://images.weserv.nl/?url=https://i.redd.it/5qknnp0tg6rf1.jpg',
+      'https://images.weserv.nl/?url=https://i.redd.it/ryla2m0tg6rf1.jpg',
+      'https://images.weserv.nl/?url=https://i.redd.it/2kdj5m0n98rf1.png',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Flatwoods_monster.png/330px-Flatwoods_monster.png',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Flatwoods_monster.svg/330px-Flatwoods_monster.svg.png'
+    ],
+    sources: ['Braxton County Historical Society / Gray Barker Records']
+  },  {
+    id: 'alien-sighting-atacama-ata-node',
+    parentId: 'alien-sightings-br',
+    name: "Atacama Skeleton ('Ata')",
+    description: '[EXPLAINED / DEBUNKED - HUMAN FETAL MUTATION] A 6-inch mummified humanoid with 10 ribs and elongated skull found in Chile. Initially claimed as alien, 2018 Stanford genomic analysis proved human fetal genetic mutations.',
+    layer: 'Alien Sightings',
+    mapFeatureId: 'alien-sighting-atacama-ata-2003',
+    images: ['https://images.weserv.nl/?url=https://i.redd.it/2xb42zw23lfh1.jpeg'],
+    sources: ['Stanford University Genetics / Genome Research (Nolan et al.)']
+  },  {
+    id: 'alien-sighting-falkville-node',
+    parentId: 'alien-sightings-br',
+    name: 'Falkville Metal Man',
+    description: '[PROVEN FALSE / HOAX - STAGED TIN-FOIL PRANK] Police Chief Jeff Greenhaw photographed a humanoid figure clad in metallic tin foil with an antenna, which outran his police cruiser at high speed.',
+    layer: 'Alien Sightings',
+    mapFeatureId: 'alien-sighting-falkville-metal-man-1973',
+    images: [
+      'https://www.youtube.com/watch?v=cphe8d5xnPA',
+      'https://images.weserv.nl/?url=https://images.squarespace-cdn.com/content/v1/628ac0bfe2be2849dcbf5996/050dcf76-064c-438f-bae3-c5690ca37f1a/falkville-metal-man.jpg'
+    ],
+    sources: ['Falkville Police Records / Jeff Greenhaw Polaroid Files']
+  },  {
+    id: 'alien-sighting-travis-walton-node',
+    parentId: 'alien-sightings-br',
+    name: 'Travis Walton Alien Entities Encounter',
+    description: '[UNEXPLAINED / HIGHLY CORROBORATED] After vanishing for five days following a beam strike in Arizona, logger Travis Walton reported waking in an examination room surrounded by short humanoid entities with large domed heads and dark eyes.',
+    layer: 'Alien Sightings',
+    mapFeatureId: 'alien-sighting-travis-walton-1975',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Walton%28reconstitution%29.png/500px-Walton%28reconstitution%29.png'],
+    sources: ['Navajo County Sheriff Department / Walton Polygraph Records']
+  },  {
+    id: 'alien-sighting-varginha-node',
+    parentId: 'alien-sightings-br',
+    name: 'Varginha Alien Entity Encounters',
+    description: "Three young women in Jardim Andere encountered a bipedal brown creature with cranial ridges and red eyes, sparking military cordons, hospital quarantines, and officer Marco Chereze's fatal infection.",
+    layer: 'Alien Sightings',
+    mapFeatureId: 'alien-sighting-varginha-1996',
+    images: [
+      'https://www.youtube.com/watch?v=ERhVhfrbRtw',
+      'https://images.weserv.nl/?url=https%3A%2F%2Fexternal-preview.redd.it%2Falien-from-the-varginha-crash-v0-Ga3_lSL6NfBAzdRcK5t2guHbZEtIe_OcNWGtylVlmgQ.jpeg%3Fformat%3Dpjpg%26auto%3Dwebp%26s%3D5fa71df6a1ef57f7470f5e13dd2f1c4b70282777',
+      'https://www.youtube.com/watch?v=jJJD5bwEcj0',
+      'https://images.weserv.nl/?url=https%3A%2F%2Fexternal-preview.redd.it%2Fallegedly-video-of-varginha-1996-creature-v0-b240YWJteHA4OGRnMZqVeuxJa1u7FMhWdcmXSRCi88iaoBtKHC1Yqn76eDze.png%3Fwidth%3D1080%26crop%3Dsmart%26format%3Dpjpg%26auto%3Dwebp%26s%3D2cefef736e4b14fe1de2892e12a9803372339f81'
+    ],
+    sources: ['Brazilian Military Inquest Records / Vitório Pacaccini']
+  },  {
+    id: 'alien-sighting-kyshtym-alyoshenka-node',
+    parentId: 'alien-sightings-br',
+    name: "Kyshtym Dwarf ('Alyoshenka')",
+    description: 'A 10-inch mummified specimen with a triangular skull found in the Ural mountains; subsequent Russian medical inquiry attributed the deformities to Mayak nuclear fallout.',
+    layer: 'Alien Sightings',
+    mapFeatureId: 'alien-sighting-kyshtym-alyoshenka-1996',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/%D0%9F%D0%B0%D0%BC%D1%8F%D1%82%D0%BD%D0%B8%D0%BA_%D0%9A%D1%8B%D1%88%D1%82%D1%8B%D0%BC%D1%81%D0%BA%D0%BE%D0%BC%D1%83_%D0%BA%D0%B0%D1%80%D0%BB%D0%B8%D0%BA%D1%83.jpg/500px-%D0%9F%D0%B0%D0%BC%D1%8F%D1%82%D0%BD%D0%B8%D0%BA_%D0%9A%D1%8B%D1%88%D1%82%D1%8B%D0%BC%D1%81%D0%BA%D0%BE%D0%BC%D1%83_%D0%BA%D0%B0%D1%80%D0%BB%D0%B8%D0%BA%D1%83.jpg'],
+    sources: ['Kyshtym Police Archives / Vladimir Bendlin']
+  },  {
+    id: 'alien-sighting-zanfretta-node',
+    parentId: 'alien-sightings-br',
+    name: 'Zanfretta Reptilian Entity Encounters',
+    description: 'Italian security guard Pier Fortunato Zanfretta experienced repeated physical encounters with 10-foot tall reptilian entities in Genoa, corroborated by police footprint casts and circular scorch marks.',
+    layer: 'Alien Sightings',
+    mapFeatureId: 'alien-sighting-zanfretta-1978',
+    images: ['https://images.weserv.nl/?url=https%3A%2F%2Fexternal-preview.redd.it%2Fitalian-night-watchman-pier-zanfretta-claimed-that-10-feet-v0-ZUUX1Q-JNgBXU4S-NnKkwST9maMdsYj3NFZWHhsISng.jpg%3Fauto%3Dwebp%26s%3D41f928ce78b66753c5f819f4d538fdf976ec0fe8'],
+    sources: ['Carabinieri Military Police Archives / Dr. Cesare Musatti']
+  },  {
+    id: 'alien-sighting-allagash-node',
+    parentId: 'alien-sightings-br',
+    name: 'Allagash Waterway Alien Entity Sketches',
+    description: 'Four art students independently produced identical, haunting sketches of four-fingered, large-headed Grey alien entities following a close encounter on Eagle Lake in northern Maine.',
+    layer: 'Alien Sightings',
+    mapFeatureId: 'alien-sighting-allagash-1976',
+    images: [
+      'https://images.weserv.nl/?url=https://i.redd.it/04r944tg5rsd1.jpg',
+      'https://images.weserv.nl/?url=https://i.redd.it/dejtgbgg5rsd1.jpg',
+      'https://images.weserv.nl/?url=https://i.redd.it/pwbiwxkn5rsd1.jpg'
+    ],
+    sources: ["Ray Fowler 'The Allagash Abductions'", 'Dr. Anthony Neves Hypnosis Transcripts']
+  },  {
+    id: 'alien-sighting-crowley-lam-node',
+    parentId: 'alien-sightings-br',
+    name: "The Entity 'Lam' (Occult Proto-Grey)",
+    description: "Aleister Crowley's 1918 drawing of an interdimensional intelligence contacted during the Amalantrah Working, bearing a striking resemblance to the classic Grey archetype decades before modern ufology.",
+    layer: 'Alien Sightings',
+    mapFeatureId: 'alien-sighting-crowley-lam-1918',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Supposed_channeled_entity_by_occultist_crowley.jpg/330px-Supposed_channeled_entity_by_occultist_crowley.jpg'],
+    sources: ["The Equinox III:1 / Kenneth Grant 'The Magical Revival'"]
   },  {
     id: 'cattle-mutilations-br',
     parentId: 'supernatural-anomalies',
@@ -38978,18 +39262,17 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'kumburgaz-ufo',
-    parentId: 'ufos',
-    name: 'Kumburgaz UFO Video',
+    parentId: 'alien-sightings-br',
+    name: 'Kumburgaz UFO Cockpit Entities',
     description: 'Famous series of night-vision UFO video footage captured between 2007 and 2009 by night watchman Yalcin Yalman in Kumburgaz, Turkey. Examined by the SIRIUS UFO Space Sciences Research Center and TÜBİTAK (National Technology Research Council), the zoomed footage depicts a disc-shaped craft hovering over the Sea of Marmara with two humanoid figures visible inside the cockpit area.',
-    layer: 'UFOs - Sightings',
+    layer: 'Alien Sightings',
     timelineId: 'kumburgaz-ufo',
-    mapFeatureId: 'kumburgaz-ufo',
+    mapFeatureId: 'alien-sighting-kumburgaz-2007',
     images: [
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/e/dd/Sea_of_Marmara_map.svg/500px-Sea_of_Marmara_map.svg.png',
-      'https://www.youtube.com/embed/0my1weBD67w'
+      'https://www.youtube.com/watch?v=0my1weBD67w'
     ],
     sources: ['SIRIUS UFO Space Sciences Research Center Report', 'TÜBİTAK Analysis', 'Corridor Crew Breakdown (https://www.reddit.com/r/Corridor/comments/1enaqyq/whats_your_take_on_the_kumburgaz_video_real_or/)'],
-    relatedIds: ['ufos', 'ufo-sightings']
+    relatedIds: ['skinny-bob', 'alien-sightings-br']
   },
   {
     id: 'longyou-caves',
@@ -39049,16 +39332,33 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'skinny-bob',
-    parentId: 'ufos',
-    name: 'Skinny Bob',
-    description: 'Notorious series of leaked videos uploaded to YouTube in 2011 by user "ivan0135," purporting to show KGB archival footage of an Extraterrestrial Biological Entity (EBE) nicknamed "Skinny Bob." Features high-detail footage of a Grey alien wearing a suit, a flying saucer crash site, and EBE height measurements, remaining a heavily debated topic in UFO forensics and CGI leak analysis.',
-    layer: 'UFOs - Sightings',
+    parentId: 'alien-sightings-br',
+    name: 'Skinny Bob (1942 Louisiana Disc Crash Retrieval)',
+    description: 'Famous series of leaked film reels uploaded to YouTube in 2011 by anonymous user "ivan0135," purporting to show classified archival footage of a live Extraterrestrial Biological Entity (EBE) nicknamed "Skinny Bob." The archive features "Tin Bird" (a flying saucer crash site in wooded terrain), "Flying Twin" (aerial photo reconnaissance from an Army Air Forces F-2 / Beechcraft Model 18), EBE height measurements, and close-up footage of the grey alien wearing a turtleneck-like garment with expressive facial blinks. Archival and FOIA research links the footage lore to a 1942 crash retrieval in Louisiana, corroborated by FBI Director J. Edgar Hoover\'s handwritten July 1947 memo ("in the La. case, the Army grabbed it and would not let us have it for cursory information") and the Cantwell S-Aircraft memo. Forensic debates continue between digital video effects analysts identifying Boris FX "Sapphire Film Damage" noise overlays and proponents arguing the underlying entity animation and vintage optical artifacts predate modern accessible CGI.',
+    layer: 'Alien Sightings',
+    timelineId: 'skinny-bob',
+    mapFeatureId: 'alien-sighting-skinny-bob',
     images: [
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Gray_Alien_at_UFO_Museum%2C_Roswell_%28cropped%29.jpg/500px-Gray_Alien_at_UFO_Museum%2C_Roswell_%28cropped%29.jpg',
-      'https://www.youtube.com/embed/GQToaAqPMvY'
+      'https://www.youtube.com/watch?v=8H3oZwBQ9Bc',
+      'https://images.weserv.nl/?url=https://skinnybob.info/media/youtube/thumbnails/3.jpg',
+      'https://images.weserv.nl/?url=https://skinnybob.info/media/youtube/thumbnails/4.jpg',
+      'https://images.weserv.nl/?url=https://skinnybob.info/media/youtube/thumbnails/1.jpg',
+      'https://images.weserv.nl/?url=https://i.redd.it/pdvmopvvx3391.jpg',
+      'https://images.weserv.nl/?url=https://i.redd.it/63bzsj0hx3391.jpg',
+      'https://images.weserv.nl/?url=https://i.redd.it/7ools34pz3391.jpg',
+      'https://images.weserv.nl/?url=https://i.redd.it/e7o4awsyz3391.jpg',
+      'https://images.weserv.nl/?url=https://i.redd.it/3l145e7d04391.jpg',
+      'https://images.weserv.nl/?url=https://i.redd.it/snj1aa8h34391.jpg'
     ],
-    sources: ['ivan0135 YouTube Archive (2011)', 'SkinnyBob.info Forensics', 'X Analysis (https://x.com/i/status/2075692034631835733)'],
-    relatedIds: ['ufos', 'ufo-whistleblowers']
+    sources: [
+      'ivan0135 YouTube Archive (2011)',
+      'FBI J. Edgar Hoover "La. Case" Handwritten Memo (July 1947)',
+      'Cantwell S-Aircraft Document (1942 Louisiana Disc Retrieval)',
+      'SkinnyBob.info Forensics',
+      'DEBRIEFED Ep 54 Area52 Analysis (https://www.youtube.com/watch?v=8H3oZwBQ9Bc)',
+      'Reddit Forensic Lore Investigation (https://www.reddit.com/r/ufo/comments/w5wtzg/the_lore_behind_the_skinny_bob_is_footage_from_a/)'
+    ],
+    relatedIds: ['kumburgaz-ufo', 'alien-sightings-br']
   },
   {
     id: 'khazars',
@@ -39151,20 +39451,6 @@ const chunk_user_requested_terms: any[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Nietzsche187a.jpg/330px-Nietzsche187a.jpg'],
     sources: ['Thus Spoke Zarathustra (Nietzsche, 1883)', 'The Reign of the Superman (Siegel & Shuster, 1933)'],
     relatedIds: ['nietzsche', 'kal-el-superman', 'folklore-archetypes-comparative']
-  },
-  {
-    id: 'interstellar-uap-alien',
-    parentId: 'ufos',
-    name: 'Kumburgaz UFO Footage',
-    description: 'Famous series of night-vision UFO video footage captured between 2007 and 2009 by night watchman Yalcin Yalman in Kumburgaz, Turkey. Examined by the SIRIUS UFO Space Sciences Research Center and TÜBİTAK (National Technology Research Council), the zoomed footage depicts a disc-shaped craft hovering over the Sea of Marmara with two humanoid figures visible inside the cockpit area.',
-    layer: 'UFOs - Sightings',
-    mapFeatureId: 'kumburgaz-ufo',
-    images: [
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Gray_Alien_at_UFO_Museum%2C_Roswell_%28cropped%29.jpg/500px-Gray_Alien_at_UFO_Museum%2C_Roswell_%28cropped%29.jpg',
-      'https://www.youtube.com/embed/0my1weBD67w'
-    ],
-    sources: ['SIRIUS UFO Space Sciences Research Center Report', 'TÜBİTAK Analysis', 'Military FLIR/Infrared UAP Telemetry'],
-    relatedIds: ['ufos', 'ufo-sightings', 'skinny-bob', 'kumburgaz-ufo']
   },
   {
     id: 'enoch-family-jared',
@@ -39368,16 +39654,219 @@ const chunk_user_requested_terms: any[] = [
     description: 'An ancient clay cuneiform prism listing the kings of Sumer and their reign lengths. Divided into pre-flood (antediluvian) kings who reigned for thousands of years (e.g. Alulim reigning 28,800 years) and post-flood kings whose lifespans shortened.',
     layer: 'Ancient Texts',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Sumerian_King_List_Weld-Blundell_Prism.jpg/500px-Sumerian_King_List_Weld-Blundell_Prism.jpg'],
-    sources: ['Ashmolean Museum Oxford', 'Sumerian Cuneiform Corpus']
+    sources: ['Ashmolean Museum Oxford', 'Sumerian Cuneiform Corpus'],
+    relatedIds: ['ancient-flood-myths', 'gilgamesh-text', 'great-flood']
   },
   {
     id: 'ancient-flood-myths',
-    parentId: 'myths-legends-root',
+    parentId: 'folklore-archetypes-comparative',
     name: 'Comparative Global Flood Myths',
-    description: 'Over 200 ancient cultures across the globe share cataclysmic deluge narratives: Epic of Gilgamesh (Utnapishtim), Genesis (Noah), Deucalion (Greek), Matsya (Hindu Avatar), Gun-Yu (China), and Popol Vuh (Maya).',
+    description: 'More than 250 distinct ancient cultures across every inhabited continent document catastrophic global deluge traditions. These accounts share strikingly consistent motifs: divine warning of coming judgment, a catastrophic flood wiping out corrupt humanity, a chosen patriarch or righteous family preserved in a vessel or on a sacred mountain, animal pairs or seeds preserved, birds released as reconnaissance, and the post-diluvian renewal of civilization. Select any regional tradition below to explore its specific narrative, sacred texts, and cultural variations.',
     layer: 'Myths / Legends',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Noahs_Ark_on_Mount_Ararat_by_Simon_de_Myle.jpg/500px-Noahs_Ark_on_Mount_Ararat_by_Simon_de_Myle.jpg'],
-    sources: ['Comparative Mythology (Joseph Campbell)', 'Epic of Gilgamesh Tablet XI']
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Noah%27s_Ark_on_Mount_Ararat_by_Simon_de_Myle.jpg/1280px-Noah%27s_Ark_on_Mount_Ararat_by_Simon_de_Myle.jpg'],
+    sources: [
+      'Comparative Mythology (Joseph Campbell)',
+      'Folk-lore in the Old Testament (Sir James George Frazer)',
+      'Epic of Gilgamesh Tablet XI',
+      'Genesis Deluge Narrative',
+      'Matsya Purana & Shatapatha Brahmana',
+      'Popol Vuh (Maya)',
+      'Classic of Mountains and Seas (Shan Hai Jing)'
+    ],
+    relatedIds: [
+      'great-flood',
+      'noah-fig',
+      'archaeology-noahs-ark-ararat',
+      'noahs-ark-find',
+      'gilgamesh-text',
+      'sumerian-king-list',
+      'gk-deucalion-flood',
+      'greek-mythology',
+      'andean-mesoamerican-lore',
+      'chinese-mythology',
+      'hindu-pantheon',
+      'folklore-archetypes-comparative'
+    ]
+  },
+  {
+    id: 'flood-myth-mesopotamia',
+    parentId: 'ancient-flood-myths',
+    name: 'Mesopotamian Deluge (Gilgamesh & Atrahasis)',
+    description: 'In ancient Mesopotamian lore recorded across the Epic of Gilgamesh (Tablet XI), the Atrahasis Epic, and the Sumerian Eridu Genesis, the gods resolve to purge humanity. The god Enki/Ea secretly warns King Utnapishtim (or Atrahasis / Ziusudra) through a reed wall, instructing him to dismantle his house and construct a colossal cube-shaped ship caulked with pitch and bitumen. The ship preserves his family, skilled craftsmen, and specimens of all living creatures through seven days of ferocious tempests before grounding atop Mount Nimush, where a dove, swallow, and raven are successively released.',
+    layer: 'Myths / Legends',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/British_Museum_Flood_Tablet_1.jpg/1280px-British_Museum_Flood_Tablet_1.jpg'],
+    sources: ['Epic of Gilgamesh (Tablet XI)', 'Atrahasis Epic', 'Eridu Genesis (Sumerian)', 'Babyloniaca (Berossus)'],
+    relatedIds: ['ancient-flood-myths', 'gilgamesh-text', 'sumerian-king-list', 'great-flood']
+  },
+  {
+    id: 'flood-myth-genesis-noah',
+    parentId: 'ancient-flood-myths',
+    name: "Genesis Flood Narrative (Noah's Ark)",
+    description: 'According to Genesis chapters 6–9, the wickedness of mankind and illicit corruption of the earth (amplified by the Nephilim in 1 Enoch) prompts Yahweh to cleanse the world with a universal cataclysm. The righteous patriarch Noah is commanded to construct a three-deck cypress ark (tebah) coated with pitch. Rain falls for 40 days while the fountains of the great deep burst open, submerging all high mountains. The ark comes to rest on the mountains of Ararat; Noah sends forth a raven and a dove that returns with an olive leaf, concluding with a rainbow covenant.',
+    layer: 'Myths / Legends',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Le_d%C3%A9luge_-_mus%C3%A9e_de_beaux_arts_de_Nantes_20091017.jpg/1280px-Le_d%C3%A9luge_-_mus%C3%A9e_de_beaux_arts_de_Nantes_20091017.jpg'],
+    sources: ['Genesis 6-9', 'Book of Enoch', 'Book of Jubilees', 'Antiquities of the Jews (Flavius Josephus)'],
+    relatedIds: ['ancient-flood-myths', 'great-flood', 'noah-fig', 'noahs-ark-find', 'archaeology-noahs-ark-ararat']
+  },
+  {
+    id: 'flood-myth-greek-deucalion',
+    parentId: 'ancient-flood-myths',
+    name: "Deucalion & Pyrrha's Deluge (Greek)",
+    description: 'In classical Greek mythology detailed by Ovid, Apollodorus, and Pindar, Zeus resolves to annihilate the corrupt Bronze Generation of mankind following King Lycaon\'s human sacrifices. The Titan Prometheus warns his mortal son Deucalion, who builds a wooden chest or ark (larnax) with his wife Pyrrha. After nine days and nights drifting on turbulent seas, the ark grounds on Mount Parnassus. Consulting the oracle of Themis, they are told to cast the "bones of their mother" over their shoulders—they throw stones of Mother Earth, which miraculously morph into new men and women.',
+    layer: 'Myths / Legends',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Peter_Paul_Rubens_-_Deucalion_and_Pyrrha%2C_1636.jpg/1280px-Peter_Paul_Rubens_-_Deucalion_and_Pyrrha%2C_1636.jpg'],
+    sources: ["Ovid's Metamorphoses", "Apollodorus' Bibliotheca", "Pindar's Olympian Odes"],
+    relatedIds: ['ancient-flood-myths', 'gk-deucalion-flood', 'greek-mythology']
+  },
+  {
+    id: 'flood-myth-hindu-matsya',
+    parentId: 'ancient-flood-myths',
+    name: 'Matsya Avatar & King Manu (Hindu Deluge)',
+    description: 'The Shatapatha Brahmana, Matsya Purana, and Mahabharata describe King Satyavrata (Manu) catching a tiny speaking fish in his hands, which pleads for protection. As the fish miraculously grows, it reveals itself as Matsya, the first avatar of Vishnu. Matsya forewarns of the cosmic dissolution (Pralaya) that will drown creation and instructs Manu to construct an enormous ship containing the Seven Sages (Saptarishi), herbal seeds, and living animals. Fastening the vessel to Matsya\'s golden horn with the cosmic serpent Vasuki, Manu is towed safely to Mount Himavat.',
+    layer: 'Myths / Legends',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Matsya_Avatar_1850.jpg/1280px-Matsya_Avatar_1850.jpg'],
+    sources: ['Shatapatha Brahmana', 'Matsya Purana', 'Mahabharata (Vana Parva)', 'Bhagavata Purana'],
+    relatedIds: ['ancient-flood-myths', 'hindu-pantheon', 'great-flood']
+  },
+  {
+    id: 'flood-myth-chinese-gun-yu',
+    parentId: 'ancient-flood-myths',
+    name: 'Great Flood of Gun-Yu & Nüwa (China)',
+    description: 'Ancient Chinese texts like the Shan Hai Jing and Shiji record a catastrophic, multi-generational inundation of the Yellow River valley. Gun attempts to suppress the floodwaters using stolen Xirang (divine breathing earth that expands indefinitely). When Gun fails, his son Yu the Great spends 13 years organizing massive dredging operations, cutting mountain gorges to drain the deluge into the eastern sea—founding the legendary Xia Dynasty. Related cosmologies describe goddess Nüwa repairing the fractured dome of heaven with five-colored stones after the water god Gonggong smashed Mount Buzhou.',
+    layer: 'Myths / Legends',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/King_Yu_of_Xia.jpg/1280px-King_Yu_of_Xia.jpg'],
+    sources: ['Classic of Mountains and Seas (Shan Hai Jing)', 'Records of the Grand Historian (Shiji)', 'Huainanzi'],
+    relatedIds: ['ancient-flood-myths', 'chinese-mythology', 'great-flood']
+  },
+  {
+    id: 'flood-myth-maya-popol-vuh',
+    parentId: 'ancient-flood-myths',
+    name: 'Popol Vuh Wooden Men Deluge (Maya)',
+    description: 'In the sacred Kʼicheʼ Maya Popol Vuh, the creator deities Tepeu and Gucumatz (Huracan, Heart of Heaven) fashion humanity in iterative stages. The third creation—the Men of Wood—reproduce and speak, but lack hearts, minds, and reverence for their creators. Angered, the gods summon a torrential downpour of heavy black resin while monstrous jaguars, predatory birds, and household utensils rise up against the wooden men. The few who escape into the canopy survive as tree-dwelling monkeys, preparing the earth for the fourth creation: the Men of Maize.',
+    layer: 'Myths / Legends',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Popol_Vuh_by_Francisco_Ximenez_1857.djvu/page1-1280px-Popol_Vuh_by_Francisco_Ximenez_1857.djvu.jpg'],
+    sources: ['Popol Vuh (Kʼicheʼ Maya)', 'Dresden Codex', 'Relación de las cosas de Yucatán (Diego de Landa)'],
+    relatedIds: ['ancient-flood-myths', 'andean-mesoamerican-lore', 'great-flood']
+  },
+  {
+    id: 'flood-myth-aztec-nahui-atl',
+    parentId: 'ancient-flood-myths',
+    name: 'Fourth Sun Nahui Atl Deluge (Aztec)',
+    description: 'In Nahua Aztec cosmology recorded in the Codex Chimalpopoca and Codex Vaticanus A, cosmological time is divided into Five Suns (epochs). The Fourth Sun, known as Nahui Atl (4-Water), was presided over by the water goddess Chalchiuhtlicue. This era ended when a torrential celestial deluge submerged all terrestrial lands, transforming humanity into fish. The god Tezcatlipoca warned a pious man named Tata and his wife Nene, advising them to hollow out the trunk of an ahuehuete cypress tree and carry roasted maize ears until the waters subsided.',
+    layer: 'Myths / Legends',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/File-Monolito_de_la_Piedra_del_Sol_%28centro%29.jpg/1280px-File-Monolito_de_la_Piedra_del_Sol_%28centro%29.jpg'],
+    sources: ['Codex Chimalpopoca (Legend of the Suns)', 'Codex Vaticanus A', 'Florentine Codex (Sahagún)'],
+    relatedIds: ['ancient-flood-myths', 'andean-mesoamerican-lore', 'great-flood']
+  },
+  {
+    id: 'flood-myth-inca-unu-pachakuti',
+    parentId: 'ancient-flood-myths',
+    name: 'Unu Pachakuti (Inca Great Deluge)',
+    description: 'Andean tradition recorded by Pedro Sarmiento de Gamboa and Father Cristóbal de Molina relates that the supreme creator deity Viracocha initially formed a race of stone giants. When they rebelled, Viracocha destroyed them with Unu Pachakuti ("Water-World-Turn"), a universal flood that covered the highest peaks of the Andes. Two shepherd brothers survived on the summit of Mount Ancasmarca after noticing their llamas weeping and staring at the stars in warning; as the waters rose, the mountain miraculously grew taller to keep them above the deluge.',
+    layer: 'Myths / Legends',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Machu_Picchu_Panorama_2025_%28cropped%29.jpg/1280px-Machu_Picchu_Panorama_2025_%28cropped%29.jpg'],
+    sources: ['Narratives of the Incas (Pedro Sarmiento de Gamboa)', 'Huarochirí Manuscript', 'Inca Garcilaso de la Vega'],
+    relatedIds: ['ancient-flood-myths', 'andean-mesoamerican-lore', 'great-flood']
+  },
+  {
+    id: 'flood-myth-native-american-earth-diver',
+    parentId: 'ancient-flood-myths',
+    name: 'Earth Diver & Nanabozho Deluge (Anishinaabe)',
+    description: 'Widely preserved across Algonquian, Iroquoian, and Anishinaabe traditions, the Earth Diver flood myth relates how the cultural hero Nanabozho (or Michabo / Glooscap) clashed with malevolent underwater serpents and lynxes (Mishipeshu), unleashing a deluge that inundated the world. Nanabozho gathered animals onto a floating raft of cedar logs. In order to recreate dry land, several animals—the loon, otter, and beaver—dived into the fathomless depths, but failed. Finally, the small muskrat (Wazhashk) surfaced with a speck of mud in its paws, which expanded upon the shell of a giant snapping turtle to form Turtle Island (North America).',
+    layer: 'Myths / Legends',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Nanabozho_pictograph%2C_Mazinaw_Rock.jpg/1280px-Nanabozho_pictograph%2C_Mazinaw_Rock.jpg'],
+    sources: ['Ojibwe Oral Tradition', 'Schoolcraft Indian Legends', 'American Anthropologist Archives'],
+    relatedIds: ['ancient-flood-myths', 'folklore-archetypes-comparative', 'great-flood']
+  },
+  {
+    id: 'flood-myth-hopi-emergence',
+    parentId: 'ancient-flood-myths',
+    name: 'Third World Emergence Deluge (Hopi)',
+    description: 'According to Hopi sacred history preserved in clan kiva ceremonies, the inhabitants of the Third World (Kuskurza) became corrupt through selfish technology and warmongering. Spider Grandmother (Kokyangwuti) and the creator god Sotuknang resolved to destroy the corrupt world by opening the floodgates of heaven and the subterranean ocean. Righteous individuals who remained pure of heart were sealed inside the buoyant hollow joints of tall reed stalks (paho). Drifting for many moons over boundless waters, they emerged onto the stepping stones of the Fourth World (Tuwaqachi).',
+    layer: 'Myths / Legends',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Arizona%2C_hopi%2C_otre_con_testa_di_katsina%2C_1890.jpg/1280px-Arizona%2C_hopi%2C_otre_con_testa_di_katsina%2C_1890.jpg'],
+    sources: ['Book of the Hopi (Frank Waters)', 'Hopi Oral Traditions (Kiva Records)', 'Smithsonian Ethnohistory Reports'],
+    relatedIds: ['ancient-flood-myths', 'folklore-archetypes-comparative', 'great-flood']
+  },
+  {
+    id: 'flood-myth-pacific-northwest-deluge',
+    parentId: 'ancient-flood-myths',
+    name: 'Pacific Northwest Mountain Ropes Deluge',
+    description: 'Indigenous nations of the Pacific Northwest—including the Coast Salish, Cowichan, Squamish, Haida, and Tlingit—preserve vivid oral histories of a colossal oceanic surge that suddenly inundated coastal bays and river valleys. Forewarned by medicine shamans or animal spirits, families lashed together massive cedar dugout war canoes using thick cedar-bark ropes, anchoring them to prominent mountain summits like Mount Yamnuska, Mount Garibaldi, and Mount Baker until the sea receded. Many clan crests depict the Thunderbird wrestling the Killer Whale during the heights of the flood.',
+    layer: 'Myths / Legends',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Thunderbird_on_Totem_Pole.jpg/1280px-Thunderbird_on_Totem_Pole.jpg'],
+    sources: ['Salish Oral Tradition', 'Cowichan Deluge Narratives (Franz Boas)', 'Haida Oral History'],
+    relatedIds: ['ancient-flood-myths', 'folklore-archetypes-comparative', 'great-flood']
+  },
+  {
+    id: 'flood-myth-norse-ymir-blood',
+    parentId: 'ancient-flood-myths',
+    name: "Ymir's Blood Deluge & Bergelmir (Norse)",
+    description: 'In the Old Norse cosmogony recorded in the Poetic Edda (Vafþrúðnismál) and Prose Edda (Gylfaginning by Snorri Sturluson), the primordial creation myth features a cataclysmic flood of bodily fluid rather than rain. When Odin and his brothers Vili and Vé slew the primeval hermaphroditic frost giant Ymir, an immense ocean of boiling blood gushed from his wounds, drowning all the primeval Jötnar (frost giants). Only the giant Bergelmir and his wife escaped by climbing aboard a hollowed wooden mill-box or trough (lúðr), thereby perpetuating the race of giants.',
+    layer: 'Myths / Legends',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Audhumla_by_Abildgaard.jpg/1280px-Audhumla_by_Abildgaard.jpg'],
+    sources: ['Poetic Edda (Vafþrúðnismál)', 'Prose Edda (Gylfaginning by Snorri Sturluson)'],
+    relatedIds: ['ancient-flood-myths', 'folklore-archetypes-comparative', 'great-flood']
+  },
+  {
+    id: 'flood-myth-celtic-llyn-llion',
+    parentId: 'ancient-flood-myths',
+    name: 'Bursting of Llyn Llion (Celtic / Welsh)',
+    description: 'Welsh Celtic antiquities recorded in the Welsh Triads (Trioedd Ynys Prydein) and medieval Bardic lore commemorate three catastrophic events in the British Isles, the first being the bursting of Llyn Llion (the Lake of Waves). The sudden subterranean eruption inundated the entirety of the island, drowning all inhabitants except for Dwyfan and Dwyfach, a man and woman who escaped in a mastless ship called the Nefydd Naf Neifion. On board, they harbored a male and female pair of every living creature, eventually re-establishing life on Prydain.',
+    layer: 'Myths / Legends',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Llyn_Llydaw.jpg/1280px-Llyn_Llydaw.jpg'],
+    sources: ['Welsh Triads (Trioedd Ynys Prydein)', 'The Myvyrian Archaiology of Wales', 'Bardic Chronicles'],
+    relatedIds: ['ancient-flood-myths', 'folklore-archetypes-comparative', 'great-flood']
+  },
+  {
+    id: 'flood-myth-hawaiian-nuu',
+    parentId: 'ancient-flood-myths',
+    name: 'Kai-a-ka-hinalii & Nuʻu (Hawaiian Flood)',
+    description: 'Polynesian Hawaiian oral tradition collected by Abraham Fornander and Martha Beckwith tells of Nuʻu, a righteous man warned by the creator god Kāne that a terrible deluge called Kai-a-ka-hinalii ("Sea of Kahinaliʻi") would submerge the earth. Nuʻu constructed a large ocean-going canoe (waʻa) with a wooden house built upon it, named Lono-i-ka-moana, and took his wife Lili-noe, their sons, and pairs of all living beasts aboard. When the raging ocean covered the highest mountain summits, the vessel finally grounded atop the dormant volcano Mauna Kea on the Big Island of Hawaii.',
+    layer: 'Myths / Legends',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Mauna_Kea_from_the_ocean.jpg/1280px-Mauna_Kea_from_the_ocean.jpg'],
+    sources: ['Fornander Collection of Hawaiian Antiquities and Folk-Lore', 'Hawaiian Mythology (Martha Beckwith)'],
+    relatedIds: ['ancient-flood-myths', 'folklore-archetypes-comparative', 'great-flood']
+  },
+  {
+    id: 'flood-myth-aboriginal-tiddalik',
+    parentId: 'ancient-flood-myths',
+    name: 'Tiddalik the Flood Frog (Australian Dreamtime)',
+    description: 'In Dreamtime mythology shared across Eastern Australian Aboriginal nations (Gunai/Kurnai and Woiwurrung), Tiddalik was a gargantuan mythical frog who awoke with an insatiable thirst and drank every river, lake, billabong, and puddle across Australia, causing devastating drought. To release the water, the ancestral animals convened and attempted to make Tiddalik laugh. When the eel Nabunum began performing dizzying contortions, Tiddalik finally laughed, unleashing an uncontrollable, cataclysmic tidal flood that drowned the lowlands, shaped the courses of modern riverways, and carved out islands.',
+    layer: 'Myths / Legends',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Aboriginal_rock_art%2C_Nourlangie_Rock%2C_Kakadu_-_panoramio.jpg/1280px-Aboriginal_rock_art%2C_Nourlangie_Rock%2C_Kakadu_-_panoramio.jpg'],
+    sources: ['Dreamtime Oral Traditions (Gunai/Kurnai & Woiwurrung)', 'Aboriginal Myths and Legends (Roland Robinson)'],
+    relatedIds: ['ancient-flood-myths', 'folklore-archetypes-comparative', 'great-flood']
+  },
+  {
+    id: 'flood-myth-yoruba-olokun',
+    parentId: 'ancient-flood-myths',
+    name: "Olokun's Oceanic Deluge (Yoruba)",
+    description: 'In Yoruba West African cosmology preserved within the sacred Odu Ifá divination corpus, the supreme sea goddess Olokun, enraged by the arrogance of humans and conflicts with the sky god Olorun, unleashed the ocean deeps across the land in a cataclysmic flood. Most of early humanity drowned in the rising waters. The orisha Orunmila consulted the divine oracle and interceded, while Obatala descended with sacred golden chains, a cockerel, and magic sand to push back the waves and establish permanent dry soil upon the Yoruba homeland.',
+    layer: 'Myths / Legends',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/British_Museum_Room_25_Head_of_a_king_Ife_17022019_5147.jpg/1280px-British_Museum_Room_25_Head_of_a_king_Ife_17022019_5147.jpg'],
+    sources: ['Ifá Corpus (Odu Ifá)', 'Yoruba Culture and Myth (William Bascom)', 'Myth, Religion and Society in Africa'],
+    relatedIds: ['ancient-flood-myths', 'folklore-archetypes-comparative', 'great-flood']
+  },
+  {
+    id: 'flood-myth-egypt-sekhmet-flood',
+    parentId: 'ancient-flood-myths',
+    name: 'Destruction of Mankind & Red Beer Flood (Egypt)',
+    description: 'In the ancient Egyptian Book of the Heavenly Cow (inscribed on the golden shrines of Tutankhamun and Seti I), the aging sun god Ra perceives that humanity is plotting rebellion. Ra sends forth his fierce Eye, embodied as the lioness goddess Hathor/Sekhmet, to slaughter the conspirators. When her bloodlust threatens to exterminate all living mortals, Ra takes pity and orders 7,000 jars of barley beer mixed with red ochre to flood the fields overnight. Mistaking the red deluge for human blood, Sekhmet drinks until intoxicated, falling asleep and preserving the surviving remnant of humanity.',
+    layer: 'Myths / Legends',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Sekhmet.svg/1280px-Sekhmet.svg.png'],
+    sources: ['Book of the Heavenly Cow (Tomb of Tutankhamun & Seti I)', 'Papyrus of Ani', 'Pyramid Texts'],
+    relatedIds: ['ancient-flood-myths', 'folklore-archetypes-comparative', 'great-flood']
+  },
+  {
+    id: 'flood-myth-southeast-asian-gourd',
+    parentId: 'ancient-flood-myths',
+    name: 'Cosmic Gourd Deluge (Miao / Hmong)',
+    description: 'Across Southern China and Southeast Asia—predominant among the Miao, Hmong, Yao, and Wa peoples—ancient folklore recounts a dispute between the Thunder Lord (Saub) and early humans that triggers a cataclysmic celestial deluge. A pious brother and sister show compassion to a captured spirit or animal and are gifted a magic tooth to plant in the soil. The seed rapidly sprouts into an enormous hollow gourd. When the waters rise to touch the heavens, the siblings take shelter inside the gourd with pairs of creatures, emerging upon dry mountain peaks to become the ancestors of modern humanity.',
+    layer: 'Myths / Legends',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Long_Horn_Miao_in_Longga_10.jpg/1280px-Long_Horn_Miao_in_Longga_10.jpg'],
+    sources: ['Hmong Folk Tales', 'Miao Genesis Songs (The Song of Creation)', 'Comparative Studies of Southeast Asian Deluge Motifs'],
+    relatedIds: ['ancient-flood-myths', 'folklore-archetypes-comparative', 'great-flood']
   }
 ];
 

@@ -1484,7 +1484,7 @@ export default function CartographyPage({
 
   // 3. Initialize Mapbox Map ONCE on mount
   useEffect(() => {
-    if (!mapContainerRef.current) return;
+    if (!mapContainerRef.current || !mapboxgl.supported()) return;
 
     const customBlankStyle: mapboxgl.Style = {
       version: 8,

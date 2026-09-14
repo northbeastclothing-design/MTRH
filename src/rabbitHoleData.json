@@ -28499,38 +28499,6 @@
     ]
   },
   {
-    "id": "anomaly-UFO-1007",
-    "name": "Ariel School UFO Incident - Ruwa, Zimbabwe (1994)",
-    "category": "UFOs - Sightings",
-    "type": "Point",
-    "coordinates": {
-      "lng": 31.2464,
-      "lat": -17.8928
-    },
-    "date": 1994,
-    "description": "Sixty-two students at the Ariel School in Ruwa reported seeing one or more silver craft land in a field near their school and witnessing humanoid beings emerge, who communicated telepathic messages regarding environmental preservation.",
-    "source": "Wikipedia - Ariel School UFO incident",
-    "images": [
-      "https://www.youtube.com/watch?v=gRtp_jUCq0o"
-    ]
-  },
-  {
-    "id": "anomaly-UFO-1008",
-    "name": "Valensole UFO Incident - Valensole, France (1965)",
-    "category": "UFOs - Sightings",
-    "type": "Point",
-    "coordinates": {
-      "lng": 5.9839,
-      "lat": 43.8378
-    },
-    "date": 1965,
-    "description": "Lavender farmer Maurice Masse reported seeing an egg-shaped craft land in his field and observing two small humanoid figures. The landing left physical traces in the soil and caused Masse to experience temporary paralysis.",
-    "source": "Wikipedia - UFO sightings in France",
-    "images": [
-      "https://upload.wikimedia.org/wikipedia/commons/8/8d/Valensole_humanoid.png"
-    ]
-  },
-  {
     "id": "anomaly-UFO-1009",
     "name": "Colares UFO Incident - Operation Saucer (1977)",
     "category": "UFOs - Sightings",

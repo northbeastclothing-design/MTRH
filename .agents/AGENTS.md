@@ -42,5 +42,7 @@ Whenever adding or updating a root category/layer in the Map, Timeline, or Codex
 1. **Define in LAYER_COLORS / LAYER_CONFIG**: Add the layer name and color mapping to `LAYER_COLORS` and `LAYER_ICONS` in `src/CodexPage.tsx`, and `LAYER_CONFIG` in `src/App.tsx`.
 2. **Explicitly Map in `getNodeColor`**: If the layer maps to a root node in `TERM_TREE_DATA` (defined in `src/termTreeData.ts`), you MUST explicitly map its root node ID to its theme color in the `getNodeColor` function in `src/CodexPage.tsx`. Do not let it fall back to the default purple-blue (`#b6a6ff`).
 3. **Contrast Adjustments**: Add the corresponding contrast-adjusted dark color for the light mode theme in `adjustColorForContrast` inside `src/CodexPage.tsx`.
+4. **Layer Icon SVG Background Color Protocol**: Every layer icon in `public/icons/` contains a circular background fill (`<circle cx="15" cy="15" r="15" fill="[THEME_COLOR]"/>`). Whenever adding a new layer or changing a layer's theme color, you MUST ensure that the layer has its own dedicated SVG icon in `public/icons/` whose background `<circle>` fill matches its assigned theme color (never reuse another layer's icon file if their theme colors differ). Update `LAYER_ICONS` across `src/App.tsx`, `src/CodexPage.tsx`, and `validate-data.ts` to reference the dedicated SVG icon.
+
 
 

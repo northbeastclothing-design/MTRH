@@ -53,6 +53,7 @@ export const LAYER_COLORS: Record<string, string> = {
   'Burial Mounds': '#B3C77B',
   'Cave Systems': '#B9BDAD',
   'Alien Abductions': '#C0F06E',
+  'Alien Sightings': '#90E9FF',
   'Cattle Mutilations': '#D59CF1',
   'Crop Circles': '#FFF96A',
   "D.U.M.B.'s": '#BAEAF4',
@@ -101,6 +102,7 @@ const LAYER_ICONS: Record<string, string> = {
   'Burial Mounds': '/icons/icon-burial-mounds.svg',
   'Cave Systems': '/icons/icon-caves.svg',
   'Alien Abductions': '/icons/icon-alien.svg',
+  'Alien Sightings': '/icons/icon-alien-sightings.svg',
   'Cattle Mutilations': '/icons/icon-cow.svg',
   'Crop Circles': '/icons/icon-crop-circles.svg',
   "D.U.M.B.'s": '/icons/icon-dumbs.svg',
@@ -615,6 +617,7 @@ const cleanAndProxyImageUrl = (url: any) => {
 
   if (trimmedUrl.startsWith('http')) {
     if (trimmedUrl.includes('weserv.nl')) return trimmedUrl;
+    if (trimmedUrl.includes('imgur.com')) return trimmedUrl;
     return `https://images.weserv.nl/?url=${encodeURIComponent(trimmedUrl)}`;
   }
 
@@ -801,6 +804,10 @@ export default function CodexPage({
   const [lines, setLines] = useState<SVGLinePath[]>([]);
   const [scrollSize, setScrollSize] = useState({ width: 0, height: 0 });
   const [isRightCollapsed, setIsRightCollapsed] = useState(true);
+  const isRightCollapsedRef = useRef(isRightCollapsed);
+  useEffect(() => {
+    isRightCollapsedRef.current = isRightCollapsed;
+  }, [isRightCollapsed]);
   
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [brokenImages, setBrokenImages] = useState<Record<string, boolean>>({});
@@ -994,7 +1001,7 @@ export default function CodexPage({
 
   // Compute terms visible/matched for search query
   // Helper to trace path from node to root
-  const getPathToRoot = (id: string | null): string[] => {
+  const getPathToRoot = useCallback((id: string | null): string[] => {
     const path: string[] = [];
     let curr = id;
     while (curr) {
@@ -1003,7 +1010,7 @@ export default function CodexPage({
       curr = node?.parentId || null;
     }
     return path;
-  };
+  }, [nodes]);
 
 
 
@@ -1061,11 +1068,15 @@ export default function CodexPage({
     let curr = node;
     while (curr.parentId) {
       if (curr.id === 'vanished-ships-aircraft') return '#E7EC5B';
+      if (curr.id === 'alien-sightings-br') return '#90E9FF';
+      if (curr.id === 'alien-abductions-br') return '#C0F06E';
       const parent = nodes.find(n => n.id === curr.parentId);
       if (!parent) break;
       curr = parent;
     }
     if (curr.id === 'vanished-ships-aircraft') return '#E7EC5B';
+    if (curr.id === 'alien-sightings-br') return '#90E9FF';
+    if (curr.id === 'alien-abductions-br') return '#C0F06E';
 
     if (curr.id === 'biblical-apocryphal') return '#90C2FF'; // Blue (Biblical Figures)
     if (curr.id === 'myths-legends-root') return '#FFF96A'; // Yellow/Gold (Myths / Legends)
@@ -1117,7 +1128,7 @@ export default function CodexPage({
       case '#74f8f3': // Archaeological Finds
         return '#005c5c'; // Dark teal
       case '#baeaf4': // D.U.M.B.'s
-      case '#90e9ff': // Particle Accelerators (CERN)
+      case '#90e9ff': // Particle Accelerators (CERN) / Alien Sightings
         return '#114b59'; // Dark blue-teal
       case '#90c2ff': // Biblical Figures
       case '#bdc4ff': // Ghosts & Hauntings / Blurred
@@ -1147,6 +1158,8 @@ export default function CodexPage({
         return '#3c4f57'; // Dark slate blue-gray
       case '#e7ec5b': // Vanished Ships / Aircraft
         return '#616600'; // Dark olive green/yellow
+      case '#c0f06e': // Alien Abductions
+        return '#3a6600'; // Dark lime green
       default:
         return color;
     }
@@ -1969,20 +1982,28 @@ export default function CodexPage({
 
       // 1. Horizontal Scroll Centering
       const colCenterX = 1200 + colIdx * 300 + 130;
-      const sidebarOffset = isMobile ? 0 : (isRightCollapsed ? 0 : 300);
+      const sidebarOffset = isMobile ? 0 : (isRightCollapsedRef.current ? 0 : 300);
       const targetScrollLeft = colCenterX - (viewportWidth - sidebarOffset) / 2;
 
       // 2. Vertical Scroll Centering
-      let targetScrollTop = 3000 - viewportHeight / 2; // Default fallback to center of column layout
+      let viewableHeight = viewportHeight;
+      if (isMobile) {
+        // Subtract bottom drawer overlap height to find active vertical center in viewable upper viewport
+        const drawerHeight = isMobileDrawerExpanded ? viewportHeight * 0.7 : (selectedTermId ? 108 : 60);
+        viewableHeight = viewportHeight - drawerHeight;
+      }
+      let targetScrollTop = 3000 - viewableHeight / 2; // Default fallback to center of column layout (3000px)
 
       if (nodeId) {
-        // Find the specific node pill element
-        let element: HTMLElement | null = null;
-        for (let c = 0; c < 10; c++) {
-          const el = document.getElementById(`node-pill-${nodeId}-${c}`);
-          if (el) {
-            element = el;
-            break;
+        // Find the specific node pill element, prioritizing the target column
+        let element: HTMLElement | null = document.getElementById(`node-pill-${nodeId}-${colIdx}`);
+        if (!element) {
+          for (let c = 0; c < 10; c++) {
+            const el = document.getElementById(`node-pill-${nodeId}-${c}`);
+            if (el) {
+              element = el;
+              break;
+            }
           }
         }
 
@@ -1993,14 +2014,9 @@ export default function CodexPage({
           // Calculate vertical center relative to scroll container content height coordinates
           const elementYInScroll = elementRect.top - containerRect.top + container.scrollTop;
           
-          let viewableHeight = viewportHeight;
-          if (isMobile) {
-            // Subtract bottom drawer overlap height to find active vertical center in viewable upper viewport
-            const drawerHeight = isMobileDrawerExpanded ? viewportHeight * 0.7 : (selectedTermId ? 108 : 60);
-            viewableHeight = viewportHeight - drawerHeight;
+          if (elementYInScroll > 500) {
+            targetScrollTop = (elementYInScroll + elementRect.height / 2) - viewableHeight / 2;
           }
-          
-          targetScrollTop = (elementYInScroll + elementRect.height / 2) - viewableHeight / 2;
         }
       }
 
@@ -2017,7 +2033,47 @@ export default function CodexPage({
     };
 
     performScroll();
-  }, [isRightCollapsed, isMobile, isMobileDrawerExpanded, selectedTermId]);
+  }, [isMobile, isMobileDrawerExpanded, selectedTermId]);
+
+  // Unified helper to navigate to and center on any term node in the Codex
+  const navigateToTerm = useCallback((nodeOrId: TermNode | string) => {
+    const id = typeof nodeOrId === 'string' ? nodeOrId : nodeOrId.id;
+    const targetNode = typeof nodeOrId === 'string' ? nodes.find(n => n.id === id) : nodeOrId;
+    userHasPannedRef.current = false;
+    hasCenteredInitialRef.current = true;
+    const path = getPathToRoot(id);
+    if (path.length > 0) {
+      setSelectedPath(path);
+      isRightCollapsedRef.current = false;
+      setIsRightCollapsed(false);
+
+      const hasChildren = targetNode ? checkNodeHasSubItems(targetNode) : false;
+      const targetCol = hasChildren ? path.length : path.length - 1;
+
+      let attempts = 0;
+      const tryCenter = () => {
+        let element: HTMLElement | null = document.getElementById(`node-pill-${id}-${targetCol}`);
+        if (!element) {
+          for (let c = 0; c < 10; c++) {
+            const el = document.getElementById(`node-pill-${id}-${c}`);
+            if (el) {
+              element = el;
+              break;
+            }
+          }
+        }
+
+        if (element || attempts > 8) {
+          centerOnNode(id, targetCol, false);
+        } else {
+          attempts++;
+          setTimeout(tryCenter, 50);
+        }
+      };
+
+      setTimeout(tryCenter, 50);
+    }
+  }, [nodes, getPathToRoot, checkNodeHasSubItems, centerOnNode]);
 
   // Initial entrance/navigation scroll centering (centers Column 0 on load/tab switch)
   useEffect(() => {
@@ -2054,48 +2110,12 @@ export default function CodexPage({
   // Handle external focus on a specific term
   useEffect(() => {
     if (focusedTermId) {
-      userHasPannedRef.current = false;
-      hasCenteredInitialRef.current = true;
-      const path = getPathToRoot(focusedTermId);
-      if (path.length > 0) {
-        setSelectedPath(path);
-        setIsRightCollapsed(false);
-
-        // Center on the focused node horizontally and vertically once DOM node is rendered
-        const targetNode = nodes.find(n => n.id === focusedTermId);
-        const hasChildren = targetNode ? checkNodeHasSubItems(targetNode) : false;
-        const targetCol = hasChildren ? path.length : path.length - 1;
-
-        let attempts = 0;
-        const tryCenter = () => {
-          let element: HTMLElement | null = null;
-          for (let c = 0; c < 10; c++) {
-            const el = document.getElementById(`node-pill-${focusedTermId}-${c}`);
-            if (el) {
-              element = el;
-              break;
-            }
-          }
-
-          if (element || attempts > 8) {
-            centerOnNode(focusedTermId, targetCol, false);
-            if (onFocusedTermConsumed) {
-              onFocusedTermConsumed();
-            }
-          } else {
-            attempts++;
-            setTimeout(tryCenter, 50);
-          }
-        };
-
-        setTimeout(tryCenter, 50);
-      } else {
-        if (onFocusedTermConsumed) {
-          onFocusedTermConsumed();
-        }
+      navigateToTerm(focusedTermId);
+      if (onFocusedTermConsumed) {
+        onFocusedTermConsumed();
       }
     }
-  }, [focusedTermId, onFocusedTermConsumed, checkNodeHasSubItems, centerOnNode, nodes]);
+  }, [focusedTermId, onFocusedTermConsumed, navigateToTerm]);
 
   // Automatically expand sidebar when a term is selected
   useEffect(() => {
@@ -2287,8 +2307,7 @@ export default function CodexPage({
                   if (searchActiveIndex >= 0 && searchActiveIndex < searchSuggestions.length) {
                     e.preventDefault();
                     const node = searchSuggestions[searchActiveIndex];
-                    const path = getPathToRoot(node.id);
-                    setSelectedPath(path);
+                    navigateToTerm(node);
                     setSearchQuery('');
                   }
                 } else if (e.key === 'Escape') {
@@ -2362,8 +2381,7 @@ export default function CodexPage({
                       onClick={(e) => {
                         e.stopPropagation();
                         e.preventDefault();
-                        const path = getPathToRoot(node.id);
-                        setSelectedPath(path);
+                        navigateToTerm(node);
                         setSearchQuery('');
                       }}
                       style={{
@@ -2504,6 +2522,7 @@ export default function CodexPage({
                 }}
                 style={{
                   position: 'absolute',
+                  top: `${colTop}px`,
                   left: `${colLeft}px`,
                   width: '260px',
                   display: 'flex',
@@ -3467,8 +3486,7 @@ export default function CodexPage({
                             <button 
                               key={relId} 
                               onClick={() => {
-                                const path = getPathToRoot(relId);
-                                setSelectedPath(path);
+                                navigateToTerm(relId);
                               }}
                               title={`Navigate to ${relNode.name}`}
                               style={{ 

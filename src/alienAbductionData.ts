@@ -26,9 +26,13 @@ export const ALIEN_ABDUCTION_DATA: AlienAbductionCase[] = [
     },
     "date": 1961,
     "displayDate": "09-19-1961",
-    "description": "Widely regarded as the first well-documented and publicized alien abduction case in United States history. While driving home along US Route 3 through the White Mountains, the couple observed a bright flying object that descended towards their vehicle. They subsequently experienced two hours of missing time and, under hypnosis, recalled being examined by grey-skinned extraterrestrial entities on board the craft.",
-    "source": "NH Division of Historical Resources / John G. Fuller - The Interrupted Journey",
-    "images": ["https://upload.wikimedia.org/wikipedia/commons/6/69/BH_Star_map.png"]
+    "description": "[FOUNDATIONAL ABDUCTION ARCHETYPE] Widely regarded as the first well-documented and publicized alien abduction case in modern history. While driving south on US Route 3 through the White Mountains, Betty and Barney Hill observed a bright, pancake-shaped craft with glowing rim lights descending toward their car. Through binoculars, Barney observed humanoid crew members in shiny dark uniforms looking down from a curved bank of windows. The couple experienced two hours of missing time and 35 miles of unremembered travel, accompanied by anomalous rhythmic buzzing sounds on the car's trunk lid. Simultaneous radar detection from Pease Air Force Base in Portsmouth, NH confirmed an unidentified anomalous target in the vicinity. Under separate regressive hypnosis conducted by Boston psychiatrist Dr. Benjamin Simon, both recounted being taken aboard the craft, separated, and examined by grey-skinned extraterrestrial humanoids with oversized hairless heads and large slanted eyes. Betty Hill produced an astronomical drawing of a holographic star map shown to her by the entity leader, which amateur astronomer Marjorie Fish later matched to the Zeta Reticuli binary star system, establishing the worldwide archetype of the Grey alien abduction phenomenon.",
+    "source": "NH Division of Historical Resources / John G. Fuller - 'The Interrupted Journey' / Dr. Benjamin Simon Medical Transcripts / Marjorie Fish Astronomical Analysis",
+    "images": [
+      "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/en/2/26/Barney_Hill_hypnosis_sketch_Feb_22%2C_1962_-_cropped_downrezed.png",
+      "https://images.weserv.nl/?url=https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/BH_Star_map.png/500px-BH_Star_map.png",
+      "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/en/1/1d/Barney_Hill%2C_Betty_Hill_and_dog%2C_Desley.jpg"
+    ]
   },
   {
     "id": "abduction-walton-1975",
