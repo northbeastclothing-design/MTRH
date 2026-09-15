@@ -15183,7 +15183,12 @@ const chunk_3: any[] = [  {
     description: 'Captured by former U.S. Forest Service patrolman Paul Freeman near Walla Walla, Washington, this video depicts a large, dark, shaggy figure walking through the dense forest brush. Freeman was a dedicated tracker who also collected numerous plaster casts of footprints.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-982',
-    images: ['https://www.youtube.com/watch?v=mtrbAu8yEAI'],
+    images: [
+      'https://www.youtube.com/watch?v=vtX91ftI4SA',
+      'https://www.youtube.com/watch?v=d_Fnp03gbes',
+      'https://i.ytimg.com/vi/d_Fnp03gbes/maxresdefault.jpg',
+      'https://i.ytimg.com/vi/vtX91ftI4SA/hqdefault.jpg'
+    ],
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-983',
