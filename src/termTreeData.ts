@@ -15210,7 +15210,11 @@ const chunk_3: any[] = [  {
     description: 'Recorded on July 4, 2013, in the mountains of Utah, this controversial footage shows a large bipedal figure walking on a hillside carrying an infant-sized creature, sparking widespread frame-by-frame analysis in the research community.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-985',
-    images: ['https://www.youtube.com/watch?v=jit4U1913FE'],
+    images: [
+      'https://www.youtube.com/watch?v=iYlhhaHHNyU',
+      'https://www.youtube.com/watch?v=QppMu34ebRQ',
+      'https://i.ytimg.com/vi/iYlhhaHHNyU/maxresdefault.jpg'
+    ],
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-986',
