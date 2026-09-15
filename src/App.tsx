@@ -1199,7 +1199,7 @@ const CategoryLayerHeader = ({
           <div style={{ width: '32px', height: '32px', minWidth: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
             <img 
               src={getCategoryIcon(layerName)} 
-              onError={(e) => { e.currentTarget.src = '/icons/icon-cave-drawings.svg'; }}
+              onError={(e) => { e.currentTarget.src = '/icons/icon-map-pin.svg'; }}
               style={{ width: '30px', height: '30px' }} 
               alt={layerName} 
             />
@@ -5612,7 +5612,8 @@ function App() {
         'crop-circles', 'cryptid-sightings', 'Megaliths', 'dumbs',
         'entrances-to-underworld', 'ghosts', 'giants', 'megaliths',
         'national-parks-reserves', 'ufo-sightings', 'map-pin', 'petroglyphs',
-        'meteors', 'ley-lines', 'archaeological-finds', 'biblical-discoveries', 'geoglyphs'
+        'meteors', 'ley-lines', 'archaeological-finds', 'biblical-discoveries', 'geoglyphs',
+        'alien-sightings'
       ];
       
       let loadedCount = 0;
@@ -6434,7 +6435,7 @@ function App() {
         const img = document.createElement('img');
         img.src = icon;
         img.onerror = () => {
-          img.src = '/icons/icon-cave-drawings.svg';
+          img.src = '/icons/icon-map-pin.svg';
         };
         img.style.width = '30px';
         img.style.height = '30px';
@@ -7406,7 +7407,7 @@ function App() {
   };
 
   const getCodexNodeIcon = (node: any) => {
-    if (!node) return '/icons/icon-petroglyphs.svg';
+    if (!node) return '/icons/icon-map-pin.svg';
     const layerIcons: Record<string, string> = {
       'UFOs - War.gov': '/icons/icon-ufo-wargov.svg',
       'UFOs - Brazillian Archives': '/icons/icon-ufo-brazilian.svg',
@@ -7466,7 +7467,7 @@ function App() {
       'particle-accelerators-root': '/icons/icon-cern.svg',
       'vanished-ships-aircraft-root': '/icons/icon-vanished-ships-aircraft.svg'
     };
-    return layerIcons[node.layer || ''] || layerIcons[node.name || ''] || layerIcons[node.id || ''] || '/icons/icon-petroglyphs.svg';
+    return layerIcons[node.layer || ''] || layerIcons[node.name || ''] || layerIcons[node.id || ''] || '/icons/icon-map-pin.svg';
   };
 
   const renderCodexMobileDetails = () => {
@@ -10748,7 +10749,7 @@ function App() {
                         <div style={{ width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                           <img 
                             src={getCategoryIcon(selectedFeature.categories?.[0] || '')} 
-                            onError={(e) => { e.currentTarget.src = '/icons/icon-cave-drawings.svg'; }}
+                            onError={(e) => { e.currentTarget.src = '/icons/icon-map-pin.svg'; }}
                             style={{ width: '30px', height: '30px' }} 
                             alt="layer-icon" 
                           />
@@ -11956,7 +11957,7 @@ function App() {
                         <div style={{ width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                           <img 
                             src={rootCatIcon} 
-                            onError={(e) => { e.currentTarget.src = '/icons/icon-cave-drawings.svg'; }}
+                            onError={(e) => { e.currentTarget.src = '/icons/icon-map-pin.svg'; }}
                             style={{ width: '30px', height: '30px' }} 
                             alt="category-icon" 
                             draggable={false}

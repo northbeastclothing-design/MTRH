@@ -2836,7 +2836,7 @@ export default function CodexPage({
                           <div style={{ width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                             <img 
                               src={getNodeIcon(rootCat)} 
-                              onError={(e) => { e.currentTarget.src = '/icons/icon-cave-drawings.svg'; }}
+                              onError={(e) => { e.currentTarget.src = '/icons/icon-map-pin.svg'; }}
                               style={{ width: '30px', height: '30px' }} 
                               alt="category-icon" 
                               draggable={false}
