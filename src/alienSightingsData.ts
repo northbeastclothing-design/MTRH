@@ -29,7 +29,11 @@ export const ALIEN_SIGHTINGS_DATA: AlienSightingCase[] = [
     description: "[HISTORIC CONTROVERSY / HOAX RECONSTRUCTION] Following the July 1947 crash retrieval near Corona by the 509th Bomb Group at Roswell Army Air Field, local mortician Glenn Dennis, Sheriff George Wilcox, and witnesses alleged that small non-human bodies with oversized hairless craniums and dark almond eyes were transported to the base hospital for medical examination before transfer to Wright Field. Decades later in 1995, British video entrepreneur Ray Santilli released sensational 16mm black-and-white film footage purporting to show a classified 1947 U.S. military medical autopsy on a recovered Roswell extraterrestrial, broadcast to millions worldwide on Fox. In 2006, director Spyros Melaris and sculptor John Humphreys confessed the footage was staged in a London flat using a latex dummy packed with animal organs, though Santilli maintained it was a reconstruction of damaged original 1947 reels.",
     source: "Roswell Army Air Field 509th Records / Glenn Dennis Testimony / Spyros Melaris & John Humphreys Confessions",
     images: [
-      "https://www.youtube.com/watch?v=m9lTaQMvDvs"
+      "https://www.youtube.com/watch?v=-kWZ3JPFjm4",
+      "https://www.youtube.com/watch?v=GxZItnSe5gY",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Alien_Autopsy_Exhibit_at_UFO_Museum_-_Roswell%2C_New_Mexico.jpg/960px-Alien_Autopsy_Exhibit_at_UFO_Museum_-_Roswell%2C_New_Mexico.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Roswell_UFO_Museum_-_Alien_Autopsy_%286080682876%29.jpg/960px-Roswell_UFO_Museum_-_Alien_Autopsy_%286080682876%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Alien_Autopsy_room%2C_UFO_Museum_in_Roswell.jpg/960px-Alien_Autopsy_room%2C_UFO_Museum_in_Roswell.jpg"
     ]
   },
   {

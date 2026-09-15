@@ -28035,7 +28035,11 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Alien Sightings',
     mapFeatureId: 'alien-sighting-santilli-autopsy-1995',
     images: [
-      'https://www.youtube.com/watch?v=m9lTaQMvDvs'
+      'https://www.youtube.com/watch?v=-kWZ3JPFjm4',
+      'https://www.youtube.com/watch?v=GxZItnSe5gY',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Alien_Autopsy_Exhibit_at_UFO_Museum_-_Roswell%2C_New_Mexico.jpg/960px-Alien_Autopsy_Exhibit_at_UFO_Museum_-_Roswell%2C_New_Mexico.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Roswell_UFO_Museum_-_Alien_Autopsy_%286080682876%29.jpg/960px-Roswell_UFO_Museum_-_Alien_Autopsy_%286080682876%29.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Alien_Autopsy_room%2C_UFO_Museum_in_Roswell.jpg/960px-Alien_Autopsy_room%2C_UFO_Museum_in_Roswell.jpg'
     ],
     sources: ['Roswell Army Air Field 509th Records / Glenn Dennis Testimony / Spyros Melaris & John Humphreys Confessions'],
     relatedIds: ['roswell-incident']
