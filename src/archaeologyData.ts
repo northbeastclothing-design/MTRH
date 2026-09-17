@@ -864,18 +864,6 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
     images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Kensington_runestone_front.jpg/500px-Kensington_runestone_front.jpg"]
   },
   {
-    id: "archaeology-serpent-mound",
-    name: "Great Serpent Mound - Adams County, Ohio, USA",
-    category: "Burial Mounds",
-    type: "Point",
-    coordinates: { lng: -83.4300, lat: 39.0253 },
-    date: -300,
-    displayDate: "c. 300 BC - 1000 AD",
-    description: "A 1,348-foot-long prehistoric effigy mound depicting a giant undulating serpent uncoiling toward an oval egg structure. Positioned along an ancient meteorite impact crater ridge, the mound aligns precisely with summer solstice sunsets and lunar cycles.",
-    source: "Ohio History Connection & National Historic Landmark",
-    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Serpent_Mound_High_Angle.jpg/500px-Serpent_Mound_High_Angle.jpg"]
-  },
-  {
     id: "archaeology-newark-earthworks",
     name: "Newark Earthworks - Newark, Ohio, USA",
     category: "Burial Mounds",
@@ -885,7 +873,10 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
     displayDate: "c. 100 - 400 AD",
     description: "The largest geometric earthwork complex built by the Hopewell culture in North America, encompassing thousands of acres of octagons, circles, and parallel embankments. Serves as a monumental lunar observatory tracking the 18.6-year lunar standstill cycle.",
     source: "UNESCO World Heritage Site",
-    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Newark_Earthworks_Octagon.jpg/500px-Newark_Earthworks_Octagon.jpg"]
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Newark_Earthworks_Wall_and_Moat.jpg/1280px-Newark_Earthworks_Wall_and_Moat.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Newark_Great_Circle_Central_Mound.jpg/1280px-Newark_Great_Circle_Central_Mound.jpg"
+    ]
   },
   {
     id: "archaeology-dinosaur-national-monument",

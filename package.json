@@ -21,6 +21,7 @@
     "express": "^4.21.2",
     "firebase": "^12.13.0",
     "firebase-admin": "^13.10.0",
+    "geotiff": "^3.0.5",
     "lucide-react": "^0.546.0",
     "mapbox-gl": "^3.23.1",
     "motion": "^12.38.0",

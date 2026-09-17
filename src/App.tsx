@@ -4,7 +4,7 @@ import { createPortal } from 'react-dom';
 import { motion, AnimatePresence, animate } from 'motion/react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import { X, Heart, Play, Upload, Plus, Link, MapPin, Lock, Check, Trash2, ShieldAlert, ChevronDown, Shield, Eye, EyeOff, Shuffle, Flag, AlertTriangle, Instagram, ExternalLink, RotateCcw, Menu, Calendar, Share2, CheckCircle, Edit3 } from 'lucide-react';
+import { Layers, X, Heart, Play, Upload, Plus, Link, MapPin, Lock, Check, Trash2, ShieldAlert, ChevronDown, Shield, Eye, EyeOff, Shuffle, Flag, AlertTriangle, Instagram, ExternalLink, RotateCcw, Menu, Calendar, Share2, CheckCircle, Edit3 } from 'lucide-react';
 import { handleShare } from './utils/share';
 import { ShareModal } from './ShareModal';
 import { initializeApp } from 'firebase/app';
@@ -964,6 +964,61 @@ const LAYER_CONFIG: Record<string, { color: string; icon: string }> = {
   'Data Centers': { color: '#90E9FF', icon: '/icons/icon-cern.svg' },
   'Default': { color: '#b6a6ff', icon: '/icons/icon-map-pin.svg' }
 };
+
+interface ArchaeologicalLidarOverlay {
+  id: string;
+  name: string;
+  url: string;
+  coordinates: [number, number][];
+}
+
+// Registry for high-definition 1-meter archaeological LiDAR overlays with seamless feathered blending
+const ARCHAEOLOGICAL_LIDAR_OVERLAYS: ArchaeologicalLidarOverlay[] = [
+  {
+    id: 'alligator-mound-lidar',
+    name: 'Alligator Mound - Granville, Ohio',
+    url: '/images/alligator-mound-lidar.png',
+    coordinates: [
+      [-82.50400678013773, 40.072096397058615],
+      [-82.4981450570968, 40.072172364734875],
+      [-82.49804637763714, 40.06766906112823],
+      [-82.50390771493355, 40.0675931054928]
+    ]
+  },
+  {
+    id: 'newark-great-circle-lidar',
+    name: 'Newark Earthworks - Great Circle',
+    url: '/images/newark-great-circle-lidar.png',
+    coordinates: [
+      [-82.43520691847219, 40.04366234648612],
+      [-82.42770679611519, 40.043755021951064],
+      [-82.42758654858949, 40.0379905829329],
+      [-82.43508603978145, 40.037897926273494]
+    ]
+  },
+  {
+    id: 'newark-octagon-lidar',
+    name: 'Newark Earthworks - Octagon & Observatory',
+    url: '/images/newark-octagon-lidar.png',
+    coordinates: [
+      [-82.45508892990398, 40.05972100589692],
+      [-82.43985082698647, 40.05991142146049],
+      [-82.43960439281553, 40.04820249335739],
+      [-82.45483988992332, 40.0480121562636]
+    ]
+  },
+  {
+    id: 'serpent-mound-lidar',
+    name: 'Great Serpent Mound - Peebles, Ohio',
+    url: '/images/serpent-mound-lidar.png',
+    coordinates: [
+      [-83.4326657882106, 39.027274653784055],
+      [-83.42817421178938, 39.027274653784055],
+      [-83.42817421178938, 39.02378530315617],
+      [-83.4326657882106, 39.02378530315617]
+    ]
+  }
+];
 
 const matchParkName = (featName: string, targetName: string) => {
   if (!featName || !targetName) return false;
@@ -4274,6 +4329,91 @@ function App() {
   const [isMapDarkMode, setIsMapDarkMode] = useState(false);
   const darkModeRef = useRef(isMapDarkMode);
 
+  // Basemap Visualization Mode (Default Vector, Satellite Imagery, LiDAR Scan)
+  const [mapBaseView, setMapBaseView] = useState<'default' | 'satellite' | 'lidar'>('default');
+  const [is3DMode, setIs3DMode] = useState(false);
+  const [isBasemapMenuOpen, setIsBasemapMenuOpen] = useState(false);
+  const [isBasemapContentVisible, setIsBasemapContentVisible] = useState(false);
+  const [isBasemapLoading, setIsBasemapLoading] = useState(false);
+
+  // Auto-minimize and transition timers for Basemap Layer Menu
+  const basemapMenuTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const basemapTransitionTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  // Basemap Crossfade state & RAF handle for smooth layer cross-fading without lag
+  const basemapOpacitiesRef = useRef<{ satellite: number; lidar: number }>({
+    satellite: 0,
+    lidar: 0,
+  });
+  const basemapFadeRafRef = useRef<number | null>(null);
+
+  const closeBasemapMenu = useCallback(() => {
+    if (basemapMenuTimerRef.current) {
+      clearTimeout(basemapMenuTimerRef.current);
+      basemapMenuTimerRef.current = null;
+    }
+    if (basemapTransitionTimerRef.current) {
+      clearTimeout(basemapTransitionTimerRef.current);
+      basemapTransitionTimerRef.current = null;
+    }
+
+    // 1. Immediately fade out all text, buttons, and active indicator pills
+    setIsBasemapContentVisible(false);
+
+    // 2. Wait until content is fully faded out (90ms) before triggering container collapse
+    basemapTransitionTimerRef.current = setTimeout(() => {
+      setIsBasemapMenuOpen(false);
+      basemapTransitionTimerRef.current = null;
+    }, 90);
+  }, []);
+
+  const openBasemapMenu = useCallback(() => {
+    if (basemapTransitionTimerRef.current) {
+      clearTimeout(basemapTransitionTimerRef.current);
+      basemapTransitionTimerRef.current = null;
+    }
+
+    // Start expanding the container immediately
+    setIsBasemapMenuOpen(true);
+    setIsBasemapContentVisible(false);
+  }, []);
+
+  // Synchronize content visibility: fade in buttons once container reaches expanded width
+  useEffect(() => {
+    if (isBasemapMenuOpen) {
+      const timer = setTimeout(() => {
+        setIsBasemapContentVisible(true);
+      }, 140);
+      return () => clearTimeout(timer);
+    } else {
+      setIsBasemapContentVisible(false);
+    }
+  }, [isBasemapMenuOpen]);
+
+  const resetBasemapMenuTimer = useCallback(() => {
+    if (basemapMenuTimerRef.current) {
+      clearTimeout(basemapMenuTimerRef.current);
+      basemapMenuTimerRef.current = null;
+    }
+    basemapMenuTimerRef.current = setTimeout(() => {
+      closeBasemapMenu();
+    }, 3000);
+  }, [closeBasemapMenu]);
+
+  useEffect(() => {
+    if (isBasemapMenuOpen) {
+      resetBasemapMenuTimer();
+    } else if (basemapMenuTimerRef.current) {
+      clearTimeout(basemapMenuTimerRef.current);
+      basemapMenuTimerRef.current = null;
+    }
+    return () => {
+      if (basemapMenuTimerRef.current) {
+        clearTimeout(basemapMenuTimerRef.current);
+      }
+    };
+  }, [isBasemapMenuOpen, resetBasemapMenuTimer]);
+
   // Theme Constants
   const theme = useMemo(() => ({
     bg: isMapDarkMode ? '#000000' : '#ffffff',
@@ -5423,6 +5563,7 @@ function App() {
       style: isMapDarkMode ? MAP_STYLE_DARK : MAP_STYLE_LIGHT, 
       center: (!isNaN(urlLat) && !isNaN(urlLng)) ? [urlLng, urlLat] : [-98.5795, 39.8283], 
       zoom: !isNaN(urlZoom) ? urlZoom : (isMobile ? 2.2 : 4.0),
+      maxZoom: 22,
       projection: { name: 'globe' } as any,
       trackResize: true
     });
@@ -5686,8 +5827,129 @@ function App() {
           map.setPaintProperty(layer, 'line-opacity', isMapDarkMode ? 0.35 : 0.20);
         } else {
           map.setPaintProperty(layer, 'fill-color', targetColor);
-          map.setPaintProperty(layer, 'fill-opacity', isMapDarkMode ? 0.12 : 0.08);
+          map.setPaintProperty(layer, 'fill-opacity', (mapBaseView === 'lidar' || mapBaseView === 'satellite') ? 0 : (isMapDarkMode ? 0.12 : 0.08));
         }
+      }
+    });
+
+    // Register sources and layers for Satellite and LiDAR Views
+    if (!map.getSource('satellite-tiles-src')) {
+      map.addSource('satellite-tiles-src', {
+        type: 'raster',
+        url: 'mapbox://mapbox.satellite',
+        tileSize: 512
+      });
+    }
+
+    if (!map.getSource('mapbox-terrain-dem-src')) {
+      map.addSource('mapbox-terrain-dem-src', {
+        type: 'raster-dem',
+        url: 'mapbox://mapbox.mapbox-terrain-dem-v1',
+        tileSize: 512,
+        maxzoom: 14
+      });
+    }
+
+    // USGS 3DEP 1-Meter Dynamic Bare-Earth LiDAR Multi-directional Hillshade
+    // USGS 3DEP 1-Meter Dynamic Bare-Earth LiDAR Multi-directional Hillshade
+    if (!map.getSource('usgs-lidar-src')) {
+      map.addSource('usgs-lidar-src', {
+        type: 'raster',
+        tiles: [
+          'https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/exportImage?bbox={bbox-epsg-3857}&bboxSR=3857&imageSR=3857&size=512,512&format=jpgpng&f=image&renderingRule=%7B%22rasterFunction%22%3A%22Hillshade%20Gray-Stretch%22%7D'
+        ],
+        tileSize: 512,
+        maxzoom: 16
+      });
+    }
+
+    const baseBeforeId = map.getLayer('selected-park-highlight-fill')
+      ? 'selected-park-highlight-fill'
+      : (map.getLayer('master-unclustered-pins') ? 'master-unclustered-pins' : undefined);
+
+    if (!map.getLayer('satellite-tiles-layer')) {
+      map.addLayer({
+        id: 'satellite-tiles-layer',
+        type: 'raster',
+        source: 'satellite-tiles-src',
+        layout: {
+          visibility: (basemapOpacitiesRef.current.satellite > 0 || mapBaseView === 'satellite') ? 'visible' : 'none'
+        },
+        paint: {
+          'raster-opacity': basemapOpacitiesRef.current.satellite,
+          'raster-fade-duration': 0
+        }
+      }, baseBeforeId);
+    }
+
+    if (!map.getLayer('lidar-hillshade-layer')) {
+      map.addLayer({
+        id: 'lidar-hillshade-layer',
+        type: 'hillshade',
+        source: 'mapbox-terrain-dem-src',
+        layout: {
+          visibility: (basemapOpacitiesRef.current.lidar > 0 || mapBaseView === 'lidar') ? 'visible' : 'none'
+        },
+        paint: {
+          'hillshade-exaggeration': basemapOpacitiesRef.current.lidar,
+          'hillshade-shadow-color': '#000000',
+          'hillshade-highlight-color': '#ffffff',
+          'hillshade-accent-color': '#444444',
+          'hillshade-illumination-direction': 315
+        }
+      }, baseBeforeId);
+    }
+
+    if (!map.getLayer('usgs-lidar-layer')) {
+      map.addLayer({
+        id: 'usgs-lidar-layer',
+        type: 'raster',
+        source: 'usgs-lidar-src',
+        layout: {
+          visibility: (basemapOpacitiesRef.current.lidar > 0 || mapBaseView === 'lidar') ? 'visible' : 'none'
+        },
+        paint: {
+          'raster-opacity': basemapOpacitiesRef.current.lidar,
+          'raster-contrast': 0.15,
+          'raster-brightness-min': 0.0,
+          'raster-brightness-max': 1.0,
+          'raster-fade-duration': 0,
+          'raster-resampling': 'linear'
+        }
+      }, baseBeforeId);
+    } else {
+      map.setPaintProperty('usgs-lidar-layer', 'raster-contrast', 0.15);
+      map.setPaintProperty('usgs-lidar-layer', 'raster-brightness-min', 0.0);
+      map.setPaintProperty('usgs-lidar-layer', 'raster-brightness-max', 1.0);
+    }
+
+    // Register high-definition archaeological LiDAR overlays (feathered seamlessly into basemap)
+    ARCHAEOLOGICAL_LIDAR_OVERLAYS.forEach((overlay) => {
+      const srcId = `${overlay.id}-src`;
+      const layerId = `${overlay.id}-layer`;
+
+      if (!map.getSource(srcId)) {
+        map.addSource(srcId, {
+          type: 'image',
+          url: overlay.url,
+          coordinates: overlay.coordinates as any
+        });
+      }
+
+      if (!map.getLayer(layerId)) {
+        map.addLayer({
+          id: layerId,
+          type: 'raster',
+          source: srcId,
+          layout: {
+            visibility: (basemapOpacitiesRef.current.lidar > 0 || mapBaseView === 'lidar') ? 'visible' : 'none'
+          },
+          paint: {
+            'raster-opacity': basemapOpacitiesRef.current.lidar,
+            'raster-fade-duration': 0,
+            'raster-resampling': 'linear'
+          }
+        }, baseBeforeId);
       }
     });
 
@@ -5706,13 +5968,13 @@ function App() {
         source: 'selected-park-highlight-src',
         paint: {
           'fill-color': targetColor,
-          'fill-opacity': isMapDarkMode ? 0.45 : 0.35,
+          'fill-opacity': mapBaseView === 'lidar' ? 0 : (isMapDarkMode ? 0.45 : 0.35),
           'fill-opacity-transition': { duration: 450 }
         }
       }, map.getLayer('master-unclustered-pins') ? 'master-unclustered-pins' : undefined);
     } else {
       map.setPaintProperty('selected-park-highlight-fill', 'fill-color', targetColor);
-      map.setPaintProperty('selected-park-highlight-fill', 'fill-opacity', isMapDarkMode ? 0.45 : 0.35);
+      map.setPaintProperty('selected-park-highlight-fill', 'fill-opacity', mapBaseView === 'lidar' ? 0 : (isMapDarkMode ? 0.45 : 0.35));
     }
 
     if (!map.getLayer('selected-park-highlight-line')) {
@@ -6130,6 +6392,178 @@ function App() {
 
   }, [visibleData, isStyleLoaded, layerColors, pointsAndLinesData, isMapDarkMode]);
 
+  // Synchronize Basemap Layer Visibility and Smooth Zero-Lag WebGL Crossfade (Default, Satellite, LiDAR)
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !isStyleLoaded) return;
+
+    const targetSatellite = mapBaseView === 'satellite' ? 1.0 : 0.0;
+    const targetLidar = mapBaseView === 'lidar' ? 1.0 : 0.0;
+
+    // 1. If fading into satellite, ensure the layer is visible immediately so the fade-in is rendered
+    if (targetSatellite > 0 && map.getLayer('satellite-tiles-layer')) {
+      map.setLayoutProperty('satellite-tiles-layer', 'visibility', 'visible');
+    }
+
+    // 2. If fading into lidar, ensure hillshade, USGS, and overlays are visible immediately
+    if (targetLidar > 0) {
+      if (map.getLayer('lidar-hillshade-layer')) {
+        map.setLayoutProperty('lidar-hillshade-layer', 'visibility', 'visible');
+      }
+      if (map.getLayer('usgs-lidar-layer')) {
+        map.setLayoutProperty('usgs-lidar-layer', 'visibility', 'visible');
+      }
+      ARCHAEOLOGICAL_LIDAR_OVERLAYS.forEach((overlay) => {
+        const layerId = `${overlay.id}-layer`;
+        if (map.getLayer(layerId)) {
+          map.setLayoutProperty(layerId, 'visibility', 'visible');
+        }
+      });
+    }
+
+    // Hide 2D/3D building footprints in LiDAR mode so bare-earth topography is completely unobstructed
+    if (map.getLayer('building')) {
+      map.setLayoutProperty('building', 'visibility', mapBaseView === 'lidar' ? 'none' : 'visible');
+    }
+    if (map.getLayer('building-extrusion')) {
+      map.setLayoutProperty('building-extrusion', 'visibility', mapBaseView === 'lidar' ? 'none' : 'visible');
+    }
+
+    if (map.getLayer('selected-park-highlight-fill')) {
+      map.setPaintProperty('selected-park-highlight-fill', 'fill-opacity', mapBaseView === 'lidar' ? 0 : (isMapDarkMode ? 0.45 : 0.35));
+    }
+    const standardParkLayers = ['national-park', 'landuse-park', 'park-outline', 'national-park-line', 'landuse-park-outline'];
+    standardParkLayers.forEach(layer => {
+      if (map.getLayer(layer) && !layer.includes('outline') && !layer.includes('line')) {
+        map.setPaintProperty(layer, 'fill-opacity', (mapBaseView === 'lidar' || mapBaseView === 'satellite') ? 0 : (isMapDarkMode ? 0.12 : 0.08));
+      }
+    });
+
+    try {
+      if (mapBaseView === 'lidar' || mapBaseView === 'satellite') {
+        map.setFog({
+          'color': '#010306',
+          'high-color': '#040812',
+          'space-color': '#010204',
+          'horizon-blend': 0.04,
+          'star-intensity': 0.4
+        });
+      } else {
+        // Reset fog for Default View so default map lighting is completely untouched
+        (map as any).setFog(null);
+      }
+    } catch (e) {
+      // Ignore fog errors
+    }
+
+    // 3. Smooth WebGL float uniform crossfade (350ms duration)
+    if (basemapFadeRafRef.current) {
+      cancelAnimationFrame(basemapFadeRafRef.current);
+      basemapFadeRafRef.current = null;
+    }
+
+    const startSatellite = basemapOpacitiesRef.current.satellite;
+    const startLidar = basemapOpacitiesRef.current.lidar;
+    const startTime = performance.now();
+    const duration = 350; // ms
+
+    const animateFade = (now: number) => {
+      const elapsed = now - startTime;
+      const progress = Math.min(1, elapsed / duration);
+      // Smooth cubic ease-out
+      const ease = 1 - Math.pow(1 - progress, 3);
+
+      const currentSat = startSatellite + (targetSatellite - startSatellite) * ease;
+      const currentLidar = startLidar + (targetLidar - startLidar) * ease;
+
+      basemapOpacitiesRef.current.satellite = currentSat;
+      basemapOpacitiesRef.current.lidar = currentLidar;
+
+      if (map.getLayer('satellite-tiles-layer')) {
+        map.setPaintProperty('satellite-tiles-layer', 'raster-opacity', currentSat);
+      }
+      if (map.getLayer('lidar-hillshade-layer')) {
+        map.setPaintProperty('lidar-hillshade-layer', 'hillshade-exaggeration', currentLidar);
+      }
+      if (map.getLayer('usgs-lidar-layer')) {
+        map.setPaintProperty('usgs-lidar-layer', 'raster-opacity', currentLidar);
+      }
+      ARCHAEOLOGICAL_LIDAR_OVERLAYS.forEach((overlay) => {
+        const layerId = `${overlay.id}-layer`;
+        if (map.getLayer(layerId)) {
+          map.setPaintProperty(layerId, 'raster-opacity', currentLidar);
+        }
+      });
+
+      if (progress < 1) {
+        basemapFadeRafRef.current = requestAnimationFrame(animateFade);
+      } else {
+        basemapFadeRafRef.current = null;
+        // Turn off visibility when fully faded out to 0 to save GPU texture fillrate
+        if (targetSatellite === 0 && map.getLayer('satellite-tiles-layer')) {
+          map.setLayoutProperty('satellite-tiles-layer', 'visibility', 'none');
+        }
+        if (targetLidar === 0) {
+          if (map.getLayer('lidar-hillshade-layer')) {
+            map.setLayoutProperty('lidar-hillshade-layer', 'visibility', 'none');
+          }
+          if (map.getLayer('usgs-lidar-layer')) {
+            map.setLayoutProperty('usgs-lidar-layer', 'visibility', 'none');
+          }
+          ARCHAEOLOGICAL_LIDAR_OVERLAYS.forEach((overlay) => {
+            const layerId = `${overlay.id}-layer`;
+            if (map.getLayer(layerId)) {
+              map.setLayoutProperty(layerId, 'visibility', 'none');
+            }
+          });
+        }
+      }
+    };
+
+    basemapFadeRafRef.current = requestAnimationFrame(animateFade);
+
+    const timer = setTimeout(() => {
+      setIsBasemapLoading(false);
+    }, 1200);
+
+    const onIdle = () => {
+      setIsBasemapLoading(false);
+      clearTimeout(timer);
+    };
+
+    map.once('idle', onIdle);
+    return () => {
+      if (basemapFadeRafRef.current) {
+        cancelAnimationFrame(basemapFadeRafRef.current);
+        basemapFadeRafRef.current = null;
+      }
+      clearTimeout(timer);
+      map.off('idle', onIdle);
+    };
+  }, [mapBaseView, isStyleLoaded, isMapDarkMode]);
+
+  // Synchronize 3D Terrain Mode
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !isStyleLoaded) return;
+
+    try {
+      if (is3DMode && map.getSource('mapbox-terrain-dem-src')) {
+        (map as any).setTerrain({ source: 'mapbox-terrain-dem-src', exaggeration: 1.5 });
+        if (map.getPitch() < 25) {
+          map.easeTo({ pitch: 48, duration: 800 });
+        }
+      } else {
+        (map as any).setTerrain(null);
+        if (map.getPitch() > 0) {
+          map.easeTo({ pitch: 0, duration: 600 });
+        }
+      }
+    } catch (e) {
+      console.warn("Terrain toggle warning:", e);
+    }
+  }, [is3DMode, isStyleLoaded]);
+
   const handleViewOnMap = (timelineItem: any) => {
     setCurrentPage('map');
     const mapRecord = combinedPointsAndLinesData.find(r => String(r.id) === String(timelineItem.id));
@@ -6255,12 +6689,12 @@ function App() {
     const paddingVal = windowWidth < 1024 ? { top: 0, bottom: window.innerHeight * 0.7, left: 0, right: 0 } : { top: 0, bottom: 0, left: 0, right: 0 };
     mapRef.current.flyTo({ 
       center: flyTarget, 
-      zoom: 10, 
+      zoom: mapBaseView === 'lidar' ? 16 : 10, 
       duration: 1500,
       essential: true,
       padding: paddingVal
     });
-  }, [stopMainMapRotation, windowWidth]);
+  }, [stopMainMapRotation, windowWidth, mapBaseView]);
 
   // Safety timeout for initial deep link processing
   useEffect(() => {
@@ -10069,7 +10503,268 @@ function App() {
               animation: 'radar-pulse 2s infinite'
             }} />
           )}
-          
+
+          {/* BASEMAP LAYER TOGGLE HUD */}
+          <div
+            style={{
+              position: 'absolute',
+              top: isMobile ? '8px' : '20px',
+              left: '50%',
+              transform: isMobile ? 'translateX(-50%)' : 'translate(-50%, -50%)',
+              zIndex: 120,
+              pointerEvents: 'auto'
+            }}
+          >
+            <motion.div
+              animate={{
+                width: isBasemapMenuOpen ? 'auto' : 30
+              }}
+              transition={{
+                width: { type: 'spring', stiffness: 420, damping: 32 }
+              }}
+              onMouseEnter={resetBasemapMenuTimer}
+              onMouseMove={resetBasemapMenuTimer}
+              onTouchStart={resetBasemapMenuTimer}
+              style={{
+                background: isMapDarkMode ? 'rgba(10, 10, 10, 0.92)' : 'rgba(255, 255, 255, 0.95)',
+                backdropFilter: 'blur(10px)',
+                WebkitBackdropFilter: 'blur(10px)',
+                border: `1px solid ${isMapDarkMode ? 'rgba(255, 255, 255, 0.18)' : 'rgba(0, 0, 0, 0.15)'}`,
+                borderRadius: '15px',
+                boxShadow: isMapDarkMode 
+                  ? '0 4px 20px rgba(0, 0, 0, 0.6), 0 0 1px rgba(255, 255, 255, 0.2)' 
+                  : '0 4px 16px rgba(0, 0, 0, 0.14), 0 0 1px rgba(0, 0, 0, 0.2)',
+                fontFamily: '"Space Mono", monospace',
+                height: '30px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                overflow: 'hidden',
+                boxSizing: 'border-box',
+                position: 'relative'
+              }}
+            >
+              <AnimatePresence initial={false}>
+                {!isBasemapMenuOpen ? (
+                  <motion.button
+                    key="collapsed-layer-btn"
+                    initial={{ opacity: 0 }}
+                    animate={{ 
+                      opacity: 1, 
+                      transition: { duration: 0.18, delay: 0.14, ease: 'easeOut' } 
+                    }}
+                    exit={{ 
+                      opacity: 0, 
+                      transition: { duration: 0.1, ease: 'easeIn' } 
+                    }}
+                    whileHover={{ scale: 1.08 }}
+                    whileTap={{ scale: 0.94 }}
+                    onClick={openBasemapMenu}
+                    title="Map Layers & Basemap"
+                    aria-label="Map Layers"
+                    style={{
+                      width: '30px',
+                      height: '30px',
+                      borderRadius: '50%',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      background: 'transparent',
+                      border: 'none',
+                      cursor: 'pointer',
+                      position: 'absolute',
+                      inset: 0,
+                      margin: 'auto',
+                      padding: 0,
+                      flexShrink: 0
+                    }}
+                  >
+                    <img
+                      src="/icons/icon-layers.svg"
+                      alt="Layers"
+                      style={{
+                        width: '30px',
+                        height: '30px',
+                        display: 'block',
+                        filter: isMapDarkMode ? 'invert(1)' : 'none'
+                      }}
+                    />
+                    {(mapBaseView !== 'default' || is3DMode) && (
+                      <span
+                        style={{
+                          position: 'absolute',
+                          top: '-1px',
+                          right: '-1px',
+                          width: '7px',
+                          height: '7px',
+                          borderRadius: '50%',
+                          background: mapBaseView === 'lidar' ? '#b6a6ff' : (mapBaseView === 'satellite' ? '#FF9F63' : '#59DCB7'),
+                          boxShadow: `0 0 6px ${mapBaseView === 'lidar' ? '#b6a6ff' : (mapBaseView === 'satellite' ? '#FF9F63' : '#59DCB7')}`,
+                          border: `1.5px solid ${isMapDarkMode ? '#000000' : '#ffffff'}`
+                        }}
+                      />
+                    )}
+                    {isBasemapLoading && (
+                      <span
+                        style={{
+                          position: 'absolute',
+                          inset: 0,
+                          borderRadius: '50%',
+                          border: `2px solid ${mapBaseView === 'lidar' ? '#b6a6ff' : '#FF9F63'}`,
+                          animation: 'radar-pulse 1.5s infinite',
+                          pointerEvents: 'none'
+                        }}
+                      />
+                    )}
+                  </motion.button>
+                ) : (
+                  <div
+                    key="expanded-layer-hud"
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '4px',
+                      padding: '3px 4px 3px 4px',
+                      whiteSpace: 'nowrap',
+                      flexShrink: 0,
+                      opacity: isBasemapContentVisible ? 1 : 0,
+                      pointerEvents: isBasemapContentVisible ? 'auto' : 'none',
+                      transition: isBasemapContentVisible ? 'opacity 0.16s ease' : 'opacity 0.08s ease'
+                    }}
+                  >
+                    {(['default', 'satellite', 'lidar'] as const).map((mode) => {
+                      const isActive = mapBaseView === mode;
+                      const label = mode === 'default' ? 'DEFAULT' : (mode === 'satellite' ? 'SATELLITE' : 'LiDAR SCAN');
+                      const activeColor = mode === 'lidar' ? '#b6a6ff' : (mode === 'satellite' ? '#FF9F63' : (isMapDarkMode ? '#ffffff' : '#000000'));
+                      const dotColor = mode === 'lidar' ? '#b6a6ff' : (mode === 'satellite' ? '#FF9F63' : null);
+
+                      return (
+                        <motion.button
+                          key={mode}
+                          whileHover={{ scale: 1.03 }}
+                          whileTap={{ scale: 0.97 }}
+                          onClick={() => {
+                            resetBasemapMenuTimer();
+                            if (mode !== mapBaseView) {
+                              setIsBasemapLoading(true);
+                              setMapBaseView(mode);
+                            }
+                          }}
+                          style={{
+                            background: isActive ? activeColor : 'transparent',
+                            color: isActive 
+                              ? (mode === 'default' ? (isMapDarkMode ? '#000000' : '#ffffff') : '#000000')
+                              : (isMapDarkMode ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.7)'),
+                            border: 'none',
+                            padding: isMobile ? '4px 8px' : '5px 12px',
+                            borderRadius: '16px',
+                            fontSize: isMobile ? '8.5px' : '9.5px',
+                            fontWeight: 700,
+                            cursor: 'pointer',
+                            letterSpacing: '0.06em',
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '5px',
+                            transition: 'all 0.2s cubic-bezier(0.16, 1, 0.3, 1)',
+                            whiteSpace: 'nowrap'
+                          }}
+                        >
+                          {dotColor && (
+                            <span
+                              style={{
+                                width: '6px',
+                                height: '6px',
+                                borderRadius: '50%',
+                                background: isActive ? '#000000' : dotColor,
+                                display: 'inline-block',
+                                boxShadow: isActive ? 'none' : `0 0 6px ${dotColor}`
+                              }}
+                            />
+                          )}
+                          {label}
+                          {isBasemapLoading && isActive && mode !== 'default' && (
+                            <motion.span
+                              animate={{ rotate: 360 }}
+                              transition={{ repeat: Infinity, ease: 'linear', duration: 0.8 }}
+                              style={{
+                                width: '8px',
+                                height: '8px',
+                                borderRadius: '50%',
+                                border: '1.5px solid #000000',
+                                borderTopColor: 'transparent',
+                                display: 'inline-block',
+                                marginLeft: '2px'
+                              }}
+                            />
+                          )}
+                        </motion.button>
+                      );
+                    })}
+
+                    {/* 3D TERRAIN TOGGLE BUTTON */}
+                    <div style={{ width: '1px', height: '14px', background: isMapDarkMode ? 'rgba(255, 255, 255, 0.15)' : 'rgba(0, 0, 0, 0.12)', margin: '0 2px' }} />
+                    <motion.button
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      onClick={() => {
+                        resetBasemapMenuTimer();
+                        setIs3DMode(!is3DMode);
+                      }}
+                      title={is3DMode ? "Disable 3D Terrain Elevation" : "Enable 3D Terrain Elevation"}
+                      style={{
+                        background: is3DMode 
+                          ? '#59DCB7' 
+                          : 'transparent',
+                        color: is3DMode 
+                          ? '#000000' 
+                          : (isMapDarkMode ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.7)'),
+                        border: is3DMode ? 'none' : `1px solid ${isMapDarkMode ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.2)'}`,
+                        padding: isMobile ? '3px 7px' : '4px 9px',
+                        borderRadius: '14px',
+                        fontSize: isMobile ? '8px' : '9px',
+                        fontWeight: 800,
+                        cursor: 'pointer',
+                        letterSpacing: '0.08em',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '4px',
+                        transition: 'all 0.2s cubic-bezier(0.16, 1, 0.3, 1)',
+                        whiteSpace: 'nowrap'
+                      }}
+                    >
+                      <span>3D</span>
+                      {is3DMode && <Check size={10} strokeWidth={3} />}
+                    </motion.button>
+
+                    {/* CLOSE / COLLAPSE X BUTTON */}
+                    <div style={{ width: '1px', height: '14px', background: isMapDarkMode ? 'rgba(255, 255, 255, 0.15)' : 'rgba(0, 0, 0, 0.12)', margin: '0 1px 0 2px' }} />
+                    <motion.button
+                      whileHover={{ scale: 1.15, rotate: 90 }}
+                      whileTap={{ scale: 0.9 }}
+                      onClick={closeBasemapMenu}
+                      title="Collapse layer menu"
+                      aria-label="Collapse layer menu"
+                      style={{
+                        background: 'transparent',
+                        border: 'none',
+                        color: isMapDarkMode ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.7)',
+                        padding: isMobile ? '4px' : '5px',
+                        borderRadius: '50%',
+                        cursor: 'pointer',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        transition: 'color 0.15s ease'
+                      }}
+                    >
+                      <X size={isMobile ? 12 : 14} />
+                    </motion.button>
+                  </div>
+                )}
+              </AnimatePresence>
+            </motion.div>
+          </div>
+
           {/* PROTECTIVE SIDE STRIPS */}
           {!isMobile && (
             <>
@@ -12864,6 +13559,11 @@ function App() {
         
         button:hover .lightbox-nav-icon {
           filter: brightness(0);
+        }
+
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
         }
 
         @keyframes spinMapAsset {

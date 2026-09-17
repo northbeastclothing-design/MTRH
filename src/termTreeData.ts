@@ -16943,13 +16943,13 @@ const chunk_4: any[] = [  {
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Miamisburg_Mound_on_June_7%2C_2024.jpg/1280px-Miamisburg_Mound_on_June_7%2C_2024.jpg'],
     sources: ['Smithsonian Institution Bureau of Ethnology Reports', 'Archaeological Survey Records']
   },  {
-    id: 'anomaly-Burial-Mounds-4',
+    id: 'anomaly-Burial-Mounds-36',
     parentId: 'mounds',
     name: 'Serpent Mound State Memorial - Peebles, Ohio',
     description: 'The largest effigy mound in the world, shaped like a giant snake swallowing an egg. It is situated on the edge of a massive, ancient meteor impact crater and aligns perfectly with solar solstices and equinoxes. Conspiracists note that the site exhibits intense magnetic anomalies, and suggest the serpent represents a cosmic portal or an ancient warning of a comet strike.',
     layer: 'Burial Mounds',
-    mapFeatureId: 'anomaly-Burial-Mounds-4',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/3/31/Serpent_Mound%2C_Peebles%2C_Ohio_04.jpg'],
+    mapFeatureId: 'anomaly-Burial-Mounds-36',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Serpent_Mound%2C_Peebles%2C_Ohio_04.jpg/1280px-Serpent_Mound%2C_Peebles%2C_Ohio_04.jpg'],
     sources: ['Smithsonian Institution Bureau of Ethnology Reports', 'Archaeological Survey Records']
   },  {
     id: 'anomaly-Burial-Mounds-5',

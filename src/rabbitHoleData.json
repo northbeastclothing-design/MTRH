@@ -6338,22 +6338,6 @@
     ]
   },
   {
-    "id": "anomaly-Burial-Mounds-4",
-    "name": "Serpent Mound State Memorial - Peebles, Ohio",
-    "category": "Burial Mounds",
-    "type": "Point",
-    "coordinates": {
-      "lng": -83.4301982,
-      "lat": 39.0252414
-    },
-    "date": null,
-    "description": "The largest effigy mound in the world, shaped like a giant snake swallowing an egg. It is situated on the edge of a massive, ancient meteor impact crater and aligns perfectly with solar solstices and equinoxes. Conspiracists note that the site exhibits intense magnetic anomalies, and suggest the serpent represents a cosmic portal or an ancient warning of a comet strike.",
-    "source": "",
-    "images": [
-      "https://upload.wikimedia.org/wikipedia/commons/3/31/Serpent_Mound%2C_Peebles%2C_Ohio_04.jpg"
-    ]
-  },
-  {
     "id": "anomaly-Burial-Mounds-5",
     "name": "Shrum Mound - Upper Arlington, Ohio",
     "category": "Burial Mounds",
@@ -6854,7 +6838,7 @@
     "description": "The largest effigy mound in the world, shaped like a giant snake swallowing an egg. It is situated on the edge of a massive, ancient meteor impact crater and aligns perfectly with solar solstices and equinoxes. Conspiracists note that the site exhibits intense magnetic anomalies, and suggest the serpent represents a cosmic portal or an ancient warning of a comet strike.",
     "source": "",
     "images": [
-      "https://upload.wikimedia.org/wikipedia/commons/3/31/Serpent_Mound%2C_Peebles%2C_Ohio_04.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Serpent_Mound%2C_Peebles%2C_Ohio_04.jpg/1280px-Serpent_Mound%2C_Peebles%2C_Ohio_04.jpg"
     ]
   },
   {
@@ -7060,22 +7044,6 @@
     "source": "",
     "images": [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Monks_Mound_in_July.JPG/1280px-Monks_Mound_in_July.JPG"
-    ]
-  },
-  {
-    "id": "anomaly-Burial-Mounds-50",
-    "name": "Hopewell Mounds - Nauvoo, Illinois",
-    "category": "Burial Mounds",
-    "type": "Point",
-    "coordinates": {
-      "lng": -91.3728854,
-      "lat": 40.5719778
-    },
-    "date": null,
-    "description": "Native American oral histories and early pioneer journals suggest this mound covers a deep subterranean vault. Conspiracists suspect these vaults contain prehistoric metal records, ancient technology, or serve as sealed vaults holding artifacts from a pre-flood civilization.",
-    "source": "",
-    "images": [
-      "https://upload.wikimedia.org/wikipedia/commons/e/ef/Hopewell_Exchange_Network_HRoe_2010.jpg"
     ]
   },
   {
