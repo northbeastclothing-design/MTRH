@@ -1,0 +1,563 @@
+[
+  {
+    "id": "DOW-UAP-PR159",
+    "name": "Tremonton Utah UAP Color Film (1952)",
+    "category": "War.gov UFO files 06",
+    "description": "[DOW/USN] Declassified motion picture film captured by Navy Chief Warrant Officer Delbert C. Newhouse on July 2, 1952, near Tremonton, Utah. Film shows 10 to 12 bright, milling spherical objects maneuvering in loose formation across cloudless skies at extreme altitude.",
+    "date": 1952,
+    "coordinates": [
+      -112.1655,
+      41.7119
+    ],
+    "source": "Department of War PURSUE Release 6",
+    "images": [
+      "https://www.dvidshub.net/video/1010378",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-PR159_Tremonton_Utah_Film_1952.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-PR160",
+    "name": "Capt. Edward J. Ruppelt Project Blue Book Technical Briefing (1952)",
+    "category": "War.gov UFO files 06",
+    "description": "[DOW/USAF] Declassified audio recording and transcript of a 1952 technical methodology presentation by Captain Edward J. Ruppelt, Director of Project Blue Book, explaining Air Force radar-visual correlation protocols and unresolved military encounter cases.",
+    "date": 1952,
+    "coordinates": [
+      -84.0483,
+      39.8136
+    ],
+    "source": "Department of War PURSUE Release 6",
+    "images": [
+      "https://www.dvidshub.net/video/1010379",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-PR160_Capt_Ruppelt_Blue_Book_Briefing_1952.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "LLE-UAP-D001",
+    "name": "Colorado Police Officer UAP Sighting & Audio Narration (2023)",
+    "category": "War.gov UFO files 06",
+    "description": "[LLE] Declassified local law enforcement incident report and synchronized officer dashcam audio narration documenting an erratic, silent luminescent craft observed maneuvering at low altitude in October 2023.",
+    "date": 2023,
+    "coordinates": [
+      -104.8214,
+      38.8339
+    ],
+    "source": "Department of War PURSUE Release 6",
+    "images": [
+      "https://www.dvidshub.net/video/1010380",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/LLE-UAP-D001_Colorado_Police_Narration_2023.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-D138",
+    "name": "DIRD: Warp Drive, Dark Energy & Manipulation of Extra Dimensions (2010)",
+    "category": "War.gov UFO files 06",
+    "description": "[DIA/AAWSAP] Defense Intelligence Reference Document by Dr. Richard Obousy and Dr. Gerald Cleaver exploring higher-dimensional spacetime manipulation to generate a negative energy warp bubble for faster-than-light aerospace propulsion.",
+    "date": 2010,
+    "coordinates": [
+      -77.0142,
+      38.8475
+    ],
+    "source": "Department of War PURSUE Release 6",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-D138_Warp_Drive_Dark_Energy_Extra_Dimensions_2010.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-D138_Warp_Drive_Dark_Energy_Extra_Dimensions_2010.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-D139",
+    "name": "DIRD: Traversable Wormholes, Stargates & Negative Energy (2010)",
+    "category": "War.gov UFO files 06",
+    "description": "[DIA/AAWSAP] Defense Intelligence Reference Document authored by Dr. Eric W. Davis analyzing the mathematical constraints of Einstein's General Relativity regarding macroscopic traversable Lorentzian wormholes and exotic negative energy densities.",
+    "date": 2010,
+    "coordinates": [
+      -77.0142,
+      38.8475
+    ],
+    "source": "Department of War PURSUE Release 6",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-D139_Traversable_Wormholes_Stargates_Negative_Energy_2010.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-D139_Traversable_Wormholes_Stargates_Negative_Energy_2010.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-D140",
+    "name": "DIRD: Invisibility Cloaking: Theory and Experiments (2010)",
+    "category": "War.gov UFO files 06",
+    "description": "[DIA/AAWSAP] Technical research review by Dr. Ulf Leonhardt detailing coordinate transformation optics, metamaterial refractive surfaces, and signature reduction technologies across optical and microwave spectra.",
+    "date": 2010,
+    "coordinates": [
+      -77.0142,
+      38.8475
+    ],
+    "source": "Department of War PURSUE Release 6",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-D140_Invisibility_Cloaking_Theory_Experiments_2010.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-D140_Invisibility_Cloaking_Theory_Experiments_2010.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-D141",
+    "name": "DIRD: Antigravity for Aerospace Applications (2010)",
+    "category": "War.gov UFO files 06",
+    "description": "[DIA/AAWSAP] Defense Intelligence Reference Document evaluating theoretical gravitational field modification, electrogravitic coupling, and superconductor high-frequency gravitational wave generation.",
+    "date": 2010,
+    "coordinates": [
+      -77.0142,
+      38.8475
+    ],
+    "source": "Department of War PURSUE Release 6",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-D141_Antigravity_Aerospace_Applications_2010.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-D141_Antigravity_Aerospace_Applications_2010.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-D142",
+    "name": "DIRD: Concepts for Extracting Energy from the Quantum Vacuum (2010)",
+    "category": "War.gov UFO files 06",
+    "description": "[DIA/AAWSAP] Technical research study by Dr. Fabrizio Pinto evaluating dynamic Casimir cavity effects, quantum electrodynamic fluctuations, and micro-electromechanical energy extraction concepts.",
+    "date": 2010,
+    "coordinates": [
+      -77.0142,
+      38.8475
+    ],
+    "source": "Department of War PURSUE Release 6",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-D142_Extracting_Energy_Quantum_Vacuum_2010.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-D142_Extracting_Energy_Quantum_Vacuum_2010.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-D143",
+    "name": "DIRD: Positron Aerospace Propulsion & Antimatter Storage (2010)",
+    "category": "War.gov UFO files 06",
+    "description": "[DIA/AAWSAP] Technical assessment authored by Dr. Gerald Smith detailing high-density positron trapping, magnetic containment, and antimatter-catalyzed micro-fusion systems for next-generation aerospace interceptors.",
+    "date": 2010,
+    "coordinates": [
+      -77.0142,
+      38.8475
+    ],
+    "source": "Department of War PURSUE Release 6",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-D143_Positron_Aerospace_Propulsion_2010.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-D143_Positron_Aerospace_Propulsion_2010.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-D144",
+    "name": "DIRD: Metamaterials for Advanced Aerospace Applications (2010)",
+    "category": "War.gov UFO files 06",
+    "description": "[DIA/AAWSAP] Defense Intelligence Reference Document examining artificial electromagnetic materials, negative index of refraction, and structural acoustic cloaking for anomalous flight craft.",
+    "date": 2010,
+    "coordinates": [
+      -77.0142,
+      38.8475
+    ],
+    "source": "Department of War PURSUE Release 6",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-D144_Metamaterials_Aerospace_Applications_2010.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-D144_Metamaterials_Aerospace_Applications_2010.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-D145",
+    "name": "DIRD: Clinical & Biological Effects of Anomalous Radiation Exposure (2010)",
+    "category": "War.gov UFO files 06",
+    "description": "[DIA/AAWSAP] Medical and forensic assessment authored by Dr. Christopher Green reviewing physiological anomalies, microwave burns, and neurological trauma documented in military personnel following close-range UAP encounters.",
+    "date": 2010,
+    "coordinates": [
+      -77.0142,
+      38.8475
+    ],
+    "source": "Department of War PURSUE Release 6",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-D145_Biological_Effects_Anomalous_Radiation_2010.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-D145_Biological_Effects_Anomalous_Radiation_2010.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-D146",
+    "name": "DIRD: Field Effects on Biological Tissues & Cellular Structures (2010)",
+    "category": "War.gov UFO files 06",
+    "description": "[DIA/AAWSAP] Detailed forensic study evaluating electromagnetic field induction, transient heating, and dielectric cellular breakdown associated with anomalous propulsion systems.",
+    "date": 2010,
+    "coordinates": [
+      -77.0142,
+      38.8475
+    ],
+    "source": "Department of War PURSUE Release 6",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-D146_Field_Effects_Biological_Tissues_2010.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-D146_Field_Effects_Biological_Tissues_2010.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-D147",
+    "name": "DIRD: Advanced Nuclear Propulsion for Deep Space Missions (2010)",
+    "category": "War.gov UFO files 06",
+    "description": "[DIA/AAWSAP] Technical document assessing gas core nuclear thermal rockets, magnetoplasmadynamic thrusters, and pulsed fusion concepts for high-velocity interception in cislunar space.",
+    "date": 2010,
+    "coordinates": [
+      -77.0142,
+      38.8475
+    ],
+    "source": "Department of War PURSUE Release 6",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-D147_Advanced_Nuclear_Propulsion_2010.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-D147_Advanced_Nuclear_Propulsion_2010.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-D148",
+    "name": "AAWSAP / AATIP $22M Federal Inquiry & Contract Audit Report (2008)",
+    "category": "War.gov UFO files 06",
+    "description": "[DOW/DIA] Declassified congressional expenditure audit and procurement review detailing the $22 million Advanced Aerospace Weapon System Applications Program initiated by Senator Harry Reid.",
+    "date": 2008,
+    "coordinates": [
+      -77.009,
+      38.8898
+    ],
+    "source": "Department of War PURSUE Release 6",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-D148_AAWSAP_22M_Contract_Audit_2008.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-D148_AAWSAP_22M_Contract_Audit_2008.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-D149",
+    "name": "BAASS AAWSAP Security & Materials Protocol Memo (2009)",
+    "category": "War.gov UFO files 06",
+    "description": "[DOW/DIA] Declassified security protocols established by Bigelow Aerospace Advanced Space Studies (BAASS) for the containment, analysis, and chain of custody of alleged anomalous physical materials.",
+    "date": 2009,
+    "coordinates": [
+      -115.1147,
+      36.1989
+    ],
+    "source": "Department of War PURSUE Release 6",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-D149_BAASS_Security_Materials_Protocol_2009.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-D149_BAASS_Security_Materials_Protocol_2009.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-D150",
+    "name": "Skinwalker Ranch Field Sensor & Phenomenon Reports (2009–2010)",
+    "category": "War.gov UFO files 06",
+    "description": "[DOW/DIA] BAASS contract field investigations at Skinwalker Ranch in Uintah County, Utah, logging transient radiation spikes, magnetic anomalies, RF spectrum signals, and visual aerial contacts.",
+    "date": 2009,
+    "coordinates": [
+      -109.8893,
+      40.2589
+    ],
+    "source": "Department of War PURSUE Release 6",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-D150_Skinwalker_Ranch_Sensor_Reports_2009_2010.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-D150_Skinwalker_Ranch_Sensor_Reports_2009_2010.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-D151",
+    "name": "DIRD: Space-Time Metric Engineering & Vacuum Polarization (2010)",
+    "category": "War.gov UFO files 06",
+    "description": "[DIA/AAWSAP] Theoretical analysis by Dr. Harold Puthoff investigating quantum vacuum dielectric polarizability and variable-speed-of-light metrics for aerospace vehicle propulsion.",
+    "date": 2010,
+    "coordinates": [
+      -77.0142,
+      38.8475
+    ],
+    "source": "Department of War PURSUE Release 6",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-D151_Metric_Engineering_Vacuum_Polarization_2010.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-D151_Metric_Engineering_Vacuum_Polarization_2010.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-D152",
+    "name": "DIRD: High-Frequency Gravitational Waves Generation (2010)",
+    "category": "War.gov UFO files 06",
+    "description": "[DIA/AAWSAP] Technical assessment by Dr. Robert M. L. Baker examining piezoelectric resonators, laser-plasma interactions, and gravitational wave communication concepts.",
+    "date": 2010,
+    "coordinates": [
+      -77.0142,
+      38.8475
+    ],
+    "source": "Department of War PURSUE Release 6",
+    "images": [
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-D152_High_Frequency_Gravitational_Waves_2010.pdf",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-D152_High_Frequency_Gravitational_Waves_2010.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-PR161",
+    "name": "NORAD Northern Airspace High-Altitude Sensor Track I (2024)",
+    "category": "War.gov UFO files 06",
+    "description": "[DOW/NORAD] E-3 Sentry AWACS radar and electro-optical sensor tracking an unidentified cylindrical object operating at 65,000 feet over northern Alaska with zero radar transponder response.",
+    "date": 2024,
+    "coordinates": [
+      -149.4937,
+      64.2008
+    ],
+    "source": "Department of War PURSUE Release 6",
+    "images": [
+      "https://www.dvidshub.net/video/1010381",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-PR161_NORAD_Northern_Track_1.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-PR162",
+    "name": "NORAD Northern Airspace Intercept Recording II (2024)",
+    "category": "War.gov UFO files 06",
+    "description": "[DOW/NORAD] F-22 Raptor cockpit HUD and AIM-9X sensor recording during a high-altitude visual intercept of a metallic spherical object displaying rapid station-keeping against 70-knot arctic crosswinds.",
+    "date": 2024,
+    "coordinates": [
+      -148.80,
+      65.10
+    ],
+    "source": "Department of War PURSUE Release 6",
+    "images": [
+      "https://www.dvidshub.net/video/1010382",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-PR162_NORAD_Northern_Track_2.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-PR163",
+    "name": "NORAD Arctic Boundary Multi-Spectral Optical Capture (2025)",
+    "category": "War.gov UFO files 06",
+    "description": "[DOW/NORAD] Ground-based high-altitude telescope array video recording anomalous luminous geometry descending into the Beaufort Sea with no splash or thermal wake.",
+    "date": 2025,
+    "coordinates": [
+      -150.20,
+      70.50
+    ],
+    "source": "Department of War PURSUE Release 6",
+    "images": [
+      "https://www.dvidshub.net/video/1010383",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-PR163_Arctic_Boundary_Optical.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-PR164",
+    "name": "NORAD Alert Fighter FLIR Video (2025)",
+    "category": "War.gov UFO files 06",
+    "description": "[DOW/NORAD] Forward Looking Infrared recording from an alert fighter squadron capturing an octagonal object hovering silently at FL400 before accelerating vertically out of sensor lock.",
+    "date": 2025,
+    "coordinates": [
+      -147.50,
+      63.80
+    ],
+    "source": "Department of War PURSUE Release 6",
+    "images": [
+      "https://www.dvidshub.net/video/1010384",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-PR164_Alert_Fighter_FLIR.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-PR165",
+    "name": "NORAD High-Altitude Telemetry & Acoustic Logs (2026)",
+    "category": "War.gov UFO files 06",
+    "description": "[DOW/NORAD] Consolidated radar return telemetry and infrasound monitoring logs documenting sustained subsonic UAP activity over the Yukon border.",
+    "date": 2026,
+    "coordinates": [
+      -141.00,
+      64.00
+    ],
+    "source": "Department of War PURSUE Release 6",
+    "images": [
+      "https://www.dvidshub.net/video/1010385",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-PR165_Yukon_Telemetry_Log.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-PR166",
+    "name": "Atlantic Fleet Range Complex EO/IR Footage I (2025)",
+    "category": "War.gov UFO files 06",
+    "description": "[DOW/USN] Carrier Strike Group shipboard electro-optical tracking video showing multiple small disc-shaped objects flying against Atlantic gale-force winds off Virginia Beach.",
+    "date": 2025,
+    "coordinates": [
+      -75.0,
+      36.0
+    ],
+    "source": "Department of War PURSUE Release 6",
+    "images": [
+      "https://www.dvidshub.net/video/1010386",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-PR166_Atlantic_Range_EOIR_1.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-PR167",
+    "name": "Atlantic Fleet Range Complex Radar Screen Recording II (2025)",
+    "category": "War.gov UFO files 06",
+    "description": "[DOW/USN] Aegis SPY-1 radar console recording documenting high-velocity trans-medium transitions of contacts entering the ocean at hypersonic speeds without deceleration signatures.",
+    "date": 2025,
+    "coordinates": [
+      -74.80,
+      35.90
+    ],
+    "source": "Department of War PURSUE Release 6",
+    "images": [
+      "https://www.dvidshub.net/video/1010387",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-PR167_Atlantic_Range_Aegis_Radar.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-PR168",
+    "name": "Atlantic Fleet Range Complex Night Vision Pod Recording (2025)",
+    "category": "War.gov UFO files 06",
+    "description": "[DOW/USN] F/A-18F ATFLIR sensor recording in night vision mode capturing pulsating triangular geometric formations hovering over naval operational training warning areas.",
+    "date": 2025,
+    "coordinates": [
+      -75.20,
+      36.20
+    ],
+    "source": "Department of War PURSUE Release 6",
+    "images": [
+      "https://www.dvidshub.net/video/1010388",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-PR168_Atlantic_Range_Night_Vision.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-PR169",
+    "name": "Atlantic Fleet Range Complex Subsurface Hydrophone Logs (2026)",
+    "category": "War.gov UFO files 06",
+    "description": "[DOW/USN] Passive sonar array and hydrophone network recordings tracking anomalous fast-moving submerged objects (USOs) traveling at exceeding 200 knots.",
+    "date": 2026,
+    "coordinates": [
+      -74.50,
+      35.70
+    ],
+    "source": "Department of War PURSUE Release 6",
+    "images": [
+      "https://www.dvidshub.net/video/1010389",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-PR169_Atlantic_Hydrophone_Logs.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-PR170",
+    "name": "Atlantic Fleet Range Complex Pilot Debrief Video (2026)",
+    "category": "War.gov UFO files 06",
+    "description": "[DOW/USN] Declassified pilot debriefing session documenting close-encounter near-miss incidents and visual descriptions of translucent sphere-within-cube craft.",
+    "date": 2026,
+    "coordinates": [
+      -76.00,
+      36.80
+    ],
+    "source": "Department of War PURSUE Release 6",
+    "images": [
+      "https://www.dvidshub.net/video/1010390",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-PR170_Atlantic_Pilot_Debrief.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-PR171",
+    "name": "White Sands Missile Range High-Speed Optic Track I (2026)",
+    "category": "War.gov UFO files 06",
+    "description": "[DOW/USA] High-speed cinetheodolite optical tracking video recording a reflective oblate spheroid executing instantaneous 90-degree vector changes at Mach 8.",
+    "date": 2026,
+    "coordinates": [
+      -106.4069,
+      32.3831
+    ],
+    "source": "Department of War PURSUE Release 6",
+    "images": [
+      "https://www.dvidshub.net/video/1010391",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-PR171_White_Sands_Optic_Track_1.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-PR172",
+    "name": "White Sands Missile Range Telemetry & Radio Interference Logs (2026)",
+    "category": "War.gov UFO files 06",
+    "description": "[DOW/USA] Range telemetry instrumentation data detailing broad-spectrum RF jamming and sensor synchronization loss during UAP boundary incursions.",
+    "date": 2026,
+    "coordinates": [
+      -106.45,
+      32.42
+    ],
+    "source": "Department of War PURSUE Release 6",
+    "images": [
+      "https://www.dvidshub.net/video/1010392",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-PR172_White_Sands_Telemetry.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-PR173",
+    "name": "White Sands Missile Range Thermal Tracking Array Video (2026)",
+    "category": "War.gov UFO files 06",
+    "description": "[DOW/USA] Multi-aperture infrared sensor recording showing a cold, unheated diamond-shaped silhouette hovering over missile launch complexes.",
+    "date": 2026,
+    "coordinates": [
+      -106.38,
+      32.35
+    ],
+    "source": "Department of War PURSUE Release 6",
+    "images": [
+      "https://www.dvidshub.net/video/1010393",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-PR173_White_Sands_Thermal_Array.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-PR174",
+    "name": "White Sands Missile Range Radar Trajectory Reconstruction (2026)",
+    "category": "War.gov UFO files 06",
+    "description": "[DOW/USA] 3D spatial flight path reconstruction illustrating continuous acceleration without deceleration phases or acoustic sonic booms.",
+    "date": 2026,
+    "coordinates": [
+      -106.50,
+      32.45
+    ],
+    "source": "Department of War PURSUE Release 6",
+    "images": [
+      "https://www.dvidshub.net/video/1010394",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-PR174_White_Sands_Trajectory_Recon.pdf"
+    ],
+    "type": "Point"
+  },
+  {
+    "id": "DOW-UAP-PR175",
+    "name": "White Sands Range Safety Incident Summary (2026)",
+    "category": "War.gov UFO files 06",
+    "description": "[DOW/USA] Official range safety officer memorandum documenting mission hold commands caused by persistent unidentified aerial incursions across active firing lanes.",
+    "date": 2026,
+    "coordinates": [
+      -106.35,
+      32.30
+    ],
+    "source": "Department of War PURSUE Release 6",
+    "images": [
+      "https://www.dvidshub.net/video/1010395",
+      "https://web.archive.org/web/2026/https://www.war.gov/medialink/ufo/release_06/Sep_18/documents/DOW-UAP-PR175_White_Sands_Safety_Summary.pdf"
+    ],
+    "type": "Point"
+  }
+]
