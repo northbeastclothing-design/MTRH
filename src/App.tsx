@@ -10505,35 +10505,47 @@ function App() {
           )}
 
           {/* BASEMAP LAYER TOGGLE HUD */}
-          <div
+          <motion.div
+            initial={false}
+            animate={{
+              right: isMobile ? 20 : (isRightCollapsed ? 40 : 340),
+              bottom: isMobile 
+                ? (isMobileDrawerExpanded 
+                    ? 'calc(70vh + 20px)' 
+                    : 'calc(108px + max(12px, env(safe-area-inset-bottom, 12px)) + 20px)')
+                : (isTimelineCollapsed ? 20 : 170)
+            }}
+            transition={{
+              right: { type: 'spring', stiffness: 240, damping: 28 },
+              bottom: { duration: 0.5, ease: [0.16, 1, 0.3, 1] }
+            }}
             style={{
               position: 'absolute',
-              top: isMobile ? '8px' : '20px',
-              left: '50%',
-              transform: isMobile ? 'translateX(-50%)' : 'translate(-50%, -50%)',
               zIndex: 120,
-              pointerEvents: 'auto'
+              pointerEvents: 'auto',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'flex-end'
             }}
           >
             <motion.div
               animate={{
-                width: isBasemapMenuOpen ? 'auto' : 30
+                width: isBasemapMenuOpen ? 'auto' : 30,
+                background: isBasemapMenuOpen ? 'rgba(255, 255, 255, 0.96)' : '#000000'
               }}
               transition={{
-                width: { type: 'spring', stiffness: 420, damping: 32 }
+                width: { type: 'spring', stiffness: 420, damping: 32 },
+                background: { duration: 0.15 }
               }}
               onMouseEnter={resetBasemapMenuTimer}
               onMouseMove={resetBasemapMenuTimer}
               onTouchStart={resetBasemapMenuTimer}
               style={{
-                background: isMapDarkMode ? 'rgba(10, 10, 10, 0.92)' : 'rgba(255, 255, 255, 0.95)',
                 backdropFilter: 'blur(10px)',
                 WebkitBackdropFilter: 'blur(10px)',
-                border: `1px solid ${isMapDarkMode ? 'rgba(255, 255, 255, 0.18)' : 'rgba(0, 0, 0, 0.15)'}`,
+                border: '1px solid #000000',
                 borderRadius: '15px',
-                boxShadow: isMapDarkMode 
-                  ? '0 4px 20px rgba(0, 0, 0, 0.6), 0 0 1px rgba(255, 255, 255, 0.2)' 
-                  : '0 4px 16px rgba(0, 0, 0, 0.14), 0 0 1px rgba(0, 0, 0, 0.2)',
+                boxShadow: 'none',
                 fontFamily: '"Space Mono", monospace',
                 height: '30px',
                 display: 'flex',
@@ -10586,7 +10598,7 @@ function App() {
                         width: '30px',
                         height: '30px',
                         display: 'block',
-                        filter: isMapDarkMode ? 'invert(1)' : 'none'
+                        filter: 'brightness(0) invert(1)'
                       }}
                     />
                     {(mapBaseView !== 'default' || is3DMode) && (
@@ -10600,7 +10612,7 @@ function App() {
                           borderRadius: '50%',
                           background: mapBaseView === 'lidar' ? '#b6a6ff' : (mapBaseView === 'satellite' ? '#FF9F63' : '#59DCB7'),
                           boxShadow: `0 0 6px ${mapBaseView === 'lidar' ? '#b6a6ff' : (mapBaseView === 'satellite' ? '#FF9F63' : '#59DCB7')}`,
-                          border: `1.5px solid ${isMapDarkMode ? '#000000' : '#ffffff'}`
+                          border: '1.5px solid #000000'
                         }}
                       />
                     )}
@@ -10624,7 +10636,7 @@ function App() {
                       display: 'flex',
                       alignItems: 'center',
                       gap: '4px',
-                      padding: '3px 4px 3px 4px',
+                      padding: '2px',
                       whiteSpace: 'nowrap',
                       flexShrink: 0,
                       opacity: isBasemapContentVisible ? 1 : 0,
@@ -10635,7 +10647,7 @@ function App() {
                     {(['default', 'satellite', 'lidar'] as const).map((mode) => {
                       const isActive = mapBaseView === mode;
                       const label = mode === 'default' ? 'DEFAULT' : (mode === 'satellite' ? 'SATELLITE' : 'LiDAR SCAN');
-                      const activeColor = mode === 'lidar' ? '#b6a6ff' : (mode === 'satellite' ? '#FF9F63' : (isMapDarkMode ? '#ffffff' : '#000000'));
+                      const activeColor = mode === 'lidar' ? '#b6a6ff' : (mode === 'satellite' ? '#FF9F63' : '#000000');
                       const dotColor = mode === 'lidar' ? '#b6a6ff' : (mode === 'satellite' ? '#FF9F63' : null);
 
                       return (
@@ -10653,20 +10665,23 @@ function App() {
                           style={{
                             background: isActive ? activeColor : 'transparent',
                             color: isActive 
-                              ? (mode === 'default' ? (isMapDarkMode ? '#000000' : '#ffffff') : '#000000')
-                              : (isMapDarkMode ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.7)'),
+                              ? (mode === 'default' ? '#ffffff' : '#000000')
+                              : 'rgba(0, 0, 0, 0.75)',
                             border: 'none',
-                            padding: isMobile ? '4px 8px' : '5px 12px',
-                            borderRadius: '16px',
-                            fontSize: isMobile ? '8.5px' : '9.5px',
+                            padding: '0 10px',
+                            height: '24px',
+                            borderRadius: '12px',
+                            fontSize: '9.5px',
                             fontWeight: 700,
                             cursor: 'pointer',
                             letterSpacing: '0.06em',
                             display: 'flex',
                             alignItems: 'center',
+                            justifyContent: 'center',
                             gap: '5px',
                             transition: 'all 0.2s cubic-bezier(0.16, 1, 0.3, 1)',
-                            whiteSpace: 'nowrap'
+                            whiteSpace: 'nowrap',
+                            boxSizing: 'border-box'
                           }}
                         >
                           {dotColor && (
@@ -10702,7 +10717,7 @@ function App() {
                     })}
 
                     {/* 3D TERRAIN TOGGLE BUTTON */}
-                    <div style={{ width: '1px', height: '14px', background: isMapDarkMode ? 'rgba(255, 255, 255, 0.15)' : 'rgba(0, 0, 0, 0.12)', margin: '0 2px' }} />
+                    <div style={{ width: '1px', height: '14px', background: 'rgba(0, 0, 0, 0.15)', margin: '0 2px' }} />
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
@@ -10717,19 +10732,22 @@ function App() {
                           : 'transparent',
                         color: is3DMode 
                           ? '#000000' 
-                          : (isMapDarkMode ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.7)'),
-                        border: is3DMode ? 'none' : `1px solid ${isMapDarkMode ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.2)'}`,
-                        padding: isMobile ? '3px 7px' : '4px 9px',
-                        borderRadius: '14px',
-                        fontSize: isMobile ? '8px' : '9px',
+                          : 'rgba(0, 0, 0, 0.75)',
+                        border: is3DMode ? 'none' : '1px solid rgba(0, 0, 0, 0.25)',
+                        padding: '0 8px',
+                        height: '24px',
+                        borderRadius: '12px',
+                        fontSize: '9px',
                         fontWeight: 800,
                         cursor: 'pointer',
                         letterSpacing: '0.08em',
                         display: 'flex',
                         alignItems: 'center',
+                        justifyContent: 'center',
                         gap: '4px',
                         transition: 'all 0.2s cubic-bezier(0.16, 1, 0.3, 1)',
-                        whiteSpace: 'nowrap'
+                        whiteSpace: 'nowrap',
+                        boxSizing: 'border-box'
                       }}
                     >
                       <span>3D</span>
@@ -10737,7 +10755,7 @@ function App() {
                     </motion.button>
 
                     {/* CLOSE / COLLAPSE X BUTTON */}
-                    <div style={{ width: '1px', height: '14px', background: isMapDarkMode ? 'rgba(255, 255, 255, 0.15)' : 'rgba(0, 0, 0, 0.12)', margin: '0 1px 0 2px' }} />
+                    <div style={{ width: '1px', height: '14px', background: 'rgba(0, 0, 0, 0.15)', margin: '0 1px 0 2px' }} />
                     <motion.button
                       whileHover={{ scale: 1.15, rotate: 90 }}
                       whileTap={{ scale: 0.9 }}
@@ -10747,23 +10765,26 @@ function App() {
                       style={{
                         background: 'transparent',
                         border: 'none',
-                        color: isMapDarkMode ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.7)',
-                        padding: isMobile ? '4px' : '5px',
-                        borderRadius: '50%',
+                        color: 'rgba(0, 0, 0, 0.75)',
+                        width: '24px',
+                        height: '24px',
+                        padding: 0,
+                        borderRadius: '12px',
                         cursor: 'pointer',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        transition: 'color 0.15s ease'
+                        transition: 'color 0.15s ease',
+                        boxSizing: 'border-box'
                       }}
                     >
-                      <X size={isMobile ? 12 : 14} />
+                      <X size={14} />
                     </motion.button>
                   </div>
                 )}
               </AnimatePresence>
             </motion.div>
-          </div>
+          </motion.div>
 
           {/* PROTECTIVE SIDE STRIPS */}
           {!isMobile && (
