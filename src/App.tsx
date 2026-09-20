@@ -911,6 +911,7 @@ const processIncomingRecord = (item: any, index: number) => {
     ...item,
     id: safeId,
     name: safeName,
+    rawCategory: rawCategory,
     categories: Array.from(tagsSet),
     category: normalizedCategory,
     description: displayDescription,
@@ -920,6 +921,29 @@ const processIncomingRecord = (item: any, index: number) => {
     images: safeImages,
     type: item.type === 'LineString' ? 'LineString' : 'Point'
   };
+};
+
+const getWarGovReleaseInfo = (item: any) => {
+  const src = (item.source || '').toLowerCase();
+  const rawCat = (item.rawCategory || item.category || '').toLowerCase();
+  const id = (item.id || '').toUpperCase();
+
+  if (src.includes('release 6') || src.includes('release 06') || rawCat.includes('files 06') || rawCat.includes('release 6') || rawCat.includes('release 06') || id.startsWith('LLE-UAP')) {
+    return { id: 6, title: 'Release 06', sub: 'Sep 18, 2026', key: 'rel-6' };
+  }
+  if (src.includes('release 5') || src.includes('release 05') || rawCat.includes('files 05') || rawCat.includes('release 5') || rawCat.includes('release 05') || id.includes('PR117') || id.includes('PR118') || id.includes('PR119') || id.includes('PR120') || id.includes('PR121') || id.includes('PR122') || id.includes('PR123') || id.includes('PR124') || id.includes('PR125') || id.includes('PR126') || id.includes('PR127') || id.includes('PR128') || id.includes('PR129') || id.includes('PR130') || id.includes('PR131')) {
+    return { id: 5, title: 'Release 05', sub: 'Aug 07, 2026', key: 'rel-5' };
+  }
+  if (src.includes('release 4') || src.includes('release 04') || rawCat.includes('files 04') || rawCat.includes('release 4') || rawCat.includes('release 04')) {
+    return { id: 4, title: 'Release 04', sub: 'Jul 24, 2026', key: 'rel-4' };
+  }
+  if (src.includes('release 3') || src.includes('release 03') || rawCat.includes('files 03') || rawCat.includes('release 3') || rawCat.includes('release 03')) {
+    return { id: 3, title: 'Release 03', sub: 'Jun 19, 2026', key: 'rel-3' };
+  }
+  if (src.includes('release 2') || src.includes('release 02') || rawCat.includes('files 02') || rawCat.includes('release 2') || rawCat.includes('release 02')) {
+    return { id: 2, title: 'Release 02', sub: 'May 29, 2026', key: 'rel-2' };
+  }
+  return { id: 1, title: 'Release 01', sub: 'May 08, 2026', key: 'rel-1' };
 };
 
 const LAYER_CONFIG: Record<string, { color: string; icon: string }> = {
@@ -5349,6 +5373,14 @@ function App() {
     // Sort items within each layer
     Object.keys(groups).forEach(cat => {
       groups[cat].sort((a, b) => {
+        if (cat === 'UFOs - War.gov') {
+          const relA = getWarGovReleaseInfo(a).id;
+          const relB = getWarGovReleaseInfo(b).id;
+          if (relB !== relA) {
+            return relB - relA; // Newest release first (6 -> 5 -> 4 -> 3 -> 2 -> 1)
+          }
+        }
+
         const likesA = likes[String(a.id).replace(/[^a-zA-Z0-9_\-]/g, '_')] || 0;
         const likesB = likes[String(b.id).replace(/[^a-zA-Z0-9_\-]/g, '_')] || 0;
         
@@ -7681,30 +7713,124 @@ function App() {
                           {CATEGORY_DESCRIPTIONS[layerName]}
                         </div>
                       )}
-                      {locationsInLayer.map(loc => {
-                        const isSelected = selectedFeature?.id === loc.id;
+                      {(() => {
+                        const isWarGov = layerName === 'UFOs - War.gov';
+                        let lastReleaseId: number | null = null;
                         return (
-                          <div
-                            key={`mob-loc-${loc.id}`}
-                            onClick={() => handleLocationItemClick(loc)}
-                            style={{
-                              padding: '10px 8px',
-                              cursor: 'pointer',
-                              borderBottom: `1px solid ${theme.borderLight}`,
-                              display: 'flex',
-                              alignItems: 'center',
-                              justifyContent: 'space-between',
-                              background: isSelected ? (isMapDarkMode ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.04)') : 'transparent',
-                              color: isSelected ? '#b6a6ff' : theme.text,
-                              fontSize: '11px',
-                              fontFamily: '"Space Mono", monospace'
-                            }}
-                          >
-                            <span>{loc.name}</span>
-                            {loc.date && <span style={{ color: theme.textDim, fontSize: '9px' }}>{loc.date}</span>}
-                          </div>
+                          <>
+                            {isWarGov && locationsInLayer.length > 0 && (
+                              <div style={{
+                                display: 'flex',
+                                gap: '4px',
+                                padding: '2px 0 8px 0',
+                                flexWrap: 'wrap',
+                                borderBottom: `1px solid ${theme.borderLight}`,
+                                marginBottom: '6px'
+                              }}>
+                                {[6, 5, 4, 3, 2, 1].map(rNum => (
+                                  <button
+                                    key={`mob-quick-rel-${rNum}`}
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      const el = document.getElementById(`mob-wargov-rel-${rNum}`);
+                                      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                    }}
+                                    style={{
+                                      fontSize: '9px',
+                                      padding: '2px 6px',
+                                      borderRadius: '8px',
+                                      background: isMapDarkMode ? 'rgba(255, 155, 225, 0.12)' : 'rgba(255, 155, 225, 0.2)',
+                                      border: `1px solid ${isMapDarkMode ? 'rgba(255, 155, 225, 0.3)' : 'rgba(255, 155, 225, 0.5)'}`,
+                                      color: isMapDarkMode ? '#FF9BE1' : '#940d3f',
+                                      cursor: 'pointer',
+                                      fontFamily: '"Space Mono", monospace',
+                                      fontWeight: '600'
+                                    }}
+                                  >
+                                    Rel {rNum < 10 ? `0${rNum}` : rNum}
+                                  </button>
+                                ))}
+                              </div>
+                            )}
+                            {locationsInLayer.map((loc, idx) => {
+                              const isSelected = selectedFeature?.id === loc.id;
+                              let showDivider = false;
+                              let relInfo: any = null;
+
+                              if (isWarGov) {
+                                relInfo = getWarGovReleaseInfo(loc);
+                                if (relInfo.id !== lastReleaseId) {
+                                  showDivider = true;
+                                  lastReleaseId = relInfo.id;
+                                }
+                              }
+
+                              return (
+                                <React.Fragment key={`mob-loc-${loc.id}`}>
+                                  {showDivider && (
+                                    <div 
+                                      id={`mob-wargov-rel-${relInfo.id}`}
+                                      style={{
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'space-between',
+                                        padding: '8px 4px 4px 2px',
+                                        marginTop: idx === 0 ? '2px' : '10px',
+                                        marginBottom: '4px',
+                                        borderTop: idx === 0 ? 'none' : `1px solid ${isMapDarkMode ? 'rgba(255, 155, 225, 0.25)' : 'rgba(255, 155, 225, 0.45)'}`,
+                                        fontFamily: '"Space Mono", monospace',
+                                        textTransform: 'uppercase',
+                                        letterSpacing: '0.8px'
+                                      }}
+                                    >
+                                      <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                                        <div style={{
+                                          width: '6px',
+                                          height: '6px',
+                                          borderRadius: '50%',
+                                          background: '#FF9BE1',
+                                          boxShadow: '0 0 6px rgba(255, 155, 225, 0.6)'
+                                        }} />
+                                        <span style={{ fontSize: '10px', fontWeight: 'bold', color: isMapDarkMode ? '#FF9BE1' : '#940d3f' }}>
+                                          {relInfo.title}
+                                        </span>
+                                      </div>
+                                      <span style={{ 
+                                        fontSize: '8.5px', 
+                                        padding: '1px 6px',
+                                        borderRadius: '8px',
+                                        background: isMapDarkMode ? 'rgba(255, 155, 225, 0.15)' : 'rgba(255, 155, 225, 0.2)',
+                                        color: isMapDarkMode ? '#FFC2EF' : '#73052d',
+                                        fontWeight: '600'
+                                      }}>
+                                        {relInfo.sub}
+                                      </span>
+                                    </div>
+                                  )}
+                                  <div
+                                    onClick={() => handleLocationItemClick(loc)}
+                                    style={{
+                                      padding: '10px 8px',
+                                      cursor: 'pointer',
+                                      borderBottom: `1px solid ${theme.borderLight}`,
+                                      display: 'flex',
+                                      alignItems: 'center',
+                                      justifyContent: 'space-between',
+                                      background: isSelected ? (isMapDarkMode ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.04)') : 'transparent',
+                                      color: isSelected ? '#b6a6ff' : theme.text,
+                                      fontSize: '11px',
+                                      fontFamily: '"Space Mono", monospace'
+                                    }}
+                                  >
+                                    <span>{loc.name}</span>
+                                    {loc.date && <span style={{ color: theme.textDim, fontSize: '9px' }}>{loc.date}</span>}
+                                  </div>
+                                </React.Fragment>
+                              );
+                            })}
+                          </>
                         );
-                      })}
+                      })()}
                       {locationsInLayer.length === 0 && (
                         <div style={{ padding: '8px', fontSize: '9px', color: theme.textDim }}>
                           {!isActive ? "Toggle on visibility to view data" : "NO ASSETS IN RANGE"}
@@ -11265,21 +11391,113 @@ function App() {
                               >
                                 {(() => {
                                   const maxVisible = visibleCounts[layerName] || 100;
+                                  const isWarGov = layerName === 'UFOs - War.gov';
+                                  let lastReleaseId: number | null = null;
+
                                   return (
                                     <>
-                                      {locationsInLayer.slice(0, maxVisible).map(loc => {
+                                      {isWarGov && locationsInLayer.length > 0 && (
+                                        <div style={{
+                                          display: 'flex',
+                                          gap: '4px',
+                                          padding: '2px 0 10px 0',
+                                          flexWrap: 'wrap',
+                                          borderBottom: `1px solid ${theme.borderLight}`,
+                                          marginBottom: '8px'
+                                        }}>
+                                          {[6, 5, 4, 3, 2, 1].map(rNum => (
+                                            <button
+                                              key={`desk-quick-rel-${rNum}`}
+                                              onClick={(e) => {
+                                                e.stopPropagation();
+                                                const el = document.getElementById(`desk-wargov-rel-${rNum}`);
+                                                if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                              }}
+                                              style={{
+                                                fontSize: '9px',
+                                                padding: '2px 7px',
+                                                borderRadius: '10px',
+                                                background: isMapDarkMode ? 'rgba(255, 155, 225, 0.12)' : 'rgba(255, 155, 225, 0.2)',
+                                                border: `1px solid ${isMapDarkMode ? 'rgba(255, 155, 225, 0.3)' : 'rgba(255, 155, 225, 0.5)'}`,
+                                                color: isMapDarkMode ? '#FF9BE1' : '#940d3f',
+                                                cursor: 'pointer',
+                                                fontFamily: '"Space Mono", monospace',
+                                                fontWeight: '600',
+                                                transition: 'all 0.15s ease'
+                                              }}
+                                              className="interactive-tag-pill"
+                                            >
+                                              Rel {rNum < 10 ? `0${rNum}` : rNum}
+                                            </button>
+                                          ))}
+                                        </div>
+                                      )}
+
+                                      {locationsInLayer.slice(0, maxVisible).map((loc, idx) => {
                                         const isSelected = selectedFeature?.id === loc.id;
                                         const pillColor = layerColors[layerName] || '#e5e5e5';
+                                        let showDivider = false;
+                                        let relInfo: any = null;
+
+                                        if (isWarGov) {
+                                          relInfo = getWarGovReleaseInfo(loc);
+                                          if (relInfo.id !== lastReleaseId) {
+                                            showDivider = true;
+                                            lastReleaseId = relInfo.id;
+                                          }
+                                        }
+
                                         return (
-                                          <SidebarListItem
-                                            key={loc.id}
-                                            loc={loc}
-                                            isSelected={isSelected}
-                                            pillColor={pillColor}
-                                            isMapDarkMode={isMapDarkMode}
-                                            theme={theme}
-                                            onItemClick={handleLocationItemClick}
-                                          />
+                                          <React.Fragment key={loc.id}>
+                                            {showDivider && (
+                                              <div 
+                                                id={`desk-wargov-rel-${relInfo.id}`}
+                                                style={{
+                                                  display: 'flex',
+                                                  alignItems: 'center',
+                                                  justifyContent: 'space-between',
+                                                  padding: '10px 6px 5px 2px',
+                                                  marginTop: idx === 0 ? '2px' : '12px',
+                                                  marginBottom: '4px',
+                                                  borderTop: idx === 0 ? 'none' : `1px solid ${isMapDarkMode ? 'rgba(255, 155, 225, 0.25)' : 'rgba(255, 155, 225, 0.45)'}`,
+                                                  fontFamily: '"Space Mono", monospace',
+                                                  textTransform: 'uppercase',
+                                                  letterSpacing: '0.8px'
+                                                }}
+                                              >
+                                                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                                                  <div style={{
+                                                    width: '6px',
+                                                    height: '6px',
+                                                    borderRadius: '50%',
+                                                    background: '#FF9BE1',
+                                                    boxShadow: '0 0 6px rgba(255, 155, 225, 0.6)'
+                                                  }} />
+                                                  <span style={{ fontSize: '10px', fontWeight: 'bold', color: isMapDarkMode ? '#FF9BE1' : '#940d3f' }}>
+                                                    {relInfo.title}
+                                                  </span>
+                                                </div>
+                                                <span style={{ 
+                                                  fontSize: '8.5px', 
+                                                  padding: '1px 6px',
+                                                  borderRadius: '8px',
+                                                  background: isMapDarkMode ? 'rgba(255, 155, 225, 0.15)' : 'rgba(255, 155, 225, 0.2)',
+                                                  color: isMapDarkMode ? '#FFC2EF' : '#73052d',
+                                                  fontWeight: '600'
+                                                }}>
+                                                  {relInfo.sub}
+                                                </span>
+                                              </div>
+                                            )}
+                                            <SidebarListItem
+                                              loc={loc}
+                                              isSelected={isSelected}
+                                              pillColor={pillColor}
+                                              isMapDarkMode={isMapDarkMode}
+                                              theme={theme}
+                                              onItemClick={handleLocationItemClick}
+                                            />
+                                          </React.Fragment>
                                         );
                                       })}
                                       {locationsInLayer.length > maxVisible && (
