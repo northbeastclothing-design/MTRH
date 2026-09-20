@@ -460,8 +460,19 @@ const getFilenameWithNoExtension = (url: string) => {
 const getCombinedAssets = (images: string[]): CombinedAsset[] => {
   if (!images || images.length === 0) return [];
   
-  const pdfs = images.filter(isPdfUrl);
-  const others = images.filter(url => !isPdfUrl(url));
+  // Deduplicate unique trimmed URLs while preserving order
+  const uniqueImages: string[] = [];
+  const seenUrls = new Set<string>();
+  images.forEach(img => {
+    const trimmed = (img || '').trim();
+    if (trimmed && !seenUrls.has(trimmed)) {
+      seenUrls.add(trimmed);
+      uniqueImages.push(trimmed);
+    }
+  });
+
+  const pdfs = uniqueImages.filter(isPdfUrl);
+  const others = uniqueImages.filter(url => !isPdfUrl(url));
   
   const combined: CombinedAsset[] = [];
   const processedPdfs = new Set<string>();

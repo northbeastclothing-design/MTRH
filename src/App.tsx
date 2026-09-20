@@ -549,8 +549,19 @@ const compressImageToDataUrl = (file: File, maxWidth = 1200, maxHeight = 1200, q
 const getCombinedAssets = (images: string[]): CombinedAsset[] => {
   if (!images || images.length === 0) return [];
   
-  const pdfs = images.filter(isPdfUrl);
-  const others = images.filter(url => !isPdfUrl(url));
+  // Deduplicate unique trimmed URLs while preserving order
+  const uniqueImages: string[] = [];
+  const seenUrls = new Set<string>();
+  images.forEach(img => {
+    const trimmed = (img || '').trim();
+    if (trimmed && !seenUrls.has(trimmed)) {
+      seenUrls.add(trimmed);
+      uniqueImages.push(trimmed);
+    }
+  });
+
+  const pdfs = uniqueImages.filter(isPdfUrl);
+  const others = uniqueImages.filter(url => !isPdfUrl(url));
   
   const combined: CombinedAsset[] = [];
   const processedPdfs = new Set<string>();
@@ -5381,22 +5392,22 @@ function App() {
           }
         }
 
-        const likesA = likes[String(a.id).replace(/[^a-zA-Z0-9_\-]/g, '_')] || 0;
-        const likesB = likes[String(b.id).replace(/[^a-zA-Z0-9_\-]/g, '_')] || 0;
+        const idA = String(a.id || '');
+        const idB = String(b.id || '');
+        const cleanIdA = idA.replace(/[^a-zA-Z0-9_\-]/g, '_');
+        const cleanIdB = idB.replace(/[^a-zA-Z0-9_\-]/g, '_');
+        const likesA = likes[cleanIdA] ?? likes[idA] ?? 0;
+        const likesB = likes[cleanIdB] ?? likes[idB] ?? 0;
         
         if (likesB !== likesA) {
-          return likesB - likesA; // Sort by likes descending
+          return likesB - likesA; // 1st: Most hearted first
         }
 
-        // Identify content tiers:
-        // Tier 3: Has video content
-        // Tier 2: Has photos / PDFs / other imagery but no video
-        // Tier 1: Has no imagery at all
+        // 2nd: Ones with video content
         const getTier = (item: any) => {
           const imgs = item.images || [];
           if (imgs.length === 0) return 1;
-          const hasVideo = imgs.some(isVideoUrl);
-          if (hasVideo) return 3;
+          if (imgs.some(isVideoUrl)) return 3;
           return 2;
         };
 
@@ -5404,10 +5415,10 @@ function App() {
         const tierB = getTier(b);
 
         if (tierB !== tierA) {
-          return tierB - tierA; // Sort by tier descending (3 -> 2 -> 1)
+          return tierB - tierA; // 2nd: Video items first
         }
         
-        return a.name.localeCompare(b.name); // Then alphabetically
+        return a.name.localeCompare(b.name); // 3rd: Alphabetical order
       });
     });
     
