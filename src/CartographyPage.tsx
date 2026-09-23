@@ -31,6 +31,7 @@ interface HistoricalMap {
   year: string;
   description: string;
   url: string;
+  thumbnailUrl?: string;
   aspectRatio: number;
   pinColor?: string;
   era: string;
@@ -89,7 +90,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     name: "Ptolemy’s Geography",
     year: "c. 150 AD",
     description: "A classical Renaissance restoration of Claudius Ptolemy's geographical coordinates, showing the known world of the Roman Empire extending from Hibernia (Ireland) to China.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/PtolemyWorldMap.jpg/1280px-PtolemyWorldMap.jpg",
+    url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/PtolemyWorldMap.jpg/1280px-PtolemyWorldMap.jpg",
     aspectRatio: 1.4612,
     pinColor: '#FF5C5C',
     era: 'ancient'
@@ -100,6 +101,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     year: "c. 4th Century",
     description: "An incredibly elongated map showing the cursus publicus (Roman road network) spanning from southern Britain all the way to India, optimized for traveler itinerary rather than shape accuracy.",
     url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/TabulaPeutingeriana.jpg/3840px-TabulaPeutingeriana.jpg",
+    thumbnailUrl: "/images/peutinger_thumb.jpg",
     aspectRatio: 13.0612,
     pinColor: '#FF5E97',
     era: 'ancient'
@@ -110,7 +112,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     name: "Albi Mappa Mundi",
     year: "c. 8th Century",
     description: "One of the oldest surviving non-T-O style medieval world maps, preserved in the Albi Cathedral library, showing a horseshoe-shaped Mediterranean basin and surrounding lands.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Mappa_mundi_dAlbi.png/500px-Mappa_mundi_dAlbi.png",
+    url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Mappa_mundi_dAlbi.png/960px-Mappa_mundi_dAlbi.png",
     aspectRatio: 0.8128,
     pinColor: '#B297FF',
     era: 'early-medieval'
@@ -120,7 +122,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     name: "Cotton World Map",
     year: "c. 1025",
     description: "An Anglo-Saxon world map representing the East at the top, displaying unique early political geography, mountain ranges, and biblical events.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Cotton_world_map.jpg/1280px-Cotton_world_map.jpg",
+    url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Cotton_world_map.jpg/1280px-Cotton_world_map.jpg",
     aspectRatio: 0.8224,
     pinColor: '#FF9F63',
     era: 'early-medieval'
@@ -140,7 +142,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     name: "Ebstorf Map",
     year: "c. 1239",
     description: "A monumental medieval world map, found in a convent at Ebstorf, depicting the Earth with Christ's body containing the entire creation (head at top, hands at sides, feet at bottom).",
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Ebstorfer_Weltkarte_2.jpg/500px-Ebstorfer_Weltkarte_2.jpg",
+    url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Ebstorfer_Weltkarte_2.jpg/3840px-Ebstorfer_Weltkarte_2.jpg",
     aspectRatio: 1.006,
     pinColor: '#FFF96A',
     era: 'early-medieval'
@@ -150,7 +152,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     name: "Psalter Mappa Mundi",
     year: "c. 1260",
     description: "A detailed medieval miniature map from a psalter. It depicts the world inside a circular frame with Christ presiding above, flanked by angels.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Psalter_world_map.jpg/500px-Psalter_world_map.jpg",
+    url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Psalter_world_map.jpg/1280px-Psalter_world_map.jpg",
     aspectRatio: 0.7838,
     pinColor: '#C0F06E',
     era: 'early-medieval'
@@ -160,7 +162,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     name: "Hereford Mappa Mundi",
     year: "c. 1300",
     description: "The largest surviving medieval European world map, displaying theological, geographical, and historical narratives in a circular frame centered on Jerusalem.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/9/92/Hereford_Mappa_Mundi.jpg",
+    url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Hereford_Mappa_Mundi.jpg/3840px-Hereford_Mappa_Mundi.jpg",
     aspectRatio: 0.8421,
     pinColor: '#59DCB7',
     era: 'early-medieval'
@@ -170,7 +172,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     name: "Fra Mauro Mappa Mundi (1459 CE)",
     year: "1459 CE",
     description: "Created in 1459 CE by Venetian monk and cartographer Fra Mauro at the Monastery of St. Michael in Murano, Venice. Commissioned by King Afonso V of Portugal, this circular planisphere represents the absolute pinnacle of medieval cartography. Oriented with South at the top, it integrates Portuguese maritime discoveries, Arab trade logs, and Marco Polo's Asian itineraries without adhering to traditional religious geography.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Fra_Mauro_Map_FactumArte.jpg/1280px-Fra_Mauro_Map_FactumArte.jpg",
+    url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Fra_Mauro_Map_FactumArte.jpg/1280px-Fra_Mauro_Map_FactumArte.jpg",
     aspectRatio: 1.0,
     pinColor: '#59DCB7',
     era: 'early-medieval'
@@ -190,7 +192,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     name: "Cellarius Celestial Star Map",
     year: "1660",
     description: "Andreas Cellarius' famous star map and celestial planisphere from the Harmonia Macrocosmica atlas, illustrating the Ptolemaic, Copernican, and Tycho Brahe planetary systems.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Harmonia_Macrocosmica_Star_Atlas.jpg/1280px-Harmonia_Macrocosmica_Star_Atlas.jpg",
+    url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Harmonia_Macrocosmica_Star_Atlas%2C_Andreas_Cellarius%2C1660.jpg/1280px-Harmonia_Macrocosmica_Star_Atlas%2C_Andreas_Cellarius%2C1660.jpg",
     aspectRatio: 1.18,
     pinColor: '#BACEF4',
     era: 'early-modern'
@@ -211,7 +213,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     name: "Kangnido Map",
     year: "1402",
     description: "An early Joseon-dynasty Korean map detailing East Asia, the Silk Road, India, and Africa, representing the collision of Western Islamic and Far Eastern Chinese cartographical findings.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/%ED%98%BC%EC%9D%BC%EA%B0%95%EB%A6%AC%EC%97%AD%EB%8C%80%EA%B5%AD%EB%8F%84%EC%A7%80%EB%8F%84_%281%29.JPG/1920px-%ED%98%BC%EC%9D%BC%EA%B0%95%EB%A6%AC%EC%97%AD%EB%8C%80%EA%B5%AD%EB%8F%84%EC%A7%80%EB%8F%84_%281%29.JPG",
+    url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/%ED%98%BC%EC%9D%BC%EA%B0%95%EB%A6%AC%EC%97%AD%EB%8C%80%EA%B5%AD%EB%8F%84%EC%A7%80%EB%8F%84_%281%29.JPG/1280px-%ED%98%BC%EC%9D%BC%EA%B0%95%EB%A6%AC%EC%97%AD%EB%8C%80%EA%B5%AD%EB%8F%84%EC%A7%80%EB%8F%84_%281%29.JPG",
     aspectRatio: 1.7813,
     pinColor: '#FFF96A',
     era: 'late-medieval',
@@ -222,7 +224,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     name: "Andrea Bianco Map",
     year: "1436",
     description: "Venetian cartographer Andrea Bianco's circular world map from his portolan atlas, depicting the Atlantic islands, sailing lines, and early compass wind roses.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/9/99/Biancomap.jpg",
+    url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Biancomap.jpg/500px-Biancomap.jpg",
     aspectRatio: 1.3060,
     pinColor: '#FF5E97',
     era: 'late-medieval'
@@ -232,7 +234,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     name: "Borgia World Map",
     year: "c. 1430",
     description: "A highly complex, non-theocentric map engraved on a circular copper plate, showing Asia, Europe, and Africa with mythological illustrations and kingdoms.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Mapa_de_Borgia_XV.jpg/1280px-Mapa_de_Borgia_XV.jpg",
+    url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Mapa_de_Borgia_XV.jpg/3840px-Mapa_de_Borgia_XV.jpg",
     aspectRatio: 1.0,
     pinColor: '#74F8F3',
     era: 'late-medieval',
@@ -244,7 +246,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     name: "Waldseemüller World Map",
     year: "1507",
     description: "Martin Waldseemüller's monumental map, the first to use the name 'America' and represent the New World as a separate landmass between the Atlantic and Pacific.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Waldseemuller_map_2.jpg/1280px-Waldseemuller_map_2.jpg",
+    url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Waldseemuller_map_2.jpg/3840px-Waldseemuller_map_2.jpg",
     aspectRatio: 1.7513,
     pinColor: '#FF5E97',
     era: 'renaissance'
@@ -264,7 +266,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     name: "Orontius Finaeus Map",
     year: "1531",
     description: "A famous heart-shaped cordiform projection created by French mathematician Oronce Fine, depicting a massive, detailed Antarctic landmass centuries before its official discovery.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/c/c9/Oronce_Fine_1531.jpg",
+    url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Oronce_Fine_1531.jpg/1280px-Oronce_Fine_1531.jpg",
     aspectRatio: 1.3474,
     pinColor: '#B297FF',
     era: 'renaissance'
@@ -274,7 +276,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     name: "Ortelius World Map",
     year: "1570",
     description: "Abraham Ortelius's landmark 'Typus Orbis Terrarum' world map, published as the opening plate of the first modern atlas, mapping Tartaria, the Americas, and speculative polar coastlines.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/OrteliusWorldMap1570.jpg/3840px-OrteliusWorldMap1570.jpg",
+    url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/OrteliusWorldMap1570.jpg/3840px-OrteliusWorldMap1570.jpg",
     aspectRatio: 1.4683,
     pinColor: '#FF5C5C',
     era: 'renaissance'
@@ -297,16 +299,14 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/1587_Planisphere_Urbano_Monti_%2816th_century_Milan%2C_Italy%29.jpg/3840px-1587_Planisphere_Urbano_Monti_%2816th_century_Milan%2C_Italy%29.jpg",
     aspectRatio: 0.9987,
     pinColor: '#F7E8C1',
-    era: 'renaissance',
-    highResUrl: "https://upload.wikimedia.org/wikipedia/commons/5/53/1587_Planisphere_Urbano_Monti_%2816th_century_Milan%2C_Italy%29.jpg",
-    highResWidth: 7760
+    era: 'renaissance'
   },
   {
     id: 'tartaria',
     name: "Map of Tartaria",
     year: "1606",
     description: "Jodocus Hondius's seminal engraving of the Great Empire of Tartary, detailing geographical regions, rivers, and cities spanning across Northern Asia and Russia.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Tartaria_by_Jodocus_Hondius.jpg/3840px-Tartaria_by_Jodocus_Hondius.jpg",
+    url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Tartaria_by_Jodocus_Hondius.jpg/3840px-Tartaria_by_Jodocus_Hondius.jpg",
     aspectRatio: 1.3904,
     pinColor: '#FF5E97',
     era: 'renaissance'
@@ -317,19 +317,17 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     name: "Buache’s Physical Planisphere",
     year: "1753 AD",
     description: "Philippe Buache's revolutionary physical planisphere depicting a central ice-free Antarctic ocean basin, subterranean water channels, and mountain chains linking the continents under early speculative physical geology.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Buache1753Map.jpg/1920px-Buache1753Map.jpg",
+    url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Buache1753Map.jpg/1920px-Buache1753Map.jpg",
     aspectRatio: 1.4617,
     pinColor: '#59DCB7',
-    era: '18th-19th',
-    highResUrl: "https://upload.wikimedia.org/wikipedia/commons/b/b3/Buache1753Map.jpg",
-    highResWidth: 2811
+    era: '18th-19th'
   },
   {
     id: 'middleton1892',
     name: "Middleton’s Pioneer Map of the World",
     year: "c. 1892 AD",
     description: "A famous 19th-century flat-earth planar cartography chart by Christopher Middleton depicting the world as an immovable plane, featuring ancient post-Diluvian migrations, biblical firmament circles, and polar projection lines.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/1/14/Middletons_pioneer_map_of_the_world%2C_%28as_a%3F%29_plane_and_immoveable_%288347346144%29.jpg",
+    url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Middletons_pioneer_map_of_the_world%2C_%28as_a%3F%29_plane_and_immoveable_%288347346144%29.jpg/500px-Middletons_pioneer_map_of_the_world%2C_%28as_a%3F%29_plane_and_immoveable_%288347346144%29.jpg",
     aspectRatio: 1.0582,
     pinColor: '#C0F06E',
     era: '18th-19th',
@@ -350,7 +348,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     name: "Ferguson's Square and Stationary Earth Map",
     year: "1893",
     description: "Professor Orlando Ferguson's highly elaborate cosmology diagram asserting the Earth is a square, stationary basin with a central concave globe, citing numerous Biblical texts.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Map_of_the_square_and_stationary_earth_-_four_hundred_passages_in_the_Bible_that_condemn_the_Globe_Theory%2C_or_the_Flying_Earth%2C_and_none_sustain_it_%3B_this_map_is_the_Bible_map_of_the_world_LOC_2011594831.jpg/3840px-Map_of_the_square_and_stationary_earth_-_four_hundred_passages_in_the_Bible_that_condemn_the_Globe_Theory%2C_or_the_Flying_Earth%2C_and_none_sustain_it_%3B_this_map_is_the_Bible_map_of_the_world_LOC_2011594831.jpg",
+    url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Map_of_the_square_and_stationary_earth_-_four_hundred_passages_in_the_Bible_that_condemn_the_Globe_Theory%2C_or_the_Flying_Earth%2C_and_none_sustain_it_%3B_this_map_is_the_Bible_map_of_the_world_LOC_2011594831.jpg/3840px-thumbnail.jpg",
     aspectRatio: 1.4494,
     pinColor: '#b6a6ff',
     era: 'modern'
@@ -360,7 +358,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     name: "Winkel Tripel Projection",
     year: "1921",
     description: "A low-distortion world map projection designed by Oswald Winkel, balancing size and conformal distortions. It was adopted as the standard world map of the National Geographic Society.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Winkel_triple_projection_SW.jpg/1280px-Winkel_triple_projection_SW.jpg",
+    url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Winkel_triple_projection_SW.jpg/1280px-Winkel_triple_projection_SW.jpg",
     aspectRatio: 1.6307,
     pinColor: '#FF5C5C',
     era: 'modern'
@@ -370,7 +368,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     name: "Goode Homolosine Map",
     year: "1923",
     description: "An interrupted, equal-area pseudocylindrical projection designed by J. Paul Goode to minimize continental shape distortion by dividing ocean sections.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Goode_homolosine_projection_SW.jpg/1280px-Goode_homolosine_projection_SW.jpg",
+    url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Goode_homolosine_projection_SW.jpg/1280px-Goode_homolosine_projection_SW.jpg",
     aspectRatio: 2.2867,
     pinColor: '#FF5E97',
     era: 'modern'
@@ -380,7 +378,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     name: "Robinson Projection",
     year: "1963",
     description: "A compromise map projection developed by Arthur H. Robinson, designed to present a visually balanced representation of the entire world with mild distortions across all metrics.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Robinson_projection_SW.jpg/1280px-Robinson_projection_SW.jpg",
+    url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Robinson_projection_SW.jpg/1280px-Robinson_projection_SW.jpg",
     aspectRatio: 1.6288,
     pinColor: '#B297FF',
     era: 'modern'
@@ -401,7 +399,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     name: "Pangea Politica Map",
     year: "Modern (335M BC)",
     description: "A detailed scientific and political reconstruction by Massimo Pietrobon mapping modern country borders onto the prehistoric supercontinent of Pangaea.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Pangea_political.jpg",
+    url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Pangea_political.jpg/1280px-Pangea_political.jpg",
     aspectRatio: 1.0082,
     pinColor: '#FF5E97',
     era: 'speculative'
@@ -411,7 +409,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     name: "Rodinia Reconstruction",
     year: "Modern (900M BC)",
     description: "A paleogeographic reconstruction of the prehistoric supercontinent Rodinia, which assembled prior to Pangaea during the Neoproterozoic era.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/5/5a/Rodinia_900Ma.jpg",
+    url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Rodinia_900Ma.jpg/500px-Rodinia_900Ma.jpg",
     aspectRatio: 1.0000,
     pinColor: '#FFF96A',
     era: 'speculative'
@@ -421,7 +419,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     name: "Kircher's Atlantis",
     year: "1669",
     description: "German scholar Athanasius Kircher's speculative map of the lost island continent of Atlantis, featured in 'Mundus Subterraneus' and oriented with South at the top.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Atlantis_Kircher_Mundus_subterraneus_1678.jpg/1280px-Atlantis_Kircher_Mundus_subterraneus_1678.jpg",
+    url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Atlantis_Kircher_Mundus_subterraneus_1678.jpg/1280px-Atlantis_Kircher_Mundus_subterraneus_1678.jpg",
     aspectRatio: 1.5039,
     pinColor: '#74F8F3',
     era: 'speculative'
@@ -451,7 +449,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     name: "Sigillum Dei Æmeth (Seal of Truth)",
     year: "c. 1582",
     description: "John Dee's complex Enochian cosmology seal, representing the cosmic order, names of angels, and mystical dimensions of the universe revealed to him and Edward Kelley.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Sigillum_Dei_%C3%86meth.jpg/500px-Sigillum_Dei_%C3%86meth.jpg",
+    url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Sigillum_Dei_%C3%86meth.jpg/500px-Sigillum_Dei_%C3%86meth.jpg",
     aspectRatio: 1.5000,
     pinColor: '#FF9F63',
     era: 'speculative'
@@ -461,7 +459,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     name: "Early Hebrew Cosmology Diagram",
     year: "Modern Reconstruction",
     description: "A diagrammatic representation of ancient biblical cosmology, featuring the dome firmament, the waters above and below, the pillars of the earth, and the underworld of Sheol.",
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Early_Hebrew_Conception_of_the_Universe.png/500px-Early_Hebrew_Conception_of_the_Universe.png",
+    url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Early_Hebrew_Conception_of_the_Universe.png/500px-Early_Hebrew_Conception_of_the_Universe.png",
     aspectRatio: 1.0964,
     pinColor: '#90C2FF',
     era: 'speculative'
@@ -470,7 +468,7 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
 
 const getProxyOrDirectUrl = (url: string): string => {
   if (!url) return url;
-  if (url.startsWith('/')) return url;
+  if (url.startsWith('/') || url.startsWith('data:') || url.startsWith('blob:') || url.includes('/api/proxy')) return url;
   return `/api/proxy-resource?url=${encodeURIComponent(url)}`;
 };
 
@@ -701,26 +699,31 @@ const updateMapOverlay = (map: mapboxgl.Map, hMap: HistoricalMap, slices: ImageS
         });
 
         // Insert new layer below hotspots to keep annotations interactive
+        const otherRes = resolution === 'low' ? 'high' : 'low';
+        const hasOtherResLayer = !!map.getLayer(`historical-map-layer-${index}-${otherRes}`);
+        const initialOpacity = hasOtherResLayer ? 0 : 1;
         const beforeId = map.getLayer('hotspots-fill') ? 'hotspots-fill' : undefined;
+
         map.addLayer({
           id: lyrId,
           type: 'raster',
           source: srcId,
           paint: {
             'raster-fade-duration': 0, // Disable internal fade to avoid double opacity transitions
-            'raster-opacity': 0, // Start fully transparent to fade in on top of other resolution
+            'raster-opacity': initialOpacity,
             'raster-opacity-transition': { duration: 300 }
           }
         }, beforeId);
 
-        // Transition opacity to 1 on the next frame for a smooth fade-in
-        requestAnimationFrame(() => {
-          try {
-            if (map.getLayer(lyrId)) {
-              map.setPaintProperty(lyrId, 'raster-opacity', 1);
-            }
-          } catch (e) {}
-        });
+        if (initialOpacity === 0) {
+          requestAnimationFrame(() => {
+            try {
+              if (map.getLayer(lyrId)) {
+                map.setPaintProperty(lyrId, 'raster-opacity', 1);
+              }
+            } catch (e) {}
+          });
+        }
       }
     });
 
@@ -766,26 +769,16 @@ const getEraFolderBgColor = (eraId: string): string => {
 };
 
 const getThumbnailUrl = (url: string): string => {
-  if (url.includes('iiif.digitalcommonwealth.org')) {
-    return url.replace('/full/4000,', '/full/500,');
+  if (!url) return url;
+  if (url.startsWith('/') || url.startsWith('data:') || url.startsWith('blob:')) return url;
+  if (url.includes('images.weserv.nl')) {
+    return url.includes('&w=') ? url : `${url}&w=600&h=250&fit=cover`;
   }
-  if (url.includes('upload.wikimedia.org/wikipedia/commons/')) {
-    if (url.includes('/commons/thumb/')) {
-      const parts = url.split('/');
-      const filename = parts[parts.length - 2];
-      parts[parts.length - 1] = `500px-${filename}`;
-      return parts.join('/');
-    } else {
-      const parts = url.split('/commons/');
-      if (parts.length === 2) {
-        const filePart = parts[1];
-        const fileParts = filePart.split('/');
-        const filename = fileParts[fileParts.length - 1];
-        return `https://upload.wikimedia.org/wikipedia/commons/thumb/${filePart}/500px-${filename}`;
-      }
-    }
-  }
-  return url;
+  let safeUrl = url;
+  try {
+    safeUrl = decodeURI(url);
+  } catch (_) {}
+  return `https://images.weserv.nl/?url=${encodeURIComponent(safeUrl)}&w=600&h=250&fit=cover`;
 };
 
 interface EraAccordionHeaderProps {
@@ -939,13 +932,7 @@ const getMapUrlForWidth = (url: string, width: number) => {
   return url;
 };
 
-// Helper to resolve the raw original Wikipedia file URL from a thumbnail URL
-const getWikipediaRawUrl = (url: string) => {
-  if (!url.includes('/commons/thumb/')) return url;
-  return url
-    .replace('/commons/thumb/', '/commons/')
-    .replace(/\/(\d+)px-[^\/]+$/, '');
-};
+
 
 interface ImageSlice {
   url: string;
@@ -1162,13 +1149,8 @@ export default function CartographyPage({
     if (selectedMap.disableResolutionUpgrade) {
       return selectedMap.url;
     }
-    if (currentResolution === 'high') {
-      if (selectedMap.highResUrl) {
-        return selectedMap.highResUrl;
-      }
-      if (selectedMap.url.includes('/commons/thumb/')) {
-        return getWikipediaRawUrl(selectedMap.url);
-      }
+    if (currentResolution === 'high' && selectedMap.highResUrl) {
+      return selectedMap.highResUrl;
     }
     const width = currentResolution === 'low' ? lowResWidth : highResWidth;
     return getMapUrlForWidth(selectedMap.url, width);
@@ -1380,98 +1362,124 @@ export default function CartographyPage({
     }
 
     const fetchImageProgress = async () => {
-      try {
-        // Route through proxy-resource endpoint to bypass CORS and user hotlink protections
-        const proxiedUrl = getProxyOrDirectUrl(targetUrl);
-        const response = await fetch(proxiedUrl, { signal: controller.signal });
-        if (!response.ok) throw new Error("Image fetch response failed");
+      // Prioritize local server proxy (which forwards desktop User-Agent and Referer headers),
+      // then fall back to direct Wikimedia fetch, then weserv CDN.
+      const candidateUrls = [
+        getProxyOrDirectUrl(targetUrl),
+        targetUrl,
+        `https://images.weserv.nl/?url=${encodeURIComponent(targetUrl)}`
+      ].filter((u, idx, arr) => u && arr.indexOf(u) === idx);
 
-        const reader = response.body?.getReader();
-        const contentLength = +(response.headers.get('Content-Length') || 0);
+      let lastError: any = null;
 
-        if (!reader) {
-          if (active) {
-            setMapImageSlices([{
-              url: proxiedUrl,
-              col: 0,
-              row: 0,
-              cols: 1,
-              rows: 1
-            }]);
-            setSlicesResolution(currentResolution);
-            loadedMapIdRef.current = selectedMap.id;
-            setLoadProgress(null);
-            setIsMapSwitchLoading(false);
+      for (const currentUrl of candidateUrls) {
+        if (!active) return;
+        try {
+          const response = await fetch(currentUrl, { signal: controller.signal });
+          if (!response.ok) {
+            throw new Error(`Fetch failed with status ${response.status} for ${currentUrl}`);
           }
-          return;
-        }
 
-        let receivedLength = 0;
-        const chunks: Uint8Array[] = [];
+          const reader = response.body?.getReader();
+          const contentLength = +(response.headers.get('Content-Length') || 0);
 
-        while (true) {
-          const { done, value } = await reader.read();
-          if (done) break;
-          if (value) {
-            chunks.push(value);
-            receivedLength += value.length;
-            if (contentLength > 0) {
-              const pct = Math.min(Math.round((receivedLength / contentLength) * 100), 99);
-              if (active) setLoadProgress(pct);
+          if (!reader) {
+            if (active) {
+              setMapImageSlices([{
+                url: currentUrl,
+                col: 0,
+                row: 0,
+                cols: 1,
+                rows: 1
+              }]);
+              setSlicesResolution(currentResolution);
+              loadedMapIdRef.current = selectedMap.id;
+              setLoadProgress(null);
+              setIsMapSwitchLoading(false);
+            }
+            return;
+          }
+
+          let receivedLength = 0;
+          const chunks: Uint8Array[] = [];
+
+          while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+            if (value) {
+              chunks.push(value);
+              receivedLength += value.length;
+              if (contentLength > 0) {
+                const pct = Math.min(Math.round((receivedLength / contentLength) * 100), 99);
+                if (active) setLoadProgress(pct);
+              }
             }
           }
-        }
 
-        if (!active) return;
+          if (!active) return;
 
-        // Create Blob and slice it
-        const blob = new Blob(chunks);
-        try {
-          const slices = await sliceImage(blob);
-          if (active) {
-            setMapImageSlices(slices);
-            setSlicesResolution(currentResolution);
-            loadedMapIdRef.current = selectedMap.id;
-            setLoadProgress(null);
-            setIsMapSwitchLoading(false);
+          // Create Blob and slice it
+          const blob = new Blob(chunks);
+          try {
+            const slices = await sliceImage(blob);
+            if (active) {
+              setMapImageSlices(slices);
+              setSlicesResolution(currentResolution);
+              loadedMapIdRef.current = selectedMap.id;
+              setLoadProgress(null);
+              setIsMapSwitchLoading(false);
+            }
+            return;
+          } catch (sliceErr) {
+            console.warn("Failed to slice image, falling back to original blob URL:", sliceErr);
+            const localUrl = URL.createObjectURL(blob);
+            if (active) {
+              setMapImageSlices([{
+                url: localUrl,
+                col: 0,
+                row: 0,
+                cols: 1,
+                rows: 1
+              }]);
+              setSlicesResolution(currentResolution);
+              loadedMapIdRef.current = selectedMap.id;
+              setLoadProgress(null);
+              setIsMapSwitchLoading(false);
+            }
+            return;
           }
-        } catch (sliceErr) {
-          console.warn("Failed to slice image, falling back to original blob URL:", sliceErr);
-          const localUrl = URL.createObjectURL(blob);
-          if (active) {
-            setMapImageSlices([{
-              url: localUrl,
-              col: 0,
-              row: 0,
-              cols: 1,
-              rows: 1
-            }]);
-            setSlicesResolution(currentResolution);
-            loadedMapIdRef.current = selectedMap.id;
-            setLoadProgress(null);
-            setIsMapSwitchLoading(false);
+        } catch (candidateErr: any) {
+          if (candidateErr.name === 'AbortError') {
+            return;
           }
-        }
-      } catch (err: any) {
-        if (err.name === 'AbortError') {
-          return;
-        }
-        console.warn("Failed to load map with progress, falling back to proxy URL:", err);
-        if (active) {
-          const proxiedUrl = getProxyOrDirectUrl(targetUrl);
-          setMapImageSlices([{
-            url: proxiedUrl,
-            col: 0,
-            row: 0,
-            cols: 1,
-            rows: 1
-          }]);
-          setSlicesResolution(currentResolution);
-          loadedMapIdRef.current = selectedMap.id;
-          setLoadProgress(null);
-          setIsMapSwitchLoading(false);
+          lastError = candidateErr;
+          console.warn(`Fetch candidate failed (${currentUrl}):`, candidateErr.message || candidateErr);
         }
       }
+
+      // If all candidate URLs failed
+      if (!active) return;
+      console.warn("All image fetch candidates failed, falling back:", lastError);
+
+      // If upgrading to high resolution and fetch fails, retain the existing low-resolution slices so the map never disappears!
+      if (currentResolution === 'high' && mapImageSlices.length > 0) {
+        setLoadProgress(null);
+        setIsMapSwitchLoading(false);
+        return;
+      }
+
+      const fallbackUrl = getProxyOrDirectUrl(targetUrl);
+      setMapImageSlices([{
+        url: fallbackUrl,
+        col: 0,
+        row: 0,
+        cols: 1,
+        rows: 1
+      }]);
+      setSlicesResolution(currentResolution);
+      loadedMapIdRef.current = selectedMap.id;
+      setLoadProgress(null);
+      setIsMapSwitchLoading(false);
     };
 
     fetchImageProgress();
@@ -1615,8 +1623,10 @@ export default function CartographyPage({
     const hView = container.clientHeight;
     
     const sidebarWidth = isSidebarCollapsed ? 40 : 340;
-    const visibleWidth = Math.max(100, wView - sidebarWidth - 80);
-    const visibleHeight = Math.max(100, hView - 80);
+    const paddingX = 120;
+    const paddingY = 120;
+    const visibleWidth = Math.max(100, wView - sidebarWidth - paddingX);
+    const visibleHeight = Math.max(100, hView - paddingY);
     const visibleAspectRatio = visibleWidth / visibleHeight;
 
     // Reset constraints so fitBounds works cleanly
@@ -1629,13 +1639,14 @@ export default function CartographyPage({
     const zoomHeight = Math.log2((visibleHeight * Math.PI) / (256 * mercatorY));
     const containZoom = Math.min(zoomWidth, zoomHeight);
 
-    // Define dynamicMinZoom as containZoom - 0.8 (allows clear padding when zoomed out)
-    const dynamicMinZoom = Math.max(0.1, containZoom - 0.8);
+    // Define dynamicMinZoom as containZoom - 1.5 (allows comfortable breathing room around map edges when zoomed out)
+    const dynamicMinZoom = Math.max(0.1, containZoom - 1.5);
     minZoomLimitRef.current = dynamicMinZoom;
     map.setMinZoom(dynamicMinZoom);
 
     const pendingTarget = pendingTargetPointRef.current;
-    const targetZoom = selectedMap.aspectRatio < visibleAspectRatio ? zoomWidth : zoomHeight;
+    // Use containment zoom so the map comfortably fills and fits within the window without being excessively zoomed in
+    const targetZoom = containZoom;
     setCoverZoom(targetZoom);
     const snapCenter: [number, number] = pendingTarget 
       ? [pendingTarget.lng, pendingTarget.lat] 
@@ -1866,9 +1877,15 @@ export default function CartographyPage({
       const targetOpacity = isMapSwitchLoading ? 0 : 1;
       const maxSlices = 25;
       for (let i = 0; i < maxSlices; i++) {
-        const lyrId = `historical-map-layer-${i}`;
-        if (map.getLayer(lyrId)) {
-          map.setPaintProperty(lyrId, 'raster-opacity', targetOpacity);
+        ['low', 'high'].forEach(res => {
+          const lyrId = `historical-map-layer-${i}-${res}`;
+          if (map.getLayer(lyrId)) {
+            map.setPaintProperty(lyrId, 'raster-opacity', targetOpacity);
+          }
+        });
+        const oldLyrId = `historical-map-layer-${i}`;
+        if (map.getLayer(oldLyrId)) {
+          map.setPaintProperty(oldLyrId, 'raster-opacity', targetOpacity);
         }
       }
       if (map.getLayer('historical-map-layer')) {
@@ -2821,9 +2838,17 @@ export default function CartographyPage({
                                 }} />
                               )}
                               <img
-                                src={getProxyOrDirectUrl(getThumbnailUrl(hMap.url))}
+                                src={hMap.thumbnailUrl || getThumbnailUrl(hMap.url)}
                                 alt={hMap.name}
+                                loading="lazy"
                                 onLoad={() => setLoadedThumbnails(prev => ({ ...prev, [hMap.id]: true }))}
+                                onError={(e) => {
+                                  setLoadedThumbnails(prev => ({ ...prev, [hMap.id]: true }));
+                                  const currentSrc = (e.target as HTMLImageElement).src;
+                                  if (currentSrc.includes('weserv.nl')) {
+                                    (e.target as HTMLImageElement).src = `/api/proxy-resource?url=${encodeURIComponent(hMap.url)}`;
+                                  }
+                                }}
                                 style={{
                                   width: '100%',
                                   height: '100%',
