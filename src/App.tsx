@@ -5006,14 +5006,14 @@ function App() {
   }, [activeImageIndex, selectedFeature, activeAssets]);
 
   useEffect(() => {
-    if (isLightboxOpen && selectedFeature && activeAssets && activeAssets.length > 0) {
+    if (isLightboxOpen && (selectedFeature || selectedCodexNode) && activeAssets && activeAssets.length > 0) {
       setIsLightboxImageLoading(true);
     }
-  }, [activeImageIndex, isLightboxOpen, selectedFeature, activeAssets]);
+  }, [activeImageIndex, isLightboxOpen, selectedFeature, selectedCodexNode, activeAssets]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (!selectedFeature || !activeAssets || activeAssets.length === 0) return;
+      if ((!selectedFeature && !selectedCodexNode) || !activeAssets || activeAssets.length === 0) return;
       
       if (isLightboxOpen) {
         if (e.key === 'Escape') setIsLightboxOpen(false);
@@ -5028,7 +5028,7 @@ function App() {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isLightboxOpen, selectedFeature, activeAssets]);
+  }, [isLightboxOpen, selectedFeature, selectedCodexNode, activeAssets]);
 
   // Dynamically load datasets on demand based on active layers
   useEffect(() => {
@@ -8165,7 +8165,7 @@ function App() {
 
                     {curAsset.type === 'pdf' ? (
                       <div 
-                        onClick={() => setIsLightboxOpen(true)}
+                        onClick={handleOpenLightbox}
                         style={{ 
                           width: '100%', 
                           height: '100%', 
@@ -8234,7 +8234,7 @@ function App() {
                       </div>
                     ) : curAsset.type === 'video' ? (
                       <div 
-                        onClick={() => setIsLightboxOpen(true)}
+                        onClick={handleOpenLightbox}
                         style={{ 
                           width: '100%', 
                           height: '100%', 
@@ -8357,7 +8357,7 @@ function App() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: isImageLoading ? 0 : 1 }}
                         transition={{ duration: 0.3 }}
-                        onClick={() => setIsLightboxOpen(true)}
+                        onClick={handleOpenLightbox}
                         src={imgSrc} 
                         alt={`${activeTermNode.name} asset viewport`} 
                         referrerPolicy="no-referrer"
@@ -8484,7 +8484,7 @@ function App() {
                 <div style={{ display: 'flex', flex: 1, justifyContent: 'flex-end', pointerEvents: 'auto' }}>
                   <motion.button 
                     whileHover={{ scale: 1.1, backgroundColor: isMapDarkMode ? '#222' : '#f0f0f0' }}
-                    onClick={() => setIsLightboxOpen(true)} 
+                    onClick={handleOpenLightbox} 
                     title="Expand image to Fullscreen Lightbox"
                     style={{ 
                       background: theme.bg, 
@@ -13295,6 +13295,10 @@ function App() {
               onClick={e => e.stopPropagation()}
             >
               {(() => {
+                const activeItem = selectedFeature || selectedCodexNode;
+                const activeItemId = activeItem?.id || 'active-item';
+                const activeItemName = activeItem?.name || 'ASSET';
+
                 const curAsset = activeAssets[activeImageIndex];
                 if (!curAsset) return null;
 
@@ -13314,7 +13318,7 @@ function App() {
                     <AnimatePresence mode="wait">
                       {isPdf && actualPdfUrl ? (
                         <motion.div
-                          key={`lightbox-pdf-${selectedFeature.id}-${activeImageIndex}`}
+                          key={`lightbox-pdf-${activeItemId}-${activeImageIndex}`}
                           initial={{ opacity: 0, scale: 0.95 }}
                           animate={{ opacity: 1, scale: 1 }}
                           exit={{ opacity: 0, scale: 1.05 }}
@@ -13334,7 +13338,7 @@ function App() {
                         </motion.div>
                       ) : curAsset.type === 'video' ? (
                         <motion.div
-                          key={`lightbox-video-${selectedFeature.id}-${activeImageIndex}`}
+                          key={`lightbox-video-${activeItemId}-${activeImageIndex}`}
                           initial={{ opacity: 0, scale: 0.95 }}
                           animate={{ opacity: 1, scale: 1 }}
                           exit={{ opacity: 0, scale: 1.05 }}
@@ -13391,7 +13395,7 @@ function App() {
                         </motion.div>
                       ) : curAsset.type === 'audio' ? (
                         <motion.div
-                          key={`lightbox-audio-${selectedFeature.id}-${activeImageIndex}`}
+                          key={`lightbox-audio-${activeItemId}-${activeImageIndex}`}
                           initial={{ opacity: 0, scale: 0.95 }}
                           animate={{ opacity: 1, scale: 1 }}
                           exit={{ opacity: 0, scale: 1.05 }}
@@ -13413,12 +13417,12 @@ function App() {
                           />
                           <div style={{ textAlign: 'center' }}>
                             <p style={{ color: '#ffffff', fontSize: '14px', textTransform: 'uppercase', letterSpacing: '4px', fontWeight: 'bold', marginBottom: '8px' }}>AUDIO INTELLIGENCE INTERCEPT</p>
-                            <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '10px' }}>{selectedFeature.name} - DIRECT SIGNAL CAPTURE</p>
+                            <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '10px' }}>{activeItemName} - DIRECT SIGNAL CAPTURE</p>
                           </div>
                         </motion.div>
                       ) : (
                         <motion.img 
-                          key={`${selectedFeature.id}-${activeImageIndex}`}
+                          key={`${activeItemId}-${activeImageIndex}`}
                           initial={{ opacity: 0, scale: 0.95 }}
                           animate={{ opacity: isLightboxImageLoading ? 0 : 1, scale: 1 }}
                           exit={{ opacity: 0, scale: 1.05 }}
@@ -13490,7 +13494,7 @@ function App() {
                             zIndex: 1000001,
                             maxWidth: 'min(75vw, 600px)'
                           }}>
-                          FILE ASSET {activeImageIndex + 1} OF {activeAssets.length} — {(selectedFeature?.name || selectedCodexNode?.name || '').toUpperCase()}
+                          FILE ASSET {activeImageIndex + 1} OF {activeAssets.length} — {activeItemName.toUpperCase()}
                         </motion.div>
 
                         {activeAssets.length > 1 && (
