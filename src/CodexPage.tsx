@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useMemo, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { createPortal } from 'react-dom';
-import { X, Flag, Play, Share2 } from 'lucide-react';
+import { X, Flag, Play, Share2, ExternalLink, Instagram } from 'lucide-react';
 import { handleShare } from './utils/share';
 import { ShareModal } from './ShareModal';
 import { updateClientOgpTags } from './utils/ogp';
@@ -3449,9 +3449,57 @@ export default function CodexPage({
                             <circle cx="12" cy="12" r="10"></circle>
                             <polyline points="12 6 12 12 16 14"></polyline>
                           </svg>
-                          <span>TIMELINE VIEW</span>
                         </motion.button>
                       )}
+
+                      {(activeTermNode.submitterLink || activeTermNode.socialLink) && (() => {
+                        const link = (activeTermNode.submitterLink || activeTermNode.socialLink) as string;
+                        const linkLower = link.toLowerCase();
+                        let icon = <ExternalLink size={13} />;
+                        let label = 'LINK / WEBSITE';
+
+                        if (linkLower.includes('instagram.com')) {
+                          icon = <Instagram size={13} />;
+                          label = 'INSTAGRAM';
+                        } else if (linkLower.includes('x.com') || linkLower.includes('twitter.com')) {
+                          label = 'X.COM';
+                        } else if (linkLower.includes('youtube.com') || linkLower.includes('youtu.be')) {
+                          label = 'YOUTUBE';
+                        } else if (linkLower.includes('tiktok.com')) {
+                          label = 'TIKTOK';
+                        }
+
+                        return (
+                          <motion.a
+                            whileTap={{ scale: 0.95 }}
+                            whileHover={{ scale: 1.05 }}
+                            href={link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{
+                              display: 'flex',
+                              alignItems: 'center',
+                              gap: '6px',
+                              background: 'transparent',
+                              color: isMapDarkMode ? '#fff' : '#000',
+                              border: `1px solid ${isMapDarkMode ? '#fff' : '#000'}`,
+                              padding: '6px 12px',
+                              borderRadius: '16px',
+                              cursor: 'pointer',
+                              fontSize: '11px',
+                              fontWeight: 'bold',
+                              fontFamily: '"Space Mono", monospace',
+                              letterSpacing: '0.05em',
+                              transition: 'all 0.2s ease',
+                              whiteSpace: 'nowrap',
+                              textDecoration: 'none'
+                            }}
+                          >
+                            {icon}
+                            <span>{label}</span>
+                          </motion.a>
+                        );
+                      })()}
                     </div>
 
                     {/* Tag Pills (Category layer + Related terms) */}
@@ -3734,7 +3782,7 @@ export default function CodexPage({
                     )}
 
                     {/* Intel Contributor */}
-                    {(activeTermNode.submitterName || activeTermNode.submitterLink || activeTermNode.socialLink) && (
+                    {activeTermNode.submitterName && (
                       <div 
                         style={{ 
                           marginTop: '24px', 
@@ -3750,29 +3798,7 @@ export default function CodexPage({
                           INTEL CONTRIBUTOR:
                         </div>
                         <div style={{ fontFamily: '"Space Mono", monospace', fontSize: '10px', color: theme.text }}>
-                          {activeTermNode.submitterName ? (
-                            (activeTermNode.submitterLink || activeTermNode.socialLink) ? (
-                              <a 
-                                href={activeTermNode.submitterLink || activeTermNode.socialLink} 
-                                target="_blank" 
-                                rel="noopener noreferrer" 
-                                style={{ color: '#b6a6ff', textDecoration: 'underline', fontWeight: 'bold' }}
-                              >
-                                {activeTermNode.submitterName}
-                              </a>
-                            ) : (
-                              <strong>{activeTermNode.submitterName}</strong>
-                            )
-                          ) : (
-                            <a 
-                              href={activeTermNode.submitterLink || activeTermNode.socialLink} 
-                              target="_blank" 
-                              rel="noopener noreferrer" 
-                              style={{ color: '#b6a6ff', textDecoration: 'underline', fontWeight: 'bold' }}
-                            >
-                              {activeTermNode.submitterLink || activeTermNode.socialLink}
-                            </a>
-                          )}
+                          <strong>{activeTermNode.submitterName}</strong>
                         </div>
                       </div>
                     )}

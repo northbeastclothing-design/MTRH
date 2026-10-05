@@ -9746,32 +9746,10 @@ function App() {
                 SOURCE: <span style={{ fontStyle: 'normal', fontWeight: '400' }}>{selectedFeature.source}</span>
               </div>
             )}
-            {(selectedFeature.submitterName || selectedFeature.submitterLink || selectedFeature.socialLink) && (
+            {selectedFeature.submitterName && (
               <div style={{ fontFamily: '"Space Mono", monospace', fontWeight: '700', fontStyle: 'italic', fontSize: '10px', lineHeight: '22px' }}>
                 INTEL CONTRIBUTOR: <span style={{ fontStyle: 'normal', fontWeight: '400' }}>
-                  {selectedFeature.submitterName ? (
-                    (selectedFeature.submitterLink || selectedFeature.socialLink) ? (
-                      <a 
-                        href={selectedFeature.submitterLink || selectedFeature.socialLink} 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        style={{ color: '#b6a6ff', textDecoration: 'underline', fontWeight: '600' }}
-                      >
-                        {selectedFeature.submitterName}
-                      </a>
-                    ) : (
-                      <strong>{selectedFeature.submitterName}</strong>
-                    )
-                  ) : (
-                    <a 
-                      href={selectedFeature.submitterLink || selectedFeature.socialLink} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      style={{ color: '#b6a6ff', textDecoration: 'underline', fontWeight: '600' }}
-                    >
-                      {selectedFeature.submitterLink || selectedFeature.socialLink}
-                    </a>
-                  )}
+                  <strong>{selectedFeature.submitterName}</strong>
                 </span>
               </div>
             )}

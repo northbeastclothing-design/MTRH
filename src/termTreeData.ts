@@ -18389,6 +18389,7 @@ const chunk_4: any[] = [  {
   },  {
     id: 'book-of-enoch',
     parentId: 'ancient-texts',
+    secondaryParentIds: ['judaism', 'christianity'],
     name: 'Book of Enoch',
     description: 'An ancient Jewish religious work ascribed to Enoch. It contains unique descriptions of the fall of the Watchers, their breeding with humans to create Nephilim, and detailed astronomical grids.',
     relatedIds: ['enoch', 'watchers', 'mt-hermon'],
@@ -18404,10 +18405,11 @@ const chunk_4: any[] = [  {
   {
     id: 'holy-bible',
     parentId: 'ancient-texts',
+    secondaryParentIds: ['christianity'],
     name: 'The Holy Bible',
     description: 'A canonical collection of sacred texts in Judaism and Christianity, divided into the Old Testament (Hebrew Bible) and the New Testament. Alternative historians and biblical archaeologists study these texts for historical records of early cosmic anomalies, ancient giants, global cataclysms, and lost world civilizations.',
     layer: 'Ancient Texts',
-    relatedIds: ['codex-dead-sea-scrolls', 'codex-sinaiticus', 'book-of-enoch', 'noah-fig', 'giants-nephilim-br'],
+    relatedIds: ['codex-dead-sea-scrolls', 'codex-sinaiticus', 'book-of-enoch', 'noah-fig', 'giants-nephilim-br', 'christianity', 'judaism', 'old-testament', 'new-testament'],
     sources: ['Hebrew Bible (Masoretic Text)', 'Septuagint (LXX)', 'Vulgate', 'Biblical Papyri']
   },
   {
@@ -18438,7 +18440,8 @@ const chunk_4: any[] = [  {
     description: "Traditional/Attributed Author: Moses. Critical/Modern Consensus: Priestly source (P) materials compiled and revised during or immediately after the Babylonian exile (c. 6th–5th centuries BCE). Earliest Manuscript: 4QExod-Lev (c. 250 BCE), containing early fragments of Exodus and Leviticus, discovered in Cave 4 at Qumran.",
     layer: 'Ancient Texts',
     mapFeatureId: 'discovery-qumran',
-    sources: ["Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"]
+    sources: ["Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"],
+    relatedIds: ['clean-animals-old-testament', 'unclean-animals-old-testament']
   },
   {
     id: 'bible-book-numbers',
@@ -18458,7 +18461,8 @@ const chunk_4: any[] = [  {
     description: "Traditional/Attributed Author: Moses. Critical/Modern Consensus: Deuteronomistic school, closely linked to the temple reforms under King Josiah of Judah (c. 7th century BCE). Earliest Manuscript: 4QDeut (c. 150–100 BCE), a well-preserved scroll fragment containing the Decalogue, found in Cave 4 at Qumran.",
     layer: 'Ancient Texts',
     mapFeatureId: 'discovery-qumran',
-    sources: ["Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"]
+    sources: ["Dead Sea Scrolls","Codex Sinaiticus","Codex Vaticanus"],
+    relatedIds: ['clean-animals-old-testament', 'unclean-animals-old-testament']
   },
   {
     id: 'bible-book-joshua',
@@ -19073,6 +19077,7 @@ const chunk_4: any[] = [  {
   {
     id: 'codex-dead-sea-scrolls',
     parentId: 'ancient-texts',
+    secondaryParentIds: ['judaism'],
     name: 'The Dead Sea Scrolls',
     description: 'A collection of ancient Jewish religious manuscripts discovered in the Qumran Caves, containing the oldest surviving copies of biblical books and apocryphal texts.',
     layer: 'Ancient Texts',
@@ -19082,6 +19087,7 @@ const chunk_4: any[] = [  {
   },  {
     id: 'codex-nag-hammadi',
     parentId: 'ancient-texts',
+    secondaryParentIds: ['gnosticism'],
     name: 'Nag Hammadi Library',
     description: 'Thirteen leather-bound papyrus codices discovered in Egypt containing major early Gnostic texts, including the Gospel of Thomas and Gospel of Philip.',
     layer: 'Ancient Texts',
@@ -19100,6 +19106,7 @@ const chunk_4: any[] = [  {
   },  {
     id: 'codex-sinaiticus',
     parentId: 'ancient-texts',
+    secondaryParentIds: ['christianity'],
     name: 'Codex Sinaiticus',
     description: 'A 4th-century Greek uncial manuscript of the Bible, representing one of the oldest and most complete surviving witnesses to the New Testament text.',
     layer: 'Ancient Texts',
@@ -19118,6 +19125,7 @@ const chunk_4: any[] = [  {
   },  {
     id: 'codex-dunhuang-manuscripts',
     parentId: 'ancient-texts',
+    secondaryParentIds: ['buddhism'],
     name: 'Dunhuang Manuscripts',
     description: 'A cache of medieval documents discovered in the Mogao Caves of Dunhuang, China, preserving unique Buddhist texts, historical records, and the earliest printed dated book (the Diamond Sutra).',
     layer: 'Ancient Texts',
@@ -23134,7 +23142,7 @@ const chunk_6: any[] = [
     parentId: 'biblical-apocryphal',
     name: 'Judaism',
     description: 'Monotheistic Abrahamic religion traced to the patriarch Abraham and the prophet Moses, who received the Torah directly from God on Mount Sinai. Judaism views Jesus as a historical Jewish teacher and reformer, but does not recognize him as the Messiah, divine, or a prophet, since his life did not fulfill the traditional Hebrew scriptural prophecies of global peace and gathering the exiles.',
-    relatedIds: ['kabbalah', 'leviathan-biblical', 'behemoth-dinosaur', 'christianity', 'islam'],
+    relatedIds: ['kabbalah', 'leviathan-biblical', 'behemoth-dinosaur', 'christianity', 'islam', 'old-testament', 'talmud', 'codex-dead-sea-scrolls', 'clean-animals-old-testament', 'unclean-animals-old-testament'],
     timelineId: 'judaism-origins',
     mapFeatureId: 'anomaly-Religions-Judaism',
     sources: ['Torah / Tanakh', 'Talmud', 'Zohar']
@@ -23144,7 +23152,7 @@ const chunk_6: any[] = [
     parentId: 'biblical-apocryphal',
     name: 'Christianity',
     description: 'Abrahamic religion based on the life, death, resurrection, and teachings of Jesus of Nazareth, recorded in the New Testament. It recognizes Jesus as the incarnate Son of God, the prophesied Messiah (Christ), and the second person of the Holy Trinity who redeemed humanity through his sacrifice on the cross.',
-    relatedIds: ['gnosticism', 'judaism', 'islam', 'catholicism', 'mormonism'],
+    relatedIds: ['gnosticism', 'judaism', 'islam', 'catholicism', 'mormonism', 'holy-bible', 'new-testament', 'old-testament', 'clean-animals-old-testament', 'unclean-animals-old-testament'],
     timelineId: 'christianity-origins',
     mapFeatureId: 'anomaly-Religions-Christianity',
     sources: ['New Testament', 'Apocryphal Gospels', 'Philokalia']
@@ -23154,7 +23162,7 @@ const chunk_6: any[] = [
     parentId: 'biblical-apocryphal',
     name: 'Islam',
     description: 'Monotheistic Abrahamic religion revealed through the Prophet Muhammad, who received the Quran from God via the Angel Gabriel (Jibril). Islam highly reveres Jesus as Isa al-Masih (Jesus the Messiah), one of its greatest prophets and messengers born of the Virgin Mary, though it rejects the beliefs that he is the literal Son of God or that he was crucified, holding that he was raised alive to heaven by God.',
-    relatedIds: ['sufism', 'judaism', 'christianity'],
+    relatedIds: ['sufism', 'judaism', 'christianity', 'quran'],
     timelineId: 'islam-origins',
     mapFeatureId: 'anomaly-Religions-Islam',
     sources: ['Quran', 'Hadith', 'Masnavi (Rumi)']
@@ -23215,7 +23223,7 @@ const chunk_6: any[] = [
     parentId: 'biblical-apocryphal',
     name: 'Mormonism (Latter-day Saints)',
     description: 'A restorationist Christian movement founded by Joseph Smith Jr. in 1830, who claimed to translate the Book of Mormon from golden plates delivered by the angel Moroni. It depicts Jesus as the literal firstborn spirit son of God the Father, distinct from Him in physical body, and teaches that after His resurrection in Jerusalem, Jesus visited and established His church among ancient civilizations in the Americas.',
-    relatedIds: ['christianity', 'judaism', 'mounds'],
+    relatedIds: ['christianity', 'judaism', 'mounds', 'book-of-mormon'],
     timelineId: 'mormonism-origins',
     mapFeatureId: 'anomaly-Religions-Mormonism',
     sources: ['Book of Mormon', 'Doctrine and Covenants', 'Pearl of Great Price']
@@ -23256,9 +23264,12 @@ const chunk_6: any[] = [
     id: 'const-sirius',
     parentId: 'constellations-parent',
     name: 'Sirius (The Dog Star)',
-    description: 'The brightest star in Canis Major, central to Egyptian stellar tracking and calendars. Fringely famous for the Dogon tribe\'s unexplained historical knowledge of its invisible white dwarf companion star Sirius B.',
-    relatedIds: ['constellations-parent', 'egyptian-civilization'],
-    sources: ['The Pale Fox (Griaule/Dieterlen)', 'The Sirius Mystery (Robert Temple)']
+    description: 'The brightest star in Canis Major and the apex of esoteric cosmology. In ancient Egypt, Sirius was worshipped as Sopdet / Sothis (the celestial manifestation of Isis), whose heliacal rising governed the Nile flood and the secret 1,460-year Sothic cycle. In Freemasonry, Sirius is revered as the radiant \'Blazing Star\' presiding over lodge tracing boards, symbolizing divine omnipresence, intellectual illumination, and the lost architectural mysteries of Hiram Abiff. In Aleister Crowley\'s Thelemic system and Kenneth Grant\'s Typhonian OTO, Sirius is the Silver Star (A∴A∴)—the occult powerhouse behind the Solar-Phallic current and the trans-Yuggothian transmission. Madame Blavatsky and Theosophical masters taught that Sirius is the supreme sun behind our sun, the central clearinghouse of cosmic karma and the seat of the Great White Brotherhood. West African Dogon priests preserved centuries of inexplicable oral knowledge regarding Sirius B (Po Tolo) and its amphibious emissaries, the Nommo. Tragically, the star became the focal destination for the doomsday cult Order of the Solar Temple, whose members believed mass ritual suicide would instantly transit their consciousness into the etheric light of Sirius.',
+    images: [
+      'https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/f/f3/Sirius_A_and_B_Hubble_photo.jpg'
+    ],
+    relatedIds: ['constellations-parent', 'egyptian-civilization', 'alchemy-occult', 'masonic-lodges', 'order-solar-temple'],
+    sources: ['The Sirius Mystery (Robert Temple)', 'The Pale Fox (Marcel Griaule & Germaine Dieterlen)', 'The Secret Doctrine (H.P. Blavatsky)', 'Morals and Dogma (Albert Pike)', 'Magick Without Tears (Aleister Crowley)']
   },
   {
     id: 'const-draco',
@@ -24163,6 +24174,7 @@ const chunk_new_additions: any[] = [
   }, {
     id: 'mahabharata-epic',
     parentId: 'ancient-texts',
+    secondaryParentIds: ['hinduism'],
     name: 'The Mahabharata',
     description: "One of the two major ancient Sanskrit epics of India, detailing the Kurukshetra War between the Pandavas and Kauravas. In ancient astronaut and alternative history circles, the epic's descriptions of flying celestial chariots (Vimanas) and destructive weapons (Astra, Brahmastra) that vaporized armies are interpreted as accounts of prehistoric nuclear warfare and advanced extraterrestrial technologies.",
     layer: 'Ancient Texts',
@@ -24173,6 +24185,7 @@ const chunk_new_additions: any[] = [
   }, {
     id: 'ramayana-epic',
     parentId: 'ancient-texts',
+    secondaryParentIds: ['hinduism'],
     name: 'The Ramayana',
     description: "One of the two major ancient Sanskrit epics of India, detailing the life and adventures of Lord Rama. The epic describes Rama's battles and voyages, featuring the celestial aerial vehicle Pushpaka Vimana, which are interpreted by alternative historians as prehistoric flying technology.",
     layer: 'Ancient Texts',
@@ -25772,6 +25785,7 @@ const chunk_user_additions_2: any[] = [
   }, {
     id: 'vedas',
     parentId: 'hinduism',
+    secondaryParentIds: ['ancient-texts'],
     name: 'The Vedas',
     description: 'The oldest and most sacred scriptures of Hinduism, composed in Sanskrit between 1500 and 500 BCE. They are divided into four collections: Rigveda, Yajurveda, Samaveda, and Atharvaveda, containing hymns, prayers, and philosophical treatises. Alternative and ancient astronaut theories often claim the Vedas describe advanced ancient technology, such as vimanas (flying crafts) and ancient nuclear warfare.',
     relatedIds: ['hinduism', 'hindu-pantheon', 'vishnu', 'ancient-texts'],
@@ -28108,6 +28122,8 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Stanford University Genetics / Genome Research (Nolan et al.)']
   },  {
     id: 'alien-sighting-falkville-node',
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/metal-man",
     parentId: 'alien-sightings-br',
     name: 'Falkville Metal Man',
     description: '[PROVEN FALSE / HOAX - STAGED TIN-FOIL PRANK] Police Chief Jeff Greenhaw photographed a humanoid figure clad in metallic tin foil with an antenna, which outran his police cruiser at high speed.',
@@ -38912,6 +38928,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   {
     id: 'anomaly-Ancient-Texts-sanskrit',
     parentId: 'ancient-texts',
+    secondaryParentIds: ['hinduism'],
     name: 'Sanskrit Liturgical Texts',
     description: 'The ancient Indo-Aryan language. Oldest texts like the Rigveda preserve detailed cosmologies, philosophical hymns, and descriptions of advanced aerial vehicles (Vimanas) that figure in alternative history.',
     layer: 'Ancient Texts',
@@ -39131,6 +39148,7 @@ const chunk_bible_sources: TermNode[] = [
   {
     id: 'codex-vaticanus',
     parentId: 'ancient-texts',
+    secondaryParentIds: ['christianity', 'catholicism'],
     name: 'Codex Vaticanus',
     description: 'A 4th-century Greek uncial manuscript of the Bible, representing one of the oldest and most complete surviving witnesses to the Greek Bible (Septuagint and New Testament), preserved in the Vatican Library since at least the 15th century.',
     layer: 'Ancient Texts',
@@ -39141,6 +39159,7 @@ const chunk_bible_sources: TermNode[] = [
   {
     id: 'codex-alexandrinus',
     parentId: 'ancient-texts',
+    secondaryParentIds: ['christianity'],
     name: 'Codex Alexandrinus',
     description: 'A 5th-century Greek manuscript of the Bible, containing the majority of the Septuagint and the New Testament. It is one of the earliest and most complete of the great codices, alongside Codex Sinaiticus and Codex Vaticanus.',
     layer: 'Ancient Texts',
@@ -39151,6 +39170,7 @@ const chunk_bible_sources: TermNode[] = [
   {
     id: 'samaritan-pentateuch',
     parentId: 'ancient-texts',
+    secondaryParentIds: ['judaism'],
     name: 'Samaritan Pentateuch',
     description: 'A manuscript of the first five books of the Hebrew Bible, written in the Samaritan alphabet and used by the Samaritans. It preserves independent readings that diverge from both the Masoretic Text and the Septuagint, notably on Mount Gerizim.',
     layer: 'Ancient Texts',
@@ -39161,6 +39181,7 @@ const chunk_bible_sources: TermNode[] = [
   {
     id: 'masoretic-text',
     parentId: 'ancient-texts',
+    secondaryParentIds: ['judaism'],
     name: 'Masoretic Text',
     description: 'The authoritative Hebrew and Aramaic text of the Tanakh (Hebrew Bible) for Rabbinic Judaism, meticulously copied, edited, and distributed by a group of Jews known as the Masoretes between the 7th and 10th centuries CE. Housed in key codices like the Aleppo Codex.',
     layer: 'Ancient Texts',
@@ -39171,6 +39192,7 @@ const chunk_bible_sources: TermNode[] = [
   {
     id: 'septuagint',
     parentId: 'ancient-texts',
+    secondaryParentIds: ['judaism', 'christianity'],
     name: 'Septuagint (LXX)',
     description: 'The earliest surviving Greek translation of the Hebrew Bible (the Pentateuch), completed in Alexandria, Egypt, in the 3rd century BCE. Legend records that seventy-two Jewish scholars independently produced identical translations, serving as the primary Old Testament text for the early Christian Church.',
     layer: 'Ancient Texts',
@@ -39181,6 +39203,7 @@ const chunk_bible_sources: TermNode[] = [
   {
     id: 'rylands-papyri',
     parentId: 'ancient-texts',
+    secondaryParentIds: ['christianity'],
     name: 'Rylands Library Papyrus P52',
     description: 'A tiny fragment of papyrus, generally accepted as the earliest surviving manuscript record of a New Testament text (specifically the Gospel of John 18:31–33, 37–38), dated to approximately 125–175 CE and discovered in the Fayum region of Egypt.',
     layer: 'Ancient Texts',
@@ -39191,6 +39214,7 @@ const chunk_bible_sources: TermNode[] = [
   {
     id: 'chester-beatty-papyri',
     parentId: 'ancient-texts',
+    secondaryParentIds: ['christianity'],
     name: 'Chester Beatty Papyri',
     description: 'A group of eleven ancient papyrus codices of biblical texts, acquired by collector Chester Beatty. Written in Greek and dating from the 2nd to 4th centuries CE, they contain some of the oldest surviving portions of the Gospels, Acts, and Pauline Epistles.',
     layer: 'Ancient Texts',
@@ -39201,6 +39225,7 @@ const chunk_bible_sources: TermNode[] = [
   {
     id: 'bodmer-papyri',
     parentId: 'ancient-texts',
+    secondaryParentIds: ['christianity'],
     name: 'Bodmer Papyri',
     description: 'A collection of twenty-two papyrus manuscripts discovered in Pabau (near Dishna), Egypt, in 1952. Written in Greek and Coptic, they include early Christian texts, classical literature, and extremely early copies of the Gospels of Luke and John (dated c. 200 CE).',
     layer: 'Ancient Texts',
@@ -39211,6 +39236,7 @@ const chunk_bible_sources: TermNode[] = [
   {
     id: 'oxyrhynchus-papyri',
     parentId: 'ancient-texts',
+    secondaryParentIds: ['christianity'],
     name: 'Oxyrhynchus Papyri',
     description: 'A vast group of manuscripts discovered by archaeologists Bernard Grenfell and Arthur Hunt at an ancient garbage dump near Oxyrhynchus, Egypt. Dating from the Ptolemaic to Arab periods, they preserve thousands of Greek and Latin texts, including numerous early biblical fragments.',
     layer: 'Ancient Texts',
@@ -39221,6 +39247,7 @@ const chunk_bible_sources: TermNode[] = [
   {
     id: 'ketef-hinnom',
     parentId: 'ancient-texts',
+    secondaryParentIds: ['judaism'],
     name: 'Ketef Hinnom Silver Scrolls',
     description: 'Two tiny rolled silver scrolls discovered in 1979 in a burial cave at Ketef Hinnom, Jerusalem. Dating to the late 7th century BCE, they contain the Priestly Blessing from the Book of Numbers, representing the oldest surviving citations of a biblical text.',
     layer: 'Ancient Texts',
@@ -39231,6 +39258,7 @@ const chunk_bible_sources: TermNode[] = [
   {
     id: 'vulgate',
     parentId: 'ancient-texts',
+    secondaryParentIds: ['christianity', 'catholicism'],
     name: 'Latin Vulgate',
     description: 'A late 4th-century Latin translation of the Bible, commissioned by Pope Damasus I and translated primarily by Jerome of Stridon in Bethlehem. It became the definitive, officially sanctioned Latin Bible of the Catholic Church for over a thousand years.',
     layer: 'Ancient Texts',
@@ -39241,6 +39269,7 @@ const chunk_bible_sources: TermNode[] = [
   {
     id: 'peshitta',
     parentId: 'ancient-texts',
+    secondaryParentIds: ['christianity'],
     name: 'Syriac Peshitta',
     description: 'The standard version of the Bible in the Syriac Christian tradition, written in the Syriac dialect of Aramaic. Developed between the 2nd and 5th centuries CE, it represents a crucial early witness to both the Hebrew Bible and Greek New Testament texts.',
     layer: 'Ancient Texts',
@@ -39894,6 +39923,991 @@ const chunk_user_requested_terms: any[] = [
 ];
 
 TERM_TREE_DATA.push(...chunk_user_requested_terms);
+
+
+const chunk_user_requested_additions_2026: TermNode[] = [
+  {
+    id: "order-nine-angles",
+    parentId: "alchemy-occult",
+    name: "Order of Nine Angles (ONA)",
+    description: "An infamous, ultra-sinister esoteric secret society founded in the United Kingdom in the 1960s/1970s (closely linked to Anton Long and David Myatt). Blending traditional Satanism, Hermetic dark aeonics, and Lovecraftian cosmic horror, the ONA advocates \"sinister accelerationism\", psychological infiltration of global institutions, and ritual culling (\"opfers\"). Intelligence researchers frequently identify ONA networks as a state-sanctioned Gladio-style honeypot designed for domestic surveillance and psychological warfare.",
+    layer: "The Occult",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Flag_of_the_Order_of_Nine_Angles.svg/1280px-Flag_of_the_Order_of_Nine_Angles.svg.png"
+    ],
+    sources: ["The Black Book of Satan","Naos: A Practical Guide to Modern Magick","Hostia: Secret Teachings of the ONA"],
+    relatedIds: ["alchemy-occult","eugothic-language","government-conspiracies"],
+  },
+  {
+    id: "eugothic-language",
+    parentId: "order-nine-angles",
+    name: "Eugothic Language",
+    description: "The secret, highly guarded ceremonial tongue utilized within the highest esoteric circles of the Order of Nine Angles (ONA). Revered by initiates as the ancestral language of the \"Great Old Ones\" and acausal entities (such as Vindex, Baphomet, and the Dark Gods), Eugothic consists of guttural chants, sinister phonemes, and vibrational keys designed to shatter linear temporal barriers and induce psychological hysteria during dark pathworking rituals.",
+    layer: "The Occult",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Flag_of_the_Order_of_Nine_Angles.svg/1280px-Flag_of_the_Order_of_Nine_Angles.svg.png"
+    ],
+    sources: ["Naos (Order of Nine Angles)","Esoteric Chant Manuscripts","Typhonian & Left-Hand Path Linguistic Archives"],
+    relatedIds: ["order-nine-angles","ancient-texts","alchemy-occult"],
+  },
+  {
+    id: "order-of-the-trapezoid",
+    parentId: "alchemy-occult",
+    name: "Order of the Trapezoid",
+    description: "The inner, esoteric sanctum originally established within the Church of Satan by Anton Szandor LaVey in 1966 and later reconstituted within the Temple of Set by Lt. Col. Dr. Michael A. Aquino in 1975. Grounded in the \"Law of the Trapezoid\", the order explores how non-Euclidean angular architecture, specific optical geometries, and acoustic resonance induce dread, alter consciousness, and open portals to Prince of Darkness intelligences. Researchers frequently highlight Dr. Aquino's concurrent career as a top U.S. Army Psychological Operations (PSYOPS) strategist at the Presidio of San Francisco.",
+    layer: "The Occult",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/SF_Examiner_photo_of_Anton_LaVey_%28cropped%29.jpg/330px-SF_Examiner_photo_of_Anton_LaVey_%28cropped%29.jpg"
+    ],
+    sources: ["The Ruby Tablet of Set (Michael Aquino)","MindWar: The Secret Reality (Aquino)","The Command to Look (William Mortensen)"],
+    relatedIds: ["alchemy-occult","government-conspiracies","masonic-lodges"],
+  },
+  {
+    id: "enochian-language",
+    parentId: "ancient-texts",
+    secondaryParentIds: ["alchemy-occult"],
+    name: "Enochian Language (Angelic Tongue)",
+    description: "An intricate, complete occult language complete with its own unique 21-letter script and syntax, recorded between 1582 and 1589 by Queen Elizabeth I's court astrologer and intelligence operative Dr. John Dee (code-name 007) and scryer Edward Kelley. Delivered during scrying sessions with angelic entities (such as Uriel, Michael, and Nalvage), the angels claimed Enochian was the original Adamitic tongue spoken before the Fall of Man and the dispersion of Babel, capable of controlling the elemental Watchtowers and commanding the spirits of the 30 Aethyrs.",
+    layer: "Ancient Texts",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Enochian_letters_%281583_manuscript%29.png/1280px-Enochian_letters_%281583_manuscript%29.png"
+    ],
+    sources: ["Mysteriorum Libri Quinque (British Library Sloane MS 3188)","A True & Faithful Relation (Meric Casaubon, 1659)","The Golden Dawn (Israel Regardie)"],
+    relatedIds: ["ancient-texts","enochian-lore-root","alchemy-occult"],
+  },
+  {
+    id: "ars-notoria",
+    parentId: "ancient-texts",
+    name: "Ars Notoria (The Notary Art of Solomon)",
+    description: "The fifth and most mystical grimoire of the Lemegeton (Lesser Key of Solomon), dating back to medieval Latin manuscripts from the 12th and 13th centuries. Rather than summoning demonic spirits, the Ars Notoria focuses on mystical diagrams (notae), prayers, and angelic invocations said to have been revealed to King Solomon by the angel Pamphilius. Initiates who gazed upon the sacred notae while chanting divine orations allegedly received photographic memory, instant comprehension of all liberal arts and sciences, and divine prophetic illumination.",
+    layer: "Ancient Texts",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/The_first_figure_of_grammar.jpg/500px-The_first_figure_of_grammar.jpg"
+    ],
+    sources: ["British Library Sloane MS 1712","Ars Notoria: The Notary Art of Solomon (trans. Robert Turner, 1657)","Lemegeton Clavicula Salomonis"],
+    relatedIds: ["ancient-texts","alchemy-occult","biblical-apocryphal"],
+  },
+  {
+    id: "helena-blavatsky",
+    parentId: "alchemy-occult",
+    name: "Helena Petrovna Blavatsky (HPB)",
+    description: "Russian mystic, globetrotter, and founder of the Theosophical Society in New York (1875). Author of foundational occult treatises \"Isis Unveiled\" and \"The Secret Doctrine\", Blavatsky synthesized Eastern mysticism, Western Hermeticism, and hidden history. She popularized modern esoteric concepts of the Seven Root Races (Hyperboreans, Lemurians, Atlanteans), subterranean Himalayan masters (Mahatmas / Ascended Masters in Shambhala), and the Akashic Records. Alternative historians point to documented British and Russian secret service surveillance tracking her international journeys across Egypt, India, and Tibet.",
+    layer: "The Occult",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Helena_Petrovna_Blavatsky.jpg/250px-Helena_Petrovna_Blavatsky.jpg"
+    ],
+    sources: ["The Secret Doctrine (1888)","Isis Unveiled (1877)","The Masters and the Path (C.W. Leadbeater)"],
+    relatedIds: ["alchemy-occult","ascended-masters","agartha-subterranean-realm","const-sirius"],
+  },
+  {
+    id: "ishim-theosophy",
+    parentId: "biblical-apocryphal",
+    secondaryParentIds: ["alchemy-occult"],
+    name: "Ishim (Angelic Men-Spirits)",
+    description: "In traditional Jewish Kabbalah (Zohar) and Madame Blavatsky's Theosophical cosmology, the Ishim (\"men-spirits\" or \"flames\") represent the tenth and lowest choir of the angelic hierarchy, stationed in the sphere of Malkuth (The Physical Earth/Kingdom). Presided over by the Archangel Sandalphon, the Ishim are described as the immortal souls of perfected saints and departed adepts who directly interface with human consciousness, guiding terrestrial evolution, genetic lineages, and physical manifestation from the astral realm.",
+    layer: "Religion",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Helena_Petrovna_Blavatsky.jpg/250px-Helena_Petrovna_Blavatsky.jpg"
+    ],
+    sources: ["The Zohar (Kabbalistic Tree of Life)","Theosophical Glossary (H.P. Blavatsky)","Dion Fortune (The Mystical Qabalah)"],
+    relatedIds: ["biblical-apocryphal","helena-blavatsky","alchemy-occult"],
+  },
+  {
+    id: "order-solar-temple",
+    parentId: "alchemy-occult",
+    name: "Order of the Solar Temple (OTS)",
+    description: "A secretive Neo-Templar and Rosicrucian doomsday society established in Geneva in 1984 by Belgian homeopath Luc Jouret and financial orchestrator Joseph Di Mambro. The sect held theatrical initiation ceremonies featuring optical holographic projections of the Holy Grail, recruited wealthy European politicians, industrialists, and intelligence operatives, and utilized Swiss private banks to launder arms and funds. Between 1994 and 1997, 74 members perished in staged murder-suicide compound fires across Switzerland, France, and Quebec in an apocalyptic ritual to \"transit\" their immortal souls to the star Sirius.",
+    layer: "The Occult",
+    mapFeatureId: "anomaly-order-solar-temple-salvan",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Order_of_the_Solar_Temple_logo.svg/1280px-Order_of_the_Solar_Temple_logo.svg.png"
+    ],
+    sources: ["Swiss Federal Police Investigative Dossier","Order of the Solar Temple (Jean-François Mayer)","Interpol Criminal Files"],
+    relatedIds: ["alchemy-occult","luc-jouret","joseph-di-mambro","const-sirius","government-conspiracies"],
+  },
+  {
+    id: "luc-jouret",
+    parentId: "order-solar-temple",
+    name: "Luc Jouret (OTS Prophet)",
+    description: "Belgian physician, classical homeopath, and charismatic spiritual leader of the Order of the Solar Temple. Jouret toured Europe delivering captivating lectures on survivalism, environmental collapse, New Age spirituality, and Templar resurrection. Behind his humanitarian facade, Jouret preached that the corrupt earth was doomed and that elite initiates must voluntarily shed their physical bodies in a baptism of fire to attain cosmic immortality. He perished in the October 1994 chalet fire at Salvan, Switzerland.",
+    layer: "The Occult",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Order_of_the_Solar_Temple_logo.svg/1280px-Order_of_the_Solar_Temple_logo.svg.png"
+    ],
+    sources: ["Swiss Cantonal Autopsy Records","The Templar Transit Documents","Jean-Marie Abgrall Sect Reports"],
+    relatedIds: ["order-solar-temple","joseph-di-mambro","const-sirius"],
+  },
+  {
+    id: "joseph-di-mambro",
+    parentId: "order-solar-temple",
+    name: "Joseph Di Mambro (OTS Financial Mastermind)",
+    description: "French jeweler, former AMORC Rosicrucian, and ruthless financial and ritual conductor of the Order of the Solar Temple. Operating behind the scenes while Jouret served as public prophet, Di Mambro amassed tens of millions of dollars from wealthy members through Swiss offshore accounts. He engineered elaborate theatrical miracles using hidden lasers, slide projectors, and speaker systems to simulate apparitions of Christ and the Masters. Facing terminal illness and financial embezzlement audits, Di Mambro orchestrated the final transit exterminations, including the sacrifice of an infant deemed the Antichrist.",
+    layer: "The Occult",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Joseph_di_Mambro_%28cropped%29.png/250px-Joseph_di_Mambro_%28cropped%29.png"
+    ],
+    sources: ["Geneva Police Financial Investigation","Order of the Solar Temple (Mayer & Introvigne)","French Parliamentary Cult Inquest"],
+    relatedIds: ["order-solar-temple","luc-jouret","const-sirius"],
+  },
+  {
+    id: "ascended-masters",
+    parentId: "alchemy-occult",
+    name: "Ascended Masters & Great White Brotherhood",
+    description: "In Theosophy, the I AM Activity, and esoteric Western tradition, Ascended Masters are spiritually enlightened beings who were once human but passed through higher initiations, transcending death and physical reincarnation. Led by the enigmatic Count de Saint Germain, Master El Morya, and Kuthumi, this secret cosmic hierarchy allegedly directs global human evolution, geopolitics, and esoteric awakenings from etheric retreats located beneath Mount Shasta, the Grand Teton, and the Gobi Desert.",
+    layer: "The Occult",
+    images: [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Count_of_St_Germain.jpg/250px-Count_of_St_Germain.jpg"
+    ],
+    sources: ["Unveiled Mysteries (Godfré Ray King / Guy Ballard)","The Mahatma Letters to A.P. Sinnett","The I AM Discourses"],
+    relatedIds: ["alchemy-occult","helena-blavatsky","agartha-subterranean-realm"],
+  },
+  {
+    id: "manly-p-hall",
+    parentId: "alchemy-occult",
+    name: "Manly P. Hall (The Secret Destiny of America)",
+    description: "Canadian-born author, 33° Scottish Rite Freemason, and founder of the Philosophical Research Society in Los Angeles. At age 27, Hall published the encyclopedic masterpiece \"The Secret Teachings of All Ages\" (1928), synthesizing universal mystery schools, Kabbalah, alchemy, and Masonic symbolism. In \"The Secret Destiny of America\" (1944), Hall revealed that secret societies—led by Sir Francis Bacon and Rosicrucian initiates—deliberately planned and guided the founding of the United States as the \"New Atlantis\", dedicated to establishing an enlightened world government ruled by philosopher-initiates.",
+    layer: "The Occult",
+    mapFeatureId: "anomaly-manly-p-hall-prs",
+    images: [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Manly_P._Hall.jpg/250px-Manly_P._Hall.jpg"
+    ],
+    sources: ["The Secret Teachings of All Ages (1928)","The Secret Destiny of America (1944)","Masonic Orders of Fraternity"],
+    relatedIds: ["alchemy-occult","masonic-lodges","government-conspiracies"],
+  },
+  {
+    id: "freemason-flat-hollow-earth",
+    parentId: "alchemy-occult",
+    secondaryParentIds: ["supernatural-anomalies"],
+    name: "Freemasonic Flat & Hollow Earth Architecture",
+    description: "Esoteric researchers document how traditional Masonic lodge architecture and high-degree rituals encode ancient subterranean and non-spherical cosmologies. The Royal Arch degree centers upon excavating subterranean vaults beneath King Solomon's Temple to recover lost divine secrets in a vaulted chamber illuminated by an inner, supernatural light. Masonic tracing boards depict a domed celestial canopy resting upon cosmic boundary pillars (Jachin and Boaz), while high-ranking 33° initiates have historically linked the secret subterranean vaults of Solomon to the concave inner earth networks of Agartha.",
+    layer: "Masonic Lodges",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Freimaurer_Initiation.jpg/500px-Freimaurer_Initiation.jpg"
+    ],
+    sources: ["Morals and Dogma (Albert Pike)","The Secret Teachings of All Ages (Manly P. Hall)","Duncan's Masonic Ritual and Monitor"],
+    relatedIds: ["masonic-lodges","hollow-earth-cosmology","agartha-subterranean-realm"],
+  },
+  {
+    id: "september-11-attacks",
+    parentId: "government-conspiracies",
+    name: "9/11 Demolition & Intelligence Conspiracies",
+    description: "The September 11, 2001 terrorist attacks represent the foundational event of 21st-century global geopolitics. Alternative researchers, intelligence whistleblowers, and structural engineers cite overwhelming anomalies: the symmetrical free-fall collapses of WTC 1, WTC 2, and Building 7 (WTC 7, a 47-story skyscraper not struck by a plane); chemical signatures of unreacted nanothermite in dust; the unprecedented failure of NORAD air defense due to simultaneous military war games; insider trading put options on American and United Airlines; and Donald Rumsfeld's Sept 10 announcement of 2.3 trillion dollars missing from Pentagon ledgers.",
+    layer: "Government Conspiracies",
+    mapFeatureId: "anomaly-wtc-ground-zero-911",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/WTC_smoking_on_9-11.jpeg/1280px-WTC_smoking_on_9-11.jpeg"
+    ],
+    sources: ["Architects & Engineers for 9/11 Truth","NIST NCSTAR 1-9 Inquest Reports","9/11 Commission Report Critiques (David Ray Griffin)"],
+    relatedIds: ["government-conspiracies","five-dancing-israelis"],
+  },
+  {
+    id: "five-dancing-israelis",
+    parentId: "september-11-attacks",
+    name: "The 5 Dancing Israelis (Urban Moving Systems)",
+    description: "On the morning of September 11, 2001, five Israeli men (Sivan Kurzberg, Paul Kurzberg, Yaron Shmuel, Oded Ellner, and Omer Marmari) were spotted on the roof of the Doric Apartments in Union City, New Jersey, observing, celebrating, and photographing the burning World Trade Center towers. Arrested later that day by East Rutherford police in a white van registered to \"Urban Moving Systems\", the men had box cutters, 4,700 in cash, and European passports. Subsequent FBI counterintelligence investigations revealed the moving company was a Mossad surveillance front. After being detained for 71 days, the men were quietly deported back to Israel, where one later stated on Israeli television: \"Our purpose was to document the event.\"",
+    layer: "Government Conspiracies",
+    mapFeatureId: "anomaly-five-dancing-israelis-nj",
+    images: [
+      "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/WTC_smoking_on_9-11.jpeg/1280px-WTC_smoking_on_9-11.jpeg"
+    ],
+    sources: ["FBI Section 19 Declassified 9/11 Foreign Counterintelligence Files","Bergen Record (Sept 12, 2001)","Forward Newspaper Investigative Series"],
+    relatedIds: ["september-11-attacks","government-conspiracies"],
+  },
+  {
+    id: "albert-einstein-occult",
+    parentId: "government-conspiracies",
+    secondaryParentIds: ["nasa-root"],
+    name: "Albert Einstein (Occult, Majic-12 & Secret Doctrine Ties)",
+    description: "Beyond his sanitized legacy as the father of modern physics, historical and intelligence archives reveal Albert Einstein was deeply entrenched in suppressed esoteric knowledge. Multiple personal accounts (including his niece) confirm Einstein maintained a dog-eared copy of Madame Blavatsky's \"The Secret Doctrine\" prominently on his Princeton study desk. In June 1947, Einstein and J. Robert Oppenheimer co-authored a top-secret draft memo titled \"Relationships with Inhabitants of Celestial Bodies\" for the Majestic-12 committee, addressing legal and military frameworks for extraterrestrial contact. Einstein was also repeatedly connected by whistleblowers to the Navy's 1943 Philadelphia Experiment / Project Rainbow, exploring unified field theories to render naval vessels optically and radar invisible.",
+    layer: "Government Conspiracies",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Albert_Einstein_Head_cleaned.jpg/1280px-Albert_Einstein_Head_cleaned.jpg"
+    ],
+    sources: ["Einstein-Oppenheimer Draft Memo (Majestic-12 Declassified)","The Philadelphia Experiment (William L. Moore)","The Secret Doctrine & Modern Science"],
+    relatedIds: ["government-conspiracies","helena-blavatsky","nasa-root","particle-accelerators"],
+  },
+  {
+    id: "edwin-hubble-seedy-ties",
+    parentId: "nasa-root",
+    name: "Edwin Hubble (Cosmic Redshift Dogma & Institutional Gatekeeping)",
+    description: "Renowned for formulating Hubble's Law and asserting the expanding universe model, astronomer Edwin Hubble served as a primary gatekeeper of 20th-century astrophysics. Working from the Mount Wilson Observatory, Hubble operated within elite Southern California networks closely tied to military intelligence ballistics and corporate foundations. Alternative cosmologists, plasma universe physicists (like Nobel laureate Hannes Alfvén), and tired-light theorists demonstrate that Hubble selectively suppressed observational data contradicting expanding space-time, cementing an institutional dogma designed to eliminate the electromagnetic ether and enforce academic gatekeeping over astrophysical funding.",
+    layer: "NASA / Space",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Studio_portrait_photograph_of_Edwin_Powell_Hubble_%28cropped%29.JPG/500px-Studio_portrait_photograph_of_Edwin_Powell_Hubble_%28cropped%29.JPG"
+    ],
+    sources: ["The Realm of the Nebulae (Edwin Hubble)","The Big Bang Never Happened (Eric Lerner)","Cosmic Plasma (Hannes Alfvén)"],
+    relatedIds: ["nasa-root","stephen-hawking-seedy-ties","albert-einstein-occult"],
+  },
+  {
+    id: "stephen-hawking-seedy-ties",
+    parentId: "nasa-root",
+    name: "Stephen Hawking (Epstein Island & Cosmological Gatekeeping)",
+    description: "The celebrated theoretical physicist and author of \"A Brief History of Time\" served as the premier international public face of institutional cosmology. Unsealed court documents and photographic records from 2006 confirmed Hawking's documented attendance at a conference held on convicted financier Jeffrey Epstein's private Caribbean island, Little St. James, where Hawking was photographed attending an island barbecue and taking an underwater submarine tour of Epstein's seabed. Critics and dissident physicists note Hawking's institutional role in entrenching unprovable mathematical abstractions (singularities, black hole information paradoxes, and multiverse fatalism) that diverted scientific research away from applied anti-gravitic and electro-gravitic field propulsion.",
+    layer: "NASA / Space",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Physicist_Stephen_Hawking_in_Zero_Gravity_NASA.jpg/1280px-Physicist_Stephen_Hawking_in_Zero_Gravity_NASA.jpg"
+    ],
+    sources: ["Unsealed Epstein Flight Logs & Court Exhibits (Virginia Giuffre v. Maxwell)","A Brief History of Time","Institute of Advanced Studies Archives"],
+    relatedIds: ["nasa-root","edwin-hubble-seedy-ties","government-conspiracies"],
+  },
+  {
+    id: "balmoral-castle-occult",
+    parentId: "old-world-structures",
+    secondaryParentIds: ["government-conspiracies"],
+    name: "Balmoral Castle (Royal Occultism & Highland Ley Lines)",
+    description: "The secluded private Scottish estate of the British royal family in Aberdeenshire. Positioned upon a high-energy convergence of granite geological faults and ancient Pictish ley lines, Balmoral has hosted covert royal esoteric activities for generations. Historical records document Queen Victoria conducting regular mediumistic seances in the castle with her Highland ghillie John Brown to contact Prince Albert, Prince Philip's secretive collection of military UFO incident dossiers, and the sovereign funerary customs observed when Queen Elizabeth II died within the fortress in September 2022.",
+    layer: "Old World Structures",
+    mapFeatureId: "anomaly-balmoral-castle-scotland",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Balmoral_Castle.jpg/1280px-Balmoral_Castle.jpg"
+    ],
+    sources: ["Royal Archives at Windsor Castle","Queen Victoria's Highland Journals","British Monarchy Esoteric Inquest"],
+    relatedIds: ["old-world-structures","government-conspiracies","alchemy-occult"],
+  },
+  {
+    id: "philip-k-dick-valis",
+    parentId: "supernatural-anomalies",
+    secondaryParentIds: ["government-conspiracies"],
+    name: "Philip K. Dick (2-3-74 Pink Laser Download & VALIS)",
+    description: "In February and March 1974 (\"2-3-74\") in Fullerton, California, science fiction visionary Philip K. Dick was struck by a beam of coherent pink laser light originating from an extraterrestrial or trans-temporal source. The beam downloaded gigabytes of encyclopedic information directly into his brain, correctly diagnosed an undiagnosed inguinal hernia in his infant son (saving his life), and imparted Gnostic revelations that linear historical time was an illusion (\"the Empire Never Ended\") orchestrated by a cosmic demiurge inside a psychic prison called the \"Black Iron Prison\". Dick spent his remaining years writing the 8,000-page \"Exegesis\", exploring whether he had contacted an artificial intelligence named VALIS (Vast Active Living Intelligence System) or an extraterrestrial satellite orbiting Earth.",
+    layer: "The Occult",
+    mapFeatureId: "anomaly-pkd-2374-download",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Philip_K_Dick_in_early_1960s_Arthur_Knight_%283x4_cropped%29.jpg/500px-Philip_K_Dick_in_early_1960s_Arthur_Knight_%283x4_cropped%29.jpg"
+    ],
+    sources: ["The Exegesis of Philip K. Dick","VALIS (1981)","Divine Invasions: A Life of Philip K. Dick (Lawrence Sutin)"],
+    relatedIds: ["supernatural-anomalies","alchemy-occult","government-conspiracies"],
+  },
+  {
+    id: "woodwose-wild-man",
+    parentId: "supernatural-anomalies",
+    name: "Woodwose (The Wild Man of the Woods)",
+    description: "A prominent figure in medieval European folklore, church sculpture, and heraldry, the Woodwose (or wodewose) is depicted as a giant, heavily muscled humanoid covered head-to-toe in shaggy hair, wielding uprooted trees or clubs. Prominently carved on 15th-century baptismal fonts and church doors across East Anglia (such as Lavenham and Saxmundham) and woven into European Renaissance tapestries, alternative cryptozoologists and Nephilim researchers maintain that Woodwoses were not mythological fables, but real surviving relict hominids and European sasquatch populations driven to extinction or subterranean refuge by medieval deforestation and religious inquisitions.",
+    layer: "Cryptid Sightings",
+    mapFeatureId: "anomaly-woodwose-lavenham-uk",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/ADurerWoodwoses1499.jpg/500px-ADurerWoodwoses1499.jpg"
+    ],
+    sources: ["The Wild Man: Medieval Myth and Symbolism (Metropolitan Museum of Art)","Lavenham Church Font Carvings","European Cryptozoology Registers"],
+    relatedIds: ["cryptid-sightings","bigfoot-sightings","giants-nephilim-lore"],
+  },
+  {
+    id: "the-glimmerman-cryptid",
+    parentId: "supernatural-anomalies",
+    name: "The Glimmerman (Active Camouflage Entity)",
+    description: "An anomalous cryptid phenomenon reported in dense wilderness areas, state parks, and Missing 411 disappearance clusters across North America. Witnesses describe observing an upright, humanoid entity that is optically transparent, bending background light like the cloaking camouflage in the movie \"Predator\". Moving silently through high tree canopies, the entity is frequently accompanied by a sudden, unnatural silence (the \"Oz Effect\") where all bird and insect calls abruptly cease, electrical equipment discharges, and acute dread overwhelms observers before the entity dissolves into the foliage.",
+    layer: "Cryptid Sightings",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Cuttlefish_color.jpg/1280px-Cuttlefish_color.jpg"
+    ],
+    sources: ["National Cryptid Society Case Files","Missing 411 Field Reports (David Paulides)","North American Anomalous Entity Registers"],
+    relatedIds: ["cryptid-sightings","supernatural-anomalies","missing-411"],
+  },
+  {
+    id: "baigong-pipes",
+    parentId: "megaliths-structures",
+    name: "Baigong Pipes (Mount Baigong OOPArt)",
+    description: "Discovered in triangular caves embedded into Mount Baigong near the toxic saltwater Lake Toson in Qinghai Province, China, the Baigong Pipes are an array of rusty metallic pipe-like tubes ranging from toothpick thinness up to 16 inches in diameter, extending deep into the mountain rock and lake sediment. Metallurgical spectral analysis revealed high concentrations of ferric oxide, silicon dioxide, and calcium oxide, alongside 8% unidentifiable trace elements. While government geologists claim they are fossilized tree casts (rhizoconcretions), alternative researchers view them as ancient pre-diluvian pipelines or extraterrestrial installations dating back tens of thousands of years.",
+    layer: "Archaeological Finds",
+    mapFeatureId: "anomaly-baigong-pipes-china",
+    images: [
+      "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/%E5%A4%8F%E4%B9%8B%E6%AD%8C_-_panoramio.jpg/1280px-%E5%A4%8F%E4%B9%8B%E6%AD%8C_-_panoramio.jpg"
+    ],
+    sources: ["Chinese Academy of Social Sciences Reports","Delingha Seismic Bureau Investigation","Forbidden Archeology (Michael Cremo)"],
+    relatedIds: ["megaliths-structures","archaeological-finds","out-of-place-artifacts"],
+  },
+  {
+    id: "agartha-subterranean-realm",
+    parentId: "supernatural-anomalies",
+    secondaryParentIds: ["alchemy-occult"],
+    name: "Agartha (Subterranean Kingdom of the King of the World)",
+    description: "A legendary subterranean empire said to exist inside the Earth's crust, populated by advanced humanoid races and spiritual masters governed by the \"King of the World\" (Rigden Jyepo). Popularized in the West by French esotericist Alexandre Saint-Yves d'Alveydre and Polish explorer Ferdinand Ossendowski (\"Beasts, Men and Gods\"), Agartha is accessed through deep cavern openings in Tibet, the Gobi Desert, the Mato Grosso in Brazil, and Kentucky's Mammoth Cave. Illuminated by the central green Vril energy light, Agartha is believed to harbor pre-diluvian science, anti-gravitic technology, and the true archives of human genesis.",
+    layer: "Underworld Entrances",
+    mapFeatureId: "anomaly-agartha-kunlun-gateway",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Agartha_and_Shambhala%2C_Land_of_Advanced_Races%2C_Raymond_Bernard.png/500px-Agartha_and_Shambhala%2C_Land_of_Advanced_Races%2C_Raymond_Bernard.png"
+    ],
+    sources: ["Beasts, Men and Gods (Ferdinand Ossendowski, 1922)","Mission de l'Inde (Saint-Yves d'Alveydre)","The Hollow Earth (Raymond Bernard)"],
+    relatedIds: ["underworld-entrances","hollow-earth-cosmology","alchemy-occult"],
+  },
+  {
+    id: "hollow-earth-cosmology",
+    parentId: "supernatural-anomalies",
+    name: "Hollow Earth Cosmology (Polar Apertures & Inner Sun)",
+    description: "The comprehensive scientific and alternative cosmological hypothesis positing that Earth is not a solid sphere, but a hollow shell between 800 and 1,000 miles thick, possessing an interior miniature sun, lush tropical continents, and cavernous openings at the North and South Poles. Developed historically by Royal Society astronomer Edmond Halley, Captain John Cleves Symmes Jr. (who petitioned Congress for a polar expedition), and William Reed, the theory reached its zenith following Admiral Richard E. Byrd's polar expeditions and the alleged discovery of Nazi Base 211 in Neuschwabenland, Antarctica.",
+    layer: "Underworld Entrances",
+    mapFeatureId: "anomaly-hollow-earth-arctic-opening",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Map_of_the_Interior_World_%281892%2C_B%26W_version%29.png/500px-Map_of_the_Interior_World_%281892%2C_B%26W_version%29.png"
+    ],
+    sources: ["Symmes' Theory of Concentric Spheres (1826)","The Phantom of the Poles (William Reed, 1906)","A Journey to the Earth's Interior (Marshall Gardner, 1920)"],
+    relatedIds: ["underworld-entrances","agartha-subterranean-realm","freemason-flat-hollow-earth"],
+  },
+  {
+    id: "stonish-giants-o-ne-yar-heg",
+    parentId: "myths-legends-root",
+    name: "Stonish Giants (Ot-ne-yar-heh / O-ne-yar-heg)",
+    description: "In the sacred oral traditions of the Iroquois (Haudenosaunee) and Shawnee nations, the Stonish Giants (Ot-ne-yar-heh or O-ne-yar-heg) were a terrifying race of cannibalistic giants towering twice the height of normal warriors. They possessed virtually impenetrable stone armor created by rolling in flint, wet sand, and clay. Armed with whole uprooted pine trees, they preyed on tribal settlements until the Great Spirit or allied clans lured them into a treacherous rocky gorge near Onondaga, hurling avalanches of boulders from the clifftops to crush them.",
+    layer: "Giants & Nephilim",
+    mapFeatureId: "anomaly-stonish-giants-onondaga",
+    images: [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Iroquois_Mythological_Giant_Hunter_Holding_Weapons%2C_with_a_Deer_and_Bear_under_His_Belt.jpg/500px-Iroquois_Mythological_Giant_Hunter_Holding_Weapons%2C_with_a_Deer_and_Bear_under_His_Belt.jpg"
+    ],
+    sources: ["Sketches of Ancient History of the Six Nations (David Cusick, 1827)","Iroquois Folk Lore (William M. Beauchamp)","Shawnee Mythological Accounts"],
+    relatedIds: ["giants-nephilim-lore","myths-legends-root"],
+  },
+  {
+    id: "hyksos-people",
+    parentId: "people-groups",
+    name: "Hyksos People (Rulers of Foreign Lands)",
+    description: "The enigmatic West Semitic / Levantine rulers who conquered and ruled Lower Egypt during the Second Intermediate Period (15th Dynasty), establishing their fortified capital at Avaris (Tell el-Dab'a). Introducing composite bows, horse-drawn chariots, and bronze curved swords to the Nile Valley, the Hyksos elevated the worship of Set/Sutekh (god of storms and deserts). Classical Jewish historian Flavius Josephus explicitly equated the Hyksos with the biblical Israelites and identified their expulsion by Pharaoh Ahmose I as the historical reality underlying the Exodus narrative.",
+    layer: "Ancient People Groups",
+    mapFeatureId: "anomaly-avaris-hyksos-capital",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Painting_of_foreign_delegation_in_the_tomb_of_Khnumhotep_II_circa_1900_BCE_%28Detail_mentioning_%22Abisha_the_Hyksos%22_in_hieroglyphs%29.jpg/1280px-Painting_of_foreign_delegation_in_the_tomb_of_Khnumhotep_II_circa_1900_BCE_%28Detail_mentioning_%22Abisha_the_Hyksos%22_in_hieroglyphs%29.jpg"
+    ],
+    sources: ["Against Apion (Flavius Josephus)","Manetho's Aegyptiaca","Excavations at Tell el-Dab'a (Manfred Bietak)"],
+    relatedIds: ["ancient-people-groups","biblical-apocryphal","egyptian-civilization"],
+  },
+  {
+    id: "mabinogion-tales",
+    parentId: "ancient-texts",
+    name: "The Mabinogion (Celtic Mythology & LOTR Blueprint)",
+    description: "The supreme corpus of medieval Welsh prose tales, preserved in the Red Book of Hergest and White Book of Rhydderch. Pre-dating the Christianization of Arthurian romance, the eleven tales preserve pagan Celtic cosmology: the Otherworld (Annwn), enchanted shapeshifting cauldrons, severed speaking heads, and towering Celtic giants like Bendigeidfran (Bran the Blessed), whose body bridged the Irish Sea. Oxford philologist J.R.R. Tolkien drew extensively upon the Mabinogion's linguistic cadences, magical rings, and mythological motifs to construct Middle-earth and \"The Lord of the Rings\".",
+    layer: "Ancient Texts",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Ceridwen.jpg/960px-Ceridwen.jpg"
+    ],
+    sources: ["The Mabinogion (trans. Lady Charlotte Guest)","The White Book of Rhydderch (Peniarth MS 4)","Tolkien and the Welsh Language"],
+    relatedIds: ["ancient-texts","red-book-of-hergest","myths-legends-root"],
+  },
+  {
+    id: "red-book-of-hergest",
+    parentId: "ancient-texts",
+    name: "The Red Book of Hergest (Llyfr Coch Hergest)",
+    description: "A colossal 14th-century Welsh vellum manuscript compiled between 1382 and 1410, now preserved at Jesus College, Oxford (MS 111). Bound in heavy red leather, it contains the most complete surviving compilation of the Mabinogion, Arthurian romances, historical chronicles (Brut y Brenhinedd), and the mystical prophetic verses of the legendary bard Taliesin. Esotericists value the manuscript for preserving lost pre-Roman knowledge of ancient European giant lineages, subterranean fairy mounds, and Arthur's expeditions into the underworld realm of Annwn.",
+    layer: "Ancient Texts",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Red.Book.of.Hergest.facsimile.png/500px-Red.Book.of.Hergest.facsimile.png"
+    ],
+    sources: ["Jesus College Oxford MS 111","Report on Manuscripts in the Welsh Language (J. Gwenogvryn Evans)","Welsh Manuscript Traditions"],
+    relatedIds: ["ancient-texts","mabinogion-tales"],
+  },
+  {
+    id: "palazzo-farnese-map-codex",
+    parentId: "ancient-texts",
+    name: "Palazzo Farnese World Map Fresco (1574)",
+    description: "The monumental world map fresco gracing the Sala del Mappamondo at Villa Farnese in Caprarola, Italy, painted by cartographer Giovanni Antonio da Varese. Highly prized among alternative historians and cartography researchers, the fresco illustrates a massive Terra Australis Incognita connecting Antarctica to southern South America, navigable Arctic channels, and detailed coastlines mapped centuries before their official discovery by modern explorers.",
+    layer: "Ancient Texts",
+    images: [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/World_map_-_Room_of_Maps_-_Villa_Farnese_-_Caprarola%2C_Italy_-_DSC02398.jpg/1280px-World_map_-_Room_of_Maps_-_Villa_Farnese_-_Caprarola%2C_Italy_-_DSC02398.jpg"
+    ],
+    sources: ["Villa Farnese Caprarola Curatorial Records","Old World Cartography Archives","Renaissance Fresco Studies"],
+    relatedIds: ["ancient-texts","old-world-structures"],
+  },
+  {
+    id: "kunyu-wanguo-quantu-codex",
+    parentId: "ancient-texts",
+    name: "Kunyu Wanguo Quantu (The Impossible Black Tulip - 1602)",
+    description: "The legendary 1602 world map produced by Jesuit scholar Matteo Ricci in collaboration with Chinese cartographers Li Zhizao and Zhang Wentao in Beijing during the Ming Dynasty. Printed from six monumental woodblocks, it placed China at the center of the world and revealed detailed geography of the Americas, magnetic poles, and uncharted southern lands alongside extensive classical Chinese annotations on foreign races, monsters, and cosmological principles.",
+    layer: "Ancient Texts",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F7%2F71%2FKunyu_Wanguo_Quantu_(%25E5%259D%25A4%25E8%25BC%25BF%25E8%2590%25AC%25E5%259C%258B%25E5%2585%25A8%25E5%259C%2596).jpg%2F1280px-Kunyu_Wanguo_Quantu_(%25E5%259D%25A4%25E8%25BC%25BF%25E8%2590%25AC%25E5%259C%258B%25E5%2585%25A8%25E5%259C%2596).jpg"
+    ],
+    sources: ["Library of Congress Asian Division","Matteo Ricci Papers","Ming Dynasty Cartographical Archives"],
+    relatedIds: ["ancient-texts","old-world-structures"],
+  },
+  {
+    id: "prehistoric-cavemen-fossils",
+    parentId: "archaeological-finds-br",
+    name: "Prehistoric Hominid Fossil Record & Dating Anomalies",
+    description: "The physical archaeological catalog of pre-modern human and hominid remains. Mainstream physical anthropology arranges these finds into a linear evolutionary progression, but alternative researchers, creationists, and anomaly researchers (e.g. Michael Cremo) examine the exact physical parts actually recovered versus modern speculative artistic reconstructions, as well as the significant calibration assumptions and limitations inherent in radiometric dating methods (AMS Radiocarbon, Potassium-Argon, Argon-Argon, Uranium-Series, and Electron Spin Resonance).",
+    layer: "Archaeological Finds",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Neandertal_1856.jpg/960px-Neandertal_1856.jpg"
+    ],
+    sources: ["Smithsonian Human Origins Program","Nature & Science Paleoanthropology Archives","Forbidden Archeology (Michael Cremo & Richard Thompson)"],
+    relatedIds: ["archaeological-finds","giants-nephilim-lore"],
+  },
+  {
+    id: "otzi-the-iceman",
+    parentId: "prehistoric-cavemen-fossils",
+    name: "Ötzi the Iceman (Glacial Mummy)",
+    description: "DISCOVERED: September 19, 1991 on the Tisenjoch ridge (Ötztal Alps, 3,210m altitude).\nPHYSICAL PARTS FOUND: A completely intact, freeze-dried mummified human body (including skin, soft tissues, eyeballs, complete brain, heart, internal organs, hair, fingernails, and stomach contents). Also recovered intact: cast copper axe with yew handle, ash-handled flint dagger, 14-arrow quiver with dogwood and viburnum shafts, unfinished yew longbow, birch-bark containers holding live embers in maple leaves, woven grass cloak, deerskin leggings, bearskin cap, and calfskin shoes insulated with alpine grass.\nDATING METHOD: Accelerator Mass Spectrometry (AMS) radiocarbon (14C) dating performed on bone collagen, muscle tissue, hair, and clothing fibers consistently dated the remains to ~3350–3100 BCE (~5,300 years ago).\nCONSPIRACY / ANOMALY ANGLE: Ötzi possessed 61 therapeutic charcoal tattoos precisely positioned along traditional Chinese acupuncture lines (primarily the bladder meridian) thousands of years before acupuncture was officially recorded in Asia. A deep flint arrowhead lodged in his left subclavian artery and defensive wounds on his hands indicate he was ambushed and assassinated at high altitude.",
+    layer: "Archaeological Finds",
+    mapFeatureId: "anomaly-otzi-iceman-discovery",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Otzi-Quinson.jpg/500px-Otzi-Quinson.jpg"
+    ],
+    sources: ["South Tyrol Museum of Archaeology (Bolzano, Italy)","Science (Vanderbilt & University of Innsbruck Inquest)","Nature Scientific Reports"],
+    relatedIds: ["prehistoric-cavemen-fossils","archaeological-finds"],
+  },
+  {
+    id: "neanderthal-1-fossil",
+    parentId: "prehistoric-cavemen-fossils",
+    name: "Neanderthal 1 (Feldhofer Cave)",
+    description: "DISCOVERED: August 1856 in the Kleine Feldhofer Grotte in the Neander Valley near Düsseldorf, Germany.\nPHYSICAL PARTS FOUND: A thick cranial vault / skullcap (calotte) lacking the facial skeleton, two femora, a right humerus, a left humerus fragment, a complete left radius and ulna, a right radius fragment, a left hip bone fragment, part of the right scapula, and five ribs.\nDATING METHOD: Initially dated via stratigraphic association with Pleistocene cave sediments; direct Accelerator Mass Spectrometry (AMS) radiocarbon dating on the right femur and associated faunal remains determined an age of ~40,000 BP.\nCONSPIRACY / ANOMALY ANGLE: Initially dismissed by leading pathologist Rudolf Virchow as an ordinary diseased Cossack cavalryman with rickets and arthritis. Alternative researchers note how Neanderthal cranial capacity (1500–1750 cc) significantly exceeded modern humans (1350 cc), contradicting linear evolution and fueling theories of pre-diluvian Nephilim hybrid decline.",
+    layer: "Archaeological Finds",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Neandertal_1856.jpg/960px-Neandertal_1856.jpg"
+    ],
+    sources: ["Rheinisches Landesmuseum Bonn","Rudolf Virchow Inquest Records (1872)","Proceedings of the National Academy of Sciences"],
+    relatedIds: ["prehistoric-cavemen-fossils","giants-nephilim-lore"],
+  },
+  {
+    id: "denisova-hominin-fossil",
+    parentId: "prehistoric-cavemen-fossils",
+    name: "Denisova Hominin (Denisova 3)",
+    description: "DISCOVERED: 2008 in Denisova Cave in the Altai Mountains of Siberia, Russia.\nPHYSICAL PARTS FOUND: Merely a tiny fragment of a distal phalanx (the pinky finger bone of a juvenile female), three large molar teeth (Denisova 4, 8, and 2), and a parietal bone fragment.\nDATING METHOD: Optical stimulated luminescence (OSL) and radiocarbon dating of the cave strata established dates of ~51,600–76,200 BP, corroborated by mitochondrial and high-coverage nuclear DNA genomic molecular clock dating.\nCONSPIRACY / ANOMALY ANGLE: Based almost entirely on microscopic genetic sequencing from a single finger bone, mainstream anthropology constructed an entire mysterious hominid branch that interbred with humans and Neanderthals. Denisova cave also yielded an advanced polished chlorite stone bracelet and bone needle exhibiting high-precision micro-drilling dated to over 40,000 years ago, demonstrating anomalous advanced pre-diluvian manufacturing.",
+    layer: "Archaeological Finds",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Homo_longi_holotype.jpg/500px-Homo_longi_holotype.jpg"
+    ],
+    sources: ["Max Planck Institute for Evolutionary Anthropology (Svante Pääbo)","Nature (Krause et al., 2010)","Russian Academy of Sciences Archaeology Institute"],
+    relatedIds: ["prehistoric-cavemen-fossils","giants-nephilim-lore"],
+  },
+  {
+    id: "lucy-australopithecus",
+    parentId: "prehistoric-cavemen-fossils",
+    name: "Lucy (AL 288-1 - Australopithecus afarensis)",
+    description: "DISCOVERED: November 24, 1974 by Donald Johanson and Tom Gray at Hadar in the Awash Valley, Ethiopia.\nPHYSICAL PARTS FOUND: Approximately 40% of a single female hominid skeleton (comprising 47 out of 207 bones): a partial cranium, mandible with teeth, fragments of the sacrum and pelvis, left femur, right and left humeri, radius, ulna, ribs, and several vertebrae. Hand and foot bones were almost entirely missing.\nDATING METHOD: Dated to ~3.18–3.22 million years ago not by testing the bones directly, but by Potassium-Argon (40K/40Ar) and Argon-Argon (40Ar/39Ar) radiometric dating of surrounding volcanic tuff strata (Kada Hadar Tuff) combined with paleomagnetic reversal stratigraphy.\nCONSPIRACY / ANOMALY ANGLE: Skeptics highlight that the knee joint used to prove bipedalism was found over a mile away in a different stratum. Anthropologists like Lord Solly Zuckerman and Dr. Charles Oxnard concluded Australopithecines were an extinct species of knuckle-walking ape anatomically distant from modern humans, whose human-like reconstructions rely on speculative museum modeling.",
+    layer: "Archaeological Finds",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Reconstruction_of_the_fossil_skeleton_of_%22Lucy%22_the_Australopithecus_afarensis.jpg/960px-Reconstruction_of_the_fossil_skeleton_of_%22Lucy%22_the_Australopithecus_afarensis.jpg"
+    ],
+    sources: ["Cleveland Museum of Natural History","Lucy: The Beginnings of Humankind (Johanson & Edey)","The Order of Man (Charles Oxnard)"],
+    relatedIds: ["prehistoric-cavemen-fossils"],
+  },
+  {
+    id: "taung-child-fossil",
+    parentId: "prehistoric-cavemen-fossils",
+    name: "Taung Child (Australopithecus africanus)",
+    description: "DISCOVERED: 1924 by quarrymen in a lime quarry at Taung near Kimberley, South Africa; analyzed by Raymond Dart.\nPHYSICAL PARTS FOUND: A natural fossilized limestone endocast of the brain cavity, the front face and orbital sockets, and a complete juvenile mandible containing milk teeth and erupting first permanent molars.\nDATING METHOD: Dated via biochronological faunal correlation of accompanying extinct baboon species in the calcified limestone tufa cave deposits, later supplemented by uranium-lead (U-Pb) and paleomagnetic reversal stratigraphy to ~2.8 million years ago.\nCONSPIRACY / ANOMALY ANGLE: Damage on the base of the eye sockets matches the talons of a large predatory eagle (similar to modern African crowned eagles), indicating the child was snatched as prey. Alternative anatomists note that juvenile ape skulls closely resemble human infants until adult sagittal crests develop.",
+    layer: "Archaeological Finds",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Australopithecus_africanus_-_Cast_of_taung_child.jpg/1280px-Australopithecus_africanus_-_Cast_of_taung_child.jpg"
+    ],
+    sources: ["Nature (Raymond Dart, 1925)","University of the Witwatersrand Anatomical Archives","American Journal of Physical Anthropology"],
+    relatedIds: ["prehistoric-cavemen-fossils"],
+  },
+  {
+    id: "cro-magnon-1-fossil",
+    parentId: "prehistoric-cavemen-fossils",
+    name: "Cro-Magnon 1 (The Old Man of Les Eyzies)",
+    description: "DISCOVERED: March 1868 during road construction in the Abri de Cro-Magnon rock shelter at Les Eyzies, Dordogne, France.\nPHYSICAL PARTS FOUND: A virtually complete adult male cranium, facial bones, upper jaw, fragmented cervical and thoracic vertebrae, pelvic fragments, and limb bones of an anatomically modern human exhibiting intense facial bone reabsorption caused by severe fungal infection.\nDATING METHOD: Direct AMS radiocarbon dating on associated pierced sea-shell ornaments, reindeer bones, and ivory beads recovered from the burial layer dated the remains to ~27,680–28,000 BP (Gravettian cultural era).\nCONSPIRACY / ANOMALY ANGLE: The Cro-Magnon individuals were exceptionally tall (averaging 6 feet to 6 feet 4 inches) with cranial capacities averaging 1600 cc—substantially larger than modern humans. Their sudden, fully-formed appearance in European cave paintings without evolutionary transitional precursors fuels theories of displaced Atlantean survivors.",
+    layer: "Archaeological Finds",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Abri_de_Cro-Magnon_-_Les_Eyzies_de_Tayac_-_20090925.jpg/1280px-Abri_de_Cro-Magnon_-_Les_Eyzies_de_Tayac_-_20090925.jpg"
+    ],
+    sources: ["Musée de l'Homme (Paris)","Comptes Rendus de l'Académie des Sciences (1868)","The Lancet Forensic Inquest (2018)"],
+    relatedIds: ["prehistoric-cavemen-fossils","giants-nephilim-lore"],
+  },
+  {
+    id: "java-man-trinil",
+    parentId: "prehistoric-cavemen-fossils",
+    name: "Java Man (Pithecanthropus erectus / Homo erectus)",
+    description: "DISCOVERED: 1891–1892 by Dutch anatomist Eugène Dubois on the banks of the Solo River at Trinil, East Java, Indonesia.\nPHYSICAL PARTS FOUND: Only a thick, archaic skullcap (calvarium Trinil 2), a single tooth, and a completely modern-looking left femur (Trinil 3) found 15 meters away in the river gravel beds months later.\nDATING METHOD: Dated via Argon-Argon (40Ar/39Ar) radiometric dating of surrounding volcanic pumice horizons and bio-stratigraphic correlation of extinct mammalian fauna to ~700,000–1,000,000 BP.\nCONSPIRACY / ANOMALY ANGLE: Dubois concealed for decades that he had discovered two fully modern human skulls (Wadjak 1 and 2) in the same geographic formation, which disproved his assertion that Java Man was the solitary evolutionary missing link between apes and humans.",
+    layer: "Archaeological Finds",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Pithecanthropus_erectus-PeterMaas_Naturalis.jpg/1280px-Pithecanthropus_erectus-PeterMaas_Naturalis.jpg"
+    ],
+    sources: ["Naturalis Biodiversity Center (Leiden, Netherlands)","The Discovery of Java Man (Dubois Archives)","Science (Swisher et al., 1994)"],
+    relatedIds: ["prehistoric-cavemen-fossils"],
+  },
+  {
+    id: "peking-man-zhoukoudian",
+    parentId: "prehistoric-cavemen-fossils",
+    name: "Peking Man (Sinanthropus pekinensis)",
+    description: "DISCOVERED: 1927–1937 by Pei Wenzhong and Davidson Black in the limestone cave system of Dragon Bone Hill at Zhoukoudian near Beijing, China.\nPHYSICAL PARTS FOUND: 6 nearly complete skullcaps, 12 skull fragments, 15 partial lower jaws (mandibles), 147 teeth, and 7 thigh bone fragments representing ~40 individuals. INCREDIBLY, ALL ORIGINAL SPECIMENS VANISHED IN DECEMBER 1941 during wartime evacuation to the United States and have never been found; modern science relies entirely on plaster casts and notes by Franz Weidenreich.\nDATING METHOD: Aluminum-Beryllium (26Al/10Be) isotope burial dating and paleomagnetic reversal dating of cave quartz sands date the fossils to ~680,000–780,000 BP.\nCONSPIRACY / ANOMALY ANGLE: The mysterious wartime disappearance of the bones aboard the USS President Harrison or in Japanese vaults sparked allegations of covert military intelligence confiscation. Jesuit paleontologist Pierre Teilhard de Chardin's controversial role and the fact that all skulls had their occipital bases deliberately smashed in led researchers like Marcel de Corte to argue the site was a pre-diluvian cannibal feast where true humans consumed ape heads.",
+    layer: "Archaeological Finds",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Skull_pekingman.jpg/500px-Skull_pekingman.jpg"
+    ],
+    sources: ["Peking Man Fossil Inquiry (Chinese Academy of Sciences)","The Search for Peking Man (Janus & Brashler)","American Museum of Natural History"],
+    relatedIds: ["prehistoric-cavemen-fossils","government-conspiracies"],
+  },
+  {
+    id: "la-chapelle-aux-saints-1",
+    parentId: "prehistoric-cavemen-fossils",
+    name: "La Chapelle-aux-Saints 1 (The Old Man of La Chapelle)",
+    description: "DISCOVERED: August 3, 1908 by Catholic priests Amédée and Jean Bouyssonie in the Bouffia Bonneval cave at La Chapelle-aux-Saints, Corrèze, France.\nPHYSICAL PARTS FOUND: A nearly complete adult male Neanderthal skeleton including skull, complete mandible, vertebrae, ribs, long bones of the limbs, and pelvic bones, missing almost all teeth due to severe periodontal disease.\nDATING METHOD: Electron Spin Resonance (ESR) on accompanying animal tooth enamel and AMS radiocarbon of bone collagen establish an age of ~60,000 BP.\nCONSPIRACY / ANOMALY ANGLE: French paleontologist Marcellin Boule used this individual's severe, crippling osteoarthritis and spinal deformation to fabricate the enduring, derogatory caricature of Neanderthals as hunched, bent-kneed ape-brutes. That this toothless elderly individual survived for years through communal care and was buried in an intentionally dug grave with flowers and animal offerings proves advanced spiritual compassion.",
+    layer: "Archaeological Finds",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Homo_sapiens_neanderthalensis.jpg/960px-Homo_sapiens_neanderthalensis.jpg"
+    ],
+    sources: ["Musée National de Préhistoire (Les Eyzies)","L'Homme Fossile de La Chapelle-aux-Saints (Marcellin Boule, 1911)","Proceedings of the National Academy of Sciences"],
+    relatedIds: ["prehistoric-cavemen-fossils"],
+  },
+  {
+    id: "homo-naledi-rising-star",
+    parentId: "prehistoric-cavemen-fossils",
+    name: "Homo naledi (Rising Star Cave)",
+    description: "DISCOVERED: 2013–2015 by Lee Berger and team in the subterranean Dinaledi and Lesedi Chambers of the Rising Star cave system, Cradle of Humankind, South Africa.\nPHYSICAL PARTS FOUND: Over 1,550 cataloged fossil skeletal elements representing at least 15 distinct individuals of both sexes and all ages (infants to elderly), including complete skulls, curved hands, feet, and pelves—the largest single hominid fossil assemblage ever discovered in Africa.\nDATING METHOD: Combining optically stimulated luminescence (OSL) of cave sediments, electron spin resonance (ESR), and uranium-thorium (U-Th) dating of flowstones, dated to an unexpectedly young ~236,000–335,000 BP.\nCONSPIRACY / ANOMALY ANGLE: The chamber is accessible only through a harrowing vertical chute just 7.5 inches wide in pitch-black darkness. Berger argued the small-brained (450–600 cc) hominids used controlled torches and deliberately buried their dead in deep subterranean crypts. Mainstream peers attacked the claim, unwilling to concede that tiny-brained hominids possessed mortuary rituals and spiritual culture.",
+    layer: "Archaeological Finds",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Homo_naledi_skeletal_specimens.jpg/1280px-Homo_naledi_skeletal_specimens.jpg"
+    ],
+    sources: ["eLife (Berger et al., 2015 & 2017)","National Geographic Society Rising Star Expedition","Evolutionary Anthropology Inquest"],
+    relatedIds: ["prehistoric-cavemen-fossils","underworld-entrances"],
+  },
+  {
+    id: "codex-sighting-beavercreek-1973",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/beavercreek",
+    parentId: "supernatural-anomalies",
+    name: "Beavercreek Humanoids (Ohio, 1973)",
+    description: "Motorists on U.S. 35 in Ohio reported three silver-clad humanoids with antennae and flashing lights beside the highway. Covered by Walter Cronkite on CBS News, local authorities claimed it was a teenage prank, yet ufologists note the timing matched the historic October 1973 nationwide UFO wave.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-beavercreek-1973",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0d5c0e40-445f-40f6-ba6c-e768f45fbf0f_808x517.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!tCYJ!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F756bc140-116a-459d-893e-0ff802550089_556x831.png"
+    ],
+    sources: ["The Beavercreek Humanoids [Hoax] Photograph — Xenia, Ohio — 1973","Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-merida-2005",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/merida-alien",
+    parentId: "supernatural-anomalies",
+    name: "Mérida Light Pole Alien Grab (Mexico, 2005)",
+    description: "Cellphone recording of a youth being grabbed by a frigid, clawed non-human arm reaching from behind a light pole at 2 a.m. in Yucatán, followed by the entity peeking its bulbous head around the pole. Investigated by Jaime Maussan and Santiago Yturria.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-merida-2005",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!5pmb!%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F85e9c773-5080-4c61-85b4-8a5fe0079234_1807x1324.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!m7H8!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252Fd7c360a7-0b31-450a-b021-2665f411a640_555x368.jpeg"
+    ],
+    sources: ["The Mérida Alien Video — José Alonso Herrera & David Espada — Mexico, 2005","Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-ronnie-hill-1967",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/ronnie-hill",
+    parentId: "supernatural-anomalies",
+    name: "Ronnie Hill Alien Photograph (North Carolina, 1967)",
+    description: "14-year-old Ronnie Hill captured a color photograph of a 3.5-foot humanoid in a silver pressurized suit standing in a field before a landed luminous disc, submitting firsthand flight schematics and descriptions of pungent ozone odors.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-ronnie-hill-1967",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1a5826eb-1d2e-4650-be39-5b1dd5ff1f1e_1402x997.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!Z5mC!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F1a54d298-cca1-43ed-96c2-0434c6a7aba9_1600x1561.tif"
+    ],
+    sources: ["Ronnie Hill’s Alien Photograph — Oriental, North Carolina — 1967 — [Colorized Full Scan, and Original Ronnie Hill Letter & Diagrams Included]","Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-monte-verrugoli-1976",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/monte-verrugoli",
+    parentId: "supernatural-anomalies",
+    name: "Monte Verrugoli Humanoid Photograph (Italy, 1976)",
+    description: "Photograph of an anomalous biomechanical humanoid entity in the hills of La Spezia, Italy, coinciding with severe military radar blackouts and transmedium craft sightings in the Gulf of Genoa.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-monte-verrugoli-1976",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!8H5-!%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252Fe725e429-5bbf-4e20-a229-a267ba4fa9fb_1073x869.webp",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!LnPg!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F2eafeff3-425e-49f3-a845-d0bc671ed243_730x490.png"
+    ],
+    sources: ["The Monte Verrugoli Humanoid Photograph — La Spezia, Italy — 1976","Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-martian-kings-1897",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/martian-kings",
+    parentId: "supernatural-anomalies",
+    name: "1897 Martian King Photographs (London, England)",
+    description: "Victorian plate photographs captured during the worldwide 1897 Great Airship wave depicting tall, crowned humanoid figures circulated in London occult lodges.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-martian-kings-1897",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6f0ca577-db75-4867-bc60-2eeb1ae6501e_1690x1651.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!wD6Q!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F2fea1c01-7918-48c2-9e73-1c89b355e4ab_959x1355.webp"
+    ],
+    sources: ["The 1897 Martian King Photographs — Charles West & J. Evans Starling — London, England","Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-marcahuasi-1982",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/marcahuasi",
+    parentId: "supernatural-anomalies",
+    name: "Marcahuasi Plateau Alien Entity (Peru, 1982)",
+    description: "Photograph of an elongated luminous humanoid entity appearing among the cyclopean megaliths of Marcahuasi Plateau at 4,000m altitude in Peru, long revered as an interdimensional portal.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-marcahuasi-1982",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!Gk12!%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F50c5c424-90cf-4e3d-95ca-a0a7edef02ad_1263x871.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!8gGq!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252Fa3c994b2-cd2b-4be3-8d14-f85a3ae54f5a_300x431.jpeg"
+    ],
+    sources: ["The Marcahuasi Alien Photograph — Peru, 1982","Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-lake-travis-2007",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/lake-travis",
+    parentId: "supernatural-anomalies",
+    name: "Lake Travis Humanoid Sighting (Texas, 2007)",
+    description: "Photographic capture of a pale, semi-aquatic humanoid entity emerging from the secluded limestone shoreline of Lake Travis near Austin, Texas, tied to underground base and cavern lore.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-lake-travis-2007",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!ZBMq!%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F21613475-bb90-40b2-91f5-1a15f178e81d_792x488.jpeg",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!CBSs!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F8342a7e6-0e47-420d-8bde-0ce274be7487_792x488.jpeg"
+    ],
+    sources: ["The Lake Travis Humanoid Photograph — Texas, 2007","Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-cedric-allingham-1954",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/cedric-allingham",
+    parentId: "supernatural-anomalies",
+    name: "Cedric Allingham Martian Contact (Scotland, 1954)",
+    description: "British contactee case in Lossiemouth, Scotland, producing photographs of a 50-foot flying saucer and its tall Martian pilot, suspected by researchers of being an elite psychological warfare test tied to Patrick Moore.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-cedric-allingham-1954",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc900a2b3-ee8d-4a53-964b-9cf4161d09b7_1939x984.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!O1SJ!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F493bc07b-c66a-4b17-98f4-1bb4d690f2fa_933x955.png"
+    ],
+    sources: ["Cedric Allingham’s UFO & Martian Pilot Photographs — Lossiemouth, Scotland, 1954","Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-nicholson-1957",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/nicholson-photos",
+    parentId: "supernatural-anomalies",
+    name: "Ralph Nicholson UFO Fleet During Sputnik (New Jersey, 1957)",
+    description: "Amateur astronomer Ralph Nicholson photographed multiple glowing disc craft maneuvering in orbit over Paterson, NJ, while monitoring Soviet Sputnik passes, triggering Project Blue Book confiscations.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-nicholson-1957",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!3Si-!%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F32b2af7b-dbde-4614-8ea4-a2e94895c3fa_1402x1402.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!Ds_4!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F2808590c-c321-4f09-83e0-ec631b9db7b7_1225x1756.png"
+    ],
+    sources: ["Ralph Nicholson’s UFO Photographs During Sputnik Observations — Paterson, New Jersey — 1957–1958","Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-eucla-1955",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/eucla",
+    parentId: "supernatural-anomalies",
+    name: "Eucla Flying Saucer Pilot (Australia, 1955)",
+    description: "Historic Australian outback photograph capturing a diminutive extraterrestrial occupant standing near the transcontinental highway in the Nullarbor Plain, directly within the flight path of British atomic bomb tests.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-eucla-1955",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!JzAj!%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252Fcee6e36f-9b04-419c-99f6-09d003552093_1086x1768.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!JzAj!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252Fcee6e36f-9b04-419c-99f6-09d003552093_1086x1768.png"
+    ],
+    sources: ["The Eucla “Flying Saucer Pilot” Photograph — Australia, 1955","Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-sverdlovsk-1968",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/operation-sverdlovsk",
+    parentId: "supernatural-anomalies",
+    name: "KGB Sverdlovsk UFO Crash & Autopsy (USSR, 1968–1969)",
+    description: "Declassified Soviet film documenting the military recovery of a crashed saucer embedded in snow near Berezovsky and the subsequent medical autopsy of a non-human torso at the Semashko Institute.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-sverdlovsk-1968",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!5coV!%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F454c1510-ddb7-46b8-8698-887ac6a3141b_3567x2345.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!eoGB!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252Fd3f34138-e95f-4009-b633-903293861759_2873x2101.png"
+    ],
+    sources: ["The KGB UFO Crash & Alien Autopsy Films — Sverdlovsk, USSR — 1968–1969","Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-george-adamski-1952",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/george-adamski",
+    parentId: "supernatural-anomalies",
+    name: "George Adamski Scout Ships & Orthon Contact (California, 1952)",
+    description: "Foundational 1950s contactee case where George Adamski met Venusian emissary \"Orthon\" in the California desert and photographed iconic bell-shaped scout ships with spherical underside landing gear.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-george-adamski-1952",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9ad5ed2e-f7f2-4987-a2c5-a1887d9e47aa_1644x1255.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!04lf!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252Fae75b2d9-306d-4347-b98b-ced160318a80_615x874.png"
+    ],
+    sources: ["George Adamski’s UFO Photographs, Films & the Orthon Alien Image — North America, 1946–1965","Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-mister-x-1950",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/mister-x",
+    parentId: "supernatural-anomalies",
+    name: "Mister X Wiesbaden Alien Photo (Germany, 1950)",
+    description: "Iconic photograph of a 3-foot helmeted alien escorted across a military airfield by a U.S. Army intelligence officer and German police, cited in 2026 declassified Department of War dossier leaks.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-mister-x-1950",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!-kYm!%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252Ff69fb59f-49a0-41a2-a4a7-27ba5501b990_1203x1696.webp",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!UzTy!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252Fdbeae199-4e33-4aef-baf2-40caf6a85ddc_816x1144.png"
+    ],
+    sources: ["“Mister X” — The Other 2026 U.S. Department of War Alien Image — April Fools Hoax — Wiesbaden, Germany, 1950","Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-rama-brazil-1984",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/rama",
+    parentId: "supernatural-anomalies",
+    name: "João Valério da Silva Rama Entity (Brazil, 1984)",
+    description: "Photographs captured in Maringá, Paraná, Brazil, depicting a thin-limbed, helmeted extraterrestrial humanoid standing in broad daylight in an agricultural field, examined by Brazilian military researchers.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-rama-brazil-1984",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!5wCO!%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252Fae6a0205-fcd6-467c-a752-aaace662e638_1471x969.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!prV_!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F6c5c0f7a-3e72-47ac-8c03-87665781b0fb_1821x2010.png"
+    ],
+    sources: ["João Valério da Silva’s “Rama” Alien Photographs — Brazil, 1984","Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-mars-man-1950",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/mars-man",
+    parentId: "supernatural-anomalies",
+    name: "The Mars Man Alien Image (Germany, 1950)",
+    description: "Post-war photographic leak from occupied Germany showing a diminutive humanoid in metallic flight suit flanked by Allied military intelligence personnel, recently re-evaluated in declassified archives.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-mars-man-1950",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F985d2f00-9b93-41fd-9a6d-71a59fba3188_467x223.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!Sbvg!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252Fb63333be-64e9-45c5-ad52-bd3bbbd4665b_2655x1026.png"
+    ],
+    sources: ["The Mars Man — The 2026 U.S. Department of War Alien Image — Germany, 1950","Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-rocca-pia-1956",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/rocca-pia",
+    parentId: "supernatural-anomalies",
+    name: "Rocca Pia & Amicizia W56 Alien Alliance (Italy, 1956–1976)",
+    description: "The monumental Italian Friendship Case documenting decades of direct interaction between prominent Italian scholars/diplomats and the W56 extraterrestrials operating from vast subterranean Adriatic bases.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-rocca-pia-1956",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6e11dab1-c839-450f-86e7-30179d19cbe3_1200x643.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!iEQ0!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252Fac69ec90-c863-4491-9f58-22decb6f1702_868x600.jpeg"
+    ],
+    sources: ["Rocca Pia — The Friendship Case — Amicizia, W56 Alien & UFO Photographs — Italy, 1956–1976","Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-brother-bocco-1954",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/lee-crandall",
+    parentId: "supernatural-anomalies",
+    name: "Lee Crandall & Brother Bocco the Venusian (Los Angeles, 1954)",
+    description: "Photographs and contact accounts by electronics technician Lee Crandall with \"Brother Bocco\", an emissary of the Venusian spiritual hierarchy communicating disarmament messages in 1950s Los Angeles.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-brother-bocco-1954",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!n9Hm!%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F16022fce-d97f-4636-a3b1-e4be1b23377c_525x512.jpeg",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!jzen!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F4d35a6bd-818f-4a75-98f7-2a5fbc41700a_615x1093.png"
+    ],
+    sources: ["Lee Crandall’s Photographs of the Venusian, Brother Bocco — Los Angeles, California, 1954","Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-admiral-byrd-1929",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/admiral-byrd",
+    parentId: "supernatural-anomalies",
+    name: "Admiral Byrd Antarctic Flying Disc Photo (Little America, 1929)",
+    description: "Glass plate photograph discovered by researcher Joe Fex in Admiral Richard E. Byrd's 1928–1930 expedition negatives, showing an aerodynamic disc hovering over the Ross Ice Shelf decades before modern UFO lore.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-admiral-byrd-1929",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!ORKR!%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F2d8ff8b6-394c-4975-aa7c-a2fa46215902_1772x1199.jpeg",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!uJDJ!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F5f49ac41-f612-49f7-8e58-c4b54dc17b68_368x540.jpeg"
+    ],
+    sources: ["Admiral Byrd’s UFO Photograph — Found by Joe Fex — Little America, Antarctica, 1928–1930","Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-chris-bledsoe-2007",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/chris-bledsoe",
+    parentId: "supernatural-anomalies",
+    name: "Chris Bledsoe: The Lady & Luminous Orbs (North Carolina, 2007–Present)",
+    description: "Modern intelligence-validated contact nexus beside the Cape Fear River, investigated by senior CIA officials (Jim Semivan) and NASA scientists, involving plasma orbs, multi-dimensional entities, and visions of The Lady.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-chris-bledsoe-2007",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F066c664a-ddd4-492a-94db-6cb13c80e5ee_1672x941.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!vGRD!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F26b479e3-d4b8-476a-b963-2895c6699073_600x900.jpeg"
+    ],
+    sources: ["Chris Bledsoe’s Alien Photographs — The Lady, the Interdimensional Alien, the Cloaked Being, and More — Fayetteville, North Carolina, 2007–Present","Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-el-condesito-1974",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/el-condesito",
+    parentId: "supernatural-anomalies",
+    name: "Julio Marvizón El Condesito Humanoid & Disc (Spain, 1974)",
+    description: "Spanish meteorologist Julio Marvizón captured photographs of an illuminated disc craft and humanoid entity among olive groves in Huelva, triggering classified Spanish Air Force radar tracking investigations.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-el-condesito-1974",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F13b12836-4a9b-4a21-ad14-0037ce8d9f20_1672x941.png"
+    ],
+    sources: ["Julio Marvizón’s “El Condesito” Alien & UFO Photographs — Huelva, Spain, 1974–1975","Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-gina-jones-1989",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/gina-jones",
+    parentId: "supernatural-anomalies",
+    name: "Gina Jones Check-Mark UFO & Window Humanoid (South Carolina, 1989)",
+    description: "Camcorder video recorded on Halloween 1989 in Greenville, SC, capturing a check-mark craft. Stabilized zoom reveals the distinct silhouette and facial features of an alien humanoid observing from the cockpit window.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-gina-jones-1989",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!7Fla!%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F92fa0a6f-3943-432d-8cc9-85d8ef9469c9_2880x2158.png"
+    ],
+    sources: ["Gina Jones’ Check-Mark UFO Formation and “Window Humanoid” Video — Greenville, South Carolina, October 31, 1989","Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-the-guardian-1989",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/the-guardian",
+    parentId: "supernatural-anomalies",
+    name: "The Guardian Carp UFO Landing & Photos (Ontario, Canada, 1989)",
+    description: "Whistleblower leak containing classified Canadian Department of National Defence documents, VHS footage of a nocturnal craft landing, and close-up photographs of a gray-skinned alien with huge dark eyes in Carp, Ontario.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-the-guardian-1989",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F94163ef6-467b-43cd-906b-b7b0b24d956b_2728x1534.png"
+    ],
+    sources: ["The Guardian UFO Landing Video & Humanoid Photographs — Ontario, Canada, 1989–1992","Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  }
+];
+
+TERM_TREE_DATA.push(...chunk_user_requested_additions_2026);
+
+
+const chunk_biblical_dietary_animals: TermNode[] = [
+  {
+    id: "clean-animals-old-testament",
+    parentId: "bible-book-leviticus",
+    secondaryParentIds: ["bible-book-deuteronomy","holy-bible","judaism","christianity","biblical-apocryphal"],
+    name: "Clean Animals",
+    description: "The biblical taxonomy of ritually and dietary \"clean\" animals (Hebrew: Tahor / טָהוֹר) declared permissible for food and sacrificial offerings to God under the Mosaic Covenant (Leviticus 11:1–47, Deuteronomy 14:3–21), with pre-Sinai roots tracing back to the Noahic Covenant (Genesis 7:2–3, 8:20).\n\nCRITERIA & ENUMERATED SPECIES:\n1. Land Mammals (Quadrupeds): Must satisfy BOTH criteria simultaneously—(1) chew the cud (rumination) AND (2) possess completely parted, cloven hooves (divided into two distinct digits). Deuteronomy 14:4–5 explicitly enumerates the ten permissible species:\n   • Domesticated Livestock: Ox / Cattle (Shor / Baqar), Sheep (Seh Kesavim), and Goat (Seh Izim).\n   • Wild Game / Ruminants: Red Deer / Hart (Ayal), Gazelle (Tzvi), Fallow Deer / Roe Deer (Yachmur), Wild Goat / Nubian Ibex (Akko), White Antelope / Addax (Dishon), Oryx / Wild Ox (Te'o), and Mountain Sheep / Chamois (Zemer).\n2. Aquatic Creatures (Water Life): Must possess BOTH fins AND true scales in seas, rivers, and streams (Leviticus 11:9; Deuteronomy 14:9). Permissible fish include trout, salmon, bass, carp, tilapia, cod, tuna, mackerel, and perch. Lacking either fins or scales renders an aquatic creature an abomination.\n3. Flying Creatures (Birds / Fowl): The Torah does not provide anatomical rules for birds; instead, it establishes an exclusive prohibition list of 20–21 predatory raptors and scavengers. All unlisted non-carnivorous birds exhibiting a crop, gizzard, and non-predatory hind toe were deemed clean, including Doves / Pigeons (Yonah / Tor), Quail (Selav), Partridges (Qore), Sparrows (Tzippor), and domestic waterfowl.\n4. Winged Insects (Leaping Arthropods): While most creeping insects are an abomination, Leviticus 11:21–22 specifically permits four types of winged locusts possessing jointed legs above their feet for hopping upon the earth: the Locust (Arbeh), Bald Locust (Sol'am), Beetle / Cricket (Chargol), and Grasshopper (Chagav).\n\nALTERNATIVE & ESOTERIC PERSPECTIVES:\nAlternative medical researchers, biblicists, and biological anomaly investigators point out that the clean animal catalog functions as an ancient, highly sophisticated biosecurity protocol. Clean herbivores exhibit complex four-chambered digestive tracts that filter out bacterial endotoxins and plant toxins, avoid heavy metal bioaccumulation found in marine scavengers, and carry a vastly lower viral and zoonotic transmission profile compared to carnivorous predators, bats, rodents, and swine. In Kabbalistic and biblical theology, consuming clean creatures preserves spiritual purity by avoiding the predatory \"vital forces\" (Nefesh) associated with the unclean husks (Qliphoth).",
+    layer: "Religion",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Gazella_gazella.jpg/500px-Gazella_gazella.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Cow_%28Fleckvieh_breed%29_Oeschinensee_Slaunger_2009-07-07.jpg/960px-Cow_%28Fleckvieh_breed%29_Oeschinensee_Slaunger_2009-07-07.jpg"
+    ],
+    sources: ["Torah / Tanakh (Leviticus 11:1–47, Deuteronomy 14:3–21, Genesis 7:2–3)","Dead Sea Scrolls (Temple Scroll 11Q19)","Mishnah (Tractate Chullin)","Babylonian Talmud"],
+    bibleVerses: [
+      "These are the beasts which ye shall eat among all the beasts that are on the earth. Whatsoever parteth the hoof, and is clovenfooted, and cheweth the cud, among the beasts, that shall ye eat. — Leviticus 11:2-3 (https://www.biblegateway.com/passage/?search=Leviticus+11%3A2-3)",
+      "These are the animals you may eat: the ox, the sheep, the goat, the deer, the gazelle, the roe deer, the wild goat, the ibex, the antelope and the mountain sheep. — Deuteronomy 14:4-5 (https://www.biblegateway.com/passage/?search=Deuteronomy+14%3A4-5)",
+      "Of every clean beast thou shalt take to thee by sevens, the male and his female... to keep seed alive upon the face of all the earth. — Genesis 7:2-3 (https://www.biblegateway.com/passage/?search=Genesis+7%3A2-3)"
+    ],
+    relatedIds: ["unclean-animals-old-testament","bible-book-leviticus","bible-book-deuteronomy","holy-bible","old-testament","judaism","christianity","noah-fig","bible-book-genesis","bible-book-acts","peter_apostle"],
+  },
+  {
+    id: "unclean-animals-old-testament",
+    parentId: "bible-book-leviticus",
+    secondaryParentIds: ["bible-book-deuteronomy","holy-bible","judaism","christianity","biblical-apocryphal"],
+    name: "Unclean Animals",
+    description: "The biblical catalog of ritually and dietary \"unclean\" animals (Hebrew: Tamei / טָמֵא, Sheqetz / שֶׁקֶץ, and To'evah / תּוֹעֵבָה) strictly forbidden for consumption, touch, or sacrificial offering in the Old Testament / Hebrew Bible (Leviticus 11:1–47, Deuteronomy 14:3–21, Isaiah 66:17).\n\nCRITERIA & PROHIBITED SPECIES:\n1. Unclean Land Mammals: Any quadruped failing either of the two required criteria (failing to chew the cud OR failing to possess completely divided cloven hooves):\n   • Explicitly Highlighted Quadrupeds (Leviticus 11:4–8; Deuteronomy 14:7–8):\n     - The Camel (Gamal): Chews the cud, but has padded toes rather than a divided cloven hoof.\n     - The Rock Badger / Hyrax / Coney (Shaphan): Chews the cud (masticatory jaw movement), but lacks divided hooves.\n     - The Hare / Rabbit (Arnevet): Chews the cud (cecotrophy), but lacks divided hooves.\n     - The Swine / Pig / Boar (Chazir): Possesses a completely divided cloven hoof, but does NOT chew the cud. Singled out as archetypal unclean flesh (Isaiah 65:4, 66:17).\n   • Paw-Walking Animals (Leviticus 11:27): All quadrupeds walking on paws/pads—Canines (dogs, wolves, foxes, jackals), Felines (lions, leopards, wildcats), Bears, Badgers, and Primates (apes, monkeys).\n   • Solid-Hoofed Equines & Pachyderms: Horses, donkeys, mules, zebras, elephants, rhinos, and hippos.\n2. Unclean Aquatic Creatures (Leviticus 11:10–12): Any creature living in seas, lakes, or rivers lacking either fins or scales:\n   • Shellfish & Crustaceans: Shrimp, crabs, lobsters, crawfish, prawns.\n   • Mollusks: Oysters, clams, mussels, scallops, squid, octopus, snails.\n   • Scale-less Marine Fauna: Catfish, eels, sturgeon, sharks, rays, and marine mammals (whales, dolphins, seals).\n3. The 20+ Forbidden Birds (Abominations of the Air - Leviticus 11:13–19; Deuteronomy 14:11–18): The definitive Torah list of predatory raptors, carrion scavengers, and nocturnal hunters:\n   • Eagle / Griffon Vulture (Nesher), Bearded Vulture / Ossifrage (Peres), Black Vulture / Osprey (Ozniyyah), Red Kite / Falcon (Da'ah / Ra'ah), Black Kite / Buzzard (Ayyah), Raven and all Corvids (Orev), Ostrich / Desert Owl (Bat Ya'anah), Screech Owl / Nighthawk (Tachmas), Gull / Sea Gull (Shachaph), Hawk and Falcons (Netz), Little Owl (Kos), Cormorant (Shalak), Great Owl (Yanshuf), Barn Owl / White Owl (Tinshemet), Desert Owl / Pelican (Ka'at), Carrion Vulture (Racham), Stork (Chasidah), Heron (Anafah), Hoopoe (Dukhiphat), and the Bat (Atalef).\n4. Unclean Creeping Swarming Things (Sheretz Ha-Aretz - Leviticus 11:29–31, 41–44):\n   • The Eight Unclean Swarmers: Weasel / Mole (Choled), Mouse / Rodents (Akhbar), Large Monitor Lizard (Tzav), Gecko (Anaqah), Land Crocodile / Monitor (Ko'ach), Sand Lizard (Leta'ah), Skink (Chomet), and Chameleon (Tinshemet).\n   • All creatures crawling on bellies or multiple feet: Snakes, worms, scorpions, spiders, centipedes, and all non-leaping winged insects.\n\nALTERNATIVE & ESOTERIC PERSPECTIVES:\nModern epidemiological and alternative health researchers emphasize that unclean animals are nature's garbage disposals and apex parasite vectors: pigs harbor Trichinella spiralis, cysticercosis, and retroviruses; shellfish concentrate lethal dinoflagellate neurotoxins (paralytic shellfish poisoning) and heavy metals; bats and rodents serve as premier mammalian viral reservoirs; and raptors consume putrefying carrion filled with botulinum and anthrax spores. In Kabbalah and biblical demonology, unclean beasts are considered earthly manifestations of the Qliphothic realms of decay, while the Book of Enoch connects the prohibition to the fallen Watchers who corrupted animal genetics through unnatural hybridization prior to the Great Deluge. In the New Testament, Peter's vision of the descending sheet filled with all four-footed and unclean beasts (Acts 10) uses this ancient taxonomy to announce the inclusion of the Gentile nations into the divine covenant.",
+    layer: "Religion",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Peter%27s_vision_of_the_sheet_with_animals.jpg/500px-Peter%27s_vision_of_the_sheet_with_animals.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Camel_portrait.jpg/960px-Camel_portrait.jpg"
+    ],
+    sources: ["Torah / Tanakh (Leviticus 11:1–47, Deuteronomy 14:3–21, Isaiah 66:17)","Dead Sea Scrolls (Damascus Document CD, 11Q19)","Mishnah (Tractate Chullin)","Acts of the Apostles 10:9–16"],
+    bibleVerses: [
+      "Nevertheless these shall ye not eat of them that chew the cud, or of them that divide the hoof: as the camel, because he cheweth the cud, but divideth not the hoof; he is unclean unto you... And the swine, though he divide the hoof, and be clovenfooted, yet he cheweth not the cud; he is unclean to you. — Leviticus 11:4, 7 (https://www.biblegateway.com/passage/?search=Leviticus+11%3A4%2C7)",
+      "And all that have not fins and scales in the seas, and in the rivers, of all that move in the waters, and of any living thing which is in the waters, they shall be an abomination unto you. — Leviticus 11:10 (https://www.biblegateway.com/passage/?search=Leviticus+11%3A10)",
+      "And these are they which ye shall have in abomination among the fowls; they shall not be eaten, they are an abomination: the eagle, and the ossifrage, and the ospray... and every raven after his kind... and the bat. — Leviticus 11:13, 15, 19 (https://www.biblegateway.com/passage/?search=Leviticus+11%3A13%2C15%2C19)"
+    ],
+    relatedIds: ["clean-animals-old-testament","bible-book-leviticus","bible-book-deuteronomy","holy-bible","old-testament","judaism","christianity","azazel","noah-fig","bible-book-genesis","bible-book-acts","peter_apostle"],
+  }
+];
+
+TERM_TREE_DATA.push(...chunk_biblical_dietary_animals);
+
+const chunk_sacred_scriptures: TermNode[] = [
+  {
+    id: "old-testament",
+    parentId: "judaism",
+    secondaryParentIds: ["ancient-texts", "holy-bible", "christianity"],
+    name: "The Old Testament (Tanakh)",
+    description: "The canonical Hebrew Bible (Tanakh—comprising the Torah/Teaching, Nevi'im/Prophets, and Ketuvim/Writings) and the foundational Old Testament scriptures shared by Judaism and Christianity. Containing 24 books in the Hebrew canon and 39 in Protestant traditions, the text preserves the ancient cosmological origins of the world, antediluvian genealogies, the Great Deluge, the patriarchal covenants (Abraham, Isaac, Jacob), and the Mosaic Law delivered at Mount Sinai. In alternative history, biblical archaeology, and esoteric research, the Old Testament is scrutinized for records of pre-flood civilization, the Nephilim and Rephaim giants, anomalous Ark of the Covenant phenomena, advanced megalithic temple alignments, and celestial encounters.",
+    layer: "Ancient Texts",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Aleppo_Codex_Joshua_1_1.jpg/500px-Aleppo_Codex_Joshua_1_1.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/1QIsa_b.jpg/500px-1QIsa_b.jpg"
+    ],
+    sources: ["Masoretic Text (Aleppo & Leningrad Codices)", "Dead Sea Scrolls", "Samaritan Pentateuch", "Septuagint (LXX)"],
+    relatedIds: ["holy-bible", "new-testament", "judaism", "christianity", "talmud", "codex-dead-sea-scrolls", "clean-animals-old-testament", "unclean-animals-old-testament", "masoretic-text", "samaritan-pentateuch", "septuagint", "ketef-hinnom", "bible-book-genesis", "bible-book-exodus", "bible-book-leviticus", "bible-book-numbers", "bible-book-deuteronomy"]
+  },
+  {
+    id: "new-testament",
+    parentId: "christianity",
+    secondaryParentIds: ["ancient-texts", "holy-bible"],
+    name: "The New Testament",
+    description: "The 27-book canonical collection of early Christian scriptures recounting the incarnation, teachings, miracles, crucifixion, and resurrection of Jesus Christ, the evangelistic acts of the apostles, pastoral epistles, and the apocalyptic vision of the Book of Revelation. Preserved in over 5,800 surviving Greek manuscripts and early translations, the New Testament established the theological framework of Christianity. In esoteric and alternative scholarship, the New Testament is studied alongside Gnostic apocrypha for lost sayings of Christ, mystical ascension mechanics, celestial hierarchies, transfiguration anomalies, and coded prophetic symbolism.",
+    layer: "Ancient Texts",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Sinaiticus_text.jpg/500px-Sinaiticus_text.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Codex_Alexandrinus_f41v_-_Luke.jpg/500px-Codex_Alexandrinus_f41v_-_Luke.jpg"
+    ],
+    sources: ["Codex Sinaiticus", "Codex Vaticanus", "Codex Alexandrinus", "Chester Beatty Papyri", "Bodmer Papyri", "Latin Vulgate"],
+    relatedIds: ["holy-bible", "old-testament", "christianity", "catholicism", "gnosticism", "peter_apostle", "clean-animals-old-testament", "unclean-animals-old-testament", "codex-sinaiticus", "codex-vaticanus", "codex-alexandrinus", "rylands-papyri", "chester-beatty-papyri", "bodmer-papyri", "vulgate", "peshitta"]
+  },
+  {
+    id: "quran",
+    parentId: "islam",
+    secondaryParentIds: ["ancient-texts"],
+    name: "The Holy Quran",
+    description: "The central sacred scripture of Islam, revered by Muslims as the verbatim Word of God (Allah) revealed to the Prophet Muhammad over twenty-three years through the Archangel Gabriel (Jibril). Composed of 114 Surahs (chapters) in classical Arabic, the Quran provides moral laws, spiritual wisdom, and extensive accounts of earlier biblical figures (Adam, Noah, Abraham, Moses, Mary, and Jesus). In alternative history, Sufi mysticism, and esoteric lore, the Quran is closely examined for its descriptions of the seven layered heavens, creation of beings from smokeless fire (the Jinn), mysterious disconnected Arabic letters (Muqatta'at), and celestial portals.",
+    layer: "Ancient Texts",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Birmingham_Quran_manuscript.jpg/500px-Birmingham_Quran_manuscript.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Birmingham_Quran_manuscript_full.jpg/500px-Birmingham_Quran_manuscript_full.jpg"
+    ],
+    sources: ["Birmingham Quran Manuscript", "Sanaa Palimpsest", "Topkapi Manuscript", "Codex Parisino-petropolitanus"],
+    relatedIds: ["islam", "muslim-practitioner", "kabah", "kiswah", "archangel-michael", "ancient-texts"]
+  },
+  {
+    id: "book-of-mormon",
+    parentId: "mormonism",
+    secondaryParentIds: ["ancient-texts"],
+    name: "The Book of Mormon",
+    description: "A foundational sacred text of the Latter-day Saint (Mormon) faith, first published in March 1830 by Joseph Smith Jr., who stated that he translated its reformed Egyptian text from engraved golden plates delivered to him by the angel Moroni at the Hill Cumorah in New York. The text chronicles several waves of ancient Near Eastern migrations to the Americas (Jaredites, Nephites, Lamanites) and describes a post-resurrection ministry of Jesus Christ among New World civilizations. In alternative archaeology, North American mound builder research, and transatlantic contact theories, the Book of Mormon is frequently analyzed for its descriptions of fortified ancient cities, advanced metallurgical tools, and anomalous cultural artifacts across pre-Columbian America.",
+    layer: "Ancient Texts",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Book_of_Mormon_1830_edition_reprint.jpg/500px-Book_of_Mormon_1830_edition_reprint.jpg"
+    ],
+    sources: ["Original Manuscript (1829)", "Printer's Manuscript", "Book of Mormon 1830 First Edition"],
+    relatedIds: ["mormonism", "christianity", "ancient-texts", "mounds"]
+  }
+];
+
+TERM_TREE_DATA.push(...chunk_sacred_scriptures);
+
+
 
 // Number the books of the Bible sequentially to preserve their canonical order in the sorted UI
 const bibleBooks = TERM_TREE_DATA.filter(n => n && n.parentId === 'holy-bible');

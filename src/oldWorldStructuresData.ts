@@ -16,6 +16,24 @@ export interface OldWorldStructureCase {
 
 export const OLD_WORLD_STRUCTURES_DATA: OldWorldStructureCase[] = [
   {
+    "id": "anomaly-balmoral-castle-scotland",
+    "name": "Balmoral Castle - Royal Occultism & Highland Ley Lines - Royal Deeside, Scotland",
+    "category": "Old World Structures",
+    "type": "Point",
+    "coordinates": {
+      "lng": -3.2282,
+      "lat": 57.0397
+    },
+    "date": 1852,
+    "displayDate": "1852 CE",
+    "description": "The private Scottish fortress and summer sanctuary of the British Royal Family. Long the subject of esoteric investigation, Balmoral sits at a major intersection of Highland granite ley lines and ancient Pictish earthworks. Historical accounts document Queen Victoria's secretive mediumistic seances held here with personal servant John Brown, Prince Philip's deep fascination with classified military UFO archives, and the esoteric funerary rites enacted when Queen Elizabeth II passed away within its granite walls in September 2022.",
+    "source": "Royal Archives Windsor / Highland Heritage Trust / Alternative British Monarchy Researchers",
+    "images": [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Balmoral_Castle.jpg/1280px-Balmoral_Castle.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    ]
+  },
+
+  {
     "id": "structure-neuschwanstein",
     "name": "Neuschwanstein Castle - Schwangau, Germany",
     "category": "Old World Structures",

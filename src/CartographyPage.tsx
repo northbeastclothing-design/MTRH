@@ -302,6 +302,26 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     era: 'renaissance'
   },
   {
+    id: 'palazzofarnese',
+    name: "Palazzo Farnese World Map",
+    year: "1574",
+    description: "The monumental world map fresco gracing the Sala del Mappamondo at Villa Farnese in Caprarola, Italy, painted by Giovanni Antonio da Varese. Renowned among alternative cartography researchers for its detailed depiction of Terra Australis Incognita connecting to southern landmasses prior to officially recorded Antarctic exploration.",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/World_map_-_Room_of_Maps_-_Villa_Farnese_-_Caprarola%2C_Italy_-_DSC02398.jpg/3840px-World_map_-_Room_of_Maps_-_Villa_Farnese_-_Caprarola%2C_Italy_-_DSC02398.jpg",
+    aspectRatio: 1.5,
+    pinColor: '#FF9F63',
+    era: 'renaissance'
+  },
+  {
+    id: 'kunyuwanguo',
+    name: "Kunyu Wanguo Quantu",
+    year: "1602",
+    description: "The legendary 'Impossible Black Tulip' of cartography created by Jesuit scholar Matteo Ricci alongside Chinese collaborators Li Zhizao and Zhang Wentao in Beijing. Centering China at the heart of the world, this vast six-panel woodblock map reveals the Americas, Arctic channels, and enigmatic southern polar terrains with extensive classical Chinese cosmological inscriptions.",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Kunyu_Wanguo_Quantu_%28%E5%9D%A4%E8%BC%BF%E8%90%AC%E5%9C%8B%E5%85%A8%E5%9C%96%29.jpg/3840px-Kunyu_Wanguo_Quantu_%28%E5%9D%A4%E8%BC%BF%E8%90%AC%E5%9C%8B%E5%85%A8%E5%9C%96%29.jpg",
+    aspectRatio: 2.2267,
+    pinColor: '#ECCE81',
+    era: 'renaissance'
+  },
+  {
     id: 'tartaria',
     name: "Map of Tartaria",
     year: "1606",
