@@ -1444,18 +1444,17 @@ export default function CodexPage({
 
   // Handle term node selection click
   const handleNodeClick = (node: TermNode, level: number) => {
+    if (inertiaFrameRef.current !== null) {
+      cancelAnimationFrame(inertiaFrameRef.current);
+      inertiaFrameRef.current = null;
+    }
     userHasPannedRef.current = false;
     const path = [...selectedPath.slice(0, level), node.id];
     setSelectedPath(path);
 
-    const hasChildren = checkNodeHasSubItems(node, level, columns[level]?.nodes);
-
-    // If it has children, center on the newly expanded sublayer column (level + 1).
-    // If it has no children, stay centered on the current column (level).
-    const targetCol = hasChildren ? level + 1 : level;
-    setTimeout(() => {
-      centerOnNode(node.id, targetCol, false);
-    }, 50);
+    // Always center on the clicked node's column (level)
+    const targetCol = level;
+    centerOnNode(node.id, targetCol, false);
   };
 
   // Update selection pathways and cross-links lines
@@ -1974,7 +1973,7 @@ export default function CodexPage({
     };
   }, []);
 
-  // Helper to center the container on a specified node and column horizontally and vertically
+  // Helper to center the container on a specified column horizontally and vertically
   const centerOnNode = useCallback((nodeId: string | null, colIdx: number, isInstant: boolean = false) => {
     let timer: any;
 
@@ -1985,51 +1984,27 @@ export default function CodexPage({
       const viewportWidth = container.clientWidth;
       const viewportHeight = container.clientHeight;
 
-      // Ensure layout pass is complete (scrollWidth expanded) before scroll assignment
-      if (viewportWidth === 0 || viewportHeight === 0 || container.scrollWidth <= viewportWidth) {
+      // Ensure layout pass is complete before scroll assignment
+      if (viewportWidth === 0 || viewportHeight === 0) {
         timer = setTimeout(performScroll, 50);
         return;
       }
 
       // 1. Horizontal Scroll Centering
+      // Each column is at left: 1200 + colIdx * 300, width: 260px (center is + 130px)
       const colCenterX = 1200 + colIdx * 300 + 130;
       const sidebarOffset = isMobile ? 0 : (isRightCollapsedRef.current ? 0 : 300);
-      const targetScrollLeft = colCenterX - (viewportWidth - sidebarOffset) / 2;
+      const targetScrollLeft = Math.max(0, colCenterX - (viewportWidth - sidebarOffset) / 2);
 
       // 2. Vertical Scroll Centering
+      // Every active column's selected pill is anchored at canvas Y = 3000px
       let viewableHeight = viewportHeight;
       if (isMobile) {
         // Subtract bottom drawer overlap height to find active vertical center in viewable upper viewport
         const drawerHeight = isMobileDrawerExpanded ? viewportHeight * 0.7 : (selectedTermId ? 108 : 60);
         viewableHeight = viewportHeight - drawerHeight;
       }
-      let targetScrollTop = 3000 - viewableHeight / 2; // Default fallback to center of column layout (3000px)
-
-      if (nodeId) {
-        // Find the specific node pill element, prioritizing the target column
-        let element: HTMLElement | null = document.getElementById(`node-pill-${nodeId}-${colIdx}`);
-        if (!element) {
-          for (let c = 0; c < 10; c++) {
-            const el = document.getElementById(`node-pill-${nodeId}-${c}`);
-            if (el) {
-              element = el;
-              break;
-            }
-          }
-        }
-
-        if (element) {
-          const containerRect = container.getBoundingClientRect();
-          const elementRect = element.getBoundingClientRect();
-          
-          // Calculate vertical center relative to scroll container content height coordinates
-          const elementYInScroll = elementRect.top - containerRect.top + container.scrollTop;
-          
-          if (elementYInScroll > 500) {
-            targetScrollTop = (elementYInScroll + elementRect.height / 2) - viewableHeight / 2;
-          }
-        }
-      }
+      const targetScrollTop = Math.max(0, 3000 - viewableHeight / 2);
 
       if (isInstant) {
         container.scrollLeft = targetScrollLeft;
@@ -2048,8 +2023,11 @@ export default function CodexPage({
 
   // Unified helper to navigate to and center on any term node in the Codex
   const navigateToTerm = useCallback((nodeOrId: TermNode | string) => {
+    if (inertiaFrameRef.current !== null) {
+      cancelAnimationFrame(inertiaFrameRef.current);
+      inertiaFrameRef.current = null;
+    }
     const id = typeof nodeOrId === 'string' ? nodeOrId : nodeOrId.id;
-    const targetNode = typeof nodeOrId === 'string' ? nodes.find(n => n.id === id) : nodeOrId;
     userHasPannedRef.current = false;
     hasCenteredInitialRef.current = true;
     const path = getPathToRoot(id);
@@ -2058,33 +2036,11 @@ export default function CodexPage({
       isRightCollapsedRef.current = false;
       setIsRightCollapsed(false);
 
-      const hasChildren = targetNode ? checkNodeHasSubItems(targetNode) : false;
-      const targetCol = hasChildren ? path.length : path.length - 1;
-
-      let attempts = 0;
-      const tryCenter = () => {
-        let element: HTMLElement | null = document.getElementById(`node-pill-${id}-${targetCol}`);
-        if (!element) {
-          for (let c = 0; c < 10; c++) {
-            const el = document.getElementById(`node-pill-${id}-${c}`);
-            if (el) {
-              element = el;
-              break;
-            }
-          }
-        }
-
-        if (element || attempts > 8) {
-          centerOnNode(id, targetCol, false);
-        } else {
-          attempts++;
-          setTimeout(tryCenter, 50);
-        }
-      };
-
-      setTimeout(tryCenter, 50);
+      // Always center on the column containing the selected node (path.length - 1)
+      const targetCol = path.length - 1;
+      centerOnNode(id, targetCol, false);
     }
-  }, [nodes, getPathToRoot, checkNodeHasSubItems, centerOnNode]);
+  }, [getPathToRoot, centerOnNode]);
 
   // Initial entrance/navigation scroll centering (centers Column 0 on load/tab switch)
   useEffect(() => {
@@ -2101,9 +2057,7 @@ export default function CodexPage({
   // Automatically center the selected node when mobile drawer collapses/expands (only if user hasn't manually panned)
   useEffect(() => {
     if (isMobile && selectedTermId && selectedPath.length > 0 && !userHasPannedRef.current) {
-      const activeNode = nodes.find(n => n.id === selectedTermId);
-      const hasChildren = activeNode ? checkNodeHasSubItems(activeNode) : false;
-      const targetCol = hasChildren ? selectedPath.length : selectedPath.length - 1;
+      const targetCol = selectedPath.length - 1;
 
       // Start scrolling instantly in sync with drawer height animation
       centerOnNode(selectedTermId, targetCol, false);
@@ -2116,7 +2070,7 @@ export default function CodexPage({
       }, 450);
       return () => clearTimeout(timer);
     }
-  }, [isMobileDrawerExpanded, isMobile, selectedTermId, selectedPath.length, centerOnNode, nodes, checkNodeHasSubItems]);
+  }, [isMobileDrawerExpanded, isMobile, selectedTermId, selectedPath.length, centerOnNode]);
 
   // Handle external focus on a specific term
   useEffect(() => {

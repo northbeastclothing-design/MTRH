@@ -40907,6 +40907,943 @@ const chunk_sacred_scriptures: TermNode[] = [
 
 TERM_TREE_DATA.push(...chunk_sacred_scriptures);
 
+const chunk_user_additions_prophets_and_anomalies: TermNode[] = [
+  // 1. Indrid Cold
+  {
+    id: "indrid-cold",
+    parentId: "cryptid-sightings-br",
+    secondaryParentIds: ["supernatural-anomalies", "alien-sightings-root"],
+    name: "Indrid Cold (The Grinning Man)",
+    description: "An enigmatic humanoid entity and alleged extraterrestrial/interdimensional contactee figure first encountered by Woodrow Derenberger on Interstate 77 near Parkersburg, West Virginia, on November 2, 1966. Described as standing over six feet tall, dressed in a reflective metallic garment, with slicked-back dark hair, piercing eyes, and an unnatural, frozen smile, the entity identified himself telepathically as 'Indrid Cold' from the planet 'Lanulos' in the galaxy of 'Ganymede'. Eyewitnesses in Point Pleasant reported Cold appearing alongside sightings of the Mothman, high-strangeness Men in Black visits, and glowing UFO orbs prior to the collapse of the Silver Bridge in December 1967.",
+    layer: "Cryptid Sightings",
+    mapFeatureId: "anomaly-indrid-cold-woodrow-derenberger",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Mothman_Artist%27s_Impression.png/500px-Mothman_Artist%27s_Impression.png"
+    ],
+    sources: [
+      "Visitors from Lanulos (Woodrow Derenberger & Harold W. Hubbard, 1971)",
+      "The Mothman Prophecies (John A. Keel, 1975)",
+      "Project Blue Book Report (November 1966, Mineral Wells, WV)"
+    ],
+    relatedIds: ["mothman", "supernatural-anomalies", "ufos-anomalies", "alien-abductions-br", "ufo-type-orb"]
+  },
+
+  // 2. Mel's Hole
+  {
+    id: "mels-hole",
+    parentId: "underworld",
+    secondaryParentIds: ["supernatural-anomalies", "hollow-earth-cosmology"],
+    name: "Mel's Hole",
+    description: "A legendary subterranean abyss and alleged bottomless geological anomaly located on Manastash Ridge near Ellensburg, Washington, first publicized by caller Mel Waters on Art Bell's 'Coast to Coast AM' radio broadcast on February 21, 1997. Waters reported that the hole possessed an unmeasurable depth exceeding 80,000 feet (demonstrated by lowering miles of heavy-gauge nylon shark fishing line without striking bottom) and exhibited supernatural properties: deceased animals thrown into the pit reportedly returned alive, radio transmissions near the perimeter were distorted, and dropping metal objects generated no echo or impact reverberations. Waters later claimed the property was seized by black-budget federal defense operatives who established an armed perimeter around the site.",
+    layer: "Underworld Entrances",
+    mapFeatureId: "anomaly-mels-hole-manastash-ridge",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Manastash_Vista_Point_0404.jpg/500px-Manastash_Vista_Point_0404.jpg"
+    ],
+    sources: [
+      "Coast to Coast AM Broadcast Archives (Art Bell Interviews with Mel Waters, 1997-2002)",
+      "Geological Survey of Kittitas County, Washington",
+      "Manastash Ridge Anomaly Field Reports"
+    ],
+    relatedIds: ["supernatural-anomalies", "underworld-entrances", "hollow-earth-cosmology", "agartha-subterranean-realm"]
+  },
+
+  // 3. Pentagram
+  {
+    id: "pentagram-history-symbolism",
+    parentId: "alchemy-occult",
+    secondaryParentIds: ["esoteric-traditions"],
+    name: "Pentagram (History & Origins)",
+    description: "An ancient sacred geometric five-pointed star (Greek: πεντάγραμμον / pentagrammon, 'five lines') with a continuous 5,000-year history spanning Mesopotamian cosmology, Pythagorean sacred mathematics, Christian mysticism, and ceremonial magic. In ancient Sumer and Babylonia (c. 3000 BCE), the pentagram (cuneiform UB) represented heavenly celestial vaults and astrological directional quadrants. In classical Greece, Pythagoras and his disciples adopted the pentagram as a symbol of health (Hygieia), divine proportion (the Golden Ratio / Phi, where each segment intersects according to the golden section), and the harmonizing of the five physical and spiritual elements: Earth, Air, Fire, Water, and Spirit (Aether). In medieval Christian theology, the upright five-pointed star symbolized the Five Holy Wounds of Christ on the cross, the five senses, and the Star of Bethlehem (exemplified on Sir Gawain's shield in Arthurian legend). During the Renaissance and 19th-century occult revival, Heinrich Cornelius Agrippa, Éliphas Lévi, and the Hermetic Order of the Golden Dawn formalized the upright pentagram as the microcosm of man (ruling spirit over the four elemental forces) and the inverted pentagram (Goat of Mendes) as the material inversion of spirit.",
+    layer: "The Occult",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Pentagram4.svg/500px-Pentagram4.svg.png"
+    ],
+    sources: [
+      "De Occulta Philosophia Libri Tres (Heinrich Cornelius Agrippa, 1533)",
+      "Transcendental Magic: Its Doctrine and Ritual (Éliphas Lévi, 1856)",
+      "Pythagorean Mathematics and Sacred Geometry (Thesleff)",
+      "The Golden Dawn: Rituals and Teachings (Israel Regardie)"
+    ],
+    relatedIds: ["alchemy-occult", "esoteric-traditions", "hermetic-order-golden-dawn", "wicca-tradition", "kabbalah", "alchemy"]
+  },
+
+  // 4. Wicca
+  {
+    id: "wicca-tradition",
+    parentId: "alchemy-occult",
+    secondaryParentIds: ["magical-orders"],
+    name: "Wicca (Roots & History)",
+    description: "A modern pagan, witchcraft-based mystery tradition and religious movement initiated in England during the mid-20th century by retired British civil servant, amateur anthropologist, and occultist Gerald Brosseau Gardner (1884–1964). Drawing upon the folkloric 'witch-cult hypothesis' popularized by Margaret Murray, ceremonial magical rituals of the Hermetic Order of the Golden Dawn and Aleister Crowley's Ordo Templi Orientis (O.T.O.), Rosicrucian theater, and historical grimoires (such as Charles Godfrey Leland's 'Aradia, or the Gospel of the Witches'), Gardner established the Bricket Wood coven in Hertfordshire following the repeal of the British Witchcraft Act of 1735 in 1951. Gardner published 'Witchcraft Today' (1954) and 'The Meaning of Witchcraft' (1959), unveiling the tradition's seasonal liturgy (the Wheel of the Year with its eight Sabbats), the duotheistic worship of the Triple Goddess and the Horned God, the moral ethos of the Wiccan Rede ('An it harm none, do what ye will'), and the three-fold law of karmic return. Key foundational contributors include High Priestess Doreen Valiente (who rewrote and poeticized the Book of Shadows), Alex and Maxine Sanders (Alexandrian Wicca), and Raymond Buckland (who introduced Gardnerian Wicca to the United States in the 1960s).",
+    layer: "The Occult",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Gerald_Gardner%27s_Sword_in_the_Museum_of_Witchcraft_and_Magic.jpg/500px-Gerald_Gardner%27s_Sword_in_the_Museum_of_Witchcraft_and_Magic.jpg"
+    ],
+    sources: [
+      "Witchcraft Today (Gerald B. Gardner, 1954)",
+      "The Rebirth of Witchcraft (Doreen Valiente, 1989)",
+      "The Triumph of the Moon: A History of Modern Pagan Witchcraft (Ronald Hutton, 1999)",
+      "Aradia, or the Gospel of the Witches (Charles G. Leland, 1899)"
+    ],
+    relatedIds: ["alchemy-occult", "pentagram-history-symbolism", "hermetic-order-golden-dawn", "ordo-templi-orientis", "aleister-crowley"]
+  },
+
+  // 7. Baba Vanga
+  {
+    id: "baba-vanga-prophecies",
+    parentId: "prophets-general",
+    secondaryParentIds: ["alchemy-occult"],
+    name: "Baba Vanga & Her Prophecies",
+    description: "Vangeliya Pandeva Gushterova (1911–1996), universally revered as 'Baba Vanga' ('Grandmother Vanga') and the 'Nostradamus of the Balkans', was a blind Bulgarian mystic, herbalist, and clairvoyant from Rupite, Strumica. Blighted by blindness during a catastrophic dust storm in childhood, Vanga claimed that invisible spirit entities informed her of distant events, deceased individuals, and impending global catastrophes. Bulgarian state institutions and high-ranking Warsaw Pact officials consulted her extensively throughout the Cold War.\n\nDOCUMENTED & FULFILLED PROPHECIES:\n1. The Sinking of the Kursk Submarine (August 2000): In 1980, Vanga foresaw that 'at the turn of the century, in August 1999 or 2000, Kursk will be covered with water, and the whole world will weep over it.' Believed at the time to refer to the Russian city of Kursk, the prophecy was fulfilled on August 12, 2000, when the Russian nuclear submarine K-141 Kursk suffered catastrophic torpedo explosions in the Barents Sea, sinking with all 118 crewmen.\n2. September 11 Terrorist Attacks (2001): In 1989, she proclaimed: 'Horror, horror! The American brethren will fall after being attacked by the steel birds. The wolves will be howling in a bush, and innocent blood will be gushing.' On September 11, 2001, commercial passenger aircraft ('steel birds') were flown into the Twin Towers of the World Trade Center in New York.\n3. Chernobyl Nuclear Disaster (April 1986): Foresaw the fiery cataclysm and poisoned earth that struck reactor No. 4 at Chernobyl, Ukraine.\n4. Dissolution of the Soviet Union (1991): Predicted the collapse of the USSR and the electoral rise of Boris Yeltsin.\n5. Assassination of Indira Gandhi (October 1984): In 1969, she stated: 'The dress will destroy her. I see an orange-yellow dress in the smoke and fire,' fulfilled when Prime Minister Indira Gandhi was shot by her bodyguards while wearing a saffron-colored saree.\n6. World War II & Hitler's Defeat: Warned Bulgarian Tsar Boris III of his fate and predicted the outcome of the war when Adolf Hitler allegedly dispatched emissaries to consult her in 1942.",
+    layer: "The Occult",
+    mapFeatureId: "anomaly-baba-vanga-rupite-shrine",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Baba_Vanga_bust.jpg/500px-Baba_Vanga_bust.jpg"
+    ],
+    sources: [
+      "Vanga: The Bulgarian Clairvoyant (Krasimira Stoyanova)",
+      "Bulgarian Academy of Sciences Parapsychological Institute Records",
+      "Phenomenon of Vanga (Zheni Kostadinova, 2006)"
+    ],
+    relatedIds: ["prophets-general", "anomaly-The-Occult-nostradamus", "alchemy-occult", "anomaly-The-Occult-mothershipton"]
+  },
+
+  // 8. Nostradamus (Enhanced standalone node)
+  {
+    id: "nostradamus-prophecies-fulfilled",
+    parentId: "prophets-general",
+    secondaryParentIds: ["alchemy-occult"],
+    name: "Nostradamus & Fulfilled Quatrains",
+    description: "Michel de Nostredame (1503–1566), Latinized as Nostradamus, was a celebrated French physician, apothecary, and Renaissance seer who published 'Les Prophéties' in 1555—a monumental compendium of 942 poetic quatrains organized into ten centuries. Utilizing nocturnal scrying over a brass tripod and water bowl according to ancient Delphic and Branchidic methods, Nostradamus recorded obscure astrological and historical visions stretching to the year 3797 CE.\n\nPROMINENT FULFILLED QUATRAINS & HISTORICAL ACCURACY:\n1. The Death of King Henry II of France (Century I, Quatrain 35 - 1559):\n   'The young lion will overcome the older one, on the field of combat in single battle: He will pierce his eyes through a golden cage, two wounds made one, then he dies a cruel death.' In July 1559, during a jousting tournament in Paris, the younger Gabriel Montgomery's lance splintered, pierced Henry II's gilded helmet visor, entered his eye and brain, and caused the King's agonizing death ten days later.\n2. The Great Fire of London (Century II, Quatrain 51 - 1666):\n   'The blood of the just will commit a fault at London, burnt through lightning of twenty threes the six: The ancient lady will fall from her high place, several of the same sect will be killed.' In 1666 ('twenty threes the six' = 20 x 3 + 6 = 66), the Great Fire destroyed the medieval City of London and St. Paul's Cathedral ('the ancient lady').\n3. The French Revolution & Execution of Louis XVI (Century IX, Quatrain 20 & Century I, Quatrain 57):\n   Foresaw the King fleeing by night through the forest of Reines to Varennes where he was arrested, the overthrow of the Bourbon monarchy, and the Reign of Terror.\n4. The Rise of Adolf Hitler (Century III, Quatrain 35 & Century II, Quatrain 24):\n   'From the depths of the West of Europe, a young child will be born of poor people, he who by his tongue will seduce a great troop; his fame will increase towards the realm of the East.' He named the leader fighting on the Danube as 'Hister' (the ancient Latin name for the Danube where Braunau am Inn is located).\n5. Atomic Bombings of Hiroshima and Nagasaki (Century II, Quatrain 6):\n   'Near the harbors and within two cities, there will happen two scourges the like of which was never seen: famine within plague, people put out by steel, crying to the great immortal God for relief.' Fulfilled in August 1945 upon coastal Hiroshima and Nagasaki.\n6. Assassination of President John F. Kennedy (Century I, Quatrain 26):\n   'The great man will be struck down in the day by a thunderbolt, an evil deed foretold by the bearer of a petition. According to the prediction, another falls at night time.'",
+    layer: "The Occult",
+    mapFeatureId: "anomaly-The-Occult-nostradamus",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Nostradamus_by_Cesar.jpg/500px-Nostradamus_by_Cesar.jpg"
+    ],
+    sources: [
+      "Les Prophéties de M. Michel Nostradamus (1555 / 1568 Macé Bonhomme edition)",
+      "Nostradamus: The Complete Prophecies for The Future (John Hogue)",
+      "The Prophecies of Nostradamus (Erika Cheetham)"
+    ],
+    relatedIds: ["anomaly-The-Occult-nostradamus", "prophets-general", "baba-vanga-prophecies", "alchemy-occult", "anomaly-The-Occult-mothershipton"]
+  },
+
+  // 6. Biblical Prophets Each One Separate Items & What Has Come True
+  {
+    id: "prophet-moses-node",
+    parentId: "prophets-general",
+    secondaryParentIds: ["biblical-figures", "judaism", "holy-bible"],
+    name: "Prophet Moses & Fulfilled Prophecies",
+    description: "Moses (Moshe Rabbenu), the greatest prophet, lawgiver, and covenant mediator of the Old Testament, who spoke with Yahweh 'face to face' (Deuteronomy 34:10). In Deuteronomy 28–32, Moses uttered precise prophetic forecasts spanning millennia:\n\nFULFILLED PROPHECIES:\n1. The Siege and Destruction of Jerusalem: Predicted that Israel's rebellion would bring a distant nation from the end of the earth 'as swift as the eagle flies, a nation whose language you will not understand' (fulfilled by Nebuchadnezzar's Babylon in 586 BCE and Titus' Roman legions in 70 CE with their eagle standards), describing severe siege starvation.\n2. Global Diaspora and Scattering: Moses prophesied that the Jewish people would be scattered 'among all peoples, from one end of the earth even to the other' (Deuteronomy 28:64), wandering without rest for centuries—fulfilled throughout the worldwide Jewish diaspora.\n3. The Coming of the Prophet Like Moses: In Deuteronomy 18:15–18, Moses prophesied: 'Yahweh your God will raise up to you a prophet from among you, of your brothers, like me; to him you shall listen,' fulfilled in Jesus Christ (Acts 3:22).",
+    layer: "Religion",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/The_Prophet_Moses%2C_from_Prophets_and_Sibyls_MET_DP835431.jpg/500px-The_Prophet_Moses%2C_from_Prophets_and_Sibyls_MET_DP835431.jpg"
+    ],
+    sources: ["Torah (Exodus, Leviticus, Numbers, Deuteronomy)", "Flavius Josephus (Antiquities of the Jews)"],
+    bibleVerses: [
+      "Yahweh your God will raise up to you a prophet from among you, of your brothers, like me; to him you shall listen. — Deuteronomy 18:15 (https://www.biblegateway.com/passage/?search=Deuteronomy+18%3A15)",
+      "Yahweh will scatter you among all peoples, from one end of the earth even to the other. — Deuteronomy 28:64 (https://www.biblegateway.com/passage/?search=Deuteronomy+28%3A64)"
+    ],
+    relatedIds: ["prophets-general", "moses", "holy-bible", "judaism", "christianity"]
+  },
+  {
+    id: "prophet-samuel-node",
+    parentId: "prophets-general",
+    secondaryParentIds: ["biblical-figures", "holy-bible"],
+    name: "Prophet Samuel & Fulfilled Prophecies",
+    description: "Samuel (Shemu'el), the last of the biblical Judges and founder of the school of the prophets, who inaugurated the monarchy by anointing King Saul and King David.\n\nFULFILLED PROPHECIES:\n1. Destruction of the House of Eli: Foretold the sudden death of Eli's sons Hophni and Phinehas in one day and the removal of the priesthood from Eli's lineage (1 Samuel 2:34, 3:11–14), fulfilled during the Philistine battle at Aphek.\n2. Rejection and Death of King Saul: Accurately predicted Saul's kingdom would be torn away and given to David (1 Samuel 15:28), and at Endor prophesied Saul and his sons would die on Mount Gilboa tomorrow (1 Samuel 28:19).\n3. Warning of the Despotic Monarchy: Foretold in detail in 1 Samuel 8 the oppressive conscription, heavy taxation, and royal seizures that Israel would suffer under human kings.",
+    layer: "Religion",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/The_Prophet_Samuel%2C_from_Prophets_and_Sibyls_MET_DP835434.jpg/500px-The_Prophet_Samuel%2C_from_Prophets_and_Sibyls_MET_DP835434.jpg"
+    ],
+    sources: ["1 Samuel", "2 Samuel"],
+    bibleVerses: [
+      "Yahweh said to Samuel: 'Behold, I will do a thing in Israel, at which both the ears of everyone who hears it will tingle.' — 1 Samuel 3:11 (https://www.biblegateway.com/passage/?search=1+Samuel+3%3A11)",
+      "Samuel said to Saul: 'Yahweh has torn the kingdom of Israel from you this day, and has given it to a neighbor of yours who is better than you.' — 1 Samuel 15:28 (https://www.biblegateway.com/passage/?search=1+Samuel+15%3A28)"
+    ],
+    relatedIds: ["prophets-general", "samuel_prophet", "saul_king", "david_king", "holy-bible"]
+  },
+  {
+    id: "prophet-nathan-node",
+    parentId: "prophets-general",
+    secondaryParentIds: ["biblical-figures", "holy-bible"],
+    name: "Prophet Nathan & Fulfilled Prophecies",
+    description: "Nathan, royal court prophet during the reigns of King David and King Solomon, who delivered the foundational Davidic Covenant.\n\nFULFILLED PROPHECIES:\n1. The Eternal Davidic Covenant: In 2 Samuel 7:12–16, Nathan prophesied that David's throne would be established forever and his descendant would build the Temple of God (fulfilled historically in Solomon's Temple and messianically in Jesus Christ, the Son of David, Luke 1:32–33).\n2. Judgment on David's Household: Following David's sin regarding Uriah and Bathsheba, Nathan boldly declared: 'The sword shall never depart from your house... I will take your wives before your eyes and give them to your neighbor' (2 Samuel 12:10–11), fulfilled in Amnon's murder, Absalom's rebellion, and the defilement of David's concubines on the palace roof.",
+    layer: "Religion",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Nathan.jpg/330px-Nathan.jpg"
+    ],
+    sources: ["2 Samuel 7 & 12", "1 Kings 1", "1 Chronicles 17"],
+    bibleVerses: [
+      "Your house and your kingdom will be made sure forever before you. Your throne will be established forever. — 2 Samuel 7:16 (https://www.biblegateway.com/passage/?search=2+Samuel+7%3A16)",
+      "Nathan said to David, 'You are the man! This is what Yahweh, the God of Israel, says: I anointed you king over Israel...' — 2 Samuel 12:7 (https://www.biblegateway.com/passage/?search=2+Samuel+12%3A7)"
+    ],
+    relatedIds: ["prophets-general", "nathan_prophet", "david_king", "solomon", "holy-bible"]
+  },
+  {
+    id: "prophet-elijah-node",
+    parentId: "prophets-general",
+    secondaryParentIds: ["biblical-figures", "holy-bible"],
+    name: "Prophet Elijah & Fulfilled Prophecies",
+    description: "Elijah the Tishbite (Eliyahu), the fire-calling wonder-working prophet of the Northern Kingdom of Israel during the apostasy of King Ahab and Queen Jezebel.\n\nFULFILLED PROPHECIES:\n1. Three-Year Severe Drought: Prophesied to Ahab: 'There shall not be dew nor rain these years, but according to my word' (1 Kings 17:1), confirmed by 3.5 years of drought (James 5:17).\n2. Downfall and Violent End of Ahab and Jezebel: Prophesied that dogs would lick Ahab's blood at Naboth's vineyard (1 Kings 21:19, fulfilled in 1 Kings 22:38) and that dogs would devour Jezebel by the wall of Jezreel (1 Kings 21:23, fulfilled in 2 Kings 9:33–36).\n3. Overthrow of the House of Ahab: Foretold the utter extermination of the Omride dynasty, accomplished through the uprising of Jehu (2 Kings 10).\n4. Fire from Heaven on Mount Carmel: Proved Yahweh's supremacy over 450 prophets of Baal by commanding miraculous fire from heaven consuming the water-soaked bull offering.",
+    layer: "Religion",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/The_Prophet_Elijah_and_the_Widow_of_Zarephath_A10797.jpg/500px-The_Prophet_Elijah_and_the_Widow_of_Zarephath_A10797.jpg"
+    ],
+    sources: ["1 Kings 17–22", "2 Kings 1–2", "Malachi 4:5"],
+    bibleVerses: [
+      "As Yahweh, the God of Israel, lives, before whom I stand, there shall not be dew nor rain these years, but according to my word. — 1 Kings 17:1 (https://www.biblegateway.com/passage/?search=1+Kings+17%3A1)",
+      "Behold, I will send you Elijah the prophet before the great and terrible day of Yahweh comes. — Malachi 4:5 (https://www.biblegateway.com/passage/?search=Malachi+4%3A5)"
+    ],
+    relatedIds: ["prophets-general", "elijah", "elisha", "ahab_king", "jezebel_queen", "holy-bible"]
+  },
+  {
+    id: "prophet-elisha-node",
+    parentId: "prophets-general",
+    secondaryParentIds: ["biblical-figures", "holy-bible"],
+    name: "Prophet Elisha & Fulfilled Prophecies",
+    description: "Elisha the son of Shaphat, successor to Elijah who inherited a double portion of his master's prophetic spirit.\n\nFULFILLED PROPHECIES:\n1. Miraculous Influx of Water Without Rain: Foretold the Moabite valley would be filled with water without wind or rain, saving the coalition armies (2 Kings 3:16–20).\n2. End of the Syrian Siege of Samaria within 24 Hours: Prophesied during catastrophic famine that tomorrow fine flour would sell for a shekel and barley for a shekel, and that the mocking royal officer would see it but not eat of it (2 Kings 7:1–20).\n3. Hazael's Treachery and Reign over Aram: Foretold that Hazael would murder King Ben-hadad and bring brutal war against Israel (2 Kings 8:12–15).\n4. Anointing and Revolt of Jehu: Prophesied the military strike that ended the Omride dynasty (2 Kings 9).",
+    layer: "Religion",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Giorgio_Vasari_-_The_Prophet_Elisha_-_WGA24289.jpg/500px-Giorgio_Vasari_-_The_Prophet_Elisha_-_WGA24289.jpg"
+    ],
+    sources: ["1 Kings 19", "2 Kings 2–13"],
+    bibleVerses: [
+      "Elisha said: 'Hear Yahweh’s word! Thus says Yahweh: Tomorrow about this time a seah of fine flour will be sold for a shekel in the gate of Samaria.' — 2 Kings 7:1 (https://www.biblegateway.com/passage/?search=2+Kings+7%3A1)",
+      "Elisha answered: 'Yahweh has shown me that you will be king over Syria.' — 2 Kings 8:13 (https://www.biblegateway.com/passage/?search=2+Kings+8%3A13)"
+    ],
+    relatedIds: ["prophets-general", "elisha", "elijah", "holy-bible"]
+  },
+  {
+    id: "prophet-isaiah-node",
+    parentId: "prophets-general",
+    secondaryParentIds: ["biblical-figures", "holy-bible"],
+    name: "Prophet Isaiah & Fulfilled Prophecies",
+    description: "Isaiah son of Amoz (Yeshayahu), the prince of Old Testament prophets, who ministered in Jerusalem during the 8th century BCE under kings Uzziah, Jotham, Ahaz, and Hezekiah.\n\nFULFILLED PROPHECIES:\n1. Naming Cyrus of Persia 150 Years Before His Birth: In Isaiah 44:28 and 45:1, Isaiah specifically named King Cyrus of Persia 150 years before his reign, foretelling that Cyrus would conquer Babylon, set Jewish exiles free, and decree the rebuilding of Jerusalem and the Temple—precisely fulfilled in 538 BCE (confirmed by the Cyrus Cylinder).\n2. Deliverance from Sennacherib: Foretold King Sennacherib of Assyria would not shoot an arrow into Jerusalem but would retreat and be assassinated by his own sons in Nineveh (Isaiah 37:33–38, fulfilled in 701 BCE).\n3. Virgin Birth of the Messiah: Isaiah 7:14 prophesied: 'Behold, the virgin will conceive, and bear a son, and shall call his name Immanuel' (Matthew 1:22–23).\n4. The Suffering Servant (Isaiah 53): Detailed the Messiah being pierced for our transgressions, led like a lamb to the slaughter, buried in a rich man's tomb, and resurrected to justify many—astonishingly fulfilled in Jesus Christ.\n5. Desolation of Babylon: Prophesied Babylon would be overthrown like Sodom and Gomorrah and never inhabited through all generations (Isaiah 13:19–20).",
+    layer: "Religion",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Raffael_-_The_Prophet_Isaiah_-_1511-1512.jpg/500px-Raffael_-_The_Prophet_Isaiah_-_1511-1512.jpg"
+    ],
+    sources: ["Book of Isaiah", "Dead Sea Scrolls (Great Isaiah Scroll 1QIsa)", "Cyrus Cylinder (British Museum)"],
+    bibleVerses: [
+      "Thus says Yahweh to his anointed, to Cyrus, whose right hand I have held, to subdue nations before him... — Isaiah 45:1 (https://www.biblegateway.com/passage/?search=Isaiah+45%3A1)",
+      "He was pierced for our transgressions. He was crushed for our iniquities. The punishment that brought our peace was on him; and by his wounds we are healed. — Isaiah 53:5 (https://www.biblegateway.com/passage/?search=Isaiah+53%3A5)"
+    ],
+    relatedIds: ["prophets-general", "isaiah", "bible-book-isaiah", "holy-bible"]
+  },
+  {
+    id: "prophet-jeremiah-node",
+    parentId: "prophets-general",
+    secondaryParentIds: ["biblical-figures", "holy-bible"],
+    name: "Prophet Jeremiah & Fulfilled Prophecies",
+    description: "Jeremiah son of Hilkiah (Yirmeyahu), the 'Weeping Prophet', who ministered for 40 years leading up to and during the catastrophic destruction of Jerusalem by Nebuchadnezzar in 586 BCE.\n\nFULFILLED PROPHECIES:\n1. 70-Year Babylonian Captivity: In Jeremiah 25:11–12 and 29:10, Jeremiah prophesied the exact duration of the exile: 'After seventy years are accomplished for Babylon, I will visit you, and perform my good word toward you, in causing you to return to this place,' exactly fulfilled from the first deportation (606/605 BCE) to the decree of Cyrus (536 BCE).\n2. Fate of King Zedekiah: Prophesied King Zedekiah would see the King of Babylon eye to eye, be carried to Babylon, yet die in peace (Jeremiah 34:3–5; 39:5–7).\n3. Fall of Babylon and the Drying of Her Waters: Foretold Babylon would be taken suddenly, its sea dried up, and its broad walls utterly broken (Jeremiah 50–51), fulfilled when Cyrus diverted the Euphrates in 539 BCE.\n4. Death of the False Prophet Hananiah: Foretold Hananiah would die within that exact year for preaching rebellion against God (Jeremiah 28:16–17), fulfilled seven months later.\n5. The New Covenant: In Jeremiah 31:31–34, prophesied God would make a New Covenant written on human hearts.",
+    layer: "Religion",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Michelangelo%2C_profeti%2C_Jeremiah_01.jpg/500px-Michelangelo%2C_profeti%2C_Jeremiah_01.jpg"
+    ],
+    sources: ["Book of Jeremiah", "Book of Lamentations", "Babylonian Chronicles (BM 21946)"],
+    bibleVerses: [
+      "For thus says Yahweh: 'After seventy years are accomplished for Babylon, I will visit you, and perform my good word toward you, in causing you to return to this place.' — Jeremiah 29:10 (https://www.biblegateway.com/passage/?search=Jeremiah+29%3A10)",
+      "Behold, the days come, says Yahweh, that I will make a new covenant with the house of Israel, and with the house of Judah... — Jeremiah 31:31 (https://www.biblegateway.com/passage/?search=Jeremiah+31%3A31)"
+    ],
+    relatedIds: ["prophets-general", "jeremiah", "bible-book-jeremiah", "holy-bible"]
+  },
+  {
+    id: "prophet-ezekiel-node",
+    parentId: "prophets-general",
+    secondaryParentIds: ["biblical-figures", "holy-bible"],
+    name: "Prophet Ezekiel & Fulfilled Prophecies",
+    description: "Ezekiel son of Buzi (Yechezkel), priest and apocalyptic prophet carried into Babylonian exile in 597 BCE, who ministered by the Chebar Canal near Tel Abib.\n\nFULFILLED PROPHECIES:\n1. The Siege and Destruction of Tyre (Ezekiel 26): Prophesied that Nebuchadnezzar would besiege Tyre (fulfilled in a 13-year siege), many nations would come against her like waves of the sea, her stones and timber would be cast into the midst of the water, and she would be scraped flat like the top of a rock for fishermen to spread nets—astonishingly fulfilled in 332 BCE when Alexander the Great demolished the ruins of mainland Tyre and scraped the soil into the sea to build a 0.5-mile causeway to conquer island Tyre.\n2. Total Desolation of Egypt for 40 Years (Ezekiel 29:10–13).\n3. Rebirth of Israel from the Valley of Dry Bones (Ezekiel 37): Prophesied the dry bones of Israel would gather sinews and flesh and return to their ancient homeland, fulfilled in the 20th-century regathering of the Jewish nation in 1948.\n4. Prophecy Against Mount Seir / Edom (Ezekiel 35): Foretold Edom would be perpetual desolation, historically fulfilled as the Nabataeans expelled the Edomites and their land became desolate desert.",
+    layer: "Religion",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Ezekiel_by_Michelangelo%2C_restored_-_large.jpg/500px-Ezekiel_by_Michelangelo%2C_restored_-_large.jpg"
+    ],
+    sources: ["Book of Ezekiel", "Arrian (Anabasis of Alexander)", "Historical Records of the Siege of Tyre"],
+    bibleVerses: [
+      "They will destroy the walls of Tyre, and break down her towers. I will also scrape her dust from her, and make her a bare rock. — Ezekiel 26:4 (https://www.biblegateway.com/passage/?search=Ezekiel+26%3A4)",
+      "Behold, I will take the children of Israel from among the nations... and bring them into their own land. — Ezekiel 37:21 (https://www.biblegateway.com/passage/?search=Ezekiel+37%3A21)"
+    ],
+    relatedIds: ["prophets-general", "ezekiel", "bible-book-ezekiel", "holy-bible"]
+  },
+  {
+    id: "prophet-daniel-node",
+    parentId: "prophets-general",
+    secondaryParentIds: ["biblical-figures", "holy-bible"],
+    name: "Prophet Daniel & Fulfilled Prophecies",
+    description: "Daniel (Belteshazzar), prime statesman and prophetic seer exiled to Babylon who served in the courts of Nebuchadnezzar, Belshazzar, Darius the Mede, and Cyrus the Great.\n\nFULFILLED PROPHECIES:\n1. The Succession of Four World Empires (Daniel 2 & 7): Accurately outlined the exact sequence of 4 world kingdoms: Babylon (head of gold / lion), Medo-Persia (chest of silver / bear), Greece (belly of bronze / 4-winged leopard), and Rome (legs of iron / dreadful beast with iron teeth).\n2. Division of the Greek Empire into Four Kingdoms (Daniel 8:8, 11:3–4): Prophesied that the mighty King of Greece (Alexander the Great) would be broken at the height of his power and his empire divided into four winds of heaven (fulfilled by Alexander's four generals / the Diadochi: Cassander, Lysimachus, Seleucus, Ptolemy).\n3. Rise and Desecration of Antiochus IV Epiphanes (Daniel 8:9–14, 11:21–35): Foretold the little horn defiling the sanctuary, stopping the daily sacrifice, and setting up the abomination of desolation (fulfilled in 167 BCE when Antiochus sacrificed a pig on the Temple altar, sparking the Maccabean Revolt).\n4. The 70 Weeks Prophecy (Daniel 9:24–27): Exact chronological countdown of 483 prophetic years (69 weeks of years) from the decree to rebuild Jerusalem (Artaxerxes I, 445 BCE) to the cutting off of the Messiah and the destruction of the city and sanctuary by the Romans (70 CE).",
+    layer: "Religion",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Michelangelo_Buonarroti_026.jpg/500px-Michelangelo_Buonarroti_026.jpg"
+    ],
+    sources: ["Book of Daniel", "Flavius Josephus (Antiquities of the Jews, Book XI & XII)", "Dead Sea Scrolls (4QDan)"],
+    bibleVerses: [
+      "Know therefore and discern, that from the going forth of the commandment to restore and to build Jerusalem to the Anointed One, the prince, will be seven weeks, and sixty-two weeks... — Daniel 9:25 (https://www.biblegateway.com/passage/?search=Daniel+9%3A25)",
+      "The goat grew very great: and when he was strong, the great horn was broken; and four notable horns came up instead of it toward the four winds of the sky. — Daniel 8:8 (https://www.biblegateway.com/passage/?search=Daniel+8%3A8)"
+    ],
+    relatedIds: ["prophets-general", "daniel_prophet", "bible-book-daniel", "holy-bible"]
+  },
+  {
+    id: "prophet-jonah-node",
+    parentId: "prophets-general",
+    secondaryParentIds: ["biblical-figures", "holy-bible"],
+    name: "Prophet Jonah & Fulfilled Prophecies",
+    description: "Jonah son of Amittai (Yonah), 8th-century BCE prophet from Gath-hepher in Galilee sent to preach judgment against the Assyrian imperial capital of Nineveh.\n\nFULFILLED PROPHECIES:\n1. National Repentance of Nineveh: Prophesied: 'Yet forty days, and Nineveh will be overthrown!' (Jonah 3:4). The entire population, from the king on the throne to beasts in sackcloth, fasted and repented, averting imminent divine destruction for over a century.\n2. Territorial Restoration of Israel: In 2 Kings 14:25, Jonah accurately prophesied that King Jeroboam II of Israel would restore the border of Israel from the entrance of Hamath to the Sea of the Arabah, confirmed by historical archaeological boundaries.\n3. The Sign of Jonah: Jonah's three days and nights in the belly of the sea monster served as the explicit prophetic sign of the resurrection of Jesus Christ after three days and nights in the heart of the earth (Matthew 12:39–40).",
+    layer: "Religion",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Prophet_Jonah.jpg/500px-Prophet_Jonah.jpg"
+    ],
+    sources: ["Book of Jonah", "2 Kings 14:25", "Gospel of Matthew 12:38–41"],
+    bibleVerses: [
+      "He restored the border of Israel from the entrance of Hamath to the sea of the Arabah, according to the word of Yahweh, the God of Israel, which he spoke by his servant Jonah the son of Amittai, the prophet... — 2 Kings 14:25 (https://www.biblegateway.com/passage/?search=2+Kings+14%3A25)",
+      "Jonah began to enter into the city a day’s journey, and he cried out, and said, 'Yet forty days, and Nineveh will be overthrown!' — Jonah 3:4 (https://www.biblegateway.com/passage/?search=Jonah+3%3A4)"
+    ],
+    relatedIds: ["prophets-general", "jonah", "bible-book-jonah", "holy-bible"]
+  },
+  {
+    id: "prophet-hosea-node",
+    parentId: "prophets-general",
+    secondaryParentIds: ["biblical-figures", "holy-bible"],
+    name: "Prophet Hosea & Fulfilled Prophecies",
+    description: "Hosea son of Beeri (Hoshea), 8th-century prophet to the Northern Kingdom whose marriage to unfaithful Gomer dramatized God's enduring covenant love and Israel's spiritual adultery.\n\nFULFILLED PROPHECIES:\n1. Destruction and Exile of the Northern Kingdom by Assyria: In Hosea 9:3 and 10:5–6, Hosea foretold Ephraim would return to bondage and the golden calf of Beth-aven would be carried to Assyria as tribute to King Jareb—fulfilled in 722 BCE by Sargon II.\n2. Wandering Without King or Sacrifice: In Hosea 3:4, foretold: 'For the children of Israel will live many days without king, and without prince, and without sacrifice, and without sacred stone, and without ephod or idols'—an exact description of the Jewish condition post-70 CE.\n3. Call of the Messiah Out of Egypt: Hosea 11:1 ('Out of Egypt I called my son') fulfilled in the Christ child's flight and return from Egypt (Matthew 2:15).",
+    layer: "Religion",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/FlorenceBaptistery_Hosea.png/500px-FlorenceBaptistery_Hosea.png"
+    ],
+    sources: ["Book of Hosea", "Assyrian Royal Annals (Sargon II)"],
+    bibleVerses: [
+      "For the children of Israel will live many days without king, and without prince, and without sacrifice... Afterward the children of Israel will return, and seek Yahweh their God... — Hosea 3:4-5 (https://www.biblegateway.com/passage/?search=Hosea+3%3A4-5)",
+      "When Israel was a child, then I loved him, and called my son out of Egypt. — Hosea 11:1 (https://www.biblegateway.com/passage/?search=Hosea+11%3A1)"
+    ],
+    relatedIds: ["prophets-general", "bible-book-hosea", "holy-bible"]
+  },
+  {
+    id: "prophet-joel-node",
+    parentId: "prophets-general",
+    secondaryParentIds: ["biblical-figures", "holy-bible"],
+    name: "Prophet Joel & Fulfilled Prophecies",
+    description: "Joel son of Pethuel (Yo'el), prophet of Judah who utilized a catastrophic locust swarm to foretell the Day of the Lord and the ultimate outpouring of the Holy Spirit.\n\nFULFILLED PROPHECIES:\n1. The Outpouring of the Holy Spirit: In Joel 2:28–32, Joel uttered the signature promise: 'It will happen afterward, that I will pour out my Spirit on all flesh; and your sons and your daughters will prophesy, your old men will dream dreams, your young men will see visions,' cited by the Apostle Peter on the Day of Pentecost as having been fulfilled (Acts 2:16–21).\n2. The Judgment on the Nations in the Valley of Jehoshaphat: Foretold the gathering of nations that divided God's land and scattered His heritage (Joel 3:2).\n3. Celestial Signs: Foretold the sun turned to darkness and the moon into blood before the great and terrible day of the Lord.",
+    layer: "Religion",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Joel_%28Michelangelo%29.jpg/500px-Joel_%28Michelangelo%29.jpg"
+    ],
+    sources: ["Book of Joel", "Acts of the Apostles 2:14–21"],
+    bibleVerses: [
+      "It will happen afterward, that I will pour out my Spirit on all flesh; and your sons and your daughters will prophesy... — Joel 2:28 (https://www.biblegateway.com/passage/?search=Joel+2%3A28)",
+      "I will gather all nations, and will bring them down into the valley of Jehoshaphat; and I will execute judgment on them there for my people... — Joel 3:2 (https://www.biblegateway.com/passage/?search=Joel+3%3A2)"
+    ],
+    relatedIds: ["prophets-general", "bible-book-joel", "holy-bible"]
+  },
+  {
+    id: "prophet-amos-node",
+    parentId: "prophets-general",
+    secondaryParentIds: ["biblical-figures", "holy-bible"],
+    name: "Prophet Amos & Fulfilled Prophecies",
+    description: "Amos of Tekoa, a herdsman and pincher of sycamore figs from Judah called to deliver blistering oracles against the corrupt northern kingdom of Jeroboam II.\n\nFULFILLED PROPHECIES:\n1. The Great Earthquake: In Amos 1:1, Amos dated his prophecy 'two years before the earthquake.' Zechariah 14:5 and modern archaeological excavations at Hazor and Gezer confirm a catastrophic magnitude 8.2 earthquake struck Israel c. 760 BCE.\n2. Fall of the Northern Sanctuaries: Foretold the high places of Isaac would be desolate and the sanctuaries of Israel laid waste (Amos 7:9), fulfilled when Assyria dismantled Dan and Bethel in 722 BCE.\n3. Restoration of the Fallen Booth of David: In Amos 9:11, prophesied: 'In that day I will raise up the tent of David that is fallen, and close up its breaches,' cited by James at the Council of Jerusalem in Acts 15:16–17 as fulfilled through the Gentile inclusion in Christ.",
+    layer: "Religion",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/FlorenceBaptistery_Amos.png/500px-FlorenceBaptistery_Amos.png"
+    ],
+    sources: ["Book of Amos", "Geological & Archaeological Survey of Hazor Earthquake Layer", "Acts 15:13–18"],
+    bibleVerses: [
+      "The words of Amos, who was among the herdsmen of Tekoa... two years before the earthquake. — Amos 1:1 (https://www.biblegateway.com/passage/?search=Amos+1%3A1)",
+      "In that day I will raise up the tent of David that is fallen, and close up its breaches... — Amos 9:11 (https://www.biblegateway.com/passage/?search=Amos+9%3A11)"
+    ],
+    relatedIds: ["prophets-general", "bible-book-amos", "holy-bible"]
+  },
+  {
+    id: "prophet-obadiah-node",
+    parentId: "prophets-general",
+    secondaryParentIds: ["biblical-figures", "holy-bible"],
+    name: "Prophet Obadiah & Fulfilled Prophecies",
+    description: "Obadiah (Ovadyah, 'Servant of Yahweh'), author of the shortest book in the Old Testament, who pronounced doom on the mountain fortress of Edom (Mount Seir).\n\nFULFILLED PROPHECIES:\n1. Total Destruction and Erasure of Edom: Because Edom gloated over and aided the destruction of Jerusalem in 586 BCE (Obadiah 10–14), Obadiah prophesied: 'Though you mount on high as the eagle, and though your nest is set among the stars, I will bring you down from there, says Yahweh... There will be no survivor to the house of Esau' (Obadiah 4, 18). Historically fulfilled when Nabataean Arabs drove the Edomites from Petra, John Hyrcanus forced their conversion to Judaism, and after the Roman destruction of Jerusalem in 70 CE, the Edomite (Idumean) people disappeared entirely from world history.",
+    layer: "Religion",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/FlorenceBaptistery_Obadiah.png/500px-FlorenceBaptistery_Obadiah.png"
+    ],
+    sources: ["Book of Obadiah", "Flavius Josephus (Antiquities of the Jews, Book XIII)"],
+    bibleVerses: [
+      "The pride of your heart has deceived you, you who dwell in the clefts of the rock, whose habitation is high; who says in his heart, 'Who will bring me down to the ground?' — Obadiah 1:3 (https://www.biblegateway.com/passage/?search=Obadiah+1%3A3)",
+      "There will be no survivor to the house of Esau; for Yahweh has spoken. — Obadiah 1:18 (https://www.biblegateway.com/passage/?search=Obadiah+1%3A18)"
+    ],
+    relatedIds: ["prophets-general", "bible-book-obadiah", "holy-bible"]
+  },
+  {
+    id: "prophet-micah-node",
+    parentId: "prophets-general",
+    secondaryParentIds: ["biblical-figures", "holy-bible"],
+    name: "Prophet Micah & Fulfilled Prophecies",
+    description: "Micah of Moresheth (Mikhah), contemporary of Isaiah who prophesied against social injustice, corrupt priests, and the impending fall of Samaria and Jerusalem.\n\nFULFILLED PROPHECIES:\n1. The Birthplace of the Messiah in Bethlehem Ephrathah: In Micah 5:2, Micah delivered the exact geographic prediction: 'But you, Bethlehem Ephrathah, being small among the clans of Judah, out of you one will come out to me who is to be ruler in Israel; whose goings out are from of old, from ancient times'—quoted by the Chief Priests to Herod the Great and fulfilled in the birth of Jesus (Matthew 2:5–6).\n2. Plowing of Zion Like a Field: Prophesied: 'Zion will be plowed as a field, and Jerusalem will become heaps' (Micah 3:12), quoted a century later in Jeremiah 26:18 and fulfilled in 586 BCE and again under the Roman Emperor Hadrian, who plowed the Temple Mount with oxen.\n3. The Fall of Samaria: Accurately predicted Samaria would become 'a heap of the field' and its stones poured down into the valley (Micah 1:6).",
+    layer: "Religion",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/FlorenceBaptistery_Micah.png/500px-FlorenceBaptistery_Micah.png"
+    ],
+    sources: ["Book of Micah", "Jeremiah 26:18", "Gospel of Matthew 2:1–6"],
+    bibleVerses: [
+      "But you, Bethlehem Ephrathah, being small among the clans of Judah, out of you one will come out to me who is to be ruler in Israel; whose goings out are from of old, from ancient times. — Micah 5:2 (https://www.biblegateway.com/passage/?search=Micah+5%3A2)",
+      "Therefore Zion for your sake will be plowed like a field, and Jerusalem will become heaps... — Micah 3:12 (https://www.biblegateway.com/passage/?search=Micah+3%3A12)"
+    ],
+    relatedIds: ["prophets-general", "bible-book-micah", "holy-bible"]
+  },
+  {
+    id: "prophet-nahum-node",
+    parentId: "prophets-general",
+    secondaryParentIds: ["biblical-figures", "holy-bible"],
+    name: "Prophet Nahum & Fulfilled Prophecies",
+    description: "Nahum of Elkosh (Nachum, 'Comfort'), who uttered the prophetic funeral song over the cruel Neo-Assyrian capital of Nineveh approximately 100 years after Jonah.\n\nFULFILLED PROPHECIES:\n1. Destruction of Nineveh by Water and Fire: Prophesied that Nineveh—the world's most heavily fortified metropolis with 100-foot walls—would be breached by flood and consumed by fire: 'The gates of the rivers are opened, and the palace is dissolved... There the fire will devour you. The sword will cut you off' (Nahum 2:6, 3:15). In 612 BCE, Greek historian Diodorus Siculus records that continuous torrential rains caused the Khosr River to overflow and breach the massive city walls, allowing the combined armies of Medes and Babylonians to flood through and incinerate the palace.",
+    layer: "Religion",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/FlorenceBaptistery_Nahum.png/500px-FlorenceBaptistery_Nahum.png"
+    ],
+    sources: ["Book of Nahum", "Diodorus Siculus (Bibliotheca Historica)", "Fall of Nineveh Chronicle (BM 21901)"],
+    bibleVerses: [
+      "The gates of the rivers are opened, and the palace is dissolved. — Nahum 2:6 (https://www.biblegateway.com/passage/?search=Nahum+2%3A6)",
+      "Behold, your troops among you are women. The gates of your land are set wide open to your enemies. Fire has devoured your bars. — Nahum 3:13 (https://www.biblegateway.com/passage/?search=Nahum+3%3A13)"
+    ],
+    relatedIds: ["prophets-general", "bible-book-nahum", "holy-bible"]
+  },
+  {
+    id: "prophet-habakkuk-node",
+    parentId: "prophets-general",
+    secondaryParentIds: ["biblical-figures", "holy-bible"],
+    name: "Prophet Habakkuk & Fulfilled Prophecies",
+    description: "Habakkuk (Chavakuk, 'Embrace'), the wrestling prophet of Judah who questioned God concerning injustice and the impending rise of the brutal Chaldeans (Babylonians).\n\nFULFILLED PROPHECIES:\n1. The Rise of the Fierce Babylonian War Machine: Foretold that God was raising up the Chaldeans, 'that bitter and hasty nation, that march through the width of the earth, to possess dwelling places that are not theirs... their horses are swifter than leopards' (Habakkuk 1:6–8), fulfilled in Nebuchadnezzar's blitzkrieg conquest of the ancient Near East.\n2. The Just Shall Live by Faith: Habakkuk 2:4 proclaimed the profound eternal maxim: 'The righteous shall live by his faith,' which became the theological foundation of the New Testament (Romans 1:17, Galatians 3:11, Hebrews 10:38).\n3. Ultimate Ruin of the Plundering Empire: Foretold that the conqueror who swallowed nations would in turn be plundered (Habakkuk 2:8), fulfilled in the overnight fall of Babylon in 539 BCE.",
+    layer: "Religion",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Wadham_Chapel_Habakkuk.jpg/500px-Wadham_Chapel_Habakkuk.jpg"
+    ],
+    sources: ["Book of Habakkuk", "Dead Sea Scrolls (Habakkuk Commentary 1QpHab)"],
+    bibleVerses: [
+      "For, behold, I raise up the Chaldeans, that bitter and hasty nation, that march through the width of the earth, to possess dwelling places that are not theirs. — Habakkuk 1:6 (https://www.biblegateway.com/passage/?search=Habakkuk+1%3A6)",
+      "Behold, his soul is puffed up. It is not upright in him, but the righteous will live by his faith. — Habakkuk 2:4 (https://www.biblegateway.com/passage/?search=Habakkuk+2%3A4)"
+    ],
+    relatedIds: ["prophets-general", "bible-book-habakkuk", "holy-bible"]
+  },
+  {
+    id: "prophet-zephaniah-node",
+    parentId: "prophets-general",
+    secondaryParentIds: ["biblical-figures", "holy-bible"],
+    name: "Prophet Zephaniah & Fulfilled Prophecies",
+    description: "Zephaniah son of Cushi (Tzefanyah, 'Yahweh Has Hidden'), great-great-grandson of King Hezekiah who prophesied during the reign of King Josiah.\n\nFULFILLED PROPHECIES:\n1. Judgment and Desolation of Philistia, Moab, Ammon, and Cush: Accurately predicted Gaza would be forsaken, Ashdod driven out at noonday, Ashkelon desolate, and Moab like Sodom (Zephaniah 2:4–9).\n2. Desolation of Nineveh into a Dry Waste for Wild Beasts: Foretold God would stretch out His hand against the north, destroy Assyria, and make Nineveh a desolation where herds would lie down (Zephaniah 2:13–15), fulfilled so thoroughly that for centuries travelers passed Nineveh without recognizing the earthen mounds.\n3. Purification of the Remnant with Pure Speech: Foretold God would purify the speech of the peoples that they may call upon the name of Yahweh (Zephaniah 3:9).",
+    layer: "Religion",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/FlorenceBaptistery_Zephaniah.png/500px-FlorenceBaptistery_Zephaniah.png"
+    ],
+    sources: ["Book of Zephaniah", "Historical Fall of Nineveh and Assyrian Empire"],
+    bibleVerses: [
+      "He will stretch out his hand against the north, and destroy Assyria, and will make Nineveh a desolation, and dry like the wilderness. — Zephaniah 2:13 (https://www.biblegateway.com/passage/?search=Zephaniah+2%3A13)",
+      "The great day of Yahweh is near. It is near, and hurries greatly... That day is a day of wrath, a day of distress and anguish... — Zephaniah 1:14-15 (https://www.biblegateway.com/passage/?search=Zephaniah+1%3A14-15)"
+    ],
+    relatedIds: ["prophets-general", "bible-book-zephaniah", "holy-bible"]
+  },
+  {
+    id: "prophet-haggai-node",
+    parentId: "prophets-general",
+    secondaryParentIds: ["biblical-figures", "holy-bible"],
+    name: "Prophet Haggai & Fulfilled Prophecies",
+    description: "Haggai (Chaggai, 'Festive'), post-exilic prophet who in 520 BCE roused governor Zerubbabel and high priest Joshua to resume rebuilding the ruined Second Temple in Jerusalem.\n\nFULFILLED PROPHECIES:\n1. The Greater Glory of the Second Temple: In Haggai 2:7–9, Haggai prophesied that despite its humble appearance compared to Solomon's gold-covered Temple, 'The latter glory of this house will be greater than the former, says Yahweh of Armies; and in this place I will give peace'—fulfilled when Jesus Christ Himself, God incarnate, entered and taught within the courts of the Second Temple.\n2. Zerubbabel as the Signet Ring: Foretold God would make Zerubbabel like a signet ring (Haggai 2:23), reversing the curse pronounced on his grandfather Jeconiah (Jeremiah 22:24) and preserving the royal Messianic line to Christ (Matthew 1:12).",
+    layer: "Religion",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/FlorenceBaptistery_Haggai.png/500px-FlorenceBaptistery_Haggai.png"
+    ],
+    sources: ["Book of Haggai", "Book of Ezra", "Gospel of Matthew 1"],
+    bibleVerses: [
+      "The latter glory of this house will be greater than the former, says Yahweh of Armies; and in this place I will give peace, says Yahweh of Armies. — Haggai 2:9 (https://www.biblegateway.com/passage/?search=Haggai+2%3A9)",
+      "In that day, says Yahweh of Armies, I will take you, Zerubbabel, my servant... and will make you like a signet ring; for I have chosen you... — Haggai 2:23 (https://www.biblegateway.com/passage/?search=Haggai+2%3A23)"
+    ],
+    relatedIds: ["prophets-general", "bible-book-haggai", "holy-bible"]
+  },
+  {
+    id: "prophet-zechariah-node",
+    parentId: "prophets-general",
+    secondaryParentIds: ["biblical-figures", "holy-bible"],
+    name: "Prophet Zechariah & Fulfilled Prophecies",
+    description: "Zechariah son of Berechiah, priest and apocalyptic prophet of the Restoration who ministered alongside Haggai, recording numerous Messianic prophecies.\n\nFULFILLED PROPHECIES:\n1. Triumphal Entry on a Donkey's Colt (Zechariah 9:9): Prophesied: 'Rejoice greatly, daughter of Zion! Shout, daughter of Jerusalem! Behold, your King comes to you! He is righteous, and having salvation; lowly, and riding on a donkey, even on a colt, the foal of a donkey'—fulfilled on Palm Sunday (Matthew 21:4–5).\n2. Betrayed for Thirty Pieces of Silver (Zechariah 11:12–13): Foretold the exact wage of betrayal: 30 pieces of silver, and that the money would be thrown to the potter in the house of the Lord—fulfilled when Judas returned the 30 shekels to the Temple sanctuary and priests used it to buy the Potter's Field (Matthew 27:3–10).\n3. Pierced and Mourned: Zechariah 12:10 prophesied: 'They will look on me whom they have pierced; and they will mourn for him, as one mourns for his only son'—fulfilled when the Roman soldier pierced Jesus' side with a spear (John 19:34–37).\n4. Smite the Shepherd and the Sheep Scatter: Zechariah 13:7 foretold the disciples fleeing upon Christ's arrest in Gethsemane (Matthew 26:31).",
+    layer: "Religion",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Michelangelo%2C_profeti%2C_Zechariah_01.jpg/500px-Michelangelo%2C_profeti%2C_Zechariah_01.jpg"
+    ],
+    sources: ["Book of Zechariah", "Dead Sea Scrolls (4QXII)", "Gospel of Matthew 21 & 27"],
+    bibleVerses: [
+      "Rejoice greatly, daughter of Zion! Shout, daughter of Jerusalem! Behold, your King comes to you! He is righteous, and having salvation; lowly, and riding on a donkey... — Zechariah 9:9 (https://www.biblegateway.com/passage/?search=Zechariah+9%3A9)",
+      "They weighed for my wages thirty pieces of silver. Yahweh said to me, 'Throw it to the potter, the handsome price that I was valued at by them!' — Zechariah 11:12-13 (https://www.biblegateway.com/passage/?search=Zechariah+11%3A12-13)"
+    ],
+    relatedIds: ["prophets-general", "bible-book-zechariah", "holy-bible"]
+  },
+  {
+    id: "prophet-malachi-node",
+    parentId: "prophets-general",
+    secondaryParentIds: ["biblical-figures", "holy-bible"],
+    name: "Prophet Malachi & Fulfilled Prophecies",
+    description: "Malachi (Mal'akhi, 'My Messenger'), the final prophetic voice of the Old Testament canon, who ministered c. 430 BCE rebuking corrupt priests and insincere worship, concluding the Hebrew scriptures with the anticipation of the forerunner and the Messiah.\n\nFULFILLED PROPHECIES:\n1. The Messenger to Prepare the Way: In Malachi 3:1, Malachi prophesied: 'Behold, I send my messenger, and he will prepare the way before me; and the Lord, whom you seek, will suddenly come to his temple; and the messenger of the covenant, whom you desire, behold, he comes!'—fulfilled in John the Baptist preparing the way for Jesus Christ (Matthew 3:1–3, 11:10).\n2. The Coming of Elijah the Forerunner: In Malachi 4:5–6, the concluding words of the Old Testament: 'Behold, I will send you Elijah the prophet before the great and terrible day of Yahweh comes. He will turn the hearts of the fathers to the children, and the hearts of the children to their fathers'—fulfilled in John the Baptist who came 'in the spirit and power of Elijah' (Luke 1:17; Matthew 17:11–13).\n3. Pure Offerings Among the Gentiles: In Malachi 1:11, foretold God's name would be great among the Gentiles from the rising of the sun to its going down.",
+    layer: "Religion",
+    images: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/FlorenceBaptistery_Malachi.png/500px-FlorenceBaptistery_Malachi.png"
+    ],
+    sources: ["Book of Malachi", "Gospel of Luke 1:11–17", "Gospel of Matthew 11:7–14"],
+    bibleVerses: [
+      "Behold, I send my messenger, and he will prepare the way before me; and the Lord, whom you seek, will suddenly come to his temple... — Malachi 3:1 (https://www.biblegateway.com/passage/?search=Malachi+3%3A1)",
+      "Behold, I will send you Elijah the prophet before the great and terrible day of Yahweh comes. — Malachi 4:5 (https://www.biblegateway.com/passage/?search=Malachi+4%3A5)"
+    ],
+    relatedIds: ["prophets-general", "bible-book-malachi", "holy-bible"]
+  }
+];
+
+TERM_TREE_DATA.push(...chunk_user_additions_prophets_and_anomalies);
+
+const chunk_alien_archivist_latest_additions: TermNode[] = [
+  {
+    id: "codex-sighting-pavia-entity-1986",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/pavia-entity",
+    parentId: "supernatural-anomalies",
+    name: "The Pavia Entity Alien Photographs (Pavia, Italy, 1986)",
+    description: "Color photographs captured in summer 1986 by a University of Pavia professor during canine perception experiments, showing an anomalous extraterrestrial entity.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-pavia-entity-1986",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffe9b5cd8-0d6b-4507-882b-e3518dbb6849_1837x1251.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!wHRa!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F30233f4f-2b5a-4cf0-b7bb-8864212febc5_1275x1754.jpeg"
+    ],
+    sources: ["University of Pavia / Italian Ufology Archive / Alien Archivist", "Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-dante-franch-1986",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/dante-franch",
+    parentId: "supernatural-anomalies",
+    name: "Dante Franch Alien & Occupant Photos (Argentina, 1986–1995)",
+    description: "Contactee photographs by Dante Franch documenting diverse extraterrestrial occupants including the Teddy Bear entity, macrocephalic beings, and high-frequency dimensional humanoids.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-dante-franch-1986",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1a240ce4-f7fd-4ff5-b938-d2ab0ec61260_1182x706.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!0s3a!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252Fda2fe7e7-b3b5-4ece-9d05-b182de5495f8_1313x1887.png"
+    ],
+    sources: ["FUPEC (Fundación Planeta Encantado) / Dante Franch Archive / Alien Archivist", "Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-commander-1950",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/commander",
+    parentId: "supernatural-anomalies",
+    name: "The Martian Commander UFO Landing Hoax (Bruges, Belgium, 1950)",
+    description: "Infamous March 1950 front-page press release and photograph of 'de bevelhebber' (the Martian commander) alleged to have landed on Bruges' historic Burg square.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-commander-1950",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!5Hhn!%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F23ed2f51-7447-4865-9d82-3cf4e92cec17_1228x913.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!5Hhn!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F23ed2f51-7447-4865-9d82-3cf4e92cec17_1228x913.png"
+    ],
+    sources: ["Burgerwelzijn Newspaper Archive (Bruges) / Alien Archivist", "Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-genrikh-silanov-1984",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/genrikh-silanov",
+    parentId: "supernatural-anomalies",
+    name: "Genrikh Silanov Voronezh UAP & Entity Sensograms (Russia, 1984–2008)",
+    description: "Two decades of specialized ultraviolet and quartz-lens 'sensograms' by geophysicist Genrikh Silanov capturing invisible humanoids, 'Memory of Space' fields, and UAPs in Voronezh.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-genrikh-silanov-1984",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0f3a6f83-2d59-4bd0-9b5c-8e25ac4ac87c_1208x600.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!VJDI!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F5cecd290-d5ec-47ed-a982-d6ce7f699aee_300x200.jpeg"
+    ],
+    sources: ["Voronezh Geophysical Section / Genrikh Silanov Archive / Alien Archivist", "Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-altamira-2005",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/altamira",
+    parentId: "supernatural-anomalies",
+    name: "The Altamira Thermoelectric Plant Humanoid (Tamaulipas, Mexico, 2005)",
+    description: "Security camera capture of an anomalous, slender humanoid roaming the high-voltage turbine floor of an Altamira thermoelectric plant in September 2005.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-altamira-2005",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F21421909-8f1f-45c5-8061-706b18ab6a76_1042x736.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!xa3o!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F5d071334-ff14-4021-ac74-22a6bf7c746d_960x720.png"
+    ],
+    sources: ["Hoy Extramex / CFE Altamira Security Video / Alien Archivist", "Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-bell-jars-and-gargoyles-1973",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/bell-jars-and-gargoyles",
+    parentId: "supernatural-anomalies",
+    name: "Orval Wyman Clearwater Bell-Jar & Gargoyles (Idaho, 1973)",
+    description: "Translucent bell-jar shaped craft, energy cells, and gargoyle-like occupant forms revealed upon photographic enhancement of Clearwater River snapshots in September 1973.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-bell-jars-and-gargoyles-1973",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe09449c1-5c7f-4d16-aa6e-a995826cf520_708x546.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!pf0N!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F8948cfa8-38d1-4b60-9c4d-cbd8292b776b_2068x1672.png"
+    ],
+    sources: ["Canadian UFO Report / Orval Wyman / Alien Archivist", "Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-hoia-baciu-1968",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/hoia-baciu",
+    parentId: "supernatural-anomalies",
+    name: "Hoia-Baciu Forest Humanoids & UAPs (Cluj-Napoca, Romania, 1960–1994)",
+    description: "Extensive photographic documentation by Alexandru Sift and Romanian researchers of hovering disc crafts, biomechanical humanoids, and luminous apparitions in Hoia-Baciu.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-hoia-baciu-1968",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F458b1b28-4485-43d3-864f-ae8b4502f2dd_1500x1000.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!o7mL!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F8cabfcfd-1407-488c-8426-b3b60bb721bd_768x1024.webp"
+    ],
+    sources: ["Alexandru Sift Archive / Emil Barnea / Romanian Society of Parapsychology / Alien Archivist", "Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-semi-transparent-woman-1995",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/semi-transparent-woman",
+    parentId: "supernatural-anomalies",
+    name: "The Semi-Transparent Woman Restaurant Apparition (Hong Kong, 1995)",
+    description: "Unexplained 35mm film photograph of a couple in a Hong Kong restaurant revealing a semi-transparent woman materialized directly behind them.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-semi-transparent-woman-1995",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!lJKb!%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252Fb0f12fd2-57b0-42eb-ba93-d2db91e50227_2843x2130.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!lJKb!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252Fb0f12fd2-57b0-42eb-ba93-d2db91e50227_2843x2130.png"
+    ],
+    sources: ["Hong Kong Anomalous Photography Archive / Alien Archivist", "Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-shakti-1979",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/shakti",
+    parentId: "supernatural-anomalies",
+    name: "Shōichi Yanaka & Shakti from Lyra (Tokyo, Japan, 1979–2007)",
+    description: "Documented contact by Shōichi Yanaka with Shakti Rirael of Lyra, including the Tokyo disco Polaroid photograph capturing her distinct facial profile.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-shakti-1979",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F13dfb711-1f43-4186-ac43-76ec05293105_319x228.jpeg",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!t3iT!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252Ffeb78f54-430f-4d2a-98e7-67ed2e84b614_144x176.jpeg"
+    ],
+    sources: ["Shōichi Yanaka Archive / Ken Morita / Alien Archivist", "Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-absu-imaily-swandy-1973",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/absu-imaily-swandy",
+    parentId: "supernatural-anomalies",
+    name: "Absu Imaily Swandy & SIC (Turin, Italy, 1973)",
+    description: "Photographs and dossier circulated by Turin's Sidereal Intercontacts Centre concerning Absu Imaily Swandy, an alleged 256-year-old extraterrestrial visitor.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-absu-imaily-swandy-1973",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!ZmwA!%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252Fef5068de-caa5-451c-a943-73f380041fde_385x328.jpeg",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!YDUn!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F04470548-c358-48ee-b3fd-7b31afbd07d0_1059x1324.png"
+    ],
+    sources: ["Sidereal Intercontacts Centre (SIC Turin) / Alien Archivist", "Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-h-mansfield-robinson-1926",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/h-mansfield-robinson",
+    parentId: "supernatural-anomalies",
+    name: "H. Mansfield Robinson & Martian Radio Communications (London, 1926–1929)",
+    description: "Radio transmissions and psychomotormeter communications between London attorney Dr. H. Mansfield Robinson and Martian entities 'Oomaruru' and 'Pawleenoos'.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-h-mansfield-robinson-1926",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!LDn-!%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252Ff10c79cb-a522-4ba6-9132-33eb7a369565_3541x2533.jpeg",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!LDn-!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252Ff10c79cb-a522-4ba6-9132-33eb7a369565_3541x2533.jpeg"
+    ],
+    sources: ["British Post Office Radio Logs / Dr. H. Mansfield Robinson / Alien Archivist", "Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-a-grand-astronomical-picture-1895",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/a-grand-astronomical-picture",
+    parentId: "supernatural-anomalies",
+    name: "Evans & Boursnell Grand Astronomical Spirit Photo (London, 1895–1896)",
+    description: "Earliest known astronomical spirit photograph, produced by J. H. Evans and Richard Boursnell, depicting cosmic entities linked to Cassiopeia, Perseus, and Algol.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-a-grand-astronomical-picture-1895",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2d9a585f-67d5-4817-b7bf-c4d8bd897b3a_1150x718.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!My1B!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F52b92cce-1a6b-4c35-8cf6-a6077d9eef59_2289x3390.jpeg"
+    ],
+    sources: ["British Spiritualist Alliance / Richard Boursnell / Alien Archivist", "Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-daughter-of-venus-1958",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/daughter-of-venus",
+    parentId: "supernatural-anomalies",
+    name: "Dimitrios Symeonidis 'Daughter of Venus' (Athens, Greece, 1958)",
+    description: "Motion picture stills from Bellosean Sphere séances in Athens capturing the materialization of the 'Daughter of Venus' and astral entities.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-daughter-of-venus-1958",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4727424a-03de-45e6-9d94-337e2a83e337_1498x1101.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!B0Y4!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F69b26b89-f316-4f8c-992c-3d27a459a9f8_369x336.jpeg"
+    ],
+    sources: ["Hellenic Society of Metapsychic Research (SSMR) / Alexandros Bellos / Alien Archivist", "Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-leonid-pritsker-1991",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/leonid-pritsker",
+    parentId: "supernatural-anomalies",
+    name: "Leonid Pritsker Ostankino Pascagoula Humanoid (USSR, 1991–1992)",
+    description: "Geophysicist Leonid Pritsker's sensographs capturing clawed, wrinkled-skin entities at Moscow's Ostankino center resembling the Pascagoula humanoids.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-leonid-pritsker-1991",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!-VHG!%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F59118eb6-99ad-4465-ae19-db208aa2c8d7_1373x894.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!fTJB!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252Fdb0da604-6cba-4f0e-99ef-b124754cfed6_1770x1815.png"
+    ],
+    sources: ["Leonid Pritsker Sensograph Archive / Soviet Geophysical Society / Alien Archivist", "Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-carroll-watts-1967",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/carroll-watts",
+    parentId: "supernatural-anomalies",
+    name: "Carroll Watts UFO & Martian Pilot Encounter (Loco, Texas, 1967)",
+    description: "Photographs taken by farmer Carroll Watts in Childress County, Texas, depicting an oval craft and its suited pilot claiming Martian origins.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-carroll-watts-1967",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd877c00f-234d-4f61-a1af-5725cded77e4_1200x630.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!snn7!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F8f6f565d-e550-45f5-86fd-00049eeb495f_1078x1473.png"
+    ],
+    sources: ["J. Allen Hynek Center for UFO Studies (CUFOS) / Project Blue Book / Alien Archivist", "Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-horev-klub-diary-1939",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/horev-klub-diary",
+    parentId: "supernatural-anomalies",
+    name: "Horev-Klub Hermetic Diary Entity Photos (Czechoslovakia, 1939–1940)",
+    description: "Esoteric photographic plates from the 1939–1940 Horev-Klub diary preserving elemental, gnome, and planetary entity manifestations during Prague invocations.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-horev-klub-diary-1939",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F513e02a9-0448-4086-b9c9-583c3a18302d_1630x1054.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!dXu0!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F6ca94e04-3792-4aba-b58b-6c4debca4596_841x643.png"
+    ],
+    sources: ["Dokumentační centrum českého hermetismu (DCČH) / Petr Kalač / Alien Archivist", "Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-venusian-woman-1960",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/venusian-woman",
+    parentId: "supernatural-anomalies",
+    name: "The Venusian Woman in the Crowd (Wiesbaden, West Germany, 1960)",
+    description: "Bunte Münchner Illustrierte photograph of an enigmatic blond attendee at the 1960 Wiesbaden UFO Congress identified as claiming Venusian origins.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-venusian-woman-1960",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa24b6f60-49a3-4c8b-978d-f1baf8de947d_1039x604.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!g0RN!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252Ff56c1bd6-d6c0-46d4-bde3-67e065984e00_1222x399.png"
+    ],
+    sources: ["Bunte Münchner Illustrierte (Nov 12, 1960) / Alien Archivist", "Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-indrid-cold-1969",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/indrid-cold",
+    parentId: "supernatural-anomalies",
+    name: "Allen Greenfield Photograph of Indrid Cold (Charleston, WV, 1969)",
+    description: "June 1969 photograph by Allen Greenfield of a stiff, grinning, putty-skinned man at a Charleston convention identified with Indrid Cold and Men in Black phenomena.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-indrid-cold-1969",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!B_RP!%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F7011b365-1918-414a-9a14-760e88d245fb_1536x1066.jpeg",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!GVmi!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F3c04966a-4e5c-48ec-a482-30db4b2d9038_766x1140.jpeg"
+    ],
+    sources: ["Allen H. Greenfield Archive / NICAP / Alien Archivist", "Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root","indrid-cold"],
+  },
+  {
+    id: "codex-sighting-elizabeth-klarer-1954",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/elizabeth-klarer",
+    parentId: "supernatural-anomalies",
+    name: "Elizabeth Klarer & Akon of Meton (Drakensberg, South Africa, 1954–1983)",
+    description: "Extensive photographic archive by Elizabeth Klarer documenting landings of Akon's Meton spacecraft and portraits of the extraterrestrial visitor in the Drakensberg.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-elizabeth-klarer-1954",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!l-0t!%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252Fc30fb081-474e-4a36-897f-e39dcc4c1942_1080x1350.jpeg",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!tiZe!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252Fc91c4435-b7e3-4960-85dd-56dee0b4660a_702x1174.png"
+    ],
+    sources: ["Elizabeth Klarer Archive / Beyond the Light Barrier / Alien Archivist", "Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-anna-m-stewart-1883",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/anna-m-stewart",
+    parentId: "supernatural-anomalies",
+    name: "Anna M. Stewart Planetary Spirits (Terre Haute, Indiana, 1883)",
+    description: "1883 séance engraving 'Group of Planetary Spirits' from medium Anna M. Stewart's physical materialization sessions at Pence Hall in Terre Haute.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-anna-m-stewart-1883",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!88Pq!%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F0e3c1ccf-1688-4ba2-8ddb-8aee8ae617f8_1416x842.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!y6j9!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F10f15e4f-2350-4fea-8669-fd961a7b4ada_632x810.jpeg"
+    ],
+    sources: ["Gallery of Spirit Art (1883) / Pence Hall Séance Records / Alien Archivist", "Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-marfa-yegorovna-2009",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/marfa-yegorovna",
+    parentId: "supernatural-anomalies",
+    name: "Marfa Yegorovna Refrigerator Alien (Petrozavodsk, Russia, 2009–2011)",
+    description: "Photographs of an alleged recovered humanoid body stored in a home refrigerator in Karelia, Russia, following a 2009 crash near Petrozavodsk.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-marfa-yegorovna-2009",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!_zE4!%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F776101b9-722f-4365-9467-5a9b69c8cb4d_620x479.jpeg",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!_zE4!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F776101b9-722f-4365-9467-5a9b69c8cb4d_620x479.jpeg"
+    ],
+    sources: ["Karelian Academy of Sciences / Russian Media Reports / Alien Archivist", "Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-giovanna-podda-1999",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/giovanna-podda",
+    parentId: "supernatural-anomalies",
+    name: "Giovanna Podda Farm Grey Humanoids (Sardinia, Italy, 1999)",
+    description: "Sardinian farm photographs taken by contactee Giovanna Podda capturing classic Grey entities observing her residence.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-giovanna-podda-1999",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0808385d-a198-4ae2-b933-04095796a6a3_1738x1111.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!wlyI!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F7a2aa439-39dc-4ead-99dd-156e3edd581a_328x333.jpeg"
+    ],
+    sources: ["Mediaset / Mistero / Giovanna Podda Case File / Alien Archivist", "Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-little-green-man-2000",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/little-green-man",
+    parentId: "supernatural-anomalies",
+    name: "The Quebec 'Little Green Man' Photograph (Canada, c. 2000)",
+    description: "Party snapshot taken in Quebec revealing a vivid green humanoid entity with prominent dark eyes lurking in the upper corner of the room.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-little-green-man-2000",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb1f6330d-26c4-4733-ace3-a2a1a357d73a_552x363.jpeg",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!_dMW!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252Fa908a0e8-3895-4b37-89b0-cb17ad5ac6ed_331x283.jpeg"
+    ],
+    sources: ["Albert S. Rosales Humanoid Encounters / Alien Archivist", "Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-2026-4chan-alien-2026",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/2026-4chan-alien",
+    parentId: "supernatural-anomalies",
+    name: "2026 4chan NHI Autopsy Leak (USA, 2026)",
+    description: "September 2026 4chan /x/ leak purporting to depict a non-human intelligence biological specimen retrieved from classified government crash retrieval programs.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-2026-4chan-alien-2026",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F35b44b19-277c-475b-ac3e-0ebd1606ea51_1894x960.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!VC5W!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252Fee2d131c-2256-471a-97d1-2010aa3c01a2_1295x941.png"
+    ],
+    sources: ["4chan /x/ Paranormal Leak / Classified Archive / Alien Archivist", "Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-jose-clares-1978",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/jose-clares",
+    parentId: "supernatural-anomalies",
+    name: "José Clarés Astral Being (Barcelona–Ibiza Ferry, 1978)",
+    description: "Translucent humanoid figure captured on film by Spanish artist José Clarés aboard a Barcelona-Ibiza ferry where no physical person was standing.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-jose-clares-1978",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe44b0dc6-d303-44ae-a8d6-3182e40f00e3_994x894.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!V5De!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F8a0556ad-5984-46d6-a500-b9b3a03e6885_511x652.png"
+    ],
+    sources: ["Antonio Ribera Archive / José María Clarés Jerez / Alien Archivist", "Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-yoshio-asano-1973",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/yoshio-asano",
+    parentId: "supernatural-anomalies",
+    name: "Yoshio Asano Mantis-Man Photo (Gunma, Japan, 1973)",
+    description: "September 1973 photograph taken in Gunma Prefecture revealing an insectoid mantis-like entity positioned immediately behind young Yoshio Asano.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-yoshio-asano-1973",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!NWH7!%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F71ee439d-6564-4e46-8c82-90ab4af7e09e_640x502.jpeg",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!NWH7!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F71ee439d-6564-4e46-8c82-90ab4af7e09e_640x502.jpeg"
+    ],
+    sources: ["Japanese Ufological Archive / Yoshio Asano / Alien Archivist", "Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-valiant-thor-1958",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/valiant-thor",
+    parentId: "supernatural-anomalies",
+    name: "Valiant Thor & Venusian Visitors (High Bridge, NJ, 1958)",
+    description: "July 1958 photographs by August C. Roberts of Valiant Thor, Jill, and Don at High Bridge, NJ, later detailed in Frank Stranges' Stranger at the Pentagon.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-valiant-thor-1958",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!11AT!%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F604b15a2-b9a9-40b6-b431-24c8f5431a39_900x900.jpeg",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!lKZ6!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F5c19c94f-8cf2-4061-8718-04b357e51f7b_1078x919.png"
+    ],
+    sources: ["August C. Roberts Archive / Stranger at the Pentagon / Alien Archivist", "Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root"],
+  },
+  {
+    id: "codex-sighting-greys-cattle-video-2026",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/greys-cattle-video",
+    parentId: "supernatural-anomalies",
+    name: "Grey Aliens Inspecting Cattle Video Leak (2026)",
+    description: "October 2026 footage depicting four Grey humanoids in a pasture, with sentinels standing guard as an entity examines an immobilized cow with a luminous device.",
+    layer: "Alien Sightings",
+    mapFeatureId: "alien-sighting-greys-cattle-video-2026",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!6BBd!%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F36004441-6012-41ff-8163-59603ef2fe7e_1867x2112.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!wLEj!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_lossy%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F29f55e26-28b3-4f64-8754-7e0d4486b10b_440x504.gif"
+    ],
+    sources: ["Reddit Leak Archive / Farmer Night Cam / Alien Archivist", "Alien Archivist (alienarchivist.substack.com)"],
+    relatedIds: ["supernatural-anomalies","alien-sightings-root","cattle-mutilations-root"],
+  }
+];
+
+TERM_TREE_DATA.push(...chunk_alien_archivist_latest_additions);
+
+
 
 
 // Number the books of the Bible sequentially to preserve their canonical order in the sorted UI

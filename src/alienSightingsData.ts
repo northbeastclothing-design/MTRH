@@ -925,5 +925,565 @@ export const ALIEN_SIGHTINGS_DATA: AlienSightingCase[] = [
     images: [
           "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F94163ef6-467b-43cd-906b-b7b0b24d956b_2728x1534.png"
     ]
+  },
+  {
+    id: "alien-sighting-pavia-entity-1986",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/pavia-entity",
+    name: "The Pavia Entity Alien Photographs - Pavia, Italy",
+    category: "Alien Sightings",
+    type: "Point",
+    coordinates: {
+      lng: 9.1582,
+      lat: 45.1847
+    },
+    date: 1986,
+    displayDate: "Summer 1986",
+    description: "In the summer of 1986, an unidentified University of Pavia professor captured five color photographs of an extraterrestrial entity while conducting scientific experiments on the visual perception of dogs. The anomalous figure, exhibiting distinct non-human biological features, was subsequently published in Italian ufological journals in 1988.",
+    source: "University of Pavia / Italian Ufology Archive / Alien Archivist",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffe9b5cd8-0d6b-4507-882b-e3518dbb6849_1837x1251.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!wHRa!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F30233f4f-2b5a-4cf0-b7bb-8864212febc5_1275x1754.jpeg"
+    ]
+  },
+  {
+    id: "alien-sighting-dante-franch-1986",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/dante-franch",
+    name: "Dante Franch Alien & Occupant Photographs - Argentina",
+    category: "Alien Sightings",
+    type: "Point",
+    coordinates: {
+      lng: -64.1888,
+      lat: -31.4201
+    },
+    date: 1986,
+    displayDate: "1986–1995",
+    description: "Argentine contactee and FUPEC researcher Dante Alberto Franch captured a remarkable series of photographs from 1986 to 1997 documenting both unconventional crafts and extraterrestrial occupants. Among the entities documented were the 'Teddy Bear' entity, the macrocephalic humanoid, and luminous highly evolved beings during contact events.",
+    source: "FUPEC (Fundación Planeta Encantado) / Dante Franch Archive / Alien Archivist",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1a240ce4-f7fd-4ff5-b938-d2ab0ec61260_1182x706.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!0s3a!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252Fda2fe7e7-b3b5-4ece-9d05-b182de5495f8_1313x1887.png"
+    ]
+  },
+  {
+    id: "alien-sighting-commander-1950",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/commander",
+    name: "The Martian Commander & Flying Saucer Landing - Bruges, Belgium",
+    category: "Alien Sightings",
+    type: "Point",
+    coordinates: {
+      lng: 3.2267,
+      lat: 51.2089
+    },
+    date: 1950,
+    displayDate: "03-31-1950",
+    description: "On March 31, 1950, the Bruges newspaper Burgerwelzijn published a sensational front-page report accompanied by a photograph claiming a 45-meter Martian flying disc had landed on the historic Burg square with 26 extraterrestrials aboard. The photograph captured the entity referred to as 'de bevelhebber' (the commander), sparking international intrigue as one of early ufology's most infamous April Fools hoaxes.",
+    source: "Burgerwelzijn Newspaper Archive (Bruges) / Alien Archivist",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!5Hhn!%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F23ed2f51-7447-4865-9d82-3cf4e92cec17_1228x913.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!5Hhn!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F23ed2f51-7447-4865-9d82-3cf4e92cec17_1228x913.png"
+    ]
+  },
+  {
+    id: "alien-sighting-genrikh-silanov-1984",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/genrikh-silanov",
+    name: "Genrikh Silanov Voronezh UAP & Entity Sensograms - Voronezh, Russia",
+    category: "Alien Sightings",
+    type: "Point",
+    coordinates: {
+      lng: 39.1843,
+      lat: 51.672
+    },
+    date: 1984,
+    displayDate: "1984–2008",
+    description: "Geophysicist Genrikh Silanov conducted extensive photographic expeditions in the Voronezh region over more than two decades, developing specialized ultraviolet and quartz-lens cameras to capture 'Memory of Space' phenomena. His archives documented translucent humanoid figures, UAPs, and anomalous plasma structures invisible to normal human sight.",
+    source: "Voronezh Geophysical Section / Genrikh Silanov Archive / Alien Archivist",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0f3a6f83-2d59-4bd0-9b5c-8e25ac4ac87c_1208x600.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!VJDI!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F5cecd290-d5ec-47ed-a982-d6ce7f699aee_300x200.jpeg"
+    ]
+  },
+  {
+    id: "alien-sighting-altamira-2005",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/altamira",
+    name: "The Altamira Thermoelectric Plant Humanoid - Altamira, Mexico",
+    category: "Alien Sightings",
+    type: "Point",
+    coordinates: {
+      lng: -97.9378,
+      lat: 22.3925
+    },
+    date: 2005,
+    displayDate: "09-25-2005",
+    description: "On September 25, 2005, security watchmen at an electrical power generating plant in Altamira recorded a bizarre, slender humanoid entity maneuvering through the high-voltage turbine sector on surveillance cameras. The startling still frames made front-page headlines across Mexico with the declaration '¡Extraterrestres Invaden Altamira!'.",
+    source: "Hoy Extramex / CFE Altamira Security Video / Alien Archivist",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F21421909-8f1f-45c5-8061-706b18ab6a76_1042x736.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!xa3o!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F5d071334-ff14-4021-ac74-22a6bf7c746d_960x720.png"
+    ]
+  },
+  {
+    id: "alien-sighting-bell-jars-and-gargoyles-1973",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/bell-jars-and-gargoyles",
+    name: "Orval Wyman Clearwater River Bell-Jar & Gargoyles - Idaho",
+    category: "Alien Sightings",
+    type: "Point",
+    coordinates: {
+      lng: -116.32,
+      lat: 46.495
+    },
+    date: 1973,
+    displayDate: "09-1973",
+    description: "In September 1973, while photographing the scenic Clearwater River in Idaho, Orval Wyman and his wife captured what later optical analysis revealed as an extraordinary anomaly: a translucent bluish bell-jar craft, an energy cell, and grotesque gargoyle-like occupant forms suspended above the tree line.",
+    source: "Canadian UFO Report / Orval Wyman / Alien Archivist",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe09449c1-5c7f-4d16-aa6e-a995826cf520_708x546.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!pf0N!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F8948cfa8-38d1-4b60-9c4d-cbd8292b776b_2068x1672.png"
+    ]
+  },
+  {
+    id: "alien-sighting-hoia-baciu-1968",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/hoia-baciu",
+    name: "Hoia-Baciu Forest Humanoids & Disc Craft - Cluj-Napoca, Romania",
+    category: "Alien Sightings",
+    type: "Point",
+    coordinates: {
+      lng: 23.5186,
+      lat: 46.7733
+    },
+    date: 1968,
+    displayDate: "1960–1994",
+    description: "Biologist Alexandru Sift and military technician Emil Barnea documented world-renowned anomalous aerial discs and humanoid apparitions within the notorious Hoia-Baciu Forest near Cluj-Napoca. Known as the 'Bermuda Triangle of Transylvania', the region exhibits spatial distortions, vegetation anomalies, and frequent photographic manifestations of shadow and luminous beings.",
+    source: "Alexandru Sift Archive / Emil Barnea / Romanian Society of Parapsychology / Alien Archivist",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F458b1b28-4485-43d3-864f-ae8b4502f2dd_1500x1000.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!o7mL!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F8cabfcfd-1407-488c-8426-b3b60bb721bd_768x1024.webp"
+    ]
+  },
+  {
+    id: "alien-sighting-semi-transparent-woman-1995",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/semi-transparent-woman",
+    name: "The Semi-Transparent Woman Restaurant Apparition - Hong Kong",
+    category: "Alien Sightings",
+    type: "Point",
+    coordinates: {
+      lng: 114.1694,
+      lat: 22.3193
+    },
+    date: 1995,
+    displayDate: "1995",
+    description: "In 1995, a snapshot taken of a couple dining in a Hong Kong restaurant captured a semi-transparent, luminous female figure standing directly behind them. Analysis revealed no physical reflection or double exposure, appearing as an interdimensional or astral being materializing momentarily across the electromagnetic spectrum.",
+    source: "Hong Kong Anomalous Photography Archive / Alien Archivist",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!lJKb!%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252Fb0f12fd2-57b0-42eb-ba93-d2db91e50227_2843x2130.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!lJKb!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252Fb0f12fd2-57b0-42eb-ba93-d2db91e50227_2843x2130.png"
+    ]
+  },
+  {
+    id: "alien-sighting-shakti-1979",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/shakti",
+    name: "Shōichi Yanaka & Shakti of Constellation Lyra - Tokyo, Japan",
+    category: "Alien Sightings",
+    type: "Point",
+    coordinates: {
+      lng: 139.6503,
+      lat: 35.6762
+    },
+    date: 1979,
+    displayDate: "1979–2007",
+    description: "Japanese contactee Shōichi Yanaka (Swami Deva Saka) reported telepathic contact with an extraterrestrial female emissary named Shakti Rirael from the Lyra star system. In 1991, an unexplainable Polaroid photograph showing her distinct facial structure was discovered on a bulletin board in a Roppongi disco, which Yanaka later authenticated.",
+    source: "Shōichi Yanaka Archive / Ken Morita / Alien Archivist",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F13dfb711-1f43-4186-ac43-76ec05293105_319x228.jpeg",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!t3iT!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252Ffeb78f54-430f-4d2a-98e7-67ed2e84b614_144x176.jpeg"
+    ]
+  },
+  {
+    id: "alien-sighting-absu-imaily-swandy-1973",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/absu-imaily-swandy",
+    name: "Absu Imaily Swandy (Sidereal Intercontacts Centre) - Turin, Italy",
+    category: "Alien Sightings",
+    type: "Point",
+    coordinates: {
+      lng: 7.6869,
+      lat: 45.0703
+    },
+    date: 1973,
+    displayDate: "1973",
+    description: "In 1973, the secretive Sidereal Intercontacts Centre (SIC) in Turin circulated communiqués and photographs concerning Absu Imaily Swandy, an alleged 256-year-old extraterrestrial traveler. The organization detailed contacts with galactic emissaries visiting Italy, accompanied by remarkable portrait photographs of the visitor.",
+    source: "Sidereal Intercontacts Centre (SIC Turin) / Alien Archivist",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!ZmwA!%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252Fef5068de-caa5-451c-a943-73f380041fde_385x328.jpeg",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!YDUn!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F04470548-c358-48ee-b3fd-7b31afbd07d0_1059x1324.png"
+    ]
+  },
+  {
+    id: "alien-sighting-h-mansfield-robinson-1926",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/h-mansfield-robinson",
+    name: "H. Mansfield Robinson & Miss Mars 'Oomaruru' Communications - London, UK",
+    category: "Alien Sightings",
+    type: "Point",
+    coordinates: {
+      lng: -0.1278,
+      lat: 51.5074
+    },
+    date: 1926,
+    displayDate: "1926–1929",
+    description: "Prominent London lawyer Dr. H. Mansfield Robinson made worldwide headlines between 1926 and 1929 using high-powered British Post Office radio stations and telepathic 'psychomotormeters' to transmit and receive long-distance communications with an alleged Martian civilization, specifically exchanging messages with Martian woman 'Oomaruru'.",
+    source: "British Post Office Radio Logs / Dr. H. Mansfield Robinson / Alien Archivist",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!LDn-!%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252Ff10c79cb-a522-4ba6-9132-33eb7a369565_3541x2533.jpeg",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!LDn-!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252Ff10c79cb-a522-4ba6-9132-33eb7a369565_3541x2533.jpeg"
+    ]
+  },
+  {
+    id: "alien-sighting-a-grand-astronomical-picture-1895",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/a-grand-astronomical-picture",
+    name: "J. H. Evans & Richard Boursnell Celestial Spirit Photo - London, UK",
+    category: "Alien Sightings",
+    type: "Point",
+    coordinates: {
+      lng: -0.1278,
+      lat: 51.5074
+    },
+    date: 1895,
+    displayDate: "1895–1896",
+    description: "Produced in 1895–1896 by medium J. H. Evans ('Mr. Starling') and pioneering spirit photographer Richard Boursnell, 'A Grand Astronomical Picture from the Spirit-World' is recognized as the earliest known photographic composition linking disembodied entities directly to deep-sky celestial bodies, Cassiopeia, Perseus, and the demon star Algol.",
+    source: "British Spiritualist Alliance / Richard Boursnell / Alien Archivist",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2d9a585f-67d5-4817-b7bf-c4d8bd897b3a_1150x718.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!My1B!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F52b92cce-1a6b-4c35-8cf6-a6077d9eef59_2289x3390.jpeg"
+    ]
+  },
+  {
+    id: "alien-sighting-daughter-of-venus-1958",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/daughter-of-venus",
+    name: "Dimitrios Symeonidis 'Daughter of Venus' & Bellosean Sphere - Athens, Greece",
+    category: "Alien Sightings",
+    type: "Point",
+    coordinates: {
+      lng: 23.7275,
+      lat: 37.9838
+    },
+    date: 1958,
+    displayDate: "1958",
+    description: "In 1958, the Hellenic Society of Metapsychic Research filmed seance experiments utilizing the 'Bellosean Sphere' invented by Alexandros Bellos. The surviving motion picture frames and still photos show the sudden physical materialization of an entity named the 'Daughter of Venus' along with Yogi Yakhve beside medium Dimitrios Symeonidis.",
+    source: "Hellenic Society of Metapsychic Research (SSMR) / Alexandros Bellos / Alien Archivist",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4727424a-03de-45e6-9d94-337e2a83e337_1498x1101.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!B0Y4!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F69b26b89-f316-4f8c-992c-3d27a459a9f8_369x336.jpeg"
+    ]
+  },
+  {
+    id: "alien-sighting-leonid-pritsker-1991",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/leonid-pritsker",
+    name: "Leonid Pritsker Ostankino Pascagoula Humanoid - Moscow & Almaty",
+    category: "Alien Sightings",
+    type: "Point",
+    coordinates: {
+      lng: 37.6189,
+      lat: 55.8239
+    },
+    date: 1991,
+    displayDate: "1991–1992",
+    description: "Soviet geophysicist Leonid Pritsker obtained startling 'sensograph' photographs at the Ostankino television center in Moscow in 1991, revealing a wrinkled-skin humanoid with claw-like appendages bearing an uncanny resemblance to the 1973 Pascagoula abductors, followed by phantom facial manifestations in Alma-Ata.",
+    source: "Leonid Pritsker Sensograph Archive / Soviet Geophysical Society / Alien Archivist",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!-VHG!%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F59118eb6-99ad-4465-ae19-db208aa2c8d7_1373x894.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!fTJB!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252Fdb0da604-6cba-4f0e-99ef-b124754cfed6_1770x1815.png"
+    ]
+  },
+  {
+    id: "alien-sighting-carroll-watts-1967",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/carroll-watts",
+    name: "Carroll Watts UFO & Martian Pilot Encounter - Loco, Texas",
+    category: "Alien Sightings",
+    type: "Point",
+    coordinates: {
+      lng: -100.1287,
+      lat: 34.9392
+    },
+    date: 1967,
+    displayDate: "06-1967",
+    description: "In June 1967, Texas farmer Carroll Wayne Watts reported encountering an oval craft in Childress County and photographing both the UFO and a suited entity claiming to be an expedition pilot from Mars. Despite subsequent polygraph disputes and claims of a hoax, Project Blue Book consultant Dr. J. Allen Hynek noted that the physical photographic evidence remained unexplained.",
+    source: "J. Allen Hynek Center for UFO Studies (CUFOS) / Project Blue Book / Alien Archivist",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd877c00f-234d-4f61-a1af-5725cded77e4_1200x630.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!snn7!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F8f6f565d-e550-45f5-86fd-00049eeb495f_1078x1473.png"
+    ]
+  },
+  {
+    id: "alien-sighting-horev-klub-diary-1939",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/horev-klub-diary",
+    name: "Horev-Klub Hermetic Diary Entity Photos - Czechoslovakia",
+    category: "Alien Sightings",
+    type: "Point",
+    coordinates: {
+      lng: 14.4378,
+      lat: 50.0755
+    },
+    date: 1939,
+    displayDate: "1939–1940",
+    description: "Preserved in the Documentation Centre of Czech Hermeticism, the classified 1939–1940 diary of the esoteric Horev-Klub contains extraordinary photographic plates showing manifested nature elementals, gnomes, and planetary astral entities captured during ceremonial invocations on the eve of World War II.",
+    source: "Dokumentační centrum českého hermetismu (DCČH) / Petr Kalač / Alien Archivist",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F513e02a9-0448-4086-b9c9-583c3a18302d_1630x1054.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!dXu0!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F6ca94e04-3792-4aba-b58b-6c4debca4596_841x643.png"
+    ]
+  },
+  {
+    id: "alien-sighting-venusian-woman-1960",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/venusian-woman",
+    name: "The Venusian Woman in the Crowd (Wiesbaden Congress) - Germany",
+    category: "Alien Sightings",
+    type: "Point",
+    coordinates: {
+      lng: 8.2417,
+      lat: 50.082
+    },
+    date: 1960,
+    displayDate: "10-1960",
+    description: "In October 1960, photojournalists covering the International UFO Congress in Wiesbaden for the German periodical Bunte Münchner Illustrierte photographed an unidentified, strikingly elegant blond woman seated among attendees, officially captioning the photo as an enigmatic individual who claimed to have arrived directly from Venus.",
+    source: "Bunte Münchner Illustrierte (Nov 12, 1960) / Alien Archivist",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa24b6f60-49a3-4c8b-978d-f1baf8de947d_1039x604.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!g0RN!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252Ff56c1bd6-d6c0-46d4-bde3-67e065984e00_1222x399.png"
+    ]
+  },
+  {
+    id: "alien-sighting-indrid-cold-1969",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/indrid-cold",
+    name: "Allen Greenfield Photograph of Indrid Cold - Charleston, West Virginia",
+    category: "Alien Sightings",
+    type: "Point",
+    coordinates: {
+      lng: -81.6326,
+      lat: 38.3498
+    },
+    date: 1969,
+    displayDate: "06-1969",
+    description: "At a June 1969 UFO convention in Charleston, West Virginia, ufologist and author Allen Greenfield photographed an unsettling, stiff-moving attendee with a putty-like complexion and unnatural fixed grin. The subject was later linked by researchers to 'Indrid Cold' and the Men in Black phenomena documented across the Ohio River Valley following the Mothman wave.",
+    source: "Allen H. Greenfield Archive / NICAP / Alien Archivist",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!B_RP!%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F7011b365-1918-414a-9a14-760e88d245fb_1536x1066.jpeg",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!GVmi!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F3c04966a-4e5c-48ec-a482-30db4b2d9038_766x1140.jpeg"
+    ]
+  },
+  {
+    id: "alien-sighting-elizabeth-klarer-1954",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/elizabeth-klarer",
+    name: "Elizabeth Klarer & Akon of Meton Encounters - South Africa",
+    category: "Alien Sightings",
+    type: "Point",
+    coordinates: {
+      lng: 29.9983,
+      lat: -29.2133
+    },
+    date: 1954,
+    displayDate: "1954–1983",
+    description: "Renowned South African contactee Elizabeth Klarer documented a multi-decade relationship with Akon, an astrophysicist from the planet Meton in the Proxima Centauri star system. Klarer captured multiple clear photographs of Akon's silver reconnaissance ship landing in the Drakensberg mountains, as well as portraits of the extraterrestrial pilot.",
+    source: "Elizabeth Klarer Archive / Beyond the Light Barrier / Alien Archivist",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!l-0t!%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252Fc30fb081-474e-4a36-897f-e39dcc4c1942_1080x1350.jpeg",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!tiZe!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252Fc91c4435-b7e3-4960-85dd-56dee0b4660a_702x1174.png"
+    ]
+  },
+  {
+    id: "alien-sighting-anna-m-stewart-1883",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/anna-m-stewart",
+    name: "Anna M. Stewart 'Group of Planetary Spirits' - Terre Haute, Indiana",
+    category: "Alien Sightings",
+    type: "Point",
+    coordinates: {
+      lng: -87.4139,
+      lat: 39.4667
+    },
+    date: 1883,
+    displayDate: "1883",
+    description: "In 1883, the spiritualist journal Gallery of Spirit Art published an engraving created from full-form materialization séances held by medium Anna M. Stewart at Pence Hall in Terre Haute, Indiana. The plate, titled 'Group of Planetary Spirits', depicts distinct extraterrestrial beings claimed to inhabit other planetary spheres in our solar system.",
+    source: "Gallery of Spirit Art (1883) / Pence Hall Séance Records / Alien Archivist",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!88Pq!%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F0e3c1ccf-1688-4ba2-8ddb-8aee8ae617f8_1416x842.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!y6j9!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F10f15e4f-2350-4fea-8669-fd961a7b4ada_632x810.jpeg"
+    ]
+  },
+  {
+    id: "alien-sighting-marfa-yegorovna-2009",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/marfa-yegorovna",
+    name: "Marfa Yegorovna Refrigerator Alien Specimen - Petrozavodsk, Russia",
+    category: "Alien Sightings",
+    type: "Point",
+    coordinates: {
+      lng: 34.3469,
+      lat: 61.7849
+    },
+    date: 2009,
+    displayDate: "2009–2011",
+    description: "In November 2011, Russian news media publicized photographs taken by Marfa Yegorovna of Petrozavodsk, Karelia, who claimed to have recovered a small bi-pedal humanoid entity from a crashed metallic craft near her dacha in 2009. She allegedly stored the frozen biological specimen in her refrigerator for two years before it was confiscated by unidentified officials.",
+    source: "Karelian Academy of Sciences / Russian Media Reports / Alien Archivist",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!_zE4!%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F776101b9-722f-4365-9467-5a9b69c8cb4d_620x479.jpeg",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!_zE4!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F776101b9-722f-4365-9467-5a9b69c8cb4d_620x479.jpeg"
+    ]
+  },
+  {
+    id: "alien-sighting-giovanna-podda-1999",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/giovanna-podda",
+    name: "Giovanna Podda Farm Grey Humanoids - Sardinia, Italy",
+    category: "Alien Sightings",
+    type: "Point",
+    coordinates: {
+      lng: 9,
+      lat: 39.75
+    },
+    date: 1999,
+    displayDate: "1999",
+    description: "Italian lifelong contactee Giovanna Podda captured several photographs at her family farm in Sardinia in 1999 showing classic Grey extraterrestrial entities with almond eyes and slender torsos peering from behind trees and stone walls. Podda underwent extensive clinical examinations detailing missing time and biological anomalies.",
+    source: "Mediaset / Mistero / Giovanna Podda Case File / Alien Archivist",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0808385d-a198-4ae2-b933-04095796a6a3_1738x1111.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!wlyI!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F7a2aa439-39dc-4ead-99dd-156e3edd581a_328x333.jpeg"
+    ]
+  },
+  {
+    id: "alien-sighting-little-green-man-2000",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/little-green-man",
+    name: "The Quebec 'Little Green Man' Photograph - Quebec, Canada",
+    category: "Alien Sightings",
+    type: "Point",
+    coordinates: {
+      lng: -71.208,
+      lat: 46.8139
+    },
+    date: 2000,
+    displayDate: "c. 2000",
+    description: "An anonymous partygoer in Quebec snapped an indoor gathering with a 35mm camera, noticing nothing unusual until the photo was developed. Positioned in the upper corner of the room was a small, vibrant green humanoid with large dark eyes peering intently toward the room, later investigated by humanoid cataloger Albert S. Rosales.",
+    source: "Albert S. Rosales Humanoid Encounters / Alien Archivist",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb1f6330d-26c4-4733-ace3-a2a1a357d73a_552x363.jpeg",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!_dMW!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252Fa908a0e8-3895-4b37-89b0-cb17ad5ac6ed_331x283.jpeg"
+    ]
+  },
+  {
+    id: "alien-sighting-2026-4chan-alien-2026",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/2026-4chan-alien",
+    name: "The 2026 4chan Autopsy & Crash Retrieval Leak - USA",
+    category: "Alien Sightings",
+    type: "Point",
+    coordinates: {
+      lng: -77.0563,
+      lat: 38.8719
+    },
+    date: 2026,
+    displayDate: "09-30-2026",
+    description: "On September 30, 2026, an anonymous whistleblower posted a photographic file to 4chan's /x/ board titled 'New Alien Autopsy Photo Leak', asserting it was exfiltrated from a secure government drive. The high-contrast image shows a Non-Human Intelligence (NHI) specimen consistent with historical UAP crash retrieval dossiers discussed in congressional testimony.",
+    source: "4chan /x/ Paranormal Leak / Classified Archive / Alien Archivist",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F35b44b19-277c-475b-ac3e-0ebd1606ea51_1894x960.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!VC5W!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252Fee2d131c-2256-471a-97d1-2010aa3c01a2_1295x941.png"
+    ]
+  },
+  {
+    id: "alien-sighting-jose-clares-1978",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/jose-clares",
+    name: "José Clarés Astral Being Photograph - Spain",
+    category: "Alien Sightings",
+    type: "Point",
+    coordinates: {
+      lng: 2,
+      lat: 39.85
+    },
+    date: 1978,
+    displayDate: "1978",
+    description: "In 1978, Spanish artist José María Clarés Jerez, associated with pioneer ufologist Antonio Ribera, photographed the deck of a ferry traversing the Mediterranean from Barcelona to Ibiza. The resulting emulsion revealed a translucent, tall human-like astral figure standing on deck where no passenger had been present.",
+    source: "Antonio Ribera Archive / José María Clarés Jerez / Alien Archivist",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe44b0dc6-d303-44ae-a8d6-3182e40f00e3_994x894.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!V5De!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F8a0556ad-5984-46d6-a500-b9b3a03e6885_511x652.png"
+    ]
+  },
+  {
+    id: "alien-sighting-yoshio-asano-1973",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/yoshio-asano",
+    name: "Yoshio Asano Mantis-Man Photograph - Gunma Prefecture, Japan",
+    category: "Alien Sightings",
+    type: "Point",
+    coordinates: {
+      lng: 139.0604,
+      lat: 36.3907
+    },
+    date: 1973,
+    displayDate: "09-09-1973",
+    description: "On September 9, 1973, in Gunma Prefecture, Yoshio Asano was photographed outdoors by his father. Upon film development, an ominous insectoid 'Mantis-Man' figure with prominent ocular structures was visible looming immediately behind Asano, becoming a classic Japanese humanoid case.",
+    source: "Japanese Ufological Archive / Yoshio Asano / Alien Archivist",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!NWH7!%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F71ee439d-6564-4e46-8c82-90ab4af7e09e_640x502.jpeg",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!NWH7!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F71ee439d-6564-4e46-8c82-90ab4af7e09e_640x502.jpeg"
+    ]
+  },
+  {
+    id: "alien-sighting-valiant-thor-1958",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/valiant-thor",
+    name: "Valiant Thor & Venusian Visitors - High Bridge, New Jersey",
+    category: "Alien Sightings",
+    type: "Point",
+    coordinates: {
+      lng: -74.8968,
+      lat: 40.6698
+    },
+    date: 1958,
+    displayDate: "07-13-1958",
+    description: "On July 13, 1958, ufologist August C. Roberts photographed three alleged Venusian visitors—identified as Jill, Don, and Valiant Thor—at Howard Menger's gathering in High Bridge, NJ. Commander Valiant Thor was famously chronicled by Dr. Frank E. Stranges in 'Stranger at the Pentagon' as an extraterrestrial liaison who met with President Eisenhower.",
+    source: "August C. Roberts Archive / Stranger at the Pentagon / Alien Archivist",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!11AT!%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F604b15a2-b9a9-40b6-b431-24c8f5431a39_900x900.jpeg",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!lKZ6!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F5c19c94f-8cf2-4061-8718-04b357e51f7b_1078x919.png"
+    ]
+  },
+  {
+    id: "alien-sighting-greys-cattle-video-2026",
+    submitterName: "Alien Archivist",
+    submitterLink: "https://alienarchivist.substack.com/p/greys-cattle-video",
+    name: "Grey Aliens Inspecting Cattle Video Leak - USA",
+    category: "Alien Sightings",
+    type: "Point",
+    coordinates: {
+      lng: -98.5795,
+      lat: 39.8283
+    },
+    date: 2026,
+    displayDate: "10-18-2026",
+    description: "Leaked to online forums on October 18, 2026, viral low-light footage depicts multiple slender Grey extraterrestrial humanoids maneuvering inside a rural cattle pasture. While two perimeter sentinels stand guard, another entity deploys a handheld luminous device over a stunned, immobilized cow, demonstrating direct links between Grey beings and cattle mutilation phenomena.",
+    source: "Reddit Leak Archive / Farmer Night Cam / Alien Archivist",
+    images: [
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!6BBd!%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F36004441-6012-41ff-8163-59603ef2fe7e_1867x2112.png",
+      "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!wLEj!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_lossy%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F29f55e26-28b3-4f64-8754-7e0d4486b10b_440x504.gif"
+    ]
   }
 ];

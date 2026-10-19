@@ -282,6 +282,16 @@ const HISTORICAL_MAPS: HistoricalMap[] = [
     era: 'renaissance'
   },
   {
+    id: 'ortelius1575',
+    name: "Abraham Ortelius Map (1575)",
+    year: "1575",
+    description: "The 1575 edition of Abraham Ortelius's monumental 'Typus Orbis Terrarum' with contemporary French commentary ('Description universelle de tout le monde'), published during Ortelius's appointment as Royal Geographer to Philip II of Spain. It highlights Tartaria, the Straits of Anian, and the expansive Terra Australis Incognita.",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Typus_orbis_terrarum_%28en_haut%29._Description_universelle_de_tout_le_monde_%28en_bas%29_-_btv1b84914964.jpg/3840px-Typus_orbis_terrarum_%28en_haut%29._Description_universelle_de_tout_le_monde_%28en_bas%29_-_btv1b84914964.jpg",
+    aspectRatio: 1.4932,
+    pinColor: '#FF9F63',
+    era: 'renaissance'
+  },
+  {
     id: 'islandia',
     name: "Islandia (Map of Iceland)",
     year: "1585",

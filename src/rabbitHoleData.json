@@ -51575,5 +51575,53 @@
     "images": [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Iroquois_Mythological_Giant_Hunter_Holding_Weapons%2C_with_a_Deer_and_Bear_under_His_Belt.jpg/500px-Iroquois_Mythological_Giant_Hunter_Holding_Weapons%2C_with_a_Deer_and_Bear_under_His_Belt.jpg"
     ]
+  },
+  {
+    "id": "anomaly-indrid-cold-woodrow-derenberger",
+    "name": "Indrid Cold Contact Encounter (Woodrow Derenberger, 1966) - Interstate 77, Parkersburg, WV",
+    "category": "Cryptid Sightings",
+    "type": "Point",
+    "coordinates": {
+      "lng": -81.5471,
+      "lat": 39.2312
+    },
+    "date": 1966,
+    "description": "On the rainy evening of November 2, 1966, sewing machine salesman Woodrow Derenberger was driving home on Interstate 77 near Mineral Wells and Parkersburg, WV, when an aerodynamic, charcoal-colored metallic vehicle cut off his truck and hovered above the pavement. An entity standing over six feet tall emerged dressed in a shimmering metallic green coat, possessing slicked-back dark hair, piercing eyes, and an unnatural, frozen ear-to-ear grin. Telepathically communicating with Derenberger, the entity smiled warmly, requested that he roll down his passenger window, and stated: \"Do not be afraid, we mean you no harm. My name is Indrid Cold. We will visit you again.\" Derenberger subsequently experienced repeated high-strangeness encounters, telephone harassment, Men in Black visitations, and visions linking Cold to the Point Pleasant Mothman flap and the Silver Bridge disaster.",
+    "source": "Visitors from Lanulos (Woodrow Derenberger) / The Mothman Prophecies (John A. Keel) / Project Blue Book Mineral Wells Files",
+    "images": [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Mothman_Artist%27s_Impression.png/500px-Mothman_Artist%27s_Impression.png"
+    ]
+  },
+  {
+    "id": "anomaly-mels-hole-manastash-ridge",
+    "name": "Mel's Hole (Unfathomable Subterranean Abyss) - Manastash Ridge, WA",
+    "category": "Underworld Entrances",
+    "type": "Point",
+    "coordinates": {
+      "lng": -120.612,
+      "lat": 46.945
+    },
+    "date": 1997,
+    "description": "First brought to global attention by caller Mel Waters on Art Bell's Coast to Coast AM radio broadcast on February 21, 1997. Located on rural property west of Ellensburg on Manastash Ridge, this circular, brick-lined pit possessed an unmeasurable depth exceeding 80,000 feet (demonstrated by lowering miles of 20-lb nylon line with heavy sinkers without ever striking bottom). Eyewitnesses reported bizarre anomalies: a neighbor who tossed a deceased guard dog into the hole reported seeing the dog alive days later in the woods, dropping objects produced no echo, and high-frequency radio equipment suffered complete signal deadening near the aperture. Waters claimed the site was eventually confiscated by armed federal personnel who established a black-budget military exclusion zone over the ridge.",
+    "source": "Coast to Coast AM Broadcast Archives (Art Bell / Mel Waters Interviews) / Kittitas County Topographic & Geological Survey",
+    "images": [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Manastash_Vista_Point_0404.jpg/500px-Manastash_Vista_Point_0404.jpg"
+    ]
+  },
+  {
+    "id": "anomaly-baba-vanga-rupite-shrine",
+    "name": "Baba Vanga Memorial & Prophecy Sanctuary - Rupite, Bulgaria",
+    "category": "The Occult",
+    "type": "Point",
+    "coordinates": {
+      "lng": 23.2558,
+      "lat": 41.4428
+    },
+    "date": 1911,
+    "description": "The home sanctuary, volcanic thermal springs, and burial shrine of Vangeliya Pandeva Gushterova (1911–1996), universally known as Baba Vanga. Blinded as a girl by a mysterious tornado-like dust storm, Vanga lived in Rupite at the base of the Kozhuh extinct volcano, drawing hundreds of thousands of pilgrims, including European heads of state and top Warsaw Pact leaders. Famed for her clairvoyant foresight, believers credit her with foretelling the 1986 Chernobyl nuclear disaster, the sinking of the submarine Kursk in August 2000, the September 11 attacks by \"steel birds\", the dissolution of the Soviet Union, and the assassination of Indira Gandhi.",
+    "source": "Bulgarian Academy of Sciences Institute of Suggestology & Parapsychology / Memorial Complex \"Vanga\" Rupite",
+    "images": [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Baba_Vanga_bust.jpg/500px-Baba_Vanga_bust.jpg"
+    ]
   }
 ]
