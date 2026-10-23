@@ -1,5 +1,4 @@
-// Media/URL helpers shared by the map, codex and other pages.
-// Moved verbatim out of App.tsx; CodexPage keeps its own getEmbedUrl / cleanAndProxyImageUrl (they differ).
+// Media/URL helpers shared by the map, codex and other pages (single source of truth).
 
 export const isVideoUrl = (url: string) => {
   if (!url) return false;
@@ -470,17 +469,14 @@ export const getEmbedUrl = (url: string) => {
     const videoId = parts ? parts[0] : '';
     return `https://www.dvidshub.net/video/embed/${videoId}`;
   }
-  if (trimmed.includes('dvidshub.net/image/')) {
-    // If it's a DVIDS image page, we might want the thumbnail but it's complex
-    // For now, let it be handled by proxy if it's a direct image link
-    return trimmed;
-  }
-
-  // Twitter / X
+  // Twitter / X (dark theme to match the site; already-embedded URLs pass straight through)
   if (trimmed.includes('twitter.com/') || trimmed.includes('x.com/')) {
-    const match = trimmed.match(/(?:status|status\/|i\/status\/)(\d+)/);
+    if (trimmed.includes('platform.twitter.com/embed/')) {
+      return trimmed;
+    }
+    const match = trimmed.match(/\/status\/(\d+)/);
     if (match && match[1]) {
-      return `https://platform.twitter.com/embed/Tweet.html?id=${match[1]}`;
+      return `https://platform.twitter.com/embed/Tweet.html?id=${match[1]}&theme=dark`;
     }
   }
 

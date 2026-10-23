@@ -10,7 +10,7 @@ import { TERM_TREE_DATA, TermNode, TranslationInfo } from './termTreeData';
 import { TIMELINE_LOCATIONS } from './timelineData';
 import { LAYER_COLORS, LAYER_ICONS } from './layers';
 export { LAYER_COLORS };
-import { isVideoUrl, isPdfUrl, getPdfViewerSrcDoc, getCombinedAssets, isAudioUrl, MISSING_IMAGE_URL } from './utils/media';
+import { isVideoUrl, isPdfUrl, getPdfViewerSrcDoc, getCombinedAssets, isAudioUrl, MISSING_IMAGE_URL, getEmbedUrl, cleanAndProxyImageUrl } from './utils/media';
 
 interface CodexPageProps {
   theme: {
@@ -49,95 +49,6 @@ interface SVGLinePath {
   isRelated: boolean;
   isDottedParentLink?: boolean;
 }
-
-const getEmbedUrl = (url: string) => {
-  if (!url) return '';
-  const trimmed = url.trim();
-  
-  // YouTube 
-  if (trimmed.includes('youtube.com/watch?v=')) {
-    const videoId = trimmed.split('v=')[1]?.split('&')[0];
-    return `https://www.youtube.com/embed/${videoId}`;
-  }
-  if (trimmed.includes('youtu.be/')) {
-    const videoId = trimmed.split('youtu.be/')[1]?.split('?')[0];
-    return `https://www.youtube.com/embed/${videoId}`;
-  }
-  
-  // DVIDS
-  if (trimmed.includes('dvidshub.net/video/')) {
-    if (trimmed.includes('/video/embed/')) {
-      return trimmed;
-    }
-    const parts = trimmed.split('/video/')[1]?.split('/');
-    const videoId = parts ? parts[0] : '';
-    return `https://www.dvidshub.net/video/embed/${videoId}`;
-  }
-
-  // Twitter / X
-  if (trimmed.includes('twitter.com/') || trimmed.includes('x.com/')) {
-    if (trimmed.includes('platform.twitter.com/embed/')) {
-      return trimmed;
-    }
-    const match = trimmed.match(/\/status\/(\d+)/);
-    if (match && match[1]) {
-      return `https://platform.twitter.com/embed/Tweet.html?id=${match[1]}&theme=dark`;
-    }
-  }
-
-  return trimmed;
-};
-
-const cleanAndProxyImageUrl = (url: any) => {
-  if (!url || typeof url !== 'string') return MISSING_IMAGE_URL;
-  
-  const trimmedUrl = url.trim();
-  if (trimmedUrl.includes('icon-missing-image.svg')) return MISSING_IMAGE_URL;
-
-  // Handle local uploaded files (e.g. '/uploads/abc.jpg', 'uploads/abc.jpg', or 'http://localhost:3000/uploads/abc.jpg')
-  // NEVER truncate external domains (like WordPress sites with /wp-content/uploads/)!
-  if (trimmedUrl.startsWith('/uploads/')) {
-    return trimmedUrl;
-  }
-  if (trimmedUrl.startsWith('uploads/')) {
-    return '/' + trimmedUrl;
-  }
-  if (trimmedUrl.startsWith('http://') || trimmedUrl.startsWith('https://')) {
-    try {
-      const parsed = new URL(trimmedUrl);
-      const isLocalHost = parsed.hostname === 'localhost' || parsed.hostname === '127.0.0.1' || 
-        (typeof window !== 'undefined' && parsed.host === window.location.host);
-      if (isLocalHost && parsed.pathname.startsWith('/uploads/')) {
-        return parsed.pathname;
-      }
-    } catch (_) {}
-  }
-
-  if (isVideoUrl(trimmedUrl)) {
-    return trimmedUrl;
-  }
-  
-  if (
-    trimmedUrl.startsWith('/api/proxy') || 
-    trimmedUrl.startsWith('data:') || 
-    trimmedUrl.startsWith('blob:')
-  ) {
-    return trimmedUrl;
-  }
-
-  // Bypass proxy for localhost / internal IPs
-  if (trimmedUrl.includes('localhost') || trimmedUrl.includes('127.0.0.1')) {
-    return trimmedUrl;
-  }
-
-  if (trimmedUrl.startsWith('http')) {
-    if (trimmedUrl.includes('weserv.nl')) return trimmedUrl;
-    if (trimmedUrl.includes('imgur.com')) return trimmedUrl;
-    return `https://images.weserv.nl/?url=${encodeURIComponent(trimmedUrl)}`;
-  }
-
-  return trimmedUrl;
-};
 
 const toTitleCase = (str: string) => {
   if (!str) return '';
