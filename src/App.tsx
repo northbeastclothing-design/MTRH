@@ -2216,13 +2216,13 @@ function App() {
   };
 
   useEffect(() => {
-    if (selectedFeature) {
+    if (currentPage === 'map' && selectedFeature) {
       const title = `${selectedFeature.name} | Dossier Archive | MTRH Map`;
       const description = selectedFeature.description || 'Declassified dossier and anomaly research on MTRH Interactive Map.';
       const image = selectedFeature.images?.[0] || selectedFeature.imageUrl;
       const url = window.location.href;
       updateClientOgpTags({ title, description, url, image });
-    } else if (selectedCodexNode) {
+    } else if (currentPage === 'codex' && selectedCodexNode) {
       const title = `${selectedCodexNode.name} | Codex Research Archive | MTRH Map`;
       const description = selectedCodexNode.description || 'Declassified dossier and anomaly research on MTRH Interactive Map.';
       const image = selectedCodexNode.images?.[0];
@@ -9583,6 +9583,7 @@ function App() {
             selectedItem={selectedTimelineItem}
             setSelectedItem={setSelectedTimelineItem}
             isMobile={isMobile}
+            isActive={currentPage === 'timeline'}
             searchQuery={timelineSearchQuery}
             onSearchQueryChange={setTimelineSearchQuery}
             viewStart={timelineViewStart}
@@ -9725,6 +9726,7 @@ function App() {
             selectedMapId={selectedCartographyMapId}
             onMapSelect={setSelectedCartographyMapId}
             isMobile={isMobile}
+            isActive={currentPage === 'cartography'}
           />
         </div>
 

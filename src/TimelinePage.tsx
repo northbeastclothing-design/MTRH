@@ -27,6 +27,7 @@ interface TimelinePageProps {
   timelineItems?: TimelineItem[];
   approvedSubmissions?: any[];
   isMobile?: boolean;
+  isActive?: boolean;
   searchQuery?: string;
   onSearchQueryChange?: (query: string) => void;
   viewStart?: number;
@@ -199,6 +200,7 @@ export default function TimelinePage({
   timelineItems,
   approvedSubmissions,
   isMobile,
+  isActive,
   searchQuery: propsSearchQuery,
   onSearchQueryChange,
   viewStart: propsViewStart,
@@ -247,6 +249,7 @@ export default function TimelinePage({
   };
 
   useEffect(() => {
+    if (isActive === false) return; // only the visible page owns the document title / OG tags
     if (selectedItem) {
       const title = `${selectedItem.name} | Timeline Event | MTRH Map`;
       const description = selectedItem.description || 'Trace historical events, declassified releases, and anomaly sightings through time.';
@@ -260,7 +263,7 @@ export default function TimelinePage({
         url: window.location.href
       });
     }
-  }, [selectedItem]);
+  }, [selectedItem, isActive]);
 
   // Match the active timeline item to a Codex term
   const codexTerm = useMemo(() => {

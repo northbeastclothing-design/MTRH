@@ -16,6 +16,7 @@ import { ARCHAEOLOGICAL_FINDS_DATA } from './src/archaeologyData';
 import { OLD_WORLD_STRUCTURES_DATA } from './src/oldWorldStructuresData';
 import { TIMELINE_ITEMS } from './src/timelineData';
 import { generateDeclassifiedDossierPdf } from './src/server/generateDossierPdf';
+import { HISTORICAL_MAPS } from './src/cartographyMaps';
 
 // Load environment variables
 dotenv.config();
@@ -23,33 +24,6 @@ dotenv.config();
 const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
 const isProduction = process.env.NODE_ENV === "production" || !!process.env.K_SERVICE || (typeof __filename !== "undefined" && __filename.includes("dist"));
 
-const HISTORICAL_MAPS: Record<string, { name: string; description: string; url: string }> = {
-  'catalhoyuk': {
-    name: 'Çatalhöyük Map (6600 BCE)',
-    description: 'Discovered during excavations of the ancient Neolithic settlement of Çatalhöyük in Anatolia, Turkey. Depicts a town plan with individual dwellings and the erupting double-peaked volcano of Hasan Dağı.',
-    url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/%C3%87atalh%C3%B6y%C3%BCk_map.jpg/800px-%C3%87atalh%C3%B6y%C3%BCk_map.jpg'
-  },
-  'fra-mauro': {
-    name: 'Fra Mauro Mappa Mundi (1459 CE)',
-    description: 'A monumental 15th-century circular world map produced by the Venetian monk Fra Mauro. Renowned for its extraordinary detail, orientation with South at the top, and integration of medieval Asian geographic knowledge.',
-    url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/FraMauroDetailedMap.jpg/800px-FraMauroDetailedMap.jpg'
-  },
-  'piri-reis': {
-    name: 'Piri Reis Map (1513 CE)',
-    description: 'A famous pre-modern world map compiled by Ottoman admiral and cartographer Piri Reis. Shows the western coasts of Europe, North Africa, Brazil, and an ice-free Antarctic coastline.',
-    url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Piri_reis_map_of_1513_surface.jpg/800px-Piri_reis_map_of_1513_surface.jpg'
-  },
-  'urbano-monte': {
-    name: 'Urbano Monte Planisphere (1587 CE)',
-    description: 'A massive 60-sheet hand-drawn manuscript map created by Milanese cartographer Urbano Monte. Depicts the Earth as a north-polar azimuthal projection with advanced cosmological detail and fantastical creatures.',
-    url: 'https://davidrumsey.realityengines.com/tiles/1587-Urbano-Monte/dzi.jpg'
-  },
-  'flammarion': {
-    name: 'Flammarion Engraving (1888 CE)',
-    description: 'A famous 19th-century wood engraving illustrating a pilgrim kneeling and peering through the atmospheric sky dome or firmament to behold the celestial mechanics of the cosmos behind the curtain.',
-    url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flammarion_1888_article_capitile_4_figure_14.jpg/800px-Flammarion_1888_article_capitile_4_figure_14.jpg'
-  }
-};
 
 function getOgpMetaForRequest(reqPath: string, query: Record<string, any>, fullUrl: string) {
   const { featureId, termId, itemId, mapId } = query;
@@ -58,11 +32,12 @@ function getOgpMetaForRequest(reqPath: string, query: Record<string, any>, fullU
   let description = '';
   let image = '';
 
-  if (mapId && HISTORICAL_MAPS[String(mapId)]) {
-    const map = HISTORICAL_MAPS[String(mapId)];
-    title = `${map.name} | Historical Cartography | MTRH Map`;
-    description = map.description;
-    image = map.url;
+  // Same registry the Cartography page renders from, so ?mapId= previews always match the page.
+  const historicalMap = mapId ? HISTORICAL_MAPS.find(m => m.id === String(mapId)) : undefined;
+  if (historicalMap) {
+    title = `${historicalMap.name} | Historical Cartography | MTRH Map`;
+    description = historicalMap.description;
+    image = historicalMap.url;
   } else if (termId) {
     const node = TERM_TREE_DATA.find(n => n.id === String(termId));
     if (node) {
@@ -104,7 +79,9 @@ function getOgpMetaForRequest(reqPath: string, query: Record<string, any>, fullU
   }
 
   if (image && image.startsWith('http') && !image.includes('weserv.nl')) {
-    image = `https://images.weserv.nl/?url=${image}`;
+    // Map scans can be 3840px wide; cap share-card images so social scrapers accept them.
+    const sizeHint = historicalMap ? '&w=1200' : '';
+    image = `https://images.weserv.nl/?url=${image}${sizeHint}`;
   } else if (!image) {
     image = 'https://uap-files.pages.dev/preview-banner.jpg';
   }

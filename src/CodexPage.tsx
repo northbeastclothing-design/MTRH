@@ -373,6 +373,7 @@ export default function CodexPage({
   }, [activeTermId, nodes]);
 
   useEffect(() => {
+    if (isActive === false) return; // only the visible page owns the document title / OG tags
     if (activeTermNode) {
       const title = `${activeTermNode.name} | Codex Research Archive | MTRH Map`;
       const description = activeTermNode.description || 'Declassified dossier and anomaly research on MTRH Interactive Map.';
@@ -386,7 +387,7 @@ export default function CodexPage({
         url: window.location.href
       });
     }
-  }, [activeTermNode]);
+  }, [activeTermNode, isActive]);
 
   const [isLightboxImageLoading, setIsLightboxImageLoading] = useState(false);
   const columnsContainerRef = useRef<HTMLDivElement>(null);
