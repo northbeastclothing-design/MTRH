@@ -20,7 +20,7 @@ import { TIMELINE_ITEMS, TIMELINE_LOCATIONS, BIBLICAL_TRAVEL_PATHS, Waypoint, Tr
 import { ARCHAEOLOGICAL_FINDS_DATA } from './archaeologyData';
 import { OLD_WORLD_STRUCTURES_DATA } from './oldWorldStructuresData';
 import { DATA_CENTERS_DATA } from './dataCentersData';
-import { TERM_TREE_DATA } from './termTreeData';
+import type { TermNode } from './termTreeData';
 import { isVideoUrl, isPdfUrl, getPdfViewerSrcDoc, compressImageToDataUrl, getCombinedAssets, getEmbedUrl, isAudioUrl, MISSING_IMAGE_URL, cleanAndProxyImageUrl } from './utils/media';
 import { getSafeData, isValidLngLat, processIncomingRecord, getWarGovReleaseInfo, matchParkName, getMatchScore } from './utils/records';
 import { CATEGORY_DESCRIPTIONS, LAYER_CONFIG, ARCHAEOLOGICAL_LIDAR_OVERLAYS } from './layers';
@@ -415,6 +415,9 @@ function App() {
   const [searchActiveIndex, setSearchActiveIndex] = useState(-1);
   const [pointsAndLinesData, setPointsAndLinesData] = useState<any[]>([]);
   const [rabbitHoleData, setRabbitHoleData] = useState<any[]>([]);
+  // The Codex term tree (~3 MB) is loaded on demand alongside the core dataset instead of being
+  // bundled into the main chunk; null until it arrives.
+  const [termTreeData, setTermTreeData] = useState<TermNode[] | null>(null);
   const [ufoData, setUfoData] = useState<any[]>([]);
   const [missing411Data, setMissing411Data] = useState<any[]>([]);
   const [cavesData, setCavesData] = useState<any[]>([]);
@@ -695,7 +698,7 @@ function App() {
       sources: item.source ? [item.source] : [],
       layer: item.category || undefined
     }));
-    const rawNodes = [...TERM_TREE_DATA, ...approvedCodexSubmissions];
+    const rawNodes = [...(termTreeData ?? []), ...approvedCodexSubmissions];
     return rawNodes.map((node: any) => {
       if (!node || !node.id) return null;
       const override = overrides[String(node.id)];
@@ -707,7 +710,7 @@ function App() {
       }
       return node;
     }).filter((node): node is any => node !== null);
-  }, [approvedSubmissions, overrides]);
+  }, [termTreeData, approvedSubmissions, overrides]);
 
   // Compute Codex suggestions in App.tsx
   const codexSuggestions = useMemo(() => {
@@ -1053,16 +1056,9 @@ function App() {
   const [isStyleLoaded, setIsStyleLoaded] = useState(false);
   const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1200);
   const [scrollbarWidth, setScrollbarWidth] = useState(0);
-  const [selectedCodexNode, setSelectedCodexNode] = useState<any>(() => {
-    try {
-      const params = new URLSearchParams(window.location.search);
-      const termId = params.get('termId');
-      if (termId) {
-        return TERM_TREE_DATA.find(node => node && node.id && String(node.id) === termId) || null;
-      }
-    } catch (e) {}
-    return null;
-  });
+  // A ?termId= deep link is resolved by the "initial Codex deep link" effect below once the
+  // term tree has loaded (it was previously looked up synchronously here).
+  const [selectedCodexNode, setSelectedCodexNode] = useState<any>(null);
   const isMobile = windowWidth < 1024;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileDrawerExpanded, setIsMobileDrawerExpanded] = useState(false);
@@ -2387,14 +2383,19 @@ function App() {
         }
       }
 
-      // 5. Core Rabbit Hole data (loaded immediately on mount to prevent map loading screen pop-in/race conditions)
-      if (rabbitHoleData.length === 0) {
-        try {
-          const module = await import('./rabbitHoleData.json');
-          setRabbitHoleData(getSafeData(module));
-        } catch (err) {
-          console.error("Failed to load core map data:", err);
-        }
+      // 5. Core Rabbit Hole data and the Codex term tree (both loaded immediately on mount; the
+      //    compile step waits for both so the loading screen never dismisses on partial data)
+      if (rabbitHoleData.length === 0 || !termTreeData) {
+        const [core, tree] = await Promise.all([
+          rabbitHoleData.length === 0
+            ? import('./rabbitHoleData.json').catch(err => { console.error("Failed to load core map data:", err); return null; })
+            : null,
+          !termTreeData
+            ? import('./termTreeData').catch(err => { console.error("Failed to load codex term tree:", err); return null; })
+            : null
+        ]);
+        if (core) setRabbitHoleData(getSafeData(core));
+        if (tree) setTermTreeData(tree.TERM_TREE_DATA);
       }
     };
 
@@ -2403,8 +2404,8 @@ function App() {
 
   useEffect(() => {
     const compileVerifiedIntel = () => {
-      if (rabbitHoleData.length === 0) {
-        // Wait until core rabbit hole data is loaded before compiling/dismissing loading screen
+      if (rabbitHoleData.length === 0 || !termTreeData) {
+        // Wait until the core dataset and the codex term tree are loaded before compiling/dismissing loading screen
         return;
       }
 
@@ -2501,7 +2502,7 @@ function App() {
     };
 
     compileVerifiedIntel();
-  }, [rabbitHoleData, ufoData, missing411Data, cavesData, alienAbductionData, alienSightingsData, cattleMutilationData, vanishedShipsAircraftData, overrides, isInitialLoad]);
+  }, [rabbitHoleData, termTreeData, ufoData, missing411Data, cavesData, alienAbductionData, alienSightingsData, cattleMutilationData, vanishedShipsAircraftData, overrides, isInitialLoad]);
 
   useEffect(() => {
     if (uniqueCategories.length > 0 && !hasRandomizedRef.current) {
@@ -9634,7 +9635,7 @@ function App() {
         >
           <CodexPage
             theme={theme}
-            codexNodes={combinedCodexNodes}
+            codexNodes={termTreeData ? combinedCodexNodes : undefined}
             trackCustomEvent={trackCustomEvent}
             isMapDarkMode={isMapDarkMode}
             focusedTermId={focusedCodexTermId}
