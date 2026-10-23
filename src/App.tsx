@@ -44,8 +44,6 @@ const CodexPage = (props: React.ComponentProps<typeof CodexPageChunk>) => (
 const CartographyPage = (props: React.ComponentProps<typeof CartographyPageChunk>) => (
   <Suspense fallback={null}><CartographyPageChunk {...props} /></Suspense>
 );
-// import { MISSING_411_DATA } from './missing411Data';
-// import { CAVES_DATA } from './cavesData';
 
 // Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig);
@@ -74,33 +72,6 @@ if (firebaseConfig.measurementId) {
   });
 }
 
-// Heavy datasets will be loaded dynamically on demand
-const MISSING_411_DATA: any[] = [];
-const CAVES_DATA: any[] = [];
-const ALIEN_ABDUCTION_DATA: any[] = [];
-const CATTLE_MUTILATION_DATA: any[] = [];
-const rawPointsAndLinesData: any[] = [];
-const ufoData1: any[] = [];
-const ufoData2: any[] = [];
-const warGovData: any[] = [];
-const warGovData2: any[] = [];
-const warGovData3: any[] = [];
-const warGovData4: any[] = [];
-const warGovData5: any[] = [];
-const warGovData6: any[] = [];
-const brazilianUfoData: any[] = [];
-
-const realUfoData = [
-  ...getSafeData(ufoData1),
-  ...getSafeData(ufoData2),
-  ...getSafeData(warGovData),
-  ...getSafeData(warGovData2),
-  ...getSafeData(warGovData3),
-  ...getSafeData(warGovData4),
-  ...getSafeData(warGovData5),
-  ...getSafeData(warGovData6),
-  ...getSafeData(brazilianUfoData)
-];
 
 mapboxgl.accessToken = 'pk.eyJ1Ijoibm9ydGhiZWFzdCIsImEiOiJjbXAyNnBhMGowMTFoMnFwenRnNWZvOWc5In0.PpOOemte4Ub9PVLfGsUS1g'; 
 

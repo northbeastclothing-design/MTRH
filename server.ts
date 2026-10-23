@@ -1257,7 +1257,7 @@ ${modLink}
   app.use(async (req, res, next) => {
     const accept = req.headers.accept || '';
     if (req.method === 'GET' && accept.includes('text/html') && !req.path.startsWith('/assets/') && !path.extname(req.path)) {
-      const host = req.get('host') || 'mtrhmap.org';
+      const host = req.get('host') || 'mappingtherabbithole.com';
       const protocol = req.protocol || 'https';
       const fullUrl = `${protocol}://${host}${req.originalUrl}`;
       const meta = getOgpMetaForRequest(req.path, req.query, fullUrl);
@@ -1322,7 +1322,7 @@ ${modLink}
         return;
       }
 
-      const host = req.get('host') || 'mtrhmap.org';
+      const host = req.get('host') || 'mappingtherabbithole.com';
       const protocol = req.protocol || 'https';
       const fullUrl = `${protocol}://${host}${req.originalUrl}`;
       const meta = getOgpMetaForRequest(req.path, req.query, fullUrl);

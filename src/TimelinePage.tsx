@@ -1469,6 +1469,10 @@ export default function TimelinePage({
                                 position: 'absolute',
                                 left: `${xStart}%`,
                                 width: isHovered || isSelected || isSolidHighlight || !hasNext ? 'auto' : `${distToNext}%`,
+                                // Keep the hit-area at least as wide as the gap to the next item while hovered too;
+                                // if it collapsed to the label width the pointer would fall outside, un-hover,
+                                // re-expand, re-hover... and the item would flicker.
+                                minWidth: hasNext ? `${distToNext}%` : undefined,
                                 height: '24px',
                                 top: '6px',
                                 display: 'flex',
