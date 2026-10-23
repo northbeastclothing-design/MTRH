@@ -8,6 +8,8 @@ import { ShareModal } from './ShareModal';
 import { updateClientOgpTags } from './utils/ogp';
 import { TERM_TREE_DATA, TermNode, TranslationInfo } from './termTreeData';
 import { TIMELINE_LOCATIONS } from './timelineData';
+import { LAYER_COLORS, LAYER_ICONS } from './layers';
+export { LAYER_COLORS };
 import { isVideoUrl, isPdfUrl, getPdfViewerSrcDoc, getCombinedAssets, isAudioUrl, MISSING_IMAGE_URL } from './utils/media';
 
 interface CodexPageProps {
@@ -35,99 +37,6 @@ interface CodexPageProps {
   searchQuery?: string;
   onSearchQueryChange?: (query: string) => void;
 }
-
-export const LAYER_COLORS: Record<string, string> = {
-  'UFOs - War.gov': '#FF9BE1',
-  'UFOs - Brazillian Archives': '#B297FF',
-  'Enochian Sites': '#FF9F63',
-  'Giants & Nephilim': '#ECCE81',
-  'Biblical Figures': '#90C2FF',
-  'Religion': '#90C2FF',
-  'Myths / Legends': '#FFF96A',
-  'Biblical Events': '#91FFC4',
-  'UFOs - Sightings': '#C2FFBD',
-  'Bigfoot Sightings': '#C6986D',
-  'Cryptid Sightings': '#AFFFEC',
-  'Underworld Entrances': '#D3C5FB',
-  'Portals / Stargates': '#F9B6DB',
-  'Ancient Texts': '#F7E8C1',
-  'Burial Mounds': '#B3C77B',
-  'Cave Systems': '#B9BDAD',
-  'Alien Abductions': '#C0F06E',
-  'Alien Sightings': '#90E9FF',
-  'Cattle Mutilations': '#D59CF1',
-  'Crop Circles': '#FFF96A',
-  "D.U.M.B.'s": '#BAEAF4',
-  'Particle Accelerators': '#90E9FF',
-  'Ghosts & Hauntings': '#BDC4FF',
-  'Megaliths / Structures': '#FFFBA6',
-  'Old World Structures': '#B5CED5',
-  'Rock Art & Cave Paintings': '#FFABA6',
-
-  'National Parks & Reserves': '#9FF3BC',
-  'Missing 411': '#CBDF8E',
-  'Blurred on Google Maps': '#BDC4FF',
-  'Meteor Impact Craters': '#FF9F63',
-  'Ley Lines': '#FF5E97',
-  'Archaeological Finds': '#74F8F3',
-  'Biblical Discoveries': '#D49459',
-  'Government Conspiracies': '#FF5C5C',
-  'NASA / Space': '#BACEF4',
-  'The Occult': '#59DCB7',
-  'Masonic Lodges': '#ECCE81',
-  'People Groups': '#BCA7C7',
-  'Ancient People Groups': '#BCA7C7',
-  'Data Centers': '#90E9FF',
-  'Vanished Ships / Aircraft': '#E7EC5B',
-  'Default': '#b6a6ff'
-};
-
-const LAYER_ICONS: Record<string, string> = {
-  'Data Centers': '/icons/icon-cern.svg',
-  'UFOs - War.gov': '/icons/icon-ufo-wargov.svg',
-  'UFOs - Brazillian Archives': '/icons/icon-ufo-brazilian.svg',
-  'Enochian Sites': '/icons/icon-enochian-lore.svg',
-  'Giants & Nephilim': '/icons/icon-giants.svg',
-  'Biblical Figures': '/icons/icon-biblical-bloodlines.svg',
-  'Religion': '/icons/icon-religion.svg',
-  'Masonic Lodges': '/icons/icon-masonic-lodges.svg',
-  'Particle Accelerators': '/icons/icon-cern.svg',
-  'Myths / Legends': '/icons/icon-greek-mythology.svg',
-  'Biblical Events': '/icons/icon-biblical-bloodlines-1.svg',
-  'UFOs - Sightings': '/icons/icon-ufo-sightings.svg',
-  'Bigfoot Sightings': '/icons/icon-bigfoot-sightings.svg',
-  'Cryptid Sightings': '/icons/icon-cryptid-sightings.svg',
-  'Underworld Entrances': '/icons/icon-entrances-to-underworld.svg',
-  'Portals / Stargates': '/icons/icon-portals.svg',
-  'Ancient Texts': '/icons/icon-ancient-texts.svg',
-  'Burial Mounds': '/icons/icon-burial-mounds.svg',
-  'Cave Systems': '/icons/icon-caves.svg',
-  'Alien Abductions': '/icons/icon-alien.svg',
-  'Alien Sightings': '/icons/icon-alien-sightings.svg',
-  'Cattle Mutilations': '/icons/icon-cow.svg',
-  'Crop Circles': '/icons/icon-crop-circles.svg',
-  "D.U.M.B.'s": '/icons/icon-dumbs.svg',
-  'Ghosts & Hauntings': '/icons/icon-ghosts.svg',
-  'Megaliths / Structures': '/icons/icon-megaliths.svg',
-  'Old World Structures': '/icons/icon-old-world-structures.svg',
-  'Rock Art & Cave Paintings': '/icons/icon-petroglyphs.svg',
-  'Vanished Ships / Aircraft': '/icons/icon-vanished-ships-aircraft.svg',
-
-  'National Parks & Reserves': '/icons/icon-national-parks-reserves.svg',
-  'Missing 411': '/icons/icon-missing-411.svg',
-  'Blurred on Google Maps': '/icons/icon-blurred-on-google.svg',
-  'Meteor Impact Craters': '/icons/icon-meteors.svg',
-  'Ley Lines': '/icons/icon-ley-lines.svg',
-  'Archaeological Finds': '/icons/icon-archaeological-finds.svg',
-  'Biblical Discoveries': '/icons/icon-biblical-discoveries.svg',
-  'Government Conspiracies': '/icons/icon-government-conspiracies.svg',
-  'NASA / Space': '/icons/icon-nasa.svg',
-  'The Occult': '/icons/icon-alchemy-occult.svg',
-  'People Groups': '/icons/icon-people-groups.svg',
-  'Ancient People Groups': '/icons/icon-people-groups.svg',
-  'ancient-civilizations': '/icons/icon-people-groups.svg',
-  'Default': '/icons/icon-map-pin.svg'
-};
 
 interface SVGLinePath {
   id: string;

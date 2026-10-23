@@ -6,7 +6,7 @@ import { handleShare } from './utils/share';
 import { ShareModal } from './ShareModal';
 import { updateClientOgpTags } from './utils/ogp';
 import { TERM_TREE_DATA } from './termTreeData';
-import { LAYER_COLORS } from './CodexPage';
+import { LAYER_COLORS } from './layers';
 
 interface TimelinePageProps {
   theme: {

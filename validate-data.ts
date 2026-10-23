@@ -1,47 +1,6 @@
 import { TERM_TREE_DATA } from './src/termTreeData';
+import { LAYER_ICONS } from './src/layers';
 
-const LAYER_ICONS: Record<string, string> = {
-  'UFOs - War.gov': '/icons/icon-ufo-wargov.svg',
-  'UFOs - Brazillian Archives': '/icons/icon-ufo-brazilian.svg',
-  'Enochian Sites': '/icons/icon-enochian-lore.svg',
-  'Giants & Nephilim': '/icons/icon-giants.svg',
-  'Biblical Figures': '/icons/icon-biblical-bloodlines.svg',
-  'Religion': '/icons/icon-religion.svg',
-  'Masonic Lodges': '/icons/icon-alchemy-occult.svg',
-  'Particle Accelerators': '/icons/icon-cern.svg',
-  'Myths / Legends': '/icons/icon-greek-mythology.svg',
-  'Biblical Events': '/icons/icon-biblical-bloodlines-1.svg',
-  'UFOs - Sightings': '/icons/icon-ufo-sightings.svg',
-  'Bigfoot Sightings': '/icons/icon-bigfoot-sightings.svg',
-  'Cryptid Sightings': '/icons/icon-cryptid-sightings.svg',
-  'Underworld Entrances': '/icons/icon-entrances-to-underworld.svg',
-  'Portals / Stargates': '/icons/icon-portals.svg',
-  'Ancient Texts': '/icons/icon-ancient-texts.svg',
-  'Burial Mounds': '/icons/icon-burial-mounds.svg',
-  'Cave Systems': '/icons/icon-caves.svg',
-  'Alien Abductions': '/icons/icon-alien.svg',
-  'Alien Sightings': '/icons/icon-alien-sightings.svg',
-  'Cattle Mutilations': '/icons/icon-cow.svg',
-  'Crop Circles': '/icons/icon-crop-circles.svg',
-  "D.U.M.B.'s": '/icons/icon-dumbs.svg',
-  'Ghosts & Hauntings': '/icons/icon-ghosts.svg',
-  'Megaliths / Structures': '/icons/icon-megaliths.svg',
-  'Rock Art & Cave Paintings': '/icons/icon-petroglyphs.svg',
-  'National Parks & Reserves': '/icons/icon-national-parks-reserves.svg',
-  'Missing 411': '/icons/icon-missing-411.svg',
-  'Blurred on Google Maps': '/icons/icon-blurred-on-google.svg',
-  'Meteor Impact Craters': '/icons/icon-meteors.svg',
-  'Ley Lines': '/icons/icon-ley-lines.svg',
-  'Archaeological Finds': '/icons/icon-archaeological-finds.svg',
-  'Biblical Discoveries': '/icons/icon-biblical-discoveries.svg',
-  'Government Conspiracies': '/icons/icon-government-conspiracies.svg',
-  'NASA / Space': '/icons/icon-nasa.svg',
-  'The Occult': '/icons/icon-alchemy-occult.svg',
-  'People Groups': '/icons/icon-people-groups.svg',
-  'Ancient People Groups': '/icons/icon-people-groups.svg',
-  'ancient-civilizations': '/icons/icon-people-groups.svg',
-  'Default': '/icons/icon-map-pin.svg'
-};
 
 const nodes = TERM_TREE_DATA;
 

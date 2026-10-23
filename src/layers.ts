@@ -144,3 +144,19 @@ export const ARCHAEOLOGICAL_LIDAR_OVERLAYS: ArchaeologicalLidarOverlay[] = [
     ]
   }
 ];
+
+// Codex root nodes that are not map layers themselves but borrow a layer's colour/icon.
+const CODEX_LAYER_ALIASES: Record<string, { color?: string; icon?: string }> = {
+  'People Groups': { color: 'Ancient People Groups', icon: 'Ancient People Groups' },
+  'ancient-civilizations': { icon: 'Ancient People Groups' }
+};
+
+export const LAYER_COLORS: Record<string, string> = Object.fromEntries([
+  ...Object.entries(LAYER_CONFIG).map(([name, cfg]) => [name, cfg.color]),
+  ...Object.entries(CODEX_LAYER_ALIASES).filter(([, a]) => a.color).map(([alias, a]) => [alias, LAYER_CONFIG[a.color!].color])
+]);
+
+export const LAYER_ICONS: Record<string, string> = Object.fromEntries([
+  ...Object.entries(LAYER_CONFIG).map(([name, cfg]) => [name, cfg.icon]),
+  ...Object.entries(CODEX_LAYER_ALIASES).filter(([, a]) => a.icon).map(([alias, a]) => [alias, LAYER_CONFIG[a.icon!].icon])
+]);
