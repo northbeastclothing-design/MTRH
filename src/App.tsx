@@ -1,5 +1,5 @@
 // Mapping The Rabbit Hole App Component
-import React, { useState, useMemo, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useMemo, useEffect, useRef, useCallback, Suspense, lazy } from 'react';
 import { createPortal } from 'react-dom';
 import { motion, AnimatePresence, animate } from 'motion/react';
 import mapboxgl from 'mapbox-gl';
@@ -14,9 +14,6 @@ import { getAnalytics, isSupported, logEvent } from 'firebase/analytics';
 // @ts-ignore
 import firebaseConfig from '../firebase-applet-config.json';
 
-import TimelinePage from './TimelinePage';
-import CodexPage from './CodexPage';
-import CartographyPage from './CartographyPage';
 import { playAudio } from './utils/audio';
 import { updateClientOgpTags } from './utils/ogp';
 import { TIMELINE_ITEMS, TIMELINE_LOCATIONS, BIBLICAL_TRAVEL_PATHS, Waypoint, TravelPath } from './timelineData';
@@ -24,6 +21,22 @@ import { ARCHAEOLOGICAL_FINDS_DATA } from './archaeologyData';
 import { OLD_WORLD_STRUCTURES_DATA } from './oldWorldStructuresData';
 import { DATA_CENTERS_DATA } from './dataCentersData';
 import { TERM_TREE_DATA } from './termTreeData';
+
+// The three secondary pages are code-split so the map shell can start executing before
+// their code arrives. Each gets its own Suspense boundary so a page that is still loading
+// never hides its siblings; the panels are invisible until selected anyway.
+const TimelinePageChunk = lazy(() => import('./TimelinePage'));
+const CodexPageChunk = lazy(() => import('./CodexPage'));
+const CartographyPageChunk = lazy(() => import('./CartographyPage'));
+const TimelinePage = (props: React.ComponentProps<typeof TimelinePageChunk>) => (
+  <Suspense fallback={null}><TimelinePageChunk {...props} /></Suspense>
+);
+const CodexPage = (props: React.ComponentProps<typeof CodexPageChunk>) => (
+  <Suspense fallback={null}><CodexPageChunk {...props} /></Suspense>
+);
+const CartographyPage = (props: React.ComponentProps<typeof CartographyPageChunk>) => (
+  <Suspense fallback={null}><CartographyPageChunk {...props} /></Suspense>
+);
 // import { MISSING_411_DATA } from './missing411Data';
 // import { CAVES_DATA } from './cavesData';
 
@@ -1403,13 +1416,11 @@ function App() {
   const [pointsAndLinesData, setPointsAndLinesData] = useState<any[]>([]);
   const [rabbitHoleData, setRabbitHoleData] = useState<any[]>([]);
   const [ufoData, setUfoData] = useState<any[]>([]);
-  const [archaeologyData, setArchaeologyData] = useState<any[]>([]);
   const [missing411Data, setMissing411Data] = useState<any[]>([]);
   const [cavesData, setCavesData] = useState<any[]>([]);
   const [alienAbductionData, setAlienAbductionData] = useState<any[]>([]);
   const [alienSightingsData, setAlienSightingsData] = useState<any[]>([]);
   const [cattleMutilationData, setCattleMutilationData] = useState<any[]>([]);
-  const [oldWorldStructuresData, setOldWorldStructuresData] = useState<any[]>([]);
   const [vanishedShipsAircraftData, setVanishedShipsAircraftData] = useState<any[]>([]);
   const [savedPasscode, setSavedPasscode] = useState(() => {
     try {
@@ -1584,17 +1595,11 @@ function App() {
     if (layerName === 'Cattle Mutilations') {
       return cattleMutilationData.length === 0;
     }
-    if (layerName === 'Old World Structures') {
-      return oldWorldStructuresData.length === 0;
-    }
     if (layerName === 'Vanished Ships / Aircraft') {
       return vanishedShipsAircraftData.length === 0;
     }
     if (layerName === 'Missing 411') {
       return missing411Data.length === 0;
-    }
-    if (layerName === 'Archaeological Finds' || layerName === 'Biblical Discoveries') {
-      return archaeologyData.length === 0;
     }
     if (
       layerName === 'UFOs - War.gov' ||
@@ -5064,22 +5069,7 @@ function App() {
         }
       }
 
-      // 2. Archaeology Finds & Biblical Discoveries
-      const hasArchaeologyActive = 
-        activeLayers['Archaeological Finds'] || 
-        activeLayers['Biblical Discoveries'] ||
-        activeLayers['Rock Art & Cave Paintings'] ||
-        activeLayers['Megaliths / Structures'] ||
-
-        activeLayers['Burial Mounds'];
-      if (hasArchaeologyActive && archaeologyData.length === 0) {
-        try {
-          const module = await import('./archaeologyData');
-          setArchaeologyData(getSafeData(module.ARCHAEOLOGICAL_FINDS_DATA));
-        } catch (err) {
-          console.error("Failed to load archaeology finds:", err);
-        }
-      }
+      // 2. Archaeology Finds / Old World Structures are statically imported (always present).
 
       // 3. Missing 411
       if (activeLayers['Missing 411'] && missing411Data.length === 0) {
@@ -5131,16 +5121,6 @@ function App() {
         }
       }
 
-      // 4d. Old World Structures
-      if (activeLayers['Old World Structures'] && oldWorldStructuresData.length === 0) {
-        try {
-          const module = await import('./oldWorldStructuresData');
-          setOldWorldStructuresData(getSafeData(module.OLD_WORLD_STRUCTURES_DATA));
-        } catch (err) {
-          console.error("Failed to load Old World Structures data:", err);
-        }
-      }
-
       // 4e. Vanished Ships / Aircraft
       if (activeLayers['Vanished Ships / Aircraft'] && vanishedShipsAircraftData.length === 0) {
         try {
@@ -5183,14 +5163,12 @@ function App() {
           ...safeLocalData, 
           ...safeUfoData, 
           ...ARCHAEOLOGICAL_FINDS_DATA,
-          ...archaeologyData, 
-          ...missing411Data, 
+          ...missing411Data,
           ...cavesData, 
           ...alienAbductionData, 
           ...alienSightingsData, 
           ...cattleMutilationData, 
           ...OLD_WORLD_STRUCTURES_DATA,
-          ...oldWorldStructuresData, 
           ...vanishedShipsAircraftData,
           ...DATA_CENTERS_DATA
         ];
@@ -5237,23 +5215,26 @@ function App() {
 
         initialBuffer.push(...timelinePins);
 
-        console.log(`Initial compilation: ${initialBuffer.length} records processed.`);
+        // Datasets can overlap (the same id reachable from more than one source).
+        // Collapse duplicates by id, last one wins.
+        const uniqueById = new Map<any, any>();
+        initialBuffer.forEach((item: any) => uniqueById.set(item.id, item));
+        const compiledRecords = Array.from(uniqueById.values());
+
+        console.log(`Initial compilation: ${compiledRecords.length} records processed.`);
         const catCounts: any = {};
-        initialBuffer.forEach((f: any) => {
+        compiledRecords.forEach((f: any) => {
           catCounts[f.category] = (catCounts[f.category] || 0) + 1;
         });
         console.log("Loaded Categories:", catCounts);
 
-        setPointsAndLinesData(initialBuffer);
+        setPointsAndLinesData(compiledRecords);
 
         const minYear = 0;
         const maxYear = 2050;
         setYearRange({ start: minYear, end: maxYear });
         setTimelineWindowStart(minYear);
         setTimelineWindowSpan(maxYear - minYear);
-
-        // Fetch additional records asynchronously without blocking the local data
-        loadRemoteArchiveData();
       } catch (err) {
         console.error("Critical failure during map compilation pipeline: ", err);
       } finally {
@@ -5263,31 +5244,8 @@ function App() {
       }
     };
 
-    const loadRemoteArchiveData = async () => {
-      try {
-        const archiveRes = await fetch('/api/uap-archive');
-        if (archiveRes.ok) {
-          const archiveData = await archiveRes.json();
-          if (archiveData.records && Array.isArray(archiveData.records)) {
-            const remoteRecords = archiveData.records
-              .map((item: any, idx: number) => processIncomingRecord(item, 100000 + idx))
-              .filter(Boolean);
-            
-            setPointsAndLinesData(prev => {
-              const combined = [...prev, ...remoteRecords];
-              const uniqueMap = new Map();
-              combined.forEach((item: any) => uniqueMap.set(item.id, item));
-              return Array.from(uniqueMap.values()) as any[];
-            });
-          }
-        }
-      } catch (apiErr) {
-        console.warn("Could not reach UAP archive scraping proxy:", apiErr);
-      }
-    };
-
     compileVerifiedIntel();
-  }, [rabbitHoleData, ufoData, archaeologyData, missing411Data, cavesData, alienAbductionData, alienSightingsData, cattleMutilationData, oldWorldStructuresData, vanishedShipsAircraftData, overrides, isInitialLoad]);
+  }, [rabbitHoleData, ufoData, missing411Data, cavesData, alienAbductionData, alienSightingsData, cattleMutilationData, vanishedShipsAircraftData, overrides, isInitialLoad]);
 
   useEffect(() => {
     if (uniqueCategories.length > 0 && !hasRandomizedRef.current) {
