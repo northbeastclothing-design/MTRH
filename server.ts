@@ -2,6 +2,11 @@ import express from "express";
 import path from "path";
 import * as cheerio from 'cheerio';
 import fs from "fs";
+import net from "net";
+import dns from "dns";
+import crypto from "crypto";
+import compression from "compression";
+import { rateLimit } from "express-rate-limit";
 import admin from "firebase-admin";
 import nodemailer from "nodemailer";
 import dotenv from "dotenv";
@@ -122,14 +127,81 @@ function escapeHtml(str: string) {
     .replace(/'/g, '&#039;');
 }
 
+// --- Resource proxy safety -------------------------------------------------
+// The proxy accepts any public http(s) URL so that image/PDF fallbacks keep
+// working for every data source, but it must never be steerable at localhost,
+// the Cloud Run metadata server, or the private network, and it must never
+// hand HTML/scripts back to the browser under our origin.
+
+const BLOCKED_HOSTNAMES = new Set(['localhost', 'metadata', 'metadata.google.internal']);
+
+function isPrivateIp(rawIp: string): boolean {
+  const mapped = rawIp.match(/^::ffff:(\d+\.\d+\.\d+\.\d+)$/i);
+  const ip = mapped ? mapped[1] : rawIp;
+  if (net.isIPv4(ip)) {
+    const [a, b] = ip.split('.').map(Number);
+    return a === 0 || a === 10 || a === 127
+      || (a === 100 && b >= 64 && b <= 127)
+      || (a === 169 && b === 254)
+      || (a === 172 && b >= 16 && b <= 31)
+      || (a === 192 && b === 168)
+      || a >= 224;
+  }
+  if (net.isIPv6(ip)) {
+    const lower = ip.toLowerCase();
+    return lower === '::' || lower === '::1' || /^f[cd]/.test(lower) || /^fe[89ab]/.test(lower) || lower.startsWith('ff');
+  }
+  return true;
+}
+
+async function assertPublicUrl(target: URL): Promise<void> {
+  if (target.protocol !== 'http:' && target.protocol !== 'https:') {
+    throw new Error('Unsupported protocol');
+  }
+  const host = target.hostname.replace(/^\[|\]$/g, '').toLowerCase();
+  if (BLOCKED_HOSTNAMES.has(host) || host.endsWith('.internal') || host.endsWith('.local')) {
+    throw new Error('Blocked host');
+  }
+  if (net.isIP(host)) {
+    if (isPrivateIp(host)) throw new Error('Blocked address');
+    return;
+  }
+  const addrs = await dns.promises.lookup(host, { all: true });
+  if (addrs.length === 0 || addrs.some(a => isPrivateIp(a.address))) {
+    throw new Error('Blocked address');
+  }
+}
+
+// fetch() that re-validates the destination on every redirect hop.
+async function safeFetch(url: string, init: RequestInit, maxRedirects = 5): Promise<Response> {
+  let current = url;
+  for (let hop = 0; hop <= maxRedirects; hop++) {
+    await assertPublicUrl(new URL(current));
+    const response = await fetch(current, { ...init, redirect: 'manual' });
+    if (response.status >= 300 && response.status < 400) {
+      const location = response.headers.get('location');
+      if (!location) return response;
+      await response.body?.cancel().catch(() => {});
+      current = new URL(location, current).href;
+      continue;
+    }
+    return response;
+  }
+  throw new Error('Too many redirects');
+}
+
+// Only media may pass back through the proxy. octet-stream is tolerated because
+// some hosts serve images that way; nosniff + CSP sandbox keep it inert.
+function isAllowedProxyMediaType(contentType: string): boolean {
+  return /^(image|video|audio)\//i.test(contentType) || /octet-stream/i.test(contentType);
+}
+
 // Initialize Firebase Admin with applet configuration
-let firebaseProjectId: string | null = null;
 let dbAdmin: admin.firestore.Firestore | null = null;
 try {
   const configPath = path.join(process.cwd(), "firebase-applet-config.json");
   if (fs.existsSync(configPath)) {
     const firebaseConfig = JSON.parse(fs.readFileSync(configPath, "utf8"));
-    firebaseProjectId = firebaseConfig.projectId;
     if (admin.apps.length === 0) {
       admin.initializeApp({
         projectId: firebaseConfig.projectId
@@ -271,78 +343,6 @@ async function safeDeleteDocument(collectionName: string, docId: string): Promis
   }
 }
 
-const authorizedHosts = new Set<string>(["localhost", "127.0.0.1"]);
-
-async function authorizeDomain(domain: string) {
-  if (!firebaseProjectId) {
-    console.warn(`[Domain Auth] Cannot authorize ${domain}: firebaseProjectId is not set.`);
-    return;
-  }
-  
-  // Skip standard IP addresses, local domains or empty values
-  if (!domain || domain === "localhost" || domain === "127.0.0.1" || /^[0-9.]+$/.test(domain)) {
-    return;
-  }
-
-  try {
-    console.log(`[Domain Auth] Attempting to authorize domain "${domain}" on Firebase...`);
-    const credential = admin.app().options.credential || admin.credential.applicationDefault();
-    const tokenObj = await credential.getAccessToken();
-    const token = (tokenObj as any).accessToken || (tokenObj as any).access_token || (tokenObj as any).token;
-
-    if (!token) {
-      console.warn("[Domain Auth] Could not retrieve access token for Identity Toolkit config API.");
-      return;
-    }
-
-    const configUrl = `https://identitytoolkit.googleapis.com/admin/v2/projects/${firebaseProjectId}/config`;
-    
-    // Fetch current project authentication config
-    const getRes = await fetch(configUrl, {
-      headers: {
-        Authorization: `Bearer ${token}`
-      }
-    });
-
-    if (!getRes.ok) {
-      const errorText = await getRes.text();
-      console.warn(`[Domain Auth] Failed to fetch Identity Toolkit config: ${getRes.status} - ${errorText}`);
-      return;
-    }
-
-    const config = await getRes.json();
-    const currentDomains: string[] = config.authorizedDomains || [];
-
-    if (!currentDomains.includes(domain)) {
-      const updatedDomains = [...currentDomains, domain];
-      console.log(`[Domain Auth] Adding ${domain} to whitelist. New list:`, updatedDomains);
-
-      const patchRes = await fetch(`${configUrl}?updateMask=authorizedDomains`, {
-        method: "PATCH",
-        headers: {
-          Authorization: `Bearer ${token}`,
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          authorizedDomains: updatedDomains
-        })
-      });
-
-      if (patchRes.ok) {
-        console.log(`[Domain Auth] Successfully whitelisted domain: ${domain}`);
-      } else {
-        const errorText = await patchRes.text();
-        console.warn(`[Domain Auth] Failed to patch authorized domains: ${patchRes.status} - ${errorText}`);
-      }
-    } else {
-      console.log(`[Domain Auth] Domain "${domain}" is already authorized.`);
-    }
-  } catch (err: any) {
-    // This is expected during local development without GCP credentials, so we log it as a warning
-    console.warn(`[Domain Auth] Firebase domain authorization failed for "${domain}" (this is normal if running locally without GCP credentials):`, err.message || err);
-  }
-}
-
 /**
  * Sends an email notification to the moderator.
  */
@@ -387,20 +387,52 @@ async function sendNotificationEmail(subject: string, textBody: string, htmlBody
 async function startServer() {
   const app = express();
 
-  // Dynamic host verification for Firebase Authentication domains
-  app.use((req, res, next) => {
-    const host = req.hostname || req.headers.host?.split(":")[0];
-    if (host && !authorizedHosts.has(host)) {
-      authorizedHosts.add(host);
-      authorizeDomain(host).catch(err => {
-        console.error(`[Domain Auth] Error in background authorizeDomain for ${host}:`, err);
-        authorizedHosts.delete(host);
-      });
-    }
+  // Cloud Run fronts the service with exactly one Google load-balancer hop. Trusting
+  // it makes req.ip and req.protocol reflect the real client, which the rate
+  // limiters and the OGP share URLs both depend on.
+  app.set('trust proxy', 1);
+  app.disable('x-powered-by');
+
+  // Gzip/Brotli-compress text responses (HTML, JS, CSS, JSON). Images, video and
+  // PDFs are already compressed and are passed through untouched.
+  app.use(compression());
+
+  app.use((_req, res, next) => {
+    res.setHeader('X-Content-Type-Options', 'nosniff');
     next();
   });
 
-  // Set payload sizes to allow base64 file uploads
+  // Public write endpoints: generous per-IP cap that a real visitor won't reach.
+  const publicWriteLimiter = rateLimit({
+    windowMs: 15 * 60 * 1000,
+    limit: 30,
+    standardHeaders: 'draft-8',
+    legacyHeaders: false,
+    message: { error: 'Too many requests from this address. Please try again later.' }
+  });
+
+  // Moderation endpoints: only *failed* attempts count, so the moderator is never
+  // throttled while brute-forcing the passcode is.
+  const adminLimiter = rateLimit({
+    windowMs: 15 * 60 * 1000,
+    limit: 10,
+    skipSuccessfulRequests: true,
+    standardHeaders: 'draft-8',
+    legacyHeaders: false,
+    message: { error: 'Too many failed authorization attempts. Try again in 15 minutes.' }
+  });
+
+  // Resource proxy: high ceiling (PDF viewer + image fallbacks are legitimately chatty).
+  const proxyLimiter = rateLimit({
+    windowMs: 15 * 60 * 1000,
+    limit: 600,
+    standardHeaders: 'draft-8',
+    legacyHeaders: false
+  });
+
+  app.use('/api/moderate', adminLimiter);
+
+  // Set payload sizes to allow base64 attachments embedded in submissions
   app.use(express.json({ limit: "50mb" }));
   app.use(express.urlencoded({ limit: "50mb", extended: true }));
 
@@ -423,50 +455,29 @@ async function startServer() {
     app.use("/uploads", express.static(publicUploadsDir));
   } catch (e) {}
 
-  // File Upload Route
-  app.post("/api/upload", async (req, res) => {
-    try {
-      const { filename, fileData } = req.body;
-      if (!filename || !fileData) {
-        return res.status(400).json({ error: "Missing filename or fileData" });
-      }
+  // Attachments are embedded in submissions as data URLs by the client, so there is
+  // no server-side upload endpoint. (The old unauthenticated /api/upload was removed.)
 
-      // Extract pure base64 representation if data url prefix is present
-      const matches = fileData.match(/^data:([a-zA-Z0-9]+\/[a-zA-Z0-9-+.]+);base64,(.+)$/);
-      let base64Content = fileData;
-      if (matches && matches.length === 3) {
-        base64Content = matches[2];
-      }
+  const ADMIN_PASSCODE = process.env.ADMIN_PASSCODE || "";
+  const ADMIN_EMAIL = "jhuffman710@gmail.com";
+  if (!ADMIN_PASSCODE) {
+    console.error("[Admin Auth] ADMIN_PASSCODE is not set. Passcode login to the moderation desk is DISABLED; only Google sign-in will work. Set ADMIN_PASSCODE in the environment to enable it.");
+  }
 
-      const buffer = Buffer.from(base64Content, 'base64');
-      const sanitizedFilename = `${Date.now()}-${filename.replace(/[^a-zA-Z0-9.-]/g, '_')}`;
-      const filePath = path.join(uploadsDir, sanitizedFilename);
-      const publicFilePath = path.join(publicUploadsDir, sanitizedFilename);
-
-      await fs.promises.writeFile(filePath, buffer);
-      try {
-        await fs.promises.writeFile(publicFilePath, buffer);
-      } catch (e) {
-        console.warn("Could not mirror file to publicUploadsDir", e);
-      }
-
-      console.log(`Uploaded file saved to: ${filePath}`);
-
-      res.json({ url: `/uploads/${sanitizedFilename}` });
-    } catch (err: any) {
-      console.error("Upload handler failed:", err);
-      res.status(500).json({ error: "Could not persist uploaded file" });
-    }
-  });
+  const safeEqual = (a: string, b: string) => {
+    const bufA = Buffer.from(a);
+    const bufB = Buffer.from(b);
+    return bufA.length === bufB.length && crypto.timingSafeEqual(bufA, bufB);
+  };
 
   async function verifyAdminAccess(req: express.Request): Promise<boolean> {
     const { passcode } = req.body;
     const authHeader = req.headers.authorization;
-    const expectedPasscode = process.env.ADMIN_PASSCODE || "MTRH2026";
 
-    // 1. Passcode check (body or auth header)
-    if (passcode === expectedPasscode || authHeader === expectedPasscode) {
-      return true;
+    // 1. Passcode check (body or auth header) - only when one is configured
+    if (ADMIN_PASSCODE) {
+      if (typeof passcode === "string" && safeEqual(passcode, ADMIN_PASSCODE)) return true;
+      if (typeof authHeader === "string" && safeEqual(authHeader, ADMIN_PASSCODE)) return true;
     }
 
     // 2. Firebase ID Token check
@@ -474,7 +485,7 @@ async function startServer() {
       const token = authHeader.substring(7);
       try {
         const decodedToken = await admin.auth().verifyIdToken(token);
-        if (decodedToken && decodedToken.email === "jhuffman710@gmail.com") {
+        if (decodedToken && decodedToken.email === ADMIN_EMAIL && decodedToken.email_verified) {
           return true;
         }
       } catch (err: any) {
@@ -577,7 +588,7 @@ async function startServer() {
     }
   });
 
-  app.post("/api/submissions/create", async (req, res) => {
+  app.post("/api/submissions/create", publicWriteLimiter, async (req, res) => {
     try {
       const {
         name,
@@ -682,74 +693,90 @@ Please review and approve or reject this submission in the Moderation Desk:
 ${modLink}
 `;
 
+      // Everything below came from an anonymous visitor: escape it before it lands in the moderator's inbox.
+      const h = (v: unknown) => escapeHtml(String(v ?? ''));
+      const coordsText = Array.isArray(submissionData.coordinates)
+        ? `[${submissionData.coordinates.join(', ')}]`
+        : (submissionData.coordinates ? JSON.stringify(submissionData.coordinates) : "Not provided");
+      const attachmentHref = (img: string) => {
+        const full = img.startsWith('/') ? appUrl + img : img;
+        return /^(https?:\/\/|data:(image|video|audio|application\/pdf))/i.test(full) ? full : '';
+      };
+
       const htmlBody = `
         <div style="font-family: monospace; padding: 20px; background-color: #000; color: #fff; border: 1px solid #fff;">
           <h2 style="color: #ffcc00; border-bottom: 2px solid #ffcc00; padding-bottom: 10px; font-weight: bold; letter-spacing: 1px;">MTRH // New Intel Submitted</h2>
           <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
             <tr>
               <td style="padding: 6px; font-weight: bold; width: 180px; color: #ffcc00;">Anomaly Name:</td>
-              <td style="padding: 6px; border-bottom: 1px solid #222;">${submissionData.name}</td>
+              <td style="padding: 6px; border-bottom: 1px solid #222;">${h(submissionData.name)}</td>
             </tr>
             <tr>
               <td style="padding: 6px; font-weight: bold; color: #ffcc00;">Destinations:</td>
-              <td style="padding: 6px; border-bottom: 1px solid #222; color: #ffcc00;"><strong>${(submissionData.destinations || []).join(', ')}</strong></td>
+              <td style="padding: 6px; border-bottom: 1px solid #222; color: #ffcc00;"><strong>${h((submissionData.destinations || []).join(', '))}</strong></td>
             </tr>
             <tr>
               <td style="padding: 6px; font-weight: bold; color: #ffcc00;">Map Category:</td>
-              <td style="padding: 6px; border-bottom: 1px solid #222;">${submissionData.category}</td>
+              <td style="padding: 6px; border-bottom: 1px solid #222;">${h(submissionData.category)}</td>
             </tr>
             <tr>
               <td style="padding: 6px; font-weight: bold; color: #ffcc00;">Date/Timeframe:</td>
-              <td style="padding: 6px; border-bottom: 1px solid #222;">${submissionData.date || "Not provided"}</td>
+              <td style="padding: 6px; border-bottom: 1px solid #222;">${h(submissionData.date || "Not provided")}</td>
             </tr>
             <tr>
               <td style="padding: 6px; font-weight: bold; color: #ffcc00;">Coordinates:</td>
-              <td style="padding: 6px; border-bottom: 1px solid #222;">${submissionData.coordinates ? `[${submissionData.coordinates.join(', ')}]` : "Not provided"}</td>
+              <td style="padding: 6px; border-bottom: 1px solid #222;">${h(coordsText)}</td>
             </tr>
             <tr>
               <td style="padding: 6px; font-weight: bold; color: #ffcc00;">Source:</td>
-              <td style="padding: 6px; border-bottom: 1px solid #222;">${submissionData.source || "Not provided"}</td>
+              <td style="padding: 6px; border-bottom: 1px solid #222;">${h(submissionData.source || "Not provided")}</td>
             </tr>
             <tr>
               <td style="padding: 6px; font-weight: bold; color: #ffcc00;">Social Link:</td>
-              <td style="padding: 6px; border-bottom: 1px solid #222;">${submissionData.socialLink || "Not provided"}</td>
+              <td style="padding: 6px; border-bottom: 1px solid #222;">${h(submissionData.socialLink || "Not provided")}</td>
             </tr>
             <tr>
               <td style="padding: 6px; font-weight: bold; color: #ffcc00;">Submitter Name:</td>
-              <td style="padding: 6px; border-bottom: 1px solid #222;">${submissionData.submitterName || "Not provided"}</td>
+              <td style="padding: 6px; border-bottom: 1px solid #222;">${h(submissionData.submitterName || "Not provided")}</td>
             </tr>
             <tr>
               <td style="padding: 6px; font-weight: bold; color: #ffcc00;">Submitter Email:</td>
-              <td style="padding: 6px; border-bottom: 1px solid #222;">${submissionData.submitterEmail ? `<a href="mailto:${submissionData.submitterEmail}" style="color: #ffcc00;">${submissionData.submitterEmail}</a>` : "Not provided"}</td>
+              <td style="padding: 6px; border-bottom: 1px solid #222;">${submissionData.submitterEmail ? `<a href="mailto:${h(submissionData.submitterEmail)}" style="color: #ffcc00;">${h(submissionData.submitterEmail)}</a>` : "Not provided"}</td>
             </tr>
           </table>
 
           <div style="margin-bottom: 20px; border: 1px solid #333; padding: 12px; background: #111;">
             <h4 style="color: #ffcc00; font-weight: bold; margin: 0 0 10px 0; border-bottom: 1px solid #333; padding-bottom: 4px;">Codex Placement</h4>
-            <div>Parent Term ID: <code>${submissionData.codexParentId || "None (Root)"}</code></div>
+            <div>Parent Term ID: <code>${h(submissionData.codexParentId || "None (Root)")}</code></div>
           </div>
 
           <div style="margin-bottom: 20px; border: 1px solid #333; padding: 12px; background: #111;">
             <h4 style="color: #ffcc00; font-weight: bold; margin: 0 0 10px 0; border-bottom: 1px solid #333; padding-bottom: 4px;">Timeline Placement</h4>
             <table style="width: 100%; font-size: 11px;">
-              <tr><td style="width: 150px; color: #aaa;">Layer/Era:</td><td>${submissionData.timelineLayer || "None"}</td></tr>
-              <tr><td style="color: #aaa;">Type:</td><td>${submissionData.timelineType}</td></tr>
-              <tr><td style="color: #aaa;">End Year:</td><td>${submissionData.timelineEnd || "N/A"}</td></tr>
-              <tr><td style="color: #aaa;">Father ID:</td><td>${submissionData.timelineFatherId || "None"}</td></tr>
-              <tr><td style="color: #aaa;">Mother ID:</td><td>${submissionData.timelineMotherId || "None"}</td></tr>
-              <tr><td style="color: #aaa;">Spouse ID:</td><td>${submissionData.timelineSpouseId || "None"}</td></tr>
+              <tr><td style="width: 150px; color: #aaa;">Layer/Era:</td><td>${h(submissionData.timelineLayer || "None")}</td></tr>
+              <tr><td style="color: #aaa;">Type:</td><td>${h(submissionData.timelineType)}</td></tr>
+              <tr><td style="color: #aaa;">End Year:</td><td>${h(submissionData.timelineEnd || "N/A")}</td></tr>
+              <tr><td style="color: #aaa;">Father ID:</td><td>${h(submissionData.timelineFatherId || "None")}</td></tr>
+              <tr><td style="color: #aaa;">Mother ID:</td><td>${h(submissionData.timelineMotherId || "None")}</td></tr>
+              <tr><td style="color: #aaa;">Spouse ID:</td><td>${h(submissionData.timelineSpouseId || "None")}</td></tr>
             </table>
           </div>
 
           <div style="margin-bottom: 20px;">
             <h4 style="color: #ffcc00; font-weight: bold; margin-bottom: 8px;">Description</h4>
-            <p style="white-space: pre-wrap; background: #111; padding: 12px; border: 1px solid #333; line-height: 1.6;">${submissionData.description}</p>
+            <p style="white-space: pre-wrap; background: #111; padding: 12px; border: 1px solid #333; line-height: 1.6;">${h(submissionData.description)}</p>
           </div>
-          ${submissionData.images && submissionData.images.length > 0 ? `
+          ${Array.isArray(submissionData.images) && submissionData.images.length > 0 ? `
           <div style="margin-bottom: 20px;">
             <h4 style="color: #ffcc00; font-weight: bold; margin-bottom: 8px;">Staged Attachments</h4>
             <ul style="list-style-type: none; padding: 0;">
-              ${submissionData.images.map((img: string) => `<li><a href="${img.startsWith('/') ? appUrl + img : img}" style="color: #3b82f6; text-decoration: none;" target="_blank">${img}</a></li>`).join('')}
+              ${submissionData.images.map((img: unknown) => {
+                const text = String(img ?? '');
+                const href = attachmentHref(text);
+                return href
+                  ? `<li><a href="${h(href)}" style="color: #3b82f6; text-decoration: none;" target="_blank">${h(text)}</a></li>`
+                  : `<li>${h(text)}</li>`;
+              }).join('')}
             </ul>
           </div>` : ''}
           <div style="margin-top: 30px; text-align: center;">
@@ -789,7 +816,7 @@ ${modLink}
   });
 
   // Inaccuracy Reporting API Endpoints
-  app.post("/api/reports/create", async (req, res) => {
+  app.post("/api/reports/create", publicWriteLimiter, async (req, res) => {
     try {
       const { pointId, pointName, pointCategory, reason, details } = req.body;
       if (!pointId || !pointName || !pointCategory || !reason) {
@@ -834,24 +861,24 @@ ${modLink}
           <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
             <tr>
               <td style="padding: 6px; font-weight: bold; width: 180px; color: #ef4444;">Point Name:</td>
-              <td style="padding: 6px; border-bottom: 1px solid #222;">${reportData.pointName}</td>
+              <td style="padding: 6px; border-bottom: 1px solid #222;">${escapeHtml(reportData.pointName)}</td>
             </tr>
             <tr>
               <td style="padding: 6px; font-weight: bold; color: #ef4444;">Category:</td>
-              <td style="padding: 6px; border-bottom: 1px solid #222;">${reportData.pointCategory}</td>
+              <td style="padding: 6px; border-bottom: 1px solid #222;">${escapeHtml(reportData.pointCategory)}</td>
             </tr>
             <tr>
               <td style="padding: 6px; font-weight: bold; color: #ef4444;">Point ID:</td>
-              <td style="padding: 6px; border-bottom: 1px solid #222;"><code>${reportData.pointId}</code></td>
+              <td style="padding: 6px; border-bottom: 1px solid #222;"><code>${escapeHtml(reportData.pointId)}</code></td>
             </tr>
             <tr>
               <td style="padding: 6px; font-weight: bold; color: #ef4444;">Reason for Flag:</td>
-              <td style="padding: 6px; border-bottom: 1px solid #222; font-weight: bold;">${reportData.reason}</td>
+              <td style="padding: 6px; border-bottom: 1px solid #222; font-weight: bold;">${escapeHtml(reportData.reason)}</td>
             </tr>
           </table>
           <div style="margin-bottom: 20px;">
             <h4 style="color: #ef4444; font-weight: bold; margin-bottom: 8px;">Reporter Details</h4>
-            <p style="white-space: pre-wrap; background: #111; padding: 12px; border: 1px solid #333; line-height: 1.6;">${reportData.details || "No details provided"}</p>
+            <p style="white-space: pre-wrap; background: #111; padding: 12px; border: 1px solid #333; line-height: 1.6;">${escapeHtml(reportData.details || "No details provided")}</p>
           </div>
           <div style="margin-top: 30px; text-align: center;">
             <a href="${modLink}" style="display: inline-block; background: #ef4444; color: #fff; font-weight: bold; text-decoration: none; padding: 10px 24px; border: 2px solid #ef4444; letter-spacing: 0.5px;">OPEN DECISIONAL MODERATION DESK</a>
@@ -956,7 +983,7 @@ ${modLink}
     }
   });
 
-  app.post("/api/cartography-points/create", async (req, res) => {
+  app.post("/api/cartography-points/create", publicWriteLimiter, async (req, res) => {
     try {
       const { mapId, lng, lat, note } = req.body;
       if (!mapId || lng === undefined || lat === undefined || !note) {
@@ -1051,9 +1078,15 @@ ${modLink}
   });
 
   // Image/Video/PDF Proxy Route to bypass hotlinking, CORS, and support range requests & resilient PDF delivery
-  app.get("/api/proxy-resource", async (req, res) => {
+  app.get("/api/proxy-resource", proxyLimiter, async (req, res) => {
     const url = req.query.url as string;
-    if (!url) return res.status(400).send("URL is required");
+    if (!url || typeof url !== 'string') return res.status(400).send("URL is required");
+    if (url.length > 4096) return res.status(414).send("URL too long");
+    try {
+      await assertPublicUrl(new URL(url));
+    } catch {
+      return res.status(400).send("URL not permitted");
+    }
 
     const isPdf = url.toLowerCase().includes('.pdf') || 
                   (url.includes('web.archive.org') && url.includes('/documents/')) ||
@@ -1104,7 +1137,7 @@ ${modLink}
 
       let response: Response | null = null;
       try {
-        response = await fetch(url, { headers, signal: controller.signal, redirect: 'follow' });
+        response = await safeFetch(url, { headers, signal: controller.signal });
       } catch (fetchErr) {
         console.warn(`[Proxy] Upstream direct fetch aborted/failed for ${url}:`, (fetchErr as Error)?.message);
       } finally {
@@ -1171,25 +1204,38 @@ ${modLink}
       if (!response) {
         return res.status(502).send("Upstream gateway failed");
       }
-      
+
+      // Never relay HTML, scripts, or anything else that could execute under our origin.
+      const upstreamType = response.headers.get('content-type') || '';
+      if (response.ok && upstreamType && !isAllowedProxyMediaType(upstreamType)) {
+        await response.body?.cancel().catch(() => {});
+        return res.status(415).send("Only image, video, audio and PDF resources may be proxied");
+      }
+
       // Set status code matching upstream response
       res.statusCode = response.status;
-      
+
       const copyHeader = (name: string) => {
         const val = response?.headers.get(name);
         if (val) res.setHeader(name, val);
       };
 
-      copyHeader('content-type');
+      if (response.ok) {
+        res.setHeader('content-type', upstreamType || 'application/octet-stream');
+      } else {
+        // Upstream error bodies are not ours to render; serve them as plain text.
+        res.setHeader('content-type', 'text/plain; charset=utf-8');
+      }
       copyHeader('content-length');
       copyHeader('content-range');
       copyHeader('accept-ranges');
       copyHeader('cache-control');
 
       res.setHeader("Access-Control-Allow-Origin", "*");
-      res.setHeader("X-Frame-Options", "ALLOWALL");
+      // Harmless for <img>/<video> embeds; if someone opens the proxy URL directly the
+      // response is sandboxed so even a scripted SVG can't run as our origin.
+      res.setHeader("Content-Security-Policy", "sandbox");
       res.removeHeader("X-Frame-Options");
-      res.removeHeader("Content-Security-Policy");
       res.removeHeader("Cross-Origin-Resource-Policy");
 
       // Stream response body back to client chunk by chunk
