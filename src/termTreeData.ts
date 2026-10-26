@@ -30,16 +30,19 @@ export interface TermNode {
 
 const chunk_0: any[] = [  {
     id: 'biblical-apocryphal',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/La_salle_dAkhenaton_%281356-1340_av_J.C.%29_%28Mus%C3%A9e_du_Caire%29_%282076972086%29.jpg/500px-La_salle_dAkhenaton_%281356-1340_av_J.C.%29_%28Mus%C3%A9e_du_Caire%29_%282076972086%29.jpg'],
     name: 'Religion',
     description: 'Scriptural records, world religions, angelic hierarchies, ancient patriarchs, nephilim lineages, and canonical or apocryphal narratives.'
   },
   {
     id: 'myths-legends-root',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Baal_thunderbolt_Louvre_AO15775.jpg/1280px-Baal_thunderbolt_Louvre_AO15775.jpg'],
     name: 'Myths / Legends',
     description: 'Ancient pantheons, legendary sagas, mythical beasts, and hero epics from Greek, Norse, Egyptian, Chinese, and other civilizations.'
   },
   {
     id: 'mesopotamian-mythology',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/One_dragon_of_the_Ishtar_Gate_of_Babylon%2C_Iraq%2C_colored_glazed_and_molded_bricks%2C_6th_century_BCE._Pergamon_Museum_in_Berlin.jpg/1280px-One_dragon_of_the_Ishtar_Gate_of_Babylon%2C_Iraq%2C_colored_glazed_and_molded_bricks%2C_6th_century_BCE._Pergamon_Museum_in_Berlin.jpg'],
     parentId: 'myths-legends-root',
     name: 'Mesopotamian & Sumerian Lore',
     description: 'Pantheons, epics, and lists of ancient deities and rulers from Sumer, Akkad, Babylon, and Assyria.',
@@ -47,6 +50,7 @@ const chunk_0: any[] = [  {
   },
   {
     id: 'canaanite-mythology',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Foster_Bible_Pictures_0074-1_Offering_to_Molech.jpg/1280px-Foster_Bible_Pictures_0074-1_Offering_to_Molech.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail'],
     parentId: 'myths-legends-root',
     name: 'Canaanite & Levantine Lore',
     description: 'Ancient religious and mythological narratives from the Levant, including Canaanite, Phoenician, and Ugaritic deities.',
@@ -54,6 +58,7 @@ const chunk_0: any[] = [  {
   },
   {
     id: 'andean-mesoamerican-lore',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Huitzilopochtli_V.png/330px-Huitzilopochtli_V.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail'],
     relatedIds: ['ancient-flood-myths', 'flood-myth-maya-popol-vuh', 'flood-myth-aztec-nahui-atl', 'flood-myth-inca-unu-pachakuti'],
     parentId: 'myths-legends-root',
     name: 'Andean & Mesoamerican Lore',
@@ -62,6 +67,7 @@ const chunk_0: any[] = [  {
   },
   {
     id: 'folklore-archetypes-comparative',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Schedel%27sche_Weltchronik-Dog_head.jpg/500px-Schedel%27sche_Weltchronik-Dog_head.jpg'],
     parentId: 'myths-legends-root',
     name: 'Folklore Archetypes & Comparative Myths',
     description: 'Universal comparative archetypes and the modern adaptation of ancient mythological themes in pop culture.',
@@ -70,12 +76,14 @@ const chunk_0: any[] = [  {
   },
   {
     id: 'chinese-mythology',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Imperial_Encyclopaedia_-_Animal_Kingdom_-_pic152_-_%E9%A8%B6%E8%99%9E%E5%9C%96.png/1280px-Imperial_Encyclopaedia_-_Animal_Kingdom_-_pic152_-_%E9%A8%B6%E8%99%9E%E5%9C%96.png'],
     parentId: 'myths-legends-root',
     name: 'Chinese Pantheon & Lore',
     description: 'Deities, immortals, and legendary creatures of ancient Chinese mythology and folklore.'
   },
   {
     id: 'greek-mythology',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/0/02/Plutarch_of_Chaeronea-03-removebg-preview.png'],
     parentId: 'myths-legends-root',
     name: 'Greek Mythology',
     description: 'The pantheon of Olympian gods, primeval Titans, and legendary monsters and heroes of ancient Hellenic lore.',
@@ -83,6 +91,7 @@ const chunk_0: any[] = [  {
   },
   {
     id: 'native-american-mythology',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Indigenous_Americans_by_county.png/960px-Indigenous_Americans_by_county.png'],
     relatedIds: ['se-ti-cah-giants'],
     parentId: 'myths-legends-root',
     name: 'Native American Lore',
@@ -91,6 +100,7 @@ const chunk_0: any[] = [  {
   },
   {
     id: 'navajo-hopi-lore',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Hopi_woman_with_a_traditional_pot_and_traditional_clothing.png/500px-Hopi_woman_with_a_traditional_pot_and_traditional_clothing.png'],
     parentId: 'native-american-mythology',
     name: 'Navajo & Hopi Lore',
     description: 'The cosmology, shape-shifting legends, and emergence myths of the Southwestern Hopi and Navajo peoples.',
@@ -105,6 +115,7 @@ const chunk_0: any[] = [  {
   },
   {
     id: 'sioux-plains-lore',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Great_plains_storm_-_Great_Sand_Dunes_National_Park.jpg/960px-Great_plains_storm_-_Great_Sand_Dunes_National_Park.jpg'],
     parentId: 'native-american-mythology',
     name: 'Sioux & Plains Lore',
     description: 'The sacred vision quests, pipe ceremonies, and trickster legends of the Great Plains Lakota/Sioux nations.',
@@ -118,10 +129,12 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'megaliths-structures',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Richat_Structure_ISS030-E-12516.jpg/250px-Richat_Structure_ISS030-E-12516.jpg'],
     name: 'Megaliths / Structures',
     description: 'Ancient monolithic ruins, prehistoric earthworks, grid alignments, deep underground military bases, and planetary anomalies.'
   },  {
     id: 'old-world-structures',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Castelul_Bran2.jpg/500px-Castelul_Bran2.jpg'],
     name: 'Old World Structures',
     description: 'Famous historic castles, medieval fortresses, royal strongholds, and grand old-world architectural marvels across the globe.'
   },  {
@@ -208,10 +221,12 @@ const chunk_0: any[] = [  {
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Aerial_image_of_Ch%C3%A2teau_de_Chambord_%28view_from_the_southeast%29.jpg/500px-Aerial_image_of_Ch%C3%A2teau_de_Chambord_%28view_from_the_southeast%29.jpg']
   },  {
     id: 'supernatural-anomalies',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Cripta_Santuario_Amore_Misericordioso_Collevalenza.jpg/1280px-Cripta_Santuario_Amore_Misericordioso_Collevalenza.jpg'],
     name: 'Supernatural / Anomalies',
     description: 'Extraterrestrial encounters, cryptid sightings, localized hauntings, portal gateways, and cosmic space-time anomalies.'
   },  {
     id: 'people-groups',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Max_Muller.jpg/1280px-Max_Muller.jpg'],
     name: 'People Groups',
     description: 'Indigenous nations, historical empires, lineages, and mysterious societies whose origins and legacies are recorded in antiquity.'
   },  {
@@ -289,6 +304,7 @@ const chunk_0: any[] = [  {
     ]
   },  {
     id: 'living-creatures',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Ezekiel-Vision-Merkaba.jpg/960px-Ezekiel-Vision-Merkaba.jpg'],
     relatedIds: ['enoch3-merkabah-princes', 'enoch-merkabah-chariot', 'flood-myth-mesopotamia'],
     parentId: 'elohim',
     name: 'Living Creatures (Chayot Ha Kodesh)',
@@ -331,6 +347,7 @@ const chunk_0: any[] = [  {
     ]
   },  {
     id: 'metatron',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Alchemy_elements_chart_annotated_metatron.jpg/960px-Alchemy_elements_chart_annotated_metatron.jpg'],
     parentId: 'angel',
     name: 'Metatron',
     description: 'A high archangel in Jewish apocryphal and mystical traditions (specifically 3 Enoch), described as the celestial scribe who records the deeds of humanity and the cosmos, serving as the mediator between God and Israel.',
@@ -352,6 +369,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['This Enoch is Metatron... I have committed unto him seventy names, and I have made his glory like My glory... — 3 Enoch 4:2-5 (https://www.sacred-texts.com/jud/3en/index.htm)']
   },  {
     id: 'ariel',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Ariel_key_visual_ESA499933.jpg/960px-Ariel_key_visual_ESA499933.jpg'],
     parentId: 'angel',
     name: 'Ariel',
     description: 'Female Archangel Environment, animals, shelter money, supplies',
@@ -360,6 +378,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Woe to Ariel, to Ariel, the city where David dwelt! add ye year to year; let them kill sacrifices. — Isaiah 29:1 (https://www.biblegateway.com/passage/?search=Isaiah+29%3A1)']
   },  {
     id: 'azrael',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/AC-130_AZRAEL_Angel_of_Death.jpg/960px-AC-130_AZRAEL_Angel_of_Death.jpg'],
     parentId: 'angel',
     name: 'Azrael',
     description: 'Archangel of Death/Retribution guides souls to heaven, consoles families',
@@ -371,6 +390,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['And the angel of death, who is charged with taking your souls, will take you. Then to your Lord you will be returned. — Quran 32:11', 'For he hath weighed the world in a balance; by measure hath he measured the times... — 2 Esdras 4:36-37 (https://www.biblegateway.com/passage/?search=2+Esdras+4%3A36-37)']
   },  {
     id: 'barachiel',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/El_Arc%C3%A1ngel_Baraquiel_esparciendo_flores%2C_de_Bartolom%C3%A9_Rom%C3%A1n_%28Museo_del_Prado%29.jpg/960px-El_Arc%C3%A1ngel_Baraquiel_esparciendo_flores%2C_de_Bartolom%C3%A9_Rom%C3%A1n_%28Museo_del_Prado%29.jpg'],
     parentId: 'angel',
     name: 'Barachiel',
     description: 'Lightning and blessings (Seraphim)',
@@ -379,6 +399,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Another angel came and stood over the altar, having a golden censer. Much incense was given to him, that he should add it to the prayers of all the saints on the golden altar which was before the throne. The smoke of the incense, with the prayers of the saints, went up before God out of the angel’s hand. — Revelation 8:3-4 (https://www.biblegateway.com/passage/?search=Revelation+8%3A3-4)']
   },  {
     id: 'camael',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Sanctus_Chamuel.jpg/960px-Sanctus_Chamuel.jpg'],
     parentId: 'angel',
     name: 'Camael',
     description: 'Strength, Courage, war Seen in: Comforted Adam and Eve after they got kicked out of Eden..',
@@ -395,6 +416,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['An angel from heaven appeared to him, strengthening him. — Luke 22:43 (https://www.biblegateway.com/passage/?search=Luke+22%3A43)']
   },  {
     id: 'gabriel',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Ghent_Altarpiece_-_Angel_of_the_Annunciation.jpg/960px-Ghent_Altarpiece_-_Angel_of_the_Annunciation.jpg'],
     relatedIds: ['quran', 'enoch3-seven-princes-heavens', 'enoch3-72-princes', 'melchizedek-miraculous-birth'],
     parentId: 'angel',
     name: 'Gabriel',
@@ -430,6 +452,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Then answered the angel Jeremiel, and said, Even when the number of seeds is filled in you: for he hath weighed the world in a balance. — 2 Esdras 4:36 (https://www.biblegateway.com/passage/?search=2+Esdras+4%3A36)']
   },  {
     id: 'jophiel',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Sanctus_Jophiel.jpg/960px-Sanctus_Jophiel.jpg'],
     relatedIds: ['egyptian-tree-of-life'],
     parentId: 'angel',
     name: 'Jophiel',
@@ -439,6 +462,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['So he drove out the man; and he placed cherubim at the east of the garden of Eden, and a flaming sword which turned every way, to guard the way to the tree of life. — Genesis 3:24 (https://www.biblegateway.com/passage/?search=Genesis+3%3A24)']
   },  {
     id: 'michael',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/GuidoReni_MichaelDefeatsSatan.jpg/960px-GuidoReni_MichaelDefeatsSatan.jpg'],
     relatedIds: ['quran', 'enoch3-seven-princes-heavens', 'enoch3-72-princes', 'enoch3-araboth', 'third-of-the-stars', 'nir-brother-of-noah', 'melchizedek-miraculous-birth'],
     parentId: 'angel',
     name: 'Michael',
@@ -450,6 +474,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Michael, one of the holy angels, to wit, he that is set over the best part of mankind and over chaos. — 1 Enoch 20:5 (https://www.sacred-texts.com/bib/boe/boe023.htm)']
   },  {
     id: 'phanuel',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Archangel_Phanuel%2C_Ethiopian_scroll.jpg/960px-Archangel_Phanuel%2C_Ethiopian_scroll.jpg'],
     relatedIds: ['book-of-enoch'],
     parentId: 'angel',
     name: 'Phanuel',
@@ -476,6 +501,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Then they will see the Son of Man coming in clouds with great power and glory. Then he will send out his angels, and will gather together his chosen ones from the four winds, from the ends of the earth to the ends of the sky. — Mark 13:26-27 (https://www.biblegateway.com/passage/?search=Mark+13%3A26-27)']
   },  {
     id: 'raphael',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Raffaello_Sanzio.jpg/960px-Raffaello_Sanzio.jpg'],
     relatedIds: ['enoch3-seven-princes-heavens', 'enoch1-journeys-ends-of-earth'],
     parentId: 'angel',
     name: 'Raphael',
@@ -497,6 +523,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Saraqael, one of the holy angels, who is set over the spirits, who sin in the spirit. — 1 Enoch 20:6 (https://www.sacred-texts.com/bib/boe/boe023.htm)']
   },  {
     id: 'uriel',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Archangel_Raphael_%26_Uriel_-_Westminster_Abbey.jpg/960px-Archangel_Raphael_%26_Uriel_-_Westminster_Abbey.jpg'],
     relatedIds: ['enoch3-seven-princes-heavens', 'enoch1-cosmos-flat-earth', 'enoch1-journeys-ends-of-earth'],
     parentId: 'angel',
     name: 'Uriel',
@@ -509,6 +536,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Uriel, one of the holy angels, who is over clamour and terror. — 1 Enoch 20:2 (https://www.sacred-texts.com/bib/boe/boe023.htm)']
   },  {
     id: 'zadkiel',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Aartsengel_Zadki%C3%ABl_Dominationes_Zadkiel_%28titel_op_object%29_Aartsengelen_en_andere_engelen_%28serietitel%29_Deus_Pater_ex_quo_Omnia_Angeli_%28serietitel_op_object%29%2C_RP-P-2012-38-9.jpg/960px-thumbnail.jpg'],
     parentId: 'angel',
     name: 'Zadkiel',
     description: 'The archangel of mercy, benevolence, and freedom. In rabbinic and Christian traditions, he is often identified as the angel who stayed Abraham\'s hand from sacrificing his son Isaac on Mount Moriah, and is associated with memory and forgiveness.',
@@ -542,6 +570,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Above him stood the seraphim. Each one had six wings. With two he covered his face. With two he covered his feet. With two he flew. One called to another, and said, “Holy, holy, holy, is Yahweh of Armies! The whole earth is full of his glory!” — Isaiah 6:2-3 (https://www.biblegateway.com/passage/?search=Isaiah+6%3A2-3)', 'Then one of the seraphim flew to me, having a live coal in his hand, which he had taken with the tongs from off the altar. He touched my mouth with it, and said, “Behold, this has touched your lips; and your iniquity is taken away, and your sin forgiven.” — Isaiah 6:6-7 (https://www.biblegateway.com/passage/?search=Isaiah+6%3A6-7)']
   },  {
     id: 'twenty-four-elders',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Chartres_-_portail_royal%2C_tympan_central.jpg/960px-Chartres_-_portail_royal%2C_tympan_central.jpg'],
     parentId: 'angel',
     name: 'Twenty-four Elders',
     description: 'Elders described in the Book of Revelation who sit on twenty-four thrones surrounding the throne of God. Clad in white garments and wearing golden crowns, they continuously cast their crowns before God in worship, representing the redeemed or divine council.',
@@ -549,12 +578,14 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Around the throne were twenty-four thrones. On the thrones were twenty-four elders sitting, dressed in white garments, with crowns of gold on their heads. — Revelation 4:4 (https://www.biblegateway.com/passage/?search=Revelation+4%3A4)', 'the twenty-four elders fall down before him who sits on the throne, and worship him who lives forever and ever, and throw their crowns before the throne, saying, — Revelation 4:10 (https://www.biblegateway.com/passage/?search=Revelation+4%3A10)', 'Now when he had taken the book, the four living creatures and the twenty-four elders fell down before the Lamb, each one having a harp, and golden bowls full of incense, which are the prayers of the saints. — Revelation 5:8 (https://www.biblegateway.com/passage/?search=Revelation+5%3A8)']
   },  {
     id: 'demonology',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Nachtmahr_%28Abildgaard%29.jpg/960px-Nachtmahr_%28Abildgaard%29.jpg'],
     relatedIds: ['baal-deity'],
     parentId: 'christianity',
     name: 'Demonology',
     description: 'The study and taxonomy of fallen angels, demons, malevolent spirits, and unclean entities in biblical, apocryphal, and historical accounts.'
   },  {
     id: 'fallen-angel',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Alexandre_Cabanel_-_Fallen_Angel.jpg/960px-Alexandre_Cabanel_-_Fallen_Angel.jpg'],
     parentId: 'demonology',
     name: 'Fallen Angels',
     description: 'Rebellious spiritual entities cast out of heaven who corrupt humanity, teach forbidden knowledge, and are bound for judgment.',
@@ -562,6 +593,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'demons',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Destruction_of_Leviathan.png/1280px-Destruction_of_Leviathan.png'],
     parentId: 'demonology',
     name: 'Demons',
     description: 'Malevolent spiritual entities, described in Enochian texts as the disembodied spirits of the deceased Nephilim giants who wander the earth bringing corruption.',
@@ -574,6 +606,7 @@ const chunk_0: any[] = [  {
     secondaryParentIds: ['hauntings-br', 'cryptid-sightings-br'],
   },  {
     id: 'shedim',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Compendium_rarissimum_totius_Artis_Magicae._Wellcome_L0027769.jpg/960px-Compendium_rarissimum_totius_Artis_Magicae._Wellcome_L0027769.jpg'],
     parentId: 'demons',
     name: 'Shedim',
     description: 'The biblical Hebrew term for demons or foreign deities, translated as "demons" or "devils," to whom ancient Israelites were warned against sacrificing.',
@@ -605,6 +638,7 @@ const chunk_0: any[] = [  {
     ]
   },  {
     id: 'belial',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/68-belial-sigilo-ars-goetia.svg/960px-68-belial-sigilo-ars-goetia.svg.png'],
     relatedIds: ['new-testament'],
     parentId: 'demons',
     name: 'Belial',
@@ -616,6 +650,7 @@ const chunk_0: any[] = [  {
     ]
   },  {
     id: 'djinns',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Shah_Namah%2C_the_Persian_Epic_of_the_Kings_Wellcome_L0035191.jpg/960px-Shah_Namah%2C_the_Persian_Epic_of_the_Kings_Wellcome_L0035191.jpg'],
     parentId: 'demons',
     name: 'Jinn (Djinns)',
     description: 'Spiritual beings in Near Eastern and Islamic lore created from "smokeless fire" who inhabit an unseen parallel dimension. Like humans, they possess free will and can be good, neutral, or malevolent.',
@@ -626,6 +661,7 @@ const chunk_0: any[] = [  {
     ]
   },  {
     id: 'dybbuk',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Dybbuk.jpg/960px-Dybbuk.jpg'],
     parentId: 'demons',
     name: 'Dybbuk',
     description: 'In Jewish folklore and Kabbalistic tradition, a dybbuk is the wandering, disembodied soul of a deceased person that clings to or possesses the body of a living person to achieve a neglected purpose.',
@@ -664,6 +700,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Because that she had been married to seven husbands, whom Asmodeus the evil spirit had killed, before they had lain with her. — Tobit 3:8 (https://www.biblegateway.com/passage/?search=Tobit+3%3A8)']
   },  {
     id: 'grigori',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Rasputin_PA.jpg/960px-Rasputin_PA.jpg'],
     parentId: 'fallen-angel',
     name: 'Grigori',
     description: 'An order of angels also known as the Watchers. According to the Book of Enoch, a group of two hundred Grigori led by Semyaza descended to Mount Hermon, took human wives, taught humanity forbidden arts, and fathered the giant Nephilim.',
@@ -682,6 +719,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['And they became pregnant, and they bare great giants, whose height was three thousand ells: Who consumed all the acquisitions of men. And when men could no longer sustain them, the giants turned against them and devoured mankind. — 1 Enoch 7:2-4 (https://www.sacred-texts.com/bib/boe/boe010.htm)']
   },  {
     id: 'azazel',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Detail_of_East_Window%2C_Lincoln_Cathedral_%2814224253959%29.jpg/960px-Detail_of_East_Window%2C_Lincoln_Cathedral_%2814224253959%29.jpg'],
     relatedIds: ['book-of-enoch', 'enoch3-uzza-azza-azael', 'wandering-stars-fallen-angels', 'planet-mars-scripture', 'enoch-son-of-cain', 'unclean-animals-old-testament'],
     parentId: 'fallen-angel',
     name: 'Azazel',
@@ -692,6 +730,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['And Azâzêl taught men to make swords, and knives, and shields, and breastplates, and made known to them the metals of the earth and the art of working them... — 1 Enoch 8:1 (https://www.sacred-texts.com/bib/boe/boe011.htm)', 'And the Lord said to Raphael: \'Bind Azazel hand and foot, and cast him into the darkness: and make an opening in the desert, which is in Dudael, and cast him therein.\' — 1 Enoch 10:4 (https://www.sacred-texts.com/bib/boe/boe013.htm)']
   },  {
     id: 'samyaza',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/The_Sons_of_God_Saw_the_Daughters_of_Men_That_They_Were_Fair%2C_by_Daniel_Chester_French%2C_modeled_by_1918%2C_carved_1923_-_Corcoran_Gallery_of_Art_-_DSC01065.JPG/960px-The_Sons_of_God_Saw_the_Daughters_of_Men_That_They_Were_Fair%2C_by_Daniel_Chester_French%2C_modeled_by_1918%2C_carved_1923_-_Corcoran_Gallery_of_Art_-_DSC01065.JPG'],
     relatedIds: ['enochian-mount-hermon', 'book-of-enoch', 'book-of-giants', 'enoch3-uzza-azza-azael'],
     parentId: 'fallen-angel',
     name: 'Samyaza',
@@ -790,6 +829,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['And these are the names of their chiefs... Turiel... — 1 Enoch 6:7-8 (https://www.sacred-texts.com/bib/boe/boe009.htm)']
   },  {
     id: 'lucifer',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Alexandre_Cabanel_-_Fallen_Angel.jpg/960px-Alexandre_Cabanel_-_Fallen_Angel.jpg'],
     parentId: 'fallen-angel',
     name: 'Lucifer',
     description: 'Leader of the angelic rebellion against God. Light bearer, morning star, the dragon, the devil, satan, covering cherub. Syncretized with Zeus, Jupiter, and Baal. Set in Eden, covered in precious stones, on the mountain of God.',
@@ -801,6 +841,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['How art thou fallen from heaven, O Lucifer, son of the morning! how art thou cut down to the ground, which didst weaken the nations! — Isaiah 14:12 (https://www.biblegateway.com/passage/?search=Isaiah+14%3A12)', 'Thou hast been in Eden the garden of God; every precious stone was thy covering... thou art the anointed cherub that covereth... — Ezekiel 28:13-14 (https://www.biblegateway.com/passage/?search=Ezekiel+28%3A13-14)']
   },  {
     id: 'satan',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Codex_Gigas_fol_290r_Devil.jpg/960px-Codex_Gigas_fol_290r_Devil.jpg'],
     parentId: 'fallen-angel',
     name: 'Satan',
     description: 'The adversary, accuser, and personification of evil in Abrahamic religions. Evolving from a divine prosecutor in the Hebrew Bible (ha-Satan) to the chief opponent of God and commander of fallen angels in Christian and Islamic theology.',
@@ -892,6 +933,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['These are their chiefs of tens... And these are the names: ... Tamiel... — 1 Enoch 6:7-8 (https://www.sacred-texts.com/bib/boe/boe009.htm)']
   },  {
     id: 'daniel',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Daniel_Dubois_walkout_%28cropped%29.jpg/960px-Daniel_Dubois_walkout_%28cropped%29.jpg'],
     relatedIds: ['enoch3-sopheriel', 'enoch3-princes-of-judgment', 'enoch3-irin-qaddishin', 'enoch3-72-princes', 'star-of-bethlehem', 'enoch-wife-edna'],
     parentId: 'fallen-angel',
     name: 'Daniel',
@@ -989,12 +1031,14 @@ const chunk_0: any[] = [  {
     bibleVerses: ['These are their chiefs of tens... And these are the names: ... Yomiel... — 1 Enoch 6:7-8 (https://www.sacred-texts.com/bib/boe/boe009.htm)']
   },  {
     id: 'greek-pantheon',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Terracotta_votive_plaque_from_Eleusis%2C_450_BC%2C_NAMA%2C_190875.jpg/1280px-Terracotta_votive_plaque_from_Eleusis%2C_450_BC%2C_NAMA%2C_190875.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail'],
     parentId: 'greek-mythology',
     name: 'Greek Pantheon',
     description: 'The twelve Olympian gods and associated deities of classical Greek religion ruling from Mount Olympus.',
     isApocryphal: true
   },  {
     id: 'greek-titans',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Cornelis_Cornelisz._van_Haarlem_-_The_Fall_of_the_Titans_-_Google_Art_Project.jpg/960px-Cornelis_Cornelisz._van_Haarlem_-_The_Fall_of_the_Titans_-_Google_Art_Project.jpg'],
     parentId: 'greek-mythology',
     name: 'Greek Titans',
     description: 'The elder deities of Greek mythology who ruled during the Golden Age, led by Cronus, preceding the Olympians.',
@@ -1007,30 +1051,35 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'egyptian-pantheon',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Set.svg/500px-Set.svg.png'],
     parentId: 'myths-legends-root',
     name: 'Egyptian Pantheon',
     description: 'The ancient Egyptian gods and goddesses representing cosmological forces, kingship, and underworld judgments.',
     isApocryphal: true
   },  {
     id: 'norse-pantheon',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Claes_Kurck_Sk%C3%A5ne_hammer_-_HST_DIG55488_original.jpg/1280px-Claes_Kurck_Sk%C3%A5ne_hammer_-_HST_DIG55488_original.jpg'],
     parentId: 'myths-legends-root',
     name: 'Norse Pantheon',
     description: 'The Aesir and Vanir deities of Germanic and Scandinavian mythology ruling over Asgard.',
     isApocryphal: true
   },  {
     id: 'hindu-pantheon',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Brahma%2C_dal_soffitto_del_tempio_di_huchchappaiyya_gudi%2C_aihole_%28balgakot%29%2C_karnataka%2C_VII_secolo_%28cropped%29.jpg/1280px-Brahma%2C_dal_soffitto_del_tempio_di_huchchappaiyya_gudi%2C_aihole_%28balgakot%29%2C_karnataka%2C_VII_secolo_%28cropped%29.jpg'],
     parentId: 'myths-legends-root',
     name: 'Hindu Pantheon',
     description: 'The divine manifestations, avatars, and cosmic deities of Vedic and classical Hindu traditions.',
     isApocryphal: true
   },  {
     id: 'sumerian-kings',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/8/8f/Nimrud_Apkallu.jpg'],
     parentId: 'myths-legends-root',
     name: 'Sumerian King List',
     description: 'Legendary pre-flood and post-flood Mesopotamian rulers claiming immensely long reigns, bridging Sumerian mythology with historical dynastic records.',
     isApocryphal: true
   },  {
     id: 'mythical-creatures',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Y_Draig_Aur_Owain_Glynd%C5%B5r.jpg/250px-Y_Draig_Aur_Owain_Glynd%C5%B5r.jpg'],
     parentId: 'myths-legends-root',
     name: 'Mythical Creatures',
     description: 'Legendary beasts and creatures of ancient folklore, mythology, and medieval bestiaries. Often carrying profound symbolic or spiritual significance, these creatures are studied by alternative researchers for their possible historical basis (such as surviving pre-flood species), ties to genetic manipulation, or interdimensional manifestations.',
@@ -1039,6 +1088,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'myth-phoenix',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Downtown_Phoenix_Aerial_Looking_Northeast.jpg/960px-Downtown_Phoenix_Aerial_Looking_Northeast.jpg'],
     parentId: 'mythical-creatures',
     name: 'Phoenix',
     description: 'A mythical firebird from Greek, Egyptian, and Persian mythology. Renowned for its longevity, the Phoenix cyclically burns to ashes and is reborn from its own remains, serving as a universal symbol of spiritual resurrection, alchemical transmutation, and solar cycles.',
@@ -1055,6 +1105,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'myth-griffins',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Knossos_fresco_in_throne_palace.JPG/960px-Knossos_fresco_in_throne_palace.JPG'],
     parentId: 'mythical-creatures',
     name: 'Griffin (Gryphon)',
     description: 'A legendary creature with the body of a lion and the head and wings of an eagle. Guarding gold and treasures in ancient Scythian lore, alternative historians link the griffin to ancient memories of dinosaur fossils (such as Protoceratops) or symbolic representations of royal-angelic hybrids.',
@@ -1071,6 +1122,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'myth-pegasus',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Lakonian_Black-Figure_Kylix%3B_detached_fragments.jpg/960px-Lakonian_Black-Figure_Kylix%3B_detached_fragments.jpg'],
     parentId: 'mythical-creatures',
     name: 'Pegasus',
     description: 'The mythical winged horse of Greek lore, sired by Poseidon and born from the blood of the slain Medusa. Associated with celestial navigation, lightning, and poetic inspiration, it was ridden by Bellerophon to slay the Chimera.',
@@ -1079,6 +1131,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'myth-chimera',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Chimera_Apulia_Louvre_K362.jpg/960px-Chimera_Apulia_Louvre_K362.jpg'],
     parentId: 'mythical-creatures',
     name: 'Chimera',
     description: 'A fire-breathing monster from Greek mythology composed of the parts of three animals: a lion, a goat, and a snake. Slain by Bellerophon riding Pegasus, it is studied in alternative history as a possible representation of pre-flood transgenic hybridization or a symbolic warning against transgenic sciences.',
@@ -1087,6 +1140,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'myth-kraken',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Le_Poulpe_Colossal.jpg/960px-Le_Poulpe_Colossal.jpg'],
     parentId: 'mythical-creatures',
     name: 'Kraken',
     description: 'A legendary giant sea monster of Scandinavian folklore, described as a colossal cephalopod capable of dragging entire ships to the depths. Alternative researchers link the kraken to ancient sightings of giant or colossal squids, or pre-flood marine monsters.',
@@ -1128,6 +1182,7 @@ const chunk_0: any[] = [  {
     ]
   },  {
     id: 'achelous',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Louvre-Lens_-_Les_%C3%89trusques_et_la_M%C3%A9diterran%C3%A9e_-_290_-_Londres%2C_British_Museum%2C_inv._1839.0214.70_%28Stamnos_attique_%C3%A0_figures_rouges%29_%28A%29.JPG/960px-Louvre-Lens_-_Les_%C3%89trusques_et_la_M%C3%A9diterran%C3%A9e_-_290_-_Londres%2C_British_Museum%2C_inv._1839.0214.70_%28Stamnos_attique_%C3%A0_figures_rouges%29_%28A%29.JPG'],
     parentId: 'greek-pantheon',
     name: 'Achelous',
     description: 'River god, father of the Sirens',
@@ -1135,6 +1190,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'adonis',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Cupid_with_Venus_and_Adonis%2C_fresco_in_Pompeii.jpg/960px-Cupid_with_Venus_and_Adonis%2C_fresco_in_Pompeii.jpg'],
     relatedIds: ['tammuz'],
     parentId: 'greek-pantheon',
     name: 'Adonis',
@@ -1150,6 +1206,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'ares',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/%CE%9F_%CE%86%CF%81%CE%B7%CF%82_%28Borghese-%CE%9B%CE%BF%CF%8D%CE%B2%CF%81%CE%BF%CF%85%29.jpg/960px-%CE%9F_%CE%86%CF%81%CE%B7%CF%82_%28Borghese-%CE%9B%CE%BF%CF%8D%CE%B2%CF%81%CE%BF%CF%85%29.jpg'],
     parentId: 'greek-pantheon',
     name: 'Ares',
     description: 'Greek divinity. Domain: War, bloodshed, and violence. Symbol: Spear. Notable deeds: God of war, bloodshed, and violence. Son of Zeus and Hera..',
@@ -1157,6 +1214,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'artemis',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Diane_de_Versailles_-_Mus%C3%A9e_du_Louvre_AGER_Ma_589.jpg/960px-Diane_de_Versailles_-_Mus%C3%A9e_du_Louvre_AGER_Ma_589.jpg'],
     parentId: 'greek-pantheon',
     name: 'Artemis',
     description: 'Greek divinity. Domain: Hunt, the moon, and wild animals. Symbol: Bow and arrow. Notable deeds: Goddess of the hunt, the moon, and wild animals. Daughter of Zeus and Leto. Twin sister of Apollo..',
@@ -1164,6 +1222,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'athena',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Mattei_Athena_Louvre_Ma530_n2.jpg/960px-Mattei_Athena_Louvre_Ma530_n2.jpg'],
     parentId: 'greek-pantheon',
     name: 'Athena',
     description: 'Greek divinity. Domain: Wisdom, crafts, and warfare. Symbol: Owl. Notable deeds: Goddess of wisdom, crafts, and warfare. Daughter of Zeus and Metis..',
@@ -1178,6 +1237,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'demeter',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Demeter_Altemps_Inv8546.jpg/960px-Demeter_Altemps_Inv8546.jpg'],
     relatedIds: ['persephone'],
     parentId: 'greek-pantheon',
     name: 'Demeter',
@@ -1186,6 +1246,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'dionysus',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Dionysos_Louvre_Ma87_n2.jpg/960px-Dionysos_Louvre_Ma87_n2.jpg'],
     parentId: 'greek-pantheon',
     name: 'Dionysus',
     description: 'Greek divinity. Domain: Wine, revelry, and ecstasy. Symbol: Grapes. Notable deeds: God of wine, revelry, and ecstasy. Son of Zeus and Semele..',
@@ -1193,6 +1254,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'eros',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Eros_Farnese_N%C3%A1poles_05.jpg/960px-Eros_Farnese_N%C3%A1poles_05.jpg'],
     parentId: 'greek-pantheon',
     name: 'Eros',
     description: 'God of love and desire',
@@ -1207,6 +1269,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'gaia',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Gaia_mosaic_antioch.png/960px-Gaia_mosaic_antioch.png'],
     parentId: 'greek-pantheon',
     name: 'Gaia',
     description: 'Earth goddess, mother of the Titans',
@@ -1214,6 +1277,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'hades',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Persephone_Hades_BM_Vase_E82_%28cropped%29.jpg/960px-Persephone_Hades_BM_Vase_E82_%28cropped%29.jpg'],
     relatedIds: ['nergal', 'ereshkigal', 'persephone', 'hells-all-religions'],
     parentId: 'greek-pantheon',
     name: 'Hades',
@@ -1222,6 +1286,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'hecate',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Relief_triplicate_Hekate_marble%2C_Hadrian_clasicism%2C_Prague_Kinsky%2C_NM-H10_4742%2C_140995.jpg/960px-Relief_triplicate_Hekate_marble%2C_Hadrian_clasicism%2C_Prague_Kinsky%2C_NM-H10_4742%2C_140995.jpg'],
     relatedIds: ['ereshkigal'],
     parentId: 'greek-pantheon',
     name: 'Hecate',
@@ -1237,6 +1302,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'hephaestus',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Hephaistos_Thetis_at_Kylix_by_the_Foundry_Painter_Antikensammlung_Berlin_F2294.jpg/960px-Hephaistos_Thetis_at_Kylix_by_the_Foundry_Painter_Antikensammlung_Berlin_F2294.jpg'],
     parentId: 'greek-pantheon',
     name: 'Hephaestus',
     description: 'Greek divinity. Domain: Fire, metalworking, and crafts. Symbol: Forge. Notable deeds: God of fire, metalworking, and crafts. Son of Zeus and Hera..',
@@ -1244,6 +1310,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'hera',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Hera_Campana_Louvre_Ma2283.jpg/960px-Hera_Campana_Louvre_Ma2283.jpg'],
     parentId: 'greek-pantheon',
     name: 'Hera',
     description: 'Greek divinity. Domain: Women, marriage, childbirth, and family. Symbol: Peacock. Notable deeds: Queen of the gods and goddess of women, marriage, childbirth, and family. Daughter of Cronus and Rhea. Wife of Zeus..',
@@ -1251,6 +1318,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'hermes',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Hermes_Ingenui_Pio-Clementino_Inv544.jpg/960px-Hermes_Ingenui_Pio-Clementino_Inv544.jpg'],
     relatedIds: ['planet-mercury-scripture'],
     parentId: 'greek-pantheon',
     name: 'Hermes',
@@ -1266,6 +1334,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'hypnos',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Head_of_Hypnos_in_Palazzo_Massimo_alle_Terme_%28Rome%29.jpg/960px-Head_of_Hypnos_in_Palazzo_Massimo_alle_Terme_%28Rome%29.jpg'],
     parentId: 'greek-pantheon',
     name: 'Hypnos',
     description: 'God of sleep',
@@ -1273,6 +1342,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'iris',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Iris_Louvre_L43_n2.jpg/960px-Iris_Louvre_L43_n2.jpg'],
     parentId: 'greek-pantheon',
     name: 'Iris',
     description: 'Rainbow goddess and messenger of the gods',
@@ -1287,6 +1357,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'maia',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Hermes_Maia_Staatliche_Antikensammlungen_2304.jpg/960px-Hermes_Maia_Staatliche_Antikensammlungen_2304.jpg'],
     parentId: 'greek-pantheon',
     name: 'Maia',
     description: 'Titan goddess of spring and fertility',
@@ -1294,6 +1365,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'metis',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Winged_goddess_Louvre_F32.jpg/960px-Winged_goddess_Louvre_F32.jpg'],
     parentId: 'greek-pantheon',
     name: 'Metis',
     description: 'Titan goddess of wisdom and counsel',
@@ -1301,6 +1373,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'nike',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/02_2020_Grecia_photo_Paolo_Villa_FO190013_%28Museo_archeologico_di_Olimpia_-_Statua_della_Vittoria-Nike_scolpita_da_Paionios%29.jpg/960px-02_2020_Grecia_photo_Paolo_Villa_FO190013_%28Museo_archeologico_di_Olimpia_-_Statua_della_Vittoria-Nike_scolpita_da_Paionios%29.jpg'],
     parentId: 'greek-pantheon',
     name: 'Nike',
     description: 'Goddess of victory',
@@ -1308,6 +1381,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'nyx',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Terracotta_lekythos_%28oil_flask%29_MET_DP225322_%28cropped%29.jpg/960px-Terracotta_lekythos_%28oil_flask%29_MET_DP225322_%28cropped%29.jpg'],
     parentId: 'greek-pantheon',
     name: 'Nyx',
     description: 'Night goddess',
@@ -1315,6 +1389,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'poseidon',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Statue_of_Poseidon_NAMA_235_%28DerHexer%29%2C_part_2.JPG/960px-Statue_of_Poseidon_NAMA_235_%28DerHexer%29%2C_part_2.JPG'],
     parentId: 'greek-pantheon',
     name: 'Poseidon',
     description: 'Greek divinity. Domain: Sea, earthquakes, and horses. Symbol: Trident. Notable deeds: God of the sea, earthquakes, and horses. Son of Cronus and Rhea. Brother of Zeus and Hades..',
@@ -1322,6 +1397,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'prometheus',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Prometheus_and_Atlas%2C_Laconian_black-figure_kylix%2C_by_the_Arkesilas_Painter%2C_560-550_BC%2C_inv._16592_-_Museo_Gregoriano_Etrusco_-_Vatican_Museums_-_DSC01069.jpg/960px-Prometheus_and_Atlas%2C_Laconian_black-figure_kylix%2C_by_the_Arkesilas_Painter%2C_560-550_BC%2C_inv._16592_-_Museo_Gregoriano_Etrusco_-_Vatican_Museums_-_DSC01069.jpg'],
     parentId: 'greek-pantheon',
     name: 'Prometheus',
     description: 'Titan god of foresight and fire',
@@ -1329,6 +1405,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'selene',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Brygos_Painter_370_10_Selene_-_gigantomachy_%2803%29.jpg/960px-Brygos_Painter_370_10_Selene_-_gigantomachy_%2803%29.jpg'],
     parentId: 'greek-pantheon',
     name: 'Selene',
     description: 'Moon goddess',
@@ -1336,6 +1413,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'triton',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Herakles_Triton_Met_06.1021.48.jpg/960px-Herakles_Triton_Met_06.1021.48.jpg'],
     parentId: 'greek-pantheon',
     name: 'Triton',
     description: 'Sea god, son of Poseidon',
@@ -1343,6 +1421,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'zeus',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Zeus_Otricoli_Pio-Clementino_Inv257.jpg/960px-Zeus_Otricoli_Pio-Clementino_Inv257.jpg'],
     parentId: 'greek-pantheon',
     name: 'Zeus',
     description: ' Job/Domain: King of the gods, god of the sky and thunder. Correlated characters: Jupiter (Roman), Odin (Norse), Indra (Hindu).',
@@ -1350,6 +1429,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'apollo',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Italy-3104_-_Apollo_%285378415112%29.jpg/960px-Italy-3104_-_Apollo_%285378415112%29.jpg'],
     relatedIds: ['shamash-utu'],
     parentId: 'greek-pantheon',
     name: 'Apollo',
@@ -1358,6 +1438,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'aphrodite',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Group_of_Aphrodite%2C_Pan_and_Eros%2C_found_in_the_House_of_the_Poseidoniastai_of_Beryttos_on_Delos%2C_Aphrodite_attempts_to_fend_off_Pan_who_makes_erotic_advances%2C_National_Archaeological_Museum_of_Athens_%2813912357968%29.jpg/960px-thumbnail.jpg'],
     relatedIds: ['inanna-ishtar', 'astarte-ashtoreth'],
     parentId: 'greek-pantheon',
     name: 'Aphrodite',
@@ -1388,6 +1469,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'atlas',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/MAN_Atlante_fronte_1040572.JPG/960px-MAN_Atlante_fronte_1040572.JPG'],
     parentId: 'greek-titans',
     name: 'Atlas',
     description: 'Greek divinity. Domain: Strength and endurance. Symbol: Globe. Notable deeds: Held up the sky and earth after the Titanomachy..',
@@ -1431,6 +1513,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'mnemosyne',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Mosa%C3%AFque_murale_Mn%C3%A9mosyne.jpg/960px-Mosa%C3%AFque_murale_Mn%C3%A9mosyne.jpg'],
     parentId: 'greek-titans',
     name: 'Mnemosyne',
     description: 'Greek divinity. Domain: Memory and remembrance. Mother of the nine Muses.. Symbol: Memory.',
@@ -1445,6 +1528,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'tethys',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Antakya_Archaeological_Museum_Mosaic_of_Oceanus_and_Thetis_from_Alexandretta_in_2004_04.jpg/960px-Antakya_Archaeological_Museum_Mosaic_of_Oceanus_and_Thetis_from_Alexandretta_in_2004_04.jpg'],
     parentId: 'greek-titans',
     name: 'Tethys',
     description: 'Greek divinity. Domain: Freshwater and rivers. Wife of Oceanus and mother of all river gods and oceanids.. Symbol: Freshwater.',
@@ -1459,6 +1543,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'cerberus',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Herakles_Kerberos_Eurystheus_Louvre_E701.jpg/960px-Herakles_Kerberos_Eurystheus_Louvre_E701.jpg'],
     parentId: 'greek-monsters',
     name: 'Cerberus',
     description: 'A three-headed dog that guarded the gates of the Underworld. Notable Deeds: Defeated by Heracles during his Twelve Labors..',
@@ -1473,6 +1558,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'chimera',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Chimera_Apulia_Louvre_K362.jpg/960px-Chimera_Apulia_Louvre_K362.jpg'],
     parentId: 'greek-monsters',
     name: 'Chimera',
     description: 'A creature with the head of a lion, the body of a goat, and the tail of a serpent. Notable Deeds: Slain by Bellerophon with the help of Pegasus..',
@@ -1494,6 +1580,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'hydra',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Lernaean_Hydra_Getty_Villa_83.AE.346.jpg/960px-Lernaean_Hydra_Getty_Villa_83.AE.346.jpg'],
     parentId: 'greek-monsters',
     name: 'Hydra',
     description: 'A nine-headed serpent with poisonous breath. Notable Deeds: Slain by Heracles during his Twelve Labors..',
@@ -1501,6 +1588,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'kraken',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Le_Poulpe_Colossal.jpg/960px-Le_Poulpe_Colossal.jpg'],
     parentId: 'greek-monsters',
     name: 'Kraken',
     description: 'A giant sea monster with tentacles. Notable Deeds: Said to be so large that it could wrap itself around ships and drag them to the bottom of the ocean..',
@@ -1508,6 +1596,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'minotaur',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Tondo_Minotaur_London_E4_MAN.jpg/960px-Tondo_Minotaur_London_E4_MAN.jpg'],
     parentId: 'greek-monsters',
     name: 'Minotaur',
     description: 'A half-bull, half-man creature that lived in the Labyrinth. Notable Deeds: Slain by Theseus..',
@@ -1515,6 +1604,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'pegasus',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Lakonian_Black-Figure_Kylix%3B_detached_fragments.jpg/960px-Lakonian_Black-Figure_Kylix%3B_detached_fragments.jpg'],
     parentId: 'greek-monsters',
     name: 'Pegasus',
     description: 'A winged horse. Notable Deeds: Born from the blood of the Gorgon Medusa..',
@@ -1522,6 +1612,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'phoenix',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Downtown_Phoenix_Aerial_Looking_Northeast.jpg/960px-Downtown_Phoenix_Aerial_Looking_Northeast.jpg'],
     parentId: 'greek-monsters',
     name: 'Phoenix',
     description: 'A bird that could resurrect itself from its own ashes. Notable Deeds: Said to be a symbol of immortality and rebirth..',
@@ -1529,6 +1620,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'sphinx',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Sphinx_CdM_Paris_DeRidder865_n2.jpg/960px-Sphinx_CdM_Paris_DeRidder865_n2.jpg'],
     relatedIds: ['atlantis-lost'],
     parentId: 'greek-monsters',
     name: 'Sphinx',
@@ -1537,6 +1629,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'scylla-and-charybdis',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Johann_Heinrich_F%C3%BCssli_054.jpg/960px-Johann_Heinrich_F%C3%BCssli_054.jpg'],
     parentId: 'greek-monsters',
     name: 'Scylla and Charybdis',
     description: 'Two sea monsters that lived on opposite sides of a narrow strait. Notable Deeds: Odysseus and his crew managed to navigate the strait safely, but lost six of their men to Scylla..',
@@ -1552,6 +1645,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'aeneas',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Iapyx_removing_arrowhead_from_Aeneas.jpg/960px-Iapyx_removing_arrowhead_from_Aeneas.jpg'],
     parentId: 'greek-monsters',
     name: 'Aeneas',
     description: 'Greek mortal figure. Deeds: Trojan hero who fled Troy after its fall and eventually founded Rome..',
@@ -1559,6 +1653,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'ajax',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Attic_red-figure_cup_with_Ajax_and_Cassandra_Louvre_G_458.jpg/960px-Attic_red-figure_cup_with_Ajax_and_Cassandra_Louvre_G_458.jpg'],
     relatedIds: ['gk-trojan-war'],
     parentId: 'greek-monsters',
     name: 'Ajax',
@@ -1567,6 +1662,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'andromeda',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Perseus_Andromeda_MAN_Napoli_Inv8998.jpg/960px-Perseus_Andromeda_MAN_Napoli_Inv8998.jpg'],
     parentId: 'greek-monsters',
     name: 'Andromeda',
     description: 'Greek mortal figure. Deeds: Daughter of Cepheus and Cassiopeia who was chained to a rock to be sacrificed to a sea monster, but was rescued by Perseus..',
@@ -1574,6 +1670,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'antigone',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Darius_Painter_-_RVAp_18-23_-_Antigone_-_judgement_of_Paris_-_Eros_with_youths_and_women_-_Berlin_AS_F_3240_-_04.jpg/960px-Darius_Painter_-_RVAp_18-23_-_Antigone_-_judgement_of_Paris_-_Eros_with_youths_and_women_-_Berlin_AS_F_3240_-_04.jpg'],
     parentId: 'greek-monsters',
     name: 'Antigone',
     description: 'Greek mortal figure. Deeds: Daughter of Oedipus who buried her brother Polynices against the orders of King Creon..',
@@ -1581,6 +1678,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'ariadne',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Dioniso_scopre_arianna%2C_da_casa_dei_capitelli_colorati_a_pompei%2C_9278_%28cropped%29.JPG/960px-Dioniso_scopre_arianna%2C_da_casa_dei_capitelli_colorati_a_pompei%2C_9278_%28cropped%29.JPG'],
     parentId: 'greek-monsters',
     name: 'Ariadne',
     description: 'Greek mortal figure. Deeds: Daughter of King Minos of Crete who helped Theseus escape from the Labyrinth..',
@@ -1588,6 +1686,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'cassandra',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Attic_red-figure_cup_with_Ajax_and_Cassandra_Louvre_G_458.jpg/960px-Attic_red-figure_cup_with_Ajax_and_Cassandra_Louvre_G_458.jpg'],
     parentId: 'greek-monsters',
     name: 'Cassandra',
     description: 'Greek mortal figure. Deeds: Daughter of Priam and Hecuba who had the gift of prophecy, but her prophecies were never believed..',
@@ -1595,6 +1694,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'circe',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Circe_coi_maiali%2C_III-II_secolo_ac.jpg/960px-Circe_coi_maiali%2C_III-II_secolo_ac.jpg'],
     parentId: 'greek-monsters',
     name: 'Circe',
     description: 'Greek mortal figure. Deeds: A sorceress who lived on an island in the Mediterranean Sea. She turned Odysseus\'s men into pigs..',
@@ -1602,6 +1702,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'gk-cecrops',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Kekrops_on_a_red-figure_cup_%28Codrus_Ptr%2C_Berlin_Ant_F_2537%29.jpg/960px-Kekrops_on_a_red-figure_cup_%28Codrus_Ptr%2C_Berlin_Ant_F_2537%29.jpg'],
     parentId: 'greek-monsters',
     name: 'King Cecrops of Athens',
     description: 'Legendary first King of Athens, depicted as half-man and half-serpent. Founded the Cecropia citadel.',
@@ -1621,6 +1722,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'gk-cadmus-thebes',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Kadmos_dragon_Louvre_N3157.jpg/960px-Kadmos_dragon_Louvre_N3157.jpg'],
     parentId: 'greek-monsters',
     name: 'Cadmus Founds Thebes',
     description: 'Phoenician prince Cadmus, searcher of Europa, follows a cow to Boeotia and founds the Cadmea (Thebes) after slaying a dragon.',
@@ -1630,6 +1732,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'gk-minos-crete',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Syriskos_Painter_-_ARV_259_1_-_Theseus_killing_the_Minotauros_in_the_presence_of_Minos_and_Ariadne_and_lookers_-_Athens_NAM_15115.jpg/960px-Syriskos_Painter_-_ARV_259_1_-_Theseus_killing_the_Minotauros_in_the_presence_of_Minos_and_Ariadne_and_lookers_-_Athens_NAM_15115.jpg'],
     parentId: 'greek-monsters',
     name: 'Reign of King Minos',
     description: 'Reign of King Minos of Crete, builder of the Labyrinth, jailer of the Minotaur, founder of the Cretan thalassocracy.',
@@ -1639,6 +1742,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'gk-perseus-mycenae',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Path_upto_the_Lion_Gate%2C_Mycenae_%2828693130016%29.jpg/960px-Path_upto_the_Lion_Gate%2C_Mycenae_%2828693130016%29.jpg'],
     parentId: 'greek-monsters',
     name: 'Perseus Founds Mycenae',
     description: 'Slayer of Medusa, Perseus founds the city of Mycenae, building its walls with the help of the Cyclopes.',
@@ -1648,6 +1752,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'gk-heracles-labors',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Herakles_Farnese_MAN_Napoli_Inv6001_n01.jpg/960px-Herakles_Farnese_MAN_Napoli_Inv6001_n01.jpg'],
     parentId: 'greek-monsters',
     name: 'Labors of Heracles',
     description: 'The era of Heracles (Hercules) and his Twelve Labors performed for King Eurystheus of Mycenae.',
@@ -1657,6 +1762,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'gk-theseus-athens',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Kylix_Theseus_Aison_MNA_Inv11365_n1.jpg/960px-Kylix_Theseus_Aison_MNA_Inv11365_n1.jpg'],
     parentId: 'greek-monsters',
     name: 'Theseus in Athens',
     description: 'Reign of Theseus, slayer of the Minotaur, unifier of Attica, and hero of Athens.',
@@ -1675,6 +1781,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'gk-seven-thebes',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Seven_against_Thebes_Getty_Villa_92.AE.86.jpg/960px-Seven_against_Thebes_Getty_Villa_92.AE.86.jpg'],
     parentId: 'greek-monsters',
     name: 'Seven Against Thebes',
     description: 'The mythological war between the sons of Oedipus (Polynices and Eteocles) for the throne of Thebes.',
@@ -1684,6 +1791,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'gk-trojan-war',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Akhilleus_Patroklos_Antikensammlung_Berlin_F2278.jpg/960px-Akhilleus_Patroklos_Antikensammlung_Berlin_F2278.jpg'],
     relatedIds: ['achilles', 'ajax'],
     parentId: 'greek-monsters',
     name: 'The Trojan War',
@@ -1694,6 +1802,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'gk-odyssey-wander',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Head_Odysseus_MAR_Sperlonga.jpg/960px-Head_Odysseus_MAR_Sperlonga.jpg'],
     parentId: 'greek-monsters',
     name: 'Wanderings of Odysseus',
     description: 'The ten-year voyage of Odysseus to return home to Ithaca after the fall of Troy, encountering cyclopes, sirens, and gods.',
@@ -1703,6 +1812,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'gk-rome-founded',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Kapitolinische_W%C3%B6lfin_Museum_Capitolini.jpg/960px-Kapitolinische_W%C3%B6lfin_Museum_Capitolini.jpg'],
     relatedIds: ['mithra'],
     parentId: 'greek-monsters',
     name: 'Founding of Rome',
@@ -1713,6 +1823,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'amun',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Amun_%28God%29.png/960px-Amun_%28God%29.png'],
     parentId: 'egyptian-pantheon',
     name: 'Amun',
     description: 'God of the sun and air',
@@ -1720,6 +1831,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'anubis',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Anubis_standing.svg/960px-Anubis_standing.svg.png'],
     relatedIds: ['heaven-aaru-field-of-reeds', 'hell-duat-hall-of-judgment'],
     parentId: 'egyptian-pantheon',
     name: 'Anubis',
@@ -1728,6 +1840,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'atum',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Atum_%28God%29.png/960px-Atum_%28God%29.png'],
     relatedIds: ['egyptian-ouroboros'],
     parentId: 'egyptian-pantheon',
     name: 'Atum',
@@ -1736,6 +1849,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'bastet',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Bastet.svg/960px-Bastet.svg.png'],
     relatedIds: ['egyptian-eye-of-ra', 'egyptian-sistrum', 'sekhmet'],
     parentId: 'egyptian-pantheon',
     name: 'Bastet',
@@ -1744,6 +1858,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'bes',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Deity_Bes.png/960px-Deity_Bes.png'],
     parentId: 'egyptian-pantheon',
     name: 'Bes',
     description: 'Protector god of children and childbirth',
@@ -1751,6 +1866,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'geb',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Geb_%28God%29.png/960px-Geb_%28God%29.png'],
     relatedIds: ['egyptian-uraeus'],
     parentId: 'egyptian-pantheon',
     name: 'Geb',
@@ -1759,6 +1875,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'hathor',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Hathor.svg/960px-Hathor.svg.png'],
     relatedIds: ['egyptian-eye-of-ra', 'egyptian-menat', 'egyptian-sistrum', 'sekhmet'],
     parentId: 'egyptian-pantheon',
     name: 'Hathor',
@@ -1767,6 +1884,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'horus',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Horus_standing.svg/960px-Horus_standing.svg.png'],
     parentId: 'egyptian-pantheon',
     name: 'Horus',
     description: 'Sky god and protector of the pharaoh Job/Domain: God of the sky, kingship, and protection. Correlated characters: Apollo (Greek), Hermes (Greek), Vishnu (Hindu).',
@@ -1775,6 +1893,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'isis',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Isis.svg/960px-Isis.svg.png'],
     parentId: 'egyptian-pantheon',
     name: 'Isis',
     description: 'Goddess of motherhood, magic, healing, and protection Job/Domain: Goddess of motherhood, magic, healing, and protection. Correlated characters: Demeter (Greek), Hera (Greek), Parvati (Hindu).',
@@ -1783,6 +1902,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'maat',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Maat.svg/960px-Maat.svg.png'],
     relatedIds: ['egyptian-feather-of-maat'],
     parentId: 'egyptian-pantheon',
     name: 'Maat',
@@ -1791,6 +1911,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'neith',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Neith.svg/960px-Neith.svg.png'],
     parentId: 'egyptian-pantheon',
     name: 'Neith',
     description: 'Goddess of war, wisdom, and crafts',
@@ -1798,6 +1919,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'nephthys',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Nepthys.svg/960px-Nepthys.svg.png'],
     parentId: 'egyptian-pantheon',
     name: 'Nephthys',
     description: 'Goddess of mourning and protection',
@@ -1805,6 +1927,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'nut',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Bago%2C_mercado_23.jpg/960px-Bago%2C_mercado_23.jpg'],
     parentId: 'egyptian-pantheon',
     name: 'Nut',
     description: 'Sky goddess',
@@ -1812,6 +1935,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'osiris',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Standing_Osiris.svg/960px-Standing_Osiris.svg.png'],
     parentId: 'egyptian-pantheon',
     name: 'Osiris',
     description: 'God of the underworld, agriculture, fertility, and rebirth Job/Domain: God of the underworld, agriculture, fertility, and rebirth. Correlated characters: Dionysus (Greek), Hades (Greek), Osiris (Hindu).',
@@ -1820,6 +1944,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'ptah',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Ptah_standing.svg/960px-Ptah_standing.svg.png'],
     relatedIds: ['sekhmet'],
     parentId: 'egyptian-pantheon',
     name: 'Ptah',
@@ -1828,6 +1953,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'ra',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Re-Horakhty.svg/960px-Re-Horakhty.svg.png'],
     parentId: 'egyptian-pantheon',
     name: 'Ra',
     description: 'Sun god Job/Domain: God of the sun, creation, order, and light. Correlated characters: Helios (Greek), Apollo (Greek), Mithra (Persian).',
@@ -1846,6 +1972,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'thoth',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Thoth.svg/960px-Thoth.svg.png'],
     parentId: 'egyptian-pantheon',
     name: 'Thoth',
     description: 'God of wisdom, knowledge, and writing. In esoteric traditions, he is syncretized with Hermes Trismegistus and is associated with the creation of the Emerald Tablets (or the Emerald Tablet) and the Book of Thoth.',
@@ -1868,6 +1995,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'odin',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Odin_%28Manual_of_Mythology%29.jpg/960px-Odin_%28Manual_of_Mythology%29.jpg'],
     relatedIds: ['heaven-folkvangr'],
     parentId: 'norse-pantheon',
     name: 'Odin',
@@ -1913,6 +2041,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'agni',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Agni_god_of_fire.jpg/960px-Agni_god_of_fire.jpg'],
     parentId: 'hindu-pantheon',
     name: 'Agni',
     description: 'God of fire',
@@ -1929,6 +2058,7 @@ const chunk_0: any[] = [  {
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Brahma%2C_dal_soffitto_del_tempio_di_huchchappaiyya_gudi%2C_aihole_%28balgakot%29%2C_karnataka%2C_VII_secolo_%28cropped%29.jpg/1280px-Brahma%2C_dal_soffitto_del_tempio_di_huchchappaiyya_gudi%2C_aihole_%28balgakot%29%2C_karnataka%2C_VII_secolo_%28cropped%29.jpg']
   },  {
     id: 'durga',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Kanakadurga_Temple_gopuram.jpg/960px-Kanakadurga_Temple_gopuram.jpg'],
     relatedIds: ['kali'],
     parentId: 'hindu-pantheon',
     name: 'Durga',
@@ -1937,6 +2067,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'ganesha',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Ganesha_Basohli_miniature_circa_1730_Dubost_p73.jpg/960px-Ganesha_Basohli_miniature_circa_1730_Dubost_p73.jpg'],
     parentId: 'hindu-pantheon',
     name: 'Ganesha',
     description: 'Elephant-headed god of wisdom, beginnings, and good luck',
@@ -1944,6 +2075,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'indra',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Indra%2C_Chief_of_the_Gods_LACMA_M.69.13.4_%281_of_5%29.jpg/960px-Indra%2C_Chief_of_the_Gods_LACMA_M.69.13.4_%281_of_5%29.jpg'],
     relatedIds: ['heaven-svarga'],
     parentId: 'hindu-pantheon',
     name: 'Indra',
@@ -1961,6 +2093,7 @@ const chunk_0: any[] = [  {
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Krishna_Holds_Up_Mount_Govardhan_%28MET_70694%29_cropped.png/1280px-Krishna_Holds_Up_Mount_Govardhan_%28MET_70694%29_cropped.png']
   },  {
     id: 'lakshmi',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Raja_Ravi_Varma%2C_Goddess_Lakshmi%2C_1896.jpg/960px-Raja_Ravi_Varma%2C_Goddess_Lakshmi%2C_1896.jpg'],
     parentId: 'hindu-pantheon',
     name: 'Lakshmi',
     description: 'Goddess of wealth, prosperity, love, and beauty Job/Domain: Goddess of wealth, prosperity, love, and beauty. Correlated characters: Aphrodite (Greek), Venus (Roman), Freya (Norse).',
@@ -1976,6 +2109,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'shiva',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Bangalore_Shiva.jpg/960px-Bangalore_Shiva.jpg'],
     relatedIds: ['brahma', 'kali'],
     parentId: 'hindu-pantheon',
     name: 'Shiva',
@@ -1984,6 +2118,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'vishnu',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Vishnu_from_Gita_Govinda.jpg/960px-Vishnu_from_Gita_Govinda.jpg'],
     parentId: 'hindu-pantheon',
     name: 'Vishnu',
     description: 'God of preservation and order Job/Domain: God of preservation and order. Correlated characters: Osiris (Egyptian), Dionysus (Greek), Mithra (Persian).',
@@ -1992,6 +2127,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'saraswati',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Goddess_Saraswati_worship.jpg/960px-Goddess_Saraswati_worship.jpg'],
     parentId: 'hindu-pantheon',
     name: 'Saraswati',
     description: ' Job/Domain: Goddess of knowledge, wisdom, and the arts. Correlated characters: Athena (Greek), Minerva (Roman), Neith (Egyptian).',
@@ -1999,6 +2135,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'skl-alulim',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Lista_Reale_Sumerica.jpg/960px-Lista_Reale_Sumerica.jpg'],
     parentId: 'sumerian-kings',
     name: 'Alulim of Eridu',
     description: 'The first king of the first city, Eridu. Legendary reign of 28,800 years before the flood.',
@@ -2008,6 +2145,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'skl-alalngar',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Ziggurat_at_Eridu_%2830809118442%29.jpg/960px-Ziggurat_at_Eridu_%2830809118442%29.jpg'],
     parentId: 'sumerian-kings',
     name: 'Alalngar of Eridu',
     description: 'The second king of Eridu. Reigned for 36,000 years.',
@@ -2035,6 +2173,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'skl-dumuzid-shep',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Fran%C3%A7oise_Foliot_-_%C3%A9poux.jpg/960px-Fran%C3%A7oise_Foliot_-_%C3%A9poux.jpg'],
     relatedIds: ['tammuz'],
     parentId: 'sumerian-kings',
     name: 'Dumuzid the Shepherd',
@@ -2054,6 +2193,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'skl-enmendurana',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Lista_Reale_Sumerica.jpg/960px-Lista_Reale_Sumerica.jpg'],
     parentId: 'sumerian-kings',
     name: 'En-men-dur-ana of Sippar',
     description: 'King of Sippar. In legend, he was summoned to heaven by the gods Shamash and Adad and taught the secrets of divination. Reigned 21,000 years.',
@@ -2063,6 +2203,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'skl-ubarautu',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Lista_Reale_Sumerica.jpg/960px-Lista_Reale_Sumerica.jpg'],
     parentId: 'sumerian-kings',
     name: 'Ubara-Tutu of Shuruppak',
     description: 'The last antediluvian king of Sumer, ruling in Shuruppak. Father of the Sumerian flood survivor Ziusudra. Reigned for 16,252 years until the flood swept over.',
@@ -2082,6 +2223,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'skl-lugalbanda',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Obverse._The_story_of_Lugalbanda_in_the_Mountain_Cave%2C_Old-Babylonian_period%2C_from_southern_Iraq._Sulaymaniyah_Museum%2C_Iraqi_Kurdistan.jpg/960px-Obverse._The_story_of_Lugalbanda_in_the_Mountain_Cave%2C_Old-Babylonian_period%2C_from_southern_Iraq._Sulaymaniyah_Museum%2C_Iraqi_Kurdistan.jpg'],
     parentId: 'sumerian-kings',
     name: 'Lugalbanda of Uruk',
     description: 'Second king of Uruk, deified ancestor and father of Gilgamesh. Legend states he reigned for 1,200 years.',
@@ -2091,6 +2233,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'skl-enmerkar',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Priest-king_from_Uruk%2C_Mesopotamia%2C_Iraq%2C_c._3000_BCE._The_Iraq_Museum_%28transparent%29.png/960px-Priest-king_from_Uruk%2C_Mesopotamia%2C_Iraq%2C_c._3000_BCE._The_Iraq_Museum_%28transparent%29.png'],
     parentId: 'sumerian-kings',
     name: 'Enmerkar of Uruk',
     description: 'Builder of Uruk, famous for demanding tribute from Aratta, leading to the confusion of speech (similar to Babel). Reigned 420 years.',
@@ -2100,6 +2243,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'skl-gilgamesh',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/British_Museum_Flood_Tablet.jpg/960px-British_Museum_Flood_Tablet.jpg'],
     relatedIds: ['gilgamesh-text', 'shamash-utu'],
     parentId: 'sumerian-kings',
     name: 'Gilgamesh of Uruk',
@@ -2142,6 +2286,7 @@ const chunk_0: any[] = [  {
     sources: ['Bloodlines of the Illuminati by Fritz Springmeier', 'Esoteric History Records']
   },  {
     id: 'bloodline-rothschild',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Great_coat_of_arms_of_Rothschild_family.svg/960px-Great_coat_of_arms_of_Rothschild_family.svg.png'],
     relatedIds: ['wars-real-causes', 'war-waterloo-rothschild-1815', 'war-opium-wars-1839', 'war-sarajevo-wwi-1914', 'war-bolshevik-funding-1917', 'war-libya-gold-dinar-2011'],
     parentId: 'illuminati-bloodlines',
     secondaryParentIds: ['black-nobility'],
@@ -2372,6 +2517,7 @@ const chunk_0: any[] = [  {
     sources: ['European Royal Registries', 'Hofburg Palace Archives']
   },  {
     id: 'nobility-plantagenet',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/WarwickRousRoll.jpg/960px-WarwickRousRoll.jpg'],
     parentId: 'black-nobility',
     name: 'Plantagenet Bloodline',
     description: 'A royal house of French origin that ruled England from 1154 to 1485. They established the foundations of English common law, signed the Magna Carta, and engaged in the Crusades and the Hundred Years\' War.',
@@ -2406,6 +2552,7 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'merovech',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Victory_of_King_Merovech.png/960px-Victory_of_King_Merovech.png'],
     parentId: 'merovingian-bloodlines',
     name: 'Merovech',
     description: 'The legendary founder of the Merovingian dynasty, said to have been born of a sea monster Quinotaur.',
@@ -2430,6 +2577,7 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'clotilde',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Drouais_-_Clotilde_of_France_-_Versailles_MV_3972.jpg/960px-Drouais_-_Clotilde_of_France_-_Versailles_MV_3972.jpg'],
     parentId: 'merovingian-bloodlines',
     name: 'Queen Clotilde',
     description: 'Burgundian princess, wife of Clovis I, who successfully persuaded her husband to convert to Christianity.',
@@ -2462,6 +2610,7 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'dagobert_i',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Basilica_of_Saint_Denis%2C_Paris%2C_interior%2C_tomb_of_Dagobert_I.jpg/960px-Basilica_of_Saint_Denis%2C_Paris%2C_interior%2C_tomb_of_Dagobert_I.jpg'],
     parentId: 'merovingian-bloodlines',
     name: 'King Dagobert I',
     description: 'The last Merovingian king to wield real power. Built the Basilica of Saint-Denis.',
@@ -2494,6 +2643,7 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'charlemagne',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Charlemagne_denier_Mayence_812_814.jpg/960px-Charlemagne_denier_Mayence_812_814.jpg'],
     parentId: 'royal-bloodlines',
     name: 'Charlemagne',
     description: 'King of the Franks, Lombards, and Emperor of the Romans. United Western Europe. Father of Europe.',
@@ -2542,6 +2692,7 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'aethelred_unready',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Ethelred_the_Unready.jpg/960px-Ethelred_the_Unready.jpg'],
     parentId: 'royal-bloodlines',
     name: 'Æthelred the Unready',
     description: 'King of the English. Paid Danegeld to buy off Viking raiders; reign plagued by Danish incursions.',
@@ -2568,6 +2719,7 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'margaret_scotland',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/St._Margaret_of_Scotland%2C_Langrick_-_geograph.org.uk_-_2821492.jpg/960px-St._Margaret_of_Scotland%2C_Langrick_-_geograph.org.uk_-_2821492.jpg'],
     relatedIds: ['malcolm_iii'],
     parentId: 'royal-bloodlines',
     name: 'Margaret of Scotland',
@@ -2595,6 +2747,7 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'henry_i',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Bildnis_des_Kardinalk%C3%B6nigs_Enrico_I_von_Portugal.png/960px-Bildnis_des_Kardinalk%C3%B6nigs_Enrico_I_von_Portugal.png'],
     relatedIds: ['william_conqueror', 'matilda_scotland', 'nostradamus-prophecies-fulfilled'],
     parentId: 'royal-bloodlines',
     name: 'King Henry I',
@@ -2613,6 +2766,7 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'empress_matilda',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/P169-The_Empress_Matilda_and_the_Queen_of_Stephen.jpg/960px-P169-The_Empress_Matilda_and_the_Queen_of_Stephen.jpg'],
     parentId: 'royal-bloodlines',
     name: 'Empress Matilda',
     description: 'Daughter of Henry I, Holy Roman Empress, claimant to the English throne during "The Anarchy" civil war.',
@@ -2621,6 +2775,7 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'henry_ii',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Silver_coin_of_King_Henry_II_of_Jerusalem_%281310-1324%29.jpg/960px-Silver_coin_of_King_Henry_II_of_Jerusalem_%281310-1324%29.jpg'],
     relatedIds: ['nostradamus-prophecies-fulfilled'],
     parentId: 'royal-bloodlines',
     name: 'King Henry II',
@@ -2670,6 +2825,7 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'john_of_gaunt',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/The_King_of_Portugal_and_John_of_Gaunt_Consulting_%28c._1480-1483%29.png/960px-The_King_of_Portugal_and_John_of_Gaunt_Consulting_%28c._1480-1483%29.png'],
     relatedIds: ['john_beaufort'],
     parentId: 'royal-bloodlines',
     name: 'John of Gaunt',
@@ -2696,6 +2852,7 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'margaret_beaufort',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Lady_Margaret_Beaufort_from_NPG.jpg/960px-Lady_Margaret_Beaufort_from_NPG.jpg'],
     relatedIds: ['henry_vii'],
     parentId: 'royal-bloodlines',
     name: 'Lady Margaret Beaufort',
@@ -2705,6 +2862,7 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'henry_vii',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/King_Henry_VII.jpg/960px-King_Henry_VII.jpg'],
     relatedIds: ['margaret_beaufort'],
     parentId: 'royal-bloodlines',
     name: 'King Henry VII',
@@ -2714,6 +2872,7 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'henry_viii',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Remigius_van_Leemput_-_Whitehall_Mural.jpg/960px-Remigius_van_Leemput_-_Whitehall_Mural.jpg'],
     parentId: 'royal-bloodlines',
     name: 'King Henry VIII',
     description: 'King of England, broke from Rome to establish Church of England, married six times. Rule of reform.',
@@ -2722,6 +2881,7 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'elizabeth_i',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Darnley_stage_3.jpg/960px-Darnley_stage_3.jpg'],
     relatedIds: ['enochian-language', 'john-dee', 'balmoral-castle-occult'],
     parentId: 'royal-bloodlines',
     name: 'Queen Elizabeth I',
@@ -2731,6 +2891,7 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'mary_queen_of_scots',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Fran%C3%A7ois_Clouet_-_Mary%2C_Queen_of_Scots_%281542-87%29_-_Google_Art_Project.jpg/960px-Fran%C3%A7ois_Clouet_-_Mary%2C_Queen_of_Scots_%281542-87%29_-_Google_Art_Project.jpg'],
     parentId: 'royal-bloodlines',
     name: 'Mary, Queen of Scots',
     description: 'Queen of Scotland, claimant to English throne, executed by Elizabeth I.',
@@ -2739,6 +2900,7 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'james_vi_i',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/JamesIEngland_%28cropped_2%29.jpg/960px-JamesIEngland_%28cropped_2%29.jpg'],
     relatedIds: ['bible-kjv-1611'],
     parentId: 'royal-bloodlines',
     name: 'King James I & VI',
@@ -2748,6 +2910,7 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'elizabeth_stuart',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Workshop_of_Michiel_Jansz._van_Miereveldt_Elizabeth_Stuart_Queen_of_Bohemia.jpg/960px-Workshop_of_Michiel_Jansz._van_Miereveldt_Elizabeth_Stuart_Queen_of_Bohemia.jpg'],
     relatedIds: ['george_i'],
     parentId: 'royal-bloodlines',
     name: 'Elizabeth Stuart (Bohemia)',
@@ -2801,6 +2964,7 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'edward_kent',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/HRH_Prince_Michael_of_Kent_62_Allan_Warren.jpg/960px-HRH_Prince_Michael_of_Kent_62_Allan_Warren.jpg'],
     relatedIds: ['queen_victoria'],
     parentId: 'royal-bloodlines',
     name: 'Prince Edward, Duke of Kent',
@@ -2810,6 +2974,7 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'queen_victoria',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Queen_Victoria_by_Bassano.jpg/960px-Queen_Victoria_by_Bassano.jpg'],
     relatedIds: ['edward_kent', 'balmoral-castle-occult'],
     parentId: 'royal-bloodlines',
     name: 'Queen Victoria',
@@ -2819,6 +2984,7 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'edward_vii',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/King-Edward-VII_%28cropped%29_%28b%29.jpg/960px-King-Edward-VII_%28cropped%29_%28b%29.jpg'],
     parentId: 'royal-bloodlines',
     name: 'King Edward VII',
     description: 'First monarch of House of Saxe-Coburg and Gotha (later Windsor), fostered entente cordiale.',
@@ -2827,6 +2993,7 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'george_v',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/King_George_1923_LCCN2014715558_%28cropped%29.jpg/960px-King_George_1923_LCCN2014715558_%28cropped%29.jpg'],
     parentId: 'royal-bloodlines',
     name: 'King George V',
     description: 'King during WWI. Changed royal house name to Windsor. Inaugurated Christmas broadcasts.',
@@ -2843,6 +3010,7 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'queen_elizabeth_ii',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Queen_Elizabeth_II_in_March_2015.jpg/960px-Queen_Elizabeth_II_in_March_2015.jpg'],
     relatedIds: ['balmoral-castle-occult'],
     parentId: 'royal-bloodlines',
     name: 'Queen Elizabeth II',
@@ -2893,6 +3061,7 @@ const chunk_0: any[] = [  {
     sources: ['Modern UFOlogy Literature', 'Close Encounter Witness Records']
   },  {
     id: 'men-in-black',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/MiB.svg/960px-MiB.svg.png'],
     relatedIds: ['anomaly-UFO-rex-heflin-1965', 'indrid-cold', 'codex-sighting-indrid-cold-1969'],
     parentId: 'aliens',
     name: 'Men in Black',
@@ -2906,6 +3075,7 @@ const chunk_0: any[] = [  {
     sources: ['Modern UFOlogy Literature', 'Close Encounter Witness Records']
   },  {
     id: 'space-anomalies-br',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/GPB_circling_earth.jpg/960px-GPB_circling_earth.jpg'],
     relatedIds: ['philadelphia-experiment'],
     parentId: 'supernatural-anomalies',
     name: 'Space-Time Anomalies',
@@ -2927,6 +3097,7 @@ const chunk_0: any[] = [  {
     sources: ['Astrophysics Literature', 'Theoretical Physics Papers']
   },  {
     id: 'portals',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Portals%2C_%C3%89glise_Saint-Andr%C3%A9%2C_Niort.jpg/960px-Portals%2C_%C3%89glise_Saint-Andr%C3%A9%2C_Niort.jpg'],
     parentId: 'space-anomalies-br',
     name: 'Portals',
     description: 'Doorways or gateways in space-time rumored to exist at specific ley line intersections or geographic anomalies, facilitating transport across realms.',
@@ -2941,12 +3112,14 @@ const chunk_0: any[] = [  {
     sources: ['Astrophysics Literature', 'Theoretical Physics Papers']
   },  {
     id: 'biblical-figures',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Simeon_Solomon%2C_King_Solomon%2C_1872_or_1874%2C_NGA_76152_%28cropped%29.jpg/1280px-Simeon_Solomon%2C_King_Solomon%2C_1872_or_1874%2C_NGA_76152_%28cropped%29.jpg'],
     parentId: 'christianity',
     name: 'Biblical Figures',
     description: 'Key historical patriarchs and historical personalities mentioned in the biblical record.',
     layer: 'Biblical Figures'
   },  {
     id: 'adam',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Michelangelo%2C_Creation_of_Adam_03.jpg/960px-Michelangelo%2C_Creation_of_Adam_03.jpg'],
     relatedIds: ['enoch3-shekinah-withdrawal'],
     parentId: 'biblical-figures',
     name: 'Adam',
@@ -2966,6 +3139,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Yahweh God made a woman from the rib which he had taken from the man, and brought her to the man. — Genesis 2:22 (https://www.biblegateway.com/passage/?search=Genesis+2%3A22)', 'The man called his wife Eve because she would be the mother of all the living. — Genesis 3:20 (https://www.biblegateway.com/passage/?search=Genesis+3%3A20)', 'But I am afraid that somehow, as the serpent deceived Eve in his craftiness, so your minds might be corrupted from the simplicity that is in Christ. — 2 Corinthians 11:3 (https://www.biblegateway.com/passage/?search=2+Corinthians+11%3A3)']
   },  {
     id: 'cain',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Peter_Paul_Rubens_-_Cain_slaying_Abel_%28Courtauld_Institute%29.jpg/960px-Peter_Paul_Rubens_-_Cain_slaying_Abel_%28Courtauld_Institute%29.jpg'],
     parentId: 'biblical-figures',
     name: 'Cain',
     description: 'Eldest son of Adam and Eve. Slew his brother Abel and was marked by God.',
@@ -2976,6 +3150,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['The man knew Eve his wife. She conceived, and gave birth to Cain, and said, “I have gotten a man with Yahweh’s help.” — Genesis 4:1 (https://www.biblegateway.com/passage/?search=Genesis+4%3A1)', 'Cain said to Abel, his brother, “Let’s go into the field.” While they were in the field, Cain rose up against Abel, his brother, and killed him. — Genesis 4:8 (https://www.biblegateway.com/passage/?search=Genesis+4%3A8)', 'unlike Cain, who was of the evil one, and killed his brother. Why did he kill him? Because his deeds were evil, and his brother’s righteous. — 1 John 3:12 (https://www.biblegateway.com/passage/?search=1+John+3%3A12)']
   },  {
     id: 'abel',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Peter_Paul_Rubens_-_Cain_slaying_Abel_%28Courtauld_Institute%29.jpg/960px-Peter_Paul_Rubens_-_Cain_slaying_Abel_%28Courtauld_Institute%29.jpg'],
     parentId: 'biblical-figures',
     name: 'Abel',
     description: 'Second son of Adam and Eve. A keeper of sheep whose offering was accepted by God, slain by Cain out of jealousy.',
@@ -2995,6 +3170,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['A son was also born to Seth, and he named him Enosh. At that time men began to call on Yahweh’s name. — Genesis 4:26 (https://www.biblegateway.com/passage/?search=Genesis+4%3A26)', 'Seth lived one hundred five years, then became the father of Enosh. Seth lived after he became the father of Enosh eight hundred seven years, and became the father of other sons and daughters. All of the days of Seth were nine hundred twelve years, then he died. — Genesis 5:6-8 (https://www.biblegateway.com/passage/?search=Genesis+5%3A6-8)', 'the son of Enos, the son of Seth, the son of Adam, the son of God. — Luke 3:38 (https://www.biblegateway.com/passage/?search=Luke+3%3A38)']
   },  {
     id: 'kenan',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Biblical_antediluvian_patriarch_Cainan%2C_Kenan.jpg/960px-Biblical_antediluvian_patriarch_Cainan%2C_Kenan.jpg'],
     parentId: 'biblical-figures',
     name: 'Kenan',
     description: 'Son of Enosh. Lived 910 years.',
@@ -3004,6 +3180,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Enosh lived ninety years, and became the father of Kenan. Enosh lived after he became the father of Kenan, eight hundred fifteen years, and became the father of other sons and daughters. All of the days of Enosh were nine hundred five years, then he died. Kenan lived seventy years, then became the father of Mahalalel. Kenan lived after he became the father of Mahalalel eight hundred forty years, and became the father of other sons and daughters and all of the days of Kenan were nine hundred ten years, then he died. — Genesis 5:9-14 (https://www.biblegateway.com/passage/?search=Genesis+5%3A9-14)', 'Kenan, Mahalalel, Jared, — 1 Chronicles 1:2 (https://www.biblegateway.com/passage/?search=1+Chronicles+1%3A2)', 'the son of Methuselah, the son of Enoch, the son of Jared, the son of Mahalaleel, the son of Cainan, — Luke 3:37 (https://www.biblegateway.com/passage/?search=Luke+3%3A37)']
   },  {
     id: 'mahalalel',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Mahalalel%2C_son_of_Kenan%2C_human_biblical_figure.jpg/960px-Mahalalel%2C_son_of_Kenan%2C_human_biblical_figure.jpg'],
     relatedIds: ['enoch-family', 'enoch-family-jared'],
     parentId: 'biblical-figures',
     name: 'Mahalalel',
@@ -3014,6 +3191,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Mahalalel lived sixty-five years, then became the father of Jared. Mahalalel lived after he became the father of Jared eight hundred thirty years, and became the father of other sons and daughters. All of the days of Mahalalel were eight hundred ninety-five years, then he died. — Genesis 5:15-17 (https://www.biblegateway.com/passage/?search=Genesis+5%3A15-17)', 'Kenan, Mahalalel, Jared, — 1 Chronicles 1:2 (https://www.biblegateway.com/passage/?search=1+Chronicles+1%3A2)', 'the son of Methuselah, the son of Enoch, the son of Jared, the son of Mahalaleel, the son of Cainan, — Luke 3:37 (https://www.biblegateway.com/passage/?search=Luke+3%3A37)']
   },  {
     id: 'jared',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Canterbury_Cathedral%2C_window_S28_detail_%2845789806014%29.jpg/960px-Canterbury_Cathedral%2C_window_S28_detail_%2845789806014%29.jpg'],
     relatedIds: ['enoch-family', 'enoch-family-jared'],
     parentId: 'biblical-figures',
     name: 'Jared',
@@ -3024,6 +3202,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Jared lived one hundred sixty-two years, then became the father of Enoch. Jared lived after he became the father of Enoch eight hundred years, and became the father of other sons and daughters. All of the days of Jared were nine hundred sixty-two years, then he died. — Genesis 5:18-20 (https://www.biblegateway.com/passage/?search=Genesis+5%3A18-20)', 'Kenan, Mahalalel, Jared, — 1 Chronicles 1:2 (https://www.biblegateway.com/passage/?search=1+Chronicles+1%3A2)', 'the son of Methuselah, the son of Enoch, the son of Jared, the son of Mahalaleel, the son of Cainan, — Luke 3:37 (https://www.biblegateway.com/passage/?search=Luke+3%3A37)']
   },  {
     id: 'methuselah',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Methuselah_Stained_glass.jpg/960px-Methuselah_Stained_glass.jpg'],
     relatedIds: ['great-flood', 'enoch-family', 'achuzan-altar-methuselah', 'enoch-family-methuselah'],
     parentId: 'biblical-figures',
     name: 'Methuselah',
@@ -3034,6 +3213,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Enoch lived sixty-five years, then became the father of Methuselah. After Methuselah’s birth, Enoch walked with God for three hundred years, and became the father of more sons and daughters. All the days of Enoch were three hundred sixty-five years. Enoch walked with God, and he was not found, for God took him. Methuselah lived one hundred eighty-seven years, then became the father of Lamech. Methuselah lived after he became the father of Lamech seven hundred eighty-two years, and became the father of other sons and daughters. All the days of Methuselah were nine hundred sixty-nine years, then he died. — Genesis 5:21-27 (https://www.biblegateway.com/passage/?search=Genesis+5%3A21-27)', 'Enoch, Methuselah, Lamech, — 1 Chronicles 1:3 (https://www.biblegateway.com/passage/?search=1+Chronicles+1%3A3)', 'the son of Methuselah, the son of Enoch, the son of Jared, the son of Mahalaleel, the son of Cainan, — Luke 3:37 (https://www.biblegateway.com/passage/?search=Luke+3%3A37)']
   },  {
     id: 'lamech',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Lamech_and_Cain_MET_DP818832.jpg/960px-Lamech_and_Cain_MET_DP818832.jpg'],
     relatedIds: ['enoch-family', 'enoch-family-lamech'],
     parentId: 'biblical-figures',
     name: 'Lamech',
@@ -3053,6 +3233,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Noah became the father of three sons: Shem, Ham, and Japheth. — Genesis 6:10 (https://www.biblegateway.com/passage/?search=Genesis+6%3A10)', 'He said, “Blessed be Yahweh, the God of Shem. Let Canaan be his servant. May God enlarge Japheth. Let him dwell in the tents of Shem. Let Canaan be his servant.” — Genesis 9:26-27 (https://www.biblegateway.com/passage/?search=Genesis+9%3A26-27)', 'the son of Cainan, the son of Arphaxad, the son of Shem, the son of Noah, the son of Lamech, — Luke 3:36 (https://www.biblegateway.com/passage/?search=Luke+3%3A36)']
   },  {
     id: 'ham',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Ham_%284%29.jpg/960px-Ham_%284%29.jpg'],
     parentId: 'biblical-figures',
     name: 'Ham',
     description: 'Son of Noah, father of Cush, Egypt, Put, and Canaan. Survived the Flood. Lived approximately 540 years (historical estimate).',
@@ -3071,6 +3252,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Noah became the father of three sons: Shem, Ham, and Japheth. — Genesis 6:10 (https://www.biblegateway.com/passage/?search=Genesis+6%3A10)', 'May God enlarge Japheth. Let him dwell in the tents of Shem. Let Canaan be his servant.” — Genesis 9:27 (https://www.biblegateway.com/passage/?search=Genesis+9%3A27)', 'Noah, Shem, Ham, and Japheth. — 1 Chronicles 1:4 (https://www.biblegateway.com/passage/?search=1+Chronicles+1%3A4)']
   },  {
     id: 'cush',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Cush_Jumbo%2C_2026.jpg/960px-Cush_Jumbo%2C_2026.jpg'],
     parentId: 'biblical-figures',
     name: 'Cush',
     description: 'Eldest son of Ham, father of Nimrod. Ancestor of the land of Cush (Nubia/Ethiopia). Lived approximately 500 years.',
@@ -3089,6 +3271,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['This is the history of the generations of Shem: Shem was one hundred years old when he became the father of Arpachshad two years after the flood. Shem lived five hundred years after he became the father of Arpachshad, and became the father of more sons and daughters. Arpachshad lived thirty-five years and became the father of Shelah. Arpachshad lived four hundred three years after he became the father of Shelah, and became the father of more sons and daughters. — Genesis 11:10-13 (https://www.biblegateway.com/passage/?search=Genesis+11%3A10-13)', 'The sons of Shem: Elam, Asshur, Arpachshad, Lud, Aram, Uz, Hul, Gether, and Meshech. Arpachshad became the father of Shelah, and Shelah became the father of Eber. — 1 Chronicles 1:17-18 (https://www.biblegateway.com/passage/?search=1+Chronicles+1%3A17-18)', 'the son of Cainan, the son of Arphaxad, the son of Shem, the son of Noah, the son of Lamech, — Luke 3:36 (https://www.biblegateway.com/passage/?search=Luke+3%3A36)']
   },  {
     id: 'shelah',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Saharon_Shelah.jpg/960px-Saharon_Shelah.jpg'],
     parentId: 'biblical-figures',
     name: 'Shelah',
     description: 'Son of Arpachshad. Lived 433 years.',
@@ -3153,6 +3336,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Nahor lived twenty-nine years, and became the father of Terah. Nahor lived one hundred nineteen years after he became the father of Terah, and became the father of more sons and daughters. Terah lived seventy years, and became the father of Abram, Nahor, and Haran. Now this is the history of the generations of Terah. Terah became the father of Abram, Nahor, and Haran. Haran became the father of Lot. Haran died before his father Terah in the land of his birth, in Ur of the Chaldees. Abram and Nahor married wives. The name of Abram’s wife was Sarai, and the name of Nahor’s wife was Milcah, the daughter of Haran who was also the father of Iscah. Sarai was barren. She had no child. Terah took Abram his son, Lot the son of Haran, his son’s son, and Sarai his daughter-in-law, his son Abram’s wife. They went from Ur of the Chaldees, to go into the land of Canaan. They came to Haran and lived there. The days of Terah were two hundred five years. Terah died in Haran. — Genesis 11:24-32 (https://www.biblegateway.com/passage/?search=Genesis+11%3A24-32)', 'Joshua said to all the people, “Yahweh says, the God of Israel, ‘Your fathers lived of old time beyond the River, even Terah, the father of Abraham, and the father of Nahor: and they served other gods. — Joshua 24:2 (https://www.biblegateway.com/passage/?search=Joshua+24%3A2)', 'the son of Jacob, the son of Isaac, the son of Abraham, the son of Terah, the son of Nahor, — Luke 3:34 (https://www.biblegateway.com/passage/?search=Luke+3%3A34)']
   },  {
     id: 'sarah',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/James_Jacques_Joseph_Tissot_-_Abram%27s_Counsel_to_Sarai_-_Google_Art_Project_%28cropped%29.jpg/960px-James_Jacques_Joseph_Tissot_-_Abram%27s_Counsel_to_Sarai_-_Google_Art_Project_%28cropped%29.jpg'],
     parentId: 'biblical-figures',
     name: 'Sarah',
     description: 'Wife of Abraham and mother of Isaac. Lived 127 years.',
@@ -3162,6 +3346,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['God said to Abraham, “As for Sarai your wife, you shall not call her name Sarai, but her name will be Sarah. I will bless her, and moreover I will give you a son by her. Yes, I will bless her, and she will be a mother of nations. Kings of peoples will come from her.” — Genesis 17:15-16 (https://www.biblegateway.com/passage/?search=Genesis+17%3A15-16)', 'Yahweh visited Sarah as he had said, and Yahweh did to Sarah as he had spoken. Sarah conceived, and bore Abraham a son in his old age, at the set time of which God had spoken to him. — Genesis 21:1-2 (https://www.biblegateway.com/passage/?search=Genesis+21%3A1-2)', 'By faith, even Sarah herself received power to conceive, and she bore a child when she was past age, since she counted him faithful who had promised. — Hebrews 11:11 (https://www.biblegateway.com/passage/?search=Hebrews+11%3A11)']
   },  {
     id: 'ishmael',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Oldtestamentthre0001unse_0096_%28cropped%29.jpg/960px-Oldtestamentthre0001unse_0096_%28cropped%29.jpg'],
     relatedIds: ['rabbi-ishmael-3-enoch'],
     parentId: 'biblical-figures',
     name: 'Ishmael',
@@ -3190,6 +3375,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Before he had finished speaking, behold, Rebekah came out, who was born to Bethuel the son of Milcah, the wife of Nahor, Abraham’s brother, with her pitcher on her shoulder. — Genesis 24:15 (https://www.biblegateway.com/passage/?search=Genesis+24%3A15)', 'Isaac brought her into his mother Sarah’s tent, and took Rebekah, and she became his wife. He loved her. Isaac was comforted after his mother’s death. — Genesis 24:67 (https://www.biblegateway.com/passage/?search=Genesis+24%3A67)', 'Not only so, but Rebekah also conceived by one, by our father Isaac. — Romans 9:10 (https://www.biblegateway.com/passage/?search=Romans+9%3A10)']
   },  {
     id: 'esau',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Esau_and_Jacob_%28cropped%29.jpg/960px-Esau_and_Jacob_%28cropped%29.jpg'],
     relatedIds: ['edomites', 'prophecy-edom-obadiah'],
     parentId: 'biblical-figures',
     name: 'Esau',
@@ -3200,6 +3386,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['The first came out red all over, like a hairy garment. They named him Esau. — Genesis 25:25 (https://www.biblegateway.com/passage/?search=Genesis+25%3A25)', 'Jacob boiled stew. Esau came in from the field, and he was famished. Esau said to Jacob, “Please feed me with that same red stew, for I am famished.” Therefore his name was called Edom. Jacob said, “First, sell me your birthright.” Esau said, “Behold, I am about to die. What good is the birthright to me?” Jacob said, “Swear to me first.” He swore to him. He sold his birthright to Jacob. Jacob gave Esau bread and stew of lentils. He ate and drank, rose up, and went his way. So Esau despised his birthright. — Genesis 25:29-34 (https://www.biblegateway.com/passage/?search=Genesis+25%3A29-34)', 'lest there be any sexually immoral person, or profane person, like Esau, who sold his birthright for one meal. For you know that even when he afterward desired to inherit the blessing, he was rejected, for he found no place for a change of mind though he sought it diligently with tears. — Hebrews 12:16-17 (https://www.biblegateway.com/passage/?search=Hebrews+12%3A16-17)']
   },  {
     id: 'jacob',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Jan_Victors_-_Jacob_Seeking_the_Forgiveness_of_Esau_-_79.330_-_Indianapolis_Museum_of_Art_%28cropped%29.jpg/960px-Jan_Victors_-_Jacob_Seeking_the_Forgiveness_of_Esau_-_79.330_-_Indianapolis_Museum_of_Art_%28cropped%29.jpg'],
     parentId: 'biblical-figures',
     name: 'Jacob',
     description: 'Son of Isaac, renamed Israel. Father of the twelve patriarchs of the Tribes of Israel. Lived 147 years.',
@@ -3209,6 +3396,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['After that, his brother came out, and his hand had hold on Esau’s heel. He was named Jacob. Isaac was sixty years old when she bore them. — Genesis 25:26 (https://www.biblegateway.com/passage/?search=Genesis+25%3A26)', 'He said, “Your name will no longer be called Jacob, but Israel; for you have fought with God and with men, and have prevailed.” — Genesis 32:28 (https://www.biblegateway.com/passage/?search=Genesis+32%3A28)', 'Even as it is written, “Jacob I loved, but Esau I hated.” — Romans 9:13 (https://www.biblegateway.com/passage/?search=Romans+9%3A13)']
   },  {
     id: 'leah',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Michelangelo-Leah.jpg/960px-Michelangelo-Leah.jpg'],
     parentId: 'biblical-figures',
     name: 'Leah',
     description: 'First wife of Jacob and mother of Reuben, Simeon, Levi, Judah, Issachar, and Zebulun.',
@@ -3218,6 +3406,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Laban had two daughters. The name of the elder was Leah, and the name of the younger was Rachel. Leah’s eyes were weak, but Rachel was beautiful in form and attractive. — Genesis 29:16-17 (https://www.biblegateway.com/passage/?search=Genesis+29%3A16-17)', 'Yahweh saw that Leah was hated, and he opened her womb, but Rachel was barren. Leah conceived, and bore a son, and she named him Reuben. For she said, “Because Yahweh has looked at my affliction; for now my husband will love me.” She conceived again, and bore a son, and said, “Because Yahweh has heard that I am hated, he has therefore given me this son also.” She named him Simeon. She conceived again, and bore a son. Said, “Now this time will my husband be joined to me, because I have borne him three sons.” Therefore his name was called Levi. She conceived again, and bore a son. She said, “This time will I praise Yahweh.” Therefore she named him Judah. Then she stopped bearing. — Genesis 29:31-35 (https://www.biblegateway.com/passage/?search=Genesis+29%3A31-35)', 'All the people who were in the gate, and the elders, said, “We are witnesses. May Yahweh make the woman who has come into your house like Rachel and like Leah, which both built the house of Israel; and treat you worthily in Ephrathah, and be famous in Bethlehem. — Ruth 4:11 (https://www.biblegateway.com/passage/?search=Ruth+4%3A11)']
   },  {
     id: 'rachel',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Foster_Bible_Pictures_0044-1_Jacob_and_Rachel_at_the_Well.jpg/960px-Foster_Bible_Pictures_0044-1_Jacob_and_Rachel_at_the_Well.jpg'],
     parentId: 'biblical-figures',
     name: 'Rachel',
     description: 'Beloved second wife of Jacob and mother of Joseph and Benjamin. Died in childbirth.',
@@ -3227,6 +3416,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Leah’s eyes were weak, but Rachel was beautiful in form and attractive. — Genesis 29:17 (https://www.biblegateway.com/passage/?search=Genesis+29%3A17)', 'God remembered Rachel, and God listened to her, and opened her womb. She conceived, bore a son, and said, “God has taken away my reproach.” She named him Joseph, saying, “May Yahweh add another son to me.” — Genesis 30:22-24 (https://www.biblegateway.com/passage/?search=Genesis+30%3A22-24)', 'Yahweh says: “A voice is heard in Ramah, lamentation and bitter weeping, Rachel weeping for her children. She refuses to be comforted for her children, because they are no more.” — Jeremiah 31:15 (https://www.biblegateway.com/passage/?search=Jeremiah+31%3A15)']
   },  {
     id: 'judah',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Judah_%28Francisco_de_Zurbar%C3%A1n%29.jpg/960px-Judah_%28Francisco_de_Zurbar%C3%A1n%29.jpg'],
     relatedIds: ['tribe-of-judah'],
     parentId: 'biblical-figures',
     name: 'Judah',
@@ -3237,6 +3427,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['She conceived again, and bore a son. She said, “This time will I praise Yahweh.” Therefore she named him Judah. Then she stopped bearing. — Genesis 29:35 (https://www.biblegateway.com/passage/?search=Genesis+29%3A35)', '“Judah, your brothers will praise you. Your hand will be on the neck of your enemies. Your father’s sons will bow down before you. Judah is a lion’s cub. From the prey, my son, you have gone up. He stooped down, he crouched as a lion, as a lioness. Who will rouse him up? The scepter will not depart from Judah, nor the ruler’s staff from between his feet, until he comes to whom it belongs. To him will the obedience of the peoples be. — Genesis 49:8-10 (https://www.biblegateway.com/passage/?search=Genesis+49%3A8-10)', 'One of the elders said to me, “Don’t weep. Behold, the Lion who is of the tribe of Judah, the Root of David, has overcome; he who opens the book and its seven seals.” — Revelation 5:5 (https://www.biblegateway.com/passage/?search=Revelation+5%3A5)']
   },  {
     id: 'levi',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Levi%27s_Times_Square_NYC_-_May_2026.jpg/960px-Levi%27s_Times_Square_NYC_-_May_2026.jpg'],
     parentId: 'biblical-figures',
     name: 'Levi',
     description: 'Third son of Jacob and Leah. Ancestor of the priestly Levite tribe. Lived 137 years.',
@@ -3246,6 +3437,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['She conceived again, and bore a son. Said, “Now this time will my husband be joined to me, because I have borne him three sons.” Therefore his name was called Levi. — Genesis 29:34 (https://www.biblegateway.com/passage/?search=Genesis+29%3A34)', 'About Levi he said, “Your Thummim and your Urim are with your godly one, whom you proved at Massah, with whom you contended at the waters of Meribah. He said of his father, and of his mother, ‘I have not seen him.’ He didn’t acknowledge his brothers, nor did he know his own children; for they have observed your word, and keep your covenant. They shall teach Jacob your ordinances, and Israel your law. They shall put incense before you, and whole burnt offering on your altar. — Deuteronomy 33:8-10 (https://www.biblegateway.com/passage/?search=Deuteronomy+33%3A8-10)', 'You will know that I have sent this commandment to you, that my covenant may be with Levi,” says Yahweh of Armies. “My covenant was with him of life and peace; and I gave them to him that he might be reverent toward me; and he was reverent toward me, and stood in awe of my name. — Malachi 2:4-5 (https://www.biblegateway.com/passage/?search=Malachi+2%3A4-5)']
   },  {
     id: 'joseph',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Joseph_%28Francisco_de_Zurbar%C3%A1n%29.jpg/960px-Joseph_%28Francisco_de_Zurbar%C3%A1n%29.jpg'],
     parentId: 'biblical-figures',
     name: 'Joseph',
     description: 'Favored son of Jacob, sold into slavery in Egypt, became Vizier under Pharaoh, and saved his family from famine. Lived 110 years.',
@@ -3255,6 +3447,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Now Israel loved Joseph more than all his children, because he was the son of his old age, and he made him a coat of many colors. — Genesis 37:3 (https://www.biblegateway.com/passage/?search=Genesis+37%3A3)', 'Pharaoh said to Joseph, “Because God has shown you all of this, there is no one so discreet and wise as you. You shall be over my house, and according to your word will all my people be ruled. Only in the throne I will be greater than you.” Pharaoh said to Joseph, “Behold, I have set you over all the land of Egypt.” — Genesis 41:39-41 (https://www.biblegateway.com/passage/?search=Genesis+41%3A39-41)', 'By faith, Joseph, when his end was near, made mention of the departure of the children of Israel; and gave instructions concerning his bones. — Hebrews 11:22 (https://www.biblegateway.com/passage/?search=Hebrews+11%3A22)']
   },  {
     id: 'benjamin',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Benjamin_%28after_Francisco_de_Zurbar%C3%A1n%29.jpg/960px-Benjamin_%28after_Francisco_de_Zurbar%C3%A1n%29.jpg'],
     parentId: 'biblical-figures',
     name: 'Benjamin',
     description: 'Twelfth and youngest son of Jacob (with Rachel). Brother of Joseph. Lived approximately 110 years.',
@@ -3274,6 +3467,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['As he drew back his hand, behold, his brother came out, and she said, “Why have you made a breach for yourself?” Therefore his name was called Perez. — Genesis 38:29 (https://www.biblegateway.com/passage/?search=Genesis+38%3A29)', 'Now this is the history of the generations of Perez: Perez became the father of Hezron, — Ruth 4:18 (https://www.biblegateway.com/passage/?search=Ruth+4%3A18)', 'Judah became the father of Perez and Zerah by Tamar. Perez became the father of Hezron. Hezron became the father of Ram. — Matthew 1:3 (https://www.biblegateway.com/passage/?search=Matthew+1%3A3)']
   },  {
     id: 'hezron',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Michelangelo_-_Sistine_Chapel_-_Lunette_Perez_-_Hezron_-_Ram.jpg/960px-Michelangelo_-_Sistine_Chapel_-_Lunette_Perez_-_Hezron_-_Ram.jpg'],
     parentId: 'biblical-figures',
     name: 'Hezron',
     description: 'Son of Perez. Traveled with Jacob into Egypt.',
@@ -3293,6 +3487,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['and Hezron became the father of Ram, and Ram became the father of Amminadab, — Ruth 4:19 (https://www.biblegateway.com/passage/?search=Ruth+4%3A19)', 'The sons also of Hezron, who were born to him: Jerahmeel, Ram, and Chelubai. — 1 Chronicles 2:9 (https://www.biblegateway.com/passage/?search=1+Chronicles+2%3A9)', 'Judah became the father of Perez and Zerah by Tamar. Perez became the father of Hezron. Hezron became the father of Ram. Ram became the father of Amminadab. Amminadab became the father of Nahshon. Nahshon became the father of Salmon. — Matthew 1:3-4 (https://www.biblegateway.com/passage/?search=Matthew+1%3A3-4)']
   },  {
     id: 'amminadab',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Michelangelo%2C_lunetta%2C_Amminadab_01.jpg/960px-Michelangelo%2C_lunetta%2C_Amminadab_01.jpg'],
     parentId: 'biblical-figures',
     name: 'Amminadab',
     description: 'Son of Ram. Father of Nahshon and Elisheba (wife of Aaron).',
@@ -3302,6 +3497,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['and Hezron became the father of Ram, and Ram became the father of Amminadab, — Ruth 4:19 (https://www.biblegateway.com/passage/?search=Ruth+4%3A19)', 'Ram became the father of Amminadab, and Amminadab became the father of Nahshon, prince of the children of Judah; — 1 Chronicles 2:10 (https://www.biblegateway.com/passage/?search=1+Chronicles+2%3A10)', 'Ram became the father of Amminadab. Amminadab became the father of Nahshon. Nahshon became the father of Salmon. — Matthew 1:4 (https://www.biblegateway.com/passage/?search=Matthew+1%3A4)']
   },  {
     id: 'nahshon',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Michelangelo%2C_lunetta%2C_Nahshon_01.jpg/960px-Michelangelo%2C_lunetta%2C_Nahshon_01.jpg'],
     relatedIds: ['tribe-of-judah'],
     parentId: 'biblical-figures',
     name: 'Nahshon',
@@ -3312,6 +3508,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Of Judah: Nahshon the son of Amminadab. — Numbers 1:7 (https://www.biblegateway.com/passage/?search=Numbers+1%3A7)', 'and Amminadab became the father of Nahshon, and Nahshon became the father of Salmon, — Ruth 4:20 (https://www.biblegateway.com/passage/?search=Ruth+4%3A20)', 'Ram became the father of Amminadab. Amminadab became the father of Nahshon. Nahshon became the father of Salmon. — Matthew 1:4 (https://www.biblegateway.com/passage/?search=Matthew+1%3A4)']
   },  {
     id: 'salmon',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Michelangelo%2C_lunetta%2C_Salmon_-_Boaz_-_Obed_01.jpg/960px-Michelangelo%2C_lunetta%2C_Salmon_-_Boaz_-_Obed_01.jpg'],
     parentId: 'biblical-figures',
     name: 'Salmon',
     description: 'Son of Nahshon. Traditional husband of Rahab and father of Boaz.',
@@ -3321,6 +3518,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['and Amminadab became the father of Nahshon, and Nahshon became the father of Salmon, and Salmon became the father of Boaz, and Boaz became the father of Obed, — Ruth 4:20-21 (https://www.biblegateway.com/passage/?search=Ruth+4%3A20-21)', 'and Nahshon became the father of Salma, and Salma became the father of Boaz, — 1 Chronicles 2:11 (https://www.biblegateway.com/passage/?search=1+Chronicles+2%3A11)', 'Ram became the father of Amminadab. Amminadab became the father of Nahshon. Nahshon became the father of Salmon. Salmon became the father of Boaz by Rahab. Boaz became the father of Obed by Ruth. Obed became the father of Jesse. — Matthew 1:4-5 (https://www.biblegateway.com/passage/?search=Matthew+1%3A4-5)']
   },  {
     id: 'rahab',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Tissot_The_Harlot_of_Jericho_and_the_Two_Spies.jpg/960px-Tissot_The_Harlot_of_Jericho_and_the_Two_Spies.jpg'],
     parentId: 'biblical-figures',
     name: 'Rahab',
     description: 'Woman of Jericho who assisted Joshua\'s spies and married Salmon, entering the lineage of David and Jesus.',
@@ -3339,6 +3537,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Naomi had a relative of her husband’s, a mighty man of wealth, of the family of Elimelech, and his name was Boaz. — Ruth 2:1 (https://www.biblegateway.com/passage/?search=Ruth+2%3A1)', 'So Boaz took Ruth, and she became his wife; and he went in to her, and Yahweh enabled her to conceive, and she bore a son. — Ruth 4:13 (https://www.biblegateway.com/passage/?search=Ruth+4%3A13)', 'Salmon became the father of Boaz by Rahab. Boaz became the father of Obed by Ruth. Obed became the father of Jesse. — Matthew 1:5 (https://www.biblegateway.com/passage/?search=Matthew+1%3A5)']
   },  {
     id: 'ruth',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/1795-William-Blake-Naomi-entreating-Ruth-Orpah.jpg/960px-1795-William-Blake-Naomi-entreating-Ruth-Orpah.jpg'],
     parentId: 'biblical-figures',
     name: 'Ruth',
     description: 'Moabite woman who remained loyal to her mother-in-law Naomi, married Boaz, and became the great-grandmother of David.',
@@ -3368,6 +3567,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Yahweh said to Samuel, “How long will you mourn for Saul, since I have rejected him from being king over Israel? Fill your horn with oil, and go. I will send you to Jesse the Bethlehemite; for I have provided a king for myself among his sons.” — 1 Samuel 16:1 (https://www.biblegateway.com/passage/?search=1+Samuel+16%3A1)', 'A shoot will come out of the stock of Jesse, and a branch out of his roots will bear fruit. — Isaiah 11:1 (https://www.biblegateway.com/passage/?search=Isaiah+11%3A1)', 'Again, Isaiah says, “There will be the root of Jesse, he who arises to rule over the Gentiles; in him the Gentiles will hope.” — Romans 15:12 (https://www.biblegateway.com/passage/?search=Romans+15%3A12)']
   },  {
     id: 'david_pat',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/King_David%2C_the_King_of_Israel.jpg/960px-King_David%2C_the_King_of_Israel.jpg'],
     relatedIds: ['perez', 'ram_pat', 'obed', 'jesse', 'bathsheba', 'jonathan', 'absalom', 'nathan_prophet', 'lahmi', 'ishbi-benob', 'rapha', 'reign-david', 'archaeology-tel-dan-stele', 'bible-book-psalms', 'davids-mighty-men', 'mighty-men-jashobeam', 'mighty-men-abishai', 'dogheaded-men-moab', 'prophet-samuel-node', 'prophet-nathan-node'],
     parentId: 'biblical-figures',
     name: 'King David',
@@ -3378,6 +3578,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Then Samuel took the horn of oil, and anointed him in the middle of his brothers. Then Yahweh’s Spirit came mightily on David from that day forward. So Samuel rose up and went to Ramah. — 1 Samuel 16:13 (https://www.biblegateway.com/passage/?search=1+Samuel+16%3A13)', 'When your days are fulfilled, and you sleep with your fathers, I will set up your offspring after you, who will proceed out of your body, and I will establish his kingdom. He will build a house for my name, and I will establish the throne of his kingdom forever. — 2 Samuel 7:12-13 (https://www.biblegateway.com/passage/?search=2+Samuel+7%3A12-13)', 'The book of the genealogy of Jesus Christ, the son of David, the son of Abraham. — Matthew 1:1 (https://www.biblegateway.com/passage/?search=Matthew+1%3A1)']
   },  {
     id: 'bathsheba',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Willem_Drost_-_Batsheba_met_de_brief_van_koning_David.jpg/960px-Willem_Drost_-_Batsheba_met_de_brief_van_koning_David.jpg'],
     relatedIds: ['david_pat', 'solomon_pat'],
     parentId: 'biblical-figures',
     name: 'Bathsheba',
@@ -3388,6 +3589,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['At evening, David arose from his bed and walked on the roof of the king’s house. From the roof, he saw a woman bathing, and the woman was very beautiful to look at. David sent and inquired after the woman. One said, “Isn’t this Bathsheba, the daughter of Eliam, Uriah the Hittite’s wife?” — 2 Samuel 11:2-3 (https://www.biblegateway.com/passage/?search=2+Samuel+11%3A2-3)', 'Then Nathan spoke to Bathsheba the mother of Solomon, saying, “Haven’t you heard that Adonijah the son of Haggith reigns, and David our lord doesn’t know it? Now therefore come, please let me give you counsel, that you may save your own life, and your son Solomon’s life. Go in to king David, and tell him, ‘Didn’t you, my lord, king, swear to your servant, saying, “Assuredly Solomon your son shall reign after me, and he shall sit on my throne?” Why then does Adonijah reign?’ — 1 Kings 1:11-13 (https://www.biblegateway.com/passage/?search=1+Kings+1%3A11-13)', 'Jesse became the father of King David. David became the father of Solomon by her who had been Uriah’s wife. — Matthew 1:6 (https://www.biblegateway.com/passage/?search=Matthew+1%3A6)']
   },  {
     id: 'solomon_pat',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Simeon_Solomon%2C_King_Solomon%2C_1872_or_1874%2C_NGA_76152_%28cropped%29.jpg/960px-Simeon_Solomon%2C_King_Solomon%2C_1872_or_1874%2C_NGA_76152_%28cropped%29.jpg'],
     relatedIds: ['bathsheba', 'reign-solomon-temple', 'archaeology-ark-of-covenant-axum', 'bible-book-proverbs', 'bible-book-ecclesiastes', 'bible-book-songofsolomon', 'solomons-shamir', 'lesser-key-solomon', 'blueprint-tabernacle-model-timna', 'ars-notoria', 'freemason-flat-hollow-earth', 'prophet-nathan-node'],
     parentId: 'biblical-figures',
     name: 'King Solomon',
@@ -3398,6 +3600,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['In Gibeon, Yahweh appeared to Solomon in a dream by night; and God said, “Ask for what I should give you.” Solomon said, “You have shown to your servant David my father great loving kindness, because he walked before you in truth, in righteousness, and in uprightness of heart with you. You have kept for him this great loving kindness, that you have given him a son to sit on his throne, as it is today. Now, Yahweh my God, you have made your servant king instead of David my father. I am just a little child. I don’t know how to go out or come in. Your servant is among your people which you have chosen, a great people, that can’t be numbered or counted for multitude. Give your servant therefore an understanding heart to judge your people, that I may discern between good and evil; for who is able to judge this great people of yours?” — 1 Kings 3:5-9 (https://www.biblegateway.com/passage/?search=1+Kings+3%3A5-9)', 'God gave Solomon abundant wisdom and understanding, and very great understanding, even as the sand that is on the seashore. Solomon’s wisdom excelled the wisdom of all the children of the east and all the wisdom of Egypt. — 1 Kings 4:29-30 (https://www.biblegateway.com/passage/?search=1+Kings+4%3A29-30)', 'Jesse became the father of King David. David became the father of Solomon by her who had been Uriah’s wife. — Matthew 1:6 (https://www.biblegateway.com/passage/?search=Matthew+1%3A6)']
   },  {
     id: 'rehoboam',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Rehoboam._Fragment_of_Wall_Painting_from_Basel_Town_Hall_Council_Chamber%2C_by_Hans_Holbein_the_Younger..jpg/960px-Rehoboam._Fragment_of_Wall_Painting_from_Basel_Town_Hall_Council_Chamber%2C_by_Hans_Holbein_the_Younger..jpg'],
     parentId: 'biblical-figures',
     name: 'King Rehoboam',
     description: 'Son of Solomon. His harsh policies led to the revolt of the ten tribes and the split of the United Kingdom.',
@@ -3471,6 +3674,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['In the second year of Joash son of Joahaz king of Israel Amaziah the son of Joash king of Judah began to reign. He was twenty-five years old when he began to reign; and he reigned twenty-nine years in Jerusalem. His mother’s name was Jehoaddin of Jerusalem. He did that which was right in Yahweh’s eyes, yet not like David his father. He did according to all that Joash his father had done. — 2 Kings 14:1-3 (https://www.biblegateway.com/passage/?search=2+Kings+14%3A1-3)', 'Amaziah was twenty-five years old when he began to reign, and he reigned twenty-nine years in Jerusalem. His mother’s name was Jehoaddan, of Jerusalem. He did that which was right in Yahweh’s eyes, but not with a perfect heart. — 2 Chronicles 25:1-2 (https://www.biblegateway.com/passage/?search=2+Chronicles+25%3A1-2)', 'Now after Amaziah had come from the slaughter of the Edomites, he brought the gods of the children of Seir, and set them up to be his gods, and bowed down himself before them, and burned incense to them. — 2 Chronicles 25:14 (https://www.biblegateway.com/passage/?search=2+Chronicles+25%3A14)']
   },  {
     id: 'uzziah',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Rembrandt_van_Rijn_%281606-1669%29_%28after%29_-_King_Uzziah_Stricken_with_Leprosy_%28%5E%29_-_1257105_-_National_Trust.jpg/960px-Rembrandt_van_Rijn_%281606-1669%29_%28after%29_-_King_Uzziah_Stricken_with_Leprosy_%28%5E%29_-_1257105_-_National_Trust.jpg'],
     parentId: 'biblical-figures',
     name: 'King Uzziah',
     description: 'Ninth King of Judah. Struck with leprosy for offering incense in the Temple. Reigned 52 years.',
@@ -3489,6 +3693,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['In the second year of Pekah the son of Remaliah king of Israel, Jotham the son of Uzziah king of Judah began to reign. He was twenty-five years old when he began to reign, and he reigned sixteen years in Jerusalem. His mother’s name was Jerusha the daughter of Zadok. He did that which was right in Yahweh’s eyes. He did according to all that his father Uzziah had done. — 2 Kings 15:32-34 (https://www.biblegateway.com/passage/?search=2+Kings+15%3A32-34)', 'Jotham was twenty-five years old when he began to reign, and he reigned sixteen years in Jerusalem. His mother’s name was Jerushah the daughter of Zadok. He did that which was right in Yahweh’s eyes, according to all that his father Uzziah had done. However he didn’t enter into Yahweh’s temple. The people still acted corruptly. — 2 Chronicles 27:1-2 (https://www.biblegateway.com/passage/?search=2+Chronicles+27%3A1-2)', 'Uzziah became the father of Jotham. Jotham became the father of Ahaz. Ahaz became the father of Hezekiah. — Matthew 1:9 (https://www.biblegateway.com/passage/?search=Matthew+1%3A9)']
   },  {
     id: 'ahaz',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/King_Ahaz._Reader.png/960px-King_Ahaz._Reader.png'],
     parentId: 'biblical-figures',
     name: 'King Ahaz',
     description: 'Eleventh King of Judah. Renowned for wickedness and sacrificing his sons. Reigned 16 years.',
@@ -3498,6 +3703,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['In the seventeenth year of Pekah the son of Remaliah, Ahaz the son of Jotham king of Judah began to reign. Ahaz was twenty years old when he began to reign, and he reigned sixteen years in Jerusalem. He didn’t do that which was right in Yahweh his God’s eyes, like David his father. But he walked in the way of the kings of Israel, yes, and made his son to pass through the fire, according to the abominations of the nations whom Yahweh cast out from before the children of Israel. — 2 Kings 16:1-3 (https://www.biblegateway.com/passage/?search=2+Kings+16%3A1-3)', 'Ahaz was twenty years old when he began to reign, and he reigned sixteen years in Jerusalem. He didn’t do that which was right in Yahweh’s eyes, like David his father, but he walked in the ways of the kings of Israel, and also made molten images for the Baals. Moreover he burned incense in the valley of the son of Hinnom, and burned his children in the fire, according to the abominations of the nations whom Yahweh cast out before the children of Israel. He sacrificed and burned incense in the high places, and on the hills, and under every green tree. — 2 Chronicles 28:1-4 (https://www.biblegateway.com/passage/?search=2+Chronicles+28%3A1-4)', 'Uzziah became the father of Jotham. Jotham became the father of Ahaz. Ahaz became the father of Hezekiah. — Matthew 1:9 (https://www.biblegateway.com/passage/?search=Matthew+1%3A9)']
   },  {
     id: 'hezekiah',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/%C3%85hus_kyrka-10.jpg/960px-%C3%85hus_kyrka-10.jpg'],
     relatedIds: ['archaeology-pool-of-siloam', 'prophet-zephaniah-node'],
     parentId: 'biblical-figures',
     name: 'King Hezekiah',
@@ -3508,6 +3714,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Now in the third year of Hoshea son of Elah king of Israel, Hezekiah the son of Ahaz king of Judah began to reign. He was twenty-five years old when he began to reign, and he reigned twenty-nine years in Jerusalem. His mother’s name was Abi the daughter of Zechariah. He did that which was right in Yahweh’s eyes, according to all that David his father had done. He removed the high places, and broke the pillars, and cut down the Asherah. He also broke in pieces the bronze serpent that Moses had made, because in those days the children of Israel burned incense to it; and he called it Nehushtan. He trusted in Yahweh, the God of Israel; so that after him was no one like him among all the kings of Judah, nor among them that were before him. — 2 Kings 18:1-5 (https://www.biblegateway.com/passage/?search=2+Kings+18%3A1-5)', 'This same Hezekiah also stopped the upper spring of the waters of Gihon, and brought them straight down on the west side of David’s city. Hezekiah prospered in all his works. — 2 Chronicles 32:30 (https://www.biblegateway.com/passage/?search=2+Chronicles+32%3A30)', 'Uzziah became the father of Jotham. Jotham became the father of Ahaz. Ahaz became the father of Hezekiah. — Matthew 1:9 (https://www.biblegateway.com/passage/?search=Matthew+1%3A9)']
   },  {
     id: 'manasseh',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Jacob_bendice_a_Efra%C3%ADn_y_Manas%C3%A9s_%28Real_Academia_de_Bellas_Artes_de_San_Fernando%29.jpg/960px-Jacob_bendice_a_Efra%C3%ADn_y_Manas%C3%A9s_%28Real_Academia_de_Bellas_Artes_de_San_Fernando%29.jpg'],
     parentId: 'biblical-figures',
     name: 'King Manasseh',
     description: 'Thirteenth King of Judah. The longest-reigning Judean monarch (55 years), known for cruelty but repented in captivity.',
@@ -3526,6 +3733,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Amon was twenty-two years old when he began to reign; and he reigned two years in Jerusalem. His mother’s name was Meshullemeth the daughter of Haruz of Jotbah. He did that which was evil in Yahweh’s sight, as Manasseh his father did. He walked in all the ways that his father walked in, and served the idols that his father served, and worshiped them; and he abandoned Yahweh, the God of his fathers, and didn’t walk in the way of Yahweh. — 2 Kings 21:19-22 (https://www.biblegateway.com/passage/?search=2+Kings+21%3A19-22)', 'Amon was twenty-two years old when he began to reign; and he reigned two years in Jerusalem. He did that which was evil in Yahweh’s sight, as did Manasseh his father; and Amon sacrificed to all the engraved images which Manasseh his father had made, and served them. He didn’t humble himself before Yahweh, as Manasseh his father had humbled himself; but this same Amon trespassed more and more. — 2 Chronicles 33:21-23 (https://www.biblegateway.com/passage/?search=2+Chronicles+33%3A21-23)', 'Hezekiah became the father of Manasseh. Manasseh became the father of Amon. Amon became the father of Josiah. — Matthew 1:10 (https://www.biblegateway.com/passage/?search=Matthew+1%3A10)']
   },  {
     id: 'josiah',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/%C3%85hus_kyrka-12.jpg/960px-%C3%85hus_kyrka-12.jpg'],
     relatedIds: ['book-of-the-law', 'bible-book-deuteronomy', 'prophet-zephaniah-node'],
     parentId: 'biblical-figures',
     name: 'King Josiah',
@@ -3536,6 +3744,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Josiah was eight years old when he began to reign, and he reigned thirty-one years in Jerusalem. His mother’s name was Jedidah the daughter of Adaiah of Bozkath. He did that which was right in Yahweh’s eyes, and walked in all the way of David his father, and didn’t turn away to the right hand or to the left. — 2 Kings 22:1-2 (https://www.biblegateway.com/passage/?search=2+Kings+22%3A1-2)', 'There was no king like him before him, who turned to Yahweh with all his heart, and with all his soul, and with all his might, according to all the law of Moses; and there was none like him who arose after him. — 2 Kings 23:25 (https://www.biblegateway.com/passage/?search=2+Kings+23%3A25)', 'Hezekiah became the father of Manasseh. Manasseh became the father of Amon. Amon became the father of Josiah. — Matthew 1:10 (https://www.biblegateway.com/passage/?search=Matthew+1%3A10)']
   },  {
     id: 'jehoiakim',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/The_cuneiform_inscription_highlights_the_conquest_of_Jerusalem_and_the_surrender_of_Jehoiakim%2C_king_of_Judah%2C_in_597_BCE._From_Babylon%2C_Iraq.jpg/960px-The_cuneiform_inscription_highlights_the_conquest_of_Jerusalem_and_the_surrender_of_Jehoiakim%2C_king_of_Judah%2C_in_597_BCE._From_Babylon%2C_Iraq.jpg'],
     parentId: 'biblical-figures',
     name: 'King Jehoiakim',
     description: 'Sixteenth King of Judah. Carried away captive by Nebuchadnezzar. Reigned 11 years.',
@@ -3545,6 +3754,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Jehoiakim was twenty-five years old when he began to reign, and he reigned eleven years in Jerusalem. His mother’s name was Zebidah the daughter of Pedaiah of Rumah. He did that which was evil in Yahweh’s sight, according to all that his fathers had done. — 2 Kings 23:36-37 (https://www.biblegateway.com/passage/?search=2+Kings+23%3A36-37)', 'Jehoiakim was twenty-five years old when he began to reign, and he reigned eleven years in Jerusalem. He did that which was evil in Yahweh his God’s sight. — 2 Chronicles 36:5 (https://www.biblegateway.com/passage/?search=2+Chronicles+36%3A5)', 'Therefore Yahweh says concerning Jehoiakim the son of Josiah, king of Judah: “They won’t lament for him, saying, ‘Ah my brother!’ or, ‘Ah sister!’ They won’t lament for him, saying ‘Ah lord!’ or, ‘Ah his glory!’ — Jeremiah 22:18 (https://www.biblegateway.com/passage/?search=Jeremiah+22%3A18)']
   },  {
     id: 'jeconiah',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Clay_tablet._The_Akkadian_cuneiform_inscription_lists_certain_rations_and_mentions_the_name_of_Jeconiah_%28Jehoiachin%29%2C_King_of_Judah_and_the_Babylonian_captivity._From_Babylon%2C_Iraq._C._580_BCE._Vorderasiatisches_Museum%2C_Berlin.jpg/960px-thumbnail.jpg'],
     relatedIds: ['shealtiel'],
     parentId: 'biblical-figures',
     name: 'King Jeconiah',
@@ -3555,6 +3765,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Jehoiachin was eighteen years old when he began to reign, and he reigned in Jerusalem three months. His mother’s name was Nehushta the daughter of Elnathan of Jerusalem. He did that which was evil in Yahweh’s sight, according to all that his father had done. — 2 Kings 24:8-9 (https://www.biblegateway.com/passage/?search=2+Kings+24%3A8-9)', 'The sons of Jehoiakim: Jeconiah his son, and Zedekiah his son. — 1 Chronicles 3:16 (https://www.biblegateway.com/passage/?search=1+Chronicles+3%3A16)', 'Josiah became the father of Jechoniah and his brothers, at the time of the exile to Babylon. — Matthew 1:11 (https://www.biblegateway.com/passage/?search=Matthew+1%3A11)']
   },  {
     id: 'shealtiel',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Michelangelo%2C_lunetta%2C_Josiah_-_Jechoniah_-_Shealtiel_01.jpg/960px-Michelangelo%2C_lunetta%2C_Josiah_-_Jechoniah_-_Shealtiel_01.jpg'],
     relatedIds: ['jeconiah', 'evt-fall-jerusalem'],
     parentId: 'biblical-figures',
     name: 'Shealtiel',
@@ -3565,6 +3776,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['The sons of Jeconiah, the captive: Shealtiel his son, — 1 Chronicles 3:17 (https://www.biblegateway.com/passage/?search=1+Chronicles+3%3A17)', 'Then Jeshua the son of Jozadak stood up with his brothers the priests, and Zerubbabel the son of Shealtiel and his brothers, and built the altar of the God of Israel, to offer burnt offerings on it, as it is written in the law of Moses the man of God. — Ezra 3:2 (https://www.biblegateway.com/passage/?search=Ezra+3%3A2)', 'After the exile to Babylon, Jechoniah became the father of Shealtiel. Shealtiel became the father of Zerubbabel. — Matthew 1:12 (https://www.biblegateway.com/passage/?search=Matthew+1%3A12)']
   },  {
     id: 'zerubbabel',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Michelangelo%2C_lunetta%2C_Zerubbabel_-_Abiud_-_Eliakim_01.jpg/960px-Michelangelo%2C_lunetta%2C_Zerubbabel_-_Abiud_-_Eliakim_01.jpg'],
     parentId: 'biblical-figures',
     name: 'Zerubbabel',
     description: 'Grandson of Jeconiah. Headed the first return of exiles from Babylon and laid the foundations of the Second Temple.',
@@ -3583,6 +3795,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Zerubbabel became the father of Abiud. Abiud became the father of Eliakim. Eliakim became the father of Azor. — Matthew 1:13 (https://www.biblegateway.com/passage/?search=Matthew+1%3A13)']
   },  {
     id: 'eliakim',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Elyakim8081.JPG/960px-Elyakim8081.JPG'],
     relatedIds: ['jesus'],
     parentId: 'biblical-figures',
     name: 'Eliakim',
@@ -3593,6 +3806,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Zerubbabel became the father of Abiud. Abiud became the father of Eliakim. Eliakim became the father of Azor. — Matthew 1:13 (https://www.biblegateway.com/passage/?search=Matthew+1%3A13)']
   },  {
     id: 'azor',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Azor-S-747.jpg/960px-Azor-S-747.jpg'],
     parentId: 'biblical-figures',
     name: 'Azor',
     description: 'Son of Eliakim, mentioned in the lineage of Joseph.',
@@ -3602,6 +3816,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Zerubbabel became the father of Abiud. Abiud became the father of Eliakim. Eliakim became the father of Azor. — Matthew 1:13 (https://www.biblegateway.com/passage/?search=Matthew+1%3A13)', 'Azor became the father of Zadok. Zadok became the father of Achim. Achim became the father of Eliud. — Matthew 1:14 (https://www.biblegateway.com/passage/?search=Matthew+1%3A14)']
   },  {
     id: 'zadok_pat',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/The_Anointing_of_Queen_Alexandra_at_the_Coronation_of_Edward_VII.JPG/960px-The_Anointing_of_Queen_Alexandra_at_the_Coronation_of_Edward_VII.JPG'],
     parentId: 'biblical-figures',
     name: 'Zadok',
     description: 'Son of Azor. Ancestor of Jesus.',
@@ -3611,6 +3826,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Azor became the father of Zadok. Zadok became the father of Achim. Achim became the father of Eliud. — Matthew 1:14 (https://www.biblegateway.com/passage/?search=Matthew+1%3A14)']
   },  {
     id: 'achim',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Achim_-_St._Laurentius-Kirche_mit_Friedhof.jpg/960px-Achim_-_St._Laurentius-Kirche_mit_Friedhof.jpg'],
     parentId: 'biblical-figures',
     name: 'Achim',
     description: 'Son of Zadok. Ancestor of Jesus.',
@@ -3629,6 +3845,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Eliud became the father of Eleazar. Eleazar became the father of Matthan. Matthan became the father of Jacob. — Matthew 1:15 (https://www.biblegateway.com/passage/?search=Matthew+1%3A15)']
   },  {
     id: 'eleazar_pat',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Facial_Chronicle_-_b.02%2C_p.187_-_Eleazar_receiving_trophies.jpg/960px-Facial_Chronicle_-_b.02%2C_p.187_-_Eleazar_receiving_trophies.jpg'],
     parentId: 'biblical-figures',
     name: 'Eleazar',
     description: 'Son of Eliud. Ancestor of Jesus.',
@@ -3647,6 +3864,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Eliud became the father of Eleazar. Eleazar became the father of Matthan. Matthan became the father of Jacob. — Matthew 1:15 (https://www.biblegateway.com/passage/?search=Matthew+1%3A15)']
   },  {
     id: 'mary_pat',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Saint_Patrick_Church_%28Troy%2C_Ohio%29_-_stained-glass_windows%2C_St._Anne_Educates_the_Virgin_Mary_-_detail.jpg/960px-Saint_Patrick_Church_%28Troy%2C_Ohio%29_-_stained-glass_windows%2C_St._Anne_Educates_the_Virgin_Mary_-_detail.jpg'],
     relatedIds: ['jesus', 'islam', 'saint-bernadette-soubirous'],
     parentId: 'biblical-figures',
     name: 'Virgin Mary',
@@ -3657,6 +3875,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Now in the sixth month, the angel Gabriel was sent from God to a city of Galilee, named Nazareth, to a virgin pledged to be married to a man whose name was Joseph, of David’s house. The virgin’s name was Mary. Having come in, the angel said to her, “Rejoice, you highly favored one! The Lord is with you. Blessed are you among women!” But when she saw him, she was greatly troubled at the saying, and considered what kind of salutation this might be. The angel said to her, “Don’t be afraid, Mary, for you have found favor with God. Behold, you will conceive in your womb, and give birth to a son, and will call his name ‘Jesus.’ — Luke 1:26-31 (https://www.biblegateway.com/passage/?search=Luke+1%3A26-31)', 'She gave birth to her firstborn son. She wrapped him in bands of cloth, and laid him in a feeding trough, because there was no room for them in the inn. — Luke 2:7 (https://www.biblegateway.com/passage/?search=Luke+2%3A7)', 'But there were standing by the cross of Jesus his mother, and his mother’s sister, Mary the wife of Clopas, and Mary Magdalene. Therefore when Jesus saw his mother, and the disciple whom he loved standing there, he said to his mother, “Woman, behold, your son!” Then he said to the disciple, “Behold, your mother!” From that hour, the disciple took her to his own home. — John 19:25-27 (https://www.biblegateway.com/passage/?search=John+19%3A25-27)']
   },  {
     id: 'jesus',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Spas_vsederzhitel_sinay_%28cropped1%29.jpg/960px-Spas_vsederzhitel_sinay_%28cropped1%29.jpg'],
     relatedIds: ['perez', 'eliakim', 'mary_pat', 'mary_magdalene', 'john_baptist', 'evt-crucifixion', 'catholicism', 'tribe-of-judah', 'rel-figure-spencer-kimball', 'sudarium-of-oviedo', 'archaeology-frankfurt-silver-amulet', 'book-of-mormon', 'metatron-across-texts', 'star-of-bethlehem', 'melchizedek-miraculous-birth', 'polycarp', 'new-testament', 'prophet-moses-node', 'prophet-nathan-node', 'prophet-isaiah-node'],
     parentId: 'biblical-figures',
     name: 'Jesus Christ',
@@ -3677,6 +3896,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['and certain women who had been healed of evil spirits and infirmities: Mary who was called Magdalene, from whom seven demons had gone out; — Luke 8:2 (https://www.biblegateway.com/passage/?search=Luke+8%3A2)', 'But Mary was standing outside at the tomb weeping. So, as she wept, she stooped and looked into the tomb, and she saw two angels in white sitting, one at the head, and one at the feet, where the body of Jesus had lain. They told her, “Woman, why are you weeping?” She said to them, “Because they have taken away my Lord, and I don’t know where they have laid him.” When she had said this, she turned around and saw Jesus standing, and didn’t know that it was Jesus. Jesus said to her, “Woman, why are you weeping? Who are you looking for?” She, supposing him to be the gardener, said to him, “Sir, if you have carried him away, tell me where you have laid him, and I will take him away.” Jesus said to her, “Mary.” She turned and said to him, “Rabboni!” which is to say, “Teacher!” Jesus said to her, “Don’t hold me, for I haven’t yet ascended to my Father; but go to my brothers, and tell them, ‘I am ascending to my Father and your Father, to my God and your God.’” Mary Magdalene came and told the disciples that she had seen the Lord, and that he had said these things to her. — John 20:11-18 (https://www.biblegateway.com/passage/?search=John+20%3A11-18)', 'Now when he had risen early on the first day of the week, he appeared first to Mary Magdalene, from whom he had cast out seven demons. — Mark 16:9 (https://www.biblegateway.com/passage/?search=Mark+16%3A9)']
   },  {
     id: 'peter_apostle',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Christ_Healing_the_Mother_of_Simon_Peter%E2%80%99s_Wife_by_John_Bridges.jpg/960px-Christ_Healing_the_Mother_of_Simon_Peter%E2%80%99s_Wife_by_John_Bridges.jpg'],
     relatedIds: ['clean-animals-old-testament', 'unclean-animals-old-testament', 'new-testament'],
     parentId: 'biblical-figures',
     name: 'Peter the Apostle',
@@ -3696,6 +3916,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['As he traveled, he got close to Damascus, and suddenly a light from the sky shone around him. He fell on the earth, and heard a voice saying to him, “Saul, Saul, why do you persecute me?” He said, “Who are you, Lord?” The Lord said, “I am Jesus, whom you are persecuting. But rise up, and enter into the city, and you will be told what you must do.” — Acts 9:3-6 (https://www.biblegateway.com/passage/?search=Acts+9%3A3-6)', '“He said to me, ‘Depart, for I will send you out far from here to the Gentiles.’” — Acts 22:21 (https://www.biblegateway.com/passage/?search=Acts+22%3A21)', 'Paul, a servant of Jesus Christ, called to be an apostle, set apart for the Good News of God, — Romans 1:1 (https://www.biblegateway.com/passage/?search=Romans+1%3A1)']
   },  {
     id: 'john_apostle',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Rubens_apostel_johannes_grt.jpg/960px-Rubens_apostel_johannes_grt.jpg'],
     relatedIds: ['james_apostle', 'bible-book-john', 'bible-book-1john', 'bible-book-2john', 'bible-book-3john', 'bible-book-revelation', 'polycarp'],
     parentId: 'biblical-figures',
     name: 'John the Apostle',
@@ -3706,6 +3927,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Therefore when Jesus saw his mother, and the disciple whom he loved standing there, he said to his mother, “Woman, behold, your son!” — John 19:26 (https://www.biblegateway.com/passage/?search=John+19%3A26)', 'This is the Revelation of Jesus Christ, which God gave him to show to his servants the things which must happen soon, which he sent and made known by his angel to his servant, John, who testified to God’s word, and of the testimony of Jesus Christ, about everything that he saw. — Revelation 1:1-2 (https://www.biblegateway.com/passage/?search=Revelation+1%3A1-2)', 'Then Peter, turning around, saw a disciple following. This was the disciple whom Jesus loved, the one who had also leaned on Jesus’ breast at the supper and asked, “Lord, who is going to betray You?” Peter seeing him, said to Jesus, “Lord, what about this man?” Jesus said to him, “If I desire that he stay until I come, what is that to you? You follow me.” This saying therefore went out among the brothers, that this disciple wouldn’t die. Yet Jesus didn’t say to him that he wouldn’t die, but, “If I desire that he stay until I come, what is that to you?” This is the disciple who testifies about these things, and wrote these things. We know that his witness is true. — John 21:20-24 (https://www.biblegateway.com/passage/?search=John+21%3A20-24)']
   },  {
     id: 'job_patriarch',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/POxy_n3522.jpg/960px-POxy_n3522.jpg'],
     parentId: 'biblical-figures',
     name: 'Job',
     description: 'A righteous man tested by Satan, who maintained his faith in God despite losing his wealth, health, and children.',
@@ -3725,6 +3947,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Melchizedek king of Salem brought out bread and wine. He was priest of God Most High. He blessed him, and said, “Blessed be Abram by God Most High, possessor of heaven and earth.” — Genesis 14:18-19 (https://www.biblegateway.com/passage/?search=Genesis+14%3A18-19)', 'Yahweh has sworn, and will not change his mind: “You are a priest forever after the order of Melchizedek.” — Psalm 110:4 (https://www.biblegateway.com/passage/?search=Psalm+110%3A4)']
   },  {
     id: 'lot',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/LOT_Boeing_787-8_%28SP-LRA%29_arrives_London_Heathrow_11Apr2015_arp.jpg/960px-LOT_Boeing_787-8_%28SP-LRA%29_arrives_London_Heathrow_11Apr2015_arp.jpg'],
     parentId: 'biblical-figures',
     name: 'Lot',
     description: 'Nephew of Abraham who settled in Sodom and was rescued by angels before its destruction.',
@@ -3734,6 +3957,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Terah took Abram his son, and Lot the son of Haran, his son’s son... and they went forth from Ur of the Chaldees... — Genesis 11:31 (https://www.biblegateway.com/passage/?search=Genesis+11%3A31)', 'The two angels came to Sodom at evening. Lot was sitting in the gate of Sodom. — Genesis 19:1 (https://www.biblegateway.com/passage/?search=Genesis+19%3A1)']
   },  {
     id: 'hagar',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Fran%C3%A7ois-Joseph_Navez_-_Agar_et_Isma%C3%ABl_dans_le_d%C3%A9sert_%28cropped%29.jpg/960px-Fran%C3%A7ois-Joseph_Navez_-_Agar_et_Isma%C3%ABl_dans_le_d%C3%A9sert_%28cropped%29.jpg'],
     parentId: 'biblical-figures',
     name: 'Hagar',
     description: 'Egyptian handmaid of Sarah, second wife of Abraham, and mother of Ishmael.',
@@ -3743,6 +3967,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Sarai, Abram’s wife, took Hagar the Egyptian, her handmaid... and gave her to her husband Abram to be his wife. — Genesis 16:3 (https://www.biblegateway.com/passage/?search=Genesis+16%3A3)', 'God heard the voice of the boy. The angel of God called to Hagar out of heaven, and said to her, “What ails you, Hagar? Don’t be afraid...” — Genesis 21:17 (https://www.biblegateway.com/passage/?search=Genesis+21%3A17)']
   },  {
     id: 'miriam',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Miriam_%28Dalziels%27_Bible_Gallery%29_MET_DP835720.jpg/960px-Miriam_%28Dalziels%27_Bible_Gallery%29_MET_DP835720.jpg'],
     parentId: 'biblical-figures',
     name: 'Miriam',
     description: 'Prophetess and elder sister of Moses and Aaron who helped lead the Israelites during the Exodus.',
@@ -3762,6 +3987,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['“Is there not Aaron, your brother, the Levite? I know that he can speak well... He will be your spokesman to the people.” — Exodus 4:14-16 (https://www.biblegateway.com/passage/?search=Exodus+4%3A14-16)', 'Bring Aaron and his sons with him, and the garments, and the anointing oil... — Leviticus 8:2 (https://www.biblegateway.com/passage/?search=Leviticus+8%3A2)']
   },  {
     id: 'moses',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Rembrandt_Harmensz._van_Rijn_079.jpg/960px-Rembrandt_Harmensz._van_Rijn_079.jpg'],
     relatedIds: ['prophet-moses-node'],
     parentId: 'biblical-figures',
     name: 'Moses',
@@ -3772,6 +3998,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['She named him Moses, and said, “Because I drew him out of the water.” — Exodus 2:10 (https://www.biblegateway.com/passage/?search=Exodus+2%3A10)', 'There has not arisen a prophet since in Israel like Moses, whom Yahweh knew face to face... — Deuteronomy 34:10 (https://www.biblegateway.com/passage/?search=Deuteronomy+34%3A10)']
   },  {
     id: 'joshua',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Collection_Motais_de_Narbonne_-_Josu%C3%A9_arr%C3%A8te_la_course_du_soleil_-_Carlo_Maratta.jpg/960px-Collection_Motais_de_Narbonne_-_Josu%C3%A9_arr%C3%A8te_la_course_du_soleil_-_Carlo_Maratta.jpg'],
     parentId: 'biblical-figures',
     name: 'Joshua',
     description: 'Moses\' assistant and successor who led the Israelite tribes in the conquest of Canaan.',
@@ -3781,6 +4008,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['“Joshua the son of Nun, who stands before you, he will enter there. Encourage him, for he will cause Israel to inherit it.” — Deuteronomy 1:38 (https://www.biblegateway.com/passage/?search=Deuteronomy+1%3A38)', 'Be strong and courageous; for you shall cause this people to inherit the land which I swore to their fathers to give them. — Joshua 1:6 (https://www.biblegateway.com/passage/?search=Joshua+1%3A6)']
   },  {
     id: 'caleb',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Schnorr_von_Carolsfeld_Bibel_in_Bildern_1860_058.png/960px-Schnorr_von_Carolsfeld_Bibel_in_Bildern_1860_058.png'],
     parentId: 'biblical-figures',
     name: 'Caleb',
     description: 'One of the twelve spies sent by Moses into Canaan, who along with Joshua brought back a favorable report.',
@@ -3790,6 +4018,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Caleb stilled the people before Moses, and said, “Let’s go up at once, and possess it; for we are well able to overcome it.” — Numbers 13:30 (https://www.biblegateway.com/passage/?search=Numbers+13%3A30)', '“But my servant Caleb, because he had another spirit with him, and has followed me fully, him I will bring into the land...” — Numbers 14:24 (https://www.biblegateway.com/passage/?search=Numbers+14%3A24)']
   },  {
     id: 'deborah_judge',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Johanna_Unger_%E2%80%93_Debora.jpg/960px-Johanna_Unger_%E2%80%93_Debora.jpg'],
     parentId: 'biblical-figures',
     name: 'Deborah',
     description: 'Prophetess and the only female Judge of Israel, who rallied the tribes against Canaanite oppression.',
@@ -3808,6 +4037,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['The angel of Yahweh appeared to him, and said to him, “Yahweh is with you, you mighty man of valor.” — Judges 6:12 (https://www.biblegateway.com/passage/?search=Judges+6%3A12)', 'Yahweh said to Gideon, “By the three hundred men who lapped I will save you...” — Judges 7:7 (https://www.biblegateway.com/passage/?search=Judges+7%3A7)']
   },  {
     id: 'samson',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Lucas_Cranach_d.%C3%84._-_Simson_bezwingt_den_L%C3%B6wen.jpg/960px-Lucas_Cranach_d.%C3%84._-_Simson_bezwingt_den_L%C3%B6wen.jpg'],
     relatedIds: ['dagon'],
     parentId: 'biblical-figures',
     name: 'Samson',
@@ -3818,6 +4048,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['“For, behold, you shall conceive, and bear a son; and no razor shall come on his head; for the child shall be a Nazirite to God...” — Judges 13:5 (https://www.biblegateway.com/passage/?search=Judges+13%3A5)', 'He found a fresh jawbone of a donkey... and killed a thousand men with it. — Judges 15:15 (https://www.biblegateway.com/passage/?search=Judges+15%3A15)']
   },  {
     id: 'prophets-general',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Baba_Vanga_bust.jpg/500px-Baba_Vanga_bust.jpg'],
     parentId: 'biblical-figures',
     name: 'Prophets & Seers',
     description: 'Individuals who serve as messengers or mouthpieces of the divine, conveying revelations, warnings, and future predictions to humanity. In the biblical Hebrew tradition, prophets (Nevi\'im) received words, dreams, and visions directly from Yahweh, acting in direct opposition to false prophets, mediums, and necromancers. Alternative and esoteric scholars study the spiritual, multidimensional, and neurological contexts of prophetic visions.',
@@ -3829,6 +4060,7 @@ const chunk_0: any[] = [  {
     ]
   },  {
     id: 'samuel_prophet',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Saul_and_the_Witch_of_Endor_%28Stom%2C_1635%29_%28cropped%29.jpg/960px-Saul_and_the_Witch_of_Endor_%28Stom%2C_1635%29_%28cropped%29.jpg'],
     relatedIds: ['prophets-general', 'prophet-samuel-node'],
     parentId: 'biblical-figures',
     name: 'Samuel',
@@ -3839,6 +4071,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['She named him Samuel, saying, “Because I have asked him of Yahweh.” — 1 Samuel 1:20 (https://www.biblegateway.com/passage/?search=1+Samuel+1%3A20)', 'Samuel grew, and Yahweh was with him, and let none of his words fall to the ground. — 1 Samuel 3:19 (https://www.biblegateway.com/passage/?search=1+Samuel+3%3A19)']
   },  {
     id: 'saul_king',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/King_Saul_MET_DP802069.jpg/960px-King_Saul_MET_DP802069.jpg'],
     relatedIds: ['israelites', 'prophet-samuel-node'],
     parentId: 'biblical-figures',
     name: 'King Saul',
@@ -3849,6 +4082,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Then Samuel took the vial of oil, and poured it on his head... and said, “Hasn’t Yahweh anointed you to be prince over his inheritance?” — 1 Samuel 10:1 (https://www.biblegateway.com/passage/?search=1+Samuel+10%3A1)', 'So Saul died, and his three sons, and his armor bearer, and all his men, that same day together. — 1 Samuel 31:6 (https://www.biblegateway.com/passage/?search=1+Samuel+31%3A6)']
   },  {
     id: 'jonathan',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/073A.David_and_Jonathan.jpg/960px-073A.David_and_Jonathan.jpg'],
     relatedIds: ['david_pat'],
     parentId: 'biblical-figures',
     name: 'Jonathan',
@@ -3859,6 +4093,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['The soul of Jonathan was knit with the soul of David, and Jonathan loved him as his own soul. — 1 Samuel 18:1 (https://www.biblegateway.com/passage/?search=1+Samuel+18%3A1)', '“I am distressed for you, my brother Jonathan. You have been very pleasant to me. Your love to me was wonderful, passing the love of women.” — 2 Samuel 1:26 (https://www.biblegateway.com/passage/?search=2+Samuel+1%3A26)']
   },  {
     id: 'absalom',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Muerte_de_absalon_en_el_CESEDEN_%28cropped%29.jpg/960px-Muerte_de_absalon_en_el_CESEDEN_%28cropped%29.jpg'],
     relatedIds: ['david_pat'],
     parentId: 'biblical-figures',
     name: 'Absalom',
@@ -3869,6 +4104,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Now in all Israel there was none to be so much praised as Absalom for his beauty... — 2 Samuel 14:25 (https://www.biblegateway.com/passage/?search=2+Samuel+14%3A25)', 'The king was much moved, and went up to the room over the gate, and wept. As he went, he said, “O my son Absalom! My son, my son Absalom!...” — 2 Samuel 18:33 (https://www.biblegateway.com/passage/?search=2+Samuel+18%33)']
   },  {
     id: 'nathan_prophet',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Jacopo_Negretti%2C_gen._Palma_il_Giovane_und_Werkstatt_-_Prophet_Nathan_ermahnt_K%C3%B6nig_David_-_GG_3816_-_Kunsthistorisches_Museum.jpg/960px-Jacopo_Negretti%2C_gen._Palma_il_Giovane_und_Werkstatt_-_Prophet_Nathan_ermahnt_K%C3%B6nig_David_-_GG_3816_-_Kunsthistorisches_Museum.jpg'],
     relatedIds: ['david_pat', 'prophet-nathan-node'],
     parentId: 'biblical-figures',
     name: 'Nathan',
@@ -3889,6 +4125,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['“I will tear the kingdom out of the hand of Solomon, and will give ten tribes to you.” — 1 Kings 11:31 (https://www.biblegateway.com/passage/?search=1+Kings+11%3A31)', 'Whereupon the king took counsel, and made two calves of gold; and he said to them, “It is too much for you to go up to Jerusalem. Behold your gods, Israel...” — 1 Kings 12:28 (https://www.biblegateway.com/passage/?search=1+Kings+12%3A28)']
   },  {
     id: 'ahab_king',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Lucas_van_Leyden%2C_Jezebel_Promising_Naboth%27s_Vineyard_to_King_Ahab%2C_1516-1519%2C_NGA_11601.jpg/960px-Lucas_van_Leyden%2C_Jezebel_Promising_Naboth%27s_Vineyard_to_King_Ahab%2C_1516-1519%2C_NGA_11601.jpg'],
     relatedIds: ['prophet-elijah-node'],
     parentId: 'biblical-figures',
     name: 'King Ahab',
@@ -3909,6 +4146,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['It came to pass, as if it had been a light thing for him to walk in the sins of Jeroboam... that he took as wife Jezebel the daughter of Ethbaal... — 1 Kings 16:31 (https://www.biblegateway.com/passage/?search=1+Kings+16%3A31)', '“The dogs shall eat Jezebel by the rampart of Jezreel.” — 1 Kings 21:23 (https://www.biblegateway.com/passage/?search=1+Kings+21%3A23)']
   },  {
     id: 'elijah',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Giovanni_Girolamo_Savoldo%2C_Elijah_Fed_by_the_Raven%2C_c._1510%2C_NGA_46134.jpg/960px-Giovanni_Girolamo_Savoldo%2C_Elijah_Fed_by_the_Raven%2C_c._1510%2C_NGA_46134.jpg'],
     relatedIds: ['prophet-elijah-node', 'prophet-elisha-node'],
     parentId: 'biblical-figures',
     name: 'Elijah',
@@ -3919,6 +4157,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Elijah the Tishbite... said to Ahab, “As Yahweh, the God of Israel, lives, before whom I stand, there shall not be dew nor rain these years, but according to my word.” — 1 Kings 17:1 (https://www.biblegateway.com/passage/?search=1+Kings+17%3A1)', 'It came to pass, as they still went on, and talked, that behold, a chariot of fire and horses of fire parted them... and Elijah went up by a whirlwind into heaven. — 2 Kings 2:11 (https://www.biblegateway.com/passage/?search=2+Kings+2%3A11)']
   },  {
     id: 'elisha',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Chapelle_des_Carm%C3%A9lites_-_Interieur_-_%C3%89lis%C3%A9e_ressuscitant_le_fils_de_la_Sunamite_par_Despax_%28cropped%29.jpg/960px-Chapelle_des_Carm%C3%A9lites_-_Interieur_-_%C3%89lis%C3%A9e_ressuscitant_le_fils_de_la_Sunamite_par_Despax_%28cropped%29.jpg'],
     relatedIds: ['prophet-elijah-node', 'prophet-elisha-node'],
     parentId: 'biblical-figures',
     name: 'Elisha',
@@ -3929,6 +4168,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Elijah went over to him, and cast his mantle on him. — 1 Kings 19:19 (https://www.biblegateway.com/passage/?search=1+Kings+19%39)', 'Elisha said, “Please let a double portion of your spirit be on me.” — 2 Kings 2:9 (https://www.biblegateway.com/passage/?search=2+Kings+2%3A9)']
   },  {
     id: 'jonah',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Dore_jonah.jpg/960px-Dore_jonah.jpg'],
     relatedIds: ['prophecy-nineveh-nahum', 'prophet-jonah-node'],
     parentId: 'biblical-figures',
     name: 'Jonah',
@@ -3939,6 +4179,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Now the word of Yahweh came to Jonah the son of Amittai, saying, “Arise, go to Nineveh, that great city, and preach against it...” — Jonah 1:1-2 (https://www.biblegateway.com/passage/?search=Jonah+1%3A1-2)', 'Yahweh prepared a great fish to swallow up Jonah, and Jonah was in the belly of the fish three days and three nights. — Jonah 1:17 (https://www.biblegateway.com/passage/?search=Jonah+1%3A17)']
   },  {
     id: 'isaiah',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Jesaja_%28Michelangelo%29.jpg/960px-Jesaja_%28Michelangelo%29.jpg'],
     relatedIds: ['fulfilled-prophecies', 'prophecy-babylon-isaiah-13', 'prophecy-cyrus-named-isaiah-45', 'prophecy-isaiah-53-suffering-servant', 'prophecy-israel-regathered-1948', 'prophet-isaiah-node'],
     parentId: 'biblical-figures',
     name: 'Isaiah',
@@ -3949,6 +4190,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['I heard the Lord’s voice, saying, “Whom shall I send, and who will go for us?” Then I said, “Here I am. Send me.” — Isaiah 6:8 (https://www.biblegateway.com/passage/?search=Isaiah+6%3A8)', 'Therefore the Lord himself will give you a sign. Behold, the virgin will conceive, and bear a son, and shall call his name Immanuel. — Isaiah 7:14 (https://www.biblegateway.com/passage/?search=Isaiah+7%3A14)']
   },  {
     id: 'jeremiah',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/SA_160-Jeremia_op_de_puinhopen_van_Jeruzalem.jpg/960px-SA_160-Jeremia_op_de_puinhopen_van_Jeruzalem.jpg'],
     relatedIds: ['fulfilled-prophecies', 'prophecy-babylon-isaiah-13', 'prophet-jeremiah-node'],
     parentId: 'biblical-figures',
     name: 'Jeremiah',
@@ -3959,6 +4201,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['“Before I formed you in the belly, I knew you. Before you came out of the womb, I sanctified you. I have appointed you a prophet to the nations.” — Jeremiah 1:5 (https://www.biblegateway.com/passage/?search=Jeremiah+1%3A5)', '“For I know the thoughts that I think toward you,” says Yahweh, “thoughts of peace, and not of evil, to give you hope and a future.” — Jeremiah 29:11 (https://www.biblegateway.com/passage/?search=Jeremiah+29%3A11)']
   },  {
     id: 'ezekiel',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Ezekiel_by_Michelangelo%2C_restored_-_large.jpg/960px-Ezekiel_by_Michelangelo%2C_restored_-_large.jpg'],
     relatedIds: ['fulfilled-prophecies', 'prophecy-tyre-ezekiel-26', 'prophecy-israel-regathered-1948', 'blueprint-ezekiels-temple', 'enoch3-merkabah-princes', 'enoch3-shekinah-withdrawal', 'enoch-merkabah-chariot', 'the-sun-scripture', 'prophet-ezekiel-node'],
     parentId: 'biblical-figures',
     name: 'Ezekiel',
@@ -3969,6 +4212,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['The heavens were opened, and I saw visions of God. — Ezekiel 1:1 (https://www.biblegateway.com/passage/?search=Ezekiel+1%3A1)', 'He said to me, “Prophesy to these bones, and tell them, ‘You dry bones, hear Yahweh’s word!’” — Ezekiel 37:4 (https://www.biblegateway.com/passage/?search=Ezekiel+37%3A4)']
   },  {
     id: 'daniel_prophet',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Sir_Peter_Paul_Rubens_-_Daniel_in_the_Lions%27_Den_-_Google_Art_Project.jpg/960px-Sir_Peter_Paul_Rubens_-_Daniel_in_the_Lions%27_Den_-_Google_Art_Project.jpg'],
     relatedIds: ['prophets-general', 'fulfilled-prophecies', 'prophecy-babylon-isaiah-13', 'prophecy-cyrus-named-isaiah-45', 'prophecy-daniel-70-weeks', 'prophecy-daniel-2-four-kingdoms', 'prophet-daniel-node'],
     parentId: 'biblical-figures',
     name: 'Daniel',
@@ -3979,6 +4223,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['As for these four youths, God gave them knowledge and skill in all learning and wisdom; and Daniel had understanding in all visions and dreams. — Daniel 1:17 (https://www.biblegateway.com/passage/?search=Daniel+1%3A17)', 'My God has sent his angel, and has shut the lions’ mouths, and they have not hurt me... — Daniel 6:22 (https://www.biblegateway.com/passage/?search=Daniel+6%3A22)']
   },  {
     id: 'esther_queen',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Queen_Esther_Approaching_the_Palace_of_Ahasuerus_MET_DP832663.jpg/960px-Queen_Esther_Approaching_the_Palace_of_Ahasuerus_MET_DP832663.jpg'],
     relatedIds: ['anomaly-Giants---Nephilim---Elongated-Skulls---Horns-107'],
     parentId: 'biblical-figures',
     name: 'Queen Esther',
@@ -3989,6 +4234,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['“Who knows whether you haven’t come to the kingdom for such a time as this?” — Esther 4:14 (https://www.biblegateway.com/passage/?search=Esther+4%3A14)', '“Go, gather together all the Jews... and fast for me... and so I will go in to the king... and if I perish, I perish.” — Esther 4:16 (https://www.biblegateway.com/passage/?search=Esther+4%3A16)']
   },  {
     id: 'ezra',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/109.Ezra_Reads_the_Law_to_the_People.jpg/960px-109.Ezra_Reads_the_Law_to_the_People.jpg'],
     parentId: 'biblical-figures',
     name: 'Ezra',
     description: 'Priest, scribe, and religious leader who returned from exile and helped re-establish the law in Jerusalem.',
@@ -4017,6 +4263,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Now when Jesus was born in Bethlehem of Judea in the days of Herod the king, behold, wise men from the east came to Jerusalem... — Matthew 2:1 (https://www.biblegateway.com/passage/?search=Matthew+2%3A1)', 'Then Herod, when he saw that he was mocked by the wise men, was exceedingly angry, and sent out, and slew all the male children who were in Bethlehem... — Matthew 2:16 (https://www.biblegateway.com/passage/?search=Matthew+2%3A16)']
   },  {
     id: 'john_baptist',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Accademia_-_St_John_the_Baptist_by_Titian_Cat314.jpg/960px-Accademia_-_St_John_the_Baptist_by_Titian_Cat314.jpg'],
     relatedIds: ['jesus', 'nazarites', 'shroud-of-turin', 'prophet-malachi-node'],
     parentId: 'biblical-figures',
     name: 'John the Baptist',
@@ -4047,6 +4294,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['“Isn’t this the carpenter’s son? Isn’t his mother called Mary, and his brothers James, Joses, Simon, and Judas?” — Matthew 13:55 (https://www.biblegateway.com/passage/?search=Matthew+13%3A55)', 'But I saw none of the other apostles, except James, the Lord’s brother. — Galatians 1:19 (https://www.biblegateway.com/passage/?search=Galatians+1%3A19)']
   },  {
     id: 'jude_brother',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Anthonis_van_Dyck%2C_Kunsthistorisches_Museum_Wien%2C_Gem%C3%A4ldegalerie_-_Apostel_Judas_Thadd%C3%A4us_-_GG_6809_-_Kunsthistorisches_Museum.jpg/960px-Anthonis_van_Dyck%2C_Kunsthistorisches_Museum_Wien%2C_Gem%C3%A4ldegalerie_-_Apostel_Judas_Thadd%C3%A4us_-_GG_6809_-_Kunsthistorisches_Museum.jpg'],
     relatedIds: ['james_brother'],
     parentId: 'biblical-figures',
     name: 'Jude',
@@ -4066,6 +4314,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Stephen, full of faith and power, performed great wonders and signs among the people. — Acts 6:8 (https://www.biblegateway.com/passage/?search=Acts+6%3A8)', 'They stoned Stephen as he called on the Lord and said, “Lord Jesus, receive my spirit!” — Acts 7:59 (https://www.biblegateway.com/passage/?search=Acts+7%3A59)']
   },  {
     id: 'barnabas',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Vienna%2C_Austrian_National_Libarary_Ms_Codex_2662_fol._26r_Beginning_of_the_Gospel_of_Barnabas.jpg/960px-Vienna%2C_Austrian_National_Libarary_Ms_Codex_2662_fol._26r_Beginning_of_the_Gospel_of_Barnabas.jpg'],
     parentId: 'biblical-figures',
     name: 'Barnabas',
     description: 'A Cypriot Jew and early Christian missionary who traveled with Paul and introduced him to the Apostles.',
@@ -4075,6 +4324,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Joses, who by the apostles was surnamed Barnabas (which is, being interpreted, Son of Encouragement), a Levite, a man of Cyprus by birth... — Acts 4:36 (https://www.biblegateway.com/passage/?search=Acts+4%3A36)', 'For he was a good man, and full of the Holy Spirit and of faith. And a great multitude was added to the Lord. — Acts 11:24 (https://www.biblegateway.com/passage/?search=Acts+11%3A24)']
   },  {
     id: 'mark_evangelist',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Saint_Mark_the_Evangelist_%28CBL_W_139%2C_f.122v%29.jpg/960px-Saint_Mark_the_Evangelist_%28CBL_W_139%2C_f.122v%29.jpg'],
     parentId: 'biblical-figures',
     name: 'Mark the Evangelist',
     description: 'Companion of Peter and Paul, and author of the Gospel of Mark.',
@@ -4084,6 +4334,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['She came to the house of Mary the mother of John whose surname was Mark, where many were gathered together and were praying. — Acts 12:12 (https://www.biblegateway.com/passage/?search=Acts+12%3A12)', '“Only Luke is with me. Take Mark, and bring him with you, for he is useful to me for service.” — 2 Timothy 4:11 (https://www.biblegateway.com/passage/?search=2+Timothy+4%3A11)']
   },  {
     id: 'luke_evangelist',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/St_Luke_the_Evangelist_church%2C_Walton_2.jpg/960px-St_Luke_the_Evangelist_church%2C_Walton_2.jpg'],
     parentId: 'biblical-figures',
     name: 'Luke the Evangelist',
     description: 'Physician, companion of Paul, and author of the Gospel of Luke and the Book of Acts.',
@@ -4103,6 +4354,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['As Jesus passed by from there, he saw a man, called Matthew, sitting at the tax collection office. He said to him, “Follow me.” He arose and followed him. — Matthew 9:9 (https://www.biblegateway.com/passage/?search=Matthew+9%3A9)']
   },  {
     id: 'timothy_bishop',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/1_Timothy_1_and_2_in_Sinaiticus.jpg/960px-1_Timothy_1_and_2_in_Sinaiticus.jpg'],
     parentId: 'biblical-figures',
     name: 'Timothy',
     description: 'Paul\'s close companion, co-worker, and recipient of the pastoral epistles, later Bishop of Ephesus.',
@@ -4122,6 +4374,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['He cried with a loud voice, “Lazarus, come out!” He who had been dead came out... — John 11:43-44 (https://www.biblegateway.com/passage/?search=John+11%3A43-44)', 'The chief priests took counsel that they might put Lazarus to death also, because on account of him many of the Jews went away, and believed in Jesus. — John 12:10-11 (https://www.biblegateway.com/passage/?search=John+12%3A10-11)']
   },  {
     id: 'martha_bethany',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Johannes_%28Jan%29_Vermeer_-_Christ_in_the_House_of_Martha_and_Mary_-_Google_Art_Project_%28cropped2%29.jpg/960px-Johannes_%28Jan%29_Vermeer_-_Christ_in_the_House_of_Martha_and_Mary_-_Google_Art_Project_%28cropped2%29.jpg'],
     relatedIds: ['lazarus'],
     parentId: 'biblical-figures',
     name: 'Martha of Bethany',
@@ -4132,6 +4385,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Now a certain woman named Martha received him into her house. — Luke 10:38 (https://www.biblegateway.com/passage/?search=Luke+10%38)', 'Martha said to Jesus, “Lord, if you had been here, my brother wouldn’t have died.” — John 11:21 (https://www.biblegateway.com/passage/?search=John+11%3A21)']
   },  {
     id: 'mary_bethany',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Johannes_%28Jan%29_Vermeer_-_Christ_in_the_House_of_Martha_and_Mary_-_Google_Art_Project_%28cropped%29.jpg/960px-Johannes_%28Jan%29_Vermeer_-_Christ_in_the_House_of_Martha_and_Mary_-_Google_Art_Project_%28cropped%29.jpg'],
     relatedIds: ['lazarus'],
     parentId: 'biblical-figures',
     name: 'Mary of Bethany',
@@ -4163,6 +4417,7 @@ const chunk_0: any[] = [  {
     subLabel: 'Possible Nephilim Bloodline'
   },  {
     id: 'horites',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/MACCOUN%281899%29_p061_MT.HOR_TO_RIVER_ARNON_-_ARABIA_PETRAEA_IN_THE_SOUTH_COUNTRY.jpg/960px-MACCOUN%281899%29_p061_MT.HOR_TO_RIVER_ARNON_-_ARABIA_PETRAEA_IN_THE_SOUTH_COUNTRY.jpg'],
     relatedIds: ['edomites'],
     parentId: 'people-groups',
     name: 'Horites',
@@ -4202,6 +4457,7 @@ const chunk_0: any[] = [  {
     bibleVerses: ['the Kenites, the Kenizzites, the Kadmonites, — Genesis 15:19 (https://www.biblegateway.com/passage/?search=Genesis+15%3A19)', 'He looked at the Kenite, and took up his parable, and said, “Your dwelling place is strong. Your nest is set in the rock. — Numbers 24:21 (https://www.biblegateway.com/passage/?search=Numbers+24%3A21)', 'Now Heber the Kenite had separated himself from the Kenites, even from the children of Hobab, Moses’ brother-in-law, and had pitched his tent as far as the oak in Zaanannim, which is by Kedesh. — Judges 4:11 (https://www.biblegateway.com/passage/?search=Judges+4%3A11)']
   },  {
     id: 'adam-eve',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Peter_Paul_Rubens_-_Adam_and_Eve%2C_after_Titian%2C_between_1628_and_1629.jpg/960px-Peter_Paul_Rubens_-_Adam_and_Eve%2C_after_Titian%2C_between_1628_and_1629.jpg'],
     parentId: 'biblical-figures',
     name: 'Adam & Eve',
     description: 'The first humans described in Genesis, whose lineage marks the starting point of biblical genealogy.',
@@ -4215,6 +4471,7 @@ const chunk_0: any[] = [  {
     sources: ['Bible', 'Historical Chronology Database']
   },  {
     id: 'enoch',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figures_God_took_Enoch.jpg/500px-Figures_God_took_Enoch.jpg'],
     parentId: 'biblical-figures',
     name: 'Enoch',
     description: 'The seventh patriarch from Adam. According to scripture, he walked with God and was translated directly to heaven. Associated with ancient astronomical secrets.',
@@ -4263,6 +4520,7 @@ const chunk_0: any[] = [  {
     sources: ['Bible', 'Historical Chronology Database']
   },  {
     id: 'nephilim-br',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Quinametzin.jpg/500px-Quinametzin.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail'],
     parentId: 'christianity',
     name: 'Nephilim & Giants',
     description: 'The offspring of the Watchers (sons of God) and human women, described as "mighty men of old, men of renown."',
@@ -4277,6 +4535,7 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'giant-skeletal-finds',
+    images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X471Ywze0cWP7vyD6XRpdCPB59v-dJjysTxpR-Ga8m2HN1Oki2Y7CTPZNcAqOStBkdwGZk8NWu5xWXOJRaUKb05FpR8rj9POfTPC1ueD0HIVKZRZkWhGX9K4AuxBWs1_VBqzka6dxRznCrGcC4ICv1ZQPIT2Lr4Ux4JJKSaoR7FUpEgCwc5Mw-Hh9KljNCStbh651yVmg8mdIkTcb7nRKEOEgubNGf9Qbs4ZQ1vNGVtzQJ6wU5P2KbVfZ0?authuser=0&fife=s16383'],
     relatedIds: ['elongated-skulls'],
     parentId: 'nephilim-br',
     name: 'Giant Excavations & Finds',
@@ -5915,6 +6174,7 @@ const chunk_1: any[] = [  {
     isApocryphal: true
   },  {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-165',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/TodoSantos_%28cropped%29.JPG/960px-TodoSantos_%28cropped%29.JPG'],
     parentId: 'giant-skeletal-finds',
     name: 'Contra Costa County - Blackhawk, California',
     description: 'date: description: source: location:',
@@ -7270,6 +7530,7 @@ const chunk_1: any[] = [  {
     isApocryphal: true
   },  {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-303',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Downtown_Tuscaloosa_Alabama.png/960px-Downtown_Tuscaloosa_Alabama.png'],
     parentId: 'giant-skeletal-finds',
     name: '7 ft 6 in Giant - Moundville, Alabama',
     description: 'ALABAMA— Excavations of the prehistoric mounds at Moundville by the Alabama Museum of Natural History produced some 400 burials. Walter B. Jones, director of the museum, announced that one skeleton measured seven feet six inches in height. Most of the large skeletons were found in the vicinity of Mound G, with the majority averaging over six feet in height.',
@@ -7316,6 +7577,7 @@ const chunk_1: any[] = [  {
     isApocryphal: true
   },  {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-308',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Grant_County_Courthouse_in_Marion.jpg/960px-Grant_County_Courthouse_in_Marion.jpg'],
     parentId: 'giant-skeletal-finds',
     name: '9 ft Giants - Marion, Ohio',
     description: 'OHIO— Excavation of a mound (64 ft long by 35 ft wide) in Marion, Ohio, uncovered several skeletons about eight feet deep. In one grave, two skeletons—one male and one female—were buried. The male skeleton measured nine feet in length, and the female measured eight feet. The female was looking downward, and the male was directly on top looking upward.',
@@ -7325,6 +7587,7 @@ const chunk_1: any[] = [  {
     isApocryphal: true
   },  {
     id: 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-309',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/SLC_Skyline_2024.jpg/960px-SLC_Skyline_2024.jpg'],
     relatedIds: ['anomaly-D-U-M-B-s-35'],
     parentId: 'giant-skeletal-finds',
     name: '8 ft 6 in Giant - Salt Lake City, Utah',
@@ -7353,6 +7616,7 @@ const chunk_1: any[] = [  {
     isApocryphal: true
   },  {
     id: 'lahmi',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Tel-Tsafit-206.jpg/1280px-Tel-Tsafit-206.jpg'],
     relatedIds: ['david_pat', 'goliath', 'davids-mighty-men'],
     parentId: 'nephilim-br',
     subLabel: 'Possible Nephilim Bloodline',
@@ -7364,6 +7628,7 @@ const chunk_1: any[] = [  {
     bibleVerses: ['And there was again war with the Philistines, and Elhanan the son of Jair struck Lahmi the brother of Goliath the Gittite... — 1 Chronicles 20:5']
   },  {
     id: 'ishbi-benob',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Tel-Tsafit-206.jpg/1280px-Tel-Tsafit-206.jpg'],
     relatedIds: ['david_pat'],
     parentId: 'nephilim-br',
     subLabel: 'Possible Nephilim Bloodline',
@@ -7375,6 +7640,7 @@ const chunk_1: any[] = [  {
     bibleVerses: ['And Ishbi-benob, one of the descendants of the giants, whose spear weighed three hundred shekels of bronze... — 2 Samuel 21:16']
   },  {
     id: 'saph',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Tel-Tsafit-206.jpg/1280px-Tel-Tsafit-206.jpg'],
     parentId: 'nephilim-br',
     subLabel: 'Possible Nephilim Bloodline',
     name: 'Saph',
@@ -7416,6 +7682,7 @@ const chunk_1: any[] = [  {
     bibleVerses: ['The Horites also formerly dwelt in Seir, but the descendants of Esau dispossessed them and destroyed them from before them... — Deuteronomy 2:12 (https://www.biblegateway.com/passage/?search=Deuteronomy+2%3A12)']
   },  {
     id: 'anak',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Hebron_Cave_of_the_Patriarchs.jpg/1280px-Hebron_Cave_of_the_Patriarchs.jpg'],
     parentId: 'nephilim-br',
     subLabel: 'Possible Nephilim Bloodline',
     name: 'Anak',
@@ -7426,6 +7693,7 @@ const chunk_1: any[] = [  {
     bibleVerses: ['...and there we saw the giants, the sons of Anak, which come of the giants... — Numbers 13:33']
   },  {
     id: 'ahiman',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Hebron_Cave_of_the_Patriarchs.jpg/1280px-Hebron_Cave_of_the_Patriarchs.jpg'],
     parentId: 'nephilim-br',
     subLabel: 'Possible Nephilim Bloodline',
     name: 'Ahiman',
@@ -7436,6 +7704,7 @@ const chunk_1: any[] = [  {
     bibleVerses: ['And they went up through the South and came to Hebron; Ahiman, Sheshai, and Talmai, the descendants of Anak, were there... — Numbers 13:22']
   },  {
     id: 'sheshai',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Hebron_Cave_of_the_Patriarchs.jpg/1280px-Hebron_Cave_of_the_Patriarchs.jpg'],
     parentId: 'nephilim-br',
     subLabel: 'Possible Nephilim Bloodline',
     name: 'Sheshai',
@@ -7446,6 +7715,7 @@ const chunk_1: any[] = [  {
     bibleVerses: ['And Caleb drove out from there the three sons of Anak: Sheshai, Ahiman, and Talmai, the children of Anak. — Joshua 15:14']
   },  {
     id: 'talmai',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Hebron_Cave_of_the_Patriarchs.jpg/1280px-Hebron_Cave_of_the_Patriarchs.jpg'],
     parentId: 'nephilim-br',
     subLabel: 'Possible Nephilim Bloodline',
     name: 'Talmai',
@@ -7456,6 +7726,7 @@ const chunk_1: any[] = [  {
     bibleVerses: ['And Caleb drove out from there the three sons of Anak: Sheshai, Ahiman, and Talmai, the children of Anak. — Joshua 15:14']
   },  {
     id: 'sihon',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Tell_Hesban_%28Column%29.jpg/1280px-Tell_Hesban_%28Column%29.jpg'],
     relatedIds: ['amorite-giants'],
     parentId: 'nephilim-br',
     subLabel: 'Possible Nephilim Bloodline',
@@ -7467,6 +7738,7 @@ const chunk_1: any[] = [  {
     bibleVerses: ['But Sihon would not allow Israel to pass through his territory. Sihon gathered all his people together and went out against Israel in the wilderness... — Numbers 21:23']
   },  {
     id: 'zuzim',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Mount_Nebo_BW_6.JPG/1280px-Mount_Nebo_BW_6.JPG'],
     parentId: 'nephilim-br',
     subLabel: 'Possible Nephilim Bloodline',
     name: 'Zuzim',
@@ -7477,6 +7749,7 @@ const chunk_1: any[] = [  {
     bibleVerses: ['...and struck the Rephaim in Ashteroth Karnaim, and the Zuzim in Ham, and the Emim in Shaveh Kiriathaim... — Genesis 14:5']
   },  {
     id: 'arba',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Hebron_Cave_of_the_Patriarchs.jpg/1280px-Hebron_Cave_of_the_Patriarchs.jpg'],
     parentId: 'nephilim-br',
     subLabel: 'Possible Nephilim Bloodline',
     name: 'Arba',
@@ -7487,6 +7760,7 @@ const chunk_1: any[] = [  {
     bibleVerses: ['Now the name of Hebron formerly was Kiriath-arba. (Arba was the greatest man among the Anakim.) And the land had rest from war. — Joshua 14:15']
   },  {
     id: 'rapha',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Tel-Tsafit-206.jpg/1280px-Tel-Tsafit-206.jpg'],
     relatedIds: ['david_pat'],
     parentId: 'nephilim-br',
     subLabel: 'Possible Nephilim Bloodline',
@@ -7498,6 +7772,7 @@ const chunk_1: any[] = [  {
     bibleVerses: ['These four were descended from the giants [Hebrew: Rapha] in Gath, and they fell by the hand of David and by the hand of his servants. — 2 Samuel 21:22']
   },  {
     id: 'amorite-giants',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Cuneiform_Clay_Tablets_from_Amorite_Kingdom_of_Mari%2C_1st_Half_of_2nd_Mill._BC.jpg/1280px-Cuneiform_Clay_Tablets_from_Amorite_Kingdom_of_Mari%2C_1st_Half_of_2nd_Mill._BC.jpg'],
     relatedIds: ['sihon'],
     parentId: 'nephilim-br',
     subLabel: 'Possible Nephilim Bloodline',
@@ -7509,6 +7784,7 @@ const chunk_1: any[] = [  {
     bibleVerses: ['Yet I destroyed the Amorite before them, whose height was like the height of the cedars, and he was as strong as the oaks... — Amos 2:9']
   },  {
     id: 'ohyah',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Qumran.jpeg/1280px-Qumran.jpeg'],
     relatedIds: ['archaeology-dead-sea-scrolls', 'book-of-giants'],
     parentId: 'nephilim-br',
     subLabel: 'Possible Nephilim Bloodline',
@@ -7519,6 +7795,7 @@ const chunk_1: any[] = [  {
     sources: ['Book of Giants', 'Book of Enoch']
   },  {
     id: 'hahyah',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Qumran.jpeg/1280px-Qumran.jpeg'],
     relatedIds: ['book-of-giants'],
     parentId: 'nephilim-br',
     subLabel: 'Possible Nephilim Bloodline',
@@ -7529,6 +7806,7 @@ const chunk_1: any[] = [  {
     sources: ['Book of Giants', 'Book of Enoch']
   },  {
     id: 'mahway',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Qumran.jpeg/1280px-Qumran.jpeg'],
     relatedIds: ['book-of-giants'],
     parentId: 'nephilim-br',
     subLabel: 'Possible Nephilim Bloodline',
@@ -7558,6 +7836,7 @@ const chunk_1: any[] = [  {
     sources: ['Book of Revelation', 'Book of Enoch']
   },  {
     id: 'goliath',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Cafit030.jpg/1280px-Cafit030.jpg'],
     parentId: 'nephilim-br',
     subLabel: 'Possible Nephilim Bloodline',
     name: 'Goliath of Gath',
@@ -7572,6 +7851,7 @@ const chunk_1: any[] = [  {
     sources: ['First Book of Samuel', 'Historical Chronicles'],
   },  {
     id: 'og-bashan',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/127303_ghost_wheel_golan_heights_PikiWiki_Israel.jpg/1280px-127303_ghost_wheel_golan_heights_PikiWiki_Israel.jpg'],
     parentId: 'nephilim-br',
     subLabel: 'Possible Nephilim Bloodline',
     name: 'Og of Bashan',
@@ -7586,6 +7866,7 @@ const chunk_1: any[] = [  {
     bibleVerses: ['Og king of Bashan was the last of the Rephaim. His bed was decorated with iron and was more than nine cubits long and four cubits wide... — Deuteronomy 3:11'],
   },  {
     id: 'enochian-sites',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/William_Holman_Hunt_-_The_Scapegoat.jpg/1280px-William_Holman_Hunt_-_The_Scapegoat.jpg'],
     relatedIds: ['enochian-lore', 'watchers'],
     parentId: 'christianity',
     name: 'Enochian Sites & Peaks',
@@ -7595,6 +7876,7 @@ const chunk_1: any[] = [  {
     isApocryphal: true
   },  {
     id: 'enochian-mount-hermon',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Hermonsnow.jpg/960px-Hermonsnow.jpg'],
     relatedIds: ['fallen-angel', 'grigori', 'samyaza', 'watchers', 'watcher_descent', 'enoch3-uzza-azza-azael', 'enoch3-irin-qaddishin', 'achuzan-altar-methuselah', 'enoch-family-jared'],
     parentId: 'enochian-sites',
     name: 'Mount Hermon (Watchers Descent)',
@@ -7618,6 +7900,7 @@ const chunk_1: any[] = [  {
     bibleVerses: ['And the Lord said to Raphael: \'Bind Azazel hand and foot, and cast him into the darkness: and make an opening in the desert, which is in Dudael, and cast him therein.\' — 1 Enoch 10:4 (https://www.sacred-texts.com/bib/boe/boe013.htm)']
   },  {
     id: 'enochian-gates-of-sheol',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Hole%C5%A1ov%2C_%C5%BEidovsk%C3%BD_h%C5%99bitov.JPG/960px-Hole%C5%A1ov%2C_%C5%BEidovsk%C3%BD_h%C5%99bitov.JPG'],
     relatedIds: ['fallen-angel', 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-23', 'moloch', 'hell-lake-of-fire-gehenna', 'enoch1-journeys-ends-of-earth'],
     parentId: 'enochian-sites',
     name: 'Gates of Sheol (Valley of Hinnom)',
@@ -7696,6 +7979,7 @@ const chunk_1: any[] = [  {
     bibleVerses: ['And they were in all two hundred; who descended in the days of Jared on the summit of Mount Hermon, and they called it Mount Hermon, because they had sworn and bound themselves by mutual imprecations upon it. — 1 Enoch 6:6 (https://www.sacred-texts.com/bib/boe/boe009.htm)']
   },  {
     id: 'cave-machpelah',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Hebron_Cave_of_the_Patriarchs.jpg/960px-Hebron_Cave_of_the_Patriarchs.jpg'],
     parentId: 'enochian-sites',
     name: 'Cave of Machpelah',
     description: 'The burial site of Abraham, Sarah, Isaac, Rebekah, Jacob, and Leah. Rumored to hold tunnels leading deep into the Earth.',
@@ -7704,6 +7988,7 @@ const chunk_1: any[] = [  {
     sources: ['Apocryphal Texts', 'Book of Enoch', 'Historical Gazeteers'],
   },  {
     id: 'enochian-cosmology',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Europe_a_Prophecy_copy_K_plate_01.jpg/1280px-Europe_a_Prophecy_copy_K_plate_01.jpg'],
     relatedIds: ['book-of-enoch'],
     parentId: 'christianity',
     name: 'Enochian Cosmology',
@@ -7711,6 +7996,7 @@ const chunk_1: any[] = [  {
     isApocryphal: true
   },  {
     id: 'enochian-creatures',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/f/f5/Ill_dict_infernal_p0100-86_behemoth.jpg'],
     relatedIds: ['book-of-enoch'],
     parentId: 'enochian-cosmology',
     name: 'Enochian Creatures',
@@ -7897,6 +8183,7 @@ const chunk_1: any[] = [  {
     bibleVerses: ['And I saw the tenth heaven, which is called Aravat, where the appearance of the face of the Lord is like iron in a fire... and the throne of the Lord is there... — 2 Enoch 22:1']
   },  {
     id: 'biblical-events',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/The_Great_Isaiah_Scroll_MS_A_%281QIsa%29_-_Google_Art_Project.jpg/1280px-The_Great_Isaiah_Scroll_MS_A_%281QIsa%29_-_Google_Art_Project.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail'],
     parentId: 'christianity',
     name: 'Biblical Events',
     description: 'Catastrophic events and cosmological milestones recorded in antiquity.',
@@ -7910,6 +8197,7 @@ const chunk_1: any[] = [  {
     bibleVerses: ['And I saw a new heaven and a new earth: for the first heaven and the first earth were passed away... And I John saw the holy city, new Jerusalem, coming down from God out of heaven, prepared as a bride adorned for her husband. — Revelation 21:1-2 (https://www.biblegateway.com/passage/?search=Revelation+21%3A1-2)']
   },  {
     id: 'rev_tribulation',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/%28Venice%29_La_distruzione_del_tempio_di_Gerusalemme_-Francesco_Hayez_-_gallerie_Accademia_Venice.jpg/960px-%28Venice%29_La_distruzione_del_tempio_di_Gerusalemme_-Francesco_Hayez_-_gallerie_Accademia_Venice.jpg'],
     relatedIds: ['prophecy-israel-regathered-1948', 'hell-abyss-bottomless-pit', 'weather-modification'],
     parentId: 'future-prophecy',
     name: 'The Tribulation Period',
@@ -7937,6 +8225,7 @@ const chunk_1: any[] = [  {
     bibleVerses: ['Then I stood on the sand of the sea. I saw a beast coming up out of the sea, having ten horns and seven heads. On his horns were ten crowns, and on his heads, blasphemous names. The beast which I saw was like a leopard, and his feet were like those of a bear, and his mouth like the mouth of a lion. The dragon gave him his power, his throne, and great authority. — Revelation 13:1-2 (https://www.biblegateway.com/passage/?search=Revelation+13%3A1-2)', 'I saw another beast coming up out of the earth. He had two horns like a lamb, and he spoke like a dragon. He exercises all the authority of the first beast in his presence. He makes the earth and those who dwell in it to worship the first beast, whose fatal wound was healed. — Revelation 13:11-12 (https://www.biblegateway.com/passage/?search=Revelation+13%3A11-12)', 'Let no one deceive you in any way. For it will not be, unless the rebellion comes first, and the man of sin is revealed, the son of destruction, he who opposes and exalts himself against all that is called God or that is worshiped; so that he sits as God in the temple of God, setting himself up as God. — 2 Thessalonians 2:3-4 (https://www.biblegateway.com/passage/?search=2+Thessalonians+2%3A3-4)']
   },  {
     id: 'rev_second_coming',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Second_Coming_of_Christ_window.jpg/960px-Second_Coming_of_Christ_window.jpg'],
     parentId: 'future-prophecy',
     name: 'The Second Coming of Christ',
     description: 'Christ returns in glory with the armies of heaven on white horses, defeats the beast and the false prophet, and binds Satan in the abyss.',
@@ -7954,6 +8243,7 @@ const chunk_1: any[] = [  {
     bibleVerses: ['I saw thrones, and they sat on them, and judgment was given to them. I saw the souls of those who had been beheaded for the testimony of Jesus, and for the word of God, and such as didn’t worship the beast nor his image, and didn’t receive the mark on their forehead and on their hand. They lived and reigned with Christ for a thousand years. The rest of the dead didn’t live until the thousand years were finished. This is the first resurrection. Blessed and holy is he who has part in the first resurrection. Over these, the second death has no power, but they will be priests of God and of Christ, and will reign with him one thousand years. — Revelation 20:4-6 (https://www.biblegateway.com/passage/?search=Revelation+20%3A4-6)', 'The wolf will live with the lamb, and the leopard will lie down with the young goat; The calf, the young lion, and the fattened calf together; and a little child will lead them. The cow and the bear will graze. Their young ones will lie down together. The lion will eat straw like the ox. The nursing child will play near a cobra’s hole, and the weaned child will put his hand on the viper’s den. They will not hurt nor destroy in all my holy mountain; for the earth will be full of the knowledge of Yahweh, as the waters cover the sea. — Isaiah 11:6-9 (https://www.biblegateway.com/passage/?search=Isaiah+11%3A6-9)']
   },  {
     id: 'rev_final_judgment',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Cath%C3%A9drale_d%27Amiens%2C_fa%C3%A7ade_-_d%C3%A9tail.JPG/960px-Cath%C3%A9drale_d%27Amiens%2C_fa%C3%A7ade_-_d%C3%A9tail.JPG'],
     relatedIds: ['hell-lake-of-fire-gehenna', 'hell-outer-darkness'],
     parentId: 'future-prophecy',
     name: 'The Great White Throne Judgment',
@@ -7963,6 +8253,7 @@ const chunk_1: any[] = [  {
     bibleVerses: ['I saw a great white throne, and him who sat on it, from whose face the earth and the heaven fled away. There was found no place for them. I saw the dead, the great and the small, standing before the throne, and they opened books. Another book was opened, which is the book of life. The dead were judged out of the things which were written in the books, according to their works. — Revelation 20:11-12 (https://www.biblegateway.com/passage/?search=Revelation+20%3A11-12)', 'But you, why do you judge your brother? Or you again, why do you despise your brother? For we will all stand before the judgment seat of Christ. — Romans 14:10 (https://www.biblegateway.com/passage/?search=Romans+14%3A10)', 'For we must all be revealed before the judgment seat of Christ; that each one may receive the things in the body, according to what he has done, whether good or bad. — 2 Corinthians 5:10 (https://www.biblegateway.com/passage/?search=2+Corinthians+5%3A10)']
   },  {
     id: 'rev_new_jerusalem',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/La_J%C3%A9rusalem_c%C3%A9leste_%282%29.jpg/960px-La_J%C3%A9rusalem_c%C3%A9leste_%282%29.jpg'],
     relatedIds: ['biblical-blueprints', 'blueprint-ezekiels-temple', 'heavens-all-religions', 'heaven-third-heaven-paradise'],
     parentId: 'future-prophecy',
     name: 'New Heaven, Earth & New Jerusalem',
@@ -7972,6 +8263,7 @@ const chunk_1: any[] = [  {
     bibleVerses: ['I saw a new heaven and a new earth: for the first heaven and the first earth have passed away, and the sea is no more. I saw the holy city, New Jerusalem, coming down out of heaven from God, prepared like a bride adorned for her husband. — Revelation 21:1-2 (https://www.biblegateway.com/passage/?search=Revelation+21%3A1-2)', 'He carried me away in the Spirit to a great and high mountain, and showed me the holy city, Jerusalem, coming down out of heaven from God, having the glory of God. Her light was like a most precious stone, as if it were a jasper stone, clear as crystal; having a great and high wall; having twelve gates, and at the gates twelve angels; and names written on them, which are the names of the twelve tribes of the children of Israel. — Revelation 21:10-12 (https://www.biblegateway.com/passage/?search=Revelation+21%3A10-12)', 'But, according to his promise, we look for new heavens and a new earth, in which righteousness dwells. — 2 Peter 3:13 (https://www.biblegateway.com/passage/?search=2+Peter+3%3A13)']
   },  {
     id: 'evt-enoch-trans',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/The_Phillip_Medhurst_Picture_Torah_44._Enoch_translated._Genesis_cap_5_v_24._Mortier%27s_Bible.jpg/960px-The_Phillip_Medhurst_Picture_Torah_44._Enoch_translated._Genesis_cap_5_v_24._Mortier%27s_Bible.jpg'],
     relatedIds: ['enoch3-anafiel', 'achuzan-altar-methuselah', 'enoch-second-return'],
     parentId: 'biblical-events',
     name: 'Enoch Translated',
@@ -7982,6 +8274,7 @@ const chunk_1: any[] = [  {
     bibleVerses: ['Enoch walked with God, and he was not found, for God took him. — Genesis 5:24 (https://www.biblegateway.com/passage/?search=Genesis+5%3A24)', 'By faith, Enoch was taken away, so that he wouldn’t see death, and he was not found, because God translated him. For he has had testimony given to him that before his translation he had been well pleasing to God. — Hebrews 11:5 (https://www.biblegateway.com/passage/?search=Hebrews+11%3A5)']
   },  {
     id: 'evt-adam-death',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Michelangelo%2C_Creation_of_Adam_03.jpg/960px-Michelangelo%2C_Creation_of_Adam_03.jpg'],
     parentId: 'biblical-events',
     name: 'Death of Adam',
     description: 'The death of the first man, Adam, at 930 years of age.',
@@ -7991,6 +8284,7 @@ const chunk_1: any[] = [  {
     bibleVerses: ['And all the days that Adam lived were nine hundred and thirty years: and he died. — Genesis 5:5 (https://www.biblegateway.com/passage/?search=Genesis+5%3A5)']
   },  {
     id: 'evt-abraham-canaan',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/A_dictionary_of_the_Bible.._%281887%29_%2814781539332%29.jpg/960px-A_dictionary_of_the_Bible.._%281887%29_%2814781539332%29.jpg'],
     parentId: 'biblical-events',
     name: 'Abraham Enters Canaan',
     description: 'At age 75, Abraham obeys God\'s call to leave Harran and journey to the promised land of Canaan.',
@@ -8000,6 +8294,7 @@ const chunk_1: any[] = [  {
     bibleVerses: ['So Abram went, as Yahweh had told him. Lot went with him. Abram was seventy-five years old when he departed from Haran. Abram took Sarai his wife, Lot his brother’s son, all their possessions that they had gathered, and the people whom they had acquired in Haran, and they went to go into the land of Canaan. They entered into the land of Canaan. — Genesis 12:4-5 (https://www.biblegateway.com/passage/?search=Genesis+12%3A4-5)', 'By faith, Abraham, when he was called, obeyed to go out to the place which he was to receive for an inheritance. He went out, not knowing where he went. — Hebrews 11:8 (https://www.biblegateway.com/passage/?search=Hebrews+11%3A8)']
   },  {
     id: 'evt-sodom-gomorrah',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/John_Martin_-_Sodom_and_Gomorrah.jpg/960px-John_Martin_-_Sodom_and_Gomorrah.jpg'],
     relatedIds: ['abraham-fig'],
     parentId: 'biblical-events',
     name: 'Destruction of Sodom',
@@ -8019,6 +8314,7 @@ const chunk_1: any[] = [  {
     bibleVerses: ['They came to the place which God had told him of. Abraham built the altar there, and laid the wood in order, bound Isaac his son, and laid him on the altar, on the wood. Abraham stretched out his hand, and took the knife to kill his son. Yahweh’s angel called to him out of the sky, and said, “Abraham, Abraham!” He said, “Here I am.” He said, “Don’t lay your hand on the boy or do anything to him. For now I know that you fear God, since you have not withheld your son, your only son, from me.” — Genesis 22:9-12 (https://www.biblegateway.com/passage/?search=Genesis+22%3A9-12)', 'By faith, Abraham, being tested, offered up Isaac. Yes, he who had gladly received the promises was offering up his one and only son, to whom it was said, “your offspring will be accounted as from Isaac”; — Hebrews 11:17-18 (https://www.biblegateway.com/passage/?search=Hebrews+11%3A17-18)']
   },  {
     id: 'evt-joseph-sold',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Joseph_%28Francisco_de_Zurbar%C3%A1n%29.jpg/960px-Joseph_%28Francisco_de_Zurbar%C3%A1n%29.jpg'],
     parentId: 'biblical-events',
     name: 'Joseph Sold to Egypt',
     description: 'Joseph is sold by his jealous brothers to Ishmaelite merchants for twenty shekels of silver, who take him to Egypt.',
@@ -8028,6 +8324,7 @@ const chunk_1: any[] = [  {
     bibleVerses: ['Midianites who were merchants passed by, and they drew and lifted up Joseph out of the pit, and sold Joseph to the Ishmaelites for twenty pieces of silver. They brought Joseph into Egypt. — Genesis 37:28 (https://www.biblegateway.com/passage/?search=Genesis+37%3A28)', '“The patriarchs, moved with jealousy against Joseph, sold him into Egypt. God was with him, — Acts 7:9 (https://www.biblegateway.com/passage/?search=Acts+7%3A9)']
   },  {
     id: 'evt-israel-egypt',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Jan_Victors_-_Jacob_Seeking_the_Forgiveness_of_Esau_-_79.330_-_Indianapolis_Museum_of_Art_%28cropped%29.jpg/960px-Jan_Victors_-_Jacob_Seeking_the_Forgiveness_of_Esau_-_79.330_-_Indianapolis_Museum_of_Art_%28cropped%29.jpg'],
     parentId: 'biblical-events',
     name: 'Jacob Enters Egypt',
     description: 'Jacob and his entire family migrate from Canaan to Goshen in Egypt to escape a severe seven-year famine.',
@@ -8037,6 +8334,7 @@ const chunk_1: any[] = [  {
     bibleVerses: ['Jacob rose up from Beersheba, and the sons of Israel carried Jacob, their father, their little ones, and their wives, in the wagons which Pharaoh had sent to carry him. They took their livestock, and their goods, which they had gotten in the land of Canaan, and came into Egypt—Jacob, and all his offspring with him, his sons, and his sons’ sons with him, his daughters, and his sons’ daughters, and he brought all his offspring with him into Egypt. — Genesis 46:5-7 (https://www.biblegateway.com/passage/?search=Genesis+46%3A5-7)', 'Joseph sent, and summoned Jacob, his father, and all his relatives, seventy-five souls. Jacob went down into Egypt, and he died, himself and our fathers, — Acts 7:14-15 (https://www.biblegateway.com/passage/?search=Acts+7%3A14-15)']
   },  {
     id: 'evt-exodus',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/David_Roberts-IsraelitesLeavingEgypt_1828.jpg/960px-David_Roberts-IsraelitesLeavingEgypt_1828.jpg'],
     relatedIds: ['archaeology-merneptah-stele', 'sekhmet', 'blueprint-tabernacle-model-timna'],
     parentId: 'biblical-events',
     name: 'The Exodus from Egypt',
@@ -8047,6 +8345,7 @@ const chunk_1: any[] = [  {
     bibleVerses: ['Now the time that the children of Israel lived in Egypt was four hundred thirty years. At the end of four hundred thirty years, to the day, all of Yahweh’s armies went out from the land of Egypt. — Exodus 12:40-41 (https://www.biblegateway.com/passage/?search=Exodus+12%3A40-41)', 'Moses stretched out his hand over the sea, and Yahweh caused the sea to go back by a strong east wind all night, and made the sea dry land, and the waters were divided. The children of Israel went into the middle of the sea on the dry ground, and the waters were a wall to them on their right hand, and on their left. — Exodus 14:21-22 (https://www.biblegateway.com/passage/?search=Exodus+14%3A21-22)', 'By faith, they passed through the Red Sea as on dry land. When the Egyptians tried to do so, they were swallowed up. — Hebrews 11:29 (https://www.biblegateway.com/passage/?search=Hebrews+11%3A29)']
   },  {
     id: 'evt-sinai-law',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/PikiWiki_Israel_31909_The_Giving_Tree_garden_in_Holon.jpg/960px-PikiWiki_Israel_31909_The_Giving_Tree_garden_in_Holon.jpg'],
     relatedIds: ['yhwh-tetragrammaton', 'blueprint-tabernacle', 'blueprint-tabernacle-model-timna', 'hebrew-america-los-lunas-decalogue'],
     parentId: 'biblical-events',
     name: 'Giving of the Law',
@@ -8086,6 +8385,7 @@ const chunk_1: any[] = [  {
     bibleVerses: ['David was thirty years old when he began to reign, and he reigned forty years. In Hebron he reigned over Judah seven years and six months; and in Jerusalem he reigned thirty-three years over all Israel and Judah. — 2 Samuel 5:4-5 (https://www.biblegateway.com/passage/?search=2+Samuel+5%3A4-5)', 'The days that David reigned over Israel were forty years; he reigned seven years in Hebron, and he reigned thirty-three years in Jerusalem. — 1 Kings 2:11 (https://www.biblegateway.com/passage/?search=1+Kings+2%3A11)']
   },  {
     id: 'reign-solomon-temple',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Francois_Vatable%2C_reconstructie_van_de_tempel_van_Salomo_%28detail%29.jpg/960px-Francois_Vatable%2C_reconstructie_van_de_tempel_van_Salomo_%28detail%29.jpg'],
     relatedIds: ['solomon_pat', 'israelites', 'blueprint-solomons-temple'],
     parentId: 'biblical-events',
     name: 'Solomon\'s Temple Construction',
@@ -8096,6 +8396,7 @@ const chunk_1: any[] = [  {
     bibleVerses: ['In the four hundred and eightieth year after the children of Israel had come out of the land of Egypt, in the fourth year of Solomon’s reign over Israel, in the month Ziv, which is the second month, he began to build Yahweh’s house. — 1 Kings 6:1 (https://www.biblegateway.com/passage/?search=1+Kings+6%3A1)', 'In the eleventh year, in the month Bul, which is the eighth month, the house was finished throughout all its parts, and according to all its specifications. So he spent seven years building it. — 1 Kings 6:38 (https://www.biblegateway.com/passage/?search=1+Kings+6%3A38)', 'Then Solomon began to build Yahweh’s house at Jerusalem on Mount Moriah, where Yahweh appeared to David his father, which he prepared in the place that David had appointed, on the threshing floor of Ornan the Jebusite. He began to build in the second day of the second month, in the fourth year of his reign. — 2 Chronicles 3:1-2 (https://www.biblegateway.com/passage/?search=2+Chronicles+3%3A1-2)']
   },  {
     id: 'evt-split-kingdom',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Split_080620-133710-IMG_0968x.jpg/960px-Split_080620-133710-IMG_0968x.jpg'],
     relatedIds: ['prophecy-samaria-micah-1'],
     parentId: 'biblical-events',
     name: 'Split of the Kingdom',
@@ -8106,6 +8407,7 @@ const chunk_1: any[] = [  {
     bibleVerses: ['When all Israel saw that the king didn’t listen to them, the people answered the king, saying, “What portion have we in David? We don’t have an inheritance in the son of Jesse. To your tents, Israel! Now see to your own house, David.” So Israel departed to their tents. But as for the children of Israel who lived in the cities of Judah, Rehoboam reigned over them. Then king Rehoboam sent Adoram, who was over the men subject to forced labor; and all Israel stoned him to death with stones. King Rehoboam hurried to get himself up to his chariot, to flee to Jerusalem. So Israel rebelled against David’s house to this day. When all Israel heard that Jeroboam had returned, they sent and called him to the congregation, and made him king over all Israel. There was no one who followed David’s house, except for the tribe of Judah only. — 1 Kings 12:16-20 (https://www.biblegateway.com/passage/?search=1+Kings+12%3A16-20)', 'When all Israel saw that the king didn’t listen to them, the people answered the king, saying, “What portion have we in David? We don’t have an inheritance in the son of Jesse! Every man to your tents, Israel! Now see to your own house, David.” So all Israel departed to their tents. But as for the children of Israel who lived in the cities of Judah, Rehoboam reigned over them. Then king Rehoboam sent Hadoram, who was over the men subject to forced labor; and the children of Israel stoned him to death with stones. King Rehoboam hurried to get himself up to his chariot, to flee to Jerusalem. So Israel rebelled against David’s house to this day. — 2 Chronicles 10:16-19 (https://www.biblegateway.com/passage/?search=2+Chronicles+10%3A16-19)']
   },  {
     id: 'evt-fall-samaria',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Deportation_of_Jews_by_Assyrians.svg/960px-Deportation_of_Jews_by_Assyrians.svg.png'],
     relatedIds: ['prophecy-nineveh-nahum', 'prophecy-samaria-micah-1', 'nergal'],
     parentId: 'biblical-events',
     name: 'Assyrian Captivity (Israel)',
@@ -8116,6 +8418,7 @@ const chunk_1: any[] = [  {
     bibleVerses: ['Then the king of Assyria came up throughout all the land, went up to Samaria, and besieged it three years. In the ninth year of Hoshea the king of Assyria took Samaria, and carried Israel away to Assyria, and placed them in Halah, and on the Habor, the river of Gozan, and in the cities of the Medes. — 2 Kings 17:5-6 (https://www.biblegateway.com/passage/?search=2+Kings+17%3A5-6)', 'In the fourth year of king Hezekiah, which was the seventh year of Hoshea son of Elah king of Israel, Shalmaneser king of Assyria came up against Samaria, and besieged it. At the end of three years they took it. In the sixth year of Hezekiah, which was the ninth year of Hoshea king of Israel, Samaria was taken. The king of Assyria carried Israel away to Assyria, and put them in Halah, and on the Habor, the river of Gozan, and in the cities of the Medes, because they didn’t obey Yahweh their God’s voice, but transgressed his covenant, even all that Moses the servant of Yahweh commanded, and would not hear it or do it. — 2 Kings 18:9-12 (https://www.biblegateway.com/passage/?search=2+Kings+18%3A9-12)']
   },  {
     id: 'evt-fall-jerusalem',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Tissot_The_Flight_of_the_Prisoners.jpg/960px-Tissot_The_Flight_of_the_Prisoners.jpg'],
     relatedIds: ['blueprint-solomons-temple', 'shealtiel', 'prophecy-tyre-ezekiel-26', 'prophecy-babylon-isaiah-13', 'blueprint-brazen-sea', 'prophet-jeremiah-node'],
     parentId: 'biblical-events',
     name: 'Babylonian Captivity (Judah)',
@@ -8126,6 +8429,7 @@ const chunk_1: any[] = [  {
     bibleVerses: ['Now in the fifth month, on the seventh day of the month, which was the nineteenth year of king Nebuchadnezzar, king of Babylon, Nebuzaradan the captain of the guard, a servant of the king of Babylon, came to Jerusalem. He burned Yahweh’s house, the king’s house, and all the houses of Jerusalem, even every great house, he burned with fire. All the army of the Chaldeans, who were with the captain of the guard, broke down the walls around Jerusalem. Nebuzaradan the captain of the guard carried away captive the residue of the people who were left in the city, and those who fell away, who fell to the king of Babylon, and the residue of the multitude. — 2 Kings 25:8-11 (https://www.biblegateway.com/passage/?search=2+Kings+25%3A8-11)', 'Therefore he brought on them the king of the Chaldeans, who killed their young men with the sword in the house of their sanctuary, and had no compassion on young man or virgin, old man or gray-headed. He gave them all into his hand. All the vessels of God’s house, great and small, and the treasures of Yahweh’s house, and the treasures of the king, and of his princes, all these he brought to Babylon. They burned God’s house, and broke down the wall of Jerusalem, and burned all its palaces with fire, and destroyed all of its valuable vessels. He carried those who had escaped from the sword away to Babylon, and they were servants to him and his sons until the reign of the kingdom of Persia, to fulfill Yahweh’s word by Jeremiah’s mouth, until the land had enjoyed its Sabbaths. As long as it lay desolate, it kept Sabbath, to fulfill seventy years. — 2 Chronicles 36:17-21 (https://www.biblegateway.com/passage/?search=2+Chronicles+36%3A17-21)']
   },  {
     id: 'evt-temple-rebuilt',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Our_day_in_the_light_of_prophecy_and_providence_%281921%29_%2814754519586%29.jpg/960px-Our_day_in_the_light_of_prophecy_and_providence_%281921%29_%2814754519586%29.jpg'],
     relatedIds: ['prophecy-cyrus-named-isaiah-45', 'prophecy-daniel-70-weeks'],
     parentId: 'biblical-events',
     name: 'Decree of Cyrus & Return',
@@ -8136,6 +8440,7 @@ const chunk_1: any[] = [  {
     bibleVerses: ['Now in the first year of Cyrus king of Persia, that Yahweh’s word by Jeremiah’s mouth might be accomplished, Yahweh stirred up the spirit of Cyrus king of Persia, so that he made a proclamation throughout all his kingdom, and put it also in writing, saying, “Thus says Cyrus king of Persia, ‘Yahweh, the God of heaven, has given me all the kingdoms of the earth; and he has commanded me to build him a house in Jerusalem, which is in Judah. Whoever there is among you of all his people, may his God be with him, and let him go up to Jerusalem, which is in Judah, and build the house of Yahweh, the God of Israel (he is God), which is in Jerusalem. — Ezra 1:1-3 (https://www.biblegateway.com/passage/?search=Ezra+1%3A1-3)', 'The elders of the Jews built and prospered, through the prophesying of Haggai the prophet and Zechariah the son of Iddo. They built and finished it, according to the commandment of the God of Israel, and according to the decree of Cyrus, Darius, and Artaxerxes king of Persia. This house was finished on the third day of the month Adar, which was in the sixth year of the reign of Darius the king. — Ezra 6:14-15 (https://www.biblegateway.com/passage/?search=Ezra+6%3A14-15)']
   },  {
     id: 'evt-christ-birth',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Adoration_of_the_sheperds_-_Matthias_Stomer.jpg/960px-Adoration_of_the_sheperds_-_Matthias_Stomer.jpg'],
     relatedIds: ['prophecy-bethlehem-micah-5', 'star-of-bethlehem'],
     parentId: 'biblical-events',
     name: 'Birth of Jesus Christ',
@@ -8146,6 +8451,7 @@ const chunk_1: any[] = [  {
     bibleVerses: ['Joseph also went up from Galilee, out of the city of Nazareth, into Judea, to David’s city, which is called Bethlehem, because he was of the house and family of David; to enroll himself with Mary, who was pledged to be married to him as wife, being pregnant. While they were there, the day had come for her to give birth. She gave birth to her firstborn son. She wrapped him in bands of cloth, and laid him in a feeding trough, because there was no room for them in the inn. — Luke 2:4-7 (https://www.biblegateway.com/passage/?search=Luke+2%3A4-7)', 'Now the birth of Jesus Christ was like this: After his mother, Mary, was engaged to Joseph, before they came together, she was found pregnant by the Holy Spirit. Joseph, her husband, being a righteous man, and not willing to make her a public example, intended to put her away secretly. But when he thought about these things, behold, an angel of the Lord appeared to him in a dream, saying, “Joseph, son of David, don’t be afraid to take to yourself Mary, your wife, for that which is conceived in her is of the Holy Spirit. She shall give birth to a son. You shall call his name Jesus, for it is he who shall save his people from their sins.” Now all this has happened, that it might be fulfilled which was spoken by the Lord through the prophet, saying, “Behold, the virgin shall be with child, and shall give birth to a son. They shall call his name Immanuel”; which is, being interpreted, “God with us.” Joseph arose from his sleep, and did as the angel of the Lord commanded him, and took his wife to himself; and didn’t know her sexually until she had given birth to her firstborn son. He named him Jesus. — Matthew 1:18-25 (https://www.biblegateway.com/passage/?search=Matthew+1%3A18-25)']
   },  {
     id: 'evt-crucifixion',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Cristo_crucificado.jpg/960px-Cristo_crucificado.jpg'],
     relatedIds: ['jesus', 'prophecy-daniel-70-weeks', 'prophecy-isaiah-53-suffering-servant', 'prophecy-zechariah-9-triumphal-entry', 'prophecy-thirty-pieces-silver', 'heaven-abrahams-bosom'],
     parentId: 'biblical-events',
     name: 'Crucifixion & Resurrection',
@@ -8156,6 +8462,7 @@ const chunk_1: any[] = [  {
     bibleVerses: ['When they came to the place that is called The Skull, they crucified him there with the criminals, one on the right and the other on the left. — Luke 23:33 (https://www.biblegateway.com/passage/?search=Luke+23%3A33)', 'When they had crucified him, they divided his clothing among them, casting lots, — Matthew 27:35 (https://www.biblegateway.com/passage/?search=Matthew+27%3A35)', 'The angel answered the women, “Don’t be afraid, for I know that you seek Jesus, who has been crucified. He is not here, for he has risen, just like he said. Come, see the place where the Lord was lying. — Matthew 28:5-6 (https://www.biblegateway.com/passage/?search=Matthew+28%3A5-6)']
   },  {
     id: 'creation-evt',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Tissot_The_Creation.jpg/960px-Tissot_The_Creation.jpg'],
     relatedIds: ['thoth', 'adam-eve', 'codex-enuma-elish', 'dragons-br', 'feathered-serpent', 'sefer-yetzirah', 'kojiki', 'enuma-elish'],
     parentId: 'biblical-events',
     name: 'The Creation',
@@ -8165,6 +8472,7 @@ const chunk_1: any[] = [  {
     sources: ['Bible', 'Ancient Historical Chronicles']
   },  {
     id: 'great-flood',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Le_d%C3%A9luge_-_mus%C3%A9e_de_beaux_arts_de_Nantes_20091017.jpg/960px-Le_d%C3%A9luge_-_mus%C3%A9e_de_beaux_arts_de_Nantes_20091017.jpg'],
     parentId: 'biblical-events',
     name: 'The Great Flood',
     description: 'A global deluge sent to wipe out the corruption of the pre-flood world, including the Nephilim. Paralleled across dozens of global cultural mythologies.',
@@ -8178,6 +8486,7 @@ const chunk_1: any[] = [  {
     sources: ['Bible', 'Ancient Historical Chronicles']
   },  {
     id: 'babel-evt',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Vienna%29_-_Google_Art_Project_-_edited.jpg/960px-Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Vienna%29_-_Google_Art_Project_-_edited.jpg'],
     parentId: 'biblical-events',
     name: 'Tower of Babel',
     description: 'A post-flood project led by Nimrod in the plains of Shinar to build a tower reaching into heaven, resulting in the confusion of tongues.',
@@ -8187,6 +8496,7 @@ const chunk_1: any[] = [  {
     sources: ['Bible', 'Ancient Historical Chronicles']
   },  {
     id: 'biblical-discoveries',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Tissot_Moses_and_Joshua_in_the_Tabernacle.jpg/1280px-Tissot_Moses_and_Joshua_in_the_Tabernacle.jpg'],
     parentId: 'christianity',
     name: 'Biblical Discoveries',
     description: 'Archaeological discoveries and artifacts reinforcing or validating biblical historical accounts.',
@@ -8372,6 +8682,7 @@ const chunk_1: any[] = [  {
     bibleVerses: ['And when Jesus was come into Peter\'s house, he saw his wife\'s mother laid, and sick of a fever. — Matthew 8:14 (https://www.biblegateway.com/passage/?search=Matthew+8%3A14)', 'And leaving Nazareth, he came and dwelt in Capernaum, which is upon the sea coast, in the borders of Zabulon and Nephthalim: — Matthew 4:13 (https://www.biblegateway.com/passage/?search=Matthew+4%3A13)']
   },  {
     id: 'ark-covenant',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Tissot_Moses_and_Joshua_in_the_Tabernacle.jpg/960px-Tissot_Moses_and_Joshua_in_the_Tabernacle.jpg'],
     parentId: 'biblical-discoveries',
     name: 'Ark of the Covenant',
     description: 'The sacred chest containing the tablets of the Law, Aaron\'s rod, and manna. Described as possessing immense electrical and spiritual power.',
@@ -8383,6 +8694,7 @@ const chunk_1: any[] = [  {
     sources: ['Archaeological Excavation Reports', 'Historical Geography Database']
   },  {
     id: 'noahs-ark-find',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Edward_Hicks%2C_American_-_Noah%27s_Ark_-_Google_Art_Project.jpg/960px-Edward_Hicks%2C_American_-_Noah%27s_Ark_-_Google_Art_Project.jpg'],
     parentId: 'biblical-discoveries',
     name: 'Noah\'s Ark',
     description: 'The legendary vessel that survived the global deluge. Historically searched for in the Ararat mountain range.',
@@ -8391,6 +8703,7 @@ const chunk_1: any[] = [  {
     sources: ['Archaeological Excavation Reports', 'Historical Geography Database']
   },  {
     id: 'ufo-sightings-br',
+    images: ['https://www.youtube.com/watch?v=rO_M0hLlJ-Q'],
     parentId: 'ufos',
     name: 'U.F.O. Sightings',
     description: 'Unidentified Flying Objects or Aerial Phenomena sightings that defy explanation.',
@@ -8633,6 +8946,7 @@ const chunk_1: any[] = [  {
     sources: ['MUFON (Mutual UFO Network) Database', 'Project Blue Book Archives']
   },  {
     id: 'roswell-incident',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Roswell_Daily_Record._July_8%2C_1947._RAAF_Captures_Flying_Saucer_On_Ranch_in_Roswell_Region._Top_of_front_page.jpg/960px-Roswell_Daily_Record._July_8%2C_1947._RAAF_Captures_Flying_Saucer_On_Ranch_in_Roswell_Region._Top_of_front_page.jpg'],
     parentId: 'ufo-sightings-br',
     name: 'Roswell Crash (1947)',
     description: 'The famous crash of a mysterious object in Roswell, New Mexico, initially reported as a "flying disc" and later retracting to a weather balloon.',
@@ -8640,6 +8954,7 @@ const chunk_1: any[] = [  {
     sources: ['MUFON (Mutual UFO Network) Database', 'Project Blue Book Archives']
   },  {
     id: 'foo-fighters',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Glasto2023.jpg/960px-Glasto2023.jpg'],
     parentId: 'ufo-sightings-br',
     name: 'Foo Fighters (WWII)',
     description: 'Glowing metallic spheres and lights reported by Allied and Axis pilots during World War II, showing intelligent maneuvers and tracking aircraft.',
@@ -8647,6 +8962,7 @@ const chunk_1: any[] = [  {
     sources: ['MUFON (Mutual UFO Network) Database', 'Project Blue Book Archives']
   },  {
     id: 'crop-circles-br',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/960px-CropCircleW.jpg'],
     relatedIds: ['invisible-college', 'mayan-civilization', 'linda-moulton-howe', 'anomaly-Crop-Circles-378', 'anomaly-Crop-Circles-386', 'anomaly-Crop-Circles-394', 'anomaly-Crop-Circles-412', 'anomaly-Crop-Circles-434', 'anomaly-Crop-Circles-450', 'anomaly-Crop-Circles-467', 'anomaly-Crop-Circles-490', 'archaeology-nazca-stone-circles'],
     parentId: 'supernatural-anomalies',
     name: 'Crop Circles',
@@ -8654,6 +8970,7 @@ const chunk_1: any[] = [  {
     layer: 'Crop Circles'
   },  {
     id: 'crop-circle-formations',
+    images: ['https://circleresearcharchive.com/wp-content/uploads/2025/07/enca199901-great-staughton-photo-ge-150m.jpg'],
     parentId: 'crop-circles-br',
     name: 'Documented Formations',
     description: 'Catalog of documented geometric crop circle formations appearing near prehistoric monuments and fields.',
@@ -11148,6 +11465,7 @@ const chunk_2: any[] = [  {
     sources: ['BLT Research Team Reports']
   },  {
     id: 'julia-set',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Julia_set%2C_plotted_with_Matplotlib.svg/960px-Julia_set%2C_plotted_with_Matplotlib.svg.png'],
     parentId: 'crop-circles-br',
     name: 'Julia Set (Stonehenge)',
     description: 'A massive fractal crop circle that appeared in broad daylight within a 45-minute window near Stonehenge in 1996.',
@@ -11155,18 +11473,21 @@ const chunk_2: any[] = [  {
     sources: ['BLT Research Team Reports']
   },  {
     id: 'bigfoot-br',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Patterson_Gimlin_Bigfoot.jpg/960px-Patterson_Gimlin_Bigfoot.jpg'],
     parentId: 'supernatural-anomalies',
     name: 'Bigfoot / Sasquatch',
     description: 'Large, hairy, bipedal ape-like hominids reported across forested regions.',
     layer: 'Bigfoot Sightings'
   },  {
     id: 'bigfoot-sightings-br',
+    images: ['https://youtu.be/nb45rXZX6Yw?si=vzv_1eO3eLPB7uyf'],
     parentId: 'bigfoot-br',
     name: 'Sasquatch Encounters',
     description: 'Regional reports and cataloged historical sightings of Bigfoot / Sasquatch across North America.',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database']
   },  {
     id: 'anomaly-Bigfoot-0',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/US_Post_Office%E2%80%94Fredonia_NY_Nov_10.JPG/960px-US_Post_Office%E2%80%94Fredonia_NY_Nov_10.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Fredonia, New York (May 2014)',
     description: 'sasquatch witnessed at 30 feet while metal detecting. Facial features',
@@ -11175,6 +11496,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-1',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/US_Post_Office%E2%80%94Fredonia_NY_Nov_10.JPG/960px-US_Post_Office%E2%80%94Fredonia_NY_Nov_10.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Fredonia, New York (July 2017)',
     description: 'Family of four creatures witnessed on video.',
@@ -11183,6 +11505,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-3',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/US_Post_Office%E2%80%94Fredonia_NY_Nov_10.JPG/960px-US_Post_Office%E2%80%94Fredonia_NY_Nov_10.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Fredonia, New York (July 9 2016)',
     description: 'Two sasquatch witnessed one was recorded on video as it went to all fours and fled.',
@@ -11191,6 +11514,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-4',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/US_Post_Office%E2%80%94Fredonia_NY_Nov_10.JPG/960px-US_Post_Office%E2%80%94Fredonia_NY_Nov_10.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Fredonia, New York (June 2005)',
     description: '3 am motorist witnessed a small sasquatch roughly 5 foot tall cross the highway and go up a hill.',
@@ -11199,6 +11523,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-5',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/US_Post_Office%E2%80%94Fredonia_NY_Nov_10.JPG/960px-US_Post_Office%E2%80%94Fredonia_NY_Nov_10.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Fredonia, New York (August 2007)',
     description: 'Anthropologist ( Kenneth) was followed out of the woods by what they said was a hairy creature',
@@ -11207,6 +11532,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-6',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/US_Post_Office%E2%80%94Fredonia_NY_Nov_10.JPG/960px-US_Post_Office%E2%80%94Fredonia_NY_Nov_10.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Fredonia, New York (1920  Winter)',
     description: 'Abe Fortes follows large bi pedal trackway for over a mile in Cassadaga swamp  .   https://www.bibliotecapleyades.net/gigantes/NewYorklandofgiants.html',
@@ -11215,6 +11541,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-7',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/US_Post_Office%E2%80%94Fredonia_NY_Nov_10.JPG/960px-US_Post_Office%E2%80%94Fredonia_NY_Nov_10.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Fredonia, New York (April 1907)',
     description: 'Marcus Thomason a peddler witnessed a large hairy creature and observed it at close range for few minutes. Near Cassadaga swamp.',
@@ -11223,6 +11550,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-8',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/East_Main_Street%2C_Falconer%2C_New_York_-_20210427.jpg/960px-East_Main_Street%2C_Falconer%2C_New_York_-_20210427.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Falconer, New York (October 2018)',
     description: 'Baby Witnessed in a Tree',
@@ -11231,6 +11559,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-9',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/US_Post_Office%E2%80%94Fredonia_NY_Nov_10.JPG/960px-US_Post_Office%E2%80%94Fredonia_NY_Nov_10.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Fredonia, New York (October 2018)',
     description: '2 sasquatch captured on camera. White round head bottom middle of screen and large black figure screen looking at the camera.',
@@ -11247,6 +11576,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-11',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Chautauqua_County_Courthouse_Old_and_New%2C_Mayville%2C_New_York_-_20210501.jpg/960px-Chautauqua_County_Courthouse_Old_and_New%2C_Mayville%2C_New_York_-_20210501.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Mayville, New York (1965-66)',
     description: 'John Keel      (Strange Creatures from Time & Space ). Explains of a family who witnesses two white fuzzy creatures that usually appear in pairs of 2. Chautauqua  county.',
@@ -11255,6 +11585,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-12',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/CubaNewYork.jpg/960px-CubaNewYork.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Cuba, New York (1960s)',
     description: 'Strange happenings with farm equipment. The tractor was picked up by the hitch and dragged a good distance. The big dogs on the farm coward  by unseen things in the trees.                    (Black Creek Whodat) mid 70s',
@@ -11271,6 +11602,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-14',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Youngstown-Lockport_Road%2C_Ransomville%2C_New_York.jpg/960px-Youngstown-Lockport_Road%2C_Ransomville%2C_New_York.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Ransomville, New York (September 1978)',
     description: 'Two teen hunters find decomposing carcass. Everyone considered it a defunct bigfoot body.  Veteran hunter stated whatever that was',
@@ -11279,6 +11611,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-15',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Canisteo_Town_Hall.jpg/960px-Canisteo_Town_Hall.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Canisteo, New York (1979)',
     description: 'Two farmers witness a creature tear past them up the hill near the creek. Stated it was about 6 foot tall with no neck with a wide body',
@@ -11287,6 +11620,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-16',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Greece%2C_New_York_town_hall.jpg/960px-Greece%2C_New_York_town_hall.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Greece, New York (October 1997)',
     description: 'Four people witness a white 7 foot sasquatch off of Mill rd.',
@@ -11295,6 +11629,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-17',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/PostcardAlfredNYTerraCottaTileCoFactory1910.jpg/960px-PostcardAlfredNYTerraCottaTileCoFactory1910.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Alfred, New York (1999 Summer)',
     description: 'Two teenage girls witness a large white sasquatch about 8 miles from the village of belmont',
@@ -11303,6 +11638,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-18',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Portville_Free_Library_Apr_10.JPG/960px-Portville_Free_Library_Apr_10.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Portville, New York (1999 Labor day)',
     description: 'Family has felt spied on in their home. Later that week the made plaster casts of a 19 inch foot print. The family wants no publicity.',
@@ -11311,6 +11647,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-19',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Main_Street%2C_Akron%2C_New_York_-_20211027.jpg/960px-Main_Street%2C_Akron%2C_New_York_-_20211027.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Akron, New York (April 1997)',
     description: 'Motorist near the Alabama swamps reports driving and witnessing a bigfoot -like creature cross the road in the early morning hours. Tall dark and shaggy was the description.',
@@ -11319,6 +11656,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-20',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/United_States_Post_Office_Little_Valley_NY_Aug_10.JPG/960px-United_States_Post_Office_Little_Valley_NY_Aug_10.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Little Valley, New York (October 2000)',
     description: 'Two hunter s see a 6 foot bigfoot like creature. ^ foot tall stocky. Closer to route 242',
@@ -11335,6 +11673,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-22',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Downtown_Middleport%2C_NY.jpg/960px-Downtown_Middleport%2C_NY.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Middleport, New York (September 21 2002)',
     description: 'Twilight',
@@ -11343,6 +11682,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-23',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/NY_19_entering_Clarkson_Corners.jpg/960px-NY_19_entering_Clarkson_Corners.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Clarkson, New York (Januray 2003)',
     description: 'Motorist sees a large bigfoot near the garbage dump. It crossed the road near an upright old refrigerator.  It only came up to its belly implying a tall subject.',
@@ -11351,6 +11691,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-24',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/ClarenceHollow.jpg/960px-ClarenceHollow.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Clarence, New York (May 312006)',
     description: 'Hans mobius famed automobile collector took photos of an upright beast on the farm.',
@@ -11359,6 +11700,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-25',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Medina_2008-01-01_002.JPG/960px-Medina_2008-01-01_002.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Medina, New York (Christmas 2008)',
     description: '3 motorists witness a large shaggy upright creature cross the road west of Medina.',
@@ -11367,6 +11709,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-26',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/USPO_Susquahanna_PA_18847.jpg/960px-USPO_Susquahanna_PA_18847.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Susquehanna, Pennsylvania (2008 until present)',
     description: 'Long time resident is having multiple interaction and problems on the property with sasquatch creatures.',
@@ -11383,6 +11726,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-28',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/27422334290_700d772338_oBelmont.jpg/960px-27422334290_700d772338_oBelmont.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Belmont, New York (January 1999)',
     description: 'Teen recalls witnessing a hairy creature run under a street light',
@@ -11391,6 +11735,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-29',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/27422334290_700d772338_oBelmont.jpg/960px-27422334290_700d772338_oBelmont.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Belmont, New York (February 1998)',
     description: 'Witness has 2 encounters with a hairy creature near Genesee river.',
@@ -11399,6 +11744,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-30',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Village_of_Endwell_NY_Locator_Map.png/960px-Village_of_Endwell_NY_Locator_Map.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Endwell, New York (1986)',
     description: 'Witness spots legs of a bi pedal creature at a distance of 100 feet near their house.',
@@ -11415,6 +11761,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-32',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/United_States_Post_Office_Little_Valley_NY_Aug_10.JPG/960px-United_States_Post_Office_Little_Valley_NY_Aug_10.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Little Valley, New York (October 15 2000)',
     description: 'State land.  Daylight sighting by a turkey hunter.',
@@ -11431,6 +11778,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-34',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/United_States_Post_Office_Little_Valley_NY_Aug_10.JPG/960px-United_States_Post_Office_Little_Valley_NY_Aug_10.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Little Valley, New York (September 2000)',
     description: 'Witness states they heard howl and knocks. Witness makes emphasis of "being college educated" and not having answers.',
@@ -11439,6 +11787,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-35',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/North_East%2C_Pennsylvania.jpg/960px-North_East%2C_Pennsylvania.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'North East, Pennsylvania (September 1975)',
     description: 'Occasional incidents from the 1970 to current. Hunters have many reports. Chautauqua  county.',
@@ -11455,6 +11804,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-37',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Park_Center_for_Business_and_Sustainable_Enterprise%2C_Ithaca_College.jpg/960px-Park_Center_for_Business_and_Sustainable_Enterprise%2C_Ithaca_College.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'South Hill, New York (Summer 1997)',
     description: 'Howls and screams heard from residence.',
@@ -11471,6 +11821,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-39',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/US_Post_Office-Oxford_NY_Dec_09.jpg/960px-US_Post_Office-Oxford_NY_Dec_09.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Oxford, New York (June 2002)',
     description: 'Multiple vocalization heard by resident near bowman lake.',
@@ -11479,6 +11830,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-40',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Downtown_Middleport%2C_NY.jpg/960px-Downtown_Middleport%2C_NY.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Middleport, New York (July 2002)',
     description: 'Night time sighiting around 10pm by a couple that was sitting on the porch.',
@@ -11487,6 +11839,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-41',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/NY_374_Dannemora_13_miles.jpg/960px-NY_374_Dannemora_13_miles.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Dannemora, New York (February 2005)',
     description: 'Motorists witness night time sighting.',
@@ -11495,6 +11848,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-42',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/NY_374_Dannemora_13_miles.jpg/960px-NY_374_Dannemora_13_miles.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Dannemora, New York (July 1998)',
     description: 'Daytime sighting by motorists.',
@@ -11511,6 +11865,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-44',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Homer%2C_NY%2C_Town_Hall_IMG_1500.JPG/960px-Homer%2C_NY%2C_Town_Hall_IMG_1500.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Homer, New York (Winter 1969)',
     description: 'Experimental forest Suny Cortland. A woman reports being followed by a large dark creature .',
@@ -11543,6 +11898,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-48',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Pawling%2C_NY%2C_welcome_sign.jpg/960px-Pawling%2C_NY%2C_welcome_sign.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Pawling, New York (March 2018)',
     description: 'Hiker experiences howling vocalizations.',
@@ -11551,6 +11907,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-49',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Downtown_Dover_Plains%2C_NY.jpg/960px-Downtown_Dover_Plains%2C_NY.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Dover Plains, New York (November 9)',
     description: '2013',
@@ -11559,6 +11916,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-50',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Beekman_Arms_Oldest_Inn_Rhinebeck_2007_02.jpg/960px-Beekman_Arms_Oldest_Inn_Rhinebeck_2007_02.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Rhinebeck, New York (June 2009)',
     description: 'Young adult has encounter while driving near  pilgrims progress rd.',
@@ -11567,6 +11925,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-51',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Pawling%2C_NY%2C_welcome_sign.jpg/960px-Pawling%2C_NY%2C_welcome_sign.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Pawling, New York (July 2007)',
     description: 'Family of campers witness a possible sasquatch pass by their tents near nuclear lake.',
@@ -11575,6 +11934,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-52',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Pine_Plains%2C_NY%2C_from_Stissing_Mountain_fire_tower.jpg/960px-Pine_Plains%2C_NY%2C_from_Stissing_Mountain_fire_tower.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Pine Plains, New York (May 1985)',
     description: 'Motorists see a dark shadow manlike creature on more than one occasion.',
@@ -11583,6 +11943,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-53',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Main_Street%2C_Akron%2C_New_York_-_20211027.jpg/960px-Main_Street%2C_Akron%2C_New_York_-_20211027.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Akron, New York (Summer 1998)',
     description: 'Witness sees large glowing yellow eyes while four wheeling. Many talk about a menacing presence.',
@@ -11591,6 +11952,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-54',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Lake_Placid_from_McKenzie_Mountain.jpg/960px-Lake_Placid_from_McKenzie_Mountain.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Lake Placid, New York (August 6 2010)',
     description: 'Keene near Cascade mountain. Camper witnessed a 7 to 8 foot tall creature for about 1 minute',
@@ -11599,6 +11961,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-55',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Lake_Placid_from_McKenzie_Mountain.jpg/960px-Lake_Placid_from_McKenzie_Mountain.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Lake Placid, New York (June 10 2006)',
     description: 'Brothers driving witness a large creature cross the road early morning 730 am',
@@ -11607,6 +11970,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-56',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Hand_House%2C_Elizabethtown%2C_New_York.jpg/960px-Hand_House%2C_Elizabethtown%2C_New_York.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Elizabethtown, New York (October 2002 - 2003)',
     description: 'Multiple encounters by cabin owners. Stomping',
@@ -11615,6 +11979,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-57',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Hand_House%2C_Elizabethtown%2C_New_York.jpg/960px-Hand_House%2C_Elizabethtown%2C_New_York.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Elizabethtown, New York (October 2002)',
     description: 'Vocalizations heard in this area on rt 9n',
@@ -11623,6 +11988,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-58',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Sherman_Free_Library_Nov_10.jpg/960px-Sherman_Free_Library_Nov_10.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Port Henry, New York (October 5 2002)',
     description: 'Motorists on 54 heading from rt9n toward Mineville witness a creature in the woods.',
@@ -11631,6 +11997,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-59',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Community_Building%2C_Ticonderoga%2C_NY.jpg/960px-Community_Building%2C_Ticonderoga%2C_NY.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Ticonderoga, New York (September 28  1998)',
     description: 'Hiker a mile in finds footprints and hears possible vocalizations.',
@@ -11639,6 +12006,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-60',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Racquette_Pond.jpg/960px-Racquette_Pond.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Tupper Lake, New York (August 15 1996)',
     description: 'Fishermen in a canoe witness a tall dark hairy creature on the north west bank of pine pond',
@@ -11647,6 +12015,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-61',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Sherman_Free_Library_Nov_10.jpg/960px-Sherman_Free_Library_Nov_10.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Port Henry, New York (1989)',
     description: '1993',
@@ -11655,6 +12024,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-62',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Chamber_of_Commerce_Building%2C_Main_Street%2C_Gloversville-00.jpg/960px-Chamber_of_Commerce_Building%2C_Main_Street%2C_Gloversville-00.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Gloversville, New York (Summer 2004)',
     description: '2 Motorists witness a large dark creature cross the road in the vehicle headlights. It crossed the guardrail with ease.',
@@ -11663,6 +12033,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-63',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/2020_Johnson_Hall%2C_Johnstown.jpg/960px-2020_Johnson_Hall%2C_Johnstown.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Johnstown, New York (August 1998)',
     description: '25th-30th.   Two see a 7 to 8 ft tall bi-ped walking on a dead end road.',
@@ -11671,6 +12042,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-64',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Chamber_of_Commerce_Building%2C_Main_Street%2C_Gloversville-00.jpg/960px-Chamber_of_Commerce_Building%2C_Main_Street%2C_Gloversville-00.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Gloversville, New York (January 15 1966)',
     description: '2 rabbit hunters come across large 16 inch tracks in the snow that were spaced about 12 feet apart as if it was running.',
@@ -11679,6 +12051,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-65',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Routes_8_and_10_Arietta_edited.jpg/960px-Routes_8_and_10_Arietta_edited.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Lake Pleasant, New York (July 11)',
     description: '2014',
@@ -11687,6 +12060,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-66',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Main_Street%2C_Northville.jpg/960px-Main_Street%2C_Northville.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Northville, New York (September 24 2010)',
     description: '2 men sitting on a porch encounter something in the late evening near the friends home.',
@@ -11695,6 +12069,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-67',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Routes_8_and_10_Arietta_edited.jpg/960px-Routes_8_and_10_Arietta_edited.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Lake Pleasant, New York (May 1999)',
     description: 'Camper hears crazy screams from the cabin. They have been camping in the region for 25 years and never heard anything like it.',
@@ -11703,6 +12078,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-68',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Routes_8_and_10_Arietta_edited.jpg/960px-Routes_8_and_10_Arietta_edited.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Lake Pleasant, New York (July 1969)',
     description: 'Couple sees something looking in the window of their home',
@@ -11719,6 +12095,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-70',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Oneida_County_New_York_incorporated_and_unincorporated_areas_Boonville_%28town%29_highlighted.svg/960px-Oneida_County_New_York_incorporated_and_unincorporated_areas_Boonville_%28town%29_highlighted.svg.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Boonville, New York (July 11 2000)',
     description: 'Group of hikers see a dark hairy creature while hiking near  moose river camp trail.',
@@ -11727,6 +12104,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-71',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Chittenango%2C_New_York_-_panoramio.jpg/960px-Chittenango%2C_New_York_-_panoramio.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Chittenango, New York (Summer 1970)',
     description: 'Witness makes loud bang prior to witnessing a creature',
@@ -11735,6 +12113,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-72',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Greece%2C_New_York_town_hall.jpg/960px-Greece%2C_New_York_town_hall.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Greece, New York (June 20 2004)',
     description: '3 men have a late nite encounter with a bipedal creature',
@@ -11743,6 +12122,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-74',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/US_Post_Office_Gasport_NY_Sep_12.jpg/960px-US_Post_Office_Gasport_NY_Sep_12.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Gasport, New York (September 2002)',
     description: 'Hiker has encounter outside Middleport',
@@ -11759,6 +12139,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-76',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Onondaga_County_New_York_incorporated_and_unincorporated_areas_Nedrow_highlighted.svg/960px-Onondaga_County_New_York_incorporated_and_unincorporated_areas_Nedrow_highlighted.svg.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Nedrow, New York (August 1960)',
     description: 'Odd happenings take place near a golf course over a period of time.',
@@ -11767,6 +12148,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-77',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/South_Main_Street%2C_Naples%2C_New_York_-_20210610.jpg/960px-South_Main_Street%2C_Naples%2C_New_York_-_20210610.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Naples, New York (Point 84)',
     description: '',
@@ -11775,6 +12157,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-78',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/South_Main_Street%2C_Naples%2C_New_York_-_20210610.jpg/960px-South_Main_Street%2C_Naples%2C_New_York_-_20210610.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Naples, New York (October 2020)',
     description: '2 hunters hear clear woods knocks just south of Middlesex NY.',
@@ -11783,6 +12166,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-79',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/South_Main_Street%2C_Naples%2C_New_York_-_20210610.jpg/960px-South_Main_Street%2C_Naples%2C_New_York_-_20210610.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Naples, New York (November 1979)',
     description: 'Hunter has morning sighting of a creature while hunting deer.',
@@ -11791,6 +12175,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-80',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Nairiman.jpg/960px-Nairiman.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Harriman, New York (September 14 1994)',
     description: '2 friends driving witness a sasquatch near the Appalachian trail cross.',
@@ -11799,6 +12184,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-81',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Greenwood_Lake_East_Arm_%281911941868%29.jpg/960px-Greenwood_Lake_East_Arm_%281911941868%29.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Greenwood Lake, New York (Point 88)',
     description: '',
@@ -11807,6 +12193,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-82',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Greenwood_Lake_East_Arm_%281911941868%29.jpg/960px-Greenwood_Lake_East_Arm_%281911941868%29.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Greenwood Lake, New York (July 1973)',
     description: 'Screams being exchanged while camping on the Appalachian trail.',
@@ -11815,6 +12202,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-83',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Downtown_Albion%2C_NY.jpg/960px-Downtown_Albion%2C_NY.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Albion, New York (January 2003)',
     description: 'Husband and wife see creature near the garbage dump',
@@ -11823,6 +12211,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-84',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Downtown_Albion%2C_NY.jpg/960px-Downtown_Albion%2C_NY.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Albion, New York (August 2002)',
     description: 'Vocalization  heard in town',
@@ -11831,6 +12220,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-85',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Medina_2008-01-01_002.JPG/960px-Medina_2008-01-01_002.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Medina, New York (April 15 1997)',
     description: 'Motorist has sighting near media early morning',
@@ -11839,6 +12229,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-86',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/New_York_in_United_States_%28US48%29.svg/960px-New_York_in_United_States_%28US48%29.svg.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Holley, New York (Summer 1995)',
     description: 'Coon hunters hear multiple vocalizations',
@@ -11847,6 +12238,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-87',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Oswego_County_New_York_incorporated_and_unincorporated_areas_Pulaski_highlighted.svg/960px-Oswego_County_New_York_incorporated_and_unincorporated_areas_Pulaski_highlighted.svg.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Pulaski, New York (September 1996)',
     description: 'Night sighting by motorist',
@@ -11855,6 +12247,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-88',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Williamstown%2C_MA_-_View_along_Route_2.JPG/960px-Williamstown%2C_MA_-_View_along_Route_2.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Williamstown, Massachusetts (December 1985)',
     description: 'Large figure prowls around a cabin at night',
@@ -11887,6 +12280,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-92',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Pawling%2C_NY%2C_welcome_sign.jpg/960px-Pawling%2C_NY%2C_welcome_sign.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Pawling, New York (May 2020)',
     description: 'Loud knocks heard from Croton Swamp south of Pawling',
@@ -11895,6 +12289,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-93',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Aerial_view_of_West_Point_and_Hudson_River_02_-_white_balanced_%289614194870%29.jpg/960px-Aerial_view_of_West_Point_and_Hudson_River_02_-_white_balanced_%289614194870%29.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'West Point, New York (September 2004)',
     description: 'Red eyeshine witnessed by worker.',
@@ -11903,6 +12298,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-94',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Lake_Carmel%2C_New_York.jpg/960px-Lake_Carmel%2C_New_York.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Lake Carmel, New York (August 1980)',
     description: '2 report seeing a hairy crouching animal',
@@ -11911,6 +12307,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-95',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Williamstown%2C_MA_-_View_along_Route_2.JPG/960px-Williamstown%2C_MA_-_View_along_Route_2.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Williamstown, Massachusetts (February 2004)',
     description: 'Vocalizations heard and foot tracks located the next day and photographed.',
@@ -11919,6 +12316,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-96',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/2014-08-28_13_31_47_View_east_along_West_Sand_Lake_Road_%28New_York_State_Route_43%29_in_the_Averill_Park_section_of_Sand_Lake%2C_New_York.JPG/960px-2014-08-28_13_31_47_View_east_along_West_Sand_Lake_Road_%28New_York_State_Route_43%29_in_the_Averill_Park_section_of_Sand_Lake%2C_New_York.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Averill Park, New York (January 1990)',
     description: 'Track find about 1.5 miles behind homeowners residence.',
@@ -11927,6 +12325,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-97',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Rensselaer_County_New_York_incorporated_and_unincorporated_areas_Poestenkill_highlighted.svg/960px-Rensselaer_County_New_York_incorporated_and_unincorporated_areas_Poestenkill_highlighted.svg.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Poestenkill, New York (July 1988)',
     description: 'Night road sighting by wife and husband.',
@@ -11935,6 +12334,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-98',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Nairiman.jpg/960px-Nairiman.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Harriman, New York (August 10 2010)',
     description: 'Fishermen docking the boat around 9:20 pm hear a large boulder thrown into the water. Manlike creature with red eyes seen as they flashed lights on it.',
@@ -11951,6 +12351,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-100',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Rockland_County_New_York_incorporated_and_unincorporated_areas_Thiells_highlighted.svg/960px-Rockland_County_New_York_incorporated_and_unincorporated_areas_Thiells_highlighted.svg.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Thiells, New York (Winter 1990)',
     description: 'Tracks located in the snow and many other sightings near bear mountain.',
@@ -11959,6 +12360,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-101',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Montour_Falls_from_Mill_Street.jpg/960px-Montour_Falls_from_Mill_Street.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Montour Falls, New York (September 13 1999)',
     description: 'Motorist sees hairy black creature cross road . Oncoming traffic was firefighters on call who also witnessed the creature.',
@@ -11967,6 +12369,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-102',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/New_York_-_Buffalo_through_Dexter_-_NARA_-_68145065_%28cropped%29.jpg/960px-New_York_-_Buffalo_through_Dexter_-_NARA_-_68145065_%28cropped%29.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Canton, New York (March 3 2009)',
     description: 'Elder gentleman walking his dog in the preserve hears wood knocking and whoops',
@@ -11975,6 +12378,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-103',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/New_York_-_Buffalo_through_Dexter_-_NARA_-_68145065_%28cropped%29.jpg/960px-New_York_-_Buffalo_through_Dexter_-_NARA_-_68145065_%28cropped%29.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Canton, New York (Fall 1976 - 2009)',
     description: 'Sightings and odd happenings  around a family house for years.',
@@ -11991,6 +12395,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-105',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/BathNYovervlook.jpg/960px-BathNYovervlook.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Bath, New York (November 2012)',
     description: 'Resident observe a sasquatch near homes around 2 am',
@@ -11999,6 +12404,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-106',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Oneida_County_New_York_incorporated_and_unincorporated_areas_Sylvan_Beach_highlighted.svg/960px-Oneida_County_New_York_incorporated_and_unincorporated_areas_Sylvan_Beach_highlighted.svg.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Sylvan Beach, New York (November 9 2003)',
     description: 'Campers describe an animal making odd sounds over a 3 or 4 hour period',
@@ -12007,6 +12413,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-107',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/BathNYovervlook.jpg/960px-BathNYovervlook.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Bath, New York (November 2002)',
     description: 'Sighting by hunters near Bath NY',
@@ -12015,6 +12422,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-108',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/NY_417_east_entering_Addison_town.jpg/960px-NY_417_east_entering_Addison_town.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Addison, New York (August 1995 with follow up)',
     description: 'Bigfoot seen stomping around near town by a pond pulling vegetation. Footprints  and hair were found. The DEC was called and eventually stated it was one of the most odd things they had investigated in the region.',
@@ -12031,6 +12439,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-110',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Canisteo_Town_Hall.jpg/960px-Canisteo_Town_Hall.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Canisteo, New York (April 21 1980)',
     description: 'Farmers building a fence witness a sasquatch.',
@@ -12047,6 +12456,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-112',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Dryden_Historic_District_Jan_10.jpg/960px-Dryden_Historic_District_Jan_10.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Dryden, New York (January 2001)',
     description: '2 Hunters experience vocalizations',
@@ -12055,6 +12465,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-113',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Kingston%2C_NY_-_view_of_the_Stockade.jpg/960px-Kingston%2C_NY_-_view_of_the_Stockade.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Kingston, New York (June 2018)',
     description: 'Cattle farm has sightings',
@@ -12063,6 +12474,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-114',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Plattekill%2C_NY%2C_town_hall.jpg/960px-Plattekill%2C_NY%2C_town_hall.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Plattekill, New York (May 23 1997)',
     description: 'Video footage shot at dusk shows a baby bigfoot in the trees.',
@@ -12071,6 +12483,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-115',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Downtown_Ellenville%2C_NY.JPG/960px-Downtown_Ellenville%2C_NY.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Ellenville, New York (December 1985)',
     description: 'Large bigfoot creature seen while hiking',
@@ -12079,6 +12492,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-116',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Lake_Shenorock.jpg/960px-Lake_Shenorock.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Shenorock, New York (September 2010)',
     description: 'Fishermen and law enforcement officer report 3 class A sightings in the town of Somers within a year.',
@@ -12087,6 +12501,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-117',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Wayne_County_New_York_incorporated_and_unincorporated_areas_Wolcott_highlighted.svg/960px-Wayne_County_New_York_incorporated_and_unincorporated_areas_Wolcott_highlighted.svg.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Wolcott, New York (September 2003)',
     description: 'Farmer observes white hair covered creature during a family gathering on a farm',
@@ -12095,6 +12510,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-118',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Main_Street_Historic_District_Whitehall_NY_Sep_09.jpg/960px-Main_Street_Historic_District_Whitehall_NY_Sep_09.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Whitehall, New York (June 12 2019)',
     description: 'Afternoon sighting by dog walker',
@@ -12103,6 +12519,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-119',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Warren_County_Municipal_Center.JPG/960px-Warren_County_Municipal_Center.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Queensbury, New York (June 2015)',
     description: 'Couple has sighting while boating',
@@ -12111,6 +12528,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-120',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Main_Street%2C_Manchester_Center%2C_VT.jpg/960px-Main_Street%2C_Manchester_Center%2C_VT.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Manchester Center, Vermont (November 2004)',
     description: 'Wildlife surveyor hears distinct knocking on 2 days while working',
@@ -12119,6 +12537,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-121',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Warren_County_Municipal_Center.JPG/960px-Warren_County_Municipal_Center.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Queensbury, New York (July 9 2000)',
     description: 'Howls heard by couple taking photos near creek on Buck mountain.',
@@ -12127,6 +12546,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-122',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Main_Street_Historic_District_Whitehall_NY_Sep_09.jpg/960px-Main_Street_Historic_District_Whitehall_NY_Sep_09.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Whitehall, New York (November 1999)',
     description: 'Election day',
@@ -12135,6 +12555,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-123',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Main_Street_Historic_District_Whitehall_NY_Sep_09.jpg/960px-Main_Street_Historic_District_Whitehall_NY_Sep_09.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Whitehall, New York (Januray 1981)',
     description: 'Man has clear sighting of primate type creature on a clear winter night',
@@ -12143,6 +12564,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-124',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Main_Street_Historic_District_Whitehall_NY_Sep_09.jpg/960px-Main_Street_Historic_District_Whitehall_NY_Sep_09.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Whitehall, New York (August 7 2018)',
     description: 'Investigators hear about a creature that stepped over barells and crosses a guardrail with ease.',
@@ -12151,6 +12573,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-125',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Main_Street_Historic_District_Whitehall_NY_Sep_09.jpg/960px-Main_Street_Historic_District_Whitehall_NY_Sep_09.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Whitehall, New York (1976)',
     description: 'Abair rd incident.',
@@ -12159,6 +12582,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-126',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Hadley_NY_Town_Hall.jpg/960px-Hadley_NY_Town_Hall.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Hadley, New York (July 2009)',
     description: 'Vocalizations heard by multiple campers',
@@ -12167,6 +12591,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-127',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Main_Street_Historic_District_Whitehall_NY_Sep_09.jpg/960px-Main_Street_Historic_District_Whitehall_NY_Sep_09.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Whitehall, New York (August 2007)',
     description: 'Hikers describe rocks being thrown at her and a hiking companion.',
@@ -12175,6 +12600,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-128',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Warrensburg%2C_New_York.png/960px-Warrensburg%2C_New_York.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Warrensburg, New York (Summer 1981)',
     description: 'Possible stalking of a few hikers.',
@@ -12183,6 +12609,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-129',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Warrensburg%2C_New_York.png/960px-Warrensburg%2C_New_York.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Warrensburg, New York (Summer 2002)',
     description: 'Knocking sounds heard by resident.',
@@ -12191,6 +12618,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-130',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Community_Building%2C_Ticonderoga%2C_NY.jpg/960px-Community_Building%2C_Ticonderoga%2C_NY.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Ticonderoga, New York (August 2001)',
     description: 'Campers describe being approached by some type of creature while camping.',
@@ -12199,6 +12627,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-131',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Main_Street_Historic_District_Whitehall_NY_Sep_09.jpg/960px-Main_Street_Historic_District_Whitehall_NY_Sep_09.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Whitehall, New York (May 2001)',
     description: 'Possible sighting by "over night" campers. 3 campers in tent',
@@ -12207,6 +12636,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-132',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Community_Building%2C_Ticonderoga%2C_NY.jpg/960px-Community_Building%2C_Ticonderoga%2C_NY.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Ticonderoga, New York (July 29 1998)',
     description: 'Investigator finds 8 inch branches snapped after hearing motorist sighting.',
@@ -12215,6 +12645,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-133',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Main_Street_Historic_District_Whitehall_NY_Sep_09.jpg/960px-Main_Street_Historic_District_Whitehall_NY_Sep_09.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Whitehall, New York (Summer 1992)',
     description: 'Family reports strange sounds near their cabin over a 2 week period',
@@ -12223,6 +12654,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-134',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Warrensburg%2C_New_York.png/960px-Warrensburg%2C_New_York.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Warrensburg, New York (October 1992)',
     description: 'Standoff with motorist as hairy creature goes across the road',
@@ -12231,6 +12663,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-135',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Main_Street_Historic_District_Whitehall_NY_Sep_09.jpg/960px-Main_Street_Historic_District_Whitehall_NY_Sep_09.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Whitehall, New York (May 1990)',
     description: 'Boaters witness creature near the shoreline',
@@ -12239,6 +12672,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-136',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/USPO_Susquahanna_PA_18847.jpg/960px-USPO_Susquahanna_PA_18847.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Susquehanna, Pennsylvania (August 2007)',
     description: 'Home owner has odd happenings around the house near the River. Garden was raided. Footprints seen and bad smells.',
@@ -12247,6 +12681,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-137',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Perry_Town_Hall_Perry_Downtown_Historic_District_Nov_10.jpg/960px-Perry_Town_Hall_Perry_Downtown_Historic_District_Nov_10.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Perry, New York (Summer 1838)',
     description: 'A boy was scared by a man like creature near Silver Lake region.',
@@ -12263,6 +12698,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-139',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/US_Post_Office%E2%80%94Newark_%2814513%29.jpg/960px-US_Post_Office%E2%80%94Newark_%2814513%29.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Newark, New York (Summer 1869)',
     description: 'Over 100 residents make reports of seeing a wild man. 200 men set out to capture the creature to no avail.',
@@ -12271,6 +12707,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-140',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Saranac_Lake_-_Lake_Flower.jpg/960px-Saranac_Lake_-_Lake_Flower.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Saranac Lake, New York (Summer 1909)',
     description: 'Sightings near rainbow lake scare many residents.',
@@ -12287,6 +12724,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-142',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Malone_NY.JPG/960px-Malone_NY.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Malone, New York (September 1921)',
     description: 'Odd wild man sightings broke out over the region. Many parents would not allow the children to walk home from school due to fear.',
@@ -12295,6 +12733,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-143',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Malone_NY.JPG/960px-Malone_NY.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Malone, New York (October 1921)',
     description: 'Many wild man sightings broke out. The Sherriff attempted to capture the creatures with his posse.',
@@ -12311,6 +12750,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-145',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Racquette_Pond.jpg/960px-Racquette_Pond.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Tupper Lake, New York (February 1932)',
     description: 'Indian lake residents and fur trappers spot a huge hairy man beast.',
@@ -12319,6 +12759,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-146',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Welcome_to_Massapequa_Park.jpg/960px-Welcome_to_Massapequa_Park.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Massapequa Park, New York (September 1934)',
     description: 'Albert Abernathy residence destroyed inside by a gorilla man',
@@ -12327,6 +12768,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-147',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Potsdam_New_York.jpg/960px-Potsdam_New_York.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Potsdam, New York (February 1941)',
     description: 'Many Potsdam residence are in fear due to creature sightings',
@@ -12335,6 +12777,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-148',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Racquette_Pond.jpg/960px-Racquette_Pond.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Tupper Lake, New York (November 1948)',
     description: 'Hunter Lawrence Peets spotted a wild beast making whimpering sounds',
@@ -12343,6 +12786,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-149',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Racquette_Pond.jpg/960px-Racquette_Pond.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Tupper Lake, New York (Summer 1969)',
     description: 'Ape creature appears at a cabin window',
@@ -12351,6 +12795,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-150',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Downtown_Glens_Falls%2C_NY.jpg/960px-Downtown_Glens_Falls%2C_NY.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Glens Falls, New York (Spring 1970)',
     description: 'Creature runs in front of a school teachers car',
@@ -12359,6 +12804,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-151',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Main_Street_Historic_District_Whitehall_NY_Sep_09.jpg/960px-Main_Street_Historic_District_Whitehall_NY_Sep_09.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Whitehall, New York (Early  1970s)',
     description: 'Man like creature walks onto a farmers porch',
@@ -12367,6 +12813,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-152',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Main_Street_Historic_District_Whitehall_NY_Sep_09.jpg/960px-Main_Street_Historic_District_Whitehall_NY_Sep_09.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Whitehall, New York (February 16 1974)',
     description: 'A man parked on the road with his girlfriend sees large silhouette of a creature',
@@ -12375,6 +12822,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-153',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Public_Square%2C_Watertown%2C_New_York.jpg/960px-Public_Square%2C_Watertown%2C_New_York.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Watertown, New York (December 7 1974)',
     description: 'Boys near a church parking lot witness a large creature black and hairy.',
@@ -12383,6 +12831,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-154',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Public_Square%2C_Watertown%2C_New_York.jpg/960px-Public_Square%2C_Watertown%2C_New_York.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Watertown, New York (January 21 1975)',
     description: '10 inch tracks found near a church after a hairy creature was spotted.',
@@ -12399,6 +12848,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-156',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Main_Street_in_Fair_Haven.jpg/960px-Main_Street_in_Fair_Haven.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Fair Haven, Vermont (May 1975)',
     description: 'Golf course owner encounters a giant two legged beast sloth like thing at 1130pm',
@@ -12407,6 +12857,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-157',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Saranac_Lake_-_Lake_Flower.jpg/960px-Saranac_Lake_-_Lake_Flower.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Saranac Lake, New York (June 1975)',
     description: '2 men witness a big sasquatch creature bending down before darting off into the bushes',
@@ -12415,6 +12866,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-158',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Main_Street_in_Fair_Haven.jpg/960px-Main_Street_in_Fair_Haven.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Fair Haven, Vermont (August 24 1976)',
     description: 'Martin paddock and 2 others report to the sheriff they seen a towering beast at 10pm',
@@ -12423,6 +12875,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-159',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Main_Street_in_Fair_Haven.jpg/960px-Main_Street_in_Fair_Haven.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Fair Haven, Vermont (September 1 1976)',
     description: 'Frank Mcfarren told police that at 11:10 pm he fired his shotgun and rifle at a huge hairy beast . Police search turned up nothing',
@@ -12431,6 +12884,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-160',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Niagara_County_New_York_incorporated_and_unincorporated_areas_Lewiston_%28town%29_highlighted.svg/960px-Niagara_County_New_York_incorporated_and_unincorporated_areas_Lewiston_%28town%29_highlighted.svg.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Lewiston, New York (September 1976)',
     description: 'Police officer Peter Filicetti was picking corn when the rows started to separate and a big creature walked by him. A 200 yard trail of 3 toe prints were seen.',
@@ -12439,6 +12893,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-161',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Main_Street_Historic_District_Whitehall_NY_Sep_09.jpg/960px-Main_Street_Historic_District_Whitehall_NY_Sep_09.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Whitehall, New York (March 1977)',
     description: 'An amber colored animal walked across the road swinging its arms',
@@ -12447,6 +12902,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-162',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/First_Prebyterian_Church_Valatie_NY_Feb_2017.jpg/960px-First_Prebyterian_Church_Valatie_NY_Feb_2017.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Valatie, New York (December 1978)',
     description: 'Martha Hallenbeck Seen a big black furry creature on her lawn curled up. Later large prints were seen in the snow',
@@ -12455,6 +12911,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-163',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Routes_8_and_10_Arietta_edited.jpg/960px-Routes_8_and_10_Arietta_edited.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Lake Pleasant, New York (Summer 1979)',
     description: 'Woman sees a 4.5 foot tall creature making a thumping noise next to a tree',
@@ -12463,6 +12920,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-164',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/HempsteadHouseSandsPoint.jpg/960px-HempsteadHouseSandsPoint.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Nassau, New York (December 5 1979)',
     description: 'Barry Knight witnessed 4 creatures walking through the woods while trapping. They made growling clacking sounds',
@@ -12479,6 +12937,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-166',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Downtown_Saratoga_Springs.jpg/960px-Downtown_Saratoga_Springs.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Saratoga Springs, New York (April 1980)',
     description: 'A woman notices a 7 to 8 ft tall animal in her headlights',
@@ -12487,6 +12946,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-167',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Warrensburg%2C_New_York.png/960px-Warrensburg%2C_New_York.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Warrensburg, New York (June 4 1980)',
     description: 'Camper Fred Renaudo was awakened by the sound of something crashing through the brush. He seen a white creature and 15 inch prints were seen.',
@@ -12495,6 +12955,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-168',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/HempsteadHouseSandsPoint.jpg/960px-HempsteadHouseSandsPoint.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Nassau, New York (May 1982)',
     description: 'Michael Maub looked across Kinderhook creek while fishing and seen a 7 foot reddish creature go up the bank',
@@ -12511,6 +12972,7 @@ const chunk_2: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-170',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Poultney%2C_Vermont.jpg/960px-Poultney%2C_Vermont.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Poultney, Vermont (August 18 1989)',
     description: 'Dog walker witnesses a hairy creature by the road at 3pm. It had matted hair.',
@@ -12530,6 +12992,7 @@ const chunk_2: any[] = [  {
 
 const chunk_3: any[] = [  {
     id: 'anomaly-Bigfoot-172',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Main_Street_Historic_District_Whitehall_NY_Sep_09.jpg/960px-Main_Street_Historic_District_Whitehall_NY_Sep_09.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Whitehall, New York (1979)',
     description: 'Darren Gosslin and friend found a long trail of human like footprints',
@@ -12538,6 +13001,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-173',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Warrensburg%2C_New_York.png/960px-Warrensburg%2C_New_York.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Warrensburg, New York (June 1995)',
     description: 'Squatting creature near roadside at 12:25 am which seemed to be 5 feet tall with white matted hair with oval shaped eyes.',
@@ -12546,6 +13010,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-174',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Plattekill%2C_NY%2C_town_hall.jpg/960px-Plattekill%2C_NY%2C_town_hall.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Plattekill, New York (Summer 1997)',
     description: 'Doug Pridgen made a video of a concert near an apple orchard. Upon review it seems to be two creatures and the small one is swinging in the tree.',
@@ -12554,6 +13019,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-175',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Wyoming_County_NY_Castile_town_highlighted.svg/960px-Wyoming_County_NY_Castile_town_highlighted.svg.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Castile, New York (February 1998)',
     description: '2 girls saw a six to seven foot tall bigfoot jump onto the trail near them and growled. it had white matted shaggy hair.',
@@ -12562,6 +13028,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-176',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Main_Street_Historic_District_Whitehall_NY_Sep_09.jpg/960px-Main_Street_Historic_District_Whitehall_NY_Sep_09.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Whitehall, New York (June 2004)',
     description: '2 Hong Kong visitors were fishing and seen a reddish brown creature with a flat face wadding quickly through the water.',
@@ -12570,6 +13037,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-178',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Main_Street_Historic_District_Whitehall_NY_Sep_09.jpg/960px-Main_Street_Historic_District_Whitehall_NY_Sep_09.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Whitehall, New York (June 2003)',
     description: 'Larry Paap witnessed a golden brown creature large with a huge neck as it vanished before his eyes',
@@ -12586,6 +13054,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-180',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Park_Place%2C_Silver_Creek%2C_New_York_-_20190811.jpg/960px-Park_Place%2C_Silver_Creek%2C_New_York_-_20190811.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Silver Creek, New York (October 2014)',
     description: 'Odd tracks seen in the light snow. Reported 15 inch in length. Chautauqua county',
@@ -12594,6 +13063,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-181',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/US_Post_Office%E2%80%94Fredonia_NY_Nov_10.JPG/960px-US_Post_Office%E2%80%94Fredonia_NY_Nov_10.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Fredonia, New York (November 2015)',
     description: 'Prints in the snow witnessed by driver. The tracks cut diagonal across the trail road into the pines.',
@@ -12602,6 +13072,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-182',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/US_Post_Office%E2%80%94Fredonia_NY_Nov_10.JPG/960px-US_Post_Office%E2%80%94Fredonia_NY_Nov_10.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Fredonia, New York (October 18 2017)',
     description: 'Hunter party hears loud screams over the truck radio as they are leaving for the day. 7 pm',
@@ -12610,6 +13081,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-183',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/US_Post_Office%E2%80%94Fredonia_NY_Nov_10.JPG/960px-US_Post_Office%E2%80%94Fredonia_NY_Nov_10.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Fredonia, New York (July 2017 -2019)',
     description: 'Multi prints casted by searchers Dan and Ryan. 16 and 19 inch in length',
@@ -12618,6 +13090,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-184',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/East_Main_Street%2C_Falconer%2C_New_York_-_20210427.jpg/960px-East_Main_Street%2C_Falconer%2C_New_York_-_20210427.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Falconer, New York (November 2019)',
     description: 'Veteran Hunter hears screams in a valley. Something he has never heard ever before.',
@@ -12626,6 +13099,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-185',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/East_Main_Street%2C_Falconer%2C_New_York_-_20210427.jpg/960px-East_Main_Street%2C_Falconer%2C_New_York_-_20210427.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Falconer, New York (November 2 2015)',
     description: 'Hunters hear mumblings  in the pines on separate occasions',
@@ -12634,6 +13108,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-186',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Brocton_Arch_Nov_09.jpg/960px-Brocton_Arch_Nov_09.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Brocton, New York (December 2013)',
     description: 'Hunters have sighting of tall black creature moving through the timber. Chautauqua  county.',
@@ -12642,6 +13117,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-187',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/US_Post_Office%E2%80%94Fredonia_NY_Nov_10.JPG/960px-US_Post_Office%E2%80%94Fredonia_NY_Nov_10.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Fredonia, New York (November  2016)',
     description: 'Bow hunter records screams down in a valley and hears other hunters shooting. Recording attached. Best heard around the 30 plus second mark.',
@@ -12650,6 +13126,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-188',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/South_Main_Street%2C_Naples%2C_New_York_-_20210610.jpg/960px-South_Main_Street%2C_Naples%2C_New_York_-_20210610.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Naples, New York (August 2018)',
     description: 'Residents have encounters with a tan creature  during the daytime causing them to run to their truck. Tracks found during winter months.',
@@ -12658,6 +13135,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-189',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/PostcardAlfredNYTerraCottaTileCoFactory1910.jpg/960px-PostcardAlfredNYTerraCottaTileCoFactory1910.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Alfred, New York (2000s)',
     description: 'Gentleman hears branches breaking and talking with no one around.',
@@ -12666,6 +13144,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-190',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Trinity_Church_%28former_First_Baptist_Church%29%2C_Nunda%2C_New_York_-_20200830.jpg/960px-Trinity_Church_%28former_First_Baptist_Church%29%2C_Nunda%2C_New_York_-_20200830.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Nunda, New York (2014 Fall)',
     description: 'A gentleman who has since passed away had witnessed a bigfoot like creature in the Rattlesnake forest.',
@@ -12682,6 +13161,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-192',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/WELLSVILLEHILLS1.jpg/960px-WELLSVILLEHILLS1.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Wellsville, New York (May 30 2021)',
     description: 'Multiple occurrences at family farm witnessed by ( Todd) researcher.  ( balls of light) . A juvenile sasquatch was witnessed.',
@@ -12690,6 +13170,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-193',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Lanesborough_Town_Hall.JPG/960px-Lanesborough_Town_Hall.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Lanesborough, Massachusetts (February  2007)',
     description: 'Atv riders at night (10pm) witness a tall dark figure come out of the woods onto the trail as it runs down the trail back into the woods. The riders attempted to follow with lights to no avail. There is a second part to this later that summer not to far away riding atvs they stop for a break and hear large branches breaking as they wrote it off as a bear?',
@@ -12698,6 +13179,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-194',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/New_York_in_United_States_%28US48%29.svg/960px-New_York_in_United_States_%28US48%29.svg.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Holley, New York (2022 comments)',
     description: 'Hunter circles and locates an area in Murray township and states " This is an entire area you should search" . Updates on odd happenings in the future.',
@@ -12706,6 +13188,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-195',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Genesee_County_Courthouse_Oct_09.JPG/960px-Genesee_County_Courthouse_Oct_09.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Batavia, New York (Summer 1960)',
     description: 'Bigfoot was seen running under a rail trestle Donald Palone age 15 and a few of his friends state.',
@@ -12714,6 +13197,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-196',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/NY_78_through_Newfane.jpg/960px-NY_78_through_Newfane.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Newfane, New York (Summer 1980)',
     description: 'Peter Filicetti a part time police office for Newfane stated " he has spent 4 years researching the beast" He has heard screams and noticed the 3 toed footprints',
@@ -12722,6 +13206,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-197',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/South_Main_Street%2C_Naples%2C_New_York_-_20210610.jpg/960px-South_Main_Street%2C_Naples%2C_New_York_-_20210610.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Naples, New York (Fall/Winter 2020)',
     description: 'Bow hunter has odd wood knocks',
@@ -12730,6 +13215,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-198',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Downtown_Cazenovia%2C_NY_May.jpg/960px-Downtown_Cazenovia%2C_NY_May.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Cazenovia, New York (January 1 2022)',
     description: 'Researchers hear a howl near a structure.',
@@ -12738,6 +13224,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-200',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/US_Post_Office%E2%80%94Fredonia_NY_Nov_10.JPG/960px-US_Post_Office%E2%80%94Fredonia_NY_Nov_10.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Fredonia, New York (July 2016)',
     description: 'Odd structure located in the woods offtrail.',
@@ -12746,6 +13233,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-201',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/US_Post_Office%E2%80%94Fredonia_NY_Nov_10.JPG/960px-US_Post_Office%E2%80%94Fredonia_NY_Nov_10.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Fredonia, New York (July 2018)',
     description: 'Camera capture of a possible sasquatch.',
@@ -12754,6 +13242,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-202',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/US_Post_Office%E2%80%94Fredonia_NY_Nov_10.JPG/960px-US_Post_Office%E2%80%94Fredonia_NY_Nov_10.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Fredonia, New York (August 2018)',
     description: 'Glowing eyes captured on a trail camera photo. Photo had to be zoomed in in an attempt to view.',
@@ -12762,6 +13251,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-203',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/US_Post_Office%E2%80%94Fredonia_NY_Nov_10.JPG/960px-US_Post_Office%E2%80%94Fredonia_NY_Nov_10.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Fredonia, New York (June 2016)',
     description: 'Structure located near a trail',
@@ -12770,6 +13260,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-204',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/US_Post_Office%E2%80%94Fredonia_NY_Nov_10.JPG/960px-US_Post_Office%E2%80%94Fredonia_NY_Nov_10.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Fredonia, New York (Summer 2017)',
     description: 'Audio captured in this area at 540am.  All these audio captures were from near this specific location.',
@@ -12778,6 +13269,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-205',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/US_Post_Office%E2%80%94Fredonia_NY_Nov_10.JPG/960px-US_Post_Office%E2%80%94Fredonia_NY_Nov_10.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Fredonia, New York (August 2016)',
     description: 'A long distance photo was captured of something black moving through the timber with something in it\'s mouth. Seems you can see the right leg on the creature and lighter colored face.',
@@ -12786,6 +13278,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-206',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/East_Main_Street%2C_Falconer%2C_New_York_-_20210427.jpg/960px-East_Main_Street%2C_Falconer%2C_New_York_-_20210427.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Falconer, New York (May 2014)',
     description: 'Small structure located that has since been removed.',
@@ -12794,6 +13287,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-207',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Greene_County_NY_Cairo_town_highlighted.svg/960px-Greene_County_NY_Cairo_town_highlighted.svg.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Cairo, New York (February 6)',
     description: '2022',
@@ -12802,6 +13296,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-208',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Oneida_County_New_York_incorporated_and_unincorporated_areas_Boonville_%28town%29_highlighted.svg/960px-Oneida_County_New_York_incorporated_and_unincorporated_areas_Boonville_%28town%29_highlighted.svg.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Boonville, New York (May 2016)',
     description: 'Hunters report hearing multiple loud wood knocks while hunting turkey. Five years later one hunter went back to that location and ran across what is known as a tree structure where he had previously heard the tree knock to his astonishment.',
@@ -12810,6 +13305,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-209',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Erie_Canal_and_Flight_of_Five_Locks_from_Canal_Street%2C_Lockport%2C_New_York_-_20210531.jpg/960px-Erie_Canal_and_Flight_of_Five_Locks_from_Canal_Street%2C_Lockport%2C_New_York_-_20210531.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Lockport, New York (October 2016)',
     description: 'Witness describes road crossing close to a deer crossing sign on Day road to investigator  Erik',
@@ -12818,6 +13314,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-210',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Erie_Canal_and_Flight_of_Five_Locks_from_Canal_Street%2C_Lockport%2C_New_York_-_20210531.jpg/960px-Erie_Canal_and_Flight_of_Five_Locks_from_Canal_Street%2C_Lockport%2C_New_York_-_20210531.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Lockport, New York (February 2018)',
     description: 'Local Lockport investigator Eric  had a sighting.',
@@ -12826,6 +13323,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-211',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Erie_Canal_and_Flight_of_Five_Locks_from_Canal_Street%2C_Lockport%2C_New_York_-_20210531.jpg/960px-Erie_Canal_and_Flight_of_Five_Locks_from_Canal_Street%2C_Lockport%2C_New_York_-_20210531.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Lockport, New York (1960-70s)',
     description: 'Sighting minimal details. WYRK post regarding bigfoot.',
@@ -12834,6 +13332,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-212',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/South_Main_Street%2C_Naples%2C_New_York_-_20210610.jpg/960px-South_Main_Street%2C_Naples%2C_New_York_-_20210610.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Naples, New York (Point 217)',
     description: 'https://www.lifeinthefingerlakes.com/part-3-wilderness-and-canadice-lake/           Sightings have been reported between Candice lake and Honeoye Wildlife Inlet.',
@@ -12842,6 +13341,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-213',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Oneida_County_New_York_incorporated_and_unincorporated_areas_Sylvan_Beach_highlighted.svg/960px-Oneida_County_New_York_incorporated_and_unincorporated_areas_Sylvan_Beach_highlighted.svg.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Sylvan Beach, New York (Spring 2010)',
     description: 'Witness reports something brown hairy and hunched crossed the road quickly.',
@@ -12858,6 +13358,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-215',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Lake_Placid_from_McKenzie_Mountain.jpg/960px-Lake_Placid_from_McKenzie_Mountain.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Lake Placid, New York (December 1986)',
     description: 'Witness (PJP}  recalls the events that took place during the sighting. .',
@@ -12866,6 +13367,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-216',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/New_York_-_Buffalo_through_Dexter_-_NARA_-_68145065_%28cropped%29.jpg/960px-New_York_-_Buffalo_through_Dexter_-_NARA_-_68145065_%28cropped%29.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Canton, New York (September  27-28 2021)',
     description: 'TONY- recalls seeing something during bear season.',
@@ -12874,6 +13376,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-217',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Housing_development_in_the_hills_of_Manlius%2C_New_York.jpg/960px-Housing_development_in_the_hills_of_Manlius%2C_New_York.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Manlius, New York (1990 no month given)',
     description: 'Young man states what he saw during a drive in Morgan Hill State Forest.',
@@ -12882,6 +13385,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-218',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Buffalo%2C_NY_skyline.jpg/960px-Buffalo%2C_NY_skyline.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Buffalo, New York (WGRZ)',
     description: 'Attached is a video done by the news station.  plus the following link.   https://buffalonews.com/bn-chronicles-looking-back-at-western-new-york-bigfoot-sightings/article_a958bd58-6c24-11ec-9824-27f2ee9035ae.html',
@@ -12890,6 +13394,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-219',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Onondaga_County_New_York_incorporated_and_unincorporated_areas_Nedrow_highlighted.svg/960px-Onondaga_County_New_York_incorporated_and_unincorporated_areas_Nedrow_highlighted.svg.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Nedrow, New York (Fall 1869)',
     description: 'CARDIFF GIANT. Stub Newell finds a stone giant which is on display at Cooperstown museum. Wikipedia has details on the Cardiff giant.  https://en.wikipedia.org/wiki/Cardiff_Giant',
@@ -12898,6 +13403,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-220',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/US_Post_Office%E2%80%94Fredonia_NY_Nov_10.JPG/960px-US_Post_Office%E2%80%94Fredonia_NY_Nov_10.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Fredonia, New York (1820-1939)',
     description: '7) Cassadaga. About seven miles south of Fredonia',
@@ -12906,6 +13412,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-222',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Aurora_Theatre_from_Main_Street.jpg/960px-Aurora_Theatre_from_Main_Street.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'East Aurora, New York (1850 Chase Pierson)',
     description: '9) East Aurora. The village of East Aurora has a couple ancient mysteries in its track record. In History of the Holland Purchase (1850)',
@@ -12914,6 +13421,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-223',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Monroe_County_New_York_incorporated_and_unincorporated_areas_Irondequoit_highlighted.svg/960px-Monroe_County_New_York_incorporated_and_unincorporated_areas_Irondequoit_highlighted.svg.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Irondequoit, New York (1830-1850s)',
     description: '6) Rochester. A natural sand mound revealed a surprise in 1796. “On the shore of Lake Ontario on a high bluff near Irondequoit Bay… the bank caved off and untombed a great quantity of human bones of a large size',
@@ -12938,6 +13446,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-226',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/The_North_Tonawanda_side_of_Gateway_Harbor_during_a_summer_Canal_Concert.jpg/960px-The_North_Tonawanda_side_of_Gateway_Harbor_during_a_summer_Canal_Concert.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Tonawanda, New York (1820s)',
     description: '3) Tonawanda. Right offshore from the village of North Tonawanda is a small island in the Niagara River upon which the Stephen White family once dwelt in their fine Federal-style mansion. Another structure had been there when the Whites arrived: a ten-foot high burial mound people could see from shore. Someone decided to take it apart sometime in the 1820s',
@@ -12946,6 +13455,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-227',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Erie_County_New_York_incorporated_and_unincorporated_areas_Billington_Heights_highlighted.svg/960px-Erie_County_New_York_incorporated_and_unincorporated_areas_Billington_Heights_highlighted.svg.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Billington Heights, New York (1800s ridge rd to Buffalo Creek)',
     description: '2) Shelby. Many early commenters – including E. G. Squier',
@@ -12954,6 +13464,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-228',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/South_Blooming_Grove%2C_NY%2C_village_hall.jpg/960px-South_Blooming_Grove%2C_NY%2C_village_hall.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'South Blooming Grove, New York (1976)',
     description: 'School bus driver stops and children watch a hairy creature.',
@@ -12970,6 +13481,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-231',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Racquette_Pond.jpg/960px-Racquette_Pond.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Tupper Lake, New York (Sumer mid 1990s)',
     description: 'Kevin. Hears screams @ 2am while camping near Rollins pond. States it was extremely  loud and it vibrated in your chest.',
@@ -12986,6 +13498,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-261',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/US_Post_Office%E2%80%94Fredonia_NY_Nov_10.JPG/960px-US_Post_Office%E2%80%94Fredonia_NY_Nov_10.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Fredonia, New York (Ex -Marine 2022)',
     description: 'August 27',
@@ -13002,6 +13515,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-263',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Eden_Center_Depot%2C_Eden%2C_New_York_-_20200328.jpg/960px-Eden_Center_Depot%2C_Eden%2C_New_York_-_20200328.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Eden, New York (1979)',
     description: 'I took the top bunk of the bunk bed. We positioned it front of the window to look out. Sometime in the night I woke up. Across from our cabin was probably a 9 footer. Standing by the cars. There was a booger light on. He was in that more on the lean side. Brownish. 40 or so feet from the cabin. He (no breasts) had a thoughtful look on his face. Didn\'t look my way',
@@ -13010,6 +13524,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-266',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Harrogate-US25E-tn.jpg/960px-Harrogate-US25E-tn.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Harrogate, Tennessee (Bigfoot in Colmar)',
     description: 'KY',
@@ -13018,6 +13533,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-270',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Pineville%2C_KY_spring.jpg/960px-Pineville%2C_KY_spring.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Pineville, Kentucky (Bigfoot Night Sighting)',
     description: '1940\'s - Bigfoot chases man to house.',
@@ -13026,6 +13542,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-272',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Pineville%2C_KY_spring.jpg/960px-Pineville%2C_KY_spring.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Pineville, Kentucky (2002 Bigfoot Sighting)',
     description: '2002 Bigfoot sighting in bell county',
@@ -13034,6 +13551,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-273',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Seattle_Center_as_night_falls.jpg/960px-Seattle_Center_as_night_falls.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Seattle, Washington (UFO Sighting)',
     description: '8/04/2011 - Possible UFO reported to TCC by Matthew O\'Brien.',
@@ -13042,6 +13560,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-275',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Masonic_Temple_-_Willits%2C_California.jpg/960px-Masonic_Temple_-_Willits%2C_California.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Willits, California (Bigfoot Crosses hwy 101)',
     description: '10/29/2008 - sighting date may be off a little. A dazed bigfoot is seen crossing hwy 101.',
@@ -13050,6 +13569,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-278',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Cleburne_County_Alabama_Incorporated_and_Unincorporated_areas_Heflin_Highlighted_0133976.svg/960px-Cleburne_County_Alabama_Incorporated_and_Unincorporated_areas_Heflin_Highlighted_0133976.svg.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Heflin, Alabama (Bigfoot seen while Fishing)',
     description: '1994 - Report submitted by Dewey Lambert. While Dewey and his wife were fishing in a small boat they had an encounter with Bigfoot.',
@@ -13058,6 +13578,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-280',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Harlan_County_Kentucky_Courthouse.jpg/960px-Harlan_County_Kentucky_Courthouse.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Harlan, Kentucky (Bigfoot Crosses the Road)',
     description: '9/2000 - Bigfoot seen crossing the road by Joann Carter. She stop and gather a hair sample.',
@@ -13066,6 +13587,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-282',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Eastward_on_Main_from_Myers.jpg/960px-Eastward_on_Main_from_Myers.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Cumberland, Kentucky (4 people see a Bigfoot)',
     description: 'Fall/2008 - While on a ATV trip 4 people see a bigfoot.',
@@ -13074,6 +13596,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-284',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Eastward_on_Main_from_Myers.jpg/960px-Eastward_on_Main_from_Myers.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Cumberland, Kentucky (2 men see Bigfoot)',
     description: '1981 - 2 men on the way to work see a bigfoot crouched on side of the road.',
@@ -13082,6 +13605,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-286',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Pineville%2C_KY_spring.jpg/960px-Pineville%2C_KY_spring.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Pineville, Kentucky (Possible Dog Man Seen)',
     description: '2011 - Strange creature seen in cow pasture',
@@ -13090,6 +13614,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-290',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Main_Post_Office_-_Kelso_Washington.jpg/960px-Main_Post_Office_-_Kelso_Washington.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Kelso, Washington (Man sees Bigfoot)',
     description: '1995 - Kelso',
@@ -13098,6 +13623,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-291',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/NewmarketNH_MainStreet.jpg/960px-NewmarketNH_MainStreet.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Newmarket, New Hampshire (18 inch track found)',
     description: '1990 - Newmarket',
@@ -13106,6 +13632,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-296',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Coeur_d%27Alene_aerial%2C_May_2023_%28cropped%29.png/960px-Coeur_d%27Alene_aerial%2C_May_2023_%28cropped%29.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Coeur d\'Alene, Idaho (UFO Sighting)',
     description: '8/2003 -',
@@ -13114,6 +13641,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-311',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Shoshone_Historic_District7_NRHP_75000636_Lincoln_County%2C_ID.jpg/960px-Shoshone_Historic_District7_NRHP_75000636_Lincoln_County%2C_ID.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Shoshone, Idaho (Sounds of a Bigfoot)',
     description: 'Aug. 2005 - First name: Phil',
@@ -13122,6 +13650,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-322',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Hungarian_Settlement_School%2C_Albany%2C_Louisiana.jpg/960px-Hungarian_Settlement_School%2C_Albany%2C_Louisiana.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Albany, Louisiana (Bigfoot Crosses Hwy.)',
     description: '2000',
@@ -13130,6 +13659,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-323',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Green_Springs_Aerial.jpg/960px-Green_Springs_Aerial.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Green Springs, Ohio (Bigfoot sighting with photos)',
     description: 'June 26th',
@@ -13138,6 +13668,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-326',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Wirt_County_Courthouse_Elizabeth_West_Virginia.jpg/960px-Wirt_County_Courthouse_Elizabeth_West_Virginia.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Elizabeth, West Virginia (Bigfoot seen eating)',
     description: '9/29/2011 - Dustin Ostrowski said - "my buddy and I were walking around in the woods out back of our house',
@@ -13146,6 +13677,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-329',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/WestBrookfieldMA_TownHall.jpg/960px-WestBrookfieldMA_TownHall.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'West Brookfield, Massachusetts (Bigfoot seen while bird hunting)',
     description: '10/2011 -  "I saw a  creature in Brookfield',
@@ -13154,6 +13686,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-333',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Montgomery_County_Courthouse%2C_Troy%2C_North_Carolina.jpg/960px-Montgomery_County_Courthouse%2C_Troy%2C_North_Carolina.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Troy, North Carolina (Truck shaken by Bigfoot)',
     description: '2011 (?) - “As it got close',
@@ -13162,6 +13695,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-335',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Loyall-from-840-ky.jpg/960px-Loyall-from-840-ky.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Low Flying UFO)',
     description: '1990\'s - The object was almost directly over my head when I first saw it. We both seen the object',
@@ -13170,6 +13704,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-338',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/1724_Chester_Courhouse.JPG/960px-1724_Chester_Courhouse.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Chester, Pennsylvania (Christmas UFO)',
     description: '12/25/2012 - Video of strange lights filmed during the day.',
@@ -13178,6 +13713,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-340',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Loyall-from-840-ky.jpg/960px-Loyall-from-840-ky.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (UFO in Sky)',
     description: 'Late Summer 2012 -I had stepped out on my back deck and noticed this thing in the sky',
@@ -13186,6 +13722,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-342',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/ALFALFA_COUNTY_COURTHOUSE.jpg/960px-ALFALFA_COUNTY_COURTHOUSE.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Cherokee, Oklahoma (2 Girls See Bigfoot)',
     description: '1984 - Two young girls (Carla and Toni) both 12 at the time',
@@ -13194,6 +13731,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-343',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/SpringfieldNH_TownOfficeAndLibrary.jpg/960px-SpringfieldNH_TownOfficeAndLibrary.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Springfield, New Hampshire (Bigfoot Game Cam Photo)',
     description: 'picture was taken with a motion detecting trail camera',
@@ -13202,6 +13740,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-346',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Kingston_Town_Hall.jpg/960px-Kingston_Town_Hall.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Kingston, New Hampshire (Bigfoot seen in tall Grass)',
     description: 'Date unknown -  my sister and I were walking down a main street in Kingston NH and we both saw a hairy creature wearing a tattered flannel shirt in a field of tall grass',
@@ -13210,6 +13749,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-348',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/US_30_eb_in_Imperial%2C_PA%2C_May_2024.jpg/960px-US_30_eb_in_Imperial%2C_PA%2C_May_2024.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Imperial, Pennsylvania (Possible Photo of Bigfoot)',
     description: '3/2012 - Photo taken of possible bigfoot in Clinton',
@@ -13218,6 +13758,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-350',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Oakridge%2C_Oregon.jpg/960px-Oakridge%2C_Oregon.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Oakridge, Oregon (Logger Sees Bigfoot)',
     description: 'June27',
@@ -13226,6 +13767,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-352',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Smith_County_Mississippi_Courthouse.jpg/960px-Smith_County_Mississippi_Courthouse.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Raleigh, Mississippi (Bigfoot in Mississippi)',
     description: '10/23/2011 - Rock thrown into creek',
@@ -13234,6 +13776,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-354',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/San_Bernardino_County_California_Incorporated_and_Unincorporated_areas_Pi%C3%B1on_Hills_Highlighted_0657302.svg/960px-San_Bernardino_County_California_Incorporated_and_Unincorporated_areas_Pi%C3%B1on_Hills_Highlighted_0657302.svg.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Pinon Hills, California (UFO Seen in Campground)',
     description: '5/26/13 -  Wrightwood',
@@ -13242,6 +13785,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-356',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Canyonville%2C_Oregon.jpg/960px-Canyonville%2C_Oregon.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Canyonville, Oregon (Bigfoot sighting in Days Creek)',
     description: 'Oct. 1991 - Bigfoot spotted by two hunters in Days Creek',
@@ -13250,6 +13794,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-358',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Black_and_Co_Bldg_-_Myrtle_Point_Oregon.jpg/960px-Black_and_Co_Bldg_-_Myrtle_Point_Oregon.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Myrtle Point, Oregon (Bigfoot seen by 3 people)',
     description: '6/8/13 - Remote',
@@ -13258,6 +13803,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-362',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Canyonville%2C_Oregon.jpg/960px-Canyonville%2C_Oregon.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Canyonville, Oregon (2 Men See Bigfoot)',
     description: 'Fall 1971 - 2 Men see what they think is a bear until it stands up.',
@@ -13283,6 +13829,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-370',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Harlan_County_Kentucky_Courthouse.jpg/960px-Harlan_County_Kentucky_Courthouse.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Harlan, Kentucky (Pastor and others find tracks)',
     description: '10/2008 - 4 men find bigfoot tracks in Evarts',
@@ -13291,6 +13838,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-372',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Harlan_County_Kentucky_Courthouse.jpg/960px-Harlan_County_Kentucky_Courthouse.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Harlan, Kentucky (Bigfoot Seen in garbage)',
     description: '6/28/2011 - Bigfoot seen digging in garbage',
@@ -13307,6 +13855,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-376',
+    images: ['https://thumb.wikimedia.org/wikipedia/en/thumb/1/13/Myrtle_Creek%2C_City_Hall%2C_Wikipedia.jpg/960px-Myrtle_Creek%2C_City_Hall%2C_Wikipedia.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Myrtle Creek, Oregon (Juvenile Bigfoot Tracks)',
     description: '75/2013 - The Crypto Crew\'s Bobby and Corinna Long find possible juvenile bigfoot tracks. See the photos and video by Clicking Here (http://www.thecryptocrew.com/2013/07/possible-juvenile-bigfoot-tracks.html)',
@@ -13315,6 +13864,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-377',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Loyall-from-840-ky.jpg/960px-Loyall-from-840-ky.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Man Sees BF while feeding Dogs)',
     description: '1967 - Never reported until now. Man and wife see bigfoot while going out to feed the dogs. (Pin is really close)',
@@ -13331,6 +13881,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-382',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Pineville%2C_KY_spring.jpg/960px-Pineville%2C_KY_spring.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Pineville, Kentucky (White bigfoot sighting)',
     description: 'Late 1950\'s -  2 teenage boys playing near a coal mine see a large white bigfoot.',
@@ -13339,6 +13890,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-387',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Pineville%2C_KY_spring.jpg/960px-Pineville%2C_KY_spring.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Pineville, Kentucky (UFO on Hwy 119)',
     description: '1990\'s -  UFO seen on Hwy 119 near Calloway',
@@ -13347,6 +13899,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-390',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Ohio_-_Pickerington.jpg/960px-Ohio_-_Pickerington.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Pickerington, Ohio (UFO in Pickerington)',
     description: 'Oh',
@@ -13355,6 +13908,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-395',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Town_Hall_Spring.jpg/960px-Town_Hall_Spring.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Ware, Massachusetts (Sounds & Tracks)',
     description: 'Jan. 2013 - Man hears strange ape like sounds around his home',
@@ -13363,6 +13917,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-400',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Mount_Plymouth%2C_Florida.jpg/960px-Mount_Plymouth%2C_Florida.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Mount Plymouth, Florida (UFOs Seen Near Zellwood)',
     description: '1993 & 2012 - Family see large UFO in 1993 and try to record it. Also more UFOs seen around 2012. Read Full report by',
@@ -13371,6 +13926,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-402',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/WareRiverCoverBridge.jpg/960px-WareRiverCoverBridge.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Hardwick, Massachusetts (Black Triangle UFO)',
     description: 'Sighting Date - around 2002 - Large Black triangle UFO seen in MA.',
@@ -13379,6 +13935,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-406',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Shady_cove_city_hall.jpg/960px-Shady_cove_city_hall.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Shady Cove, Oregon (Tracks Found)',
     description: '7/26/2013 - TCC\'s Bobby & Corinna Long find more possible Bigfoot Tracks.',
@@ -13387,6 +13944,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-409',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Loyall-from-840-ky.jpg/960px-Loyall-from-840-ky.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Bigfoot Crosses the Road)',
     description: '7/18/2013 - Early in the morning a bigfoot cross the road in from of car.',
@@ -13395,6 +13953,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-413',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Appomattox_Court_House%2C_VA%2C_Theater_IMG_4179.JPG/960px-Appomattox_Court_House%2C_VA%2C_Theater_IMG_4179.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Appomattox, Virginia (3 UFOs filmed)',
     description: '2013 - Chris Light films 2 UFOs near his home in Virginia.',
@@ -13403,6 +13962,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-417',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Jasper_County_Missouri_Incorporated_and_Unincorporated_areas_Duquesne_Highlighted.svg/960px-Jasper_County_Missouri_Incorporated_and_Unincorporated_areas_Duquesne_Highlighted.svg.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Duquesne, Missouri (Elderly woman sees bigfoot)',
     description: '8/06/2013 - A elderly woman out bird watching in the morning sees a large bigfoot. Report by Casey Macias (Push pin is very close)',
@@ -13419,6 +13979,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-424',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Old_Dawson_County_Courthouse.JPG/960px-Old_Dawson_County_Courthouse.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Dawsonville, Georgia (Bull Mountain Tracks)',
     description: '2011 - Hunters find possible bigfoot tracks and follow them.',
@@ -13427,6 +13988,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-428',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Mason_County_Courthouse_-_Shelton_Washington.jpg/960px-Mason_County_Courthouse_-_Shelton_Washington.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Shelton, Washington (Bigfoot Tracks found)',
     description: '2010 - A state employee stumbled across an excellent bigfoot trackway.',
@@ -13435,6 +13997,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-434',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Loyall-from-840-ky.jpg/960px-Loyall-from-840-ky.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Bigfoot seen in creek)',
     description: '3/2006 - Man on walk sees a bigfoot in creek splashing around.(pin is very close to target)',
@@ -13443,6 +14006,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-438',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/DwntwnBlufieldWV.jpg/960px-DwntwnBlufieldWV.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Bluefield, West Virginia (Hunter Shoots A Bigfoot)',
     description: '11/26/03 - Exclusive',
@@ -13451,6 +14015,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-443',
+    images: ['https://thumb.wikimedia.org/wikipedia/en/thumb/6/6d/Downtown_Whitesburg_Kentucky.JPG/960px-Downtown_Whitesburg_Kentucky.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Whitesburg, Kentucky (Track found)',
     description: '2010 - Track found in Letcher county near a hollow fill.',
@@ -13467,6 +14032,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-449',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Elliott_County%2C_Kentucky_courthouse.jpg/960px-Elliott_County%2C_Kentucky_courthouse.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Sandy Hook, Kentucky (Bigfoot tracks found)',
     description: '6/15/2013 - Bigfoot tracks found in garden in Carter',
@@ -13475,6 +14041,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-452',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Railroad_west_of_Cross_in_Olive_Hill.jpg/960px-Railroad_west_of_Cross_in_Olive_Hill.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Olive Hill, Kentucky (2 Sighting Reports)',
     description: '1990\'s -  2 reports from Carter County Kentucky in a little town named Grahn.',
@@ -13483,6 +14050,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-456',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Coeburn-from-park-va.jpg/960px-Coeburn-from-park-va.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Coeburn, Virginia (Bigfoot crosses road)',
     description: '2000 - late summer or early fall - Couple on the way home after seeing a movie witness large hairy man type creature cross the road. (Marker/pin is very close)',
@@ -13491,6 +14059,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-459',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Main_street_Riddle%2C_Oregon.jpg/960px-Main_street_Riddle%2C_Oregon.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Riddle, Oregon (Hunters See Black Bigfoot)',
     description: '10/2008 - Three hunters see a large black bigfoot cross the road. Push pin is on mark.',
@@ -13499,6 +14068,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-462',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Knox_County_Kentucky_Courthouse.jpg/960px-Knox_County_Kentucky_Courthouse.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Barbourville, Kentucky (UFO Follows Car)',
     description: 'Winter',
@@ -13507,6 +14077,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-464',
+    images: ['https://thumb.wikimedia.org/wikipedia/en/thumb/6/6d/Downtown_Whitesburg_Kentucky.JPG/960px-Downtown_Whitesburg_Kentucky.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Whitesburg, Kentucky (2 Reports of bigfoot sighting)',
     description: '2006 -  Mr. Isom shares his 2 bigfoot sightings. Read the full report by  Clicking Here (http://www.thecryptocrew.com/2013/11/2-more-bigfoot-reports-from-kentucky.html)',
@@ -13515,6 +14086,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-466',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Vintonvirginia.jpg/960px-Vintonvirginia.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Vinton, Virginia (Game Cam photo of a Bigfoot?)',
     description: '8/7/2010 - Sightings report than includes a possible game cam photo of a bigfoot. Lady reports seeing a large "something" behind her house. Read the full report and watch the video by Clicking Here (http://www.thecryptocrew.com/2013/12/possible-bigfoot-photo-from-va.html)',
@@ -13531,6 +14103,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-469',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Berea_Kentucky_City_Hall.jpg/960px-Berea_Kentucky_City_Hall.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Berea, Kentucky (4 Men see a Bigfoot)',
     description: 'Fall 1987 - 4 men see a gray bigfoot next to a railroad trestle. Pin is on target.',
@@ -13539,6 +14112,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-471',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Berea_Kentucky_City_Hall.jpg/960px-Berea_Kentucky_City_Hall.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Berea, Kentucky (Several more Bigfoot Sightings)',
     description: 'From 2002 until 2011 - Several more bigfoot sightings in and around Berea. Ranging in size and color. Read the full reports by Clicking Here> (http://www.thecryptocrew.com/2014/01/more-bigfoot-sightings-in-kentucky.html)',
@@ -13547,6 +14121,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-472',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/WarMonumentbyJohnWilsonDudleyMassachusetts2.jpg/960px-WarMonumentbyJohnWilsonDudleyMassachusetts2.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Dudley, Massachusetts (Bigfoot seen near Power lines)',
     description: '1/10/14 - Possible bigfoot seen near power lines digging in trash bag. Read full report by Clicking Here (http://www.thecryptocrew.com/2014/01/possible-bigfoot-seen-near-power-lines.html)',
@@ -13555,6 +14130,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-473',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Berea_Kentucky_City_Hall.jpg/960px-Berea_Kentucky_City_Hall.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Berea, Kentucky (Triangle Shaped UFO)',
     description: '1973 - Triangle Shaped UFO seen by for people. Read the full report by Clicking Here (http://www.thecryptocrew.com/2014/01/triangle-shaped-ufo-unreported-until-now.html)',
@@ -13563,6 +14139,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-475',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Bruce_Mississippi_1.JPG/960px-Bruce_Mississippi_1.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Bruce, Mississippi (UFO Seen for 2 hours)',
     description: 'Fall 1976 - Group of about 12 people witness UFO for almost 2 hours. (Push Pin is close)',
@@ -13579,6 +14156,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-480',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Ohio_County_West_Virginia_Incorporated_and_Unincorporated_areas_Bethlehem_Highlighted.svg/960px-Ohio_County_West_Virginia_Incorporated_and_Unincorporated_areas_Bethlehem_Highlighted.svg.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Bethlehem, West Virginia (Bigfoot Sighting)',
     description: 'July 11',
@@ -13587,6 +14165,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-482',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Tippah_County_Courthouse%2C_Ripley_Historic_District%2C_MS.jpg/960px-Tippah_County_Courthouse%2C_Ripley_Historic_District%2C_MS.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Ripley, Mississippi (Bigfoot Crosses Road)',
     description: '12/25/2008 - Two people see large creature cross the road. Read full report by Clicking Here (http://www.thecryptocrew.com/2014/01/bigfoot-sighting-report-from-mississippi.html)',
@@ -13595,6 +14174,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-483',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Raymond_NH_Common_021813.jpg/960px-Raymond_NH_Common_021813.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Raymond, New Hampshire (Hiker sees possible Bigfoot)',
     description: '2/2/2014 - Hiker and his dogs see possible bigfoot cross trail.',
@@ -13611,6 +14191,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-487',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Berea_Kentucky_City_Hall.jpg/960px-Berea_Kentucky_City_Hall.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Berea, Kentucky (Hunters encounter Bigfoot)',
     description: '1994 (?) - Two hunters out scouting a large farm for hunting encounter possible bigfoots.(push pin is general area)',
@@ -13619,6 +14200,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-489',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/EppingTownHallApril2025.jpg/960px-EppingTownHallApril2025.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Epping, New Hampshire (More reports of Bigfoot)',
     description: 'Two reports - one from 2005 and one from 2011. - More possible bigfoot sightings coming from New Hampshire from the Pawtuckaway State Park area.',
@@ -13627,6 +14209,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-492',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Levy_County_Florida_Incorporated_and_Unincorporated_areas_Williston_Highlands_Highlighted.svg/960px-Levy_County_Florida_Incorporated_and_Unincorporated_areas_Williston_Highlands_Highlighted.svg.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Williston Highlands, Florida (Bigfoot at Geothe State Forest)',
     description: '2014/2005 - Reports of bigfoot being seen in Geothe State Forest.',
@@ -13635,6 +14218,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-501',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Loyall-from-840-ky.jpg/960px-Loyall-from-840-ky.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Bigfoot sighting)',
     description: '2006 or 2007 - Bigfoot was seen on old strip mine site. Read the full report by  Clicking Here (http://www.thecryptocrew.com/2014/05/bigfoot-sighting-report-unreported.html)',
@@ -13651,6 +14235,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-503',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Providence-Main-Street-Park-ky.jpg/960px-Providence-Main-Street-Park-ky.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Providence, Kentucky (Blackberry picker encounters Bigfoot)',
     description: '6/28/2008 - While out picking blackberries a man encounters a bigfoot chasing deer. Read the full report at http://www.thecryptocrew.com/2014/05/bigfoot-in-western-kentucky-blackberry.html',
@@ -13659,6 +14244,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-504',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Truckee.jpg/960px-Truckee.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Truckee, California (Bigfoot Peeks in Tent)',
     description: '1977 - Bigfoot peeks inside a tent and kid shines flashlight on it. read full report by  Clicking Here (http://www.thecryptocrew.com/2014/05/bigfoot-sighting-near-stampede-reservoir.html)',
@@ -13667,6 +14253,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-505',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Loyall-from-840-ky.jpg/960px-Loyall-from-840-ky.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Bigfoot Crosses Road)',
     description: '5/22/14 - Couple witness bigfoot cross the road in the early morning hours.',
@@ -13675,6 +14262,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-507',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Loyall-from-840-ky.jpg/960px-Loyall-from-840-ky.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Bigfoot standing)',
     description: '2001 - 3 people see large figure just standing watching. Read full report by Clicking Here (http://www.thecryptocrew.com/2014/05/2-more-possible-bigfoot-sightings-in.html)',
@@ -13683,6 +14271,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-508',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Downtown_Meridian_from_City_Hall.jpg/960px-Downtown_Meridian_from_City_Hall.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Meridian, Mississippi (Driver has close sighting of Bigfoot)',
     description: '1979 - While driving back to base',
@@ -13691,6 +14280,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-511',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/WestBurlingtonIowaCityHall.jpg/960px-WestBurlingtonIowaCityHall.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'West Burlington, Iowa (Bigfoot seen)',
     description: 'picture taken',
@@ -13699,6 +14289,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-512',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Denton_County_Texas_Incorporated_Areas_Hickory_Creek_highlighted.svg/960px-Denton_County_Texas_Incorporated_Areas_Hickory_Creek_highlighted.svg.png'],
     relatedIds: ['werewolf-lycanthropy-dogman'],
     parentId: 'bigfoot-sightings-br',
     name: 'Hickory Creek, Texas (Bigfoot/Dogman Seen)',
@@ -13708,6 +14299,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-519',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Tallulah%2C_Louisiana.jpg/960px-Tallulah%2C_Louisiana.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Tallulah, Louisiana (Man spots Bigfoot while fishing)',
     description: '1960\'s -While bass fishing a man see a large bigfoot. Read all the details by Clicking Here (http://www.thecryptocrew.com/2014/09/another-bigfoot-report-from-mississippi.html)',
@@ -13724,6 +14316,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-522',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Loyall-from-840-ky.jpg/960px-Loyall-from-840-ky.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (2 bigfoot seen)',
     description: '10/2013 - Man out ginsening seen 2 bigfoot. A large female and a younger bigfoot. Read all the details by  Clicking Here  (http://www.thecryptocrew.com/2014/11/bigfoot-report-from-harlan-ky-never.html)',
@@ -13732,6 +14325,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-524',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Wolfville%2C_Nova_Scotia.jpg/960px-Wolfville%2C_Nova_Scotia.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Wolfville, Nova Scotia, CA (Bigfoot sighting)',
     description: '1997 - Man spots Bigfoot in mountains near Wolfville',
@@ -13740,6 +14334,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-525',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Avenal_Theatre_4-11-30_C.jpg/960px-Avenal_Theatre_4-11-30_C.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Avenal, California (Bigfoot crosses Road)',
     description: '1977 - Bigfoot crosses hwy 41. Large Bigfoot is seen on hwy 41 by 5 people. Read the details at http://www.thecryptocrew.com/2014/12/bigfoot-seen-on-hwy-41.html   Push pin is general area.',
@@ -13748,6 +14343,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-526',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Lenoir_Main_Street-27527.jpg/960px-Lenoir_Main_Street-27527.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Lenoir, North Carolina (UFO photo)',
     description: '',
@@ -13756,6 +14352,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-529',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Kensington%2C_Prince_Edward_Island.jpg/960px-Kensington%2C_Prince_Edward_Island.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Kensington, Prince Edward Island, CA (Bigfoot Walks Away)',
     description: '1997 - Man walking his dog sees a Bigfoot. Read the details at http://www.thecryptocrew.com/2014/12/prince-edward-island-bigfoot-report.html',
@@ -13780,6 +14377,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-533',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Angus_UK_location_map.svg/960px-Angus_UK_location_map.svg.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Letham, Scotland, GB (Bigfoot in Scotland)',
     description: '',
@@ -13804,6 +14402,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-539',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Colebrook_NH_9-15-26a.jpg/960px-Colebrook_NH_9-15-26a.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Colebrook, New Hampshire (Hunters find possible Bigfoot Tracks)',
     description: '2001 (?) - A man and his son encounter odd',
@@ -13812,6 +14411,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-540',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Raymond_NH_Common_021813.jpg/960px-Raymond_NH_Common_021813.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Raymond, New Hampshire (Tracks found)',
     description: '',
@@ -13820,6 +14420,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-542',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Cimarron_Art_Gallery_Cimarron%2C_NM.JPG/960px-Cimarron_Art_Gallery_Cimarron%2C_NM.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Cimarron, New Mexico (Bigfoot Crosses Road)',
     description: '',
@@ -13828,6 +14429,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-544',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Wabash_County_Courthouse_in_Mount_Carmel.jpg/960px-Wabash_County_Courthouse_in_Mount_Carmel.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Mount Carmel, Illinois (Bigfoot Seen Near Wabash River)',
     description: '',
@@ -13836,6 +14438,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-547',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Foley%2C_Foley_%26_Peden_-_Martinsville%2C_IN.jpg/960px-Foley%2C_Foley_%26_Peden_-_Martinsville%2C_IN.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Martinsville, Indiana (Bigfoot at Pond.)',
     description: 'Summer 1999 - 2 men fishing seen large bigfoot next to fishing pond. Push pin is general area. read the full report at http://www.thecryptocrew.com/2015/02/bigfoot-sighting-in-indiana.html',
@@ -13844,6 +14447,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-548',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Wabash_County_Courthouse_in_Mount_Carmel.jpg/960px-Wabash_County_Courthouse_in_Mount_Carmel.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Mount Carmel, Illinois (Young Bigfoot seen in River bed)',
     description: '',
@@ -13852,6 +14456,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-550',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Manchester_%26_Salford_Skyline_2020.jpg/960px-Manchester_%26_Salford_Skyline_2020.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Salford, England, GB (Male Bigfoot Seen)',
     description: '',
@@ -13860,6 +14465,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-552',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/20030726_19_Rosiclare%2C_IL.jpg/960px-20030726_19_Rosiclare%2C_IL.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Rosiclare, Illinois (Scavenging Bigfoot)',
     description: '2/2001 - Family driving home witness a Bigfoot taking some road kill. Push pin is general area. Read the full details at http://www.thecryptocrew.com/2015/03/scavenging-shawnee-bigfoot.html',
@@ -13868,6 +14474,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-553',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Main_at_Grace_in_Pikeville.jpg/960px-Main_at_Grace_in_Pikeville.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Pikeville, Kentucky (Coon Hunters Encounter Bigfoot)',
     description: '',
@@ -13876,6 +14483,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-555',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Keokuk_iowa.jpg/960px-Keokuk_iowa.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Keokuk, Iowa (Bigfoot seen in creek)',
     description: '8/27/2000 - 3 men witness a bigfoot in Lamalees creek. Push pin is general area. Read full report at http://www.thecryptocrew.com/2015/04/bigfoot-sighting-report-from-iowa.html',
@@ -13884,6 +14492,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-556',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Deerfield_Town_Offices%2C_Deerfield_NH.jpg/960px-Deerfield_Town_Offices%2C_Deerfield_NH.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Deerfield, New Hampshire (Bigfoot at Dump)',
     description: '',
@@ -13892,6 +14501,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-558',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/BethelME_Common.jpg/960px-BethelME_Common.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Bethel, Maine (Bigfoot seen in Grafton Notch Park)',
     description: '',
@@ -13908,6 +14518,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-561',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Madera%2C_California_-_Aerial_%2849394852076%29.jpg/960px-Madera%2C_California_-_Aerial_%2849394852076%29.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Madera, California (Object Seen in Sky)',
     description: '',
@@ -13916,6 +14527,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-563',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Broad_Street%2C_Downtown_Kingsport%2C_TN.jpg/960px-Broad_Street%2C_Downtown_Kingsport%2C_TN.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Kingsport, Tennessee (Massive UFO Cluster)',
     description: '',
@@ -13932,6 +14544,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-567',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Russell_Lee%2C_On_main_street_of_Cascade%2C_Idaho%2C_1941.jpg/960px-Russell_Lee%2C_On_main_street_of_Cascade%2C_Idaho%2C_1941.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Cascade, Idaho (Man chases Bigfoot after sightings)',
     description: '',
@@ -13940,6 +14553,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-569',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/NewAlbanyFromOhioRiver.jpg/960px-NewAlbanyFromOhioRiver.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'New Albany, Indiana (Possible Tracks Near Ohio River)',
     description: '5/24/15 - A man and his son out for a fishing trip find possible Bigfoot tracks. Read the full report at  http://www.thecryptocrew.com/2015/05/possible-bigfoot-tracks-found-near-ohio.html',
@@ -13948,6 +14562,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-570',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Loyall-from-840-ky.jpg/960px-Loyall-from-840-ky.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Couple find track)',
     description: '2013 - While out on their ATV a couple find a bigfoot track. Read the details at http://www.thecryptocrew.com/2015/05/couple-fines-track-while-4-wheelin.html Pin is general area and not on target',
@@ -13964,6 +14579,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-575',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Main_Street%2C_Elizabethtown.jpg/960px-Main_Street%2C_Elizabethtown.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Elizabethtown, Illinois (Howls and Whoops)',
     description: '',
@@ -13972,6 +14588,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-577',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Town_of_Atoka_Sign%2C_Atoka%2C_Tennessee.JPG/960px-Town_of_Atoka_Sign%2C_Atoka%2C_Tennessee.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Atoka, Tennessee (Bigfoot seen in field)',
     description: '6/1/15 - Woman see possible bigfoot standing in a field. Makes return trip and finds tracks. Push pin is general area. Read the full report at http://www.thecryptocrew.com/2015/07/bigfoot-sighting-in-tennessee.html',
@@ -13980,6 +14597,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-580',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Sudbury_downtown.JPG/960px-Sudbury_downtown.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Greater Sudbury, Ontario, CA (UFO photographed?)',
     description: '',
@@ -13988,6 +14606,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-582',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Westover_Bridge_2017a.jpg/960px-Westover_Bridge_2017a.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Westover, West Virginia (Man has sighting while looking for deer)',
     description: '',
@@ -13996,6 +14615,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-584',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/TX_Van_Zandt_County_Van.svg/960px-TX_Van_Zandt_County_Van.svg.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Van, Texas (Hog Hunter Spots Bigfoot)',
     description: '',
@@ -14004,6 +14624,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-586',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Cave_Junction%2C_Oregon_1.jpg/960px-Cave_Junction%2C_Oregon_1.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Cave Junction, Oregon (Best UFO picture Ever?)',
     description: '1927 - Fireman takes clear photo of a UFO. Get the story and details',
@@ -14020,6 +14641,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-589',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Aerial_view_of_Murray%2C_Kentucky%2C_October_2020.JPG/960px-Aerial_view_of_Murray%2C_Kentucky%2C_October_2020.JPG'],
     relatedIds: ['werewolf-lycanthropy-dogman'],
     parentId: 'bigfoot-sightings-br',
     name: 'Murray, Kentucky (Possible Dogman seen)',
@@ -14029,6 +14651,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-591',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Vonder_Ahe_House_-_Molalla_Oregon.jpg/960px-Vonder_Ahe_House_-_Molalla_Oregon.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Molalla, Oregon (Bigfoot behind cabins)',
     description: '',
@@ -14037,6 +14660,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-595',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Harlan_County_Kentucky_Courthouse.jpg/960px-Harlan_County_Kentucky_Courthouse.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Harlan, Kentucky (Bigfoot Near River)',
     description: '',
@@ -14045,6 +14669,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-597',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Rainy_Day_in_Lakeland_Village%2C_California.jpg/960px-Rainy_Day_in_Lakeland_Village%2C_California.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Lakeland Village, California (Creature seen on 74 Ortega hwy)',
     description: '',
@@ -14061,6 +14686,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-601',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Downtown_London_KY.jpg/960px-Downtown_London_KY.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'London, Kentucky (Possible Bigfoot Tracks)',
     description: '12/03/15 - Woman find possible Bigfoot tracks near her home. Also reports of strange sounds. Push pin in general area. Read full report at  http://www.thecryptocrew.com/2015/12/possible-bigfoot-tracks-found-in.html',
@@ -14069,6 +14695,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-602',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Lone_Oak_Baptist_Church.jpg/960px-Lone_Oak_Baptist_Church.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Lone Oak, Tennessee (Bigfoot next to creek)',
     description: '',
@@ -14085,6 +14712,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-606',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Temple%2C_Georgia_city_hall.JPG/960px-Temple%2C_Georgia_city_hall.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Temple, Georgia (Something near the lake)',
     description: '',
@@ -14093,6 +14721,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-608',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Hopkins_County_Courthouse_KY.JPG/960px-Hopkins_County_Courthouse_KY.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Madisonville, Kentucky (Driver Sees Bigfoot)',
     description: '',
@@ -14101,6 +14730,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-610',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Franklin-County-Courthouse-Winchester-tn1.jpg/960px-Franklin-County-Courthouse-Winchester-tn1.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Winchester, Tennessee (White Bigfoot Seen several times)',
     description: '',
@@ -14109,6 +14739,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-612',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Chapel_at_Highland_Cemetery%2C_Kentucky_03.JPG/960px-Chapel_at_Highland_Cemetery%2C_Kentucky_03.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Fort Mitchell, Kentucky (Howl Heard by Two People)',
     description: '11/14 - Two people on a break hear a sound that was terrifying',
@@ -14117,6 +14748,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-613',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Loyall-from-840-ky.jpg/960px-Loyall-from-840-ky.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Daytime Howl)',
     description: '',
@@ -14125,6 +14757,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-615',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Morristown_Main_Street_looking_east.jpg/960px-Morristown_Main_Street_looking_east.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Morristown, Tennessee (UFO in Night Sky)',
     description: 'Winter of 2005 or 06 - Dark object seen moving slowly and making no sound. Push pin is general area. Read full report and details at http://www.thecryptocrew.com/2016/04/ufo-report-morristown-tennessee.html',
@@ -14133,6 +14766,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-616',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Millington_TN_02_welcome_sign_Singleton_Pkwy.jpg/960px-Millington_TN_02_welcome_sign_Singleton_Pkwy.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Millington, Tennessee (Bigfoot stalks giggers)',
     description: '',
@@ -14141,6 +14775,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-620',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Rainelle_2017_by_Lukas_Ray.jpg/960px-Rainelle_2017_by_Lukas_Ray.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Rainelle, West Virginia (Dark figure)',
     description: 'Knocks and Howls',
@@ -14149,6 +14784,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-622',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Downtown_Tecumseh_Michigan.JPG/960px-Downtown_Tecumseh_Michigan.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Tecumseh, Michigan (Deer Hunter encounters Bigfoot)',
     description: '',
@@ -14157,6 +14793,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-624',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/HuronStHistoricDistrictBerlinWisconsinWIS49.jpg/960px-HuronStHistoricDistrictBerlinWisconsinWIS49.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Berlin, Wisconsin (UFO Seen)',
     description: '',
@@ -14165,6 +14802,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-626',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Main_at_Grace_in_Pikeville.jpg/960px-Main_at_Grace_in_Pikeville.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Pikeville, Kentucky (Wood Knocks and Glowing eyes)',
     description: '',
@@ -14173,6 +14811,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-628',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Loyall-from-840-ky.jpg/960px-Loyall-from-840-ky.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Round Silver UFO)',
     description: '',
@@ -14197,6 +14836,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-634',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Loyall-from-840-ky.jpg/960px-Loyall-from-840-ky.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Bigfoot near a pond)',
     description: '',
@@ -14221,6 +14861,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-640',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Downtown_Hindman.jpg/960px-Downtown_Hindman.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Hindman, Kentucky (Bigfoot Tracks Found)',
     description: '',
@@ -14229,6 +14870,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-642',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Coshocton_County_Courthouse_rear.jpg/960px-Coshocton_County_Courthouse_rear.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Coshocton, Ohio (Bigfoot sighting)',
     description: '',
@@ -14237,6 +14879,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-644',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Eastward_on_Main_from_Myers.jpg/960px-Eastward_on_Main_from_Myers.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Cumberland, Kentucky (Bigfoot Steals Dog)',
     description: '',
@@ -14245,6 +14888,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-646',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Burke_County_Georgia_Incorporated_and_Unincorporated_areas_Sardis_Highlighted.svg/960px-Burke_County_Georgia_Incorporated_and_Unincorporated_areas_Sardis_Highlighted.svg.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Sardis, Georgia (Bigfoot Steals Pears)',
     description: '',
@@ -14253,6 +14897,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-648',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/The_Dalles_OR_with_Columbia_River.jpg/960px-The_Dalles_OR_with_Columbia_River.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'The Dalles, Oregon (Bigfoot Seen at Water Trough)',
     description: '',
@@ -14261,6 +14906,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-650',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Pendleton_County_Courthouse_at_Franklin_West_Virginia.jpg/960px-Pendleton_County_Courthouse_at_Franklin_West_Virginia.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Franklin, West Virginia (Bigfoot on side of the road)',
     description: '',
@@ -14269,6 +14915,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-652',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Rockland_Union_Street.jpg/960px-Rockland_Union_Street.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Rockland, Massachusetts (Teens See Bigfoot in Field)',
     description: '',
@@ -14277,6 +14924,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-654',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Bodfish_and_Lake_Isabella_California.JPG/960px-Bodfish_and_Lake_Isabella_California.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Bodfish, California (Weird Things In Bodfish)',
     description: '',
@@ -14285,6 +14933,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-656',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Fairfax_St_and_N_Washington_St_Berkeley_Springs_WV_2022-08-05_13-14-17.jpg/960px-Fairfax_St_and_N_Washington_St_Berkeley_Springs_WV_2022-08-05_13-14-17.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Berkeley Springs, West Virginia (UFO Near Rainbow?)',
     description: '',
@@ -14293,6 +14942,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-658',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Humboldt_County_California_Incorporated_and_Unincorporated_areas_Westhaven-Moonstone_Highlighted.svg/960px-Humboldt_County_California_Incorporated_and_Unincorporated_areas_Westhaven-Moonstone_Highlighted.svg.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Westhaven-Moonstone, California (Bigfoot seen near trees)',
     description: '',
@@ -14301,6 +14951,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-662',
+    images: ['https://thumb.wikimedia.org/wikipedia/en/thumb/1/13/Myrtle_Creek%2C_City_Hall%2C_Wikipedia.jpg/960px-Myrtle_Creek%2C_City_Hall%2C_Wikipedia.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Myrtle Creek, Oregon (Bigfoot Tracks Found)',
     description: '',
@@ -14309,6 +14960,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-664',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Loyall-from-840-ky.jpg/960px-Loyall-from-840-ky.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Horses riders encounter bigfoot.)',
     description: '',
@@ -14317,6 +14969,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-666',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Boone_County_Kentucky_incorporated_and_unincorporated_areas_Verona_highlighted.svg/960px-Boone_County_Kentucky_incorporated_and_unincorporated_areas_Verona_highlighted.svg.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Verona, Kentucky (Hunter encounters Bigfoot)',
     description: '',
@@ -14325,6 +14978,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-668',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Harlan_County_Kentucky_Courthouse.jpg/960px-Harlan_County_Kentucky_Courthouse.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Harlan, Kentucky (Possible Bigfoot Track)',
     description: '',
@@ -14333,6 +14987,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-670',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Eastward_on_Main_from_Myers.jpg/960px-Eastward_on_Main_from_Myers.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Cumberland, Kentucky (Bigfoot Sighting)',
     description: '',
@@ -14341,6 +14996,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-672',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Green%2C_Oregon.jpg/960px-Green%2C_Oregon.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Green, Oregon (Possible Bigfoot Track)',
     description: '',
@@ -14365,6 +15021,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-678',
+    images: ['https://thumb.wikimedia.org/wikipedia/en/thumb/1/13/Myrtle_Creek%2C_City_Hall%2C_Wikipedia.jpg/960px-Myrtle_Creek%2C_City_Hall%2C_Wikipedia.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Myrtle Creek, Oregon (More Bigfoot Tracks)',
     description: '',
@@ -14373,6 +15030,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-680',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Pineville%2C_KY_spring.jpg/960px-Pineville%2C_KY_spring.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Pineville, Kentucky (Bigfoot Track)',
     description: '',
@@ -14381,6 +15039,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-682',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Burke_County_Georgia_Incorporated_and_Unincorporated_areas_Sardis_Highlighted.svg/960px-Burke_County_Georgia_Incorporated_and_Unincorporated_areas_Sardis_Highlighted.svg.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Sardis, Georgia (Driver has sighting)',
     description: '',
@@ -14389,6 +15048,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-684',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Front_north_of_Ford_in_Prestonsburg.jpg/960px-Front_north_of_Ford_in_Prestonsburg.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Prestonsburg, Kentucky (Sighting in 05 & Tracks in 17)',
     description: '',
@@ -14397,6 +15057,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-686',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Williamsburg%2C_Kentucky.jpg/960px-Williamsburg%2C_Kentucky.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Williamsburg, Kentucky (Bigfoot Seen On Old Logging Road)',
     description: '',
@@ -14405,6 +15066,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-688',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Fredericton%2C_New_Brunswick_aerial_view_%28cropped%29.jpg/960px-Fredericton%2C_New_Brunswick_aerial_view_%28cropped%29.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Fredericton, New Brunswick, CA (Bigfoot seen in hay field)',
     description: '',
@@ -14413,6 +15075,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-690',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/North-Main-Jellico-tn1.jpg/960px-North-Main-Jellico-tn1.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Jellico, Tennessee (ATV Rider Has Bigfoot Sighting)',
     description: '',
@@ -14421,6 +15084,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-692',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Clark_County_Missouri_Incorporated_and_Unincorporated_areas_Kahoka_Highlighted.svg/960px-Clark_County_Missouri_Incorporated_and_Unincorporated_areas_Kahoka_Highlighted.svg.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Kahoka, Missouri (Large Track Found)',
     description: '',
@@ -14429,6 +15093,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-694',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Glide_Store.jpg/960px-Glide_Store.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Glide, Oregon (Couple Find Bigfoot Tracks)',
     description: '',
@@ -14437,6 +15102,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-696',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Sutton_West_Virginia.jpg/960px-Sutton_West_Virginia.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Sutton, West Virginia (2 Men see Bigfoot)',
     description: '',
@@ -14445,6 +15111,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-698',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Shady_cove_city_hall.jpg/960px-Shady_cove_city_hall.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Shady Cove, Oregon (Couple Find Tracks)',
     description: '',
@@ -14453,6 +15120,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-700',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Wolfe_County%2C_Kentucky_courthouse.jpg/960px-Wolfe_County%2C_Kentucky_courthouse.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Campton, Kentucky (Bigfoot Chases ATV)',
     description: '',
@@ -14461,6 +15129,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-702',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Sullivan%2C_Missouri.jpg/960px-Sullivan%2C_Missouri.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Sullivan, Missouri (Bigfoot Shot 9 Times!)',
     description: '',
@@ -14469,6 +15138,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-704',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Whatcom_County_Washington_Incorporated_and_Unincorporated_areas_Marietta-Alderwood_Highlighted.svg/960px-Whatcom_County_Washington_Incorporated_and_Unincorporated_areas_Marietta-Alderwood_Highlighted.svg.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Marietta, Washington (Bigfoot Terrorizes 78 Year Old Woman!)',
     description: '10/23/1975 - Police are called after an apparent Bigfoot tried to break into the house of a 78 year old woman. The woman became so frightened that she fled the house out of total fear. The Bigfoot damaged not only the house but also the smokehouse that was on the property. Push Pin is general area. Read the full details at http://www.thecryptocrew.com/2018/01/bigfoot-terrorizes-78-year-old-woman.html',
@@ -14477,6 +15147,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-706',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Overview_of_the_town_of_Wrangell%2C_AK_June_7th_2016.jpg/960px-Overview_of_the_town_of_Wrangell%2C_AK_June_7th_2016.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Wrangell, Alaska (Hairy man Tells Hunter - Leave us Alone!)',
     description: '1979 - The follow account comes from a refrigeration mechanic by the name of Dana Jacallen.Jacallen\'s fascination with the creatures goes back to a cold morning in 1979 in the remote Etolin Island area near Wrangell. Push pin is general area. Read the details and other reports at http://www.thecryptocrew.com/2018/01/hairy-man-tells-hunter-leave-us-alone.html',
@@ -14485,6 +15156,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-707',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Overview_of_the_town_of_Wrangell%2C_AK_June_7th_2016.jpg/960px-Overview_of_the_town_of_Wrangell%2C_AK_June_7th_2016.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Wrangell, Alaska (Missing Child Returned by Bigfoot)',
     description: '',
@@ -14493,6 +15165,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-709',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Harrogate-US25E-tn.jpg/960px-Harrogate-US25E-tn.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Harrogate, Tennessee (Bigfoot around house)',
     description: '',
@@ -14509,6 +15182,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-713',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Main_Cross_in_downtown_Louisa.jpg/960px-Main_Cross_in_downtown_Louisa.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Louisa, Kentucky (White Bigfoot Seen)',
     description: '',
@@ -14517,6 +15191,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-715',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Madison_County_Illinois_Incorporated_and_Unincorporated_areas_Worden_Highlighted.svg/960px-Madison_County_Illinois_Incorporated_and_Unincorporated_areas_Worden_Highlighted.svg.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Worden, Illinois (Bigfoot Runs Across Dirt Road)',
     description: '',
@@ -14525,6 +15200,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-717',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Jackson_County%2C_Kentucky_courthouse.jpg/960px-Jackson_County%2C_Kentucky_courthouse.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'McKee, Kentucky (Possible Bigfoot Seen in Jackson County)',
     description: '12/2017 - Couple driving home see a large dark figure on the side of the road. Push pin is general area. Read full details by clicking the link https://www.thecryptocrew.com/2018/04/possible-bigfoot-seen-in-jackson-county.html',
@@ -14533,6 +15209,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-718',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Loyall-from-840-ky.jpg/960px-Loyall-from-840-ky.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Teen Has Bigfoot Sighting!)',
     description: '',
@@ -14541,6 +15218,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-720',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Cutlerville%2C_MI_location.png/960px-Cutlerville%2C_MI_location.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Cutlerville, Michigan (Blonde Bigfoot Startles Woman)',
     description: '',
@@ -14549,6 +15227,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-724',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Crocker%2C_Missouri.jpg/960px-Crocker%2C_Missouri.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Crocker, Missouri (Possible Young Bigfoot Seen)',
     description: '',
@@ -14557,6 +15236,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-726',
+    images: ['https://thumb.wikimedia.org/wikipedia/en/thumb/1/13/Myrtle_Creek%2C_City_Hall%2C_Wikipedia.jpg/960px-Myrtle_Creek%2C_City_Hall%2C_Wikipedia.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Myrtle Creek, Oregon (Possible Bigfoot Track Found)',
     description: '',
@@ -14565,6 +15245,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-729',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Harlan_County_Kentucky_Courthouse.jpg/960px-Harlan_County_Kentucky_Courthouse.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Harlan, Kentucky (Bigfoot Tracks Found)',
     description: '',
@@ -14573,6 +15254,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-731',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Lovern_and_Main%2C_Hazard.jpg/960px-Lovern_and_Main%2C_Hazard.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Hazard, Kentucky (Hunters Encounter Bigfoot)',
     description: '',
@@ -14581,6 +15263,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-733',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Pineville%2C_KY_spring.jpg/960px-Pineville%2C_KY_spring.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Pineville, Kentucky (Shots Fired in Possible Bigfoot Abduction)',
     description: '',
@@ -14589,6 +15272,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-735',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Cole_Harbour%2C_Home_of_Sidney_Crosby_%28cropped%29.jpg/960px-Cole_Harbour%2C_Home_of_Sidney_Crosby_%28cropped%29.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Cole Harbour, Nova Scotia, CA (Bigfoot Standing Near Trees)',
     description: '',
@@ -14597,6 +15281,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-738',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Harlan_County_Kentucky_Courthouse.jpg/960px-Harlan_County_Kentucky_Courthouse.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Harlan, Kentucky (Bigfoot Track Found & Cast)',
     description: '',
@@ -14605,6 +15290,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-740',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Williamsburg%2C_Kentucky.jpg/960px-Williamsburg%2C_Kentucky.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Williamsburg, Kentucky (Kayak Fisherman spots Bigfoot)',
     description: '',
@@ -14613,6 +15299,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-742',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Harlan_County_Kentucky_Courthouse.jpg/960px-Harlan_County_Kentucky_Courthouse.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Harlan, Kentucky (Bigfoot standing)',
     description: '',
@@ -14621,6 +15308,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-744',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Morgan_west_of_Kentucky%2C_Pennington_Gap.jpg/960px-Morgan_west_of_Kentucky%2C_Pennington_Gap.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Pennington Gap, Virginia (Possible UFO)',
     description: '',
@@ -14637,6 +15325,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-748',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Pineville%2C_KY_spring.jpg/960px-Pineville%2C_KY_spring.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Pineville, Kentucky (Bigfoot Crosses Road)',
     description: '',
@@ -14645,6 +15334,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-750',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Harlan_County_Kentucky_Courthouse.jpg/960px-Harlan_County_Kentucky_Courthouse.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Harlan, Kentucky (Possible Bigfoot Tracks)',
     description: '',
@@ -14653,6 +15343,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-753',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Elliott_County%2C_Kentucky_courthouse.jpg/960px-Elliott_County%2C_Kentucky_courthouse.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Sandy Hook, Kentucky (Road sighting)',
     description: '',
@@ -14661,6 +15352,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-755',
+    images: ['https://thumb.wikimedia.org/wikipedia/en/thumb/1/13/Myrtle_Creek%2C_City_Hall%2C_Wikipedia.jpg/960px-Myrtle_Creek%2C_City_Hall%2C_Wikipedia.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Myrtle Creek, Oregon (Large Bigfoot seen)',
     description: '',
@@ -14669,6 +15361,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-757',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Winston%2C_Oregon.jpg/960px-Winston%2C_Oregon.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Winston, Oregon (Bigfoot Charges Car)',
     description: '',
@@ -14677,6 +15370,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-759',
+    images: ['https://thumb.wikimedia.org/wikipedia/en/thumb/1/13/Myrtle_Creek%2C_City_Hall%2C_Wikipedia.jpg/960px-Myrtle_Creek%2C_City_Hall%2C_Wikipedia.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Myrtle Creek, Oregon (Reddish Bigfoot)',
     description: '',
@@ -14685,6 +15379,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-761',
+    images: ['https://thumb.wikimedia.org/wikipedia/en/thumb/6/6d/Downtown_Whitesburg_Kentucky.JPG/960px-Downtown_Whitesburg_Kentucky.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Whitesburg, Kentucky (Bigfoot Howls)',
     description: '',
@@ -14693,6 +15388,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-765',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Pendleton_County_Courthouse_at_Franklin_West_Virginia.jpg/960px-Pendleton_County_Courthouse_at_Franklin_West_Virginia.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Franklin, West Virginia (Bigfoot seen twice)',
     description: '',
@@ -14709,6 +15405,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-770',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Pineville%2C_KY_spring.jpg/960px-Pineville%2C_KY_spring.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Pineville, Kentucky (Bigfoot Seen in early AM)',
     description: '',
@@ -14717,6 +15414,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-774',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Loyall-from-840-ky.jpg/960px-Loyall-from-840-ky.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Mushroom Hunters Find Tracks)',
     description: '',
@@ -14733,6 +15431,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-778',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Nevada_Iowa_20090816_Welcome_Sign.JPG/960px-Nevada_Iowa_20090816_Welcome_Sign.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Nevada, Iowa (walkers spot Bigfoot)',
     description: '',
@@ -14741,6 +15440,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-780',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/WythevilleMainStreet.jpg/960px-WythevilleMainStreet.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Wytheville, Virginia (Large UFO Seen!)',
     description: '',
@@ -14749,6 +15449,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-783',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Loyall-from-840-ky.jpg/960px-Loyall-from-840-ky.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Multiple Bigfoot Sighting)',
     description: '',
@@ -14757,6 +15458,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-785',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Pineville%2C_KY_spring.jpg/960px-Pineville%2C_KY_spring.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Pineville, Kentucky (Multiple Sightings)',
     description: '',
@@ -14765,6 +15467,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-787',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Loyall-from-840-ky.jpg/960px-Loyall-from-840-ky.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (UFO Sighting and Interview)',
     description: '',
@@ -14773,6 +15476,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-789',
+    images: ['https://thumb.wikimedia.org/wikipedia/en/thumb/1/13/Myrtle_Creek%2C_City_Hall%2C_Wikipedia.jpg/960px-Myrtle_Creek%2C_City_Hall%2C_Wikipedia.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Myrtle Creek, Oregon (Possible Bigfoot Encounter)',
     description: '',
@@ -14781,6 +15485,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-791',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Lovern_and_Main%2C_Hazard.jpg/960px-Lovern_and_Main%2C_Hazard.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Hazard, Kentucky (Bigfoot Sighting)',
     description: '',
@@ -14789,6 +15494,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-793',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Grantsville_Utah_City_Office.jpeg/960px-Grantsville_Utah_City_Office.jpeg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Grantsville, Utah (UFO Seen in Dugway)',
     description: '',
@@ -14797,6 +15503,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-795',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Campbell_County_VA_courthouse.jpg/960px-Campbell_County_VA_courthouse.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Rustburg, Virginia (Bigfoot Crosses the Road)',
     description: '',
@@ -14805,6 +15512,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-797',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Harlan_County_Kentucky_Courthouse.jpg/960px-Harlan_County_Kentucky_Courthouse.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Harlan, Kentucky (Hunter finds Tracks)',
     description: '',
@@ -14829,6 +15537,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-806',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Downtown_Maysville_NC.jpg/960px-Downtown_Maysville_NC.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Maysville, North Carolina (Bigfoot Encounter and Track Castings)',
     description: '4/27/2020 Bigfoot Encounter and Track Castings - A night research trip turns a little frightful but yields good results. Push pin is general area. Read full report at https://www.thecryptocrew.com/2020/05/bigfoot-encounter-and-track-castings.html',
@@ -14845,6 +15554,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-809',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Newbury_NH_11-16-25.jpg/960px-Newbury_NH_11-16-25.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Newbury, New Hampshire (Large Humanoid Seen In New Hampshire - Maybe a Bigfoot?)',
     description: '05/20/2018 - Large Humanoid Seen In New Hampshire - Maybe a Bigfoot? Push pin is general area. Read the full report at - https://www.thecryptocrew.com/2020/05/large-humanoid-seen-in-new-hampshire.html',
@@ -14853,6 +15563,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-810',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Colorado_Springs%2C_Colorado_%28cropped%29.jpg/960px-Colorado_Springs%2C_Colorado_%28cropped%29.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Colorado Springs, Colorado (UFO Over Colorado Springs)',
     description: 'Colorado',
@@ -14861,6 +15572,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-811',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Vista_Gateway.jpg/960px-Vista_Gateway.jpg'],
     relatedIds: ['anomaly-UFO-phoenix-lights-1997'],
     parentId: 'bigfoot-sightings-br',
     name: 'Vista, California (Strange Lights Seen)',
@@ -14870,6 +15582,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-812',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/EM_ST._GEORGE%2C_UTAH_%282624012794%29.jpg/960px-EM_ST._GEORGE%2C_UTAH_%282624012794%29.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Saint George, Utah (UFOs Filmed)',
     description: '5/12/20 - Flashing objects filmed during the day time. Push pin is on target. Read report and watch video at https://www.thecryptocrew.com/2020/05/ufos-filmed-in-utah.html',
@@ -14878,6 +15591,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-813',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Williamsburg%2C_Kentucky.jpg/960px-Williamsburg%2C_Kentucky.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Williamsburg, Kentucky (Object In Sky)',
     description: '',
@@ -14894,6 +15608,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-817',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Ipswich_School.jpg/960px-Ipswich_School.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Ipswich, England, GB (Bright orange lights in the sky)',
     description: '6/19/2020 - Several objects captured on film. Push pin is general area. Read the full report and watch the video at https://www.thecryptocrew.com/2020/06/ufos-over-england.html',
@@ -14910,6 +15625,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-819',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Englehart_Ontario.JPG/960px-Englehart_Ontario.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Englehart, Ontario, CA (UFO Filmed)',
     description: '',
@@ -14918,6 +15634,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-821',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Shamokin%2C_PA_Keystone_Marker.jpg/960px-Shamokin%2C_PA_Keystone_Marker.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Shamokin, Pennsylvania (Very bright white flying object)',
     description: '6/3/20 - witness observed a very bright white flying object moving rapidly into sky',
@@ -14926,6 +15643,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-822',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Williams_Country_Store.jpg/960px-Williams_Country_Store.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Williams, Oregon (Possible Bigfoot seen)',
     description: '',
@@ -14934,6 +15652,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-824',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/2016WIKI_DowntownJeffersonville_June13.jpg/960px-2016WIKI_DowntownJeffersonville_June13.jpg'],
     relatedIds: ['anomaly-Giants---Nephilim---Elongated-Skulls---Horns-220'],
     parentId: 'bigfoot-sightings-br',
     name: 'Jeffersonville, Indiana (UFOs Watches Fireworks)',
@@ -14943,6 +15662,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-827',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/ChrisLitherlandCanonCity.jpg/960px-ChrisLitherlandCanonCity.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Canon City, Colorado (UFO Filmed)',
     description: '',
@@ -14951,6 +15671,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-829',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Aerial_view_of_Murray%2C_Kentucky%2C_October_2020.JPG/960px-Aerial_view_of_Murray%2C_Kentucky%2C_October_2020.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Murray, Kentucky (Silver Triangle UFO)',
     description: '',
@@ -14959,6 +15680,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-831',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Johnson_County_Courthouse_in_Vienna.jpg/960px-Johnson_County_Courthouse_in_Vienna.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Vienna, Illinois (Bigfoot Sighting in Shawnee National Forest)',
     description: '8/11/20 - While camping in SNF man encounters possible bigfoot. Push pin is general area. Read the full report at http://www.thecryptocrew.com/2020/08/bigfoot-sighting-in-shawnee-national.html',
@@ -14967,6 +15689,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-832',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Kansas_Capitol.jpg/960px-Kansas_Capitol.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Topeka, Kansas (Door Cam Catches UFO)',
     description: '',
@@ -14975,6 +15698,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-834',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Coweta_County_Courthouse.jpg/960px-Coweta_County_Courthouse.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Newnan, Georgia (Doorbell Camera Catches UFO)',
     description: '',
@@ -14983,6 +15707,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-836',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Rainelle_2017_by_Lukas_Ray.jpg/960px-Rainelle_2017_by_Lukas_Ray.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Rainelle, West Virginia (Man has Bigfoot Sighting)',
     description: '',
@@ -14991,6 +15716,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-838',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Downtown_Brentwood_California.jpg/960px-Downtown_Brentwood_California.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Brentwood, California (Triangle UFO Sighting)',
     description: '',
@@ -14999,6 +15725,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-840',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Sutherlin_Bank_Building_-_Sutherlin_Oregon.jpg/960px-Sutherlin_Bank_Building_-_Sutherlin_Oregon.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Sutherlin, Oregon (Bigfoot Howls or Screams)',
     description: '',
@@ -15007,6 +15734,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-842',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Pineville%2C_KY_spring.jpg/960px-Pineville%2C_KY_spring.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Pineville, Kentucky (Bigfoot Takes Apples)',
     description: '',
@@ -15015,6 +15743,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-844',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Pineville%2C_KY_spring.jpg/960px-Pineville%2C_KY_spring.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Pineville, Kentucky (Screams)',
     description: '1940s - This is an old report handed down from mother to daughter. There are actually 2 reports',
@@ -15023,6 +15752,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-845',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Main_Street_in_central_Hyden.jpg/960px-Main_Street_in_central_Hyden.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Hyden, Kentucky (Bigfoot in Creek)',
     description: '',
@@ -15031,6 +15761,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-847',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Arkansas_County_Courthouse-Southern_District.jpg/960px-Arkansas_County_Courthouse-Southern_District.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'De Witt, Arkansas (Huge Bigfoot seen)',
     description: '',
@@ -15039,6 +15770,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-849',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Guildford_%26_Cathedral_of_Surrey.JPG/960px-Guildford_%26_Cathedral_of_Surrey.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Guildford, England, GB (2 Glowing Objects)',
     description: '',
@@ -15055,6 +15787,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-853',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Spring_Hill_City_Hall.JPG/960px-Spring_Hill_City_Hall.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Spring Hill, Tennessee (Man Chases UFO)',
     description: '',
@@ -15063,6 +15796,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-855',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Frisco_Square_-_20261020.jpg/960px-Frisco_Square_-_20261020.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Frisco, Texas (UFO Filmed Over Frisco)',
     description: '',
@@ -15071,6 +15805,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-857',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Lincoln_Park%2C_Colorado.JPG/960px-Lincoln_Park%2C_Colorado.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Lincoln Park, Colorado (UFOs filmed)',
     description: '',
@@ -15087,6 +15822,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-861',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/East_5th_Street_Historic_District%2C_East_Liverpool%2C_Ohio_July_2022.jpg/960px-East_5th_Street_Historic_District%2C_East_Liverpool%2C_Ohio_July_2022.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'East Liverpool, Ohio (Bigfoot Encounter - Tracks Found)',
     description: '',
@@ -15095,6 +15831,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-863',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Bakermainstreet.jpg/960px-Bakermainstreet.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Baker City, Oregon (Bright Red Lights)',
     description: '',
@@ -15103,6 +15840,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-865',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Shoshone_County_Idaho_Incorporated_and_Unincorporated_areas_Pinehurst_Highlighted_1663100.svg/960px-Shoshone_County_Idaho_Incorporated_and_Unincorporated_areas_Pinehurst_Highlighted_1663100.svg.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Pinehurst, Idaho (Cigar Shaped UFO)',
     description: '',
@@ -15111,6 +15849,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-867',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Chicago_River_ferry_b.jpg/960px-Chicago_River_ferry_b.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Chicago, Illinois (Chicago UFO)',
     description: '',
@@ -15127,6 +15866,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-871',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Loyall-from-840-ky.jpg/960px-Loyall-from-840-ky.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Kentucky UFO)',
     description: '',
@@ -15135,6 +15875,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-873',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Weston%2C_Florida_-_Aerial.jpg/960px-Weston%2C_Florida_-_Aerial.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Weston, Florida (UFO Flap)',
     description: '',
@@ -15143,6 +15884,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-875',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Waterford_Charter_Township%2C_MI_location.png/960px-Waterford_Charter_Township%2C_MI_location.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Waterford, Michigan (Glowing Orb Filmed)',
     description: '',
@@ -15151,6 +15893,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-877',
+    images: ['https://thumb.wikimedia.org/wikipedia/en/thumb/7/7d/Edwardsville.jpg/960px-Edwardsville.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Edwardsville, Kansas (2 Triangle Craft)',
     description: '',
@@ -15159,6 +15902,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-881',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Jamaica_Av_Sutphin_Blvd_jeh.jpg/960px-Jamaica_Av_Sutphin_Blvd_jeh.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Jamaica, New York (UFO Seen and photographed)',
     description: '',
@@ -15175,6 +15919,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-885',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Roscoe_Texas_grain_elevator_2011.jpg/960px-Roscoe_Texas_grain_elevator_2011.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Roscoe, Texas (Sphere shaped Object)',
     description: '',
@@ -15183,6 +15928,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-887',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Lovern_and_Main%2C_Hazard.jpg/960px-Lovern_and_Main%2C_Hazard.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Hazard, Kentucky (Possible Bigfoot Jumps on Van)',
     description: '',
@@ -15191,6 +15937,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-889',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/New_Trigg_County_Courthouse.jpg/960px-New_Trigg_County_Courthouse.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Cadiz, Kentucky (Bigfoot Sighting)',
     description: '',
@@ -15199,6 +15946,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-891',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Harlan_County_Kentucky_Courthouse.jpg/960px-Harlan_County_Kentucky_Courthouse.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Harlan, Kentucky (Campers Encounter Bigfoot)',
     description: '',
@@ -15207,6 +15955,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-893',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Harlan_County_Kentucky_Courthouse.jpg/960px-Harlan_County_Kentucky_Courthouse.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Harlan, Kentucky (Bowhunter encounters Bigfoot)',
     description: '',
@@ -15232,6 +15981,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-901',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Raymond_NH_Common_021813.jpg/960px-Raymond_NH_Common_021813.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Raymond, New Hampshire (Boy on Bicycle Followed By Possible Bigfoot)',
     description: '1980\'s - Boy on Bicycle Followed By Possible Bigfoot. A teenaged boy encountered a possible Bigfoot at the Pawtuckaway state park. Push pin is general area. read the full report at https://www.thecryptocrew.com/2021/05/boy-on-bicycle-followed-by-possible.html',
@@ -15240,6 +15990,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-903',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Musselshell_county_courthouse.jpg/960px-Musselshell_county_courthouse.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Roundup, Montana (Hikers Encounter Bigfoot)',
     description: '',
@@ -15248,6 +15999,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-905',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Belfry_of_Tielt_%28DSCF0059%29.jpg/960px-Belfry_of_Tielt_%28DSCF0059%29.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Tielt, Flanders, BE (UFO In Photo)',
     description: '',
@@ -15272,6 +16024,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-912',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Cass_County_Missouri_Courthouse_20191026-6991.jpg/960px-Cass_County_Missouri_Courthouse_20191026-6991.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Harrisonville, Missouri (Unknown Creature)',
     description: '',
@@ -15280,6 +16033,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-916',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Interstate_44_East_at_Exit_253%2C_Route_100_East%2C_Gray_Summit_exit_%281993%29.jpg/960px-Interstate_44_East_at_Exit_253%2C_Route_100_East%2C_Gray_Summit_exit_%281993%29.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Gray Summit, Missouri (Bigfoot/Ape man sighting)',
     description: '',
@@ -15288,6 +16042,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-918',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/VB_Oceanfront.jpg/960px-VB_Oceanfront.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Virginia Beach, Virginia (Possible Dogman Sighting)',
     description: '',
@@ -15296,6 +16051,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-920',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Newport-downtown-tn1.jpg/960px-Newport-downtown-tn1.jpg'],
     relatedIds: ['anomaly-Giants---Nephilim---Elongated-Skulls---Horns-218'],
     parentId: 'bigfoot-sightings-br',
     name: 'Newport, Tennessee (Bigfoot Hit by Truck)',
@@ -15305,6 +16061,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-922',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Avilla%2C_Indiana.jpg/960px-Avilla%2C_Indiana.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Avilla, Indiana (Trucker Records UFO)',
     description: '',
@@ -15313,6 +16070,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-924',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Eastward_on_Main_from_Myers.jpg/960px-Eastward_on_Main_from_Myers.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Cumberland, Kentucky (Possible Dogman)',
     description: '',
@@ -15321,6 +16079,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-926',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/VB_Oceanfront.jpg/960px-VB_Oceanfront.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Virginia Beach, Virginia (Unknown Large Creature)',
     description: '',
@@ -15329,6 +16088,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-928',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Harlan_County_Kentucky_Courthouse.jpg/960px-Harlan_County_Kentucky_Courthouse.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Harlan, Kentucky (Possible UFO in Night Sky)',
     description: '',
@@ -15337,6 +16097,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-930',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Harlan_County_Kentucky_Courthouse.jpg/960px-Harlan_County_Kentucky_Courthouse.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Harlan, Kentucky (UFO seen in night sky)',
     description: '',
@@ -15345,6 +16106,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-932',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Uptown_Doylestown.jpg/960px-Uptown_Doylestown.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Doylestown, Ohio (Possible Dogman seen twice)',
     description: '',
@@ -15353,6 +16115,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-934',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Downtown_Mount_Sterling%2C_Kentucky.JPG/960px-Downtown_Mount_Sterling%2C_Kentucky.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Mount Sterling, Kentucky (Possible Bigfoot Seen in Field)',
     description: '',
@@ -15361,6 +16124,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-936',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Torquay_harbour_-_geograph.org.uk_-_5719656.jpg/960px-Torquay_harbour_-_geograph.org.uk_-_5719656.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Torquay, England, GB (Unknown Humanoid)',
     description: '',
@@ -15369,6 +16133,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-938',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Deerfield_Town_Offices%2C_Deerfield_NH.jpg/960px-Deerfield_Town_Offices%2C_Deerfield_NH.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Deerfield, New Hampshire (Summer Camp Bigfoot)',
     description: '',
@@ -15377,6 +16142,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-940',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Loyall-from-840-ky.jpg/960px-Loyall-from-840-ky.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Unknown Object)',
     description: '',
@@ -15393,6 +16159,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-944',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Astor_FL_post_office01.jpg/960px-Astor_FL_post_office01.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Astor, Florida (Woman spots UFOs)',
     description: '',
@@ -15401,6 +16168,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-946',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Burlington%2C_North_Dakota.jpg/960px-Burlington%2C_North_Dakota.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Burlington, North Dakota (UFO Filmed Early in Morning)',
     description: '',
@@ -15417,6 +16185,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-950',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Springhill%2C_Nova_Scotia%2C_Canada.jpg/960px-Springhill%2C_Nova_Scotia%2C_Canada.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Springhill, Nova Scotia, CA (Terrifying Encounter)',
     description: '',
@@ -15425,6 +16194,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-952',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Lovern_and_Main%2C_Hazard.jpg/960px-Lovern_and_Main%2C_Hazard.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Hazard, Kentucky (Possible Bigfoot Seen)',
     description: '',
@@ -15433,6 +16203,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-954',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Riley_and_Wolfe_Grocery%2C_Morgan%27s_Shoe_Store_and_other_businesses_-_NARA_-_280607.jpg/960px-Riley_and_Wolfe_Grocery%2C_Morgan%27s_Shoe_Store_and_other_businesses_-_NARA_-_280607.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Benton, Kentucky (Bigfoot Activity)',
     description: '',
@@ -15441,6 +16212,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-957',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/US-90_and_FL-100_junction_in_Watertown%2C_Florida.jpg/960px-US-90_and_FL-100_junction_in_Watertown%2C_Florida.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Watertown, Florida (White UFOs)',
     description: '',
@@ -15449,6 +16221,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-959',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Riley_and_Wolfe_Grocery%2C_Morgan%27s_Shoe_Store_and_other_businesses_-_NARA_-_280607.jpg/960px-Riley_and_Wolfe_Grocery%2C_Morgan%27s_Shoe_Store_and_other_businesses_-_NARA_-_280607.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Benton, Kentucky (Bigfoot Evidence)',
     description: '',
@@ -15457,6 +16230,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-961',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Cascadelocks1.png/960px-Cascadelocks1.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Cascade Locks, Oregon (Mrs. Baxter and Bigfoot)',
     description: '',
@@ -15465,6 +16239,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-963',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Towanda_Main_Street.jpg/960px-Towanda_Main_Street.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Towanda, Pennsylvania (Woman Frightened by Bigfoot)',
     description: '',
@@ -15473,6 +16248,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-965',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Spring_Green_Village_Hall.jpg/960px-Spring_Green_Village_Hall.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Spring Green, Wisconsin (Howls and Visual)',
     description: '',
@@ -15481,6 +16257,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-969',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Lee_County_Courthouse%2C_Virginia.jpg/960px-Lee_County_Courthouse%2C_Virginia.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Jonesville, Virginia (UFO Speeds off)',
     description: '',
@@ -15489,6 +16266,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-971',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Cass_County_Missouri_Courthouse_20191026-6991.jpg/960px-Cass_County_Missouri_Courthouse_20191026-6991.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Harrisonville, Missouri (Possible Bigfoot Sighting)',
     description: '6/2021 - Family moves into a new home in April',
@@ -15497,6 +16275,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-972',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/City_of_Omaha%2C_Nebraska_Skyline_on_the_Missouri_River_%2830899969517%29.jpg/960px-City_of_Omaha%2C_Nebraska_Skyline_on_the_Missouri_River_%2830899969517%29.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Omaha, Nebraska (Large Bird sighting)',
     description: '7/8/1969 - As a teenager',
@@ -15505,6 +16284,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-973',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Loyall-from-840-ky.jpg/960px-Loyall-from-840-ky.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Bigfoot Hits Garage)',
     description: '1/25/23 - Early morning encounter with a possible bigfoot that ends up slapping the garage. Push pin is general area.  Read the full report at .https://www.thecryptocrew.com/2023/02/possible-bigfoot-sighting-in-harlan.html',
@@ -15513,6 +16293,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-974',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Lebanon%2C_Missouri.jpg/960px-Lebanon%2C_Missouri.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Lebanon, Missouri (UFO Seen Above Trees)',
     description: '1967 - It was a big white light hovering silently above a stand of trees and silently lowered itself down in the trees about a mile away. Push pin is general area. Read the full report at - https://www.thecryptocrew.com/2023/02/bright-ufo-seen-above-trees.html',
@@ -15521,6 +16302,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-975',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Gronau_St._Antonius.jpg/960px-Gronau_St._Antonius.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Gronau, North Rhine-Westphalia, DE (Black Figure)',
     description: '12/30/22 - While out walking a dog',
@@ -15529,6 +16311,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-976',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Loyall-from-840-ky.jpg/960px-Loyall-from-840-ky.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (UFO Spotted)',
     description: '3/25/23 UFO sighting and the witness managed to get a picture. Push pin is on target. Read the full report and see the images at https://www.thecryptocrew.com/2023/03/2-ufo-sightings-in-harlan-county.html',
@@ -15537,6 +16320,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-977',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Loyall-from-840-ky.jpg/960px-Loyall-from-840-ky.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (UFO Wave Witnessed)',
     description: '3/25/23 - Witness saw and photographed UFO wave with 30+ UFOs. Push pin is general area. Read the full report and see the images at - https://www.thecryptocrew.com/2023/03/2-ufo-sightings-in-harlan-county.html',
@@ -15545,6 +16329,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-978',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Mundys_Corner_Keystone_marker.jpg/960px-Mundys_Corner_Keystone_marker.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Mundys Corner, Pennsylvania (Bikers Have Bigfoot Sighting)',
     description: '10/05/2022 - A couple biking spot a large bigfoot up ahead of them.  Push pin is general area. Read the full report at https://www.thecryptocrew.com/2023/04/ghost-town-trails-bigfoot-sighting.html',
@@ -15553,6 +16338,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-979',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/North_Ogden_Utah_City_Hall.jpeg/960px-North_Ogden_Utah_City_Hall.jpeg'],
     parentId: 'bigfoot-sightings-br',
     name: 'North Ogden, Utah (Bigfoot Throws Log at Researchers)',
     description: '8/2016 - 2 researchers get a log threw at them while following bigfoot tracks. Push pin is general area. Read the full report at https://www.thecryptocrew.com/2023/08/bigfoot-throws-log-at-researchers.html',
@@ -15561,6 +16347,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'anomaly-Bigfoot-980',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Diego_Sep%C3%BAlveda_Adobe_2013-11-02_17-26-03.jpg/960px-Diego_Sep%C3%BAlveda_Adobe_2013-11-02_17-26-03.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Costa Mesa, California (UFOs filmed over 2 days)',
     description: '2023 - Witness films several unknown objects over two days. Push pin is general area. Read the full report and watch the videos at https://www.thecryptocrew.com/2023/08/ufo-sightings-near-costa-mesa-california.html',
@@ -15714,6 +16501,7 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database']
   },  {
     id: 'yowie-australia',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Yowie_Statue%2C_Yowie_Park%2C_Kilcoy%2C_Queensland.JPG/960px-Yowie_Statue%2C_Yowie_Park%2C_Kilcoy%2C_Queensland.JPG'],
     parentId: 'bigfoot-br',
     name: 'Yowie',
     description: 'A bipedal hominid cryptid from Australian Aboriginal mythology and modern sightings, said to inhabit the outback and wilderness regions of Eastern Australia.',
@@ -15726,18 +16514,21 @@ const chunk_3: any[] = [  {
     sources: ['Soviet Academy of Sciences Hominoid Studies', 'Mongolian Folklore']
   },  {
     id: 'orang-pendek-sumatra',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Orang_Pendek.png/960px-Orang_Pendek.png'],
     parentId: 'bigfoot-br',
     name: 'Orang Pendek',
     description: 'A small, bipedal, ground-dwelling hominid reported to inhabit the remote, mountainous forests of Sumatra, Indonesia.',
     sources: ['Sumatran Expedition Logs', 'Indonesian Cryptozoology']
   },  {
     id: 'mapinguari-amazon',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Isnashi_wiki.svg/960px-Isnashi_wiki.svg.png'],
     parentId: 'bigfoot-br',
     name: 'Mapinguari',
     description: 'A legendary giant beast described in Amazonian folklore as a large, hairy, bipedal creature with a second mouth on its belly. Some researchers link it to late-surviving giant ground sloths or a South American hominid.',
     sources: ['Amazonian Indigenous Legends', 'South American Cryptid Research']
   },  {
     id: 'yeren-china',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Yerencave.jpg/960px-Yerencave.jpg'],
     parentId: 'bigfoot-br',
     name: 'Yeren',
     description: 'A legendary wild man or ape-man reported to inhabit the mountainous, heavily forested regions of Hubei province and the Shennongjia Nature Reserve in China.',
@@ -15750,6 +16541,7 @@ const chunk_3: any[] = [  {
     sources: ['Hiroshima Cryptid Reports', 'Japanese Folklore']
   },  {
     id: 'skunk-ape-florida',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/The_Florida_Skunk_Ape_-_panoramio.jpg/960px-The_Florida_Skunk_Ape_-_panoramio.jpg'],
     parentId: 'bigfoot-br',
     name: 'Skunk Ape',
     description: 'A swamp-dwelling, bipedal hominid reported to inhabit the southeastern United States, most famously the Florida Everglades, characterized by its reddish-brown hair and extremely foul odor.',
@@ -15786,6 +16578,7 @@ const chunk_3: any[] = [  {
     sources: ['East African Explorer Journals', 'Tanzanian Folklore']
   },  {
     id: 'cryptid-sightings-br',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/a/ac/The_Florida_Skunk_Ape_-_panoramio.jpg'],
     parentId: 'supernatural-anomalies',
     name: 'Cryptid Sightings',
     description: 'Sightings of other legendary or undiscovered creatures whose existence is not confirmed by conventional zoology.',
@@ -15802,6 +16595,7 @@ const chunk_3: any[] = [  {
     sources: ['Regional Cryptid Databases', 'Folklore Society Archives']
   },  {
     id: 'anomaly-Cryptid-Sightings-0',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/GRAND_HOTEL.jpg/960px-GRAND_HOTEL.jpg'],
     parentId: 'cryptid-sightings-br',
     name: 'Big Timber, Montana (Thunderbird in Montana)',
     description: '10/1987 - 2 man traveling along I-90 in Montana see possible Thunderbird. The bird had a 15-20 foot wingspan.',
@@ -15810,6 +16604,7 @@ const chunk_3: any[] = [  {
     sources: ['Regional Cryptid Databases', 'Folklore Society Archives']
   },  {
     id: 'anomaly-Cryptid-Sightings-1',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/StollBuildingWorks.jpg/960px-StollBuildingWorks.jpg'],
     parentId: 'cryptid-sightings-br',
     name: 'Boone, Iowa (Thunderbird in Iowa)',
     description: '10/2/2013 - A couple driving along highway 30 see a large bird',
@@ -15818,6 +16613,7 @@ const chunk_3: any[] = [  {
     sources: ['Regional Cryptid Databases', 'Folklore Society Archives']
   },  {
     id: 'anomaly-Cryptid-Sightings-2',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Seward%2C_Nebraska_downtown_1.JPG/960px-Seward%2C_Nebraska_downtown_1.JPG'],
     parentId: 'cryptid-sightings-br',
     name: 'Seward, Nebraska (Thunderbird sighting)',
     description: '1990 - 4 people see large bird go over their porch.',
@@ -15829,6 +16625,7 @@ const chunk_3: any[] = [  {
 
 const chunk_4: any[] = [  {
     id: 'anomaly-Cryptid-Sightings-3',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Van_Buren_County_Michigan_Incorporated_and_Unincorporated_areas_Bangor_Highlighted.svg/960px-Van_Buren_County_Michigan_Incorporated_and_Unincorporated_areas_Bangor_Highlighted.svg.png'],
     parentId: 'cryptid-sightings-br',
     name: 'Bangor, Michigan (Possible Thunderbird Sighting)',
     description: '6/14/14 - Possible Thunderbird seen by 3 people.',
@@ -15837,6 +16634,7 @@ const chunk_4: any[] = [  {
     sources: ['Regional Cryptid Databases', 'Folklore Society Archives']
   },  {
     id: 'anomaly-Cryptid-Sightings-4',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Ellicott_Grocery_in_Ellicott%2C_Colorado.jpg/960px-Ellicott_Grocery_in_Ellicott%2C_Colorado.jpg'],
     parentId: 'cryptid-sightings-br',
     name: 'Ellicott, Colorado (Thunderbird sighting)',
     description: '2006 - Possible Thunderbird Sighting.',
@@ -15853,6 +16651,7 @@ const chunk_4: any[] = [  {
     sources: ['Regional Cryptid Databases', 'Folklore Society Archives']
   },  {
     id: 'anomaly-Cryptid-Sightings-6',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/CHICAGO%2C_BURLINGTON_AND_QUINCY_DEPOT%2C_HOLT_COUNTY%2C_MO.jpg/960px-CHICAGO%2C_BURLINGTON_AND_QUINCY_DEPOT%2C_HOLT_COUNTY%2C_MO.jpg'],
     parentId: 'cryptid-sightings-br',
     name: 'Mound City, Missouri (Thunderbird Stuck in Mud)',
     description: '',
@@ -15861,6 +16660,7 @@ const chunk_4: any[] = [  {
     sources: ['Regional Cryptid Databases', 'Folklore Society Archives']
   },  {
     id: 'anomaly-Cryptid-Sightings-7',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Val_des_Monts_QC.JPG/960px-Val_des_Monts_QC.JPG'],
     parentId: 'cryptid-sightings-br',
     name: 'Val-des-Monts, Quebec, CA (Possible Thunderbird spotted!)',
     description: '',
@@ -15885,6 +16685,7 @@ const chunk_4: any[] = [  {
     sources: ['Regional Cryptid Databases', 'Folklore Society Archives']
   },  {
     id: 'anomaly-Cryptid-Sightings-10',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Riverview%2C_Michigan_City_Hall.jpg/960px-Riverview%2C_Michigan_City_Hall.jpg'],
     parentId: 'cryptid-sightings-br',
     name: 'Riverview, Michigan (Thunderbird sighting)',
     description: '',
@@ -15893,6 +16694,7 @@ const chunk_4: any[] = [  {
     sources: ['Regional Cryptid Databases', 'Folklore Society Archives']
   },  {
     id: 'anomaly-Cryptid-Sightings-11',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Sylvan_Lake%2C_MI_location.png/960px-Sylvan_Lake%2C_MI_location.png'],
     parentId: 'cryptid-sightings-br',
     name: 'Sylvan Lake, Michigan (Thunderbird Sightings)',
     description: '',
@@ -15901,6 +16703,7 @@ const chunk_4: any[] = [  {
     sources: ['Regional Cryptid Databases', 'Folklore Society Archives']
   },  {
     id: 'anomaly-Cryptid-Sightings-12',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Steffen_west_of_McIntyre%2C_Lincoln_Heights.jpg/960px-Steffen_west_of_McIntyre%2C_Lincoln_Heights.jpg'],
     parentId: 'cryptid-sightings-br',
     name: 'Lincoln Heights, Ohio (Orange Eyed Monster Seen)',
     description: '3/28/1959 - The orange eyed monster was first sighted on March 28',
@@ -15909,6 +16712,7 @@ const chunk_4: any[] = [  {
     sources: ['Regional Cryptid Databases', 'Folklore Society Archives']
   },  {
     id: 'anomaly-Cryptid-Sightings-13',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/RockSpringsWY.jpg/960px-RockSpringsWY.jpg'],
     parentId: 'cryptid-sightings-br',
     name: 'Rock Springs, Wyoming (Possible Thunderbird Sighting)',
     description: '',
@@ -15925,6 +16729,7 @@ const chunk_4: any[] = [  {
     sources: ['Regional Cryptid Databases', 'Folklore Society Archives']
   },  {
     id: 'anomaly-Cryptid-Sightings-15',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Bridgeport-Main-Street-il.jpg/960px-Bridgeport-Main-Street-il.jpg'],
     parentId: 'cryptid-sightings-br',
     name: 'Bridgeport, Illinois (Possible Thunderbird Sighting)',
     description: '',
@@ -15933,6 +16738,7 @@ const chunk_4: any[] = [  {
     sources: ['Regional Cryptid Databases', 'Folklore Society Archives']
   },  {
     id: 'anomaly-Cryptid-Sightings-16',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Des_Arc%2C_AR_014.jpg/960px-Des_Arc%2C_AR_014.jpg'],
     parentId: 'cryptid-sightings-br',
     name: 'Des Arc, Arkansas (Canoers Have Possible Thunderbird Sighting!)',
     description: '1982 - Canoers Have Possible Thunderbird Sighting! A couple on a canoeing trip have a sighting of a very large bird. Push Pin is general area.  Read the full report at https://www.thecryptocrew.com/2021/05/canoers-have-possible-thunderbird.html',
@@ -15941,6 +16747,7 @@ const chunk_4: any[] = [  {
     sources: ['Regional Cryptid Databases', 'Folklore Society Archives']
   },  {
     id: 'anomaly-Cryptid-Sightings-17',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Westminster_South_Carolina.jpg/960px-Westminster_South_Carolina.jpg'],
     parentId: 'cryptid-sightings-br',
     name: 'Westminster, South Carolina (Was it a Thunderbird?)',
     description: '',
@@ -16057,6 +16864,7 @@ const chunk_4: any[] = [  {
     sources: ['Regional Cryptid Databases', 'Folklore Society Archives']
   },  {
     id: 'anomaly-Cryptid-Sightings-30',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Mansi_Photograph_%28cropped%29.jpg/960px-Mansi_Photograph_%28cropped%29.jpg'],
     parentId: 'cryptid-sightings-br',
     name: 'Champ (Lake Champlain Monster) Sighting',
     description: 'The \'Champ\' sightings aren',
@@ -16092,6 +16900,7 @@ const chunk_4: any[] = [  {
     sources: ['Regional Cryptid Databases', 'Folklore Society Archives']
   },  {
     id: 'anomaly-Cryptid-Sightings-34',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Monster_Mart%2C_Fouke%2C_Arkansas%2C_January_5%2C_2016.jpg/960px-Monster_Mart%2C_Fouke%2C_Arkansas%2C_January_5%2C_2016.jpg'],
     parentId: 'cryptid-sightings-br',
     name: 'Fouke Monster Encounter',
     description: 'The Fouke Monster wasn',
@@ -16233,6 +17042,7 @@ const chunk_4: any[] = [  {
     sources: ['Regional Cryptid Databases', 'Folklore Society Archives']
   },  {
     id: 'anomaly-Cryptid-Sightings-51',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/284_Green_Street%2C_Enfield.jpg/960px-284_Green_Street%2C_Enfield.jpg'],
     parentId: 'cryptid-sightings-br',
     name: 'Enfield Horror Encounter',
     description: 'Reports of a strange, unidentified entity matching descriptions of the legendary \'Enfield Horror\' sighted in \'Enfield, Illinois\'. Local authorities and mainstream institutions have historically downplayed or suppressed documentation of the encounter.',
@@ -16350,6 +17160,7 @@ const chunk_4: any[] = [  {
     sources: ['Regional Cryptid Databases', 'Folklore Society Archives']
   },  {
     id: 'mothman',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Mothman_Artist%27s_Impression.png/960px-Mothman_Artist%27s_Impression.png'],
     parentId: 'cryptid-sightings-br',
     name: 'Mothman',
     description: 'A winged, red-eyed humanoid creature sighted in Point Pleasant, West Virginia, historically associated with impending disasters.',
@@ -16357,12 +17168,14 @@ const chunk_4: any[] = [  {
     sources: ['Regional Cryptid Databases', 'Folklore Society Archives']
   },  {
     id: 'nessie',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Loch_Ness_Monster_Surgeon%27s_photograph.jpg/960px-Loch_Ness_Monster_Surgeon%27s_photograph.jpg'],
     parentId: 'cryptid-sightings-br',
     name: 'Loch Ness Monster',
     description: 'A large aquatic cryptid rumored to inhabit Loch Ness in Scotland, often described as resembling a prehistoric plesiosaur.',
     sources: ['Regional Cryptid Databases', 'Folklore Society Archives']
   },  {
     id: 'hauntings-br',
+    images: ['https://www.youtube.com/watch?v=0Anx3VQ2dcc'],
     parentId: 'supernatural-anomalies',
     name: 'Ghosts & Hauntings',
     description: 'Reports of paranormal occurrences, residual energy, or spirits tied to specific geographic battlefields or buildings.',
@@ -16549,6 +17362,7 @@ const chunk_4: any[] = [  {
     sources: ['Regional Folklore & Paranormal Archives', 'Society for Psychical Research']
   },  {
     id: 'gettysburg',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Gettysburg-Open-Battlefield.svg/960px-Gettysburg-Open-Battlefield.svg.png'],
     parentId: 'hauntings-br',
     name: 'Gettysburg Battlefield',
     description: 'Site of the bloodiest battle of the American Civil War, now known for intense residual hauntings and phantom echoes.',
@@ -16556,6 +17370,7 @@ const chunk_4: any[] = [  {
     sources: ['Regional Folklore & Paranormal Archives', 'Society for Psychical Research']
   },  {
     id: 'portals-stargates',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/0/02/Doorway-lg.jpg'],
     parentId: 'supernatural-anomalies',
     name: 'Portals / Stargates',
     description: 'Purported or speculative stargates, wormholes, and interdimensional gateways documented in ancient lore, modern whistleblower accounts, and anomalous zones.',
@@ -16646,6 +17461,7 @@ const chunk_4: any[] = [  {
     sources: ['Wikipedia', 'Esoteric & Paranormal Records']
   },  {
     id: 'underworld',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Darvasa_gas_crater_panorama.jpg/1280px-Darvasa_gas_crater_panorama.jpg'],
     parentId: 'supernatural-anomalies',
     name: 'Underworld Entrances',
     description: 'Caverns, underground systems, or structural passages rumored to lead deep into hollow earth tunnels.',
@@ -16666,6 +17482,7 @@ const chunk_4: any[] = [  {
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
   },  {
     id: 'tartarus',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Nekyia_Staatliche_Antikensammlungen_1494_n2.jpg/960px-Nekyia_Staatliche_Antikensammlungen_1494_n2.jpg'],
     parentId: 'underworld',
     name: 'Tartarus',
     description: 'In Greek mythology, Tartarus is the deep abyss that is used as a dungeon of torment and suffering for the wicked and as the prison for the Titans. Mentioned in the New Testament as the prison where rebellious angels are chained for judgment.',
@@ -16677,6 +17494,7 @@ const chunk_4: any[] = [  {
     sources: ['Second Epistle of Peter', "Hesiod's Theogony", "Plato's Gorgias"]
   },  {
     id: 'asphodel',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Colonie_d%27_Asphod%C3%A8les_blancs_%28Asphodelus_albus%29_-_For%C3%AAt_de_Mervent-Vouvant.jpg/960px-Colonie_d%27_Asphod%C3%A8les_blancs_%28Asphodelus_albus%29_-_For%C3%AAt_de_Mervent-Vouvant.jpg'],
     parentId: 'underworld',
     name: 'Asphodel Meadows',
     description: 'A section of the ancient Greek underworld where ordinary souls who lived balanced, neutral lives reside. Mentioned in Homer\'s Odyssey as the place where the shades of heroes wander.',
@@ -16710,6 +17528,7 @@ const chunk_4: any[] = [  {
     sources: ["Hesiod's Theogony", "Homer's Iliad"]
   },  {
     id: 'at-the-mountains-of-madness',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/At_the_Mountains_of_Madness.jpg/960px-At_the_Mountains_of_Madness.jpg'],
     parentId: 'underworld',
     name: 'At the Mountains of Madness',
     description: 'HP Lovecraft\'s seminal novella depicting an ancient, abandoned city in Antarctica, serving as a cultural narrative of subterranean cities, hollow earth lore, and interdimensional pre-human civilizations.',
@@ -16944,6 +17763,7 @@ const chunk_4: any[] = [  {
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
   },  {
     id: 'mt-shasta',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/MtShasta_aerial.JPG/960px-MtShasta_aerial.JPG'],
     parentId: 'underworld',
     name: 'Mount Shasta',
     description: 'A volcanic peak in northern California. Regarded by occultists as an Earth chakra and rumored to contain the subterranean city of Telos.',
@@ -16959,6 +17779,7 @@ const chunk_4: any[] = [  {
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Derinkuyu_Underground_City_9910_Nevit.jpg/960px-Derinkuyu_Underground_City_9910_Nevit.jpg']
   },  {
     id: 'megaliths',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/4748.1099_Menhire%2C_bis_zu_4_Meter_hoch%2C_von_OstnachWest_in_1167_Meter_Langen_Alignements_%28Granit-Steinreihen%29_in_einem_Halbkreis_endend_Le_M%C3%A9nec%2C_Carnac%2C_Departement_Morbihan%2C_Bretagne_Steffen_Heilfort.jpg/1280px-thumbnail.jpg'],
     parentId: 'megaliths-structures',
     name: 'Megaliths / Structures',
     description: 'Massive, precision-engineered stone monuments built in antiquity using stones of immense weight.',
@@ -16970,12 +17791,14 @@ const chunk_4: any[] = [  {
   },
   {
     id: 'geoglyphs-br',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/7/7f/05-Palpa_Lines-nX-22.jpg'],
     parentId: 'megaliths-structures',
     name: 'Geoglyphs & Earthworks',
     description: 'Massive prehistoric ground designs, desert glyphs, and ceremonial alignments.',
     layer: 'Megaliths / Structures'
   },  {
     id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-0',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Great_Pyramid_of_Giza_-_Pyramid_of_Khufu.jpg/960px-Great_Pyramid_of_Giza_-_Pyramid_of_Khufu.jpg'],
     relatedIds: ['anomaly-Ley-Lines-7'],
     parentId: 'megaliths',
     secondaryParentIds: ['egyptian-civilization'],
@@ -16986,6 +17809,7 @@ const chunk_4: any[] = [  {
     sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
   },  {
     id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-1',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Sphinx_with_the_third_pyramid.jpg/960px-Sphinx_with_the_third_pyramid.jpg'],
     relatedIds: ['atlantis-lost'],
     parentId: 'megaliths',
     secondaryParentIds: ['egyptian-civilization'],
@@ -17044,6 +17868,7 @@ const chunk_4: any[] = [  {
     ]
   },  {
     id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-8',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Blythe_Intaglio_%284858%29.jpg/960px-Blythe_Intaglio_%284858%29.jpg'],
     parentId: 'geoglyphs-br',
     name: 'Blythe Intaglios',
     description: 'Colossal human and animal figures carved into the California desert floor, invisible except from high altitudes. Local tribes speak of these representing the creator Mastamho, but alternative historians believe they were coordinates or signaling markers for sky deities.',
@@ -17302,6 +18127,7 @@ const chunk_4: any[] = [  {
 
   {
     id: 'stonehenge',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Stonehenge2007_07_30.jpg/960px-Stonehenge2007_07_30.jpg'],
     parentId: 'megaliths',
     layer: 'Megaliths / Structures',
     name: 'Stonehenge',
@@ -17310,6 +18136,7 @@ const chunk_4: any[] = [  {
     sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
   },  {
     id: 'pyramids',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Great_Pyramid_of_Giza_-_Pyramid_of_Khufu.jpg/960px-Great_Pyramid_of_Giza_-_Pyramid_of_Khufu.jpg'],
     parentId: 'megaliths',
     layer: 'Megaliths / Structures',
     secondaryParentIds: ['egyptian-civilization'],
@@ -17338,6 +18165,7 @@ const chunk_4: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'mounds',
+    images: ['https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6S2O7g1WL86rTFr2y1ByHSbqX5CRL-TyzCRkhaN1ekdKOkpNKDH4XGuld5vJsHgR8x6UOryT2iaa3NFDoYJTUnLQ4zGaUNmWzZa2R_aP2s_QoGzmHZ7upnUGA0Ib4WaN4N3U4SH3ZPSUNzVmp_xePGFBP1ZkigUkFghZ4FYmxh3JTHNI4TL3ZFkaPYreq6iIPUblitpy1kpqyVS6PeCjnv8xI5QrqvScxF6xH52XSFS8U1zSzQ3KUBimY?authuser=0&fife=s16383'],
     parentId: 'megaliths-structures',
     name: 'Burial Mounds & Earthworks',
     description: 'Artificial hills and structural earthworks built by ancient cultures, often aligned with astronomical events.',
@@ -17446,6 +18274,7 @@ const chunk_4: any[] = [  {
     sources: ['Smithsonian Institution Bureau of Ethnology Reports', 'Archaeological Survey Records']
   },  {
     id: 'anomaly-Burial-Mounds-11',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Yahara_River_-_panoramio.jpg/960px-Yahara_River_-_panoramio.jpg'],
     parentId: 'mounds',
     name: 'Indian Mounds Park - Monona, Wisconsin',
     description: 'Native American oral histories and early pioneer journals suggest this mound covers a deep subterranean vault. Conspiracists suspect these vaults contain prehistoric metal records, ancient technology, or serve as sealed vaults holding artifacts from a pre-flood civilization.',
@@ -17902,6 +18731,7 @@ const chunk_4: any[] = [  {
     sources: ['Smithsonian Institution Bureau of Ethnology Reports', 'Archaeological Survey Records']
   },  {
     id: 'petroglyphs-br',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/d/dc/Bigfoot_petroglyph_panel_McConkie_Ranch_Vernal_Utah.jpeg'],
     parentId: 'megaliths-structures',
     name: 'Rock Art & Cave Paintings',
     description: 'Images carved or painted onto rock walls, frequently depicting strange humanoid figures, spirals, and entities.',
@@ -17911,6 +18741,7 @@ const chunk_4: any[] = [  {
     layer: 'Rock Art & Cave Paintings'
   },  {
     id: 'newspaper-rock',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Newspaper_Rock_Full.jpg/960px-Newspaper_Rock_Full.jpg'],
     parentId: 'petroglyphs-br',
     layer: 'Rock Art & Cave Paintings',
     name: 'Newspaper Rock (Utah)',
@@ -18792,6 +19623,7 @@ const chunk_4: any[] = [  {
     sources: ['Prehistoric Art Catalogs', 'Archaeological Site Inventories']
   },  {
     id: 'ancient-texts',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/6/63/El_pesado_del_coraz%C3%B3n_en_el_Papiro_de_Hunefer.jpg'],
     name: 'Ancient Texts',
     description: 'Written records from ancient civilizations that preserve historical memories of floods, giants, and celestial deities.',
     layer: 'Ancient Texts'
@@ -18805,6 +19637,7 @@ const chunk_4: any[] = [  {
     sources: ['Ancient Egyptian Papyri', 'Hermetic Literature']
   },  {
     id: 'library-of-alexandria',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Ancientlibraryalex.jpg/960px-Ancientlibraryalex.jpg'],
     parentId: 'ancient-texts',
     name: 'Library of Alexandria',
     description: 'The preeminent archive of the ancient world in Egypt, which housed hundreds of thousands of scrolls containing lost historical, scientific, and spiritual secrets from antiquity.',
@@ -18824,6 +19657,7 @@ const chunk_4: any[] = [  {
     bibleVerses: ['There Stentor, the bronze-voiced, shouted, he who was as loud as fifty other men... — Homer, Iliad Book 5 (https://www.sacred-texts.com/cla/homer/ili/ili05.htm)']
   },  {
     id: 'book-of-enoch',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Codex_Zographensis_77r.jpg/960px-Codex_Zographensis_77r.jpg'],
     parentId: 'ancient-texts',
     secondaryParentIds: ['judaism', 'christianity'],
     name: 'Book of Enoch',
@@ -18833,6 +19667,7 @@ const chunk_4: any[] = [  {
     bibleVerses: ['The words of the blessing of Enoch, wherewith he blessed the elect and righteous, who will be living in the day of tribulation, when all the wicked and godless are to be removed. — 1 Enoch 1:1 (https://www.sacred-texts.com/bib/boe/boe004.htm)']
   },  {
     id: 'gilgamesh-text',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/British_Museum_Flood_Tablet.jpg/960px-British_Museum_Flood_Tablet.jpg'],
     parentId: 'ancient-texts',
     name: 'Epic of Gilgamesh',
     description: 'A Mesopotamian epic poem containing the Sumerian story of the Great Flood survived by Utnapishtim, bearing strong similarities to the Genesis narrative.',
@@ -18840,6 +19675,7 @@ const chunk_4: any[] = [  {
   },
   {
     id: 'holy-bible',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/1QIsa_b.jpg/500px-1QIsa_b.jpg'],
     parentId: 'ancient-texts',
     secondaryParentIds: ['christianity'],
     name: 'The Holy Bible',
@@ -19625,6 +20461,7 @@ const chunk_4: any[] = [  {
     sources: ['Mesopotamian Clay Tablets Collection', 'British Museum']
   },  {
     id: 'archaeological-finds-br',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/4/4d/White_House_Ruins%2C_Canyon_de_Chelly_1.jpg'],
     parentId: 'megaliths-structures',
     name: 'Archaeological Finds',
     description: 'Physical objects and artifacts discovered during excavations that challenge historical timelines.',
@@ -19792,6 +20629,7 @@ const chunk_4: any[] = [  {
     sources: ['Ley Line Cartography Records', "Alfred Watkins' The Old Straight Track"]
   },  {
     id: 'anomaly-Ley-Lines-4',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Mappa_Linea_Sacra_di_San_Michele.jpg/960px-Mappa_Linea_Sacra_di_San_Michele.jpg'],
     parentId: 'ley-lines-br',
     name: 'Mary Ley Line (UK)',
     description: 'The female/yin counterpart to the masculine St. Michael Line. The Mary Line weaves dynamically across the southern landscape of England, intersecting the St. Michael Line at high-energy node points such as Avebury Henge and Glastonbury Tor, representing the balance of telluric forces.',
@@ -19808,6 +20646,7 @@ const chunk_4: any[] = [  {
     sources: ['Ley Line Cartography Records', "Alfred Watkins' The Old Straight Track"]
   },  {
     id: 'anomaly-Ley-Lines-6',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Equilateral-triangle.svg/960px-Equilateral-triangle.svg.png'],
     relatedIds: ['atlantis-lost'],
     parentId: 'ley-lines-br',
     name: 'Bermuda Triangle Grid',
@@ -19843,6 +20682,7 @@ const chunk_4: any[] = [  {
     sources: ['Ley Line Cartography Records', "Alfred Watkins' The Old Straight Track"]
   },  {
     id: 'anomaly-Ley-Lines-10',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Angkor_Wat.jpg/960px-Angkor_Wat.jpg'],
     relatedIds: ['anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-35'],
     parentId: 'ley-lines-br',
     name: 'Angkor Wat-Easter Island Axis',
@@ -19868,6 +20708,7 @@ const chunk_4: any[] = [  {
     sources: ['Ley Line Cartography Records', "Alfred Watkins' The Old Straight Track"]
   },  {
     id: 'st-michaels-line',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Mappa_Linea_Sacra_di_San_Michele.jpg/960px-Mappa_Linea_Sacra_di_San_Michele.jpg'],
     parentId: 'ley-lines-br',
     name: 'St. Michael\'s Ley Line',
     description: 'A straight alignment of St. Michael churches across southern England, intersecting major megalithic nodes like Glastonbury.',
@@ -19875,6 +20716,7 @@ const chunk_4: any[] = [  {
     sources: ['Ley Line Cartography Records', "Alfred Watkins' The Old Straight Track"]
   },  {
     id: 'dumbs',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Cheyenne_Mountain_Space_Force_Station_Base_Upgrade_Photos_%288248119%29.jpg/1280px-Cheyenne_Mountain_Space_Force_Station_Base_Upgrade_Photos_%288248119%29.jpg'],
     parentId: 'megaliths-structures',
     name: 'D.U.M.B.\'s',
     description: 'Deep Underground Military Bases alleged to exist across the United States, connected by high-speed subterranean rail lines.',
@@ -20084,6 +20926,7 @@ const chunk_4: any[] = [  {
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
   },  {
     id: 'anomaly-D-U-M-B-s-23',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/A_black_and_white_ball_of_fur_%2814409103416%29.jpg/960px-A_black_and_white_ball_of_fur_%2814409103416%29.jpg'],
     parentId: 'dumbs',
     name: 'Page',
     description: 'A critical western logistics node near Lake Powell, linking Area 51 to the eastern network. Rumored to utilize massive amounts of hydroelectric power from Glen Canyon Dam for classified experiments.',
@@ -20136,6 +20979,7 @@ const chunk_4: any[] = [  {
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
   },  {
     id: 'anomaly-D-U-M-B-s-29',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Sierra.madre.occidental.volcanics.JPG/960px-Sierra.madre.occidental.volcanics.JPG'],
     parentId: 'dumbs',
     name: 'Chihuahua',
     description: 'A joint-operation subterranean monitoring base located under the desert, rumored to monitor tectonic activities and test electronic border surveillance networks.',
@@ -20162,6 +21006,7 @@ const chunk_4: any[] = [  {
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
   },  {
     id: 'anomaly-D-U-M-B-s-32',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Irvine_City_Hall.jpg/960px-Irvine_City_Hall.jpg'],
     relatedIds: ['anomaly-D-U-M-B-s-46'],
     parentId: 'dumbs',
     name: 'Irvine',
@@ -20180,6 +21025,7 @@ const chunk_4: any[] = [  {
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
   },  {
     id: 'anomaly-D-U-M-B-s-34',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/MtShasta_aerial.JPG/960px-MtShasta_aerial.JPG'],
     relatedIds: ['mt-shasta'],
     parentId: 'dumbs',
     name: 'Shasta',
@@ -20199,6 +21045,7 @@ const chunk_4: any[] = [  {
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
   },  {
     id: 'anomaly-D-U-M-B-s-36',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Riverton_Fishing_Boats.JPG/960px-Riverton_Fishing_Boats.JPG'],
     parentId: 'dumbs',
     name: 'Riverton',
     description: 'A mid-country subterranean logistics depot in Wyoming, rumored to store massive strategic reserves of food, water, and medical equipment for continuity-of-government scenarios.',
@@ -20241,6 +21088,7 @@ const chunk_4: any[] = [  {
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
   },  {
     id: 'anomaly-D-U-M-B-s-41',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/View_of_Palms_station%2C_Los_Angeles_Metro.jpg/960px-View_of_Palms_station%2C_Los_Angeles_Metro.jpg'],
     relatedIds: ['anomaly-D-U-M-B-s-65'],
     parentId: 'dumbs',
     name: 'Palms',
@@ -20379,6 +21227,7 @@ const chunk_5: any[] = [  {
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
   },  {
     id: 'area-51',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Sentinel-Homey.png/960px-Sentinel-Homey.png'],
     parentId: 'dumbs',
     name: 'Area 51 (Groom Lake)',
     description: 'The legendary classified US Air Force installation in Nevada, famous for developing advanced stealth aircraft and associated UFO folklore.',
@@ -20386,6 +21235,7 @@ const chunk_5: any[] = [  {
     sources: ['FOIA Declassified Documents', 'Military Installation Logs']
   },  {
     id: 'google-blurred',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/2/2a/AntarcticaSummer.jpg'],
     parentId: 'megaliths-structures',
     name: 'Google Maps Blurs',
     description: 'Secret, blurred, or pixelated locations on digital maps, indicating high-security installations or anomalies.',
@@ -20859,6 +21709,7 @@ const chunk_5: any[] = [  {
     sources: ['Satellite Imagery Archives', 'Official Government Mapping Agencies']
   },  {
     id: 'craters-br',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Meteor_Crater_-_Arizona.jpg/1280px-Meteor_Crater_-_Arizona.jpg'],
     parentId: 'megaliths-structures',
     name: 'Meteor Impact Craters',
     description: 'Scars of ancient space impacts, some of which triggered global extinction events or localized magnetic anomalies.',
@@ -20928,6 +21779,7 @@ const chunk_5: any[] = [  {
     sources: ['NASA Earth Impact Database', 'Geological Survey Bulletins']
   },  {
     id: 'anomaly-Meteor-Impact-Craters-9',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Wolfe_creek_crater.jpg/960px-Wolfe_creek_crater.jpg'],
     parentId: 'craters-br',
     name: 'Cloud Creek Crater',
     description: 'Cloud Creek crater is an impact crater in Wyoming, United States. The crater is located in Natrona County, about 48 miles (77 km) northwest of Casper, near the center of a geological feature known as the Casper Arch. The Cloud Creek structure is circular with a current diameter of about 7 kilometres (4.3 mi), and it is buried beneath about 1,200 metres (3,900 ft) of Mesozoic rocks. The age of the structure is estimated to be 190 ± 20 million years, which means that it formed as the result of an impact during the early part of the Jurassic Period. This impact feature is not exposed at the surface...\n\nAlternative Lore: This location is cited by catastrophe theorists as a major contributor to a historical global civilization reset. The massive kinetic energy released at Cloud Creek crater is hypothesized to have triggered widespread seismic upheaval, soot clouds, and massive tsunamis, leaving deep scars in local mythology of fire falling from the heavens.',
@@ -21501,6 +22353,7 @@ const chunk_5: any[] = [  {
     sources: ['NASA Earth Impact Database', 'Geological Survey Bulletins']
   },  {
     id: 'anomaly-Meteor-Impact-Craters-74',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Vredefort_Crater%2C_South_Africa%2C_OLI_satellite_image%2C_27_June_2018_cropped.png/960px-Vredefort_Crater%2C_South_Africa%2C_OLI_satellite_image%2C_27_June_2018_cropped.png'],
     parentId: 'craters-br',
     name: 'Dhala Impact Structure',
     description: 'Confirmed impact structure located in Dhala impact structure. Documented in the global Earth Impact Database.\n\nAlternative Lore: Alternative researchers note that the Dhala impact structure site aligns with major planetary grid lines, suggesting it acted as a geological focal point. Dowsers and electromagnetic surveyors report intense magnetic anomalies and local gravitational fluctuations near the rim, leading to claims of a permanent telluric vortex at 25.3000, 78.1333.',
@@ -21875,6 +22728,7 @@ const chunk_5: any[] = [  {
     sources: ['NASA Earth Impact Database', 'Geological Survey Bulletins']
   },  {
     id: 'anomaly-Meteor-Impact-Craters-116',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Gusev_crater_Spirit_landing_ellipse.jpg/960px-Gusev_crater_Spirit_landing_ellipse.jpg'],
     relatedIds: ['anomaly-Meteor-Impact-Craters-90'],
     parentId: 'craters-br',
     name: 'Gusev Crater (Russia)',
@@ -22425,6 +23279,7 @@ const chunk_5: any[] = [  {
     sources: ['NASA Earth Impact Database', 'Geological Survey Bulletins']
   },  {
     id: 'national-parks',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Acadia_National_Park_02.JPG/1280px-Acadia_National_Park_02.JPG'],
     relatedIds: ['missing-411-br'],
     parentId: 'megaliths-structures',
     name: 'National Parks & Anomalies',
@@ -22962,6 +23817,7 @@ const chunk_5: any[] = [  {
     sources: ['National Park Service Database', 'USGS Geographic Names Information System']
   },  {
     id: 'grand-canyon-cave',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Little_Grand_Canyon_IL.jpg/960px-Little_Grand_Canyon_IL.jpg'],
     parentId: 'national-parks',
     name: 'Grand Canyon Egyptian Caves',
     description: 'A rumored discovery reported in a 1909 newspaper article detailing massive underground caverns containing Egyptian-style artifacts and mummies.',
@@ -22984,6 +23840,7 @@ const chunk_6: any[] = [
   // ── WITCHCRAFT & FOLK MAGIC ───────────────────────────────────────────────
   {
     id: 'witchcraft-folk-magic',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/JosephSmithTranslating.jpg/500px-JosephSmithTranslating.jpg'],
     parentId: 'alchemy-occult',
     name: 'Witchcraft & Folk Magic',
     description: 'The practice of wielding supernatural or spiritual power through ritual, spell-casting, divination, and communion with spirits. Found in virtually every culture throughout recorded history, it encompasses a wide spectrum from ceremonial high magic to rural folk traditions and shamanic practices.',
@@ -23044,6 +23901,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'enchantresses',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/On-Line-Systems-Ultima2.jpg/960px-On-Line-Systems-Ultima2.jpg'],
     parentId: 'witchcraft-folk-magic',
     name: 'Enchantress',
     description: 'A female practitioner of enchantment and glamour magic, using charms, spells, music, and alluring speech to bind or manipulate the minds, senses, and wills of others. Enchantresses are prominent in classical myth, such as Circe in Homer\'s Odyssey, who transfigured men into beasts, and the biblical warnings against seductive, spirit-whispering enchantments.',
@@ -23055,6 +23913,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'divination',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/The_Witch_of_Endor_%28William_Blake%29_2.jpg/960px-The_Witch_of_Endor_%28William_Blake%29_2.jpg'],
     relatedIds: ['necromancers', 'i-ching'],
     parentId: 'witchcraft-folk-magic',
     name: 'Divination',
@@ -23088,6 +23947,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'voodoo',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Poup%C3%A9e_vaudou.jpg/960px-Poup%C3%A9e_vaudou.jpg'],
     parentId: 'witchcraft-folk-magic',
     name: 'Voodoo (Vodou)',
     description: 'A syncretic spiritual religion originating in West Africa (Vodun) and developed in the Haitian diaspora through the blending of African traditional religion with Catholic iconography. Practitioners work with powerful spirits called Lwa (or Loa), performing ritual offerings, dances, and possessions to communicate with the spirit world. Voodoo is often misrepresented in Western media but remains a deeply complex system of ancestor veneration, spirit communion, and folk magic.',
@@ -23095,6 +23955,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'papa-legba',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/VeveLegba.svg/960px-VeveLegba.svg.png'],
     parentId: 'voodoo',
     name: 'Papa Legba',
     description: 'The most important Lwa (spirit) in Haitian Vodou, Papa Legba is the gatekeeper who stands at the crossroads between the physical world and the spirit realm. No communication with other spirits can occur without first invoking his permission. He is depicted as an old man with a cane, often accompanied by dogs, and is associated with the sun, communication, and the roads of destiny. He bears resemblance to similar crossroads entities in African Yoruba tradition (Eshu/Elegba) and has been linked in occult circles to Lucifer as a gatekeeper spirit.',
@@ -23186,6 +24047,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'secret-chiefs',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Secret_Chiefs_3%2C_New_York%2C_2009%3B_05.jpg/960px-Secret_Chiefs_3%2C_New_York%2C_2009%3B_05.jpg'],
     relatedIds: ['aleister-crowley', 'macgregor-mathers'],
     parentId: 'esoteric-traditions',
     name: 'Secret Chiefs',
@@ -23212,6 +24074,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'zeta-reticuli',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Reticulum_constellation_map.svg/960px-Reticulum_constellation_map.svg.png'],
     relatedIds: ['abduction-hill-1961'],
     parentId: 'aliens',
     name: 'Zeta Reticuli',
@@ -23228,6 +24091,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'admiral-byrd',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Richard_E._Byrd_cph.3b17378.jpg/960px-Richard_E._Byrd_cph.3b17378.jpg'],
     parentId: 'operation-highjump',
     name: 'Admiral Richard E. Byrd',
     description: 'U.S. Navy Admiral and polar explorer who led Operation Highjump (1946–1947). Byrd claimed to have flown beyond both the North and South Poles into vast temperate territories, fueling Hollow Earth theories of polar entrances to a subterranean world.',
@@ -23266,6 +24130,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'coral-castle',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Coral_Castle_1.jpg/960px-Coral_Castle_1.jpg'],
     parentId: 'megaliths',
     name: 'Coral Castle',
     description: 'A massive stone structure in Homestead, Florida, built single-handedly by Latvian immigrant Edward Leedskalnin between 1923 and 1951. Moving blocks weighing up to 30 tons without heavy machinery, Leedskalnin claimed he understood the construction secrets of the Egyptian pyramids, sparking theories of acoustic levitation, anti-gravity, or telluric magnetism.',
@@ -23276,6 +24141,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'taoism',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Mawangdui_LaoTsu_Ms2.JPG/330px-Mawangdui_LaoTsu_Ms2.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail'],
     parentId: 'biblical-apocryphal',
     name: 'Taoism',
     description: 'An ancient Chinese philosophical and spiritual tradition founded by Lao Tzu. Beyond its exoteric tenets, Taoism features internal alchemy (Neidan), Qi energy cultivation, and magical practices aimed at spiritual and physical immortality.',
@@ -23285,6 +24151,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'buddhism',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Pali_Canon_Structure.png/1280px-Pali_Canon_Structure.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail'],
     parentId: 'biblical-apocryphal',
     name: 'Buddhism',
     description: 'A major world philosophy founded by Siddhartha Gautama in ancient India. While exoterically focused on mindfulness and liberation, its esoteric branches (like Vajrayana or Tibetan Buddhism) feature complex rituals, mantric formulas, and traditions of hidden realms (Shambhala) connecting directly to alternative histories of subterranean civilizations.',
@@ -23303,6 +24170,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'ufo-types',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Supposed_UFO%2C_Passaic%2C_New_Jersey_%28cropped%29.jpg/960px-Supposed_UFO%2C_Passaic%2C_New_Jersey_%28cropped%29.jpg'],
     parentId: 'ufos',
     name: 'Types of UFOs',
     description: 'The primary categorizations of Unidentified Flying Objects based on shape and flight behavior: flying saucers/discs, cigar-shaped cylinders (motherships), silent black triangles (TR-3B), luminous shifting orbs, and white oblong "tic-tacs".',
@@ -23310,6 +24178,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'bilderberg-group',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Bilderberg_-_Oosterbeek.jpg/960px-Bilderberg_-_Oosterbeek.jpg'],
     parentId: 'illuminati-bloodlines',
     name: 'Bilderberg Group',
     description: 'An annual private conference established in 1954 to foster dialogue between political, financial, and industrial elites of Europe and North America. Conspiracy researchers view the invitation-only, off-the-record meetings as a shadow global government coordinating international policies and trade.',
@@ -23319,6 +24188,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'dragons-br',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/William_Blake_-_The_Temptation_and_Fall_of_Eve_%28Illustration_to_Milton%27s_%22Paradise_Lost%22%29_-_Google_Art_Project.jpg/960px-William_Blake_-_The_Temptation_and_Fall_of_Eve_%28Illustration_to_Milton%27s_%22Paradise_Lost%22%29_-_Google_Art_Project.jpg'],
     parentId: 'supernatural-anomalies',
     name: 'Dragons & Serpents',
     description: 'Legendary winged reptiles or giant serpentine beasts found in the creation myths, historical logs, and sacred texts of nearly every ancient civilization across the globe.',
@@ -23327,6 +24197,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'leviathan-biblical',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Destruction_of_Leviathan.png/960px-Destruction_of_Leviathan.png'],
     parentId: 'dragons-br',
     name: 'Leviathan',
     description: 'A multi-headed sea serpent or dragon in Hebrew scripture and Canaanite mythology. Job 41 describes it as a fire-breathing, armored ocean titan, while Isaiah depicts it as the crooked serpent slain by the Creator in cosmic battle.',
@@ -23350,6 +24221,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'tiamat-mesopotamian',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Myths_and_legends_of_Babylonia_and_Assyria_%281916%29_%2814759101646%29.jpg/960px-Myths_and_legends_of_Babylonia_and_Assyria_%281916%29_%2814759101646%29.jpg'],
     parentId: 'dragons-br',
     name: 'Tiamat',
     description: 'The primordial Babylonian goddess of the salt sea, depicted as a chaos dragon or multi-headed serpent in the Enuma Elish. She was slain by Marduk, who used her split body to form heaven and earth.',
@@ -23366,6 +24238,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'feathered-serpent',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Featheredserpentmuseoantropologia.JPG/960px-Featheredserpentmuseoantropologia.JPG'],
     parentId: 'dragons-br',
     secondaryParentIds: ['andean-mesoamerican-lore'],
     name: 'Feathered Serpent (Quetzalcoatl)',
@@ -23390,6 +24263,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'apophis-egyptian',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Apep_%28Deity%29.svg/960px-Apep_%28Deity%29.svg.png'],
     parentId: 'dragons-br',
     name: 'Apophis (Apep)',
     description: 'The ancient Egyptian deity of chaos, darkness, and non-existence, represented as a giant serpent or dragon. Apophis was the eternal enemy of the sun god Ra, attempting to swallow Ra\'s solar barge during its nightly journey through the underworld (Duat).',
@@ -23414,6 +24288,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'wyvern-basilisk',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Y_Draig_Aur_Owain_Glynd%C5%B5r.jpg/960px-Y_Draig_Aur_Owain_Glynd%C5%B5r.jpg'],
     parentId: 'dragons-br',
     name: 'Wyvern & Basilisk',
     description: 'Key creatures of European heraldry and medieval folklore. The Wyvern is a two-legged winged dragon, while the Basilisk (or Cockatrice) is a legendary serpent king said to be hatched by a toad from a cockerel\'s egg, capable of killing with its glance or toxic breath.',
@@ -23429,6 +24304,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'fae-elves',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Demons_and_Elves_of_Every_Size_and_Kind_Danced_Across_the_Room.jpg/960px-Demons_and_Elves_of_Every_Size_and_Kind_Danced_Across_the_Room.jpg'],
     parentId: 'fae',
     name: 'Elves',
     description: 'Powerful, semi-divine beings of Norse and Germanic mythology. Historically associated with magic, physical beauty, and illnesses like "elf-shot," they reside in Alfheim under the rule of the god Freyr.',
@@ -23457,6 +24333,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'fae-banshee',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Banshee.jpg/960px-Banshee.jpg'],
     parentId: 'fae',
     name: 'Banshee (Bean Sídhe)',
     description: 'A female spirit in Irish mythology whose wailing, high-pitched scream warns of an imminent death in a family. Described as a messenger from the Otherworld (the Sidhe mounds).',
@@ -23486,6 +24363,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'fae-tuatha-de-danann',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Riders_of_th_Sidhe_%28big%29.jpg/960px-Riders_of_th_Sidhe_%28big%29.jpg'],
     parentId: 'fae',
     name: 'Tuatha Dé Danann (Aos Sí)',
     description: 'The "People of the Goddess Danu"—a supernatural race of god-like beings in Irish mythology. After losing Ireland to the Milesians, they retreated into the hollow hills (mounds) and became the Sidhe/faerie folk. Esoteric researchers like Gary Wayne link the Tuatha Dé Danann to the Nephilim, identifying them as the "fairy" branch of the dragon bloodline (the Gene of Isis) that preserved pre-flood ancient knowledge.',
@@ -23550,6 +24428,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'fae-will-o-wisp',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Will-o-the-wisp_and_snake_by_Hermann_Hendrich_1823.jpg/960px-Will-o-the-wisp_and_snake_by_Hermann_Hendrich_1823.jpg'],
     relatedIds: ['anomaly-Myths---Legends-mae-de-ouro-paraiba'],
     parentId: 'fae',
     name: 'Will-o\'-the-Wisp',
@@ -23579,6 +24458,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'fae-kelpies',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/The_Kelpies_at_The_Helix_in_Falkirk%2C_Scotland%2C_June_2014.jpg/960px-The_Kelpies_at_The_Helix_in_Falkirk%2C_Scotland%2C_June_2014.jpg'],
     parentId: 'fae',
     name: 'Kelpies',
     description: 'Scottish shape-shifting water spirits inhabiting lochs and deep pools. Typically appearing as a magnificent horse that entices travelers to mount it, the Kelpie traps its rider and drags them to the depths.',
@@ -23593,6 +24473,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'philosophers-br',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Joseph%2C_son_of_Gorian%2C_called_Flavius_Josephus_%28cropped%29.jpg/1280px-Joseph%2C_son_of_Gorian%2C_called_Flavius_Josephus_%28cropped%29.jpg'],
     parentId: 'esoteric-traditions',
     name: 'Philosophers & Sages',
     description: 'Historical thinkers, mystics, and scholars whose works shaped global metaphysics, ethics, and esoteric understanding of the cosmos.',
@@ -23600,6 +24481,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'socrates-philosopher',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Socrates_Louvre.jpg/960px-Socrates_Louvre.jpg'],
     parentId: 'philosophers-br',
     name: 'Socrates',
     description: 'Classical Greek philosopher credited as one of the founders of Western philosophy. He taught through the Socratic method of dialogue and questioning, ultimately executed by hemlock in Athens for impiety and corrupting the youth.',
@@ -23609,6 +24491,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'plato-philosopher',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Plato_Silanion_Musei_Capitolini_MC1377.png/960px-Plato_Silanion_Musei_Capitolini_MC1377.png'],
     parentId: 'philosophers-br',
     name: 'Plato',
     description: 'Greek philosopher, student of Socrates, and founder of the Academy. He authored dialogues on metaphysics, politics, and the soul. In esoteric research, Plato is famous for documenting the legend of Atlantis in Timaeus and Critias.',
@@ -23619,6 +24502,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'aristotle-philosopher',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Aristotle_Altemps_Inv8575.jpg/960px-Aristotle_Altemps_Inv8575.jpg'],
     parentId: 'philosophers-br',
     name: 'Aristotle',
     description: 'Polymath and philosopher of classical Greece, student of Plato, and tutor to Alexander the Great. He established the Lyceum and wrote extensively on physics, biology, metaphysics, and logic, shaping medieval scholasticism.',
@@ -23628,6 +24512,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'pythagoras-philosopher',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Pythagoras_in_the_Roman_Forum%2C_Colosseum.jpg/960px-Pythagoras_in_the_Roman_Forum%2C_Colosseum.jpg'],
     parentId: 'philosophers-br',
     name: 'Pythagoras',
     description: 'Ionian Greek philosopher and founder of the Pythagorean brotherhood in Croton. Beyond mathematics, he taught the transmigration of souls (reincarnation), the "harmony of the spheres" (cosmic acoustics), and sacred geometry.',
@@ -23637,6 +24522,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'hermes-trismegistus-philosopher',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Hermes_Trismegistus_Sienna_Cathedral_Mosaic.jpg/960px-Hermes_Trismegistus_Sienna_Cathedral_Mosaic.jpg'],
     parentId: 'philosophers-br',
     name: 'Hermes Trismegistus',
     description: 'The legendary syncretic figure combining the Greek god Hermes and the Egyptian god Thoth. Revered as the author of the Hermetica, he is the foundational patron of Hermeticism, alchemy, and astrology, famously associated with the Emerald Tablet.',
@@ -23646,6 +24532,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'francis-bacon-philosopher',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Somer_Francis_Bacon.jpg/960px-Somer_Francis_Bacon.jpg'],
     parentId: 'philosophers-br',
     name: 'Francis Bacon',
     description: 'English philosopher, statesman, and pioneer of the scientific method. In alternative history, Bacon is viewed as a high-ranking Rosicrucian or Freemason, the true author behind Shakespeare\'s plays, and the visionary of a "New Atlantis" (America) established as a utopian scientific empire.',
@@ -23665,6 +24552,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'hinduism',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/1500-1200_BCE_Rigveda%2C_manuscript_page_sample_i%2C_Mandala_1%2C_Hymn_1_%28Sukta_1%29%2C_Adhyaya_1%2C_lines_1.1.1_to_1.1.9%2C_Sanskrit%2C_Devanagari.jpg/1280px-1500-1200_BCE_Rigveda%2C_manuscript_page_sample_i%2C_Mandala_1%2C_Hymn_1_%28Sukta_1%29%2C_Adhyaya_1%2C_lines_1.1.1_to_1.1.9%2C_Sanskrit%2C_Devanagari.jpg'],
     parentId: 'biblical-apocryphal',
     name: 'Hinduism',
     description: 'One of the world\'s oldest major spiritual traditions. It has no single historical founder, having evolved from ancient Vedic rishis (sages) who received the sacred Vedas as divine sound (shruti, "what is heard"). In modern Hinduism, Jesus is widely revered by reformists and gurus (such as Paramahansa Yogananda) as a self-realized yogi, a great spiritual master, or an avatar (incarnation) of divine consciousness.',
@@ -23675,6 +24563,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'judaism',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Talmud-Druck_von_Daniel_Bomberg_und_Ambrosius_Froben.jpg/1280px-Talmud-Druck_von_Daniel_Bomberg_und_Ambrosius_Froben.jpg'],
     parentId: 'biblical-apocryphal',
     name: 'Judaism',
     description: 'Monotheistic Abrahamic religion traced to the patriarch Abraham and the prophet Moses, who received the Torah directly from God on Mount Sinai. Judaism views Jesus as a historical Jewish teacher and reformer, but does not recognize him as the Messiah, divine, or a prophet, since his life did not fulfill the traditional Hebrew scriptural prophecies of global peace and gathering the exiles.',
@@ -23684,6 +24573,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'christianity',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Simeon_Stylites_the_Elder_and_Simeon_Stylites_the_Younger%2C_1699.jpg/960px-Simeon_Stylites_the_Elder_and_Simeon_Stylites_the_Younger%2C_1699.jpg'],
     parentId: 'biblical-apocryphal',
     name: 'Christianity',
     description: 'Abrahamic religion based on the life, death, resurrection, and teachings of Jesus of Nazareth, recorded in the New Testament. It recognizes Jesus as the incarnate Son of God, the prophesied Messiah (Christ), and the second person of the Holy Trinity who redeemed humanity through his sacrifice on the cross.',
@@ -23693,6 +24583,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'islam',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/The_Ka%27ba%2C_Great_Mosque_of_Mecca%2C_Saudi_Arabia_%284%29.jpg/1280px-The_Ka%27ba%2C_Great_Mosque_of_Mecca%2C_Saudi_Arabia_%284%29.jpg'],
     parentId: 'biblical-apocryphal',
     name: 'Islam',
     description: 'Monotheistic Abrahamic religion revealed through the Prophet Muhammad, who received the Quran from God via the Angel Gabriel (Jibril). Islam highly reveres Jesus as Isa al-Masih (Jesus the Messiah), one of its greatest prophets and messengers born of the Virgin Mary, though it rejects the beliefs that he is the literal Son of God or that he was crucified, holding that he was raised alive to heaven by God.',
@@ -23702,6 +24593,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'zoroastrianism',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Faravahar.svg/1280px-Faravahar.svg.png'],
     parentId: 'biblical-apocryphal',
     name: 'Zoroastrianism',
     description: 'Ancient Persian dualistic religion founded by the prophet Zoroaster (Zarathustra), who received revelations from the creator deity Ahura Mazda recorded in the Gathas/Avesta. While traditional Zoroastrianism does not mention Jesus, alternative and historical scholars note striking parallels between his role and the Zoroastrian prophecy of the Saoshyant (a future virgin-born savior who overcomes evil).',
@@ -23712,6 +24604,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'shinto',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Kojiki_Shinpukuji.jpg/1280px-Kojiki_Shinpukuji.jpg'],
     parentId: 'biblical-apocryphal',
     name: 'Shinto',
     description: 'The indigenous animist tradition of Japan, originating from prehistoric folklore and nature worship without a single founder or primary canonical text. Shinto does not officially recognize Jesus, but syncretic views sometimes revere him as a kami (divine spirit) of benevolence. A highly unusual local Japanese legend in Shingo, Aomori, claims Jesus did not die on the cross but escaped to Japan, becoming a farmer.',
@@ -23721,6 +24614,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'gnosticism',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Albrecht_D%C3%BCrer_-_Adoration_of_the_Trinity_%28Landauer_Altar%29_-_Google_Art_Project.jpg/1280px-Albrecht_D%C3%BCrer_-_Adoration_of_the_Trinity_%28Landauer_Altar%29_-_Google_Art_Project.jpg'],
     parentId: 'biblical-apocryphal',
     name: 'Gnosticism',
     description: 'Ancient esoteric religious movements founded by early Christian mystics (like Valentinus), claiming to receive secret teachings of Jesus and direct spiritual intuition (Gnosis) rather than orthodox faith. Gnosticism depicts Jesus as a docetic, non-physical divine messenger sent from the supreme realm (Pleroma) to reveal the secret spark of light trapped in the material world.',
@@ -23731,6 +24625,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'rosicrucianism',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Rose_Cross.png/960px-Rose_Cross.png'],
     parentId: 'biblical-apocryphal',
     secondaryParentIds: ['magical-orders'],
     name: 'Rosicrucianism',
@@ -23742,6 +24637,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'catholicism',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/f/f5/Basilica_di_San_Pietro_in_Vaticano_September_2015-1a.jpg'],
     parentId: 'christian-denominations',
     name: 'Catholicism',
     description: 'The largest branch of Christianity, historically tracing its founding to Jesus Christ, who appointed Saint Peter as the first Pope, with teachings preserved in the 73-book biblical canon and Sacred Tradition. Catholicism recognizes Jesus as the incarnate Son of God, the Savior, and the second person of the Trinity, physically present in the bread and wine of the Eucharist through transubstantiation.',
@@ -23752,6 +24648,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'mormonism',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Mormon-book.jpg/500px-Mormon-book.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail'],
     parentId: 'biblical-apocryphal',
     name: 'Mormonism (Latter-day Saints)',
     description: 'A restorationist Christian movement founded by Joseph Smith Jr. in 1830, who claimed to translate the Book of Mormon from golden plates delivered by the angel Moroni. It depicts Jesus as the literal firstborn spirit son of God the Father, distinct from Him in physical body, and teaches that after His resurrection in Jerusalem, Jesus visited and established His church among ancient civilizations in the Americas.',
@@ -23762,6 +24659,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'astrology-cosmology',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/5/55/8-cell-simple.gif'],
     parentId: 'esoteric-traditions',
     name: 'Astrology & Cosmology',
     description: 'The ancient practice of observing celestial movements and relative planetary alignments, interpreting them as keys to terrestrial events, personality archetypes, and spiritual cycles.',
@@ -23770,6 +24668,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'constellations-parent',
+    images: ['https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/f/f3/Sirius_A_and_B_Hubble_photo.jpg'],
     parentId: 'astrology-cosmology',
     name: 'Constellations',
     description: 'Mapped groups of stars forming recognized celestial patterns. In alternative history, ancient astronaut theories, and esoteric traditions, key constellation alignments (like Giza to Orion) are viewed as stargates or signs of ancient contact.',
@@ -23778,6 +24677,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'const-orion',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Mosaic_House_of_Orion_by_Dr_Sophie_Hay_4.jpg/960px-Mosaic_House_of_Orion_by_Dr_Sophie_Hay_4.jpg'],
     parentId: 'constellations-parent',
     name: 'Orion',
     description: 'The Hunter constellation, one of the most prominent in the night sky. In alternative archaeology, the Orion Correlation Theory suggests the Giza Pyramids align with Orion\'s Belt, symbolizing Osiris.',
@@ -23786,6 +24686,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'const-pleiades',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Pleiades_large.jpg/960px-Pleiades_large.jpg'],
     parentId: 'constellations-parent',
     name: 'The Pleiades',
     description: 'A cluster of stars in the Taurus constellation, mentioned in Job and ancient myths globally. In modern UFO contactee lore and New Age channeling, they are claimed to be the home of Pleiadians.',
@@ -23813,6 +24714,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'const-ursa-major',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Ursa_Major_IAU.svg/960px-Ursa_Major_IAU.svg.png'],
     parentId: 'constellations-parent',
     name: 'Ursa Major (The Great Bear)',
     description: 'The Great Bear constellation containing the Big Dipper asterism. Associated globally with navigation, polar alignment, the Seven Rishis of Vedic lore, and cosmic axis symbolism.',
@@ -23828,6 +24730,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'zodiac',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Ecliptic_path.jpg/960px-Ecliptic_path.jpg'],
     parentId: 'astrology-cosmology',
     name: 'The Zodiac',
     description: 'The celestial path divided into twelve equal divisions of 30 degrees, representing the sun\'s annual path. The foundation of western, Vedic, and Chinese astrology, mapping human archetypes and cycles.',
@@ -23836,6 +24739,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'zodiac-aries',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Aries_symbol_%28bold%29.svg/960px-Aries_symbol_%28bold%29.svg.png'],
     parentId: 'zodiac',
     name: 'Aries',
     description: 'The Ram, the first sign of the zodiac marking the vernal equinox. Symbolizes new beginnings, initiation, and the spring season of renewal.',
@@ -23843,6 +24747,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'zodiac-taurus',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Taurus_symbol_%28bold%29.svg/960px-Taurus_symbol_%28bold%29.svg.png'],
     parentId: 'zodiac',
     name: 'Taurus',
     description: 'The Bull, the second sign of the zodiac. Linked historically to the ancient bull cults of Egypt (Apis) and Minoan Crete, and associated with material stability.',
@@ -23850,6 +24755,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'zodiac-gemini',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Google_Gemini_Screenshot_%282026%29.png/960px-Google_Gemini_Screenshot_%282026%29.png'],
     parentId: 'zodiac',
     name: 'Gemini',
     description: 'The Twins, the third sign of the zodiac. Represents duality, intellectual communication, and the divine twins of global mythologies.',
@@ -23857,6 +24763,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'zodiac-cancer',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Cancer_symbol_%28bold%29.svg/960px-Cancer_symbol_%28bold%29.svg.png'],
     parentId: 'zodiac',
     name: 'Cancer',
     description: 'The Crab, the fourth sign of the zodiac marking the summer solstice. Associated with intuition, emotion, protection, and lunar cycles.',
@@ -23864,6 +24771,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'zodiac-leo',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Pope_Leo_XIV_3_%283x4_cropped%29.png/960px-Pope_Leo_XIV_3_%283x4_cropped%29.png'],
     parentId: 'zodiac',
     name: 'Leo',
     description: 'The Lion, the fifth sign of the zodiac. Associated with solar power, sovereignty, and the Sphinx (theoretically aligned with Leo in 10,500 BC).',
@@ -23871,6 +24779,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'zodiac-virgo',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Virgo_symbol_%28bold%29.svg/960px-Virgo_symbol_%28bold%29.svg.png'],
     parentId: 'zodiac',
     name: 'Virgo',
     description: 'The Virgin, the sixth sign of the zodiac. Associated with harvest, fertility deities (Isis, Demeter), and purity.',
@@ -23878,6 +24787,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'zodiac-libra',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Libra_symbol_%28bold%29.svg/960px-Libra_symbol_%28bold%29.svg.png'],
     parentId: 'zodiac',
     name: 'Libra',
     description: 'The Scales, the seventh sign of the zodiac marking the autumn equinox. Symbolizes balance, justice, and cosmic law.',
@@ -23885,6 +24795,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'zodiac-scorpio',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Scorpius_symbol_%28bold%29.svg/960px-Scorpius_symbol_%28bold%29.svg.png'],
     parentId: 'zodiac',
     name: 'Scorpio',
     description: 'The Scorpion, the eighth sign of the zodiac. Associated with transformation, hidden knowledge, death, rebirth, and the occult.',
@@ -23892,6 +24803,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'zodiac-sagittarius',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Sagittarius_symbol_%28bold%29.svg/960px-Sagittarius_symbol_%28bold%29.svg.png'],
     parentId: 'zodiac',
     name: 'Sagittarius',
     description: 'The Archer, the ninth sign of the zodiac. Symbolizes exploration, philosophy, and alignment with the Galactic Center.',
@@ -23899,6 +24811,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'zodiac-capricorn',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Capricornus_symbol_%28bold%29.svg/960px-Capricornus_symbol_%28bold%29.svg.png'],
     parentId: 'zodiac',
     name: 'Capricorn',
     description: 'The Sea-Goat, the tenth sign of the zodiac marking the winter solstice. Represents time, structure, karma, and Saturnian limitations.',
@@ -23906,6 +24819,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'zodiac-aquarius',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Aquarius_symbol_%28bold%29.svg/960px-Aquarius_symbol_%28bold%29.svg.png'],
     parentId: 'zodiac',
     name: 'Aquarius',
     description: 'The Water-Bearer, the eleventh sign of the zodiac. Associated with collective consciousness, technological evolution, and the Age of Aquarius.',
@@ -23913,6 +24827,7 @@ const chunk_6: any[] = [
   },
   {
     id: 'zodiac-pisces',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Pisces_symbol_%28bold%29.svg/960px-Pisces_symbol_%28bold%29.svg.png'],
     parentId: 'zodiac',
     name: 'Pisces',
     description: 'The Fish, the twelfth sign of the zodiac. Represents spiritual completion, mystical union, and the current messianic era.',
@@ -23931,12 +24846,14 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'eastern-orthodoxy',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Catedrala_M%C3%A2ntuirii_Neamului_%28Aprilie_2025%29.jpg/960px-Catedrala_M%C3%A2ntuirii_Neamului_%28Aprilie_2025%29.jpg'],
     parentId: 'christian-denominations',
     name: 'Eastern Orthodoxy',
     description: 'The second-largest Christian church, representing the Eastern branch of Chalcedonian Christianity, emphasizing liturgical tradition, mystical theology (Hesychasm), and the consensus of the early Church Fathers.'
   },
   {
     id: 'oriental-orthodoxy',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Etchmiadzin_2025-3.jpg/960px-Etchmiadzin_2025-3.jpg'],
     parentId: 'christian-denominations',
     name: 'Oriental Orthodoxy',
     description: 'An ancient branch of Eastern Christianity that recognized only the first three ecumenical councils, historically distinct in its Miaphysite christology.'
@@ -23999,6 +24916,7 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'plymouth-brethren',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Plymouth_Brethren_Christian_Church_in_Redwood.jpg/960px-Plymouth_Brethren_Christian_Church_in_Redwood.jpg'],
     parentId: 'protestantism',
     name: 'Plymouth Brethren',
     description: 'A late-1820s restorationist movement originating in Dublin and Plymouth, rejecting formal clerical structures in favor of the priesthood of all believers and weekly communion.'
@@ -24023,6 +24941,7 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'seventh-day-adventists',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Adventist_Symbol.svg/960px-Adventist_Symbol.svg.png'],
     parentId: 'protestantism',
     name: 'Seventh-day Adventism',
     description: 'A Protestant denomination arising from the 19th-century Millerite movement, characterized by its observance of Saturday as the Sabbath and its expectation of the imminent second coming of Jesus.'
@@ -24082,6 +25001,7 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'buddhism-mahayana',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Shishoin_temple_shibamata_Five_Tathagatas_2020.jpg/960px-Shishoin_temple_shibamata_Five_Tathagatas_2020.jpg'],
     parentId: 'buddhism-denominations',
     name: 'Mahayana',
     description: 'The "Great Vehicle," emphasizing the Bodhisattva path of universal compassion and liberation for all sentient beings.'
@@ -24109,18 +25029,21 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'hinduism-vaishnavism',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Hindu_God_Vishnu_as_Narayana_witth_Consorts_10_AD_Sculpture_at_LA_County_Museum_of_Art.tif/lossy-page1-960px-Hindu_God_Vishnu_as_Narayana_witth_Consorts_10_AD_Sculpture_at_LA_County_Museum_of_Art.tif.jpg'],
     parentId: 'hinduism-denominations',
     name: 'Vaishnavism',
     description: 'The branch of Hinduism devoted to the worship of Vishnu and his avatars (such as Rama and Krishna) as the supreme deity.'
   },
   {
     id: 'hinduism-shaivism',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Meenakshi_Temple%2C_Shaivism%2C_Madurai%2C_India.jpg/960px-Meenakshi_Temple%2C_Shaivism%2C_Madurai%2C_India.jpg'],
     parentId: 'hinduism-denominations',
     name: 'Shaivism',
     description: 'The branch of Hinduism devoted to Shiva as the supreme Lord, emphasizing asceticism, yoga, and non-dualistic realization.'
   },
   {
     id: 'hinduism-shaktism',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Statues_of_Vaishnavi%2C_Varahi%2C_Indrani_and_Camunda%2C_National_Museum%2C_New_Delhi.jpg/960px-Statues_of_Vaishnavi%2C_Varahi%2C_Indrani_and_Camunda%2C_National_Museum%2C_New_Delhi.jpg'],
     parentId: 'hinduism-denominations',
     name: 'Shaktism',
     description: 'The branch of Hinduism focusing on the active, creative feminine energy (Shakti) or Devi as the supreme cosmic power.'
@@ -24142,6 +25065,7 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'judaism-orthodox',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Koppel_reich.png/960px-Koppel_reich.png'],
     relatedIds: ['judaism-hasidic'],
     parentId: 'judaism-denominations',
     name: 'Orthodox Judaism',
@@ -24155,6 +25079,7 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'judaism-reform',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Congregation_Emanu-El_of_the_City_New_York.jpg/960px-Congregation_Emanu-El_of_the_City_New_York.jpg'],
     parentId: 'judaism-denominations',
     name: 'Reform Judaism',
     description: 'A progressive movement emphasizing the ethical dimensions of Jewish law over ritual obligations, advocating individual autonomy.'
@@ -24176,6 +25101,7 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'gnostic-sethian',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Zhdan_Dementiyev_01_Seth_%281630%29.jpg/960px-Zhdan_Dementiyev_01_Seth_%281630%29.jpg'],
     parentId: 'gnosticism-denominations',
     name: 'Sethianism',
     description: 'One of the earliest Gnostic groups, tracing their esoteric revelation to Seth, the third son of Adam and Eve.'
@@ -24204,6 +25130,7 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'shinto-shrine',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Plum_trees_Kitano_Tenmangu.jpg/960px-Plum_trees_Kitano_Tenmangu.jpg'],
     parentId: 'shinto-denominations',
     name: 'Shrine Shinto (Jinja Shinto)',
     description: 'The traditional, mainstream form of Shinto centered on localized shrine worship, festivals, and community kami devotion.'
@@ -24216,6 +25143,7 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'shinto-state',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Japanese_government_small-face-value_paper_money_50_Sen_%28Yasukuni_Shrine%29_-_front.jpg/960px-Japanese_government_small-face-value_paper_money_50_Sen_%28Yasukuni_Shrine%29_-_front.jpg'],
     relatedIds: ['kojiki'],
     parentId: 'shinto-denominations',
     name: 'State Shinto (Kokka Shinto)',
@@ -24232,12 +25160,14 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'taoism-quanzhen',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Changchun-Temple-Master-and-disciples-painting-0316.jpg/960px-Changchun-Temple-Master-and-disciples-painting-0316.jpg'],
     parentId: 'taoism-denominations',
     name: 'Quanzhen (Complete Perfection)',
     description: 'The monastic branch of Taoism emphasizing internal alchemy, meditation, celibacy, and vegetarianism.'
   },
   {
     id: 'taoism-zhengyi',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Zhengyi_rite_for_the_Jade_Deity_at_the_Qinciyangdian_of_Shanghai.jpg/960px-Zhengyi_rite_for_the_Jade_Deity_at_the_Qinciyangdian_of_Shanghai.jpg'],
     parentId: 'taoism-denominations',
     name: 'Zhengyi (Orthodox Unity)',
     description: 'The householder branch of Taoism led by married priests, focusing on talismans, exorcisms, and public rituals.'
@@ -24266,6 +25196,7 @@ const chunk_new_religion: any[] = [
   // --- MYTHOLOGY ADDITIONS ---
   {
     id: 'jade-emperor',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/%E7%8E%89%E7%9A%87%E5%A4%A7%E5%B8%9D%E7%95%AB%E5%83%8F.jpg/960px-%E7%8E%89%E7%9A%87%E5%A4%A7%E5%B8%9D%E7%95%AB%E5%83%8F.jpg'],
     relatedIds: ['tao-te-ching', 'heaven-tian-heavenly-court'],
     parentId: 'chinese-mythology',
     name: 'The Jade Emperor (Yuhuang Dadi)',
@@ -24284,6 +25215,7 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'change-goddess',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/The_Moon_Goddess_Chang_E_-_Unidentified_artist%2C_after_Tang_Yin.jpg/960px-The_Moon_Goddess_Chang_E_-_Unidentified_artist%2C_after_Tang_Yin.jpg'],
     relatedIds: ['elixir-of-life'],
     parentId: 'chinese-mythology',
     name: "Chang'e (Moon Goddess)",
@@ -24293,6 +25225,7 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'pangu-creator',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Pangu.jpg/960px-Pangu.jpg'],
     parentId: 'chinese-mythology',
     name: 'Pangu (The Creator Giant)',
     description: 'The first sentient being and creator giant in Chinese mythology, who emerged from a cosmic egg and separated Yin and Yang to form the earth and sky. His body parts transformed into the wind, thunder, sun, moon, and mountains upon his death, mirroring giant creation myths worldwide.',
@@ -24301,6 +25234,7 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'fuxi-nuwa',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Ma-Lin-Fuxi-and-turtle.jpg/960px-Ma-Lin-Fuxi-and-turtle.jpg'],
     relatedIds: ['i-ching'],
     parentId: 'chinese-mythology',
     name: 'Fuxi & Nuwa',
@@ -24327,6 +25261,7 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'myth-thunderbird',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Thunderbird_on_Totem_Pole.jpg/960px-Thunderbird_on_Totem_Pole.jpg'],
     parentId: 'anishinaabe-ojibwe-lore',
     name: 'Thunderbird',
     description: 'A legendary giant bird in Native American cultures, believed to possess supernatural power and generate thunder by flapping its wings. In cryptozoology and alternative archaeology, Thunderbird sightings are investigated as potential surviving pterosaurs or relic populations of prehistoric giant avians.',
@@ -24336,6 +25271,7 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'navajo-skinwalker',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Skinwalker_Ranch_%2810393732103%29.jpg/960px-Skinwalker_Ranch_%2810393732103%29.jpg'],
     parentId: 'navajo-hopi-lore',
     name: 'Skinwalker (Yee Naaldlooshii)',
     description: 'A harmful shape-shifting witch in Navajo cultural folklore, capable of transforming into, or occupying, various animals. Alternative and paranormal researchers study Skinwalker legends in relation to localized creature sightings, skinwalker-like encounters, and anomalous energetic signatures.',
@@ -24396,6 +25332,7 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'ojibwe-nanabozho',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Nanabozho_pictograph%2C_Mazinaw_Rock.jpg/960px-Nanabozho_pictograph%2C_Mazinaw_Rock.jpg'],
     parentId: 'anishinaabe-ojibwe-lore',
     name: 'Nanabozho (The Great Hare)',
     description: 'A central trickster figure, shape-shifter, and culture hero in Anishinaabe/Ojibwe storytelling. He is credited with creating the world, bringing medicine and fire to humans, and naming all geographic landmarks.',
@@ -24416,6 +25353,7 @@ const chunk_new_additions: any[] = [
   },
   {
     id: 'sophia-gnostic',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Hagia_Sophia_%28228968325%29.jpeg/960px-Hagia_Sophia_%28228968325%29.jpeg'],
     parentId: 'gnosticism',
     name: 'Sophia (Gnostic Divine Feminine)',
     description: "The personification of divine wisdom and the final Aeon of the Pleroma. Her attempt to create without her male consort resulted in her fall and the accidental creation of the material demiurge.",
@@ -24442,6 +25380,7 @@ const chunk_new_additions: any[] = [
   // --- OCCULT & ESOTERIC ADDITIONS ---
   {
     id: 'the-great-work',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/HermesTrismegistusCaucHighRes.jpg/960px-HermesTrismegistusCaucHighRes.jpg'],
     parentId: 'esoteric-traditions',
     name: 'The Great Work (Magnum Opus)',
     description: "The ultimate spiritual goal in Western alchemy, Hermeticism, and modern esotericism, representing the transmutation of human consciousness, self-realization, and union with the divine.",
@@ -24449,6 +25388,7 @@ const chunk_new_additions: any[] = [
   },
   {
     id: 'left-hand-path',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Baphomet_by_%C3%89liphas_L%C3%A9vi.jpg/960px-Baphomet_by_%C3%89liphas_L%C3%A9vi.jpg'],
     parentId: 'esoteric-traditions',
     name: 'Left-Hand Path',
     description: "An esoteric classification focusing on individual will, self-deification, and the transgression of traditional moral boundaries and social taboos to achieve spiritual liberation, contrasting with the submissive Right-Hand Path.",
@@ -24463,6 +25403,7 @@ const chunk_new_additions: any[] = [
   },
   {
     id: 'amalantrah-working',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/3/31/Supposed_channeled_entity_by_occultist_crowley.jpg'],
     parentId: 'thelema',
     name: 'Amalantrah Working',
     description: "A series of ceremonial magic rituals conducted by Aleister Crowley in New York City in 1918, claiming to open a spiritual portal and establish contact with a non-human entity named Lam.",
@@ -24473,6 +25414,7 @@ const chunk_new_additions: any[] = [
   },
   {
     id: 'scientology',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Scientology_Logo.svg/960px-Scientology_Logo.svg.png'],
     parentId: 'esoteric-traditions',
     secondaryParentIds: ['biblical-apocryphal'],
     name: 'Scientology',
@@ -24484,6 +25426,7 @@ const chunk_new_additions: any[] = [
   },
   {
     id: 'l-ron-hubbard',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/L._Ron_Hubbard_in_1950_%28cropped_3x4%29.jpg/960px-L._Ron_Hubbard_in_1950_%28cropped_3x4%29.jpg'],
     parentId: 'historical-alchemists',
     secondaryParentIds: ['scientology'],
     name: 'L. Ron Hubbard',
@@ -24565,6 +25508,7 @@ const chunk_new_additions: any[] = [
   },
   {
     id: 'sherwood-forest-lore',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Sherwood_Forest%2C_May%2C_2017-5.jpg/960px-Sherwood_Forest%2C_May%2C_2017-5.jpg'],
     parentId: 'robin-hood-legends',
     name: 'Sherwood Forest',
     description: "The ancient royal forest in Nottinghamshire, England, which serves as the legendary sanctuary and base of operations for Robin Hood and his Merry Men.",
@@ -24576,6 +25520,7 @@ const chunk_new_additions: any[] = [
   // --- ARTHURIAN LEGENDS ---
   {
     id: 'arthurian-legend',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Arthur-Pyle_Excalibur_the_Sword.JPG/500px-Arthur-Pyle_Excalibur_the_Sword.JPG'],
     parentId: 'myths-legends-root',
     name: 'King Arthur & Merlin Legends',
     description: "The legendary cycle of British history and medieval romance centered on Camelot, the round table, and the mystical prophecies of the wizard Merlin.",
@@ -24587,6 +25532,7 @@ const chunk_new_additions: any[] = [
   },
   {
     id: 'king-arthur-char',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Arth_tapestry2.jpg/960px-Arth_tapestry2.jpg'],
     parentId: 'arthurian-legend',
     name: 'King Arthur',
     description: "The legendary British sovereign who pulled the sword from the stone, established the fellowship of the Round Table at Camelot, and defended Britain against Saxon invaders. In esoteric giant theories, Arthur is viewed as a historical branch of the hybrid Nephilim/fairy lineage (the Gene of Isis) preserved through secret royal lines.",
@@ -24596,6 +25542,7 @@ const chunk_new_additions: any[] = [
   },
   {
     id: 'merlin-wizard-char',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Arthur-Pyle_The_Enchanter_Merlin.JPG/960px-Arthur-Pyle_The_Enchanter_Merlin.JPG'],
     parentId: 'arthurian-legend',
     name: 'Merlin the Wizard',
     description: "The legendary wizard, prophet, and advisor who engineered Arthur's birth, constructed the Round Table, and guided the kingdom of Camelot before his mystical imprisonment.",
@@ -24614,6 +25561,7 @@ const chunk_new_additions: any[] = [
   },
   {
     id: 'round-table-knights',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Holy_Grail_Tapestry_-The_Arming_and_Departure_of_the_Kniights.jpg/960px-Holy_Grail_Tapestry_-The_Arming_and_Departure_of_the_Kniights.jpg'],
     parentId: 'arthurian-legend',
     name: 'Knights of the Round Table & The Holy Grail',
     description: "The chivalric fellowship of Camelot's greatest knights who sat at a table designed to prevent squabbles over precedence, embarking on the sacred quest for the Holy Grail.",
@@ -24623,6 +25571,7 @@ const chunk_new_additions: any[] = [
   },
   {
     id: 'tomb-king-arthur',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Alleged_Tomb_of_King_Arthur%2C_Glastonbury_-_geograph.org.uk_-_6885488.jpg/960px-Alleged_Tomb_of_King_Arthur%2C_Glastonbury_-_geograph.org.uk_-_6885488.jpg'],
     parentId: 'arthurian-legend',
     name: 'Tomb of King Arthur (Glastonbury)',
     description: "The legendary burial site of King Arthur and Queen Guinevere. In 1191, monks at Glastonbury Abbey claimed to have excavated an oak coffin containing giant bones and a lead cross reading 'Here lies buried the renowned King Arthur in the island of Avalon.' The tomb was relocated to a black marble monument before the high altar, which was lost following the Dissolution of the Monasteries in 1539.",
@@ -24712,6 +25661,7 @@ const chunk_new_additions: any[] = [
     sources: ['Genesis Rabbah', 'The Zohar', 'Zoharistic Kabbalah']
   }, {
     id: 'cainites-lineage',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/3/3e/Giohargius_Tubalcain_%28cropped%29.JPG'],
     parentId: 'people-groups',
     name: 'The Cainites (Lineage of Cain)',
     description: "The biblical descendants of Cain, including Enoch (not the patriarch), Irad, Mehujael, Methushael, Lamech, and his children Jabal, Jubal, Tubal-Cain, and Naamah. In apocryphal literature and alternative history, the Cainites represent a parallel human lineage that intermarried with the Watchers/Nephilim, developing advanced technology, metalworking, music, and cities before the Great Flood.",
@@ -24907,12 +25857,14 @@ const chunk_new_additions: any[] = [
 const chunk_nasa: any[] = [
   {
     id: 'nasa-root',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/3I-ATLAS_noirlab2532b.jpg/1280px-3I-ATLAS_noirlab2532b.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail'],
     name: 'Nasa / Space',
     description: `Historical lunar landings, private aerospace endeavors, spaceports, space stations, and founders of the modern rocket age.`,
     layer: 'NASA / Space'
   },
   {
     id: 'space-agencies',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/NACA_seal_%28cropped%29.png/960px-NACA_seal_%28cropped%29.png'],
     parentId: 'nasa-root',
     name: 'Space Agencies & Companies',
     description: `National space agencies and commercial aerospace corporations pioneering rocket design, satellite systems, and human space flight.`,
@@ -24920,6 +25872,7 @@ const chunk_nasa: any[] = [
   },
   {
     id: 'nasa-agency',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/8/88/Jack_King%27s_Apollo_11_Launch_Commentary_o4OBKOlgmfo.webm'],
     parentId: 'space-agencies',
     name: 'NASA',
     description: `The National Aeronautics and Space Administration, the US civil space agency. Established in 1958, it led Projects Mercury, Gemini, Apollo, Skylab, the Space Shuttle, and the Artemis program.`,
@@ -24940,6 +25893,7 @@ const chunk_nasa: any[] = [
   },
   {
     id: 'nasa-figureheads',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/f/ff/Wernher_von_Braun.jpg'],
     parentId: 'nasa-agency',
     name: 'Figureheads',
     description: `Architects, directors, and engineers who founded and shaped NASA's spaceflight programs.`,
@@ -25299,6 +26253,7 @@ const chunk_nasa: any[] = [
   },
   {
     id: 'spacex-root',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/b/b2/Elon_Musk%27s_Tesla_Roadster_%2840110297852%29.jpg'],
     parentId: 'space-agencies',
     name: 'SpaceX',
     description: `Space Exploration Technologies Corp. (SpaceX) is a private American aerospace manufacturer and space transportation company founded in 2002 by Elon Musk, pioneering reusable orbital rocketry.`,
@@ -25306,6 +26261,7 @@ const chunk_nasa: any[] = [
   },
   {
     id: 'spacex-figureheads',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/8/85/Elon_Musk_Royal_Society_%28crop1%29.jpg'],
     parentId: 'spacex-root',
     name: 'Figureheads',
     description: `Founders and key engineering figureheads driving SpaceX innovation.`,
@@ -25366,6 +26322,7 @@ const chunk_nasa: any[] = [
   },
   {
     id: 'blue-origin-root',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/8/83/Blue_Origin_New_Glenn_Rocket_Successful_Launch_%289387524%29.jpg'],
     relatedIds: ['jeff-bezos'],
     parentId: 'space-agencies',
     name: 'Blue Origin',
@@ -25374,6 +26331,7 @@ const chunk_nasa: any[] = [
   },
   {
     id: 'blue-origin-figureheads',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/9/91/Jeff_Bezos%27_iconic_laugh_crop.jpg'],
     parentId: 'blue-origin-root',
     name: 'Figureheads',
     description: `Founders and directors steering Blue Origin's aerospace engineering missions.`,
@@ -25420,6 +26378,7 @@ const chunk_nasa: any[] = [
   },
   {
     id: 'bigelow-figureheads',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/d/d4/Robert_Bigelow_and_Lori_Garver_at_the_Bigelow_Aerospace_facilities.jpg'],
     parentId: 'bigelow-aerospace',
     name: 'Figureheads',
     description: `Key founders and funding figures behind Bigelow's aerospace development.`,
@@ -25446,6 +26405,7 @@ const chunk_nasa: any[] = [
 const chunk_saints: any[] = [
   {
     id: 'saints-root',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/St-thomas-aquinasFXD.jpg/1280px-St-thomas-aquinasFXD.jpg'],
     parentId: 'christianity',
     name: 'Saints & Miracles',
     description: `The holy men and women recognized by the Christian tradition, and the supernatural phenomena, relics, and miracles (including bodily incorruptibility) associated with their lives and remains.`,
@@ -25453,6 +26413,7 @@ const chunk_saints: any[] = [
   },
   {
     id: 'saints-stories',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/d/da/Giotto_-_Saint_Francis_Receiving_the_Stigmata.jpg'],
     parentId: 'saints-root',
     name: 'Saints & Stories',
     description: `Renowned historical saints associated with mystical visions, miraculous interventions, or anomalous spiritual phenomena.`,
@@ -25528,6 +26489,7 @@ const chunk_saints: any[] = [
   },
   {
     id: 'incorruptible-saints',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/8/87/Bernadette_Soubirous_Nevers.png'],
     parentId: 'saints-root',
     name: 'Incorruptible Saints',
     description: `Christian saints whose deceased bodies have miraculously resisted natural decay, remaining intact, flexible, and lifelike without any artificial embalming or chemical preservation.`,
@@ -25706,6 +26668,7 @@ const chunk_historic_extensions: any[] = [
   },
   {
     id: 'freemasonry',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Square_and_Compasses_no_G.svg/960px-Square_and_Compasses_no_G.svg.png'],
     parentId: 'alchemy-occult',
     secondaryParentIds: ['magical-orders'],
     name: 'Freemasonry',
@@ -25715,6 +26678,7 @@ const chunk_historic_extensions: any[] = [
   },
   {
     id: 'famous-freemasons',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg/960px-Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg'],
     parentId: 'freemasonry',
     name: 'Famous Freemasons',
     description: `A directory of the most prominent and influential historical figureheads who were initiated members of the Masonic Fraternity, including presidents, philosophers, scientists, and writers.`,
@@ -26058,6 +27022,7 @@ const chunk_historic_extensions: any[] = [
   },
   {
     id: 'masonic-lodges',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Freemasonry_Loge_Brussels.jpg/960px-Freemasonry_Loge_Brussels.jpg'],
     relatedIds: ['const-sirius', 'order-of-the-trapezoid', 'manly-p-hall', 'freemason-flat-hollow-earth'],
     parentId: 'freemasonry',
     name: 'Masonic Lodges',
@@ -26066,6 +27031,7 @@ const chunk_historic_extensions: any[] = [
   },
   {
     id: 'particle-accelerators',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Views_of_the_LHC_tunnel_sector_3-4%2C_tirage_2.jpg/1280px-Views_of_the_LHC_tunnel_sector_3-4%2C_tirage_2.jpg'],
     parentId: 'government-conspiracies',
     name: 'Particle Accelerators',
     description: `A directory of high-energy particle accelerators designed to accelerate charged particles to relativistic speeds, facilitating high-energy physics research and space-time anomaly studies. Conspiratorial theories link these facilities to portals, space-time dilation, and interdimensional research.`,
@@ -26376,6 +27342,7 @@ const chunk_user_additions_2: any[] = [
     sources: ['The Gathas of Zarathustra', 'Yasna Liturgy']
   }, {
     id: 'avesta',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Videvdad_Sadah_%28Zoroastrian_religious_code%29%2C_opened_to_first_chapter%2C_unknown_copyist%2C_Yazd%2C_Iran%2C_1647_AD_-_British_Library%2C_London_-_DSC00550.jpg/960px-Videvdad_Sadah_%28Zoroastrian_religious_code%29%2C_opened_to_first_chapter%2C_unknown_copyist%2C_Yazd%2C_Iran%2C_1647_AD_-_British_Library%2C_London_-_DSC00550.jpg'],
     parentId: 'zoroastrianism',
     secondaryParentIds: ['ancient-texts'],
     name: 'The Avesta',
@@ -26435,6 +27402,7 @@ const chunk_user_additions_2: any[] = [
     sources: ['The Temple of Set (Michael A. Aquino)', 'Black Magic']
   }, {
     id: 'enkidu',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Enkidu%2C_Gilgamesh%27s_friend._From_Ur%2C_Iraq%2C_2027-1763_BCE._Iraq_Museum.jpg/960px-Enkidu%2C_Gilgamesh%27s_friend._From_Ur%2C_Iraq%2C_2027-1763_BCE._Iraq_Museum.jpg'],
     parentId: 'mesopotamian-mythology',
     secondaryParentIds: ['sumerian-civilization'],
     name: 'Enkidu',
@@ -26497,6 +27465,7 @@ const chunk_user_additions_2: any[] = [
     sources: ['Book of Revelation (8:10-11)', 'Chernobyl Historical Accounts', 'Alternative Astronomy Texts']
   }, {
     id: 'michael-aquino',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/LTC_Michael_Aquino.jpg/960px-LTC_Michael_Aquino.jpg'],
     parentId: 'historical-alchemists',
     name: 'Michael A. Aquino',
     description: 'An officer in the U.S. Army specializing in psychological warfare (PsyOp) and the founder of the Temple of Set in 1975. He was initially a high-ranking member of the Church of Satan under Anton LaVey, but left to establish a more esoteric philosophy focused on the self-deification of the individual and Setian metaphysics.',
@@ -26525,6 +27494,7 @@ const chunk_user_additions_2: any[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/St-thomas-aquinasFXD.jpg/1280px-St-thomas-aquinasFXD.jpg']
   }, {
     id: 'brazen-head',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Miles_%26_the_Brazen_Head.png/960px-Miles_%26_the_Brazen_Head.png'],
     parentId: 'alchemy',
     name: 'The Brazen Head',
     description: 'A legendary bronze or brass automaton attributed to medieval alchemists and scholars, including Roger Bacon, Albertus Magnus, and Thomas Aquinas. Reputedly constructed using astrological alignments and alchemical principles, the head could answer any question and speak the future. The most famous legend states that after working on the head for years, Bacon missed its brief hour of speech, and it was destroyed by Thomas Aquinas or crumbled to dust.',
@@ -26575,6 +27545,7 @@ const chunk_user_additions_2: any[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Talmud-Druck_von_Daniel_Bomberg_und_Ambrosius_Froben.jpg/1280px-Talmud-Druck_von_Daniel_Bomberg_und_Ambrosius_Froben.jpg']
   }, {
     id: 'majestic-12',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Truman_initiating_Korean_involvement_GettyImages-615308236.jpg/960px-Truman_initiating_Korean_involvement_GettyImages-615308236.jpg'],
     parentId: 'government-conspiracies',
     name: 'Majestic 12 (MJ-12)',
     description: 'The code name of a purported secret committee of scientists, military leaders, and government officials formed in 1947 by executive order of U.S. President Harry S. Truman. Its alleged purpose was to facilitate the recovery, containment, and reverse-engineering of crashed extraterrestrial spacecraft and their occupants, most notably following the Roswell UFO incident.',
@@ -26584,6 +27555,7 @@ const chunk_user_additions_2: any[] = [
     sources: ['FBI Vault (Conspiratorial Document Leak Archives)', 'Investigative Research Manuscripts', 'Roswell Incident Investigations', 'The MJ-12 Documents']
   }, {
     id: 'invisible-college',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Templeofrosycross_highres.png/960px-Templeofrosycross_highres.png'],
     parentId: 'magical-orders',
     secondaryParentIds: ['ufology-researchers'],
     name: 'The Invisible College',
@@ -26592,6 +27564,7 @@ const chunk_user_additions_2: any[] = [
     sources: ['The Invisible College (Jacques Vallée)', 'UFOs: Past, Present, and Future']
   }, {
     id: 'kiswah',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/The_Kabah_in_the_Grand_Mosque_of_Makkah%2C_Saudi_Arabia_%2852501405646%29.jpg/960px-The_Kabah_in_the_Grand_Mosque_of_Makkah%2C_Saudi_Arabia_%2852501405646%29.jpg'],
     parentId: 'islam',
     name: 'The Kiswah',
     description: 'The holy black silk drape embroidered with gold Quranic calligraphy that covers the Kaaba in Mecca, Saudi Arabia. It is replaced annually during the Hajj pilgrimage. In esoteric symbolism, the Kiswah represents the veil separating the physical world from the divine presence, holding deep significance in Sufi and mystical Islamic traditions.',
@@ -26624,6 +27597,7 @@ const chunk_user_additions_2: any[] = [
     sources: ['Saturnian Occult Studies', 'Symbols of the Occult']
   }, {
     id: 'muslim-practitioner',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Prayer_in_Cairo_1865.jpg/960px-Prayer_in_Cairo_1865.jpg'],
     parentId: 'islam',
     name: 'Muslim',
     description: 'A practitioner of Islam, meaning "one who submits to God." In the broader esoteric and historical scope of the codex, Muslims are tracked through history as preservers of ancient Hermetic, alchemical, and Greek scientific texts during the Islamic Golden Age, contributing significantly to Sufi mysticism, mathematical sacred geometry, and western esotericism.',
@@ -26639,6 +27613,7 @@ const chunk_user_additions_2: any[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Rom%2C_Vatikan%2C_Basilika_St._Peter%2C_Die_Taube_des_Heiligen_Geistes_%28Cathedra_Petri%2C_Bernini%29.jpg/1280px-Rom%2C_Vatikan%2C_Basilika_St._Peter%2C_Die_Taube_des_Heiligen_Geistes_%28Cathedra_Petri%2C_Bernini%29.jpg']
   }, {
     id: 'soul-essence',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Schiavonetti_Soul_leaving_body_1808.jpg/960px-Schiavonetti_Soul_leaving_body_1808.jpg'],
     parentId: 'esoteric-traditions',
     name: 'The Soul',
     description: 'The incorporeal essence of a living being, believed to contain individual consciousness, memory, and spiritual life. Across world religions, alchemy, and occult philosophies, the soul (referred to as Nephesh/Neshamah in Hebrew, Psyche in Greek, or Atman in Sanskrit) is viewed as an immortal spark that descends into the material plane, undergoes karmic cycles, and seeks ascension or reunification with the divine source.',
@@ -26678,6 +27653,7 @@ const chunk_user_additions_2: any[] = [
 const chunk_us_presidents: any[] = [
   {
     id: 'us-presidents',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg/1280px-Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg'],
     parentId: 'government-conspiracies',
     name: 'US Presidents',
     description: 'A directory of US Presidents and the historical conspiracies, anomalies, secret society connections, and cover-ups associated with their administrations.',
@@ -27194,6 +28170,7 @@ const chunk_us_presidents: any[] = [
 const chunk_37_new_items: any[] = [
   {
     id: 'enochian-lore',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/John_Dee_Ashmolean.jpg/1280px-John_Dee_Ashmolean.jpg'],
     parentId: 'alchemy-occult',
     name: 'Enochian Lore',
     description: 'The system of angelic magic, language, and celestial cosmology received by John Dee and Edward Kelley in the late 16th century.',
@@ -27584,6 +28561,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   ...chunk_4,
   ...chunk_5,  {
     id: 'anunnaki',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Ea_%28Babilonian%29_-_EnKi_%28Sumerian%29.jpg/960px-Ea_%28Babilonian%29_-_EnKi_%28Sumerian%29.jpg'],
     parentId: 'myths-legends-root',
     name: 'The Anunnaki',
     description: 'Ancient Sumerian gods ("those who descended from heaven") reimagined in modern alternative history as an advanced extraterrestrial species from the planet Nibiru, who genetically modified early humanity to serve as gold miners—paralleling the Enochian account of the Watchers.',
@@ -27595,6 +28573,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Sumerian Clay Tablets (Enuma Elis)', 'Alternative Archaeology Texts']
   },  {
     id: 'book-of-giants',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/a/a6/Dead_Sea_Scrolls.jpg'],
     parentId: 'nephilim-br',
     name: 'Book of Giants',
     description: 'An apocryphal Jewish manuscript discovered among the Dead Sea Scrolls in Qumran, expanding on the Book of Enoch by detailing the lives, wars, and prophetic nightmares of the Nephilim giants—such as Ohyah and Hahyah—preceding the Great Flood.',
@@ -27605,6 +28584,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     isApocryphal: true
   },  {
     id: 'kandahar-giant',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Snowy_mountains_in_Kandahar.jpg/960px-Snowy_mountains_in_Kandahar.jpg'],
     parentId: 'nephilim-br',
     subLabel: 'Possible Nephilim Bloodline',
     name: 'Kandahar Giant',
@@ -27626,6 +28606,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Gnostic Codices (Nag Hammadi Library)', 'Pistis Sophia']
   },  {
     id: 'tartaria-empire',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Map_of_Asia_in_1700_by_Guillaume_de_L%27Isle.jpg/960px-Map_of_Asia_in_1700_by_Guillaume_de_L%27Isle.jpg'],
     parentId: 'megaliths-structures',
     name: 'Tartaria & The Mud Flood',
     description: 'A global alternative history theory alleging a technologically advanced empire ("Grand Tartaria") that utilized atmospheric free energy through antiqui-tech architectural details (domes, spires, and obelisks) before being erased by a weaponized mud flood and a massive 19th-century history rewrite.',
@@ -27633,6 +28614,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Alternative Cartography Research', 'Esoteric Architectural History']
   },  {
     id: 'atlantis-lost',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Hypothetical_sketch_of_the_monophylitic_origin_and_of_the_diffusion_of_the_12_varieties_of_men_from_Lemuria_over_the_earth_LCCN2014649358_%28cropped%29.jpg/960px-Hypothetical_sketch_of_the_monophylitic_origin_and_of_the_diffusion_of_the_12_varieties_of_men_from_Lemuria_over_the_earth_LCCN2014649358_%28cropped%29.jpg'],
     parentId: 'megaliths-structures',
     name: 'Atlantis & Lemuria',
     description: 'Legendary lost continents representing advanced pre-diluvian civilizations possessing high-crystal technologies and geodetic grids, swallowed by global geological cataclysms—often equated with the pre-flood civilization of the Genesis era.',
@@ -27641,6 +28623,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Plato\'s Timaeus & Critias', 'Esoteric History Archives']
   },  {
     id: 'mayan-civilization',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/0/06/Tikal_Temple1_2006_08_11.JPG'],
     parentId: 'people-groups',
     name: 'Mayan Civilization',
     description: 'A Mesoamerican civilization known for its highly developed writing system, art, architecture, mathematics, calendar, and astronomical system. Their lore features deep connections to Xibalba (the underworld) and legends of ancient giants.',
@@ -27651,6 +28634,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Popol Vuh', 'Mayan Hieroglyphic Records']
   },  {
     id: 'archaeology-mayan-copan',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/0/06/Tikal_Temple1_2006_08_11.JPG'],
     relatedIds: ['anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-36'],
     parentId: 'mayan-civilization',
     name: 'Mayan Ruins of Copán & Tikal',
@@ -27660,6 +28644,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['UNESCO World Heritage Sites']
   },  {
     id: 'aztec-civilization',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/1/19/Templo_Mayor_50.jpg'],
     parentId: 'people-groups',
     name: 'Aztec Civilization',
     description: 'A Mesoamerican culture that flourished in central Mexico in the post-classic period. Famous for Tenochtitlan, their complex calendar stone, massive temples, and accounts of Quetzalcoatl and the Quinamentin (ancient giants).',
@@ -27670,6 +28655,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Codex Florentino', 'Nahuatl Oral History']
   },  {
     id: 'archaeology-aztec-tenochtitlan',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/1/19/Templo_Mayor_50.jpg'],
     relatedIds: ['huitzilopochtli'],
     parentId: 'aztec-civilization',
     name: 'Tenochtitlan (Aztec Capital)',
@@ -27679,6 +28665,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['INAH Mexico / Historical Archives']
   },  {
     id: 'hopi-tribe',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/6/6d/A_distant_view_in_the_Hopi_pueblo_of_Oraibi_from_the_southwest%2C_Arizona%2C_ca.1898_%28CHS-4594%29.jpg'],
     parentId: 'people-groups',
     name: 'Hopi Tribe',
     description: 'A Native American nation in northeastern Arizona. Hopi cosmology details migrations through successive worlds and features the \'Ant People\' (who protected them underground during cataclysms) and Kachina spirits.',
@@ -27689,6 +28676,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Hopi Oral Traditions', 'Book of the Hopi (Frank Waters)']
   },  {
     id: 'archaeology-hopi-mesa',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/6/6d/A_distant_view_in_the_Hopi_pueblo_of_Oraibi_from_the_southwest%2C_Arizona%2C_ca.1898_%28CHS-4594%29.jpg'],
     parentId: 'hopi-tribe',
     name: 'Hopi Oraibi Mesa',
     description: 'Old Oraibi on Third Mesa is one of the oldest continuously inhabited communities in North America, associated with subterranean Ant People legends.',
@@ -27697,6 +28685,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['National Register of Historic Places / Hopi History']
   },  {
     id: 'mound-builders',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/2/2d/Monks_Mound_in_July.JPG'],
     parentId: 'people-groups',
     name: 'The Mound Builders',
     description: 'Prehistoric inhabitants of North America who constructed massive earthen mounds for burial, residential, and ceremonial purposes. Associated with numerous 19th-century reports of giant skeletal remains.',
@@ -27707,6 +28696,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Smithsonian Bureau of Ethnology Reports', 'North American Archaeology Archives']
   },  {
     id: 'archaeology-moundbuilders-cahokia',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/2/2d/Monks_Mound_in_July.JPG'],
     relatedIds: ['anomaly-Burial-Mounds-35', 'mississippian-culture'],
     parentId: 'mound-builders',
     name: 'Cahokia Mounds',
@@ -27716,6 +28706,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Cahokia Mounds State Historic Site']
   },  {
     id: 'egyptian-civilization',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/2/27/CairoEgMuseumTaaMaskMostlyPhotographed.jpg'],
     parentId: 'people-groups',
     name: 'Ancient Egyptians',
     description: 'One of the oldest and most influential civilizations in the ancient world, centered along the Nile River. Renowned for monumental stone pyramids, sphinxes, advanced geometry, and deep ties to Enochian and Hermetic lore.',
@@ -27726,6 +28717,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Ancient Egyptian Records', 'Hermetic Literature']
   },  {
     id: 'israelites',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/a/af/Siloam_Inscription_2.jpg'],
     parentId: 'people-groups',
     name: 'Kingdom of Israel',
     description: 'The ancient Hebrew nation descended from the twelve sons of Jacob (Israel). They established a united monarchy under Saul, David, and Solomon before splitting into the Northern Kingdom (Israel) and Southern Kingdom (Judah).',
@@ -27736,6 +28728,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Bible', 'Ancient Near East Chronology']
   },  {
     id: 'tribe-of-judah',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/8/80/City_of_David_-_Pool_of_Siloam_IMG_5931.JPG'],
     parentId: 'people-groups',
     name: 'Tribe of Judah',
     description: 'One of the twelve tribes of Israel, descended from Jacob\'s fourth son, Judah. The tribe settled in the southern region of Canaan (Judea) and produced the Davidic royal bloodline and eventually Jesus Christ.',
@@ -27746,6 +28739,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Bible', 'Jewish Historical Annals']
   },  {
     id: 'sumerian-civilization',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/8/87/Enki%28Ea%29.jpg'],
     parentId: 'people-groups',
     name: 'Sumerian Civilization',
     description: 'The earliest known civilization in the historical region of southern Mesopotamia (modern Iraq). Famous for inventing cuneiform writing, developing advanced mathematics, and compiling the Sumerian King List of legendary long-lived rulers.',
@@ -27756,6 +28750,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Sumerian Clay Tablets', 'Mesopotamian Archaeology']
   },  {
     id: 'archaeology-sumer-ur',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/6/6b/Ziggarat_of_Ur_001.jpg'],
     parentId: 'sumerian-civilization',
     name: 'Ancient Ur & Eridu Ruins',
     description: 'The archaeological remains of Ur and Eridu, key urban centers of the ancient Sumerian civilization, featuring the Great Ziggurat of Ur.',
@@ -27764,6 +28759,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['UNESCO World Heritage Sites']
   },  {
     id: 'edomites',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/2/2f/Treasury_petra_crop.jpeg'],
     parentId: 'people-groups',
     name: 'Edomites',
     description: 'An ancient Semitic nation situated in the rugged mountain region of Mount Seir (modern Jordan), descended from Esau (Edom), the twin brother of Jacob. Famous for their rock-hewn fortress cities like Petra.',
@@ -27774,6 +28770,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Bible', 'Levantine Archaeological Records']
   },  {
     id: 'archaeology-mount-seir-petra',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/2/2f/Treasury_petra_crop.jpeg'],
     relatedIds: ['prophecy-edom-obadiah'],
     parentId: 'edomites',
     name: 'Petra & Mount Seir',
@@ -27783,6 +28780,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['UNESCO World Heritage Sites']
   },  {
     id: 'philistines',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/c/ce/Restored_Canaanite_city_gate_of_Ashkelon_%2814341997262%29.jpg'],
     parentId: 'people-groups',
     name: 'Philistines',
     description: 'An ancient seafaring people who settled on the southern coast of Canaan (the Pentapolis, including Gaza and Ashkelon). According to biblical and archaeological records, they migrated from Caphtor (Crete) and frequently clashed with the Israelites.',
@@ -27793,6 +28791,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Bible', 'Philistine Material Culture (Ashkelon)']
   },  {
     id: 'archaeology-ashkelon-philistines',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/c/ce/Restored_Canaanite_city_gate_of_Ashkelon_%2814341997262%29.jpg'],
     parentId: 'philistines',
     name: 'Archaeological Site of Ashkelon',
     description: 'An ancient seaport, one of the five major cities of the Philistine Pentapolis, where extensive Bronze/Iron Age remains were excavated.',
@@ -27831,6 +28830,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Project Rainbow Records', 'Fringe Physics Literature']
   },  {
     id: 'government-conspiracies',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Diana%2C_Princess_of_Wales_1997_%282%29.jpg/500px-Diana%2C_Princess_of_Wales_1997_%282%29.jpg'],
     name: 'Government Conspiracies',
     description: 'Declassified military projects, psychological operations, clandestine intelligence agency experiments, and conspiracy theory research programs in the United States and abroad.',
     layer: 'Government Conspiracies'
@@ -27859,6 +28859,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['DIA Declassified Documents', 'CIA Archives (Released 1995)']
   },  {
     id: 'operation-paperclip',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/JFK_Tour_of_KSC_-_GPN-2000-000605.jpg/960px-JFK_Tour_of_KSC_-_GPN-2000-000605.jpg'],
     parentId: 'government-conspiracies',
     name: 'Operation Paperclip',
     description: 'A secret program of the Joint Intelligence Objectives Agency in 1945 in which more than 1,600 German scientists, engineers, and technicians were recruited to the U.S. for government employment.',
@@ -27898,6 +28899,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Nick Cook\'s The Hunt for Zero Point', 'SS Trial Documents']
   },  {
     id: 'ss-ahnenerbe',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Ahnenerbe.svg/960px-Ahnenerbe.svg.png'],
     parentId: 'government-conspiracies',
     name: 'SS Ahnenerbe',
     description: 'The Ancestral Heritage (Ahnenerbe) research institute established in 1935 by Reichsführer-SS Heinrich Himmler to investigate the history, archaeology, and occult sciences of the Aryan race. The Ahnenerbe funded scientific expeditions to Tibet (led by Ernst Schäfer), Antarctica, Sweden, and Iraq to locate ancient esoteric knowledge, search for runic power, and retrieve religious relics like the Holy Grail and the Spear of Destiny to empower the SS.',
@@ -28011,6 +29013,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Declassified USAF Records (Released 2012)', 'Avro Canada Aeronautical Studies']
   },  {
     id: 'operation-gladio',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Italian_Military_Secret_Service_%28SIFAR%29_report_on_Operation_Gladio.pdf/page1-500px-Italian_Military_Secret_Service_%28SIFAR%29_report_on_Operation_Gladio.pdf.jpg'],
     relatedIds: ['wars-real-causes', 'war-reichstag-fire-1933', 'war-gleiwitz-incident-1939', 'war-syria-pipeline-2011', 'war-ukraine-maidan-2014', 'war-nord-stream-2022', 'gov-conspiracy-mexico-tlatelolco-1968', 'gov-conspiracy-italy-ustica-1980', 'gov-conspiracy-sweden-olof-palme-1986', 'gov-conspiracy-argentina-ratlines-1945', 'gov-conspiracy-france-rainbow-warrior-1985', 'gov-conspiracy-belgium-dutroux-affair-1996'],
     parentId: 'government-conspiracies',
     name: 'Operation Gladio',
@@ -28020,6 +29023,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Italian Parliamentary Investigations', 'NATO Clandestine Planning Files']
   },  {
     id: 'operation-lac',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Fairchild_C-119B_of_the_314th_Troop_Carrier_Group_in_flight%2C_1952_%28021001-O-9999G-016%29.jpg/960px-Fairchild_C-119B_of_the_314th_Troop_Carrier_Group_in_flight%2C_1952_%28021001-O-9999G-016%29.jpg'],
     relatedIds: ['health-pharma-conspiracies', 'health-agent-orange-1961'],
     parentId: 'government-conspiracies',
     name: 'Operation LAC',
@@ -28050,12 +29054,14 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'UFOs - Sightings'
   },  {
     id: 'ufo-whistleblowers',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/PHIL_SCHNEIDER.jpg/500px-PHIL_SCHNEIDER.jpg'],
     parentId: 'ufos',
     name: 'Whistleblowers',
     description: 'Military intelligence officials, aerospace contractors, and government personnel who have exposed secret UFO retrieval and reverse-engineering programs.',
     layer: 'UFOs - Sightings'
   },  {
     id: 'ufology-researchers',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Jack_Sarfatti_%28cropped%29_2.jpg/1280px-Jack_Sarfatti_%28cropped%29_2.jpg'],
     parentId: 'ufos',
     name: 'Ufologists & Researchers',
     description: 'Leading scientists, astronomers, computer scientists, and historians who have researched, documented, and analyzed unidentified aerial phenomena (UAP) and anomalous events.',
@@ -28070,6 +29076,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['The UFO Experience (Hynek)', 'Project Blue Book Archives']
   },  {
     id: 'jacques-vallee',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Jacques_Vall%C3%A9e_2024.jpg/960px-Jacques_Vall%C3%A9e_2024.jpg'],
     parentId: 'ufology-researchers',
     secondaryParentIds: ['project-blue-book'],
     name: 'Dr. Jacques Vallée',
@@ -28093,6 +29100,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Flying Saucers are Real (1950)', 'NICAP Archives']
   },  {
     id: 'richard-dolan',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/James_L._Dolan_by_Gage_Skidmore.jpg/960px-James_L._Dolan_by_Gage_Skidmore.jpg'],
     parentId: 'ufology-researchers',
     secondaryParentIds: ['majestic-12'],
     name: 'Richard Dolan',
@@ -28101,6 +29109,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['UFOs and the National Security State']
   },  {
     id: 'linda-moulton-howe',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Linda1981EmmyStrangeHarvest300dpi.jpg/960px-Linda1981EmmyStrangeHarvest300dpi.jpg'],
     parentId: 'ufology-researchers',
     name: 'Linda Moulton Howe',
     description: 'Emmy-winning investigative journalist who pioneered research into animal mutilations, crop circles, and physical evidence of UFO encounters, proposing military and non-human intelligence involvement.',
@@ -28123,6 +29132,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Above Top Secret', 'Need to Know']
   },  {
     id: 'david-grusch',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/2023_House_Oversight_and_Accountability_Hearing_on_UAP_%E2%80%93_Unidentified_Anomalous_Phenomena_%E2%80%93_Implications_on_National_Security%2C_Public_Safety%2C_and_Government_Transparency.webm/960px--thumbnail.webm.jpg'],
     parentId: 'ufo-whistleblowers',
     secondaryParentIds: ['ufology-researchers'],
     name: 'David Grusch',
@@ -28131,6 +29141,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Congressional Hearing on UAP (July 2023)', 'Inspector General Complaint Filing']
   },  {
     id: 'bob-lazar',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Groom_Lake_and_Papoose_Lake.jpg/960px-Groom_Lake_and_Papoose_Lake.jpg'],
     parentId: 'ufo-whistleblowers',
     secondaryParentIds: ['ufology-researchers'],
     name: 'Bob Lazar',
@@ -28139,6 +29150,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['KLAS-TV Interviews (George Knapp)', 'Area 51 Historical Archives']
   },  {
     id: 'luis-elizondo',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Elizondo_from_Moszkowicz_KFQ1uz6irPc.png/960px-Elizondo_from_Moszkowicz_KFQ1uz6irPc.png'],
     parentId: 'ufo-whistleblowers',
     secondaryParentIds: ['ufology-researchers'],
     name: 'Luis Elizondo',
@@ -28197,6 +29209,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['The Men Who Stare at Goats (Jon Ronson)', 'INSCOM Clandestine Records']
   },  {
     id: 'sidney-gottlieb',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Sidney_Gottlieb_photo.jpg/960px-Sidney_Gottlieb_photo.jpg'],
     parentId: 'project-mkultra',
     name: 'Dr. Sidney Gottlieb',
     description: 'Chemist and CIA officer who directed Project MKUltra. Nicknamed the "Black Sorcerer," he administered LSD, toxins, and mind-control techniques to unwitting subjects, destroying most program records before congressional investigations.',
@@ -28252,6 +29265,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['NSA Declassified Documents', 'Citizenfour Documentary Files']
   },  {
     id: 'chelsea-manning',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Chelsea_Manning_2022.jpg/960px-Chelsea_Manning_2022.jpg'],
     parentId: 'whistleblowers',
     name: 'Chelsea Manning',
     description: 'Former U.S. Army intelligence analyst who leaked nearly 750,000 military and diplomatic documents to WikiLeaks in 2010, exposing battlefield logs, classified videos, and secret diplomatic communications.',
@@ -28259,17 +29273,20 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['WikiLeaks Iraq and Afghan War Logs', 'U.S. Army Court-Martial Proceedings']
   },  {
     id: 'alchemy-occult',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/6/6c/The_Curse_Tablets_-_Roman_Baths_%28Bath%29.jpg'],
     name: 'The Occult',
     description: 'Esoteric philosophy, hermeticism, alchemy, secret societies, magical orders, and historical figures dedicated to occult sciences.',
     layer: 'The Occult'
   },  {
     id: 'esoteric-traditions',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Goetia_seal_of_solomon.svg/1280px-Goetia_seal_of_solomon.svg.png'],
     parentId: 'alchemy-occult',
     name: 'Esoteric Traditions',
     description: 'Schools of thought and philosophical systems concerned with secret or hidden wisdom, spiritual initiation, and the nature of reality.',
     layer: 'The Occult'
   },  {
     id: 'hermeticism',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/HermesTrismegistusCaucHighRes.jpg/960px-HermesTrismegistusCaucHighRes.jpg'],
     parentId: 'esoteric-traditions',
     name: 'Hermeticism',
     description: 'A philosophical and religious tradition based primarily upon writings attributed to Hermes Trismegistus, emphasizing the divine nature of humanity and the cosmos.',
@@ -28277,6 +29294,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Corpus Hermeticum', 'Hermetic Literature']
   },  {
     id: 'alchemy',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/E-codices_zbz-Ms-Rh-0172_044_max_copy.jpg/960px-E-codices_zbz-Ms-Rh-0172_044_max_copy.jpg'],
     parentId: 'esoteric-traditions',
     secondaryParentIds: ['watchers'],
     name: 'Alchemy',
@@ -28286,6 +29304,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     bibleVerses: ['And Semjâzâ taught enchantments, and root-clippings, and Armârôs the resolving of enchantments, and Barâqîjâl taught astrology... — 1 Enoch 8:3 (https://www.sacred-texts.com/bib/boe/boe011.htm)']
   },  {
     id: 'philosophers-stone',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Joseph_Wright_of_Derby_The_Alchemist.jpg/960px-Joseph_Wright_of_Derby_The_Alchemist.jpg'],
     parentId: 'alchemy',
     name: 'Philosopher\'s Stone',
     description: 'A legendary alchemical substance capable of turning base metals into gold or silver, and the essential ingredient for creating the Elixir of Life.',
@@ -28293,6 +29312,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Alchemical Treatises']
   },  {
     id: 'elixir-of-life',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/%E5%AE%8B%E5%B1%B1%E7%94%BB%E8%B1%A1%E5%85%AD_%E5%85%94%E5%AD%90%E6%8D%A3%E8%87%BC.jpg/960px-%E5%AE%8B%E5%B1%B1%E7%94%BB%E8%B1%A1%E5%85%AD_%E5%85%94%E5%AD%90%E6%8D%A3%E8%87%BC.jpg'],
     parentId: 'alchemy',
     name: 'Elixir of Life',
     description: 'A mythical potion that grants the drinker eternal youth or immortality, sought by alchemists in connection with the Philosopher\'s Stone.',
@@ -28317,6 +29337,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Hermetic Corpus', 'Tabula Smaragdina', 'Tabula Smaragdina Translation (Isaac Newton)', 'Chrysopoeia of Cleopatra']
   },  {
     id: 'kabbalah',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/8/8f/Cabalistic-Gematria.png'],
     parentId: 'esoteric-traditions',
     name: 'Kabbalah',
     description: 'An esoteric method, discipline, and school of thought in Jewish mysticism (also spelled Kabalah or Qabalah), later adapted by Western occultists to form Christian and Hermetic Kabbalah.',
@@ -28343,6 +29364,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['The Book of the Law (Aleister Crowley)', 'Thelemic Holy Books']
   },  {
     id: 'abbey-of-thelema',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Abbey_of_Thelema_01.jpg/960px-Abbey_of_Thelema_01.jpg'],
     parentId: 'thelema',
     name: 'Abbey of Thelema',
     description: 'A temple and spiritual commune founded by Aleister Crowley in Cefalù, Sicily in 1920, serving as a school for training in ceremonial magic and Thelema.',
@@ -28366,12 +29388,14 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Theosophical Literature']
   },  {
     id: 'magical-orders',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/The_Hellfire_Club%2C_Dublin.jpg/1280px-The_Hellfire_Club%2C_Dublin.jpg'],
     parentId: 'alchemy-occult',
     name: 'Secret Societies & Orders',
     description: 'Fraternal organizations, esoteric societies, and initiatory orders that structured occult study and rituals through historical lineages.',
     layer: 'The Occult'
   },  {
     id: 'knights-templar',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Bandeira_Templ%C3%A1ria.svg/960px-Bandeira_Templ%C3%A1ria.svg.png'],
     parentId: 'magical-orders',
     name: 'The Knights Templar',
     description: 'A Catholic military order founded in 1119, famous for their role in the Crusades and their immense wealth. Mystically, they are alleged to have discovered esoteric relics (such as the Holy Grail) beneath the Temple Mount and to have practiced secret, occult rites prior to their sudden dissolution by King Philip IV of France in 1307.',
@@ -28381,6 +29405,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['The History of the Knights Templar (Charles Addison)', 'Occult conspiracy literature']
   },  {
     id: 'knights-hospitaller',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Coat_of_arms_of_the_Knights_Hospitaller.svg/960px-Coat_of_arms_of_the_Knights_Hospitaller.svg.png'],
     parentId: 'magical-orders',
     name: 'The Knights Hospitaller',
     description: 'Also known as the Sovereign Military Order of Malta, a medieval Catholic military order founded in Jerusalem in the 11th century. Like the Templars, they grew into a major military power in the Mediterranean, holding Rhodes and later Malta, and are often linked in esoteric lore to global elite networks and secret sovereign lineages.',
@@ -28399,6 +29424,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['The Secret School of Wisdom (Josef Wäges)', 'Conspiracy history records']
   },  {
     id: 'hermetic-order-golden-dawn',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Rose_Cross_Lamen.svg/960px-Rose_Cross_Lamen.svg.png'],
     parentId: 'magical-orders',
     name: 'Hermetic Order of the Golden Dawn',
     description: 'A highly influential 19th-century secret society in London dedicated to ceremonial magic, Kabbalah, Tarot, and spiritual development.',
@@ -28424,12 +29450,14 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Lucis Trust Archives', 'Alice Bailey: Autobiography']
   },  {
     id: 'historical-alchemists',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Edward_Kelly_prophet_or_seer_to_Dr_Dee_02355.jpg/1280px-Edward_Kelly_prophet_or_seer_to_Dr_Dee_02355.jpg'],
     parentId: 'alchemy-occult',
     name: 'Occultists & Alchemists',
     description: 'Prominent historical scientists, philosophers, writers, and figures who privately or publicly practiced alchemical, esoteric, and occult arts.',
     layer: 'The Occult'
   },  {
     id: 'blessed-gerard',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Antoine_de_Favray_-_The_Blessed_Gerard_Receiving_Godfrey_de_Bouillon.jpg/960px-Antoine_de_Favray_-_The_Blessed_Gerard_Receiving_Godfrey_de_Bouillon.jpg'],
     parentId: 'historical-alchemists',
     secondaryParentIds: ['knights-hospitaller'],
     name: 'Blessed Gerard',
@@ -28474,6 +29502,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/John_Dee_Ashmolean.jpg/250px-John_Dee_Ashmolean.jpg']
   },  {
     id: 'elias-ashmole',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Elias_Ashmole_by_John_Riley.jpg/960px-Elias_Ashmole_by_John_Riley.jpg'],
     parentId: 'historical-alchemists',
     secondaryParentIds: ['freemasonry'],
     name: 'Elias Ashmole',
@@ -28500,6 +29529,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Newton Papers (Cambridge University Library)', 'Isaac Newton: The Last Sorcerer (Michael White)']
   },  {
     id: 'adam-weishaupt',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/God2-Sistine_Chapel.png/960px-God2-Sistine_Chapel.png'],
     parentId: 'historical-alchemists',
     secondaryParentIds: ['illuminati'],
     name: 'Adam Weishaupt',
@@ -28508,6 +29538,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Illuminati Correspondence', 'Bavarian Government Suppression Files']
   },  {
     id: 'william-wynn-westcott',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/William_Wynn_Westcott_PNG.png/960px-William_Wynn_Westcott_PNG.png'],
     parentId: 'historical-alchemists',
     secondaryParentIds: ['hermetic-order-golden-dawn'],
     name: 'Dr. William Wynn Westcott',
@@ -28595,6 +29626,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'Missing 411'
   },  {
     id: 'alien-abductions-br',
+    images: ['https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/en/2/26/Barney_Hill_hypnosis_sketch_Feb_22%2C_1962_-_cropped_downrezed.png'],
     parentId: 'supernatural-anomalies',
     name: 'Alien Abductions',
     description: 'Documentation of major reported extraterrestrial abduction cases and close encounters.',
@@ -28615,6 +29647,7 @@ export const TERM_TREE_DATA: TermNode[] = [
     relatedIds: ['zeta-reticuli', 'greys', 'hypnotic-regression']
   },  {
     id: 'alien-sightings-br',
+    images: ['https://www.youtube.com/watch?v=gRtp_jUCq0o'],
     parentId: 'supernatural-anomalies',
     name: 'Alien Sightings',
     description: 'Visual records, photographs, footage, and encounter evidence of extraterrestrial and anomalous entities, including forensic analyses, debunked hoaxes, and unexplained encounters.',
@@ -28762,12 +29795,14 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ["The Equinox III:1 / Kenneth Grant 'The Magical Revival'"]
   },  {
     id: 'cattle-mutilations-br',
+    images: ['https://archive.org/download/a-strange-harvest-cattle-mutilation/A-Strange-Harvest-Cattle-Mutilation.mp4'],
     parentId: 'supernatural-anomalies',
     name: 'Cattle Mutilations',
     description: 'Reports of unexplained livestock deaths characterized by bloodless surgical-like tissue removal and a lack of tracks.',
     layer: 'Cattle Mutilations'
   },  {
     id: 'vanished-ships-aircraft',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Grumman_TBF-1_Avengers_of_VGS-29_in_flight_over_Norfolk%2C_Virginia_%28USA%29%2C_on_1_September_1942_%2880-G-427475%29.jpg/500px-Grumman_TBF-1_Avengers_of_VGS-29_in_flight_over_Norfolk%2C_Virginia_%28USA%29%2C_on_1_September_1942_%2880-G-427475%29.jpg'],
     parentId: 'supernatural-anomalies',
     name: 'Vanished Ships / Aircraft',
     description: 'Mysterious disappearances of maritime vessels and airplanes throughout history, often associated with geographic anomalies, electromagnetic aberrations, or unexplained atmospheric phenomena.',
@@ -28876,42 +29911,49 @@ export const TERM_TREE_DATA: TermNode[] = [
   ...chunk_6,
   {
     id: 'christianity-members',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/3/3b/Spas_vsederzhitel_sinay_%28cropped1%29.jpg'],
     parentId: 'christianity',
     name: 'Prominent Members',
     description: 'Prominent figures, historical leaders, and famous adherents of Christianity.'
   },
   {
     id: 'judaism-members',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/4/4a/Rembrandt_Harmensz._van_Rijn_079.jpg'],
     parentId: 'judaism',
     name: 'Prominent Members',
     description: 'Prominent figures, historical leaders, and famous adherents of Judaism.'
   },
   {
     id: 'islam-members',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/7/73/Al-Masjid_AL-Nabawi_Door.jpg'],
     parentId: 'islam',
     name: 'Prominent Members',
     description: 'Prominent figures, historical leaders, and famous adherents of Islam.'
   },
   {
     id: 'buddhism-members',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/c/cf/Buddha_in_Sarnath_Museum.jpg'],
     parentId: 'buddhism',
     name: 'Prominent Members',
     description: 'Prominent figures, historical leaders, and famous adherents of Buddhism.'
   },
   {
     id: 'hinduism-members',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/e/e3/Raja_Ravi_Varma_-_Sankaracharya.jpg'],
     parentId: 'hinduism',
     name: 'Prominent Members',
     description: 'Prominent figures, historical leaders, and famous adherents of Hinduism.'
   },
   {
     id: 'scientology-members',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/1/11/L._Ron_Hubbard_in_1950_%28cropped_3x4%29.jpg'],
     parentId: 'scientology',
     name: 'Prominent Members',
     description: 'Prominent figures, historical leaders, and famous adherents of Scientology.'
   },
   {
     id: 'mormonism-members',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/8/86/Joseph_Smith%2C_Jr._portrait_owned_by_Joseph_Smith_III.jpg'],
     parentId: 'mormonism',
     name: 'Prominent Members',
     description: 'Prominent figures, historical leaders, and famous adherents of Mormonism.'
@@ -29731,6 +30773,7 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'egyptian-symbols',
+    images: ['https://www.cleopatraegypttours.com/wp-content/uploads/2019/10/The-Ankh.jpg'],
     parentId: 'egyptian-pantheon',
     name: 'Egyptian Symbols',
     description: 'Sacred symbols, amulets, and hieroglyphic concepts of ancient Egypt, representing cosmological order, protection, and eternal life.',
@@ -45303,6 +46346,7 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'enoch2-pravuil',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/GuidoReni_MichaelDefeatsSatan.jpg/960px-GuidoReni_MichaelDefeatsSatan.jpg'],
     parentId: 'angelic-hierarchy',
     name: 'Archangel Pravuil (Vretil - The Scribe)',
     description: 'Featured in 2 Enoch 22-23 as the archangel whose wisdom is swift like the wind. Pravuil was commanded by the Lord to hand Enoch a reed pen and 360 books of heavenly secret knowledge to transcribe.',
@@ -45321,6 +46365,7 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'enoch3-metatron',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Alchemy_elements_chart_annotated_metatron.jpg/960px-Alchemy_elements_chart_annotated_metatron.jpg'],
     parentId: 'angelic-hierarchy',
     name: 'Metatron (The Supreme Prince of Presence)',
     description: 'Detailed extensively in 3 Enoch (Hebrew Enoch), Metatron is the glorified transformation of Enoch after being taken to heaven. Known as the King of Angels, Lesser YHWH, and Prince of the World.',
@@ -45349,6 +46394,7 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'deity-enlil',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/God_Enlil%2C_seated%2C_from_Nippur%2C_Iraq._1800-1600_BCE._Iraq_Museum.jpg/960px-God_Enlil%2C_seated%2C_from_Nippur%2C_Iraq._1800-1600_BCE._Iraq_Museum.jpg'],
     relatedIds: ['nanna-sin'],
     parentId: 'mesopotamian-mythology',
     name: 'Enlil (Lord of Storms & Decrees)',
@@ -45376,6 +46422,7 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'deity-osiris',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Standing_Osiris.svg/960px-Standing_Osiris.svg.png'],
     parentId: 'myths-legends-root',
     name: 'Osiris (Lord of the Underworld)',
     description: 'Egyptian god of the afterlife, resurrection, and agriculture, slain by Seth and resurrected by Isis.',
@@ -45411,6 +46458,7 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'realm-sheol-hades',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Hole%C5%A1ov%2C_%C5%BEidovsk%C3%BD_h%C5%99bitov.JPG/960px-Hole%C5%A1ov%2C_%C5%BEidovsk%C3%BD_h%C5%99bitov.JPG'],
     relatedIds: ['tibetan-book-of-the-dead', 'ereshkigal', 'izanagi-izanami', 'heaven-olam-haba-gan-eden', 'heaven-abrahams-bosom', 'hells-all-religions', 'hell-lake-of-fire-gehenna', 'hell-irkalla-kur', 'classic-ghost-photographs', 'enoch3-souls-treasury', 'enoch1-journeys-ends-of-earth'],
     parentId: 'biblical-apocryphal',
     name: 'Sheol & Hades (Abode of the Dead)',
@@ -45430,6 +46478,7 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'gov-conspiracy-usa-paperclip',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/JFK_Tour_of_KSC_-_GPN-2000-000605.jpg/960px-JFK_Tour_of_KSC_-_GPN-2000-000605.jpg'],
     parentId: 'government-conspiracies',
     name: 'Operation Paperclip',
     description: 'Secret United States intelligence program in which over 1,600 German scientists, engineers, and technicians were brought to the US post-WWII to lead American aerospace and defense research.',
@@ -45448,6 +46497,7 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'pharma-thalidomide-scandal',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Inspecting_a_Drug_Manufacturer_%28FDA034%29_%286982162417%29.jpg/960px-Inspecting_a_Drug_Manufacturer_%28FDA034%29_%286982162417%29.jpg'],
     relatedIds: ['health-pharma-conspiracies', 'health-vioxx-2004'],
     parentId: 'government-conspiracies',
     name: 'Thalidomide Pharmaceutical Scandal',
