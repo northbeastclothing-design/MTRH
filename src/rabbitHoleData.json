@@ -54445,5 +54445,175 @@
   "images": [
    "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Fort_mountain%2C_Georgia_wall_2016.JPG/1280px-Fort_mountain%2C_Georgia_wall_2016.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
   ]
+ },
+ {
+  "id": "anomaly-Ghosts---Hauntings-brown-lady-1936",
+  "name": "The Brown Lady of Raynham Hall (1936) - Raynham Hall, Norfolk",
+  "category": "Ghosts & Hauntings",
+  "type": "Point",
+  "coordinates": {
+   "lng": 0.8819,
+   "lat": 52.8356
+  },
+  "date": 1936,
+  "description": "The most famous ghost photograph ever taken: on 19 September 1936 two photographers from Country Life magazine were shooting the oak staircase of Raynham Hall when one of them saw 'an ethereal, veiled form' coming down the stairs and shouted to the other to open the shutter. The plate shows a translucent figure in a veil descending - the Brown Lady, identified since the 1830s as Lady Dorothy Walpole, sister of Britain's first prime minister, locked in the house by her husband and dead of smallpox in 1726, who had been seen by King George IV, by the novelist Captain Marryat (who fired a pistol through her), and by the Townshend family for a century. Skeptics propose a double exposure; the negative was examined at the time and showed no tampering. The Townshends still own the house.",
+  "source": "Country Life (26 Dec 1936), 'The Ghost of Raynham Hall'; Frederick Marryat's account (1836); Lord Townshend interview, Daily Mirror (1936)",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/The_Brown_Lady.jpg/1280px-The_Brown_Lady.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Ghosts---Hauntings-tulip-staircase-1966",
+  "name": "The Tulip Staircase Ghost (1966) - Queen's House, Greenwich",
+  "category": "Ghosts & Hauntings",
+  "type": "Point",
+  "coordinates": {
+   "lng": 0.0036,
+   "lat": 51.4812
+  },
+  "date": 1966,
+  "description": "A retired Canadian clergyman, the Rev. Ralph Hardy, photographed the empty spiral Tulip Staircase in the Queen's House at Greenwich in June 1966 and, when the slide was developed, found a hooded figure with skeletal hands hauling itself up the banister, with a second figure behind it. Kodak and the Ghost Club examined the original and found no evidence of a double exposure; the staircase had a 'no entry' rope across it and Hardy and his wife swore it was empty. The house, built for Anne of Denmark in 1616 on the site of the Tudor palace where Henry VIII was born, has a long record of a figure on that staircase, and staff have reported doors slamming and a woman mopping blood at the foot of the stairs where a maid was thrown to her death 300 years ago.",
+  "source": "Ghost Club investigation (1967); Peter Underwood, 'Haunted London' (1973); National Maritime Museum records",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/TulipStair_QueensHouse_Greenwich.jpg/1280px-TulipStair_QueensHouse_Greenwich.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Ghosts---Hauntings-combermere-1891",
+  "name": "Lord Combermere's Ghost in the Library (1891) - Combermere Abbey, Cheshire",
+  "category": "Ghosts & Hauntings",
+  "type": "Point",
+  "coordinates": {
+   "lng": -2.6,
+   "lat": 52.99
+  },
+  "date": 1891,
+  "description": "On 5 December 1891 Sybell Corbet set up her camera in the library of Combermere Abbey for a one-hour exposure while the household was four miles away burying Wellington Stapleton-Cotton, 2nd Viscount Combermere, who had died after being run over by a carriage. The developed plate showed the faint figure of a man sitting in the late Lord Combermere's favourite chair - head, collar and right arm distinct, the legs fading away below the knee, where the carriage had crushed him. The family identified the face; the skeptic's explanation, that a servant sat down briefly during the exposure, founders on the fact that every servant was at the funeral. It was investigated by Sir William Barrett of the Society for Psychical Research, who published it.",
+  "source": "Sir William Barrett, Journal of the Society for Psychical Research (Dec 1895); Combermere Abbey archive",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Combermere_Abbey.jpg/960px-Combermere_Abbey.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Ghosts---Hauntings-ss-watertown-1924",
+  "name": "The Faces in the Water: SS Watertown (1924) - Pacific Ocean, off Mexico",
+  "category": "Ghosts & Hauntings",
+  "type": "Point",
+  "coordinates": {
+   "lng": -110.0,
+   "lat": 15.0
+  },
+  "date": 1924,
+  "description": "Two crewmen of the Cities Service tanker Watertown, James Courtney and Michael Meehan, were overcome by fumes while cleaning a cargo tank in December 1924 and buried at sea off the Mexican coast. The next day the crew saw two faces following the ship in the water off the port side - and saw them again, day after day, for the rest of the voyage, until Captain Keith Tracy was ordered by the company to photograph them. Of six exposures, one showed the two faces clearly in the waves. The negative was examined by the Burns Detective Agency and declared genuine, and the picture ran in the company's magazine in 1934. The faces stopped appearing when the crew changed. Whatever rode the Watertown's wake, it wanted its shipmates to see it.",
+  "source": "Cities Service magazine 'Service' (1934); Burns Detective Agency examination; Hereward Carrington, 'Haunted People' (1951)",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/%D0%90%D0%BD%D1%82%D0%B8-%D1%81%D0%BF%D0%B8%D1%80%D0%B8%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D1%84%D0%BE%D1%82%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%8F_%D0%91%D1%83%D0%B3%D0%B5.jpg/330px-%D0%90%D0%BD%D1%82%D0%B8-%D1%81%D0%BF%D0%B8%D1%80%D0%B8%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D1%84%D0%BE%D1%82%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%8F_%D0%91%D1%83%D0%B3%D0%B5.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Ghosts---Hauntings-freddy-jackson-1919",
+  "name": "The Goddard Squadron Photograph: Freddy Jackson's Ghost (1919) - HMS Daedalus, Lee-on-Solent",
+  "category": "Ghosts & Hauntings",
+  "type": "Point",
+  "coordinates": {
+   "lng": -1.2,
+   "lat": 50.81
+  },
+  "date": 1919,
+  "description": "In 1919 the men of a Royal Naval Air Service squadron at Cranwell sat for their group photograph two days after the burial of air mechanic Freddy Jackson, killed when he walked into a spinning propeller. When the print came back, Jackson's face was in it - peering over the shoulder of the man in the back row, capless, grinning, slightly transparent, and recognized by everyone who had known him. Sir Victor Goddard, later Air Marshal, who was in the squadron and kept the picture, published it in 1975 along with his own account of flying through a 'slip in time' over an abandoned airfield in 1935 that he saw rebuilt four years later. The photograph has never been explained as a double exposure because the plate was a single shot of a seated group.",
+  "source": "Sir Victor Goddard, 'Flight Towards Reality' (1975); Bobbie Capel's account (1975); Royal Naval Air Service records, Cranwell",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/GoddardsSquadron-1600px.jpg/1280px-GoddardsSquadron-1600px.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Myths---Legends-mae-de-ouro-paraiba",
+  "name": "Mãe de Ouro: The Golden Spheres of the Sertão - Paraíba, Brazil",
+  "category": "Myths / Legends",
+  "type": "Point",
+  "coordinates": {
+   "lng": -36.6,
+   "lat": -7.1
+  },
+  "date": 2026,
+  "description": "In the backlands of northeastern Brazil, people have always seen the Mãe de Ouro - the 'Mother of Gold' - a golden or blue-green ball of fire that floats silently over the hills at night, changes size, splits, and vanishes, said to mark buried gold or to be a woman of fire who lures men away. The footage circulating from Paraíba shows exactly that: a glowing sphere drifting over a dark ridge. Science files it beside the will-o'-the-wisp and earthquake lights (the region has active faults); the folk tradition files it with the Curupira and the enchanted ones, and the Catholic sertanejos cross themselves. The same silent orbs are reported from Hessdalen in Norway to the Marfa lights in Texas; the behaviour is the same, and so is the fact that nobody has caught one.",
+  "source": "Luís da Câmara Cascudo, 'Dicionário do Folclore Brasileiro' (1954); Hessdalen Project (Østfold University College); viral Paraíba footage (2026) [UNVERIFIED FOOTAGE]",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Bandeira_da_Para%C3%ADba.svg/1280px-Bandeira_da_Para%C3%ADba.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "https://x.com/i/status/2078628991192453552",
+   "https://pbs.twimg.com/amplify_video_thumb/2078628949886636032/img/qjGwMxDpshC6Evqg.jpg"
+  ]
+ },
+ {
+  "id": "anomaly-UFO-texas-disc-2015",
+  "name": "The Texas 'Retro Disc' Footage (2015) - Texas",
+  "category": "UFOs - Sightings",
+  "type": "Point",
+  "coordinates": {
+   "lng": -99.9,
+   "lat": 31.5
+  },
+  "date": 2015,
+  "description": "A clip filmed in Texas on 29 June 2015 that keeps resurfacing because it is too clear: a classic domed disc about four metres across, dull metal, with visible seams and 'parts,' hovering and tilting at close range in daylight. It is either one of the sharpest UFO videos ever shot or a very good render, and since 2015 is about when very good renders became cheap, the second possibility has to be taken seriously. Nobody has identified the photographer, the exact location, or a motive either way. Listed because the user community keeps asking about it; weigh accordingly. [UNVERIFIED FOOTAGE - LIKELY CGI]",
+  "source": "Viral footage, Texas, 29 June 2015 (reposted widely; original uploader unidentified)",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Flag_of_Texas.svg/1280px-Flag_of_Texas.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "https://x.com/i/status/2093956747363069967",
+   "https://pbs.twimg.com/amplify_video_thumb/2093895094672007168/img/kERWUu-YiQ282L-T.jpg"
+  ]
+ },
+ {
+  "id": "anomaly-UFO-china-airliner-mass-sighting-2026",
+  "name": "Airline Passenger Films a Fleet Over China (Aug 2026) - over central China",
+  "category": "UFOs - Sightings",
+  "type": "Point",
+  "coordinates": {
+   "lng": 105.0,
+   "lat": 35.0
+  },
+  "date": 2026,
+  "description": "On 22 August 2026 a passenger on a commercial flight over China filmed a formation of bright objects holding position far above the aircraft and then moving in ways the passenger, and the Mexican journalist Jaime Maussan who circulated the clip, called one of the most spectacular mass sightings of the year. Chinese authorities said nothing. Maussan's track record (the 'Nazca mummies' presented to the Mexican congress in 2023) means his material must be treated with caution, but the footage itself has not been shown to be faked, and it joins a run of 2026 airline-crew sightings from Tehran to the Sahara. [UNVERIFIED FOOTAGE]",
+  "source": "Jaime Maussan (@jaimemaussan1), 7 Sept 2026; passenger footage dated 22 Aug 2026",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/1280px-Flag_of_the_People%27s_Republic_of_China.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "https://x.com/i/status/2097096071277130080",
+   "https://pbs.twimg.com/amplify_video_thumb/2093758421010935809/img/RyBgtul83ug6BCI4.jpg"
+  ]
+ },
+ {
+  "id": "anomaly-UFO-saudi-nigeria-747-2026",
+  "name": "Boeing 747 Crew Films Multiple UFOs Over the Sahara (2026) - Saudi Arabia to Nigeria route",
+  "category": "UFOs - Sightings",
+  "type": "Point",
+  "coordinates": {
+   "lng": 15.0,
+   "lat": 18.0
+  },
+  "date": 2026,
+  "description": "Pilots flying a Boeing 747 cargo route from Saudi Arabia to Nigeria filmed a group of extremely bright objects over the desert at cruising altitude that moved erratically, then in formation, then 'freely,' for several minutes - one pilot said on the recording that 'they seemed to entertain us.' Flight-crew sightings are the most credible class of UFO report because the witnesses are trained observers with instruments, which is why the Japan Air Lines 1628 case of 1986 and the 2004 Nimitz encounter anchor the field; this one has the pilots' voices but not, so far, their names or the airline's log. The Sahara at night is also the route of a great deal of military and satellite traffic. [UNVERIFIED FOOTAGE]",
+  "source": "Cockpit footage circulated September 2026 (@maniaUFO); compare JAL 1628 (FAA, 1986)",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Sahara_real_color.jpg/1280px-Sahara_real_color.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "https://x.com/i/status/2097215482025709861",
+   "https://pbs.twimg.com/amplify_video_thumb/1942501619020541952/img/I5Jnsz33tEV8_db9.jpg"
+  ]
+ },
+ {
+  "id": "anomaly-UFO-peru-portal-2026",
+  "name": "The Peru 'Portal' Video (2026) - Peru",
+  "category": "UFOs - Sightings",
+  "type": "Point",
+  "coordinates": {
+   "lng": -75.0,
+   "lat": -10.0
+  },
+  "date": 2026,
+  "description": "A short clip from Peru showing a luminous shape in the sky that opens, widens and closes like an aperture, described by the people sharing it as a portal and by skeptics as a lenticular cloud lit by the sun, a lens flare, or an edit. Peru is the country of the Nazca lines, the Gate of the Gods at Hayu Marca and the 2023 'alien mummies,' so the local framing is always a door; that is also why Peru produces more fakes than anywhere else in South America. Nothing in the clip can be measured. Kept as an example of the genre, with the warning attached. [UNVERIFIED FOOTAGE]",
+  "source": "Footage circulated 23 Sept 2026 (@maniaUFO); location and photographer unidentified",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_Peru.svg/1280px-Flag_of_Peru.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "https://x.com/i/status/2102748476555878467",
+   "https://pbs.twimg.com/amplify_video_thumb/2102748295781105665/img/DXUm807zNU19SFVP.jpg"
+  ]
  }
 ]

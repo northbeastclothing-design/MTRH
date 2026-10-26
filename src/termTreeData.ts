@@ -43251,6 +43251,159 @@ const chunk_bible_sources: TermNode[] = [
     relatedIds: ['hidden-american-history', 'nephilim-br', 'giant-skeletal-finds', 'mound-builders', 'mounds', 'america-lake-superior-copper-culture', 'anomaly-Giants---Nephilim---Elongated-Skulls---Horns-305'],
     sources: ['Cyrus Thomas, \'12th Annual Report of the Bureau of Ethnology\' (1894), pp. 362-380 etc.; Jim Vieira & Hugh Newman, \'Giants on Record\' (2015); Richard Dewhurst, \'The Ancient Giants Who Ruled America\' (2014)'],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Smithsonian_Building_NR.jpg/1280px-Smithsonian_Building_NR.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
+  },
+  {
+    id: 'structure-chronicles-of-georgia',
+    parentId: 'old-world-structures',
+    name: 'The Chronicles of Georgia Monument',
+    description: 'Sixteen bronze-clad concrete pillars up to 35 metres tall on a hill above the Tbilisi Sea, raised by the sculptor Zurab Tsereteli from 1985 and never finished: the upper registers carry the kings, queens and heroes of three thousand years of Georgian history, the lower registers the life of Christ, and a chapel marks the spot where St. Nino is said to have planted the cross that converted the kingdom in AD 337 - the second nation on earth to adopt Christianity. It looks like something from a lost civilization because it was designed to, by a Soviet-era artist working at the scale of the pagan colossi of antiquity but with the Gospel on the ground floor. Almost no one outside Georgia knows it exists.',
+    layer: 'Old World Structures',
+    mapFeatureId: 'structure-chronicles-of-georgia',
+    relatedIds: ['old-world-structures', 'christianity', 'megaliths', 'rel-figure-constantine'],
+    sources: ['Zurab Tsereteli, \'Chronicle of Georgia\' (Tbilisi, 1985-); Georgian National Tourism Administration'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Photos_taken_during_HGN_workshop_in_Tbilisi_in_May_2024_5.jpg/1280px-Photos_taken_during_HGN_workshop_in_Tbilisi_in_May_2024_5.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail', 'https://pbs.twimg.com/media/HMnpKv4WsAAfzeC.jpg', 'https://pbs.twimg.com/media/HMnp_e0WQAAbJG3.png']
+  },
+  {
+    id: 'archaeology-serrania-de-la-lindosa',
+    parentId: 'petroglyphs-br',
+    name: 'Serranía de la Lindosa: Ice-Age Megafauna Painted in the Amazon',
+    description: 'Eight miles of red-ochre rock art on cliff faces at the edge of the Colombian Amazon, found by the thousands after the FARC withdrew in 2016 and dated by excavation to 12,500 years ago: handprints, hunters, and - this is the controversy - animals that do not exist anymore: a giant ground sloth, a mastodon-like creature with a trunk, an Ice Age horse, and what looks like a palaeolama, painted by people who saw them alive. Some panels are 40 feet up sheer rock, which means scaffolding or a very different landscape. A world that remembered the animals that drowned in the Flood painted them on the walls; the official line is that these were the first Amazonians, arriving at the end of the last glaciation, and that the \'extinct\' animals are stylized tapirs. Look at the trunk.',
+    layer: 'Rock Art & Cave Paintings',
+    mapFeatureId: 'archaeology-serrania-de-la-lindosa',
+    timelineId: 'tl-serrania-de-la-lindosa',
+    relatedIds: ['petroglyphs-br', 'great-flood', 'ancient-flood-myths', 'nephilim-br', 'anomaly-Petroglyphs-53'],
+    sources: ['Morcote-Ríos, Aceituno, Iriarte et al., \'Colonisation and early peopling of the Colombian Amazon during the Late Pleistocene and Early Holocene\' (Quaternary International, 2021); Iriarte et al., \'Ice Age megafauna rock art in the Colombian Amazon?\' (Phil. Trans. R. Soc. B, 2022)'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Serrania_de_la_Lindosa_rock_paintings.jpg/960px-Serrania_de_la_Lindosa_rock_paintings.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail', 'https://x.com/i/status/2082640343330357251', 'https://pbs.twimg.com/ext_tw_video_thumb/1840088866218487809/pu/img/y2QdHFB6fNviCevm.jpg']
+  },
+  {
+    id: 'classic-ghost-photographs',
+    parentId: 'hauntings-br',
+    name: 'Classic Ghost Photographs',
+    description: 'The camera was supposed to kill the ghost story and instead gave it its best evidence. Leaving aside the Victorian spirit-photography racket of William Mumler, a handful of pictures taken by people who were not trying to photograph anything have never been convincingly explained: the Brown Lady descending the stairs at Raynham Hall, the hooded figure climbing the Tulip Staircase at Greenwich, Lord Combermere sitting in his chair during his own funeral, the two faces that followed the SS Watertown across the Pacific, the dead airman Freddy Jackson grinning in his squadron photograph. The Bible is clear that the dead do not wander (Hebrews 9:27; Luke 16:26) and equally clear that something does: the \'familiar spirit\' that spoke as Samuel to the witch of Endor and the \'seducing spirits\' Paul warned of. What the camera caught is a question of who, not whether.',
+    layer: 'Ghosts & Hauntings',
+    relatedIds: ['hauntings-br', 'anomaly-Ghosts---Hauntings-brown-lady-1936', 'anomaly-Ghosts---Hauntings-tulip-staircase-1966', 'anomaly-Ghosts---Hauntings-combermere-1891', 'anomaly-Ghosts---Hauntings-ss-watertown-1924', 'anomaly-Ghosts---Hauntings-freddy-jackson-1919', 'realm-sheol-hades'],
+    sources: ['Hebrews 9:27; 1 Samuel 28; 1 Timothy 4:1; Country Life (26 Dec 1936); Peter Underwood, \'Ghosts and How to See Them\' (1993)'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/%D0%90%D0%BD%D1%82%D0%B8-%D1%81%D0%BF%D0%B8%D1%80%D0%B8%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D1%84%D0%BE%D1%82%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%8F_%D0%91%D1%83%D0%B3%D0%B5.jpg/330px-%D0%90%D0%BD%D1%82%D0%B8-%D1%81%D0%BF%D0%B8%D1%80%D0%B8%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D1%84%D0%BE%D1%82%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%8F_%D0%91%D1%83%D0%B3%D0%B5.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail', 'https://x.com/i/status/2102745170290880620', 'https://pbs.twimg.com/amplify_video_thumb/2102745009476833280/img/nAFRmiNp6tiTgUDP.jpg']
+  },
+  {
+    id: 'anomaly-Ghosts---Hauntings-brown-lady-1936',
+    parentId: 'classic-ghost-photographs',
+    name: 'The Brown Lady of Raynham Hall (1936)',
+    description: 'The most famous ghost photograph ever taken: on 19 September 1936 two photographers from Country Life magazine were shooting the oak staircase of Raynham Hall when one of them saw \'an ethereal, veiled form\' coming down the stairs and shouted to the other to open the shutter. The plate shows a translucent figure in a veil descending - the Brown Lady, identified since the 1830s as Lady Dorothy Walpole, sister of Britain\'s first prime minister, locked in the house by her husband and dead of smallpox in 1726, who had been seen by King George IV, by the novelist Captain Marryat (who fired a pistol through her), and by the Townshend family for a century. Skeptics propose a double exposure; the negative was examined at the time and showed no tampering. The Townshends still own the house.',
+    layer: 'Ghosts & Hauntings',
+    mapFeatureId: 'anomaly-Ghosts---Hauntings-brown-lady-1936',
+    relatedIds: ['classic-ghost-photographs', 'hauntings-br', 'royal-bloodlines'],
+    sources: ['Country Life (26 Dec 1936), \'The Ghost of Raynham Hall\'; Frederick Marryat\'s account (1836); Lord Townshend interview, Daily Mirror (1936)'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/The_Brown_Lady.jpg/1280px-The_Brown_Lady.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
+  },
+  {
+    id: 'anomaly-Ghosts---Hauntings-tulip-staircase-1966',
+    parentId: 'classic-ghost-photographs',
+    name: 'The Tulip Staircase Ghost (1966)',
+    description: 'A retired Canadian clergyman, the Rev. Ralph Hardy, photographed the empty spiral Tulip Staircase in the Queen\'s House at Greenwich in June 1966 and, when the slide was developed, found a hooded figure with skeletal hands hauling itself up the banister, with a second figure behind it. Kodak and the Ghost Club examined the original and found no evidence of a double exposure; the staircase had a \'no entry\' rope across it and Hardy and his wife swore it was empty. The house, built for Anne of Denmark in 1616 on the site of the Tudor palace where Henry VIII was born, has a long record of a figure on that staircase, and staff have reported doors slamming and a woman mopping blood at the foot of the stairs where a maid was thrown to her death 300 years ago.',
+    layer: 'Ghosts & Hauntings',
+    mapFeatureId: 'anomaly-Ghosts---Hauntings-tulip-staircase-1966',
+    relatedIds: ['classic-ghost-photographs', 'hauntings-br', 'anomaly-Ghosts---Hauntings-brown-lady-1936'],
+    sources: ['Ghost Club investigation (1967); Peter Underwood, \'Haunted London\' (1973); National Maritime Museum records'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/TulipStair_QueensHouse_Greenwich.jpg/1280px-TulipStair_QueensHouse_Greenwich.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
+  },
+  {
+    id: 'anomaly-Ghosts---Hauntings-combermere-1891',
+    parentId: 'classic-ghost-photographs',
+    name: 'Lord Combermere\'s Ghost in the Library (1891)',
+    description: 'On 5 December 1891 Sybell Corbet set up her camera in the library of Combermere Abbey for a one-hour exposure while the household was four miles away burying Wellington Stapleton-Cotton, 2nd Viscount Combermere, who had died after being run over by a carriage. The developed plate showed the faint figure of a man sitting in the late Lord Combermere\'s favourite chair - head, collar and right arm distinct, the legs fading away below the knee, where the carriage had crushed him. The family identified the face; the skeptic\'s explanation, that a servant sat down briefly during the exposure, founders on the fact that every servant was at the funeral. It was investigated by Sir William Barrett of the Society for Psychical Research, who published it.',
+    layer: 'Ghosts & Hauntings',
+    mapFeatureId: 'anomaly-Ghosts---Hauntings-combermere-1891',
+    relatedIds: ['classic-ghost-photographs', 'hauntings-br', 'royal-bloodlines'],
+    sources: ['Sir William Barrett, Journal of the Society for Psychical Research (Dec 1895); Combermere Abbey archive'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Combermere_Abbey.jpg/960px-Combermere_Abbey.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'anomaly-Ghosts---Hauntings-ss-watertown-1924',
+    parentId: 'classic-ghost-photographs',
+    name: 'The Faces in the Water: SS Watertown (1924)',
+    description: 'Two crewmen of the Cities Service tanker Watertown, James Courtney and Michael Meehan, were overcome by fumes while cleaning a cargo tank in December 1924 and buried at sea off the Mexican coast. The next day the crew saw two faces following the ship in the water off the port side - and saw them again, day after day, for the rest of the voyage, until Captain Keith Tracy was ordered by the company to photograph them. Of six exposures, one showed the two faces clearly in the waves. The negative was examined by the Burns Detective Agency and declared genuine, and the picture ran in the company\'s magazine in 1934. The faces stopped appearing when the crew changed. Whatever rode the Watertown\'s wake, it wanted its shipmates to see it.',
+    layer: 'Ghosts & Hauntings',
+    mapFeatureId: 'anomaly-Ghosts---Hauntings-ss-watertown-1924',
+    relatedIds: ['classic-ghost-photographs', 'hauntings-br'],
+    sources: ['Cities Service magazine \'Service\' (1934); Burns Detective Agency examination; Hereward Carrington, \'Haunted People\' (1951)'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/%D0%90%D0%BD%D1%82%D0%B8-%D1%81%D0%BF%D0%B8%D1%80%D0%B8%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D1%84%D0%BE%D1%82%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%8F_%D0%91%D1%83%D0%B3%D0%B5.jpg/330px-%D0%90%D0%BD%D1%82%D0%B8-%D1%81%D0%BF%D0%B8%D1%80%D0%B8%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D1%84%D0%BE%D1%82%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%8F_%D0%91%D1%83%D0%B3%D0%B5.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'anomaly-Ghosts---Hauntings-freddy-jackson-1919',
+    parentId: 'classic-ghost-photographs',
+    name: 'The Goddard Squadron Photograph: Freddy Jackson\'s Ghost (1919)',
+    description: 'In 1919 the men of a Royal Naval Air Service squadron at Cranwell sat for their group photograph two days after the burial of air mechanic Freddy Jackson, killed when he walked into a spinning propeller. When the print came back, Jackson\'s face was in it - peering over the shoulder of the man in the back row, capless, grinning, slightly transparent, and recognized by everyone who had known him. Sir Victor Goddard, later Air Marshal, who was in the squadron and kept the picture, published it in 1975 along with his own account of flying through a \'slip in time\' over an abandoned airfield in 1935 that he saw rebuilt four years later. The photograph has never been explained as a double exposure because the plate was a single shot of a seated group.',
+    layer: 'Ghosts & Hauntings',
+    mapFeatureId: 'anomaly-Ghosts---Hauntings-freddy-jackson-1919',
+    relatedIds: ['classic-ghost-photographs', 'hauntings-br', 'foo-fighters'],
+    sources: ['Sir Victor Goddard, \'Flight Towards Reality\' (1975); Bobbie Capel\'s account (1975); Royal Naval Air Service records, Cranwell'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/GoddardsSquadron-1600px.jpg/1280px-GoddardsSquadron-1600px.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
+  },
+  {
+    id: 'mkultra-hearings-2026-ruby-manson',
+    parentId: 'project-mkultra',
+    name: 'MKUltra Hearings 2026: The Jack Ruby & Charles Manson Testimony',
+    description: 'In June 2026 the House Task Force on the Declassification of Federal Secrets heard expert testimony that Jack Ruby - the Dallas nightclub owner who shot Lee Harvey Oswald on live television - and Charles Manson were both MKUltra \'assets,\' Ruby through the Agency\'s Dallas and Chicago mob contacts and Manson through the Haight-Ashbury Free Clinic, where the CIA\'s LSD research had a field office in 1967, as Tom O\'Neill\'s \'Chaos\' documented in 2019. Rep. Anna Paulina Luna announced she was demanding the full MKUltra records from the CIA. Sidney Gottlieb destroyed most of them in 1973; what survived was 20,000 financial pages found in the wrong building. Ruby himself told the Warren Commission he was being injected and that \'a whole new form of government is going to take over the country.\' He died of cancer before his retrial.',
+    layer: 'Government Conspiracies',
+    relatedIds: ['project-mkultra', 'jfk-assassination', 'sidney-gottlieb', 'mk-ultra-congressional-hearings', 'gov-conspiracy-canada-allan-memorial-mkultra-1957', 'us-presidents'],
+    sources: ['House Task Force on Declassification hearing (June 2026); Tom O\'Neill, \'Chaos: Charles Manson, the CIA and the Secret History of the Sixties\' (2019); Warren Commission testimony of Jack Ruby (7 June 1964)'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Jack_Ruby_1963_Mugshot_Extracted_%283x4_cropped%29.jpg/500px-Jack_Ruby_1963_Mugshot_Extracted_%283x4_cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail', 'https://x.com/i/status/2071994565981053389', 'https://pbs.twimg.com/amplify_video_thumb/2071994486742306816/img/EnnFemosuLOqGFJI.jpg']
+  },
+  {
+    id: 'anomaly-Myths---Legends-mae-de-ouro-paraiba',
+    parentId: 'myths-legends-root',
+    name: 'Mãe de Ouro: The Golden Spheres of the Sertão',
+    description: 'In the backlands of northeastern Brazil, people have always seen the Mãe de Ouro - the \'Mother of Gold\' - a golden or blue-green ball of fire that floats silently over the hills at night, changes size, splits, and vanishes, said to mark buried gold or to be a woman of fire who lures men away. The footage circulating from Paraíba shows exactly that: a glowing sphere drifting over a dark ridge. Science files it beside the will-o\'-the-wisp and earthquake lights (the region has active faults); the folk tradition files it with the Curupira and the enchanted ones, and the Catholic sertanejos cross themselves. The same silent orbs are reported from Hessdalen in Norway to the Marfa lights in Texas; the behaviour is the same, and so is the fact that nobody has caught one.',
+    layer: 'Myths / Legends',
+    mapFeatureId: 'anomaly-Myths---Legends-mae-de-ouro-paraiba',
+    relatedIds: ['fae-will-o-wisp', 'myths-legends-root', 'ufo-sightings-br', 'fae'],
+    sources: ['Luís da Câmara Cascudo, \'Dicionário do Folclore Brasileiro\' (1954); Hessdalen Project (Østfold University College); viral Paraíba footage (2026) [UNVERIFIED FOOTAGE]'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Bandeira_da_Para%C3%ADba.svg/1280px-Bandeira_da_Para%C3%ADba.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail', 'https://x.com/i/status/2078628991192453552', 'https://pbs.twimg.com/amplify_video_thumb/2078628949886636032/img/qjGwMxDpshC6Evqg.jpg']
+  },
+  {
+    id: 'anomaly-UFO-texas-disc-2015',
+    parentId: 'ufo-sightings-br',
+    name: 'The Texas \'Retro Disc\' Footage (2015)',
+    description: 'A clip filmed in Texas on 29 June 2015 that keeps resurfacing because it is too clear: a classic domed disc about four metres across, dull metal, with visible seams and \'parts,\' hovering and tilting at close range in daylight. It is either one of the sharpest UFO videos ever shot or a very good render, and since 2015 is about when very good renders became cheap, the second possibility has to be taken seriously. Nobody has identified the photographer, the exact location, or a motive either way. Listed because the user community keeps asking about it; weigh accordingly. [UNVERIFIED FOOTAGE - LIKELY CGI]',
+    layer: 'UFOs - Sightings',
+    mapFeatureId: 'anomaly-UFO-texas-disc-2015',
+    relatedIds: ['ufo-sightings-br', 'anomaly-UFO-passaic-1952', 'anomaly-UFO-mcminnville-1950'],
+    sources: ['Viral footage, Texas, 29 June 2015 (reposted widely; original uploader unidentified)'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Flag_of_Texas.svg/1280px-Flag_of_Texas.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail', 'https://x.com/i/status/2093956747363069967', 'https://pbs.twimg.com/amplify_video_thumb/2093895094672007168/img/kERWUu-YiQ282L-T.jpg']
+  },
+  {
+    id: 'anomaly-UFO-china-airliner-mass-sighting-2026',
+    parentId: 'ufo-sightings-br',
+    name: 'Airline Passenger Films a Fleet Over China (Aug 2026)',
+    description: 'On 22 August 2026 a passenger on a commercial flight over China filmed a formation of bright objects holding position far above the aircraft and then moving in ways the passenger, and the Mexican journalist Jaime Maussan who circulated the clip, called one of the most spectacular mass sightings of the year. Chinese authorities said nothing. Maussan\'s track record (the \'Nazca mummies\' presented to the Mexican congress in 2023) means his material must be treated with caution, but the footage itself has not been shown to be faked, and it joins a run of 2026 airline-crew sightings from Tehran to the Sahara. [UNVERIFIED FOOTAGE]',
+    layer: 'UFOs - Sightings',
+    mapFeatureId: 'anomaly-UFO-china-airliner-mass-sighting-2026',
+    relatedIds: ['ufo-sightings-br', 'anomaly-UFO-saudi-nigeria-747-2026', 'anomaly-UFO-tehran-2026', 'gov-conspiracy-china-wuhan-lab-leak-2019'],
+    sources: ['Jaime Maussan (@jaimemaussan1), 7 Sept 2026; passenger footage dated 22 Aug 2026'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/1280px-Flag_of_the_People%27s_Republic_of_China.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail', 'https://x.com/i/status/2097096071277130080', 'https://pbs.twimg.com/amplify_video_thumb/2093758421010935809/img/RyBgtul83ug6BCI4.jpg']
+  },
+  {
+    id: 'anomaly-UFO-saudi-nigeria-747-2026',
+    parentId: 'ufo-sightings-br',
+    name: 'Boeing 747 Crew Films Multiple UFOs Over the Sahara (2026)',
+    description: 'Pilots flying a Boeing 747 cargo route from Saudi Arabia to Nigeria filmed a group of extremely bright objects over the desert at cruising altitude that moved erratically, then in formation, then \'freely,\' for several minutes - one pilot said on the recording that \'they seemed to entertain us.\' Flight-crew sightings are the most credible class of UFO report because the witnesses are trained observers with instruments, which is why the Japan Air Lines 1628 case of 1986 and the 2004 Nimitz encounter anchor the field; this one has the pilots\' voices but not, so far, their names or the airline\'s log. The Sahara at night is also the route of a great deal of military and satellite traffic. [UNVERIFIED FOOTAGE]',
+    layer: 'UFOs - Sightings',
+    mapFeatureId: 'anomaly-UFO-saudi-nigeria-747-2026',
+    relatedIds: ['ufo-sightings-br', 'anomaly-UFO-china-airliner-mass-sighting-2026', 'anomaly-UFO-1000', 'anomaly-UFO-uss-roosevelt-1958'],
+    sources: ['Cockpit footage circulated September 2026 (@maniaUFO); compare JAL 1628 (FAA, 1986)'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Sahara_real_color.jpg/1280px-Sahara_real_color.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail', 'https://x.com/i/status/2097215482025709861', 'https://pbs.twimg.com/amplify_video_thumb/1942501619020541952/img/I5Jnsz33tEV8_db9.jpg']
+  },
+  {
+    id: 'anomaly-UFO-peru-portal-2026',
+    parentId: 'ufo-sightings-br',
+    name: 'The Peru \'Portal\' Video (2026)',
+    description: 'A short clip from Peru showing a luminous shape in the sky that opens, widens and closes like an aperture, described by the people sharing it as a portal and by skeptics as a lenticular cloud lit by the sun, a lens flare, or an edit. Peru is the country of the Nazca lines, the Gate of the Gods at Hayu Marca and the 2023 \'alien mummies,\' so the local framing is always a door; that is also why Peru produces more fakes than anywhere else in South America. Nothing in the clip can be measured. Kept as an example of the genre, with the warning attached. [UNVERIFIED FOOTAGE]',
+    layer: 'UFOs - Sightings',
+    mapFeatureId: 'anomaly-UFO-peru-portal-2026',
+    relatedIds: ['ufo-sightings-br', 'portals-stargates', 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-5', 'anomaly-Portals---Stargates-2'],
+    sources: ['Footage circulated 23 Sept 2026 (@maniaUFO); location and photographer unidentified'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_Peru.svg/1280px-Flag_of_Peru.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail', 'https://x.com/i/status/2102748476555878467', 'https://pbs.twimg.com/amplify_video_thumb/2102748295781105665/img/DXUm807zNU19SFVP.jpg']
   }
 ];
 

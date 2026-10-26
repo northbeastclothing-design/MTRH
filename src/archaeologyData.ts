@@ -1693,5 +1693,17 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
     description: "Two students found a skull in the shallows of the Columbia River in 1996; the anthropologist who examined the nearly complete skeleton, James Chatters, thought it was a 19th-century European settler until a stone spear point turned up healed into the hip and the carbon date came back at 8,500 years. The long, narrow 'Caucasoid' skull resembled the Ainu of Japan and Polynesians more than any Native American; the Army Corps of Engineers immediately seized the bones, buried the discovery site under 500 tons of rubble, and tried to hand the remains to five tribes for reburial under NAGPRA without study - which eight scientists had to sue for nine years to prevent. A 2015 DNA study found him closest to modern Native Americans after all, and he was reburied in 2017. What the government did with the site before the DNA came back is the part that will not be undone.",
     source: "Bonnichsen v. United States (9th Cir. 2004); Douglas Owsley & Richard Jantz (eds.), 'Kennewick Man: The Scientific Investigation of an Ancient American Skeleton' (2014); Rasmussen et al., Nature (2015)",
     images: ["https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Kennewick_Man.jpg/1280px-Kennewick_Man.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"]
+  },
+  {
+    id: "archaeology-serrania-de-la-lindosa",
+    name: "Serranía de la Lindosa: Ice-Age Megafauna Painted in the Amazon - Guaviare, Colombia",
+    category: "Rock Art & Cave Paintings",
+    type: "Point",
+    coordinates: { lng: -72.78, lat: 2.5 },
+    date: -10500,
+    displayDate: "c. 10,500 BC",
+    description: "Eight miles of red-ochre rock art on cliff faces at the edge of the Colombian Amazon, found by the thousands after the FARC withdrew in 2016 and dated by excavation to 12,500 years ago: handprints, hunters, and - this is the controversy - animals that do not exist anymore: a giant ground sloth, a mastodon-like creature with a trunk, an Ice Age horse, and what looks like a palaeolama, painted by people who saw them alive. Some panels are 40 feet up sheer rock, which means scaffolding or a very different landscape. A world that remembered the animals that drowned in the Flood painted them on the walls; the official line is that these were the first Amazonians, arriving at the end of the last glaciation, and that the 'extinct' animals are stylized tapirs. Look at the trunk.",
+    source: "Morcote-Ríos, Aceituno, Iriarte et al., 'Colonisation and early peopling of the Colombian Amazon during the Late Pleistocene and Early Holocene' (Quaternary International, 2021); Iriarte et al., 'Ice Age megafauna rock art in the Colombian Amazon?' (Phil. Trans. R. Soc. B, 2022)",
+    images: ["https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Serrania_de_la_Lindosa_rock_paintings.jpg/960px-Serrania_de_la_Lindosa_rock_paintings.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail", "https://x.com/i/status/2082640343330357251", "https://pbs.twimg.com/ext_tw_video_thumb/1840088866218487809/pu/img/y2QdHFB6fNviCevm.jpg"]
   }
 ];

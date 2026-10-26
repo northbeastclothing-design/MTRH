@@ -587,5 +587,17 @@ export const OLD_WORLD_STRUCTURES_DATA: OldWorldStructureCase[] = [
     description: "Thirty acres of stone chambers, standing stones, walls and a 4.5-ton grooved 'sacrificial table' with a drain channel and a hidden speaking tube beneath it, on a hilltop north of Boston. Radiocarbon dates from charcoal under the walls run to 2000 BC; the standing stones around the perimeter mark the solstice and equinox sunrises and sunsets and the lunar standstills; and Barry Fell read inscriptions on the site as Iberian Punic and Ogham dedicating it to the Phoenician sun god Bel - in whose honour, on a table like that one, children were burned in Carthage. The alternative is that a colonial farmer named Pattee built dozens of corbelled stone chambers for root storage with astronomical alignments by accident. It has been a tourist site since 1958; H.P. Lovecraft visited and was inspired.",
     source: "Barry Fell, 'America B.C.' (1976) ch. 7; Mary Gage, 'America's Stonehenge Deciphered' (2006); Geochron Laboratories radiocarbon samples (1969-1995)",
     images: ["https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/America_Stonehenge.jpg/500px-America_Stonehenge.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"]
+  },
+  {
+    id: "structure-chronicles-of-georgia",
+    name: "The Chronicles of Georgia Monument - Tbilisi, Georgia",
+    category: "Old World Structures",
+    type: "Point",
+    coordinates: { lng: 44.7896, lat: 41.8019 },
+    date: 1985,
+    displayDate: "1985 (unfinished)",
+    description: "Sixteen bronze-clad concrete pillars up to 35 metres tall on a hill above the Tbilisi Sea, raised by the sculptor Zurab Tsereteli from 1985 and never finished: the upper registers carry the kings, queens and heroes of three thousand years of Georgian history, the lower registers the life of Christ, and a chapel marks the spot where St. Nino is said to have planted the cross that converted the kingdom in AD 337 - the second nation on earth to adopt Christianity. It looks like something from a lost civilization because it was designed to, by a Soviet-era artist working at the scale of the pagan colossi of antiquity but with the Gospel on the ground floor. Almost no one outside Georgia knows it exists.",
+    source: "Zurab Tsereteli, 'Chronicle of Georgia' (Tbilisi, 1985-); Georgian National Tourism Administration",
+    images: ["https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Photos_taken_during_HGN_workshop_in_Tbilisi_in_May_2024_5.jpg/1280px-Photos_taken_during_HGN_workshop_in_Tbilisi_in_May_2024_5.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail", "https://pbs.twimg.com/media/HMnpKv4WsAAfzeC.jpg", "https://pbs.twimg.com/media/HMnp_e0WQAAbJG3.png"]
   }
 ];

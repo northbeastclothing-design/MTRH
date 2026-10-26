@@ -7488,6 +7488,16 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     description: 'Two students found a skull in the shallows of the Columbia River in 1996; the anthropologist who examined the nearly complete skeleton, James Chatters, thought it was a 19th-century European settler until a stone spear point turned up healed into the hip and the carbon date came back at 8,500 years.',
     source: 'Bonnichsen v. United States (9th Cir. 2004); Douglas Owsley & Richard Jantz (eds.), \'Kennewick Man: The Scientific Investigation of an Ancient American Skeleton\' (2014); Rasmussen et al., Nature (2015)',
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Kennewick_Man.jpg/1280px-Kennewick_Man.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-serrania-de-la-lindosa',
+    name: 'Serranía de la Lindosa: Ice-Age Megafauna Painted in the Amazon',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: -10500,
+    description: 'Eight miles of red-ochre rock art on cliff faces at the edge of the Colombian Amazon, found by the thousands after the FARC withdrew in 2016 and dated by excavation to 12,500 years ago: handprints, hunters, and - this is the controversy - animals that do not exist anymore: a giant ground sloth, a mastodon-like creature with a trunk, an Ice Age horse, and what looks like a palaeolama, painted by people who saw them alive.',
+    source: 'Morcote-Ríos, Aceituno, Iriarte et al., \'Colonisation and early peopling of the Colombian Amazon during the Late Pleistocene and Early Holocene\' (Quaternary International, 2021); Iriarte et al., \'Ice Age megafauna rock art in the Colombian Amazon?\' (Phil. Trans. R. Soc. B, 2022)',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Serrania_de_la_Lindosa_rock_paintings.jpg/960px-Serrania_de_la_Lindosa_rock_paintings.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
   }
 ];
 
@@ -8114,7 +8124,8 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'tl-maine-penny': { lng: -68.57, lat: 44.27, locationName: 'Brooklin, Maine', category: 'Archaeological Finds' },
   'tl-america-bat-creek-stone': { lng: -84.37, lat: 35.6, locationName: 'Loudon County, Tennessee', category: 'Archaeological Finds' },
   'tl-lake-superior-copper-culture': { lng: -88.3, lat: 47.4, locationName: 'Keweenaw Peninsula, Michigan', category: 'Archaeological Finds' },
-  'tl-kennewick-man': { lng: -119.14, lat: 46.21, locationName: 'Columbia River, Washington', category: 'Ancient People Groups' }
+  'tl-kennewick-man': { lng: -119.14, lat: 46.21, locationName: 'Columbia River, Washington', category: 'Ancient People Groups' },
+  'tl-serrania-de-la-lindosa': { lng: -72.78, lat: 2.5, locationName: 'Guaviare, Colombia', category: 'Rock Art & Cave Paintings' }
 };
 
 export interface Waypoint {
