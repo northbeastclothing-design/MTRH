@@ -5887,6 +5887,396 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     start: 1869,
     description: 'King Ludwig II of Bavaria lays the foundation stone for Neuschwanstein Castle high in the Bavarian Alps.',
     source: 'Bavarian Palace Department'
+  },
+  {
+    id: 'tl-ales-stenar',
+    name: 'Ale\'s Stones (Ales Stenar)',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: 600,
+    description: 'Fifty-nine boulders laid out as a 67-metre stone ship on a clifftop above the Baltic.',
+    source: 'Swedish National Heritage Board / Megalithic Survey Records',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ales_Stenar_from_pole_camera.jpg/1280px-Ales_Stenar_from_pole_camera.jpg']
+  },
+  {
+    id: 'tl-nuku-hiva-tiki',
+    name: 'Nuku Hiva Tiki Statues',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: 1000,
+    description: 'Dozens of squat stone figures with swollen heads, enormous staring eyes and bodies unlike any later Polynesian art stand in the ceremonial me\'ae of Nuku Hiva.',
+    source: 'Marquesan Archaeological Surveys / Pacific Oral Histories',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Karta_FP_Marquesa_isl.PNG/330px-Karta_FP_Marquesa_isl.PNG']
+  },
+  {
+    id: 'tl-kuelap',
+    name: 'Kuélap Fortress of the Chachapoya',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: 500,
+    description: 'More than four hundred circular stone houses crowd inside a wall that rises nineteen metres on a cloud-forest ridge, built by the fair-skinned \'Cloud Warriors\' of the Chachapoya.',
+    source: 'Peruvian Ministry of Culture / Spanish Colonial Chronicles',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Kuelap_-_Ao%C3%BBt_2007_-_05.jpg/1280px-Kuelap_-_Ao%C3%BBt_2007_-_05.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-monte-sierpe',
+    name: 'Monte Sierpe \'Band of Holes\'',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: 1300,
+    description: 'Roughly 5,200 pits, each about a metre wide, march in a precise serpentine band for 1.5 kilometres across a hillside above the Pisco Valley.',
+    source: 'Peruvian Archaeological Surveys / Aerial Photography Archives',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Faixa_de_Buracos_-_Linhas_de_Nazca_-_Peru_-_Band_of_Holes_-_4_-_panoramio.jpg/330px-Faixa_de_Buracos_-_Linhas_de_Nazca_-_Peru_-_Band_of_Holes_-_4_-_panoramio.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-tlos',
+    name: 'Tlos \'Melted\' Acropolis',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: -2000,
+    description: 'One of the oldest cities of Lycia, said in Greek legend to be the home of the winged horse Pegasus and the hero Bellerophon.',
+    source: 'Lycian Archaeological Surveys / Classical Geographers',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Tlos_Stadium_4152.jpg/1280px-Tlos_Stadium_4152.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-dara',
+    name: 'Dara-Anastasiupolis Rock-Cut City',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: 505,
+    description: 'A Byzantine frontier fortress carved straight down into the bedrock of northern Mesopotamia: cisterns the size of cathedrals, a necropolis cut into cliffs, galleries that run under the whole town.',
+    source: 'Turkish Ministry of Culture / Byzantine Military Chronicles',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Dara_P1030851_20080424091200.JPG/1280px-Dara_P1030851_20080424091200.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-chronicle-of-georgia',
+    name: 'The Chronicle of Georgia Monument',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: 1985,
+    description: 'Sixteen pillars up to thirty-five metres tall rise over the Tbilisi Sea, carved by Zurab Tsereteli with Georgia\'s kings and queens on their upper registers and the life of Christ beneath them.',
+    source: 'Georgian National Tourism Administration',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Photos_taken_during_HGN_workshop_in_Tbilisi_in_May_2024_5.jpg/1280px-Photos_taken_during_HGN_workshop_in_Tbilisi_in_May_2024_5.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-mount-nemrut',
+    name: 'Mount Nemrut Colossal Heads',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: -62,
+    description: 'On a 2,100-metre summit King Antiochus I of Commagene raised a tumulus of crushed stone flanked by enthroned colossi of himself seated among Zeus, Apollo, Heracles and the goddess of Commagene.',
+    source: 'UNESCO World Heritage Catalog / Commagene Inscriptions',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Mount_Nemrut_-_East_Terrace_%284961323529%29.jpg/1280px-Mount_Nemrut_-_East_Terrace_%284961323529%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-heracleion',
+    name: 'Sunken Thonis-Heracleion & Its Sphinx',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: -800,
+    description: 'For two thousand years Thonis-Heracleion existed only in Herodotus and Diodorus; then in 2000 divers found it ten metres under Abu Qir Bay with its temples, colossal statues and a sphinx still lying on the seabed.',
+    source: 'European Institute for Underwater Archaeology (IEASM)',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Canopus_menouthis_herakleion.jpg/330px-Canopus_menouthis_herakleion.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-santa-cristina-well',
+    name: 'Sacred Well of Santa Cristina (Nuragic)',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: -1100,
+    description: 'A keyhole-shaped stair of perfectly cut basalt descends to a well whose corbelled dome is open to the sky through a small aperture.',
+    source: 'Sardinian Archaeological Superintendency',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Santa_Cristina_Pozzo_Sacro_Esterno_5849.JPG/1280px-Santa_Cristina_Pozzo_Sacro_Esterno_5849.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-eupalinos-tunnel',
+    name: 'Tunnel of Eupalinos',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: -550,
+    description: 'A kilometre-long aqueduct driven through a mountain from both ends at once, meeting in the middle with an error of a few centimetres, in the sixth century BCE.',
+    source: 'Herodotus, Histories III.60 / Greek Archaeological Service',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Eupalinian_aqueduct.JPG/1280px-Eupalinian_aqueduct.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-vishaps',
+    name: 'Armenian Vishaps (Dragon Stones)',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: -2000,
+    description: 'Up to five metres tall and eight tons each, these monoliths stand beside high mountain springs carved as fish, bulls\' hides and serpents.',
+    source: 'Armenian Institute of Archaeology / Yerevan State University Survey',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Vishap02.jpg/1280px-Vishap02.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-sakafuneishi',
+    name: 'Sakafune-ishi Carved Stone',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: 650,
+    description: 'A five-metre granite slab on a hilltop in Japan\'s ancient capital, cut with shallow basins joined by straight channels, like a circuit board or a distillation bench.',
+    source: 'Nara Prefecture Cultural Heritage Office',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/%E9%85%92%E8%88%B9%E7%9F%B3%E9%81%BA%E8%B7%A1%E9%85%92%E8%88%B9%E7%9F%B3.JPG/1280px-%E9%85%92%E8%88%B9%E7%9F%B3%E9%81%BA%E8%B7%A1%E9%85%92%E8%88%B9%E7%9F%B3.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-lomas-rishi',
+    name: 'Lomas Rishi Cave',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: -250,
+    description: 'A sanctuary hollowed from a single granite hill with walls polished to a mirror finish that still rings like a bell when struck.',
+    source: 'Archaeological Survey of India',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Lomas_Rishi_entrance.jpg/1280px-Lomas_Rishi_entrance.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-rosalila',
+    name: 'Rosalila Temple (Buried Intact)',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: 571,
+    description: 'The Maya did not demolish this temple when they outgrew it; they wrapped it in a thick layer of plaster and buried it whole inside a larger pyramid, stucco masks and red paint untouched.',
+    source: 'Copán Archaeological Project / UNESCO',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Rosalila_Temple_Museum_in_Copan.jpg/1280px-Rosalila_Temple_Museum_in_Copan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-waru-waru',
+    name: 'Waru Waru Raised Fields',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: -300,
+    description: 'Seen from a drone, the altiplano around Titicaca is combed into thousands of raised beds and canals, a hydraulic machine that stored the day\'s heat in water to beat the night frost at 3,800 metres.',
+    source: 'Andean Agricultural Archaeology Programme',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Waru_waru_moderno.JPG/330px-Waru_waru_moderno.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-sabu-disk',
+    name: 'The Disk of Sabu',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: -3000,
+    description: 'A tri-lobed dish of fragile schist, sixty centimetres across, lifted from the tomb of Prince Sabu in 1936.',
+    source: 'Egyptian Museum, Cairo / W.B. Emery Excavation Reports',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Disk_of_Sabu.jpg/1280px-Disk_of_Sabu.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-colossus-apennines',
+    name: 'Colossus of the Apennines',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: 1580,
+    description: 'A ten-metre giant crouches over a pond in a Medici garden north of Florence, brick and stone fused into a mountain-god with rooms and a fireplace inside his body, so that in winter smoke poured from his nostrils.',
+    source: 'Parco Mediceo di Pratolino / Florentine Archives',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Apennine_Colossus_panorama_%2881988p%29.jpg/1280px-Apennine_Colossus_panorama_%2881988p%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-galgano-sword',
+    name: 'Saint Galgano\'s Sword in the Stone',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: 1180,
+    description: 'A Tuscan knight who renounced war in 1180 drove his sword into a rock to make a cross to pray before, and it is still there, under glass in a round chapel on the hill.',
+    source: 'University of Pavia Metallurgical Analysis / Abbey of San Galgano Records',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Pietro_di_giovanni_d%27ambrogio%2C_adorazione_dei_pastori_tra_i_ss._galgano_e_agostino%2C_da._agostino%2C_12.JPG/1280px-Pietro_di_giovanni_d%27ambrogio%2C_adorazione_dei_pastori_tra_i_ss._galgano_e_agostino%2C_da._agostino%2C_12.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-domus-de-janas',
+    name: 'Grutta \'e Janas (Fairy Houses)',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: -3400,
+    description: 'More than three thousand chambers cut into Sardinian cliffs, with carved doorways, false ceilings imitating wooden beams and bulls\' horns in red ochre on the walls.',
+    source: 'Sardinian Archaeological Superintendency / Folklore Archives',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Putifigari%2C_necropoli_di_Monte_Siseri_%2820%29.jpg/1280px-Putifigari%2C_necropoli_di_Monte_Siseri_%2820%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-giants-tomb-san-cosimo',
+    name: 'Giants\' Tomb of San Cosimo',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: -1400,
+    description: 'One of more than three hundred surviving \'tombe dei giganti\', long gallery graves fronted by a horned forecourt and a carved portal stele, that the Nuragic people spread across Sardinia.',
+    source: 'Sardinian Archaeological Superintendency / 19th-Century Excavation Reports',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Foto_aerea_della_tomba_Tomba_dei_Giganti_%22Sa_Domu_%27e_S%27Orku2_in_territorio_di_Siddi._La_tomba_risale_al_periodo_nuragico.jpg/1280px-Foto_aerea_della_tomba_Tomba_dei_Giganti_%22Sa_Domu_%27e_S%27Orku2_in_territorio_di_Siddi._La_tomba_risale_al_periodo_nuragico.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-pietravairano-theater',
+    name: 'San Nicola Theatre-Temple',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: -150,
+    description: 'A Samnite-Roman theatre and temple terraced into a mountainside above Campania, invisible until a paraglider spotted the outline in 2000.',
+    source: 'Campania Archaeological Superintendency',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Pietravairano.jpg/1280px-Pietravairano.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-ark-of-bukhara',
+    name: 'Ark of Bukhara Citadel',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: 500,
+    description: 'A mudbrick mountain in the centre of one of the oldest cities on the Silk Road, rebuilt so many times that its earliest layers reach back before Islam, before Alexander, into the fog of the first Sogdian kings.',
+    source: 'Uzbek Academy of Sciences / Shahnameh Traditions',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Ark_of_Bukhara_2023.9.jpg/1280px-Ark_of_Bukhara_2023.9.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-yediler-monastery',
+    name: 'Yediler Monastery Ruins',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: 800,
+    description: 'Byzantine monks built the Monastery of the Seven Brothers among the granite boulders of Mount Latmos, painting the Crucifixion onto the underside of a natural rock shelter.',
+    source: 'Turkish Ministry of Culture / Latmos Surveys',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Yediler_Manast%C4%B1r%C4%B1_Genel_G%C3%B6r%C3%BCn%C3%BCm.jpg/1280px-Yediler_Manast%C4%B1r%C4%B1_Genel_G%C3%B6r%C3%BCn%C3%BCm.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-sumela-monastery',
+    name: 'Sümela Monastery',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: 386,
+    description: 'A Greek Orthodox monastery glued to a sheer cliff three hundred metres above the Altındere valley, founded in 386 by two Athenian monks who followed an icon of the Virgin said to have been painted by Luke.',
+    source: 'Turkish Ministry of Culture / Pontic Greek Chronicles',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Sumela_From_Across_Valley.JPG/1280px-Sumela_From_Across_Valley.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-agia-sofia-cave-kythira',
+    name: 'Agia Sofia Cave Church',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: 1250,
+    description: 'On the island where Aphrodite was said to have risen from the sea, a cave of stalactites was consecrated to Holy Wisdom, its antechamber frescoed with saints in the thirteenth century.',
+    source: 'Greek Ministry of Culture / Kythira Speleological Records',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Agia_Sofia_cave%2C_Kythira.JPG/1280px-Agia_Sofia_cave%2C_Kythira.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-aztec-sun-stone',
+    name: 'Aztec Sun Stone (Calendar Stone)',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: 1500,
+    description: 'A 24-ton basalt disk carved under Moctezuma II, with the sun god Tonatiuh at its heart, tongue out as a sacrificial knife, ringed by the four previous worlds that ended in jaguars, wind, fire and flood.',
+    source: 'Museo Nacional de Antropología, Mexico City',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Monolito_de_la_Piedra_del_Sol.jpg/1280px-Monolito_de_la_Piedra_del_Sol.jpg']
+  },
+  {
+    id: 'tl-man-mound',
+    name: 'Man Mound (Human Effigy Earthwork)',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: 1000,
+    description: 'The only surviving human-shaped effigy mound in North America, 214 feet long, striding west with horned headgear, built by the Late Woodland mound people.',
+    source: 'Sauk County Historical Society / National Historic Landmark Nomination',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Man_Mound.jpg/1280px-Man_Mound.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-nazca-168-geoglyphs',
+    name: '168 New Nazca Geoglyphs (Yamagata Survey)',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: -200,
+    description: 'A Yamagata University team using drones and AI added 168 previously unknown figures to the Nazca catalogue in 2022: humanoids, birds, cats, a snake, mostly small and clustered along ancient paths.',
+    source: 'Yamagata University Nazca Institute (2022)',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/L%C3%ADneas_de_Nazca%2C_Nazca%2C_Per%C3%BA%2C_2015-07-29%2C_DD_49.JPG/1280px-L%C3%ADneas_de_Nazca%2C_Nazca%2C_Per%C3%BA%2C_2015-07-29%2C_DD_49.JPG']
+  },
+  {
+    id: 'tl-bashplemi-tablet',
+    name: 'Bashplemi Lake Basalt Tablet',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: -1000,
+    description: 'A basalt slab pulled from a lakeshore near Dmanisi carries sixty characters in thirty-nine distinct signs that match no known script, drilled and scored with a precision tool.',
+    source: 'Georgian National Academy of Sciences (2024)',
+    images: ['https://pbs.twimg.com/media/HM6qN1bbYAAiZlk.jpg']
+  },
+  {
+    id: 'tl-kudurru',
+    name: 'Babylonian Kudurru Boundary Stones',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: -1150,
+    description: 'Black limestone stelae recording royal land grants, their upper registers carved with the symbols of the gods, sun, moon, Venus, the scorpion, the serpent, who would curse anyone moving the boundary.',
+    source: 'British Museum / Louvre Mesopotamian Collections',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Caillou_Michaux_CdM.jpg/1280px-Caillou_Michaux_CdM.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-merneptah-stele',
+    name: 'Merneptah Stele (\'Israel Stele\')',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: -1208,
+    description: 'On a black granite victory stele Pharaoh Merneptah boasts that \'Israel is laid waste, its seed is no more.\' It is the earliest mention of Israel outside the Bible, and it puts a people by that name in Canaan by 1208 BCE, already settled enough to be worth destroying.',
+    source: 'Egyptian Museum, Cairo / Flinders Petrie (1896)',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Merneptah_Steli_%28cropped%29.jpg/1280px-Merneptah_Steli_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-frankfurt-silver-amulet',
+    name: 'Frankfurt Silver Inscription (Earliest Christian Text North of the Alps)',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: 250,
+    description: 'A silver foil rolled inside an amulet, buried with a man outside Roman Frankfurt around 250 CE and unrolled by CT scan in 2024.',
+    source: 'Frankfurt Archaeological Museum / Leibniz Centre for Archaeology (2024)',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Hagios_hagios_hagios_20241222_155425.jpg/1280px-Hagios_hagios_hagios_20241222_155425.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-cyprus-wheeled-stands',
+    name: 'Cypriot Bronze Wheeled Stands (1 Kings 7)',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: -1200,
+    description: 'Bronze stands on four wheels with openwork panels of lions, oxen and cherubim, cast in Cyprus in the twelfth century BCE and now in the British Museum.',
+    source: 'British Museum / 1 Kings 7:27-37',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Cypriot_bronze_wheeled_stand_with_an_animal_frieze_on_the_ring_and_figures_in_the_side_panels.jpg/1280px-Cypriot_bronze_wheeled_stand_with_an_animal_frieze_on_the_ring_and_figures_in_the_side_panels.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-sea-peoples',
+    name: 'The Sea Peoples & the Bronze Age Collapse',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: -1177,
+    description: 'Around 1177 BCE a confederation of sea-borne raiders, the Peleset, Sherden, Shekelesh and others, burned the Hittite empire, Ugarit and the Mycenaean palaces and were only stopped on the Nile delta by Ramesses III, who carved the battle on his temple at Medinet Habu.',
+    source: 'Medinet Habu Reliefs / Egyptian Royal Annals',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Medinet_Habu_Ramses_III._Tempel_Nordostwand_Abzeichnung_01.jpg/1280px-Medinet_Habu_Ramses_III._Tempel_Nordostwand_Abzeichnung_01.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-abydos-king-list',
+    name: 'Abydos King List of Seti I',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: -1290,
+    description: 'Seventy-six cartouches of pharaohs from Menes to Seti I carved in the Temple of Seti at Abydos, the official memory of Egypt as the priests wanted it.',
+    source: 'Temple of Seti I, Abydos / Egyptological Chronologies',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/C%2BB-Egypt-Fig9-SetiIAbydosKingList.PNG/500px-C%2BB-Egypt-Fig9-SetiIAbydosKingList.PNG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-fleckenstein',
+    name: 'Fleckenstein Castle',
+    type: 'event',
+    layer: 'old-world-structures',
+    start: 1165,
+    description: 'A castle carved into and on top of a 52-metre sandstone fin in the Vosges, its stairs, cisterns and rooms hollowed from the living rock so that the keep and the cliff are one body.',
+    source: 'Alsace Heritage Council / Holy Roman Empire Charters',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Fleckenstein.jpg/960px-Fleckenstein.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-forte-da-graca',
+    name: 'Forte da Graça (Fort of Our Lady of Grace)',
+    type: 'event',
+    layer: 'old-world-structures',
+    start: 1763,
+    description: 'A perfect star fortress crowning a hill above Elvas, designed by the Count of Lippe after the Seven Years\' War, with concentric bastions, a hidden governor\'s house and three-tier cannon galleries engineered to geometric perfection.',
+    source: 'Portuguese Directorate-General for Cultural Heritage / UNESCO',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Forte_da_Gra%C3%A7a_December_2016-3.jpg/1280px-Forte_da_Gra%C3%A7a_December_2016-3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-king-alfreds-tower',
+    name: 'King Alfred\'s Tower',
+    type: 'event',
+    layer: 'old-world-structures',
+    start: 1772,
+    description: 'A triangular brick tower 49 metres high, standing on the spot where King Alfred is said to have raised his standard against the Danes in 878 before the battle that saved Christian England.',
+    source: 'National Trust / Anglo-Saxon Chronicle',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/King_Alfred%27s_Tower_view_from_west.jpg/1280px-King_Alfred%27s_Tower_view_from_west.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
   }
 ];
 
@@ -6353,7 +6743,46 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'discovery-oxyrhynchus': { lng: 30.7500, lat: 28.5333, locationName: 'Oxyrhynchus, Egypt (Biblical Papyri)', category: 'Ancient Texts' },
   'discovery-fayum': { lng: 30.8400, lat: 29.3100, locationName: 'Fayum, Egypt (Rylands Library P52)', category: 'Ancient Texts' },
   'discovery-ketef-hinnom': { lng: 35.2269, lat: 31.7719, locationName: 'Ketef Hinnom, Jerusalem (Silver Scrolls)', category: 'Ancient Texts' },
-  'discovery-vatican': { lng: 12.4545, lat: 41.9045, locationName: 'Vatican Library (Codex Vaticanus)', category: 'Ancient Texts' }
+  'discovery-vatican': { lng: 12.4545, lat: 41.9045, locationName: 'Vatican Library (Codex Vaticanus)', category: 'Ancient Texts' },
+  'tl-ales-stenar': { lng: 14.0576, lat: 55.3826, locationName: 'Kåseberga, Sweden', category: 'Megaliths / Structures' },
+  'tl-nuku-hiva-tiki': { lng: -140.13333333, lat: -8.86666667, locationName: 'Marquesas Islands', category: 'Megaliths / Structures' },
+  'tl-kuelap': { lng: -77.9271134, lat: -6.426295, locationName: 'Amazonas, Peru', category: 'Megaliths / Structures' },
+  'tl-monte-sierpe': { lng: -75.87516, lat: -13.710486, locationName: 'Pisco Valley, Peru', category: 'Megaliths / Structures' },
+  'tl-tlos': { lng: 29.42079444, lat: 36.55253611, locationName: 'Lycia, Türkiye', category: 'Megaliths / Structures' },
+  'tl-dara': { lng: 40.94111111, lat: 37.17777778, locationName: 'Mardin, Türkiye', category: 'Megaliths / Structures' },
+  'tl-chronicle-of-georgia': { lng: 44.810438, lat: 41.770503, locationName: 'Tbilisi, Georgia', category: 'Megaliths / Structures' },
+  'tl-mount-nemrut': { lng: 38.74083333, lat: 37.98055556, locationName: 'Commagene, Türkiye', category: 'Megaliths / Structures' },
+  'tl-heracleion': { lng: 30.12888889, lat: 31.31277778, locationName: 'Abu Qir Bay, Egypt', category: 'Archaeological Finds' },
+  'tl-santa-cristina-well': { lng: 8.7756, lat: 40.0646, locationName: 'Paulilatino, Sardinia', category: 'Megaliths / Structures' },
+  'tl-eupalinos-tunnel': { lng: 26.93, lat: 37.694, locationName: 'Samos, Greece', category: 'Archaeological Finds' },
+  'tl-vishaps': { lng: 44.75, lat: 40.275, locationName: 'Geghama Mountains, Armenia', category: 'Megaliths / Structures' },
+  'tl-sakafuneishi': { lng: 135.82072222, lat: 34.47130556, locationName: 'Asuka, Japan', category: 'Megaliths / Structures' },
+  'tl-lomas-rishi': { lng: 85.06452778, lat: 25.00644444, locationName: 'Barabar Hills, India', category: 'Megaliths / Structures' },
+  'tl-rosalila': { lng: -89.1425, lat: 14.8375, locationName: 'Copán, Honduras', category: 'Archaeological Finds' },
+  'tl-waru-waru': { lng: -70.02805556, lat: -15.78361111, locationName: 'Lake Titicaca, Peru', category: 'Megaliths / Structures' },
+  'tl-sabu-disk': { lng: 31.2164, lat: 29.8711, locationName: 'Saqqara, Egypt', category: 'Archaeological Finds' },
+  'tl-colossus-apennines': { lng: 11.3047, lat: 43.8614, locationName: 'Villa Demidoff, Italy', category: 'Megaliths / Structures' },
+  'tl-galgano-sword': { lng: 11.1555, lat: 43.1525, locationName: 'Montesiepi, Italy', category: 'Archaeological Finds' },
+  'tl-domus-de-janas': { lng: 8.951, lat: 40.085, locationName: 'Sardinia, Italy', category: 'Megaliths / Structures' },
+  'tl-giants-tomb-san-cosimo': { lng: 8.6472, lat: 39.4886, locationName: 'Gonnosfanadiga, Sardinia', category: 'Megaliths / Structures' },
+  'tl-pietravairano-theater': { lng: 14.16666667, lat: 41.33333333, locationName: 'Pietravairano, Italy', category: 'Archaeological Finds' },
+  'tl-ark-of-bukhara': { lng: 64.41027778, lat: 39.77777778, locationName: 'Bukhara, Uzbekistan', category: 'Megaliths / Structures' },
+  'tl-yediler-monastery': { lng: 27.41666667, lat: 37.5, locationName: 'Lake Bafa, Türkiye', category: 'Archaeological Finds' },
+  'tl-sumela-monastery': { lng: 39.65833333, lat: 40.69, locationName: 'Trabzon, Türkiye', category: 'Megaliths / Structures' },
+  'tl-agia-sofia-cave-kythira': { lng: 22.9975, lat: 36.2575, locationName: 'Kythira, Greece', category: 'Archaeological Finds' },
+  'tl-aztec-sun-stone': { lng: -99.1875, lat: 19.42611111, locationName: 'Mexico City, Mexico', category: 'Archaeological Finds' },
+  'tl-man-mound': { lng: -89.6718, lat: 43.4886, locationName: 'Sauk County, Wisconsin', category: 'Burial Mounds' },
+  'tl-nazca-168-geoglyphs': { lng: -75.13, lat: -14.739, locationName: 'Nazca, Peru', category: 'Megaliths / Structures' },
+  'tl-bashplemi-tablet': { lng: 44.35, lat: 41.33, locationName: 'Dmanisi, Georgia', category: 'Archaeological Finds' },
+  'tl-kudurru': { lng: 44.2522, lat: 33.0588, locationName: 'Sippar, Iraq', category: 'Archaeological Finds' },
+  'tl-merneptah-stele': { lng: 32.61027778, lat: 25.72055556, locationName: 'Thebes, Egypt', category: 'Biblical Discoveries' },
+  'tl-frankfurt-silver-amulet': { lng: 8.6378, lat: 50.1542, locationName: 'Frankfurt Silver Inscription (Earliest Christian Text North of the Alps)', category: 'Biblical Discoveries' },
+  'tl-cyprus-wheeled-stands': { lng: 33.95, lat: 35.17, locationName: 'Enkomi & Kourion, Cyprus', category: 'Biblical Discoveries' },
+  'tl-sea-peoples': { lng: 32.6, lat: 25.72, locationName: 'Medinet Habu, Egypt', category: 'Biblical Discoveries' },
+  'tl-abydos-king-list': { lng: 31.9192, lat: 26.1844, locationName: 'Abydos, Egypt', category: 'Biblical Discoveries' },
+  'tl-fleckenstein': { lng: 7.77194444, lat: 49.04472222, locationName: 'Lembach, Alsace, France', category: 'Old World Structures' },
+  'tl-forte-da-graca': { lng: -7.1615, lat: 38.8921, locationName: 'Elvas, Portugal', category: 'Old World Structures' },
+  'tl-king-alfreds-tower': { lng: -2.3650446, lat: 51.1148273, locationName: 'Stourhead, Somerset, England', category: 'Old World Structures' }
 };
 
 export interface Waypoint {

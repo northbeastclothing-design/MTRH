@@ -527,5 +527,41 @@ export const OLD_WORLD_STRUCTURES_DATA: OldWorldStructureCase[] = [
     "description": "A medieval Islamic fortification constructed by Saladin on Mokattam Hill in 1176 to protect Cairo against Crusader forces. Served as the seat of government in Egypt for over 700 years until the late 19th century.",
     "source": "Egyptian Ministry of Tourism and Antiquities",
     "images": ["https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Flickr_-_HuTect_ShOts_-_Citadel_of_Salah_El.Din_and_Masjid_Muhammad_Ali_%D9%82%D9%84%D8%B9%D8%A9_%D8%B5%D9%84%D8%A7%D8%AD_%D8%A7%D9%84%D8%AF%D9%8A%D9%86_%D8%A7%D9%84%D8%A3%D9%8A%D9%88%D8%A8%D9%8A_%D9%88%D9%85%D8%B3%D8%AC%D8%AF_%D9%85%D8%AD%D9%85%D8%AF_%D8%B9%D9%84%D9%8A_-_Cairo_-_Egypt_-_17_04_2010_%284%29.jpg/500px-thumbnail.jpg"]
+  },
+  {
+    id: "structure-fleckenstein",
+    name: "Fleckenstein Castle - Lembach, Alsace, France",
+    category: "Old World Structures",
+    type: "Point",
+    coordinates: { lng: 7.77194444, lat: 49.04472222 },
+    date: 1165,
+    displayDate: "1165 CE",
+    description: "A castle carved into and on top of a 52-metre sandstone fin in the Vosges, its stairs, cisterns and rooms hollowed from the living rock so that the keep and the cliff are one body. First recorded in 1165 and blown up by the French in 1680, it was never rebuilt. Rock-cut castles like Fleckenstein raise the old-world question in its sharpest form: were the medieval lords building, or moving into something they found?",
+    source: "Alsace Heritage Council / Holy Roman Empire Charters",
+    images: ["https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Fleckenstein.jpg/960px-Fleckenstein.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"]
+  },
+  {
+    id: "structure-forte-da-graca",
+    name: "Forte da Graça (Fort of Our Lady of Grace) - Elvas, Portugal",
+    category: "Old World Structures",
+    type: "Point",
+    coordinates: { lng: -7.1615, lat: 38.8921 },
+    date: 1763,
+    displayDate: "1763-1792 CE",
+    description: "A perfect star fortress crowning a hill above Elvas, designed by the Count of Lippe after the Seven Years' War, with concentric bastions, a hidden governor's house and three-tier cannon galleries engineered to geometric perfection. Star forts ring the globe from Portugal to Goa to Manila, all 'built' within a few generations by nations that could not agree on anything else. Old-world researchers see one inherited design, not a hundred separate inventions.",
+    source: "Portuguese Directorate-General for Cultural Heritage / UNESCO",
+    images: ["https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Forte_da_Gra%C3%A7a_December_2016-3.jpg/1280px-Forte_da_Gra%C3%A7a_December_2016-3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"]
+  },
+  {
+    id: "structure-king-alfreds-tower",
+    name: "King Alfred's Tower - Stourhead, Somerset, England",
+    category: "Old World Structures",
+    type: "Point",
+    coordinates: { lng: -2.3650446, lat: 51.1148273 },
+    date: 1772,
+    displayDate: "1772 CE",
+    description: "A triangular brick tower 49 metres high, standing on the spot where King Alfred is said to have raised his standard against the Danes in 878 before the battle that saved Christian England. Henry Hoare built it as a 'folly', the polite eighteenth-century word for a monument no one needs. A thousand years on, a cross-shaped tower marks the place where a king chose to fight for the faith rather than pay tribute to the pagans.",
+    source: "National Trust / Anglo-Saxon Chronicle",
+    images: ["https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/King_Alfred%27s_Tower_view_from_west.jpg/1280px-King_Alfred%27s_Tower_view_from_west.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"]
   }
 ];
