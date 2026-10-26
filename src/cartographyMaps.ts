@@ -547,5 +547,15 @@ export const HISTORICAL_MAPS: HistoricalMap[] = [
     aspectRatio: 0.67,
     pinColor: '#91FFC4',
     era: 'ancient'
+  },
+  {
+    id: 'enochian-cosmos-map',
+    name: "The Enochian Cosmos (Early Hebrew Conception of the Universe)",
+    year: "c. 300 BCE (diagram 1908)",
+    description: "The cosmos as the Torah, Job and 1 Enoch describe it, drawn out by the biblical scholars of the early 1900s: a flat earth on pillars over Sheol and the great deep, the solid firmament (raqia) with its windows and storehouses of snow, hail and wind, the waters above, the sun and moon running their courses beneath the dome and entering through its gates, and the heaven of heavens above all. Compare it with 1 Enoch 72-82 (the twelve portals), 2 Enoch's ten stacked heavens and 3 Enoch's seven palaces. Every ancient map on this page was drawn on this model; the Babylonian Map of the World is the same picture from above.",
+    url: "https://upload.wikimedia.org/wikipedia/commons/b/ba/Early_Hebrew_Conception_of_the_Universe.png",
+    aspectRatio: 1.0964,
+    pinColor: '#C77DFF',
+    era: 'speculative'
   }
 ];

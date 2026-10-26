@@ -54615,5 +54615,69 @@
    "https://x.com/i/status/2102748476555878467",
    "https://pbs.twimg.com/amplify_video_thumb/2102748295781105665/img/DXUm807zNU19SFVP.jpg"
   ]
+ },
+ {
+  "id": "rabbi-ishmael-3-enoch",
+  "name": "Rabbi Ishmael ben Elisha (Narrator of 3 Enoch) - Jerusalem",
+  "category": "Religion",
+  "type": "Point",
+  "coordinates": {
+   "lng": 35.2345,
+   "lat": 31.7767
+  },
+  "date": 120,
+  "description": "The 'Ishmael' of 3 Enoch is not Abraham's son by Hagar but Rabbi Ishmael ben Elisha ha-Kohen (c. 90-135 CE), grandson of a High Priest, a Tanna of the Mishnah and, by legend, one of the Ten Martyrs flayed by Rome after the Bar Kokhba revolt. He appears nowhere in the Bible. He does appear in the Talmud (Berakhot 7a records him entering the Holy of Holies and seeing God on His throne), in Hekhalot Rabbati as the chief of the Merkabah descenders, and in the Yom Kippur martyrology Eleh Ezkerah, where his face is so beautiful that Caesar's daughter asks to keep its skin. 3 Enoch is his report from the seventh heaven, where Metatron tells him 'I am Enoch, the son of Jared'. The priestly line reporting back from the Throne while the Temple lies in ruins is the point.",
+  "source": "3 Enoch 1-2 / Berakhot 7a / Hekhalot Rabbati / Midrash Eleh Ezkerah",
+  "images": [
+   "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/%D7%A8%D7%91%D7%99_%D7%99%D7%A9%D7%9E%D7%A2%D7%90%D7%9C_%D7%9B%D7%94%D7%9F_%D7%92%D7%93%D7%95%D7%9C.JPG/500px-%D7%A8%D7%91%D7%99_%D7%99%D7%A9%D7%9E%D7%A2%D7%90%D7%9C_%D7%9B%D7%94%D7%9F_%D7%92%D7%93%D7%95%D7%9C.JPG"
+  ]
+ },
+ {
+  "id": "star-of-bethlehem",
+  "name": "The Star of Bethlehem - Bethlehem",
+  "category": "Religion",
+  "type": "Point",
+  "coordinates": {
+   "lng": 35.2024,
+   "lat": 31.7054
+  },
+  "date": -5,
+  "description": "'We have seen his star in the east, and are come to worship him' (Matthew 2:2). The Magi were Persian-Babylonian astrologers, heirs of the school Daniel had headed in Babylon (Daniel 2:48), and Balaam's oracle - 'there shall come a Star out of Jacob' (Numbers 24:17) - had been in their archives for a thousand years. The star 'went before them' and 'stood over where the young child was' (2:9), which no conjunction does; Jupiter-Saturn in 7 BCE, Jupiter-Venus in 2 BCE and Halley's comet in 12 BCE have all been proposed and none walks. The early church read it as an angel, which 1 Enoch would call the same thing. Herod's response was the slaughter of the innocents. The last word on the star is Revelation 22:16, where the child grown says: 'I am the bright and morning star.'",
+  "source": "Matthew 2:1-12 / Numbers 24:17 / Daniel 2:48 / Revelation 22:16",
+  "images": [
+   "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Giotto_-_Scrovegni_-_-18-_-_Adoration_of_the_Magi.jpg/500px-Giotto_-_Scrovegni_-_-18-_-_Adoration_of_the_Magi.jpg"
+  ]
+ },
+ {
+  "id": "melchizedek-miraculous-birth",
+  "name": "The Miraculous Birth of Melchizedek (2 Enoch 71-72) - Achuzan (Jerusalem)",
+  "category": "Religion",
+  "type": "Point",
+  "coordinates": {
+   "lng": 35.2354,
+   "lat": 31.778
+  },
+  "date": -2349,
+  "description": "Forty days after the child comes alive out of his dead mother, the archangel Gabriel (Michael in some manuscripts) takes him 'on his wings' to the Garden of Eden 'so that he will not perish with those who perish' in the Flood. After the waters, 2 Enoch says, he will be 'the head of priests in another generation', and there will be a second Melchizedek, and a third, until the last one, 'the Word and Power of God'. This is how a priest with 'neither beginning of days nor end of life' (Hebrews 7:3) can meet Abraham at Salem five centuries later: he was carried over the Flood by an angel. 11QMelchizedek at Qumran makes him the judge of the last days. The Christian reading that he is a type of Christ and the Enochic reading that he is a rescued pre-Flood child are not in conflict; one is the plan and the other is the first draft.",
+  "source": "2 Enoch 71:28-72:11 / Genesis 14:18 / Hebrews 7:1-3 / 11Q13 (11QMelchizedek)",
+  "images": [
+   "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Abraham_y_Melquisedec%2C_por_Juan_Antonio_de_Fr%C3%ADas_%28cropped%29.jpg/500px-Abraham_y_Melquisedec%2C_por_Juan_Antonio_de_Fr%C3%ADas_%28cropped%29.jpg"
+  ]
+ },
+ {
+  "id": "achuzan-altar-methuselah",
+  "name": "Achuzan (Altar of Methuselah, Centre of the Earth) - Temple Mount, Jerusalem",
+  "category": "Enochian Sites",
+  "type": "Point",
+  "coordinates": {
+   "lng": 35.2354,
+   "lat": 31.778
+  },
+  "date": -3017,
+  "description": "'The place Achuzan, where Enoch was taken up' (2 Enoch 68:5): the spot from which the patriarch ascended, where Methuselah built an altar the next morning at the Lord's instruction and sacrificed with the whole people, and where the Lord appeared to Methuselah in a dream and ordained him priest. 2 Enoch 71 calls it 'the centre of the earth', the formula Ezekiel 38:12 uses for the land of Israel and the rabbis use for the Foundation Stone of the Temple Mount. The Slavonic book says Adam was created there, Melchizedek will serve there after the Flood, and the Temple will stand there; it is describing Moriah before Abraham. The oldest altar in the Enochic literature sits exactly where the Dome of the Rock sits now, which explains why the ground has never stopped being fought over.",
+  "source": "2 Enoch 64:2, 68:5-7, 69:1-18, 70:17, 71:35 / Ezekiel 38:12 / Yoma 54b",
+  "images": [
+   "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Jerusalem-2013%282%29-Aerial-Temple_Mount-%28south_exposure%29.jpg/1280px-Jerusalem-2013%282%29-Aerial-Temple_Mount-%28south_exposure%29.jpg"
+  ]
  }
 ]

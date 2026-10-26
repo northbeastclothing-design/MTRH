@@ -7498,6 +7498,56 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     description: 'Eight miles of red-ochre rock art on cliff faces at the edge of the Colombian Amazon, found by the thousands after the FARC withdrew in 2016 and dated by excavation to 12,500 years ago: handprints, hunters, and - this is the controversy - animals that do not exist anymore: a giant ground sloth, a mastodon-like creature with a trunk, an Ice Age horse, and what looks like a palaeolama, painted by people who saw them alive.',
     source: 'Morcote-Ríos, Aceituno, Iriarte et al., \'Colonisation and early peopling of the Colombian Amazon during the Late Pleistocene and Early Holocene\' (Quaternary International, 2021); Iriarte et al., \'Ice Age megafauna rock art in the Colombian Amazon?\' (Phil. Trans. R. Soc. B, 2022)',
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Serrania_de_la_Lindosa_rock_paintings.jpg/960px-Serrania_de_la_Lindosa_rock_paintings.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-ishmael-3-enoch',
+    name: 'Rabbi Ishmael ben Elisha (Narrator of 3 Enoch)',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 120,
+    description: 'The \'Ishmael\' of 3 Enoch is not Abraham\'s son by Hagar but Rabbi Ishmael ben Elisha ha-Kohen (c.',
+    source: '3 Enoch 1-2 / Berakhot 7a / Hekhalot Rabbati / Midrash Eleh Ezkerah',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/%D7%A8%D7%91%D7%99_%D7%99%D7%A9%D7%9E%D7%A2%D7%90%D7%9C_%D7%9B%D7%94%D7%9F_%D7%92%D7%93%D7%95%D7%9C.JPG/500px-%D7%A8%D7%91%D7%99_%D7%99%D7%A9%D7%9E%D7%A2%D7%90%D7%9C_%D7%9B%D7%94%D7%9F_%D7%92%D7%93%D7%95%D7%9C.JPG']
+  },
+  {
+    id: 'tl-of-bethlehem',
+    name: 'The Star of Bethlehem',
+    type: 'event',
+    layer: 'biblical-events',
+    start: -5,
+    description: '\'We have seen his star in the east, and are come to worship him\' (Matthew 2:2).',
+    source: 'Matthew 2:1-12 / Numbers 24:17 / Daniel 2:48 / Revelation 22:16',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Giotto_-_Scrovegni_-_-18-_-_Adoration_of_the_Magi.jpg/500px-Giotto_-_Scrovegni_-_-18-_-_Adoration_of_the_Magi.jpg']
+  },
+  {
+    id: 'tl-miraculous-birth',
+    name: 'The Miraculous Birth of Melchizedek (2 Enoch 71-72)',
+    type: 'event',
+    layer: 'enochian-lore',
+    start: -2349,
+    description: 'Forty days after the child comes alive out of his dead mother, the archangel Gabriel (Michael in some manuscripts) takes him \'on his wings\' to the Garden of Eden \'so that he will not perish with those who perish\' in the Flood.',
+    source: '2 Enoch 71:28-72:11 / Genesis 14:18 / Hebrews 7:1-3 / 11Q13 (11QMelchizedek)',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Abraham_y_Melquisedec%2C_por_Juan_Antonio_de_Fr%C3%ADas_%28cropped%29.jpg/500px-Abraham_y_Melquisedec%2C_por_Juan_Antonio_de_Fr%C3%ADas_%28cropped%29.jpg']
+  },
+  {
+    id: 'tl-altar-methuselah',
+    name: 'Achuzan (Altar of Methuselah, Centre of the Earth)',
+    type: 'event',
+    layer: 'enochian-lore',
+    start: -3017,
+    description: '\'The place Achuzan, where Enoch was taken up\' (2 Enoch 68:5): the spot from which the patriarch ascended, where Methuselah built an altar the next morning at the Lord\'s instruction and sacrificed with the whole people, and where the Lord appeared to Methuselah in a dream and ordained him priest.',
+    source: '2 Enoch 64:2, 68:5-7, 69:1-18, 70:17, 71:35 / Ezekiel 38:12 / Yoma 54b',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Jerusalem-2013%282%29-Aerial-Temple_Mount-%28south_exposure%29.jpg/1280px-Jerusalem-2013%282%29-Aerial-Temple_Mount-%28south_exposure%29.jpg']
+  },
+  {
+    id: 'tl-second-return',
+    name: 'Enoch\'s Thirty-Day Return (2 Enoch 36-38)',
+    type: 'event',
+    layer: 'enochian-lore',
+    start: -3017,
+    description: 'Genesis says Enoch was taken once.',
+    source: '2 Enoch 36:1-38:3, 67:1-3 / Genesis 5:23-24',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figures_God_took_Enoch.jpg/500px-Figures_God_took_Enoch.jpg']
   }
 ];
 
@@ -8125,7 +8175,12 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'tl-america-bat-creek-stone': { lng: -84.37, lat: 35.6, locationName: 'Loudon County, Tennessee', category: 'Archaeological Finds' },
   'tl-lake-superior-copper-culture': { lng: -88.3, lat: 47.4, locationName: 'Keweenaw Peninsula, Michigan', category: 'Archaeological Finds' },
   'tl-kennewick-man': { lng: -119.14, lat: 46.21, locationName: 'Columbia River, Washington', category: 'Ancient People Groups' },
-  'tl-serrania-de-la-lindosa': { lng: -72.78, lat: 2.5, locationName: 'Guaviare, Colombia', category: 'Rock Art & Cave Paintings' }
+  'tl-serrania-de-la-lindosa': { lng: -72.78, lat: 2.5, locationName: 'Guaviare, Colombia', category: 'Rock Art & Cave Paintings' },
+  'tl-ishmael-3-enoch': { lng: 35.2345, lat: 31.7767, locationName: 'Jerusalem', category: 'Religion' },
+  'tl-of-bethlehem': { lng: 35.2024, lat: 31.7054, locationName: 'Bethlehem', category: 'Religion' },
+  'tl-miraculous-birth': { lng: 35.2354, lat: 31.778, locationName: 'Achuzan (Jerusalem)', category: 'Religion' },
+  'tl-altar-methuselah': { lng: 35.2354, lat: 31.778, locationName: 'Temple Mount, Jerusalem', category: 'Enochian Sites' },
+  'tl-second-return': { lng: 35.2354, lat: 31.778, locationName: 'Enoch\'s Thirty-Day Return (2 Enoch 36-38)', category: 'Religion' }
 };
 
 export interface Waypoint {
