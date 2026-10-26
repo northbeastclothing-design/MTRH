@@ -527,5 +527,25 @@ export const HISTORICAL_MAPS: HistoricalMap[] = [
     aspectRatio: 1.0,
     pinColor: '#FF5C5C',
     era: 'modern'
+  },
+  {
+    id: 'carto-paul-journeys',
+    name: "Travels of St. Paul in the Roman Empire",
+    year: "1st century AD (map c. 1850)",
+    description: "The three missionary journeys and the voyage to Rome from Acts 13-28, traced across the Roman roads and sea lanes of Asia Minor, Greece and Italy: Antioch, Cyprus, Galatia, Philippi, Thessalonica, Athens, Corinth, Ephesus, the shipwreck on Malta and the Appian Way into Rome. Every church that received an epistle is a pin on this map, and every one of them sits on a known Roman site. The apostle covered roughly 10,000 miles on foot and by ship.",
+    url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Biblica_Open_Bible_Map_16_17_Paul_missionary_journeys_map.png/1280px-Biblica_Open_Bible_Map_16_17_Paul_missionary_journeys_map.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    aspectRatio: 1.458,
+    pinColor: '#F7E8C1',
+    era: 'ancient'
+  },
+  {
+    id: 'carto-twelve-tribes',
+    name: "The Twelve Tribes of Israel - Allotment of Canaan",
+    year: "c. 1400 BC (map 19th century)",
+    description: "Joshua's division of the Promised Land by lot (Joshua 13-21): Judah and Simeon in the south, Ephraim and Manasseh in the hill country, Dan pushed up to the far north, Reuben, Gad and half of Manasseh across the Jordan, and Levi scattered among 48 cities. The boundaries matter for prophecy - Ezekiel 48 re-divides the land in parallel strips for the Millennium, and the ten northern tribes carried into Assyria in 722 BC are the 'lost tribes' that everyone from British Israelites to Mormons has claimed to be.",
+    url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Biblica_Open_Bible_Map_05_The_Twelve_Tribes_of_Israel.png/1280px-Biblica_Open_Bible_Map_05_The_Twelve_Tribes_of_Israel.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    aspectRatio: 0.67,
+    pinColor: '#91FFC4',
+    era: 'ancient'
   }
 ];

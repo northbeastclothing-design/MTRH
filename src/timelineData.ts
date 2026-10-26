@@ -6447,6 +6447,347 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     description: 'One-eyed giants of two kinds: the three elder Cyclopes who forged Zeus\'s thunderbolt under Etna, and the lawless shepherd-giants of Homer who kept no assemblies and ate men, among them Polyphemus, blinded by Odysseus in his cave.',
     source: 'Homer, Odyssey IX / Hesiod, Theogony / Othenio Abel (1914)',
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Head_of_a_Cyclops_Colosseum.jpg/330px-Head_of_a_Cyclops_Colosseum.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-tyre-ezekiel-26',
+    name: 'Tyre Scraped Bare (Ezekiel 26)',
+    type: 'event',
+    layer: 'biblical-events',
+    start: -332,
+    description: 'Around 586 BC Ezekiel declared that \'many nations\' would come against the proud merchant city of Tyre, that its stones, timber and even its dust would be thrown into the sea, and that it would become \'a place to spread nets\' (Ezekiel 26:3-14).',
+    source: 'Ezekiel 26:3-14; Arrian, Anabasis of Alexander II.18-24',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Siege_tryre.gif/500px-Siege_tryre.gif?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-babylon-isaiah-13',
+    name: 'Babylon Never Inhabited Again (Isaiah 13)',
+    type: 'event',
+    layer: 'biblical-events',
+    start: -539,
+    description: 'Isaiah and Jeremiah both foretold that Babylon, \'the glory of kingdoms,\' would be overthrown like Sodom and \'never be inhabited, nor dwelt in from generation to generation; neither shall the Arabian pitch tent there\' (Isaiah 13:19-20; Jeremiah 51:26).',
+    source: 'Isaiah 13:19-22; Jeremiah 51:24-64; Daniel 5; Revelation 18',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Ishtar_Gate.jpg/960px-Ishtar_Gate.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-nineveh-nahum',
+    name: 'Nineveh Destroyed by Flood and Fire (Nahum)',
+    type: 'event',
+    layer: 'biblical-events',
+    start: -612,
+    description: 'A century after Jonah\'s preaching spared it, Nineveh went back to its cruelty and Nahum pronounced its end: \'with an overrunning flood he will make an utter end of the place thereof,\' \'the gates of the rivers shall be opened,\' and the city would be hidden so completely that men would ask \'where is Nineveh?\' (Nahum 1:8, 2:6, 3:7).',
+    source: 'Nahum 1-3; Zephaniah 2:13-15; Xenophon, Anabasis III.4',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Fall_of_nineveh.jpg/1280px-Fall_of_nineveh.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-bethlehem-micah-5',
+    name: 'Messiah Born in Bethlehem (Micah 5:2)',
+    type: 'event',
+    layer: 'biblical-events',
+    start: -4,
+    description: 'Seven hundred years before the manger, Micah wrote: \'But thou, Bethlehem Ephratah, though thou be little among the thousands of Judah, yet out of thee shall he come forth unto me that is to be ruler in Israel; whose goings forth have been from of old, from everlasting\' (Micah 5:2).',
+    source: 'Micah 5:2; Matthew 2:1-6; Luke 2:1-7',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Church_of_the_Nativity_%287703592746%29.jpg/1280px-Church_of_the_Nativity_%287703592746%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-cyrus-named-isaiah-45',
+    name: 'Cyrus Named 150 Years Early (Isaiah 44-45)',
+    type: 'event',
+    layer: 'biblical-events',
+    start: -539,
+    description: 'Isaiah, writing around 700 BC, named the future Persian king who would free the Jews and order the Temple rebuilt: \'That saith of Cyrus, He is my shepherd, and shall perform all my pleasure: even saying to Jerusalem, Thou shalt be built; and to the temple, Thy foundation shall be laid\' (Isaiah 44:28-45:1).',
+    source: 'Isaiah 44:28-45:7; Ezra 1:1-4; Josephus, Antiquities XI.1',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Pasargad_Tomb_Cyrus3.jpg/1280px-Pasargad_Tomb_Cyrus3.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-daniel-70-weeks',
+    name: 'Daniel\'s 70 Weeks: Messiah Arrives on Schedule',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 27,
+    description: 'Gabriel gave Daniel a countdown: from \'the going forth of the commandment to restore and to build Jerusalem unto the Messiah the Prince shall be seven weeks, and threescore and two weeks\' - 69 \'weeks\' of years, 483 years - after which \'Messiah shall be cut off, but not for himself,\' and then \'the people of the prince that shall come shall destroy the city and the sanctuary\' (Daniel 9:24-27).',
+    source: 'Daniel 9:24-27; Nehemiah 2:1-8; Luke 3:1, 23; Talmud Sanhedrin 97b',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Lukas_Stipperger%2C_Daniel%27s_Prophecy_of_the_Seventy_Weeks%2C_1797%2C_NGA_162308.jpg/1280px-Lukas_Stipperger%2C_Daniel%27s_Prophecy_of_the_Seventy_Weeks%2C_1797%2C_NGA_162308.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-isaiah-53-suffering-servant',
+    name: 'The Suffering Servant (Isaiah 53 & Psalm 22)',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 33,
+    description: 'Isaiah 53 reads like an eyewitness account of the crucifixion written 700 years early: despised and rejected, silent before his accusers, \'wounded for our transgressions,\' numbered with the transgressors, buried with the rich, and yet \'he shall prolong his days.\' Psalm 22, composed by David a thousand years before Rome invented crucifixion, adds the pierced hands and feet, the mocking crowd, the bones out of joint and the soldiers casting lots for his clothing.',
+    source: 'Isaiah 52:13-53:12; Psalm 22; John 19:23-37; 1QIsaa',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Great_Isaiah_Scroll_Ch53.jpg/1280px-Great_Isaiah_Scroll_Ch53.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-zechariah-9-triumphal-entry',
+    name: 'The King Rides a Donkey (Zechariah 9:9)',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 33,
+    description: '\'Rejoice greatly, O daughter of Zion...',
+    source: 'Zechariah 9:9-10; Matthew 21:1-11; Luke 19:28-44',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Assisi-frescoes-entry-into-jerusalem-pietro_lorenzetti.jpg/960px-Assisi-frescoes-entry-into-jerusalem-pietro_lorenzetti.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-thirty-pieces-silver',
+    name: 'Thirty Pieces of Silver & the Potter\'s Field (Zechariah 11)',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 33,
+    description: 'Zechariah 11:12-13 fixed the price of the Shepherd\'s betrayal five centuries early: \'they weighed for my price thirty pieces of silver...',
+    source: 'Zechariah 11:12-13; Matthew 26:14-16, 27:3-10; Acts 1:18-19',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/%D7%97%D7%A7%D7%9C_%D7%93%D7%9E%D7%90%2C_%D7%9E%D7%91%D7%98_%D7%9E%D7%92%D7%A9%D7%A8_%D7%94%D7%A1%D7%99%D7%A0%D7%9E%D7%98%D7%A7.JPG/1280px-%D7%97%D7%A7%D7%9C_%D7%93%D7%9E%D7%90%2C_%D7%9E%D7%91%D7%98_%D7%9E%D7%92%D7%A9%D7%A8_%D7%94%D7%A1%D7%99%D7%A0%D7%9E%D7%98%D7%A7.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-temple-destruction-ad70',
+    name: 'Not One Stone Left (Matthew 24)',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 70,
+    description: 'Leaving the Temple for the last time, Jesus told his disciples, \'There shall not be left here one stone upon another, that shall not be thrown down,\' and warned that when they saw Jerusalem surrounded by armies they should flee to the mountains - all within \'this generation\' (Matthew 24:1-34; Luke 21:20-24).',
+    source: 'Matthew 24:1-34; Luke 19:41-44, 21:5-24; Josephus, Wars of the Jews VI; Eusebius, Church History III.5',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/%28Venice%29_La_distruzione_del_tempio_di_Gerusalemme_-Francesco_Hayez_-_gallerie_Accademia_Venice.jpg/1280px-%28Venice%29_La_distruzione_del_tempio_di_Gerusalemme_-Francesco_Hayez_-_gallerie_Accademia_Venice.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-samaria-micah-1',
+    name: 'Samaria Made a Heap of the Field (Micah 1:6)',
+    type: 'event',
+    layer: 'biblical-events',
+    start: -722,
+    description: 'Micah, a contemporary of Isaiah, said of the capital of the northern kingdom: \'I will make Samaria as an heap of the field, and as plantings of a vineyard: and I will pour down the stones thereof into the valley, and I will discover the foundations thereof\' (Micah 1:6).',
+    source: 'Micah 1:5-7; 2 Kings 17:5-23; Harvard Expedition to Samaria (1908-1910)',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Sabastia7856_d55.JPG/1280px-Sabastia7856_d55.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-edom-obadiah',
+    name: 'Edom Cut Off Forever (Obadiah)',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 106,
+    description: 'Obadiah, Jeremiah and Ezekiel all pronounced doom on Esau\'s descendants in their rock fortress: \'Though thou exalt thyself as the eagle, and though thou set thy nest among the stars, thence will I bring thee down...',
+    source: 'Obadiah 1-21; Jeremiah 49:7-22; Ezekiel 35; Malachi 1:2-4',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Al_Deir_Petra.JPG/1280px-Al_Deir_Petra.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-israel-regathered-1948',
+    name: 'A Nation Born in a Day (Isaiah 66:8, Ezekiel 37)',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1948,
+    description: '\'Who hath heard such a thing?...',
+    source: 'Isaiah 11:11-12, 66:8; Ezekiel 36-37; Amos 9:14-15; Matthew 24:32-34',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Declaration_of_State_of_Israel_1948.jpg/1280px-Declaration_of_State_of_Israel_1948.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-bible-torah',
+    name: 'Moses Writes the Torah',
+    type: 'event',
+    layer: 'biblical-events',
+    start: -1446,
+    end: -1406,
+    description: 'Between Sinai and his death on Mount Nebo, Moses wrote Genesis through Deuteronomy - creation, the Flood, the Nephilim, Babel, the patriarchs, the Exodus and the Law - \'and Moses wrote all the words of the LORD\' (Exodus 24:4). Jesus treated Mosaic authorship as fact (John 5:46-47); the \'Documentary Hypothesis\' that chops the Pentateuch into four anonymous late sources was invented in 19th-century German universities with no manuscript evidence whatsoever.',
+    source: 'Exodus 24:4; Deuteronomy 31:9, 24-26; John 5:46-47',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/%D0%A2%D0%BE%D1%80%D0%B0._%D0%9D%D0%B0%D1%86%D1%8B%D1%8F%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D0%B1%D1%96%D0%B1%D0%BB%D1%96%D1%8F%D1%82%D1%8D%D0%BA%D0%B0_%D0%91%D0%B5%D0%BB%D0%B0%D1%80%D1%83%D1%81%D1%96.jpg/1280px-%D0%A2%D0%BE%D1%80%D0%B0._%D0%9D%D0%B0%D1%86%D1%8B%D1%8F%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D0%B1%D1%96%D0%B1%D0%BB%D1%96%D1%8F%D1%82%D1%8D%D0%BA%D0%B0_%D0%91%D0%B5%D0%BB%D0%B0%D1%80%D1%83%D1%81%D1%96.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-bible-joshua',
+    name: 'Book of Joshua Written at Shiloh',
+    type: 'event',
+    layer: 'biblical-events',
+    start: -1400,
+    description: 'Joshua recorded the conquest - Jericho\'s fallen walls, the long day at Gibeon, the giant clans of Anak driven into Gaza, Gath and Ashdod - and \'wrote these words in the book of the law of God\' at Shiloh where the Tabernacle stood (Joshua 24:26). The Amarna letters from Egypt, written by panicking Canaanite kings about invading \'Habiru,\' date to the same decades.',
+    source: 'Joshua 24:26; Joshua 11:21-22; Amarna letters EA 286-290',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Papyrus_with_the_fragments_of_the_Book_of_Joshua_%28CBL_Cpt_2019.8a%29.jpg/1280px-Papyrus_with_the_fragments_of_the_Book_of_Joshua_%28CBL_Cpt_2019.8a%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-bible-samuel',
+    name: 'Samuel Writes Judges, Ruth & 1 Samuel',
+    type: 'event',
+    layer: 'biblical-events',
+    start: -1050,
+    description: 'The last judge and first of the prophets compiled the dark age after Joshua - the giant-slaying strongman Samson, the Levite\'s concubine, Ruth the Moabite grandmother of David - and \'wrote it in a book, and laid it up before the LORD\' (1 Samuel 10:25). Jewish tradition (Baba Bathra 14b-15a) credits Samuel with Judges, Ruth and the first part of the book bearing his name; the prophets Nathan and Gad finished it.',
+    source: '1 Samuel 10:25; 1 Chronicles 29:29; Talmud Baba Bathra 14b-15a',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Fl-_147_Biblia_de_Cervera%2C_Samuel.jpg/500px-Fl-_147_Biblia_de_Cervera%2C_Samuel.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-bible-psalms',
+    name: 'David Composes the Psalms',
+    type: 'event',
+    layer: 'biblical-events',
+    start: -1000,
+    description: 'The shepherd-king who killed a giant wrote at least 73 of the 150 psalms - the songs of the Temple that also contain some of the Bible\'s sharpest Messianic prophecy: the pierced hands and feet of Psalm 22, the resurrection of Psalm 16, the priest-king of Psalm 110 that Jesus quoted against the Pharisees. Asaph, the sons of Korah, Solomon and even Moses (Psalm 90) contributed; Ezra likely arranged the final five books.',
+    source: '2 Samuel 23:1-2; Psalm 22, 16, 110; Matthew 22:41-46; Acts 2:25-31',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Psalms_scroll.PNG/330px-Psalms_scroll.PNG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-bible-solomon-wisdom',
+    name: 'Solomon\'s Proverbs, Ecclesiastes & Song of Songs',
+    type: 'event',
+    layer: 'biblical-events',
+    start: -950,
+    description: 'The wisest man who ever lived \'spake three thousand proverbs: and his songs were a thousand and five\' (1 Kings 4:32). Proverbs is the surviving distillation, Song of Songs the love poem of his youth, and Ecclesiastes the bitter confession of his old age after 700 wives and the altars of Chemosh and Molech had hollowed him out - \'vanity of vanities.\' The occult tradition that he also bound demons with a ring and wrote grimoires comes from the much later Testament of Solomon, not from Scripture.',
+    source: '1 Kings 4:29-34; 1 Kings 11:1-13; Ecclesiastes 12:9-14',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Simeon_Solomon%2C_King_Solomon%2C_1872_or_1874%2C_NGA_76152_%28cropped%29.jpg/1280px-Simeon_Solomon%2C_King_Solomon%2C_1872_or_1874%2C_NGA_76152_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-bible-isaiah',
+    name: 'Isaiah Prophesies & Writes',
+    type: 'event',
+    layer: 'biblical-events',
+    start: -700,
+    description: 'Isaiah served four kings of Judah from Uzziah to Hezekiah and wrote the 66-chapter \'fifth gospel\': the virgin birth (7:14), the child called Mighty God (9:6), Lucifer\'s fall (14:12-15), the suffering servant (53), Cyrus by name (45:1) and the new heavens and earth (65-66). Tradition says Manasseh had him sawn in half (Hebrews 11:37). The complete Isaiah scroll from Qumran, copied c. 125 BC, matches the Masoretic text almost letter for letter.',
+    source: 'Isaiah 1:1; 2 Chronicles 32:32; Hebrews 11:37; 1QIsaa',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/%27Isaiah_Sistine_Chapel_ceiling%27_by_Michelangelo_JBU36.jpg/1280px-%27Isaiah_Sistine_Chapel_ceiling%27_by_Michelangelo_JBU36.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-bible-jeremiah',
+    name: 'Jeremiah & Lamentations Written',
+    type: 'event',
+    layer: 'biblical-events',
+    start: -586,
+    description: 'The weeping prophet dictated to his scribe Baruch; King Jehoiakim cut the scroll up and burned it in his fireplace, so Jeremiah dictated it again with additions (Jeremiah 36). He foretold the exact 70-year length of the Babylonian captivity, watched Jerusalem burn in 586 BC, wrote the funeral dirge Lamentations in the ruins and was dragged to Egypt. Seals of his enemies Gedaliah and Jehucal have been dug up in the City of David.',
+    source: 'Jeremiah 36; Jeremiah 25:11-12; Lamentations 1; City of David bullae (2005, 2008)',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Stamp_seal_with_Hebrew_text_of_Jeremiah_48-11%2C_probably_early_centuries_AD%2C_terracotta_-_Oriental_Institute_Museum%2C_University_of_Chicago_-_DSC07746.JPG/1280px-Stamp_seal_with_Hebrew_text_of_Jeremiah_48-11%2C_probably_early_centuries_AD%2C_terracotta_-_Oriental_Institute_Museum%2C_University_of_Chicago_-_DSC07746.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-bible-ezekiel',
+    name: 'Ezekiel Written in Exile',
+    type: 'event',
+    layer: 'biblical-events',
+    start: -571,
+    description: 'Among the exiles by the river Chebar, the priest Ezekiel saw the wheels within wheels - the four living creatures and the throne-chariot that UFO researchers have tried to turn into a spacecraft since Blumrich\'s \'The Spaceships of Ezekiel\' (1974) - and wrote the prophecies of Tyre, Gog and Magog, the valley of dry bones and the measurements of a Temple that has never yet been built. The book is dated to the day in its own text (Ezekiel 1:1-3, 29:17).',
+    source: 'Ezekiel 1:1-3; Ezekiel 29:17; Ezekiel 38-48',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Raphael_-_Ezekiel%27s_Vision.jpg/1280px-Raphael_-_Ezekiel%27s_Vision.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-bible-daniel',
+    name: 'Book of Daniel Completed',
+    type: 'event',
+    layer: 'biblical-events',
+    start: -536,
+    description: 'Taken to Babylon as a teenager in 605 BC, Daniel served Nebuchadnezzar, Belshazzar, Darius and Cyrus and wrote the Bible\'s most precise prophetic calendar: the four-kingdom statue, the 70 weeks, the little horn, the abomination of desolation and the \'time of the end\' when \'knowledge shall be increased\' and many \'run to and fro\' (Daniel 12:4). Half the book is in Aramaic, the language of the empire. His last dated vision is 536 BC, the third year of Cyrus.',
+    source: 'Daniel 1:1-6; Daniel 10:1; Daniel 12:4-13',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Daniel_scroll.png/500px-Daniel_scroll.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-bible-ezra-chronicles',
+    name: 'Ezra Compiles Chronicles, Ezra & Nehemiah',
+    type: 'event',
+    layer: 'biblical-events',
+    start: -440,
+    description: '\'Ezra the priest, the scribe of the law of the God of heaven\' led the second return from Persia, read the Torah aloud to the whole nation at the Water Gate (Nehemiah 8), and - according to Jewish tradition - wrote Chronicles, Ezra and Nehemiah and gathered the Old Testament books into their final collection, switching the alphabet to the square Aramaic script still used in Torah scrolls. The Men of the Great Assembly he founded carried the canon to Malachi\'s close.',
+    source: 'Ezra 7:6-10; Nehemiah 8:1-8; Talmud Baba Bathra 15a; 2 Esdras 14',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Leningrad_Codex_Folio_453a.jpg/1280px-Leningrad_Codex_Folio_453a.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-bible-malachi',
+    name: 'Malachi Closes the Old Testament',
+    type: 'event',
+    layer: 'biblical-events',
+    start: -420,
+    description: 'The last prophet rebuked the priests for blemished sacrifices and ended the Old Testament with a promise and a cliffhanger: \'Behold, I will send you Elijah the prophet before the coming of the great and dreadful day of the LORD\' (Malachi 4:5). Then heaven went silent for 400 years - the intertestamental period of the Maccabees, the Septuagint, the Dead Sea Scrolls and the book of Enoch - until a man in camel hair appeared at the Jordan.',
+    source: 'Malachi 3:1, 4:5-6; Matthew 11:7-14; 1 Maccabees 9:27',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/CodexGigas_119_MinorProphets.jpg/1280px-CodexGigas_119_MinorProphets.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-bible-septuagint',
+    name: 'Septuagint Translated at Alexandria',
+    type: 'event',
+    layer: 'biblical-events',
+    start: -250,
+    description: 'Ptolemy II had the Hebrew Scriptures translated into Greek for the Library of Alexandria - by seventy-two scholars working independently who, legend says, produced identical texts. The LXX is the Bible the apostles quoted, the one that renders Isaiah 7:14 as \'virgin\' and gives the giants of Genesis 6 their name, gigantes. Its older chronology adds about 1,500 years to the patriarchal timeline compared to the Masoretic text, which matters a great deal for dating the Flood.',
+    source: 'Letter of Aristeas; Josephus, Antiquities XII.2; Genesis 6:4 LXX; Isaiah 7:14 LXX',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Codex_Vaticanus_%281_Esdras_1-55_to_2-5%29_%28The_S.S._Teacher%27s_Edition-The_Holy_Bible%29.jpg/330px-Codex_Vaticanus_%281_Esdras_1-55_to_2-5%29_%28The_S.S._Teacher%27s_Edition-The_Holy_Bible%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-bible-james-galatians',
+    name: 'First New Testament Letters: James & Galatians',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 49,
+    description: 'Within twenty years of the resurrection the New Testament began: James, the Lord\'s brother and head of the Jerusalem church, wrote to the scattered twelve tribes, and Paul fired off Galatians from Antioch against the Judaizers who wanted Gentile converts circumcised - \'if any man preach any other gospel unto you than that ye have received, let him be accursed.\' The Jerusalem Council of Acts 15 settled the dispute the same year.',
+    source: 'James 1:1; Galatians 1:6-9; Acts 15',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Papyrus_20_%28Jc_1_vers%29.jpeg/1280px-Papyrus_20_%28Jc_1_vers%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-bible-mark',
+    name: 'Gospel of Mark Written in Rome',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 60,
+    description: 'John Mark, Peter\'s interpreter, wrote down the apostle\'s preaching in Rome - the shortest, fastest gospel, full of the word \'immediately,\' with Peter\'s own failures left in. Papias (c. AD 110) records that Mark \'wrote accurately, though not in order, whatever he remembered of the things said or done by the Lord.\' Fragments of Mark may be among the earliest Christian papyri ever found.',
+    source: '1 Peter 5:13; Papias in Eusebius, Church History III.39; Irenaeus, Against Heresies III.1.1',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Mark_16_first_lines%2C_Codex_Sinaiticus.png/330px-Mark_16_first_lines%2C_Codex_Sinaiticus.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-bible-matthew-luke',
+    name: 'Matthew, Luke & Acts Written',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 62,
+    description: 'Matthew the tax collector wrote for Jews, opening with the genealogy from Abraham and quoting the prophets at every turn; Luke the physician, Paul\'s traveling companion, \'had perfect understanding of all things from the very first\' and interviewed eyewitnesses - probably Mary herself - during Paul\'s two-year imprisonment at Caesarea, then continued the story in Acts. Acts ends abruptly with Paul alive in Rome in AD 62, which is the simplest proof the whole set was finished before the Temple fell.',
+    source: 'Luke 1:1-4; Acts 28:30-31; Irenaeus, Against Heresies III.1.1',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Luke_13.29-35_and_14.10_%28CBL_BP_I%2C_f.15r%29.jpg/1280px-Luke_13.29-35_and_14.10_%28CBL_BP_I%2C_f.15r%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-bible-paul-epistles',
+    name: 'Paul\'s Final Letters from Rome',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 67,
+    description: 'Thirteen letters bear Paul\'s name - Romans, the Corinthian and prison epistles, the pastorals - and Peter already called them \'scripture\' in his own lifetime (2 Peter 3:16). From a Roman dungeon awaiting Nero\'s sword he wrote 2 Timothy: \'I have fought a good fight, I have finished my course, I have kept the faith.\' Nero\'s persecution took Peter and Paul in the same year; Peter\'s two letters and Hebrews date from this window too.',
+    source: '2 Timothy 4:6-8; 2 Peter 3:15-16; Clement of Rome, 1 Clement 5',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Rembrandt_Harmensz._van_Rijn_163.jpg/960px-Rembrandt_Harmensz._van_Rijn_163.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-bible-john',
+    name: 'John\'s Gospel & Letters at Ephesus',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 90,
+    description: 'The last surviving apostle, the disciple Jesus loved, wrote the fourth gospel and three letters from Ephesus as an old man - \'In the beginning was the Word\' - deliberately supplementing the other three and naming the Antichrist spirit already at work. The Rylands fragment P52 of John 18, found in Egypt and dated c. AD 125, is the oldest piece of the New Testament in existence and ended the 19th-century claim that John was a 2nd-century forgery.',
+    source: 'John 21:24; 1 John 2:18-22; Irenaeus, Against Heresies III.1.1; Rylands P52',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Manchester%2C_John_Rylands_Library_Ms_Greek_P_457_%28Papyrus_52%29_recto_John_18%2C_31-33.jpg/1280px-Manchester%2C_John_Rylands_Library_Ms_Greek_P_457_%28Papyrus_52%29_recto_John_18%2C_31-33.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-bible-revelation',
+    name: 'Revelation Received on Patmos - the Canon Closes',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 95,
+    description: 'Exiled by Domitian to the prison island of Patmos, John was \'in the Spirit on the Lord\'s day\' and received the Apocalypse in a cave: the seven churches, the seals, trumpets and vials, the Beast and his mark, Mystery Babylon, Armageddon, the Millennium and the New Jerusalem measured in cubits. It closes with the curse on anyone who adds to or takes from the book - the seal on the whole canon. Everything on the Future Prophecy branch of this site runs through this cave.',
+    source: 'Revelation 1:9-11; Revelation 22:18-19; Irenaeus, Against Heresies V.30.3',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Cave_of_the_Apocalypse.jpg/1280px-Cave_of_the_Apocalypse.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-bible-canon-carthage',
+    name: 'Council of Carthage Affirms the 27-Book New Testament',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 397,
+    description: 'The church did not create the canon; it recognized it. Athanasius\'s Easter letter of 367 listed the same 27 books Christians use today, and the Council of Carthage in 397 formally ratified them - while leaving out the Gnostic gospels of Thomas, Judas and Mary that Hollywood and the History Channel keep trying to smuggle back in. The real argument of the next thousand years was over the Apocrypha, which Jerome kept out of the Hebrew canon but the Vulgate carried along anyway.',
+    source: 'Athanasius, Festal Letter 39 (367); Council of Carthage canon 24 (397); Jerome, Prologus Galeatus',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/St._Athanasius_Icon_%2810335730335%29.jpg/1280px-St._Athanasius_Icon_%2810335730335%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-gutenberg-1455',
+    name: 'Gutenberg Bible (1455)',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1455,
+    description: 'The first substantial book printed with movable type in Europe was the Latin Vulgate, run off by Johannes Gutenberg in Mainz around 1455 in about 180 copies - 49 survive.',
+    source: 'Gutenberg Bible, Mainz c. 1455 (Library of Congress copy); Stephan Füssel, \'Gutenberg and the Impact of Printing\'',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Gutenberg_Bible%2C_Lenox_Copy%2C_New_York_Public_Library%2C_2009._Pic_01.jpg/1280px-Gutenberg_Bible%2C_Lenox_Copy%2C_New_York_Public_Library%2C_2009._Pic_01.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-kjv-1611',
+    name: 'King James Bible (1611)',
+    type: 'event',
+    layer: 'biblical-events',
+    start: 1611,
+    description: 'Commissioned by James VI & I at the Hampton Court Conference of 1604 and translated by 47 scholars from the Hebrew Masoretic text and the Greek Textus Receptus, the Authorized Version of 1611 became the Bible of the English-speaking world for four centuries and the single greatest influence on the language.',
+    source: 'The Holy Bible, Authorized Version (Robert Barker, 1611); Hampton Court Conference records (1604); Gordon Campbell, \'Bible: The Story of the King James Version\'',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/KJV-King-James-Version-Bible-first-edition-title-page-1611.jpg/1280px-KJV-King-James-Version-Bible-first-edition-title-page-1611.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
   }
 ];
 
@@ -6969,7 +7310,41 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'tl-santa-elena-giants': { lng: -80.86, lat: -2.23, locationName: 'Santa Elena Peninsula, Ecuador', category: 'Giants & Nephilim' },
   'tl-jentilak-aralar': { lng: -2.0, lat: 43.0, locationName: 'Aralar Range, Basque Country', category: 'Giants & Nephilim' },
   'tl-emim-moab': { lng: 35.7, lat: 31.6, locationName: 'Kiriathaim, Jordan', category: 'Giants & Nephilim' },
-  'tl-cyclopes-etna': { lng: 15.0, lat: 37.75, locationName: 'Mount Etna, Sicily', category: 'Giants & Nephilim' }
+  'tl-cyclopes-etna': { lng: 15.0, lat: 37.75, locationName: 'Mount Etna, Sicily', category: 'Giants & Nephilim' },
+  'tl-tyre-ezekiel-26': { lng: 35.1939, lat: 33.2705, locationName: 'Tyre, Lebanon', category: 'Biblical Events' },
+  'tl-babylon-isaiah-13': { lng: 44.4208, lat: 32.5422, locationName: 'Babylon, Iraq', category: 'Biblical Events' },
+  'tl-nineveh-nahum': { lng: 43.1528, lat: 36.3594, locationName: 'Mosul, Iraq', category: 'Biblical Events' },
+  'tl-bethlehem-micah-5': { lng: 35.2024, lat: 31.7054, locationName: 'Bethlehem', category: 'Biblical Events' },
+  'tl-cyrus-named-isaiah-45': { lng: 53.1675, lat: 30.1936, locationName: 'Pasargadae, Iran', category: 'Biblical Events' },
+  'tl-daniel-70-weeks': { lng: 35.2345, lat: 31.778, locationName: 'Jerusalem', category: 'Biblical Events' },
+  'tl-isaiah-53-suffering-servant': { lng: 35.2297, lat: 31.7784, locationName: 'Golgotha, Jerusalem', category: 'Biblical Events' },
+  'tl-zechariah-9-triumphal-entry': { lng: 35.2446, lat: 31.7786, locationName: 'Mount of Olives', category: 'Biblical Events' },
+  'tl-thirty-pieces-silver': { lng: 35.2322, lat: 31.7693, locationName: 'Akeldama', category: 'Biblical Events' },
+  'tl-temple-destruction-ad70': { lng: 35.2354, lat: 31.778, locationName: 'Temple Mount, AD 70', category: 'Biblical Events' },
+  'tl-samaria-micah-1': { lng: 35.1894, lat: 32.2764, locationName: 'Sebastia', category: 'Biblical Events' },
+  'tl-edom-obadiah': { lng: 35.4444, lat: 30.3285, locationName: 'Petra, Jordan', category: 'Biblical Events' },
+  'tl-israel-regathered-1948': { lng: 34.7745, lat: 32.063, locationName: 'Tel Aviv, 1948', category: 'Biblical Events' },
+  'tl-bible-torah': { lng: 33.9753, lat: 28.5396, locationName: 'Mount Sinai & the Plains of Moab', category: 'Ancient Texts' },
+  'tl-bible-joshua': { lng: 35.2897, lat: 32.0556, locationName: 'Shiloh, Israel', category: 'Ancient Texts' },
+  'tl-bible-samuel': { lng: 35.2333, lat: 31.8333, locationName: 'Ramah, Israel', category: 'Ancient Texts' },
+  'tl-bible-psalms': { lng: 35.2345, lat: 31.7741, locationName: 'Jerusalem', category: 'Ancient Texts' },
+  'tl-bible-solomon-wisdom': { lng: 35.2355, lat: 31.7767, locationName: 'Jerusalem', category: 'Ancient Texts' },
+  'tl-bible-isaiah': { lng: 35.2337, lat: 31.7758, locationName: 'Jerusalem', category: 'Ancient Texts' },
+  'tl-bible-jeremiah': { lng: 35.2297, lat: 31.7784, locationName: 'Jerusalem', category: 'Ancient Texts' },
+  'tl-bible-ezekiel': { lng: 45.2306, lat: 32.1264, locationName: 'Tel Abib on the Chebar canal, Babylonia', category: 'Ancient Texts' },
+  'tl-bible-daniel': { lng: 44.4208, lat: 32.5422, locationName: 'Babylon', category: 'Ancient Texts' },
+  'tl-bible-ezra-chronicles': { lng: 35.2345, lat: 31.7741, locationName: 'Jerusalem', category: 'Ancient Texts' },
+  'tl-bible-malachi': { lng: 35.2354, lat: 31.778, locationName: 'Jerusalem', category: 'Ancient Texts' },
+  'tl-bible-septuagint': { lng: 29.9187, lat: 31.2001, locationName: 'Library of Alexandria, Egypt', category: 'Ancient Texts' },
+  'tl-bible-james-galatians': { lng: 36.16, lat: 36.2, locationName: 'Antioch, Syria', category: 'Ancient Texts' },
+  'tl-bible-mark': { lng: 12.4964, lat: 41.9028, locationName: 'Rome', category: 'Ancient Texts' },
+  'tl-bible-matthew-luke': { lng: 34.8917, lat: 32.5, locationName: 'Caesarea Maritima, Judea', category: 'Ancient Texts' },
+  'tl-bible-paul-epistles': { lng: 12.4823, lat: 41.8902, locationName: 'Mamertine Prison, Rome', category: 'Ancient Texts' },
+  'tl-bible-john': { lng: 27.3417, lat: 37.9394, locationName: 'Ephesus, Asia Minor', category: 'Ancient Texts' },
+  'tl-bible-revelation': { lng: 26.55, lat: 37.3167, locationName: 'Cave of the Apocalypse, Patmos', category: 'Ancient Texts' },
+  'tl-bible-canon-carthage': { lng: 10.3233, lat: 36.8528, locationName: 'Carthage, Tunisia', category: 'Ancient Texts' },
+  'tl-gutenberg-1455': { lng: 8.2711, lat: 49.9929, locationName: 'Gutenberg Bible (1455)', category: 'Ancient Texts' },
+  'tl-kjv-1611': { lng: -0.0981, lat: 51.5138, locationName: 'King James Bible (1611)', category: 'Ancient Texts' }
 };
 
 export interface Waypoint {
