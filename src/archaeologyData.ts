@@ -1429,5 +1429,17 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
     description: "Seventy-six cartouches of pharaohs from Menes to Seti I carved in the Temple of Seti at Abydos, the official memory of Egypt as the priests wanted it. Hatshepsut, Akhenaten and the Amarna kings are simply missing, erased from the lineage. A king list that openly edits out inconvenient rulers is a lesson in how every dynasty, ancient and modern, curates its past, and why the records that survive are never the whole story.",
     source: "Temple of Seti I, Abydos / Egyptological Chronologies",
     images: ["https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/C%2BB-Egypt-Fig9-SetiIAbydosKingList.PNG/500px-C%2BB-Egypt-Fig9-SetiIAbydosKingList.PNG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"]
+  },
+  {
+    id: "archaeology-quinametzin-giants",
+    name: "The Quinametzin Giants of the Previous Sun - Cholula, Mexico",
+    category: "Giants & Nephilim",
+    type: "Point",
+    coordinates: { lng: -98.3, lat: 19.06 },
+    date: -1000,
+    displayDate: "Mythic (Aztec chronicles, 16th c.)",
+    description: "The Aztecs taught that the world before ours belonged to the Quinametzin, giants who raised the pyramids of Teotihuacan and Cholula and were wiped out when the sun of that age was destroyed. Spanish friars recorded Tlaxcalans digging up enormous bones as proof, and Cortés was shown a femur the height of a man. A giant race that built the great monuments and was annihilated by a world-ending judgement is Genesis 6 told in Nahuatl.",
+    source: "Fernando de Alva Ixtlilxóchitl, Historia de la nación chichimeca / Bernal Díaz del Castillo",
+    images: ["https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Quinametzin.jpg/500px-Quinametzin.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"]
   }
 ];

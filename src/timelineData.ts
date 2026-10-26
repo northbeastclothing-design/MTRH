@@ -6277,6 +6277,66 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     description: 'A triangular brick tower 49 metres high, standing on the spot where King Alfred is said to have raised his standard against the Danes in 878 before the battle that saved Christian England.',
     source: 'National Trust / Anglo-Saxon Chronicle',
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/King_Alfred%27s_Tower_view_from_west.jpg/1280px-King_Alfred%27s_Tower_view_from_west.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-UFO-kalahari-1989',
+    name: 'Kalahari Shoot-Down & Retrieval',
+    type: 'event',
+    layer: 'government-conspiracies',
+    start: 1989,
+    description: '[DISPUTED ACCOUNT] In May 1989 a South African Air Force Mirage is said to have downed an unidentified craft with an experimental laser over the Kalahari; a recovery team allegedly found a 20-metre disc and two living grey humanoids, later handed to the US at Wright-Patterson.',
+    source: 'James Van Greunen Dossier / SAAF Press Statements / Quest International Investigation',
+    images: ['https://pbs.twimg.com/media/HObtX2_XMAA-AwZ.png']
+  },
+  {
+    id: 'tl-UFO-uss-trepang-1971',
+    name: 'USS Trepang Arctic Photographs',
+    type: 'event',
+    layer: 'government-conspiracies',
+    start: 1971,
+    description: '[DISPUTED PHOTOS] Eight photographs said to be taken through the periscope of the nuclear submarine USS Trepang in March 1971 show cigar and disc-shaped objects, one apparently crashing into the Arctic sea.',
+    source: 'USS Trepang (SSN-674) Deployment Records / Top Secret Magazine (2015)',
+    images: ['https://pbs.twimg.com/media/HRp2UODboAAmBND.jpg']
+  },
+  {
+    id: 'tl-quinametzin-giants',
+    name: 'The Quinametzin Giants of the Previous Sun',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: -1000,
+    description: 'The Aztecs taught that the world before ours belonged to the Quinametzin, giants who raised the pyramids of Teotihuacan and Cholula and were wiped out when the sun of that age was destroyed.',
+    source: 'Fernando de Alva Ixtlilxóchitl, Historia de la nación chichimeca / Bernal Díaz del Castillo',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Quinametzin.jpg/500px-Quinametzin.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-Nasa-Space-3i-atlas',
+    name: '3I/ATLAS Interstellar Object',
+    type: 'event',
+    layer: 'nasa-space',
+    start: 2025,
+    description: 'Only the third object ever confirmed to come from outside the solar system, 3I/ATLAS was picked up by the ATLAS survey telescope in Chile on 1 July 2025 on a hyperbolic path that no planet could have given it.',
+    source: 'NASA JPL Small-Body Database / ATLAS Survey / Minor Planet Center',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/3I-ATLAS_noirlab2532b.jpg/1280px-3I-ATLAS_noirlab2532b.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-Nasa-Space-99942-apophis',
+    name: '99942 Apophis \'Doomsday Asteroid\'',
+    type: 'event',
+    layer: 'nasa-space',
+    start: 2004,
+    description: 'Discovered in 2004 and briefly given the highest impact probability ever assigned to an asteroid, Apophis, named for the Egyptian serpent of chaos, will pass inside the ring of geostationary satellites on Friday 13 April 2029, visible to the naked eye.',
+    source: 'NASA CNEOS / Kitt Peak National Observatory / OSIRIS-APEX Mission',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Apophis_February_2021_NBO.webm/500px--Apophis_February_2021_NBO.webm.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo']
+  },
+  {
+    id: 'tl-Underworld-kola-superdeep-borehole',
+    name: 'Kola Superdeep Borehole \'Well to Hell\'',
+    type: 'event',
+    layer: 'government-conspiracies',
+    start: 1970,
+    description: 'The Soviets drilled 12,262 metres into the Baltic Shield, the deepest hole ever made, and stopped in 1992 when the rock at 180°C flowed like plastic.',
+    source: 'Kola Scientific Drilling Expedition Records / Trinity Broadcasting Network (1989)',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/%D0%9A%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%D0%B0%D1%8F_%D1%81%D0%B2%D0%B5%D1%80%D1%85%D0%B3%D0%BB%D1%83%D0%B1%D0%BE%D0%BA%D0%B0%D1%8F_%D1%81%D0%BA%D0%B2%D0%B0%D0%B6%D0%B8%D0%BD%D0%B0_crop.jpg/500px-%D0%9A%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%D0%B0%D1%8F_%D1%81%D0%B2%D0%B5%D1%80%D1%85%D0%B3%D0%BB%D1%83%D0%B1%D0%BE%D0%BA%D0%B0%D1%8F_%D1%81%D0%BA%D0%B2%D0%B0%D0%B6%D0%B8%D0%BD%D0%B0_crop.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
   }
 ];
 
@@ -6782,7 +6842,13 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'tl-abydos-king-list': { lng: 31.9192, lat: 26.1844, locationName: 'Abydos, Egypt', category: 'Biblical Discoveries' },
   'tl-fleckenstein': { lng: 7.77194444, lat: 49.04472222, locationName: 'Lembach, Alsace, France', category: 'Old World Structures' },
   'tl-forte-da-graca': { lng: -7.1615, lat: 38.8921, locationName: 'Elvas, Portugal', category: 'Old World Structures' },
-  'tl-king-alfreds-tower': { lng: -2.3650446, lat: 51.1148273, locationName: 'Stourhead, Somerset, England', category: 'Old World Structures' }
+  'tl-king-alfreds-tower': { lng: -2.3650446, lat: 51.1148273, locationName: 'Stourhead, Somerset, England', category: 'Old World Structures' },
+  'tl-UFO-kalahari-1989': { lng: 21.5, lat: -24.0, locationName: 'Kalahari Desert, Botswana/South Africa (1989)', category: 'UFOs - Sightings' },
+  'tl-UFO-uss-trepang-1971': { lng: -8.0, lat: 70.0, locationName: 'Between Iceland & Jan Mayen (1971)', category: 'UFOs - Sightings' },
+  'tl-quinametzin-giants': { lng: -98.3, lat: 19.06, locationName: 'Cholula, Mexico', category: 'Giants & Nephilim' },
+  'tl-Nasa-Space-3i-atlas': { lng: -70.76, lat: -30.47, locationName: 'Discovered at Río Hurtado, Chile (2025)', category: 'NASA / Space' },
+  'tl-Nasa-Space-99942-apophis': { lng: -111.6, lat: 31.96, locationName: 'Discovered at Kitt Peak, Arizona (2004)', category: 'NASA / Space' },
+  'tl-Underworld-kola-superdeep-borehole': { lng: 30.61, lat: 69.4, locationName: 'Zapolyarny, Murmansk, Russia', category: 'Underworld Entrances' }
 };
 
 export interface Waypoint {

@@ -10627,7 +10627,7 @@ const chunk_2: any[] = [  {
     description: 'An intricate eight-fold crop circle formation reported in a wheat field in Kingweston, Somerset, marking the second major event at this location in 2026.',
     layer: 'Crop Circles',
     mapFeatureId: 'anomaly-Crop-Circles-364',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg'],
+    images: ['https://temporarytemples.co.uk/wp-content/uploads/2026/04/UK20260621_A_G.jpg', 'https://temporarytemples.co.uk/wp-content/uploads/2026/06/10.-_DSC1451-Kingsweston-Somerset-21-06-26-OH2-1.jpg', 'https://temporarytemples.co.uk/wp-content/uploads/2026/06/11.-_DSC1454-Kingsweston-Somerset-21-06-26-OH-1.jpg'],
     sources: ['Temporary Temples Crop Circle Archives']
   },  {
     id: 'anomaly-Crop-Circles-365',
@@ -10663,7 +10663,7 @@ const chunk_2: any[] = [  {
     description: 'The second formation of the season appearing at Etchilhampton Hill, Wiltshire, featuring a complex array of rings and nested circles.',
     layer: 'Crop Circles',
     mapFeatureId: 'anomaly-Crop-Circles-368',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg'],
+    images: ['https://x.com/i/status/2073545641465405919', 'https://pbs.twimg.com/amplify_video_thumb/2073529646512009216/img/c4z2jqTAElbVeqy3.jpg', 'https://temporarytemples.co.uk/wp-content/uploads/2026/07/15.Etchilhampton-Wilts-04-07-26-OH.jpg', 'https://temporarytemples.co.uk/wp-content/uploads/2026/07/16.-Etchilhampton-Wilts-04-07-26-OH2.jpg', 'https://temporarytemples.co.uk/wp-content/uploads/2026/07/17.-Etchilhampton-Wilts-04-07-26-CL.jpg'],
     sources: ['Temporary Temples Crop Circle Archives']
   },  {
     id: 'anomaly-Crop-Circles-369',
@@ -10672,7 +10672,7 @@ const chunk_2: any[] = [  {
     description: 'A distinct circular design reported in Mere at Zeal\'s Knoll, Wiltshire, attracting significant interest from aerial photographers.',
     layer: 'Crop Circles',
     mapFeatureId: 'anomaly-Crop-Circles-369',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg'],
+    images: ['https://x.com/i/status/2073809419997958461', 'https://pbs.twimg.com/amplify_video_thumb/2073808692550451201/img/_5_hZnMf7E1K65VN.jpg', 'https://temporarytemples.co.uk/wp-content/uploads/2026/07/23.-Mere-Wilts-05-07-26-OH2.jpg'],
     sources: ['Temporary Temples Crop Circle Archives']
   },  {
     id: 'anomaly-Crop-Circles-370',
@@ -10690,7 +10690,7 @@ const chunk_2: any[] = [  {
     description: 'A highly complex partial star design approximately 85 meters in diameter, reported in a wheat field at Roundway Hill near Devizes, Wiltshire.',
     layer: 'Crop Circles',
     mapFeatureId: 'anomaly-Crop-Circles-371',
-    images: ['https://www.youtube.com/watch?v=kgtA5dgvVYQ'],
+    images: ['https://x.com/i/status/2076014248300560639', 'https://pbs.twimg.com/amplify_video_thumb/2076013587991318528/img/ZSnZCzEygVna6OBv.jpg', 'https://www.youtube.com/watch?v=kgtA5dgvVYQ', 'https://temporarytemples.co.uk/wp-content/uploads/2026/07/33.-Roundway-Wilts-11-07-26-OH.jpg'],
     sources: ['Temporary Temples Crop Circle Archives']
   },  {
     id: 'anomaly-Crop-Circles-372',
@@ -10708,7 +10708,7 @@ const chunk_2: any[] = [  {
     description: 'A complex collection of circles and rings appearing in close proximity to the historic Avebury Henge stone circle, Wiltshire.',
     layer: 'Crop Circles',
     mapFeatureId: 'anomaly-Crop-Circles-373',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg'],
+    images: ['https://x.com/i/status/2077081228205752576', 'https://pbs.twimg.com/amplify_video_thumb/2077080522409320448/img/c00O7KpAWfPCPMaV.jpg', 'https://temporarytemples.co.uk/wp-content/uploads/2026/07/Web-Ben-Sasson_final.jpg', 'https://temporarytemples.co.uk/wp-content/uploads/2026/04/UK20260714_A_G.jpg', 'https://temporarytemples.co.uk/wp-content/uploads/2026/07/Banner-Avebury.jpg', 'https://temporarytemples.co.uk/wp-content/uploads/2026/07/WEB-dji_fly_photo3.jpg'],
     sources: ['Temporary Temples Crop Circle Archives']
   },  {
     id: 'anomaly-Crop-Circles-374',
@@ -10717,7 +10717,7 @@ const chunk_2: any[] = [  {
     description: 'A new crop circle formation reported near the ancient Neolithic chambered long barrow of Wayland\'s Smithy, Oxfordshire.',
     layer: 'Crop Circles',
     mapFeatureId: 'anomaly-Crop-Circles-374',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Cropcircle1.JPG/960px-Cropcircle1.JPG', 'https://temporarytemples.co.uk/wp-content/uploads/2026/07/1.-web-IMG_4065.jpg', 'https://temporarytemples.co.uk/wp-content/uploads/2026/07/2.-web-IMG_20260717_202928.jpg', 'https://temporarytemples.co.uk/wp-content/uploads/2026/07/3.-web-MG_20260717_202019.jpg'],
     sources: ['Temporary Temples Crop Circle Archives']
   },  {
     id: 'anomaly-Crop-Circles-375',
@@ -10744,7 +10744,7 @@ const chunk_2: any[] = [  {
     description: 'A geometric crop circle reported near Fox Hill, Wiltshire, in late July, continuing the active summer season.',
     layer: 'Crop Circles',
     mapFeatureId: 'anomaly-Crop-Circles-377',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CropCircleW.jpg/1280px-CropCircleW.jpg'],
+    images: ['https://temporarytemples.co.uk/wp-content/uploads/2026/07/UK20260721_A_G.jpg', 'https://temporarytemples.co.uk/wp-content/uploads/2026/08/BB-Web-1.jpg', 'https://temporarytemples.co.uk/wp-content/uploads/2026/08/BB-Web-2.jpg'],
     sources: ['Temporary Temples Crop Circle Archives']
   },  {
     id: 'chilbolton',
@@ -39285,7 +39285,7 @@ const chunk_bible_sources: TermNode[] = [
     layer: 'Megaliths / Structures',
     mapFeatureId: 'archaeology-ales-stenar',
     timelineId: 'tl-ales-stenar',
-    relatedIds: ['stonehenge-node', 'megaliths'],
+    relatedIds: ['megaliths'],
     sources: ['Swedish National Heritage Board / Megalithic Survey Records'],
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ales_Stenar_from_pole_camera.jpg/1280px-Ales_Stenar_from_pole_camera.jpg']
   },
@@ -39380,7 +39380,7 @@ const chunk_bible_sources: TermNode[] = [
     layer: 'Megaliths / Structures',
     mapFeatureId: 'archaeology-mount-nemrut',
     timelineId: 'tl-mount-nemrut',
-    relatedIds: ['megaliths', 'giants'],
+    relatedIds: ['megaliths', 'nephilim-br'],
     sources: ['UNESCO World Heritage Catalog / Commagene Inscriptions'],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Mount_Nemrut_-_East_Terrace_%284961323529%29.jpg/1280px-Mount_Nemrut_-_East_Terrace_%284961323529%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
   },
@@ -39428,7 +39428,7 @@ const chunk_bible_sources: TermNode[] = [
     layer: 'Megaliths / Structures',
     mapFeatureId: 'archaeology-vishaps',
     timelineId: 'tl-vishaps',
-    relatedIds: ['megaliths', 'leviathan'],
+    relatedIds: ['megaliths', 'leviathan-biblical'],
     sources: ['Armenian Institute of Archaeology / Yerevan State University Survey'],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Vishap02.jpg/1280px-Vishap02.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
   },
@@ -39464,7 +39464,7 @@ const chunk_bible_sources: TermNode[] = [
     layer: 'Archaeological Finds',
     mapFeatureId: 'archaeology-rosalila',
     timelineId: 'tl-rosalila',
-    relatedIds: ['archaeological-finds-br', 'maya-civilization'],
+    relatedIds: ['archaeological-finds-br', 'mayan-civilization'],
     sources: ['Copán Archaeological Project / UNESCO'],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Rosalila_Temple_Museum_in_Copan.jpg/1280px-Rosalila_Temple_Museum_in_Copan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
   },
@@ -39476,7 +39476,7 @@ const chunk_bible_sources: TermNode[] = [
     layer: 'Megaliths / Structures',
     mapFeatureId: 'archaeology-waru-waru',
     timelineId: 'tl-waru-waru',
-    relatedIds: ['geoglyphs-br', 'puma-punku-node'],
+    relatedIds: ['geoglyphs-br', 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-17'],
     sources: ['Andean Agricultural Archaeology Programme'],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Waru_waru_moderno.JPG/330px-Waru_waru_moderno.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
   },
@@ -39500,7 +39500,7 @@ const chunk_bible_sources: TermNode[] = [
     layer: 'Megaliths / Structures',
     mapFeatureId: 'archaeology-colossus-apennines',
     timelineId: 'tl-colossus-apennines',
-    relatedIds: ['megaliths', 'giants'],
+    relatedIds: ['megaliths', 'nephilim-br'],
     sources: ['Parco Mediceo di Pratolino / Florentine Archives'],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Apennine_Colossus_panorama_%2881988p%29.jpg/1280px-Apennine_Colossus_panorama_%2881988p%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
   },
@@ -39512,7 +39512,7 @@ const chunk_bible_sources: TermNode[] = [
     layer: 'Archaeological Finds',
     mapFeatureId: 'archaeology-galgano-sword',
     timelineId: 'tl-galgano-sword',
-    relatedIds: ['archaeological-finds-br', 'arthurian-legend-era'],
+    relatedIds: ['archaeological-finds-br', 'arthurian-legend'],
     sources: ['University of Pavia Metallurgical Analysis / Abbey of San Galgano Records'],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/San_Galgano_Spada_nella_roccia.JPG/1280px-San_Galgano_Spada_nella_roccia.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
   },
@@ -39536,7 +39536,7 @@ const chunk_bible_sources: TermNode[] = [
     layer: 'Megaliths / Structures',
     mapFeatureId: 'archaeology-giants-tomb-san-cosimo',
     timelineId: 'tl-giants-tomb-san-cosimo',
-    relatedIds: ['giants', 'megaliths', 'archaeology-domus-de-janas'],
+    relatedIds: ['nephilim-br', 'megaliths', 'archaeology-domus-de-janas'],
     sources: ['Sardinian Archaeological Superintendency / 19th-Century Excavation Reports'],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Foto_aerea_della_tomba_Tomba_dei_Giganti_%22Sa_Domu_%27e_S%27Orku2_in_territorio_di_Siddi._La_tomba_risale_al_periodo_nuragico.jpg/1280px-Foto_aerea_della_tomba_Tomba_dei_Giganti_%22Sa_Domu_%27e_S%27Orku2_in_territorio_di_Siddi._La_tomba_risale_al_periodo_nuragico.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
   },
@@ -39596,7 +39596,7 @@ const chunk_bible_sources: TermNode[] = [
     layer: 'Archaeological Finds',
     mapFeatureId: 'archaeology-agia-sofia-cave-kythira',
     timelineId: 'tl-agia-sofia-cave-kythira',
-    relatedIds: ['archaeological-finds-br', 'underworld-entrances'],
+    relatedIds: ['archaeological-finds-br', 'underworld'],
     sources: ['Greek Ministry of Culture / Kythira Speleological Records'],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Agia_Sofia_cave%2C_Kythira.JPG/1280px-Agia_Sofia_cave%2C_Kythira.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
   },
@@ -39620,7 +39620,7 @@ const chunk_bible_sources: TermNode[] = [
     layer: 'Burial Mounds',
     mapFeatureId: 'archaeology-man-mound',
     timelineId: 'tl-man-mound',
-    relatedIds: ['mounds', 'giants', 'alligator-mound-lidar'],
+    relatedIds: ['mounds', 'nephilim-br', 'anomaly-Burial-Mounds-8'],
     sources: ['Sauk County Historical Society / National Historic Landmark Nomination'],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Man_Mound.jpg/1280px-Man_Mound.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
   },
@@ -39632,7 +39632,7 @@ const chunk_bible_sources: TermNode[] = [
     layer: 'Megaliths / Structures',
     mapFeatureId: 'archaeology-nazca-168-geoglyphs',
     timelineId: 'tl-nazca-168-geoglyphs',
-    relatedIds: ['geoglyphs-br', 'nazca-lines-node', 'archaeology-nazca-stone-circles'],
+    relatedIds: ['geoglyphs-br', 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-5', 'archaeology-nazca-stone-circles'],
     sources: ['Yamagata University Nazca Institute (2022)'],
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/L%C3%ADneas_de_Nazca%2C_Nazca%2C_Per%C3%BA%2C_2015-07-29%2C_DD_49.JPG/1280px-L%C3%ADneas_de_Nazca%2C_Nazca%2C_Per%C3%BA%2C_2015-07-29%2C_DD_49.JPG']
   },
@@ -39643,7 +39643,7 @@ const chunk_bible_sources: TermNode[] = [
     description: 'Beyond the famous hummingbird and monkey, aerial explorers keep finding geometry in the pampa: concentric squares, a \'compass rose\', interlocking triangles like a Hindu yantra, and at least eight rings of stone that look for all the world like crop circles frozen in the desert. Sacred geometry drawn at a scale only the sky can read, by people who, the official line says, never left the ground.',
     layer: 'Megaliths / Structures',
     mapFeatureId: 'archaeology-nazca-stone-circles',
-    relatedIds: ['geoglyphs-br', 'nazca-lines-node', 'crop-circles', 'archaeology-nazca-168-geoglyphs'],
+    relatedIds: ['geoglyphs-br', 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-5', 'crop-circles-br', 'archaeology-nazca-168-geoglyphs'],
     sources: ['Aerial Survey Footage (Weird Old World) / Nazca Research Archives'],
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/L%C3%ADneas_de_Nazca%2C_Nazca%2C_Per%C3%BA%2C_2015-07-29%2C_DD_49.JPG/1280px-L%C3%ADneas_de_Nazca%2C_Nazca%2C_Per%C3%BA%2C_2015-07-29%2C_DD_49.JPG', 'https://x.com/i/status/2073776414231515341', 'https://pbs.twimg.com/amplify_video_thumb/2073593538005127168/img/q-PUPA_McpusBM8l.jpg', 'https://x.com/i/status/2075945999390974240', 'https://pbs.twimg.com/amplify_video_thumb/2075944867960692736/img/HqJ14gj52OKfgMOO.jpg']
   },
@@ -39678,7 +39678,7 @@ const chunk_bible_sources: TermNode[] = [
     layer: 'Archaeological Finds',
     mapFeatureId: 'archaeology-kudurru',
     timelineId: 'tl-kudurru',
-    relatedIds: ['archaeological-finds-br', 'sumerian-kings-root'],
+    relatedIds: ['archaeological-finds-br', 'sumerian-kings'],
     sources: ['British Museum / Louvre Mesopotamian Collections'],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Caillou_Michaux_CdM.jpg/1280px-Caillou_Michaux_CdM.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
   },
@@ -39690,7 +39690,7 @@ const chunk_bible_sources: TermNode[] = [
     layer: 'Biblical Discoveries',
     mapFeatureId: 'archaeology-merneptah-stele',
     timelineId: 'tl-merneptah-stele',
-    relatedIds: ['biblical-discoveries', 'exodus-event'],
+    relatedIds: ['biblical-discoveries', 'evt-exodus'],
     sources: ['Egyptian Museum, Cairo / Flinders Petrie (1896)'],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Merneptah_Steli_%28cropped%29.jpg/1280px-Merneptah_Steli_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
   },
@@ -39702,7 +39702,7 @@ const chunk_bible_sources: TermNode[] = [
     layer: 'Biblical Discoveries',
     mapFeatureId: 'archaeology-frankfurt-silver-amulet',
     timelineId: 'tl-frankfurt-silver-amulet',
-    relatedIds: ['biblical-discoveries', 'early-church'],
+    relatedIds: ['biblical-discoveries'],
     sources: ['Frankfurt Archaeological Museum / Leibniz Centre for Archaeology (2024)'],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Hagios_hagios_hagios_20241222_155425.jpg/1280px-Hagios_hagios_hagios_20241222_155425.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
   },
@@ -39714,7 +39714,7 @@ const chunk_bible_sources: TermNode[] = [
     layer: 'Biblical Discoveries',
     mapFeatureId: 'archaeology-cyprus-wheeled-stands',
     timelineId: 'tl-cyprus-wheeled-stands',
-    relatedIds: ['biblical-discoveries', 'solomons-temple'],
+    relatedIds: ['biblical-discoveries'],
     sources: ['British Museum / 1 Kings 7:27-37'],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Cypriot_bronze_wheeled_stand_with_an_animal_frieze_on_the_ring_and_figures_in_the_side_panels.jpg/1280px-Cypriot_bronze_wheeled_stand_with_an_animal_frieze_on_the_ring_and_figures_in_the_side_panels.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
   },
@@ -39738,7 +39738,7 @@ const chunk_bible_sources: TermNode[] = [
     layer: 'Biblical Discoveries',
     mapFeatureId: 'archaeology-abydos-king-list',
     timelineId: 'tl-abydos-king-list',
-    relatedIds: ['biblical-discoveries', 'abydos-osireion', 'sumerian-kings-root'],
+    relatedIds: ['biblical-discoveries', 'anomaly-Portals---Stargates-2', 'sumerian-kings'],
     sources: ['Temple of Seti I, Abydos / Egyptological Chronologies'],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/C%2BB-Egypt-Fig9-SetiIAbydosKingList.PNG/500px-C%2BB-Egypt-Fig9-SetiIAbydosKingList.PNG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
   },
@@ -39762,7 +39762,7 @@ const chunk_bible_sources: TermNode[] = [
     layer: 'Old World Structures',
     mapFeatureId: 'structure-forte-da-graca',
     timelineId: 'tl-forte-da-graca',
-    relatedIds: ['old-world-structures', 'star-forts'],
+    relatedIds: ['old-world-structures'],
     sources: ['Portuguese Directorate-General for Cultural Heritage / UNESCO'],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Forte_da_Gra%C3%A7a_December_2016-3.jpg/1280px-Forte_da_Gra%C3%A7a_December_2016-3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
   },
@@ -39777,6 +39777,455 @@ const chunk_bible_sources: TermNode[] = [
     relatedIds: ['old-world-structures'],
     sources: ['National Trust / Anglo-Saxon Chronicle'],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/King_Alfred%27s_Tower_view_from_west.jpg/1280px-King_Alfred%27s_Tower_view_from_west.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'anomaly-UFO-calvine-1990',
+    parentId: 'ufo-sightings-br',
+    name: 'The Calvine Photograph',
+    description: 'On 4 August 1990 two hikers near Calvine photographed a huge diamond-shaped object hanging motionless over the Cairngorms while an RAF Harrier circled it. The Daily Record never ran the pictures; the Ministry of Defence took the negatives and the file was sealed until 2076. One print surfaced in 2022 through an RAF press officer and was called \'the clearest UFO photo ever taken.\' The question is not whether it is real but why Britain locked it away for eighty years.',
+    layer: 'UFOs - Sightings',
+    mapFeatureId: 'anomaly-UFO-calvine-1990',
+    sources: ['UK Ministry of Defence UFO Files / Sheffield Hallam University (Dr David Clarke) / Daily Record'],
+    images: ['https://pbs.twimg.com/media/HNmMQ_RbQAAmHOX.jpg']
+  },
+  {
+    id: 'anomaly-UFO-magenta-1933',
+    parentId: 'ufo-sightings-br',
+    name: 'Magenta Crash Retrieval',
+    description: '[DISPUTED DOCUMENTS] Fourteen years before Roswell, Italian papers leaked in 1996 describe a bell-shaped craft recovered near Magenta on 13 June 1933 and a secret \'Gabinetto RS/33\' set up under Marconi to study it, with Mussolini ordering a press blackout. Sceptics call the documents forgeries; believers note that the RS/33 cabinet\'s names, letterheads and Vatican involvement have never been cleanly debunked. If genuine, the fascist state held crashed non-human technology before the Second World War and handed it to the Americans in 1945.',
+    layer: 'UFOs - Sightings',
+    mapFeatureId: 'anomaly-UFO-magenta-1933',
+    sources: ['RS/33 Documents (Roberto Pinotti / Alfredo Lissoni) / Italian UFO Archives'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Magenta-chiesa_san_martino-facciata1.jpg/1280px-Magenta-chiesa_san_martino-facciata1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'anomaly-UFO-kalahari-1989',
+    parentId: 'ufo-sightings-br',
+    name: 'Kalahari Shoot-Down & Retrieval',
+    description: '[DISPUTED ACCOUNT] In May 1989 a South African Air Force Mirage is said to have downed an unidentified craft with an experimental laser over the Kalahari; a recovery team allegedly found a 20-metre disc and two living grey humanoids, later handed to the US at Wright-Patterson. The source was an SAAF intelligence officer, \'James Van Greunen,\' whose documents the SAAF called fabricated. The story refuses to die because it describes exactly the retrieval-and-transfer pipeline that later whistleblowers swore existed.',
+    layer: 'UFOs - Sightings',
+    mapFeatureId: 'anomaly-UFO-kalahari-1989',
+    timelineId: 'tl-UFO-kalahari-1989',
+    sources: ['James Van Greunen Dossier / SAAF Press Statements / Quest International Investigation'],
+    images: ['https://pbs.twimg.com/media/HObtX2_XMAA-AwZ.png', 'https://pbs.twimg.com/media/HObtYPoXkAASh7o.png', 'https://pbs.twimg.com/media/HObtaIiXoAAAPUi.png', 'https://pbs.twimg.com/media/HObttSKWgAAB1NF.png']
+  },
+  {
+    id: 'anomaly-UFO-treviso-1979',
+    parentId: 'ufo-sightings-br',
+    name: 'Cecconi Gun-Camera \'Tic-Tac\'',
+    description: 'On 18 June 1979 Italian Air Force pilot Giancarlo Cecconi was vectored by radar onto a dark cylindrical object near Treviso airbase and shot more than eighty gun-camera frames of it before it vanished off the scope. The Italian military released the photographs years later. It is the Nimitz \'Tic Tac\' twenty-five years early, photographed by a NATO interceptor, and almost nobody outside Italy has heard of it.',
+    layer: 'UFOs - Sightings',
+    mapFeatureId: 'anomaly-UFO-treviso-1979',
+    sources: ['Aeronautica Militare Gun-Camera Archive / Italian Ministry of Defence'],
+    images: ['https://pbs.twimg.com/media/HP3iMZQaQAA8aXk.jpg']
+  },
+  {
+    id: 'anomaly-UFO-nashville-1989',
+    parentId: 'ufo-sightings-br',
+    name: 'Commander Bethune\'s Nashville UFO Photos',
+    description: 'US Navy Commander Graham Bethune, a pilot who had logged his own encounter with a 300-foot disc over the Atlantic in 1951, obtained and vouched for a set of 1989 photographs of a classic domed disc over Nashville. A decorated naval aviator staking his name on civilian photos is rare; Bethune did it because he had already seen the thing himself from the cockpit of a Navy transport.',
+    layer: 'UFOs - Sightings',
+    mapFeatureId: 'anomaly-UFO-nashville-1989',
+    sources: ['Cmdr Graham Bethune USN (Ret.) Testimony / Disclosure Project Archive'],
+    images: ['https://pbs.twimg.com/media/HM3LRr2WgAAmK1N.jpg', 'https://pbs.twimg.com/media/HM3LUolWwAE4bdr.jpg']
+  },
+  {
+    id: 'anomaly-UFO-uss-trepang-1971',
+    parentId: 'ufo-sightings-br',
+    name: 'USS Trepang Arctic Photographs',
+    description: '[DISPUTED PHOTOS] Eight photographs said to be taken through the periscope of the nuclear submarine USS Trepang in March 1971 show cigar and disc-shaped objects, one apparently crashing into the Arctic sea. The Trepang\'s Arctic deployment is documented; the Navy has never acknowledged the images, which surfaced in 2015 from an unnamed source. Either someone faked an entire photo set with period-correct periscope framing, or a US submarine photographed craft that are still not in any admitted inventory.',
+    layer: 'UFOs - Sightings',
+    mapFeatureId: 'anomaly-UFO-uss-trepang-1971',
+    timelineId: 'tl-UFO-uss-trepang-1971',
+    sources: ['USS Trepang (SSN-674) Deployment Records / Top Secret Magazine (2015)'],
+    images: ['https://pbs.twimg.com/media/HRp2UODboAAmBND.jpg', 'https://pbs.twimg.com/media/HRp2UODawAA7Xpc.jpg', 'https://pbs.twimg.com/media/HRp2UNmXUAA8g8_.jpg', 'https://pbs.twimg.com/media/HRp2UNsWQAAyu9F.jpg']
+  },
+  {
+    id: 'anomaly-UFO-kassel-2014',
+    parentId: 'ufo-sightings-br',
+    name: 'Kassel Triangular Craft Footage',
+    description: '[UNVERIFIED FOOTAGE] In June 2014 a slow-moving black triangle with lights at each vertex was filmed over Kassel and uploaded by the channel O7TV, where it drew millions of views and a predictable split between \'military drone\' and \'TR-3B.\' The silent triangle over a German city is the same shape reported over Belgium in 1990 and the Hudson Valley in the 1980s. Image shown is of the Kassel skyline; the original clip remains on social media.',
+    layer: 'UFOs - Sightings',
+    mapFeatureId: 'anomaly-UFO-kassel-2014',
+    sources: ['O7TV Upload (2014) / Beyond the Radar Archive'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/18-09-26-Kassel-RalfR-DJI_0369.jpg/1280px-18-09-26-Kassel-RalfR-DJI_0369.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'anomaly-UFO-colima-volcano',
+    parentId: 'ufo-sightings-br',
+    name: 'Colima Volcano Webcam Objects',
+    description: 'The public webcam on the Volcán de Colima has recorded, again and again, elongated objects dropping into and climbing out of the crater at speed, a phenomenon so persistent that Mexican ufologists treat the volcano as a base entrance rather than a mountain. Popocatépetl has the same reputation. Volcanoes as doors is an idea the ancient Mexica would have recognised immediately.',
+    layer: 'UFOs - Sightings',
+    mapFeatureId: 'anomaly-UFO-colima-volcano',
+    sources: ['Webcams de México Archive / Ovniología Investigations'],
+    images: ['https://x.com/i/status/2089125343873368221', 'https://pbs.twimg.com/amplify_video_thumb/2089125313045307392/img/rSgWtSSWqjCbUClr.jpg']
+  },
+  {
+    id: 'anomaly-UFO-utsuro-bune-1803',
+    parentId: 'ufo-sightings-br',
+    name: 'Utsuro-bune \'Hollow Ship\'',
+    description: 'In 1803 fishermen at Harayadori hauled in a round vessel of metal and glass, inscribed with unknown symbols, with a pale woman inside clutching a box she would let no one touch. Three separate Edo-period manuscripts illustrate it. The village elders pushed the ship back out to sea rather than report it. Japan\'s \'first UFO\' is also one of the first records of a woman from somewhere else delivered to Earth in a sealed craft.',
+    layer: 'UFOs - Sightings',
+    mapFeatureId: 'anomaly-UFO-utsuro-bune-1803',
+    sources: ['Toen Shosetsu (1825) / Hyoryu Kishu / Ume no Chiri Manuscripts'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Utsuro-Bune-Manjud%C5%8D-Drifted-Ashore-on_Fief-of-Lord-Ogasawara.png/960px-Utsuro-Bune-Manjud%C5%8D-Drifted-Ashore-on_Fief-of-Lord-Ogasawara.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'anomaly-UFO-stralsund-1665',
+    parentId: 'ufo-sightings-br',
+    name: 'Stralsund Aerial Battle of 1665',
+    description: 'Six fishermen off Stralsund on 8 April 1665 watched flocks of \'ships\' fighting in the sky; by evening a flat dark disc hung over the church of St Nikolai for hours, and the men fell ill with trembling and pain afterwards. The account was printed in a 1665 broadsheet with a woodcut. It is one of a chain of \'sky battle\' reports from Nuremberg 1561 and Basel 1566 that read, to modern eyes, like aerial warfare observed by people with no word for it.',
+    layer: 'UFOs - Sightings',
+    mapFeatureId: 'anomaly-UFO-stralsund-1665',
+    sources: ['Erasmus Francisci, \'Der wunder-reiche Ueberzug unserer Nider-Welt\' (1680) / 1665 Broadsheet'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/WLM_-_2020_-_Stralsund_-_St._Nikolai_Kirche.jpg/1280px-WLM_-_2020_-_Stralsund_-_St._Nikolai_Kirche.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'anomaly-UFO-weyauwega',
+    parentId: 'ufo-sightings-br',
+    name: 'Weyauwega Sledding-Trip Photographs',
+    description: '[UNVERIFIED PHOTOS] A set of snapshots said to come from a family sledding outing near Weyauwega shows a dark, textured craft low over the snow, close enough to make out panel lines. The photographer, the year and the camera are all unknown, which is exactly the kind of provenance that makes a case impossible to close either way. Shown here because the images are striking; weigh them accordingly.',
+    layer: 'UFOs - Sightings',
+    mapFeatureId: 'anomaly-UFO-weyauwega',
+    sources: ['Circulated via AlienLeaks (X), provenance unknown'],
+    images: ['https://pbs.twimg.com/media/HNsmwc1bUAALT3j.png', 'https://pbs.twimg.com/media/HNsmxqOa4AA_kbb.png', 'https://pbs.twimg.com/media/HNsmyjjbMAEbKo-.png']
+  },
+  {
+    id: 'anomaly-UFO-chapada-diamantina-2011',
+    parentId: 'ufo-sightings-br',
+    name: 'Chapada Diamantina Sphere Selfie',
+    description: 'Brazilian researcher Edie Meireles, hiking the plateau of Chapada Diamantina in 2011, turned the camera on himself and caught a metallic sphere hovering over the valley behind him. Brazil\'s interior has a long record of spheres, from the Colares attacks of 1977 to the Varginha incident, and the Chapada selfie is one of the few with the witness and the object in the same frame.',
+    layer: 'UFOs - Sightings',
+    mapFeatureId: 'anomaly-UFO-chapada-diamantina-2011',
+    sources: ['Edie Meireles Field Photographs / Brazilian UFO Research Network'],
+    images: ['https://pbs.twimg.com/media/HNMWf8MWQAAD39j.jpg', 'https://pbs.twimg.com/media/HNMWf6sWcAAb6SR.jpg', 'https://pbs.twimg.com/media/HNMWf8UWgAA38Ct.jpg']
+  },
+  {
+    id: 'anomaly-UFO-south-korea-craft-claim',
+    parentId: 'ufo-sightings-br',
+    name: '\'Too Big to Hide\' Craft Claim',
+    description: '[UNVERIFIED CLAIM] A researcher posting coordinates 37°24\'48.5"N 126°55\'44.4"E asserts that a recovered craft \'too big\' to move is held at this site south of Seoul, with sister craft at a Nevada facility and at Pine Gap in Australia. No imagery, document or witness supports it beyond the post itself. Listed because specific coordinates were given and can be examined; treat the claim as unproven.',
+    layer: 'UFOs - Sightings',
+    mapFeatureId: 'anomaly-UFO-south-korea-craft-claim',
+    sources: ['Social media claim (X), unverified'],
+    images: ['https://pbs.twimg.com/media/HNx9xEDWcAA-8nq.jpg']
+  },
+  {
+    id: 'anomaly-UFO-white-sands-crash-video',
+    parentId: 'ufo-sightings-br',
+    name: 'Alleged White Sands Crash Footage',
+    description: '[UNVERIFIED FOOTAGE] A short clip circulating in 2026 purports to show a craft coming down inside White Sands Missile Range, the proving ground where the first atomic bomb and the first captured V-2s were tested. Date, source and chain of custody are unknown and the clip has the hallmarks of a composite. White Sands is where you would expect such a thing to fall, which is also why hoaxers set their stories there.',
+    layer: 'UFOs - Sightings',
+    mapFeatureId: 'anomaly-UFO-white-sands-crash-video',
+    sources: ['Circulated via UAPWixy (X), provenance unknown'],
+    images: ['https://x.com/i/status/2091617471484866979', 'https://pbs.twimg.com/amplify_video_thumb/2091616362208894976/img/xJtO-bXU-y1VnWcm.jpg']
+  },
+  {
+    id: 'anomaly-UFO-roswell-2026',
+    parentId: 'ufo-sightings-br',
+    name: 'Roswell Daylight Sighting',
+    description: '[RECENT / UNDER REVIEW] In broad daylight over Roswell in 2026, multiple witnesses filmed a bright object from several angles. The videos are consistent with one another, which hoaxed clips rarely are, but no official or instrumented data has been released. Roswell producing a new daylight multi-witness case nearly eighty years after 1947 is either coincidence or the place has a standing appointment.',
+    layer: 'UFOs - Sightings',
+    mapFeatureId: 'anomaly-UFO-roswell-2026',
+    sources: ['Multiple witness videos (X / UAPDr compilation)'],
+    images: ['https://x.com/i/status/2104260440033513726', 'https://pbs.twimg.com/amplify_video_thumb/2104260357246042112/img/DM1XXJnQEmkVED0a.jpg']
+  },
+  {
+    id: 'anomaly-UFO-tehran-2026',
+    parentId: 'ufo-sightings-br',
+    name: 'Tehran Circular Object',
+    description: '[RECENT / UNDER REVIEW] On 20 September 2026 a motorist on Tehran\'s Azadegan expressway filmed a silent, luminous circular object hanging near the cloud base; a second analyst\'s thread argues it is a gravity-control platform from a classified US programme rather than a drone, kite or balloon. Tehran was the site of the 1976 F-4 intercept, one of the best-documented military UFO cases ever, so the city has form. Fifty years on, something is back over the capital.',
+    layer: 'UFOs - Sightings',
+    mapFeatureId: 'anomaly-UFO-tehran-2026',
+    sources: ['Witness video (X) / Analytical thread by aprajitanefes'],
+    images: ['https://x.com/i/status/2101780481217843412', 'https://pbs.twimg.com/amplify_video_thumb/2101779507459883008/img/eP64MPxYNbTDLCse.jpg', 'https://x.com/i/status/2101894763838656864', 'https://pbs.twimg.com/amplify_video_thumb/2101894697648328705/img/UhX5f2_P27YumCGK.jpg']
+  },
+  {
+    id: 'anomaly-UFO-langley-messick-2026',
+    parentId: 'ufo-sightings-br',
+    name: 'Objects Over Langley AFB from Messick Point',
+    description: '[RECENT / UNDER REVIEW] Filmed from Messick Point across the Back River toward Langley Air Force Base, lights move over the base in a pattern the witness could not match to aircraft. Langley was the centre of the December 2023 drone incursions that the Pentagon admitted it could not stop or identify. Whatever flies over Langley flies over the headquarters of Air Combat Command, and nobody has explained it.',
+    layer: 'UFOs - Sightings',
+    mapFeatureId: 'anomaly-UFO-langley-messick-2026',
+    sources: ['Witness video (X / JonStewartIL) / Langley AFB Incursion Reports 2023'],
+    images: ['https://x.com/i/status/2102355684503245010', 'https://pbs.twimg.com/amplify_video_thumb/2102355594162147328/img/RDjhTJzmGTlzyzhl.jpg']
+  },
+  {
+    id: 'anomaly-UFO-chicago-2026',
+    parentId: 'ufo-sightings-br',
+    name: 'Chicago Aerial Objects',
+    description: '[RECENT / UNDER REVIEW] Part of a wave of 2026 videos showing clusters of lights over American cities, this clip over Chicago was posted the same week as the Langley footage. Chicago has produced some of the most credible mass sightings on record, including the 2006 O\'Hare disc witnessed by United Airlines staff. The new footage is unanalysed; the pattern of simultaneous reports across the country is the notable part.',
+    layer: 'UFOs - Sightings',
+    mapFeatureId: 'anomaly-UFO-chicago-2026',
+    sources: ['Witness video (X / JonStewartIL)'],
+    images: ['https://x.com/i/status/2102356359136035174', 'https://pbs.twimg.com/amplify_video_thumb/2102356320657473536/img/uZUMNQUSyWmCefnQ.jpg']
+  },
+  {
+    id: 'anomaly-UFO-savannah-tn-2026',
+    parentId: 'ufo-sightings-br',
+    name: 'Savannah Spheres Video',
+    description: '[UNVERIFIED FOOTAGE] On 7 September 2026 a mother and child in Savannah, Tennessee filmed bright spheres moving overhead in formation. The clip spread with \'invasion\' captions; the objects could as easily be lanterns or drones and no second source has surfaced. Included for the record of the 2026 sphere wave, with the usual caution about single-camera footage.',
+    layer: 'UFOs - Sightings',
+    mapFeatureId: 'anomaly-UFO-savannah-tn-2026',
+    sources: ['Witness video (X / AbbottEddi5270), single source'],
+    images: ['https://x.com/i/status/2097287536280256906', 'https://pbs.twimg.com/amplify_video_thumb/2097287401798324224/img/WfZnvRaMHwNhWRA4.jpg']
+  },
+  {
+    id: 'anomaly-UFO-fox-live-2026',
+    parentId: 'ufo-sightings-br',
+    name: 'Object Buzzes Military Assets on Live TV',
+    description: '[UNVERIFIED FOOTAGE] During a live Fox broadcast on 18 August 2026, viewers spotted a fast object passing military aircraft on screen. Broadcast captures are notoriously easy to misread, with birds, bugs and compression artefacts doing most of the work, and no network or military statement followed. Logged as part of the 2026 wave; evidence grade low.',
+    layer: 'UFOs - Sightings',
+    mapFeatureId: 'anomaly-UFO-fox-live-2026',
+    sources: ['Live broadcast capture (X / AbbottEddi5270), single source'],
+    images: ['https://x.com/i/status/2096815588706251183', 'https://pbs.twimg.com/amplify_video_thumb/2096815536340385792/img/JVvsZ9fF6WyCnRC3.jpg']
+  },
+  {
+    id: 'anomaly-UFO-alabama-2026',
+    parentId: 'ufo-sightings-br',
+    name: 'Dark \'Mollusc\' Object',
+    description: '[UNVERIFIED FOOTAGE] On 1 July 2026 several Alabama witnesses described a dark object like a mollusc trailing black smoke, and insisted it was no drone. The exact town is not given in the circulating post, so the pin sits on the state capital. Smoking, organic-looking objects are a recurring sub-type in modern reports, from the \'jellyfish\' over Iraq to the red medusa filmed over the US in October 2026.',
+    layer: 'UFOs - Sightings',
+    mapFeatureId: 'anomaly-UFO-alabama-2026',
+    sources: ['Witness video (X / AlexandrHelbert), location approximate'],
+    images: ['https://x.com/i/status/2073486523098710167', 'https://pbs.twimg.com/amplify_video_thumb/2073486427514400768/img/naAzioDabOy_aSow.jpg']
+  },
+  {
+    id: 'anomaly-UFO-big-bear-laser',
+    parentId: 'ufo-sightings-br',
+    name: 'Laser-Pointer Reaction Craft',
+    description: '[UNVERIFIED FOOTAGE] A witness at Big Bear Lake aims a laser pointer at a hovering light; the moment the beam touches it, the object breaks sharply away. If genuine, it is one of the few clips showing an apparent response to a human signal, which is why the \'CE-5\' contact community circulates it. If not, it is a drone with a nervous pilot. Date and operator remain unknown.',
+    layer: 'UFOs - Sightings',
+    mapFeatureId: 'anomaly-UFO-big-bear-laser',
+    sources: ['Witness video (X / maniaUFO), provenance unknown'],
+    images: ['https://x.com/i/status/2077024783762407809', 'https://pbs.twimg.com/amplify_video_thumb/2077024699876364288/img/BCAFJthqOy425Eak.jpg']
+  },
+  {
+    id: 'anomaly-UFO-cookeville-nuforc',
+    parentId: 'ufo-sightings-br',
+    name: 'Cookeville Three-Minute NUFORC Video',
+    description: 'A three-minute clip submitted to the National UFO Reporting Center by a Cookeville resident shows a slow, bright object filmed from the witness\'s home. NUFORC does not authenticate footage, but it does log it, and long continuous takes are worth more than ten-second snippets because they are harder to fake and easier to analyse.',
+    layer: 'UFOs - Sightings',
+    mapFeatureId: 'anomaly-UFO-cookeville-nuforc',
+    sources: ['National UFO Reporting Center (NUFORC) submission / maniaUFO'],
+    images: ['https://x.com/i/status/2102645501359214703', 'https://pbs.twimg.com/amplify_video_thumb/2102645374095622144/img/mnegbP3kBkNyfWXI.jpg']
+  },
+  {
+    id: 'anomaly-UFO-nevada-hiker-2026',
+    parentId: 'ufo-sightings-br',
+    name: 'Translucent Disc Near Area 51',
+    description: '[UNVERIFIED FOOTAGE] A hiker less than a hundred miles from Groom Lake filmed a translucent disc with a small dark sphere beneath it against a mountain horizon in January 2026. Analysts are split between a genuine capture and a lens artefact; the disc-and-companion configuration matches older reports of \'motherships\' deploying probes. The proximity to Area 51 cuts both ways.',
+    layer: 'UFOs - Sightings',
+    mapFeatureId: 'anomaly-UFO-nevada-hiker-2026',
+    sources: ['Witness video (X / tolgaozcelkk90), under analysis'],
+    images: ['https://x.com/i/status/2098308427852267802', 'https://pbs.twimg.com/amplify_video_thumb/2098308372345020417/img/U1IoEKDBMoiDBc04.jpg']
+  },
+  {
+    id: 'anomaly-UFO-berlin-wall-1989',
+    parentId: 'ufo-sightings-br',
+    name: 'Berlin Wall Night Object',
+    description: '[UNVERIFIED FOOTAGE] Footage said to have been shot on the night of 9 November 1989, as the Berlin Wall fell, shows a luminous object over the city while the border stood on full alert. The claim is that both German states\' militaries were watching the sky as well as the crowds. The clip has no confirmed provenance; the image shown is the Wall itself. If authentic, something attended the most watched night of the Cold War.',
+    layer: 'UFOs - Sightings',
+    mapFeatureId: 'anomaly-UFO-berlin-wall-1989',
+    sources: ['Beyond the Radar Archive (Instagram), provenance unknown'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Berlinermauer.jpg/960px-Berlinermauer.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'anomaly-UFO-south-africa-2003',
+    parentId: 'ufo-sightings-br',
+    name: 'Classic Disc Off the Cape Coast',
+    description: 'On 19 August 2003 a classic flat disc was filmed off the South African coast, holding steady above the sea before accelerating away. The textbook saucer silhouette, decades after the shape fell out of fashion in reports, is what makes the clip interesting; the pin is placed at Cape Town because the circulating copy does not name the stretch of coast.',
+    layer: 'UFOs - Sightings',
+    mapFeatureId: 'anomaly-UFO-south-africa-2003',
+    sources: ['Witness video (X / UAPWixy), location approximate'],
+    images: ['https://x.com/i/status/2078574202895142961', 'https://pbs.twimg.com/amplify_video_thumb/2078574151082917888/img/quBbvwbmuGplU_HM.jpg']
+  },
+  {
+    id: 'alien-sighting-howard-menger-1956',
+    parentId: 'alien-sightings-br',
+    name: 'Howard Menger\'s Venusian Contacts',
+    description: '[CONTACTEE ERA] Sign-painter Howard Menger claimed that from childhood he had met beautiful \'Space People\' from Venus in the woods of New Jersey, that in 1956 he photographed and filmed their craft and crew, and that they flew him to the Moon, where he photographed a lunar base. He said they told him to build a free-energy motor. Menger later half-recanted, then recanted the recantation. The photographs survive, and the contactee gospel of benevolent, human-looking visitors is the mirror image of the biblical warning about angels of light.',
+    layer: 'Alien Sightings',
+    mapFeatureId: 'alien-sighting-howard-menger-1956',
+    sources: ['Howard Menger, \'From Outer Space to You\' (1959) / Alien Archive X Collection'],
+    images: ['https://pbs.twimg.com/media/HRm8JXoWIAAa8bS.jpg', 'https://pbs.twimg.com/media/HRm8LhcbwAA_S3S.jpg', 'https://pbs.twimg.com/media/HRm8NcPWcAAfSxZ.jpg', 'https://pbs.twimg.com/media/HRm8PYPboAAtX48.png']
+  },
+  {
+    id: 'alien-sighting-jonathan-reed-1996',
+    parentId: 'alien-sightings-br',
+    name: 'Dr. Jonathan Reed \'Alien in the Freezer\'',
+    description: '[CONTESTED CASE] In October 1996 a Seattle psychologist calling himself Dr. Jonathan Reed said a small grey being killed his dog on a mountain trail, that he struck it with a branch, carried it home and kept it in his freezer, filming it for days while a black craft sat in the woods. The videotape, the \'obelisk\' artefact and Reed\'s credentials have all been attacked as fabrications. Stabilised copies of the footage keep circulating because, fake or not, it is the only \'body in a freezer\' tape anyone ever shot.',
+    layer: 'Alien Sightings',
+    mapFeatureId: 'alien-sighting-jonathan-reed-1996',
+    sources: ['Jonathan Reed Video Testimony / Art Bell Coast to Coast Broadcasts / Stabilised Footage (JeninedUFO)'],
+    images: ['https://x.com/i/status/2098980231000539569', 'https://pbs.twimg.com/amplify_video_thumb/2098971539710582784/img/q7kfmto3GFEjvMnT.jpg']
+  },
+  {
+    id: 'alien-sighting-4chan-luke-afb-2017',
+    parentId: 'alien-sightings-br',
+    name: '\'24489\' 4chan Alien Photographs',
+    description: '[UNVERIFIED PHOTOS] Just after midnight on 22 February 2017 an anonymous 4chan user posted photographs captioned \'24489 - taken approximately 24 miles northwest of Luke Air Force Base,\' showing a thin grey figure in desert scrub. The thread vanished; the images did not. Anonymous imageboard leaks are the modern equivalent of the unsigned pamphlet: impossible to source, impossible to ignore, and occasionally true.',
+    layer: 'Alien Sightings',
+    mapFeatureId: 'alien-sighting-4chan-luke-afb-2017',
+    sources: ['4chan /pol/ Thread Archive (2017) / anonymoushadoww compilation'],
+    images: ['https://pbs.twimg.com/media/HNuMlCUbIAAikNy.jpg', 'https://pbs.twimg.com/media/HNuMlCcaoAA2bZe.jpg']
+  },
+  {
+    id: 'abduction-carl-higdon-1974',
+    parentId: 'alien-abductions-br',
+    name: 'Carl Higdon Hunting-Trip Abduction',
+    description: '[CLASSIC CASE] On 25 October 1974 oil driller Carl Higdon fired at an elk in the Medicine Bow forest and watched the bullet float out of the barrel and drop to the ground. A tall being in a black jumpsuit, \'Ausso,\' offered him pills and took him in a transparent cubicle to a world with a blinding sun, then returned him; searchers found Higdon\'s truck miles from any road. His later medical exams showed old tuberculosis scars gone. The case is a textbook example of the \'healed by the visitors\' motif.',
+    layer: 'Alien Abductions',
+    mapFeatureId: 'abduction-carl-higdon-1974',
+    sources: ['Dr. Leo Sprinkle (University of Wyoming) Hypnotic Regression Records / Carbon County Sheriff Report'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Esterbrook_Medicine_Bow_NF.jpg/1280px-Esterbrook_Medicine_Bow_NF.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'anomaly-Bigfoot-basket-lake-1941',
+    parentId: 'bigfoot-sightings-br',
+    name: 'Basket Lake Encounter',
+    description: 'In 1941 a seventeen-year-old hunter in the willows near Basket Lake, Manitoba, shot at what he took to be a moose and spent eight minutes face to face with an upright, hair-covered creature that watched him and then walked away. The account was recorded decades later with the matter-of-fact detail of a man who never wanted to be believed, only to say what he saw. It is one of the earliest dated Canadian sasquatch encounters.',
+    layer: 'Bigfoot Sightings',
+    mapFeatureId: 'anomaly-Bigfoot-basket-lake-1941',
+    sources: ['Witness account (Bugimus archive) / Manitoba Sasquatch Reports'],
+    images: ['https://pbs.twimg.com/media/HSLwGutbQAASn1b.jpg']
+  },
+  {
+    id: 'codex-bigfoot-harley-hoffman-2001',
+    parentId: 'bigfoot-sightings-br',
+    name: 'Harley Hoffman Bigfoot Footage (2001 / released 2006)',
+    description: 'Filmed in 2001 and released in 2006, the Hoffman footage follows a dark, heavy figure moving through brush at close range with an arm swing and body mass that are difficult to fake with a costume. It splits researchers who otherwise agree: some call it the strongest clip since Patterson-Gimlin, others a man in a suit. The filming location has never been disclosed, which is why it is catalogued here as a case rather than a pin.',
+    layer: 'Bigfoot Sightings',
+    sources: ['Harley Hoffman Footage (2006 release) / Bugimus analysis'],
+    images: ['https://x.com/i/status/2101321698553540752', 'https://pbs.twimg.com/amplify_video_thumb/2101321603208675329/img/KgbNtxKWp77EvcCG.jpg']
+  },
+  {
+    id: 'anomaly-Cryptid-Sightings-green-children-woolpit',
+    parentId: 'cryptid-sightings-br',
+    name: 'The Green Children of Woolpit',
+    description: 'Two children with green skin, speaking an unknown tongue and eating only raw beans, were found beside the wolf pits of Woolpit in the reign of King Stephen. The boy died; the girl lost her colour, learned English and said they came from \'St Martin\'s Land,\' a twilight country reached through a cavern. Two medieval chroniclers recorded it independently. Fairy realm, parallel world or a lost people underground: the girl\'s own account points to a place beneath, not beyond.',
+    layer: 'Cryptid Sightings',
+    mapFeatureId: 'anomaly-Cryptid-Sightings-green-children-woolpit',
+    sources: ['William of Newburgh, Historia rerum Anglicarum / Ralph of Coggeshall, Chronicon Anglicanum'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/WoolpitSign.jpg/330px-WoolpitSign.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'anomaly-Cryptid-Sightings-mantis-man-nj',
+    parentId: 'cryptid-sightings-br',
+    name: 'The Musconetcong Mantis Man',
+    description: 'A fly fisherman on New Jersey\'s Musconetcong River described a near-seven-foot humanoid with a triangular head, huge black eyes and jointed insect legs standing in the shallows, visible for seconds before it blurred out as if cloaked. Mantis beings turn up in abduction accounts worldwide as the ones in charge of the greys. Meeting one in the open, in daylight, in New Jersey, is the kind of report that gets filed under cryptid because there is nowhere else to put it.',
+    layer: 'Cryptid Sightings',
+    mapFeatureId: 'anomaly-Cryptid-Sightings-mantis-man-nj',
+    sources: ['Witness report (Phantoms & Monsters) / The Secret Files X'],
+    images: ['https://x.com/i/status/2104685619662221584', 'https://pbs.twimg.com/amplify_video_thumb/2104685572841263105/img/pqC--0Yjoz-3UfHK.jpg']
+  },
+  {
+    id: 'anomaly-Cryptid-Sightings-red-ghost-arizona',
+    parentId: 'cryptid-sightings-br',
+    name: 'The Red Ghost of Arizona',
+    description: 'In 1883 a woman at Eagle Creek was trampled to death by a huge red beast that left cloven tracks and strands of red hair, and for a decade ranchers reported a towering creature with a \'devil\' strapped to its back. When a farmer finally shot it in 1893 it was a feral camel, a survivor of the Army\'s abandoned Camel Corps, with the skeleton of a dead rider lashed to its hump. The Red Ghost is the rare monster story that ends with a corpse and still manages to be worse than the legend.',
+    layer: 'Cryptid Sightings',
+    mapFeatureId: 'anomaly-Cryptid-Sightings-red-ghost-arizona',
+    sources: ['Mohave County Miner (1893) / Arizona Historical Society'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Goldfield_Ghost_Town%2C_Arizona%2C_USA_5-2024_17.jpg/1280px-Goldfield_Ghost_Town%2C_Arizona%2C_USA_5-2024_17.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
+  },
+  {
+    id: 'anomaly-Cryptid-Sightings-sharlie-payette',
+    parentId: 'cryptid-sightings-br',
+    name: 'Sharlie, the Payette Lake Monster',
+    description: 'Loggers on Payette Lake in the 1920s thought the dark shape in the water was a drifting log until it moved against the wind; in 1944 a crowd of thirty watched a serpentine body with humps cross the lake, and a 1954 naming contest christened it Sharlie. The Shoshone and Nez Perce had avoided the lake\'s \'evil spirit\' long before the town was built. Every deep cold lake in the Northwest has one; the question is what the tribes knew that the loggers did not.',
+    layer: 'Cryptid Sightings',
+    mapFeatureId: 'anomaly-Cryptid-Sightings-sharlie-payette',
+    sources: ['McCall Star-News Archives / Idaho State Historical Society'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Gare_de_Cholet_-_par_Sharlie_M..jpg/1280px-Gare_de_Cholet_-_par_Sharlie_M..jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
+  },
+  {
+    id: 'anomaly-Cryptid-Sightings-guadalupe-flying-humanoid-2004',
+    parentId: 'cryptid-sightings-br',
+    name: 'Officer Samaniego\'s Flying \'Witch\'',
+    description: 'On a routine patrol before dawn on 16 January 2004, police officer Leonardo Samaniego saw a dark figure drop from a tree onto the hood of his car: a woman-shaped thing in a black cloak with no visible eyes, clawing at the windscreen until he fainted. Fellow officers found him in shock and his account was broadcast across Mexico. Flying humanoids over Monterrey were reported for years afterwards, and the local word for what he met was the old one: bruja.',
+    layer: 'Cryptid Sightings',
+    mapFeatureId: 'anomaly-Cryptid-Sightings-guadalupe-flying-humanoid-2004',
+    sources: ['Guadalupe Municipal Police Report / Televisa Monterrey (2004)'],
+    images: ['https://pbs.twimg.com/media/HS7_PcpXUAEkTl3.jpg', 'https://pbs.twimg.com/media/HS7_P3yXwAMQsxL.jpg']
+  },
+  {
+    id: 'archaeology-quinametzin-giants',
+    parentId: 'nephilim-br',
+    name: 'The Quinametzin Giants of the Previous Sun',
+    description: 'The Aztecs taught that the world before ours belonged to the Quinametzin, giants who raised the pyramids of Teotihuacan and Cholula and were wiped out when the sun of that age was destroyed. Spanish friars recorded Tlaxcalans digging up enormous bones as proof, and Cortés was shown a femur the height of a man. A giant race that built the great monuments and was annihilated by a world-ending judgement is Genesis 6 told in Nahuatl.',
+    layer: 'Giants & Nephilim',
+    mapFeatureId: 'archaeology-quinametzin-giants',
+    timelineId: 'tl-quinametzin-giants',
+    relatedIds: ['nephilim-br', 'archaeology-aztec-sun-stone', 'ancient-flood-myths'],
+    sources: ['Fernando de Alva Ixtlilxóchitl, Historia de la nación chichimeca / Bernal Díaz del Castillo'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Quinametzin.jpg/500px-Quinametzin.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'anomaly-Nasa-Space-3i-atlas',
+    parentId: 'nasa-root',
+    name: '3I/ATLAS Interstellar Object',
+    description: 'Only the third object ever confirmed to come from outside the solar system, 3I/ATLAS was picked up by the ATLAS survey telescope in Chile on 1 July 2025 on a hyperbolic path that no planet could have given it. Harvard\'s Avi Loeb again raised the possibility of artificial origin, as he had with \'Oumuamua, and NASA kept its images quiet for weeks. Three interstellar visitors in eight years, after none in all of recorded astronomy, is a trend worth watching.',
+    layer: 'NASA / Space',
+    mapFeatureId: 'anomaly-Nasa-Space-3i-atlas',
+    timelineId: 'tl-Nasa-Space-3i-atlas',
+    sources: ['NASA JPL Small-Body Database / ATLAS Survey / Minor Planet Center'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/3I-ATLAS_noirlab2532b.jpg/1280px-3I-ATLAS_noirlab2532b.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'anomaly-Nasa-Space-99942-apophis',
+    parentId: 'nasa-root',
+    name: '99942 Apophis \'Doomsday Asteroid\'',
+    description: 'Discovered in 2004 and briefly given the highest impact probability ever assigned to an asteroid, Apophis, named for the Egyptian serpent of chaos, will pass inside the ring of geostationary satellites on Friday 13 April 2029, visible to the naked eye. NASA now says it will miss. The name was chosen by astronomers who watch Stargate; a 340-metre rock called after the devourer of the sun, arriving on a Friday the 13th, is the sort of thing the prophets would have noticed.',
+    layer: 'NASA / Space',
+    mapFeatureId: 'anomaly-Nasa-Space-99942-apophis',
+    timelineId: 'tl-Nasa-Space-99942-apophis',
+    relatedIds: ['apophis-egyptian'],
+    sources: ['NASA CNEOS / Kitt Peak National Observatory / OSIRIS-APEX Mission'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Apophis_February_2021_NBO.webm/500px--Apophis_February_2021_NBO.webm.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo']
+  },
+  {
+    id: 'anomaly-Underworld-kola-superdeep-borehole',
+    parentId: 'underworld',
+    name: 'Kola Superdeep Borehole \'Well to Hell\'',
+    description: 'The Soviets drilled 12,262 metres into the Baltic Shield, the deepest hole ever made, and stopped in 1992 when the rock at 180°C flowed like plastic. Within a year the \'Well to Hell\' story spread: microphones lowered into the shaft had recorded screaming, and the engineers fled. The recording is a hoax, the hole is real and welded shut, and the fact that the first thing people assumed about the deepest hole on Earth is that it opened on hell says something about what we all suspect is down there.',
+    layer: 'Underworld Entrances',
+    mapFeatureId: 'anomaly-Underworld-kola-superdeep-borehole',
+    timelineId: 'tl-Underworld-kola-superdeep-borehole',
+    relatedIds: ['underworld', 'anomaly-Underworld-mels-hole'],
+    sources: ['Kola Scientific Drilling Expedition Records / Trinity Broadcasting Network (1989)'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/%D0%9A%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%D0%B0%D1%8F_%D1%81%D0%B2%D0%B5%D1%80%D1%85%D0%B3%D0%BB%D1%83%D0%B1%D0%BE%D0%BA%D0%B0%D1%8F_%D1%81%D0%BA%D0%B2%D0%B0%D0%B6%D0%B8%D0%BD%D0%B0_crop.jpg/500px-%D0%9A%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%D0%B0%D1%8F_%D1%81%D0%B2%D0%B5%D1%80%D1%85%D0%B3%D0%BB%D1%83%D0%B1%D0%BE%D0%BA%D0%B0%D1%8F_%D1%81%D0%BA%D0%B2%D0%B0%D0%B6%D0%B8%D0%BD%D0%B0_crop.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'anomaly-Underworld-mels-hole',
+    parentId: 'underworld',
+    name: 'Mel\'s Hole',
+    description: 'In 1997 a caller to Art Bell\'s Coast to Coast AM, \'Mel Waters,\' described a nine-foot-wide shaft on his property near Ellensburg with no bottom: 80,000 feet of fishing line never touched down, a dead dog thrown in was later seen alive, and radios picked up old broadcasts near the rim. Then, he said, the government fenced the land and he was bought out. No hole has ever been found. Mel\'s Hole is the modern American version of the bottomless pit, told by a voice on the radio in the dark.',
+    layer: 'Underworld Entrances',
+    mapFeatureId: 'anomaly-Underworld-mels-hole',
+    relatedIds: ['underworld', 'anomaly-Underworld-kola-superdeep-borehole'],
+    sources: ['Coast to Coast AM Broadcasts (1997-2002) / Kittitas County Records'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Ellensburg_Washington_from_Manastash_Ridge_-_panoramio.jpg/1280px-Ellensburg_Washington_from_Manastash_Ridge_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1307',
+    parentId: 'crop-circle-formations',
+    name: 'Roundway Hill (2) Formation (Wiltshire)',
+    description: 'The second formation of the 2026 season on Roundway Hill, reported 18 July 2026 a week after the Roundway star, laid down in wheat below the ridge where the 1643 battle was fought. Two circles in one field in one month is either an artist with a season ticket or a signal that Roundway\'s chalk escarpment, like Milk Hill and Avebury, is a place the makers return to.',
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1307',
+    sources: ['Temporary Temples Crop Circle Archive (2026)'],
+    images: ['https://temporarytemples.co.uk/wp-content/uploads/2026/07/44.-_DSC1542-Roundway-Hill-2-18-07-26-OH.jpg', 'https://temporarytemples.co.uk/wp-content/uploads/2026/07/45.-_DSC1581-Roundway-Hill-2-18-07-26-OH2-.jpg', 'https://temporarytemples.co.uk/wp-content/uploads/2026/07/46.-_DSC1581-Roundway-Hill-2-18-07-26-OH3-.jpg']
+  },
+  {
+    id: 'anomaly-Crop-Circles-1308',
+    parentId: 'crop-circle-formations',
+    name: 'Kansas City Formation (Missouri)',
+    description: '[UNVERIFIED FOOTAGE] A rare American formation reported outside Kansas City in 2026 and circulated as drone footage with a request for anyone to decipher it. Circles in the US Midwest are uncommon and usually prove to be local artists, but no one has claimed this one. The pin is placed on the city; the field\'s location was not given.',
+    layer: 'Crop Circles',
+    mapFeatureId: 'anomaly-Crop-Circles-1308',
+    sources: ['Drone footage (X / maniaUFO), single source'],
+    images: ['https://x.com/i/status/2096221748953817531', 'https://pbs.twimg.com/amplify_video_thumb/1918391186588311552/img/g5dptjgbjQzX2znq.jpg']
   }
 ];
 

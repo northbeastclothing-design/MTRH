@@ -1485,5 +1485,41 @@ export const ALIEN_SIGHTINGS_DATA: AlienSightingCase[] = [
       "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!6BBd!%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F36004441-6012-41ff-8163-59603ef2fe7e_1867x2112.png",
       "https://images.weserv.nl/?url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%24s_!wLEj!%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_lossy%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F29f55e26-28b3-4f64-8754-7e0d4486b10b_440x504.gif"
     ]
+  },
+  {
+    id: "alien-sighting-howard-menger-1956",
+    name: "Howard Menger's Venusian Contacts - High Bridge, New Jersey (1956)",
+    category: "Alien Sightings",
+    type: "Point",
+    coordinates: { lng: -74.9, lat: 40.67 },
+    date: 1956,
+    displayDate: "1956-1959",
+    description: "[CONTACTEE ERA] Sign-painter Howard Menger claimed that from childhood he had met beautiful 'Space People' from Venus in the woods of New Jersey, that in 1956 he photographed and filmed their craft and crew, and that they flew him to the Moon, where he photographed a lunar base. He said they told him to build a free-energy motor. Menger later half-recanted, then recanted the recantation. The photographs survive, and the contactee gospel of benevolent, human-looking visitors is the mirror image of the biblical warning about angels of light.",
+    source: "Howard Menger, 'From Outer Space to You' (1959) / Alien Archive X Collection",
+    images: ["https://pbs.twimg.com/media/HRm8JXoWIAAa8bS.jpg", "https://pbs.twimg.com/media/HRm8LhcbwAA_S3S.jpg", "https://pbs.twimg.com/media/HRm8NcPWcAAfSxZ.jpg", "https://pbs.twimg.com/media/HRm8PYPboAAtX48.png"]
+  },
+  {
+    id: "alien-sighting-jonathan-reed-1996",
+    name: "Dr. Jonathan Reed 'Alien in the Freezer' - Cascade Mountains, Washington (1996)",
+    category: "Alien Sightings",
+    type: "Point",
+    coordinates: { lng: -121.9, lat: 47.6 },
+    date: 1996,
+    displayDate: "10-15-1996",
+    description: "[CONTESTED CASE] In October 1996 a Seattle psychologist calling himself Dr. Jonathan Reed said a small grey being killed his dog on a mountain trail, that he struck it with a branch, carried it home and kept it in his freezer, filming it for days while a black craft sat in the woods. The videotape, the 'obelisk' artefact and Reed's credentials have all been attacked as fabrications. Stabilised copies of the footage keep circulating because, fake or not, it is the only 'body in a freezer' tape anyone ever shot.",
+    source: "Jonathan Reed Video Testimony / Art Bell Coast to Coast Broadcasts / Stabilised Footage (JeninedUFO)",
+    images: ["https://x.com/i/status/2098980231000539569", "https://pbs.twimg.com/amplify_video_thumb/2098971539710582784/img/q7kfmto3GFEjvMnT.jpg"]
+  },
+  {
+    id: "alien-sighting-4chan-luke-afb-2017",
+    name: "'24489' 4chan Alien Photographs - Near Luke AFB, Arizona (2017)",
+    category: "Alien Sightings",
+    type: "Point",
+    coordinates: { lng: -112.5, lat: 33.6 },
+    date: 2017,
+    displayDate: "02-22-2017",
+    description: "[UNVERIFIED PHOTOS] Just after midnight on 22 February 2017 an anonymous 4chan user posted photographs captioned '24489 - taken approximately 24 miles northwest of Luke Air Force Base,' showing a thin grey figure in desert scrub. The thread vanished; the images did not. Anonymous imageboard leaks are the modern equivalent of the unsigned pamphlet: impossible to source, impossible to ignore, and occasionally true.",
+    source: "4chan /pol/ Thread Archive (2017) / anonymoushadoww compilation",
+    images: ["https://pbs.twimg.com/media/HNuMlCUbIAAikNy.jpg", "https://pbs.twimg.com/media/HNuMlCcaoAA2bZe.jpg"]
   }
 ];

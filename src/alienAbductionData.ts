@@ -261,5 +261,22 @@ export const ALIEN_ABDUCTION_DATA: AlienAbductionCase[] = [
     "description": "Air Force sergeant Charles Moody was watching a meteor shower in the desert when a metallic disc descended and hovered near his car. The car engine died, and he felt a strange numbness. He then saw several small, grey-skinned humanoids with large heads approach. Moody panicked and drove away when the car restarted, but realized he had lost about 90 minutes. He later recalled being taken inside the disc, meeting a leader named Elder, and seeing the engine systems.",
     "source": "APRO / Coral & Jim Lorenzen - UFO Abductions",
     "images": []
+  },
+  {
+    "id": "abduction-carl-higdon-1974",
+    "name": "Carl Higdon Hunting-Trip Abduction - Medicine Bow National Forest, Wyoming (1974)",
+    "category": "Alien Abductions",
+    "type": "Point",
+    "coordinates": {
+      "lng": -106.3,
+      "lat": 41.33
+    },
+    "date": 1974,
+    "displayDate": "10-25-1974",
+    "description": "[CLASSIC CASE] On 25 October 1974 oil driller Carl Higdon fired at an elk in the Medicine Bow forest and watched the bullet float out of the barrel and drop to the ground. A tall being in a black jumpsuit, 'Ausso,' offered him pills and took him in a transparent cubicle to a world with a blinding sun, then returned him; searchers found Higdon's truck miles from any road. His later medical exams showed old tuberculosis scars gone. The case is a textbook example of the 'healed by the visitors' motif.",
+    "source": "Dr. Leo Sprinkle (University of Wyoming) Hypnotic Regression Records / Carbon County Sheriff Report",
+    "images": [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Esterbrook_Medicine_Bow_NF.jpg/1280px-Esterbrook_Medicine_Bow_NF.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    ]
   }
 ];
