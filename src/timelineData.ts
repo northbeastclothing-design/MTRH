@@ -7308,6 +7308,56 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     description: 'For 19 years the Army\'s biological-warfare center at Fort Detrick infected 2,300 Seventh-day Adventist conscientious objectors with Q fever, tularemia, yellow fever and other agents to measure how much it took to incapacitate a man - the only large-scale deliberate human infection program the U.S.',
     source: 'U.S. Army Medical Research Institute of Infectious Diseases, Whitecoat program records; Senate Subcommittee on Health hearings (1977); FBI Amerithrax Investigative Summary (2010); CDC cease-and-desist to USAMRIID (July 2019)',
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Consent_Form%2C_Operation_White_Coat.jpg/500px-Consent_Form%2C_Operation_White_Coat.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-Nasa-Space-sts-48-1991',
+    name: 'STS-48: The Discovery \'Abrupt Turn\' Footage (1991)',
+    type: 'event',
+    layer: 'nasa-space',
+    start: 1991,
+    description: 'On 15 September 1991 the shuttle Discovery\'s payload-bay camera, broadcasting live on NASA Select, recorded a bright object rising over the Earth\'s horizon, moving steadily across the field - then a flash of light near the shuttle, and the object making an abrupt right-angle turn and accelerating away, while a streak of light shot through the space where it had just been.',
+    source: 'NASA STS-48 downlink video (15 Sept 1991); Jack Kasher, \'Five Proofs That STS-48 Objects Were Not Ice Particles\' (MUFON Symposium, 1994); Don Ecker, \'Hard Copy\' (1992)',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/STS-48_UARS_deployment.jpg/1280px-STS-48_UARS_deployment.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-Nasa-Space-sts-75-tether-1996',
+    name: 'STS-75: The Tether Incident & the Swarm (1996)',
+    type: 'event',
+    layer: 'nasa-space',
+    start: 1996,
+    description: 'On 25 February 1996 Columbia deployed a 12-mile tethered satellite to generate electricity from the Earth\'s magnetic field; the tether snapped, and when the crew filmed it three days later drifting 77 miles away, the camera caught dozens of pulsing, disc-shaped objects with a notch in them moving around and apparently behind the tether - some crossing it, which would make them miles across.',
+    source: 'NASA STS-75 downlink video (28 Feb 1996); NASA TSS-1R Mission Failure Investigation Board report (1996); David Sereda, \'Evidence: The Case for NASA UFOs\' (2001)',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/STS-75_Tethered_Satellite_System_deployment.jpg/1280px-STS-75_Tethered_Satellite_System_deployment.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-Nasa-Space-black-knight-1998',
+    name: 'The \'Black Knight\' Object Photographed from Endeavour (1998)',
+    type: 'event',
+    layer: 'nasa-space',
+    start: 1998,
+    description: 'During the first ISS assembly flight in December 1998 the Endeavour crew photographed a dark, angular object tumbling in orbit near the station - NASA catalogued it as a thermal blanket lost during a spacewalk and tracked it until it burned up.',
+    source: 'NASA photo STS088-724-65 (11 Dec 1998); James Oberg, \'The Black Knight Satellite\' analysis (2014); Duncan Lunan, Spaceflight (1973)',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Black_Knight_Satellite_%28STS088-724-65%29.jpg/1280px-Black_Knight_Satellite_%28STS088-724-65%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-Nasa-Space-face-on-mars-1976',
+    name: 'The Face on Mars & Cydonia (1976)',
+    type: 'event',
+    layer: 'nasa-space',
+    start: 1976,
+    description: 'Viking 1 frame 35A72, taken on 25 July 1976, shows a mile-long mesa in the Cydonia region that looks unmistakably like a face staring up from Mars, with a cluster of pyramid-shaped mounds and a \'city\' nearby.',
+    source: 'Viking Orbiter frame 035A72 (1976); DiPietro & Molenaar, \'Unusual Mars Surface Features\' (1982); MGS MOC image (April 1998); CIA Stargate session CRV \'Mars 1 million BC\' (22 May 1984)',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Face_on_Mars_with_Inset.jpg/1280px-Face_on_Mars_with_Inset.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-Nasa-Space-apollo-16-cl862-1972',
+    name: 'Apollo 16 Film CL-862: The \'Saucer\' Frame (1972)',
+    type: 'event',
+    layer: 'nasa-space',
+    start: 1972,
+    description: 'Four seconds of 16mm film shot through the command-module window as Apollo 16 headed home in April 1972 show a classic domed-saucer silhouette hanging over the lunar horizon.',
+    source: 'NASA film CL-862 (Apollo 16, 1972); NASA JSC analysis for Rep. Ruppersberger (2004); Apollo 11 technical air-to-ground transcript (Day 2); Buzz Aldrin, \'Science Channel\' interview (2005)',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/John_W._Young_on_the_Moon.jpg/1280px-John_W._Young_on_the_Moon.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
   }
 ];
 
@@ -7916,7 +7966,12 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'tl-event-201-2019': { lng: -73.97, lat: 40.76, locationName: 'The Pierre Hotel, New York', category: 'Government Conspiracies' },
   'tl-gain-of-function-ecohealth': { lng: -73.99, lat: 40.74, locationName: 'EcoHealth Alliance, New York', category: 'Government Conspiracies' },
   'tl-glyphosate-monsanto-2017': { lng: -90.44, lat: 38.66, locationName: 'Monsanto HQ, Creve Coeur, Missouri', category: 'Government Conspiracies' },
-  'tl-whitecoat-1954': { lng: -77.43, lat: 39.44, locationName: 'Frederick, Maryland', category: 'Government Conspiracies' }
+  'tl-whitecoat-1954': { lng: -77.43, lat: 39.44, locationName: 'Frederick, Maryland', category: 'Government Conspiracies' },
+  'tl-Nasa-Space-sts-48-1991': { lng: -80.604, lat: 28.608, locationName: 'Kennedy Space Center', category: 'NASA / Space' },
+  'tl-Nasa-Space-sts-75-tether-1996': { lng: -80.65, lat: 28.59, locationName: 'Kennedy Space Center', category: 'NASA / Space' },
+  'tl-Nasa-Space-black-knight-1998': { lng: -95.09, lat: 29.56, locationName: 'Johnson Space Center, Houston', category: 'NASA / Space' },
+  'tl-Nasa-Space-face-on-mars-1976': { lng: -118.17, lat: 34.2, locationName: 'Jet Propulsion Laboratory, Pasadena', category: 'NASA / Space' },
+  'tl-Nasa-Space-apollo-16-cl862-1972': { lng: -80.604, lat: 28.608, locationName: 'Launch Complex 39A, Florida', category: 'NASA / Space' }
 };
 
 export interface Waypoint {

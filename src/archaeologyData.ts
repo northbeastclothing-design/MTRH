@@ -1573,5 +1573,17 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
     description: "One-eyed giants of two kinds: the three elder Cyclopes who forged Zeus's thunderbolt under Etna, and the lawless shepherd-giants of Homer who kept no assemblies and ate men, among them Polyphemus, blinded by Odysseus in his cave. The Sicilians showed the giant's cave and the rocks he threw. Dwarf-elephant skulls found in Sicilian caves, with a single nasal cavity in the forehead, are the mainstream explanation; the Greeks who found them had no doubt what they were looking at.",
     source: "Homer, Odyssey IX / Hesiod, Theogony / Othenio Abel (1914)",
     images: ["https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Head_of_a_Cyclops_Colosseum.jpg/330px-Head_of_a_Cyclops_Colosseum.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"]
+  },
+  {
+    id: "archaeology-ubaid-lizard-figurines",
+    name: "The Ubaid 'Lizard-Headed' Figurines - Ur & Eridu, Iraq",
+    category: "Archaeological Finds",
+    type: "Point",
+    coordinates: { lng: 46.1, lat: 30.96 },
+    date: -5000,
+    displayDate: "c. 5000-4000 BC",
+    description: "The oldest figurines in Mesopotamia, from the Ubaid culture that preceded the Sumerians at Ur and Eridu, show men and women - some nursing babies - with elongated heads, slanted almond eyes, and faces that look like lizards or snakes, wearing the shoulder pads and headdresses of their society. Archaeologists call the heads stylized or deformed by binding; the figures are in the British Museum and Baghdad. They come from the very ground where the Anunnaki stories and the first temples arose, Enki's city of Eridu, and they are the single most-cited artifact in the reptilian theory: a civilization at the dawn of history portraying its elite as serpent-faced beings. Genesis 3 puts a talking serpent at the start of the story too, and Eden's rivers run through this ground.",
+    source: "Sir Leonard Woolley, 'Ur Excavations IV: The Early Periods' (1955); British Museum ME 1919,1011.4913; Genesis 3:1-15",
+    images: ["https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Bowl_MET_DP104228_%28cropped%29.jpg/1280px-Bowl_MET_DP104228_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"]
   }
 ];

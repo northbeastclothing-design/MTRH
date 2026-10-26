@@ -53735,5 +53735,539 @@
   "images": [
    "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Consent_Form%2C_Operation_White_Coat.jpg/500px-Consent_Form%2C_Operation_White_Coat.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
   ]
+ },
+ {
+  "id": "anomaly-Cattle-Mutilations-snippy-1967",
+  "name": "Snippy the Horse: The First Modern Mutilation (1967) - Alamosa, Colorado",
+  "category": "Cattle Mutilations",
+  "type": "Point",
+  "coordinates": {
+   "lng": -105.87,
+   "lat": 37.47
+  },
+  "date": 1967,
+  "description": "On 9 September 1967 a three-year-old Appaloosa named Lady (the press called her Snippy) was found on the King ranch in the San Luis Valley with the flesh stripped cleanly from her head and neck down to the bone, the cut so smooth it looked cauterized, no blood on the ground, the tracks ending a hundred feet from the body, and a strong medicinal smell; nearby were burn marks, crushed bushes and 'exhaust marks' in a circle, and a Geiger counter reportedly went off. The valley had been swarming with UFO reports all summer. A pathologist found the abdominal cavity empty and the brain missing. The Condon Committee's investigator dismissed it; the Associated Press put it on front pages nationwide, and the mutilation phenomenon had its first name. The skeleton is still in Alamosa.",
+  "source": "Pueblo Chieftain (5 Oct 1967); Condon Report, Case 32 (1969); Christopher O'Brien, 'The Mysterious Valley' (1996)",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Great_plains_storm_-_Great_Sand_Dunes_National_Park.jpg/1280px-Great_plains_storm_-_Great_Sand_Dunes_National_Park.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Cattle-Mutilations-kansas-nebraska-1973",
+  "name": "The 1973 Kansas-Nebraska Wave - Lincoln County, Kansas",
+  "category": "Cattle Mutilations",
+  "type": "Point",
+  "coordinates": {
+   "lng": -98.2,
+   "lat": 39.05
+  },
+  "date": 1973,
+  "description": "The phenomenon went from one horse to an epidemic in the autumn of 1973: dozens of cattle across central Kansas and southern Nebraska found with the same bloodless surgical removals - genitals, udder, tongue, an ear, an eye, sometimes the heart through a small hole - reported within weeks of each other, with lights in the sky and unmarked helicopters, and the Kansas Bureau of Investigation forced to open a file. The county-by-county map compiled on 13 December 1973 is the first attempt to chart the thing; it spread to Minnesota, Iowa, Texas and Colorado the next year. Veterinary schools blamed predators and bloat; ranchers who had skinned animals all their lives said they knew what a coyote looked like.",
+  "source": "Kansas Bureau of Investigation file (Dec 1973); Nebraska State Patrol reports; Frederick W. Smith, 'Cattle Mutilation: The Unthinkable Truth' (1976)",
+  "images": [
+   "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Cattle_Mutilations_by_county_in_Kansas_and_Nebraska_-_December_13_1973.png/1280px-Cattle_Mutilations_by_county_in_Kansas_and_Nebraska_-_December_13_1973.png"
+  ]
+ },
+ {
+  "id": "anomaly-Cattle-Mutilations-elbert-county-colorado-1975",
+  "name": "The 1975 Colorado Wave & Sheriff Yarnell - Elbert County, Colorado",
+  "category": "Cattle Mutilations",
+  "type": "Point",
+  "coordinates": {
+   "lng": -104.13,
+   "lat": 39.3
+  },
+  "date": 1975,
+  "description": "Colorado logged over 200 mutilations in 1975 alone, and Elbert County east of Denver was the epicenter: Sheriff George Yarnell, a cattleman himself, documented carcasses with ears, eyes, tongues and sex organs removed by cuts 'like a laser,' no blood, no tracks in fresh snow, and the body sometimes found in a place no truck could reach as if it had been dropped. Ranchers armed themselves and shot at helicopters; the state legislature passed a resolution, Senator Floyd Haskell demanded an FBI investigation, and the Colorado Bureau of Investigation ran a two-year probe that concluded 'predators' while admitting it could not explain the clean cuts. Howe filmed Yarnell for 'A Strange Harvest' standing over the evidence.",
+  "source": "Colorado Bureau of Investigation report (1977); Sen. Floyd Haskell letter to FBI (29 Aug 1975); Rommel Report (New Mexico, 1980)",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/St._Mark_United_Presbyterian_Church_04.JPG/1280px-St._Mark_United_Presbyterian_Church_04.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Cattle-Mutilations-cascade-county-montana-1975",
+  "name": "Mutilations, UFOs & Nuclear Missiles (1975) - Malmstrom AFB, Montana",
+  "category": "Cattle Mutilations",
+  "type": "Point",
+  "coordinates": {
+   "lng": -111.3,
+   "lat": 47.5
+  },
+  "date": 1975,
+  "description": "In the autumn of 1975 Cascade County, Montana, which surrounds the Minuteman missile fields of Malmstrom Air Force Base, reported a cluster of cattle mutilations at the same time the base was logging UFOs hovering over its launch silos - the Air Force's own documents, released under FOIA, record 'unidentified aircraft' and helicopters over the sites for weeks, with sabotage alert teams scrambled and one object tracked on radar before NORAD lost it. Sheriff Keith Wolverton collected the mutilation reports, including a witness who saw a cow lifted by a beam of light. The link between the mutilation wave, missile bases and the 1975 Northern Tier UFO alerts (Loring, Wurtsmith, Malmstrom) is one of the most documented and least explained in the files.",
+  "source": "USAF 24th NORAD Region log (Nov 1975, FOIA); Keith Wolverton & Roberta Donovan, 'Mystery Stalks the Prairie' (1976); Robert Hastings, 'UFOs and Nukes' (2008)",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Air_Force_UH-1.jpg/1280px-Air_Force_UH-1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Cattle-Mutilations-dulce-new-mexico-1976",
+  "name": "The Dulce Mutilations & Officer Gabe Valdez (1976) - Dulce, New Mexico",
+  "category": "Cattle Mutilations",
+  "type": "Point",
+  "coordinates": {
+   "lng": -106.99,
+   "lat": 36.93
+  },
+  "date": 1976,
+  "description": "On the Jicarilla Apache reservation, state police officer Gabe Valdez investigated dozens of mutilations on Manuel Gomez's ranch from 1976 on: he found tripod marks and gas-mask canisters near carcasses, a calf whose stomach held drug residue, cattle marked with fluorescent paint visible only under UV, and he reported following tracks that ended in mid-field and seeing craft at night. Valdez came to believe a covert program was using the animals for radiation and biological testing after the Gasbuggy nuclear test nearby - the 'alien base under Archuleta Mesa' legend grew out of his cases through Paul Bennewitz, who was then fed disinformation by Air Force counterintelligence. Dulce is where mutilations, UFOs, underground bases and government deception meet on one mesa.",
+  "source": "New Mexico State Police reports of Officer Gabe Valdez (1976-1978); Rommel Report (1980); Greg Bishop, 'Project Beta' (2005)",
+  "images": [
+   "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Dulce_Lake%2C_Jacarilla_Apache_Nation%2C_New_Mexico%2C_USA.jpg/1280px-Dulce_Lake%2C_Jacarilla_Apache_Nation%2C_New_Mexico%2C_USA.jpg"
+  ]
+ },
+ {
+  "id": "anomaly-Cattle-Mutilations-fyffe-alabama-1993",
+  "name": "The Fyffe Mutilations (1993) - Fyffe, Alabama",
+  "category": "Cattle Mutilations",
+  "type": "Point",
+  "coordinates": {
+   "lng": -85.9,
+   "lat": 34.45
+  },
+  "date": 1993,
+  "description": "Fyffe, a town of a thousand on Sand Mountain, had already made national news in 1989 for a mass UFO sighting over the town; in early 1993 the cattle started turning up. Police chief Junior Garmany and officer Ted Oliver documented more than thirty cases across DeKalb County - udders, genitals, tongues and eyes removed with surgical precision, no blood at the scene, carcasses untouched by buzzards and dogs - and sent samples to a lab that reported the cuts had been made with high heat. The town sold 'UFO capital of Alabama' T-shirts, the sheriff blamed coyotes, and the cases stopped as suddenly as they began. The Fyffe reports were investigated by Howe and became a standard set in the literature because the police kept careful records.",
+  "source": "DeKalb County Sheriff / Fyffe Police Department reports (1993); Birmingham News (Feb 1993); Linda Moulton Howe, 'Glimpses of Other Realities' vol. 1 (1993)",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Fyffe-Main-al.jpg/1280px-Fyffe-Main-al.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Cattle-Mutilations-canovanas-puerto-rico-1995",
+  "name": "The Chupacabra Wave: 150 Animals Drained (1995) - Canóvanas, Puerto Rico",
+  "category": "Cattle Mutilations",
+  "type": "Point",
+  "coordinates": {
+   "lng": -65.9,
+   "lat": 18.38
+  },
+  "date": 1995,
+  "description": "In the spring and summer of 1995 goats, sheep, chickens, dogs and cattle across eastern Puerto Rico were found dead with small puncture wounds in the neck and their blood drained; Canóvanas alone reported over 150 animals, and the mayor, José 'Chemo' Soto, led armed night patrols with a caged goat as bait. Witnesses described a grey, spiny, red-eyed biped that hopped like a kangaroo - Madelyne Tolentino's August sighting produced the standard drawing - and the creature got its name, chupacabra, 'goat-sucker.' The island's El Yunque rainforest, home to the Arecibo radio telescope and a U.S. military presence, has fed theories of an escaped experiment ever since. The phenomenon jumped to Mexico, Chile and Texas within two years.",
+  "source": "El Vocero (Aug-Nov 1995); Scott Corrales, 'Chupacabras and Other Mysteries' (1997); Benjamin Radford, 'Tracking the Chupacabra' (2011)",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Canovanas%2C_Puerto_Rico_%28aerial%29.JPG/1280px-Canovanas%2C_Puerto_Rico_%28aerial%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Cattle-Mutilations-skinwalker-ranch-1996",
+  "name": "Skinwalker Ranch Mutilations (1996) - Uintah Basin, Utah",
+  "category": "Cattle Mutilations",
+  "type": "Point",
+  "coordinates": {
+   "lng": -109.89,
+   "lat": 40.26
+  },
+  "date": 1996,
+  "description": "The Sherman family bought the 512-acre ranch in 1994 and lost cattle almost immediately: a calf found in a field with its body cavity emptied and no blood forty-five minutes after it was seen alive; cows with surgically removed organs; a dog that vanished into a ball of light and was found as a greasy spot. In 1996 Robert Bigelow bought the ranch and installed his National Institute for Discovery Science - scientists with cameras and a veterinarian - who documented more mutilations, orbs, a 'portal' and a creature that climbed out of it. The Pentagon's AAWSAP program later funded Bigelow's work there with $22 million, which is how cattle mutilations ended up in a Defense Intelligence Agency budget. The Shermans' ranch was called by the Utes a place forbidden to their people.",
+  "source": "Colm Kelleher & George Knapp, 'Hunt for the Skinwalker' (2005); Deseret News (30 June 1996); DIA AAWSAP contract (2008)",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Skinwalker_Ranch_%2810393732103%29.jpg/1280px-Skinwalker_Ranch_%2810393732103%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Cattle-Mutilations-la-pampa-argentina-2002",
+  "name": "The Argentine Wave: 400 Mutilations in One Year (2002) - La Pampa, Argentina",
+  "category": "Cattle Mutilations",
+  "type": "Point",
+  "coordinates": {
+   "lng": -63.75,
+   "lat": -35.66
+  },
+  "date": 2002,
+  "description": "Starting in April 2002 the pampas produced the largest mutilation wave ever recorded anywhere: over 400 cattle in La Pampa, Buenos Aires, Córdoba and Santa Fe provinces within a few months, with the classic signature - tongue, jaw flesh, udder, genitals and anus removed by clean cuts, no blood, no tracks - plus strange lights reported over the fields. The national agricultural agency SENASA announced the culprit was the red-muzzled mouse (Oxymycterus rufus) eating the soft tissue of animals that had died naturally, which ranchers greeted with open laughter; the Argentine press ran it daily for a year. Cases continued at a lower rate through 2020 and remain a staple of South American ufology.",
+  "source": "SENASA report (June 2002); La Nación (May-July 2002); Scott Corrales, 'The Argentine Mutilations of 2002' (Inexplicata)",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Parque_Nacional_Lihu%C3%A9_Calel.jpg/1280px-Parque_Nacional_Lihu%C3%A9_Calel.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Cattle-Mutilations-silvies-valley-oregon-2019",
+  "name": "Five Bulls Drained of Blood (2019) - Silvies Valley Ranch, Oregon",
+  "category": "Cattle Mutilations",
+  "type": "Point",
+  "coordinates": {
+   "lng": -118.95,
+   "lat": 43.95
+  },
+  "date": 2019,
+  "description": "In July 2019 five purebred Hereford bulls worth $6,000 each were found over several days on the 140,000-acre Silvies Valley Ranch in Harney County - each drained of blood, with the tongue and genitals removed by clean cuts, no blood on the ground, no tracks, no signs of a struggle or of scavenging, and one dead on its stomach with its legs spread as if dropped. The sheriff's office asked the public for leads and got none; the ranch's vice president told reporters, 'It's rugged, there's a lot of trees... one week there's five dead bulls,' and the Oregon Cattlemen's Association put up a reward. NPR, the New York Times and the BBC covered it; nobody has explained it. The same signature as Colorado 1975, forty-four years later.",
+  "source": "Harney County Sheriff's Office press release (July 2019); Oregon Public Broadcasting (3 Oct 2019); New York Times (27 Sept 2019)",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Poison_Creek_Reservoir%2C_Silvies_Valley%2C_US_Highway_395_-_DPLA_-_53ded1356a76f0efbd3598730ef63144.jpg/1280px-Poison_Creek_Reservoir%2C_Silvies_Valley%2C_US_Highway_395_-_DPLA_-_53ded1356a76f0efbd3598730ef63144.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Cattle-Mutilations-madison-county-texas-2023",
+  "name": "Six Cattle Along Highway 20 (2023) - Madison County, Texas",
+  "category": "Cattle Mutilations",
+  "type": "Point",
+  "coordinates": {
+   "lng": -95.92,
+   "lat": 30.96
+  },
+  "date": 2023,
+  "description": "In April 2023 the Madison County Sheriff's Office issued a public statement that six cattle - a cow and five others across Madison, Brazos and Robertson counties along a stretch of State Highway OSR - had been found with the hide around one side of the mouth removed in 'a straight, clean cut with apparent precision,' the tongue gone, no blood spilled, no tracks or footprints, no signs of struggle, and the carcasses untouched by predators or birds for weeks. One cow had her anus and genitalia removed in a circular cut. The sheriff was blunt that it matched reports from other states and asked for help. It was the first time in years a law-enforcement agency had put the classic signature in an official release, and it went around the world.",
+  "source": "Madison County Sheriff's Office Facebook statement (19 April 2023); KBTX / CBS News (20 April 2023)",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Madison_County_Texas_Courthouse_2019.jpg/1280px-Madison_County_Texas_Courthouse_2019.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-UFO-mcminnville-1950",
+  "name": "The McMinnville (Trent) Photographs (1950) - McMinnville, Oregon",
+  "category": "UFOs - Sightings",
+  "type": "Point",
+  "coordinates": {
+   "lng": -123.2,
+   "lat": 45.21
+  },
+  "date": 1950,
+  "description": "On the evening of 11 May 1950 Evelyn Trent was feeding rabbits on her farm outside McMinnville when she saw a slow, silent metallic disc with a flat bottom and a small superstructure drifting over the fields; her husband Paul got two frames on their Kodak before it tilted and sped off west. The Trents never sought money or fame; the negatives went to the local paper, then LIFE magazine, and sat in a newspaper's files for decades. The 1968 Condon Report - the Air Force's own debunking study - concluded that 'all factors investigated, geometric, psychological and physical, appear to be consistent with the assertion that an extraordinary flying object, silvery, metallic, disk-shaped, tens of meters in diameter, and evidently artificial, flew within sight of two witnesses.' Skeptics have argued since for a truck mirror on a string. The town holds a UFO festival every May.",
+  "source": "Condon Report, Case 46 (1969); LIFE magazine (26 June 1950); Bruce Maccabee, photometric analysis (1976)",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/UFO_picture_taken_by_Paul_Trent_in_McMinnville%2C_Oregon.jpg/1280px-UFO_picture_taken_by_Paul_Trent_in_McMinnville%2C_Oregon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-UFO-lubbock-lights-1951",
+  "name": "The Lubbock Lights (1951) - Lubbock, Texas",
+  "category": "UFOs - Sightings",
+  "type": "Point",
+  "coordinates": {
+   "lng": -101.85,
+   "lat": 33.58
+  },
+  "date": 1951,
+  "description": "On 25 August 1951 three Texas Tech professors sitting in a backyard watched a V-formation of 20-30 bluish-green lights pass silently overhead at high speed, then come back; over the next two weeks they and dozens of others saw the formation repeatedly, and on 30 August a 19-year-old freshman, Carl Hart Jr., photographed it five times with a Kodak 35. The Air Force's Project Blue Book investigated at length - Captain Edward Ruppelt called it 'one of the best documented' cases - could not find a flaw in Hart's negatives, and eventually announced a 'natural phenomenon' (plovers reflecting streetlights) that the professors flatly rejected. The photographs ran in LIFE in 1952. Hart, who never changed his story, died in 2023.",
+  "source": "Project Blue Book case file (Sept 1951); Edward Ruppelt, 'The Report on Unidentified Flying Objects' (1956) ch. 8; LIFE (7 April 1952)",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Lubbock_Skyline.jpg/1280px-Lubbock_Skyline.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-UFO-washington-flap-1952",
+  "name": "The Washington National Flap: Saucers Over the Capitol (1952) - Washington, D.C.",
+  "category": "UFOs - Sightings",
+  "type": "Point",
+  "coordinates": {
+   "lng": -77.01,
+   "lat": 38.89
+  },
+  "date": 1952,
+  "description": "Two consecutive weekends in July 1952: radar at Washington National Airport and Andrews AFB tracked up to a dozen unknown objects over the White House and Capitol at speeds up to 7,000 mph, airline pilots saw the lights, and F-94 interceptors were scrambled - on 26 July the objects went dark as the jets approached and lit up again when they left, and one pilot radioed that he was surrounded. It was the biggest front page since V-J Day ('SAUCERS SWARM OVER CAPITAL'). The Air Force held the largest press conference since the war to blame temperature inversions, and within months the CIA convened the Robertson Panel, which recommended a program to 'debunk' UFOs through the media and keep the public from being distracted - the origin of the ridicule policy that lasted seventy years.",
+  "source": "Project Blue Book files (July 1952); Washington Post (28 July 1952); Robertson Panel report (CIA, Jan 1953, declassified 1975)",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Washington_National_%281944%29.jpg/1280px-Washington_National_%281944%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-UFO-passaic-1952",
+  "name": "The George Stock Photographs (1952) - Passaic, New Jersey",
+  "category": "UFOs - Sightings",
+  "type": "Point",
+  "coordinates": {
+   "lng": -74.13,
+   "lat": 40.86
+  },
+  "date": 1952,
+  "description": "Two days after the second Washington weekend, on 29 July 1952, George Stock was in his yard in Passaic when a domed disc about 25 feet across came drifting over the rooftops at an estimated 200 feet, slow enough for him to run inside for his camera and take five photographs as it hovered and moved off. They are among the sharpest daylight disc photographs ever taken - a classic 'Adamski-type' saucer with a dome and a flat rim, in a suburban street with telephone wires for scale - and have never been conclusively exposed as fakes, though their provenance through a UFO publisher has kept them in the 'controversial' file. Stock never sought publicity and died without changing his account.",
+  "source": "Passaic Herald-News (Aug 1952); Project Blue Book file; Wendelle Stevens & August Roberts, 'UFO Photographs Around the World' (1985)",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Supposed_UFO%2C_Passaic%2C_New_Jersey.jpg/1280px-Supposed_UFO%2C_Passaic%2C_New_Jersey.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-UFO-battle-of-los-angeles-1942",
+  "name": "The Battle of Los Angeles (1942) - Los Angeles, California",
+  "category": "UFOs - Sightings",
+  "type": "Point",
+  "coordinates": {
+   "lng": -118.24,
+   "lat": 34.05
+  },
+  "date": 1942,
+  "description": "Eleven weeks after Pearl Harbor, in the early hours of 25 February 1942, air-raid sirens went off across Los Angeles and the 37th Coast Artillery Brigade fired 1,440 anti-aircraft shells for nearly an hour at something hanging in the searchlights over Culver City and Santa Monica - 'a huge object, like a hovering balloon or blimp,' witnesses said, which took direct hits and did not fall; shrapnel killed five people on the ground. No Japanese aircraft were ever found to have been there; the Navy said war nerves, the Army said unidentified aircraft, and the LA Times published the famous photograph of the beams converging on an object (retouched for print, as was standard). The first modern mass UFO event, and the first time a military fired on one.",
+  "source": "Los Angeles Times (26 Feb 1942); Secretary of War Stimson memo (26 Feb 1942); USAF Historical Studies No. 88, 'The Army Air Forces in WWII' vol. 1",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Battle_of_Los_Angeles_LATimes.jpg/500px-Battle_of_Los_Angeles_LATimes.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-UFO-kenneth-arnold-1947",
+  "name": "Kenneth Arnold & the First 'Flying Saucers' (1947) - Mount Rainier, Washington",
+  "category": "UFOs - Sightings",
+  "type": "Point",
+  "coordinates": {
+   "lng": -121.76,
+   "lat": 46.85
+  },
+  "date": 1947,
+  "description": "On 24 June 1947 a private pilot and fire-equipment salesman flying his CallAir near Mount Rainier saw nine bright crescent-shaped objects flying in echelon at a speed he clocked at over 1,200 mph - 'like a saucer would if you skipped it across the water,' he told reporters, which a headline writer turned into 'flying saucers.' Within two weeks there were hundreds of reports across the country, Roswell happened on 8 July, and the modern UFO era had begun. Arnold was a respected, sober witness who later investigated the Maury Island case with two Army intelligence officers who died when their B-25 crashed flying the evidence back to base. His drawing for Army Air Forces intelligence shows a heel-shaped craft, not a disc.",
+  "source": "East Oregonian (25 June 1947); Arnold's report to Army Air Forces Intelligence (12 July 1947); Kenneth Arnold & Ray Palmer, 'The Coming of the Saucers' (1952)",
+  "images": [
+   "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Kenneth_arnold_ufo_sighting_2.png/1280px-Kenneth_arnold_ufo_sighting_2.png"
+  ]
+ },
+ {
+  "id": "anomaly-UFO-trindade-1958",
+  "name": "The Trindade Island Navy Photographs (1958) - Trindade, Brazil",
+  "category": "UFOs - Sightings",
+  "type": "Point",
+  "coordinates": {
+   "lng": -29.32,
+   "lat": -20.51
+  },
+  "date": 1958,
+  "description": "On 16 January 1958 the Brazilian Navy ship Almirante Saldanha was anchored off the remote island of Trindade with scientists for the International Geophysical Year when a Saturn-shaped object - a disc with a ring - came over the island in front of dozens of sailors and officers; the civilian photographer Almiro Baraúna took four frames in fourteen seconds as it looped around the peak and sped off. The Navy developed the film aboard ship, the Brazilian president released the photographs to the press a month later, and the Navy's own report called the object 'unidentified.' Decades of claims that Baraúna confessed to a hoax rest on a second-hand anecdote he denied until he died. Brazil's official UFO archive, released in 2009, still carries the case.",
+  "source": "Brazilian Navy report (Feb 1958); O Globo and Correio da Manhã (22 Feb 1958); Brazilian National Archives UFO release (2009)",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Simone_Marinho_-_Trindade_-_2010_05_08_edited.jpg/1280px-Simone_Marinho_-_Trindade_-_2010_05_08_edited.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-UFO-nuremberg-1561",
+  "name": "The Nuremberg Celestial Battle (1561) - Nuremberg, Germany",
+  "category": "UFOs - Sightings",
+  "type": "Point",
+  "coordinates": {
+   "lng": 11.08,
+   "lat": 49.45
+  },
+  "date": 1561,
+  "description": "At dawn on 14 April 1561 the citizens of Nuremberg saw the sky fill with hundreds of spheres, cylinders and crosses, blood-red, blue and black, that 'fought one another' for about an hour before falling to earth outside the city in smoke, followed by a great black spear-shaped object. The printer Hans Glaser issued a broadsheet with a woodcut and a sermon reading it as a warning from God to repent. Carl Jung reproduced it in 'Flying Saucers' (1958) as a precedent for the modern phenomenon; astronomers propose a sun-dog display; the woodcut's tubes 'from which balls came out' do not look like any parhelion. Whatever it was, a whole city saw a war in heaven and understood it as such - which is exactly how Revelation 12 describes one.",
+  "source": "Hans Glaser broadsheet, Nuremberg (1561), Zentralbibliothek Zürich; C.G. Jung, 'Flying Saucers: A Modern Myth' (1958); Revelation 12:7",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Himmelserscheinung_%C3%BCber_N%C3%BCrnberg_vom_14._April_1561.jpg/500px-Himmelserscheinung_%C3%BCber_N%C3%BCrnberg_vom_14._April_1561.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-UFO-basel-1566",
+  "name": "The Basel Black Spheres (1566) - Basel, Switzerland",
+  "category": "UFOs - Sightings",
+  "type": "Point",
+  "coordinates": {
+   "lng": 7.59,
+   "lat": 47.56
+  },
+  "date": 1566,
+  "description": "Five years after Nuremberg, on 7 August 1566 at sunrise, the people of Basel watched 'many large black globes' racing across the sun at great speed, turning against each other 'as if fighting,' some glowing red and burning out - the third in a sequence of strange suns and moons over the city that summer, recorded by the student Samuel Coccius in a broadsheet printed the same year. Two Protestant cities, two printers, two unrelated witnesses describing aerial objects in combat in the same decade; both read it as a sign that the Last Days were near. The swarm-of-black-spheres description is the one that keeps resurfacing, from Stralsund in 1665 to the 'orbs' in modern military footage.",
+  "source": "Samuel Coccius broadsheet, Basel (1566), Zentralbibliothek Zürich; Jung, 'Flying Saucers' (1958)",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/LinkSeltsame_Gestalt_so_in_disem_MDLXVI_Jar.jpg/500px-LinkSeltsame_Gestalt_so_in_disem_MDLXVI_Jar.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-UFO-socorro-zamora-1964",
+  "name": "The Socorro Landing: Officer Lonnie Zamora (1964) - Socorro, New Mexico",
+  "category": "UFOs - Sightings",
+  "type": "Point",
+  "coordinates": {
+   "lng": -106.89,
+   "lat": 34.05
+  },
+  "date": 1964,
+  "description": "On 24 April 1964 police sergeant Lonnie Zamora broke off a speeding chase to investigate a roar and a flame in the desert and found an egg-shaped white craft on four legs in an arroyo, with two small figures in white coveralls beside it who looked startled to see him; as he approached it roared, lifted off on a blue flame and flew away silently. He radioed it in before it left. Investigators found four landing-pad depressions, burned brush still smouldering, and a red insignia Zamora drew that the Air Force asked him to keep secret. Project Blue Book's chief, Hector Quintanilla, who debunked nearly everything, wrote that it was the best-documented case on record and he could not explain it; J. Allen Hynek said Zamora was the most credible witness he ever interviewed. The Air Force listed it 'unidentified.'",
+  "source": "Project Blue Book case 8766; Hector Quintanilla, 'UFOs: An Air Force Dilemma' (CIA Studies in Intelligence, 1966); J. Allen Hynek, 'The UFO Experience' (1972)",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Lonnie_Zamora-tuig_van_24_April_1964_te_Secorro%2C_NM%2C_a.jpg/1280px-Lonnie_Zamora-tuig_van_24_April_1964_te_Secorro%2C_NM%2C_a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-UFO-phoenix-lights-1997",
+  "name": "The Phoenix Lights (1997) - Phoenix, Arizona",
+  "category": "UFOs - Sightings",
+  "type": "Point",
+  "coordinates": {
+   "lng": -112.07,
+   "lat": 33.45
+  },
+  "date": 1997,
+  "description": "On the night of 13 March 1997 thousands of people across 300 miles from Nevada to Tucson watched a silent V-shaped craft, 'a mile wide,' with five or more lights, drift over Phoenix low enough to blot out the stars - including Governor Fife Symington, a former Air Force officer, who mocked it at a press conference with an aide in an alien costume and ten years later admitted on CNN he had seen it himself and 'it was enormous, it just felt otherworldly.' A separate set of lights filmed over the Estrella Mountains at 10 p.m. was explained as flares from A-10s on a training exercise; the earlier flyover, seen by Symington and witnesses with the craft directly overhead, was not. The most-witnessed UFO event in American history was ignored by the national press for three months.",
+  "source": "Arizona Republic (18 June 1997); Fife Symington, CNN interview (March 2007); Lynne Kitei, 'The Phoenix Lights' (2004)",
+  "images": [
+   "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/1997.3.13VUFO1.JPG/1280px-1997.3.13VUFO1.JPG"
+  ]
+ },
+ {
+  "id": "anomaly-UFO-rex-heflin-1965",
+  "name": "The Rex Heflin Polaroids (1965) - Santa Ana, California",
+  "category": "UFOs - Sightings",
+  "type": "Point",
+  "coordinates": {
+   "lng": -117.87,
+   "lat": 33.75
+  },
+  "date": 1965,
+  "description": "Orange County highway inspector Rex Heflin took four Polaroids from his truck on 3 August 1965 of a hat-shaped metallic disc hovering over the road with a dust ring beneath it, then a smoke ring it left behind. The photos were examined by NICAP and the Air Force; the Condon Committee called them inconclusive. Then two men claiming to be from NORAD visited Heflin, borrowed the three best originals, and never returned them - the earliest well-documented 'Men in Black' confiscation - until, in 1993, the originals were mysteriously returned to his mailbox. A 2000 photogrammetric analysis of the recovered Polaroids found a 'particulate cloud' under the object consistent with a large craft at distance rather than a model. Heflin died in 2005 still insisting they were real.",
+  "source": "Santa Ana Register (20 Sept 1965); Condon Report Case 52; Ann Druffel, Robert Wood & Eric Kelson, 'Reanalysis of the 1965 Heflin UFO Photos' (Journal of Scientific Exploration, 2000)",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/County_Yard%2C_Fruit_Street%2C_Santa_Ana%2C_1965.jpg/1280px-County_Yard%2C_Fruit_Street%2C_Santa_Ana%2C_1965.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-UFO-falcon-lake-1967",
+  "name": "The Falcon Lake Incident: Burned by a Saucer (1967) - Whiteshell, Manitoba",
+  "category": "UFOs - Sightings",
+  "type": "Point",
+  "coordinates": {
+   "lng": -95.27,
+   "lat": 50.1
+  },
+  "date": 1967,
+  "description": "On 20 May 1967 amateur prospector Stefan Michalak was chipping quartz in the Whiteshell when two glowing discs descended; one landed, a door opened, he heard voices, and when he touched the hot hull his glove melted and an exhaust vent blasted him in the chest, burning a grid of dots through his shirt and skin. He staggered out sick and vomiting with a 'horrible smell of sulphur'; a doctor found a pattern of raised burns matching the vent grille, he lost weight and developed radiation-like symptoms, and radioactive soil was later found at the site. The RCMP, the Royal Canadian Air Force, Mayo Clinic and the U.S. Condon Committee investigated without resolving it; Canada's government listed it unexplained, and in 2018 the Royal Canadian Mint struck a glow-in-the-dark coin commemorating it. His son Stan still has the burned shirt.",
+  "source": "RCMP file (1967); Condon Report Case 22; Stan Michalak & Chris Rutkowski, 'When They Appeared' (2017); Royal Canadian Mint 'Falcon Lake Incident' coin (2018)",
+  "images": [
+   "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Falcon_Lake%2C_Whiteshell_Provincial_Park_%28181113533%29.jpg/1280px-Falcon_Lake%2C_Whiteshell_Provincial_Park_%28181113533%29.jpg"
+  ]
+ },
+ {
+  "id": "anomaly-UFO-uss-roosevelt-1958",
+  "name": "UFO Over the USS Franklin D. Roosevelt: Radar Operator Harry Jordan (1958) - North Atlantic",
+  "category": "UFOs - Sightings",
+  "type": "Point",
+  "coordinates": {
+   "lng": -70.0,
+   "lat": 35.0
+  },
+  "date": 1958,
+  "description": "The USS Franklin D. Roosevelt was the Navy's first nuclear-weapons carrier, and its radar operators reported UFOs shadowing it repeatedly from 1952 into the 1960s. Harry Allen Jordan, on the carrier's CIC radar during a 1958 Mediterranean/Atlantic deployment, tracked an object the size of a ship at 80,000 feet that descended to pace the carrier, with its entire electrical system failing as the object closed - and then watched Navy intelligence officers collect the logs and order the crew to forget it. Chester Grusinski, another crewman, described the whole ship's company called to the flight deck in 1958 to see a cigar-shaped object with portholes and figures inside. The 'UFOs and nukes' pattern - objects fixated on nuclear-armed ships, missile fields and weapons labs - starts here, and Jordan told it on camera.",
+  "source": "Harry Allen Jordan interview (Disclosure Project, 2001); Robert Hastings, 'UFOs and Nukes' (2008) ch. 6; Chester Grusinski affidavit",
+  "images": [
+   "https://www.youtube.com/watch?v=8QAlezjhOls",
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/USS_Franklin_D._Roosevelt_%28CVA-42%29_underway_in_1971_%28NNAM.1996.488.062.023%29.jpg/1280px-USS_Franklin_D._Roosevelt_%28CVA-42%29_underway_in_1971_%28NNAM.1996.488.062.023%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Nasa-Space-sts-48-1991",
+  "name": "STS-48: The Discovery 'Abrupt Turn' Footage (1991) - Kennedy Space Center",
+  "category": "NASA / Space",
+  "type": "Point",
+  "coordinates": {
+   "lng": -80.604,
+   "lat": 28.608
+  },
+  "date": 1991,
+  "description": "On 15 September 1991 the shuttle Discovery's payload-bay camera, broadcasting live on NASA Select, recorded a bright object rising over the Earth's horizon, moving steadily across the field - then a flash of light near the shuttle, and the object making an abrupt right-angle turn and accelerating away, while a streak of light shot through the space where it had just been. Several other objects move through the frame. Viewers taping the feed caught it; NASA said ice particles disturbed by a thruster firing. Physicist Jack Kasher of the University of Nebraska published five proofs that the kinematics are inconsistent with ice near the camera and consistent with objects miles away reacting to something fired at them. The clip was the first NASA footage to go mainstream and has never been convincingly explained to the people who studied it frame by frame.",
+  "source": "NASA STS-48 downlink video (15 Sept 1991); Jack Kasher, 'Five Proofs That STS-48 Objects Were Not Ice Particles' (MUFON Symposium, 1994); Don Ecker, 'Hard Copy' (1992)",
+  "images": [
+   "https://www.youtube.com/watch?v=T1xlCxpv0wQ",
+   "https://archive.org/download/youtube-T1xlCxpv0wQ/T1xlCxpv0wQ.mp4",
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/STS-48_UARS_deployment.jpg/1280px-STS-48_UARS_deployment.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Nasa-Space-sts-75-tether-1996",
+  "name": "STS-75: The Tether Incident & the Swarm (1996) - Kennedy Space Center",
+  "category": "NASA / Space",
+  "type": "Point",
+  "coordinates": {
+   "lng": -80.65,
+   "lat": 28.59
+  },
+  "date": 1996,
+  "description": "On 25 February 1996 Columbia deployed a 12-mile tethered satellite to generate electricity from the Earth's magnetic field; the tether snapped, and when the crew filmed it three days later drifting 77 miles away, the camera caught dozens of pulsing, disc-shaped objects with a notch in them moving around and apparently behind the tether - some crossing it, which would make them miles across. NASA's explanation: out-of-focus debris and ice particles near the lens, with the notch an artifact of the camera's iris. The astronauts' own commentary on the tape ('there's a lot of stuff flying around here') and the way objects appear to pass behind a 12-mile line have kept the clip at the top of the NASA-footage canon for thirty years; David Sereda's analysis, linked here, argues from the camera's optics that they could not be near-field.",
+  "source": "NASA STS-75 downlink video (28 Feb 1996); NASA TSS-1R Mission Failure Investigation Board report (1996); David Sereda, 'Evidence: The Case for NASA UFOs' (2001)",
+  "images": [
+   "https://www.youtube.com/watch?v=Ta1P5Q0UnBQ",
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/STS-75_Tethered_Satellite_System_deployment.jpg/1280px-STS-75_Tethered_Satellite_System_deployment.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Nasa-Space-black-knight-1998",
+  "name": "The 'Black Knight' Object Photographed from Endeavour (1998) - Johnson Space Center, Houston",
+  "category": "NASA / Space",
+  "type": "Point",
+  "coordinates": {
+   "lng": -95.09,
+   "lat": 29.56
+  },
+  "date": 1998,
+  "description": "During the first ISS assembly flight in December 1998 the Endeavour crew photographed a dark, angular object tumbling in orbit near the station - NASA catalogued it as a thermal blanket lost during a spacewalk and tracked it until it burned up. The photographs, released on NASA's own site, became the face of a legend assembled from unrelated pieces across a century: Tesla's 1899 reception of structured signals from space, the 1928 Norwegian 'long-delayed echoes,' a 1954 newspaper report of two satellites in orbit before Sputnik, the 1960 'dark satellite' tracked by the Navy, and Duncan Lunan's 1973 claim that the echoes encoded a star map from Epsilon Boötis - a 13,000-year-old alien probe in polar orbit, watching. Each piece has a mundane answer; the picture is still the most downloaded object in NASA's STS-088 roll.",
+  "source": "NASA photo STS088-724-65 (11 Dec 1998); James Oberg, 'The Black Knight Satellite' analysis (2014); Duncan Lunan, Spaceflight (1973)",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Black_Knight_Satellite_%28STS088-724-65%29.jpg/1280px-Black_Knight_Satellite_%28STS088-724-65%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Nasa-Space-face-on-mars-1976",
+  "name": "The Face on Mars & Cydonia (1976) - Jet Propulsion Laboratory, Pasadena",
+  "category": "NASA / Space",
+  "type": "Point",
+  "coordinates": {
+   "lng": -118.17,
+   "lat": 34.2
+  },
+  "date": 1976,
+  "description": "Viking 1 frame 35A72, taken on 25 July 1976, shows a mile-long mesa in the Cydonia region that looks unmistakably like a face staring up from Mars, with a cluster of pyramid-shaped mounds and a 'city' nearby. NASA released it as a 'trick of light and shadow' and moved on; Vincent DiPietro and Gregory Molenaar found a second frame at a different sun angle with the same features, and Richard Hoagland built a career on the geometry of the 'D&M pyramid' and its alignment with the Face. Mars Global Surveyor's 1998 and 2001 images at ten times the resolution show an eroded butte - which satisfied almost everyone except the people who note that the new images were taken at the worst angle and that the CIA's remote viewers had been tasked on Cydonia in 1984 and reported pyramids and a dying race. Either way, Mars's ruins are now a NASA tourism line.",
+  "source": "Viking Orbiter frame 035A72 (1976); DiPietro & Molenaar, 'Unusual Mars Surface Features' (1982); MGS MOC image (April 1998); CIA Stargate session CRV 'Mars 1 million BC' (22 May 1984)",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Face_on_Mars_with_Inset.jpg/1280px-Face_on_Mars_with_Inset.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Nasa-Space-apollo-16-cl862-1972",
+  "name": "Apollo 16 Film CL-862: The 'Saucer' Frame (1972) - Launch Complex 39A, Florida",
+  "category": "NASA / Space",
+  "type": "Point",
+  "coordinates": {
+   "lng": -80.604,
+   "lat": 28.608
+  },
+  "date": 1972,
+  "description": "Four seconds of 16mm film shot through the command-module window as Apollo 16 headed home in April 1972 show a classic domed-saucer silhouette hanging over the lunar horizon. NASA's Johnson Space Center studied it after a congressman's constituent demanded answers and concluded in 2004 that it was the EVA floodlight boom on the spacecraft's own side, which the frame-by-frame geometry supports. It is listed here because the Apollo program generated the richest body of 'something followed us' material in the archive: Apollo 11's Buzz Aldrin describing an L-shaped object pacing the craft on day two; Apollo 12's 'two bogeys' seen by all three astronauts; the Gemini 4 photographs; and the persistent, unverifiable claims about Apollo 20 and structures in the Delporte crater. Separate the real logs from the forgeries and there is still a lot left over.",
+  "source": "NASA film CL-862 (Apollo 16, 1972); NASA JSC analysis for Rep. Ruppersberger (2004); Apollo 11 technical air-to-ground transcript (Day 2); Buzz Aldrin, 'Science Channel' interview (2005)",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/John_W._Young_on_the_Moon.jpg/1280px-John_W._Young_on_the_Moon.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Bigfoot-sierra-sounds-1971",
+  "name": "The Sierra Sounds: Recorded Sasquatch 'Language' (1971-74) - Sierra Camp, Stanislaus National Forest",
+  "category": "Bigfoot",
+  "type": "Point",
+  "coordinates": {
+   "lng": -119.8,
+   "lat": 38.2
+  },
+  "date": 1971,
+  "description": "At a remote hunting camp 8,500 feet up in the Sierra Nevada, Ron Morehead, Al Berry (a skeptical journalist who came to expose a hoax) and their party recorded hours of vocalizations over several seasons from creatures that circled the camp at night, threw rocks and hit the shelter - deep whoops, growls, whistles and a rapid, articulated 'samurai chatter' that no one has matched to a known animal. The creatures were never clearly seen; the tapes were. Retired Navy cryptologic linguist R. Scott Nelson spent years transcribing them and concluded they contain phonemes, morphemes and syntax - 'definitely a language, definitely not human' - and that a human could not produce the pitch range. The University of Wyoming analysis in 1978 found the sounds fell outside human vocal capacity. The recordings, sold as 'The Bigfoot Recordings,' are the only widely accepted audio evidence in the field.",
+  "source": "Ron Morehead, 'Voices in the Wilderness' (2011); R. Scott Nelson, 'The Sierra Sounds Transcription' (2008); Lynn Kirlin & Lasse Hertel, University of Wyoming acoustic analysis (1978)",
+  "images": [
+   "https://archive.org/download/sasquatch-sierra-sounds/Sasquatch%20Sierra%20Sounds%20by%20Ron%20Morehead%20%26%20Al%20Berry%20in%20%28HD%29.mp4",
+   "https://archive.org/download/BigfootSoundsSierraGrowl/ORBF_sierragrowl.mp3",
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/DanaFork.JPG/1280px-DanaFork.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Bigfoot-skookum-cast-2000",
+  "name": "The Skookum Cast (2000) - Skookum Meadows, Gifford Pinchot National Forest",
+  "category": "Bigfoot",
+  "type": "Point",
+  "coordinates": {
+   "lng": -121.9,
+   "lat": 46.1
+  },
+  "date": 2000,
+  "description": "On 22 September 2000 a BFRO expedition that had been broadcasting Sierra Sounds calls in the Washington Cascades left fruit in a mud wallow; by morning something had lain down at the edge of the mud, reached across for the apples without stepping in, and pushed itself up again. The team poured 200 pounds of plaster and recovered a body impression three and a half feet across showing a forearm, hip, thigh, heel, Achilles tendon and buttocks - with dermal ridges on the heel and hair samples that were primate but not human. Idaho State anatomist Jeff Meldrum, primatologist Daris Swindler and wildlife expert John Bindernagel examined it and concluded it was consistent with a large unknown primate; skeptics say an elk. No elk has an Achilles tendon that size, and elk do not sit down to eat.",
+  "source": "Jeff Meldrum, 'Sasquatch: Legend Meets Science' (2006) ch. 9; BFRO Skookum expedition report (2000); Daris Swindler analysis (2001)",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/OldSnowy_15A.JPG/1280px-OldSnowy_15A.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Bigfoot-memorial-day-1996",
+  "name": "The Memorial Day Footage (1996) - Chopaka Lake, Okanogan County, Washington",
+  "category": "Bigfoot",
+  "type": "Point",
+  "coordinates": {
+   "lng": -119.68,
+   "lat": 48.93
+  },
+  "date": 1996,
+  "description": "On Memorial Day weekend 1996 Lori Pate, camping with family at Chopaka Lake near the Canadian border, filmed a dark, upright figure running across a hillside at the far edge of the lake with a long, loping stride, dropping out of sight behind a rise and reappearing - about 55 seconds of footage that aired on a Fox special and became one of the few post-Patterson clips the research community still argues about. The hillside was measured; the figure's stride and speed were calculated as well beyond a human's over that terrain, and the family had no motive or history. Critics note the distance makes the figure a few pixels tall. The site is marked on Washington's bigfoot sighting maps as one of the Okanogan's cluster of reports. [UNVERIFIED FOOTAGE - DISTANT SUBJECT]",
+  "source": "'World's Greatest Hoaxes: Secrets Finally Revealed' (Fox, 1998) segment; Jeff Meldrum, 'Sasquatch: Legend Meets Science' (2006); BFRO Okanogan County reports",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Chopaka_Lake.jpg/1280px-Chopaka_Lake.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  ]
  }
 ]
