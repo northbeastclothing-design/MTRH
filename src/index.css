@@ -1,14 +1,23 @@
 @import "tailwindcss";
 
-html, body, #root {
-  height: 100%;
-  height: 100dvh;
+html, body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  position: fixed;
-  width: 100%;
-  inset: 0;
+}
+
+/* Mobile only (matches isMobile = width < 1024): lock the document to the
+   visual viewport so the bottom trays never scroll the page. Desktop keeps
+   normal document scrolling so the footer below the full-screen app can be
+   reached by scrolling down. */
+@media (max-width: 1023px) {
+  html, body, #root {
+    height: 100%;
+    height: 100dvh;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    inset: 0;
+  }
 }
 
 @keyframes pinBounceIn {

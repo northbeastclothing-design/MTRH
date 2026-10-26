@@ -7047,7 +7047,7 @@ function App() {
   };
 
   return (
-    <div style={{ width: scrollbarWidth ? `calc(100vw - ${scrollbarWidth}px)` : '100vw', minHeight: isMobile ? '100dvh' : '100vh', height: isMobile ? '100dvh' : 'auto', background: '#ffffff', color: '#000000', fontFamily: '"Space Mono", monospace', overflowX: 'hidden', overflowY: 'hidden', textAlign: 'left', position: isMobile ? 'fixed' : 'relative', inset: isMobile ? 0 : 'auto' }}>
+    <div style={{ width: scrollbarWidth ? `calc(100vw - ${scrollbarWidth}px)` : '100vw', minHeight: isMobile ? '100dvh' : '100vh', height: isMobile ? '100dvh' : 'auto', background: '#ffffff', color: '#000000', fontFamily: '"Space Mono", monospace', overflowX: 'hidden', overflowY: isMobile ? 'hidden' : 'visible', textAlign: 'left', position: isMobile ? 'fixed' : 'relative', inset: isMobile ? 0 : 'auto' }}>
       
 
       {/* GLOBAL FULL-SCREEN LOADER OVERLAY */}

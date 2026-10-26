@@ -468,7 +468,15 @@ export default function Lightbox({
           overflow-y: auto;
           overflow-x: hidden;
           width: 100%;
+        }
+        html {
           height: 100%;
+        }
+        /* Let the body grow past the viewport so the document itself scrolls
+           and the desktop footer below the full-screen app can be reached.
+           Mobile is locked separately in index.css. */
+        body {
+          min-height: 100%;
         }
 
         .custom-sidebar-scrollbar::-webkit-scrollbar {
