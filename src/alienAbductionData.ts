@@ -278,5 +278,80 @@ export const ALIEN_ABDUCTION_DATA: AlienAbductionCase[] = [
     "images": [
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Esterbrook_Medicine_Bow_NF.jpg/1280px-Esterbrook_Medicine_Bow_NF.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     ]
+  },
+  {
+    "id": "abduction-plymouth-michigan-2015",
+    "name": "The Plymouth Abduction Photographs (MUFON 73270) - Plymouth, Michigan",
+    "category": "Alien Abductions",
+    "type": "Point",
+    "coordinates": {
+      "lng": -83.4702,
+      "lat": 42.3714
+    },
+    "date": 2015,
+    "displayDate": "9 Oct 2015",
+    "description": "[UNVERIFIED PHOTOS] About 5 a.m. on 9 October 2015 a Plymouth, Michigan woman, after years of odd activity in the house and an argument with her boyfriend, remembered lighting a cigarette in the kitchen and then waking on the bathroom floor. Days later she found roughly forty photographs on her phone that neither of them had taken: close, dark, flash-lit frames of something with a large head and thin limbs. She filed MUFON Case 73270 with ten of them. Phone cameras do not take forty pictures by themselves; either someone in that house did, or something did. The missing time is the part that matches the older cases exactly.",
+    "source": "Alien Archivist - The Plymouth Alien Abduction Photographs (https://alienarchivist.substack.com/p/plymouth-alien) / MUFON Case No. 73270",
+    "images": [
+      "https://substack-post-media.s3.amazonaws.com/public/images/312b8dbf-aab6-4679-8b86-db787b1e8bfa_1200x685.png",
+      "https://substack-post-media.s3.amazonaws.com/public/images/9bba13e6-b938-427a-b711-d9f19cd9ff50_960x1280.jpeg",
+      "https://substack-post-media.s3.amazonaws.com/public/images/eee512a2-cc18-46fd-b958-ceeb3d51ecd8_960x1280.jpeg"
+    ]
+  },
+  {
+    "id": "abduction-lac-beauport-quebec-2014",
+    "name": "The 2014 Quebec Alien Photographs (MUFON) - Lac-Beauport, Quebec",
+    "category": "Alien Abductions",
+    "type": "Point",
+    "coordinates": {
+      "lng": -71.2833,
+      "lat": 46.9667
+    },
+    "date": 2014,
+    "displayDate": "31 Jan 2014",
+    "description": "[UNVERIFIED PHOTOS] At 7 p.m. on 31 January 2014, alone at home in Lac-Beauport with her husband away, a woman saw two flashes light the clear winter sky, then a shadow cross her living room; she called her husband's name to an empty house. She lost time, and afterwards found photographs on her phone of a short entity inside the house. A second Quebec report from the same year, also filed to MUFON, supplied a similar image. Two Quebec households, the same winter, the same missing hours and the same unasked-for pictures. Compare the 1992 L'Annonciation body: the province keeps producing cases in which the camera sees what the witness cannot remember.",
+    "source": "Alien Archivist - The 2014 Quebec Alien Photographs (https://alienarchivist.substack.com/p/2014-quebec-aliens) / MUFON case files",
+    "images": [
+      "https://substack-post-media.s3.amazonaws.com/public/images/aa4b5abf-f03a-4b58-8501-6197a934bc09_1360x768.png",
+      "https://substack-post-media.s3.amazonaws.com/public/images/9097bf3b-a4a8-4d94-990b-9424e7010f8e_1360x768.png"
+    ]
+  },
+  {
+    "id": "abduction-vallgorguina-xavier-clares-1985",
+    "name": "Xavier Clares' 'Jinn' Abduction at the Pedra Gentil Dolmen - Vallgorguina, Spain",
+    "category": "Alien Abductions",
+    "type": "Point",
+    "coordinates": {
+      "lng": 2.5106,
+      "lat": 41.6447
+    },
+    "date": 1985,
+    "displayDate": "21 Jul 1985",
+    "description": "[UNVERIFIED PHOTOS] At 8 a.m. on Sunday 21 July 1985 Xavier Clares, a 23-year-old Barcelona photographer, drove alone to the Pedra Gentil, a Neolithic dolmen above Vallgorguina long associated with witches' sabbaths, to photograph the stone. He came back with hours missing and a roll of film that, developed, showed a small dark figure beside the dolmen and bars of light he had not seen. Under regression he described being taken by beings he later called jinn. Flying Saucer Review printed his full name with permission; Spanish writers hid it for decades. His older brother Jose Maria had photographed an 'astral being' on a Barcelona-Ibiza ferry in 1978. A megalith with a witch tradition, a family that attracts entities, and a camera: the pieces of this site in one case.",
+    "source": "Alien Archivist - Xavier Clares 'Jinn' Abduction Photographs (https://alienarchivist.substack.com/p/jinn-abduction) / Flying Saucer Review",
+    "images": [
+      "https://substack-post-media.s3.amazonaws.com/public/images/bb0478f5-8e76-4aa1-b50d-0e2d2250c48a_842x382.jpeg",
+      "https://substack-post-media.s3.amazonaws.com/public/images/752f73ad-c6be-4c41-9321-c056ba812734_1074x1549.png",
+      "https://substack-post-media.s3.amazonaws.com/public/images/1e7652df-ad6f-4bb7-b4f2-b24aa1f7c627_600x861.png"
+    ]
+  },
+  {
+    "id": "abduction-key-west-mufon-142206-2021",
+    "name": "MUFON Case 142206: Video From Inside a UFO - Key West, Florida",
+    "category": "Alien Abductions",
+    "type": "Point",
+    "coordinates": {
+      "lng": -81.78,
+      "lat": 24.5551
+    },
+    "date": 2021,
+    "displayDate": "12 Jun 2021",
+    "description": "[UNVERIFIED FOOTAGE] At 1:15 a.m. on 12 June 2021 a Key West man in severe hip pain, which he believes kept him from being fully sedated, recorded 42 seconds of video he has no memory of taking. He found it in his phone six months later. The frames show a dim room with several figures the MUFON investigator classed as a tall Grey, two short 'frog-like' beings and a reptilian, and through what looks like a window a cell tower whose obstruction lights flash thirty times a minute, the FAA-mandated rate. He later underwent regression. Either it is the first video shot from inside an abduction, or a bedroom with a tower outside. The frog-like entities are the detail no hoaxer would invent.",
+    "source": "Alien Archivist - MUFON Case No. 142206, Video Taken From Inside a UFO (https://alienarchivist.substack.com/p/mufon-case-no-142206)",
+    "images": [
+      "https://substackcdn.com/image/fetch/$s_!quSD!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F60b4749c-0649-48a3-a5ea-3884e1530421_738x812.jpeg",
+      "https://substack-post-media.s3.amazonaws.com/public/images/60b4749c-0649-48a3-a5ea-3884e1530421_738x812.jpeg",
+      "https://substack-post-media.s3.amazonaws.com/public/images/82d0844d-5dc8-46cc-95f7-7fef422f22d8_503x584.jpeg"
+    ]
   }
 ];
