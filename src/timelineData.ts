@@ -7358,6 +7358,136 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     description: 'Four seconds of 16mm film shot through the command-module window as Apollo 16 headed home in April 1972 show a classic domed-saucer silhouette hanging over the lunar horizon.',
     source: 'NASA film CL-862 (Apollo 16, 1972); NASA JSC analysis for Rep. Ruppersberger (2004); Apollo 11 technical air-to-ground transcript (Day 2); Buzz Aldrin, \'Science Channel\' interview (2005)',
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/John_W._Young_on_the_Moon.jpg/1280px-John_W._Young_on_the_Moon.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-mod-project-cirrus-1947',
+    name: 'Project Cirrus: GE & the Military Seed a Hurricane (1947)',
+    type: 'event',
+    layer: 'government-conspiracies',
+    start: 1947,
+    description: 'Within a year of Vincent Schaefer\'s discovery at General Electric that dry ice could make a cloud snow, GE, the Army Signal Corps, the Navy and the Air Force were running Project Cirrus - and on 13 October 1947 a Navy bomber dropped 80 pounds of dry ice into a hurricane that was heading harmlessly out to sea off Georgia.',
+    source: 'Project Cirrus Final Report (GE / U.S. Army Signal Corps, 1948); Irving Langmuir, \'The Growth of Particles in Smokes and Clouds\' (1948); James Fleming, \'Fixing the Sky\' (2010) ch. 6',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Irving_Langmuir.jpg/1280px-Irving_Langmuir.jpg']
+  },
+  {
+    id: 'tl-mod-lynmouth-flood-1952',
+    name: 'Operation Cumulus & the Lynmouth Flood (1952)',
+    type: 'event',
+    layer: 'government-conspiracies',
+    start: 1952,
+    description: 'On 15 August 1952 nine inches of rain fell on Exmoor in a day, the East and West Lyn rivers came down through the village of Lynmouth carrying boulders the size of cars, and 34 people died.',
+    source: 'BBC Radio 4, \'The Day They Made It Rain\' (30 Aug 2001); The Guardian, \'RAF rainmakers caused 1952 flood\' (30 Aug 2001); National Archives AIR 2/11216 (Operation Cumulus)',
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Lynmouth_%28Devon%2C_UK%29%2C_Harbour_--_2013_--_1494.jpg/1280px-Lynmouth_%28Devon%2C_UK%29%2C_Harbour_--_2013_--_1494.jpg']
+  },
+  {
+    id: 'tl-mod-project-stormfury-1962',
+    name: 'Project Stormfury: Two Decades of Hurricane Seeding (1962)',
+    type: 'event',
+    layer: 'government-conspiracies',
+    start: 1962,
+    description: 'From 1962 to 1983 the Navy and the Weather Bureau flew into Atlantic hurricanes - Esther, Beulah, Debbie, Ginger - and seeded their eyewalls with silver iodide to try to weaken them; Debbie\'s winds reportedly dropped 30 percent in 1969.',
+    source: 'H.E. Willoughby et al., \'Project STORMFURY: A Scientific Chronicle 1962-1983\' (Bulletin of the AMS, 1985); U.S. Patent Application 2009/0177569 (Intellectual Ventures, \'Water alteration structure\'); USAF, \'Owning the Weather in 2025\' (1996)',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Project_Stormfury_crew.jpg/500px-Project_Stormfury_crew.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-mod-operation-popeye-1967',
+    name: 'Operation Popeye: Weather Warfare Over the Ho Chi Minh Trail (1967)',
+    type: 'event',
+    layer: 'government-conspiracies',
+    start: 1967,
+    description: 'For five years, from 1967 to 1972, the 54th Weather Reconnaissance Squadron flew more than 2,600 cloud-seeding sorties from Thailand over Laos, Vietnam and Cambodia to extend the monsoon by a month or more and turn the Ho Chi Minh Trail into mud - \'make mud, not war\' was the squadron\'s motto.',
+    source: 'U.S. Senate Subcommittee on Oceans and International Environment, hearing on \'Weather Modification\' (20 March 1974); Jack Anderson, Washington Post (18 March 1971); Pentagon Papers; ENMOD Convention (1977)',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/RIAT_2023_WC-130_Hercules_%28cropped%29.jpg/1280px-RIAT_2023_WC-130_Hercules_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-mod-sura-russia',
+    name: 'The Sura Ionospheric Heater: Russia\'s HAARP (1981)',
+    type: 'event',
+    layer: 'government-conspiracies',
+    start: 1981,
+    description: 'Twelve years before HAARP, the Soviet Union built Sura - 144 crossed dipoles over 300 by 300 metres in the forest east of Nizhny Novgorod, pumping 190 megawatts of effective radiated power into the ionosphere to study, and manipulate, the layer that bounces radio and reflects the sun\'s energy.',
+    source: 'Radiophysical Research Institute (NIRFI) Sura facility documentation; Gennady Belyaev, \'Sura: the Russian HAARP\' (Nizhny Novgorod University, 2007); Bulletin of the Atomic Scientists (2014)',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/%D0%9F%D0%BE%D0%BB%D0%B5_%D1%81_%D0%B0%D0%BD%D1%82%D0%B5%D0%BD%D0%BD%D0%B0%D0%BC%D0%B8.jpg/1280px-%D0%9F%D0%BE%D0%BB%D0%B5_%D1%81_%D0%B0%D0%BD%D1%82%D0%B5%D0%BD%D0%BD%D0%B0%D0%BC%D0%B8.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-mod-eiscat-tromso',
+    name: 'EISCAT Heating Facility & the Norway Spiral (2009)',
+    type: 'event',
+    layer: 'government-conspiracies',
+    start: 2009,
+    description: 'On the morning of 9 December 2009 a giant blue-white spiral unwound in the sky over northern Norway, visible for hundreds of miles, with a blue beam spiralling down from its centre - the day before Obama arrived in Oslo to accept the Nobel Peace Prize.',
+    source: 'Russian Ministry of Defence statement (10 Dec 2009); EISCAT Scientific Association operations log (Dec 2009); Norwegian Meteorological Institute analysis',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/NorwayRegions.png/330px-NorwayRegions.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-mod-china-olympics-2008',
+    name: 'China Clears the Sky for the Olympics: 1,100 Rockets (2008)',
+    type: 'event',
+    layer: 'government-conspiracies',
+    start: 2008,
+    description: 'On the evening of the 2008 opening ceremony the Beijing Weather Modification Office fired 1,104 silver-iodide rockets from 21 sites around the city to empty the approaching rain clouds before they reached the Bird\'s Nest stadium - and it did not rain.',
+    source: 'Xinhua (9 Aug 2008); China State Council, \'Guiding Opinions on Weather Modification Development\' (Dec 2020); The Guardian, \'China plans rapid expansion of weather modification\' (3 Dec 2020)',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Beijing_China_Beijing-National-Stadium-01.jpg/1280px-Beijing_China_Beijing-National-Stadium-01.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-mod-dubai-floods-2024',
+    name: 'Cloud Seeding & the Dubai Floods (2024)',
+    type: 'event',
+    layer: 'government-conspiracies',
+    start: 2024,
+    description: 'On 16 April 2024 Dubai got two years\' rain in a day - 10 inches - flooding the airport, drowning the motorways and killing more than twenty people across the UAE and Oman.',
+    source: 'Bloomberg, \'Dubai Hit by Heaviest Rain on Record After Cloud Seeding\' (16 April 2024); UAE National Center of Meteorology statement (17 April 2024); Nature, \'Dubai floods: did cloud seeding play a role?\' (April 2024)',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Bahrain_Flooding_2024.png/500px-Bahrain_Flooding_2024.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-kensington-runestone',
+    name: 'The Kensington Runestone',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: 1362,
+    description: 'In 1898 a Swedish farmer, Olof Ohman, pulled a 200-pound greywacke slab out of the roots of a poplar on his land and found it covered in runes: \'8 Goths and 22 Norwegians on an exploration journey from Vinland westward...',
+    source: 'Hjalmar Holand, \'The Kensington Stone\' (1932); Scott Wolter & Richard Nielsen, \'The Kensington Rune Stone: Compelling New Evidence\' (2006); Runestone Museum, Alexandria MN',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Christian_Krohg_-_Leiv_Eirikson_discovering_America_-_Google_Art_Project.jpg/1280px-Christian_Krohg_-_Leiv_Eirikson_discovering_America_-_Google_Art_Project.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-maine-penny',
+    name: 'The Maine Penny: A Norse Coin in an Indian Village',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: 1070,
+    description: 'In 1957 an amateur archaeologist digging the Goddard site, a large Native American trading village on Penobscot Bay, found a small silver coin that sat misidentified as an English penny for twenty years until a Norwegian numismatist recognized it as a Norse penny of King Olaf Kyrre, minted between 1065 and 1080.',
+    source: 'Maine State Museum, Goddard site collection; Kolbjørn Skaare, \'An Eleventh Century Norwegian Penny Found on the Coast of Maine\' (1979); Bruce Bourque, \'Twelve Thousand Years: American Indians in Maine\' (2001)',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Christian_Krohg_-_Leiv_Eirikson_discovering_America_-_Google_Art_Project.jpg/1280px-Christian_Krohg_-_Leiv_Eirikson_discovering_America_-_Google_Art_Project.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-america-bat-creek-stone',
+    name: 'The Bat Creek Stone: Paleo-Hebrew in a Cherokee Mound',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: 100,
+    description: 'In 1889 a Smithsonian field assistant excavating a burial mound at the mouth of Bat Creek found a small inscribed stone under the skull of one of nine skeletons, with brass bracelets and wood.',
+    source: 'Cyrus Thomas, \'Report on the Mound Explorations of the Bureau of Ethnology\' (1894); Cyrus Gordon, \'Before Columbus\' (1971); J. Huston McCulloch, \'The Bat Creek Inscription: Cherokee or Hebrew?\' (Tennessee Anthropologist, 1988)',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Bat_Creek_Exam_5-28-10.JPG/1280px-Bat_Creek_Exam_5-28-10.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-lake-superior-copper-culture',
+    name: 'The Lost Copper Miners of Lake Superior',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: -3000,
+    description: 'Isle Royale and the Keweenaw Peninsula hold some 5,000 ancient mining pits - and 19th-century mining engineers estimated that over 500 million pounds of pure native copper had been taken out of them by hand, with stone hammers found by the ton, before the Bronze Age ended in the Old World.',
+    source: 'Charles Whittlesey, \'Ancient Mining on the Shores of Lake Superior\' (Smithsonian, 1863); Roy Drier & Octave Du Temple, \'Prehistoric Copper Mining in the Lake Superior Region\' (1961); Susan Martin, \'Wonderful Power\' (1999)',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Copper_knife%2C_spearpoints%2C_awls%2C_and_spud%2C_Late_Archaic_period%2C_Wisconsin%2C_3000_BC-1000_BC_-_Wisconsin_Historical_Museum_-_DSC03436.JPG/1280px-Copper_knife%2C_spearpoints%2C_awls%2C_and_spud%2C_Late_Archaic_period%2C_Wisconsin%2C_3000_BC-1000_BC_-_Wisconsin_Historical_Museum_-_DSC03436.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-kennewick-man',
+    name: 'Kennewick Man: The 9,000-Year-Old Skull the Government Buried',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: -7000,
+    description: 'Two students found a skull in the shallows of the Columbia River in 1996; the anthropologist who examined the nearly complete skeleton, James Chatters, thought it was a 19th-century European settler until a stone spear point turned up healed into the hip and the carbon date came back at 8,500 years.',
+    source: 'Bonnichsen v. United States (9th Cir. 2004); Douglas Owsley & Richard Jantz (eds.), \'Kennewick Man: The Scientific Investigation of an Ancient American Skeleton\' (2014); Rasmussen et al., Nature (2015)',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Kennewick_Man.jpg/1280px-Kennewick_Man.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
   }
 ];
 
@@ -7971,7 +8101,20 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'tl-Nasa-Space-sts-75-tether-1996': { lng: -80.65, lat: 28.59, locationName: 'Kennedy Space Center', category: 'NASA / Space' },
   'tl-Nasa-Space-black-knight-1998': { lng: -95.09, lat: 29.56, locationName: 'Johnson Space Center, Houston', category: 'NASA / Space' },
   'tl-Nasa-Space-face-on-mars-1976': { lng: -118.17, lat: 34.2, locationName: 'Jet Propulsion Laboratory, Pasadena', category: 'NASA / Space' },
-  'tl-Nasa-Space-apollo-16-cl862-1972': { lng: -80.604, lat: 28.608, locationName: 'Launch Complex 39A, Florida', category: 'NASA / Space' }
+  'tl-Nasa-Space-apollo-16-cl862-1972': { lng: -80.604, lat: 28.608, locationName: 'Launch Complex 39A, Florida', category: 'NASA / Space' },
+  'tl-mod-project-cirrus-1947': { lng: -80.0, lat: 31.0, locationName: 'off Savannah, Georgia', category: 'Government Conspiracies' },
+  'tl-mod-lynmouth-flood-1952': { lng: -3.83, lat: 51.23, locationName: 'Lynmouth, Devon', category: 'Government Conspiracies' },
+  'tl-mod-project-stormfury-1962': { lng: -80.19, lat: 25.77, locationName: 'Miami, Florida', category: 'Government Conspiracies' },
+  'tl-mod-operation-popeye-1967': { lng: 105.8, lat: 17.0, locationName: 'Laos', category: 'Government Conspiracies' },
+  'tl-mod-sura-russia': { lng: 45.84, lat: 56.14, locationName: 'Vasilsursk, Nizhny Novgorod', category: 'Government Conspiracies' },
+  'tl-mod-eiscat-tromso': { lng: 19.22, lat: 69.58, locationName: 'Ramfjordmoen, Tromsø', category: 'Government Conspiracies' },
+  'tl-mod-china-olympics-2008': { lng: 116.39, lat: 39.99, locationName: 'Beijing', category: 'Government Conspiracies' },
+  'tl-mod-dubai-floods-2024': { lng: 55.27, lat: 25.2, locationName: 'Dubai, UAE', category: 'Government Conspiracies' },
+  'tl-kensington-runestone': { lng: -95.67, lat: 45.81, locationName: 'Alexandria, Minnesota', category: 'Archaeological Finds' },
+  'tl-maine-penny': { lng: -68.57, lat: 44.27, locationName: 'Brooklin, Maine', category: 'Archaeological Finds' },
+  'tl-america-bat-creek-stone': { lng: -84.37, lat: 35.6, locationName: 'Loudon County, Tennessee', category: 'Archaeological Finds' },
+  'tl-lake-superior-copper-culture': { lng: -88.3, lat: 47.4, locationName: 'Keweenaw Peninsula, Michigan', category: 'Archaeological Finds' },
+  'tl-kennewick-man': { lng: -119.14, lat: 46.21, locationName: 'Columbia River, Washington', category: 'Ancient People Groups' }
 };
 
 export interface Waypoint {

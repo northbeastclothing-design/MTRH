@@ -563,5 +563,29 @@ export const OLD_WORLD_STRUCTURES_DATA: OldWorldStructureCase[] = [
     description: "A triangular brick tower 49 metres high, standing on the spot where King Alfred is said to have raised his standard against the Danes in 878 before the battle that saved Christian England. Henry Hoare built it as a 'folly', the polite eighteenth-century word for a monument no one needs. A thousand years on, a cross-shaped tower marks the place where a king chose to fight for the faith rather than pay tribute to the pagans.",
     source: "National Trust / Anglo-Saxon Chronicle",
     images: ["https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/King_Alfred%27s_Tower_view_from_west.jpg/1280px-King_Alfred%27s_Tower_view_from_west.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"]
+  },
+  {
+    id: "america-newport-tower",
+    name: "The Newport Tower - Newport, Rhode Island",
+    category: "Old World Structures",
+    type: "Point",
+    coordinates: { lng: -71.3067, lat: 41.4866 },
+    date: 1400,
+    displayDate: "Disputed: c. 1400 or 1670s",
+    description: "A round stone tower on eight arched pillars in a park in Newport, already standing and 'old' when Governor Benedict Arnold's 1677 will called it 'my stone-built windmill' - which has been the official explanation ever since, despite the fact that no windmill in history was built that way. Its design matches the round churches of the Knights Templar and the 12th-century baptistery at Tønsberg, Norway; it is built in Norse units of measurement; its windows are aligned so the rising sun on the winter solstice shines through to an egg-shaped keystone; and the 1507 Mercator and 1569 maps show a 'Norman Villa' on Narragansett Bay before any Englishman arrived. Carbon dating of the mortar gave dates from 1400 to 1700 depending on who was asking. It is a Templar baptistery to the people who have measured it and a colonial mill to the people who have not.",
+    source: "William Penhallow, 'Astronomical Alignments in the Newport Tower' (1998); Andrew Sinclair, 'The Sword and the Grail' (1992); Jan Heinemeier & Hogne Jungner, mortar radiocarbon study (1993)",
+    images: ["https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Newport_Tower_-_Newport%2C_RI_%2851488606239%29.jpg/1280px-Newport_Tower_-_Newport%2C_RI_%2851488606239%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"]
+  },
+  {
+    id: "america-mystery-hill-stonehenge",
+    name: "America's Stonehenge (Mystery Hill) - Salem, New Hampshire",
+    category: "Old World Structures",
+    type: "Point",
+    coordinates: { lng: -71.21, lat: 42.84 },
+    date: -2000,
+    displayDate: "Disputed: c. 2000 BC or colonial",
+    description: "Thirty acres of stone chambers, standing stones, walls and a 4.5-ton grooved 'sacrificial table' with a drain channel and a hidden speaking tube beneath it, on a hilltop north of Boston. Radiocarbon dates from charcoal under the walls run to 2000 BC; the standing stones around the perimeter mark the solstice and equinox sunrises and sunsets and the lunar standstills; and Barry Fell read inscriptions on the site as Iberian Punic and Ogham dedicating it to the Phoenician sun god Bel - in whose honour, on a table like that one, children were burned in Carthage. The alternative is that a colonial farmer named Pattee built dozens of corbelled stone chambers for root storage with astronomical alignments by accident. It has been a tourist site since 1958; H.P. Lovecraft visited and was inspired.",
+    source: "Barry Fell, 'America B.C.' (1976) ch. 7; Mary Gage, 'America's Stonehenge Deciphered' (2006); Geochron Laboratories radiocarbon samples (1969-1995)",
+    images: ["https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/America_Stonehenge.jpg/500px-America_Stonehenge.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"]
   }
 ];

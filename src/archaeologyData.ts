@@ -1585,5 +1585,113 @@ export const ARCHAEOLOGICAL_FINDS_DATA: ArchaeologicalFind[] = [
     description: "The oldest figurines in Mesopotamia, from the Ubaid culture that preceded the Sumerians at Ur and Eridu, show men and women - some nursing babies - with elongated heads, slanted almond eyes, and faces that look like lizards or snakes, wearing the shoulder pads and headdresses of their society. Archaeologists call the heads stylized or deformed by binding; the figures are in the British Museum and Baghdad. They come from the very ground where the Anunnaki stories and the first temples arose, Enki's city of Eridu, and they are the single most-cited artifact in the reptilian theory: a civilization at the dawn of history portraying its elite as serpent-faced beings. Genesis 3 puts a talking serpent at the start of the story too, and Eden's rivers run through this ground.",
     source: "Sir Leonard Woolley, 'Ur Excavations IV: The Early Periods' (1955); British Museum ME 1919,1011.4913; Genesis 3:1-15",
     images: ["https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Bowl_MET_DP104228_%28cropped%29.jpg/1280px-Bowl_MET_DP104228_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"]
+  },
+  {
+    id: "america-kensington-runestone",
+    name: "The Kensington Runestone - Alexandria, Minnesota",
+    category: "Archaeological Finds",
+    type: "Point",
+    coordinates: { lng: -95.67, lat: 45.81 },
+    date: 1362,
+    displayDate: "1362 (found 1898)",
+    description: "In 1898 a Swedish farmer, Olof Ohman, pulled a 200-pound greywacke slab out of the roots of a poplar on his land and found it covered in runes: '8 Goths and 22 Norwegians on an exploration journey from Vinland westward... we were fishing one day. After we came home we found 10 men red with blood and dead. AVM [Ave Maria] save us from evil... year 1362.' Scandinavian linguists called it a modern forgery within months and have ever since; geologist Scott Wolter's analysis of the weathering of the carved mica found it had been in the ground far longer than a decade, and the dialect's 'errors' have since turned up in genuine 14th-century Swedish documents. A Templar-linked 'hooked X' rune on it appears on the Spirit Pond stones in Maine and at Rosslyn Chapel. The stone sits in its own museum in Alexandria under a 28-foot Viking statue.",
+    source: "Hjalmar Holand, 'The Kensington Stone' (1932); Scott Wolter & Richard Nielsen, 'The Kensington Rune Stone: Compelling New Evidence' (2006); Runestone Museum, Alexandria MN",
+    images: ["https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Christian_Krohg_-_Leiv_Eirikson_discovering_America_-_Google_Art_Project.jpg/1280px-Christian_Krohg_-_Leiv_Eirikson_discovering_America_-_Google_Art_Project.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"]
+  },
+  {
+    id: "america-maine-penny",
+    name: "The Maine Penny: A Norse Coin in an Indian Village - Brooklin, Maine",
+    category: "Archaeological Finds",
+    type: "Point",
+    coordinates: { lng: -68.57, lat: 44.27 },
+    date: 1070,
+    displayDate: "1065-1080 (found 1957)",
+    description: "In 1957 an amateur archaeologist digging the Goddard site, a large Native American trading village on Penobscot Bay, found a small silver coin that sat misidentified as an English penny for twenty years until a Norwegian numismatist recognized it as a Norse penny of King Olaf Kyrre, minted between 1065 and 1080. It is the only pre-Columbian Norse artifact ever found in the United States that mainstream archaeology accepts as genuine - its official explanation being that it was traded down from Labrador through native networks rather than carried by a Viking. The same site yielded a Dorset Eskimo burin from a thousand miles north, which shows the networks were real. Either way, a coin from the reign of the king who succeeded Harald Hardrada sat in a Maine midden four centuries before Columbus.",
+    source: "Maine State Museum, Goddard site collection; Kolbjørn Skaare, 'An Eleventh Century Norwegian Penny Found on the Coast of Maine' (1979); Bruce Bourque, 'Twelve Thousand Years: American Indians in Maine' (2001)",
+    images: ["https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Christian_Krohg_-_Leiv_Eirikson_discovering_America_-_Google_Art_Project.jpg/1280px-Christian_Krohg_-_Leiv_Eirikson_discovering_America_-_Google_Art_Project.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"]
+  },
+  {
+    id: "hebrew-america-bat-creek-stone",
+    name: "The Bat Creek Stone: Paleo-Hebrew in a Cherokee Mound - Loudon County, Tennessee",
+    category: "Archaeological Finds",
+    type: "Point",
+    coordinates: { lng: -84.37, lat: 35.6 },
+    date: 100,
+    displayDate: "c. AD 32-769 (found 1889)",
+    description: "In 1889 a Smithsonian field assistant excavating a burial mound at the mouth of Bat Creek found a small inscribed stone under the skull of one of nine skeletons, with brass bracelets and wood. The Smithsonian published it as Cherokee writing. In 1970 Semitic scholar Cyrus Gordon turned the photograph upside down and read it as Paleo-Hebrew of the 1st-2nd century AD: 'for Judea' - the script of the Bar Kokhba coins. The brass bracelets were tested and found to be of a composition used in the Roman Mediterranean; radiocarbon dating of the wood gave AD 32-769. The Smithsonian's response was a paper arguing the inscription had been copied from a Masonic reference book of 1870, by a field assistant who could not have read it. It is in the Smithsonian's storage and has never been displayed.",
+    source: "Cyrus Thomas, 'Report on the Mound Explorations of the Bureau of Ethnology' (1894); Cyrus Gordon, 'Before Columbus' (1971); J. Huston McCulloch, 'The Bat Creek Inscription: Cherokee or Hebrew?' (Tennessee Anthropologist, 1988)",
+    images: ["https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Bat_Creek_Exam_5-28-10.JPG/1280px-Bat_Creek_Exam_5-28-10.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"]
+  },
+  {
+    id: "hebrew-america-los-lunas-decalogue",
+    name: "The Los Lunas Decalogue Stone - Hidden Mountain, New Mexico",
+    category: "Archaeological Finds",
+    type: "Point",
+    coordinates: { lng: -106.83, lat: 34.77 },
+    date: -500,
+    displayDate: "Disputed: 500 BC - AD 1800",
+    description: "On the north face of Hidden Mountain, 35 miles south of Albuquerque, an 80-ton basalt boulder carries the Ten Commandments in nine lines of Paleo-Hebrew - the script of the First Temple period, with a few Greek letters mixed in, as found on the coins of the Maccabees and in Samaritan usage. Harvard's Robert Pfeiffer translated it in 1949 and a Hebrew professor at Hebrew University concluded it was ancient; the patina on the inscription was examined in 1996 and judged consistent with 500 to 2,000 years of weathering; and the mountain top bears a ruined stone structure and a second inscription with astronomical data matching a solar eclipse of 15 September 107 BC. The official position is a 19th-century hoax by someone who knew pre-exilic Hebrew letterforms a century before scholars did. The site is on state trust land and requires a permit; vandals attacked the stone in 2006.",
+    source: "Robert Pfeiffer, Harvard, translation (1949); David Deal, 'Discovery of Ancient America' (1984); George Morehouse, 'The Los Lunas Inscriptions: A Geological Study' (Epigraphic Society Occasional Papers, 1985)",
+    images: ["https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/10_Commandment_Rock.jpg/1280px-10_Commandment_Rock.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"]
+  },
+  {
+    id: "hebrew-america-newark-holy-stones",
+    name: "The Newark Holy Stones (Keystone & Decalogue) - Newark Earthworks, Ohio",
+    category: "Archaeological Finds",
+    type: "Point",
+    coordinates: { lng: -82.4, lat: 40.04 },
+    date: 1860,
+    displayDate: "Found 1860",
+    description: "In 1860 surveyor David Wyrick dug two objects out of the Hopewell mounds at Newark, the largest geometric earthworks on earth: a wedge-shaped 'Keystone' inscribed in Hebrew 'Holy of Holies, King of the Earth, the Law of God, the Word of God,' and a black stone box holding a carved figure of Moses surrounded by a condensed Decalogue in a peculiar post-exilic Hebrew script. They were national news in the months before the Civil War, when the question of whether the Mound Builders were the Lost Tribes - and whether all men descended from Adam - was politically explosive; the Smithsonian's consensus is that an Episcopal minister forged them to prove the unity of mankind against the polygenists. They are displayed in the Johnson-Humrickhouse Museum in Coshocton. The earthworks they came from encode the 18.6-year lunar cycle to a precision no one expected of 'primitive' people.",
+    source: "David Wyrick's account (1860); Bradley Lepper & Jeff Gill, 'The Newark Holy Stones' (Timeline, 2000); Johnson-Humrickhouse Museum, Coshocton OH",
+    images: ["https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Newark_Earthworks_Wall_and_Moat.jpg/1280px-Newark_Earthworks_Wall_and_Moat.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"]
+  },
+  {
+    id: "america-heavener-runestone",
+    name: "The Heavener Runestone - Poteau Mountain, Oklahoma",
+    category: "Archaeological Finds",
+    type: "Point",
+    coordinates: { lng: -94.59, lat: 34.9 },
+    date: 1000,
+    displayDate: "Disputed: c. AD 600-1000",
+    description: "A twelve-foot slab of sandstone standing in a ravine on Poteau Mountain in eastern Oklahoma carries eight runes a foot tall, known to the Choctaw as 'Indian Rock' before the first white settlers saw it in the 1830s; Gloria Farley spent fifty years documenting it and read it as 'GLOME DAL' - Glome's Valley, a land claim in Elder Futhark, the alphabet that went out of use around AD 800. Four more runestones have been found in the same corner of Oklahoma. The Oklahoma Historical Society called it a 19th-century Scandinavian immigrant's carving; the runes are in an alphabet those immigrants did not know. Vikings a thousand miles up the Mississippi and Arkansas rivers is exactly what the Kensington stone's '14 days' journey from this stone' implies they were doing. The site is a state park.",
+    source: "Gloria Farley, 'In Plain Sight: Old World Records in Ancient America' (1994); Heavener Runestone Park; Richard Nielsen, 'The Oklahoma Runestones' (1986)",
+    images: ["https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Heavener_Runestone_State_Park%2C_OK_USA_-_panoramio_%283%29.jpg/1280px-Heavener_Runestone_State_Park%2C_OK_USA_-_panoramio_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"]
+  },
+  {
+    id: "america-dighton-rock",
+    name: "Dighton Rock - Taunton River, Berkley, Massachusetts",
+    category: "Archaeological Finds",
+    type: "Point",
+    coordinates: { lng: -71.1, lat: 41.81 },
+    date: 1680,
+    displayDate: "Recorded 1680; carving undated",
+    description: "A 40-ton boulder that sat in the tidal Taunton River covered in petroglyphs, drawn by Cotton Mather in 1690 and argued over ever since by more scholars than any rock in America: Native American, Phoenician (Ezra Stiles, president of Yale, 1767), Norse (Carl Rafn, 1837, who read 'Thorfinn' and '151 men'), and Portuguese - Edmund Delabarre of Brown University in 1912 found the date 1511 and the name of Miguel Corte-Real, a Portuguese explorer who vanished in 1502 searching for his brother, with the Portuguese royal arms. Delabarre's reading is the one on the museum placard, which means the state of Massachusetts officially accepts that a European expedition was living on Narragansett Bay a century before the Pilgrims. The Newport Tower is 20 miles away.",
+    source: "Edmund Delabarre, 'Dighton Rock: A Study of the Written Rocks of New England' (1928); Dighton Rock State Park museum; Carl Christian Rafn, 'Antiquitates Americanae' (1837)",
+    images: ["https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Dighton_Rock-Davis_photograph.jpg/1280px-Dighton_Rock-Davis_photograph.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"]
+  },
+  {
+    id: "america-lake-superior-copper-culture",
+    name: "The Lost Copper Miners of Lake Superior - Keweenaw Peninsula, Michigan",
+    category: "Archaeological Finds",
+    type: "Point",
+    coordinates: { lng: -88.3, lat: 47.4 },
+    date: -3000,
+    displayDate: "c. 5000-1000 BC",
+    description: "Isle Royale and the Keweenaw Peninsula hold some 5,000 ancient mining pits - and 19th-century mining engineers estimated that over 500 million pounds of pure native copper had been taken out of them by hand, with stone hammers found by the ton, before the Bronze Age ended in the Old World. Almost none of it has been found in North America: the Native copper artifacts of the Old Copper Complex account for a small fraction. Bronze needs copper, the Mediterranean Bronze Age ran short of it around 1200 BC, and Lake Superior's float copper is the purest on earth; Barry Fell and others proposed Minoan and Phoenician fleets, and a 'Copper Culture' trading up the St. Lawrence. Mainstream archaeology says the estimates are wildly inflated and the natives used it all. The Mound Builders' giant skeletons were often found with copper breastplates and armour from these very mines.",
+    source: "Charles Whittlesey, 'Ancient Mining on the Shores of Lake Superior' (Smithsonian, 1863); Roy Drier & Octave Du Temple, 'Prehistoric Copper Mining in the Lake Superior Region' (1961); Susan Martin, 'Wonderful Power' (1999)",
+    images: ["https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Copper_knife%2C_spearpoints%2C_awls%2C_and_spud%2C_Late_Archaic_period%2C_Wisconsin%2C_3000_BC-1000_BC_-_Wisconsin_Historical_Museum_-_DSC03436.JPG/1280px-Copper_knife%2C_spearpoints%2C_awls%2C_and_spud%2C_Late_Archaic_period%2C_Wisconsin%2C_3000_BC-1000_BC_-_Wisconsin_Historical_Museum_-_DSC03436.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"]
+  },
+  {
+    id: "america-kennewick-man",
+    name: "Kennewick Man: The 9,000-Year-Old Skull the Government Buried - Columbia River, Washington",
+    category: "Ancient People Groups",
+    type: "Point",
+    coordinates: { lng: -119.14, lat: 46.21 },
+    date: -7000,
+    displayDate: "c. 7300 BC (found 1996)",
+    description: "Two students found a skull in the shallows of the Columbia River in 1996; the anthropologist who examined the nearly complete skeleton, James Chatters, thought it was a 19th-century European settler until a stone spear point turned up healed into the hip and the carbon date came back at 8,500 years. The long, narrow 'Caucasoid' skull resembled the Ainu of Japan and Polynesians more than any Native American; the Army Corps of Engineers immediately seized the bones, buried the discovery site under 500 tons of rubble, and tried to hand the remains to five tribes for reburial under NAGPRA without study - which eight scientists had to sue for nine years to prevent. A 2015 DNA study found him closest to modern Native Americans after all, and he was reburied in 2017. What the government did with the site before the DNA came back is the part that will not be undone.",
+    source: "Bonnichsen v. United States (9th Cir. 2004); Douglas Owsley & Richard Jantz (eds.), 'Kennewick Man: The Scientific Investigation of an Ancient American Skeleton' (2014); Rasmussen et al., Nature (2015)",
+    images: ["https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Kennewick_Man.jpg/1280px-Kennewick_Man.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"]
   }
 ];
