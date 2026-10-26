@@ -40226,6 +40226,250 @@ const chunk_bible_sources: TermNode[] = [
     mapFeatureId: 'anomaly-Crop-Circles-1308',
     sources: ['Drone footage (X / maniaUFO), single source'],
     images: ['https://x.com/i/status/2096221748953817531', 'https://pbs.twimg.com/amplify_video_thumb/1918391186588311552/img/g5dptjgbjQzX2znq.jpg']
+  },
+  {
+    id: 'eridu-genesis',
+    parentId: 'ancient-flood-myths',
+    name: 'Eridu Genesis (Sumerian Flood Story)',
+    description: 'A single broken tablet from Nippur, written around 1600 BCE, preserves the oldest version of the Flood: the gods create mankind, found the first five cities beginning with Eridu, grant kingship from heaven, then resolve to drown the world. The pious king Ziusudra is warned by the god Enki, builds a boat, survives the seven-day deluge and is granted eternal life. Every element of Genesis 6-9 is here, a thousand years before Moses, in the language of the city the Bible calls Babel.',
+    layer: 'Ancient Texts',
+    relatedIds: ['anomaly-UFO-utsuro-bune-1803', 'archaeology-kudurru'],
+    sources: ['Penn Museum CBS 10673 / Thorkild Jacobsen, \'The Eridu Genesis\' (1981)'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/CBS10673_Sumerian_Flood_Story_Penn_Museum.jpg/1280px-CBS10673_Sumerian_Flood_Story_Penn_Museum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
+  },
+  {
+    id: 'enochian-calendar',
+    parentId: 'enochian-lore',
+    name: 'The Enochian Solar Calendar (Astronomical Book)',
+    description: 'Chapters 72-82 of 1 Enoch, the \'Book of the Luminaries,\' lay out a year of exactly 364 days: twelve months of thirty days plus four intercalary days marking the seasons, revealed to Enoch by the archangel Uriel. Fifty-two weeks precisely, so every festival falls on the same weekday forever. The Qumran community kept this calendar and condemned the Temple for following the moon instead. Enoch\'s complaint was that men had corrupted the count of days; the calendar fight was a fight over who kept God\'s time.',
+    layer: 'Enochian Sites',
+    sources: ['1 Enoch 72-82 (R.H. Charles translation) / Dead Sea Scrolls 4Q208-211'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/BL_Or_485_f._102r.png/500px-BL_Or_485_f._102r.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'hypnotic-regression',
+    parentId: 'alien-abductions-br',
+    name: 'Hypnotic Regression & Recovered Abduction Memory',
+    description: 'The technique that built the abduction literature: Benjamin Simon\'s sessions with Betty and Barney Hill in 1964, Leo Sprinkle\'s with Carl Higdon, Budd Hopkins\'s and John Mack\'s with hundreds more. Under hypnosis the missing hours fill with examinations, implants and hybrid children. Critics say hypnosis manufactures memory; practitioners say it only unlocks what was deliberately hidden. Either way, the beings in the accounts are remembered as the ones who did the hiding.',
+    layer: 'Alien Abductions',
+    relatedIds: ['abduction-hill-1961', 'abduction-carl-higdon-1974'],
+    sources: ['John G. Fuller, \'The Interrupted Journey\' / John E. Mack, \'Abduction\' (1994)'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Hypnotisk_seans_av_Richard_Bergh_1887.jpg/1280px-Hypnotisk_seans_av_Richard_Bergh_1887.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
+  },
+  {
+    id: 'alien-implants',
+    parentId: 'alien-abductions-br',
+    name: 'Alien Implants',
+    description: 'Small metallic or crystalline objects recovered from abductees\' hands, legs, jaws and sinuses, most famously by podiatrist Dr. Roger Leir, who removed seventeen between 1995 and 2014 and reported that they were encased in tissue without any inflammation, carried a magnetic field and emitted radio frequencies. Mainstream labs called them ordinary debris. The implant is the physical hinge of the whole abduction question: either there is nothing to find, or something has been tagging people.',
+    layer: 'Alien Abductions',
+    relatedIds: ['hypnotic-regression'],
+    sources: ['Dr. Roger Leir, \'The Aliens and the Scalpel\' (1998) / Derrel Sims Case Files'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/The_desirable_alien_at_home_in_Germany_%28IA_desirablealienat00huntiala%29.pdf/page1-500px-The_desirable_alien_at_home_in_Germany_%28IA_desirablealienat00huntiala%29.pdf.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
+  },
+  {
+    id: 'werewolf-lycanthropy-dogman',
+    parentId: 'cryptid-sightings-br',
+    name: 'Werewolves, Lycanthropes & the Dogman',
+    description: 'From Lucas Cranach\'s 1512 woodcut of a wolf-man devouring a village to the Beast of Gévaudan and the witch trials of Peter Stumpp, Europe treated lycanthropy as a real crime with a real body count. The American Dogman, an upright canine seven feet tall reported from Michigan and Wisconsin since the 1930s, is the same creature with the folklore stripped off. Scripture never names a werewolf, but it knows the type: the sons of God took on flesh and bred monsters, and the monsters did not all die in the Flood.',
+    layer: 'Cryptid Sightings',
+    relatedIds: ['anomaly-Bigfoot-512', 'anomaly-Bigfoot-589', 'anomaly-Cryptid-Sightings-guadalupe-flying-humanoid-2004'],
+    sources: ['Lucas Cranach the Elder, \'Werwolf\' (1512) / Linda Godfrey, \'The Beast of Bray Road\' / Peter Stumpp Trial Records (1589)'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Werwolf.png/1280px-Werwolf.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
+  },
+  {
+    id: 'pizzagate-2016',
+    parentId: 'government-conspiracies',
+    name: 'Pizzagate (2016)',
+    description: 'In the last weeks of the 2016 election, readers of the WikiLeaks Podesta emails decided that references to pizza, pasta and \'handkerchiefs\' were a code for child trafficking run out of Comet Ping Pong, a Washington pizzeria. On 4 December 2016 a believer walked in with a rifle to free the children and found none; he fired three rounds and went to prison. No evidence of any crime at the restaurant has ever been produced, and the named individuals have denied everything. The episode matters because of what it revealed: how fast a coded reading of real documents can become a conviction, and how the establishment\'s own secrecy, from MKUltra to Epstein, had taught people to expect the worst.',
+    layer: 'Government Conspiracies',
+    relatedIds: ['project-mkultra'],
+    sources: ['WikiLeaks Podesta Emails (2016) / U.S. v. Welch (D.D.C. 2017) / Comet Ping Pong Incident Reports'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Comet_Ping_Pong_Pizzagate_2016_01.jpg/1280px-Comet_Ping_Pong_Pizzagate_2016_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
+  },
+  {
+    id: 'anton-lavey',
+    parentId: 'witchcraft-folk-magic',
+    name: 'Anton LaVey',
+    description: 'Founder of the Church of Satan in San Francisco on Walpurgisnacht 1966 and author of \'The Satanic Bible,\' LaVey shaved his head, kept a pet lion and staged black masses for Hollywood. He insisted his Satan was a symbol of carnal self-interest, not a being. Whether or not he believed in the devil, he spent his life dressing as his priest, and his church remains the public face of organised Satanism in America.',
+    layer: 'The Occult',
+    sources: ['Anton LaVey, \'The Satanic Bible\' (1969) / Blanche Barton, \'The Secret Life of a Satanist\''],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/SF_Examiner_photo_of_Anton_LaVey_%28cropped%29.jpg/330px-SF_Examiner_photo_of_Anton_LaVey_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'eliphas-levi',
+    parentId: 'witchcraft-folk-magic',
+    name: 'Éliphas Lévi',
+    description: 'A failed French seminarian, born Alphonse Louis Constant, who reinvented ceremonial magic for the modern age and drew the goat-headed Baphomet that every later occultist copied. His \'Dogme et Rituel de la Haute Magie\' (1856) fused Kabbalah, tarot and Catholic ritual into a system that fed directly into the Golden Dawn and Aleister Crowley, who claimed to be his reincarnation. Lévi taught that the magician commands the \'astral light\'; the churchmen who trained him would have called it something else.',
+    layer: 'The Occult',
+    sources: ['Éliphas Lévi, \'Dogme et Rituel de la Haute Magie\' (1856) / A.E. Waite translation'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Eliphas_Levi.png/330px-Eliphas_Levi.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'cornelius-agrippa',
+    parentId: 'witchcraft-folk-magic',
+    name: 'Heinrich Cornelius Agrippa',
+    description: 'Soldier, physician, lawyer and spy of the German Renaissance, Agrippa wrote the \'Three Books of Occult Philosophy\' (1533), the encyclopaedia of natural, celestial and ceremonial magic from which Dee, the Rosicrucians and the Golden Dawn all drew. He defended a woman accused of witchcraft and was accused of it himself; legend says a black dog that was his familiar leapt into the river at his death. The Faust legend borrowed his biography.',
+    layer: 'The Occult',
+    sources: ['Agrippa, \'De occulta philosophia libri III\' (1533)'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Portrait_of_Agrippa_Wellcome_L0000100.jpg/960px-Portrait_of_Agrippa_Wellcome_L0000100.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'azealia-banks-self-described-witch',
+    parentId: 'witchcraft-folk-magic',
+    name: 'Azealia Banks (Self-Described Witch)',
+    description: 'The Harlem rapper has stated plainly and repeatedly, from 2015 onward, that she is a witch and practises brujería, and in 2016 posted a video of herself cleaning out a closet she said she had used for years of animal sacrifice. Included on her own public testimony. She is one of the few celebrities to describe the practice in literal rather than aesthetic terms, which makes the claim worth recording exactly as she made it.',
+    layer: 'The Occult',
+    sources: ['Azealia Banks public statements and posts (2015-2016), as reported by Billboard, Rolling Stone and Pitchfork'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/AzealiaBanksBrixt140924_%2874_of_77%29_%2853997797453%29_%28cropped%29.jpg/500px-AzealiaBanksBrixt140924_%2874_of_77%29_%2853997797453%29_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'lana-del-rey-witchcraft',
+    parentId: 'witchcraft-folk-magic',
+    name: 'Lana Del Rey (Public Hex Participation)',
+    description: 'In February 2017 the singer posted the dates of the coordinated \'binding spell\' against the newly inaugurated president and told NME she had taken part, adding that she believed in the power of intention and that witchcraft was \'in line with\' her beliefs. Included on her own public statements. A pop star publicly joining a mass hex is a small window onto how openly ritual practice now sits in the culture.',
+    layer: 'The Occult',
+    sources: ['Lana Del Rey, NME interview (July 2017) / public posts (February 2017)'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/LanaDRPrimavera310524_%2832_of_147%29_%2853765476960%29_%28cropped%29.jpg/1280px-LanaDRPrimavera310524_%2832_of_147%29_%2853765476960%29_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'fairuza-balk-wicca',
+    parentId: 'witchcraft-folk-magic',
+    name: 'Fairuza Balk (Practising Wiccan, Panpipes Owner)',
+    description: 'After playing the witch Nancy in \'The Craft\' (1996), Balk bought Panpipes Magickal Marketplace, the oldest occult shop in Los Angeles, and ran it for several years while describing herself in interviews as a practising Wiccan who had been drawn to the craft before the film. Included on her own public statements. The line between the role and the practitioner, in her case, was one she erased herself.',
+    layer: 'The Occult',
+    sources: ['Fairuza Balk interviews (1996-2001) / Panpipes Magickal Marketplace records'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Fairuza_Balk_%282019_crop%29.jpg/960px-Fairuza_Balk_%282019_crop%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'occult-grimoires',
+    parentId: 'alchemy-occult',
+    name: 'Grimoires & Occult Books',
+    description: 'The working manuals of Western magic: books of spirits, seals, conjurations and correspondences passed from Hellenistic Egypt through medieval Jewish and Arabic scholars into the Renaissance and the modern occult revival. Most claim an ancient author, Solomon, Hermes, Moses, Enoch, and most were written far later than they say. Together they form the counter-scripture: the library of those who sought to command what the Bible says to flee.',
+    layer: 'The Occult',
+    relatedIds: ['lesser-key-solomon', 'emerald-tablet'],
+    sources: ['Owen Davies, \'Grimoires: A History of Magic Books\' (2009)'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Kat_nr_062_Svartkonstbok%2C_fr%C3%A5n_Island_-_KMB_-_16000300015519_%28cropped%29.jpg/500px-Kat_nr_062_Svartkonstbok%2C_fr%C3%A5n_Island_-_KMB_-_16000300015519_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'picatrix',
+    parentId: 'occult-grimoires',
+    name: 'Picatrix (Ghāyat al-Ḥakīm)',
+    description: 'The \'Aim of the Sage,\' compiled in Arabic in eleventh-century Spain and translated for Alfonso X, is the great textbook of astral magic: how to draw the powers of the planets and the lunar mansions into talismans at the right hour. Its recipes include the vilest ingredients in any grimoire. It fed Agrippa and the Florentine Platonists, and it is the clearest surviving bridge between the star-worship of Babylon and the magic of Renaissance Europe.',
+    layer: 'The Occult',
+    sources: ['Picatrix, Latin version (c. 1256) / Pingree edition'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/17th_century_Picatrix_title_Istanbul%2C_Hagia_Sophia_2443_crop.png/960px-17th_century_Picatrix_title_Istanbul%2C_Hagia_Sophia_2443_crop.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'three-books-occult-philosophy',
+    parentId: 'occult-grimoires',
+    name: 'Three Books of Occult Philosophy',
+    description: 'Agrippa\'s 1533 summa of natural, celestial and ceremonial magic: the virtues of stones and herbs, the numbers and seals of the planets, the names and orders of angels and demons. It made Kabbalah, astrology and conjuration respectable reading for Christian scholars, and nearly every later system quietly copies its tables. A spurious \'Fourth Book\' of practical spirit-summoning was added after his death and is the part the sorcerers actually used.',
+    layer: 'The Occult',
+    relatedIds: ['cornelius-agrippa'],
+    sources: ['Agrippa, \'De occulta philosophia\' (Cologne, 1533)'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Phys_m_6_tb_1.jpg/960px-Phys_m_6_tb_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'malleus-maleficarum',
+    parentId: 'occult-grimoires',
+    name: 'Malleus Maleficarum (Hammer of Witches)',
+    description: 'Not a grimoire but its mirror: the 1486 manual by the Dominican inquisitor Heinrich Kramer that taught magistrates how to identify, interrogate and burn witches, and that witchcraft was real, feminine and a pact with the devil. Printed more often than any book but the Bible for two centuries, it supplied the legal machinery for tens of thousands of executions. The book that defined the witch defined her by what it feared.',
+    layer: 'The Occult',
+    sources: ['Heinrich Kramer, \'Malleus Maleficarum\' (Speyer, 1486)'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Malleus_maleficarum%2C_K%C3%B6ln_1520%2C_Titelseite.jpg/330px-Malleus_maleficarum%2C_K%C3%B6ln_1520%2C_Titelseite.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'book-of-abramelin',
+    parentId: 'occult-grimoires',
+    name: 'The Book of Abramelin',
+    description: 'Framed as a Jewish magician\'s instructions to his son around 1458, the Abramelin operation is a six-month retreat of prayer and purification whose goal is the \'Knowledge and Conversation of the Holy Guardian Angel,\' after which the magician binds the demons of the four directions with magic word-squares. Mathers\' flawed translation became the central rite of the Golden Dawn and of Crowley, who abandoned the operation at Boleskine and, by his own account, let the demons out.',
+    layer: 'The Occult',
+    sources: ['\'The Book of the Sacred Magic of Abramelin the Mage\' (Mathers, 1898) / Dehn-Guth edition (2006)'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Liber_L_-_The_Book_of_the_Law.pdf/page1-500px-Liber_L_-_The_Book_of_the_Law.pdf.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
+  },
+  {
+    id: 'book-of-the-law',
+    parentId: 'occult-grimoires',
+    name: 'The Book of the Law (Liber AL vel Legis)',
+    description: 'Dictated to Aleister Crowley in a Cairo hotel room over three days in April 1904 by a voice he called Aiwass, the book announces a new aeon under the law \'Do what thou wilt,\' abolishes the religions of the past and proclaims Crowley its prophet. It is the scripture of Thelema and of every order descended from it. Crowley said he did not like its contents; he simply obeyed them.',
+    layer: 'The Occult',
+    relatedIds: ['aleister-crowley'],
+    sources: ['Aleister Crowley, \'Liber AL vel Legis\' (1904; published 1909)'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Liber_AL_Vel_Legis.png/500px-Liber_AL_Vel_Legis.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'corpus-hermeticum',
+    parentId: 'occult-grimoires',
+    name: 'Corpus Hermeticum',
+    description: 'Seventeen Greek treatises in which Hermes Trismegistus, the \'thrice-great\' fusion of Thoth and Hermes, teaches the ascent of the soul through the planetary spheres to the divine Mind. When Ficino translated them for the Medici in 1463 they were believed to predate Moses; they were actually written in Roman Egypt. \'As above, so below\' is their creed, and the Renaissance magus, the Rosicrucian and the Freemason all took it as their starting point.',
+    layer: 'The Occult',
+    relatedIds: ['emerald-tablet'],
+    sources: ['Marsilio Ficino, \'Pimander\' (1471) / Brian Copenhaver, \'Hermetica\' (1992)'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/HermesTrismegistusCaucHighRes.jpg/1280px-HermesTrismegistusCaucHighRes.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'sefer-raziel',
+    parentId: 'occult-grimoires',
+    name: 'Sefer Raziel HaMalakh',
+    description: 'The \'Book of the Angel Raziel,\' which tradition says the angel gave to Adam after the expulsion from Eden so that mankind would not be left without knowledge, and which passed to Enoch, Noah and Solomon. The medieval text we have is a compilation of angelology, astrology and amulet-making in Hebrew. Jewish households kept a copy as protection against fire. The claim at its heart, that the first man received a book from heaven, is the oldest story in the occult.',
+    layer: 'The Occult',
+    sources: ['Sefer Raziel HaMalakh (Amsterdam, 1701) / Steve Savedow translation'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Sefer_raziel_segulot.png/500px-Sefer_raziel_segulot.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'necronomicon',
+    parentId: 'occult-grimoires',
+    name: 'The Necronomicon',
+    description: 'H.P. Lovecraft invented the \'Book of Dead Names\' of the mad Arab Abdul Alhazred for his horror stories in the 1920s and said so repeatedly. It made no difference: forged editions appeared from the 1970s, the \'Simon Necronomicon\' sold a million copies as a working grimoire, and libraries still receive requests for the original. A fictional book of the Old Ones that people insist on treating as real is itself a case study in how grimoires come to exist.',
+    layer: 'The Occult',
+    sources: ['H.P. Lovecraft, \'History of the Necronomicon\' (1927) / \'Simon\' Necronomicon (1977)'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/H.P._Lovecraft_statue_in_Providence%2C_RI_sculpted_by_artist_Gage_Prentiss._Photo_by_David_Lepage.jpg/1280px-H.P._Lovecraft_statue_in_Providence%2C_RI_sculpted_by_artist_Gage_Prentiss._Photo_by_David_Lepage.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'secret-doctrine',
+    parentId: 'occult-grimoires',
+    name: 'The Secret Doctrine',
+    description: 'Helena Blavatsky\'s 1888 synthesis of science, religion and philosophy, built on the \'Stanzas of Dzyan\' that she said came from a Tibetan book no one else has seen. It lays out seven root races of humanity, Lemuria and Atlantis among them, cosmic cycles and hidden masters guiding evolution. Theosophy\'s influence runs through the New Age, through Ariosophy and the occult roots of the Third Reich, and through every modern teaching about \'ascended masters.\'',
+    layer: 'The Occult',
+    sources: ['H.P. Blavatsky, \'The Secret Doctrine\' (1888)'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/%D0%A2%D0%B0%D0%B9%D0%BD%D0%B0%D1%8F_%D0%B4%D0%BE%D0%BA%D1%82%D1%80%D0%B8%D0%BD%D0%B0_%D0%91%D0%BB%D0%B0%D0%B2%D0%B0%D1%82%D1%81%D0%BA%D0%B0%D1%8F_.PDF/page1-1280px-%D0%A2%D0%B0%D0%B9%D0%BD%D0%B0%D1%8F_%D0%B4%D0%BE%D0%BA%D1%82%D1%80%D0%B8%D0%BD%D0%B0_%D0%91%D0%BB%D0%B0%D0%B2%D0%B0%D1%82%D1%81%D0%BA%D0%B0%D1%8F_.PDF.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
+  },
+  {
+    id: 'kybalion',
+    parentId: 'occult-grimoires',
+    name: 'The Kybalion',
+    description: 'Published in 1908 by the \'Three Initiates,\' almost certainly the Chicago New Thought writer William Walker Atkinson, the Kybalion presents seven \'Hermetic principles,\' Mentalism, Correspondence, Vibration, Polarity, Rhythm, Cause and Effect, Gender, as the secret teaching of ancient Egypt. It is modern American self-help wearing a pharaoh\'s mask, and it is the source of the \'laws of the universe\' that manifestation culture still repeats.',
+    layer: 'The Occult',
+    sources: ['\'Three Initiates,\' \'The Kybalion\' (Yogi Publication Society, 1908)'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Kybalion_1908.jpg/1280px-Kybalion_1908.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'dogme-et-rituel',
+    parentId: 'occult-grimoires',
+    name: 'Dogme et Rituel de la Haute Magie',
+    description: 'Lévi\'s two-volume \'Dogma and Ritual of High Magic\' (1856), the book that founded the modern occult revival and introduced the Baphomet image, the identification of tarot with Kabbalah and the pentagram as the sign of the microcosm. Every magical order after it, from the Golden Dawn to the O.T.O., is a footnote to its chapters.',
+    layer: 'The Occult',
+    relatedIds: ['eliphas-levi'],
+    sources: ['Éliphas Lévi, \'Dogme et Rituel de la Haute Magie\' (Paris, 1856)'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Sealsolomon.jpg/1280px-Sealsolomon.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'sworn-book-of-honorius',
+    parentId: 'occult-grimoires',
+    name: 'The Sworn Book of Honorius',
+    description: 'Written in the thirteenth century and attributed to \'Honorius of Thebes,\' this is the oldest surviving grimoire of its kind, a manual for obtaining the beatific vision and commanding spirits through a 28-day regimen of prayers, fasting and seals drawn in blood. Its preface says the magicians of the world met in council and distilled their art into this one book, each swearing to keep only three copies. The oath gave the book its name and its aura.',
+    layer: 'The Occult',
+    sources: ['\'Liber Juratus Honorii\' (British Library Sloane 313) / Gösta Hedegård edition (2002)'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/D._Johannis_Tackii_..._Triplex_phasis_sophicus_solis_orbe_expeditus_humanaeque_fragilitati_%26_spei_resurrectionis_rerum_consecratus_%28IA_djohannistackiit00tack%29.pdf/page1-500px-thumbnail.pdf.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
+  },
+  {
+    id: 'grand-grimoire',
+    parentId: 'occult-grimoires',
+    name: 'The Grand Grimoire (Red Dragon)',
+    description: 'The most notorious of the cheap French grimoires, claiming to date from 1522 but printed in the eighteenth century: instructions for summoning Lucifuge Rofocale, Lucifer\'s prime minister, and striking a pact for hidden treasure. It is the book of the crossroads bargain in its purest form, the one sorcerers in Haiti and the Caribbean still use. The Church forbade it; peasants bought it anyway.',
+    layer: 'The Occult',
+    sources: ['\'Le Grand Grimoire\' (c. 1750) / Owen Davies, \'Grimoires\' (2009)'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/A_bibliographical%2C_antiquarian_and_picturesque_tour_in_France_and_Germany_%281821%29_%2814594715768%29.jpg/960px-A_bibliographical%2C_antiquarian_and_picturesque_tour_in_France_and_Germany_%281821%29_%2814594715768%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
   }
 ];
 

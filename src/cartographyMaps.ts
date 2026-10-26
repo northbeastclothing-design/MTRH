@@ -457,5 +457,75 @@ export const HISTORICAL_MAPS: HistoricalMap[] = [
     aspectRatio: 1.0964,
     pinColor: '#90C2FF',
     era: 'speculative'
+  },
+  {
+    id: 'nuremberg-1493',
+    name: "Nuremberg Chronicle World Map",
+    year: "1493",
+    description: "Hartmann Schedel's world map from the Nuremberg Chronicle, printed a year after Columbus sailed, is held at its corners by Shem, Ham and Japheth, the sons of Noah who repopulated the earth. Down its left margin march the monstrous races: dog-headed men, one-footed sciapods, headless Blemmyes with faces in their chests. The last great world picture of the age before the Americas still drew the world as the Bible described it: three continents for three brothers, with the Nephilim's strange children pushed to the edges.",
+    url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/1493_map_of_the_world_by_Hartmann_Schedel.jpg/3840px-1493_map_of_the_world_by_Hartmann_Schedel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    aspectRatio: 1.3079,
+    pinColor: '#FF9F63',
+    era: 'late-medieval'
+  },
+  {
+    id: 'kircher-flood-1675',
+    name: "Kircher's World After the Flood (Arca Noë)",
+    year: "1675",
+    description: "From Athanasius Kircher's 'Arca Noë': a geographical map of the world as it stood when the Flood receded, with Atlantis still shown off the coast of the Americas and the mountains of Ararat at the centre of the new world. Kircher, a Jesuit who treated Genesis as a survey report, plotted the dispersion of Noah's sons across the continents. The map asks the question modern geology refuses to: what did the coastlines look like before the waters came?",
+    url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Arca_Noe%2C_geography_of_world_after_flood%2C_by_A._Kircher._Wellcome_L0013366.jpg/1280px-Arca_Noe%2C_geography_of_world_after_flood%2C_by_A._Kircher._Wellcome_L0013366.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    aspectRatio: 1.3976,
+    pinColor: '#59DCB7',
+    era: 'renaissance'
+  },
+  {
+    id: 'moon-flammarion-1887',
+    name: "Flammarion-Gaudibert General Map of the Moon",
+    year: "1887",
+    description: "A monumental lunar chart compiled by Casimir Gaudibert from his own observations, drawn by Léon Fenet and published under Camille Flammarion, the astronomer who popularised the plurality of inhabited worlds. Every crater, ridge and 'sea' is named as the nineteenth century saw them, before any probe had flown. Flammarion believed the Moon had been alive once; his map is a portrait of a dead world made by men who thought it might not be.",
+    url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Carte_g%C3%A9n%C3%A9rale_de_la_lune_-_dress%C3%A9e_sous_la_direction_de_Camille_Flammarion_%3B_par_C.-M._Gaudibert_%3B_dessin%C3%A9e_par_L%C3%A9on_Fenet_-_btv1b52505506n.jpg/3840px-Carte_g%C3%A9n%C3%A9rale_de_la_lune_-_dress%C3%A9e_sous_la_direction_de_Camille_Flammarion_%3B_par_C.-M._Gaudibert_%3B_dessin%C3%A9e_par_L%C3%A9on_Fenet_-_btv1b52505506n.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    aspectRatio: 0.7753,
+    pinColor: '#B297FF',
+    era: 'modern'
+  },
+  {
+    id: 'palestine-time-of-christ',
+    name: "Palestine in the Time of Christ (Coleman Bible Atlas)",
+    year: "c. 1854",
+    description: "Lyman Coleman's atlas map of the Holy Land as it was under Herod's sons and Pilate: Galilee, Samaria, Judaea and the Decapolis, with Capernaum, Nazareth, Bethany, Jericho and the roads between them on which the Gospels unfold. This is the ground Jesus walked, drawn for the family Bibles of the nineteenth century so that readers could follow the ministry town by town. Use it with the Biblical Figures layer to trace the journeys.",
+    url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Lyman_Coleman%2C_Map_of_Palestine_in_the_time_of_Christ_%28FL35476936_3803117%29.jpg/3840px-Lyman_Coleman%2C_Map_of_Palestine_in_the_time_of_Christ_%28FL35476936_3803117%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    aspectRatio: 0.6908,
+    pinColor: '#90C2FF',
+    era: 'modern'
+  },
+  {
+    id: 'exodus-sinai-1873',
+    name: "The Exodus & the Sinai Wanderings",
+    year: "1873",
+    description: "An 1873 map of the Sinai Peninsula tracing the route of the Israelites out of Egypt: the crossing of the sea, the bitter waters of Marah, the giving of the Law at the mountain, Kadesh-Barnea and the forty years of wandering. Where exactly the sea parted and which peak is the true Sinai are still fought over, with Jebel al-Lawz in Arabia the modern contender. The Victorian surveyors who drew this map walked the wadis with the book open.",
+    url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/The_desert_of_the_Exodus_-_journeys_on_foot_in_the_wilderness_of_the_forty_years%27_wanderings_-_undertaken_in_connexion_with_the_ordnance_survey_of_Sinai_%28IA_desertofexodusjo02palmuoft%29.pdf/page1-500px-thumbnail.pdf.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    aspectRatio: 0.8338,
+    pinColor: '#91FFC4',
+    era: 'modern'
+  },
+  {
+    id: 'dunhuang-star-chart',
+    name: "Dunhuang Star Chart",
+    year: "c. 700 CE",
+    description: "The oldest complete star atlas in the world, found in 1907 among the sealed manuscripts of the Mogao Caves at Dunhuang and now in the British Library. Over 1,300 stars in 257 Chinese asterisms are drawn on a scroll in a projection Europe would not reinvent for nine centuries. The Tang astrologers who made it read the heavens as a court of celestial officials; the sky, to them, was a government.",
+    url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Dunhuang_star_map.jpg/1920px-Dunhuang_star_map.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    aspectRatio: 0.9963,
+    pinColor: '#FFF96A',
+    era: 'early-medieval'
+  },
+  {
+    id: 'azimuthal-equidistant-flat',
+    name: "Azimuthal Equidistant 'Flat Earth' Projection",
+    year: "Modern (UN emblem basis)",
+    description: "The north-polar azimuthal equidistant projection: the Arctic at the centre, the continents fanning outward, Antarctica stretched into an ice wall around the rim. It is the projection on the flag of the United Nations and the map favoured by every flat-earth model from Gleason's 1892 'New Standard Map' onward. Whether you read it as a convenient projection or as the true shape of the world, it is worth knowing that the UN chose it for the whole globe's emblem.",
+    url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Azimuthal_equidistant_projection_SW.jpg/1920px-Azimuthal_equidistant_projection_SW.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    aspectRatio: 1.0,
+    pinColor: '#FF5C5C',
+    era: 'modern'
   }
 ];
