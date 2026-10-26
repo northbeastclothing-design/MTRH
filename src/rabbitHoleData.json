@@ -52279,5 +52279,373 @@
    "https://x.com/i/status/2096221748953817531",
    "https://pbs.twimg.com/amplify_video_thumb/1918391186588311552/img/g5dptjgbjQzX2znq.jpg"
   ]
+ },
+ {
+  "id": "anomaly-Cryptid-Sightings-minnesota-iceman",
+  "name": "The Minnesota Iceman - Rollingstone, Minnesota (1968)",
+  "category": "Cryptid Sightings",
+  "type": "Point",
+  "coordinates": {
+   "lng": -91.8,
+   "lat": 44.1
+  },
+  "date": 1968,
+  "description": "A hairy, man-like body frozen in a block of ice, toured through Midwestern fairs by showman Frank Hansen in 1968, was examined by zoologists Ivan Sanderson and Bernard Heuvelmans, who declared it a genuine unknown hominid and published it as 'Homo pongoides.' The Smithsonian asked questions, Hansen swapped in a latex model, and the original vanished. Whether a real corpse was ever in the ice is the whole case, and nobody can say.",
+  "source": "Bernard Heuvelmans, Bulletin de l'Institut Royal des Sciences Naturelles de Belgique (1969) / Ivan T. Sanderson",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Winona_County_Courthouse.jpg/1280px-Winona_County_Courthouse.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Cryptid-Sightings-dover-demon",
+  "name": "The Dover Demon - Dover, Massachusetts (1977)",
+  "category": "Cryptid Sightings",
+  "type": "Point",
+  "coordinates": {
+   "lng": -71.283,
+   "lat": 42.246
+  },
+  "date": 1977,
+  "description": "Over two nights in April 1977 four teenagers in Dover separately described a hairless, peach-skinned creature with a huge watermelon head, glowing orange eyes and long spindly fingers, perched on a stone wall and then crouched in the trees. Their sketches match without having compared notes. Investigator Loren Coleman found no explanation and the town has none either; the Dover Demon stands with the greys and the Hopkinsville goblins as something small, big-headed and watching.",
+  "source": "Loren Coleman, 'Mysterious America' / Dover Police Reports (1977)",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Dover_Demon.png/1280px-Dover_Demon.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Cryptid-Sightings-goatman-maryland",
+  "name": "The Goatman of Beltsville - Prince George's County, Maryland",
+  "category": "Cryptid Sightings",
+  "type": "Point",
+  "coordinates": {
+   "lng": -76.91,
+   "lat": 39.03
+  },
+  "date": 1971,
+  "description": "An axe-wielding half-man, half-goat said to haunt the back roads near the Beltsville Agricultural Research Center, blamed in 1971 for the decapitation of a family dog and for a rash of attacks on parked cars on Lover's Lane. The local legend says he was a scientist whose experiment on goats went wrong. A satyr with a government-laboratory origin story is the twentieth century retelling an old creature in its own idiom.",
+  "source": "Prince George's County News (1971) / Mark Opsasnick, 'The Maryland Bigfoot Digest'",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Faun_2_%28PSF%29.png/1280px-Faun_2_%28PSF%29.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Cryptid-Sightings-lizard-man-scape-ore",
+  "name": "The Lizard Man of Scape Ore Swamp - Bishopville, South Carolina (1988)",
+  "category": "Cryptid Sightings",
+  "type": "Point",
+  "coordinates": {
+   "lng": -80.25,
+   "lat": 34.22
+  },
+  "date": 1988,
+  "description": "Seventeen-year-old Christopher Davis, changing a tyre at 2 a.m. beside Scape Ore Swamp, was charged by a seven-foot creature with green scaly skin, red eyes and three-fingered hands that clung to his roof as he sped away. The sheriff took it seriously enough to cast the three-toed prints; cars in the area turned up with chewed chrome. The reptilian in the swamp is the same thing the reptilian theorists put in the boardroom, minus the suit.",
+  "source": "Lee County Sheriff's Office Report (1988) / The Item, Sumter SC",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Lizard_Man_of_Scape_ore_Swamp.jpg/1280px-Lizard_Man_of_Scape_ore_Swamp.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Cryptid-Sightings-ropen-umboi",
+  "name": "The Ropen - Umboi Island, Papua New Guinea",
+  "category": "Cryptid Sightings",
+  "type": "Point",
+  "coordinates": {
+   "lng": 147.9,
+   "lat": -5.6
+  },
+  "date": 1994,
+  "description": "Islanders on Umboi describe a nocturnal flying creature with a long tail, leathery wings and a glowing underside that robs graves and fishing nets; American creationist expeditions in the 1990s and 2000s filmed lights over the ridges and concluded it is a living pterosaur. Sceptics say bioluminescent birds or bats. The Ropen matters to the young-earth case because a surviving flying reptile would put the 'ages' of the textbooks under one very recent sky.",
+  "source": "Jonathan Whitcomb & Paul Nation Expedition Reports (1994-2007)",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Ropen_%28cryptid_pterosaur%29.png/1280px-Ropen_%28cryptid_pterosaur%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Cryptid-Sightings-honey-island-swamp-monster",
+  "name": "Honey Island Swamp Monster - Slidell, Louisiana (1963)",
+  "category": "Cryptid Sightings",
+  "type": "Point",
+  "coordinates": {
+   "lng": -89.8,
+   "lat": 30.27
+  },
+  "date": 1963,
+  "description": "Air-traffic controller Harlan Ford claimed to have met a seven-foot, grey-haired biped with yellow eyes in the Honey Island Swamp in 1963 and, in 1974, to have found a wild boar with its throat torn out beside three-toed tracks he cast in plaster. After his death his family found Super 8 footage of something moving through the trees. The Cajuns called it the Letiche, a feral child raised by alligators; the tracks say something that walks on two legs and has claws.",
+  "source": "Harlan Ford Plaster Casts & Super 8 Footage / Louisiana Folklore Society",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Honey_Island_Swamp%2C_Louisiana_%28paulmannix%29.jpg/1280px-Honey_Island_Swamp%2C_Louisiana_%28paulmannix%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Cryptid-Sightings-beast-of-bodmin",
+  "name": "The Beast of Bodmin Moor - Cornwall, England",
+  "category": "Cryptid Sightings",
+  "type": "Point",
+  "coordinates": {
+   "lng": -4.6,
+   "lat": 50.52
+  },
+  "date": 1983,
+  "description": "More than sixty sightings of a large black cat on Bodmin Moor, mutilated livestock, and a 1995 government inquiry that found 'no verifiable evidence' and then, a week later, a leopard skull in the River Fowey that turned out to be an imported rug. Britain officially has no big cats and unofficially has hundreds of reports a year. Something is killing sheep on the moor, and the ministry's answer was to stop looking.",
+  "source": "MAFF Bodmin Moor Investigation (1995) / Cornwall Police Reports",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Big_Cats_in_Sussex.jpg/1280px-Big_Cats_in_Sussex.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Cryptid-Sightings-owlman-mawnan",
+  "name": "The Owlman of Mawnan - Mawnan Smith, Cornwall (1976)",
+  "category": "Cryptid Sightings",
+  "type": "Point",
+  "coordinates": {
+   "lng": -5.1,
+   "lat": 50.11
+  },
+  "date": 1976,
+  "description": "On Easter weekend 1976 two sisters saw a huge feathered man with glowing eyes and pincer claws hovering over the tower of Mawnan church; two more girls camping nearby that July drew the same thing. The reports came through the showman Tony 'Doc' Shiels, which is the case's weakness, but the church stands on a ley line and inside a prehistoric earthwork, and the descriptions are a near copy of Point Pleasant's Mothman. Winged men with lamp eyes keep appearing at old sacred sites.",
+  "source": "Jonathan Downes, 'The Owlman and Others' / Fortean Times Case Files",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Mawnan_Church.jpg/330px-Mawnan_Church.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Cryptid-Sightings-kongamato",
+  "name": "Kongamato, the Overturner of Boats - Jiundu Swamps, Zambia",
+  "category": "Cryptid Sightings",
+  "type": "Point",
+  "coordinates": {
+   "lng": 24.5,
+   "lat": -11.0
+  },
+  "date": 1923,
+  "description": "When colonial administrator Frank Melland showed Kaonde tribesmen a picture of a pterodactyl in 1923, they immediately named it: kongamato, the red, featherless, bat-winged thing that capsized canoes in the Jiundu swamps and whose very sight meant death. In 1957 a man arrived at Fort Rosebery hospital with chest wounds he said came from a great bird in the swamp. Africa's interior keeps producing reports of animals that are supposed to be sixty million years dead.",
+  "source": "Frank Melland, 'In Witch-Bound Africa' (1923) / Fort Rosebery Hospital Report (1957)",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Kongamato.png/1280px-Kongamato.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Cryptid-Sightings-grootslang",
+  "name": "The Grootslang of the Wonder Hole - Richtersveld, South Africa",
+  "category": "Cryptid Sightings",
+  "type": "Point",
+  "coordinates": {
+   "lng": 17.1,
+   "lat": -28.5
+  },
+  "date": 1900,
+  "description": "A primordial creature half elephant, half serpent, made in the first days of creation when the gods still experimented and spared when they separated the two kinds; it lives in the 'Wonder Hole,' a bottomless cave near the Orange River said to lead to the sea, guarding a hoard of diamonds and buying its life with gems. The diamond prospectors of the Richtersveld took the warning seriously. A serpent in a bottomless pit guarding treasure needs no translation for a reader of Revelation.",
+  "source": "Khoikhoi Oral Tradition / Richtersveld Diamond-Field Accounts",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Python_natalensis_G._J._Alexander.JPG/1280px-Python_natalensis_G._J._Alexander.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Cryptid-Sightings-tsuchinoko",
+  "name": "The Tsuchinoko - Niimi, Okayama, Japan",
+  "category": "Cryptid Sightings",
+  "type": "Point",
+  "coordinates": {
+   "lng": 133.47,
+   "lat": 34.98
+  },
+  "date": 1970,
+  "description": "A snake as thick as a beer bottle in the middle and thin at both ends, that can jump a metre, snore, and, in older tales, speak and lie; the Kojiki mentions it in 712 and Japanese towns have offered rewards of up to a hundred million yen for a live one. Niimi gives a two-million-yen bounty. Dozens of specimens turn out to be gorged vipers. The Japanese have treated the tsuchinoko hunt as half joke and half serious for forty years, which is exactly how most cultures handle the creatures they half remember.",
+  "source": "Kojiki (712 CE) / Niimi City Tsuchinoko Reward Records",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Tsuchinoko_kan.jpg/1280px-Tsuchinoko_kan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Cryptid-Sightings-kappa-tono",
+  "name": "Kappa of the Tōno Rivers - Tōno, Iwate, Japan",
+  "category": "Cryptid Sightings",
+  "type": "Point",
+  "coordinates": {
+   "lng": 141.53,
+   "lat": 39.33
+  },
+  "date": 1910,
+  "description": "Child-sized river demons with a turtle shell, a beak and a water-filled dish on the head that drowns their strength if it spills; they drag horses and children into the water and pull out their livers. Tōno's kappa pool still sells fishing licences for them. Kunio Yanagita recorded villagers in 1910 who described kappa children being born to human mothers and quietly killed. The kappa is a water-spirit that breeds with humans, and Japan wrote that down as recent memory.",
+  "source": "Kunio Yanagita, 'Tōno Monogatari' (1910) / Tōno City Folklore Museum",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Kyoka_Hyaku-Monogatari_Kappa.jpg/500px-Kyoka_Hyaku-Monogatari_Kappa.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Cryptid-Sightings-batsquatch",
+  "name": "Batsquatch - Mount St. Helens, Washington (1980)",
+  "category": "Cryptid Sightings",
+  "type": "Point",
+  "coordinates": {
+   "lng": -122.19,
+   "lat": 46.19
+  },
+  "date": 1980,
+  "description": "After the 1980 eruption of Mount St. Helens, witnesses in the blast zone began describing a nine-foot winged ape with blue-grey fur, a wolf's muzzle and a fifty-foot wingspan; in 1994 a teenager watched it land on the road near Mount Rainier and stall his truck's engine. A flying sasquatch released by a volcano sounds like a comic book, and the engine-stalling detail is straight out of the UFO literature. The Cascades are where the bigfoot reports and the sky reports overlap.",
+  "source": "Tacoma News Tribune (1994) / Pacific Northwest Cryptid Reports",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/MSH80_eruption_mount_st_helens_05-18-80-dramatic-edit.jpg/1280px-MSH80_eruption_mount_st_helens_05-18-80-dramatic-edit.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Cryptid-Sightings-shunka-warakin",
+  "name": "Shunka Warak'in (The Ringdocus) - Ennis, Montana",
+  "category": "Cryptid Sightings",
+  "type": "Point",
+  "coordinates": {
+   "lng": -111.73,
+   "lat": 45.35
+  },
+  "date": 1886,
+  "description": "The Ioway called it 'carries off dogs': a hyena-like beast with a sloping back that raided Montana ranches until Israel Hutchins shot one in 1886 and had it mounted. The taxidermy, nicknamed the Ringdocus, sat in an Idaho museum, vanished, and was found again in 2007 in a family attic and returned to Ennis, where it sits in the Madison Valley museum looking like nothing in any field guide. Rare among cryptids, this one has a body you can visit.",
+  "source": "Madison Valley History Museum, Ennis MT / Ross Hutchins, 'Trails to Nature's Mysteries' (1977)",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Ennismainstreet.jpg/1280px-Ennismainstreet.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Cryptid-Sightings-melon-heads-kirtland",
+  "name": "The Melon Heads of Kirtland - Kirtland, Ohio",
+  "category": "Cryptid Sightings",
+  "type": "Point",
+  "coordinates": {
+   "lng": -81.36,
+   "lat": 41.62
+  },
+  "date": 1960,
+  "description": "Small, feral figures with grotesquely swollen heads said to haunt Wisner Road near Kirtland, the escaped subjects of a Dr. Crow who experimented on hydrocephalic children in a woodland house that burned down. Michigan and Connecticut have their own versions with their own doctor. A government-funded experiment on children that produced monsters who still live in the woods is a legend America tells in three states at once, which suggests it is about something more than Kirtland.",
+  "source": "Lake County Folklore Collections / 'Weird Ohio'",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Velvet_Street_%28Dracula_Drive%29.jpg/500px-Velvet_Street_%28Dracula_Drive%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Cryptid-Sightings-issie-ikeda",
+  "name": "Issie of Lake Ikeda - Kagoshima, Japan (1978)",
+  "category": "Cryptid Sightings",
+  "type": "Point",
+  "coordinates": {
+   "lng": 130.56,
+   "lat": 31.23
+  },
+  "date": 1978,
+  "description": "On 3 September 1978 about twenty people watched two black humps move across the crater lake of Ikeda at speed; a photograph that December showed a dark shape ten metres long, and the town put up a statue. Legend says Issie was a white mare whose foal was stolen by a samurai and who leapt into the lake in grief. A volcanic crater lake with no outlet and a monster that appeared the same decade the lake's giant eels were discovered: the lake is deep enough to keep its own counsel.",
+  "source": "Ibusuki City Records (1978) / Kagoshima Prefectural Newspaper",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Lake_Ikeda_%28152624734%29.jpg/500px-Lake_Ikeda_%28152624734%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Cryptid-Sightings-inkanyamba-howick",
+  "name": "Inkanyamba of Howick Falls - KwaZulu-Natal, South Africa",
+  "category": "Cryptid Sightings",
+  "type": "Point",
+  "coordinates": {
+   "lng": 30.24,
+   "lat": -29.49
+  },
+  "date": 1995,
+  "description": "A huge horse-headed serpent that lives in the pool beneath Howick Falls, whose rising in summer brings the storms and tornadoes of the Midlands; sangomas still go to the falls to leave offerings, and a 1995 photograph by a park worker shows a long dark shape in the plunge pool. Rock paintings in the Drakensberg show the same creature. A storm-bringing water serpent worshipped at a waterfall is the Leviathan cult alive and functioning in the twenty-first century.",
+  "source": "Zulu Oral Tradition / Howick Falls Photograph (Bob Teeney, 1995)",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Howick-Falls-November-2009.jpg/1280px-Howick-Falls-November-2009.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Cryptid-Sightings-trunko-margate",
+  "name": "Trunko - Margate Beach, South Africa (1924)",
+  "category": "Cryptid Sightings",
+  "type": "Point",
+  "coordinates": {
+   "lng": 30.37,
+   "lat": -30.86
+  },
+  "date": 1924,
+  "description": "Bathers at Margate in October 1924 watched two whales battle a white, fur-covered creature with a trunk for three hours before its body washed ashore: forty-seven feet long, ten feet of trunk, no head, covered in snow-white hair. It lay on the beach for ten days and was photographed before the sea took it back. The photographs surfaced in 2010 and show what looks like a mass of whale blubber. The witnesses who saw it fight were not describing blubber.",
+  "source": "Margate Beach Photographs (1924, published 2010) / Wide World Magazine",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Margate_Main_beach.jpg/960px-Margate_Main_beach.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Cryptid-Sightings-ahool-salak",
+  "name": "The Ahool - Salak Mountains, West Java, Indonesia",
+  "category": "Cryptid Sightings",
+  "type": "Point",
+  "coordinates": {
+   "lng": 106.73,
+   "lat": -6.7
+  },
+  "date": 1925,
+  "description": "Named for its cry, the ahool is a giant bat the size of a child with a monkey's face and a three-metre wingspan, seen gliding over the rivers of the Salak range by naturalist Ernest Bartels in 1925 and heard by him again in 1927. Cryptozoologists suggest a surviving pterosaur or a giant unknown bat. Java's forests also hid a living rhinoceros species until the twentieth century; the ahool keeps company with things that were not supposed to exist.",
+  "source": "Ernest Bartels Field Notes (1925-1927) / Ivan T. Sanderson",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/MT._SALAK_-_INDONESIA_-_2019.jpg/1280px-MT._SALAK_-_INDONESIA_-_2019.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Cryptid-Sightings-emela-ntouka",
+  "name": "Emela-ntouka, the 'Killer of Elephants' - Likouala, Republic of the Congo",
+  "category": "Cryptid Sightings",
+  "type": "Point",
+  "coordinates": {
+   "lng": 17.5,
+   "lat": 1.5
+  },
+  "date": 1954,
+  "description": "The Likouala swamps that hide Mokele-mbembe also hold the emela-ntouka: a beast the size of an elephant with a single great horn on its snout, no hair, a heavy tail, that disembowels elephants and buffalo that stray into its water. Game wardens recorded it in 1954. The pygmies who describe it draw something a child would recognise from a dinosaur book, and they have never seen a dinosaur book.",
+  "source": "Lucien Blancou, Mammalia (1954) / Roy Mackal, 'A Living Dinosaur?' (1987)",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Emela-ntouka.png/1280px-Emela-ntouka.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Cryptid-Sightings-lake-van-monster",
+  "name": "The Lake Van Monster - Lake Van, Türkiye (1997)",
+  "category": "Cryptid Sightings",
+  "type": "Point",
+  "coordinates": {
+   "lng": 43.0,
+   "lat": 38.6
+  },
+  "date": 1997,
+  "description": "In 1997 a university teaching assistant filmed a long dark creature surfacing in Lake Van, the vast alkaline lake in the shadow of Ararat, after years of fishermen's reports of a fifteen-metre animal with spiky back ridges. The footage went around the world and the town built a statue. A monster in the lake beneath the mountain where the Ark came to rest is either a tourist-board invention or a reminder that not everything that walked off the Ark stayed on dry land.",
+  "source": "Ünal Kozak Footage (1997) / Van Province Tourism Records",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/STS079-781-53.jpg/1280px-STS079-781-53.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Cryptid-Sightings-akkorokamui",
+  "name": "Akkorokamui, the Giant Red Octopus - Uchiura Bay, Hokkaido, Japan",
+  "category": "Cryptid Sightings",
+  "type": "Point",
+  "coordinates": {
+   "lng": 140.6,
+   "lat": 42.3
+  },
+  "date": 1900,
+  "description": "The Ainu of Funka Bay feared a crimson octopus more than a hundred metres across whose body dyed the sea and sky red before it took ships; John Batchelor recorded fishermen's accounts of it in the 1900s. Shinto shrines near the bay still venerate it as a healing god of the sea with power over limbs. A colossal sea-creature that is both terror and deity is the Kraken and Leviathan in one, worshipped where it was once fled.",
+  "source": "John Batchelor, 'The Ainu and Their Folk-Lore' (1901)",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/130922_Toyoura_Hokkaido_Japan01bss3.jpg/1280px-130922_Toyoura_Hokkaido_Japan01bss3.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  ]
+ },
+ {
+  "id": "anomaly-Cryptid-Sightings-jba-fofi",
+  "name": "J'ba Fofi, the Giant Spider of the Congo - Ituri Forest, DR Congo",
+  "category": "Cryptid Sightings",
+  "type": "Point",
+  "coordinates": {
+   "lng": 28.6,
+   "lat": 1.5
+  },
+  "date": 1938,
+  "description": "In 1938 an English couple driving through the Congo interior stopped for what they took to be a cat crossing the track and found a spider with a leg span of four to five feet. The Baka describe the j'ba fofi as a brown, long-legged web-builder that traps small antelope and once took children, and say it has grown rare since the forest was cut. Nothing in biology permits a spider that size; nothing in the Baka's history permits them to have invented it.",
+  "source": "Reginald & Margurite Lloyd Account (1938) / George Eberhart, 'Mysterious Creatures' (2002)",
+  "images": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Rainforest_-_Ituri_%2820874628148%29.jpg/1280px-Rainforest_-_Ituri_%2820874628148%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  ]
  }
 ]

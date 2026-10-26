@@ -6337,6 +6337,116 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     description: 'The Soviets drilled 12,262 metres into the Baltic Shield, the deepest hole ever made, and stopped in 1992 when the rock at 180°C flowed like plastic.',
     source: 'Kola Scientific Drilling Expedition Records / Trinity Broadcasting Network (1989)',
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/%D0%9A%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%D0%B0%D1%8F_%D1%81%D0%B2%D0%B5%D1%80%D1%85%D0%B3%D0%BB%D1%83%D0%B1%D0%BE%D0%BA%D0%B0%D1%8F_%D1%81%D0%BA%D0%B2%D0%B0%D0%B6%D0%B8%D0%BD%D0%B0_crop.jpg/500px-%D0%9A%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%D0%B0%D1%8F_%D1%81%D0%B2%D0%B5%D1%80%D1%85%D0%B3%D0%BB%D1%83%D0%B1%D0%BE%D0%BA%D0%B0%D1%8F_%D1%81%D0%BA%D0%B2%D0%B0%D0%B6%D0%B8%D0%BD%D0%B0_crop.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-fomorians',
+    name: 'The Fomorians',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: -2000,
+    description: 'Ireland\'s first monstrous race: sea-giants who held the island before the gods of the Tuatha Dé Danann, ruled from a glass tower on Tory Island by Balor of the evil eye, and were broken at the second battle of Moytura.',
+    source: 'Lebor Gabála Érenn (Book of Invasions) / Cath Maige Tuired',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/The_Fomors_-_Duncan_1912.png/500px-The_Fomors_-_Duncan_1912.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-gigantes-pallene',
+    name: 'The Gigantes & the Gigantomachy',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: -1200,
+    description: 'Born from the blood of the castrated Uranus falling on the Earth, the Gigantes rose against Olympus from the plain of Phlegra on the Pallene peninsula, hurling mountains until Heracles and the gods buried them under volcanoes.',
+    source: 'Hesiod, Theogony / Apollodorus, Bibliotheca I.6 / Pausanias',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Poseidon_Polybotes_Cdm_Paris_573.jpg/1280px-Poseidon_Polybotes_Cdm_Paris_573.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-daityas-mahabali',
+    name: 'The Daityas & King Mahabali',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: -1500,
+    description: 'The Daityas, giant sons of the goddess Diti, are the asuras who fought the gods for the three worlds in the Puranas.',
+    source: 'Bhagavata Purana VIII / Vamana Purana',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/MET_DP367896.jpg/1280px-MET_DP367896.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-kap-dwa',
+    name: 'Kap Dwa, the Two-Headed Patagonian Giant',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: 1673,
+    description: 'A twelve-foot mummified body with two heads, said to have been captured by Spanish sailors in Patagonia in 1673 and killed after he slew four of them, passed through Victorian sideshows and the Blackpool waxworks before ending up in a Baltimore curiosity museum.',
+    source: 'Bob\'s Side Show, Baltimore / Blackpool Waxworks Records / Patagonian Giant Accounts (Pigafetta, 1520)',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Urville-Patagonians3.jpg/500px-Urville-Patagonians3.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-gogmagog',
+    name: 'Gogmagog & the Giants of Albion',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: -1100,
+    description: 'When Brutus of Troy landed in Britain it was inhabited only by giants; their chief, Gogmagog, twelve cubits tall, was wrestled by Corineus and thrown from the cliff at Plymouth Hoe, where chalk figures of the pair were cut into the turf and maintained until the seventeenth century.',
+    source: 'Geoffrey of Monmouth, Historia Regum Britanniae (c. 1136) / Plymouth Corporation Records',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Gogmagog_the_Giant_in_Guildhall_1859.png/500px-Gogmagog_the_Giant_in_Guildhall_1859.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-antaeus-tangier',
+    name: 'Antaeus, Giant of Libya',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: -1000,
+    description: 'Son of Poseidon and the Earth, Antaeus forced every traveller through Libya to wrestle him and roofed his father\'s temple with their skulls; he could not be beaten while he touched the ground, so Heracles lifted him into the air and crushed him.',
+    source: 'Plutarch, Life of Sertorius 9 / Apollodorus II.5.11',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Herakles_Antaios_Louvre_G103.jpg/1280px-Herakles_Antaios_Louvre_G103.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-daidarabotchi',
+    name: 'Daidarabotchi, the Mountain-Making Giant',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: 721,
+    description: 'A giant so large that in the Hitachi Fudoki of 721 he is said to have eaten clams from a hilltop and left shell-mounds behind; later tales have him carrying Mount Fuji on his back and leaving footprint-lakes across the Kanto plain.',
+    source: 'Hitachi no Kuni Fudoki (721 CE) / Japanese Folklore Archives',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Daidarabocchi_1.jpg/330px-Daidarabocchi_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-santa-elena-giants',
+    name: 'The Giants of Santa Elena (Cieza de León)',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: 1553,
+    description: 'The conquistador-chronicler Pedro Cieza de León recorded in 1553 the native tradition that giants had landed at Point Santa Elena in reed boats, dug wells through solid rock that still gave sweet water, consumed the country\'s food and abused its people until a fiery angel destroyed them.',
+    source: 'Pedro Cieza de León, Crónica del Perú (1553), ch. 52 / Agustín de Zárate',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/The_travels_of_Pedro_de_Cieza_de_Le%C3%B3n%2C_A._D._1532-50_-_contained_in_the_first_part_of_his_Chronicle_of_Peru_%28IA_gri_000033125008673861%29.pdf/page1-500px-The_travels_of_Pedro_de_Cieza_de_Le%C3%B3n%2C_A._D._1532-50_-_contained_in_the_first_part_of_his_Chronicle_of_Peru_%28IA_gri_000033125008673861%29.pdf.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-jentilak-aralar',
+    name: 'The Jentilak, Basque Giants of the Dolmens',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: -3000,
+    description: 'Basque tradition names the builders of the Pyrenean dolmens and cromlechs as the jentilak, pagan giants who hurled rocks between mountaintops, taught men to forge iron and grow wheat, and retreated under the earth when a luminous cloud announced the birth of Christ, leaving only Olentzero behind.',
+    source: 'José Miguel de Barandiarán, Basque Mythology Collections',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Lamina2.jpg/1280px-Lamina2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-emim-moab',
+    name: 'The Emim & Zamzummim of Moab',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: -2000,
+    description: 'Deuteronomy 2 records, almost in passing, that the plains of Moab and Ammon were held before Lot\'s descendants by the Emim and the Zamzummim, \'a people great, and many, and tall, as the Anakims,\' giants whom the Lord destroyed so that Moab could have the land, just as He would destroy the Anakim before Israel.',
+    source: 'Deuteronomy 2:10-11, 20-21 / Genesis 14:5',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Kingdoms_around_Israel_830_map.svg/1280px-Kingdoms_around_Israel_830_map.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'tl-cyclopes-etna',
+    name: 'The Cyclopes & Polyphemus',
+    type: 'event',
+    layer: 'ancient-civilizations',
+    start: -800,
+    description: 'One-eyed giants of two kinds: the three elder Cyclopes who forged Zeus\'s thunderbolt under Etna, and the lawless shepherd-giants of Homer who kept no assemblies and ate men, among them Polyphemus, blinded by Odysseus in his cave.',
+    source: 'Homer, Odyssey IX / Hesiod, Theogony / Othenio Abel (1914)',
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Head_of_a_Cyclops_Colosseum.jpg/330px-Head_of_a_Cyclops_Colosseum.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
   }
 ];
 
@@ -6848,7 +6958,18 @@ export const TIMELINE_LOCATIONS: Record<string, TimelineLocation> = {
   'tl-quinametzin-giants': { lng: -98.3, lat: 19.06, locationName: 'Cholula, Mexico', category: 'Giants & Nephilim' },
   'tl-Nasa-Space-3i-atlas': { lng: -70.76, lat: -30.47, locationName: 'Discovered at Río Hurtado, Chile (2025)', category: 'NASA / Space' },
   'tl-Nasa-Space-99942-apophis': { lng: -111.6, lat: 31.96, locationName: 'Discovered at Kitt Peak, Arizona (2004)', category: 'NASA / Space' },
-  'tl-Underworld-kola-superdeep-borehole': { lng: 30.61, lat: 69.4, locationName: 'Zapolyarny, Murmansk, Russia', category: 'Underworld Entrances' }
+  'tl-Underworld-kola-superdeep-borehole': { lng: 30.61, lat: 69.4, locationName: 'Zapolyarny, Murmansk, Russia', category: 'Underworld Entrances' },
+  'tl-fomorians': { lng: -8.235, lat: 55.265, locationName: 'Tory Island, Donegal, Ireland', category: 'Giants & Nephilim' },
+  'tl-gigantes-pallene': { lng: 23.4, lat: 40.05, locationName: 'Pallene (Kassandra), Greece', category: 'Giants & Nephilim' },
+  'tl-daityas-mahabali': { lng: 76.33, lat: 10.03, locationName: 'Thrikkakara, Kerala, India', category: 'Giants & Nephilim' },
+  'tl-kap-dwa': { lng: -76.61, lat: 39.29, locationName: 'Baltimore, Maryland', category: 'Giants & Nephilim' },
+  'tl-gogmagog': { lng: -4.142, lat: 50.364, locationName: 'Plymouth Hoe, England', category: 'Giants & Nephilim' },
+  'tl-antaeus-tangier': { lng: -5.81, lat: 35.78, locationName: 'Tangier, Morocco', category: 'Giants & Nephilim' },
+  'tl-daidarabotchi': { lng: 138.73, lat: 35.36, locationName: 'Mount Fuji, Japan', category: 'Giants & Nephilim' },
+  'tl-santa-elena-giants': { lng: -80.86, lat: -2.23, locationName: 'Santa Elena Peninsula, Ecuador', category: 'Giants & Nephilim' },
+  'tl-jentilak-aralar': { lng: -2.0, lat: 43.0, locationName: 'Aralar Range, Basque Country', category: 'Giants & Nephilim' },
+  'tl-emim-moab': { lng: 35.7, lat: 31.6, locationName: 'Kiriathaim, Jordan', category: 'Giants & Nephilim' },
+  'tl-cyclopes-etna': { lng: 15.0, lat: 37.75, locationName: 'Mount Etna, Sicily', category: 'Giants & Nephilim' }
 };
 
 export interface Waypoint {

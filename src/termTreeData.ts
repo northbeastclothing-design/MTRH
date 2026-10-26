@@ -40470,6 +40470,368 @@ const chunk_bible_sources: TermNode[] = [
     layer: 'The Occult',
     sources: ['\'Le Grand Grimoire\' (c. 1750) / Owen Davies, \'Grimoires\' (2009)'],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/A_bibliographical%2C_antiquarian_and_picturesque_tour_in_France_and_Germany_%281821%29_%2814594715768%29.jpg/960px-A_bibliographical%2C_antiquarian_and_picturesque_tour_in_France_and_Germany_%281821%29_%2814594715768%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'archaeology-fomorians',
+    parentId: 'nephilim-br',
+    name: 'The Fomorians',
+    description: 'Ireland\'s first monstrous race: sea-giants who held the island before the gods of the Tuatha Dé Danann, ruled from a glass tower on Tory Island by Balor of the evil eye, and were broken at the second battle of Moytura. The monks who wrote the lore down placed them, pointedly, as descendants of Ham after the Flood. A race of giants from across the sea, half-divine and hostile, defeated in a war of gods: it is the Nephilim story with an Atlantic accent.',
+    layer: 'Giants & Nephilim',
+    mapFeatureId: 'archaeology-fomorians',
+    timelineId: 'tl-fomorians',
+    relatedIds: ['nephilim-br', 'archaeology-gogmagog'],
+    sources: ['Lebor Gabála Érenn (Book of Invasions) / Cath Maige Tuired'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/The_Fomors_-_Duncan_1912.png/500px-The_Fomors_-_Duncan_1912.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'archaeology-gigantes-pallene',
+    parentId: 'nephilim-br',
+    name: 'The Gigantes & the Gigantomachy',
+    description: 'Born from the blood of the castrated Uranus falling on the Earth, the Gigantes rose against Olympus from the plain of Phlegra on the Pallene peninsula, hurling mountains until Heracles and the gods buried them under volcanoes. Classical writers said the giants\' bones were still being dug out of Pallene. A race born of a divine wound, warring on heaven and entombed in the earth by a god: Hesiod and Genesis are telling the same story from two sides of the Mediterranean.',
+    layer: 'Giants & Nephilim',
+    mapFeatureId: 'archaeology-gigantes-pallene',
+    timelineId: 'tl-gigantes-pallene',
+    relatedIds: ['nephilim-br', 'archaeology-cyclopes-etna'],
+    sources: ['Hesiod, Theogony / Apollodorus, Bibliotheca I.6 / Pausanias'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Poseidon_Polybotes_Cdm_Paris_573.jpg/1280px-Poseidon_Polybotes_Cdm_Paris_573.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'archaeology-daityas-mahabali',
+    parentId: 'nephilim-br',
+    name: 'The Daityas & King Mahabali',
+    description: 'The Daityas, giant sons of the goddess Diti, are the asuras who fought the gods for the three worlds in the Puranas. The greatest of them, Mahabali, ruled so justly that Vishnu had to descend as a dwarf to trick him into surrendering heaven and earth and push him into the underworld with one foot. Kerala still celebrates his annual return at Onam. A righteous giant king, banished below by a god who came in disguise, is a figure the authors of Enoch would have recognised.',
+    layer: 'Giants & Nephilim',
+    mapFeatureId: 'archaeology-daityas-mahabali',
+    timelineId: 'tl-daityas-mahabali',
+    relatedIds: ['nephilim-br'],
+    sources: ['Bhagavata Purana VIII / Vamana Purana'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/MET_DP367896.jpg/1280px-MET_DP367896.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'archaeology-kap-dwa',
+    parentId: 'nephilim-br',
+    name: 'Kap Dwa, the Two-Headed Patagonian Giant',
+    description: 'A twelve-foot mummified body with two heads, said to have been captured by Spanish sailors in Patagonia in 1673 and killed after he slew four of them, passed through Victorian sideshows and the Blackpool waxworks before ending up in a Baltimore curiosity museum. Sceptics call him a gaff of papier-mâché; owners point to the apparently real skin and teeth. Either way, Kap Dwa is what the European imagination did with the Patagonian giants Magellan\'s crew swore they had seen.',
+    layer: 'Giants & Nephilim',
+    mapFeatureId: 'archaeology-kap-dwa',
+    timelineId: 'tl-kap-dwa',
+    relatedIds: ['nephilim-br'],
+    sources: ['Bob\'s Side Show, Baltimore / Blackpool Waxworks Records / Patagonian Giant Accounts (Pigafetta, 1520)'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Urville-Patagonians3.jpg/500px-Urville-Patagonians3.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'archaeology-gogmagog',
+    parentId: 'nephilim-br',
+    name: 'Gogmagog & the Giants of Albion',
+    description: 'When Brutus of Troy landed in Britain it was inhabited only by giants; their chief, Gogmagog, twelve cubits tall, was wrestled by Corineus and thrown from the cliff at Plymouth Hoe, where chalk figures of the pair were cut into the turf and maintained until the seventeenth century. Geoffrey of Monmouth\'s giants of Albion were the island\'s original owners, and his name for their king is Ezekiel\'s Gog and Magog fused into one. Britain\'s founding legend is a giant-killing.',
+    layer: 'Giants & Nephilim',
+    mapFeatureId: 'archaeology-gogmagog',
+    timelineId: 'tl-gogmagog',
+    relatedIds: ['nephilim-br', 'archaeology-fomorians'],
+    sources: ['Geoffrey of Monmouth, Historia Regum Britanniae (c. 1136) / Plymouth Corporation Records'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Gogmagog_the_Giant_in_Guildhall_1859.png/500px-Gogmagog_the_Giant_in_Guildhall_1859.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'archaeology-antaeus-tangier',
+    parentId: 'nephilim-br',
+    name: 'Antaeus, Giant of Libya',
+    description: 'Son of Poseidon and the Earth, Antaeus forced every traveller through Libya to wrestle him and roofed his father\'s temple with their skulls; he could not be beaten while he touched the ground, so Heracles lifted him into the air and crushed him. Plutarch records that the Roman general Sertorius opened the giant\'s tomb at Tangier and found a body sixty cubits long. Tangier\'s own founding legend says the city was built by his widow. The Romans believed the skeleton; the question is what they actually dug up.',
+    layer: 'Giants & Nephilim',
+    mapFeatureId: 'archaeology-antaeus-tangier',
+    timelineId: 'tl-antaeus-tangier',
+    relatedIds: ['nephilim-br'],
+    sources: ['Plutarch, Life of Sertorius 9 / Apollodorus II.5.11'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Herakles_Antaios_Louvre_G103.jpg/1280px-Herakles_Antaios_Louvre_G103.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'archaeology-daidarabotchi',
+    parentId: 'nephilim-br',
+    name: 'Daidarabotchi, the Mountain-Making Giant',
+    description: 'A giant so large that in the Hitachi Fudoki of 721 he is said to have eaten clams from a hilltop and left shell-mounds behind; later tales have him carrying Mount Fuji on his back and leaving footprint-lakes across the Kanto plain. Japan\'s primordial giant is a landscape-shaper, like the Fomorians and the Jentilak, remembered where his feet fell. Every nation that forgot its giants kept the holes they left.',
+    layer: 'Giants & Nephilim',
+    mapFeatureId: 'archaeology-daidarabotchi',
+    timelineId: 'tl-daidarabotchi',
+    relatedIds: ['nephilim-br', 'archaeology-jentilak-aralar'],
+    sources: ['Hitachi no Kuni Fudoki (721 CE) / Japanese Folklore Archives'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Daidarabocchi_1.jpg/330px-Daidarabocchi_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'archaeology-santa-elena-giants',
+    parentId: 'nephilim-br',
+    name: 'The Giants of Santa Elena (Cieza de León)',
+    description: 'The conquistador-chronicler Pedro Cieza de León recorded in 1553 the native tradition that giants had landed at Point Santa Elena in reed boats, dug wells through solid rock that still gave sweet water, consumed the country\'s food and abused its people until a fiery angel destroyed them. He reported seeing teeth \'three fingers broad\' and bones of enormous size dug from the point. A giant race arriving by sea, devouring the land, wiped out by fire from heaven: the same ending the Watchers\' children got.',
+    layer: 'Giants & Nephilim',
+    mapFeatureId: 'archaeology-santa-elena-giants',
+    timelineId: 'tl-santa-elena-giants',
+    relatedIds: ['nephilim-br', 'archaeology-kap-dwa'],
+    sources: ['Pedro Cieza de León, Crónica del Perú (1553), ch. 52 / Agustín de Zárate'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/The_travels_of_Pedro_de_Cieza_de_Le%C3%B3n%2C_A._D._1532-50_-_contained_in_the_first_part_of_his_Chronicle_of_Peru_%28IA_gri_000033125008673861%29.pdf/page1-500px-The_travels_of_Pedro_de_Cieza_de_Le%C3%B3n%2C_A._D._1532-50_-_contained_in_the_first_part_of_his_Chronicle_of_Peru_%28IA_gri_000033125008673861%29.pdf.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
+  },
+  {
+    id: 'archaeology-jentilak-aralar',
+    parentId: 'nephilim-br',
+    name: 'The Jentilak, Basque Giants of the Dolmens',
+    description: 'Basque tradition names the builders of the Pyrenean dolmens and cromlechs as the jentilak, pagan giants who hurled rocks between mountaintops, taught men to forge iron and grow wheat, and retreated under the earth when a luminous cloud announced the birth of Christ, leaving only Olentzero behind. The oldest surviving people of Europe remember the megalith-builders as giants who knew the sky was changing. The dolmens are still there; the Basques never claimed to have built them.',
+    layer: 'Giants & Nephilim',
+    mapFeatureId: 'archaeology-jentilak-aralar',
+    timelineId: 'tl-jentilak-aralar',
+    relatedIds: ['nephilim-br', 'megaliths', 'archaeology-daidarabotchi'],
+    sources: ['José Miguel de Barandiarán, Basque Mythology Collections'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Lamina2.jpg/1280px-Lamina2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'archaeology-emim-moab',
+    parentId: 'nephilim-br',
+    name: 'The Emim & Zamzummim of Moab',
+    description: 'Deuteronomy 2 records, almost in passing, that the plains of Moab and Ammon were held before Lot\'s descendants by the Emim and the Zamzummim, \'a people great, and many, and tall, as the Anakims,\' giants whom the Lord destroyed so that Moab could have the land, just as He would destroy the Anakim before Israel. Genesis 14 has Chedorlaomer\'s coalition smiting the Emim at Shaveh-Kiriathaim. The Transjordan was giant country from Bashan to the Dead Sea, and the Bible treats their removal as a pattern.',
+    layer: 'Giants & Nephilim',
+    mapFeatureId: 'archaeology-emim-moab',
+    timelineId: 'tl-emim-moab',
+    relatedIds: ['nephilim-br', 'anakim'],
+    sources: ['Deuteronomy 2:10-11, 20-21 / Genesis 14:5'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Kingdoms_around_Israel_830_map.svg/1280px-Kingdoms_around_Israel_830_map.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'archaeology-cyclopes-etna',
+    parentId: 'nephilim-br',
+    name: 'The Cyclopes & Polyphemus',
+    description: 'One-eyed giants of two kinds: the three elder Cyclopes who forged Zeus\'s thunderbolt under Etna, and the lawless shepherd-giants of Homer who kept no assemblies and ate men, among them Polyphemus, blinded by Odysseus in his cave. The Sicilians showed the giant\'s cave and the rocks he threw. Dwarf-elephant skulls found in Sicilian caves, with a single nasal cavity in the forehead, are the mainstream explanation; the Greeks who found them had no doubt what they were looking at.',
+    layer: 'Giants & Nephilim',
+    mapFeatureId: 'archaeology-cyclopes-etna',
+    timelineId: 'tl-cyclopes-etna',
+    relatedIds: ['nephilim-br', 'archaeology-gigantes-pallene'],
+    sources: ['Homer, Odyssey IX / Hesiod, Theogony / Othenio Abel (1914)'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Head_of_a_Cyclops_Colosseum.jpg/330px-Head_of_a_Cyclops_Colosseum.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'anomaly-Cryptid-Sightings-minnesota-iceman',
+    parentId: 'cryptid-sightings-br',
+    name: 'The Minnesota Iceman',
+    description: 'A hairy, man-like body frozen in a block of ice, toured through Midwestern fairs by showman Frank Hansen in 1968, was examined by zoologists Ivan Sanderson and Bernard Heuvelmans, who declared it a genuine unknown hominid and published it as \'Homo pongoides.\' The Smithsonian asked questions, Hansen swapped in a latex model, and the original vanished. Whether a real corpse was ever in the ice is the whole case, and nobody can say.',
+    layer: 'Cryptid Sightings',
+    mapFeatureId: 'anomaly-Cryptid-Sightings-minnesota-iceman',
+    sources: ['Bernard Heuvelmans, Bulletin de l\'Institut Royal des Sciences Naturelles de Belgique (1969) / Ivan T. Sanderson'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Winona_County_Courthouse.jpg/1280px-Winona_County_Courthouse.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'anomaly-Cryptid-Sightings-dover-demon',
+    parentId: 'cryptid-sightings-br',
+    name: 'The Dover Demon',
+    description: 'Over two nights in April 1977 four teenagers in Dover separately described a hairless, peach-skinned creature with a huge watermelon head, glowing orange eyes and long spindly fingers, perched on a stone wall and then crouched in the trees. Their sketches match without having compared notes. Investigator Loren Coleman found no explanation and the town has none either; the Dover Demon stands with the greys and the Hopkinsville goblins as something small, big-headed and watching.',
+    layer: 'Cryptid Sightings',
+    mapFeatureId: 'anomaly-Cryptid-Sightings-dover-demon',
+    sources: ['Loren Coleman, \'Mysterious America\' / Dover Police Reports (1977)'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Dover_Demon.png/1280px-Dover_Demon.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
+  },
+  {
+    id: 'anomaly-Cryptid-Sightings-goatman-maryland',
+    parentId: 'cryptid-sightings-br',
+    name: 'The Goatman of Beltsville',
+    description: 'An axe-wielding half-man, half-goat said to haunt the back roads near the Beltsville Agricultural Research Center, blamed in 1971 for the decapitation of a family dog and for a rash of attacks on parked cars on Lover\'s Lane. The local legend says he was a scientist whose experiment on goats went wrong. A satyr with a government-laboratory origin story is the twentieth century retelling an old creature in its own idiom.',
+    layer: 'Cryptid Sightings',
+    mapFeatureId: 'anomaly-Cryptid-Sightings-goatman-maryland',
+    sources: ['Prince George\'s County News (1971) / Mark Opsasnick, \'The Maryland Bigfoot Digest\''],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Faun_2_%28PSF%29.png/1280px-Faun_2_%28PSF%29.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'anomaly-Cryptid-Sightings-lizard-man-scape-ore',
+    parentId: 'cryptid-sightings-br',
+    name: 'The Lizard Man of Scape Ore Swamp',
+    description: 'Seventeen-year-old Christopher Davis, changing a tyre at 2 a.m. beside Scape Ore Swamp, was charged by a seven-foot creature with green scaly skin, red eyes and three-fingered hands that clung to his roof as he sped away. The sheriff took it seriously enough to cast the three-toed prints; cars in the area turned up with chewed chrome. The reptilian in the swamp is the same thing the reptilian theorists put in the boardroom, minus the suit.',
+    layer: 'Cryptid Sightings',
+    mapFeatureId: 'anomaly-Cryptid-Sightings-lizard-man-scape-ore',
+    sources: ['Lee County Sheriff\'s Office Report (1988) / The Item, Sumter SC'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Lizard_Man_of_Scape_ore_Swamp.jpg/1280px-Lizard_Man_of_Scape_ore_Swamp.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'anomaly-Cryptid-Sightings-ropen-umboi',
+    parentId: 'cryptid-sightings-br',
+    name: 'The Ropen',
+    description: 'Islanders on Umboi describe a nocturnal flying creature with a long tail, leathery wings and a glowing underside that robs graves and fishing nets; American creationist expeditions in the 1990s and 2000s filmed lights over the ridges and concluded it is a living pterosaur. Sceptics say bioluminescent birds or bats. The Ropen matters to the young-earth case because a surviving flying reptile would put the \'ages\' of the textbooks under one very recent sky.',
+    layer: 'Cryptid Sightings',
+    mapFeatureId: 'anomaly-Cryptid-Sightings-ropen-umboi',
+    sources: ['Jonathan Whitcomb & Paul Nation Expedition Reports (1994-2007)'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Ropen_%28cryptid_pterosaur%29.png/1280px-Ropen_%28cryptid_pterosaur%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
+  },
+  {
+    id: 'anomaly-Cryptid-Sightings-honey-island-swamp-monster',
+    parentId: 'cryptid-sightings-br',
+    name: 'Honey Island Swamp Monster',
+    description: 'Air-traffic controller Harlan Ford claimed to have met a seven-foot, grey-haired biped with yellow eyes in the Honey Island Swamp in 1963 and, in 1974, to have found a wild boar with its throat torn out beside three-toed tracks he cast in plaster. After his death his family found Super 8 footage of something moving through the trees. The Cajuns called it the Letiche, a feral child raised by alligators; the tracks say something that walks on two legs and has claws.',
+    layer: 'Cryptid Sightings',
+    mapFeatureId: 'anomaly-Cryptid-Sightings-honey-island-swamp-monster',
+    sources: ['Harlan Ford Plaster Casts & Super 8 Footage / Louisiana Folklore Society'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Honey_Island_Swamp%2C_Louisiana_%28paulmannix%29.jpg/1280px-Honey_Island_Swamp%2C_Louisiana_%28paulmannix%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'anomaly-Cryptid-Sightings-beast-of-bodmin',
+    parentId: 'cryptid-sightings-br',
+    name: 'The Beast of Bodmin Moor',
+    description: 'More than sixty sightings of a large black cat on Bodmin Moor, mutilated livestock, and a 1995 government inquiry that found \'no verifiable evidence\' and then, a week later, a leopard skull in the River Fowey that turned out to be an imported rug. Britain officially has no big cats and unofficially has hundreds of reports a year. Something is killing sheep on the moor, and the ministry\'s answer was to stop looking.',
+    layer: 'Cryptid Sightings',
+    mapFeatureId: 'anomaly-Cryptid-Sightings-beast-of-bodmin',
+    sources: ['MAFF Bodmin Moor Investigation (1995) / Cornwall Police Reports'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Big_Cats_in_Sussex.jpg/1280px-Big_Cats_in_Sussex.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'anomaly-Cryptid-Sightings-owlman-mawnan',
+    parentId: 'cryptid-sightings-br',
+    name: 'The Owlman of Mawnan',
+    description: 'On Easter weekend 1976 two sisters saw a huge feathered man with glowing eyes and pincer claws hovering over the tower of Mawnan church; two more girls camping nearby that July drew the same thing. The reports came through the showman Tony \'Doc\' Shiels, which is the case\'s weakness, but the church stands on a ley line and inside a prehistoric earthwork, and the descriptions are a near copy of Point Pleasant\'s Mothman. Winged men with lamp eyes keep appearing at old sacred sites.',
+    layer: 'Cryptid Sightings',
+    mapFeatureId: 'anomaly-Cryptid-Sightings-owlman-mawnan',
+    sources: ['Jonathan Downes, \'The Owlman and Others\' / Fortean Times Case Files'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Mawnan_Church.jpg/330px-Mawnan_Church.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'anomaly-Cryptid-Sightings-kongamato',
+    parentId: 'cryptid-sightings-br',
+    name: 'Kongamato, the Overturner of Boats',
+    description: 'When colonial administrator Frank Melland showed Kaonde tribesmen a picture of a pterodactyl in 1923, they immediately named it: kongamato, the red, featherless, bat-winged thing that capsized canoes in the Jiundu swamps and whose very sight meant death. In 1957 a man arrived at Fort Rosebery hospital with chest wounds he said came from a great bird in the swamp. Africa\'s interior keeps producing reports of animals that are supposed to be sixty million years dead.',
+    layer: 'Cryptid Sightings',
+    mapFeatureId: 'anomaly-Cryptid-Sightings-kongamato',
+    sources: ['Frank Melland, \'In Witch-Bound Africa\' (1923) / Fort Rosebery Hospital Report (1957)'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Kongamato.png/1280px-Kongamato.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'anomaly-Cryptid-Sightings-grootslang',
+    parentId: 'cryptid-sightings-br',
+    name: 'The Grootslang of the Wonder Hole',
+    description: 'A primordial creature half elephant, half serpent, made in the first days of creation when the gods still experimented and spared when they separated the two kinds; it lives in the \'Wonder Hole,\' a bottomless cave near the Orange River said to lead to the sea, guarding a hoard of diamonds and buying its life with gems. The diamond prospectors of the Richtersveld took the warning seriously. A serpent in a bottomless pit guarding treasure needs no translation for a reader of Revelation.',
+    layer: 'Cryptid Sightings',
+    mapFeatureId: 'anomaly-Cryptid-Sightings-grootslang',
+    sources: ['Khoikhoi Oral Tradition / Richtersveld Diamond-Field Accounts'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Python_natalensis_G._J._Alexander.JPG/1280px-Python_natalensis_G._J._Alexander.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'anomaly-Cryptid-Sightings-tsuchinoko',
+    parentId: 'cryptid-sightings-br',
+    name: 'The Tsuchinoko',
+    description: 'A snake as thick as a beer bottle in the middle and thin at both ends, that can jump a metre, snore, and, in older tales, speak and lie; the Kojiki mentions it in 712 and Japanese towns have offered rewards of up to a hundred million yen for a live one. Niimi gives a two-million-yen bounty. Dozens of specimens turn out to be gorged vipers. The Japanese have treated the tsuchinoko hunt as half joke and half serious for forty years, which is exactly how most cultures handle the creatures they half remember.',
+    layer: 'Cryptid Sightings',
+    mapFeatureId: 'anomaly-Cryptid-Sightings-tsuchinoko',
+    sources: ['Kojiki (712 CE) / Niimi City Tsuchinoko Reward Records'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Tsuchinoko_kan.jpg/1280px-Tsuchinoko_kan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
+  },
+  {
+    id: 'anomaly-Cryptid-Sightings-kappa-tono',
+    parentId: 'cryptid-sightings-br',
+    name: 'Kappa of the Tōno Rivers',
+    description: 'Child-sized river demons with a turtle shell, a beak and a water-filled dish on the head that drowns their strength if it spills; they drag horses and children into the water and pull out their livers. Tōno\'s kappa pool still sells fishing licences for them. Kunio Yanagita recorded villagers in 1910 who described kappa children being born to human mothers and quietly killed. The kappa is a water-spirit that breeds with humans, and Japan wrote that down as recent memory.',
+    layer: 'Cryptid Sightings',
+    mapFeatureId: 'anomaly-Cryptid-Sightings-kappa-tono',
+    sources: ['Kunio Yanagita, \'Tōno Monogatari\' (1910) / Tōno City Folklore Museum'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Kyoka_Hyaku-Monogatari_Kappa.jpg/500px-Kyoka_Hyaku-Monogatari_Kappa.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'anomaly-Cryptid-Sightings-batsquatch',
+    parentId: 'cryptid-sightings-br',
+    name: 'Batsquatch',
+    description: 'After the 1980 eruption of Mount St. Helens, witnesses in the blast zone began describing a nine-foot winged ape with blue-grey fur, a wolf\'s muzzle and a fifty-foot wingspan; in 1994 a teenager watched it land on the road near Mount Rainier and stall his truck\'s engine. A flying sasquatch released by a volcano sounds like a comic book, and the engine-stalling detail is straight out of the UFO literature. The Cascades are where the bigfoot reports and the sky reports overlap.',
+    layer: 'Cryptid Sightings',
+    mapFeatureId: 'anomaly-Cryptid-Sightings-batsquatch',
+    sources: ['Tacoma News Tribune (1994) / Pacific Northwest Cryptid Reports'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/MSH80_eruption_mount_st_helens_05-18-80-dramatic-edit.jpg/1280px-MSH80_eruption_mount_st_helens_05-18-80-dramatic-edit.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
+  },
+  {
+    id: 'anomaly-Cryptid-Sightings-shunka-warakin',
+    parentId: 'cryptid-sightings-br',
+    name: 'Shunka Warak\'in (The Ringdocus)',
+    description: 'The Ioway called it \'carries off dogs\': a hyena-like beast with a sloping back that raided Montana ranches until Israel Hutchins shot one in 1886 and had it mounted. The taxidermy, nicknamed the Ringdocus, sat in an Idaho museum, vanished, and was found again in 2007 in a family attic and returned to Ennis, where it sits in the Madison Valley museum looking like nothing in any field guide. Rare among cryptids, this one has a body you can visit.',
+    layer: 'Cryptid Sightings',
+    mapFeatureId: 'anomaly-Cryptid-Sightings-shunka-warakin',
+    sources: ['Madison Valley History Museum, Ennis MT / Ross Hutchins, \'Trails to Nature\'s Mysteries\' (1977)'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Ennismainstreet.jpg/1280px-Ennismainstreet.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'anomaly-Cryptid-Sightings-melon-heads-kirtland',
+    parentId: 'cryptid-sightings-br',
+    name: 'The Melon Heads of Kirtland',
+    description: 'Small, feral figures with grotesquely swollen heads said to haunt Wisner Road near Kirtland, the escaped subjects of a Dr. Crow who experimented on hydrocephalic children in a woodland house that burned down. Michigan and Connecticut have their own versions with their own doctor. A government-funded experiment on children that produced monsters who still live in the woods is a legend America tells in three states at once, which suggests it is about something more than Kirtland.',
+    layer: 'Cryptid Sightings',
+    mapFeatureId: 'anomaly-Cryptid-Sightings-melon-heads-kirtland',
+    sources: ['Lake County Folklore Collections / \'Weird Ohio\''],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Velvet_Street_%28Dracula_Drive%29.jpg/500px-Velvet_Street_%28Dracula_Drive%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'anomaly-Cryptid-Sightings-issie-ikeda',
+    parentId: 'cryptid-sightings-br',
+    name: 'Issie of Lake Ikeda',
+    description: 'On 3 September 1978 about twenty people watched two black humps move across the crater lake of Ikeda at speed; a photograph that December showed a dark shape ten metres long, and the town put up a statue. Legend says Issie was a white mare whose foal was stolen by a samurai and who leapt into the lake in grief. A volcanic crater lake with no outlet and a monster that appeared the same decade the lake\'s giant eels were discovered: the lake is deep enough to keep its own counsel.',
+    layer: 'Cryptid Sightings',
+    mapFeatureId: 'anomaly-Cryptid-Sightings-issie-ikeda',
+    sources: ['Ibusuki City Records (1978) / Kagoshima Prefectural Newspaper'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Lake_Ikeda_%28152624734%29.jpg/500px-Lake_Ikeda_%28152624734%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'anomaly-Cryptid-Sightings-inkanyamba-howick',
+    parentId: 'cryptid-sightings-br',
+    name: 'Inkanyamba of Howick Falls',
+    description: 'A huge horse-headed serpent that lives in the pool beneath Howick Falls, whose rising in summer brings the storms and tornadoes of the Midlands; sangomas still go to the falls to leave offerings, and a 1995 photograph by a park worker shows a long dark shape in the plunge pool. Rock paintings in the Drakensberg show the same creature. A storm-bringing water serpent worshipped at a waterfall is the Leviathan cult alive and functioning in the twenty-first century.',
+    layer: 'Cryptid Sightings',
+    mapFeatureId: 'anomaly-Cryptid-Sightings-inkanyamba-howick',
+    sources: ['Zulu Oral Tradition / Howick Falls Photograph (Bob Teeney, 1995)'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Howick-Falls-November-2009.jpg/1280px-Howick-Falls-November-2009.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'anomaly-Cryptid-Sightings-trunko-margate',
+    parentId: 'cryptid-sightings-br',
+    name: 'Trunko',
+    description: 'Bathers at Margate in October 1924 watched two whales battle a white, fur-covered creature with a trunk for three hours before its body washed ashore: forty-seven feet long, ten feet of trunk, no head, covered in snow-white hair. It lay on the beach for ten days and was photographed before the sea took it back. The photographs surfaced in 2010 and show what looks like a mass of whale blubber. The witnesses who saw it fight were not describing blubber.',
+    layer: 'Cryptid Sightings',
+    mapFeatureId: 'anomaly-Cryptid-Sightings-trunko-margate',
+    sources: ['Margate Beach Photographs (1924, published 2010) / Wide World Magazine'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Margate_Main_beach.jpg/960px-Margate_Main_beach.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'anomaly-Cryptid-Sightings-ahool-salak',
+    parentId: 'cryptid-sightings-br',
+    name: 'The Ahool',
+    description: 'Named for its cry, the ahool is a giant bat the size of a child with a monkey\'s face and a three-metre wingspan, seen gliding over the rivers of the Salak range by naturalist Ernest Bartels in 1925 and heard by him again in 1927. Cryptozoologists suggest a surviving pterosaur or a giant unknown bat. Java\'s forests also hid a living rhinoceros species until the twentieth century; the ahool keeps company with things that were not supposed to exist.',
+    layer: 'Cryptid Sightings',
+    mapFeatureId: 'anomaly-Cryptid-Sightings-ahool-salak',
+    sources: ['Ernest Bartels Field Notes (1925-1927) / Ivan T. Sanderson'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/MT._SALAK_-_INDONESIA_-_2019.jpg/1280px-MT._SALAK_-_INDONESIA_-_2019.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'anomaly-Cryptid-Sightings-emela-ntouka',
+    parentId: 'cryptid-sightings-br',
+    name: 'Emela-ntouka, the \'Killer of Elephants\'',
+    description: 'The Likouala swamps that hide Mokele-mbembe also hold the emela-ntouka: a beast the size of an elephant with a single great horn on its snout, no hair, a heavy tail, that disembowels elephants and buffalo that stray into its water. Game wardens recorded it in 1954. The pygmies who describe it draw something a child would recognise from a dinosaur book, and they have never seen a dinosaur book.',
+    layer: 'Cryptid Sightings',
+    mapFeatureId: 'anomaly-Cryptid-Sightings-emela-ntouka',
+    sources: ['Lucien Blancou, Mammalia (1954) / Roy Mackal, \'A Living Dinosaur?\' (1987)'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Emela-ntouka.png/1280px-Emela-ntouka.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
+  },
+  {
+    id: 'anomaly-Cryptid-Sightings-lake-van-monster',
+    parentId: 'cryptid-sightings-br',
+    name: 'The Lake Van Monster',
+    description: 'In 1997 a university teaching assistant filmed a long dark creature surfacing in Lake Van, the vast alkaline lake in the shadow of Ararat, after years of fishermen\'s reports of a fifteen-metre animal with spiky back ridges. The footage went around the world and the town built a statue. A monster in the lake beneath the mountain where the Ark came to rest is either a tourist-board invention or a reminder that not everything that walked off the Ark stayed on dry land.',
+    layer: 'Cryptid Sightings',
+    mapFeatureId: 'anomaly-Cryptid-Sightings-lake-van-monster',
+    sources: ['Ünal Kozak Footage (1997) / Van Province Tourism Records'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/STS079-781-53.jpg/1280px-STS079-781-53.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'anomaly-Cryptid-Sightings-akkorokamui',
+    parentId: 'cryptid-sightings-br',
+    name: 'Akkorokamui, the Giant Red Octopus',
+    description: 'The Ainu of Funka Bay feared a crimson octopus more than a hundred metres across whose body dyed the sea and sky red before it took ships; John Batchelor recorded fishermen\'s accounts of it in the 1900s. Shinto shrines near the bay still venerate it as a healing god of the sea with power over limbs. A colossal sea-creature that is both terror and deity is the Kraken and Leviathan in one, worshipped where it was once fled.',
+    layer: 'Cryptid Sightings',
+    mapFeatureId: 'anomaly-Cryptid-Sightings-akkorokamui',
+    sources: ['John Batchelor, \'The Ainu and Their Folk-Lore\' (1901)'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/130922_Toyoura_Hokkaido_Japan01bss3.jpg/1280px-130922_Toyoura_Hokkaido_Japan01bss3.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'anomaly-Cryptid-Sightings-jba-fofi',
+    parentId: 'cryptid-sightings-br',
+    name: 'J\'ba Fofi, the Giant Spider of the Congo',
+    description: 'In 1938 an English couple driving through the Congo interior stopped for what they took to be a cat crossing the track and found a spider with a leg span of four to five feet. The Baka describe the j\'ba fofi as a brown, long-legged web-builder that traps small antelope and once took children, and say it has grown rare since the forest was cut. Nothing in biology permits a spider that size; nothing in the Baka\'s history permits them to have invented it.',
+    layer: 'Cryptid Sightings',
+    mapFeatureId: 'anomaly-Cryptid-Sightings-jba-fofi',
+    sources: ['Reginald & Margurite Lloyd Account (1938) / George Eberhart, \'Mysterious Creatures\' (2002)'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Rainforest_-_Ituri_%2820874628148%29.jpg/1280px-Rainforest_-_Ituri_%2820874628148%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail']
   }
 ];
 
