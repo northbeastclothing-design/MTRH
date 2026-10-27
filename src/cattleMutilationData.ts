@@ -103,7 +103,7 @@ export const CATTLE_MUTILATION_DATA: CattleMutilationCase[] = [
     "displayDate": "03-10-1996",
     "description": "Ranchers Terry and Gwen Sherman discovered a healthy cow dead in a pasture just hours after checking on it. The animal had a large, clean circular incision on its hide with its organs precisely removed and no blood found on the ground. A heavy snow cover was present, yet investigators found no footprints around the carcass, a case later studied extensively by NIDS (National Institute for Discovery Science).",
     "source": "NIDS Investigation Report / Colm Kelleher & George Knapp - Hunt for the Skinwalker",
-    "images": []
+    "images": ["https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Skinwalker_Ranch_%2810393732103%29.jpg/1280px-Skinwalker_Ranch_%2810393732103%29.jpg"]
   },
   {
     "id": "mutilation-redbluff-1975",

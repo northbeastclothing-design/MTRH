@@ -227,7 +227,7 @@ export const MISSING_411_DATA: Missing411Case[] = [
   },
   {
     "id": "missing411-sarm-heslop-2021",
-    "name": "Sarm Heslop - Virgin Islands National Park, Texas",
+    "name": "Sarm Heslop - Virgin Islands National Park, U.S. Virgin Islands",
     "category": "Missing 411",
     "type": "Point",
     "coordinates": {
@@ -236,7 +236,7 @@ export const MISSING_411_DATA: Missing411Case[] = [
     },
     "date": 2021,
     "displayDate": "03-07-2021",
-    "description": "Unsolved missing person case of Sarm Heslop at Virgin Islands National Park in Texas on 03-07-2021.",
+    "description": "Unsolved missing person case of Sarm Heslop at Virgin Islands National Park in the U.S. Virgin Islands on 03-07-2021.",
     "source": "Locations Unknown / David Paulides - Missing 411",
     "images": []
   },
@@ -711,8 +711,8 @@ export const MISSING_411_DATA: Missing411Case[] = [
     "category": "Missing 411",
     "type": "Point",
     "coordinates": {
-      "lng": -118.755997,
-      "lat": 36.7014631
+      "lng": -116.7142,
+      "lat": 33.7406
     },
     "date": 2017,
     "displayDate": "04-07-2017",
@@ -1232,16 +1232,16 @@ export const MISSING_411_DATA: Missing411Case[] = [
   },
   {
     "id": "missing411-rick-allen-williams-2015",
-    "name": "Rick Allen Williams - Stanbury Park, Ohio",
+    "name": "Rick Allen Williams - Stanbery Park, Ohio",
     "category": "Missing 411",
     "type": "Point",
     "coordinates": {
-      "lng": -95.6266931,
-      "lat": 30.0342307
+      "lng": -84.3868,
+      "lat": 39.0836
     },
     "date": 2015,
     "displayDate": "05-01-2015",
-    "description": "Unsolved missing person case of Rick Allen Williams at Stanbury Park in Ohio on 05-01-2015.",
+    "description": "Unsolved missing person case of Rick Allen Williams at Stanbery Park in Ohio on 05-01-2015.",
     "source": "Locations Unknown / David Paulides - Missing 411",
     "images": []
   },
@@ -1356,8 +1356,8 @@ export const MISSING_411_DATA: Missing411Case[] = [
     "category": "Missing 411",
     "type": "Point",
     "coordinates": {
-      "lng": -118.755997,
-      "lat": 36.7014631
+      "lng": -119.9602,
+      "lat": 38.3334
     },
     "date": 2014,
     "displayDate": "04-22-2014",
@@ -1416,8 +1416,8 @@ export const MISSING_411_DATA: Missing411Case[] = [
     "category": "Missing 411",
     "type": "Point",
     "coordinates": {
-      "lng": -117.7179767,
-      "lat": 34.3031859
+      "lng": -115.2,
+      "lat": 36.65
     },
     "date": 2014,
     "displayDate": "11-10-2014",
@@ -1472,7 +1472,7 @@ export const MISSING_411_DATA: Missing411Case[] = [
   },
   {
     "id": "missing411-krishna-venkatesh-2014",
-    "name": "Krishna Venkatesh - Deception State Park, Oregon",
+    "name": "Krishna Venkatesh - Deception Pass State Park, Washington",
     "category": "Missing 411",
     "type": "Point",
     "coordinates": {
@@ -1481,7 +1481,7 @@ export const MISSING_411_DATA: Missing411Case[] = [
     },
     "date": 2014,
     "displayDate": "10-15-2014",
-    "description": "Unsolved missing person case of Krishna Venkatesh at Deception State Park in Oregon on 10-15-2014.",
+    "description": "Unsolved missing person case of Krishna Venkatesh at Deception Pass State Park in Washington on 10-15-2014.",
     "source": "Locations Unknown / David Paulides - Missing 411",
     "images": []
   },
@@ -1502,7 +1502,7 @@ export const MISSING_411_DATA: Missing411Case[] = [
   },
   {
     "id": "missing411-michael-hugh-camilletti-2014",
-    "name": "Michael Hugh Camilletti - Monongahela National Forest, Virginia",
+    "name": "Michael Hugh Camilletti - Monongahela National Forest, West Virginia",
     "category": "Missing 411",
     "type": "Point",
     "coordinates": {
@@ -1511,7 +1511,7 @@ export const MISSING_411_DATA: Missing411Case[] = [
     },
     "date": 2014,
     "displayDate": "05-22-2014",
-    "description": "Unsolved missing person case of Michael Hugh Camilletti at Monongahela National Forest in Virginia on 05-22-2014.",
+    "description": "Unsolved missing person case of Michael Hugh Camilletti at Monongahela National Forest in West Virginia on 05-22-2014.",
     "source": "Locations Unknown / David Paulides - Missing 411",
     "images": []
   },
@@ -1622,16 +1622,16 @@ export const MISSING_411_DATA: Missing411Case[] = [
   },
   {
     "id": "missing411-dustin-self-2013",
-    "name": "Dustin Self - Steen Mountain, Oregon",
+    "name": "Dustin Self - Steens Mountain, Oregon",
     "category": "Missing 411",
     "type": "Point",
     "coordinates": {
-      "lng": -120.737257,
-      "lat": 43.9792797
+      "lng": -118.5753,
+      "lat": 42.6378
     },
     "date": 2013,
     "displayDate": "03-16-2013",
-    "description": "Unsolved missing person case of Dustin Self at Steen Mountain in Oregon on 03-16-2013.",
+    "description": "Unsolved missing person case of Dustin Self at Steens Mountain in Oregon on 03-16-2013.",
     "source": "Locations Unknown / David Paulides - Missing 411",
     "images": []
   },
@@ -1731,8 +1731,8 @@ export const MISSING_411_DATA: Missing411Case[] = [
     "category": "Missing 411",
     "type": "Point",
     "coordinates": {
-      "lng": -118.755997,
-      "lat": 36.7014631
+      "lng": -122.4458,
+      "lat": 40.6113
     },
     "date": 2012,
     "displayDate": "08-18-2012",
@@ -1866,8 +1866,8 @@ export const MISSING_411_DATA: Missing411Case[] = [
     "category": "Missing 411",
     "type": "Point",
     "coordinates": {
-      "lng": -118.755997,
-      "lat": 36.7014631
+      "lng": -122.5461,
+      "lat": 40.6251
     },
     "date": 2011,
     "displayDate": "10-31-2011",
@@ -2076,8 +2076,8 @@ export const MISSING_411_DATA: Missing411Case[] = [
     "category": "Missing 411",
     "type": "Point",
     "coordinates": {
-      "lng": -82.3243095,
-      "lat": 37.6056575
+      "lng": -121.65,
+      "lat": 50.3
     },
     "date": 2011,
     "displayDate": "06-20-2011",
@@ -2091,8 +2091,8 @@ export const MISSING_411_DATA: Missing411Case[] = [
     "category": "Missing 411",
     "type": "Point",
     "coordinates": {
-      "lng": -82.3243095,
-      "lat": 37.6056575
+      "lng": -115.15,
+      "lat": 50.65
     },
     "date": 2011,
     "displayDate": "08-21-2011",
@@ -2106,8 +2106,8 @@ export const MISSING_411_DATA: Missing411Case[] = [
     "category": "Missing 411",
     "type": "Point",
     "coordinates": {
-      "lng": -111.763275,
-      "lat": 34.395342
+      "lng": -109.964,
+      "lat": 33.837
     },
     "date": 2010,
     "displayDate": "05-22-2010",
@@ -2181,8 +2181,8 @@ export const MISSING_411_DATA: Missing411Case[] = [
     "category": "Missing 411",
     "type": "Point",
     "coordinates": {
-      "lng": -118.755997,
-      "lat": 36.7014631
+      "lng": -123.7647,
+      "lat": 39.1912
     },
     "date": 2010,
     "displayDate": "10-27-2010",
@@ -2192,16 +2192,16 @@ export const MISSING_411_DATA: Missing411Case[] = [
   },
   {
     "id": "missing411-robert-perry-bissell-2010",
-    "name": "Robert Perry Bissell - Roaring Wilderness Area, Oregon",
+    "name": "Robert Perry Bissell - Roaring River Wilderness, Oregon",
     "category": "Missing 411",
     "type": "Point",
     "coordinates": {
-      "lng": -120.737257,
-      "lat": 43.9792797
+      "lng": -122.0714,
+      "lat": 45.1878
     },
     "date": 2010,
     "displayDate": "07-12-2010",
-    "description": "Unsolved missing person case of Robert Perry Bissell at Roaring Wilderness Area in Oregon on 07-12-2010.",
+    "description": "Unsolved missing person case of Robert Perry Bissell at Roaring River Wilderness in Oregon on 07-12-2010.",
     "source": "Locations Unknown / David Paulides - Missing 411",
     "images": []
   },
@@ -2241,8 +2241,8 @@ export const MISSING_411_DATA: Missing411Case[] = [
     "category": "Missing 411",
     "type": "Point",
     "coordinates": {
-      "lng": -82.3243095,
-      "lat": 37.6056575
+      "lng": -122.72,
+      "lat": 49.43
     },
     "date": 2010,
     "displayDate": "08-10-2010",
@@ -2316,8 +2316,8 @@ export const MISSING_411_DATA: Missing411Case[] = [
     "category": "Missing 411",
     "type": "Point",
     "coordinates": {
-      "lng": -74.0060152,
-      "lat": 40.7127281
+      "lng": -74.2718,
+      "lat": 43.7793
     },
     "date": 2008,
     "displayDate": "10-12-2008",
@@ -2361,8 +2361,8 @@ export const MISSING_411_DATA: Missing411Case[] = [
     "category": "Missing 411",
     "type": "Point",
     "coordinates": {
-      "lng": -111.763275,
-      "lat": 34.395342
+      "lng": -110.2546,
+      "lat": 36.7281
     },
     "date": 2007,
     "displayDate": "04-01-2007",
@@ -2612,16 +2612,16 @@ export const MISSING_411_DATA: Missing411Case[] = [
   },
   {
     "id": "missing411-gregory-r--brown-2005",
-    "name": "Gregory R. Brown - Alpine Lake Wilderness, Washington",
+    "name": "Gregory R. Brown - Alpine Lakes Wilderness, Washington",
     "category": "Missing 411",
     "type": "Point",
     "coordinates": {
-      "lng": -77.0363849,
-      "lat": 38.8950982
+      "lng": -121.2,
+      "lat": 47.55
     },
     "date": 2005,
     "displayDate": "07-05-2005",
-    "description": "Unsolved missing person case of Gregory R. Brown at Alpine Lake Wilderness in Washington on 07-05-2005.",
+    "description": "Unsolved missing person case of Gregory R. Brown at Alpine Lakes Wilderness in Washington on 07-05-2005.",
     "source": "Locations Unknown / David Paulides - Missing 411",
     "images": []
   },
@@ -2661,8 +2661,8 @@ export const MISSING_411_DATA: Missing411Case[] = [
     "category": "Missing 411",
     "type": "Point",
     "coordinates": {
-      "lng": -84.6824346,
-      "lat": 43.6211955
+      "lng": -85.2069,
+      "lat": 46.5754
     },
     "date": 2004,
     "displayDate": "03-17-2004",
@@ -2822,7 +2822,7 @@ export const MISSING_411_DATA: Missing411Case[] = [
   },
   {
     "id": "missing411-jay-cee-2002",
-    "name": "Jay Cee - Pisgah National Forest, Rhode Island",
+    "name": "Jay Cee - Pisgah National Forest, North Carolina",
     "category": "Missing 411",
     "type": "Point",
     "coordinates": {
@@ -2831,7 +2831,7 @@ export const MISSING_411_DATA: Missing411Case[] = [
     },
     "date": 2002,
     "displayDate": "02-04-2002",
-    "description": "Unsolved missing person case of Jay Cee at Pisgah National Forest in Rhode Island on 02-04-2002.",
+    "description": "Unsolved missing person case of Jay Cee at Pisgah National Forest in North Carolina on 02-04-2002.",
     "source": "Locations Unknown / David Paulides - Missing 411",
     "images": []
   },
@@ -3411,8 +3411,8 @@ export const MISSING_411_DATA: Missing411Case[] = [
     "category": "Missing 411",
     "type": "Point",
     "coordinates": {
-      "lng": -84.6824346,
-      "lat": 43.6211955
+      "lng": -88.4904,
+      "lat": 46.7786
     },
     "date": 1993,
     "displayDate": "08-26-1993",
@@ -3441,8 +3441,8 @@ export const MISSING_411_DATA: Missing411Case[] = [
     "category": "Missing 411",
     "type": "Point",
     "coordinates": {
-      "lng": -74.0060152,
-      "lat": 40.7127281
+      "lng": -74.35,
+      "lat": 43.95
     },
     "date": 1993,
     "displayDate": "08-27-1993",
@@ -3456,8 +3456,8 @@ export const MISSING_411_DATA: Missing411Case[] = [
     "category": "Missing 411",
     "type": "Point",
     "coordinates": {
-      "lng": -74.0060152,
-      "lat": 40.7127281
+      "lng": -73.95,
+      "lat": 44.13
     },
     "date": 1993,
     "displayDate": "10-09-1993",
@@ -3696,8 +3696,8 @@ export const MISSING_411_DATA: Missing411Case[] = [
     "category": "Missing 411",
     "type": "Point",
     "coordinates": {
-      "lng": -74.0060152,
-      "lat": 40.7127281
+      "lng": -74.3598,
+      "lat": 41.6708
     },
     "date": 1987,
     "displayDate": "01-16-1987",
@@ -3762,21 +3762,6 @@ export const MISSING_411_DATA: Missing411Case[] = [
     "date": 1984,
     "displayDate": "07-22-1984",
     "description": "Unsolved missing person case of Curtis A. Holmen at Placid Lake State Park in Montana on 07-22-1984.",
-    "source": "Locations Unknown / David Paulides - Missing 411",
-    "images": []
-  },
-  {
-    "id": "missing411-nyleen-kay-marchall-1983",
-    "name": "Nyleen Kay Marchall - Helena National Forest, California",
-    "category": "Missing 411",
-    "type": "Point",
-    "coordinates": {
-      "lng": -112.2008413,
-      "lat": 46.5499332
-    },
-    "date": 1983,
-    "displayDate": "06-25-1983",
-    "description": "Unsolved missing person case of Nyleen Kay Marchall at Helena National Forest in California on 06-25-1983.",
     "source": "Locations Unknown / David Paulides - Missing 411",
     "images": []
   },
@@ -3992,16 +3977,16 @@ export const MISSING_411_DATA: Missing411Case[] = [
   },
   {
     "id": "missing411-steven-paul-thomas-1976",
-    "name": "Steven Paul Thomas - Mout Marcy, New York",
+    "name": "Steven Paul Thomas - Mount Marcy, New York",
     "category": "Missing 411",
     "type": "Point",
     "coordinates": {
-      "lng": -74.0060152,
-      "lat": 40.7127281
+      "lng": -73.9237,
+      "lat": 44.1126
     },
     "date": 1976,
     "displayDate": "04-12-1976",
-    "description": "Unsolved missing person case of Steven Paul Thomas at Mout Marcy in New York on 04-12-1976.",
+    "description": "Unsolved missing person case of Steven Paul Thomas at Mount Marcy in New York on 04-12-1976.",
     "source": "Locations Unknown / David Paulides - Missing 411",
     "images": []
   },
@@ -4041,8 +4026,8 @@ export const MISSING_411_DATA: Missing411Case[] = [
     "category": "Missing 411",
     "type": "Point",
     "coordinates": {
-      "lng": -77.0363849,
-      "lat": 38.8950982
+      "lng": -116.95,
+      "lat": 48.6
     },
     "date": 1975,
     "displayDate": "08-16-1975",
@@ -4457,16 +4442,16 @@ export const MISSING_411_DATA: Missing411Case[] = [
   },
   {
     "id": "missing411-stephen-papol-1962",
-    "name": "Stephen Papol - Hecksher State Park, New York",
+    "name": "Stephen Papol - Heckscher State Park, New York",
     "category": "Missing 411",
     "type": "Point",
     "coordinates": {
-      "lng": -74.0060152,
-      "lat": 40.7127281
+      "lng": -73.1716,
+      "lat": 40.7118
     },
     "date": 1962,
     "displayDate": "08-19-1962",
-    "description": "Unsolved missing person case of Stephen Papol at Hecksher State Park in New York on 08-19-1962.",
+    "description": "Unsolved missing person case of Stephen Papol at Heckscher State Park in New York on 08-19-1962.",
     "source": "Locations Unknown / David Paulides - Missing 411",
     "images": []
   },
@@ -4517,16 +4502,16 @@ export const MISSING_411_DATA: Missing411Case[] = [
   },
   {
     "id": "missing411-richard-herman-1959",
-    "name": "Richard Herman - Emigrant State Park, Oregon",
+    "name": "Richard Herman - Emigrant Springs State Heritage Area, Oregon",
     "category": "Missing 411",
     "type": "Point",
     "coordinates": {
-      "lng": -120.232164,
-      "lat": 39.3241207
+      "lng": -118.4594,
+      "lat": 45.5406
     },
     "date": 1959,
     "displayDate": "08-30-1959",
-    "description": "Unsolved missing person case of Richard Herman at Emigrant State Park in Oregon on 08-30-1959.",
+    "description": "Unsolved missing person case of Richard Herman at Emigrant Springs State Heritage Area in Oregon on 08-30-1959.",
     "source": "Locations Unknown / David Paulides - Missing 411",
     "images": []
   },
@@ -4896,8 +4881,8 @@ export const MISSING_411_DATA: Missing411Case[] = [
     "category": "Missing 411",
     "type": "Point",
     "coordinates": {
-      "lng": -120.737257,
-      "lat": 43.9792797
+      "lng": -122.6553,
+      "lat": 44.8773
     },
     "date": 1941,
     "displayDate": "06-21-1941",
@@ -4956,8 +4941,8 @@ export const MISSING_411_DATA: Missing411Case[] = [
     "category": "Missing 411",
     "type": "Point",
     "coordinates": {
-      "lng": -109.638757,
-      "lat": 47.3752671
+      "lng": -113.76,
+      "lat": 46.25
     },
     "date": 1936,
     "displayDate": "10-24-1936",

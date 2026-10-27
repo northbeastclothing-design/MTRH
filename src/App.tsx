@@ -2411,13 +2411,14 @@ function App() {
           const override = overrides[String(item.id)];
           if (!loc && (!override || !override.coordinates)) return null;
           
-          // Match with Codex node to pull images
-          const codexNode = combinedCodexNodes.find(node => 
+          // Match with Codex node to pull images (prefer a matching node that actually has images)
+          const matchesCodexNode = (node: any) =>
             node.timelineId === item.id ||
             node.mapFeatureId === item.id ||
             node.id === item.id ||
-            (node.name && item.name && node.name.toLowerCase() === item.name.toLowerCase())
-          );
+            (node.name && item.name && node.name.toLowerCase() === item.name.toLowerCase());
+          const codexNode = combinedCodexNodes.find(node => matchesCodexNode(node) && Array.isArray(node.images) && node.images.length > 0)
+            || combinedCodexNodes.find(matchesCodexNode);
           const resolvedImages = codexNode && codexNode.images ? codexNode.images : [];
 
           const lng = override && override.coordinates ? override.coordinates[0] : (loc ? loc.lng : 0);
@@ -2446,7 +2447,15 @@ function App() {
         // Datasets can overlap (the same id reachable from more than one source).
         // Collapse duplicates by id, last one wins.
         const uniqueById = new Map<any, any>();
-        initialBuffer.forEach((item: any) => uniqueById.set(item.id, item));
+        initialBuffer.forEach((item: any) => {
+          const existing = uniqueById.get(item.id);
+          // A timeline pin that shadows a dataset record must not drop the record's imagery.
+          if (existing && (!Array.isArray(item.images) || item.images.length === 0) && Array.isArray(existing.images) && existing.images.length > 0) {
+            uniqueById.set(item.id, { ...item, images: existing.images });
+          } else {
+            uniqueById.set(item.id, item);
+          }
+        });
         const compiledRecords = Array.from(uniqueById.values());
 
         console.log(`Initial compilation: ${compiledRecords.length} records processed.`);

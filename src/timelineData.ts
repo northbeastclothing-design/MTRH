@@ -1868,16 +1868,6 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     source: 'Luke 10, John 11-12'
   },
   {
-    id: 'mary_magdalene',
-    name: 'Mary Magdalene',
-    type: 'lifespan',
-    layer: 'biblical-patriarchs',
-    start: 3,
-    end: 63,
-    description: 'Faithful disciple of Jesus Christ, witness to His crucifixion and burial, and the first to witness His resurrection.',
-    source: 'Gospels'
-  },
-  {
     id: 'paul_apostle',
     name: 'Paul the Apostle',
     type: 'lifespan',

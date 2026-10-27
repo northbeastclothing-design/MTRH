@@ -15,23 +15,6 @@ export interface OldWorldStructureCase {
 }
 
 export const OLD_WORLD_STRUCTURES_DATA: OldWorldStructureCase[] = [
-  {
-    "id": "anomaly-balmoral-castle-scotland",
-    "name": "Balmoral Castle - Royal Occultism & Highland Ley Lines - Royal Deeside, Scotland",
-    "category": "Old World Structures",
-    "type": "Point",
-    "coordinates": {
-      "lng": -3.2282,
-      "lat": 57.0397
-    },
-    "date": 1852,
-    "displayDate": "1852 CE",
-    "description": "The private Scottish fortress and summer sanctuary of the British Royal Family. Long the subject of esoteric investigation, Balmoral sits at a major intersection of Highland granite ley lines and ancient Pictish earthworks. Historical accounts document Queen Victoria's secretive mediumistic seances held here with personal servant John Brown, Prince Philip's deep fascination with classified military UFO archives, and the esoteric funerary rites enacted when Queen Elizabeth II passed away within its granite walls in September 2022.",
-    "source": "Royal Archives Windsor / Highland Heritage Trust / Alternative British Monarchy Researchers",
-    "images": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Balmoral_Castle.jpg/1280px-Balmoral_Castle.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
-    ]
-  },
 
   {
     "id": "structure-neuschwanstein",
@@ -392,66 +375,6 @@ export const OLD_WORLD_STRUCTURES_DATA: OldWorldStructureCase[] = [
     "description": "Constructed by the Saxons of Kronstadt in 1377 under charter from King Louis I of Hungary, Bran Castle commands a dramatic cliffside pass between Transylvania and Wallachia. Infamous for its historical association with Vlad the Impaler and Bram Stoker's Dracula legend.",
     "source": "National Museum of Bran",
     "images": ["https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Castelul_Bran2.jpg/500px-Castelul_Bran2.jpg"]
-  },
-  {
-    "id": "structure-bodiam-castle",
-    "name": "Bodiam Castle - East Sussex, England",
-    "category": "Old World Structures",
-    "type": "Point",
-    "coordinates": {
-      "lng": 0.5435,
-      "lat": 51.0023
-    },
-    "date": 1385,
-    "displayDate": "1385 CE",
-    "description": "Built in 1385 by Sir Edward Dalyngrigge with permission from Richard II to defend the area against French invasion during the Hundred Years' War. Featuring a complete moat, quadrangular plan, and massive corner towers, it is a quintessential medieval moated fortress.",
-    "source": "National Trust UK",
-    "images": ["https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Bodiam-castle-10My8-1197.jpg/500px-Bodiam-castle-10My8-1197.jpg"]
-  },
-  {
-    "id": "structure-spis-castle",
-    "name": "Spiš Castle (Spišský Hrad) - Spišské Podhradie, Slovakia",
-    "category": "Old World Structures",
-    "type": "Point",
-    "coordinates": {
-      "lng": 20.7681,
-      "lat": 48.9995
-    },
-    "date": 1209,
-    "displayDate": "1209 CE",
-    "description": "One of the largest castle complexes in Central Europe covering over 4 hectares. Founded in the 12th century on a travertine cliff, Spiš Castle withstood the Mongol invasions of 1241 and served as the royal administrative hub of Spiš County.",
-    "source": "Slovak National Museum",
-    "images": ["https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Burg_Hohenzollern_10-2016.jpg/500px-Burg_Hohenzollern_10-2016.jpg"]
-  },
-  {
-    "id": "structure-carcassonne",
-    "name": "Citadel of Carcassonne - Carcassonne, France",
-    "category": "Old World Structures",
-    "type": "Point",
-    "coordinates": {
-      "lng": 2.3631,
-      "lat": 43.2070
-    },
-    "date": 1247,
-    "displayDate": "1247 CE",
-    "description": "A fortified medieval citadel boasting 3 kilometers of double outer walls and 52 watchtowers. Restored by Eugène Viollet-le-Duc in the 19th century, Carcassonne played a central role during the Albigensian Crusade and the Cathar wars.",
-    "source": "Centre des Monuments Nationaux",
-    "images": ["https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/1_carcassonne_aerial_2016.jpg/500px-1_carcassonne_aerial_2016.jpg"]
-  },
-  {
-    "id": "structure-conwy-castle",
-    "name": "Conwy Castle - Conwy, Wales",
-    "category": "Old World Structures",
-    "type": "Point",
-    "coordinates": {
-      "lng": -3.8258,
-      "lat": 53.2804
-    },
-    "date": 1283,
-    "displayDate": "1283 CE",
-    "description": "Built by Edward I during his conquest of Wales between 1283 and 1289. Designed by master architect James of St. George, Conwy features eight massive towers and complete curtain walls integrated into the town fortification.",
-    "source": "Cadw Welsh Historic Monuments",
-    "images": ["https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Conwy_Castle%2C_water_view1.jpg/500px-Conwy_Castle%2C_water_view1.jpg"]
   },
   {
     "id": "structure-eilean-donan",

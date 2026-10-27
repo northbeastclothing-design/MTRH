@@ -79,7 +79,7 @@ export const processIncomingRecord = (item: any, index: number) => {
     if (item.type === 'LineString') {
       safeCoords = item.coordinates.map((c: any) => {
         if (Array.isArray(c)) return [parseFloat(c[0]), parseFloat(c[1])];
-        return [parseFloat(c.lng || c.lon), parseFloat(c.lat)];
+        return [parseFloat(c.lng ?? c.lon), parseFloat(c.lat)];
       }).filter((c: any) => isValidLngLat(c[0], c[1]));
     } else if (item.coordinates.length === 2) {
       const lng = parseFloat(item.coordinates[0]);
@@ -87,7 +87,7 @@ export const processIncomingRecord = (item: any, index: number) => {
       if (isValidLngLat(lng, lat)) safeCoords = [lng, lat];
     }
   } else if (item.coordinates && typeof item.coordinates === 'object') {
-    const lng = parseFloat(item.coordinates.lng || item.coordinates.lon);
+    const lng = parseFloat(item.coordinates.lng ?? item.coordinates.lon);
     const lat = parseFloat(item.coordinates.lat);
     if (isValidLngLat(lng, lat)) safeCoords = [lng, lat];
   }
