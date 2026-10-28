@@ -6,7 +6,9 @@ import dns from "dns";
 import crypto from "crypto";
 import compression from "compression";
 import { rateLimit } from "express-rate-limit";
-import admin from "firebase-admin";
+import { initializeApp as initializeAdminApp, getApps as getAdminApps } from "firebase-admin/app";
+import { getFirestore as getAdminFirestore, Firestore as AdminFirestore, FieldValue } from "firebase-admin/firestore";
+import { getAuth as getAdminAuth } from "firebase-admin/auth";
 import nodemailer from "nodemailer";
 import dotenv from "dotenv";
 
@@ -173,23 +175,23 @@ function isAllowedProxyMediaType(contentType: string): boolean {
 }
 
 // Initialize Firebase Admin with applet configuration
-let dbAdmin: admin.firestore.Firestore | null = null;
+let dbAdmin: AdminFirestore | null = null;
 try {
   const configPath = path.join(process.cwd(), "firebase-applet-config.json");
   if (fs.existsSync(configPath)) {
     const firebaseConfig = JSON.parse(fs.readFileSync(configPath, "utf8"));
-    if (admin.apps.length === 0) {
-      admin.initializeApp({
+    if (getAdminApps().length === 0) {
+      initializeAdminApp({
         projectId: firebaseConfig.projectId
       });
     }
     if (firebaseConfig.firestoreDatabaseId) {
-      dbAdmin = new admin.firestore.Firestore({
+      dbAdmin = new AdminFirestore({
         projectId: firebaseConfig.projectId,
         databaseId: firebaseConfig.firestoreDatabaseId
       });
     } else {
-      dbAdmin = admin.firestore();
+      dbAdmin = getAdminFirestore();
     }
     console.log("Firebase Admin successfully initialized on server.");
   } else {
@@ -460,7 +462,7 @@ async function startServer() {
     if (authHeader && authHeader.startsWith("Bearer ")) {
       const token = authHeader.substring(7);
       try {
-        const decodedToken = await admin.auth().verifyIdToken(token);
+        const decodedToken = await getAdminAuth().verifyIdToken(token);
         if (decodedToken && decodedToken.email === ADMIN_EMAIL && decodedToken.email_verified) {
           return true;
         }
@@ -603,7 +605,7 @@ async function startServer() {
         description: description.trim(),
         images: images || [],
         status: 'pending',
-        createdAt: dbAdmin ? admin.firestore.FieldValue.serverTimestamp() : new Date().toISOString(),
+        createdAt: dbAdmin ? FieldValue.serverTimestamp() : new Date().toISOString(),
         destinations: destinations || ['map'],
         codexParentId: codexParentId || '',
         timelineLayer: timelineLayer || '',
@@ -807,7 +809,7 @@ ${modLink}
         reason: String(reason).trim(),
         details: (details || "").trim(),
         status: 'pending',
-        createdAt: dbAdmin ? admin.firestore.FieldValue.serverTimestamp() : new Date().toISOString()
+        createdAt: dbAdmin ? FieldValue.serverTimestamp() : new Date().toISOString()
       };
 
       await safeAddDocument('reports', reportId, reportData);
@@ -972,7 +974,7 @@ ${modLink}
         lng: Number(lng),
         lat: Number(lat),
         note: String(note).trim().substring(0, 120),
-        createdAt: dbAdmin ? admin.firestore.FieldValue.serverTimestamp() : new Date().toISOString()
+        createdAt: dbAdmin ? FieldValue.serverTimestamp() : new Date().toISOString()
       };
       
       const docId = await safeAddDocument('cartography_points', pointId, pointData);
