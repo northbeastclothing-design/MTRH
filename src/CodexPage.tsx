@@ -3210,25 +3210,33 @@ export default function CodexPage({
                                 paddingBottom: tIdx < activeTermNode.translations!.length - 1 ? '12px' : '0'
                               }}
                             >
-                              <div style={{ display: 'flex', flexDirection: 'column' }}>
+                              <div style={{ display: 'flex', flexDirection: 'column', flex: '1 1 160px', minWidth: 0 }}>
                                 <span style={{ fontSize: '8.5px', fontWeight: 'bold', textTransform: 'uppercase', color: adjustColorForContrast(activeRootColor), letterSpacing: '0.5px' }}>
                                   {trans.lang}
                                 </span>
-                                <span style={{ fontSize: '11px', fontWeight: 'bold', color: theme.text, fontFamily: '"Space Mono", monospace' }}>
-                                  {trans.translit}
-                                </span>
-                                <span style={{ fontSize: '10px', fontStyle: 'italic', color: theme.textDim }}>
+                                {trans.translit && (
+                                  <span style={{ fontSize: '11px', fontWeight: 'bold', color: theme.text, fontFamily: '"Space Mono", monospace', overflowWrap: 'anywhere' }}>
+                                    {trans.translit}
+                                  </span>
+                                )}
+                                <span style={{ fontSize: '10px', fontStyle: 'italic', color: theme.textDim, lineHeight: '14px', overflowWrap: 'anywhere' }}>
                                   "{trans.meaning}"
                                 </span>
                               </div>
 
                               <div
+                                lang={trans.lang === 'Hebrew' ? 'he' : trans.lang === 'Greek' ? 'el' : undefined}
                                 style={{
-                                  fontSize: '24px',
+                                  fontSize: trans.original.length > 14 ? '16px' : trans.original.length > 9 ? '20px' : '24px',
                                   fontWeight: 'bold',
                                   color: theme.text,
-                                  fontFamily: trans.lang === 'Hebrew' ? 'serif' : '"Space Mono", monospace',
-                                  letterSpacing: '1px'
+                                  // Space Mono has no Hebrew/Greek/Devanagari/cuneiform glyphs — use a serif face for any non-Latin script
+                                  fontFamily: /[^\u0000-\u024F\u1E00-\u1EFF\u02B0-\u02FF]/.test(trans.original) ? 'Georgia, "Times New Roman", serif' : '"Space Mono", monospace',
+                                  letterSpacing: '1px',
+                                  maxWidth: '100%',
+                                  overflowWrap: 'anywhere',
+                                  lineHeight: 1.25,
+                                  textAlign: 'right'
                                 }}
                               >
                                 {trans.original}

@@ -30,6 +30,9 @@ export interface TermNode {
 
 const chunk_0: any[] = [  {
     id: 'biblical-apocryphal',
+      translations: [
+        { lang: 'Latin', original: 'religiō', translit: '', meaning: 'reverence, scrupulous observance; derivation disputed (relegere \'reread\' or religare \'bind\')' }
+      ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/La_salle_dAkhenaton_%281356-1340_av_J.C.%29_%28Mus%C3%A9e_du_Caire%29_%282076972086%29.jpg/500px-La_salle_dAkhenaton_%281356-1340_av_J.C.%29_%28Mus%C3%A9e_du_Caire%29_%282076972086%29.jpg'],
     name: 'Religion',
     description: 'Scriptural records, world religions, angelic hierarchies, ancient patriarchs, nephilim lineages, and canonical or apocryphal narratives.'
@@ -129,6 +132,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'megaliths-structures',
+    translations: [
+      { lang: 'Greek', original: 'μέγας', translit: 'mégas', meaning: 'great, large (first element of \'megalith\', great stone)' },
+      { lang: 'Greek', original: 'λίθος', translit: 'líthos', meaning: 'stone' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Richat_Structure_ISS030-E-12516.jpg/250px-Richat_Structure_ISS030-E-12516.jpg'],
     name: 'Megaliths / Structures',
     description: 'Ancient monolithic ruins, prehistoric earthworks, grid alignments, deep underground military bases, and planetary anomalies.'
@@ -231,6 +238,9 @@ const chunk_0: any[] = [  {
     description: 'Indigenous nations, historical empires, lineages, and mysterious societies whose origins and legacies are recorded in antiquity.'
   },  {
     id: 'elohim',
+    translations: [
+      { lang: 'Hebrew', original: 'אֱלֹהִים', translit: 'ʾĔlōhîm', meaning: 'God; gods — plural of ʾĕlôah (cf. ʾēl), used with singular verbs for Israel\'s God' }
+    ],
     parentId: 'christianity',
     name: 'Angelology / Elohim',
     description: 'The study of angels, heavenly hosts, and divine messengers. In biblical cosmology, it encompasses the angelic hierarchies, the heavenly council, and spiritual beings historically referred to by the Hebrew term Elohim. In alternative history and ancient astronaut theories, the plural nature of the word Elohim ("gods" or "divine ones") is interpreted as referring to an advanced extraterrestrial race, such as the Anunnaki, who engineered early humanity.',
@@ -240,11 +250,20 @@ const chunk_0: any[] = [  {
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Elohim.svg/1280px-Elohim.svg.png']
   },  {
     id: 'angel',
+    translations: [
+      { lang: 'Hebrew', original: 'מַלְאָךְ', translit: 'malʾāḵ', meaning: 'messenger, envoy (root l-ʾ-k, to send)' },
+      { lang: 'Greek', original: 'ἄγγελος', translit: 'angelos', meaning: 'messenger; the Septuagint\'s rendering of malʾāḵ' },
+      { lang: 'Latin', original: 'angelus', translit: '', meaning: 'angel; borrowed from Greek, whence Old English engel' }
+    ],
     parentId: 'elohim',
     name: 'Angels',
     description: 'Angelic messengers and heavenly hosts who carry out the will of God, acting as guides, protectors, and executors of divine judgment.'
   },  {
     id: 'thrones-ophanim',
+    translations: [
+      { lang: 'Hebrew', original: 'אוֹפַנִּים', translit: 'ʾôp̄annîm', meaning: 'wheels (plural of ʾôp̄ān, wheel); Ezekiel 1:15-21' },
+      { lang: 'Greek', original: 'θρόνοι', translit: 'thronoi', meaning: 'thrones, seats of authority (Colossians 1:16)' }
+    ],
     relatedIds: ['angelic-hierarchy', 'enoch3-merkabah-princes', 'enoch-merkabah-chariot'],
     parentId: 'elohim',
     name: 'Thrones (Ophanim)',
@@ -256,6 +275,10 @@ const chunk_0: any[] = [  {
     ]
   },  {
     id: 'dominions',
+    translations: [
+      { lang: 'Greek', original: 'κυριότητες', translit: 'kyriotētes', meaning: 'lordships, dominions (from kyrios, lord); Colossians 1:16, Ephesians 1:21' },
+      { lang: 'Latin', original: 'dominationes', translit: '', meaning: 'lordships (from dominus, lord, master); the Vulgate\'s term' }
+    ],
     parentId: 'elohim',
     name: 'Dominions (Lordships)',
     description: 'An order of angels responsible for regulating the duties of lower angels and maintaining the cosmic order. They manifest the majesty of God\'s sovereign rule.',
@@ -266,6 +289,10 @@ const chunk_0: any[] = [  {
     ]
   },  {
     id: 'virtues',
+    translations: [
+      { lang: 'Greek', original: 'δυνάμεις', translit: 'dynameis', meaning: 'powers, mighty works; the order the Vulgate renders virtutes' },
+      { lang: 'Latin', original: 'virtus', translit: '', meaning: 'excellence, valour, power (from vir, man)' }
+    ],
     parentId: 'elohim',
     name: 'Virtues (Strongholds)',
     description: 'An order of angels associated with miracles, signs, and the bestowal of grace and courage to humanity, helping govern the laws of the physical cosmos.',
@@ -275,6 +302,11 @@ const chunk_0: any[] = [  {
     ]
   },  {
     id: 'holy-powers',
+    translations: [
+      { lang: 'Greek', original: 'ἐξουσίαι', translit: 'exousiai', meaning: 'authorities, powers (Ephesians 1:21, Colossians 1:16)' },
+      { lang: 'Greek', original: 'δυνάμεις', translit: 'dynameis', meaning: 'powers, mighty forces (Romans 8:38, Ephesians 1:21)' },
+      { lang: 'Latin', original: 'potestates', translit: '', meaning: 'powers, authorities (from posse, to be able); the Vulgate\'s term' }
+    ],
     parentId: 'elohim',
     name: 'Powers (Authorities)',
     description: 'An order of angels tasked with defending the cosmos against malevolent spiritual forces, guarding the pathways between heaven and earth, and maintaining spiritual equilibrium.',
@@ -284,6 +316,10 @@ const chunk_0: any[] = [  {
     ]
   },  {
     id: 'holy-principalities',
+    translations: [
+      { lang: 'Greek', original: 'ἀρχαί', translit: 'archai', meaning: 'beginnings, rulers, principalities (Ephesians 1:21, Colossians 1:16)' },
+      { lang: 'Latin', original: 'principatus', translit: '', meaning: 'principalities, first rank (from princeps, first, chief)' }
+    ],
     parentId: 'elohim',
     name: 'Principalities (Rulers)',
     description: 'An order of angels charged with watching over large groups, nations, cities, and the church, guiding their leaders and protecting their spiritual destinies.',
@@ -293,6 +329,10 @@ const chunk_0: any[] = [  {
     ]
   },  {
     id: 'archangels-order',
+    translations: [
+      { lang: 'Greek', original: 'ἀρχάγγελος', translit: 'archangelos', meaning: 'chief messenger (archi-, chief, first + angelos, messenger)' },
+      { lang: 'Hebrew', original: 'שַׂר', translit: 'śar', meaning: 'prince, chief; Daniel 10:13 calls Michael \'one of the chief princes\'' }
+    ],
     relatedIds: ['angelic-hierarchy', 'enoch3-seven-princes-heavens'],
     parentId: 'elohim',
     name: 'Archangels',
@@ -304,6 +344,11 @@ const chunk_0: any[] = [  {
     ]
   },  {
     id: 'living-creatures',
+    translations: [
+      { lang: 'Hebrew', original: 'חַיָּה', translit: 'ḥayyâ', meaning: 'living thing, animal (from ḥāyâ, to live)' },
+      { lang: 'Hebrew', original: 'חַיּוֹת הַקֹּדֶשׁ', translit: 'ḥayyôṯ haqqōḏeš', meaning: 'the holy living creatures of Ezekiel\'s chariot vision' },
+      { lang: 'Greek', original: 'ζῷον', translit: 'zōon', meaning: 'living being, animal (from zōē, life); Revelation 4:6' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Ezekiel-Vision-Merkaba.jpg/960px-Ezekiel-Vision-Merkaba.jpg'],
     relatedIds: ['enoch3-merkabah-princes', 'enoch-merkabah-chariot', 'flood-myth-mesopotamia'],
     parentId: 'elohim',
@@ -316,6 +361,11 @@ const chunk_0: any[] = [  {
     ]
   },  {
     id: 'hashmallim',
+    translations: [
+      { lang: 'Hebrew', original: 'חַשְׁמַל', translit: 'ḥašmal', meaning: 'gleaming amber or electrum (Ezekiel 1:4); meaning uncertain; modern Hebrew \'electricity\'' },
+      { lang: 'Greek', original: 'ἤλεκτρον', translit: 'ēlektron', meaning: 'amber, electrum; the Septuagint\'s rendering of ḥašmal' },
+      { lang: 'Hebrew', original: 'חַשְׁמַלִּים', translit: 'ḥašmallîm', meaning: 'the glowing ones; angelic order named from the vision' }
+    ],
     parentId: 'elohim',
     name: 'Hashmallim (Glowing Ones)',
     description: 'An order of angels in Jewish Kabbalistic tradition and Ezekiel\'s chariot vision, described as entities of glowing metal or electric light who represent raw celestial energy.',
@@ -326,6 +376,10 @@ const chunk_0: any[] = [  {
     ]
   },  {
     id: 'erelim',
+    translations: [
+      { lang: 'Hebrew', original: 'אֶרְאֵל', translit: 'ʾerʾēl', meaning: 'valiant one, hero (Isaiah 33:7); perhaps \'lion of God\', ʾărî + ʾēl' },
+      { lang: 'Hebrew', original: 'אֶרְאֶלִּים', translit: 'ʾerʾellîm', meaning: 'valiant ones; the angelic order of rabbinic and liturgical tradition' }
+    ],
     parentId: 'elohim',
     name: 'Erelim (Valiant Ones)',
     description: 'An order of angels in Jewish Kabbalistic and liturgical lore representing strength and deep devotion, associated with mourning for destruction and carrying divine courage.',
@@ -336,6 +390,10 @@ const chunk_0: any[] = [  {
     ]
   },  {
     id: 'holy-watchers',
+    translations: [
+      { lang: 'Aramaic', original: 'עִירִין', translit: 'ʿîrîn', meaning: 'wakeful ones, watchers (Daniel 4:13, 17); from the root ʿ-w-r, to be awake' },
+      { lang: 'Greek', original: 'ἐγρήγοροι', translit: 'egrēgoroi', meaning: 'watchers, wakeful ones (perfect participle of egeirō, to wake); 1 Enoch' }
+    ],
     relatedIds: ['angelic-hierarchy', 'enoch3-irin-qaddishin', 'enoch2-grigori'],
     parentId: 'elohim',
     name: 'Holy Watchers (Irin)',
@@ -360,6 +418,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'metatron-cube',
+    translations: [
+      { lang: 'Hebrew', original: 'מטטרון', translit: 'Meṭaṭrôn', meaning: 'disputed; often from Greek metà thrónou \'beside the throne\' or Latin metator \'guide\'' }
+    ],
     parentId: 'angel',
     name: 'Metatron\'s Cube',
     description: 'A complex geometric figure containing all five Platonic solids, serving as a sacred template representing the organization and structure of matter in the universe.',
@@ -369,6 +430,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['This Enoch is Metatron... I have committed unto him seventy names, and I have made his glory like My glory... — 3 Enoch 4:2-5 (https://www.sacred-texts.com/jud/3en/index.htm)']
   },  {
     id: 'ariel',
+    translations: [
+      { lang: 'Hebrew', original: 'אֲרִיאֵל', translit: 'ʾĂrîʾēl', meaning: 'lion of God (ʾărî, lion + ʾēl); also \'altar hearth\' in Ezekiel 43' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Ariel_key_visual_ESA499933.jpg/960px-Ariel_key_visual_ESA499933.jpg'],
     parentId: 'angel',
     name: 'Ariel',
@@ -390,6 +454,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['And the angel of death, who is charged with taking your souls, will take you. Then to your Lord you will be returned. — Quran 32:11', 'For he hath weighed the world in a balance; by measure hath he measured the times... — 2 Esdras 4:36-37 (https://www.biblegateway.com/passage/?search=2+Esdras+4%3A36-37)']
   },  {
     id: 'barachiel',
+    translations: [
+      { lang: 'Hebrew', original: 'ברכיאל', translit: 'Bārāḵîʾēl', meaning: 'blessing of God, God has blessed (bārakh, to bless + ʾēl)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/El_Arc%C3%A1ngel_Baraquiel_esparciendo_flores%2C_de_Bartolom%C3%A9_Rom%C3%A1n_%28Museo_del_Prado%29.jpg/960px-El_Arc%C3%A1ngel_Baraquiel_esparciendo_flores%2C_de_Bartolom%C3%A9_Rom%C3%A1n_%28Museo_del_Prado%29.jpg'],
     parentId: 'angel',
     name: 'Barachiel',
@@ -399,6 +466,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Another angel came and stood over the altar, having a golden censer. Much incense was given to him, that he should add it to the prayers of all the saints on the golden altar which was before the throne. The smoke of the incense, with the prayers of the saints, went up before God out of the angel’s hand. — Revelation 8:3-4 (https://www.biblegateway.com/passage/?search=Revelation+8%3A3-4)']
   },  {
     id: 'camael',
+    translations: [
+      { lang: 'Hebrew', original: 'קמאל', translit: 'Qamāʾēl', meaning: 'uncertain; popularly \'he who sees God\'; perhaps a form of Kemuel (qûm, to rise + ʾēl)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Sanctus_Chamuel.jpg/960px-Sanctus_Chamuel.jpg'],
     parentId: 'angel',
     name: 'Camael',
@@ -408,6 +478,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Jacob was left alone, and wrestled with a man there until the breaking of the day. When he saw that he didn’t prevail against him, he touched the hollow of his thigh, and the hollow of Jacob’s thigh was strained, as he wrestled. The man said, “Let me go, for the day breaks.” Jacob said, “I won’t let you go, unless you bless me.” He said to him, “What is your name?” He said, “Jacob”. He said, “Your name will no longer be called Jacob, but Israel; for you have fought with God and with men, and have prevailed.” Jacob asked him, “Please tell me your name.” He said, “Why is it that you ask what my name is?” He blessed him there. Jacob called the name of the place Peniel: for, he said, “I have seen God face to face, and my life is preserved.” — Genesis 32:24-30 (https://www.biblegateway.com/passage/?search=Genesis+32%3A24-30)']
   },  {
     id: 'chamuel',
+    translations: [
+      { lang: 'Hebrew', original: 'חַמּוּאֵל', translit: 'Ḥammûʾēl', meaning: 'heat of God, or wrath of God (ḥammāh/ḥēmāh + ʾēl); traditionally \'he who seeks God\'' }
+    ],
     parentId: 'angel',
     name: 'Chamuel',
     description: 'Omniscient vision, ease anxiety, peace, brings love to relationships, and can help someone find a loving partner. Chamuel also provides comfort and protection.',
@@ -428,6 +501,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['I heard a man’s voice between the banks of the Ulai, which called, and said, “Gabriel, make this man understand the vision.” — Daniel 8:16 (https://www.biblegateway.com/passage/?search=Daniel+8%3A16)', 'The angel answered him, “I am Gabriel, who stands in the presence of God. I was sent to speak to you, and to bring you this good news. — Luke 1:19 (https://www.biblegateway.com/passage/?search=Luke+1%3A19)', 'Now in the sixth month, the angel Gabriel was sent from God to a city of Galilee, named Nazareth, to a virgin pledged to be married to a man whose name was Joseph, of David’s house. The virgin’s name was Mary. Having come in, the angel said to her, “Rejoice, you highly favored one! The Lord is with you. Blessed are you among women!” But when she saw him, she was greatly troubled at the saying, and considered what kind of salutation this might be. The angel said to her, “Don’t be afraid, Mary, for you have found favor with God. Behold, you will conceive in your womb, and give birth to a son, and will call his name ‘Jesus.’ He will be great, and will be called the Son of the Most High. The Lord God will give him the throne of his father, David, and he will reign over the house of Jacob forever. There will be no end to his Kingdom.” Mary said to the angel, “How can this be, seeing I am a virgin?” The angel answered her, “The Holy Spirit will come on you, and the power of the Most High will overshadow you. Therefore also the holy one who is born from you will be called the Son of God. Behold, Elizabeth, your relative, also has conceived a son in her old age; and this is the sixth month with her who was called barren. For nothing spoken by God is impossible.” Mary said, “Behold, the servant of the Lord; let it be done to me according to your word.” The angel departed from her. — Luke 1:26-38 (https://www.biblegateway.com/passage/?search=Luke+1%3A26-38)']
   },  {
     id: 'haniel',
+    translations: [
+      { lang: 'Hebrew', original: 'חַנִּיאֵל', translit: 'Ḥannîʾēl', meaning: 'grace of God, favour of God (ḥēn, grace + ʾēl)' }
+    ],
     parentId: 'angel',
     name: 'Haniel',
     description: 'Female, direct people to god Seen in: Escorted Enoch to heaven.',
@@ -436,6 +512,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Then Samuel took the horn of oil, and anointed him in the middle of his brothers. Then Yahweh’s Spirit came mightily on David from that day forward. So Samuel rose up and went to Ramah. — 1 Samuel 16:13 (https://www.biblegateway.com/passage/?search=1+Samuel+16%3A13)']
   },  {
     id: 'jegudiel',
+    translations: [
+      { lang: 'Hebrew', original: 'יהודיאל', translit: 'Yəhûdîʾēl', meaning: 'praise of God, laudation of God (yādāh, to praise + ʾēl)' }
+    ],
     parentId: 'angel',
     name: 'Jegudiel',
     description: 'Encouragement, wisdom, strength to people working for God\'s glory',
@@ -444,6 +523,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['“Behold, I send an angel before you, to keep you by the way, and to bring you into the place which I have prepared. Pay attention to him, and listen to his voice. Don’t provoke him, for he will not pardon your disobedience, for my name is in him. — Exodus 23:20-21 (https://www.biblegateway.com/passage/?search=Exodus+23%3A20-21)']
   },  {
     id: 'jeremiel',
+    translations: [
+      { lang: 'Hebrew', original: 'יְרַחְמְאֵל', translit: 'Yəraḥməʾēl', meaning: 'may God have mercy, God shows compassion (rāḥam, to pity + ʾēl); = Jerahmeel' }
+    ],
     parentId: 'angel',
     name: 'Jeremiel',
     description: 'hope, visions, dreams, inspires souls to go to heaven',
@@ -452,6 +534,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Then answered the angel Jeremiel, and said, Even when the number of seeds is filled in you: for he hath weighed the world in a balance. — 2 Esdras 4:36 (https://www.biblegateway.com/passage/?search=2+Esdras+4%3A36)']
   },  {
     id: 'jophiel',
+    translations: [
+      { lang: 'Hebrew', original: 'יופיאל', translit: 'Yôfîʾēl', meaning: 'beauty of God (yōfî, beauty + ʾēl)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Sanctus_Jophiel.jpg/960px-Sanctus_Jophiel.jpg'],
     relatedIds: ['egyptian-tree-of-life'],
     parentId: 'angel',
@@ -474,6 +559,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Michael, one of the holy angels, to wit, he that is set over the best part of mankind and over chaos. — 1 Enoch 20:5 (https://www.sacred-texts.com/bib/boe/boe023.htm)']
   },  {
     id: 'phanuel',
+    translations: [
+      { lang: 'Hebrew', original: 'פְּנוּאֵל', translit: 'Pənûʾēl', meaning: 'face of God (pānîm, face + ʾēl); cf. Peniel in Genesis 32' },
+      { lang: 'Greek', original: 'Φανουήλ', translit: 'Phanouḗl', meaning: 'Greek form of Penuel, as in 1 Enoch and Luke 2:36' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Archangel_Phanuel%2C_Ethiopian_scroll.jpg/960px-Archangel_Phanuel%2C_Ethiopian_scroll.jpg'],
     relatedIds: ['book-of-enoch'],
     parentId: 'angel',
@@ -484,6 +573,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['It will be that whoever will call on the name of the Lord will be saved.’ — Acts 2:21 (https://www.biblegateway.com/passage/?search=Acts+2%3A21)']
   },  {
     id: 'raguel',
+    translations: [
+      { lang: 'Hebrew', original: 'רְעוּאֵל', translit: 'Rəʿûʾēl', meaning: 'friend of God (rēaʿ, friend + ʾēl); = Reuel' },
+      { lang: 'Greek', original: 'Ῥαγουήλ', translit: 'Rhagouḗl', meaning: 'Greek form of Reuel used in 1 Enoch and Tobit' }
+    ],
     relatedIds: ['book-of-enoch', 'enoch3-seven-princes-heavens'],
     parentId: 'angel',
     name: 'Raguel',
@@ -493,6 +586,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Raguel, one of the holy angels, who takes vengeance on the world of the luminaries. — 1 Enoch 20:4 (https://www.sacred-texts.com/bib/boe/boe023.htm)']
   },  {
     id: 'ramiel',
+    translations: [
+      { lang: 'Hebrew', original: 'רַעַמְאֵל', translit: 'Raʿamʾēl', meaning: 'thunder of God (raʿam, thunder + ʾēl)' },
+      { lang: 'Greek', original: 'Ῥαμιήλ', translit: 'Rhamiḗl', meaning: 'Greek form of the name in 1 Enoch' }
+    ],
     relatedIds: ['watchers-chiefs-of-tens', 'remiel', 'jeremiel', 'enoch3-nature-angels'],
     secondaryParentIds: ['watchers-chiefs-of-tens'],
     parentId: 'angel',
@@ -516,6 +613,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Raphael, one of the holy angels, who is over the spirits of men. — 1 Enoch 20:3 (https://www.sacred-texts.com/bib/boe/boe023.htm)']
   },  {
     id: 'saraqael',
+    translations: [
+      { lang: 'Hebrew', original: 'שריאל', translit: 'Śarîʾēl', meaning: 'prince of God, command of God (śar, prince + ʾēl); Saraqael is the Ethiopic form' },
+      { lang: 'Greek', original: 'Σαριήλ', translit: 'Sariḗl', meaning: 'Greek form of the name in 1 Enoch 20' }
+    ],
     relatedIds: ['book-of-enoch', 'enoch3-seven-princes-heavens'],
     parentId: 'angel',
     name: 'Saraqael',
@@ -538,6 +639,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Uriel, one of the holy angels, who is over clamour and terror. — 1 Enoch 20:2 (https://www.sacred-texts.com/bib/boe/boe023.htm)']
   },  {
     id: 'zadkiel',
+    translations: [
+      { lang: 'Hebrew', original: 'צִדְקִיאֵל', translit: 'Ṣiḏqîʾēl', meaning: 'righteousness of God (ṣeḏeq, righteousness + ʾēl)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Aartsengel_Zadki%C3%ABl_Dominationes_Zadkiel_%28titel_op_object%29_Aartsengelen_en_andere_engelen_%28serietitel%29_Deus_Pater_ex_quo_Omnia_Angeli_%28serietitel_op_object%29%2C_RP-P-2012-38-9.jpg/960px-thumbnail.jpg'],
     parentId: 'angel',
     name: 'Zadkiel',
@@ -547,6 +651,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Yahweh’s angel called to him out of the sky, and said, “Abraham, Abraham!” He said, “Here I am.” He said, “Don’t lay your hand on the boy or do anything to him. For now I know that you fear God, since you have not withheld your son, your only son, from me.” — Genesis 22:11-12 (https://www.biblegateway.com/passage/?search=Genesis+22%3A11-12)']
   },  {
     id: 'remiel',
+    translations: [
+      { lang: 'Hebrew', original: 'רַעַמְאֵל', translit: 'Raʿamʾēl', meaning: 'thunder of God (raʿam + ʾēl); Remiel is often identified with Jerahmeel, \'God has mercy\'' },
+      { lang: 'Greek', original: 'Ῥαμιήλ', translit: 'Rhamiḗl', meaning: 'Greek form of the name in 1 Enoch' }
+    ],
     relatedIds: ['book-of-enoch', 'enoch3-seven-princes-heavens'],
     parentId: 'angel',
     name: 'Remiel',
@@ -556,6 +664,11 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Remiel, one of the holy angels, whom God set over those who rise. — 1 Enoch 20:8 (https://www.sacred-texts.com/bib/boe/boe023.htm)']
   },  {
     id: 'cherubim',
+    translations: [
+      { lang: 'Akkadian', original: 'kāribu', translit: '', meaning: 'one who blesses, intercessor; a protective genie (from karābu, to bless, pray)' },
+      { lang: 'Hebrew', original: 'כְּרוּב', translit: 'kərûḇ', meaning: 'cherub; etymology uncertain, usually linked to Akkadian kāribu' },
+      { lang: 'Hebrew', original: 'כְּרוּבִים', translit: 'kərûḇîm', meaning: 'cherubim (plural; Genesis 3:24, Exodus 25:18)' }
+    ],
     relatedIds: ['egyptian-tree-of-life', 'angelic-hierarchy', 'enoch3-merkabah-princes', 'enoch-merkabah-chariot'],
     parentId: 'elohim',
     name: 'Cherubim',
@@ -564,6 +677,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['So he drove out the man; and he placed cherubim at the east of the garden of Eden, and a flaming sword which turned every way, to guard the way to the tree of life. — Genesis 3:24 (https://www.biblegateway.com/passage/?search=Genesis+3%3A24)', 'Then I looked, and see, in the expanse that was over the head of the cherubim there appeared above them as it were a sapphire stone, as the appearance of the likeness of a throne. He spoke to the man clothed in linen, and said, “Go in between the whirling wheels, even under the cherub, and fill both your hands with coals of fire from between the cherubim, and scatter them over the city.” He went in as I watched. — Ezekiel 10:1-2 (https://www.biblegateway.com/passage/?search=Ezekiel+10%3A1-2)', 'You shall make two cherubim of hammered gold. You shall make them at the two ends of the mercy seat. Make one cherub at the one end, and one cherub at the other end. You shall make the cherubim on its two ends of one piece with the mercy seat. The cherubim shall spread out their wings upward, covering the mercy seat with their wings, with their faces toward one another. The faces of the cherubim shall be toward the mercy seat. — Exodus 25:18-20 (https://www.biblegateway.com/passage/?search=Exodus+25%3A18-20)']
   },  {
     id: 'seraphim',
+    translations: [
+      { lang: 'Hebrew', original: 'שָׂרָף', translit: 'śārāp̄', meaning: 'burning one; fiery serpent (from śārap̄, to burn)' },
+      { lang: 'Hebrew', original: 'שְׂרָפִים', translit: 'śərāp̄îm', meaning: 'seraphim, the burning ones (plural; Isaiah 6:2)' }
+    ],
     relatedIds: ['angelic-hierarchy', 'enoch3-merkabah-princes', 'enoch-merkabah-chariot'],
     parentId: 'elohim',
     name: 'Seraphim',
@@ -572,6 +689,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Above him stood the seraphim. Each one had six wings. With two he covered his face. With two he covered his feet. With two he flew. One called to another, and said, “Holy, holy, holy, is Yahweh of Armies! The whole earth is full of his glory!” — Isaiah 6:2-3 (https://www.biblegateway.com/passage/?search=Isaiah+6%3A2-3)', 'Then one of the seraphim flew to me, having a live coal in his hand, which he had taken with the tongs from off the altar. He touched my mouth with it, and said, “Behold, this has touched your lips; and your iniquity is taken away, and your sin forgiven.” — Isaiah 6:6-7 (https://www.biblegateway.com/passage/?search=Isaiah+6%3A6-7)']
   },  {
     id: 'twenty-four-elders',
+    translations: [
+      { lang: 'Greek', original: 'πρεσβύτερος', translit: 'presbýteros', meaning: 'elder, older man (comparative of présbys, old); source of \'priest\'' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Chartres_-_portail_royal%2C_tympan_central.jpg/960px-Chartres_-_portail_royal%2C_tympan_central.jpg'],
     parentId: 'angel',
     name: 'Twenty-four Elders',
@@ -580,6 +700,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Around the throne were twenty-four thrones. On the thrones were twenty-four elders sitting, dressed in white garments, with crowns of gold on their heads. — Revelation 4:4 (https://www.biblegateway.com/passage/?search=Revelation+4%3A4)', 'the twenty-four elders fall down before him who sits on the throne, and worship him who lives forever and ever, and throw their crowns before the throne, saying, — Revelation 4:10 (https://www.biblegateway.com/passage/?search=Revelation+4%3A10)', 'Now when he had taken the book, the four living creatures and the twenty-four elders fell down before the Lamb, each one having a harp, and golden bowls full of incense, which are the prayers of the saints. — Revelation 5:8 (https://www.biblegateway.com/passage/?search=Revelation+5%3A8)']
   },  {
     id: 'demonology',
+    translations: [
+      { lang: 'Greek', original: 'δαίμων', translit: 'daimōn', meaning: 'divine power, spirit, lesser deity; in Jewish-Christian usage an evil spirit' },
+      { lang: 'Greek', original: '-λογία', translit: '-logia', meaning: 'study, discourse (from logos, word, account)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Nachtmahr_%28Abildgaard%29.jpg/960px-Nachtmahr_%28Abildgaard%29.jpg'],
     relatedIds: ['baal-deity'],
     parentId: 'christianity',
@@ -608,6 +732,11 @@ const chunk_0: any[] = [  {
     secondaryParentIds: ['hauntings-br', 'cryptid-sightings-br'],
   },  {
     id: 'shedim',
+    translations: [
+      { lang: 'Akkadian', original: 'šēdu', translit: '', meaning: 'protective spirit, guardian genius (the bull colossi at palace gates)' },
+      { lang: 'Hebrew', original: 'שֵׁד', translit: 'šēḏ', meaning: 'demon, foreign deity (Deuteronomy 32:17, Psalm 106:37); borrowed from Akkadian' },
+      { lang: 'Hebrew', original: 'שֵׁדִים', translit: 'šēḏîm', meaning: 'demons (plural form used in the Bible and Talmud)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Compendium_rarissimum_totius_Artis_Magicae._Wellcome_L0027769.jpg/960px-Compendium_rarissimum_totius_Artis_Magicae._Wellcome_L0027769.jpg'],
     parentId: 'demons',
     name: 'Shedim',
@@ -619,6 +748,10 @@ const chunk_0: any[] = [  {
     ]
   },  {
     id: 'seirim',
+    translations: [
+      { lang: 'Hebrew', original: 'שָׂעִיר', translit: 'śāʿîr', meaning: 'hairy one, he-goat (from śēʿār, hair)' },
+      { lang: 'Hebrew', original: 'שְׂעִירִים', translit: 'śəʿîrîm', meaning: 'goat-demons, satyrs (plural; Leviticus 17:7, Isaiah 13:21)' }
+    ],
     parentId: 'demons',
     name: 'Se\'irim (Goat-Demons)',
     description: 'Desert spirits or satyrs mentioned in the Bible, translated as "goat-demons" or "wild goats," associated with desolate ruins and forbidden pagan rituals.',
@@ -629,6 +762,11 @@ const chunk_0: any[] = [  {
     ]
   },  {
     id: 'lilith',
+    translations: [
+      { lang: 'Sumerian', original: 'líl', translit: '', meaning: 'spirit, phantom; also wind, air (the lil in En-lil)' },
+      { lang: 'Akkadian', original: 'lilītu', translit: '', meaning: 'female demon of the lilû class of night spirits; source of the Hebrew name' },
+      { lang: 'Hebrew', original: 'לִילִית', translit: 'Līlīṯ', meaning: 'night creature (Isaiah 34:14); popularly linked to laylâ, night' }
+    ],
     relatedIds: ['naamah-nemah', 'zohar', 'inanna-ishtar'],
     parentId: 'demons',
     name: 'Lilith',
@@ -640,6 +778,10 @@ const chunk_0: any[] = [  {
     ]
   },  {
     id: 'belial',
+    translations: [
+      { lang: 'Hebrew', original: 'בְּלִיַּעַל', translit: 'bəliyyaʿal', meaning: 'worthlessness, wickedness; traditionally bəli (without) + yaʿal (worth, profit)' },
+      { lang: 'Greek', original: 'Βελίαρ', translit: 'Beliar', meaning: 'form of the name in 2 Corinthians 6:15 and the Testaments of the Twelve Patriarchs' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/68-belial-sigilo-ars-goetia.svg/960px-68-belial-sigilo-ars-goetia.svg.png'],
     relatedIds: ['new-testament'],
     parentId: 'demons',
@@ -652,6 +794,10 @@ const chunk_0: any[] = [  {
     ]
   },  {
     id: 'djinns',
+    translations: [
+      { lang: 'Arabic', original: 'جِنّ', translit: 'jinn', meaning: 'hidden ones, unseen beings (collective; root j-n-n, to hide, conceal)' },
+      { lang: 'Arabic', original: 'جِنِّيّ', translit: 'jinnī', meaning: 'a single jinn, whence English \'genie\'' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Shah_Namah%2C_the_Persian_Epic_of_the_Kings_Wellcome_L0035191.jpg/960px-Shah_Namah%2C_the_Persian_Epic_of_the_Kings_Wellcome_L0035191.jpg'],
     parentId: 'demons',
     name: 'Jinn (Djinns)',
@@ -663,6 +809,10 @@ const chunk_0: any[] = [  {
     ]
   },  {
     id: 'dybbuk',
+    translations: [
+      { lang: 'Hebrew', original: 'דִּבּוּק', translit: 'dibbûq', meaning: 'attachment, clinging (from dāḇaq, to cleave, cling to)' },
+      { lang: 'Yiddish', original: 'דיבוק', translit: 'dibek', meaning: 'a clinging spirit; the folklore term came into English through Yiddish' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Dybbuk.jpg/960px-Dybbuk.jpg'],
     parentId: 'demons',
     name: 'Dybbuk',
@@ -671,6 +821,11 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'principalities',
+    translations: [
+      { lang: 'Greek', original: 'ἀρχαί', translit: 'archai', meaning: 'rulers, principalities (archē, beginning, rule); Ephesians 6:12' },
+      { lang: 'Greek', original: 'ἐξουσίαι', translit: 'exousiai', meaning: 'authorities, powers (Ephesians 6:12)' },
+      { lang: 'Greek', original: 'κοσμοκράτορες', translit: 'kosmokratores', meaning: 'world-rulers (of this darkness), Ephesians 6:12' }
+    ],
     parentId: 'fallen-angel',
     name: 'Principalities & Powers',
     description: 'High-ranking spiritual forces or rulers of darkness mentioned in biblical theology, believed to hold territorial authority over nations and regions.',
@@ -689,6 +844,11 @@ const chunk_0: any[] = [  {
     bibleVerses: ['He who gave evil counsel to the holy sons of God, and led them astray to defile their bodies with the daughters of men. — 1 Enoch 69:5 (https://www.sacred-texts.com/bib/boe/boe072.htm)']
   },  {
     id: 'beelzebub',
+    translations: [
+      { lang: 'Hebrew', original: 'בַּעַל זְבוּב', translit: 'Baʿal Zəḇûḇ', meaning: 'lord of the flies; the god of Ekron (2 Kings 1:2), probably a mocking distortion' },
+      { lang: 'Greek', original: 'Βεελζεβούλ', translit: 'Beelzeboul', meaning: 'New Testament form; perhaps \'Baal the prince\' or \'lord of the (heavenly) dwelling\' (zəḇûl)' },
+      { lang: 'Latin', original: 'Beelzebub', translit: '', meaning: 'Vulgate spelling, source of the English form' }
+    ],
     parentId: 'demons',
     name: 'Beelzebub',
     description: 'Originally a Philistine god worshipped at Ekron (Baal-Zebub), later syncretized in Jewish and Christian demonology as a high-ranking prince of demons. Known as the \'Lord of the Flies,\' he is associated with pride, rebellion, and demonic hierarchy.',
@@ -696,6 +856,11 @@ const chunk_0: any[] = [  {
     bibleVerses: ['But when the Pharisees heard it, they said, This fellow doth not cast out devils, but by Beelzebub the prince of the devils. — Matthew 12:24 (https://www.biblegateway.com/passage/?search=Matthew+12%3A24)', 'And Ahaziah fell down through a lattice... and sent messengers, and said unto them, Go, inquire of Baal-zebub the god of Ekron whether I shall recover of this disease. — 2 Kings 1:2 (https://www.biblegateway.com/passage/?search=2+Kings+1%3A2)']
   },  {
     id: 'asmodeus',
+    translations: [
+      { lang: 'Avestan', original: 'aēšma-daēva', translit: '', meaning: 'demon of wrath (aēšma, wrath + daēva, demon); the usual Iranian derivation' },
+      { lang: 'Hebrew', original: 'אַשְׁמְדַאי', translit: 'ʾAšmədai', meaning: 'Ashmedai, king of demons in Tobit and the Talmud; Iranian loan-name' },
+      { lang: 'Greek', original: 'Ἀσμοδαῖος', translit: 'Asmodaios', meaning: 'form of the name in the Book of Tobit' }
+    ],
     parentId: 'demons',
     name: 'Asmodeus',
     description: 'A powerful king of demons prominently featured in the deuterocanonical Book of Tobit and the Testament of Solomon. Associated with lust, wrath, discord, and the disruption of marriages.',
@@ -704,6 +869,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Because that she had been married to seven husbands, whom Asmodeus the evil spirit had killed, before they had lain with her. — Tobit 3:8 (https://www.biblegateway.com/passage/?search=Tobit+3%3A8)']
   },  {
     id: 'grigori',
+    translations: [
+      { lang: 'Greek', original: 'ἐγρήγοροι', translit: 'egrēgoroi', meaning: 'watchers, wakeful ones (perfect participle of egeirō, to wake)' },
+      { lang: 'Old Church Slavonic', original: 'Григори', translit: 'Grigori', meaning: 'the Slavonic 2 Enoch\'s transcription of the Greek egrēgoroi' }
+    ],
     secondaryParentIds: ['watchers'],
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/The_Sons_of_God_Saw_the_Daughters_of_Men_That_They_Were_Fair%2C_by_Daniel_Chester_French%2C_modeled_by_1918%2C_carved_1923_-_Corcoran_Gallery_of_Art_-_DSC01065.JPG/960px-The_Sons_of_God_Saw_the_Daughters_of_Men_That_They_Were_Fair%2C_by_Daniel_Chester_French%2C_modeled_by_1918%2C_carved_1923_-_Corcoran_Gallery_of_Art_-_DSC01065.JPG'],
     parentId: 'fallen-angel',
@@ -715,6 +884,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['These are the Grigori (Watchers), who with their prince Satanail rejected the Lord... and they went down on the earth, and performed a deed outside their covenant... — 2 Enoch 18:3 (https://www.sacred-texts.com/bib/boe/index.htm)']
   },  {
     id: 'nephilim',
+    translations: [
+      { lang: 'Hebrew', original: 'נְפִילִים', translit: 'Nəp̄îlîm', meaning: 'fallen ones (from nāp̄al, to fall); traditionally \'giants\'' },
+      { lang: 'Greek', original: 'γίγαντες', translit: 'gigantes', meaning: 'giants; the Septuagint\'s rendering in Genesis 6:4' }
+    ],
     relatedIds: ['book-of-enoch', 'rh-negative-blood', 'nephilim-br', 'watchers', 'watchers-chiefs-of-tens', 'watchers-judgment', 'book-of-giants', 'great-flood', 'enochian-og-kingdom'],
     parentId: 'fallen-angel',
     name: 'Nephilim',
@@ -724,6 +897,11 @@ const chunk_0: any[] = [  {
     bibleVerses: ['And they became pregnant, and they bare great giants, whose height was three thousand ells: Who consumed all the acquisitions of men. And when men could no longer sustain them, the giants turned against them and devoured mankind. — 1 Enoch 7:2-4 (https://www.sacred-texts.com/bib/boe/boe010.htm)']
   },  {
     id: 'azazel',
+    translations: [
+      { lang: 'Hebrew', original: 'עֲזָאזֵל', translit: 'ʿĂzāʾzēl', meaning: 'disputed: \'fierce god\', \'goat that departs\' (ʿēz + ʾāzal), or \'rugged cliff\'' },
+      { lang: 'Greek', original: 'ἀποπομπαῖος', translit: 'apopompaios', meaning: 'the one sent away, scapegoat; the Septuagint\'s rendering (Leviticus 16:8)' },
+      { lang: 'Latin', original: 'caper emissarius', translit: '', meaning: 'the emissary goat; the Vulgate\'s rendering, source of \'scapegoat\'' }
+    ],
     secondaryParentIds: ['watchers-chiefs-of-tens'],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Detail_of_East_Window%2C_Lincoln_Cathedral_%2814224253959%29.jpg/960px-Detail_of_East_Window%2C_Lincoln_Cathedral_%2814224253959%29.jpg'],
     relatedIds: ['book-of-enoch', 'enoch3-uzza-azza-azael', 'wandering-stars-fallen-angels', 'planet-mars-scripture', 'enoch-son-of-cain', 'unclean-animals-old-testament', 'watchers-chiefs-of-tens', 'watchers-teachings', 'watchers-judgment', 'samyaza', 'enochian-desert-dudael', 'raphael', 'tubal-cain'],
@@ -736,6 +914,11 @@ const chunk_0: any[] = [  {
     bibleVerses: ['And Azâzêl taught men to make swords, and knives, and shields, and breastplates, and made known to them the metals of the earth and the art of working them... — 1 Enoch 8:1 (https://www.sacred-texts.com/bib/boe/boe011.htm)', 'And the Lord said to Raphael: \'Bind Azazel hand and foot, and cast him into the darkness: and make an opening in the desert, which is in Dudael, and cast him therein.\' — 1 Enoch 10:4 (https://www.sacred-texts.com/bib/boe/boe013.htm)']
   },  {
     id: 'samyaza',
+    translations: [
+      { lang: 'Aramaic', original: 'שמיחזה', translit: 'Šəmîḥăzâ', meaning: '\'my name has seen\' or \'the Name has seen\' (šēm, name + ḥăzâ, to see); Qumran form' },
+      { lang: 'Greek', original: 'Σεμιαζά', translit: 'Semiaza', meaning: 'Greek form of the name in 1 Enoch' },
+      { lang: 'Hebrew', original: 'שַׁמְּחֲזַי', translit: 'Šamḥăzai', meaning: 'Talmudic and midrashic form of the name' }
+    ],
     secondaryParentIds: ['watchers-chiefs-of-tens'],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/The_Sons_of_God_Saw_the_Daughters_of_Men_That_They_Were_Fair%2C_by_Daniel_Chester_French%2C_modeled_by_1918%2C_carved_1923_-_Corcoran_Gallery_of_Art_-_DSC01065.JPG/960px-The_Sons_of_God_Saw_the_Daughters_of_Men_That_They_Were_Fair%2C_by_Daniel_Chester_French%2C_modeled_by_1918%2C_carved_1923_-_Corcoran_Gallery_of_Art_-_DSC01065.JPG'],
     relatedIds: ['enochian-mount-hermon', 'book-of-enoch', 'book-of-giants', 'enoch3-uzza-azza-azael', 'watchers-chiefs-of-tens', 'watchers-teachings', 'watchers-judgment', 'azazel', 'semjaza', 'michael', 'nephilim'],
@@ -748,6 +931,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['And Semjâzâ, who was their leader, said unto them: \'I fear ye will not indeed agree to do this deed, and I alone shall have to pay the penalty of a great sin.\' — 1 Enoch 6:3 (https://www.sacred-texts.com/bib/boe/boe009.htm)', 'And Semjâzâ taught enchantments, and root-clippings... — 1 Enoch 8:3 (https://www.sacred-texts.com/bib/boe/boe011.htm)']
   },  {
     id: 'araqiel',
+    translations: [
+      { lang: 'Aramaic', original: 'ארעתקף', translit: 'ʾArʿteqoph', meaning: '\'the earth is power\' (ʾaraʿ, earth + teqoph, might); the Qumran reading' },
+      { lang: 'Greek', original: 'Ἀρακιήλ', translit: 'Arakiēl', meaning: 'Greek form, reinterpreted as \'earth of God\' (ʾaraʿ + ʾēl)' }
+    ],
     secondaryParentIds: ['watchers-chiefs-of-tens'],
     relatedIds: ['book-of-enoch', 'watchers-chiefs-of-tens', 'watchers-teachings', 'shamsiel', 'sariel', 'ley-lines-br'],
     parentId: 'fallen-angel',
@@ -758,6 +945,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['And Araqiêl taught the signs of the earth... — 1 Enoch 8:3 (https://www.sacred-texts.com/bib/boe/boe011.htm)']
   },  {
     id: 'armaros',
+    translations: [
+      { lang: 'Aramaic', original: 'חרמוני', translit: 'Ḥermônî', meaning: '\'the one of Hermon\', after the mountain of the descent; Qumran form' },
+      { lang: 'Greek', original: 'Ἀρμαρώς', translit: 'Armarōs', meaning: 'Greek form of the name; folk-etymologised as \'the accursed\' (ḥerem, ban)' }
+    ],
     secondaryParentIds: ['watchers-chiefs-of-tens'],
     relatedIds: ['book-of-enoch', 'watchers-chiefs-of-tens', 'watchers-teachings', 'samyaza', 'book-of-giants', 'magick'],
     parentId: 'fallen-angel',
@@ -768,6 +959,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['And Armârôs taught the resolving of enchantments... — 1 Enoch 8:3 (https://www.sacred-texts.com/bib/boe/boe011.htm)']
   },    {
     id: 'baraqiel',
+    translations: [
+      { lang: 'Aramaic', original: 'ברקאל', translit: 'Baraqʾel', meaning: 'lightning of God (bəraq, lightning + ʾēl); Qumran form' }
+    ],
     secondaryParentIds: ['watchers-chiefs-of-tens'],
     relatedIds: ['book-of-enoch', 'watchers-chiefs-of-tens', 'watchers-teachings', 'kokabel', 'shamsiel', 'zodiac', 'astrology-cosmology', 'book-of-giants', 'enoch3-nature-angels'],
     parentId: 'fallen-angel',
@@ -778,6 +972,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['And Barâqîjâl taught astrology... — 1 Enoch 8:3 (https://www.sacred-texts.com/bib/boe/boe011.htm)']
   },    {
     id: 'kokabel',
+    translations: [
+      { lang: 'Aramaic', original: 'כוכבאל', translit: 'Kôḵaḇʾel', meaning: 'star of God (kôḵaḇ, star + ʾēl); Qumran form' }
+    ],
     secondaryParentIds: ['watchers-chiefs-of-tens'],
     relatedIds: ['book-of-enoch', 'watchers-chiefs-of-tens', 'watchers-teachings', 'baraqiel', 'mazzaroth', 'zodiac', 'stars-as-angels-bible', 'enoch3-nature-angels'],
     parentId: 'fallen-angel',
@@ -798,6 +995,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['He who showed the children of men the bitter and the sweet, and he showed them all the secrets of their wisdom. And he instructed mankind in writing with ink and paper... — 1 Enoch 69:8 (https://www.sacred-texts.com/bib/boe/boe072.htm)']
   },  {
     id: 'sariel',
+    translations: [
+      { lang: 'Hebrew', original: 'שָׂרִיאֵל', translit: 'Śārîʾēl', meaning: 'prince of God, \'God is my ruler\' (śar, prince + ʾēl); 1QM 9:15' },
+      { lang: 'Aramaic', original: 'שהריאל', translit: 'Śahărîʾēl', meaning: 'moon of God (śahar, moon + ʾēl); Qumran form of the Watcher who taught the moon\'s course' }
+    ],
     secondaryParentIds: ['watchers-chiefs-of-tens'],
     relatedIds: ['book-of-enoch', 'watchers-chiefs-of-tens', 'watchers-teachings', 'saraqael', 'the-moon-scripture', 'enochian-calendar', 'uriel'],
     parentId: 'fallen-angel',
@@ -808,6 +1009,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['And Sariêl taught the course of the moon... — 1 Enoch 8:3 (https://www.sacred-texts.com/bib/boe/boe011.htm)', 'Sariel, one of the holy angels, who is set over the spirits, who sin in the spirit. — 1 Enoch 20:6 (https://www.sacred-texts.com/bib/boe/boe023.htm)']
   },    {
     id: 'turel',
+    translations: [
+      { lang: 'Aramaic', original: 'טוריאל', translit: 'Ṭûrîʾēl', meaning: 'mountain of God (ṭûr, mountain, rock + ʾēl); Qumran form' }
+    ],
     secondaryParentIds: ['watchers-chiefs-of-tens'],
     relatedIds: ['book-of-enoch', 'watchers-chiefs-of-tens', 'watchers-teachings', 'book-of-giants'],
     parentId: 'fallen-angel',
@@ -886,6 +1090,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['And they had a king over them, which is the angel of the bottomless pit, whose name in the Hebrew tongue is Abaddon, but in the Greek tongue hath his name Apollyon. — Revelation 9:11 (https://www.biblegateway.com/passage/?search=Revelation+9%3A11)', 'Hell and destruction [Hebrew: Abaddon] are before the Lord: how much more then the hearts of the children of men? — Proverbs 15:11 (https://www.biblegateway.com/passage/?search=Proverbs+15%3A11)']
   },  {
     id: 'leviathin',
+    translations: [
+      { lang: 'Hebrew', original: 'לִוְיָתָן', translit: 'Liwyāṯān', meaning: 'twisting, coiled one (from the root l-w-y, to twist, wreathe)' },
+      { lang: 'Ugaritic', original: 'ltn', translit: 'Lôtān', meaning: 'the seven-headed sea serpent slain by Baal; the same name as Leviathan' }
+    ],
     parentId: 'demons',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Destruction_of_Leviathan.png/1280px-Destruction_of_Leviathan.png'],
     relatedIds: ['behemoth-enoch'],
@@ -906,6 +1114,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['He who showed the children of men all the evil blows of spirits and demons, and the blows of the embryo in the womb... — 1 Enoch 69:12 (https://www.sacred-texts.com/bib/boe/boe072.htm)']
   },      {
     id: 'tamiel',
+    translations: [
+      { lang: 'Aramaic', original: 'תמיאל', translit: 'Tummîʾēl', meaning: 'perfection of God (tōm, completeness, integrity + ʾēl); Qumran form' }
+    ],
     relatedIds: ['watchers-chiefs-of-tens', 'sefer-raziel'],
     secondaryParentIds: ['watchers-chiefs-of-tens'],
     parentId: 'fallen-angel',
@@ -916,6 +1127,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['These are their chiefs of tens... And these are the names: ... Tamiel... — 1 Enoch 6:7-8 (https://www.sacred-texts.com/bib/boe/boe009.htm)']
   },  {
     id: 'daniel',
+    translations: [
+      { lang: 'Aramaic', original: 'דנאל', translit: 'Danʾel', meaning: 'God has judged, God is judge (dîn, to judge + ʾēl); Qumran form' },
+      { lang: 'Ugaritic', original: 'dnil', translit: 'Danʾilu', meaning: 'the righteous judge of the Aqhat epic; the same name' }
+    ],
     secondaryParentIds: ['watchers-chiefs-of-tens'],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Daniel_Dubois_walkout_%28cropped%29.jpg/960px-Daniel_Dubois_walkout_%28cropped%29.jpg'],
     relatedIds: ['enoch3-sopheriel', 'enoch3-princes-of-judgment', 'enoch3-irin-qaddishin', 'enoch3-72-princes', 'star-of-bethlehem', 'enoch-wife-edna', 'watchers-chiefs-of-tens', 'prophet-daniel-node', 'canaanite-mythology'],
@@ -927,6 +1142,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['These are their chiefs of tens... And these are the names: ... Daniel... — 1 Enoch 6:7-8 (https://www.sacred-texts.com/bib/boe/boe009.htm)']
   },  {
     id: 'chazaqiel',
+    translations: [
+      { lang: 'Aramaic', original: 'זיקיאל', translit: 'Zîqîʾēl', meaning: 'shooting star / lightning-flash of God (zîq, spark, meteor + ʾēl); Qumran form' },
+      { lang: 'Greek', original: 'Ἐζεκιήλ', translit: 'Ezekiēl', meaning: '\'God strengthens\' (ḥāzaq + ʾēl); the Greek assimilated the name to Ezekiel' }
+    ],
     relatedIds: ['watchers-chiefs-of-tens', 'watchers-teachings', 'weather-modification', 'enoch3-nature-angels'],
     secondaryParentIds: ['watchers-chiefs-of-tens'],
     parentId: 'fallen-angel',
@@ -937,6 +1156,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['And Êzêqêêl taught the knowledge of the clouds... — 1 Enoch 8:3 (https://www.sacred-texts.com/bib/boe/boe011.htm)']
   },    {
     id: 'asael',
+    translations: [
+      { lang: 'Aramaic', original: 'עשאל', translit: 'ʿAśaʾel', meaning: 'God has made (ʿăśâ, to make + ʾēl); Qumran form' },
+      { lang: 'Hebrew', original: 'עֲשָׂהאֵל', translit: 'ʿĂśāhʾēl', meaning: 'Asahel, the same name borne by David\'s nephew (2 Samuel 2:18)' }
+    ],
     relatedIds: ['watchers-chiefs-of-tens', 'azazel', 'enoch3-uzza-azza-azael', 'watchers-teachings'],
     secondaryParentIds: ['watchers-chiefs-of-tens'],
     parentId: 'fallen-angel',
@@ -947,6 +1170,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['And Azâzêl taught men to make swords, and knives, and shields, and breastplates... And the whole earth has been corrupted through the works that were taught by Azâzêl... — 1 Enoch 8:1 / 10:8 (https://www.sacred-texts.com/bib/boe/boe011.htm)']
   },  {
     id: 'batariel',
+    translations: [
+      { lang: 'Aramaic', original: 'מטראל', translit: 'Maṭarʾel', meaning: 'rain of God (məṭar, rain + ʾēl); Qumran form behind Batarel/Batariel' }
+    ],
     relatedIds: ['watchers-chiefs-of-tens'],
     secondaryParentIds: ['watchers-chiefs-of-tens'],
     parentId: 'fallen-angel',
@@ -957,6 +1183,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['These are their chiefs of tens... And these are the names: ... Batariel... — 1 Enoch 6:7-8 (https://www.sacred-texts.com/bib/boe/boe009.htm)']
   },  {
     id: 'bezaliel',
+    translations: [
+      { lang: 'Hebrew', original: 'בְּצַלְאֵל', translit: 'Bəṣalʾēl', meaning: 'in the shadow of God (bə, in + ṣēl, shadow + ʾēl); the name of the Tabernacle\'s craftsman' }
+    ],
     relatedIds: ['watchers-chiefs-of-tens', 'book-of-giants'],
     secondaryParentIds: ['watchers-chiefs-of-tens'],
     parentId: 'fallen-angel',
@@ -967,6 +1196,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['These are their chiefs of tens... And these are the names: ... Bezaliel... — 1 Enoch 6:7-8 (https://www.sacred-texts.com/bib/boe/boe009.htm)']
   },  {
     id: 'ananiel',
+    translations: [
+      { lang: 'Aramaic', original: 'ענניאל', translit: 'ʿAnanʾel', meaning: 'cloud of God (ʿănān, cloud + ʾēl, God); Qumran form' }
+    ],
     relatedIds: ['watchers-chiefs-of-tens'],
     secondaryParentIds: ['watchers-chiefs-of-tens'],
     parentId: 'fallen-angel',
@@ -987,6 +1219,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['These are their chiefs of tens... And these are the names: ... Zaqiel... — 1 Enoch 6:7-8 (https://www.sacred-texts.com/bib/boe/boe009.htm)']
   },  {
     id: 'shamsiel',
+    translations: [
+      { lang: 'Aramaic', original: 'שמשיאל', translit: 'Šamšîʾēl', meaning: 'sun of God (šemeš, sun + ʾēl); Qumran form' }
+    ],
     relatedIds: ['watchers-chiefs-of-tens', 'watchers-teachings', 'the-sun-scripture', 'araqiel', 'sariel', 'zohar'],
     secondaryParentIds: ['watchers-chiefs-of-tens'],
     parentId: 'fallen-angel',
@@ -1007,6 +1242,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['These are their chiefs of tens... And these are the names: ... Sathariel... — 1 Enoch 6:7-8 (https://www.sacred-texts.com/bib/boe/boe009.htm)']
   },    {
     id: 'yomiel',
+    translations: [
+      { lang: 'Aramaic', original: 'יומיאל', translit: 'Yômîʾēl', meaning: 'day of God (yôm, day + ʾēl); Qumran form' }
+    ],
     relatedIds: ['watchers-chiefs-of-tens', 'yekun'],
     secondaryParentIds: ['watchers-chiefs-of-tens'],
     parentId: 'fallen-angel',
@@ -1024,6 +1262,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'greek-titans',
+    translations: [
+      { lang: 'Greek', original: 'Τιτάν', translit: 'Tītā́n', meaning: 'uncertain; Hesiod puns on titaínō, \'to strain\', and tísis, \'retribution\'' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Cornelis_Cornelisz._van_Haarlem_-_The_Fall_of_the_Titans_-_Google_Art_Project.jpg/960px-Cornelis_Cornelisz._van_Haarlem_-_The_Fall_of_the_Titans_-_Google_Art_Project.jpg'],
     parentId: 'greek-mythology',
     name: 'Greek Titans',
@@ -1074,6 +1315,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'myth-phoenix',
+    translations: [
+      { lang: 'Egyptian', original: 'bnw', translit: 'bennu', meaning: 'heron-like solar bird of Heliopolis (from wbn, to rise, shine); model for the phoenix' },
+      { lang: 'Greek', original: 'φοῖνιξ', translit: 'phoînix', meaning: 'phoenix; also \'Phoenician\', \'crimson, purple-red\', \'date-palm\'' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Downtown_Phoenix_Aerial_Looking_Northeast.jpg/960px-Downtown_Phoenix_Aerial_Looking_Northeast.jpg'],
     parentId: 'mythical-creatures',
     name: 'Phoenix',
@@ -1083,6 +1328,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'myth-satyrs',
+    translations: [
+      { lang: 'Greek', original: 'σάτυρος', translit: 'sátyros', meaning: 'uncertain, possibly pre-Greek; goat-like woodland spirit' },
+      { lang: 'Hebrew', original: 'שָׂעִיר', translit: 'śāʿîr', meaning: 'hairy one; he-goat; goat-demon (śəʿîrîm, Lev 17:7)' }
+    ],
     parentId: 'mythical-creatures',
     name: 'Satyrs',
     description: 'Cloven-hoofed, goat-legged male nature spirits of Greek mythology, companions of Dionysus and Pan. Historically linked to the biblical \'se\'irim\' (goat-demons or devils) and later syncretized with demonic imagery.',
@@ -1091,6 +1340,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'myth-griffins',
+    translations: [
+      { lang: 'Greek', original: 'γρύψ', translit: 'grýps (gen. grypós)', meaning: 'griffin; cf. grypós, hook-nosed, curved' },
+      { lang: 'Latin', original: 'gryphus', translit: '', meaning: 'griffin' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Knossos_fresco_in_throne_palace.JPG/960px-Knossos_fresco_in_throne_palace.JPG'],
     parentId: 'mythical-creatures',
     name: 'Griffin (Gryphon)',
@@ -1100,6 +1353,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'myth-centaurs',
+    translations: [
+      { lang: 'Greek', original: 'Κένταυρος', translit: 'Kéntauros', meaning: 'uncertain; folk-etymology \'bull-goader\' (kentéō, to prick + taûros, bull)' }
+    ],
     parentId: 'mythical-creatures',
     name: 'Centaurs',
     description: 'A mythological race of creatures possessing the upper body of a human and the lower body and legs of a horse. Alternative historians and Nephilim researchers hypothesize that centaurs represented memories of early cavalry riders or pre-flood transgenic experiments conducted by the Watchers.',
@@ -1108,6 +1364,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'myth-pegasus',
+    translations: [
+      { lang: 'Greek', original: 'Πήγασος', translit: 'Pḗgasos', meaning: 'traditionally from pēgḗ \'spring\' (Hesiod); perhaps Luwian pihassas, \'lightning\'' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Lakonian_Black-Figure_Kylix%3B_detached_fragments.jpg/960px-Lakonian_Black-Figure_Kylix%3B_detached_fragments.jpg'],
     parentId: 'mythical-creatures',
     name: 'Pegasus',
@@ -1117,6 +1376,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'myth-chimera',
+    translations: [
+      { lang: 'Greek', original: 'χίμαιρα', translit: 'chímaira', meaning: 'she-goat, yearling goat (from chímaros)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Chimera_Apulia_Louvre_K362.jpg/960px-Chimera_Apulia_Louvre_K362.jpg'],
     parentId: 'mythical-creatures',
     name: 'Chimera',
@@ -1126,6 +1388,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'myth-kraken',
+    translations: [
+      { lang: 'Old Norse', original: 'kraki', translit: '', meaning: 'pole, stake; boat-hook; something crooked' },
+      { lang: 'Norwegian', original: 'krake', translit: '', meaning: 'stunted or crooked thing; sea monster (definite form kraken)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Le_Poulpe_Colossal.jpg/960px-Le_Poulpe_Colossal.jpg'],
     parentId: 'mythical-creatures',
     name: 'Kraken',
@@ -1135,6 +1401,11 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'myth-basilisk',
+    translations: [
+      { lang: 'Greek', original: 'βασιλίσκος', translit: 'basilískos', meaning: 'little king (dim. of basileús, king), from the crown-like crest' },
+      { lang: 'Latin', original: 'basiliscus', translit: '', meaning: 'basilisk' },
+      { lang: 'Latin', original: 'calcātrīx', translit: '', meaning: 'treader, tracker (translating Greek ichneúmōn); source of \'cockatrice\'' }
+    ],
     parentId: 'mythical-creatures',
     name: 'Basilisk (Cockatrice)',
     description: 'A legendary reptilian king of beasts said to kill with a single glance and leave a trail of deadly venom. Often described as hatched from a cock\'s egg by a serpent. Esoterically representing spiritual death and corruption, it is sometimes linked to ancient venomous reptiles or alchemical symbols.',
@@ -1143,6 +1414,11 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'myth-unicorn',
+    translations: [
+      { lang: 'Hebrew', original: 'רְאֵם', translit: 'rəʾēm', meaning: 'wild ox, aurochs; rendered \'unicorn\' in the KJV' },
+      { lang: 'Greek', original: 'μονόκερως', translit: 'monókerōs', meaning: 'one-horned (Septuagint rendering of rəʾēm)' },
+      { lang: 'Latin', original: 'ūnicornis', translit: '', meaning: 'one-horned (ūnus, one + cornū, horn)' }
+    ],
     parentId: 'mythical-creatures',
     name: 'Unicorn',
     description: 'A legendary creature depicted since antiquity as a horse with a single large, pointed, spiraling horn. Historically, the King James Version of the Bible translates the Hebrew word \'re\'em\' (likely a wild ox or aurochs) as \'unicorn.\' Esoterically, it symbolizes purity, divine strength, and the alchemical union of opposites.',
@@ -1155,6 +1431,9 @@ const chunk_0: any[] = [  {
     ]
   },  {
     id: 'myth-pan',
+    translations: [
+      { lang: 'Greek', original: 'Πάν', translit: 'Pán', meaning: 'uncertain; folk-etymology \'all\' (pân); likely from a root \'to guard, pasture\' (cf. Pūṣan)' }
+    ],
     parentId: 'greek-pantheon',
     name: 'Pan',
     description: 'The ancient Greek god of the wild, shepherds, rustic music, and nature elementals, depicted as a satyr with the horns, legs, and cloven hooves of a goat. In alternative and biblical research, Pan is connected to the Hebrew term "Se\'irim" (goat-demons or satyrs) referenced in Leviticus 17:7 and Isaiah 13:21/34:14. Pan\'s cave at Caesarea Philippi—referred to as the "Gates of Hades"—is the direct geographical setting where Jesus declared that the gates of hell would not overcome His church (Matthew 16:18). In later Western occultism, Pan\'s goat-like physiology heavily influenced the visual depiction of Baphomet and the Devil.',
@@ -1176,6 +1455,11 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'adonis',
+    translations: [
+      { lang: 'Phoenician', original: '𐤀𐤃𐤍', translit: 'ʾadōn', meaning: 'lord (title of the dying god, Tammuz-Adon)' },
+      { lang: 'Hebrew', original: 'אָדוֹן', translit: 'ʾāḏôn', meaning: 'lord, master (cf. Adonai)' },
+      { lang: 'Greek', original: 'Ἄδωνις', translit: 'Ádōnis', meaning: 'Greek form of the Semitic title \'lord\'' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Cupid_with_Venus_and_Adonis%2C_fresco_in_Pompeii.jpg/960px-Cupid_with_Venus_and_Adonis%2C_fresco_in_Pompeii.jpg'],
     relatedIds: ['tammuz'],
     parentId: 'greek-pantheon',
@@ -1185,6 +1469,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'aegir',
+    translations: [
+      { lang: 'Old Norse', original: 'Ægir', translit: '', meaning: 'the sea (poetic); cognate with Latin aqua, \'water\'' }
+    ],
     parentId: 'greek-pantheon',
     name: 'Aegir',
     description: 'Sea god of the giants',
@@ -1192,6 +1479,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'ares',
+    translations: [
+      { lang: 'Greek', original: 'Ἄρης', translit: 'Árēs', meaning: 'linked to arḗ, \'bane, ruin, curse\'; the word also means \'war, battle\'' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/%CE%9F_%CE%86%CF%81%CE%B7%CF%82_%28Borghese-%CE%9B%CE%BF%CF%8D%CE%B2%CF%81%CE%BF%CF%85%29.jpg/960px-%CE%9F_%CE%86%CF%81%CE%B7%CF%82_%28Borghese-%CE%9B%CE%BF%CF%8D%CE%B2%CF%81%CE%BF%CF%85%29.jpg'],
     parentId: 'greek-pantheon',
     name: 'Ares',
@@ -1200,6 +1490,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'artemis',
+    translations: [
+      { lang: 'Greek', original: 'Ἄρτεμις', translit: 'Ártemis', meaning: 'pre-Greek; ancients linked it to artemḗs, \'safe\', or ártamos, \'butcher\'' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Diane_de_Versailles_-_Mus%C3%A9e_du_Louvre_AGER_Ma_589.jpg/960px-Diane_de_Versailles_-_Mus%C3%A9e_du_Louvre_AGER_Ma_589.jpg'],
     parentId: 'greek-pantheon',
     name: 'Artemis',
@@ -1208,6 +1501,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'athena',
+    translations: [
+      { lang: 'Mycenaean Greek', original: 'a-ta-na po-ti-ni-ja', translit: 'Atana potnia', meaning: 'Lady of Atana (Linear B tablet from Knossos)' },
+      { lang: 'Greek', original: 'Ἀθηνᾶ', translit: 'Athēnâ', meaning: 'pre-Greek; goddess \'of Athens\' (Athênai), city and goddess sharing one name' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Mattei_Athena_Louvre_Ma530_n2.jpg/960px-Mattei_Athena_Louvre_Ma530_n2.jpg'],
     parentId: 'greek-pantheon',
     name: 'Athena',
@@ -1216,6 +1513,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'boreas',
+    translations: [
+      { lang: 'Greek', original: 'Βορέας', translit: 'Boréas', meaning: 'the north wind; perhaps \'wind from the mountains\' (cf. Slavic gora, mountain)' }
+    ],
     parentId: 'greek-pantheon',
     name: 'Boreas',
     description: 'North wind god',
@@ -1223,6 +1523,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'demeter',
+    translations: [
+      { lang: 'Greek', original: 'Δημήτηρ', translit: 'Dēmḗtēr', meaning: 'Dā-/Dē- (uncertain; folk \'earth\', gê) + mḗtēr, \'mother\': \'earth mother\'' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Demeter_Altemps_Inv8546.jpg/960px-Demeter_Altemps_Inv8546.jpg'],
     relatedIds: ['persephone'],
     parentId: 'greek-pantheon',
@@ -1232,6 +1535,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'dionysus',
+    translations: [
+      { lang: 'Mycenaean Greek', original: 'di-wo-nu-so', translit: 'Diwonusos', meaning: 'Linear B attestation of the name (Pylos)' },
+      { lang: 'Greek', original: 'Διόνυσος', translit: 'Diónysos', meaning: 'Diós (of Zeus) + -nysos, obscure; read as \'son of Zeus\' or \'Zeus of Nysa\'' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Dionysos_Louvre_Ma87_n2.jpg/960px-Dionysos_Louvre_Ma87_n2.jpg'],
     parentId: 'greek-pantheon',
     name: 'Dionysus',
@@ -1240,6 +1547,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'eros',
+    translations: [
+      { lang: 'Greek', original: 'Ἔρως', translit: 'Érōs', meaning: 'love, sexual desire (éramai, to love, to desire)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Eros_Farnese_N%C3%A1poles_05.jpg/960px-Eros_Farnese_N%C3%A1poles_05.jpg'],
     parentId: 'greek-pantheon',
     name: 'Eros',
@@ -1248,6 +1558,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'eurus',
+    translations: [
+      { lang: 'Greek', original: 'Εὖρος', translit: 'Eûros', meaning: 'the east (or south-east) wind' }
+    ],
     parentId: 'greek-pantheon',
     name: 'Eurus',
     description: 'East wind god',
@@ -1255,6 +1568,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'gaia',
+    translations: [
+      { lang: 'Greek', original: 'Γαῖα', translit: 'Gaîa', meaning: 'earth, land (contracted Gê); the Earth personified' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Gaia_mosaic_antioch.png/960px-Gaia_mosaic_antioch.png'],
     parentId: 'greek-pantheon',
     name: 'Gaia',
@@ -1263,6 +1579,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'hades',
+    translations: [
+      { lang: 'Greek', original: 'ᾍδης', translit: 'Hā́idēs', meaning: 'traditionally \'the unseen one\' (a-, not + ideîn, to see); earlier Aḯdēs' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Persephone_Hades_BM_Vase_E82_%28cropped%29.jpg/960px-Persephone_Hades_BM_Vase_E82_%28cropped%29.jpg'],
     relatedIds: ['nergal', 'ereshkigal', 'persephone', 'hells-all-religions'],
     parentId: 'greek-pantheon',
@@ -1272,6 +1591,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'hecate',
+    translations: [
+      { lang: 'Greek', original: 'Ἑκάτη', translit: 'Hekátē', meaning: 'uncertain; traditionally \'she who works from afar\' (fem. of hékatos, epithet of Apollo)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Relief_triplicate_Hekate_marble%2C_Hadrian_clasicism%2C_Prague_Kinsky%2C_NM-H10_4742%2C_140995.jpg/960px-Relief_triplicate_Hekate_marble%2C_Hadrian_clasicism%2C_Prague_Kinsky%2C_NM-H10_4742%2C_140995.jpg'],
     relatedIds: ['ereshkigal'],
     parentId: 'greek-pantheon',
@@ -1281,6 +1603,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'helios',
+    translations: [
+      { lang: 'Proto-Indo-European', original: '*sóh₂wl̥', translit: '', meaning: 'sun' },
+      { lang: 'Greek', original: 'Ἥλιος', translit: 'Hḗlios', meaning: 'sun; the sun personified' }
+    ],
     parentId: 'greek-pantheon',
     name: 'Helios',
     description: 'Sun god',
@@ -1288,6 +1614,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'hephaestus',
+    translations: [
+      { lang: 'Greek', original: 'Ἥφαιστος', translit: 'Hḗphaistos', meaning: 'meaning uncertain; probably a pre-Greek name; the word also meant \'fire\' by metonymy' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Hephaistos_Thetis_at_Kylix_by_the_Foundry_Painter_Antikensammlung_Berlin_F2294.jpg/960px-Hephaistos_Thetis_at_Kylix_by_the_Foundry_Painter_Antikensammlung_Berlin_F2294.jpg'],
     parentId: 'greek-pantheon',
     name: 'Hephaestus',
@@ -1296,6 +1625,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'hera',
+    translations: [
+      { lang: 'Greek', original: 'Ἥρα', translit: 'Hḗrā', meaning: 'uncertain; linked by some to hṓra \'season, ripe time\' or to hḗrōs \'protector, hero\'' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Hera_Campana_Louvre_Ma2283.jpg/960px-Hera_Campana_Louvre_Ma2283.jpg'],
     parentId: 'greek-pantheon',
     name: 'Hera',
@@ -1304,6 +1636,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'hermes',
+    translations: [
+      { lang: 'Greek', original: 'Ἑρμῆς', translit: 'Hermês', meaning: 'uncertain; traditionally from hérma, heap of stones, cairn, boundary marker' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Hermes_Ingenui_Pio-Clementino_Inv544.jpg/960px-Hermes_Ingenui_Pio-Clementino_Inv544.jpg'],
     relatedIds: ['planet-mercury-scripture'],
     parentId: 'greek-pantheon',
@@ -1313,6 +1648,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'hestia',
+    translations: [
+      { lang: 'Greek', original: 'ἑστία', translit: 'hestía', meaning: 'hearth, fireplace, household altar' }
+    ],
     parentId: 'greek-pantheon',
     name: 'Hestia',
     description: 'Greek divinity. Domain: Hearth, home, and family. Symbol: Hearth. Notable deeds: Goddess of the hearth, home, and family. Daughter of Cronus and Rhea..',
@@ -1320,6 +1658,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'hypnos',
+    translations: [
+      { lang: 'Proto-Indo-European', original: '*swep-', translit: '', meaning: 'to sleep' },
+      { lang: 'Greek', original: 'Ὕπνος', translit: 'Hýpnos', meaning: 'sleep; Sleep personified' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Head_of_Hypnos_in_Palazzo_Massimo_alle_Terme_%28Rome%29.jpg/960px-Head_of_Hypnos_in_Palazzo_Massimo_alle_Terme_%28Rome%29.jpg'],
     parentId: 'greek-pantheon',
     name: 'Hypnos',
@@ -1328,6 +1670,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'iris',
+    translations: [
+      { lang: 'Greek', original: 'Ἶρις', translit: 'Îris', meaning: 'rainbow; the rainbow personified as the gods\' messenger' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Iris_Louvre_L43_n2.jpg/960px-Iris_Louvre_L43_n2.jpg'],
     parentId: 'greek-pantheon',
     name: 'Iris',
@@ -1336,6 +1681,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'kronos',
+    translations: [
+      { lang: 'Greek', original: 'Κρόνος', translit: 'Krónos', meaning: 'uncertain; anciently conflated with Chrónos \'time\'; perhaps from kraínō \'to rule\'' }
+    ],
     parentId: 'greek-pantheon',
     name: 'Kronos',
     description: 'Titan god of time and harvest',
@@ -1343,6 +1691,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'maia',
+    translations: [
+      { lang: 'Greek', original: 'Μαῖα', translit: 'Maîa', meaning: 'good mother; nurse, midwife (honorific for an older woman)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Hermes_Maia_Staatliche_Antikensammlungen_2304.jpg/960px-Hermes_Maia_Staatliche_Antikensammlungen_2304.jpg'],
     parentId: 'greek-pantheon',
     name: 'Maia',
@@ -1351,6 +1702,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'metis',
+    translations: [
+      { lang: 'Greek', original: 'μῆτις', translit: 'mêtis', meaning: 'wisdom, skill, cunning counsel' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Winged_goddess_Louvre_F32.jpg/960px-Winged_goddess_Louvre_F32.jpg'],
     parentId: 'greek-pantheon',
     name: 'Metis',
@@ -1359,6 +1713,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'nike',
+    translations: [
+      { lang: 'Greek', original: 'Νίκη', translit: 'Níkē', meaning: 'victory' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/02_2020_Grecia_photo_Paolo_Villa_FO190013_%28Museo_archeologico_di_Olimpia_-_Statua_della_Vittoria-Nike_scolpita_da_Paionios%29.jpg/960px-02_2020_Grecia_photo_Paolo_Villa_FO190013_%28Museo_archeologico_di_Olimpia_-_Statua_della_Vittoria-Nike_scolpita_da_Paionios%29.jpg'],
     parentId: 'greek-pantheon',
     name: 'Nike',
@@ -1367,6 +1724,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'nyx',
+    translations: [
+      { lang: 'Proto-Indo-European', original: '*nókʷts', translit: '', meaning: 'night' },
+      { lang: 'Greek', original: 'Νύξ', translit: 'Nýx', meaning: 'night; Night personified' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Terracotta_lekythos_%28oil_flask%29_MET_DP225322_%28cropped%29.jpg/960px-Terracotta_lekythos_%28oil_flask%29_MET_DP225322_%28cropped%29.jpg'],
     parentId: 'greek-pantheon',
     name: 'Nyx',
@@ -1375,6 +1736,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'poseidon',
+    translations: [
+      { lang: 'Greek', original: 'Ποσειδῶν', translit: 'Poseidôn', meaning: 'disputed; often read as \'lord (pósis) of the earth (dā)\'; Mycenaean po-se-da-o' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Statue_of_Poseidon_NAMA_235_%28DerHexer%29%2C_part_2.JPG/960px-Statue_of_Poseidon_NAMA_235_%28DerHexer%29%2C_part_2.JPG'],
     parentId: 'greek-pantheon',
     name: 'Poseidon',
@@ -1383,6 +1747,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'prometheus',
+    translations: [
+      { lang: 'Greek', original: 'Προμηθεύς', translit: 'Promētheús', meaning: 'forethinker (pro- \'before\' + mēth-, \'to think\'); paired with Epimetheus \'afterthought\'' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Prometheus_and_Atlas%2C_Laconian_black-figure_kylix%2C_by_the_Arkesilas_Painter%2C_560-550_BC%2C_inv._16592_-_Museo_Gregoriano_Etrusco_-_Vatican_Museums_-_DSC01069.jpg/960px-Prometheus_and_Atlas%2C_Laconian_black-figure_kylix%2C_by_the_Arkesilas_Painter%2C_560-550_BC%2C_inv._16592_-_Museo_Gregoriano_Etrusco_-_Vatican_Museums_-_DSC01069.jpg'],
     parentId: 'greek-pantheon',
     name: 'Prometheus',
@@ -1391,6 +1758,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'selene',
+    translations: [
+      { lang: 'Greek', original: 'σέλας', translit: 'sélas', meaning: 'light, brightness, gleam' },
+      { lang: 'Greek', original: 'Σελήνη', translit: 'Selḗnē', meaning: 'the moon; the bright one' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Brygos_Painter_370_10_Selene_-_gigantomachy_%2803%29.jpg/960px-Brygos_Painter_370_10_Selene_-_gigantomachy_%2803%29.jpg'],
     parentId: 'greek-pantheon',
     name: 'Selene',
@@ -1407,6 +1778,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'zeus',
+    translations: [
+      { lang: 'Proto-Indo-European', original: '*dyḗws', translit: '', meaning: 'sky, daylight; the bright sky-god (root *dyew-, to shine)' },
+      { lang: 'Greek', original: 'Ζεύς', translit: 'Zeús (gen. Diós)', meaning: 'sky-father; the bright daytime sky' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Zeus_Otricoli_Pio-Clementino_Inv257.jpg/960px-Zeus_Otricoli_Pio-Clementino_Inv257.jpg'],
     parentId: 'greek-pantheon',
     name: 'Zeus',
@@ -1415,6 +1790,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'apollo',
+    translations: [
+      { lang: 'Greek', original: 'Ἀπόλλων', translit: 'Apóllōn', meaning: 'uncertain; Doric Apéllōn linked to apélla, \'assembly\'; folk from apóllymi, destroy' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Italy-3104_-_Apollo_%285378415112%29.jpg/960px-Italy-3104_-_Apollo_%285378415112%29.jpg'],
     relatedIds: ['shamash-utu'],
     parentId: 'greek-pantheon',
@@ -1424,6 +1802,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'aphrodite',
+    translations: [
+      { lang: 'Greek', original: 'Ἀφροδίτη', translit: 'Aphrodítē', meaning: 'folk-read \'foam-born\' (aphrós, foam); true origin uncertain, perhaps Semitic' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Group_of_Aphrodite%2C_Pan_and_Eros%2C_found_in_the_House_of_the_Poseidoniastai_of_Beryttos_on_Delos%2C_Aphrodite_attempts_to_fend_off_Pan_who_makes_erotic_advances%2C_National_Archaeological_Museum_of_Athens_%2813912357968%29.jpg/960px-thumbnail.jpg'],
     relatedIds: ['inanna-ishtar', 'astarte-ashtoreth'],
     parentId: 'greek-pantheon',
@@ -1433,6 +1814,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'oceanus',
+    translations: [
+      { lang: 'Greek', original: 'Ὠκεανός', translit: 'Ōkeanós', meaning: 'uncertain, probably pre-Greek; the world-encircling river; source of \'ocean\'' }
+    ],
     relatedIds: ['temple-of-styx'],
     parentId: 'greek-titans',
     name: 'Oceanus',
@@ -1441,6 +1825,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'rhea',
+    translations: [
+      { lang: 'Greek', original: 'Ῥέα', translit: 'Rhéa', meaning: 'uncertain; anciently linked to rhéō \'to flow\' or éra \'earth, ground\'' }
+    ],
     parentId: 'greek-titans',
     name: 'Rhea',
     description: 'Greek divinity. Domain: Motherhood and fertility. Mother of the six Olympian gods and goddesses.. Symbol: Earth.',
@@ -1448,6 +1835,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'themis',
+    translations: [
+      { lang: 'Greek', original: 'θέμις', translit: 'thémis', meaning: 'that which is laid down (títhēmi); divine law, custom, right' }
+    ],
     parentId: 'greek-titans',
     name: 'Themis',
     description: 'Greek divinity. Domain: Law and justice. Mother of the Fates and the Horae.. Symbol: Justice.',
@@ -1455,6 +1845,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'atlas',
+    translations: [
+      { lang: 'Greek', original: 'Ἄτλας', translit: 'Átlas', meaning: 'the bearer, the enduring one (traditionally a- + tláō, to bear); possibly pre-Greek' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/MAN_Atlante_fronte_1040572.JPG/960px-MAN_Atlante_fronte_1040572.JPG'],
     parentId: 'greek-titans',
     name: 'Atlas',
@@ -1463,6 +1856,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'coeus',
+    translations: [
+      { lang: 'Greek', original: 'Κοῖος', translit: 'Koîos', meaning: 'uncertain; perhaps Ionic koîos \'of what kind?\', hence \'the inquirer\'' }
+    ],
     parentId: 'greek-titans',
     name: 'Coeus',
     description: 'Greek divinity. Domain: Titan of intelligence and knowledge. Father of Leto and Asteria.. Symbol: Intelligence and knowledge.',
@@ -1470,6 +1866,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'crius',
+    translations: [
+      { lang: 'Greek', original: 'Κρεῖος', translit: 'Kreîos', meaning: 'ram (kriós); the Titan was linked to the constellation Aries' }
+    ],
     parentId: 'greek-titans',
     name: 'Crius',
     description: 'Greek divinity. Domain: Rams and constellations. Father of Astraeus and Pallas.. Symbol: Rams.',
@@ -1477,6 +1876,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'cronus',
+    translations: [
+      { lang: 'Greek', original: 'Κρόνος', translit: 'Krónos', meaning: 'uncertain; anciently conflated with Chrónos \'time\'; perhaps from kraínō \'to rule\'' }
+    ],
     relatedIds: ['moloch'],
     parentId: 'greek-titans',
     name: 'Cronus',
@@ -1485,6 +1887,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'hyperion',
+    translations: [
+      { lang: 'Greek', original: 'Ὑπερίων', translit: 'Hyperíōn', meaning: 'the high one, he who goes above (hypér, over, above)' }
+    ],
     parentId: 'greek-titans',
     name: 'Hyperion',
     description: 'Greek divinity. Domain: Sun and light. Father of Helios, Selene, and Eos.. Symbol: Sun.',
@@ -1492,6 +1897,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'iapetus',
+    translations: [
+      { lang: 'Greek', original: 'Ἰαπετός', translit: 'Iapetós', meaning: 'uncertain; perhaps from iáptō \'to pierce, hurl\'; popularly (unproven) equated with Japheth' }
+    ],
     parentId: 'greek-titans',
     name: 'Iapetus',
     description: 'Greek divinity. Domain: Mortality and human experience. Father of Atlas, Prometheus, Epimetheus, and Menoetius.. Symbol: Mortality.',
@@ -1499,6 +1907,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'mnemosyne',
+    translations: [
+      { lang: 'Greek', original: 'μνήμη', translit: 'mnḗmē', meaning: 'memory, remembrance (root men-, to think)' },
+      { lang: 'Greek', original: 'Μνημοσύνη', translit: 'Mnēmosýnē', meaning: 'memory; Memory personified, mother of the Muses' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Mosa%C3%AFque_murale_Mn%C3%A9mosyne.jpg/960px-Mosa%C3%AFque_murale_Mn%C3%A9mosyne.jpg'],
     parentId: 'greek-titans',
     name: 'Mnemosyne',
@@ -1507,6 +1919,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'phoebe',
+    translations: [
+      { lang: 'Greek', original: 'Φοίβη', translit: 'Phoíbē', meaning: 'bright, pure, radiant (fem. of phoîbos)' }
+    ],
     parentId: 'greek-titans',
     name: 'Phoebe',
     description: 'Greek divinity. Domain: Intelligence and prophecy. Mother of Leto and Asteria.. Symbol: Intelligence.',
@@ -1514,6 +1929,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'tethys',
+    translations: [
+      { lang: 'Greek', original: 'Τηθύς', translit: 'Tēthýs', meaning: 'uncertain; perhaps from tḗthē \'grandmother, nurse\'' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Antakya_Archaeological_Museum_Mosaic_of_Oceanus_and_Thetis_from_Alexandretta_in_2004_04.jpg/960px-Antakya_Archaeological_Museum_Mosaic_of_Oceanus_and_Thetis_from_Alexandretta_in_2004_04.jpg'],
     parentId: 'greek-titans',
     name: 'Tethys',
@@ -1522,6 +1940,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'thia',
+    translations: [
+      { lang: 'Greek', original: 'Θεία', translit: 'Theía', meaning: 'divine, goddess (fem. of theîos)' }
+    ],
     parentId: 'greek-titans',
     name: 'Thia',
     description: 'Greek divinity. Domain: Light and brightness. Mother of Helios, Selene, and Eos.. Symbol: Light.',
@@ -1529,6 +1950,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'cerberus',
+    translations: [
+      { lang: 'Greek', original: 'Κέρβερος', translit: 'Kérberos', meaning: 'uncertain; traditionally compared with Sanskrit śábala, \'spotted\', Yama\'s dog' },
+      { lang: 'Sanskrit', original: 'शबल', translit: 'śabala', meaning: 'spotted, brindled; name of one of Yama\'s two hounds' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Herakles_Kerberos_Eurystheus_Louvre_E701.jpg/960px-Herakles_Kerberos_Eurystheus_Louvre_E701.jpg'],
     parentId: 'greek-monsters',
     name: 'Cerberus',
@@ -1537,6 +1962,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'centaurs',
+    translations: [
+      { lang: 'Greek', original: 'Κένταυρος', translit: 'Kéntauros', meaning: 'uncertain; folk etymology \'bull-goader\' (kentéō, to prick + taûros, bull)' }
+    ],
     parentId: 'greek-monsters',
     name: 'Centaurs',
     description: 'Half-man, half-horse creatures. Notable Deeds: Known for their wild and barbaric nature..',
@@ -1544,6 +1972,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'chimera',
+    translations: [
+      { lang: 'Greek', original: 'Χίμαιρα', translit: 'Khímaira', meaning: 'she-goat, a yearling goat (khímaros, he-goat)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Chimera_Apulia_Louvre_K362.jpg/960px-Chimera_Apulia_Louvre_K362.jpg'],
     parentId: 'greek-monsters',
     name: 'Chimera',
@@ -1552,6 +1983,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'cyclops',
+    translations: [
+      { lang: 'Greek', original: 'Κύκλωψ', translit: 'Kýklōps', meaning: 'round-eye (kýklos, circle + ṓps, eye)' }
+    ],
     parentId: 'greek-monsters',
     name: 'Cyclops',
     description: 'One-eyed giants. Notable Deeds: Well-known for their strength and ferocity..',
@@ -1559,6 +1993,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'gorgon',
+    translations: [
+      { lang: 'Greek', original: 'Γοργώ', translit: 'Gorgṓ', meaning: 'the grim one (gorgós, grim, fierce, terrible)' }
+    ],
     parentId: 'greek-monsters',
     name: 'Gorgon',
     description: 'Three sisters with snake hair and the ability to turn people to stone with their gaze. Notable Deeds: Medusa, the most famous Gorgon, was slain by Perseus..',
@@ -1566,6 +2003,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'hydra',
+    translations: [
+      { lang: 'Greek', original: 'Ὕδρα', translit: 'Hýdra', meaning: 'water-serpent (hýdōr, water)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Lernaean_Hydra_Getty_Villa_83.AE.346.jpg/960px-Lernaean_Hydra_Getty_Villa_83.AE.346.jpg'],
     parentId: 'greek-monsters',
     name: 'Hydra',
@@ -1574,6 +2014,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'kraken',
+    translations: [
+      { lang: 'Old Norse', original: 'kraki', translit: '', meaning: 'pole, stake; something hooked or crooked' },
+      { lang: 'Norwegian', original: 'krake', translit: '', meaning: 'stunted, twisted thing; sea monster (kraken is the definite form)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Le_Poulpe_Colossal.jpg/960px-Le_Poulpe_Colossal.jpg'],
     parentId: 'greek-monsters',
     name: 'Kraken',
@@ -1582,6 +2026,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'minotaur',
+    translations: [
+      { lang: 'Greek', original: 'Μινώταυρος', translit: 'Mīnṓtauros', meaning: 'bull of Minos (Mínōs + taûros, bull)' },
+      { lang: 'Greek', original: 'Ἀστερίων', translit: 'Asteríōn', meaning: 'starry one (astḗr, star), the Minotaur\'s proper name' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Tondo_Minotaur_London_E4_MAN.jpg/960px-Tondo_Minotaur_London_E4_MAN.jpg'],
     parentId: 'greek-monsters',
     name: 'Minotaur',
@@ -1590,6 +2038,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'pegasus',
+    translations: [
+      { lang: 'Greek', original: 'Πήγασος', translit: 'Pḗgasos', meaning: 'linked by Hesiod to pēgḗ, \'spring\'; cf. Luwian piḫaššašši, \'of lightning\'' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Lakonian_Black-Figure_Kylix%3B_detached_fragments.jpg/960px-Lakonian_Black-Figure_Kylix%3B_detached_fragments.jpg'],
     parentId: 'greek-monsters',
     name: 'Pegasus',
@@ -1598,6 +2049,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'phoenix',
+    translations: [
+      { lang: 'Egyptian', original: 'bnw', translit: '', meaning: 'the Bennu heron, prototype of the phoenix (wbn, to rise, to shine)' },
+      { lang: 'Greek', original: 'φοῖνιξ', translit: 'phoînix', meaning: 'purple-red; Phoenician; date palm; the fabulous bird (cf. phoinós, blood-red)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Downtown_Phoenix_Aerial_Looking_Northeast.jpg/960px-Downtown_Phoenix_Aerial_Looking_Northeast.jpg'],
     parentId: 'greek-monsters',
     name: 'Phoenix',
@@ -1606,6 +2061,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'sphinx',
+    translations: [
+      { lang: 'Greek', original: 'Σφίγξ', translit: 'Sphínx', meaning: 'the strangler (sphíngō, to squeeze, bind tight)' },
+      { lang: 'Egyptian', original: 'šsp-ꜥnḫ', translit: '', meaning: 'living image (proposed Egyptian source of the Greek word)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Sphinx_CdM_Paris_DeRidder865_n2.jpg/960px-Sphinx_CdM_Paris_DeRidder865_n2.jpg'],
     relatedIds: ['atlantis-lost'],
     parentId: 'greek-monsters',
@@ -1615,6 +2074,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'scylla-and-charybdis',
+    translations: [
+      { lang: 'Greek', original: 'Σκύλλα', translit: 'Skýlla', meaning: 'the render (skýllō, to tear), or \'puppy\' (skýlax); she yelps like a dog' },
+      { lang: 'Greek', original: 'Χάρυβδις', translit: 'Khárybdis', meaning: 'uncertain; linked to rhoibdéō, \'to gulp down, swallow\'' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Johann_Heinrich_F%C3%BCssli_054.jpg/960px-Johann_Heinrich_F%C3%BCssli_054.jpg'],
     parentId: 'greek-monsters',
     name: 'Scylla and Charybdis',
@@ -1623,6 +2086,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'achilles',
+    translations: [
+      { lang: 'Greek', original: 'Ἀχιλλεύς', translit: 'Akhilleús', meaning: 'uncertain; read by Nagy as \'grief of the host\' (ákhos, grief + lāós, people)' }
+    ],
     relatedIds: ['gk-trojan-war'],
     parentId: 'greek-monsters',
     name: 'Achilles',
@@ -1631,6 +2097,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'aeneas',
+    translations: [
+      { lang: 'Greek', original: 'Αἰνείας', translit: 'Aineías', meaning: 'uncertain; the Homeric Hymn links it to ainón, \'dreadful\'; also aînos, \'praise\'' },
+      { lang: 'Latin', original: 'Aenēās', translit: '', meaning: 'Latin form, hero of Virgil\'s Aeneid' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Iapyx_removing_arrowhead_from_Aeneas.jpg/960px-Iapyx_removing_arrowhead_from_Aeneas.jpg'],
     parentId: 'greek-monsters',
     name: 'Aeneas',
@@ -1639,6 +2109,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'ajax',
+    translations: [
+      { lang: 'Greek', original: 'Αἴας', translit: 'Aías', meaning: 'uncertain; ancient puns on aietós, \'eagle\', and the cry aiaî, \'alas\'' },
+      { lang: 'Latin', original: 'Aiāx', translit: '', meaning: 'Latin form, source of English \'Ajax\'' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Attic_red-figure_cup_with_Ajax_and_Cassandra_Louvre_G_458.jpg/960px-Attic_red-figure_cup_with_Ajax_and_Cassandra_Louvre_G_458.jpg'],
     relatedIds: ['gk-trojan-war'],
     parentId: 'greek-monsters',
@@ -1648,6 +2122,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'andromeda',
+    translations: [
+      { lang: 'Greek', original: 'Ἀνδρομέδα', translit: 'Androméda', meaning: 'ruler of men; mindful of men (anḗr, andr-, man + médomai, to rule, to plan)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Perseus_Andromeda_MAN_Napoli_Inv8998.jpg/960px-Perseus_Andromeda_MAN_Napoli_Inv8998.jpg'],
     parentId: 'greek-monsters',
     name: 'Andromeda',
@@ -1656,6 +2133,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'antigone',
+    translations: [
+      { lang: 'Greek', original: 'Ἀντιγόνη', translit: 'Antigónē', meaning: 'in place of, or against, offspring (antí + gonḗ, birth, offspring)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Darius_Painter_-_RVAp_18-23_-_Antigone_-_judgement_of_Paris_-_Eros_with_youths_and_women_-_Berlin_AS_F_3240_-_04.jpg/960px-Darius_Painter_-_RVAp_18-23_-_Antigone_-_judgement_of_Paris_-_Eros_with_youths_and_women_-_Berlin_AS_F_3240_-_04.jpg'],
     parentId: 'greek-monsters',
     name: 'Antigone',
@@ -1664,6 +2144,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'ariadne',
+    translations: [
+      { lang: 'Greek', original: 'Ἀριάδνη', translit: 'Ariádnē', meaning: 'most holy (Cretan ari-, very + adnós = hagnós, holy, pure)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Dioniso_scopre_arianna%2C_da_casa_dei_capitelli_colorati_a_pompei%2C_9278_%28cropped%29.JPG/960px-Dioniso_scopre_arianna%2C_da_casa_dei_capitelli_colorati_a_pompei%2C_9278_%28cropped%29.JPG'],
     parentId: 'greek-monsters',
     name: 'Ariadne',
@@ -1672,6 +2155,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'cassandra',
+    translations: [
+      { lang: 'Greek', original: 'Κασσάνδρα', translit: 'Kassándra', meaning: 'uncertain; often read as kékasmai, \'to excel, shine\' + anḗr, \'man\'' },
+      { lang: 'Greek', original: 'Ἀλεξάνδρα', translit: 'Alexándra', meaning: 'defender of men (aléxō, to ward off + anḗr), her alternate name' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Attic_red-figure_cup_with_Ajax_and_Cassandra_Louvre_G_458.jpg/960px-Attic_red-figure_cup_with_Ajax_and_Cassandra_Louvre_G_458.jpg'],
     parentId: 'greek-monsters',
     name: 'Cassandra',
@@ -1680,6 +2167,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'circe',
+    translations: [
+      { lang: 'Greek', original: 'Κίρκη', translit: 'Kírkē', meaning: 'linked to kírkos, \'hawk, falcon\' (also \'circle, ring\')' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Circe_coi_maiali%2C_III-II_secolo_ac.jpg/960px-Circe_coi_maiali%2C_III-II_secolo_ac.jpg'],
     parentId: 'greek-monsters',
     name: 'Circe',
@@ -1698,6 +2188,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'gk-deucalion-flood',
+    translations: [
+      { lang: 'Greek', original: 'κατακλυσμός', translit: 'kataklysmós', meaning: 'deluge, flood (kataklýzō, to wash down, inundate); source of \'cataclysm\'' },
+      { lang: 'Greek', original: 'Πύρρα', translit: 'Pýrrha', meaning: 'flame-coloured, red-haired (pyrrhós), Deucalion\'s wife' }
+    ],
     parentId: 'greek-monsters',
     name: 'Deucalion\'s Flood',
     description: 'The Greek flood myth. Zeus sends a deluge to destroy humanity; Deucalion and Pyrrha survive in a chest, landing on Mt. Parnassus.',
@@ -1708,6 +2202,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'gk-cadmus-thebes',
+    translations: [
+      { lang: 'Phoenician', original: '𐤒𐤃𐤌', translit: 'qdm', meaning: 'east; of old (proposed Semitic source of the Phoenician prince\'s name)' },
+      { lang: 'Greek', original: 'Κάδμος', translit: 'Kádmos', meaning: 'Cadmus, founder of Thebes; also the \'Cadmean\' (Phoenician) letters' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Kadmos_dragon_Louvre_N3157.jpg/960px-Kadmos_dragon_Louvre_N3157.jpg'],
     parentId: 'greek-monsters',
     name: 'Cadmus Founds Thebes',
@@ -1718,6 +2216,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'gk-minos-crete',
+    translations: [
+      { lang: 'Greek', original: 'Μίνως', translit: 'Mínōs', meaning: 'uncertain; perhaps a Cretan (Minoan) title meaning \'king\'' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Syriskos_Painter_-_ARV_259_1_-_Theseus_killing_the_Minotauros_in_the_presence_of_Minos_and_Ariadne_and_lookers_-_Athens_NAM_15115.jpg/960px-Syriskos_Painter_-_ARV_259_1_-_Theseus_killing_the_Minotauros_in_the_presence_of_Minos_and_Ariadne_and_lookers_-_Athens_NAM_15115.jpg'],
     parentId: 'greek-monsters',
     name: 'Reign of King Minos',
@@ -1728,6 +2229,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'gk-perseus-mycenae',
+    translations: [
+      { lang: 'Greek', original: 'Περσεύς', translit: 'Perseús', meaning: 'uncertain; folk-linked to pérthō, \'to sack, destroy\'' },
+      { lang: 'Greek', original: 'Μυκῆναι', translit: 'Mykênai', meaning: 'uncertain; Pausanias derives it from mýkēs, \'mushroom\' or sword-cap' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Path_upto_the_Lion_Gate%2C_Mycenae_%2828693130016%29.jpg/960px-Path_upto_the_Lion_Gate%2C_Mycenae_%2828693130016%29.jpg'],
     parentId: 'greek-monsters',
     name: 'Perseus Founds Mycenae',
@@ -1738,6 +2243,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'gk-heracles-labors',
+    translations: [
+      { lang: 'Greek', original: 'Ἡρακλῆς', translit: 'Hēraklês', meaning: 'glory of Hera (Hḗrā + kléos, fame, glory)' },
+      { lang: 'Greek', original: 'ἆθλοι', translit: 'âthloi', meaning: 'contests, labours (âthlos, contest for a prize)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Herakles_Farnese_MAN_Napoli_Inv6001_n01.jpg/960px-Herakles_Farnese_MAN_Napoli_Inv6001_n01.jpg'],
     parentId: 'greek-monsters',
     name: 'Labors of Heracles',
@@ -1748,6 +2257,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'gk-theseus-athens',
+    translations: [
+      { lang: 'Greek', original: 'Θησεύς', translit: 'Thēseús', meaning: 'uncertain; Plutarch links it to thésis, \'a placing, institution\' (títhēmi)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Kylix_Theseus_Aison_MNA_Inv11365_n1.jpg/960px-Kylix_Theseus_Aison_MNA_Inv11365_n1.jpg'],
     parentId: 'greek-monsters',
     name: 'Theseus in Athens',
@@ -1758,6 +2270,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'gk-argonauts',
+    translations: [
+      { lang: 'Greek', original: 'Ἀργώ', translit: 'Argṓ', meaning: 'swift, bright (argós), or named for her builder Argus' },
+      { lang: 'Greek', original: 'Ἀργοναῦται', translit: 'Argonaûtai', meaning: 'sailors of the Argo (naútēs, sailor)' }
+    ],
     parentId: 'greek-monsters',
     name: 'Voyage of the Argonauts',
     description: 'Jason and his crew of heroes (including Heracles, Orpheus, Castor, Pollux) sail the Argo to Colchis to retrieve the Golden Fleece.',
@@ -1777,6 +2293,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'gk-trojan-war',
+    translations: [
+      { lang: 'Greek', original: 'Ἴλιος', translit: 'Ílios', meaning: 'Ilion, Troy; earlier Wílios, matching Hittite Wiluša' },
+      { lang: 'Hittite', original: 'Wiluša', translit: '', meaning: 'Troy as named in Hittite treaties (also Taruiša ~ Troía)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Akhilleus_Patroklos_Antikensammlung_Berlin_F2278.jpg/960px-Akhilleus_Patroklos_Antikensammlung_Berlin_F2278.jpg'],
     relatedIds: ['achilles', 'ajax'],
     parentId: 'greek-monsters',
@@ -1788,6 +2308,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'gk-odyssey-wander',
+    translations: [
+      { lang: 'Greek', original: 'Ὀδυσσεύς', translit: 'Odysseús', meaning: 'Homer links it to odýssomai, \'to be angry at, to hate\': \'man of wrath\'' },
+      { lang: 'Latin', original: 'Ulixēs', translit: '', meaning: 'Latin form (Ulysses), via a dialectal Greek Olysseus' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Head_Odysseus_MAR_Sperlonga.jpg/960px-Head_Odysseus_MAR_Sperlonga.jpg'],
     parentId: 'greek-monsters',
     name: 'Wanderings of Odysseus',
@@ -1798,6 +2322,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'gk-rome-founded',
+    translations: [
+      { lang: 'Latin', original: 'Rōma', translit: '', meaning: 'uncertain; linked to Etruscan ruma or to *srew-, \'to flow\' (the Tiber)' },
+      { lang: 'Latin', original: 'Rōmulus', translit: '', meaning: '\'man of Rome\', an eponym back-formed from the city\'s name' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Kapitolinische_W%C3%B6lfin_Museum_Capitolini.jpg/960px-Kapitolinische_W%C3%B6lfin_Museum_Capitolini.jpg'],
     relatedIds: ['mithra'],
     parentId: 'greek-monsters',
@@ -1809,6 +2337,11 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'amun',
+    translations: [
+      { lang: 'Egyptian', original: 'jmn', translit: '', meaning: 'the hidden one (jmn, to hide, conceal)' },
+      { lang: 'Coptic', original: 'Ⲁⲙⲟⲩⲛ', translit: 'Amoun', meaning: 'Coptic form of the god\'s name' },
+      { lang: 'Greek', original: 'Ἄμμων', translit: 'Ámmōn', meaning: 'Greek form, identified with Zeus (Zeus Ammon)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Amun_%28God%29.png/960px-Amun_%28God%29.png'],
     parentId: 'egyptian-pantheon',
     name: 'Amun',
@@ -1817,6 +2350,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'anubis',
+    translations: [
+      { lang: 'Egyptian', original: 'jnpw', translit: '', meaning: 'uncertain; linked to jnp, \'royal child\', or to jnp, \'to decay, putrefy\'' },
+      { lang: 'Greek', original: 'Ἄνουβις', translit: 'Ánoubis', meaning: 'Greek form of Inpu' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Anubis_standing.svg/960px-Anubis_standing.svg.png'],
     relatedIds: ['heaven-aaru-field-of-reeds', 'hell-duat-hall-of-judgment'],
     parentId: 'egyptian-pantheon',
@@ -1826,6 +2363,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'atum',
+    translations: [
+      { lang: 'Egyptian', original: 'jtm', translit: '', meaning: 'the complete one; the all (tm, to be complete, to finish)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Atum_%28God%29.png/960px-Atum_%28God%29.png'],
     relatedIds: ['egyptian-ouroboros'],
     parentId: 'egyptian-pantheon',
@@ -1835,6 +2375,11 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'bastet',
+    translations: [
+      { lang: 'Egyptian', original: 'bꜣstt', translit: '', meaning: 'she of the ointment jar (bꜣs), traditional reading' },
+      { lang: 'Egyptian', original: 'pr-bꜣstt', translit: '', meaning: 'house of Bastet, her cult city (Greek Boubastis)' },
+      { lang: 'Greek', original: 'Βούβαστις', translit: 'Boúbastis', meaning: 'Greek name of goddess and city, from pr-bꜣstt' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Bastet.svg/960px-Bastet.svg.png'],
     relatedIds: ['egyptian-eye-of-ra', 'egyptian-sistrum', 'sekhmet'],
     parentId: 'egyptian-pantheon',
@@ -1844,6 +2389,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'bes',
+    translations: [
+      { lang: 'Egyptian', original: 'bs', translit: '', meaning: 'uncertain; often linked to bsꜣ, \'to protect, guard\'' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Deity_Bes.png/960px-Deity_Bes.png'],
     parentId: 'egyptian-pantheon',
     name: 'Bes',
@@ -1861,6 +2409,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'hathor',
+    translations: [
+      { lang: 'Egyptian', original: 'ḥwt-ḥr', translit: '', meaning: 'house (mansion) of Horus (ḥwt, enclosure, temple + ḥr, Horus)' },
+      { lang: 'Greek', original: 'Ἁθώρ', translit: 'Hathṓr', meaning: 'Greek form of the goddess\'s name' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Hathor.svg/960px-Hathor.svg.png'],
     relatedIds: ['egyptian-eye-of-ra', 'egyptian-menat', 'egyptian-sistrum', 'sekhmet'],
     parentId: 'egyptian-pantheon',
@@ -1870,6 +2422,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'horus',
+    translations: [
+      { lang: 'Egyptian', original: 'ḥr', translit: '', meaning: 'the distant one; the one above (ḥr, face; upon, above)' },
+      { lang: 'Greek', original: 'Ὧρος', translit: 'Hôros', meaning: 'Greek form of Heru' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Horus_standing.svg/960px-Horus_standing.svg.png'],
     parentId: 'egyptian-pantheon',
     name: 'Horus',
@@ -1879,6 +2435,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'isis',
+    translations: [
+      { lang: 'Egyptian', original: 'ꜣst', translit: '', meaning: 'throne (her name-sign is the throne hieroglyph)' },
+      { lang: 'Greek', original: 'Ἶσις', translit: 'Îsis', meaning: 'Greek form of Aset' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Isis.svg/960px-Isis.svg.png'],
     parentId: 'egyptian-pantheon',
     name: 'Isis',
@@ -1888,6 +2448,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'maat',
+    translations: [
+      { lang: 'Egyptian', original: 'mꜣꜥt', translit: '', meaning: 'truth, order, justice (mꜣꜥ, true, straight, right)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Maat.svg/960px-Maat.svg.png'],
     relatedIds: ['egyptian-feather-of-maat'],
     parentId: 'egyptian-pantheon',
@@ -1897,6 +2460,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'neith',
+    translations: [
+      { lang: 'Egyptian', original: 'nt', translit: '', meaning: 'uncertain; linked to nt, \'water\', or to the root for weaving' },
+      { lang: 'Greek', original: 'Νηΐθ', translit: 'Nēḯth', meaning: 'Greek form of the goddess\'s name' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Neith.svg/960px-Neith.svg.png'],
     parentId: 'egyptian-pantheon',
     name: 'Neith',
@@ -1905,6 +2472,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'nephthys',
+    translations: [
+      { lang: 'Egyptian', original: 'nbt-ḥwt', translit: '', meaning: 'lady of the house (nbt, lady, mistress + ḥwt, house, temple enclosure)' },
+      { lang: 'Greek', original: 'Νέφθυς', translit: 'Néphthys', meaning: 'Greek form of Nebet-hut' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Nepthys.svg/960px-Nepthys.svg.png'],
     parentId: 'egyptian-pantheon',
     name: 'Nephthys',
@@ -1913,6 +2484,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'nut',
+    translations: [
+      { lang: 'Egyptian', original: 'nwt', translit: '', meaning: 'sky; the sky goddess' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Bago%2C_mercado_23.jpg/960px-Bago%2C_mercado_23.jpg'],
     parentId: 'egyptian-pantheon',
     name: 'Nut',
@@ -1921,6 +2495,11 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'osiris',
+    translations: [
+      { lang: 'Egyptian', original: 'wsjr', translit: '', meaning: 'uncertain; read as \'mighty one\' (wsr) or folk-read \'seat of the eye\' (st + jrt)' },
+      { lang: 'Coptic', original: 'ⲟⲩⲥⲓⲣⲉ', translit: 'Ousire', meaning: 'Coptic form of the god\'s name' },
+      { lang: 'Greek', original: 'Ὄσιρις', translit: 'Ósiris', meaning: 'Greek form of Wesir' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Standing_Osiris.svg/960px-Standing_Osiris.svg.png'],
     parentId: 'egyptian-pantheon',
     name: 'Osiris',
@@ -1930,6 +2509,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'ptah',
+    translations: [
+      { lang: 'Egyptian', original: 'ptḥ', translit: '', meaning: 'uncertain; traditionally \'the opener\' or \'the fashioner, sculptor\'' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Ptah_standing.svg/960px-Ptah_standing.svg.png'],
     relatedIds: ['sekhmet'],
     parentId: 'egyptian-pantheon',
@@ -1939,6 +2521,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'ra',
+    translations: [
+      { lang: 'Egyptian', original: 'rꜥ', translit: '', meaning: 'sun; the sun god' },
+      { lang: 'Coptic', original: 'ⲣⲏ', translit: 'Rē', meaning: 'sun' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Re-Horakhty.svg/960px-Re-Horakhty.svg.png'],
     parentId: 'egyptian-pantheon',
     name: 'Ra',
@@ -1948,6 +2534,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'egyptian-set',
+    translations: [
+      { lang: 'Egyptian', original: 'stẖ', translit: '', meaning: 'uncertain; also swtḫ; te Velde\'s reading \'instigator of confusion\'' },
+      { lang: 'Greek', original: 'Σήθ', translit: 'Sḗth', meaning: 'Greek form of Setekh, Sutekh' }
+    ],
     parentId: 'egyptian-pantheon',
     name: 'Set',
     description: 'The ancient Egyptian god of chaos, storms, violence, deserts, and foreign lands. Unlike other deities, Set represents the principle of individuality, separation, and dynamic struggle. In esoteric philosophy and Setian metaphysics, he is revered not as a force of evil, but as the initiator of human consciousness, self-deification, and the non-natural evolution of the intellect, directly opposing the cosmic stasis represented by Osiris.',
@@ -1958,6 +2548,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'thoth',
+    translations: [
+      { lang: 'Egyptian', original: 'ḏḥwtj', translit: '', meaning: 'he of Djehut (a Delta nome); traditionally \'he who is like the ibis\'' },
+      { lang: 'Greek', original: 'Θώθ', translit: 'Thṓth', meaning: 'Greek form of Djehuty' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Thoth.svg/960px-Thoth.svg.png'],
     parentId: 'egyptian-pantheon',
     name: 'Thoth',
@@ -1967,6 +2561,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'baldr',
+    translations: [
+      { lang: 'Old Norse', original: 'Baldr', translit: '', meaning: 'disputed; traditionally \'brave, bold\' or \'lord, prince\' (cf. OE bealdor); or \'shining\'' }
+    ],
     parentId: 'norse-pantheon',
     name: 'Baldr',
     description: 'God of light, beauty, and joy',
@@ -1974,6 +2571,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'loki',
+    translations: [
+      { lang: 'Old Norse', original: 'Loki', translit: '', meaning: 'disputed; linked to lúka \'to close, lock\', lokke \'knot, tangle\', or logi \'fire\'' }
+    ],
     parentId: 'norse-pantheon',
     name: 'Loki',
     description: 'God of mischief, fire, and chaos Job/Domain: God of mischief, fire, and chaos. Correlated characters: Hermes (Greek), Hephaestus (Greek), Agni (Hindu).',
@@ -1981,6 +2581,11 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'odin',
+    translations: [
+      { lang: 'Proto-Germanic', original: '*Wōdanaz', translit: '', meaning: 'lord of frenzy, inspired one (*wōdaz, rage, manic inspiration)' },
+      { lang: 'Old Norse', original: 'Óðinn', translit: '', meaning: 'the frenzied, inspired one (óðr, frenzy, inspiration, poetry)' },
+      { lang: 'Old English', original: 'Wōden', translit: '', meaning: 'Woden; the same god among the Anglo-Saxons' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Odin_%28Manual_of_Mythology%29.jpg/960px-Odin_%28Manual_of_Mythology%29.jpg'],
     relatedIds: ['heaven-folkvangr'],
     parentId: 'norse-pantheon',
@@ -1990,6 +2595,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'sif',
+    translations: [
+      { lang: 'Proto-Germanic', original: '*sibjō', translit: '', meaning: 'kinship, relationship' },
+      { lang: 'Old Norse', original: 'Sif', translit: '', meaning: 'kinswoman, bride, relation by marriage (pl. sifjar, affinity)' }
+    ],
     parentId: 'norse-pantheon',
     name: 'Sif',
     description: 'Goddess of the harvest and fertility',
@@ -1997,6 +2606,11 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'tyr',
+    translations: [
+      { lang: 'Proto-Indo-European', original: '*dyēws', translit: '', meaning: 'sky god, bright sky (also Zeus, Latin deus)' },
+      { lang: 'Proto-Germanic', original: '*Tīwaz', translit: '', meaning: 'god; the sky god' },
+      { lang: 'Old Norse', original: 'Týr', translit: '', meaning: 'god; plural tívar \'gods\'; source of \'Tuesday\' (Old English Tīwesdæg)' }
+    ],
     parentId: 'norse-pantheon',
     name: 'Tyr',
     description: 'God of war, law, and justice',
@@ -2004,6 +2618,11 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'thor',
+    translations: [
+      { lang: 'Old Norse', original: 'Þórr', translit: '', meaning: 'thunder (Proto-Germanic *Þunraz \'thunder\')' },
+      { lang: 'Old English', original: 'Þunor', translit: '', meaning: 'thunder; source of \'Thursday\' (Þunresdæg)' },
+      { lang: 'Proto-Indo-European', original: '*(s)tenh₂-', translit: '', meaning: 'to thunder (also Latin tonare)' }
+    ],
     relatedIds: ['susanoo'],
     parentId: 'norse-pantheon',
     name: 'Thor',
@@ -2012,6 +2631,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'freya',
+    translations: [
+      { lang: 'Proto-Germanic', original: '*frawjōn', translit: '', meaning: 'lady, mistress' },
+      { lang: 'Old Norse', original: 'Freyja', translit: '', meaning: 'lady, mistress' }
+    ],
     relatedIds: ['heaven-folkvangr'],
     parentId: 'norse-pantheon',
     name: 'Freya',
@@ -2020,6 +2643,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'frigg',
+    translations: [
+      { lang: 'Proto-Germanic', original: '*Frijjō', translit: '', meaning: 'beloved, dear one (PIE *priH-, to love; cf. Sanskrit priyā)' },
+      { lang: 'Old Norse', original: 'Frigg', translit: '', meaning: 'beloved' }
+    ],
     parentId: 'norse-pantheon',
     name: 'Frigg',
     description: ' Job/Domain: Goddess of marriage, motherhood, the household, and prophecy. Correlated characters: Hera (Greek), Juno (Roman), Lakshmi (Hindu).',
@@ -2027,6 +2654,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'agni',
+    translations: [
+      { lang: 'Proto-Indo-European', original: '*h₁n̥gʷnis', translit: '', meaning: 'fire (cf. Latin ignis)' },
+      { lang: 'Sanskrit', original: 'अग्नि', translit: 'agní', meaning: 'fire; the fire-god' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Agni_god_of_fire.jpg/960px-Agni_god_of_fire.jpg'],
     parentId: 'hindu-pantheon',
     name: 'Agni',
@@ -2035,6 +2666,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'brahma',
+    translations: [
+      { lang: 'Sanskrit', original: 'ब्रह्मन्', translit: 'bráhman', meaning: 'sacred utterance, growth, expansion (root bṛh, to grow, swell)' },
+      { lang: 'Sanskrit', original: 'ब्रह्मा', translit: 'Brahmā', meaning: 'the creator god; masculine personification of bráhman' }
+    ],
     parentId: 'hindu-pantheon',
     name: 'Brahma',
     description: 'The Hindu god of creation, completing the Trimurti along with Vishnu (the preserver) and Shiva (the destroyer). According to the Puranas, Brahma self-incarnated in a golden egg (Hiranyagarbha) or emerged from a lotus arising from Vishnu\'s navel, and created the various realms of the cosmos.',
@@ -2044,6 +2679,9 @@ const chunk_0: any[] = [  {
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Brahma%2C_dal_soffitto_del_tempio_di_huchchappaiyya_gudi%2C_aihole_%28balgakot%29%2C_karnataka%2C_VII_secolo_%28cropped%29.jpg/1280px-Brahma%2C_dal_soffitto_del_tempio_di_huchchappaiyya_gudi%2C_aihole_%28balgakot%29%2C_karnataka%2C_VII_secolo_%28cropped%29.jpg']
   },  {
     id: 'durga',
+    translations: [
+      { lang: 'Sanskrit', original: 'दुर्गा', translit: 'Durgā', meaning: 'the inaccessible, invincible one (dur- \'hard\' + gam-, \'to go\'; durga, fortress)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Kanakadurga_Temple_gopuram.jpg/960px-Kanakadurga_Temple_gopuram.jpg'],
     relatedIds: ['kali'],
     parentId: 'hindu-pantheon',
@@ -2053,6 +2691,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'ganesha',
+    translations: [
+      { lang: 'Sanskrit', original: 'गणेश', translit: 'Gaṇeśa', meaning: 'lord (īśa) of the gaṇas (hosts, attendants of Shiva)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Ganesha_Basohli_miniature_circa_1730_Dubost_p73.jpg/960px-Ganesha_Basohli_miniature_circa_1730_Dubost_p73.jpg'],
     parentId: 'hindu-pantheon',
     name: 'Ganesha',
@@ -2061,6 +2702,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'indra',
+    translations: [
+      { lang: 'Sanskrit', original: 'इन्द्र', translit: 'Índra', meaning: 'uncertain; traditional glosses \'mighty, powerful\', or linked to indu \'drop\'' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Indra%2C_Chief_of_the_Gods_LACMA_M.69.13.4_%281_of_5%29.jpg/960px-Indra%2C_Chief_of_the_Gods_LACMA_M.69.13.4_%281_of_5%29.jpg'],
     relatedIds: ['heaven-svarga'],
     parentId: 'hindu-pantheon',
@@ -2070,6 +2714,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'krishna',
+    translations: [
+      { lang: 'Sanskrit', original: 'कृष्ण', translit: 'Kṛṣṇa', meaning: 'black, dark, dark-blue' }
+    ],
     parentId: 'hindu-pantheon',
     name: 'Krishna',
     description: 'A major deity in Hinduism, worshipped as the eighth avatar of Vishnu and as a supreme god in his own right. He is the divine speaker of the Bhagavad Gita, delivering theological, philosophical, and ethical instructions to the warrior Arjuna on the battlefield of Kurukshetra.',
@@ -2079,6 +2726,10 @@ const chunk_0: any[] = [  {
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Krishna_Holds_Up_Mount_Govardhan_%28MET_70694%29_cropped.png/1280px-Krishna_Holds_Up_Mount_Govardhan_%28MET_70694%29_cropped.png']
   },  {
     id: 'lakshmi',
+    translations: [
+      { lang: 'Sanskrit', original: 'लक्ष्मी', translit: 'Lakṣmī', meaning: 'sign, mark; good fortune, prosperity (from lakṣ-, lakṣman, mark)' },
+      { lang: 'Sanskrit', original: 'श्री', translit: 'Śrī', meaning: 'radiance, prosperity, auspiciousness; her chief epithet' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Raja_Ravi_Varma%2C_Goddess_Lakshmi%2C_1896.jpg/960px-Raja_Ravi_Varma%2C_Goddess_Lakshmi%2C_1896.jpg'],
     parentId: 'hindu-pantheon',
     name: 'Lakshmi',
@@ -2087,6 +2738,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'parvati',
+    translations: [
+      { lang: 'Sanskrit', original: 'पार्वती', translit: 'Pārvatī', meaning: 'she of the mountain; daughter of Parvata (parvata, mountain)' },
+      { lang: 'Sanskrit', original: 'गौरी', translit: 'Gaurī', meaning: 'the fair, bright one (gaura, white, shining)' }
+    ],
     relatedIds: ['kali'],
     parentId: 'hindu-pantheon',
     name: 'Parvati',
@@ -2095,6 +2750,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'shiva',
+    translations: [
+      { lang: 'Sanskrit', original: 'शिव', translit: 'Śiva', meaning: 'auspicious, kind, gracious' },
+      { lang: 'Sanskrit', original: 'महादेव', translit: 'Mahādeva', meaning: 'great god (mahā + deva)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Bangalore_Shiva.jpg/960px-Bangalore_Shiva.jpg'],
     relatedIds: ['brahma', 'kali'],
     parentId: 'hindu-pantheon',
@@ -2104,6 +2763,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'vishnu',
+    translations: [
+      { lang: 'Sanskrit', original: 'विष्णु', translit: 'Viṣṇu', meaning: 'traditionally \'all-pervading\' (from viś-, to enter, pervade); etymology debated' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Vishnu_from_Gita_Govinda.jpg/960px-Vishnu_from_Gita_Govinda.jpg'],
     parentId: 'hindu-pantheon',
     name: 'Vishnu',
@@ -2113,6 +2775,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'saraswati',
+    translations: [
+      { lang: 'Sanskrit', original: 'सरस्वती', translit: 'Sarasvatī', meaning: 'she who has pools, flowing water (saras + -vatī, possessing)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Goddess_Saraswati_worship.jpg/960px-Goddess_Saraswati_worship.jpg'],
     parentId: 'hindu-pantheon',
     name: 'Saraswati',
@@ -2141,6 +2806,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'skl-enmenluana',
+    translations: [
+      { lang: 'Sumerian', original: 'en-men-lu₂-an-na', translit: 'Enmenluanna', meaning: 'en \'lord\' + men \'crown\' + lu \'man, person\' + an-na \'of heaven\'' }
+    ],
     parentId: 'sumerian-kings',
     name: 'En-men-lu-ana of Bad-tibira',
     description: 'King of Bad-tibira. Recorded as having the longest reign on the Kings List: 43,200 years.',
@@ -2150,6 +2818,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'skl-enmengalana',
+    translations: [
+      { lang: 'Sumerian', original: 'en-men-gal-an-na', translit: 'Enmengalanna', meaning: 'lord of the great crown of heaven (en \'lord\' + men \'crown\' + gal \'great\' + an-na \'of heaven\')' }
+    ],
     parentId: 'sumerian-kings',
     name: 'En-men-gal-ana of Bad-tibira',
     description: 'King of Bad-tibira. Reigned for 28,800 years.',
@@ -2159,6 +2830,11 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'skl-dumuzid-shep',
+    translations: [
+      { lang: 'Sumerian', original: '𒌉𒍣 (dumu-zid)', translit: 'Dumuzid', meaning: 'faithful son, true son (dumu \'son\' + zid \'true, faithful\')' },
+      { lang: 'Akkadian', original: 'Duʾūzu', translit: '', meaning: 'Akkadian form of Dumuzid; also the fourth month of the Babylonian year' },
+      { lang: 'Hebrew', original: 'תַּמּוּז', translit: 'Tammūz', meaning: 'Tammuz, the god mourned in Ezekiel 8:14; also the fourth month of the Hebrew calendar' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Fran%C3%A7oise_Foliot_-_%C3%A9poux.jpg/960px-Fran%C3%A7oise_Foliot_-_%C3%A9poux.jpg'],
     relatedIds: ['tammuz'],
     parentId: 'sumerian-kings',
@@ -2170,6 +2846,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'skl-ensipad-zian-anna',
+    translations: [
+      { lang: 'Sumerian', original: 'en-sipad-zid-an-na', translit: 'Ensipadzidanna', meaning: 'lord, faithful shepherd of heaven (en \'lord\' + sipad \'shepherd\' + zid \'true\' + an-na \'of heaven\')' }
+    ],
     parentId: 'sumerian-kings',
     name: 'En-sipad-zian-anna of Larag',
     description: 'King of Larag. Reigned for 28,800 years.',
@@ -2179,6 +2858,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'skl-enmendurana',
+    translations: [
+      { lang: 'Sumerian', original: 'en-men-dur-an-na', translit: 'Enmenduranna', meaning: 'chief of the powers of Dur-an-ki, the bond of heaven and earth (en \'lord\' + me \'powers\' + dur-an)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Lista_Reale_Sumerica.jpg/960px-Lista_Reale_Sumerica.jpg'],
     parentId: 'sumerian-kings',
     name: 'En-men-dur-ana of Sippar',
@@ -2189,6 +2871,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'skl-ubarautu',
+    translations: [
+      { lang: 'Sumerian', original: '𒁛𒁺𒁺 (ubara-tu-tu)', translit: 'Ubara-Tutu', meaning: 'protégé of the god Tutu (ubara \'protection, protégé\'; Tutu later identified with Marduk)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Lista_Reale_Sumerica.jpg/960px-Lista_Reale_Sumerica.jpg'],
     parentId: 'sumerian-kings',
     name: 'Ubara-Tutu of Shuruppak',
@@ -2209,6 +2894,9 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'skl-lugalbanda',
+    translations: [
+      { lang: 'Sumerian', original: '𒈗𒌉𒁕 (lugal-banda₃)', translit: 'Lugalbanda', meaning: 'junior king, fierce king (lugal \'king\' + banda \'junior, young; fierce\')' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Obverse._The_story_of_Lugalbanda_in_the_Mountain_Cave%2C_Old-Babylonian_period%2C_from_southern_Iraq._Sulaymaniyah_Museum%2C_Iraqi_Kurdistan.jpg/960px-Obverse._The_story_of_Lugalbanda_in_the_Mountain_Cave%2C_Old-Babylonian_period%2C_from_southern_Iraq._Sulaymaniyah_Museum%2C_Iraqi_Kurdistan.jpg'],
     parentId: 'sumerian-kings',
     name: 'Lugalbanda of Uruk',
@@ -2229,6 +2917,10 @@ const chunk_0: any[] = [  {
     isApocryphal: true
   },  {
     id: 'skl-gilgamesh',
+    translations: [
+      { lang: 'Sumerian', original: '𒀭𒄑𒉋𒂵𒈩 (Bil₃-ga-mes)', translit: 'Bilgames', meaning: 'the ancestor is a hero / the old man is a young man (pabilga \'elder kinsman\' + mes \'hero\')' },
+      { lang: 'Akkadian', original: '𒄑𒂆𒈦', translit: 'Gilgameš', meaning: 'Akkadian form of Sumerian Bilgames' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/British_Museum_Flood_Tablet.jpg/960px-British_Museum_Flood_Tablet.jpg'],
     relatedIds: ['gilgamesh-text', 'shamash-utu'],
     parentId: 'sumerian-kings',
@@ -2246,6 +2938,10 @@ const chunk_0: any[] = [  {
     description: 'Lineages of power tracing through the Merovingian dynasty, royal houses, and ancient genealogical lineages.'
   },  {
     id: 'bloodline-gene-of-isis',
+    translations: [
+      { lang: 'Egyptian', original: 'ꜣst', translit: 'Aset', meaning: 'written with the throne sign; traditionally interpreted as \'throne, seat\'' },
+      { lang: 'Greek', original: 'Ἶσις', translit: 'Îsis', meaning: 'Greek form of the goddess\'s name' }
+    ],
     parentId: 'bloodlines-genealogy',
     name: 'Gene of Isis (Dragon & Fairy Bloodlines)',
     description: 'An alleged ancient esoteric lineage (also referred to as elven, fairy, or dragon bloodlines) traced by occult societies and royal dynasties back to the Nephilim of Genesis 6. Esoteric researcher Gary Wayne asserts that Western figures like King Arthur, Vlad the Impaler (Dracula), and the Tuatha Dé Danann represent branches of this single buried family tree. In the East, this lineage is linked to the Chinese Li bloodline, the legendary "Dragon Kings," and claims of divine descent by emperors descending from the Yellow Emperor or solar deities like Amaterasu. The lineage is associated with the Rh-negative/O-negative blood groups, coded royal heraldry, and the preservation of a counterfeit pedigree intended to usher in the Antichrist.',
@@ -2254,6 +2950,9 @@ const chunk_0: any[] = [  {
     sources: ['Blurry Creatures Podcast (EP: 442)', 'The Genesis 6 Conspiracy by Gary Wayne']
   },  {
     id: 'merovingian-bloodlines',
+    translations: [
+      { lang: 'Latin', original: 'Merovingi', translit: '', meaning: 'descendants of Merovech, legendary founder; a Frankish name, probably \'famed in battle\'' }
+    ],
     parentId: 'bloodlines-genealogy',
     name: 'Merovingian Dynasty',
     description: 'The Salian Frankish dynasty that ruled the Franks from the mid-5th century, surrounded by esoteric Grail lore and legends of holy bloodlines.',
@@ -2266,6 +2965,9 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'illuminati-bloodlines',
+    translations: [
+      { lang: 'Latin', original: 'illūminātī', translit: '', meaning: 'the enlightened ones (plural past participle of illūmināre, to light up)' }
+    ],
     parentId: 'bloodlines-genealogy',
     name: '13 Illuminati Bloodlines',
     description: 'A shadow network of thirteen powerful family lineages popularized in alternative history and conspiracy theories, alleged to secretly steer the course of global finance, geopolitics, and religious/esoteric organizations.',
@@ -2400,6 +3102,10 @@ const chunk_0: any[] = [  {
     sources: ['Vatican & Papal Historical Records', 'European Aristocratic Genealogies']
   },  {
     id: 'nobility-medici',
+    translations: [
+      { lang: 'Latin', original: 'medicus', translit: '', meaning: 'physician, healer (from medērī, to heal)' },
+      { lang: 'Italian', original: 'medici', translit: '', meaning: 'physicians (plural of medico)' }
+    ],
     parentId: 'black-nobility',
     name: 'De Medici Bloodline',
     description: 'The dominant Italian banking family and political dynasty of Florence that rose to fame in the 15th century. Producing four popes and two queens of France, they were central to Renaissance-era financing and European power structures.',
@@ -2418,6 +3124,9 @@ const chunk_0: any[] = [  {
     sources: ['Vatican & Papal Historical Records', 'Jesuit Historical Society']
   },  {
     id: 'nobility-massimo',
+    translations: [
+      { lang: 'Latin', original: 'Maximus', translit: '', meaning: 'greatest; the family claims descent from Q. Fabius Maximus' }
+    ],
     relatedIds: ['vatican-central'],
     parentId: 'black-nobility',
     name: 'Massimo Bloodline',
@@ -2428,6 +3137,9 @@ const chunk_0: any[] = [  {
     sources: ['Vatican & Papal Historical Records', 'Roman Patrician Registries']
   },  {
     id: 'nobility-colonna',
+    translations: [
+      { lang: 'Latin', original: 'columna', translit: '', meaning: 'column, pillar; the family\'s name and heraldic emblem' }
+    ],
     parentId: 'black-nobility',
     name: 'Colonna Bloodline',
     description: 'An ancient and extremely powerful Roman noble family. They produced Pope Martin V and dominated Rome\'s medieval politics, fighting a centuries-long rivalry with the Orsini family for control of the Papacy.',
@@ -2474,6 +3186,9 @@ const chunk_0: any[] = [  {
     sources: ['British Peerage Records', 'Devonshire Estate Archives']
   },  {
     id: 'nobility-windsor',
+    translations: [
+      { lang: 'Old English', original: 'Windlesora', translit: '', meaning: 'riverbank with a windlass (windels + ōra, bank, shore)' }
+    ],
     parentId: 'black-nobility',
     name: 'Windsor Bloodline',
     description: 'The royal house of the United Kingdom, renamed in 1917 from the House of Saxe-Coburg-Gotha. In alternative eschatology (such as the theories of Gary Wayne), the Windsors are linked to the Nephilim pedigree, pointing to their Rh-negative mystery, O-negative blood groups, coded royal heraldry, and King Charles III\'s claimed descent from Vlad the Impaler as markers of this lineage.',
@@ -2484,6 +3199,10 @@ const chunk_0: any[] = [  {
     sources: ['British Royal Archives', 'Windsor Castle Historical Society', 'Blurry Creatures Podcast (EP: 442)']
   },  {
     id: 'nobility-romanov',
+    translations: [
+      { lang: 'Latin', original: 'Rōmānus', translit: '', meaning: 'Roman' },
+      { lang: 'Russian', original: 'Романов', translit: 'Romanov', meaning: 'patronymic surname, \'of Roman\' (Roman Yurievich Zakharin-Koshkin)' }
+    ],
     relatedIds: ['war-bolshevik-funding-1917'],
     parentId: 'black-nobility',
     name: 'Romanov Bloodline',
@@ -2494,6 +3213,9 @@ const chunk_0: any[] = [  {
     sources: ['Imperial Russian Archives', 'Romanov Family Association']
   },  {
     id: 'nobility-habsburg',
+    translations: [
+      { lang: 'German', original: 'Habichtsburg', translit: '', meaning: 'hawk\'s castle (Habicht, hawk + Burg, fortress); the family\'s seat in Aargau' }
+    ],
     parentId: 'black-nobility',
     name: 'Habsburg Bloodline',
     description: 'One of the most influential royal houses of Europe, supplying Holy Roman Emperors, Spanish kings, and Austrian emperors. Famous for expanding their empire through dynastic alliances rather than conquest.',
@@ -2503,6 +3225,9 @@ const chunk_0: any[] = [  {
     sources: ['European Royal Registries', 'Hofburg Palace Archives']
   },  {
     id: 'nobility-plantagenet',
+    translations: [
+      { lang: 'Latin', original: 'planta genista', translit: '', meaning: 'sprig of broom, the badge of Geoffrey of Anjou' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/WarwickRousRoll.jpg/960px-WarwickRousRoll.jpg'],
     parentId: 'black-nobility',
     name: 'Plantagenet Bloodline',
@@ -2513,6 +3238,10 @@ const chunk_0: any[] = [  {
     sources: ['English Royal Chronologies', 'Fontevraud Abbey Records']
   },  {
     id: 'sarah_damaris',
+    translations: [
+      { lang: 'Hebrew', original: 'שָׂרָה', translit: 'Śārāh', meaning: 'princess, noblewoman' },
+      { lang: 'Greek', original: 'Δάμαρις', translit: 'Damaris', meaning: 'uncertain; perhaps \'heifer, calf\' (damalis) or from damar \'wife\' (Acts 17:34)' }
+    ],
     relatedIds: ['mary_magdalene'],
     parentId: 'merovingian-bloodlines',
     name: 'Sarah Damaris',
@@ -2522,6 +3251,10 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'faramund',
+    translations: [
+      { lang: 'Frankish', original: '*Faramund', translit: '', meaning: 'protection of the clan (fara \'clan, travelling band\' + mund \'protection\')' },
+      { lang: 'Latin', original: 'Pharamundus', translit: '', meaning: 'Latinised form in the Liber Historiae Francorum' }
+    ],
     parentId: 'merovingian-bloodlines',
     name: 'Faramund',
     description: 'Semi-legendary first king of the Salian Franks, traditional ancestor of the Merovingian kings.',
@@ -2530,6 +3263,10 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'chlodio',
+    translations: [
+      { lang: 'Frankish', original: '*Hlodio', translit: '', meaning: 'short form of names in hlōd \'famous, renowned\'' },
+      { lang: 'Latin', original: 'Chlodio', translit: '', meaning: 'Latinised form in Gregory of Tours' }
+    ],
     parentId: 'merovingian-bloodlines',
     name: 'Chlodio the Long-Haired',
     description: 'King of the Salian Franks at Dispargum. Captured Tournai and Cambrai from the Romans.',
@@ -2538,6 +3275,10 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'merovech',
+    translations: [
+      { lang: 'Frankish', original: '*Merowig', translit: '', meaning: 'disputed; usually \'famous fighter\' (mēr \'famous\' + wīg \'battle\'), or \'sea-fighter\'' },
+      { lang: 'Latin', original: 'Meroveus', translit: '', meaning: 'Latinised form in Gregory of Tours; source of \'Merovingian\'' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Victory_of_King_Merovech.png/960px-Victory_of_King_Merovech.png'],
     parentId: 'merovingian-bloodlines',
     name: 'Merovech',
@@ -2547,6 +3288,10 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'childeric_i',
+    translations: [
+      { lang: 'Frankish', original: '*Hildirīk', translit: '', meaning: 'battle-ruler (hild \'battle\' + rīk \'ruler, powerful\')' },
+      { lang: 'Latin', original: 'Childericus', translit: '', meaning: 'Latinised form used in Frankish chronicles' }
+    ],
     parentId: 'merovingian-bloodlines',
     name: 'Childeric I',
     description: 'Merovingian King of the Salian Franks. Allied with Romans against Visigoths. His rich tomb was found in 1653.',
@@ -2555,6 +3300,10 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'clovis_i',
+    translations: [
+      { lang: 'Frankish', original: '*Hlōdowig', translit: '', meaning: 'famous in battle (hlōd \'fame\' + wīg \'battle, warrior\'); later Ludwig, Louis' },
+      { lang: 'Latin', original: 'Chlodovechus', translit: '', meaning: 'Latinised form in Gregory of Tours' }
+    ],
     parentId: 'merovingian-bloodlines',
     name: 'King Clovis I',
     description: 'First King of all the Franks, united the tribes, defeated the Romans at Soissons, and converted to Catholicism.',
@@ -2563,6 +3312,10 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'clotilde',
+    translations: [
+      { lang: 'Frankish', original: '*Hlōdohild', translit: '', meaning: 'famous in battle (hlōd \'fame\' + hild \'battle\')' },
+      { lang: 'Latin', original: 'Chrodechildis', translit: '', meaning: 'Latinised form in Gregory of Tours' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Drouais_-_Clotilde_of_France_-_Versailles_MV_3972.jpg/960px-Drouais_-_Clotilde_of_France_-_Versailles_MV_3972.jpg'],
     parentId: 'merovingian-bloodlines',
     name: 'Queen Clotilde',
@@ -2572,6 +3325,10 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'chlothar_i',
+    translations: [
+      { lang: 'Frankish', original: '*Hlōdohari', translit: '', meaning: 'famous army (hlōd \'fame\' + hari \'army\'); later Lothar' },
+      { lang: 'Latin', original: 'Chlotharius', translit: '', meaning: 'Latinised form used in Frankish chronicles' }
+    ],
     parentId: 'merovingian-bloodlines',
     name: 'Chlothar I',
     description: 'King of the Franks. Re-united the Frankish realms after his brothers died. Lived 64 years.',
@@ -2580,6 +3337,10 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'chilperic_i',
+    translations: [
+      { lang: 'Frankish', original: '*Hilpirīk', translit: '', meaning: 'helper-ruler (hilp \'help\' + rīk \'ruler, powerful\')' },
+      { lang: 'Latin', original: 'Chilpericus', translit: '', meaning: 'Latinised form used in Frankish chronicles' }
+    ],
     parentId: 'merovingian-bloodlines',
     name: 'Chilperic I',
     description: 'King of Neustria. Famous for his fierce feuds with his brother Sigebert and Queen Brunhilda.',
@@ -2588,6 +3349,10 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'chlothar_ii',
+    translations: [
+      { lang: 'Frankish', original: '*Hlōdohari', translit: '', meaning: 'famous army (hlōd \'fame\' + hari \'army\'); later Lothar' },
+      { lang: 'Latin', original: 'Chlotharius', translit: '', meaning: 'Latinised form used in Frankish chronicles' }
+    ],
     parentId: 'merovingian-bloodlines',
     name: 'Chlothar II the Great',
     description: 'King of Neustria, later sole King of the Franks. Promulgated the Edict of Paris.',
@@ -2596,6 +3361,10 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'dagobert_i',
+    translations: [
+      { lang: 'Frankish', original: '*Dagoberht', translit: '', meaning: 'bright day (dag \'day\' + berht \'bright, famous\')' },
+      { lang: 'Latin', original: 'Dagobertus', translit: '', meaning: 'Latinised form used in Frankish chronicles' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Basilica_of_Saint_Denis%2C_Paris%2C_interior%2C_tomb_of_Dagobert_I.jpg/960px-Basilica_of_Saint_Denis%2C_Paris%2C_interior%2C_tomb_of_Dagobert_I.jpg'],
     parentId: 'merovingian-bloodlines',
     name: 'King Dagobert I',
@@ -2605,6 +3374,10 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'clovis_ii',
+    translations: [
+      { lang: 'Frankish', original: '*Hlōdowig', translit: '', meaning: 'famous in battle (hlōd \'fame\' + wīg \'battle, warrior\'); later Ludwig, Louis' },
+      { lang: 'Latin', original: 'Chlodovechus', translit: '', meaning: 'Latinised form used in Frankish chronicles' }
+    ],
     parentId: 'merovingian-bloodlines',
     name: 'Clovis II',
     description: 'King of Neustria and Burgundy, ruled under the regency of his mother and Mayor of the Palace Erchinoald.',
@@ -2613,6 +3386,10 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'childeric_ii',
+    translations: [
+      { lang: 'Frankish', original: '*Hildirīk', translit: '', meaning: 'battle-ruler (hild \'battle\' + rīk \'ruler, powerful\')' },
+      { lang: 'Latin', original: 'Childericus', translit: '', meaning: 'Latinised form used in Frankish chronicles' }
+    ],
     parentId: 'merovingian-bloodlines',
     name: 'Childeric II',
     description: 'King of Austrasia, Neustria, and Burgundy. Assassinated during a hunting trip.',
@@ -2621,6 +3398,10 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'dagobert_ii',
+    translations: [
+      { lang: 'Frankish', original: '*Dagoberht', translit: '', meaning: 'bright day (dag \'day\' + berht \'bright, famous\')' },
+      { lang: 'Latin', original: 'Dagobertus', translit: '', meaning: 'Latinised form used in Frankish chronicles' }
+    ],
     parentId: 'merovingian-bloodlines',
     name: 'King Dagobert II',
     description: 'Assassinated Merovingian king. In alternative lore, his survival and lineage form the foundation of the Priory of Sion.',
@@ -2629,6 +3410,10 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'charlemagne',
+    translations: [
+      { lang: 'Latin', original: 'Carolus Magnus', translit: '', meaning: 'Charles the Great' },
+      { lang: 'Old High German', original: 'Karl', translit: '', meaning: 'free man, man (Proto-Germanic *karlaz)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Charlemagne_denier_Mayence_812_814.jpg/960px-Charlemagne_denier_Mayence_812_814.jpg'],
     parentId: 'royal-bloodlines',
     name: 'Charlemagne',
@@ -2646,6 +3431,9 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'alfred_the_great',
+    translations: [
+      { lang: 'Old English', original: 'Ælfrǣd', translit: '', meaning: 'elf-counsel (ælf, elf + rǣd, counsel)' }
+    ],
     parentId: 'royal-bloodlines',
     name: 'Alfred the Great',
     description: 'King of the Anglo-Saxons, defender of England against the Vikings, and promoter of literacy. Lived 50 years.',
@@ -2654,6 +3442,9 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'edward_elder',
+    translations: [
+      { lang: 'Old English', original: 'Ēadweard', translit: '', meaning: 'wealth-guardian (ēad, prosperity + weard, guardian)' }
+    ],
     parentId: 'royal-bloodlines',
     name: 'Edward the Elder',
     description: 'King of the Anglo-Saxons, conquered Danish-held territories in East Anglia and the Midlands.',
@@ -2662,6 +3453,9 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'edmund_i',
+    translations: [
+      { lang: 'Old English', original: 'Ēadmund', translit: '', meaning: 'wealth-protector (ēad, prosperity + mund, protection)' }
+    ],
     parentId: 'royal-bloodlines',
     name: 'Edmund I',
     description: 'King of the English, conquered Strathclyde and established political control over northern realms.',
@@ -2670,6 +3464,9 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'edgar_peaceful',
+    translations: [
+      { lang: 'Old English', original: 'Ēadgār', translit: '', meaning: 'wealth-spear (ēad, prosperity + gār, spear)' }
+    ],
     parentId: 'royal-bloodlines',
     name: 'Edgar the Peaceful',
     description: 'King of the English. His reign marked the apex of Anglo-Saxon unity and peace.',
@@ -2678,6 +3475,10 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'aethelred_unready',
+    translations: [
+      { lang: 'Old English', original: 'Æþelrǣd', translit: '', meaning: 'noble counsel (æþele, noble + rǣd, counsel)' },
+      { lang: 'Old English', original: 'unrǣd', translit: '', meaning: 'ill counsel, folly; the epithet puns on his name, not \'unprepared\'' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Ethelred_the_Unready.jpg/960px-Ethelred_the_Unready.jpg'],
     parentId: 'royal-bloodlines',
     name: 'Æthelred the Unready',
@@ -2687,6 +3488,9 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'edmund_ironside',
+    translations: [
+      { lang: 'Old English', original: 'Ēadmund', translit: '', meaning: 'wealth-protector (ēad, prosperity + mund, protection)' }
+    ],
     relatedIds: ['edward_exile'],
     parentId: 'royal-bloodlines',
     name: 'Edmund Ironside',
@@ -2696,6 +3500,9 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'edward_exile',
+    translations: [
+      { lang: 'Old English', original: 'Ēadweard', translit: '', meaning: 'wealth-guardian (ēad, prosperity + weard, guardian)' }
+    ],
     relatedIds: ['edmund_ironside'],
     parentId: 'royal-bloodlines',
     name: 'Edward the Exile',
@@ -2715,6 +3522,9 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'malcolm_iii',
+    translations: [
+      { lang: 'Old Irish', original: 'Máel Coluim', translit: '', meaning: 'devotee (tonsured servant) of Saint Columba' }
+    ],
     relatedIds: ['margaret_scotland'],
     parentId: 'royal-bloodlines',
     name: 'Malcolm III of Scotland',
@@ -2743,6 +3553,9 @@ const chunk_0: any[] = [  {
     sources: ['Frankish Annals', 'Historical Genealogy Records', 'Merovingian Grail Lore']
   },  {
     id: 'william_conqueror',
+    translations: [
+      { lang: 'Old High German', original: 'Willahelm', translit: '', meaning: 'will-helmet (willo, will, desire + helm, helmet, protection)' }
+    ],
     relatedIds: ['structure-windsor-castle-node', 'henry_i'],
     parentId: 'royal-bloodlines',
     name: 'William the Conqueror',
@@ -3028,6 +3841,9 @@ const chunk_0: any[] = [  {
     sources: ['Modern UFOlogy Literature', 'Close Encounter Witness Records']
   },  {
     id: 'reptilians',
+    translations: [
+      { lang: 'Latin', original: 'reptilis', translit: '', meaning: 'creeping, crawling (from rēpere \'to creep\')' }
+    ],
     relatedIds: ['anomaly-Cattle-Mutilations-dulce-new-mexico-1976', 'archaeology-ubaid-lizard-figurines'],
     parentId: 'aliens',
     name: 'Reptilians',
@@ -3055,12 +3871,18 @@ const chunk_0: any[] = [  {
     sources: ['Modern UFOlogy Literature', 'Close Encounter Witness Records']
   },  {
     id: 'orbs',
+    translations: [
+      { lang: 'Latin', original: 'orbis', translit: '', meaning: 'circle, disc, ring; later sphere, globe' }
+    ],
     parentId: 'aliens',
     name: 'Orbs',
     description: 'These spheres of light are said to be UFOs or alien probes. They are often reported to move erratically and disappear suddenly.',
     sources: ['Modern UFOlogy Literature', 'Close Encounter Witness Records']
   },  {
     id: 'space-anomalies-br',
+    translations: [
+      { lang: 'Greek', original: 'ἀνωμαλία', translit: 'anōmalia', meaning: 'irregularity, unevenness (an- \'not\' + homalos \'even, level\')' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/GPB_circling_earth.jpg/960px-GPB_circling_earth.jpg'],
     relatedIds: ['philadelphia-experiment'],
     parentId: 'supernatural-anomalies',
@@ -3083,6 +3905,9 @@ const chunk_0: any[] = [  {
     sources: ['Astrophysics Literature', 'Theoretical Physics Papers']
   },  {
     id: 'portals',
+    translations: [
+      { lang: 'Latin', original: 'porta', translit: '', meaning: 'gate, city gate, door (Medieval Latin portāle \'gateway\')' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Portals%2C_%C3%89glise_Saint-Andr%C3%A9%2C_Niort.jpg/960px-Portals%2C_%C3%89glise_Saint-Andr%C3%A9%2C_Niort.jpg'],
     parentId: 'space-anomalies-br',
     name: 'Portals',
@@ -3091,6 +3916,10 @@ const chunk_0: any[] = [  {
     sources: ['Astrophysics Literature', 'Theoretical Physics Papers']
   },  {
     id: 'the-veil',
+    translations: [
+      { lang: 'Latin', original: 'vēlum', translit: '', meaning: 'sail, awning, curtain, covering' },
+      { lang: 'Hebrew', original: 'פָּרֹכֶת', translit: 'pārōḵeṯ', meaning: 'the curtain screening the Holy of Holies (Exodus 26:31)' }
+    ],
     parentId: 'space-anomalies-br',
     name: 'The Veil',
     description: 'The metaphysical barrier separating the physical universe from spiritual, higher-dimensional, or unseen realities.',
@@ -3105,6 +3934,10 @@ const chunk_0: any[] = [  {
     layer: 'Biblical Figures'
   },  {
     id: 'adam',
+    translations: [
+      { lang: 'Hebrew', original: 'אָדָם', translit: 'ʾāḏām', meaning: 'man, humankind; linked to ʾăḏāmāh, ground, and ʾāḏōm, red' },
+      { lang: 'Greek', original: 'Ἀδάμ', translit: 'Adám', meaning: 'Septuagint form of the name' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Michelangelo%2C_Creation_of_Adam_03.jpg/960px-Michelangelo%2C_Creation_of_Adam_03.jpg'],
     relatedIds: ['enoch3-shekinah-withdrawal'],
     parentId: 'biblical-figures',
@@ -3116,6 +3949,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Yahweh God formed man from the dust of the ground, and breathed into his nostrils the breath of life; and man became a living soul. — Genesis 2:7 (https://www.biblegateway.com/passage/?search=Genesis+2%3A7)', 'By the sweat of your face will you eat bread until you return to the ground, for out of it you were taken. For you are dust, and to dust you shall return.” — Genesis 3:19 (https://www.biblegateway.com/passage/?search=Genesis+3%3A19)', 'So also it is written, “The first man, Adam, became a living soul.” The last Adam became a life-giving spirit. — 1 Corinthians 15:45 (https://www.biblegateway.com/passage/?search=1+Corinthians+15%3A45)']
   },  {
     id: 'eve',
+    translations: [
+      { lang: 'Hebrew', original: 'חַוָּה', translit: 'Ḥawwāh', meaning: 'living one, life-giver (ḥāyāh, to live; Genesis 3:20)' },
+      { lang: 'Greek', original: 'Εὔα', translit: 'Eúa', meaning: 'Septuagint form of the name' }
+    ],
     parentId: 'biblical-figures',
     name: 'Eve',
     description: 'The first woman, created by God from Adam\'s rib. Mother of Cain, Abel, Seth, and others.',
@@ -3125,6 +3962,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Yahweh God made a woman from the rib which he had taken from the man, and brought her to the man. — Genesis 2:22 (https://www.biblegateway.com/passage/?search=Genesis+2%3A22)', 'The man called his wife Eve because she would be the mother of all the living. — Genesis 3:20 (https://www.biblegateway.com/passage/?search=Genesis+3%3A20)', 'But I am afraid that somehow, as the serpent deceived Eve in his craftiness, so your minds might be corrupted from the simplicity that is in Christ. — 2 Corinthians 11:3 (https://www.biblegateway.com/passage/?search=2+Corinthians+11%3A3)']
   },  {
     id: 'cain',
+    translations: [
+      { lang: 'Hebrew', original: 'קַיִן', translit: 'Qayin', meaning: 'acquired, gotten (wordplay on qānāh, Genesis 4:1); also \'smith\', \'spear\'' },
+      { lang: 'Greek', original: 'Κάϊν', translit: 'Káïn', meaning: 'Septuagint form of the name' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Peter_Paul_Rubens_-_Cain_slaying_Abel_%28Courtauld_Institute%29.jpg/960px-Peter_Paul_Rubens_-_Cain_slaying_Abel_%28Courtauld_Institute%29.jpg'],
     parentId: 'biblical-figures',
     name: 'Cain',
@@ -3136,6 +3977,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['The man knew Eve his wife. She conceived, and gave birth to Cain, and said, “I have gotten a man with Yahweh’s help.” — Genesis 4:1 (https://www.biblegateway.com/passage/?search=Genesis+4%3A1)', 'Cain said to Abel, his brother, “Let’s go into the field.” While they were in the field, Cain rose up against Abel, his brother, and killed him. — Genesis 4:8 (https://www.biblegateway.com/passage/?search=Genesis+4%3A8)', 'unlike Cain, who was of the evil one, and killed his brother. Why did he kill him? Because his deeds were evil, and his brother’s righteous. — 1 John 3:12 (https://www.biblegateway.com/passage/?search=1+John+3%3A12)']
   },  {
     id: 'abel',
+    translations: [
+      { lang: 'Hebrew', original: 'הֶבֶל', translit: 'Heḇel', meaning: 'breath, vapour, vanity (the word used in Ecclesiastes)' },
+      { lang: 'Akkadian', original: 'aplu', translit: '', meaning: 'son, heir; proposed as the name\'s original source' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Peter_Paul_Rubens_-_Cain_slaying_Abel_%28Courtauld_Institute%29.jpg/960px-Peter_Paul_Rubens_-_Cain_slaying_Abel_%28Courtauld_Institute%29.jpg'],
     parentId: 'biblical-figures',
     name: 'Abel',
@@ -3146,6 +3991,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Again she gave birth, to Cain’s brother Abel. Abel was a keeper of sheep, but Cain was a tiller of the ground. — Genesis 4:2 (https://www.biblegateway.com/passage/?search=Genesis+4%3A2)', 'that on you may come all the righteous blood shed on the earth, from the blood of righteous Abel to the blood of Zachariah son of Barachiah, whom you killed between the sanctuary and the altar. — Matthew 23:35 (https://www.biblegateway.com/passage/?search=Matthew+23%3A35)', 'By faith, Abel offered to God a more excellent sacrifice than Cain, through which he had testimony given to him that he was righteous, God testifying with respect to his gifts; and through it he, being dead, still speaks. — Hebrews 11:4 (https://www.biblegateway.com/passage/?search=Hebrews+11%3A4)']
   },  {
     id: 'enosh',
+    translations: [
+      { lang: 'Hebrew', original: 'אֱנוֹשׁ', translit: 'ʾĔnôš', meaning: 'man, mortal, humankind' }
+    ],
     relatedIds: ['enoch3-shekinah-withdrawal'],
     parentId: 'biblical-figures',
     name: 'Enosh',
@@ -3156,6 +4004,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['A son was also born to Seth, and he named him Enosh. At that time men began to call on Yahweh’s name. — Genesis 4:26 (https://www.biblegateway.com/passage/?search=Genesis+4%3A26)', 'Seth lived one hundred five years, then became the father of Enosh. Seth lived after he became the father of Enosh eight hundred seven years, and became the father of other sons and daughters. All of the days of Seth were nine hundred twelve years, then he died. — Genesis 5:6-8 (https://www.biblegateway.com/passage/?search=Genesis+5%3A6-8)', 'the son of Enos, the son of Seth, the son of Adam, the son of God. — Luke 3:38 (https://www.biblegateway.com/passage/?search=Luke+3%3A38)']
   },  {
     id: 'kenan',
+    translations: [
+      { lang: 'Hebrew', original: 'קֵינָן', translit: 'Qênān', meaning: 'uncertain; perhaps \'possession\' or \'smith\', related to Cain (qayin)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Biblical_antediluvian_patriarch_Cainan%2C_Kenan.jpg/960px-Biblical_antediluvian_patriarch_Cainan%2C_Kenan.jpg'],
     parentId: 'biblical-figures',
     name: 'Kenan',
@@ -3166,6 +4017,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Enosh lived ninety years, and became the father of Kenan. Enosh lived after he became the father of Kenan, eight hundred fifteen years, and became the father of other sons and daughters. All of the days of Enosh were nine hundred five years, then he died. Kenan lived seventy years, then became the father of Mahalalel. Kenan lived after he became the father of Mahalalel eight hundred forty years, and became the father of other sons and daughters and all of the days of Kenan were nine hundred ten years, then he died. — Genesis 5:9-14 (https://www.biblegateway.com/passage/?search=Genesis+5%3A9-14)', 'Kenan, Mahalalel, Jared, — 1 Chronicles 1:2 (https://www.biblegateway.com/passage/?search=1+Chronicles+1%3A2)', 'the son of Methuselah, the son of Enoch, the son of Jared, the son of Mahalaleel, the son of Cainan, — Luke 3:37 (https://www.biblegateway.com/passage/?search=Luke+3%3A37)']
   },  {
     id: 'mahalalel',
+    translations: [
+      { lang: 'Hebrew', original: 'מַהֲלַלְאֵל', translit: 'Mahălalʾēl', meaning: 'praise of God (mahălal, praise + ʾēl, God)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Mahalalel%2C_son_of_Kenan%2C_human_biblical_figure.jpg/960px-Mahalalel%2C_son_of_Kenan%2C_human_biblical_figure.jpg'],
     relatedIds: ['enoch-family', 'enoch-family-jared'],
     parentId: 'biblical-figures',
@@ -3177,6 +4031,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Mahalalel lived sixty-five years, then became the father of Jared. Mahalalel lived after he became the father of Jared eight hundred thirty years, and became the father of other sons and daughters. All of the days of Mahalalel were eight hundred ninety-five years, then he died. — Genesis 5:15-17 (https://www.biblegateway.com/passage/?search=Genesis+5%3A15-17)', 'Kenan, Mahalalel, Jared, — 1 Chronicles 1:2 (https://www.biblegateway.com/passage/?search=1+Chronicles+1%3A2)', 'the son of Methuselah, the son of Enoch, the son of Jared, the son of Mahalaleel, the son of Cainan, — Luke 3:37 (https://www.biblegateway.com/passage/?search=Luke+3%3A37)']
   },  {
     id: 'jared',
+    translations: [
+      { lang: 'Hebrew', original: 'יֶרֶד', translit: 'Yereḏ', meaning: 'descent (yāraḏ, to go down)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Canterbury_Cathedral%2C_window_S28_detail_%2845789806014%29.jpg/960px-Canterbury_Cathedral%2C_window_S28_detail_%2845789806014%29.jpg'],
     relatedIds: ['enoch-family', 'enoch-family-jared'],
     parentId: 'biblical-figures',
@@ -3188,6 +4045,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Jared lived one hundred sixty-two years, then became the father of Enoch. Jared lived after he became the father of Enoch eight hundred years, and became the father of other sons and daughters. All of the days of Jared were nine hundred sixty-two years, then he died. — Genesis 5:18-20 (https://www.biblegateway.com/passage/?search=Genesis+5%3A18-20)', 'Kenan, Mahalalel, Jared, — 1 Chronicles 1:2 (https://www.biblegateway.com/passage/?search=1+Chronicles+1%3A2)', 'the son of Methuselah, the son of Enoch, the son of Jared, the son of Mahalaleel, the son of Cainan, — Luke 3:37 (https://www.biblegateway.com/passage/?search=Luke+3%3A37)']
   },  {
     id: 'methuselah',
+    translations: [
+      { lang: 'Hebrew', original: 'מְתוּשֶׁלַח', translit: 'Məṯûšelaḥ', meaning: 'man of the dart, javelin (mətû, man + šelaḥ); or \'man of (the god) Shelah\'' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Methuselah_Stained_glass.jpg/960px-Methuselah_Stained_glass.jpg'],
     relatedIds: ['great-flood', 'enoch-family', 'achuzan-altar-methuselah', 'enoch-family-methuselah'],
     parentId: 'biblical-figures',
@@ -3199,6 +4059,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Enoch lived sixty-five years, then became the father of Methuselah. After Methuselah’s birth, Enoch walked with God for three hundred years, and became the father of more sons and daughters. All the days of Enoch were three hundred sixty-five years. Enoch walked with God, and he was not found, for God took him. Methuselah lived one hundred eighty-seven years, then became the father of Lamech. Methuselah lived after he became the father of Lamech seven hundred eighty-two years, and became the father of other sons and daughters. All the days of Methuselah were nine hundred sixty-nine years, then he died. — Genesis 5:21-27 (https://www.biblegateway.com/passage/?search=Genesis+5%3A21-27)', 'Enoch, Methuselah, Lamech, — 1 Chronicles 1:3 (https://www.biblegateway.com/passage/?search=1+Chronicles+1%3A3)', 'the son of Methuselah, the son of Enoch, the son of Jared, the son of Mahalaleel, the son of Cainan, — Luke 3:37 (https://www.biblegateway.com/passage/?search=Luke+3%3A37)']
   },  {
     id: 'lamech',
+    translations: [
+      { lang: 'Hebrew', original: 'לֶמֶךְ', translit: 'Lemeḵ', meaning: 'meaning uncertain' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Lamech_and_Cain_MET_DP818832.jpg/960px-Lamech_and_Cain_MET_DP818832.jpg'],
     relatedIds: ['enoch-family', 'enoch-family-lamech'],
     parentId: 'biblical-figures',
@@ -3210,6 +4073,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Lamech lived one hundred eighty-two years, then became the father of a son. He named him Noah, saying, “This one will comfort us in our work and in the toil of our hands, caused by the ground which Yahweh has cursed.” Lamech lived after he became the father of Noah five hundred ninety-five years, and became the father of other sons and daughters. All the days of Lamech were seven hundred seventy-seven years, then he died. — Genesis 5:28-31 (https://www.biblegateway.com/passage/?search=Genesis+5%3A28-31)', 'Enoch, Methuselah, Lamech, — 1 Chronicles 1:3 (https://www.biblegateway.com/passage/?search=1+Chronicles+1%3A3)', 'the son of Cainan, the son of Arphaxad, the son of Shem, the son of Noah, the son of Lamech, — Luke 3:36 (https://www.biblegateway.com/passage/?search=Luke+3%3A36)']
   },  {
     id: 'shem',
+    translations: [
+      { lang: 'Hebrew', original: 'שֵׁם', translit: 'Šēm', meaning: 'name; renown, fame' }
+    ],
     parentId: 'biblical-figures',
     name: 'Shem',
     description: 'Son of Noah, ancestor of the Semitic peoples. Survived the Flood. Lived 600 years.',
@@ -3219,6 +4085,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Noah became the father of three sons: Shem, Ham, and Japheth. — Genesis 6:10 (https://www.biblegateway.com/passage/?search=Genesis+6%3A10)', 'He said, “Blessed be Yahweh, the God of Shem. Let Canaan be his servant. May God enlarge Japheth. Let him dwell in the tents of Shem. Let Canaan be his servant.” — Genesis 9:26-27 (https://www.biblegateway.com/passage/?search=Genesis+9%3A26-27)', 'the son of Cainan, the son of Arphaxad, the son of Shem, the son of Noah, the son of Lamech, — Luke 3:36 (https://www.biblegateway.com/passage/?search=Luke+3%3A36)']
   },  {
     id: 'ham',
+    translations: [
+      { lang: 'Hebrew', original: 'חָם', translit: 'Ḥām', meaning: 'hot, warm (ḥām); in the Psalms a name for Egypt' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Ham_%284%29.jpg/960px-Ham_%284%29.jpg'],
     parentId: 'biblical-figures',
     name: 'Ham',
@@ -3229,6 +4098,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Noah became the father of three sons: Shem, Ham, and Japheth. — Genesis 6:10 (https://www.biblegateway.com/passage/?search=Genesis+6%3A10)', 'Ham, the father of Canaan, saw the nakedness of his father, and told his two brothers outside. Shem and Japheth took a garment, and laid it on both their shoulders, went in backwards, and covered the nakedness of their father. Their faces were backwards, and they didn’t see their father’s nakedness. Noah awoke from his wine, and knew what his youngest son had done to him. He said, “Canaan is cursed. He will be a servant of servants to his brothers.” — Genesis 9:22-25 (https://www.biblegateway.com/passage/?search=Genesis+9%3A22-25)', 'Noah, Shem, Ham, and Japheth. — 1 Chronicles 1:4 (https://www.biblegateway.com/passage/?search=1+Chronicles+1%3A4)']
   },  {
     id: 'japheth',
+    translations: [
+      { lang: 'Hebrew', original: 'יֶפֶת', translit: 'Yep̄eṯ', meaning: 'may he enlarge (pāṯāh, to be wide; Genesis 9:27)' },
+      { lang: 'Greek', original: 'Ἰάφεθ', translit: 'Iápheth', meaning: 'Septuagint form; often compared with the Titan Iapetos' }
+    ],
     parentId: 'biblical-figures',
     name: 'Japheth',
     description: 'Son of Noah, ancestor of the maritime and northern nations. Survived the Flood. Lived approximately 540 years (historical estimate).',
@@ -3238,6 +4111,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Noah became the father of three sons: Shem, Ham, and Japheth. — Genesis 6:10 (https://www.biblegateway.com/passage/?search=Genesis+6%3A10)', 'May God enlarge Japheth. Let him dwell in the tents of Shem. Let Canaan be his servant.” — Genesis 9:27 (https://www.biblegateway.com/passage/?search=Genesis+9%3A27)', 'Noah, Shem, Ham, and Japheth. — 1 Chronicles 1:4 (https://www.biblegateway.com/passage/?search=1+Chronicles+1%3A4)']
   },  {
     id: 'cush',
+    translations: [
+      { lang: 'Egyptian', original: 'kꜣš', translit: 'Kash', meaning: 'Nubia, the land south of Egypt' },
+      { lang: 'Hebrew', original: 'כּוּשׁ', translit: 'Kûš', meaning: 'Nubia/Ethiopia; eponymous ancestor of the Cushites' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Cush_Jumbo%2C_2026.jpg/960px-Cush_Jumbo%2C_2026.jpg'],
     parentId: 'biblical-figures',
     name: 'Cush',
@@ -3248,6 +4125,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['The sons of Ham were: Cush, Mizraim, Put, and Canaan. The sons of Cush were: Seba, Havilah, Sabtah, Raamah, and Sabteca. The sons of Raamah were: Sheba and Dedan. Cush became the father of Nimrod. He began to be a mighty one in the earth. — Genesis 10:6-8 (https://www.biblegateway.com/passage/?search=Genesis+10%3A6-8)', 'The sons of Ham: Cush, Mizraim, Put, and Canaan. The sons of Cush: Seba, Havilah, Sabta, Raama, Sabteca. The sons of Raamah: Sheba and Dedan. Cush became the father of Nimrod. He began to be a mighty one in the earth. — 1 Chronicles 1:8-10 (https://www.biblegateway.com/passage/?search=1+Chronicles+1%3A8-10)', 'Princes shall come out of Egypt. Ethiopia shall hurry to stretch out her hands to God. — Psalm 68:31 (https://www.biblegateway.com/passage/?search=Psalm+68%3A31)']
   },  {
     id: 'arpachshad',
+    translations: [
+      { lang: 'Hebrew', original: 'אַרְפַּכְשַׁד', translit: 'ʾArpaḵšaḏ', meaning: 'uncertain; often linked to Arrapḫa (Kirkuk) or to the Chaldeans (Kaśdîm)' },
+      { lang: 'Greek', original: 'Ἀρφαξάδ', translit: 'Arphaxád', meaning: 'Septuagint form of the name' }
+    ],
     parentId: 'biblical-figures',
     name: 'Arpachshad',
     description: 'Son of Shem, born two years after the Flood. Lived 438 years.',
@@ -3257,6 +4138,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['This is the history of the generations of Shem: Shem was one hundred years old when he became the father of Arpachshad two years after the flood. Shem lived five hundred years after he became the father of Arpachshad, and became the father of more sons and daughters. Arpachshad lived thirty-five years and became the father of Shelah. Arpachshad lived four hundred three years after he became the father of Shelah, and became the father of more sons and daughters. — Genesis 11:10-13 (https://www.biblegateway.com/passage/?search=Genesis+11%3A10-13)', 'The sons of Shem: Elam, Asshur, Arpachshad, Lud, Aram, Uz, Hul, Gether, and Meshech. Arpachshad became the father of Shelah, and Shelah became the father of Eber. — 1 Chronicles 1:17-18 (https://www.biblegateway.com/passage/?search=1+Chronicles+1%3A17-18)', 'the son of Cainan, the son of Arphaxad, the son of Shem, the son of Noah, the son of Lamech, — Luke 3:36 (https://www.biblegateway.com/passage/?search=Luke+3%3A36)']
   },  {
     id: 'shelah',
+    translations: [
+      { lang: 'Hebrew', original: 'שָׁלַח', translit: 'Šālaḥ', meaning: 'sent forth; missile, shoot (from šālaḥ, to send)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Saharon_Shelah.jpg/960px-Saharon_Shelah.jpg'],
     parentId: 'biblical-figures',
     name: 'Shelah',
@@ -3267,6 +4151,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Arpachshad lived thirty-five years and became the father of Shelah. Arpachshad lived four hundred three years after he became the father of Shelah, and became the father of more sons and daughters. Shelah lived thirty years, and became the father of Eber. Shelah lived four hundred three years after he became the father of Eber, and became the father of more sons and daughters. — Genesis 11:12-15 (https://www.biblegateway.com/passage/?search=Genesis+11%3A12-15)', 'Arpachshad became the father of Shelah, and Shelah became the father of Eber. — 1 Chronicles 1:18 (https://www.biblegateway.com/passage/?search=1+Chronicles+1%3A18)', 'the son of Serug, the son of Reu, the son of Peleg, the son of Eber, the son of Shelah, — Luke 3:35 (https://www.biblegateway.com/passage/?search=Luke+3%3A35)']
   },  {
     id: 'eber',
+    translations: [
+      { lang: 'Hebrew', original: 'עֵבֶר', translit: 'ʿĒḇer', meaning: 'region beyond, the other side (ʿāḇar, to cross); eponym of \'Hebrew\' (ʿiḇrî)' }
+    ],
     parentId: 'biblical-figures',
     name: 'Eber',
     description: 'Son of Shelah. Ancestor of the Hebrews. Lived 464 years.',
@@ -3276,6 +4163,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Shelah lived thirty years, and became the father of Eber. Shelah lived four hundred three years after he became the father of Eber, and became the father of more sons and daughters. Eber lived thirty-four years, and became the father of Peleg. Eber lived four hundred thirty years after he became the father of Peleg, and became the father of more sons and daughters. — Genesis 11:14-17 (https://www.biblegateway.com/passage/?search=Genesis+11%3A14-17)', 'Arpachshad became the father of Shelah, and Shelah became the father of Eber. To Eber were born two sons: the name of the one was Peleg, for in his days the earth was divided; and his brother’s name was Joktan. — 1 Chronicles 1:18-19 (https://www.biblegateway.com/passage/?search=1+Chronicles+1%3A18-19)', 'the son of Serug, the son of Reu, the son of Peleg, the son of Eber, the son of Shelah, — Luke 3:35 (https://www.biblegateway.com/passage/?search=Luke+3%3A35)']
   },  {
     id: 'peleg',
+    translations: [
+      { lang: 'Hebrew', original: 'פֶּלֶג', translit: 'Peleḡ', meaning: 'division; watercourse, channel (from pālaḡ, to divide; Gen 10:25)' }
+    ],
     relatedIds: ['babel-evt'],
     parentId: 'biblical-figures',
     name: 'Peleg',
@@ -3286,6 +4176,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Eber lived thirty-four years, and became the father of Peleg. Eber lived four hundred thirty years after he became the father of Peleg, and became the father of more sons and daughters. Peleg lived thirty years, and became the father of Reu. Peleg lived two hundred nine years after he became the father of Reu, and became the father of more sons and daughters. — Genesis 11:16-19 (https://www.biblegateway.com/passage/?search=Genesis+11%3A16-19)', 'To Eber were born two sons: the name of the one was Peleg, for in his days the earth was divided; and his brother’s name was Joktan. — 1 Chronicles 1:19 (https://www.biblegateway.com/passage/?search=1+Chronicles+1%3A19)', 'the son of Serug, the son of Reu, the son of Peleg, the son of Eber, the son of Shelah, — Luke 3:35 (https://www.biblegateway.com/passage/?search=Luke+3%3A35)']
   },  {
     id: 'reu',
+    translations: [
+      { lang: 'Hebrew', original: 'רְעוּ', translit: 'Rəʿû', meaning: 'friend (from rēaʿ); possibly short for Reuel, \'friend of God\'' }
+    ],
     parentId: 'biblical-figures',
     name: 'Reu',
     description: 'Son of Peleg. Lived 239 years.',
@@ -3313,6 +4206,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Serug lived thirty years, and became the father of Nahor. Serug lived two hundred years after he became the father of Nahor, and became the father of more sons and daughters. Nahor lived twenty-nine years, and became the father of Terah. Nahor lived one hundred nineteen years after he became the father of Terah, and became the father of more sons and daughters. — Genesis 11:22-25 (https://www.biblegateway.com/passage/?search=Genesis+11%3A22-25)', 'Serug, Nahor, Terah, — 1 Chronicles 1:26 (https://www.biblegateway.com/passage/?search=1+Chronicles+1%3A26)', 'the son of Jacob, the son of Isaac, the son of Abraham, the son of Terah, the son of Nahor, — Luke 3:34 (https://www.biblegateway.com/passage/?search=Luke+3%3A34)']
   },  {
     id: 'terah',
+    translations: [
+      { lang: 'Hebrew', original: 'תֶּרַח', translit: 'Teraḥ', meaning: 'meaning uncertain; sometimes linked to Akkadian turāḫu, \'ibex\', or to a place near Harran' }
+    ],
     parentId: 'biblical-figures',
     name: 'Terah',
     description: 'Son of Nahor and father of Abraham. Set out from Ur of the Chaldeans but settled in Harran. Lived 205 years.',
@@ -3322,6 +4218,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Nahor lived twenty-nine years, and became the father of Terah. Nahor lived one hundred nineteen years after he became the father of Terah, and became the father of more sons and daughters. Terah lived seventy years, and became the father of Abram, Nahor, and Haran. Now this is the history of the generations of Terah. Terah became the father of Abram, Nahor, and Haran. Haran became the father of Lot. Haran died before his father Terah in the land of his birth, in Ur of the Chaldees. Abram and Nahor married wives. The name of Abram’s wife was Sarai, and the name of Nahor’s wife was Milcah, the daughter of Haran who was also the father of Iscah. Sarai was barren. She had no child. Terah took Abram his son, Lot the son of Haran, his son’s son, and Sarai his daughter-in-law, his son Abram’s wife. They went from Ur of the Chaldees, to go into the land of Canaan. They came to Haran and lived there. The days of Terah were two hundred five years. Terah died in Haran. — Genesis 11:24-32 (https://www.biblegateway.com/passage/?search=Genesis+11%3A24-32)', 'Joshua said to all the people, “Yahweh says, the God of Israel, ‘Your fathers lived of old time beyond the River, even Terah, the father of Abraham, and the father of Nahor: and they served other gods. — Joshua 24:2 (https://www.biblegateway.com/passage/?search=Joshua+24%3A2)', 'the son of Jacob, the son of Isaac, the son of Abraham, the son of Terah, the son of Nahor, — Luke 3:34 (https://www.biblegateway.com/passage/?search=Luke+3%3A34)']
   },  {
     id: 'sarah',
+    translations: [
+      { lang: 'Hebrew', original: 'שָׂרָה', translit: 'Śārāh', meaning: 'princess, noblewoman (feminine of śar, chief, prince)' },
+      { lang: 'Hebrew', original: 'שָׂרַי', translit: 'Śāray', meaning: 'Sarai, her earlier name; probably \'my princess\' or an archaic form of the same' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/James_Jacques_Joseph_Tissot_-_Abram%27s_Counsel_to_Sarai_-_Google_Art_Project_%28cropped%29.jpg/960px-James_Jacques_Joseph_Tissot_-_Abram%27s_Counsel_to_Sarai_-_Google_Art_Project_%28cropped%29.jpg'],
     parentId: 'biblical-figures',
     name: 'Sarah',
@@ -3332,6 +4232,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['God said to Abraham, “As for Sarai your wife, you shall not call her name Sarai, but her name will be Sarah. I will bless her, and moreover I will give you a son by her. Yes, I will bless her, and she will be a mother of nations. Kings of peoples will come from her.” — Genesis 17:15-16 (https://www.biblegateway.com/passage/?search=Genesis+17%3A15-16)', 'Yahweh visited Sarah as he had said, and Yahweh did to Sarah as he had spoken. Sarah conceived, and bore Abraham a son in his old age, at the set time of which God had spoken to him. — Genesis 21:1-2 (https://www.biblegateway.com/passage/?search=Genesis+21%3A1-2)', 'By faith, even Sarah herself received power to conceive, and she bore a child when she was past age, since she counted him faithful who had promised. — Hebrews 11:11 (https://www.biblegateway.com/passage/?search=Hebrews+11%3A11)']
   },  {
     id: 'ishmael',
+    translations: [
+      { lang: 'Hebrew', original: 'יִשְׁמָעֵאל', translit: 'Yišmāʿēʾl', meaning: 'God hears, God will hear (šāmaʿ, to hear + ʾēl)' },
+      { lang: 'Arabic', original: 'إِسْمَاعِيل', translit: 'ʾIsmāʿīl', meaning: 'Arabic form; ancestor of the Arabs in Islamic tradition' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Oldtestamentthre0001unse_0096_%28cropped%29.jpg/960px-Oldtestamentthre0001unse_0096_%28cropped%29.jpg'],
     relatedIds: ['rabbi-ishmael-3-enoch'],
     parentId: 'biblical-figures',
@@ -3343,6 +4247,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Yahweh’s angel said to her, “Behold, you are with child, and will bear a son. You shall call his name Ishmael, because Yahweh has heard your affliction. He will be like a wild donkey among men. His hand will be against every man, and every man’s hand against him. He will live opposite all of his brothers.” — Genesis 16:11-12 (https://www.biblegateway.com/passage/?search=Genesis+16%3A11-12)', 'God heard the voice of the boy. The angel of God called to Hagar out of the sky, and said to her, “What ails you, Hagar? Don’t be afraid. For God has heard the voice of the boy where he is. Get up, lift up the boy, and hold him in your hand. For I will make him a great nation.” — Genesis 21:17-18 (https://www.biblegateway.com/passage/?search=Genesis+21%3A17-18)', 'For it is written that Abraham had two sons, one by the servant, and one by the free woman. However, the son by the servant was born according to the flesh, but the son by the free woman was born through promise. — Galatians 4:22-23 (https://www.biblegateway.com/passage/?search=Galatians+4%3A22-23)']
   },  {
     id: 'isaac',
+    translations: [
+      { lang: 'Hebrew', original: 'יִצְחָק', translit: 'Yiṣḥāq', meaning: 'he laughs, he will laugh (ṣāḥaq; Genesis 17:17, 21:6)' },
+      { lang: 'Greek', original: 'Ἰσαάκ', translit: 'Isaák', meaning: 'Septuagint form of the name' }
+    ],
     parentId: 'biblical-figures',
     name: 'Isaac',
     description: 'Son of Abraham and Sarah, born in their old age. Father of Jacob and Esau. Lived 180 years.',
@@ -3352,6 +4260,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Abraham called his son who was born to him, whom Sarah bore to him, Isaac. — Genesis 21:3 (https://www.biblegateway.com/passage/?search=Genesis+21%3A3)', 'They came to the place which God had told him of. Abraham built the altar there, and laid the wood in order, bound Isaac his son, and laid him on the altar, on the wood. Abraham stretched out his hand, and took the knife to kill his son. Yahweh’s angel called to him out of the sky, and said, “Abraham, Abraham!” He said, “Here I am.” He said, “Don’t lay your hand on the boy or do anything to him. For now I know that you fear God, since you have not withheld your son, your only son, from me.” — Genesis 22:9-12 (https://www.biblegateway.com/passage/?search=Genesis+22%3A9-12)', 'By faith, Isaac blessed Jacob and Esau, even concerning things to come. — Hebrews 11:20 (https://www.biblegateway.com/passage/?search=Hebrews+11%3A20)']
   },  {
     id: 'rebekah',
+    translations: [
+      { lang: 'Hebrew', original: 'רִבְקָה', translit: 'Riḇqāh', meaning: 'uncertain; traditionally linked to a root \'to tie, bind\' (cf. Arabic ribqa, tether)' }
+    ],
     parentId: 'biblical-figures',
     name: 'Rebekah',
     description: 'Wife of Isaac and mother of Jacob and Esau.',
@@ -3361,6 +4272,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Before he had finished speaking, behold, Rebekah came out, who was born to Bethuel the son of Milcah, the wife of Nahor, Abraham’s brother, with her pitcher on her shoulder. — Genesis 24:15 (https://www.biblegateway.com/passage/?search=Genesis+24%3A15)', 'Isaac brought her into his mother Sarah’s tent, and took Rebekah, and she became his wife. He loved her. Isaac was comforted after his mother’s death. — Genesis 24:67 (https://www.biblegateway.com/passage/?search=Genesis+24%3A67)', 'Not only so, but Rebekah also conceived by one, by our father Isaac. — Romans 9:10 (https://www.biblegateway.com/passage/?search=Romans+9%3A10)']
   },  {
     id: 'esau',
+    translations: [
+      { lang: 'Hebrew', original: 'עֵשָׂו', translit: 'ʿĒśāw', meaning: 'uncertain; traditionally \'hairy\' (śēʿār), cf. Genesis 25:25' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Esau_and_Jacob_%28cropped%29.jpg/960px-Esau_and_Jacob_%28cropped%29.jpg'],
     relatedIds: ['edomites', 'prophecy-edom-obadiah'],
     parentId: 'biblical-figures',
@@ -3372,6 +4286,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['The first came out red all over, like a hairy garment. They named him Esau. — Genesis 25:25 (https://www.biblegateway.com/passage/?search=Genesis+25%3A25)', 'Jacob boiled stew. Esau came in from the field, and he was famished. Esau said to Jacob, “Please feed me with that same red stew, for I am famished.” Therefore his name was called Edom. Jacob said, “First, sell me your birthright.” Esau said, “Behold, I am about to die. What good is the birthright to me?” Jacob said, “Swear to me first.” He swore to him. He sold his birthright to Jacob. Jacob gave Esau bread and stew of lentils. He ate and drank, rose up, and went his way. So Esau despised his birthright. — Genesis 25:29-34 (https://www.biblegateway.com/passage/?search=Genesis+25%3A29-34)', 'lest there be any sexually immoral person, or profane person, like Esau, who sold his birthright for one meal. For you know that even when he afterward desired to inherit the blessing, he was rejected, for he found no place for a change of mind though he sought it diligently with tears. — Hebrews 12:16-17 (https://www.biblegateway.com/passage/?search=Hebrews+12%3A16-17)']
   },  {
     id: 'jacob',
+    translations: [
+      { lang: 'Hebrew', original: 'יַעֲקֹב', translit: 'Yaʿăqōḇ', meaning: 'heel-grabber, supplanter (ʿāqēḇ, heel; Genesis 25:26); orig. \'may God protect\'' },
+      { lang: 'Greek', original: 'Ἰακώβ', translit: 'Iakṓb', meaning: 'Septuagint form of the name' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Jan_Victors_-_Jacob_Seeking_the_Forgiveness_of_Esau_-_79.330_-_Indianapolis_Museum_of_Art_%28cropped%29.jpg/960px-Jan_Victors_-_Jacob_Seeking_the_Forgiveness_of_Esau_-_79.330_-_Indianapolis_Museum_of_Art_%28cropped%29.jpg'],
     parentId: 'biblical-figures',
     name: 'Jacob',
@@ -3382,6 +4300,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['After that, his brother came out, and his hand had hold on Esau’s heel. He was named Jacob. Isaac was sixty years old when she bore them. — Genesis 25:26 (https://www.biblegateway.com/passage/?search=Genesis+25%3A26)', 'He said, “Your name will no longer be called Jacob, but Israel; for you have fought with God and with men, and have prevailed.” — Genesis 32:28 (https://www.biblegateway.com/passage/?search=Genesis+32%3A28)', 'Even as it is written, “Jacob I loved, but Esau I hated.” — Romans 9:13 (https://www.biblegateway.com/passage/?search=Romans+9%3A13)']
   },  {
     id: 'leah',
+    translations: [
+      { lang: 'Hebrew', original: 'לֵאָה', translit: 'Lēʾāh', meaning: 'traditionally \'weary\' (from lāʾâ); possibly \'wild cow\' (cf. Akkadian littu)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Michelangelo-Leah.jpg/960px-Michelangelo-Leah.jpg'],
     parentId: 'biblical-figures',
     name: 'Leah',
@@ -3392,6 +4313,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Laban had two daughters. The name of the elder was Leah, and the name of the younger was Rachel. Leah’s eyes were weak, but Rachel was beautiful in form and attractive. — Genesis 29:16-17 (https://www.biblegateway.com/passage/?search=Genesis+29%3A16-17)', 'Yahweh saw that Leah was hated, and he opened her womb, but Rachel was barren. Leah conceived, and bore a son, and she named him Reuben. For she said, “Because Yahweh has looked at my affliction; for now my husband will love me.” She conceived again, and bore a son, and said, “Because Yahweh has heard that I am hated, he has therefore given me this son also.” She named him Simeon. She conceived again, and bore a son. Said, “Now this time will my husband be joined to me, because I have borne him three sons.” Therefore his name was called Levi. She conceived again, and bore a son. She said, “This time will I praise Yahweh.” Therefore she named him Judah. Then she stopped bearing. — Genesis 29:31-35 (https://www.biblegateway.com/passage/?search=Genesis+29%3A31-35)', 'All the people who were in the gate, and the elders, said, “We are witnesses. May Yahweh make the woman who has come into your house like Rachel and like Leah, which both built the house of Israel; and treat you worthily in Ephrathah, and be famous in Bethlehem. — Ruth 4:11 (https://www.biblegateway.com/passage/?search=Ruth+4%3A11)']
   },  {
     id: 'rachel',
+    translations: [
+      { lang: 'Hebrew', original: 'רָחֵל', translit: 'Rāḥēl', meaning: 'ewe' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Foster_Bible_Pictures_0044-1_Jacob_and_Rachel_at_the_Well.jpg/960px-Foster_Bible_Pictures_0044-1_Jacob_and_Rachel_at_the_Well.jpg'],
     parentId: 'biblical-figures',
     name: 'Rachel',
@@ -3402,6 +4326,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Leah’s eyes were weak, but Rachel was beautiful in form and attractive. — Genesis 29:17 (https://www.biblegateway.com/passage/?search=Genesis+29%3A17)', 'God remembered Rachel, and God listened to her, and opened her womb. She conceived, bore a son, and said, “God has taken away my reproach.” She named him Joseph, saying, “May Yahweh add another son to me.” — Genesis 30:22-24 (https://www.biblegateway.com/passage/?search=Genesis+30%3A22-24)', 'Yahweh says: “A voice is heard in Ramah, lamentation and bitter weeping, Rachel weeping for her children. She refuses to be comforted for her children, because they are no more.” — Jeremiah 31:15 (https://www.biblegateway.com/passage/?search=Jeremiah+31%3A15)']
   },  {
     id: 'judah',
+    translations: [
+      { lang: 'Hebrew', original: 'יְהוּדָה', translit: 'Yəhûḏāh', meaning: 'praised, let him be praised (yāḏāh, Genesis 29:35); source of \'Jew\'' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Judah_%28Francisco_de_Zurbar%C3%A1n%29.jpg/960px-Judah_%28Francisco_de_Zurbar%C3%A1n%29.jpg'],
     relatedIds: ['tribe-of-judah'],
     parentId: 'biblical-figures',
@@ -3413,6 +4340,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['She conceived again, and bore a son. She said, “This time will I praise Yahweh.” Therefore she named him Judah. Then she stopped bearing. — Genesis 29:35 (https://www.biblegateway.com/passage/?search=Genesis+29%3A35)', '“Judah, your brothers will praise you. Your hand will be on the neck of your enemies. Your father’s sons will bow down before you. Judah is a lion’s cub. From the prey, my son, you have gone up. He stooped down, he crouched as a lion, as a lioness. Who will rouse him up? The scepter will not depart from Judah, nor the ruler’s staff from between his feet, until he comes to whom it belongs. To him will the obedience of the peoples be. — Genesis 49:8-10 (https://www.biblegateway.com/passage/?search=Genesis+49%3A8-10)', 'One of the elders said to me, “Don’t weep. Behold, the Lion who is of the tribe of Judah, the Root of David, has overcome; he who opens the book and its seven seals.” — Revelation 5:5 (https://www.biblegateway.com/passage/?search=Revelation+5%3A5)']
   },  {
     id: 'levi',
+    translations: [
+      { lang: 'Hebrew', original: 'לֵוִי', translit: 'Lēwî', meaning: 'joined, attached (from lāwâ, to join; Gen 29:34)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Levi%27s_Times_Square_NYC_-_May_2026.jpg/960px-Levi%27s_Times_Square_NYC_-_May_2026.jpg'],
     parentId: 'biblical-figures',
     name: 'Levi',
@@ -3423,6 +4353,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['She conceived again, and bore a son. Said, “Now this time will my husband be joined to me, because I have borne him three sons.” Therefore his name was called Levi. — Genesis 29:34 (https://www.biblegateway.com/passage/?search=Genesis+29%3A34)', 'About Levi he said, “Your Thummim and your Urim are with your godly one, whom you proved at Massah, with whom you contended at the waters of Meribah. He said of his father, and of his mother, ‘I have not seen him.’ He didn’t acknowledge his brothers, nor did he know his own children; for they have observed your word, and keep your covenant. They shall teach Jacob your ordinances, and Israel your law. They shall put incense before you, and whole burnt offering on your altar. — Deuteronomy 33:8-10 (https://www.biblegateway.com/passage/?search=Deuteronomy+33%3A8-10)', 'You will know that I have sent this commandment to you, that my covenant may be with Levi,” says Yahweh of Armies. “My covenant was with him of life and peace; and I gave them to him that he might be reverent toward me; and he was reverent toward me, and stood in awe of my name. — Malachi 2:4-5 (https://www.biblegateway.com/passage/?search=Malachi+2%3A4-5)']
   },  {
     id: 'joseph',
+    translations: [
+      { lang: 'Hebrew', original: 'יוֹסֵף', translit: 'Yôsēp̄', meaning: 'may he (God) add (yāsap̄; Genesis 30:24)' },
+      { lang: 'Greek', original: 'Ἰωσήφ', translit: 'Iōsḗph', meaning: 'Septuagint form of the name' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Joseph_%28Francisco_de_Zurbar%C3%A1n%29.jpg/960px-Joseph_%28Francisco_de_Zurbar%C3%A1n%29.jpg'],
     parentId: 'biblical-figures',
     name: 'Joseph',
@@ -3433,6 +4367,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Now Israel loved Joseph more than all his children, because he was the son of his old age, and he made him a coat of many colors. — Genesis 37:3 (https://www.biblegateway.com/passage/?search=Genesis+37%3A3)', 'Pharaoh said to Joseph, “Because God has shown you all of this, there is no one so discreet and wise as you. You shall be over my house, and according to your word will all my people be ruled. Only in the throne I will be greater than you.” Pharaoh said to Joseph, “Behold, I have set you over all the land of Egypt.” — Genesis 41:39-41 (https://www.biblegateway.com/passage/?search=Genesis+41%3A39-41)', 'By faith, Joseph, when his end was near, made mention of the departure of the children of Israel; and gave instructions concerning his bones. — Hebrews 11:22 (https://www.biblegateway.com/passage/?search=Hebrews+11%3A22)']
   },  {
     id: 'benjamin',
+    translations: [
+      { lang: 'Hebrew', original: 'בִּנְיָמִין', translit: 'Binyāmîn', meaning: 'son of the right hand, son of the south (bēn + yāmîn)' },
+      { lang: 'Greek', original: 'Βενιαμίν', translit: 'Beniamín', meaning: 'Septuagint form of the name' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Benjamin_%28after_Francisco_de_Zurbar%C3%A1n%29.jpg/960px-Benjamin_%28after_Francisco_de_Zurbar%C3%A1n%29.jpg'],
     parentId: 'biblical-figures',
     name: 'Benjamin',
@@ -3443,6 +4381,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['As her soul was departing (for she died), she named him Benoni, but his father named him Benjamin. — Genesis 35:18 (https://www.biblegateway.com/passage/?search=Genesis+35%3A18)', '“Benjamin is a ravenous wolf. In the morning he will devour the prey. At evening he will divide the plunder.” — Genesis 49:27 (https://www.biblegateway.com/passage/?search=Genesis+49%3A27)', 'About Benjamin he said, “The beloved of Yahweh will dwell in safety by him. He covers him all day long. He dwells between his shoulders.” — Deuteronomy 33:12 (https://www.biblegateway.com/passage/?search=Deuteronomy+33%3A12)']
   },  {
     id: 'perez',
+    translations: [
+      { lang: 'Hebrew', original: 'פֶּרֶץ', translit: 'Pereṣ', meaning: 'breach, bursting forth (from pāraṣ, to break through; Gen 38:29)' }
+    ],
     relatedIds: ['david_pat', 'jesus'],
     parentId: 'biblical-figures',
     name: 'Perez',
@@ -3453,6 +4394,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['As he drew back his hand, behold, his brother came out, and she said, “Why have you made a breach for yourself?” Therefore his name was called Perez. — Genesis 38:29 (https://www.biblegateway.com/passage/?search=Genesis+38%3A29)', 'Now this is the history of the generations of Perez: Perez became the father of Hezron, — Ruth 4:18 (https://www.biblegateway.com/passage/?search=Ruth+4%3A18)', 'Judah became the father of Perez and Zerah by Tamar. Perez became the father of Hezron. Hezron became the father of Ram. — Matthew 1:3 (https://www.biblegateway.com/passage/?search=Matthew+1%3A3)']
   },  {
     id: 'hezron',
+    translations: [
+      { lang: 'Hebrew', original: 'חֶצְרוֹן', translit: 'Ḥeṣrôn', meaning: 'enclosed, enclosure (ḥāṣēr, courtyard, settlement)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Michelangelo_-_Sistine_Chapel_-_Lunette_Perez_-_Hezron_-_Ram.jpg/960px-Michelangelo_-_Sistine_Chapel_-_Lunette_Perez_-_Hezron_-_Ram.jpg'],
     parentId: 'biblical-figures',
     name: 'Hezron',
@@ -3463,6 +4407,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['The sons of Judah: Er, Onan, Shelah, Perez, and Zerah; but Er and Onan died in the land of Canaan. The sons of Perez were Hezron and Hamul. — Genesis 46:12 (https://www.biblegateway.com/passage/?search=Genesis+46%3A12)', 'Now this is the history of the generations of Perez: Perez became the father of Hezron, — Ruth 4:18 (https://www.biblegateway.com/passage/?search=Ruth+4%3A18)', 'Judah became the father of Perez and Zerah by Tamar. Perez became the father of Hezron. Hezron became the father of Ram. — Matthew 1:3 (https://www.biblegateway.com/passage/?search=Matthew+1%3A3)']
   },  {
     id: 'ram_pat',
+    translations: [
+      { lang: 'Hebrew', original: 'רָם', translit: 'Rām', meaning: 'high, exalted (from rûm, to be high)' }
+    ],
     relatedIds: ['david_pat'],
     parentId: 'biblical-figures',
     name: 'Ram',
@@ -3473,6 +4420,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['and Hezron became the father of Ram, and Ram became the father of Amminadab, — Ruth 4:19 (https://www.biblegateway.com/passage/?search=Ruth+4%3A19)', 'The sons also of Hezron, who were born to him: Jerahmeel, Ram, and Chelubai. — 1 Chronicles 2:9 (https://www.biblegateway.com/passage/?search=1+Chronicles+2%3A9)', 'Judah became the father of Perez and Zerah by Tamar. Perez became the father of Hezron. Hezron became the father of Ram. Ram became the father of Amminadab. Amminadab became the father of Nahshon. Nahshon became the father of Salmon. — Matthew 1:3-4 (https://www.biblegateway.com/passage/?search=Matthew+1%3A3-4)']
   },  {
     id: 'amminadab',
+    translations: [
+      { lang: 'Hebrew', original: 'עַמִּינָדָב', translit: 'ʿAmmînāḏāḇ', meaning: 'my kinsman is noble, my people is generous (ʿam + nāḏāḇ)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Michelangelo%2C_lunetta%2C_Amminadab_01.jpg/960px-Michelangelo%2C_lunetta%2C_Amminadab_01.jpg'],
     parentId: 'biblical-figures',
     name: 'Amminadab',
@@ -3483,6 +4433,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['and Hezron became the father of Ram, and Ram became the father of Amminadab, — Ruth 4:19 (https://www.biblegateway.com/passage/?search=Ruth+4%3A19)', 'Ram became the father of Amminadab, and Amminadab became the father of Nahshon, prince of the children of Judah; — 1 Chronicles 2:10 (https://www.biblegateway.com/passage/?search=1+Chronicles+2%3A10)', 'Ram became the father of Amminadab. Amminadab became the father of Nahshon. Nahshon became the father of Salmon. — Matthew 1:4 (https://www.biblegateway.com/passage/?search=Matthew+1%3A4)']
   },  {
     id: 'nahshon',
+    translations: [
+      { lang: 'Hebrew', original: 'נַחְשׁוֹן', translit: 'Naḥšôn', meaning: 'uncertain; usually linked to nāḥāš, \'serpent\' or \'to divine\'' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Michelangelo%2C_lunetta%2C_Nahshon_01.jpg/960px-Michelangelo%2C_lunetta%2C_Nahshon_01.jpg'],
     relatedIds: ['tribe-of-judah'],
     parentId: 'biblical-figures',
@@ -3504,6 +4457,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['and Amminadab became the father of Nahshon, and Nahshon became the father of Salmon, and Salmon became the father of Boaz, and Boaz became the father of Obed, — Ruth 4:20-21 (https://www.biblegateway.com/passage/?search=Ruth+4%3A20-21)', 'and Nahshon became the father of Salma, and Salma became the father of Boaz, — 1 Chronicles 2:11 (https://www.biblegateway.com/passage/?search=1+Chronicles+2%3A11)', 'Ram became the father of Amminadab. Amminadab became the father of Nahshon. Nahshon became the father of Salmon. Salmon became the father of Boaz by Rahab. Boaz became the father of Obed by Ruth. Obed became the father of Jesse. — Matthew 1:4-5 (https://www.biblegateway.com/passage/?search=Matthew+1%3A4-5)']
   },  {
     id: 'rahab',
+    translations: [
+      { lang: 'Hebrew', original: 'רָחָב', translit: 'Rāḥāḇ', meaning: 'broad, wide (from rāḥaḇ); distinct from the sea-monster Rahab (רַהַב)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Tissot_The_Harlot_of_Jericho_and_the_Two_Spies.jpg/960px-Tissot_The_Harlot_of_Jericho_and_the_Two_Spies.jpg'],
     parentId: 'biblical-figures',
     name: 'Rahab',
@@ -3514,6 +4470,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Joshua the son of Nun secretly sent two men out of Shittim as spies, saying, “Go, view the land, including Jericho.” They went and came into the house of a prostitute whose name was Rahab, and slept there. — Joshua 2:1 (https://www.biblegateway.com/passage/?search=Joshua+2%3A1)', 'By faith, Rahab the prostitute, didn’t perish with those who were disobedient, having received the spies in peace. — Hebrews 11:31 (https://www.biblegateway.com/passage/?search=Hebrews+11%3A31)', 'In the same way, wasn’t Rahab the prostitute also justified by works, in that she received the messengers, and sent them out another way? — James 2:25 (https://www.biblegateway.com/passage/?search=James+2%3A25)']
   },  {
     id: 'boaz',
+    translations: [
+      { lang: 'Hebrew', original: 'בֹּעַז', translit: 'Bōʿaz', meaning: 'in him is strength (bô + ʿōz), traditional; also the name of a Temple pillar' }
+    ],
     parentId: 'biblical-figures',
     name: 'Boaz',
     description: 'Wealthy landowner of Bethlehem who married Ruth. Lived in the era of the Judges.',
@@ -3523,6 +4482,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Naomi had a relative of her husband’s, a mighty man of wealth, of the family of Elimelech, and his name was Boaz. — Ruth 2:1 (https://www.biblegateway.com/passage/?search=Ruth+2%3A1)', 'So Boaz took Ruth, and she became his wife; and he went in to her, and Yahweh enabled her to conceive, and she bore a son. — Ruth 4:13 (https://www.biblegateway.com/passage/?search=Ruth+4%3A13)', 'Salmon became the father of Boaz by Rahab. Boaz became the father of Obed by Ruth. Obed became the father of Jesse. — Matthew 1:5 (https://www.biblegateway.com/passage/?search=Matthew+1%3A5)']
   },  {
     id: 'ruth',
+    translations: [
+      { lang: 'Hebrew', original: 'רוּת', translit: 'Rûṯ', meaning: 'uncertain; traditionally \'friend, companion\' (as if from rəʿûṯ)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/1795-William-Blake-Naomi-entreating-Ruth-Orpah.jpg/960px-1795-William-Blake-Naomi-entreating-Ruth-Orpah.jpg'],
     parentId: 'biblical-figures',
     name: 'Ruth',
@@ -3533,6 +4495,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Ruth said, “Don’t urge me to leave you, and to return from following you, for where you go, I will go; and where you stay, I will stay. Your people will be my people, and your God my God. — Ruth 1:16 (https://www.biblegateway.com/passage/?search=Ruth+1%3A16)', 'So Boaz took Ruth, and she became his wife; and he went in to her, and Yahweh enabled her to conceive, and she bore a son. — Ruth 4:13 (https://www.biblegateway.com/passage/?search=Ruth+4%3A13)', 'Salmon became the father of Boaz by Rahab. Boaz became the father of Obed by Ruth. Obed became the father of Jesse. — Matthew 1:5 (https://www.biblegateway.com/passage/?search=Matthew+1%3A5)']
   },  {
     id: 'obed',
+    translations: [
+      { lang: 'Hebrew', original: 'עוֹבֵד', translit: 'ʿÔḇēḏ', meaning: 'serving, worshipper (participle of ʿāḇaḏ, to serve)' }
+    ],
     relatedIds: ['david_pat'],
     parentId: 'biblical-figures',
     name: 'Obed',
@@ -3553,6 +4518,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Yahweh said to Samuel, “How long will you mourn for Saul, since I have rejected him from being king over Israel? Fill your horn with oil, and go. I will send you to Jesse the Bethlehemite; for I have provided a king for myself among his sons.” — 1 Samuel 16:1 (https://www.biblegateway.com/passage/?search=1+Samuel+16%3A1)', 'A shoot will come out of the stock of Jesse, and a branch out of his roots will bear fruit. — Isaiah 11:1 (https://www.biblegateway.com/passage/?search=Isaiah+11%3A1)', 'Again, Isaiah says, “There will be the root of Jesse, he who arises to rule over the Gentiles; in him the Gentiles will hope.” — Romans 15:12 (https://www.biblegateway.com/passage/?search=Romans+15%3A12)']
   },  {
     id: 'david_pat',
+    translations: [
+      { lang: 'Hebrew', original: 'דָּוִד', translit: 'Dāwiḏ', meaning: 'beloved (dôḏ, beloved, uncle)' },
+      { lang: 'Greek', original: 'Δαυίδ', translit: 'Dauíd', meaning: 'Septuagint form of the name' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/King_David%2C_the_King_of_Israel.jpg/960px-King_David%2C_the_King_of_Israel.jpg'],
     relatedIds: ['perez', 'ram_pat', 'obed', 'jesse', 'bathsheba', 'jonathan', 'absalom', 'nathan_prophet', 'lahmi', 'ishbi-benob', 'rapha', 'reign-david', 'archaeology-tel-dan-stele', 'bible-book-psalms', 'davids-mighty-men', 'mighty-men-jashobeam', 'mighty-men-abishai', 'dogheaded-men-moab', 'prophet-samuel-node', 'prophet-nathan-node'],
     parentId: 'biblical-figures',
@@ -3564,6 +4533,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Then Samuel took the horn of oil, and anointed him in the middle of his brothers. Then Yahweh’s Spirit came mightily on David from that day forward. So Samuel rose up and went to Ramah. — 1 Samuel 16:13 (https://www.biblegateway.com/passage/?search=1+Samuel+16%3A13)', 'When your days are fulfilled, and you sleep with your fathers, I will set up your offspring after you, who will proceed out of your body, and I will establish his kingdom. He will build a house for my name, and I will establish the throne of his kingdom forever. — 2 Samuel 7:12-13 (https://www.biblegateway.com/passage/?search=2+Samuel+7%3A12-13)', 'The book of the genealogy of Jesus Christ, the son of David, the son of Abraham. — Matthew 1:1 (https://www.biblegateway.com/passage/?search=Matthew+1%3A1)']
   },  {
     id: 'bathsheba',
+    translations: [
+      { lang: 'Hebrew', original: 'בַּת־שֶׁבַע', translit: 'Baṯ-Šeḇaʿ', meaning: 'daughter of the oath, or daughter of seven (baṯ + šeḇaʿ)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Willem_Drost_-_Batsheba_met_de_brief_van_koning_David.jpg/960px-Willem_Drost_-_Batsheba_met_de_brief_van_koning_David.jpg'],
     relatedIds: ['david_pat', 'solomon_pat'],
     parentId: 'biblical-figures',
@@ -3575,6 +4547,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['At evening, David arose from his bed and walked on the roof of the king’s house. From the roof, he saw a woman bathing, and the woman was very beautiful to look at. David sent and inquired after the woman. One said, “Isn’t this Bathsheba, the daughter of Eliam, Uriah the Hittite’s wife?” — 2 Samuel 11:2-3 (https://www.biblegateway.com/passage/?search=2+Samuel+11%3A2-3)', 'Then Nathan spoke to Bathsheba the mother of Solomon, saying, “Haven’t you heard that Adonijah the son of Haggith reigns, and David our lord doesn’t know it? Now therefore come, please let me give you counsel, that you may save your own life, and your son Solomon’s life. Go in to king David, and tell him, ‘Didn’t you, my lord, king, swear to your servant, saying, “Assuredly Solomon your son shall reign after me, and he shall sit on my throne?” Why then does Adonijah reign?’ — 1 Kings 1:11-13 (https://www.biblegateway.com/passage/?search=1+Kings+1%3A11-13)', 'Jesse became the father of King David. David became the father of Solomon by her who had been Uriah’s wife. — Matthew 1:6 (https://www.biblegateway.com/passage/?search=Matthew+1%3A6)']
   },  {
     id: 'solomon_pat',
+    translations: [
+      { lang: 'Hebrew', original: 'שְׁלֹמֹה', translit: 'Šəlōmōh', meaning: 'peaceful; his peace (from šālôm, peace)' },
+      { lang: 'Arabic', original: 'سُلَيْمَان', translit: 'Sulaymān', meaning: 'Qur\'anic form of the name' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Simeon_Solomon%2C_King_Solomon%2C_1872_or_1874%2C_NGA_76152_%28cropped%29.jpg/960px-Simeon_Solomon%2C_King_Solomon%2C_1872_or_1874%2C_NGA_76152_%28cropped%29.jpg'],
     relatedIds: ['bathsheba', 'reign-solomon-temple', 'archaeology-ark-of-covenant-axum', 'bible-book-proverbs', 'bible-book-ecclesiastes', 'bible-book-songofsolomon', 'solomons-shamir', 'lesser-key-solomon', 'blueprint-tabernacle-model-timna', 'ars-notoria', 'freemason-flat-hollow-earth', 'prophet-nathan-node'],
     parentId: 'biblical-figures',
@@ -3586,6 +4562,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['In Gibeon, Yahweh appeared to Solomon in a dream by night; and God said, “Ask for what I should give you.” Solomon said, “You have shown to your servant David my father great loving kindness, because he walked before you in truth, in righteousness, and in uprightness of heart with you. You have kept for him this great loving kindness, that you have given him a son to sit on his throne, as it is today. Now, Yahweh my God, you have made your servant king instead of David my father. I am just a little child. I don’t know how to go out or come in. Your servant is among your people which you have chosen, a great people, that can’t be numbered or counted for multitude. Give your servant therefore an understanding heart to judge your people, that I may discern between good and evil; for who is able to judge this great people of yours?” — 1 Kings 3:5-9 (https://www.biblegateway.com/passage/?search=1+Kings+3%3A5-9)', 'God gave Solomon abundant wisdom and understanding, and very great understanding, even as the sand that is on the seashore. Solomon’s wisdom excelled the wisdom of all the children of the east and all the wisdom of Egypt. — 1 Kings 4:29-30 (https://www.biblegateway.com/passage/?search=1+Kings+4%3A29-30)', 'Jesse became the father of King David. David became the father of Solomon by her who had been Uriah’s wife. — Matthew 1:6 (https://www.biblegateway.com/passage/?search=Matthew+1%3A6)']
   },  {
     id: 'rehoboam',
+    translations: [
+      { lang: 'Hebrew', original: 'רְחַבְעָם', translit: 'Rəḥaḇʿām', meaning: 'the people are enlarged; he enlarges the people (rāḥaḇ + ʿam)' },
+      { lang: 'Greek', original: 'Ροβοάμ', translit: 'Rhoboám', meaning: 'Septuagint form of the name' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Rehoboam._Fragment_of_Wall_Painting_from_Basel_Town_Hall_Council_Chamber%2C_by_Hans_Holbein_the_Younger..jpg/960px-Rehoboam._Fragment_of_Wall_Painting_from_Basel_Town_Hall_Council_Chamber%2C_by_Hans_Holbein_the_Younger..jpg'],
     parentId: 'biblical-figures',
     name: 'King Rehoboam',
@@ -3596,6 +4576,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Rehoboam went to Shechem, for all Israel had come to Shechem to make him king. When Jeroboam the son of Nebat heard of it (for he was yet in Egypt, where he had fled from the presence of king Solomon, and Jeroboam lived in Egypt, and they sent and called him), Jeroboam and all the assembly of Israel came, and spoke to Rehoboam, saying, “Your father made our yoke difficult. Now therefore make the hard service of your father, and his heavy yoke which he put on us, lighter, and we will serve you.” He said to them, “Depart for three days, then come back to me.” The people departed. — 1 Kings 12:1-5 (https://www.biblegateway.com/passage/?search=1+Kings+12%3A1-5)', 'Rehoboam the son of Solomon reigned in Judah. Rehoboam was forty-one years old when he began to reign, and he reigned seventeen years in Jerusalem, the city which Yahweh had chosen out of all the tribes of Israel, to put his name there. His mother’s name was Naamah the Ammonitess. — 1 Kings 14:21 (https://www.biblegateway.com/passage/?search=1+Kings+14%3A21)', 'Solomon became the father of Rehoboam. Rehoboam became the father of Abijah. Abijah became the father of Asa. — Matthew 1:7 (https://www.biblegateway.com/passage/?search=Matthew+1%3A7)']
   },  {
     id: 'abijah',
+    translations: [
+      { lang: 'Hebrew', original: 'אֲבִיָּה', translit: 'ʾĂḇiyyāh', meaning: 'my father is Yahweh (ʾāḇ + Yāh)' }
+    ],
     parentId: 'biblical-figures',
     name: 'King Abijah',
     description: 'The second King of Judah. Reigned for three years.',
@@ -3605,6 +4588,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Now in the eighteenth year of king Jeroboam the son of Nebat, Abijam began to reign over Judah. He reigned three years in Jerusalem. His mother’s name was Maacah the daughter of Abishalom. He walked in all the sins of his father, which he had done before him; and his heart was not perfect with Yahweh his God, as the heart of David his father. — 1 Kings 15:1-3 (https://www.biblegateway.com/passage/?search=1+Kings+15%3A1-3)', 'In the eighteenth year of king Jeroboam, Abijah began to reign over Judah. He reigned three years in Jerusalem. His mother’s name was Micaiah the daughter of Uriel of Gibeah. There was war between Abijah and Jeroboam. Abijah joined battle with an army of valiant men of war, even four hundred thousand chosen men; and Jeroboam set the battle in array against him with eight hundred thousand chosen men, who were mighty men of valor. — 2 Chronicles 13:1-3 (https://www.biblegateway.com/passage/?search=2+Chronicles+13%3A1-3)', 'Solomon became the father of Rehoboam. Rehoboam became the father of Abijah. Abijah became the father of Asa. — Matthew 1:7 (https://www.biblegateway.com/passage/?search=Matthew+1%3A7)']
   },  {
     id: 'asa',
+    translations: [
+      { lang: 'Hebrew', original: 'אָסָא', translit: 'ʾĀsāʾ', meaning: 'uncertain; traditionally \'healer\' (Aramaic ʾāsyā, physician)' }
+    ],
     parentId: 'biblical-figures',
     name: 'King Asa',
     description: 'Third King of Judah. Commenced religious reforms and ruled for 41 years.',
@@ -3614,6 +4600,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['In the twentieth year of Jeroboam king of Israel, Asa began to reign over Judah. He reigned forty-one years in Jerusalem. His mother’s name was Maacah the daughter of Abishalom. Asa did that which was right in Yahweh’s eyes, as David his father did. — 1 Kings 15:9-11 (https://www.biblegateway.com/passage/?search=1+Kings+15%3A9-11)', 'Asa did that which was good and right in Yahweh his God’s eyes; for he took away the foreign altars and the high places, broke down the pillars, cut down the Asherah poles, — 2 Chronicles 14:2-3 (https://www.biblegateway.com/passage/?search=2+Chronicles+14%3A2-3)', 'Solomon became the father of Rehoboam. Rehoboam became the father of Abijah. Abijah became the father of Asa. — Matthew 1:7 (https://www.biblegateway.com/passage/?search=Matthew+1%3A7)']
   },  {
     id: 'jehoshaphat',
+    translations: [
+      { lang: 'Hebrew', original: 'יְהוֹשָׁפָט', translit: 'Yəhôšāp̄āṭ', meaning: 'YHWH has judged (yəhô + šāp̄aṭ, to judge)' }
+    ],
     relatedIds: ['israelites'],
     parentId: 'biblical-figures',
     name: 'King Jehoshaphat',
@@ -3624,6 +4613,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Jehoshaphat the son of Asa began to reign over Judah in the fourth year of Ahab king of Israel. Jehoshaphat was thirty-five years old when he began to reign; and he reigned twenty-five years in Jerusalem. His mother’s name was Azubah the daughter of Shilhi. He walked in all the way of Asa his father. He didn’t turn away from it, doing that which was right in Yahweh’s eyes. However the high places were not taken away. The people still sacrificed and burned incense on the high places. — 1 Kings 22:41-43 (https://www.biblegateway.com/passage/?search=1+Kings+22%3A41-43)', 'Yahweh was with Jehoshaphat, because he walked in the first ways of his father David, and didn’t seek the Baals, but sought to the God of his father, and walked in his commandments, and not in the ways of Israel. — 2 Chronicles 17:3-4 (https://www.biblegateway.com/passage/?search=2+Chronicles+17%3A3-4)', 'Asa became the father of Jehoshaphat. Jehoshaphat became the father of Joram. Joram became the father of Uzziah. — Matthew 1:8 (https://www.biblegateway.com/passage/?search=Matthew+1%3A8)']
   },  {
     id: 'jehoram',
+    translations: [
+      { lang: 'Hebrew', original: 'יְהוֹרָם', translit: 'Yəhôrām', meaning: 'Yahweh is exalted (Yəhô + rûm, to be high)' }
+    ],
     parentId: 'biblical-figures',
     name: 'King Jehoram',
     description: 'Fifth King of Judah. Married Athaliah, daughter of Ahab and Jezebel, introducing pagan worship. Reigned 8 years.',
@@ -3633,6 +4625,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['In the fifth year of Joram the son of Ahab king of Israel, Jehoshaphat being king of Judah then, Jehoram the son of Jehoshaphat king of Judah began to reign. He was thirty-two years old when he began to reign. He reigned eight years in Jerusalem. He walked in the way of the kings of Israel, as did Ahab’s house; for he married Ahab’s daughter. He did that which was evil in Yahweh’s sight. — 2 Kings 8:16-18 (https://www.biblegateway.com/passage/?search=2+Kings+8%3A16-18)', 'Jehoram was thirty-two years old when he began to reign, and he reigned eight years in Jerusalem. He walked in the way of the kings of Israel, as did Ahab’s house; for he had Ahab’s daughter as his wife. He did that which was evil in Yahweh’s sight. — 2 Chronicles 21:5-6 (https://www.biblegateway.com/passage/?search=2+Chronicles+21%3A5-6)', 'Asa became the father of Jehoshaphat. Jehoshaphat became the father of Joram. Joram became the father of Uzziah. — Matthew 1:8 (https://www.biblegateway.com/passage/?search=Matthew+1%3A8)']
   },  {
     id: 'ahaziah',
+    translations: [
+      { lang: 'Hebrew', original: 'אֲחַזְיָהוּ', translit: 'ʾĂḥazyāhû', meaning: 'Yahweh has grasped, Yahweh holds (ʾāḥaz + Yāhû)' }
+    ],
     parentId: 'biblical-figures',
     name: 'King Ahaziah',
     description: 'Sixth King of Judah. Reigned for only one year before being slain by Jehu.',
@@ -3642,6 +4637,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['In the twelfth year of Joram the son of Ahab king of Israel, Ahaziah the son of Jehoram king of Judah began to reign. Ahaziah was twenty-two years old when he began to reign; and he reigned one year in Jerusalem. His mother’s name was Athaliah the daughter of Omri king of Israel. He walked in the way of Ahab’s house, and did that which was evil in Yahweh’s sight, as did Ahab’s house; for he was the son-in-law of Ahab’s house. — 2 Kings 8:25-27 (https://www.biblegateway.com/passage/?search=2+Kings+8%3A25-27)', 'The inhabitants of Jerusalem made Ahaziah his youngest son king in his place, because the band of men who came with the Arabians to the camp had slain all the oldest. So Ahaziah the son of Jehoram king of Judah reigned. Ahaziah was forty-two years old when he began to reign, and he reigned one year in Jerusalem. His mother’s name was Athaliah the daughter of Omri. — 2 Chronicles 22:1-2 (https://www.biblegateway.com/passage/?search=2+Chronicles+22%3A1-2)', 'He sought Ahaziah, and they caught him (now he was hiding in Samaria), and they brought him to Jehu, and killed him; and they buried him, for they said, “He is the son of Jehoshaphat, who sought Yahweh with all his heart.” The house of Ahaziah had no power to hold the kingdom. — 2 Chronicles 22:9 (https://www.biblegateway.com/passage/?search=2+Chronicles+22%3A9)']
   },  {
     id: 'joash',
+    translations: [
+      { lang: 'Hebrew', original: 'יוֹאָשׁ', translit: 'Yôʾāš', meaning: 'short for Jehoash; traditionally \'YHWH has given\', second element disputed' }
+    ],
     parentId: 'biblical-figures',
     name: 'King Joash',
     description: 'Seventh King of Judah, crowned at age seven after hiding from Athaliah. Repaired the Temple. Reigned 40 years.',
@@ -3651,6 +4649,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Jehoash was seven years old when he began to reign. — 2 Kings 11:21 (https://www.biblegateway.com/passage/?search=2+Kings+11%3A21)', 'Jehoash began to reign in the seventh year of Jehu, and he reigned forty years in Jerusalem. His mother’s name was Zibiah of Beersheba. Jehoash did that which was right in Yahweh’s eyes all his days in which Jehoiada the priest instructed him. — 2 Kings 12:1-2 (https://www.biblegateway.com/passage/?search=2+Kings+12%3A1-2)', 'Joash was seven years old when he began to reign, and he reigned forty years in Jerusalem. His mother’s name was Zibiah, of Beersheba. Joash did that which was right in Yahweh’s eyes all the days of Jehoiada the priest. — 2 Chronicles 24:1-2 (https://www.biblegateway.com/passage/?search=2+Chronicles+24%3A1-2)']
   },  {
     id: 'amaziah',
+    translations: [
+      { lang: 'Hebrew', original: 'אֲמַצְיָהוּ', translit: 'ʾĂmaṣyāhû', meaning: 'Yahweh is mighty, Yahweh strengthens (ʾāmaṣ + Yāhû)' }
+    ],
     parentId: 'biblical-figures',
     name: 'King Amaziah',
     description: 'Eighth King of Judah. Defeated the Edomites but was later assassinated. Reigned 29 years.',
@@ -3660,6 +4661,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['In the second year of Joash son of Joahaz king of Israel Amaziah the son of Joash king of Judah began to reign. He was twenty-five years old when he began to reign; and he reigned twenty-nine years in Jerusalem. His mother’s name was Jehoaddin of Jerusalem. He did that which was right in Yahweh’s eyes, yet not like David his father. He did according to all that Joash his father had done. — 2 Kings 14:1-3 (https://www.biblegateway.com/passage/?search=2+Kings+14%3A1-3)', 'Amaziah was twenty-five years old when he began to reign, and he reigned twenty-nine years in Jerusalem. His mother’s name was Jehoaddan, of Jerusalem. He did that which was right in Yahweh’s eyes, but not with a perfect heart. — 2 Chronicles 25:1-2 (https://www.biblegateway.com/passage/?search=2+Chronicles+25%3A1-2)', 'Now after Amaziah had come from the slaughter of the Edomites, he brought the gods of the children of Seir, and set them up to be his gods, and bowed down himself before them, and burned incense to them. — 2 Chronicles 25:14 (https://www.biblegateway.com/passage/?search=2+Chronicles+25%3A14)']
   },  {
     id: 'uzziah',
+    translations: [
+      { lang: 'Hebrew', original: 'עֻזִּיָּהוּ', translit: 'ʿUzziyyāhû', meaning: 'my strength is YHWH (ʿōz, strength + yāhû)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Rembrandt_van_Rijn_%281606-1669%29_%28after%29_-_King_Uzziah_Stricken_with_Leprosy_%28%5E%29_-_1257105_-_National_Trust.jpg/960px-Rembrandt_van_Rijn_%281606-1669%29_%28after%29_-_King_Uzziah_Stricken_with_Leprosy_%28%5E%29_-_1257105_-_National_Trust.jpg'],
     parentId: 'biblical-figures',
     name: 'King Uzziah',
@@ -3670,6 +4674,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['In the twenty-seventh year of Jeroboam king of Israel, Azariah son of Amaziah king of Judah began to reign. He was sixteen years old when he began to reign, and he reigned fifty-two years in Jerusalem. His mother’s name was Jecoliah of Jerusalem. He did that which was right in Yahweh’s eyes, according to all that his father Amaziah had done. — 2 Kings 15:1-3 (https://www.biblegateway.com/passage/?search=2+Kings+15%3A1-3)', 'All the people of Judah took Uzziah, who was sixteen years old, and made him king in the place of his father Amaziah. — 2 Chronicles 26:1 (https://www.biblegateway.com/passage/?search=2+Chronicles+26%3A1)', 'But when he was strong, his heart was lifted up, so that he did corruptly, and he trespassed against Yahweh his God; for he went into Yahweh’s temple to burn incense on the altar of incense. Azariah the priest went in after him, and with him eighty priests of Yahweh, who were valiant men. They resisted Uzziah the king, and said to him, “It isn’t for you, Uzziah, to burn incense to Yahweh, but for the priests the sons of Aaron, who are consecrated to burn incense. Go out of the sanctuary, for you have trespassed. It will not be for your honor from Yahweh God.” Then Uzziah was angry. He had a censer in his hand to burn incense, and while he was angry with the priests, the leprosy broke out on his forehead before the priests in Yahweh’s house, beside the altar of incense. Azariah the chief priest, and all the priests, looked at him, and behold, he was leprous in his forehead, and they thrust him out quickly from there. Yes, he himself also hurried to go out, because Yahweh had struck him. Uzziah the king was a leper to the day of his death, and lived in a separate house, being a leper; for he was cut off from Yahweh’s house. Jotham his son was over the king’s house, judging the people of the land. — 2 Chronicles 26:16-21 (https://www.biblegateway.com/passage/?search=2+Chronicles+26%3A16-21)']
   },  {
     id: 'jotham',
+    translations: [
+      { lang: 'Hebrew', original: 'יוֹתָם', translit: 'Yôṯām', meaning: 'YHWH is perfect, upright (yô + tām, complete)' }
+    ],
     parentId: 'biblical-figures',
     name: 'King Jotham',
     description: 'Tenth King of Judah. Built the Upper Gate of the Temple. Reigned 16 years.',
@@ -3679,6 +4686,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['In the second year of Pekah the son of Remaliah king of Israel, Jotham the son of Uzziah king of Judah began to reign. He was twenty-five years old when he began to reign, and he reigned sixteen years in Jerusalem. His mother’s name was Jerusha the daughter of Zadok. He did that which was right in Yahweh’s eyes. He did according to all that his father Uzziah had done. — 2 Kings 15:32-34 (https://www.biblegateway.com/passage/?search=2+Kings+15%3A32-34)', 'Jotham was twenty-five years old when he began to reign, and he reigned sixteen years in Jerusalem. His mother’s name was Jerushah the daughter of Zadok. He did that which was right in Yahweh’s eyes, according to all that his father Uzziah had done. However he didn’t enter into Yahweh’s temple. The people still acted corruptly. — 2 Chronicles 27:1-2 (https://www.biblegateway.com/passage/?search=2+Chronicles+27%3A1-2)', 'Uzziah became the father of Jotham. Jotham became the father of Ahaz. Ahaz became the father of Hezekiah. — Matthew 1:9 (https://www.biblegateway.com/passage/?search=Matthew+1%3A9)']
   },  {
     id: 'ahaz',
+    translations: [
+      { lang: 'Hebrew', original: 'אָחָז', translit: 'ʾĀḥāz', meaning: 'he has grasped (ʾāḥaz); short for Jehoahaz, \'Yahweh has held\'' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/King_Ahaz._Reader.png/960px-King_Ahaz._Reader.png'],
     parentId: 'biblical-figures',
     name: 'King Ahaz',
@@ -3689,6 +4699,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['In the seventeenth year of Pekah the son of Remaliah, Ahaz the son of Jotham king of Judah began to reign. Ahaz was twenty years old when he began to reign, and he reigned sixteen years in Jerusalem. He didn’t do that which was right in Yahweh his God’s eyes, like David his father. But he walked in the way of the kings of Israel, yes, and made his son to pass through the fire, according to the abominations of the nations whom Yahweh cast out from before the children of Israel. — 2 Kings 16:1-3 (https://www.biblegateway.com/passage/?search=2+Kings+16%3A1-3)', 'Ahaz was twenty years old when he began to reign, and he reigned sixteen years in Jerusalem. He didn’t do that which was right in Yahweh’s eyes, like David his father, but he walked in the ways of the kings of Israel, and also made molten images for the Baals. Moreover he burned incense in the valley of the son of Hinnom, and burned his children in the fire, according to the abominations of the nations whom Yahweh cast out before the children of Israel. He sacrificed and burned incense in the high places, and on the hills, and under every green tree. — 2 Chronicles 28:1-4 (https://www.biblegateway.com/passage/?search=2+Chronicles+28%3A1-4)', 'Uzziah became the father of Jotham. Jotham became the father of Ahaz. Ahaz became the father of Hezekiah. — Matthew 1:9 (https://www.biblegateway.com/passage/?search=Matthew+1%3A9)']
   },  {
     id: 'hezekiah',
+    translations: [
+      { lang: 'Hebrew', original: 'חִזְקִיָּהוּ', translit: 'Ḥizqiyyāhû', meaning: 'Yahweh strengthens, Yahweh is my strength (ḥāzaq + Yāhû)' },
+      { lang: 'Akkadian', original: 'Ḫa-za-qi-a-ú', translit: 'Ḫazaqiau', meaning: 'Hezekiah as named in Sennacherib\'s annals (Taylor Prism)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/%C3%85hus_kyrka-10.jpg/960px-%C3%85hus_kyrka-10.jpg'],
     relatedIds: ['archaeology-pool-of-siloam', 'prophet-zephaniah-node'],
     parentId: 'biblical-figures',
@@ -3700,6 +4714,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Now in the third year of Hoshea son of Elah king of Israel, Hezekiah the son of Ahaz king of Judah began to reign. He was twenty-five years old when he began to reign, and he reigned twenty-nine years in Jerusalem. His mother’s name was Abi the daughter of Zechariah. He did that which was right in Yahweh’s eyes, according to all that David his father had done. He removed the high places, and broke the pillars, and cut down the Asherah. He also broke in pieces the bronze serpent that Moses had made, because in those days the children of Israel burned incense to it; and he called it Nehushtan. He trusted in Yahweh, the God of Israel; so that after him was no one like him among all the kings of Judah, nor among them that were before him. — 2 Kings 18:1-5 (https://www.biblegateway.com/passage/?search=2+Kings+18%3A1-5)', 'This same Hezekiah also stopped the upper spring of the waters of Gihon, and brought them straight down on the west side of David’s city. Hezekiah prospered in all his works. — 2 Chronicles 32:30 (https://www.biblegateway.com/passage/?search=2+Chronicles+32%3A30)', 'Uzziah became the father of Jotham. Jotham became the father of Ahaz. Ahaz became the father of Hezekiah. — Matthew 1:9 (https://www.biblegateway.com/passage/?search=Matthew+1%3A9)']
   },  {
     id: 'manasseh',
+    translations: [
+      { lang: 'Hebrew', original: 'מְנַשֶּׁה', translit: 'Mənaššeh', meaning: 'causing to forget (from nāšâ, to forget; Gen 41:51)' },
+      { lang: 'Akkadian', original: '𒈨𒈾𒋛𒄿', translit: 'Me-na-si-i', meaning: 'Assyrian spelling of the name in inscriptions of Esarhaddon and Ashurbanipal' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Jacob_bendice_a_Efra%C3%ADn_y_Manas%C3%A9s_%28Real_Academia_de_Bellas_Artes_de_San_Fernando%29.jpg/960px-Jacob_bendice_a_Efra%C3%ADn_y_Manas%C3%A9s_%28Real_Academia_de_Bellas_Artes_de_San_Fernando%29.jpg'],
     parentId: 'biblical-figures',
     name: 'King Manasseh',
@@ -3710,6 +4728,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Manasseh was twelve years old when he began to reign, and he reigned fifty-five years in Jerusalem. His mother’s name was Hephzibah. He did that which was evil in Yahweh’s sight, after the abominations of the nations whom Yahweh cast out before the children of Israel. — 2 Kings 21:1-2 (https://www.biblegateway.com/passage/?search=2+Kings+21%3A1-2)', 'Yahweh spoke to Manasseh, and to his people; but they didn’t listen. Therefore Yahweh brought on them the captains of the army of the king of Assyria, who took Manasseh in chains, bound him with fetters, and carried him to Babylon. When he was in distress, he begged Yahweh his God, and humbled himself greatly before the God of his fathers. He prayed to him; and he was entreated by him, and heard his supplication, and brought him again to Jerusalem into his kingdom. Then Manasseh knew that Yahweh was God. — 2 Chronicles 33:10-13 (https://www.biblegateway.com/passage/?search=2+Chronicles+33%3A10-13)', 'Hezekiah became the father of Manasseh. Manasseh became the father of Amon. Amon became the father of Josiah. — Matthew 1:10 (https://www.biblegateway.com/passage/?search=Matthew+1%3A10)']
   },  {
     id: 'amon',
+    translations: [
+      { lang: 'Hebrew', original: 'אָמוֹן', translit: 'ʾĀmôn', meaning: 'faithful, trustworthy (ʾāman); or after the Egyptian god Amun, \'the hidden one\'' }
+    ],
     parentId: 'biblical-figures',
     name: 'King Amon',
     description: 'Fourteenth King of Judah, assassinated by his own servants after a brief two-year reign.',
@@ -3719,6 +4740,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Amon was twenty-two years old when he began to reign; and he reigned two years in Jerusalem. His mother’s name was Meshullemeth the daughter of Haruz of Jotbah. He did that which was evil in Yahweh’s sight, as Manasseh his father did. He walked in all the ways that his father walked in, and served the idols that his father served, and worshiped them; and he abandoned Yahweh, the God of his fathers, and didn’t walk in the way of Yahweh. — 2 Kings 21:19-22 (https://www.biblegateway.com/passage/?search=2+Kings+21%3A19-22)', 'Amon was twenty-two years old when he began to reign; and he reigned two years in Jerusalem. He did that which was evil in Yahweh’s sight, as did Manasseh his father; and Amon sacrificed to all the engraved images which Manasseh his father had made, and served them. He didn’t humble himself before Yahweh, as Manasseh his father had humbled himself; but this same Amon trespassed more and more. — 2 Chronicles 33:21-23 (https://www.biblegateway.com/passage/?search=2+Chronicles+33%3A21-23)', 'Hezekiah became the father of Manasseh. Manasseh became the father of Amon. Amon became the father of Josiah. — Matthew 1:10 (https://www.biblegateway.com/passage/?search=Matthew+1%3A10)']
   },  {
     id: 'josiah',
+    translations: [
+      { lang: 'Hebrew', original: 'יֹאשִׁיָּהוּ', translit: 'Yōʾšiyyāhû', meaning: 'YHWH supports (or heals); first element disputed, -yāhû = YHWH' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/%C3%85hus_kyrka-12.jpg/960px-%C3%85hus_kyrka-12.jpg'],
     relatedIds: ['book-of-the-law', 'bible-book-deuteronomy', 'prophet-zephaniah-node'],
     parentId: 'biblical-figures',
@@ -3730,6 +4754,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Josiah was eight years old when he began to reign, and he reigned thirty-one years in Jerusalem. His mother’s name was Jedidah the daughter of Adaiah of Bozkath. He did that which was right in Yahweh’s eyes, and walked in all the way of David his father, and didn’t turn away to the right hand or to the left. — 2 Kings 22:1-2 (https://www.biblegateway.com/passage/?search=2+Kings+22%3A1-2)', 'There was no king like him before him, who turned to Yahweh with all his heart, and with all his soul, and with all his might, according to all the law of Moses; and there was none like him who arose after him. — 2 Kings 23:25 (https://www.biblegateway.com/passage/?search=2+Kings+23%3A25)', 'Hezekiah became the father of Manasseh. Manasseh became the father of Amon. Amon became the father of Josiah. — Matthew 1:10 (https://www.biblegateway.com/passage/?search=Matthew+1%3A10)']
   },  {
     id: 'jehoiakim',
+    translations: [
+      { lang: 'Hebrew', original: 'יְהוֹיָקִים', translit: 'Yəhôyāqîm', meaning: 'Yahweh raises up, Yahweh establishes (Yəhô + qûm)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/The_cuneiform_inscription_highlights_the_conquest_of_Jerusalem_and_the_surrender_of_Jehoiakim%2C_king_of_Judah%2C_in_597_BCE._From_Babylon%2C_Iraq.jpg/960px-The_cuneiform_inscription_highlights_the_conquest_of_Jerusalem_and_the_surrender_of_Jehoiakim%2C_king_of_Judah%2C_in_597_BCE._From_Babylon%2C_Iraq.jpg'],
     parentId: 'biblical-figures',
     name: 'King Jehoiakim',
@@ -3740,6 +4767,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Jehoiakim was twenty-five years old when he began to reign, and he reigned eleven years in Jerusalem. His mother’s name was Zebidah the daughter of Pedaiah of Rumah. He did that which was evil in Yahweh’s sight, according to all that his fathers had done. — 2 Kings 23:36-37 (https://www.biblegateway.com/passage/?search=2+Kings+23%3A36-37)', 'Jehoiakim was twenty-five years old when he began to reign, and he reigned eleven years in Jerusalem. He did that which was evil in Yahweh his God’s sight. — 2 Chronicles 36:5 (https://www.biblegateway.com/passage/?search=2+Chronicles+36%3A5)', 'Therefore Yahweh says concerning Jehoiakim the son of Josiah, king of Judah: “They won’t lament for him, saying, ‘Ah my brother!’ or, ‘Ah sister!’ They won’t lament for him, saying ‘Ah lord!’ or, ‘Ah his glory!’ — Jeremiah 22:18 (https://www.biblegateway.com/passage/?search=Jeremiah+22%3A18)']
   },  {
     id: 'jeconiah',
+    translations: [
+      { lang: 'Hebrew', original: 'יְכָנְיָהוּ', translit: 'Yəḵonyāhû', meaning: 'Yahweh establishes, Yahweh will establish (kûn + Yāhû)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Clay_tablet._The_Akkadian_cuneiform_inscription_lists_certain_rations_and_mentions_the_name_of_Jeconiah_%28Jehoiachin%29%2C_King_of_Judah_and_the_Babylonian_captivity._From_Babylon%2C_Iraq._C._580_BCE._Vorderasiatisches_Museum%2C_Berlin.jpg/960px-thumbnail.jpg'],
     relatedIds: ['shealtiel'],
     parentId: 'biblical-figures',
@@ -3751,6 +4781,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Jehoiachin was eighteen years old when he began to reign, and he reigned in Jerusalem three months. His mother’s name was Nehushta the daughter of Elnathan of Jerusalem. He did that which was evil in Yahweh’s sight, according to all that his father had done. — 2 Kings 24:8-9 (https://www.biblegateway.com/passage/?search=2+Kings+24%3A8-9)', 'The sons of Jehoiakim: Jeconiah his son, and Zedekiah his son. — 1 Chronicles 3:16 (https://www.biblegateway.com/passage/?search=1+Chronicles+3%3A16)', 'Josiah became the father of Jechoniah and his brothers, at the time of the exile to Babylon. — Matthew 1:11 (https://www.biblegateway.com/passage/?search=Matthew+1%3A11)']
   },  {
     id: 'shealtiel',
+    translations: [
+      { lang: 'Hebrew', original: 'שְׁאַלְתִּיאֵל', translit: 'Šəʾaltîʾēl', meaning: 'I have asked God (šāʾal, to ask + ʾēl)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Michelangelo%2C_lunetta%2C_Josiah_-_Jechoniah_-_Shealtiel_01.jpg/960px-Michelangelo%2C_lunetta%2C_Josiah_-_Jechoniah_-_Shealtiel_01.jpg'],
     relatedIds: ['jeconiah', 'evt-fall-jerusalem'],
     parentId: 'biblical-figures',
@@ -3762,6 +4795,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['The sons of Jeconiah, the captive: Shealtiel his son, — 1 Chronicles 3:17 (https://www.biblegateway.com/passage/?search=1+Chronicles+3%3A17)', 'Then Jeshua the son of Jozadak stood up with his brothers the priests, and Zerubbabel the son of Shealtiel and his brothers, and built the altar of the God of Israel, to offer burnt offerings on it, as it is written in the law of Moses the man of God. — Ezra 3:2 (https://www.biblegateway.com/passage/?search=Ezra+3%3A2)', 'After the exile to Babylon, Jechoniah became the father of Shealtiel. Shealtiel became the father of Zerubbabel. — Matthew 1:12 (https://www.biblegateway.com/passage/?search=Matthew+1%3A12)']
   },  {
     id: 'zerubbabel',
+    translations: [
+      { lang: 'Akkadian', original: 'Zēr-Bābili', translit: '', meaning: 'seed of Babylon (zēru, seed, offspring + Bābili, Babylon)' },
+      { lang: 'Hebrew', original: 'זְרֻבָּבֶל', translit: 'Zərubbāḇel', meaning: 'seed of Babylon (Hebraised from Akkadian Zēr-Bābili)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Michelangelo%2C_lunetta%2C_Zerubbabel_-_Abiud_-_Eliakim_01.jpg/960px-Michelangelo%2C_lunetta%2C_Zerubbabel_-_Abiud_-_Eliakim_01.jpg'],
     parentId: 'biblical-figures',
     name: 'Zerubbabel',
@@ -3772,6 +4809,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['In the second year of Darius the king, in the sixth month, in the first day of the month, Yahweh’s word came by Haggai, the prophet, to Zerubbabel, the son of Shealtiel, governor of Judah, and to Joshua, the son of Jehozadak, the high priest, saying, — Haggai 1:1 (https://www.biblegateway.com/passage/?search=Haggai+1%3A1)', 'Then he answered and spoke to me, saying, “This is Yahweh’s word to Zerubbabel, saying, ‘Not by might, nor by power, but by my Spirit,’ says Yahweh of Armies. — Zechariah 4:6 (https://www.biblegateway.com/passage/?search=Zechariah+4%3A6)', 'After the exile to Babylon, Jechoniah became the father of Shealtiel. Shealtiel became the father of Zerubbabel. — Matthew 1:12 (https://www.biblegateway.com/passage/?search=Matthew+1%3A12)']
   },  {
     id: 'abiud',
+    translations: [
+      { lang: 'Hebrew', original: 'אֲבִיהוּד', translit: 'ʾĂḇîhûḏ', meaning: 'my father is majesty (ʾāḇ, father + hôḏ, splendour)' }
+    ],
     parentId: 'biblical-figures',
     name: 'Abiud',
     description: 'Son of Zerubbabel. Mentioned in the Messianic genealogy of Matthew.',
@@ -3781,6 +4821,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Zerubbabel became the father of Abiud. Abiud became the father of Eliakim. Eliakim became the father of Azor. — Matthew 1:13 (https://www.biblegateway.com/passage/?search=Matthew+1%3A13)']
   },  {
     id: 'eliakim',
+    translations: [
+      { lang: 'Hebrew', original: 'אֶלְיָקִים', translit: 'ʾElyāqîm', meaning: 'God raises up, God establishes (ʾēl + qûm, to rise)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Elyakim8081.JPG/960px-Elyakim8081.JPG'],
     relatedIds: ['jesus'],
     parentId: 'biblical-figures',
@@ -3802,6 +4845,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Zerubbabel became the father of Abiud. Abiud became the father of Eliakim. Eliakim became the father of Azor. — Matthew 1:13 (https://www.biblegateway.com/passage/?search=Matthew+1%3A13)', 'Azor became the father of Zadok. Zadok became the father of Achim. Achim became the father of Eliud. — Matthew 1:14 (https://www.biblegateway.com/passage/?search=Matthew+1%3A14)']
   },  {
     id: 'zadok_pat',
+    translations: [
+      { lang: 'Hebrew', original: 'צָדוֹק', translit: 'Ṣāḏôq', meaning: 'righteous, just (from ṣāḏaq, to be righteous)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/The_Anointing_of_Queen_Alexandra_at_the_Coronation_of_Edward_VII.JPG/960px-The_Anointing_of_Queen_Alexandra_at_the_Coronation_of_Edward_VII.JPG'],
     parentId: 'biblical-figures',
     name: 'Zadok',
@@ -3822,6 +4868,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Azor became the father of Zadok. Zadok became the father of Achim. Achim became the father of Eliud. — Matthew 1:14 (https://www.biblegateway.com/passage/?search=Matthew+1%3A14)']
   },  {
     id: 'eliud',
+    translations: [
+      { lang: 'Hebrew', original: 'אליהוד', translit: 'ʾĔlîhûḏ', meaning: 'God is my majesty (ʾēl + hôḏ, splendour)' },
+      { lang: 'Greek', original: 'Ἐλιούδ', translit: 'Elioúd', meaning: 'form of the name in Matthew 1:14' }
+    ],
     parentId: 'biblical-figures',
     name: 'Eliud',
     description: 'Son of Achim. Ancestor of Jesus.',
@@ -3831,6 +4881,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Eliud became the father of Eleazar. Eleazar became the father of Matthan. Matthan became the father of Jacob. — Matthew 1:15 (https://www.biblegateway.com/passage/?search=Matthew+1%3A15)']
   },  {
     id: 'eleazar_pat',
+    translations: [
+      { lang: 'Hebrew', original: 'אֶלְעָזָר', translit: 'ʾElʿāzār', meaning: 'God has helped (ʾēl + ʿāzar, to help)' },
+      { lang: 'Greek', original: 'Ἐλεάζαρ', translit: 'Eleázar', meaning: 'Greek form of the name, as in Matthew 1:15' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Facial_Chronicle_-_b.02%2C_p.187_-_Eleazar_receiving_trophies.jpg/960px-Facial_Chronicle_-_b.02%2C_p.187_-_Eleazar_receiving_trophies.jpg'],
     parentId: 'biblical-figures',
     name: 'Eleazar',
@@ -3841,6 +4895,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Eliud became the father of Eleazar. Eleazar became the father of Matthan. Matthan became the father of Jacob. — Matthew 1:15 (https://www.biblegateway.com/passage/?search=Matthew+1%3A15)']
   },  {
     id: 'matthan',
+    translations: [
+      { lang: 'Hebrew', original: 'מַתָּן', translit: 'Mattān', meaning: 'gift (from nāṯan, to give)' }
+    ],
     parentId: 'biblical-figures',
     name: 'Matthan',
     description: 'Son of Eleazar. Grandfather of Joseph.',
@@ -3850,6 +4907,11 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Eliud became the father of Eleazar. Eleazar became the father of Matthan. Matthan became the father of Jacob. — Matthew 1:15 (https://www.biblegateway.com/passage/?search=Matthew+1%3A15)']
   },  {
     id: 'mary_pat',
+    translations: [
+      { lang: 'Hebrew', original: 'מִרְיָם', translit: 'Miryām', meaning: 'uncertain; possibly Egyptian mry, \'beloved\', or Hebrew \'bitter\' / \'rebellious\'' },
+      { lang: 'Greek', original: 'Μαρία', translit: 'María', meaning: 'Greek form of Miryām, source of \'Mary\'' },
+      { lang: 'Arabic', original: 'مريم', translit: 'Maryam', meaning: 'Qur\'anic form of the name' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Saint_Patrick_Church_%28Troy%2C_Ohio%29_-_stained-glass_windows%2C_St._Anne_Educates_the_Virgin_Mary_-_detail.jpg/960px-Saint_Patrick_Church_%28Troy%2C_Ohio%29_-_stained-glass_windows%2C_St._Anne_Educates_the_Virgin_Mary_-_detail.jpg'],
     relatedIds: ['jesus', 'islam', 'saint-bernadette-soubirous'],
     parentId: 'biblical-figures',
@@ -3861,6 +4923,11 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Now in the sixth month, the angel Gabriel was sent from God to a city of Galilee, named Nazareth, to a virgin pledged to be married to a man whose name was Joseph, of David’s house. The virgin’s name was Mary. Having come in, the angel said to her, “Rejoice, you highly favored one! The Lord is with you. Blessed are you among women!” But when she saw him, she was greatly troubled at the saying, and considered what kind of salutation this might be. The angel said to her, “Don’t be afraid, Mary, for you have found favor with God. Behold, you will conceive in your womb, and give birth to a son, and will call his name ‘Jesus.’ — Luke 1:26-31 (https://www.biblegateway.com/passage/?search=Luke+1%3A26-31)', 'She gave birth to her firstborn son. She wrapped him in bands of cloth, and laid him in a feeding trough, because there was no room for them in the inn. — Luke 2:7 (https://www.biblegateway.com/passage/?search=Luke+2%3A7)', 'But there were standing by the cross of Jesus his mother, and his mother’s sister, Mary the wife of Clopas, and Mary Magdalene. Therefore when Jesus saw his mother, and the disciple whom he loved standing there, he said to his mother, “Woman, behold, your son!” Then he said to the disciple, “Behold, your mother!” From that hour, the disciple took her to his own home. — John 19:25-27 (https://www.biblegateway.com/passage/?search=John+19%3A25-27)']
   },  {
     id: 'jesus',
+    translations: [
+      { lang: 'Hebrew', original: 'יֵשׁוּעַ', translit: 'Yēšûaʿ', meaning: 'Yahweh is salvation; late short form of Yəhôšûaʿ (Joshua)' },
+      { lang: 'Greek', original: 'Ἰησοῦς', translit: 'Iēsoûs', meaning: 'Greek form of Yeshua/Joshua' },
+      { lang: 'Greek', original: 'Χριστός', translit: 'Khristós', meaning: 'anointed one (khríō, to anoint), translating Hebrew māšîaḥ, messiah' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Spas_vsederzhitel_sinay_%28cropped1%29.jpg/960px-Spas_vsederzhitel_sinay_%28cropped1%29.jpg'],
     relatedIds: ['perez', 'eliakim', 'mary_pat', 'mary_magdalene', 'john_baptist', 'evt-crucifixion', 'catholicism', 'tribe-of-judah', 'rel-figure-spencer-kimball', 'sudarium-of-oviedo', 'archaeology-frankfurt-silver-amulet', 'book-of-mormon', 'metatron-across-texts', 'star-of-bethlehem', 'melchizedek-miraculous-birth', 'polycarp', 'new-testament', 'prophet-moses-node', 'prophet-nathan-node', 'prophet-isaiah-node'],
     parentId: 'biblical-figures',
@@ -3872,6 +4939,11 @@ const chunk_0: any[] = [  {
     bibleVerses: ['In the beginning was the Word, and the Word was with God, and the Word was God. — John 1:1 (https://www.biblegateway.com/passage/?search=John+1%3A1)', 'For God so loved the world, that he gave his one and only Son, that whoever believes in him should not perish, but have eternal life. — John 3:16 (https://www.biblegateway.com/passage/?search=John+3%3A16)', 'She shall give birth to a son. You shall call his name Jesus, for it is he who shall save his people from their sins.” — Matthew 1:21 (https://www.biblegateway.com/passage/?search=Matthew+1%3A21)']
   },  {
     id: 'mary_magdalene',
+    translations: [
+      { lang: 'Hebrew', original: 'מִרְיָם', translit: 'Miryām', meaning: 'uncertain; possibly Egyptian mry, \'beloved\', or Hebrew \'bitter\' / \'rebellious\'' },
+      { lang: 'Hebrew', original: 'מִגְדָּל', translit: 'miḡdāl', meaning: 'tower; Magdala, \'the tower\', her home town on the Sea of Galilee' },
+      { lang: 'Greek', original: 'Μαγδαληνή', translit: 'Magdalēnḗ', meaning: 'woman of Magdala' }
+    ],
     relatedIds: ['jesus', 'sarah_damaris'],
     parentId: 'biblical-figures',
     name: 'Mary Magdalene',
@@ -3882,6 +4954,11 @@ const chunk_0: any[] = [  {
     bibleVerses: ['and certain women who had been healed of evil spirits and infirmities: Mary who was called Magdalene, from whom seven demons had gone out; — Luke 8:2 (https://www.biblegateway.com/passage/?search=Luke+8%3A2)', 'But Mary was standing outside at the tomb weeping. So, as she wept, she stooped and looked into the tomb, and she saw two angels in white sitting, one at the head, and one at the feet, where the body of Jesus had lain. They told her, “Woman, why are you weeping?” She said to them, “Because they have taken away my Lord, and I don’t know where they have laid him.” When she had said this, she turned around and saw Jesus standing, and didn’t know that it was Jesus. Jesus said to her, “Woman, why are you weeping? Who are you looking for?” She, supposing him to be the gardener, said to him, “Sir, if you have carried him away, tell me where you have laid him, and I will take him away.” Jesus said to her, “Mary.” She turned and said to him, “Rabboni!” which is to say, “Teacher!” Jesus said to her, “Don’t hold me, for I haven’t yet ascended to my Father; but go to my brothers, and tell them, ‘I am ascending to my Father and your Father, to my God and your God.’” Mary Magdalene came and told the disciples that she had seen the Lord, and that he had said these things to her. — John 20:11-18 (https://www.biblegateway.com/passage/?search=John+20%3A11-18)', 'Now when he had risen early on the first day of the week, he appeared first to Mary Magdalene, from whom he had cast out seven demons. — Mark 16:9 (https://www.biblegateway.com/passage/?search=Mark+16%3A9)']
   },  {
     id: 'peter_apostle',
+    translations: [
+      { lang: 'Aramaic', original: 'כֵּיפָא', translit: 'Kêp̄āʾ', meaning: 'rock, stone; the name given by Jesus (Greek Kēphâs)' },
+      { lang: 'Greek', original: 'Πέτρος', translit: 'Pétros', meaning: 'rock, stone (translation of Aramaic Kêp̄āʾ)' },
+      { lang: 'Hebrew', original: 'שִׁמְעוֹן', translit: 'Šimʿôn', meaning: 'he has heard (from šāmaʿ); his given name, Simon' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Christ_Healing_the_Mother_of_Simon_Peter%E2%80%99s_Wife_by_John_Bridges.jpg/960px-Christ_Healing_the_Mother_of_Simon_Peter%E2%80%99s_Wife_by_John_Bridges.jpg'],
     relatedIds: ['clean-animals-old-testament', 'unclean-animals-old-testament', 'new-testament'],
     parentId: 'biblical-figures',
@@ -3893,6 +4970,11 @@ const chunk_0: any[] = [  {
     bibleVerses: ['I also tell you that you are Peter, and on this rock I will build my assembly, and the gates of Hades will not prevail against it. — Matthew 16:18 (https://www.biblegateway.com/passage/?search=Matthew+16%3A18)', 'The Lord said, “Simon, Simon, behold, Satan asked to have all of you, that he might sift you as wheat, but I prayed for you, that your faith wouldn’t fail. You, when once you have turned again, establish your brothers.” — Luke 22:31-32 (https://www.biblegateway.com/passage/?search=Luke+22%3A31-32)', 'So when they had eaten their breakfast, Jesus said to Simon Peter, “Simon, son of Jonah, do you love me more than these?” He said to him, “Yes, Lord; you know that I have affection for you.” He said to him, “Feed my lambs.” He said to him again a second time, “Simon, son of Jonah, do you love me?” He said to him, “Yes, Lord; you know that I have affection for you.” He said to him, “Tend my sheep.” He said to him the third time, “Simon, son of Jonah, do you have affection for me?” Peter was grieved because he asked him the third time, “Do you have affection for me?” He said to him, “Lord, you know everything. You know that I have affection for you.” Jesus said to him, “Feed my sheep. — John 21:15-17 (https://www.biblegateway.com/passage/?search=John+21%3A15-17)']
   },  {
     id: 'paul_apostle',
+    translations: [
+      { lang: 'Latin', original: 'Paulus', translit: '', meaning: 'small, little' },
+      { lang: 'Greek', original: 'Παῦλος', translit: 'Paûlos', meaning: 'Greek form of Latin Paulus' },
+      { lang: 'Hebrew', original: 'שָׁאוּל', translit: 'Šāʾûl', meaning: 'asked for; his Hebrew name, Saul' }
+    ],
     parentId: 'biblical-figures',
     name: 'Paul the Apostle',
     description: 'Apostle to the Gentiles, author of many epistles, martyred in Rome.',
@@ -3902,6 +4984,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['As he traveled, he got close to Damascus, and suddenly a light from the sky shone around him. He fell on the earth, and heard a voice saying to him, “Saul, Saul, why do you persecute me?” He said, “Who are you, Lord?” The Lord said, “I am Jesus, whom you are persecuting. But rise up, and enter into the city, and you will be told what you must do.” — Acts 9:3-6 (https://www.biblegateway.com/passage/?search=Acts+9%3A3-6)', '“He said to me, ‘Depart, for I will send you out far from here to the Gentiles.’” — Acts 22:21 (https://www.biblegateway.com/passage/?search=Acts+22%3A21)', 'Paul, a servant of Jesus Christ, called to be an apostle, set apart for the Good News of God, — Romans 1:1 (https://www.biblegateway.com/passage/?search=Romans+1%3A1)']
   },  {
     id: 'john_apostle',
+    translations: [
+      { lang: 'Hebrew', original: 'יוֹחָנָן', translit: 'Yôḥānān', meaning: 'Yahweh is gracious, Yahweh has shown favour (Yô + ḥānan)' },
+      { lang: 'Greek', original: 'Ἰωάννης', translit: 'Iōánnēs', meaning: 'Greek form of Yohanan used in the New Testament' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Rubens_apostel_johannes_grt.jpg/960px-Rubens_apostel_johannes_grt.jpg'],
     relatedIds: ['james_apostle', 'bible-book-john', 'bible-book-1john', 'bible-book-2john', 'bible-book-3john', 'bible-book-revelation', 'polycarp'],
     parentId: 'biblical-figures',
@@ -3913,6 +4999,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Therefore when Jesus saw his mother, and the disciple whom he loved standing there, he said to his mother, “Woman, behold, your son!” — John 19:26 (https://www.biblegateway.com/passage/?search=John+19%3A26)', 'This is the Revelation of Jesus Christ, which God gave him to show to his servants the things which must happen soon, which he sent and made known by his angel to his servant, John, who testified to God’s word, and of the testimony of Jesus Christ, about everything that he saw. — Revelation 1:1-2 (https://www.biblegateway.com/passage/?search=Revelation+1%3A1-2)', 'Then Peter, turning around, saw a disciple following. This was the disciple whom Jesus loved, the one who had also leaned on Jesus’ breast at the supper and asked, “Lord, who is going to betray You?” Peter seeing him, said to Jesus, “Lord, what about this man?” Jesus said to him, “If I desire that he stay until I come, what is that to you? You follow me.” This saying therefore went out among the brothers, that this disciple wouldn’t die. Yet Jesus didn’t say to him that he wouldn’t die, but, “If I desire that he stay until I come, what is that to you?” This is the disciple who testifies about these things, and wrote these things. We know that his witness is true. — John 21:20-24 (https://www.biblegateway.com/passage/?search=John+21%3A20-24)']
   },  {
     id: 'job_patriarch',
+    translations: [
+      { lang: 'Hebrew', original: 'אִיּוֹב', translit: 'ʾIyyôḇ', meaning: 'uncertain; traditionally \'persecuted\' (ʾāyaḇ, to be hostile) or \'where is the father?\'' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/POxy_n3522.jpg/960px-POxy_n3522.jpg'],
     parentId: 'biblical-figures',
     name: 'Job',
@@ -3923,6 +5012,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['There was a man in the land of Uz, whose name was Job. That man was blameless and upright, and one who feared God, and turned away from evil. — Job 1:1 (https://www.biblegateway.com/passage/?search=Job+1%3A1)', '“Naked I came out of my mother’s womb, and naked I will return there. Yahweh gave, and Yahweh has taken away. Blessed be the name of Yahweh.” — Job 1:21 (https://www.biblegateway.com/passage/?search=Job+1%3A21)']
   },  {
     id: 'melchizedek',
+    translations: [
+      { lang: 'Hebrew', original: 'מַלְכִּי־צֶדֶק', translit: 'Malkî-ṣeḏeq', meaning: 'my king is righteousness; traditionally \'king of righteousness\' (Heb 7:2)' }
+    ],
     relatedIds: ['nir-brother-of-noah', 'sopanim-wife-of-nir', 'melchizedek-miraculous-birth'],
     parentId: 'biblical-figures',
     name: 'Melchizedek',
@@ -3933,6 +5025,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Melchizedek king of Salem brought out bread and wine. He was priest of God Most High. He blessed him, and said, “Blessed be Abram by God Most High, possessor of heaven and earth.” — Genesis 14:18-19 (https://www.biblegateway.com/passage/?search=Genesis+14%3A18-19)', 'Yahweh has sworn, and will not change his mind: “You are a priest forever after the order of Melchizedek.” — Psalm 110:4 (https://www.biblegateway.com/passage/?search=Psalm+110%3A4)']
   },  {
     id: 'lot',
+    translations: [
+      { lang: 'Hebrew', original: 'לוֹט', translit: 'Lôṭ', meaning: 'covering, veil (from lûṭ, to wrap, envelop)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/LOT_Boeing_787-8_%28SP-LRA%29_arrives_London_Heathrow_11Apr2015_arp.jpg/960px-LOT_Boeing_787-8_%28SP-LRA%29_arrives_London_Heathrow_11Apr2015_arp.jpg'],
     parentId: 'biblical-figures',
     name: 'Lot',
@@ -3943,6 +5038,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Terah took Abram his son, and Lot the son of Haran, his son’s son... and they went forth from Ur of the Chaldees... — Genesis 11:31 (https://www.biblegateway.com/passage/?search=Genesis+11%3A31)', 'The two angels came to Sodom at evening. Lot was sitting in the gate of Sodom. — Genesis 19:1 (https://www.biblegateway.com/passage/?search=Genesis+19%3A1)']
   },  {
     id: 'hagar',
+    translations: [
+      { lang: 'Hebrew', original: 'הָגָר', translit: 'Hāḡār', meaning: 'uncertain; often linked to Arabic hajara, to emigrate or flee (cf. hijra)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Fran%C3%A7ois-Joseph_Navez_-_Agar_et_Isma%C3%ABl_dans_le_d%C3%A9sert_%28cropped%29.jpg/960px-Fran%C3%A7ois-Joseph_Navez_-_Agar_et_Isma%C3%ABl_dans_le_d%C3%A9sert_%28cropped%29.jpg'],
     parentId: 'biblical-figures',
     name: 'Hagar',
@@ -3953,6 +5051,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Sarai, Abram’s wife, took Hagar the Egyptian, her handmaid... and gave her to her husband Abram to be his wife. — Genesis 16:3 (https://www.biblegateway.com/passage/?search=Genesis+16%3A3)', 'God heard the voice of the boy. The angel of God called to Hagar out of heaven, and said to her, “What ails you, Hagar? Don’t be afraid...” — Genesis 21:17 (https://www.biblegateway.com/passage/?search=Genesis+21%3A17)']
   },  {
     id: 'miriam',
+    translations: [
+      { lang: 'Hebrew', original: 'מִרְיָם', translit: 'Miryām', meaning: 'uncertain; possibly Egyptian mry, \'beloved\', or Hebrew \'bitter\' / \'rebellious\'' },
+      { lang: 'Greek', original: 'Μαριάμ', translit: 'Mariám', meaning: 'Septuagint form, source of \'Mary\'' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Miriam_%28Dalziels%27_Bible_Gallery%29_MET_DP835720.jpg/960px-Miriam_%28Dalziels%27_Bible_Gallery%29_MET_DP835720.jpg'],
     parentId: 'biblical-figures',
     name: 'Miriam',
@@ -3963,6 +5065,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Miriam the prophetess, the sister of Aaron, took a tambourine in her hand; and all the women went out after her with tambourines and with dances. — Exodus 15:20 (https://www.biblegateway.com/passage/?search=Exodus+15%3A20)', 'Miriam and Aaron spoke against Moses because of the Cushite woman whom he had married... — Numbers 12:1 (https://www.biblegateway.com/passage/?search=Numbers+12%3A1)']
   },  {
     id: 'aaron',
+    translations: [
+      { lang: 'Hebrew', original: 'אַהֲרֹן', translit: 'ʾAhărōn', meaning: 'meaning uncertain; possibly of Egyptian origin' },
+      { lang: 'Greek', original: 'Ἀαρών', translit: 'Aarṓn', meaning: 'Septuagint form of the name' }
+    ],
     relatedIds: ['blueprint-high-priest-garments'],
     parentId: 'biblical-figures',
     name: 'Aaron',
@@ -3973,6 +5079,11 @@ const chunk_0: any[] = [  {
     bibleVerses: ['“Is there not Aaron, your brother, the Levite? I know that he can speak well... He will be your spokesman to the people.” — Exodus 4:14-16 (https://www.biblegateway.com/passage/?search=Exodus+4%3A14-16)', 'Bring Aaron and his sons with him, and the garments, and the anointing oil... — Leviticus 8:2 (https://www.biblegateway.com/passage/?search=Leviticus+8%3A2)']
   },  {
     id: 'moses',
+    translations: [
+      { lang: 'Hebrew', original: 'מֹשֶׁה', translit: 'Mōšeh', meaning: 'traditionally \'drawn out\' (Exod 2:10, from māšâ); probably Egyptian ms, \'born, child\'' },
+      { lang: 'Egyptian', original: 'msj', translit: 'mes', meaning: 'to be born; child of (as in Thutmose, Ramesses)' },
+      { lang: 'Arabic', original: 'مُوسَىٰ', translit: 'Mūsā', meaning: 'Qur\'anic form of the name' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Rembrandt_Harmensz._van_Rijn_079.jpg/960px-Rembrandt_Harmensz._van_Rijn_079.jpg'],
     relatedIds: ['prophet-moses-node'],
     parentId: 'biblical-figures',
@@ -3984,6 +5095,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['She named him Moses, and said, “Because I drew him out of the water.” — Exodus 2:10 (https://www.biblegateway.com/passage/?search=Exodus+2%3A10)', 'There has not arisen a prophet since in Israel like Moses, whom Yahweh knew face to face... — Deuteronomy 34:10 (https://www.biblegateway.com/passage/?search=Deuteronomy+34%3A10)']
   },  {
     id: 'joshua',
+    translations: [
+      { lang: 'Hebrew', original: 'יְהוֹשֻׁעַ', translit: 'Yəhôšûaʿ', meaning: 'Yahweh is salvation (Yəhô + yāšaʿ, to save)' },
+      { lang: 'Greek', original: 'Ἰησοῦς', translit: 'Iēsoûs', meaning: 'Septuagint form, identical to the Greek of \'Jesus\'' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Collection_Motais_de_Narbonne_-_Josu%C3%A9_arr%C3%A8te_la_course_du_soleil_-_Carlo_Maratta.jpg/960px-Collection_Motais_de_Narbonne_-_Josu%C3%A9_arr%C3%A8te_la_course_du_soleil_-_Carlo_Maratta.jpg'],
     parentId: 'biblical-figures',
     name: 'Joshua',
@@ -3994,6 +5109,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['“Joshua the son of Nun, who stands before you, he will enter there. Encourage him, for he will cause Israel to inherit it.” — Deuteronomy 1:38 (https://www.biblegateway.com/passage/?search=Deuteronomy+1%3A38)', 'Be strong and courageous; for you shall cause this people to inherit the land which I swore to their fathers to give them. — Joshua 1:6 (https://www.biblegateway.com/passage/?search=Joshua+1%3A6)']
   },  {
     id: 'caleb',
+    translations: [
+      { lang: 'Hebrew', original: 'כָּלֵב', translit: 'Kālēḇ', meaning: 'dog (keleḇ); traditionally reinterpreted as \'whole-hearted\'' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Schnorr_von_Carolsfeld_Bibel_in_Bildern_1860_058.png/960px-Schnorr_von_Carolsfeld_Bibel_in_Bildern_1860_058.png'],
     parentId: 'biblical-figures',
     name: 'Caleb',
@@ -4004,6 +5122,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Caleb stilled the people before Moses, and said, “Let’s go up at once, and possess it; for we are well able to overcome it.” — Numbers 13:30 (https://www.biblegateway.com/passage/?search=Numbers+13%3A30)', '“But my servant Caleb, because he had another spirit with him, and has followed me fully, him I will bring into the land...” — Numbers 14:24 (https://www.biblegateway.com/passage/?search=Numbers+14%3A24)']
   },  {
     id: 'deborah_judge',
+    translations: [
+      { lang: 'Hebrew', original: 'דְּבוֹרָה', translit: 'Dəḇôrāh', meaning: 'bee' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Johanna_Unger_%E2%80%93_Debora.jpg/960px-Johanna_Unger_%E2%80%93_Debora.jpg'],
     parentId: 'biblical-figures',
     name: 'Deborah',
@@ -4014,6 +5135,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Now Deborah, a prophetess, the wife of Lappidoth, judged Israel at that time. — Judges 4:4 (https://www.biblegateway.com/passage/?search=Judges+4%3A4)', '“The rulers ceased in Israel. They ceased until I, Deborah, arose, arose a mother in Israel.” — Judges 5:7 (https://www.biblegateway.com/passage/?search=Judges+5%3A7)']
   },  {
     id: 'gideon',
+    translations: [
+      { lang: 'Hebrew', original: 'גִּדְעוֹן', translit: 'Giḏʿôn', meaning: 'hewer, feller (gāḏaʿ, to cut down)' }
+    ],
     parentId: 'biblical-figures',
     name: 'Gideon',
     description: 'A judge of Israel who defeated a massive Midianite army with only 300 men.',
@@ -4023,6 +5147,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['The angel of Yahweh appeared to him, and said to him, “Yahweh is with you, you mighty man of valor.” — Judges 6:12 (https://www.biblegateway.com/passage/?search=Judges+6%3A12)', 'Yahweh said to Gideon, “By the three hundred men who lapped I will save you...” — Judges 7:7 (https://www.biblegateway.com/passage/?search=Judges+7%3A7)']
   },  {
     id: 'samson',
+    translations: [
+      { lang: 'Hebrew', original: 'שִׁמְשׁוֹן', translit: 'Šimšôn', meaning: 'little sun; sun-like (from šemeš, sun)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Lucas_Cranach_d.%C3%84._-_Simson_bezwingt_den_L%C3%B6wen.jpg/960px-Lucas_Cranach_d.%C3%84._-_Simson_bezwingt_den_L%C3%B6wen.jpg'],
     relatedIds: ['dagon'],
     parentId: 'biblical-figures',
@@ -4034,6 +5161,11 @@ const chunk_0: any[] = [  {
     bibleVerses: ['“For, behold, you shall conceive, and bear a son; and no razor shall come on his head; for the child shall be a Nazirite to God...” — Judges 13:5 (https://www.biblegateway.com/passage/?search=Judges+13%3A5)', 'He found a fresh jawbone of a donkey... and killed a thousand men with it. — Judges 15:15 (https://www.biblegateway.com/passage/?search=Judges+15%3A15)']
   },  {
     id: 'prophets-general',
+    translations: [
+      { lang: 'Hebrew', original: 'נָבִיא', translit: 'nāḇîʾ', meaning: 'prophet; probably \'one called\' (cf. Akkadian nabû, to call, name)' },
+      { lang: 'Hebrew', original: 'רֹאֶה', translit: 'rōʾeh', meaning: 'seer, one who sees (1 Sam 9:9)' },
+      { lang: 'Greek', original: 'προφήτης', translit: 'prophḗtēs', meaning: 'one who speaks forth or on behalf of (pró + phēmí, to speak)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Baba_Vanga_bust.jpg/500px-Baba_Vanga_bust.jpg'],
     parentId: 'biblical-figures',
     name: 'Prophets & Seers',
@@ -4046,6 +5178,9 @@ const chunk_0: any[] = [  {
     ]
   },  {
     id: 'samuel_prophet',
+    translations: [
+      { lang: 'Hebrew', original: 'שְׁמוּאֵל', translit: 'Šəmûʾēl', meaning: '\'name of God\' (šēm + ʾēl) or \'God has heard\'; 1 Sam 1:20 links it to šāʾal, to ask' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Saul_and_the_Witch_of_Endor_%28Stom%2C_1635%29_%28cropped%29.jpg/960px-Saul_and_the_Witch_of_Endor_%28Stom%2C_1635%29_%28cropped%29.jpg'],
     relatedIds: ['prophets-general', 'prophet-samuel-node'],
     parentId: 'biblical-figures',
@@ -4057,6 +5192,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['She named him Samuel, saying, “Because I have asked him of Yahweh.” — 1 Samuel 1:20 (https://www.biblegateway.com/passage/?search=1+Samuel+1%3A20)', 'Samuel grew, and Yahweh was with him, and let none of his words fall to the ground. — 1 Samuel 3:19 (https://www.biblegateway.com/passage/?search=1+Samuel+3%3A19)']
   },  {
     id: 'saul_king',
+    translations: [
+      { lang: 'Hebrew', original: 'שָׁאוּל', translit: 'Šāʾûl', meaning: 'asked for, prayed for (passive participle of šāʾal, to ask)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/King_Saul_MET_DP802069.jpg/960px-King_Saul_MET_DP802069.jpg'],
     relatedIds: ['israelites', 'prophet-samuel-node'],
     parentId: 'biblical-figures',
@@ -4068,6 +5206,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Then Samuel took the vial of oil, and poured it on his head... and said, “Hasn’t Yahweh anointed you to be prince over his inheritance?” — 1 Samuel 10:1 (https://www.biblegateway.com/passage/?search=1+Samuel+10%3A1)', 'So Saul died, and his three sons, and his armor bearer, and all his men, that same day together. — 1 Samuel 31:6 (https://www.biblegateway.com/passage/?search=1+Samuel+31%3A6)']
   },  {
     id: 'jonathan',
+    translations: [
+      { lang: 'Hebrew', original: 'יְהוֹנָתָן', translit: 'Yəhônāṯān', meaning: 'Yahweh has given (Yəhô + nāṯan, to give)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/073A.David_and_Jonathan.jpg/960px-073A.David_and_Jonathan.jpg'],
     relatedIds: ['david_pat'],
     parentId: 'biblical-figures',
@@ -4079,6 +5220,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['The soul of Jonathan was knit with the soul of David, and Jonathan loved him as his own soul. — 1 Samuel 18:1 (https://www.biblegateway.com/passage/?search=1+Samuel+18%3A1)', '“I am distressed for you, my brother Jonathan. You have been very pleasant to me. Your love to me was wonderful, passing the love of women.” — 2 Samuel 1:26 (https://www.biblegateway.com/passage/?search=2+Samuel+1%3A26)']
   },  {
     id: 'absalom',
+    translations: [
+      { lang: 'Hebrew', original: 'אַבְשָׁלוֹם', translit: 'ʾAḇšālôm', meaning: 'father is peace, father of peace (ʾāḇ + šālôm)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Muerte_de_absalon_en_el_CESEDEN_%28cropped%29.jpg/960px-Muerte_de_absalon_en_el_CESEDEN_%28cropped%29.jpg'],
     relatedIds: ['david_pat'],
     parentId: 'biblical-figures',
@@ -4090,6 +5234,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Now in all Israel there was none to be so much praised as Absalom for his beauty... — 2 Samuel 14:25 (https://www.biblegateway.com/passage/?search=2+Samuel+14%3A25)', 'The king was much moved, and went up to the room over the gate, and wept. As he went, he said, “O my son Absalom! My son, my son Absalom!...” — 2 Samuel 18:33 (https://www.biblegateway.com/passage/?search=2+Samuel+18%33)']
   },  {
     id: 'nathan_prophet',
+    translations: [
+      { lang: 'Hebrew', original: 'נָתָן', translit: 'Nāṯān', meaning: 'he has given; gift (from nāṯan, to give)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Jacopo_Negretti%2C_gen._Palma_il_Giovane_und_Werkstatt_-_Prophet_Nathan_ermahnt_K%C3%B6nig_David_-_GG_3816_-_Kunsthistorisches_Museum.jpg/960px-Jacopo_Negretti%2C_gen._Palma_il_Giovane_und_Werkstatt_-_Prophet_Nathan_ermahnt_K%C3%B6nig_David_-_GG_3816_-_Kunsthistorisches_Museum.jpg'],
     relatedIds: ['david_pat', 'prophet-nathan-node'],
     parentId: 'biblical-figures',
@@ -4101,6 +5248,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Nathan said to David, “You are the man! This is what Yahweh, the God of Israel, says...” — 2 Samuel 12:7 (https://www.biblegateway.com/passage/?search=2+Samuel+12%3A7)', '“Go and tell my servant David, ‘This is what Yahweh says: “Should you build me a house for me to dwell in?”’” — 2 Samuel 7:5 (https://www.biblegateway.com/passage/?search=2+Samuel+7%3A5)']
   },  {
     id: 'jeroboam_i',
+    translations: [
+      { lang: 'Hebrew', original: 'יָרָבְעָם', translit: 'Yārāḇʿām', meaning: 'disputed: \'the people contend\' (rîḇ) or \'may the people increase\' (rāḇaḇ + ʿam)' }
+    ],
     relatedIds: ['israelites', 'prophet-jonah-node'],
     parentId: 'biblical-figures',
     name: 'King Jeroboam I',
@@ -4111,6 +5261,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['“I will tear the kingdom out of the hand of Solomon, and will give ten tribes to you.” — 1 Kings 11:31 (https://www.biblegateway.com/passage/?search=1+Kings+11%3A31)', 'Whereupon the king took counsel, and made two calves of gold; and he said to them, “It is too much for you to go up to Jerusalem. Behold your gods, Israel...” — 1 Kings 12:28 (https://www.biblegateway.com/passage/?search=1+Kings+12%3A28)']
   },  {
     id: 'ahab_king',
+    translations: [
+      { lang: 'Hebrew', original: 'אַחְאָב', translit: 'ʾAḥʾāḇ', meaning: 'father\'s brother, uncle (ʾāḥ, brother + ʾāḇ, father)' },
+      { lang: 'Akkadian', original: '𒀀𒄩𒀊𒁍', translit: 'Aḫâbbu', meaning: 'Ahab of Israel as named on Shalmaneser III\'s Kurkh Monolith' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Lucas_van_Leyden%2C_Jezebel_Promising_Naboth%27s_Vineyard_to_King_Ahab%2C_1516-1519%2C_NGA_11601.jpg/960px-Lucas_van_Leyden%2C_Jezebel_Promising_Naboth%27s_Vineyard_to_King_Ahab%2C_1516-1519%2C_NGA_11601.jpg'],
     relatedIds: ['prophet-elijah-node'],
     parentId: 'biblical-figures',
@@ -4122,6 +5276,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Ahab the son of Omri did that which was evil in the sight of Yahweh above all who were before him. — 1 Kings 16:30 (https://www.biblegateway.com/passage/?search=1+Kings+16%3A30)', '“Have you found me, my enemy?” Ahab said to Elijah. He answered, “I have found you, because you have sold yourself to do that which is evil...” — 1 Kings 21:20 (https://www.biblegateway.com/passage/?search=1+Kings+21%3A20)']
   },  {
     id: 'jezebel_queen',
+    translations: [
+      { lang: 'Hebrew', original: 'אִיזֶבֶל', translit: 'ʾÎzeḇel', meaning: 'uncertain; Phoenician \'where is the Prince (Baal)?\', punned in Hebrew as \'no dung\'' }
+    ],
     relatedIds: ['prophet-elijah-node'],
     parentId: 'biblical-figures',
     name: 'Jezebel',
@@ -4132,6 +5289,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['It came to pass, as if it had been a light thing for him to walk in the sins of Jeroboam... that he took as wife Jezebel the daughter of Ethbaal... — 1 Kings 16:31 (https://www.biblegateway.com/passage/?search=1+Kings+16%3A31)', '“The dogs shall eat Jezebel by the rampart of Jezreel.” — 1 Kings 21:23 (https://www.biblegateway.com/passage/?search=1+Kings+21%3A23)']
   },  {
     id: 'elijah',
+    translations: [
+      { lang: 'Hebrew', original: 'אֵלִיָּהוּ', translit: 'ʾĒliyyāhû', meaning: 'my God is Yahweh (ʾēlî + Yāhû)' },
+      { lang: 'Greek', original: 'Ἠλίας', translit: 'Ēlías', meaning: 'Greek form of the name (Elias)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Giovanni_Girolamo_Savoldo%2C_Elijah_Fed_by_the_Raven%2C_c._1510%2C_NGA_46134.jpg/960px-Giovanni_Girolamo_Savoldo%2C_Elijah_Fed_by_the_Raven%2C_c._1510%2C_NGA_46134.jpg'],
     relatedIds: ['prophet-elijah-node', 'prophet-elisha-node'],
     parentId: 'biblical-figures',
@@ -4143,6 +5304,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Elijah the Tishbite... said to Ahab, “As Yahweh, the God of Israel, lives, before whom I stand, there shall not be dew nor rain these years, but according to my word.” — 1 Kings 17:1 (https://www.biblegateway.com/passage/?search=1+Kings+17%3A1)', 'It came to pass, as they still went on, and talked, that behold, a chariot of fire and horses of fire parted them... and Elijah went up by a whirlwind into heaven. — 2 Kings 2:11 (https://www.biblegateway.com/passage/?search=2+Kings+2%3A11)']
   },  {
     id: 'elisha',
+    translations: [
+      { lang: 'Hebrew', original: 'אֱלִישָׁע', translit: 'ʾĔlîšāʿ', meaning: 'God is salvation, my God saves (ʾēl + yāšaʿ, to save)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Chapelle_des_Carm%C3%A9lites_-_Interieur_-_%C3%89lis%C3%A9e_ressuscitant_le_fils_de_la_Sunamite_par_Despax_%28cropped%29.jpg/960px-Chapelle_des_Carm%C3%A9lites_-_Interieur_-_%C3%89lis%C3%A9e_ressuscitant_le_fils_de_la_Sunamite_par_Despax_%28cropped%29.jpg'],
     relatedIds: ['prophet-elijah-node', 'prophet-elisha-node'],
     parentId: 'biblical-figures',
@@ -4154,6 +5318,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Elijah went over to him, and cast his mantle on him. — 1 Kings 19:19 (https://www.biblegateway.com/passage/?search=1+Kings+19%39)', 'Elisha said, “Please let a double portion of your spirit be on me.” — 2 Kings 2:9 (https://www.biblegateway.com/passage/?search=2+Kings+2%3A9)']
   },  {
     id: 'jonah',
+    translations: [
+      { lang: 'Hebrew', original: 'יוֹנָה', translit: 'Yônāh', meaning: 'dove' },
+      { lang: 'Greek', original: 'Ἰωνᾶς', translit: 'Iōnâs', meaning: 'Septuagint form of the name (Jonas)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Dore_jonah.jpg/960px-Dore_jonah.jpg'],
     relatedIds: ['prophecy-nineveh-nahum', 'prophet-jonah-node'],
     parentId: 'biblical-figures',
@@ -4165,6 +5333,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Now the word of Yahweh came to Jonah the son of Amittai, saying, “Arise, go to Nineveh, that great city, and preach against it...” — Jonah 1:1-2 (https://www.biblegateway.com/passage/?search=Jonah+1%3A1-2)', 'Yahweh prepared a great fish to swallow up Jonah, and Jonah was in the belly of the fish three days and three nights. — Jonah 1:17 (https://www.biblegateway.com/passage/?search=Jonah+1%3A17)']
   },  {
     id: 'isaiah',
+    translations: [
+      { lang: 'Hebrew', original: 'יְשַׁעְיָהוּ', translit: 'Yəšaʿyāhû', meaning: 'Yahweh is salvation (yāšaʿ, to save + Yāhû)' },
+      { lang: 'Greek', original: 'Ἠσαΐας', translit: 'Ēsaḯas', meaning: 'Septuagint form of the name (Esaias)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Jesaja_%28Michelangelo%29.jpg/960px-Jesaja_%28Michelangelo%29.jpg'],
     relatedIds: ['fulfilled-prophecies', 'prophecy-babylon-isaiah-13', 'prophecy-cyrus-named-isaiah-45', 'prophecy-isaiah-53-suffering-servant', 'prophecy-israel-regathered-1948', 'prophet-isaiah-node'],
     parentId: 'biblical-figures',
@@ -4176,6 +5348,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['I heard the Lord’s voice, saying, “Whom shall I send, and who will go for us?” Then I said, “Here I am. Send me.” — Isaiah 6:8 (https://www.biblegateway.com/passage/?search=Isaiah+6%3A8)', 'Therefore the Lord himself will give you a sign. Behold, the virgin will conceive, and bear a son, and shall call his name Immanuel. — Isaiah 7:14 (https://www.biblegateway.com/passage/?search=Isaiah+7%3A14)']
   },  {
     id: 'jeremiah',
+    translations: [
+      { lang: 'Hebrew', original: 'יִרְמְיָהוּ', translit: 'Yirməyāhû', meaning: 'Yahweh exalts, Yahweh will raise up (rûm + Yāhû)' },
+      { lang: 'Greek', original: 'Ἰερεμίας', translit: 'Ieremías', meaning: 'Septuagint form of the name (Jeremias)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/SA_160-Jeremia_op_de_puinhopen_van_Jeruzalem.jpg/960px-SA_160-Jeremia_op_de_puinhopen_van_Jeruzalem.jpg'],
     relatedIds: ['fulfilled-prophecies', 'prophecy-babylon-isaiah-13', 'prophet-jeremiah-node'],
     parentId: 'biblical-figures',
@@ -4187,6 +5363,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['“Before I formed you in the belly, I knew you. Before you came out of the womb, I sanctified you. I have appointed you a prophet to the nations.” — Jeremiah 1:5 (https://www.biblegateway.com/passage/?search=Jeremiah+1%3A5)', '“For I know the thoughts that I think toward you,” says Yahweh, “thoughts of peace, and not of evil, to give you hope and a future.” — Jeremiah 29:11 (https://www.biblegateway.com/passage/?search=Jeremiah+29%3A11)']
   },  {
     id: 'ezekiel',
+    translations: [
+      { lang: 'Hebrew', original: 'יְחֶזְקֵאל', translit: 'Yəḥezqēʾl', meaning: 'God strengthens, may God strengthen (ḥāzaq + ʾēl)' },
+      { lang: 'Greek', original: 'Ἰεζεκιήλ', translit: 'Iezekiḗl', meaning: 'Septuagint form of the name' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Ezekiel_by_Michelangelo%2C_restored_-_large.jpg/960px-Ezekiel_by_Michelangelo%2C_restored_-_large.jpg'],
     relatedIds: ['fulfilled-prophecies', 'prophecy-tyre-ezekiel-26', 'prophecy-israel-regathered-1948', 'blueprint-ezekiels-temple', 'enoch3-merkabah-princes', 'enoch3-shekinah-withdrawal', 'enoch-merkabah-chariot', 'the-sun-scripture', 'prophet-ezekiel-node'],
     parentId: 'biblical-figures',
@@ -4198,6 +5378,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['The heavens were opened, and I saw visions of God. — Ezekiel 1:1 (https://www.biblegateway.com/passage/?search=Ezekiel+1%3A1)', 'He said to me, “Prophesy to these bones, and tell them, ‘You dry bones, hear Yahweh’s word!’” — Ezekiel 37:4 (https://www.biblegateway.com/passage/?search=Ezekiel+37%3A4)']
   },  {
     id: 'daniel_prophet',
+    translations: [
+      { lang: 'Hebrew', original: 'דָּנִיֵּאל', translit: 'Dāniyyēʾl', meaning: 'God is my judge (dîn, to judge + ʾēl)' },
+      { lang: 'Greek', original: 'Δανιήλ', translit: 'Daniḗl', meaning: 'Septuagint form of the name' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Sir_Peter_Paul_Rubens_-_Daniel_in_the_Lions%27_Den_-_Google_Art_Project.jpg/960px-Sir_Peter_Paul_Rubens_-_Daniel_in_the_Lions%27_Den_-_Google_Art_Project.jpg'],
     relatedIds: ['prophets-general', 'fulfilled-prophecies', 'prophecy-babylon-isaiah-13', 'prophecy-cyrus-named-isaiah-45', 'prophecy-daniel-70-weeks', 'prophecy-daniel-2-four-kingdoms', 'prophet-daniel-node'],
     parentId: 'biblical-figures',
@@ -4209,6 +5393,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['As for these four youths, God gave them knowledge and skill in all learning and wisdom; and Daniel had understanding in all visions and dreams. — Daniel 1:17 (https://www.biblegateway.com/passage/?search=Daniel+1%3A17)', 'My God has sent his angel, and has shut the lions’ mouths, and they have not hurt me... — Daniel 6:22 (https://www.biblegateway.com/passage/?search=Daniel+6%3A22)']
   },  {
     id: 'esther_queen',
+    translations: [
+      { lang: 'Hebrew', original: 'אֶסְתֵּר', translit: 'ʾEstēr', meaning: 'probably from Old Persian stāra, \'star\', or the goddess-name Ishtar' },
+      { lang: 'Hebrew', original: 'הֲדַסָּה', translit: 'Hăḏassāh', meaning: 'myrtle; her Hebrew name (Esth 2:7)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Queen_Esther_Approaching_the_Palace_of_Ahasuerus_MET_DP832663.jpg/960px-Queen_Esther_Approaching_the_Palace_of_Ahasuerus_MET_DP832663.jpg'],
     relatedIds: ['anomaly-Giants---Nephilim---Elongated-Skulls---Horns-107'],
     parentId: 'biblical-figures',
@@ -4220,6 +5408,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['“Who knows whether you haven’t come to the kingdom for such a time as this?” — Esther 4:14 (https://www.biblegateway.com/passage/?search=Esther+4%3A14)', '“Go, gather together all the Jews... and fast for me... and so I will go in to the king... and if I perish, I perish.” — Esther 4:16 (https://www.biblegateway.com/passage/?search=Esther+4%3A16)']
   },  {
     id: 'ezra',
+    translations: [
+      { lang: 'Hebrew', original: 'עֶזְרָא', translit: 'ʿEzrāʾ', meaning: 'help; short form of Azariah, \'Yahweh has helped\'' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/109.Ezra_Reads_the_Law_to_the_People.jpg/960px-109.Ezra_Reads_the_Law_to_the_People.jpg'],
     parentId: 'biblical-figures',
     name: 'Ezra',
@@ -4230,6 +5421,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['For Ezra had set his heart to seek Yahweh’s law, and to do it, and to teach statutes and ordinances in Israel. — Ezra 7:10 (https://www.biblegateway.com/passage/?search=Ezra+7%3A10)', 'Ezra the priest stood up, and said to them, “You have trespassed, and have married foreign women, to increase the guilt of Israel.” — Ezra 10:10 (https://www.biblegateway.com/passage/?search=Ezra+10%3A10)']
   },  {
     id: 'nehemiah',
+    translations: [
+      { lang: 'Hebrew', original: 'נְחֶמְיָה', translit: 'Nəḥemyāh', meaning: 'YHWH comforts (nāḥam, to comfort + yāh)' }
+    ],
     parentId: 'biblical-figures',
     name: 'Nehemiah',
     description: 'Governor of Persian Judea who led the rebuilding of Jerusalem\'s walls and enacted religious reforms.',
@@ -4239,6 +5433,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['They said to me, “The remnant... are in great affliction and reproach. The wall of Jerusalem also is broken down...” — Nehemiah 1:3 (https://www.biblegateway.com/passage/?search=Nehemiah+1%3A3)', 'So we built the wall; and all the wall was joined together to half the height of it; for the people had a mind to work. — Nehemiah 4:6 (https://www.biblegateway.com/passage/?search=Nehemiah+4%3A6)']
   },  {
     id: 'herod_great',
+    translations: [
+      { lang: 'Greek', original: 'Ἡρῴδης', translit: 'Hērṓidēs', meaning: 'hero-like, son of a hero (hḗrōs, hero + patronymic -idēs)' }
+    ],
     relatedIds: ['prophecy-bethlehem-micah-5', 'prophecy-temple-destruction-ad70', 'blueprint-herods-temple-model', 'prophet-micah-node'],
     parentId: 'biblical-figures',
     name: 'Herod the Great',
@@ -4249,6 +5446,11 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Now when Jesus was born in Bethlehem of Judea in the days of Herod the king, behold, wise men from the east came to Jerusalem... — Matthew 2:1 (https://www.biblegateway.com/passage/?search=Matthew+2%3A1)', 'Then Herod, when he saw that he was mocked by the wise men, was exceedingly angry, and sent out, and slew all the male children who were in Bethlehem... — Matthew 2:16 (https://www.biblegateway.com/passage/?search=Matthew+2%3A16)']
   },  {
     id: 'john_baptist',
+    translations: [
+      { lang: 'Hebrew', original: 'יוֹחָנָן', translit: 'Yôḥānān', meaning: 'Yahweh is gracious, Yahweh has shown favour (Yô + ḥānan)' },
+      { lang: 'Greek', original: 'Ἰωάννης', translit: 'Iōánnēs', meaning: 'Greek form of Yohanan used in the New Testament' },
+      { lang: 'Greek', original: 'βαπτιστής', translit: 'baptistḗs', meaning: 'one who dips, immerser (baptízō, to dip, immerse)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Accademia_-_St_John_the_Baptist_by_Titian_Cat314.jpg/960px-Accademia_-_St_John_the_Baptist_by_Titian_Cat314.jpg'],
     relatedIds: ['jesus', 'nazarites', 'shroud-of-turin', 'prophet-malachi-node'],
     parentId: 'biblical-figures',
@@ -4260,6 +5462,11 @@ const chunk_0: any[] = [  {
     bibleVerses: ['In those days, John the Baptist came, preaching in the wilderness of Judea, saying, “Repent, for the Kingdom of Heaven is at hand!” — Matthew 3:1-2 (https://www.biblegateway.com/passage/?search=Matthew+3%3A1-2)', 'Then Jesus came from Galilee to the Jordan to John, to be baptized by him. — Matthew 3:13 (https://www.biblegateway.com/passage/?search=Matthew+3%3A13)']
   },  {
     id: 'james_apostle',
+    translations: [
+      { lang: 'Hebrew', original: 'יַעֲקֹב', translit: 'Yaʿăqōḇ', meaning: 'Jacob: heel-grabber, supplanter (ʿāqēḇ, heel)' },
+      { lang: 'Greek', original: 'Ἰάκωβος', translit: 'Iákōbos', meaning: 'hellenised form of Jacob used in the New Testament' },
+      { lang: 'Latin', original: 'Iacomus', translit: '', meaning: 'Late Latin variant of Iacobus, whence \'James\'' }
+    ],
     relatedIds: ['john_apostle'],
     parentId: 'biblical-figures',
     name: 'James the Apostle',
@@ -4270,6 +5477,11 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Going on from there, he saw two other brothers, James the son of Zebedee, and John his brother, in the boat... and he called them. — Matthew 4:21 (https://www.biblegateway.com/passage/?search=Matthew+4%3A21)', 'Now about that time, Herod the king stretched out his hands to afflict certain of the assembly. He killed James, the brother of John, with the sword. — Acts 12:1-2 (https://www.biblegateway.com/passage/?search=Acts+12%3A1-2)']
   },  {
     id: 'james_brother',
+    translations: [
+      { lang: 'Hebrew', original: 'יַעֲקֹב', translit: 'Yaʿăqōḇ', meaning: 'Jacob: heel-grabber, supplanter (ʿāqēḇ, heel)' },
+      { lang: 'Greek', original: 'Ἰάκωβος', translit: 'Iákōbos', meaning: 'hellenised form of Jacob used in the New Testament' },
+      { lang: 'Latin', original: 'Iacomus', translit: '', meaning: 'Late Latin variant of Iacobus, whence \'James\'' }
+    ],
     relatedIds: ['jude_brother'],
     parentId: 'biblical-figures',
     name: 'James the Just',
@@ -4280,6 +5492,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['“Isn’t this the carpenter’s son? Isn’t his mother called Mary, and his brothers James, Joses, Simon, and Judas?” — Matthew 13:55 (https://www.biblegateway.com/passage/?search=Matthew+13%3A55)', 'But I saw none of the other apostles, except James, the Lord’s brother. — Galatians 1:19 (https://www.biblegateway.com/passage/?search=Galatians+1%3A19)']
   },  {
     id: 'jude_brother',
+    translations: [
+      { lang: 'Hebrew', original: 'יְהוּדָה', translit: 'Yəhûḏāh', meaning: 'praised (yāḏāh, to praise); Judah' },
+      { lang: 'Greek', original: 'Ἰούδας', translit: 'Ioúdas', meaning: 'Greek form of Judah; \'Jude\' distinguishes him from Judas Iscariot' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Anthonis_van_Dyck%2C_Kunsthistorisches_Museum_Wien%2C_Gem%C3%A4ldegalerie_-_Apostel_Judas_Thadd%C3%A4us_-_GG_6809_-_Kunsthistorisches_Museum.jpg/960px-Anthonis_van_Dyck%2C_Kunsthistorisches_Museum_Wien%2C_Gem%C3%A4ldegalerie_-_Apostel_Judas_Thadd%C3%A4us_-_GG_6809_-_Kunsthistorisches_Museum.jpg'],
     relatedIds: ['james_brother'],
     parentId: 'biblical-figures',
@@ -4291,6 +5507,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Jude, a servant of Jesus Christ, and brother of James, to those who are called, sanctified by God the Father, and kept for Jesus Christ: — Jude 1:1 (https://www.biblegateway.com/passage/?search=Jude+1%3A1)']
   },  {
     id: 'stephen_martyr',
+    translations: [
+      { lang: 'Greek', original: 'Στέφανος', translit: 'Stéphanos', meaning: 'wreath, crown (from stéphō, to encircle)' },
+      { lang: 'Latin', original: 'Stephanus', translit: '', meaning: 'Latin form of the Greek name' }
+    ],
     parentId: 'biblical-figures',
     name: 'Stephen',
     description: 'A deacon in the early Church and the first Christian martyr, stoned to death under Saul\'s approval.',
@@ -4300,6 +5520,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Stephen, full of faith and power, performed great wonders and signs among the people. — Acts 6:8 (https://www.biblegateway.com/passage/?search=Acts+6%3A8)', 'They stoned Stephen as he called on the Lord and said, “Lord Jesus, receive my spirit!” — Acts 7:59 (https://www.biblegateway.com/passage/?search=Acts+7%3A59)']
   },  {
     id: 'barnabas',
+    translations: [
+      { lang: 'Syriac', original: 'ܒܪܢܒܐ', translit: 'Barnabā', meaning: 'son of prophecy (bar, son + nəḇîyā); glossed in Acts 4:36 as \'son of encouragement\'' },
+      { lang: 'Greek', original: 'Βαρναβᾶς', translit: 'Barnabâs', meaning: 'Greek form of the Aramaic byname of Joseph the Levite' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Vienna%2C_Austrian_National_Libarary_Ms_Codex_2662_fol._26r_Beginning_of_the_Gospel_of_Barnabas.jpg/960px-Vienna%2C_Austrian_National_Libarary_Ms_Codex_2662_fol._26r_Beginning_of_the_Gospel_of_Barnabas.jpg'],
     parentId: 'biblical-figures',
     name: 'Barnabas',
@@ -4310,6 +5534,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Joses, who by the apostles was surnamed Barnabas (which is, being interpreted, Son of Encouragement), a Levite, a man of Cyprus by birth... — Acts 4:36 (https://www.biblegateway.com/passage/?search=Acts+4%3A36)', 'For he was a good man, and full of the Holy Spirit and of faith. And a great multitude was added to the Lord. — Acts 11:24 (https://www.biblegateway.com/passage/?search=Acts+11%3A24)']
   },  {
     id: 'mark_evangelist',
+    translations: [
+      { lang: 'Latin', original: 'Marcus', translit: '', meaning: 'Roman praenomen, probably \'dedicated to Mars\' (Mārs, Mārtis)' },
+      { lang: 'Greek', original: 'Μᾶρκος', translit: 'Mârkos', meaning: 'Greek form of Latin Marcus' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Saint_Mark_the_Evangelist_%28CBL_W_139%2C_f.122v%29.jpg/960px-Saint_Mark_the_Evangelist_%28CBL_W_139%2C_f.122v%29.jpg'],
     parentId: 'biblical-figures',
     name: 'Mark the Evangelist',
@@ -4320,6 +5548,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['She came to the house of Mary the mother of John whose surname was Mark, where many were gathered together and were praying. — Acts 12:12 (https://www.biblegateway.com/passage/?search=Acts+12%3A12)', '“Only Luke is with me. Take Mark, and bring him with you, for he is useful to me for service.” — 2 Timothy 4:11 (https://www.biblegateway.com/passage/?search=2+Timothy+4%3A11)']
   },  {
     id: 'luke_evangelist',
+    translations: [
+      { lang: 'Latin', original: 'Lūcius / Lūcānus', translit: '', meaning: 'light-born (from lūx) / man of Lucania; the full names Loukas abbreviates' },
+      { lang: 'Greek', original: 'Λουκᾶς', translit: 'Loukâs', meaning: 'hypocoristic (short form) of a Latin name, probably Lucanus or Lucius' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/St_Luke_the_Evangelist_church%2C_Walton_2.jpg/960px-St_Luke_the_Evangelist_church%2C_Walton_2.jpg'],
     parentId: 'biblical-figures',
     name: 'Luke the Evangelist',
@@ -4330,6 +5562,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Luke, the beloved physician, and Demas greet you. — Colossians 4:14 (https://www.biblegateway.com/passage/?search=Colossians+4%3A14)', 'It seemed good to me also, having traced the course of all things accurately from the first, to write to you in order, most excellent Theophilus... — Luke 1:3 (https://www.biblegateway.com/passage/?search=Luke+1%3A3)']
   },  {
     id: 'matthew_apostle',
+    translations: [
+      { lang: 'Hebrew', original: 'מַתִּתְיָהוּ', translit: 'Mattiṯyāhû', meaning: 'gift of YHWH (mattaṯ, gift + yāhû)' },
+      { lang: 'Greek', original: 'Ματθαῖος', translit: 'Matthaîos', meaning: 'Greek form of the Hebrew name' }
+    ],
     relatedIds: ['bible-book-matthew'],
     parentId: 'biblical-figures',
     name: 'Matthew the Apostle',
@@ -4340,6 +5576,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['As Jesus passed by from there, he saw a man, called Matthew, sitting at the tax collection office. He said to him, “Follow me.” He arose and followed him. — Matthew 9:9 (https://www.biblegateway.com/passage/?search=Matthew+9%3A9)']
   },  {
     id: 'timothy_bishop',
+    translations: [
+      { lang: 'Greek', original: 'Τιμόθεος', translit: 'Timótheos', meaning: 'honouring God (timḗ, honour + theós, god)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/1_Timothy_1_and_2_in_Sinaiticus.jpg/960px-1_Timothy_1_and_2_in_Sinaiticus.jpg'],
     parentId: 'biblical-figures',
     name: 'Timothy',
@@ -4350,6 +5589,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['He came to Derbe and Lystra: and behold, a certain disciple was there, named Timothy, the son of a Jewess who believed... — Acts 16:1 (https://www.biblegateway.com/passage/?search=Acts+16%3A1)', 'To Timothy, my beloved child: Grace, mercy, and peace, from God the Father and Christ Jesus our Lord. — 2 Timothy 1:2 (https://www.biblegateway.com/passage/?search=2+Timothy+1%3A2)']
   },  {
     id: 'lazarus',
+    translations: [
+      { lang: 'Hebrew', original: 'אֶלְעָזָר', translit: 'ʾElʿāzār', meaning: 'God has helped (ʾēl + ʿāzar, to help)' },
+      { lang: 'Greek', original: 'Λάζαρος', translit: 'Lázaros', meaning: 'Greek form of the shortened Aramaic Laʿzar' }
+    ],
     relatedIds: ['martha_bethany', 'mary_bethany'],
     parentId: 'biblical-figures',
     name: 'Lazarus of Bethany',
@@ -4360,6 +5603,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['He cried with a loud voice, “Lazarus, come out!” He who had been dead came out... — John 11:43-44 (https://www.biblegateway.com/passage/?search=John+11%3A43-44)', 'The chief priests took counsel that they might put Lazarus to death also, because on account of him many of the Jews went away, and believed in Jesus. — John 12:10-11 (https://www.biblegateway.com/passage/?search=John+12%3A10-11)']
   },  {
     id: 'martha_bethany',
+    translations: [
+      { lang: 'Aramaic', original: 'מָרְתָא', translit: 'Mārtāʾ', meaning: 'lady, mistress (feminine of mār, lord)' },
+      { lang: 'Greek', original: 'Μάρθα', translit: 'Mártha', meaning: 'Greek form of the Aramaic name' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Johannes_%28Jan%29_Vermeer_-_Christ_in_the_House_of_Martha_and_Mary_-_Google_Art_Project_%28cropped2%29.jpg/960px-Johannes_%28Jan%29_Vermeer_-_Christ_in_the_House_of_Martha_and_Mary_-_Google_Art_Project_%28cropped2%29.jpg'],
     relatedIds: ['lazarus'],
     parentId: 'biblical-figures',
@@ -4371,6 +5618,10 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Now a certain woman named Martha received him into her house. — Luke 10:38 (https://www.biblegateway.com/passage/?search=Luke+10%38)', 'Martha said to Jesus, “Lord, if you had been here, my brother wouldn’t have died.” — John 11:21 (https://www.biblegateway.com/passage/?search=John+11%3A21)']
   },  {
     id: 'mary_bethany',
+    translations: [
+      { lang: 'Hebrew', original: 'מִרְיָם', translit: 'Miryām', meaning: 'uncertain; possibly Egyptian mry, \'beloved\', or Hebrew \'bitter\' / \'rebellious\'' },
+      { lang: 'Greek', original: 'Μαρία', translit: 'María', meaning: 'Greek form of Miryām, source of \'Mary\'' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Johannes_%28Jan%29_Vermeer_-_Christ_in_the_House_of_Martha_and_Mary_-_Google_Art_Project_%28cropped%29.jpg/960px-Johannes_%28Jan%29_Vermeer_-_Christ_in_the_House_of_Martha_and_Mary_-_Google_Art_Project_%28cropped%29.jpg'],
     relatedIds: ['lazarus'],
     parentId: 'biblical-figures',
@@ -4382,6 +5633,11 @@ const chunk_0: any[] = [  {
     bibleVerses: ['She had a sister called Mary, who also sat at Jesus’ feet, and heard his word. — Luke 10:39 (https://www.biblegateway.com/passage/?search=Luke+10%39)', 'Mary therefore took a pound of ointment of pure nard, very precious, and anointed the feet of Jesus, and wiped his feet with her hair. — John 12:3 (https://www.biblegateway.com/passage/?search=John+12%3A3)']
   },  {
     id: 'rephaim',
+    translations: [
+      { lang: 'Hebrew', original: 'רְפָאִים', translit: 'rəp̄āʾîm', meaning: 'shades of the dead; a race of giants; perhaps \'healers\' (rāpāʾ) or \'weak ones\' (rāpāh)' },
+      { lang: 'Ugaritic', original: '𐎗𐎔𐎜𐎎', translit: 'rapiʾūma', meaning: 'the deified royal ancestors, shades of the dead (rpum)' },
+      { lang: 'Phoenician', original: '𐤓𐤐𐤀𐤌', translit: 'rpʾm', meaning: 'shades of the dead (in the Sidonian royal inscriptions)' }
+    ],
     relatedIds: ['og-bashan'],
     parentId: 'people-groups',
     name: 'Rephaim',
@@ -4393,6 +5649,9 @@ const chunk_0: any[] = [  {
     subLabel: 'Possible Nephilim Bloodline'
   },  {
     id: 'emim',
+    translations: [
+      { lang: 'Hebrew', original: 'אֵימִים', translit: 'ʾÊmîm', meaning: 'terrors, dreadful ones (ʾêmāh, terror); Moabite name for the giants (Deut 2:11)' }
+    ],
     parentId: 'people-groups',
     name: 'Emim',
     description: 'An ancient giant people who originally inhabited the land of Moab. Described as "a people great, and many, and tall, as the Anakim."',
@@ -4403,6 +5662,9 @@ const chunk_0: any[] = [  {
     subLabel: 'Possible Nephilim Bloodline'
   },  {
     id: 'horites',
+    translations: [
+      { lang: 'Hebrew', original: 'חֹרִי', translit: 'Ḥōrî', meaning: 'traditionally \'cave-dweller\' (ḥōr, hole, cave); often linked to the Hurrians' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/MACCOUN%281899%29_p061_MT.HOR_TO_RIVER_ARNON_-_ARABIA_PETRAEA_IN_THE_SOUTH_COUNTRY.jpg/960px-MACCOUN%281899%29_p061_MT.HOR_TO_RIVER_ARNON_-_ARABIA_PETRAEA_IN_THE_SOUTH_COUNTRY.jpg'],
     relatedIds: ['edomites'],
     parentId: 'people-groups',
@@ -4425,6 +5687,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['and the Avvim, who lived in villages as far as Gaza, the Caphtorim, who came out of Caphtor, destroyed them, and lived in their place.) — Deuteronomy 2:23 (https://www.biblegateway.com/passage/?search=Deuteronomy+2%3A23)', 'from the Shihor, which is before Egypt, even to the border of Ekron northward, which is counted as Canaanite; the five lords of the Philistines; the Gazites, and the Ashdodites, the Ashkelonites, the Gittites, and the Ekronites; also the Avvim, — Joshua 13:3 (https://www.biblegateway.com/passage/?search=Joshua+13%3A3)']
   },  {
     id: 'perizzites',
+    translations: [
+      { lang: 'Hebrew', original: 'פְּרִזִּי', translit: 'Pərizzî', meaning: 'traditionally \'villagers, dwellers in unwalled country\' (pərāzôt, open villages)' }
+    ],
     parentId: 'people-groups',
     name: 'Perizzites',
     description: 'A Canaanite people group who lived in the forested hill country of Ephraim and Judah. Mentioned regularly as inhabitants of the Promised Land.',
@@ -4434,6 +5699,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['There was strife between the herdsmen of Abram’s livestock and the herdsmen of Lot’s livestock. The Canaanites and the Perizzites lived in the land at that time. — Genesis 13:7 (https://www.biblegateway.com/passage/?search=Genesis+13%3A7)', 'the Hittites, the Perizzites, the Rephaim, — Genesis 15:20 (https://www.biblegateway.com/passage/?search=Genesis+15%3A20)', 'Judah went up, and Yahweh delivered the Canaanites and the Perizzites into their hand. They struck ten thousand men in Bezek. — Judges 1:4 (https://www.biblegateway.com/passage/?search=Judges+1%3A4)']
   },  {
     id: 'kenites',
+    translations: [
+      { lang: 'Hebrew', original: 'קֵינִי', translit: 'Qênî', meaning: 'smiths, metalworkers (qayin, smith, spear); same root as the name Cain' }
+    ],
     parentId: 'people-groups',
     name: 'Kenites',
     description: 'A nomadic clan of metalworkers allied with Israel. Jethro, the father-in-law of Moses, was a Kenite. They inhabited the Wilderness of Arad.',
@@ -7602,6 +8870,9 @@ const chunk_1: any[] = [  {
     isApocryphal: true
   },  {
     id: 'lahmi',
+    translations: [
+      { lang: 'Hebrew', original: 'לַחְמִי', translit: 'Laḥmî', meaning: 'lit. \'my bread\' (leḥem); likely a fragment of \'Bethlehemite\' in 2 Sam 21:19' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Tel-Tsafit-206.jpg/1280px-Tel-Tsafit-206.jpg'],
     relatedIds: ['david_pat', 'goliath', 'davids-mighty-men'],
     parentId: 'nephilim-br',
@@ -7626,6 +8897,9 @@ const chunk_1: any[] = [  {
     bibleVerses: ['And Ishbi-benob, one of the descendants of the giants, whose spear weighed three hundred shekels of bronze... — 2 Samuel 21:16']
   },  {
     id: 'saph',
+    translations: [
+      { lang: 'Hebrew', original: 'סַף', translit: 'Sap̄', meaning: 'threshold; basin, bowl; called Sippai in 1 Chr 20:4' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Tel-Tsafit-206.jpg/1280px-Tel-Tsafit-206.jpg'],
     parentId: 'nephilim-br',
     subLabel: 'Possible Nephilim Bloodline',
@@ -7637,6 +8911,9 @@ const chunk_1: any[] = [  {
     bibleVerses: ['Then Sibbecai the Hushathite struck down Saph, who was one of the descendants of the giants. — 2 Samuel 21:18']
   },  {
     id: 'zamzummim',
+    translations: [
+      { lang: 'Hebrew', original: 'זַמְזֻמִּים', translit: 'Zamzummîm', meaning: 'uncertain; perhaps \'murmurers, buzzers\' (onomatopoeic, cf. zāmam)' }
+    ],
     parentId: 'nephilim-br',
     name: 'Zamzummim',
     description: 'An ancient tribe of giants who inhabited the region of Ammon. Described in Deuteronomy as a people great, many, and tall, as the Anakim, who were dispossessed and destroyed by the Ammonites.',
@@ -7645,6 +8922,9 @@ const chunk_1: any[] = [  {
     subLabel: 'Possible Nephilim Bloodline'
   },  {
     id: 'anakim',
+    translations: [
+      { lang: 'Hebrew', original: 'עֲנָקִים', translit: 'ʿĂnāqîm', meaning: 'descendants of Anak; traditionally \'long-necked ones\' (ʿănāq, neck-chain)' }
+    ],
     relatedIds: ['archaeology-emim-moab'],
     parentId: 'nephilim-br',
     name: 'Anakim',
@@ -7654,6 +8934,10 @@ const chunk_1: any[] = [  {
     subLabel: 'Possible Nephilim Bloodline'
   },  {
     id: 'enakim',
+    translations: [
+      { lang: 'Hebrew', original: 'עֲנָקִים', translit: 'ʿĂnāqîm', meaning: 'descendants of Anak; traditionally \'long-necked ones\' (ʿănāq, neck-chain)' },
+      { lang: 'Greek', original: 'Ενακιμ', translit: 'Enakim', meaning: 'Septuagint transcription of Hebrew ʿĂnāqîm' }
+    ],
     parentId: 'nephilim-br',
     subLabel: 'Possible Nephilim Bloodline',
     name: 'Enakim',
@@ -7661,6 +8945,9 @@ const chunk_1: any[] = [  {
     bibleVerses: ['A people great and tall, the descendants of the Anakim, whom you know, and of whom you have heard it said, \'Who can stand before the descendants of Anak?\' — Deuteronomy 9:2 (https://www.biblegateway.com/passage/?search=Deuteronomy+9%3A2)']
   },  {
     id: 'horim',
+    translations: [
+      { lang: 'Hebrew', original: 'חֹרִי', translit: 'Ḥōrî', meaning: 'traditionally \'cave-dweller\' (ḥōr \'hole, cave\'); often linked to the Hurrians' }
+    ],
     parentId: 'nephilim-br',
     subLabel: 'Possible Nephilim Bloodline',
     name: 'Horim',
@@ -7668,6 +8955,9 @@ const chunk_1: any[] = [  {
     bibleVerses: ['The Horites also formerly dwelt in Seir, but the descendants of Esau dispossessed them and destroyed them from before them... — Deuteronomy 2:12 (https://www.biblegateway.com/passage/?search=Deuteronomy+2%3A12)']
   },  {
     id: 'anak',
+    translations: [
+      { lang: 'Hebrew', original: 'עֲנָק', translit: 'ʿĂnāq', meaning: 'neck-chain, necklace; traditionally read as \'long-necked\', i.e. giant' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Hebron_Cave_of_the_Patriarchs.jpg/1280px-Hebron_Cave_of_the_Patriarchs.jpg'],
     parentId: 'nephilim-br',
     subLabel: 'Possible Nephilim Bloodline',
@@ -7679,6 +8969,9 @@ const chunk_1: any[] = [  {
     bibleVerses: ['...and there we saw the giants, the sons of Anak, which come of the giants... — Numbers 13:33']
   },  {
     id: 'ahiman',
+    translations: [
+      { lang: 'Hebrew', original: 'אֲחִימַן', translit: 'ʾĂḥîman', meaning: 'ʾăḥî \'my brother\' + uncertain element; perhaps \'my brother is a gift\'' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Hebron_Cave_of_the_Patriarchs.jpg/1280px-Hebron_Cave_of_the_Patriarchs.jpg'],
     parentId: 'nephilim-br',
     subLabel: 'Possible Nephilim Bloodline',
@@ -7701,6 +8994,9 @@ const chunk_1: any[] = [  {
     bibleVerses: ['And Caleb drove out from there the three sons of Anak: Sheshai, Ahiman, and Talmai, the children of Anak. — Joshua 15:14']
   },  {
     id: 'talmai',
+    translations: [
+      { lang: 'Hebrew', original: 'תַּלְמַי', translit: 'Talmay', meaning: 'uncertain; perhaps \'furrowed, plowman\' (telem \'furrow\'); possibly Hurrian' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Hebron_Cave_of_the_Patriarchs.jpg/1280px-Hebron_Cave_of_the_Patriarchs.jpg'],
     parentId: 'nephilim-br',
     subLabel: 'Possible Nephilim Bloodline',
@@ -7735,6 +9031,9 @@ const chunk_1: any[] = [  {
     bibleVerses: ['...and struck the Rephaim in Ashteroth Karnaim, and the Zuzim in Ham, and the Emim in Shaveh Kiriathaim... — Genesis 14:5']
   },  {
     id: 'arba',
+    translations: [
+      { lang: 'Hebrew', original: 'אַרְבַּע', translit: 'ʾArbaʿ', meaning: 'four (Kiriath-arba, \'city of four\')' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Hebron_Cave_of_the_Patriarchs.jpg/1280px-Hebron_Cave_of_the_Patriarchs.jpg'],
     parentId: 'nephilim-br',
     subLabel: 'Possible Nephilim Bloodline',
@@ -7746,6 +9045,10 @@ const chunk_1: any[] = [  {
     bibleVerses: ['Now the name of Hebron formerly was Kiriath-arba. (Arba was the greatest man among the Anakim.) And the land had rest from war. — Joshua 14:15']
   },  {
     id: 'rapha',
+    translations: [
+      { lang: 'Hebrew', original: 'רָפָא', translit: 'Rāp̄āʾ', meaning: 'eponym of the Rephaim; root rpʾ \'to heal\' or \'to sink, be slack\' (disputed)' },
+      { lang: 'Hebrew', original: 'רְפָאִים', translit: 'Rəp̄āʾîm', meaning: 'Rephaim: giants; also \'shades of the dead\'' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Tel-Tsafit-206.jpg/1280px-Tel-Tsafit-206.jpg'],
     relatedIds: ['david_pat'],
     parentId: 'nephilim-br',
@@ -7758,6 +9061,11 @@ const chunk_1: any[] = [  {
     bibleVerses: ['These four were descended from the giants [Hebrew: Rapha] in Gath, and they fell by the hand of David and by the hand of his servants. — 2 Samuel 21:22']
   },  {
     id: 'amorite-giants',
+    translations: [
+      { lang: 'Sumerian', original: 'MAR.TU', translit: 'Martu', meaning: 'the west; the Amorite land and people' },
+      { lang: 'Akkadian', original: 'Amurrû', translit: '', meaning: 'westerner; of Amurru, \'the West\'' },
+      { lang: 'Hebrew', original: 'אֱמֹרִי', translit: 'ʾĔmōrî', meaning: 'Amorite' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Cuneiform_Clay_Tablets_from_Amorite_Kingdom_of_Mari%2C_1st_Half_of_2nd_Mill._BC.jpg/1280px-Cuneiform_Clay_Tablets_from_Amorite_Kingdom_of_Mari%2C_1st_Half_of_2nd_Mill._BC.jpg'],
     relatedIds: ['sihon'],
     parentId: 'nephilim-br',
@@ -7814,6 +9122,10 @@ const chunk_1: any[] = [  {
     isApocryphal: true
   },  {
     id: 'pharmakia',
+    translations: [
+      { lang: 'Greek', original: 'φάρμακον', translit: 'pharmakon', meaning: 'drug, remedy, poison, charm' },
+      { lang: 'Greek', original: 'φαρμακεία', translit: 'pharmakeia', meaning: 'use of drugs or potions; sorcery, witchcraft (Gal 5:20, Rev 18:23)' }
+    ],
     parentId: 'watchers',
     name: 'Pharmakia',
     description: 'The administration of drugs, potions, and sorcery. Described in the Book of Enoch as a forbidden science taught by the Watchers to lead humanity into occult dependency.',
@@ -7862,6 +9174,10 @@ const chunk_1: any[] = [  {
     isApocryphal: true
   },  {
     id: 'enochian-mount-hermon',
+    translations: [
+      { lang: 'Hebrew', original: 'חֶרְמוֹן', translit: 'Ḥermôn', meaning: 'sacred, set-apart (mountain); from ḥāram, to devote, ban, which 1 Enoch 6:6 puns on' },
+      { lang: 'Hebrew', original: 'שְׂנִיר', translit: 'Śənîr', meaning: 'Senir, the Amorite name of Hermon (Deuteronomy 3:9)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Hermonsnow.jpg/960px-Hermonsnow.jpg'],
     relatedIds: ['fallen-angel', 'grigori', 'samyaza', 'watchers', 'watcher_descent', 'enoch3-uzza-azza-azael', 'enoch3-irin-qaddishin', 'achuzan-altar-methuselah', 'enoch-family-jared'],
     parentId: 'enochian-sites',
@@ -7886,6 +9202,11 @@ const chunk_1: any[] = [  {
     bibleVerses: ['And the Lord said to Raphael: \'Bind Azazel hand and foot, and cast him into the darkness: and make an opening in the desert, which is in Dudael, and cast him therein.\' — 1 Enoch 10:4 (https://www.sacred-texts.com/bib/boe/boe013.htm)']
   },  {
     id: 'enochian-gates-of-sheol',
+    translations: [
+      { lang: 'Hebrew', original: 'שְׁאוֹל', translit: 'Šəʾôl', meaning: 'the underworld, abode of the dead; etymology uncertain, traditionally from šāʾal, to ask' },
+      { lang: 'Hebrew', original: 'גֵּי הִנֹּם', translit: 'Gê Hinnōm', meaning: 'valley of (the sons of) Hinnom, south of Jerusalem' },
+      { lang: 'Greek', original: 'γέεννα', translit: 'geenna', meaning: 'Gehenna, hell; the New Testament\'s rendering of Gê Hinnōm' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Hole%C5%A1ov%2C_%C5%BEidovsk%C3%BD_h%C5%99bitov.JPG/960px-Hole%C5%A1ov%2C_%C5%BEidovsk%C3%BD_h%C5%99bitov.JPG'],
     relatedIds: ['fallen-angel', 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-23', 'moloch', 'hell-lake-of-fire-gehenna', 'enoch1-journeys-ends-of-earth'],
     parentId: 'enochian-sites',
@@ -7919,6 +9240,11 @@ const chunk_1: any[] = [  {
     bibleVerses: ['And it came to pass when the children of men had multiplied that in those days were born unto them beautiful and comely daughters. And the angels, the children of the heaven, saw and lusted after them... — 1 Enoch 6:1-2 (https://www.sacred-texts.com/bib/boe/boe009.htm)']
   },  {
     id: 'semjaza',
+    translations: [
+      { lang: 'Aramaic', original: 'שמיחזה', translit: 'Šəmîḥăzâ', meaning: '\'my name has seen\' or \'the Name has seen\' (šēm, name + ḥăzâ, to see); Qumran form' },
+      { lang: 'Greek', original: 'Σεμιαζά', translit: 'Semiaza', meaning: 'Greek form of the name in 1 Enoch' },
+      { lang: 'Hebrew', original: 'שַׁמְּחֲזַי', translit: 'Šamḥăzai', meaning: 'Talmudic and midrashic form of the name' }
+    ],
     relatedIds: ['enoch3-uzza-azza-azael', 'wandering-stars-fallen-angels'],
     parentId: 'enochian-sites',
     name: 'Semjaza (Watcher Leader)',
@@ -7930,6 +9256,11 @@ const chunk_1: any[] = [  {
     bibleVerses: ['And Semjâzâ, who was their leader, said unto them: \'I fear ye will not indeed agree to do this deed, and I alone shall have to pay the penalty of a great sin.\' — 1 Enoch 6:3 (https://www.sacred-texts.com/bib/boe/boe009.htm)', 'And Semjâzâ taught enchantments, and root-clippings... — 1 Enoch 8:3 (https://www.sacred-texts.com/bib/boe/boe011.htm)']
   },  {
     id: 'enoch_ascension',
+    translations: [
+      { lang: 'Hebrew', original: 'חֲנוֹךְ', translit: 'Ḥănôḵ', meaning: 'dedicated, initiated (from ḥānaḵ, to dedicate, train)' },
+      { lang: 'Hebrew', original: 'לָקַח', translit: 'lāqaḥ', meaning: 'to take; \'God took him\' (Genesis 5:24), the verb behind \'translation\'' },
+      { lang: 'Latin', original: 'translatio', translit: '', meaning: 'a carrying across, removal (from transferre); the Vulgate\'s \'transtulit\' in Genesis 5:24' }
+    ],
     relatedIds: ['watchers'],
     parentId: 'enochian-sites',
     name: 'Translation of Enoch',
@@ -7965,6 +9296,9 @@ const chunk_1: any[] = [  {
     bibleVerses: ['And they were in all two hundred; who descended in the days of Jared on the summit of Mount Hermon, and they called it Mount Hermon, because they had sworn and bound themselves by mutual imprecations upon it. — 1 Enoch 6:6 (https://www.sacred-texts.com/bib/boe/boe009.htm)']
   },  {
     id: 'cave-machpelah',
+    translations: [
+      { lang: 'Hebrew', original: 'מַכְפֵּלָה', translit: 'Maḵpēlâ', meaning: 'double (cave), doubling (from kāp̄al, to double, fold); Genesis 23:9' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Hebron_Cave_of_the_Patriarchs.jpg/960px-Hebron_Cave_of_the_Patriarchs.jpg'],
     parentId: 'enochian-sites',
     name: 'Cave of Machpelah',
@@ -7974,6 +9308,10 @@ const chunk_1: any[] = [  {
     sources: ['Apocryphal Texts', 'Book of Enoch', 'Historical Gazeteers'],
   },  {
     id: 'enochian-cosmology',
+    translations: [
+      { lang: 'Hebrew', original: 'חֲנוֹךְ', translit: 'Ḥănôḵ', meaning: 'dedicated, initiated (from ḥānaḵ, to dedicate, train)' },
+      { lang: 'Greek', original: 'Ἑνώχ', translit: 'Henōch', meaning: 'Septuagint form of Enoch, whence the Latin and English' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Europe_a_Prophecy_copy_K_plate_01.jpg/1280px-Europe_a_Prophecy_copy_K_plate_01.jpg'],
     relatedIds: ['book-of-enoch'],
     parentId: 'christianity',
@@ -8017,6 +9355,10 @@ const chunk_1: any[] = [  {
     bibleVerses: ['And the Lord called Pravuil, one of his archangels, who was quick in wisdom... and the Lord said to Pravuil: \'Bring out the books from my store-houses, and a reed of quick-writing, and give it to Enoch...\' — 2 Enoch 22:11-12 (https://www.sacred-texts.com/bib/boe/index.htm)']
   },  {
     id: 'sabaoth',
+    translations: [
+      { lang: 'Hebrew', original: 'צְבָאוֹת', translit: 'ṣəḇāʾôṯ', meaning: 'hosts, armies (plural of ṣāḇāʾ); YHWH Ṣəḇāʾôṯ, \'Lord of Hosts\'' },
+      { lang: 'Greek', original: 'Σαβαώθ', translit: 'Sabaōth', meaning: 'transliteration in the Septuagint and Gnostic texts, where it became a proper name' }
+    ],
     relatedIds: ['heaven-7', 'archons'],
     parentId: 'gnosticism',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Albrecht_D%C3%BCrer_-_Adoration_of_the_Trinity_%28Landauer_Altar%29_-_Google_Art_Project.jpg/1280px-Albrecht_D%C3%BCrer_-_Adoration_of_the_Trinity_%28Landauer_Altar%29_-_Google_Art_Project.jpg'],
@@ -8026,6 +9368,9 @@ const chunk_1: any[] = [  {
     sources: ['Nag Hammadi Library', 'Apocryphon of John', 'Hypostasis of the Archons']
   },  {
     id: 'behemoth-enoch',
+    translations: [
+      { lang: 'Hebrew', original: 'בְּהֵמוֹת', translit: 'bəhēmôṯ', meaning: 'beasts; intensive plural of bəhēmâ, beast, cattle, hence \'great beast\' (Job 40:15)' }
+    ],
     parentId: 'enochian-creatures',
     images: ['https://upload.wikimedia.org/wikipedia/commons/f/f5/Ill_dict_infernal_p0100-86_behemoth.jpg'],
     relatedIds: ['leviathin', 'book-of-enoch'],
@@ -8046,6 +9391,10 @@ const chunk_1: any[] = [  {
     bibleVerses: ['And those men took me from thence, and led me up on to the seventh heaven... and the nine regiments, and the Ioanit stations of light... — 2 Enoch 20:1-3']
   },  {
     id: 'heavens-levels',
+    translations: [
+      { lang: 'Hebrew', original: 'שָׁמַיִם', translit: 'šāmayim', meaning: 'heavens, sky; dual/plural in form, hence the tradition of many heavens' },
+      { lang: 'Hebrew', original: 'רָקִיעַ', translit: 'rāqîaʿ', meaning: 'firmament, beaten-out expanse (from rāqaʿ, to hammer thin, spread out)' }
+    ],
     parentId: 'enochian-cosmology',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Firenze%2C_commedia_di_dante%2C_paradiso%2C_1325-50_%28con_intregrazioni_dei_canti_VI-XXXIII_del_xix_sec%29%2C_pluteo_40.15%2C_c_5v%2C_01.JPG/1280px-Firenze%2C_commedia_di_dante%2C_paradiso%2C_1325-50_%28con_intregrazioni_dei_canti_VI-XXXIII_del_xix_sec%29%2C_pluteo_40.15%2C_c_5v%2C_01.JPG'],
     name: 'The Levels of Heaven',
@@ -8091,6 +9440,11 @@ const chunk_1: any[] = [  {
     bibleVerses: ['Those men took me, and led me up on to the fourth heaven, and showed me all the successive goings, and all the rays of the light of sun and moon... and the chalkydri and phoenixes... — 2 Enoch 11:1-12:1']
   },  {
     id: 'chalkydri',
+    translations: [
+      { lang: 'Greek', original: 'χαλκός', translit: 'chalkos', meaning: 'copper, bronze' },
+      { lang: 'Greek', original: 'ὕδρα', translit: 'hydra', meaning: 'water-serpent (from hydōr, water)' },
+      { lang: 'Greek', original: 'χαλκύδραι', translit: 'chalkydrai', meaning: 'brazen serpents; the sun-creatures of 2 Enoch 12' }
+    ],
     parentId: 'enochian-creatures',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Guido_Reni_-_L%27Aurora_di_Guido_Reni_nelle_arti_decorative.jpg/1280px-Guido_Reni_-_L%27Aurora_di_Guido_Reni_nelle_arti_decorative.jpg'],
     secondaryParentIds: ['heaven-4'],
@@ -8101,6 +9455,10 @@ const chunk_1: any[] = [  {
     bibleVerses: ['And in the midst of the sun path, there go spirits, chalkydri and phoenixes, with twelve wings... having the head of a crocodile, the feet and tail of a lion... — 2 Enoch 12:1-2']
   },  {
     id: 'phoenixes-enoch',
+    translations: [
+      { lang: 'Egyptian', original: 'bnw', translit: 'Bennu', meaning: 'the heron of Heliopolis, prototype of the Greek phoenix (from wbn, to rise, shine)' },
+      { lang: 'Greek', original: 'φοῖνιξ', translit: 'phoinix', meaning: 'the fabulous bird; also \'purple-red\', \'Phoenician\' and \'date-palm\'' }
+    ],
     parentId: 'enochian-creatures',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Guido_Reni_-_L%27Aurora_di_Guido_Reni_nelle_arti_decorative.jpg/1280px-Guido_Reni_-_L%27Aurora_di_Guido_Reni_nelle_arti_decorative.jpg'],
     secondaryParentIds: ['heaven-4'],
@@ -8140,6 +9498,10 @@ const chunk_1: any[] = [  {
     relatedIds: ['ioanit-stations', 'sabaoth', 'heaven-8', 'enoch-366-books', 'rabbi-ishmael-3-enoch', 'enoch3-anafiel', 'enoch3-merkabah-princes', 'enoch3-araboth', 'enoch3-hekhalot-seven-palaces']
   },  {
     id: 'heaven-8',
+    translations: [
+      { lang: 'Akkadian', original: 'manzaltu', translit: '', meaning: 'station, standing-place (of a star); source of Hebrew mazzāl' },
+      { lang: 'Hebrew', original: 'מַזָּלוֹת', translit: 'mazzālôṯ', meaning: 'constellations, signs of the zodiac (2 Kings 23:5); sing. mazzāl \'star, fortune\'' }
+    ],
     relatedIds: ['heaven-7', 'zodiac'],
     parentId: 'heavens-levels',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Firenze%2C_commedia_di_dante%2C_paradiso%2C_1325-50_%28con_intregrazioni_dei_canti_VI-XXXIII_del_xix_sec%29%2C_pluteo_40.15%2C_c_5v%2C_01.JPG/1280px-Firenze%2C_commedia_di_dante%2C_paradiso%2C_1325-50_%28con_intregrazioni_dei_canti_VI-XXXIII_del_xix_sec%29%2C_pluteo_40.15%2C_c_5v%2C_01.JPG'],
@@ -8150,6 +9512,9 @@ const chunk_1: any[] = [  {
     bibleVerses: ['And the wind took me, and brought me to the eighth heaven, which is called in the Hebrew tongue Muzaloth, the changer of the seasons, who carries the twelve constellations... — 2 Enoch 21:6 (Slavonic manuscript variants)']
   },  {
     id: 'heaven-9',
+    translations: [
+      { lang: 'Hebrew', original: 'כּוֹכָבִים', translit: 'kôḵāḇîm', meaning: 'stars (sing. kôḵāḇ)' }
+    ],
     relatedIds: ['zodiac'],
     parentId: 'heavens-levels',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Firenze%2C_commedia_di_dante%2C_paradiso%2C_1325-50_%28con_intregrazioni_dei_canti_VI-XXXIII_del_xix_sec%29%2C_pluteo_40.15%2C_c_5v%2C_01.JPG/1280px-Firenze%2C_commedia_di_dante%2C_paradiso%2C_1325-50_%28con_intregrazioni_dei_canti_VI-XXXIII_del_xix_sec%29%2C_pluteo_40.15%2C_c_5v%2C_01.JPG'],
@@ -8160,6 +9525,9 @@ const chunk_1: any[] = [  {
     bibleVerses: ['And the wind brought me to the ninth heaven, which is called in the Hebrew tongue Kuchavim, where the houses of the twelve constellations are... — 2 Enoch 21:6']
   },  {
     id: 'heaven-10',
+    translations: [
+      { lang: 'Hebrew', original: 'עֲרָבוֹת', translit: 'ʿărāḇôṯ', meaning: 'plains, steppes (Ps 68:5, \'rider on the ʿărāḇôṯ\'); Talmudic name of the highest heaven' }
+    ],
     parentId: 'heavens-levels',
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Firenze%2C_commedia_di_dante%2C_paradiso%2C_1325-50_%28con_intregrazioni_dei_canti_VI-XXXIII_del_xix_sec%29%2C_pluteo_40.15%2C_c_5v%2C_01.JPG/1280px-Firenze%2C_commedia_di_dante%2C_paradiso%2C_1325-50_%28con_intregrazioni_dei_canti_VI-XXXIII_del_xix_sec%29%2C_pluteo_40.15%2C_c_5v%2C_01.JPG'],
     name: 'Tenth Heaven (Aravat)',
@@ -8176,6 +9544,10 @@ const chunk_1: any[] = [  {
     layer: 'Biblical Events'
   },  {
     id: 'future-prophecy',
+    translations: [
+      { lang: 'Greek', original: 'ἔσχατος', translit: 'éskhatos', meaning: 'last, farthest, uttermost; root of \'eschatology\'' },
+      { lang: 'Greek', original: 'προφήτης', translit: 'prophḗtēs', meaning: 'one who speaks forth, spokesman (pró, before/forth + phēmí, to speak)' }
+    ],
     parentId: 'biblical-events',
     name: 'Future Prophecy & Eschatology',
     description: 'Apocalyptic events, biblical prophecies, and cosmological end-time visions such as the New Jerusalem and Armageddon.',
@@ -8183,6 +9555,10 @@ const chunk_1: any[] = [  {
     bibleVerses: ['And I saw a new heaven and a new earth: for the first heaven and the first earth were passed away... And I John saw the holy city, new Jerusalem, coming down from God out of heaven, prepared as a bride adorned for her husband. — Revelation 21:1-2 (https://www.biblegateway.com/passage/?search=Revelation+21%3A1-2)']
   },  {
     id: 'rev_tribulation',
+    translations: [
+      { lang: 'Greek', original: 'θλῖψις', translit: 'thlipsis', meaning: 'pressure, affliction, tribulation (from thlibō, to press, squeeze)' },
+      { lang: 'Latin', original: 'tribulatio', translit: '', meaning: 'distress, affliction (from tribulum, threshing-sledge; Christian Latin coinage)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/%28Venice%29_La_distruzione_del_tempio_di_Gerusalemme_-Francesco_Hayez_-_gallerie_Accademia_Venice.jpg/960px-%28Venice%29_La_distruzione_del_tempio_di_Gerusalemme_-Francesco_Hayez_-_gallerie_Accademia_Venice.jpg'],
     relatedIds: ['prophecy-israel-regathered-1948', 'hell-abyss-bottomless-pit', 'weather-modification'],
     parentId: 'future-prophecy',
@@ -8193,6 +9569,9 @@ const chunk_1: any[] = [  {
     bibleVerses: ['for then there will be great oppression, such as has not been from the beginning of the world until now, no, nor ever will be. — Matthew 24:21 (https://www.biblegateway.com/passage/?search=Matthew+24%3A21)', 'I told him, “My lord, you know.” He said to me, “These are those who came out of the great tribulation. They washed their robes, and made them white in the Lamb’s blood. — Revelation 7:14 (https://www.biblegateway.com/passage/?search=Revelation+7%3A14)', '“At that time Michael will stand up, the great prince who stands for the children of your people; and there will be a time of trouble, such as never was since there was a nation even to that same time. At that time your people will be delivered, everyone who is found written in the book. — Daniel 12:1 (https://www.biblegateway.com/passage/?search=Daniel+12%3A1)']
   },  {
     id: 'rev_two_witnesses',
+    translations: [
+      { lang: 'Greek', original: 'μάρτυς', translit: 'martys', meaning: 'witness, one who testifies (Revelation 11:3); later \'martyr\'' }
+    ],
     relatedIds: ['blueprint-menorah'],
     parentId: 'future-prophecy',
     name: 'The Two Witnesses',
@@ -8202,6 +9581,10 @@ const chunk_1: any[] = [  {
     bibleVerses: ['I will give power to my two witnesses, and they will prophesy one thousand two hundred sixty days, clothed in sackcloth.” These are the two olive trees and the two lamp stands, standing before the Lord of the earth. — Revelation 11:3-4 (https://www.biblegateway.com/passage/?search=Revelation+11%3A3-4)', 'After the three and a half days, the breath of life from God entered into them, and they stood on their feet. Great fear fell on those who saw them. I heard a loud voice from heaven saying to them, “Come up here!” They went up into heaven in the cloud, and their enemies saw them. — Revelation 11:11-12 (https://www.biblegateway.com/passage/?search=Revelation+11%3A11-12)']
   },  {
     id: 'rev_antichrist',
+    translations: [
+      { lang: 'Greek', original: 'ἀντίχριστος', translit: 'antichristos', meaning: 'opponent or substitute of Christ (anti, against/instead of + christos, anointed)' },
+      { lang: 'Greek', original: 'θηρίον', translit: 'thērion', meaning: 'wild beast (diminutive of thēr); the \'Beast\' of Revelation 13' }
+    ],
     parentId: 'future-prophecy',
     name: 'Rise of the Beast (Antichrist)',
     description: 'The final 3.5 years (42 months) of the Tribulation where the Beast rules the earth, wages war against the saints, and enforces the Mark of the Beast. Conspiracy researchers assert that elite bloodlines are tracking these lines to build a counterfeit pedigree for the Antichrist, establishing his claim to global rule through ancient lineages (the Gene of Isis).',
@@ -8211,6 +9594,10 @@ const chunk_1: any[] = [  {
     bibleVerses: ['Then I stood on the sand of the sea. I saw a beast coming up out of the sea, having ten horns and seven heads. On his horns were ten crowns, and on his heads, blasphemous names. The beast which I saw was like a leopard, and his feet were like those of a bear, and his mouth like the mouth of a lion. The dragon gave him his power, his throne, and great authority. — Revelation 13:1-2 (https://www.biblegateway.com/passage/?search=Revelation+13%3A1-2)', 'I saw another beast coming up out of the earth. He had two horns like a lamb, and he spoke like a dragon. He exercises all the authority of the first beast in his presence. He makes the earth and those who dwell in it to worship the first beast, whose fatal wound was healed. — Revelation 13:11-12 (https://www.biblegateway.com/passage/?search=Revelation+13%3A11-12)', 'Let no one deceive you in any way. For it will not be, unless the rebellion comes first, and the man of sin is revealed, the son of destruction, he who opposes and exalts himself against all that is called God or that is worshiped; so that he sits as God in the temple of God, setting himself up as God. — 2 Thessalonians 2:3-4 (https://www.biblegateway.com/passage/?search=2+Thessalonians+2%3A3-4)']
   },  {
     id: 'rev_second_coming',
+    translations: [
+      { lang: 'Greek', original: 'παρουσία', translit: 'parousia', meaning: 'presence, arrival (para, beside + ousia, being); the NT term for Christ\'s return' },
+      { lang: 'Latin', original: 'adventus', translit: '', meaning: 'arrival, coming (ad- + venire); Vulgate rendering of parousia' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Second_Coming_of_Christ_window.jpg/960px-Second_Coming_of_Christ_window.jpg'],
     parentId: 'future-prophecy',
     name: 'The Second Coming of Christ',
@@ -8220,6 +9607,10 @@ const chunk_1: any[] = [  {
     bibleVerses: ['I saw the heaven opened, and behold, a white horse, and he who sat on it is called Faithful and True. In righteousness he judges and makes war. His eyes are a flame of fire, and on his head are many crowns. He has names written and a name written which no one knows but he himself. He is clothed in a garment sprinkled with blood. His name is called “The Word of God.” The armies which are in heaven followed him on white horses, clothed in white, pure, fine linen. Out of his mouth proceeds a sharp, double-edged sword, that with it he should strike the nations. He will rule them with an iron rod. He treads the wine press of the fierceness of the wrath of God, the Almighty. He has on his garment and on his thigh a name written, “KING OF KINGS, AND LORD OF LORDS.” — Revelation 19:11-16 (https://www.biblegateway.com/passage/?search=Revelation+19%3A11-16)', 'and then the sign of the Son of Man will appear in the sky. Then all the tribes of the earth will mourn, and they will see the Son of Man coming on the clouds of the sky with power and great glory. — Matthew 24:30 (https://www.biblegateway.com/passage/?search=Matthew+24%3A30)', 'who also said, “You men of Galilee, why do you stand looking into the sky? This Jesus, who was received up from you into the sky, will come back in the same way as you saw him going into the sky.” — Acts 1:11 (https://www.biblegateway.com/passage/?search=Acts+1%3A11)']
   },  {
     id: 'rev_millennial_reign',
+    translations: [
+      { lang: 'Greek', original: 'χίλια ἔτη', translit: 'chilia etē', meaning: 'a thousand years (Rev 20:2-7); source of \'chiliasm\'' },
+      { lang: 'Latin', original: 'millennium', translit: '', meaning: 'a thousand years (mille, thousand + annus, year)' }
+    ],
     relatedIds: ['blueprint-ezekiels-temple'],
     parentId: 'future-prophecy',
     name: 'The Millennial Reign',
@@ -8239,6 +9630,10 @@ const chunk_1: any[] = [  {
     bibleVerses: ['I saw a great white throne, and him who sat on it, from whose face the earth and the heaven fled away. There was found no place for them. I saw the dead, the great and the small, standing before the throne, and they opened books. Another book was opened, which is the book of life. The dead were judged out of the things which were written in the books, according to their works. — Revelation 20:11-12 (https://www.biblegateway.com/passage/?search=Revelation+20%3A11-12)', 'But you, why do you judge your brother? Or you again, why do you despise your brother? For we will all stand before the judgment seat of Christ. — Romans 14:10 (https://www.biblegateway.com/passage/?search=Romans+14%3A10)', 'For we must all be revealed before the judgment seat of Christ; that each one may receive the things in the body, according to what he has done, whether good or bad. — 2 Corinthians 5:10 (https://www.biblegateway.com/passage/?search=2+Corinthians+5%3A10)']
   },  {
     id: 'rev_new_jerusalem',
+    translations: [
+      { lang: 'Hebrew', original: 'יְרוּשָׁלַיִם', translit: 'Yərûšālayim', meaning: 'probably \'foundation of (the god) Shalem\'; popularly \'city of peace\'' },
+      { lang: 'Greek', original: 'Ἰερουσαλὴμ καινή', translit: 'Ierousalēm kainē', meaning: 'new Jerusalem (Revelation 21:2)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/La_J%C3%A9rusalem_c%C3%A9leste_%282%29.jpg/960px-La_J%C3%A9rusalem_c%C3%A9leste_%282%29.jpg'],
     relatedIds: ['biblical-blueprints', 'blueprint-ezekiels-temple', 'heavens-all-religions', 'heaven-third-heaven-paradise'],
     parentId: 'future-prophecy',
@@ -8249,6 +9644,10 @@ const chunk_1: any[] = [  {
     bibleVerses: ['I saw a new heaven and a new earth: for the first heaven and the first earth have passed away, and the sea is no more. I saw the holy city, New Jerusalem, coming down out of heaven from God, prepared like a bride adorned for her husband. — Revelation 21:1-2 (https://www.biblegateway.com/passage/?search=Revelation+21%3A1-2)', 'He carried me away in the Spirit to a great and high mountain, and showed me the holy city, Jerusalem, coming down out of heaven from God, having the glory of God. Her light was like a most precious stone, as if it were a jasper stone, clear as crystal; having a great and high wall; having twelve gates, and at the gates twelve angels; and names written on them, which are the names of the twelve tribes of the children of Israel. — Revelation 21:10-12 (https://www.biblegateway.com/passage/?search=Revelation+21%3A10-12)', 'But, according to his promise, we look for new heavens and a new earth, in which righteousness dwells. — 2 Peter 3:13 (https://www.biblegateway.com/passage/?search=2+Peter+3%3A13)']
   },  {
     id: 'evt-enoch-trans',
+    translations: [
+      { lang: 'Hebrew', original: 'חֲנוֹךְ', translit: 'Ḥănôḵ', meaning: 'dedicated, initiated (from ḥānaḵ, to dedicate, train)' },
+      { lang: 'Greek', original: 'μετατίθημι', translit: 'metatíthēmi', meaning: 'to transfer, translate, take up (Hebrews 11:5; LXX Genesis 5:24)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/The_Phillip_Medhurst_Picture_Torah_44._Enoch_translated._Genesis_cap_5_v_24._Mortier%27s_Bible.jpg/960px-The_Phillip_Medhurst_Picture_Torah_44._Enoch_translated._Genesis_cap_5_v_24._Mortier%27s_Bible.jpg'],
     relatedIds: ['enoch3-anafiel', 'achuzan-altar-methuselah', 'enoch-second-return'],
     parentId: 'biblical-events',
@@ -8260,6 +9659,10 @@ const chunk_1: any[] = [  {
     bibleVerses: ['Enoch walked with God, and he was not found, for God took him. — Genesis 5:24 (https://www.biblegateway.com/passage/?search=Genesis+5%3A24)', 'By faith, Enoch was taken away, so that he wouldn’t see death, and he was not found, because God translated him. For he has had testimony given to him that before his translation he had been well pleasing to God. — Hebrews 11:5 (https://www.biblegateway.com/passage/?search=Hebrews+11%3A5)']
   },  {
     id: 'evt-adam-death',
+    translations: [
+      { lang: 'Hebrew', original: 'אֲדָמָה', translit: 'ʾăḏāmāh', meaning: 'ground, soil (Genesis 2:7: man formed from the ground)' },
+      { lang: 'Hebrew', original: 'אָדָם', translit: 'ʾāḏām', meaning: 'man, humankind; linked to ʾăḏāmāh, ground, and ʾāḏōm, red' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Michelangelo%2C_Creation_of_Adam_03.jpg/960px-Michelangelo%2C_Creation_of_Adam_03.jpg'],
     parentId: 'biblical-events',
     name: 'Death of Adam',
@@ -8270,6 +9673,11 @@ const chunk_1: any[] = [  {
     bibleVerses: ['And all the days that Adam lived were nine hundred and thirty years: and he died. — Genesis 5:5 (https://www.biblegateway.com/passage/?search=Genesis+5%3A5)']
   },  {
     id: 'evt-abraham-canaan',
+    translations: [
+      { lang: 'Hebrew', original: 'אַבְרָהָם', translit: 'ʾAḇrāhām', meaning: 'father of a multitude (Genesis 17:5: ʾāḇ + hămôn); earlier ʾAḇrām, \'exalted father\'' },
+      { lang: 'Akkadian', original: 'ḫarrānu', translit: '', meaning: 'road, journey, caravan route (the city Harran)' },
+      { lang: 'Hebrew', original: 'כְּנַעַן', translit: 'Kənaʿan', meaning: 'Canaan; meaning uncertain (Akkadian Kinaḫḫu; traditionally \'lowland\')' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/A_dictionary_of_the_Bible.._%281887%29_%2814781539332%29.jpg/960px-A_dictionary_of_the_Bible.._%281887%29_%2814781539332%29.jpg'],
     parentId: 'biblical-events',
     name: 'Abraham Enters Canaan',
@@ -8291,6 +9699,11 @@ const chunk_1: any[] = [  {
     bibleVerses: ['Then Yahweh rained on Sodom and on Gomorrah sulfur and fire from Yahweh out of the sky. He overthrew those cities, all the plain, all the inhabitants of the cities, and that which grew on the ground. — Genesis 19:24-25 (https://www.biblegateway.com/passage/?search=Genesis+19%3A24-25)', 'and turning the cities of Sodom and Gomorrah into ashes, condemned them to destruction, having made them an example to those who would live in an ungodly way; — 2 Peter 2:6 (https://www.biblegateway.com/passage/?search=2+Peter+2%3A6)', 'Even as Sodom and Gomorrah, and the cities around them, having, in the same way as these, given themselves over to sexual immorality and gone after strange flesh, are shown as an example, suffering the punishment of eternal fire. — Jude 1:7 (https://www.biblegateway.com/passage/?search=Jude+1%3A7)']
   },  {
     id: 'evt-binding-isaac',
+    translations: [
+      { lang: 'Hebrew', original: 'עֲקֵדָה', translit: 'ʿĂqēḏāh', meaning: 'binding (from ʿāqaḏ, to bind; Genesis 22:9)' },
+      { lang: 'Hebrew', original: 'יִצְחָק', translit: 'Yiṣḥāq', meaning: 'he laughs (from ṣāḥaq, to laugh; Genesis 17:17, 21:6)' },
+      { lang: 'Hebrew', original: 'מוֹרִיָּה', translit: 'Môriyyāh', meaning: 'Moriah; uncertain, Genesis 22:14 plays on rāʾāh, to see, provide' }
+    ],
     parentId: 'biblical-events',
     name: 'Binding of Isaac',
     description: 'God commands Abraham to sacrifice his son Isaac on Mount Moriah; Abraham is stopped by an angel at the last second.',
@@ -8300,6 +9713,11 @@ const chunk_1: any[] = [  {
     bibleVerses: ['They came to the place which God had told him of. Abraham built the altar there, and laid the wood in order, bound Isaac his son, and laid him on the altar, on the wood. Abraham stretched out his hand, and took the knife to kill his son. Yahweh’s angel called to him out of the sky, and said, “Abraham, Abraham!” He said, “Here I am.” He said, “Don’t lay your hand on the boy or do anything to him. For now I know that you fear God, since you have not withheld your son, your only son, from me.” — Genesis 22:9-12 (https://www.biblegateway.com/passage/?search=Genesis+22%3A9-12)', 'By faith, Abraham, being tested, offered up Isaac. Yes, he who had gladly received the promises was offering up his one and only son, to whom it was said, “your offspring will be accounted as from Isaac”; — Hebrews 11:17-18 (https://www.biblegateway.com/passage/?search=Hebrews+11%3A17-18)']
   },  {
     id: 'evt-joseph-sold',
+    translations: [
+      { lang: 'Hebrew', original: 'יוֹסֵף', translit: 'Yôsēp̄', meaning: 'may he add (from yāsap̄, to add; Genesis 30:24)' },
+      { lang: 'Hebrew', original: 'יִשְׁמָעֵאל', translit: 'Yišmāʿēʾl', meaning: 'God hears (šāmaʿ, to hear + ʾēl)' },
+      { lang: 'Hebrew', original: 'שֶׁקֶל', translit: 'šeqel', meaning: 'weight; unit of silver (from šāqal, to weigh)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Joseph_%28Francisco_de_Zurbar%C3%A1n%29.jpg/960px-Joseph_%28Francisco_de_Zurbar%C3%A1n%29.jpg'],
     parentId: 'biblical-events',
     name: 'Joseph Sold to Egypt',
@@ -8310,6 +9728,11 @@ const chunk_1: any[] = [  {
     bibleVerses: ['Midianites who were merchants passed by, and they drew and lifted up Joseph out of the pit, and sold Joseph to the Ishmaelites for twenty pieces of silver. They brought Joseph into Egypt. — Genesis 37:28 (https://www.biblegateway.com/passage/?search=Genesis+37%3A28)', '“The patriarchs, moved with jealousy against Joseph, sold him into Egypt. God was with him, — Acts 7:9 (https://www.biblegateway.com/passage/?search=Acts+7%3A9)']
   },  {
     id: 'evt-israel-egypt',
+    translations: [
+      { lang: 'Hebrew', original: 'יַעֲקֹב', translit: 'Yaʿăqōḇ', meaning: 'he grasps the heel, supplanter (ʿāqēḇ, heel; Genesis 25:26)' },
+      { lang: 'Hebrew', original: 'מִצְרַיִם', translit: 'Miṣrayim', meaning: 'Egypt (dual form; cf. Akkadian Miṣru, Arabic Miṣr)' },
+      { lang: 'Egyptian', original: 'ḥwt-kꜣ-ptḥ', translit: 'Hut-ka-Ptah', meaning: 'temple of the ka of Ptah (Memphis); source of Greek Aígyptos, Egypt' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Jan_Victors_-_Jacob_Seeking_the_Forgiveness_of_Esau_-_79.330_-_Indianapolis_Museum_of_Art_%28cropped%29.jpg/960px-Jan_Victors_-_Jacob_Seeking_the_Forgiveness_of_Esau_-_79.330_-_Indianapolis_Museum_of_Art_%28cropped%29.jpg'],
     parentId: 'biblical-events',
     name: 'Jacob Enters Egypt',
@@ -8320,6 +9743,11 @@ const chunk_1: any[] = [  {
     bibleVerses: ['Jacob rose up from Beersheba, and the sons of Israel carried Jacob, their father, their little ones, and their wives, in the wagons which Pharaoh had sent to carry him. They took their livestock, and their goods, which they had gotten in the land of Canaan, and came into Egypt—Jacob, and all his offspring with him, his sons, and his sons’ sons with him, his daughters, and his sons’ daughters, and he brought all his offspring with him into Egypt. — Genesis 46:5-7 (https://www.biblegateway.com/passage/?search=Genesis+46%3A5-7)', 'Joseph sent, and summoned Jacob, his father, and all his relatives, seventy-five souls. Jacob went down into Egypt, and he died, himself and our fathers, — Acts 7:14-15 (https://www.biblegateway.com/passage/?search=Acts+7%3A14-15)']
   },  {
     id: 'evt-exodus',
+    translations: [
+      { lang: 'Greek', original: 'ἔξοδος', translit: 'éxodos', meaning: 'going out, departure (ex, out + hodós, way)' },
+      { lang: 'Hebrew', original: 'שְׁמוֹת', translit: 'Šəmôṯ', meaning: 'names (Hebrew title of Exodus: wə-ʾēlleh šəmôṯ, \'these are the names\')' },
+      { lang: 'Hebrew', original: 'יְצִיאַת מִצְרַיִם', translit: 'Yəṣîʾaṯ Miṣrayim', meaning: 'the going out from Egypt (from yāṣāʾ, to go out)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/David_Roberts-IsraelitesLeavingEgypt_1828.jpg/960px-David_Roberts-IsraelitesLeavingEgypt_1828.jpg'],
     relatedIds: ['archaeology-merneptah-stele', 'sekhmet', 'blueprint-tabernacle-model-timna'],
     parentId: 'biblical-events',
@@ -8331,6 +9759,11 @@ const chunk_1: any[] = [  {
     bibleVerses: ['Now the time that the children of Israel lived in Egypt was four hundred thirty years. At the end of four hundred thirty years, to the day, all of Yahweh’s armies went out from the land of Egypt. — Exodus 12:40-41 (https://www.biblegateway.com/passage/?search=Exodus+12%3A40-41)', 'Moses stretched out his hand over the sea, and Yahweh caused the sea to go back by a strong east wind all night, and made the sea dry land, and the waters were divided. The children of Israel went into the middle of the sea on the dry ground, and the waters were a wall to them on their right hand, and on their left. — Exodus 14:21-22 (https://www.biblegateway.com/passage/?search=Exodus+14%3A21-22)', 'By faith, they passed through the Red Sea as on dry land. When the Egyptians tried to do so, they were swallowed up. — Hebrews 11:29 (https://www.biblegateway.com/passage/?search=Hebrews+11%3A29)']
   },  {
     id: 'evt-sinai-law',
+    translations: [
+      { lang: 'Hebrew', original: 'תּוֹרָה', translit: 'tôrāh', meaning: 'instruction, teaching, law (from yārāh, to point, teach)' },
+      { lang: 'Hebrew', original: 'סִינַי', translit: 'Sînay', meaning: 'Sinai; uncertain, often linked to the moon-god Sîn or səneh, thorn-bush' },
+      { lang: 'Hebrew', original: 'בְּרִית', translit: 'bərîṯ', meaning: 'covenant, pact' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/PikiWiki_Israel_31909_The_Giving_Tree_garden_in_Holon.jpg/960px-PikiWiki_Israel_31909_The_Giving_Tree_garden_in_Holon.jpg'],
     relatedIds: ['yhwh-tetragrammaton', 'blueprint-tabernacle', 'blueprint-tabernacle-model-timna', 'hebrew-america-los-lunas-decalogue'],
     parentId: 'biblical-events',
@@ -8342,6 +9775,9 @@ const chunk_1: any[] = [  {
     bibleVerses: ['All of Mount Sinai smoked, because Yahweh descended on it in fire; and its smoke ascended like the smoke of a furnace, and the whole mountain quaked greatly. When the sound of the trumpet grew louder and louder, Moses spoke, and God answered him by a voice. Yahweh came down on Mount Sinai, to the top of the mountain. Yahweh called Moses to the top of the mountain, and Moses went up. — Exodus 19:18-20 (https://www.biblegateway.com/passage/?search=Exodus+19%3A18-20)', 'God spoke all these words, saying, “I am Yahweh your God, who brought you out of the land of Egypt, out of the house of bondage. “You shall have no other gods before me. — Exodus 20:1-3 (https://www.biblegateway.com/passage/?search=Exodus+20%3A1-3)']
   },  {
     id: 'evt-jericho',
+    translations: [
+      { lang: 'Hebrew', original: 'יְרִיחוֹ', translit: 'Yərîḥô', meaning: 'Jericho; uncertain, traditionally from yārēaḥ, moon, or rêaḥ, fragrance' }
+    ],
     parentId: 'biblical-events',
     name: 'Battle of Jericho',
     description: 'After crossing the Jordan River, the walls of Jericho collapse after the Israelite army marches around them carrying the Ark.',
@@ -8351,6 +9787,10 @@ const chunk_1: any[] = [  {
     bibleVerses: ['So the people shouted and the priests blew the trumpets. When the people heard the sound of the trumpet, the people shouted with a great shout, and the wall fell down flat, so that the people went up into the city, every man straight in front of him, and they took the city. — Joshua 6:20 (https://www.biblegateway.com/passage/?search=Joshua+6%3A20)', 'By faith, the walls of Jericho fell down, after they had been encircled for seven days. — Hebrews 11:30 (https://www.biblegateway.com/passage/?search=Hebrews+11%3A30)']
   },  {
     id: 'reign-saul',
+    translations: [
+      { lang: 'Hebrew', original: 'שָׁאוּל', translit: 'Šāʾûl', meaning: 'asked for (passive participle of šāʾal, to ask)' },
+      { lang: 'Hebrew', original: 'מֶלֶךְ', translit: 'meleḵ', meaning: 'king (root m-l-k, to rule; cf. Akkadian malku)' }
+    ],
     relatedIds: ['israelites'],
     parentId: 'biblical-events',
     name: 'Reign of King Saul',
@@ -8361,6 +9801,11 @@ const chunk_1: any[] = [  {
     bibleVerses: ['Then Samuel took the vial of oil, and poured it on his head, and kissed him, and said, “Hasn’t Yahweh anointed you to be prince over his inheritance? — 1 Samuel 10:1 (https://www.biblegateway.com/passage/?search=1+Samuel+10%3A1)', 'Saul was thirty years old when he became king, and he reigned over Israel forty-two years. — 1 Samuel 13:1 (https://www.biblegateway.com/passage/?search=1+Samuel+13%3A1)', 'Afterward they asked for a king, and God gave to them Saul the son of Kish, a man of the tribe of Benjamin, for forty years. — Acts 13:21 (https://www.biblegateway.com/passage/?search=Acts+13%3A21)']
   },  {
     id: 'reign-david',
+    translations: [
+      { lang: 'Hebrew', original: 'דָּוִד', translit: 'Dāwiḏ', meaning: 'beloved (from dôḏ, beloved)' },
+      { lang: 'Hebrew', original: 'יְרוּשָׁלַיִם', translit: 'Yərûšālayim', meaning: 'Jerusalem; probably \'foundation of Shalem\' (yrw + Šālēm); popularly \'city of peace\'' },
+      { lang: 'Hebrew', original: 'פְּלִשְׁתִּים', translit: 'Pəlištîm', meaning: 'Philistines' }
+    ],
     relatedIds: ['david_pat', 'israelites', 'philistines'],
     parentId: 'biblical-events',
     name: 'Reign of King David',
@@ -8371,6 +9816,11 @@ const chunk_1: any[] = [  {
     bibleVerses: ['David was thirty years old when he began to reign, and he reigned forty years. In Hebron he reigned over Judah seven years and six months; and in Jerusalem he reigned thirty-three years over all Israel and Judah. — 2 Samuel 5:4-5 (https://www.biblegateway.com/passage/?search=2+Samuel+5%3A4-5)', 'The days that David reigned over Israel were forty years; he reigned seven years in Hebron, and he reigned thirty-three years in Jerusalem. — 1 Kings 2:11 (https://www.biblegateway.com/passage/?search=1+Kings+2%3A11)']
   },  {
     id: 'reign-solomon-temple',
+    translations: [
+      { lang: 'Hebrew', original: 'שְׁלֹמֹה', translit: 'Šəlōmōh', meaning: 'his peace, peaceable (from šālôm, peace)' },
+      { lang: 'Hebrew', original: 'בַּיִת', translit: 'bayiṯ', meaning: 'house; \'the House\' (bêṯ YHWH), the Temple' },
+      { lang: 'Hebrew', original: 'הֵיכָל', translit: 'hêḵāl', meaning: 'temple, palace, nave (loan from Akkadian ēkallu ← Sumerian É.GAL, \'great house\')' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Francois_Vatable%2C_reconstructie_van_de_tempel_van_Salomo_%28detail%29.jpg/960px-Francois_Vatable%2C_reconstructie_van_de_tempel_van_Salomo_%28detail%29.jpg'],
     relatedIds: ['solomon_pat', 'israelites', 'blueprint-solomons-temple'],
     parentId: 'biblical-events',
@@ -8382,6 +9832,10 @@ const chunk_1: any[] = [  {
     bibleVerses: ['In the four hundred and eightieth year after the children of Israel had come out of the land of Egypt, in the fourth year of Solomon’s reign over Israel, in the month Ziv, which is the second month, he began to build Yahweh’s house. — 1 Kings 6:1 (https://www.biblegateway.com/passage/?search=1+Kings+6%3A1)', 'In the eleventh year, in the month Bul, which is the eighth month, the house was finished throughout all its parts, and according to all its specifications. So he spent seven years building it. — 1 Kings 6:38 (https://www.biblegateway.com/passage/?search=1+Kings+6%3A38)', 'Then Solomon began to build Yahweh’s house at Jerusalem on Mount Moriah, where Yahweh appeared to David his father, which he prepared in the place that David had appointed, on the threshing floor of Ornan the Jebusite. He began to build in the second day of the second month, in the fourth year of his reign. — 2 Chronicles 3:1-2 (https://www.biblegateway.com/passage/?search=2+Chronicles+3%3A1-2)']
   },  {
     id: 'evt-split-kingdom',
+    translations: [
+      { lang: 'Hebrew', original: 'יִשְׂרָאֵל', translit: 'Yiśrāʾēl', meaning: 'he strives with God / God strives (śārāh + ʾēl; Genesis 32:28)' },
+      { lang: 'Hebrew', original: 'יְהוּדָה', translit: 'Yəhûḏāh', meaning: 'Judah; Genesis 29:35 links it to yāḏāh, to praise' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Split_080620-133710-IMG_0968x.jpg/960px-Split_080620-133710-IMG_0968x.jpg'],
     relatedIds: ['prophecy-samaria-micah-1'],
     parentId: 'biblical-events',
@@ -8393,6 +9847,11 @@ const chunk_1: any[] = [  {
     bibleVerses: ['When all Israel saw that the king didn’t listen to them, the people answered the king, saying, “What portion have we in David? We don’t have an inheritance in the son of Jesse. To your tents, Israel! Now see to your own house, David.” So Israel departed to their tents. But as for the children of Israel who lived in the cities of Judah, Rehoboam reigned over them. Then king Rehoboam sent Adoram, who was over the men subject to forced labor; and all Israel stoned him to death with stones. King Rehoboam hurried to get himself up to his chariot, to flee to Jerusalem. So Israel rebelled against David’s house to this day. When all Israel heard that Jeroboam had returned, they sent and called him to the congregation, and made him king over all Israel. There was no one who followed David’s house, except for the tribe of Judah only. — 1 Kings 12:16-20 (https://www.biblegateway.com/passage/?search=1+Kings+12%3A16-20)', 'When all Israel saw that the king didn’t listen to them, the people answered the king, saying, “What portion have we in David? We don’t have an inheritance in the son of Jesse! Every man to your tents, Israel! Now see to your own house, David.” So all Israel departed to their tents. But as for the children of Israel who lived in the cities of Judah, Rehoboam reigned over them. Then king Rehoboam sent Hadoram, who was over the men subject to forced labor; and the children of Israel stoned him to death with stones. King Rehoboam hurried to get himself up to his chariot, to flee to Jerusalem. So Israel rebelled against David’s house to this day. — 2 Chronicles 10:16-19 (https://www.biblegateway.com/passage/?search=2+Chronicles+10%3A16-19)']
   },  {
     id: 'evt-fall-samaria',
+    translations: [
+      { lang: 'Hebrew', original: 'שֹׁמְרוֹן', translit: 'Šōmərôn', meaning: 'Samaria; named for Shemer, owner of the hill (1 Kings 16:24); cf. šāmar, to watch' },
+      { lang: 'Akkadian', original: 'Aššur', translit: '', meaning: 'the god, city and land Assur (Assyria)' },
+      { lang: 'Akkadian', original: 'Šarru-kīn', translit: 'Sargon', meaning: 'the king is legitimate, the true king' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Deportation_of_Jews_by_Assyrians.svg/960px-Deportation_of_Jews_by_Assyrians.svg.png'],
     relatedIds: ['prophecy-nineveh-nahum', 'prophecy-samaria-micah-1', 'nergal'],
     parentId: 'biblical-events',
@@ -8404,6 +9863,11 @@ const chunk_1: any[] = [  {
     bibleVerses: ['Then the king of Assyria came up throughout all the land, went up to Samaria, and besieged it three years. In the ninth year of Hoshea the king of Assyria took Samaria, and carried Israel away to Assyria, and placed them in Halah, and on the Habor, the river of Gozan, and in the cities of the Medes. — 2 Kings 17:5-6 (https://www.biblegateway.com/passage/?search=2+Kings+17%3A5-6)', 'In the fourth year of king Hezekiah, which was the seventh year of Hoshea son of Elah king of Israel, Shalmaneser king of Assyria came up against Samaria, and besieged it. At the end of three years they took it. In the sixth year of Hezekiah, which was the ninth year of Hoshea king of Israel, Samaria was taken. The king of Assyria carried Israel away to Assyria, and put them in Halah, and on the Habor, the river of Gozan, and in the cities of the Medes, because they didn’t obey Yahweh their God’s voice, but transgressed his covenant, even all that Moses the servant of Yahweh commanded, and would not hear it or do it. — 2 Kings 18:9-12 (https://www.biblegateway.com/passage/?search=2+Kings+18%3A9-12)']
   },  {
     id: 'evt-fall-jerusalem',
+    translations: [
+      { lang: 'Akkadian', original: '𒆍𒀭𒊏𒆠', translit: 'Bāb-ili', meaning: 'gate of the god (Babylon)' },
+      { lang: 'Hebrew', original: 'בָּבֶל', translit: 'Bāḇel', meaning: 'Babylon, Babel; Genesis 11:9 links it to bālal, to confuse' },
+      { lang: 'Akkadian', original: 'Nabû-kudurri-uṣur', translit: 'Nebuchadnezzar', meaning: 'O Nabu, protect my heir (or boundary)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Tissot_The_Flight_of_the_Prisoners.jpg/960px-Tissot_The_Flight_of_the_Prisoners.jpg'],
     relatedIds: ['blueprint-solomons-temple', 'shealtiel', 'prophecy-tyre-ezekiel-26', 'prophecy-babylon-isaiah-13', 'blueprint-brazen-sea', 'prophet-jeremiah-node'],
     parentId: 'biblical-events',
@@ -8415,6 +9879,11 @@ const chunk_1: any[] = [  {
     bibleVerses: ['Now in the fifth month, on the seventh day of the month, which was the nineteenth year of king Nebuchadnezzar, king of Babylon, Nebuzaradan the captain of the guard, a servant of the king of Babylon, came to Jerusalem. He burned Yahweh’s house, the king’s house, and all the houses of Jerusalem, even every great house, he burned with fire. All the army of the Chaldeans, who were with the captain of the guard, broke down the walls around Jerusalem. Nebuzaradan the captain of the guard carried away captive the residue of the people who were left in the city, and those who fell away, who fell to the king of Babylon, and the residue of the multitude. — 2 Kings 25:8-11 (https://www.biblegateway.com/passage/?search=2+Kings+25%3A8-11)', 'Therefore he brought on them the king of the Chaldeans, who killed their young men with the sword in the house of their sanctuary, and had no compassion on young man or virgin, old man or gray-headed. He gave them all into his hand. All the vessels of God’s house, great and small, and the treasures of Yahweh’s house, and the treasures of the king, and of his princes, all these he brought to Babylon. They burned God’s house, and broke down the wall of Jerusalem, and burned all its palaces with fire, and destroyed all of its valuable vessels. He carried those who had escaped from the sword away to Babylon, and they were servants to him and his sons until the reign of the kingdom of Persia, to fulfill Yahweh’s word by Jeremiah’s mouth, until the land had enjoyed its Sabbaths. As long as it lay desolate, it kept Sabbath, to fulfill seventy years. — 2 Chronicles 36:17-21 (https://www.biblegateway.com/passage/?search=2+Chronicles+36%3A17-21)']
   },  {
     id: 'evt-temple-rebuilt',
+    translations: [
+      { lang: 'Old Persian', original: '𐎤𐎢𐎽𐎢𐏁', translit: 'Kūruš', meaning: 'Cyrus; meaning disputed (classical authors glossed it \'sun\'; perhaps \'humiliator of the foe\')' },
+      { lang: 'Hebrew', original: 'כּוֹרֶשׁ', translit: 'Kôreš', meaning: 'Cyrus (Isaiah 45:1, the only foreigner called \'anointed\')' },
+      { lang: 'Greek', original: 'Κῦρος', translit: 'Kŷros', meaning: 'Cyrus (Greek form, source of the English name)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Our_day_in_the_light_of_prophecy_and_providence_%281921%29_%2814754519586%29.jpg/960px-Our_day_in_the_light_of_prophecy_and_providence_%281921%29_%2814754519586%29.jpg'],
     relatedIds: ['prophecy-cyrus-named-isaiah-45', 'prophecy-daniel-70-weeks'],
     parentId: 'biblical-events',
@@ -8426,6 +9895,11 @@ const chunk_1: any[] = [  {
     bibleVerses: ['Now in the first year of Cyrus king of Persia, that Yahweh’s word by Jeremiah’s mouth might be accomplished, Yahweh stirred up the spirit of Cyrus king of Persia, so that he made a proclamation throughout all his kingdom, and put it also in writing, saying, “Thus says Cyrus king of Persia, ‘Yahweh, the God of heaven, has given me all the kingdoms of the earth; and he has commanded me to build him a house in Jerusalem, which is in Judah. Whoever there is among you of all his people, may his God be with him, and let him go up to Jerusalem, which is in Judah, and build the house of Yahweh, the God of Israel (he is God), which is in Jerusalem. — Ezra 1:1-3 (https://www.biblegateway.com/passage/?search=Ezra+1%3A1-3)', 'The elders of the Jews built and prospered, through the prophesying of Haggai the prophet and Zechariah the son of Iddo. They built and finished it, according to the commandment of the God of Israel, and according to the decree of Cyrus, Darius, and Artaxerxes king of Persia. This house was finished on the third day of the month Adar, which was in the sixth year of the reign of Darius the king. — Ezra 6:14-15 (https://www.biblegateway.com/passage/?search=Ezra+6%3A14-15)']
   },  {
     id: 'evt-christ-birth',
+    translations: [
+      { lang: 'Hebrew', original: 'יֵשׁוּעַ', translit: 'Yēšûaʿ', meaning: 'YHWH is salvation (shortened from Yəhôšuaʿ, Joshua)' },
+      { lang: 'Greek', original: 'Ἰησοῦς', translit: 'Iēsoûs', meaning: 'Jesus (Greek form of Yēšûaʿ)' },
+      { lang: 'Hebrew', original: 'בֵּית לֶחֶם', translit: 'Bêṯ Leḥem', meaning: 'house of bread (bêṯ, house + leḥem, bread)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Adoration_of_the_sheperds_-_Matthias_Stomer.jpg/960px-Adoration_of_the_sheperds_-_Matthias_Stomer.jpg'],
     relatedIds: ['prophecy-bethlehem-micah-5', 'star-of-bethlehem'],
     parentId: 'biblical-events',
@@ -8437,6 +9911,11 @@ const chunk_1: any[] = [  {
     bibleVerses: ['Joseph also went up from Galilee, out of the city of Nazareth, into Judea, to David’s city, which is called Bethlehem, because he was of the house and family of David; to enroll himself with Mary, who was pledged to be married to him as wife, being pregnant. While they were there, the day had come for her to give birth. She gave birth to her firstborn son. She wrapped him in bands of cloth, and laid him in a feeding trough, because there was no room for them in the inn. — Luke 2:4-7 (https://www.biblegateway.com/passage/?search=Luke+2%3A4-7)', 'Now the birth of Jesus Christ was like this: After his mother, Mary, was engaged to Joseph, before they came together, she was found pregnant by the Holy Spirit. Joseph, her husband, being a righteous man, and not willing to make her a public example, intended to put her away secretly. But when he thought about these things, behold, an angel of the Lord appeared to him in a dream, saying, “Joseph, son of David, don’t be afraid to take to yourself Mary, your wife, for that which is conceived in her is of the Holy Spirit. She shall give birth to a son. You shall call his name Jesus, for it is he who shall save his people from their sins.” Now all this has happened, that it might be fulfilled which was spoken by the Lord through the prophet, saying, “Behold, the virgin shall be with child, and shall give birth to a son. They shall call his name Immanuel”; which is, being interpreted, “God with us.” Joseph arose from his sleep, and did as the angel of the Lord commanded him, and took his wife to himself; and didn’t know her sexually until she had given birth to her firstborn son. He named him Jesus. — Matthew 1:18-25 (https://www.biblegateway.com/passage/?search=Matthew+1%3A18-25)']
   },  {
     id: 'evt-crucifixion',
+    translations: [
+      { lang: 'Latin', original: 'crux', translit: '', meaning: 'cross, gibbet (crucifigere, to fix to a cross)' },
+      { lang: 'Greek', original: 'σταυρός', translit: 'staurós', meaning: 'stake, pole; cross' },
+      { lang: 'Greek', original: 'ἀνάστασις', translit: 'anástasis', meaning: 'resurrection, \'standing up again\' (aná, up + hístēmi, to stand)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Cristo_crucificado.jpg/960px-Cristo_crucificado.jpg'],
     relatedIds: ['jesus', 'prophecy-daniel-70-weeks', 'prophecy-isaiah-53-suffering-servant', 'prophecy-zechariah-9-triumphal-entry', 'prophecy-thirty-pieces-silver', 'heaven-abrahams-bosom'],
     parentId: 'biblical-events',
@@ -8448,6 +9927,11 @@ const chunk_1: any[] = [  {
     bibleVerses: ['When they came to the place that is called The Skull, they crucified him there with the criminals, one on the right and the other on the left. — Luke 23:33 (https://www.biblegateway.com/passage/?search=Luke+23%3A33)', 'When they had crucified him, they divided his clothing among them, casting lots, — Matthew 27:35 (https://www.biblegateway.com/passage/?search=Matthew+27%3A35)', 'The angel answered the women, “Don’t be afraid, for I know that you seek Jesus, who has been crucified. He is not here, for he has risen, just like he said. Come, see the place where the Lord was lying. — Matthew 28:5-6 (https://www.biblegateway.com/passage/?search=Matthew+28%3A5-6)']
   },  {
     id: 'creation-evt',
+    translations: [
+      { lang: 'Hebrew', original: 'בָּרָא', translit: 'bārāʾ', meaning: 'to create (used only with God as subject; Genesis 1:1)' },
+      { lang: 'Hebrew', original: 'בְּרֵאשִׁית', translit: 'bərēʾšîṯ', meaning: 'in the beginning (Genesis 1:1; Hebrew title of Genesis)' },
+      { lang: 'Greek', original: 'Γένεσις', translit: 'Génesis', meaning: 'origin, birth, generation (from gígnomai, to come into being)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Tissot_The_Creation.jpg/960px-Tissot_The_Creation.jpg'],
     relatedIds: ['thoth', 'adam-eve', 'codex-enuma-elish', 'dragons-br', 'feathered-serpent', 'sefer-yetzirah', 'kojiki', 'enuma-elish'],
     parentId: 'biblical-events',
@@ -8472,6 +9956,11 @@ const chunk_1: any[] = [  {
     sources: ['Bible', 'Ancient Historical Chronicles']
   },  {
     id: 'babel-evt',
+    translations: [
+      { lang: 'Akkadian', original: '𒆍𒀭𒊏𒆠', translit: 'Bāb-ili', meaning: 'gate of the god (Babylon)' },
+      { lang: 'Hebrew', original: 'בָּבֶל', translit: 'Bāḇel', meaning: 'Babel, Babylon; Genesis 11:9 derives it from bālal, to confuse' },
+      { lang: 'Hebrew', original: 'מִגְדָּל', translit: 'miḡdāl', meaning: 'tower (from gāḏal, to be great)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Vienna%29_-_Google_Art_Project_-_edited.jpg/960px-Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Vienna%29_-_Google_Art_Project_-_edited.jpg'],
     parentId: 'biblical-events',
     name: 'Tower of Babel',
@@ -8489,6 +9978,10 @@ const chunk_1: any[] = [  {
     layer: 'Biblical Discoveries'
   },  {
     id: 'archaeology-shroud-of-turin',
+    translations: [
+      { lang: 'Greek', original: 'σινδών', translit: 'sindṓn', meaning: 'fine linen, linen sheet; the burial cloth of Mark 15:46' },
+      { lang: 'Old English', original: 'scrūd', translit: '', meaning: 'garment, clothing (source of \'shroud\')' }
+    ],
     relatedIds: ['sudarium-of-oviedo'],
     parentId: 'biblical-discoveries',
     name: 'The Shroud of Turin',
@@ -8500,6 +9993,10 @@ const chunk_1: any[] = [  {
     bibleVerses: ['And he bought fine linen, and took him down, and wrapped him in the linen, and laid him in a sepulchre which was hewn out of a rock, and rolled a stone unto the door of the sepulchre. — Mark 15:46 (https://www.biblegateway.com/passage/?search=Mark+15%3A46)']
   },  {
     id: 'archaeology-noahs-ark-ararat',
+    translations: [
+      { lang: 'Akkadian', original: 'Urarṭu', translit: 'Urartu', meaning: 'the kingdom of Urartu around Lake Van (source of Hebrew ʾĂrārāṭ)' },
+      { lang: 'Hebrew', original: 'אֲרָרָט', translit: 'ʾĂrārāṭ', meaning: 'Ararat (Genesis 8:4, \'mountains of Ararat\' = Urartu)' }
+    ],
     relatedIds: ['blueprint-noahs-ark', 'ancient-flood-myths', 'flood-myth-genesis-noah'],
     parentId: 'biblical-discoveries',
     name: 'Noah\'s Ark Search (Durupinar Site)',
@@ -8511,6 +10008,10 @@ const chunk_1: any[] = [  {
     bibleVerses: ['And the ark rested in the seventh month, on the seventeenth day of the month, upon the mountains of Ararat. — Genesis 8:4 (https://www.biblegateway.com/passage/?search=Genesis+8%3A4)', 'Make thee an ark of gopher wood; rooms shalt thou make in the ark, and shalt pitch it within and without with pitch. — Genesis 6:14 (https://www.biblegateway.com/passage/?search=Genesis+6%3A14)']
   },  {
     id: 'archaeology-ark-of-covenant-axum',
+    translations: [
+      { lang: 'Hebrew', original: 'אֲרוֹן', translit: 'ʾărôn', meaning: 'chest, box (ʾărôn hab-bərîṯ, \'ark of the covenant\')' },
+      { lang: 'Hebrew', original: 'בְּרִית', translit: 'bərîṯ', meaning: 'covenant, pact' }
+    ],
     relatedIds: ['ark-of-the-covenant', 'solomon_pat'],
     parentId: 'biblical-discoveries',
     secondaryParentIds: ['israelites'],
@@ -8536,6 +10037,10 @@ const chunk_1: any[] = [  {
     bibleVerses: ['Then the Lord rained upon Sodom and upon Gomorrah brimstone and fire from the Lord out of heaven; — Genesis 19:24 (https://www.biblegateway.com/passage/?search=Genesis+19%3A24)', 'Even as Sodom and Gomorrha, and the cities about them in like manner, giving themselves over to fornication, and going after strange flesh, are set forth for an example, suffering the vengeance of eternal fire. — Jude 1:7 (https://www.biblegateway.com/passage/?search=Jude+1%3A7)']
   },  {
     id: 'archaeology-hezekiahs-tunnel-inscription',
+    translations: [
+      { lang: 'Hebrew', original: 'חִזְקִיָּהוּ', translit: 'Ḥizqiyyāhû', meaning: 'YHWH strengthens (ḥāzaq, to be strong + Yāhû)' },
+      { lang: 'Hebrew', original: 'נִקְבָּה', translit: 'niqbāh', meaning: 'tunnel, boring (the inscription\'s own word: \'the day of the boring\')' }
+    ],
     parentId: 'biblical-discoveries',
     secondaryParentIds: ['israelites'],
     name: "Hezekiah's Tunnel Inscription",
@@ -8550,6 +10055,11 @@ const chunk_1: any[] = [  {
     ]
   },  {
     id: 'archaeology-garden-tomb',
+    translations: [
+      { lang: 'Aramaic', original: 'גֻּלְגָּלְתָּא', translit: 'Gulgaltāʾ', meaning: 'skull (Golgotha, \'place of the skull\'; Hebrew gulgōleṯ)' },
+      { lang: 'Greek', original: 'Γολγοθᾶ', translit: 'Golgothâ', meaning: 'Golgotha, \'place of a skull\' (Matthew 27:33)' },
+      { lang: 'Latin', original: 'Calvaria', translit: '', meaning: 'skull (Vulgate rendering; source of \'Calvary\')' }
+    ],
     parentId: 'biblical-discoveries',
     name: 'The Garden Tomb',
     description: 'A rock-cut tomb located outside the city walls of Jerusalem. Unearthed in 1867, it was proposed by British General Charles Gordon as the actual site of Golgotha and the tomb of Joseph of Arimathea. It features a channel in the ground for a rolling stone, matching the Gospel descriptions of Jesus\' resurrection site.',
@@ -8560,6 +10070,10 @@ const chunk_1: any[] = [  {
     bibleVerses: ['Now in the place where he was crucified there was a garden; and in the garden a new sepulchre, wherein was never man yet laid. — John 19:41 (https://www.biblegateway.com/passage/?search=John+19%3A41)']
   },  {
     id: 'archaeology-dead-sea-scrolls',
+    translations: [
+      { lang: 'Hebrew', original: 'יָם הַמֶּלַח', translit: 'Yām ham-Melaḥ', meaning: 'Sea of Salt (the biblical name of the Dead Sea)' },
+      { lang: 'Hebrew', original: 'מְגִלָּה', translit: 'məḡillāh', meaning: 'scroll (from gālal, to roll)' }
+    ],
     relatedIds: ['ohyah', 'archaeology-ketef-hinnom', 'bible-book-esther', 'book-of-giants', 'prophecy-isaiah-53-suffering-servant', 'blueprint-herods-temple-model', 'book-of-jubilees'],
     parentId: 'biblical-discoveries',
     secondaryParentIds: ['tribe-of-judah'],
@@ -8574,6 +10088,11 @@ const chunk_1: any[] = [  {
     ]
   },  {
     id: 'archaeology-tel-dan-stele',
+    translations: [
+      { lang: 'Aramaic', original: 'ביתדוד', translit: 'bytdwd', meaning: 'house of David (bêt + Dāwid); the stele\'s phrase' },
+      { lang: 'Hebrew', original: 'דָּוִד', translit: 'Dāwiḏ', meaning: 'beloved (from dôḏ, beloved)' },
+      { lang: 'Hebrew', original: 'דָּן', translit: 'Dān', meaning: 'judge (Genesis 30:6: dānannî, \'he has judged me\')' }
+    ],
     relatedIds: ['david_pat'],
     parentId: 'biblical-discoveries',
     secondaryParentIds: ['israelites'],
@@ -8588,6 +10107,11 @@ const chunk_1: any[] = [  {
     ]
   },  {
     id: 'archaeology-cyrus-cylinder',
+    translations: [
+      { lang: 'Old Persian', original: '𐎤𐎢𐎽𐎢𐏁', translit: 'Kūruš', meaning: 'Cyrus; meaning disputed (classical authors glossed it \'sun\'; perhaps \'humiliator of the foe\')' },
+      { lang: 'Hebrew', original: 'כּוֹרֶשׁ', translit: 'Kôreš', meaning: 'Cyrus (Isaiah 45:1, the only foreigner called \'anointed\')' },
+      { lang: 'Greek', original: 'Κῦρος', translit: 'Kŷros', meaning: 'Cyrus (Greek form, source of the English name)' }
+    ],
     relatedIds: ['prophecy-cyrus-named-isaiah-45', 'prophet-isaiah-node'],
     parentId: 'biblical-discoveries',
     secondaryParentIds: ['tribe-of-judah'],
@@ -8602,6 +10126,11 @@ const chunk_1: any[] = [  {
     ]
   },  {
     id: 'archaeology-ketef-hinnom',
+    translations: [
+      { lang: 'Hebrew', original: 'כתף הינום', translit: 'Ketef Hinnom', meaning: 'shoulder of Hinnom (kāṯēp̄, shoulder, hillside); the site\'s name' },
+      { lang: 'Hebrew', original: 'גֵּי בֶן־הִנֹּם', translit: 'Gê ḇen-Hinnōm', meaning: 'Valley of the son of Hinnom (source of \'Gehenna\')' },
+      { lang: 'Greek', original: 'Γέεννα', translit: 'Géenna', meaning: 'Gehenna, hell (from the valley\'s name)' }
+    ],
     relatedIds: ['archaeology-dead-sea-scrolls', 'bible-book-numbers'],
     parentId: 'biblical-discoveries',
     secondaryParentIds: ['tribe-of-judah'],
@@ -8616,6 +10145,10 @@ const chunk_1: any[] = [  {
     ]
   },  {
     id: 'archaeology-pilate-stone',
+    translations: [
+      { lang: 'Latin', original: 'Pilatus', translit: '', meaning: 'cognomen, traditionally \'armed with a pilum (javelin)\'' },
+      { lang: 'Latin', original: 'praefectus', translit: '', meaning: 'prefect, \'one set in charge\' (praeficere); the stone\'s title praefectus Iudaeae' }
+    ],
     parentId: 'biblical-discoveries',
     secondaryParentIds: ['tribe-of-judah'],
     name: 'The Pilate Stone',
@@ -8629,6 +10162,11 @@ const chunk_1: any[] = [  {
     ]
   },  {
     id: 'archaeology-pool-of-siloam',
+    translations: [
+      { lang: 'Hebrew', original: 'שִׁלֹחַ', translit: 'Šilōaḥ', meaning: 'sent, conduit (from šālaḥ, to send; Isaiah 8:6)' },
+      { lang: 'Greek', original: 'Σιλωάμ', translit: 'Silōám', meaning: 'Siloam, \'which is interpreted, Sent\' (John 9:7)' },
+      { lang: 'Hebrew', original: 'גִּיחוֹן', translit: 'Gîḥôn', meaning: 'gusher, bursting forth (from gîaḥ, to burst forth); the spring' }
+    ],
     relatedIds: ['hezekiah'],
     parentId: 'biblical-discoveries',
     secondaryParentIds: ['tribe-of-judah'],
@@ -8644,6 +10182,10 @@ const chunk_1: any[] = [  {
     ]
   },  {
     id: 'archaeology-mesha-stele',
+    translations: [
+      { lang: 'Moabite', original: 'משע', translit: 'Mēšaʿ', meaning: 'salvation, deliverance (root y-š-ʿ, as in Hebrew yēšaʿ)' },
+      { lang: 'Hebrew', original: 'מוֹאָב', translit: 'Môʾāḇ', meaning: 'Moab; Genesis 19:37 folk etymology \'from (my) father\' (mē-ʾāḇ); true origin uncertain' }
+    ],
     relatedIds: ['chemosh', 'yhwh-tetragrammaton'],
     parentId: 'biblical-discoveries',
     secondaryParentIds: ['israelites'],
@@ -8658,6 +10200,11 @@ const chunk_1: any[] = [  {
     ]
   },  {
     id: 'archaeology-house-of-peter',
+    translations: [
+      { lang: 'Aramaic', original: 'כֵּיפָא', translit: 'Kêp̄āʾ', meaning: 'rock (Cephas, John 1:42)' },
+      { lang: 'Greek', original: 'Πέτρος', translit: 'Pétros', meaning: 'stone, rock (translating Aramaic Kêp̄āʾ)' },
+      { lang: 'Hebrew', original: 'כְּפַר נַחוּם', translit: 'Kəp̄ar Naḥûm', meaning: 'village of Nahum (kəp̄ar, village + Naḥûm, \'comforted\')' }
+    ],
     parentId: 'biblical-discoveries',
     name: 'House of Peter at Capernaum',
     description: 'A first-century residential house in Capernaum, over which an early Christian octagonal church was later built in the 5th century. Early graffiti scratched into the plaster of the house walls mentions Jesus, Peter, and Christian symbols, supporting the historic tradition that this was the home of Simon Peter.',
@@ -8680,6 +10227,11 @@ const chunk_1: any[] = [  {
     sources: ['Archaeological Excavation Reports', 'Historical Geography Database']
   },  {
     id: 'noahs-ark-find',
+    translations: [
+      { lang: 'Hebrew', original: 'נֹחַ', translit: 'Nōaḥ', meaning: 'rest, comfort (Genesis 5:29 links it to nāḥam, to comfort)' },
+      { lang: 'Hebrew', original: 'תֵּבָה', translit: 'tēḇāh', meaning: 'chest, box (Noah\'s ark; also Moses\' basket); perhaps from Egyptian ḏbꜣt, chest, coffin' },
+      { lang: 'Latin', original: 'arca', translit: '', meaning: 'chest, box, coffer (source of \'ark\')' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Edward_Hicks%2C_American_-_Noah%27s_Ark_-_Google_Art_Project.jpg/960px-Edward_Hicks%2C_American_-_Noah%27s_Ark_-_Google_Art_Project.jpg'],
     parentId: 'biblical-discoveries',
     name: 'Noah\'s Ark',
@@ -11459,6 +13011,9 @@ const chunk_2: any[] = [  {
     sources: ['BLT Research Team Reports']
   },  {
     id: 'bigfoot-br',
+    translations: [
+      { lang: 'Halkomelem', original: 'sásq̓ets', translit: 'sasq\'ets', meaning: 'wild man, hairy man; anglicised as \'Sasquatch\' by J. W. Burns (1929)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Patterson_Gimlin_Bigfoot.jpg/960px-Patterson_Gimlin_Bigfoot.jpg'],
     parentId: 'supernatural-anomalies',
     name: 'Bigfoot / Sasquatch',
@@ -16473,6 +18028,9 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
   },  {
     id: 'sasquatch-nw',
+    translations: [
+      { lang: 'Halkomelem', original: 'sásq̓ets', translit: 'sasq\'ets', meaning: 'wild man, hairy man; anglicised as \'Sasquatch\' by J. W. Burns (1929)' }
+    ],
     parentId: 'bigfoot-br',
     name: 'Pacific Sasquatch',
     description: 'The standard North American wild man, frequently associated with dense forests, tree knocks, and giant footprints.',
@@ -16480,6 +18038,10 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database']
   },  {
     id: 'yeti-himalayas',
+    translations: [
+      { lang: 'Tibetan', original: 'གཡའ་དྲེད', translit: 'g.ya\' dred (yeh-teh)', meaning: 'rock bear, bear of the rocky places (g.ya\' \'rocky slope\' + dred \'bear\')' },
+      { lang: 'Tibetan', original: 'མི་དྲེད', translit: 'mi dred (meh-teh)', meaning: 'man-bear' }
+    ],
     parentId: 'bigfoot-br',
     name: 'Yeti (Abominable Snowman)',
     description: 'The Himalayan version of the bipedal hominid, rooted in local Sherpa mythology and tracked by Western explorers.',
@@ -16487,6 +18049,9 @@ const chunk_3: any[] = [  {
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database']
   },  {
     id: 'yowie-australia',
+    translations: [
+      { lang: 'Yuwaalaraay', original: 'yuwi', translit: '', meaning: 'uncertain; possibly \'dream spirit\', or an alteration of \'yahoo\', a bush spirit' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Yowie_Statue%2C_Yowie_Park%2C_Kilcoy%2C_Queensland.JPG/960px-Yowie_Statue%2C_Yowie_Park%2C_Kilcoy%2C_Queensland.JPG'],
     parentId: 'bigfoot-br',
     name: 'Yowie',
@@ -16494,12 +18059,18 @@ const chunk_3: any[] = [  {
     sources: ['Australian Hominoid Research', 'Aboriginal Dreamtime Legends']
   },  {
     id: 'almas-caucasus',
+    translations: [
+      { lang: 'Mongolian', original: 'Алмас', translit: 'Almas', meaning: 'the wild man of Mongolian folklore; origin of the word unknown' }
+    ],
     parentId: 'bigfoot-br',
     name: 'Almas / Almasty',
     description: 'A wild, bipedal hominid reported in the Caucasus and Pamir Mountains of Central Asia, and the Altai Mountains of southern Mongolia.',
     sources: ['Soviet Academy of Sciences Hominoid Studies', 'Mongolian Folklore']
   },  {
     id: 'orang-pendek-sumatra',
+    translations: [
+      { lang: 'Indonesian', original: 'orang pendek', translit: '', meaning: 'short person (orang \'person\' + pendek \'short\')' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Orang_Pendek.png/960px-Orang_Pendek.png'],
     parentId: 'bigfoot-br',
     name: 'Orang Pendek',
@@ -16507,6 +18078,9 @@ const chunk_3: any[] = [  {
     sources: ['Sumatran Expedition Logs', 'Indonesian Cryptozoology']
   },  {
     id: 'mapinguari-amazon',
+    translations: [
+      { lang: 'Tupi', original: 'mbaé-pi-guari', translit: '', meaning: 'uncertain; \'the thing with the turned-back foot\' (Câmara Cascudo\'s reading)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Isnashi_wiki.svg/960px-Isnashi_wiki.svg.png'],
     parentId: 'bigfoot-br',
     name: 'Mapinguari',
@@ -16514,6 +18088,9 @@ const chunk_3: any[] = [  {
     sources: ['Amazonian Indigenous Legends', 'South American Cryptid Research']
   },  {
     id: 'yeren-china',
+    translations: [
+      { lang: 'Chinese', original: '野人', translit: 'yěrén', meaning: 'wild man (yě \'wild\' + rén \'person\')' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Yerencave.jpg/960px-Yerencave.jpg'],
     parentId: 'bigfoot-br',
     name: 'Yeren',
@@ -16521,6 +18098,9 @@ const chunk_3: any[] = [  {
     sources: ['Chinese Academy of Sciences Expeditions', 'Shennongjia Archives']
   },  {
     id: 'hibagon-japan',
+    translations: [
+      { lang: 'Japanese', original: 'ヒバゴン', translit: 'Hibagon', meaning: 'Hiba (Mount Hiba, 比婆山) + -gon, a monster-name suffix as in kaiju names' }
+    ],
     parentId: 'bigfoot-br',
     name: 'Hibagon',
     description: 'A hairy, ape-like creature reported in the forested areas around Mount Hiba in Hiroshima Prefecture, Japan, during the 1970s.',
@@ -16546,6 +18126,9 @@ const chunk_3: any[] = [  {
     sources: ['Vu Quang Expedition Logs', 'Indochina Wildlife Surveys']
   },  {
     id: 'mande-barung-india',
+    translations: [
+      { lang: 'Garo', original: 'mande burung', translit: '', meaning: 'forest man (mande \'man\' + burung \'forest, jungle\')' }
+    ],
     parentId: 'bigfoot-br',
     name: 'Mande Barung',
     description: 'A forest-dwelling ape-man reported in the Garo Hills of Meghalaya, India, described as a giant, herbivorous biped.',
@@ -17161,6 +18744,10 @@ const chunk_4: any[] = [  {
     sources: ['Regional Cryptid Databases', 'Folklore Society Archives']
   },  {
     id: 'hauntings-br',
+    translations: [
+      { lang: 'Old English', original: 'gāst', translit: '', meaning: 'breath, spirit, soul; the source of \'ghost\'' },
+      { lang: 'Old French', original: 'hanter', translit: '', meaning: 'to frequent, resort to habitually; the source of \'haunt\'' }
+    ],
     images: ['https://www.youtube.com/watch?v=0Anx3VQ2dcc'],
     parentId: 'supernatural-anomalies',
     name: 'Ghosts & Hauntings',
@@ -17356,6 +18943,9 @@ const chunk_4: any[] = [  {
     sources: ['Regional Folklore & Paranormal Archives', 'Society for Psychical Research']
   },  {
     id: 'portals-stargates',
+    translations: [
+      { lang: 'Latin', original: 'porta', translit: '', meaning: 'gate, city gate, door (Medieval Latin portāle \'gateway\')' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/0/02/Doorway-lg.jpg'],
     parentId: 'supernatural-anomalies',
     name: 'Portals / Stargates',
@@ -17438,6 +19028,11 @@ const chunk_4: any[] = [  {
     sources: ['Wikipedia', 'Esoteric & Paranormal Records']
   },  {
     id: 'anomaly-Portals---Stargates-8',
+    translations: [
+      { lang: 'Sinhala', original: 'සක්වල චක්‍රය', translit: 'Sakwala Chakraya', meaning: 'wheel of the universe (sakwala \'world-system\' + chakraya \'wheel, cycle\')' },
+      { lang: 'Sanskrit', original: 'चक्रवाल', translit: 'cakravāla', meaning: 'the ring of mountains encircling the world; a world-system' },
+      { lang: 'Sanskrit', original: 'चक्र', translit: 'cakra', meaning: 'wheel, disc, circle' }
+    ],
     parentId: 'portals-stargates',
     name: 'Sakwala Chakraya (Ranmasu Uyana)',
     description: 'A complex circular petroglyph carved onto a cliff face in Anuradhapura, Sri Lanka. Alternative historians suggest the engraving is an ancient stargate map or chart detailing the navigation codes to travel between other dimensions and solar systems.',
@@ -17460,6 +19055,10 @@ const chunk_4: any[] = [  {
     secondaryParentIds: ['megaliths-structures']
   },  {
     id: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-17',
+    translations: [
+      { lang: 'Chinese', original: '鬼門關', translit: 'Guǐménguān', meaning: 'ghost gate pass (guǐ ghost, mén gate, guān pass); gateway to the netherworld' },
+      { lang: 'Chinese', original: '名山', translit: 'Míngshān', meaning: 'famous mountain' }
+    ],
     parentId: 'underworld',
     name: 'Guimen Gate\n - Mingshan Mountain',
     description: 'Chongqing’s Ming Mountain is haunted by Fengdu Ghost City, a temple site dedicated to tales of the underworld influenced by Confucianism, Taoism, and Buddhism. Visitors can find the entrance to Hell at Guimen Gate, which is also known as the Ghost Torturing Pass. According to Chinese mythology, the newly dead must present themselves here to Yanluo Wang, the King of Hell, for his final judgment. Those deemed evil are banished to one of the many torturous realms of Diyu, or Chinese Hell. Fengdu’s gate to Hell has a suitably ominous appearance: it’s black and red with peaked roofs and flanked by 18 sculptures of demons enacting gruesome punishments (the worst level involves being boiled forever in a wok).',
@@ -17528,6 +19127,10 @@ const chunk_4: any[] = [  {
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
   },  {
     id: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-0',
+    translations: [
+      { lang: 'Persian', original: 'دروازه', translit: 'darvāza', meaning: 'gate, gateway' },
+      { lang: 'Turkmen', original: 'Derweze', translit: '', meaning: 'gate; the village name, from Persian darvāza' }
+    ],
     parentId: 'underworld',
     name: 'Darvaza Gas Crater - "Door to Hell"',
     description: 'A burning pit of fire in the Turkmenistan desert. While officially blamed on a Soviet drilling mishap in 1971, local mystics and conspiracists whisper that the drill penetrated a hollow subterranean vault, releasing ancient subterranean entities and a perpetual flame that cannot be extinguished.',
@@ -17537,6 +19140,9 @@ const chunk_4: any[] = [  {
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
   },  {
     id: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-1',
+    translations: [
+      { lang: 'Hawaiian', original: 'Lua-o-Milu', translit: '', meaning: 'pit of Milu (lua pit, hole; Milu, lord of the underworld)' }
+    ],
     parentId: 'underworld',
     name: 'Lua-o-Milu, or the land of the dead',
     description: 'Situated in the remote Waipi\'o Valley, this lava tube was feared by ancient Hawaiians as the portal to the spirit underworld. Modern esotericists suggest it is an entrance to the Hollow Earth network, guarded by ancient entities and protected by localized electromagnetic anomalies.',
@@ -17545,6 +19151,10 @@ const chunk_4: any[] = [  {
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
   },  {
     id: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-2',
+    translations: [
+      { lang: 'Japanese', original: '恐山', translit: 'Osorezan', meaning: 'mountain of dread (osore fear + -zan mountain)' },
+      { lang: 'Ainu', original: 'usori / ushoro', translit: '', meaning: 'earlier Ainu place-name, perhaps \'bay\'; reshaped to Japanese osore' }
+    ],
     parentId: 'underworld',
     name: 'Mount Osore, Osorezan, Mount of Dread',
     description: 'A sulfurous wasteland in Japan where blind mediums (Itako) summon the dead. Conspiracy theorists suggest the volcanic gas acts as a consciousness-altering agent, opening a tear in the dimensional fabric that allows contact with entities from parallel realms.',
@@ -17554,6 +19164,9 @@ const chunk_4: any[] = [  {
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
   },  {
     id: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-3',
+    translations: [
+      { lang: 'Greek', original: 'ᾍδης', translit: 'Háidēs', meaning: 'traditionally \'the unseen one\' (a-, not + idein, to see); god and realm of the dead' }
+    ],
     parentId: 'underworld',
     name: 'Cave of Hades (Gates Of Hades)',
     description: 'A dark, sea-level cave where Hercules and Orpheus supposedly descended into the underworld. Hollow Earth researchers suggest this cave system descends far deeper than mapped, connecting to a subterranean highway network used by non-human civilizations.',
@@ -17573,6 +19186,9 @@ const chunk_4: any[] = [  {
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
   },  {
     id: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-5',
+    translations: [
+      { lang: 'Old Norse', original: 'hekla', translit: '', meaning: 'hooded cloak, cowl; from the cloud cap on the summit' }
+    ],
     parentId: 'underworld',
     name: 'Hekla Volcano',
     description: 'In medieval Europe, Christian writers declared this active Icelandic volcano to be one of the physical gates of Hell. Modern hollow-earth and UFO researchers claim to have witnessed metallic crafts entering and exiting the volcanic plume, suggesting a subterranean base hidden deep within the earth\'s crust.',
@@ -17582,6 +19198,9 @@ const chunk_4: any[] = [  {
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
   },  {
     id: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-6',
+    translations: [
+      { lang: 'Yucatec Maya', original: 'Actun Tunichil Muknal', translit: '', meaning: 'cave of the stone sepulchre (actun cave, tunich stone, muknal burial place)' }
+    ],
     parentId: 'underworld',
     name: 'ATM Cave Belize- Actun Tunichil Muknal',
     description: 'Xibalba is described as a terrifying labyrinth filled with rivers of blood and scorpions, with demonic beings lurking about. The entrance to the Mayan underworld is said to be a cavern in Belize’s Tapir Mountain named Actun Tunichil Muknal, or Cave of the Crystal Sepulchre. Creeping inside feels like a scene from Indiana Jones’ Raiders of the Lost Ark: the dark, tight passages are littered with the skulls and bones of human sacrifices.',
@@ -17591,6 +19210,10 @@ const chunk_4: any[] = [  {
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
   },  {
     id: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-7',
+    translations: [
+      { lang: 'Latin', original: 'purgatorium', translit: '', meaning: 'place of cleansing (purgare, to purify)' },
+      { lang: 'Latin', original: 'Patricius', translit: '', meaning: 'nobleman, patrician; source of the name Patrick' }
+    ],
     relatedIds: ['hell-purgatory'],
     parentId: 'underworld',
     name: 'St Patrick\'s Purgatory',
@@ -17619,6 +19242,9 @@ const chunk_4: any[] = [  {
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
   },  {
     id: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-10',
+    translations: [
+      { lang: 'Latin', original: 'Lacus Curtius', translit: '', meaning: 'pool of Curtius (lacus basin, pool; Curtius, a Roman gens name)' }
+    ],
     parentId: 'underworld',
     name: 'Lacus Curtius',
     description: 'The Roman Forum is one of the Italian capital’s most popular attractions, yet the majority of sightseers have no clue that they are treading near a gate to Hell. Look for a pit called Lacus Curtius: a tablet surrounded by rubble surreptitiously marks this entrance to the netherworld. The ancient historian Livy wrote that an oracle foretold Rome’s doom unless citizens sacrificed what was dearest to the city. A chasm to Hell opened up, and soldier Marcus Curtius charged in because he realized the Roman legion was of greatest value to the city. Curtius’ sacrifice saved the people, and a carved stone of his armored figure now sits at the mouth to Hell.',
@@ -17628,6 +19254,10 @@ const chunk_4: any[] = [  {
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
   },  {
     id: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-11',
+    translations: [
+      { lang: 'Greek', original: 'Σίβυλλα', translit: 'Síbylla', meaning: 'prophetess; origin uncertain (ancient folk etymology theoû boulḗ, \'counsel of god\')' },
+      { lang: 'Latin', original: 'antrum', translit: '', meaning: 'cave, grotto (from Greek ántron); Italian antro' }
+    ],
     relatedIds: ['anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-4'],
     parentId: 'underworld',
     name: 'Antro della Sibilla',
@@ -17638,6 +19268,9 @@ const chunk_4: any[] = [  {
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
   },  {
     id: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-12',
+    translations: [
+      { lang: 'Nahuatl', original: 'Mictlān', translit: '', meaning: 'place of the dead (miqui, to die + -tlān, place of)' }
+    ],
     relatedIds: ['heaven-tlalocan'],
     parentId: 'underworld',
     name: 'Mictlan México',
@@ -17666,6 +19299,9 @@ const chunk_4: any[] = [  {
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
   },  {
     id: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-15',
+    translations: [
+      { lang: 'Haitian Creole', original: 'Ginen', translit: '', meaning: 'mythic ancestral Africa, home of the spirits and the dead; from the toponym Guinea' }
+    ],
     parentId: 'underworld',
     name: 'Gates of Guinee - St. Louis Cemetery No. 1',
     description: 'Voodoo mythology says that the dead are sent to a purgatory called Guinee before continuing to travel to the “deep waters” of their ancestors. Some believe that powerful voodoo masters can open the seven gates to the spirit world and reclaim the souls of the dead or turn them into zombie-like creatures for nefarious purposes. The Gates of Guinee is said to be found in the graveyards of New Orleans, perhaps at the tomb of voodoo queen Marie Laveau in the St. Louis Cemetery. Those making the journey to Guinee must open all seven gates in sequence and appease the loa or spirit guarding each one.',
@@ -17674,6 +19310,11 @@ const chunk_4: any[] = [  {
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
   },  {
     id: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-16',
+    translations: [
+      { lang: 'Greek', original: 'Πλούτων', translit: 'Ploútōn', meaning: 'the wealthy one (ploûtos, wealth); euphemistic name of Hades' },
+      { lang: 'Greek', original: 'Πλουτώνιον', translit: 'Ploutṓnion', meaning: 'sanctuary of Pluto; the site\'s ancient name' },
+      { lang: 'Greek', original: 'Ἱεράπολις', translit: 'Hierápolis', meaning: 'holy city (hierós sacred + pólis city)' }
+    ],
     parentId: 'underworld',
     name: 'Pluto’s Gate - Hierapolis',
     description: 'According to storytellers, Turkey has an opening to Greco-Roman Hell called Pluto’s Gate. Toxic mists waft out from the pit, sending priests into hallucinations and causing some to die. Pluto’s Gate was written off as a fable until it was unexpectedly discovered in 2013. Archaeologists uncovered a carved arch opening in the Temple of Pluto, with fumes spewing from the thermal springs deep below. These carbon dioxide vapors can kill birds and other small animals that get too close to this “Satanic temple,” making it one of the scariest gates of Hell on Earth.',
@@ -17692,6 +19333,10 @@ const chunk_4: any[] = [  {
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
   },  {
     id: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-20',
+    translations: [
+      { lang: 'Japanese', original: '血の池地獄', translit: 'Chi-no-ike Jigoku', meaning: 'blood pond hell (chi blood, ike pond, jigoku hell)' },
+      { lang: 'Chinese', original: '地獄', translit: 'dìyù', meaning: 'earth prison; Buddhist term for hell translating Sanskrit naraka' }
+    ],
     parentId: 'underworld',
     name: 'Chinoike Jigoku',
     description: 'Chinoike Jigoku is presided over by a collection of sculpted demons, some carved into the rocks themselves. The Buddhists likened the appearance of the pool to the bubbling pits of hell, and in times gone by the Bloody Hell Pond – reckoned at around 78 degrees Celsius—was sometimes used to torture prisoners before boiling them alive.',
@@ -17710,6 +19355,10 @@ const chunk_4: any[] = [  {
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
   },  {
     id: 'anomaly-Portals---Stargates---Underworld---Hollow-Earth-Entrances-23',
+    translations: [
+      { lang: 'Greek', original: 'Καισάρεια Φιλίππου', translit: 'Kaisáreia Philíppou', meaning: 'Philip\'s city of Caesar (named for Augustus by Philip the Tetrarch)' },
+      { lang: 'Greek', original: 'Πανεάς', translit: 'Paneás', meaning: 'place of Pan; the site\'s older name, surviving as Banias' }
+    ],
     relatedIds: ['enochian-gates-of-sheol', 'myth-pan'],
     parentId: 'underworld',
     name: 'Caesarea Philippi - Gates of Hell',
@@ -17757,6 +19406,9 @@ const chunk_4: any[] = [  {
     sources: ['Ancient Mythology', 'Hollow Earth Theory Literature', 'Lovecraftian Mythos']
   },  {
     id: 'derinkuyu',
+    translations: [
+      { lang: 'Turkish', original: 'Derinkuyu', translit: '', meaning: 'deep well (derin deep + kuyu well)' }
+    ],
     parentId: 'underworld',
     name: 'Derinkuyu Underground City',
     description: 'An ancient multi-level underground city in Turkey, large enough to shelter 20,000 people along with livestock and food stores.',
@@ -17777,6 +19429,10 @@ const chunk_4: any[] = [  {
   },
   {
     id: 'geoglyphs-br',
+    translations: [
+      { lang: 'Greek', original: 'γῆ', translit: 'gê', meaning: 'earth' },
+      { lang: 'Greek', original: 'γλυφή', translit: 'glyphḗ', meaning: 'carving (from glýphein, to carve)' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/7/7f/05-Palpa_Lines-nX-22.jpg'],
     parentId: 'megaliths-structures',
     name: 'Geoglyphs & Earthworks',
@@ -17784,6 +19440,10 @@ const chunk_4: any[] = [  {
     layer: 'Megaliths / Structures'
   },  {
     id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-0',
+    translations: [
+      { lang: 'Egyptian', original: 'mr', translit: 'mer', meaning: 'pyramid' },
+      { lang: 'Greek', original: 'πυραμίς', translit: 'pyramís', meaning: 'pyramid (also a kind of wheat cake; origin uncertain)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Great_Pyramid_of_Giza_-_Pyramid_of_Khufu.jpg/960px-Great_Pyramid_of_Giza_-_Pyramid_of_Khufu.jpg'],
     relatedIds: ['anomaly-Ley-Lines-7'],
     parentId: 'megaliths',
@@ -17795,6 +19455,10 @@ const chunk_4: any[] = [  {
     sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
   },  {
     id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-1',
+    translations: [
+      { lang: 'Greek', original: 'Σφίγξ', translit: 'Sphínx', meaning: 'the strangler (traditionally from sphíngō, to squeeze)' },
+      { lang: 'Arabic', original: 'أبو الهول', translit: 'Abū al-Hawl', meaning: 'father of terror (the Egyptian Arabic name)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Sphinx_with_the_third_pyramid.jpg/960px-Sphinx_with_the_third_pyramid.jpg'],
     relatedIds: ['atlantis-lost'],
     parentId: 'megaliths',
@@ -17806,6 +19470,10 @@ const chunk_4: any[] = [  {
     sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
   },  {
     id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-3',
+    translations: [
+      { lang: 'Rapa Nui', original: 'moʻai', translit: '', meaning: 'statue, image' },
+      { lang: 'Rapa Nui', original: 'mana', translit: '', meaning: 'spiritual power, efficacy (pan-Polynesian)' }
+    ],
     parentId: 'megaliths',
     name: 'Easter Island Moai',
     description: 'The colossal stone figures do not just face inland; they sit on powerful energy nodes of the global lay line network. Local legends speak of \'Mana\'—an acoustic or telekinetic power that made the stones walk. Some researchers suggest their elongated heads represent the Nephilim.',
@@ -17833,6 +19501,9 @@ const chunk_4: any[] = [  {
     sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
   },  {
     id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-6',
+    translations: [
+      { lang: 'Old English', original: 'Uffan tūn', translit: '', meaning: 'Uffa\'s farmstead or estate (recorded as Uffentun in 931)' }
+    ],
     relatedIds: ['anomaly-Crop-Circles-30', 'anomaly-Crop-Circles-626', 'anomaly-Crop-Circles-627', 'anomaly-Crop-Circles-628', 'anomaly-Crop-Circles-704', 'anomaly-Crop-Circles-1285'],
     parentId: 'geoglyphs-br',
     name: 'Uffington White Horse',
@@ -17842,6 +19513,10 @@ const chunk_4: any[] = [  {
     sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
   },  {
     id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-7',
+    translations: [
+      { lang: 'Latin', original: 'candelabrum', translit: '', meaning: 'candlestick, lamp-stand (from candela, candle)' },
+      { lang: 'Quechua', original: 'para aqu', translit: '', meaning: 'traditionally \'sand rain\' (para, rain + aqu, sand), for the local sandstorms' }
+    ],
     relatedIds: ['anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-5'],
     parentId: 'geoglyphs-br',
     name: 'Candelabro de Paracas (Candelabra of Paracas)',
@@ -17854,6 +19529,9 @@ const chunk_4: any[] = [  {
     ]
   },  {
     id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-8',
+    translations: [
+      { lang: 'Italian', original: 'intaglio', translit: '', meaning: 'engraving, incised carving (from intagliare, to cut into)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Blythe_Intaglio_%284858%29.jpg/960px-Blythe_Intaglio_%284858%29.jpg'],
     parentId: 'geoglyphs-br',
     name: 'Blythe Intaglios',
@@ -17887,6 +19565,9 @@ const chunk_4: any[] = [  {
     sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
   },  {
     id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-16',
+    translations: [
+      { lang: 'Breton', original: 'Karnag', translit: '', meaning: 'probably from karn, heap of stones, cairn' }
+    ],
     parentId: 'megaliths',
     name: 'Carnac Stones',
     description: 'An exceptionally dense collection of over 3,000 standing stones in Brittany, France. Believed by alternative theorists to be a massive ancient seismic monitoring system or a giant acoustic wave-guide array designed to map telluric energy lines.',
@@ -17896,6 +19577,9 @@ const chunk_4: any[] = [  {
     sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
   },  {
     id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-17',
+    translations: [
+      { lang: 'Quechua', original: 'Puma Punku', translit: '', meaning: 'gate of the puma (puma + punku, door)' }
+    ],
     relatedIds: ['archaeology-waru-waru'],
     parentId: 'megaliths',
     name: 'Puma Punku',
@@ -17906,6 +19590,9 @@ const chunk_4: any[] = [  {
     sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
   },  {
     id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-18',
+    translations: [
+      { lang: 'Quechua', original: 'Saqsaywaman', translit: '', meaning: 'traditionally \'satisfied falcon\' (saqsay, be satiated + waman, falcon)' }
+    ],
     parentId: 'megaliths',
     name: 'Saksaywaman',
     description: 'A citadel on the northern outskirts of Cusco, Peru, featuring colossal walls built from perfectly fitted stones weighing up to 125 tons. The jigsaw precision has led to claims that the ancient builders used solar mirrors or plant-based chemical mixtures to soften and mold the stone.',
@@ -17915,6 +19602,11 @@ const chunk_4: any[] = [  {
     sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
   },  {
     id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-19',
+    translations: [
+      { lang: 'Phoenician', original: '𐤁𐤏𐤋', translit: 'baʿl', meaning: 'lord, master; the storm god Baal' },
+      { lang: 'Arabic', original: 'بعلبك', translit: 'Baʿlabakk', meaning: 'traditionally \'Baal of the Beqaa valley\'' },
+      { lang: 'Greek', original: 'Ἡλιούπολις', translit: 'Hēlioúpolis', meaning: 'city of the sun (the Hellenistic and Roman name)' }
+    ],
     relatedIds: ['baal-deity', 'america-mystery-hill-stonehenge'],
     parentId: 'megaliths',
     name: 'Baalbek Temple Complex',
@@ -17925,6 +19617,11 @@ const chunk_4: any[] = [  {
     sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
   },  {
     id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-20',
+    translations: [
+      { lang: 'Irish', original: 'Brú na Bóinne', translit: '', meaning: 'mansion or palace of the Boyne' },
+      { lang: 'Irish', original: 'Sí an Bhrú', translit: '', meaning: 'fairy mound of the Brú' },
+      { lang: 'English', original: 'new grange', translit: '', meaning: 'new outlying farm (a grange of Mellifont Abbey)' }
+    ],
     parentId: 'megaliths',
     name: 'Newgrange',
     description: 'A 5,000-year-old passage tomb in Ireland. Theorists argue that the chamber\'s precise alignment with the winter solstice sunrise, combined with the famous triple-spiral carvings, indicates it functioned as an ancient initiatory chamber, calendar, or acoustic resonator.',
@@ -17934,6 +19631,9 @@ const chunk_4: any[] = [  {
     sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
   },  {
     id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-21',
+    translations: [
+      { lang: 'Old English', original: 'burh', translit: '', meaning: 'fortified place, stronghold; first element uncertain, traditionally the name Afa' }
+    ],
     relatedIds: ['anomaly-Crop-Circles-22', 'anomaly-Crop-Circles-357', 'anomaly-Crop-Circles-648', 'anomaly-Crop-Circles-707', 'anomaly-Crop-Circles-752'],
     parentId: 'megaliths',
     name: 'Avebury Stone Circle',
@@ -17980,6 +19680,10 @@ const chunk_4: any[] = [  {
     sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
   },  {
     id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-26',
+    translations: [
+      { lang: 'Maltese', original: 'Ħaġar Qim', translit: '', meaning: 'standing stones, or worshipping stones (ħaġar, stones + qim)' },
+      { lang: 'Arabic', original: 'حجر', translit: 'ḥajar', meaning: 'stone (source of Maltese ħaġar)' }
+    ],
     parentId: 'megaliths',
     name: 'Hagar Qim Temple',
     description: 'An ancient temple in Malta featuring massive single-stone walls, including a slab weighing 20 tons. Local legends attribute the construction to a prehistoric race of giants who inhabited the island before the biblical flood.',
@@ -17989,6 +19693,9 @@ const chunk_4: any[] = [  {
     sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
   },  {
     id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-27',
+    translations: [
+      { lang: 'Pohnpeian', original: 'Nan Madol', translit: '', meaning: 'within the intervals, the spaces between (the canals)' }
+    ],
     parentId: 'megaliths',
     name: 'Nan Madol',
     description: 'A ruined city built on coral reefs in Micronesia using massive basalt columns. Local legends say the stones were levitated into place using acoustic sorcery, while theorists link the ruins to the lost continent of Lemuria.',
@@ -17998,6 +19705,9 @@ const chunk_4: any[] = [  {
     sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
   },  {
     id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-28',
+    translations: [
+      { lang: 'Lao', original: 'ທົ່ງໄຫຫີນ', translit: 'Thong Hai Hin', meaning: 'plain of stone jars' }
+    ],
     parentId: 'megaliths',
     name: 'Plain of Jars',
     description: 'Thousands of massive stone jars scattered across the valleys of Laos. Theorists suggest they were not for burials or wine storage, but acted as ancient energy cells, chemical distillation vats, or acoustic transmitters.',
@@ -18007,6 +19717,10 @@ const chunk_4: any[] = [  {
     sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
   },  {
     id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-29',
+    translations: [
+      { lang: 'Armenian', original: 'Զորաց Քարեր', translit: 'Zorats K\'arer', meaning: 'stones of the army, or of the mighty (translating Turkic Ghoshun Dash)' },
+      { lang: 'Armenian', original: 'Քարահունջ', translit: 'K\'arahunj', meaning: 'popularly \'speaking stones\' (k\'ar, stone + hunch, sound); a modern coinage' }
+    ],
     parentId: 'megaliths',
     name: 'Zorats Karer (Karahunj)',
     description: 'An Armenian stone circle featuring neat circular holes drilled through the tops of many stones. Theorists claim it is a 7,500-year-old astronomical observatory and stellar portal, predating Stonehenge by millennia.',
@@ -18034,6 +19748,9 @@ const chunk_4: any[] = [  {
     sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
   },  {
     id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-32',
+    translations: [
+      { lang: 'Mongolian', original: 'буган чулуу', translit: 'bugan chuluu', meaning: 'deer stone' }
+    ],
     parentId: 'megaliths',
     name: 'Mongolian Deer Stones',
     description: 'Ancient standing stones in Mongolia carved with flying reindeer and weapons. Theorists suggest they depict ancient aerial travelers, spirit flight, or shamanic dimensional travel paths.',
@@ -18043,6 +19760,9 @@ const chunk_4: any[] = [  {
     sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
   },  {
     id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-33',
+    translations: [
+      { lang: 'Old Norse', original: 'brúar-garðr', translit: '', meaning: 'bridge farm' }
+    ],
     parentId: 'megaliths',
     name: 'Ring of Brodgar',
     description: 'A massive stone circle in Orkney, Scotland. Believed to be a focal point for lunar energies and a major node in the northern European lay line network.',
@@ -18052,6 +19772,9 @@ const chunk_4: any[] = [  {
     sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
   },  {
     id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-34',
+    translations: [
+      { lang: 'Japanese', original: '益田岩船', translit: 'Masuda no Iwafune', meaning: 'rock ship of Masuda (iwa, rock + fune, boat)' }
+    ],
     parentId: 'megaliths',
     name: 'Masuda no Iwafune (Rock Ship)',
     description: 'A colossal, 800-ton carved granite block in Asuka, Nara, Japan, with square holes cut into its top. Conspiracy theorists suggest it is an ancient machine base, a monument commemorating extraterrestrial \'rock ships\', or a pre-diluvian astronomical observation platform.',
@@ -18061,6 +19784,11 @@ const chunk_4: any[] = [  {
     sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
   },  {
     id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-35',
+    translations: [
+      { lang: 'Khmer', original: 'អង្គរវត្ត', translit: 'Ângkôr Vôtt', meaning: 'temple city' },
+      { lang: 'Sanskrit', original: 'नगर', translit: 'nagara', meaning: 'city, town (source of Khmer angkor)' },
+      { lang: 'Sanskrit', original: 'वाट', translit: 'vāṭa', meaning: 'enclosure (source of Khmer wat, temple)' }
+    ],
     relatedIds: ['anomaly-Ley-Lines-10'],
     parentId: 'megaliths',
     name: 'Angkor Wat',
@@ -18071,6 +19799,9 @@ const chunk_4: any[] = [  {
     sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
   },  {
     id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-36',
+    translations: [
+      { lang: 'Yucatec Maya', original: 'Chi\'ch\'èen Ìitsha\'', translit: '', meaning: 'at the mouth of the well of the Itzá (chi\', mouth + ch\'e\'en, well)' }
+    ],
     parentId: 'megaliths',
     secondaryParentIds: ['mayan-civilization'],
     name: 'Chichen Itza',
@@ -18082,6 +19813,10 @@ const chunk_4: any[] = [  {
     sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
   },  {
     id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-38',
+    translations: [
+      { lang: 'Nahuatl', original: 'Teōtīhuacān', translit: '', meaning: 'place where gods were born (or made)' },
+      { lang: 'Nahuatl', original: 'teōtl', translit: '', meaning: 'god' }
+    ],
     parentId: 'megaliths',
     secondaryParentIds: ['aztec-civilization'],
     name: 'Teotihuacan',
@@ -18093,6 +19828,10 @@ const chunk_4: any[] = [  {
     sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
   },  {
     id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-39',
+    translations: [
+      { lang: 'Maltese', original: 'Ġgantija', translit: '', meaning: 'giantess\'s (place), from ġgant, giant' },
+      { lang: 'Greek', original: 'γίγας', translit: 'gígas', meaning: 'giant' }
+    ],
     parentId: 'megaliths',
     name: 'Ġgantija Temples',
     description: 'A megalithic temple complex in Gozo, Malta, dating back to 3600 BC. Built using corbelled globigerina limestone blocks weighing over 50 tons, local folklore attributes the construction to a giantess who carried the stones from the south coast, supporting alternative theories of a prehistoric giant race.',
@@ -18102,6 +19841,9 @@ const chunk_4: any[] = [  {
     sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
   },  {
     id: 'anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-40',
+    translations: [
+      { lang: 'Breton', original: 'taol maen', translit: '', meaning: 'table stone (the traditional derivation of French dolmen)' }
+    ],
     parentId: 'megaliths',
     name: 'Dolmen of Menga',
     description: 'A massive megalithic gallery grave in Spain dating to 3750 BC. Built using vertical stones and enormous roof slabs weighing up to 180 tons, alternative theorists argue the transport and alignment of these blocks would be impossible without advanced engineering techniques or acoustic manipulation.',
@@ -18113,6 +19855,10 @@ const chunk_4: any[] = [  {
 
   {
     id: 'stonehenge',
+    translations: [
+      { lang: 'Old English', original: 'stān', translit: '', meaning: 'stone' },
+      { lang: 'Old English', original: 'hengen', translit: '', meaning: 'hanging, gallows; hence \'hanging stones\' (Stanenges, c. 1130)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Stonehenge2007_07_30.jpg/960px-Stonehenge2007_07_30.jpg'],
     parentId: 'megaliths',
     layer: 'Megaliths / Structures',
@@ -18122,6 +19868,10 @@ const chunk_4: any[] = [  {
     sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
   },  {
     id: 'pyramids',
+    translations: [
+      { lang: 'Egyptian', original: 'mr', translit: 'mer', meaning: 'pyramid' },
+      { lang: 'Greek', original: 'πυραμίς', translit: 'pyramís', meaning: 'pyramid (also a kind of wheat cake; origin uncertain)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Great_Pyramid_of_Giza_-_Pyramid_of_Khufu.jpg/960px-Great_Pyramid_of_Giza_-_Pyramid_of_Khufu.jpg'],
     parentId: 'megaliths',
     layer: 'Megaliths / Structures',
@@ -18132,6 +19882,10 @@ const chunk_4: any[] = [  {
     sources: ['UNESCO World Heritage Catalog', 'Archaeological Field Surveys']
   },  {
     id: 'gobekli-tepe',
+    translations: [
+      { lang: 'Turkish', original: 'Göbekli Tepe', translit: '', meaning: 'potbelly hill (göbek, navel, belly + tepe, hill)' },
+      { lang: 'Kurdish', original: 'Girê Mirazan', translit: '', meaning: 'hill of wishes' }
+    ],
     parentId: 'megaliths',
     name: 'Göbekli Tepe',
     description: 'At over 12,000 years old, this is the oldest known temple complex in the world (~9600 BC), completely rewriting human history. Built by a highly advanced, unknown civilization before the invention of agriculture, its massive T-shaped stone pillars are carved with wild animals. Its construction may serve as a warning of a past cosmic catastrophe — possibly a comet impact that reset human progress.',
@@ -19615,6 +21369,10 @@ const chunk_4: any[] = [  {
     layer: 'Ancient Texts'
   },  {
     id: 'book-of-thoth',
+    translations: [
+      { lang: 'Egyptian', original: 'ḏḥwtj', translit: 'Djehuty', meaning: 'uncertain; perhaps \'he of Djehut\' (a Delta town), the ibis-headed scribe of the gods' },
+      { lang: 'Greek', original: 'Θώθ', translit: 'Thṓth', meaning: 'Greek rendering of Egyptian Djehuty' }
+    ],
     parentId: 'ancient-texts',
     name: 'Book of Thoth',
     description: 'A legendary book containing sacred spells and cosmic secrets, attributed to Thoth, the Egyptian god of wisdom and writing. Allegedly written by Thoth\'s own hand, it was said to contain spells enabling the reader to understand the language of beasts and behold the gods themselves.',
@@ -19623,6 +21381,10 @@ const chunk_4: any[] = [  {
     sources: ['Ancient Egyptian Papyri', 'Hermetic Literature']
   },  {
     id: 'library-of-alexandria',
+    translations: [
+      { lang: 'Greek', original: 'Ἀλεξάνδρεια', translit: 'Alexándreia', meaning: 'city of Alexander (Aléxandros, defender of men)' },
+      { lang: 'Greek', original: 'βιβλιοθήκη', translit: 'bibliothḗkē', meaning: 'book repository (biblion, book + thēkē, case, store)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Ancientlibraryalex.jpg/960px-Ancientlibraryalex.jpg'],
     parentId: 'ancient-texts',
     name: 'Library of Alexandria',
@@ -19631,18 +21393,29 @@ const chunk_4: any[] = [  {
     sources: ['Letter of Aristeas', "Plutarch's Lives"]
   },  {
     id: 'mouseion',
+    translations: [
+      { lang: 'Greek', original: 'Μουσεῖον', translit: 'Mouseîon', meaning: 'shrine of the Muses; seat of learning (source of \'museum\')' },
+      { lang: 'Greek', original: 'Μοῦσα', translit: 'Moûsa', meaning: 'Muse; origin uncertain, possibly from the root *men-, to think, remember' }
+    ],
     parentId: 'ancient-texts',
     name: 'Mouseion of Alexandria',
     description: 'The institution of the Muses that included the Great Library, serving as a sanctuary of research, astronomy, and classical literature.',
     relatedIds: ['library-of-alexandria']
   },  {
     id: 'stentorian-voice',
+    translations: [
+      { lang: 'Greek', original: 'Στέντωρ', translit: 'Sténtōr', meaning: 'the groaner, roarer (from stenō, to groan, moan), the brazen-voiced herald of the Iliad' }
+    ],
     parentId: 'ancient-texts',
     name: 'Stentorian Voice',
     description: 'A booming, authoritative voice. Derived from Stentor, a Greek herald in classical epic whose voice was as loud as fifty men, and biblical references to loud angelic trumpets.',
     bibleVerses: ['There Stentor, the bronze-voiced, shouted, he who was as loud as fifty other men... — Homer, Iliad Book 5 (https://www.sacred-texts.com/cla/homer/ili/ili05.htm)']
   },  {
     id: 'book-of-enoch',
+    translations: [
+      { lang: 'Hebrew', original: 'חֲנוֹךְ', translit: 'Ḥănōḵ', meaning: 'dedicated, initiated (from ḥānaḵ, to dedicate, train)' },
+      { lang: 'Ge\'ez', original: 'መጽሐፈ ሄኖክ', translit: 'Maṣḥafa Hēnok', meaning: 'Book of Enoch (the title of the only complete surviving version)' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Codex_Zographensis_77r.jpg/960px-Codex_Zographensis_77r.jpg'],
     parentId: 'ancient-texts',
     secondaryParentIds: ['judaism', 'christianity'],
@@ -19653,6 +21426,11 @@ const chunk_4: any[] = [  {
     bibleVerses: ['The words of the blessing of Enoch, wherewith he blessed the elect and righteous, who will be living in the day of tribulation, when all the wicked and godless are to be removed. — 1 Enoch 1:1 (https://www.sacred-texts.com/bib/boe/boe004.htm)']
   },  {
     id: 'gilgamesh-text',
+    translations: [
+      { lang: 'Sumerian', original: 'Bilgames', translit: '', meaning: 'the ancestor is a hero (pa-bilga, ancestor, elder + mes, young man, hero)' },
+      { lang: 'Akkadian', original: 'Gilgameš', translit: '', meaning: 'Akkadian form of Sumerian Bilgames' },
+      { lang: 'Akkadian', original: 'ša naqba īmuru', translit: '', meaning: 'he who saw the deep, the incipit and ancient title of the standard epic' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/British_Museum_Flood_Tablet.jpg/960px-British_Museum_Flood_Tablet.jpg'],
     parentId: 'ancient-texts',
     name: 'Epic of Gilgamesh',
@@ -19661,6 +21439,10 @@ const chunk_4: any[] = [  {
   },
   {
     id: 'holy-bible',
+    translations: [
+      { lang: 'Greek', original: 'τὰ βιβλία', translit: 'tà biblía', meaning: 'the books (plural of biblion, little book, scroll)' },
+      { lang: 'Greek', original: 'βύβλος', translit: 'býblos', meaning: 'papyrus, papyrus scroll, after the Phoenician port of Byblos that exported it' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/1QIsa_b.jpg/500px-1QIsa_b.jpg'],
     parentId: 'ancient-texts',
     secondaryParentIds: ['christianity'],
@@ -20367,6 +22149,10 @@ const chunk_4: any[] = [  {
   },
   {
     id: 'codex-dead-sea-scrolls',
+    translations: [
+      { lang: 'Hebrew', original: 'יָם הַמֶּלַח', translit: 'Yām ha-Melaḥ', meaning: 'Sea of Salt, the biblical name of the Dead Sea' },
+      { lang: 'Hebrew', original: 'מְגִלָּה', translit: 'məḡillāh', meaning: 'scroll (from gālal, to roll)' }
+    ],
     relatedIds: ['holy-bible', 'judaism', 'old-testament'],
     parentId: 'ancient-texts',
     secondaryParentIds: ['judaism'],
@@ -20378,6 +22164,9 @@ const chunk_4: any[] = [  {
     sources: ['Qumran Caves Scrolls Database', 'Israel Museum']
   },  {
     id: 'codex-nag-hammadi',
+    translations: [
+      { lang: 'Arabic', original: 'نجع حمادي', translit: 'Najʿ Ḥammādī', meaning: 'hamlet of Hammadi (najʿ, Upper Egyptian word for a small village)' }
+    ],
     parentId: 'ancient-texts',
     secondaryParentIds: ['gnosticism'],
     name: 'Nag Hammadi Library',
@@ -20388,6 +22177,9 @@ const chunk_4: any[] = [  {
     sources: ['Gnostic Society Library', 'Institute for Antiquity and Christianity']
   },  {
     id: 'codex-library-ashurbanipal',
+    translations: [
+      { lang: 'Akkadian', original: 'Aššur-bāni-apli', translit: '', meaning: 'Ashur is the creator of the heir (Aššur + bānû, creator + aplu, heir, son)' }
+    ],
     relatedIds: ['gilgamesh-text'],
     parentId: 'ancient-texts',
     name: 'Royal Library of Ashurbanipal',
@@ -20398,6 +22190,10 @@ const chunk_4: any[] = [  {
     sources: ['British Museum Nineveh Project']
   },  {
     id: 'codex-sinaiticus',
+    translations: [
+      { lang: 'Latin', original: 'Codex Sinaiticus', translit: '', meaning: 'the book of Sinai (found at St Catherine\'s Monastery)' },
+      { lang: 'Hebrew', original: 'סִינַי', translit: 'Sînay', meaning: 'uncertain; linked by tradition to səneh, thornbush, or to the moon god Sîn' }
+    ],
     relatedIds: ['new-testament', 'holy-bible', 'codex-alexandrinus', 'bible-gutenberg-1455', 'bible-history-manuscripts'],
     parentId: 'ancient-texts',
     secondaryParentIds: ['christianity'],
@@ -20409,6 +22205,9 @@ const chunk_4: any[] = [  {
     sources: ['British Library / Codex Sinaiticus Project']
   },  {
     id: 'codex-grolier-maya',
+    translations: [
+      { lang: 'Latin', original: 'codex', translit: '', meaning: 'tree trunk, block of wood; wooden writing tablet, hence a bound book (from caudex)' }
+    ],
     parentId: 'ancient-texts',
     name: 'Maya Codex of Mexico',
     description: 'A pre-Columbian Maya book depicting Venus cycle almanacs and deity rituals, confirmed to be the oldest surviving authentic manuscript from the Americas (c. 13th century).',
@@ -20418,6 +22217,9 @@ const chunk_4: any[] = [  {
     sources: ['National Museum of Anthropology (Mexico)', 'INAH']
   },  {
     id: 'codex-dunhuang-manuscripts',
+    translations: [
+      { lang: 'Chinese', original: '敦煌', translit: 'Dūnhuáng', meaning: 'traditionally \'great and flourishing\' (dūn, great, thick + huáng, brilliant, blazing)' }
+    ],
     parentId: 'ancient-texts',
     secondaryParentIds: ['buddhism'],
     name: 'Dunhuang Manuscripts',
@@ -20437,6 +22239,9 @@ const chunk_4: any[] = [  {
     sources: ['Heraklion Archaeological Museum']
   },  {
     id: 'codex-enuma-elish',
+    translations: [
+      { lang: 'Akkadian', original: 'e-nu-ma e-liš', translit: 'Enūma eliš', meaning: 'when on high, the opening words of the epic' }
+    ],
     relatedIds: ['creation-evt'],
     parentId: 'ancient-texts',
     name: 'Enūma Eliš',
@@ -20584,6 +22389,9 @@ const chunk_4: any[] = [  {
     sources: ['Archaeological Field Surveys', 'Historical Chronology Database']
   },  {
     id: 'ley-lines-br',
+    translations: [
+      { lang: 'Old English', original: 'lēah', translit: '', meaning: 'woodland clearing, meadow (source of \'ley\', chosen by Alfred Watkins)' }
+    ],
     parentId: 'megaliths-structures',
     name: 'Ley Lines & Planetary Grids',
     description: 'Hypothetical straight alignments of ancient megalithic sites, sacred places, and earth energy currents.',
@@ -21695,6 +23503,10 @@ const chunk_5: any[] = [  {
     sources: ['Satellite Imagery Archives', 'Official Government Mapping Agencies']
   },  {
     id: 'craters-br',
+    translations: [
+      { lang: 'Greek', original: 'κρατήρ', translit: 'kratḗr', meaning: 'mixing bowl for wine; later a volcanic bowl' },
+      { lang: 'Greek', original: 'μετέωρος', translit: 'metéōros', meaning: 'raised high, in mid-air' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Meteor_Crater_-_Arizona.jpg/1280px-Meteor_Crater_-_Arizona.jpg'],
     parentId: 'megaliths-structures',
     name: 'Meteor Impact Craters',
@@ -23826,6 +25638,9 @@ const chunk_6: any[] = [
   // ── WITCHCRAFT & FOLK MAGIC ───────────────────────────────────────────────
   {
     id: 'witchcraft-folk-magic',
+    translations: [
+      { lang: 'Old English', original: 'wiccecræft', translit: '', meaning: 'witchcraft, sorcery (wicce, witch + cræft, skill or power)' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/JosephSmithTranslating.jpg/500px-JosephSmithTranslating.jpg'],
     parentId: 'alchemy-occult',
     name: 'Witchcraft & Folk Magic',
@@ -23833,6 +25648,11 @@ const chunk_6: any[] = [
   },
   {
     id: 'witches',
+    translations: [
+      { lang: 'Old English', original: 'wicce', translit: '', meaning: 'female sorceress, witch' },
+      { lang: 'Old English', original: 'wicca', translit: '', meaning: 'male sorcerer, wizard' },
+      { lang: 'Old English', original: 'wiccecræft', translit: '', meaning: 'witchcraft, sorcery' }
+    ],
     relatedIds: ['sorcerers', 'enchantresses'],
     parentId: 'witchcraft-folk-magic',
     name: 'Witches',
@@ -23845,6 +25665,10 @@ const chunk_6: any[] = [
   },
   {
     id: 'wizards',
+    translations: [
+      { lang: 'Old English', original: 'wīs', translit: '', meaning: 'wise, learned, knowing' },
+      { lang: 'Middle English', original: 'wysard', translit: '', meaning: 'wise man, sage (wys, wise + -ard suffix); later a magician' }
+    ],
     relatedIds: ['sorcerers'],
     parentId: 'witchcraft-folk-magic',
     name: 'Wizards',
@@ -23856,6 +25680,11 @@ const chunk_6: any[] = [
   },
   {
     id: 'warlocks',
+    translations: [
+      { lang: 'Old English', original: 'wǣrloga', translit: '', meaning: 'oath-breaker, traitor; the Devil (wǣr, covenant + -loga, liar)' },
+      { lang: 'Old English', original: 'wǣr', translit: '', meaning: 'pledge, covenant, truth' },
+      { lang: 'Old English', original: 'lēogan', translit: '', meaning: 'to lie, to deceive' }
+    ],
     parentId: 'witchcraft-folk-magic',
     name: 'Warlocks',
     description: 'Historically derived from the Old English "wǣrloga," meaning oath-breaker or deceiver, a warlock is often defined as a male practitioner of dark magic who has made a pact with a demonic entity. In Scottish tradition, warlocks were specifically those who had renounced their baptismal vows and pledged allegiance to the devil. The term carries a connotation of betrayal and forbidden covenant.',
@@ -23863,6 +25692,11 @@ const chunk_6: any[] = [
   },
   {
     id: 'necromancers',
+    translations: [
+      { lang: 'Greek', original: 'νεκρομαντεία', translit: 'nekromanteia', meaning: 'divination by consulting the dead (nekros, corpse + manteia, divination)' },
+      { lang: 'Greek', original: 'νεκρός', translit: 'nekros', meaning: 'dead body, corpse' },
+      { lang: 'Latin', original: 'nigromantia', translit: '', meaning: 'the \'black art\'; respelling of necromantia after niger, black' }
+    ],
     parentId: 'witchcraft-folk-magic',
     name: 'Necromancer',
     description: 'A practitioner of necromancy, the forbidden magic of summoning and communicating with the spirits of the dead to retrieve hidden knowledge or foresee the future. In the Bible, necromancy is explicitly condemned as consulting familiar spirits. The most famous scriptural example is the Witch of Endor, whom King Saul petitioned to conjure the spirit of the deceased prophet Samuel (1 Samuel 28).',
@@ -23875,6 +25709,11 @@ const chunk_6: any[] = [
   },
   {
     id: 'sorcerers',
+    translations: [
+      { lang: 'Latin', original: 'sors', translit: '', meaning: 'lot, fate; oracular response obtained by casting lots' },
+      { lang: 'Vulgar Latin', original: '*sortiārius', translit: '', meaning: 'one who casts lots, teller of fortunes' },
+      { lang: 'Greek', original: 'φαρμακεία', translit: 'pharmakeia', meaning: 'use of drugs or potions; sorcery (New Testament term for witchcraft)' }
+    ],
     parentId: 'witchcraft-folk-magic',
     name: 'Sorcerer',
     description: 'A practitioner of sorcery (pharmakeia), the art of using spells, rituals, potions, and herbs to invoke supernatural forces and alter the physical world. In the Greek New Testament, the root word \'pharmakeia\' carries the connotation of drugs, poisons, and hallucinogens used to induce trance states for communion with demons. Biblical accounts document sorcerers opposing prophets, such as Simon Magus in Acts 8 and Elymas in Acts 13.',
@@ -23887,6 +25726,11 @@ const chunk_6: any[] = [
   },
   {
     id: 'enchantresses',
+    translations: [
+      { lang: 'Latin', original: 'cantāre', translit: '', meaning: 'to sing, to chant' },
+      { lang: 'Latin', original: 'incantāre', translit: '', meaning: 'to chant a spell over, to bewitch (in- + cantāre)' },
+      { lang: 'Old French', original: 'enchanteresse', translit: '', meaning: 'female sorceress, caster of spells' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/On-Line-Systems-Ultima2.jpg/960px-On-Line-Systems-Ultima2.jpg'],
     parentId: 'witchcraft-folk-magic',
     name: 'Enchantress',
@@ -23899,6 +25743,11 @@ const chunk_6: any[] = [
   },
   {
     id: 'divination',
+    translations: [
+      { lang: 'Latin', original: 'dīvīnātiō', translit: '', meaning: 'foretelling the future by divine inspiration' },
+      { lang: 'Latin', original: 'dīvīnus', translit: '', meaning: 'of a god, godlike, inspired (from dīvus, god)' },
+      { lang: 'Proto-Indo-European', original: '*deywós', translit: '', meaning: 'god, celestial one (root of deus, Zeus, Dyaus)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/The_Witch_of_Endor_%28William_Blake%29_2.jpg/960px-The_Witch_of_Endor_%28William_Blake%29_2.jpg'],
     relatedIds: ['necromancers', 'i-ching'],
     parentId: 'witchcraft-folk-magic',
@@ -23912,6 +25761,10 @@ const chunk_6: any[] = [
   },
   {
     id: 'familiars',
+    translations: [
+      { lang: 'Latin', original: 'famulus', translit: '', meaning: 'household servant' },
+      { lang: 'Latin', original: 'familiāris', translit: '', meaning: 'of the household, intimate; spīritus familiāris = attendant spirit' }
+    ],
     parentId: 'witchcraft-folk-magic',
     name: 'Familiars',
     description: 'Spirit entities — often inhabiting the form of animals — believed to assist witches, wizards, or shamans in their magical work. Common in European witch trial records, familiars were said to be given to witches by the devil and would perform tasks, gather intelligence, or act as conduits for dark power. They appear as cats, dogs, toads, ravens, or other creatures, and are considered demonic in nature from a biblical perspective.',
@@ -23926,6 +25779,10 @@ const chunk_6: any[] = [
   },
   {
     id: 'shaman',
+    translations: [
+      { lang: 'Evenki', original: 'šamān', translit: '', meaning: 'spirit-practitioner, ecstatic healer (Tungusic; ultimate origin debated)' },
+      { lang: 'Sanskrit', original: 'श्रमण', translit: 'śramaṇa', meaning: 'ascetic, one who strives; proposed but disputed source via Chinese shamen' }
+    ],
     parentId: 'witchcraft-folk-magic',
     name: 'Shaman',
     description: 'A spiritual practitioner who acts as an intermediary between the physical and spirit worlds, using altered states of consciousness — induced through drumming, chanting, fasting, or plant medicines — to communicate with spirits, heal the sick, divine the future, and navigate the unseen realm. Found on every inhabited continent, shamanism is considered the world\'s oldest spiritual system. In biblical context, the shaman\'s role as a spirit-communicator places it within the category of forbidden mediumship.',
@@ -23933,6 +25790,10 @@ const chunk_6: any[] = [
   },
   {
     id: 'voodoo',
+    translations: [
+      { lang: 'Fon', original: 'vodún', translit: '', meaning: 'spirit, deity, sacred power' },
+      { lang: 'Haitian Creole', original: 'Vodou', translit: '', meaning: 'the Haitian religion of the lwa (from Fon vodún)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Poup%C3%A9e_vaudou.jpg/960px-Poup%C3%A9e_vaudou.jpg'],
     parentId: 'witchcraft-folk-magic',
     name: 'Voodoo (Vodou)',
@@ -23949,6 +25810,11 @@ const chunk_6: any[] = [
   },
   {
     id: 'witch-of-endor',
+    translations: [
+      { lang: 'Hebrew', original: 'בַּעֲלַת־אוֹב', translit: 'baʿălat-ʾôḇ', meaning: 'mistress of a ghost, i.e. necromantic medium (1 Sam 28:7)' },
+      { lang: 'Hebrew', original: 'אוֹב', translit: 'ʾôḇ', meaning: 'ghost, spirit of the dead; one who consults the dead' },
+      { lang: 'Hebrew', original: 'עֵין־דּוֹר', translit: 'ʿÊn-Dôr', meaning: 'spring of Dor; spring of habitation (ʿayin, spring + dôr, dwelling)' }
+    ],
     relatedIds: ['necromancers', 'classic-ghost-photographs'],
     parentId: 'witchcraft-folk-magic',
     name: 'Witch of Endor',
@@ -24025,6 +25891,10 @@ const chunk_6: any[] = [
   },
   {
     id: 'mahatmas',
+    translations: [
+      { lang: 'Sanskrit', original: 'महात्मा', translit: 'mahātmā', meaning: 'great soul (mahā, great + ātman, self or soul)' },
+      { lang: 'Sanskrit', original: 'आत्मन्', translit: 'ātman', meaning: 'breath, self, soul' }
+    ],
     relatedIds: ['fallen-angel'],
     parentId: 'theosophy',
     name: 'Mahatmas (Masters of Wisdom)',
@@ -24060,6 +25930,10 @@ const chunk_6: any[] = [
   },
   {
     id: 'zeta-reticuli',
+    translations: [
+      { lang: 'Latin', original: 'reticulum', translit: '', meaning: 'little net (diminutive of rēte \'net\'); the constellation Reticulum' },
+      { lang: 'Greek', original: 'ζῆτα', translit: 'zēta', meaning: 'sixth Greek letter, used in Bayer\'s star designations' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Reticulum_constellation_map.svg/960px-Reticulum_constellation_map.svg.png'],
     relatedIds: ['abduction-hill-1961'],
     parentId: 'aliens',
@@ -24069,6 +25943,9 @@ const chunk_6: any[] = [
   },
   {
     id: 'pleiadians',
+    translations: [
+      { lang: 'Greek', original: 'Πλειάδες', translit: 'Pleiades', meaning: 'uncertain; traditionally from plein \'to sail\' (sailing season) or from Pleione, their mother' }
+    ],
     relatedIds: ['const-pleiades'],
     parentId: 'aliens',
     name: 'Pleiadians',
@@ -24127,6 +26004,11 @@ const chunk_6: any[] = [
   },
   {
     id: 'taoism',
+    translations: [
+      { lang: 'Chinese', original: '道', translit: 'dào', meaning: 'way, path, principle' },
+      { lang: 'Chinese', original: '道家', translit: 'Dàojiā', meaning: 'school of the Way (philosophical Taoism)' },
+      { lang: 'Chinese', original: '道教', translit: 'Dàojiào', meaning: 'teaching of the Way (religious Taoism)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Mawangdui_LaoTsu_Ms2.JPG/330px-Mawangdui_LaoTsu_Ms2.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail'],
     parentId: 'biblical-apocryphal',
     name: 'Taoism',
@@ -24137,6 +26019,10 @@ const chunk_6: any[] = [
   },
   {
     id: 'buddhism',
+    translations: [
+      { lang: 'Sanskrit', original: 'बुध्', translit: 'budh', meaning: 'to awaken, perceive, know' },
+      { lang: 'Sanskrit', original: 'बुद्ध', translit: 'buddha', meaning: 'awakened one, enlightened (past participle of budh)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Pali_Canon_Structure.png/1280px-Pali_Canon_Structure.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail'],
     parentId: 'biblical-apocryphal',
     name: 'Buddhism',
@@ -24174,6 +26060,11 @@ const chunk_6: any[] = [
   },
   {
     id: 'dragons-br',
+    translations: [
+      { lang: 'Greek', original: 'δράκων', translit: 'drakōn', meaning: 'serpent, great snake; from derkesthai \'to see clearly\', the sharp-eyed one' },
+      { lang: 'Latin', original: 'dracō', translit: '', meaning: 'serpent, dragon; the windsock standard of late Roman cavalry' },
+      { lang: 'Latin', original: 'serpēns', translit: '', meaning: 'creeping thing (from serpere \'to creep\')' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/William_Blake_-_The_Temptation_and_Fall_of_Eve_%28Illustration_to_Milton%27s_%22Paradise_Lost%22%29_-_Google_Art_Project.jpg/960px-William_Blake_-_The_Temptation_and_Fall_of_Eve_%28Illustration_to_Milton%27s_%22Paradise_Lost%22%29_-_Google_Art_Project.jpg'],
     parentId: 'supernatural-anomalies',
     name: 'Dragons & Serpents',
@@ -24183,6 +26074,10 @@ const chunk_6: any[] = [
   },
   {
     id: 'leviathan-biblical',
+    translations: [
+      { lang: 'Hebrew', original: 'לִוְיָתָן', translit: 'liwyāṯān', meaning: 'the twisting, coiled one (from lwy \'to twist, wreathe\')' },
+      { lang: 'Ugaritic', original: 'ltn', translit: 'Lôtān', meaning: 'the coiling sea-serpent slain by Baal; cognate of Leviathan' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Destruction_of_Leviathan.png/960px-Destruction_of_Leviathan.png'],
     parentId: 'dragons-br',
     name: 'Leviathan',
@@ -24196,6 +26091,9 @@ const chunk_6: any[] = [
   },
   {
     id: 'behemoth-dinosaur',
+    translations: [
+      { lang: 'Hebrew', original: 'בְּהֵמוֹת', translit: 'bəhēmōṯ', meaning: 'great beast; intensive plural of bəhēmāh \'beast, cattle\'' }
+    ],
     parentId: 'dragons-br',
     name: 'Behemoth',
     description: 'A massive primeval land beast described in Job 40:15-24. While modern exegesis often interprets it as a hippopotamus or elephant, alternative researchers and creationists highlight its tail \'like a cedar\' as matching a sauropod dinosaur.',
@@ -24207,6 +26105,10 @@ const chunk_6: any[] = [
   },
   {
     id: 'tiamat-mesopotamian',
+    translations: [
+      { lang: 'Akkadian', original: 'Tiāmat', translit: '', meaning: 'the sea (from tiāmtum \'sea, ocean\'); cognate with Hebrew təhôm \'the deep\'' },
+      { lang: 'Hebrew', original: 'תְּהוֹם', translit: 'təhôm', meaning: 'the deep, primeval ocean (Genesis 1:2)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Myths_and_legends_of_Babylonia_and_Assyria_%281916%29_%2814759101646%29.jpg/960px-Myths_and_legends_of_Babylonia_and_Assyria_%281916%29_%2814759101646%29.jpg'],
     parentId: 'dragons-br',
     name: 'Tiamat',
@@ -24216,6 +26118,10 @@ const chunk_6: any[] = [
   },
   {
     id: 'chinese-long',
+    translations: [
+      { lang: 'Chinese', original: '龍', translit: 'lóng', meaning: 'dragon' },
+      { lang: 'Chinese', original: '神龍', translit: 'shénlóng', meaning: 'spirit dragon, divine dragon (shén \'spirit, god\' + lóng \'dragon\')' }
+    ],
     parentId: 'dragons-br',
     name: 'Shenlong (Chinese Dragon)',
     description: 'Unlike the destructive Western dragons, the Chinese Long is a benevolent symbol of imperial power, wisdom, and water. Shenlong, the spiritual dragon, governs wind, rain, and storms in Taoist and Chinese cosmology.',
@@ -24224,6 +26130,10 @@ const chunk_6: any[] = [
   },
   {
     id: 'feathered-serpent',
+    translations: [
+      { lang: 'Nahuatl', original: 'Quetzalcōātl', translit: '', meaning: 'quetzal-feathered serpent (quetzalli \'quetzal plume\' + cōātl \'serpent\')' },
+      { lang: 'Yucatec Maya', original: 'K\'uk\'ulkan', translit: '', meaning: 'feathered serpent (k\'uk\'ul \'feathered\' + kan \'serpent\')' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Featheredserpentmuseoantropologia.JPG/960px-Featheredserpentmuseoantropologia.JPG'],
     parentId: 'dragons-br',
     secondaryParentIds: ['andean-mesoamerican-lore'],
@@ -24234,6 +26144,9 @@ const chunk_6: any[] = [
   },
   {
     id: 'fafnir-norse',
+    translations: [
+      { lang: 'Old Norse', original: 'Fáfnir', translit: '', meaning: 'the embracer (from faðma \'to embrace, fathom\'), the worm coiled about its hoard' }
+    ],
     parentId: 'dragons-br',
     name: 'Fafnir',
     description: 'A dwarf in Germanic/Norse mythology who was corrupted by greed and transformed into a venom-spitting dragon to guard his hoard. He was slain by the hero Sigurd/Siegfried, whose tasting of Fafnir\'s blood granted the ability to speak with birds.',
@@ -24241,6 +26154,9 @@ const chunk_6: any[] = [
   },
   {
     id: 'ryujin-japanese',
+    translations: [
+      { lang: 'Japanese', original: '龍神', translit: 'Ryūjin', meaning: 'dragon god (ryū \'dragon\' + jin \'god, deity\')' }
+    ],
     parentId: 'dragons-br',
     name: 'Ryujin',
     description: 'The Japanese dragon god of the sea and oceans, residing in Ryugu-jo, a palace built of red and white coral. He controlled the tides using magical jewels and was revered as an ancestor of Japan\'s imperial line.',
@@ -24249,6 +26165,10 @@ const chunk_6: any[] = [
   },
   {
     id: 'apophis-egyptian',
+    translations: [
+      { lang: 'Egyptian', original: 'ꜥꜣpp', translit: 'Apep', meaning: 'meaning uncertain; the great serpent, enemy of the sun god Ra' },
+      { lang: 'Greek', original: 'Ἄποφις', translit: 'Apophis', meaning: 'Hellenised form of Egyptian Apep' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Apep_%28Deity%29.svg/960px-Apep_%28Deity%29.svg.png'],
     parentId: 'dragons-br',
     name: 'Apophis (Apep)',
@@ -24258,6 +26178,9 @@ const chunk_6: any[] = [
   },
   {
     id: 'vritra-vedic',
+    translations: [
+      { lang: 'Sanskrit', original: 'वृत्र', translit: 'Vṛtra', meaning: 'the enveloper, obstructor (from vṛ \'to cover, enclose, restrain\')' }
+    ],
     parentId: 'dragons-br',
     name: 'Vritra',
     description: 'A Vedic dragon or massive serpent representing drought in Hindu scripture. Vritra hoarded all the waters of the cosmos until slain by the storm god Indra using his thunderbolt (Vajra), releasing the rivers and restoring life.',
@@ -24266,6 +26189,9 @@ const chunk_6: any[] = [
   },
   {
     id: 'ouroboros-esoteric',
+    translations: [
+      { lang: 'Greek', original: 'οὐροβόρος', translit: 'ouroboros', meaning: 'tail-devouring (ourā \'tail\' + -boros \'devouring\', from bibrōskein \'to eat\')' }
+    ],
     parentId: 'dragons-br',
     name: 'Ouroboros',
     description: 'An ancient symbol depicting a serpent or dragon eating its own tail. Originating in Egyptian iconographies and refined in Greek alchemical texts, it symbolizes the cyclical nature of the universe, infinity, and eternal return.',
@@ -24274,6 +26200,11 @@ const chunk_6: any[] = [
   },
   {
     id: 'wyvern-basilisk',
+    translations: [
+      { lang: 'Old French', original: 'wivre', translit: '', meaning: 'viper, serpent (from Latin vīpera \'viper\'); source of \'wyvern\'' },
+      { lang: 'Greek', original: 'βασιλίσκος', translit: 'basiliskos', meaning: 'little king (diminutive of basileus), from the crown-like crest on its head' },
+      { lang: 'Latin', original: 'calcātrīx', translit: '', meaning: 'she who tracks (calcāre \'to tread\'), rendering Greek ichneumōn; source of \'cockatrice\'' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Y_Draig_Aur_Owain_Glynd%C5%B5r.jpg/960px-Y_Draig_Aur_Owain_Glynd%C5%B5r.jpg'],
     parentId: 'dragons-br',
     name: 'Wyvern & Basilisk',
@@ -24282,6 +26213,11 @@ const chunk_6: any[] = [
   },
   {
     id: 'dinosaurs-historical',
+    translations: [
+      { lang: 'Greek', original: 'δεινός', translit: 'deinos', meaning: 'terrible, fearfully great' },
+      { lang: 'Greek', original: 'σαῦρος', translit: 'sauros', meaning: 'lizard; \'dinosaur\' coined by Richard Owen (1841)' },
+      { lang: 'Greek', original: 'δράκων', translit: 'drakōn', meaning: 'serpent, great snake; from derkesthai \'to see clearly\', the sharp-eyed one' }
+    ],
     parentId: 'dragons-br',
     name: 'Dinosaurs as Dragons',
     description: 'The alternative history theory asserting that ancient accounts of \'dragons\' across various continents were first-hand encounters with surviving dinosaurs. Proponents highlight petroglyphs, ancient temple carvings (such as the Ta Prohm stegosaur), and historical logs of reptilian monsters written long before the word \'dinosaur\' was coined in 1841.',
@@ -24459,6 +26395,9 @@ const chunk_6: any[] = [
   },
   {
     id: 'philosophers-br',
+    translations: [
+      { lang: 'Greek', original: 'φιλόσοφος', translit: 'philosophos', meaning: 'lover of wisdom (philos, loving + sophia, wisdom)' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Joseph%2C_son_of_Gorian%2C_called_Flavius_Josephus_%28cropped%29.jpg/1280px-Joseph%2C_son_of_Gorian%2C_called_Flavius_Josephus_%28cropped%29.jpg'],
     parentId: 'esoteric-traditions',
     name: 'Philosophers & Sages',
@@ -24467,6 +26406,9 @@ const chunk_6: any[] = [
   },
   {
     id: 'socrates-philosopher',
+    translations: [
+      { lang: 'Greek', original: 'Σωκράτης', translit: 'Sōkratēs', meaning: 'whole or sound power (sōs, safe, whole + kratos, power)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Socrates_Louvre.jpg/960px-Socrates_Louvre.jpg'],
     parentId: 'philosophers-br',
     name: 'Socrates',
@@ -24477,6 +26419,9 @@ const chunk_6: any[] = [
   },
   {
     id: 'plato-philosopher',
+    translations: [
+      { lang: 'Greek', original: 'Πλάτων', translit: 'Platōn', meaning: 'broad (platys); traditionally a nickname for his broad frame or brow, birth name Aristocles' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Plato_Silanion_Musei_Capitolini_MC1377.png/960px-Plato_Silanion_Musei_Capitolini_MC1377.png'],
     parentId: 'philosophers-br',
     name: 'Plato',
@@ -24488,6 +26433,9 @@ const chunk_6: any[] = [
   },
   {
     id: 'aristotle-philosopher',
+    translations: [
+      { lang: 'Greek', original: 'Ἀριστοτέλης', translit: 'Aristotelēs', meaning: 'the best purpose or end (aristos, best + telos, end, goal)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Aristotle_Altemps_Inv8575.jpg/960px-Aristotle_Altemps_Inv8575.jpg'],
     parentId: 'philosophers-br',
     name: 'Aristotle',
@@ -24498,6 +26446,9 @@ const chunk_6: any[] = [
   },
   {
     id: 'pythagoras-philosopher',
+    translations: [
+      { lang: 'Greek', original: 'Πυθαγόρας', translit: 'Pythagoras', meaning: 'traditionally \'proclaimed by the Pythia\' (Pythō, Delphi + agoreuō, to speak publicly)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Pythagoras_in_the_Roman_Forum%2C_Colosseum.jpg/960px-Pythagoras_in_the_Roman_Forum%2C_Colosseum.jpg'],
     parentId: 'philosophers-br',
     name: 'Pythagoras',
@@ -24508,6 +26459,10 @@ const chunk_6: any[] = [
   },
   {
     id: 'hermes-trismegistus-philosopher',
+    translations: [
+      { lang: 'Egyptian', original: 'ḏḥwty', translit: 'Thoth', meaning: 'the god Thoth, scribe of the gods, equated with Hermes' },
+      { lang: 'Greek', original: 'Ἑρμῆς ὁ Τρισμέγιστος', translit: 'Hermēs ho Trismegistos', meaning: 'Hermes the thrice-greatest (tris, thrice + megistos, greatest)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Hermes_Trismegistus_Sienna_Cathedral_Mosaic.jpg/960px-Hermes_Trismegistus_Sienna_Cathedral_Mosaic.jpg'],
     parentId: 'philosophers-br',
     name: 'Hermes Trismegistus',
@@ -24538,6 +26493,11 @@ const chunk_6: any[] = [
   },
   {
     id: 'hinduism',
+    translations: [
+      { lang: 'Sanskrit', original: 'सिन्धु', translit: 'sindhu', meaning: 'river, stream; the Indus' },
+      { lang: 'Old Persian', original: '𐏃𐎡𐎯𐎢𐏁', translit: 'Hindūš', meaning: 'the Indus land (Persian form of Sanskrit sindhu, with s > h)' },
+      { lang: 'Persian', original: 'هندو', translit: 'Hindū', meaning: 'inhabitant of India (Hind); source of \'Hindu\'' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/1500-1200_BCE_Rigveda%2C_manuscript_page_sample_i%2C_Mandala_1%2C_Hymn_1_%28Sukta_1%29%2C_Adhyaya_1%2C_lines_1.1.1_to_1.1.9%2C_Sanskrit%2C_Devanagari.jpg/1280px-1500-1200_BCE_Rigveda%2C_manuscript_page_sample_i%2C_Mandala_1%2C_Hymn_1_%28Sukta_1%29%2C_Adhyaya_1%2C_lines_1.1.1_to_1.1.9%2C_Sanskrit%2C_Devanagari.jpg'],
     parentId: 'biblical-apocryphal',
     name: 'Hinduism',
@@ -24549,6 +26509,11 @@ const chunk_6: any[] = [
   },
   {
     id: 'judaism',
+    translations: [
+      { lang: 'Hebrew', original: 'יְהוּדָה', translit: 'Yəhûḏāh', meaning: 'Judah; Genesis 29:35 links it to yāḏāh, to praise' },
+      { lang: 'Hebrew', original: 'יְהוּדִי', translit: 'Yəhûḏî', meaning: 'Judahite, Jew' },
+      { lang: 'Greek', original: 'Ἰουδαϊσμός', translit: 'Ioudaïsmós', meaning: 'Judaism, the Jewish way of life (2 Maccabees 2:21)' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Talmud-Druck_von_Daniel_Bomberg_und_Ambrosius_Froben.jpg/1280px-Talmud-Druck_von_Daniel_Bomberg_und_Ambrosius_Froben.jpg'],
     parentId: 'biblical-apocryphal',
     name: 'Judaism',
@@ -24559,6 +26524,11 @@ const chunk_6: any[] = [
   },
   {
     id: 'christianity',
+    translations: [
+      { lang: 'Hebrew', original: 'מָשִׁיחַ', translit: 'māšîaḥ', meaning: 'anointed one, messiah (from māšaḥ, to anoint)' },
+      { lang: 'Greek', original: 'Χριστός', translit: 'Khristós', meaning: 'anointed one (from khríō, to anoint); calque of Hebrew māšîaḥ' },
+      { lang: 'Greek', original: 'Χριστιανός', translit: 'Khristianós', meaning: 'Christian, partisan of Christ (Acts 11:26)' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Simeon_Stylites_the_Elder_and_Simeon_Stylites_the_Younger%2C_1699.jpg/960px-Simeon_Stylites_the_Elder_and_Simeon_Stylites_the_Younger%2C_1699.jpg'],
     parentId: 'biblical-apocryphal',
     name: 'Christianity',
@@ -24569,6 +26539,11 @@ const chunk_6: any[] = [
   },
   {
     id: 'islam',
+    translations: [
+      { lang: 'Arabic', original: 'س-ل-م', translit: 's-l-m', meaning: 'root: to be whole, safe, at peace' },
+      { lang: 'Arabic', original: 'إِسْلَام', translit: 'islām', meaning: 'submission, surrender (to God); verbal noun of aslama, form IV of s-l-m' },
+      { lang: 'Arabic', original: 'مُسْلِم', translit: 'muslim', meaning: 'one who submits (active participle of aslama)' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/The_Ka%27ba%2C_Great_Mosque_of_Mecca%2C_Saudi_Arabia_%284%29.jpg/1280px-The_Ka%27ba%2C_Great_Mosque_of_Mecca%2C_Saudi_Arabia_%284%29.jpg'],
     parentId: 'biblical-apocryphal',
     name: 'Islam',
@@ -24579,6 +26554,11 @@ const chunk_6: any[] = [
   },
   {
     id: 'zoroastrianism',
+    translations: [
+      { lang: 'Avestan', original: '𐬰𐬀𐬭𐬀𐬚𐬎𐬱𐬙𐬭𐬀', translit: 'Zaraθuštra', meaning: 'uncertain; second element uštra, camel (\'owner of old camels\' is the usual reading)' },
+      { lang: 'Greek', original: 'Ζωροάστρης', translit: 'Zōroástrēs', meaning: 'Greek form, reinterpreted with ástron, star' },
+      { lang: 'Persian', original: 'زرتشت', translit: 'Zartošt', meaning: 'Zoroaster (New Persian form)' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Faravahar.svg/1280px-Faravahar.svg.png'],
     parentId: 'biblical-apocryphal',
     name: 'Zoroastrianism',
@@ -24590,6 +26570,10 @@ const chunk_6: any[] = [
   },
   {
     id: 'shinto',
+    translations: [
+      { lang: 'Chinese', original: '神道', translit: 'shéndào', meaning: 'way of the spirits/gods (shén, spirit, god + dào, way)' },
+      { lang: 'Japanese', original: '神道', translit: 'Shintō', meaning: 'way of the kami (gods); Sino-Japanese reading of the Chinese term' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Kojiki_Shinpukuji.jpg/1280px-Kojiki_Shinpukuji.jpg'],
     parentId: 'biblical-apocryphal',
     name: 'Shinto',
@@ -24600,6 +26584,11 @@ const chunk_6: any[] = [
   },
   {
     id: 'gnosticism',
+    translations: [
+      { lang: 'Proto-Indo-European', original: '*ǵneh₃-', translit: '', meaning: 'to know, recognise' },
+      { lang: 'Greek', original: 'γνῶσις', translit: 'gnôsis', meaning: 'knowledge, esp. esoteric knowledge (from gignṓskō, to know)' },
+      { lang: 'Greek', original: 'γνωστικός', translit: 'gnōstikós', meaning: 'pertaining to knowledge; a \'knower\'' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Albrecht_D%C3%BCrer_-_Adoration_of_the_Trinity_%28Landauer_Altar%29_-_Google_Art_Project.jpg/1280px-Albrecht_D%C3%BCrer_-_Adoration_of_the_Trinity_%28Landauer_Altar%29_-_Google_Art_Project.jpg'],
     parentId: 'biblical-apocryphal',
     name: 'Gnosticism',
@@ -24611,6 +26600,10 @@ const chunk_6: any[] = [
   },
   {
     id: 'rosicrucianism',
+    translations: [
+      { lang: 'German', original: 'Rosenkreuz', translit: '', meaning: 'rose cross (Rose, rose + Kreuz, cross); surname of the legendary founder' },
+      { lang: 'Latin', original: 'Rosae Crucis', translit: '', meaning: 'of the Rose Cross (Fraternitas Rosae Crucis, the manifestos\' brotherhood)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Rose_Cross.png/960px-Rose_Cross.png'],
     parentId: 'biblical-apocryphal',
     secondaryParentIds: ['magical-orders'],
@@ -24623,6 +26616,10 @@ const chunk_6: any[] = [
   },
   {
     id: 'catholicism',
+    translations: [
+      { lang: 'Greek', original: 'καθολικός', translit: 'katholikos', meaning: 'universal, general (kata, according to + holos, whole)' },
+      { lang: 'Latin', original: 'catholicus', translit: '', meaning: 'universal; of the whole Church (via Greek katholikos)' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/f/f5/Basilica_di_San_Pietro_in_Vaticano_September_2015-1a.jpg'],
     parentId: 'christian-denominations',
     name: 'Catholicism',
@@ -24645,6 +26642,9 @@ const chunk_6: any[] = [
   },
   {
     id: 'astrology-cosmology',
+    translations: [
+      { lang: 'Greek', original: 'ἀστρολογία', translit: 'astrologia', meaning: 'study of the stars (astron, star + -logia, discourse)' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/5/55/8-cell-simple.gif'],
     parentId: 'esoteric-traditions',
     name: 'Astrology & Cosmology',
@@ -24654,6 +26654,9 @@ const chunk_6: any[] = [
   },
   {
     id: 'constellations-parent',
+    translations: [
+      { lang: 'Latin', original: 'constellatio', translit: '', meaning: 'set of stars, position of stars (con-, together + stella, star)' }
+    ],
     images: ['https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/f/f3/Sirius_A_and_B_Hubble_photo.jpg'],
     parentId: 'astrology-cosmology',
     name: 'Constellations',
@@ -24663,6 +26666,9 @@ const chunk_6: any[] = [
   },
   {
     id: 'const-orion',
+    translations: [
+      { lang: 'Greek', original: 'Ὠρίων', translit: 'Ōriōn', meaning: 'etymology uncertain; the giant hunter of Boeotian myth placed among the stars' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Mosaic_House_of_Orion_by_Dr_Sophie_Hay_4.jpg/960px-Mosaic_House_of_Orion_by_Dr_Sophie_Hay_4.jpg'],
     parentId: 'constellations-parent',
     name: 'Orion',
@@ -24672,6 +26678,10 @@ const chunk_6: any[] = [
   },
   {
     id: 'const-pleiades',
+    translations: [
+      { lang: 'Greek', original: 'Πλειάδες', translit: 'Pleiades', meaning: 'disputed; from plein, to sail (the sailing season), or peleiades, doves, or the mother Pleione' },
+      { lang: 'Hebrew', original: 'כִּימָה', translit: 'Kîmāh', meaning: 'the Pleiades (Job 38:31, Amos 5:8); probably \'cluster, heap\'' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Pleiades_large.jpg/960px-Pleiades_large.jpg'],
     parentId: 'constellations-parent',
     name: 'The Pleiades',
@@ -24681,6 +26691,11 @@ const chunk_6: any[] = [
   },
   {
     id: 'const-sirius',
+    translations: [
+      { lang: 'Egyptian', original: 'spdt', translit: 'Sopdet', meaning: 'the sharp or pointed one; goddess of the star (Greek Sothis)' },
+      { lang: 'Greek', original: 'Σείριος', translit: 'Seirios', meaning: 'scorching, glowing' },
+      { lang: 'Latin', original: 'Sirius', translit: '', meaning: 'the Dog Star' }
+    ],
     parentId: 'constellations-parent',
     name: 'Sirius (The Dog Star)',
     description: 'The brightest star in Canis Major and the apex of esoteric cosmology. In ancient Egypt, Sirius was worshipped as Sopdet / Sothis (the celestial manifestation of Isis), whose heliacal rising governed the Nile flood and the secret 1,460-year Sothic cycle. In Freemasonry, Sirius is revered as the radiant \'Blazing Star\' presiding over lodge tracing boards, symbolizing divine omnipresence, intellectual illumination, and the lost architectural mysteries of Hiram Abiff. In Aleister Crowley\'s Thelemic system and Kenneth Grant\'s Typhonian OTO, Sirius is the Silver Star (A∴A∴)—the occult powerhouse behind the Solar-Phallic current and the trans-Yuggothian transmission. Madame Blavatsky and Theosophical masters taught that Sirius is the supreme sun behind our sun, the central clearinghouse of cosmic karma and the seat of the Great White Brotherhood. West African Dogon priests preserved centuries of inexplicable oral knowledge regarding Sirius B (Po Tolo) and its amphibious emissaries, the Nommo. Tragically, the star became the focal destination for the doomsday cult Order of the Solar Temple, whose members believed mass ritual suicide would instantly transit their consciousness into the etheric light of Sirius.',
@@ -24692,6 +26707,10 @@ const chunk_6: any[] = [
   },
   {
     id: 'const-draco',
+    translations: [
+      { lang: 'Greek', original: 'δράκων', translit: 'drakōn', meaning: 'serpent, dragon; traditionally from derkesthai, to see clearly, \'the sharp-eyed one\'' },
+      { lang: 'Latin', original: 'draco', translit: '', meaning: 'dragon, large serpent' }
+    ],
     parentId: 'constellations-parent',
     name: 'Draco',
     description: 'The celestial Dragon constellation. In alternative history and reptilian conspiracy theories, Draco is identified as the prime star system of origin for hostile non-human serpentine entities.',
@@ -24700,6 +26719,10 @@ const chunk_6: any[] = [
   },
   {
     id: 'const-ursa-major',
+    translations: [
+      { lang: 'Greek', original: 'Ἄρκτος Μεγάλη', translit: 'Arktos Megalē', meaning: 'great bear' },
+      { lang: 'Latin', original: 'Ursa Maior', translit: '', meaning: 'greater she-bear' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Ursa_Major_IAU.svg/960px-Ursa_Major_IAU.svg.png'],
     parentId: 'constellations-parent',
     name: 'Ursa Major (The Great Bear)',
@@ -24708,6 +26731,9 @@ const chunk_6: any[] = [
   },
   {
     id: 'mazzaroth',
+    translations: [
+      { lang: 'Hebrew', original: 'מַזָּרוֹת', translit: 'mazzārôṯ', meaning: 'meaning uncertain; traditionally the zodiac constellations (Job 38:32), perhaps for mazzālôṯ' }
+    ],
     parentId: 'astrology-cosmology',
     name: 'The Mazzaroth',
     description: 'The ancient Hebrew word for the constellations of the zodiac, referenced in Job 38:32. Christian esotericists view the Mazzaroth as a divine prophecy written in the stars depicting the redemptive history of humanity.',
@@ -24716,6 +26742,10 @@ const chunk_6: any[] = [
   },
   {
     id: 'zodiac',
+    translations: [
+      { lang: 'Greek', original: 'ζῳδιακὸς κύκλος', translit: 'zōidiakos kyklos', meaning: 'circle of little figures or animals (zōidion, diminutive of zōion, living creature)' },
+      { lang: 'Latin', original: 'zodiacus', translit: '', meaning: 'the zodiac' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Ecliptic_path.jpg/960px-Ecliptic_path.jpg'],
     parentId: 'astrology-cosmology',
     name: 'The Zodiac',
@@ -24725,6 +26755,11 @@ const chunk_6: any[] = [
   },
   {
     id: 'zodiac-aries',
+    translations: [
+      { lang: 'Latin', original: 'ariēs', translit: '', meaning: 'ram' },
+      { lang: 'Greek', original: 'Κριός', translit: 'Krios', meaning: 'ram' },
+      { lang: 'Akkadian', original: 'MUL.LÚ.ḪUN.GÁ', translit: 'agru', meaning: 'the Hired Man (farm labourer)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Aries_symbol_%28bold%29.svg/960px-Aries_symbol_%28bold%29.svg.png'],
     parentId: 'zodiac',
     name: 'Aries',
@@ -24733,6 +26768,11 @@ const chunk_6: any[] = [
   },
   {
     id: 'zodiac-taurus',
+    translations: [
+      { lang: 'Latin', original: 'taurus', translit: '', meaning: 'bull' },
+      { lang: 'Greek', original: 'Ταῦρος', translit: 'Tauros', meaning: 'bull' },
+      { lang: 'Akkadian', original: 'MUL.GU₄.AN.NA', translit: '', meaning: 'the Bull of Heaven' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Taurus_symbol_%28bold%29.svg/960px-Taurus_symbol_%28bold%29.svg.png'],
     parentId: 'zodiac',
     name: 'Taurus',
@@ -24741,6 +26781,11 @@ const chunk_6: any[] = [
   },
   {
     id: 'zodiac-gemini',
+    translations: [
+      { lang: 'Latin', original: 'geminī', translit: '', meaning: 'twins' },
+      { lang: 'Greek', original: 'Δίδυμοι', translit: 'Didymoi', meaning: 'twins' },
+      { lang: 'Akkadian', original: 'MUL.MAŠ.TAB.BA.GAL.GAL', translit: 'māšū rabûtu', meaning: 'the Great Twins' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Google_Gemini_Screenshot_%282026%29.png/960px-Google_Gemini_Screenshot_%282026%29.png'],
     parentId: 'zodiac',
     name: 'Gemini',
@@ -24749,6 +26794,11 @@ const chunk_6: any[] = [
   },
   {
     id: 'zodiac-cancer',
+    translations: [
+      { lang: 'Latin', original: 'cancer', translit: '', meaning: 'crab' },
+      { lang: 'Greek', original: 'Καρκίνος', translit: 'Karkinos', meaning: 'crab' },
+      { lang: 'Akkadian', original: 'MUL.AL.LUL', translit: 'alluttu', meaning: 'the crab, crayfish' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Cancer_symbol_%28bold%29.svg/960px-Cancer_symbol_%28bold%29.svg.png'],
     parentId: 'zodiac',
     name: 'Cancer',
@@ -24757,6 +26807,11 @@ const chunk_6: any[] = [
   },
   {
     id: 'zodiac-leo',
+    translations: [
+      { lang: 'Latin', original: 'leō', translit: '', meaning: 'lion' },
+      { lang: 'Greek', original: 'Λέων', translit: 'Leōn', meaning: 'lion' },
+      { lang: 'Akkadian', original: 'MUL.UR.GU.LA', translit: 'urgulû', meaning: 'the Lion (lit. \'great dog\')' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Pope_Leo_XIV_3_%283x4_cropped%29.png/960px-Pope_Leo_XIV_3_%283x4_cropped%29.png'],
     parentId: 'zodiac',
     name: 'Leo',
@@ -24765,6 +26820,11 @@ const chunk_6: any[] = [
   },
   {
     id: 'zodiac-virgo',
+    translations: [
+      { lang: 'Latin', original: 'virgō', translit: '', meaning: 'maiden, virgin' },
+      { lang: 'Greek', original: 'Παρθένος', translit: 'Parthenos', meaning: 'maiden, virgin' },
+      { lang: 'Akkadian', original: 'MUL.AB.SÍN', translit: 'absinnu', meaning: 'the Furrow, goddess holding an ear of grain' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Virgo_symbol_%28bold%29.svg/960px-Virgo_symbol_%28bold%29.svg.png'],
     parentId: 'zodiac',
     name: 'Virgo',
@@ -24773,6 +26833,11 @@ const chunk_6: any[] = [
   },
   {
     id: 'zodiac-libra',
+    translations: [
+      { lang: 'Latin', original: 'lībra', translit: '', meaning: 'balance, pair of scales; also a pound weight' },
+      { lang: 'Greek', original: 'Ζυγός', translit: 'Zygos', meaning: 'yoke; beam of a balance' },
+      { lang: 'Akkadian', original: 'MUL.ZI.BA.AN.NA', translit: 'zibānītu', meaning: 'the Scales' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Libra_symbol_%28bold%29.svg/960px-Libra_symbol_%28bold%29.svg.png'],
     parentId: 'zodiac',
     name: 'Libra',
@@ -24781,6 +26846,11 @@ const chunk_6: any[] = [
   },
   {
     id: 'zodiac-scorpio',
+    translations: [
+      { lang: 'Latin', original: 'scorpiō', translit: '', meaning: 'scorpion' },
+      { lang: 'Greek', original: 'Σκορπίος', translit: 'Skorpios', meaning: 'scorpion' },
+      { lang: 'Akkadian', original: 'MUL.GÍR.TAB', translit: 'zuqaqīpu', meaning: 'the Scorpion' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Scorpius_symbol_%28bold%29.svg/960px-Scorpius_symbol_%28bold%29.svg.png'],
     parentId: 'zodiac',
     name: 'Scorpio',
@@ -24789,6 +26859,11 @@ const chunk_6: any[] = [
   },
   {
     id: 'zodiac-sagittarius',
+    translations: [
+      { lang: 'Latin', original: 'sagittārius', translit: '', meaning: 'archer (sagitta, arrow)' },
+      { lang: 'Greek', original: 'Τοξότης', translit: 'Toxotēs', meaning: 'archer, bowman' },
+      { lang: 'Akkadian', original: 'MUL.PA.BIL.SAG', translit: 'Pabilsag', meaning: 'the god Pabilsag, a bow-wielding deity shown as a centaur' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Sagittarius_symbol_%28bold%29.svg/960px-Sagittarius_symbol_%28bold%29.svg.png'],
     parentId: 'zodiac',
     name: 'Sagittarius',
@@ -24797,6 +26872,11 @@ const chunk_6: any[] = [
   },
   {
     id: 'zodiac-capricorn',
+    translations: [
+      { lang: 'Latin', original: 'capricornus', translit: '', meaning: 'goat-horned (caper, goat + cornū, horn)' },
+      { lang: 'Greek', original: 'Αἰγόκερως', translit: 'Aigokerōs', meaning: 'goat-horned' },
+      { lang: 'Akkadian', original: 'MUL.SUḪUR.MÁŠ', translit: 'suḫurmāšu', meaning: 'the goat-fish, emblem of the god Ea' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Capricornus_symbol_%28bold%29.svg/960px-Capricornus_symbol_%28bold%29.svg.png'],
     parentId: 'zodiac',
     name: 'Capricorn',
@@ -24805,6 +26885,11 @@ const chunk_6: any[] = [
   },
   {
     id: 'zodiac-aquarius',
+    translations: [
+      { lang: 'Latin', original: 'aquārius', translit: '', meaning: 'water-carrier (aqua, water)' },
+      { lang: 'Greek', original: 'Ὑδροχόος', translit: 'Hydrokhoos', meaning: 'water-pourer' },
+      { lang: 'Akkadian', original: 'MUL.GU.LA', translit: '', meaning: 'the Great One, constellation of the god Ea' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Aquarius_symbol_%28bold%29.svg/960px-Aquarius_symbol_%28bold%29.svg.png'],
     parentId: 'zodiac',
     name: 'Aquarius',
@@ -24813,6 +26898,11 @@ const chunk_6: any[] = [
   },
   {
     id: 'zodiac-pisces',
+    translations: [
+      { lang: 'Latin', original: 'piscēs', translit: '', meaning: 'fishes (plural of piscis)' },
+      { lang: 'Greek', original: 'Ἰχθύες', translit: 'Ikhthyes', meaning: 'fishes' },
+      { lang: 'Akkadian', original: 'MUL.KUN.MEŠ', translit: 'zibbātu', meaning: 'the Tails' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Pisces_symbol_%28bold%29.svg/960px-Pisces_symbol_%28bold%29.svg.png'],
     parentId: 'zodiac',
     name: 'Pisces',
@@ -24832,6 +26922,9 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'eastern-orthodoxy',
+    translations: [
+      { lang: 'Greek', original: 'ὀρθοδοξία', translit: 'orthodoxía', meaning: 'right belief, right worship (orthós, correct + dóxa, opinion, glory)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Catedrala_M%C3%A2ntuirii_Neamului_%28Aprilie_2025%29.jpg/960px-Catedrala_M%C3%A2ntuirii_Neamului_%28Aprilie_2025%29.jpg'],
     parentId: 'christian-denominations',
     name: 'Eastern Orthodoxy',
@@ -24839,6 +26932,10 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'oriental-orthodoxy',
+    translations: [
+      { lang: 'Latin', original: 'oriēns', translit: '', meaning: 'rising (sun), the east (present participle of orīrī, to rise)' },
+      { lang: 'Greek', original: 'ὀρθοδοξία', translit: 'orthodoxía', meaning: 'right belief, right worship (orthós, correct + dóxa, opinion, glory)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Etchmiadzin_2025-3.jpg/960px-Etchmiadzin_2025-3.jpg'],
     parentId: 'christian-denominations',
     name: 'Oriental Orthodoxy',
@@ -24852,6 +26949,9 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'protestantism',
+    translations: [
+      { lang: 'Latin', original: 'prōtestārī', translit: '', meaning: 'to declare publicly, bear witness (prō + testārī); from the 1529 Protestation at Speyer' }
+    ],
     parentId: 'christian-denominations',
     name: 'Protestantism',
     description: 'A major branch of Christianity originating from the 16th-century Reformation, emphasizing salvation by faith alone (sola fide), the authority of scripture (sola scriptura), and the priesthood of all believers.'
@@ -24859,12 +26959,19 @@ const chunk_new_religion: any[] = [
   // --- PROTESTANT DENOMINATIONS ---
   {
     id: 'baptists',
+    translations: [
+      { lang: 'Greek', original: 'βαπτίζω', translit: 'baptizō', meaning: 'to dip, immerse' },
+      { lang: 'Greek', original: 'βαπτιστής', translit: 'baptistēs', meaning: 'one who dips, baptiser' }
+    ],
     parentId: 'protestantism',
     name: 'Baptists',
     description: "A major Protestant group emphasizing believer's baptism by full immersion, local church autonomy, and liberty of conscience."
   },
   {
     id: 'methodists',
+    translations: [
+      { lang: 'Greek', original: 'μέθοδος', translit: 'methodos', meaning: 'pursuit, systematic procedure (meta \'after\' + hodos \'way\')' }
+    ],
     parentId: 'protestantism',
     name: 'Methodists',
     description: 'A movement founded by John Wesley in the 18th century, emphasizing personal holiness, charity, social action, and methodical study of scripture.'
@@ -24877,6 +26984,9 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'presbyterians',
+    translations: [
+      { lang: 'Greek', original: 'πρεσβύτερος', translit: 'presbyteros', meaning: 'elder; comparative of presbys, old man' }
+    ],
     parentId: 'protestantism',
     name: 'Presbyterians',
     description: 'A branch of Reformed Protestantism governed by representative bodies of elders (presbyters), heavily influenced by John Knox and Scottish church history.'
@@ -24895,6 +27005,9 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'pentecostalism',
+    translations: [
+      { lang: 'Greek', original: 'Πεντηκοστή', translit: 'Pentēkostē', meaning: '\'fiftieth (day)\' after Passover, the feast of Weeks (Shavuot)' }
+    ],
     relatedIds: ['holy-spirit'],
     parentId: 'protestantism',
     name: 'Pentecostalism',
@@ -24921,12 +27034,19 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'anglicanism',
+    translations: [
+      { lang: 'Old English', original: 'Engle', translit: '', meaning: 'the Angles, from Angeln in Schleswig' },
+      { lang: 'Latin', original: 'Anglicanus', translit: '', meaning: 'English; of the Angli, as in ecclesia Anglicana' }
+    ],
     parentId: 'protestantism',
     name: 'Anglican / Episcopalian',
     description: 'The global communion of churches historically connected to the Church of England, representing a middle way (via media) between Catholicism and Protestantism.'
   },
   {
     id: 'seventh-day-adventists',
+    translations: [
+      { lang: 'Latin', original: 'adventus', translit: '', meaning: 'arrival, coming (ad- + venire, to come); the Second Coming' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Adventist_Symbol.svg/960px-Adventist_Symbol.svg.png'],
     parentId: 'protestantism',
     name: 'Seventh-day Adventism',
@@ -24934,6 +27054,10 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'pentecostal-charismatic',
+    translations: [
+      { lang: 'Greek', original: 'Πεντηκοστή', translit: 'Pentēkostē', meaning: '\'fiftieth (day)\' after Passover, the feast of Weeks (Shavuot)' },
+      { lang: 'Greek', original: 'χάρισμα', translit: 'charisma', meaning: 'gift of grace, favour freely given (from charis, grace)' }
+    ],
     relatedIds: ['holy-spirit'],
     parentId: 'protestantism',
     name: 'Pentecostal & Charismatic Movement',
@@ -24951,6 +27075,10 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'islam-sunni',
+    translations: [
+      { lang: 'Arabic', original: 'سُنَّة', translit: 'sunna', meaning: 'custom, established practice, tradition (of the Prophet)' },
+      { lang: 'Arabic', original: 'أَهْل السُّنَّة', translit: 'ahl as-sunna', meaning: 'people of the tradition' }
+    ],
     relatedIds: ['muslim-practitioner', 'rel-adherent-muhammad-ali', 'rel-adherent-malcolm-x'],
     parentId: 'islam-denominations',
     name: 'Sunni Islam',
@@ -24958,6 +27086,9 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'islam-shia',
+    translations: [
+      { lang: 'Arabic', original: 'شِيعَة', translit: 'shīʿa', meaning: 'party, faction, followers; short for shīʿat ʿAlī, \'the party of Ali\'' }
+    ],
     relatedIds: ['muslim-practitioner'],
     parentId: 'islam-denominations',
     name: 'Shia Islam',
@@ -24965,6 +27096,10 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'islam-sufism',
+    translations: [
+      { lang: 'Arabic', original: 'صُوف', translit: 'ṣūf', meaning: 'wool; the traditional derivation, from the ascetics\' coarse woollen garments' },
+      { lang: 'Arabic', original: 'صُوفِيّ', translit: 'ṣūfī', meaning: 'a Sufi, mystic; abstract noun taṣawwuf \'Sufism\'' }
+    ],
     relatedIds: ['islam', 'muslim-practitioner'],
     parentId: 'islam-denominations',
     name: 'Sufism',
@@ -24981,12 +27116,19 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'buddhism-theravada',
+    translations: [
+      { lang: 'Pali', original: 'theravāda', translit: '', meaning: 'doctrine of the elders (thera, elder + vāda, doctrine)' },
+      { lang: 'Sanskrit', original: 'स्थविरवाद', translit: 'Sthaviravāda', meaning: 'doctrine of the elders (sthavira, elder + vāda, doctrine)' }
+    ],
     parentId: 'buddhism-denominations',
     name: 'Theravada',
     description: 'The "School of the Elders," the oldest surviving Buddhist branch, focusing on the Pali Canon and monastic path to Arhatship.'
   },
   {
     id: 'buddhism-mahayana',
+    translations: [
+      { lang: 'Sanskrit', original: 'महायान', translit: 'Mahāyāna', meaning: 'great vehicle (mahā, great + yāna, vehicle, path)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Shishoin_temple_shibamata_Five_Tathagatas_2020.jpg/960px-Shishoin_temple_shibamata_Five_Tathagatas_2020.jpg'],
     parentId: 'buddhism-denominations',
     name: 'Mahayana',
@@ -24994,12 +27136,20 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'buddhism-vajrayana',
+    translations: [
+      { lang: 'Sanskrit', original: 'वज्रयान', translit: 'Vajrayāna', meaning: 'diamond or thunderbolt vehicle (vajra, thunderbolt, diamond + yāna, vehicle)' }
+    ],
     parentId: 'buddhism-denominations',
     name: 'Vajrayana / Tibetan Buddhism',
     description: 'The "Diamond Vehicle," incorporating tantric rituals, visualization, mantric formulas, and oral lineages led by Lamas.'
   },
   {
     id: 'buddhism-zen',
+    translations: [
+      { lang: 'Sanskrit', original: 'ध्यान', translit: 'dhyāna', meaning: 'meditation, contemplation' },
+      { lang: 'Chinese', original: '禪', translit: 'chán', meaning: 'meditation; transcribes Pali jhāna' },
+      { lang: 'Japanese', original: '禅', translit: 'zen', meaning: 'Japanese reading of Chinese chán' }
+    ],
     relatedIds: ['rel-figure-bodhidharma', 'rel-adherent-steve-jobs'],
     parentId: 'buddhism-denominations',
     name: 'Zen Buddhism',
@@ -25015,6 +27165,10 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'hinduism-vaishnavism',
+    translations: [
+      { lang: 'Sanskrit', original: 'विष्णु', translit: 'viṣṇu', meaning: 'traditionally \'all-pervader\' (from viś, to enter, pervade); etymology debated' },
+      { lang: 'Sanskrit', original: 'वैष्णव', translit: 'vaiṣṇava', meaning: 'relating to or devoted to Vishnu' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Hindu_God_Vishnu_as_Narayana_witth_Consorts_10_AD_Sculpture_at_LA_County_Museum_of_Art.tif/lossy-page1-960px-Hindu_God_Vishnu_as_Narayana_witth_Consorts_10_AD_Sculpture_at_LA_County_Museum_of_Art.tif.jpg'],
     parentId: 'hinduism-denominations',
     name: 'Vaishnavism',
@@ -25022,6 +27176,10 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'hinduism-shaivism',
+    translations: [
+      { lang: 'Sanskrit', original: 'शिव', translit: 'śiva', meaning: 'auspicious, benign, kind' },
+      { lang: 'Sanskrit', original: 'शैव', translit: 'śaiva', meaning: 'relating to or devoted to Shiva' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Meenakshi_Temple%2C_Shaivism%2C_Madurai%2C_India.jpg/960px-Meenakshi_Temple%2C_Shaivism%2C_Madurai%2C_India.jpg'],
     parentId: 'hinduism-denominations',
     name: 'Shaivism',
@@ -25029,6 +27187,10 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'hinduism-shaktism',
+    translations: [
+      { lang: 'Sanskrit', original: 'शक्ति', translit: 'śakti', meaning: 'power, energy, ability (from śak, to be able)' },
+      { lang: 'Sanskrit', original: 'शाक्त', translit: 'śākta', meaning: 'relating to or devoted to Shakti' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Statues_of_Vaishnavi%2C_Varahi%2C_Indrani_and_Camunda%2C_National_Museum%2C_New_Delhi.jpg/960px-Statues_of_Vaishnavi%2C_Varahi%2C_Indrani_and_Camunda%2C_National_Museum%2C_New_Delhi.jpg'],
     parentId: 'hinduism-denominations',
     name: 'Shaktism',
@@ -25036,6 +27198,10 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'hinduism-smartism',
+    translations: [
+      { lang: 'Sanskrit', original: 'स्मृति', translit: 'smṛti', meaning: 'that which is remembered; remembered tradition (from smṛ, to remember)' },
+      { lang: 'Sanskrit', original: 'स्मार्त', translit: 'smārta', meaning: 'based on or following the smṛti texts' }
+    ],
     parentId: 'hinduism-denominations',
     name: 'Smartism',
     description: 'A liberal, non-sectarian tradition focusing on the worship of five major deities (Vishnu, Shiva, Ganesha, Surya, Devi) as equal manifestations of Brahman.'
@@ -25051,6 +27217,9 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'judaism-orthodox',
+    translations: [
+      { lang: 'Greek', original: 'ὀρθόδοξος', translit: 'orthodoxos', meaning: 'holding right opinion (orthos \'straight, right\' + doxa \'opinion, belief\')' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Koppel_reich.png/960px-Koppel_reich.png'],
     relatedIds: ['judaism-hasidic'],
     parentId: 'judaism-denominations',
@@ -25059,6 +27228,9 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'judaism-conservative',
+    translations: [
+      { lang: 'Hebrew', original: 'יהדות מסורתית', translit: 'Yahadut Masortit', meaning: 'traditional Judaism (Masorti); from māsōreṯ \'tradition, that which is handed down\'' }
+    ],
     parentId: 'judaism-denominations',
     name: 'Conservative Judaism',
     description: 'A moderate branch viewing Jewish law as binding but evolving dynamically with modern historical developments.'
@@ -25072,6 +27244,11 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'judaism-hasidic',
+    translations: [
+      { lang: 'Hebrew', original: 'חֶסֶד', translit: 'ḥeseḏ', meaning: 'loving-kindness, steadfast love' },
+      { lang: 'Hebrew', original: 'חָסִיד', translit: 'ḥāsîḏ', meaning: 'pious, devout one' },
+      { lang: 'Hebrew', original: 'חסידות', translit: 'Ḥăsīdūt', meaning: 'piety; the Hasidic movement' }
+    ],
     relatedIds: ['judaism-orthodox'],
     parentId: 'judaism-denominations',
     name: 'Hasidic Judaism',
@@ -25087,6 +27264,10 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'gnostic-sethian',
+    translations: [
+      { lang: 'Hebrew', original: 'שֵׁת', translit: 'Šēṯ', meaning: 'Seth; \'appointed, granted\' (Gen 4:25 links it to šîṯ, to set or place)' },
+      { lang: 'Greek', original: 'Σηθιανοί', translit: 'Sēthianoi', meaning: 'Sethians, those who trace their revelation to Seth' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Zhdan_Dementiyev_01_Seth_%281630%29.jpg/960px-Zhdan_Dementiyev_01_Seth_%281630%29.jpg'],
     parentId: 'gnosticism-denominations',
     name: 'Sethianism',
@@ -25094,12 +27275,19 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'gnostic-valentinian',
+    translations: [
+      { lang: 'Latin', original: 'Valentinus', translit: '', meaning: 'name derived from valens \'strong, healthy, vigorous\' (valēre, to be strong)' }
+    ],
     parentId: 'gnosticism-denominations',
     name: 'Valentinianism',
     description: 'A major Gnostic school founded by Valentinus, attempting to synthesize Gnostic cosmology with mainstream proto-orthodox Christianity.'
   },
   {
     id: 'gnostic-manichaean',
+    translations: [
+      { lang: 'Greek', original: 'Μανιχαῖος', translit: 'Manichaios', meaning: 'Mani, follower of Mani; probably from Syriac Mānī ḥayyā, \'the living Mani\'' },
+      { lang: 'Latin', original: 'Manichaeus', translit: '', meaning: 'a Manichaean; source of the English form' }
+    ],
     relatedIds: ['angra-mainyu'],
     parentId: 'gnosticism-denominations',
     name: 'Manichaeism',
@@ -25116,6 +27304,9 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'shinto-shrine',
+    translations: [
+      { lang: 'Japanese', original: '神社神道', translit: 'Jinja Shintō', meaning: 'shrine Shinto (jinja, kami shrine + Shintō, way of the gods)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Plum_trees_Kitano_Tenmangu.jpg/960px-Plum_trees_Kitano_Tenmangu.jpg'],
     parentId: 'shinto-denominations',
     name: 'Shrine Shinto (Jinja Shinto)',
@@ -25123,12 +27314,18 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'shinto-sect',
+    translations: [
+      { lang: 'Japanese', original: '教派神道', translit: 'Kyōha Shintō', meaning: 'sect Shinto (kyōha, sect, denomination + Shintō, way of the gods)' }
+    ],
     parentId: 'shinto-denominations',
     name: 'Sect Shinto (Kyoha Shinto)',
     description: 'The various independent Shinto groups and new religious movements recognized by the government in the 19th century.'
   },
   {
     id: 'shinto-state',
+    translations: [
+      { lang: 'Japanese', original: '国家神道', translit: 'Kokka Shintō', meaning: 'state Shinto (kokka, state, nation + Shintō, way of the gods)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Japanese_government_small-face-value_paper_money_50_Sen_%28Yasukuni_Shrine%29_-_front.jpg/960px-Japanese_government_small-face-value_paper_money_50_Sen_%28Yasukuni_Shrine%29_-_front.jpg'],
     relatedIds: ['kojiki'],
     parentId: 'shinto-denominations',
@@ -25146,6 +27343,9 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'taoism-quanzhen',
+    translations: [
+      { lang: 'Chinese', original: '全真', translit: 'Quánzhēn', meaning: 'complete perfection, complete reality (quán, whole + zhēn, true, perfected)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Changchun-Temple-Master-and-disciples-painting-0316.jpg/960px-Changchun-Temple-Master-and-disciples-painting-0316.jpg'],
     parentId: 'taoism-denominations',
     name: 'Quanzhen (Complete Perfection)',
@@ -25153,6 +27353,9 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'taoism-zhengyi',
+    translations: [
+      { lang: 'Chinese', original: '正一', translit: 'Zhèngyī', meaning: 'orthodox unity, correct one (zhèng, correct + yī, one)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Zhengyi_rite_for_the_Jade_Deity_at_the_Qinciyangdian_of_Shanghai.jpg/960px-Zhengyi_rite_for_the_Jade_Deity_at_the_Qinciyangdian_of_Shanghai.jpg'],
     parentId: 'taoism-denominations',
     name: 'Zhengyi (Orthodox Unity)',
@@ -25168,12 +27371,19 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'zoroastrian-parsis',
+    translations: [
+      { lang: 'Old Persian', original: '𐎱𐎠𐎼𐎿', translit: 'Pārsa', meaning: 'Persia, the province Fars; a Persian' },
+      { lang: 'Persian', original: 'پارسی', translit: 'Pārsī', meaning: 'Persian; one from Pars' }
+    ],
     parentId: 'zoroastrianism-denominations',
     name: 'Parsis',
     description: 'The ethnoreligious group of Zoroastrian heritage residing in India, descended from Persian refugees who fled Islamic conquest.'
   },
   {
     id: 'zoroastrian-iranis',
+    translations: [
+      { lang: 'Persian', original: 'ایرانی', translit: 'īrānī', meaning: 'Iranian; from Ērān, \'land of the Aryans\' (Avestan airya-, noble)' }
+    ],
     parentId: 'zoroastrianism-denominations',
     name: 'Iranis',
     description: 'The Zoroastrian community of Iran, distinct from the Parsis due to their continuous presence in their ancestral homeland.'
@@ -25182,6 +27392,9 @@ const chunk_new_religion: any[] = [
   // --- MYTHOLOGY ADDITIONS ---
   {
     id: 'jade-emperor',
+    translations: [
+      { lang: 'Chinese', original: '玉皇大帝', translit: 'Yùhuáng Dàdì', meaning: 'Jade Emperor Great Deity (玉 jade + 皇 emperor + 大帝 great god)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/%E7%8E%89%E7%9A%87%E5%A4%A7%E5%B8%9D%E7%95%AB%E5%83%8F.jpg/960px-%E7%8E%89%E7%9A%87%E5%A4%A7%E5%B8%9D%E7%95%AB%E5%83%8F.jpg'],
     relatedIds: ['tao-te-ching', 'heaven-tian-heavenly-court'],
     parentId: 'chinese-mythology',
@@ -25192,6 +27405,10 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'monkey-king',
+    translations: [
+      { lang: 'Chinese', original: '孫悟空', translit: 'Sūn Wùkōng', meaning: 'Sun (surname, punning on 猢猻 húsūn, monkey) + 悟空, \'awakened to emptiness\'' },
+      { lang: 'Chinese', original: '美猴王', translit: 'Měi Hóuwáng', meaning: 'Handsome Monkey King' }
+    ],
     relatedIds: ['hanuman'],
     parentId: 'chinese-mythology',
     name: 'The Monkey King (Sun Wukong)',
@@ -25201,6 +27418,10 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'change-goddess',
+    translations: [
+      { lang: 'Chinese', original: '姮娥', translit: 'Héng\'é', meaning: 'original name; 娥 é, \'beautiful young woman\'' },
+      { lang: 'Chinese', original: '嫦娥', translit: 'Cháng\'é', meaning: 'later form: 姮 héng replaced under Han taboo on Emperor Wen\'s name Liu Heng' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/The_Moon_Goddess_Chang_E_-_Unidentified_artist%2C_after_Tang_Yin.jpg/960px-The_Moon_Goddess_Chang_E_-_Unidentified_artist%2C_after_Tang_Yin.jpg'],
     relatedIds: ['elixir-of-life'],
     parentId: 'chinese-mythology',
@@ -25211,6 +27432,9 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'pangu-creator',
+    translations: [
+      { lang: 'Chinese', original: '盤古', translit: 'Pángǔ', meaning: '盤 pán, \'coiled; basin\' + 古 gǔ, \'ancient\': \'coiled antiquity\'' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Pangu.jpg/960px-Pangu.jpg'],
     parentId: 'chinese-mythology',
     name: 'Pangu (The Creator Giant)',
@@ -25220,6 +27444,10 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'fuxi-nuwa',
+    translations: [
+      { lang: 'Chinese', original: '伏羲', translit: 'Fúxī', meaning: 'name of uncertain sense; variant 庖犧 Páoxī read as \'kitchen sacrificer\'' },
+      { lang: 'Chinese', original: '女媧', translit: 'Nǚwā', meaning: '女 nǚ, \'woman\' + 媧 wā, a graph used only for her name' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Ma-Lin-Fuxi-and-turtle.jpg/960px-Ma-Lin-Fuxi-and-turtle.jpg'],
     relatedIds: ['i-ching'],
     parentId: 'chinese-mythology',
@@ -25230,6 +27458,9 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'yggdrasil-norse',
+    translations: [
+      { lang: 'Old Norse', original: 'Yggdrasill', translit: '', meaning: 'Ygg\'s horse, i.e. Odin\'s gallows (Yggr \'the terrible one\' + drasill \'horse\')' }
+    ],
     parentId: 'norse-pantheon',
     name: 'Yggdrasil (The World Tree)',
     description: 'The immense, sacred ash tree that connects the nine worlds of Norse cosmology. Serving as the central axis of the cosmos, alternative researchers compare Yggdrasil to global "World Tree" alignments, telluric current networks, and multi-dimensional portal structures.',
@@ -25238,6 +27469,10 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'ragnarok-norse',
+    translations: [
+      { lang: 'Old Norse', original: 'ragnarǫk', translit: '', meaning: 'fate of the gods (regin, ruling powers + rǫk, fate, doom)' },
+      { lang: 'Old Norse', original: 'ragnarøkkr', translit: '', meaning: 'twilight of the gods (Snorri\'s later reinterpretation with røkkr, twilight)' }
+    ],
     relatedIds: ['heaven-folkvangr'],
     parentId: 'norse-pantheon',
     name: 'Ragnarok (Doom of the Gods)',
@@ -25247,6 +27482,10 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'myth-thunderbird',
+    translations: [
+      { lang: 'Ojibwe', original: 'animikii', translit: '', meaning: 'thunderer; thunder being' },
+      { lang: 'Lakota', original: 'Wakíŋyaŋ', translit: '', meaning: 'thunder beings (wakȟáŋ, sacred, holy + kiŋyáŋ, to fly)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Thunderbird_on_Totem_Pole.jpg/960px-Thunderbird_on_Totem_Pole.jpg'],
     parentId: 'anishinaabe-ojibwe-lore',
     name: 'Thunderbird',
@@ -25257,6 +27496,9 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'navajo-skinwalker',
+    translations: [
+      { lang: 'Navajo', original: 'yee naaldlooshii', translit: '', meaning: '\'by means of it, it goes on all fours\': a witch travelling in animal form' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Skinwalker_Ranch_%2810393732103%29.jpg/960px-Skinwalker_Ranch_%2810393732103%29.jpg'],
     parentId: 'navajo-hopi-lore',
     name: 'Skinwalker (Yee Naaldlooshii)',
@@ -25267,6 +27509,9 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'hopi-kachina',
+    translations: [
+      { lang: 'Hopi', original: 'katsina', translit: '', meaning: 'spirit being, ancestral and rain spirit; also its masked impersonator (pl. katsinam)' }
+    ],
     parentId: 'navajo-hopi-lore',
     name: 'Kachina Spirits',
     description: 'Deified spirits or cosmological messengers in Pueblo and Hopi mythology, representing natural forces, ancestors, or celestial beings. Hopi rituals utilize carved dolls and masked dancers to invite their guidance and blessing.',
@@ -25276,6 +27521,9 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'blue-star-kachina',
+    translations: [
+      { lang: 'Hopi', original: 'Sakwasohu', translit: '', meaning: 'blue-green (sakwa) star (soohu)' }
+    ],
     parentId: 'navajo-hopi-lore',
     name: 'Blue Star Kachina (Saquasohuh)',
     description: 'A sacred prophecy of the Hopi people, symbolizing the transition between world ages (the transition from the Fourth World to the Fifth). The prophecy states that the arrival of a blue star spirit will signal the purification of the earth, often compared by alternative researchers to astronomical events, comets, or celestial arrival events.',
@@ -25285,6 +27533,10 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'algonquian-wendigo',
+    translations: [
+      { lang: 'Ojibwe', original: 'wiindigoo', translit: '', meaning: 'cannibal giant; winter spirit of greed (Proto-Algonquian *wi·nteko·wa)' },
+      { lang: 'Cree', original: 'ᐃᐧᐦᑎᑯᐤ', translit: 'wīhtikōw', meaning: 'cannibal; greedy person; man-eating giant' }
+    ],
     parentId: 'algonquian-iroquois-lore',
     name: 'The Wendigo',
     description: 'A malevolent, cannibalistic giant spirit of Algonquian folklore, associated with winter, cold, starvation, and greed. Legend holds that humans who engage in cannibalism or exhibit extreme selfishness can be possessed or transformed into a Wendigo.',
@@ -25302,6 +27554,9 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'white-buffalo-calf-woman',
+    translations: [
+      { lang: 'Lakota', original: 'Ptesáŋwiŋ', translit: '', meaning: 'White Buffalo Woman (pte \'buffalo cow\' + sáŋ \'white, pale\' + wíŋ \'woman\')' }
+    ],
     parentId: 'sioux-plains-lore',
     name: 'White Buffalo Calf Woman (Ptesanwi)',
     description: 'A primary sacred figure of the Lakota/Sioux religion. She brought the Seven Sacred Rites and the Chanunpa (sacred ceremonial pipe) to the Lakota, instructing them in their sacred relation to Wakan Tanka (the Great Spirit) and all living things before transforming into a white buffalo calf.',
@@ -25310,6 +27565,9 @@ const chunk_new_religion: any[] = [
   },
   {
     id: 'lakota-iktomi',
+    translations: [
+      { lang: 'Lakota', original: 'Iktómi', translit: '', meaning: 'spider; the spider-trickster' }
+    ],
     parentId: 'sioux-plains-lore',
     name: 'Iktomi',
     description: 'The spider-trickster spirit in Lakota mythology, representing both profound wisdom and foolishness. Iktomi acts as a teacher of moral lessons, warning against greed, pride, and deceit through his own comical errors.',
@@ -25331,6 +27589,9 @@ const chunk_new_additions: any[] = [
   // --- GNOSTIC ADDITIONS ---
   {
     id: 'pleroma',
+    translations: [
+      { lang: 'Greek', original: 'πλήρωμα', translit: 'plērōma', meaning: 'fullness, that which fills or completes (from plēroō, to fill)' }
+    ],
     parentId: 'gnosticism',
     name: 'Pleroma',
     description: "The divine totality or 'fullness' of light in Gnostic cosmology, representing the supreme spiritual realm inhabited by the Aeons, entirely separate from the flawed material universe.",
@@ -25339,6 +27600,10 @@ const chunk_new_additions: any[] = [
   },
   {
     id: 'sophia-gnostic',
+    translations: [
+      { lang: 'Greek', original: 'σοφία', translit: 'sophia', meaning: 'wisdom, skill (from sophos, wise, skilled)' },
+      { lang: 'Hebrew', original: 'חָכְמָה', translit: 'ḥoḵmâ', meaning: 'wisdom, personified as a woman in Proverbs 8; the figure behind Gnostic Sophia' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Hagia_Sophia_%28228968325%29.jpeg/960px-Hagia_Sophia_%28228968325%29.jpeg'],
     parentId: 'gnosticism',
     name: 'Sophia (Gnostic Divine Feminine)',
@@ -25348,6 +27613,10 @@ const chunk_new_additions: any[] = [
   },
   {
     id: 'yaldabaoth',
+    translations: [
+      { lang: 'Greek', original: 'Ἰαλδαβαώθ', translit: 'Ialdabaōth', meaning: 'disputed; often Aramaic yaldā bāhûṯ, \'child of chaos\', or \'begetter of Sabaoth\'' },
+      { lang: 'Coptic', original: 'ⲓⲁⲗⲧⲁⲃⲁⲱⲑ', translit: 'Ialtabaōth', meaning: 'spelling in the Nag Hammadi Apocryphon of John' }
+    ],
     parentId: 'gnosticism',
     name: 'Yaldabaoth',
     description: "The lion-faced, serpent-bodied demiurge or false creator deity of Gnostic belief systems, born from Sophia's fall, who rules the material realm in ignorance of the supreme spiritual God.",
@@ -25356,6 +27625,9 @@ const chunk_new_additions: any[] = [
   },
   {
     id: 'demiurge',
+    translations: [
+      { lang: 'Greek', original: 'δημιουργός', translit: 'dēmiourgos', meaning: 'craftsman, public worker (dēmos, people + ergon, work); Plato\'s world-maker in the Timaeus' }
+    ],
     parentId: 'gnosticism',
     name: 'Demiurge',
     description: "In Gnosticism, the subordinate, flawed, or malevolent creator deity who fashioned the material world, holding human souls prisoner in matter. He is typically identified in Gnostic texts as Yaldabaoth, Saklas, or Samael.",
@@ -25366,6 +27638,9 @@ const chunk_new_additions: any[] = [
   // --- OCCULT & ESOTERIC ADDITIONS ---
   {
     id: 'the-great-work',
+    translations: [
+      { lang: 'Latin', original: 'magnum opus', translit: '', meaning: 'great work; the alchemists\' name for the completion of the Philosopher\'s Stone' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/HermesTrismegistusCaucHighRes.jpg/960px-HermesTrismegistusCaucHighRes.jpg'],
     parentId: 'esoteric-traditions',
     name: 'The Great Work (Magnum Opus)',
@@ -25374,6 +27649,9 @@ const chunk_new_additions: any[] = [
   },
   {
     id: 'left-hand-path',
+    translations: [
+      { lang: 'Sanskrit', original: 'वामाचार', translit: 'vāmācāra', meaning: 'left-hand conduct (vāma, left + ācāra, practice); the Tantric source of the term' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Baphomet_by_%C3%89liphas_L%C3%A9vi.jpg/960px-Baphomet_by_%C3%89liphas_L%C3%A9vi.jpg'],
     parentId: 'esoteric-traditions',
     name: 'Left-Hand Path',
@@ -25382,6 +27660,10 @@ const chunk_new_additions: any[] = [
   },
   {
     id: 'antinomianism-esoteric',
+    translations: [
+      { lang: 'Greek', original: 'ἀντί', translit: 'antí', meaning: 'against, opposite' },
+      { lang: 'Greek', original: 'νόμος', translit: 'nómos', meaning: 'law, custom (from némō, to distribute, apportion)' }
+    ],
     parentId: 'esoteric-traditions',
     name: 'Antinomianism',
     description: "The theological and esoteric concept that spiritual liberation involves transcending, or intentionally transgressing, conventional moral laws and social taboos.",
@@ -25400,6 +27682,10 @@ const chunk_new_additions: any[] = [
   },
   {
     id: 'scientology',
+    translations: [
+      { lang: 'Latin', original: 'scientia', translit: '', meaning: 'knowledge (from sciō, to know)' },
+      { lang: 'Greek', original: 'λόγος', translit: 'lógos', meaning: 'word, account, study (-logy); \'knowing about knowing\', Hubbard\'s gloss of 1952' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Scientology_Logo.svg/960px-Scientology_Logo.svg.png'],
     parentId: 'esoteric-traditions',
     secondaryParentIds: ['biblical-apocryphal'],
@@ -25467,6 +27753,10 @@ const chunk_new_additions: any[] = [
   },
   {
     id: 'robin-hood-char',
+    translations: [
+      { lang: 'Old French', original: 'Robin', translit: '', meaning: 'diminutive of Robert (Germanic hrōd \'fame\' + berht \'bright\')' },
+      { lang: 'Old English', original: 'hōd', translit: '', meaning: 'hood, head-covering' }
+    ],
     parentId: 'robin-hood-legends',
     name: 'Robin Hood',
     description: "The legendary heroic outlaw of English folklore, depicted as a highly skilled archer and swordsman who 'steals from the rich and gives to the poor.'",
@@ -25476,6 +27766,10 @@ const chunk_new_additions: any[] = [
   },
   {
     id: 'maid-marian-char',
+    translations: [
+      { lang: 'Old French', original: 'Marion', translit: '', meaning: 'diminutive of Marie (Mary)' },
+      { lang: 'Hebrew', original: 'מִרְיָם', translit: 'Miryām', meaning: 'Miriam; meaning uncertain, perhaps Egyptian mry \'beloved\'' }
+    ],
     parentId: 'robin-hood-legends',
     name: 'Maid Marian',
     description: "Robin Hood's love interest and companion, who evolved from a figure in May Day games into a strong, independent noblewoman who aids the outlaws.",
@@ -25494,6 +27788,9 @@ const chunk_new_additions: any[] = [
   },
   {
     id: 'sherwood-forest-lore',
+    translations: [
+      { lang: 'Old English', original: 'scīr-wudu (Sciryuda, 958 AD)', translit: '', meaning: 'shire wood: the woodland belonging to the shire (scīr \'shire\' + wudu \'wood\')' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Sherwood_Forest%2C_May%2C_2017-5.jpg/960px-Sherwood_Forest%2C_May%2C_2017-5.jpg'],
     parentId: 'robin-hood-legends',
     name: 'Sherwood Forest',
@@ -25518,6 +27815,10 @@ const chunk_new_additions: any[] = [
   },
   {
     id: 'king-arthur-char',
+    translations: [
+      { lang: 'Welsh', original: 'Arthur', translit: '', meaning: 'uncertain; from Latin Artorius or Brittonic *arto-rīg-, \'bear-king\' (arth, bear)' },
+      { lang: 'Latin', original: 'Artorius', translit: '', meaning: 'Roman family name, the most favoured source of the name' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Arth_tapestry2.jpg/960px-Arth_tapestry2.jpg'],
     parentId: 'arthurian-legend',
     name: 'King Arthur',
@@ -25528,6 +27829,11 @@ const chunk_new_additions: any[] = [
   },
   {
     id: 'merlin-wizard-char',
+    translations: [
+      { lang: 'Latin', original: 'Moridunum', translit: '', meaning: 'sea-fort (Brittonic *mori-, sea + *dūnon, fort), Roman Carmarthen' },
+      { lang: 'Welsh', original: 'Myrddin', translit: '', meaning: 'back-formed from Caerfyrddin (Carmarthen), reread as \'fort of Myrddin\'' },
+      { lang: 'Latin', original: 'Merlinus', translit: '', meaning: 'Geoffrey of Monmouth\'s Latinisation, avoiding French merde' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Arthur-Pyle_The_Enchanter_Merlin.JPG/960px-Arthur-Pyle_The_Enchanter_Merlin.JPG'],
     parentId: 'arthurian-legend',
     name: 'Merlin the Wizard',
@@ -25538,6 +27844,11 @@ const chunk_new_additions: any[] = [
   },
   {
     id: 'excalibur-lore',
+    translations: [
+      { lang: 'Welsh', original: 'Caledfwlch', translit: '', meaning: 'hard breach, hard cleft (caled, hard + bwlch, gap, notch)' },
+      { lang: 'Latin', original: 'Caliburnus', translit: '', meaning: 'Geoffrey of Monmouth\'s form, later folk-linked to chalybs, steel' },
+      { lang: 'Old French', original: 'Escalibor', translit: '', meaning: 'romance form of the sword\'s name, source of \'Excalibur\'' }
+    ],
     parentId: 'arthurian-legend',
     name: 'Excalibur & The Lady of the Lake',
     description: "The magical sword of sovereignty given to Arthur by the mystical Lady of the Lake, possessing healing scabbard properties and returned to the waters upon his death.",
@@ -25547,6 +27858,10 @@ const chunk_new_additions: any[] = [
   },
   {
     id: 'round-table-knights',
+    translations: [
+      { lang: 'Latin', original: 'gradalis', translit: '', meaning: 'medieval word for a broad dish or platter, source of \'grail\'' },
+      { lang: 'Old French', original: 'graal', translit: '', meaning: 'wide dish, bowl (the Holy Grail, Saint Graal)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Holy_Grail_Tapestry_-The_Arming_and_Departure_of_the_Kniights.jpg/960px-Holy_Grail_Tapestry_-The_Arming_and_Departure_of_the_Kniights.jpg'],
     parentId: 'arthurian-legend',
     name: 'Knights of the Round Table & The Holy Grail',
@@ -25557,6 +27872,10 @@ const chunk_new_additions: any[] = [
   },
   {
     id: 'tomb-king-arthur',
+    translations: [
+      { lang: 'Welsh', original: 'Ynys Afallon', translit: '', meaning: 'isle of apples (afal, apple); Avalon, identified with Glastonbury' },
+      { lang: 'Latin', original: 'Insula Avallonis', translit: '', meaning: 'Geoffrey of Monmouth\'s Avalon; the 1191 Glastonbury cross read \'insula Avalonia\'' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Alleged_Tomb_of_King_Arthur%2C_Glastonbury_-_geograph.org.uk_-_6885488.jpg/960px-Alleged_Tomb_of_King_Arthur%2C_Glastonbury_-_geograph.org.uk_-_6885488.jpg'],
     parentId: 'arthurian-legend',
     name: 'Tomb of King Arthur (Glastonbury)',
@@ -25568,6 +27887,10 @@ const chunk_new_additions: any[] = [
     isApocryphal: true
   }, {
     id: 'vatican-central',
+    translations: [
+      { lang: 'Latin', original: 'Mōns Vāticānus', translit: '', meaning: 'the Vatican hill; anciently linked to vāticinārī, to prophesy' },
+      { lang: 'Latin', original: 'vātēs', translit: '', meaning: 'seer, soothsayer, prophet' }
+    ],
     parentId: 'catholicism',
     name: 'The Vatican',
     description: "The administrative and spiritual center of the Roman Catholic Church and the world's smallest independent sovereign state, governed by the Pope. In alternative history, it is scrutinized for its immense historical power, suppression of apocryphal texts, and deep connection to global aristocratic lineages (the Black Nobility).",
@@ -25577,6 +27900,10 @@ const chunk_new_additions: any[] = [
     sources: ['Catechism of the Catholic Church', 'Holy See Diplomatic Records']
   }, {
     id: 'vatican-archive',
+    translations: [
+      { lang: 'Greek', original: 'ἀρχεῖον', translit: 'archeion', meaning: 'public records office, magistrates\' house (from archē, rule)' },
+      { lang: 'Latin', original: 'archivum', translit: '', meaning: 'repository of public records' }
+    ],
     parentId: 'vatican-central',
     name: 'Vatican Apostolic Archive',
     description: "The central depository for all state papers, papal correspondence, account books, and administrative records of the Holy See, dating back to the 8th century. Formerly known as the Vatican Secret Archive, it is a frequent focus of alternative history theories claiming it houses suppressed gospels, ancient records of Nephilim giants, and evidence of extraterrestrial contact.",
@@ -25586,6 +27913,10 @@ const chunk_new_additions: any[] = [
     sources: ['Holy See Archival Catalogs', 'The Secret Archives of the Vatican (Maria Luisa Ambrosini)']
   }, {
     id: 'vatican-observatory',
+    translations: [
+      { lang: 'Latin', original: 'specula', translit: '', meaning: 'watchtower, lookout (from specere, to look); Italian specola, observatory' },
+      { lang: 'Italian', original: 'Specola Vaticana', translit: '', meaning: 'Vatican Observatory' }
+    ],
     parentId: 'vatican-central',
     name: 'The Vatican Observatory',
     description: "One of the oldest active astronomical research institutions in the world, founded in 1582 to reform the Julian calendar. Headquartered at Castel Gandolfo, Italy, and operating the Vatican Advanced Technology Telescope (VATT) at the Mount Graham International Observatory in Arizona, it represents the intersection of Catholic theology and astronomical science.",
@@ -25595,6 +27926,9 @@ const chunk_new_additions: any[] = [
     sources: ['Vatican Observatory Publications', 'Specola Vaticana Historical Records']
   }, {
     id: 'lucifer-telescope',
+    translations: [
+      { lang: 'Latin', original: 'lucifer', translit: '', meaning: 'light-bearer (lux, light + ferre, to bear); the morning star, Venus' }
+    ],
     parentId: 'vatican-observatory',
     name: 'The LUCIFER Telescope',
     description: "A high-tech near-infrared instrument (Large Binocular Telescope Near-infrared Utility with Camera and Integral Field Unit for Extragalactic Research) operated by German astronomical institutes at Mount Graham, Arizona. Because it is mounted on the Large Binocular Telescope adjacent to the Vatican Advanced Technology Telescope (VATT), its name and location have spawned widespread conspiracy theories about Vatican astronomers searching for extraterrestrial life or incoming cosmic anomalies.",
@@ -25613,6 +27947,9 @@ const chunk_new_additions: any[] = [
     sources: ['Behold a Pale Horse (Milton William Cooper)', 'Hour of the Time Radio Broadcasts']
   }, {
     id: 'behold-pale-horse',
+    translations: [
+      { lang: 'Greek', original: 'ἵππος χλωρός', translit: 'hippos chlōros', meaning: 'pale, greenish-yellow horse, mount of Death in Revelation 6:8' }
+    ],
     parentId: 'ufology-researchers',
     name: 'Behold a Pale Horse',
     description: "An influential underground conspiracy book published in 1991 by Milton William Cooper. The text synthesizes theories concerning the Illuminati, secret societies, UFO cover-ups, Bilderberg Group plots, and global government control, serving as a foundational text for modern alternative research and militia movements.",
@@ -25629,6 +27966,9 @@ const chunk_new_additions: any[] = [
     sources: ['Passport to Magonia: From Folklore to Flying Saucers (Jacques Vallée)']
   }, {
     id: 'tubal-cain',
+    translations: [
+      { lang: 'Hebrew', original: 'תּוּבַל קַיִן', translit: 'Tūḇal Qayin', meaning: 'Tubal the smith (qayin, smith, spear); Tubal cf. the Anatolian people Tabal' }
+    ],
     parentId: 'cainites-lineage',
     name: 'Tubal-Cain',
     description: "A biblical patriarch mentioned in Genesis 4:22 as the son of Lamech and Zillah, and a descendant of Cain. Described as the 'instructor of every artificer in brass and iron', he is esoterically revered in masonic lore and occult traditions as the primordial blacksmith, associated with metallurgy, ancient technology, and the preservation of antediluvian knowledge.",
@@ -25638,6 +27978,9 @@ const chunk_new_additions: any[] = [
     sources: ['Book of Genesis', 'Masonic Symbolism and Legend']
   }, {
     id: 'naamah-nemah',
+    translations: [
+      { lang: 'Hebrew', original: 'נַעֲמָה', translit: 'Naʿămāh', meaning: 'pleasant, lovely (from nāʿēm, to be pleasant)' }
+    ],
     parentId: 'cainites-lineage',
     name: 'Naamah (Nemah)',
     description: "A biblical figure mentioned in Genesis 4:22 as the daughter of Lamech and Zillah, and sister of Tubal-Cain. In rabbinic literature, Gnostic texts, and occult lore, Naamah is depicted as a singer of seductive songs, an initiator of metallurgy, and in some traditions, a demonic entity (mother of demons or consort of Samael) who survived the Great Flood, carrying the bloodline of Cain into the post-diluvian world.",
@@ -25647,6 +27990,9 @@ const chunk_new_additions: any[] = [
     sources: ['Genesis Rabbah', 'The Zohar', 'Zoharistic Kabbalah']
   }, {
     id: 'cainites-lineage',
+    translations: [
+      { lang: 'Hebrew', original: 'קַיִן', translit: 'Qayin', meaning: 'Cain; glossed \'acquired\' (qānāh, Gen 4:1); also \'smith, spear\'' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/3/3e/Giohargius_Tubalcain_%28cropped%29.JPG'],
     parentId: 'people-groups',
     name: 'The Cainites (Lineage of Cain)',
@@ -25656,6 +28002,10 @@ const chunk_new_additions: any[] = [
     sources: ['Book of Genesis', 'The Book of Enoch', 'Hebrew Apocrypha']
   }, {
     id: 'mahabharata-epic',
+    translations: [
+      { lang: 'Sanskrit', original: 'महाभारतम्', translit: 'Mahābhāratam', meaning: 'the great (tale) of the Bharatas (mahā, great + Bhārata, descendant of Bharata)' },
+      { lang: 'Sanskrit', original: 'भरत', translit: 'Bharata', meaning: 'to be maintained, cherished (from bhṛ, to bear, support), the eponymous ancestor' }
+    ],
     parentId: 'ancient-texts',
     secondaryParentIds: ['hinduism'],
     name: 'The Mahabharata',
@@ -25667,6 +28017,10 @@ const chunk_new_additions: any[] = [
     sources: ['Mahabharata (attributed to Vyasa)', 'Vedic Cosmography Studies']
   }, {
     id: 'ramayana-epic',
+    translations: [
+      { lang: 'Sanskrit', original: 'रामायणम्', translit: 'Rāmāyaṇam', meaning: 'Rama\'s journey, the course of Rama (Rāma + ayana, going, course)' },
+      { lang: 'Sanskrit', original: 'राम', translit: 'Rāma', meaning: 'pleasing, charming, dark-coloured (from ram, to delight)' }
+    ],
     parentId: 'ancient-texts',
     secondaryParentIds: ['hinduism'],
     name: 'The Ramayana',
@@ -25704,6 +28058,9 @@ const chunk_new_additions: any[] = [
     sources: ['HAARP Technical Reports (UAF)', 'Angels Don\'t Play This HAARP (Nick Begich)']
   }, {
     id: 'taboo-occult',
+    translations: [
+      { lang: 'Tongan', original: 'tapu', translit: '', meaning: 'forbidden, set apart, sacred; recorded by Cook in Tonga (1777) as \'taboo\'' }
+    ],
     parentId: 'alchemy-occult',
     name: 'Taboo',
     description: "A social or religious custom forbidding or restricting a particular practice, association, or discussion. In alternative history and comparative religion, taboos often surround sacred megaliths, occult words of power, or divine bloodlines, representing ancient boundaries between the profane and the initiate.",
@@ -25711,6 +28068,9 @@ const chunk_new_additions: any[] = [
     images: []
   }, {
     id: 'curse-occult',
+    translations: [
+      { lang: 'Old English', original: 'curs', translit: '', meaning: 'a malediction, imprecation; origin uncertain, with no sure Germanic cognates' }
+    ],
     parentId: 'alchemy-occult',
     name: 'Curse',
     description: "A solemn utterance intended to invoke a supernatural power to inflict harm or punishment on someone or something. From Roman curse tablets (defixiones) to the curses of Tutankhamun's tomb and the Hope Diamond, alternative history examines curses as remnants of ancient psychic technology, spiritual warnings, or energetic patterns.",
@@ -25719,6 +28079,10 @@ const chunk_new_additions: any[] = [
     sources: ['The Curse Tablets - Roman Baths Museum']
   }, {
     id: 'pharaohs-curse',
+    translations: [
+      { lang: 'Egyptian', original: 'pr-ꜥꜣ', translit: 'per-aa', meaning: 'great house, the palace; from the New Kingdom a title of the king himself' },
+      { lang: 'Hebrew', original: 'פַּרְעֹה', translit: 'Parʿōh', meaning: 'Pharaoh; borrowed from Egyptian pr-ꜥꜣ, \'great house\'' }
+    ],
     parentId: 'curse-occult',
     name: 'Curse of the Pharaohs',
     description: "The alleged curse that plagues anyone who enters or disturbs the tomb of an ancient Egyptian pharaoh, particularly Tutankhamun's tomb (KV62). Following the 1922 discovery by Howard Carter, several excavation team members died under mysterious or untimely circumstances, fueling global media sensation and theories on ancient bio-defenses or protective occult wards.",
@@ -25736,6 +28100,9 @@ const chunk_new_additions: any[] = [
     sources: ['Smithsonian Institution Records', 'Gemological Institute of America Historical Archives']
   }, {
     id: 'voodoo-religion',
+    translations: [
+      { lang: 'Fon', original: 'vodun', translit: '', meaning: 'spirit, deity, invisible power (also Ewe vodu)' }
+    ],
     parentId: 'biblical-apocryphal',
     name: 'Voodoo (Vodou)',
     description: "A syncretic religion developed by Afro-diasporic communities in Haiti, Louisiana, and Cuba, blending West African Vodun practices with Roman Catholicism and indigenous Taíno beliefs. Esoterically focused on direct communion and possession by the Loa spirits, it is often misunderstood in popular culture.",
@@ -25745,6 +28112,9 @@ const chunk_new_additions: any[] = [
     sources: ['The Drum and the Hoe: Life and Lore of the Haitian People (Harold Courlander)']
   }, {
     id: 'voodoo-doll-occult',
+    translations: [
+      { lang: 'Fon', original: 'vodun', translit: '', meaning: 'spirit, deity (source of Vodou/voodoo); the pin-stuck \'doll\' is a European poppet' }
+    ],
     parentId: 'alchemy-occult',
     name: 'Voodoo Doll',
     description: "A representation of a person, typically a doll made of cloth, wax, or straw, used in folk magic and witchcraft (historically known as a poppet). While popularized as a malicious Haitian Voodoo practice by Western pop culture, it actually originates from European folk magic and ancient Greek *kolossoi*, acting as a physical focus for psychic influence.",
@@ -25753,6 +28123,10 @@ const chunk_new_additions: any[] = [
     sources: ['Museum of Witchcraft and Magic (Boscastle, UK)', 'Greek and Roman Necromancy (Daniel Ogden)']
   }, {
     id: 'apkallu-sages',
+    translations: [
+      { lang: 'Sumerian', original: '𒉣𒈨 (NUN.ME)', translit: 'abgal', meaning: 'sage, wise man; priestly expert' },
+      { lang: 'Akkadian', original: 'apkallu', translit: '', meaning: 'sage, wise man, expert; title of the seven antediluvian sages' }
+    ],
     parentId: 'sumerian-kings',
     name: 'Apkallu',
     description: "In Mesopotamian mythology, the seven demi-god sages created by the god Enki to bring civilization, moral codes, agriculture, and writing to humanity. Depicted as half-fish or bird-headed hybrids, alternative theorists often link them to pre-flood ancient builders, Watchers, or interdimensional visitors.",
@@ -25762,6 +28136,10 @@ const chunk_new_additions: any[] = [
     sources: ['Mesopotamian Civilizations (The Epic of Gilgamesh)', 'Cuneiform Tablets of Eridu']
   }, {
     id: 'ollantaytambo-terraces',
+    translations: [
+      { lang: 'Quechua', original: 'tampu', translit: '', meaning: 'way-station, lodging on the Inca road' },
+      { lang: 'Quechua', original: 'Ullantaytampu', translit: '', meaning: 'Ollantay\'s tambo (Ollantay, the legendary Inca general)' }
+    ],
     parentId: 'megaliths-structures',
     name: 'Ollantaytambo Terraces',
     description: "An ancient Inca fortress and town situated at the northern end of the Sacred Valley. It is famous for its massive, perfectly fitted polygonal blocks of rose granite weighing up to 50 tons, which alternative theorists suggest are remains of a pre-Incan high-technology civilization that survived global cataclysms.",
@@ -25780,6 +28158,9 @@ const chunk_new_additions: any[] = [
     mapFeatureId: 'se-ti-cah-lovelock-cave'
   }, {
     id: 'viracocha-deity',
+    translations: [
+      { lang: 'Quechua', original: 'Wiraqucha', translit: '', meaning: 'traditionally \'sea-fat\' or \'sea foam\' (wira, fat + qucha, lake, sea); true sense debated' }
+    ],
     parentId: 'myths-legends-root',
     name: 'Viracocha',
     description: "The great creator deity in pre-Inca and Inca mythology, depicted as a staff-bearing god. He was said to have risen from Lake Titicaca to create the sun, moon, stars, and humanity at Tiwanaku. Alternative historians associate his legend of a bearded, light-skinned teacher with a lost global civilizing race.",
@@ -25796,6 +28177,9 @@ const chunk_new_additions: any[] = [
     images: []
   }, {
     id: 'karahan-tepe-site',
+    translations: [
+      { lang: 'Turkish', original: 'Karahan Tepe', translit: '', meaning: 'Karahan hill (kara, black + han, khan, lord + tepe, hill)' }
+    ],
     parentId: 'megaliths-structures',
     name: 'Karahan Tepe',
     description: "An ancient archaeological site in Sanliurfa, Turkey, dating to the Pre-Pottery Neolithic (c. 9400–8200 BC). Like its sister site Göbekli Tepe, it features T-shaped pillars, human head carvings, and sophisticated structural architecture, challenging traditional models of human social development and hunter-gatherer capacities.",
@@ -25814,6 +28198,9 @@ const chunk_new_additions: any[] = [
     sources: ['Gallo-Roman Museum of Tongeren Exhibit Catalogs', 'The Roman Dodecahedron: An Archaeological Mystery']
   }, {
     id: 'niflheim-realm',
+    translations: [
+      { lang: 'Old Norse', original: 'Niflheimr', translit: '', meaning: 'mist-home, world of mist (nifl-, mist, darkness + heimr, home, world)' }
+    ],
     parentId: 'norse-pantheon',
     name: 'Niflheim',
     description: "The primordial realm of ice, mist, and cold in Norse cosmology. It is one of the Nine Realms of Yggdrasil, situated beneath the world tree. Alternative mythology links it to ancient descriptions of a prehistoric Ice Age, cosmic cold, or polar shifts.",
@@ -25822,6 +28209,10 @@ const chunk_new_additions: any[] = [
     sources: ['The Prose Edda (Snorri Sturluson)', 'Norse Mythology Studies']
   }, {
     id: 'helheim-realm',
+    translations: [
+      { lang: 'Old Norse', original: 'Hel', translit: '', meaning: 'the concealed place; the underworld and its ruler (root *kel-, to cover, hide)' },
+      { lang: 'Old English', original: 'hell', translit: '', meaning: 'the underworld; cognate \'hidden place\'' }
+    ],
     parentId: 'norse-pantheon',
     name: 'Helheim',
     description: "The realm of the dead in Norse cosmology, ruled by the goddess Hela (Hel). It is the destination for those who died of old age or disease, rather than in battle. Alternative history interprets this realm as a symbolic representation of the subterranean underworld or planetary cataclysms.",
@@ -25830,6 +28221,9 @@ const chunk_new_additions: any[] = [
     sources: ['The Poetic Edda', 'Norse Underworld Mythology']
   }, {
     id: 'valhalla-hall',
+    translations: [
+      { lang: 'Old Norse', original: 'Valhǫll', translit: '', meaning: 'hall of the slain (valr \'the slain in battle\' + hǫll \'hall\')' }
+    ],
     parentId: 'norse-pantheon',
     name: 'Valhalla',
     description: "Odin's grand hall in Asgard, where fallen warriors (Einherjar) who died heroically in battle are led by Valkyries to prepare for the final conflict of Ragnarok. Esoterically, it represents the reward of the heroic path and ancient stellar initiation rites.",
@@ -26391,6 +28785,11 @@ const chunk_nasa: any[] = [
 const chunk_saints: any[] = [
   {
     id: 'saints-root',
+    translations: [
+      { lang: 'Latin', original: 'sanctus', translit: '', meaning: 'holy, consecrated, set apart (past participle of sancire, to make sacred)' },
+      { lang: 'Greek', original: 'ἅγιος', translit: 'hagios', meaning: 'holy, set apart for God; the New Testament word for \'saint\'' },
+      { lang: 'Latin', original: 'miraculum', translit: '', meaning: 'object of wonder (from mirari, to marvel at)' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/St-thomas-aquinasFXD.jpg/1280px-St-thomas-aquinasFXD.jpg'],
     parentId: 'christianity',
     name: 'Saints & Miracles',
@@ -26407,6 +28806,9 @@ const chunk_saints: any[] = [
   },
   {
     id: 'saint-francis-assisi',
+    translations: [
+      { lang: 'Latin', original: 'Franciscus', translit: '', meaning: 'Frenchman, \'the little Frank\' (from Francus); a nickname, he was baptised Giovanni' }
+    ],
     parentId: 'saints-stories',
     name: 'Saint Francis of Assisi',
     description: `Italian Catholic friar and mystic who founded the Franciscans. Celebrated for his radical poverty and deep connection to nature, he is historically significant as the first recorded person to receive the stigmata (mystical crucifixion wounds) in 1224.`,
@@ -26574,6 +28976,10 @@ const chunk_saints: any[] = [
 const chunk_historic_extensions: any[] = [
   {
     id: 'chi-rho',
+    translations: [
+      { lang: 'Greek', original: 'Χριστός', translit: 'Christos', meaning: 'anointed one (from chriō, to anoint); the monogram is its first two letters, chi and rho' },
+      { lang: 'Hebrew', original: 'מָשִׁיחַ', translit: 'māšîaḥ', meaning: 'anointed one, Messiah; the title Christos translates' }
+    ],
     relatedIds: ['rel-figure-constantine'],
     parentId: 'christianity',
     name: 'Chi Rho',
@@ -26602,6 +29008,9 @@ const chunk_historic_extensions: any[] = [
   },
   {
     id: 'lam-entity',
+    translations: [
+      { lang: 'Tibetan', original: 'ལམ', translit: 'lam', meaning: 'road, path, way; Crowley glossed the name \'Lam is the Tibetan word for Way or Path\'' }
+    ],
     parentId: 'amalantrah-working',
     secondaryParentIds: ['thelema'],
     name: 'Lam (The Entity)',
@@ -26613,6 +29022,9 @@ const chunk_historic_extensions: any[] = [
   },
   {
     id: 'plutarch',
+    translations: [
+      { lang: 'Greek', original: 'Πλούταρχος', translit: 'Ploútarkhos', meaning: 'ruler of wealth (ploûtos, wealth + árkhō, to rule)' }
+    ],
     parentId: 'greek-mythology',
     name: 'Plutarch',
     description: `Greek philosopher, historian, biographer, and priest of Apollo at Delphi (c. 46 – 119 CE). His works, including the 'Parallel Lives' and various essays, are highly studied in alternative archaeology for recording strange historical anomalies, such as aerial shields at Aegospotami and discussions regarding the habitability of the Moon.`,
@@ -26626,6 +29038,9 @@ const chunk_historic_extensions: any[] = [
   },
   {
     id: 'vimanas',
+    translations: [
+      { lang: 'Sanskrit', original: 'विमान', translit: 'vimāna', meaning: 'measuring out, traversing; a palace or celestial chariot (vi, apart + mā, to measure)' }
+    ],
     relatedIds: ['ramayana-epic'],
     parentId: 'mahabharata-epic',
     secondaryParentIds: ['ramayana-epic', 'ufo-types'],
@@ -26654,6 +29069,10 @@ const chunk_historic_extensions: any[] = [
   },
   {
     id: 'freemasonry',
+    translations: [
+      { lang: 'Old French', original: 'maçon', translit: '', meaning: 'stonemason, builder (from Frankish via Late Latin macio)' },
+      { lang: 'Middle English', original: 'fre mason', translit: '', meaning: 'disputed: prob. a mason who worked freestone, or one free of local guild control' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Square_and_Compasses_no_G.svg/960px-Square_and_Compasses_no_G.svg.png'],
     parentId: 'alchemy-occult',
     secondaryParentIds: ['magical-orders'],
@@ -27270,6 +29689,9 @@ const chunk_geoglyphs: any[] = [
   },
   {
     id: 'paracas-geoglyphs',
+    translations: [
+      { lang: 'Quechua', original: 'para aqu', translit: '', meaning: 'traditionally \'sand rain\' (para, rain + aqu, sand), for the local sandstorms' }
+    ],
     relatedIds: ['anomaly-Megaliths---Dolmans---Petroglyphs---Geoglyphs-5'],
     parentId: 'geoglyphs-br',
     name: 'Paracas Geoglyphs',
@@ -27287,6 +29709,11 @@ const chunk_geoglyphs: any[] = [
 const chunk_user_additions_2: any[] = [
   {
     id: 'magick',
+    translations: [
+      { lang: 'Greek', original: 'μάγος', translit: 'mágos', meaning: 'Magian priest, sorcerer; from Old Persian maguš, a member of the Median priestly caste' },
+      { lang: 'Greek', original: 'μαγεία', translit: 'mageía', meaning: 'the lore of the Magi; sorcery, enchantment' },
+      { lang: 'Latin', original: 'magica (ars)', translit: '', meaning: 'the magic art; Crowley revived the archaic Early Modern spelling \'magick\'' }
+    ],
     parentId: 'esoteric-traditions',
     name: 'Magick',
     description: 'Occult term popularized by Aleister Crowley, spelled with a "k" to distinguish the performance of real magic from stage magic. It is defined as the science and art of causing change to occur in conformity with will, often utilizing ritual, ceremony, and symbol to interface with deeper dimensions of consciousness or reality.',
@@ -27294,6 +29721,9 @@ const chunk_user_additions_2: any[] = [
     sources: ['Magick in Theory and Practice (Aleister Crowley)', 'Book 4']
   }, {
     id: 'great-wall-of-china',
+    translations: [
+      { lang: 'Chinese', original: '萬里長城', translit: 'Wànlǐ Chángchéng', meaning: 'long wall of ten thousand li' }
+    ],
     parentId: 'megaliths-structures',
     name: 'Great Wall of China',
     description: 'A massive series of ancient fortifications and stone walls built across the historical northern borders of ancient Chinese empires, constructed primarily to protect against nomadic incursions. In alternative archaeology, esoteric geography, and grid alignment theories, the Great Wall is scrutinized as a titanic, earth-anchored energy conductor, built along major terrestrial ley lines to manipulate regional geomantic energies (Feng Shui) and control planetary etheric flows.',
@@ -27303,6 +29733,10 @@ const chunk_user_additions_2: any[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/The_Great_Wall_of_China_at_Jinshanling-edit.jpg/1280px-The_Great_Wall_of_China_at_Jinshanling-edit.jpg']
   }, {
     id: 'vedas',
+    translations: [
+      { lang: 'Proto-Indo-European', original: '*weyd-', translit: '', meaning: 'to see, to know' },
+      { lang: 'Sanskrit', original: 'वेद', translit: 'veda', meaning: 'knowledge, sacred lore (from vid, to know)' }
+    ],
     parentId: 'hinduism',
     secondaryParentIds: ['ancient-texts'],
     name: 'The Vedas',
@@ -27312,6 +29746,10 @@ const chunk_user_additions_2: any[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/1500-1200_BCE_Rigveda%2C_manuscript_page_sample_i%2C_Mandala_1%2C_Hymn_1_%28Sukta_1%29%2C_Adhyaya_1%2C_lines_1.1.1_to_1.1.9%2C_Sanskrit%2C_Devanagari.jpg/1280px-1500-1200_BCE_Rigveda%2C_manuscript_page_sample_i%2C_Mandala_1%2C_Hymn_1_%28Sukta_1%29%2C_Adhyaya_1%2C_lines_1.1.1_to_1.1.9%2C_Sanskrit%2C_Devanagari.jpg']
   }, {
     id: 'faravahar',
+    translations: [
+      { lang: 'Avestan', original: '𐬟𐬭𐬀𐬎𐬎𐬀𐬴𐬌', translit: 'frauuaṣ̌i', meaning: 'guardian spirit; debated, most often \'the chosen one\' (var-, to choose)' },
+      { lang: 'Persian', original: 'فروهر', translit: 'faravahar', meaning: 'the fravashi; the winged-disc symbol of Zoroastrianism' }
+    ],
     parentId: 'zoroastrianism',
     name: 'The Faravahar',
     description: 'One of the most prominent symbols of Zoroastrianism, representing the Fravashi (personal guardian spirit). It depicts a winged disc with a human figure, symbolizing the soul\'s progression, divine grace (Farr), and the union of good thoughts, good words, and good deeds.',
@@ -27320,6 +29758,10 @@ const chunk_user_additions_2: any[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Faravahar.svg/1280px-Faravahar.svg.png']
   }, {
     id: 'gathas',
+    translations: [
+      { lang: 'Avestan', original: '𐬔𐬁𐬚𐬁', translit: 'gāθā', meaning: 'hymn, song (root gā-, to sing)' },
+      { lang: 'Sanskrit', original: 'गाथा', translit: 'gāthā', meaning: 'song, verse (cognate)' }
+    ],
     parentId: 'zoroastrianism',
     secondaryParentIds: ['ancient-texts'],
     name: 'The Gathas',
@@ -27328,6 +29770,9 @@ const chunk_user_additions_2: any[] = [
     sources: ['The Gathas of Zarathustra', 'Yasna Liturgy']
   }, {
     id: 'avesta',
+    translations: [
+      { lang: 'Middle Persian', original: 'abestāg', translit: '', meaning: 'uncertain; variously explained as \'praise\' or \'injunction, foundation\'' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Videvdad_Sadah_%28Zoroastrian_religious_code%29%2C_opened_to_first_chapter%2C_unknown_copyist%2C_Yazd%2C_Iran%2C_1647_AD_-_British_Library%2C_London_-_DSC00550.jpg/960px-Videvdad_Sadah_%28Zoroastrian_religious_code%29%2C_opened_to_first_chapter%2C_unknown_copyist%2C_Yazd%2C_Iran%2C_1647_AD_-_British_Library%2C_London_-_DSC00550.jpg'],
     parentId: 'zoroastrianism',
     secondaryParentIds: ['ancient-texts'],
@@ -27337,6 +29782,10 @@ const chunk_user_additions_2: any[] = [
     sources: ['The Avesta: Sacred Books of the East']
   }, {
     id: 'zarathustra',
+    translations: [
+      { lang: 'Avestan', original: '𐬰𐬀𐬭𐬀𐬚𐬎𐬱𐬙𐬭𐬀', translit: 'Zaraθuštra', meaning: 'uncertain; -uštra is \'camel\', often \'he who owns old (or golden) camels\'' },
+      { lang: 'Greek', original: 'Ζωροάστρης', translit: 'Zōroastrēs', meaning: 'Hellenised form, folk-linked to astron, star' }
+    ],
     parentId: 'zoroastrianism',
     secondaryParentIds: ['philosophers-br'],
     name: 'Zarathustra (Zoroaster)',
@@ -27346,6 +29795,10 @@ const chunk_user_additions_2: any[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Yazd%2C_Templo_del_Fuego_%282000%29_02_%28cropped%29.jpg/1280px-Yazd%2C_Templo_del_Fuego_%282000%29_02_%28cropped%29.jpg']
   }, {
     id: 'gilgal-refaim',
+    translations: [
+      { lang: 'Hebrew', original: 'גלגל רפאים', translit: 'Gilgal Refaʾim', meaning: 'wheel of the Rephaim (biblical giants; in modern Hebrew, ghosts)' },
+      { lang: 'Arabic', original: 'رجم الهري', translit: 'Rujm al-Hīrī', meaning: 'stone heap of the wildcat' }
+    ],
     parentId: 'megaliths-structures',
     name: 'Gilgal Refaim (Wheel of Giants)',
     description: 'An ancient megalithic monument consisting of concentric stone rings in the Golan Heights, dating back to 3000–4000 BCE. Known in Hebrew as Gilgal Refaim (Wheel of Giants) and in Arabic as Rujm el-Hiri (Stone Heap of the Wild Cat), it is associated in biblical and alternative lore with the Rephaim, an ancient race of biblical giants mentioned in the Old Testament.',
@@ -27355,6 +29808,10 @@ const chunk_user_additions_2: any[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/127303_ghost_wheel_golan_heights_PikiWiki_Israel.jpg/1280px-127303_ghost_wheel_golan_heights_PikiWiki_Israel.jpg']
   }, {
     id: 'gematria',
+    translations: [
+      { lang: 'Greek', original: 'γεωμετρία', translit: 'geōmetría', meaning: 'land-measuring, geometry; the usual source (alt. grammateía, \'letter-lore\')' },
+      { lang: 'Hebrew', original: 'גִּימַטְרִיָּה', translit: 'gīmaṭriyyā', meaning: 'reckoning the numerical value of letters; attested in rabbinic literature' }
+    ],
     parentId: 'kabbalah',
     name: 'Gematria',
     description: 'An esoteric system of assigning numerical values to Hebrew letters, words, and phrases, permitting the discovery of hidden mystical connections between different terms of identical value. Widely utilized in Kabbalistic literature, hermeticism, and Western occultism to decode scriptural texts.',
@@ -27363,6 +29820,9 @@ const chunk_user_additions_2: any[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/8/8f/Cabalistic-Gematria.png']
   }, {
     id: 'akashic-records',
+    translations: [
+      { lang: 'Sanskrit', original: 'आकाश', translit: 'ākāśa', meaning: 'sky, open space, ether (the fifth element); from ā + kāś, to shine, be visible' }
+    ],
     parentId: 'theosophy',
     name: 'Akashic Records',
     description: 'In Theosophy and New Age philosophy, a compendium of all cosmic events, thoughts, words, emotions, and intent ever to have occurred in the past, present, or future, encoded in a non-physical plane of existence (Akasha). Esotericists claim the records can be accessed through altered states of consciousness, meditation, or remote viewing.',
@@ -27388,6 +29848,9 @@ const chunk_user_additions_2: any[] = [
     sources: ['The Temple of Set (Michael A. Aquino)', 'Black Magic']
   }, {
     id: 'enkidu',
+    translations: [
+      { lang: 'Sumerian', original: 'EN.KI.DU₁₀', translit: 'Enkidu', meaning: '\'lord of the good place\' (en, lord + ki, place + du₁₀, good); or \'Enki\'s creation\'' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Enkidu%2C_Gilgamesh%27s_friend._From_Ur%2C_Iraq%2C_2027-1763_BCE._Iraq_Museum.jpg/960px-Enkidu%2C_Gilgamesh%27s_friend._From_Ur%2C_Iraq%2C_2027-1763_BCE._Iraq_Museum.jpg'],
     parentId: 'mesopotamian-mythology',
     secondaryParentIds: ['sumerian-civilization'],
@@ -27407,6 +29870,10 @@ const chunk_user_additions_2: any[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Baphosimb.svg/1280px-Baphosimb.svg.png']
   },  {
     id: 'prima-materia',
+    translations: [
+      { lang: 'Greek', original: 'πρώτη ὕλη', translit: 'prṓtē hýlē', meaning: 'first matter (Aristotle); hýlē lit. \'wood, timber\', hence raw material' },
+      { lang: 'Latin', original: 'prima materia', translit: '', meaning: 'first matter; the scholastic rendering of Aristotle\'s prōtē hýlē' }
+    ],
     parentId: 'alchemy',
     name: 'Prima Materia',
     description: 'In alchemy, the formless, chaotic prime matter or base substance from which all material things are created, serving as the starting point for the Magnum Opus (Great Work). Alchemists sought to purify this chaotic base substance to extract the Philosopher\'s Stone, symbolic of spiritual purification and enlightenment.',
@@ -27435,6 +29902,10 @@ const chunk_user_additions_2: any[] = [
     sources: ['The Amalantrah Working Logs (Aleister Crowley)', 'Magick Without Tears']
   }, {
     id: 'enki',
+    translations: [
+      { lang: 'Sumerian', original: '𒀭𒂗𒆠', translit: 'Enki', meaning: 'lord of the earth (en, lord + ki, earth)' },
+      { lang: 'Akkadian', original: 'Ea', translit: '', meaning: 'Enki\'s Akkadian name; etymology uncertain, perhaps \'house of water\' (Sumerian e + a)' }
+    ],
     parentId: 'sumerian-civilization',
     secondaryParentIds: ['myths-legends-root'],
     name: 'Enki',
@@ -27444,6 +29915,11 @@ const chunk_user_additions_2: any[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/8/87/Enki%28Ea%29.jpg']
   }, {
     id: 'wormwood',
+    translations: [
+      { lang: 'Hebrew', original: 'לַעֲנָה', translit: 'laʿănâ', meaning: 'wormwood, bitterness (Jeremiah 9:15, Lamentations 3:19)' },
+      { lang: 'Greek', original: 'Ἄψινθος', translit: 'Apsinthos', meaning: 'wormwood, the bitter herb Artemisia absinthium; the star\'s name in Revelation 8:11' },
+      { lang: 'Old English', original: 'wermōd', translit: '', meaning: 'wormwood; origin obscure, later folk-etymologised as worm + wood' }
+    ],
     parentId: 'future-prophecy',
     name: 'Wormwood',
     description: 'A star or celestial body mentioned in the Book of Revelation (8:11) that falls from heaven to earth upon the blowing of the third trumpet, turning one-third of the waters bitter and causing many to die. In alternative circles, Wormwood is equated with the rogue planet Nibiru/Nemesis, cosmic impact hazards, or the Chernobyl disaster (as "Chernobyl" translates to "wormwood" or mugwort in Ukrainian).',
@@ -27471,6 +29947,10 @@ const chunk_user_additions_2: any[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Vallely.jpg/500px-Vallely.jpg']
   }, {
     id: 'thomas-aquinas',
+    translations: [
+      { lang: 'Aramaic', original: 'תְּאוֹמָא', translit: 'Tə\'ômā', meaning: 'twin (Greek Thōmas)' },
+      { lang: 'Latin', original: 'Aquinas', translit: '', meaning: 'of Aquino, the family\'s county in Lazio' }
+    ],
     parentId: 'saints-root',
     secondaryParentIds: ['philosophers-br'],
     name: 'Thomas Aquinas',
@@ -27488,6 +29968,11 @@ const chunk_user_additions_2: any[] = [
     sources: ['Famous History of Friar Bacon', 'Medieval Alchemical Folklore']
   }, {
     id: 'baal-deity',
+    translations: [
+      { lang: 'Ugaritic', original: '𐎁𐎓𐎍', translit: 'baʿlu', meaning: 'lord, master, owner; title of the storm-god Hadad' },
+      { lang: 'Phoenician', original: '𐤁𐤏𐤋', translit: 'bʿl', meaning: 'lord, master, owner' },
+      { lang: 'Hebrew', original: 'בַּעַל', translit: 'baʿal', meaning: 'lord, owner, husband; the Canaanite storm-god' }
+    ],
     parentId: 'myths-legends-root',
     name: 'Baal',
     description: 'An ancient Semitic title meaning "lord" or "owner," which became the name of the principal Canaanite storm, fertility, and agricultural deity (Baal Hadad). In the Old Testament, Baal is depicted as the chief rival of Yahweh, leading to theological struggles and depictions of human sacrifice. In demonology, Baal is transformed into Bael, a primary king of the underworld.',
@@ -27496,6 +29981,9 @@ const chunk_user_additions_2: any[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Baal_thunderbolt_Louvre_AO15775.jpg/1280px-Baal_thunderbolt_Louvre_AO15775.jpg']
   }, {
     id: 'sefer-yetzirah',
+    translations: [
+      { lang: 'Hebrew', original: 'סֵפֶר יְצִירָה', translit: 'Sēfer Yəṣīrāh', meaning: 'Book of Formation (yāṣar, to form, fashion as a potter); conventionally \'Book of Creation\'' }
+    ],
     parentId: 'kabbalah',
     secondaryParentIds: ['ancient-texts'],
     name: 'Sefer Yetzirah',
@@ -27505,6 +29993,9 @@ const chunk_user_additions_2: any[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/4/45/Yetzirah.png']
   }, {
     id: 'book-of-the-dead',
+    translations: [
+      { lang: 'Egyptian', original: 'rw nw prt m hrw', translit: 'ru nu peret em heru', meaning: 'spells of going forth by day, the Egyptian title of the funerary spells' }
+    ],
     parentId: 'ancient-texts',
     name: 'Book of the Dead',
     description: 'A modern term for ancient funerary texts designed to assist a deceased person\'s journey through the underworld (Duat) or afterlife. Most famously, the Egyptian Book of the Dead (Book of Coming Forth by Day) contains magic spells, amulets, and instructions for passing trials like the Weighing of the Heart. The Tibetan Book of the Dead (Bardo Thodol) guides the consciousness through the intermediate state (Bardo) between death and rebirth.',
@@ -27513,6 +30004,10 @@ const chunk_user_additions_2: any[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/6/63/El_pesado_del_coraz%C3%B3n_en_el_Papiro_de_Hunefer.jpg']
   }, {
     id: 'josephus',
+    translations: [
+      { lang: 'Hebrew', original: 'יוֹסֵף', translit: 'Yôsēf', meaning: 'may He add (from yāsaf, to add); born Yôsēf ben Mattityāhû' },
+      { lang: 'Latin', original: 'Flavius', translit: '', meaning: 'of the gens Flavia (flavus, yellow, golden); taken from his Flavian imperial patrons' }
+    ],
     parentId: 'philosophers-br',
     secondaryParentIds: ['ancient-texts'],
     name: 'Flavius Josephus',
@@ -27522,6 +30017,9 @@ const chunk_user_additions_2: any[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Joseph%2C_son_of_Gorian%2C_called_Flavius_Josephus_%28cropped%29.jpg/1280px-Joseph%2C_son_of_Gorian%2C_called_Flavius_Josephus_%28cropped%29.jpg']
   }, {
     id: 'talmud',
+    translations: [
+      { lang: 'Hebrew', original: 'תַּלְמוּד', translit: 'talmûḏ', meaning: 'instruction, learning, study (from lāmaḏ, to learn or teach)' }
+    ],
     parentId: 'judaism',
     secondaryParentIds: ['ancient-texts'],
     name: 'The Talmud',
@@ -27550,6 +30048,9 @@ const chunk_user_additions_2: any[] = [
     sources: ['The Invisible College (Jacques Vallée)', 'UFOs: Past, Present, and Future']
   }, {
     id: 'kiswah',
+    translations: [
+      { lang: 'Arabic', original: 'كِسْوَة', translit: 'kiswa', meaning: 'garment, clothing, covering (from kasā, to clothe)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/The_Kabah_in_the_Grand_Mosque_of_Makkah%2C_Saudi_Arabia_%2852501405646%29.jpg/960px-The_Kabah_in_the_Grand_Mosque_of_Makkah%2C_Saudi_Arabia_%2852501405646%29.jpg'],
     parentId: 'islam',
     name: 'The Kiswah',
@@ -27558,6 +30059,10 @@ const chunk_user_additions_2: any[] = [
     sources: ['Islamic Architectural History', 'Sufi Symbology']
   }, {
     id: 'tesseract',
+    translations: [
+      { lang: 'Greek', original: 'τέσσαρες', translit: 'téssares', meaning: 'four' },
+      { lang: 'Greek', original: 'ἀκτίς', translit: 'aktís', meaning: 'ray, beam; \'four rays\' from each vertex, coined by C. H. Hinton (1888)' }
+    ],
     parentId: 'astrology-cosmology',
     secondaryParentIds: ['esoteric-traditions'],
     name: 'Tesseract',
@@ -27567,6 +30072,9 @@ const chunk_user_additions_2: any[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/5/55/8-cell-simple.gif']
   }, {
     id: 'kabah',
+    translations: [
+      { lang: 'Arabic', original: 'الكعبة', translit: 'al-Kaʿba', meaning: 'the cube (kaʿb \'cube; knuckle, ankle-bone\')' }
+    ],
     parentId: 'islam',
     name: 'The Kaaba',
     description: 'A building at the center of Islam\'s most important mosque, Al-Masjid al-Haram, in Mecca, Saudi Arabia. It is the most sacred site in Islam, toward which Muslims around the world face during prayer. In esoteric, historical, and alternative archaeology, the Kaaba is examined as an ancient planetary energy node (ley line intersection), a symbolic black cube representing space-time limits, and the resting place of the Black Stone—purported to be a meteoric relic.',
@@ -27583,6 +30091,9 @@ const chunk_user_additions_2: any[] = [
     sources: ['Saturnian Occult Studies', 'Symbols of the Occult']
   }, {
     id: 'muslim-practitioner',
+    translations: [
+      { lang: 'Arabic', original: 'مُسْلِم', translit: 'muslim', meaning: 'one who submits (to God); participle of aslama, root s-l-m \'peace, wholeness\'' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Prayer_in_Cairo_1865.jpg/960px-Prayer_in_Cairo_1865.jpg'],
     parentId: 'islam',
     name: 'Muslim',
@@ -27591,6 +30102,11 @@ const chunk_user_additions_2: any[] = [
     sources: ['History of Islamic Philosophy', 'The Sufi Path of Love']
   }, {
     id: 'holy-spirit',
+    translations: [
+      { lang: 'Hebrew', original: 'רוּחַ הַקֹּדֶשׁ', translit: 'rûaḥ haqqōḏeš', meaning: 'spirit of holiness; rûaḥ means wind, breath, spirit' },
+      { lang: 'Greek', original: 'Πνεῦμα Ἅγιον', translit: 'Pneuma Hagion', meaning: 'Holy Spirit; pneuma means breath, wind, spirit (from pneō, to blow)' },
+      { lang: 'Latin', original: 'Spiritus Sanctus', translit: '', meaning: 'Holy Spirit; spiritus means breath (from spirare, to breathe)' }
+    ],
     parentId: 'christianity',
     name: 'Holy Spirit',
     description: 'In mainstream Christian theology, the third person of the Trinity, representing the active presence of God in the world. In Gnostic and esoteric traditions, the Holy Spirit is often identified with the feminine Aeon Sophia, or the active spiritual energy (Ruach HaKodesh in Hebrew, Shekhinah) that illuminates the human soul, leading to gnosis and divine union.',
@@ -27599,6 +30115,11 @@ const chunk_user_additions_2: any[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Rom%2C_Vatikan%2C_Basilika_St._Peter%2C_Die_Taube_des_Heiligen_Geistes_%28Cathedra_Petri%2C_Bernini%29.jpg/1280px-Rom%2C_Vatikan%2C_Basilika_St._Peter%2C_Die_Taube_des_Heiligen_Geistes_%28Cathedra_Petri%2C_Bernini%29.jpg']
   }, {
     id: 'soul-essence',
+    translations: [
+      { lang: 'Old English', original: 'sāwol', translit: '', meaning: 'soul, life, spirit; from Proto-Germanic *saiwalō, of uncertain further origin' },
+      { lang: 'Hebrew', original: 'נֶפֶשׁ', translit: 'nefeš', meaning: 'throat, breath, living being, self; the biblical \'soul\'' },
+      { lang: 'Greek', original: 'ψυχή', translit: 'psychḗ', meaning: 'breath, life, soul (from psýchō, to breathe, blow)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Schiavonetti_Soul_leaving_body_1808.jpg/960px-Schiavonetti_Soul_leaving_body_1808.jpg'],
     parentId: 'esoteric-traditions',
     name: 'The Soul',
@@ -27628,6 +30149,10 @@ const chunk_user_additions_2: any[] = [
     sources: ['Moonchild (Aleister Crowley)', 'The Babalon Working (Jack Parsons)']
   }, {
     id: 'babalon-working',
+    translations: [
+      { lang: 'Akkadian', original: 'KÁ.DINGIR.RA', translit: 'Bāb-ilim', meaning: 'gate of god, Babylon; Crowley respelled it \'Babalon\' so its gematria would total 156' },
+      { lang: 'Hebrew', original: 'בָּבֶל', translit: 'Bāḇel', meaning: 'Babylon; linked by folk etymology to bālal, \'to confuse\' (Gen 11:9)' }
+    ],
     parentId: 'thelema',
     name: 'Babalon Working',
     description: 'A series of sex magic rituals performed by rocket scientist Jack Parsons and Scientology founder L. Ron Hubbard in 1946. Inspired by Aleister Crowley\'s writings and the Book of Enoch, their goal was to manifest an incarnation of the divine feminine archetype Babalon on Earth, initiating a new aeon of individual liberty.',
@@ -28156,6 +30681,9 @@ const chunk_us_presidents: any[] = [
 const chunk_37_new_items: any[] = [
   {
     id: 'enochian-lore',
+    translations: [
+      { lang: 'Hebrew', original: 'חֲנוֹךְ', translit: 'Ḥănôḵ', meaning: 'dedicated, initiated (from ḥānak, to dedicate); Enoch, after whom Dee\'s angelic tongue is named' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/John_Dee_Ashmolean.jpg/1280px-John_Dee_Ashmolean.jpg'],
     parentId: 'alchemy-occult',
     name: 'Enochian Lore',
@@ -28165,6 +30693,9 @@ const chunk_37_new_items: any[] = [
   },
   {
     id: 'enochian-language',
+    translations: [
+      { lang: 'Hebrew', original: 'חֲנוֹךְ', translit: 'Ḥănôḵ', meaning: 'dedicated, initiated (from ḥānak, to dedicate); Enoch, after whom Dee\'s angelic tongue is named' }
+    ],
     secondaryParentIds: ['ancient-texts'],
     parentId: 'enochian-lore',
     name: 'Enochian Language',
@@ -28211,6 +30742,10 @@ const chunk_37_new_items: any[] = [
   },
   {
     id: 'solomon',
+    translations: [
+      { lang: 'Hebrew', original: 'שְׁלֹמֹה', translit: 'Šəlōmōh', meaning: 'peaceful; his peace (from šālôm, peace)' },
+      { lang: 'Arabic', original: 'سُلَيْمَان', translit: 'Sulaymān', meaning: 'Qur\'anic form of the name' }
+    ],
     parentId: 'biblical-figures',
     name: 'Solomon',
     description: 'King of Israel and builder of the First Temple in Jerusalem. Renowned for his wisdom, wealth, and power, he is also prominent in esoteric traditions (such as the Testament of Solomon and Kabbalah) as a master exorcist who commanded demons to build the temple using a magical signet ring.',
@@ -28222,6 +30757,9 @@ const chunk_37_new_items: any[] = [
   },
   {
     id: 'solomons-shamir',
+    translations: [
+      { lang: 'Hebrew', original: 'שָׁמִיר', translit: 'šāmîr', meaning: 'adamant, hardest stone (Jer 17:1, Ezek 3:9); also thorn, brier' }
+    ],
     parentId: 'solomon',
     name: "Solomon's Shamir",
     description: "A legendary substance, object, or tiny worm mentioned in the Talmud and Midrashim that King Solomon used to cut the massive stones of the First Temple without using iron tools (as iron, being a metal of war, was prohibited on the altar). Wrapped in wool and stored in a lead container filled with barley bran because of its destructive power, the Shamir is interpreted in alternative archaeology as a high-tech artifact, such as a sonic resonator, radioactive material, or a focused laser-like device.",
@@ -28232,6 +30770,10 @@ const chunk_37_new_items: any[] = [
   },
   {
     id: 'lesser-key-solomon',
+    translations: [
+      { lang: 'Latin', original: 'Clavicula Salomonis', translit: '', meaning: 'little key of Solomon (clavicula, dim. of clavis, key); hence \'Lesser Key\'' },
+      { lang: 'Hebrew', original: 'שְׁלֹמֹה', translit: 'Šəlōmōh', meaning: 'peaceful, his peace (from šālôm, peace)' }
+    ],
     parentId: 'esoteric-traditions',
     name: 'The Lesser Key of Solomon',
     description: 'An anonymous 17th-century grimoire of ceremonial magic, compiling demonological lore and magical pentacles. It describes the seventy-two demons allegedly bound and commanded by King Solomon, establishing a cornerstone of modern Goetic magic.',
@@ -28265,6 +30807,11 @@ const chunk_37_new_items: any[] = [
   },
   {
     id: 'aryan-race',
+    translations: [
+      { lang: 'Sanskrit', original: 'आर्य', translit: 'ārya', meaning: 'noble, honourable; self-designation of the Vedic people' },
+      { lang: 'Avestan', original: 'airiia', translit: '', meaning: 'Aryan, Iranian; self-designation of the ancient Iranians' },
+      { lang: 'Old Persian', original: 'ariya', translit: '', meaning: 'Aryan; Darius calls himself \'an Aryan, of Aryan lineage\'' }
+    ],
     parentId: 'people-groups',
     name: 'Aryan Race',
     description: 'A term historically referring to Indo-Iranian language speakers in antiquity, which was co-opted by 19th and 20th-century racial theorists and occult groups (such as the Thule Society) to describe a hypothetical, superior primordial race linked to lost continents like Hyperborea or Atlantis.',
@@ -28287,6 +30834,10 @@ const chunk_37_new_items: any[] = [
   },
   {
     id: 'wyvern',
+    translations: [
+      { lang: 'Latin', original: 'vīpera', translit: '', meaning: 'viper (vīvus, alive + parere, to bear: bearing live young)' },
+      { lang: 'Old French', original: 'wivre', translit: '', meaning: 'serpent, viper (also guivre); source of Middle English wyvere' }
+    ],
     parentId: 'mythical-creatures',
     secondaryParentIds: ['dragons-br'],
     name: 'Wyvern',
@@ -28299,6 +30850,10 @@ const chunk_37_new_items: any[] = [
   },
   {
     id: 'rachels-tomb',
+    translations: [
+      { lang: 'Hebrew', original: 'קֶבֶר רָחֵל', translit: 'Qeḇer Rāḥēl', meaning: 'tomb of Rachel (qeḇer, grave + Rāḥēl, ewe)' },
+      { lang: 'Arabic', original: 'قبة راحيل', translit: 'Qubbat Rāḥīl', meaning: 'dome of Rachel' }
+    ],
     parentId: 'biblical-figures',
     name: 'Rachel\'s Tomb',
     description: 'The traditional burial site of the biblical matriarch Rachel, wife of Jacob. Located near Bethlehem, it has been a sacred site of pilgrimage for Jews, Christians, and Muslims for millennia, symbolizing maternal protection and redemption.',
@@ -28310,6 +30865,11 @@ const chunk_37_new_items: any[] = [
   },
   {
     id: 'jesuits',
+    translations: [
+      { lang: 'Hebrew', original: 'יֵשׁוּעַ', translit: 'Yēšûaʿ', meaning: 'Yahweh is salvation (short form of Yəhôšûaʿ, Joshua); the name Jesus' },
+      { lang: 'Greek', original: 'Ἰησοῦς', translit: 'Iēsoûs', meaning: 'Jesus; Greek rendering of Aramaic/Hebrew Yēšûaʿ' },
+      { lang: 'Latin', original: 'Iesuita', translit: '', meaning: 'follower of Jesus; member of the Societas Iesu (Society of Jesus, founded 1540)' }
+    ],
     parentId: 'magical-orders',
     name: 'Jesuits',
     description: 'The Society of Jesus, a religious order of the Catholic Church founded in 1540 by Ignatius of Loyola. In political and occult conspiracy theories, the Jesuits are frequently cast as an omnipotent secret network operating behind major historical events and controlling global education and science.',
@@ -28321,6 +30881,9 @@ const chunk_37_new_items: any[] = [
   },
   {
     id: 'nazarites',
+    translations: [
+      { lang: 'Hebrew', original: 'נָזִיר', translit: 'nāzîr', meaning: 'consecrated, dedicated one (from nāzar, to separate, dedicate)' }
+    ],
     parentId: 'biblical-figures',
     name: 'Nazarites',
     description: 'Individuals in ancient Israel who took a sacred vow of consecration to God, undertaking to abstain from alcohol, avoid cutting their hair, and remain ritually pure. Famous historical Nazarites include Samson, Samuel, and John the Baptist.',
@@ -28332,6 +30895,11 @@ const chunk_37_new_items: any[] = [
   },
   {
     id: 'stylites',
+    translations: [
+      { lang: 'Greek', original: 'στῦλος', translit: 'stylos', meaning: 'pillar, column' },
+      { lang: 'Greek', original: 'στυλίτης', translit: 'stylitēs', meaning: 'pillar-dweller' },
+      { lang: 'Syriac', original: 'ܐܣܛܘܢܝܐ', translit: 'ʾesṭūnāyā', meaning: 'pillar-man, stylite (from ʾesṭūnā, pillar, itself from Greek stylos)' }
+    ],
     parentId: 'christianity',
     name: 'Stylites',
     description: 'Christian ascetics in the early Byzantine Empire who stood on platforms atop high pillars (stylos) to pray and fast, living there for years or decades in extreme self-denial to draw closer to the divine.',
@@ -28353,6 +30921,9 @@ const chunk_37_new_items: any[] = [
   },
   {
     id: 'cults',
+    translations: [
+      { lang: 'Latin', original: 'cultus', translit: '', meaning: 'care, cultivation, worship (from colere, to till, tend, honour)' }
+    ],
     parentId: 'magical-orders',
     name: 'Cults',
     description: 'Highly cohesive spiritual or philosophical groups defined by intense devotion to a charismatic leader and isolation from mainstream society. Historically scrutinized for psychological coercion, secret doctrines, and catastrophic terminations.',
@@ -28384,6 +30955,10 @@ const chunk_37_new_items: any[] = [
   },
   {
     id: 'chronovisor',
+    translations: [
+      { lang: 'Greek', original: 'χρόνος', translit: 'khronos', meaning: 'time' },
+      { lang: 'Latin', original: 'vīsor', translit: '', meaning: 'one who sees (from vidēre \'to see\'); modern coinage \'time-viewer\'' }
+    ],
     parentId: 'supernatural-anomalies',
     name: 'Chronovisor',
     description: 'A legendary time-viewer device allegedly constructed in the 1950s by an international team of scientists, including Father Pellegrino Ernetti. The device was rumored to detect electromagnetic residue left by past events, allowing users to view historical events like the crucifixion of Christ.',
@@ -28394,6 +30969,10 @@ const chunk_37_new_items: any[] = [
   },
   {
     id: 'aeon-of-horus',
+    translations: [
+      { lang: 'Greek', original: 'αἰών', translit: 'aiṓn', meaning: 'lifetime, age, eternity; in Gnosticism an emanation or world-age' },
+      { lang: 'Egyptian', original: 'ḥr', translit: 'Ḥōr / Heru', meaning: 'Horus, the falcon god; prob. \'the distant one\' or \'the one on high\'' }
+    ],
     parentId: 'esoteric-traditions',
     name: 'The Aeon of Horus',
     description: 'A central concept in Aleister Crowley\'s spiritual system, Thelema. The Aeon of Horus is defined as the current era of human spiritual development, characterized by self-realization, individual liberty ("Do what thou wilt"), and the divine child archetype, superseding the prior Aeons of Isis and Osiris.',
@@ -28415,6 +30994,9 @@ const chunk_37_new_items: any[] = [
   },
   {
     id: 'shuimu',
+    translations: [
+      { lang: 'Chinese', original: '水母娘娘', translit: 'Shuǐmǔ Niángniang', meaning: 'Water Mother Lady (水 water + 母 mother + 娘娘 goddess, lady)' }
+    ],
     parentId: 'chinese-mythology',
     name: 'Shuimu',
     description: 'Also known as Shuimu Niangniang (Water Mother Goddess), a Chinese deity of springs and rivers in Taoist and folk traditions. Associated with fertility, rain, and water purification, she is historically worshipped in temples near natural springs.',
@@ -28425,6 +31007,9 @@ const chunk_37_new_items: any[] = [
   },
   {
     id: 'shui-gui',
+    translations: [
+      { lang: 'Chinese', original: '水鬼', translit: 'shuǐguǐ', meaning: 'water ghost (水 shuǐ, water + 鬼 guǐ, ghost)' }
+    ],
     parentId: 'chinese-mythology',
     name: 'Shui Gui',
     description: 'Water ghosts in Chinese folklore, representing the spirits of drowned individuals who lurk in rivers, lakes, and pools. Legend says they attempt to drag swimmers underwater to steal their life force in order to achieve reincarnation.',
@@ -28435,6 +31020,9 @@ const chunk_37_new_items: any[] = [
   },
   {
     id: 'shui-hu',
+    translations: [
+      { lang: 'Chinese', original: '水虎', translit: 'shuǐhǔ', meaning: 'water tiger (水 shuǐ, water + 虎 hǔ, tiger)' }
+    ],
     parentId: 'chinese-mythology',
     name: 'Shui Hu',
     description: 'An amphibious water-dwelling creature in Chinese and Japanese (Kappa) folklore. Described as child-sized with webbed hands, a turtle-like shell, and a fluid-filled cavity on top of its head which holds its magical power.',
@@ -28455,6 +31043,9 @@ const chunk_37_new_items: any[] = [
   },
   {
     id: 'mjolnir',
+    translations: [
+      { lang: 'Old Norse', original: 'Mjǫllnir', translit: '', meaning: 'disputed: \'crusher, grinder\' (cf. mala, to grind) or \'lightning\' (cf. Russian molniya)' }
+    ],
     parentId: 'norse-pantheon',
     name: 'Mjölnir',
     description: 'The legendary hammer of Thor, the Norse god of thunder. Crafted by the dwarves Brokkr and Sindri, Mjölnir was capable of leveling mountains and would always return to Thor\'s hand, serving as a powerful symbol of protection and divine order.',
@@ -28465,6 +31056,11 @@ const chunk_37_new_items: any[] = [
   },
   {
     id: 'excalibur',
+    translations: [
+      { lang: 'Welsh', original: 'Caledfwlch', translit: '', meaning: 'hard breach, hard cleft (caled, hard + bwlch, gap, notch)' },
+      { lang: 'Latin', original: 'Caliburnus', translit: '', meaning: 'Geoffrey of Monmouth\'s form, later folk-linked to chalybs, steel' },
+      { lang: 'Old French', original: 'Escalibor', translit: '', meaning: 'romance form of the sword\'s name, source of \'Excalibur\'' }
+    ],
     parentId: 'arthurian-legend',
     name: 'Excalibur',
     description: 'The legendary sword of King Arthur, possessing magical properties and symbolizing sovereign authority over Britain. In Arthurian romance, it was given to Arthur by the Lady of the Lake and later returned to her upon his death.',
@@ -28476,6 +31072,9 @@ const chunk_37_new_items: any[] = [
   },
   {
     id: 'atenism',
+    translations: [
+      { lang: 'Egyptian', original: 'jtn', translit: 'Aten', meaning: 'the sun disk, worshipped as sole god under Akhenaten' }
+    ],
     parentId: 'biblical-apocryphal',
     name: 'Atenism',
     description: 'The ancient Egyptian religious movement founded by Pharaoh Akhenaten in the 14th century BCE, centered on the sole worship of the sun-disk deity Aten. It represents one of the earliest documented forms of monotheism, which alternative historians frequently link to the origins of Abrahamic religions.',
@@ -28487,6 +31086,10 @@ const chunk_37_new_items: any[] = [
   },
   {
     id: 'ark-of-the-covenant',
+    translations: [
+      { lang: 'Hebrew', original: 'אֲרוֹן', translit: 'ʾărôn', meaning: 'chest, box (also used of a coffin, Genesis 50:26)' },
+      { lang: 'Hebrew', original: 'בְּרִית', translit: 'bərîṯ', meaning: 'covenant, pact, binding agreement' }
+    ],
     parentId: 'biblical-discoveries',
     name: 'Ark of the Covenant',
     description: 'A sacred, gold-plated wooden chest described in the Book of Exodus as containing the stone tablets of the Ten Commandments. According to biblical tradition, it possessed immense power, leveling city walls and striking down those who touched it, and its current whereabouts remain one of history\'s greatest mysteries.',
@@ -28509,6 +31112,9 @@ const chunk_37_new_items: any[] = [
   },
   {
     id: 'doeg',
+    translations: [
+      { lang: 'Hebrew', original: 'דֹּאֵג', translit: 'Dōʾēḡ', meaning: 'anxious, fearful (dāʾaḡ, to be anxious)' }
+    ],
     parentId: 'biblical-figures',
     name: 'Doeg',
     description: 'Doeg the Edomite, an official under King Saul who is infamous in the biblical account for executing eighty-five priests at Saul\'s command in the city of Nob, after they aided David.',
@@ -28519,6 +31125,10 @@ const chunk_37_new_items: any[] = [
   },
   {
     id: 'atlantis',
+    translations: [
+      { lang: 'Greek', original: 'Ἀτλαντὶς νῆσος', translit: 'Atlantìs nêsos', meaning: 'island of Atlas' },
+      { lang: 'Greek', original: 'Ἄτλας', translit: 'Átlas', meaning: 'the Titan who bears the sky (traditionally from tlênai, to bear)' }
+    ],
     parentId: 'megaliths-structures',
     name: 'Atlantis (Richat Structure)',
     description: 'The legendary advanced island civilization first described by the Greek philosopher Plato. While traditionally searched for in the Atlantic Ocean, modern alternative theorists identify the concentric ringed geological formation of the Richat Structure in Mauritania as a prime candidate for the physical ruins of Atlantis.',
@@ -28592,6 +31202,10 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Gnostic Codices (Nag Hammadi Library)', 'Pistis Sophia']
   },  {
     id: 'tartaria-empire',
+    translations: [
+      { lang: 'Greek', original: 'Τάρταρος', translit: 'Tártaros', meaning: 'the underworld abyss; shaped the medieval name Tartary for the Tatar lands' },
+      { lang: 'Latin', original: 'Tartaria', translit: '', meaning: 'Tartary, land of the Tatars' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Map_of_Asia_in_1700_by_Guillaume_de_L%27Isle.jpg/960px-Map_of_Asia_in_1700_by_Guillaume_de_L%27Isle.jpg'],
     parentId: 'megaliths-structures',
     name: 'Tartaria & The Mud Flood',
@@ -28600,6 +31214,11 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Alternative Cartography Research', 'Esoteric Architectural History']
   },  {
     id: 'atlantis-lost',
+    translations: [
+      { lang: 'Greek', original: 'Ἀτλαντίς', translit: 'Atlantís', meaning: '(island) of Atlas; daughter of Atlas' },
+      { lang: 'Greek', original: 'Ἄτλας', translit: 'Átlas', meaning: 'the Titan who bears the sky (traditionally from tlênai, to bear)' },
+      { lang: 'Latin', original: 'lemures', translit: '', meaning: 'spirits of the dead; source of lemur, hence Sclater\'s Lemuria' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Hypothetical_sketch_of_the_monophylitic_origin_and_of_the_diffusion_of_the_12_varieties_of_men_from_Lemuria_over_the_earth_LCCN2014649358_%28cropped%29.jpg/960px-Hypothetical_sketch_of_the_monophylitic_origin_and_of_the_diffusion_of_the_12_varieties_of_men_from_Lemuria_over_the_earth_LCCN2014649358_%28cropped%29.jpg'],
     parentId: 'megaliths-structures',
     name: 'Atlantis & Lemuria',
@@ -28630,6 +31249,10 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['UNESCO World Heritage Sites']
   },  {
     id: 'aztec-civilization',
+    translations: [
+      { lang: 'Nahuatl', original: 'Aztēcah', translit: '', meaning: 'people from Aztlān, the legendary homeland (sing. aztēcatl)' },
+      { lang: 'Nahuatl', original: 'Aztlān', translit: '', meaning: 'uncertain; \'place of herons\' (āztatl) or \'place of whiteness\'' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/1/19/Templo_Mayor_50.jpg'],
     parentId: 'people-groups',
     name: 'Aztec Civilization',
@@ -28641,6 +31264,9 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Codex Florentino', 'Nahuatl Oral History']
   },  {
     id: 'archaeology-aztec-tenochtitlan',
+    translations: [
+      { lang: 'Nahuatl', original: 'Tenōchtitlan', translit: '', meaning: 'among the prickly pears of the rock (tetl, stone + nōchtli, prickly pear + -titlan, among)' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/1/19/Templo_Mayor_50.jpg'],
     relatedIds: ['huitzilopochtli'],
     parentId: 'aztec-civilization',
@@ -28651,6 +31277,9 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['INAH Mexico / Historical Archives']
   },  {
     id: 'hopi-tribe',
+    translations: [
+      { lang: 'Hopi', original: 'Hopi', translit: '', meaning: 'one who is well-behaved, peaceable, civilized; pl. Hopiit, \'the peaceful people\'' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/6/6d/A_distant_view_in_the_Hopi_pueblo_of_Oraibi_from_the_southwest%2C_Arizona%2C_ca.1898_%28CHS-4594%29.jpg'],
     parentId: 'people-groups',
     name: 'Hopi Tribe',
@@ -28692,6 +31321,11 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Cahokia Mounds State Historic Site']
   },  {
     id: 'egyptian-civilization',
+    translations: [
+      { lang: 'Egyptian', original: 'km.t', translit: 'Kemet', meaning: 'the black land, the fertile Nile valley (km, black)' },
+      { lang: 'Egyptian', original: 'ḥwt-kꜣ-ptḥ', translit: 'Hut-ka-Ptah', meaning: 'house of the ka of Ptah (temple at Memphis), source of Greek Aigyptos' },
+      { lang: 'Greek', original: 'Αἴγυπτος', translit: 'Aigyptos', meaning: 'Egypt; from Hut-ka-Ptah, the name of Memphis' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/2/27/CairoEgMuseumTaaMaskMostlyPhotographed.jpg'],
     parentId: 'people-groups',
     name: 'Ancient Egyptians',
@@ -28703,6 +31337,9 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Ancient Egyptian Records', 'Hermetic Literature']
   },  {
     id: 'israelites',
+    translations: [
+      { lang: 'Hebrew', original: 'יִשְׂרָאֵל', translit: 'Yiśrāʾēl', meaning: 'he strives with God / God strives (śārāh, to strive + ʾēl, God; Gen 32:28)' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/a/af/Siloam_Inscription_2.jpg'],
     parentId: 'people-groups',
     name: 'Kingdom of Israel',
@@ -28714,6 +31351,9 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Bible', 'Ancient Near East Chronology']
   },  {
     id: 'tribe-of-judah',
+    translations: [
+      { lang: 'Hebrew', original: 'יְהוּדָה', translit: 'Yəhûḏāh', meaning: 'praised, let him be praised (yādāh, to praise; Gen 29:35)' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/8/80/City_of_David_-_Pool_of_Siloam_IMG_5931.JPG'],
     parentId: 'people-groups',
     name: 'Tribe of Judah',
@@ -28725,6 +31365,11 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Bible', 'Jewish Historical Annals']
   },  {
     id: 'sumerian-civilization',
+    translations: [
+      { lang: 'Sumerian', original: '𒆠𒂗𒄀', translit: 'ki-en-gi(r)', meaning: 'the land of Sumer; traditionally \'land of the noble lords\', disputed' },
+      { lang: 'Sumerian', original: 'saĝ-gíg-ga', translit: '', meaning: 'the black-headed ones, the Sumerians\' name for themselves' },
+      { lang: 'Akkadian', original: 'Šumeru', translit: '', meaning: 'Akkadian name for southern Babylonia, source of \'Sumer\'' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/8/87/Enki%28Ea%29.jpg'],
     parentId: 'people-groups',
     name: 'Sumerian Civilization',
@@ -28745,6 +31390,9 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['UNESCO World Heritage Sites']
   },  {
     id: 'edomites',
+    translations: [
+      { lang: 'Hebrew', original: 'אֱדוֹם', translit: 'ʾĔḏôm', meaning: 'red (ʾāḏōm), from Esau\'s red stew and ruddy hair (Gen 25:25, 30)' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/2/2f/Treasury_petra_crop.jpeg'],
     parentId: 'people-groups',
     name: 'Edomites',
@@ -28756,6 +31404,10 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Bible', 'Levantine Archaeological Records']
   },  {
     id: 'archaeology-mount-seir-petra',
+    translations: [
+      { lang: 'Hebrew', original: 'שֵׂעִיר', translit: 'Śēʿîr', meaning: 'hairy, shaggy (Mount Seir, the Edomite highland)' },
+      { lang: 'Greek', original: 'Πέτρα', translit: 'Petra', meaning: 'rock (the Nabataean capital; Semitic name Raqmu)' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/2/2f/Treasury_petra_crop.jpeg'],
     relatedIds: ['prophecy-edom-obadiah'],
     parentId: 'edomites',
@@ -28766,6 +31418,11 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['UNESCO World Heritage Sites']
   },  {
     id: 'philistines',
+    translations: [
+      { lang: 'Hebrew', original: 'פְּלִשְׁתִּים', translit: 'Pəlištîm', meaning: 'Philistines; meaning uncertain, the people called Peleset in Egyptian records' },
+      { lang: 'Egyptian', original: 'prst', translit: 'Peleset', meaning: 'a Sea People named at Medinet Habu under Ramesses III; the Philistines' },
+      { lang: 'Greek', original: 'Παλαιστίνη', translit: 'Palaistinē', meaning: 'Herodotus\' name for the coastal land of the Philistines, whence \'Palestine\'' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/c/ce/Restored_Canaanite_city_gate_of_Ashkelon_%2814341997262%29.jpg'],
     parentId: 'people-groups',
     name: 'Philistines',
@@ -29259,12 +31916,18 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['WikiLeaks Iraq and Afghan War Logs', 'U.S. Army Court-Martial Proceedings']
   },  {
     id: 'alchemy-occult',
+    translations: [
+      { lang: 'Latin', original: 'occultus', translit: '', meaning: 'hidden, concealed; past participle of occulere, to cover over (ob- + celare, to hide)' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/6/6c/The_Curse_Tablets_-_Roman_Baths_%28Bath%29.jpg'],
     name: 'The Occult',
     description: 'Esoteric philosophy, hermeticism, alchemy, secret societies, magical orders, and historical figures dedicated to occult sciences.',
     layer: 'The Occult'
   },  {
     id: 'esoteric-traditions',
+    translations: [
+      { lang: 'Greek', original: 'ἐσωτερικός', translit: 'esōterikos', meaning: 'inner, belonging to the inner circle (from esōterō, further within, comparative of esō, inside)' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Goetia_seal_of_solomon.svg/1280px-Goetia_seal_of_solomon.svg.png'],
     parentId: 'alchemy-occult',
     name: 'Esoteric Traditions',
@@ -29272,6 +31935,10 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'The Occult'
   },  {
     id: 'hermeticism',
+    translations: [
+      { lang: 'Greek', original: 'Ἑρμῆς Τρισμέγιστος', translit: 'Hermēs Trismegistos', meaning: 'Hermes the thrice-greatest (tris, thrice + megistos, greatest)' },
+      { lang: 'Latin', original: 'hermeticus', translit: '', meaning: 'of Hermes Trismegistus; hence \'hermetically sealed\', alchemically airtight' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/HermesTrismegistusCaucHighRes.jpg/960px-HermesTrismegistusCaucHighRes.jpg'],
     parentId: 'esoteric-traditions',
     name: 'Hermeticism',
@@ -29280,6 +31947,11 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Corpus Hermeticum', 'Hermetic Literature']
   },  {
     id: 'alchemy',
+    translations: [
+      { lang: 'Egyptian', original: 'kmt', translit: 'Kemet', meaning: 'the black land, Egypt; a disputed source of the Greek word' },
+      { lang: 'Greek', original: 'χημεία', translit: 'khēmeia', meaning: 'art of alloying and transmuting metals (also khymeia, from khyma, fluid)' },
+      { lang: 'Arabic', original: 'الكيمياء', translit: 'al-kīmiyāʾ', meaning: 'the art of transmutation; al- is the Arabic article' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/E-codices_zbz-Ms-Rh-0172_044_max_copy.jpg/960px-E-codices_zbz-Ms-Rh-0172_044_max_copy.jpg'],
     parentId: 'esoteric-traditions',
     secondaryParentIds: ['watchers'],
@@ -29290,6 +31962,10 @@ export const TERM_TREE_DATA: TermNode[] = [
     bibleVerses: ['And Semjâzâ taught enchantments, and root-clippings, and Armârôs the resolving of enchantments, and Barâqîjâl taught astrology... — 1 Enoch 8:3 (https://www.sacred-texts.com/bib/boe/boe011.htm)']
   },  {
     id: 'philosophers-stone',
+    translations: [
+      { lang: 'Latin', original: 'lapis philosophorum', translit: '', meaning: 'stone of the philosophers' },
+      { lang: 'Greek', original: 'φιλόσοφος', translit: 'philosophos', meaning: 'lover of wisdom (philos, loving + sophia, wisdom)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Joseph_Wright_of_Derby_The_Alchemist.jpg/960px-Joseph_Wright_of_Derby_The_Alchemist.jpg'],
     parentId: 'alchemy',
     name: 'Philosopher\'s Stone',
@@ -29298,6 +31974,10 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Alchemical Treatises']
   },  {
     id: 'elixir-of-life',
+    translations: [
+      { lang: 'Greek', original: 'ξήριον', translit: 'xērion', meaning: 'drying powder for wounds (from xēros, dry)' },
+      { lang: 'Arabic', original: 'الإكسير', translit: 'al-iksīr', meaning: 'the transmuting powder or tincture of the alchemists; hence \'elixir\'' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/%E5%AE%8B%E5%B1%B1%E7%94%BB%E8%B1%A1%E5%85%AD_%E5%85%94%E5%AD%90%E6%8D%A3%E8%87%BC.jpg/960px-%E5%AE%8B%E5%B1%B1%E7%94%BB%E8%B1%A1%E5%85%AD_%E5%85%94%E5%AD%90%E6%8D%A3%E8%87%BC.jpg'],
     parentId: 'alchemy',
     name: 'Elixir of Life',
@@ -29306,6 +31986,9 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Alchemical Treatises']
   },  {
     id: 'homunculus',
+    translations: [
+      { lang: 'Latin', original: 'homunculus', translit: '', meaning: 'little man; diminutive of homo, human being' }
+    ],
     parentId: 'alchemy',
     name: 'Homunculus',
     description: 'A miniature, fully formed human constructed through alchemical processes, first detailed in the writings of Paracelsus.',
@@ -29313,6 +31996,10 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['De Natura Rerum (Paracelsus)']
   },  {
     id: 'emerald-tablet',
+    translations: [
+      { lang: 'Latin', original: 'Tabula Smaragdina', translit: '', meaning: 'emerald tablet (tabula, board, writing tablet + smaragdus, emerald)' },
+      { lang: 'Greek', original: 'σμάραγδος', translit: 'smáragdos', meaning: 'emerald, green gem; probably a Semitic loan (cf. Hebrew bāreqeṯ, flashing stone)' }
+    ],
     parentId: 'ancient-texts',
     secondaryParentIds: ['esoteric-traditions'],
     name: 'The Emerald Tablet',
@@ -29323,6 +32010,9 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Hermetic Corpus', 'Tabula Smaragdina', 'Tabula Smaragdina Translation (Isaac Newton)', 'Chrysopoeia of Cleopatra']
   },  {
     id: 'kabbalah',
+    translations: [
+      { lang: 'Hebrew', original: 'קַבָּלָה', translit: 'qabbālāh', meaning: 'reception, received tradition (from qibbēl, to receive)' }
+    ],
     images: ['https://upload.wikimedia.org/wikipedia/commons/8/8f/Cabalistic-Gematria.png'],
     parentId: 'esoteric-traditions',
     name: 'Kabbalah',
@@ -29331,6 +32021,9 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['The Zohar', 'Sefer Yetzirah']
   },  {
     id: 'golem',
+    translations: [
+      { lang: 'Hebrew', original: 'גֹּלֶם', translit: 'gōlem', meaning: 'shapeless mass, unformed substance (Psalm 139:16)' }
+    ],
     parentId: 'kabbalah',
     name: 'The Golem',
     description: 'An animate anthropomorphic being created entirely from inanimate matter (usually clay or mud) brought to life through mystical Hebrew letters and Kabbalistic incantations, most famously the Golem of Prague.',
@@ -29341,6 +32034,9 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Jewish Folklore', 'Kabbalistic Manuscripts']
   },  {
     id: 'thelema',
+    translations: [
+      { lang: 'Greek', original: 'θέλημα', translit: 'thelēma', meaning: 'will, wish, desire (from thelō, to will)' }
+    ],
     parentId: 'esoteric-traditions',
     name: 'Thelema',
     description: 'An esoteric and social philosophy founded by Aleister Crowley in 1904 with the reception of *The Book of the Law*. Its core tenets are "Do what thou wilt shall be the whole of the Law" and "Love is the law, love under will."',
@@ -29350,6 +32046,10 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['The Book of the Law (Aleister Crowley)', 'Thelemic Holy Books']
   },  {
     id: 'abbey-of-thelema',
+    translations: [
+      { lang: 'Greek', original: 'θέλημα', translit: 'thelēma', meaning: 'will, desire; esp. the divine will' },
+      { lang: 'Aramaic', original: 'אַבָּא', translit: 'ʾabbā', meaning: 'father (source of \'abbot\' and \'abbey\' via Latin abbātia)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Abbey_of_Thelema_01.jpg/960px-Abbey_of_Thelema_01.jpg'],
     parentId: 'thelema',
     name: 'Abbey of Thelema',
@@ -29358,6 +32058,9 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['The Confessions of Aleister Crowley', 'Cefalù Local History Records']
   },  {
     id: 'theosophy',
+    translations: [
+      { lang: 'Greek', original: 'θεοσοφία', translit: 'theosophia', meaning: 'divine wisdom, wisdom concerning God (theos, god + sophia, wisdom)' }
+    ],
     parentId: 'esoteric-traditions',
     name: 'Theosophy',
     description: 'An esoteric philosophy founded in the late 19th century by Helena Blavatsky, Henry Steel Olcott, and others, blending Western esotericism with Eastern mystical concepts.',
@@ -29381,6 +32084,10 @@ export const TERM_TREE_DATA: TermNode[] = [
     layer: 'The Occult'
   },  {
     id: 'knights-templar',
+    translations: [
+      { lang: 'Latin', original: 'templum', translit: '', meaning: 'sacred precinct, temple; from their quarters on the Temple Mount in Jerusalem' },
+      { lang: 'Latin', original: 'Pauperes commilitones Christi Templique Salomonici', translit: '', meaning: 'Poor Fellow-Soldiers of Christ and of the Temple of Solomon; the order\'s full name' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Bandeira_Templ%C3%A1ria.svg/960px-Bandeira_Templ%C3%A1ria.svg.png'],
     parentId: 'magical-orders',
     name: 'The Knights Templar',
@@ -29391,6 +32098,10 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['The History of the Knights Templar (Charles Addison)', 'Occult conspiracy literature']
   },  {
     id: 'knights-hospitaller',
+    translations: [
+      { lang: 'Latin', original: 'hospes', translit: '', meaning: 'guest, host, stranger' },
+      { lang: 'Latin', original: 'hospitalarius', translit: '', meaning: 'one who serves in a hospitale, a hospice for pilgrims (medieval Latin)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Coat_of_arms_of_the_Knights_Hospitaller.svg/960px-Coat_of_arms_of_the_Knights_Hospitaller.svg.png'],
     parentId: 'magical-orders',
     name: 'The Knights Hospitaller',
@@ -29401,6 +32112,9 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['The Knights Hospitaller (H. J. A. Sire)', 'Occult history archives']
   },  {
     id: 'illuminati',
+    translations: [
+      { lang: 'Latin', original: 'illuminati', translit: '', meaning: 'the enlightened ones; plural past participle of illuminare, to light up (in- + lumen, light)' }
+    ],
     parentId: 'magical-orders',
     name: 'Bavarian Illuminati',
     description: 'An Enlightenment-era secret society founded in 1776 by Adam Weishaupt in Bavaria. It aimed to oppose superstition, obscurantism, religious influence over public life, and abuses of state power, but was outlawed in 1785 and has since become the focal point of global conspiracy theories regarding a shadow elite.',
@@ -29420,6 +32134,9 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['The Golden Dawn (Israel Regardie)', 'Order Ritual Records']
   },  {
     id: 'ordo-templi-orientis',
+    translations: [
+      { lang: 'Latin', original: 'Ordo Templi Orientis', translit: '', meaning: 'Order of the Temple of the East (ordo, order + templum, temple + oriens, the rising sun, east)' }
+    ],
     parentId: 'magical-orders',
     name: 'Ordo Templi Orientis (O.T.O.)',
     description: 'An international fraternal occult organization founded by Theodor Reuss, later restructured by Aleister Crowley around the law of Thelema.',
@@ -29427,6 +32144,9 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Equinox of the Gods', 'O.T.O. Charters']
   },  {
     id: 'lucis-trust',
+    translations: [
+      { lang: 'Latin', original: 'lucis', translit: '', meaning: 'of light; genitive of lux, light (cf. Lucifer, light-bearer)' }
+    ],
     parentId: 'magical-orders',
     name: 'Lucis Trust',
     description: 'An esoteric publishing and educational trust founded in 1922 by Alice and Foster Bailey. Originally incorporated as the Lucifer Publishing Company, it publishes the writings of Alice Bailey (which she claimed to have received from a Tibetan Master, Djwhal Khul) and promotes the establishment of a "New World Order" based on spiritual principles.',
@@ -29470,6 +32190,9 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Exposition of the Hieroglyphical Figures (1612)', 'Historical Paris Archives']
   },  {
     id: 'christian-rosenkreuz',
+    translations: [
+      { lang: 'German', original: 'Rosenkreuz', translit: '', meaning: 'rose cross (Rose + Kreuz); Latinised Rosae Crucis, whence \'Rosicrucian\'' }
+    ],
     parentId: 'historical-alchemists',
     secondaryParentIds: ['rosicrucianism'],
     name: 'Christian Rosenkreuz',
@@ -29497,6 +32220,9 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['The Diary and Will of Elias Ashmole', 'Ashmolean Library Archives']
   },  {
     id: 'paracelsus',
+    translations: [
+      { lang: 'Latin', original: 'Paracelsus', translit: '', meaning: 'assumed name; traditionally \'surpassing Celsus\' (Greek para, beyond) or Latinised Hohenheim' }
+    ],
     parentId: 'historical-alchemists',
     name: 'Paracelsus',
     description: 'Swiss physician, alchemist, and occultist who pioneered iatrochemistry (using chemistry in medicine) and wrote extensively on elementals and hermetic philosophy.',
@@ -29946,6 +32672,11 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-figure-jesus',
+    translations: [
+      { lang: 'Hebrew', original: 'יְהוֹשֻׁעַ', translit: 'Yəhôšûaʿ', meaning: 'Yahweh is salvation (Yāhû + yāšaʿ, to save)' },
+      { lang: 'Aramaic', original: 'יֵשׁוּעַ', translit: 'Yēšûaʿ', meaning: 'shortened late form of Yehoshua; Jesus\' own name' },
+      { lang: 'Greek', original: 'Ἰησοῦς', translit: 'Iēsous', meaning: 'Greek rendering of Yeshua, source of Latin Iesus' }
+    ],
     relatedIds: ['christianity', 'prophecy-bethlehem-micah-5', 'prophecy-daniel-70-weeks', 'prophecy-zechariah-9-triumphal-entry', 'prophecy-thirty-pieces-silver', 'prophecy-temple-destruction-ad70', 'blueprint-herods-temple-model', 'hell-outer-darkness'],
     parentId: 'christianity-members',
     name: 'Jesus of Nazareth',
@@ -29957,6 +32688,11 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-figure-saint-paul',
+    translations: [
+      { lang: 'Hebrew', original: 'שָׁאוּל', translit: 'Šāʾûl', meaning: 'asked for, prayed for (from šāʾal, to ask); his Jewish name Saul' },
+      { lang: 'Latin', original: 'Paulus', translit: '', meaning: 'small, humble; his Roman cognomen' },
+      { lang: 'Greek', original: 'Παῦλος', translit: 'Paulos', meaning: 'Greek form of Latin Paulus as used in the New Testament' }
+    ],
     relatedIds: ['heaven-third-heaven-paradise'],
     parentId: 'christianity-members',
     name: 'Saint Paul the Apostle',
@@ -29968,6 +32704,11 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-figure-saint-peter',
+    translations: [
+      { lang: 'Aramaic', original: 'כֵּיפָא', translit: 'Kêp̄āʾ', meaning: 'rock, stone; the name Jesus gave Simon (Greek Kēphas)' },
+      { lang: 'Greek', original: 'Πέτρος', translit: 'Petros', meaning: 'stone, rock; translating Aramaic Kepha' },
+      { lang: 'Hebrew', original: 'שִׁמְעוֹן', translit: 'Šimʿôn', meaning: 'he has heard (from šāmaʿ, to hear); his birth name Simon' }
+    ],
     relatedIds: ['catholicism'],
     parentId: 'christianity-members',
     name: 'Saint Peter',
@@ -29979,6 +32720,9 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-figure-saint-augustine',
+    translations: [
+      { lang: 'Latin', original: 'Augustinus', translit: '', meaning: 'diminutive of Augustus, \'venerable, consecrated\' (from augere, to increase)' }
+    ],
     parentId: 'christianity-members',
     name: 'Saint Augustine of Hippo',
     description: 'One of the most important Latin Church Fathers. His writings (like Confessions and City of God) merged Platonic philosophy with Christian theology, laying the foundation for Western Christian mysticism.',
@@ -29989,6 +32733,9 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-figure-constantine',
+    translations: [
+      { lang: 'Latin', original: 'Constantinus', translit: '', meaning: 'from constans, \'steadfast, constant\' (con- + stare, to stand)' }
+    ],
     relatedIds: ['chi-rho', 'mithra', 'structure-chronicles-of-georgia'],
     parentId: 'christianity-members',
     name: 'Constantine the Great',
@@ -30064,6 +32811,10 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-figure-moses',
+    translations: [
+      { lang: 'Egyptian', original: 'ms', translit: 'mes', meaning: 'child, born of (as in Thutmose, Ramesses); probable source of the name' },
+      { lang: 'Hebrew', original: 'מֹשֶׁה', translit: 'Mōšeh', meaning: 'explained as \'drawn out\' (māšāh, Exodus 2:10), a folk etymology' }
+    ],
     relatedIds: ['yhwh-tetragrammaton', 'blueprint-tabernacle'],
     parentId: 'judaism-members',
     name: 'Moses',
@@ -30075,6 +32826,10 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-figure-abraham',
+    translations: [
+      { lang: 'Hebrew', original: 'אַבְרָם', translit: 'ʾAḇrām', meaning: 'exalted father (ʾāḇ \'father\' + rām \'high\'); the patriarch\'s original name' },
+      { lang: 'Hebrew', original: 'אַבְרָהָם', translit: 'ʾAḇrāhām', meaning: 'interpreted \'father of a multitude\' (ʾaḇ hămôn, Genesis 17:5)' }
+    ],
     relatedIds: ['sefer-yetzirah'],
     parentId: 'judaism-members',
     name: 'Abraham',
@@ -30086,6 +32841,9 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-figure-king-david',
+    translations: [
+      { lang: 'Hebrew', original: 'דָּוִד', translit: 'Dāwīḏ', meaning: 'beloved (from dôḏ \'beloved, uncle\')' }
+    ],
     relatedIds: ['israelites', 'prophecy-bethlehem-micah-5', 'prophecy-isaiah-53-suffering-servant'],
     parentId: 'judaism-members',
     name: 'King David',
@@ -30178,6 +32936,9 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-figure-muhammad',
+    translations: [
+      { lang: 'Arabic', original: 'مُحَمَّد', translit: 'Muḥammad', meaning: 'praised, praiseworthy (passive participle of ḥammada \'to praise\')' }
+    ],
     relatedIds: ['heaven-seven-heavens', 'islam', 'quran', 'hadith'],
     parentId: 'islam-members',
     name: 'Prophet Muhammad',
@@ -30189,6 +32950,9 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-figure-ali',
+    translations: [
+      { lang: 'Arabic', original: 'عَلِيّ', translit: 'ʿAlī', meaning: 'exalted, high (from ʿalā \'to be high\')' }
+    ],
     parentId: 'islam-members',
     name: 'Ali ibn Abi Talib',
     description: 'Cousin and son-in-law of Muhammad, first Shia Imam. In esoteric Sufism, he is viewed as the gatekeeper of mystical knowledge (Batin) and the father of spiritual knight-errantry and metaphysical wisdom.',
@@ -30291,6 +33055,11 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-figure-buddha',
+    translations: [
+      { lang: 'Sanskrit', original: 'सिद्धार्थ', translit: 'Siddhārtha', meaning: 'he who has achieved his aim (siddha, accomplished + artha, aim, goal)' },
+      { lang: 'Sanskrit', original: 'गौतम', translit: 'Gautama', meaning: 'descendant of Gotama (the sage; \'greatest ox\', go + tama)' },
+      { lang: 'Sanskrit', original: 'बुद्ध', translit: 'buddha', meaning: 'awakened one (past participle of budh, to awake, know)' }
+    ],
     relatedIds: ['buddhism', 'pali-canon-tripitaka', 'dhammapada', 'lotus-sutra', 'heaven-nirvana', 'hell-avici'],
     parentId: 'buddhism-members',
     name: 'Siddhartha Gautama (The Buddha)',
@@ -30302,6 +33071,10 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-figure-nagarjuna',
+    translations: [
+      { lang: 'Sanskrit', original: 'नाग', translit: 'nāga', meaning: 'serpent; serpent-deity' },
+      { lang: 'Sanskrit', original: 'नागार्जुन', translit: 'Nāgārjuna', meaning: 'nāga + Arjuna (\'white, bright\'); legend: taught by nāgas, born under an arjuna tree' }
+    ],
     parentId: 'buddhism-members',
     name: 'Nagarjuna',
     description: 'One of the most important Buddhist philosophers, founder of the Madhyamaka school. Legend states he retrieved the sacred Prajnaparamita Sutras (Wisdom Teachings) from the Nagas (serpentine beings) who guarded them in their underwater palace.',
@@ -30312,6 +33085,10 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'rel-figure-bodhidharma',
+    translations: [
+      { lang: 'Sanskrit', original: 'बोधिधर्म', translit: 'Bodhidharma', meaning: 'dharma of awakening (bodhi, awakening + dharma, law, teaching)' },
+      { lang: 'Chinese', original: '達摩', translit: 'Dámó', meaning: 'Chinese transcription of (Bodhi)dharma; Japanese Daruma' }
+    ],
     relatedIds: ['buddhism-zen'],
     parentId: 'buddhism-members',
     name: 'Bodhidharma',
@@ -30767,6 +33544,9 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'egyptian-ankh',
+    translations: [
+      { lang: 'Egyptian', original: 'ꜥnḫ', translit: 'ankh', meaning: 'life; to live' }
+    ],
     parentId: 'egyptian-symbols',
     name: 'Ankh',
     description: 'The Ankh (key of life) is a cross with a loop at the top. In the hieroglyphic system of writing, it represents the concept of eternal life. It frequently appears in Egyptian tomb paintings and other art. It is also known as the "key of the Nile" representing the union between Osiris and Isis.',
@@ -30776,6 +33556,9 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'egyptian-djed',
+    translations: [
+      { lang: 'Egyptian', original: 'ḏd', translit: 'djed', meaning: 'stability, endurance, to be stable' }
+    ],
     parentId: 'egyptian-symbols',
     name: 'Djed',
     description: 'The Djed is a pillar-like symbol representing stability and strength. Known as "The Backbone of Osiris," this symbol is Osirian in nature and is primarily associated with themes of rebirth, resurrection, and regeneration.',
@@ -30785,6 +33568,9 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'egyptian-eye-of-horus',
+    translations: [
+      { lang: 'Egyptian', original: 'wḏꜣt', translit: 'wedjat', meaning: 'the whole one, the sound one; the restored eye (wḏꜣ \'to be whole, healthy\')' }
+    ],
     parentId: 'egyptian-symbols',
     name: 'Wadjet Eye (Eye of Horus)',
     description: 'The Eye of Horus (Wadjet Eye) represents sacrifice, healing, protection, and royal power. Used as a protective amulet against envy, illness, and evil spirits, it was placed on the pharaoh\'s mummy for protection in the tomb. In myth, Horus used his eye to restore life to his father Osiris.',
@@ -30794,6 +33580,9 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'egyptian-eye-of-ra',
+    translations: [
+      { lang: 'Egyptian', original: 'jrt Rꜥ', translit: 'iret Ra', meaning: 'Eye of Ra (jrt \'eye\' + Rꜥ \'sun\')' }
+    ],
     parentId: 'egyptian-symbols',
     name: 'Eye of Ra',
     description: 'The Eye of Ra symbolizes the sun, power, and the feminine counterpart to Ra. It acts as an independent entity that protects Ra and destroys his enemies. In mythology, it is identified with the personification of goddesses such as Wadjet, Hathor, Mut, Sekhmet, and Bastet.',
@@ -30803,6 +33592,9 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'egyptian-was',
+    translations: [
+      { lang: 'Egyptian', original: 'wꜣs', translit: 'was', meaning: 'dominion, power; the sceptre is the hieroglyph for this word' }
+    ],
     parentId: 'egyptian-symbols',
     name: '\'Was\' Sceptre',
     description: 'The Was Sceptre is a symbol of power, dominion, and authority of the gods and the king. It features a straight shaft, a crooked handle in the shape of an animal head (resembling the god Set), and a forked base, ensuring the continuance of the king\'s prosperity.',
@@ -30812,6 +33604,10 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'egyptian-scarab',
+    translations: [
+      { lang: 'Egyptian', original: 'ḫprr', translit: 'kheprer', meaning: 'scarab beetle (ḫpr \'to come into being, become\'); Khepri = \'he who comes into being\'' },
+      { lang: 'Latin', original: 'scarabaeus', translit: '', meaning: 'beetle (from Greek kárabos \'horned beetle, crayfish\')' }
+    ],
     parentId: 'egyptian-symbols',
     name: 'Scarab Beetle',
     description: 'The Scarab Beetle (Khepri) represents the sun, creation, rebirth, and transformation. As one of the most popular Egyptian amulets, scarabs were placed over the hearts of the deceased to protect them in the afterlife and guide their transformation.',
@@ -30821,6 +33617,10 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'egyptian-cartouche',
+    translations: [
+      { lang: 'Egyptian', original: 'šnw', translit: 'shenu', meaning: 'that which encircles; the ring enclosing a royal name (šnj \'to encircle\')' },
+      { lang: 'French', original: 'cartouche', translit: '', meaning: 'cartridge, scroll ornament (Italian cartoccio \'paper cornet\', from carta \'paper\')' }
+    ],
     parentId: 'egyptian-symbols',
     name: 'Cartouche',
     description: 'A Cartouche is an oval loop representing a protective rope enclosing the royal name. Linked to the sun and eternal protection, it guarded the pharaoh\'s name from evil spirits in this life and the next. Its shape is esoterically associated with the ouroboros.',
@@ -30830,6 +33630,10 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'egyptian-lotus',
+    translations: [
+      { lang: 'Egyptian', original: 'sšn', translit: 'seshen', meaning: 'lotus, water lily (source of Hebrew šôšān \'lily\' and the name Susan)' },
+      { lang: 'Greek', original: 'λωτός', translit: 'lōtós', meaning: 'lotus; name of several plants, of uncertain (probably Semitic) origin' }
+    ],
     parentId: 'egyptian-symbols',
     name: 'Lotus',
     description: 'The Lotus flower represents rebirth, renewal, and the sun, rising from the water each morning. The white and blue lotus symbolized the unification of Upper and Lower Egypt and was widely used in ancient medicine, perfumes, and spiritual rituals.',
@@ -30839,6 +33643,10 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'egyptian-uraeus',
+    translations: [
+      { lang: 'Egyptian', original: 'jꜥrt', translit: 'iaret', meaning: 'the rearing one, rearing cobra (jꜥr \'to rise up, ascend\')' },
+      { lang: 'Greek', original: 'οὐραῖος', translit: 'ouraîos', meaning: 'Greek rendering of the Egyptian, reshaped after ourá \'tail\'; Latin uraeus' }
+    ],
     parentId: 'egyptian-symbols',
     name: 'Uraeus',
     description: 'The Uraeus is the rearing cobra symbol representing the goddess Wadjet and royal authority. Worn on the crowns of pharaohs, it was believed to embody magical powers and spit fire to protect the king from his enemies. It was gifted to the kings by the god Geb.',
@@ -30848,6 +33656,9 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'egyptian-ka',
+    translations: [
+      { lang: 'Egyptian', original: 'kꜣ', translit: 'ka', meaning: 'life-force, vital essence, spiritual double' }
+    ],
     parentId: 'egyptian-symbols',
     name: 'Ka',
     description: 'The Ka is the spiritual double or life force born with a person that survives death. It required physical offerings, statues, and mummification to preserve its connection to the physical world, living in the tomb\'s burial chamber. In hieroglyphs, it is shown as upstretched arms.',
@@ -30857,6 +33668,9 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'egyptian-ba',
+    translations: [
+      { lang: 'Egyptian', original: 'bꜣ', translit: 'ba', meaning: 'soul, manifestation, animating power of a person or god' }
+    ],
     parentId: 'egyptian-symbols',
     name: 'Ba',
     description: 'The Ba represents a person\'s unique personality and soul in the spirit world. Depicted as a human-headed bird, the Ba leaves the body after death to soar among the stars, returning regularly to visit the tomb and reunite with the body and Ka to achieve eternal life.',
@@ -30866,6 +33680,9 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'egyptian-canopic-jars',
+    translations: [
+      { lang: 'Greek', original: 'Κάνωπος', translit: 'Kánōpos', meaning: 'Canopus, Delta town where Osiris was worshipped as a jar; the name is a modern misnomer' }
+    ],
     parentId: 'egyptian-symbols',
     name: 'Canopic Jars',
     description: 'Canopic Jars are four containers used to preserve the internal organs of the deceased for the afterlife. Each jar represents one of the Four Sons of Horus: Imsety (man, liver), Duamutef (jackal, stomach), Hapi (baboon, lungs), and Qebehsenuf (falcon, intestines).',
@@ -30875,6 +33692,9 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'egyptian-winged-sun',
+    translations: [
+      { lang: 'Egyptian', original: 'bḥdtj', translit: 'Behdety', meaning: 'he of Behdet (Edfu); epithet of Horus as the winged disk' }
+    ],
     parentId: 'egyptian-symbols',
     name: 'Winged Sun',
     description: 'The Winged Sun (Behdety) is a solar symbol representing the midday sun god Behedti. Used as a protective amulet over temple doorways and on royal stelae, it provided divine protection and represented solar divinity across various ancient Near Eastern cultures.',
@@ -30884,6 +33704,9 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'egyptian-ouroboros',
+    translations: [
+      { lang: 'Greek', original: 'οὐροβόρος', translit: 'ourobóros', meaning: 'tail-devouring (ourá \'tail\' + bibrṓskō \'to devour\')' }
+    ],
     parentId: 'egyptian-symbols',
     name: 'Egyptian Ouroboros',
     description: 'The Egyptian Ouroboros is a circular snake biting its own tail, symbolizing infinity, the sun\'s daily journey (the solar disk of Aten), rebirth, and the cyclical nature of time. In the Book of the Dead, it is associated with the creator god Atum rising from chaotic waters.',
@@ -30893,6 +33716,9 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'egyptian-amenta',
+    translations: [
+      { lang: 'Egyptian', original: 'jmntt', translit: 'Imentet / Amentet', meaning: 'the West, land of the dead (jmn \'to hide, conceal\'; jmnt \'right side, west\')' }
+    ],
     parentId: 'egyptian-symbols',
     name: 'Amenta',
     description: 'Amenta represents the Underworld (realm of the dead) and the horizon where the sun sets. Originally denoting the western bank of the Nile where tombs were built, the symbol evolved to represent Duat, the spiritual realm ruled by Osiris.',
@@ -30902,6 +33728,9 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'egyptian-tiet',
+    translations: [
+      { lang: 'Egyptian', original: 'tjt', translit: 'tyet', meaning: 'the Isis-knot amulet; the sign is used for \'welfare, life\', root uncertain' }
+    ],
     parentId: 'egyptian-symbols',
     name: 'Tiet (Knot of Isis)',
     description: 'The Tiet (Tyet), known as the Knot of Isis or the Blood of Isis, is a symbol resembling the Ankh. Linked to the goddess Isis, it represents life and protection. Often paired with the Djed of Osiris, it denotes the dual nature of life and spiritual fertility.',
@@ -30911,6 +33740,10 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'egyptian-feather-of-maat',
+    translations: [
+      { lang: 'Egyptian', original: 'mꜣꜥt', translit: 'maat', meaning: 'truth, order, justice, what is right (mꜣꜥ \'true, straight, just\')' },
+      { lang: 'Egyptian', original: 'šwt', translit: 'shut', meaning: 'feather, plume; the ostrich feather is the ideogram of Maat' }
+    ],
     parentId: 'egyptian-symbols',
     name: 'Feather of Maat',
     description: 'The Feather of Maat represents truth, balance, and justice. In the Hall of Two Truths, the heart of the deceased is weighed against Maat\'s feather. If equal or lighter, the soul goes to paradise (Aaru); if heavier, it is consumed by the monster Ammit.',
@@ -30920,6 +33753,10 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'egyptian-crook-flail',
+    translations: [
+      { lang: 'Egyptian', original: 'ḥqꜣ', translit: 'heka', meaning: 'ruler, chieftain; the crook is the hieroglyph for \'rule\'' },
+      { lang: 'Egyptian', original: 'nḫꜣḫꜣ', translit: 'nekhakha', meaning: 'flail, flagellum' }
+    ],
     parentId: 'egyptian-symbols',
     name: 'Crook and Flail',
     description: 'The Crook (Heka) and Flail (Nekhakha) are symbols of royal power and divine authority. Originally emblems of Osiris, they represent the pharaoh\'s dual role: the shepherd crook denotes leading and caring for the people, while the flail symbolizes provider of food.',
@@ -30929,6 +33766,9 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'egyptian-deshret',
+    translations: [
+      { lang: 'Egyptian', original: 'dšrt', translit: 'deshret', meaning: 'the red one (dšr \'red\'); also \'red land\', the desert' }
+    ],
     parentId: 'egyptian-symbols',
     name: 'Deshret Crown',
     description: 'The Deshret (Red Crown) represents Lower Egypt and the protective goddess Wadjet. It is also associated with the fertile land of Kemet and the territory of the god Set. When combined with the White Crown, it forms the unified crown of Egypt.',
@@ -30938,6 +33778,9 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'egyptian-hedjet',
+    translations: [
+      { lang: 'Egyptian', original: 'ḥḏt', translit: 'hedjet', meaning: 'the white one, the bright one (ḥḏ \'white, bright\')' }
+    ],
     parentId: 'egyptian-symbols',
     name: 'Hedjet Crown',
     description: 'The Hedjet (White Crown) represents the kingdom of Upper Egypt. It is associated with the vulture goddess Nekhbet. Following the unification of Upper and Lower Egypt, it was merged with the Red Crown to symbolize total sovereignty.',
@@ -30947,6 +33790,10 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'egyptian-pschent',
+    translations: [
+      { lang: 'Egyptian', original: 'pꜣ-sḫmtj', translit: 'pa-sekhemty', meaning: 'the two powerful ones (sḫm \'powerful\', dual); the double crown' },
+      { lang: 'Greek', original: 'ψχέντ', translit: 'pschent', meaning: 'Ptolemaic Greek rendering of the Egyptian (Rosetta Stone)' }
+    ],
     parentId: 'egyptian-symbols',
     name: 'Pschent Crown',
     description: 'The Pschent is the Double Crown of Egypt, formed by combining the Deshret (Red Crown) and the Hedjet (White Crown). It symbolizes the unification of Upper and Lower Egypt and the pharaoh\'s total rule and authority over the entire land.',
@@ -30965,6 +33812,9 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'egyptian-seba',
+    translations: [
+      { lang: 'Egyptian', original: 'sbꜣ', translit: 'seba', meaning: 'star; also \'door, gate\' and \'to teach\'' }
+    ],
     parentId: 'egyptian-symbols',
     name: 'Seba',
     description: 'The Seba is a star symbol representing the stars, constellations, and the underworld Duat. The Egyptians decorated temple ceilings and tomb interiors with it. A star inside a circle represented Duat, where stars descend at night to accompany the Sun.',
@@ -30974,6 +33824,9 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'egyptian-ajet',
+    translations: [
+      { lang: 'Egyptian', original: 'ꜣḫt', translit: 'akhet', meaning: 'horizon; place where the sun becomes effective or radiant (ꜣḫ \'to be effective, shine\')' }
+    ],
     parentId: 'egyptian-symbols',
     name: 'Ajet',
     description: 'Ajet represents the horizon where the sun rises and sets, embodying sunrise and sunset. Guiding Ra\'s path, it features the solar disk between two mountain peaks (Djew). It is guarded by the double-lion underworld god Aker, representing yesterday and today.',
@@ -30983,6 +33836,9 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'egyptian-menat',
+    translations: [
+      { lang: 'Egyptian', original: 'mnjt', translit: 'menit / menat', meaning: 'the bead-necklace with counterpoise sacred to Hathor' }
+    ],
     parentId: 'egyptian-symbols',
     name: 'Menat',
     description: 'The Menat is a ritual heavy necklace associated with the goddess Hathor. Believed to be the physical conduit of Hathor\'s power, it symbolizes fertility, rebirth, life, and cosmic renewal, often used as an amulet of protection.',
@@ -30992,6 +33848,10 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'egyptian-sistrum',
+    translations: [
+      { lang: 'Egyptian', original: 'sššt', translit: 'sesheshet', meaning: 'sistrum (onomatopoeic, from its rattling sound)' },
+      { lang: 'Greek', original: 'σεῖστρον', translit: 'seîstron', meaning: 'that which is shaken (seíō \'to shake\'); Latin sistrum' }
+    ],
     parentId: 'egyptian-symbols',
     name: 'Sistrum',
     description: 'The Sistrum is a sacred rattle instrument used in temple dances and rituals to worship the goddesses Hathor, Isis, and Bastet. Resembling the Ankh symbol, it featured a handle and metal rings that made sound, representing joy, festivity, and banishing chaos.',
@@ -31001,6 +33861,9 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'egyptian-nemyss',
+    translations: [
+      { lang: 'Egyptian', original: 'nms', translit: 'nemes', meaning: 'the striped royal headcloth (\'nemyss\' is a Golden Dawn spelling)' }
+    ],
     parentId: 'egyptian-symbols',
     name: 'Nemyss',
     description: 'The Nemyss is the folded linen ritual headdress worn by pharaohs, famously seen on King Tutankhamun\'s gold sarcophagus. Rising from the forehead and hanging over the shoulders, it symbolized royal authority and remains a key vestment in Kemetic rituals.',
@@ -31009,6 +33872,10 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'egyptian-obelisk',
+    translations: [
+      { lang: 'Egyptian', original: 'tḫn', translit: 'tekhen', meaning: 'obelisk' },
+      { lang: 'Greek', original: 'ὀβελίσκος', translit: 'obelískos', meaning: 'little spit, skewer (diminutive of obelós \'spit\')' }
+    ],
     parentId: 'egyptian-symbols',
     name: 'Obelisk',
     description: 'The Obelisk is a monolithic tall stone structure with a pyramid-shaped tip (pyramidion). Erected to honor and invoke the protection of the sun god Ra, it represented Earth\'s generative energies and power, serving as a physical dwelling place for the deity.',
@@ -31018,6 +33885,9 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'egyptian-shen-ring',
+    translations: [
+      { lang: 'Egyptian', original: 'šn', translit: 'shen', meaning: 'to encircle; šnw \'ring, circuit\', hence eternity and protection' }
+    ],
     parentId: 'egyptian-symbols',
     name: 'Shen Ring',
     description: 'The Shen Ring (Shenu) is a knotted circular rope symbol representing eternity, infinite protection, and the solar disk. Often depicted carried by divine falcons, it was highly revered as a magic circle of power, shielding against diseases and hostile forces.',
@@ -40343,6 +43213,10 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'anomaly-Ancient-Texts-pliny',
+    translations: [
+      { lang: 'Latin', original: 'Naturalis Historia', translit: '', meaning: 'natural history: an inquiry into nature' },
+      { lang: 'Greek', original: 'ἱστορία', translit: 'historía', meaning: 'inquiry; knowledge gained by investigation (from histōr, one who knows)' }
+    ],
     relatedIds: ['cynocephali-race', 'blemmyes'],
     parentId: 'ancient-texts',
     name: 'Pliny the Elder',
@@ -40354,6 +43228,9 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'anomaly-Ancient-Texts-herodotus',
+    translations: [
+      { lang: 'Greek', original: 'Ἡρόδοτος', translit: 'Hēródotos', meaning: 'given by Hera (Hēra + dotos, given)' }
+    ],
     parentId: 'ancient-texts',
     name: 'Herodotus',
     description: 'The Greek historian known as the Father of History. His work \'The Histories\' documented the Greco-Persian wars, regional ethnographies, and legendary creatures, including giant gold-digging ants and Arabian winged serpents.',
@@ -40387,6 +43264,11 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'anomaly-The-Occult-santeria',
+    translations: [
+      { lang: 'Latin', original: 'sanctus', translit: '', meaning: 'holy, consecrated' },
+      { lang: 'Spanish', original: 'santería', translit: '', meaning: 'devotion to the saints (santo, saint); originally a dismissive outsiders\' term' },
+      { lang: 'Yoruba', original: 'òrìṣà', translit: 'orisha', meaning: 'deity, spirit of the Yoruba pantheon; Spanish ocha, as in Regla de Ocha' }
+    ],
     parentId: 'alchemy-occult',
     name: 'Santería (Regla de Ocha)',
     description: 'A syncretic religion developed in Cuba by Yoruba slaves, blending West African spirit communication with Roman Catholic saint worship. Centers on the veneration of Orishas, trance states, and ritual drumming.',
@@ -40427,6 +43309,10 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'anomaly-Myths---Legends-goblins',
+    translations: [
+      { lang: 'Old French', original: 'gobelin', translit: '', meaning: 'mischievous sprite (Medieval Latin gobelinus, 12th c.)' },
+      { lang: 'Greek', original: 'κόβαλος', translit: 'kóbalos', meaning: 'rogue, impudent knave; a mischievous spirit; possibly the ultimate source' }
+    ],
     parentId: 'myths-legends-root',
     name: 'Goblins & Pixies (Wistman\'s Wood)',
     description: 'Grotesque, small subterranean elementals in European folklore. In Dartmoor, England, Wistman\'s Wood is heavily tied to tales of pixies and goblins who lead travelers astray in the rocky tors.',
@@ -40437,6 +43323,9 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'anomaly-Myths---Legends-duende',
+    translations: [
+      { lang: 'Spanish', original: 'duende', translit: '', meaning: 'house-spirit, goblin; from duen de casa \'master of the house\' (Latin dominus)' }
+    ],
     parentId: 'myths-legends-root',
     name: 'Duendes',
     description: 'Small, goblin-like forest guardians in Spanish and Latin American folklore. Belizean legends depict the \'Tata Duende\' as a red-hatted bearded figure with backward-pointing feet who protects jungle wildlife.',
@@ -40447,6 +43336,9 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'anomaly-Ancient-People-Groups-medjay',
+    translations: [
+      { lang: 'Egyptian', original: 'mḏꜣ.y', translit: 'Medjay', meaning: 'man of Medja, a region of Nubia; later a term for desert police' }
+    ],
     parentId: 'people-groups',
     name: 'The Medjay',
     description: 'An ancient elite Nubian police force and desert scouts recruited by Egyptian Pharaohs. Known for tracking and archery, their name eventually became synonymous with law enforcement.',
@@ -40457,6 +43349,10 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'anomaly-The-Occult-nostradamus',
+    translations: [
+      { lang: 'Latin', original: 'nostra domina', translit: '', meaning: 'our lady' },
+      { lang: 'Old French', original: 'Nostredame', translit: '', meaning: 'Our Lady; Latinised by Michel de Nostredame as Nostradamus' }
+    ],
     relatedIds: ['fulfilled-prophecies', 'baba-vanga', 'edgar-cayce', 'baba-vanga-prophecies', 'nostradamus-prophecies-fulfilled'],
     parentId: 'alchemy-occult',
     name: 'Nostradamus & His Prophecies',
@@ -40479,6 +43375,10 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'anomaly-Ancient-People-Groups-akhenaten',
+    translations: [
+      { lang: 'Egyptian', original: 'ꜣḫ-n-jtn', translit: 'Akhenaten', meaning: 'effective for the Aten (the sun disc)' },
+      { lang: 'Egyptian', original: 'jmn-ḥtp', translit: 'Amenhotep', meaning: 'Amun is satisfied (his birth name, Amenhotep IV)' }
+    ],
     relatedIds: ['elongated-skulls'],
     parentId: 'people-groups',
     name: 'Pharaoh Akhenaten & Amarna Art',
@@ -40490,6 +43390,9 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'anomaly-The-Occult-akashic',
+    translations: [
+      { lang: 'Sanskrit', original: 'आकाश', translit: 'ākāśa', meaning: 'ether, open space, sky; the fifth element in Indian cosmology' }
+    ],
     relatedIds: ['helena-blavatsky'],
     parentId: 'alchemy-occult',
     name: 'The Akashic Records',
@@ -40501,6 +43404,9 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'structure-dharmarajeshwar-monolithic-node',
+    translations: [
+      { lang: 'Sanskrit', original: 'धर्मराजेश्वर', translit: 'Dharmarājeśvara', meaning: 'lord (īśvara) of the king of dharma (Dharmarāja)' }
+    ],
     parentId: 'megaliths-structures',
     secondaryParentIds: ['old-world-structures'],
     name: 'Dharmarajeshwar Monolithic Temple',
@@ -40512,6 +43418,10 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'anomaly-Underworld-Entrances-hades',
+    translations: [
+      { lang: 'Greek', original: 'ᾍδης', translit: 'Háidēs', meaning: 'traditionally \'the unseen one\' (a-, not + idein, to see); god and realm of the dead' },
+      { lang: 'Greek', original: 'Τάρταρος', translit: 'Tártaros', meaning: 'the abyss beneath Hades; pre-Greek, origin unknown' }
+    ],
     relatedIds: ['asphodel'],
     parentId: 'underworld',
     name: 'Hades & Tartarus (Greek Underworld)',
@@ -40523,6 +43433,9 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'anomaly-Underworld-Entrances-xibalba',
+    translations: [
+      { lang: 'K\'iche\' Maya', original: 'Xib\'alb\'a', translit: '', meaning: 'place of fear (xib\'ij, to frighten); the Maya underworld' }
+    ],
     relatedIds: ['hells-all-religions'],
     parentId: 'underworld',
     name: 'Xibalba (Mayan Underworld)',
@@ -40534,6 +43447,11 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'anomaly-Underworld-Entrances-helheim',
+    translations: [
+      { lang: 'Proto-Indo-European', original: '*ḱel-', translit: '', meaning: 'to cover, conceal' },
+      { lang: 'Old Norse', original: 'Hel', translit: '', meaning: 'the hidden place / goddess of the dead; from Germanic *haljō, \'the concealed\'' },
+      { lang: 'Old Norse', original: 'Helheimr', translit: '', meaning: 'Hel\'s home, the realm of Hel (heimr home, world)' }
+    ],
     parentId: 'underworld',
     name: 'Helheim (Norse Underworld)',
     description: 'The Norse cold underworld ruled by the goddess Hel, where those dying of sickness or age go. Traversed via the golden bridge Gjallarbrú over the river Gjöll.',
@@ -40544,6 +43462,10 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'anomaly-Underworld-Entrances-diyu',
+    translations: [
+      { lang: 'Chinese', original: '地獄', translit: 'dìyù', meaning: 'earth prison; the subterranean hells' },
+      { lang: 'Sanskrit', original: 'नरक', translit: 'naraka', meaning: 'hell, the netherworld; the Buddhist term that dìyù translates' }
+    ],
     relatedIds: ['heaven-tian-heavenly-court', 'hells-all-religions', 'hell-naraka'],
     parentId: 'underworld',
     name: 'Diyu (Chinese Underworld)',
@@ -40555,6 +43477,10 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'structure-church-st-george-lalibela-node',
+    translations: [
+      { lang: 'Amharic', original: 'ቤተ ጊዮርጊስ', translit: 'Betä Giyorgis', meaning: 'house of George' },
+      { lang: 'Agaw', original: 'Lalibäla', translit: '', meaning: 'traditionally \'the bees recognise his sovereignty\'' }
+    ],
     parentId: 'megaliths-structures',
     secondaryParentIds: ['old-world-structures'],
     name: 'Church of St. George (Lalibela)',
@@ -40566,6 +43492,10 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'anomaly-Ancient-Texts-codexgigas',
+    translations: [
+      { lang: 'Latin', original: 'Codex Gigas', translit: '', meaning: 'giant book (codex, bound book + gigas, giant)' },
+      { lang: 'Greek', original: 'γίγας', translit: 'gígas', meaning: 'giant; one of the earth-born Gigantes who fought the gods' }
+    ],
     parentId: 'ancient-texts',
     secondaryParentIds: ['alchemy-occult'],
     name: 'Codex Gigas (The Devil\'s Bible)',
@@ -40577,6 +43507,10 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'anomaly-Ancient-Texts-sanskrit',
+    translations: [
+      { lang: 'Sanskrit', original: 'संस्कृतम्', translit: 'saṃskṛtam', meaning: 'perfected, refined, put together (sam, together + kṛ, to make)' },
+      { lang: 'Sanskrit', original: 'ऋग्वेद', translit: 'Ṛgveda', meaning: 'knowledge of the praise-verses (ṛc, verse of praise + veda, knowledge)' }
+    ],
     parentId: 'ancient-texts',
     secondaryParentIds: ['hinduism'],
     name: 'Sanskrit Liturgical Texts',
@@ -40588,6 +43522,10 @@ export const TERM_TREE_DATA: TermNode[] = [
   },
   {
     id: 'anomaly-Ancient-Texts-cuneiform',
+    translations: [
+      { lang: 'Latin', original: 'cuneus', translit: '', meaning: 'wedge; cuneiform means wedge-shaped (cuneus + forma)' },
+      { lang: 'Akkadian', original: 'Šumeru', translit: '', meaning: 'Sumer, the Akkadian name for the southern land its people called ki-en-gir' }
+    ],
     relatedIds: ['anunnaki'],
     parentId: 'ancient-texts',
     name: 'Sumerian Cuneiform Tablets',
@@ -40677,6 +43615,10 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Common Sense Renewed (R.C. Christian)', 'Elbert County Police Investigation July 2022', 'Georgia Guidestones Documentary (Dark Clouds over Elberton)']
   }, {
     id: 'mayan-calendar',
+    translations: [
+      { lang: 'Yucatec Maya', original: 'tzolkʼin', translit: '', meaning: 'count of days (tzol, to order, count + kʼin, day, sun); a modern coinage for the 260-day cycle' },
+      { lang: 'Yucatec Maya', original: 'haabʼ', translit: '', meaning: 'year, the 365-day cycle' }
+    ],
     parentId: 'ancient-texts',
     name: 'The Mayan Calendar',
     description: 'The sophisticated Mesoamerican calendrical system developed by the Maya, consisting of interlocking cycles (Tzolkin, Haab, and the Long Count). Famously, the completion of the 13th b\'ak\'tun cycle on December 21, 2012, triggered global end-of-the-world prophecies. In alternative history and ancient astronaut lore, the calendar\'s extreme astronomical precision is interpreted as evidence of lost high-technology cycles or cosmic schedules taught by extraterrestrial sky-gods.',
@@ -40686,6 +43628,10 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Maya Calendrical Inscriptions', 'The Mayan Factor (José Argüelles)', 'The 2012 Phenomenon: Astronomical Realities']
   }, {
     id: 'shroud-of-turin',
+    translations: [
+      { lang: 'Greek', original: 'σινδών', translit: 'sindṓn', meaning: 'fine linen, linen sheet; the burial cloth of Mark 15:46' },
+      { lang: 'Old English', original: 'scrūd', translit: '', meaning: 'garment, clothing (source of \'shroud\')' }
+    ],
     relatedIds: ['john_baptist', 'prophecy-isaiah-53-suffering-servant'],
     parentId: 'biblical-apocryphal',
     name: 'The Shroud of Turin',
@@ -40696,6 +43642,10 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Shroud of Turin Research Project (STURP) Reports', 'The Turin Shroud: Inquest (Ian Wilson)', 'Radiocarbon Dating of the Shroud of Turin (Nature 1989)']
   }, {
     id: 'sudarium-of-oviedo',
+    translations: [
+      { lang: 'Latin', original: 'sudarium', translit: '', meaning: 'sweat-cloth, napkin (from sudor, sweat)' },
+      { lang: 'Greek', original: 'σουδάριον', translit: 'soudárion', meaning: 'face cloth, napkin (John 20:7; loan from Latin)' }
+    ],
     relatedIds: ['jesus', 'archaeology-shroud-of-turin'],
     parentId: 'biblical-apocryphal',
     name: 'Sudarium of Oviedo',
@@ -40706,6 +43656,9 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Studies of the Sudarium of Oviedo (Centro Español de Sindonología)', 'The Sudarium of Oviedo (Mark Guscin)', 'Gospel of John 20:7']
   }, {
     id: 'davids-mighty-men',
+    translations: [
+      { lang: 'Hebrew', original: 'גִּבּוֹר', translit: 'gibbôr', meaning: 'mighty man, warrior, hero (from gāḇar, to be strong); plural gibbôrîm' }
+    ],
     relatedIds: ['david_pat'],
     parentId: 'biblical-apocryphal',
     name: 'David\'s Mighty Men',
@@ -40716,6 +43669,9 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['2 Samuel 23', '1 Chronicles 11', 'Antiquities of the Jews (Josephus)']
   }, {
     id: 'mighty-men-jashobeam',
+    translations: [
+      { lang: 'Hebrew', original: 'יָשָׁבְעָם', translit: 'Yāšoḇʿām', meaning: 'the people will return (yāšûḇ, he returns + ʿām, people)' }
+    ],
     relatedIds: ['david_pat'],
     parentId: 'davids-mighty-men',
     name: 'Jashobeam',
@@ -40725,6 +43681,9 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['2 Samuel 23:8', '1 Chronicles 11:11']
   }, {
     id: 'mighty-men-eleazar',
+    translations: [
+      { lang: 'Hebrew', original: 'אֶלְעָזָר', translit: 'ʾElʿāzār', meaning: 'God has helped (ʾēl + ʿāzar, to help); Greek Lazaros' }
+    ],
     parentId: 'davids-mighty-men',
     name: 'Eleazar',
     description: 'Eleazar, son of Dodo the Ahohite, was one of the three primary mighty men. At Pas Dammim, he stood his ground against a Philistine army when the other Israelite soldiers retreated. He fought so intensely and for so long that his hand grew tired and froze to his sword. Fringe researchers highlight this physiological reaction as a potential state of ancient battle-trance or altered nervous state.',
@@ -40733,6 +43692,9 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['2 Samuel 23:9-10', '1 Chronicles 11:12']
   }, {
     id: 'mighty-men-shammah',
+    translations: [
+      { lang: 'Hebrew', original: 'שַׁמָּה', translit: 'Šammāh', meaning: 'desolation, astonishment (from šāmēm, to be desolate)' }
+    ],
     parentId: 'davids-mighty-men',
     name: 'Shammah',
     description: 'Shammah, son of Agee the Hararite, was the third member of the elite Three. When a Philistine raiding party gathered at a field of lentils and the Israelite army fled, Shammah took his stand in the middle of the field, defended it, and struck down the Philistines. The victory is cited as an example of localized divine intervention or defensive martial arts lost to history.',
@@ -40741,6 +43703,9 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['2 Samuel 23:11-12']
   }, {
     id: 'mighty-men-abishai',
+    translations: [
+      { lang: 'Hebrew', original: 'אֲבִישַׁי', translit: 'ʾĂḇîšay', meaning: 'my father is a gift (ʾāḇî + šay); or \'my father is Jesse\'' }
+    ],
     relatedIds: ['david_pat'],
     parentId: 'davids-mighty-men',
     name: 'Abishai',
@@ -40750,6 +43715,9 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['2 Samuel 23:18-19', '2 Samuel 21:16-17']
   }, {
     id: 'mighty-men-benaiah',
+    translations: [
+      { lang: 'Hebrew', original: 'בְּנָיָהוּ', translit: 'Bənāyāhû', meaning: 'Yahweh has built (bānāh, to build + Yāhû)' }
+    ],
     parentId: 'davids-mighty-men',
     name: 'Benaiah',
     description: 'Benaiah, son of Jehoiada, was a legendary mighty man who commanded David\'s bodyguard. He is famous for three exploits: slaying two of Moab\'s greatest warriors (ariels/lion-like men), descending into a pit on a snowy day to kill a wild lion, and killing a giant Egyptian with the giant\'s own spear. Alternate historians argue Benaiah was a specialist in neutralizing genetic hybrids and Nephilim descendants.',
@@ -40758,6 +43726,9 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['2 Samuel 23:20-23', '1 Chronicles 11:22-25']
   }, {
     id: 'ariels-of-moab',
+    translations: [
+      { lang: 'Hebrew', original: 'אֲרִיאֵל', translit: 'ʾĂrîʾēl', meaning: 'lion of God (ʾărî, lion + ʾēl, God); also \'altar hearth\' (Ezekiel 43:15)' }
+    ],
     parentId: 'biblical-apocryphal',
     name: 'Ariels of Moab (Lion-like Men)',
     description: 'Mentioned in 2 Samuel 23:20 as two "ariels" (literally "lion of God" or "lion-like men") of Moab slain by Benaiah. Historical and theological analyses differ, but fringe researchers and alternative historians suggest the term describes half-human, half-animal hybrids resulting from ancient genetic experiments, or a remnant clan of Nephilim giants who wore animal headdresses and possessed beast-like strength.',
@@ -40767,6 +43738,10 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['2 Samuel 23:20', '1 Chronicles 11:22', 'Legends of the Jews (Louis Ginzberg)']
   }, {
     id: 'cynocephali-race',
+    translations: [
+      { lang: 'Greek', original: 'κυνοκέφαλοι', translit: 'kynoképhaloi', meaning: 'dog-headed ones (kýōn, kyn- \'dog\' + kephalḗ \'head\')' },
+      { lang: 'Latin', original: 'cynocephali', translit: '', meaning: 'dog-heads; Pliny\'s name for the race' }
+    ],
     relatedIds: ['anomaly-Ancient-Texts-pliny', 'anomaly-Ancient-Texts-marcopolo'],
     parentId: 'folklore-archetypes-comparative',
     name: 'Cynocephali',
@@ -40787,6 +43762,10 @@ export const TERM_TREE_DATA: TermNode[] = [
     sources: ['Medieval Syriac Chronicles', 'Moabite Stone Commentary', 'Lexicon of Hebrew Myths']
   }, {
     id: 'st-christopher-dogheaded',
+    translations: [
+      { lang: 'Greek', original: 'Χριστόφορος', translit: 'Christóphoros', meaning: 'Christ-bearer (Christós + phérein \'to carry\')' },
+      { lang: 'Greek', original: 'κυνοκέφαλος', translit: 'kynoképhalos', meaning: 'dog-headed (kýōn, kyn- \'dog\' + kephalḗ \'head\')' }
+    ],
     parentId: 'cynocephali-race',
     name: 'St. Christopher the Dogheaded Saint',
     description: 'In Eastern Orthodox iconography, Saint Christopher is frequently depicted with the head of a dog (known as Christopher Cynocephalus). Eastern Christian tradition relates he was a giant warrior from the land of the Cynocephali (dog-headed men) who converted to Christianity. In alternative history and werewolf lore, this iconography is interpreted literally as historical evidence of a genetic canine-human hybrid, or an ancient warrior clan practicing skinwalker-style transformation rituals.',
@@ -40809,6 +43788,9 @@ export const TERM_TREE_DATA: TermNode[] = [
 const chunk_bible_sources: TermNode[] = [
   {
     id: 'codex-vaticanus',
+    translations: [
+      { lang: 'Latin', original: 'Codex Vaticanus', translit: '', meaning: 'the book of the Vatican (Mons Vaticanus, a hill anciently linked to vates, seer, and vaticinium, prophecy)' }
+    ],
     relatedIds: ['vatican-central', 'codex-alexandrinus', 'bible-history-manuscripts', 'flood-myth-aztec-nahui-atl', 'new-testament'],
     parentId: 'ancient-texts',
     secondaryParentIds: ['christianity', 'catholicism'],
@@ -40821,6 +43803,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'codex-alexandrinus',
+    translations: [
+      { lang: 'Latin', original: 'codex', translit: '', meaning: 'tree trunk, block of wood; wooden writing tablet, hence a bound book (from caudex)' },
+      { lang: 'Greek', original: 'Ἀλέξανδρος', translit: 'Aléxandros', meaning: 'defender of men (alexō, to ward off + anēr, man), namesake of Alexandria' }
+    ],
     relatedIds: ['codex-sinaiticus', 'codex-vaticanus', 'new-testament'],
     parentId: 'ancient-texts',
     secondaryParentIds: ['christianity'],
@@ -40833,6 +43819,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'samaritan-pentateuch',
+    translations: [
+      { lang: 'Hebrew', original: 'שֹׁמְרִים', translit: 'Šōmərīm', meaning: 'keepers (of the Torah), the Samaritans\' own name; others derived it from Šōmərōn, Samaria' },
+      { lang: 'Greek', original: 'Πεντάτευχος', translit: 'Pentáteuchos', meaning: 'five scroll-cases, the five books (pente, five + teuchos, case, book)' }
+    ],
     relatedIds: ['masoretic-text', 'old-testament'],
     parentId: 'ancient-texts',
     secondaryParentIds: ['judaism'],
@@ -40845,6 +43835,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'masoretic-text',
+    translations: [
+      { lang: 'Hebrew', original: 'מָסוֹרָה', translit: 'Māsōrāh', meaning: 'tradition, that which is handed down (from māsar, to hand over, transmit)' }
+    ],
     relatedIds: ['samaritan-pentateuch', 'bible-kjv-1611', 'yhwh-tetragrammaton', 'old-testament'],
     parentId: 'ancient-texts',
     secondaryParentIds: ['judaism'],
@@ -40857,6 +43850,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'septuagint',
+    translations: [
+      { lang: 'Latin', original: 'Septuaginta', translit: '', meaning: 'seventy, for the seventy(-two) translators of legend' },
+      { lang: 'Greek', original: 'οἱ Ἑβδομήκοντα', translit: 'hoi Hebdomḗkonta', meaning: 'the Seventy, the Greek name of the translation' }
+    ],
     relatedIds: ['old-testament'],
     parentId: 'ancient-texts',
     secondaryParentIds: ['judaism', 'christianity'],
@@ -40869,6 +43866,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'rylands-papyri',
+    translations: [
+      { lang: 'Greek', original: 'πάπυρος', translit: 'pápyros', meaning: 'the papyrus plant and the writing material made from it; origin uncertain, perhaps Egyptian' }
+    ],
     relatedIds: ['new-testament'],
     parentId: 'ancient-texts',
     secondaryParentIds: ['christianity'],
@@ -40881,6 +43881,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'chester-beatty-papyri',
+    translations: [
+      { lang: 'Greek', original: 'πάπυρος', translit: 'pápyros', meaning: 'the papyrus plant and the writing material made from it; origin uncertain, perhaps Egyptian' }
+    ],
     relatedIds: ['new-testament'],
     parentId: 'ancient-texts',
     secondaryParentIds: ['christianity'],
@@ -40893,6 +43896,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'bodmer-papyri',
+    translations: [
+      { lang: 'Greek', original: 'πάπυρος', translit: 'pápyros', meaning: 'the papyrus plant and the writing material made from it; origin uncertain, perhaps Egyptian' }
+    ],
     relatedIds: ['new-testament'],
     parentId: 'ancient-texts',
     secondaryParentIds: ['christianity'],
@@ -40905,6 +43911,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'oxyrhynchus-papyri',
+    translations: [
+      { lang: 'Greek', original: 'Ὀξύρρυγχος', translit: 'Oxýrrhynchos', meaning: 'sharp-snouted, after the fish sacred there (oxys, sharp + rhynchos, snout)' },
+      { lang: 'Egyptian', original: 'pr-mḏd', translit: 'Per-Medjed', meaning: 'house of the medjed fish, the town\'s Egyptian name' }
+    ],
     parentId: 'ancient-texts',
     secondaryParentIds: ['christianity'],
     name: 'Oxyrhynchus Papyri',
@@ -40916,6 +43926,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'ketef-hinnom',
+    translations: [
+      { lang: 'Hebrew', original: 'כֶּתֶף הִנֹּם', translit: 'Keṯef Hinnōm', meaning: 'shoulder (slope) of Hinnom' },
+      { lang: 'Hebrew', original: 'גֵּיא בֶן־הִנֹּם', translit: 'Gê ḇen-Hinnōm', meaning: 'valley of the son of Hinnom, source of the Greek Gehenna' }
+    ],
     relatedIds: ['old-testament'],
     parentId: 'ancient-texts',
     secondaryParentIds: ['judaism'],
@@ -40928,6 +43942,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'vulgate',
+    translations: [
+      { lang: 'Latin', original: 'versio vulgata', translit: '', meaning: 'the common version, the one in general circulation (vulgus, the common people)' }
+    ],
     relatedIds: ['fae-gamadim', 'bible-gutenberg-1455', 'bible-kjv-1611', 'new-testament'],
     parentId: 'ancient-texts',
     secondaryParentIds: ['christianity', 'catholicism'],
@@ -40940,6 +43957,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'peshitta',
+    translations: [
+      { lang: 'Syriac', original: 'ܦܫܝܛܬܐ', translit: 'Pšīṭtā', meaning: 'simple, straightforward (version), from pšaṭ, to stretch out, make plain' }
+    ],
     relatedIds: ['new-testament'],
     parentId: 'ancient-texts',
     secondaryParentIds: ['christianity'],
@@ -40964,6 +43984,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'archaeology-nuku-hiva-tiki',
+    translations: [
+      { lang: 'Marquesan', original: 'tiki', translit: '', meaning: 'carved human figure; the first man in Polynesian myth' }
+    ],
     parentId: 'megaliths',
     name: 'Nuku Hiva Tiki Statues',
     description: 'Dozens of squat stone figures with swollen heads, enormous staring eyes and bodies unlike any later Polynesian art stand in the ceremonial me\'ae of Nuku Hiva. Islanders carved them at the very founding of the settlement, roughly a thousand years ago. Alternative researchers point to the oversized craniums and reptilian eyes as a sculpted record of the beings the islanders met, or descended from: the same \'gods\' remembered across the Pacific as giants who came down from the sky.',
@@ -40987,6 +44010,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'archaeology-monte-sierpe',
+    translations: [
+      { lang: 'Spanish', original: 'Monte Sierpe', translit: '', meaning: 'serpent hill' },
+      { lang: 'Latin', original: 'serpens', translit: '', meaning: 'creeping thing, snake (from serpere, to creep)' }
+    ],
     parentId: 'geoglyphs-br',
     name: 'Monte Sierpe \'Band of Holes\'',
     description: 'Roughly 5,200 pits, each about a metre wide, march in a precise serpentine band for 1.5 kilometres across a hillside above the Pisco Valley. Archaeologists guess at storage, tribute accounting or defence, but no one has found a single artefact to settle it. From the air the line reads like a coded strip, a tally stick for giants, or the spine of the serpent the site is named for.',
@@ -41011,6 +44038,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'archaeology-dara',
+    translations: [
+      { lang: 'Greek', original: 'Ἀναστασιούπολις', translit: 'Anastasioúpolis', meaning: 'city of Anastasius (the emperor who fortified Dara in 505)' },
+      { lang: 'Greek', original: 'ἀνάστασις', translit: 'anástasis', meaning: 'resurrection (source of the name Anastasius)' }
+    ],
     parentId: 'megaliths',
     name: 'Dara-Anastasiupolis Rock-Cut City',
     description: 'A Byzantine frontier fortress carved straight down into the bedrock of northern Mesopotamia: cisterns the size of cathedrals, a necropolis cut into cliffs, galleries that run under the whole town. The outer walls appear slumped and melted while the chambers inside are crisp and intact. Theorists ask what kind of heat deforms a fortress from the outside without touching its heart, and whether the history of the \'builders\' was simply re-dated to the emperor who repaired it.',
@@ -41045,6 +44076,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'archaeology-mount-nemrut',
+    translations: [
+      { lang: 'Turkish', original: 'Nemrut Dağı', translit: '', meaning: 'mountain of Nimrod' },
+      { lang: 'Hebrew', original: 'נִמְרוֹד', translit: 'Nimrōd', meaning: 'meaning uncertain; traditionally linked to marad, to rebel' }
+    ],
     parentId: 'megaliths',
     name: 'Mount Nemrut Colossal Heads',
     description: 'On a 2,100-metre summit King Antiochus I of Commagene raised a tumulus of crushed stone flanked by enthroned colossi of himself seated among Zeus, Apollo, Heracles and the goddess of Commagene. Their heads, each the height of a man, now sit toppled in the gravel. Antiochus declared himself the equal of the gods and had his horoscope carved in a stone lion: the same claim that got the Watchers\' offspring destroyed, repeated by a king who wanted to be worshipped on a mountain.',
@@ -41092,6 +44127,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'archaeology-vishaps',
+    translations: [
+      { lang: 'Armenian', original: 'վիշապ', translit: 'višap', meaning: 'dragon, serpent-monster (an Iranian loanword)' }
+    ],
     parentId: 'megaliths',
     name: 'Armenian Vishaps (Dragon Stones)',
     description: 'Up to five metres tall and eight tons each, these monoliths stand beside high mountain springs carved as fish, bulls\' hides and serpents. A survey of 115 of them found they were deliberately placed above the water sources of the plains below. Armenian legend calls them dragon stones, planted where the vishap, the dragon of the deep, was bound: the serpent of Eden pinned at the headwaters, exactly where a people who remembered the Flood would put it.',
@@ -41104,6 +44142,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'archaeology-sakafuneishi',
+    translations: [
+      { lang: 'Japanese', original: '酒船石', translit: 'Sakafune-ishi', meaning: 'sake-boat stone (sake, rice wine + fune, boat, vat + ishi, stone)' }
+    ],
     parentId: 'megaliths',
     name: 'Sakafune-ishi Carved Stone',
     description: 'A five-metre granite slab on a hilltop in Japan\'s ancient capital, cut with shallow basins joined by straight channels, like a circuit board or a distillation bench. Later scholars decided it was for brewing sake; it isn\'t. Along with the nearby Masuda-no-Iwafune \'rock ship\', Asuka\'s carved monoliths point to a technology, or a ritual chemistry, the official chronicles never explain.',
@@ -41115,6 +44156,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'archaeology-lomas-rishi',
+    translations: [
+      { lang: 'Sanskrit', original: 'लोमश', translit: 'Lomaśa', meaning: 'hairy; name of a legendary sage' },
+      { lang: 'Sanskrit', original: 'ऋषि', translit: 'ṛṣi', meaning: 'seer, sage' }
+    ],
     parentId: 'megaliths',
     name: 'Lomas Rishi Cave',
     description: 'A sanctuary hollowed from a single granite hill with walls polished to a mirror finish that still rings like a bell when struck. Its ogee entrance imitates timber architecture in solid rock, carved supposedly with iron chisels in the age of Ashoka. The acoustics and the glass-smooth surfaces have convinced many that the Barabar caves were not cut by hand at all, but by a lost technique of working stone the ancient world shared from Egypt to India.',
@@ -41162,6 +44207,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'archaeology-colossus-apennines',
+    translations: [
+      { lang: 'Greek', original: 'κολοσσός', translit: 'kolossós', meaning: 'gigantic statue (a pre-Greek word)' },
+      { lang: 'Latin', original: 'colossus', translit: '', meaning: 'colossal statue' }
+    ],
     parentId: 'megaliths',
     name: 'Colossus of the Apennines',
     description: 'A ten-metre giant crouches over a pond in a Medici garden north of Florence, brick and stone fused into a mountain-god with rooms and a fireplace inside his body, so that in winter smoke poured from his nostrils. Giambologna is credited with building him in 1580. For those who collect the giants on the earth in those days, the Colossus is the Renaissance remembering, in the only language it was allowed, what once walked the Apennines.',
@@ -41186,6 +44235,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'archaeology-domus-de-janas',
+    translations: [
+      { lang: 'Sardinian', original: 'domus de janas', translit: '', meaning: 'houses of the fairies (janas)' },
+      { lang: 'Latin', original: 'Diana', translit: '', meaning: 'the goddess Diana, the probable source of Sardinian jana, fairy' }
+    ],
     parentId: 'megaliths',
     name: 'Grutta \'e Janas (Fairy Houses)',
     description: 'More than three thousand chambers cut into Sardinian cliffs, with carved doorways, false ceilings imitating wooden beams and bulls\' horns in red ochre on the walls. The islanders have always called them domus de janas, the houses of the fairies, small beings who were there before men. The folk memory of a prior, non-human race living in the rock is the same one the Bible attributes to the generations before the Flood.',
@@ -41221,6 +44274,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'archaeology-ark-of-bukhara',
+    translations: [
+      { lang: 'Persian', original: 'ارگ', translit: 'arg', meaning: 'citadel, fortress' },
+      { lang: 'Sanskrit', original: 'विहार', translit: 'vihāra', meaning: 'Buddhist monastery; the traditional but disputed source of the name Bukhara' }
+    ],
     parentId: 'megaliths',
     name: 'Ark of Bukhara Citadel',
     description: 'A mudbrick mountain in the centre of one of the oldest cities on the Silk Road, rebuilt so many times that its earliest layers reach back before Islam, before Alexander, into the fog of the first Sogdian kings. The emirs ruled from it until the Red Army shelled it in 1920. Legend ties its foundation to the hero Siyavush of the Shahnameh, which makes the Ark a fortress built on a myth older than its own name.',
@@ -41245,6 +44302,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'archaeology-sumela-monastery',
+    translations: [
+      { lang: 'Greek', original: 'Σουμελά', translit: 'Soumelá', meaning: 'traditionally from Pontic sou Melá, \'on (Mount) Melas\'' },
+      { lang: 'Greek', original: 'μέλας', translit: 'mélas', meaning: 'black, dark' }
+    ],
     parentId: 'megaliths',
     name: 'Sümela Monastery',
     description: 'A Greek Orthodox monastery glued to a sheer cliff three hundred metres above the Altındere valley, founded in 386 by two Athenian monks who followed an icon of the Virgin said to have been painted by Luke. The question the guidebooks skip is why anyone would build here at all, and whether the ledge was cut and the rock-face chambers hollowed by builders long before the monks arrived to sanctify them.',
@@ -41350,6 +44411,11 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'archaeology-merneptah-stele',
+    translations: [
+      { lang: 'Egyptian', original: 'mr-n-ptḥ', translit: 'Merneptah', meaning: 'beloved of Ptah' },
+      { lang: 'Egyptian', original: 'ysrjꜣr', translit: 'Israel', meaning: 'Israel (the stele\'s spelling, with the determinative for a people)' },
+      { lang: 'Hebrew', original: 'יִשְׂרָאֵל', translit: 'Yiśrāʾēl', meaning: 'he strives with God / God strives (śārāh + ʾēl; Genesis 32:28)' }
+    ],
     parentId: 'biblical-discoveries',
     name: 'Merneptah Stele (\'Israel Stele\')',
     description: 'On a black granite victory stele Pharaoh Merneptah boasts that \'Israel is laid waste, its seed is no more.\' It is the earliest mention of Israel outside the Bible, and it puts a people by that name in Canaan by 1208 BCE, already settled enough to be worth destroying. The pharaoh meant it as an obituary. Three thousand years later his empire is dust and the people he wrote off still carry the name.',
@@ -41374,6 +44440,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'archaeology-cyprus-wheeled-stands',
+    translations: [
+      { lang: 'Hebrew', original: 'מְכוֹנָה', translit: 'məḵônāh', meaning: 'stand, base (1 Kings 7:27; from kûn, to set up, establish)' },
+      { lang: 'Greek', original: 'Κύπρος', translit: 'Kýpros', meaning: 'Cyprus; origin uncertain; source of Latin cuprum, copper (aes Cyprium)' }
+    ],
     parentId: 'biblical-discoveries',
     name: 'Cypriot Bronze Wheeled Stands (1 Kings 7)',
     description: 'Bronze stands on four wheels with openwork panels of lions, oxen and cherubim, cast in Cyprus in the twelfth century BCE and now in the British Museum. First Kings 7 describes Hiram of Tyre making ten bronze wheeled stands for Solomon\'s Temple with exactly those decorations. Critics called the Temple account a later fiction; the stands show the craft, the imagery and the Phoenician workshops were real and precisely as the text describes.',
@@ -41386,6 +44456,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'archaeology-sea-peoples',
+    translations: [
+      { lang: 'Egyptian', original: 'prst', translit: 'Peleset', meaning: 'a Sea People named at Medinet Habu, identified with the Philistines' },
+      { lang: 'Hebrew', original: 'פְּלִשְׁתִּי', translit: 'Pəlištî', meaning: 'Philistine (plural Pəlištîm); via Greek Palaistínē, source of \'Palestine\'' }
+    ],
     parentId: 'biblical-discoveries',
     name: 'The Sea Peoples & the Bronze Age Collapse',
     description: 'Around 1177 BCE a confederation of sea-borne raiders, the Peleset, Sherden, Shekelesh and others, burned the Hittite empire, Ugarit and the Mycenaean palaces and were only stopped on the Nile delta by Ramesses III, who carved the battle on his temple at Medinet Habu. The Peleset settled the coast and became the Philistines of Goliath and Samson. The Bible\'s giants-in-the-land narrative begins exactly where Egypt\'s records of the invasion leave off.',
@@ -41398,6 +44472,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'archaeology-abydos-king-list',
+    translations: [
+      { lang: 'Egyptian', original: 'ꜣbḏw', translit: 'Abdju', meaning: 'the Egyptian name of Abydos (Greek Ábydos)' },
+      { lang: 'Egyptian', original: 'stẖy', translit: 'Sety', meaning: '\'he of Seth\', man of the god Set (the name Seti)' }
+    ],
     parentId: 'biblical-discoveries',
     name: 'Abydos King List of Seti I',
     description: 'Seventy-six cartouches of pharaohs from Menes to Seti I carved in the Temple of Seti at Abydos, the official memory of Egypt as the priests wanted it. Hatshepsut, Akhenaten and the Amarna kings are simply missing, erased from the lineage. A king list that openly edits out inconvenient rulers is a lesson in how every dynasty, ancient and modern, curates its past, and why the records that survive are never the whole story.',
@@ -41820,6 +44898,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'archaeology-quinametzin-giants',
+    translations: [
+      { lang: 'Nahuatl', original: 'Quinametzin', translit: '', meaning: 'giants (plural of quinametli \'giant\', with honorific -tzin)' }
+    ],
     parentId: 'nephilim-br',
     name: 'The Quinametzin Giants of the Previous Sun',
     description: 'The Aztecs taught that the world before ours belonged to the Quinametzin, giants who raised the pyramids of Teotihuacan and Cholula and were wiped out when the sun of that age was destroyed. Spanish friars recorded Tlaxcalans digging up enormous bones as proof, and Cortés was shown a femur the height of a man. A giant race that built the great monuments and was annihilated by a world-ending judgement is Genesis 6 told in Nahuatl.',
@@ -41898,6 +44979,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'eridu-genesis',
+    translations: [
+      { lang: 'Sumerian', original: '𒉣𒆠', translit: 'Eridug (NUN.KI)', meaning: 'Eridu; disputed, usually \'mighty place\', also read eri-dug \'good city\'' }
+    ],
     parentId: 'ancient-flood-myths',
     name: 'Eridu Genesis (Sumerian Flood Story)',
     description: 'A single broken tablet from Nippur, written around 1600 BCE, preserves the oldest version of the Flood: the gods create mankind, found the first five cities beginning with Eridu, grant kingship from heaven, then resolve to drown the world. The pious king Ziusudra is warned by the god Enki, builds a boat, survives the seven-day deluge and is granted eternal life. Every element of Genesis 6-9 is here, a thousand years before Moses, in the language of the city the Bible calls Babel.',
@@ -42016,6 +45100,11 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'occult-grimoires',
+    translations: [
+      { lang: 'Greek', original: 'γραμματική', translit: 'grammatikē', meaning: 'the art of letters (from gramma, letter)' },
+      { lang: 'Latin', original: 'grammatica', translit: '', meaning: 'grammar, Latin learning' },
+      { lang: 'Old French', original: 'gramaire', translit: '', meaning: 'grammar; a book of Latin learning, hence a book of spells (modern French grimoire)' }
+    ],
     parentId: 'alchemy-occult',
     name: 'Grimoires & Occult Books',
     description: 'The working manuals of Western magic: books of spirits, seals, conjurations and correspondences passed from Hellenistic Egypt through medieval Jewish and Arabic scholars into the Renaissance and the modern occult revival. Most claim an ancient author, Solomon, Hermes, Moses, Enoch, and most were written far later than they say. Together they form the counter-scripture: the library of those who sought to command what the Bible says to flee.',
@@ -42026,6 +45115,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'picatrix',
+    translations: [
+      { lang: 'Arabic', original: 'غاية الحكيم', translit: 'Ghāyat al-Ḥakīm', meaning: 'the goal of the sage (ghāya, aim + ḥakīm, wise man)' },
+      { lang: 'Latin', original: 'Picatrix', translit: '', meaning: 'uncertain; perhaps a garbling of Arabic Buqrāṭīs, Hippocrates, taken as the author\'s name' }
+    ],
     parentId: 'occult-grimoires',
     name: 'Picatrix (Ghāyat al-Ḥakīm)',
     description: 'The \'Aim of the Sage,\' compiled in Arabic in eleventh-century Spain and translated for Alfonso X, is the great textbook of astral magic: how to draw the powers of the planets and the lunar mansions into talismans at the right hour. Its recipes include the vilest ingredients in any grimoire. It fed Agrippa and the Florentine Platonists, and it is the clearest surviving bridge between the star-worship of Babylon and the magic of Renaissance Europe.',
@@ -42035,6 +45128,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'three-books-occult-philosophy',
+    translations: [
+      { lang: 'Latin', original: 'De Occulta Philosophia Libri Tres', translit: '', meaning: 'three books on hidden philosophy (occultus, hidden + philosophia, love of wisdom)' }
+    ],
     parentId: 'occult-grimoires',
     name: 'Three Books of Occult Philosophy',
     description: 'Agrippa\'s 1533 summa of natural, celestial and ceremonial magic: the virtues of stones and herbs, the numbers and seals of the planets, the names and orders of angels and demons. It made Kabbalah, astrology and conjuration respectable reading for Christian scholars, and nearly every later system quietly copies its tables. A spurious \'Fourth Book\' of practical spirit-summoning was added after his death and is the part the sorcerers actually used.',
@@ -42045,6 +45141,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'malleus-maleficarum',
+    translations: [
+      { lang: 'Latin', original: 'malleus', translit: '', meaning: 'hammer, mallet' },
+      { lang: 'Latin', original: 'malefica', translit: '', meaning: 'female evildoer, witch (male, badly + facere, to do); genitive plural maleficarum' }
+    ],
     parentId: 'occult-grimoires',
     name: 'Malleus Maleficarum (Hammer of Witches)',
     description: 'Not a grimoire but its mirror: the 1486 manual by the Dominican inquisitor Heinrich Kramer that taught magistrates how to identify, interrogate and burn witches, and that witchcraft was real, feminine and a pact with the devil. Printed more often than any book but the Bible for two centuries, it supplied the legal machinery for tens of thousands of executions. The book that defined the witch defined her by what it feared.',
@@ -42063,6 +45163,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'book-of-the-law',
+    translations: [
+      { lang: 'Latin', original: 'Liber AL vel Legis', translit: '', meaning: 'Book AL, or of the Law (liber, book + lex, law); AL is Hebrew ʾēl, God' }
+    ],
     parentId: 'occult-grimoires',
     name: 'The Book of the Law (Liber AL vel Legis)',
     description: 'Dictated to Aleister Crowley in a Cairo hotel room over three days in April 1904 by a voice he called Aiwass, the book announces a new aeon under the law \'Do what thou wilt,\' abolishes the religions of the past and proclaims Crowley its prophet. It is the scripture of Thelema and of every order descended from it. Crowley said he did not like its contents; he simply obeyed them.',
@@ -42073,6 +45176,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'corpus-hermeticum',
+    translations: [
+      { lang: 'Latin', original: 'corpus', translit: '', meaning: 'body; a collected body of writings' },
+      { lang: 'Greek', original: 'Ἑρμῆς', translit: 'Hermēs', meaning: 'the god Hermes, identified with Egyptian Thoth as Hermes Trismegistus' }
+    ],
     parentId: 'occult-grimoires',
     name: 'Corpus Hermeticum',
     description: 'Seventeen Greek treatises in which Hermes Trismegistus, the \'thrice-great\' fusion of Thoth and Hermes, teaches the ascent of the soul through the planetary spheres to the divine Mind. When Ficino translated them for the Medici in 1463 they were believed to predate Moses; they were actually written in Roman Egypt. \'As above, so below\' is their creed, and the Renaissance magus, the Rosicrucian and the Freemason all took it as their starting point.',
@@ -42083,6 +45190,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'sefer-raziel',
+    translations: [
+      { lang: 'Hebrew', original: 'סֵפֶר רָזִיאֵל הַמַּלְאָךְ', translit: 'Sēfer Rāzîʾēl ha-Malʾāḵ', meaning: 'Book of Raziel the Angel' },
+      { lang: 'Hebrew', original: 'רָזִיאֵל', translit: 'Rāzîʾēl', meaning: 'secret of God (rāz, secret, an Aramaic loan + ʾēl, God)' }
+    ],
     relatedIds: ['3-enoch-hekhalot', 'enoch3-sar-torah'],
     parentId: 'occult-grimoires',
     name: 'Sefer Raziel HaMalakh',
@@ -42093,6 +45204,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'necronomicon',
+    translations: [
+      { lang: 'Greek', original: 'νεκρός', translit: 'nekros', meaning: 'dead body, corpse' },
+      { lang: 'Greek', original: 'νόμος', translit: 'nomos', meaning: 'law, custom; Lovecraft\'s coinage, glossed by him as \'an image of the law of the dead\'' }
+    ],
     relatedIds: ['hp-lovecraft'],
     parentId: 'occult-grimoires',
     name: 'The Necronomicon',
@@ -42132,6 +45247,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'sworn-book-of-honorius',
+    translations: [
+      { lang: 'Latin', original: 'Liber Iuratus Honorii', translit: '', meaning: 'the sworn book of Honorius (iuratus, bound by oath, from iurare, to swear)' }
+    ],
     parentId: 'occult-grimoires',
     name: 'The Sworn Book of Honorius',
     description: 'Written in the thirteenth century and attributed to \'Honorius of Thebes,\' this is the oldest surviving grimoire of its kind, a manual for obtaining the beatific vision and commanding spirits through a 28-day regimen of prayers, fasting and seals drawn in blood. Its preface says the magicians of the world met in council and distilled their art into this one book, each swearing to keep only three copies. The oath gave the book its name and its aura.',
@@ -42150,6 +45268,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'archaeology-fomorians',
+    translations: [
+      { lang: 'Old Irish', original: 'Fomoire', translit: '', meaning: 'the under-ones (fo \'under\' + disputed element: muir \'sea\', mór \'great\', or \'phantom\')' }
+    ],
     parentId: 'nephilim-br',
     name: 'The Fomorians',
     description: 'Ireland\'s first monstrous race: sea-giants who held the island before the gods of the Tuatha Dé Danann, ruled from a glass tower on Tory Island by Balor of the evil eye, and were broken at the second battle of Moytura. The monks who wrote the lore down placed them, pointedly, as descendants of Ham after the Flood. A race of giants from across the sea, half-divine and hostile, defeated in a war of gods: it is the Nephilim story with an Atlantic accent.',
@@ -42162,6 +45283,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'archaeology-gigantes-pallene',
+    translations: [
+      { lang: 'Greek', original: 'Γίγαντες', translit: 'Gígantes', meaning: 'the Giants, earth-born sons of Gaia; name of uncertain, pre-Greek origin' },
+      { lang: 'Greek', original: 'Γιγαντομαχία', translit: 'Gigantomachía', meaning: 'battle of the Giants (máchē \'battle\')' }
+    ],
     parentId: 'nephilim-br',
     name: 'The Gigantes & the Gigantomachy',
     description: 'Born from the blood of the castrated Uranus falling on the Earth, the Gigantes rose against Olympus from the plain of Phlegra on the Pallene peninsula, hurling mountains until Heracles and the gods buried them under volcanoes. Classical writers said the giants\' bones were still being dug out of Pallene. A race born of a divine wound, warring on heaven and entombed in the earth by a god: Hesiod and Genesis are telling the same story from two sides of the Mediterranean.',
@@ -42174,6 +45299,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'archaeology-daityas-mahabali',
+    translations: [
+      { lang: 'Sanskrit', original: 'दैत्य', translit: 'daitya', meaning: 'descendant of Diti, the mother of the giant asuras' },
+      { lang: 'Sanskrit', original: 'महाबलि', translit: 'Mahābali', meaning: 'great Bali (mahā \'great\' + bali \'offering, tribute\')' }
+    ],
     parentId: 'nephilim-br',
     name: 'The Daityas & King Mahabali',
     description: 'The Daityas, giant sons of the goddess Diti, are the asuras who fought the gods for the three worlds in the Puranas. The greatest of them, Mahabali, ruled so justly that Vishnu had to descend as a dwarf to trick him into surrendering heaven and earth and push him into the underworld with one foot. Kerala still celebrates his annual return at Onam. A righteous giant king, banished below by a god who came in disguise, is a figure the authors of Enoch would have recognised.',
@@ -42197,6 +45326,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'archaeology-gogmagog',
+    translations: [
+      { lang: 'Hebrew', original: 'גּוֹג וּמָגוֹג', translit: 'Gôg û-Māgôg', meaning: 'Ezekiel\'s hostile prince and his land (Ezekiel 38–39); meanings uncertain' },
+      { lang: 'Latin', original: 'Goemagot', translit: '', meaning: 'Geoffrey of Monmouth\'s name for the giant of Albion, fused from Gog and Magog' }
+    ],
     parentId: 'nephilim-br',
     name: 'Gogmagog & the Giants of Albion',
     description: 'When Brutus of Troy landed in Britain it was inhabited only by giants; their chief, Gogmagog, twelve cubits tall, was wrestled by Corineus and thrown from the cliff at Plymouth Hoe, where chalk figures of the pair were cut into the turf and maintained until the seventeenth century. Geoffrey of Monmouth\'s giants of Albion were the island\'s original owners, and his name for their king is Ezekiel\'s Gog and Magog fused into one. Britain\'s founding legend is a giant-killing.',
@@ -42209,6 +45342,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'archaeology-antaeus-tangier',
+    translations: [
+      { lang: 'Greek', original: 'Ἀνταῖος', translit: 'Antaîos', meaning: 'set against, opponent (from antí \'against\')' }
+    ],
     parentId: 'nephilim-br',
     name: 'Antaeus, Giant of Libya',
     description: 'Son of Poseidon and the Earth, Antaeus forced every traveller through Libya to wrestle him and roofed his father\'s temple with their skulls; he could not be beaten while he touched the ground, so Heracles lifted him into the air and crushed him. Plutarch records that the Roman general Sertorius opened the giant\'s tomb at Tangier and found a body sixty cubits long. Tangier\'s own founding legend says the city was built by his widow. The Romans believed the skeleton; the question is what they actually dug up.',
@@ -42244,6 +45380,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'archaeology-jentilak-aralar',
+    translations: [
+      { lang: 'Latin', original: 'gentilis', translit: '', meaning: 'of a clan or nation; heathen, gentile' },
+      { lang: 'Basque', original: 'jentilak', translit: '', meaning: 'the gentiles, pagans (plural of jentil, from Latin gentilis)' }
+    ],
     parentId: 'nephilim-br',
     name: 'The Jentilak, Basque Giants of the Dolmens',
     description: 'Basque tradition names the builders of the Pyrenean dolmens and cromlechs as the jentilak, pagan giants who hurled rocks between mountaintops, taught men to forge iron and grow wheat, and retreated under the earth when a luminous cloud announced the birth of Christ, leaving only Olentzero behind. The oldest surviving people of Europe remember the megalith-builders as giants who knew the sky was changing. The dolmens are still there; the Basques never claimed to have built them.',
@@ -42256,6 +45396,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'archaeology-emim-moab',
+    translations: [
+      { lang: 'Hebrew', original: 'אֵימִים', translit: 'ʾÊmîm', meaning: 'terrors, fearsome ones (from ʾêmāh \'dread\')' },
+      { lang: 'Hebrew', original: 'זַמְזֻמִּים', translit: 'Zamzummîm', meaning: 'meaning uncertain; traditionally \'murmurers, buzzers\' (zāmam)' }
+    ],
     parentId: 'nephilim-br',
     name: 'The Emim & Zamzummim of Moab',
     description: 'Deuteronomy 2 records, almost in passing, that the plains of Moab and Ammon were held before Lot\'s descendants by the Emim and the Zamzummim, \'a people great, and many, and tall, as the Anakims,\' giants whom the Lord destroyed so that Moab could have the land, just as He would destroy the Anakim before Israel. Genesis 14 has Chedorlaomer\'s coalition smiting the Emim at Shaveh-Kiriathaim. The Transjordan was giant country from Bashan to the Dead Sea, and the Bible treats their removal as a pattern.',
@@ -42268,6 +45412,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'archaeology-cyclopes-etna',
+    translations: [
+      { lang: 'Greek', original: 'Κύκλωψ', translit: 'Kýklōps', meaning: 'round-eyed (kýklos \'circle\' + ṓps \'eye\')' },
+      { lang: 'Greek', original: 'Πολύφημος', translit: 'Polýphēmos', meaning: 'much-spoken-of, famous (polýs \'many\' + phḗmē \'speech, report\')' }
+    ],
     parentId: 'nephilim-br',
     name: 'The Cyclopes & Polyphemus',
     description: 'One-eyed giants of two kinds: the three elder Cyclopes who forged Zeus\'s thunderbolt under Etna, and the lawless shepherd-giants of Homer who kept no assemblies and ate men, among them Polyphemus, blinded by Odysseus in his cave. The Sicilians showed the giant\'s cave and the rocks he threw. Dwarf-elephant skulls found in Sicilian caves, with a single nasal cavity in the forehead, are the mainstream explanation; the Greeks who found them had no doubt what they were looking at.',
@@ -42510,6 +45658,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'fulfilled-prophecies',
+    translations: [
+      { lang: 'Hebrew', original: 'נָבִיא', translit: 'nāḇîʾ', meaning: 'prophet, spokesman (cf. Akkadian nabû, to call, name)' },
+      { lang: 'Greek', original: 'προφήτης', translit: 'prophḗtēs', meaning: 'one who speaks forth or on behalf of (pró + phēmí, to speak)' }
+    ],
     parentId: 'biblical-events',
     name: 'Fulfilled Biblical Prophecies',
     description: 'The Bible stakes its entire authority on prophecy: \'I am God, and there is none like me, declaring the end from the beginning\' (Isaiah 46:9-10). Roughly a quarter of Scripture was predictive when written, and the prophecies about named cities, named kings and the Messiah were fulfilled in verifiable history - Tyre scraped bare, Babylon left uninhabited, Cyrus called by name 150 years before his birth, the Messiah born in Bethlehem and cut off in the exact window Daniel counted. This branch tracks the prophecies that have already come true on the map and the timeline; the ones still outstanding live under Future Prophecy. Compare them with the hedged quatrains of Nostradamus or the hearsay of Baba Vanga and the difference is obvious: God names the city, the king and the year.',
@@ -42520,6 +45672,11 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'prophecy-tyre-ezekiel-26',
+    translations: [
+      { lang: 'Phoenician', original: '𐤑𐤓', translit: 'Ṣur', meaning: 'rock' },
+      { lang: 'Hebrew', original: 'צֹר', translit: 'Ṣōr', meaning: 'rock; Tyre, the island-city' },
+      { lang: 'Greek', original: 'Τύρος', translit: 'Tyros', meaning: 'Tyre (via Phoenician Ṣur)' }
+    ],
     parentId: 'fulfilled-prophecies',
     name: 'Tyre Scraped Bare (Ezekiel 26)',
     description: 'Around 586 BC Ezekiel declared that \'many nations\' would come against the proud merchant city of Tyre, that its stones, timber and even its dust would be thrown into the sea, and that it would become \'a place to spread nets\' (Ezekiel 26:3-14). Nebuchadnezzar razed the mainland city after a 13-year siege, and in 332 BC Alexander the Great literally scraped the ruins into the sea to build a causeway out to the island fortress - the rubble of old Tyre is still under that mole today. Fishermen dry their nets on the bare rock exactly as written. A prophecy with that many moving parts does not come true by accident.',
@@ -42532,6 +45689,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'prophecy-babylon-isaiah-13',
+    translations: [
+      { lang: 'Akkadian', original: 'Bāb-ili', translit: '', meaning: 'gate of god (bāb, gate + ilu, god)' },
+      { lang: 'Hebrew', original: 'בָּבֶל', translit: 'Bāḇel', meaning: 'Babylon; Gen 11:9 links it to bālal, \'to confuse\'' }
+    ],
     parentId: 'fulfilled-prophecies',
     name: 'Babylon Never Inhabited Again (Isaiah 13)',
     description: 'Isaiah and Jeremiah both foretold that Babylon, \'the glory of kingdoms,\' would be overthrown like Sodom and \'never be inhabited, nor dwelt in from generation to generation; neither shall the Arabian pitch tent there\' (Isaiah 13:19-20; Jeremiah 51:26). The city fell to Cyrus in a single night in 539 BC while Belshazzar feasted (Daniel 5), then decayed under Persians, Greeks and Parthians until it was an empty mound. Alexander tried to rebuild it and died there; Saddam Hussein tried again in the 1980s and his palace sits abandoned beside the ruins. Mystery Babylon still waits for the final verdict of Revelation 18.',
@@ -42544,6 +45705,11 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'prophecy-nineveh-nahum',
+    translations: [
+      { lang: 'Hebrew', original: 'נַחוּם', translit: 'Naḥûm', meaning: 'comfort, consolation (from nāḥam, to comfort)' },
+      { lang: 'Akkadian', original: 'Ninua', translit: '', meaning: 'Nineveh; meaning uncertain, traditionally linked to the goddess Nina' },
+      { lang: 'Hebrew', original: 'נִינְוֵה', translit: 'Nînəwēh', meaning: 'Nineveh (Hebrew form of Akkadian Ninua)' }
+    ],
     parentId: 'fulfilled-prophecies',
     name: 'Nineveh Destroyed by Flood and Fire (Nahum)',
     description: 'A century after Jonah\'s preaching spared it, Nineveh went back to its cruelty and Nahum pronounced its end: \'with an overrunning flood he will make an utter end of the place thereof,\' \'the gates of the rivers shall be opened,\' and the city would be hidden so completely that men would ask \'where is Nineveh?\' (Nahum 1:8, 2:6, 3:7). In 612 BC the Medes and Babylonians took the city after the swollen Khosr river burst its walls; the palace was burned and the greatest city on earth vanished so thoroughly that Xenophon marched past the mound two centuries later without knowing what it was. It stayed lost until Layard dug it up in the 1840s.',
@@ -42556,6 +45722,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'prophecy-bethlehem-micah-5',
+    translations: [
+      { lang: 'Hebrew', original: 'בֵּית לֶחֶם', translit: 'Bêṯ Leḥem', meaning: 'house of bread (bayiṯ, house + leḥem, bread)' },
+      { lang: 'Hebrew', original: 'אֶפְרָתָה', translit: 'ʾEp̄rāṯāh', meaning: 'fruitful, fruitfulness (from pārāh, to bear fruit)' }
+    ],
     parentId: 'fulfilled-prophecies',
     name: 'Messiah Born in Bethlehem (Micah 5:2)',
     description: 'Seven hundred years before the manger, Micah wrote: \'But thou, Bethlehem Ephratah, though thou be little among the thousands of Judah, yet out of thee shall he come forth unto me that is to be ruler in Israel; whose goings forth have been from of old, from everlasting\' (Micah 5:2). Of all the villages in the empire, a Roman census moved a Nazareth carpenter and his pregnant wife to David\'s hometown at exactly the right moment - Herod\'s own scribes quoted this verse to the Magi (Matthew 2:4-6). The Church of the Nativity, built by Constantine\'s mother over the grotto in AD 327, is the oldest continuously used church in the world.',
@@ -42568,6 +45738,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'prophecy-cyrus-named-isaiah-45',
+    translations: [
+      { lang: 'Old Persian', original: '𐎤𐎢𐎽𐎢𐏁', translit: 'Kūruš', meaning: 'meaning uncertain; possibly Elamite in origin' },
+      { lang: 'Hebrew', original: 'כּוֹרֶשׁ', translit: 'Kôreš', meaning: 'Cyrus, the Hebrew form in Isaiah 44-45' }
+    ],
     parentId: 'fulfilled-prophecies',
     name: 'Cyrus Named 150 Years Early (Isaiah 44-45)',
     description: 'Isaiah, writing around 700 BC, named the future Persian king who would free the Jews and order the Temple rebuilt: \'That saith of Cyrus, He is my shepherd, and shall perform all my pleasure: even saying to Jerusalem, Thou shalt be built; and to the temple, Thy foundation shall be laid\' (Isaiah 44:28-45:1). Cyrus was born about 600 BC, took Babylon in 539 BC through the dried-up riverbed and the opened \'two leaved gates\' exactly as Isaiah 45:1-2 describes, and issued the decree in Ezra 1. Josephus says Daniel showed Cyrus the scroll with his own name in it. The Cyrus Cylinder in the British Museum records the same policy in the king\'s own words. His tomb at Pasargadae still stands.',
@@ -42580,6 +45754,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'prophecy-daniel-70-weeks',
+    translations: [
+      { lang: 'Hebrew', original: 'מָשִׁיחַ', translit: 'māšîaḥ', meaning: 'anointed one (from māšaḥ, to anoint); Greek christos' },
+      { lang: 'Hebrew', original: 'שָׁבֻעִים', translit: 'šāḇuʿîm', meaning: 'weeks, \'sevens\' (from šeḇaʿ, seven); the 70 \'weeks\' of years' }
+    ],
     parentId: 'fulfilled-prophecies',
     name: 'Daniel\'s 70 Weeks: Messiah Arrives on Schedule',
     description: 'Gabriel gave Daniel a countdown: from \'the going forth of the commandment to restore and to build Jerusalem unto the Messiah the Prince shall be seven weeks, and threescore and two weeks\' - 69 \'weeks\' of years, 483 years - after which \'Messiah shall be cut off, but not for himself,\' and then \'the people of the prince that shall come shall destroy the city and the sanctuary\' (Daniel 9:24-27). Artaxerxes issued that decree to Nehemiah in 457/444 BC; 483 prophetic years lands squarely on the public ministry and crucifixion of Jesus between AD 27 and 33, and Rome destroyed city and sanctuary in AD 70. Rabbinic tradition later pronounced a curse on anyone who calculates the date - because the math only works for one candidate.',
@@ -42640,6 +45818,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'prophecy-samaria-micah-1',
+    translations: [
+      { lang: 'Hebrew', original: 'שֹׁמְרוֹן', translit: 'Šōmərôn', meaning: 'watch-mountain (from šāmar, to guard); named for Shemer, 1 Kgs 16:24' }
+    ],
     parentId: 'fulfilled-prophecies',
     name: 'Samaria Made a Heap of the Field (Micah 1:6)',
     description: 'Micah, a contemporary of Isaiah, said of the capital of the northern kingdom: \'I will make Samaria as an heap of the field, and as plantings of a vineyard: and I will pour down the stones thereof into the valley, and I will discover the foundations thereof\' (Micah 1:6). Assyria took the city in 722 BC and carried the ten tribes away; Herod later rebuilt it as Sebaste, and after that it decayed until the hilltop was literally terraced vineyards and olive groves with Omri\'s palace foundations exposed and the stones tumbled down the slope - which is what archaeologists found when they arrived in 1908. The ten \'lost\' tribes are the subject of their own rabbit hole.',
@@ -42652,6 +45833,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'prophecy-edom-obadiah',
+    translations: [
+      { lang: 'Hebrew', original: 'אֱדוֹם', translit: 'ʾĔḏôm', meaning: 'red (from ʾāḏōm; the red stew of Gen 25:30); Esau\'s land' },
+      { lang: 'Hebrew', original: 'עֹבַדְיָה', translit: 'ʿŌḇaḏyāh', meaning: 'servant of Yahweh (ʿeḇeḏ + Yāh)' }
+    ],
     parentId: 'fulfilled-prophecies',
     name: 'Edom Cut Off Forever (Obadiah)',
     description: 'Obadiah, Jeremiah and Ezekiel all pronounced doom on Esau\'s descendants in their rock fortress: \'Though thou exalt thyself as the eagle, and though thou set thy nest among the stars, thence will I bring thee down... thou shalt be cut off for ever\' and \'Edom shall be a desolation: every one that goeth by it shall be astonished\' (Obadiah 4, 10; Jeremiah 49:17). The Nabataeans displaced the Edomites, Rome annexed Petra in AD 106, trade routes shifted, and the red-rock city that had seemed impregnable was forgotten by the West until Burckhardt stumbled on it in 1812 - a tourist ruin that astonishes everyone who walks the Siq, exactly as Jeremiah said. The Edomites themselves, forcibly converted as Idumeans (Herod\'s people), vanished as a nation after AD 70.',
@@ -42676,6 +45861,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'prophecy-daniel-2-four-kingdoms',
+    translations: [
+      { lang: 'Akkadian', original: 'Nabû-kudurri-uṣur', translit: '', meaning: 'O Nabu, protect my firstborn son (or: my boundary)' },
+      { lang: 'Hebrew', original: 'נְבוּכַדְנֶאצַּר', translit: 'Nəḇûḵaḏneʾṣṣar', meaning: 'Nebuchadnezzar (Hebrew form of the Akkadian name)' }
+    ],
     parentId: 'fulfilled-prophecies',
     name: 'Nebuchadnezzar\'s Statue: The Four Kingdoms (Daniel 2)',
     description: 'Nebuchadnezzar dreamed of a statue with a head of gold, chest of silver, belly of bronze, legs of iron and feet of iron mixed with clay, smashed by a stone \'cut out without hands\' that became a mountain filling the earth. Daniel read it as the sequence of world empires: Babylon, Medo-Persia, Greece and Rome, in that order, each weaker and harder than the last (Daniel 2:31-45). The first four came true to the letter, which is why critics insist the book must have been written after the events - but the Septuagint translation predates Rome\'s conquest of Judea. The feet of iron and clay, ten toes, a final patched-together revival of Rome that cannot hold together, is the world system still being assembled in front of us; the stone is Christ\'s kingdom that ends it.',
@@ -42728,6 +45917,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'quran',
+    translations: [
+      { lang: 'Arabic', original: 'قُرْآن', translit: 'Qurʾān', meaning: 'recitation, reading (from qaraʾa \'to recite, read\')' },
+      { lang: 'Syriac', original: 'ܩܪܝܢܐ', translit: 'qeryānā', meaning: 'scripture reading, lection; proposed source of the Arabic word' }
+    ],
     parentId: 'islam',
     name: 'The Quran',
     description: 'Islam\'s scripture: 114 chapters that Muhammad said were dictated to him by the angel Gabriel in a cave on Mount Hira over 23 years (610-632), collected into a single book under the caliph Uthman around 650 - who then burned the variant copies. It retells Adam, Noah, Abraham, Moses and Jesus from the Bible and the apocrypha (Jesus speaking from the cradle comes from the Infancy Gospels) but denies the crucifixion and the Sonship of Christ outright, which by 1 John 2:22-23 and Galatians 1:8 is the test of a false gospel \'though we, or an angel from heaven\' preach it. The Birmingham and Sana\'a manuscripts show the text was still in flux in the first century of Islam. The Kaaba it orients toward predates Muhammad as a pagan shrine of 360 idols.',
@@ -42738,6 +45931,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'hadith',
+    translations: [
+      { lang: 'Arabic', original: 'حَدِيث', translit: 'ḥadīth', meaning: 'report, narrative, speech (root ḥ-d-th \'to be new, to relate\')' }
+    ],
     parentId: 'islam',
     name: 'The Hadith (Sahih al-Bukhari & Muslim)',
     description: 'The Quran is short on law and detail; the Hadith supply it - hundreds of thousands of reported sayings and deeds of Muhammad, collected two centuries after his death by scholars like al-Bukhari (d. 870), who kept about 7,000 of the 600,000 he examined. Sharia, the five prayers, the ban on images and most of what the world recognizes as Islamic practice come from here, not from the Quran. Sunni and Shia split in part over which chains of transmission to trust. The Hadith also preserve Islam\'s own end-times script - the Mahdi, the return of Isa (Jesus) who breaks the cross, and the one-eyed Dajjal - a mirror image of Revelation that prophecy watchers read with great interest.',
@@ -42748,6 +45944,11 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'pali-canon-tripitaka',
+    translations: [
+      { lang: 'Sanskrit', original: 'त्रिपिटक', translit: 'Tripiṭaka', meaning: 'three baskets (tri, three + piṭaka, basket)' },
+      { lang: 'Pali', original: 'तिपिटक', translit: 'Tipiṭaka', meaning: 'three baskets (Pali form)' },
+      { lang: 'Pali', original: 'पालि', translit: 'Pāli', meaning: 'line, text; the canonical text, hence the language\'s name' }
+    ],
     parentId: 'buddhism',
     name: 'The Tripitaka (Pali Canon)',
     description: 'The \'Three Baskets\' - monastic rules, the Buddha\'s discourses and the philosophical Abhidhamma - were recited from memory for four centuries after Siddhartha Gautama\'s death and first written on palm leaves in Sri Lanka around 29 BC. It is the largest scripture of any religion, some 40 volumes, and teaches that the self is an illusion, suffering comes from desire, and the goal is extinction (nibbana) of the cycle of rebirth. There is no Creator in it at all; the gods (devas) it mentions are themselves trapped in samsara. That is the precise inversion of Genesis: not a Person who made you and wants you, but a process you escape by ceasing to want.',
@@ -42758,6 +45959,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'dhammapada',
+    translations: [
+      { lang: 'Sanskrit', original: 'धर्म', translit: 'dharma', meaning: 'that which upholds; law, duty, teaching (from dhṛ, to hold)' },
+      { lang: 'Pali', original: 'धम्मपद', translit: 'Dhammapada', meaning: 'words/path of the Dhamma (dhamma, teaching + pada, foot, verse, path)' }
+    ],
     parentId: 'buddhism',
     name: 'The Dhammapada',
     description: '423 verses of the Buddha\'s sayings, the most-read Buddhist text in the world and the one Western seekers usually start with: \'All that we are is the result of what we have thought.\' Its ethics of restraint, non-hatred and mindfulness overlap with Proverbs - but it offers them as self-salvation by effort and has no answer for guilt but more effort. Compare Proverbs, which begins where the Dhammapada cannot: \'The fear of the LORD is the beginning of knowledge.\'',
@@ -42768,6 +45973,11 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'lotus-sutra',
+    translations: [
+      { lang: 'Sanskrit', original: 'सूत्र', translit: 'sūtra', meaning: 'thread, string; aphoristic text (from siv, to sew)' },
+      { lang: 'Sanskrit', original: 'सद्धर्मपुण्डरीकसूत्र', translit: 'Saddharma Puṇḍarīka Sūtra', meaning: 'sūtra of the white lotus of the true dharma (sat, true + dharma + puṇḍarīka, white lotus)' },
+      { lang: 'Chinese', original: '妙法蓮華經', translit: 'Miàofǎ Liánhuá Jīng', meaning: 'Sūtra of the Lotus of the Wonderful Law (Kumārajīva\'s title)' }
+    ],
     parentId: 'buddhism',
     name: 'The Lotus Sutra',
     description: 'The defining scripture of Mahayana Buddhism (c. 1st century AD), in which the Buddha reveals that he was never really a man who died but an eternal cosmic being who only appeared to - and that countless bodhisattvas exist to save all beings. It is the heart of Nichiren and Tendai Buddhism and the chant \'Nam Myoho Renge Kyo\' repeated by millions, including Soka Gakkai, one of the most politically connected religious organizations in Japan. A Buddha who \'seemed\' to die is Docetism, the same heresy John wrote against concerning Christ.',
@@ -42778,6 +45988,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'tibetan-book-of-the-dead',
+    translations: [
+      { lang: 'Sanskrit', original: 'अन्तराभव', translit: 'antarābhava', meaning: 'intermediate existence (antarā, between + bhava, becoming); source of Tibetan bar do' },
+      { lang: 'Tibetan', original: 'བར་དོ་ཐོས་གྲོལ', translit: 'Bar do thos grol', meaning: 'liberation through hearing in the between-state (bar do + thos, hearing + grol, liberation)' }
+    ],
     parentId: 'buddhism',
     name: 'Tibetan Book of the Dead (Bardo Thodol)',
     description: '\'Liberation Through Hearing in the Intermediate State\': a 14th-century Tibetan text, supposedly hidden by Padmasambhava in the 8th century, read aloud to the dying and the dead over 49 days to guide the soul through the bardo - the peaceful and wrathful deities, the blinding lights, the judgment before the Lord of Death, and the pull back into a new womb. Timothy Leary rewrote it as an LSD manual in 1964, and its map of the afterlife matches both near-death-experience reports and the deceptions described in 2 Corinthians 11:14, where Satan \'is transformed into an angel of light.\'',
@@ -42788,6 +46002,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'bhagavad-gita',
+    translations: [
+      { lang: 'Sanskrit', original: 'भगवद्गीता', translit: 'Bhagavadgītā', meaning: 'song of the Blessed One (bhagavat \'blessed, lord\' + gītā \'song\')' }
+    ],
     parentId: 'hinduism',
     name: 'The Bhagavad Gita',
     description: '700 verses embedded in the Mahabharata: on the battlefield of Kurukshetra the warrior Arjuna loses his nerve and his charioteer Krishna reveals himself as God incarnate, teaching duty without attachment, reincarnation, and a vision of his universal form so terrible Arjuna begs him to stop - the passage Oppenheimer quoted at Trinity, \'Now I am become Death, the destroyer of worlds.\' The Gita\'s \'I am the Self seated in the hearts of all creatures\' is the exact pantheism Romans 1:25 describes as worshipping the creature rather than the Creator; its vimanas and divine weapons feed the ancient-astronaut rabbit hole.',
@@ -42798,6 +46015,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'upanishads',
+    translations: [
+      { lang: 'Sanskrit', original: 'उपनिषद्', translit: 'upaniṣad', meaning: 'sitting down near (upa \'near\' + ni \'down\' + sad \'sit\'); secret teaching' }
+    ],
     parentId: 'hinduism',
     name: 'The Upanishads',
     description: 'The philosophical end of the Vedas (c. 800-200 BC): secret teachings passed from guru to disciple \'sitting near,\' which conclude that the individual soul (atman) is identical with the universal spirit (Brahman) - \'tat tvam asi,\' thou art that. This is the source of every \'you are God\' teaching from the Theosophists to Oprah, the very promise the serpent made in Genesis 3:5. Schopenhauer called them \'the consolation of my life\'; Schrödinger built his view of consciousness on them.',
@@ -42808,6 +46028,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'zohar',
+    translations: [
+      { lang: 'Hebrew', original: 'זֹהַר', translit: 'Zōhar', meaning: 'radiance, splendour (Daniel 12:3, \'the brightness of the firmament\')' }
+    ],
     parentId: 'judaism',
     name: 'The Zohar',
     description: 'The foundational text of Kabbalah, published in Spain by Moses de León around 1290 but attributed by him to the 2nd-century rabbi Shimon bar Yochai: a mystical commentary on the Torah in invented Aramaic describing the ten sefirot through which the hidden Ein Sof emanates the universe, the feminine Shekhinah, Lilith, reincarnation (gilgul) and the power of Hebrew letters. De León\'s own widow said he wrote it himself. From the Zohar flow Christian Cabala, the Golden Dawn, Madonna\'s red string and the Tree of Life diagram found in every occult order on this site. Isaiah 8:20: \'To the law and to the testimony: if they speak not according to this word, it is because there is no light in them.\'',
@@ -42818,6 +46041,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'tao-te-ching',
+    translations: [
+      { lang: 'Chinese', original: '道德經', translit: 'Dàodéjīng', meaning: 'classic of the Way and its virtue (dào, way + dé, virtue, power + jīng, classic)' }
+    ],
     parentId: 'taoism',
     name: 'Tao Te Ching',
     description: '81 short chapters attributed to Laozi, the \'Old Master\' who, legend says, rode a water buffalo west out of China and wrote the book for a gatekeeper on the way: \'The Tao that can be told is not the eternal Tao.\' The Way is an impersonal flow to be yielded to (wu wei), water that wears down stone. John deliberately used the same word when the gospel reached China - \'In the beginning was the Tao\' (Logos) - but with the difference that the Word is a Person and \'the Word was made flesh.\' Taoist alchemists seeking immortality elixirs poisoned several emperors with mercury.',
@@ -42828,6 +46054,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'i-ching',
+    translations: [
+      { lang: 'Chinese', original: '易經', translit: 'Yìjīng', meaning: 'classic of changes (yì, change + jīng, classic, warp-thread)' }
+    ],
     parentId: 'taoism',
     name: 'I Ching (Book of Changes)',
     description: 'The oldest Chinese classic and the world\'s most sophisticated divination manual: 64 hexagrams built from broken and unbroken lines, traditionally invented by the serpent-bodied Fuxi and expanded by King Wen in a Shang prison around 1050 BC, consulted by casting yarrow stalks or coins. Confucius wore out his copy\'s binding three times; Leibniz saw binary arithmetic in it; Jung used it for \'synchronicity\'; Philip K. Dick plotted novels with it. It is, in plain terms, the practice Deuteronomy 18:10 calls \'an observer of times\' - asking the spirit world for answers through chance - dressed in the most elegant mathematics ever devised for the purpose.',
@@ -42838,6 +46067,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'kojiki',
+    translations: [
+      { lang: 'Japanese', original: '古事記', translit: 'Kojiki', meaning: 'record of ancient matters (ko, old + ji, matters + ki, record)' },
+      { lang: 'Japanese', original: '日本書紀', translit: 'Nihon Shoki', meaning: 'chronicles of Japan (Nihon + sho, writing + ki, annals)' }
+    ],
     parentId: 'shinto',
     name: 'Kojiki & Nihon Shoki',
     description: 'Japan\'s oldest books (AD 712 and 720), compiled on imperial order to record the creation of the islands by Izanagi and Izanami, the sun goddess Amaterasu\'s retreat into a cave, and the unbroken descent of the Emperor from her grandson - the doctrine that made Hirohito a living god until MacArthur made him renounce it in 1946. State Shinto built on these texts drove the Empire of the Rising Sun into the Second World War. The eight-million kami of Shinto are the \'gods of the nations\' of Psalm 96:5, and the mirror, sword and jewel regalia still hidden in Japan\'s shrines have never been shown to the public.',
@@ -42858,6 +46091,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'sikhism',
+    translations: [
+      { lang: 'Sanskrit', original: 'शिष्य', translit: 'śiṣya', meaning: 'pupil, disciple (from śās, to instruct)' },
+      { lang: 'Punjabi', original: 'ਸਿੱਖ', translit: 'sikkh', meaning: 'disciple, learner' }
+    ],
     parentId: 'biblical-apocryphal',
     name: 'Sikhism',
     description: 'Founded in the Punjab by Guru Nanak (1469-1539), who after a mystical disappearance in a river declared \'There is no Hindu, there is no Muslim\' and taught one formless God, equality of castes and sexes, honest work and charity, while rejecting idols, priests and ritual. Ten gurus shaped the faith; the tenth, Gobind Singh, created the warrior Khalsa with its five Ks - uncut hair, comb, steel bracelet, undergarment and dagger - and declared the scripture itself the final guru. Some 26 million Sikhs, the Golden Temple at Amritsar, and a long history of fighting Mughal and British empires. It is monotheism without a Redeemer: salvation by meditation on the Name and good karma across rebirths.',
@@ -42868,6 +46105,11 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'guru-granth-sahib',
+    translations: [
+      { lang: 'Sanskrit', original: 'गुरु', translit: 'guru', meaning: 'heavy, weighty; hence venerable teacher' },
+      { lang: 'Sanskrit', original: 'ग्रन्थ', translit: 'grantha', meaning: 'book, composition (granth, to tie, bind together)' },
+      { lang: 'Arabic', original: 'صاحب', translit: 'ṣāḥib', meaning: 'companion, master; honorific \'lord, sir\' via Persian and Punjabi' }
+    ],
     parentId: 'sikhism',
     name: 'Guru Granth Sahib',
     description: 'The only scripture on earth that is formally enthroned as a living teacher: 1,430 pages of hymns by six Sikh gurus plus Hindu and Muslim saints, compiled by Guru Arjan in 1604 and declared the eternal Guru by Gobind Singh in 1708. It is placed on a throne under a canopy in every gurdwara, fanned, put to bed at night, and carried on the head; the day\'s reading is taken at random as the Guru\'s command. Every copy has identical pagination so a verse can be cited anywhere. Its message - repeat the Name of the one God and shed the ego - is lifted straight from both the Vedas and the Sufis.',
@@ -42878,6 +46120,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'bahai-faith',
+    translations: [
+      { lang: 'Arabic', original: 'بَهَاء', translit: 'bahāʾ', meaning: 'glory, splendour, light' },
+      { lang: 'Arabic', original: 'بهائي', translit: 'bahāʾī', meaning: 'follower of Bahāʾ (Bahāʾu\'llāh, \'Glory of God\')' }
+    ],
     parentId: 'biblical-apocryphal',
     name: 'Bahá\'í Faith',
     description: 'Born in Persia in 1844 when a merchant called the Báb announced a new age, and taken over by Bahá\'u\'lláh (1817-1892), who declared himself the latest \'Manifestation of God\' after Abraham, Moses, Buddha, Zoroaster, Jesus and Muhammad - all one progressive revelation. Its program reads like a draft of the New World Order a century early: one world government, one world language, one world currency, a world tribunal, and the merging of all religions - which is why Bahá\'í delegations have had a seat at the United Nations since 1948 and why prophecy students watch it closely as a prototype of Revelation 13\'s one-world religion. The world headquarters sits on Mount Carmel, Elijah\'s mountain, in Haifa.',
@@ -42888,6 +46134,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'kitab-i-aqdas',
+    translations: [
+      { lang: 'Arabic', original: 'الكتاب الأقدس', translit: 'al-Kitāb al-Aqdas', meaning: 'the most holy book (kitāb, book + aqdas, most holy, superlative of root q-d-s)' },
+      { lang: 'Persian', original: 'کتاب اقدس', translit: 'Ketāb-e Aqdas', meaning: 'Persian-style (ezafe) title of the Arabic al-Kitāb al-Aqdas' }
+    ],
     parentId: 'bahai-faith',
     name: 'Kitáb-i-Aqdas (The Most Holy Book)',
     description: 'Bahá\'u\'lláh\'s book of laws, written in Arabic in the prison city of Acre around 1873 and only fully published in English in 1992: daily prayers, a 19-day fast, a 19-month calendar, the abolition of the priesthood, and the blueprint for a \'Universal House of Justice\' to govern the planet. It explicitly claims to abrogate the Quran as the Quran claimed to abrogate the Gospel - the pattern of each new \'manifestation\' editing the last. Scripture, by contrast, says Christ is the final word: \'God... hath in these last days spoken unto us by his Son\' (Hebrews 1:1-2).',
@@ -42898,6 +46148,11 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'confucianism',
+    translations: [
+      { lang: 'Chinese', original: '孔夫子', translit: 'Kǒng Fūzǐ', meaning: 'Master Kong (Kǒng, surname + fūzǐ, master, teacher)' },
+      { lang: 'Latin', original: 'Confucius', translit: '', meaning: 'Jesuit Latinisation of Kǒng Fūzǐ (16th century)' },
+      { lang: 'Chinese', original: '儒家', translit: 'Rújiā', meaning: 'school of the scholars (rú, scholar, learned man); the Chinese name of the tradition' }
+    ],
     parentId: 'biblical-apocryphal',
     name: 'Confucianism',
     description: 'Less a religion than a civic operating system: Kong Fuzi (551-479 BC), a failed minister turned teacher, taught that a harmonious society comes from ritual propriety, filial piety and virtuous rulers who hold the \'Mandate of Heaven.\' The imperial examination system tested the Confucian classics for 1,300 years, and ancestor veneration - offerings, incense and prayers to the dead - became the glue of Chinese, Korean and Vietnamese life. Beijing uses \'Confucius Institutes\' on Western campuses as influence operations today. Its Heaven (Tian) is impersonal, its golden rule is stated negatively, and the dead cannot hear you (Ecclesiastes 9:5-6).',
@@ -42908,6 +46163,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'analects',
+    translations: [
+      { lang: 'Chinese', original: '論語', translit: 'Lúnyǔ', meaning: 'selected sayings, discussed words (lún, to discuss, arrange + yǔ, words)' },
+      { lang: 'Greek', original: 'ἀνάλεκτα', translit: 'analekta', meaning: 'things gathered up (analegein, to collect); source of English \'analects\'' }
+    ],
     parentId: 'confucianism',
     name: 'The Analects of Confucius',
     description: 'Sayings of Confucius and his disciples collected after his death - \'Do not impose on others what you yourself do not desire,\' \'The superior man is modest in his speech but exceeds in his actions.\' Memorized by every Chinese schoolboy for two millennia, burned by the First Emperor in 213 BC, resurrected by the Han, denounced by Mao and quoted by Xi. The Analects are ethics without a lawgiver, which is why they could serve every dynasty equally; the Bible\'s law comes with a Judge.',
@@ -42918,6 +46177,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'enuma-elish',
+    translations: [
+      { lang: 'Akkadian', original: 'e-nu-ma e-liš', translit: 'Enūma eliš', meaning: 'when on high, the opening words of the epic' }
+    ],
     parentId: 'ancient-texts',
     name: 'Enuma Elish (Babylonian Creation Epic)',
     description: 'Seven clay tablets from Ashurbanipal\'s library at Nineveh, recited every Babylonian New Year: the sweet-water god Apsu and the salt-water dragon Tiamat spawn the gods; the young gods kill Apsu; Tiamat raises an army of monsters; Marduk slays her, splits her body to make heaven and earth, and creates mankind from the blood of her executed general Kingu to be the gods\' slaves. Liberal scholars claim Genesis copied it; in fact it is the pagan distortion of the original - the same seven-tablet structure, the same waters divided, but with a chaos-dragon in place of the Creator and man as slave instead of image-bearer. Marduk\'s temple was Babylon\'s ziggurat, Etemenanki, the Tower of Babel rebuilt.',
@@ -42928,6 +46190,11 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'marduk',
+    translations: [
+      { lang: 'Sumerian', original: '𒀭𒀫𒌓', translit: 'AMAR.UTU (Marduk)', meaning: 'calf of the sun / of Utu (amar \'calf\' + utu \'sun\')' },
+      { lang: 'Akkadian', original: 'bēlu', translit: '', meaning: 'lord; the title Bel by which Marduk was known' },
+      { lang: 'Hebrew', original: 'מְרֹדַךְ', translit: 'Mərōḏaḵ', meaning: 'Merodach, biblical form (Jer 50:2)' }
+    ],
     parentId: 'mesopotamian-mythology',
     name: 'Marduk (Bel)',
     description: 'Patron god of Babylon, son of Enki, who rose from local deity to king of the pantheon when Hammurabi made the city an empire - the Enuma Elish was written to justify the promotion. Called Bel (\'Lord\'), his ziggurat Etemenanki stood on the site of the Tower of Babel and his golden statue was carried in procession every New Year; Jeremiah 50:2 and Isaiah 46:1 name him when they mock Babylon\'s fall: \'Bel boweth down.\' The Babylonian \'Marduk Prophecy\' and the god\'s dragon-serpent mushussu feed straight into the Nimrod-as-first-tyrant theory and the identity of the Beast\'s city in Revelation 17-18.',
@@ -42938,6 +46205,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'inanna-ishtar',
+    translations: [
+      { lang: 'Sumerian', original: '𒀭𒈹', translit: 'Inanna', meaning: 'lady of heaven (nin \'lady\' + an \'heaven\' + genitive -ak)' },
+      { lang: 'Akkadian', original: 'Ištar', translit: '', meaning: 'Ishtar; East Semitic goddess name, cognate with Astarte and Ashtoreth' }
+    ],
     parentId: 'mesopotamian-mythology',
     name: 'Inanna / Ishtar (Queen of Heaven)',
     description: 'Sumerian goddess of sex and war, daughter of the moon god Nanna, who descended through the seven gates of the underworld to her sister Ereshkigal, was hung dead on a hook and rose again three days later - the template for every dying-and-rising fertility cult. Her temple at Uruk ran sacred prostitution, her symbol is the eight-pointed star and the planet Venus, and her consort Tammuz was mourned annually by women. The Bible knows her as \'the queen of heaven\' to whom Judah\'s women baked cakes (Jeremiah 7:18, 44:17-25), and Ezekiel saw women weeping for Tammuz at the Temple gate (Ezekiel 8:14). The \'Ishtar Gate\' in Berlin\'s Pergamon Museum was Babylon\'s front door.',
@@ -42948,6 +46219,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'nanna-sin',
+    translations: [
+      { lang: 'Sumerian', original: '𒀭𒋀𒆠', translit: 'Nanna (ŠEŠ.KI)', meaning: 'moon god of Ur; meaning uncertain' },
+      { lang: 'Akkadian', original: '𒀭𒂗𒍪', translit: 'Sîn / Suen (EN.ZU)', meaning: 'the moon god; meaning uncertain' }
+    ],
     parentId: 'mesopotamian-mythology',
     name: 'Nanna / Sin (Moon God)',
     description: 'The crescent-moon god of Ur and Harran - the two cities of Abraham\'s family, which is why God called Abram out of a house of moon worship (Joshua 24:2). Father of the sun god Utu and of Inanna, \'Lord of Wisdom\' whose bull horns are the crescent; his great ziggurat at Ur still stands, and Nabonidus, the last king of Babylon, abandoned Marduk to restore Sin\'s temple at Harran. The crescent symbol passed from Harran to the Sabians to the Arabian peninsula; the family resemblance to the symbol on every Islamic flag is not a coincidence that scholars like to discuss.',
@@ -42958,6 +46233,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'shamash-utu',
+    translations: [
+      { lang: 'Sumerian', original: '𒀭𒌓', translit: 'Utu', meaning: 'sun; the sun god' },
+      { lang: 'Akkadian', original: 'Šamaš', translit: '', meaning: 'sun (Semitic *šamš-; cf. Hebrew šemeš)' }
+    ],
     parentId: 'mesopotamian-mythology',
     name: 'Shamash / Utu (Sun God of Justice)',
     description: 'The sun god who sees everything and therefore judges everything: at the top of the Code of Hammurabi stele, Shamash hands the king the rod and ring of justice - the ancient template of divine right that every pharaoh, emperor and \'Sun King\' has claimed since. He guided Gilgamesh through the cedar forest and his symbol is the four-pointed star in a sun disk. Ezekiel 8:16 shows twenty-five men in the Temple itself \'with their backs toward the temple of the LORD... worshipping the sun toward the east\' - the sun cult never stopped; it just changed names.',
@@ -42968,6 +46247,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'nergal',
+    translations: [
+      { lang: 'Sumerian', original: '𒀭𒄊𒀕𒃲', translit: 'Nergal (KIŠ.UNUG.GAL)', meaning: 'lord of the great city, a euphemism for the underworld (en-iri-gal)' }
+    ],
     parentId: 'mesopotamian-mythology',
     name: 'Nergal (God of Plague & the Underworld)',
     description: 'Lord of war, pestilence and the scorching noon sun, who forced his way into the underworld and made Ereshkigal his queen - the Babylonian Pluto, identified with the planet Mars. He is one of the few pagan gods the Bible names directly: when Assyria resettled Samaria with foreigners, \'the men of Cuth made Nergal\' (2 Kings 17:30), which is how the Samaritans\' mixed religion began. His lion-headed cult at Cutha survived into the Roman era, and modern \'Nergal\' is a favourite name in the Chaldean-magic revival and the Simon Necronomicon.',
@@ -42978,6 +46260,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'ereshkigal',
+    translations: [
+      { lang: 'Sumerian', original: '𒀭𒊩𒌆𒆠𒃲', translit: 'Ereškigal', meaning: 'queen of the great earth / great below (ereš \'queen\' + ki \'earth\' + gal \'great\')' }
+    ],
     parentId: 'mesopotamian-mythology',
     name: 'Ereshkigal (Queen of the Great Below)',
     description: 'Inanna\'s elder sister, sole ruler of Kur, the land of no return where the dead eat clay and dust in darkness - the Sumerian picture of Sheol. She hung her sister on a hook, received Nergal as consort, and was never worshipped so much as feared and placated. The Burney Relief in the British Museum, a winged, bird-footed goddess standing on lions, is argued to be her (or Lilith, or Inanna) and is the direct ancestor of every winged-demoness image in Western occultism.',
@@ -42988,6 +46273,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'moloch',
+    translations: [
+      { lang: 'Hebrew', original: 'מֹלֶךְ', translit: 'Mōleḵ', meaning: 'meleḵ \'king\' with the vowels of bōšeṯ \'shame\'; perhaps originally a sacrifice term (Punic mlk)' },
+      { lang: 'Greek', original: 'Μολόχ', translit: 'Molóch', meaning: 'Septuagint rendering of the Hebrew' }
+    ],
     parentId: 'canaanite-mythology',
     name: 'Moloch (Molech)',
     description: 'The god to whom Canaanites and backslidden Israelites burned their children alive: \'Thou shalt not let any of thy seed pass through the fire to Molech\' (Leviticus 18:21). Solomon built him a high place; the kings Ahaz and Manasseh sacrificed their own sons; Josiah finally defiled the furnace at Tophet in the Valley of Hinnom - which is why Gehenna became the name for hell. Carthage\'s tophet holds 20,000 urns of burned infants, and classical writers describe the bronze bull-headed idol with outstretched arms heated red-hot. The 40-foot owl at Bohemian Grove, the \'Cremation of Care\' ritual, and the modern industrial-scale killing of the unborn are the same altar under new management.',
@@ -42998,6 +46287,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'dagon',
+    translations: [
+      { lang: 'Ugaritic', original: '𐎄𐎂𐎐', translit: 'Dagnu / Dagan', meaning: 'grain (Semitic *dagan-); folk-etymologised from Hebrew dāg \'fish\'' },
+      { lang: 'Hebrew', original: 'דָּגוֹן', translit: 'Dāḡôn', meaning: 'Dagon; cf. dāḡān \'grain, corn\'' }
+    ],
     parentId: 'canaanite-mythology',
     name: 'Dagon',
     description: 'Chief god of the Philistines, with temples at Gaza, Ashdod and Beth-shan: Samson pulled down his temple in Gaza, the Philistines hung Saul\'s head in his temple at Beth-shan, and when they put the captured Ark of the Covenant in his temple at Ashdod, Dagon\'s idol fell on its face overnight and the next morning lay with its head and hands cut off on the threshold (1 Samuel 5). Older than the Philistines - he was \'Dagan,\' grain god of the Amorites - the medieval tradition that he was half fish ties him to the Babylonian Oannes who came out of the sea to teach men, and to the fish-head mitre worn by popes and bishops today.',
@@ -43008,6 +46301,11 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'asherah',
+    translations: [
+      { lang: 'Ugaritic', original: '𐎀𐎘𐎗𐎚', translit: 'ʾAṯirat', meaning: 'Athirat, consort of El; titled rbt ʾaṯrt ym \'Lady Athirat of the Sea\'' },
+      { lang: 'Hebrew', original: 'אֲשֵׁרָה', translit: 'ʾĂšērāh', meaning: 'Asherah; also her cult pole or sacred tree (KJV \'grove\')' },
+      { lang: 'Akkadian', original: 'Ašratum', translit: '', meaning: 'Ashratu, consort of Amurru; Mesopotamian form of the goddess' }
+    ],
     parentId: 'canaanite-mythology',
     name: 'Asherah (Mother Goddess of the Groves)',
     description: 'Consort of El and mother of the seventy gods at Ugarit, worshipped in Israel as a carved wooden pole or living tree beside the altar of Baal - the \'groves\' the King James Bible says Gideon, Asa, Hezekiah and Josiah cut down, and that Manasseh set up inside the Temple itself (2 Kings 21:7). Inscriptions from Kuntillet Ajrud (c. 800 BC) read \'Yahweh of Samaria and his Asherah\' - the apostasy the prophets fought, which academics now cite to claim God \'had a wife.\' Her tree-pole worship, maypoles and \'Mother Earth\' cults are the same spirit; Jeremiah 10:3-4 describes her idol being decked with silver and gold.',
@@ -43018,6 +46316,11 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'astarte-ashtoreth',
+    translations: [
+      { lang: 'Phoenician', original: '𐤏𐤔𐤕𐤓𐤕', translit: 'ʿštrt (ʿAštart)', meaning: 'Astarte, goddess of love and war; West Semitic form of Ishtar' },
+      { lang: 'Hebrew', original: 'עַשְׁתֹּרֶת', translit: 'ʿAštōreṯ', meaning: 'Ashtoreth; the consonants vocalised with the vowels of bōšeṯ \'shame\'' },
+      { lang: 'Greek', original: 'Ἀστάρτη', translit: 'Astártē', meaning: 'Astarte, Hellenised form of the Phoenician name' }
+    ],
     parentId: 'canaanite-mythology',
     name: 'Astarte / Ashtoreth',
     description: 'The Canaanite and Phoenician form of Ishtar, \'the goddess of the Zidonians\' for whom Solomon built a high place on the Mount of Olives (1 Kings 11:5, 33) that stood for three centuries until Josiah broke it. Goddess of fertility and war with the horns of a cow or a crescent, served by temple prostitutes, carried by the Phoenicians to Carthage and Cyprus where the Greeks renamed her Aphrodite and the Romans Venus. The Philistines hung Saul\'s armor in her temple. Her name, Easter-like festivals, eggs and rabbits survive in a spring holiday most Christians never question.',
@@ -43028,6 +46331,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'chemosh',
+    translations: [
+      { lang: 'Moabite', original: '𐤊𐤌𐤔', translit: 'Kamōš', meaning: 'national god of Moab (Mesha Stele); meaning uncertain, traditionally \'subduer\'' },
+      { lang: 'Hebrew', original: 'כְּמוֹשׁ', translit: 'Kəmôš', meaning: 'Chemosh; Septuagint Chamōs' }
+    ],
     parentId: 'canaanite-mythology',
     name: 'Chemosh (God of Moab)',
     description: '\'The abomination of Moab,\' a war god who like Moloch received children in the fire: when Israel besieged him, King Mesha \'took his eldest son that should have reigned in his stead, and offered him for a burnt offering upon the wall\' (2 Kings 3:27) - and the siege broke. Mesha\'s own account on the Mesha Stele (c. 840 BC) brags that Chemosh told him to attack and that he \'dragged\' the vessels of Yahweh before his god; it is one of the earliest extrabiblical mentions of the name YHWH. Solomon built Chemosh a high place too, and Jeremiah 48 is his death warrant.',
@@ -43038,6 +46345,11 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'tammuz',
+    translations: [
+      { lang: 'Sumerian', original: '𒀭𒌉𒍣', translit: 'Dumuzid', meaning: 'faithful son, rightful son (dumu \'son\' + zid \'true, faithful\')' },
+      { lang: 'Akkadian', original: 'Duʾūzu / Tammūz', translit: '', meaning: 'Tammuz; also the fourth month, when he was mourned' },
+      { lang: 'Hebrew', original: 'תַּמּוּז', translit: 'Tammûz', meaning: 'Tammuz, wept for by the women at the Temple gate (Ezek 8:14)' }
+    ],
     parentId: 'canaanite-mythology',
     name: 'Tammuz (Dumuzid)',
     description: 'The shepherd-king of Uruk who became Inanna\'s lover and was handed over to the underworld in her place; every summer the women of Mesopotamia wept for him, and Ezekiel was shown that very ritual inside the Temple of the LORD: \'behold, there sat women weeping for Tammuz\' (Ezekiel 8:14). The Hebrew calendar still has a month named after him. Through Adonis, Attis and Osiris he is the dying-and-rising vegetation god that Alexander Hislop (\'The Two Babylons\') identified with Nimrod reborn as the child of Semiramis - the Babylonian mother-and-child image that Hislop argued was absorbed into the cult of Mary. The forty days of weeping for Tammuz are the likely origin of Lent.',
@@ -43048,6 +46360,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'ahura-mazda',
+    translations: [
+      { lang: 'Avestan', original: '𐬀𐬵𐬎𐬭𐬀⸱𐬨𐬀𐬰𐬛𐬁', translit: 'Ahura Mazdā', meaning: 'Wise Lord (ahura, lord + mazdā, wisdom)' },
+      { lang: 'Middle Persian', original: 'Ohrmazd', translit: '', meaning: 'Pahlavi form of Ahura Mazdā; also Old Persian Auramazdā' }
+    ],
     parentId: 'zoroastrianism',
     name: 'Ahura Mazda',
     description: '\'Wise Lord,\' the uncreated god of light proclaimed by Zarathustra, who creates the world as a battlefield against the evil spirit Angra Mainyu and will finally defeat him in a fiery judgment, resurrect the dead and renew the earth. Darius carved his name over the whole Behistun inscription; Cyrus, who freed the Jews, served him. Critics claim Judaism borrowed its devil, angels, resurrection and final judgment from Persia during the exile - but Job, Daniel and Isaiah already have them, and the direction of borrowing was the other way. Freddie Mercury was raised in his faith; the winged Faravahar symbol is everywhere in modern Iran\'s dissident movement.',
@@ -43058,6 +46374,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'angra-mainyu',
+    translations: [
+      { lang: 'Avestan', original: '𐬀𐬢𐬭𐬀⸱𐬨𐬀𐬌𐬥𐬌𐬌𐬎', translit: 'Aŋra Mainiiu', meaning: 'destructive, hostile spirit (aŋra, evil + mainiiu, spirit, mind)' },
+      { lang: 'Middle Persian', original: 'Ahreman', translit: '', meaning: 'Pahlavi form of Angra Mainyu; source of \'Ahriman\'' }
+    ],
     parentId: 'zoroastrianism',
     name: 'Angra Mainyu (Ahriman)',
     description: 'The \'destructive spirit,\' Ahriman in later Persian, who invaded Ahura Mazda\'s good creation with death, disease, winter, serpents and lies, and who wars against it until the end of the age - Zoroastrianism\'s equal-and-opposite devil. This dualism, in which good and evil are two equal eternal principles, spread through Manichaeism into Gnosticism and the Cathars, and is the lens through which Hollywood and the occult still picture \'the balance\' of light and dark. Scripture refuses it: Satan is a created, defeated angel, not God\'s rival - \'I form the light, and create darkness\' (Isaiah 45:7), spoken to Cyrus the Persian.',
@@ -43068,6 +46388,11 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'mithra',
+    translations: [
+      { lang: 'Avestan', original: '𐬨𐬌𐬚𐬭𐬀', translit: 'Miθra', meaning: 'covenant, contract; the god who guards oaths' },
+      { lang: 'Sanskrit', original: 'मित्र', translit: 'Mitra', meaning: 'friend, alliance; Vedic god of contracts, cognate with Mithra' },
+      { lang: 'Greek', original: 'Μίθρας', translit: 'Mithras', meaning: 'Hellenised form of Mithra; name of the Roman mystery god' }
+    ],
     parentId: 'zoroastrianism',
     name: 'Mithra / Mithras',
     description: 'Persian god of covenants and the rising sun, reborn in the Roman Empire as Mithras, the bull-slayer worshipped in underground chapels (mithraea) by soldiers and officials in a seven-degree initiation that is the ancestor of every secret lodge. The \'Jesus was copied from Mithras\' claim - December 25 birth, twelve disciples, resurrection - collapses on inspection (the Roman cult postdates the gospels, and no text of it survives), but the Church\'s later adoption of 25 December, the date of Sol Invictus, is real. Mithraea sit under San Clemente in Rome and under the City of London\'s financial district.',
@@ -43078,6 +46403,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'amaterasu',
+    translations: [
+      { lang: 'Japanese', original: '天照大神', translit: 'Amaterasu-ōmikami', meaning: 'great august kami shining in heaven (ama, heaven + terasu, to illuminate)' }
+    ],
     parentId: 'shinto',
     name: 'Amaterasu (Sun Goddess)',
     description: 'The sun goddess born from Izanagi\'s left eye, who hid in a cave after her brother Susanoo\'s rampage and plunged the world into darkness until the other kami lured her out with a mirror and a dance - the mirror now kept at the Ise Grand Shrine, rebuilt every twenty years for 1,300 years and never shown. Every Emperor of Japan claims direct descent from her grandson Ninigi, a doctrine written into the Meiji constitution that sent kamikaze pilots to die for a living god. Over 100 million Japanese still visit her shrines at New Year.',
@@ -43088,6 +46416,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'susanoo',
+    translations: [
+      { lang: 'Japanese', original: '須佐之男命', translit: 'Susanoo-no-Mikoto', meaning: 'uncertain; often \'impetuous male\' (susabu, to rage + o, man); mikoto, august lord' }
+    ],
     parentId: 'shinto',
     name: 'Susanoo (Storm God & Dragon-Slayer)',
     description: 'Amaterasu\'s violent brother, born from Izanagi\'s nose, banished from heaven for flinging a flayed horse into her weaving hall, who redeemed himself by getting the eight-headed dragon Yamata-no-Orochi drunk and hacking it apart - finding in its tail the sword Kusanagi that is still one of the three imperial regalia of Japan. The dragon-slaying storm god appears in every pantheon (Marduk, Thor, Baal, Indra, St George), a worldwide memory of Genesis 3:15 and Revelation 12 refracted through the nations.',
@@ -43098,6 +46429,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'izanagi-izanami',
+    translations: [
+      { lang: 'Japanese', original: '伊邪那岐', translit: 'Izanagi', meaning: 'he who invites (izanau, to invite, beckon + -gi, male)' },
+      { lang: 'Japanese', original: '伊邪那美', translit: 'Izanami', meaning: 'she who invites (izanau + -mi, female)' }
+    ],
     parentId: 'shinto',
     name: 'Izanagi & Izanami (Creator Pair)',
     description: 'The divine couple who stirred the ocean with a jeweled spear and created the Japanese islands from the drips, then populated them with kami. Izanami died giving birth to the fire god; Izanagi followed her into Yomi, the land of the dead, saw her rotting body, fled in horror and sealed the entrance with a boulder - the same Orpheus-and-Eurydice story that appears on the other side of the world. Washing off the pollution of death, he produced Amaterasu, the moon god Tsukuyomi and Susanoo. Purification by water remains the core of every Shinto shrine visit.',
@@ -43108,6 +46443,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'huitzilopochtli',
+    translations: [
+      { lang: 'Nahuatl', original: 'Huītzilōpōchtli', translit: '', meaning: 'hummingbird of the left / south (huītzilin \'hummingbird\' + ōpōchtli \'left side\')' }
+    ],
     parentId: 'andean-mesoamerican-lore',
     name: 'Huitzilopochtli (Aztec War & Sun God)',
     description: '\'Hummingbird of the South,\' the god who led the Mexica out of Aztlan to the place where an eagle sat on a cactus eating a snake - the image on Mexico\'s flag - and who demanded human hearts to keep the sun rising. The Templo Mayor in Tenochtitlan was his, and at its rededication in 1487 the Aztecs reportedly sacrificed tens of thousands in four days; the skull rack (tzompantli) excavated in Mexico City in 2015 held thousands of heads. No clearer example exists of what Psalm 106:37 means by \'they sacrificed their sons and their daughters unto devils\' - the same hunger as Moloch on the other side of the ocean.',
@@ -43118,6 +46456,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'tlaloc',
+    translations: [
+      { lang: 'Nahuatl', original: 'Tlāloc', translit: '', meaning: 'uncertain; traditionally \'he who is made of earth\' or \'lies on the earth\' (tlālli \'earth\')' }
+    ],
     parentId: 'andean-mesoamerican-lore',
     name: 'Tlaloc (Rain God)',
     description: 'Goggle-eyed, fanged rain god of central Mexico, far older than the Aztecs - he is painted all over Teotihuacan. He shared the Templo Mayor with Huitzilopochtli and received the most horrifying offerings: children, whose tears were believed to bring rain, so priests made them cry on the way to the altar. Dozens of child skeletons have been excavated at his shrine. His paradise Tlalocan received those who died by water. The 168-ton monolith of Tlaloc moved to the National Museum of Anthropology in 1964 was greeted by a freak rainstorm.',
@@ -43128,6 +46469,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'tezcatlipoca',
+    translations: [
+      { lang: 'Nahuatl', original: 'Tezcatlipōca', translit: '', meaning: 'smoking mirror (tezcatl \'mirror\' + pōca \'it smokes\')' }
+    ],
     parentId: 'andean-mesoamerican-lore',
     name: 'Tezcatlipoca (Smoking Mirror)',
     description: 'The jaguar god of the night sky, sorcery, discord and destiny, whose obsidian mirror showed him everything happening on earth - and in which he could not help showing Quetzalcoatl his own aged face, driving the feathered serpent into exile. Rival and dark twin of Quetzalcoatl, he was \'he whose slaves we are,\' and once a year a handsome youth impersonated him for twelve months of luxury before climbing the pyramid to have his heart cut out. John Dee\'s scrying mirror in the British Museum is an Aztec obsidian mirror of Tezcatlipoca, which tells you exactly what Dee\'s angels were.',
@@ -43138,6 +46482,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'kukulkan',
+    translations: [
+      { lang: 'Yucatec Maya', original: 'Kʼukʼulkan', translit: '', meaning: 'feathered serpent (kʼukʼul \'feathered, quetzal-plumed\' + kan \'snake\')' }
+    ],
     parentId: 'andean-mesoamerican-lore',
     name: 'Kukulkan (Maya Feathered Serpent)',
     description: 'The Maya name for the feathered serpent of Mexico - at Chichen Itza, on the spring and autumn equinoxes, the setting sun throws a shadow of seven triangles down the northern staircase of El Castillo that joins the carved serpent head at the bottom: a stone serpent descending to earth, built with astronomical precision around AD 1000. The pyramid has 365 steps and a clap at its base echoes back as the chirp of the quetzal bird. The serpent who flies, teaches civilization and promises to return is the oldest story in the world, told from the other side.',
@@ -43148,6 +46495,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'persephone',
+    translations: [
+      { lang: 'Greek', original: 'Περσεφόνη', translit: 'Persephónē', meaning: 'uncertain, likely pre-Greek; folk-etymologised \'bringer of destruction\' (pérthō + phónos)' },
+      { lang: 'Greek', original: 'Κόρη', translit: 'Kórē', meaning: 'the Maiden; her cult title' }
+    ],
     parentId: 'greek-pantheon',
     name: 'Persephone (Queen of the Underworld)',
     description: 'Demeter\'s daughter, snatched by Hades while picking flowers and bound to the underworld by six pomegranate seeds - the myth that explained winter and powered the Eleusinian Mysteries, Greece\'s most secret initiation, where for two thousand years initiates drank the kykeon (very probably ergot, the natural LSD) and saw something that \'made death no longer an evil.\' Cicero, Plato and Marcus Aurelius were initiated; the Church shut it down in AD 392. Her descent is Inanna\'s descent again, and Eleusis is the model for every mystery school and degree system since.',
@@ -43158,6 +46509,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'kali',
+    translations: [
+      { lang: 'Sanskrit', original: 'काली', translit: 'Kālī', meaning: 'the black one, the dark one; feminine of kāla \'black\', also \'time\'' }
+    ],
     parentId: 'hindu-pantheon',
     name: 'Kali (Goddess of Destruction)',
     description: 'Black-skinned, tongue out, four-armed, wearing a necklace of severed heads and a skirt of arms, dancing on the corpse of her husband Shiva: the goddess of time and death who sprang from Durga\'s brow to drink demon blood. Her Calcutta temple (Kalighat) still sacrifices goats daily; the Thuggee cult strangled an estimated million travelers in her name until the British suppressed it in the 1830s. In 2015 her image was projected onto the Empire State Building, and a statue of Shiva\'s dance stands outside CERN. The \'divine feminine\' being revived in the West has a face, and this is it.',
@@ -43168,6 +46522,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'hanuman',
+    translations: [
+      { lang: 'Sanskrit', original: 'हनुमान्', translit: 'Hanumān', meaning: 'having (prominent) jaws (hanu \'jaw\' + possessive -mant)' }
+    ],
     parentId: 'hindu-pantheon',
     name: 'Hanuman (Monkey God)',
     description: 'The flying monkey general of the Ramayana who leapt the strait to Lanka, carried a Himalayan mountain back for its healing herb, and tore open his chest to show Rama and Sita in his heart - the most popular god in India today, with a 108-foot statue near Delhi and his Chalisa chanted by hundreds of millions. He is the model of China\'s Monkey King, Sun Wukong. The \'vanara\' race of intelligent forest-men he belongs to is cited by cryptozoologists who note that Hindu scripture simply assumes a species of man-apes living in the jungle.',
@@ -43178,6 +46535,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'sekhmet',
+    translations: [
+      { lang: 'Egyptian', original: 'sḫmt', translit: 'Sekhmet', meaning: 'the powerful one, she who is mighty (sḫm \'to be powerful\' + feminine -t)' }
+    ],
     parentId: 'egyptian-pantheon',
     name: 'Sekhmet (Lioness of War & Plague)',
     description: '\'The Powerful One,\' lion-headed daughter of Ra, sent to slaughter rebellious mankind and stopped only when the gods dyed beer red and she drank herself unconscious thinking it was blood. Goddess of plague and its cure - her priests were Egypt\'s physicians - Amenhotep III raised over 700 black granite statues of her at Karnak to ward off an epidemic. The ten plagues of the Exodus were aimed at exactly these gods: \'against all the gods of Egypt I will execute judgment\' (Exodus 12:12), and Sekhmet, mistress of pestilence, could not stop the boils or the death of the firstborn.',
@@ -43208,6 +46568,11 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'blueprint-noahs-ark',
+    translations: [
+      { lang: 'Hebrew', original: 'נֹחַ', translit: 'Nōaḥ', meaning: 'rest, comfort (Genesis 5:29 links it to nāḥam, to comfort)' },
+      { lang: 'Hebrew', original: 'תֵּבָה', translit: 'tēḇāh', meaning: 'chest, box (Noah\'s ark; also Moses\' basket); perhaps from Egyptian ḏbꜣt, chest, coffin' },
+      { lang: 'Latin', original: 'arca', translit: '', meaning: 'chest, box, coffer (source of \'ark\')' }
+    ],
     parentId: 'biblical-blueprints',
     name: 'Noah\'s Ark',
     description: '300 cubits long, 50 wide, 30 high - about 510 x 85 x 51 feet - three decks, one door, one window, gopher wood sealed with pitch inside and out (Genesis 6:14-16). That 6:1 length-to-beam ratio is the same used by modern cargo ships and was shown in Korean naval-engineering tests (1993) to be close to optimal for stability in heavy seas; the volume equals about 520 railway stock cars, far more than the roughly 16,000 land-vertebrate \'kinds\' would need. It was not a boat that had to go anywhere, only float. Gilgamesh\'s cube-shaped ark, by contrast, would roll over - which tells you which account is the original and which the garbled copy. Pilgrims have been hunting the wood on Ararat for 1,700 years.',
@@ -43229,6 +46594,11 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'blueprint-tabernacle',
+    translations: [
+      { lang: 'Hebrew', original: 'מִשְׁכָּן', translit: 'miškān', meaning: 'dwelling place (from šāḵan, to dwell, settle)' },
+      { lang: 'Hebrew', original: 'אֹהֶל מוֹעֵד', translit: 'ʾōhel môʿēḏ', meaning: 'tent of meeting (ʾōhel, tent + môʿēḏ, appointed meeting)' },
+      { lang: 'Latin', original: 'tabernaculum', translit: '', meaning: 'tent, hut (diminutive of taberna); Vulgate\'s word, source of \'tabernacle\'' }
+    ],
     parentId: 'biblical-blueprints',
     name: 'The Tabernacle (Exodus 25-27)',
     description: 'God\'s tent in the wilderness, shown to Moses on Sinai and built by Bezalel: a courtyard 100 x 50 cubits fenced with linen, the bronze altar and laver, then the tent itself 30 x 10 cubits of gold-plated acacia boards under four layers of curtains - the Holy Place with the golden lampstand, the table of showbread and the altar of incense, and behind the veil the Holy of Holies with the Ark. Every piece is a picture of Christ, as Hebrews spells out: the one door, the sacrifice, the washing, the bread, the light, the torn veil. Its layout was oriented east, and the arrangement of the tribes camped around it forms a cross when drawn to the numbers in Numbers 2. It stood at Shiloh for over 300 years and then vanished.',
@@ -43250,6 +46620,11 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'blueprint-solomons-temple',
+    translations: [
+      { lang: 'Hebrew', original: 'שְׁלֹמֹה', translit: 'Šəlōmōh', meaning: 'his peace, peaceable (from šālôm, peace)' },
+      { lang: 'Sumerian', original: '𒂍𒃲', translit: 'É.GAL', meaning: 'great house, palace (ultimate source of Hebrew hêḵāl, temple)' },
+      { lang: 'Hebrew', original: 'הֵיכָל', translit: 'hêḵāl', meaning: 'temple, palace, nave (loan from Akkadian ēkallu ← Sumerian É.GAL, \'great house\')' }
+    ],
     parentId: 'biblical-blueprints',
     name: 'Solomon\'s Temple (1 Kings 6-7)',
     description: 'Twice the Tabernacle in every dimension - 60 x 20 x 30 cubits - built of quarried stone finished so silently \'there was neither hammer nor axe nor any tool of iron heard in the house,\' panelled in cedar from Lebanon and overlaid with gold, with two bronze pillars Jachin and Boaz at the door, twin fifteen-foot cherubim over the Ark, and the great bronze Sea on twelve oxen in the court (1 Kings 6-7). David received the plan \'in writing by his hand upon me\' (1 Chronicles 28:19). Nebuchadnezzar burned it in 586 BC and nothing of it has been excavated because the Waqf will not allow a spade on the Mount - but Freemasonry built its entire mythology on this building, and the Templars took their name from its site.',
@@ -43271,6 +46646,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'blueprint-ezekiels-temple',
+    translations: [
+      { lang: 'Hebrew', original: 'יְחֶזְקֵאל', translit: 'Yəḥezqēʾl', meaning: 'God strengthens (ḥāzaq, to be strong + ʾēl, God)' },
+      { lang: 'Hebrew', original: 'הֵיכָל', translit: 'hêḵāl', meaning: 'temple, palace, nave (loan from Akkadian ēkallu ← Sumerian É.GAL, \'great house\')' }
+    ],
     parentId: 'biblical-blueprints',
     name: 'Ezekiel\'s Temple (Ezekiel 40-48)',
     description: 'In 573 BC a man \'whose appearance was like brass\' with a measuring reed walked Ezekiel through a Temple that has never existed: a 500-cubit square complex with gates, chambers and an altar laid out in nine chapters of measurements, a river flowing from under its threshold that heals the Dead Sea, and the glory of God returning through the east gate it had left - the gate Suleiman walled up in 1541. Its dimensions do not fit the Second Temple or the current Temple Mount, there is no Ark and no high priest, and sacrifices are offered by a \'prince.\' Dispensationalists read it as the literal Millennial Temple of Revelation 20; everyone agrees it is a blueprint waiting for its builder.',
@@ -43281,6 +46660,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'blueprint-menorah',
+    translations: [
+      { lang: 'Hebrew', original: 'נֵר', translit: 'nēr', meaning: 'lamp (root n-w-r, to shine)' },
+      { lang: 'Hebrew', original: 'מְנוֹרָה', translit: 'mənôrāh', meaning: 'lampstand (from nēr, lamp)' }
+    ],
     parentId: 'biblical-blueprints',
     name: 'The Golden Menorah (Exodus 25:31-40)',
     description: 'One talent of pure gold (about 75 lb) hammered - not cast - into a single piece: a central shaft with six branches, each decorated with almond-blossom cups, knops and flowers, seven lamps burning olive oil all night (Exodus 25:31-40, 27:20-21). It is the only Temple vessel we can actually see: the Arch of Titus in Rome shows Roman soldiers carrying it in the triumph of AD 71. From there it went into Vespasian\'s Temple of Peace, was looted by the Vandals in 455, recaptured by Belisarius and sent to Constantinople in 534 - and then the record stops. Persistent rumor says it is in the Vatican; Israeli ministers have formally asked. The seven lamps are the seven Spirits of God and the seven churches of Revelation 1:20.',
@@ -43291,6 +46674,11 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'blueprint-high-priest-garments',
+    translations: [
+      { lang: 'Hebrew', original: 'אוּרִים', translit: 'ʾÛrîm', meaning: 'lights (plural of ʾûr, flame, light); sense debated' },
+      { lang: 'Hebrew', original: 'תֻּמִּים', translit: 'Tummîm', meaning: 'perfections, completeness (plural of tōm, integrity)' },
+      { lang: 'Hebrew', original: 'אֵפוֹד', translit: 'ʾēp̄ôḏ', meaning: 'ephod, priestly vestment; etymology uncertain (cf. Akkadian epattu, a garment)' }
+    ],
     parentId: 'biblical-blueprints',
     name: 'The High Priest\'s Garments, Breastplate & Urim and Thummim (Exodus 28)',
     description: 'Aaron\'s \'garments for glory and for beauty\': the blue robe with golden bells and pomegranates on its hem, the ephod of gold, blue, purple and scarlet, two onyx shoulder-stones engraved with the tribes, the turban with a gold plate reading HOLINESS TO THE LORD, and the breastplate of judgment - a square of twelve gemstones, one per tribe, folded double to hold the Urim and Thummim by which the high priest asked God yes-or-no questions (Exodus 28; Numbers 27:21). The breastplate stones are the foundation stones of the New Jerusalem (Revelation 21:19-20). Joseph Smith claimed to have found the Urim and Thummim with his golden plates; the Temple Institute has reconstructed the real set, with the gold plate and dyed-wool garments, ready for a priest.',
@@ -43301,6 +46689,11 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'blueprint-brazen-sea',
+    translations: [
+      { lang: 'Hebrew', original: 'יָם', translit: 'yām', meaning: 'sea; the great bronze basin (yām mûṣāq, \'molten sea\', 1 Kings 7:23)' },
+      { lang: 'Hebrew', original: 'יָכִין', translit: 'Yāḵîn', meaning: 'he will establish (from kûn); the right-hand pillar' },
+      { lang: 'Hebrew', original: 'בֹּעַז', translit: 'Bōʿaz', meaning: 'traditionally \'in him is strength\' (bô + ʿōz); the left-hand pillar' }
+    ],
     parentId: 'biblical-blueprints',
     name: 'The Molten Sea & Bronze Pillars (1 Kings 7)',
     description: 'Hiram of Tyre cast for Solomon a bronze basin ten cubits across and five deep, holding 2,000 baths of water (about 12,000 gallons), standing on twelve bronze oxen facing the four compass points, for the priests to wash in - and two hollow bronze pillars 18 cubits high named Jachin (\'He establishes\') and Boaz (\'In him is strength\') flanking the Temple porch, with lily-work and 200 pomegranates on each capital (1 Kings 7:13-26). The Babylonians broke them all up and carried the bronze to Babylon in 586 BC (Jeremiah 52:17-23). The two pillars are the first thing a Masonic candidate meets in every lodge room in the world, which is where the Craft\'s claim to Solomon\'s secrets starts - and 1 Kings 7:23 is the \'pi = 3\' verse that skeptics misread by ignoring the handbreadth rim.',
@@ -43955,6 +47348,11 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'heavens-all-religions',
+    translations: [
+      { lang: 'Hebrew', original: 'שָׁמַיִם', translit: 'šāmayim', meaning: 'heavens, sky (plural/dual form; Genesis 1:1)' },
+      { lang: 'Greek', original: 'οὐρανός', translit: 'ouranós', meaning: 'sky, heaven' },
+      { lang: 'Old English', original: 'heofon', translit: '', meaning: 'sky, heaven' }
+    ],
     parentId: 'biblical-apocryphal',
     name: 'Heavens of All Religions',
     description: 'Every people on earth remembers a garden it was thrown out of and a sky it is trying to get back to - \'he hath set eternity in their heart\' (Ecclesiastes 3:11). This branch lays the paradises side by side: the Bible\'s third heaven and New Jerusalem; Judaism\'s Gan Eden and the World to Come; Islam\'s seven-tiered Jannah of rivers and gardens; the Hindu Svarga and Buddhist Pure Land; Egypt\'s Field of Reeds; Valhalla and Fólkvangr; the Celtic Land of Youth; the Aztec Tlalocan; Japan\'s High Plain of Heaven. Read them together and two things stand out: nearly all are earned by works or won by warriors, and nearly all are reached by a judgment of the heart - while only one is entered by the merit of Someone else. The counterfeits are the measure of the original.',
@@ -43965,6 +47363,11 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'heaven-third-heaven-paradise',
+    translations: [
+      { lang: 'Avestan', original: 'pairi-daēza', translit: '', meaning: 'walled enclosure (pairi, around + daēza, wall)' },
+      { lang: 'Greek', original: 'παράδεισος', translit: 'paradeisos', meaning: 'enclosed park, pleasure garden (Persian loan); Eden in the Septuagint' },
+      { lang: 'Hebrew', original: 'פַּרְדֵּס', translit: 'pardēs', meaning: 'orchard, park (Persian loan); later the mystical \'Paradise\'' }
+    ],
     parentId: 'heavens-all-religions',
     name: 'The Third Heaven & Paradise (Christianity)',
     description: 'Paul \'knew a man in Christ... caught up to the third heaven... into paradise, and heard unspeakable words\' (2 Corinthians 12:2-4). The Hebrew Bible knows three heavens: the sky where birds fly, the heaven of the stars, and \'the heaven of heavens\' where God\'s throne is (Deuteronomy 10:14). Jesus promised the thief \'today shalt thou be with me in paradise\' - the believer is \'absent from the body, present with the Lord\' until the resurrection, when heaven comes down to a renewed earth as the New Jerusalem. No clouds and harps: a city, a river, a tree of life, no night, no temple because the Lamb is the temple, and the redeemed reigning with Christ. Enoch\'s ten heavens and Paul\'s third heaven describe the same layered cosmos the Enochian branch maps.',
@@ -43975,6 +47378,11 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'heaven-seven-heavens',
+    translations: [
+      { lang: 'Hebrew', original: 'שָׁמַיִם', translit: 'šāmayim', meaning: 'heavens, sky (a plural/dual form; cf. Akkadian šamû)' },
+      { lang: 'Hebrew', original: 'רָקִיעַ', translit: 'rāqîaʿ', meaning: 'firmament, expanse (from rāqaʿ, to beat out, spread); the second heaven' },
+      { lang: 'Arabic', original: 'سَمَاء', translit: 'samāʾ', meaning: 'sky, heaven (root s-m-w, to be high)' }
+    ],
     parentId: 'heavens-all-religions',
     name: 'The Seven Heavens (Judaism & Islam)',
     description: 'The Talmud (Hagigah 12b) names them: Vilon, Rakia, Shehaqim, Zebul, Ma\'on, Makon and Araboth, where the Throne of Glory stands above the ophanim and seraphim - the rabbinic systematization of the heavens Enoch toured and Paul alluded to. The Quran took the structure over whole (\'He who created the seven heavens in layers,\' 67:3), and in the Night Journey Muhammad is said to have climbed through them on a winged mule from the Temple Mount, meeting Adam, Jesus, Joseph, Enoch (Idris), Aaron, Moses and Abraham one heaven at a time before reaching the Lote Tree. The Dome of the Rock marks the launch point. Seven planets, seven heavens, seven days: the ancient sky was a ladder, and every mystery school since has sold tickets to climb it.',
@@ -43985,6 +47393,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'heaven-jannah',
+    translations: [
+      { lang: 'Arabic', original: 'جَنَّة', translit: 'jannah', meaning: 'garden; paradise (root j-n-n, to cover, conceal)' },
+      { lang: 'Arabic', original: 'فِرْدَوْس', translit: 'firdaws', meaning: 'paradise (Qur\'an 18:107); Persian loan via Greek paradeisos' }
+    ],
     parentId: 'heavens-all-religions',
     name: 'Jannah (Islamic Paradise)',
     description: '\'Gardens beneath which rivers flow\' - the Quran\'s constant refrain. Jannah has eight gates and a hundred levels; its rivers run with water, milk, wine and honey; its inhabitants recline on couches in silk, served by immortal youths, married to the houris - the large-eyed maidens \'whom no man or jinn has touched\' - and the highest level, Firdaus, lies directly beneath the Throne. Entry is by Allah\'s mercy weighed against deeds on the scales, with martyrs admitted directly, which is the engine behind every jihadist\'s confidence. It is a paradise of sensual reward with God himself mostly offstage; compare Revelation, where the whole point of the city is that \'they shall see his face.\'',
@@ -43995,6 +47407,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'heaven-olam-haba-gan-eden',
+    translations: [
+      { lang: 'Hebrew', original: 'גַּן עֵדֶן', translit: 'Gan ʿĒḏen', meaning: 'garden of Eden; ʿēḏen \'delight\', or from Akkadian edinu, \'plain, steppe\'' },
+      { lang: 'Hebrew', original: 'עוֹלָם הַבָּא', translit: 'ʿÔlām hab-bāʾ', meaning: 'the world to come (ʿôlām, age, world + bāʾ, coming)' }
+    ],
     parentId: 'heavens-all-religions',
     name: 'Gan Eden & Olam Ha-Ba (Judaism)',
     description: 'The Torah barely speaks of an afterlife; the rabbis built one. The righteous dead go to the heavenly Gan Eden - the Garden of Eden transposed upward - to await the resurrection in Olam Ha-Ba, the World to Come, which follows the Messiah\'s reign and the great judgment; the wicked spend up to twelve months in Gehinnom being purged, which is why Kaddish is said for eleven. Maimonides made resurrection one of his thirteen principles of faith; the Sadducees of Jesus\' day denied it entirely (Matthew 22:23). Kabbalah added reincarnation (gilgul). Jesus\' parable of Lazarus \'in Abraham\'s bosom\' and the rich man in torment with \'a great gulf fixed\' is the first-century Jewish picture exactly.',
@@ -44005,6 +47421,11 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'heaven-abrahams-bosom',
+    translations: [
+      { lang: 'Greek', original: 'κόλπος Ἀβραάμ', translit: 'kolpos Abraam', meaning: 'Abraham\'s bosom (kolpos, bosom, lap, fold of a garment), Luke 16:22' },
+      { lang: 'Hebrew', original: 'אַבְרָהָם', translit: 'ʾAḇrāhām', meaning: 'father of a multitude (Gen 17:5 folk link to hămôn); from ʾAḇrām, exalted father' },
+      { lang: 'Hebrew', original: 'שְׁאוֹל', translit: 'Šəʾôl', meaning: 'the underworld; meaning uncertain, perhaps from šāʾal, to ask' }
+    ],
     parentId: 'heavens-all-religions',
     name: 'Abraham\'s Bosom (The Comfort Side of Sheol)',
     description: 'Before the cross, Jesus taught, the dead went to Sheol/Hades in two compartments: the beggar Lazarus \'was carried by the angels into Abraham\'s bosom,\' the rich man to torment, with a gulf between (Luke 16:22-26). Christ himself \'descended first into the lower parts of the earth\' between Good Friday and Easter, preached to the spirits in prison, and \'led captivity captive\' (Ephesians 4:8-9; 1 Peter 3:19) - which is why the Apostles\' Creed says \'he descended into hell\' and why paradise moved: from under the earth to the presence of God. The icon of the Harrowing of Hell, Christ hauling Adam and Eve out of their tombs, is the Eastern church\'s standard Easter image and the clearest picture of what changed.',
@@ -44015,6 +47436,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'heaven-svarga',
+    translations: [
+      { lang: 'Sanskrit', original: 'स्वर्ग', translit: 'svarga', meaning: 'heaven; \'going to the light\' (svar, sunlight, sky + ga, going)' }
+    ],
     parentId: 'heavens-all-religions',
     name: 'Svarga (Hindu Heaven of Indra)',
     description: 'Indra\'s paradise on the summit of Mount Meru, where the gods drink soma, the apsaras dance, and the souls of the virtuous enjoy the fruits of their karma - until the merit runs out and they fall back into a new womb. That is the catch: in Hinduism heaven is a waiting room, not a destination. Even the gods are mortal in the long cycles of the yugas, and the real goal is moksha, release from rebirth into union with Brahman, which the Gita explicitly places above Svarga (\'they go to heaven and enjoy... and when their merit is exhausted they return\'). The Bible\'s heaven has no exit; Svarga has a turnstile.',
@@ -44025,6 +47449,11 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'heaven-sukhavati-pure-land',
+    translations: [
+      { lang: 'Sanskrit', original: 'सुखावती', translit: 'Sukhāvatī', meaning: 'full of bliss (sukha, happiness + possessive -vatī)' },
+      { lang: 'Chinese', original: '極樂', translit: 'Jílè', meaning: 'utmost bliss; the Chinese name of the Pure Land' },
+      { lang: 'Japanese', original: '極楽浄土', translit: 'Gokuraku Jōdo', meaning: 'Pure Land of Utmost Bliss' }
+    ],
     parentId: 'heavens-all-religions',
     name: 'Sukhavati, the Western Pure Land (Buddhism)',
     description: 'The Buddha Amitabha vowed that anyone who calls on his name with faith even ten times will be reborn after death in his Pure Land in the West - a realm of jewel trees, lotus ponds and perfect teaching from which enlightenment is guaranteed. Pure Land is the most popular form of Buddhism in East Asia precisely because it is salvation by faith in another\'s merit rather than by one\'s own impossible effort - the closest any non-Christian religion comes to grace, which Jesuit missionaries noticed immediately and Karl Barth called \'the most exact parallel to Christianity.\' The difference is that Amitabha is a story and the tomb in Jerusalem is empty.',
@@ -44035,6 +47464,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'heaven-nirvana',
+    translations: [
+      { lang: 'Sanskrit', original: 'निर्वाण', translit: 'nirvāṇa', meaning: 'blowing out, extinction (nis, out + vā, to blow)' },
+      { lang: 'Pali', original: 'nibbāna', translit: '', meaning: 'Pali form of nirvāṇa' }
+    ],
     parentId: 'heavens-all-religions',
     name: 'Nirvana (Extinction, Not Heaven)',
     description: 'The word means \'blowing out,\' as of a candle. Nirvana is not a place but the end of craving, and with it the end of the self and the cycle of rebirth - the Buddha refused to say whether an enlightened one exists after death, because the question assumes a self to exist. Westerners repackage it as bliss; the texts call it the cessation of becoming. Set beside the Bible\'s promise of a resurrected body, a name, a city and a face to see, the contrast could not be sharper: one faith\'s highest hope is to be no one, the other\'s is to be known. The Hindu version, moksha, dissolves the drop into the ocean of Brahman; the Christian version keeps the drop.',
@@ -44045,6 +47478,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'heaven-aaru-field-of-reeds',
+    translations: [
+      { lang: 'Egyptian', original: 'sḫt-jꜣrw', translit: 'Sekhet-Aaru', meaning: 'field of reeds (sḫt, field + jꜣrw, reeds)' }
+    ],
     parentId: 'heavens-all-religions',
     name: 'Aaru, the Field of Reeds (Egypt)',
     description: 'The Egyptian paradise was Egypt perfected: endless fields of barley seven cubits high along a heavenly Nile in the east where the sun rises, farmed forever by the justified dead - or by their shabti servant-figurines, which is why tombs are full of them. To get there the soul crossed the Duat, passed the gates with the right passwords from the Book of the Dead, and had its heart weighed against the feather of Ma\'at before Osiris; a heart heavier than truth was eaten by Ammit and the soul ceased to exist. The whole apparatus - judgment by a scale, a devourer, a paradise of the vindicated - is a pagan memory of the real court described in Daniel 7 and Revelation 20.',
@@ -44055,6 +47491,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'heaven-folkvangr',
+    translations: [
+      { lang: 'Old Norse', original: 'Fólkvangr', translit: '', meaning: 'field of the host, people-field (fólk, people, host + vangr, field)' },
+      { lang: 'Old Norse', original: 'Valhǫll', translit: '', meaning: 'hall of the slain (valr, the slain in battle + hǫll, hall)' }
+    ],
     parentId: 'heavens-all-religions',
     name: 'Fólkvangr & Valhalla (Norse)',
     description: 'Half the warriors who die in battle go to Odin\'s Valhalla to feast and fight until Ragnarök; the other half, the Grímnismál says, go to Freya\'s field Fólkvangr and her hall Sessrúmnir - the forgotten half of the Norse afterlife, chosen by the goddess rather than the god. Everyone else, the sick and the old, went down to Hel. It is a heaven with an expiry date: at Ragnarök the einherjar march out and die with the gods. A paradise you must kill to enter and that ends in a final defeat is the honest pagan picture, which is why the Vikings converted so fast once they heard of a King who had already won.',
@@ -44065,6 +47505,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'heaven-takamagahara',
+    translations: [
+      { lang: 'Japanese', original: '高天原', translit: 'Takamagahara', meaning: 'high plain of heaven (taka, high + ama, heaven + hara, plain)' }
+    ],
     parentId: 'heavens-all-religions',
     name: 'Takamagahara, the High Plain of Heaven (Shinto)',
     description: 'The dwelling of the heavenly kami, connected to the earth by the Floating Bridge of Heaven from which Izanagi stirred the sea, and ruled by Amaterasu after her brother\'s rampage got him banished to earth. Shinto has almost no doctrine of a human afterlife - the dead go to the gloomy Yomi or linger as ancestral spirits in the household shrine - so the imperial line\'s descent from Takamagahara was the one bridge between heaven and men, and the reason the Emperor\'s divinity mattered so much. Several mountains in Japan are named Takamagahara and claimed as the place the gods came down.',
@@ -44075,6 +47518,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'heaven-tlalocan',
+    translations: [
+      { lang: 'Nahuatl', original: 'Tlālōcān', translit: '', meaning: 'place of Tlaloc, the rain god (Tlāloc, from tlālli \'earth\' + locative -cān)' }
+    ],
     parentId: 'heavens-all-religions',
     name: 'Tlalocan, Paradise of the Rain God (Aztec)',
     description: 'The Aztecs assigned the afterlife by cause of death, not conduct: warriors and sacrificial victims went to the House of the Sun, women who died in childbirth became the Cihuateteo who haunted crossroads, and those who died by water, lightning or leprosy went to Tlalocan, the lush green paradise of the rain god painted on the walls of Tepantitla at Teotihuacan a thousand years before the Aztecs - figures singing, swimming and playing among butterflies and flowering trees. Everyone else made the four-year journey through the nine levels of Mictlan to oblivion. Children drowned for Tlaloc were promised this garden; that is how the priests sold it to the parents.',
@@ -44085,6 +47531,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'heaven-tir-na-nog',
+    translations: [
+      { lang: 'Irish', original: 'Tír na nÓg', translit: '', meaning: 'land of the young (tír \'land\' + óg \'young\'); Old Irish Tír inna n-Óc' }
+    ],
     parentId: 'heavens-all-religions',
     name: 'Tír na nÓg, the Land of Youth (Celtic)',
     description: 'An island in the western sea where no one ages, reached by the hero Oisín on the white horse of the fairy woman Niamh; after what felt like three years he rode home to find three centuries had passed, and when his foot touched Irish soil he withered into an old man and was baptized by St. Patrick before he died. The Celtic Otherworld - Tír na nÓg, Mag Mell, Avalon, Annwn - is always just offshore, entered through a mist, a mound or a lake, inhabited by the Tuatha Dé Danann who are the old gods demoted to fairies. The time dilation of the Oisín story is the same detail reported by modern abductees and in Rip Van Winkle; the Christian scribes who wrote it down made a point of giving Patrick the last word.',
@@ -44095,6 +47544,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'heaven-tian-heavenly-court',
+    translations: [
+      { lang: 'Chinese', original: '天', translit: 'Tiān', meaning: 'sky, heaven; the impersonal supreme power' },
+      { lang: 'Chinese', original: '上帝', translit: 'Shàngdì', meaning: 'Lord on High, Supreme Deity (shàng, above + dì, lord, emperor)' }
+    ],
     parentId: 'heavens-all-religions',
     name: 'Tian & the Celestial Bureaucracy (China)',
     description: 'The oldest Chinese Heaven was a person: Shangdi, the \'Lord on High,\' worshipped by the Shang kings with sacrifices and oracle bones, who became the impersonal Tian whose \'Mandate\' made and unmade dynasties and to whom the Emperor alone sacrificed each winter solstice at the Temple of Heaven in Beijing. Taoism and folk religion later furnished it with a full civil service: the Jade Emperor on his throne, ministries of thunder and plague, the Kitchen God filing annual reports on every household, and promotions and demotions for the gods themselves. Jesuit missionaries argued, with the ancient texts in hand, that Shangdi was the one true God the Chinese had known and lost - the Chinese Union Bible still translates God as Shangdi.',
@@ -44105,6 +47558,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'hells-all-religions',
+    translations: [
+      { lang: 'Old English', original: 'hel', translit: '', meaning: 'the underworld, abode of the dead (Germanic *haljō, \'concealed place\')' },
+      { lang: 'Old Norse', original: 'Hel', translit: '', meaning: 'the realm of the dead and its goddess (cognate)' }
+    ],
     parentId: 'biblical-apocryphal',
     name: 'Hells of All Religions',
     description: 'Every culture has a hell, and nearly all of them are underground, dark, guarded, and entered by a river or a gate - the Underworld Entrances layer on the map marks where people said the door was. This branch collects the doctrines rather than the doorways: the Bible\'s Sheol, Gehenna, the Abyss and the Lake of Fire; the Greek Tartarus; the Norse Hel; Mesopotamia\'s House of Dust; Egypt\'s hall of judgment; Islam\'s seven-gated Jahannam; the Hindu-Buddhist Narakas with their hot and cold levels; Rome\'s Purgatory and Limbo; the Chinese Diyu courts; Mictlan and Xibalba. Jesus spoke of hell more than anyone else in Scripture, and 2 Peter 2:4 uses the Greek word Tartarus for where the fallen angels are chained - the pagans were describing a real place from the outside.',
@@ -44115,6 +47572,11 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'hell-lake-of-fire-gehenna',
+    translations: [
+      { lang: 'Hebrew', original: 'גֵּי בֶן־הִנֹּם', translit: 'Gê ḇen-Hinnōm', meaning: 'valley of the son of Hinnom, the ravine south-west of Jerusalem' },
+      { lang: 'Greek', original: 'γέεννα', translit: 'géenna', meaning: 'Gehenna, the Greek form of Hebrew Gê Hinnōm; hell of fire' },
+      { lang: 'Greek', original: 'λίμνη τοῦ πυρός', translit: 'límnē toû pyrós', meaning: 'lake of fire (Revelation 19–20)' }
+    ],
     parentId: 'hells-all-religions',
     name: 'Gehenna & the Lake of Fire (Christianity)',
     description: 'Gehenna is a place you can visit: the Valley of Hinnom below Jerusalem\'s walls, where Judah\'s kings burned their children to Moloch and Josiah turned the site into the city\'s smouldering garbage dump - \'where their worm dieth not, and the fire is not quenched,\' Jesus said eleven times. Hades is the holding cell; Gehenna, the Lake of Fire, is the sentence, \'prepared for the devil and his angels\' (Matthew 25:41), into which death and Hades themselves are thrown after the Great White Throne. Annihilationists read the second death as destruction; the historic church read \'the smoke of their torment ascendeth up for ever and ever\' (Revelation 14:11) literally. Either way, the One who described it is the One who went to the cross to keep people out of it.',
@@ -44125,6 +47587,11 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'hell-abyss-bottomless-pit',
+    translations: [
+      { lang: 'Greek', original: 'ἄβυσσος', translit: 'ábyssos', meaning: 'bottomless (a- \'without\' + byssós \'depth\'); the deep, the pit' },
+      { lang: 'Hebrew', original: 'תְּהוֹם', translit: 'təhôm', meaning: 'the deep, primeval waters (rendered ábyssos in the Septuagint)' },
+      { lang: 'Greek', original: 'Τάρταρος', translit: 'Tártaros', meaning: 'the prison-pit beneath Hades (2 Peter 2:4 tartaróō); name of pre-Greek origin' }
+    ],
     parentId: 'hells-all-religions',
     name: 'The Abyss / Bottomless Pit (Tartarus of the Fallen Angels)',
     description: 'Not the same as hell. The Abyss (Greek abyssos, \'without bottom\') is the prison where the Watchers who sinned before the Flood are \'reserved in everlasting chains under darkness\' (Jude 6) - Peter calls it Tartarus, the same name Hesiod gave the pit where Zeus chained the Titans. The demons begged Jesus not to send them there (Luke 8:31). In Revelation 9 a star falls with its key, the pit is opened, the smoke darkens the sun, and locust-scorpions pour out under their king Abaddon/Apollyon; the Beast itself ascends \'out of the bottomless pit\' (17:8), and Satan is chained in it for the thousand years. Enoch saw it as a place \'without a firmament above and without a foundation beneath.\' CERN\'s statue of Shiva and the \'opening the portal\' jokes of its own staff are the reason prophecy students watch Geneva.',
@@ -44135,6 +47602,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'hell-outer-darkness',
+    translations: [
+      { lang: 'Greek', original: 'τὸ σκότος τὸ ἐξώτερον', translit: 'tò skótos tò exṓteron', meaning: 'the outer darkness (Matthew 8:12; 22:13; 25:30)' }
+    ],
     parentId: 'hells-all-religions',
     name: 'The Outer Darkness',
     description: 'Three times in Matthew, Jesus describes a place of \'weeping and gnashing of teeth\' that is not fire but darkness - the guest without a wedding garment, the unprofitable servant who buried his talent, the \'children of the kingdom\' who presumed on their birthright, each \'cast into outer darkness\' outside the lit banquet hall. Jude 13 reserves \'the blackness of darkness for ever\' for the wandering stars. Fire and darkness together: C.S. Lewis read hell as the place where God finally gives a man what he insisted on, himself alone, with the door locked on the inside. Mormonism borrowed the phrase for its lowest kingdom, for the sons of perdition only.',
@@ -44145,6 +47615,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'hell-jahannam',
+    translations: [
+      { lang: 'Arabic', original: 'جَهَنَّم', translit: 'Jahannam', meaning: 'hell; borrowed from Hebrew Gê Hinnōm, the valley of Hinnom (Gehenna)' }
+    ],
     parentId: 'hells-all-religions',
     name: 'Jahannam (Islamic Hell)',
     description: 'The name is Gehenna in Arabic. Seven gates, seven levels, each for a class of sinner, with hypocrites at the bottom; boiling water, the fruit of the Zaqqum tree with heads like devils, skins burned off and replaced to be burned again, and chains seventy cubits long. The bridge As-Sirat, thinner than a hair and sharper than a sword, runs over it and every soul must cross on the Day of Judgment - the believer swiftly, the wicked falling. Muslims who sinned are released after punishment; unbelievers never. Nineteen angels guard it (Quran 74:30), a number the Baha\'is and numerologists have built whole systems on. It is the Bible\'s hell with the structure of Dante and the escape clause of Purgatory.',
@@ -44155,6 +47628,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'hell-naraka',
+    translations: [
+      { lang: 'Sanskrit', original: 'नरक', translit: 'naraka', meaning: 'hell, the underworld of torment ruled by Yama' }
+    ],
     parentId: 'hells-all-religions',
     name: 'Naraka (Hindu & Buddhist Hells)',
     description: 'Yama, the first man to die, became the judge of the dead and the ruler of Naraka - in the Garuda Purana twenty-eight hells, each tailored to a sin: boiling oil for the adulterer, being devoured by the animals you ate, the river Vaitarani of blood and filth. Buddhism kept Yama and expanded the system to eight hot and eight cold hells stacked beneath India, with lifespans in the trillions of years - but none of it is eternal; when the karma is burned off the being is reborn, perhaps as a god, perhaps as a hungry ghost. Tibetan temple paintings of the Wheel of Life put the hells at the bottom of the wheel and a demon holding the whole thing in its teeth. A universe with no exit and no Judge who can forgive is its own kind of hell.',
@@ -44165,6 +47641,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'hell-avici',
+    translations: [
+      { lang: 'Sanskrit', original: 'अवीचि', translit: 'avīci', meaning: 'waveless, without interval (a- + vīci \'wave\'); the hell of unceasing torment' },
+      { lang: 'Chinese', original: '無間', translit: 'wújiàn', meaning: 'without interval, uninterrupted (calque of avīci)' }
+    ],
     parentId: 'hells-all-religions',
     name: 'Avici, the Uninterrupted Hell (Buddhism)',
     description: 'The lowest of the eight hot hells, \'without interval\' because the torment never pauses - reserved for the five worst crimes: killing a parent, killing an arhat, wounding a Buddha, splitting the sangha, and, in Mahayana, slandering the Lotus Sutra. Devadatta, the Buddha\'s cousin who tried to murder him, is the textbook inmate; the earth opened and swallowed him alive. A term there lasts an antarakalpa, roughly 3.4 × 10^20 years, and ends only because everything in samsara ends. Japanese Buddhism\'s Lotus sects used Avici the way medieval preachers used the Inferno; the Hell Scrolls of Kyoto are the Eastern Hieronymus Bosch.',
@@ -44175,6 +47655,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'hell-duat-hall-of-judgment',
+    translations: [
+      { lang: 'Egyptian', original: 'dwꜣt', translit: 'Duat', meaning: 'the netherworld through which the sun travels by night' }
+    ],
     parentId: 'hells-all-religions',
     name: 'The Duat & the Weighing of the Heart (Egypt)',
     description: 'The sun god sailed through the Duat every night, fighting the serpent Apophis in the twelve hours of darkness, and the dead followed the same road: lakes of fire, gates with knife-wielding guardians whose names had to be spoken, and at the end the Hall of Two Truths where Anubis weighed the heart, Thoth recorded, forty-two assessor gods heard the \'negative confession\' (\'I have not killed, I have not stolen...\'), and the crocodile-lion-hippo Ammit waited to eat the failures. There was no eternal torment, only the second death - non-existence - for the heavy-hearted. The Book of the Dead was, literally, the cheat sheet buried with the body. Compare the court of Revelation 20, where the books are also opened - but where another Book, not your own heart, decides.',
@@ -44185,6 +47668,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'hell-irkalla-kur',
+    translations: [
+      { lang: 'Sumerian', original: '𒆳', translit: 'kur', meaning: 'mountain, foreign land; the netherworld' },
+      { lang: 'Akkadian', original: 'Irkalla', translit: '', meaning: 'the netherworld and its queen Ereshkigal; probably from Sumerian iri-gal \'great city\'' }
+    ],
     parentId: 'hells-all-religions',
     name: 'Irkalla / Kur, the House of Dust (Mesopotamia)',
     description: '\'The house where those who enter do not come out, the road where the way leads only forward, the house where those who enter are deprived of light, where dust is their food and clay their bread\' - Enkidu\'s dream in Gilgamesh and Ishtar\'s descent describe the same place: a dim city beneath the earth ruled by Ereshkigal and later Nergal, entered through seven gates at each of which the dead are stripped, where kings and slaves alike shuffle in feathers eating dust, cheered only by offerings their living families pour down to them. No judgment, no reward, just a shadow-existence for everyone - essentially the Hebrew Sheol of Job and Ecclesiastes, which is no accident, since Abraham came from Ur. The Mesopotamians also believed the gates of Kur were in the far west and in the Zagros mountains.',
@@ -44195,6 +47682,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'hell-yomi',
+    translations: [
+      { lang: 'Chinese', original: '黃泉', translit: 'Huángquán', meaning: 'yellow springs; the underworld of the dead' },
+      { lang: 'Japanese', original: '黄泉', translit: 'Yomi', meaning: 'land of the dead; written with Chinese \'yellow springs\', native reading of unknown origin' }
+    ],
     parentId: 'hells-all-religions',
     name: 'Yomi, the Land of the Dead (Shinto)',
     description: 'Yomi-no-kuni, the \'land of darkness,\' is where Izanami went when she died and where Izanagi found her rotting and crawling with maggots; he fled, she sent the hags of Yomi after him, and he blocked the entrance with a boulder while she swore to kill a thousand of his people every day (so he vowed to cause fifteen hundred births). It is not a place of punishment - just decay and pollution (kegare), which is why Shinto is obsessed with ritual washing and leaves funerals to the Buddhists. The traditional entrance is Yomotsu Hirasaka, a slope at Higashiizumo in Shimane, where a shrine marks the boulder.',
@@ -44205,6 +47696,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'hell-annwn',
+    translations: [
+      { lang: 'Welsh', original: 'Annwfn', translit: '', meaning: '\'very deep\' or \'un-world\' (an-, intensive or negative + dwfn \'deep, world\')' }
+    ],
     parentId: 'hells-all-religions',
     name: 'Annwn, the Welsh Otherworld',
     description: 'Not quite a hell - a deep place (the name means \'very deep\' or \'un-world\') of eternal youth and feasting ruled by Arawn, whose red-eared white hounds, the Cŵn Annwn, hunt the souls of the damned across the night sky in the Wild Hunt. Pwyll swapped places with its king for a year in the Mabinogi; Arthur raided it for a magic cauldron in the poem \'Preiddeu Annwfn\' and came back with seven men out of three shiploads - the Welsh seed of the Grail quest. Christian Wales quietly folded it into hell, and the hounds became hellhounds; Glastonbury Tor and Lundy Island were both named as its gate.',
@@ -44215,6 +47709,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'hell-purgatory',
+    translations: [
+      { lang: 'Latin', original: 'purgatorium', translit: '', meaning: 'place of cleansing (from purgāre \'to purify, cleanse\')' }
+    ],
     parentId: 'hells-all-religions',
     name: 'Purgatory (Roman Catholicism)',
     description: 'A temporary fire where the saved but imperfect are purified before heaven - defined at Lyon (1274) and Trent (1563), built from 2 Maccabees 12 (prayers for the dead), 1 Corinthians 3:15 (\'saved; yet so as by fire\') and the rabbinic Gehinnom, and given its architecture by Dante\'s seven-terraced mountain. Because the living could shorten a soul\'s sentence with Masses, prayers and alms, Purgatory became the Church\'s most profitable doctrine: chantries, indulgences, and Tetzel\'s jingle - \'as soon as the coin in the coffer rings, the soul from purgatory springs\' - which set off the Reformation in 1517. The Orthodox never accepted it; the Reformers pointed out that the thief on the cross went straight to paradise. St. Patrick\'s Purgatory in Lough Derg is the cave pilgrims entered to see it for themselves.',
@@ -44225,6 +47722,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'hell-limbo',
+    translations: [
+      { lang: 'Latin', original: 'limbus', translit: '', meaning: 'hem, border, edge; hence the fringe of hell' }
+    ],
     parentId: 'hells-all-religions',
     name: 'Limbo (The Edge of Hell)',
     description: 'Limbus means \'hem\' or \'edge.\' Medieval theologians needed somewhere for the righteous who died before Christ (the Limbo of the Fathers - the Old Testament saints Christ released at the Harrowing of Hell) and for unbaptized infants, who had original sin but no actual sin and so, Augustine reluctantly concluded, could not enter heaven - the Limbo of Infants, a painless natural happiness without the vision of God. Dante put Homer, Plato and Saladin there in a green meadow with a castle. It was never formally defined; in 2007 the Vatican\'s International Theological Commission quietly shelved it, saying there were \'serious grounds for hope\' that unbaptized babies are saved - which is what David said about his dead son in 2 Samuel 12:23.',
@@ -45027,6 +48527,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'anomaly-Myths---Legends-mae-de-ouro-paraiba',
+    translations: [
+      { lang: 'Portuguese', original: 'Mãe de Ouro', translit: '', meaning: 'mother of gold (mãe \'mother\', Latin mater + ouro \'gold\', Latin aurum)' }
+    ],
     parentId: 'myths-legends-root',
     name: 'Mãe de Ouro: The Golden Spheres of the Sertão',
     description: 'In the backlands of northeastern Brazil, people have always seen the Mãe de Ouro - the \'Mother of Gold\' - a golden or blue-green ball of fire that floats silently over the hills at night, changes size, splits, and vanishes, said to mark buried gold or to be a woman of fire who lures men away. The footage circulating from Paraíba shows exactly that: a glowing sphere drifting over a dark ridge. Science files it beside the will-o\'-the-wisp and earthquake lights (the region has active faults); the folk tradition files it with the Curupira and the enchanted ones, and the Catholic sertanejos cross themselves. The same silent orbs are reported from Hessdalen in Norway to the Marfa lights in Texas; the behaviour is the same, and so is the fact that nobody has caught one.',
@@ -45082,6 +48585,11 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'angelic-hierarchy',
+    translations: [
+      { lang: 'Greek', original: 'ἱεραρχία', translit: 'hierarchia', meaning: 'sacred rule (hieros + archein); Pseudo-Dionysius\' term for the angelic orders' },
+      { lang: 'Greek', original: 'ἄγγελος', translit: 'angelos', meaning: 'messenger; rendering Hebrew malʾāḵ' },
+      { lang: 'Hebrew', original: 'מַלְאָךְ', translit: 'malʾāḵ', meaning: 'messenger, envoy (from a root l-ʾ-k, to send)' }
+    ],
     parentId: 'elohim',
     name: 'Angelic Hierarchy (Enochian Orders)',
     description: 'The chain of command in heaven as the Enochic books and the rabbis mapped it: seraphim, cherubim and ophanim about the Throne; archangels and princes over the seven heavens; angels of the elements, the nations, the Torah and the books of life and death; and the Watchers, holy and fallen. The Bible gives the ranks only in glimpses (Isaiah 6, Ezekiel 1, Daniel 10, Colossians 1:16 \'thrones, dominions, principalities, powers\'); 1, 2 and 3 Enoch fill in the org chart. Whoever controls the chart controls who you pray to, which is exactly why the Church kept these books out of the canon and the magicians of every age tried to get them back.',
@@ -45132,6 +48640,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: '2-enoch-secrets',
+    translations: [
+      { lang: 'Hebrew', original: 'חֲנוֹךְ', translit: 'Ḥănōḵ', meaning: 'dedicated, initiated (from ḥānaḵ, to dedicate, train)' },
+      { lang: 'Greek', original: 'Ἑνώχ', translit: 'Henṓkh', meaning: 'Greek form of Enoch, the language of the lost original' }
+    ],
     parentId: 'book-of-enoch',
     name: '2 Enoch (The Secrets of Enoch, Slavonic)',
     description: 'Survives only in Old Church Slavonic manuscripts copied by monks who were told it was forbidden, which is usually a sign a book is worth reading. Written in Greek in the first century, probably in Alexandria, it is the account of Enoch\'s ascent through ten heavens, his dictation of 366 books from the archangel Vrevoil, his thirty-day return to instruct his sons, and the strange coda in which Noah\'s brother Nir receives a son, Melchizedek, born of a virgin and carried to Eden before the Flood. The Church fathers quote it, then lose it; it resurfaces in Russia in the 1890s. Its ten-heaven cosmology and its priesthood that bypasses Levi are precisely the things a managed canon would need to bury.',
@@ -45142,6 +48654,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: '3-enoch-hekhalot',
+    translations: [
+      { lang: 'Sumerian', original: 'É.GAL', translit: 'é-gal', meaning: 'great house: palace, temple; via Akkadian ekallu the source of Hebrew hêḵāl' },
+      { lang: 'Hebrew', original: 'סֵפֶר הֵיכָלוֹת', translit: 'Sēfer Hêḵālôṯ', meaning: 'Book of Palaces, the heavenly halls through which the mystic ascends' }
+    ],
     parentId: 'book-of-enoch',
     name: '3 Enoch (Sefer Hekhalot, The Hebrew Book of Enoch)',
     description: 'The Hebrew Enoch is not Enoch\'s book at all but Rabbi Ishmael\'s, a second-century High Priest\'s heir who claims to have ascended through the seven palaces and been received by Metatron, who turns out to be Enoch himself, transformed into the Prince of the Presence with seventy-two wings and a body of fire. Compiled around the fifth or sixth century from older Merkabah traditions, it reads like a debriefing: the angelic ranks and their duties, the names of the princes of the nations, the Curtain of the Throne, the souls waiting to be born, and the day God bound His own right hand behind His back. The Talmud warned that of four rabbis who entered this garden only one came out whole. 3 Enoch is the map they used.',
@@ -45152,6 +48668,11 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'book-of-jubilees',
+    translations: [
+      { lang: 'Ge\'ez', original: 'መጽሐፈ ኩፋሌ', translit: 'Maṣḥafa Kufālē', meaning: 'Book of Division (of the days), the Ethiopic title' },
+      { lang: 'Hebrew', original: 'יוֹבֵל', translit: 'yōḇēl', meaning: 'ram\'s horn; the jubilee year proclaimed by its blast every fiftieth year' },
+      { lang: 'Greek', original: 'Λεπτογένεσις', translit: 'Leptogénesis', meaning: 'the Little Genesis (leptos, small, fine + Genesis)' }
+    ],
     parentId: 'ancient-texts',
     name: 'Book of Jubilees (The Little Genesis)',
     description: 'Genesis retold by the Angel of the Presence to Moses on Sinai, dated by jubilees of forty-nine years, written around 150 BCE and found in fifteen copies among the Dead Sea Scrolls. It is still canon in the Ethiopian Church and was Scripture at Qumran. Jubilees is where the gaps get filled: the names of the patriarchs\' wives (Enoch\'s is Edna), the Watchers first sent to teach men and only then corrupted, the demons after the Flood led by Mastema, the 364-day calendar, and Abraham\'s war on the idol factory. It explains that the Flood did not end the Nephilim problem; a tenth of the spirits were left to Mastema \'to corrupt and lead astray\'. That tenth is the subject of most of this map.',
@@ -45172,6 +48693,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'rabbi-ishmael-3-enoch',
+    translations: [
+      { lang: 'Hebrew', original: 'יִשְׁמָעֵאל', translit: 'Yišmāʿēl', meaning: 'God hears / God will hear (yišmaʿ + ʾēl)' },
+      { lang: 'Hebrew', original: 'רַבִּי', translit: 'Rabbī', meaning: 'my master, my teacher (from rav, great one)' }
+    ],
     parentId: '3-enoch-hekhalot',
     name: 'Rabbi Ishmael ben Elisha (Narrator of 3 Enoch)',
     description: 'The \'Ishmael\' of 3 Enoch is not Abraham\'s son by Hagar but Rabbi Ishmael ben Elisha ha-Kohen (c. 90-135 CE), grandson of a High Priest, a Tanna of the Mishnah and, by legend, one of the Ten Martyrs flayed by Rome after the Bar Kokhba revolt. He appears nowhere in the Bible. He does appear in the Talmud (Berakhot 7a records him entering the Holy of Holies and seeing God on His throne), in Hekhalot Rabbati as the chief of the Merkabah descenders, and in the Yom Kippur martyrology Eleh Ezkerah, where his face is so beautiful that Caesar\'s daughter asks to keep its skin. 3 Enoch is his report from the seventh heaven, where Metatron tells him \'I am Enoch, the son of Jared\'. The priestly line reporting back from the Throne while the Temple lies in ruins is the point.',
@@ -45184,6 +48709,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'ten-martyrs',
+    translations: [
+      { lang: 'Hebrew', original: 'אֵלֶּה אֶזְכְּרָה', translit: 'ʾĒlleh ʾEzkərāh', meaning: 'these I will remember (opening words, from Psalm 42:5)' },
+      { lang: 'Greek', original: 'μάρτυς', translit: 'mártys', meaning: 'witness; later one who testifies by dying for the faith' }
+    ],
     parentId: '3-enoch-hekhalot',
     name: 'The Ten Martyrs (Eleh Ezkerah)',
     description: 'Ten sages executed by Hadrian\'s Rome around 135 CE, recited every Yom Kippur: Rabbi Ishmael the High Priest, Rabban Simeon ben Gamaliel, Rabbi Akiva combed with iron, Rabbi Hananiah ben Teradion burned wrapped in a Torah scroll, and six more. The midrash says the emperor found in Genesis that Joseph\'s brothers were never punished for selling him and demanded ten sages as the price. Before the sentence Ishmael ascends to heaven to ask whether the decree is sealed; Metatron tells him it is, and that if he protests God will return the world to chaos. The Merkabah literature, 3 Enoch included, is their last testament: heaven mapped by men who knew Rome would kill them for it.',
@@ -45194,6 +48723,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'metatron-across-texts',
+    translations: [
+      { lang: 'Hebrew', original: 'מֶטָטְרוֹן', translit: 'Meṭaṭrôn', meaning: 'uncertain; perhaps Greek meta + thronos, \'beside the throne\', or Latin metator, \'guide\'' },
+      { lang: 'Hebrew', original: 'יהוה הַקָּטָן', translit: 'YHWH haq-qāṭān', meaning: 'the lesser YHWH, Metatron\'s title in 3 Enoch 12' }
+    ],
     parentId: 'enoch3-angels',
     name: 'Metatron Across the Texts: Enoch, the Lesser YHWH & the Bible',
     description: 'In 1 Enoch 71 Enoch is greeted in heaven as \'the Son of Man who was born for righteousness\'. In 2 Enoch he is a scribe; the angel Vrevoil dictates, Enoch writes. In 3 Enoch he has become Metatron, \'the Lesser YHWH\', enthroned with a crown on which God wrote the letters of creation, until Elisha ben Avuyah sees him seated and concludes \'there are two powers in heaven\', after which Anafiel flogs him and he stands forever. The Bible never names Metatron, but the rabbis found him in Exodus 23:21 - the angel \'in whom is My Name\' - and Sanhedrin 38b admits the problem. Christian readers saw the same figure and called him the Word. The dispute over whether a man can sit on God\'s throne is the oldest theological fight there is, and both sides claim Enoch.',
@@ -45204,6 +48737,11 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'enoch3-uzza-azza-azael',
+    translations: [
+      { lang: 'Hebrew', original: 'עֻזָּא', translit: 'ʿUzzāʾ', meaning: 'strength, might (from ʿōz)' },
+      { lang: 'Hebrew', original: 'עַזָּה', translit: 'ʿAzzāh', meaning: 'strong, mighty (from ʿāzaz, to be strong)' },
+      { lang: 'Hebrew', original: 'עֲזָאֵל', translit: 'ʿĂzāʾēl', meaning: 'God strengthens / strong one of God (ʿāzaz + ʾēl); variant of Azazel' }
+    ],
     parentId: 'enoch3-angels',
     name: 'Uzza, Azza & Azael: The Accusers (3 Enoch 4-5)',
     description: 'When God raises Enoch to heaven, three ministering angels - Uzza, Azza and Azael - come forward to object: \'Did not the primeval ones rightly say before Thee, create not man?\' God answers that He has chosen this one in exchange for all of them and throws the three out of heaven. In 3 Enoch 5 they are named again as the fallen ones who taught sorcery and brought the sun, moon and stars down to be worshipped in the days of Enosh. They are the Watchers of 1 Enoch under rabbinic names: Shemihazah and Azazel, the \'Uzza and Azael\' of the Zohar and the Talmud (Yoma 67b), still hanging in chains in the mountains of darkness, consulted by Balaam and Solomon for magic. The grudge is explicit: the angels who fell for women are the angels who objected to a man being promoted over them.',
@@ -45214,6 +48752,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'enoch3-anafiel',
+    translations: [
+      { lang: 'Hebrew', original: 'ענפיאל', translit: 'ʿĂnāp̄îʾēl', meaning: 'branch of God (ʿānāp̄, bough + ʾēl); 3 Enoch 18 links it to the foliage of his crowns' }
+    ],
     parentId: 'enoch3-angels',
     name: 'Anafiel YHWH (Keeper of the Keys of the Palaces)',
     description: '\'The honoured, glorified, beloved, wonderful, terrible and dreadful Prince\' who holds the keys to the seven palaces of Araboth, whose crown covers the whole seventh heaven and who is called \'YHWH\' like his Master because the Name is in him. It was Anafiel who carried Enoch up from the earth on a chariot of fire (3 Enoch 6), and Anafiel who, when Metatron sat and a mystic mistook him for a second god, was sent to strike Metatron with sixty lashes of fire and make him stand (3 Enoch 16). Hekhalot Rabbati says the bowing of all the heavens is to Anafiel. Job\'s \'he taketh away, who can hinder him?\' has an officer: the angel who enforces the hierarchy on the hierarchy.',
@@ -45224,6 +48765,11 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'enoch3-sopheriel',
+    translations: [
+      { lang: 'Hebrew', original: 'סופריאל', translit: 'Sôp̄ərîʾēl', meaning: 'scribe of God (sôp̄ēr, scribe + ʾēl)' },
+      { lang: 'Hebrew', original: 'מְחַיֶּה', translit: 'Məḥayyeh', meaning: 'who gives life (piel participle of ḥāyāh, to live)' },
+      { lang: 'Hebrew', original: 'מֵמִית', translit: 'Mēmîṯ', meaning: 'who causes death (hiphil participle of mûṯ, to die)' }
+    ],
     parentId: 'enoch3-angels',
     name: 'Sopheriel Mehayye & Sopheriel Memeth (Scribes of the Living and the Dead)',
     description: 'Two princes \'great, honoured, terrible, wonderful\' who stand before the Throne with scrolls in their hands and pens of flame, one writing the book of the living, the other the book of the dead; 3 Enoch says the scrolls are so vast they cannot be rolled up. These are the clerks behind Exodus 32:32 (\'blot me out of thy book\'), Psalm 69:28, Daniel 12:1 and Revelation 20:12, where \'the books were opened\' and the dead are judged by what is written. 2 Enoch has the same office under Vrevoil; 1 Enoch 104 says the angels record every sin \'in heaven before the glory of the Great One\'. The modern surveillance state is a crude imitation of a very old ledger; the originals keep the names of people who think they left no records.',
@@ -45254,6 +48800,11 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'enoch3-merkabah-princes',
+    translations: [
+      { lang: 'Hebrew', original: 'רכביאל', translit: 'Riḵbîʾēl', meaning: 'chariot of God (reḵeḇ, chariot + ʾēl)' },
+      { lang: 'Hebrew', original: 'אופניאל', translit: 'ʾÔp̄annîʾēl', meaning: 'wheel of God (ʾôp̄an, wheel + ʾēl)' },
+      { lang: 'Hebrew', original: 'שרפיאל', translit: 'Śərāp̄îʾēl', meaning: 'burning one of God (śārāp̄, to burn + ʾēl)' }
+    ],
     parentId: 'enoch3-angels',
     name: 'Princes of the Merkabah: Rikbiel, Hayliel, Kerubiel, Ophanniel & Seraphiel',
     description: 'Ezekiel saw the Chariot; 3 Enoch gives you its crew list. Rikbiel YHWH commands the wheels of the Merkabah, eight in all, out of which flow four rivers of fire; Hayliel YHWH, who could swallow the earth in one gulp, rules the Hayyot, the four living creatures; Kerubiel YHWH, a prince of fire whose body is full of coals, rules the cherubim; Ophanniel YHWH, with sixteen faces and a hundred wings, rules the ophanim; and Seraphiel YHWH, whose crown is the size of the seventh heaven, rules the four seraphim, each with sixteen faces, who burn the written accusations of Satan each day. Isaiah 6, Ezekiel 1 and 10 and Revelation 4 are eyewitness glimpses of the same machine; 3 Enoch is the maintenance manual. Modern \'ancient astronaut\' readers of Ezekiel are not wrong that it is a vehicle; they are only wrong about who is driving.',
@@ -45274,6 +48825,11 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'enoch3-nature-angels',
+    translations: [
+      { lang: 'Hebrew', original: 'גלגליאל', translit: 'Galgallîʾēl', meaning: 'wheel, orb of God (galgal, wheel + ʾēl); angel of the sun\'s disc' },
+      { lang: 'Hebrew', original: 'כוכביאל', translit: 'Kôḵāḇîʾēl', meaning: 'star of God (kôḵāḇ, star + ʾēl)' },
+      { lang: 'Hebrew', original: 'ברדיאל', translit: 'Baraḏîʾēl', meaning: 'hail of God (bārāḏ, hail + ʾēl)' }
+    ],
     parentId: 'enoch3-angels',
     name: 'Angels of the Elements: Galgalliel, Kokabiel, Baradiel, Ruhiel & Company (3 Enoch 14)',
     description: 'Metatron names the department heads of the weather: Galgalliel over the sun\'s disc, Ophanniel over the moon, Rahatiel over the constellations, Kokabiel over the stars, Baradiel over hail, Ruhiel over wind, Barakiel over lightning, Za\'amiel over storm, Ziqiel over comets, Zi\'iel over commotion, Ra\'amiel over thunder, Ra\'ashiel over earthquakes, Shalgiel over snow, Matariel over rain, Shimshiel over day and Lailiel over night. Jubilees 2:2 says God made \'the angels of the spirit of fire, wind, clouds, hail, frost, thunder, lightning, cold, heat\' on day one; 1 Enoch 60 and 82 assign leaders to the seasons and the stars; Revelation gives \'the angel of the waters\' (16:5) and the four who hold the winds (7:1). Scripture does not have weather. It has staff. Which is why every attempt to seize the weather - from Baal\'s priests to HAARP - is in the end an act of war against a chain of command.',
@@ -45284,6 +48840,11 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'enoch3-irin-qaddishin',
+    translations: [
+      { lang: 'Aramaic', original: 'עִירִין', translit: 'ʿîrîn', meaning: 'watchers, wakeful ones (sg. ʿîr, from ʿûr, to be awake)' },
+      { lang: 'Aramaic', original: 'קַדִּישִׁין', translit: 'qaddîšîn', meaning: 'holy ones (sg. qaddîš, cognate with Hebrew qāḏôš)' },
+      { lang: 'Greek', original: 'ἐγρήγοροι', translit: 'egrēgoroi', meaning: 'watchers, wakeful ones; the 1 Enoch rendering (from egeirō, to wake)' }
+    ],
     parentId: 'enoch3-angels',
     name: 'The Irin and Qaddishin (Watchers & Holy Ones of the Court)',
     description: '\'The matter is by the decree of the Watchers, and the demand by the word of the Holy Ones\' - Daniel 4:17, the only place the Bible names the Irin. 3 Enoch 28 explains who they are: two Watchers and two Holy Ones who stand opposite the Throne and sit as assessors of the Great Court, each equal in rank to all the other princes together, who debate every case and argue the verdict before the Holy One, \'and the word is confirmed by the mouth of the Watchers\'. They are the loyal counterpart of the two hundred who came down on Hermon: the same order, the half that stayed. Nebuchadnezzar\'s seven years as a beast was their ruling. Every verdict on earth is first handed down by a bench nobody on earth elected.',
@@ -45294,6 +48855,11 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'enoch3-72-princes',
+    translations: [
+      { lang: 'Hebrew', original: 'שָׂרִים', translit: 'śārîm', meaning: 'princes, chiefs (sg. śar); the angelic \'princes of kingdoms\'' },
+      { lang: 'Hebrew', original: 'סַמָּאֵל', translit: 'Sammāʾēl', meaning: 'uncertain; traditionally \'venom of God\' (sam, poison + ʾēl) or \'blind god\'' },
+      { lang: 'Hebrew', original: 'דֻּבִּיאֵל', translit: 'Dubbîʾēl', meaning: 'bear of God (dōḇ, bear + ʾēl); prince of Persia in Yoma 77a' }
+    ],
     parentId: 'enoch3-angels',
     name: 'The 72 Princes of Kingdoms, Samael & Dubbiel',
     description: 'Every nation on earth has an angel over it and the angels are not neutral. 3 Enoch 17:8 and 30 seat seventy-two princes of kingdoms in the Great Sanhedrin of heaven, \'and the princes of kingdoms argue the cause of their nations\'. Samael, Prince of Rome, and Dubbiel, Prince of Persia, are named as the accusers of Israel; Michael is Israel\'s advocate. The Bible has the same structure: Deuteronomy 32:8 (Dead Sea Scrolls reading) divides the nations \'according to the number of the sons of God\'; Daniel 10 has Gabriel delayed twenty-one days by \'the prince of the kingdom of Persia\' until Michael arrives; Psalm 82 has God sentencing the gods of the nations to die like men. The seventy or seventy-two sons of God of the Table of Nations are the true rulers behind every flag, and geopolitics is their litigation.',
@@ -45304,6 +48870,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'enoch3-sar-torah',
+    translations: [
+      { lang: 'Hebrew', original: 'שַׂר תּוֹרָה', translit: 'Śar Tôrāh', meaning: 'Prince of the Torah (śar, prince + tôrāh, instruction, from yārāh, to teach)' },
+      { lang: 'Hebrew', original: 'יפיפיה', translit: 'Yəp̄êp̄iyyāh', meaning: 'beauty of Yah (yəp̄êp̄eh, very beautiful + Yāh)' }
+    ],
     parentId: 'enoch3-angels',
     name: 'Yefefiah, Prince of the Torah (Sar Torah)',
     description: 'When Moses went up, 3 Enoch 48D says, Yefefiah the Prince of the Torah was assigned to teach him, and after the forty days Moses had forgotten everything until the prince handed him the Law \'as a gift\'. The later Hekhalot texts turn this into a technique: an adjuration by which a student can summon the Sar Torah and receive total recall of Scripture without study, which the rabbis hedged with ritual fasts because it worked too well. The New Testament concedes the mechanism: the Law was \'ordained by angels in the hand of a mediator\' (Galatians 3:19), \'received by the disposition of angels\' (Acts 7:53), \'the word spoken by angels\' (Hebrews 2:2). Sinai was not a one-on-one. There was an angel in the room with the download, and the technique for calling him back was the first classified program.',
@@ -45314,6 +48884,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'enoch3-pargod',
+    translations: [
+      { lang: 'Hebrew', original: 'פַּרְגּוֹד', translit: 'pargôḏ', meaning: 'curtain, veil before the Throne; a Persian loanword of uncertain derivation' }
+    ],
     parentId: 'enoch3-angels',
     name: 'The Pargod: Curtain of the Throne (3 Enoch 45)',
     description: 'Metatron lifts the curtain that hangs before the Throne of Glory, \'on which all the generations of the world and all their deeds are embroidered\', and Ishmael reads history off it like a tapestry: Adam, the generation of the Flood, Abraham, Moses, the kings, the Temple destroyed, the Messiah, the war of Gog and Magog, \'all that has been done and all that will be done\'. The Temple veil in Exodus 26 was a copy of this curtain; Hebrews 10:20 calls Christ\'s flesh \'the veil\'; Matthew 27:51 has it torn in two at the crucifixion, top to bottom. The point of the Pargod is that the future is already woven, visible, and kept behind a drape, and that what the privileged are allowed to see of it decides who rules. The Akashic record of the theosophists is the Pargod with the Throne removed.',
@@ -45334,6 +48907,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'enoch3-souls-treasury',
+    translations: [
+      { lang: 'Hebrew', original: 'גּוּף', translit: 'gûp̄', meaning: 'body; in Yevamot 62a the storehouse of unborn souls' },
+      { lang: 'Hebrew', original: 'אוֹצָר', translit: 'ʾôṣār', meaning: 'treasury, storehouse (from ʾāṣar, to store up)' }
+    ],
     parentId: 'enoch3-angels',
     name: 'The Treasury of Souls & the Unborn (3 Enoch 43-44, the Guf)',
     description: 'Beneath the Throne Metatron keeps \'the spirits of the righteous who have already been created and returned, and the spirits of the righteous not yet created\', flying about in a storehouse called in the Talmud the Guf; the Messiah cannot come until it is empty (Yevamot 62a). Beside it stand the souls of the wicked being punished and the souls of the \'intermediate\' being purified. Ecclesiastes 12:7 has the spirit returning to God who gave it; Revelation 6:9-11 shows the souls of the martyrs under the altar told to wait \'until their fellow servants also should be fulfilled\' - the same count-down. Jeremiah 1:5 (\'before I formed thee in the belly I knew thee\') is a withdrawal from this account. The pre-existence of souls was declared heresy in 553 CE; 3 Enoch keeps the inventory anyway.',
@@ -45344,6 +48921,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'enoch3-shekinah-withdrawal',
+    translations: [
+      { lang: 'Hebrew', original: 'שְׁכִינָה', translit: 'Šəḵînāh', meaning: 'dwelling, indwelling presence (from šāḵan, to dwell, settle)' },
+      { lang: 'Hebrew', original: 'אֱנוֹשׁ', translit: 'ʾĔnôš', meaning: 'man, mortal (poetic word for mankind)' }
+    ],
     parentId: 'enoch3-angels',
     name: 'The Departure of the Shekinah in the Days of Enosh (3 Enoch 5)',
     description: 'From Adam to Enosh, 3 Enoch says, the Shekinah dwelt on earth at the gate of Eden under the Tree of Life, and the first men \'were not able to look at the splendour\'. Then the generation of Enosh, taught by the fallen Uzza, Azza and Azael, gathered silver, gold, gems and pearls \'in heaps and piles\', built idols the size of mountains and drew the sun, moon and stars down with sorcery to stand before them, \'and the Holy One removed His Shekinah from the earth\'. Genesis 4:26 reads innocently in English - \'then began men to call upon the name of the Lord\' - but the rabbis read huchal as \'then men began to profane\'. The ten descents and ascents of the Presence through history are the real shape of the Bible: the problem is never that God is far away, but that He was asked to leave.',
@@ -45354,6 +48935,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'sandalphon-twin',
+    translations: [
+      { lang: 'Hebrew', original: 'סַנְדַּלְפוֹן', translit: 'Sandalp̄ôn', meaning: 'uncertain; often from Greek synádelphos, \'co-brother\' (of Metatron)' },
+      { lang: 'Greek', original: 'συνάδελφος', translit: 'synádelphos', meaning: 'co-brother, fellow brother (syn, with + adelphós, brother)' }
+    ],
     parentId: 'angelic-hierarchy',
     name: 'Sandalphon (Twin of Metatron, the Translated Elijah)',
     description: 'If Enoch became Metatron, the tradition says, then Elijah - the only other man Scripture takes up alive (2 Kings 2:11) - became Sandalphon, Metatron\'s \'twin brother\', who stands behind the Chariot weaving the prayers of Israel into crowns for God\'s head. Hagigah 13b says he is taller than his fellows \'by a journey of five hundred years\' and that Elisha ben Avuyah fainted at the sight of him. The Zohar makes him the angel of the lowest world and the master of the earth; the Kabbalists place him at Malkuth with Metatron at Kether, the top and bottom of the Tree, two glorified men holding the whole structure. Moses saw him on Sinai. Two human beings promoted into the hierarchy is the Bible\'s own proof that the \'gods\' of the ancient world could have been exactly that.',
@@ -45394,6 +48979,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'enoch3-araboth',
+    translations: [
+      { lang: 'Hebrew', original: 'עֲרָבוֹת', translit: 'ʿĂrāḇôṯ', meaning: 'plains, steppes (pl. of ʿărāḇāh); read in Psalm 68:4 as the highest heaven' }
+    ],
     parentId: 'enoch-cosmology-compared',
     name: 'Araboth: The Seventh Heaven & the Throne of Glory',
     description: 'The highest heaven, named from Psalm 68:4, \'extol him that rideth upon the heavens [araboth]\'. The Talmud inventories it: righteousness, judgment and charity, the treasuries of life, peace and blessing, the souls of the righteous and of the unborn, the dew of resurrection, and the ophanim, seraphim, holy Hayyot and the Throne of Glory with \'the King, the living God, high and exalted\' upon it. 3 Enoch locates within it the seven palaces, the Chariot, the Pargod and Metatron\'s own throne at the door. It is \'the seventh heaven\' of the phrase, and the destination of every Merkabah descent, and the vantage from which Rabbi Ishmael was shown the whole of history embroidered on a curtain. Everything below it is administration.',
@@ -45404,6 +48992,11 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'enoch3-hekhalot-seven-palaces',
+    translations: [
+      { lang: 'Sumerian', original: 'É.GAL', translit: 'E-gal', meaning: 'great house; palace, temple' },
+      { lang: 'Akkadian', original: 'ekallu', translit: '', meaning: 'palace, temple (from Sumerian É.GAL)' },
+      { lang: 'Hebrew', original: 'הֵיכָלוֹת', translit: 'hêḵālôṯ', meaning: 'palaces, temples (pl. of hêḵāl, a loan via Akkadian ekallu)' }
+    ],
     parentId: 'enoch-cosmology-compared',
     name: 'The Seven Palaces (Hekhalot) of Araboth',
     description: 'Inside the seventh heaven stand seven palaces, one within another, each with a gate and eight gatekeepers who demand seals - the names of God and of Metatron shown on the right and left hand - before they let the descender pass. The sixth is the deadly one: it appears to be made of water and whoever says \'water, water\' is cut down (Hagigah 14b). The seventh holds the Throne. 3 Enoch says Metatron\'s own throne stands at its door, and that Anafiel holds its keys. Ezekiel\'s Temple vision with its nested courts and gates, Solomon\'s seven-year build, and the Kaaba\'s seven circuits are all the same floor plan from different distances. The Merkabah mystics were not meditating; they were attempting a breach, with passwords, and some of them died of it.',
@@ -45414,6 +49007,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'enoch-merkabah-chariot',
+    translations: [
+      { lang: 'Hebrew', original: 'מֶרְכָּבָה', translit: 'merkāḇāh', meaning: 'chariot (from rāḵaḇ, to ride, mount)' },
+      { lang: 'Hebrew', original: 'מַעֲשֵׂה מֶרְכָּבָה', translit: 'maʿăśēh merkāḇāh', meaning: '\'work of the chariot\', the rabbinic name for speculation on Ezekiel 1' }
+    ],
     parentId: 'enoch-cosmology-compared',
     name: 'The Merkabah (Throne-Chariot): Ezekiel, 1 Enoch 14 & 3 Enoch',
     description: 'Ezekiel by the Chebar in 593 BCE saw four living creatures, wheels within wheels \'full of eyes\', a crystal firmament over their heads and above it a sapphire throne with the likeness of a man in fire. Enoch, in the oldest part of 1 Enoch, is lifted into a house of crystal and fire, and within it a greater house, \'and lo! there was a second house, greater than the former\', and a throne of crystal with wheels like the shining sun, from under which came streams of flaming fire, and no angel could enter. 3 Enoch assigns every component an officer. The same object three times across a thousand years, each witness more specific than the last. The rabbis forbade expounding the Chariot to fewer than one hearer at a time. Modern readers see a craft and are half right: it is a craft, and it is occupied.',
@@ -45424,6 +49021,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'wandering-stars-fallen-angels',
+    translations: [
+      { lang: 'Greek', original: 'πλανάω', translit: 'planaō', meaning: 'to wander, lead astray; root of planētēs, \'wanderer, planet\'' },
+      { lang: 'Greek', original: 'ἀστέρες πλανῆται', translit: 'asteres planētai', meaning: 'wandering stars (Jude 13); the planets, read as errant angels' }
+    ],
     parentId: 'planets-in-scripture',
     name: 'Wandering Stars: Planets as Fallen Angels (Jude 13 & 1 Enoch 18, 21)',
     description: 'Jude, the only New Testament book to quote 1 Enoch by name, calls the false teachers \'wandering stars [asteres planetai], to whom is reserved the blackness of darkness for ever\'. The Greek is the word for planets. He is citing what Enoch saw at the edge of the world: \'seven stars like great burning mountains\' bound in a place \'chaotic and horrible\', and Uriel\'s explanation - \'these are of the stars of heaven which have transgressed the commandment of the Lord, and are bound here till ten thousand years, the time entailed by their sins, are consummated\' (1 Enoch 21:6). Seven lights that do not keep their course, seven Watchers sentenced, seven classical planets, seven days of a week still named for them. The horoscope you read this morning was drawn from a prison roster.',
@@ -45434,6 +49035,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'stars-as-angels-bible',
+    translations: [
+      { lang: 'Hebrew', original: 'כּוֹכָב', translit: 'kôḵāḇ', meaning: 'star (cognate with Akkadian kakkabu)' },
+      { lang: 'Hebrew', original: 'בְּנֵי הָאֱלֹהִים', translit: 'bənê hā-ʾĕlōhîm', meaning: 'sons of God (Job 38:7), set in parallel with \'morning stars\'' }
+    ],
     parentId: 'planets-in-scripture',
     name: 'Stars Are Angels: The Biblical Equation',
     description: 'The Bible does not treat stars as gas. At creation \'the morning stars sang together, and all the sons of God shouted for joy\' (Job 38:7) - the two phrases are parallel, the same beings. \'The stars in their courses fought against Sisera\' (Judges 5:20). God \'calleth them all by names\' (Isaiah 40:26). The \'host of heaven\' Israel is forbidden to worship (Deuteronomy 4:19) is the army Micaiah sees standing beside the throne (1 Kings 22:19). In Revelation \'the seven stars are the angels of the seven churches\' (1:20), the dragon\'s tail drags a third of the stars to earth (12:4), and a star falls with the key to the pit (9:1). 1 Enoch simply says it plainly, and Jude quotes him. Once you grant the equation, astrology is angel-worship, the planets are named for the defendants, and \'the heavens declare\' is a literal statement about who is up there.',
@@ -45444,6 +49049,11 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'planet-venus-scripture',
+    translations: [
+      { lang: 'Hebrew', original: 'הֵילֵל בֶּן־שָׁחַר', translit: 'hêlēl ben šāḥar', meaning: 'shining one, son of dawn (hālal, to shine); the morning star (Isaiah 14:12)' },
+      { lang: 'Hebrew', original: 'מְלֶכֶת הַשָּׁמַיִם', translit: 'məleḵeṯ haš-šāmayim', meaning: 'queen of heaven (Jeremiah 7:18); Astarte-Ishtar, the Venus goddess' },
+      { lang: 'Latin', original: 'lucifer', translit: '', meaning: 'light-bearer (lux + ferre); Vulgate rendering of hêlēl, the morning star' }
+    ],
     parentId: 'planets-in-scripture',
     name: 'Venus: Helel the Morning Star & the Queen of Heaven',
     description: '\'How art thou fallen from heaven, O Lucifer, son of the morning!\' (Isaiah 14:12). The Hebrew is Helel ben Shahar, \'shining one, son of dawn\' - Venus as the morning star, which climbs toward the zenith and is swallowed by the sun, the oldest emblem of a god who tried to take the high throne. The same planet is the Queen of Heaven whose cakes the women of Judah baked (Jeremiah 7:18, 44:17-25): Ishtar, Astarte, Ashtoreth, the goddess Solomon built a high place for. 1 Enoch 80:6 warns that in the last days \'many chiefs of the stars shall transgress the order prescribed\'. Then the reversal: Jesus takes the title for Himself, \'I am the bright and morning star\' (Revelation 22:16), and promises it to the overcomer (2:28). Venus is the contested throne of the sky, and both claimants are named in the book.',
@@ -45454,6 +49064,11 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'planet-saturn-scripture',
+    translations: [
+      { lang: 'Akkadian', original: 'kayyamānu', translit: '', meaning: 'the steady, constant one; the planet Saturn' },
+      { lang: 'Hebrew', original: 'כִּיּוּן', translit: 'Kiyyûn', meaning: 'Chiun (Amos 5:26); Akkadian kayyamānu with vowels of šiqqûṣ \'detestable thing\'' },
+      { lang: 'Greek', original: 'Ῥαιφάν', translit: 'Rhaiphán', meaning: 'Rephan/Remphan, the Septuagint\'s rendering (Acts 7:43); origin disputed' }
+    ],
     parentId: 'planets-in-scripture',
     name: 'Saturn: Chiun, Remphan & \'the Star of Your God\'',
     description: '\'Ye have borne the tabernacle of your Moloch and Chiun your images, the star of your god\' (Amos 5:26); Stephen, quoting the Greek, says \'the star of your god Remphan\' (Acts 7:43). Kaiwanu is the Babylonian name of Saturn; Repa is the Egyptian. Israel carried Saturn\'s star through the wilderness, which is why the Sabbath day the pagans named for him had to be reclaimed by command. Saturn is the Roman Kronos who ate his children, the god of Carthage who received them in the fire, the black cube of Mecca, the Ring, the Reaper, the \'time\' that devours everything. 3 Enoch\'s Samael, Prince of Rome, sits on the Saturn seat of the seventy-two princes. The slow outer planet that governs death, limits and chains is the natural throne of the oldest prisoner, and the cults that still wear his cube and his rings know it.',
@@ -45464,6 +49079,11 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'planet-jupiter-scripture',
+    translations: [
+      { lang: 'Hebrew', original: 'גָּד', translit: 'Gāḏ', meaning: 'fortune, luck; the god Fortune of Isaiah 65:11' },
+      { lang: 'Akkadian', original: 'Bēl', translit: '', meaning: 'lord; title of Marduk, god of the planet Jupiter (cf. Hebrew Baʿal)' },
+      { lang: 'Greek', original: 'Ζεύς', translit: 'Zeús', meaning: 'sky god (Proto-Indo-European *dyēws \'sky, daylight\')' }
+    ],
     parentId: 'planets-in-scripture',
     name: 'Jupiter: Gad, Bel-Marduk & the Zeus of Lystra',
     description: '\'Ye are they that forsake the Lord, that prepare a table for Gad [Fortune], and that furnish the drink offering unto Meni [Destiny]\' (Isaiah 65:11): Gad is the planet Jupiter as luck-bringer, the \'greater benefic\' of every astrologer since Babylon, where he was Bel-Marduk, \'Bel boweth down, Nebo stoopeth\' (Isaiah 46:1). At Lystra the crowds took Barnabas for Jupiter and Paul for Mercury and the priest of Jupiter brought oxen to sacrifice (Acts 14:12-13). Jupiter is the king-planet, the throne-usurper, the Zeus of Olympus whose conspiracy against his father Kronos is the Greek memory of the Watchers\' rebellion against heaven. 1 Enoch 8 says Baraqijal taught astrology and Kokabel \'the constellations\'. The temples of Jupiter stood on the Capitoline in Rome and on the Temple Mount under Hadrian, which is to say at the two centres of the world the book cares about.',
@@ -45474,6 +49094,11 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'planet-mercury-scripture',
+    translations: [
+      { lang: 'Akkadian', original: 'DINGIR.AG', translit: 'Nabû', meaning: 'the called, the announcer (nabû \'to call, name\'; cf. Hebrew nāḇîʾ \'prophet\')' },
+      { lang: 'Greek', original: 'Ἑρμῆς', translit: 'Hermês', meaning: 'messenger god; perhaps from hérma \'heap of stones, boundary marker\'' },
+      { lang: 'Egyptian', original: 'ḏḥwtj', translit: 'Djehuty', meaning: 'Thoth, the ibis-headed scribe-god; perhaps \'he of Djehut\'' }
+    ],
     parentId: 'planets-in-scripture',
     name: 'Mercury: Nebo, Hermes & Thoth',
     description: '\'Nebo stoopeth\' (Isaiah 46:1) - Nabu, the Babylonian scribe-god of the planet Mercury, who gave his name to Nebuchadnezzar and to Mount Nebo where Moses died looking into the land. Mercury is the messenger, the writer, the god of trade, thieves and magic: Hermes to the Greeks, who took Paul for him at Lystra \'because he was the chief speaker\' (Acts 14:12); Thoth to the Egyptians, who gave him the Book of the Dead; Hermes Trismegistus to the alchemists, who gave him the Emerald Tablet. In 1 Enoch 69 the Watcher Penemue \'taught the children of men the bitter and the sweet, and the secrets of their wisdom, and instructed mankind in writing with ink and paper, and thereby many sinned\'. Every occult lineage claims the Mercury-god as its founder. The Bible names him as a fallen teacher of writing.',
@@ -45484,6 +49109,11 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'planet-mars-scripture',
+    translations: [
+      { lang: 'Sumerian', original: 'EN.ERI.GAL', translit: 'Nergal', meaning: 'lord of the great city, i.e. the netherworld; god of war and plague, planet Mars' },
+      { lang: 'Greek', original: 'Ἄρης', translit: 'Árēs', meaning: 'god of war; perhaps from arḗ \'bane, ruin\'' },
+      { lang: 'Greek', original: 'Ἄρειος Πάγος', translit: 'Áreios Págos', meaning: 'hill of Ares, the Athenian court where Paul preached (Acts 17)' }
+    ],
     parentId: 'planets-in-scripture',
     name: 'Mars: Nergal & the Areopagus',
     description: '\'The men of Cuth made Nergal\' (2 Kings 17:30) - the Mesopotamian god of war, plague and the underworld, lord of the planet Mars, imported into Samaria by the settlers Assyria planted there. Mars is the red planet of the sword: Ares to the Greeks, whose hill, the Areopagus, is where Paul preached the unknown God to Athens (Acts 17:22); Mars to the Romans, who called themselves his sons. 1 Enoch 8:1 has Azazel teaching men \'to make swords, and knives, and shields, and breastplates\'; the first thing the Watchers brought down was war. Revelation\'s second horseman takes peace from the earth with a great sword (6:4). Nergal\'s other name, in the Talmud, is the angel of death. The Face on Mars that NASA photographed in 1976 was a Rorschach test the whole world failed in the same direction, which tells you what the planet still means.',
@@ -45494,6 +49124,11 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'the-moon-scripture',
+    translations: [
+      { lang: 'Sumerian', original: 'DINGIR.ŠEŠ.KI', translit: 'Nanna', meaning: 'the moon god of Ur' },
+      { lang: 'Akkadian', original: '𒀭𒂗𒍪', translit: 'Sîn', meaning: 'the moon god (written dEN.ZU), lord of Ur and Harran' },
+      { lang: 'Hebrew', original: 'מְנִי', translit: 'Mənî', meaning: 'Destiny; \'portion, allotment\' (from mānāh \'to count, apportion\'; Isaiah 65:11)' }
+    ],
     parentId: 'planets-in-scripture',
     name: 'The Moon: Sin of Ur, Meni & the Blood Moon',
     description: 'Abraham was called out of Ur and Haran, the two capitals of the moon-god Sin (Nanna), whose crescent still flies over half the world; Joshua 24:2 says his fathers \'served other gods\', and that is the god. Jericho, the first city taken in the land, is named for the moon. Isaiah 65:11 condemns the drink-offering to Meni, \'Destiny\', the moon as apportioner of fate. 1 Enoch gives the moon\'s courses in chapters 73-74 and its four secret names in 78: Asonja, Ebla, Benase, Erae. The Enochic calendar is solar precisely because the moon was the pagans\' clock; Qumran accused the Temple of following \'the feasts of the Gentiles\'. Then Joel 2:31 and Acts 2:20: \'the moon into blood, before the great and terrible day of the Lord come\'. The crescent is the enemy\'s standard in the sky, and its reddening is the signal that the war is about to end.',
@@ -45504,6 +49139,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'the-sun-scripture',
+    translations: [
+      { lang: 'Hebrew', original: 'שֶׁמֶשׁ', translit: 'šemeš', meaning: 'sun; cognate with the Mesopotamian sun god' },
+      { lang: 'Akkadian', original: '𒀭𒌓', translit: 'Šamaš', meaning: 'the sun; the sun god, judge of heaven and earth' }
+    ],
     parentId: 'planets-in-scripture',
     name: 'The Sun: Shemesh, the Temple Sun-Worshippers & Enoch\'s Portals',
     description: 'Ezekiel is shown the worst of the abominations last: \'about five and twenty men, with their backs toward the temple of the Lord, and their faces toward the east; and they worshipped the sun\' (8:16). Josiah had already burned the chariots of the sun and removed its horses from the Temple gate (2 Kings 23:11). Beth-Shemesh, \'house of the sun\', is where the Ark came home. 1 Enoch 72 gives the sun\'s two names, Oryares and Tomas, and its twelve portals; 1 Enoch 41 says the sun and moon swore an oath and keep faith with it, which the Watchers did not. Malachi\'s \'Sun of righteousness\' (4:2) and Revelation\'s woman \'clothed with the sun\' (12:1) reclaim the symbol. Every solar cult from Ra to the Black Sun is an attempt to worship the clock instead of the clockmaker, and the Temple itself fell to it from the inside.',
@@ -45514,6 +49153,11 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'stars-of-job',
+    translations: [
+      { lang: 'Hebrew', original: 'כִּימָה', translit: 'Kîmāh', meaning: 'the Pleiades; \'cluster, heap\' (cf. Akkadian kimtu \'family\')' },
+      { lang: 'Hebrew', original: 'כְּסִיל', translit: 'Kəsîl', meaning: 'Orion; literally \'fool, insolent one\', the giant bound in the sky' },
+      { lang: 'Hebrew', original: 'עָשׁ', translit: 'ʿĀš', meaning: 'KJV \'Arcturus\'; probably the Great Bear (ʿAyiš in Job 38:32)' }
+    ],
     parentId: 'planets-in-scripture',
     name: 'Job\'s Stars: Pleiades, Orion, Arcturus & the Chambers of the South',
     description: '\'Which maketh Arcturus, Orion, and Pleiades, and the chambers of the south\' (Job 9:9); \'Canst thou bind the sweet influences of Pleiades, or loose the bands of Orion? Canst thou bring forth Mazzaroth in his season? or canst thou guide Arcturus with his sons?\' (38:31-32); \'Seek him that maketh the seven stars and Orion\' (Amos 5:8). Kimah is the Pleiades, the seven sisters the Watchers\' sons were said to pursue; Kesil, \'the fool\', is Orion, the bound giant - the rabbis identified him with Nimrod, chained in the sky. Ash with her sons is the Great Bear. The Talmud (Berakhot 58b-59a) says the Flood came when God removed two stars from the Pleiades and sealed the hole with two from the Bear. These are the oldest named stars in any book, and every one of them is tied to the Nephilim.',
@@ -45524,6 +49168,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'nibiru-planet-x',
+    translations: [
+      { lang: 'Akkadian', original: 'nēberu', translit: 'Nibiru', meaning: 'crossing, ford, ferry (from ebēru \'to cross\'); Marduk\'s star, the \'crossing point\'' }
+    ],
     parentId: 'planets-in-scripture',
     name: 'Nibiru / Planet X: Sitchin\'s Twelfth Planet',
     description: 'Zecharia Sitchin\'s 1976 book The 12th Planet claimed the Sumerian tablets describe a planet on a 3,600-year orbit, Nibiru, home of the Anunnaki, who came to earth for gold, engineered mankind as a labour force and left the Nephilim behind - the Genesis 6 story told from the other side. The Babylonian word nibiru is real (Enuma Elish calls Marduk\'s star \'Nibiru\' and uses it for the crossing-point of the ecliptic); the orbit is not in any tablet. NASA has spent twenty years denying a Planet X while publishing papers on a Planet Nine, and the Vatican\'s Mount Graham telescope is named LUCIFER. Read through Enoch, Sitchin is a Watcher\'s version of events: the fallen angels recast as helpful astronauts, the sons of God as a civilization with a flight schedule. The deception does not require the planet to exist; it only requires you to wait for it.',
@@ -45534,6 +49181,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'star-of-bethlehem',
+    translations: [
+      { lang: 'Hebrew', original: 'בֵּית לֶחֶם', translit: 'Bêṯ Leḥem', meaning: 'house of bread (bêṯ + leḥem); perhaps originally \'house of (the god) Laḥmu\'' },
+      { lang: 'Greek', original: 'ἀστήρ', translit: 'astēr', meaning: 'star; \'his star in the east\' (Matthew 2:2)' }
+    ],
     parentId: 'planets-in-scripture',
     name: 'The Star of Bethlehem',
     description: '\'We have seen his star in the east, and are come to worship him\' (Matthew 2:2). The Magi were Persian-Babylonian astrologers, heirs of the school Daniel had headed in Babylon (Daniel 2:48), and Balaam\'s oracle - \'there shall come a Star out of Jacob\' (Numbers 24:17) - had been in their archives for a thousand years. The star \'went before them\' and \'stood over where the young child was\' (2:9), which no conjunction does; Jupiter-Saturn in 7 BCE, Jupiter-Venus in 2 BCE and Halley\'s comet in 12 BCE have all been proposed and none walks. The early church read it as an angel, which 1 Enoch would call the same thing. Herod\'s response was the slaughter of the innocents. The last word on the star is Revelation 22:16, where the child grown says: \'I am the bright and morning star.\'',
@@ -45546,6 +49197,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'third-of-the-stars',
+    translations: [
+      { lang: 'Greek', original: 'δράκων', translit: 'drákōn', meaning: 'serpent, dragon (from dérkomai \'to see clearly\'; the sharp-eyed one)' }
+    ],
     parentId: 'planets-in-scripture',
     name: 'The Dragon\'s Tail: A Third of the Stars Cast Down (Revelation 12)',
     description: '\'And his tail drew the third part of the stars of heaven, and did cast them to the earth: and the dragon stood before the woman which was ready to be delivered\' (Revelation 12:4). If stars are angels, as Job and 1 Enoch insist, this is the census of the rebellion: one third of the host followed the dragon, and they were thrown down to the earth, not to hell - \'woe to the inhabiters of the earth\' (12:12). 1 Enoch\'s Animal Apocalypse (86-88) shows the same event from Enoch\'s side: a star falls from heaven, then \'many stars descend and cast themselves down\', become bulls among the cattle and sire elephants, camels and asses - the giants. The Watchers of 1 Enoch 6 are two hundred; the third of Revelation is the whole faction they belonged to. Earth is where they were sent, which is why the sky is quiet and the ground is not.',
@@ -45556,6 +49210,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'enoch-wife-edna',
+    translations: [
+      { lang: 'Hebrew', original: 'עֶדְנָה', translit: 'ʿEdnāh', meaning: 'pleasure, delight (from ʿāḏan; cf. Eden)' }
+    ],
     parentId: 'enoch-family',
     name: 'Edna (Edni), Wife of Enoch, Daughter of Danel',
     description: 'Genesis never names her. Jubilees 4:20 does: \'Enoch took to himself a wife, and her name was Edna, the daughter of Danel, the daughter of his father\'s brother, and in the sixth year in this jubilee she bare him a son and he called his name Methuselah.\' Edna means \'pleasure\', the root of Eden. Her father Danel is a name the Bible otherwise reserves for a legendary righteous man ranked with Noah and Job (Ezekiel 14:14), and for the hero of the Ugaritic Aqhat epic who judged at the city gate. The sources will not say whether the wife of the man who walked with God came from a family already in contact with heaven, but Jubilees chose that name on purpose, and Jubilees is the book that names the Watchers\' wives too.',
@@ -45596,6 +49253,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'melchizedek-miraculous-birth',
+    translations: [
+      { lang: 'Hebrew', original: 'מַלְכִּי־צֶדֶק', translit: 'Malkî-ṣeḏeq', meaning: 'my king is righteousness / king of righteousness (meleḵ + ṣeḏeq)' },
+      { lang: 'Greek', original: 'Μελχισέδεκ', translit: 'Melchisedek', meaning: 'Septuagint form; Hebrews 7:2 glosses it \'king of righteousness\'' }
+    ],
     parentId: 'enoch-family',
     name: 'The Miraculous Birth of Melchizedek (2 Enoch 71-72)',
     description: 'Forty days after the child comes alive out of his dead mother, the archangel Gabriel (Michael in some manuscripts) takes him \'on his wings\' to the Garden of Eden \'so that he will not perish with those who perish\' in the Flood. After the waters, 2 Enoch says, he will be \'the head of priests in another generation\', and there will be a second Melchizedek, and a third, until the last one, \'the Word and Power of God\'. This is how a priest with \'neither beginning of days nor end of life\' (Hebrews 7:3) can meet Abraham at Salem five centuries later: he was carried over the Flood by an angel. 11QMelchizedek at Qumran makes him the judge of the last days. The Christian reading that he is a type of Christ and the Enochic reading that he is a rescued pre-Flood child are not in conflict; one is the plan and the other is the first draft.',
@@ -45608,6 +49269,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'achuzan-altar-methuselah',
+    translations: [
+      { lang: 'Hebrew', original: 'אֲחֻזָּה', translit: 'ʾăḥuzzāh', meaning: 'possession (from ʾāḥaz, to grasp); probable source of Achuzan, cf. Ezek 48:20-21' }
+    ],
     parentId: 'enochian-sites',
     name: 'Achuzan (Altar of Methuselah, Centre of the Earth)',
     description: '\'The place Achuzan, where Enoch was taken up\' (2 Enoch 68:5): the spot from which the patriarch ascended, where Methuselah built an altar the next morning at the Lord\'s instruction and sacrificed with the whole people, and where the Lord appeared to Methuselah in a dream and ordained him priest. 2 Enoch 71 calls it \'the centre of the earth\', the formula Ezekiel 38:12 uses for the land of Israel and the rabbis use for the Foundation Stone of the Temple Mount. The Slavonic book says Adam was created there, Melchizedek will serve there after the Flood, and the Temple will stand there; it is describing Moriah before Abraham. The oldest altar in the Enochic literature sits exactly where the Dome of the Rock sits now, which explains why the ground has never stopped being fought over.',
@@ -45620,6 +49284,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'enoch-son-of-cain',
+    translations: [
+      { lang: 'Hebrew', original: 'חֲנוֹךְ', translit: 'Ḥănôḵ', meaning: 'dedicated, initiated (from ḥānaḵ, to dedicate, train)' },
+      { lang: 'Hebrew', original: 'קַיִן', translit: 'Qayin', meaning: '\'acquired\' (Gen 4:1 folk link to qānāh); also \'smith, spear\'' }
+    ],
     parentId: 'enoch-family',
     name: 'Enoch, Son of Cain & the First City (Genesis 4:17)',
     description: 'There are two Enochs, and the confusion is old and useful to somebody. Cain, exiled to Nod, \'builded a city, and called the name of the city, after the name of his son, Enoch\' - the first city in the Bible, founded by the first murderer, named for the son of the cursed line. Four generations later that line produces Jabal, Jubal and Tubal-cain: tents and herds, music, metal and weapons, the same arts 1 Enoch says the Watchers taught. The other Enoch, seventh from Adam through Seth, walks with God and is taken. The Cainite Enoch is the patron of the city, technology and the occult crafts; the Sethite Enoch is the patron of the heavens. Every lodge that claims to descend from \'Enoch\' should be asked which one.',
@@ -46011,6 +49679,9 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'lyrans-cat-people',
+    translations: [
+      { lang: 'Greek', original: 'λύρα', translit: 'lyra', meaning: 'lyre; the constellation Lyra, Orpheus\'s instrument set among the stars' }
+    ],
     parentId: 'aliens',
     name: 'Lyrans (Feline Humanoids) & Experiencer Drawings',
     description: 'Lyrans are the cat-headed or cat-featured humanoids said to come from the constellation Lyra, the oldest of the \'star races\' in channelled cosmology and the supposed ancestors of the Pleiadians. The Archivist asked five self-described Lyran experiencers from the starseed forums to draw exactly what they saw, and set the drawings beside two documented cases: an Australian government UFO file (1957-71) recording a mushroom-shaped object with \'occupants with cat-like faces\' that stalled vehicles, and an older encounter. Cat-headed gods are not new: Bastet and Sekhmet ruled Egypt\'s temples, and the Bible lists the \'satyrs\' and \'wild beasts of the desert\' that haunt ruined Babylon. A race that is contacted by trance and remembered as gods is a familiar entry in the ledger.',
@@ -46072,6 +49743,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'watchers-chiefs-of-tens',
+    translations: [
+      { lang: 'Aramaic', original: 'שמיחזה', translit: 'Šemîḥăzāh', meaning: 'uncertain; traditionally \'my name has seen\' (šem + ḥăzāh); Qumran form of Semjaza' },
+      { lang: 'Greek', original: 'ἐγρήγοροι', translit: 'egrēgoroi', meaning: 'wakeful ones, watchers (egeirō, to wake); Greek Enoch term for the Watchers' }
+    ],
     parentId: 'watchers',
     name: 'The Twenty Chiefs of Tens (1 Enoch 6:7)',
     description: 'Two hundred Watchers came down on Mount Hermon in the days of Jared, and 1 Enoch 6:7 names their officers: \'These are their chiefs of tens\' - Semjaza the leader, then Arakiba, Rameel, Kokabiel, Tamiel, Ramiel, Danel, Ezeqeel, Baraqijal, Asael, Armaros, Batarel, Ananel, Zaqiel, Samsapeel, Satarel, Turel, Jomjael and Sariel. Nineteen names survive in the Ethiopic text; the Greek of Syncellus and the Aramaic fragments from Qumran (4Q201, 4Q204) restore the twentieth and correct several spellings. Each commanded ten. Their names are theophoric, ending in -el, \'of God\', which means they kept their rank-badges after they deserted. The Hebrew Bible never lists them; Genesis 6 only says \'the sons of God\'. The list is the oldest surviving order of battle for the enemy.',
@@ -46082,6 +49757,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'watchers-teachings',
+    translations: [
+      { lang: 'Hebrew', original: 'עֲזָאזֵל', translit: 'ʿĂzāʾzēl', meaning: 'uncertain; \'fierce god\' (ʿzz + ʾēl) or \'goat that departs\' (ʿēz + ʾāzal); Leviticus 16' },
+      { lang: 'Greek', original: 'ἐγρήγοροι', translit: 'egrēgoroi', meaning: 'wakeful ones, watchers (egeirō, to wake)' }
+    ],
     parentId: 'watchers',
     name: 'What the Watchers Taught (1 Enoch 8 & 69)',
     description: 'The crime was not only the wives. 1 Enoch 8 is a syllabus: Azazel taught men to make swords, knives, shields, breastplates, and \'the metals of the earth and the art of working them\', and women bracelets, ornaments, antimony, eye-paint and \'all kinds of costly stones and colouring tinctures\' - weapons and vanity, in that order. Semjaza taught enchantments and root-cuttings, Armaros the resolving of enchantments, Baraqijal astrology, Kokabel the constellations, Ezeqeel the knowledge of the clouds, Araqiel the signs of the earth, Shamsiel the signs of the sun, Sariel the course of the moon. 1 Enoch 69 adds the second syllabus: Jeqon led the others down, Asbeel gave them the counsel to take wives, Gadreel taught \'the blows of death\' and showed Eve the serpent, Penemue taught writing with ink and paper \'and thereby many sinned\', Kasdeja taught abortion, exorcism and the strikes of spirits. Genesis 4 credits the same arts to Cain\'s line. Metallurgy, cosmetics, astrology, pharmacology, writing and war: the entire technical civilisation, received as a transmission, and \'the world was changed\'.',
@@ -46092,6 +49771,10 @@ const chunk_bible_sources: TermNode[] = [
   },
   {
     id: 'watchers-judgment',
+    translations: [
+      { lang: 'Aramaic', original: 'עִירִין', translit: 'ʿîrîn', meaning: 'watchers, wakeful ones (ʿûr, to be awake; Daniel 4:13, 17)' },
+      { lang: 'Greek', original: 'ταρταρόω', translit: 'tartaroō', meaning: 'to cast down to Tartarus; New Testament hapax (2 Peter 2:4)' }
+    ],
     parentId: 'watchers',
     name: 'The Sentence on the Watchers (1 Enoch 10, Jude 6, 2 Peter 2:4)',
     description: 'The archangels file the complaint (1 Enoch 9) and the Most High answers with four orders. Uriel: warn Noah, the Flood is coming. Raphael: bind Azazel hand and foot, cast him into the darkness of the desert Dudael, cover him with rough stones until the great judgment, when he is cast into the fire; \'and the whole earth has been corrupted through the works that were taught by Azazel: to him ascribe all sin\'. Gabriel: set the giants against one another so they destroy themselves. Michael: bind Semjaza and his associates for seventy generations \'in the valleys of the earth\' until their judgment, then the abyss of fire for ever. The Watchers beg Enoch to intercede; he writes the petition and it is refused (1 Enoch 13-14). The New Testament assumes all of it: \'the angels which kept not their first estate... he hath reserved in everlasting chains under darkness\' (Jude 6), \'cast them down to hell [Tartarus]\' (2 Peter 2:4), and Christ \'preached unto the spirits in prison\' (1 Peter 3:19). The giants\' spirits, unburied, became the demons (1 Enoch 15-16). That ruling is still in force, and the appeal was denied.',
@@ -46117,6 +49800,9 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'blemmyes',
+    translations: [
+      { lang: 'Greek', original: 'Βλέμμυες', translit: 'Blémmyes', meaning: 'a real Nubian (Beja) people; the name is of non-Greek origin and unexplained' }
+    ],
     parentId: 'myths-legends-root',
     name: 'Blemmye (Headless Men)',
     description: 'Legendary race of headless humanoids described in ancient and medieval geography (Herodotus, Pliny the Elder, Mandeville). Possessing eyes and mouths on their chests, they inhabited Nubia/Libya in classical accounts and became an enduring symbol of monstrous races at the edge of the known world.',
@@ -46160,6 +49846,9 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'menehune',
+    translations: [
+      { lang: 'Hawaiian', original: 'menehune', translit: '', meaning: 'legendary little people; cognate with Tahitian manahune \'commoner, lower class\'' }
+    ],
     parentId: 'myths-legends-root',
     name: 'Menehune',
     description: 'Ancient race of small-statured legendary people in Hawaiian mythology who inhabit hidden valleys and forests. Celebrated for their master craftsmanship, stonemasonry, and engineering accomplishments (such as the Alekoko Fishpond and Kīkīaola aqueduct on Kauaʻi), reportedly constructed in a single night.',
@@ -46190,6 +49879,9 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'kal-el-superman',
+    translations: [
+      { lang: 'Hebrew', original: 'קַל־אֵל', translit: 'qal-ʾēl', meaning: 'folk reading \'voice of God\' (qôl \'voice\' + ʾēl \'God\'); qal itself means \'light, swift\'' }
+    ],
     parentId: 'folklore-archetypes-comparative',
     name: 'Kal-El (Superman & Occult Origins)',
     description: 'Comic book archetype created in 1938 by Jerry Siegel and Joe Shuster. Kal-El (Hebrew: קַל-אֵל, interpreted as "Voice of God" or "Vessel of God") incorporates deep esoteric and biblical motifs: sent in a cradle-craft before his planet\'s destruction (Moses motif), possessing solar-powered superhuman strength (Samson / Apollo), and bearing Enochian-style angelic naming conventions (the \'-El\' suffix shared with Michael, Gabriel, Metatron).',
@@ -46238,6 +49930,9 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'polycarp',
+    translations: [
+      { lang: 'Greek', original: 'Πολύκαρπος', translit: 'Polýkarpos', meaning: 'much-fruited, fruitful (polýs, much + karpós, fruit)' }
+    ],
     parentId: 'biblical-apocryphal',
     name: 'Polycarp of Smyrna',
     description: '2nd-century Christian bishop of Smyrna, Apostolic Father, and direct disciple of John the Apostle. Recorded by Irenaeus, Polycarp served as a crucial link between the original eyewitnesses of Jesus Christ and early Christian theology. He was martyred around 155 CE in the amphitheater of Smyrna, refusing to burn incense to the Roman emperor.',
@@ -46281,6 +49976,9 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'mississippian-culture',
+    translations: [
+      { lang: 'Ojibwe', original: 'misi-ziibi', translit: '', meaning: 'great river (misi, great + ziibi, river), source of \'Mississippi\'' }
+    ],
     parentId: 'moundbuilders',
     name: 'Mississippian Culture',
     description: 'Late prehistoric moundbuilder civilization (c. 800 – 1600 CE) characterized by large urban ceremonial centers with massive truncated pyramid platform mounds, intensive maize agriculture, chiefdom politics, and intricate Southeastern Ceremonial Complex artwork.',
@@ -46303,6 +50001,10 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'ubermensch',
+    translations: [
+      { lang: 'German', original: 'Übermensch', translit: '', meaning: 'over-man, beyond-man (über, over or beyond + Mensch, human being)' },
+      { lang: 'Greek', original: 'ὑπεράνθρωπος', translit: 'hyperanthrōpos', meaning: 'superhuman; Lucian\'s term, of which Übermensch is a calque' }
+    ],
     parentId: 'nietzsche',
     name: 'Übermensch (The Overman)',
     description: 'Philosophical concept introduced by Friedrich Nietzsche in "Thus Spoke Zarathustra" (1883), representing the self-mastered individual who transcends conventional morality to create new meaning. In esoteric traditions and pop culture, the concept heavily influenced early 20th-century occult secret societies, Hermetic Order of the Golden Dawn lore, Thelema, and served as the direct conceptual precursor to Siegel and Shuster\'s creation of Superman (Kal-El).',
@@ -46313,6 +50015,9 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'enoch-family-jared',
+    translations: [
+      { lang: 'Hebrew', original: 'יֶרֶד', translit: 'Yereḏ', meaning: 'descent (from yāraḏ, to go down)' }
+    ],
     parentId: 'enoch-family',
     name: 'Jared (Father of Enoch)',
     description: 'Mentioned in Genesis 5:18 and 2 Enoch as the fifth patriarch in the line of Seth and father of Enoch. His name in Hebrew means "to descend", denoting the era when the Watchers descended upon Mount Hermon.',
@@ -46323,6 +50028,9 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'enoch-family-methuselah',
+    translations: [
+      { lang: 'Hebrew', original: 'מְתוּשֶׁלַח', translit: 'Məṯûšelaḥ', meaning: 'man of the javelin (mətû, man of + šelaḥ, dart); or \'man of (the god) Shelah\'' }
+    ],
     parentId: 'enoch-family',
     name: 'Methuselah (Son of Enoch)',
     description: 'Enoch\'s oldest son who lived 969 years (the longest recorded lifespan in Biblical literature). In 2 Enoch, Methuselah was appointed by the people to construct an altar at Achuzan and lead the priesthood following Enoch\'s bodily translation into heaven.',
@@ -46333,6 +50041,9 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'enoch-family-lamech',
+    translations: [
+      { lang: 'Hebrew', original: 'לֶמֶךְ', translit: 'Lemeḵ', meaning: 'meaning uncertain' }
+    ],
     parentId: 'enoch-family',
     name: 'Lamech (Grandson of Enoch)',
     description: 'Son of Methuselah and father of Noah. According to the Genesis Apocryphon found at Qumran, Lamech suspected his newborn son Noah was fathered by a Watcher due to his glowing skin, requiring Methuselah to travel to the ends of the Earth to consult Enoch.',
@@ -46343,6 +50054,9 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'enoch-family-noah',
+    translations: [
+      { lang: 'Hebrew', original: 'נֹחַ', translit: 'Nōaḥ', meaning: 'rest, repose (from nûaḥ, to rest); Gen 5:29 links it to nāḥam, \'comfort\'' }
+    ],
     parentId: 'enoch-family',
     name: 'Noah (Great-Grandson of Enoch)',
     description: 'The righteous patriarch instructed by God and Enoch\'s revelations to construct the Ark to preserve human and animal life through the Great Deluge.',
@@ -46372,6 +50086,10 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'enoch2-grigori',
+    translations: [
+      { lang: 'Aramaic', original: 'עִיר', translit: 'ʿîr', meaning: 'watcher, wakeful one (Daniel 4:13; plural ʿîrîn)' },
+      { lang: 'Greek', original: 'ἐγρήγοροι', translit: 'egrḗgoroi', meaning: 'wakeful ones, watchers (from egeírō, to wake); Greek 1 Enoch\'s term' }
+    ],
     parentId: 'angelic-hierarchy',
     name: 'The Grigori (Watchers of the 5th Heaven)',
     description: 'In 2 Enoch 18, Enoch is shown the 5th Heaven where 200,000 Grigori (Silent Watchers) sat in grief and silence due to their fallen brethren. Enoch urged them to resume their heavenly liturgies.',
@@ -46381,6 +50099,11 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'enoch3-metatron',
+    translations: [
+      { lang: 'Hebrew', original: 'מֶטָטְרוֹן', translit: 'Meṭāṭrōn', meaning: 'uncertain; popularly from Greek metà thrónon, \'beside the throne\'' },
+      { lang: 'Greek', original: 'μετὰ θρόνον', translit: 'metà thrónon', meaning: 'beside the throne (one proposed source of the name)' },
+      { lang: 'Latin', original: 'metator', translit: '', meaning: 'measurer, one who marks out a camp or road (alternative proposed source)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Alchemy_elements_chart_annotated_metatron.jpg/960px-Alchemy_elements_chart_annotated_metatron.jpg'],
     parentId: 'angelic-hierarchy',
     name: 'Metatron (The Supreme Prince of Presence)',
@@ -46400,6 +50123,10 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'deity-anu',
+    translations: [
+      { lang: 'Sumerian', original: '𒀭', translit: 'An', meaning: 'sky, heaven; the sign also means \'god\' (dingir)' },
+      { lang: 'Akkadian', original: 'Anu(m)', translit: '', meaning: 'Anu, Akkadian form of Sumerian An' }
+    ],
     relatedIds: ['anunnaki', 'inanna-ishtar'],
     parentId: 'mesopotamian-mythology',
     name: 'Anu (Sky Father)',
@@ -46410,6 +50137,10 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'deity-enlil',
+    translations: [
+      { lang: 'Sumerian', original: '𒀭𒂗𒆤', translit: 'Enlil', meaning: 'lord wind, lord of the air (en \'lord\' + líl \'wind, air, spirit\')' },
+      { lang: 'Akkadian', original: 'Ellil', translit: '', meaning: 'Akkadian form of Enlil' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/God_Enlil%2C_seated%2C_from_Nippur%2C_Iraq._1800-1600_BCE._Iraq_Museum.jpg/960px-God_Enlil%2C_seated%2C_from_Nippur%2C_Iraq._1800-1600_BCE._Iraq_Museum.jpg'],
     relatedIds: ['nanna-sin'],
     parentId: 'mesopotamian-mythology',
@@ -46420,6 +50151,10 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'deity-enki',
+    translations: [
+      { lang: 'Sumerian', original: '𒀭𒂗𒆠', translit: 'Enki', meaning: 'lord of the earth (en \'lord\' + ki \'earth\')' },
+      { lang: 'Akkadian', original: 'Ea', translit: '', meaning: 'Ea; uncertain, perhaps Semitic ḥyy \'living\' or Sumerian e-a \'house of water\'' }
+    ],
     relatedIds: ['marduk', 'archaeology-ubaid-lizard-figurines'],
     parentId: 'mesopotamian-mythology',
     name: 'Enki / Ea (Lord of Water & Wisdom)',
@@ -46429,6 +50164,10 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'deity-ra',
+    translations: [
+      { lang: 'Egyptian', original: 'rꜥ', translit: 'Ra / Re', meaning: 'sun; the sun god' },
+      { lang: 'Coptic', original: 'ⲣⲏ', translit: 'Rē', meaning: 'sun' }
+    ],
     parentId: 'myths-legends-root',
     name: 'Ra (Sun God & Creator)',
     description: 'The primary deity of ancient Egyptian religion, representing the sun at noon, creator of the cosmos, and ruler of the sky.',
@@ -46438,6 +50177,10 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'deity-osiris',
+    translations: [
+      { lang: 'Egyptian', original: 'wsjr', translit: 'Wesir / Usir', meaning: 'Osiris; disputed, read as \'mighty one\' or \'seat of the eye\' (st \'seat\' + jrt \'eye\')' },
+      { lang: 'Greek', original: 'Ὄσιρις', translit: 'Ósiris', meaning: 'Hellenised form of the Egyptian name' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Standing_Osiris.svg/960px-Standing_Osiris.svg.png'],
     parentId: 'myths-legends-root',
     name: 'Osiris (Lord of the Underworld)',
@@ -46447,6 +50190,10 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'deity-zeus',
+    translations: [
+      { lang: 'Proto-Indo-European', original: '*dyēws', translit: '', meaning: 'sky, daylight; the bright sky god (also Latin Iuppiter, Sanskrit Dyaus)' },
+      { lang: 'Greek', original: 'Ζεύς', translit: 'Zeús', meaning: 'Zeus; genitive Diós, from the root \'to shine\'' }
+    ],
     parentId: 'greek-mythology',
     name: 'Zeus (King of Olympians)',
     description: 'Sky and thunder god of ancient Greece who ruled as king of the gods from Mount Olympus.',
@@ -46456,6 +50203,10 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'deity-odin',
+    translations: [
+      { lang: 'Old Norse', original: 'Óðinn', translit: '', meaning: 'lord of frenzy, inspiration (óðr \'fury, ecstasy, poetry\'; Proto-Germanic *Wōdanaz)' },
+      { lang: 'Old English', original: 'Wōden', translit: '', meaning: 'Woden; source of \'Wednesday\' (Wōdnesdæg)' }
+    ],
     parentId: 'myths-legends-root',
     name: 'Odin (Norse Allfather)',
     description: 'The widely revered king of the Aesir in Norse mythology, associated with wisdom, healing, royalty, gallows, knowledge, war, and the runes.',
@@ -46474,6 +50225,10 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'realm-sheol-hades',
+    translations: [
+      { lang: 'Hebrew', original: 'שְׁאוֹל', translit: 'šəʾôl', meaning: 'the underworld, grave; etymology uncertain (perhaps from šāʾal, to ask, or \'hollow place\')' },
+      { lang: 'Greek', original: 'ᾍδης', translit: 'Háidēs', meaning: 'Hades, the underworld; traditionally \'the unseen\' (a-, not + idein, to see)' }
+    ],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Hole%C5%A1ov%2C_%C5%BEidovsk%C3%BD_h%C5%99bitov.JPG/960px-Hole%C5%A1ov%2C_%C5%BEidovsk%C3%BD_h%C5%99bitov.JPG'],
     relatedIds: ['tibetan-book-of-the-dead', 'ereshkigal', 'izanagi-izanami', 'heaven-olam-haba-gan-eden', 'heaven-abrahams-bosom', 'hells-all-religions', 'hell-lake-of-fire-gehenna', 'hell-irkalla-kur', 'classic-ghost-photographs', 'enoch3-souls-treasury', 'enoch1-journeys-ends-of-earth'],
     parentId: 'biblical-apocryphal',
@@ -46533,6 +50288,9 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'sumerian-king-list',
+    translations: [
+      { lang: 'Sumerian', original: '𒈗', translit: 'lugal', meaning: 'king, lit. \'big man\' (lú \'man\' + gal \'great\'); nam-lugal \'kingship\' descends from heaven' }
+    ],
     parentId: 'mesopotamian-mythology',
     name: 'Sumerian King List (Weld-Blundell Prism)',
     description: 'An ancient clay cuneiform prism listing the kings of Sumer and their reign lengths. Divided into pre-flood (antediluvian) kings who reigned for thousands of years (e.g. Alulim reigning 28,800 years) and post-flood kings whose lifespans shortened.',
@@ -46543,6 +50301,10 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'ancient-flood-myths',
+    translations: [
+      { lang: 'Latin', original: 'diluvium', translit: '', meaning: 'a washing away, flood (diluere \'to wash away\'); source of \'deluge\'' },
+      { lang: 'Greek', original: 'κατακλυσμός', translit: 'kataklysmós', meaning: 'deluge, inundation (kataklýzein \'to wash down\'); Septuagint word for Noah\'s flood' }
+    ],
     parentId: 'folklore-archetypes-comparative',
     name: 'Comparative Global Flood Myths',
     description: 'More than 250 distinct ancient cultures across every inhabited continent document catastrophic global deluge traditions. These accounts share strikingly consistent motifs: divine warning of coming judgment, a catastrophic flood wiping out corrupt humanity, a chosen patriarch or righteous family preserved in a vessel or on a sacred mountain, animal pairs or seeds preserved, birds released as reconnaissance, and the post-diluvian renewal of civilization. Select any regional tradition below to explore its specific narrative, sacred texts, and cultural variations.',
@@ -46561,6 +50323,11 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'flood-myth-mesopotamia',
+    translations: [
+      { lang: 'Akkadian', original: 'Atra-ḫasīs', translit: '', meaning: 'exceedingly wise (atru \'surpassing\' + ḫasīsu \'wisdom, hearing\')' },
+      { lang: 'Akkadian', original: 'Ūta-napišti', translit: '', meaning: 'he found life (watû \'to find\' + napištu \'life, breath\')' },
+      { lang: 'Sumerian', original: 'dGIŠ.BIL₂.GA.MES', translit: 'Bilgames (Gilgameš)', meaning: 'uncertain; perhaps \'the ancestor is a hero\' (bilga \'forefather\' + mes \'hero, youth\')' }
+    ],
     parentId: 'ancient-flood-myths',
     name: 'Mesopotamian Deluge (Gilgamesh & Atrahasis)',
     description: 'In ancient Mesopotamian lore recorded across the Epic of Gilgamesh (Tablet XI), the Atrahasis Epic, and the Sumerian Eridu Genesis, the gods resolve to purge humanity. The god Enki/Ea secretly warns King Utnapishtim (or Atrahasis / Ziusudra) through a reed wall, instructing him to dismantle his house and construct a colossal cube-shaped ship caulked with pitch and bitumen. The ship preserves his family, skilled craftsmen, and specimens of all living creatures through seven days of ferocious tempests before grounding atop Mount Nimush, where a dove, swallow, and raven are successively released.',
@@ -46571,6 +50338,11 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'flood-myth-genesis-noah',
+    translations: [
+      { lang: 'Hebrew', original: 'נֹחַ', translit: 'Nōaḥ', meaning: 'rest, repose (nûaḥ \'to rest\'); Gen 5:29 links it to niḥam \'to comfort\'' },
+      { lang: 'Hebrew', original: 'תֵּבָה', translit: 'tēḇāh', meaning: 'ark, chest; probably from Egyptian ḏbꜣt \'box, coffin\'' },
+      { lang: 'Hebrew', original: 'מַבּוּל', translit: 'mabbûl', meaning: 'the Flood, deluge (used only of Noah\'s flood)' }
+    ],
     parentId: 'ancient-flood-myths',
     name: "Genesis Flood Narrative (Noah's Ark)",
     description: 'According to Genesis chapters 6–9, the wickedness of mankind and illicit corruption of the earth (amplified by the Nephilim in 1 Enoch) prompts Yahweh to cleanse the world with a universal cataclysm. The righteous patriarch Noah is commanded to construct a three-deck cypress ark (tebah) coated with pitch. Rain falls for 40 days while the fountains of the great deep burst open, submerging all high mountains. The ark comes to rest on the mountains of Ararat; Noah sends forth a raven and a dove that returns with an olive leaf, concluding with a rainbow covenant.',
@@ -46581,6 +50353,10 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'flood-myth-greek-deucalion',
+    translations: [
+      { lang: 'Greek', original: 'Δευκαλίων', translit: 'Deukalíōn', meaning: 'uncertain; anciently folk-etymologised as \'new-wine sailor\' (deûkos + halieús)' },
+      { lang: 'Greek', original: 'Πύρρα', translit: 'Pýrrha', meaning: 'flame-coloured, red-haired (pyrrhós \'fiery red\', from pŷr \'fire\')' }
+    ],
     parentId: 'ancient-flood-myths',
     name: "Deucalion & Pyrrha's Deluge (Greek)",
     description: 'In classical Greek mythology detailed by Ovid, Apollodorus, and Pindar, Zeus resolves to annihilate the corrupt Bronze Generation of mankind following King Lycaon\'s human sacrifices. The Titan Prometheus warns his mortal son Deucalion, who builds a wooden chest or ark (larnax) with his wife Pyrrha. After nine days and nights drifting on turbulent seas, the ark grounds on Mount Parnassus. Consulting the oracle of Themis, they are told to cast the "bones of their mother" over their shoulders—they throw stones of Mother Earth, which miraculously morph into new men and women.',
@@ -46591,6 +50367,10 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'flood-myth-hindu-matsya',
+    translations: [
+      { lang: 'Sanskrit', original: 'मत्स्य', translit: 'matsya', meaning: 'fish' },
+      { lang: 'Sanskrit', original: 'मनु', translit: 'Manu', meaning: 'man, the thinking one (man- \'to think\'); progenitor of mankind' }
+    ],
     parentId: 'ancient-flood-myths',
     name: 'Matsya Avatar & King Manu (Hindu Deluge)',
     description: 'The Shatapatha Brahmana, Matsya Purana, and Mahabharata describe King Satyavrata (Manu) catching a tiny speaking fish in his hands, which pleads for protection. As the fish miraculously grows, it reveals itself as Matsya, the first avatar of Vishnu. Matsya forewarns of the cosmic dissolution (Pralaya) that will drown creation and instructs Manu to construct an enormous ship containing the Seven Sages (Saptarishi), herbal seeds, and living animals. Fastening the vessel to Matsya\'s golden horn with the cosmic serpent Vasuki, Manu is towed safely to Mount Himavat.',
@@ -46601,6 +50381,11 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'flood-myth-chinese-gun-yu',
+    translations: [
+      { lang: 'Chinese', original: '鯀', translit: 'Gǔn', meaning: 'Gun; the graph (fish radical) names a great fish' },
+      { lang: 'Chinese', original: '禹', translit: 'Yǔ', meaning: 'Yu; the graph is glossed by the Shuowen as a reptile or worm' },
+      { lang: 'Chinese', original: '女媧', translit: 'Nǚwā', meaning: 'Nüwa; nǚ \'woman\' + Wā, the goddess\'s proper name' }
+    ],
     parentId: 'ancient-flood-myths',
     name: 'Great Flood of Gun-Yu & Nüwa (China)',
     description: 'Ancient Chinese texts like the Shan Hai Jing and Shiji record a catastrophic, multi-generational inundation of the Yellow River valley. Gun attempts to suppress the floodwaters using stolen Xirang (divine breathing earth that expands indefinitely). When Gun fails, his son Yu the Great spends 13 years organizing massive dredging operations, cutting mountain gorges to drain the deluge into the eastern sea—founding the legendary Xia Dynasty. Related cosmologies describe goddess Nüwa repairing the fractured dome of heaven with five-colored stones after the water god Gonggong smashed Mount Buzhou.',
@@ -46611,6 +50396,10 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'flood-myth-maya-popol-vuh',
+    translations: [
+      { lang: 'Kʼicheʼ Maya', original: 'Popol Wuj', translit: '', meaning: 'book of the council / of the community (popol \'council, mat\' + wuj \'book, paper\')' },
+      { lang: 'Kʼicheʼ Maya', original: 'Qʼuqʼumatz', translit: '', meaning: 'quetzal serpent, feathered serpent (qʼuqʼ \'quetzal\' + kumatz \'snake\')' }
+    ],
     parentId: 'ancient-flood-myths',
     name: 'Popol Vuh Wooden Men Deluge (Maya)',
     description: 'In the sacred Kʼicheʼ Maya Popol Vuh, the creator deities Tepeu and Gucumatz (Huracan, Heart of Heaven) fashion humanity in iterative stages. The third creation—the Men of Wood—reproduce and speak, but lack hearts, minds, and reverence for their creators. Angered, the gods summon a torrential downpour of heavy black resin while monstrous jaguars, predatory birds, and household utensils rise up against the wooden men. The few who escape into the canopy survive as tree-dwelling monkeys, preparing the earth for the fourth creation: the Men of Maize.',
@@ -46621,6 +50410,9 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'flood-myth-aztec-nahui-atl',
+    translations: [
+      { lang: 'Nahuatl', original: 'Nāhui Ātl', translit: '', meaning: 'Four Water, the Sun of Water (nāhui \'four\' + ātl \'water\')' }
+    ],
     parentId: 'ancient-flood-myths',
     name: 'Fourth Sun Nahui Atl Deluge (Aztec)',
     description: 'In Nahua Aztec cosmology recorded in the Codex Chimalpopoca and Codex Vaticanus A, cosmological time is divided into Five Suns (epochs). The Fourth Sun, known as Nahui Atl (4-Water), was presided over by the water goddess Chalchiuhtlicue. This era ended when a torrential celestial deluge submerged all terrestrial lands, transforming humanity into fish. The god Tezcatlipoca warned a pious man named Tata and his wife Nene, advising them to hollow out the trunk of an ahuehuete cypress tree and carry roasted maize ears until the waters subsided.',
@@ -46631,6 +50423,10 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'flood-myth-inca-unu-pachakuti',
+    translations: [
+      { lang: 'Quechua', original: 'Unu Pachakuti', translit: '', meaning: 'water that overturns the world-age (unu \'water\' + pacha \'world, time\' + kuti \'turning\')' },
+      { lang: 'Quechua', original: 'Wiraqucha', translit: '', meaning: 'Viracocha; uncertain, folk-etymologised as \'sea foam\' (wira \'fat\' + qucha \'lake, sea\')' }
+    ],
     parentId: 'ancient-flood-myths',
     name: 'Unu Pachakuti (Inca Great Deluge)',
     description: 'Andean tradition recorded by Pedro Sarmiento de Gamboa and Father Cristóbal de Molina relates that the supreme creator deity Viracocha initially formed a race of stone giants. When they rebelled, Viracocha destroyed them with Unu Pachakuti ("Water-World-Turn"), a universal flood that covered the highest peaks of the Andes. Two shepherd brothers survived on the summit of Mount Ancasmarca after noticing their llamas weeping and staring at the stars in warning; as the waters rose, the mountain miraculously grew taller to keep them above the deluge.',
@@ -46671,6 +50467,10 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'flood-myth-norse-ymir-blood',
+    translations: [
+      { lang: 'Old Norse', original: 'Ymir', translit: '', meaning: 'twin, hermaphrodite (Proto-Germanic *jumijaz; cognate with Sanskrit Yama)' },
+      { lang: 'Old Norse', original: 'Bergelmir', translit: '', meaning: 'disputed; \'mountain-yeller\' (berg + gelmir) or \'bear-roarer\' (de Vries)' }
+    ],
     parentId: 'ancient-flood-myths',
     name: "Ymir's Blood Deluge & Bergelmir (Norse)",
     description: 'In the Old Norse cosmogony recorded in the Poetic Edda (Vafþrúðnismál) and Prose Edda (Gylfaginning by Snorri Sturluson), the primordial creation myth features a cataclysmic flood of bodily fluid rather than rain. When Odin and his brothers Vili and Vé slew the primeval hermaphroditic frost giant Ymir, an immense ocean of boiling blood gushed from his wounds, drowning all the primeval Jötnar (frost giants). Only the giant Bergelmir and his wife escaped by climbing aboard a hollowed wooden mill-box or trough (lúðr), thereby perpetuating the race of giants.',
@@ -46691,6 +50491,10 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'flood-myth-hawaiian-nuu',
+    translations: [
+      { lang: 'Hawaiian', original: 'Kai a Kahinaliʻi', translit: '', meaning: 'sea of Kahinaliʻi; read as \'sea that made the chiefs (aliʻi) fall (hina)\'' },
+      { lang: 'Hawaiian', original: 'Nuʻu', translit: '', meaning: 'height, high place, raised platform' }
+    ],
     parentId: 'ancient-flood-myths',
     name: 'Kai-a-ka-hinalii & Nuʻu (Hawaiian Flood)',
     description: 'Polynesian Hawaiian oral tradition collected by Abraham Fornander and Martha Beckwith tells of Nuʻu, a righteous man warned by the creator god Kāne that a terrible deluge called Kai-a-ka-hinalii ("Sea of Kahinaliʻi") would submerge the earth. Nuʻu constructed a large ocean-going canoe (waʻa) with a wooden house built upon it, named Lono-i-ka-moana, and took his wife Lili-noe, their sons, and pairs of all living beasts aboard. When the raging ocean covered the highest mountain summits, the vessel finally grounded atop the dormant volcano Mauna Kea on the Big Island of Hawaii.',
@@ -46711,6 +50515,9 @@ const chunk_user_requested_terms: any[] = [
   },
   {
     id: 'flood-myth-yoruba-olokun',
+    translations: [
+      { lang: 'Yoruba', original: 'Olókun', translit: '', meaning: 'owner of the sea (oní-/oló- \'owner of\' + òkun \'sea, ocean\')' }
+    ],
     parentId: 'ancient-flood-myths',
     name: "Olokun's Oceanic Deluge (Yoruba)",
     description: 'In Yoruba West African cosmology preserved within the sacred Odu Ifá divination corpus, the supreme sea goddess Olokun, enraged by the arrogance of humans and conflicts with the sky god Olorun, unleashed the ocean deeps across the land in a cataclysmic flood. Most of early humanity drowned in the rising waters. The orisha Orunmila consulted the divine oracle and interceded, while Obatala descended with sacred golden chains, a cockerel, and magic sand to push back the waves and establish permanent dry soil upon the Yoruba homeland.',
@@ -46784,6 +50591,9 @@ const chunk_user_requested_additions_2026: TermNode[] = [
   
   {
     id: "ars-notoria",
+    translations: [
+      { lang: 'Latin', original: 'Ars Notoria', translit: '', meaning: 'the notory art: the art of notae, the signs and figures used in it (nota, mark, sign)' }
+    ],
     parentId: "ancient-texts",
     name: "Ars Notoria (The Notary Art of Solomon)",
     description: "The fifth and most mystical grimoire of the Lemegeton (Lesser Key of Solomon), dating back to medieval Latin manuscripts from the 12th and 13th centuries. Rather than summoning demonic spirits, the Ars Notoria focuses on mystical diagrams (notae), prayers, and angelic invocations said to have been revealed to King Solomon by the angel Pamphilius. Initiates who gazed upon the sacred notae while chanting divine orations allegedly received photographic memory, instant comprehension of all liberal arts and sciences, and divine prophetic illumination.",
@@ -46808,6 +50618,10 @@ const chunk_user_requested_additions_2026: TermNode[] = [
   },
   {
     id: "ishim-theosophy",
+    translations: [
+      { lang: 'Hebrew', original: 'אִישׁ', translit: 'ʾîš', meaning: 'man, person' },
+      { lang: 'Hebrew', original: 'אִישִׁים', translit: 'ʾîšîm', meaning: 'men, \'man-like ones\' (plural of ʾîš); Kabbalah\'s tenth angelic order' }
+    ],
     parentId: "biblical-apocryphal",
     secondaryParentIds: ["alchemy-occult"],
     name: "Ishim (Angelic Men-Spirits)",
@@ -46987,6 +50801,9 @@ const chunk_user_requested_additions_2026: TermNode[] = [
   },
   {
     id: "woodwose-wild-man",
+    translations: [
+      { lang: 'Old English', original: 'wuduwāsa', translit: '', meaning: 'wood-being, wild man of the woods (wudu \'wood\' + wāsa, obscure, perhaps \'being\')' }
+    ],
     parentId: "supernatural-anomalies",
     name: "Woodwose (The Wild Man of the Woods)",
     description: "A prominent figure in medieval European folklore, church sculpture, and heraldry, the Woodwose (or wodewose) is depicted as a giant, heavily muscled humanoid covered head-to-toe in shaggy hair, wielding uprooted trees or clubs. Prominently carved on 15th-century baptismal fonts and church doors across East Anglia (such as Lavenham and Saxmundham) and woven into European Renaissance tapestries, alternative cryptozoologists and Nephilim researchers maintain that Woodwoses were not mythological fables, but real surviving relict hominids and European sasquatch populations driven to extinction or subterranean refuge by medieval deforestation and religious inquisitions.",
@@ -47065,6 +50882,10 @@ const chunk_user_requested_additions_2026: TermNode[] = [
   },
   {
     id: "hyksos-people",
+    translations: [
+      { lang: 'Egyptian', original: 'ḥqꜣ-ḫꜣswt', translit: 'heqa khasut', meaning: 'ruler(s) of foreign lands' },
+      { lang: 'Greek', original: 'Ὑκσώς', translit: 'Hyksōs', meaning: 'Manetho\'s rendering, glossed \'shepherd kings\' by folk etymology' }
+    ],
     parentId: "people-groups",
     name: "Hyksos People (Rulers of Foreign Lands)",
     description: "The enigmatic West Semitic / Levantine rulers who conquered and ruled Lower Egypt during the Second Intermediate Period (15th Dynasty), establishing their fortified capital at Avaris (Tell el-Dab'a). Introducing composite bows, horse-drawn chariots, and bronze curved swords to the Nile Valley, the Hyksos elevated the worship of Set/Sutekh (god of storms and deserts). Classical Jewish historian Flavius Josephus explicitly equated the Hyksos with the biblical Israelites and identified their expulsion by Pharaoh Ahmose I as the historical reality underlying the Exodus narrative.",
@@ -47078,6 +50899,9 @@ const chunk_user_requested_additions_2026: TermNode[] = [
   },
   {
     id: "mabinogion-tales",
+    translations: [
+      { lang: 'Welsh', original: 'Mabinogi', translit: '', meaning: 'uncertain; traditionally \'tale of youth\' or \'of Mabon\' (mab, son, youth); -ion is a scribal plural' }
+    ],
     parentId: "ancient-texts",
     name: "The Mabinogion (Celtic Mythology & LOTR Blueprint)",
     description: "The supreme corpus of medieval Welsh prose tales, preserved in the Red Book of Hergest and White Book of Rhydderch. Pre-dating the Christianization of Arthurian romance, the eleven tales preserve pagan Celtic cosmology: the Otherworld (Annwn), enchanted shapeshifting cauldrons, severed speaking heads, and towering Celtic giants like Bendigeidfran (Bran the Blessed), whose body bridged the Irish Sea. Oxford philologist J.R.R. Tolkien drew extensively upon the Mabinogion's linguistic cadences, magical rings, and mythological motifs to construct Middle-earth and \"The Lord of the Rings\".",
@@ -47090,6 +50914,10 @@ const chunk_user_requested_additions_2026: TermNode[] = [
   },
   {
     id: "red-book-of-hergest",
+    translations: [
+      { lang: 'Welsh', original: 'Llyfr Coch Hergest', translit: '', meaning: 'Red Book of Hergest (llyfr, book + coch, red)' },
+      { lang: 'Latin', original: 'liber', translit: '', meaning: 'inner bark of a tree, hence book; source of Welsh llyfr' }
+    ],
     parentId: "ancient-texts",
     name: "The Red Book of Hergest (Llyfr Coch Hergest)",
     description: "A colossal 14th-century Welsh vellum manuscript compiled between 1382 and 1410, now preserved at Jesus College, Oxford (MS 111). Bound in heavy red leather, it contains the most complete surviving compilation of the Mabinogion, Arthurian romances, historical chronicles (Brut y Brenhinedd), and the mystical prophetic verses of the legendary bard Taliesin. Esotericists value the manuscript for preserving lost pre-Roman knowledge of ancient European giant lineages, subterranean fairy mounds, and Arthur's expeditions into the underworld realm of Annwn.",
@@ -47102,6 +50930,9 @@ const chunk_user_requested_additions_2026: TermNode[] = [
   },
   {
     id: "palazzo-farnese-map-codex",
+    translations: [
+      { lang: 'Latin', original: 'mappa mundi', translit: '', meaning: 'cloth of the world: a world map (mappa, napkin, cloth), source of Italian mappamondo' }
+    ],
     parentId: "ancient-texts",
     name: "Palazzo Farnese World Map Fresco (1574)",
     description: "The monumental world map fresco gracing the Sala del Mappamondo at Villa Farnese in Caprarola, Italy, painted by cartographer Giovanni Antonio da Varese. Highly prized among alternative historians and cartography researchers, the fresco illustrates a massive Terra Australis Incognita connecting Antarctica to southern South America, navigable Arctic channels, and detailed coastlines mapped centuries before their official discovery by modern explorers.",
@@ -47114,6 +50945,9 @@ const chunk_user_requested_additions_2026: TermNode[] = [
   },
   {
     id: "kunyu-wanguo-quantu-codex",
+    translations: [
+      { lang: 'Chinese', original: '坤輿萬國全圖', translit: 'Kūnyú Wànguó Quántú', meaning: 'complete map of the myriad countries of the earth (kūnyú, earth + wànguó, all nations + quántú, full map)' }
+    ],
     parentId: "ancient-texts",
     name: "Kunyu Wanguo Quantu (The Impossible Black Tulip - 1602)",
     description: "The legendary 1602 world map produced by Jesuit scholar Matteo Ricci in collaboration with Chinese cartographers Li Zhizao and Zhang Wentao in Beijing during the Ming Dynasty. Printed from six monumental woodblocks, it placed China at the center of the world and revealed detailed geography of the Americas, magnetic poles, and uncharted southern lands alongside extensive classical Chinese annotations on foreign races, monsters, and cosmological principles.",
@@ -47610,6 +51444,9 @@ TERM_TREE_DATA.push(...chunk_user_requested_additions_2026);
 const chunk_biblical_dietary_animals: TermNode[] = [
   {
     id: "clean-animals-old-testament",
+    translations: [
+      { lang: 'Hebrew', original: 'טָהוֹר', translit: 'ṭāhôr', meaning: 'clean, pure, ritually fit (from ṭāhēr, to be pure)' }
+    ],
     parentId: "bible-book-leviticus",
     secondaryParentIds: ["bible-book-deuteronomy","holy-bible","judaism","christianity","biblical-apocryphal"],
     name: "Clean Animals",
@@ -47629,6 +51466,11 @@ const chunk_biblical_dietary_animals: TermNode[] = [
   },
   {
     id: "unclean-animals-old-testament",
+    translations: [
+      { lang: 'Hebrew', original: 'טָמֵא', translit: 'ṭāmēʾ', meaning: 'unclean, defiled, ritually impure' },
+      { lang: 'Hebrew', original: 'שֶׁקֶץ', translit: 'šeqeṣ', meaning: 'detestable thing, abomination (used of forbidden creatures)' },
+      { lang: 'Hebrew', original: 'תּוֹעֵבָה', translit: 'tôʿēḇāh', meaning: 'abomination, abhorrent thing' }
+    ],
     parentId: "bible-book-leviticus",
     secondaryParentIds: ["bible-book-deuteronomy","holy-bible","judaism","christianity","biblical-apocryphal"],
     name: "Unclean Animals",
@@ -47653,6 +51495,10 @@ TERM_TREE_DATA.push(...chunk_biblical_dietary_animals);
 const chunk_sacred_scriptures: TermNode[] = [
   {
     id: "old-testament",
+    translations: [
+      { lang: 'Hebrew', original: 'תַּנַ״ךְ', translit: 'Tanaḵ', meaning: 'acronym of Tôrāh (Teaching), Nəḇîʾîm (Prophets), Kəṯûḇîm (Writings)' },
+      { lang: 'Greek', original: 'Παλαιὰ Διαθήκη', translit: 'Palaià Diathḗkē', meaning: 'old covenant (diathḗkē \'covenant, testament\'); Latin Vetus Testamentum' }
+    ],
     parentId: "judaism",
     secondaryParentIds: ["ancient-texts", "holy-bible", "christianity"],
     name: "The Old Testament (Tanakh)",
@@ -47667,6 +51513,11 @@ const chunk_sacred_scriptures: TermNode[] = [
   },
   {
     id: "new-testament",
+    translations: [
+      { lang: 'Hebrew', original: 'בְּרִית חֲדָשָׁה', translit: 'bərîṯ ḥăḏāšāh', meaning: 'new covenant (Jeremiah 31:31), the phrase the Greek title translates' },
+      { lang: 'Greek', original: 'Καινὴ Διαθήκη', translit: 'Kainē Diathēkē', meaning: 'new covenant; diathēkē = will, testament, covenant' },
+      { lang: 'Latin', original: 'Novum Testamentum', translit: '', meaning: 'new testament (testamentum, a will, rendering Greek diathēkē)' }
+    ],
     parentId: "christianity",
     secondaryParentIds: ["ancient-texts", "holy-bible"],
     name: "The New Testament",
@@ -47728,6 +51579,9 @@ const chunk_user_additions_prophets_and_anomalies: TermNode[] = [
   // 3. Pentagram
   {
     id: "pentagram-history-symbolism",
+    translations: [
+      { lang: 'Greek', original: 'πεντάγραμμον', translit: 'pentagrammon', meaning: 'five-lined figure (pente, five + grammē, line)' }
+    ],
     parentId: "alchemy-occult",
     secondaryParentIds: ["esoteric-traditions"],
     name: "Pentagram (History & Origins)",
@@ -47748,6 +51602,9 @@ const chunk_user_additions_prophets_and_anomalies: TermNode[] = [
   // 4. Wicca
   {
     id: "wicca-tradition",
+    translations: [
+      { lang: 'Old English', original: 'wicca', translit: '', meaning: 'male sorcerer, wizard (feminine wicce, witch)' }
+    ],
     parentId: "alchemy-occult",
     secondaryParentIds: ["magical-orders"],
     name: "Wicca (Roots & History)",
@@ -47788,6 +51645,9 @@ const chunk_user_additions_prophets_and_anomalies: TermNode[] = [
   // 8. Nostradamus (Enhanced standalone node)
   {
     id: "nostradamus-prophecies-fulfilled",
+    translations: [
+      { lang: 'Latin', original: 'Nostradamus', translit: '', meaning: 'Latinised Provençal Nostredame, \'Our Lady\' (nostra domina)' }
+    ],
     parentId: "prophets-general",
     secondaryParentIds: ["alchemy-occult"],
     name: "Nostradamus & Fulfilled Quatrains",
@@ -47808,6 +51668,10 @@ const chunk_user_additions_prophets_and_anomalies: TermNode[] = [
   // 6. Biblical Prophets Each One Separate Items & What Has Come True
   {
     id: "prophet-moses-node",
+    translations: [
+      { lang: 'Egyptian', original: 'msj', translit: 'mes', meaning: 'to be born, child of (as in Thutmose, Ramesses); likely source of the name' },
+      { lang: 'Hebrew', original: 'מֹשֶׁה', translit: 'Mōšeh', meaning: 'folk etymology \'drawn out\' of the water (māšāh, Exodus 2:10)' }
+    ],
     parentId: "prophets-general",
     secondaryParentIds: ["biblical-figures", "judaism", "holy-bible"],
     name: "Prophet Moses & Fulfilled Prophecies",
@@ -47825,6 +51689,9 @@ const chunk_user_additions_prophets_and_anomalies: TermNode[] = [
   },
   {
     id: "prophet-samuel-node",
+    translations: [
+      { lang: 'Hebrew', original: 'שְׁמוּאֵל', translit: 'Šəmûʾēl', meaning: 'name of God (šēm + ʾēl); folk etymology \'asked of God\' (šāʾal, 1 Samuel 1:20)' }
+    ],
     parentId: "prophets-general",
     secondaryParentIds: ["biblical-figures", "holy-bible"],
     name: "Prophet Samuel & Fulfilled Prophecies",
@@ -47842,6 +51709,9 @@ const chunk_user_additions_prophets_and_anomalies: TermNode[] = [
   },
   {
     id: "prophet-nathan-node",
+    translations: [
+      { lang: 'Hebrew', original: 'נָתָן', translit: 'Nāṯān', meaning: 'he has given (nāṯan, to give); short for Nethanel or Nathaniah' }
+    ],
     parentId: "prophets-general",
     secondaryParentIds: ["biblical-figures", "holy-bible"],
     name: "Prophet Nathan & Fulfilled Prophecies",
@@ -47859,6 +51729,10 @@ const chunk_user_additions_prophets_and_anomalies: TermNode[] = [
   },
   {
     id: "prophet-elijah-node",
+    translations: [
+      { lang: 'Hebrew', original: 'אֵלִיָּהוּ', translit: 'ʾĒliyyāhû', meaning: 'my God is Yahweh (ʾēlî + Yāhû)' },
+      { lang: 'Greek', original: 'Ἠλίας', translit: 'Ēlias', meaning: 'Septuagint and New Testament form of Elijah' }
+    ],
     parentId: "prophets-general",
     secondaryParentIds: ["biblical-figures", "holy-bible"],
     name: "Prophet Elijah & Fulfilled Prophecies",
@@ -47876,6 +51750,9 @@ const chunk_user_additions_prophets_and_anomalies: TermNode[] = [
   },
   {
     id: "prophet-elisha-node",
+    translations: [
+      { lang: 'Hebrew', original: 'אֱלִישָׁע', translit: 'ʾĔlîšāʿ', meaning: 'my God is salvation (ʾēl + yāšaʿ, to save)' }
+    ],
     parentId: "prophets-general",
     secondaryParentIds: ["biblical-figures", "holy-bible"],
     name: "Prophet Elisha & Fulfilled Prophecies",
@@ -47893,6 +51770,9 @@ const chunk_user_additions_prophets_and_anomalies: TermNode[] = [
   },
   {
     id: "prophet-isaiah-node",
+    translations: [
+      { lang: 'Hebrew', original: 'יְשַׁעְיָהוּ', translit: 'Yəšaʿyāhû', meaning: 'Yahweh is salvation (yāšaʿ + Yāhû)' }
+    ],
     parentId: "prophets-general",
     secondaryParentIds: ["biblical-figures", "holy-bible"],
     name: "Prophet Isaiah & Fulfilled Prophecies",
@@ -47910,6 +51790,9 @@ const chunk_user_additions_prophets_and_anomalies: TermNode[] = [
   },
   {
     id: "prophet-jeremiah-node",
+    translations: [
+      { lang: 'Hebrew', original: 'יִרְמְיָהוּ', translit: 'Yirməyāhû', meaning: 'Yahweh exalts (rûm) or \'Yahweh establishes\'; sense debated' }
+    ],
     parentId: "prophets-general",
     secondaryParentIds: ["biblical-figures", "holy-bible"],
     name: "Prophet Jeremiah & Fulfilled Prophecies",
@@ -47927,6 +51810,9 @@ const chunk_user_additions_prophets_and_anomalies: TermNode[] = [
   },
   {
     id: "prophet-ezekiel-node",
+    translations: [
+      { lang: 'Hebrew', original: 'יְחֶזְקֵאל', translit: 'Yəḥezqēʾl', meaning: 'God strengthens (ḥāzaq, to be strong + ʾēl)' }
+    ],
     parentId: "prophets-general",
     secondaryParentIds: ["biblical-figures", "holy-bible"],
     name: "Prophet Ezekiel & Fulfilled Prophecies",
@@ -47944,6 +51830,10 @@ const chunk_user_additions_prophets_and_anomalies: TermNode[] = [
   },
   {
     id: "prophet-daniel-node",
+    translations: [
+      { lang: 'Hebrew', original: 'דָּנִיֵּאל', translit: 'Dāniyyēʾl', meaning: 'God is my judge (dān + î + ʾēl)' },
+      { lang: 'Akkadian', original: 'Balāṭsu-uṣur', translit: '', meaning: 'protect his life; Babylonian court name Belteshazzar (Daniel 1:7)' }
+    ],
     parentId: "prophets-general",
     secondaryParentIds: ["biblical-figures", "holy-bible"],
     name: "Prophet Daniel & Fulfilled Prophecies",
@@ -47961,6 +51851,9 @@ const chunk_user_additions_prophets_and_anomalies: TermNode[] = [
   },
   {
     id: "prophet-jonah-node",
+    translations: [
+      { lang: 'Hebrew', original: 'יוֹנָה', translit: 'Yônāh', meaning: 'dove' }
+    ],
     parentId: "prophets-general",
     secondaryParentIds: ["biblical-figures", "holy-bible"],
     name: "Prophet Jonah & Fulfilled Prophecies",
@@ -47978,6 +51871,9 @@ const chunk_user_additions_prophets_and_anomalies: TermNode[] = [
   },
   {
     id: "prophet-hosea-node",
+    translations: [
+      { lang: 'Hebrew', original: 'הוֹשֵׁעַ', translit: 'Hôšēaʿ', meaning: 'salvation, he has saved (yāšaʿ); same root as Joshua and Jesus' }
+    ],
     parentId: "prophets-general",
     secondaryParentIds: ["biblical-figures", "holy-bible"],
     name: "Prophet Hosea & Fulfilled Prophecies",
@@ -47995,6 +51891,9 @@ const chunk_user_additions_prophets_and_anomalies: TermNode[] = [
   },
   {
     id: "prophet-joel-node",
+    translations: [
+      { lang: 'Hebrew', original: 'יוֹאֵל', translit: 'Yôʾēl', meaning: 'Yahweh is God (Yô + ʾēl)' }
+    ],
     parentId: "prophets-general",
     secondaryParentIds: ["biblical-figures", "holy-bible"],
     name: "Prophet Joel & Fulfilled Prophecies",
@@ -48012,6 +51911,9 @@ const chunk_user_additions_prophets_and_anomalies: TermNode[] = [
   },
   {
     id: "prophet-amos-node",
+    translations: [
+      { lang: 'Hebrew', original: 'עָמוֹס', translit: 'ʿĀmôs', meaning: 'burden, burden-bearer (ʿāmas, to load, carry)' }
+    ],
     parentId: "prophets-general",
     secondaryParentIds: ["biblical-figures", "holy-bible"],
     name: "Prophet Amos & Fulfilled Prophecies",
@@ -48029,6 +51931,9 @@ const chunk_user_additions_prophets_and_anomalies: TermNode[] = [
   },
   {
     id: "prophet-obadiah-node",
+    translations: [
+      { lang: 'Hebrew', original: 'עֹבַדְיָה', translit: 'ʿŌḇaḏyāh', meaning: 'servant of Yahweh (ʿeḇeḏ + Yāh)' }
+    ],
     parentId: "prophets-general",
     secondaryParentIds: ["biblical-figures", "holy-bible"],
     name: "Prophet Obadiah & Fulfilled Prophecies",
@@ -48046,6 +51951,9 @@ const chunk_user_additions_prophets_and_anomalies: TermNode[] = [
   },
   {
     id: "prophet-micah-node",
+    translations: [
+      { lang: 'Hebrew', original: 'מִיכָה', translit: 'Mîḵāh', meaning: 'short for Mîḵāyāhû, \'who is like Yahweh?\' (mî + kə + Yāhû)' }
+    ],
     parentId: "prophets-general",
     secondaryParentIds: ["biblical-figures", "holy-bible"],
     name: "Prophet Micah & Fulfilled Prophecies",
@@ -48063,6 +51971,9 @@ const chunk_user_additions_prophets_and_anomalies: TermNode[] = [
   },
   {
     id: "prophet-nahum-node",
+    translations: [
+      { lang: 'Hebrew', original: 'נַחוּם', translit: 'Naḥûm', meaning: 'comfort, consolation (nāḥam, to comfort)' }
+    ],
     parentId: "prophets-general",
     secondaryParentIds: ["biblical-figures", "holy-bible"],
     name: "Prophet Nahum & Fulfilled Prophecies",
@@ -48080,6 +51991,9 @@ const chunk_user_additions_prophets_and_anomalies: TermNode[] = [
   },
   {
     id: "prophet-habakkuk-node",
+    translations: [
+      { lang: 'Hebrew', original: 'חֲבַקּוּק', translit: 'Ḥăḇaqqûq', meaning: 'uncertain; traditionally \'embrace\' (ḥāḇaq); perhaps Akkadian ḫambaqūqu, a garden plant' }
+    ],
     parentId: "prophets-general",
     secondaryParentIds: ["biblical-figures", "holy-bible"],
     name: "Prophet Habakkuk & Fulfilled Prophecies",
@@ -48097,6 +52011,9 @@ const chunk_user_additions_prophets_and_anomalies: TermNode[] = [
   },
   {
     id: "prophet-zephaniah-node",
+    translations: [
+      { lang: 'Hebrew', original: 'צְפַנְיָה', translit: 'Ṣəp̄anyāh', meaning: 'Yahweh has hidden, treasured (ṣāp̄an + Yāh)' }
+    ],
     parentId: "prophets-general",
     secondaryParentIds: ["biblical-figures", "holy-bible"],
     name: "Prophet Zephaniah & Fulfilled Prophecies",
@@ -48114,6 +52031,9 @@ const chunk_user_additions_prophets_and_anomalies: TermNode[] = [
   },
   {
     id: "prophet-haggai-node",
+    translations: [
+      { lang: 'Hebrew', original: 'חַגַּי', translit: 'Ḥaggay', meaning: 'festal, born on a feast day (ḥag, pilgrim festival)' }
+    ],
     parentId: "prophets-general",
     secondaryParentIds: ["biblical-figures", "holy-bible"],
     name: "Prophet Haggai & Fulfilled Prophecies",
@@ -48131,6 +52051,9 @@ const chunk_user_additions_prophets_and_anomalies: TermNode[] = [
   },
   {
     id: "prophet-zechariah-node",
+    translations: [
+      { lang: 'Hebrew', original: 'זְכַרְיָה', translit: 'Zəḵaryāh', meaning: 'Yahweh has remembered (zāḵar + Yāh)' }
+    ],
     parentId: "prophets-general",
     secondaryParentIds: ["biblical-figures", "holy-bible"],
     name: "Prophet Zechariah & Fulfilled Prophecies",
@@ -48148,6 +52071,9 @@ const chunk_user_additions_prophets_and_anomalies: TermNode[] = [
   },
   {
     id: "prophet-malachi-node",
+    translations: [
+      { lang: 'Hebrew', original: 'מַלְאָכִי', translit: 'Malʾāḵî', meaning: 'my messenger (malʾāḵ, messenger, angel); possibly a title rather than a name' }
+    ],
     parentId: "prophets-general",
     secondaryParentIds: ["biblical-figures", "holy-bible"],
     name: "Prophet Malachi & Fulfilled Prophecies",
