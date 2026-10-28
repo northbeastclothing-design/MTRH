@@ -209,7 +209,8 @@ export default function CodexPage({
   searchQuery: propsSearchQuery,
   onSearchQueryChange
 }: CodexPageProps) {
-  const nodes = (codexNodes || TERM_TREE_DATA).filter((n): n is TermNode => !!(n && n.id));
+  // memoised: a fresh array every render would invalidate every memo downstream (columns, link index, web layout)
+  const nodes = useMemo(() => (codexNodes || TERM_TREE_DATA).filter((n): n is TermNode => !!(n && n.id)), [codexNodes]);
 
   const [selectedPath, setSelectedPath] = useState<string[]>(() => {
     if (focusedTermId) {
@@ -304,9 +305,6 @@ export default function CodexPage({
     if (!activeTermId) return null;
     return nodes.find(t => t.id === activeTermId) || null;
   }, [activeTermId, nodes]);
-
-  // The web is centred on the selection only (hover previews the dossier without re-centring)
-  const webCenterNode = selectedTermId ? (linkIndex.byId.get(selectedTermId) || null) : null;
 
   // Entries that point at the active one (links are stored one-way), minus those it already lists itself
   const referencedBy = useMemo(() => {
@@ -1934,34 +1932,13 @@ export default function CodexPage({
             originShift={{ x: isMobile ? 0 : 130, y: isMobile ? -40 : 30 }}
           />
 
-          {/* Header: sits to the right of the floating search box on desktop, under it on mobile */}
-          <div style={{ position: 'absolute', top: isMobile ? 'auto' : 24, bottom: isMobile ? 96 : 'auto', left: isMobile ? 16 : 320, right: 24, pointerEvents: 'none', display: 'flex', alignItems: 'baseline', gap: '12px', flexWrap: 'wrap' }}>
-            <span style={{ fontSize: '9px', letterSpacing: '2px', color: theme.textDim, fontWeight: 700 }}>
-              {webCenterNode ? 'WEB AROUND' : 'WEB OF ALL THEMES'}
-            </span>
-            {webCenterNode && (
-              <span style={{ fontSize: '18px', fontWeight: 700, color: getNodeColor(webCenterNode), letterSpacing: '0.5px' }}>
-                {webCenterNode.name}
-              </span>
-            )}
-            {webCenterNode && webCenterNode.parentId && (
-              <button
-                type="button"
-                onClick={() => navigateToTerm(webCenterNode.parentId!)}
-                style={{ pointerEvents: 'auto', background: theme.bg, border: `1px solid ${theme.border}`, color: theme.textDim, fontFamily: '"Space Mono", monospace', fontSize: '8px', letterSpacing: '1px', padding: '3px 8px', borderRadius: '10px', cursor: 'pointer' }}
-              >
-                ↑ {linkIndex.byId.get(webCenterNode.parentId)?.name || 'UP'}
-              </button>
-            )}
-          </div>
-
           {/* Legend */}
           {!isMobile && (
             <div style={{ position: 'absolute', left: 24, bottom: 20, pointerEvents: 'none', display: 'flex', gap: '16px', fontSize: '8px', letterSpacing: '1px', color: theme.textDim }}>
               <span><span style={{ display: 'inline-block', width: 18, borderTop: `2px solid ${theme.text}`, verticalAlign: 'middle', marginRight: 6 }} />SUB-THEME</span>
               <span><span style={{ display: 'inline-block', width: 18, borderTop: `2px dashed ${theme.text}`, verticalAlign: 'middle', marginRight: 6 }} />RELATED</span>
               <span><span style={{ display: 'inline-block', width: 18, borderTop: `2px dashed ${theme.textDim}`, verticalAlign: 'middle', marginRight: 6, opacity: 0.6 }} />REFERENCED BY</span>
-              <span>CLICK A TERM TO FOCUS · DRAG TO PAN · SCROLL TO SPREAD / PULL IN</span>
+              <span>CLICK A TERM TO FOCUS · DRAG A TERM TO MOVE IT · DRAG THE BACKGROUND TO PAN · SCROLL TO ZOOM</span>
             </div>
           )}
         </div>
