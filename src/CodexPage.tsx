@@ -242,6 +242,8 @@ export default function CodexPage({
   }, [isRightCollapsed]);
   
   const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const REF_BY_PREVIEW = 6; // referenced-by pills shown before the list is collapsed
+  const [refByExpanded, setRefByExpanded] = useState(false);
   const [brokenImages, setBrokenImages] = useState<Record<string, boolean>>({});
   const [codexViewMode, setCodexViewMode] = useState<'tree' | 'web'>('tree');
 
@@ -305,6 +307,8 @@ export default function CodexPage({
     if (!activeTermId) return null;
     return nodes.find(t => t.id === activeTermId) || null;
   }, [activeTermId, nodes]);
+
+  useEffect(() => { setRefByExpanded(false); }, [activeTermId]);
 
   // Entries that point at the active one (links are stored one-way), minus those it already lists itself
   const referencedBy = useMemo(() => {
@@ -3118,11 +3122,22 @@ export default function CodexPage({
                     {/* Referenced by: entries whose related links point at this one (links are stored one-way) */}
                     {referencedBy.length > 0 && (
                       <div style={{ marginBottom: '24px' }}>
-                        <div style={{ fontFamily: '"Space Mono", monospace', fontSize: '8px', letterSpacing: '1.5px', color: theme.textDim, fontWeight: 700, marginBottom: '8px' }}>
-                          REFERENCED BY ({referencedBy.length})
+                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
+                          <div style={{ fontFamily: '"Space Mono", monospace', fontSize: '8px', letterSpacing: '1.5px', color: theme.textDim, fontWeight: 700 }}>
+                            REFERENCED BY ({referencedBy.length})
+                          </div>
+                          {referencedBy.length > REF_BY_PREVIEW && (
+                            <button
+                              type="button"
+                              onClick={() => setRefByExpanded(v => !v)}
+                              style={{ background: 'transparent', border: 'none', padding: 0, cursor: 'pointer', fontFamily: '"Space Mono", monospace', fontSize: '8px', letterSpacing: '1px', fontWeight: 700, color: theme.text }}
+                            >
+                              {refByExpanded ? '− SHOW LESS' : `+ ${referencedBy.length - REF_BY_PREVIEW} MORE`}
+                            </button>
+                          )}
                         </div>
                         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', justifyContent: 'flex-start' }}>
-                          {referencedBy.map(refNode => {
+                          {(refByExpanded ? referencedBy : referencedBy.slice(0, REF_BY_PREVIEW)).map(refNode => {
                             const refColor = getNodeColor(refNode);
                             return (
                               <button

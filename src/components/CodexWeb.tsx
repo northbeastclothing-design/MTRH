@@ -129,6 +129,17 @@ function runLayout(
 
 const easeOut = (t: number) => 1 - Math.pow(1 - t, 5); // quintic: quick start, long gentle settle
 
+// Connector drawn only with horizontal, vertical and 45° segments (subway-map style):
+// a 45° run out of the source, then a straight run into the target.
+const octilinearPath = (A: XY, B: XY) => {
+  const dx = B.x - A.x, dy = B.y - A.y;
+  const adx = Math.abs(dx), ady = Math.abs(dy);
+  if (adx < 0.5 && ady < 0.5) return `M ${A.x} ${A.y}`;
+  const ex = adx >= ady ? A.x + Math.sign(dx) * ady : B.x;   // elbow: diagonal covers the shorter axis
+  const ey = adx >= ady ? B.y : A.y + Math.sign(dy) * adx;
+  return `M ${A.x} ${A.y} L ${ex} ${ey} L ${B.x} ${B.y}`;
+};
+
 const CodexWeb: React.FC<CodexWebProps> = ({
   centerId, selectedId, hoveredId, nodes, index, getNodeColor, getNodeIcon, hasSubItems,
   onSelect, onHover, theme, isDark, originShift
@@ -387,13 +398,15 @@ const CodexWeb: React.FC<CodexWebProps> = ({
           const dashed = e.kind === 'related' || e.kind === 'backlink';
           const lit = connected ? (e.source === highlightId || e.target === highlightId) : true;
           return (
-            <line
+            <path
               key={`${e.source}->${e.target}`}
-              x1={A.x} y1={A.y} x2={B.x} y2={B.y}
+              d={octilinearPath(A, B)}
+              fill="none"
               stroke={theme.text}
               strokeWidth={e.kind === 'leaf' ? 1 : 2}
               strokeDasharray={dashed ? '4,4' : undefined}
               opacity={lit ? (e.kind === 'leaf' ? 0.35 : e.kind === 'backlink' ? 0.45 : 0.75) : 0.18}
+              strokeLinejoin="round"
               style={{ transition: 'opacity 0.15s ease' }}
             />
           );

@@ -3977,6 +3977,8 @@ function App() {
       if (matched) {
         setSelectedCodexNode(matched);
         setFocusedCodexTermId(termId);
+        // consumed: otherwise clearing the selection later re-runs this effect and re-selects the deep link
+        initialUrlParamsRef.current.termId = null;
       }
     }
   }, [combinedCodexNodes, selectedCodexNode]);
@@ -3989,6 +3991,7 @@ function App() {
       const matched = combinedTimelineItems.find(item => item && item.id && String(item.id) === itemId);
       if (matched) {
         setSelectedTimelineItem(matched);
+        initialUrlParamsRef.current.itemId = null; // consumed (see the codex effect above)
       }
     }
   }, [combinedTimelineItems, selectedTimelineItem]);
