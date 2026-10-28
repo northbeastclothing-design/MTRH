@@ -28,6 +28,7 @@ import OnboardingTour from './components/OnboardingTour';
 import Lightbox from './components/Lightbox';
 import SubmissionForm from './components/SubmissionForm';
 import ModeratorConsole from './components/ModeratorConsole';
+import CommunityNotes from './components/CommunityNotes';
 
 // The three secondary pages are code-split so the map shell can start executing before
 // their code arrives. Each gets its own Suspense boundary so a page that is still loading
@@ -3938,11 +3939,14 @@ function App() {
     });
   }, [stopMainMapRotation, windowWidth, mapBaseView]);
 
-  // Safety timeout for initial deep link processing
+  // Safety timeout for initial deep link processing. A pending ?featureId= must survive a slow map
+  // load (the map and the approved-submission feed can take well over 4s on a cold connection), so
+  // give it a long grace period; without a feature deep link the short timeout is enough.
   useEffect(() => {
+    const hasPendingFeature = !!initialUrlParamsRef.current.featureId;
     const timer = setTimeout(() => {
       hasProcessedInitialDeepLinkRef.current = true;
-    }, 4000);
+    }, hasPendingFeature ? 30000 : 4000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -5202,7 +5206,8 @@ function App() {
       if (activeTermNode.layer) {
         return {
           layer: activeTermNode.layer,
-          featureSearchTerm: activeTermNode.mapFeatureId || activeTermNode.id || activeTermNode.name
+          featureSearchTerm: activeTermNode.mapFeatureId || activeTermNode.id,
+          fallbackName: activeTermNode.name
         };
       }
       
@@ -5216,14 +5221,15 @@ function App() {
       if (curr.layer) {
         return {
           layer: curr.layer,
-          featureSearchTerm: activeTermNode.mapFeatureId || activeTermNode.id || activeTermNode.name
+          featureSearchTerm: activeTermNode.mapFeatureId || activeTermNode.id,
+          fallbackName: activeTermNode.name
         };
       }
       
       return null;
     })();
 
-    const handleViewOnMapClick = (layerName: string, featureSearchTerm: string) => {
+    const handleViewOnMapClick = (layerName: string, featureSearchTerm: string, fallbackName?: string) => {
       stopMainMapRotation();
       setCurrentPage('map');
       setActiveLayers(prev => ({
@@ -5237,9 +5243,15 @@ function App() {
       if (featureSearchTerm) {
         let mapRecord = combinedPointsAndLinesData.find(r => String(r.id) === featureSearchTerm);
         if (!mapRecord) {
-          mapRecord = combinedPointsAndLinesData.find(r => 
+          mapRecord = combinedPointsAndLinesData.find(r =>
             String(r.name).toLowerCase().includes(featureSearchTerm.toLowerCase())
           );
+        }
+        // Codex ids rarely match a record name, so fall back to the node's display name
+        if (!mapRecord && fallbackName) {
+          const fn = fallbackName.toLowerCase();
+          mapRecord = combinedPointsAndLinesData.find(r => String(r.name).toLowerCase() === fn)
+            || combinedPointsAndLinesData.find(r => String(r.name).toLowerCase().includes(fn));
         }
         setSearchQuery('');
         if (mapRecord) {
@@ -5745,7 +5757,7 @@ function App() {
               <motion.button
                 whileTap={{ scale: 0.95 }}
                 whileHover={{ scale: 1.05 }}
-                onClick={() => handleViewOnMapClick(resolvedMapInfo.layer, resolvedMapInfo.featureSearchTerm)}
+                onClick={() => handleViewOnMapClick(resolvedMapInfo.layer, resolvedMapInfo.featureSearchTerm, resolvedMapInfo.fallbackName)}
                 style={{
                   display: 'flex',
                   alignItems: 'center',
@@ -6889,6 +6901,8 @@ function App() {
               {selectedFeature.description}
             </p>
           </div>
+
+          <CommunityNotes db={db} pointId={String(selectedFeature.id)} theme={theme} isDark={isMapDarkMode} trackCustomEvent={trackCustomEvent} />
 
           {(() => {
             const travelPath = BIBLICAL_TRAVEL_PATHS[selectedFeature.id];
@@ -9626,7 +9640,8 @@ function App() {
             isMobileDrawerExpanded={isMobileDrawerExpanded}
             searchQuery={codexSearchQuery}
             onSearchQueryChange={setCodexSearchQuery}
-            onViewOnMap={(layerName, featureSearchTerm) => {
+            db={db}
+            onViewOnMap={(layerName, featureSearchTerm, fallbackName) => {
               stopMainMapRotation();
               setCurrentPage('map');
               // Enable the layer on the map
@@ -9646,9 +9661,15 @@ function App() {
                 
                 // If not found, find by name containing search term
                 if (!mapRecord) {
-                  mapRecord = combinedPointsAndLinesData.find(r => 
+                  mapRecord = combinedPointsAndLinesData.find(r =>
                     String(r.name).toLowerCase().includes(featureSearchTerm.toLowerCase())
                   );
+                }
+                // Codex ids rarely match a record name, so fall back to the node's display name
+                if (!mapRecord && fallbackName) {
+                  const fn = fallbackName.toLowerCase();
+                  mapRecord = combinedPointsAndLinesData.find(r => String(r.name).toLowerCase() === fn)
+                    || combinedPointsAndLinesData.find(r => String(r.name).toLowerCase().includes(fn));
                 }
                 
                 // Clear search query to keep all other layer assets visible on the map and sidebar list

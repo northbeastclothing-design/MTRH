@@ -493,9 +493,11 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Raguel, one of the holy angels, who takes vengeance on the world of the luminaries. — 1 Enoch 20:4 (https://www.sacred-texts.com/bib/boe/boe023.htm)']
   },  {
     id: 'ramiel',
+    relatedIds: ['watchers-chiefs-of-tens', 'remiel', 'jeremiel', 'enoch3-nature-angels'],
+    secondaryParentIds: ['watchers-chiefs-of-tens'],
     parentId: 'angel',
-    name: 'Ramiel',
-    description: 'Forgiveness, hope, divine visions, guiding souls into heaven',
+    name: 'Ramiel (Rameel)',
+    description: 'Third of the chiefs of tens, Rameel or Ramiel, \'thunder of God\'. Listed in 1 Enoch 6:7 and again as a fallen Watcher in the Greek of Syncellus; no course is assigned in chapter 8. The name is reused for a holy archangel - Remiel, \'whom God set over those who rise\' (1 Enoch 20:8), the angel of hope and of the resurrection in 2 Baruch - and the sixth chief of tens is also a Ramiel in some manuscripts, so three angels may hide under one spelling. Thunder belongs to the loyal Ra\'amiel in 3 Enoch. The fallen Ramiel kept the name and lost the thunder.',
     sources: ['Apocryphal Texts'],
     isApocryphal: true,
     bibleVerses: ['Then they will see the Son of Man coming in clouds with great power and glory. Then he will send out his angels, and will gather together his chosen ones from the four winds, from the ends of the earth to the ends of the sky. — Mark 13:26-27 (https://www.biblegateway.com/passage/?search=Mark+13%3A26-27)']
@@ -672,14 +674,16 @@ const chunk_0: any[] = [  {
     parentId: 'fallen-angel',
     name: 'Principalities & Powers',
     description: 'High-ranking spiritual forces or rulers of darkness mentioned in biblical theology, believed to hold territorial authority over nations and regions.',
-    relatedIds: ['archons'],
+    relatedIds: ['archons', 'elohim', 'enoch3-72-princes', 'holy-principalities', 'holy-powers', 'watchers'],
     bibleVerses: ['For our struggle is not against flesh and blood, but against the rulers, against the authorities, against the powers of this dark world and against the spiritual forces of evil in the heavenly realms. — Ephesians 6:12 (https://www.biblegateway.com/passage/?search=Ephesians+6%3A12)'],
     sources: ['Ephesians 6', 'Colossians 2'],
   },  {
     id: 'asbeel',
+    relatedIds: ['watchers-teachings', 'yekun', 'gadreel', 'penemue', 'kasyade'],
+    secondaryParentIds: ['watchers-teachings'],
     parentId: 'fallen-angel',
-    name: 'Asbeel',
-    description: 'Angel of destruction',
+    name: 'Asbeel, Who Gave the Counsel',
+    description: '\'The second was named Asbeel: he imparted to the holy sons of God evil counsel, and led them astray so that they defiled their bodies with the daughters of men\' (1 Enoch 69:5). Where Jeqon led them down, Asbeel told them what to do once they arrived. The name is \'deserter from God\'. In the Parables\' account the fall is a staffed operation: a recruiter, a strategist, a weapons instructor, a scribe and a physician, which is the structure of every secret society this site maps.',
     sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
     isApocryphal: true,
     bibleVerses: ['He who gave evil counsel to the holy sons of God, and led them astray to defile their bodies with the daughters of men. — 1 Enoch 69:5 (https://www.sacred-texts.com/bib/boe/boe072.htm)']
@@ -700,17 +704,18 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Because that she had been married to seven husbands, whom Asmodeus the evil spirit had killed, before they had lain with her. — Tobit 3:8 (https://www.biblegateway.com/passage/?search=Tobit+3%3A8)']
   },  {
     id: 'grigori',
+    secondaryParentIds: ['watchers'],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Rasputin_PA.jpg/960px-Rasputin_PA.jpg'],
     parentId: 'fallen-angel',
     name: 'Grigori',
     description: 'An order of angels also known as the Watchers. According to the Book of Enoch, a group of two hundred Grigori led by Semyaza descended to Mount Hermon, took human wives, taught humanity forbidden arts, and fathered the giant Nephilim.',
     sources: ['Book of Enoch', 'Second Book of Enoch'],
     isApocryphal: true,
-    relatedIds: ['heaven-2', 'heaven-5', 'watchers', 'enochian-mount-hermon', 'book-of-enoch'],
+    relatedIds: ['heaven-2', 'heaven-5', 'watchers', 'enochian-mount-hermon', 'book-of-enoch', 'watchers-chiefs-of-tens', 'enoch2-grigori', 'nephilim', 'samyaza'],
     bibleVerses: ['These are the Grigori (Watchers), who with their prince Satanail rejected the Lord... and they went down on the earth, and performed a deed outside their covenant... — 2 Enoch 18:3 (https://www.sacred-texts.com/bib/boe/index.htm)']
   },  {
     id: 'nephilim',
-    relatedIds: ['book-of-enoch', 'rh-negative-blood'],
+    relatedIds: ['book-of-enoch', 'rh-negative-blood', 'nephilim-br', 'watchers', 'watchers-chiefs-of-tens', 'watchers-judgment', 'book-of-giants', 'great-flood', 'enochian-og-kingdom'],
     parentId: 'fallen-angel',
     name: 'Nephilim',
     description: 'The giant offspring of the union between the sons of God (Watchers) and daughters of men as described in Genesis 6 and the Book of Enoch. Their great size and violence filled the earth with bloodshed, prompting the divine judgment of the Flood.',
@@ -719,8 +724,9 @@ const chunk_0: any[] = [  {
     bibleVerses: ['And they became pregnant, and they bare great giants, whose height was three thousand ells: Who consumed all the acquisitions of men. And when men could no longer sustain them, the giants turned against them and devoured mankind. — 1 Enoch 7:2-4 (https://www.sacred-texts.com/bib/boe/boe010.htm)']
   },  {
     id: 'azazel',
+    secondaryParentIds: ['watchers-chiefs-of-tens'],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Detail_of_East_Window%2C_Lincoln_Cathedral_%2814224253959%29.jpg/960px-Detail_of_East_Window%2C_Lincoln_Cathedral_%2814224253959%29.jpg'],
-    relatedIds: ['book-of-enoch', 'enoch3-uzza-azza-azael', 'wandering-stars-fallen-angels', 'planet-mars-scripture', 'enoch-son-of-cain', 'unclean-animals-old-testament'],
+    relatedIds: ['book-of-enoch', 'enoch3-uzza-azza-azael', 'wandering-stars-fallen-angels', 'planet-mars-scripture', 'enoch-son-of-cain', 'unclean-animals-old-testament', 'watchers-chiefs-of-tens', 'watchers-teachings', 'watchers-judgment', 'samyaza', 'enochian-desert-dudael', 'raphael', 'tubal-cain'],
     parentId: 'fallen-angel',
     name: 'Azazel',
     description: 'One of the primary leaders of the fallen Watchers in the Book of Enoch. He is accused of teaching humanity metalworking, weapons of war, cosmetics, and writing, and is associated with the scapegoat ritual in Leviticus 16.',
@@ -730,100 +736,83 @@ const chunk_0: any[] = [  {
     bibleVerses: ['And Azâzêl taught men to make swords, and knives, and shields, and breastplates, and made known to them the metals of the earth and the art of working them... — 1 Enoch 8:1 (https://www.sacred-texts.com/bib/boe/boe011.htm)', 'And the Lord said to Raphael: \'Bind Azazel hand and foot, and cast him into the darkness: and make an opening in the desert, which is in Dudael, and cast him therein.\' — 1 Enoch 10:4 (https://www.sacred-texts.com/bib/boe/boe013.htm)']
   },  {
     id: 'samyaza',
+    secondaryParentIds: ['watchers-chiefs-of-tens'],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/The_Sons_of_God_Saw_the_Daughters_of_Men_That_They_Were_Fair%2C_by_Daniel_Chester_French%2C_modeled_by_1918%2C_carved_1923_-_Corcoran_Gallery_of_Art_-_DSC01065.JPG/960px-The_Sons_of_God_Saw_the_Daughters_of_Men_That_They_Were_Fair%2C_by_Daniel_Chester_French%2C_modeled_by_1918%2C_carved_1923_-_Corcoran_Gallery_of_Art_-_DSC01065.JPG'],
-    relatedIds: ['enochian-mount-hermon', 'book-of-enoch', 'book-of-giants', 'enoch3-uzza-azza-azael'],
+    relatedIds: ['enochian-mount-hermon', 'book-of-enoch', 'book-of-giants', 'enoch3-uzza-azza-azael', 'watchers-chiefs-of-tens', 'watchers-teachings', 'watchers-judgment', 'azazel', 'semjaza', 'michael', 'nephilim'],
     parentId: 'fallen-angel',
-    name: 'Samyaza',
-    description: 'The chief leader of the two hundred fallen Watchers who descended to Mount Hermon in the Book of Enoch. He bound the angels to a mutual oath to go through with their plan to take human wives, teaching enchantments and root-cuttings.',
+    name: 'Samyaza (Shemihazah)',
+    description: 'Shemihazah, \'my name has seen\', the ringleader. In 1 Enoch 6 he is the one who says \'I fear ye will not indeed agree to do this deed, and I alone shall have to pay the penalty of a great sin\', and so binds the two hundred by oath on Hermon. He takes a wife, teaches enchantments and root-cuttings, and fathers giants. Michael is ordered to bind him \'for seventy generations in the valleys of the earth\' (10:11-12). Later Jewish legend (Yalkut Shimoni, the Zohar) makes him Uzza, hung between heaven and earth, and the Aramaic fragments spell him Shemihazah. The oath at Hermon is the first conspiracy in literature: a leader who will not act unless everyone is equally guilty.',
     timelineId: 'semjaza',
     sources: ['Book of Enoch', 'Book of Giants'],
     isApocryphal: true,
     bibleVerses: ['And Semjâzâ, who was their leader, said unto them: \'I fear ye will not indeed agree to do this deed, and I alone shall have to pay the penalty of a great sin.\' — 1 Enoch 6:3 (https://www.sacred-texts.com/bib/boe/boe009.htm)', 'And Semjâzâ taught enchantments, and root-clippings... — 1 Enoch 8:3 (https://www.sacred-texts.com/bib/boe/boe011.htm)']
   },  {
     id: 'araqiel',
-    relatedIds: ['book-of-enoch'],
+    secondaryParentIds: ['watchers-chiefs-of-tens'],
+    relatedIds: ['book-of-enoch', 'watchers-chiefs-of-tens', 'watchers-teachings', 'shamsiel', 'sariel', 'ley-lines-br'],
     parentId: 'fallen-angel',
-    name: 'Araqiel',
-    description: 'One of the chief fallen Watchers in the Book of Enoch. He is described as teaching humanity the signs of the earth, geomancy, and terrestrial secrets.',
+    name: 'Araqiel (Arakiba)',
+    description: 'Second of the chiefs of tens in 1 Enoch 6:7, Arakiba in the Ethiopic, Araqiel in the Greek, \'earth of God\'. 1 Enoch 8:3 gives his subject: \'Araqiel the signs of the earth\' - geomancy, the reading of omens in the ground, the lore that became dowsing, ley lines and every attempt to hear the earth speak. He is paired with Shamsiel (signs of the sun) and Sariel (course of the moon), which makes the three of them the faculty of natural divination. The earth has signs; the sin was in who was asked to interpret them.',
     sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
     isApocryphal: true,
     bibleVerses: ['And Araqiêl taught the signs of the earth... — 1 Enoch 8:3 (https://www.sacred-texts.com/bib/boe/boe011.htm)']
   },  {
     id: 'armaros',
-    relatedIds: ['book-of-enoch'],
+    secondaryParentIds: ['watchers-chiefs-of-tens'],
+    relatedIds: ['book-of-enoch', 'watchers-chiefs-of-tens', 'watchers-teachings', 'samyaza', 'book-of-giants', 'magick'],
     parentId: 'fallen-angel',
     name: 'Armaros',
-    description: 'A prominent fallen Watcher listed in the Book of Enoch. He taught humanity the resolving of enchantments, counter-spells, and warding wardcraft.',
+    description: 'Eleventh chief of tens, \'cursed one\' or \'he who is accursed\', spelled Armaros in the Greek and Armers in the Ethiopic. His course in 1 Enoch 8:3 was \'the resolving of enchantments\' - the counter-spell, the undoing of a binding. Note the pairing: Semjaza taught the enchantment and Armaros taught its reversal, so that the two hundred held both the lock and the key. Every tradition of exorcism and spell-breaking outside the Name of God descends from this seat. He is also named among the fallen in the Book of Giants from Qumran.',
     sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
     isApocryphal: true,
     bibleVerses: ['And Armârôs taught the resolving of enchantments... — 1 Enoch 8:3 (https://www.sacred-texts.com/bib/boe/boe011.htm)']
-  },  {
-    id: 'azazeel',
-    parentId: 'fallen-angel',
-    name: 'Azazeel',
-    description: 'An alternative spelling or distinct demonic entity linked to Azazel in various occult traditions and demonological records, associated with wilderness, scapegoats, and desert spirits.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
-    isApocryphal: true,
-    bibleVerses: ['And Azâzêl taught men to make swords, and knives, and shields, and breastplates, and made known to them the metals of the earth and the art of working them... — 1 Enoch 8:1 (https://www.sacred-texts.com/bib/boe/boe011.htm)', 'And the Lord said to Raphael: \'Bind Azazel hand and foot, and cast him into the darkness: and make an opening in the desert, which is in Dudael, and cast him therein.\' — 1 Enoch 10:4 (https://www.sacred-texts.com/bib/boe/boe013.htm)']
-  },  {
+  },    {
     id: 'baraqiel',
-    relatedIds: ['book-of-enoch'],
+    secondaryParentIds: ['watchers-chiefs-of-tens'],
+    relatedIds: ['book-of-enoch', 'watchers-chiefs-of-tens', 'watchers-teachings', 'kokabel', 'shamsiel', 'zodiac', 'astrology-cosmology', 'book-of-giants', 'enoch3-nature-angels'],
     parentId: 'fallen-angel',
-    name: 'Baraqiel',
-    description: 'One of the chief fallen Watchers in the Book of Enoch. He is responsible for teaching humanity astrology, the observation of the stars, and celestial paths.',
+    name: 'Baraqiel (Baraqijal)',
+    description: 'Ninth chief of tens, \'lightning of God\'. 1 Enoch 8:3: \'Baraqijal taught astrology\' - the first of three Watchers who divided the sky between them, with Kokabel on the constellations and Shamsiel on the sun. In the Book of Giants he is the father of the giant Mahaway, who is sent to Enoch to beg an interpretation of the giants\' dreams. In 3 Enoch a Barakiel is the holy angel of lightning in charge of the second heaven, which may be the same name reused or a deliberate replacement. The horoscope column is his monument.',
     sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
     isApocryphal: true,
     bibleVerses: ['And Barâqîjâl taught astrology... — 1 Enoch 8:3 (https://www.sacred-texts.com/bib/boe/boe011.htm)']
-  },  {
-    id: 'barquiel',
-    relatedIds: ['book-of-enoch'],
-    parentId: 'fallen-angel',
-    name: 'Barquiel',
-    description: 'A fallen Watcher listed in the Book of Enoch. He taught humanity the observation of the lightning, weather portents, and electrical phenomena.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
-    isApocryphal: true,
-    bibleVerses: ['And Barâqîjâl taught astrology, and Kôkabîêl the constellations, and Ezêqêêl the knowledge of the clouds... — 1 Enoch 8:3 (https://www.sacred-texts.com/bib/boe/boe011.htm)']
-  },  {
+  },    {
     id: 'kokabel',
-    relatedIds: ['book-of-enoch'],
+    secondaryParentIds: ['watchers-chiefs-of-tens'],
+    relatedIds: ['book-of-enoch', 'watchers-chiefs-of-tens', 'watchers-teachings', 'baraqiel', 'mazzaroth', 'zodiac', 'stars-as-angels-bible', 'enoch3-nature-angels'],
     parentId: 'fallen-angel',
-    name: 'Kokabel',
-    description: 'A chief fallen Watcher in the Book of Enoch. He is described as teaching his disciples the constellations, star configurations, and astronomical lore.',
+    name: 'Kokabel (Kokabiel)',
+    description: 'Fourth chief of tens, \'star of God\'. 1 Enoch 8:3: \'Kokabel the constellations\' - he taught men to read the fixed stars as a map of fate. 3 Enoch 17 keeps a Kokabiel as the holy prince over the stars, the loyal twin of the office. The Mazzaroth of Job 38:32, the zodiac wheels in the synagogue floors of Galilee, the Chaldean star-priests Daniel outranked: all downstream of one Watcher\'s lesson. The stars were given \'for signs and for seasons\' (Genesis 1:14); Kokabel taught men to take orders from them instead.',
     sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
     isApocryphal: true,
     bibleVerses: ['And Kôkabîêl taught the constellations... — 1 Enoch 8:3 (https://www.sacred-texts.com/bib/boe/boe011.htm)']
   },  {
     id: 'penemue',
-    relatedIds: ['book-of-enoch'],
+    secondaryParentIds: ['watchers-teachings'],
+    relatedIds: ['book-of-enoch', 'watchers-teachings', 'planet-mercury-scripture', 'thoth', 'hermes', 'enoch-366-books', 'enoch2-pravuil'],
     parentId: 'fallen-angel',
     name: 'Penemue',
-    description: 'A prominent fallen Watcher in the Book of Enoch. He taught humanity the art of writing with ink and paper, which Enoch condemns as leading people astray, and taught children the secrets of wisdom, sweetness, and bitterness.',
+    description: 'Named not among the chiefs of tens but in the Parables (1 Enoch 69:8-11): Penemue \'taught the children of men the bitter and the sweet, and the secrets of their wisdom. And he instructed mankind in writing with ink and paper, and thereby many sinned from eternity to eternity and until this day. For men were not created for such a purpose, to give confirmation to their good faith with pen and ink.\' The one Watcher whose gift the reader is holding. Thoth, Nabu and Hermes, the scribe-gods of three empires, are his portrait; the scribes and lawyers who \'bind heavy burdens\' in Matthew 23 are his school. The Bible\'s own verdict on writing is that God engraved the first text Himself, and that man was never meant to need a contract.',
     sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
     isApocryphal: true,
     bibleVerses: ['He who showed the children of men the bitter and the sweet, and he showed them all the secrets of their wisdom. And he instructed mankind in writing with ink and paper... — 1 Enoch 69:8 (https://www.sacred-texts.com/bib/boe/boe072.htm)']
   },  {
     id: 'sariel',
-    relatedIds: ['book-of-enoch'],
+    secondaryParentIds: ['watchers-chiefs-of-tens'],
+    relatedIds: ['book-of-enoch', 'watchers-chiefs-of-tens', 'watchers-teachings', 'saraqael', 'the-moon-scripture', 'enochian-calendar', 'uriel'],
     parentId: 'fallen-angel',
     name: 'Sariel',
-    description: 'A holy archangel who watches over spirits, but in some traditions listed among the fallen Watchers. In the Book of Enoch, he is credited with teaching humanity the course of the moon and lunar phases.',
+    description: 'Last of the chiefs of tens in the Ethiopic list, \'prince of God\', who taught \'the course of the moon\' (1 Enoch 8:3). The name is double-booked: in 1 Enoch 20 Saraqael is one of the seven holy archangels, set over the spirits that sin, and the Qumran War Scroll puts Sariel\'s name on the shields of Michael\'s army. Either two angels share the name or the office was refilled after the fall. The moon\'s courses are also the subject of 1 Enoch 73-79, where Uriel teaches them lawfully to Enoch; the same knowledge, licensed and unlicensed, is the whole difference between a revelation and a leak.',
     sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
     isApocryphal: true,
     bibleVerses: ['And Sariêl taught the course of the moon... — 1 Enoch 8:3 (https://www.sacred-texts.com/bib/boe/boe011.htm)', 'Sariel, one of the holy angels, who is set over the spirits, who sin in the spirit. — 1 Enoch 20:6 (https://www.sacred-texts.com/bib/boe/boe023.htm)']
-  },  {
-    id: 'semyaza',
-    parentId: 'fallen-angel',
-    name: 'Semyaza',
-    description: 'A fallen angel variant name of Shemyaza/Samyaza referenced in various medieval grimoires and apocryphal lists as a commander of demonic hosts and teacher of magical arts.',
-    sources: ['Book of Enoch', 'Book of Giants'],
-    isApocryphal: true,
-    bibleVerses: ['And Semjâzâ, who was their leader, said unto them: \'I fear ye will not indeed agree to do this deed, and I alone shall have to pay the penalty of a great sin.\' — 1 Enoch 6:3 (https://www.sacred-texts.com/bib/boe/boe009.htm)', 'And Semjâzâ taught enchantments, and root-clippings... — 1 Enoch 8:3 (https://www.sacred-texts.com/bib/boe/boe011.htm)']
-  },  {
+  },    {
     id: 'turel',
-    relatedIds: ['book-of-enoch'],
+    secondaryParentIds: ['watchers-chiefs-of-tens'],
+    relatedIds: ['book-of-enoch', 'watchers-chiefs-of-tens', 'watchers-teachings', 'book-of-giants'],
     parentId: 'fallen-angel',
-    name: 'Turel',
-    description: 'One of the fallen Watchers listed in the Book of Enoch. He is associated with teaching the course of the sun and celestial motions.',
+    name: 'Turel (Tûrêl)',
+    description: 'Seventeenth chief of tens, \'rock of God\' or \'mountain of God\'. He has no course assigned in 1 Enoch 8, only his rank in chapter 6; the Greek of Syncellus spells him Thausael and the Aramaic fragments Turiel. The silence is itself information: of twenty commanders only eight are credited with a subject, which means twelve commanded without teaching, enforcers rather than instructors. He is remembered in the Book of Giants and in medieval lists of the fallen; the alternate spelling Turiel is the same angel.',
     sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
     isApocryphal: true,
     bibleVerses: ['And these are the names of their chiefs... Turiel... — 1 Enoch 6:7-8 (https://www.sacred-texts.com/bib/boe/boe009.htm)']
@@ -836,7 +825,7 @@ const chunk_0: any[] = [  {
     translations: [
       { lang: 'Latin', original: 'Lucifer', translit: 'Lucifer', meaning: 'Light Bringer / Morning Star' }
     ],
-    relatedIds: ['satan', 'myth-satyrs', 'myth-pan', 'stars-as-angels-bible', 'planet-venus-scripture', 'third-of-the-stars'],
+    relatedIds: ['satan', 'myth-satyrs', 'myth-pan', 'stars-as-angels-bible', 'planet-venus-scripture', 'third-of-the-stars', 'fallen-angel', 'watchers', 'gadreel'],
     sources: ['Book of Isaiah', 'Latin Vulgate Translation'],
     bibleVerses: ['How art thou fallen from heaven, O Lucifer, son of the morning! how art thou cut down to the ground, which didst weaken the nations! — Isaiah 14:12 (https://www.biblegateway.com/passage/?search=Isaiah+14%3A12)', 'Thou hast been in Eden the garden of God; every precious stone was thy covering... thou art the anointed cherub that covereth... — Ezekiel 28:13-14 (https://www.biblegateway.com/passage/?search=Ezekiel+28%3A13-14)']
   },  {
@@ -848,7 +837,7 @@ const chunk_0: any[] = [  {
     translations: [
       { lang: 'Hebrew', original: 'שָׂטָן', translit: 'Satan', meaning: 'Adversary / Accuser' }
     ],
-    relatedIds: ['lucifer', 'egyptian-set', 'church-of-satan', 'church-of-set', 'michael-aquino', 'anton-lavey', 'angra-mainyu', 'tezcatlipoca', 'hells-all-religions'],
+    relatedIds: ['lucifer', 'egyptian-set', 'church-of-satan', 'church-of-set', 'michael-aquino', 'anton-lavey', 'angra-mainyu', 'tezcatlipoca', 'hells-all-religions', 'fallen-angel', 'rev_antichrist', 'enoch3-72-princes', 'gadreel', 'demons'],
     sources: ['Hebrew Bible', 'New Testament', 'Book of Enoch'],
     bibleVerses: [
       'Now there was a day when the sons of God came to present themselves before Yahweh, and Satan also came among them. — Job 1:6 (https://www.biblegateway.com/passage/?search=Job+1%3A6)',
@@ -856,25 +845,31 @@ const chunk_0: any[] = [  {
     ]
   },  {
     id: 'yekun',
+    relatedIds: ['watchers-teachings', 'asbeel', 'samyaza', 'watchers-chiefs-of-tens', 'yomiel'],
+    secondaryParentIds: ['watchers-teachings'],
     parentId: 'fallen-angel',
-    name: 'Yekun',
-    description: 'Persuaded and mislead other angels',
+    name: 'Jeqon (Yekun), Who Led Them Down',
+    description: '\'The first is Jeqon: that is, the one who led astray all the sons of God, and brought them down to the earth, and led them astray through the daughters of men\' (1 Enoch 69:4). The Parables give a second list of ringleaders alongside the chiefs of tens, and Jeqon heads it: not the oath-taker on Hermon but the recruiter before the oath, the one who sold the idea. Every conspiracy has a Semjaza who organises and a Jeqon who seduces. The name means \'the inciter\'.',
     sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
     isApocryphal: true,
     bibleVerses: ['He who led astray all the sons of God, and brought them down to the earth, and led them astray through the daughters of men. — 1 Enoch 69:4 (https://www.sacred-texts.com/bib/boe/boe072.htm)']
   },  {
     id: 'kesabel',
+    relatedIds: ['watchers-teachings', 'kasyade', 'michael', 'lesser-key-solomon', 'freemasonry'],
+    secondaryParentIds: ['watchers-teachings'],
     parentId: 'fallen-angel',
-    name: 'Kesabel',
-    description: 'Female, seduction',
+    name: 'Kasbeel (Kesabel), Keeper of the Oath',
+    description: '\'This is the task of Kasbeel, the chief of the oath which he showed to the holy ones when he dwelt high above in glory, and its name is Biqa\' (1 Enoch 69:13). Kasbeel asked Michael to show him the hidden name, the oath by which heaven was suspended, the earth founded on water, the sea bounded and the sun and moon kept in their courses (69:16-25), so that the Watchers could swear by it. Not a seductress - the older stub here was wrong - but the angel who wanted the password to creation and got it. The Name as a binding oath is the root of every magical tradition that followed, from the Tetragrammaton on the Key of Solomon to the sworn words of the lodge.',
     sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
     isApocryphal: true,
     bibleVerses: ['He who showed the children of men the path of death... — 1 Enoch 69:7 (https://www.sacred-texts.com/bib/boe/boe072.htm)']
   },  {
     id: 'gadreel',
+    relatedIds: ['watchers-teachings', 'azazel', 'adam-eve', 'wars-real-causes', 'satan', 'lucifer'],
+    secondaryParentIds: ['watchers-teachings'],
     parentId: 'fallen-angel',
-    name: 'Gadreel',
-    description: 'Teaches weapons of war and killing',
+    name: 'Gadreel, Who Showed Eve the Serpent',
+    description: '\'The third was named Gadreel: he it is who showed the children of men all the blows of death, and he led astray Eve, and showed the weapons of death to the sons of men: the shield and the coat of mail, and the sword for battle, and all the weapons of death\' (1 Enoch 69:6-7). The Parables put the serpent of Genesis 3 and the arms industry under one name, \'wall of God\'. The Ethiopic tradition therefore identifies the tempter in Eden not with Satan but with a Watcher, which means the fall of man and the fall of the angels are one event told twice. Azazel teaches the same weapons in 1 Enoch 8; the two books disagree only about who held the patent.',
     sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
     isApocryphal: true,
     bibleVerses: ['He who showed the children of men all the blows of death, and he led astray Eve, and showed the weapons of death to the sons of men... — 1 Enoch 69:6 (https://www.sacred-texts.com/bib/boe/boe072.htm)']
@@ -901,131 +896,122 @@ const chunk_0: any[] = [  {
     bibleVerses: ['Canst thou draw out leviathan with an hook? or his tongue with a cord which thou lettest down? — Job 41:1 (https://www.biblegateway.com/passage/?search=Job+41%3A1)', 'In that day the Lord with his sore and great and strong sword shall punish leviathan the piercing serpent, even leviathan that crooked serpent; and he shall slay the dragon that is in the sea. — Isaiah 27:1 (https://www.biblegateway.com/passage/?search=Isaiah+27%3A1)']
   },  {
     id: 'kasyade',
+    relatedIds: ['watchers-teachings', 'kesabel', 'demons', 'health-pharma-conspiracies'],
+    secondaryParentIds: ['watchers-teachings'],
     parentId: 'fallen-angel',
-    name: 'Kasyade',
-    description: 'Astrology, strikes on embryos, spirits, souls, and demons',
+    name: 'Kasdeja (Kasyade), Teacher of Abortion & Exorcism',
+    description: '\'The fifth was named Kasdeja: this is he who showed the children of men all the wicked smitings of spirits and demons, and the smitings of the embryo in the womb, that it may pass away, and the smitings of the soul, the bites of the serpent, and the smitings which befall through the noontide heat, the son of the serpent named Taba\'et\' (1 Enoch 69:12). The name is \'Chaldean\'. The oldest text on earth to describe induced abortion assigns it to a fallen angel, together with the exorcist\'s trade and the noon-day demon of Psalm 91:6. Kasbeel, who follows him, is the angel of the oath by which heaven and earth were made.',
     sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
     isApocryphal: true,
     bibleVerses: ['He who showed the children of men all the evil blows of spirits and demons, and the blows of the embryo in the womb... — 1 Enoch 69:12 (https://www.sacred-texts.com/bib/boe/boe072.htm)']
-  },  {
-    id: 'semyazza',
-    parentId: 'fallen-angel',
-    name: 'Semyazza',
-    description: 'leader of watcher/fallen, grigori',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
-    isApocryphal: true,
-    bibleVerses: ['And Semjâzâ, who was their leader, said unto them: \'I fear ye will not indeed agree to do this deed, and I alone shall have to pay the penalty of a great sin.\' — 1 Enoch 6:3 (https://www.sacred-texts.com/bib/boe/boe009.htm)', 'And Semjâzâ taught enchantments, and root-clippings... — 1 Enoch 8:3 (https://www.sacred-texts.com/bib/boe/boe011.htm)']
-  },  {
-    id: 'kokabiel',
-    parentId: 'fallen-angel',
-    name: 'Kokabiel',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
-    isApocryphal: true,
-    bibleVerses: ['And Kôkabîêl taught the constellations... — 1 Enoch 8:3 (https://www.sacred-texts.com/bib/boe/boe011.htm)']
-  },  {
+  },      {
     id: 'tamiel',
+    relatedIds: ['watchers-chiefs-of-tens', 'sefer-raziel'],
+    secondaryParentIds: ['watchers-chiefs-of-tens'],
     parentId: 'fallen-angel',
-    name: 'Tamiel',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
+    name: 'Tamiel (Tamel)',
+    description: 'Fifth chief of tens in 1 Enoch 6:7, \'perfection of God\'. No course is recorded for him in chapter 8, but the Greek version of the list and some manuscripts of the Parables (69:2) place him among the fallen, and the medieval angelologists (Agrippa\'s sources, the Sefer Raziel tradition) keep him as an angel of the deep. A commander of ten whose only surviving fact is that he came down.',
     sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
     isApocryphal: true,
     bibleVerses: ['These are their chiefs of tens... And these are the names: ... Tamiel... — 1 Enoch 6:7-8 (https://www.sacred-texts.com/bib/boe/boe009.htm)']
   },  {
     id: 'daniel',
+    secondaryParentIds: ['watchers-chiefs-of-tens'],
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Daniel_Dubois_walkout_%28cropped%29.jpg/960px-Daniel_Dubois_walkout_%28cropped%29.jpg'],
-    relatedIds: ['enoch3-sopheriel', 'enoch3-princes-of-judgment', 'enoch3-irin-qaddishin', 'enoch3-72-princes', 'star-of-bethlehem', 'enoch-wife-edna'],
+    relatedIds: ['enoch3-sopheriel', 'enoch3-princes-of-judgment', 'enoch3-irin-qaddishin', 'enoch3-72-princes', 'star-of-bethlehem', 'enoch-wife-edna', 'watchers-chiefs-of-tens', 'prophet-daniel-node', 'canaanite-mythology'],
     parentId: 'fallen-angel',
-    name: 'Daniel',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
+    name: 'Danel (Watcher, not the prophet)',
+    description: 'Seventh chief of tens, Danel or Daniel, \'God has judged\'. Not the prophet of the lions\' den: this is the Watcher of 1 Enoch 6:7, and the name is the same one Jubilees gives to the father of Enoch\'s wife Edna and that Ezekiel 14:14 uses for a legendary righteous man alongside Noah and Job, and that the Ugaritic tablets give to the hero of Aqhat. One name, four figures, three of them from before the Flood. Whether the Watcher Danel and Edna\'s father Danel are the same is a question the sources leave open, and the answer would make Enoch the son-in-law of a fallen angel.',
     sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
     isApocryphal: true,
     bibleVerses: ['These are their chiefs of tens... And these are the names: ... Daniel... — 1 Enoch 6:7-8 (https://www.sacred-texts.com/bib/boe/boe009.htm)']
   },  {
     id: 'chazaqiel',
+    relatedIds: ['watchers-chiefs-of-tens', 'watchers-teachings', 'weather-modification', 'enoch3-nature-angels'],
+    secondaryParentIds: ['watchers-chiefs-of-tens'],
     parentId: 'fallen-angel',
-    name: 'Chazaqiel',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
+    name: 'Chazaqiel (Ezeqeel)',
+    description: 'Eighth chief of tens, Ezeqeel in the Ethiopic, Chazaqiel in the Greek, \'strength of God\' or \'cloud of God\'. 1 Enoch 8:3: \'Ezeqeel the knowledge of the clouds\' - meteorology as divination, reading weather for omens, the forecaster\'s art before it had instruments. 3 Enoch\'s loyal counterparts are the angels of hail, rain and wind under their own princes. Modern weather modification is the same ambition with aircraft: to know the clouds well enough to command them.',
     sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
     isApocryphal: true,
     bibleVerses: ['And Êzêqêêl taught the knowledge of the clouds... — 1 Enoch 8:3 (https://www.sacred-texts.com/bib/boe/boe011.htm)']
-  },  {
-    id: 'bragiel',
-    parentId: 'fallen-angel',
-    name: 'Bragiel',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
-    isApocryphal: true,
-    bibleVerses: ['These are their chiefs of tens... And these are the names: ... Barâqîjâl... — 1 Enoch 6:7-8 (https://www.sacred-texts.com/bib/boe/boe009.htm)']
-  },  {
+  },    {
     id: 'asael',
+    relatedIds: ['watchers-chiefs-of-tens', 'azazel', 'enoch3-uzza-azza-azael', 'watchers-teachings'],
+    secondaryParentIds: ['watchers-chiefs-of-tens'],
     parentId: 'fallen-angel',
-    name: 'Asael',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
+    name: 'Asael (Asa\'el)',
+    description: 'Tenth chief of tens in 1 Enoch 6:7, \'God has made\'. In the Aramaic Qumran fragments and the Greek of Syncellus, Asael is the name of the Watcher who in the Ethiopic text appears as Azazel - the teacher of weapons and cosmetics bound in Dudael. The two names are one angel seen through two translations, and the site keeps both because the traditions diverged: Azazel became the scapegoat demon of Leviticus 16, Asael stayed a Watcher. 3 Enoch\'s Azael, one of the three who objected to Enoch\'s elevation, is the same figure a third time.',
     sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
     isApocryphal: true,
     bibleVerses: ['And Azâzêl taught men to make swords, and knives, and shields, and breastplates... And the whole earth has been corrupted through the works that were taught by Azâzêl... — 1 Enoch 8:1 / 10:8 (https://www.sacred-texts.com/bib/boe/boe011.htm)']
   },  {
     id: 'batariel',
+    relatedIds: ['watchers-chiefs-of-tens'],
+    secondaryParentIds: ['watchers-chiefs-of-tens'],
     parentId: 'fallen-angel',
-    name: 'Batariel',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
+    name: 'Batariel (Batarel)',
+    description: 'Twelfth chief of tens, \'valley of God\' or \'rain of God\', spelled Batarel in the Ethiopic and Batariel in the Greek. No course is assigned to him in 1 Enoch 8. He appears in the Aramaic fragment 4Q201 and in the later catalogues of the fallen that fed the grimoires. One of the twelve commanders who came down and taught nothing recorded: a Watcher whose whole file is a name and a rank.',
     sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
     isApocryphal: true,
     bibleVerses: ['These are their chiefs of tens... And these are the names: ... Batariel... — 1 Enoch 6:7-8 (https://www.sacred-texts.com/bib/boe/boe009.htm)']
   },  {
     id: 'bezaliel',
+    relatedIds: ['watchers-chiefs-of-tens', 'book-of-giants'],
+    secondaryParentIds: ['watchers-chiefs-of-tens'],
     parentId: 'fallen-angel',
-    name: 'Bezaliel',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
+    name: 'Bezaliel (Busasejal)',
+    description: '\'Shadow of God\'. Not in the standard Ethiopic list of the chiefs of tens but present in the Greek of Syncellus and in some manuscripts of 1 Enoch 69 as Busasejal, and among the Watchers of the Book of Giants from Qumran. One of the names that drifts between the lists depending on which scribe copied which exemplar, which is the condition of the whole roster: twenty seats, more than twenty names.',
     sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
     isApocryphal: true,
     bibleVerses: ['These are their chiefs of tens... And these are the names: ... Bezaliel... — 1 Enoch 6:7-8 (https://www.sacred-texts.com/bib/boe/boe009.htm)']
   },  {
     id: 'ananiel',
+    relatedIds: ['watchers-chiefs-of-tens'],
+    secondaryParentIds: ['watchers-chiefs-of-tens'],
     parentId: 'fallen-angel',
-    name: 'Ananiel',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
+    name: 'Ananiel (Ananel)',
+    description: 'Thirteenth chief of tens, \'cloud of God\' or \'God has answered\'. Named in 1 Enoch 6:7 with no course in chapter 8; the Aramaic fragments confirm the spelling. The name is the same root as Anani in 1 Chronicles 3:24, the last name in David\'s line, and as the Hananiah of Daniel\'s three friends, which is to say it stayed in use among the righteous. A Watcher with a perfectly good name and no recorded crime beyond the descent itself.',
     sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
     isApocryphal: true,
     bibleVerses: ['These are their chiefs of tens... And these are the names: ... Ananiel... — 1 Enoch 6:7-8 (https://www.sacred-texts.com/bib/boe/boe009.htm)']
   },  {
     id: 'zaqiel',
+    relatedIds: ['watchers-chiefs-of-tens', 'enoch3-nature-angels'],
+    secondaryParentIds: ['watchers-chiefs-of-tens'],
     parentId: 'fallen-angel',
-    name: 'Zaqiel',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
+    name: 'Zaqiel (Zaqebe)',
+    description: 'Fourteenth chief of tens, \'purity of God\' or \'God has purified\', spelled Zaqiel in the Greek and Zaqebe in the Ethiopic. No teaching is recorded. 3 Enoch\'s loyal angel of comets and sparks, Ziqiel, carries nearly the same name in the heavenly weather service, which suggests the fallen Zaqiel\'s office was refilled. Listed in the Aramaic fragments and later demonologies.',
     sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
     isApocryphal: true,
     bibleVerses: ['These are their chiefs of tens... And these are the names: ... Zaqiel... — 1 Enoch 6:7-8 (https://www.sacred-texts.com/bib/boe/boe009.htm)']
   },  {
     id: 'shamsiel',
+    relatedIds: ['watchers-chiefs-of-tens', 'watchers-teachings', 'the-sun-scripture', 'araqiel', 'sariel', 'zohar'],
+    secondaryParentIds: ['watchers-chiefs-of-tens'],
     parentId: 'fallen-angel',
-    name: 'Shamsiel',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
+    name: 'Shamsiel (Samsapeel)',
+    description: 'Fifteenth chief of tens, \'sun of God\', Samsapeel in the Ethiopic. 1 Enoch 8:3: \'Shamsiel the signs of the sun\' - solar omens, eclipses and halos read as messages, the knowledge that became sun-worship. In the Zohar Shamsiel is a holy angel who led Adam and Eve back toward Eden and now guards the Temple\'s hidden vessels; in 3 Enoch a Shimshiel rules the day. The Watcher and the loyal angel share the name because the sun\'s signs are real and were always meant to be read - by the right reader.',
     sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
     isApocryphal: true,
     bibleVerses: ['And Shamsiêl taught the signs of the sun... — 1 Enoch 8:3 (https://www.sacred-texts.com/bib/boe/boe011.htm)']
   },  {
     id: 'sathariel',
+    relatedIds: ['watchers-chiefs-of-tens', 'kabbalah'],
+    secondaryParentIds: ['watchers-chiefs-of-tens'],
     parentId: 'fallen-angel',
-    name: 'Sathariel',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
+    name: 'Sathariel (Satarel)',
+    description: 'Sixteenth chief of tens, \'hidden one of God\' or \'God\'s side\', Satarel in the Ethiopic, Sathariel in the Greek and in Agrippa. No teaching is recorded in 1 Enoch 8. The name was taken up by the Kabbalists as one of the Qliphoth, the \'concealment of God\', the husk opposite the sephirah Binah, which is a fair summary of what a Watcher does once bound: hidden, but still a presence on the tree.',
     sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
     isApocryphal: true,
     bibleVerses: ['These are their chiefs of tens... And these are the names: ... Sathariel... — 1 Enoch 6:7-8 (https://www.sacred-texts.com/bib/boe/boe009.htm)']
-  },  {
-    id: 'turiel',
-    parentId: 'fallen-angel',
-    name: 'Turiel',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
-    sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
-    isApocryphal: true,
-    bibleVerses: ['These are their chiefs of tens... And these are the names: ... Turiel... — 1 Enoch 6:7-8 (https://www.sacred-texts.com/bib/boe/boe009.htm)']
-  },  {
+  },    {
     id: 'yomiel',
+    relatedIds: ['watchers-chiefs-of-tens', 'yekun'],
+    secondaryParentIds: ['watchers-chiefs-of-tens'],
     parentId: 'fallen-angel',
-    name: 'Yomiel',
-    description: 'A fallen angel or Watcher mentioned in apocryphal texts.',
+    name: 'Yomiel (Jomjael)',
+    description: 'Eighteenth chief of tens, \'day of God\', Jomjael in the Ethiopic. Not to be confused with Jeqon (Yekun) of the Parables, who led the others down. No course is assigned to Yomiel; the Greek and Aramaic lists agree on the name and nothing else. 3 Enoch\'s loyal angel of the day, Shimshiel, holds the office his name describes.',
     sources: ['Book of Enoch', 'Book of Giants', 'Genesis 6'],
     isApocryphal: true,
     bibleVerses: ['These are their chiefs of tens... And these are the names: ... Yomiel... — 1 Enoch 6:7-8 (https://www.sacred-texts.com/bib/boe/boe009.htm)']
@@ -12151,7 +12137,7 @@ const chunk_2: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/South_Main_Street%2C_Naples%2C_New_York_-_20210610.jpg/960px-South_Main_Street%2C_Naples%2C_New_York_-_20210610.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Naples, New York (Point 84)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Naples, New York. The pin was imported from a community map with no further detail. The BFRO database does hold a Fall 1979 report from the same area, \'Morning sighting by deer hunter near Naples\' (BFRO Report #7368, Ontario County): "This was years ago. I\'m 38 now, but when this happened I was 14. My father worked with a guy who had some prime property in Naples, NewYork. Being that I was 14, I was not old enough to have a hunters license. So my father let me..." Whether the two are the same incident is not recorded; treat this pin as an unverified local report corroborated by a nearby case.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-77',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -12187,7 +12173,7 @@ const chunk_2: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Greenwood_Lake_East_Arm_%281911941868%29.jpg/960px-Greenwood_Lake_East_Arm_%281911941868%29.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Greenwood Lake, New York (Point 88)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Greenwood Lake, New York. The pin was imported from a community map with no further detail. The BFRO database does hold a Summer 1973 report from the same area, \'Scream exchanges heard by camper on Appalachian Trail near Greenwood Lake\' (BFRO Report #2144, Orange County): "I had parked my Volkswagen beetle at the junction of Rte. 17A and the Appalachian Trail, intending to camp out overnite along the trail. I then hiked south on the trail about 4 miles, along a ridge that overlooks Greenwood Lake..." Whether the two are the same incident is not recorded; treat this pin as an unverified local report corroborated by a nearby case.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-81',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14346,7 +14332,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Lenoir_Main_Street-27527.jpg/960px-Lenoir_Main_Street-27527.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Lenoir, North Carolina (UFO photo)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Lenoir, North Carolina: uFO photo. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1029',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14363,7 +14349,7 @@ const chunk_3: any[] = [  {
     id: 'anomaly-Bigfoot-530',
     parentId: 'bigfoot-sightings-br',
     name: 'Northwest Ithaca, New York (2 Men see Bigfoot)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Northwest Ithaca, New York: 2 Men see Bigfoot. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-530',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14380,7 +14366,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Angus_UK_location_map.svg/960px-Angus_UK_location_map.svg.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Letham, Scotland, GB (Bigfoot in Scotland)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Letham, Scotland: bigfoot in Scotland. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-533',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14396,7 +14382,7 @@ const chunk_3: any[] = [  {
     id: 'anomaly-Bigfoot-537',
     parentId: 'bigfoot-sightings-br',
     name: 'Blackley, England, GB (Rock Throwing Bigfoot?)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Blackley, England: rock Throwing Bigfoot?. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-537',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14414,7 +14400,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Raymond_NH_Common_021813.jpg/960px-Raymond_NH_Common_021813.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Raymond, New Hampshire (Tracks found)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Raymond, New Hampshire: tracks found. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-540',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14423,7 +14409,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Cimarron_Art_Gallery_Cimarron%2C_NM.JPG/960px-Cimarron_Art_Gallery_Cimarron%2C_NM.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Cimarron, New Mexico (Bigfoot Crosses Road)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Cimarron, New Mexico: bigfoot Crosses Road. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-542',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14432,7 +14418,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Wabash_County_Courthouse_in_Mount_Carmel.jpg/960px-Wabash_County_Courthouse_in_Mount_Carmel.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Mount Carmel, Illinois (Bigfoot Seen Near Wabash River)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Mount Carmel, Illinois: bigfoot Seen Near Wabash River. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-544',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14450,7 +14436,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Wabash_County_Courthouse_in_Mount_Carmel.jpg/960px-Wabash_County_Courthouse_in_Mount_Carmel.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Mount Carmel, Illinois (Young Bigfoot seen in River bed)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Mount Carmel, Illinois: young Bigfoot seen in River bed. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-548',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14459,7 +14445,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Manchester_%26_Salford_Skyline_2020.jpg/960px-Manchester_%26_Salford_Skyline_2020.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Salford, England, GB (Male Bigfoot Seen)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Salford, England: male Bigfoot Seen. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-550',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14477,7 +14463,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Main_at_Grace_in_Pikeville.jpg/960px-Main_at_Grace_in_Pikeville.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Pikeville, Kentucky (Coon Hunters Encounter Bigfoot)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Pikeville, Kentucky: coon Hunters Encounter Bigfoot. The pin was imported from a community map with no further detail. The BFRO database does hold a Spring 2005 report from the same area, \'Bipedal creature observed on a cliff outside Pikeville\' (BFRO Report #28575, Pike County): "In April of 2005 i was in a doctors office in pike co. ky. i was looking out the window and seen a tall creature on a rock cliff accross from the jail , at the mouth of chloe creek. It was acting very confused or anxious. It..." Whether the two are the same incident is not recorded; treat this pin as an unverified local report corroborated by a nearby case.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-553',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14495,7 +14481,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Deerfield_Town_Offices%2C_Deerfield_NH.jpg/960px-Deerfield_Town_Offices%2C_Deerfield_NH.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Deerfield, New Hampshire (Bigfoot at Dump)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Deerfield, New Hampshire: bigfoot at Dump. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-556',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14504,7 +14490,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/BethelME_Common.jpg/960px-BethelME_Common.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Bethel, Maine (Bigfoot seen in Grafton Notch Park)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Bethel, Maine: bigfoot seen in Grafton Notch Park. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-558',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14521,7 +14507,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Madera%2C_California_-_Aerial_%2849394852076%29.jpg/960px-Madera%2C_California_-_Aerial_%2849394852076%29.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Madera, California (Object Seen in Sky)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Madera, California: object Seen in Sky. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-561',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14530,7 +14516,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Broad_Street%2C_Downtown_Kingsport%2C_TN.jpg/960px-Broad_Street%2C_Downtown_Kingsport%2C_TN.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Kingsport, Tennessee (Massive UFO Cluster)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Kingsport, Tennessee: massive UFO Cluster. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1030',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14538,7 +14524,7 @@ const chunk_3: any[] = [  {
     id: 'anomaly-Bigfoot-565',
     parentId: 'bigfoot-sightings-br',
     name: 'Halifax, Nova Scotia, CA (Bigfoot almost hit by car)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Halifax, Nova Scotia, California: bigfoot almost hit by car. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-565',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14547,7 +14533,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Russell_Lee%2C_On_main_street_of_Cascade%2C_Idaho%2C_1941.jpg/960px-Russell_Lee%2C_On_main_street_of_Cascade%2C_Idaho%2C_1941.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Cascade, Idaho (Man chases Bigfoot after sightings)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Cascade, Idaho: man chases Bigfoot after sightings. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-567',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14582,7 +14568,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Main_Street%2C_Elizabethtown.jpg/960px-Main_Street%2C_Elizabethtown.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Elizabethtown, Illinois (Howls and Whoops)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Elizabethtown, Illinois: howls and Whoops. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-575',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14600,7 +14586,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Sudbury_downtown.JPG/960px-Sudbury_downtown.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Greater Sudbury, Ontario, CA (UFO photographed?)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Greater Sudbury, Ontario, California: uFO photographed?. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1031',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14609,7 +14595,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Westover_Bridge_2017a.jpg/960px-Westover_Bridge_2017a.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Westover, West Virginia (Man has sighting while looking for deer)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Westover, West Virginia: man has sighting while looking for deer. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-582',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14618,7 +14604,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/TX_Van_Zandt_County_Van.svg/960px-TX_Van_Zandt_County_Van.svg.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Van, Texas (Hog Hunter Spots Bigfoot)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Van, Texas: hog Hunter Spots Bigfoot. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-584',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14645,7 +14631,7 @@ const chunk_3: any[] = [  {
     relatedIds: ['werewolf-lycanthropy-dogman'],
     parentId: 'bigfoot-sightings-br',
     name: 'Murray, Kentucky (Possible Dogman seen)',
-    description: '',
+    description: 'Regional cryptid sightings-map entry for Murray, Kentucky: possible Dogman seen. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Cryptid-Sightings-65',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14654,7 +14640,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Vonder_Ahe_House_-_Molalla_Oregon.jpg/960px-Vonder_Ahe_House_-_Molalla_Oregon.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Molalla, Oregon (Bigfoot behind cabins)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Molalla, Oregon: bigfoot behind cabins. The pin was imported from a community map with no further detail. The BFRO database does hold a Fall 2004 report from the same area, \'Campers are greeted by tree-shaking display in afternoon near Molalla River\' (BFRO Report #9391, Clackamas County): "13 Miles south of Glen Avon Bridge on the Molalla River in Oregon, my friend, myself and two large dogs jumped out of my truck to check up on a regular camp site we use throughout the summer. We walked only about 25 ft from the..." Whether the two are the same incident is not recorded; treat this pin as an unverified local report corroborated by a nearby case.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-591',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14663,7 +14649,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Harlan_County_Kentucky_Courthouse.jpg/960px-Harlan_County_Kentucky_Courthouse.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Harlan, Kentucky (Bigfoot Near River)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Harlan, Kentucky: bigfoot Near River. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-595',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14672,7 +14658,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Rainy_Day_in_Lakeland_Village%2C_California.jpg/960px-Rainy_Day_in_Lakeland_Village%2C_California.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Lakeland Village, California (Creature seen on 74 Ortega hwy)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Lakeland Village, California: creature seen on 74 Ortega hwy. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-597',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14680,7 +14666,7 @@ const chunk_3: any[] = [  {
     id: 'anomaly-Bigfoot-599',
     parentId: 'bigfoot-sightings-br',
     name: 'Condon, Tennessee (Squirrel Hunters encounter Bigfoot)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Condon, Tennessee: squirrel Hunters encounter Bigfoot. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-599',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14698,7 +14684,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Lone_Oak_Baptist_Church.jpg/960px-Lone_Oak_Baptist_Church.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Lone Oak, Tennessee (Bigfoot next to creek)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Lone Oak, Tennessee: bigfoot next to creek. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-602',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14706,7 +14692,7 @@ const chunk_3: any[] = [  {
     id: 'anomaly-Bigfoot-604',
     parentId: 'bigfoot-sightings-br',
     name: 'Cotgrave, England, GB (6 foot tall covered with hair)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Cotgrave, England: 6 foot tall covered with hair. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-604',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14715,7 +14701,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Temple%2C_Georgia_city_hall.JPG/960px-Temple%2C_Georgia_city_hall.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Temple, Georgia (Something near the lake)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Temple, Georgia: something near the lake. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-606',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14724,7 +14710,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Hopkins_County_Courthouse_KY.JPG/960px-Hopkins_County_Courthouse_KY.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Madisonville, Kentucky (Driver Sees Bigfoot)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Madisonville, Kentucky: driver Sees Bigfoot. The pin was imported from a community map with no further detail. The BFRO database does hold a Winter 2010 report from the same area, \'Possible activity while deer hunting on an old coal mining location outside Madisonville\' (BFRO Report #31443, Hopkins County): "I am from Madisonville KY. Last year I took my then\' 8yr old daughter hunting during late youth weekend. The place where we went is some where my and my husband have been going for years. So we went in the woods got set up and as..." Whether the two are the same incident is not recorded; treat this pin as an unverified local report corroborated by a nearby case.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-608',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14733,7 +14719,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Franklin-County-Courthouse-Winchester-tn1.jpg/960px-Franklin-County-Courthouse-Winchester-tn1.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Winchester, Tennessee (White Bigfoot Seen several times)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Winchester, Tennessee: white Bigfoot Seen several times. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-610',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14751,7 +14737,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Loyall-from-840-ky.jpg/960px-Loyall-from-840-ky.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Daytime Howl)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Loyall, Kentucky: daytime Howl. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-613',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14769,7 +14755,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Millington_TN_02_welcome_sign_Singleton_Pkwy.jpg/960px-Millington_TN_02_welcome_sign_Singleton_Pkwy.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Millington, Tennessee (Bigfoot stalks giggers)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Millington, Tennessee: bigfoot stalks giggers. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-616',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14787,7 +14773,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Downtown_Tecumseh_Michigan.JPG/960px-Downtown_Tecumseh_Michigan.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Tecumseh, Michigan (Deer Hunter encounters Bigfoot)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Tecumseh, Michigan: deer Hunter encounters Bigfoot. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-622',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14796,7 +14782,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/HuronStHistoricDistrictBerlinWisconsinWIS49.jpg/960px-HuronStHistoricDistrictBerlinWisconsinWIS49.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Berlin, Wisconsin (UFO Seen)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Berlin, Wisconsin: uFO Seen. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1034',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14805,7 +14791,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Main_at_Grace_in_Pikeville.jpg/960px-Main_at_Grace_in_Pikeville.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Pikeville, Kentucky (Wood Knocks and Glowing eyes)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Pikeville, Kentucky: wood Knocks and Glowing eyes. The pin was imported from a community map with no further detail. The BFRO database does hold a Spring 2005 report from the same area, \'Bipedal creature observed on a cliff outside Pikeville\' (BFRO Report #28575, Pike County): "In April of 2005 i was in a doctors office in pike co. ky. i was looking out the window and seen a tall creature on a rock cliff accross from the jail , at the mouth of chloe creek. It was acting very confused or anxious. It..." Whether the two are the same incident is not recorded; treat this pin as an unverified local report corroborated by a nearby case.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-626',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14814,7 +14800,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Loyall-from-840-ky.jpg/960px-Loyall-from-840-ky.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Round Silver UFO)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Loyall, Kentucky: round Silver UFO. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1035',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14822,7 +14808,7 @@ const chunk_3: any[] = [  {
     id: 'anomaly-Bigfoot-630',
     parentId: 'bigfoot-sightings-br',
     name: 'Henryetta, Oklahoma (Hunter frying bologna has encounter)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Henryetta, Oklahoma: hunter frying bologna has encounter. The pin was imported from a community map with no further detail. The BFRO database does hold a Summer 1986 report from the same area, \'Woman remembers large bipedal creature running thru pasture at night, south of Henryetta\' (BFRO Report #12712, McIntosh County): "It was a summer, moonlit night, my then boyfriend and myself were standing outside after a date saying our goodbye\'s and both leaning with our back towards his pickup truck. We were facing our pasture behind the house that I grew..." Whether the two are the same incident is not recorded; treat this pin as an unverified local report corroborated by a nearby case.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-630',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14830,7 +14816,7 @@ const chunk_3: any[] = [  {
     id: 'anomaly-Bigfoot-632',
     parentId: 'bigfoot-sightings-br',
     name: 'Texanna, Oklahoma (Bigfoot steals chickens)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Texanna, Oklahoma: bigfoot steals chickens. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-632',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14839,7 +14825,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Loyall-from-840-ky.jpg/960px-Loyall-from-840-ky.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Bigfoot near a pond)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Loyall, Kentucky: bigfoot near a pond. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-634',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14847,7 +14833,7 @@ const chunk_3: any[] = [  {
     id: 'anomaly-Bigfoot-636',
     parentId: 'bigfoot-sightings-br',
     name: 'Hickman, Kentucky (Hunter films UFO Finds Crop Circle)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Hickman, Kentucky: hunter films UFO Finds Crop Circle. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1036',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14855,7 +14841,7 @@ const chunk_3: any[] = [  {
     id: 'anomaly-Bigfoot-638',
     parentId: 'bigfoot-sightings-br',
     name: 'Hendron, Kentucky (UFOs caught on camera)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Hendron, Kentucky: uFOs caught on camera. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1037',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14864,7 +14850,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Downtown_Hindman.jpg/960px-Downtown_Hindman.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Hindman, Kentucky (Bigfoot Tracks Found)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Hindman, Kentucky: bigfoot Tracks Found. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-640',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14873,7 +14859,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Coshocton_County_Courthouse_rear.jpg/960px-Coshocton_County_Courthouse_rear.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Coshocton, Ohio (Bigfoot sighting)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Coshocton, Ohio: bigfoot sighting. The pin was imported from a community map with no further detail. The BFRO database does hold a Spring 2001 report from the same area, \'Two witnesses find animal carcasses in possible display arrangement, near Coshocton on the Woodbury Wildlife Refuge\' (BFRO Report #3535, Coshocton County): "A friend of mine and myself went to Coshocton County Ohio. My friend has been deer hunting there for about 15 years and wanted to show me his tree stand along with the area he hunts. My friend took me to an area where there were..." Whether the two are the same incident is not recorded; treat this pin as an unverified local report corroborated by a nearby case.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-642',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14882,7 +14868,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Eastward_on_Main_from_Myers.jpg/960px-Eastward_on_Main_from_Myers.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Cumberland, Kentucky (Bigfoot Steals Dog)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Cumberland, Kentucky: bigfoot Steals Dog. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-644',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14891,7 +14877,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Burke_County_Georgia_Incorporated_and_Unincorporated_areas_Sardis_Highlighted.svg/960px-Burke_County_Georgia_Incorporated_and_Unincorporated_areas_Sardis_Highlighted.svg.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Sardis, Georgia (Bigfoot Steals Pears)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Sardis, Georgia: bigfoot Steals Pears. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-646',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14900,7 +14886,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/The_Dalles_OR_with_Columbia_River.jpg/960px-The_Dalles_OR_with_Columbia_River.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'The Dalles, Oregon (Bigfoot Seen at Water Trough)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for The Dalles, Oregon: bigfoot Seen at Water Trough. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-648',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14909,7 +14895,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Pendleton_County_Courthouse_at_Franklin_West_Virginia.jpg/960px-Pendleton_County_Courthouse_at_Franklin_West_Virginia.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Franklin, West Virginia (Bigfoot on side of the road)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Franklin, West Virginia: bigfoot on side of the road. The pin was imported from a community map with no further detail. The BFRO database does hold a Winter 2012 report from the same area, \'Hunters hear possible vocalizations, large head seen peeking from behind boulders near Franklin\' (BFRO Report #37565, Pendleton County): "On November 19th 2012 the first day of hunting season in West Virginia, I experienced a few events that I am unable to explain. My step father and I were hunting in Pendleton County and had split up on either side of a ridge. At..." Whether the two are the same incident is not recorded; treat this pin as an unverified local report corroborated by a nearby case.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-650',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14918,7 +14904,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Rockland_Union_Street.jpg/960px-Rockland_Union_Street.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Rockland, Massachusetts (Teens See Bigfoot in Field)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Rockland, Massachusetts: teens See Bigfoot in Field. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-652',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14927,7 +14913,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Bodfish_and_Lake_Isabella_California.JPG/960px-Bodfish_and_Lake_Isabella_California.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Bodfish, California (Weird Things In Bodfish)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Bodfish, California: weird Things In Bodfish. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-654',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14936,7 +14922,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Fairfax_St_and_N_Washington_St_Berkeley_Springs_WV_2022-08-05_13-14-17.jpg/960px-Fairfax_St_and_N_Washington_St_Berkeley_Springs_WV_2022-08-05_13-14-17.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Berkeley Springs, West Virginia (UFO Near Rainbow?)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Berkeley Springs, West Virginia: uFO Near Rainbow?. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1038',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14945,7 +14931,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Humboldt_County_California_Incorporated_and_Unincorporated_areas_Westhaven-Moonstone_Highlighted.svg/960px-Humboldt_County_California_Incorporated_and_Unincorporated_areas_Westhaven-Moonstone_Highlighted.svg.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Westhaven-Moonstone, California (Bigfoot seen near trees)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Westhaven-Moonstone, California: bigfoot seen near trees. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-658',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14954,7 +14940,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/en/thumb/1/13/Myrtle_Creek%2C_City_Hall%2C_Wikipedia.jpg/960px-Myrtle_Creek%2C_City_Hall%2C_Wikipedia.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Myrtle Creek, Oregon (Bigfoot Tracks Found)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Myrtle Creek, Oregon: bigfoot Tracks Found. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-662',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14963,7 +14949,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Loyall-from-840-ky.jpg/960px-Loyall-from-840-ky.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Horses riders encounter bigfoot.)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Loyall, Kentucky: horses riders encounter bigfoot. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-664',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14972,7 +14958,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Boone_County_Kentucky_incorporated_and_unincorporated_areas_Verona_highlighted.svg/960px-Boone_County_Kentucky_incorporated_and_unincorporated_areas_Verona_highlighted.svg.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Verona, Kentucky (Hunter encounters Bigfoot)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Verona, Kentucky: hunter encounters Bigfoot. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-666',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14981,7 +14967,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Harlan_County_Kentucky_Courthouse.jpg/960px-Harlan_County_Kentucky_Courthouse.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Harlan, Kentucky (Possible Bigfoot Track)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Harlan, Kentucky: possible Bigfoot Track. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-668',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14990,7 +14976,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Eastward_on_Main_from_Myers.jpg/960px-Eastward_on_Main_from_Myers.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Cumberland, Kentucky (Bigfoot Sighting)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Cumberland, Kentucky: bigfoot Sighting. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-670',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -14999,7 +14985,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Green%2C_Oregon.jpg/960px-Green%2C_Oregon.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Green, Oregon (Possible Bigfoot Track)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Green, Oregon: possible Bigfoot Track. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-672',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15007,7 +14993,7 @@ const chunk_3: any[] = [  {
     id: 'anomaly-Bigfoot-674',
     parentId: 'bigfoot-sightings-br',
     name: 'Jay, Oklahoma (Bigfoot Looking in Window)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Jay, Oklahoma: bigfoot Looking in Window. The pin was imported from a community map with no further detail. The BFRO database does hold a Fall 1979 report from the same area, \'Man remembers seeing a large white hairy man at a cemetery outside the city of Jay\' (BFRO Report #27477, Delaware County): "The incident that I am reporting occurred at Jumper Cemetary, Jay Oklahoma in 1979. Jumper Cemetary is located east of Jay on Hwy 20, then turn on the first dirt road to the right, and follow it to its end approximately 1 mile to..." Whether the two are the same incident is not recorded; treat this pin as an unverified local report corroborated by a nearby case.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-674',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15015,7 +15001,7 @@ const chunk_3: any[] = [  {
     id: 'anomaly-Bigfoot-676',
     parentId: 'bigfoot-sightings-br',
     name: 'New Hope, Oregon (Possible Bigfoot Track)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for New Hope, Oregon: possible Bigfoot Track. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-676',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15024,7 +15010,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/en/thumb/1/13/Myrtle_Creek%2C_City_Hall%2C_Wikipedia.jpg/960px-Myrtle_Creek%2C_City_Hall%2C_Wikipedia.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Myrtle Creek, Oregon (More Bigfoot Tracks)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Myrtle Creek, Oregon: more Bigfoot Tracks. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-678',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15033,7 +15019,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Pineville%2C_KY_spring.jpg/960px-Pineville%2C_KY_spring.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Pineville, Kentucky (Bigfoot Track)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Pineville, Kentucky: bigfoot Track. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-680',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15042,7 +15028,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Burke_County_Georgia_Incorporated_and_Unincorporated_areas_Sardis_Highlighted.svg/960px-Burke_County_Georgia_Incorporated_and_Unincorporated_areas_Sardis_Highlighted.svg.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Sardis, Georgia (Driver has sighting)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Sardis, Georgia: driver has sighting. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-682',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15051,7 +15037,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Front_north_of_Ford_in_Prestonsburg.jpg/960px-Front_north_of_Ford_in_Prestonsburg.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Prestonsburg, Kentucky (Sighting in 05 & Tracks in 17)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Prestonsburg, Kentucky: sighting in 05 & Tracks in 17. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-684',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15060,7 +15046,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Williamsburg%2C_Kentucky.jpg/960px-Williamsburg%2C_Kentucky.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Williamsburg, Kentucky (Bigfoot Seen On Old Logging Road)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Williamsburg, Kentucky: bigfoot Seen On Old Logging Road. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-686',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15069,7 +15055,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Fredericton%2C_New_Brunswick_aerial_view_%28cropped%29.jpg/960px-Fredericton%2C_New_Brunswick_aerial_view_%28cropped%29.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Fredericton, New Brunswick, CA (Bigfoot seen in hay field)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Fredericton, New Brunswick, California: bigfoot seen in hay field. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-688',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15078,7 +15064,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/North-Main-Jellico-tn1.jpg/960px-North-Main-Jellico-tn1.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Jellico, Tennessee (ATV Rider Has Bigfoot Sighting)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Jellico, Tennessee: aTV Rider Has Bigfoot Sighting. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-690',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15087,7 +15073,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Clark_County_Missouri_Incorporated_and_Unincorporated_areas_Kahoka_Highlighted.svg/960px-Clark_County_Missouri_Incorporated_and_Unincorporated_areas_Kahoka_Highlighted.svg.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Kahoka, Missouri (Large Track Found)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Kahoka, Missouri: large Track Found. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-692',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15096,7 +15082,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Glide_Store.jpg/960px-Glide_Store.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Glide, Oregon (Couple Find Bigfoot Tracks)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Glide, Oregon: couple Find Bigfoot Tracks. The pin was imported from a community map with no further detail. The BFRO database does hold a Winter 1970 report from the same area, \'Hunter recalls finding fresh tracks in snow outside of Glide\' (BFRO Report #25764, Douglas County): "Back in the 70\'s my wife ,friend and i hunted the black powder season up Rock Creek east of Glide, Oregon. I don\'t remember the year, but we hunted Blacktail Deer every year for over 20 years in this same area. We were north of..." Whether the two are the same incident is not recorded; treat this pin as an unverified local report corroborated by a nearby case.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-694',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15105,7 +15091,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Sutton_West_Virginia.jpg/960px-Sutton_West_Virginia.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Sutton, West Virginia (2 Men see Bigfoot)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Sutton, West Virginia: 2 Men see Bigfoot. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-696',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15114,7 +15100,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Shady_cove_city_hall.jpg/960px-Shady_cove_city_hall.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Shady Cove, Oregon (Couple Find Tracks)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Shady Cove, Oregon: couple Find Tracks. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-698',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15123,7 +15109,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Wolfe_County%2C_Kentucky_courthouse.jpg/960px-Wolfe_County%2C_Kentucky_courthouse.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Campton, Kentucky (Bigfoot Chases ATV)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Campton, Kentucky: bigfoot Chases ATV. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-700',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15132,7 +15118,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Sullivan%2C_Missouri.jpg/960px-Sullivan%2C_Missouri.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Sullivan, Missouri (Bigfoot Shot 9 Times!)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Sullivan, Missouri: bigfoot Shot 9 Times. The pin was imported from a community map with no further detail. The BFRO database does hold a Fall 2009 report from the same area, \'Nighttime sighting at City Lake Park outside Sullivan\' (BFRO Report #27089, Crawford County): "This past October I was walking along Mattox Dr, by City Lake Park in Sullivan Missouri. It was around 11, 11 20 PM on a Thursday night and the park is remote and empty on a night like that. I am 29 and stand 6 foot 6 inches. My..." Whether the two are the same incident is not recorded; treat this pin as an unverified local report corroborated by a nearby case.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-702',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15159,7 +15145,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Overview_of_the_town_of_Wrangell%2C_AK_June_7th_2016.jpg/960px-Overview_of_the_town_of_Wrangell%2C_AK_June_7th_2016.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Wrangell, Alaska (Missing Child Returned by Bigfoot)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Wrangell, Alaska: missing Child Returned by Bigfoot. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-707',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15168,7 +15154,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Harrogate-US25E-tn.jpg/960px-Harrogate-US25E-tn.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Harrogate, Tennessee (Bigfoot around house)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Harrogate, Tennessee: bigfoot around house. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-709',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15176,7 +15162,7 @@ const chunk_3: any[] = [  {
     id: 'anomaly-Bigfoot-711',
     parentId: 'bigfoot-sightings-br',
     name: 'Masonville, Kentucky (Bigfoot Startles Harmonica Player)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Masonville, Kentucky: bigfoot Startles Harmonica Player. The pin was imported from a community map with no further detail. The BFRO database does hold a Spring 2007 report from the same area, \'Late afternoon road crossing sighting by motorists near Masonville\' (BFRO Report #27024, Daviess County): "My son and I were heading home and about 100 feet in front of me I saw a dark colored figure in the road. I began to slow down as I got closer because I thought it was a person because it was standing upright walking across the..." Whether the two are the same incident is not recorded; treat this pin as an unverified local report corroborated by a nearby case.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-711',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15185,7 +15171,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Main_Cross_in_downtown_Louisa.jpg/960px-Main_Cross_in_downtown_Louisa.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Louisa, Kentucky (White Bigfoot Seen)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Louisa, Kentucky: white Bigfoot Seen. The pin was imported from a community map with no further detail. The BFRO database does hold a Winter 2012 report from the same area, \'Suspicious figures seen at dawn west of Louisa\' (BFRO Report #31824, Lawrence County): "On my way from Louisa to Blaine, just before the Rich Creek boat ramp. I looked to my left to look at some horses that stay on this hill and I noticed two pine trees that I never seen before (which I thought to be pine trees). I..." Whether the two are the same incident is not recorded; treat this pin as an unverified local report corroborated by a nearby case.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-713',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15194,7 +15180,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Madison_County_Illinois_Incorporated_and_Unincorporated_areas_Worden_Highlighted.svg/960px-Madison_County_Illinois_Incorporated_and_Unincorporated_areas_Worden_Highlighted.svg.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Worden, Illinois (Bigfoot Runs Across Dirt Road)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Worden, Illinois: bigfoot Runs Across Dirt Road. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-715',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15212,7 +15198,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Loyall-from-840-ky.jpg/960px-Loyall-from-840-ky.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Teen Has Bigfoot Sighting!)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Loyall, Kentucky: teen Has Bigfoot Sighting. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-718',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15221,7 +15207,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Cutlerville%2C_MI_location.png/960px-Cutlerville%2C_MI_location.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Cutlerville, Michigan (Blonde Bigfoot Startles Woman)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Cutlerville, Michigan: blonde Bigfoot Startles Woman. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-720',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15230,7 +15216,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Crocker%2C_Missouri.jpg/960px-Crocker%2C_Missouri.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Crocker, Missouri (Possible Young Bigfoot Seen)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Crocker, Missouri: possible Young Bigfoot Seen. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-724',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15239,7 +15225,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/en/thumb/1/13/Myrtle_Creek%2C_City_Hall%2C_Wikipedia.jpg/960px-Myrtle_Creek%2C_City_Hall%2C_Wikipedia.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Myrtle Creek, Oregon (Possible Bigfoot Track Found)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Myrtle Creek, Oregon: possible Bigfoot Track Found. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-726',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15248,7 +15234,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Harlan_County_Kentucky_Courthouse.jpg/960px-Harlan_County_Kentucky_Courthouse.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Harlan, Kentucky (Bigfoot Tracks Found)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Harlan, Kentucky: bigfoot Tracks Found. The pin was imported from a community map with no further detail. The BFRO database does hold a Fall 2008 report from the same area, \'ATV riders find possible tracks outside Evarts\' (BFRO Report #25257, Harlan County): "In October 2008 we went on a 4 wheeler trip to Harlan county, in eastern Kentucky near the Big Black Mountain area, we do this several times each year. My friend, (Ricky) also brought along 2 of his friends who were visiting him..." Whether the two are the same incident is not recorded; treat this pin as an unverified local report corroborated by a nearby case.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-729',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15257,7 +15243,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Lovern_and_Main%2C_Hazard.jpg/960px-Lovern_and_Main%2C_Hazard.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Hazard, Kentucky (Hunters Encounter Bigfoot)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Hazard, Kentucky: hunters Encounter Bigfoot. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-731',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15266,7 +15252,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Pineville%2C_KY_spring.jpg/960px-Pineville%2C_KY_spring.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Pineville, Kentucky (Shots Fired in Possible Bigfoot Abduction)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Pineville, Kentucky: shots Fired in Possible Bigfoot Abduction. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-733',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15275,7 +15261,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Cole_Harbour%2C_Home_of_Sidney_Crosby_%28cropped%29.jpg/960px-Cole_Harbour%2C_Home_of_Sidney_Crosby_%28cropped%29.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Cole Harbour, Nova Scotia, CA (Bigfoot Standing Near Trees)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Cole Harbour, Nova Scotia, California: bigfoot Standing Near Trees. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-735',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15284,7 +15270,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Harlan_County_Kentucky_Courthouse.jpg/960px-Harlan_County_Kentucky_Courthouse.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Harlan, Kentucky (Bigfoot Track Found & Cast)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Harlan, Kentucky: bigfoot Track Found & Cast. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-738',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15293,7 +15279,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Williamsburg%2C_Kentucky.jpg/960px-Williamsburg%2C_Kentucky.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Williamsburg, Kentucky (Kayak Fisherman spots Bigfoot)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Williamsburg, Kentucky: kayak Fisherman spots Bigfoot. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-740',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15302,7 +15288,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Harlan_County_Kentucky_Courthouse.jpg/960px-Harlan_County_Kentucky_Courthouse.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Harlan, Kentucky (Bigfoot standing)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Harlan, Kentucky: bigfoot standing. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-742',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15311,7 +15297,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Morgan_west_of_Kentucky%2C_Pennington_Gap.jpg/960px-Morgan_west_of_Kentucky%2C_Pennington_Gap.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Pennington Gap, Virginia (Possible UFO)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Pennington Gap, Virginia: possible UFO. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1039',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15319,7 +15305,7 @@ const chunk_3: any[] = [  {
     id: 'anomaly-Bigfoot-746',
     parentId: 'bigfoot-sightings-br',
     name: 'Dillon, Montana (Hikers Encounter Bigfoot)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Dillon, Montana: hikers Encounter Bigfoot. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-746',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15328,7 +15314,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Pineville%2C_KY_spring.jpg/960px-Pineville%2C_KY_spring.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Pineville, Kentucky (Bigfoot Crosses Road)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Pineville, Kentucky: bigfoot Crosses Road. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-748',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15337,7 +15323,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Harlan_County_Kentucky_Courthouse.jpg/960px-Harlan_County_Kentucky_Courthouse.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Harlan, Kentucky (Possible Bigfoot Tracks)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Harlan, Kentucky: possible Bigfoot Tracks. The pin was imported from a community map with no further detail. The BFRO database does hold a Fall 2008 report from the same area, \'ATV riders find possible tracks outside Evarts\' (BFRO Report #25257, Harlan County): "In October 2008 we went on a 4 wheeler trip to Harlan county, in eastern Kentucky near the Big Black Mountain area, we do this several times each year. My friend, (Ricky) also brought along 2 of his friends who were visiting him..." Whether the two are the same incident is not recorded; treat this pin as an unverified local report corroborated by a nearby case.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-750',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15346,7 +15332,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Elliott_County%2C_Kentucky_courthouse.jpg/960px-Elliott_County%2C_Kentucky_courthouse.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Sandy Hook, Kentucky (Road sighting)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Sandy Hook, Kentucky: road sighting. The pin was imported from a community map with no further detail. The BFRO database does hold a Fall 2018 report from the same area, \'Passenger has a possible evening sighting in Sandy Hook\' (BFRO Report #61097, Elliott County): "My husband and I are visiting family in Sandy Hook. On the evening of the 18th, at about 7:30, we got in the car to make a quick run to Sandy Hook. It was very cold, (it was already dark as well), so he started up the car to let..." Whether the two are the same incident is not recorded; treat this pin as an unverified local report corroborated by a nearby case.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-753',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15355,7 +15341,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/en/thumb/1/13/Myrtle_Creek%2C_City_Hall%2C_Wikipedia.jpg/960px-Myrtle_Creek%2C_City_Hall%2C_Wikipedia.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Myrtle Creek, Oregon (Large Bigfoot seen)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Myrtle Creek, Oregon: large Bigfoot seen. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-755',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15364,7 +15350,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Winston%2C_Oregon.jpg/960px-Winston%2C_Oregon.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Winston, Oregon (Bigfoot Charges Car)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Winston, Oregon: bigfoot Charges Car. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-757',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15373,7 +15359,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/en/thumb/1/13/Myrtle_Creek%2C_City_Hall%2C_Wikipedia.jpg/960px-Myrtle_Creek%2C_City_Hall%2C_Wikipedia.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Myrtle Creek, Oregon (Reddish Bigfoot)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Myrtle Creek, Oregon: reddish Bigfoot. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-759',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15382,7 +15368,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/en/thumb/6/6d/Downtown_Whitesburg_Kentucky.JPG/960px-Downtown_Whitesburg_Kentucky.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Whitesburg, Kentucky (Bigfoot Howls)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Whitesburg, Kentucky: bigfoot Howls. The pin was imported from a community map with no further detail. The BFRO database does hold a Summer 2003 report from the same area, \'Man describes encounter at a strip mine near Whitesburg\' (BFRO Report #26036, Letcher County): "I was working as a security guard at a strip mine location in the mountains of ky near Whitesburg. One night after making my rounds I came back to the guard shack, did my report and was just relaxing listening to the..." Whether the two are the same incident is not recorded; treat this pin as an unverified local report corroborated by a nearby case.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-761',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15391,7 +15377,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Pendleton_County_Courthouse_at_Franklin_West_Virginia.jpg/960px-Pendleton_County_Courthouse_at_Franklin_West_Virginia.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Franklin, West Virginia (Bigfoot seen twice)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Franklin, West Virginia: bigfoot seen twice. The pin was imported from a community map with no further detail. The BFRO database does hold a Winter 2012 report from the same area, \'Hunters hear possible vocalizations, large head seen peeking from behind boulders near Franklin\' (BFRO Report #37565, Pendleton County): "On November 19th 2012 the first day of hunting season in West Virginia, I experienced a few events that I am unable to explain. My step father and I were hunting in Pendleton County and had split up on either side of a ridge. At..." Whether the two are the same incident is not recorded; treat this pin as an unverified local report corroborated by a nearby case.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-765',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15399,7 +15385,7 @@ const chunk_3: any[] = [  {
     id: 'anomaly-Bigfoot-768',
     parentId: 'bigfoot-sightings-br',
     name: 'Locust Grove, Oklahoma (Bigfoot watches kids sleeping)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Locust Grove, Oklahoma: bigfoot watches kids sleeping. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-768',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15408,7 +15394,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Pineville%2C_KY_spring.jpg/960px-Pineville%2C_KY_spring.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Pineville, Kentucky (Bigfoot Seen in early AM)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Pineville, Kentucky: bigfoot Seen in early AM. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-770',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15417,7 +15403,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Loyall-from-840-ky.jpg/960px-Loyall-from-840-ky.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Mushroom Hunters Find Tracks)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Loyall, Kentucky: mushroom Hunters Find Tracks. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-774',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15425,7 +15411,7 @@ const chunk_3: any[] = [  {
     id: 'anomaly-Bigfoot-776',
     parentId: 'bigfoot-sightings-br',
     name: 'Middlesboro, Kentucky (Bigfoot track in creek)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Middlesboro, Kentucky: bigfoot track in creek. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-776',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15434,7 +15420,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Nevada_Iowa_20090816_Welcome_Sign.JPG/960px-Nevada_Iowa_20090816_Welcome_Sign.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Nevada, Iowa (walkers spot Bigfoot)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Nevada, Iowa: walkers spot Bigfoot. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-778',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15443,7 +15429,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/WythevilleMainStreet.jpg/960px-WythevilleMainStreet.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Wytheville, Virginia (Large UFO Seen!)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Wytheville, Virginia: large UFO Seen. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1040',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15452,7 +15438,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Loyall-from-840-ky.jpg/960px-Loyall-from-840-ky.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Multiple Bigfoot Sighting)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Loyall, Kentucky: multiple Bigfoot Sighting. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-783',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15461,7 +15447,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Pineville%2C_KY_spring.jpg/960px-Pineville%2C_KY_spring.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Pineville, Kentucky (Multiple Sightings)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Pineville, Kentucky: multiple Sightings. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-785',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15470,7 +15456,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Loyall-from-840-ky.jpg/960px-Loyall-from-840-ky.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (UFO Sighting and Interview)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Loyall, Kentucky: uFO Sighting and Interview. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1041',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15479,7 +15465,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/en/thumb/1/13/Myrtle_Creek%2C_City_Hall%2C_Wikipedia.jpg/960px-Myrtle_Creek%2C_City_Hall%2C_Wikipedia.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Myrtle Creek, Oregon (Possible Bigfoot Encounter)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Myrtle Creek, Oregon: possible Bigfoot Encounter. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-789',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15488,7 +15474,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Lovern_and_Main%2C_Hazard.jpg/960px-Lovern_and_Main%2C_Hazard.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Hazard, Kentucky (Bigfoot Sighting)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Hazard, Kentucky: bigfoot Sighting. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-791',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15497,7 +15483,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Grantsville_Utah_City_Office.jpeg/960px-Grantsville_Utah_City_Office.jpeg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Grantsville, Utah (UFO Seen in Dugway)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Grantsville, Utah: uFO Seen in Dugway. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1042',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15506,7 +15492,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Campbell_County_VA_courthouse.jpg/960px-Campbell_County_VA_courthouse.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Rustburg, Virginia (Bigfoot Crosses the Road)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Rustburg, Virginia: bigfoot Crosses the Road. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-795',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15515,7 +15501,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Harlan_County_Kentucky_Courthouse.jpg/960px-Harlan_County_Kentucky_Courthouse.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Harlan, Kentucky (Hunter finds Tracks)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Harlan, Kentucky: hunter finds Tracks. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-797',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15523,7 +15509,7 @@ const chunk_3: any[] = [  {
     id: 'anomaly-Bigfoot-799',
     parentId: 'bigfoot-sightings-br',
     name: 'Jenkins, Kentucky (UFO Filmed)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Jenkins, Kentucky: uFO Filmed. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1043',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15531,7 +15517,7 @@ const chunk_3: any[] = [  {
     id: 'anomaly-Bigfoot-801',
     parentId: 'bigfoot-sightings-br',
     name: 'Jenkins, Kentucky (More UFOs in Jenkins)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Jenkins, Kentucky: more UFOs in Jenkins. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1044',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15548,7 +15534,7 @@ const chunk_3: any[] = [  {
     id: 'anomaly-Bigfoot-807',
     parentId: 'bigfoot-sightings-br',
     name: 'Green Cove Springs, Florida (UFO Report From FL)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Green Cove Springs, Florida: uFO Report From FL. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1045',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15594,7 +15580,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Williamsburg%2C_Kentucky.jpg/960px-Williamsburg%2C_Kentucky.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Williamsburg, Kentucky (Object In Sky)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Williamsburg, Kentucky: object In Sky. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-813',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15602,7 +15588,7 @@ const chunk_3: any[] = [  {
     id: 'anomaly-Bigfoot-815',
     parentId: 'bigfoot-sightings-br',
     name: 'Altadena, California (Unknown Objects in the sky)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Altadena, California: unknown Objects in the sky. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1048',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15628,7 +15614,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Englehart_Ontario.JPG/960px-Englehart_Ontario.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Englehart, Ontario, CA (UFO Filmed)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Englehart, Ontario, California: uFO Filmed. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1051',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15646,7 +15632,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Williams_Country_Store.jpg/960px-Williams_Country_Store.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Williams, Oregon (Possible Bigfoot seen)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Williams, Oregon: possible Bigfoot seen. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-822',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15656,7 +15642,7 @@ const chunk_3: any[] = [  {
     relatedIds: ['anomaly-Giants---Nephilim---Elongated-Skulls---Horns-220'],
     parentId: 'bigfoot-sightings-br',
     name: 'Jeffersonville, Indiana (UFOs Watches Fireworks)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Jeffersonville, Indiana: uFOs Watches Fireworks. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1052',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15665,7 +15651,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/ChrisLitherlandCanonCity.jpg/960px-ChrisLitherlandCanonCity.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Canon City, Colorado (UFO Filmed)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Canon City, Colorado: uFO Filmed. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1053',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15674,7 +15660,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Aerial_view_of_Murray%2C_Kentucky%2C_October_2020.JPG/960px-Aerial_view_of_Murray%2C_Kentucky%2C_October_2020.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Murray, Kentucky (Silver Triangle UFO)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Murray, Kentucky: silver Triangle UFO. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1054',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15692,7 +15678,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Kansas_Capitol.jpg/960px-Kansas_Capitol.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Topeka, Kansas (Door Cam Catches UFO)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Topeka, Kansas: door Cam Catches UFO. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1055',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15701,7 +15687,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Coweta_County_Courthouse.jpg/960px-Coweta_County_Courthouse.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Newnan, Georgia (Doorbell Camera Catches UFO)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Newnan, Georgia: doorbell Camera Catches UFO. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1056',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15710,7 +15696,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Rainelle_2017_by_Lukas_Ray.jpg/960px-Rainelle_2017_by_Lukas_Ray.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Rainelle, West Virginia (Man has Bigfoot Sighting)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Rainelle, West Virginia: man has Bigfoot Sighting. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-836',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15719,7 +15705,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Downtown_Brentwood_California.jpg/960px-Downtown_Brentwood_California.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Brentwood, California (Triangle UFO Sighting)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Brentwood, California: triangle UFO Sighting. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1057',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15728,7 +15714,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Sutherlin_Bank_Building_-_Sutherlin_Oregon.jpg/960px-Sutherlin_Bank_Building_-_Sutherlin_Oregon.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Sutherlin, Oregon (Bigfoot Howls or Screams)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Sutherlin, Oregon: bigfoot Howls or Screams. The pin was imported from a community map with no further detail. The BFRO database does hold a Fall 1980-1 report from the same area, \'Afternoon sighting in hills between Oakland and Sutherlin\' (BFRO Report #3295, Douglas County): "This was a long time ago, but I have never forgotten that day. I can still clearly see the beast. I was about 15 and my friend & I went hiking in the hills between these two neighboring towns of Sutherlin & Oakland, Oregon. It..." Whether the two are the same incident is not recorded; treat this pin as an unverified local report corroborated by a nearby case.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-840',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15737,7 +15723,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Pineville%2C_KY_spring.jpg/960px-Pineville%2C_KY_spring.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Pineville, Kentucky (Bigfoot Takes Apples)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Pineville, Kentucky: bigfoot Takes Apples. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-842',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15755,7 +15741,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Main_Street_in_central_Hyden.jpg/960px-Main_Street_in_central_Hyden.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Hyden, Kentucky (Bigfoot in Creek)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Hyden, Kentucky: bigfoot in Creek. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-845',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15764,7 +15750,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Arkansas_County_Courthouse-Southern_District.jpg/960px-Arkansas_County_Courthouse-Southern_District.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'De Witt, Arkansas (Huge Bigfoot seen)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for De Witt, Arkansas: huge Bigfoot seen. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-847',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15773,7 +15759,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Guildford_%26_Cathedral_of_Surrey.JPG/960px-Guildford_%26_Cathedral_of_Surrey.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Guildford, England, GB (2 Glowing Objects)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Guildford, England: 2 Glowing Objects. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-849',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15781,7 +15767,7 @@ const chunk_3: any[] = [  {
     id: 'anomaly-Bigfoot-851',
     parentId: 'bigfoot-sightings-br',
     name: 'Bell Gardens, California (Cigar Shaped UFO Filmed)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Bell Gardens, California: cigar Shaped UFO Filmed. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1058',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15790,7 +15776,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Spring_Hill_City_Hall.JPG/960px-Spring_Hill_City_Hall.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Spring Hill, Tennessee (Man Chases UFO)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Spring Hill, Tennessee: man Chases UFO. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1059',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15799,7 +15785,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Frisco_Square_-_20261020.jpg/960px-Frisco_Square_-_20261020.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Frisco, Texas (UFO Filmed Over Frisco)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Frisco, Texas: uFO Filmed Over Frisco. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1060',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15808,7 +15794,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Lincoln_Park%2C_Colorado.JPG/960px-Lincoln_Park%2C_Colorado.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Lincoln Park, Colorado (UFOs filmed)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Lincoln Park, Colorado: uFOs filmed. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1061',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15816,7 +15802,7 @@ const chunk_3: any[] = [  {
     id: 'anomaly-Bigfoot-859',
     parentId: 'bigfoot-sightings-br',
     name: 'Dillon, Montana (Tracks Found)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Dillon, Montana: tracks Found. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-859',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15825,7 +15811,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/East_5th_Street_Historic_District%2C_East_Liverpool%2C_Ohio_July_2022.jpg/960px-East_5th_Street_Historic_District%2C_East_Liverpool%2C_Ohio_July_2022.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'East Liverpool, Ohio (Bigfoot Encounter - Tracks Found)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for East Liverpool, Ohio: bigfoot Encounter - Tracks Found. The pin was imported from a community map with no further detail. The BFRO database does hold a Summer 1973 report from the same area, \'Memory told of a daylight sightling while walking down railroad tracks near East Liverpool\' (BFRO Report #33014, Columbiana County): "This happened around August/September of 1973 time frame. My friend and I were walking down some railroad tracks near the Ohio river. We were walking from East Liverpool to Wellsville Ohio, just below Route 7. When we started out..." Whether the two are the same incident is not recorded; treat this pin as an unverified local report corroborated by a nearby case.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-861',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15834,7 +15820,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Bakermainstreet.jpg/960px-Bakermainstreet.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Baker City, Oregon (Bright Red Lights)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Baker City, Oregon: bright Red Lights. The pin was imported from a community map with no further detail. The BFRO database does hold a Fall 1991 report from the same area, \'Hunter remembers possible howls and footprints near Baker City\' (BFRO Report #26224, Baker County): "It was hunting season 1991 we left camp in the morning just before daylight. We drove to a spot that we had just found a few days before. We parked are truck up on top of a ridge and hiked down a draw that leads into a canyon. I..." Whether the two are the same incident is not recorded; treat this pin as an unverified local report corroborated by a nearby case.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-863',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15843,7 +15829,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Shoshone_County_Idaho_Incorporated_and_Unincorporated_areas_Pinehurst_Highlighted_1663100.svg/960px-Shoshone_County_Idaho_Incorporated_and_Unincorporated_areas_Pinehurst_Highlighted_1663100.svg.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Pinehurst, Idaho (Cigar Shaped UFO)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Pinehurst, Idaho: cigar Shaped UFO. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1062',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15852,7 +15838,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Chicago_River_ferry_b.jpg/960px-Chicago_River_ferry_b.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Chicago, Illinois (Chicago UFO)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Chicago, Illinois: chicago UFO. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1063',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15869,7 +15855,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Loyall-from-840-ky.jpg/960px-Loyall-from-840-ky.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Kentucky UFO)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Loyall, Kentucky: kentucky UFO. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1064',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15878,7 +15864,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Weston%2C_Florida_-_Aerial.jpg/960px-Weston%2C_Florida_-_Aerial.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Weston, Florida (UFO Flap)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Weston, Florida: uFO Flap. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1065',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15887,7 +15873,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Waterford_Charter_Township%2C_MI_location.png/960px-Waterford_Charter_Township%2C_MI_location.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Waterford, Michigan (Glowing Orb Filmed)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Waterford, Michigan: glowing Orb Filmed. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1066',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15896,7 +15882,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/en/thumb/7/7d/Edwardsville.jpg/960px-Edwardsville.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Edwardsville, Kansas (2 Triangle Craft)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Edwardsville, Kansas: 2 Triangle Craft. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1067',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15905,7 +15891,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Jamaica_Av_Sutphin_Blvd_jeh.jpg/960px-Jamaica_Av_Sutphin_Blvd_jeh.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Jamaica, New York (UFO Seen and photographed)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Jamaica, New York: uFO Seen and photographed. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1068',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15913,7 +15899,7 @@ const chunk_3: any[] = [  {
     id: 'anomaly-Bigfoot-883',
     parentId: 'bigfoot-sightings-br',
     name: 'Temecula, California (Bright Orb)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Temecula, California: bright Orb. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1069',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15922,7 +15908,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Roscoe_Texas_grain_elevator_2011.jpg/960px-Roscoe_Texas_grain_elevator_2011.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Roscoe, Texas (Sphere shaped Object)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Roscoe, Texas: sphere shaped Object. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-885',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15931,7 +15917,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Lovern_and_Main%2C_Hazard.jpg/960px-Lovern_and_Main%2C_Hazard.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Hazard, Kentucky (Possible Bigfoot Jumps on Van)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Hazard, Kentucky: possible Bigfoot Jumps on Van. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-887',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15940,7 +15926,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/New_Trigg_County_Courthouse.jpg/960px-New_Trigg_County_Courthouse.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Cadiz, Kentucky (Bigfoot Sighting)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Cadiz, Kentucky: bigfoot Sighting. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-889',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15949,7 +15935,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Harlan_County_Kentucky_Courthouse.jpg/960px-Harlan_County_Kentucky_Courthouse.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Harlan, Kentucky (Campers Encounter Bigfoot)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Harlan, Kentucky: campers Encounter Bigfoot. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-891',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15958,7 +15944,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Harlan_County_Kentucky_Courthouse.jpg/960px-Harlan_County_Kentucky_Courthouse.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Harlan, Kentucky (Bowhunter encounters Bigfoot)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Harlan, Kentucky: bowhunter encounters Bigfoot. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-893',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15967,7 +15953,7 @@ const chunk_3: any[] = [  {
     images: ['https://youtu.be/nb45rXZX6Yw?si=vzv_1eO3eLPB7uyf'],
     parentId: 'bigfoot-sightings-br',
     name: 'Moreno Valley, California (Moreno Valley UFO)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Moreno Valley, California: moreno Valley UFO. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1070',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15975,7 +15961,7 @@ const chunk_3: any[] = [  {
     id: 'anomaly-Bigfoot-897',
     parentId: 'bigfoot-sightings-br',
     name: 'Renaze, Pays de la Loire, FR (Possible UFO)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Renaze, Pays de la Loire, FR: possible UFO. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1071',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -15993,7 +15979,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Musselshell_county_courthouse.jpg/960px-Musselshell_county_courthouse.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Roundup, Montana (Hikers Encounter Bigfoot)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Roundup, Montana: hikers Encounter Bigfoot. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-903',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -16002,7 +15988,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Belfry_of_Tielt_%28DSCF0059%29.jpg/960px-Belfry_of_Tielt_%28DSCF0059%29.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Tielt, Flanders, BE (UFO In Photo)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Tielt, Flanders, BE: uFO In Photo. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1072',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -16010,7 +15996,7 @@ const chunk_3: any[] = [  {
     id: 'anomaly-Bigfoot-908',
     parentId: 'bigfoot-sightings-br',
     name: 'Great Wyrley, England, GB (Large Fireball UFO)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Great Wyrley, England: large Fireball UFO. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1073',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -16018,7 +16004,7 @@ const chunk_3: any[] = [  {
     id: 'anomaly-Bigfoot-910',
     parentId: 'bigfoot-sightings-br',
     name: 'Flippin, Arkansas (Hunter Hears Possible Bigfoot)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Flippin, Arkansas: hunter Hears Possible Bigfoot. The pin was imported from a community map with no further detail. The BFRO database does hold a Winter 2004 report from the same area, \'Motorist has nighttime sighting on a mountain road north of Flippin\' (BFRO Report #27948, Marion County): "I was going home from work. I work nights at a plastics company and went up to the lake that night going home that way. I seen something that looked like a big goat at first. Then I got closer and it stood up in the middle of the..." Whether the two are the same incident is not recorded; treat this pin as an unverified local report corroborated by a nearby case.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-910',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -16027,7 +16013,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Cass_County_Missouri_Courthouse_20191026-6991.jpg/960px-Cass_County_Missouri_Courthouse_20191026-6991.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Harrisonville, Missouri (Unknown Creature)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Harrisonville, Missouri: unknown Creature. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-912',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -16036,7 +16022,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Interstate_44_East_at_Exit_253%2C_Route_100_East%2C_Gray_Summit_exit_%281993%29.jpg/960px-Interstate_44_East_at_Exit_253%2C_Route_100_East%2C_Gray_Summit_exit_%281993%29.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Gray Summit, Missouri (Bigfoot/Ape man sighting)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Gray Summit, Missouri: bigfoot/Ape man sighting. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-916',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -16045,7 +16031,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/VB_Oceanfront.jpg/960px-VB_Oceanfront.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Virginia Beach, Virginia (Possible Dogman Sighting)',
-    description: '',
+    description: 'Regional cryptid sightings-map entry for Virginia Beach, Virginia: possible Dogman Sighting. The pin was imported from a community map with no further detail. The BFRO database does hold a Spring 2012 report from the same area, \'Unexplained loud banging and whoops heard by a homeowner near Virginia Beach\' (BFRO Report #35467, Virginia Beach City County): "About a week ago I woke up early in the morning, about 3:30 a.m. to a loud banging noise, like multiple woodblocks slamming. It happened several times for about 10 minutes then ceased. I thought nothing of it. Then two mornings..." Whether the two are the same incident is not recorded; treat this pin as an unverified local report corroborated by a nearby case.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Cryptid-Sightings-66',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -16055,7 +16041,7 @@ const chunk_3: any[] = [  {
     relatedIds: ['anomaly-Giants---Nephilim---Elongated-Skulls---Horns-218'],
     parentId: 'bigfoot-sightings-br',
     name: 'Newport, Tennessee (Bigfoot Hit by Truck)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Newport, Tennessee: bigfoot Hit by Truck. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-920',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -16064,7 +16050,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Avilla%2C_Indiana.jpg/960px-Avilla%2C_Indiana.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Avilla, Indiana (Trucker Records UFO)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Avilla, Indiana: trucker Records UFO. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1074',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -16073,7 +16059,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Eastward_on_Main_from_Myers.jpg/960px-Eastward_on_Main_from_Myers.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Cumberland, Kentucky (Possible Dogman)',
-    description: '',
+    description: 'Regional cryptid sightings-map entry for Cumberland, Kentucky: possible Dogman. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Cryptid-Sightings-67',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -16082,7 +16068,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/VB_Oceanfront.jpg/960px-VB_Oceanfront.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Virginia Beach, Virginia (Unknown Large Creature)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Virginia Beach, Virginia: unknown Large Creature. The pin was imported from a community map with no further detail. The BFRO database does hold a Spring 2012 report from the same area, \'Unexplained loud banging and whoops heard by a homeowner near Virginia Beach\' (BFRO Report #35467, Virginia Beach City County): "About a week ago I woke up early in the morning, about 3:30 a.m. to a loud banging noise, like multiple woodblocks slamming. It happened several times for about 10 minutes then ceased. I thought nothing of it. Then two mornings..." Whether the two are the same incident is not recorded; treat this pin as an unverified local report corroborated by a nearby case.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-926',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -16091,7 +16077,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Harlan_County_Kentucky_Courthouse.jpg/960px-Harlan_County_Kentucky_Courthouse.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Harlan, Kentucky (Possible UFO in Night Sky)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Harlan, Kentucky: possible UFO in Night Sky. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1075',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -16100,7 +16086,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Harlan_County_Kentucky_Courthouse.jpg/960px-Harlan_County_Kentucky_Courthouse.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Harlan, Kentucky (UFO seen in night sky)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Harlan, Kentucky: uFO seen in night sky. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1076',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -16109,7 +16095,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Uptown_Doylestown.jpg/960px-Uptown_Doylestown.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Doylestown, Ohio (Possible Dogman seen twice)',
-    description: '',
+    description: 'Regional cryptid sightings-map entry for Doylestown, Ohio: possible Dogman seen twice. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Cryptid-Sightings-68',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -16118,7 +16104,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Downtown_Mount_Sterling%2C_Kentucky.JPG/960px-Downtown_Mount_Sterling%2C_Kentucky.JPG'],
     parentId: 'bigfoot-sightings-br',
     name: 'Mount Sterling, Kentucky (Possible Bigfoot Seen in Field)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Mount Sterling, Kentucky: possible Bigfoot Seen in Field. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-934',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -16127,7 +16113,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Torquay_harbour_-_geograph.org.uk_-_5719656.jpg/960px-Torquay_harbour_-_geograph.org.uk_-_5719656.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Torquay, England, GB (Unknown Humanoid)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Torquay, England: unknown Humanoid. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-936',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -16136,7 +16122,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Deerfield_Town_Offices%2C_Deerfield_NH.jpg/960px-Deerfield_Town_Offices%2C_Deerfield_NH.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Deerfield, New Hampshire (Summer Camp Bigfoot)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Deerfield, New Hampshire: summer Camp Bigfoot. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-938',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -16145,7 +16131,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Loyall-from-840-ky.jpg/960px-Loyall-from-840-ky.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Loyall, Kentucky (Unknown Object)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Loyall, Kentucky: unknown Object. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-940',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -16153,7 +16139,7 @@ const chunk_3: any[] = [  {
     id: 'anomaly-Bigfoot-942',
     parentId: 'bigfoot-sightings-br',
     name: 'Weare, New Hampshire (UFO Seen)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Weare, New Hampshire: uFO Seen. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1077',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -16162,7 +16148,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Astor_FL_post_office01.jpg/960px-Astor_FL_post_office01.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Astor, Florida (Woman spots UFOs)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Astor, Florida: woman spots UFOs. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1078',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -16171,7 +16157,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Burlington%2C_North_Dakota.jpg/960px-Burlington%2C_North_Dakota.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Burlington, North Dakota (UFO Filmed Early in Morning)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Burlington, North Dakota: uFO Filmed Early in Morning. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1079',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -16179,7 +16165,7 @@ const chunk_3: any[] = [  {
     id: 'anomaly-Bigfoot-948',
     parentId: 'bigfoot-sightings-br',
     name: 'Weare, New Hampshire (Wood Devil Sighting)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Weare, New Hampshire: wood Devil Sighting. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-948',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -16188,7 +16174,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Springhill%2C_Nova_Scotia%2C_Canada.jpg/960px-Springhill%2C_Nova_Scotia%2C_Canada.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Springhill, Nova Scotia, CA (Terrifying Encounter)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Springhill, Nova Scotia, California: terrifying Encounter. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-950',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -16197,7 +16183,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Lovern_and_Main%2C_Hazard.jpg/960px-Lovern_and_Main%2C_Hazard.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Hazard, Kentucky (Possible Bigfoot Seen)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Hazard, Kentucky: possible Bigfoot Seen. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-952',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -16206,7 +16192,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Riley_and_Wolfe_Grocery%2C_Morgan%27s_Shoe_Store_and_other_businesses_-_NARA_-_280607.jpg/960px-Riley_and_Wolfe_Grocery%2C_Morgan%27s_Shoe_Store_and_other_businesses_-_NARA_-_280607.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Benton, Kentucky (Bigfoot Activity)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Benton, Kentucky: bigfoot Activity. The pin was imported from a community map with no further detail. The BFRO database does hold a Spring 1990 report from the same area, \'Sighting by a courier near Benton, across from a log cabin on Cole Cemetery Road\' (BFRO Report #317, Marshall County): "(Please excuse the old story, was not aware a site like this exsisted to record information, also, haven\'t told too many people...guess you can just imagine why...) April, 1990, rural Marshall County, I was attempting to make a..." Whether the two are the same incident is not recorded; treat this pin as an unverified local report corroborated by a nearby case.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-954',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -16215,7 +16201,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/US-90_and_FL-100_junction_in_Watertown%2C_Florida.jpg/960px-US-90_and_FL-100_junction_in_Watertown%2C_Florida.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Watertown, Florida (White UFOs)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Watertown, Florida: white UFOs. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1080',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -16224,7 +16210,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Riley_and_Wolfe_Grocery%2C_Morgan%27s_Shoe_Store_and_other_businesses_-_NARA_-_280607.jpg/960px-Riley_and_Wolfe_Grocery%2C_Morgan%27s_Shoe_Store_and_other_businesses_-_NARA_-_280607.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Benton, Kentucky (Bigfoot Evidence)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Benton, Kentucky: bigfoot Evidence. The pin was imported from a community map with no further detail. The BFRO database does hold a Spring 1990 report from the same area, \'Sighting by a courier near Benton, across from a log cabin on Cole Cemetery Road\' (BFRO Report #317, Marshall County): "(Please excuse the old story, was not aware a site like this exsisted to record information, also, haven\'t told too many people...guess you can just imagine why...) April, 1990, rural Marshall County, I was attempting to make a..." Whether the two are the same incident is not recorded; treat this pin as an unverified local report corroborated by a nearby case.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-959',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -16233,7 +16219,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Cascadelocks1.png/960px-Cascadelocks1.png'],
     parentId: 'bigfoot-sightings-br',
     name: 'Cascade Locks, Oregon (Mrs. Baxter and Bigfoot)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Cascade Locks, Oregon: mrs. Baxter and Bigfoot. The pin was imported from a community map with no further detail. The BFRO database does hold a Winter 2001 report from the same area, \'Hikers hear possible vocalizations near Cascade Locks along the Columbia River\' (BFRO Report #22742, Hood River County): "My friend B.P. and I decided to spend an evening at Eagle Creek State Park along the Columbia River on I-84 at milepost 41 East of Portland, OR. We had a cook out camp fire in the Community Kitchen there. It was on April 9th,..." Whether the two are the same incident is not recorded; treat this pin as an unverified local report corroborated by a nearby case.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-961',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -16242,7 +16228,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Towanda_Main_Street.jpg/960px-Towanda_Main_Street.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Towanda, Pennsylvania (Woman Frightened by Bigfoot)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Towanda, Pennsylvania: woman Frightened by Bigfoot. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-963',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -16251,7 +16237,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Spring_Green_Village_Hall.jpg/960px-Spring_Green_Village_Hall.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Spring Green, Wisconsin (Howls and Visual)',
-    description: '',
+    description: 'Regional Bigfoot sightings-map entry for Spring Green, Wisconsin: howls and Visual. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-Bigfoot-965',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -16260,7 +16246,7 @@ const chunk_3: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Lee_County_Courthouse%2C_Virginia.jpg/960px-Lee_County_Courthouse%2C_Virginia.jpg'],
     parentId: 'bigfoot-sightings-br',
     name: 'Jonesville, Virginia (UFO Speeds off)',
-    description: '',
+    description: 'Regional UFO sightings-map entry for Jonesville, Virginia: uFO Speeds off. Imported from a community map with no further detail; no case file could be matched, so treat it as an unverified local report.',
     layer: 'Bigfoot Sightings',
     mapFeatureId: 'anomaly-UFO-1081',
     sources: ['BFRO (Bigfoot Field Researchers Organization) Database', 'North American Bigfoot Search']
@@ -16654,7 +16640,7 @@ const chunk_4: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/CHICAGO%2C_BURLINGTON_AND_QUINCY_DEPOT%2C_HOLT_COUNTY%2C_MO.jpg/960px-CHICAGO%2C_BURLINGTON_AND_QUINCY_DEPOT%2C_HOLT_COUNTY%2C_MO.jpg'],
     parentId: 'cryptid-sightings-br',
     name: 'Mound City, Missouri (Thunderbird Stuck in Mud)',
-    description: '',
+    description: 'Regional cryptid sightings-map entry for Mound City, Missouri: thunderbird Stuck in Mud. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Cryptid Sightings',
     mapFeatureId: 'anomaly-Cryptid-Sightings-6',
     sources: ['Regional Cryptid Databases', 'Folklore Society Archives']
@@ -16663,7 +16649,7 @@ const chunk_4: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Val_des_Monts_QC.JPG/960px-Val_des_Monts_QC.JPG'],
     parentId: 'cryptid-sightings-br',
     name: 'Val-des-Monts, Quebec, CA (Possible Thunderbird spotted!)',
-    description: '',
+    description: 'Regional cryptid sightings-map entry for Val-des-Monts, Quebec, California: possible Thunderbird spotted. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Cryptid Sightings',
     mapFeatureId: 'anomaly-Cryptid-Sightings-7',
     sources: ['Regional Cryptid Databases', 'Folklore Society Archives']
@@ -16679,7 +16665,7 @@ const chunk_4: any[] = [  {
     id: 'anomaly-Cryptid-Sightings-9',
     parentId: 'cryptid-sightings-br',
     name: 'Cooranbong, New South Wales, AU (Possible Yowie track and hair sample)',
-    description: '',
+    description: 'Regional cryptid sightings-map entry for Cooranbong, New South Wales, AU: possible Yowie track and hair sample. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Cryptid Sightings',
     mapFeatureId: 'anomaly-Cryptid-Sightings-9',
     sources: ['Regional Cryptid Databases', 'Folklore Society Archives']
@@ -16688,7 +16674,7 @@ const chunk_4: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Riverview%2C_Michigan_City_Hall.jpg/960px-Riverview%2C_Michigan_City_Hall.jpg'],
     parentId: 'cryptid-sightings-br',
     name: 'Riverview, Michigan (Thunderbird sighting)',
-    description: '',
+    description: 'Regional cryptid sightings-map entry for Riverview, Michigan: thunderbird sighting. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Cryptid Sightings',
     mapFeatureId: 'anomaly-Cryptid-Sightings-10',
     sources: ['Regional Cryptid Databases', 'Folklore Society Archives']
@@ -16697,7 +16683,7 @@ const chunk_4: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Sylvan_Lake%2C_MI_location.png/960px-Sylvan_Lake%2C_MI_location.png'],
     parentId: 'cryptid-sightings-br',
     name: 'Sylvan Lake, Michigan (Thunderbird Sightings)',
-    description: '',
+    description: 'Regional cryptid sightings-map entry for Sylvan Lake, Michigan: thunderbird Sightings. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Cryptid Sightings',
     mapFeatureId: 'anomaly-Cryptid-Sightings-11',
     sources: ['Regional Cryptid Databases', 'Folklore Society Archives']
@@ -16715,7 +16701,7 @@ const chunk_4: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/RockSpringsWY.jpg/960px-RockSpringsWY.jpg'],
     parentId: 'cryptid-sightings-br',
     name: 'Rock Springs, Wyoming (Possible Thunderbird Sighting)',
-    description: '',
+    description: 'Regional cryptid sightings-map entry for Rock Springs, Wyoming: possible Thunderbird Sighting. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Cryptid Sightings',
     mapFeatureId: 'anomaly-Cryptid-Sightings-13',
     sources: ['Regional Cryptid Databases', 'Folklore Society Archives']
@@ -16723,7 +16709,7 @@ const chunk_4: any[] = [  {
     id: 'anomaly-Cryptid-Sightings-14',
     parentId: 'cryptid-sightings-br',
     name: 'Hinton, Oklahoma (Thunderbird Sighting)',
-    description: '',
+    description: 'Regional cryptid sightings-map entry for Hinton, Oklahoma: thunderbird Sighting. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Cryptid Sightings',
     mapFeatureId: 'anomaly-Cryptid-Sightings-14',
     sources: ['Regional Cryptid Databases', 'Folklore Society Archives']
@@ -16732,7 +16718,7 @@ const chunk_4: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Bridgeport-Main-Street-il.jpg/960px-Bridgeport-Main-Street-il.jpg'],
     parentId: 'cryptid-sightings-br',
     name: 'Bridgeport, Illinois (Possible Thunderbird Sighting)',
-    description: '',
+    description: 'Regional cryptid sightings-map entry for Bridgeport, Illinois: possible Thunderbird Sighting. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Cryptid Sightings',
     mapFeatureId: 'anomaly-Cryptid-Sightings-15',
     sources: ['Regional Cryptid Databases', 'Folklore Society Archives']
@@ -16750,7 +16736,7 @@ const chunk_4: any[] = [  {
     images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Westminster_South_Carolina.jpg/960px-Westminster_South_Carolina.jpg'],
     parentId: 'cryptid-sightings-br',
     name: 'Westminster, South Carolina (Was it a Thunderbird?)',
-    description: '',
+    description: 'Regional cryptid sightings-map entry for Westminster, South Carolina: was it a Thunderbird?. No matching report for this town is on file in the BFRO database, so treat it as an unverified local report.',
     layer: 'Cryptid Sightings',
     mapFeatureId: 'anomaly-Cryptid-Sightings-17',
     sources: ['Regional Cryptid Databases', 'Folklore Society Archives']
@@ -19662,7 +19648,7 @@ const chunk_4: any[] = [  {
     secondaryParentIds: ['judaism', 'christianity'],
     name: 'Book of Enoch',
     description: 'An ancient Jewish religious work ascribed to Enoch. It contains unique descriptions of the fall of the Watchers, their breeding with humans to create Nephilim, and detailed astronomical grids.',
-    relatedIds: ['enoch', 'watchers', 'mt-hermon', 'metatron', 'phanuel', 'raguel', 'saraqael', 'remiel', 'grigori', 'nephilim', 'azazel', 'samyaza', 'araqiel', 'armaros', 'baraqiel', 'barquiel', 'kokabel', 'penemue', 'sariel', 'turel'],
+    relatedIds: ['enoch', 'watchers', 'mt-hermon', 'metatron', 'phanuel', 'raguel', 'saraqael', 'remiel', 'grigori', 'nephilim', 'azazel', 'samyaza', 'araqiel', 'armaros', 'baraqiel', 'kokabel', 'penemue', 'sariel', 'turel'],
     isApocryphal: true,
     bibleVerses: ['The words of the blessing of Enoch, wherewith he blessed the elect and righteous, who will be living in the day of tribulation, when all the wicked and godless are to be removed. — 1 Enoch 1:1 (https://www.sacred-texts.com/bib/boe/boe004.htm)']
   },  {
@@ -46083,6 +46069,36 @@ const chunk_bible_sources: TermNode[] = [
     relatedIds: ['reptilians', 'aliens', 'lyrans-cat-people', 'third-of-the-stars', 'alien-abductions-br', 'abduction-key-west-mufon-142206-2021'],
     sources: ['Alien Archivist - I asked 9 Reptilian Experiencers to Draw Me Exactly What They Saw (https://alienarchivist.substack.com/p/i-asked-9-reptilian-experiencers)'],
     images: ['https://substackcdn.com/image/fetch/$s_!wawe!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff732b6f7-80a5-4c0d-89e4-f025715ac4f0_2891x3840.jpeg', 'https://substack-post-media.s3.amazonaws.com/public/images/f732b6f7-80a5-4c0d-89e4-f025715ac4f0_2891x3840.jpeg', 'https://substack-post-media.s3.amazonaws.com/public/images/a6f6df82-daf2-4877-956c-33330406714e_1056x1364.png']
+  },
+  {
+    id: 'watchers-chiefs-of-tens',
+    parentId: 'watchers',
+    name: 'The Twenty Chiefs of Tens (1 Enoch 6:7)',
+    description: 'Two hundred Watchers came down on Mount Hermon in the days of Jared, and 1 Enoch 6:7 names their officers: \'These are their chiefs of tens\' - Semjaza the leader, then Arakiba, Rameel, Kokabiel, Tamiel, Ramiel, Danel, Ezeqeel, Baraqijal, Asael, Armaros, Batarel, Ananel, Zaqiel, Samsapeel, Satarel, Turel, Jomjael and Sariel. Nineteen names survive in the Ethiopic text; the Greek of Syncellus and the Aramaic fragments from Qumran (4Q201, 4Q204) restore the twentieth and correct several spellings. Each commanded ten. Their names are theophoric, ending in -el, \'of God\', which means they kept their rank-badges after they deserted. The Hebrew Bible never lists them; Genesis 6 only says \'the sons of God\'. The list is the oldest surviving order of battle for the enemy.',
+    layer: 'Religion',
+    relatedIds: ['watchers', 'enochian-mount-hermon', 'watcher_descent', 'samyaza', 'semjaza', 'azazel', 'watchers-teachings', 'watchers-judgment', 'nephilim', 'nephilim-br', 'book-of-enoch', 'grigori', 'enoch3-uzza-azza-azael'],
+    sources: ['1 Enoch 6:7-8 (Charles; Nickelsburg) / 4Q201 (4QEnoch a) / Syncellus, Chronography'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Angel_on_the_spire_of_St_Michael%27s_church%2C_Clifton_Hampden_-_geograph.org.uk_-_1573635.jpg/330px-Angel_on_the_spire_of_St_Michael%27s_church%2C_Clifton_Hampden_-_geograph.org.uk_-_1573635.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'watchers-teachings',
+    parentId: 'watchers',
+    name: 'What the Watchers Taught (1 Enoch 8 & 69)',
+    description: 'The crime was not only the wives. 1 Enoch 8 is a syllabus: Azazel taught men to make swords, knives, shields, breastplates, and \'the metals of the earth and the art of working them\', and women bracelets, ornaments, antimony, eye-paint and \'all kinds of costly stones and colouring tinctures\' - weapons and vanity, in that order. Semjaza taught enchantments and root-cuttings, Armaros the resolving of enchantments, Baraqijal astrology, Kokabel the constellations, Ezeqeel the knowledge of the clouds, Araqiel the signs of the earth, Shamsiel the signs of the sun, Sariel the course of the moon. 1 Enoch 69 adds the second syllabus: Jeqon led the others down, Asbeel gave them the counsel to take wives, Gadreel taught \'the blows of death\' and showed Eve the serpent, Penemue taught writing with ink and paper \'and thereby many sinned\', Kasdeja taught abortion, exorcism and the strikes of spirits. Genesis 4 credits the same arts to Cain\'s line. Metallurgy, cosmetics, astrology, pharmacology, writing and war: the entire technical civilisation, received as a transmission, and \'the world was changed\'.',
+    layer: 'Religion',
+    relatedIds: ['watchers', 'watchers-chiefs-of-tens', 'azazel', 'samyaza', 'armaros', 'baraqiel', 'kokabel', 'chazaqiel', 'araqiel', 'shamsiel', 'sariel', 'yekun', 'asbeel', 'gadreel', 'penemue', 'kasyade', 'tubal-cain', 'cainites-lineage', 'alchemy-occult', 'astrology-cosmology', 'planet-mercury-scripture', 'wars-real-causes'],
+    sources: ['1 Enoch 7:1, 8:1-4, 69:4-15 / Genesis 4:20-22'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/El_%C3%81ngel_Ca%C3%ADdo_%28Ricardo_Bellver%29_03.jpg/960px-El_%C3%81ngel_Ca%C3%ADdo_%28Ricardo_Bellver%29_03.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
+  },
+  {
+    id: 'watchers-judgment',
+    parentId: 'watchers',
+    name: 'The Sentence on the Watchers (1 Enoch 10, Jude 6, 2 Peter 2:4)',
+    description: 'The archangels file the complaint (1 Enoch 9) and the Most High answers with four orders. Uriel: warn Noah, the Flood is coming. Raphael: bind Azazel hand and foot, cast him into the darkness of the desert Dudael, cover him with rough stones until the great judgment, when he is cast into the fire; \'and the whole earth has been corrupted through the works that were taught by Azazel: to him ascribe all sin\'. Gabriel: set the giants against one another so they destroy themselves. Michael: bind Semjaza and his associates for seventy generations \'in the valleys of the earth\' until their judgment, then the abyss of fire for ever. The Watchers beg Enoch to intercede; he writes the petition and it is refused (1 Enoch 13-14). The New Testament assumes all of it: \'the angels which kept not their first estate... he hath reserved in everlasting chains under darkness\' (Jude 6), \'cast them down to hell [Tartarus]\' (2 Peter 2:4), and Christ \'preached unto the spirits in prison\' (1 Peter 3:19). The giants\' spirits, unburied, became the demons (1 Enoch 15-16). That ruling is still in force, and the appeal was denied.',
+    layer: 'Religion',
+    relatedIds: ['watchers', 'watchers-chiefs-of-tens', 'azazel', 'samyaza', 'enochian-desert-dudael', 'michael', 'raphael', 'gabriel', 'uriel', 'great-flood', 'nephilim', 'demons', 'realm-sheol-hades', 'tartarus', 'bible-book-jude', 'evt-enoch-trans'],
+    sources: ['1 Enoch 9-16 / Jude 6 / 2 Peter 2:4 / 1 Peter 3:19-20'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/BL_Or_485_f._102r.png/500px-BL_Or_485_f._102r.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail']
   }
 ];
 

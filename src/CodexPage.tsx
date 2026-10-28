@@ -9,6 +9,8 @@ import { updateClientOgpTags } from './utils/ogp';
 import { TERM_TREE_DATA, TermNode, TranslationInfo } from './termTreeData';
 import { TIMELINE_LOCATIONS } from './timelineData';
 import { LAYER_COLORS, LAYER_ICONS } from './layers';
+import CommunityNotes from './components/CommunityNotes';
+import type { Firestore } from 'firebase/firestore';
 export { LAYER_COLORS };
 import { isVideoUrl, isPdfUrl, getPdfViewerSrcDoc, getCombinedAssets, isAudioUrl, MISSING_IMAGE_URL, getEmbedUrl, cleanAndProxyImageUrl } from './utils/media';
 
@@ -23,8 +25,9 @@ interface CodexPageProps {
     invert: string;
   };
   isMapDarkMode: boolean;
-  onViewOnMap: (layerName: string, featureSearchTerm?: string) => void;
+  onViewOnMap: (layerName: string, featureSearchTerm?: string, fallbackName?: string) => void;
   onViewOnTimeline: (timelineId: string) => void;
+  db?: Firestore; // Firestore handle for community notes (optional: the section is hidden without it)
   onFlagItem?: (item: TermNode) => void;
   onSelectedTermChange?: (node: TermNode | null) => void;
   focusedTermId?: string | null;
@@ -192,6 +195,7 @@ export default function CodexPage({
   isMapDarkMode,
   onViewOnMap,
   onViewOnTimeline,
+  db,
   onFlagItem,
   onSelectedTermChange,
   focusedTermId,
@@ -238,6 +242,22 @@ export default function CodexPage({
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [brokenImages, setBrokenImages] = useState<Record<string, boolean>>({});
   const [codexViewMode, setCodexViewMode] = useState<'tree' | 'cloud' | 'web'>('tree');
+
+  // Connectivity index for the cloud view: how many children, related links and incoming links each node has
+  const cloudIndex = useMemo(() => {
+    const children = new Map<string, string[]>();
+    const incoming = new Map<string, string[]>();
+    const byId = new Map<string, TermNode>();
+    nodes.forEach(n => byId.set(n.id, n));
+    nodes.forEach(n => {
+      const parents = [n.parentId, ...(n.secondaryParentIds || [])].filter(Boolean) as string[];
+      parents.forEach(p => { if (!children.has(p)) children.set(p, []); children.get(p)!.push(n.id); });
+      (n.relatedIds || []).forEach(r => { if (!incoming.has(r)) incoming.set(r, []); incoming.get(r)!.push(n.id); });
+    });
+    const degree = (id: string) => (children.get(id)?.length || 0) + (byId.get(id)?.relatedIds?.length || 0) + (incoming.get(id)?.length || 0);
+    return { children, incoming, byId, degree };
+  }, [nodes]);
+
   const [isImageLoading, setIsImageLoading] = useState(false);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [shareToast, setShareToast] = useState<string | null>(null);
@@ -282,6 +302,36 @@ export default function CodexPage({
     if (!activeTermId) return null;
     return nodes.find(t => t.id === activeTermId) || null;
   }, [activeTermId, nodes]);
+
+  // Terms shown in the cloud: the active node's neighbourhood (children, related, referenced-by), or the roots
+  const cloudTerms = useMemo(() => {
+    if (codexViewMode !== 'cloud') return [] as { node: TermNode; weight: number; kind: 'child' | 'related' | 'backlink' | 'root' }[];
+    const { children, incoming, byId, degree } = cloudIndex;
+    const seen = new Set<string>();
+    const out: { node: TermNode; weight: number; kind: 'child' | 'related' | 'backlink' | 'root' }[] = [];
+    const push = (id: string, kind: 'child' | 'related' | 'backlink' | 'root') => {
+      const n = byId.get(id);
+      if (!n || seen.has(id) || (activeTermNode && id === activeTermNode.id)) return;
+      seen.add(id); out.push({ node: n, weight: degree(id), kind });
+    };
+    if (activeTermNode) {
+      (children.get(activeTermNode.id) || []).forEach(id => push(id, 'child'));
+      (activeTermNode.relatedIds || []).forEach(id => push(id, 'related'));
+      (incoming.get(activeTermNode.id) || []).forEach(id => push(id, 'backlink'));
+      if (out.length < 12) {
+        // thin neighbourhood: add the siblings so the cloud is still worth looking at
+        const parents = [activeTermNode.parentId, ...(activeTermNode.secondaryParentIds || [])].filter(Boolean) as string[];
+        parents.forEach(p => (children.get(p) || []).forEach(id => push(id, 'related')));
+      }
+    } else {
+      nodes.filter(n => !n.parentId).forEach(r => {
+        push(r.id, 'root');
+        (children.get(r.id) || []).forEach(id => push(id, 'child'));
+      });
+    }
+    out.sort((a, b) => b.weight - a.weight);
+    return out.slice(0, 160).sort((a, b) => a.node.name.localeCompare(b.node.name));
+  }, [codexViewMode, cloudIndex, activeTermNode, nodes]);
 
   useEffect(() => {
     if (isActive === false) return; // only the visible page owns the document title / OG tags
@@ -368,7 +418,8 @@ export default function CodexPage({
       const loc = TIMELINE_LOCATIONS[activeTermNode.timelineId];
       return {
         layer: loc.category,
-        featureSearchTerm: activeTermNode.timelineId
+        featureSearchTerm: activeTermNode.timelineId,
+        fallbackName: activeTermNode.name
       };
     }
 
@@ -390,7 +441,8 @@ export default function CodexPage({
       }
       return {
         layer: layerName,
-        featureSearchTerm: activeTermNode.mapFeatureId || activeTermNode.id || activeTermNode.name
+        featureSearchTerm: activeTermNode.mapFeatureId || activeTermNode.id,
+        fallbackName: activeTermNode.name
       };
     }
 
@@ -411,7 +463,8 @@ export default function CodexPage({
         }
         return {
           layer: layerName,
-          featureSearchTerm: activeTermNode.mapFeatureId || activeTermNode.id || activeTermNode.name
+          featureSearchTerm: activeTermNode.mapFeatureId || activeTermNode.id,
+        fallbackName: activeTermNode.name
         };
       }
       curr = parent;
@@ -1729,6 +1782,44 @@ export default function CodexPage({
             )}
           </div>
 
+          {/* View changer: TREE (columns) / CLOUD (weighted word cloud of the current neighbourhood) */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '4px', padding: '6px 4px 2px 4px', borderTop: `1px solid ${theme.borderLight || theme.border}`, marginTop: '4px' }}>
+            <span style={{ fontSize: '8px', fontFamily: '"Space Mono", monospace', letterSpacing: '1.2px', color: theme.textDim, fontWeight: 700, marginRight: 'auto' }}>VIEW</span>
+            {(['tree', 'cloud'] as const).map((mode) => {
+              const isActiveMode = codexViewMode === mode;
+              return (
+                <motion.button
+                  key={mode}
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                  onClick={() => { setCodexViewMode(mode); trackCustomEvent?.('codex_view_mode', { mode }); }}
+                  style={{
+                    background: isActiveMode ? (mode === 'cloud' ? '#b6a6ff' : theme.text) : 'transparent',
+                    color: isActiveMode ? (mode === 'cloud' ? '#000000' : theme.bg) : theme.textDim,
+                    border: 'none',
+                    padding: '0 10px',
+                    height: '22px',
+                    borderRadius: '11px',
+                    fontSize: '9px',
+                    fontWeight: 700,
+                    cursor: 'pointer',
+                    letterSpacing: '0.08em',
+                    fontFamily: '"Space Mono", monospace',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '5px',
+                    transition: 'all 0.2s cubic-bezier(0.16, 1, 0.3, 1)'
+                  }}
+                >
+                  {mode === 'cloud' && (
+                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', display: 'inline-block', background: isActiveMode ? '#000000' : '#b6a6ff', boxShadow: isActiveMode ? 'none' : '0 0 6px #b6a6ff' }} />
+                  )}
+                  {mode === 'tree' ? 'TREE' : 'CLOUD'}
+                </motion.button>
+              );
+            })}
+          </div>
+
           {/* Suggestion Dropdown Panel */}
           {searchQuery.trim() !== '' && (
             <motion.div
@@ -1810,6 +1901,92 @@ export default function CodexPage({
                 )}
               </motion.div>
             )}
+        </div>
+      )}
+
+      {/* CLOUD VIEW: weighted word cloud of the active node's neighbourhood, sits over the column canvas */}
+      {codexViewMode === 'cloud' && (
+        <div
+          className="custom-sidebar-scrollbar"
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            bottom: 0,
+            right: isMobile ? 0 : (isRightCollapsed ? 0 : 340),
+            zIndex: 5,
+            overflowY: 'auto',
+            overflowX: 'hidden',
+            background: theme.bg,
+            backgroundImage: `url("${svgGrid}")`,
+            backgroundRepeat: 'repeat',
+            padding: isMobile ? '24px 16px 120px 16px' : '110px 40px 80px 320px',
+            transition: 'right 0.3s ease',
+            boxSizing: 'border-box',
+            fontFamily: '"Space Mono", monospace'
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'baseline', gap: '12px', flexWrap: 'wrap', marginBottom: '18px' }}>
+            <span style={{ fontSize: '9px', letterSpacing: '2px', color: theme.textDim, fontWeight: 700 }}>
+              {activeTermNode ? 'CLOUD AROUND' : 'CLOUD OF ALL THEMES'}
+            </span>
+            {activeTermNode && (
+              <span style={{ fontSize: '18px', fontWeight: 700, color: getNodeColor(activeTermNode), letterSpacing: '0.5px' }}>
+                {activeTermNode.name}
+              </span>
+            )}
+            {activeTermNode && activeTermNode.parentId && (
+              <button
+                type="button"
+                onClick={() => navigateToTerm(activeTermNode.parentId!)}
+                style={{ background: 'transparent', border: `1px solid ${theme.border}`, color: theme.textDim, fontFamily: '"Space Mono", monospace', fontSize: '8px', letterSpacing: '1px', padding: '3px 8px', borderRadius: '10px', cursor: 'pointer' }}
+              >
+                ↑ {cloudIndex.byId.get(activeTermNode.parentId)?.name || 'UP'}
+              </button>
+            )}
+            <span style={{ fontSize: '8px', color: theme.textDim, letterSpacing: '1px', marginLeft: 'auto' }}>
+              {cloudTerms.length} TERMS · SIZE = CONNECTIONS · CLICK TO FOCUS
+            </span>
+          </div>
+
+          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', gap: '6px 14px', maxWidth: '1100px' }}>
+            {cloudTerms.map(({ node, weight, kind }) => {
+              const maxW = Math.max(1, ...cloudTerms.map(t => t.weight));
+              const size = 9 + Math.round(13 * Math.log(1 + weight) / Math.log(1 + maxW));
+              const color = getNodeColor(node);
+              const label = node.name.replace(/\s*\([^)]*\)\s*/g, ' ').replace(/\s+/g, ' ').trim() || node.name;
+              return (
+                <button
+                  key={node.id}
+                  type="button"
+                  title={`${node.name} · ${weight} connection${weight === 1 ? '' : 's'}${kind === 'backlink' ? ' · references this entry' : kind === 'child' ? ' · sub-theme' : ''}`}
+                  onClick={() => navigateToTerm(node.id)}
+                  style={{
+                    background: 'transparent',
+                    border: 'none',
+                    cursor: 'pointer',
+                    padding: '2px 4px',
+                    fontFamily: '"Space Mono", monospace',
+                    fontWeight: size > 18 ? 700 : 400,
+                    fontSize: `${size}px`,
+                    lineHeight: 1.15,
+                    color: kind === 'backlink' ? theme.textDim : color,
+                    textDecoration: kind === 'child' ? 'none' : 'none',
+                    borderBottom: kind === 'child' ? `1px dotted ${color}` : '1px solid transparent',
+                    opacity: kind === 'backlink' ? 0.8 : 1,
+                    transition: 'transform 0.15s ease, opacity 0.15s ease'
+                  }}
+                  onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.transform = 'scale(1.08)'; }}
+                  onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.transform = 'scale(1)'; }}
+                >
+                  {label}
+                </button>
+              );
+            })}
+            {cloudTerms.length === 0 && (
+              <span style={{ fontSize: '10px', color: theme.textDim }}>This entry has no linked terms yet.</span>
+            )}
+          </div>
         </div>
       )}
 
@@ -2764,7 +2941,7 @@ export default function CodexPage({
                         <motion.button
                           whileTap={{ scale: 0.95 }}
                           whileHover={{ scale: 1.05 }}
-                          onClick={() => onViewOnMap(resolvedMapInfo.layer, resolvedMapInfo.featureSearchTerm)}
+                          onClick={() => onViewOnMap(resolvedMapInfo.layer, resolvedMapInfo.featureSearchTerm, resolvedMapInfo.fallbackName)}
                           style={{
                             display: 'flex',
                             alignItems: 'center',
@@ -3034,6 +3211,10 @@ export default function CodexPage({
                         {activeTermNode.description}
                       </p>
                     </div>
+
+                    {db && (
+                      <CommunityNotes db={db} pointId={String(activeTermNode.id)} theme={theme} isDark={isMapDarkMode} trackCustomEvent={trackCustomEvent} />
+                    )}
 
                     {/* Scripture references */}
                     {activeTermNode.bibleVerses && activeTermNode.bibleVerses.length > 0 && (
