@@ -45,7 +45,7 @@ const REST: Record<Kind, number> = { center: 0, parent: 235, child: 210, related
 const PILL_H = 32;
 const GAP = 24; // minimum breathing room between pills, in screen pixels
 const MAX_PILL_W = 260;
-const ANIM_MS = 480;
+const ANIM_MS = 1100;
 
 const estimateWidth = (n: WebNode) => {
   const text = n.node.name.length * 6.1;
@@ -127,7 +127,7 @@ function runLayout(
   return new Map(webNodes.map((n, i) => [n.id, { x: P[i].x, y: P[i].y }]));
 }
 
-const easeOut = (t: number) => 1 - Math.pow(1 - t, 3);
+const easeOut = (t: number) => 1 - Math.pow(1 - t, 5); // quintic: quick start, long gentle settle
 
 const CodexWeb: React.FC<CodexWebProps> = ({
   centerId, selectedId, hoveredId, nodes, index, getNodeColor, getNodeIcon, hasSubItems,

@@ -1932,6 +1932,40 @@ export default function CodexPage({
             originShift={{ x: isMobile ? 0 : 130, y: isMobile ? -40 : 30 }}
           />
 
+          {/* Start over: back to the ten main categories (always present, dim when already there) */}
+          <button
+            type="button"
+            onClick={() => { setSelectedPath([]); setHoveredTerm(null); trackCustomEvent?.('codex_web_reset'); }}
+            disabled={!selectedTermId}
+            title={selectedTermId ? 'Back to the main categories' : 'Showing the main categories'}
+            style={{
+              position: 'absolute',
+              top: isMobile ? 'auto' : 24,
+              bottom: isMobile ? 96 : 'auto',
+              left: isMobile ? 16 : 320,
+              zIndex: 6,
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '8px',
+              height: '32px',
+              padding: '0 14px 0 10px',
+              borderRadius: '16px',
+              background: theme.bg,
+              border: `1px solid ${selectedTermId ? theme.text : theme.border}`,
+              color: selectedTermId ? theme.text : theme.textDim,
+              fontFamily: '"Space Mono", monospace',
+              fontSize: '10px',
+              fontWeight: 700,
+              letterSpacing: '0.5px',
+              cursor: selectedTermId ? 'pointer' : 'default',
+              opacity: selectedTermId ? 1 : 0.6,
+              transition: 'opacity 0.2s ease, border-color 0.2s ease'
+            }}
+          >
+            <span style={{ fontSize: '12px', lineHeight: 1 }}>⌂</span>
+            ALL CATEGORIES
+          </button>
+
           {/* Legend */}
           {!isMobile && (
             <div style={{ position: 'absolute', left: 24, bottom: 20, pointerEvents: 'none', display: 'flex', gap: '16px', fontSize: '8px', letterSpacing: '1px', color: theme.textDim }}>
@@ -3011,12 +3045,12 @@ export default function CodexPage({
                         {activeTermNode.layer && (
                           <button 
                             style={{ 
-                              height: '24px',
+                              minHeight: '24px',
                               display: 'inline-flex',
                               alignItems: 'center',
                               fontSize: '10px', 
                               fontWeight: '400', 
-                              padding: '0 12px', 
+                              padding: '4px 12px', lineHeight: '14px', textAlign: 'left', maxWidth: '100%', boxSizing: 'border-box', 
                               borderRadius: '12px', 
                               background: activeRootColor, 
                               border: 'none',
@@ -3051,12 +3085,12 @@ export default function CodexPage({
                               }}
                               title={`Navigate to ${relNode.name}`}
                               style={{ 
-                                height: '24px',
+                                minHeight: '24px',
                                 display: 'inline-flex',
                                 alignItems: 'center',
                                 fontSize: '10px', 
                                 fontWeight: '400', 
-                                padding: '0 12px', 
+                                padding: '4px 12px', lineHeight: '14px', textAlign: 'left', maxWidth: '100%', boxSizing: 'border-box', 
                                 borderRadius: '12px', 
                                 background: relColor, 
                                 border: 'none',
@@ -3096,12 +3130,12 @@ export default function CodexPage({
                                 onClick={() => navigateToTerm(refNode.id)}
                                 title={`${refNode.name} references this entry`}
                                 style={{
-                                  height: '24px',
+                                  minHeight: '24px',
                                   display: 'inline-flex',
                                   alignItems: 'center',
                                   fontSize: '10px',
                                   fontWeight: '400',
-                                  padding: '0 12px',
+                                  padding: '4px 12px', lineHeight: '14px', textAlign: 'left', maxWidth: '100%', boxSizing: 'border-box',
                                   borderRadius: '12px',
                                   background: 'transparent',
                                   border: `1px dashed ${refColor}`,
@@ -3318,8 +3352,16 @@ export default function CodexPage({
                                   backgroundColor: `${rootColor}15`,
                                   border: `1px solid ${rootColor}30`,
                                   color: adjustColorForContrast(rootColor),
-                                  whiteSpace: 'nowrap'
+                                  maxWidth: '100%',
+                                  boxSizing: 'border-box',
+                                  overflowWrap: 'anywhere',
+                                  display: '-webkit-box',
+                                  WebkitLineClamp: 2,
+                                  WebkitBoxOrient: 'vertical',
+                                  overflow: 'hidden',
+                                  lineHeight: '13px'
                                 }}
+                                title={source}
                               >
                                 {source.trim().toUpperCase() === 'CANONICAL SCRIPTURE' ? 'BIBLE' : source.toUpperCase()}
                               </div>
