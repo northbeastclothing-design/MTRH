@@ -1362,4 +1362,15 @@ ${modLink}
   });
 }
 
+// Firestore's gRPC layer can reject outside any awaited chain (e.g. no Google credentials on a dev
+// machine); without this Node 15+ exits the whole process. Log it and keep serving instead.
+process.on('unhandledRejection', (reason: any) => {
+  const msg = reason?.message || String(reason);
+  if (/default credentials|credentials/i.test(msg)) {
+    console.warn(`[Firestore] ${msg.split('\n')[0]} — database features run in local fallback mode.`);
+  } else {
+    console.error('[unhandledRejection]', reason);
+  }
+});
+
 startServer();

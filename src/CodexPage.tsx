@@ -10,6 +10,7 @@ import { TERM_TREE_DATA, TermNode, TranslationInfo } from './termTreeData';
 import { TIMELINE_LOCATIONS } from './timelineData';
 import { LAYER_COLORS, LAYER_ICONS } from './layers';
 import CommunityNotes from './components/CommunityNotes';
+import CodexWeb from './components/CodexWeb';
 import type { Firestore } from 'firebase/firestore';
 export { LAYER_COLORS };
 import { isVideoUrl, isPdfUrl, getPdfViewerSrcDoc, getCombinedAssets, isAudioUrl, MISSING_IMAGE_URL, getEmbedUrl, cleanAndProxyImageUrl } from './utils/media';
@@ -241,10 +242,11 @@ export default function CodexPage({
   
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [brokenImages, setBrokenImages] = useState<Record<string, boolean>>({});
-  const [codexViewMode, setCodexViewMode] = useState<'tree' | 'cloud' | 'web'>('tree');
+  const [codexViewMode, setCodexViewMode] = useState<'tree' | 'web'>('tree');
 
-  // Connectivity index for the cloud view: how many children, related links and incoming links each node has
-  const cloudIndex = useMemo(() => {
+  // Link index shared by the web view, the tree curves and the dossier's "referenced by" row:
+  // children per parent, incoming related links per target, id lookup and a connection count
+  const linkIndex = useMemo(() => {
     const children = new Map<string, string[]>();
     const incoming = new Map<string, string[]>();
     const byId = new Map<string, TermNode>();
@@ -303,35 +305,16 @@ export default function CodexPage({
     return nodes.find(t => t.id === activeTermId) || null;
   }, [activeTermId, nodes]);
 
-  // Terms shown in the cloud: the active node's neighbourhood (children, related, referenced-by), or the roots
-  const cloudTerms = useMemo(() => {
-    if (codexViewMode !== 'cloud') return [] as { node: TermNode; weight: number; kind: 'child' | 'related' | 'backlink' | 'root' }[];
-    const { children, incoming, byId, degree } = cloudIndex;
-    const seen = new Set<string>();
-    const out: { node: TermNode; weight: number; kind: 'child' | 'related' | 'backlink' | 'root' }[] = [];
-    const push = (id: string, kind: 'child' | 'related' | 'backlink' | 'root') => {
-      const n = byId.get(id);
-      if (!n || seen.has(id) || (activeTermNode && id === activeTermNode.id)) return;
-      seen.add(id); out.push({ node: n, weight: degree(id), kind });
-    };
-    if (activeTermNode) {
-      (children.get(activeTermNode.id) || []).forEach(id => push(id, 'child'));
-      (activeTermNode.relatedIds || []).forEach(id => push(id, 'related'));
-      (incoming.get(activeTermNode.id) || []).forEach(id => push(id, 'backlink'));
-      if (out.length < 12) {
-        // thin neighbourhood: add the siblings so the cloud is still worth looking at
-        const parents = [activeTermNode.parentId, ...(activeTermNode.secondaryParentIds || [])].filter(Boolean) as string[];
-        parents.forEach(p => (children.get(p) || []).forEach(id => push(id, 'related')));
-      }
-    } else {
-      nodes.filter(n => !n.parentId).forEach(r => {
-        push(r.id, 'root');
-        (children.get(r.id) || []).forEach(id => push(id, 'child'));
-      });
-    }
-    out.sort((a, b) => b.weight - a.weight);
-    return out.slice(0, 160).sort((a, b) => a.node.name.localeCompare(b.node.name));
-  }, [codexViewMode, cloudIndex, activeTermNode, nodes]);
+  // Entries that point at the active one (links are stored one-way), minus those it already lists itself
+  const referencedBy = useMemo(() => {
+    if (!activeTermNode) return [] as TermNode[];
+    const own = new Set<string>([activeTermNode.parentId || '', ...(activeTermNode.secondaryParentIds || []), ...(activeTermNode.relatedIds || [])]);
+    return (linkIndex.incoming.get(activeTermNode.id) || [])
+      .filter(id => !own.has(id))
+      .map(id => linkIndex.byId.get(id))
+      .filter((n): n is TermNode => !!n)
+      .sort((a, b) => a.name.localeCompare(b.name));
+  }, [activeTermNode, linkIndex]);
 
   useEffect(() => {
     if (isActive === false) return; // only the visible page owns the document title / OG tags
@@ -846,8 +829,10 @@ export default function CodexPage({
         const isChild = n.parentId === currentId || n.secondaryParentIds?.includes(currentId);
         const isRelated = currentNode && currentNode.relatedIds?.includes(n.id);
         const isParent = currentNode && (currentNode.parentId === n.id || currentNode.secondaryParentIds?.includes(n.id));
-        
-        return isChild || isRelated || isParent;
+        // Referenced by: links are stored one-way, so also surface the entries that point at this one
+        const isBacklink = n.relatedIds?.includes(currentId);
+
+        return isChild || isRelated || isParent || isBacklink;
       }).sort((a, b) => a.name.localeCompare(b.name));
 
       if (children.length > 0) {
@@ -871,19 +856,21 @@ export default function CodexPage({
   const nodeSubItemSet = useMemo(() => {
     const parentIdSet = new Set<string>();
     const secondarySet = new Set<string>();
-    const relatedSet = new Set<string>();
+    const relatedSet = new Set<string>();   // ids somebody points at (they have "referenced by" entries)
+    const hasRelatedSet = new Set<string>(); // ids that point at somebody
 
     nodes.forEach(n => {
       if (n.parentId) parentIdSet.add(n.parentId);
       if (n.secondaryParentIds) {
         n.secondaryParentIds.forEach(pId => secondarySet.add(pId));
       }
-      if (n.relatedIds) {
+      if (n.relatedIds && n.relatedIds.length > 0) {
+        hasRelatedSet.add(n.id);
         n.relatedIds.forEach(rId => relatedSet.add(rId));
       }
     });
 
-    return { parentIdSet, secondarySet, relatedSet };
+    return { parentIdSet, secondarySet, relatedSet, hasRelatedSet };
   }, [nodes]);
 
   // Dynamic lookup to determine if a node will generate valid sub-items/children in the next column
@@ -892,7 +879,8 @@ export default function CodexPage({
       return (
         nodeSubItemSet.parentIdSet.has(node.id) ||
         nodeSubItemSet.secondarySet.has(node.id) ||
-        nodeSubItemSet.relatedSet.has(node.id)
+        nodeSubItemSet.relatedSet.has(node.id) ||
+        nodeSubItemSet.hasRelatedSet.has(node.id)
       );
     }
 
@@ -906,8 +894,9 @@ export default function CodexPage({
       const isChild = n.parentId === node.id || n.secondaryParentIds?.includes(node.id);
       const isRelated = node.relatedIds?.includes(n.id);
       const isParent = node.parentId === n.id || node.secondaryParentIds?.includes(n.id);
+      const isBacklink = n.relatedIds?.includes(node.id);
 
-      return isChild || isRelated || isParent;
+      return isChild || isRelated || isParent || isBacklink;
     });
   }, [nodeSubItemSet, selectedPath, nodes]);
 
@@ -1005,10 +994,13 @@ export default function CodexPage({
       const activeNode = nodes.find(n => n.id === activeTermId);
       const activeEl = document.getElementById(`node-pill-${activeTermId}-${activeTermLevel}`);
 
-      if (activeNode && activeNode.relatedIds && activeEl) {
+      if (activeNode && activeEl) {
         const activeRect = activeEl.getBoundingClientRect();
+        // Outgoing related links plus the entries that reference this one (same dashed style)
+        const outgoing = activeNode.relatedIds || [];
+        const incomingIds = (linkIndex.incoming.get(activeNode.id) || []).filter(id => !outgoing.includes(id));
 
-        activeNode.relatedIds.forEach(relId => {
+        [...outgoing, ...incomingIds].forEach(relId => {
           const relLevel = getBestColIdx(relId);
           if (relLevel !== null) {
             const relEl = document.getElementById(`node-pill-${relId}-${relLevel}`);
@@ -1158,7 +1150,7 @@ export default function CodexPage({
       }
       window.removeEventListener('resize', updateLines);
     };
-  }, [selectedPath, columns, activeTermId, hoveredLevel, searchQuery, nodes]);
+  }, [selectedPath, columns, activeTermId, hoveredLevel, searchQuery, nodes, linkIndex]);
 
   // Track if user has manually panned/dragged the canvas away from auto-centered position
   const userHasPannedRef = useRef<boolean>(false);
@@ -1782,10 +1774,10 @@ export default function CodexPage({
             )}
           </div>
 
-          {/* View changer: TREE (columns) / CLOUD (weighted word cloud of the current neighbourhood) */}
+          {/* View changer: TREE (columns) / WEB (force-directed word web of the current neighbourhood) */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '4px', padding: '6px 4px 2px 4px', borderTop: `1px solid ${theme.borderLight || theme.border}`, marginTop: '4px' }}>
             <span style={{ fontSize: '8px', fontFamily: '"Space Mono", monospace', letterSpacing: '1.2px', color: theme.textDim, fontWeight: 700, marginRight: 'auto' }}>VIEW</span>
-            {(['tree', 'cloud'] as const).map((mode) => {
+            {(['tree', 'web'] as const).map((mode) => {
               const isActiveMode = codexViewMode === mode;
               return (
                 <motion.button
@@ -1794,8 +1786,8 @@ export default function CodexPage({
                   whileTap={{ scale: 0.97 }}
                   onClick={() => { setCodexViewMode(mode); trackCustomEvent?.('codex_view_mode', { mode }); }}
                   style={{
-                    background: isActiveMode ? (mode === 'cloud' ? '#b6a6ff' : theme.text) : 'transparent',
-                    color: isActiveMode ? (mode === 'cloud' ? '#000000' : theme.bg) : theme.textDim,
+                    background: isActiveMode ? (mode === 'web' ? '#b6a6ff' : theme.text) : 'transparent',
+                    color: isActiveMode ? (mode === 'web' ? '#000000' : theme.bg) : theme.textDim,
                     border: 'none',
                     padding: '0 10px',
                     height: '22px',
@@ -1811,10 +1803,10 @@ export default function CodexPage({
                     transition: 'all 0.2s cubic-bezier(0.16, 1, 0.3, 1)'
                   }}
                 >
-                  {mode === 'cloud' && (
+                  {mode === 'web' && (
                     <span style={{ width: '6px', height: '6px', borderRadius: '50%', display: 'inline-block', background: isActiveMode ? '#000000' : '#b6a6ff', boxShadow: isActiveMode ? 'none' : '0 0 6px #b6a6ff' }} />
                   )}
-                  {mode === 'tree' ? 'TREE' : 'CLOUD'}
+                  {mode === 'tree' ? 'TREE' : 'WEB'}
                 </motion.button>
               );
             })}
@@ -1904,10 +1896,9 @@ export default function CodexPage({
         </div>
       )}
 
-      {/* CLOUD VIEW: weighted word cloud of the active node's neighbourhood, sits over the column canvas */}
-      {codexViewMode === 'cloud' && (
+      {/* WEB VIEW: force-directed word web of the active node's neighbourhood, sits over the column canvas */}
+      {codexViewMode === 'web' && (
         <div
-          className="custom-sidebar-scrollbar"
           style={{
             position: 'absolute',
             top: 0,
@@ -1915,20 +1906,30 @@ export default function CodexPage({
             bottom: 0,
             right: isMobile ? 0 : (isRightCollapsed ? 0 : 340),
             zIndex: 5,
-            overflowY: 'auto',
-            overflowX: 'hidden',
+            overflow: 'hidden',
             background: theme.bg,
             backgroundImage: `url("${svgGrid}")`,
             backgroundRepeat: 'repeat',
-            padding: isMobile ? '24px 16px 120px 16px' : '110px 40px 80px 320px',
             transition: 'right 0.3s ease',
             boxSizing: 'border-box',
             fontFamily: '"Space Mono", monospace'
           }}
         >
-          <div style={{ display: 'flex', alignItems: 'baseline', gap: '12px', flexWrap: 'wrap', marginBottom: '18px' }}>
+          <CodexWeb
+            centerId={activeTermNode ? activeTermNode.id : null}
+            nodes={nodes}
+            index={linkIndex}
+            getNodeColor={getNodeColor}
+            onSelect={(id) => navigateToTerm(id)}
+            theme={theme}
+            isDark={isMapDarkMode}
+            originShift={{ x: isMobile ? 0 : 130, y: isMobile ? -40 : 30 }}
+          />
+
+          {/* Header: sits to the right of the floating search box on desktop, under it on mobile */}
+          <div style={{ position: 'absolute', top: isMobile ? 'auto' : 24, bottom: isMobile ? 96 : 'auto', left: isMobile ? 16 : 320, right: 24, pointerEvents: 'none', display: 'flex', alignItems: 'baseline', gap: '12px', flexWrap: 'wrap' }}>
             <span style={{ fontSize: '9px', letterSpacing: '2px', color: theme.textDim, fontWeight: 700 }}>
-              {activeTermNode ? 'CLOUD AROUND' : 'CLOUD OF ALL THEMES'}
+              {activeTermNode ? 'WEB AROUND' : 'WEB OF ALL THEMES'}
             </span>
             {activeTermNode && (
               <span style={{ fontSize: '18px', fontWeight: 700, color: getNodeColor(activeTermNode), letterSpacing: '0.5px' }}>
@@ -1939,56 +1940,25 @@ export default function CodexPage({
               <button
                 type="button"
                 onClick={() => navigateToTerm(activeTermNode.parentId!)}
-                style={{ background: 'transparent', border: `1px solid ${theme.border}`, color: theme.textDim, fontFamily: '"Space Mono", monospace', fontSize: '8px', letterSpacing: '1px', padding: '3px 8px', borderRadius: '10px', cursor: 'pointer' }}
+                style={{ pointerEvents: 'auto', background: theme.bg, border: `1px solid ${theme.border}`, color: theme.textDim, fontFamily: '"Space Mono", monospace', fontSize: '8px', letterSpacing: '1px', padding: '3px 8px', borderRadius: '10px', cursor: 'pointer' }}
               >
-                ↑ {cloudIndex.byId.get(activeTermNode.parentId)?.name || 'UP'}
+                ↑ {linkIndex.byId.get(activeTermNode.parentId)?.name || 'UP'}
               </button>
             )}
-            <span style={{ fontSize: '8px', color: theme.textDim, letterSpacing: '1px', marginLeft: 'auto' }}>
-              {cloudTerms.length} TERMS · SIZE = CONNECTIONS · CLICK TO FOCUS
-            </span>
           </div>
 
-          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', gap: '6px 14px', maxWidth: '1100px' }}>
-            {cloudTerms.map(({ node, weight, kind }) => {
-              const maxW = Math.max(1, ...cloudTerms.map(t => t.weight));
-              const size = 9 + Math.round(13 * Math.log(1 + weight) / Math.log(1 + maxW));
-              const color = getNodeColor(node);
-              const label = node.name.replace(/\s*\([^)]*\)\s*/g, ' ').replace(/\s+/g, ' ').trim() || node.name;
-              return (
-                <button
-                  key={node.id}
-                  type="button"
-                  title={`${node.name} · ${weight} connection${weight === 1 ? '' : 's'}${kind === 'backlink' ? ' · references this entry' : kind === 'child' ? ' · sub-theme' : ''}`}
-                  onClick={() => navigateToTerm(node.id)}
-                  style={{
-                    background: 'transparent',
-                    border: 'none',
-                    cursor: 'pointer',
-                    padding: '2px 4px',
-                    fontFamily: '"Space Mono", monospace',
-                    fontWeight: size > 18 ? 700 : 400,
-                    fontSize: `${size}px`,
-                    lineHeight: 1.15,
-                    color: kind === 'backlink' ? theme.textDim : color,
-                    textDecoration: kind === 'child' ? 'none' : 'none',
-                    borderBottom: kind === 'child' ? `1px dotted ${color}` : '1px solid transparent',
-                    opacity: kind === 'backlink' ? 0.8 : 1,
-                    transition: 'transform 0.15s ease, opacity 0.15s ease'
-                  }}
-                  onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.transform = 'scale(1.08)'; }}
-                  onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.transform = 'scale(1)'; }}
-                >
-                  {label}
-                </button>
-              );
-            })}
-            {cloudTerms.length === 0 && (
-              <span style={{ fontSize: '10px', color: theme.textDim }}>This entry has no linked terms yet.</span>
-            )}
-          </div>
+          {/* Legend */}
+          {!isMobile && (
+            <div style={{ position: 'absolute', left: 24, bottom: 20, pointerEvents: 'none', display: 'flex', gap: '16px', fontSize: '8px', letterSpacing: '1px', color: theme.textDim }}>
+              <span><span style={{ display: 'inline-block', width: 18, borderTop: `2px solid ${theme.text}`, verticalAlign: 'middle', marginRight: 6 }} />SUB-THEME</span>
+              <span><span style={{ display: 'inline-block', width: 18, borderTop: `2px dashed ${theme.text}`, verticalAlign: 'middle', marginRight: 6 }} />RELATED</span>
+              <span><span style={{ display: 'inline-block', width: 18, borderTop: `2px dashed ${theme.textDim}`, verticalAlign: 'middle', marginRight: 6, opacity: 0.6 }} />REFERENCED BY</span>
+              <span>CLICK A WORD TO FOCUS · DRAG TO PAN · SCROLL TO ZOOM</span>
+            </div>
+          )}
         </div>
       )}
+
 
       {/* LEFT AREA: HORIZONTALLY AND VERTICALLY DRAGGABLE INFINITE CANVAS */}
       <div
@@ -3123,6 +3093,48 @@ export default function CodexPage({
                             </button>
                           );
                         })}
+                      </div>
+                    )}
+
+                    {/* Referenced by: entries whose related links point at this one (links are stored one-way) */}
+                    {referencedBy.length > 0 && (
+                      <div style={{ marginBottom: '24px' }}>
+                        <div style={{ fontFamily: '"Space Mono", monospace', fontSize: '8px', letterSpacing: '1.5px', color: theme.textDim, fontWeight: 700, marginBottom: '8px' }}>
+                          REFERENCED BY ({referencedBy.length})
+                        </div>
+                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', justifyContent: 'flex-start' }}>
+                          {referencedBy.map(refNode => {
+                            const refColor = getNodeColor(refNode);
+                            return (
+                              <button
+                                key={refNode.id}
+                                onClick={() => navigateToTerm(refNode.id)}
+                                title={`${refNode.name} references this entry`}
+                                style={{
+                                  height: '24px',
+                                  display: 'inline-flex',
+                                  alignItems: 'center',
+                                  fontSize: '10px',
+                                  fontWeight: '400',
+                                  padding: '0 12px',
+                                  borderRadius: '12px',
+                                  background: 'transparent',
+                                  border: `1px dashed ${refColor}`,
+                                  color: theme.text,
+                                  cursor: 'pointer',
+                                  textTransform: 'uppercase',
+                                  letterSpacing: '0.5px',
+                                  fontFamily: '"Space Mono", monospace',
+                                  transition: 'transform 0.1s ease, background 0.1s ease'
+                                }}
+                                onMouseEnter={e => { e.currentTarget.style.transform = 'scale(1.05)'; e.currentTarget.style.background = refColor; e.currentTarget.style.color = '#000000'; }}
+                                onMouseLeave={e => { e.currentTarget.style.transform = 'none'; e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = theme.text; }}
+                              >
+                                {refNode.name}
+                              </button>
+                            );
+                          })}
+                        </div>
                       </div>
                     )}
 

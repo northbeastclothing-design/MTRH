@@ -705,7 +705,7 @@ const chunk_0: any[] = [  {
   },  {
     id: 'grigori',
     secondaryParentIds: ['watchers'],
-    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Rasputin_PA.jpg/960px-Rasputin_PA.jpg'],
+    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/The_Sons_of_God_Saw_the_Daughters_of_Men_That_They_Were_Fair%2C_by_Daniel_Chester_French%2C_modeled_by_1918%2C_carved_1923_-_Corcoran_Gallery_of_Art_-_DSC01065.JPG/960px-The_Sons_of_God_Saw_the_Daughters_of_Men_That_They_Were_Fair%2C_by_Daniel_Chester_French%2C_modeled_by_1918%2C_carved_1923_-_Corcoran_Gallery_of_Art_-_DSC01065.JPG'],
     parentId: 'fallen-angel',
     name: 'Grigori',
     description: 'An order of angels also known as the Watchers. According to the Book of Enoch, a group of two hundred Grigori led by Semyaza descended to Mount Hermon, took human wives, taught humanity forbidden arts, and fathered the giant Nephilim.',
