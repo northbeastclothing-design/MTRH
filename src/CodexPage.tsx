@@ -305,6 +305,9 @@ export default function CodexPage({
     return nodes.find(t => t.id === activeTermId) || null;
   }, [activeTermId, nodes]);
 
+  // The web is centred on the selection only (hover previews the dossier without re-centring)
+  const webCenterNode = selectedTermId ? (linkIndex.byId.get(selectedTermId) || null) : null;
+
   // Entries that point at the active one (links are stored one-way), minus those it already lists itself
   const referencedBy = useMemo(() => {
     if (!activeTermNode) return [] as TermNode[];
@@ -1916,11 +1919,16 @@ export default function CodexPage({
           }}
         >
           <CodexWeb
-            centerId={activeTermNode ? activeTermNode.id : null}
+            centerId={selectedTermId}
+            selectedId={selectedTermId}
+            hoveredId={hoveredTermId}
             nodes={nodes}
             index={linkIndex}
-            getNodeColor={getNodeColor}
+            getNodeColor={(n) => (n.parentId ? getRootCategoryColor(n) : getNodeColor(n))}
+            getNodeIcon={getNodeIcon}
+            hasSubItems={(n) => checkNodeHasSubItems(n)}
             onSelect={(id) => navigateToTerm(id)}
+            onHover={(id) => setHoveredTerm(id ? { id, level: 0 } : null)}
             theme={theme}
             isDark={isMapDarkMode}
             originShift={{ x: isMobile ? 0 : 130, y: isMobile ? -40 : 30 }}
@@ -1929,20 +1937,20 @@ export default function CodexPage({
           {/* Header: sits to the right of the floating search box on desktop, under it on mobile */}
           <div style={{ position: 'absolute', top: isMobile ? 'auto' : 24, bottom: isMobile ? 96 : 'auto', left: isMobile ? 16 : 320, right: 24, pointerEvents: 'none', display: 'flex', alignItems: 'baseline', gap: '12px', flexWrap: 'wrap' }}>
             <span style={{ fontSize: '9px', letterSpacing: '2px', color: theme.textDim, fontWeight: 700 }}>
-              {activeTermNode ? 'WEB AROUND' : 'WEB OF ALL THEMES'}
+              {webCenterNode ? 'WEB AROUND' : 'WEB OF ALL THEMES'}
             </span>
-            {activeTermNode && (
-              <span style={{ fontSize: '18px', fontWeight: 700, color: getNodeColor(activeTermNode), letterSpacing: '0.5px' }}>
-                {activeTermNode.name}
+            {webCenterNode && (
+              <span style={{ fontSize: '18px', fontWeight: 700, color: getNodeColor(webCenterNode), letterSpacing: '0.5px' }}>
+                {webCenterNode.name}
               </span>
             )}
-            {activeTermNode && activeTermNode.parentId && (
+            {webCenterNode && webCenterNode.parentId && (
               <button
                 type="button"
-                onClick={() => navigateToTerm(activeTermNode.parentId!)}
+                onClick={() => navigateToTerm(webCenterNode.parentId!)}
                 style={{ pointerEvents: 'auto', background: theme.bg, border: `1px solid ${theme.border}`, color: theme.textDim, fontFamily: '"Space Mono", monospace', fontSize: '8px', letterSpacing: '1px', padding: '3px 8px', borderRadius: '10px', cursor: 'pointer' }}
               >
-                ↑ {linkIndex.byId.get(activeTermNode.parentId)?.name || 'UP'}
+                ↑ {linkIndex.byId.get(webCenterNode.parentId)?.name || 'UP'}
               </button>
             )}
           </div>
@@ -1953,7 +1961,7 @@ export default function CodexPage({
               <span><span style={{ display: 'inline-block', width: 18, borderTop: `2px solid ${theme.text}`, verticalAlign: 'middle', marginRight: 6 }} />SUB-THEME</span>
               <span><span style={{ display: 'inline-block', width: 18, borderTop: `2px dashed ${theme.text}`, verticalAlign: 'middle', marginRight: 6 }} />RELATED</span>
               <span><span style={{ display: 'inline-block', width: 18, borderTop: `2px dashed ${theme.textDim}`, verticalAlign: 'middle', marginRight: 6, opacity: 0.6 }} />REFERENCED BY</span>
-              <span>CLICK A WORD TO FOCUS · DRAG TO PAN · SCROLL TO ZOOM</span>
+              <span>CLICK A TERM TO FOCUS · DRAG TO PAN · SCROLL TO SPREAD / PULL IN</span>
             </div>
           )}
         </div>
