@@ -76,6 +76,7 @@ interface CodexCategoryHeaderProps {
   nodeIcon: string;
   hasChildren: boolean;
   onNodeClick: () => void;
+  onHoverChange?: (hovered: boolean) => void;
 }
 
 const CodexCategoryHeader = ({
@@ -86,14 +87,15 @@ const CodexCategoryHeader = ({
   nodeColor,
   nodeIcon,
   hasChildren,
-  onNodeClick
+  onNodeClick,
+  onHoverChange
 }: CodexCategoryHeaderProps) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
     <motion.div
       id={`node-pill-${node.id}-0`}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={() => { setIsHovered(true); onHoverChange?.(true); }}
+      onMouseLeave={() => { setIsHovered(false); onHoverChange?.(false); }}
       onClick={onNodeClick}
       style={{
         display: 'flex',
@@ -237,6 +239,7 @@ export default function CodexPage({
   const [scrollSize, setScrollSize] = useState({ width: 0, height: 0 });
   const [isRightCollapsed, setIsRightCollapsed] = useState(true);
   const isRightCollapsedRef = useRef(isRightCollapsed);
+  const userCollapsedDossierRef = useRef(false); // true after the minimize tab is used, until the next selection
   useEffect(() => {
     isRightCollapsedRef.current = isRightCollapsed;
   }, [isRightCollapsed]);
@@ -246,6 +249,8 @@ export default function CodexPage({
   const [refByExpanded, setRefByExpanded] = useState(false);
   const [brokenImages, setBrokenImages] = useState<Record<string, boolean>>({});
   const [codexViewMode, setCodexViewMode] = useState<'tree' | 'web'>('tree');
+  // Web view trail: terms focused in order, ending with the current one. Revisiting a term cuts the trail back to it.
+  const [webTrail, setWebTrail] = useState<string[]>([]);
 
   // Link index shared by the web view, the tree curves and the dossier's "referenced by" row:
   // children per parent, incoming related links per target, id lookup and a connection count
@@ -301,7 +306,27 @@ export default function CodexPage({
   }, []);
 
   const selectedTermId = selectedPath[selectedPath.length - 1] || null;
-  const activeTermId = selectedTermId || hoveredTermId;
+
+  useEffect(() => {
+    if (codexViewMode !== 'web') return;
+    if (!selectedTermId) { setWebTrail([]); return; }
+    setWebTrail(prev => {
+      if (prev[prev.length - 1] === selectedTermId) return prev;
+      const at = prev.indexOf(selectedTermId);
+      return at >= 0 ? prev.slice(0, at + 1) : [...prev, selectedTermId];
+    });
+  }, [selectedTermId, codexViewMode]);
+
+  // Hovering a term previews it in the dossier; the selected term is what shows when nothing is hovered.
+  // The preview lingers briefly after the pointer leaves so moving between pills does not flash the selection.
+  // Touch devices have no real hover, so they stay selection-only.
+  const [previewTermId, setPreviewTermId] = useState<string | null>(null);
+  useEffect(() => {
+    if (hoveredTermId) { setPreviewTermId(hoveredTermId); return; }
+    const t = setTimeout(() => setPreviewTermId(null), 160);
+    return () => clearTimeout(t);
+  }, [hoveredTermId]);
+  const activeTermId = (!isMobile && previewTermId) || selectedTermId;
 
   const activeTermNode = useMemo(() => {
     if (!activeTermId) return null;
@@ -1551,9 +1576,16 @@ export default function CodexPage({
   // Automatically expand sidebar when a term is selected
   useEffect(() => {
     if (selectedTermId) {
+      userCollapsedDossierRef.current = false;
       setIsRightCollapsed(false);
     }
   }, [selectedTermId]);
+
+  // A hover preview also opens the dossier, but not if the user minimized it and has not selected anything since
+  useEffect(() => {
+    if (isMobile || !previewTermId || userCollapsedDossierRef.current) return;
+    setIsRightCollapsed(false);
+  }, [previewTermId, isMobile]);
 
   // Reset image index when switching locations
   useEffect(() => {
@@ -1936,39 +1968,134 @@ export default function CodexPage({
             originShift={{ x: isMobile ? 0 : 130, y: isMobile ? -40 : 30 }}
           />
 
-          {/* Start over: back to the ten main categories (always present, dim when already there) */}
-          <button
-            type="button"
-            onClick={() => { setSelectedPath([]); setHoveredTerm(null); trackCustomEvent?.('codex_web_reset'); }}
-            disabled={!selectedTermId}
-            title={selectedTermId ? 'Back to the main categories' : 'Showing the main categories'}
-            style={{
-              position: 'absolute',
-              top: isMobile ? 'auto' : 24,
-              bottom: isMobile ? 96 : 'auto',
-              left: isMobile ? 16 : 320,
-              zIndex: 6,
+          {/* Start over + trail of the terms focused in this web session (click a crumb to jump back) */}
+          {(() => {
+            const crumbColor = (n: TermNode) => (n.parentId ? getRootCategoryColor(n) : getNodeColor(n));
+            const trailNodes = webTrail.map(id => linkIndex.byId.get(id)).filter((n): n is TermNode => !!n);
+            const current = trailNodes.length > 0 ? trailNodes[trailNodes.length - 1] : null;
+            const previous = trailNodes.slice(0, -1);
+            const maxVisible = isMobile ? 2 : 5;
+            const hidden = previous.slice(0, Math.max(0, previous.length - maxVisible));
+            const visible = previous.slice(hidden.length);
+            const crumbBase: React.CSSProperties = {
+              pointerEvents: 'auto',
               display: 'inline-flex',
               alignItems: 'center',
-              gap: '8px',
-              height: '32px',
-              padding: '0 14px 0 10px',
-              borderRadius: '16px',
+              gap: '6px',
+              height: '28px',
+              padding: '0 10px',
+              borderRadius: '14px',
               background: theme.bg,
-              border: `1px solid ${selectedTermId ? theme.text : theme.border}`,
-              color: selectedTermId ? theme.text : theme.textDim,
+              border: `1px solid ${theme.border}`,
+              color: theme.text,
               fontFamily: '"Space Mono", monospace',
-              fontSize: '10px',
-              fontWeight: 700,
+              fontSize: '9px',
+              fontWeight: 500,
               letterSpacing: '0.5px',
-              cursor: selectedTermId ? 'pointer' : 'default',
-              opacity: selectedTermId ? 1 : 0.6,
-              transition: 'opacity 0.2s ease, border-color 0.2s ease'
-            }}
-          >
-            <span style={{ fontSize: '12px', lineHeight: 1 }}>⌂</span>
-            ALL CATEGORIES
-          </button>
+              textTransform: 'uppercase',
+              maxWidth: '160px',
+              cursor: 'pointer',
+              transition: 'border-color 0.15s ease, background 0.15s ease'
+            };
+            const jump = (id: string, how: string) => { navigateToTerm(id); trackCustomEvent?.('codex_web_trail_jump', { how }); };
+            const renderCrumb = (node: TermNode, isCurrent: boolean) => (
+              <button
+                type="button"
+                onClick={isCurrent ? undefined : () => jump(node.id, 'crumb')}
+                title={isCurrent ? 'Current term' : `Back to ${node.name}`}
+                style={{ ...crumbBase, cursor: isCurrent ? 'default' : 'pointer', borderColor: isCurrent ? theme.text : theme.border, fontWeight: isCurrent ? 700 : 500 }}
+                onMouseEnter={e => { if (!isCurrent) e.currentTarget.style.borderColor = theme.text; }}
+                onMouseLeave={e => { if (!isCurrent) e.currentTarget.style.borderColor = theme.border; }}
+              >
+                <span style={{ width: '8px', height: '8px', borderRadius: '4px', background: crumbColor(node), flexShrink: 0 }} />
+                <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{node.name}</span>
+              </button>
+            );
+            const sep = <span style={{ color: theme.textDim, fontSize: '11px', lineHeight: 1, userSelect: 'none' }}>›</span>;
+            return (
+              <div
+                style={{
+                  position: 'absolute',
+                  top: isMobile ? 'auto' : 24,
+                  bottom: isMobile ? 96 : 'auto',
+                  left: isMobile ? 16 : 320,
+                  right: isMobile ? 16 : 24,
+                  zIndex: 6,
+                  display: 'flex',
+                  flexWrap: 'wrap',
+                  alignItems: 'center',
+                  gap: '6px',
+                  pointerEvents: 'none'
+                }}
+              >
+                <button
+                  type="button"
+                  onClick={() => { setSelectedPath([]); setHoveredTerm(null); trackCustomEvent?.('codex_web_reset'); }}
+                  disabled={!selectedTermId}
+                  title={selectedTermId ? 'Back to the main categories' : 'Showing the main categories'}
+                  style={{
+                    pointerEvents: 'auto',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                    height: '32px',
+                    padding: '0 14px 0 10px',
+                    borderRadius: '16px',
+                    background: theme.bg,
+                    border: `1px solid ${selectedTermId ? theme.text : theme.border}`,
+                    color: selectedTermId ? theme.text : theme.textDim,
+                    fontFamily: '"Space Mono", monospace',
+                    fontSize: '10px',
+                    fontWeight: 700,
+                    letterSpacing: '0.5px',
+                    cursor: selectedTermId ? 'pointer' : 'default',
+                    opacity: selectedTermId ? 1 : 0.6,
+                    transition: 'opacity 0.2s ease, border-color 0.2s ease'
+                  }}
+                >
+                  <span style={{ fontSize: '12px', lineHeight: 1 }}>⌂</span>
+                  ALL CATEGORIES
+                </button>
+
+                {current && previous.length > 0 && (
+                  <>
+                    <button
+                      type="button"
+                      onClick={() => jump(previous[previous.length - 1].id, 'back')}
+                      title={`Back to ${previous[previous.length - 1].name}`}
+                      style={{ ...crumbBase, padding: '0 9px', fontSize: '12px' }}
+                      onMouseEnter={e => { e.currentTarget.style.borderColor = theme.text; }}
+                      onMouseLeave={e => { e.currentTarget.style.borderColor = theme.border; }}
+                    >
+                      ←
+                    </button>
+                    {hidden.length > 0 && (
+                      <>
+                        <button
+                          type="button"
+                          onClick={() => jump(hidden[hidden.length - 1].id, 'hidden')}
+                          title={hidden.map(n => n.name).join(' › ')}
+                          style={{ ...crumbBase, padding: '0 9px' }}
+                          onMouseEnter={e => { e.currentTarget.style.borderColor = theme.text; }}
+                          onMouseLeave={e => { e.currentTarget.style.borderColor = theme.border; }}
+                        >
+                          …
+                        </button>
+                        {sep}
+                      </>
+                    )}
+                    {visible.map(n => (
+                      <React.Fragment key={n.id}>
+                        {renderCrumb(n, false)}
+                        {sep}
+                      </React.Fragment>
+                    ))}
+                    {renderCrumb(current, true)}
+                  </>
+                )}
+              </div>
+            );
+          })()}
 
           {/* Legend */}
           {!isMobile && (
@@ -2154,6 +2281,7 @@ export default function CodexPage({
                         nodeIcon={nodeIcon}
                         hasChildren={hasChildren}
                         onNodeClick={() => handleNodeClick(node, colIdx)}
+                        onHoverChange={(h) => setHoveredTerm(h ? { id: node.id, level: colIdx } : null)}
                       />
                     );
                   }
@@ -2326,7 +2454,7 @@ export default function CodexPage({
           {!isMobile && (
             <motion.button 
             whileHover={{ opacity: 0.8 }}
-            onClick={() => setIsRightCollapsed(!isRightCollapsed)}
+            onClick={() => { userCollapsedDossierRef.current = !isRightCollapsed; setIsRightCollapsed(!isRightCollapsed); }}
             title={isRightCollapsed ? "Maximize Dossier" : "Minimize Dossier"}
             style={{
               position: 'absolute',

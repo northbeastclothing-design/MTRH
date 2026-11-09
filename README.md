@@ -1,19 +1,28 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# MTRH Interactive Map
 
-# Run and deploy your AI Studio app
+Mapping the Rabbit Hole (https://mappingtherabbithole.com): an interactive world map, timeline, historical cartography gallery and codex of unexplained phenomena, ancient sites, cryptids, UFO cases and related lore.
 
-This contains everything you need to run your app locally.
-https://ai.studio/apps/af1a054c-cc7b-47a3-a2d4-1d4251421460
+## Run locally
 
-## Run Locally
+Requires Node.js 22+.
 
-**Prerequisites:**  Node.js
+```sh
+npm install
+cp .env.example .env   # fill in the keys you need
+PORT=3000 npm run dev  # Vite + Express via tsx
+```
 
+`npm run lint` type-checks, `npm run build` produces `dist/` (client bundle + `dist/server.cjs`), and `npm start` serves that build.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Deploy
+
+A push to `main` on GitHub triggers Cloud Run continuous deployment. Double-click `Deploy to Live Site.command` to run the pre-flight checks and push. Firestore rules live in `firestore.rules` and are deployed separately with the Firebase CLI.
+
+## Layout
+
+- `src/App.tsx` – map page and app shell; `CartographyPage`, `TimelinePage`, `CodexPage` are lazy-loaded
+- `src/*Data.ts`, `src/*.json` – the content datasets
+- `src/layers.ts` – single source of truth for layer names, colors and icons
+- `server.ts` – Express API (moderation, share previews, media proxy)
+- `scripts/` – maintenance tooling (Alien Archivist watcher, codex audit)
+- `validate-data.ts` – data consistency check

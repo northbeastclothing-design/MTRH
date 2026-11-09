@@ -232,7 +232,7 @@ const CategoryLayerHeader = ({
       top: '15px', 
       zIndex: 12, 
       background: theme.bg,
-      padding: '3px 16px' 
+      padding: '3px 16px 0px 16px'
     }}>
       <motion.div 
         style={{ 
@@ -4812,7 +4812,7 @@ function App() {
             const isActive = activeLayers[layerName] !== false;
 
             return (
-              <div key={`mob-filter-${layerName}`} style={{ display: 'flex', flexDirection: 'column', width: '100%', marginBottom: '4px' }}>
+              <div key={`mob-filter-${layerName}`} style={{ display: 'flex', flexDirection: 'column', width: '100%', marginBottom: '7px' }}>
                 <CategoryLayerHeader
                   layerName={layerName}
                   isActive={isActive}
@@ -4835,7 +4835,7 @@ function App() {
                 />
 
                 {isExpanded && (
-                  <div style={{ background: theme.bg, padding: '4px 0', textAlign: 'left' }}>
+                  <div style={{ background: theme.bg, padding: '7px 0 4px 0', textAlign: 'left' }}>
                     <div style={{ display: 'flex', flexDirection: 'column', paddingLeft: '16px', paddingRight: '4px' }}>
                       {CATEGORY_DESCRIPTIONS[layerName] && (
                         <div style={{ 
@@ -8430,7 +8430,7 @@ function App() {
                 const isActive = activeLayers[layerName] !== false;
 
                 return (
-                  <div key={layerName} style={{ display: 'flex', flexDirection: 'column', width: '100%', position: 'relative' }}>
+                  <div key={layerName} style={{ display: 'flex', flexDirection: 'column', width: '100%', position: 'relative', marginBottom: '3px' }}>
                     <CategoryLayerHeader
                       layerName={layerName}
                       isActive={isActive}
@@ -8458,7 +8458,7 @@ function App() {
                         animate={{ height: 'auto', opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                        style={{ background: theme.bg, padding: '4px 0', textAlign: 'left', overflow: 'hidden' }}
+                        style={{ background: theme.bg, padding: '7px 0 4px 0', textAlign: 'left', overflow: 'hidden' }}
                       >
                         <motion.div 
                           initial="hidden"
