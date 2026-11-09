@@ -1545,6 +1545,19 @@ export default function CodexPage({
     }
   }, [isActive, centerOnNode]);
 
+  // Coming back to the tree from the web view: recenter on the selection, or on the main categories when it was cleared.
+  // The tree stays mounted under the web overlay, so its scroll position would otherwise be stale.
+  const latestSelectedPathRef = useRef(selectedPath);
+  latestSelectedPathRef.current = selectedPath;
+  const centerOnNodeRef = useRef(centerOnNode);
+  centerOnNodeRef.current = centerOnNode;
+  useEffect(() => {
+    if (codexViewMode !== 'tree') return;
+    const path = latestSelectedPathRef.current;
+    userHasPannedRef.current = false;
+    centerOnNodeRef.current(path[path.length - 1] || null, Math.max(0, path.length - 1), true);
+  }, [codexViewMode]);
+
   // Automatically center the selected node when mobile drawer collapses/expands (only if user hasn't manually panned)
   useEffect(() => {
     if (isMobile && selectedTermId && selectedPath.length > 0 && !userHasPannedRef.current) {
@@ -2016,8 +2029,7 @@ export default function CodexPage({
               <div
                 style={{
                   position: 'absolute',
-                  top: isMobile ? 'auto' : 24,
-                  bottom: isMobile ? 96 : 'auto',
+                  top: isMobile ? 16 : 24,
                   left: isMobile ? 16 : 320,
                   right: isMobile ? 16 : 24,
                   zIndex: 6,
@@ -2037,23 +2049,23 @@ export default function CodexPage({
                     pointerEvents: 'auto',
                     display: 'inline-flex',
                     alignItems: 'center',
-                    gap: '8px',
-                    height: '32px',
-                    padding: '0 14px 0 10px',
-                    borderRadius: '16px',
-                    background: theme.bg,
-                    border: `1px solid ${selectedTermId ? theme.text : theme.border}`,
-                    color: selectedTermId ? theme.text : theme.textDim,
+                    gap: '6px',
+                    height: '28px',
+                    padding: '0 10px 0 8px',
+                    borderRadius: '14px',
+                    background: '#000000',
+                    border: `1px solid ${isMapDarkMode ? '#ffffff' : '#000000'}`,
+                    color: '#ffffff',
                     fontFamily: '"Space Mono", monospace',
-                    fontSize: '10px',
+                    fontSize: '9px',
                     fontWeight: 700,
                     letterSpacing: '0.5px',
                     cursor: selectedTermId ? 'pointer' : 'default',
-                    opacity: selectedTermId ? 1 : 0.6,
-                    transition: 'opacity 0.2s ease, border-color 0.2s ease'
+                    opacity: selectedTermId ? 1 : 0.5,
+                    transition: 'opacity 0.2s ease'
                   }}
                 >
-                  <span style={{ fontSize: '12px', lineHeight: 1 }}>⌂</span>
+                  <span style={{ fontSize: '11px', lineHeight: 1 }}>⌂</span>
                   ALL CATEGORIES
                 </button>
 
